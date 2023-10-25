@@ -15773,6 +15773,8 @@
                 CLIPS_NITRO_EA_ANNOUNCEMENT_COACHMARK_CTA_SUBS: "Got it",
                 CLIPS_NITRO_EA_ANNOUNCEMENT_COACHMARK_CTA_NON_SUBS: "Get Nitro",
                 CLIPS_UNTITLED: "Untitled",
+                CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING: "Allow my voice to be recorded in Clips",
+                CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION: "By turning on this setting, your voice may be included when someone in the same voice channel uses Clips.",
                 SOUND_INCOMING_RING_HALLOWEEN: "Halloween Incoming Ring",
                 CUSTOM_SOUNDS: "Custom Sounds",
                 ENABLE_PHONE_INTEGRATION: "Enable integration with the Phone app to experience this.",
@@ -15989,6 +15991,9 @@
                 GUILD_SCHEDULED_EVENT_VIEW_MORE_RECURRENCES: "View future events",
                 GUILD_SCHEDULED_EVENT_RECURRENCE_RULE: "Repeats {recurrenceRule}",
                 GUILD_SCHEDULED_EVENT_REPEATS: "Repeats on",
+                GUILD_SCHEDULED_EVENT_REPEATS_WEEKLY: "Repeats every {weekday}",
+                GUILD_SCHEDULED_EVENT_REPEATS_YEARLY: "Repeats every {date}",
+                GUILD_SCHEDULED_EVENT_REPEATS_WEEKDAYS: "Repeats every weekday (Monday to Friday)",
                 EDIT_THIS_EVENT: "Edit this Event",
                 EDIT_ALL_EVENTS: "Edit all Events in this Series",
                 GUILD_EVENT_EDIT_CONFIRM_BODY_CONFIRM: "Are you sure you want to edit this event?",
@@ -17768,7 +17773,7 @@
                 L = E("782340");
             (0, r.setUpdateRules)(i.default), (0, I.default)(L.default, n.default, s.default), a.default.Emitter.injectBatchEmitChanges(o.unstable_batchedUpdates), a.default.PersistedStore.disableWrites = __OVERLAY__, a.default.initialize();
             let u = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("240437", ", Version Hash: ").concat("37b55f8d77e7ec56a87d49261ab9b7c60bc91b83")), t.default.setTags({
+            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("240563", ", Version Hash: ").concat("36bbbb0d2147b189f77ae6a416393dc92f768396")), t.default.setTags({
                 appContext: l.CURRENT_APP_CONTEXT
             }), S.default.initBasic(), N.default.init(), T.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()
         },
@@ -20130,8 +20135,8 @@
 
             function o() {
                 var e;
-                let _ = parseInt((e = "240437", "240437"));
-                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("240437")), _ = 0), _
+                let _ = parseInt((e = "240563", "240563"));
+                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("240563")), _ = 0), _
             }
         },
         990629: function(e, _, E) {
