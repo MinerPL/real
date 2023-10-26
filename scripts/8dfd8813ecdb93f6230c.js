@@ -1626,40 +1626,24 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return c
+                    return u
                 }
             });
             var r = n("920040");
             n("773670");
-            var i = n("77078"),
-                a = n("978679"),
-                s = n("641078"),
-                l = n("646718"),
-                o = n("782340"),
-                u = n("358802"),
-                d = n("880865"),
-                c = e => {
+            var i = n("641078"),
+                a = n("132554"),
+                s = n("646718"),
+                l = n("782340"),
+                o = n("880865"),
+                u = e => {
                     let {
                         isGift: t,
                         plan: n
-                    } = e, c = (0, s.useIsEligibleForBogoPromotion)();
-                    return t || (null == n ? void 0 : n.skuId) !== l.PremiumSubscriptionSKUs.TIER_2 || !c ? null : (0, r.jsxs)("div", {
-                        className: u.bannerContainer,
-                        children: [(0, r.jsx)("img", {
-                            alt: "",
-                            className: u.banner,
-                            src: d
-                        }), (0, r.jsxs)("div", {
-                            className: u.textContainer,
-                            children: [(0, r.jsx)(a.default, {
-                                className: u.giftIcon
-                            }), (0, r.jsx)(i.Heading, {
-                                className: u.textHeader,
-                                color: "always-white",
-                                variant: "heading-deprecated-12/extrabold",
-                                children: o.default.Messages.BOGO_ANNOUNCEMENT_MODAL_UPGRADE_HEADER
-                            })]
-                        })]
+                    } = e, u = (0, i.useIsEligibleForBogoPromotion)();
+                    return t || (null == n ? void 0 : n.skuId) !== s.PremiumSubscriptionSKUs.TIER_2 || !u ? null : (0, r.jsx)(a.default, {
+                        copy: l.default.Messages.BOGO_ANNOUNCEMENT_MODAL_UPGRADE_HEADER,
+                        bannerImage: o
                     })
                 }
         },
@@ -1728,6 +1712,48 @@
                     }), (0, r.jsx)(u, {
                         onClick: () => t(s.PremiumSubscriptionSKUs.TIER_0),
                         isGift: n
+                    })]
+                })
+            }
+        },
+        132554: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return u
+                }
+            });
+            var r = n("920040");
+            n("773670");
+            var i = n("575482"),
+                a = n.n(i),
+                s = n("77078"),
+                l = n("978679"),
+                o = n("101619");
+
+            function u(e) {
+                let {
+                    className: t,
+                    copy: n,
+                    bannerImage: i,
+                    textColor: u = "always-white"
+                } = e;
+                return (0, r.jsxs)("div", {
+                    className: a(o.bannerContainer, t),
+                    children: [null == i ? null : (0, r.jsx)("img", {
+                        alt: "",
+                        className: o.banner,
+                        src: i
+                    }), (0, r.jsxs)("div", {
+                        className: o.textContainer,
+                        children: [(0, r.jsx)(l.default, {
+                            className: o.giftIcon
+                        }), (0, r.jsx)(s.Heading, {
+                            className: o.textHeader,
+                            color: u,
+                            variant: "eyebrow",
+                            children: n
+                        })]
                     })]
                 })
             }
