@@ -171,8 +171,8 @@
                 CHARACTER_COUNT_AT_LIMIT: "Message is at max length",
                 CHARACTER_COUNT_CLOSE_TO_LIMIT: "{count} characters remaining",
                 CHARACTER_COUNT_OVER_LIMIT: "Message is too long",
-                CHANNEL_SETTINGS_SUMMARIES_TOGGLE: "Summaries",
-                CHANNEL_SETTINGS_SUMMARIES_TOGGLE_DESCRIPTION: "Enable Summaries for this channel. The Summaries feature uses OpenAI technology to quickly surface topics in any text channel, get a conversation preview and the number of messages in a specific topic, and indicate who is in the discussion. [Learn More]({helpdeskArticle})",
+                CHANNEL_SETTINGS_SUMMARIES_TOGGLE: "Enable Channel Summaries",
+                CHANNEL_SETTINGS_SUMMARIES_TOGGLE_DESCRIPTION: "If turned off, nobody will see the Summaries in this channel. [Learn More]({helpdeskArticle})",
                 CHANNEL_TOOLTIP_VOICE: "Voice",
                 CHANNEL_TOOLTIP_VOICE_LIMITED: "Voice (Limited)",
                 CHANNEL_TOOLTIP_VOICE_LOCKED: "Voice (Locked)",
@@ -2310,6 +2310,7 @@
                 CLYDE_GENERATE_PERSONALITY: "Generate",
                 CLYDE_GENERATE_PERSONALITY_HINT: "Generate a more detailed personality",
                 CLYDE_GENERATE_PERSONALITY_UNDO: "Undo generated personality",
+                CLYDE_EDIT_NAME_LABEL: "Name",
                 CLYDE_USER_RATING_THANKS_1: "Clyde's neurons are buzzing \uD83E\uDDE0",
                 CLYDE_USER_RATING_THANKS_2: "Your feedback is the secret sauce \uD83C\uDF1F",
                 CLYDE_USER_RATING_THANKS_3: "You're helping Clyde evolve one byte at a time \uD83D\uDE4C",
@@ -6588,7 +6589,7 @@
                 PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION: "Your !!{percent, number}!!% discount will end 3 months after purchase. After that you'll be charged {regularPrice}.",
                 PREMIUM_TIER_CARD_DISCOUNT_APPLIED: "discount applied",
                 PREMIUM_TUTORIAL_GOT_IT: "Got it!",
-                PREMIUM_TIER_CARD_TRIAL_HEADER_BEFORE_REDEMPTION: "Get {duration} **free** to try it out. Then !!{price}!!.",
+                PREMIUM_TIER_CARD_TRIAL_HEADER_BEFORE_REDEMPTION_NEW: "Try {planName} for {duration} on us. Then !!{price}!!.",
                 PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION: "Your **free trial ends {remainingTime, plural, =0 {today} one {in # day} other {in # days}}**. After that, you’ll be charged !!{price}!!.",
                 PREMIUM_TIER_CARD_TRIAL_ACTIVATED: "free trial activated",
                 INCLUDED: "Included",
@@ -10059,6 +10060,7 @@
                 APPLICATION_IFRAME_MODAL_LOAD_ERROR: "There was an error trying to load the application.",
                 INTERACTION_RATE_LIMITED: "Slow down! You're clicking too fast.",
                 APPLICATION_ADD_TO_SERVER: "Add to Server",
+                APPLICATION_ADD_BUTTON: "Add App",
                 APPLICATION_ADD_TO_SERVER_ACTIONS: "Add to Server Actions",
                 APPLICATION_ADD_TO_SERVER_ACTIONS_COPY: "Copy Add to Server URL",
                 COMMANDS_SCOPE_MIGRATION_OVERVIEW_TOOLTIP: "Members can't use this bot until you turn on permissions.",
@@ -13198,7 +13200,6 @@
                 MEMBER_SAFETY_INVITER_BOT_TOOLTIP: "Added by Bot",
                 GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE: "Show Members In Channel List",
                 GUILD_SETTINGS_SAFETY_ENABLE_MODERATION_EXPERIENCE_DESCRIPTION: "Enabling this will show the members page in the channel list, allowing you to quickly see who's recently joined your server, and find any users flagged for unusual activity.",
-                GUILD_SETTINGS_SAFETY_MODERATION_EXPERIENCE_ENABLED: "The members page has been moved to the server channel list. [Go There](onClick)",
                 GUILD_SETTINGS_SAFETY_MODERATION_EXPERIENCE_IN_COMMUNITY: "Becoming a community will automatically enable this experience for you.",
                 GUILD_ANTIRAID_SAFETY_SETUP_TITLE: "Raid Protection",
                 GUILD_ANTIRAID_SAFETY_SETUP_DESCRIPTION: "Takes automated actions to safeguard your server from potential raids or other suspicious activity. Report a raid that we miss to improve raid protection.",
@@ -13822,8 +13823,8 @@
                 Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_HEADER: "Early Access",
                 Q4_DROP_ANNOUNCEMENT_MODAL_EARLY_ACCESS_DESCRIPTION: "Be the first to try some of our newest features. Now including early access to Clips!",
                 Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_HEADER: "Member Pricing in the Shop",
-                Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_DESCRIPTION: "Snag sweet discounts on any - or every! - item at the Shop.",
-                Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_HEADER: "Custom App Icon",
+                Q4_DROP_ANNOUNCEMENT_MODAL_SPECIAL_PRICING_DESCRIPTION: "Snag sweet discounts on any (or every!) item at the Shop.",
+                Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_HEADER: "Custom App Icons",
                 Q4_DROP_ANNOUNCEMENT_MODAL_CUSTOM_APP_ICON_DESCRIPTION: "Personalize your Discord experience with an app icon that matches your vibe.",
                 Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_HEADER: "Unlimited Super Reactions",
                 Q4_DROP_ANNOUNCEMENT_MODAL_UNLIMITED_SUPER_REACTIONS_DESCRIPTION: "We made Super Reactions unlimited so you can unleash the chaos in your chats.",
@@ -13832,7 +13833,7 @@
                 Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_NON_SUB: "Get Nitro to get in on the inside scoop.",
                 Q4_DROP_WHATS_NEW_EARLY_ACCESS_CARD_DESCRIPTION_SUB: "Nitro members, get ready to get your hands on the latest and greatest before everyone else.",
                 Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_TITLE: "Special Member Pricing",
-                Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE: "Snag sweet discounts on any - or every! - item at the Shop.",
+                Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_SUBTITLE: "Snag sweet discounts on any (or every!) item at the Shop.",
                 Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_NON_SUB: "Join Nitro to take advantage of these exclusive prices.",
                 Q4_DROP_WHATS_NEW_SPECIAL_PRICING_CARD_DESCRIPTION_SUB: "Exclusive savings are reserved for Nitro members only.",
                 Q4_DROP_WHATS_NEW_UNLIMITED_SUPER_REACTIONS_CARD_TITLE: "Unlimited Super Reactions",
@@ -14203,8 +14204,8 @@
                 GUILD_SETTINGS_UPDATE_PERMISSIONS: "Update Permissions",
                 GUILD_SETTINGS_REVIEW_PERMISSIONS: "Review Permissions",
                 GUILD_SETTINGS_CHANNEL_SETTINGS: "Channel Settings",
-                GUILD_SETTINGS_SUMMARIES_TOGGLE: "Summaries",
-                GUILD_SETTINGS_SUMMARIES_TOGGLE_DESCRIPTION: "Enable Summaries for this server. The Summaries feature uses OpenAI technology to quickly surface topics in any text channel, get a conversation preview and the number of messages in a specific topic, and indicate who is in the discussion. [Learn More]({helpdeskArticle})",
+                GUILD_SETTINGS_SUMMARIES_TOGGLE: "Enable Channel Summaries",
+                GUILD_SETTINGS_SUMMARIES_TOGGLE_DESCRIPTION: "Enable Channel Summaries for this server to help your members catch up and dive into discussions. In text channels, members will be able to see a list of topics being discussed and which members are involved. [Learn More]({helpdeskArticle})",
                 UNLOCK: "Unlock",
                 DEFAULT_CHANNELS_PREVIEW_HEADER: "Preview",
                 DEFAULT_CHANNELS_PREVIEW_EMPTY_STATE: "Add 5-10 channels that all users will see!",
@@ -16515,6 +16516,7 @@
                 POLLS: "Polls",
                 POLL_CHOOSE_SINGLE_ANSWER_PROMPT: "Choose an Answer",
                 POLL_SUBMIT_VOTE: "Submit Vote",
+                POLL_SUBMIT_VOTE_EDIT: "Update Vote",
                 POLL_VOTES_COUNT: "{count, plural, one {1 vote} other {{count} votes}}",
                 POLL_ALREADY_VOTED: "Voted",
                 POLL_ANSWER_SELECTED_ARIA: "You selected this answer",
@@ -17773,7 +17775,7 @@
                 L = E("782340");
             (0, r.setUpdateRules)(i.default), (0, I.default)(L.default, n.default, s.default), a.default.Emitter.injectBatchEmitChanges(o.unstable_batchedUpdates), a.default.PersistedStore.disableWrites = __OVERLAY__, a.default.initialize();
             let u = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("240639", ", Version Hash: ").concat("1671784e21177c11fe7fc5d4d40afd4001412b41")), t.default.setTags({
+            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("241024", ", Version Hash: ").concat("e679da6284f50f15868cf42e8823cd89991bad76")), t.default.setTags({
                 appContext: l.CURRENT_APP_CONTEXT
             }), S.default.initBasic(), N.default.init(), T.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()
         },
@@ -20135,8 +20137,8 @@
 
             function o() {
                 var e;
-                let _ = parseInt((e = "240639", "240639"));
-                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("240639")), _ = 0), _
+                let _ = parseInt((e = "241024", "241024"));
+                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("241024")), _ = 0), _
             }
         },
         990629: function(e, _, E) {
