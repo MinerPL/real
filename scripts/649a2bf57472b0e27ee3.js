@@ -4535,7 +4535,7 @@
                             rawText: n,
                             addSpace: l = !1
                         } = e;
-                        this.appendText(t, n, l), this.focus()
+                        !this.props.disabled && (this.appendText(t, n, l), this.focus())
                     }, this.handleFocus = e => {
                         let {
                             onFocus: t
@@ -8050,7 +8050,7 @@
                     },
                     codeBlockSyntax: {
                         order: s.defaultRules.inlineCode.order - .1,
-                        match: e => /^(```)([a-z0-9_+\-.]+$)?/.exec(e),
+                        match: e => /^(```)([a-z0-9_+\-.#]+$)?/.exec(e),
                         parse: e => null != e[2] && "" !== e[2] && h.isKnownLang(e[2]) ? [{
                             type: "codeBlockSyntax",
                             content: e[1],
@@ -8678,9 +8678,13 @@
                     let {
                         editor: n
                     } = this.props, l = h.EditorUtils.isEditorEmpty(n) && null == n.composition;
-                    l !== this.state.showPlaceholder && this.setState({
-                        showPlaceholder: l
-                    }), null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, h.EditorUtils.richValue(n))
+                    if (l !== this.state.showPlaceholder && this.setState({
+                            showPlaceholder: l
+                        }), null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, h.EditorUtils.richValue(n)), !1 === this.props.canFocus) {
+                        let e = s.ReactEditor.findDocumentOrShadowRoot(n),
+                            t = e.getSelection();
+                        null != t && this.isSelectionPartiallyInside(t) && (null == t || t.removeAllRanges())
+                    }
                 }
                 handleKeyDown(e) {
                     var t, n;
@@ -8803,19 +8807,44 @@
                     if (null != l && !(0, p.hasDomParent)(l, r) && !(0, p.hasDomParent)(l, o)) {
                         let e = s.ReactEditor.findDocumentOrShadowRoot(t),
                             n = e.getSelection();
-                        if (null != n) {
-                            let e = !1;
-                            for (let t = n.rangeCount - 1; t >= 0; t--) {
-                                let l = n.getRangeAt(t);
-                                if (null != this.containerRef.current && (0, p.hasDomParent)(l.commonAncestorContainer, this.containerRef.current)) {
-                                    e = !0;
-                                    break
-                                }
-                            }
-                            e && n.removeAllRanges()
-                        }
+                        null != n && this.isSelectionEscaping(n) && n.removeAllRanges()
                     }
                     null == n || n(e)
+                }
+                isSelectionPartiallyInside(e) {
+                    let t = this.containerRef.current;
+                    if (null != e && null != t)
+                        for (let n = e.rangeCount - 1; n >= 0; n--) {
+                            let l = e.getRangeAt(n);
+                            if ((0, p.hasDomParent)(l.startContainer, t) || !l.collapsed && (0, p.hasDomParent)(l.endContainer, t)) return !0
+                        }
+                    return !1
+                }
+                isSelectionEscaping(e) {
+                    let t = this.containerRef.current,
+                        n = !1,
+                        l = !1;
+                    if (null != e && null != t)
+                        for (let i = e.rangeCount - 1; i >= 0; i--) {
+                            let r = e.getRangeAt(i);
+                            if ((0, p.hasDomParent)(r.startContainer, t)) {
+                                if (l) return !0;
+                                n = !0
+                            } else {
+                                if (n) return !0;
+                                l = !0
+                            }
+                            if (!r.collapsed) {
+                                if ((0, p.hasDomParent)(r.startContainer, t)) {
+                                    if (l) return !0;
+                                    n = !0
+                                } else {
+                                    if (n) return !0;
+                                    l = !0
+                                }
+                            }
+                        }
+                    return !1
                 }
                 handleContextMenu(e) {
                     let {

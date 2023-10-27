@@ -9607,7 +9607,7 @@
             function d() {
                 var e, t, s, n, d, u, c, S, E;
                 let T = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    f = (e = "c741f9bfb56058d096eda4d26372b9776a5085ca", e.substring(0, 7)),
+                    f = (e = "ef95aa4e7515baaa7a52e7aa85638af934d90664", e.substring(0, 7)),
                     m = null === (t = r.default) || void 0 === t ? void 0 : t.remoteApp.getVersion(),
                     _ = null === (n = r.default) || void 0 === n ? void 0 : null === (s = (d = n.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(d),
                     I = null === (c = r.default) || void 0 === c ? void 0 : null === (u = (S = c.remoteApp).getAppArch) || void 0 === u ? void 0 : u.call(S),
@@ -9620,7 +9620,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [T, " ", "241207", " ", (0, a.jsxs)("span", {
+                        children: [T, " ", "241370", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", f, ")"]
                         })]
@@ -21616,8 +21616,7 @@
                     }) : (0, a.jsx)(T.default, {
                         user: k
                     }, "decoration"), et && (0, a.jsx)(N.default, {
-                        user: k,
-                        showBorder: !0
+                        user: k
                     }, "effect"), X && (0, a.jsx)(c.PremiumTutorialSubstep, {
                         substeps: [L.PremiumTutorialSubsteps.PROFILE_CUSTOMIZATION_BANNER],
                         children: e => (0, a.jsx)(I.default, {
@@ -21660,7 +21659,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return j
+                    return U
                 }
             });
             var a = s("920040"),
@@ -21670,109 +21669,113 @@
                 r = s("498225"),
                 o = s("975162"),
                 d = s("913144"),
-                u = s("152584"),
-                c = s("642950"),
-                S = s("875212"),
-                E = s("812204"),
-                T = s("685665"),
-                f = s("104385"),
-                m = s("10641"),
-                _ = s("884351"),
-                I = s("184900"),
-                h = s("11899"),
-                N = s("635415"),
-                g = s("662286"),
-                C = s("783142"),
-                p = s("102985"),
-                A = s("790618"),
-                O = s("697218"),
-                x = s("719923"),
-                R = s("845579"),
-                M = s("415167"),
-                D = s("907148"),
-                v = s("994428"),
-                L = s("646718");
+                u = s("327037"),
+                c = s("152584"),
+                S = s("642950"),
+                E = s("875212"),
+                T = s("812204"),
+                f = s("685665"),
+                m = s("104385"),
+                _ = s("10641"),
+                I = s("884351"),
+                h = s("184900"),
+                N = s("11899"),
+                g = s("635415"),
+                C = s("662286"),
+                p = s("783142"),
+                A = s("102985"),
+                O = s("790618"),
+                x = s("697218"),
+                R = s("719923"),
+                M = s("845579"),
+                D = s("415167"),
+                v = s("907148"),
+                L = s("994428"),
+                P = s("646718");
 
-            function P(e, t) {
-                let s = (0, m.useIsDismissibleContentDismissed)(e);
+            function j(e, t) {
+                let s = (0, _.useIsDismissibleContentDismissed)(e);
                 n.useEffect(() => {
-                    t && !s && (0, m.markDismissibleContentAsDismissed)(e, {
-                        dismissAction: v.ContentDismissActionType.AUTO,
+                    t && !s && (0, _.markDismissibleContentAsDismissed)(e, {
+                        dismissAction: L.ContentDismissActionType.AUTO,
                         forceTrack: !0
                     })
                 }, [])
             }
 
-            function j(e) {
-                let t = (0, r.useStateFromStores)([O.default], () => {
-                        let e = O.default.getCurrentUser();
-                        return i(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e
-                    }),
-                    s = (0, r.useStateFromStores)([p.default], () => p.default.hidePersonalInformation),
+            function U(e) {
+                let t = (0, r.useStateFromStores)([x.default], () => {
+                    let e = x.default.getCurrentUser();
+                    return i(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e
+                });
+                n.useEffect(() => {
+                    (0, u.fetchProfile)(t.id)
+                }, [t.id]);
+                let s = (0, r.useStateFromStores)([A.default], () => A.default.hidePersonalInformation),
                     {
                         pendingAvatar: l,
-                        pendingBanner: m,
-                        pendingBio: v,
-                        pendingPronouns: j,
-                        pendingGlobalName: U,
-                        pendingAccentColor: b,
-                        pendingAvatarDecoration: B,
-                        pendingThemeColors: y,
-                        pendingProfileEffectID: F
-                    } = (0, r.useStateFromStoresObject)([A.default], () => {
-                        let e = A.default.getAllPending(),
-                            t = A.default.getErrors();
+                        pendingBanner: _,
+                        pendingBio: L,
+                        pendingPronouns: U,
+                        pendingGlobalName: b,
+                        pendingAccentColor: B,
+                        pendingAvatarDecoration: y,
+                        pendingThemeColors: F,
+                        pendingProfileEffectID: G
+                    } = (0, r.useStateFromStoresObject)([O.default], () => {
+                        let e = O.default.getAllPending(),
+                            t = O.default.getErrors();
                         return {
                             ...e,
                             errors: t
                         }
                     }),
-                    G = R.UseLegacyChatInput.useSetting(),
-                    k = G && null != v ? _.default.parse(void 0, v).content : v,
-                    H = x.default.canUsePremiumProfileCustomization(t),
+                    k = M.UseLegacyChatInput.useSetting(),
+                    H = k && null != L ? I.default.parse(void 0, L).content : L,
+                    w = R.default.canUsePremiumProfileCustomization(t),
                     {
-                        AnalyticsLocationProvider: w
-                    } = (0, T.default)(E.default.PROFILE),
-                    V = {
+                        AnalyticsLocationProvider: V
+                    } = (0, f.default)(T.default.PROFILE),
+                    Y = {
                         user: t,
-                        canUsePremiumCustomization: H,
-                        onUpsellClick: M.default,
-                        onAvatarChange: u.setPendingAvatar,
-                        onBannerChange: C.setPendingBanner,
-                        pendingBanner: m,
-                        pendingBio: k,
-                        pendingPronouns: j,
+                        canUsePremiumCustomization: w,
+                        onUpsellClick: D.default,
+                        onAvatarChange: c.setPendingAvatar,
+                        onBannerChange: p.setPendingBanner,
+                        pendingBanner: _,
+                        pendingBio: H,
+                        pendingPronouns: U,
                         pendingAvatar: l,
-                        pendingGlobalName: U,
-                        pendingAvatarDecoration: B,
-                        pendingProfileEffectID: F
+                        pendingGlobalName: b,
+                        pendingAvatarDecoration: y,
+                        pendingProfileEffectID: G
                     };
-                n.useEffect(() => () => d.default.wait(u.resetAllPending), []);
-                let Y = "UserSettingsProfileCustomization";
-                (0, S.useTriggerDebuggingAA)({
-                    location: Y + " auto on",
+                n.useEffect(() => () => d.default.wait(c.resetAllPending), []);
+                let W = "UserSettingsProfileCustomization";
+                (0, E.useTriggerDebuggingAA)({
+                    location: W + " auto on",
                     autoTrackExposure: !0
-                }), (0, S.useTriggerDebuggingAA)({
-                    location: Y + " auto off",
+                }), (0, E.useTriggerDebuggingAA)({
+                    location: W + " auto off",
                     autoTrackExposure: !1
-                }), P(o.DismissibleContent.SETTINGS_PROFILES_COLLECTIBLES_NEW_BADGE, !0);
-                let W = (0, g.useCanUseProfileEffects)({
+                }), j(o.DismissibleContent.SETTINGS_PROFILES_COLLECTIBLES_NEW_BADGE, !0);
+                let K = (0, C.useCanUseProfileEffects)({
                     location: "UserSettingsProfileCustomization"
                 });
-                return (P(o.DismissibleContent.SETTINGS_PROFILES_PROFILE_EFFECT_NEW_BADGE, W), s) ? (0, a.jsx)(c.default, {}) : (0, a.jsx)(w, {
+                return (j(o.DismissibleContent.SETTINGS_PROFILES_PROFILE_EFFECT_NEW_BADGE, K), s) ? (0, a.jsx)(S.default, {}) : (0, a.jsx)(V, {
                     children: (0, a.jsxs)(a.Fragment, {
-                        children: [(0, a.jsx)(f.default, {
-                            type: L.PremiumUpsellTypes.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
-                        }), (0, a.jsx)(h.default, {
-                            profilePreview: (0, a.jsx)(I.default, {
-                                ...V,
-                                pendingThemeColors: y,
-                                pendingAccentColor: b
+                        children: [(0, a.jsx)(m.default, {
+                            type: P.PremiumUpsellTypes.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
+                        }), (0, a.jsx)(N.default, {
+                            profilePreview: (0, a.jsx)(h.default, {
+                                ...Y,
+                                pendingThemeColors: F,
+                                pendingAccentColor: B
                             }),
-                            children: (0, a.jsx)(D.default, {
+                            children: (0, a.jsx)(v.default, {
                                 navigateToGuildIdentitySettings: e.navigateToGuildIdentitySettings
                             })
-                        }), !x.default.canUsePremiumProfileCustomization(t) && (0, a.jsx)(N.default, {
+                        }), !R.default.canUsePremiumProfileCustomization(t) && (0, a.jsx)(g.default, {
                             user: t
                         })]
                     })

@@ -19091,6 +19091,10 @@ html.decorate-links .lowSaturationUnderline__95e71 {
     margin-bottom: 8px
 }
 
+.item__4b324:first-of-type {
+    max-width: 60%
+}
+
 .item__4b324:last-child {
     margin-bottom: 0
 }
@@ -19355,7 +19359,7 @@ html.decorate-links .lowSaturationUnderline__95e71 {
 }
 
 .trialHeader__3c1fe {
-    max-width: 70%;
+    max-width: 60%;
     margin-bottom: 18px
 }
 
@@ -45725,6 +45729,31 @@ html .progress__4ef76 {
     gap: 16px
 }
 
+.thankYouCard_e40f4e {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 440px;
+    height: 200px;
+    border-radius: 4px;
+    margin: 12px 0
+}
+
+.thankYouText_d91c4e {
+    position: absolute;
+    align-self: center;
+    min-width: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.userAvatar_c53642 {
+    border-radius: 54px;
+    width: 100%
+}
+
 .CTAMessage__4101e {
     margin-bottom: 2px
 }
@@ -64472,8 +64501,8 @@ strong {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -137425,7 +137454,17 @@ html .invoiceCancelRow_c1bfe7 {
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .2);
+    box-shadow: 0 0 32px 32px rgba(0, 0, 0, .2);
+    border-radius: 25px;
+    padding: 2px 8px
+}
+
+.theme-light .trialPill_d04c59 {
+    box-shadow: none;
+    background-color: transparent
 }
 
 .learnMoreLink__43492 {
@@ -138267,9 +138306,14 @@ html .invoiceCancelRow_c1bfe7 {
     width: 34px
 }
 
-.closeButton__644a2 * {
+.closeButton__644a2 div {
+    background-color: hsl(var(--black-500-hsl)/.5);
     height: 34px;
     width: 34px
+}
+
+.closeButton__644a2 div:hover {
+    background-color: hsl(var(--black-500-hsl)/.6)
 }
 
 .modalContent_b9c5e8 {

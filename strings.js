@@ -2148,7 +2148,7 @@
                 CLYDE_SECTION_DESCRIPTION: "Clyde is currently a free experiment and may generate content that could be considered biased, harmful, or inaccurate. Clyde follows server Automod rules. [Learn More]({helpdeskArticle})",
                 ENABLE_CLYDE_SECTION: "Enable Clyde",
                 EDIT_CLYDE: "Edit Clyde",
-                CANNOT_EDIT_CLYDE: "Clyde cannot be edited, he has been kicked from this server.",
+                CANNOT_EDIT_CLYDE: "Clyde cannot be edited, he has been banned from this server.",
                 CANNOT_ADD_CLYDE: "Clyde cannot be added to the server, he has been banned.",
                 SAD_CLYDE_ALT_TEXT: "sad face clyde",
                 ENABLE_CLYDE_SECTION_SWITCH_DESCRIPTION: "This enables our AI chatbot to interact with members in this server.",
@@ -7321,7 +7321,7 @@
                 BILLING_CHECKOUT_CONFIRMATION_CONFIRM: "Close Checkout",
                 BILLING_CHECKOUT_CONFIRMATION_CANCEL: "Cancel",
                 BILLING_PAY_FOR_IT_WITH: "Pay for it With",
-                BILLING_PAYMENT_AUTHORIZATION_CHARGE: "A $0.99 USD hold may be placed on your payment method. [Learn More]({helpDeskArticle})",
+                BILLING_PAYMENT_AUTHORIZATION_CHARGE: "A hold may be placed on your payment method. [Learn More]({helpDeskArticle})",
                 BILLING_IS_GIFT_PURCHASE: "Is this a gift?",
                 BILLING_GIFT_LINK: "Gift Link",
                 BILLING_GIFT_COPIED: "Copied!",
@@ -7353,6 +7353,7 @@
                 BILLING_ACCEPT_TERMS_PAID_SERVICES_TOOLTIP: "Accept the Terms of Service and Paid Services Terms to continue",
                 BILLING_SELECT_PAYMENT_SOURCE_TOOLTIP: "Select a payment source to continue",
                 BILLING_PAYMENT_SOURCE_INVALID: "This payment source is invalid.",
+                BILLING_TRIAL_REDEMPTION_DISABLED: "Trial redemption is temporarily unavailable. Please try again later.",
                 BILLING_ACCOUNT_CREDIT: "Account Credit",
                 BILLING_ACCOUNT_CREDIT_DESCRIPTION: "When you accept a gift while you have a running subscription, or accept a gift that differs from your current subscription, it will appear here as credit.",
                 BILLING_ACCOUNT_CREDIT_DESCRIPTION_IOS_DISCLAIMER: "Unfortunately mobile subscriptions are not eligible for account credit. Account credit will be applied while subscribing through the desktop app.",
@@ -14835,7 +14836,7 @@
                 COLLECTIBLES_NON_PREMIUM_SHOP_CTA: "Unlock Shop with Nitro",
                 COLLECTIBLES_NON_PREMIUM_CARD_INFO: "Access to purchase this decoration is only available with Nitro.",
                 COLLECTIBLES_NON_PREMIUM_STARTER_BANNER: "Collect these bonus avatar decorations for extra style when you subscribe to Nitro! $[Unlock with Nitro](unlockHook)",
-                COLLECTIBLES_PREMIUM_STARTER_BANNER: "Collect these bonus avatar decorations for extra style! Use them anytime with an active Nitro subscription. $[Unlock with Nitro](unlockHook)",
+                COLLECTIBLES_PREMIUM_STARTER_BANNER: "Collect these bonus items for extra style! Use them anytime with an active Nitro subscription. $[Unlock with Nitro](unlockHook)",
                 COLLECTIBLES_NITRO_EXCLUSIVE: "Nitro exclusive",
                 COLLECTIBLES_PERMANENT_COLLECTION: "This decoration is now part of your collection and can be used anytime!",
                 COLLECTIBLES_STARTER_PACK_COLLECTED: "This decoration is now part of your collection and can be used anytime with an active Nitro subscription.",
@@ -14845,7 +14846,7 @@
                 COLLECTIBLES_DETAILS_MODAL_PRICE: "{price} if you have an active Nitro subscription",
                 COLLECTIBLES_DETAILS_MODAL_PREMIUM_PURCHASE_DISCLAIMER: "Once purchased, this decoration will be added to your collection and can be used anytime",
                 COLLECTIBLES_DETAILS_MODAL_NON_PREMIUM_PURCHASE_DISCLAIMER: "After subscribing to Nitro, you’ll have to purchase this decoration separately. Nitro subscriptions become non-refundable once you’ve purchased a decoration.",
-                COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER: "This bonus decoration is yours to keep and use anytime with an active Nitro subscription.",
+                COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER: "This bonus item is yours to keep and use anytime with an active Nitro subscription.",
                 COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT: "Hey! This purchase is non-refundable. Once you complete your purchase, the item will be available for use immediately and can be accessed in your User Profile settings. Note that Nitro subscriptions become non-refundable once you’ve purchased an item.",
                 COLLECTIBLES_SUBSCRIPTION_TOOLTIP_TEXT: "{price} monthly Nitro subscription",
                 COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT: "Nitro subscribers get a discount on this decoration",
@@ -14868,14 +14869,15 @@
                 CHANGE_DECORATION_MODAL_PREMIUM_STARTER_HEADER: "Exclusive to Nitro",
                 CHANGE_DECORATION_MODAL_PREMIUM_STARTER_DESC: "Collect and use these bonus decorations anytime with an active Nitro subscription.",
                 CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE: "Want this decoration for yourself? Visit the shop to buy and add it to your collection. Only with Nitro.",
-                CHANGE_DECORATION_MODAL_PREVIEW_STARTER: "Want this decoration for yourself? Collect and use this bonus decoration anytime with an active Nitro subscription.",
+                CHANGE_DECORATION_MODAL_PREVIEW_STARTER: "Want this for yourself? Collect and use this bonus decoration anytime with an active Nitro subscription",
                 CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED: "Use this bonus decoration with an active Nitro subscription.",
                 CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM: "Want this decoration for yourself? Head to the shop to buy and collect it!",
-                CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM: "Want this decoration for yourself? Head to the shop to collect it!",
+                CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM: "Want this for yourself? Head to the shop to collect it!",
                 CHANGE_DECORATION_MODAL_SHOP_PREVIEW_HEADER: "Shop Preview",
                 CHANGE_DECORATION_MODAL_SHOP_PREVIEW_DESC: "Try on some of the decorations currently available for purchase in the shop.",
                 CHANGE_DECORATION_MODAL_SHOP_PREVIEW_HEADER_STARTER_DESC: "Buy and collect decorations with a Nitro subscription.",
                 CHANGE_DECORATION_MODAL_CHAT_PREVIEW: "Chat Preview",
+                CHANGE_PFX_MODAL_PREVIEW_STARTER: "Want this for yourself? Collect and use this bonus profile effect anytime with an active Nitro subscription",
                 COLLECTIBLES_SOCIAL_UPSELL: "Like this avatar decoration? $[Get your own from the shop](openShop).",
                 COLLECTIBLES_SOCIAL_UPSELL_PREMIUM: "Like this avatar decoration? $[Claim it with your Nitro subscription](openShop).",
                 COLLECTIBLES_ACCOUNT_SWITCH_UPSELL_TITLE: "New Avatar Decorations!",
@@ -14898,7 +14900,7 @@
                 COLLECTIBLES_DISCORD_SHOP: "Discord Shop",
                 COLLECTIBLES_UPGRADE_FOR_DISCOUNT: "Upgrade for Discount",
                 COLLECTIBLES_SFA_TITLE: "The Shop is now open to you!",
-                COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION: "Collect these sweet, bonus avatar decorations when you join Nitro! $[Unlock with Nitro](getPremium)",
+                COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION: "Collect these sweet, bonus items when you join Nitro! $[Unlock with Nitro](getPremium)",
                 COLLECTIBLES_SFA_HERO_BANNER_SUBTITLE: "Charming. Fierce. Hungry. Whatever your vibe, buy and collect your favorite styles for your profile for any occasion.",
                 COLLECTIBLES_SFA_COACHMARK_DESCRIPTION: "You can now add pizzazz to your profile with stylish animations. Grab your favorite styles from the Shop.",
                 COLLECTIBLES_SFA_BANNER_DESCRIPTION: "Make your profile feel alive with snazzy profile effects and avatar decorations. What's not to love?",
@@ -15121,7 +15123,7 @@
                 GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_DISPLAY_OPTIONS_PREMIUM_MEMBER_COUNT_DESCRIPTION: "Display how many subscribers you have",
                 GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_SETTINGS_PRIMARY_TOGGLE_DISABLED_TOOLTIP: "You need at least one published tier to enable the Promo Page.",
                 GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION: "Enable monetization first!",
-                FORM_HELP_SYSTEM_CHANNEL_ROLE_SUBSCRIPTION_PURCHASE_MESSAGES: "Send a message when someone purchases or renews a Server Subscription",
+                FORM_HELP_SYSTEM_CHANNEL_ROLE_SUBSCRIPTION_PURCHASE_MESSAGES: "Send a message when someone purchases a Server Product or Server Subscription",
                 FORM_HELP_SYSTEM_CHANNEL_ROLE_SUBSCRIPTION_PURCHASE_MESSAGE_REPLIES: "Prompt members to reply to Server Subscription congratulation messages with a sticker",
                 GUILD_ROLE_SUBSCRIPTION_CHECKLIST_HEADER: "Premium Setup",
                 GUILD_ROLE_SUBSCRIPTION_CHECKLIST_PAYMENT_ENABLE: "Enable monetization",
@@ -16259,6 +16261,8 @@
                 GUILD_SHOP_REPORT_MODAL_BODY: "Do you want to report [**!!{listingName}!!**] for violation of the [Server Monetization Terms]({monetizationTermsUrl}) or [Community Guidelines]({communityGuidelinesUrl})?",
                 SKU_REPORT_CONFIRMATION_HEADER: "Report Submitted",
                 SKU_REPORT_CONFIRMATION_BODY: "Your report has been submitted against [**!!{skuName}!!**]",
+                SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE: "$[!!{username}!!](usernameHook) has purchased [{productName}](handleProductListingClick)!",
+                GUILD_PRODUCT_PURCHASE_THANK_YOU_CARD_TEXT: "Thank you,\n $[!!{username}!!](usernameHook)",
                 THREAD_HAS_BEEN_DELETED: "Thread has been deleted.",
                 FRIEND_INVITE_SHEET_TITLE: "Send Link to Add Friends",
                 FRIEND_INVITE_EXPIRATION: "Links expire in {expirationDays} days, or {expirationUses} uses.",
@@ -17780,7 +17784,7 @@
                 L = E("782340");
             (0, r.setUpdateRules)(i.default), (0, I.default)(L.default, n.default, s.default), a.default.Emitter.injectBatchEmitChanges(o.unstable_batchedUpdates), a.default.PersistedStore.disableWrites = __OVERLAY__, a.default.initialize();
             let u = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("241207", ", Version Hash: ").concat("c741f9bfb56058d096eda4d26372b9776a5085ca")), t.default.setTags({
+            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("241370", ", Version Hash: ").concat("ef95aa4e7515baaa7a52e7aa85638af934d90664")), t.default.setTags({
                 appContext: l.CURRENT_APP_CONTEXT
             }), S.default.initBasic(), N.default.init(), T.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()
         },
@@ -20142,8 +20146,8 @@
 
             function o() {
                 var e;
-                let _ = parseInt((e = "241207", "241207"));
-                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("241207")), _ = 0), _
+                let _ = parseInt((e = "241370", "241370"));
+                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("241370")), _ = 0), _
             }
         },
         990629: function(e, _, E) {

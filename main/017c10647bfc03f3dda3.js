@@ -1000,7 +1000,7 @@
                     codeBlock: {
                         order: i.defaultRules.codeBlock.order,
                         requiredFirstCharacters: ["`"],
-                        match: e => /^```(?:([a-z0-9_+\-.]+?)\n)?\n*([^\n][^]*?)\n*```/i.exec(e),
+                        match: e => /^```(?:([a-z0-9_+\-.#]+?)\n)?\n*([^\n][^]*?)\n*```/i.exec(e),
                         parse(e, t, n) {
                             var l, r;
                             return {

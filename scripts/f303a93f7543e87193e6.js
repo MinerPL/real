@@ -1684,7 +1684,10 @@
                 var n, M, g;
                 let {
                     reducedMotion: p
-                } = i.useContext(l.AccessibilityPreferencesContext), I = (0, d.useIsActiveChannelOrUnarchivableThread)(t), S = (0, s.useStateFromStores)([o.default], () => o.default.can(E.Permissions.MANAGE_MESSAGES, t) && I, [t, I]), _ = e.reactions.reduce((e, t) => null != e.find(e => null != e.id && e.id === t.emoji.id || e.name === t.emoji.name) ? e : [...e, t.emoji], []), T = (n, a) => {
+                } = i.useContext(l.AccessibilityPreferencesContext), I = (0, d.useIsActiveChannelOrUnarchivableThread)(t), S = (0, s.useStateFromStores)([o.default], () => o.default.can(E.Permissions.MANAGE_MESSAGES, t) && I, [t, I]), _ = e.reactions.reduce((e, t) => {
+                    var n;
+                    return (null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) != null || null != e.find(e => null != e.id && e.id === t.emoji.id || e.name === t.emoji.name) ? e : [...e, t.emoji]
+                }, []), T = (n, a) => {
                     n.shiftKey ? (0, r.removeEmojiReactions)(t.id, e.id, a) : u.default.show({
                         title: m.default.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_TITLE,
                         body: m.default.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_BODY,
