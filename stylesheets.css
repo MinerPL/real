@@ -64472,8 +64472,8 @@ strong {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.25rem;
+    font-size: 16px;
+    line-height: 20px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -79912,7 +79912,8 @@ button.button__4f306.disabled_dc5630 {
 }
 
 .headerArt__851a2 {
-    width: 100%
+    width: 100%;
+    pointer-events: none
 }
 
 .container__4ecff {
@@ -138232,6 +138233,10 @@ html .invoiceCancelRow_c1bfe7 {
 
 .buttonsBackground__0addb:hover {
     cursor: pointer
+}
+
+.buttonsBackground__0addb.disabled__42201 {
+    cursor: default
 }
 
 .buttonsBackgroundActive__5341f {

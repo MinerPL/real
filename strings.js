@@ -864,6 +864,7 @@
                 EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_YEARLY: "Hey! This purchase is for a recurring subscription, which which means that we'll charge you today and continue to charge you monthly until you cancel. You may cancel anytime under User Settings > Subscriptions, and previous charges won’t be refunded unless required by law. This purchase is being offered to you by the developer of this Activity and can be accessed and used only when you’re in this Activity.",
                 EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_RATE_AND_RENEWAL: "Hey! This purchase is for a recurring subscription, which will renew for **{rate}** on **{renewalDate, date, medium}**. You may cancel anytime under User Settings > Subscriptions, and previous charges won’t be refunded unless required by law. This purchase is being offered to you by the developer of this Activity and can be accessed and used only when you’re in this Activity.",
                 EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL: "Minimize activity",
+                EMBEDDED_ACTIVITIES_EXPAND_A11Y_LABEL: "Expand activity",
                 ACTIVITY_REPORT_POST_ACTIVITY_HEADER: "How'd !!{applicationName}!! go?",
                 ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE: "What could have gone better?",
                 ACTIVITY_REPORTED_POSITIVE: "Thanks for sharing! Feedback like yours helps us improve Activities.",
@@ -1027,7 +1028,7 @@
                 AFK_SETTINGS: "Inactive Settings",
                 NO_AFK_CHANNEL: "No Inactive Channel",
                 FORM_LABEL_AFK_CHANNEL: "Inactive Channel",
-                FORM_HELP_AFK_CHANNEL: "\nAutomatically move members to this channel and mute them when they have been idle for longer than the\ninactive timeout. This does not affect browsers.\n  ",
+                FORM_HELP_AFK_CHANNEL: "Automatically move members to this channel and mute them when they have been idle for longer than the\ninactive timeout. This does not affect browsers.",
                 FORM_LABEL_AFK_TIMEOUT: "Inactive Timeout",
                 NO_SYSTEM_CHANNEL: "No System Messages",
                 FORM_LABEL_SYSTEM_CHANNEL: "System Messages Channel",
@@ -15887,6 +15888,7 @@
                 STRANGER_DANGER_BANNER_CLOSE_A11Y: "Close",
                 STRANGER_DANGER_BLOCK_CONFIRM: "User Blocked",
                 STRANGER_DANGER_MUTE_CONFIRM: "User Muted",
+                STRANGER_DANGER_UNMUTE_CONFIRM: "User Unmuted",
                 STRANGER_DANGER_TIPS_HEADER: "Safety Tips",
                 STRANGER_DANGER_TIPS_DESCRIPTION: "Remember, you're always in control",
                 STRANGER_DANGER_TIPS_1: "Trust your gut. If something feels off, you can always take a break.",
@@ -15894,6 +15896,7 @@
                 STRANGER_DANGER_TIPS_3: "You're not alone. If you need help, talk to a trusted adult. You can also report messages to us anytime.",
                 STRANGER_DANGER_MORE_HEADER: "More you can do",
                 STRANGER_DANGER_MORE_MUTE: "Mute",
+                STRANGER_DANGER_MORE_UNMUTE: "Unmute",
                 STRANGER_DANGER_MORE_MUTE_DESCRIPTION: "Turn off notifications for this chat.",
                 STRANGER_DANGER_MORE_BLOCK: "Block",
                 STRANGER_DANGER_MORE_BLOCK_DESCRIPTION: "Remove their ability to message, mention, or add you as a friend.",
@@ -16102,6 +16105,8 @@
                 CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED_TITLE: "Verified payment account required",
                 CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED_BODY: "You must setup and complete verification of your payment account before you can publish.\n\nHead over to the $[Payment](highlightHook) tab and click $[Edit Payment Info](highlightHook) to get started.",
                 CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED_BODY_WITH_LINK: "You must setup and complete verification of your payment account before you can publish.\n\n[Click here]({url}) to get started, or head over to the $[Payment](highlightHook) tab at any time and click $[Edit Payment Info](highlightHook).",
+                CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_TITLE: "Cannot edit the product",
+                CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_BODY: "Your server is currently restricted for monetization and you cannot edit products. Check your email for details",
                 GUILD_PRODUCT_EDIT_MODAL_CARD_PREVIEW_HEADING: "Here's what members see",
                 GUILD_PRODUCT_EDIT_MODAL_CARD_PREVIEW_DESCRIPTION: "This is a preview of what your server product will look like to people on Discord when you share in-chat.",
                 GUILD_PRODUCT_EDIT_MODAL_SAVE_DRAFT_BUTTON: "Save as draft",
@@ -17775,7 +17780,7 @@
                 L = E("782340");
             (0, r.setUpdateRules)(i.default), (0, I.default)(L.default, n.default, s.default), a.default.Emitter.injectBatchEmitChanges(o.unstable_batchedUpdates), a.default.PersistedStore.disableWrites = __OVERLAY__, a.default.initialize();
             let u = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("241024", ", Version Hash: ").concat("e679da6284f50f15868cf42e8823cd89991bad76")), t.default.setTags({
+            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("241207", ", Version Hash: ").concat("c741f9bfb56058d096eda4d26372b9776a5085ca")), t.default.setTags({
                 appContext: l.CURRENT_APP_CONTEXT
             }), S.default.initBasic(), N.default.init(), T.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()
         },
@@ -19016,28 +19021,28 @@
                 } = e, {
                     analyticsLocations: n,
                     AnalyticsLocationProvider: T
-                } = (0, O.default)(N.default.APP_ICON_EDITOR), {
-                    isUpsellPreview: i,
-                    isEditorOpen: A,
-                    shouldEditorAnimate: R
+                } = (0, O.default)(N.default.APP_ICON_EDITOR), i = (0, a.useStateFromStores)([L.default], () => L.default.getCurrentUser()), {
+                    isUpsellPreview: A,
+                    isEditorOpen: R,
+                    shouldEditorAnimate: l
                 } = (0, a.useStateFromStoresObject)([c.default, S.default], () => ({
                     isUpsellPreview: c.default.isUpsellPreview,
                     isEditorOpen: c.default.isEditorOpen,
                     shouldEditorAnimate: _ && !S.default.useReducedMotion
                 }));
                 o.useEffect(() => {
-                    i && C.default.track(U.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+                    A && C.default.track(U.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                         type: P.PremiumUpsellTypes.APP_ICON_UPSELL,
                         location_stack: n
                     })
-                }, [i, n]);
-                let l = (0, s.default)(null, i ? G : U.NOOP);
-                return o.useEffect(() => {
-                    if (i && !A) return G
-                }, [i, A]), (0, t.jsx)(T, {
+                }, [A, n]);
+                let u = (0, s.default)(null, A ? G : U.NOOP);
+                return (o.useEffect(() => {
+                    if (A && !R) return G
+                }, [A, R]), null == i) ? null : (0, t.jsx)(T, {
                     children: (0, t.jsx)("div", {
-                        ref: l,
-                        className: I(m.editor, R ? m.editorAnimate : null),
+                        ref: u,
+                        className: I(m.editor, l ? m.editorAnimate : null),
                         children: (0, t.jsxs)(r.HeadingLevel, {
                             children: [(0, t.jsx)(B, {
                                 markAsDismissed: E
@@ -20137,8 +20142,8 @@
 
             function o() {
                 var e;
-                let _ = parseInt((e = "241024", "241024"));
-                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("241024")), _ = 0), _
+                let _ = parseInt((e = "241207", "241207"));
+                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("241207")), _ = 0), _
             }
         },
         990629: function(e, _, E) {
@@ -21588,17 +21593,18 @@
                 T = E("793441");
 
             function i(e) {
+                var _;
                 let {
-                    channelId: _,
-                    message: E,
-                    optimistic: t,
-                    isPushNotification: i
+                    channelId: E,
+                    message: t,
+                    optimistic: i,
+                    isPushNotification: s
                 } = e;
-                if (!(0, r.isEligibleForExplicitMediaRedaction)() || t || i || null == _ || E.author.id === o.default.getId()) return !1;
-                let s = I.default.getChannelId(),
-                    S = n.default.getCurrentSidebarChannelId(s),
-                    N = _ === s || _ === S;
-                return !!(N && (0, T.shouldRedactExplicitContent)(E)) && ((0, a.sendMessagesForScanning)(_, [E.id]), !0)
+                if (!(0, r.isEligibleForExplicitMediaRedaction)() || i || s || null == E || (null === (_ = t.author) || void 0 === _ ? void 0 : _.id) === o.default.getId()) return !1;
+                let S = I.default.getChannelId(),
+                    N = n.default.getCurrentSidebarChannelId(S),
+                    O = E === S || E === N;
+                return !!(O && (0, T.shouldRedactExplicitContent)(t)) && ((0, a.sendMessagesForScanning)(E, [t.id]), !0)
             }
 
             function s(e) {
@@ -23534,18 +23540,19 @@
                     s[t] = new Set(I)
                 },
                 MESSAGE_CREATE: function(e) {
+                    var _;
                     let {
-                        channelId: _,
-                        message: E,
-                        optimistic: t,
-                        isPushNotification: o
+                        channelId: E,
+                        message: t,
+                        optimistic: o,
+                        isPushNotification: n
                     } = e;
-                    if (t || o) return !1;
-                    let n = a.default.getChannel(_);
-                    if (null == n) return !1;
-                    let I = n.guild_id;
-                    if (null == I || null == s[I]) return !1;
-                    R(I, _, E.id, E.author.id)
+                    if (o || n) return !1;
+                    let I = a.default.getChannel(E);
+                    if (null == I) return !1;
+                    let r = I.guild_id;
+                    if (null == r || null == s[r]) return !1;
+                    R(r, E, t.id, null === (_ = t.author) || void 0 === _ ? void 0 : _.id)
                 },
                 GUILD_DELETE: function(e) {
                     let {
@@ -24305,14 +24312,15 @@
                         } = await this._getOrLoadOnboardingMemberActions(_), n = null == t ? void 0 : t.find(e => e.channelId === E);
                         (null == o ? void 0 : o[E]) !== !0 && null != n && n.actionType === O.NewMemberActionTypes.VIEW && (0, S.completeNewMemberAction)(_, E)
                     }, this.handleMessageSend = e => {
+                        var _;
                         let {
-                            guildId: _,
-                            channelId: E,
-                            message: t
+                            guildId: E,
+                            channelId: t,
+                            message: o
                         } = e;
-                        if (null == _ || null == E || t.author.id !== a.default.getId()) return;
-                        let o = r.default.getChannel(E);
-                        (null == o ? void 0 : o.isForumPost()) && (null == o ? void 0 : o.parent_id) != null && this._completeChatAction(_, o.parent_id), this._completeChatAction(_, E)
+                        if (null == E || null == t || (null === (_ = o.author) || void 0 === _ ? void 0 : _.id) !== a.default.getId()) return;
+                        let n = r.default.getChannel(t);
+                        (null == n ? void 0 : n.isForumPost()) && (null == n ? void 0 : n.parent_id) != null && this._completeChatAction(E, n.parent_id), this._completeChatAction(E, t)
                     }, this.handleThreadCreate = e => {
                         var _;
                         let {
@@ -25957,6 +25965,9 @@
                 isFetchingDefaultSounds() {
                     return C === o.FETCHING
                 }
+                isFetching() {
+                    return this.isFetchingSounds() || this.isFetchingDefaultSounds()
+                }
                 shouldFetchDefaultSounds() {
                     return C === o.NOT_FETCHED
                 }
@@ -26304,15 +26315,15 @@
                     }
                 }
                 handleMessageCreate(e) {
-                    var _, E;
+                    var _, E, t;
                     let {
-                        channelId: t,
-                        message: o
-                    } = e, n = r.default.getChannel(t);
-                    if (o.author.id !== a.default.getId() || !(null == n ? void 0 : n.isActiveThread())) return;
-                    let T = new Date(null !== (E = null === (_ = n.threadMetadata) || void 0 === _ ? void 0 : _.archiveTimestamp) && void 0 !== E ? E : 0).getTime(),
-                        i = Date.now() - T;
-                    i < 5e3 && I.default.resort(n.parent_id)
+                        channelId: o,
+                        message: n
+                    } = e, T = r.default.getChannel(o);
+                    if ((null === (_ = n.author) || void 0 === _ ? void 0 : _.id) !== a.default.getId() || !(null == T ? void 0 : T.isActiveThread())) return;
+                    let i = new Date(null !== (t = null === (E = T.threadMetadata) || void 0 === E ? void 0 : E.archiveTimestamp) && void 0 !== t ? t : 0).getTime(),
+                        s = Date.now() - i;
+                    s < 5e3 && I.default.resort(T.parent_id)
                 }
                 constructor(...e) {
                     super(...e), this.actions = {
