@@ -2598,6 +2598,7 @@
                 _LOGIN_STAGE: "Listen In",
                 REGISTER: "Register",
                 ENTER_PHONE_OR_EMAIL: "Enter phone or email",
+                ENTER_EMAIL: "Enter email",
                 REGISTER_USERNAME_HINT: "You can always change this later!",
                 REGISTER_LOGIN_PRIVACY_NOTICE: "[View our Privacy Policy]({privacyURL})",
                 FORGOT_PASSWORD: "Forgot your password?",
@@ -4793,6 +4794,7 @@
                 CONTACTS: "Contacts",
                 CONTACTS_ON_DISCORD: "Contacts on Discord",
                 FRIEND_REQUEST_NO_RESULTS_FOUND: "Wumpus looked, but couldn’t find anyone with that name.",
+                SEARCH_OR_ADD_BY_USERNAME: "Search or type a username",
                 ADD_BY_USERNAME: "Add by Username",
                 ADD_BY_ID_TITLE: "Add your friend on Discord",
                 ADD_BY_ID_BODY: "You will need both their username and a tag. Keep in mind that username is case sensitive.",
@@ -10838,6 +10840,7 @@
                 FRIEND_FINDER_INCENTIVIZED_BOOST_TITLE_NEW_USER: "Free Nitro Earned",
                 FRIEND_FINDER_INCENTIVIZED_BOOST_PROGRESS_NEW_USER: "{earned, plural, =1 {1 month} =0 {0 months} other {{earned} months}}",
                 FRIEND_FINDER_PEOPLE_YOU_MAY_KNOW_HEADER_NEW_USER: "People you may know — {count}",
+                FRIEND_FINDER_SEARCH_ROW_NOT_FOUND: "No exact username matches found",
                 CONTACT_SYNC_TITLE: "Find your friends",
                 CONTACT_SYNC_LANDING_TITLE: "Find your friends",
                 CONTACT_SYNC_LANDING_SUBTITLE_REDESIGN: "Let's see which of your contacts is already on Discord!",
@@ -15729,6 +15732,7 @@
                 CLIPS_SETTINGS_KEYBIND: "Clipping Keybind",
                 CLIPS_SETTINGS_KEYBIND_HELP: "Set up your keybind to capture clips. The default is ALT + C.",
                 CLIPS_SAVE: "Save Clip",
+                CLIPS_VIEWERSIDE_SAVE: "Capture Clip",
                 CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS: "Allow viewers to capture clips",
                 CLIPS_SETTINGS_ALLOW_VIEWER_CLIPS_HELP: "Enable the creation of clips from your Go Live stream",
                 CLIPS_SETTINGS_WHO_CAN_CAPTURE: "Who can capture clips",
@@ -17948,7 +17952,7 @@
                 L = E("782340");
             (0, i.setUpdateRules)(s.default), (0, r.default)(L.default, n.default, T.default), a.default.Emitter.injectBatchEmitChanges(o.unstable_batchedUpdates), a.default.PersistedStore.disableWrites = __OVERLAY__, a.default.initialize();
             let u = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("242400", ", Version Hash: ").concat("9d41a4cfe2b834e7a8154195342e889fbaf0563b")), t.default.setTags({
+            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("242664", ", Version Hash: ").concat("ca8bd0cb4718cf5b7578281f17ce09a20a1cdd15")), t.default.setTags({
                 appContext: l.CURRENT_APP_CONTEXT
             }), S.default.initBasic(), N.default.init(), I.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()
         },
@@ -19300,7 +19304,7 @@
                     loadRightBeforeConnectionOpen: !0
                 },
                 ExplicitMediaManager: {
-                    actions: ["LOAD_MESSAGES_SUCCESS", "MESSAGE_CREATE"],
+                    actions: ["LOAD_MESSAGES_SUCCESS", "MESSAGE_CREATE", "SEARCH_FINISH"],
                     inlineRequire: () => E("983850").default,
                     neverLoadBeforeConnectionOpen: !0
                 },
@@ -20318,8 +20322,8 @@
 
             function o() {
                 var e;
-                let _ = parseInt((e = "242400", "242400"));
-                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("242400")), _ = 0), _
+                let _ = parseInt((e = "242664", "242664"));
+                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("242664")), _ = 0), _
             }
         },
         990629: function(e, _, E) {
@@ -21391,64 +21395,82 @@
             "use strict";
             E.r(_), E.d(_, {
                 default: function() {
-                    return N
+                    return u
                 }
             });
-            var t = E("689988"),
-                o = E("271938"),
-                n = E("982108"),
-                r = E("18494"),
-                a = E("695681"),
-                i = E("457971"),
-                I = E("793441");
+            var t = E("345570"),
+                o = E.n(t),
+                n = E("452016"),
+                r = E.n(n),
+                a = E("689988"),
+                i = E("271938"),
+                I = E("982108"),
+                s = E("18494"),
+                T = E("695681"),
+                S = E("457971"),
+                N = E("793441");
 
-            function s(e) {
+            function O(e) {
+                var _, E, t, o, n, r, a, i, I, s;
+                let T = null !== (a = null == e ? void 0 : null === (_ = e.attachments) || void 0 === _ ? void 0 : _.length) && void 0 !== a ? a : 0,
+                    S = null !== (i = null == e ? void 0 : null === (E = e.embeds) || void 0 === E ? void 0 : E.length) && void 0 !== i ? i : 0;
+                if (0 === T && 0 === S) return !1;
+                let N = null !== (I = null == e ? void 0 : null === (o = e.attachments) || void 0 === o ? void 0 : null === (t = o.filter(e => null == e.content_scan_version)) || void 0 === t ? void 0 : t.length) && void 0 !== I ? I : 0,
+                    O = null !== (s = null == e ? void 0 : null === (r = e.embeds) || void 0 === r ? void 0 : null === (n = r.filter(e => null == e.content_scan_version)) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0;
+                return N > 0 || O > 0
+            }
+
+            function A(e) {
                 var _;
                 let {
                     channelId: E,
                     message: t,
-                    optimistic: s,
-                    isPushNotification: T
+                    optimistic: o,
+                    isPushNotification: n
                 } = e;
-                if (!(0, i.isEligibleForExplicitMediaRedaction)() || s || T || null == E || (null === (_ = t.author) || void 0 === _ ? void 0 : _.id) === o.default.getId()) return !1;
-                let S = r.default.getChannelId(),
-                    N = n.default.getCurrentSidebarChannelId(S),
-                    O = E === S || E === N;
-                return !!(O && (0, I.shouldRedactExplicitContent)(t)) && ((0, a.sendMessagesForScanning)(E, [t.id]), !0)
+                if (!(0, S.isEligibleForExplicitMediaRedaction)() || o || n || null == E || (null === (_ = t.author) || void 0 === _ ? void 0 : _.id) === i.default.getId()) return !1;
+                let r = s.default.getChannelId(),
+                    a = I.default.getCurrentSidebarChannelId(r),
+                    O = E === r || E === a;
+                return !!(O && (0, N.shouldRedactExplicitContent)(t)) && ((0, T.sendMessagesForScanning)(E, [t.id]), !0)
             }
 
-            function T(e) {
+            function R(e) {
                 let {
                     channelId: _,
                     messages: E
                 } = e;
-                if (!(0, i.isEligibleForExplicitMediaRedaction)() || null == _ || null == E) return !1;
-                let t = r.default.getChannelId(),
-                    o = n.default.getCurrentSidebarChannelId(t),
-                    s = _ === t || _ === o;
-                if (s) {
-                    let e = E.filter(e => (function(e) {
-                        var _, E, t, o, n, r, a, i, I, s;
-                        let T = null !== (a = null == e ? void 0 : null === (_ = e.attachments) || void 0 === _ ? void 0 : _.length) && void 0 !== a ? a : 0,
-                            S = null !== (i = null == e ? void 0 : null === (E = e.embeds) || void 0 === E ? void 0 : E.length) && void 0 !== i ? i : 0;
-                        if (0 === T && 0 === S) return !1;
-                        let N = null !== (I = null == e ? void 0 : null === (o = e.attachments) || void 0 === o ? void 0 : null === (t = o.filter(e => null == e.content_scan_version)) || void 0 === t ? void 0 : t.length) && void 0 !== I ? I : 0,
-                            O = null !== (s = null == e ? void 0 : null === (r = e.embeds) || void 0 === r ? void 0 : null === (n = r.filter(e => null == e.content_scan_version)) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0;
-                        return N > 0 || O > 0
-                    })(e) && (0, I.shouldRedactExplicitContent)(e)).map(e => e.id);
-                    if (e.length > 0) return (0, a.sendMessagesForScanning)(_, e), !0
+                if (!(0, S.isEligibleForExplicitMediaRedaction)() || null == _ || null == E) return !1;
+                let t = s.default.getChannelId(),
+                    o = I.default.getCurrentSidebarChannelId(t),
+                    n = _ === t || _ === o;
+                if (n) {
+                    let e = E.filter(e => O(e) && (0, N.shouldRedactExplicitContent)(e)).map(e => e.id);
+                    if (e.length > 0) return (0, T.sendMessagesForScanning)(_, e), !0
                 }
                 return !1
             }
-            class S extends t.default {
+
+            function l(e) {
+                let {
+                    messages: _
+                } = e;
+                if (!(0, S.isEligibleForExplicitMediaRedaction)() || null == _) return !1;
+                let E = o(_),
+                    t = r(E, (e, _) => e.id === _.id && e.channel_id === _.channel_id),
+                    n = t.filter(e => O(e) && (0, N.shouldRedactExplicitContent)(e));
+                return !!(n.length > 0) && ((0, T.sendMultiChannelMessagesForScanning)(n), !0)
+            }
+            class L extends a.default {
                 constructor(...e) {
                     super(...e), this.actions = {
-                        LOAD_MESSAGES_SUCCESS: T,
-                        MESSAGE_CREATE: s
+                        LOAD_MESSAGES_SUCCESS: R,
+                        MESSAGE_CREATE: A,
+                        SEARCH_FINISH: l
                     }
                 }
             }
-            var N = new S
+            var u = new L
         },
         722333: function(e, _, E) {
             "use strict";
@@ -25756,9 +25778,6 @@
                 }
                 getSoundsForGuild(e) {
                     return l.get(e)
-                }
-                getDefaultSounds() {
-                    return this.getSoundsForGuild(O.DEFAULT_SOUND_GUILD_ID)
                 }
                 getSound(e, _) {
                     var E;
