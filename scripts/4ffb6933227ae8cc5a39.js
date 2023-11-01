@@ -32,7 +32,7 @@
             var s = a("308503"),
                 n = a("599110"),
                 i = a("49111");
-            let l = {
+            let r = {
                     guildId: void 0,
                     channelId: void 0,
                     channelType: void 0,
@@ -41,11 +41,11 @@
                     selectedItemChanges: 0,
                     numMediaItems: 0
                 },
-                r = (0, s.default)(() => l);
+                l = (0, s.default)(() => r);
 
             function d(e, t, a, s) {
-                r.setState({
-                    ...l,
+                l.setState({
+                    ...r,
                     guildId: e,
                     channelId: t,
                     channelType: a,
@@ -54,7 +54,7 @@
             }
 
             function o() {
-                let e = r.getState();
+                let e = l.getState();
                 n.default.track(i.AnalyticEvents.MEDIA_VIEWER_SESSION_COMPLETED, {
                     guild_id: e.guildId,
                     channel_id: e.channelId,
@@ -63,13 +63,13 @@
                     number_thumbnail_swipes: e.thumbnailSwipes,
                     number_selected_item_changes: e.selectedItemChanges,
                     number_media_items: e.numMediaItems
-                }), r.setState({
-                    ...l
+                }), l.setState({
+                    ...r
                 })
             }
 
             function c() {
-                r.setState(e => ({
+                l.setState(e => ({
                     selectedItemChanges: e.selectedItemChanges + 1
                 }))
             }
@@ -85,8 +85,8 @@
             a("884691");
             var n = a("446674"),
                 i = a("151426"),
-                l = a("77078"),
-                r = a("997289"),
+                r = a("77078"),
+                l = a("997289"),
                 d = a("812204"),
                 o = a("685665"),
                 c = a("649844"),
@@ -119,9 +119,9 @@
                     height: 280
                 }, {
                     location: w
-                } = (0, r.useAnalyticsContext)(), {
+                } = (0, l.useAnalyticsContext)(), {
                     analyticsLocations: L
-                } = (0, o.default)(d.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), j = (0, n.useStateFromStores)([_.default], () => _.default.getCurrentUser()), B = (0, N.isPremiumExactly)(j, f.PremiumTypes.TIER_2), G = (0, N.isPremium)(j) && !B;
+                } = (0, o.default)(d.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), B = (0, n.useStateFromStores)([_.default], () => _.default.getCurrentUser()), j = (0, N.isPremiumExactly)(B, f.PremiumTypes.TIER_2), G = (0, N.isPremium)(B) && !j;
                 return (0, s.jsx)(g.default, {
                     renderModalProps: t,
                     video: {
@@ -137,10 +137,10 @@
                     modalDismissibleContent: i.DismissibleContent.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL,
                     header: A.default.Messages.BOGO_ANNOUNCEMENT_MODAL_HEADER,
                     subHeader: A.default.Messages.BOGO_ANNOUNCEMENT_MODAL_SUBHEADER,
-                    subHeaderExtra: () => (0, s.jsx)(l.Anchor, {
+                    subHeaderExtra: () => (0, s.jsx)(r.Anchor, {
                         className: O.termsApplyAnchor,
                         href: E.default.getArticleURL(C.HelpdeskArticles.SUMMER_2023_BOGO),
-                        children: (0, s.jsx)(l.Heading, {
+                        children: (0, s.jsx)(r.Heading, {
                             variant: "heading-md/normal",
                             className: O.termsApplyBodyText,
                             children: A.default.Messages.BOGO_TERMS_APPLY
@@ -169,8 +169,8 @@
                         return (0, s.jsxs)(m.default, {
                             className: O.buttonWide,
                             innerClassName: O.innerButton,
-                            color: l.Button.Colors.GREEN,
-                            size: l.Button.Sizes.SMALL,
+                            color: r.Button.Colors.GREEN,
+                            size: r.Button.Sizes.SMALL,
                             onClick: () => {
                                 h.default.track(C.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
                                     change_log_id: T,
@@ -211,12 +211,12 @@
             a("884691");
             var n = a("669491"),
                 i = a("819855"),
-                l = a("77078"),
-                r = a("841098"),
+                r = a("77078"),
+                l = a("841098"),
                 d = e => {
                     let {
                         className: t
-                    } = e, a = (0, r.default)(), d = (0, l.useToken)(n.default.colors.BACKGROUND_ACCENT).hex();
+                    } = e, a = (0, l.default)(), d = (0, r.useToken)(n.default.colors.BACKGROUND_ACCENT).hex();
                     return (0, s.jsx)("svg", {
                         width: "700",
                         height: "120",
@@ -235,63 +235,64 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return M
+                    return b
                 }
             });
             var s = a("37983"),
                 n = a("884691"),
                 i = a("414456"),
-                l = a.n(i),
-                r = a("446674"),
+                r = a.n(i),
+                l = a("446674"),
                 d = a("77078"),
                 o = a("206230"),
                 c = a("10641"),
                 u = a("933629"),
                 _ = a("560176"),
-                m = a("476765"),
-                h = a("956089"),
-                E = a("58608"),
-                N = a("599110"),
-                g = a("215429"),
-                f = a("49111"),
-                C = a("994428"),
-                A = a("236998");
-            let O = e => {
+                m = a("633667"),
+                h = a("476765"),
+                E = a("956089"),
+                N = a("58608"),
+                g = a("599110"),
+                f = a("215429"),
+                C = a("49111"),
+                A = a("994428"),
+                O = a("236998");
+            let p = e => {
                     let {
                         tagText: t,
                         className: a
                     } = e;
-                    return (0, s.jsx)(h.TextBadge, {
-                        className: l(A.tag, a),
+                    return (0, s.jsx)(E.TextBadge, {
+                        className: r(O.tag, a),
                         text: t
                     })
                 },
-                p = e => {
+                M = e => {
                     let {
                         header: t,
                         subHeader: a,
                         imageSrc: n,
                         tagText: i,
-                        wideStyle: r
+                        wideStyle: l
                     } = e;
                     return (0, s.jsxs)("div", {
-                        className: l(A.featureCard, {
-                            [A.wideStyle]: r
+                        className: r(O.featureCard, {
+                            [O.wideStyle]: l
                         }),
-                        children: [null != i ? (0, s.jsx)(O, {
+                        children: [null != i ? (0, s.jsx)(p, {
                             tagText: i,
-                            className: A.featureCardTag
+                            className: O.featureCardTag
                         }) : null, (0, s.jsx)("img", {
                             alt: "",
-                            className: l(A.featureCardImg, {
-                                [A.wideStyle]: r
+                            className: r(O.featureCardImg, {
+                                [O.wideStyle]: l
                             }),
                             src: n
                         }), (0, s.jsxs)("div", {
-                            className: A.featureCardTextGroup,
+                            className: O.featureCardTextGroup,
                             children: [(0, s.jsx)(d.Heading, {
                                 variant: "heading-lg/extrabold",
-                                className: A.featureCardTextHeader,
+                                className: O.featureCardTextHeader,
                                 children: t
                             }), (0, s.jsx)(d.Text, {
                                 variant: "text-sm/normal",
@@ -301,94 +302,95 @@
                     })
                 };
 
-            function M(e) {
+            function b(e) {
                 let {
                     className: t,
                     renderModalProps: a,
                     video: i,
-                    videoClassName: h,
-                    modalDismissibleContent: O,
-                    modalTopExtra: M,
-                    header: b,
-                    headerClassName: D,
-                    subHeader: T,
-                    subHeaderExtra: x,
-                    featureCards: S,
-                    changeLogId: v,
-                    button: y
+                    videoClassName: E,
+                    modalDismissibleContent: p,
+                    modalTopExtra: b,
+                    header: D,
+                    headerClassName: T,
+                    subHeader: x,
+                    subHeaderExtra: S,
+                    featureCards: v,
+                    changeLogId: y,
+                    button: I
                 } = e, {
-                    onClose: I,
-                    transitionState: R
-                } = a, w = (0, m.useUID)(), L = S.length % 2 == 0, j = (0, r.useStateFromStores)([o.default], () => o.default.useReducedMotion);
+                    onClose: R,
+                    transitionState: w
+                } = a, L = (0, h.useUID)(), B = v.length % 2 == 0, j = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion);
                 return n.useEffect(() => {
-                    (0, c.requestMarkDismissibleContentAsShown)(O);
+                    (0, c.requestMarkDismissibleContentAsShown)(p);
                     let e = Date.now();
-                    return N.default.track(f.AnalyticEvents.CHANGE_LOG_OPENED, {
-                        change_log_id: v
+                    return g.default.track(C.AnalyticEvents.CHANGE_LOG_OPENED, {
+                        change_log_id: y
                     }), () => {
-                        N.default.track(f.AnalyticEvents.CHANGE_LOG_CLOSED, {
-                            change_log_id: v,
+                        g.default.track(C.AnalyticEvents.CHANGE_LOG_CLOSED, {
+                            change_log_id: y,
                             seconds_open: Math.round((Date.now() - e) / 1e3)
-                        }), (0, c.markDismissibleContentAsDismissed)(O, {
-                            dismissAction: C.ContentDismissActionType.DISMISS
+                        }), (0, c.markDismissibleContentAsDismissed)(p, {
+                            dismissAction: A.ContentDismissActionType.DISMISS
                         })
                     }
-                }, [O, v]), (0, s.jsxs)(d.ModalRoot, {
-                    className: l(A.root, t),
-                    transitionState: R,
-                    "aria-labelledby": w,
+                }, [p, y]), (0, s.jsxs)(d.ModalRoot, {
+                    className: r(O.root, t),
+                    transitionState: w,
+                    "aria-labelledby": L,
                     children: [(0, s.jsx)(d.ModalCloseButton, {
-                        className: A.closeButton,
-                        onClick: I
-                    }), (0, s.jsx)(g.default, {
-                        className: A.splash
-                    }), null == M ? void 0 : M(), (0, s.jsxs)(d.ModalContent, {
-                        className: A.content,
+                        className: O.closeButton,
+                        onClick: R
+                    }), (0, s.jsx)(f.default, {
+                        className: O.splash
+                    }), null == b ? void 0 : b(), (0, s.jsxs)(d.ModalContent, {
+                        className: O.content,
                         children: [(0, s.jsx)(d.Heading, {
                             variant: "display-md",
-                            className: l(A.headerText, D),
-                            children: b
-                        }), "video" === i.type ? (0, s.jsx)(E.default, {
-                            className: l(A.video, h),
+                            className: r(O.headerText, T),
+                            children: D
+                        }), "video" === i.type ? (0, s.jsx)(N.default, {
+                            className: r(O.video, E),
                             autoPlay: !j,
                             loop: !0,
                             muted: !0,
                             controls: !0,
                             src: i.src,
                             onPlay: () => {
-                                N.default.track(f.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
-                                    change_log_id: v
+                                g.default.track(C.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
+                                    change_log_id: y
                                 })
                             }
                         }) : (0, s.jsx)(_.EmbedVideo, {
-                            className: l(A.video, h),
+                            className: r(O.video, E),
                             allowFullScreen: !1,
                             href: i.href,
                             thumbnail: i.thumbnail,
                             video: i.embed,
+                            provider: m.SupportedEmbedIFrame.YOUTUBE,
                             maxWidth: i.embed.width,
                             maxHeight: i.embed.height,
                             renderVideoComponent: u.renderVideoComponent,
                             renderImageComponent: u.renderImageComponent,
                             renderLinkComponent: u.renderMaskedLinkComponent,
                             onPlay: () => {
-                                N.default.track(f.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
-                                    change_log_id: v
+                                g.default.track(C.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
+                                    change_log_id: y
                                 })
                             }
                         }), (0, s.jsx)(d.Heading, {
                             variant: "heading-lg/extrabold",
-                            className: A.bodyText,
-                            children: T
-                        }), null == x ? void 0 : x(), (0, s.jsx)("div", {
-                            className: l(A.featureCardGroup, {
-                                [A.wideStyle]: L
+                            className: O.bodyText,
+                            children: x
+                        }), null == S ? void 0 : S(), (0, s.jsx)("div", {
+                            className: r(O.featureCardGroup, {
+                                [O.wideStyle]: B
                             }),
-                            children: S.map((e, t) => (0, s.jsx)(p, {
+                            children: v.map((e, t) => (0, s.jsx)(M, {
                                 ...e,
-                                wideStyle: L
+                                wideStyle: B
                             }, "".concat(e.header, "_").concat(t)))
-                        }), y()]
+                        }), I()]
                     })]
                 })
             }

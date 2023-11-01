@@ -1,5 +1,5 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["13548"], {
+    ["31952"], {
         608905: function(e, t, s) {
             "use strict";
             e.exports = s.p + "66ada300576adf0f4e4f.svg"
@@ -84,14 +84,6 @@
             "use strict";
             e.exports = s.p + "f4d8991602d4587f573e.svg"
         },
-        326529: function(e, t, s) {
-            "use strict";
-            e.exports = s.p + "86e981fd65ff1efe025e.jpg"
-        },
-        682448: function(e, t, s) {
-            "use strict";
-            e.exports = s.p + "101597bf88034be66dd8.png"
-        },
         217775: function(e, t, s) {
             "use strict";
             e.exports = s.p + "18d4fb0943c54591dfd4.png"
@@ -99,6 +91,10 @@
         481701: function(e, t, s) {
             "use strict";
             e.exports = s.p + "de0896237eebfc178931.png"
+        },
+        280414: function(e, t, s) {
+            "use strict";
+            e.exports = s.p + "8693cf27588b5d099f98.png"
         },
         737117: function(e, t, s) {
             "use strict";
@@ -3772,11 +3768,11 @@
                 },
                 P = () => (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)("div", {
-                        className: N.falloweenArtContainer,
+                        className: N.artContainer,
                         "aria-hidden": !0,
                         role: "presentation",
                         children: (0, a.jsx)("img", {
-                            src: s("682448"),
+                            src: s("280414"),
                             className: N.art,
                             alt: " "
                         })
@@ -3786,18 +3782,18 @@
                             variant: "heading-lg/bold",
                             color: "always-white",
                             className: N.title,
-                            children: p.default.Messages.COLLECTIBLES_FALLOWEEN_UPSELL_BANNER_TITLE
+                            children: p.default.Messages.PROFILE_EFFECTS_HERO_BANNER_TITLE
                         }), (0, a.jsx)(u.Text, {
                             className: N.textBody,
                             variant: "text-sm/normal",
                             color: "always-white",
-                            children: p.default.Messages.COLLECTIBLES_FALLOWEEN_UPSELL_BANNER_DESCRIPTION
+                            children: p.default.Messages.PROFILE_EFFECTS_HERO_BANNER_SUBTITLE
                         })]
                     })]
                 }),
                 C = () => (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)("div", {
-                        className: N.shopForAllArtContainer,
+                        className: N.artContainer,
                         "aria-hidden": !0,
                         role: "presentation",
                         children: (0, a.jsx)("img", {

@@ -14905,8 +14905,6 @@
                 CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE: "Want this profile effect for yourself? Visit the shop to buy and add it to your collection. Only with Nitro.",
                 CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE_PREMIUM: "Want this profile effect for yourself? Head to the shop to buy and collect it!",
                 CHANGE_PROFILE_EFFECT_MODAL_SHOP_PREVIEW_HEADER_STARTER_DESC: "Buy and collect profile effects with a Nitro subscription.",
-                COLLECTIBLES_FALLOWEEN_UPSELL_BANNER_TITLE: "NEW! Spooky styles for your profile",
-                COLLECTIBLES_FALLOWEEN_UPSELL_BANNER_DESCRIPTION: "Dress up your profile in costume with spooky and cozy styles, available for a limited time.",
                 COLLECTIBLES_DAYS_LEFT_IN_SHOP: "{days} days left in shop",
                 COLLECTIBLES_DAYS_LEFT: "{days} days left",
                 COLLECTIBLES_LAST_DAY: "Last day to buy",
@@ -17952,7 +17950,7 @@
                 L = E("782340");
             (0, i.setUpdateRules)(s.default), (0, r.default)(L.default, n.default, T.default), a.default.Emitter.injectBatchEmitChanges(o.unstable_batchedUpdates), a.default.PersistedStore.disableWrites = __OVERLAY__, a.default.initialize();
             let u = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("242685", ", Version Hash: ").concat("8ba82cc604de436d06c1c9ad0e08b506be7397f7")), t.default.setTags({
+            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("242711", ", Version Hash: ").concat("2db3ede202bb88ae7ce5290b2b72c7bea67e57e6")), t.default.setTags({
                 appContext: l.CURRENT_APP_CONTEXT
             }), S.default.initBasic(), N.default.init(), I.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()
         },
@@ -20322,8 +20320,8 @@
 
             function o() {
                 var e;
-                let _ = parseInt((e = "242685", "242685"));
-                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("242685")), _ = 0), _
+                let _ = parseInt((e = "242711", "242711"));
+                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("242711")), _ = 0), _
             }
         },
         990629: function(e, _, E) {

@@ -244,7 +244,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return L
+                    return M
                 }
             });
             var a = n("37983"),
@@ -258,46 +258,47 @@
                 d = n("367376"),
                 p = n("933629"),
                 h = n("560176"),
-                g = n("145131"),
-                f = n("762740"),
-                m = n("369952"),
-                _ = n("15435"),
-                C = n("58608"),
-                k = n("142367"),
+                g = n("633667"),
+                f = n("145131"),
+                m = n("762740"),
+                _ = n("369952"),
+                C = n("15435"),
+                k = n("58608"),
+                E = n("142367"),
                 x = n("49111"),
-                E = n("782340"),
-                S = n("722097"),
-                v = n("9461");
-            let R = d.default.reactParserFor(k.default.getDefaultRules(S)),
-                b = {};
-            class A extends l.PureComponent {
+                S = n("782340"),
+                v = n("722097"),
+                b = n("9461");
+            let R = d.default.reactParserFor(E.default.getDefaultRules(v)),
+                A = {};
+            class L extends l.PureComponent {
                 track(e, t, n) {
                     this.props.track(e, t, n)
                 }
                 renderFooter() {
                     return (0, a.jsxs)("div", {
-                        className: S.footer,
+                        className: v.footer,
                         children: [(0, a.jsx)(c.Anchor, {
-                            "aria-label": E.default.Messages.TWITTER,
-                            className: S.socialLink,
+                            "aria-label": S.default.Messages.TWITTER,
+                            className: v.socialLink,
                             href: (0, u.default)(x.LocalizedLinks.TWITTER),
                             target: "blank",
-                            children: (0, a.jsx)(_.default, {})
+                            children: (0, a.jsx)(C.default, {})
                         }), (0, a.jsx)(c.Anchor, {
-                            "aria-label": E.default.Messages.FACEBOOK,
-                            className: S.socialLink,
+                            "aria-label": S.default.Messages.FACEBOOK,
+                            className: v.socialLink,
                             href: x.SOCIAL_LINKS.FACEBOOK_URL,
                             target: "blank",
-                            children: (0, a.jsx)(f.default, {})
+                            children: (0, a.jsx)(m.default, {})
                         }), (0, a.jsx)(c.Anchor, {
-                            "aria-label": E.default.Messages.INSTAGRAM,
-                            className: S.socialLink,
+                            "aria-label": S.default.Messages.INSTAGRAM,
+                            className: v.socialLink,
                             href: x.SOCIAL_LINKS.INSTAGRAM_URL,
                             target: "blank",
-                            children: (0, a.jsx)(m.default, {})
+                            children: (0, a.jsx)(_.default, {})
                         }), (0, a.jsx)(c.Text, {
                             variant: "text-xs/normal",
-                            children: E.default.Messages.FOLLOW_US_FOR_MORE_UPDATES
+                            children: S.default.Messages.FOLLOW_US_FOR_MORE_UPDATES
                         })]
                     })
                 }
@@ -306,7 +307,7 @@
                         changeLog: e
                     } = this.props, t = e.youtube_video_id, l = e.video, s = e.image;
                     if (null != t && "" !== t) return (0, a.jsx)(h.EmbedVideo, {
-                        className: r(S.video),
+                        className: r(v.video),
                         allowFullScreen: !1,
                         href: "https://youtu.be/".concat(t),
                         thumbnail: {
@@ -319,6 +320,7 @@
                             width: 451,
                             height: 254
                         },
+                        provider: g.SupportedEmbedIFrame.YOUTUBE,
                         maxWidth: 451,
                         maxHeight: 254,
                         renderVideoComponent: p.renderVideoComponent,
@@ -330,7 +332,7 @@
                     });
                     if (null != l && "" !== l) {
                         let e = l.startsWith("https://") ? l : n("745249")("../../images/change-log/".concat(l).replace("../../images/change-log/", "./"));
-                        return (0, a.jsx)(C.default, {
+                        return (0, a.jsx)(k.default, {
                             src: e,
                             poster: s,
                             width: 451,
@@ -338,7 +340,7 @@
                             loop: !0,
                             muted: !0,
                             autoPlay: !0,
-                            className: S.video,
+                            className: v.video,
                             onPlay: () => {
                                 this.track(x.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {}, !0)
                             }
@@ -348,7 +350,7 @@
                     else {
                         let e = s.startsWith("https://") ? s : n("745249")("../../images/change-log/".concat(s).replace("../../images/change-log/", "./"));
                         return (0, a.jsx)("img", {
-                            className: S.image,
+                            className: v.image,
                             alt: "",
                             src: e,
                             width: 451,
@@ -362,32 +364,32 @@
                     } = this.props;
                     return (0, a.jsxs)(c.ModalRoot, {
                         transitionState: c.ModalTransitionState.ENTERED,
-                        className: v.modal,
+                        className: b.modal,
                         children: [(0, a.jsxs)(c.ModalHeader, {
-                            align: g.default.Justify.BETWEEN,
+                            align: f.default.Justify.BETWEEN,
                             separator: !1,
-                            children: [this.renderHeader(), (0, a.jsx)(g.default.Child, {
+                            children: [this.renderHeader(), (0, a.jsx)(f.default.Child, {
                                 grow: 0,
                                 children: (0, a.jsx)(c.ModalCloseButton, {
                                     onClick: this.props.onClose
                                 })
                             })]
                         }), (0, a.jsx)(c.ModalContent, {
-                            className: r(v.content, S.container, {}),
+                            className: r(b.content, v.container, {}),
                             scrollerRef: this.scrollerRef,
                             onScroll: this.handleScroll,
                             children: (0, a.jsxs)("div", {
                                 tabIndex: 0,
                                 role: "region",
-                                "aria-label": E.default.Messages.CHANGELOG_CONTENT_LABEL,
+                                "aria-label": S.default.Messages.CHANGELOG_CONTENT_LABEL,
                                 children: [this.renderVideo(), R(e.body, !1, {
                                     changeLog: this,
-                                    interpolations: b,
+                                    interpolations: A,
                                     onLinkClick: this.trackLinkClick
                                 })]
                             })
                         }), (0, a.jsx)(c.ModalFooter, {
-                            direction: g.default.Direction.HORIZONTAL,
+                            direction: f.default.Direction.HORIZONTAL,
                             children: this.renderFooter()
                         })]
                     })
@@ -410,16 +412,16 @@
                         let {
                             changeLog: e
                         } = this.props;
-                        return (0, a.jsxs)(g.default.Child, {
+                        return (0, a.jsxs)(f.default.Child, {
                             grow: 1,
                             shrink: 1,
                             children: [(0, a.jsx)(c.Heading, {
                                 variant: "heading-lg/semibold",
-                                children: E.default.Messages.WHATS_NEW
+                                children: S.default.Messages.WHATS_NEW
                             }), (0, a.jsx)(c.Text, {
                                 variant: "text-xs/normal",
-                                className: S.date,
-                                children: E.default.Messages.WHATS_NEW_DATE.format({
+                                className: v.date,
+                                children: S.default.Messages.WHATS_NEW_DATE.format({
                                     date: null != e.date && "" !== e.date ? i(e.date).toDate() : new Date
                                 })
                             })]
@@ -427,7 +429,7 @@
                     }
                 }
             }
-            var L = A
+            var M = L
         },
         114535: function(e, t, n) {
             "use strict";
@@ -732,10 +734,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 baseRules: function() {
-                    return x
+                    return E
                 },
                 customRules: function() {
-                    return E
+                    return x
                 }
             });
             var a = n("37983"),
@@ -768,8 +770,8 @@
                         className: r(...(t = i, null == (n = o) ? [] : n.split(" ").map(e => t[e])))
                     }, s)
                 },
-                x = p.default.defaultRules,
-                E = {
+                E = p.default.defaultRules,
+                x = {
                     link: {
                         parse(e, t, n) {
                             let a;
@@ -832,7 +834,7 @@
                         }
                     },
                     blockQuote: {
-                        react: x.blockQuote.react
+                        react: E.blockQuote.react
                     },
                     paragraph: {
                         react: (e, t, n) => (0, a.jsx)("p", {

@@ -1910,7 +1910,7 @@
                     children: [(0, a.jsx)(f.default, {
                         className: I.icon
                     }), _.default.Messages.DEV_NOTICE_STAGING.format({
-                        buildNumber: "242685"
+                        buildNumber: "242711"
                     }), (0, a.jsx)(T, {})]
                 }) : null
             }
@@ -44777,7 +44777,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return g
                 }
             });
             var a = n("37983"),
@@ -44790,25 +44790,26 @@
                 d = n("10641"),
                 c = n("933629"),
                 E = n("560176"),
-                f = n("476765"),
-                _ = n("956089"),
-                I = n("58608"),
-                h = n("599110"),
-                C = n("215429"),
-                T = n("49111"),
-                m = n("994428"),
-                S = n("236998");
-            let N = e => {
+                f = n("633667"),
+                _ = n("476765"),
+                I = n("956089"),
+                h = n("58608"),
+                C = n("599110"),
+                T = n("215429"),
+                m = n("49111"),
+                S = n("994428"),
+                N = n("236998");
+            let A = e => {
                     let {
                         tagText: t,
                         className: n
                     } = e;
-                    return (0, a.jsx)(_.TextBadge, {
-                        className: i(S.tag, n),
+                    return (0, a.jsx)(I.TextBadge, {
+                        className: i(N.tag, n),
                         text: t
                     })
                 },
-                A = e => {
+                p = e => {
                     let {
                         header: t,
                         subHeader: n,
@@ -44817,23 +44818,23 @@
                         wideStyle: r
                     } = e;
                     return (0, a.jsxs)("div", {
-                        className: i(S.featureCard, {
-                            [S.wideStyle]: r
+                        className: i(N.featureCard, {
+                            [N.wideStyle]: r
                         }),
-                        children: [null != l ? (0, a.jsx)(N, {
+                        children: [null != l ? (0, a.jsx)(A, {
                             tagText: l,
-                            className: S.featureCardTag
+                            className: N.featureCardTag
                         }) : null, (0, a.jsx)("img", {
                             alt: "",
-                            className: i(S.featureCardImg, {
-                                [S.wideStyle]: r
+                            className: i(N.featureCardImg, {
+                                [N.wideStyle]: r
                             }),
                             src: s
                         }), (0, a.jsxs)("div", {
-                            className: S.featureCardTextGroup,
+                            className: N.featureCardTextGroup,
                             children: [(0, a.jsx)(o.Heading, {
                                 variant: "heading-lg/extrabold",
-                                className: S.featureCardTextHeader,
+                                className: N.featureCardTextHeader,
                                 children: t
                             }), (0, a.jsx)(o.Text, {
                                 variant: "text-sm/normal",
@@ -44843,94 +44844,95 @@
                     })
                 };
 
-            function p(e) {
+            function g(e) {
                 let {
                     className: t,
                     renderModalProps: n,
                     video: l,
-                    videoClassName: _,
-                    modalDismissibleContent: N,
-                    modalTopExtra: p,
-                    header: g,
-                    headerClassName: R,
-                    subHeader: O,
-                    subHeaderExtra: L,
-                    featureCards: M,
-                    changeLogId: v,
-                    button: D
+                    videoClassName: I,
+                    modalDismissibleContent: A,
+                    modalTopExtra: g,
+                    header: R,
+                    headerClassName: O,
+                    subHeader: L,
+                    subHeaderExtra: M,
+                    featureCards: v,
+                    changeLogId: D,
+                    button: x
                 } = e, {
-                    onClose: x,
-                    transitionState: P
-                } = n, y = (0, f.useUID)(), b = M.length % 2 == 0, U = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion);
+                    onClose: P,
+                    transitionState: y
+                } = n, b = (0, _.useUID)(), U = v.length % 2 == 0, G = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion);
                 return s.useEffect(() => {
-                    (0, d.requestMarkDismissibleContentAsShown)(N);
+                    (0, d.requestMarkDismissibleContentAsShown)(A);
                     let e = Date.now();
-                    return h.default.track(T.AnalyticEvents.CHANGE_LOG_OPENED, {
-                        change_log_id: v
+                    return C.default.track(m.AnalyticEvents.CHANGE_LOG_OPENED, {
+                        change_log_id: D
                     }), () => {
-                        h.default.track(T.AnalyticEvents.CHANGE_LOG_CLOSED, {
-                            change_log_id: v,
+                        C.default.track(m.AnalyticEvents.CHANGE_LOG_CLOSED, {
+                            change_log_id: D,
                             seconds_open: Math.round((Date.now() - e) / 1e3)
-                        }), (0, d.markDismissibleContentAsDismissed)(N, {
-                            dismissAction: m.ContentDismissActionType.DISMISS
+                        }), (0, d.markDismissibleContentAsDismissed)(A, {
+                            dismissAction: S.ContentDismissActionType.DISMISS
                         })
                     }
-                }, [N, v]), (0, a.jsxs)(o.ModalRoot, {
-                    className: i(S.root, t),
-                    transitionState: P,
-                    "aria-labelledby": y,
+                }, [A, D]), (0, a.jsxs)(o.ModalRoot, {
+                    className: i(N.root, t),
+                    transitionState: y,
+                    "aria-labelledby": b,
                     children: [(0, a.jsx)(o.ModalCloseButton, {
-                        className: S.closeButton,
-                        onClick: x
-                    }), (0, a.jsx)(C.default, {
-                        className: S.splash
-                    }), null == p ? void 0 : p(), (0, a.jsxs)(o.ModalContent, {
-                        className: S.content,
+                        className: N.closeButton,
+                        onClick: P
+                    }), (0, a.jsx)(T.default, {
+                        className: N.splash
+                    }), null == g ? void 0 : g(), (0, a.jsxs)(o.ModalContent, {
+                        className: N.content,
                         children: [(0, a.jsx)(o.Heading, {
                             variant: "display-md",
-                            className: i(S.headerText, R),
-                            children: g
-                        }), "video" === l.type ? (0, a.jsx)(I.default, {
-                            className: i(S.video, _),
-                            autoPlay: !U,
+                            className: i(N.headerText, O),
+                            children: R
+                        }), "video" === l.type ? (0, a.jsx)(h.default, {
+                            className: i(N.video, I),
+                            autoPlay: !G,
                             loop: !0,
                             muted: !0,
                             controls: !0,
                             src: l.src,
                             onPlay: () => {
-                                h.default.track(T.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
-                                    change_log_id: v
+                                C.default.track(m.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
+                                    change_log_id: D
                                 })
                             }
                         }) : (0, a.jsx)(E.EmbedVideo, {
-                            className: i(S.video, _),
+                            className: i(N.video, I),
                             allowFullScreen: !1,
                             href: l.href,
                             thumbnail: l.thumbnail,
                             video: l.embed,
+                            provider: f.SupportedEmbedIFrame.YOUTUBE,
                             maxWidth: l.embed.width,
                             maxHeight: l.embed.height,
                             renderVideoComponent: c.renderVideoComponent,
                             renderImageComponent: c.renderImageComponent,
                             renderLinkComponent: c.renderMaskedLinkComponent,
                             onPlay: () => {
-                                h.default.track(T.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
-                                    change_log_id: v
+                                C.default.track(m.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {
+                                    change_log_id: D
                                 })
                             }
                         }), (0, a.jsx)(o.Heading, {
                             variant: "heading-lg/extrabold",
-                            className: S.bodyText,
-                            children: O
-                        }), null == L ? void 0 : L(), (0, a.jsx)("div", {
-                            className: i(S.featureCardGroup, {
-                                [S.wideStyle]: b
+                            className: N.bodyText,
+                            children: L
+                        }), null == M ? void 0 : M(), (0, a.jsx)("div", {
+                            className: i(N.featureCardGroup, {
+                                [N.wideStyle]: U
                             }),
-                            children: M.map((e, t) => (0, a.jsx)(A, {
+                            children: v.map((e, t) => (0, a.jsx)(p, {
                                 ...e,
-                                wideStyle: b
+                                wideStyle: U
                             }, "".concat(e.header, "_").concat(t)))
-                        }), D()]
+                        }), x()]
                     })]
                 })
             }
