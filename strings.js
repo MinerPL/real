@@ -2867,6 +2867,9 @@
                 NOTICE_DETECTED_OFF_PLATFORM_PREMIUM_PERK_BUTTON: "Redeem Now",
                 NOTICE_ENABLE_PUBLIC_GUILD_UPSELL_MESSAGE: "Get custom features and tools that can help you run your community.",
                 NOTICE_CHANNEL_MAX_MEMBERS_CAP_REACHED_MESSAGE: "Your server is approaching its member size limit. To grow past {maxMemberCount, number} members, you need to send in a request. [Learn more]({maxMembersUrl})",
+                NOTICE_PREMIUM_TRIAL_ENDING_DAYS: "Only {days, plural, =1 {# day} other {# days}} left to claim your trial",
+                NOTICE_PREMIUM_TRIAL_ENDING_HOURS: "Only {hours, plural, =1 {# hour} other {# hours}} left to claim your trial",
+                NOTICE_PREMIUM_TRIAL_ENDING_MINUTES: "Only {minutes, plural, =1 {# minute} other {# minutes}} left to claim your trial",
                 NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_DAYS: "You have {days, plural, =1 {# day} other {# days}} left to get a free month of Nitro",
                 NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_HOURS: "You have {hours, plural, =1 {# hour} other {# hours}} left to get a free month of Nitro",
                 NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_MINUTES: "You have {minutes, plural, =1 {# minute} other {# minutes}} left to get a free month of Nitro",
@@ -15940,7 +15943,11 @@
                 LEGACY_CHAT_INPUT_SLASH_COMMAND_EXPLANATION_MODAL_MESSAGE: "Get access to slash commands and other great ways to chat by enabling our latest features.\n\nYou can always go back to legacy chat at any time by heading over to $[User Settings > Accessibility](openSettingsHook).",
                 LEGACY_CHAT_INPUT_SLASH_COMMAND_EXPLANATION_MODAL_BUTTON_CTA: "Enable now",
                 MESSAGE_AUTHOR_NITRO_BADGE: "Nitro User",
-                LARGE_FILE_UPLOAD_POWERED_BY_NITRO: "Large file upload, powered by Nitro • [Learn More](onClick)"
+                LARGE_FILE_UPLOAD_POWERED_BY_NITRO: "Large file upload, powered by Nitro • [Learn More](onClick)",
+                ASSISTANT_SKIP_BUTTON: "Skip Tutorial",
+                ASSISTANT_SPLASH_TITLE: "Welcome, $[username](usernameHook)",
+                ASSISTANT_SPLASH_DESCRIPTION: "Say hello to Wumpus, our mascot and your personal guide through Discord!",
+                ASSISTANT_SPLASH_BUTTON: "Get Started"
             })
         },
         444051: function(e, _, E) {
@@ -17950,7 +17957,7 @@
                 L = E("782340");
             (0, i.setUpdateRules)(s.default), (0, r.default)(L.default, n.default, T.default), a.default.Emitter.injectBatchEmitChanges(o.unstable_batchedUpdates), a.default.PersistedStore.disableWrites = __OVERLAY__, a.default.initialize();
             let u = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("242711", ", Version Hash: ").concat("2db3ede202bb88ae7ce5290b2b72c7bea67e57e6")), t.default.setTags({
+            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("242760", ", Version Hash: ").concat("2ed21fea8b2b821018386443636fa016f5e699de")), t.default.setTags({
                 appContext: l.CURRENT_APP_CONTEXT
             }), S.default.initBasic(), N.default.init(), I.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()
         },
@@ -20320,8 +20327,8 @@
 
             function o() {
                 var e;
-                let _ = parseInt((e = "242711", "242711"));
-                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("242711")), _ = 0), _
+                let _ = parseInt((e = "242760", "242760"));
+                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("242760")), _ = 0), _
             }
         },
         990629: function(e, _, E) {
