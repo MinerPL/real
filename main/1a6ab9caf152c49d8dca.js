@@ -1,620 +1,512 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["71827"], {
-        299147: function(e, n, t) {
+    ["7039"], {
+        419830: function(e, t, s) {
             "use strict";
-            t.r(n), t.d(n, {
-                default: function() {
-                    return l
+            s.r(t), s.d(t, {
+                getChannelIconTooltipText: function() {
+                    return q
                 },
-                useCustomCallSoundsExperiment: function() {
-                    return o
+                getChannelIconComponent: function() {
+                    return J
+                },
+                getSimpleChannelIconComponent: function() {
+                    return Q
                 }
             });
-            var i = t("862205");
-            let u = (0, i.createExperiment)({
-                kind: "user",
-                id: "2023-06_custom_call_sounds",
-                label: "Custom Call Sounds",
-                defaultConfig: {
-                    enabled: !1,
-                    showVoiceChannelCoachmark: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enabled",
-                    config: {
-                        enabled: !0,
-                        showVoiceChannelCoachmark: !1
-                    }
-                }, {
-                    id: 2,
-                    label: "Enabled w/VC Coachmark",
-                    config: {
-                        enabled: !0,
-                        showVoiceChannelCoachmark: !0
-                    }
-                }]
-            });
-            var l = u;
-            let o = () => {
-                let e = u.useExperiment({
-                    location: "bba779_1"
-                }, {
-                    autoTrackExposure: !0
-                });
-                return e.enabled
+            var l = s("677315"),
+                u = s("157186"),
+                n = s("26989"),
+                a = s("305961"),
+                r = s("88093"),
+                i = s("697218"),
+                d = s("290182"),
+                f = s("116320"),
+                E = s("437825"),
+                T = s("972894"),
+                I = s("446685"),
+                h = s("978499"),
+                c = s("617559"),
+                o = s("213523"),
+                N = s("593195"),
+                _ = s("361777"),
+                C = s("497757"),
+                L = s("109264"),
+                O = s("991497"),
+                M = s("393621"),
+                p = s("905999"),
+                g = s("660074"),
+                A = s("223383"),
+                D = s("45029"),
+                U = s("990745"),
+                S = s("190986"),
+                y = s("721618"),
+                R = s("733160"),
+                G = s("990864"),
+                m = s("274652"),
+                P = s("357077"),
+                w = s("922744"),
+                H = s("841307"),
+                b = s("745183"),
+                F = s("620193"),
+                v = s("368121"),
+                W = s("944633"),
+                V = s("468507"),
+                B = s("228427"),
+                k = s("697468"),
+                Y = s("547896"),
+                X = s("619911"),
+                x = s("959097"),
+                K = s("656038"),
+                j = s("724210"),
+                Z = s("49111"),
+                z = s("782340");
+
+            function q(e, t, s, l) {
+                if (null == e) return null;
+                if (e.id === (null == t ? void 0 : t.rulesChannelId)) return z.default.Messages.CHANNEL_TOOLTIP_RULES;
+                switch (e.type) {
+                    case Z.ChannelTypes.GUILD_TEXT:
+                        if (l) return z.default.Messages.CHANNEL_TOOLTIP_TEXT_ACTIVE_THREADS;
+                        if (e.isNSFW()) return z.default.Messages.CHANNEL_TOOLTIP_TEXT_NSFW;
+                        if ((0, K.default)(e)) return z.default.Messages.CHANNEL_TOOLTIP_TEXT_LIMITED;
+                        return z.default.Messages.CHANNEL_TOOLTIP_TEXT;
+                    case Z.ChannelTypes.GUILD_FORUM:
+                        let u = e.isMediaChannel();
+                        if (e.isNSFW()) return u ? z.default.Messages.CHANNEL_TOOLTIP_MEDIA_NSFW : z.default.Messages.CHANNEL_TOOLTIP_FORUM_NSFW;
+                        if ((0, K.default)(e)) return u ? z.default.Messages.CHANNEL_TOOLTIP_MEDIA_LIMITED : z.default.Messages.CHANNEL_TOOLTIP_FORUM_LIMITED;
+                        return u ? z.default.Messages.MEDIA_CHANNEL : z.default.Messages.FORUM;
+                    case Z.ChannelTypes.GUILD_MEDIA:
+                        if (e.isNSFW()) return z.default.Messages.CHANNEL_TOOLTIP_MEDIA_NSFW;
+                        if ((0, K.default)(e)) return z.default.Messages.CHANNEL_TOOLTIP_MEDIA_LIMITED;
+                        return z.default.Messages.MEDIA_CHANNEL;
+                    case Z.ChannelTypes.GUILD_STAGE_VOICE:
+                        if (s) return z.default.Messages.CHANNEL_TOOLTIP_STAGE_LOCKED;
+                        if ((0, K.default)(e)) return z.default.Messages.CHANNEL_TOOLTIP_STAGE_LIMITED;
+                        return z.default.Messages.CHANNEL_TOOLTIP_STAGE;
+                    case Z.ChannelTypes.GUILD_VOICE:
+                        if (s) return z.default.Messages.CHANNEL_TOOLTIP_VOICE_LOCKED;
+                        if ((0, K.default)(e)) return z.default.Messages.CHANNEL_TOOLTIP_VOICE_LIMITED;
+                        return z.default.Messages.CHANNEL_TOOLTIP_VOICE;
+                    case Z.ChannelTypes.GUILD_ANNOUNCEMENT:
+                        if (e.isNSFW()) return z.default.Messages.CHANNEL_TOOLTIP_ANNOUNCEMENTS_NSFW;
+                        if ((0, K.default)(e)) return z.default.Messages.CHANNEL_TOOLTIP_ANNOUNCEMENTS_LIMITED;
+                        return z.default.Messages.CHANNEL_TOOLTIP_ANNOUNCEMENTS;
+                    case Z.ChannelTypes.GUILD_STORE:
+                        return z.default.Messages.CHANNEL_TOOLTIP_STORE;
+                    case Z.ChannelTypes.DM:
+                        return z.default.Messages.DM;
+                    case Z.ChannelTypes.GROUP_DM:
+                        return z.default.Messages.GROUP_DM;
+                    case Z.ChannelTypes.GUILD_DIRECTORY:
+                        return z.default.Messages.CHANNEL_TOOLTIP_DIRECTORY;
+                    case Z.ChannelTypes.PUBLIC_THREAD:
+                        return z.default.Messages.THREAD;
+                    case Z.ChannelTypes.PRIVATE_THREAD:
+                        return z.default.Messages.PRIVATE_THREAD;
+                    default:
+                        return null
+                }
+            }
+
+            function J(e, t) {
+                var s, z, q;
+                let J = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                    {
+                        locked: Q = !1,
+                        video: $ = !1,
+                        stream: ee = !1,
+                        hasActiveThreads: et = !1,
+                        textFocused: es = !1
+                    } = J;
+                if (null == e) return null;
+                null == t && (t = a.default.getGuild(e.getGuildId()));
+                let el = (0, u.shouldShowMembershipVerificationGate)(null === (s = t) || void 0 === s ? void 0 : s.id, [a.default, r.default, i.default, n.default]),
+                    eu = null != t && (0, l.canSeeGuildHome)(null === (z = t) || void 0 === z ? void 0 : z.id);
+                if ((null == e ? void 0 : e.id) === (null === (q = t) || void 0 === q ? void 0 : q.rulesChannelId)) return o.default;
+                switch (e.type) {
+                    case Z.ChannelTypes.GUILD_ANNOUNCEMENT:
+                        if (et) {
+                            if (e.isNSFW()) return P.default;
+                            if ((0, K.default)(e)) return H.default;
+                            else return d.default
+                        }
+                        if (e.isNSFW()) return m.default;
+                        if ((0, K.default)(e)) return G.default;
+                        return R.default;
+                    case Z.ChannelTypes.GUILD_STORE:
+                        return Y.default;
+                    case Z.ChannelTypes.DM:
+                    case Z.ChannelTypes.GROUP_DM:
+                        return f.default;
+                    case Z.ChannelTypes.PRIVATE_THREAD:
+                        return b.default;
+                    case Z.ChannelTypes.ANNOUNCEMENT_THREAD:
+                    case Z.ChannelTypes.PUBLIC_THREAD:
+                        if (e.isNSFW()) return w.default;
+                        if (e.isForumPost()) return g.default;
+                        else return x.default;
+                    case Z.ChannelTypes.GUILD_TEXT:
+                        if (et) {
+                            if (e.isNSFW()) return w.default;
+                            if ((0, K.default)(e)) return b.default;
+                            else return x.default
+                        }
+                        if (e.isNSFW()) return C.default;
+                        if ((0, K.default)(e)) return _.default;
+                        return N.default;
+                    case Z.ChannelTypes.GUILD_FORUM:
+                        let en = e.isMediaChannel();
+                        if (e.isNSFW()) return en ? y.default : p.default;
+                        if ((0, K.default)(e)) return en ? S.default : M.default;
+                        else return en ? U.default : O.default;
+                    case Z.ChannelTypes.GUILD_MEDIA:
+                        if (e.isNSFW()) return y.default;
+                        if ((0, K.default)(e)) return S.default;
+                        else return U.default;
+                    case Z.ChannelTypes.GUILD_STAGE_VOICE:
+                        if (el) return (0, K.default)(e) ? D.default : k.default;
+                        if (Q) return D.default;
+                        if ((0, K.default)(e)) return k.default;
+                        else return B.default;
+                    case Z.ChannelTypes.GUILD_VOICE:
+                        if (es) return L.default;
+                        if (e.isNSFW()) return V.default;
+                        if (ee) return X.default;
+                        if (el) {
+                            if ((0, K.default)(e)) return D.default;
+                            return $ ? T.default : W.default
+                        }
+                        if (Q) return D.default;
+                        if ((0, K.default)(e)) return $ ? T.default : W.default;
+                        else return $ ? E.default : v.default;
+                    case Z.ChannelTypes.GUILD_DIRECTORY:
+                        return c.default;
+                    case Z.ChannelTypes.GUILD_CATEGORY:
+                        return h.default;
+                    default:
+                        if (j.StaticChannelIds.has(e.id)) {
+                            if (e.id === j.StaticChannelId.GUILD_HOME || e.id === j.StaticChannelId.SERVER_GUIDE) {
+                                if (eu) return A.default;
+                                return F.default
+                            }
+                            if (e.id === j.StaticChannelId.CHANNEL_BROWSER || e.id === j.StaticChannelId.CUSTOMIZE_COMMUNITY) return I.default
+                        }
+                        return null
+                }
+            }
+
+            function Q(e) {
+                switch (e) {
+                    case Z.ChannelTypes.GUILD_ANNOUNCEMENT:
+                        return R.default;
+                    case Z.ChannelTypes.GUILD_STORE:
+                        return Y.default;
+                    case Z.ChannelTypes.DM:
+                    case Z.ChannelTypes.GROUP_DM:
+                        return f.default;
+                    case Z.ChannelTypes.PRIVATE_THREAD:
+                        return b.default;
+                    case Z.ChannelTypes.ANNOUNCEMENT_THREAD:
+                    case Z.ChannelTypes.PUBLIC_THREAD:
+                        return x.default;
+                    case Z.ChannelTypes.GUILD_TEXT:
+                    case Z.ChannelTypes.GUILD_FORUM:
+                    case Z.ChannelTypes.GUILD_MEDIA:
+                        return N.default;
+                    case Z.ChannelTypes.GUILD_STAGE_VOICE:
+                        return B.default;
+                    case Z.ChannelTypes.GUILD_VOICE:
+                        return v.default;
+                    case Z.ChannelTypes.GUILD_CATEGORY:
+                        return h.default;
+                    default:
+                        return null
+                }
             }
         },
-        880553: function(e, n, t) {
+        19766: function(e, t, s) {
             "use strict";
-            t.r(n), t.d(n, {
-                default: function() {
-                    return o
-                }
-            });
-            var i = t("271938"),
-                u = t("42203"),
-                l = t("800762");
-
-            function o() {
-                let e = l.default.getVoiceStateForSession(i.default.getId(), i.default.getSessionId()),
-                    n = null == e ? void 0 : e.channelId;
-                return u.default.getChannel(n)
-            }
-        },
-        78581: function(e, n, t) {
-            "use strict";
-            t.r(n), t.d(n, {
-                getAmplitudinalSoundboardVolume: function() {
-                    return D
-                },
-                canUseSoundboardSound: function() {
-                    return O
-                },
-                canUseCustomCallSounds: function() {
-                    return y
-                },
-                playSound: function() {
-                    return p
-                },
-                maybePlayCustomJoinSound: function() {
-                    return h
-                },
-                useSoundBoardDismissContentTypes: function() {
-                    return v
-                },
-                removeCustomJoinSound: function() {
-                    return F
-                },
-                updateCustomJoinSound: function() {
-                    return V
-                },
-                trackCustomCallSoundExternallyDeleted: function() {
-                    return R
-                }
-            });
-            var i = t("65597"),
-                u = t("151426"),
-                l = t("299147"),
-                o = t("880553"),
-                a = t("845579"),
-                d = t("872173"),
-                r = t("374363"),
-                s = t("229502"),
-                c = t("233069"),
-                _ = t("957255"),
-                f = t("697218"),
-                E = t("599110"),
-                C = t("719923"),
-                S = t("158998"),
-                m = t("305122"),
-                A = t("235004"),
-                I = t("389480"),
-                T = t("245463"),
-                U = t("675961"),
-                L = t("846325"),
-                g = t("49111");
-
-            function D() {
-                var e;
-                let n = a.SoundboardSettings.getSetting();
-                return null !== (e = null == n ? void 0 : n.volume) && void 0 !== e ? e : 100
-            }
-
-            function N(e, n) {
-                return (null == n ? void 0 : n.guild_id) == null || _.default.can(g.Permissions.USE_EXTERNAL_SOUNDS, n) || e.guildId === L.DEFAULT_SOUND_GUILD_ID || e.guildId === (null == n ? void 0 : n.guild_id)
-            }
-
-            function O(e, n, t) {
-                let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-                return (C.default.canUseSoundboardEverywhere(e) || n.guildId === (null == t ? void 0 : t.guild_id) || n.guildId === L.DEFAULT_SOUND_GUILD_ID) && N(n, t) && (!i || n.available)
-            }
-
-            function y(e) {
-                let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                    t = l.default.getCurrentConfig({
-                        location: "65e71d_1"
-                    }, {
-                        autoTrackExposure: n
-                    }).enabled;
-                return C.default.canUseCustomCallSounds(e) && t
-            }
-
-            function p(e, n, t) {
-                (0, m.playSoundLocally)(n, e), (0, s.sendVoiceChannelSoundboardEffect)(n, e, __OVERLAY__, t)
-            }
-            async function h(e) {
-                let n = f.default.getCurrentUser(),
-                    t = (0, o.default)(),
-                    i = (0, U.getCustomJoinSound)(e);
-                if (null == t || c.SILENT_JOIN_LEAVE_CHANNEL_TYPES.has(t.type) || null == i || !y(n) || !(0, T.canSelectedVoiceChannelUseSoundboard)()) return;
-                await (0, m.maybeFetchSoundboardSounds)();
-                let u = i.guildId === L.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID ? L.DEFAULT_SOUND_GUILD_ID : i.guildId,
-                    l = A.default.getSound(u, i.soundId);
-                if (null != l) {
-                    var a, d;
-                    if (!N(l, t) || !O(n, l, t, !0)) return null;
-                    a = l, d = t.id, (0, m.playSoundLocally)(d, a), (0, s.sendVoiceChannelCustomCallSoundEffect)(d, a, __OVERLAY__)
-                }
-            }
-
-            function v(e) {
-                let {
-                    isSoundboardButtonDisabled: n = !1
-                } = e, t = (0, i.default)([f.default], () => f.default.getCurrentUser()), o = [u.DismissibleContent.SOUNDBOARD_EDUCATION], {
-                    enabled: a,
-                    showVoiceChannelCoachmark: d
-                } = l.default.useExperiment({
-                    location: "65e71d_2"
-                }, {
-                    autoTrackExposure: !1
-                });
-                if (a && !n && ! function() {
-                        var e, n;
-                        let t = null !== (n = null === (e = r.default.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== n ? n : {};
-                        return Object.values(t).some(e => null != e.joinSound)
-                    }()) {
-                    o.push(u.DismissibleContent.CUSTOM_CALL_SOUNDS_SPARKLES);
-                    let e = C.default.canUseCustomCallSounds(t),
-                        n = (0, S.ageEligibleForPremiumUpsell)(t);
-                    d && !C.default.isPremium(t) && n && o.push(u.DismissibleContent.CUSTOM_CALL_SOUNDS_VOICE_COACHMARK), (e || n) && o.push(u.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL)
-                }
-                return o
-            }
-
-            function F(e, n) {
-                (0, d.updateUserGuildSettings)(e, t => {
-                    t.joinSound = void 0, b({
-                        guildId: e,
-                        changeType: I.AnalyticsChangeType.REMOVED,
-                        soundType: I.AnalyticsSoundType.ENTRY,
-                        location: n
-                    })
-                }, d.UserSettingsDelay.INFREQUENT_USER_ACTION)
-            }
-
-            function V(e, n, t) {
-                (0, d.updateUserGuildSettings)(e, i => {
-                    let u = n.guildId === L.DEFAULT_SOUND_GUILD_ID,
-                        l = u ? I.AnalyticsSoundSource.DEFAULT : I.AnalyticsSoundSource.CUSTOM,
-                        o = null != i.joinSound ? I.AnalyticsChangeType.UPDATED : I.AnalyticsChangeType.ADDED;
-                    i.joinSound = {
-                        soundId: n.soundId,
-                        guildId: u ? L.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID : n.guildId
-                    }, b({
-                        guildId: e,
-                        changeType: o,
-                        soundSource: l,
-                        soundType: I.AnalyticsSoundType.ENTRY,
-                        location: t
-                    })
-                }, d.UserSettingsDelay.INFREQUENT_USER_ACTION)
-            }
-
-            function b(e) {
-                let {
-                    guildId: n,
-                    changeType: t,
-                    soundType: i,
-                    soundSource: u,
-                    location: l
-                } = e;
-                E.default.track(g.AnalyticEvents.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, {
-                    location_stack: l,
-                    guild_id: "" === n ? 0 : Number(n),
-                    change_type: t,
-                    sound_type: i,
-                    sound_source: u
-                })
-            }
-
-            function R(e) {
-                let {
-                    location: n
-                } = e;
-                E.default.track(g.AnalyticEvents.USER_CUSTOM_CALL_SOUND_SETTING_GUILD_REMOVED, {
-                    location_stack: n
-                })
-            }
-        },
-        245463: function(e, n, t) {
-            "use strict";
-            t.r(n), t.d(n, {
-                canSelectedVoiceChannelUseSoundboard: function() {
-                    return a
-                },
-                default: function() {
-                    return d
-                }
-            });
-            var i = t("42203"),
-                u = t("957255"),
-                l = t("18494"),
-                o = t("49111");
-
-            function a() {
-                let e = l.default.getVoiceChannelId(),
-                    n = i.default.getChannel(e);
-                return d(n)
-            }
-
-            function d(e) {
-                if (null == e) return !1;
-                if (o.ChannelTypesSets.CALLABLE.has(e.type)) return !0;
-                let n = u.default.can(o.Permissions.USE_SOUNDBOARD, e),
-                    t = u.default.can(o.Permissions.SPEAK, e);
-                return e.type === o.ChannelTypes.GUILD_VOICE && n && t
-            }
-        },
-        454614: function(e, n, t) {
-            "use strict";
-            t.r(n), t.d(n, {
-                default: function() {
-                    return c
-                }
-            });
-            var i = t("42203"),
-                u = t("945956"),
-                l = t("568307"),
-                o = t("18494"),
-                a = t("599110"),
-                d = t("846325"),
-                r = t("49111"),
-                s = t("646718");
-
-            function c(e, n, t, c) {
-                var _, f, E;
-                let C = i.default.getChannel(o.default.getVoiceChannelId()),
-                    S = null == C ? void 0 : C.getGuildId(),
-                    m = u.default.getMediaSessionId(),
-                    A = u.default.getRTCConnectionId(),
-                    I = null === (_ = l.default.getCurrentGameForAnalytics()) || void 0 === _ ? void 0 : _.name,
-                    T = S !== t.guildId && t.guildId !== d.DEFAULT_SOUND_GUILD_ID;
-                let U = (f = t, E = T, f.guildId === d.DEFAULT_SOUND_GUILD_ID ? "default" : E ? "custom-external" : "custom");
-                a.default.track(r.AnalyticEvents.PREMIUM_FEATURE_USAGE, {
-                    feature_name: s.AnalyticsPremiumFeatureNames.SOUNDBOARD_PLAY,
-                    feature_tier: T ? s.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD : s.AnalyticsPremiumFeatureTiers.FREE,
-                    guild_id: S,
-                    location_stack: e,
-                    rtc_connection_id: A,
-                    media_session_id: m,
-                    in_overlay: n,
-                    application_name: I,
-                    emoji_count: null != t.emojiId || null != t.emojiName ? 1 : 0,
-                    feature_selection: U,
-                    feature_selection_id: t.soundId,
-                    sound_type: c,
-                    is_broadcast: null != C && C.isBroadcastChannel()
-                })
-            }
-        },
-        675961: function(e, n, t) {
-            "use strict";
-            t.r(n), t.d(n, {
-                CustomSoundType: function() {
-                    return u
-                },
-                useCustomJoinSound: function() {
-                    return d
-                },
-                getCustomJoinSound: function() {
-                    return r
-                }
-            });
-            var i, u, l = t("446674"),
-                o = t("374363"),
-                a = t("846325");
-
-            function d(e) {
-                return (0, l.useStateFromStores)([o.default], () => {
-                    var n, t;
-                    let i = null !== (t = null === (n = o.default.settings.guilds) || void 0 === n ? void 0 : n.guilds) && void 0 !== t ? t : {};
-                    return s(e, i)
-                })
-            }
-
-            function r(e) {
-                var n, t;
-                let i = null !== (t = null === (n = o.default.settings.guilds) || void 0 === n ? void 0 : n.guilds) && void 0 !== t ? t : {};
-                return s(e, i)
-            }
-
-            function s(e, n) {
-                var t, i;
-                let l = null === (t = n[e]) || void 0 === t ? void 0 : t.joinSound,
-                    o = null === (i = n[a.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID]) || void 0 === i ? void 0 : i.joinSound,
-                    d = null != l ? l : o;
-                return null != d ? {
-                    ...d,
-                    type: null != l ? u.GUILD : u.GLOBAL
-                } : void 0
-            }(i = u || (u = {}))[i.GLOBAL = 0] = "GLOBAL", i[i.GUILD = 1] = "GUILD"
-        },
-        229502: function(e, n, t) {
-            "use strict";
-            t.r(n), t.d(n, {
-                VoiceChannelEffectSentLocation: function() {
-                    return u
-                },
-                sendVoiceChannelCustomCallSoundEffect: function() {
-                    return L
-                },
-                sendVoiceChannelSoundboardEffect: function() {
+            s.r(t), s.d(t, {
+                EVERYONE_ID: function() {
                     return g
                 },
-                sendVoiceChannelEffect: function() {
-                    return D
+                MemberListRowTypes: function() {
+                    return u
+                },
+                default: function() {
+                    return H
                 }
             });
-            var i, u, l = t("917351"),
-                o = t("872717"),
-                a = t("913144"),
-                d = t("812204"),
-                r = t("716241"),
-                s = t("385976"),
-                c = t("389480"),
-                _ = t("454614"),
-                f = t("18494"),
-                E = t("402671"),
-                C = t("82230"),
-                S = t("568088"),
-                m = t("397485"),
-                A = t("626334"),
-                I = t("49111"),
-                T = t("846325");
+            var l, u, n = s("917351"),
+                a = s.n(n),
+                r = s("210696"),
+                i = s.n(r),
+                d = s("316693"),
+                f = s("446674"),
+                E = s("913144"),
+                T = s("991170"),
+                I = s("373469"),
+                h = s("271938"),
+                c = s("42203"),
+                o = s("525065"),
+                N = s("26989"),
+                _ = s("305961"),
+                C = s("824563"),
+                L = s("101125"),
+                O = s("697218"),
+                M = s("49111"),
+                p = s("782340");
+            let g = "everyone";
+
+            function A(e, t, s, l) {
+                switch (t) {
+                    case M.StatusTypes.ONLINE:
+                    case M.StatusTypes.OFFLINE:
+                    case M.StatusTypes.UNKNOWN:
+                        return {
+                            type: u.GROUP, key: t, id: t, get title() {
+                                switch (t) {
+                                    case M.StatusTypes.ONLINE:
+                                        return p.default.Messages.STATUS_ONLINE;
+                                    case M.StatusTypes.OFFLINE:
+                                        return p.default.Messages.STATUS_OFFLINE;
+                                    default:
+                                        return p.default.Messages.STATUS_UNKNOWN
+                                }
+                            }, count: s, index: l
+                        };
+                    default:
+                        let n = _.default.getGuild(e),
+                            a = null != n ? n.getRole(t) : null;
+                        return {
+                            type: u.GROUP, key: t, id: t, title: null != a ? a.name : "", count: s, index: l
+                        }
+                }
+            }
+
+            function D(e, t, s) {
+                let l = s === h.default.getId(),
+                    n = C.default.isMobileOnline(s),
+                    a = l ? L.default.getStatus() : C.default.getStatus(s, e),
+                    r = l ? L.default.getActivities() : C.default.getActivities(s, e),
+                    i = I.default.getStreamForUser(s, e),
+                    d = O.default.getUser(s);
+                return null == d ? null : {
+                    type: u.MEMBER,
+                    ...N.default.getMember(e, s),
+                    user: d,
+                    status: a,
+                    activities: r,
+                    applicationStream: i,
+                    isOwner: t === s,
+                    isMobileOnline: n
+                }
+            }
 
             function U(e) {
-                let n = new AbortController,
-                    t = (0, l.throttle)(t => {
-                        f.default.getVoiceChannelId() !== e && n.abort()
-                    }, 1e3);
-                return {
-                    abortController: n,
-                    onRequestProgress: t
+                let t = c.default.getChannel(e);
+                return null == t ? g : null == t.memberListId ? function(e) {
+                    return T.default.canEveryone(M.Permissions.VIEW_CHANNEL, e) ? g : i.v3(a(e.permissionOverwrites).reduce((e, t) => {
+                        let {
+                            id: s,
+                            allow: l,
+                            deny: u
+                        } = t;
+                        return d.default.has(l, M.Permissions.VIEW_CHANNEL) ? e.push("allow:".concat(s)) : d.default.has(u, M.Permissions.VIEW_CHANNEL) && e.push("deny:".concat(s)), e
+                    }, []).sort().join(",")).toString()
+                }(t) : t.memberListId
+            }(l = u || (u = {})).GROUP = "GROUP", l.MEMBER = "MEMBER";
+            class S {
+                updateOwnerId() {
+                    let e = _.default.getGuild(this.guildId);
+                    if (null == e) return !1;
+                    let t = T.default.getGuildVisualOwnerId(e);
+                    return this.ownerId !== t && (this.ownerId = t, !0)
+                }
+                setGroups(e) {
+                    let t = 0;
+                    this.groups = e.map(e => {
+                        var s;
+                        let l = t,
+                            u = Math.max(0, null !== (s = e.count) && void 0 !== s ? s : 0);
+                        return t += u + 1, A(this.guildId, e.id, u, l)
+                    }), this.rows.length = t
+                }
+                sync(e, t) {
+                    let [s] = e;
+                    t.forEach((e, t) => this.update(s + t, e))
+                }
+                invalidate(e) {
+                    let [t, s] = e;
+                    for (let e = t; e <= s; e++) {
+                        let t = this.rows[e];
+                        if (null == t) break;
+                        delete this.rows[e], t.type === u.MEMBER && delete this.members[t.user.id]
+                    }
+                    this.version++
+                }
+                insert(e, t) {
+                    let {
+                        group: s,
+                        member: l
+                    } = t;
+                    if (null != s) this.rows.splice(e, 0, A(this.guildId, s.id, s.count));
+                    else if (null != l) {
+                        let t = D(this.guildId, this.ownerId, l.user.id);
+                        if (null == t) return;
+                        this.rows.splice(e, 0, t), this.members[l.user.id] = t
+                    }
+                    this.version++
+                }
+                update(e, t) {
+                    let {
+                        group: s,
+                        member: l
+                    } = t, n = this.rows[e];
+                    if (null != n && n.type === u.MEMBER && delete this.members[n.user.id], null != s) this.rows[e] = A(this.guildId, s.id, s.count);
+                    else if (null != l) {
+                        let t = D(this.guildId, this.ownerId, l.user.id);
+                        if (null == t) return;
+                        this.rows[e] = t, this.members[l.user.id] = t
+                    }
+                    this.version++
+                }
+                delete(e) {
+                    let t = this.rows[e];
+                    null != t && (t.type === u.MEMBER && delete this.members[t.user.id], this.rows.splice(e, 1), this.version++)
+                }
+                rebuildMember(e) {
+                    let t = this.members[e];
+                    null != t && (Object.assign(t, D(this.guildId, this.ownerId, e)), this.version++)
+                }
+                rebuildMembers() {
+                    a.forEach(this.members, (e, t) => {
+                        this.rebuildMember(t)
+                    })
+                }
+                constructor(e, t) {
+                    this.rows = [], this.groups = [], this.members = {}, this.version = 0, this.guildId = e, this.listId = t, this.updateOwnerId()
                 }
             }
-
-            function L(e, n, t) {
-                var i;
-                let {
-                    abortController: u,
-                    onRequestProgress: l
-                } = U(e), a = null !== (i = C.default.getState().animationType) && void 0 !== i ? i : A.VoiceChannelEffectAnimationType.BASIC, r = {
-                    animation_type: a,
-                    animation_id: (0, m.sampleAnimationId)(a, m.CUSTOM_CALL_SOUND_ANIMATION_RANGE)
-                };
-                o.default.post({
-                    url: I.Endpoints.CUSTOM_CALL_SOUNDS(e),
-                    body: r,
-                    signal: u.signal,
-                    onRequestProgress: l
-                }).then(I.NOOP_NULL, () => {
-                    if (u.signal.aborted) return
-                }), (0, _.default)([d.default.CHANNEL_CALL], t, n, c.AnalyticsSoundType.ENTRY)
-            }
-
-            function g(e, n, t, i) {
-                var u, l;
-                let a = s.default.getCustomEmojiById(null !== (u = n.emojiId) && void 0 !== u ? u : ""),
-                    {
-                        abortController: d,
-                        onRequestProgress: r
-                    } = U(e),
-                    f = {
-                        sound_id: n.soundId,
-                        emoji_id: n.emojiId,
-                        emoji_name: null !== (l = n.emojiName) && void 0 !== l ? l : null == a ? void 0 : a.name
-                    };
-                n.guildId !== T.DEFAULT_SOUND_GUILD_ID && (f.source_guild_id = n.guildId), o.default.post({
-                    url: I.Endpoints.SEND_SOUNDBOARD_SOUND(e),
-                    body: f,
-                    signal: d.signal,
-                    onRequestProgress: r
-                }).then(I.NOOP_NULL, () => {
-                    if (d.signal.aborted) return
-                }), (0, _.default)(null != i ? i : [], t, n, c.AnalyticsSoundType.DEFAULT)
-            }(i = u || (u = {})).EMOJI_PICKER = "emoji_picker", i.EFFECT_BAR = "effect_bar";
-            let D = async e => {
-                let {
-                    channel: n,
-                    emoji: t,
-                    location: i,
-                    animationType: u,
-                    animationId: l,
-                    isPremium: d
-                } = e;
-                if (null == t || S.default.isOnCooldown) return;
-                let r = d && null != u ? u : A.VoiceChannelEffectAnimationType.BASIC;
-                try {
-                    let e = null != t.id ? {
-                        emoji_id: t.id,
-                        emoji_name: t.name,
-                        animation_type: r,
-                        animation_id: l
-                    } : {
-                        emoji_id: null,
-                        emoji_name: t.optionallyDiverseSequence,
-                        animation_type: r,
-                        animation_id: l
-                    };
-                    await o.default.post({
-                        url: I.Endpoints.VOICE_CHANNEL_EFFECTS(n.id),
-                        body: e
-                    }), O(n, t, i, r), a.default.dispatch({
-                        type: "VOICE_CHANNEL_EFFECT_SENT_LOCAL"
-                    })
-                } catch (e) {
-                    if (429 === e.status && null != e.body.retry_after) {
-                        let n = 1e3 * e.body.retry_after;
-                        a.default.dispatch({
-                            type: "VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP",
-                            cooldownEndsAtMs: n
-                        })
+            let y = new class e {
+                get(e, t) {
+                    let s = this._guildLists[e];
+                    null == s && (s = this._guildLists[e] = {});
+                    let l = s[t];
+                    return null == l && ((l = new S(e, t)).setGroups([{
+                        id: M.StatusTypes.UNKNOWN,
+                        count: 0
+                    }]), s[t] = l), l
+                }
+                forEach(e, t) {
+                    if (null == e) a.forEach(this._guildLists, e => {
+                        a.forEach(e, t)
+                    });
+                    else {
+                        let s = this._guildLists[e];
+                        null != s && a.forEach(s, t)
                     }
                 }
-            }, N = {
-                [A.VoiceChannelEffectAnimationType.BASIC]: "Basic",
-                [A.VoiceChannelEffectAnimationType.PREMIUM]: "Premium"
-            }, O = (e, n, t, i) => {
-                let {
-                    unicode: u,
-                    custom: l,
-                    customExternal: o,
-                    managed: a,
-                    managedExternal: d,
-                    animated: s
-                } = (0, E.countEmoji)([n], e.getGuildId()), c = N[i];
-                r.default.trackWithMetadata(I.AnalyticEvents.VOICE_CHANNEL_EFFECT_SENT, {
-                    channel_id: e.id,
-                    guild_id: e.getGuildId(),
-                    location: t,
-                    emoji_unicode: u,
-                    emoji_custom: l,
-                    emoji_custom_external: o,
-                    emoji_managed: a,
-                    emoji_managed_external: d,
-                    emoji_animated: s,
-                    animation_type: c,
-                    is_broadcast: e.isBroadcastChannel()
+                delete(e) {
+                    delete this._guildLists[e]
+                }
+                reset() {
+                    this._guildLists = {}
+                }
+                constructor() {
+                    this._guildLists = {}
+                }
+            };
+
+            function R() {
+                y.reset()
+            }
+            let G = [];
+
+            function m() {
+                let e = I.default.getAllApplicationStreams(),
+                    t = G.concat(e);
+                G = e, t.forEach(e => {
+                    y.forEach(null, t => t.rebuildMember(e.ownerId))
                 })
             }
-        },
-        82230: function(e, n, t) {
-            "use strict";
-            let i;
-            t.r(n), t.d(n, {
-                default: function() {
-                    return d
+
+            function P() {
+                let e = h.default.getId();
+                y.forEach(null, t => t.rebuildMember(e))
+            }
+            class w extends f.default.Store {
+                initialize() {
+                    this.waitFor(O.default, _.default, c.default, N.default, C.default, L.default, h.default, o.default, I.default), this.syncWith([L.default], P), this.syncWith([I.default], m)
                 }
-            });
-            var u = t("446674"),
-                l = t("913144"),
-                o = t("626334");
-            class a extends u.default.PersistedStore {
-                initialize(e) {
-                    var n;
-                    i = null !== (n = null == e ? void 0 : e.animationType) && void 0 !== n ? n : o.VoiceChannelEffectAnimationType.PREMIUM
-                }
-                getState() {
+                getProps(e, t) {
+                    let s = y.get(e, U(t));
                     return {
-                        animationType: i
+                        listId: "".concat(s.guildId, ":").concat(s.listId),
+                        groups: s.groups,
+                        rows: s.rows,
+                        version: s.version
                     }
                 }
+                getRows(e, t) {
+                    let s = y.get(e, U(t));
+                    return s.rows
+                }
             }
-            a.displayName = "VoiceChannelEffectsPersistedStore", a.persistKey = "VoiceChannelEffectsPersistedStore";
-            var d = new a(l.default, {
-                VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE: () => {
-                    i = i === o.VoiceChannelEffectAnimationType.BASIC ? o.VoiceChannelEffectAnimationType.PREMIUM : o.VoiceChannelEffectAnimationType.BASIC
-                }
-            })
-        },
-        568088: function(e, n, t) {
-            "use strict";
-            let i;
-            t.r(n), t.d(n, {
-                clearVoiceChannelEffectForUser: function() {
-                    return f
+            w.displayName = "ChannelMemberStore";
+            var H = new w(E.default, {
+                CONNECTION_OPEN: R,
+                OVERLAY_INITIALIZE: R,
+                GUILD_MEMBER_LIST_UPDATE: function(e) {
+                    let t = y.get(e.guildId, e.id);
+                    e.ops.forEach(e => {
+                        switch (e.op) {
+                            case "SYNC":
+                                t.sync(e.range, e.items);
+                                break;
+                            case "INVALIDATE":
+                                t.invalidate(e.range);
+                                break;
+                            case "INSERT":
+                                t.insert(e.index, e.item);
+                                break;
+                            case "UPDATE":
+                                t.update(e.index, e.item);
+                                break;
+                            case "DELETE":
+                                t.delete(e.index)
+                        }
+                    }), t.setGroups(e.groups)
                 },
-                default: function() {
-                    return m
-                }
-            });
-            var u = t("917351"),
-                l = t("446674"),
-                o = t("819855"),
-                a = t("913144"),
-                d = t("397485"),
-                r = t("99795");
-            let s = [],
-                c = {},
-                _ = [],
-                f = e => {
-                    null != e && a.default.dispatch({
-                        type: "VOICE_CHANNEL_EFFECT_CLEAR",
-                        userId: e
+                GUILD_UPDATE: function(e) {
+                    let {
+                        guild: t
+                    } = e;
+                    y.forEach(t.id, e => {
+                        e.updateOwnerId() && e.rebuildMembers()
                     })
                 },
-                E = [],
-                C = (0, u.debounce)(() => {
-                    let e = (0, d.getEffectAnnouncement)(_);
-                    o.AccessibilityAnnouncer.announce(e, "polite"), _ = []
-                }, 500);
-            class S extends l.default.Store {
-                get recentlyUsedEmojis() {
-                    return s
-                }
-                get isOnCooldown() {
-                    return null != i && new Date < i
-                }
-                get effectCooldownEndTime() {
-                    return i
-                }
-                getEffectForUserId(e) {
-                    return c[e]
-                }
-            }
-            S.displayName = "VoiceChannelEffectsStore";
-            var m = new S(a.default, {
-                VOICE_CHANNEL_EFFECT_CLEAR: e => {
+                GUILD_DELETE: function(e) {
                     let {
-                        userId: n
+                        guild: t
                     } = e;
-                    null != c[n] && delete c[n]
+                    y.delete(t.id)
                 },
-                VOICE_CHANNEL_EFFECT_RECENT_EMOJI: e => {
+                GUILD_ROLE_UPDATE: function(e) {
                     let {
-                        emoji: n
+                        guildId: t
                     } = e;
-                    null != n && (s.unshift(n), (s = (0, u.uniqBy)(s, "name")).length > r.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT + 1 && s.pop())
+                    y.forEach(t, e => e.rebuildMembers())
                 },
-                VOICE_CHANNEL_EFFECT_SEND: e => {
+                GUILD_MEMBER_UPDATE: function(e) {
                     let {
-                        emoji: n,
-                        userId: t,
-                        animationType: i
+                        guildId: t,
+                        user: s
                     } = e;
-                    null != n && null != i && (c[t] = {
-                        emoji: n,
-                        sentAt: Date.now(),
-                        animationType: i
-                    }, _ = [..._, {
-                        emojiName: n.name,
-                        userId: t
-                    }], C())
+                    y.forEach(t, e => e.rebuildMember(s.id))
                 },
-                VOICE_CHANNEL_EFFECT_SENT_LOCAL: () => {
-                    let e = new Date;
-                    if ((E = [e, ...E].slice(0, 20)).length >= 20) {
-                        let n = E[E.length - 1],
-                            t = e.getTime() - n.getTime();
-                        t < 1e4 && (i = new Date(e.getTime() + 1e4 - t))
-                    }
-                },
-                VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: e => {
-                    let {
-                        cooldownEndsAtMs: n
-                    } = e;
-                    i = new Date(Date.now() + n)
+                CHANNEL_UPDATES: function() {
+                    return !0
                 }
             })
         }

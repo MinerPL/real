@@ -1,681 +1,1429 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["22198"], {
-        335189: function(e, t, n) {
+    ["96865"], {
+        763898: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                saveClydeProfile: function() {
-                    return f
-                },
-                addClydeGuildMember: function() {
-                    return c
-                },
-                generatePersonality: function() {
-                    return d
-                },
-                setPendingPersonality: function() {
-                    return _
-                },
-                setPendingNick: function() {
-                    return p
-                },
-                setPendingAvatar: function() {
-                    return T
-                },
-                setPendingBanner: function() {
-                    return S
-                },
-                setPendingThemeColors: function() {
-                    return y
-                },
-                resetPendingChanges: function() {
-                    return I
-                },
-                fetchClydeSettings: function() {
-                    return C
-                },
-                fetchClydeProfile: function() {
-                    return A
-                },
-                createClydeProfile: function() {
-                    return L
-                },
-                startEditingClydeProfile: function() {
-                    return m
-                },
-                doneEditingClydeProfile: function() {
-                    return D
+                default: function() {
+                    return r
                 }
             });
-            var r = n("872717"),
-                i = n("913144"),
-                l = n("327037"),
-                u = n("599110"),
-                o = n("473591"),
-                a = n("680894"),
-                s = n("49111");
-            async function f(e, t) {
-                let n = await E(e, t);
-                return n
+            var i = n("884691");
+
+            function r() {
+                let e = i.useRef(null);
+                return null === e.current && (e.current = new AbortController), i.useEffect(() => () => {
+                    var t;
+                    null === (t = e.current) || void 0 === t || t.abort()
+                }, []), e.current.signal
             }
-            async function c(e) {
-                return await r.default.put({
-                    url: s.Endpoints.GUILD_CLYDE_ADD_MEMBER(e),
-                    oldFormErrors: !0
-                })
-            }
-            async function d(e) {
-                try {
-                    let t = await r.default.post({
-                        url: s.Endpoints.CLYDE_PROFILES_GENERATE_PERSONALITY,
-                        oldFormErrors: !0,
-                        body: {
-                            personality: e
-                        }
-                    });
-                    if (t.ok) return t.body.personality;
-                    return null
-                } catch (e) {
-                    return null
+        },
+        599445: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                GuildShopStorefrontExperiment: function() {
+                    return r
+                },
+                ShowGuildRoleSubInGuildShopExperiment: function() {
+                    return u
+                },
+                GuildShopPreviewExperiment: function() {
+                    return l
                 }
-            }
-            async function E(e, t) {
-                i.default.dispatch({
-                    type: "CLYDE_GUILD_SETTINGS_SAVE_START"
+            });
+            var i = n("862205");
+            let r = (0, i.createExperiment)({
+                    kind: "user",
+                    id: "2023-08_server_shop_storefront",
+                    label: "Server Shop Storefront",
+                    defaultConfig: {
+                        enabled: !1
+                    },
+                    treatments: [{
+                        id: 1,
+                        label: "Enables Server shop storefront",
+                        config: {
+                            enabled: !0
+                        }
+                    }]
+                }),
+                u = (0, i.createExperiment)({
+                    kind: "user",
+                    id: "2023-09_show_server_sub_in_server_shop",
+                    label: "Show server sub in server shop",
+                    defaultConfig: {
+                        enabled: !1
+                    },
+                    treatments: [{
+                        id: 1,
+                        label: "Enables showing server sub in server shop",
+                        config: {
+                            enabled: !0
+                        }
+                    }]
+                }),
+                l = (0, i.createExperiment)({
+                    kind: "user",
+                    id: "2023-09_server_shop_phantom_preview",
+                    label: "Server Shop Phantom Preview",
+                    defaultConfig: {
+                        enabled: !1
+                    },
+                    treatments: [{
+                        id: 1,
+                        label: "Enables Server shop phantom preview",
+                        config: {
+                            enabled: !0
+                        }
+                    }]
+                })
+        },
+        551254: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                useIsEligibleForGuildShopStorefront: function() {
+                    return u
+                },
+                isEligibleForGuildShopStorefront: function() {
+                    return l
+                },
+                useIsEligibleForSubscriptionsInGuildShop: function() {
+                    return a
+                },
+                isEligibleForSubscriptionsInGuildShop: function() {
+                    return o
+                },
+                useIsEligibleForGuildShopPreview: function() {
+                    return s
+                }
+            });
+            var i = n("287883"),
+                r = n("599445");
+
+            function u() {
+                let {
+                    enabled: e
+                } = r.GuildShopStorefrontExperiment.useExperiment({
+                    location: "adf3ea_1"
                 });
-                let n = null != t.personality && o.default.getGeneratedPersonality() === o.default.getPendingPersonality();
-                try {
-                    var l, f;
-                    let o = await r.default.patch({
-                        url: s.Endpoints.GUILD_CLYDE_SETTINGS(e),
-                        oldFormErrors: !0,
-                        body: {
-                            ...t,
-                            personality_preset: n ? "generated" : "custom"
-                        }
-                    });
-                    if (o.ok) return i.default.dispatch({
-                        type: "CLYDE_GUILD_SETTINGS_SAVE_SUCCESS",
-                        settings: o.body.settings
-                    }), null != o.body.guild_member_profile && i.default.dispatch({
-                        type: "USER_PROFILE_UPDATE_SUCCESS",
-                        userId: a.CLYDE_AI_USER_ID,
-                        profileEffectID: void 0,
-                        ...o.body.guild_member_profile
-                    }), null != o.body.guild_member && i.default.dispatch({
-                        type: "GUILD_MEMBER_PROFILE_UPDATE",
-                        guildMember: o.body.guild_member,
-                        guildId: e
-                    }), o.body.settings;
-                    return i.default.dispatch({
-                        type: "CLYDE_GUILD_SETTINGS_SAVE_FAIL",
-                        errors: null !== (f = null === (l = o.body) || void 0 === l ? void 0 : l.errors) && void 0 !== f ? f : {}
-                    }), u.default.track(s.AnalyticEvents.CLYDE_AI_PROFILE_UPDATE_FAILED, {
-                        guild_id: e,
-                        clyde_profile_id: t.clyde_profile_id
-                    }), null
-                } catch (n) {
-                    return i.default.dispatch({
-                        type: "CLYDE_GUILD_SETTINGS_SAVE_FAIL",
-                        errors: n.body
-                    }), u.default.track(s.AnalyticEvents.CLYDE_AI_PROFILE_UPDATE_FAILED, {
-                        guild_id: e,
-                        clyde_profile_id: t.clyde_profile_id
-                    }), null
+                return e
+            }
+
+            function l() {
+                let {
+                    enabled: e
+                } = r.GuildShopStorefrontExperiment.getCurrentConfig({
+                    location: "adf3ea_2"
+                });
+                return e
+            }
+
+            function a(e, t) {
+                let {
+                    enabled: n
+                } = r.ShowGuildRoleSubInGuildShopExperiment.useExperiment({
+                    location: t
+                }), u = (0, i.useGuildEligibleForGuildProducts)(e, t);
+                return n && u
+            }
+
+            function o(e, t) {
+                let {
+                    enabled: n
+                } = r.ShowGuildRoleSubInGuildShopExperiment.getCurrentConfig({
+                    location: t
+                }), u = (0, i.isGuildEligibleForGuildProducts)(e, t);
+                return n && u
+            }
+
+            function s(e) {
+                let {
+                    enabled: t
+                } = r.GuildShopPreviewExperiment.useExperiment({
+                    location: e
+                });
+                return t
+            }
+        },
+        991148: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                useGuildShopPreviewVisible: function() {
+                    return d
                 }
-            }
+            });
+            var i = n("65597"),
+                r = n("151426"),
+                u = n("10641"),
+                l = n("287883"),
+                a = n("957255"),
+                o = n("551254"),
+                s = n("49111");
 
-            function _(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                i.default.dispatch({
-                    type: "CLYDE_SET_PENDING_PERSONALITY",
-                    personality: e,
-                    isGenerated: t
-                })
+            function d(e, t) {
+                var n;
+                let d = (0, o.useIsEligibleForGuildShopPreview)(t),
+                    c = (0, u.useIsDismissibleContentDismissed)(r.DismissibleContent.SERVER_SHOP_PHANTOM_PREVIEW),
+                    f = (0, i.default)([a.default], () => null != e && a.default.can(s.Permissions.ADMINISTRATOR, e)),
+                    S = null !== (n = null == e ? void 0 : e.hasFeature(s.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) && void 0 !== n && n,
+                    I = (0, l.useGuildEligibleForGuildProducts)(null == e ? void 0 : e.id, "useGuildShopPreviewVisible"),
+                    E = [s.GuildFeatures.CREATOR_MONETIZABLE, s.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL, s.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED].some(t => (null == e ? void 0 : e.hasFeature(t)) === !0);
+                return null != e && f && !S && E && d && I && !c
             }
-
-            function p(e) {
-                i.default.dispatch({
-                    type: "CLYDE_SET_PENDING_NICK",
-                    nick: null != e ? e : ""
-                })
-            }
-
-            function T(e) {
-                i.default.dispatch({
-                    type: "CLYDE_SET_PENDING_AVATAR",
-                    avatar: e
-                })
-            }
-
-            function S(e) {
-                i.default.dispatch({
-                    type: "CLYDE_SET_PENDING_BANNER",
-                    banner: e
-                })
-            }
-
-            function y(e) {
-                i.default.dispatch({
-                    type: "CLYDE_SET_PENDING_THEME_COLORS",
-                    themeColors: e
-                })
-            }
-
-            function I() {
-                i.default.dispatch({
-                    type: "CLYDE_RESET_PENDING_CHANGES"
-                })
-            }
-            async function C(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                if (t || o.default.shouldFetchSettings(e)) {
-                    (0, l.fetchProfile)(a.CLYDE_AI_USER_ID, {
-                        guildId: e
-                    }), i.default.dispatch({
-                        type: "CLYDE_GUILD_SETTINGS_FETCH_START",
-                        guildId: e
-                    });
-                    try {
-                        let t = await r.default.get({
-                                url: s.Endpoints.GUILD_CLYDE_SETTINGS(e),
-                                oldFormErrors: !0
-                            }),
-                            n = t.body;
-                        i.default.dispatch({
-                            type: "CLYDE_GUILD_SETTINGS_FETCH_SUCCESS",
-                            guildId: n.guild_id,
-                            settings: n
-                        })
-                    } catch (t) {
-                        i.default.dispatch({
-                            type: "CLYDE_GUILD_SETTINGS_FETCH_FAIL",
-                            guildId: e
-                        })
-                    }
+        },
+        590260: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                useGuildShopVisibleInGuild: function() {
+                    return o
+                },
+                isGuildShopVisibleInGuild: function() {
+                    return s
                 }
-            }
-            async function A(e) {
-                if (null == o.default.getProfile(e)) {
-                    i.default.dispatch({
-                        type: "CLYDE_PROFILE_FETCH_START",
-                        clydeProfileId: e
-                    });
-                    try {
-                        let t = await r.default.get({
-                                url: s.Endpoints.CLYDE_PROFILES(e),
-                                oldFormErrors: !0
-                            }),
-                            n = t.body;
-                        i.default.dispatch({
-                            type: "CLYDE_PROFILE_FETCH_SUCCESS",
-                            profile: n
-                        })
-                    } catch (t) {
-                        i.default.dispatch({
-                            type: "CLYDE_PROFILE_FETCH_FAIL",
-                            clydeProfileId: e
-                        })
-                    }
-                }
-            }
-            async function L(e) {
-                try {
-                    let t = await r.default.post({
-                        url: s.Endpoints.CLYDE_PROFILES_CREATE(e),
-                        oldFormErrors: !0
-                    });
-                    return t.ok && i.default.dispatch({
-                        type: "CLYDE_PROFILE_CREATE_SUCCESS",
-                        profile: t.body
-                    }), t.body
-                } catch (e) {
-                    return null
-                }
+            });
+            var i = n("465869"),
+                r = n("903724"),
+                u = n("551254"),
+                l = n("991148"),
+                a = n("49111");
+
+            function o(e) {
+                let t = (0, u.useIsEligibleForGuildShopStorefront)(),
+                    n = (0, u.useIsEligibleForSubscriptionsInGuildShop)(null == e ? void 0 : e.id, "channel_list"),
+                    o = (0, r.useRoleSubscriptionsVisibleInGuild)(null == e ? void 0 : e.id),
+                    s = (0, l.useGuildShopPreviewVisible)(e, "channel_list"),
+                    {
+                        shouldHideGuildPurchaseEntryPoints: d
+                    } = (0, i.useShouldHideGuildPurchaseEntryPoints)(null == e ? void 0 : e.id);
+                return !!t && null != e && !d && (e.hasFeature(a.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE) || n && o || s)
             }
 
-            function m() {
-                i.default.dispatch({
-                    type: "CLYDE_PROFILE_EDITING_START"
-                })
+            function s(e) {
+                let t = (0, u.isEligibleForGuildShopStorefront)(),
+                    n = (0, u.isEligibleForSubscriptionsInGuildShop)(null == e ? void 0 : e.id, "channel_list"),
+                    i = (0, r.areRoleSubscriptionsVisibleInGuild)(null == e ? void 0 : e.id);
+                return !!t && null != e && (e.hasFeature(a.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE) || n && i)
+            }
+        },
+        250666: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                isCreatorMonetizationEnabledGuild: function() {
+                    return l
+                },
+                default: function() {
+                    return a
+                }
+            });
+            var i = n("446674"),
+                r = n("305961"),
+                u = n("49111");
+
+            function l(e) {
+                return !e.hasFeature(u.GuildFeatures.CREATOR_MONETIZABLE_DISABLED) && (e.hasFeature(u.GuildFeatures.CREATOR_MONETIZABLE) || e.hasFeature(u.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL))
             }
 
-            function D() {
-                i.default.dispatch({
-                    type: "CLYDE_PROFILE_EDITING_END"
+            function a(e) {
+                return (0, i.useStateFromStores)([r.default], () => {
+                    let t = r.default.getGuild(e);
+                    return null != t && l(t)
                 })
             }
         },
-        845962: function(e, t, n) {
+        465869: function(e, t, n) {
             "use strict";
-            let r;
             n.r(t), n.d(t, {
+                useShouldHideGuildPurchaseEntryPoints: function() {
+                    return f
+                },
+                useShouldRestrictUpdatingCreatorMonetizationSettings: function() {
+                    return S
+                },
+                useIsMonetizationReapplicationDisabled: function() {
+                    return I
+                }
+            });
+            var i = n("884691"),
+                r = n("446674"),
+                u = n("763898"),
+                l = n("371358"),
+                a = n("648825"),
+                o = n("305961"),
+                s = n("736271"),
+                d = n("49111");
+            let c = e => {
+                    let t = (0, u.default)();
+                    i.useEffect(() => {
+                        if (null != e && !!e.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) a.default.getMonetizationRestrictionsFetchState(e.id) === a.FetchState.NOT_FETCHED && l.fetchMonetizationRestrictions(e.id, {
+                            signal: t
+                        })
+                    }, [e, t]);
+                    let n = null == e ? void 0 : e.id,
+                        o = (0, r.useStateFromStoresArray)([a.default], () => {
+                            var e;
+                            return null !== (e = a.default.getMonetizationRestrictions(null != n ? n : "")) && void 0 !== e ? e : []
+                        }),
+                        s = (0, r.useStateFromStores)([a.default], () => a.default.getMonetizationRestrictionsFetchState(null != n ? n : "") === a.FetchState.FETCHING);
+                    return {
+                        restrictions: o,
+                        restrictionsLoading: s
+                    }
+                },
+                f = e => {
+                    var t;
+                    let n = (0, r.useStateFromStores)([o.default], () => o.default.getGuild(e), [e]),
+                        {
+                            restrictions: i,
+                            restrictionsLoading: u
+                        } = c(n),
+                        l = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_DISABLED),
+                        a = l || (u ? null === (t = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, s.isRestrictedFromShowingGuildPurchaseEntryPoints)(i));
+                    return {
+                        shouldHideGuildPurchaseEntryPoints: a,
+                        restrictionsLoading: u
+                    }
+                },
+                S = e => {
+                    var t;
+                    let n = (0, r.useStateFromStores)([o.default], () => o.default.getGuild(e), [e]),
+                        {
+                            restrictions: i,
+                            restrictionsLoading: u
+                        } = c(n),
+                        l = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_DISABLED),
+                        a = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING),
+                        f = l || a || (u ? null === (t = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, s.isRestrictedFromUpdatingCreatorMonetizationSettings)(i));
+                    return {
+                        shouldRestrictUpdatingCreatorMonetizationSettings: f,
+                        restrictionsLoading: u
+                    }
+                },
+                I = e => {
+                    let t = (0, r.useStateFromStores)([o.default], () => o.default.getGuild(e), [e]),
+                        {
+                            restrictions: n,
+                            restrictionsLoading: i
+                        } = c(t),
+                        u = (0, s.isRestrictedFromMonetizationReapplication)(n);
+                    return {
+                        isMonetizationReapplicationDisabled: u,
+                        restrictionsLoading: i
+                    }
+                }
+        },
+        526253: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                NO_MEMBER_VERIFICATION_FORM: function() {
+                    return o
+                },
                 default: function() {
-                    return _
+                    return c
                 }
             });
             var i = n("917351"),
-                l = n("446674"),
-                u = n("913144");
-            let o = [],
-                a = !1;
-            let s = o,
-                f = {},
-                c = null,
-                d = e => {
-                    s = (0, i.cloneDeep)(e);
-                    let t = {};
-                    s.forEach(e => {
-                        t[e.id] = e
-                    }), f = t
-                };
-            class E extends l.default.Store {
-                get isFetching() {
-                    return a
+                r = n.n(i),
+                u = n("446674"),
+                l = n("913144"),
+                a = n("567054");
+            let o = {
+                    version: "",
+                    description: "",
+                    formFields: []
+                },
+                s = {};
+            class d extends u.default.Store {
+                get(e) {
+                    if (null != e) return s[e]
                 }
-                get fetchError() {
-                    return r
-                }
-                get profileEffects() {
-                    return s
-                }
-                get tryItOutId() {
-                    return c
-                }
-                getProfileEffectById(e) {
-                    return f[e]
+                getRulesPrompt(e) {
+                    var t;
+                    return r.find(null === (t = s[e]) || void 0 === t ? void 0 : t.formFields, a.isTermsFormField)
                 }
             }
-            E.displayName = "ProfileEffectStore";
-            var _ = new E(u.default, {
-                USER_PROFILE_EFFECTS_FETCH: () => {
-                    a = !0
-                },
-                USER_PROFILE_EFFECTS_FETCH_SUCCESS: e => {
+            d.displayName = "MemberVerificationFormStore";
+            var c = new d(l.default, {
+                INVITE_ACCEPT_SUCCESS: function(e) {
                     let {
-                        profileEffects: t
-                    } = e;
-                    a = !1, d(0 === t.length ? o : t)
+                        invite: t
+                    } = e, {
+                        member_verification_form: n
+                    } = t, {
+                        guild: i
+                    } = t;
+                    if (null != i && null != n) {
+                        var r;
+                        return s[i.id] = {
+                            version: n.version,
+                            description: null !== (r = n.description) && void 0 !== r ? r : "",
+                            formFields: n.form_fields,
+                            guild: i
+                        }, !0
+                    }
+                    return !1
                 },
-                USER_PROFILE_EFFECTS_FETCH_FAILURE: e => {
+                MEMBER_VERIFICATION_FORM_UPDATE: function(e) {
                     let {
-                        error: t
+                        form: t,
+                        guildId: n
                     } = e;
-                    a = !1, r = t, d(o)
+                    s[n] = null != t ? t : o
                 },
-                PROFILE_EFFECTS_SET_TRY_IT_OUT: e => {
+                MEMBER_VERIFICATION_FORM_FETCH_FAIL: function(e) {
+                    var t;
                     let {
-                        id: t
+                        guildId: n
                     } = e;
-                    c = t
+                    s[n] = null !== (t = s[n]) && void 0 !== t ? t : o
                 },
-                LOGOUT: e => {
-                    a = !1, d(o), c = null
+                GUILD_DELETE: function(e) {
+                    let {
+                        guild: t
+                    } = e;
+                    delete s[null == t ? void 0 : t.id]
                 }
             })
         },
-        662286: function(e, t, n) {
+        520141: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                useCanUseProfileEffects: function() {
+                useIsMemberVerificationManualApproval: function() {
+                    return u
+                },
+                isMemberVerificationManualApproval: function() {
+                    return l
+                }
+            });
+            var i = n("862205");
+            let r = (0, i.createExperiment)({
+                kind: "guild",
+                id: "2021-11_member_verification_manual_approval",
+                label: "Member Verification Manual Approval",
+                defaultConfig: {
+                    manualApprovalEnabled: !1
+                },
+                treatments: [{
+                    id: 1,
+                    label: "Enable manual approval for membership verification",
+                    config: {
+                        manualApprovalEnabled: !0
+                    }
+                }]
+            });
+
+            function u(e) {
+                r.trackExposure({
+                    guildId: e,
+                    location: "bda51f_1"
+                });
+                let t = r.useExperiment({
+                    guildId: e,
+                    location: "bda51f_2"
+                }, {
+                    autoTrackExposure: !1
+                });
+                return t.manualApprovalEnabled
+            }
+
+            function l(e) {
+                let t = r.getCurrentConfig({
+                    guildId: e,
+                    location: "bda51f_3"
+                }, {
+                    autoTrackExposure: !1
+                });
+                return t.manualApprovalEnabled
+            }
+        },
+        875229: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                canReviewGuildMemberApplications: function() {
+                    return f
+                },
+                useCanReviewGuildMemberApplications: function() {
+                    return S
+                }
+            });
+            var i = n("884691"),
+                r = n("446674"),
+                u = n("305961"),
+                l = n("957255"),
+                a = n("50926"),
+                o = n("526253"),
+                s = n("520141"),
+                d = n("567054"),
+                c = n("49111");
+
+            function f(e) {
+                let t = u.default.getGuild(e);
+                return null != t && (0, s.isMemberVerificationManualApproval)(e) && l.default.can(c.Permissions.KICK_MEMBERS, t)
+            }
+
+            function S(e) {
+                var t;
+                let n = (0, s.useIsMemberVerificationManualApproval)(e),
+                    f = (0, r.useStateFromStores)([u.default], () => u.default.getGuild(e)),
+                    S = null != f && n && l.default.can(c.Permissions.KICK_MEMBERS, f) && f.hasVerificationGate(),
+                    I = (0, r.useStateFromStores)([o.default], () => o.default.get(e), [e]);
+                i.useEffect(() => {
+                    S && a.default.fetchVerificationForm(e)
+                }, [S, e]);
+                let E = i.useMemo(() => (null !== (t = null == I ? void 0 : I.formFields) && void 0 !== t ? t : []).some(e => !(0, d.isTermsFormField)(e)), [null == I ? void 0 : I.formFields]);
+                return S && E
+            }
+        },
+        536999: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                useIsBulkBanningExperimentEnabled: function() {
                     return l
                 },
-                canUseProfileEffects: function() {
+                isInMembersSearchV2Experiment: function() {
+                    return a
+                },
+                useMembersSearchV2Experiment: function() {
+                    return o
+                }
+            });
+            var i = n("862205");
+            let r = (0, i.createExperiment)({
+                    kind: "guild",
+                    id: "2023-08_guild_member_bulk_ban_experiment",
+                    label: "Bulk Banning Guild Members Experiment",
+                    defaultConfig: {
+                        enabled: !1
+                    },
+                    treatments: [{
+                        id: 1,
+                        label: "Bulk Banning Enabled",
+                        config: {
+                            enabled: !0
+                        }
+                    }]
+                }),
+                u = (0, i.createExperiment)({
+                    kind: "guild",
+                    id: "2023-07_guild_members_search_in_elasticsearch",
+                    label: "Members Search V2 Experiment",
+                    defaultConfig: {
+                        enabled: !1
+                    },
+                    treatments: [{
+                        id: 1,
+                        label: "Enable Members Search V2 Backend Only",
+                        config: {
+                            enabled: !1
+                        }
+                    }, {
+                        id: 2,
+                        label: "Enable Members Search V2 Backend + Frontend",
+                        config: {
+                            enabled: !0
+                        }
+                    }]
+                }),
+                l = function(e) {
+                    let {
+                        autoTrackExposure: t = !1,
+                        disable: n = !1,
+                        location: i = "f03bed_5"
+                    } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, {
+                        enabled: u
+                    } = r.useExperiment({
+                        guildId: e,
+                        location: i
+                    }, {
+                        autoTrackExposure: t,
+                        disable: n
+                    });
+                    return u
+                },
+                a = function(e) {
+                    let {
+                        autoTrackExposure: t = !1,
+                        disable: n = !1,
+                        location: i = "f03bed_7"
+                    } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, {
+                        enabled: r
+                    } = u.getCurrentConfig({
+                        guildId: e,
+                        location: i
+                    }, {
+                        autoTrackExposure: t,
+                        disable: n
+                    });
+                    return r
+                },
+                o = function(e) {
+                    let {
+                        autoTrackExposure: t = !1,
+                        disable: n = !1,
+                        location: i = "f03bed_8"
+                    } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, {
+                        enabled: r
+                    } = u.useExperiment({
+                        guildId: e,
+                        location: i
+                    }, {
+                        autoTrackExposure: t,
+                        disable: n
+                    });
+                    return r
+                }
+        },
+        466818: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                MemberSafetyPagePermissions: function() {
+                    return c
+                },
+                canAccessMemberSafetyPage: function() {
+                    return S
+                },
+                useCanAccessMemberSafetyPage: function() {
+                    return E
+                },
+                useCanAccessBulkBanningFeature: function() {
+                    return _
+                },
+                useCanAccessInviteCodeFeature: function() {
+                    return p
+                },
+                useCanBulkBanUser: function() {
+                    return R
+                },
+                canBulkBanUser: function() {
+                    return h
+                }
+            });
+            var i = n("316693"),
+                r = n("446674"),
+                u = n("305961"),
+                l = n("957255"),
+                a = n("697218"),
+                o = n("991170"),
+                s = n("536999"),
+                d = n("49111");
+            let c = i.default.combine(d.Permissions.ADMINISTRATOR, d.Permissions.MANAGE_GUILD, d.Permissions.BAN_MEMBERS, d.Permissions.KICK_MEMBERS, d.Permissions.MODERATE_MEMBERS),
+                f = function(e) {
+                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [u.default, a.default],
+                        [n, i] = t,
+                        r = n.getGuild(e),
+                        l = i.getCurrentUser();
+                    return {
+                        user: l,
+                        guild: r
+                    }
+                },
+                S = function(e) {
+                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [u.default, a.default],
+                        n = f(e, t);
+                    if (null == n) return !1;
+                    let r = i.default.hasAny(o.default.computePermissions({
+                        user: n.user,
+                        context: n.guild,
+                        checkElevated: !1
+                    }), c);
+                    return r
+                },
+                I = function(e) {
+                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [u.default, a.default],
+                        n = f(e, t);
+                    return null != n && l.default.can(d.Permissions.MANAGE_GUILD, n.guild) && l.default.can(d.Permissions.BAN_MEMBERS, n.guild)
+                };
+
+            function E(e) {
+                let t = (0, r.useStateFromStores)([u.default, a.default], () => S(e, [u.default, a.default]), [e]);
+                return t
+            }
+
+            function _(e, t) {
+                let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                    i = E(e),
+                    l = (0, r.useStateFromStores)([u.default, a.default], () => I(e, [u.default, a.default]), [e]),
+                    o = (0, s.useIsBulkBanningExperimentEnabled)(e, {
+                        location: t,
+                        autoTrackExposure: n,
+                        disable: !l
+                    });
+                return i && l && o
+            }
+
+            function p(e) {
+                return (0, r.useStateFromStores)([u.default, l.default], () => {
+                    let t = u.default.getGuild(e);
+                    return null != t && l.default.can(d.Permissions.MANAGE_GUILD, t)
+                }, [e])
+            }
+
+            function R(e, t, n) {
+                return (0, r.useStateFromStores)([l.default, u.default], () => {
+                    let i = u.default.getGuild(e);
+                    return null != i && t && l.default.canManageUser(d.Permissions.BAN_MEMBERS, n, i)
+                }, [t, e, n])
+            }
+
+            function h(e, t, n) {
+                let i = u.default.getGuild(e);
+                return null != i && t && l.default.canManageUser(d.Permissions.BAN_MEMBERS, n, i)
+            }
+        },
+        287883: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                useGuildEligibleForGuildProducts: function() {
+                    return r
+                },
+                isGuildEligibleForGuildProducts: function() {
                     return u
                 }
             });
-            var r = n("862205");
-            let i = (0, r.createExperiment)({
-                kind: "user",
-                id: "2023-08_profile_effects",
-                label: "Profile Effects User Experiment",
+            var i = n("60705");
+
+            function r(e, t) {
+                let {
+                    enabled: n
+                } = i.GuildProductsExperiment.useExperiment({
+                    guildId: null != e ? e : "",
+                    location: t
+                });
+                return n
+            }
+
+            function u(e, t) {
+                let {
+                    enabled: n
+                } = i.GuildProductsExperiment.getCurrentConfig({
+                    guildId: null != e ? e : "",
+                    location: t
+                });
+                return n
+            }
+        },
+        60705: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                GuildProductsExperiment: function() {
+                    return r
+                }
+            });
+            var i = n("862205");
+            let r = (0, i.createExperiment)({
+                kind: "guild",
+                id: "2023-04_server_products",
+                label: "Server Products",
                 defaultConfig: {
                     enabled: !1
                 },
                 treatments: [{
                     id: 1,
-                    label: "Enables profile effects and shop",
+                    label: "Enables Server Products (AKA one time purchases for creator guilds)",
                     config: {
                         enabled: !0
                     }
                 }]
-            });
-
-            function l(e) {
-                let {
-                    location: t,
-                    trackExposureOptions: n = {},
-                    autoTrackExposure: r = !0
-                } = e;
-                return i.useExperiment({
-                    location: t
-                }, {
-                    autoTrackExposure: r,
-                    trackExposureOptions: n
-                }).enabled
-            }
-
-            function u(e) {
-                let {
-                    location: t,
-                    trackExposureOptions: n = {},
-                    autoTrackExposure: r = !0
-                } = e;
-                return i.getCurrentConfig({
-                    location: t
-                }, {
-                    autoTrackExposure: r,
-                    trackExposureOptions: n
-                }).enabled
-            }
+            })
         },
-        76047: function(e, t, n) {
+        371358: function(e, t, n) {
             "use strict";
             n.r(t), n.d(t, {
-                ENTRY_DELAY: function() {
-                    return r
+                fetchSubscriptionsSettings: function() {
+                    return c
                 },
-                RESET: function() {
-                    return i
-                }
-            });
-            let r = 500,
-                i = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-        },
-        859498: function(e, t, n) {
-            "use strict";
-            var r, i, l, u;
-            n.r(t), n.d(t, {
-                RestartMethod: function() {
-                    return r
+                updateSubscriptionsSettings: function() {
+                    return f
                 },
-                AnimationTypes: function() {
-                    return i
-                }
-            }), (l = r || (r = {})).FromLoop = "fromLoop", l.FromStart = "fromStart", (u = i || (i = {}))[u.UNSPECIFIED = 0] = "UNSPECIFIED", u[u.PERSISTENT = 1] = "PERSISTENT", u[u.INTERMITTENT = 2] = "INTERMITTENT"
-        },
-        687682: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return l
-                }
-            });
-            var r = n("884691");
-            let i = 1e3 / 24;
-            var l = function(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i,
-                    n = r.useRef(0),
-                    l = r.useRef(),
-                    u = r.useRef(!0),
-                    o = r.useCallback(() => {
-                        u.current = !1, cancelAnimationFrame(n.current)
-                    }, []),
-                    a = r.useCallback(r => {
-                        null == l.current && (l.current = r);
-                        let i = r - l.current;
-                        i >= t && (l.current = r, e(i)), u.current && (n.current = requestAnimationFrame(a))
-                    }, [e, t]),
-                    s = r.useCallback(() => {
-                        u.current = !0, l.current = void 0, n.current = requestAnimationFrame(a)
-                    }, [a]);
-                return r.useEffect(() => (n.current = requestAnimationFrame(a), () => cancelAnimationFrame(n.current)), []), {
-                    stop: o,
-                    reset: s,
-                    ticking: u
-                }
-            }
-        },
-        833395: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return i
-                }
-            });
-            var r = n("884691"),
-                i = (e, t) => {
-                    let [n, i] = r.useState(-1), l = r.useRef(-1);
-                    return r.useEffect(() => {
-                        let t = e.reduce((e, t) => (!e.includes(t.src) && e.push(t.src), e), []);
-                        i(t.length), l.current = t.length
-                    }, [e, l, i]), r.useEffect(() => {
-                        0 === n && t()
-                    }, [n, t]), {
-                        pending: n,
-                        pendingRef: l,
-                        setPending: i
-                    }
-                }
-        },
-        525808: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                sortEffectLayers: function() {
-                    return r
-                }
-            });
-            let r = e => {
-                var t, n;
-                return e.sort((e, r) => (null !== (t = e.zIndex) && void 0 !== t ? t : 0) - (null !== (n = r.zIndex) && void 0 !== n ? n : 0))
-            }
-        },
-        635471: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return C
-                }
-            });
-            var r = n("37983"),
-                i = n("884691"),
-                l = n("414456"),
-                u = n.n(l),
-                o = n("446674"),
-                a = n("206230"),
-                s = n("845962"),
-                f = n("662286"),
-                c = n("76047"),
-                d = n("859498"),
-                E = n("687682"),
-                _ = n("525808"),
-                p = n("465523"),
-                T = n("417675"),
-                S = n("260742");
-            let y = e => {
-                    let {
-                        bannerAdjustment: t = 0,
-                        maxLoops: n,
-                        resetOnHover: l = !1,
-                        isHovering: o = !1,
-                        useOpacityOnHover: a = !0,
-                        autoPlay: s = !0,
-                        restartMethod: f,
-                        urlQueryString: p,
-                        profileEffectConfig: y,
-                        noBorderRadius: I = !1,
-                        introDelay: C = c.ENTRY_DELAY
-                    } = e, A = i.useRef(null), [L, m] = i.useState([]);
-                    (0, T.default)(y);
-                    let [D, R] = i.useState(0), [h, P] = i.useState(0), {
-                        accessibilityLabel: g
-                    } = y, [F, N] = i.useState(-C), {
-                        stop: v,
-                        reset: b,
-                        ticking: U
-                    } = (0, E.default)(e => {
-                        N(t => t + e)
-                    });
-                    i.useEffect(() => {
-                        N(-C), m((0, _.sortEffectLayers)(y.effects))
-                    }, [y]), i.useEffect(() => {
-                        let e = 0,
-                            t = 1 / 0;
-                        L.forEach(n => {
-                            let r = n.start + n.duration;
-                            r > e && (e = r), n.loop && n.start < t && (t = n.start)
-                        }), R(t), P(e)
-                    }, [P, L]);
-                    let [Y, G] = i.useState(!1);
-                    return i.useEffect(() => {
-                        !0 !== s && !o && (v(), N(0)), !o && Y && U.current && (v(), N(0)), l && o && !U.current && (b(), y.animationType === d.AnimationTypes.PERSISTENT ? N(f === d.RestartMethod.FromStart ? 0 : D) : N(0))
-                    }, [o, Y, D, l, v, b, U, y.animationType, s, f]), (0, r.jsx)("div", {
-                        ref: A,
-                        className: u(S.profileEffects, {
-                            [S.hovered]: o && a
-                        }),
-                        children: (0, r.jsx)("div", {
-                            className: I ? S.innerNoRadius : S.inner,
-                            children: L.map((e, i) => {
-                                var l, u, o, a, f, E, _, T;
-                                if (!U.current) {
-                                    if (y.animationType === d.AnimationTypes.PERSISTENT && 0 === i && !0 === s) {
-                                        let {
-                                            staticFrameSrc: n
-                                        } = y;
-                                        return (0, r.jsx)("img", {
-                                            className: S.effect,
-                                            style: {
-                                                top: null !== (f = null === (o = e.position) || void 0 === o ? void 0 : o.y) && void 0 !== f ? f : 0 - t,
-                                                left: null !== (E = null === (a = e.position) || void 0 === a ? void 0 : a.x) && void 0 !== E ? E : 0
-                                            },
-                                            src: n,
-                                            alt: g
-                                        }, e.src + i)
-                                    }
-                                    return (0, r.jsx)("img", {
-                                        src: c.RESET,
-                                        alt: g
-                                    }, e.src + i)
-                                }
-                                if (F < e.start || !e.loop && F > e.duration + e.start) return (0, r.jsx)("img", {
-                                    src: c.RESET,
-                                    alt: g
-                                }, e.src + i);
-                                if (y.animationType === d.AnimationTypes.PERSISTENT && !Y && null != n && F >= h && G(!0), e.loop && void 0 !== e.loopDelay && e.loopDelay > 0) {
-                                    let t = e.duration + e.loopDelay,
-                                        l = Math.floor((F - e.start) / t);
-                                    if (F - e.start - l * t > e.duration) return y.animationType === d.AnimationTypes.INTERMITTENT && !Y && null != n && l >= n && G(!0), (0, r.jsx)("img", {
-                                        src: c.RESET,
-                                        alt: g
-                                    }, e.src + i)
-                                }
-                                return (0, r.jsx)("img", {
-                                    src: null != p ? "".concat(e.src, "?query=").concat(p) : e.src,
-                                    className: S.effect,
-                                    style: {
-                                        top: (null !== (_ = null === (l = e.position) || void 0 === l ? void 0 : l.y) && void 0 !== _ ? _ : 0) - t,
-                                        left: null !== (T = null === (u = e.position) || void 0 === u ? void 0 : u.x) && void 0 !== T ? T : 0
-                                    },
-                                    alt: g
-                                }, e.src + i)
-                            })
-                        })
-                    })
+                fetchAllSubscriptionListingsDataForGuild: function() {
+                    return S
                 },
-                I = e => {
-                    let {
-                        config: t,
-                        useThumbnail: n,
-                        bannerAdjustment: i = 0,
-                        noBorderRadius: l
-                    } = e, {
-                        reducedMotionSrc: u,
-                        thumbnailPreviewSrc: o,
-                        accessibilityLabel: a
-                    } = t;
-                    return (0, r.jsx)("div", {
-                        className: S.profileEffects,
-                        children: (0, r.jsx)("div", {
-                            className: l ? S.innerNoRadius : S.inner,
-                            children: (0, r.jsx)("img", {
-                                src: n ? o : u,
-                                className: S.effect,
-                                style: {
-                                    top: 0 - i
-                                },
-                                alt: a
-                            })
-                        })
-                    })
-                };
-            var C = e => {
-                var t;
-                let n = (0, f.useCanUseProfileEffects)({
-                        location: "WebWrappedProfileEffect"
-                    }),
-                    l = null != e.profileEffectID ? null === (t = s.default.getProfileEffectById(e.profileEffectID)) || void 0 === t ? void 0 : t.config : null,
-                    u = (0, o.useStateFromStores)([a.default], () => a.default.useReducedMotion),
-                    [c, d] = i.useState(!1);
-                return n && null != l ? u || !1 === e.autoPlay && !1 === e.isHovering ? (0, r.jsx)(I, {
-                    useThumbnail: e.useThumbnail,
-                    config: l,
-                    bannerAdjustment: e.bannerAdjustment,
-                    noBorderRadius: e.noBorderRadius
-                }) : c ? (0, r.jsx)(y, {
-                    profileEffectConfig: l,
-                    ...e
-                }) : (0, r.jsx)(p.default, {
-                    profileEffectConfig: l,
-                    onReady: () => {
-                        d(!0)
-                    }
-                }) : null
-            }
-        },
-        465523: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return l
+                createSubscriptionGroupListing: function() {
+                    return I
+                },
+                fetchSubscriptionListingForPlan: function() {
+                    return E
+                },
+                deleteSubscriptionListing: function() {
+                    return _
+                },
+                archiveSubscriptionListing: function() {
+                    return p
+                },
+                updateSubscriptionTrial: function() {
+                    return R
+                },
+                createSubscriptionListing: function() {
+                    return G
+                },
+                updateSubscriptionListing: function() {
+                    return g
+                },
+                fetchMonetizationRestrictions: function() {
+                    return b
                 }
             });
-            var r = n("37983");
-            n("884691");
-            var i = n("833395"),
-                l = e => {
-                    let {
-                        profileEffectConfig: t,
-                        onReady: n
-                    } = e, {
-                        pendingRef: l,
-                        setPending: u
-                    } = (0, i.default)(t.effects, n);
-                    return (0, r.jsx)("div", {
-                        children: t.effects.map(e => (0, r.jsx)("img", {
-                            src: e.src,
-                            alt: "Preload Profile Effect Asset",
-                            "aria-hidden": !0,
-                            style: {
-                                opacity: 0,
-                                position: "absolute"
-                            },
-                            onLoad: () => {
-                                u(l.current - 1), l.current = l.current - 1
-                            }
-                        }, e.src))
-                    })
-                }
-        },
-        417675: function(e, t, n) {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return l
-                }
-            });
-            var r = n("884691");
-            let i = e => {
-                e.effects.forEach(e => {
-                    let {
-                        src: t
-                    } = e, n = document.createElement("link");
-                    n.rel = "prefetch", n.href = t, document.body.appendChild(n)
+            var i = n("398183"),
+                r = n("913144"),
+                u = n("850068"),
+                l = n("775433"),
+                a = n("716241"),
+                o = n("599110"),
+                s = n("719726"),
+                d = n("49111");
+            async function c(e) {
+                let t = await s.getGuildRoleSubscriptionsSettings(e);
+                r.default.dispatch({
+                    type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS",
+                    settings: t
                 })
-            };
-            var l = e => {
-                r.useEffect(() => {
-                    i(e)
-                }, [e])
+            }
+            async function f(e, t) {
+                let n = await s.updateGuildRoleSubscriptionsSettings(e, t);
+                r.default.dispatch({
+                    type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS",
+                    settings: n
+                })
+            }
+            async function S(e) {
+                let {
+                    includeSoftDeleted: t = !0,
+                    countryCode: n
+                } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                r.default.dispatch({
+                    type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS",
+                    guildId: e
+                });
+                try {
+                    let [i, l, a] = await Promise.all([s.getGuildRoleSubscriptionGroupListingsForGuild(e, {
+                        includeSoftDeleted: t,
+                        countryCode: n
+                    }), s.getGuildRoleSubscriptionsSettings(e), s.getGuildRoleSubscriptionTrials(e), (0, u.fetchSubscriptions)()]);
+                    r.default.dispatch({
+                        type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS",
+                        guildId: e,
+                        groupListings: i,
+                        settings: l,
+                        subscriptionTrials: a
+                    })
+                } catch (t) {
+                    r.default.dispatch({
+                        type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE",
+                        guildId: e
+                    })
+                }
+            }
+            async function I(e, t) {
+                let n = await s.createGuildRoleSubscriptionGroupListing(e, t);
+                return r.default.dispatch({
+                    type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING",
+                    listing: n
+                }), n
+            }
+            async function E(e) {
+                var t;
+                r.default.dispatch({
+                    type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN",
+                    planId: e
+                });
+                let n = await s.getGuildRoleSubscriptionGroupForSubscriptionPlan(e);
+                r.default.dispatch({
+                    type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS",
+                    groupListing: n
+                });
+                let i = null !== (t = n.subscription_listings) && void 0 !== t ? t : [];
+                for (let t of i) t.subscription_plans[0].id === e && await l.fetchSubscriptionPlansForSKU(t.id, void 0, void 0, !0)
+            }
+            async function _(e, t, n) {
+                await s.deleteGuildRoleSubscriptionListing(e, t, n), r.default.dispatch({
+                    type: "GUILD_ROLE_SUBSCRIPTIONS_DELETE_LISTING",
+                    listingId: n
+                })
+            }
+            async function p(e, t, n) {
+                let i = await s.archiveGuildRoleSubscriptionListing(e, t, n);
+                r.default.dispatch({
+                    type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING",
+                    listing: i
+                })
+            }
+            async function R(e, t, n) {
+                let i = await s.updateGuildRoleSubscriptionsTrial(e, t, n);
+                r.default.dispatch({
+                    type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTION_TRIAL",
+                    subscriptionTrial: i
+                })
+            }
+            async function h(e, t) {
+                let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                    i = await s.getGuildRoleSubscriptionGroupListing(e, t, n);
+                return r.default.dispatch({
+                    type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING",
+                    listing: i
+                }), i
+            }
+            async function G(e) {
+                let {
+                    guildId: t,
+                    groupListingId: n,
+                    data: i,
+                    analyticsContext: u,
+                    onBeforeDispatchNewListing: l
+                } = e, c = await s.createGuildRoleSubscriptionListing(t, n, i);
+                return o.default.track(d.AnalyticEvents.ROLE_SUBSCRIPTION_LISTING_CREATED, {
+                    role_subscription_listing_id: c.id,
+                    role_subscription_group_listing_id: n,
+                    template_name: u.templateCategory,
+                    has_change_from_template: u.hasChangeFromTemplate,
+                    ...(0, a.collectGuildAnalyticsMetadata)(t)
+                }), await h(t, n, {
+                    includeArchivedListings: !0
+                }), null == l || l(c), r.default.dispatch({
+                    type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING",
+                    listing: c
+                }), c
+            }
+            async function g(e) {
+                let {
+                    guildId: t,
+                    listingId: n,
+                    groupListingId: i,
+                    data: u
+                } = e, l = await s.updateGuildRoleSubscriptionListing(t, i, n, u);
+                return r.default.dispatch({
+                    type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_LISTING",
+                    listing: l
+                }), await h(t, i, {
+                    includeArchivedListings: !0
+                }), l
+            }
+            async function b(e) {
+                let {
+                    signal: t
+                } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = !1;
+                for (let u = 0; u < 3; u++) try {
+                    if (null == t ? void 0 : t.aborted) {
+                        r.default.dispatch({
+                            type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_ABORTED",
+                            guildId: e
+                        });
+                        return
+                    }
+                    r.default.dispatch({
+                        type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS",
+                        guildId: e
+                    });
+                    let {
+                        restrictions: i
+                    } = await s.getGuildMonetizationRestrictions(e, {
+                        signal: t
+                    });
+                    r.default.dispatch({
+                        type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS",
+                        guildId: e,
+                        restrictions: null != i ? i : []
+                    }), n = !0;
+                    break
+                } catch (e) {
+                    await (0, i.sleep)((u + 1) * 1e3)
+                }!n && r.default.dispatch({
+                    type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE",
+                    guildId: e
+                })
+            }
+        },
+        719726: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                createGuildRoleSubscriptionGroupListing: function() {
+                    return a
+                },
+                createGuildRoleSubscriptionListing: function() {
+                    return o
+                },
+                updateGuildRoleSubscriptionListing: function() {
+                    return s
+                },
+                getGuildRoleSubscriptionGroupListingsForGuild: function() {
+                    return d
+                },
+                getGuildRoleSubscriptionsSettings: function() {
+                    return c
+                },
+                updateGuildRoleSubscriptionsSettings: function() {
+                    return f
+                },
+                getPriceTiers: function() {
+                    return S
+                },
+                getGuildRoleSubscriptionGroupListing: function() {
+                    return I
+                },
+                getGuildRoleSubscriptionGroupForSubscriptionPlan: function() {
+                    return E
+                },
+                deleteGuildRoleSubscriptionListing: function() {
+                    return _
+                },
+                archiveGuildRoleSubscriptionListing: function() {
+                    return p
+                },
+                getGuildRoleSubscriptionTrials: function() {
+                    return R
+                },
+                updateGuildRoleSubscriptionsTrial: function() {
+                    return h
+                },
+                getGuildRoleSubscriptionTrialEligibility: function() {
+                    return G
+                },
+                getGuildMonetizationRestrictions: function() {
+                    return g
+                },
+                fetchHighlightedCreatorGuildDetails: function() {
+                    return b
+                }
+            });
+            var i = n("872717"),
+                r = n("448993"),
+                u = n("49111"),
+                l = n("843455");
+            let a = async (e, t) => {
+                try {
+                    let n = await i.default.post({
+                        url: u.Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(e),
+                        body: t
+                    });
+                    return n.body
+                } catch (e) {
+                    throw new r.APIError(e)
+                }
+            }, o = async (e, t, n) => {
+                let {
+                    priceTier: l,
+                    ...a
+                } = n;
+                try {
+                    let n = await i.default.post({
+                        url: u.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTINGS(e, t),
+                        body: {
+                            ...a,
+                            price_tier: l
+                        }
+                    });
+                    return n.body
+                } catch (e) {
+                    throw new r.APIError(e)
+                }
+            }, s = async (e, t, n, l) => {
+                let {
+                    priceTier: a,
+                    ...o
+                } = l;
+                try {
+                    let r = await i.default.patch({
+                        url: u.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTINGS(e, t, n),
+                        body: {
+                            ...o,
+                            price_tier: a
+                        }
+                    });
+                    return r.body
+                } catch (e) {
+                    throw new r.APIError(e)
+                }
+            }, d = async function(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+                        includeSoftDeleted: !1
+                    },
+                    n = {
+                        include_soft_deleted: t.includeSoftDeleted,
+                        country_code: t.countryCode
+                    };
+                try {
+                    let t = await i.default.get({
+                        url: u.Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(e),
+                        query: n
+                    });
+                    return t.body
+                } catch (e) {
+                    throw new r.APIError(e)
+                }
+            }, c = async e => {
+                let t = await i.default.get({
+                    url: u.Endpoints.GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(e)
+                });
+                return t.body
+            }, f = async (e, t) => {
+                try {
+                    let n = await i.default.patch({
+                        url: u.Endpoints.GUILD_ROLE_SUBSCRIPTIONS_SETTINGS(e),
+                        body: t
+                    });
+                    return n.body
+                } catch (e) {
+                    throw new r.APIError(e)
+                }
+            }, S = async e => {
+                try {
+                    let t = await i.default.get({
+                        url: u.Endpoints.PRICE_TIERS,
+                        query: {
+                            price_tier_type: l.PriceTierTypes.GUILD_ROLE_SUBSCRIPTIONS,
+                            guild_id: e
+                        }
+                    });
+                    return t.body
+                } catch (e) {
+                    throw new r.APIError(e)
+                }
+            }, I = async function(e, t) {
+                let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+                try {
+                    let r = await i.default.get({
+                        url: u.Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTINGS(e, t),
+                        query: {
+                            include_draft_listings: n.includeDraftListings,
+                            include_archived_listings: n.includeArchivedListings
+                        }
+                    });
+                    return r.body
+                } catch (e) {
+                    throw new r.APIError(e)
+                }
+            }, E = async e => {
+                try {
+                    let t = await i.default.get({
+                        url: u.Endpoints.SUBSCRIPTION_PLAN_GUILD_ROLE_GROUP_LISTING(e)
+                    });
+                    return t.body
+                } catch (e) {
+                    throw new r.APIError(e)
+                }
+            }, _ = async (e, t, n) => {
+                try {
+                    await i.default.delete({
+                        url: u.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTINGS(e, t, n)
+                    })
+                } catch (e) {
+                    throw new r.APIError(e)
+                }
+            }, p = async (e, t, n) => {
+                try {
+                    let r = await i.default.post({
+                        url: u.Endpoints.GUILD_ROLE_SUBSCRIPTION_GROUP_LISTING_ARCHIVE(e, t, n)
+                    });
+                    return r.body
+                } catch (e) {
+                    throw new r.APIError(e)
+                }
+            }, R = async e => {
+                try {
+                    let t = await i.default.get({
+                        url: u.Endpoints.GUILD_ROLE_SUBSCRIPTION_TRIALS(e)
+                    });
+                    return t.body
+                } catch (e) {
+                    throw new r.APIError(e)
+                }
+            }, h = async (e, t, n) => {
+                try {
+                    let r = await i.default.patch({
+                        url: u.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTING_TRIAL(e, t),
+                        body: n
+                    });
+                    return r.body
+                } catch (e) {
+                    throw new r.APIError(e)
+                }
+            }, G = async (e, t, n) => {
+                try {
+                    let r = await i.default.get({
+                        url: u.Endpoints.GUILD_ROLE_SUBSCRIPTION_TRIAL_ELIGIBILITY(e, t, n)
+                    });
+                    return r.body
+                } catch (e) {
+                    throw new r.APIError(e)
+                }
+            }, g = async function(e) {
+                let {
+                    signal: t
+                } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                try {
+                    let n = await i.default.get({
+                        url: u.Endpoints.CREATOR_MONETIZATION_RESTRICTIONS(e),
+                        signal: t
+                    });
+                    return n.body
+                } catch (e) {
+                    throw new r.APIError(e)
+                }
+            }, b = async e => {
+                try {
+                    var t;
+                    let n = await i.default.get({
+                        url: u.Endpoints.GUILD_DISCOVERY_SLUG(e)
+                    });
+                    return null !== (t = n.body) && void 0 !== t ? t : JSON.parse(n.text)
+                } catch (e) {
+                    throw new r.APIError(e)
+                }
+            }
+        },
+        638779: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                computeHasRoleSubscriptionsInGuild: function() {
+                    return o
+                },
+                default: function() {
+                    return s
+                }
+            });
+            var i = n("446674"),
+                r = n("271938"),
+                u = n("26989"),
+                l = n("305961"),
+                a = n("49111");
+
+            function o(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null == e ? null : u.default.getMember(e, r.default.getId()),
+                    [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [l.default],
+                    i = n.getGuild(e);
+                if (null == i || null == t || !i.hasFeature(a.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) return !1;
+                for (let e of t.roles) {
+                    var o;
+                    let t = i.getRole(e);
+                    if ((null == t ? void 0 : null === (o = t.tags) || void 0 === o ? void 0 : o.subscription_listing_id) != null) return !0
+                }
+                return !1
+            }
+
+            function s(e) {
+                let t = (0, i.useStateFromStores)([r.default, u.default], () => null == e ? null : u.default.getMember(e, r.default.getId()));
+                return (0, i.useStateFromStores)([l.default], () => o(e, t, [l.default]), [e, t])
+            }
+        },
+        903724: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                areRoleSubscriptionsVisibleInGuild: function() {
+                    return f
+                },
+                useRoleSubscriptionsVisibleInGuild: function() {
+                    return S
+                },
+                useShowRoleSubscriptionsInChannelList: function() {
+                    return I
+                }
+            });
+            var i = n("446674"),
+                r = n("551254"),
+                u = n("250666"),
+                l = n("465869"),
+                a = n("38654"),
+                o = n("305961"),
+                s = n("638779"),
+                d = n("49111");
+
+            function c(e) {
+                let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.default, a.default], i = t.getGuild(e);
+                if (null == i) return !1;
+                let r = (0, u.isCreatorMonetizationEnabledGuild)(i),
+                    l = i.hasFeature(d.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
+                if (r && l) return !0;
+                let s = n.isViewingSubscriptionRoles(e);
+                return !!s || !1
+            }
+
+            function f(e) {
+                return !!c(e) || (0, s.computeHasRoleSubscriptionsInGuild)(e)
+            }
+
+            function S(e) {
+                let t = (0, s.default)(e),
+                    n = (0, i.useStateFromStores)([o.default, a.default], () => c(e, [o.default, a.default]), [e]),
+                    {
+                        shouldHideGuildPurchaseEntryPoints: r
+                    } = (0, l.useShouldHideGuildPurchaseEntryPoints)(e);
+                return !r && (n || t)
+            }
+
+            function I(e) {
+                let t = S(e),
+                    n = (0, r.useIsEligibleForSubscriptionsInGuildShop)(e, "useShowRoleSubscriptionsInChannelList");
+                return t && !n
+            }
+        },
+        232054: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return R
+                }
+            });
+            var i = n("203288"),
+                r = n("590260"),
+                u = n("677315"),
+                l = n("875229"),
+                a = n("466818"),
+                o = n("471706"),
+                s = n("290886"),
+                d = n("903724"),
+                c = n("120252"),
+                f = n("42203"),
+                S = n("305961"),
+                I = n("449008"),
+                E = n("361572"),
+                _ = n("49111"),
+                p = n("724210");
+            async function R(e) {
+                let {
+                    guildId: t,
+                    channelId: n
+                } = e, R = S.default.getGuild(t);
+                if (null == R && t !== _.ME) return !1;
+                if (null == n) return !0;
+                if ((0, p.isStaticChannelRoute)(n)) switch (n) {
+                    case p.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
+                        return (0, d.areRoleSubscriptionsVisibleInGuild)(t);
+                    case p.StaticChannelRoute.GUILD_SHOP:
+                        return (0, r.isGuildShopVisibleInGuild)(R);
+                    case p.StaticChannelRoute.MEMBER_APPLICATIONS:
+                        return (0, l.canReviewGuildMemberApplications)(t);
+                    case p.StaticChannelRoute.GUILD_HOME:
+                        return (0, u.canSeeGuildHome)(t) || (0, s.canSeeOnboardingHome)(t);
+                    case p.StaticChannelRoute.CHANNEL_BROWSER:
+                        return null != R && R.hasFeature(_.GuildFeatures.COMMUNITY);
+                    case p.StaticChannelRoute.GUILD_ONBOARDING:
+                        return o.default.shouldShowOnboarding(t);
+                    case p.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
+                        return null != R && R.hasFeature(_.GuildFeatures.COMMUNITY);
+                    case p.StaticChannelRoute.MEMBER_SAFETY:
+                        return (0, a.canAccessMemberSafetyPage)(t);
+                    default:
+                        (0, I.assertNever)(n)
+                }
+                let h = f.default.getChannel(n);
+                return (null != h || (await c.default.loadThread(n), null != (h = f.default.getChannel(n)))) && ((0, E.canViewChannel)(h) || i.default.isChannelGatedAndVisible(t, n))
+            }
+        },
+        537325: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return f
+                }
+            });
+            var i = n("37983");
+            n("884691");
+            var r = n("551042"),
+                u = n("565298"),
+                l = n("393414"),
+                a = n("239380"),
+                o = n("42203"),
+                s = n("361572"),
+                d = n("232054"),
+                c = n("49111");
+            async function f(e, t, f) {
+                let S = (0, s.tryParseChannelPath)(e);
+                if (null != S && !await (0, d.default)(S)) {
+                    (0, r.openModalLazy)(async () => {
+                        let {
+                            default: e
+                        } = await n.el("657233").then(n.bind(n, "657233"));
+                        return t => (0, i.jsx)(e, {
+                            ...t
+                        })
+                    });
+                    return
+                }
+                if (null == S) {
+                    (0, l.transitionTo)(e);
+                    return
+                }
+                let I = function(e) {
+                    if (null == e.channelId) return e;
+                    let t = o.default.getChannel(e.channelId);
+                    if (null == t) return e;
+                    let n = (0, u.getGuildIdForGenericRedirect)(t);
+                    return {
+                        ...e,
+                        guildId: null != n ? n : c.ME
+                    }
+                }(S);
+                if (null == I.channelId) {
+                    (0, a.transitionToGuild)(I.guildId);
+                    return
+                }
+                null != I.threadId ? (0, l.transitionTo)(c.Routes.CHANNEL_THREAD_VIEW(I.guildId, I.channelId, I.threadId, I.messageId), t, f) : (0, l.transitionTo)(c.Routes.CHANNEL(I.guildId, I.channelId, I.messageId), t, f)
+            }
+        },
+        120252: function(e, t, n) {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: function() {
+                    return E
+                }
+            });
+            var i = n("803182"),
+                r = n("872717"),
+                u = n("913144"),
+                l = n("619443"),
+                a = n("233069"),
+                o = n("42203"),
+                s = n("18494"),
+                d = n("49111"),
+                c = n("724210");
+            let f = {},
+                S = !1;
+
+            function I(e) {
+                if (null == e || e === c.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID || (0, c.isStaticChannelRoute)(e) || null != o.default.getChannel(e)) return Promise.resolve();
+                if (S || (S = !0, u.default.subscribe("CONNECTION_OPEN", () => {
+                        f = {};
+                        let e = s.default.getChannelId(),
+                            t = o.default.getChannel(e);
+                        null != e && null == t && I(e)
+                    })), !l.default.isConnected()) return Promise.resolve();
+                let t = f[e];
+                if (null != t) return "LOADING" === t.type ? t.promise : Promise.resolve();
+                let n = (0, i.matchPath)(location.pathname, {
+                        path: d.Routes.CHANNEL(":guildId", ":channelId", ":messageId"),
+                        exact: !0
+                    }),
+                    E = r.default.get(d.Endpoints.CHANNEL(e)).then(t => {
+                        let {
+                            body: i
+                        } = t;
+                        if (f[e] = {
+                                type: "LOADED"
+                            }, a.THREAD_CHANNEL_TYPES.has(i.type)) {
+                            var r;
+                            u.default.dispatch({
+                                type: "THREAD_CREATE",
+                                channel: (0, a.createChannelRecordFromServer)(i),
+                                messageId: null == n ? void 0 : null === (r = n.params) || void 0 === r ? void 0 : r.messageId
+                            })
+                        }
+                    }).catch(() => {
+                        var t;
+                        f[e] = {
+                            type: "NOT_FOUND"
+                        }, u.default.dispatch({
+                            type: "CHANNEL_DELETE",
+                            channel: {
+                                id: e,
+                                guild_id: null == n ? void 0 : null === (t = n.params) || void 0 === t ? void 0 : t.guildId,
+                                parent_id: void 0
+                            }
+                        })
+                    });
+                return f[e] = {
+                    type: "LOADING",
+                    promise: E
+                }, E
+            }
+            var E = {
+                loadThread: I
             }
         }
     }

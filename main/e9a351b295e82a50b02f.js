@@ -1,505 +1,721 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["4468"], {
-        625634: function(e, t, _) {
+    ["21494"], {
+        84460: function(e, t, i) {
             "use strict";
-            _.r(t), _.d(t, {
+            i.r(t), i.d(t, {
+                default: function() {
+                    return E
+                }
+            });
+            var n = i("446674"),
+                l = i("913144"),
+                r = i("568734"),
+                d = i("49111");
+
+            function a() {
+                return {
+                    isEnabled: !1,
+                    lastUsedObject: {},
+                    useActivityUrlOverride: !1,
+                    activityUrlOverride: null,
+                    filter: ""
+                }
+            }
+            let u = a(),
+                s = null,
+                o = [];
+            class c extends n.default.PersistedStore {
+                initialize(e) {
+                    u = {
+                        ...a(),
+                        ...null != e ? e : {}
+                    }
+                }
+                getState() {
+                    return u
+                }
+                getIsEnabled() {
+                    return u.isEnabled
+                }
+                getLastUsedObject() {
+                    return u.lastUsedObject
+                }
+                getUseActivityUrlOverride() {
+                    return u.useActivityUrlOverride
+                }
+                getActivityUrlOverride() {
+                    return u.activityUrlOverride
+                }
+                getFetchState() {
+                    return s
+                }
+                getFilter() {
+                    return u.filter
+                }
+                getDeveloperShelfItems() {
+                    return o
+                }
+                isApplicationInDevShelf(e) {
+                    return null != o.find(t => t.id === e)
+                }
+                inDevModeForApplication(e) {
+                    return u.isEnabled && this.isApplicationInDevShelf(e)
+                }
+            }
+            c.displayName = "DeveloperActivityShelfStore", c.persistKey = "DeveloperActivityShelfStore";
+            var E = new c(l.default, {
+                LOGOUT: function() {
+                    u = a(), s = null, o = []
+                },
+                DEVELOPER_ACTIVITY_SHELF_TOGGLE_ENABLED: function() {
+                    u.isEnabled = !u.isEnabled
+                },
+                DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: function() {
+                    u.useActivityUrlOverride = !u.useActivityUrlOverride
+                },
+                DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE: function(e) {
+                    let {
+                        activityUrlOverride: t
+                    } = e;
+                    u.activityUrlOverride = t
+                },
+                DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED: function(e) {
+                    let {
+                        applicationId: t,
+                        timestamp: i
+                    } = e;
+                    if (null == o.find(e => e.id === t)) return !1;
+                    u.lastUsedObject[t] = i
+                },
+                DEVELOPER_ACTIVITY_SHELF_FETCH_START() {
+                    s = "loading"
+                },
+                DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: function(e) {
+                    let {
+                        items: t
+                    } = e;
+                    s = "loaded", o = t.filter(e => null != e.flags && (0, r.hasFlag)(e.flags, d.ApplicationFlags.EMBEDDED))
+                },
+                DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL: function(e) {
+                    let {
+                        type: t
+                    } = e;
+                    s = "errored"
+                },
+                DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER: function(e) {
+                    let {
+                        filter: t
+                    } = e;
+                    u.filter = t
+                }
+            })
+        },
+        191225: function(e, t, i) {
+            "use strict";
+            let n;
+            i.r(t), i.d(t, {
+                NO_ACTIVITIES: function() {
+                    return f
+                },
+                default: function() {
+                    return H
+                }
+            });
+            var l = i("446674"),
+                r = i("913144"),
+                d = i("798609"),
+                a = i("271938"),
+                u = i("42203"),
+                s = i("957255"),
+                o = i("18494"),
+                c = i("697218"),
+                E = i("773336"),
+                A = i("711562"),
+                v = i("334368"),
+                _ = i("272505"),
+                p = i("49111"),
+                T = i("782340");
+            let I = {
+                    seenActivities: new Set,
+                    seenNewActivities: {},
+                    seenUpdatedActivities: {},
+                    shouldShowNewActivityIndicator: !1,
+                    usersHavePlayedByApp: new Map
+                },
+                f = [],
+                D = new Map,
+                S = new Map,
+                g = new Map,
+                y = !1,
+                h = new Map,
+                C = new Map,
+                O = new Map,
+                L = new Map,
+                M = new Map,
+                P = new Map,
+                N = new Map,
+                F = new Set([]);
+            let w = _.ActivityPanelModes.ACTION_BAR;
+
+            function m(e) {
+                return null != e ? e : "0"
+            }
+
+            function U(e, t, i, n) {
+                var l, r;
+                let d = (0, A.default)(i.application_id);
+                if (null == d) return;
+                let o = u.default.getBasicChannel(t),
+                    c = null != o && s.default.canBasicChannel(p.BasicPermissions.CONNECT, o) || (null == o ? void 0 : o.type) === p.ChannelTypes.DM || (null == o ? void 0 : o.type) === p.ChannelTypes.GROUP_DM;
+                if (function(e, t) {
+                        var i;
+                        I.usersHavePlayedByApp.set(e, new Set([...null !== (i = I.usersHavePlayedByApp.get(e)) && void 0 !== i ? i : [], ...t.map(e => e.user_id)]))
+                    }(i.application_id, n), !c) return;
+                let E = function(e, t, i, n, l) {
+                        var r, d;
+                        let a = new Map;
+                        return t.forEach(e => {
+                            a.set(e.user_id, e)
+                        }), {
+                            ...e,
+                            name: null !== (r = e.name) && void 0 !== r ? r : T.default.Messages.EMBEDDED_ACTIVITIES_UNKNOWN_ACTIVITY_NAME,
+                            type: null !== (d = e.type) && void 0 !== d ? d : p.ActivityTypes.PLAYING,
+                            url: i,
+                            connections: a,
+                            guildId: n,
+                            channelId: l
+                        }
+                    }(i, n, d, e, t),
+                    v = a.default.getId(),
+                    _ = D.get(E.application_id);
+                n.some(e => e.user_id === v) && null != _ && D.set(_.application_id, {
+                    ..._,
+                    ...E
+                });
+                let f = null !== (l = g.get(t)) && void 0 !== l ? l : [],
+                    y = f.filter(e => {
+                        let {
+                            application_id: t
+                        } = e;
+                        return t !== i.application_id
+                    }),
+                    h = m(e),
+                    C = null !== (r = S.get(h)) && void 0 !== r ? r : [],
+                    O = C.filter(e => !(e.application_id === i.application_id && e.channelId === t));
+                0 !== n.length && (y.push(E), O.push(E)), g.set(t, y), S.set(h, O)
+            }
+
+            function V(e) {
+                let t = e.embedded_activities;
+                t.forEach(t => {
+                    let {
+                        channel_id: i,
+                        embedded_activity: n,
+                        connections: l
+                    } = t;
+                    U(e.id, i, n, l)
+                })
+            }
+
+            function R() {
+                y = !1
+            }
+
+            function b(e, t) {
+                return "".concat(e, ":").concat(t)
+            }
+            class Y extends l.default.PersistedStore {
+                initialize(e) {
+                    var t;
+                    let i = new Map;
+                    Array.isArray(null == e ? void 0 : e.usersHavePlayedByApp) && (null == e || e.usersHavePlayedByApp.forEach(e => {
+                        if (Array.isArray(e)) {
+                            let [t, n] = e;
+                            "string" == typeof t && Array.isArray(n) && i.set(t, new Set(n))
+                        }
+                    }));
+                    let n = new Set(null !== (t = null == e ? void 0 : e.seenActivities) && void 0 !== t ? t : []);
+                    null != e && (I = {
+                        ...e,
+                        seenActivities: n,
+                        usersHavePlayedByApp: i
+                    })
+                }
+                getState() {
+                    return I
+                }
+                getSelfEmbeddedActivityForChannel(e) {
+                    var t;
+                    return null !== (t = Array.from(D.values()).find(t => {
+                        let {
+                            channelId: i
+                        } = t;
+                        return e === i
+                    })) && void 0 !== t ? t : null
+                }
+                getSelfEmbeddedActivities() {
+                    return D
+                }
+                getEmbeddedActivitiesForGuild(e) {
+                    var t;
+                    return null !== (t = S.get(e)) && void 0 !== t ? t : f
+                }
+                getEmbeddedActivitiesForChannel(e) {
+                    var t;
+                    return null !== (t = g.get(e)) && void 0 !== t ? t : f
+                }
+                getEmbeddedActivitiesByChannel() {
+                    return g
+                }
+                getEmbeddedActivityDurationMs(e, t) {
+                    let i = N.get(b(e, t));
+                    return null == i ? null : Date.now() - i
+                }
+                isLaunchingActivity() {
+                    return y
+                }
+                getShelfActivities(e) {
+                    var t;
+                    let i = m(e);
+                    return null !== (t = h.get(i)) && void 0 !== t ? t : []
+                }
+                getShelfFetchStatus(e) {
+                    let t = m(e);
+                    return C.get(t)
+                }
+                shouldFetchShelf(e) {
+                    var t, i;
+                    let n = m(e),
+                        l = null !== (t = C.get(n)) && void 0 !== t ? t : {
+                            isFetching: !1
+                        },
+                        r = Date.now(),
+                        d = r - (null !== (i = null == l ? void 0 : l.lastFetchTimestampMs) && void 0 !== i ? i : 0) > 216e5;
+                    return !(null == l ? void 0 : l.isFetching) && d
+                }
+                getOrientationLockStateForApp(e) {
+                    var t;
+                    return null !== (t = O.get(e)) && void 0 !== t ? t : null
+                }
+                getPipOrientationLockStateForApp(e) {
+                    var t;
+                    return null !== (t = L.get(e)) && void 0 !== t ? t : this.getOrientationLockStateForApp(e)
+                }
+                getGridOrientationLockStateForApp(e) {
+                    var t, i;
+                    return null !== (i = null !== (t = M.get(e)) && void 0 !== t ? t : L.get(e)) && void 0 !== i ? i : this.getOrientationLockStateForApp(e)
+                }
+                getLayoutModeForApp(e) {
+                    return P.get(e)
+                }
+                getDismissedEmbeddedActivityMessageKeys() {
+                    return Array.from(F)
+                }
+                getUsersHavePlayedByApp(e) {
+                    var t;
+                    return [...null !== (t = I.usersHavePlayedByApp.get(e)) && void 0 !== t ? t : []]
+                }
+                getConnectedActivityChannelId() {
+                    return n
+                }
+                getActivityPanelMode() {
+                    return w
+                }
+                getCurrentEmbeddedActivity() {
+                    var e;
+                    let t = this.getConnectedActivityChannelId();
+                    if (null != t) return null !== (e = this.getSelfEmbeddedActivityForChannel(t)) && void 0 !== e ? e : void 0
+                }
+            }
+            Y.displayName = "EmbeddedActivitiesStore", Y.persistKey = "EmbeddedActivities", Y.migrations = [e => ({
+                ...e,
+                seenFeaturedActivities: [],
+                shouldShowNewActivityIndicator: !1
+            }), e => (delete e.seenFeaturedActivities, {
+                ...e,
+                seenActivities: []
+            }), e => ({
+                ...e
+            }), e => (delete e.currentFreeActivity, delete e.lastFreeActivityRotationTimestampMs, delete e.freePeriodActivities, delete e.shouldShowFreeActivityIndicator, {
+                ...e
+            }), e => {
+                var t;
+                let i = new Set(null !== (t = e.seenActivities) && void 0 !== t ? t : []);
+                return {
+                    ...e,
+                    seenActivities: i,
+                    seenNewActivities: {},
+                    seenUpdatedActivities: {}
+                }
+            }];
+            let B = new Y(r.default, {
+                ACTIVITY_LAYOUT_MODE_UPDATE: function(e) {
+                    let {
+                        applicationId: t,
+                        layoutMode: i
+                    } = e;
+                    P.set(t, i)
+                },
+                CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
+                    let {
+                        guilds: t
+                    } = e;
+                    g.clear(), S.clear(), t.forEach(e => V(e))
+                },
+                GUILD_CREATE: function(e) {
+                    let {
+                        guild: t
+                    } = e;
+                    V(t)
+                },
+                CALL_CREATE: function(e) {
+                    let {
+                        channelId: t,
+                        embeddedActivities: i
+                    } = e;
+                    ! function(e, t) {
+                        t.forEach(e => {
+                            let {
+                                channel_id: t,
+                                embedded_activity: i,
+                                connections: n
+                            } = e;
+                            U(null, t, i, n)
+                        })
+                    }(0, i)
+                },
+                CHANNEL_DELETE: function(e) {
+                    let {
+                        channel: t
+                    } = e;
+                    g.set(t.id, []);
+                    let i = t.guild_id;
+                    if (null != i) {
+                        var n;
+                        let e = m(i),
+                            l = null !== (n = S.get(e)) && void 0 !== n ? n : [],
+                            r = l.filter(e => e.channelId !== t.id);
+                        S.set(e, r)
+                    }
+                },
+                EMBEDDED_ACTIVITY_LAUNCH_START: function(e) {
+                    let {
+                        embeddedActivity: t
+                    } = e;
+                    y = !0, w = t.channelId === o.default.getChannelId() ? _.ActivityPanelModes.PANEL : _.ActivityPanelModes.PIP
+                },
+                EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: R,
+                EMBEDDED_ACTIVITY_LAUNCH_FAIL: R,
+                EMBEDDED_ACTIVITY_OPEN: function(e) {
+                    var t, i, l;
+                    let {
+                        channelId: r,
+                        embeddedActivity: d
+                    } = e, {
+                        application_id: s
+                    } = d, o = (0, A.default)(s), E = a.default.getSessionId();
+                    if (null == o || null == E || (null === (t = D.get(s)) || void 0 === t ? void 0 : t.channelId) === r) return !1;
+                    let v = u.default.getChannel(r),
+                        _ = null == v ? void 0 : v.getGuildId(),
+                        I = c.default.getCurrentUser();
+                    if (null == _ && !(null !== (i = null == v ? void 0 : v.isPrivate()) && void 0 !== i && i) || null == I) return !1;
+                    n = r;
+                    let f = new Map,
+                        S = I.id;
+                    f.set(S, {
+                        user_id: S
+                    }), D.set(s, {
+                        guildId: _,
+                        channelId: r,
+                        application_id: s,
+                        name: null !== (l = d.name) && void 0 !== l ? l : T.default.Messages.EMBEDDED_ACTIVITIES_UNKNOWN_ACTIVITY_NAME,
+                        url: o,
+                        type: p.ActivityTypes.PLAYING,
+                        connections: f,
+                        connectedSince: Date.now()
+                    }), N.set(b(r, s), Date.now())
+                },
+                EMBEDDED_ACTIVITY_CLOSE: function(e) {
+                    let {
+                        applicationId: t
+                    } = e, i = D.get(t);
+                    D.delete(t), (null == i ? void 0 : i.channelId) === n && (n = void 0)
+                },
+                EMBEDDED_ACTIVITY_INBOUND_UPDATE: function(e) {
+                    let {
+                        guildId: t,
+                        channelId: i,
+                        embeddedActivity: n,
+                        connections: l
+                    } = e;
+                    U(t, i, n, l)
+                },
+                LOCAL_ACTIVITY_UPDATE: function(e) {
+                    var t, i;
+                    let {
+                        activity: n
+                    } = e;
+                    if (null == n) return !1;
+                    let l = D.get(null !== (t = n.application_id) && void 0 !== t ? t : "");
+                    if (null == l) return !1;
+                    D.set(l.application_id, {
+                        ...l,
+                        type: null !== (i = n.type) && void 0 !== i ? i : l.type,
+                        secrets: n.secrets
+                    })
+                },
+                EMBEDDED_ACTIVITY_SET_CONFIG: function(e) {
+                    let {
+                        applicationId: t,
+                        config: i
+                    } = e, n = D.get(t);
+                    null != n && D.set(n.application_id, {
+                        ...n,
+                        config: i
+                    })
+                },
+                EMBEDDED_ACTIVITY_FETCH_SHELF: function(e) {
+                    let {
+                        guildId: t
+                    } = e, i = m(t), n = C.get(i);
+                    C.set(i, {
+                        isFetching: !0,
+                        lastFetchTimestampMs: null == n ? void 0 : n.lastFetchTimestampMs
+                    })
+                },
+                EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: function(e) {
+                    let {
+                        guildId: t,
+                        activities: i
+                    } = e, n = m(t);
+                    h.set(n, i);
+                    let l = Date.now();
+                    ! function(e) {
+                        let {
+                            activities: t,
+                            now: i
+                        } = e;
+                        t.forEach(e => {
+                            let t = e.application_id,
+                                n = e.client_platform_config[(0, v.default)((0, E.getOS)())];
+                            if (!I.seenActivities.has(t) && (I.shouldShowNewActivityIndicator = !0, I.seenActivities.add(t)), null == n.label_until) return;
+                            let l = new Date(n.label_until).getTime();
+                            if (l < i) return;
+                            let r = I.seenNewActivities[t],
+                                a = Object.hasOwn(I.seenNewActivities, t),
+                                u = new Date(r).getTime() < l;
+                            n.label_type === d.EmbeddedActivityLabelTypes.NEW && (!a || u) && (I.shouldShowNewActivityIndicator = !0, I.seenNewActivities[t] = n.label_until);
+                            let s = I.seenUpdatedActivities[t],
+                                o = Object.hasOwn(I.seenUpdatedActivities, t),
+                                c = new Date(s).getTime() < l;
+                            n.label_type === d.EmbeddedActivityLabelTypes.UPDATED && (!o || c) && (I.shouldShowNewActivityIndicator = !0, I.seenUpdatedActivities[t] = n.label_until)
+                        })
+                    }({
+                        activities: i,
+                        now: l
+                    }), C.set(n, {
+                        isFetching: !1,
+                        lastFetchTimestampMs: l
+                    })
+                },
+                EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL: function(e) {
+                    let {
+                        guildId: t
+                    } = e, i = m(t), n = C.get(i);
+                    C.set(i, {
+                        isFetching: !1,
+                        lastFetchTimestampMs: null == n ? void 0 : n.lastFetchTimestampMs
+                    })
+                },
+                EMBEDDED_ACTIVITY_DISMISS_NEW_INDICATOR: () => {
+                    I.shouldShowNewActivityIndicator = !1
+                },
+                EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE: function(e) {
+                    let {
+                        applicationId: t,
+                        lockState: i,
+                        pictureInPictureLockState: n,
+                        gridLockState: l
+                    } = e;
+                    null == i ? O.delete(t) : O.set(t, i), null === n ? L.delete(t) : void 0 !== n && L.set(t, n), null === l ? M.delete(t) : void 0 !== l && M.set(t, l)
+                },
+                EMBEDDED_ACTIVITY_DISMISS_MESSAGE: function(e) {
+                    let {
+                        embeddedActivityKey: t
+                    } = e;
+                    F.add(t)
+                },
+                EMBEDDED_ACTIVITY_SET_PANEL_MODE: function(e) {
+                    let {
+                        activityPanelMode: t
+                    } = e;
+                    w = t
+                },
+                CHANNEL_SELECT: function(e) {
+                    let {
+                        channelId: t
+                    } = e;
+                    n !== t && w === _.ActivityPanelModes.PANEL && (w = _.ActivityPanelModes.PIP)
+                }
+            });
+            var H = B
+        },
+        711562: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var n = i("167726"),
+                l = i("84460");
+
+            function r(e) {
+                let t = l.default.getState();
+                return t.isEnabled && t.useActivityUrlOverride && null != t.activityUrlOverride && "" !== t.activityUrlOverride ? t.activityUrlOverride : n.default.inTestModeForEmbeddedApplication(e) ? n.default.testModeOriginURL : function(e) {
+                    let t = window.GLOBAL_ENV.ACTIVITY_APPLICATION_HOST;
+                    return null == t ? null : "https://".concat(e, ".").concat(t)
+                }(e)
+            }
+        },
+        272505: function(e, t, i) {
+            "use strict";
+            var n, l;
+            i.r(t), i.d(t, {
+                ActivityPanelModes: function() {
+                    return n
+                },
+                LANDSCAPE_ACTIVITY_ASPECT_RATIO: function() {
+                    return r
+                }
+            }), (l = n || (n = {})).ACTION_BAR = "action_bar", l.PANEL = "panel", l.PIP = "pip";
+            let r = 16 / 9
+        },
+        334368: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
                 default: function() {
                     return l
                 }
             });
-            var i = _("446674"),
-                I = _("913144"),
-                s = _("521012");
-            let T = !1,
-                E = {};
+            var n = i("798609");
 
-            function o(e) {
-                let {
-                    guildBoostSlot: t
-                } = e;
-                E = {
-                    ...E,
-                    [t.id]: t
+            function l(e) {
+                switch (e) {
+                    case "android":
+                        return n.EmbeddedActivitySupportedPlatforms.ANDROID;
+                    case "ios":
+                        return n.EmbeddedActivitySupportedPlatforms.IOS;
+                    default:
+                        return n.EmbeddedActivitySupportedPlatforms.WEB
                 }
             }
-
-            function u() {
-                let e = {};
-                for (let t of Object.values(E)) e[t.id] = t, t.subscription = s.default.getSubscriptionById(t.subscriptionId);
-                E = e
-            }
-            class r extends i.default.Store {
-                initialize() {
-                    this.syncWith([s.default], u)
-                }
-                get hasFetched() {
-                    return T
-                }
-                get boostSlots() {
-                    return E
-                }
-                getGuildBoostSlot(e) {
-                    return E[e]
-                }
-            }
-            r.displayName = "GuildBoostSlotStore";
-            var l = new r(I.default, {
-                GUILD_BOOST_SLOTS_FETCH_SUCCESS: function(e) {
-                    let {
-                        guildBoostSlots: t
-                    } = e;
-                    E = {}, t.forEach(e => {
-                        E[e.id] = e
-                    }), T = !0
-                },
-                GUILD_BOOST_SLOT_UPDATE_SUCCESS: o,
-                GUILD_BOOST_SLOT_CREATE: o,
-                GUILD_BOOST_SLOT_UPDATE: o,
-                LOGOUT: function() {
-                    E = {}, T = !1
-                }
-            })
         },
-        427459: function(e, t, _) {
+        167726: function(e, t, i) {
             "use strict";
-            _.r(t), _.d(t, {
-                PerkIcons: function() {
-                    return T
-                },
-                getNextTier: function() {
-                    return D
-                },
-                getTotalStickerCountForTier: function() {
-                    return N
-                },
-                getIncrementalStickerCountForTier: function() {
+            let n, l, r;
+            i.r(t), i.d(t, {
+                default: function() {
                     return f
-                },
-                getTotalSoundboardSoundCountForTier: function() {
-                    return O
-                },
-                getIncrementalSoundboardSoundCountForTier: function() {
-                    return P
-                },
-                getTiers: function() {
-                    return c
-                },
-                getTierName: function() {
-                    return A
-                },
-                getShortenedTierName: function() {
-                    return B
-                },
-                minimumRequiredTierForGuildFeature: function() {
-                    return g
-                },
-                boostedGuildTierToAnalyticsObjectType: function() {
-                    return C
-                },
-                getGuildTierFromAppliedBoostCount: function() {
-                    return m
-                },
-                getNextGuildTierFromAppliedBoostCount: function() {
-                    return p
-                },
-                getAppliedGuildBoostMonths: function() {
-                    return K
-                },
-                isGuildBoostedAtLeast: function() {
-                    return b
-                },
-                isTierUnlocked: function() {
-                    return V
-                },
-                getAvailableGuildBoostSlots: function() {
-                    return h
-                },
-                generateBlockGuildSubscriptionPurchasesNode: function() {
-                    return F
-                },
-                isInGracePeriod: function() {
-                    return y
-                },
-                appliedGuildBoostsRequiredForPerks: function() {
-                    return v
-                },
-                getAppliedGuildBoostsRequired: function() {
-                    return Y
-                },
-                getGracePeriodEndingDate: function() {
-                    return j
-                },
-                getAvailableStickerSlotCount: function() {
-                    return x
-                },
-                getAvailableSoundboardSoundCount: function() {
-                    return H
-                },
-                getNumberOfAppliedBoostsNeededForTier: function() {
-                    return J
-                },
-                isGuildBoostSlotCanceled: function() {
-                    return w
                 }
             });
-            var i, I, s, T, E = _("917351"),
-                o = _.n(E),
-                u = _("866227"),
-                r = _.n(u),
-                l = _("625634"),
-                d = _("521012"),
-                n = _("993105"),
-                R = _("449008"),
-                a = _("701909"),
-                G = _("719923"),
-                S = _("49111"),
-                U = _("646718"),
-                M = _("782340");
-            (i = s || (s = {}))[i.LEVEL_1 = 1] = "LEVEL_1", i[i.LEVEL_2 = 2] = "LEVEL_2", i[i.LEVEL_3 = 3] = "LEVEL_3", i[i.LEVEL_4 = 4] = "LEVEL_4", i[i.LEVEL_5 = 5] = "LEVEL_5", i[i.LEVEL_6 = 6] = "LEVEL_6", i[i.LEVEL_7 = 7] = "LEVEL_7", i[i.LEVEL_8 = 8] = "LEVEL_8", i[i.LEVEL_9 = 9] = "LEVEL_9", Object.freeze({
-                1: 1,
-                2: 2,
-                3: 3,
-                4: 6,
-                5: 9,
-                6: 12,
-                7: 15,
-                8: 18,
-                9: 24
-            }), (I = T || (T = {}))[I.EMOJI = 1] = "EMOJI", I[I.AUDIO = 2] = "AUDIO", I[I.ANIMATED = 3] = "ANIMATED", I[I.CUSTOMIZATION = 4] = "CUSTOMIZATION", I[I.UPLOAD = 5] = "UPLOAD", I[I.VANITY = 6] = "VANITY", I[I.STREAM = 7] = "STREAM", I[I.STICKER = 8] = "STICKER", I[I.CUSTOM_ROLE_ICON = 11] = "CUSTOM_ROLE_ICON", I[I.STAGE_VIDEO = 12] = "STAGE_VIDEO", I[I.SOUNDBOARD = 13] = "SOUNDBOARD";
-            let L = [S.BoostedGuildTiers.NONE, S.BoostedGuildTiers.TIER_1, S.BoostedGuildTiers.TIER_2, S.BoostedGuildTiers.TIER_3],
-                D = (e, t) => {
-                    var _;
-                    return e === S.BoostedGuildTiers.NONE ? S.BoostedGuildTiers.TIER_1 : null === (_ = k(t).find(t => t.tier === e)) || void 0 === _ ? void 0 : _.nextTier
+            var d = i("446674"),
+                a = i("913144"),
+                u = i("737292"),
+                s = i("845579"),
+                o = i("374363"),
+                c = i("686470");
+            let E = {
+                    applicationId: null,
+                    originURL: null
                 },
-                N = e => U.TotalStickerCountsByTier[e],
-                f = e => U.IncrementalStickerCountsByTier[e],
-                O = e => U.TotalSoundboardSoundCountsByTier[e],
-                P = e => {
-                    if (e === S.BoostedGuildTiers.NONE) return U.TotalSoundboardSoundCountsByTier[e];
-                    let t = L[L.indexOf(e) - 1];
-                    return U.TotalSoundboardSoundCountsByTier[e] - U.TotalSoundboardSoundCountsByTier[t]
+                A = E,
+                v = new Set,
+                _ = !1;
+
+            function p() {
+                r = null
+            }
+
+            function T() {
+                n = null, l = null, v = new Set, A.applicationId = null, A.originURL = null, p()
+            }
+            class I extends d.default.PersistedStore {
+                initialize(e) {
+                    n = (A = {
+                        ...null != e ? e : E
+                    }).applicationId, l = A.originURL, this.waitFor(o.default, u.default), this.syncWith([o.default, u.default], () => !0), c.default.whenInitialized(() => {
+                        _ = !0
+                    })
+                }
+                inTestModeForApplication(e) {
+                    return n === e
+                }
+                inTestModeForEmbeddedApplication(e) {
+                    return n === e && null != l
+                }
+                shouldDisplayTestMode(e) {
+                    return s.DeveloperMode.getSetting() && this.inTestModeForApplication(e)
+                }
+                getState() {
+                    return A
+                }
+                get isTestMode() {
+                    return null != n
+                }
+                get isFetchingAuthorization() {
+                    return v.size > 0
+                }
+                get testModeEmbeddedApplicationId() {
+                    return null != l ? n : null
+                }
+                get testModeApplicationId() {
+                    return n
+                }
+                get testModeOriginURL() {
+                    return l
+                }
+                get error() {
+                    return r
+                }
+                whenInitialized(e) {
+                    this.addConditionalChangeListener(() => {
+                        if (_) return setImmediate(e), !1
+                    })
+                }
+            }
+            I.displayName = "TestModeStore", I.persistKey = "TestModeStore";
+            var f = new I(a.default, {
+                DEVELOPER_TEST_MODE_AUTHORIZATION_START: function(e) {
+                    let {
+                        applicationId: t
+                    } = e;
+                    v.add(t), r = null
                 },
-                c = e => [{
-                    tier: S.BoostedGuildTiers.TIER_1,
-                    title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_TIER_1,
-                    perks: [{
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_EMOJI.format({
-                            adding: U.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_1].limits.emoji - U.BoostedGuildFeatures[S.BoostedGuildTiers.NONE].limits.emoji,
-                            total: U.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_1].limits.emoji
-                        }),
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_EMOJI,
-                        icon: T.EMOJI
-                    }, {
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-                            adding: f(S.BoostedGuildTiers.TIER_1),
-                            total: N(S.BoostedGuildTiers.TIER_1)
-                        }),
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_STICKER,
-                        icon: T.STICKER
-                    }, {
-                        title: M.default.Messages.SOUNDBOARD_MARKETING_BOOSTING_PERKS.format({
-                            soundCount: P(S.BoostedGuildTiers.TIER_1),
-                            totalSoundCount: O(S.BoostedGuildTiers.TIER_1)
-                        }),
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_SOUNDBOARD,
-                        icon: T.SOUNDBOARD
-                    }, {
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({
-                            bitrate: U.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_1].limits.bitrate / 1e3
-                        }),
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_AUDIO_QUALITY,
-                        icon: T.AUDIO
-                    }, {
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_1_ANIMATED_GUILD_ICON,
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_ANIMATED_GUILD_ICON.format(),
-                        icon: T.ANIMATED
-                    }, {
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_1_SPLASH,
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_SPLASH,
-                        icon: T.CUSTOMIZATION
-                    }, {
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_1_STREAMING,
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_STREAMING,
-                        icon: T.STREAM
-                    }].filter(R.isNotNullish)
-                }, {
-                    tier: S.BoostedGuildTiers.TIER_2,
-                    title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_TIER_2,
-                    perks: [{
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_EMOJI.format({
-                            adding: U.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_2].limits.emoji - U.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_1].limits.emoji,
-                            total: U.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_2].limits.emoji
-                        }),
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_EMOJI,
-                        icon: T.EMOJI
-                    }, {
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-                            adding: f(S.BoostedGuildTiers.TIER_2),
-                            total: N(S.BoostedGuildTiers.TIER_2)
-                        }),
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_STICKER,
-                        icon: T.STICKER
-                    }, {
-                        title: M.default.Messages.SOUNDBOARD_MARKETING_BOOSTING_PERKS.format({
-                            soundCount: P(S.BoostedGuildTiers.TIER_2),
-                            totalSoundCount: O(S.BoostedGuildTiers.TIER_2)
-                        }),
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_SOUNDBOARD,
-                        icon: T.SOUNDBOARD
-                    }, {
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({
-                            bitrate: U.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_2].limits.bitrate / 1e3
-                        }),
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_AUDIO_QUALITY,
-                        icon: T.AUDIO
-                    }, {
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_2_BANNER,
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_BANNER,
-                        icon: T.CUSTOMIZATION
-                    }, {
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_UPLOAD_LIMIT.format({
-                            fileSize: (0, n.formatSize)(U.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_2].limits.fileSize / 1024, {
-                                useKibibytes: !0
-                            })
-                        }),
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_UPLOAD_LIMIT.format(),
-                        icon: T.UPLOAD
-                    }, {
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_2_STREAMING,
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_STREAMING,
-                        icon: T.STREAM
-                    }, {
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_2_CUSTOM_ROLE_ICONS,
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_CUSTOM_ROLE_ICONS,
-                        icon: T.CUSTOM_ROLE_ICON
-                    }, e ? {
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({
-                            limit: S.MAX_STAGE_VIDEO_USER_LIMIT_TIER2
-                        }),
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({
-                            limit: S.MAX_STAGE_VIDEO_USER_LIMIT_TIER2
-                        }),
-                        icon: T.STAGE_VIDEO
-                    } : null].filter(R.isNotNullish)
-                }, {
-                    tier: S.BoostedGuildTiers.TIER_3,
-                    title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_TIER_3,
-                    perks: [{
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_EMOJI.format({
-                            adding: U.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_3].limits.emoji - U.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_2].limits.emoji,
-                            total: U.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_3].limits.emoji
-                        }),
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_EMOJI,
-                        icon: T.EMOJI
-                    }, {
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-                            adding: f(S.BoostedGuildTiers.TIER_3),
-                            total: N(S.BoostedGuildTiers.TIER_3)
-                        }),
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_STICKER,
-                        icon: T.STICKER
-                    }, {
-                        title: M.default.Messages.SOUNDBOARD_MARKETING_BOOSTING_PERKS.format({
-                            soundCount: P(S.BoostedGuildTiers.TIER_3),
-                            totalSoundCount: O(S.BoostedGuildTiers.TIER_3)
-                        }),
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_SOUNDBOARD,
-                        icon: T.SOUNDBOARD
-                    }, {
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({
-                            bitrate: U.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_3].limits.bitrate / 1e3
-                        }),
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_AUDIO_QUALITY,
-                        icon: T.AUDIO
-                    }, {
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_3_VANITY_URL,
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_VANITY_URL.format({
-                            helpdeskArticle: a.default.getArticleURL(S.HelpdeskArticles.GUILD_VANITY_URL)
-                        }),
-                        icon: T.VANITY
-                    }, {
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_UPLOAD_LIMIT.format({
-                            fileSize: (0, n.formatSize)(U.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_3].limits.fileSize / 1024, {
-                                useKibibytes: !0
-                            })
-                        }),
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_UPLOAD_LIMIT.format(),
-                        icon: T.UPLOAD
-                    }, {
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_3_ANIMATED_BANNER,
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_ANIMATED_BANNER,
-                        icon: T.ANIMATED
-                    }, e ? {
-                        title: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({
-                            limit: S.MAX_STAGE_VIDEO_USER_LIMIT_TIER3
-                        }),
-                        description: M.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({
-                            limit: S.MAX_STAGE_VIDEO_USER_LIMIT_TIER3
-                        }),
-                        icon: T.STAGE_VIDEO
-                    } : null].filter(R.isNotNullish)
-                }];
-
-            function A(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                    {
-                        useLevels: _ = !0
-                    } = t;
-                switch (e) {
-                    case S.BoostedGuildTiers.NONE:
-                        return _ ? M.default.Messages.PREMIUM_GUILD_TIER_0 : M.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_NONE_NAME;
-                    case S.BoostedGuildTiers.TIER_1:
-                        return M.default.Messages.PREMIUM_GUILD_TIER_1;
-                    case S.BoostedGuildTiers.TIER_2:
-                        return M.default.Messages.PREMIUM_GUILD_TIER_2;
-                    case S.BoostedGuildTiers.TIER_3:
-                        return M.default.Messages.PREMIUM_GUILD_TIER_3;
-                    default:
-                        throw Error("Not a valid tier type")
-                }
-            }
-
-            function B(e) {
-                switch (e) {
-                    case S.BoostedGuildTiers.NONE:
-                        return M.default.Messages.PREMIUM_GUILD_TIER_0;
-                    case S.BoostedGuildTiers.TIER_1:
-                        return M.default.Messages.PREMIUM_GUILD_TIER_1_SHORT;
-                    case S.BoostedGuildTiers.TIER_2:
-                        return M.default.Messages.PREMIUM_GUILD_TIER_2_SHORT;
-                    case S.BoostedGuildTiers.TIER_3:
-                        return M.default.Messages.PREMIUM_GUILD_TIER_3_SHORT;
-                    default:
-                        throw Error("Not a valid tier type")
-                }
-            }
-            let g = o.memoize(e => (0, U.BoostedGuildFeatures)[S.BoostedGuildTiers.TIER_1].features.includes(e) ? S.BoostedGuildTiers.TIER_1 : (0, U.BoostedGuildFeatures)[S.BoostedGuildTiers.TIER_2].features.includes(e) ? S.BoostedGuildTiers.TIER_2 : (0, U.BoostedGuildFeatures)[S.BoostedGuildTiers.TIER_3].features.includes(e) ? S.BoostedGuildTiers.TIER_3 : null),
-                C = e => {
-                    if (e === S.BoostedGuildTiers.NONE) return S.AnalyticsObjectTypes.NONE;
-                    if (e === S.BoostedGuildTiers.TIER_1) return S.AnalyticsObjectTypes.TIER_1;
-                    if (e === S.BoostedGuildTiers.TIER_2) return S.AnalyticsObjectTypes.TIER_2;
-                    else if (e === S.BoostedGuildTiers.TIER_3) return S.AnalyticsObjectTypes.TIER_3;
-                    return null
-                };
-
-            function m(e, t) {
-                for (let _ of k(t))
-                    if (e >= _.amount) return _.tier;
-                return S.BoostedGuildTiers.NONE
-            }
-
-            function p(e, t) {
-                for (let _ of k(t))
-                    if (e >= _.amount) return _.nextTier;
-                return S.BoostedGuildTiers.TIER_1
-            }
-
-            function K(e) {
-                var t;
-                return null !== (t = r().diff(r(e), "months")) && void 0 !== t ? t : 1
-            }
-
-            function b(e, t) {
-                return null == t || null != e && e >= t
-            }
-
-            function V(e, t) {
-                return b(e.premiumTier, t)
-            }
-
-            function h(e) {
-                return o.values(e).filter(e => e.isAvailable())
-            }
-
-            function F() {
-                let e = d.default.getPremiumTypeSubscription(),
-                    t = Object.values(l.default.boostSlots),
-                    {
-                        numAvailableGuildBoostSlots: _,
-                        numCanceledGuildBoostSlots: i
-                    } = t.reduce((e, t) => (w(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
-                        numAvailableGuildBoostSlots: 0,
-                        numCanceledGuildBoostSlots: 0
-                    });
-                if (null == e || _ > 0) return null;
-                if (e.status === S.SubscriptionStatusTypes.PAST_DUE) return M.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_SUBSCRIPTION_PAST_DUE;
-                if (e.status === S.SubscriptionStatusTypes.ACCOUNT_HOLD) return M.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_SUBSCRIPTION_ACCOUNT_HOLD;
-                if (i > 0) return M.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION;
-                if (null == e.renewalMutations) return null;
-                let I = G.getNumPremiumGuildSubscriptions(e.renewalMutations.additionalPlans),
-                    s = G.getNumPremiumGuildSubscriptions(e.additionalPlans);
-                return s > I ? M.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION : M.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PLAN
-            }
-
-            function y(e, t) {
-                return v(e, t) > 0
-            }
-
-            function v(e, t) {
-                let _ = m(e.length, t),
-                    i = Y(t)[_],
-                    I = e.filter(e => null != e.endsAt);
-                return i - (e.length - I.length)
-            }
-
-            function Y(e) {
-                return S.AppliedGuildBoostsRequiredForBoostedGuildTier
-            }
-
-            function k(e) {
-                let t = Y(e);
-                return [{
-                    tier: S.BoostedGuildTiers.TIER_3,
-                    amount: t[S.BoostedGuildTiers.TIER_3],
-                    nextTier: null
-                }, {
-                    tier: S.BoostedGuildTiers.TIER_2,
-                    amount: t[S.BoostedGuildTiers.TIER_2],
-                    nextTier: S.BoostedGuildTiers.TIER_3
-                }, {
-                    tier: S.BoostedGuildTiers.TIER_1,
-                    amount: t[S.BoostedGuildTiers.TIER_1],
-                    nextTier: S.BoostedGuildTiers.TIER_2
-                }]
-            }
-
-            function j(e, t) {
-                let _ = v(e, t);
-                if (_ > 0) {
-                    let t = e.sort((e, t) => null != e.endsAt && null != t.endsAt ? e.endsAt.getTime() - t.endsAt.getTime() : -1).filter(e => null != e.endsAt),
-                        i = t[t.length - _];
-                    return i.endsAt
-                }
-                return null
-            }
-
-            function x(e, t) {
-                let _ = f(t),
-                    i = L.indexOf(t);
-                if (-1 === i) return 0;
-                let I = L[i - 1],
-                    s = null != I ? N(I) : 0,
-                    T = N(t);
-                return Math.max(0, _ - e.slice(s, T).length)
-            }
-
-            function H(e, t) {
-                let _ = L.indexOf(t);
-                if (-1 === _) return 0;
-                let i = O(t);
-                return Math.max(0, i - e.length)
-            }
-
-            function J(e, t) {
-                let _ = e.premiumSubscriberCount,
-                    i = Y(e.id)[t];
-                return Math.max(0, i - _)
-            }
-
-            function w(e) {
-                var t;
-                return (null === (t = e.subscription) || void 0 === t ? void 0 : t.status) === S.SubscriptionStatusTypes.CANCELED || e.canceled
-            }
+                DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: function(e) {
+                    let {
+                        applicationId: t,
+                        originURL: i
+                    } = e;
+                    n = t, l = i, v.delete(t), r = null, A.applicationId = t, A.originURL = i
+                },
+                DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: function(e) {
+                    let {
+                        applicationId: t,
+                        error: i
+                    } = e;
+                    v.delete(t), r = i
+                },
+                OVERLAY_INITIALIZE: function(e) {
+                    let {
+                        testModeApplicationId: t
+                    } = e;
+                    n = t
+                },
+                DEVELOPER_TEST_MODE_RESET_ERROR: p,
+                LOGOUT: T,
+                DEVELOPER_TEST_MODE_RESET: T
+            })
         }
     }
 ]);

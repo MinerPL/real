@@ -1,496 +1,426 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["80574"], {
-        393828: function(e, t, i) {
+    ["75851"], {
+        179935: function(e, t, r) {
             "use strict";
-            e.exports = i.p + "714405524ef39906bd06.png"
-        },
-        527382: function(e, t, i) {
-            "use strict";
-            i.r(t), i.d(t, {
-                FileUploadIconClassNames: function() {
+            r.r(t), r.d(t, {
+                fetchReferralsRemaining: function() {
                     return a
                 },
-                DEFAULT_FILE_UPLOAD_ICONS: function() {
-                    return l
+                checkRecipientEligibility: function() {
+                    return f
                 },
-                EMOJI_FILE_UPLOAD_ICONS: function() {
-                    return o
-                }
-            });
-            var s, n, r = i("831839");
-            (s = n || (n = {}))[s.IMAGE = 0] = "IMAGE", s[s.DOCUMENT = 1] = "DOCUMENT", s[s.CODE = 2] = "CODE";
-            let a = {
-                    [n.IMAGE]: r.image,
-                    [n.DOCUMENT]: r.document,
-                    [n.CODE]: r.code
-                },
-                l = [n.DOCUMENT, n.IMAGE, n.CODE],
-                o = [n.IMAGE, n.IMAGE, n.IMAGE]
-        },
-        109036: function(e, t, i) {
-            "use strict";
-            i.r(t), i.d(t, {
-                default: function() {
-                    return o
-                }
-            });
-            var s = i("37983");
-            i("884691");
-            var n = i("414456"),
-                r = i.n(n),
-                a = i("527382"),
-                l = i("831839"),
-                o = function(e) {
-                    let {
-                        icons: t,
-                        className: i
-                    } = e;
-                    return (0, s.jsxs)("div", {
-                        className: r(l.icons, i),
-                        children: [(0, s.jsx)("div", {
-                            className: l.wrapOne,
-                            children: (0, s.jsx)("div", {
-                                className: r(l.icon, l.one, a.FileUploadIconClassNames[t[0]])
-                            })
-                        }), (0, s.jsx)("div", {
-                            className: l.wrapThree,
-                            children: (0, s.jsx)("div", {
-                                className: r(l.icon, l.three, a.FileUploadIconClassNames[t[2]])
-                            })
-                        }), (0, s.jsx)("div", {
-                            className: l.wrapTwo,
-                            children: (0, s.jsx)("div", {
-                                className: r(l.icon, l.two, a.FileUploadIconClassNames[t[1]])
-                            })
-                        })]
-                    })
-                }
-        },
-        336522: function(e, t, i) {
-            "use strict";
-            i.r(t), i.d(t, {
-                default: function() {
-                    return m
-                },
-                UPLOAD_ERROR_MODAL_KEY: function() {
+                createReferralTrial: function() {
                     return E
                 },
-                openUploadError: function() {
-                    return f
-                }
-            });
-            var s = i("37983");
-            i("884691");
-            var n = i("414456"),
-                r = i.n(n),
-                a = i("551042"),
-                l = i("516256"),
-                o = i("202664"),
-                u = i("476765"),
-                c = i("109036"),
-                d = i("527382"),
-                _ = i("831839");
-
-            function m(e) {
-                let {
-                    title: t,
-                    help: i,
-                    showPremiumUpsell: n,
-                    transitionState: a,
-                    icons: m,
-                    fileSize: E,
-                    onClose: f
-                } = e, I = (0, u.useUID)(), T = null != m ? m : d.DEFAULT_FILE_UPLOAD_ICONS;
-                return n ? (0, s.jsx)(o.default, {
-                    transitionState: a,
-                    onClose: f,
-                    fileSize: E
-                }) : (0, s.jsx)(l.ModalRoot, {
-                    size: l.ModalSize.DYNAMIC,
-                    "aria-labelledby": I,
-                    transitionState: a,
-                    children: (0, s.jsx)("div", {
-                        className: r(_.uploadDropModal, _.error),
-                        children: (0, s.jsxs)("div", {
-                            className: _.inner,
-                            children: [(0, s.jsx)(c.default, {
-                                icons: T
-                            }), (0, s.jsx)("div", {
-                                id: I,
-                                className: _.title,
-                                children: t
-                            }), (0, s.jsx)("div", {
-                                className: _.instructions,
-                                children: i
-                            })]
-                        })
-                    })
-                })
-            }
-            let E = "UPLOAD_ERROR_MODAL_KEY";
-
-            function f(e) {
-                (0, a.openModal)(t => (0, s.jsx)(m, {
-                    ...t,
-                    ...e
-                }), {
-                    modalKey: E
-                })
-            }
-        },
-        942377: function(e, t, i) {
-            "use strict";
-            i.r(t), i.d(t, {
-                getHigherExpectedValue: function() {
-                    return r
-                },
-                getHighestLikelihood: function() {
-                    return a
-                }
-            });
-            var s = i("716849"),
-                n = i("646718");
-
-            function r(e, t, i) {
-                return null == e ? n.PremiumTypes.TIER_2 : e[n.PremiumSubscriptionSKUs.TIER_0] * t > e[n.PremiumSubscriptionSKUs.TIER_2] * i ? n.PremiumTypes.TIER_0 : n.PremiumTypes.TIER_2
-            }
-
-            function a(e) {
-                if (null == e) return n.PremiumTypes.TIER_0;
-                let t = e[s.NON_SUBSCRIBER_SENTINEL],
-                    i = e[n.PremiumSubscriptionSKUs.TIER_0],
-                    r = e[n.PremiumSubscriptionSKUs.TIER_2];
-                return r > i && r > t ? n.PremiumTypes.TIER_2 : n.PremiumTypes.TIER_0
-            }
-        },
-        843647: function(e, t, i) {
-            "use strict";
-            i.r(t), i.d(t, {
-                default: function() {
+                resolveReferralTrialOffer: function() {
                     return _
                 }
             });
-            var s = i("446674"),
-                n = i("697218"),
-                r = i("10514"),
-                a = i("719923"),
-                l = i("716849"),
-                o = i("676572"),
-                u = i("942377"),
-                c = i("917247"),
-                d = i("646718");
-
-            function _(e) {
-                let {
-                    autoTrackExposure: t,
-                    experiment: i,
-                    location: _
-                } = e, m = (0, s.useStateFromStores)([n.default], () => n.default.getCurrentUser()), E = (0, c.usePremiumTrialOffer)(), f = null != E, I = null != m && (0, a.isPremium)(m);
-                (0, l.useMaybeFetchPremiumLikelihood)(i);
-                let {
-                    enabled: T,
-                    useExpectedValue: L,
-                    useLikelihood: P
-                } = i.useExperiment({
-                    location: null != _ ? _ : "1"
-                }, {
-                    autoTrackExposure: !I && !f && t
-                }), {
-                    premiumLikelihood: p,
-                    fetched: R
-                } = (0, s.useStateFromStoresObject)([o.default], () => {
-                    let e = o.default.getState();
-                    return {
-                        fetched: e.fetched,
-                        premiumLikelihood: e.premiumLikelihood
+            var l = r("872717"),
+                i = r("913144"),
+                n = r("819689"),
+                u = r("18494"),
+                s = r("49111");
+            let a = () => (i.default.dispatch({
+                    type: "BILLING_REFERRALS_REMAINING_FETCH_START"
+                }), l.default.get({
+                    url: s.Endpoints.GET_REFERRALS_REMAINING,
+                    oldFormErrors: !0
+                }).then(e => {
+                    i.default.dispatch({
+                        type: "BILLING_REFERRALS_REMAINING_FETCH_SUCCESS",
+                        referrals_remaining: null != e.body && null != e.body.referrals_remaining ? e.body.referrals_remaining : 0,
+                        sent_user_ids: null != e.body && null != e.body.sent_user_ids ? e.body.sent_user_ids : []
+                    })
+                }, () => {
+                    i.default.dispatch({
+                        type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL"
+                    })
+                })),
+                f = e => (i.default.dispatch({
+                    type: "BILLING_CREATE_REFERRAL_PREVIEW_START",
+                    recipientId: e
+                }), l.default.post({
+                    url: s.Endpoints.CREATE_REFERRAL_PREVIEW(e),
+                    oldFormErrors: !0
+                }).then(t => {
+                    i.default.dispatch({
+                        type: "BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS",
+                        recipientId: e,
+                        is_eligible: null != t.body && t.body.is_eligible
+                    })
+                }, () => {
+                    i.default.dispatch({
+                        type: "BILLING_CREATE_REFERRAL_PREVIEW_FAIL",
+                        recipientId: e
+                    })
+                }));
+            async function E(e) {
+                try {
+                    var t;
+                    let r = await l.default.post({
+                            url: s.Endpoints.CREATE_REFERRAL(e),
+                            oldFormErrors: !0
+                        }),
+                        n = null !== (t = r.body) && void 0 !== t ? t : null;
+                    return i.default.dispatch({
+                        type: "BILLING_CREATE_REFERRAL_SUCCESS",
+                        userTrialOffer: n
+                    }), {
+                        userTrialOffer: n
                     }
-                }), U = (0, s.useStateFromStores)([r.default], () => r.default.isLoadedForSKUs([d.PremiumSubscriptionSKUs.TIER_0, d.PremiumSubscriptionSKUs.TIER_2])), M = !I && T && !f && (L ? !R || !U : !R), S = d.PremiumTypes.TIER_2;
-                if (f) {
-                    let e = E.subscription_trial;
-                    (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_0 ? S = d.PremiumTypes.TIER_0 : (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_2 && (S = d.PremiumTypes.TIER_2)
-                } else if (!I && !M && T) {
-                    if (L) {
-                        let {
-                            amount: e
-                        } = (0, a.getPrice)(d.SubscriptionPlans.PREMIUM_MONTH_TIER_0), {
-                            amount: t
-                        } = (0, a.getPrice)(d.SubscriptionPlans.PREMIUM_MONTH_TIER_2);
-                        S = (0, u.getHigherExpectedValue)(p, e, t)
-                    } else P && (S = (0, u.getHighestLikelihood)(p))
+                } catch (e) {
+                    if (i.default.dispatch({
+                            type: "BILLING_CREATE_REFERRAL_FAIL"
+                        }), e.body.code === s.AbortCodes.INVALID_MESSAGE_SEND_USER) {
+                        let t = u.default.getCurrentlySelectedChannelId();
+                        null != t && n.default.sendClydeError(t, e.body.code)
+                    }
                 }
-                return {
-                    isLoading: M,
-                    suggestedPremiumType: S
+            }
+            async function _(e) {
+                try {
+                    var t;
+                    let r = await l.default.get({
+                            url: s.Endpoints.REFERRAL_OFFER_ID_RESOLVE(e),
+                            oldFormErrors: !0
+                        }),
+                        n = null !== (t = r.body) && void 0 !== t ? t : null;
+                    return i.default.dispatch({
+                        type: "BILLING_REFERRAL_RESOLVE_SUCCESS",
+                        userTrialOffer: n
+                    }), {
+                        userTrialOffer: n
+                    }
+                } catch (t) {
+                    i.default.dispatch({
+                        type: "BILLING_REFERRAL_RESOLVE_FAIL",
+                        userTrialOfferId: e
+                    })
                 }
             }
         },
-        202664: function(e, t, i) {
+        540692: function(e, t, r) {
             "use strict";
-            i.r(t), i.d(t, {
+            r.r(t), r.d(t, {
                 default: function() {
-                    return R
+                    return p
                 }
             });
-            var s = i("37983"),
-                n = i("884691"),
-                r = i("414456"),
-                a = i.n(r),
-                l = i("446674"),
-                o = i("77078"),
-                u = i("109036"),
-                c = i("697218"),
-                d = i("993105"),
-                _ = i("719923"),
-                m = i("552917"),
-                E = i("843647"),
-                f = i("789946"),
-                I = i("646718"),
-                T = i("49111"),
-                L = i("527382"),
-                P = i("782340"),
-                p = i("74230");
+            var l = r("637612"),
+                i = r("446674"),
+                n = r("913144"),
+                u = r("697218"),
+                s = r("179935"),
+                a = r("49111");
+            let f = null,
+                E = {},
+                _ = [],
+                R = new Set,
+                d = !1,
+                c = new Set,
+                o = new Set,
+                I = {},
+                L = 0,
+                T = null,
+                A = () => !0;
 
-            function R(e) {
-                let t, {
-                        onClose: i,
-                        fileSize: r,
-                        ...R
-                    } = e,
-                    U = null != r && I.MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE < r,
-                    {
-                        isLoading: M,
-                        suggestedPremiumType: S
-                    } = (0, E.default)({
-                        autoTrackExposure: !U,
-                        experiment: m.default,
-                        location: I.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL
-                    }),
-                    A = !U && S === I.PremiumTypes.TIER_0,
-                    x = (0, l.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
-                    O = (0, s.jsx)(u.default, {
-                        icons: L.DEFAULT_FILE_UPLOAD_ICONS
-                    });
-                t = A ? P.default.Messages.UPLOAD_AREA_PREMIUM_TIER_UPSELL_BODY_LINE_2.format({
-                    premiumPlan: (0, _.getPremiumTypeDisplayName)(I.PremiumTypes.TIER_0),
-                    premiumMaxSize: P.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED
-                }) : P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE;
-                let N = n.useMemo(() => {
-                        let e = _.default.getUserMaxFileSize(x),
-                            t = (0, d.formatSize)(e / 1024, {
-                                useKibibytes: !0
-                            }),
-                            i = P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
-                                maxSize: t
-                            });
-                        switch (null == x ? void 0 : x.premiumType) {
-                            case I.PremiumTypes.TIER_0:
-                                i = P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({
-                                    maxSize: t
-                                });
-                                break;
-                            case I.PremiumTypes.TIER_1:
-                                i = P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format({
-                                    maxSize: t
-                                })
-                        }
-                        return i
-                    }, [x]),
-                    h = (0, s.jsxs)("div", {
-                        className: p.body,
-                        children: [(0, s.jsx)("span", {
-                            children: N
-                        }), (0, s.jsx)(o.Text, {
-                            variant: "text-md/medium",
-                            children: t
-                        })]
-                    });
-                return (0, s.jsx)(f.default, {
-                    artElement: O,
-                    artContainerClassName: a(p.artContainer),
-                    enableArtBoxShadow: !1,
-                    type: I.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
-                    title: P.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-                    body: h,
-                    context: P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
-                        maxSize: P.default.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD
-                    }),
-                    glowUp: t,
-                    analyticsLocation: {
-                        section: T.AnalyticsSections.FILE_UPLOAD_POPOUT
-                    },
-                    onClose: i,
-                    subscriptionTier: A ? I.PremiumSubscriptionSKUs.TIER_0 : I.PremiumSubscriptionSKUs.TIER_2,
-                    isLoading: M,
-                    ...R
-                })
+            function S(e) {
+                c.add(e)
             }
-        },
-        789946: function(e, t, i) {
-            "use strict";
-            i.r(t), i.d(t, {
-                default: function() {
-                    return U
-                }
-            });
-            var s = i("37983"),
-                n = i("884691"),
-                r = i("414456"),
-                a = i.n(r),
-                l = i("77078"),
-                o = i("812204"),
-                u = i("685665"),
-                c = i("617917"),
-                d = i("599110"),
-                _ = i("719923"),
-                m = i("154889"),
-                E = i("917247"),
-                f = i("956597"),
-                I = i("635956"),
-                T = i("646718"),
-                L = i("49111"),
-                P = i("782340"),
-                p = i("857513"),
-                R = i("393828");
 
-            function U(e) {
-                var t, i, r;
+            function O(e) {
                 let {
-                    title: U,
-                    type: M,
-                    guildBoostProps: S,
-                    analyticsSource: A,
-                    analyticsLocation: x,
-                    body: O,
-                    context: N,
-                    glowUp: h,
-                    modalClassName: v,
-                    artContainerClassName: D,
-                    bodyClassName: C,
-                    transitionState: b,
-                    onClose: g,
-                    onSubscribeClick: j,
-                    onSecondaryClick: y,
-                    secondaryCTA: k,
-                    subscribeButtonText: F,
-                    showNewBadge: B = !1,
-                    enableArtBoxShadow: K = !0,
-                    subscriptionTier: z = T.PremiumSubscriptionSKUs.TIER_2,
-                    isLoading: w = !1,
-                    hideBackButton: G,
-                    backButtonText: Y,
-                    ...H
-                } = e, V = null != S, W = (0, E.usePremiumTrialOffer)(), J = (0, m.usePremiumDiscountOffer)(), X = ((null == W ? void 0 : null === (t = W.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === z || (0, m.discountOfferHasTier)(J, z)) && !V, {
-                    analyticsLocations: Z
-                } = (0, u.default)(o.default.PREMIUM_UPSELL_MODAL);
-                n.useEffect(() => {
-                    !w && (V ? d.default.track(L.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
-                        type: "".concat(M, " - Tier ").concat(S.boostedGuildTier),
-                        guild_id: S.guild.id,
-                        channel_id: S.channelId,
-                        location: x,
-                        location_stack: Z
-                    }) : d.default.track(L.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-                        type: M,
-                        source: A,
-                        location_stack: Z,
-                        sku_id: z
-                    }))
-                }, [V, z, w]);
-                let q = K ? a(p.artContainer, p.artContainerBoxShadow, D) : a(p.artContainer, D),
-                    Q = null;
-                return Q = "artURL" in H ? (0, s.jsx)("img", {
-                    className: p.art,
-                    alt: "",
-                    src: H.artURL
-                }) : H.artElement, (0, s.jsxs)(l.ModalRoot, {
-                    className: a(p.root, v),
-                    "aria-label": U,
-                    transitionState: b,
-                    children: [(0, s.jsxs)("div", {
-                        className: q,
-                        children: [Q, B ? (0, s.jsx)("img", {
-                            className: p.sparkleBadge,
-                            alt: "",
-                            src: R
-                        }) : null]
-                    }), (0, s.jsx)(l.ModalContent, {
-                        className: p.content,
-                        children: w ? (0, s.jsx)(l.Spinner, {}) : (0, s.jsx)(s.Fragment, {
-                            children: X ? (0, s.jsx)(s.Fragment, {
-                                children: (0, s.jsx)(f.default, {
-                                    onClose: g,
-                                    type: M,
-                                    subscriptionTier: null !== (r = null == W ? void 0 : null === (i = W.subscription_trial) || void 0 === i ? void 0 : i.sku_id) && void 0 !== r ? r : T.PremiumSubscriptionSKUs.TIER_2,
-                                    headingText: U,
-                                    context: N,
-                                    analyticsLocationObject: x,
-                                    discountOffer: J,
-                                    trialOffer: W,
-                                    children: h
-                                })
-                            }) : (0, s.jsxs)(s.Fragment, {
-                                children: [(0, s.jsx)(l.Heading, {
-                                    className: p.header,
-                                    variant: "heading-xl/semibold",
-                                    children: U
-                                }), (0, s.jsx)(l.Text, {
-                                    variant: "text-md/normal",
-                                    className: a(C),
-                                    children: O
-                                })]
-                            })
-                        })
-                    }), (0, s.jsxs)(l.ModalFooter, {
-                        className: p.footer,
-                        children: [(0, s.jsxs)("div", {
-                            className: p.primaryActions,
-                            children: [null != k ? (0, s.jsx)(l.Button, {
-                                className: p.secondaryAction,
-                                onClick: y,
-                                size: l.Button.Sizes.SMALL,
-                                color: l.Button.Colors.PRIMARY,
-                                look: l.Button.Looks.LINK,
-                                children: k
-                            }) : null, (() => {
-                                let e, t;
-                                if (V) return (0, s.jsx)(c.default, {
-                                    analyticsLocation: x,
-                                    guild: S.guild,
-                                    onClose: g
-                                });
-                                if (X) {
-                                    if (null != W) {
-                                        var i, n;
-                                        e = (0, _.formatTrialCtaIntervalDuration)({
-                                            intervalType: null == W ? void 0 : null === (i = W.subscription_trial) || void 0 === i ? void 0 : i.interval,
-                                            intervalCount: null == W ? void 0 : null === (n = W.subscription_trial) || void 0 === n ? void 0 : n.interval_count
-                                        }), t = null == W ? void 0 : W.trial_id
-                                    } else null != J && (e = P.default.Messages.PREMIUM_DISCOUNT_CTA.format({
-                                        percent: J.discount.amount
-                                    }))
-                                }
-                                return (0, s.jsx)(I.default, {
-                                    premiumModalAnalyticsLocation: x,
-                                    subscriptionTier: z,
-                                    trialId: t,
-                                    size: l.Button.Sizes.SMALL,
-                                    color: l.Button.Colors.GREEN,
-                                    onClick: () => {
-                                        null == j || j(), g()
-                                    },
-                                    buttonText: null != F ? F : e
-                                })
-                            })()]
-                        }), !G && (0, s.jsx)(l.Button, {
-                            onClick: g,
-                            size: l.Button.Sizes.SMALL,
-                            color: l.Button.Colors.PRIMARY,
-                            look: l.Button.Looks.LINK,
-                            children: null != Y ? Y : P.default.Messages.BACK
-                        })]
-                    })]
-                })
+                    messages: t
+                } = e;
+                t.forEach(e => F(e))
             }
+
+            function F(e) {
+                let t = e.type === l.MessageTypes.PREMIUM_REFERRAL ? e.content : null;
+                if (null == t) return !1;
+                if (!o.has(t) && !c.has(t)) {
+                    var r;
+                    r = t, c.add(r), n.default.wait(() => (0, s.resolveReferralTrialOffer)(t).catch(a.NOOP_NULL))
+                }
+            }
+            class h extends i.default.Store {
+                initialize() {
+                    this.waitFor(u.default), this.syncWith([u.default], A)
+                }
+                checkAndFetchReferralsRemaining() {
+                    null == f && !d && L < 5 && (null == T || T < Date.now()) && (0, s.fetchReferralsRemaining)()
+                }
+                getReferralsRemaining() {
+                    return this.checkAndFetchReferralsRemaining(), f
+                }
+                getSentUserIds() {
+                    return this.checkAndFetchReferralsRemaining(), null == _ ? [] : _
+                }
+                isFetchingReferralsRemaining() {
+                    return d
+                }
+                isFetchingRecipientEligibility(e) {
+                    return R.has(e)
+                }
+                getRecipientEligibility(e) {
+                    return void 0 === E[e] && !R.has(e) && (0, s.checkRecipientEligibility)(e), E[e]
+                }
+                getRelevantUserTrialOffer(e) {
+                    return I[e]
+                }
+                isResolving(e) {
+                    return c.has(e)
+                }
+            }
+            h.displayName = "ReferralTrialStore";
+            var p = new h(n.default, {
+                BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function(e) {
+                    let {
+                        userTrialOfferId: t,
+                        recipientId: r
+                    } = e;
+                    if (!d && (0, s.fetchReferralsRemaining)(), !R.has(r) && (0, s.checkRecipientEligibility)(r), !c.has(t)) {
+                        var l;
+                        l = t, c.add(l), n.default.wait(() => (0, s.resolveReferralTrialOffer)(t).catch(a.NOOP_NULL))
+                    }
+                },
+                BILLING_REFERRALS_REMAINING_FETCH_START: function(e) {
+                    let {} = e;
+                    d = !0
+                },
+                BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function(e) {
+                    let {
+                        referrals_remaining: t,
+                        sent_user_ids: r
+                    } = e;
+                    d = !1, f = t, _ = r
+                },
+                BILLING_REFERRALS_REMAINING_FETCH_FAIL: function(e) {
+                    let {} = e;
+                    d = !1, L += 1, T = Date.now() + 1e3 * Math.pow(2, L)
+                },
+                BILLING_CREATE_REFERRAL_PREVIEW_START: function(e) {
+                    let {
+                        recipientId: t
+                    } = e;
+                    R.add(t)
+                },
+                BILLING_CREATE_REFERRAL_PREVIEW_SUCCESS: function(e) {
+                    let {
+                        recipientId: t,
+                        is_eligible: r
+                    } = e;
+                    E[t] = r, R.delete(t)
+                },
+                BILLING_CREATE_REFERRAL_PREVIEW_FAIL: function(e) {
+                    let {
+                        recipientId: t
+                    } = e;
+                    E[t] = !1, R.delete(t)
+                },
+                BILLING_CREATE_REFERRAL_SUCCESS: function(e) {
+                    let {
+                        userTrialOffer: t
+                    } = e;
+                    (0, s.fetchReferralsRemaining)(), I[t.id] = t, _ = [..._, t.user_id]
+                },
+                BILLING_REFERRAL_RESOLVE_SUCCESS: function(e) {
+                    let {
+                        userTrialOffer: t
+                    } = e;
+                    null != t && (c.delete(t.id), o.add(t.id), I[t.id] = t)
+                },
+                BILLING_REFERRAL_RESOLVE_FAIL: function(e) {
+                    let {
+                        userTrialOfferId: t
+                    } = e;
+                    c.delete(t), o.add(t)
+                },
+                LOAD_MESSAGES_SUCCESS: O,
+                MESSAGE_CREATE: function(e) {
+                    let {
+                        message: t
+                    } = e;
+                    F(t)
+                },
+                LOAD_MESSAGES_AROUND_SUCCESS: O,
+                LOGOUT: function() {
+                    f = null, E = {}, _ = [], R = new Set, d = !1, c = new Set, o = new Set, I = {}, L = 0, T = null
+                }
+            })
+        },
+        917247: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                usePremiumTrialOffer: function() {
+                    return a
+                }
+            });
+            var l = r("65597"),
+                i = r("340412"),
+                n = r("540692"),
+                u = r("833516"),
+                s = r("646718");
+
+            function a(e) {
+                var t, r, a, f;
+                let E = (0, u.useTrialOffer)(s.PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID),
+                    _ = (0, u.useTrialOffer)(s.PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID),
+                    R = (0, u.useTrialOffer)(s.PREMIUM_TIER_2_REACTIVATION_TRIAL_ID),
+                    d = (0, u.useTrialOffer)(i.default.getAnyOfUserTrialOfferId([s.PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID, s.PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID, s.PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID, s.PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID])),
+                    c = (0, u.useTrialOffer)(s.PREMIUM_TIER_2_AUTH3_TRIAL_ID),
+                    o = (0, l.default)([n.default], () => void 0 === e ? null : n.default.getRelevantUserTrialOffer(e));
+                return null !== (f = null !== (a = null !== (r = null !== (t = null != E ? E : o) && void 0 !== t ? t : _) && void 0 !== r ? r : R) && void 0 !== a ? a : d) && void 0 !== f ? f : c
+            }
+        },
+        833516: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                hasUserTrialOfferExpired: function() {
+                    return f
+                },
+                useTrialOffer: function() {
+                    return E
+                }
+            });
+            var l = r("884691"),
+                i = r("446674"),
+                n = r("862337"),
+                u = r("697218"),
+                s = r("340412"),
+                a = r("719923");
+
+            function f(e) {
+                return null != e && null != e.expires_at && Date.now() > Date.parse(e.expires_at)
+            }
+
+            function E(e) {
+                let t = (0, i.useStateFromStores)([s.default], () => s.default.getUserTrialOffer(e)),
+                    [r, E] = l.useState(f(t)),
+                    _ = (0, i.useStateFromStores)([u.default], () => (0, a.isPremium)(u.default.getCurrentUser()));
+                return l.useEffect(() => {
+                    if (null != t && null != t.expires_at) {
+                        let e = new n.Timeout,
+                            l = () => {
+                                let i = null != t.expires_at ? Date.parse(t.expires_at) - Date.now() : 0;
+                                null == e || e.start(i, () => {
+                                    !r && f(t) ? E(!0) : l()
+                                })
+                            };
+                        return l(), () => e.stop()
+                    }
+                }, [r, t]), r || _ ? null : t
+            }
+        },
+        340412: function(e, t, r) {
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return o
+                }
+            });
+            var l = r("446674"),
+                i = r("913144"),
+                n = r("697218"),
+                u = r("719923"),
+                s = r("521012"),
+                a = r("646718");
+            let f = {
+                    userOffersLastFetchedAtDate: void 0,
+                    userTrialOffers: {},
+                    userDiscounts: {}
+                },
+                E = f;
+
+            function _() {
+                E.userTrialOffers = {}, E.userDiscounts = {}, E.userOffersLastFetchedAtDate = void 0
+            }
+            let R = () => !0;
+
+            function d() {
+                let e = s.default.getPremiumTypeSubscription();
+                return null != e && (E.userTrialOffers = {}, E.userDiscounts = {}, !0)
+            }
+            class c extends l.default.PersistedStore {
+                initialize(e) {
+                    E = null != e ? e : f, this.waitFor(n.default), this.syncWith([n.default], R), this.syncWith([s.default], d)
+                }
+                getUserTrialOffer(e) {
+                    if (null !== e) return E.userTrialOffers[e]
+                }
+                getUserDiscount(e) {
+                    if (null !== e) return E.userDiscounts[e]
+                }
+                getAnyOfUserTrialOfferId(e) {
+                    for (let t of e)
+                        if (null != E.userTrialOffers[t]) return t;
+                    return null
+                }
+                hasFetchedOffer() {
+                    return null != E.userOffersLastFetchedAtDate
+                }
+                shouldFetchOffer() {
+                    let e = E.userOffersLastFetchedAtDate;
+                    return null == e || Date.now() - 1728e5 > e
+                }
+                getAlmostExpiringTrialOffers(e) {
+                    let t = Object.values(a.SubscriptionTrials).map(e => e.id),
+                        r = n.default.getCurrentUser();
+                    return (0, u.isPremium)(r) ? [] : Object.values(E.userTrialOffers).filter(r => t.includes(r.trial_id) && null != r.expires_at && null != r.subscription_trial && e.includes(r.subscription_trial.sku_id) && Date.parse(r.expires_at) < Date.now() + a.USER_PREMIUM_SUBSCRIPTION_TRIAL_EXPIRES_APPROACHING_5_DAY_THRESHOLD)
+                }
+                getAcknowledgedOffers(e) {
+                    let t = n.default.getCurrentUser();
+                    return (0, u.isPremium)(t) ? [] : Object.values(E.userTrialOffers).filter(t => e.includes(t.trial_id) && null != t.expires_at)
+                }
+                getUnacknowledgedDiscountOffers() {
+                    let e = n.default.getCurrentUser();
+                    return (0, u.isPremium)(e) ? [] : Object.values(E.userDiscounts).filter(e => null == e.expires_at)
+                }
+                getUnacknowledgedOffers(e) {
+                    let t = n.default.getCurrentUser();
+                    return (0, u.isPremium)(t) ? [] : Object.values(E.userTrialOffers).filter(t => e.includes(t.trial_id) && null == t.expires_at)
+                }
+                hasAnyUnexpiredOffer() {
+                    return Object.values(E.userTrialOffers).some(e => null == e.expires_at || Date.parse(e.expires_at) > Date.now())
+                }
+                getState() {
+                    return E
+                }
+                forceReset() {
+                    _()
+                }
+            }
+            c.displayName = "UserOfferStore", c.persistKey = "UserOfferStore";
+            var o = new c(i.default, {
+                BILLING_USER_TRIAL_OFFER_FETCH_SUCCESS: function(e) {
+                    let {
+                        userTrialOffer: t
+                    } = e;
+                    null != t ? E.userTrialOffers[t.trial_id] = t : _(), E.userOffersLastFetchedAtDate = Date.now()
+                },
+                BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS: function(e) {
+                    let {
+                        userTrialOffer: t
+                    } = e;
+                    E.userTrialOffers[t.trial_id] = t, E.userOffersLastFetchedAtDate = Date.now()
+                },
+                BILLING_USER_OFFER_FETCH_SUCCESS: function(e) {
+                    let {
+                        userTrialOffer: t,
+                        userDiscount: r
+                    } = e;
+                    null == t && null == r && _(), null != t ? (E.userTrialOffers[t.trial_id] = t, E.userDiscounts = {}) : null != r && (E.userDiscounts[r.discount_id] = r, E.userTrialOffers = {}), E.userOffersLastFetchedAtDate = Date.now()
+                },
+                BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS: function(e) {
+                    let {
+                        userTrialOffer: t,
+                        userDiscount: r
+                    } = e;
+                    (null != t || null != r) && (null != t && (E.userTrialOffers[t.trial_id] = t), null != r && (E.userDiscounts[r.discount_id] = r), E.userOffersLastFetchedAtDate = Date.now())
+                },
+                LOGOUT: _
+            })
         }
     }
 ]);

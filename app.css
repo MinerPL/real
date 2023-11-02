@@ -9498,8 +9498,7 @@
     flex-direction: row;
     align-items: center;
     gap: 8px;
-    margin-left: 12px;
-    margin-top: 8px
+    margin-bottom: 16px
 }
 
 .referencePosition__76f5a {
@@ -29012,7 +29011,7 @@ html .progress__4ef76 {
     align-items: center;
     margin: var(--spacing-16);
     border-radius: 6px;
-    padding: 6px 12px 6px 16px;
+    padding: var(--spacing-8)var(--spacing-12)var(--spacing-8)var(--spacing-16);
     background: var(--background-floating);
     position: sticky;
     height: -moz-fit-content;
@@ -35482,8 +35481,8 @@ html .progress__4ef76 {
 .errorState_b806b1 {
     padding: 20px 20px 40px;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     text-align: center
 }
 
@@ -35545,7 +35544,7 @@ html .progress__4ef76 {
 
 .confirmChannelName_c49514 {
     font-weight: 500;
-    font-size: 14px;
+    font-size: .875rem;
     margin-left: 8px;
     color: var(--header-primary)
 }
@@ -35553,7 +35552,7 @@ html .progress__4ef76 {
 .lastActiveTimestamp__56cd7 {
     margin-left: 8px;
     color: var(--text-muted);
-    font-size: 12px;
+    font-size: .75rem;
     margin-top: 2px
 }
 
@@ -83504,6 +83503,10 @@ input::-webkit-inner-spin-button {
     background-color: transparent
 }
 
+.theme-light .video__47ab5 {
+    background-color: black
+}
+
 .header__78150 {
     width: 85%
 }
@@ -113993,8 +113996,10 @@ html .invoiceCancelRow_c1bfe7 {
     border: 1px solid transparent
 }
 
-.buttonsBackground__0addb:hover {
-    cursor: pointer
+.buttonsBackground__0addb svg {
+    height: 15px;
+    width: 15px;
+    fill: var(--interactive-normal)
 }
 
 .buttonsBackground__0addb.disabled__42201 {
@@ -114004,6 +114009,19 @@ html .invoiceCancelRow_c1bfe7 {
 .buttonsBackgroundActive__5341f {
     border: 1px solid var(--brand-500);
     background: hsl(var(--brand-500-hsl)/.15)
+}
+
+.buttonsBackgroundActive__5341f svg {
+    fill: var(--interactive-active)
+}
+
+.buttonsBackgroundInactive__18982:hover {
+    cursor: pointer;
+    border: 1px solid var(--background-modifier-hover)
+}
+
+.buttonsBackgroundInactive__18982:hover svg {
+    fill: var(--interactive-hover)
 }
 
 .modalHeader_f08afe {
@@ -114088,7 +114106,7 @@ html .invoiceCancelRow_c1bfe7 {
 
 .tipNumber_ee8aea {
     border-radius: var(--radius-round);
-    background: var(--background-secondary-alt);
+    background: var(--background-tertiary);
     display: flex;
     min-width: 32px;
     min-height: 32px;

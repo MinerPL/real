@@ -1,705 +1,1430 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["60499"], {
-        340616: function(e, t, r) {
+    ["13508"], {
+        696246: function(e, t, l) {
             "use strict";
-            r.r(t), r.d(t, {
+            e.exports = l.p + "23808e559cfef1d23276.svg"
+        },
+        231185: function(e, t, l) {
+            "use strict";
+            e.exports = l.p + "606576712b69844bb246.svg"
+        },
+        604689: function(e, t, l) {
+            "use strict";
+            e.exports = l.p + "a15e231b105dd8282a02.svg"
+        },
+        943722: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                ActivityEmoji: function() {
+                    return C
+                },
                 default: function() {
-                    return c
+                    return T
                 }
             });
-            var n = r("37983"),
-                l = r("884691"),
-                i = r("132710"),
-                a = r.n(i),
-                u = r("77078"),
-                s = r("812204"),
-                d = r("685665"),
-                o = r("128259"),
-                c = l.memo(function(e) {
-                    let {
-                        onClick: t,
-                        trusted: r,
-                        title: i,
-                        href: c,
-                        children: f,
-                        messageId: v,
-                        channelId: g,
-                        ...E
-                    } = e, {
-                        analyticsLocations: I
-                    } = (0, d.default)(s.default.MASKED_LINK), R = l.useCallback(t => (0, o.handleClick)(e, t, I), [I, e]), h = l.useCallback(e => {
-                        1 === e.button && R(e)
-                    }, [R]), _ = a.sanitizeUrl(c);
-                    return (0, n.jsx)(u.Anchor, {
-                        ...E,
-                        title: i,
-                        target: "_blank",
-                        rel: "noreferrer noopener",
-                        href: _,
-                        onClick: R,
-                        onAuxClick: h,
-                        children: null != f ? f : i
+            var a = l("37983"),
+                n = l("884691"),
+                i = l("414456"),
+                s = l.n(i),
+                r = l("77078"),
+                u = l("430568"),
+                o = l("309570"),
+                d = l("29088"),
+                c = l("867805"),
+                f = l("845579"),
+                m = l("137783"),
+                p = l("49111"),
+                E = l("205341");
+
+            function C(e) {
+                let {
+                    emoji: t,
+                    className: l,
+                    animate: n = !0,
+                    hideTooltip: i
+                } = e, o = f.AnimateEmoji.useSetting(), d = null != t.id ? ":".concat(t.name, ":") : c.default.translateSurrogatesToInlineEmoji(t.name), m = {
+                    className: s(E.emoji, l),
+                    emojiId: t.id,
+                    emojiName: t.name,
+                    autoplay: !0,
+                    animated: !!(t.animated && o && n)
+                };
+                return i ? (0, a.jsx)(u.default, {
+                    ...m
+                }) : (0, a.jsx)(r.Tooltip, {
+                    text: d,
+                    children: e => (0, a.jsx)(u.default, {
+                        ...e,
+                        ...m
                     })
                 })
+            }
+            let S = e => {
+                let {
+                    className: t,
+                    text: l
+                } = e, i = n.useRef(null), u = n.useRef(null), [o, d] = n.useState(!1);
+                return n.useLayoutEffect(() => {
+                    let {
+                        current: e
+                    } = i, {
+                        current: t
+                    } = u;
+                    if (null == e || null == t) return;
+                    let l = e.clientWidth < t.clientWidth && e.clientHeight <= t.clientHeight;
+                    d(!l)
+                }, [l]), (0, a.jsx)(r.Tooltip, {
+                    text: o || null == l || "" === l ? null : l,
+                    delay: 150,
+                    "aria-label": !1,
+                    children: e => (0, a.jsxs)(a.Fragment, {
+                        children: [(0, a.jsx)("div", {
+                            ...e,
+                            className: t,
+                            ref: i,
+                            children: l
+                        }), (0, a.jsx)("div", {
+                            className: s(E.textRuler, t),
+                            ref: u,
+                            "aria-hidden": !0,
+                            children: l
+                        })]
+                    })
+                })
+            };
+            var T = e => {
+                let {
+                    activities: t,
+                    applicationStream: l,
+                    className: n,
+                    textClassName: i,
+                    emojiClassName: s,
+                    animate: r = !0,
+                    hideTooltip: u = !1,
+                    hideEmoji: c = !1
+                } = e, f = null != t ? t.find(e => e.type === p.ActivityTypes.CUSTOM_STATUS) : null, T = null;
+                null != f && null != f.emoji && !c && (T = (0, a.jsx)(C, {
+                    emoji: f.emoji,
+                    animate: r,
+                    hideTooltip: u,
+                    className: s
+                }));
+                let _ = (0, d.default)(t, l),
+                    v = null != _ && _.length > 0;
+                return null != T || v ? (0, a.jsxs)("div", {
+                    className: n,
+                    children: [T, (0, a.jsx)(S, {
+                        text: _,
+                        className: i
+                    }), null != t && t.some(o.default) ? (0, a.jsx)(m.default, {
+                        width: 16,
+                        height: 16,
+                        className: E.icon
+                    }) : null]
+                }) : null
+            }
         },
-        960460: function(e, t, r) {
+        572544: function(e, t, l) {
             "use strict";
-            let n;
-            r.r(t), r.d(t, {
-                applyStaffBuildOverride: function() {
-                    return d
-                },
-                applyPublicBuildOverride: function() {
-                    return o
-                },
-                clearBuildOverride: function() {
-                    return c
-                },
-                getPublicBuildOverrideLink: function() {
-                    return f
+            l.r(t), l.d(t, {
+                default: function() {
+                    return M
                 }
             });
-            var l = r("872717"),
-                i = r("271938"),
-                a = r("922932"),
-                u = r("355025");
-            let s = "/__development/build_overrides";
-            async function d(e) {
-                try {
+            var a = l("746379"),
+                n = l("394846"),
+                i = l("913144"),
+                s = l("970728"),
+                r = l("79112"),
+                u = l("389153"),
+                o = l("412707"),
+                d = l("139514"),
+                c = l("312016"),
+                f = l("374021"),
+                m = l("398604"),
+                p = l("468560"),
+                E = l("361572"),
+                C = l("537325"),
+                S = l("835174"),
+                T = l("566271"),
+                _ = l("337543"),
+                v = l("18494"),
+                I = l("162771"),
+                A = l("677099"),
+                N = l("599110"),
+                h = l("253981");
+            l("545158");
+            var g = l("49111");
+            async function O(e, t) {
+                await i.default.dispatch({
+                    type: "INVITE_MODAL_OPEN",
+                    invite: e,
+                    code: t,
+                    context: g.AppContext.APP
+                })
+            }
+            async function P(e) {
+                var t, l;
+                let a = _.default.getInvite(e.code);
+                if (null == a) {
+                    let {
+                        invite: t
+                    } = await s.default.resolveInvite(e.code, "Markdown Link");
+                    a = t
+                }
+                if (null == a) return;
+                if (a.state === g.InviteStates.EXPIRED || a.state === g.InviteStates.BANNED || a.state === g.InviteStates.ERROR) {
+                    await O(a, e.code);
+                    return
+                }
+                let n = A.default.getFlattenedGuildIds(),
+                    i = null === (l = a) || void 0 === l ? void 0 : null === (t = l.guild) || void 0 === t ? void 0 : t.id,
+                    r = null != i && n.includes(i);
+                r ? s.default.transitionToInviteSync(a) : await O(a, e.code)
+            }
+            let U = {
+                skipExtensionCheck: void 0,
+                analyticsLocations: []
+            };
+
+            function M(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : U,
+                    i = (0, c.findCodedLink)(e),
+                    {
+                        skipExtensionCheck: s
+                    } = t;
+                if (null != i && (i.type === d.CodedLinkType.INVITE || i.type === d.CodedLinkType.EMBEDDED_ACTIVITY_INVITE)) return e => (null == e || e.preventDefault(), P(i), !0);
+                if (null != i && i.type === d.CodedLinkType.APP_DIRECTORY_PROFILE) return e => {
                     var t;
-                    let r = await l.default.put({
-                        url: (0, u.getAPIEndpoint)(s),
-                        body: {
-                            overrides: e,
-                            version: u.APP_VERSION
-                        },
-                        headers: {
-                            Authorization: null !== (t = i.default.getToken()) && void 0 !== t ? t : ""
-                        },
-                        oldFormErrors: !0
-                    });
-                    return await n(r), r
-                } catch (e) {
-                    return e
-                }
-            }
-            async function o(e) {
-                try {
-                    let t = await l.default.put({
-                        url: (0, u.getAPIEndpoint)("/__development/link"),
-                        body: {
-                            payload: e,
-                            token: i.default.getToken(),
-                            version: u.APP_VERSION
-                        },
-                        oldFormErrors: !0
-                    });
-                    return await n(t), t
-                } catch (e) {
-                    return e
-                }
-            }
-            async function c() {
-                let e = await l.default.delete({
-                    url: (0, u.getAPIEndpoint)(s),
-                    oldFormErrors: !0
-                });
-                return await n(e), e
-            }
-
-            function f(e) {
-                var t;
-                return l.default.post({
-                    url: (0, u.getAPIEndpoint)("/__development/create_build_override_link"),
-                    body: e,
-                    headers: {
-                        Authorization: null !== (t = i.default.getToken()) && void 0 !== t ? t : ""
-                    },
-                    oldFormErrors: !0
-                }).then(e => ({
-                    url: e.body.url,
-                    error: !1
-                }), e => 400 === e.status ? {
-                    url: !1,
-                    error: e.body
-                } : {
-                    url: !1,
-                    error: "Error making API request (".concat(e.status, ")")
-                })
-            }
-            n = async e => {
-                try {
-                    await a.default.flushCookies()
-                } catch (e) {}
-            }
-        },
-        489740: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                State: function() {
-                    return l
-                },
-                default: function() {
-                    return f
-                }
-            });
-            var n, l, i = r("446674"),
-                a = r("913144"),
-                u = r("355025");
-            (n = l || (l = {}))[n.NotResolved = 0] = "NotResolved", n[n.Resolving = 1] = "Resolving", n[n.Resolved = 2] = "Resolved", n[n.Invalid = 3] = "Invalid";
-            let s = l.NotResolved,
-                d = null,
-                o = {};
-            class c extends i.default.Store {
-                getCurrentBuildOverride() {
-                    return s === l.NotResolved && (s = l.Resolving, (0, u.getBuildOverride)().then(e => {
-                        a.default.dispatch({
-                            type: "CURRENT_BUILD_OVERRIDE_RESOLVED",
-                            overrides: e
-                        })
-                    })), {
-                        state: s,
-                        overrides: d
-                    }
-                }
-                getBuildOverride(e) {
-                    return ! function(e) {
-                        if (e in o) return;
-                        let t = (0, u.validateURL)(e);
-                        if (null == t) {
-                            o = {
-                                ...o,
-                                [e]: {
-                                    url: e,
-                                    state: l.Invalid
-                                }
-                            };
-                            return
-                        }
-                        o = {
-                            ...o,
-                            [e]: {
-                                url: e,
-                                validatedURL: t.url,
-                                payload: String(t.payload),
-                                state: l.Resolving
+                    null == e || e.preventDefault();
+                    let {
+                        code: a
+                    } = i, s = null !== (t = I.default.getGuildId()) && void 0 !== t ? t : void 0;
+                    return N.default.track(g.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+                        application_id: a,
+                        device_platform: n.isMobile ? "mobile_web" : "desktop_web",
+                        guild_id: s,
+                        channel_id: v.default.getChannelId()
+                    }), l.el("838093").then(l.bind(l, "838093")).then(e => {
+                        let {
+                            goToAppDirectory: t
+                        } = e, {
+                            ApplicationDirectoryViews: n
+                        } = l("412707");
+                        t({
+                            view: n.APPLICATION,
+                            applicationId: a,
+                            guildId: s,
+                            entrypoint: {
+                                name: o.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_URL
                             }
-                        };
-                        (0, u.getBuildOverrideMeta)(t.url).then(t => {
-                            a.default.dispatch({
-                                type: "BUILD_OVERRIDE_RESOLVED",
-                                url: e,
-                                override: t
-                            })
                         })
-                    }(e), o[e]
-                }
-                getBuildOverrides() {
-                    return o
-                }
-            }
-            c.displayName = "BuildOverrideStore";
-            var f = new c(a.default, {
-                BUILD_OVERRIDE_RESOLVED: function(e) {
-                    let {
-                        url: t,
-                        override: r
-                    } = e, n = null == r ? l.Invalid : l.Resolved;
-                    o = {
-                        ...o,
-                        [t]: {
-                            ...o[t],
-                            state: n,
-                            override: r
-                        }
-                    }
-                },
-                CURRENT_BUILD_OVERRIDE_RESOLVED: function(e) {
-                    let {
-                        overrides: t
-                    } = e;
-                    s = l.Resolved, d = t
-                }
-            })
-        },
-        161449: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                default: function() {
-                    return d
-                }
-            });
-            var n = r("917351"),
-                l = r.n(n),
-                i = r("271938"),
-                a = r("180855"),
-                u = r("49111"),
-                s = r("782340");
-
-            function d(e, t, r) {
-                if (null == e || null == t) return {
-                    valid: !1,
-                    reason: s.default.Messages.BUILD_OVERRIDE_INVALID
+                    }), !0
+                };
+                if (null != i && i.type === d.CodedLinkType.GUILD_PRODUCT) return e => {
+                    null == e || e.preventDefault();
+                    let [t, a] = i.code.split("-");
+                    return l.el("573777").then(l.bind(l, "573777")).then(e => {
+                        let {
+                            openGuildProductLink: l
+                        } = e;
+                        l(t, a)
+                    }), !0
                 };
                 let {
-                    releaseChannel: n,
-                    expiresAt: d,
-                    validForUserIds: o,
-                    allowedVersions: c,
-                    targetBuildOverride: f
-                } = e, v = Object.keys(f);
-                if (0 === l.intersection(v, t).length) {
-                    var g;
-                    return {
-                        valid: !1,
-                        reason: s.default.Messages.BUILD_OVERRIDE_INCOMPATIBLE_TARGETS.format({
-                            requestedTargets: v.map(e => null !== (g = a.BUILD_OVERRIDE_TARGET_NAMES[e]) && void 0 !== g ? g : "unknown").join(", ")
-                        })
-                    }
-                }
-                if (null != n && n !== window.GLOBAL_ENV.RELEASE_CHANNEL) {
-                    let e = n === u.PublicReleaseChannels.PTB ? n.toUpperCase() : "".concat(n.charAt(0).toUpperCase()).concat(n.slice(1));
-                    return {
-                        valid: !1,
-                        reason: s.default.Messages.BUILD_OVERRIDE_INCOMPATIBLE_CLIENT.format({
-                            releaseChannel: e
-                        })
-                    }
-                }
-                if (null != c && (null == r || !c.includes(r))) return {
-                    valid: !1,
-                    reason: s.default.Messages.BUILD_OVERRIDE_INCOMPATIBLE_CLIENT.format({
-                        releaseChannel: c.join(", ")
-                    })
-                };
-                let E = null != d ? new Date(d).getTime() : null;
-                return null != E && E < Date.now() ? {
-                    valid: !1,
-                    reason: s.default.Messages.BUILD_OVERRIDE_EXPIRED
-                } : o.length > 0 && !o.includes(i.default.getId()) ? {
-                    valid: !1,
-                    reason: s.default.Messages.BUILD_OVERRIDE_INVALID_USER
-                } : {
-                    valid: !0
-                }
-            }
-        },
-        451540: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                default: function() {
-                    return O
-                }
-            });
-            var n = r("37983"),
-                l = r("884691"),
-                i = r("414456"),
-                a = r.n(i),
-                u = r("627445"),
-                s = r.n(u),
-                d = r("77078"),
-                o = r("68238"),
-                c = r("83900"),
-                f = r("626820"),
-                v = r("306160"),
-                g = r("701909"),
-                E = r("161449"),
-                I = r("49111"),
-                R = r("782340"),
-                h = r("939848");
-
-            function _(e) {
-                let {
-                    url: t
-                } = e, [r, i] = l.useState(!1), u = l.useRef(void 0), s = l.useCallback(() => {
-                    !r && ((0, v.copy)(t) && i(!0), u.current = setTimeout(() => i(!1), 2e3))
-                }, [t, r]);
-                return l.useEffect(() => () => clearTimeout(u.current), []), v.SUPPORTS_COPY ? (0, n.jsxs)(d.Clickable, {
-                    className: a(h.copyLink, r ? h.copied : null),
-                    onClick: s,
-                    children: [(0, n.jsx)(c.default, {
-                        className: h.copyLinkIcon
-                    }), r ? R.default.Messages.BUILD_OVERRIDE_LINK_COPIED : R.default.Messages.BUILD_OVERRIDE_LINK_COPY]
-                }) : null
-            }
-
-            function p(e) {
-                let {
-                    subHead: t,
-                    buildDetails: r,
-                    buttonColor: i,
-                    buttonClick: u,
-                    buttonText: s,
-                    disabled: o = !1,
-                    submitting: c = !1
-                } = e;
-                return (0, n.jsxs)(l.Fragment, {
-                    children: [(0, n.jsxs)("div", {
-                        className: h.buildInfo,
-                        children: [(0, n.jsx)(d.Text, {
-                            variant: "text-sm/medium",
-                            className: h.subHead,
-                            children: t
-                        }), (0, n.jsx)("div", {
-                            className: h.buildDetails,
-                            children: r
-                        })]
-                    }), (0, n.jsx)(d.Button, {
-                        submitting: c,
-                        color: i,
-                        onClick: u,
-                        className: a(h.button, o ? h.disabledButtonOverride : null),
-                        size: h.buttonSize,
-                        disabled: o,
-                        children: s
-                    })]
-                })
-            }
-            var O = e => {
-                var t, r, i;
-                let {
-                    loading: u = !1,
-                    currentOverrides: c,
-                    linkMeta: v,
-                    url: O,
-                    applyBuildOverride: B,
-                    clearBuildOverride: m
-                } = e, [b, D] = l.useState(!1), L = l.useCallback(() => {
-                    !b && (D(!0), B().catch(() => D(!1)))
-                }, [B, b]), y = l.useCallback(() => {
-                    !b && (D(!0), m().catch(() => D(!1)))
-                }, [m, b]);
-                return (0, n.jsxs)("div", {
-                    className: h.wrapper,
-                    children: [(t = v, r = O, i = u, (0, n.jsxs)(d.Text, {
-                        variant: "text-xs/normal",
-                        className: h.titleRegion,
-                        children: [(0, n.jsx)("strong", {
-                            className: h.title,
-                            children: null != t && null != t.releaseChannel ? R.default.Messages.BUILD_OVERRIDE_FOR.format({
-                                releaseChannel: t.releaseChannel
-                            }) : R.default.Messages.BUILD_OVERRIDE
-                        }), (0, n.jsx)(d.Anchor, {
-                            className: h.infoLink,
-                            href: g.default.getArticleURL(I.HelpdeskArticles.BUILD_OVERRIDE_EMBED),
-                            target: "_blank",
-                            children: (0, n.jsx)(o.default, {
-                                className: h.infoIcon
-                            })
-                        }), i ? null : (0, n.jsx)(_, {
-                            url: r
-                        })]
-                    })), (0, n.jsxs)("div", {
-                        className: h.content,
-                        children: [(0, n.jsx)(f.default, {
-                            className: h.icon
-                        }), u ? (0, n.jsxs)(l.Fragment, {
-                            children: [(0, n.jsxs)("div", {
-                                className: h.buildInfo,
-                                children: [(0, n.jsx)("div", {
-                                    className: a(h.barLoader, h.barTitle)
-                                }), (0, n.jsx)("div", {
-                                    className: h.barLoader
-                                })]
-                            }), (0, n.jsx)("div", {
-                                className: h.buttonLoader
-                            })]
-                        }) : function(e) {
-                            var t, r;
-                            let n, l, i, {
-                                    currentOverrides: a,
-                                    linkMeta: u,
-                                    applyBuildOverride: o,
-                                    clearBuildOverride: c,
-                                    submitting: f
-                                } = e,
-                                v = (0, E.default)(u, ["discord_web"]);
-                            if (!v.valid) return function(e) {
-                                return p({
-                                    subHead: R.default.Messages.BUILD_OVERRIDE_ISNT_AVAILABLE,
-                                    buttonColor: d.Button.Colors.TRANSPARENT,
-                                    buttonText: "Invalid",
-                                    buildDetails: e,
-                                    disabled: !0
-                                })
-                            }(v.reason);
-                            s(null != u, "BuildOverrideEmbed.renderResolved: linkMeta should never be null if resolved");
+                    path: _,
+                    hostname: A = "",
+                    host: O,
+                    query: M
+                } = a.parse(e), y = h.default.isDiscordHostname(A) || window.location.host === O;
+                if (y && (null == _ ? void 0 : _.startsWith("/application-directory"))) {
+                    let [, , e, t] = _.split("/"), a = null != e && (0, u.isSnowflake)(e) ? e : void 0;
+                    return i => {
+                        var s;
+                        null == i || i.preventDefault();
+                        let {
+                            ApplicationDirectoryProfileSections: r
+                        } = l("750947"), {
+                            ApplicationDirectoryViews: u
+                        } = l("412707"), d = null !== (s = I.default.getGuildId()) && void 0 !== s ? s : void 0, c = u.HOME;
+                        return "search" === e && (c = u.SEARCH), null != a && (c = u.APPLICATION, N.default.track(g.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+                            application_id: a,
+                            device_platform: n.isMobile ? "mobile_web" : "desktop_web",
+                            guild_id: d,
+                            channel_id: v.default.getChannelId()
+                        })), l.el("838093").then(l.bind(l, "838093")).then(e => {
                             let {
-                                discord_web: g
-                            } = u.targetBuildOverride;
-                            if (s(null != g, "BuildOverrideEmbed.renderResolved: linkMeta.targetBuildOverride.discord_web should never be null if resolved"), t = g, null == (r = a) || null == r.discord_web ? 1 : t.id !== r.discord_web.id || t.type !== r.discord_web.type) l = R.default.Messages.BUILD_OVERRIDE_APPLY, n = o, i = d.Button.Colors.GREEN;
-                            else l = R.default.Messages.BUILD_OVERRIDE_CLEAR, n = c, i = d.Button.Colors.RED;
-                            return p({
-                                subHead: R.default.Messages.BUILD_OVERRIDE_ID,
-                                buildDetails: g.id,
-                                buttonClick: n,
-                                buttonText: l,
-                                buttonColor: i,
-                                submitting: f
+                                goToAppDirectory: l
+                            } = e;
+                            l({
+                                view: c,
+                                applicationId: a,
+                                guildId: d,
+                                applicationSection: (0, p.default)(r, t),
+                                entrypoint: {
+                                    name: o.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_URL
+                                }
                             })
-                        }({
-                            currentOverrides: c,
-                            linkMeta: v,
-                            applyBuildOverride: L,
-                            clearBuildOverride: y,
-                            submitting: b
-                        })]
-                    })]
-                })
+                        }), !0
+                    }
+                }
+                if (null != _ && y && h.default.isAppRoute(_)) {
+                    let e = null != M ? {
+                        search: M
+                    } : null;
+                    return t => (null == t || t.preventDefault(), (0, C.default)(_, e), !0)
+                }
+                if (null != _ && y) {
+                    let {
+                        getOAuth2AuthorizeProps: t,
+                        openOAuth2Modal: a
+                    } = l("33942"), n = t(e);
+                    if (null != n) return e => (null == e || e.preventDefault(), a(n), !0)
+                }
+                let L = (0, E.tryParseEventDetailsPath)(_);
+                if (null != _ && y && null != L) return e => {
+                    null == e || e.preventDefault();
+                    let t = I.default.getGuildId();
+                    null != L.guildId && "" !== L.guildId && L.guildId !== t && (0, C.default)(g.Routes.CHANNEL(L.guildId));
+                    let l = m.default.getGuildScheduledEvent(L.guildEventId);
+                    return null != l && (0, f.openGuildEventDetails)({
+                        eventId: l.id
+                    }), !0
+                };
+                if (y && (null == _ ? void 0 : _.startsWith("/settings/"))) {
+                    let {
+                        default: e
+                    } = l("777523"), t = e(_);
+                    if (null != t) return e => (null == e || e.preventDefault(), r.default.open(t.section, t.subsection, {
+                        openWithoutBackstack: !1,
+                        impressionSource: t.source
+                    }), !0)
+                }
+                if (!s && null != (0, T.isSuspiciousDownload)(e)) return t => (null == t || t.preventDefault(), S.default.show(e), !0)
             }
         },
-        198700: function(e, t, r) {
+        204947: function(e, t, l) {
             "use strict";
-            r.r(t), r.d(t, {
+            l.r(t), l.d(t, {
                 default: function() {
-                    return f
+                    return n
                 }
             });
-            var n = r("37983"),
-                l = r("884691"),
-                i = r("446674"),
-                a = r("960460"),
-                u = r("489740"),
-                s = r("451540"),
-                d = r("425916");
-            async function o(e) {
-                let t = await (0, a.applyPublicBuildOverride)(e);
-                if (200 !== t.status) throw Error("Build override couldn't apply");
-                window.location.reload(!0)
-            }
-            async function c() {
-                await (0, a.clearBuildOverride)(), window.location.reload(!0)
-            }
-            var f = l.memo(function(e) {
-                let {
-                    url: t
-                } = e, r = (0, i.useStateFromStoresObject)([u.default], () => u.default.getCurrentBuildOverride()), a = (0, i.useStateFromStores)([u.default], () => u.default.getBuildOverride(t)), {
-                    payload: f,
-                    validatedURL: v
-                } = a, g = r.state === u.State.Resolving || a.state === u.State.Resolving, E = l.useCallback(() => null == f ? Promise.reject(Error("Invalid override payload")) : ((0, d.addRecentBuildOverride)(a.override, f), o(f)), [f, a]);
-                return null != v ? (0, n.jsx)(s.default, {
-                    loading: g,
-                    linkMeta: a.override,
-                    currentOverrides: r.overrides,
-                    applyBuildOverride: E,
-                    clearBuildOverride: c,
-                    url: v
-                }) : null
-            })
-        },
-        425916: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                getRecentBuildOverrides: function() {
-                    return i
-                },
-                addRecentBuildOverride: function() {
-                    return a
-                }
-            });
-            var n = r("95410");
-            let l = "recentBuildOverrides";
+            var a = l("782340");
 
-            function i() {
-                var e;
-                let t = null !== (e = n.default.get(l)) && void 0 !== e ? e : [];
-                return t.filter(e => null == e.exp || e.exp > Date.now())
-            }
-
-            function a(e, t) {
-                if (null == t || null == e || null == e.targetBuildOverride.discord_web) return;
-                let r = {
-                        id: e.targetBuildOverride.discord_web.id,
-                        payload: t,
-                        exp: Date.parse(e.expiresAt)
-                    },
-                    a = i(),
-                    u = [r, ...a.filter(e => r.id !== e.id)].slice(0, 5);
-                n.default.set(l, u)
+            function n(e) {
+                return null != e && "" !== e ? e : a.default.Messages.EMBEDDED_ACTIVITIES_IN_ACTIVITY
             }
         },
-        758926: function(e, t, r) {
+        502651: function(e, t, l) {
             "use strict";
-            r.r(t), r.d(t, {
-                isLinkTrusted: function() {
-                    return i
+            l.r(t), l.d(t, {
+                default: function() {
+                    return s
                 }
             });
-            var n = r("176309"),
-                l = r("128259");
+            var a = l("954016"),
+                n = l("49111");
 
             function i(e) {
-                return null != e.target && (0, l.isLinkTrusted)(e.target, null != e.title && "" !== e.title ? e.title : (0, n.astToString)(e.content))
+                return e.type === n.ActivityTypes.STREAMING && null != e.url && a.validStreamURL.test(e.url)
+            }
+
+            function s(e) {
+                return null != e && (Array.isArray(e) ? e.some(i) : i(e))
             }
         },
-        47677: function(e, t, r) {
+        29088: function(e, t, l) {
             "use strict";
-            r.r(t), r.d(t, {
+            l.r(t), l.d(t, {
                 default: function() {
-                    return c
+                    return d
                 }
             });
-            var n = r("37983"),
-                l = r("884691"),
-                i = r("176309"),
-                a = r("340616"),
-                u = r("355025"),
-                s = r("198700"),
-                d = r("128259"),
-                o = r("758926");
+            var a = l("204947"),
+                n = l("152311"),
+                i = l("502651"),
+                s = l("49111"),
+                r = l("782340");
 
-            function c(e) {
+            function u(e) {
                 return {
-                    react(t, r, c) {
-                        if (e.enableBuildOverrides && (0, u.isBuildOverrideLink)(t.target)) return (0, n.jsx)(l.Fragment, {
-                            children: (0, n.jsx)(s.default, {
-                                url: t.target
-                            }, t.target)
-                        }, c.key);
-                        let f = r(t.content, c),
-                            v = "string" == typeof t.title && 0 !== t.title.length ? t.title : (0, i.astToString)(t.content),
-                            g = (null == e ? void 0 : e.mustConfirmExternalLink) ? e => (null == e || e.stopPropagation(), null == e || e.preventDefault(), (0, d.handleClick)({
-                                href: t.target,
-                                shouldConfirm: !0,
-                                messageId: c.messageId,
-                                channelId: c.channelId
-                            }), null) : void 0;
-                        if (c.previewLinkTarget && !(0, o.isLinkTrusted)(t)) {
-                            let e = "\n\n(".concat(t.target, ")"),
-                                r = v.length + e.length;
-                            r > 1024 && (e = "..." + e, v = (v = v.substr(0, 1024 - e.length)).trimEnd()), v += e
-                        }
-                        return c.noStyleAndInteraction ? (0, n.jsx)("span", {
-                            title: v,
-                            children: f
-                        }, c.key) : (0, n.jsx)(a.default, {
-                            title: v,
-                            href: t.target,
-                            trusted: () => (0, o.isLinkTrusted)(t),
-                            onClick: g,
-                            messageId: c.messageId,
-                            channelId: c.channelId,
-                            children: f
-                        }, c.key)
-                    }
+                    [s.ActivityTypes.STREAMING]: e ? r.default.Messages.UNFORMATTED_STREAMING : r.default.Messages.STREAMING,
+                    [s.ActivityTypes.LISTENING]: e ? r.default.Messages.UNFORMATTED_LISTENING_TO : r.default.Messages.LISTENING_TO,
+                    [s.ActivityTypes.WATCHING]: e ? r.default.Messages.UNFORMATTED_WATCHING : r.default.Messages.WATCHING,
+                    [s.ActivityTypes.COMPETING]: e ? r.default.Messages.UNFORMATTED_COMPETING : r.default.Messages.COMPETING
                 }
             }
-        },
-        515557: function(e, t, r) {
-            "use strict";
-            r.r(t), r.d(t, {
-                astToString: function() {
-                    return l
-                },
-                flattenAst: function() {
-                    return function e(t) {
-                        let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-                        if (Array.isArray(t)) {
-                            let n = t.length,
-                                l = [];
-                            for (let i = 0; i < n; i++) ! function(e, t) {
-                                if (Array.isArray(t)) {
-                                    let {
-                                        length: r
-                                    } = t;
-                                    for (let n = 0; n < r; n++) e.push(t[n]);
-                                    return
-                                }
-                                e.push(t)
-                            }(l, e(t[i], r));
-                            return l
-                        }
-                        return (null != t.content && (t.content = e(t.content, t)), null != r && t.type === r.type) ? t.content : t
-                    }
-                },
-                constrainAst: function() {
-                    return function e(t) {
-                        let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
-                            limit: 200
-                        };
-                        if (Array.isArray(t)) {
-                            let l = t.length;
-                            for (let i = 0; i < l; i++) {
-                                let l = e(t[i], r);
-                                if (l === n) {
-                                    t.length = i;
-                                    break
-                                }
-                                t[i] = l
-                            }
-                        } else if ("text" !== t.type) {
-                            if (r.limit -= 1, r.limit <= 0) return n;
-                            Array.isArray(t.content) && (t.content = e(t.content, r))
-                        }
-                        return t
-                    }
-                }
-            });
-            let n = {};
 
-            function l(e) {
-                return (function e(t) {
-                    let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-                    return Array.isArray(t) ? t.forEach(t => e(t, r)) : "string" == typeof t.content ? r.push(t.content) : null != t.content && e(t.content, r), r
-                })(e).join("")
+            function o(e, t) {
+                let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                if (null != e && e.type === s.ActivityTypes.CUSTOM_STATUS) return null != e.state ? e.state.trim() : null;
+                if (null != t) return null == e || e.type !== s.ActivityTypes.PLAYING ? r.default.Messages.SHARING_SCREEN : u(l)[s.ActivityTypes.STREAMING].format({
+                    name: e.name
+                });
+                if (null == e || null == e.name) return null;
+                if ((0, i.default)(e)) {
+                    let t = null != e.details && "" !== e.details ? e.details : e.name;
+                    return u(l)[s.ActivityTypes.STREAMING].format({
+                        name: t
+                    })
+                }
+                return (0, n.default)(e) ? (0, a.default)(e.name) : function(e, t, l) {
+                    let a = u(l);
+                    switch (e) {
+                        case s.ActivityTypes.LISTENING:
+                        case s.ActivityTypes.WATCHING:
+                        case s.ActivityTypes.COMPETING:
+                            return a[e].format({
+                                name: t
+                            });
+                        case s.ActivityTypes.CUSTOM_STATUS:
+                            return null;
+                        case s.ActivityTypes.PLAYING:
+                        default:
+                            return l ? r.default.Messages.UNFORMATTED_PLAYING_GAME.format({
+                                game: t
+                            }) : r.default.Messages.PLAYING_GAME.format({
+                                game: t
+                            })
+                    }
+                }(e.type, e.name, l)
+            }
+
+            function d(e, t) {
+                let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                if (Array.isArray(e)) {
+                    let a = e;
+                    return null != t && (a = [...a, null]), a.map(e => o(e, t, l)).find(e => null != e)
+                }
+                return o(e, t, l)
             }
         },
-        176309: function(e, t, r) {
+        729022: function(e, t, l) {
             "use strict";
-            let n;
-            r.r(t), r.d(t, {
-                reactParserFor: function() {
-                    return i
-                },
-                astParserFor: function() {
-                    return a
+            l.r(t), l.d(t, {
+                default: function() {
+                    return r
                 }
             });
-            var l = r("515557");
-            r.es(l, t), n = r("214434").default;
-            let i = n.reactParserFor,
-                a = n.astParserFor
+            var a = l("884691"),
+                n = l("327037"),
+                i = l("662286"),
+                s = l("217513"),
+                r = e => {
+                    var t, l;
+                    let {
+                        currentUser: r,
+                        popoutUser: u,
+                        guildId: o
+                    } = e, d = (null == r ? void 0 : null === (t = r.avatarDecoration) || void 0 === t ? void 0 : t.skuId) != null, c = (null === (l = u.avatarDecoration) || void 0 === l ? void 0 : l.skuId) != null, f = (0, i.useCanUseProfileEffects)({
+                        location: "UserPopoutUpsell"
+                    }), m = (0, s.default)(r.id, o), p = (0, s.default)(u.id, o);
+                    a.useEffect(() => {
+                        f && null == m && (0, n.fetchProfile)(r.id)
+                    }, [f, m, r]);
+                    let E = f && null != m && null == m.profileEffectID && (null == p ? void 0 : p.profileEffectID) != null;
+                    return {
+                        shouldUpsellAvatarDecoration: !d && c,
+                        shouldUpsellProfileEffect: E
+                    }
+                }
         },
-        214434: function(e, t, r) {
+        775377: function(e, t, l) {
             "use strict";
-            r.r(t), r.d(t, {
+            l.r(t), l.d(t, {
                 default: function() {
                     return u
                 }
             });
-            var n = r("132710"),
-                l = r.n(n),
-                i = r("515557");
+            var a = l("37983");
+            l("884691");
+            var n = l("414456"),
+                i = l.n(n),
+                s = l("943722"),
+                r = l("462339");
 
-            function a(e, t, r, n, l) {
-                let a;
-                return !r && (t += "\n\n"), a = e(t, {
-                    inline: r,
-                    ...n
-                }), a = (0, i.flattenAst)(a), a = (0, i.constrainAst)(a), null != l && (a = l(a, r)), a
+            function u(e) {
+                let {
+                    activity: t,
+                    className: l,
+                    emojiClassName: n,
+                    textClassName: u,
+                    placeholderText: o,
+                    soloEmojiClassName: d,
+                    animate: c = !0,
+                    hideTooltip: f = !1,
+                    hideEmoji: m = !1,
+                    children: p
+                } = e;
+                if (null == t) return null;
+                let {
+                    emoji: E
+                } = t, C = null != t.state && "" !== t.state ? t.state : o;
+                return (0, a.jsxs)("div", {
+                    className: i(r.container, l),
+                    children: [m || null == E ? null : (0, a.jsx)(s.ActivityEmoji, {
+                        emoji: E,
+                        className: i(r.emoji, n, null != d ? {
+                            [d]: null == C || "" === C
+                        } : null),
+                        animate: c,
+                        hideTooltip: f
+                    }), null != C && C.length > 0 ? (0, a.jsx)("span", {
+                        className: u,
+                        children: C
+                    }) : null, p]
+                })
             }
-            var u = {
-                reactParserFor(e) {
-                    let t = l.parserFor(e),
-                        r = l.reactFor(l.ruleOutput(e, "react"));
-                    return function() {
-                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-                            n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                            l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-                        return r(a(t, e, n, l, i), l)
+        },
+        123377: function(e, t, l) {
+            "use strict";
+            let a, n;
+            l.r(t), l.d(t, {
+                CopiableField: function() {
+                    return S
+                }
+            });
+            var i = l("37983"),
+                s = l("884691"),
+                r = l("414456"),
+                u = l.n(r),
+                o = l("862337"),
+                d = l("77078"),
+                c = l("413709"),
+                f = l("599110"),
+                m = l("306160"),
+                p = l("49111"),
+                E = l("782340"),
+                C = l("491701");
+
+            function S(e) {
+                var t;
+                let {
+                    className: l,
+                    copyValue: r,
+                    copyMetaData: S,
+                    children: T,
+                    disableCopy: _,
+                    showCopyIcon: v
+                } = e, [I, A] = s.useState(0), [N, h] = s.useState(!1), [g, O] = s.useState(!1);
+                if (s.useEffect(() => (a = new o.Timeout, n = new o.Timeout, function() {
+                        a.stop(), n.stop()
+                    }), []), !m.SUPPORTS_COPY || _) return (0, i.jsx)(i.Fragment, {
+                    children: T
+                });
+                let P = [E.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_1, E.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_2, E.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_3, E.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_4, E.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_5, E.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_6, E.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_7, E.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_8, E.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_9, E.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_10, E.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_11],
+                    U = Math.min(Math.max(I - 1, 0), P.length - 1),
+                    M = null !== (t = P[U]) && void 0 !== t ? t : P[0],
+                    y = I >= P.length - 1,
+                    L = y ? d.TooltipColors.RED : d.TooltipColors.GREEN,
+                    x = N ? L : d.TooltipColors.PRIMARY,
+                    R = () => {
+                        a.stop(), O(!1)
+                    },
+                    j = e => {
+                        (0, m.copy)(r), f.default.track(p.AnalyticEvents.TEXT_COPIED, {
+                            type: S
+                        }), "function" == typeof e && e(), !g && A(I + 1), O(!0), h(!0), a.start(1e3, () => O(!1)), n.start(2e3, () => A(0))
+                    };
+                return (0, i.jsx)(d.Tooltip, {
+                    delay: 500,
+                    color: x,
+                    forceOpen: g,
+                    text: N ? (0, i.jsx)(d.Shaker, {
+                        isShaking: y,
+                        children: M
+                    }) : E.default.Messages.ACCOUNT_CLICK_TO_COPY,
+                    onAnimationRest: (e, t) => {
+                        !g && N && t.phase === p.SpringTransitionPhases.LEAVE && h(!1)
+                    },
+                    "aria-label": E.default.Messages.ACCOUNT_CLICK_TO_COPY,
+                    children: e => {
+                        let {
+                            onClick: t,
+                            onMouseEnter: a,
+                            ...n
+                        } = e;
+                        return (0, i.jsx)(d.Clickable, {
+                            ...n,
+                            className: C.clickTarget,
+                            onMouseEnter: () => {
+                                N ? R() : "function" == typeof a && a()
+                            },
+                            onClick: () => {
+                                j(t)
+                            },
+                            children: (0, i.jsxs)("div", {
+                                className: u(l, C.copiableWrapper),
+                                children: [(0, i.jsx)("div", {
+                                    className: C.childWrapper,
+                                    children: T
+                                }), v ? (0, i.jsx)("div", {
+                                    className: C.copyIconWrapper,
+                                    children: (0, i.jsx)(c.default, {
+                                        width: 18,
+                                        height: 18,
+                                        className: C.copyIcon
+                                    })
+                                }) : null]
+                            })
+                        })
                     }
+                })
+            }
+        },
+        824794: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                shouldDisableUserPresenceInChannel: function() {
+                    return n
+                }
+            });
+            var a = l("42203");
+
+            function n(e, t) {
+                let l = a.default.getChannel(t);
+                return null != l && e.bot && l.isPrivate() && null == l.rawRecipients.find(t => t.id === e.id)
+            }
+        },
+        643121: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                default: function() {
+                    return o
+                }
+            });
+            var a = l("65597"),
+                n = l("845579"),
+                i = l("102985"),
+                s = l("697218"),
+                r = l("782340");
+            let u = "legacy_username";
+
+            function o(e) {
+                var t;
+                let l = n.LegacyUsernameDisabled.useSetting(),
+                    o = (0, a.default)([s.default], () => s.default.getCurrentUser()),
+                    d = (0, a.default)([i.default], () => i.default.hidePersonalInformation);
+                if (null == e) return [];
+                let c = null !== (t = null == e ? void 0 : e.getBadges()) && void 0 !== t ? t : [];
+                return null != o && o.id === e.userId && l && (c = c.filter(e => e.id !== u)), d && (c = c.map(e => ({
+                    ...e,
+                    description: e.id === u ? r.default.Messages.STREAMER_MODE_ENABLED : e.description
+                }))), c
+            }
+        },
+        590006: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                BadgeSizes: function() {
+                    return n
                 },
-                astParserFor(e) {
-                    let t = l.parserFor(e);
-                    return function() {
-                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-                            r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                            l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-                        return a(t, e, r, n, l)
+                default: function() {
+                    return _
+                }
+            });
+            var a, n, i = l("37983");
+            l("884691");
+            var s = l("414456"),
+                r = l.n(s),
+                u = l("77078"),
+                o = l("572544"),
+                d = l("244201"),
+                c = l("298878"),
+                f = l("643121"),
+                m = l("217513"),
+                p = l("590456"),
+                E = l("49111"),
+                C = l("782340"),
+                S = l("730684"),
+                T = l("696246");
+
+            function _(e) {
+                let {
+                    user: t,
+                    guildId: l,
+                    className: a,
+                    shrinkAtCount: s,
+                    shrinkToSize: _,
+                    isTryItOutFlow: v,
+                    size: I = n.SIZE_24
+                } = e, A = (0, m.default)(t.id, l), N = (0, f.default)(A).map(e => ({
+                    ...e,
+                    src: (0, p.getBadgeAsset)(e.icon)
+                })), h = (0, d.useWindowDispatch)();
+                if (t.isClyde()) return (0, i.jsx)("div", {
+                    className: r(a, S.container, S.clydeBadgeList),
+                    "aria-label": C.default.Messages.PROFILE_USER_BADGES,
+                    role: "group",
+                    children: (0, i.jsx)(c.default, {})
+                });
+                v && null == N.find(e => "premium" === e.id) && N.push({
+                    id: "premium",
+                    icon: T,
+                    src: T,
+                    description: C.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
+                        date: new Date
+                    })
+                });
+                let g = null != s && null != _ && N.length > s ? _ : I;
+                return (0, i.jsx)("div", {
+                    className: r(a, N.length > 0 ? S.containerWithContent : S.container),
+                    "aria-label": C.default.Messages.PROFILE_USER_BADGES,
+                    role: "group",
+                    children: N.map(e => (0, i.jsx)(u.Tooltip, {
+                        position: "top",
+                        text: e.description,
+                        spacing: 12,
+                        children: t => (0, i.jsx)(u.Anchor, {
+                            ...t,
+                            onClick: l => {
+                                var a;
+                                null === (a = t.onClick) || void 0 === a || a.call(t);
+                                let n = null != e.link ? (0, o.default)(e.link) : null;
+                                if (null != n) return h.dispatch(E.ComponentActions.POPOUT_CLOSE), n(l)
+                            },
+                            href: e.link,
+                            children: (0, i.jsx)("img", {
+                                alt: " ",
+                                "aria-hidden": !0,
+                                src: e.src,
+                                className: r({
+                                    [S.profileBadge24]: g === n.SIZE_24,
+                                    [S.profileBadge22]: g === n.SIZE_22,
+                                    [S.profileBadge18]: g === n.SIZE_18
+                                })
+                            })
+                        })
+                    }, e.id))
+                })
+            }(a = n || (n = {}))[a.SIZE_24 = 0] = "SIZE_24", a[a.SIZE_22 = 1] = "SIZE_22", a[a.SIZE_18 = 2] = "SIZE_18"
+        },
+        552243: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var a = l("37983");
+            l("884691");
+            var n = l("301165"),
+                i = l("65597"),
+                s = l("206230"),
+                r = e => {
+                    let {
+                        children: t,
+                        initTranslate3d: l
+                    } = e, r = (0, i.default)([s.default], () => s.default.useReducedMotion), u = (0, n.useSpring)({
+                        immediate: r,
+                        from: {
+                            transform: l
+                        },
+                        to: {
+                            transform: "translate3d(0, 0, 0)"
+                        }
+                    });
+                    return (0, a.jsx)(n.animated.div, {
+                        style: u,
+                        children: t
+                    })
+                }
+        },
+        789321: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                DEFAULT_COLLECTIBLES_UPSELL_HEIGHT: function() {
+                    return y
+                },
+                default: function() {
+                    return x
+                }
+            });
+            var a = l("37983"),
+                n = l("884691"),
+                i = l("414456"),
+                s = l.n(i),
+                r = l("627445"),
+                u = l.n(r),
+                o = l("506838"),
+                d = l("65597"),
+                c = l("77078"),
+                f = l("731898"),
+                m = l("206230"),
+                p = l("812204"),
+                E = l("685665"),
+                C = l("606292"),
+                S = l("688318"),
+                T = l("21526"),
+                _ = l("853987"),
+                v = l("491232"),
+                I = l("729022"),
+                A = l("697218"),
+                N = l("945330"),
+                h = l("719923"),
+                g = l("994428"),
+                O = l("782340"),
+                P = l("304118"),
+                U = l("604689");
+
+            function M(e) {
+                let {
+                    onClick: t
+                } = e;
+                return (0, a.jsx)(c.Clickable, {
+                    className: P.closeButton,
+                    onClick: t,
+                    "aria-label": O.default.Messages.DISMISS,
+                    children: (0, a.jsx)(N.default, {
+                        className: P.closeIcon,
+                        width: 18,
+                        height: 18
+                    })
+                })
+            }
+            let y = 76,
+                L = e => (0, a.jsx)(c.Text, {
+                    variant: "text-sm/normal",
+                    color: "text-normal",
+                    tag: "span",
+                    className: P.ctaLink,
+                    children: e
+                });
+            var x = e => {
+                let {
+                    user: t,
+                    guildId: l,
+                    onClose: i,
+                    onDismiss: r,
+                    isInSidebar: N = !1
+                } = e, {
+                    analyticsLocations: x
+                } = (0, E.default)(p.default.COLLECTIBLES_USER_POPOUT_UPSELL), R = (0, d.default)([m.default], () => m.default.useReducedMotion), {
+                    avatarDecorationSrc: j
+                } = (0, S.default)({
+                    user: t,
+                    size: (0, C.getDecorationSizeForAvatarSize)(c.AvatarSizes.SIZE_48)
+                }), {
+                    ref: D,
+                    height: b
+                } = (0, f.default)(), k = n.useMemo(() => ({
+                    top: "-".concat((null != b ? b : y) + 6, "px")
+                }), [b]), w = (0, d.default)([_.default], () => {
+                    var e;
+                    let l = null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.skuId;
+                    return null != l && (0, v.isPremiumCollectiblesCategory)(_.default.getCategoryForProduct(l))
+                }), B = (0, d.default)([A.default], () => A.default.getCurrentUser());
+                u(null != B, "currentUser should not be null");
+                let {
+                    shouldUpsellAvatarDecoration: F,
+                    shouldUpsellProfileEffect: G
+                } = (0, I.default)({
+                    currentUser: B,
+                    popoutUser: t,
+                    guildId: l
+                }), Y = n.useCallback(() => {
+                    null == r || r(g.ContentDismissActionType.PRIMARY), null == i || i(), (0, T.openCollectiblesShop)({
+                        analyticsLocations: x,
+                        analyticsSource: p.default.COLLECTIBLES_USER_POPOUT_UPSELL
+                    })
+                }, [r, i, x]), H = n.useCallback(() => {
+                    null == r || r(g.ContentDismissActionType.DISMISS)
+                }, [r]), W = h.default.canUseCollectibles(B), z = (0, o.match)([F, G]).with([!0, !0], () => W ? O.default.Messages.PROFILE_EFFECTS_SOCIAL_UPSELL_AVATAR_DECORATION_COMBINED.format({
+                    openShop: L
+                }) : O.default.Messages.PROFILE_EFFECTS_SOCIAL_UPSELL_AVATAR_DECORATION_COMBINED_NON_NITRO.format({
+                    openShop: L
+                })).with([!0, !1], () => W && w ? O.default.Messages.COLLECTIBLES_SOCIAL_UPSELL_PREMIUM.format({
+                    openShop: L
+                }) : O.default.Messages.COLLECTIBLES_SOCIAL_UPSELL.format({
+                    openShop: L
+                })).with([!1, !0], () => W ? O.default.Messages.PROFILE_EFFECTS_SOCIAL_UPSELL.format({
+                    openShop: L
+                }) : O.default.Messages.PROFILE_EFFECTS_SOCIAL_UPSELL_NON_NITRO.format({
+                    openShop: L
+                })).otherwise(() => null);
+                return (0, a.jsx)("div", {
+                    style: k,
+                    className: s(P.containerWrapper, {
+                        [P.animation]: !R,
+                        [P.inSidebar]: N,
+                        [P.withoutAvatar]: G
+                    }),
+                    ref: D,
+                    children: (0, a.jsxs)("div", {
+                        className: P.container,
+                        children: [!G && (0, a.jsx)(c.Clickable, {
+                            className: P.avatarSection,
+                            onClick: Y,
+                            "aria-label": O.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
+                            children: (0, a.jsx)(c.Avatar, {
+                                src: U,
+                                avatarDecoration: j,
+                                size: c.AvatarSizes.SIZE_48,
+                                "aria-hidden": !0
+                            })
+                        }), (0, a.jsx)(c.Clickable, {
+                            className: P.content,
+                            onClick: Y,
+                            "aria-label": O.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
+                            children: (0, a.jsx)(c.Text, {
+                                variant: "text-sm/normal",
+                                color: "text-normal",
+                                tag: "span",
+                                children: z
+                            })
+                        }), (0, a.jsx)("div", {
+                            className: P.buttons,
+                            children: (0, a.jsx)(M, {
+                                onClick: H
+                            })
+                        })]
+                    })
+                })
+            }
+        },
+        10532: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var a = l("37983");
+            l("884691");
+            var n = l("414456"),
+                i = l.n(n),
+                s = l("193853");
+
+            function r(e) {
+                let {
+                    className: t
+                } = e;
+                return (0, a.jsx)("div", {
+                    className: i(s.divider, t)
+                })
+            }
+        },
+        935409: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                UserPopoutBadgeList: function() {
+                    return F
+                },
+                UserPopoutAvatar: function() {
+                    return Y
+                },
+                default: function() {
+                    return H
+                }
+            });
+            var a = l("37983"),
+                n = l("884691"),
+                i = l("414456"),
+                s = l.n(i),
+                r = l("506838"),
+                u = l("446674"),
+                o = l("669491"),
+                d = l("77078"),
+                c = l("606292"),
+                f = l("688318"),
+                m = l("980215"),
+                p = l("824794"),
+                E = l("635471"),
+                C = l("305961"),
+                S = l("697218"),
+                T = l("423487"),
+                _ = l("587974"),
+                v = l("599110"),
+                I = l("719923"),
+                A = l("50885"),
+                N = l("713135"),
+                h = l("106435"),
+                g = l("289918"),
+                O = l("878569"),
+                P = l("590006"),
+                U = l("430312"),
+                M = l("401642"),
+                y = l("552243"),
+                L = l("789321"),
+                x = l("590456"),
+                R = l("49111"),
+                j = l("646718"),
+                D = l("782340"),
+                b = l("524466"),
+                k = l("231185");
+            let w = d.AvatarSizes.SIZE_80,
+                B = (0, c.getDecorationSizeForAvatarSize)(w);
+
+            function F(e) {
+                let {
+                    user: t,
+                    guildId: l,
+                    isTryItOutFlow: n,
+                    forProfileEffectModal: i
+                } = e, s = (0, u.useStateFromStores)([N.default], () => N.default.getUserProfile(t.id), [t]), r = (0, u.useStateFromStores)([C.default], () => C.default.getGuild(l), [l]), c = (0, m.useClydeProfilesEnabled)(r);
+                return (0, a.jsxs)(a.Fragment, {
+                    children: [(null == s ? void 0 : s.profileFetchFailed) && (!t.isClyde() || c) && (0, a.jsx)(d.Tooltip, {
+                        text: D.default.Messages.USER_PROFILE_LOAD_ERROR,
+                        spacing: 16,
+                        children: e => (0, a.jsx)(T.default, {
+                            ...e,
+                            className: b.warningCircleIcon,
+                            color: o.default.unsafe_rawColors.YELLOW_300.css
+                        })
+                    }), (0, a.jsx)(P.default, {
+                        className: i ? b.profileBadgesCompactNoTouch : b.profileBadges,
+                        user: t,
+                        guildId: l,
+                        isTryItOutFlow: n,
+                        size: P.BadgeSizes.SIZE_22
+                    })]
+                })
+            }
+            let G = A.default.getEnableHardwareAcceleration() ? d.AnimatedAvatar : d.Avatar;
+
+            function Y(e) {
+                let {
+                    user: t,
+                    displayProfile: l,
+                    avatarSrc: i,
+                    hasBanner: o,
+                    status: c,
+                    isMobile: m,
+                    guildId: E,
+                    channelId: C,
+                    onClose: T,
+                    disableUserProfileLink: A,
+                    profileType: N,
+                    animateOnHover: g,
+                    hasProfileEffect: P
+                } = e, L = (0, u.useStateFromStores)([S.default], () => S.default.getCurrentUser()), {
+                    profileTheme: F
+                } = n.useContext(U.UserProfileContext), Y = n.useContext(v.AnalyticsContext), H = t.isNonUserBot() && !t.isClyde(), W = I.default.isPremiumAtLeast(null == l ? void 0 : l.premiumType, j.PremiumTypes.TIER_2), z = n.useMemo(() => (0, p.shouldDisableUserPresenceInChannel)(t, C), [t, C]), V = A || t.isClyde(), {
+                    avatarDecorationSrc: Z,
+                    avatarSrc: K,
+                    eventHandlers: Q,
+                    isAnimating: X
+                } = (0, h.default)({
+                    user: t,
+                    guildId: E,
+                    size: w,
+                    animateOnHover: g
+                }), {
+                    avatarDecorationSrc: q
+                } = (0, f.default)({
+                    size: B,
+                    animateOnHover: !X,
+                    showPending: t.id === (null == L ? void 0 : L.id),
+                    showTryItOut: t.id === (null == L ? void 0 : L.id)
+                }), J = (0, a.jsxs)("div", {
+                    className: b.avatarHoverTarget,
+                    ...Q,
+                    children: [(0, a.jsx)(G, {
+                        src: null != i ? i : K,
+                        avatarDecoration: null != q ? null : Z,
+                        size: w,
+                        "aria-label": t.username,
+                        status: z ? R.StatusTypes.UNKNOWN : c,
+                        statusBackdropColor: null != F && W && !z ? (0, d.getStatusBackdropColor)(F) : void 0,
+                        isMobile: m,
+                        statusTooltip: !0
+                    }), null != q && (0, a.jsx)(y.default, {
+                        initTranslate3d: "translate3d(-20px, -120px, 0)",
+                        children: (0, a.jsx)(G, {
+                            src: k,
+                            avatarDecoration: q,
+                            size: w,
+                            status: R.StatusTypes.UNKNOWN,
+                            isMobile: m,
+                            className: b.tryingOutAvatarDecoration,
+                            "aria-hidden": !0
+                        })
+                    }, q)]
+                }), $ = (0, r.match)(N).with(x.UserProfileTypes.POPOUT, () => {
+                    let e = (0, O.buildGetPremiumUserBannerStyles)({
+                        premiumUserWithBanner: b.avatarPositionPremiumBanner,
+                        premiumUserWithoutBanner: b.avatarPositionPremiumNoBanner,
+                        default: b.avatarPositionNormal
+                    });
+                    return e({
+                        isPremium: W && !H,
+                        hasBanner: o,
+                        hasProfileEffect: P
+                    })
+                }).with(x.UserProfileTypes.POMELO_POPOUT, () => b.avatarPositionPomelo).with(x.UserProfileTypes.PANEL, () => b.avatarPositionPanel).exhaustive();
+                return (0, a.jsx)(a.Fragment, {
+                    children: (0, a.jsxs)(d.Clickable, {
+                        className: s({
+                            [b.clickable]: !V,
+                            [b.avatarWrapperNonUserBot]: H,
+                            [b.avatarWrapperNormal]: !H
+                        }, $),
+                        onClick: H || V ? void 0 : function() {
+                            (0, M.openUserProfileModal)({
+                                userId: t.id,
+                                guildId: null != E ? E : void 0,
+                                channelId: null != C ? C : void 0,
+                                analyticsLocation: Y.location
+                            }), null == T || T()
+                        },
+                        children: [J, !V && function() {
+                            let e = null != Z,
+                                t = e ? B : (0, d.getAvatarSize)(w);
+                            return (0, a.jsx)(_.default, {
+                                mask: null == c || c === R.StatusTypes.UNKNOWN || z ? _.default.Masks.AVATAR_DEFAULT : (0, r.match)([e, m]).with([!0, !0], () => _.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => _.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => _.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => _.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
+                                className: e ? b.avatarDecorationHint : b.avatarHint,
+                                style: e ? {
+                                    borderRadius: .4 * t
+                                } : void 0,
+                                width: t,
+                                height: t,
+                                children: (0, a.jsx)("div", {
+                                    className: b.avatarHintInner,
+                                    children: D.default.Messages.VIEW_PROFILE
+                                })
+                            })
+                        }()]
+                    })
+                })
+            }
+
+            function H(e) {
+                let {
+                    user: t,
+                    displayProfile: l,
+                    guildId: n,
+                    channelId: i,
+                    onClose: s,
+                    isMobile: r,
+                    isStreaming: u,
+                    status: o,
+                    disableUserProfileLink: d,
+                    isHovering: c,
+                    showPremiumBadgeUpsell: f = !0,
+                    showCollectiblesSocialUpsell: m = !1,
+                    dismissCollectiblesSocialUpsell: p
+                } = e, C = null == l ? void 0 : l.profileEffectID;
+                return (0, a.jsxs)(a.Fragment, {
+                    children: [m && (0, a.jsx)(L.default, {
+                        user: t,
+                        onClose: s,
+                        guildId: n,
+                        onDismiss: p
+                    }), (0, a.jsx)(g.default, {
+                        user: t,
+                        displayProfile: l,
+                        onClose: s,
+                        guildId: n,
+                        profileType: x.UserProfileTypes.POPOUT,
+                        showPremiumBadgeUpsell: f,
+                        isHovering: c
+                    }), null != C && (0, a.jsx)(E.default, {
+                        profileEffectID: C,
+                        bannerAdjustment: 0,
+                        isHovering: c
+                    }), (0, a.jsx)(Y, {
+                        user: t,
+                        displayProfile: l,
+                        status: u ? R.StatusTypes.STREAMING : o,
+                        isMobile: r,
+                        guildId: n,
+                        channelId: i,
+                        onClose: s,
+                        disableUserProfileLink: d,
+                        hasBanner: (null == l ? void 0 : l.banner) != null,
+                        hasProfileEffect: null != C,
+                        profileType: x.UserProfileTypes.POPOUT
+                    }), (0, a.jsx)(F, {
+                        user: t,
+                        guildId: n
+                    })]
+                })
+            }
+        },
+        648149: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                default: function() {
+                    return s
+                }
+            });
+            var a = l("37983");
+            l("884691");
+            var n = l("77078"),
+                i = l("224038");
+
+            function s(e) {
+                let {
+                    user: t,
+                    nickname: l
+                } = e, s = null != l;
+                return (0, a.jsx)(n.Avatar, {
+                    src: t.getAvatarURL(void 0, s ? 16 : 24),
+                    size: s ? n.AvatarSizes.SIZE_16 : n.AvatarSizes.SIZE_24,
+                    className: s ? i.miniAvatar : i.largeAvatar,
+                    "aria-hidden": !0
+                })
+            }
+        },
+        777003: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var a = l("37983");
+            l("884691");
+            var n = l("414456"),
+                i = l.n(n),
+                s = l("383957");
+
+            function r(e) {
+                let {
+                    children: t,
+                    lastSection: l = !1,
+                    className: n,
+                    ...r
+                } = e;
+                return (0, a.jsx)("div", {
+                    className: i(s.section, n, {
+                        [s.lastSection]: l
+                    }),
+                    ...r,
+                    children: t
+                })
+            }
+        },
+        369869: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                default: function() {
+                    return v
+                }
+            });
+            var a = l("37983");
+            l("884691");
+            var n = l("414456"),
+                i = l.n(n),
+                s = l("446674"),
+                r = l("77078"),
+                u = l("997289"),
+                o = l("697218"),
+                d = l("109024"),
+                c = l("216422"),
+                f = l("719923"),
+                m = l("485422"),
+                p = l("777003"),
+                E = l("49111"),
+                C = l("782340"),
+                S = l("125234"),
+                T = l("814076");
+
+            function _(e) {
+                let {
+                    guildName: t
+                } = e;
+                return (0, a.jsxs)("div", {
+                    className: S.guildMemberProfileTooltip,
+                    children: [(0, a.jsx)(c.default, {
+                        className: S.guildMemberProfileTooltipNitroWheel
+                    }), C.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
+                        guildName: t
+                    })]
+                })
+            }
+
+            function v(e) {
+                let {
+                    guild: t,
+                    bio: n,
+                    hidePersonalInformation: c,
+                    isUsingGuildBio: v,
+                    lastSection: I = !1,
+                    animateOnHover: A = !1,
+                    isHovering: N = !1,
+                    lineClamp: h
+                } = e, {
+                    location: g
+                } = (0, u.useAnalyticsContext)(), O = (0, s.useStateFromStores)([o.default], () => o.default.getCurrentUser()), P = f.default.canUsePremiumGuildMemberProfile(O);
+                return c || null == n || "" === n ? null : (0, a.jsxs)(p.default, {
+                    lastSection: I,
+                    children: [(0, a.jsxs)(r.Heading, {
+                        variant: "eyebrow",
+                        className: T.title,
+                        children: [C.default.Messages.USER_POPOUT_ABOUT_ME, null != t && v && (0, a.jsx)(r.Tooltip, {
+                            color: r.Tooltip.Colors.CUSTOM,
+                            tooltipClassName: S.aboutMeGuildIconTooltip,
+                            "aria-label": C.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
+                                guildName: t.name
+                            }),
+                            text: (0, a.jsx)(_, {
+                                guildName: t.name
+                            }),
+                            children: e => (0, a.jsx)(d.default, {
+                                ...e,
+                                onClick: () => (function(e) {
+                                    null == e || e(), null != O && !P && (0, r.openModalLazy)(async () => {
+                                        let {
+                                            default: e
+                                        } = await l.el("414242").then(l.bind(l, "414242"));
+                                        return t => (0, a.jsx)(e, {
+                                            ...t,
+                                            source: {
+                                                ...g,
+                                                object: E.AnalyticsObjects.GUILD_ICON
+                                            }
+                                        })
+                                    })
+                                })(e.onClick),
+                                guild: t,
+                                size: d.default.Sizes.SMOL,
+                                className: i(S.aboutMeGuildIcon, {
+                                    [S.nonPremiumHoverState]: !P
+                                })
+                            })
+                        })]
+                    }), (0, a.jsx)(m.default, {
+                        userBio: n,
+                        animateOnHover: A,
+                        isHovering: N,
+                        lineClamp: h
+                    })]
+                })
+            }
+        },
+        802279: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                default: function() {
+                    return r
+                }
+            });
+            var a = l("37983");
+            l("884691");
+            var n = l("775377"),
+                i = l("777003"),
+                s = l("184256");
+
+            function r(e) {
+                let {
+                    customStatusActivity: t,
+                    className: l,
+                    animate: r
+                } = e;
+                return null == t ? null : (0, a.jsx)(i.default, {
+                    className: l,
+                    children: (0, a.jsx)(n.default, {
+                        activity: t,
+                        className: s.customStatus,
+                        animate: r,
+                        emojiClassName: s.customStatusEmoji,
+                        soloEmojiClassName: s.customStatusSoloEmoji,
+                        textClassName: s.customStatusText
+                    })
+                })
+            }
+        },
+        491250: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                default: function() {
+                    return m
+                }
+            });
+            var a = l("37983");
+            l("884691");
+            var n = l("414456"),
+                i = l.n(n),
+                s = l("77078"),
+                r = l("145079"),
+                u = l("123377"),
+                o = l("158998"),
+                d = l("777003"),
+                c = l("782340"),
+                f = l("119111");
+
+            function m(e) {
+                let {
+                    user: t,
+                    shouldCopyOnClick: l,
+                    nickname: n,
+                    pronouns: m,
+                    usernameIcon: p,
+                    identityCTA: E,
+                    className: C,
+                    isTryItOut: S = !1,
+                    lastSection: T
+                } = e;
+                return (0, a.jsx)(d.default, {
+                    className: i(f.container, C),
+                    lastSection: T,
+                    children: (0, a.jsxs)("div", {
+                        className: l ? f.copiableNameTag : void 0,
+                        children: [(0, a.jsx)(u.CopiableField, {
+                            className: f.copiableField,
+                            copyMetaData: "User Tag",
+                            copyValue: o.default.getUserTag(t, {
+                                decoration: "never",
+                                identifiable: "always"
+                            }),
+                            showCopyIcon: !0,
+                            disableCopy: !l,
+                            children: (0, a.jsxs)("div", {
+                                className: f.userText,
+                                children: [null != n ? (0, a.jsx)(s.Heading, {
+                                    variant: "heading-lg/semibold",
+                                    className: f.nickname,
+                                    children: n
+                                }) : null, (0, a.jsx)(r.default, {
+                                    usernameIcon: p,
+                                    user: t,
+                                    forceUsername: !0,
+                                    forcePomelo: S,
+                                    className: null == n ? f.userTagNoNickname : f.userTagWithNickname,
+                                    usernameClass: null == n ? f.userTagUsernameNoNickname : f.userTagUsernameBase,
+                                    discriminatorClass: null == n ? f.userTagDiscriminatorNoNickname : f.discrimBase,
+                                    botClass: null == n ? f.headerBotTag : f.headerBotTagWithNickname
+                                }), E]
+                            })
+                        }), null != m && "" !== m && (0, a.jsx)(s.Tooltip, {
+                            text: c.default.Messages.USER_PROFILE_PRONOUNS,
+                            children: e => (0, a.jsx)(s.Text, {
+                                ...e,
+                                variant: "text-sm/normal",
+                                className: f.pronouns,
+                                children: m
+                            })
+                        })]
+                    })
+                })
+            }
+        },
+        777523: function(e, t, l) {
+            "use strict";
+            l.r(t), l.d(t, {
+                default: function() {
+                    return s
+                }
+            });
+            var a = l("730290"),
+                n = l("49111");
+            let i = /-/g;
+
+            function s(e) {
+                let [, , t, l] = e.split("/"), s = null == t ? void 0 : t.toUpperCase().replace(i, "_"), r = null == l ? void 0 : l.toUpperCase().replace(i, "_");
+                if (n.UserSettingsSections.hasOwnProperty(s) && (null == r || "" === r || n.UserSettingsSections.hasOwnProperty(r))) {
+                    let {
+                        source: e
+                    } = (0, a.parse)(location.search);
+                    return {
+                        source: e,
+                        section: n.UserSettingsSections[s],
+                        subsection: r
                     }
                 }
+                return null
             }
         }
     }
