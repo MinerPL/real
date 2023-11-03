@@ -1,1005 +1,1056 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["18814"], {
-        851387: function(e, t, l) {
+    ["37580"], {
+        260365: function(t, e, i) {
             "use strict";
-            l.r(t), l.d(t, {
-                waitForGuild: function() {
-                    return P
-                },
+            i.r(e), i.d(e, {
                 default: function() {
-                    return w
+                    return s
                 }
             });
-            var n = l("759843"),
-                d = l("316693"),
-                r = l("872717"),
-                o = l("913144"),
-                a = l("333805"),
-                u = l("81732"),
-                i = l("248967"),
-                s = l("21121"),
-                E = l("693051"),
-                c = l("153498"),
-                _ = l("934306"),
-                p = l("258158"),
-                f = l("393414"),
-                L = l("239380"),
-                I = l("271938"),
-                T = l("42203"),
-                D = l("383173"),
-                G = l("923959"),
-                h = l("305961"),
-                U = l("18494"),
-                y = l("162771"),
-                S = l("697218"),
-                A = l("599110"),
-                R = l("991170"),
-                m = l("719923"),
-                C = l("840707"),
-                g = l("404118"),
-                O = l("49111"),
-                N = l("782340");
-            let M = e => {
-                    g.default.show({
-                        title: N.default.Messages.TOO_MANY_USER_GUILDS_ALERT_TITLE,
-                        body: N.default.Messages.TOO_MANY_USER_GUILDS_ALERT_DESCRIPTION.format({
-                            quantity: e
-                        })
-                    })
-                },
-                F = e => {
-                    o.default.dispatch({
-                        type: "GUILD_DELETE",
-                        guild: {
-                            id: e
-                        }
-                    })
-                },
-                b = () => {
-                    g.default.show({
-                        title: N.default.Messages.SERVER_IS_CURRENTLY_FULL,
-                        body: N.default.Messages.PLEASE_TRY_AGAIN_LATER
-                    })
-                };
-            async function v(e) {
-                var t, n, d, a, u;
-                let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                    {
-                        source: s,
-                        loadId: E,
-                        lurkLocation: c
-                    } = i,
-                    _ = null !== (t = i.lurker) && void 0 !== t && t,
-                    L = S.default.getCurrentUser();
-                if (null !== (n = null == L ? void 0 : L.hasFlag(O.UserFlags.QUARANTINED)) && void 0 !== n && n) return (0, p.default)(), new Promise((e, t) => t(Error()));
-                o.default.wait(() => o.default.dispatch({
-                    type: "GUILD_JOIN",
-                    guildId: e,
-                    lurker: _,
-                    source: s,
-                    loadId: E
-                }));
-                try {
-                    let t = y.default.getGuildId(),
-                        n = e === t && null != h.default.getGuild(e),
-                        d = n ? U.default.getChannelId(e) : null,
-                        a = await r.default.put({
-                            url: O.Endpoints.GUILD_JOIN(e),
-                            query: {
-                                lurker: _,
-                                session_id: _ ? I.default.getSessionId() : null,
-                                recommendation_load_id: E,
-                                location: _ && null != c ? c : null
-                            },
-                            context: {
-                                source: s
-                            },
-                            oldFormErrors: !0,
-                            body: {}
-                        });
-                    if (null != a.body.join_request && o.default.dispatch({
-                            type: "USER_GUILD_JOIN_REQUEST_UPDATE",
-                            guildId: e,
-                            request: a.body.join_request
-                        }), null == h.default.getGuild(e) && a.body.show_verification_form) return (0, f.transitionTo)(O.Routes.GUILD_MEMBER_VERIFICATION(e)), a;
-                    if (null != a.body.welcome_screen && o.default.dispatch({
-                            type: "WELCOME_SCREEN_UPDATE",
-                            guildId: a.body.id,
-                            welcomeScreen: a.body.welcome_screen
-                        }), null != a.body.approximate_presence_count && o.default.dispatch({
-                            type: "ONLINE_GUILD_MEMBER_COUNT_UPDATE",
-                            guildId: a.body.id,
-                            count: a.body.approximate_presence_count
-                        }), !_) {
+            var n = i("872717"),
+                a = i("913144"),
+                l = i("716241"),
+                d = i("884351"),
+                r = i("42203"),
+                u = i("450911"),
+                c = i("819689"),
+                o = i("49111"),
+                s = {
+                    updateActivity(t) {
                         let {
-                            default: t
-                        } = await l.el("937692").then(l.bind(l, "937692"));
-                        await t({
-                            guildId: e,
-                            returnChannelId: d
+                            applicationId: e,
+                            distributor: i,
+                            shareActivity: l,
+                            token: d = null,
+                            duration: r = 0,
+                            closed: u = !1
+                        } = t;
+                        a.default.wait(() => a.default.dispatch({
+                            type: "ACTIVITY_UPDATE_START",
+                            applicationId: e,
+                            duration: r,
+                            distributor: i
+                        })), n.default.post({
+                            url: o.Endpoints.ACTIVITIES,
+                            body: {
+                                application_id: e,
+                                token: d,
+                                duration: r,
+                                share_activity: l,
+                                distributor: i,
+                                closed: u
+                            },
+                            retries: 1,
+                            oldFormErrors: !0
+                        }).then(t => {
+                            let {
+                                body: {
+                                    token: n
+                                }
+                            } = t;
+                            a.default.dispatch({
+                                type: "ACTIVITY_UPDATE_SUCCESS",
+                                applicationId: e,
+                                token: n,
+                                duration: r,
+                                distributor: i
+                            })
+                        }).catch(() => {
+                            a.default.dispatch({
+                                type: "ACTIVITY_UPDATE_FAIL",
+                                applicationId: e
+                            })
                         })
+                    },
+                    sendActivityInvite(t) {
+                        let {
+                            channelId: e,
+                            type: i,
+                            activity: n,
+                            content: a,
+                            location: u
+                        } = t, s = r.default.getChannel(e);
+                        if (null == s) return Promise.resolve(null);
+                        let p = d.default.parse(s, null != a ? a : "");
+                        return c.default.sendMessage(s.id, p, !1, {
+                            activityAction: {
+                                type: i,
+                                activity: n
+                            }
+                        }).then(t => (l.default.trackWithMetadata(o.AnalyticEvents.INVITE_SENT, {
+                            location: u,
+                            invite_type: n.type === o.ActivityTypes.LISTENING ? o.LoggingInviteTypes.SPOTIFY : o.LoggingInviteTypes.APPLICATION,
+                            application_id: n.application_id,
+                            guild_id: s.getGuildId(),
+                            channel_id: s.id,
+                            message_id: null != t ? t.body.id : null
+                        }), Promise.resolve(s)), t => Promise.reject(t))
+                    },
+                    sendActivityInviteUser(t) {
+                        let {
+                            userId: e,
+                            type: i,
+                            activity: n,
+                            content: a,
+                            location: l
+                        } = t;
+                        return u.default.ensurePrivateChannel(e).then(t => this.sendActivityInvite({
+                            channelId: t,
+                            type: i,
+                            activity: n,
+                            content: a,
+                            location: l
+                        }))
+                    },
+                    async getJoinSecret(t, e, i, a, l) {
+                        let d = {};
+                        null != a && (d.channel_id = a), null != l && (d.message_id = l);
+                        let r = await n.default.get({
+                            url: o.Endpoints.USER_ACTIVITY_JOIN(t, e, i),
+                            retries: 3,
+                            query: d
+                        });
+                        return r.body.secret
                     }
-                    return a
-                } catch (t) {
-                    if ((null === (d = t.body) || void 0 === d ? void 0 : d.code) === O.AbortCodes.TOO_MANY_USER_GUILDS) {
-                        let e = S.default.getCurrentUser(),
-                            t = m.default.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff());
-                        t ? M(O.MAX_USER_GUILDS_PREMIUM) : M(O.MAX_USER_GUILDS)
-                    }
-                    throw (null === (a = t.body) || void 0 === a ? void 0 : a.code) === O.AbortCodes.GUILD_AT_CAPACITY && b(), _ && (null === (u = t.body) || void 0 === u ? void 0 : u.code) === O.AbortCodes.UNKNOWN_GUILD && F(e), t
                 }
-            }
+        },
+        823411: function(t, e, i) {
+            "use strict";
+            i.r(e), i.d(e, {
+                default: function() {
+                    return m
+                }
+            });
+            var n = i("522632"),
+                a = i("872717"),
+                l = i("913144"),
+                d = i("550766"),
+                r = i("760850"),
+                u = i("915639"),
+                c = i("86878"),
+                o = i("546463"),
+                s = i("686470"),
+                p = i("535974"),
+                E = i("568734"),
+                f = i("269180"),
+                A = i("773336"),
+                _ = i("260365"),
+                I = i("438931"),
+                T = i("215082"),
+                h = i("49111"),
+                C = i("954016"),
+                y = i("782340");
 
-            function P(e) {
-                return new Promise(t => h.default.addConditionalChangeListener(() => {
-                    let l = h.default.getGuild(e);
-                    return null == l || (t(l), !1)
+            function v(t) {
+                let {
+                    applicationId: e,
+                    secret: i,
+                    channelId: n,
+                    intent: a = C.ActivityIntent.PLAY,
+                    embedded: d = !1,
+                    analyticsLocations: r = []
+                } = t;
+                g(e, null, n, d, r).then(() => f.default.waitConnected(e)).then(() => Promise.race([f.default.waitSubscribed(e, h.RPCEvents.ACTIVITY_JOIN)])).then(() => {
+                    l.default.dispatch({
+                        type: "ACTIVITY_JOIN",
+                        applicationId: e,
+                        secret: i,
+                        intent: a,
+                        embedded: d
+                    })
+                }).catch(() => l.default.dispatch({
+                    type: "ACTIVITY_JOIN_FAILED",
+                    applicationId: e
                 }))
             }
-            var w = {
-                joinGuild: v,
-                waitForGuild: P,
-                async transitionToGuildSync(e, t, l, n) {
-                    var d, r;
-                    let o = await P(e);
-                    let a = (d = o.id, null != (r = l) ? r : (0, s.isInMainTabsExperiment)() ? void 0 : (0, L.getChannelIdForGuildTransition)(d)),
-                        u = t;
-                    (null == t ? void 0 : t.hasOwnProperty("welcomeModalChannelId")) && null == t.welcomeModalChannelId && (u = {
-                        ...t,
-                        welcomeModalChannelId: a
-                    }), (0, f.transitionTo)(O.Routes.CHANNEL(e, a), u, void 0, n), await new Promise(setImmediate)
+
+            function g(t, e, i) {
+                let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+                    E = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
+                if (r) return null == i ? Promise.reject(Error("Invalid channel ID")) : ((0, d.startEmbeddedActivity)(i, {
+                    application_id: t
+                }, E), Promise.resolve());
+                if (c.default.isConnected(t)) return Promise.resolve();
+                let A = null;
+                if (null == e) {
+                    let i = s.default.getActiveLibraryApplication(t);
+                    e = null != i ? i.branchId : t
+                }
+                if (p.default.isLaunchable(t, e)) {
+                    var _;
+                    let i = p.default.getState(t, e),
+                        l = s.default.getActiveLaunchOptionId(t, e);
+                    if (null == i) throw Error("Missing dispatch game when launching");
+                    let d = s.default.getLibraryApplication(t, e);
+                    if (null == d) throw Error("Missing library application when launching");
+                    A = (_ = t, a.default.post({
+                        url: h.Endpoints.OAUTH2_AUTHORIZE,
+                        query: {
+                            client_id: _,
+                            response_type: "token",
+                            scope: [h.OAuth2Scopes.IDENTIFY].join(" ")
+                        },
+                        retries: 3,
+                        body: {
+                            authorize: !0
+                        },
+                        oldFormErrors: !0
+                    }).then(t => {
+                        let e = t.body.location.split(/#|\?/),
+                            i = n.parse(e[e.length - 1]);
+                        if ("invalid_request" === i.error) return null;
+                        if (null != i.error) {
+                            var a;
+                            throw Error("OAuth2 Error: ".concat(i.error, ": ").concat(null !== (a = i.error_description) && void 0 !== a ? a : "unknown error"))
+                        }
+                        return i.access_token
+                    }, t => {
+                        if (404 === t.status) return null;
+                        throw t
+                    })).then(t => f.default.launchDispatchApplication(i, t, u.default.locale, d.getBranchName(), l))
+                } else {
+                    let e = o.default.getGame(t);
+                    A = null != e ? f.default.launch(e) : f.default.launchGame(t)
+                }
+                let I = Error("game not found");
+                return null != A ? (l.default.dispatch({
+                    type: "LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE",
+                    applicationId: t,
+                    branchId: e
+                }), l.default.dispatch({
+                    type: "GAME_LAUNCH_START",
+                    applicationId: t
+                }), A.then(e => {
+                    l.default.dispatch({
+                        type: "GAME_LAUNCH_SUCCESS",
+                        applicationId: t,
+                        pids: e
+                    })
+                }).catch(e => {
+                    T.default.show(h.NoticeTypes.LAUNCH_GAME_FAILURE, y.default.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND), l.default.dispatch({
+                        type: "GAME_LAUNCH_FAIL",
+                        applicationId: t,
+                        error: I
+                    })
+                })) : (l.default.dispatch({
+                    type: "GAME_LAUNCH_FAIL",
+                    applicationId: t,
+                    error: I
+                }), Promise.reject(I))
+            }
+            var m = {
+                addGame(t) {
+                    l.default.dispatch({
+                        type: "RUNNING_GAME_ADD_OVERRIDE",
+                        pid: t
+                    })
                 },
-                deleteGuild: F,
-                selectGuild(e) {
-                    (0, i.stopLurking)(e)
+                fetchApplication(t) {
+                    let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                    return l.default.dispatch({
+                        type: "APPLICATION_FETCH",
+                        applicationId: t
+                    }), a.default.get({
+                        url: h.Endpoints.APPLICATION_PUBLIC(t),
+                        query: {
+                            with_guild: e
+                        },
+                        oldFormErrors: !0
+                    }).then(t => (l.default.dispatch({
+                        type: "APPLICATION_FETCH_SUCCESS",
+                        application: t.body
+                    }), t.body)).catch(e => (l.default.dispatch({
+                        type: "APPLICATION_FETCH_FAIL",
+                        applicationId: t
+                    }), Promise.reject(e)))
                 },
-                async addGuild(e) {
-                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-                        l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-                        n = arguments.length > 3 ? arguments[3] : void 0;
-                    try {
-                        let d = await r.default.post({
-                            url: O.Endpoints.GUILDS,
+                async fetchApplications(t) {
+                    let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+                        i = t;
+                    if (!e && (i = t.filter(t => {
+                            var e, i;
+                            let n = o.default.getGame(t),
+                                a = (0, E.hasFlag)(null !== (i = null == n ? void 0 : n.flags) && void 0 !== i ? i : 0, h.ApplicationFlags.EMBEDDED),
+                                l = a && (null == n ? void 0 : null === (e = n.embeddedActivityConfig) || void 0 === e ? void 0 : e.supported_platforms) == null,
+                                d = null != n && !l;
+                            return !d && !o.default.isFetching(t) && !o.default.didFetchingFail(t) && t.length > 0
+                        })), i.length > 0) {
+                        let t;
+                        l.default.dispatch({
+                            type: "APPLICATIONS_FETCH",
+                            applicationIds: i
+                        });
+                        try {
+                            t = await a.default.get({
+                                url: h.Endpoints.APPLICATIONS_PUBLIC,
+                                query: n.stringify({
+                                    application_ids: i
+                                }),
+                                oldFormErrors: !0
+                            })
+                        } catch (t) {
+                            throw l.default.dispatch({
+                                type: "APPLICATIONS_FETCH_FAIL",
+                                applicationIds: i
+                            }), t
+                        }
+                        l.default.dispatch({
+                            type: "APPLICATIONS_FETCH_SUCCESS",
+                            applications: t.body
+                        })
+                    }
+                },
+                toggleOverlay(t) {
+                    let e = o.default.getGameByName(t.name);
+                    if (null != e) {
+                        let t = s.default.getActiveLibraryApplication(e.id);
+                        if (null != t) {
+                            let e = E.toggleFlag(t.getFlags(), h.LibraryApplicationFlags.OVERLAY_DISABLED);
+                            I.updateFlags(t.id, t.branchId, e);
+                            return
+                        }
+                    }
+                    l.default.dispatch({
+                        type: "RUNNING_GAME_TOGGLE_OVERLAY",
+                        game: t
+                    })
+                },
+                toggleDetection(t) {
+                    l.default.dispatch({
+                        type: "RUNNING_GAME_TOGGLE_DETECTION",
+                        game: t
+                    })
+                },
+                editName(t, e) {
+                    l.default.dispatch({
+                        type: "RUNNING_GAME_EDIT_NAME",
+                        game: t,
+                        newName: e
+                    })
+                },
+                identifyGame: (t, e) => (0, r.default)().then(e => new Promise((i, n) => {
+                    if (null == e) {
+                        n(Error("Game utils module not loaded"));
+                        return
+                    }
+                    e.identifyGame(t, (e, a) => {
+                        if (0 !== e) {
+                            n(Error("Error ".concat(e, " when fetching info on ").concat(t)));
+                            return
+                        }
+                        if (null == a.icon || "" === a.icon || null == a.name || "" === a.name) {
+                            n(Error("Did not find data on ".concat(t)));
+                            return
+                        }
+                        l.default.dispatch({
+                            type: "GAME_ICON_UPDATE",
+                            gameName: a.name,
+                            icon: "data:image/png;base64,".concat(a.icon)
+                        }), i(a)
+                    })
+                })),
+                getDetectableGames() {
+                    !o.default.fetching && null == o.default.lastFetched && l.default.wait(() => {
+                        l.default.dispatch({
+                            type: "GAMES_DATABASE_FETCH"
+                        }), a.default.get({
+                            url: h.Endpoints.APPLICATIONS_DETECTABLE,
+                            headers: {
+                                "If-None-Match": o.default.detectableGamesEtag
+                            },
+                            retries: 1,
+                            oldFormErrors: !0
+                        }).then(t => {
+                            let {
+                                body: e,
+                                headers: {
+                                    etag: i
+                                }
+                            } = t;
+                            l.default.dispatch({
+                                type: "GAMES_DATABASE_UPDATE",
+                                games: e,
+                                etag: i
+                            })
+                        }, t => {
+                            let {
+                                status: e
+                            } = t;
+                            304 === e ? l.default.dispatch({
+                                type: "GAMES_DATABASE_UPDATE",
+                                games: [],
+                                etag: o.default.detectableGamesEtag
+                            }) : l.default.dispatch({
+                                type: "GAMES_DATABASE_FETCH_FAIL"
+                            })
+                        })
+                    })
+                },
+                reportUnverifiedGame(t) {
+                    let {
+                        name: e,
+                        iconHash: i,
+                        publisher: n,
+                        distributor: d,
+                        sku: u,
+                        executableName: c
+                    } = t, o = (0, r.cleanExecutablePath)(c);
+                    if (null != o) {
+                        var s, p;
+                        a.default.post({
+                            url: h.Endpoints.UNVERIFIED_APPLICATIONS,
                             body: {
                                 name: e,
-                                icon: t,
-                                channels: l,
-                                system_channel_id: n
+                                os: (0, A.getPlatformName)(),
+                                icon: i,
+                                distributor_application: (s = d, p = u, null == s || "" === s ? null : {
+                                    distributor: s,
+                                    sku: p
+                                }),
+                                executable: o,
+                                publisher: n,
+                                report_version: 3
                             },
+                            retries: 1,
                             oldFormErrors: !0
-                        });
-                        return d.body
-                    } catch (e) {
-                        throw new a.default(e)
+                        }).then(t => {
+                            let {
+                                body: {
+                                    name: e,
+                                    hash: i,
+                                    missing_data: n
+                                }
+                            } = t;
+                            l.default.dispatch({
+                                type: "UNVERIFIED_GAME_UPDATE",
+                                name: e,
+                                hash: i,
+                                missingData: n
+                            })
+                        })
                     }
                 },
-                createGuild(e) {
-                    o.default.dispatch({
-                        type: "GUILD_CREATE",
-                        guild: e
-                    })
-                },
-                setServerMute: (e, t, l) => r.default.patch({
-                    url: O.Endpoints.GUILD_MEMBER(e, t),
-                    body: {
-                        mute: l
-                    },
-                    oldFormErrors: !0
-                }),
-                setServerDeaf: (e, t, l) => r.default.patch({
-                    url: O.Endpoints.GUILD_MEMBER(e, t),
-                    body: {
-                        deaf: l
-                    },
-                    oldFormErrors: !0
-                }),
-                setChannel(e, t, l) {
-                    r.default.patch({
-                        url: O.Endpoints.GUILD_MEMBER(e, t),
+                uploadIcon(t, e, i) {
+                    a.default.post({
+                        url: h.Endpoints.UNVERIFIED_APPLICATIONS_ICONS,
                         body: {
-                            channel_id: l
+                            application_name: t,
+                            application_hash: e,
+                            icon: i
                         },
+                        retries: 1,
                         oldFormErrors: !0
                     })
                 },
-                setMemberFlags(e, t, l) {
-                    r.default.patch({
-                        url: O.Endpoints.GUILD_MEMBER(e, t),
-                        body: {
-                            flags: l
-                        },
-                        oldFormErrors: !0
+                deleteEntry(t) {
+                    l.default.dispatch({
+                        type: "RUNNING_GAME_DELETE_ENTRY",
+                        game: t
                     })
                 },
-                kickUser: (e, t, l) => r.default.delete({
-                    url: O.Endpoints.GUILD_MEMBER(e, t),
-                    reason: l,
-                    oldFormErrors: !0
-                }),
-                setCommunicationDisabledUntil(e) {
+                launch: g,
+                async join(t) {
                     let {
-                        guildId: t,
-                        userId: l,
-                        communicationDisabledUntilTimestamp: d,
-                        duration: r,
-                        reason: o,
-                        location: a
-                    } = e;
-                    return C.default.patch({
-                        url: O.Endpoints.GUILD_MEMBER(t, l),
-                        reason: o,
-                        body: {
-                            communication_disabled_until: d
-                        },
-                        oldFormErrors: !0,
-                        trackedActionData: {
-                            event: n.NetworkActionNames.USER_COMMUNICATION_DISABLED_UPDATE,
-                            properties: {
-                                guild_id: t,
-                                target_user_id: l,
-                                duration: null != r ? r : null,
-                                reason: null != o ? o : null,
-                                communication_disabled_until: d,
-                                location: null != a ? a : null
-                            }
-                        }
-                    })
-                },
-                banUser: (e, t, l, n) => r.default.put({
-                    url: O.Endpoints.GUILD_BAN(e, t),
-                    reason: n,
-                    body: {
-                        delete_message_seconds: l
-                    },
-                    oldFormErrors: !0
-                }),
-                unbanUser: (e, t) => r.default.delete({
-                    url: O.Endpoints.GUILD_BAN(e, t),
-                    oldFormErrors: !0
-                }),
-                banMultipleUsers: (e, t, l, n) => r.default.post({
-                    url: O.Endpoints.BULK_GUILD_BAN(e),
-                    body: {
-                        user_ids: t,
-                        delete_message_seconds: l,
-                        reason: n
-                    },
-                    oldFormErrors: !0
-                }),
-                async createRole(e, t, l) {
-                    let n = {
-                        name: null != t && "" !== t ? t : N.default.Messages.NEW_ROLE,
-                        color: null != l ? l : 0,
-                        permissions: R.default.NONE
-                    };
+                        userId: e,
+                        sessionId: i,
+                        applicationId: n,
+                        channelId: a,
+                        messageId: d,
+                        intent: r = C.ActivityIntent.PLAY,
+                        embedded: u = !1
+                    } = t;
+                    if (__OVERLAY__) return l.default.dispatch({
+                        type: "OVERLAY_JOIN_GAME",
+                        userId: e,
+                        sessionId: i,
+                        applicationId: n,
+                        channelId: a,
+                        messageId: d
+                    }), Promise.resolve(!0);
+                    l.default.dispatch({
+                        type: "ACTIVITY_JOIN_LOADING",
+                        applicationId: n
+                    });
                     try {
-                        let t = await r.default.post({
-                                url: O.Endpoints.GUILD_ROLES(e),
-                                oldFormErrors: !0,
-                                body: n
-                            }),
-                            l = t.body;
-                        return l.permissions = d.default.deserialize(l.permissions), o.default.dispatch({
-                            type: "GUILD_SETTINGS_ROLE_SELECT",
-                            roleId: t.body.id,
-                            role: l
-                        }), u.default.checkGuildTemplateDirty(e), l
-                    } catch (e) {
-                        throw new a.default(e)
+                        let t = await _.default.getJoinSecret(e, i, n, a, d);
+                        return v({
+                            applicationId: n,
+                            secret: t,
+                            channelId: a,
+                            intent: r,
+                            embedded: u
+                        }), !0
+                    } catch (t) {
+                        return l.default.dispatch({
+                            type: "ACTIVITY_JOIN_FAILED",
+                            applicationId: n
+                        }), !1
                     }
                 },
-                async updateRole(e, t, l) {
-                    let {
-                        icon: n,
-                        unicodeEmoji: d,
-                        ...o
-                    } = l, a = null === n || (null == n ? void 0 : n.startsWith("data:")) ? n : void 0, i = await r.default.patch({
-                        url: O.Endpoints.GUILD_ROLE(e, t),
-                        body: {
-                            ...o,
-                            icon: a,
-                            unicode_emoji: d
-                        },
-                        oldFormErrors: !0
-                    });
-                    return u.default.checkGuildTemplateDirty(e), i
-                },
-                updateRolePermissions: (e, t, l) => r.default.patch({
-                    url: O.Endpoints.GUILD_ROLE(e, t),
-                    body: {
-                        permissions: l
-                    },
-                    oldFormErrors: !0
-                }),
-                deleteRole(e, t) {
-                    r.default.delete({
-                        url: O.Endpoints.GUILD_ROLE(e, t),
-                        oldFormErrors: !0
-                    }).then(() => {
-                        u.default.checkGuildTemplateDirty(e)
-                    })
-                },
-                async batchChannelUpdate(e, t) {
-                    let l = await r.default.patch({
-                        url: O.Endpoints.GUILD_CHANNELS(e),
-                        body: t,
-                        oldFormErrors: !0
-                    });
-                    return u.default.checkGuildTemplateDirty(e), l
-                },
-                async batchRoleUpdate(e, t) {
-                    let l = await r.default.patch({
-                        url: O.Endpoints.GUILD_ROLES(e),
-                        body: t,
-                        oldFormErrors: !0
-                    });
-                    return u.default.checkGuildTemplateDirty(e), l
-                },
-                requestMembers(e) {
-                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "",
-                        l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
-                        n = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-                    return o.default.dispatch({
-                        type: "GUILD_MEMBERS_REQUEST",
-                        guildIds: Array.isArray(e) ? e : [e],
-                        query: t,
-                        limit: l,
-                        presences: n
-                    })
-                },
-                searchRecentMembers(e, t) {
-                    let {
-                        query: l,
-                        continuationToken: n
-                    } = null != t ? t : {};
-                    return o.default.dispatch({
-                        type: "GUILD_SEARCH_RECENT_MEMBERS",
-                        guildId: e,
-                        query: l,
-                        continuationToken: n
-                    })
-                },
-                requestMembersById(e, t) {
-                    let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-                    return o.default.dispatch({
-                        type: "GUILD_MEMBERS_REQUEST",
-                        guildIds: Array.isArray(e) ? e : [e],
-                        userIds: Array.isArray(t) ? t : [t],
-                        presences: l
-                    })
-                },
-                move(e, t, l, n) {
-                    o.default.dispatch({
-                        type: "GUILD_MOVE",
-                        fromIndex: e,
-                        toIndex: t,
-                        fromFolderIndex: l,
-                        toFolderIndex: n
-                    })
-                },
-                moveById(e, t) {
-                    let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                        n = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-                    o.default.dispatch({
-                        type: "GUILD_MOVE_BY_ID",
-                        sourceId: e,
-                        targetId: t,
-                        moveToBelow: l,
-                        combine: n
-                    })
-                },
-                createGuildFolderLocal(e, t) {
-                    A.default.track(O.AnalyticEvents.GUILD_FOLDER_CREATED), o.default.dispatch({
-                        type: "GUILD_FOLDER_CREATE_LOCAL",
-                        sourceIds: e,
-                        name: t
-                    })
-                },
-                editGuildFolderLocal(e, t, l) {
-                    o.default.dispatch({
-                        type: "GUILD_FOLDER_EDIT_LOCAL",
-                        targetId: e,
-                        sourceIds: t,
-                        name: l
-                    })
-                },
-                deleteGuildFolderLocal(e) {
-                    o.default.dispatch({
-                        type: "GUILD_FOLDER_DELETE_LOCAL",
-                        targetId: e
-                    })
-                },
-                toggleGuildFolderExpand(e) {
-                    let t = D.default.isFolderExpanded(e);
-                    A.default.track(O.AnalyticEvents.GUILD_FOLDER_CLICKED, {
-                        source: "sidebar",
-                        action: t ? "collapsed" : "expanded"
-                    }), o.default.dispatch({
-                        type: "TOGGLE_GUILD_FOLDER_EXPAND",
-                        folderId: e
-                    })
-                },
-                setGuildFolderExpanded(e, t) {
-                    o.default.dispatch({
-                        type: "SET_GUILD_FOLDER_EXPANDED",
-                        folderId: e,
-                        expanded: t
-                    })
-                },
-                collapseAllFolders() {
-                    o.default.dispatch({
-                        type: "GUILD_FOLDER_COLLAPSE"
-                    })
-                },
-                nsfwAgree(e) {
-                    o.default.dispatch({
-                        type: "GUILD_NSFW_AGREE",
-                        guildId: e
-                    })
-                },
-                nsfwReturnToSafety(e) {
-                    if ((0, s.isInMainTabsExperiment)() && !(0, _.isOnNewPanels)()) {
-                        let e = (0, E.getRootNavigationRef)();
-                        if ((null == e ? void 0 : e.isReady()) !== !0) return;
-                        let t = (0, c.coerceModalRoute)(e.getCurrentRoute());
-                        for (null != t && e.goBack();;) {
-                            let t = (0, c.coerceChannelRoute)(e.getCurrentRoute());
-                            if (null == t) break;
-                            let l = T.default.getChannel(t.params.channelId);
-                            if (null == l || !l.isNSFW()) break;
-                            e.goBack()
-                        }
-                        return
-                    }
-                    if (null == e) {
-                        (0, f.transitionTo)(O.Routes.FRIENDS);
-                        return
-                    }
-                    let t = G.default.getDefaultChannel(e);
-                    null == t || t.isNSFW() ? (0, f.transitionTo)(O.Routes.FRIENDS) : (0, f.transitionTo)(O.Routes.CHANNEL(e, t.id))
-                },
-                escapeToDefaultChannel(e) {
-                    let t = G.default.getDefaultChannel(e);
-                    null != t ? (0, f.transitionTo)(O.Routes.CHANNEL(e, t.id)) : (0, f.transitionTo)(O.Routes.FRIENDS)
-                },
-                async fetchApplications(e, t) {
-                    let l = {
-                        url: O.Endpoints.GUILD_APPLICATIONS(e),
-                        oldFormErrors: !0
-                    };
-                    null != t && (l.query = {
-                        channel_id: t
-                    });
-                    let n = await r.default.get(l),
-                        d = n.body;
-                    o.default.dispatch({
-                        type: "GUILD_APPLICATIONS_FETCH_SUCCESS",
-                        guildId: e,
-                        applications: d
-                    })
-                },
-                async fetchGuildBansBatch(e) {
-                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1e3,
-                        l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-                        n = {
-                            limit: t
-                        };
-                    null != l && (n.after = l), await r.default.get({
-                        url: O.Endpoints.GUILD_BANS(e),
-                        oldFormErrors: !0,
-                        query: n
-                    }).then(t => {
-                        o.default.dispatch({
-                            type: "GUILD_SETTINGS_LOADED_BANS_BATCH",
-                            bans: t.body,
-                            guildId: e
-                        })
-                    })
-                },
-                async searchGuildBans(e, t, l) {
-                    let n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 10,
-                        d = {
-                            limit: n
-                        };
-                    null != l && l.length > 0 && (d.user_ids = l), null != t && t.trim().length > 0 && (d.query = t), await r.default.get({
-                        url: O.Endpoints.GUILD_BANS_SEARCH(e),
-                        oldFormErrors: !0,
-                        query: d
-                    }).then(t => {
-                        o.default.dispatch({
-                            type: "GUILD_SETTINGS_LOADED_BANS_BATCH",
-                            bans: t.body,
-                            guildId: e
-                        })
-                    })
-                },
-                async fetchGuildBans(e) {
-                    await r.default.get({
-                        url: O.Endpoints.GUILD_BANS(e),
-                        oldFormErrors: !0
-                    }).then(e => {
-                        o.default.dispatch({
-                            type: "GUILD_SETTINGS_LOADED_BANS",
-                            bans: e.body
-                        })
-                    })
-                },
-                fetchGuildRoleConnectionsEligibility: (e, t) => r.default.get({
-                    url: O.Endpoints.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(e, t),
-                    oldFormErrors: !0
-                }).then(e => {
-                    let {
-                        body: l
-                    } = e;
-                    return o.default.dispatch({
-                        type: "GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS",
-                        roleId: t,
-                        roleConnectionEligibility: l
-                    }), l
-                }),
-                async assignGuildRoleConnection(e, t) {
-                    await r.default.post({
-                        url: O.Endpoints.GUILD_ROLE_CONNECTIONS_ASSIGN(e, t),
-                        oldFormErrors: !0
-                    })
-                },
-                async unassignGuildRoleConnection(e, t) {
-                    await r.default.post({
-                        url: O.Endpoints.GUILD_ROLE_CONNECTIONS_UNASSIGN(e, t),
-                        oldFormErrors: !0
-                    })
-                },
-                async getGuildRoleConnectionsConfigurations(e) {
-                    let t = await r.default.get({
-                        url: O.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(e),
-                        oldFormErrors: !0
-                    });
-                    return t.body
-                }
+                joinWithSecret: v
             }
         },
-        883069: function(e, t, l) {
+        438931: function(t, e, i) {
             "use strict";
-            l.r(t), l.d(t, {
-                default: function() {
-                    return u
+            i.r(e), i.d(e, {
+                updateFlags: function() {
+                    return d
                 }
             });
-            var n = l("872717"),
-                d = l("913144"),
-                r = l("599110"),
-                o = l("82339"),
-                a = l("49111"),
-                u = {
-                    resolveGuildTemplate: function e(t) {
-                        return d.default.isDispatching() ? Promise.resolve().then(() => e(t)) : (d.default.dispatch({
-                            type: "GUILD_TEMPLATE_RESOLVE",
-                            code: t
-                        }), n.default.get({
-                            url: a.Endpoints.UNRESOLVED_GUILD_TEMPLATE(t),
-                            oldFormErrors: !0
-                        }).then(e => {
-                            let l = e.body;
-                            return r.default.track(a.AnalyticEvents.GUILD_TEMPLATE_RESOLVED, {
-                                resolved: !0,
-                                guild_template_code: t,
-                                guild_template_name: l.name,
-                                guild_template_description: l.description,
-                                guild_template_guild_id: l.source_guild_id
-                            }), d.default.dispatch({
-                                type: "GUILD_TEMPLATE_RESOLVE_SUCCESS",
-                                guildTemplate: l,
-                                code: t
-                            }), {
-                                guildTemplate: (0, o.default)(l),
-                                code: t
-                            }
-                        }, () => (r.default.track(a.AnalyticEvents.GUILD_TEMPLATE_RESOLVED, {
-                            resolved: !1,
-                            guild_template_code: t
-                        }), d.default.dispatch({
-                            type: "GUILD_TEMPLATE_RESOLVE_FAILURE",
-                            code: t
-                        }), {
-                            guildTemplate: null,
-                            code: t
-                        })))
+            var n = i("872717"),
+                a = i("913144"),
+                l = i("49111");
+
+            function d(t, e, i) {
+                return a.default.dispatch({
+                    type: "LIBRARY_APPLICATION_FLAGS_UPDATE_START",
+                    applicationId: t,
+                    branchId: e,
+                    flags: i
+                }), n.default.patch({
+                    url: l.Endpoints.LIBRARY_APPLICATION_BRANCH(t, e),
+                    body: {
+                        flags: i
                     },
-                    loadTemplatesForGuild: e => n.default.get({
-                        url: a.Endpoints.GUILD_TEMPLATES(e),
-                        oldFormErrors: !0
-                    }).then(e => (d.default.dispatch({
-                        type: "GUILD_TEMPLATE_LOAD_FOR_GUILD_SUCCESS",
-                        guildTemplates: e.body
-                    }), e)),
-                    createGuildTemplate: (e, t, l) => n.default.post({
-                        url: a.Endpoints.GUILD_TEMPLATES(e),
-                        body: {
-                            name: t,
-                            description: l
-                        },
-                        oldFormErrors: !0
-                    }).then(e => {
-                        d.default.dispatch({
-                            type: "GUILD_TEMPLATE_CREATE_SUCCESS",
-                            guildTemplate: e.body,
-                            code: e.body.code
-                        })
-                    }),
-                    syncGuildTemplate: (e, t) => n.default.put({
-                        url: a.Endpoints.GUILD_TEMPLATE(e, t),
-                        oldFormErrors: !0
-                    }).then(e => {
-                        d.default.dispatch({
-                            type: "GUILD_TEMPLATE_SYNC_SUCCESS",
-                            guildTemplate: e.body,
-                            code: t
-                        })
-                    }),
-                    updateGuildTemplate: (e, t, l, r) => n.default.patch({
-                        url: a.Endpoints.GUILD_TEMPLATE(e, t),
-                        body: {
-                            name: l,
-                            description: r
-                        },
-                        oldFormErrors: !0
-                    }).then(e => {
-                        d.default.dispatch({
-                            type: "GUILD_TEMPLATE_SYNC_SUCCESS",
-                            guildTemplate: e.body,
-                            code: t
-                        })
-                    }),
-                    deleteGuildTemplate: (e, t) => n.default.delete({
-                        url: a.Endpoints.GUILD_TEMPLATE(e, t),
-                        oldFormErrors: !0
-                    }).then(() => {
-                        d.default.dispatch({
-                            type: "GUILD_TEMPLATE_DELETE_SUCCESS",
-                            guildId: e,
-                            code: t
-                        })
+                    oldFormErrors: !0
+                }).then(t => {
+                    a.default.dispatch({
+                        type: "LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS",
+                        libraryApplication: t.body
                     })
-                }
+                })
+            }
         },
-        81732: function(e, t, l) {
+        215082: function(t, e, i) {
             "use strict";
-            l.r(t), l.d(t, {
+            i.r(e), i.d(e, {
                 default: function() {
                     return a
                 }
             });
-            var n = l("913144"),
-                d = l("957255"),
-                r = l("883069"),
-                o = l("49111"),
+            var n = i("913144"),
                 a = {
-                    async checkGuildTemplateDirty(e) {
-                        if (!d.default.canWithPartialContext(o.Permissions.MANAGE_GUILD, {
-                                guildId: e
-                            })) return;
-                        let t = await r.default.loadTemplatesForGuild(e);
-                        t.body.length > 0 && n.default.dispatch({
-                            type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_REFRESH",
-                            guildTemplate: t.body[0]
+                    show(t, e, i, a, l) {
+                        n.default.dispatch({
+                            type: "NOTICE_SHOW",
+                            notice: {
+                                id: l,
+                                type: t,
+                                message: e,
+                                buttonText: i,
+                                callback: a
+                            }
                         })
                     },
-                    hideGuildTemplateDirtyTooltip(e) {
+                    dismiss(t) {
                         n.default.dispatch({
-                            type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE",
-                            guildId: e
-                        })
-                    },
-                    hideGuildTemplatePromotionTooltip() {
-                        n.default.dispatch({
-                            type: "GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE"
+                            type: "NOTICE_DISMISS",
+                            ...t
                         })
                     }
                 }
         },
-        579033: function(e, t, l) {
+        447789: function(t, e, i) {
             "use strict";
-            var n, d, r, o;
-            l.r(t), l.d(t, {
-                GuildTemplateStates: function() {
-                    return n
+            i.r(e), i.d(e, {
+                ActivitiesInGdmExperiment: function() {
+                    return a
                 },
-                InternalTemplateCodes: function() {
+                useIsActivitiesInGdmEnabled: function() {
+                    return l
+                },
+                isActivitiesInGdmEnabled: function() {
                     return d
                 }
-            }), (r = n || (n = {})).RESOLVING = "RESOLVING", r.RESOLVED = "RESOLVED", r.EXPIRED = "EXPIRED", r.ACCEPTED = "ACCEPTED", r.ACCEPTING = "ACCEPTING", (o = d || (d = {})).CLASSROOM = "fVfBazbqjhXg", o.LOCAL_COMMUNITIES = "64UDvRNCC52Y", o.CREATORS_HOBBIES = "6exdzMgjZgah", o.GLOBAL_COMMUNITIES = "4sgbPdCjzAYU", o.FRIENDS_FAMILY = "hgM48av5Q69A", o.STUDY_GROUPS = "FbwUwRp4j8Es", o.CREATE_FROM_SCRATCH = "WYAQmEzjw3Pj", o.CAMPUS_CLUBS = "Ctg7PUHcQmZu", o.LEAGUE_CLUBS = "PJ6VvgEJYg45", o.GITHUB_HACKATHON = "UqzZCTj2zfwy"
+            });
+            var n = i("862205");
+            let a = (0, n.createExperiment)({
+                kind: "user",
+                id: "2023-01_activities_in_gdm",
+                label: "Activities in GDM",
+                defaultConfig: {
+                    isActivitiesInGdmEnabled: !1
+                },
+                treatments: [{
+                    id: 1,
+                    label: "enable Activities in GDMs",
+                    config: {
+                        isActivitiesInGdmEnabled: !0
+                    }
+                }]
+            });
+
+            function l() {
+                let {
+                    isActivitiesInGdmEnabled: t
+                } = a.useExperiment({
+                    location: "c7edd6_1"
+                }, {
+                    autoTrackExposure: !1
+                });
+                return t
+            }
+
+            function d() {
+                let {
+                    isActivitiesInGdmEnabled: t
+                } = a.getCurrentConfig({
+                    location: "c7edd6_2"
+                }, {
+                    autoTrackExposure: !1
+                });
+                return t
+            }
         },
-        82339: function(e, t, l) {
+        427953: function(t, e, i) {
             "use strict";
-            l.r(t), l.d(t, {
+            i.r(e), i.d(e, {
+                ActivitiesInTextExperiment: function() {
+                    return u
+                },
+                default: function() {
+                    return c
+                }
+            });
+            var n = i("446674"),
+                a = i("862205"),
+                l = i("42203"),
+                d = i("954016"),
+                r = i("49111");
+            let u = (0, a.createExperiment)({
+                kind: "user",
+                id: "2023-08_activities_in_text",
+                label: "Activities in Text",
+                defaultConfig: {
+                    isActivitiesInTextEnabled: !1
+                },
+                treatments: [{
+                    id: 1,
+                    label: "enable Activities in text channels",
+                    config: {
+                        isActivitiesInTextEnabled: !0
+                    }
+                }]
+            });
+
+            function c(t) {
+                var e;
+                let i = (0, n.useStateFromStores)([l.default], () => l.default.getChannel(t)),
+                    {
+                        isActivitiesInTextEnabled: a
+                    } = u.useExperiment({
+                        location: "useIsActivitiesInTextEnabled"
+                    }, {
+                        autoTrackExposure: !1
+                    });
+                return a && d.SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES.includes(null !== (e = null == i ? void 0 : i.type) && void 0 !== e ? e : r.ChannelTypes.UNKNOWN)
+            }
+        },
+        550766: function(t, e, i) {
+            "use strict";
+            i.r(e), i.d(e, {
+                startEmbeddedActivity: function() {
+                    return D
+                },
+                launchEmbeddedActivity: function() {
+                    return S
+                },
+                stopEmbeddedActivity: function() {
+                    return L
+                },
+                disconnectEmbeddedActivity: function() {
+                    return N
+                },
+                fetchDeveloperApplications: function() {
+                    return P
+                },
+                uploadImageAttachment: function() {
+                    return F
+                },
+                fetchShelf: function() {
+                    return O
+                },
+                sendEmbeddedActivityInvite: function() {
+                    return M
+                },
+                sendEmbeddedActivityInviteUser: function() {
+                    return G
+                },
+                dismissNewActivityIndicator: function() {
+                    return U
+                },
+                validateTestMode: function() {
+                    return H
+                },
+                updateActivityPanelMode: function() {
+                    return V
+                }
+            });
+            var n = i("759843"),
+                a = i("872717"),
+                l = i("913144"),
+                d = i("450911"),
+                r = i("255397"),
+                u = i("970728"),
+                c = i("819689"),
+                o = i("599417"),
+                s = i("191145"),
+                p = i("653047"),
+                E = i("271938"),
+                f = i("42203"),
+                A = i("546463"),
+                _ = i("697218"),
+                I = i("449008"),
+                T = i("840707"),
+                h = i("447789"),
+                C = i("191225"),
+                y = i("458184"),
+                v = i("420444"),
+                g = i("49111"),
+                m = i("91366");
+
+            function D(t, e, i) {
+                let n = C.default.getSelfEmbeddedActivityForChannel(t);
+                null != n && L({
+                    channelId: t,
+                    applicationId: n.application_id
+                }), l.default.dispatch({
+                    type: "EMBEDDED_ACTIVITY_OPEN",
+                    channelId: t,
+                    embeddedActivity: e,
+                    analyticsLocations: i
+                });
+                let {
+                    application_id: a
+                } = e, d = (0, v.default)(t);
+                d ? (r.default.selectParticipant(t, a), r.default.updateLayout(t, g.ChannelLayouts.NO_CHAT)) : (0, y.default)(t)
+            }
+            async function S(t) {
+                var e, i;
+                let a = f.default.getChannel(t),
+                    d = null !== (e = null == a ? void 0 : a.getGuildId()) && void 0 !== e ? e : null;
+                if (null == d && !(null !== (i = null == a ? void 0 : a.isPrivate()) && void 0 !== i && i)) return;
+                let r = C.default.getSelfEmbeddedActivityForChannel(t);
+                if (null === r) return;
+                let u = E.default.getSessionId();
+                try {
+                    l.default.dispatch({
+                        type: "EMBEDDED_ACTIVITY_LAUNCH_START",
+                        embeddedActivity: r
+                    }), await T.default.post({
+                        url: g.Endpoints.ACTIVITY_CHANNEL_LAUNCH(t, r.application_id),
+                        body: {
+                            session_id: u,
+                            guild_id: null != d ? d : void 0
+                        },
+                        trackedActionData: {
+                            event: n.NetworkActionNames.EMBEDDED_ACTIVITIES_LAUNCH,
+                            properties: {
+                                guild_id: d,
+                                channel_id: t,
+                                application_id: r.application_id,
+                                session_id: u
+                            }
+                        },
+                        retries: 3,
+                        oldFormErrors: !0
+                    }), l.default.dispatch({
+                        type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS"
+                    })
+                } catch (e) {
+                    l.default.dispatch({
+                        type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
+                        guildId: d,
+                        applicationId: r.application_id,
+                        error: new o.default(e)
+                    }), L({
+                        channelId: t,
+                        applicationId: r.application_id,
+                        showFeedback: !1
+                    })
+                }
+            }
+
+            function L(t) {
+                var e;
+                let {
+                    channelId: i,
+                    applicationId: n,
+                    showFeedback: a = !0
+                } = t;
+                l.default.dispatch({
+                    type: "EMBEDDED_ACTIVITY_CLOSE",
+                    channelId: i,
+                    applicationId: n,
+                    showFeedback: a
+                });
+                let d = s.default.getSelectedParticipantId(i),
+                    u = null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.id,
+                    c = C.default.getEmbeddedActivitiesForChannel(i).find(t => t.application_id === n);
+                null != c && null != u && "" !== u && d === n && r.default.selectParticipant(i, null)
+            }
+
+            function N(t, e) {
+                l.default.dispatch({
+                    type: "EMBEDDED_ACTIVITY_DISCONNECT",
+                    channelId: t,
+                    applicationId: e
+                })
+            }
+            async function P() {
+                try {
+                    l.default.dispatch({
+                        type: "DEVELOPER_ACTIVITY_SHELF_FETCH_START"
+                    });
+                    let t = await a.default.get({
+                            url: g.Endpoints.APPLICATIONS,
+                            query: {
+                                with_team_applications: !0
+                            },
+                            oldFormErrors: !0
+                        }),
+                        e = t.body.map(t => p.default.createFromServer(t));
+                    l.default.dispatch({
+                        type: "DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS",
+                        items: e
+                    })
+                } catch (t) {
+                    l.default.dispatch({
+                        type: "DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL"
+                    })
+                }
+            }
+            async function F(t, e, i) {
+                try {
+                    l.default.dispatch({
+                        type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START"
+                    });
+                    let n = await a.default.post({
+                        url: g.Endpoints.ACTIVITY_UPLOAD_ATTACHMENT(t),
+                        query: {
+                            channel_id: e
+                        },
+                        attachments: [{
+                            name: "file",
+                            file: i
+                        }]
+                    });
+                    return l.default.dispatch({
+                        type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_SUCCESS",
+                        attachment: n.body.attachment
+                    }), n.body.attachment
+                } catch (t) {
+                    return l.default.dispatch({
+                        type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL"
+                    }), new o.default(t)
+                }
+            }
+            let b = (t, e, i) => {
+                let {
+                    guildId: n
+                } = i;
+                (n === t || null == n && null == t) && e()
+            };
+            async function O(t) {
+                var e, i, a;
+                let {
+                    guildId: d,
+                    force: r = !1
+                } = t, u = C.default.getShelfActivities(d), c = u.map(t => A.default.getGame(t.application_id)).filter(I.isNotNullish);
+                if (!r && !C.default.shouldFetchShelf(d)) {
+                    if (null === (e = C.default.getShelfFetchStatus(d)) || void 0 === e ? void 0 : e.isFetching) {
+                        let t, e;
+                        let i = new Promise(e => {
+                                t = b.bind(null, d, e), l.default.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", t)
+                            }),
+                            n = new Promise(t => {
+                                e = b.bind(null, d, t), l.default.subscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", e)
+                            });
+                        await Promise.race([i, n]), null != t && (l.default.unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS", t), t = null), null != e && (l.default.unsubscribe("EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL", e), e = null)
+                    }
+                    return {
+                        activityConfigs: u,
+                        applications: c
+                    }
+                }
+                try {
+                    l.default.dispatch({
+                        type: "EMBEDDED_ACTIVITY_FETCH_SHELF",
+                        guildId: d
+                    });
+                    let t = void 0 !== d && "" !== d;
+                    if (!t && !(0, h.isActivitiesInGdmEnabled)()) return {
+                        activityConfigs: [],
+                        applications: []
+                    };
+                    let e = t ? {
+                            guild_id: d
+                        } : void 0,
+                        r = await T.default.get({
+                            url: g.Endpoints.ACTIVITY_SHELF,
+                            query: e,
+                            trackedActionData: {
+                                event: n.NetworkActionNames.EMBEDDED_ACTIVITIES_FETCH_SHELF,
+                                properties: {
+                                    guild_id: d
+                                }
+                            },
+                            retries: 3,
+                            oldFormErrors: !0
+                        }),
+                        u = null !== (i = r.body.activities) && void 0 !== i ? i : [],
+                        c = null !== (a = r.body.applications) && void 0 !== a ? a : [];
+                    return l.default.dispatch({
+                        type: "EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS",
+                        guildId: d,
+                        activities: u,
+                        applications: c
+                    }), c.length > 0 && l.default.dispatch({
+                        type: "APPLICATIONS_FETCH_SUCCESS",
+                        applications: c
+                    }), {
+                        activityConfigs: u,
+                        applications: c.map(t => p.default.createFromServer(t))
+                    }
+                } catch (t) {
+                    return l.default.dispatch({
+                        type: "EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL",
+                        guildId: d
+                    }), {
+                        activityConfigs: u,
+                        applications: c
+                    }
+                }
+            }
+            async function M(t) {
+                let {
+                    activityChannelId: e,
+                    invitedChannelId: i,
+                    applicationId: n,
+                    location: a
+                } = t, l = await u.default.createInvite(e, {
+                    target_type: m.InviteTargetTypes.EMBEDDED_APPLICATION,
+                    target_application_id: n
+                }, a);
+                null != f.default.getChannel(i) && c.default.sendInvite(i, l.code, a, null)
+            }
+            async function G(t) {
+                let {
+                    channelId: e,
+                    applicationId: i,
+                    userId: n,
+                    location: a
+                } = t, l = await u.default.createInvite(e, {
+                    target_type: m.InviteTargetTypes.EMBEDDED_APPLICATION,
+                    target_application_id: i
+                }, a);
+                d.default.ensurePrivateChannel(n).then(t => {
+                    null != f.default.getChannel(t) && c.default.sendInvite(t, l.code, a, null)
+                })
+            }
+
+            function U() {
+                l.default.dispatch({
+                    type: "EMBEDDED_ACTIVITY_DISMISS_NEW_INDICATOR"
+                })
+            }
+            async function H(t) {
+                let e = g.Endpoints.ACTIVITY_TEST_MODE(t);
+                try {
+                    return await a.default.get({
+                        url: e,
+                        oldFormErrors: !0
+                    }), !0
+                } catch (t) {
+                    return !1
+                }
+            }
+
+            function V(t) {
+                l.default.dispatch({
+                    type: "EMBEDDED_ACTIVITY_SET_PANEL_MODE",
+                    activityPanelMode: t
+                })
+            }
+        },
+        458184: function(t, e, i) {
+            "use strict";
+
+            function n(t) {}
+            i.r(e), i.d(e, {
+                default: function() {
+                    return n
+                }
+            })
+        },
+        420444: function(t, e, i) {
+            "use strict";
+            i.r(e), i.d(e, {
                 default: function() {
                     return d
                 }
             });
-            var n = l("579033");
+            var n = i("298386"),
+                a = i("42203"),
+                l = i("427953");
 
-            function d(e) {
-                var t;
-                return {
-                    code: e.code,
-                    state: n.GuildTemplateStates.RESOLVED,
-                    name: e.name,
-                    description: null !== (t = e.description) && void 0 !== t ? t : "",
-                    creatorId: e.creator_id,
-                    creator: e.creator,
-                    createdAt: e.created_at,
-                    updatedAt: e.updated_at,
-                    sourceGuildId: e.source_guild_id,
-                    serializedSourceGuild: e.serialized_source_guild,
-                    usageCount: e.usage_count,
-                    isDirty: e.is_dirty
-                }
+            function d(t) {
+                let e = a.default.getChannel(t),
+                    i = l.ActivitiesInTextExperiment.getCurrentConfig({
+                        location: "isVoiceActivityChannel"
+                    }, {
+                        autoTrackExposure: !1
+                    }).isActivitiesInTextEnabled;
+                return null != e && (e.type === n.ChannelTypes.GUILD_VOICE || e.isPrivate() && !i)
             }
         },
-        248967: function(e, t, l) {
+        760850: function(t, e, i) {
             "use strict";
-            l.r(t), l.d(t, {
-                stopLurkingAll: function() {
-                    return i
-                },
-                stopLurking: function() {
-                    return s
-                }
-            });
-            var n = l("872717"),
-                d = l("913144"),
-                r = l("945956"),
-                o = l("449008"),
-                a = l("267567"),
-                u = l("49111");
-            async function i(e) {
-                let t = a.default.lurkingGuildIds(),
-                    l = t.filter(t => !e.includes(t));
-                0 !== l.length && (d.default.dispatch({
-                    type: "GUILD_STOP_LURKING",
-                    ignoredGuildIds: e
-                }), await Promise.all(l.map(async e => {
-                    let t = a.default.getLurkingSource();
-                    try {
-                        await n.default.delete({
-                            url: u.Endpoints.GUILD_LEAVE(e),
-                            body: {
-                                lurking: !0
-                            },
-                            oldFormErrors: !0
-                        })
-                    } catch (l) {
-                        d.default.dispatch({
-                            type: "GUILD_STOP_LURKING_FAILURE",
-                            lurkingGuildId: e,
-                            lurkingSource: t
-                        })
-                    }
-                })))
-            }
-            async function s() {
-                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-                    t = a.default.lurkingGuildIds();
-                if (0 === t.length) return;
-                let l = null == e || !t.includes(e);
-                if (!l) return;
-                let n = r.default.getGuildId(),
-                    d = [e, n].filter(o.isNotNullish);
-                await i(d)
-            }
-        },
-        153498: function(e, t, l) {
-            "use strict";
-
-            function n(e) {
-                let {} = e;
-                return !1
-            }
-
-            function d(e, t) {
-                return !1
-            }
-
-            function r(e) {
-                return !1
-            }
-
-            function o() {
-                return !1
-            }
-
-            function a() {
-                return !1
-            }
-
-            function u(e) {
-                let {} = e;
-                return !1
-            }
-
-            function i(e, t) {
-                return !1
-            }
-
-            function s() {
-                return !1
-            }
-
-            function E(e) {}
-
-            function c(e) {}
-
-            function _(e) {
-                return !1
-            }
-            l.r(t), l.d(t, {
-                navigateToChannel: function() {
-                    return n
-                },
-                navigateToMemberVerification: function() {
-                    return d
-                },
-                navigateToRootTab: function() {
-                    return r
-                },
-                resetToAuthRoute: function() {
-                    return o
-                },
-                resetToPanelsUI: function() {
-                    return a
-                },
-                pushModal: function() {
-                    return u
-                },
-                popModal: function() {
-                    return i
-                },
-                popAllModals: function() {
-                    return s
-                },
-                coerceChannelRoute: function() {
+            let n;
+            i.r(e), i.d(e, {
+                cleanExecutablePath: function() {
                     return E
                 },
-                coerceModalRoute: function() {
-                    return c
-                },
-                useIsModalOpen: function() {
-                    return _
-                }
-            })
-        },
-        258158: function(e, t, l) {
-            "use strict";
-            l.r(t), l.d(t, {
                 default: function() {
-                    return r
+                    return f
                 }
             });
-            var n = l("37983");
-            l("884691");
-            var d = l("551042");
+            var a = i("917351"),
+                l = i.n(a),
+                d = i("49671"),
+                r = i("605250"),
+                u = i("773336"),
+                c = i("50885");
+            let o = [];
 
-            function r() {
-                (0, d.openModalLazy)(async () => {
-                    let {
-                        default: e
-                    } = await l.el("826269").then(l.bind(l, "826269"));
-                    return t => (0, n.jsx)(e, {
-                        ...t
-                    })
-                })
+            function s(t) {
+                return t = t.toLowerCase(), (0, u.isWindows)() && (t = (t = t.replace(/^[a-z]:/, "")).replace(/\\/g, "/")), t
             }
-        },
-        383173: function(e, t, l) {
-            "use strict";
-            l.r(t), l.d(t, {
-                default: function() {
-                    return u
-                }
-            });
-            var n = l("446674"),
-                d = l("913144"),
-                r = l("374363");
-            let o = new Set;
-            class a extends n.default.PersistedStore {
-                initialize(e) {
-                    null != e && (o = new Set(e.expandedFolders)), this.waitFor(r.default)
-                }
-                getState() {
-                    return {
-                        expandedFolders: Array.from(o)
-                    }
-                }
-                getExpandedFolders() {
-                    return o
-                }
-                isFolderExpanded(e) {
-                    return o.has(e)
-                }
-            }
-            a.displayName = "ExpandedGuildFolderStore", a.persistKey = "ExpandedGuildFolderStore";
-            var u = new a(d.default, {
-                TOGGLE_GUILD_FOLDER_EXPAND: function(e) {
-                    let {
-                        folderId: t
-                    } = e;
-                    (o = new Set(o)).has(t) ? o.delete(t) : o.add(t)
-                },
-                SET_GUILD_FOLDER_EXPANDED: function(e) {
-                    let {
-                        folderId: t,
-                        expanded: l
-                    } = e;
-                    o = new Set(o), l ? o.add(t) : o.has(t) && o.delete(t)
-                },
-                USER_SETTINGS_PROTO_UPDATE: function() {
-                    let e = r.default.getGuildFolders();
-                    if (null == e) return !1;
-                    let t = !1;
-                    for (let l of o) !e.some(e => e.folderId === l) && ((o = new Set(o)).delete(l), t = !0);
-                    return t
-                },
-                GUILD_FOLDER_COLLAPSE: function() {
-                    if (0 === o.size) return !1;
-                    o = new Set
-                }
-            })
-        },
-        840707: function(e, t, l) {
-            "use strict";
-            l.r(t), l.d(t, {
-                default: function() {
-                    return o
-                }
-            });
-            var n = l("872717"),
-                d = l("599110");
 
-            function r(e, t, l) {
-                let {
-                    trackedActionData: n,
-                    ...r
-                } = t, o = {
-                    url: r.url,
-                    request_method: l
-                };
-                return new Promise((t, l) => {
-                    e(r).then(e => {
-                        let l = n.properties;
-                        "function" == typeof n.properties && (l = n.properties(e)), (0, d.trackNetworkAction)(n.event, {
-                            status_code: e.status,
-                            ...o,
-                            ...l
-                        }), t(e)
-                    }).catch(e => {
-                        var t, r;
-                        let a = n.properties;
-                        "function" == typeof n.properties && (a = n.properties(e)), (0, d.trackNetworkAction)(n.event, {
-                            status_code: e.status,
-                            error_code: null === (t = e.body) || void 0 === t ? void 0 : t.code,
-                            error_message: null === (r = e.body) || void 0 === r ? void 0 : r.message,
-                            ...o,
-                            ...a
-                        }), l(e)
-                    })
-                })
+            function p(t) {
+                null != t && "" !== t && (!(t = s(t)).endsWith("/") && (t += "/"), o.push(t))
             }
-            var o = {
-                get: function(e) {
-                    return r(n.default.get, e, "get")
-                },
-                post: function(e) {
-                    return r(n.default.post, e, "post")
-                },
-                put: function(e) {
-                    return r(n.default.put, e, "put")
-                },
-                patch: function(e) {
-                    return r(n.default.patch, e, "patch")
-                },
-                delete: function(e) {
-                    return r(n.default.delete, e, "del")
+
+            function E(t) {
+                t = s(t);
+                let e = !1;
+                return (o.forEach(i => {
+                    !e && t.startsWith(i) && (t = t.substr(i.length), e = !0)
+                }), e) ? t = t.includes("dosbox.exe") ? t.split("/").slice(-3).join("/") : t.split("/").slice(-2).join("/") : null
+            }
+            async function f() {
+                if (null != n) return n;
+                try {
+                    await c.default.ensureModule("discord_game_utils"), n = await c.default.requireModule("discord_game_utils")
+                } catch (t) {
+                    new(0, r.default)("GamesActionCreators").error("could not load discord_game_utils", t)
                 }
+                if ((0, u.isWindows)()) {
+                    let t = d.default.process.env;
+                    p(t.LOCALAPPDATA), p(t["PROGRAMFILES(X86)"]), p(t.PROGRAMFILES), p(t.PROGRAMW6432), p(t.PROGRAMDATA), p("/games/"), p("/steamlibrary/steamapps/common/")
+                }
+                let t = d.default.remoteApp.getPath;
+                return p(await t("home")), p(await t("appData")), p(await t("desktop")), p(await t("documents")), p(await t("downloads")), (o = l.uniq(o)).sort((t, e) => e.length - t.length), n
             }
         }
     }

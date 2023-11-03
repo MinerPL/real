@@ -1,949 +1,716 @@
 (this.webpackChunkdiscord_app = this.webpackChunkdiscord_app || []).push([
-    ["18814"], {
-        851387: function(e, t, l) {
+    ["34426"], {
+        564967: function(e, t, i) {
             "use strict";
-            l.r(t), l.d(t, {
-                waitForGuild: function() {
-                    return v
-                },
+            i.r(t), i.d(t, {
                 default: function() {
-                    return w
+                    return r
                 }
             });
-            var d = l("759843"),
-                n = l("316693"),
-                r = l("872717"),
-                a = l("913144"),
-                o = l("333805"),
-                u = l("81732"),
-                i = l("248967"),
-                s = l("21121"),
-                E = l("693051"),
-                c = l("153498"),
-                _ = l("934306"),
-                f = l("258158"),
-                p = l("393414"),
-                L = l("239380"),
-                I = l("271938"),
-                T = l("42203"),
-                D = l("383173"),
-                G = l("923959"),
-                U = l("305961"),
-                h = l("18494"),
-                y = l("162771"),
-                S = l("697218"),
-                R = l("599110"),
-                A = l("991170"),
-                C = l("719923"),
-                m = l("840707"),
-                g = l("404118"),
-                O = l("49111"),
-                N = l("782340");
-            let M = e => {
-                    g.default.show({
-                        title: N.default.Messages.TOO_MANY_USER_GUILDS_ALERT_TITLE,
-                        body: N.default.Messages.TOO_MANY_USER_GUILDS_ALERT_DESCRIPTION.format({
-                            quantity: e
-                        })
+            var n = i("862205");
+            let o = (0, n.createExperiment)({
+                kind: "user",
+                id: "2023-01_emoji_discovery_backfill",
+                label: "Emoji Hotrail Backfill",
+                defaultConfig: {
+                    shouldBackfillEmojis: !1
+                },
+                treatments: [{
+                    id: 1,
+                    label: "Backfills Hotrail With Emojis",
+                    config: {
+                        shouldBackfillEmojis: !0
+                    }
+                }]
+            });
+            var r = o
+        },
+        788506: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                useEmojiCategories: function() {
+                    return A
+                },
+                trackPremiumSettingsPaneOpened: function() {
+                    return h
+                },
+                trackEmojiSearchStart: function() {
+                    return M
+                },
+                trackEmojiSearchResultsViewed: function() {
+                    return R
+                },
+                trackEmojiSearchSelect: function() {
+                    return N
+                },
+                trackEmojiSearchEmpty: function() {
+                    return P
+                },
+                trackEmojiFocus: function() {
+                    return v
+                },
+                trackEmojiSelect: function() {
+                    return k
+                },
+                trackEmojiFavorited: function() {
+                    return F
+                },
+                getAriaIdForEmojiCategory: function() {
+                    return U
+                },
+                getStringForEmojiCategory: function() {
+                    return x
+                },
+                allowUnicodeEmojiForIntention: function() {
+                    return L
+                },
+                useEmojiSearchResults: function() {
+                    return J
+                },
+                useFrequentlyUsedEmojis: function() {
+                    return G
+                },
+                useFavoriteEmojis: function() {
+                    return b
+                },
+                useIsFavoriteEmoji: function() {
+                    return w
+                },
+                useEmojiInPriorityOrder: function() {
+                    return Y
+                },
+                useTrackEmojiPickerOpened: function() {
+                    return W
+                },
+                getEmojiSubCategory: function() {
+                    return K
+                },
+                dedupeUnicodeEmojis: function() {
+                    return B
+                },
+                getSearchPlaceholder: function() {
+                    return q
+                }
+            });
+            var n = i("884691");
+            i("375128");
+            var o = i("446674"),
+                r = i("716241"),
+                a = i("385976"),
+                s = i("858619"),
+                u = i("630400"),
+                l = i("252931"),
+                E = i("166465"),
+                d = i("872173"),
+                c = i("305961"),
+                m = i("677099"),
+                _ = i("599110"),
+                f = i("402671"),
+                g = i("577426"),
+                p = i("255214"),
+                I = i("352046"),
+                C = i("115279"),
+                y = i("49111"),
+                O = i("958706"),
+                j = i("13030"),
+                T = i("646718"),
+                S = i("782340");
+            let A = function(e, t) {
+                    let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : (() => null == t ? void 0 : t.getGuildId())();
+                    (0, u.maybeFetchTopEmojisByGuild)(i);
+                    let r = (0, O.isExternalEmojiAllowedForIntention)(e),
+                        s = G(i),
+                        d = b(i),
+                        _ = (0, o.useStateFromStoresArray)([E.default], () => E.default.getSortedPackIds(), []),
+                        {
+                            topEmojis: g,
+                            newlyAddedEmojis: y,
+                            backfillEmojis: j
+                        } = (0, I.default)(i, e),
+                        {
+                            allEmojis: T
+                        } = (0, p.default)({
+                            topEmojis: g,
+                            newlyAddedEmojis: y,
+                            backfillEmojis: j
+                        }),
+                        {
+                            viewAndUseEnabled: A
+                        } = (0, l.useInventoryGuildPacksUserExperiment)({
+                            autoTrackExposure: !1
+                        }),
+                        h = (0, o.useStateFromStores)([a.default], () => a.default.getDisambiguatedEmojiContext(i)),
+                        M = (0, o.useStateFromStores)([c.default], () => {
+                            var e;
+                            return null === (e = c.default.getGuild(i)) || void 0 === e ? void 0 : e.name
+                        }),
+                        R = n.useMemo(() => {
+                            let n = h.getGroupedCustomEmoji(),
+                                o = m.default.getFlattenedGuildIds(),
+                                u = [],
+                                l = (o, r) => {
+                                    for (let a of o) {
+                                        let o;
+                                        if (r === C.EmojiCategoryTypes.PACK ? o = E.default.getPackByPackId({
+                                                packId: a
+                                            }) : r === C.EmojiCategoryTypes.GUILD && (o = c.default.getGuild(a)), null == o) continue;
+                                        let s = null == n ? void 0 : n[o.id];
+                                        if (null == s || 0 === s.length || null != t && s.every(i => f.default.isEmojiFiltered({
+                                                emoji: i,
+                                                channel: t,
+                                                intention: e,
+                                                canViewAndUsePackEmoji: A
+                                            }))) continue;
+                                        let l = null;
+                                        if (r === C.EmojiCategoryTypes.PACK) {
+                                            let e = o;
+                                            l = {
+                                                type: C.EmojiCategoryTypes.PACK,
+                                                pack: e,
+                                                id: e.id
+                                            }
+                                        } else r === C.EmojiCategoryTypes.GUILD && (l = {
+                                            type: C.EmojiCategoryTypes.GUILD,
+                                            guild: o
+                                        });
+                                        null != l && (o.id === i ? u.unshift(l) : u.push(l))
+                                    }
+                                };
+                            return l(_, C.EmojiCategoryTypes.PACK), l(o, C.EmojiCategoryTypes.GUILD), a.default.categories.reduce((t, n) => {
+                                if (n === C.EmojiCategories.TOP_GUILD_EMOJI) {
+                                    if (0 === T.length) return t;
+                                    t.push({
+                                        type: C.EmojiCategoryTypes.TOP_GUILD_EMOJI,
+                                        id: n,
+                                        name: S.default.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({
+                                            guildName: M
+                                        })
+                                    })
+                                } else if (n === C.EmojiCategories.RECENT) {
+                                    if (0 === s.length) return t;
+                                    t.push({
+                                        type: C.EmojiCategoryTypes.RECENT,
+                                        id: n,
+                                        name: S.default.Messages.EMOJI_CATEGORY_RECENT
+                                    })
+                                } else if (n === C.EmojiCategories.FAVORITES) {
+                                    if (0 === d.length) return t;
+                                    t.push({
+                                        type: C.EmojiCategoryTypes.FAVORITES,
+                                        id: n,
+                                        name: S.default.Messages.CATEGORY_FAVORITE
+                                    })
+                                } else if (n === C.EmojiCategories.CUSTOM) {
+                                    let e = u;
+                                    !r && (e = u.filter(e => e.type === C.EmojiCategoryTypes.GUILD && e.guild.id === i)), t.push(...e)
+                                } else if (L(e)) t.push({
+                                    type: C.EmojiCategoryTypes.UNICODE,
+                                    id: n,
+                                    name: n
+                                });
+                                return t
+                            }, [])
+                        }, [h, t, i, e, T.length, M, _, s.length, d.length, r, A]);
+                    return R
+                },
+                h = e => {
+                    let t = (null == e ? void 0 : e.getGuildId()) != null;
+                    _.default.track(y.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+                        location_page: t ? y.AnalyticsPages.GUILD_CHANNEL : y.AnalyticsPages.DM_CHANNEL,
+                        location_section: null != e ? y.AnalyticsSections.EMOJI_PICKER_POPOUT : y.AnalyticsSections.CUSTOM_STATUS_MODAL
+                    })
+                },
+                M = (e, t) => {
+                    r.default.trackWithMetadata(y.AnalyticEvents.SEARCH_STARTED, {
+                        search_type: null != t && t === O.EmojiIntention.REACTION ? y.SearchTypes.EMOJI_REACTION : y.SearchTypes.EMOJI,
+                        location: e
+                    })
+                },
+                R = (e, t, i, n, o) => {
+                    r.default.trackWithMetadata(y.AnalyticEvents.SEARCH_RESULT_VIEWED, {
+                        search_type: null != o && o === O.EmojiIntention.REACTION ? y.SearchTypes.EMOJI_REACTION : y.SearchTypes.EMOJI,
+                        total_results: e,
+                        num_results_locked: t,
+                        query: n,
+                        location: i
+                    })
+                },
+                N = (e, t, i, n) => {
+                    var o;
+                    let a = null !== (o = e.uniqueName) && void 0 !== o ? o : e.name;
+                    r.default.trackWithMetadata(y.AnalyticEvents.SEARCH_RESULT_SELECTED, {
+                        search_type: null != n && n === O.EmojiIntention.REACTION ? y.SearchTypes.EMOJI_REACTION : y.SearchTypes.EMOJI,
+                        location: t,
+                        expression_guild_id: D(e),
+                        expression_pack_id: e.type === s.EmojiTypes.PACK ? e.packId : void 0,
+                        emoji_id: e.id,
+                        emoji_name: a,
+                        is_custom: null != e.id,
+                        is_animated: e.animated,
+                        query: i
+                    })
+                },
+                P = (e, t) => {
+                    r.default.trackWithMetadata(y.AnalyticEvents.SEARCH_RESULT_EMPTY, {
+                        search_type: y.SearchTypes.EMOJI,
+                        query: t,
+                        location: e
+                    })
+                },
+                v = e => {
+                    let {
+                        emoji: t,
+                        subCategory: i,
+                        position: n,
+                        backfillEmoji: o,
+                        newlyAddedHighlight: a
+                    } = e;
+                    r.default.trackWithMetadata(y.AnalyticEvents.EXPRESSION_PICKER_EXPRESSION_FOCUS, {
+                        expression_section: null == i ? void 0 : i.toString(),
+                        newly_added_highlight: a,
+                        emoji_id: t.id,
+                        emoji_name: t.name,
+                        emoji_animated: t.animated,
+                        emoji_backfilled: o,
+                        emoji_position: n
+                    })
+                },
+                k = e => {
+                    var t;
+                    let i, {
+                        emoji: n,
+                        location: o,
+                        pickerIntention: a,
+                        category: u,
+                        subCategory: l = C.EmojiSubCategory.NONE,
+                        position: E,
+                        backfillEmoji: d,
+                        newlyAddedHighlight: c,
+                        isBurstReaction: m
+                    } = e;
+                    switch (a) {
+                        case O.EmojiIntention.REACTION:
+                            i = m ? T.PremiumUpsellTypes.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED : T.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
+                            break;
+                        case O.EmojiIntention.STATUS:
+                            i = T.PremiumUpsellTypes.EMOJI_PICKER_STATUS_EMOJI_CLICKED;
+                            break;
+                        default:
+                            i = T.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED
+                    }
+                    let _ = null !== (t = n.uniqueName) && void 0 !== t ? t : n.name;
+                    r.default.trackWithMetadata(y.AnalyticEvents.EXPRESSION_PICKER_EXPRESSION_SELECTED, {
+                        type: i,
+                        location: o,
+                        expression_id: n.id,
+                        expression_name: _,
+                        expression_guild_id: D(n),
+                        expression_pack_id: n.type === s.EmojiTypes.PACK ? n.packId : void 0,
+                        is_custom: null != n.id,
+                        is_animated: n.animated,
+                        expression_picker_section: u,
+                        expression_section: null == l ? void 0 : l.toString(),
+                        emoji_position: E,
+                        emoji_backfilled: d,
+                        newly_added_highlight: c,
+                        is_burst: m
                     })
                 },
                 F = e => {
-                    a.default.dispatch({
-                        type: "GUILD_DELETE",
-                        guild: {
-                            id: e
-                        }
-                    })
-                },
-                b = () => {
-                    g.default.show({
-                        title: N.default.Messages.SERVER_IS_CURRENTLY_FULL,
-                        body: N.default.Messages.PLEASE_TRY_AGAIN_LATER
+                    var t;
+                    let {
+                        emoji: i,
+                        location: n
+                    } = e, o = null !== (t = i.uniqueName) && void 0 !== t ? t : i.name;
+                    r.default.trackWithMetadata(y.AnalyticEvents.EXPRESSION_FAVORITED, {
+                        location: n,
+                        expression_type: j.ExpressionPickerViewType.EMOJI,
+                        expression_id: i.id,
+                        expression_name: o,
+                        expression_guild_id: D(i),
+                        expression_pack_id: i.type === s.EmojiTypes.PACK ? i.packId : void 0,
+                        is_custom: null != i.id,
+                        is_animated: i.animated
                     })
                 };
-            async function P(e) {
-                var t, d, n, o, u;
-                let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                    {
-                        source: s,
-                        loadId: E,
-                        lurkLocation: c
-                    } = i,
-                    _ = null !== (t = i.lurker) && void 0 !== t && t,
-                    L = S.default.getCurrentUser();
-                if (null !== (d = null == L ? void 0 : L.hasFlag(O.UserFlags.QUARANTINED)) && void 0 !== d && d) return (0, f.default)(), new Promise((e, t) => t(Error()));
-                a.default.wait(() => a.default.dispatch({
-                    type: "GUILD_JOIN",
-                    guildId: e,
-                    lurker: _,
-                    source: s,
-                    loadId: E
-                }));
-                try {
-                    let t = y.default.getGuildId(),
-                        d = e === t && null != U.default.getGuild(e),
-                        n = d ? h.default.getChannelId(e) : null,
-                        o = await r.default.put({
-                            url: O.Endpoints.GUILD_JOIN(e),
-                            query: {
-                                lurker: _,
-                                session_id: _ ? I.default.getSessionId() : null,
-                                recommendation_load_id: E,
-                                location: _ && null != c ? c : null
-                            },
-                            context: {
-                                source: s
-                            },
-                            oldFormErrors: !0,
-                            body: {}
-                        });
-                    if (null != o.body.join_request && a.default.dispatch({
-                            type: "USER_GUILD_JOIN_REQUEST_UPDATE",
-                            guildId: e,
-                            request: o.body.join_request
-                        }), null == U.default.getGuild(e) && o.body.show_verification_form) return (0, p.transitionTo)(O.Routes.GUILD_MEMBER_VERIFICATION(e)), o;
-                    if (null != o.body.welcome_screen && a.default.dispatch({
-                            type: "WELCOME_SCREEN_UPDATE",
-                            guildId: o.body.id,
-                            welcomeScreen: o.body.welcome_screen
-                        }), null != o.body.approximate_presence_count && a.default.dispatch({
-                            type: "ONLINE_GUILD_MEMBER_COUNT_UPDATE",
-                            guildId: o.body.id,
-                            count: o.body.approximate_presence_count
-                        }), !_) {
-                        let {
-                            default: t
-                        } = await l.el("937692").then(l.bind(l, "937692"));
-                        await t({
-                            guildId: e,
-                            returnChannelId: n
-                        })
+
+            function D(e) {
+                return e.type !== s.EmojiTypes.PACK ? e.guildId : void 0
+            }
+            let U = (e, t, i) => {
+                    switch (e.type) {
+                        case C.EmojiCategoryTypes.GUILD:
+                            if (null != t) return t.toString();
+                            return "";
+                        case C.EmojiCategoryTypes.PACK:
+                            if (null != i) return i.name;
+                            return e.id;
+                        default:
+                            return e.id
                     }
-                    return o
-                } catch (t) {
-                    if ((null === (n = t.body) || void 0 === n ? void 0 : n.code) === O.AbortCodes.TOO_MANY_USER_GUILDS) {
-                        let e = S.default.getCurrentUser(),
-                            t = C.default.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff());
-                        t ? M(O.MAX_USER_GUILDS_PREMIUM) : M(O.MAX_USER_GUILDS)
+                },
+                x = (e, t, i) => {
+                    switch (e) {
+                        case C.EmojiCategories.TOP_GUILD_EMOJI:
+                            return S.default.Messages.EMOJI_CATEGORY_TOP_GUILD_EMOJI.format({
+                                guildName: t
+                            });
+                        case C.EmojiCategories.RECENT:
+                            return S.default.Messages.EMOJI_CATEGORY_RECENT;
+                        case C.EmojiCategories.FAVORITES:
+                            return S.default.Messages.CATEGORY_FAVORITE;
+                        case C.EmojiCategories.ACTIVITY:
+                            return S.default.Messages.EMOJI_CATEGORY_ACTIVITY;
+                        case C.EmojiCategories.FLAGS:
+                            return S.default.Messages.EMOJI_CATEGORY_FLAGS;
+                        case C.EmojiCategories.FOOD:
+                            return S.default.Messages.EMOJI_CATEGORY_FOOD;
+                        case C.EmojiCategories.NATURE:
+                            return S.default.Messages.EMOJI_CATEGORY_NATURE;
+                        case C.EmojiCategories.OBJECTS:
+                            return S.default.Messages.EMOJI_CATEGORY_OBJECTS;
+                        case C.EmojiCategories.PEOPLE:
+                            return S.default.Messages.EMOJI_CATEGORY_PEOPLE;
+                        case C.EmojiCategories.SYMBOLS:
+                            return S.default.Messages.EMOJI_CATEGORY_SYMBOLS;
+                        case C.EmojiCategories.TRAVEL:
+                            return S.default.Messages.EMOJI_CATEGORY_TRAVEL;
+                        case C.EmojiCategories.PREMIUM_UPSELL:
+                            return S.default.Messages.EMOJI_CATEGORY_PREMIUM_UPSELL;
+                        default:
+                            return null != i ? S.default.Messages.EMOJI_CATEGORY_PACK.format({
+                                packName: i
+                            }) : null != t ? t : e
                     }
-                    throw (null === (o = t.body) || void 0 === o ? void 0 : o.code) === O.AbortCodes.GUILD_AT_CAPACITY && b(), _ && (null === (u = t.body) || void 0 === u ? void 0 : u.code) === O.AbortCodes.UNKNOWN_GUILD && F(e), t
+                },
+                L = e => e !== O.EmojiIntention.COMMUNITY_CONTENT_ONLY;
+
+            function J(e, t, i) {
+                let {
+                    viewAndUseEnabled: r
+                } = (0, l.useInventoryGuildPacksUserExperiment)({
+                    autoTrackExposure: !1
+                });
+                n.useEffect(() => {
+                    d.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []);
+                let s = (0, O.isExternalEmojiAllowedForIntention)(i);
+                return (0, o.useStateFromStores)([a.default], () => {
+                    let n = e.replace(/^:/, "").replace(/:$/, "");
+                    return "" === n ? null : a.default.searchWithoutFetchingLatest({
+                        channel: t,
+                        query: n,
+                        count: 0,
+                        intention: i,
+                        includeExternalGuilds: s,
+                        canViewAndUsePackEmoji: r
+                    })
+                }, [t, i, e, s, r], o.statesWillNeverBeEqual)
+            }
+
+            function G(e) {
+                return n.useEffect(() => {
+                    d.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []), (0, o.useStateFromStoresArray)([a.default], () => a.default.getDisambiguatedEmojiContext(e).getFrequentlyUsedEmojisWithoutFetchingLatest())
+            }
+
+            function b(e) {
+                return n.useEffect(() => {
+                    d.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []), (0, o.useStateFromStoresArray)([a.default], () => a.default.getDisambiguatedEmojiContext(e).favoriteEmojisWithoutFetchingLatest)
+            }
+
+            function w(e, t) {
+                return n.useEffect(() => {
+                    d.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []), (0, o.useStateFromStores)([a.default], () => null != t && a.default.getDisambiguatedEmojiContext(e).isFavoriteEmojiWithoutFetchingLatest(t))
+            }
+
+            function Y(e) {
+                return n.useEffect(() => {
+                    d.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []), (0, o.useStateFromStoresArray)([a.default], () => a.default.getDisambiguatedEmojiContext(e).getEmojiInPriorityOrderWithoutFetchingLatest())
+            }
+
+            function W(e) {
+                let t = n.useCallback(() => {
+                    (0, g.default)(e)
+                }, [e]);
+                return n.useEffect(() => {
+                    e.intention === O.EmojiIntention.REACTION && t()
+                }, []), {
+                    trackOnPickerOpen: t
                 }
             }
 
-            function v(e) {
-                return new Promise(t => U.default.addConditionalChangeListener(() => {
-                    let l = U.default.getGuild(e);
-                    return null == l || (t(l), !1)
-                }))
+            function K(e, t, i) {
+                var n, o;
+                if (null == i) return C.EmojiSubCategory.NONE;
+                let r = e.map(e => null !== (o = null !== (n = e.id) && void 0 !== n ? n : e.uniqueName) && void 0 !== o ? o : e.name),
+                    a = t.map(e => e.id);
+                return r.includes(i) ? C.EmojiSubCategory.TOP_GUILD_EMOJI : a.includes(i) ? C.EmojiSubCategory.NEWLY_ADDED_EMOJI : C.EmojiSubCategory.NONE
             }
-            var w = {
-                joinGuild: P,
-                waitForGuild: v,
-                async transitionToGuildSync(e, t, l, d) {
-                    var n, r;
-                    let a = await v(e);
-                    let o = (n = a.id, null != (r = l) ? r : (0, s.isInMainTabsExperiment)() ? void 0 : (0, L.getChannelIdForGuildTransition)(n)),
-                        u = t;
-                    (null == t ? void 0 : t.hasOwnProperty("welcomeModalChannelId")) && null == t.welcomeModalChannelId && (u = {
-                        ...t,
-                        welcomeModalChannelId: o
-                    }), (0, p.transitionTo)(O.Routes.CHANNEL(e, o), u, void 0, d), await new Promise(setImmediate)
-                },
-                deleteGuild: F,
-                selectGuild(e) {
-                    (0, i.stopLurking)(e)
-                },
-                async addGuild(e) {
-                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-                        l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-                        d = arguments.length > 3 ? arguments[3] : void 0;
-                    try {
-                        let n = await r.default.post({
-                            url: O.Endpoints.GUILDS,
-                            body: {
-                                name: e,
-                                icon: t,
-                                channels: l,
-                                system_channel_id: d
-                            },
-                            oldFormErrors: !0
-                        });
-                        return n.body
-                    } catch (e) {
-                        throw new o.default(e)
-                    }
-                },
-                createGuild(e) {
-                    a.default.dispatch({
-                        type: "GUILD_CREATE",
-                        guild: e
-                    })
-                },
-                setServerMute: (e, t, l) => r.default.patch({
-                    url: O.Endpoints.GUILD_MEMBER(e, t),
-                    body: {
-                        mute: l
-                    },
-                    oldFormErrors: !0
-                }),
-                setServerDeaf: (e, t, l) => r.default.patch({
-                    url: O.Endpoints.GUILD_MEMBER(e, t),
-                    body: {
-                        deaf: l
-                    },
-                    oldFormErrors: !0
-                }),
-                setChannel(e, t, l) {
-                    r.default.patch({
-                        url: O.Endpoints.GUILD_MEMBER(e, t),
-                        body: {
-                            channel_id: l
-                        },
-                        oldFormErrors: !0
-                    })
-                },
-                setMemberFlags(e, t, l) {
-                    r.default.patch({
-                        url: O.Endpoints.GUILD_MEMBER(e, t),
-                        body: {
-                            flags: l
-                        },
-                        oldFormErrors: !0
-                    })
-                },
-                kickUser: (e, t, l) => r.default.delete({
-                    url: O.Endpoints.GUILD_MEMBER(e, t),
-                    reason: l,
-                    oldFormErrors: !0
-                }),
-                setCommunicationDisabledUntil(e) {
-                    let {
-                        guildId: t,
-                        userId: l,
-                        communicationDisabledUntilTimestamp: n,
-                        duration: r,
-                        reason: a,
-                        location: o
-                    } = e;
-                    return m.default.patch({
-                        url: O.Endpoints.GUILD_MEMBER(t, l),
-                        reason: a,
-                        body: {
-                            communication_disabled_until: n
-                        },
-                        oldFormErrors: !0,
-                        trackedActionData: {
-                            event: d.NetworkActionNames.USER_COMMUNICATION_DISABLED_UPDATE,
-                            properties: {
-                                guild_id: t,
-                                target_user_id: l,
-                                duration: null != r ? r : null,
-                                reason: null != a ? a : null,
-                                communication_disabled_until: n,
-                                location: null != o ? o : null
-                            }
-                        }
-                    })
-                },
-                banUser: (e, t, l, d) => r.default.put({
-                    url: O.Endpoints.GUILD_BAN(e, t),
-                    reason: d,
-                    body: {
-                        delete_message_seconds: l
-                    },
-                    oldFormErrors: !0
-                }),
-                unbanUser: (e, t) => r.default.delete({
-                    url: O.Endpoints.GUILD_BAN(e, t),
-                    oldFormErrors: !0
-                }),
-                banMultipleUsers: (e, t, l, d) => r.default.post({
-                    url: O.Endpoints.BULK_GUILD_BAN(e),
-                    body: {
-                        user_ids: t,
-                        delete_message_seconds: l,
-                        reason: d
-                    },
-                    oldFormErrors: !0
-                }),
-                async createRole(e, t, l) {
-                    let d = {
-                        name: null != t && "" !== t ? t : N.default.Messages.NEW_ROLE,
-                        color: null != l ? l : 0,
-                        permissions: A.default.NONE
-                    };
-                    try {
-                        let t = await r.default.post({
-                                url: O.Endpoints.GUILD_ROLES(e),
-                                oldFormErrors: !0,
-                                body: d
-                            }),
-                            l = t.body;
-                        return l.permissions = n.default.deserialize(l.permissions), a.default.dispatch({
-                            type: "GUILD_SETTINGS_ROLE_SELECT",
-                            roleId: t.body.id,
-                            role: l
-                        }), u.default.checkGuildTemplateDirty(e), l
-                    } catch (e) {
-                        throw new o.default(e)
-                    }
-                },
-                async updateRole(e, t, l) {
-                    let {
-                        icon: d,
-                        unicodeEmoji: n,
-                        ...a
-                    } = l, o = null === d || (null == d ? void 0 : d.startsWith("data:")) ? d : void 0, i = await r.default.patch({
-                        url: O.Endpoints.GUILD_ROLE(e, t),
-                        body: {
-                            ...a,
-                            icon: o,
-                            unicode_emoji: n
-                        },
-                        oldFormErrors: !0
-                    });
-                    return u.default.checkGuildTemplateDirty(e), i
-                },
-                updateRolePermissions: (e, t, l) => r.default.patch({
-                    url: O.Endpoints.GUILD_ROLE(e, t),
-                    body: {
-                        permissions: l
-                    },
-                    oldFormErrors: !0
-                }),
-                deleteRole(e, t) {
-                    r.default.delete({
-                        url: O.Endpoints.GUILD_ROLE(e, t),
-                        oldFormErrors: !0
-                    }).then(() => {
-                        u.default.checkGuildTemplateDirty(e)
-                    })
-                },
-                async batchChannelUpdate(e, t) {
-                    let l = await r.default.patch({
-                        url: O.Endpoints.GUILD_CHANNELS(e),
-                        body: t,
-                        oldFormErrors: !0
-                    });
-                    return u.default.checkGuildTemplateDirty(e), l
-                },
-                async batchRoleUpdate(e, t) {
-                    let l = await r.default.patch({
-                        url: O.Endpoints.GUILD_ROLES(e),
-                        body: t,
-                        oldFormErrors: !0
-                    });
-                    return u.default.checkGuildTemplateDirty(e), l
-                },
-                requestMembers(e) {
-                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "",
-                        l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
-                        d = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-                    return a.default.dispatch({
-                        type: "GUILD_MEMBERS_REQUEST",
-                        guildIds: Array.isArray(e) ? e : [e],
-                        query: t,
-                        limit: l,
-                        presences: d
-                    })
-                },
-                searchRecentMembers(e, t) {
-                    let {
-                        query: l,
-                        continuationToken: d
-                    } = null != t ? t : {};
-                    return a.default.dispatch({
-                        type: "GUILD_SEARCH_RECENT_MEMBERS",
-                        guildId: e,
-                        query: l,
-                        continuationToken: d
-                    })
-                },
-                requestMembersById(e, t) {
-                    let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-                    return a.default.dispatch({
-                        type: "GUILD_MEMBERS_REQUEST",
-                        guildIds: Array.isArray(e) ? e : [e],
-                        userIds: Array.isArray(t) ? t : [t],
-                        presences: l
-                    })
-                },
-                move(e, t, l, d) {
-                    a.default.dispatch({
-                        type: "GUILD_MOVE",
-                        fromIndex: e,
-                        toIndex: t,
-                        fromFolderIndex: l,
-                        toFolderIndex: d
-                    })
-                },
-                moveById(e, t) {
-                    let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                        d = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-                    a.default.dispatch({
-                        type: "GUILD_MOVE_BY_ID",
-                        sourceId: e,
-                        targetId: t,
-                        moveToBelow: l,
-                        combine: d
-                    })
-                },
-                createGuildFolderLocal(e, t) {
-                    R.default.track(O.AnalyticEvents.GUILD_FOLDER_CREATED), a.default.dispatch({
-                        type: "GUILD_FOLDER_CREATE_LOCAL",
-                        sourceIds: e,
-                        name: t
-                    })
-                },
-                editGuildFolderLocal(e, t, l) {
-                    a.default.dispatch({
-                        type: "GUILD_FOLDER_EDIT_LOCAL",
-                        targetId: e,
-                        sourceIds: t,
-                        name: l
-                    })
-                },
-                deleteGuildFolderLocal(e) {
-                    a.default.dispatch({
-                        type: "GUILD_FOLDER_DELETE_LOCAL",
-                        targetId: e
-                    })
-                },
-                toggleGuildFolderExpand(e) {
-                    let t = D.default.isFolderExpanded(e);
-                    R.default.track(O.AnalyticEvents.GUILD_FOLDER_CLICKED, {
-                        source: "sidebar",
-                        action: t ? "collapsed" : "expanded"
-                    }), a.default.dispatch({
-                        type: "TOGGLE_GUILD_FOLDER_EXPAND",
-                        folderId: e
-                    })
-                },
-                setGuildFolderExpanded(e, t) {
-                    a.default.dispatch({
-                        type: "SET_GUILD_FOLDER_EXPANDED",
-                        folderId: e,
-                        expanded: t
-                    })
-                },
-                collapseAllFolders() {
-                    a.default.dispatch({
-                        type: "GUILD_FOLDER_COLLAPSE"
-                    })
-                },
-                nsfwAgree(e) {
-                    a.default.dispatch({
-                        type: "GUILD_NSFW_AGREE",
-                        guildId: e
-                    })
-                },
-                nsfwReturnToSafety(e) {
-                    if ((0, s.isInMainTabsExperiment)() && !(0, _.isOnNewPanels)()) {
-                        let e = (0, E.getRootNavigationRef)();
-                        if ((null == e ? void 0 : e.isReady()) !== !0) return;
-                        let t = (0, c.coerceModalRoute)(e.getCurrentRoute());
-                        for (null != t && e.goBack();;) {
-                            let t = (0, c.coerceChannelRoute)(e.getCurrentRoute());
-                            if (null == t) break;
-                            let l = T.default.getChannel(t.params.channelId);
-                            if (null == l || !l.isNSFW()) break;
-                            e.goBack()
-                        }
-                        return
-                    }
-                    if (null == e) {
-                        (0, p.transitionTo)(O.Routes.FRIENDS);
-                        return
-                    }
-                    let t = G.default.getDefaultChannel(e);
-                    null == t || t.isNSFW() ? (0, p.transitionTo)(O.Routes.FRIENDS) : (0, p.transitionTo)(O.Routes.CHANNEL(e, t.id))
-                },
-                escapeToDefaultChannel(e) {
-                    let t = G.default.getDefaultChannel(e);
-                    null != t ? (0, p.transitionTo)(O.Routes.CHANNEL(e, t.id)) : (0, p.transitionTo)(O.Routes.FRIENDS)
-                },
-                async fetchApplications(e, t) {
-                    let l = {
-                        url: O.Endpoints.GUILD_APPLICATIONS(e),
-                        oldFormErrors: !0
-                    };
-                    null != t && (l.query = {
-                        channel_id: t
-                    });
-                    let d = await r.default.get(l),
-                        n = d.body;
-                    a.default.dispatch({
-                        type: "GUILD_APPLICATIONS_FETCH_SUCCESS",
-                        guildId: e,
-                        applications: n
-                    })
-                },
-                async fetchGuildBansBatch(e) {
-                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1e3,
-                        l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-                        d = {
-                            limit: t
-                        };
-                    null != l && (d.after = l), await r.default.get({
-                        url: O.Endpoints.GUILD_BANS(e),
-                        oldFormErrors: !0,
-                        query: d
-                    }).then(t => {
-                        a.default.dispatch({
-                            type: "GUILD_SETTINGS_LOADED_BANS_BATCH",
-                            bans: t.body,
-                            guildId: e
-                        })
-                    })
-                },
-                async searchGuildBans(e, t, l) {
-                    let d = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 10,
-                        n = {
-                            limit: d
-                        };
-                    null != l && l.length > 0 && (n.user_ids = l), null != t && t.trim().length > 0 && (n.query = t), await r.default.get({
-                        url: O.Endpoints.GUILD_BANS_SEARCH(e),
-                        oldFormErrors: !0,
-                        query: n
-                    }).then(t => {
-                        a.default.dispatch({
-                            type: "GUILD_SETTINGS_LOADED_BANS_BATCH",
-                            bans: t.body,
-                            guildId: e
-                        })
-                    })
-                },
-                async fetchGuildBans(e) {
-                    await r.default.get({
-                        url: O.Endpoints.GUILD_BANS(e),
-                        oldFormErrors: !0
-                    }).then(e => {
-                        a.default.dispatch({
-                            type: "GUILD_SETTINGS_LOADED_BANS",
-                            bans: e.body
-                        })
-                    })
-                },
-                fetchGuildRoleConnectionsEligibility: (e, t) => r.default.get({
-                    url: O.Endpoints.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(e, t),
-                    oldFormErrors: !0
-                }).then(e => {
-                    let {
-                        body: l
-                    } = e;
-                    return a.default.dispatch({
-                        type: "GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS",
-                        roleId: t,
-                        roleConnectionEligibility: l
-                    }), l
-                }),
-                async assignGuildRoleConnection(e, t) {
-                    await r.default.post({
-                        url: O.Endpoints.GUILD_ROLE_CONNECTIONS_ASSIGN(e, t),
-                        oldFormErrors: !0
-                    })
-                },
-                async unassignGuildRoleConnection(e, t) {
-                    await r.default.post({
-                        url: O.Endpoints.GUILD_ROLE_CONNECTIONS_UNASSIGN(e, t),
-                        oldFormErrors: !0
-                    })
-                },
-                async getGuildRoleConnectionsConfigurations(e) {
-                    let t = await r.default.get({
-                        url: O.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(e),
-                        oldFormErrors: !0
-                    });
-                    return t.body
-                }
-            }
-        },
-        883069: function(e, t, l) {
-            "use strict";
-            l.r(t), l.d(t, {
-                default: function() {
-                    return u
-                }
-            });
-            var d = l("872717"),
-                n = l("913144"),
-                r = l("599110"),
-                a = l("82339"),
-                o = l("49111"),
-                u = {
-                    resolveGuildTemplate: function e(t) {
-                        return n.default.isDispatching() ? Promise.resolve().then(() => e(t)) : (n.default.dispatch({
-                            type: "GUILD_TEMPLATE_RESOLVE",
-                            code: t
-                        }), d.default.get({
-                            url: o.Endpoints.UNRESOLVED_GUILD_TEMPLATE(t),
-                            oldFormErrors: !0
-                        }).then(e => {
-                            let l = e.body;
-                            return r.default.track(o.AnalyticEvents.GUILD_TEMPLATE_RESOLVED, {
-                                resolved: !0,
-                                guild_template_code: t,
-                                guild_template_name: l.name,
-                                guild_template_description: l.description,
-                                guild_template_guild_id: l.source_guild_id
-                            }), n.default.dispatch({
-                                type: "GUILD_TEMPLATE_RESOLVE_SUCCESS",
-                                guildTemplate: l,
-                                code: t
-                            }), {
-                                guildTemplate: (0, a.default)(l),
-                                code: t
-                            }
-                        }, () => (r.default.track(o.AnalyticEvents.GUILD_TEMPLATE_RESOLVED, {
-                            resolved: !1,
-                            guild_template_code: t
-                        }), n.default.dispatch({
-                            type: "GUILD_TEMPLATE_RESOLVE_FAILURE",
-                            code: t
-                        }), {
-                            guildTemplate: null,
-                            code: t
-                        })))
-                    },
-                    loadTemplatesForGuild: e => d.default.get({
-                        url: o.Endpoints.GUILD_TEMPLATES(e),
-                        oldFormErrors: !0
-                    }).then(e => (n.default.dispatch({
-                        type: "GUILD_TEMPLATE_LOAD_FOR_GUILD_SUCCESS",
-                        guildTemplates: e.body
-                    }), e)),
-                    createGuildTemplate: (e, t, l) => d.default.post({
-                        url: o.Endpoints.GUILD_TEMPLATES(e),
-                        body: {
-                            name: t,
-                            description: l
-                        },
-                        oldFormErrors: !0
-                    }).then(e => {
-                        n.default.dispatch({
-                            type: "GUILD_TEMPLATE_CREATE_SUCCESS",
-                            guildTemplate: e.body,
-                            code: e.body.code
-                        })
-                    }),
-                    syncGuildTemplate: (e, t) => d.default.put({
-                        url: o.Endpoints.GUILD_TEMPLATE(e, t),
-                        oldFormErrors: !0
-                    }).then(e => {
-                        n.default.dispatch({
-                            type: "GUILD_TEMPLATE_SYNC_SUCCESS",
-                            guildTemplate: e.body,
-                            code: t
-                        })
-                    }),
-                    updateGuildTemplate: (e, t, l, r) => d.default.patch({
-                        url: o.Endpoints.GUILD_TEMPLATE(e, t),
-                        body: {
-                            name: l,
-                            description: r
-                        },
-                        oldFormErrors: !0
-                    }).then(e => {
-                        n.default.dispatch({
-                            type: "GUILD_TEMPLATE_SYNC_SUCCESS",
-                            guildTemplate: e.body,
-                            code: t
-                        })
-                    }),
-                    deleteGuildTemplate: (e, t) => d.default.delete({
-                        url: o.Endpoints.GUILD_TEMPLATE(e, t),
-                        oldFormErrors: !0
-                    }).then(() => {
-                        n.default.dispatch({
-                            type: "GUILD_TEMPLATE_DELETE_SUCCESS",
-                            guildId: e,
-                            code: t
-                        })
-                    })
-                }
-        },
-        81732: function(e, t, l) {
-            "use strict";
-            l.r(t), l.d(t, {
-                default: function() {
-                    return o
-                }
-            });
-            var d = l("913144"),
-                n = l("957255"),
-                r = l("883069"),
-                a = l("49111"),
-                o = {
-                    async checkGuildTemplateDirty(e) {
-                        if (!n.default.canWithPartialContext(a.Permissions.MANAGE_GUILD, {
-                                guildId: e
-                            })) return;
-                        let t = await r.default.loadTemplatesForGuild(e);
-                        t.body.length > 0 && d.default.dispatch({
-                            type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_REFRESH",
-                            guildTemplate: t.body[0]
-                        })
-                    },
-                    hideGuildTemplateDirtyTooltip(e) {
-                        d.default.dispatch({
-                            type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE",
-                            guildId: e
-                        })
-                    },
-                    hideGuildTemplatePromotionTooltip() {
-                        d.default.dispatch({
-                            type: "GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE"
-                        })
-                    }
-                }
-        },
-        579033: function(e, t, l) {
-            "use strict";
-            var d, n, r, a;
-            l.r(t), l.d(t, {
-                GuildTemplateStates: function() {
-                    return d
-                },
-                InternalTemplateCodes: function() {
-                    return n
-                }
-            }), (r = d || (d = {})).RESOLVING = "RESOLVING", r.RESOLVED = "RESOLVED", r.EXPIRED = "EXPIRED", r.ACCEPTED = "ACCEPTED", r.ACCEPTING = "ACCEPTING", (a = n || (n = {})).CLASSROOM = "fVfBazbqjhXg", a.LOCAL_COMMUNITIES = "64UDvRNCC52Y", a.CREATORS_HOBBIES = "6exdzMgjZgah", a.GLOBAL_COMMUNITIES = "4sgbPdCjzAYU", a.FRIENDS_FAMILY = "hgM48av5Q69A", a.STUDY_GROUPS = "FbwUwRp4j8Es", a.CREATE_FROM_SCRATCH = "WYAQmEzjw3Pj", a.CAMPUS_CLUBS = "Ctg7PUHcQmZu", a.LEAGUE_CLUBS = "PJ6VvgEJYg45", a.GITHUB_HACKATHON = "UqzZCTj2zfwy"
-        },
-        82339: function(e, t, l) {
-            "use strict";
-            l.r(t), l.d(t, {
-                default: function() {
-                    return n
-                }
-            });
-            var d = l("579033");
 
-            function n(e) {
+            function B(e) {
+                let t = new Set,
+                    i = e.filter(e => null == e.uniqueName || (t.has(e.optionallyDiverseSequence) ? void 0 : (t.add(e.optionallyDiverseSequence), !0)));
+                return i
+            }
+
+            function q(e, t) {
+                return e === O.EmojiIntention.REACTION ? t ? S.default.Messages.SEARCH_FOR_SUPER_REACTION : S.default.Messages.SEARCH_FOR_REACTION : S.default.Messages.SEARCH_FOR_EMOJI
+            }
+        },
+        577426: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                default: function() {
+                    return f
+                }
+            });
+            var n = i("716241"),
+                o = i("385976"),
+                r = i("166465"),
+                a = i("692171"),
+                s = i("42203"),
+                u = i("18494"),
+                l = i("402671"),
+                E = i("255214"),
+                d = i("352046"),
+                c = i("49111"),
+                m = i("958706"),
+                _ = i("13030");
+
+            function f(e) {
                 var t;
-                return {
-                    code: e.code,
-                    state: d.GuildTemplateStates.RESOLVED,
-                    name: e.name,
-                    description: null !== (t = e.description) && void 0 !== t ? t : "",
-                    creatorId: e.creator_id,
-                    creator: e.creator,
-                    createdAt: e.created_at,
-                    updatedAt: e.updated_at,
-                    sourceGuildId: e.source_guild_id,
-                    serializedSourceGuild: e.serialized_source_guild,
-                    usageCount: e.usage_count,
-                    isDirty: e.is_dirty
-                }
-            }
-        },
-        248967: function(e, t, l) {
-            "use strict";
-            l.r(t), l.d(t, {
-                stopLurkingAll: function() {
-                    return i
-                },
-                stopLurking: function() {
-                    return s
-                }
-            });
-            var d = l("872717"),
-                n = l("913144"),
-                r = l("945956"),
-                a = l("449008"),
-                o = l("267567"),
-                u = l("49111");
-            async function i(e) {
-                let t = o.default.lurkingGuildIds(),
-                    l = t.filter(t => !e.includes(t));
-                0 !== l.length && (n.default.dispatch({
-                    type: "GUILD_STOP_LURKING",
-                    ignoredGuildIds: e
-                }), await Promise.all(l.map(async e => {
-                    let t = o.default.getLurkingSource();
-                    try {
-                        await d.default.delete({
-                            url: u.Endpoints.GUILD_LEAVE(e),
-                            body: {
-                                lurking: !0
-                            },
-                            oldFormErrors: !0
-                        })
-                    } catch (l) {
-                        n.default.dispatch({
-                            type: "GUILD_STOP_LURKING_FAILURE",
-                            lurkingGuildId: e,
-                            lurkingSource: t
-                        })
+                let {
+                    intention: i,
+                    containerWidth: f,
+                    rowSize: g,
+                    isBurstReaction: p,
+                    analyticsObject: I
+                } = e, C = s.default.getChannel(u.default.getChannelId()), y = null == C ? void 0 : C.getGuildId(), O = o.default.emojiFrecencyWithoutFetchingLatest.frequently.slice(), j = null != C ? o.default.getDisambiguatedEmojiContext(C.getGuildId()).favoriteEmojisWithoutFetchingLatest : [], T = O.slice(0, o.default.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems), S = null != y ? o.default.getGuildEmoji(y) : [], A = r.default.getPacksForUser().map(e => e.content.emojis).reduce((e, t) => e.concat(t), []), h = null !== (t = o.default.getDisambiguatedEmojiContext(null == C ? void 0 : C.getGuildId()).groupedCustomEmojis) && void 0 !== t ? t : {}, M = Object.values(h).reduce((e, t) => e += t.length, 0), {
+                    topEmojis: R,
+                    newlyAddedEmojis: N,
+                    backfillEmojis: P
+                } = (0, d.getTopAndNewlyAddedEmojis)({
+                    guildId: null == C ? void 0 : C.getGuildId(),
+                    pickerIntention: i
+                }), {
+                    visibleTopEmojis: v,
+                    visibleNewlyAddedEmojis: k,
+                    visibleBackfillEmojis: F
+                } = (0, E.getEmojiHotrail)({
+                    topEmojis: R,
+                    newlyAddedEmojis: N,
+                    backfillEmojis: P,
+                    rowSize: g
+                }), D = a.default.remainingBurstCurrency;
+                n.default.trackWithMetadata(i === m.EmojiIntention.REACTION ? c.AnalyticEvents.REACTION_PICKER_OPENED : c.AnalyticEvents.EXPRESSION_PICKER_OPENED, {
+                    width: f,
+                    tab: _.ExpressionPickerViewType.EMOJI,
+                    badged: !1,
+                    num_expressions_favorites: j.length,
+                    num_animated_expressions_favorites: j.filter(e => null == e ? void 0 : e.animated).length,
+                    num_custom_expressions_favorites: j.filter(l.default.isCustomEmoji).length,
+                    num_standard_expressions_favorites: j.filter(e => null == e.id).length,
+                    num_expressions_frecent: T.length,
+                    num_animated_expressions_frecent: T.filter(e => null == e ? void 0 : e.animated).length,
+                    num_custom_expressions_frecent: T.filter(l.default.isCustomEmoji).length,
+                    num_standard_expressions_frecent: T.filter(e => null == e.id).length,
+                    num_current_guild_expressions: S.length,
+                    num_current_pack_expressions: A.length,
+                    num_custom_expressions_total: M,
+                    num_expressions_top_server: v.length,
+                    num_animated_expressions_top_server: v.filter(e => e.animated).length,
+                    num_expressions_newly_added: k.length,
+                    num_animated_expressions_newly_added: k.filter(e => e.animated).length,
+                    num_expressions_backfilled: F.length,
+                    num_animated_expressions_backfilled: F.filter(e => e.animated).length,
+                    ...i === m.EmojiIntention.REACTION && {
+                        is_burst: p,
+                        burst_reaction_balance: D
+                    },
+                    ...null != I && {
+                        location_object: I
                     }
-                })))
-            }
-            async function s() {
-                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-                    t = o.default.lurkingGuildIds();
-                if (0 === t.length) return;
-                let l = null == e || !t.includes(e);
-                if (!l) return;
-                let d = r.default.getGuildId(),
-                    n = [e, d].filter(a.isNotNullish);
-                await i(n)
-            }
-        },
-        153498: function(e, t, l) {
-            "use strict";
-
-            function d(e) {
-                let {} = e;
-                return !1
-            }
-
-            function n(e, t) {
-                return !1
-            }
-
-            function r(e) {
-                return !1
-            }
-
-            function a() {
-                return !1
-            }
-
-            function o() {
-                return !1
-            }
-
-            function u(e) {
-                let {} = e;
-                return !1
-            }
-
-            function i(e, t) {
-                return !1
-            }
-
-            function s() {
-                return !1
-            }
-
-            function E(e) {}
-
-            function c(e) {}
-
-            function _(e) {
-                return !1
-            }
-            l.r(t), l.d(t, {
-                navigateToChannel: function() {
-                    return d
-                },
-                navigateToMemberVerification: function() {
-                    return n
-                },
-                navigateToRootTab: function() {
-                    return r
-                },
-                resetToAuthRoute: function() {
-                    return a
-                },
-                resetToPanelsUI: function() {
-                    return o
-                },
-                pushModal: function() {
-                    return u
-                },
-                popModal: function() {
-                    return i
-                },
-                popAllModals: function() {
-                    return s
-                },
-                coerceChannelRoute: function() {
-                    return E
-                },
-                coerceModalRoute: function() {
-                    return c
-                },
-                useIsModalOpen: function() {
-                    return _
-                }
-            })
-        },
-        258158: function(e, t, l) {
-            "use strict";
-            l.r(t), l.d(t, {
-                default: function() {
-                    return r
-                }
-            });
-            var d = l("37983");
-            l("884691");
-            var n = l("551042");
-
-            function r() {
-                (0, n.openModalLazy)(async () => {
-                    let {
-                        default: e
-                    } = await l.el("826269").then(l.bind(l, "826269"));
-                    return t => (0, d.jsx)(e, {
-                        ...t
-                    })
                 })
             }
         },
-        383173: function(e, t, l) {
+        255214: function(e, t, i) {
             "use strict";
-            l.r(t), l.d(t, {
+            i.r(t), i.d(t, {
+                getEmojiHotrail: function() {
+                    return r
+                },
                 default: function() {
+                    return a
+                }
+            });
+            var n = i("884691"),
+                o = i("115279");
+
+            function r(e) {
+                let {
+                    topEmojis: t,
+                    newlyAddedEmojis: i,
+                    backfillEmojis: n,
+                    rowSize: r = o.EMOJI_ROW_SIZE
+                } = e, a = t.slice(0, r - i.length), s = [];
+                return a.length + i.length < r && (s = n.slice(0, r - t.length - i.length)), {
+                    visibleTopEmojis: a,
+                    visibleNewlyAddedEmojis: i,
+                    visibleBackfillEmojis: s,
+                    allEmojis: a.concat(s).concat(i)
+                }
+            }
+
+            function a(e) {
+                return n.useMemo(() => r(e), [e])
+            }
+        },
+        352046: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                getTopAndNewlyAddedEmojis: function() {
+                    return l
+                },
+                default: function() {
+                    return E
+                }
+            });
+            var n = i("65597"),
+                o = i("385976"),
+                r = i("564967"),
+                a = i("61559"),
+                s = i("958706");
+            let u = [];
+
+            function l(e) {
+                let {
+                    emojiStoreInstance: t = o.default,
+                    guildId: i,
+                    pickerIntention: n,
+                    shouldSeeTopEmojis: l = (0, a.getEmojiPickerDiscoveryExperimentConfig)().shouldSeeTopEmojiBar,
+                    shouldSeeNewlyAddedEmoji: E = (0, a.getEmojiPickerDiscoveryExperimentConfig)().shouldSeeNewlyAddedEmoji,
+                    shouldSeeBackfillEmojis: d = r.default.getCurrentConfig({
+                        location: "fe926e_1"
+                    }, {
+                        autoTrackExposure: !1
+                    }).shouldBackfillEmojis
+                } = e;
+                return {
+                    topEmojis: n !== s.EmojiIntention.REACTION && l ? t.getTopEmoji(i) : u,
+                    newlyAddedEmojis: n !== s.EmojiIntention.REACTION && E ? t.getNewlyAddedEmoji(i) : u,
+                    backfillEmojis: n !== s.EmojiIntention.REACTION && l && d ? t.getBackfillTopEmojis(i) : u
+                }
+            }
+
+            function E(e, t) {
+                let {
+                    shouldSeeNewlyAddedEmoji: i,
+                    shouldSeeTopEmojiBar: s
+                } = (0, a.useEmojiPickerDiscoveryExperiment)(!0), {
+                    shouldBackfillEmojis: u
+                } = r.default.useExperiment({
+                    location: "fe926e_1"
+                }, {
+                    autoTrackExposure: !1
+                });
+                return (0, n.useStateFromStoresObject)([o.default], () => l({
+                    emojiStoreInstance: o.default,
+                    guildId: e,
+                    pickerIntention: t,
+                    shouldSeeTopEmojis: s,
+                    shouldSeeNewlyAddedEmoji: i,
+                    shouldSeeBackfillEmojis: u
+                }), [e, t, s, i, u])
+            }
+        },
+        305781: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                fetchTopEmojis: function() {
+                    return a
+                },
+                updateNewlyAddedLastSeen: function() {
+                    return s
+                },
+                updateNewlyAddedEmojiSeenAcknowledged: function() {
                     return u
                 }
             });
-            var d = l("446674"),
-                n = l("913144"),
-                r = l("374363");
-            let a = new Set;
-            class o extends d.default.PersistedStore {
-                initialize(e) {
-                    null != e && (a = new Set(e.expandedFolders)), this.waitFor(r.default)
-                }
-                getState() {
-                    return {
-                        expandedFolders: Array.from(a)
-                    }
-                }
-                getExpandedFolders() {
-                    return a
-                }
-                isFolderExpanded(e) {
-                    return a.has(e)
-                }
+            var n = i("872717"),
+                o = i("913144"),
+                r = i("49111");
+
+            function a(e) {
+                o.default.dispatch({
+                    type: "TOP_EMOJIS_FETCH",
+                    guildId: e
+                }), n.default.get({
+                    url: r.Endpoints.TOP_EMOJIS_FOR_GUILD(e),
+                    oldFormErrors: !0
+                }).then(t => o.default.dispatch({
+                    type: "TOP_EMOJIS_FETCH_SUCCESS",
+                    guildId: e,
+                    topEmojisMetadata: t.body.items.map(e => ({
+                        emojiId: e.emoji_id,
+                        rank: e.emoji_rank
+                    })).sort((e, t) => e.rank - t.rank)
+                }), () => o.default.dispatch({
+                    type: "TOP_EMOJIS_FETCH_FAILURE",
+                    guildId: e
+                }))
             }
-            o.displayName = "ExpandedGuildFolderStore", o.persistKey = "ExpandedGuildFolderStore";
-            var u = new o(n.default, {
-                TOGGLE_GUILD_FOLDER_EXPAND: function(e) {
-                    let {
-                        folderId: t
-                    } = e;
-                    (a = new Set(a)).has(t) ? a.delete(t) : a.add(t)
-                },
-                SET_GUILD_FOLDER_EXPANDED: function(e) {
-                    let {
-                        folderId: t,
-                        expanded: l
-                    } = e;
-                    a = new Set(a), l ? a.add(t) : a.has(t) && a.delete(t)
-                },
-                USER_SETTINGS_PROTO_UPDATE: function() {
-                    let e = r.default.getGuildFolders();
-                    if (null == e) return !1;
-                    let t = !1;
-                    for (let l of a) !e.some(e => e.folderId === l) && ((a = new Set(a)).delete(l), t = !0);
-                    return t
-                },
-                GUILD_FOLDER_COLLAPSE: function() {
-                    if (0 === a.size) return !1;
-                    a = new Set
+
+            function s(e, t) {
+                o.default.dispatch({
+                    type: "NEWLY_ADDED_EMOJI_SEEN_UPDATED"
+                }), null != e && null != t && o.default.dispatch({
+                    type: "NEWLY_ADDED_EMOJI_SEEN_PENDING",
+                    guildId: e,
+                    emojiId: t
+                })
+            }
+
+            function u(e, t) {
+                null != e && null != t && o.default.dispatch({
+                    type: "NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED",
+                    guildId: e,
+                    emojiId: t
+                })
+            }
+        },
+        630400: function(e, t, i) {
+            "use strict";
+            i.r(t), i.d(t, {
+                maybeFetchTopEmojisByGuild: function() {
+                    return u
                 }
-            })
+            });
+            var n = i("61559"),
+                o = i("697218"),
+                r = i("385976"),
+                a = i("26430"),
+                s = i("305781");
+
+            function u(e) {
+                if (null == e) return;
+                let t = o.default.getCurrentUser();
+                if (null == t) return;
+                let {
+                    shouldSeeTopEmojiBar: i
+                } = (0, n.getEmojiPickerDiscoveryExperimentConfig)();
+                if (!i) return;
+                let u = r.default.getTopEmojisMetadata(e);
+                if (null != u) {
+                    let {
+                        topEmojisTTL: e
+                    } = u;
+                    if (null == e || Date.now() < e) return
+                }!a.default.getIsFetching(e) && (0, s.fetchTopEmojis)(e)
+            }
         }
     }
 ]);
