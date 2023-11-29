@@ -2291,7 +2291,8 @@
                 borderRadius: "borderRadius__3965c",
                 hidden: "hidden__576d2",
                 pictureInPicture: "pictureInPicture__48d51",
-                pictureInPictureWindow: "pictureInPictureWindow_dc49a8"
+                pictureInPictureWindow: "pictureInPictureWindow_dc49a8",
+                pictureInPictureWindowOverflow: "pictureInPictureWindowOverflow__3abe4"
             }
         },
         618556: function(e, t, a) {
@@ -2704,6 +2705,7 @@
                 activityUserPopoutV2: "activityUserPopoutV2__32328",
                 activityVoiceChannel: "activityVoiceChannel_e4ac9b",
                 assets: "assets__5bee0",
+                assetsHangStatus: "assetsHangStatus__0a328",
                 assetsLargeImage: "assetsLargeImage_b88a59",
                 assetsLargeImageActivityFeed: "assetsLargeImageActivityFeed_e92ab7 assetsLargeImage_b88a59",
                 assetsLargeImageActivityFeedTwitch: "assetsLargeImageActivityFeedTwitch__1c589 assetsLargeImage_b88a59",
@@ -3325,6 +3327,7 @@
                 messageContent: "messageContent__21e69",
                 messageEditorCompact: "messageEditorCompact__94038",
                 nitroAuthorBadgeContainer: "nitroAuthorBadgeContainer__0b121",
+                nitroAuthorBadgeTootip: "nitroAuthorBadgeTootip__967e6",
                 nitroBadgeSvg: "nitroBadgeSvg__214e0 botTag__11e95",
                 nitroBadgeSvgRepliedMessage: "nitroBadgeSvgRepliedMessage__021fb",
                 pollBadgeDefault: "pollBadgeDefault_f48298",
@@ -4149,18 +4152,18 @@
         722097: function(e, t, a) {
             "use strict";
             e.exports = {
-                added: "added_dc4118",
+                added: "added_dc4118 title_cb085d",
                 container: "container_bd6694",
                 date: "date__21306",
-                fixed: "fixed__61d41",
+                fixed: "fixed__61d41 title_cb085d",
                 footer: "footer__55d42",
                 image: "image__988dc",
-                improved: "improved_df526b",
+                improved: "improved_df526b title_cb085d",
                 lead: "lead__8e4f4",
                 marginTop: "marginTop__89620",
                 premiumBanner: "premiumBanner__6597f",
                 premiumIcon: "premiumIcon__9fe69",
-                progress: "progress_be0b9b",
+                progress: "progress_be0b9b title_cb085d",
                 socialLink: "socialLink_f11d71",
                 title: "title_cb085d",
                 video: "video__562f3"
