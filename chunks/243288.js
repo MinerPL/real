@@ -1,23 +1,23 @@
             "use strict";
-            a.r(t), a.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return r
                 }
             });
-            var n = a("37983");
-            a("884691");
-            var u = a("446674"),
-                r = a("77078"),
-                d = a("255397"),
-                l = a("191145"),
-                s = a("782340");
+            var a = n("37983");
+            n("884691");
+            var l = n("446674"),
+                i = n("77078"),
+                u = n("255397"),
+                d = n("191145"),
+                s = n("782340");
 
-            function i(e) {
-                let t = (0, u.useStateFromStores)([l.default], () => l.default.getVoiceParticipantsHidden(e));
-                return (0, n.jsx)(r.MenuCheckboxItem, {
+            function r(e) {
+                let t = (0, l.useStateFromStores)([d.default], () => d.default.getVoiceParticipantsHidden(e));
+                return (0, a.jsx)(i.MenuCheckboxItem, {
                     id: "no-video-hide",
                     label: s.default.Messages.STREAM_SHOW_NON_VIDEO,
                     checked: !t,
-                    action: () => d.default.toggleVoiceParticipantsHidden(e, !t)
+                    action: () => u.default.toggleVoiceParticipantsHidden(e, !t)
                 })
             }

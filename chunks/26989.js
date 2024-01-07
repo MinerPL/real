@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 getUserIdFromCommunicationDisabledUserKey: function() {
-                    return G
+                    return w
                 },
                 getGuildIdFromCommunicationDisabledUserKey: function() {
-                    return w
+                    return G
                 },
                 default: function() {
                     return q
@@ -52,7 +52,7 @@
                     null != v[n] && b(n), M(U(e, t))
                 } else
                     for (let t in v) {
-                        let n = w(t);
+                        let n = G(t);
                         n === e && (b(t), M(t))
                     }
             }
@@ -62,7 +62,7 @@
             }
 
             function M(e) {
-                G(e) === _.default.getId() && (0, f.clearCommunicationDisabledNotice)(w(e)), delete v[e]
+                w(e) === _.default.getId() && (0, f.clearCommunicationDisabledNotice)(G(e)), delete v[e]
             }
 
             function U(e, t) {
@@ -70,11 +70,11 @@
                 return n[0] = e, n[1] = t, n.join("-")
             }
 
-            function G(e) {
+            function w(e) {
                 return e.split("-")[1]
             }
 
-            function w(e) {
+            function G(e) {
                 return e.split("-")[0]
             }
 

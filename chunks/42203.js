@@ -36,8 +36,8 @@
                 b = {},
                 M = new Set,
                 U = {},
-                G = 0,
-                w = 0;
+                w = 0,
+                G = 0;
 
             function k(e, t, n) {
                 if (null == e || !M.has(e) || 0 === t && f.default.hasGuild(e)) return;
@@ -49,8 +49,8 @@
                     return
                 }
                 let [a, o] = r;
-                for (let n of ((0, E.default)(a), 0 !== t && (w += 1), M.delete(e), f.default.restored(e), s.default.mark("❗", "loaded guild channels (guild: ".concat(e, ")"), o), a)) !Object.hasOwn(A, n.id) && W((0, S.castChannelRecord)(n));
-                C.verbose("hydration complete (guild: ".concat(e, ", channels: ").concat(a.length, ", guilds_loaded: ").concat(w, ")"))
+                for (let n of ((0, E.default)(a), 0 !== t && (G += 1), M.delete(e), f.default.restored(e), s.default.mark("❗", "loaded guild channels (guild: ".concat(e, ")"), o), a)) !Object.hasOwn(A, n.id) && W((0, S.castChannelRecord)(n));
+                C.verbose("hydration complete (guild: ".concat(e, ", channels: ").concat(a.length, ", guilds_loaded: ").concat(G, ")"))
             }
 
             function x(e, t, n) {

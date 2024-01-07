@@ -4,79 +4,79 @@
                     return h
                 }
             }), n("222007");
-            var a = n("37983"),
-                l = n("884691"),
-                s = n("414456"),
-                i = n.n(s),
-                r = n("77078"),
-                o = n("381546"),
-                u = n("229915"),
-                d = n("782340"),
-                c = n("913893");
-            class f extends l.Component {
+            var s = n("37983"),
+                r = n("884691"),
+                i = n("414456"),
+                l = n.n(i),
+                a = n("77078"),
+                u = n("381546"),
+                o = n("229915"),
+                c = n("782340"),
+                d = n("913893");
+            class f extends r.Component {
                 render() {
                     let {
                         autoFocus: e,
                         label: t,
                         placeholder: n,
-                        searchTerm: l,
-                        inputClassName: s,
+                        searchTerm: r,
+                        inputClassName: i,
                         className: f,
                         onChange: h,
                         onFocus: p,
-                        onBlur: m,
-                        onKeyPress: E,
+                        onBlur: I,
+                        onKeyPress: v,
                         autoComplete: C,
-                        forwardedRef: g,
-                        closeIconClassName: S,
-                        searchIconClassName: _,
-                        cta: I
-                    } = this.props, T = null != l && l.length > 0, v = null != g ? g : this._textInputRef;
-                    return (0, a.jsx)(r.FocusRing, {
-                        focusTarget: v,
+                        forwardedRef: E,
+                        closeIconClassName: T,
+                        searchIconClassName: m,
+                        cta: _
+                    } = this.props, S = null != r && r.length > 0, A = null != E ? E : this._textInputRef;
+                    return (0, s.jsx)(a.FocusRing, {
+                        focusTarget: A,
                         ringTarget: this._containerRef,
-                        children: (0, a.jsxs)("div", {
-                            className: i(c.searchBox, f),
+                        children: (0, s.jsxs)("div", {
+                            className: l(d.searchBox, f),
                             ref: this._containerRef,
-                            children: [(0, a.jsx)(r.TextInput, {
-                                inputRef: v,
+                            children: [(0, s.jsx)(a.TextInput, {
+                                inputRef: A,
                                 focusProps: {
                                     enabled: !1
                                 },
                                 name: "search",
                                 maxLength: 100,
-                                className: c.searchBoxInputWrapper,
-                                inputClassName: i(c.searchBoxInput, s),
+                                className: d.searchBoxInputWrapper,
+                                inputClassName: l(d.searchBoxInput, i),
                                 onChange: h,
                                 onFocus: p,
-                                onBlur: m,
-                                onKeyPress: E,
-                                value: T ? l : "",
+                                onBlur: I,
+                                onKeyPress: v,
+                                value: S ? r : "",
                                 placeholder: n,
                                 autoFocus: e,
                                 "aria-label": t,
                                 autoComplete: C ? "on" : "off"
-                            }), null != I ? (0, a.jsx)(r.Text, {
+                            }), null != _ ? (0, s.jsx)(a.Text, {
                                 color: "text-muted",
                                 variant: "text-xs/normal",
-                                className: c.cta,
-                                children: I
-                            }) : null, T ? (0, a.jsx)(r.Clickable, {
+                                className: d.cta,
+                                children: _
+                            }) : null, S ? (0, s.jsx)(a.Clickable, {
                                 onClick: this.handleClear,
-                                className: c.clear,
-                                "aria-label": d.default.Messages.SEARCH_CLEAR,
-                                children: (0, a.jsx)(o.default, {
-                                    className: i(c.clearIcon, S)
+                                className: d.clear,
+                                "aria-label": c.default.Messages.SEARCH_CLEAR,
+                                children: (0, s.jsx)(u.default, {
+                                    className: l(d.clearIcon, T)
                                 })
-                            }) : (0, a.jsx)(u.default, {
-                                className: i(c.searchIcon, _),
-                                "aria-label": d.default.Messages.SEARCH
+                            }) : (0, s.jsx)(o.default, {
+                                className: l(d.searchIcon, m),
+                                "aria-label": c.default.Messages.SEARCH
                             })]
                         })
                     })
                 }
                 constructor(...e) {
-                    super(...e), this._textInputRef = l.createRef(), this._containerRef = l.createRef(), this.handleClear = () => {
+                    super(...e), this._textInputRef = r.createRef(), this._containerRef = r.createRef(), this.handleClear = () => {
                         let {
                             onClear: e,
                             forwardedRef: t
@@ -90,7 +90,7 @@
             f.defaultProps = {
                 autoComplete: !1
             };
-            var h = l.forwardRef((e, t) => (0, a.jsx)(f, {
+            var h = r.forwardRef((e, t) => (0, s.jsx)(f, {
                 forwardedRef: t,
                 ...e
             }))

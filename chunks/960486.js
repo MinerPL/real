@@ -85,8 +85,8 @@
                 }, [y]);
                 let M = n(N),
                     U = 0 === M.length,
-                    G = r.useId(),
-                    w = r.useCallback(() => new Promise(e => {
+                    w = r.useId(),
+                    G = r.useCallback(() => new Promise(e => {
                         let t = b.current;
                         if (null == t) return e();
                         t.scrollToTop({
@@ -109,10 +109,10 @@
                         })
                     }, []),
                     F = (0, o.default)({
-                        id: G,
+                        id: w,
                         isEnabled: !0,
                         useVirtualFocus: !0,
-                        scrollToStart: w,
+                        scrollToStart: G,
                         scrollToEnd: k,
                         setFocus: x
                     }),

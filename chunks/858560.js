@@ -62,20 +62,6 @@
                         enableRoleSubscriptionTrialsForGuild: !0
                     }
                 }]
-            }), (0, i.createExperiment)({
-                kind: "user",
-                id: "2022-06_native_mobile_role_subscription_management",
-                label: "Mobile Guild Role Subscription Management",
-                defaultConfig: {
-                    enabled: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Enable native role subscription management for mobile",
-                    config: {
-                        enabled: !0
-                    }
-                }]
             });
             let o = (0, i.createExperiment)({
                 kind: "guild",

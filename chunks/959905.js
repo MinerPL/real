@@ -1,17 +1,17 @@
             "use strict";
-            r.r(t), r.d(t, {
+            n.r(t), n.d(t, {
                 useLocalizedPromoQuery: function() {
                     return s
                 }
             });
-            var n = r("446674"),
-                i = r("160299");
+            var r = n("446674"),
+                i = n("160299");
 
             function s() {
                 let {
                     localizedPricingPromo: e,
                     hasError: t
-                } = (0, n.useStateFromStoresObject)([i.default], () => ({
+                } = (0, r.useStateFromStoresObject)([i.default], () => ({
                     localizedPricingPromo: i.default.localizedPricingPromo,
                     hasError: i.default.localizedPricingPromoHasError
                 }));

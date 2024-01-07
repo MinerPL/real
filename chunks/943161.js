@@ -8,16 +8,16 @@
             n("884691");
             var l = n("414456"),
                 r = n.n(l),
-                a = n("83910"),
-                s = n("93393"),
+                s = n("83910"),
+                a = n("93393"),
                 o = n("317041"),
                 u = n("749296");
             let d = e => {
                 switch (e.id) {
                     case o.BuiltInSectionId.BUILT_IN:
-                        return a.default;
-                    case o.BuiltInSectionId.FRECENCY:
                         return s.default;
+                    case o.BuiltInSectionId.FRECENCY:
+                        return a.default;
                     default:
                         return
                 }
@@ -28,8 +28,8 @@
                     section: t,
                     className: n,
                     width: l,
-                    height: a,
-                    padding: s,
+                    height: s,
+                    padding: a,
                     isSelected: o,
                     selectable: c = !1,
                     ...f
@@ -41,13 +41,13 @@
                     }),
                     style: {
                         width: l,
-                        height: a,
-                        padding: null != s ? s : 0
+                        height: s,
+                        padding: null != a ? a : 0
                     },
                     children: null != h ? (0, i.jsx)(h, {
                         className: u.icon,
                         width: l,
-                        height: a,
+                        height: s,
                         ...f
                     }) : null
                 })

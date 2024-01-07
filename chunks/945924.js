@@ -11,8 +11,8 @@
                 u = n("945956"),
                 d = n("659500"),
                 s = n("791776"),
-                E = n("13798"),
-                r = n("49111");
+                r = n("13798"),
+                E = n("49111");
             let _ = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]),
                 A = new Set(["Alt", "AltGraph", "CapsLock", "Control", "Fn", "FnLock", "Hyper", "Meta", "NumLock", "OS", "ScrollLock", "Shift", "Super", "Symbol", "SymbolLock"]),
                 c = new Set(["F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", "F11", "F12", "F13", "F14", "F15", "F16", "F17", "F18", "F19", "F20", "Accept", "ContextMenu", "Find", "ZoomIn", "ZoomOut"]),
@@ -24,6 +24,6 @@
                         let T = null === (n = (0, s.eventOwnerDocument)(e)) || void 0 === n ? void 0 : n.activeElement;
                         if ((0, s.isInputLikeElement)(T) || i.LOCK_STACK.isActive() || A.has(t) || c.has(t) || C.has(t)) return !1;
                         let S = null != T && "BODY" === T.tagName;
-                        return !(o.default.keyboardModeEnabled && !S && !/^[a-zA-Z0-9]$/.test(t) || d.ComponentDispatch.hasSubscribers(r.ComponentActions.MODAL_CLOSE) || l.default.hasLayers()) && ("Tab" === t && d.ComponentDispatch.hasSubscribers(r.ComponentActions.TEXTAREA_FOCUS) && null != document.querySelector('[data-can-focus="true"]') ? (e.preventDefault(), d.ComponentDispatch.dispatch(r.ComponentActions.TEXTAREA_FOCUS), !1) : !(u.default.isConnected() && a.default.getMode() === r.InputModes.PUSH_TO_TALK && !a.default.isSelfMute() && Object.values(a.default.getShortcuts()).map(E.toBrowserEvents).some(t => t.map(e => e.keyCode).includes(e.keyCode))) && void(!e.metaKey && !e.ctrlKey && !_.has(t) && d.ComponentDispatch.dispatchToLastSubscribed(r.ComponentActions.TEXTAREA_FOCUS)))
+                        return !(o.default.keyboardModeEnabled && !S && !/^[a-zA-Z0-9]$/.test(t) || d.ComponentDispatch.hasSubscribers(E.ComponentActions.MODAL_CLOSE) || l.default.hasLayers()) && ("Tab" === t && d.ComponentDispatch.hasSubscribers(E.ComponentActions.TEXTAREA_FOCUS) && null != document.querySelector('[data-can-focus="true"]') ? (e.preventDefault(), d.ComponentDispatch.dispatch(E.ComponentActions.TEXTAREA_FOCUS), !1) : !(u.default.isConnected() && a.default.getMode() === E.InputModes.PUSH_TO_TALK && !a.default.isSelfMute() && Object.values(a.default.getShortcuts()).map(r.toBrowserEvents).some(t => t.map(e => e.keyCode).includes(e.keyCode))) && void(!e.metaKey && !e.ctrlKey && !_.has(t) && d.ComponentDispatch.dispatchToLastSubscribed(E.ComponentActions.TEXTAREA_FOCUS)))
                     }
                 }

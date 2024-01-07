@@ -39,11 +39,11 @@
                     let t = null === (e = b.current) || void 0 === e ? void 0 : e.getScrollerNode();
                     null != t && (t.scrollTop = N)
                 }, []);
-                let G = r.useCallback(() => {
+                let w = r.useCallback(() => {
                         let e = "function" == typeof I ? I() : I;
                         return null == e ? 0 : e
                     }, [I]),
-                    w = r.useCallback((e, t, n) => "function" == typeof S ? S(n, {
+                    G = r.useCallback((e, t, n) => "function" == typeof S ? S(n, {
                         sectionIndex: e,
                         sectionRowIndex: t
                     }) : S, [S]),
@@ -72,7 +72,7 @@
                             i = u[0],
                             r = [],
                             s = [];
-                        i += G();
+                        i += w();
                         for (let a = 0; a < n; a++) {
                             let n = t ? _[a] : p,
                                 o = (null == _ ? void 0 : _[a]) !== 0;
@@ -84,7 +84,7 @@
                                 }
                             }, i += k(a);
                             for (let t = 0; t < n; t++) {
-                                let n = o ? w(a, t, e) : 0,
+                                let n = o ? G(a, t, e) : 0,
                                     s = i + n,
                                     l = {
                                         top: i,
@@ -102,7 +102,7 @@
                             rowDescriptors: r,
                             sectionDescriptors: s
                         }
-                    }, [w, x, k, F, u, p, _, G]);
+                    }, [G, x, k, F, u, p, _, w]);
                 V.current = Y, B.current = j;
                 let W = r.useCallback(() => {
                     var e;
@@ -226,7 +226,7 @@
                         t = 0,
                         n = u[0],
                         i = [],
-                        r = G();
+                        r = w();
                     null != h && D < r ? i.push(h()) : n += r;
                     for (let r = 0; r < Y.length; r++) {
                         let s = Y[r],
@@ -251,7 +251,7 @@
                                 m = o + h,
                                 T = m >= D && o <= e;
                             for (null != f && (C || T) && s.push(f(r)), !T && !C && (n += h); l + h + p < u - _;) {
-                                let i = w(r, S, t),
+                                let i = G(r, S, t),
                                     a = o + l + h,
                                     u = a + i;
                                 if (u <= D) n = u - (C ? h : 0);
@@ -272,7 +272,7 @@
                         visibleItems: i,
                         listOffset: n
                     }
-                }, [w, x, k, F, u, c, d, E, f, D, Y, C, h, G, P]), X = r.useMemo(() => {
+                }, [G, x, k, F, u, c, d, E, f, D, Y, C, h, w, P]), X = r.useMemo(() => {
                     var e, t, n;
                     return {
                         top: q,

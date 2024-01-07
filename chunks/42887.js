@@ -31,8 +31,8 @@
             n("715440");
             var M = n("238847"),
                 U = n("981699"),
-                G = n("140622"),
-                w = n("16001"),
+                w = n("140622"),
+                G = n("16001"),
                 k = n("631508"),
                 x = n("368765"),
                 F = n("403770"),
@@ -145,8 +145,8 @@
                 eb = !1,
                 eM = eE.DISABLED_DEVICE_ID,
                 eU = !1,
-                eG = !1,
                 ew = !1,
+                eG = !1,
                 ek = null,
                 ex = !1,
                 eF = !1,
@@ -504,7 +504,7 @@
                     eT.on(m.MediaEngineEvent.Connection, e => {
                         let {
                             maxSyncDelayOverride: t
-                        } = w.default.getCurrentConfig({
+                        } = G.default.getCurrentConfig({
                             location: "f627ab_3"
                         }, {
                             autoTrackExposure: !1
@@ -548,7 +548,7 @@
                         a && e.setExperimentFlag(eE.ExperimentFlags.SIGNAL_AV1_SUPPORT, !0);
                         let {
                             allowSettingFullbandAndroid: o
-                        } = G.default.getCurrentConfig({
+                        } = w.default.getCurrentConfig({
                             location: "f627ab_14"
                         }, {
                             autoTrackExposure: !0
@@ -847,7 +847,7 @@
                     return !this.isSupported() || e$(e).deaf
                 }
                 isVideoEnabled() {
-                    return eb && ew
+                    return eb && eG
                 }
                 isVideoAvailable() {
                     return Object.values(eO).some(e => {
@@ -1415,7 +1415,7 @@
                             eT.setAudioOutputDevice(t)
                         }
                     }(n), ! function(e) {
-                        ew = e.length > 0;
+                        eG = e.length > 0;
                         let t = eO;
                         if (eO = tn(e, eh.default.Messages.NO_VIDEO_DEVICES), eb && !h.isEqual(eO, t)) {
                             var n;
@@ -1599,10 +1599,10 @@
                     let {
                         state: t
                     } = e, n = D.default.isEnabled();
-                    if (t === eu.AppStates.BACKGROUND && eb && !n) eG = !0, e4(!1);
+                    if (t === eu.AppStates.BACKGROUND && eb && !n) ew = !0, e4(!1);
                     else {
-                        if (t !== eu.AppStates.ACTIVE || !eG) return !1;
-                        eG = !1, e4(!0)
+                        if (t !== eu.AppStates.ACTIVE || !ew) return !1;
+                        ew = !1, e4(!0)
                     }
                     return !0
                 },

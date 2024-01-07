@@ -109,8 +109,8 @@
                         } = t;
                         n === C && null != T.onSlideReady && T.onSlideReady(n)
                     }
-                }), G = (0, E.default)(A), {
-                    width: w,
+                }), w = (0, E.default)(A), {
+                    width: G,
                     centered: k = !0
                 } = T, x = o.isMobile ? "100%" : M.width.to(e => Math.round(e)), F = o.isMobile ? "100%" : M.height.to(e => Math.round(e)), V = o.isMobile ? {} : k ? {
                     transform: "translate3d(0, -50%, 0) scale(1.0, 1.0)",
@@ -138,13 +138,13 @@
                                 display: m,
                                 flexDirection: "column",
                                 backfaceVisibility: "hidden",
-                                width: o.isMobile ? "100%" : w,
+                                width: o.isMobile ? "100%" : G,
                                 ...V,
                                 ...R.enabled ? {
                                     opacity: e.value.to(e => 1 - Math.abs(e))
                                 } : {
-                                    left: e.value.to(p("left", G)),
-                                    right: e.value.to(p("right", G))
+                                    left: e.value.to(p("left", w)),
+                                    right: e.value.to(p("right", w))
                                 }
                             },
                             children: g[t].children

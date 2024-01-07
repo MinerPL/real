@@ -1,95 +1,95 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return _
                 }
             }), n("222007");
             var i = n("446674"),
-                r = n("913144"),
-                l = n("449008"),
-                o = n("42203"),
-                s = n("341542"),
-                a = n("923959"),
+                l = n("913144"),
+                r = n("449008"),
+                s = n("42203"),
+                a = n("341542"),
+                o = n("923959"),
                 u = n("49111");
-            let c = {},
-                d = 0;
+            let d = {},
+                c = 0;
 
             function f() {
-                d += 1
+                c += 1
             }
 
-            function E(e) {
-                if (null == c[e]) return !1;
-                delete c[e]
+            function h(e) {
+                if (null == d[e]) return !1;
+                delete d[e]
             }
-            class _ extends i.default.PersistedStore {
+            class E extends i.default.PersistedStore {
                 initialize(e) {
-                    this.waitFor(o.default, s.default), this.removeChangeListener(f), this.addChangeListener(f), c = null != e ? e : {}
+                    this.waitFor(s.default, a.default), this.removeChangeListener(f), this.addChangeListener(f), d = null != e ? e : {}
                 }
                 getState() {
-                    return c
-                }
-                isCollapsed(e) {
-                    return null != e && "null" !== e && !!c[e] && c[e]
-                }
-                getCollapsedCategories() {
-                    return c
-                }
-                get version() {
                     return d
                 }
+                isCollapsed(e) {
+                    return null != e && "null" !== e && !!d[e] && d[e]
+                }
+                getCollapsedCategories() {
+                    return d
+                }
+                get version() {
+                    return c
+                }
             }
-            _.displayName = "CategoryCollapseStore", _.persistKey = "collapsedCategories";
-            var I = new _(r.default, {
+            E.displayName = "CategoryCollapseStore", E.persistKey = "collapsedCategories";
+            var _ = new E(l.default, {
                 CONNECTION_OPEN: function(e) {
-                    for (let t of (!e.userGuildSettings.partial && (c = {}), e.userGuildSettings.entries))
+                    for (let t of (!e.userGuildSettings.partial && (d = {}), e.userGuildSettings.entries))
                         if (null != t.channel_overrides)
-                            for (let e of t.channel_overrides) e.collapsed ? c[e.channel_id] = !0 : delete c[e.channel_id]
+                            for (let e of t.channel_overrides) e.collapsed ? d[e.channel_id] = !0 : delete d[e.channel_id]
                 },
                 USER_GUILD_SETTINGS_FULL_UPDATE: function(e) {
                     let {
                         userGuildSettings: t
-                    } = e, n = new Set(t.map(e => e.guild_id).filter(l.isNotNullish));
-                    for (let e in c) {
-                        let t = o.default.getChannel(e);
-                        null != t && null != t.guild_id && n.has(t.guild_id) && delete c[t.id]
+                    } = e, n = new Set(t.map(e => e.guild_id).filter(r.isNotNullish));
+                    for (let e in d) {
+                        let t = s.default.getChannel(e);
+                        null != t && null != t.guild_id && n.has(t.guild_id) && delete d[t.id]
                     }
                     for (let e of t)
-                        for (let t of e.channel_overrides) t.collapsed && (c[t.channel_id] = !0)
+                        for (let t of e.channel_overrides) t.collapsed && (d[t.channel_id] = !0)
                 },
                 CATEGORY_COLLAPSE: function(e) {
                     let {
                         id: t
                     } = e;
-                    if (c[t]) return !1;
-                    c[t] = !0
+                    if (d[t]) return !1;
+                    d[t] = !0
                 },
                 CATEGORY_EXPAND: function(e) {
                     let {
                         id: t
                     } = e;
-                    return E(t)
+                    return h(t)
                 },
                 CATEGORY_COLLAPSE_ALL: function(e) {
                     let {
                         guildId: t
                     } = e;
-                    a.default.getChannels(t)[u.ChannelTypes.GUILD_CATEGORY].forEach(e => {
+                    o.default.getChannels(t)[u.ChannelTypes.GUILD_CATEGORY].forEach(e => {
                         let {
                             channel: t
                         } = e;
-                        "null" !== t.id && (c[t.id] = !0)
+                        "null" !== t.id && (d[t.id] = !0)
                     })
                 },
                 CATEGORY_EXPAND_ALL: function(e) {
                     let {
                         guildId: t
                     } = e;
-                    a.default.getChannels(t)[u.ChannelTypes.GUILD_CATEGORY].forEach(e => {
+                    o.default.getChannels(t)[u.ChannelTypes.GUILD_CATEGORY].forEach(e => {
                         let {
                             channel: t
                         } = e;
-                        delete c[t.id]
+                        delete d[t.id]
                     })
                 },
                 CHANNEL_DELETE: function(e) {
@@ -98,6 +98,6 @@
                             id: t
                         }
                     } = e;
-                    return E(t)
+                    return h(t)
                 }
             })

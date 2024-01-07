@@ -72,14 +72,14 @@
                         channel_overrides: a
                     };
                 R.clearTimer(e), !0 === o.muted && R.setTimer(e, o.mute_config, () => {
-                    G(e, {
+                    w(e, {
                         muted: !1
                     }), z.emitChange()
                 }), r.forEach(s, e => {
                     N.clearTimer(e.channel_id)
                 }), r.forEach(a, t => {
                     !0 === t.muted && N.setTimer(t.channel_id, t.mute_config, () => {
-                        w(e, t.channel_id, {
+                        G(e, t.channel_id, {
                             muted: !1
                         }), z.emitChange()
                     })
@@ -102,7 +102,7 @@
                     }(e), delete C[e]
             }
 
-            function G(e, t) {
+            function w(e, t) {
                 var n;
                 let i = g[e];
                 U(e, {
@@ -111,7 +111,7 @@
                 })
             }
 
-            function w(e, t, n) {
+            function G(e, t, n) {
                 let i = F(e, t, n);
                 x(e, {
                     [t]: i
@@ -425,14 +425,14 @@
                         guildId: t,
                         settings: n
                     } = e;
-                    G(t, n)
+                    w(t, n)
                 },
                 USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: function(e) {
                     let {
                         guildId: t,
                         settings: n
                     } = e;
-                    G(t, n), k(t, n.channel_overrides)
+                    w(t, n), k(t, n.channel_overrides)
                 },
                 USER_GUILD_SETTINGS_CHANNEL_UPDATE: function(e) {
                     let {
@@ -445,7 +445,7 @@
                         [n]: {
                             flags: i.flags
                         }
-                    }), w(t, n, i)
+                    }), G(t, n, i)
                 },
                 USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: function(e) {
                     let {

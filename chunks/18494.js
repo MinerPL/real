@@ -2,7 +2,7 @@
             let i, r, s, a, o, l, u;
             n.r(t), n.d(t, {
                 findFirstVoiceChannelId: function() {
-                    return w
+                    return G
                 },
                 default: function() {
                     return B
@@ -54,7 +54,7 @@
                 }
             }
 
-            function G(e, t) {
+            function w(e, t) {
                 if (null == e || null == t || L[e] === t) return !1;
                 let n = I.default.getChannel(t),
                     i = null != n && (0, m.isGuildTextChannelType)(n.type),
@@ -62,7 +62,7 @@
                 return !!i && !!r && (L[e] = t, !0)
             }
 
-            function w(e) {
+            function G(e) {
                 let t = I.default.getMutableBasicGuildChannelsForGuild(e),
                     n = d.find(t, e => e.type === N.ChannelTypes.GUILD_VOICE);
                 return null == n ? void 0 : n.id
@@ -77,7 +77,7 @@
                     (null == t || !I.default.hasChannel(t) && !b.has(t)) && (delete L[n], e = !0)
                 }), d.each(t, e => {
                     let t = y[e.id];
-                    null == L[e.id] && G(e.id, t)
+                    null == L[e.id] && w(e.id, t)
                 }), null != l && Date.now() - l >= 3e5 && (o = null, e = !0), e
             }
 
@@ -152,7 +152,7 @@
                     t && M()
                 },
                 OVERLAY_INITIALIZE: function(e) {
-                    i = e.sessionId, o = e.selectedVoiceChannelId, y = {}, P = {}, s = e.selectedChannelId, y[e.selectedGuildId] = e.selectedChannelId, G(e.selectedGuildId, s), k()
+                    i = e.sessionId, o = e.selectedVoiceChannelId, y = {}, P = {}, s = e.selectedChannelId, y[e.selectedGuildId] = e.selectedChannelId, w(e.selectedGuildId, s), k()
                 },
                 CONNECTION_CLOSED: function() {
                     i = null
@@ -163,7 +163,7 @@
                         channelId: n
                     } = e;
                     if (void 0 === t) return !1;
-                    null == n && (!(0, p.isInMainTabsExperiment)() || (0, _.shouldHandleNewPanelsRoute)(t)) && (n = U(t)), null != s && n !== s && (r = s), s = n, G(t, n), y[String(t)] !== n && (P[String(t)] = y[String(t)], y[String(t)] = s), M()
+                    null == n && (!(0, p.isInMainTabsExperiment)() || (0, _.shouldHandleNewPanelsRoute)(t)) && (n = U(t)), null != s && n !== s && (r = s), s = n, w(t, n), y[String(t)] !== n && (P[String(t)] = y[String(t)], y[String(t)] = s), M()
                 },
                 CHANNEL_CREATE: function(e) {
                     let {
@@ -191,7 +191,7 @@
                     } = e;
                     if (null == y[t.id]) {
                         let e = U(t.id);
-                        y[t.id] = e, G(t.id, e), M()
+                        y[t.id] = e, w(t.id, e), M()
                     }
                 },
                 GUILD_DELETE: function(e) {

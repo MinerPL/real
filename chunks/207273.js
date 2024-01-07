@@ -8,21 +8,21 @@
                 l = n("446674"),
                 i = n("913144"),
                 u = n("619443");
-            let s = new Set,
-                d = {};
+            let d = new Set,
+                s = {};
 
             function r() {
-                s.clear()
+                d.clear()
             }
 
             function o(e) {
-                s.delete(e.guild.id)
+                d.delete(e.guild.id)
             }
             class c extends l.default.Store {
                 getChannelStatus(e) {
                     var t;
                     if (null != e && null != e.guild_id) {
-                        if (e.type === a.ChannelTypes.GUILD_VOICE) return !s.has(e.guild_id) && (s.add(e.guild_id), u.default.getSocket().requestChannelStatuses(e.guild_id)), null === (t = d[e.guild_id]) || void 0 === t ? void 0 : t[e.id]
+                        if (e.type === a.ChannelTypes.GUILD_VOICE) return !d.has(e.guild_id) && (d.add(e.guild_id), u.default.getSocket().requestChannelStatuses(e.guild_id)), null === (t = s[e.guild_id]) || void 0 === t ? void 0 : t[e.id]
                     }
                 }
             }
@@ -33,13 +33,13 @@
                 CONNECTION_RESUMED: r,
                 CONNECTION_OPEN: r,
                 VOICE_CHANNEL_STATUS_UPDATE: function(e) {
-                    null == d[e.guildId] && (d[e.guildId] = {}), d[e.guildId][e.id] = e.status
+                    null == s[e.guildId] && (s[e.guildId] = {}), s[e.guildId][e.id] = e.status
                 },
                 CHANNEL_STATUSES: function(e) {
                     for (let {
                             id: t,
                             status: n
                         }
-                        of(d[e.guildId] = {}, e.channels)) d[e.guildId][t] = n
+                        of(s[e.guildId] = {}, e.channels)) s[e.guildId][t] = n
                 }
             })

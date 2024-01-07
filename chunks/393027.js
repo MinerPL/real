@@ -1,16 +1,16 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return u
                 }
             });
-            var i = n("803182"),
-                s = n("308503"),
-                l = n("49111");
+            var a = n("803182"),
+                i = n("308503"),
+                r = n("49111");
 
-            function r(e) {
-                let t = (0, i.matchPath)(null != e ? e : "", {
-                    path: l.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")
+            function l(e) {
+                let t = (0, a.matchPath)(null != e ? e : "", {
+                    path: r.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")
                 });
                 if (null != t) {
                     let {
@@ -18,12 +18,12 @@
                         channelId: n
                     } = t.params;
                     return {
-                        guildId: e === l.ME ? null : e,
+                        guildId: e === r.ME ? null : e,
                         channelId: null != n ? n : null
                     }
                 }
-                let n = (0, i.matchPath)(null != e ? e : "", {
-                    path: l.Routes.GUILD_BOOSTING_MARKETING(":guildId")
+                let n = (0, a.matchPath)(null != e ? e : "", {
+                    path: r.Routes.GUILD_BOOSTING_MARKETING(":guildId")
                 });
                 return null != n ? {
                     guildId: n.params.guildId,
@@ -33,7 +33,7 @@
                     channelId: null
                 }
             }
-            var a = (0, s.default)(e => ({
+            var u = (0, i.default)(e => ({
                 path: null,
                 basePath: "/",
                 guildId: null,
@@ -41,23 +41,23 @@
                 updatePath(t) {
                     let {
                         guildId: n,
-                        channelId: i
-                    } = r(t);
+                        channelId: a
+                    } = l(t);
                     e({
                         path: t,
                         guildId: n,
-                        channelId: i
+                        channelId: a
                     })
                 },
                 resetPath(t) {
                     let {
                         guildId: n,
-                        channelId: i
-                    } = r(t);
+                        channelId: a
+                    } = l(t);
                     e({
                         path: null,
                         guildId: n,
-                        channelId: i,
+                        channelId: a,
                         basePath: t
                     })
                 }

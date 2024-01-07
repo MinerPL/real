@@ -181,16 +181,16 @@
                     return U.FormLabel
                 },
                 FormNoticeTypes: function() {
-                    return G.FormNoticeTypes
+                    return w.FormNoticeTypes
                 },
                 FormNoticeImagePositions: function() {
-                    return G.FormNoticeImagePositions
+                    return w.FormNoticeImagePositions
                 },
                 FormNotice: function() {
-                    return G.FormNotice
+                    return w.FormNotice
                 },
                 FormSection: function() {
-                    return w.FormSection
+                    return G.FormSection
                 },
                 FormSwitch: function() {
                     return k.FormSwitch
@@ -556,13 +556,13 @@
                     return eU.Shaker
                 },
                 Shakeable: function() {
-                    return eG.Shakeable
+                    return ew.Shakeable
                 },
                 Slide: function() {
-                    return ew.Slide
+                    return eG.Slide
                 },
                 Slides: function() {
-                    return ew.Slides
+                    return eG.Slides
                 },
                 Slider: function() {
                     return ek.Slider
@@ -741,8 +741,8 @@
                 b = n("16256"),
                 M = n("298742"),
                 U = n("603616"),
-                G = n("135411"),
-                w = n("392098"),
+                w = n("135411"),
+                G = n("392098"),
                 k = n("266079"),
                 x = n("329272"),
                 F = n("818810"),
@@ -795,8 +795,8 @@
                 eb = n("178814"),
                 eM = n("981579"),
                 eU = n("68643"),
-                eG = n("292842"),
-                ew = n("265984"),
+                ew = n("292842"),
+                eG = n("265984"),
                 ek = n("837443"),
                 ex = n("242670"),
                 eF = n("391010"),

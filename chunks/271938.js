@@ -35,8 +35,8 @@
                 b = null,
                 M = null,
                 U = null,
-                G = null,
                 w = null,
+                G = null,
                 k = v.LoginStates.NONE,
                 x = v.RegistrationStates.NONE,
                 F = !1,
@@ -111,7 +111,7 @@
             }
 
             function ei() {
-                G = U, U = null, d.default.remove(O)
+                w = U, U = null, d.default.remove(O)
             }
 
             function er(e, t) {
@@ -178,7 +178,7 @@
                     return U
                 }
                 getAnalyticsToken() {
-                    return w
+                    return G
                 }
                 getErrors() {
                     return Q
@@ -252,7 +252,7 @@
                         analyticsToken: s,
                         auth: a
                     } = e;
-                    ee("handleConnectionOpen called"), g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, S.default)(n)), b = i, M = r, w = s, P = n.id, L = n.email, void 0 !== a && (V = a.authenticator_types), d.default.set(D, n.email), d.default.set(y, n.id)
+                    ee("handleConnectionOpen called"), g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, S.default)(n)), b = i, M = r, G = s, P = n.id, L = n.email, void 0 !== a && (V = a.authenticator_types), d.default.set(D, n.email), d.default.set(y, n.id)
                 },
                 OVERLAY_INITIALIZE: function(e) {
                     var t;
@@ -262,7 +262,7 @@
                         analyticsToken: r,
                         token: s
                     } = e;
-                    g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, S.default)(n)), b = i, w = r, er(s), ei(), P = n.id, d.default.set(y, n.id)
+                    g.default.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, S.default)(n)), b = i, G = r, er(s), ei(), P = n.id, d.default.set(y, n.id)
                 },
                 CONNECTION_CLOSED: function(e) {
                     let {
@@ -378,9 +378,9 @@
                 FINGERPRINT: function(e) {
                     let t = e.fingerprint;
                     null == U ? null != t ? (m.default.track(v.AnalyticEvents.USER_FINGERPRINT_CHANGED, {
-                        old_fingerprint: null != G ? (0, l.extractId)(G) : null,
+                        old_fingerprint: null != w ? (0, l.extractId)(w) : null,
                         new_fingerprint: (0, l.extractId)(t)
-                    }), U = t, G = t, d.default.set(O, U)) : et() : null != t && U !== t && m.default.track(v.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
+                    }), U = t, w = t, d.default.set(O, U)) : et() : null != t && U !== t && m.default.track(v.AnalyticEvents.EXTERNAL_FINGERPRINT_DROPPED, {
                         fingerprint: (0, l.extractId)(U),
                         dropped_fingerprint: (0, l.extractId)(t)
                     })
