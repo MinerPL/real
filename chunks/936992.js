@@ -1,145 +1,145 @@
             "use strict";
-            t.r(a), t.d(a, {
+            n.r(t), n.d(t, {
                 GuildSelectModalHeader: function() {
-                    return L
+                    return S
                 },
                 GuildSelectModalBody: function() {
-                    return R
+                    return C
                 },
                 default: function() {
-                    return x
+                    return v
                 }
-            }), t("808653"), t("424973"), t("222007");
-            var l = t("37983"),
-                s = t("884691"),
-                d = t("448105"),
-                n = t.n(d),
-                r = t("446674"),
-                i = t("77078"),
-                o = t("54239"),
-                u = t("393414"),
-                c = t("334811"),
-                _ = t("305961"),
-                m = t("677099"),
-                I = t("476263"),
-                S = t("810567"),
-                M = t("427459"),
-                E = t("49111"),
-                C = t("782340"),
-                U = t("109396");
+            }), n("808653"), n("424973"), n("222007");
+            var r = n("37983"),
+                i = n("884691"),
+                l = n("448105"),
+                s = n.n(l),
+                a = n("446674"),
+                o = n("77078"),
+                u = n("54239"),
+                c = n("393414"),
+                d = n("334811"),
+                f = n("305961"),
+                p = n("677099"),
+                E = n("476263"),
+                _ = n("810567"),
+                h = n("427459"),
+                I = n("49111"),
+                m = n("782340"),
+                g = n("109396");
 
-            function L(e) {
+            function S(e) {
                 let {
-                    isTransfer: a = !1,
-                    setQuery: t,
-                    query: s
+                    isTransfer: t = !1,
+                    setQuery: n,
+                    query: i
                 } = e;
-                return (0, l.jsxs)(i.ModalHeader, {
-                    className: U.selectHeaderContainer,
-                    children: [(0, l.jsx)(i.Heading, {
-                        className: U.selectHeader,
+                return (0, r.jsxs)(o.ModalHeader, {
+                    className: g.selectHeaderContainer,
+                    children: [(0, r.jsx)(o.Heading, {
+                        className: g.selectHeader,
                         variant: "heading-md/semibold",
-                        children: a ? C.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_TRANSFER_HEADER : C.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_HEADER
-                    }), (0, l.jsx)(S.default, {
-                        size: S.default.Sizes.MEDIUM,
-                        placeholder: C.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
-                        "aria-label": C.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
-                        className: U.selectSearch,
-                        query: s,
-                        onChange: t,
-                        onClear: () => t("")
+                        children: t ? m.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_TRANSFER_HEADER : m.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_HEADER
+                    }), (0, r.jsx)(_.default, {
+                        size: _.default.Sizes.MEDIUM,
+                        placeholder: m.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
+                        "aria-label": m.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
+                        className: g.selectSearch,
+                        query: i,
+                        onChange: n,
+                        onClear: () => n("")
                     })]
                 })
             }
 
-            function R(e) {
+            function C(e) {
                 let {
-                    isTransfer: a = !1,
-                    selectedSlotGuilds: t,
-                    onClose: s,
-                    onSelectGuild: d,
-                    query: S
-                } = e, L = (0, r.useStateFromStores)([m.default], () => m.default.getFlattenedGuildIds()), R = (0, r.useStateFromStoresArray)([_.default], () => L.reduce((e, a) => {
-                    let l = _.default.getGuild(a);
-                    return null == l || null != t && t.some(e => e.id === a) ? e : ((S.length <= 0 || n(S.toLowerCase(), null == l ? void 0 : l.name.toLowerCase())) && e.push(l), e)
+                    isTransfer: t = !1,
+                    selectedSlotGuilds: n,
+                    onClose: i,
+                    onSelectGuild: l,
+                    query: _
+                } = e, S = (0, a.useStateFromStores)([p.default], () => p.default.getFlattenedGuildIds()), C = (0, a.useStateFromStoresArray)([f.default], () => S.reduce((e, t) => {
+                    let r = f.default.getGuild(t);
+                    return null == r || null != n && n.some(e => e.id === t) ? e : ((_.length <= 0 || s(_.toLowerCase(), null == r ? void 0 : r.name.toLowerCase())) && e.push(r), e)
                 }, [])), {
-                    enabled: x
-                } = c.default.useExperiment({
+                    enabled: v
+                } = d.default.useExperiment({
                     location: "5f417c_1"
                 }, {
                     autoTrackExposure: !0
                 });
 
-                function f() {
-                    s(), (0, o.popLayer)(), (0, u.transitionTo)(E.Routes.GUILD_DISCOVERY)
+                function T() {
+                    i(), (0, u.popLayer)(), (0, c.transitionTo)(I.Routes.GUILD_DISCOVERY)
                 }
-                return (0, l.jsxs)(l.Fragment, {
-                    children: [0 === R.length && (0, l.jsx)("div", {
-                        className: U.emptyStateWrapper,
-                        children: (0, l.jsx)(i.Text, {
+                return (0, r.jsxs)(r.Fragment, {
+                    children: [0 === C.length && (0, r.jsx)("div", {
+                        className: g.emptyStateWrapper,
+                        children: (0, r.jsx)(o.Text, {
                             variant: "text-md/normal",
-                            children: 0 === L.length ? C.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_NON_GUILD_MEMBER.format({
-                                publicGuildDirectoryHook: (e, a) => (0, l.jsx)(i.Clickable, {
-                                    onClick: f,
+                            children: 0 === S.length ? m.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_NON_GUILD_MEMBER.format({
+                                publicGuildDirectoryHook: (e, t) => (0, r.jsx)(o.Clickable, {
+                                    onClick: T,
                                     tag: "a",
                                     children: e
-                                }, a)
-                            }) : C.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_GUILD_NOT_FOUND
+                                }, t)
+                            }) : m.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_GUILD_NOT_FOUND
                         })
-                    }), R.map(e => (0, l.jsxs)(i.Clickable, {
-                        className: U.selectGuild,
+                    }), C.map(e => (0, r.jsxs)(o.Clickable, {
+                        className: g.selectGuild,
                         onClick: () => {
-                            d(e)
+                            l(e)
                         },
-                        children: [(0, l.jsx)(I.default, {
-                            className: U.selectGuildIcon,
+                        children: [(0, r.jsx)(E.default, {
+                            className: g.selectGuildIcon,
                             guild: e,
-                            size: I.default.Sizes.SMALL
-                        }), (0, l.jsxs)("div", {
-                            className: U.selectGuildCopy,
-                            children: [(0, l.jsx)(i.Text, {
-                                className: U.selectGuildName,
+                            size: E.default.Sizes.SMALL
+                        }), (0, r.jsxs)("div", {
+                            className: g.selectGuildCopy,
+                            children: [(0, r.jsx)(o.Text, {
+                                className: g.selectGuildName,
                                 variant: "text-md/normal",
                                 children: e.name
-                            }), x && (0, l.jsx)(i.Text, {
-                                className: U.selectGuildLevel,
+                            }), v && (0, r.jsx)(o.Text, {
+                                className: g.selectGuildLevel,
                                 color: "text-muted",
                                 variant: "text-xs/normal",
-                                children: (0, M.getTierName)(e.premiumTier)
+                                children: (0, h.getTierName)(e.premiumTier)
                             })]
-                        }), x && (0, l.jsx)(i.Text, {
-                            className: U.selectGuildPseudoCta,
+                        }), v && (0, r.jsx)(o.Text, {
+                            className: g.selectGuildPseudoCta,
                             color: "always-white",
                             variant: "text-sm/medium",
-                            children: a ? C.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_HERE : C.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
+                            children: t ? m.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_HERE : m.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
                         })]
                     }, e.id))]
                 })
             }
 
-            function x(e) {
+            function v(e) {
                 let {
-                    onClose: a,
-                    onSelectGuild: t,
-                    transitionState: d
-                } = e, [n, r] = s.useState("");
-                return (0, l.jsxs)(i.ModalRoot, {
-                    transitionState: d,
-                    className: U.modal,
-                    size: i.ModalSize.SMALL,
-                    children: [(0, l.jsx)(L, {
-                        query: n,
-                        setQuery: r
-                    }), (0, l.jsx)(i.ModalContent, {
-                        className: U.modalContent,
-                        children: (0, l.jsx)(R, {
-                            onClose: a,
-                            onSelectGuild: t,
-                            query: n
+                    onClose: t,
+                    onSelectGuild: n,
+                    transitionState: l
+                } = e, [s, a] = i.useState("");
+                return (0, r.jsxs)(o.ModalRoot, {
+                    transitionState: l,
+                    className: g.modal,
+                    size: o.ModalSize.SMALL,
+                    children: [(0, r.jsx)(S, {
+                        query: s,
+                        setQuery: a
+                    }), (0, r.jsx)(o.ModalContent, {
+                        className: g.modalContent,
+                        children: (0, r.jsx)(C, {
+                            onClose: t,
+                            onSelectGuild: n,
+                            query: s
                         })
-                    }), (0, l.jsx)(i.ModalCloseButton, {
-                        className: U.modalCloseButton,
-                        onClick: a
+                    }), (0, r.jsx)(o.ModalCloseButton, {
+                        className: g.modalCloseButton,
+                        onClick: t
                     })]
                 })
             }

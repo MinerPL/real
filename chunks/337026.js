@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return l
                 }
             });
-            var i = (0, n("862205").createExperiment)({
+            var l = (0, n("862205").createExperiment)({
                 kind: "user",
                 id: "2023-03_apps_in_gdms",
                 label: "Apps in GDMs",

@@ -1,30 +1,30 @@
             "use strict";
-            a.r(t), a.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return d
                 }
             });
-            var n = a("37983"),
-                l = a("884691"),
-                i = a("77078"),
-                u = a("272030"),
-                r = a("861370"),
-                d = a("782340");
+            var l = n("37983"),
+                o = n("884691"),
+                r = n("77078"),
+                u = n("272030"),
+                c = n("861370"),
+                i = n("782340");
 
-            function s(e) {
+            function d(e) {
                 var t;
-                let a = (0, r.default)({
+                let n = (0, c.default)({
                     id: e.id,
                     label: e.label,
                     shiftId: e.shiftId
                 });
-                return l.useEffect(() => {
-                    null == a && (0, u.closeContextMenu)()
-                }, [a]), (0, n.jsx)(i.Menu, {
+                return o.useEffect(() => {
+                    null == n && (0, u.closeContextMenu)()
+                }, [n]), (0, l.jsx)(r.Menu, {
                     onSelect: e.onSelect,
                     navId: "dev-context",
-                    "aria-label": null !== (t = e["aria-label"]) && void 0 !== t ? t : d.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+                    "aria-label": null !== (t = e["aria-label"]) && void 0 !== t ? t : i.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
                     onClose: u.closeContextMenu,
-                    children: a
+                    children: n
                 })
             }

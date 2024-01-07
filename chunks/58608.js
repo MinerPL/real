@@ -1,72 +1,72 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return c
                 }
             });
-            var l = n("37983"),
-                a = n("884691"),
-                s = n("118810"),
-                i = n("446674"),
-                r = n("206230"),
-                o = n("719347");
-            let u = e => {
+            var i = n("37983"),
+                r = n("884691"),
+                u = n("118810"),
+                o = n("446674"),
+                s = n("206230"),
+                l = n("719347");
+            let a = e => {
                 let {
                     externalRef: t,
                     autoPlay: n,
-                    playOnHover: u,
-                    responsive: d,
-                    mediaLayoutType: c,
-                    ...m
-                } = e, f = (0, i.useStateFromStores)([r.default], () => r.default.useReducedMotion), h = a.useRef(null);
+                    playOnHover: a,
+                    responsive: c,
+                    mediaLayoutType: d,
+                    ...E
+                } = e, f = (0, o.useStateFromStores)([s.default], () => s.default.useReducedMotion), _ = r.useRef(null);
 
-                function p() {
+                function h() {
                     var e;
-                    u && (null == h || null === (e = h.current) || void 0 === e || e.play())
+                    a && (null == _ || null === (e = _.current) || void 0 === e || e.play())
                 }
 
-                function g() {
+                function I() {
                     var e;
-                    u && (null == h || null === (e = h.current) || void 0 === e || e.pause())
+                    a && (null == _ || null === (e = _.current) || void 0 === e || e.pause())
                 }
-                return a.useLayoutEffect(() => () => {
+                return r.useLayoutEffect(() => () => {
                     let {
                         current: e
-                    } = h;
+                    } = _;
                     null != e && function(e) {
                         e.removeAttribute("src"), Array.from(e.children).forEach(e => {
-                            (0, s.isElement)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")), (0, s.isElement)(e, HTMLImageElement) && e.removeAttribute("src")
+                            (0, u.isElement)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")), (0, u.isElement)(e, HTMLImageElement) && e.removeAttribute("src")
                         });
                         try {
                             e.load()
                         } catch (e) {}
                     }(e)
-                }, []), a.useLayoutEffect(() => ("function" == typeof t ? (t(null), t(h.current)) : null != t && (t.current = h.current), () => {
+                }, []), r.useLayoutEffect(() => ("function" == typeof t ? (t(null), t(_.current)) : null != t && (t.current = _.current), () => {
                     "function" == typeof t ? t(null) : null != t && (t.current = null)
-                }), [t, h]), (0, l.jsx)("video", {
-                    ref: h,
-                    autoPlay: !f && !u && n,
-                    onMouseEnter: p,
-                    onMouseLeave: g,
-                    onFocus: p,
-                    onBlur: g,
-                    style: c === o.MediaLayoutType.MOSAIC ? {
+                }), [t, _]), (0, i.jsx)("video", {
+                    ref: _,
+                    autoPlay: !f && !a && n,
+                    onMouseEnter: h,
+                    onMouseLeave: I,
+                    onFocus: h,
+                    onBlur: I,
+                    style: d === l.MediaLayoutType.MOSAIC ? {
                         width: "100%",
                         height: "100%",
                         maxHeight: "inherit",
                         objectFit: "cover"
-                    } : d ? function() {
+                    } : c ? function() {
                         return {
-                            maxWidth: m.width,
-                            maxHeight: m.height,
+                            maxWidth: E.width,
+                            maxHeight: E.height,
                             width: "100%",
                             height: "100%"
                         }
                     }() : {},
-                    ...m
+                    ...E
                 })
             };
-            var d = a.forwardRef((e, t) => (0, l.jsx)(u, {
+            var c = r.forwardRef((e, t) => (0, i.jsx)(a, {
                 ...e,
                 externalRef: t
             }))

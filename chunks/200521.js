@@ -1,11 +1,11 @@
             "use strict";
-            var l, a, s, i;
-            n.r(t), n.d(t, {
+            var n, a, l, r;
+            s.r(t), s.d(t, {
                 FeedbackRating: function() {
-                    return l
+                    return n
                 },
                 FEEDBACK_FREEFORM_LENGTH: function() {
-                    return r
+                    return u
                 },
                 FeedbackType: function() {
                     return a
@@ -13,10 +13,10 @@
                 FeedbackTypePrecedence: function() {
                     return o
                 }
-            }), n("808653"), (s = l || (l = {})).BAD = "bad", s.NEUTRAL = "neutral", s.GOOD = "good";
-            let r = 1024;
-            (i = a || (a = {}))[i.VOICE = 0] = "VOICE", i[i.STREAM = 1] = "STREAM", i[i.VIDEO_BACKGROUND = 2] = "VIDEO_BACKGROUND", i[i.ACTIVITY = 3] = "ACTIVITY", i[i.IN_APP_REPORTS = 4] = "IN_APP_REPORTS";
-            let o = [2, 1, 3, 0, 4].reduce((e, t, n) => ({
+            }), s("808653"), (l = n || (n = {})).BAD = "bad", l.NEUTRAL = "neutral", l.GOOD = "good";
+            let u = 1024;
+            (r = a || (a = {}))[r.VOICE = 0] = "VOICE", r[r.STREAM = 1] = "STREAM", r[r.VIDEO_BACKGROUND = 2] = "VIDEO_BACKGROUND", r[r.ACTIVITY = 3] = "ACTIVITY", r[r.IN_APP_REPORTS = 4] = "IN_APP_REPORTS";
+            let o = [2, 1, 3, 0, 4].reduce((e, t, s) => ({
                 ...e,
-                [t]: n
+                [t]: s
             }), {})

@@ -6,14 +6,14 @@
             });
             var i = n("37983");
             n("884691");
-            var l = n("748820"),
-                r = n("77078"),
+            var r = n("748820"),
+                l = n("77078"),
                 o = n("112679"),
-                s = n("55689"),
+                a = n("55689"),
                 u = n("676379"),
-                a = n("697218"),
-                c = n("599110"),
-                d = n("659500"),
+                s = n("697218"),
+                d = n("599110"),
+                c = n("659500"),
                 f = n("719923"),
                 E = n("49111"),
                 _ = n("646718");
@@ -22,79 +22,79 @@
                 let {
                     initialPlanId: t,
                     followupSKUInfo: p,
-                    onClose: I,
-                    onComplete: S,
+                    onClose: S,
+                    onComplete: T,
                     onSubscriptionConfirmation: h,
-                    analyticsLocations: T,
-                    analyticsObject: N,
-                    analyticsLocation: C,
-                    analyticsSourceLocation: v,
-                    isGift: g = !1,
+                    analyticsLocations: I,
+                    analyticsObject: A,
+                    analyticsLocation: g,
+                    analyticsSourceLocation: N,
+                    isGift: C = !1,
                     giftMessage: m,
-                    subscriptionTier: A,
-                    trialId: L,
-                    postSuccessGuild: U,
-                    openInvoiceId: R,
-                    applicationId: P,
-                    referralTrialOfferId: y,
-                    giftRecipient: D,
-                    returnRef: O,
-                    subscription: b
-                } = null != e ? e : {}, w = !1, M = (0, l.v4)(), G = a.default.getCurrentUser(), x = (0, f.isPremiumExactly)(G, _.PremiumTypes.TIER_2);
-                (0, r.openModalLazy)(async () => {
+                    subscriptionTier: v,
+                    trialId: R,
+                    postSuccessGuild: O,
+                    openInvoiceId: U,
+                    applicationId: y,
+                    referralTrialOfferId: D,
+                    giftRecipient: P,
+                    returnRef: M,
+                    subscription: L
+                } = null != e ? e : {}, b = !1, w = (0, r.v4)(), F = s.default.getCurrentUser(), V = (0, f.isPremiumExactly)(F, _.PremiumTypes.TIER_2);
+                (0, l.openModalLazy)(async () => {
                     let {
                         default: e
                     } = await n.el("646139").then(n.bind(n, "646139"));
                     return n => {
                         let {
-                            onClose: l,
-                            ...r
+                            onClose: r,
+                            ...l
                         } = n;
                         return (0, i.jsx)(e, {
-                            ...r,
-                            loadId: M,
-                            subscriptionTier: A,
-                            skuId: A,
-                            isGift: g,
+                            ...l,
+                            loadId: w,
+                            subscriptionTier: v,
+                            skuId: v,
+                            isGift: C,
                             giftMessage: m,
-                            giftRecipient: D,
+                            giftRecipient: P,
                             initialPlanId: t,
                             followupSKUInfo: p,
                             onClose: (e, t) => {
-                                l(), null == I || I(e), e && (null == h || h(), !g && null != t && t === _.PremiumSubscriptionSKUs.TIER_2 && !x && d.ComponentDispatch.dispatch(E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
+                                r(), null == S || S(e), e && (null == h || h(), !C && null != t && t === _.PremiumSubscriptionSKUs.TIER_2 && !V && c.ComponentDispatch.dispatch(E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
                             },
                             onComplete: () => {
-                                w = !0, null == S || S(), !g && (0, u.setCanPlayWowMoment)(!0)
+                                b = !0, null == T || T(), !C && (0, u.setCanPlayWowMoment)(!0)
                             },
                             onSubscriptionConfirmation: h,
-                            analyticsLocations: T,
-                            analyticsObject: N,
-                            analyticsLocation: C,
-                            analyticsSourceLocation: v,
-                            trialId: L,
-                            postSuccessGuild: U,
+                            analyticsLocations: I,
+                            analyticsObject: A,
+                            analyticsLocation: g,
+                            analyticsSourceLocation: N,
+                            trialId: R,
+                            postSuccessGuild: O,
                             planGroup: _.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
-                            openInvoiceId: R,
-                            applicationId: P,
-                            referralTrialOfferId: y,
-                            returnRef: O,
-                            subscription: b
+                            openInvoiceId: U,
+                            applicationId: y,
+                            referralTrialOfferId: D,
+                            returnRef: M,
+                            subscription: L
                         })
                     }
                 }, {
                     modalKey: "payment-modal",
                     onCloseCallback: () => {
-                        !w && c.default.track(E.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-                            load_id: M,
+                        !b && d.default.track(E.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+                            load_id: w,
                             payment_type: E.PurchaseTypeToAnalyticsPaymentType[E.PurchaseTypes.SUBSCRIPTION],
-                            location: null != C ? C : N,
-                            source: v,
+                            location: null != g ? g : A,
+                            source: N,
                             subscription_type: E.SubscriptionTypes.PREMIUM,
-                            is_gift: g,
-                            eligible_for_trial: null != L,
-                            application_id: P,
-                            location_stack: T
-                        }), (0, o.clearError)(), (0, s.clearPurchaseTokenAuthState)(), null == I || I(w), w && (null == h || h())
+                            is_gift: C,
+                            eligible_for_trial: null != R,
+                            application_id: y,
+                            location_stack: I
+                        }), (0, o.clearError)(), (0, a.clearPurchaseTokenAuthState)(), null == S || S(b), b && (null == h || h())
                     },
                     onCloseRequest: E.NOOP
                 })

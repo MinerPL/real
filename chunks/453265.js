@@ -1,50 +1,50 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return f
                 }
             });
-            var r = n("37983");
+            var i = n("37983");
             n("884691");
-            var i = n("551042"),
-                a = n("599110"),
-                s = n("50926"),
-                o = n("347977"),
+            var r = n("551042"),
+                l = n("599110"),
+                o = n("50926"),
+                a = n("347977"),
                 u = n("394294"),
-                l = n("49111");
-            let c = () => {
-                    a.default.track(l.AnalyticEvents.MODAL_DISMISSED, {
+                s = n("49111");
+            let d = () => {
+                    l.default.track(s.AnalyticEvents.MODAL_DISMISSED, {
                         type: u.MEMBER_VERIFICATION_TYPE
                     })
                 },
-                d = e => {
-                    a.default.track(l.AnalyticEvents.OPEN_MODAL, {
+                c = e => {
+                    l.default.track(s.AnalyticEvents.OPEN_MODAL, {
                         type: u.MEMBER_VERIFICATION_TYPE,
                         guild_id: e
                     })
                 };
-            var _ = {
+            var f = {
                 openMemberVerificationModal(e, t) {
-                    d(e);
-                    let a = async t => {
-                        await s.default.submitVerificationForm(e, t)
+                    c(e);
+                    let l = async t => {
+                        await o.default.submitVerificationForm(e, t)
                     };
-                    (0, i.openModalLazy)(async () => {
+                    (0, r.openModalLazy)(async () => {
                         let {
                             default: t
                         } = await n.el("93184").then(n.bind(n, "93184"));
-                        return n => (0, r.jsx)(t, {
+                        return n => (0, i.jsx)(t, {
                             ...n,
                             guildId: e,
-                            onComplete: a,
+                            onComplete: l,
                             onClose: function() {
                                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                                 if (!e) {
-                                    if (o.useMemberVerificationFormNoticeStore.getState().hasUnsubmittedChanges) {
-                                        (0, o.setShowWarning)(!0);
+                                    if (a.useMemberVerificationFormNoticeStore.getState().hasUnsubmittedChanges) {
+                                        (0, a.setShowWarning)(!0);
                                         return
                                     }
-                                    c()
+                                    d()
                                 }
                                 n.onClose()
                             }
@@ -52,13 +52,13 @@
                     }, {
                         modalKey: u.IN_APP_MEMBER_VERIFICATION_MODAL_KEY,
                         onCloseRequest: () => {
-                            c(), o.useMemberVerificationFormNoticeStore.getState().hasUnsubmittedChanges ? (0, o.setShowWarning)(!0) : (0, i.closeModal)(u.IN_APP_MEMBER_VERIFICATION_MODAL_KEY)
+                            d(), a.useMemberVerificationFormNoticeStore.getState().hasUnsubmittedChanges ? (0, a.setShowWarning)(!0) : (0, r.closeModal)(u.IN_APP_MEMBER_VERIFICATION_MODAL_KEY)
                         },
                         onCloseCallback: t
                     })
                 },
                 closeMemberVerificationModal() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                    !e && c(), (0, i.closeModal)(u.IN_APP_MEMBER_VERIFICATION_MODAL_KEY)
+                    !e && d(), (0, r.closeModal)(u.IN_APP_MEMBER_VERIFICATION_MODAL_KEY)
                 }
             }

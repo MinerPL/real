@@ -1,16 +1,16 @@
             "use strict";
             n.r(t), n.d(t, {
                 V6OrEarlierAPIError: function() {
-                    return r.default
-                },
-                APIError: function() {
                     return i.default
                 },
+                APIError: function() {
+                    return r.default
+                },
                 BillingError: function() {
-                    return a.default
+                    return s.default
                 },
                 AppliedGuildBoostError: function() {
-                    return s.default
+                    return l.default
                 },
                 UploadVoiceDebugLogsError: function() {
                     return o.default
@@ -19,9 +19,9 @@
                     return o.UploadErrorCodes
                 }
             });
-            var r = n("333805"),
-                i = n("599417"),
-                a = n("736978");
+            var i = n("333805"),
+                r = n("599417"),
+                s = n("736978");
             n("852766"), n("846071");
-            var s = n("79489"),
+            var l = n("79489"),
                 o = n("927367")

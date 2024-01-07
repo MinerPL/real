@@ -5,10 +5,10 @@
                 }
             }), n("222007"), n("70102");
             var i = n("884691"),
-                l = n("748820"),
-                r = n("157590");
-            let o = (0, l.v4)(),
-                s = new Map,
+                r = n("748820"),
+                s = n("157590");
+            let l = (0, r.v4)(),
+                o = new Map,
                 u = new Map;
             class a extends i.Component {
                 componentDidMount() {
@@ -48,9 +48,9 @@
                         rootMargin: n,
                         threshold: i
                     } = e;
-                    t ? s.has(t) ? this.elementId = s.get(t) || "" : s.set(t, (0, l.v4)()) : this.elementId = o;
+                    t ? o.has(t) ? this.elementId = o.get(t) || "" : o.set(t, (0, r.v4)()) : this.elementId = l;
                     let a = this.getVisibilityObserverId();
-                    !u.has(a) && u.set(a, new r.default({
+                    !u.has(a) && u.set(a, new s.default({
                         root: t,
                         rootMargin: n,
                         threshold: i

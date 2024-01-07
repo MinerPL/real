@@ -1,37 +1,37 @@
-            "use strict";
-            var e = n("434978"),
-                i = n("59393"),
-                u = n("366483"),
-                o = n("470984"),
-                c = n("823493"),
-                a = n("539536"),
-                s = n("681645"),
-                f = n("688358"),
-                l = n("391358"),
-                p = n("561051"),
-                v = n("571503"),
-                x = n("814026"),
-                h = n("140925");
-            t.exports = function(t, r, n, d) {
-                var g = "stackTraceLimit",
-                    y = d ? 2 : 1,
-                    E = t.split("."),
-                    b = E[E.length - 1],
-                    I = e.apply(null, E);
-                if (I) {
-                    var R = I.prototype;
-                    if (!h && i(R, "cause") && delete R.cause, !n) return I;
-                    var k = e("Error"),
-                        m = r(function(t, r) {
-                            var n = l(d ? r : t, void 0),
-                                e = d ? new I(t) : new I;
-                            return void 0 !== n && u(e, "message", n), v(e, m, e.stack, 2), this && o(R, this) && f(e, this, m), arguments.length > y && p(e, arguments[y]), e
-                        });
-                    if (m.prototype = R, "Error" !== b ? c ? c(m, k) : a(m, k, {
-                            name: !0
-                        }) : x && g in I && (s(m, I, g), s(m, I, "prepareStackTrace")), a(m, I), !h) try {
-                        R.name !== b && u(R, "name", b), R.constructor = m
-                    } catch (t) {}
-                    return m
+                "use strict";
+                var e = r("434978"),
+                    o = r("59393"),
+                    u = r("366483"),
+                    i = r("470984"),
+                    c = r("823493"),
+                    f = r("539536"),
+                    s = r("681645"),
+                    a = r("688358"),
+                    _ = r("391358"),
+                    E = r("561051"),
+                    p = r("571503"),
+                    O = r("814026"),
+                    l = r("140925");
+                t.exports = function(t, n, r, A) {
+                    var T = "stackTraceLimit",
+                        d = A ? 2 : 1,
+                        R = t.split("."),
+                        I = R[R.length - 1],
+                        y = e.apply(null, R);
+                    if (y) {
+                        var h = y.prototype;
+                        if (!l && o(h, "cause") && delete h.cause, !r) return y;
+                        var v = e("Error"),
+                            N = n(function(t, n) {
+                                var r = _(A ? n : t, void 0),
+                                    e = A ? new y(t) : new y;
+                                return void 0 !== r && u(e, "message", r), p(e, N, e.stack, 2), this && i(h, this) && a(e, this, N), arguments.length > d && E(e, arguments[d]), e
+                            });
+                        if (N.prototype = h, "Error" !== I ? c ? c(N, v) : f(N, v, {
+                                name: !0
+                            }) : O && T in y && (s(N, y, T), s(N, y, "prepareStackTrace")), f(N, y), !l) try {
+                            h.name !== I && u(h, "name", I), h.constructor = N
+                        } catch (t) {}
+                        return N
+                    }
                 }
-            }

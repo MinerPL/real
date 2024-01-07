@@ -1,7 +1,7 @@
             "use strict";
-            n.r(t), n.d(t, {
+            l.r(t), l.d(t, {
                 useSelfBroadcast: function() {
-                    return o
+                    return u
                 },
                 default: function() {
                     return d
@@ -13,61 +13,61 @@
                     return f
                 },
                 getIsBroadcastingToAnyone: function() {
-                    return E
+                    return S
                 }
             });
-            var a = n("446674"),
-                r = n("845579");
-            n("373469");
-            var s = n("271938"),
-                i = n("42203");
-            n("18494");
-            var l = n("101125"),
-                u = n("9759");
+            var a = l("446674"),
+                n = l("845579");
+            l("373469");
+            var s = l("271938"),
+                r = l("42203");
+            l("18494");
+            var i = l("101125"),
+                o = l("9759");
 
-            function o() {
+            function u() {
                 let e = (0, a.useStateFromStores)([s.default], () => s.default.getId()),
                     {
                         canBroadcast: t
-                    } = u.default.useExperiment({
+                    } = o.default.useExperiment({
                         location: "use_self_broadcast"
                     }, {
                         autoTrackExposure: !1
                     }),
-                    n = (0, a.useStateFromStores)([l.default], () => l.default.getBroadcast());
-                return t && (null == n ? void 0 : n.userId) === e ? n : null
+                    l = (0, a.useStateFromStores)([i.default], () => i.default.getBroadcast());
+                return t && (null == l ? void 0 : l.userId) === e ? l : null
             }
 
             function d() {
-                let e = o();
+                let e = u();
                 return null != e
             }
 
             function c(e) {
-                let t = o(),
-                    n = (0, a.useStateFromStores)([i.default], () => i.default.getChannel(e));
-                return null != t && null != n && n.ownerId === t.userId && n.isBroadcastChannel()
+                let t = u(),
+                    l = (0, a.useStateFromStores)([r.default], () => r.default.getChannel(e));
+                return null != t && null != l && l.ownerId === t.userId && l.isBroadcastChannel()
             }
 
             function f(e) {
                 let t = s.default.getId(),
                     {
-                        canBroadcast: n
-                    } = u.default.getCurrentConfig({
+                        canBroadcast: l
+                    } = o.default.getCurrentConfig({
                         location: "is_broadcasting_in_channel"
                     }, {
                         autoTrackExposure: !1
                     }),
-                    a = l.default.getBroadcast();
-                if (!n || null == a || a.userId !== t) return !1;
-                let r = i.default.getChannel(e);
-                return null != r && r.ownerId === a.userId && r.isBroadcastChannel()
+                    a = i.default.getBroadcast();
+                if (!l || null == a || a.userId !== t) return !1;
+                let n = r.default.getChannel(e);
+                return null != n && n.ownerId === a.userId && n.isBroadcastChannel()
             }
 
-            function E() {
-                let e = r.BroadcastAllowedGuildIds.getSetting(),
-                    t = r.BroadcastAllowedUserIds.getSetting(),
-                    n = r.BroadcastAllowFriends.getSetting();
-                return n || e.length > 0 || t.length > 0
+            function S() {
+                let e = n.BroadcastAllowedGuildIds.getSetting(),
+                    t = n.BroadcastAllowedUserIds.getSetting(),
+                    l = n.BroadcastAllowFriends.getSetting();
+                return l || e.length > 0 || t.length > 0
             }
-            n("194051")
+            l("194051")

@@ -1,64 +1,64 @@
             "use strict";
-            i.r(t), i.d(t, {
+            n.r(e), n.d(e, {
                 default: function() {
-                    return f
+                    return c
                 }
             });
-            var n = i("446674"),
-                l = i("862337"),
-                a = i("913144"),
-                u = i("49111");
-            let r = {},
-                d = {};
+            var l = n("446674"),
+                u = n("862337"),
+                r = n("913144"),
+                i = n("49111");
+            let a = {},
+                o = {};
 
-            function o(e, t, i) {
-                var n;
+            function s(t, e, n) {
+                var l;
                 let {
-                    applicationId: o
-                } = i, s = null !== (n = r[o]) && void 0 !== n ? n : {};
-                if (s[t] = e, r[o] = s, !__OVERLAY__ && e === u.ActivityActionStates.FAILED) {
-                    null != d[o] && d[o].stop();
-                    let e = new l.Timeout;
-                    e.start(12e4, () => a.default.dispatch({
+                    applicationId: s
+                } = n, d = null !== (l = a[s]) && void 0 !== l ? l : {};
+                if (d[e] = t, a[s] = d, !__OVERLAY__ && t === i.ActivityActionStates.FAILED) {
+                    null != o[s] && o[s].stop();
+                    let t = new u.Timeout;
+                    t.start(12e4, () => r.default.dispatch({
                         type: "ACTIVITY_LAUNCH_FAIL",
-                        applicationId: o,
-                        activityType: t
-                    })), d[o] = e
+                        applicationId: s,
+                        activityType: e
+                    })), o[s] = t
                 }
             }
 
-            function s(e) {
-                return o(u.ActivityActionStates.COMPLETE, u.ActivityActionTypes.JOIN, e)
+            function d(t) {
+                return s(i.ActivityActionStates.COMPLETE, i.ActivityActionTypes.JOIN, t)
             }
-            class c extends n.default.Store {
-                getState(e, t) {
-                    let i = r[e];
-                    return null == i ? void 0 : i[t]
+            class f extends l.default.Store {
+                getState(t, e) {
+                    let n = a[t];
+                    return null == n ? void 0 : n[e]
                 }
                 getStates() {
-                    return r
+                    return a
                 }
             }
-            c.displayName = "ActivityLauncherStore";
-            var f = new c(a.default, {
-                OVERLAY_INITIALIZE: function(e) {
+            f.displayName = "ActivityLauncherStore";
+            var c = new f(r.default, {
+                OVERLAY_INITIALIZE: function(t) {
                     let {
-                        activityLauncherStates: t
-                    } = e;
-                    r = {
-                        ...t
+                        activityLauncherStates: e
+                    } = t;
+                    a = {
+                        ...e
                     }
                 },
-                ACTIVITY_JOIN_LOADING: e => o(u.ActivityActionStates.LOADING, u.ActivityActionTypes.JOIN, e),
-                ACTIVITY_JOIN_FAILED: e => o(u.ActivityActionStates.FAILED, u.ActivityActionTypes.JOIN, e),
-                ACTIVITY_JOIN: s,
-                EMBEDDED_ACTIVITY_CLOSE: s,
-                ACTIVITY_LAUNCH_FAIL: function(e) {
+                ACTIVITY_JOIN_LOADING: t => s(i.ActivityActionStates.LOADING, i.ActivityActionTypes.JOIN, t),
+                ACTIVITY_JOIN_FAILED: t => s(i.ActivityActionStates.FAILED, i.ActivityActionTypes.JOIN, t),
+                ACTIVITY_JOIN: d,
+                EMBEDDED_ACTIVITY_CLOSE: d,
+                ACTIVITY_LAUNCH_FAIL: function(t) {
                     let {
-                        applicationId: t,
-                        activityType: i
-                    } = e, n = r[t];
-                    if (null == n || n[i] !== u.ActivityActionStates.FAILED) return !1;
-                    delete n[i]
+                        applicationId: e,
+                        activityType: n
+                    } = t, l = a[e];
+                    if (null == l || l[n] !== i.ActivityActionStates.FAILED) return !1;
+                    delete l[n]
                 }
             })

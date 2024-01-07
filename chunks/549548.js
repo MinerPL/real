@@ -1,13 +1,13 @@
             "use strict";
-            l.r(t), l.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return s
                 }
             });
-            var i = l("782340");
+            var a = n("782340");
 
-            function a(e) {
-                return e > 0 ? i.default.Messages.EMBEDDED_ACTIVITIES_MAX_PARTICIPANTS.format({
+            function s(e) {
+                return e > 0 ? a.default.Messages.EMBEDDED_ACTIVITIES_MAX_PARTICIPANTS.format({
                     count: e
-                }) : i.default.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS
+                }) : a.default.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS
             }

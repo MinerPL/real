@@ -5,22 +5,22 @@
                 }
             });
             var i, l, u = n("37983"),
-                o = n("884691"),
+                a = n("884691"),
                 r = n("748820"),
-                a = n("599110"),
+                d = n("599110"),
                 s = n("117362"),
-                d = n("49111");
-            (i = class extends o.Component {
+                o = n("49111");
+            (i = class extends a.Component {
                 renderProvider(e) {
                     var t, n;
                     let {
                         section: i,
                         page: l,
-                        object: o,
+                        object: a,
                         objectType: r,
                         children: s
-                    } = this.props, d = this.mergeLocation(e.location, this.getLocation(l, i, o, r)), c = this.getContext(d, null !== (t = this._loadDate) && void 0 !== t ? t : e.loadDate, null !== (n = this._loadId) && void 0 !== n ? n : e.loadId);
-                    return (0, u.jsx)(a.AnalyticsContext.Provider, {
+                    } = this.props, o = this.mergeLocation(e.location, this.getLocation(l, i, a, r)), c = this.getContext(o, null !== (t = this._loadDate) && void 0 !== t ? t : e.loadDate, null !== (n = this._loadId) && void 0 !== n ? n : e.loadId);
+                    return (0, u.jsx)(d.AnalyticsContext.Provider, {
                         value: c,
                         children: s
                     })
@@ -29,7 +29,7 @@
                     let {
                         context: e
                     } = this.props;
-                    return null != e ? this.renderProvider(e) : (0, u.jsx)(a.AnalyticsContext.Consumer, {
+                    return null != e ? this.renderProvider(e) : (0, u.jsx)(d.AnalyticsContext.Consumer, {
                         children: e => this.renderProvider(e)
                     })
                 }
@@ -46,6 +46,6 @@
                         loadId: n
                     })), null != e.loadId ? this._loadId = e.loadId : e.root && (this._loadId = (0, r.v4)())
                 }
-            }).Pages = d.AnalyticsPages, i.Sections = d.AnalyticsSections, i.Objects = d.AnalyticsObjects, i.ObjectTypes = d.AnalyticsObjectTypes, i.defaultProps = {
+            }).Pages = o.AnalyticsPages, i.Sections = o.AnalyticsSections, i.Objects = o.AnalyticsObjects, i.ObjectTypes = o.AnalyticsObjectTypes, i.defaultProps = {
                 root: !1
             }, l = i

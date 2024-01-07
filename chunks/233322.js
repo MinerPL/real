@@ -1,9 +1,9 @@
             "use strict";
-            let r;
+            let i;
             n.r(t), n.d(t, {
                 openMemberVerificationModal: function() {
-                    return i
+                    return r
                 }
-            }), r = n("453265").default;
-            let i = r.openMemberVerificationModal;
-            r.closeMemberVerificationModal
+            }), i = n("453265").default;
+            let r = i.openMemberVerificationModal;
+            i.closeMemberVerificationModal

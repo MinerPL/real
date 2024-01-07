@@ -1,31 +1,31 @@
             "use strict";
             n.r(t), n.d(t, {
                 showModal: function() {
-                    return o
+                    return a
                 },
                 updateModalProps: function() {
                     return u
                 }
             });
-            var r = n("37983");
+            var i = n("37983");
             n("884691");
-            var i = n("551042"),
-                a = n("920636");
-            let s = (e, t, n) => function(i) {
-                return (0, r.jsx)(a.default, {
+            var r = n("551042"),
+                l = n("920636");
+            let o = (e, t, n) => function(r) {
+                return (0, i.jsx)(l.default, {
                     handleSubmit: e,
                     handleEarlyClose: t,
                     ...n,
-                    ...i
+                    ...r
                 })
             };
 
-            function o(e, t, n) {
-                return (0, i.openModal)(s(e, t, n), {
+            function a(e, t, n) {
+                return (0, r.openModal)(o(e, t, n), {
                     onCloseCallback: t
                 })
             }
 
-            function u(e, t, n, r) {
-                return (0, i.updateModal)(e, s(t, n, r))
+            function u(e, t, n, i) {
+                return (0, r.updateModal)(e, o(t, n, i))
             }

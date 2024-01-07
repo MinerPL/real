@@ -1,22 +1,22 @@
             "use strict";
             n.r(t), n.d(t, {
                 Shine: function() {
-                    return I
+                    return S
                 },
                 default: function() {
                     return h
                 }
             });
-            var i, l, r = n("37983"),
+            var i, r, l = n("37983"),
                 o = n("884691"),
-                s = n("414456"),
-                u = n.n(s),
-                a = n("458960"),
-                c = n("77078"),
-                d = n("252744"),
+                a = n("414456"),
+                u = n.n(a),
+                s = n("458960"),
+                d = n("77078"),
+                c = n("252744"),
                 f = n("145131"),
                 E = n("396792");
-            (i = l || (l = {})).DEFAULT = "default", i.SMALL = "small";
+            (i = r || (r = {})).DEFAULT = "default", i.SMALL = "small";
             let _ = {
                     default: E.shineDefault,
                     small: E.shineSmall
@@ -25,7 +25,7 @@
                     default: E.shineInnerDefault,
                     small: E.shineInnerSmall
                 };
-            class I extends o.PureComponent {
+            class S extends o.PureComponent {
                 render() {
                     let {
                         className: e,
@@ -33,50 +33,50 @@
                         shinePaused: n,
                         ...i
                     } = this.props;
-                    return (0, r.jsx)(a.default.div, {
+                    return (0, l.jsx)(s.default.div, {
                         ...i,
                         className: u(E.shineContainer, e, {
                             [E.shinePaused]: n
                         }),
-                        children: (0, r.jsx)(f.default, {
+                        children: (0, l.jsx)(f.default, {
                             align: f.default.Align.CENTER,
                             justify: f.default.Justify.CENTER,
                             className: _[t],
-                            children: (0, r.jsx)("div", {
+                            children: (0, l.jsx)("div", {
                                 className: p[t]
                             })
                         })
                     })
                 }
             }
-            I.defaultProps = {
+            S.defaultProps = {
                 shineSize: "default"
             };
-            let S = e => {
+            let T = e => {
                 let {
                     children: t,
                     className: n,
                     disabled: i,
-                    submitting: l,
-                    pauseAnimation: s,
-                    shineSize: a = "default",
+                    submitting: r,
+                    pauseAnimation: a,
+                    shineSize: s = "default",
                     shinePaused: f,
                     buttonShineClassName: _,
                     onlyShineOnHover: p,
-                    ...S
-                } = e, h = o.createRef(), T = (0, d.default)(h), N = !i && !l && !0 !== s && (!p || T);
-                return (0, r.jsxs)(c.Button, {
+                    ...T
+                } = e, h = o.createRef(), I = (0, c.default)(h), A = !i && !r && !0 !== a && (!p || I);
+                return (0, l.jsxs)(d.Button, {
                     buttonRef: h,
-                    ...S,
+                    ...T,
                     className: u(E.shinyButton, n),
                     disabled: i,
-                    submitting: l,
-                    children: [t, N ? (0, r.jsx)(I, {
+                    submitting: r,
+                    children: [t, A ? (0, l.jsx)(S, {
                         shinePaused: f,
                         className: u(E.buttonShine, p ? E.onlyShineOnHover : void 0, _),
-                        shineSize: a
+                        shineSize: s
                     }) : null]
                 })
             };
-            S.ShineSizes = l;
-            var h = S
+            T.ShineSizes = r;
+            var h = T

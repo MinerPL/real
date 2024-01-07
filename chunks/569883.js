@@ -1,17 +1,17 @@
             "use strict";
-            n.r(t), n.d(t, {
+            n.r(e), n.d(e, {
                 default: function() {
-                    return l
+                    return r
                 }
             });
-            var l, r = n("666038");
-            l = class e extends r.default {
-                static createFromServer(t) {
-                    return new e({
-                        collectedCount: t.collected_count
+            var r, i = n("666038");
+            r = class t extends i.default {
+                static createFromServer(e) {
+                    return new t({
+                        collectedCount: e.collected_count
                     })
                 }
-                constructor(e) {
-                    super(), this.collectedCount = e.collectedCount
+                constructor(t) {
+                    super(), this.collectedCount = t.collectedCount
                 }
             }

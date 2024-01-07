@@ -1,36 +1,36 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return h
+                    return E
                 }
             });
-            var u = n("37983");
+            var a = n("37983");
             n("884691");
-            var a = n("446674"),
-                s = n("77078"),
-                r = n("828986"),
-                i = n("249561"),
-                l = n("957255"),
-                c = n("566998"),
-                d = n("327054"),
-                o = n("49111"),
+            var i = n("446674"),
+                l = n("77078"),
+                s = n("828986"),
+                u = n("249561"),
+                r = n("957255"),
+                d = n("566998"),
+                o = n("327054"),
+                c = n("49111"),
                 f = n("782340");
 
-            function h(e, t) {
-                let n = (0, a.useStateFromStores)([l.default], () => l.default.can(o.Permissions.MANAGE_MESSAGES, t), [t]);
-                return e.state !== o.MessageStates.SEND_FAILED && (0, d.default)(e, t, n) ? !1 === e.pinned ? (0, u.jsx)(s.MenuItem, {
+            function E(e, t) {
+                let n = (0, i.useStateFromStores)([r.default], () => r.default.can(c.Permissions.MANAGE_MESSAGES, t), [t]);
+                return e.state !== c.MessageStates.SEND_FAILED && (0, o.default)(e, t, n) ? !1 === e.pinned ? (0, a.jsx)(l.MenuItem, {
                     id: "pin",
                     action: function(n) {
-                        n.shiftKey ? r.default.pinMessage(t, e.id) : i.default.confirmPin(t, e)
+                        n.shiftKey ? s.default.pinMessage(t, e.id) : u.default.confirmPin(t, e)
                     },
                     label: f.default.Messages.PIN_MESSAGE,
-                    icon: c.default
-                }) : (0, u.jsx)(s.MenuItem, {
+                    icon: d.default
+                }) : (0, a.jsx)(l.MenuItem, {
                     id: "unpin",
                     action: function(n) {
-                        n.shiftKey ? r.default.unpinMessage(t, e.id) : i.default.confirmUnpin(t, e)
+                        n.shiftKey ? s.default.unpinMessage(t, e.id) : u.default.confirmUnpin(t, e)
                     },
                     label: f.default.Messages.UNPIN_MESSAGE,
-                    icon: c.default
+                    icon: d.default
                 }) : null
             }

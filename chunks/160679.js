@@ -1,27 +1,27 @@
-            r("70102"), r("424973"), e.parse = function(t, e) {
+            e("70102"), e("424973"), r.parse = function(t, r) {
                 if ("string" != typeof t) throw TypeError("argument str must be a string");
-                var r = {},
+                var e = {},
                     i = t.split(u),
-                    o = (e || {}).decode || n;
+                    o = (r || {}).decode || n;
                 return i.forEach(function(t) {
-                    var e = t.indexOf("=");
-                    if (!(e < 0)) {
-                        var n = t.substr(0, e).trim(),
-                            i = t.substr(++e, t.length).trim();
-                        '"' == i[0] && (i = i.slice(1, -1)), void 0 == r[n] && (r[n] = function(t, e) {
+                    var r = t.indexOf("=");
+                    if (!(r < 0)) {
+                        var n = t.substr(0, r).trim(),
+                            i = t.substr(++r, t.length).trim();
+                        '"' == i[0] && (i = i.slice(1, -1)), void 0 == e[n] && (e[n] = function(t, r) {
                             try {
-                                return e(t)
-                            } catch (e) {
+                                return r(t)
+                            } catch (r) {
                                 return t
                             }
                         }(i, o))
                     }
-                }), r
-            }, e.serialize = function(t, e, r) {
-                var n = r || {},
+                }), e
+            }, r.serialize = function(t, r, e) {
+                var n = e || {},
                     u = n.encode || i;
                 if (!o.test(t)) throw TypeError("argument name is invalid");
-                var s = u(e);
+                var s = u(r);
                 if (s && !o.test(s)) throw TypeError("argument val is invalid");
                 var a = [t + "=" + s];
                 if (null != n.maxAge) {

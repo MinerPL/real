@@ -1,122 +1,122 @@
             "use strict";
-            n.r(t), n.d(t, {
+            n.r(e), n.d(e, {
                 getPacksForUser: function() {
-                    return a
+                    return o
                 },
                 collectPack: function() {
-                    return s
+                    return c
                 },
                 uncollectPack: function() {
-                    return d
+                    return l
                 },
                 updateInventorySettings: function() {
-                    return c
+                    return d
                 },
                 getPackMetadata: function() {
                     return E
                 },
                 dismissPackAddedNotification: function() {
-                    return _
+                    return f
                 }
             });
-            var l = n("872717"),
-                r = n("913144"),
-                u = n("569883"),
-                i = n("871336"),
-                o = n("49111");
-            async function a() {
-                r.default.dispatch({
+            var r = n("872717"),
+                i = n("913144"),
+                a = n("569883"),
+                u = n("871336"),
+                s = n("49111");
+            async function o() {
+                i.default.dispatch({
                     type: "INVENTORY_FETCH"
                 });
                 try {
-                    let e = await l.default.get({
-                        url: o.Endpoints.INVENTORY_GET
+                    let t = await r.default.get({
+                        url: s.Endpoints.INVENTORY_GET
                     });
-                    r.default.dispatch({
+                    i.default.dispatch({
                         type: "INVENTORY_FETCH_SUCCESS",
-                        packs: e.body.map(e => i.default.fromServer(e))
+                        packs: t.body.map(t => u.default.fromServer(t))
+                    })
+                } catch (e) {
+                    var t;
+                    i.default.dispatch({
+                        type: "INVENTORY_FETCH_ERROR",
+                        is4XXError: (null == (t = e.body) ? void 0 : t.status) >= 400 && (null == t ? void 0 : t.status) <= 499
+                    })
+                }
+            }
+            async function c(t) {
+                let {
+                    authorId: e,
+                    packId: n,
+                    expressionName: a
+                } = t;
+                try {
+                    let t = await r.default.put({
+                        url: s.Endpoints.INVENTORY_ADD_PACK,
+                        body: {
+                            author_id: e,
+                            pack_id: n,
+                            name_override: a
+                        }
+                    });
+                    i.default.dispatch({
+                        type: "INVENTORY_COLLECT_PACK_SUCCESS",
+                        pack: u.default.fromServer(t.body)
                     })
                 } catch (t) {
-                    var e;
-                    r.default.dispatch({
-                        type: "INVENTORY_FETCH_ERROR",
-                        is4XXError: (null == (e = t.body) ? void 0 : e.status) >= 400 && (null == e ? void 0 : e.status) <= 499
-                    })
-                }
-            }
-            async function s(e) {
-                let {
-                    authorId: t,
-                    packId: n,
-                    expressionName: u
-                } = e;
-                try {
-                    let e = await l.default.put({
-                        url: o.Endpoints.INVENTORY_ADD_PACK,
-                        body: {
-                            author_id: t,
-                            pack_id: n,
-                            name_override: u
-                        }
-                    });
-                    r.default.dispatch({
-                        type: "INVENTORY_COLLECT_PACK_SUCCESS",
-                        pack: i.default.fromServer(e.body)
-                    })
-                } catch (e) {
                     return
                 }
             }
-            async function d(e) {
+            async function l(t) {
                 let {
-                    packId: t
-                } = e;
+                    packId: e
+                } = t;
                 try {
-                    await l.default.put({
-                        url: o.Endpoints.INVENTORY_REMOVE_PACK,
+                    await r.default.put({
+                        url: s.Endpoints.INVENTORY_REMOVE_PACK,
                         body: {
-                            pack_id: t
+                            pack_id: e
                         }
-                    }), r.default.dispatch({
+                    }), i.default.dispatch({
                         type: "INVENTORY_REMOVE_PACK_SUCCESS",
-                        packId: t
+                        packId: e
                     })
-                } catch (e) {
+                } catch (t) {
                     return
                 }
             }
-            async function c(e) {
+            async function d(t) {
                 let {
-                    guildId: t,
+                    guildId: e,
                     settings: n
-                } = e;
+                } = t;
                 try {
-                    await l.default.patch({
-                        url: o.Endpoints.INVENTORY_UPDATE_SETTINGS(t),
+                    await r.default.patch({
+                        url: s.Endpoints.INVENTORY_UPDATE_SETTINGS(e),
                         body: {
                             is_emoji_pack_collectible: n.isEmojiPackCollectible
                         }
                     })
-                } catch (e) {
+                } catch (t) {
                     return
                 }
             }
-            async function E(e) {
+            async function E(t) {
                 let {
-                    packId: t
-                } = e;
+                    packId: e
+                } = t;
                 try {
-                    let e = await l.default.get({
-                        url: o.Endpoints.INVENTORY_PACK_METADATA(t)
+                    let t = await r.default.get({
+                        url: s.Endpoints.INVENTORY_PACK_METADATA(e)
                     });
-                    return u.default.createFromServer(e.body)
-                } catch (e) {
+                    return a.default.createFromServer(t.body)
+                } catch (t) {
                     return
                 }
             }
 
-            function _() {
-                r.default.dispatch({
+            function f() {
+                i.default.dispatch({
                     type: "INVENTORY_DISMISS_PACK_ADDED_NOTIFICATION"
                 })
             }

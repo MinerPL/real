@@ -1,50 +1,50 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return h
                 }
             });
-            var a = s("37983");
-            s("884691");
-            var n = s("414456"),
-                l = s.n(n),
-                i = s("819855"),
-                r = s("841098"),
-                o = s("449918"),
-                d = s("832132"),
-                u = s("818643"),
-                c = s("608684"),
-                E = s("49111"),
-                _ = s("575282");
-            let T = E.Color.PRIMARY_400,
+            var l = n("37983");
+            n("884691");
+            var a = n("414456"),
+                s = n.n(a),
+                i = n("819855"),
+                r = n("841098"),
+                u = n("449918"),
+                o = n("832132"),
+                d = n("818643"),
+                c = n("608684"),
+                E = n("49111"),
+                f = n("575282");
+            let _ = E.Color.PRIMARY_400,
                 I = E.Color.PRIMARY_500;
 
-            function S(e) {
+            function h(e) {
                 let {
                     enabled: t,
-                    imageClassName: s,
-                    iconWrapperClassName: n,
+                    imageClassName: n,
+                    iconWrapperClassName: a,
                     ...E
-                } = e, S = (0, r.default)(), N = (0, i.isThemeDark)(S) ? T : I, g = {
+                } = e, h = (0, r.default)(), T = (0, i.isThemeDark)(h) ? _ : I, N = {
                     height: 18,
                     width: 18,
-                    color: (0, o.getColor)(N)
+                    color: (0, u.getColor)(T)
                 };
-                return (0, a.jsx)(c.default, {
-                    className: l({
-                        [_.avatarUploader]: t,
-                        [_.avatarUploaderDisabled]: !t
+                return (0, l.jsx)(c.default, {
+                    className: s({
+                        [f.avatarUploader]: t,
+                        [f.avatarUploaderDisabled]: !t
                     }),
-                    imageClassName: l(s, _.avatarUploaderInnerSquare, {
-                        [_.avatarUploaderInnerSquareDisabled]: !t
+                    imageClassName: s(n, f.avatarUploaderInnerSquare, {
+                        [f.avatarUploaderInnerSquareDisabled]: !t
                     }),
-                    icon: null != E.image && "" !== E.image ? (0, a.jsx)(d.default, {
-                        ...g
-                    }) : (0, a.jsx)(u.default, {
-                        ...g
+                    icon: null != E.image && "" !== E.image ? (0, l.jsx)(o.default, {
+                        ...N
+                    }) : (0, l.jsx)(d.default, {
+                        ...N
                     }),
-                    iconClassName: l(_.avatarUploadIcon, _.hideDefaultIcon),
-                    iconWrapperClassName: n,
+                    iconClassName: s(f.avatarUploadIcon, f.hideDefaultIcon),
+                    iconWrapperClassName: a,
                     showIcon: !0,
                     showIconDisabled: !0,
                     hideSize: !0,

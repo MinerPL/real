@@ -1,34 +1,34 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return s
                 }
             });
-            var s = n("37983");
+            var l = n("37983");
             n("884691");
-            var i = n("77078"),
+            var u = n("77078"),
                 a = n("845579"),
-                l = n("662255"),
-                r = n("306160");
+                d = n("662255"),
+                i = n("306160");
 
-            function u(e) {
+            function s(e) {
                 let {
                     id: t,
                     label: n,
-                    onSuccess: u,
-                    shiftId: o,
-                    showIconFirst: c
-                } = e, d = a.DeveloperMode.useSetting();
-                if (__OVERLAY__ || !d || !r.SUPPORTS_COPY) return null;
-                let f = "devmode-copy-id-".concat(t);
-                return (0, s.jsx)(i.MenuItem, {
-                    id: f,
+                    onSuccess: s,
+                    shiftId: r,
+                    showIconFirst: o
+                } = e, c = a.DeveloperMode.useSetting();
+                if (__OVERLAY__ || !c || !i.SUPPORTS_COPY) return null;
+                let E = "devmode-copy-id-".concat(t);
+                return (0, l.jsx)(u.MenuItem, {
+                    id: E,
                     label: n,
                     action: function(e) {
-                        let n = null != o && e.shiftKey ? o : t;
-                        (0, r.copy)(n), null == u || u()
+                        let n = null != r && e.shiftKey ? r : t;
+                        (0, i.copy)(n), null == s || s()
                     },
-                    icon: l.default,
-                    showIconFirst: c
-                }, f)
+                    icon: d.default,
+                    showIconFirst: o
+                }, E)
             }

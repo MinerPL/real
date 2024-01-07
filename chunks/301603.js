@@ -1,24 +1,24 @@
             "use strict";
-            n.r(t), n.d(t, {
+            a.r(t), a.d(t, {
                 default: function() {
-                    return o
+                    return i
                 }
             });
-            var i = n("446674"),
-                a = n("629109"),
-                l = n("271938"),
-                r = n("42887"),
-                s = n("49111"),
-                u = n("353927");
+            var n = a("446674"),
+                u = a("629109"),
+                r = a("271938"),
+                d = a("42887"),
+                l = a("49111"),
+                s = a("353927");
 
-            function o(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.MediaEngineContextTypes.DEFAULT,
-                    n = (0, i.useStateFromStores)([l.default], () => l.default.getId()),
-                    o = (0, i.useStateFromStores)([r.default], () => r.default.supports(u.Features.DISABLE_VIDEO) && r.default.isVideoEnabled()),
-                    d = (0, i.useStateFromStores)([r.default], () => r.default.isLocalVideoDisabled(n, t), [n, t]),
-                    c = null == e || e === n;
-                return [c && (o || d), d, e => {
-                    let i = e ? s.VideoToggleState.DISABLED : s.VideoToggleState.MANUAL_ENABLED;
-                    a.default.setDisableLocalVideo(n, i, t)
+            function i(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.MediaEngineContextTypes.DEFAULT,
+                    a = (0, n.useStateFromStores)([r.default], () => r.default.getId()),
+                    i = (0, n.useStateFromStores)([d.default], () => d.default.supports(s.Features.DISABLE_VIDEO) && d.default.isVideoEnabled()),
+                    o = (0, n.useStateFromStores)([d.default], () => d.default.isLocalVideoDisabled(a, t), [a, t]),
+                    f = null == e || e === a;
+                return [f && (i || o), o, e => {
+                    let n = e ? l.VideoToggleState.DISABLED : l.VideoToggleState.MANUAL_ENABLED;
+                    u.default.setDisableLocalVideo(a, n, t)
                 }]
             }

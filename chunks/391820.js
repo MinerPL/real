@@ -1,21 +1,21 @@
             "use strict";
-            a.r(t), a.d(t, {
+            l.r(t), l.d(t, {
                 default: function() {
-                    return T
+                    return I
                 }
-            }), a("424973"), a("222007");
-            var s = a("37983"),
-                l = a("884691"),
-                n = a("446674"),
-                r = a("77078"),
-                i = a("641608"),
-                d = a("98328"),
-                u = a("993105"),
-                o = a("50885"),
-                h = a("782340"),
-                c = a("335420");
-            let I = "select";
-            class A extends l.PureComponent {
+            }), l("424973"), l("222007");
+            var a = l("37983"),
+                s = l("884691"),
+                n = l("446674"),
+                i = l("77078"),
+                r = l("641608"),
+                c = l("98328"),
+                u = l("993105"),
+                o = l("50885"),
+                d = l("782340"),
+                h = l("335420");
+            let p = "select";
+            class f extends s.PureComponent {
                 fetchAllDirectoryMetadata() {
                     let {
                         installationPaths: e
@@ -25,9 +25,9 @@
                         } = e;
                         return t
                     }), {
-                        newInstallationPath: a
+                        newInstallationPath: l
                     } = this.state;
-                    for (let e of (null != a && t.push(a), t = t.filter(e => !this.fetchedMetadataPaths.has(e)), (0, i.fetchMetadata)(t), t)) this.fetchedMetadataPaths.add(e)
+                    for (let e of (null != l && t.push(l), t = t.filter(e => !this.fetchedMetadataPaths.has(e)), (0, r.fetchMetadata)(t), t)) this.fetchedMetadataPaths.add(e)
                 }
                 componentDidMount() {
                     this.fetchAllDirectoryMetadata()
@@ -40,75 +40,75 @@
                         installationPaths: e
                     } = this.props, {
                         newInstallationPath: t
-                    } = this.state, a = e.map(e => {
+                    } = this.state, l = e.map(e => {
                         let {
                             path: t,
-                            label: a
+                            label: l
                         } = e;
                         return {
                             value: t,
-                            label: this.renderLabel(t, a)
+                            label: this.renderLabel(t, l)
                         }
                     });
-                    return null != t && a.push({
+                    return null != t && l.push({
                         value: t,
                         label: this.renderLabel(t)
-                    }), a.push({
-                        value: I,
-                        label: h.default.Messages.APPLICATION_INSTALLATION_MODAL_SELECT_DIRECTORY
-                    }), a
+                    }), l.push({
+                        value: p,
+                        label: d.default.Messages.APPLICATION_INSTALLATION_MODAL_SELECT_DIRECTORY
+                    }), l
                 }
                 hasEnoughDiskSpace(e) {
                     let {
                         requiredDiskKB: t,
-                        installationPathsMetadata: a
-                    } = this.props, s = null != a[e] ? a[e].availableKB : null;
-                    return null == t || null == s || t < s
+                        installationPathsMetadata: l
+                    } = this.props, a = null != l[e] ? l[e].availableKB : null;
+                    return null == t || null == a || t < a
                 }
                 sendChange(e) {
                     let {
                         installationPathsMetadata: t,
-                        onChange: a
-                    } = this.props, s = null != t[e] && !1 === t[e].hasPermission;
-                    a(e, s || !this.hasEnoughDiskSpace(e))
+                        onChange: l
+                    } = this.props, a = null != t[e] && !1 === t[e].hasPermission;
+                    l(e, a || !this.hasEnoughDiskSpace(e))
                 }
                 renderError() {
                     let {
                         value: e,
                         installationPathsMetadata: t
-                    } = this.props, a = null != t[e] && !1 === t[e].hasPermission;
-                    return a ? (0, s.jsx)("div", {
-                        className: c.error,
-                        children: h.default.Messages.APPLICATION_INSTALLATION_MODAL_NO_PERMISSION
-                    }) : this.hasEnoughDiskSpace(e) ? null : (0, s.jsx)("div", {
-                        className: c.error,
-                        children: h.default.Messages.APPLICATION_INSTALLATION_MODAL_NOT_ENOUGH_SPACE
+                    } = this.props, l = null != t[e] && !1 === t[e].hasPermission;
+                    return l ? (0, a.jsx)("div", {
+                        className: h.error,
+                        children: d.default.Messages.APPLICATION_INSTALLATION_MODAL_NO_PERMISSION
+                    }) : this.hasEnoughDiskSpace(e) ? null : (0, a.jsx)("div", {
+                        className: h.error,
+                        children: d.default.Messages.APPLICATION_INSTALLATION_MODAL_NOT_ENOUGH_SPACE
                     })
                 }
                 renderLabel(e, t) {
                     let {
-                        installationPathsMetadata: a
-                    } = this.props, s = null != t ? t : e;
-                    return null != a[e] && null != a[e].availableKB ? h.default.Messages.APPLICATION_INSTALLATION_MODAL_DIRECTORY_WITH_SPACE.format({
-                        path: s,
-                        size: (0, u.formatSize)(a[e].availableKB, {
+                        installationPathsMetadata: l
+                    } = this.props, a = null != t ? t : e;
+                    return null != l[e] && null != l[e].availableKB ? d.default.Messages.APPLICATION_INSTALLATION_MODAL_DIRECTORY_WITH_SPACE.format({
+                        path: a,
+                        size: (0, u.formatSize)(l[e].availableKB, {
                             useKibibytes: !0
                         })
-                    }) : s
+                    }) : a
                 }
                 render() {
                     let {
                         value: e,
                         className: t,
-                        autoFocus: a
+                        autoFocus: l
                     } = this.props;
-                    return (0, s.jsxs)("div", {
+                    return (0, a.jsxs)("div", {
                         className: t,
-                        children: [(0, s.jsx)(r.FormTitle, {
+                        children: [(0, a.jsx)(i.FormTitle, {
                             tag: "h5",
-                            children: h.default.Messages.APPLICATION_INSTALLATION_MODAL_LOCATION
-                        }), (0, s.jsx)(r.SingleSelect, {
-                            autoFocus: a,
+                            children: d.default.Messages.APPLICATION_INSTALLATION_MODAL_LOCATION
+                        }), (0, a.jsx)(i.SingleSelect, {
+                            autoFocus: l,
                             options: this.getOptions(),
                             value: e,
                             onChange: this.handleChange
@@ -119,15 +119,15 @@
                     super(...e), this.state = {
                         newInstallationPath: null
                     }, this.fetchedMetadataPaths = new Set, this.handleChange = e => {
-                        e === I ? o.default.showOpenDialog(["openDirectory"]).then(e => {
+                        e === p ? o.default.showOpenDialog(["openDirectory"]).then(e => {
                             if (null != e && e.length > 0) {
                                 let t = e[0];
                                 this.setState({
                                     newInstallationPath: null != this.props.installationPaths.find(e => {
                                         let {
-                                            path: a
+                                            path: l
                                         } = e;
-                                        return a === t
+                                        return l === t
                                     }) ? null : t
                                 }), this.sendChange(t)
                             }
@@ -135,7 +135,7 @@
                     }
                 }
             }
-            var T = n.default.connectStores([d.default], () => ({
-                installationPaths: d.default.installationPaths,
-                installationPathsMetadata: d.default.installationPathsMetadata
-            }))(A)
+            var I = n.default.connectStores([c.default], () => ({
+                installationPaths: c.default.installationPaths,
+                installationPathsMetadata: c.default.installationPathsMetadata
+            }))(f)

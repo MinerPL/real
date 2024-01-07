@@ -1,12 +1,12 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return r
                 }
             }), n("222007");
-            var r = n("884691");
+            var i = n("884691");
 
-            function i() {
-                let [, e] = (0, r.useState)({});
-                return (0, r.useCallback)(() => e({}), [])
+            function r() {
+                let [, e] = (0, i.useState)({});
+                return (0, i.useCallback)(() => e({}), [])
             }

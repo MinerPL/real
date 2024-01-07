@@ -1,24 +1,24 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
                     return u
                 }
             });
-            var a = s("94927"),
-                n = s("782340"),
-                l = s("32209"),
-                i = s("381471");
-            let r = {
-                experiment: a.default,
+            var s = n("94927"),
+                a = n("782340"),
+                i = n("32209"),
+                r = n("381471");
+            let l = {
+                experiment: s.default,
                 startTimeMs: 17025768e5,
                 endTimeMs: 17042184e5,
                 isDesktopOnly: !0,
                 ringtone: "call_ringing_snowsgiving",
-                getRingtoneSettingsLabel: () => n.default.Messages.SOUND_INCOMING_RING_EOY_2023 + " ❄️",
+                getRingtoneSettingsLabel: () => a.default.Messages.SOUND_INCOMING_RING_EOY_2023 + " ❄️",
                 appSpinnerSources: {
-                    webmDark: l,
-                    webmLight: i
+                    webmDark: i,
+                    webmLight: r
                 },
                 getLoadingTips: () => []
             };
-            var u = r
+            var u = l

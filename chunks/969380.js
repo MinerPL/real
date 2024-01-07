@@ -1,29 +1,29 @@
             "use strict";
-            l.r(t), l.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return i
                 }
-            }), l("222007");
-            var i = l("884691"),
-                a = l("550368");
-            let n = ["embedded_cover", "embedded_background"];
+            }), n("222007");
+            var a = n("884691"),
+                s = n("550368");
+            let l = ["embedded_cover", "embedded_background"];
 
-            function s(e) {
+            function i(e) {
                 let {
                     applicationId: t,
-                    size: l,
-                    names: s = n
-                } = e, [r, c] = i.useState(null), [d, o] = i.useState(!0), u = (0, a.getAssetImage)(t, r, l);
-                return i.useEffect(() => {
-                    (0, a.fetchAssetIds)(t, s).then(e => {
-                        for (let t of (o(!1), e))
+                    size: n,
+                    names: i = l
+                } = e, [r, o] = a.useState(null), [u, d] = a.useState(!0), c = (0, s.getAssetImage)(t, r, n);
+                return a.useEffect(() => {
+                    (0, s.fetchAssetIds)(t, i).then(e => {
+                        for (let t of (d(!1), e))
                             if (null != t && "" !== t) {
-                                c(t);
+                                o(t);
                                 return
                             }
                     })
                 }, [t]), {
-                    url: u,
-                    state: d ? "loading" : null != u ? "fetched" : "not-found"
+                    url: c,
+                    state: u ? "loading" : null != c ? "fetched" : "not-found"
                 }
             }

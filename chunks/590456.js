@@ -1,21 +1,21 @@
             "use strict";
-            i.r(t), i.d(t, {
+            n.r(t), n.d(t, {
                 UserProfileSections: function() {
-                    return a
+                    return r
                 },
                 UserProfileTypes: function() {
-                    return u
+                    return s
                 },
                 getBadgeAsset: function() {
-                    return d
+                    return o
                 }
             });
-            var n, l, a, u, r = i("49111");
+            var l, i, r, s, a = n("49111");
 
-            function d(e) {
+            function o(e) {
                 let {
                     API_ENDPOINT: t,
-                    CDN_HOST: i
+                    CDN_HOST: n
                 } = window.GLOBAL_ENV;
-                return null != i ? "".concat(location.protocol, "//").concat(i, "/badge-icons/").concat(e, ".png") : "".concat(location.protocol).concat(t).concat(r.Endpoints.BADGE_ICON(e))
-            }(n = a || (a = {})).USER_INFO = "USER_INFO", n.USER_INFO_CONNECTIONS = "USER_INFO_CONNECTIONS", n.ACTIVITY = "ACTIVITY", n.MUTUAL_GUILDS = "MUTUAL_GUILDS", n.MUTUAL_FRIENDS = "MUTUAL_FRIENDS", n.BOT_DATA_ACCESS = "BOT_DATA_ACCESS", (l = u || (u = {})).POPOUT = "POPOUT", l.MODAL = "MODAL", l.SETTINGS = "SETTINGS", l.PANEL = "PANEL", l.CARD = "CARD", l.POMELO_POPOUT = "POMELO_POPOUT", l.CANCEL_MODAL = "CANCEL_MODAL"
+                return null != n ? "".concat(location.protocol, "//").concat(n, "/badge-icons/").concat(e, ".png") : "".concat(location.protocol).concat(t).concat(a.Endpoints.BADGE_ICON(e))
+            }(l = r || (r = {})).USER_INFO = "USER_INFO", l.USER_INFO_CONNECTIONS = "USER_INFO_CONNECTIONS", l.ACTIVITY = "ACTIVITY", l.MUTUAL_GUILDS = "MUTUAL_GUILDS", l.MUTUAL_FRIENDS = "MUTUAL_FRIENDS", l.BOT_DATA_ACCESS = "BOT_DATA_ACCESS", (i = s || (s = {})).POPOUT = "POPOUT", i.MODAL = "MODAL", i.SETTINGS = "SETTINGS", i.PANEL = "PANEL", i.CARD = "CARD", i.POMELO_POPOUT = "POMELO_POPOUT", i.CANCEL_MODAL = "CANCEL_MODAL"

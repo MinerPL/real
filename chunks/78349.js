@@ -4,21 +4,21 @@
                 if (!t) return null;
                 t.shift();
                 var n = null,
-                    r = [];
-                t[2] && (n = (s = t[2].split("-")).shift(), r = s);
-                var i = [];
-                t[5] && (i = t[5].split("-")).shift();
-                var a = [];
+                    i = [];
+                t[2] && (n = (l = t[2].split("-")).shift(), i = l);
+                var r = [];
+                t[5] && (r = t[5].split("-")).shift();
+                var s = [];
                 if (t[6]) {
-                    (s = t[6].split("-")).shift();
-                    for (var s, o, u = []; s.length;) {
-                        var l = s.shift();
-                        1 === l.length ? o ? (a.push({
+                    (l = t[6].split("-")).shift();
+                    for (var l, o, u = []; l.length;) {
+                        var a = l.shift();
+                        1 === a.length ? o ? (s.push({
                             singleton: o,
                             extension: u
-                        }), o = l, u = []) : o = l : u.push(l)
+                        }), o = a, u = []) : o = a : u.push(a)
                     }
-                    a.push({
+                    s.push({
                         singleton: o,
                         extension: u
                     })
@@ -30,12 +30,12 @@
                     langtag: {
                         language: {
                             language: n,
-                            extlang: r
+                            extlang: i
                         },
                         script: t[3] || null,
                         region: t[4] || null,
-                        variant: i,
-                        extension: a,
+                        variant: r,
+                        extension: s,
                         privateuse: c
                     },
                     privateuse: d,

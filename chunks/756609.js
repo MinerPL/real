@@ -1,45 +1,45 @@
             "use strict";
-            s.r(t), s.d(t, {
+            r.r(t), r.d(t, {
                 default: function() {
-                    return r
+                    return o
                 }
             });
-            var a = s("37983");
-            s("884691");
-            var n = s("469563"),
-                l = s("308472"),
-                i = s("75196"),
-                r = (0, n.replaceIcon)(function(e) {
+            var a = r("37983");
+            r("884691");
+            var n = r("469563"),
+                i = r("308472"),
+                l = r("75196"),
+                o = (0, n.replaceIcon)(function(e) {
                     let {
                         width: t = 18,
-                        height: s = 18,
+                        height: r = 18,
                         color: n = "currentColor",
-                        foreground: l,
-                        ...r
+                        foreground: i,
+                        ...o
                     } = e;
                     return (0, a.jsxs)("svg", {
-                        ...(0, i.default)(r),
+                        ...(0, l.default)(o),
                         width: t,
-                        height: s,
+                        height: r,
                         viewBox: "0 0 18 18",
                         children: [(0, a.jsx)("path", {
                             fill: n,
-                            className: l,
+                            className: i,
                             d: "M4.5,16.5v-3H3A1.5,1.5,0,0,1,1.5,12V3A1.5,1.5,0,0,1,3,1.5H15A1.5,1.5,0,0,1,16.5,3v9A1.5,1.5,0,0,1,15,13.5H8.5ZM3,3v9H6v1.5L8,12h7V3Z"
                         }), (0, a.jsx)("path", {
                             fill: n,
-                            className: l,
+                            className: i,
                             d: "M6.75,4.5H5.25v6h1.5Z"
                         }), (0, a.jsx)("path", {
                             fill: n,
-                            className: l,
+                            className: i,
                             d: "M9.75,7.5H8.25v3h1.5Z"
                         }), (0, a.jsx)("path", {
                             fill: n,
-                            className: l,
+                            className: i,
                             d: "M12.75,6h-1.5v4.5h1.5Z"
                         })]
                     })
-                }, l.AnalyticsIcon, void 0, {
+                }, i.AnalyticsIcon, void 0, {
                     size: 18
                 })

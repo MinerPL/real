@@ -1,33 +1,33 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return a
                 }
             });
-            var l = n("37983");
+            var r = n("37983");
             n("884691");
-            var a = n("414456"),
-                s = n.n(a),
-                i = n("288264");
+            var u = n("414456"),
+                i = n.n(u),
+                l = n("288264");
 
-            function u(e) {
+            function a(e) {
                 let {
                     icon: t,
                     iconClassName: n,
-                    description: a,
-                    color: u
+                    description: u,
+                    color: a
                 } = e;
-                return (0, l.jsxs)("div", {
-                    className: i.perkRow,
-                    children: [(0, l.jsx)("div", {
-                        className: i.perkIconContainer,
-                        children: (0, l.jsx)(t, {
-                            color: u,
-                            className: s(i.perkIcon, n)
+                return (0, r.jsxs)("div", {
+                    className: l.perkRow,
+                    children: [(0, r.jsx)("div", {
+                        className: l.perkIconContainer,
+                        children: (0, r.jsx)(t, {
+                            color: a,
+                            className: i(l.perkIcon, n)
                         })
-                    }), (0, l.jsx)("div", {
-                        className: i.perkDescription,
-                        children: a
+                    }), (0, r.jsx)("div", {
+                        className: l.perkDescription,
+                        children: u
                     })]
                 })
             }

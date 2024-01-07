@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 resolveThunk: function() {
-                    return a
+                    return l
                 }
             });
-            var r = n("917351"),
-                i = n.n(r);
-            let a = e => "function" == typeof e ? e() : e;
-            i.curry((e, t, n) => a(t) ? e(n) : n({}))
+            var i = n("917351"),
+                r = n.n(i);
+            let l = e => "function" == typeof e ? e() : e;
+            r.curry((e, t, n) => l(t) ? e(n) : n({}))

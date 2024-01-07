@@ -7,21 +7,21 @@
             var l = n("37983");
             n("884691");
             var a = n("669491"),
-                r = n("469563"),
+                s = n("469563"),
                 i = n("163725"),
-                s = n("75196"),
-                u = (0, r.replaceIcon)(function(e) {
+                r = n("75196"),
+                u = (0, s.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
                         height: n = 24,
-                        color: r = "currentColor",
+                        color: s = "currentColor",
                         foregroundColor: i = a.default.unsafe_rawColors.RED_400.css,
                         foreground: u,
                         background: o,
                         ...d
                     } = e;
                     return (0, l.jsxs)("svg", {
-                        ...(0, s.default)(d),
+                        ...(0, r.default)(d),
                         width: t,
                         height: n,
                         viewBox: "0 0 24 24",
@@ -34,7 +34,7 @@
                             height: "2",
                             transform: "rotate(-45 2 21.2154)"
                         }), (0, l.jsx)("path", {
-                            fill: r,
+                            fill: s,
                             className: o,
                             fillRule: "evenodd",
                             clipRule: "evenodd",

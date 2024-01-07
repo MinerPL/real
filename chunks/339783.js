@@ -1,19 +1,19 @@
             "use strict";
-            n.r(a), n.d(a, {
+            r.r(t), r.d(t, {
                 default: function() {
-                    return o
+                    return l
                 },
                 getIdealBankDisplayNameFromBankName: function() {
-                    return u
+                    return s
                 },
                 getEPSBankDisplayNameFromBankName: function() {
-                    return i
+                    return d
                 }
-            }), n("222007");
-            var r = n("862205"),
-                t = n("49111"),
-                s = n("782340"),
-                o = (0, r.createExperiment)({
+            }), r("222007");
+            var a = r("862205"),
+                n = r("49111"),
+                i = r("782340"),
+                l = (0, a.createExperiment)({
                     kind: "user",
                     id: "2021-08_regional_payment_methods",
                     label: "Regional Payment Methods",
@@ -26,7 +26,7 @@
                         id: 1,
                         label: "Regional Payment Method for Germany",
                         config: {
-                            enabledPaymentTypes: [t.PaymentSourceTypes.SOFORT, t.PaymentSourceTypes.GIROPAY],
+                            enabledPaymentTypes: [n.PaymentSourceTypes.SOFORT, n.PaymentSourceTypes.GIROPAY],
                             forceCountryCode: "DE",
                             validCountryCodes: ["DE"]
                         }
@@ -34,7 +34,7 @@
                         id: 2,
                         label: "Regional Payment Method for US",
                         config: {
-                            enabledPaymentTypes: [t.PaymentSourceTypes.VENMO, t.PaymentSourceTypes.CASH_APP],
+                            enabledPaymentTypes: [n.PaymentSourceTypes.VENMO, n.PaymentSourceTypes.CASH_APP],
                             forceCountryCode: "US",
                             validCountryCodes: ["US"]
                         }
@@ -58,7 +58,7 @@
                         id: 5,
                         label: "Regional Payment Method for Poland",
                         config: {
-                            enabledPaymentTypes: [t.PaymentSourceTypes.PRZELEWY24],
+                            enabledPaymentTypes: [n.PaymentSourceTypes.PRZELEWY24],
                             forceCountryCode: "PL",
                             validCountryCodes: ["PL"]
                         }
@@ -66,7 +66,7 @@
                         id: 6,
                         label: "Enable paysafecard",
                         config: {
-                            enabledPaymentTypes: [t.PaymentSourceTypes.PAYSAFE_CARD],
+                            enabledPaymentTypes: [n.PaymentSourceTypes.PAYSAFE_CARD],
                             forceCountryCode: "DE",
                             validCountryCodes: ["BG", "CZ", "DK", "HU", "RO", "SE", "DE"]
                         }
@@ -74,7 +74,7 @@
                         id: 7,
                         label: "Regional Payment Method for Philippines",
                         config: {
-                            enabledPaymentTypes: [t.PaymentSourceTypes.GCASH],
+                            enabledPaymentTypes: [n.PaymentSourceTypes.GCASH],
                             forceCountryCode: "PH",
                             validCountryCodes: ["PH"]
                         }
@@ -82,7 +82,7 @@
                         id: 8,
                         label: "Regional Payment Method for Malaysia",
                         config: {
-                            enabledPaymentTypes: [t.PaymentSourceTypes.GRABPAY_MY],
+                            enabledPaymentTypes: [n.PaymentSourceTypes.GRABPAY_MY],
                             forceCountryCode: "MY",
                             validCountryCodes: ["MY"]
                         }
@@ -90,7 +90,7 @@
                         id: 9,
                         label: "Regional Payment Method for Vietnam",
                         config: {
-                            enabledPaymentTypes: [t.PaymentSourceTypes.MOMO_WALLET],
+                            enabledPaymentTypes: [n.PaymentSourceTypes.MOMO_WALLET],
                             forceCountryCode: "VN",
                             validCountryCodes: ["VN"]
                         }
@@ -98,7 +98,7 @@
                         id: 10,
                         label: "Regional Payment Method for Indonesia",
                         config: {
-                            enabledPaymentTypes: [t.PaymentSourceTypes.GOPAY_WALLET],
+                            enabledPaymentTypes: [n.PaymentSourceTypes.GOPAY_WALLET],
                             forceCountryCode: "ID",
                             validCountryCodes: ["ID"]
                         }
@@ -106,7 +106,7 @@
                         id: 11,
                         label: "Regional Payment Method for South Korea",
                         config: {
-                            enabledPaymentTypes: [t.PaymentSourceTypes.KAKAOPAY],
+                            enabledPaymentTypes: [n.PaymentSourceTypes.KAKAOPAY],
                             forceCountryCode: "KR",
                             validCountryCodes: ["KR"]
                         }
@@ -114,7 +114,7 @@
                         id: 12,
                         label: "Regional Payment Method for Belgium",
                         config: {
-                            enabledPaymentTypes: [t.PaymentSourceTypes.PAYSAFE_CARD, t.PaymentSourceTypes.SOFORT, t.PaymentSourceTypes.BANCONTACT],
+                            enabledPaymentTypes: [n.PaymentSourceTypes.PAYSAFE_CARD, n.PaymentSourceTypes.SOFORT, n.PaymentSourceTypes.BANCONTACT],
                             forceCountryCode: "BE",
                             validCountryCodes: ["BE"]
                         }
@@ -122,7 +122,7 @@
                         id: 13,
                         label: "Regional Payment Method for Austria",
                         config: {
-                            enabledPaymentTypes: [t.PaymentSourceTypes.PAYSAFE_CARD, t.PaymentSourceTypes.EPS, t.PaymentSourceTypes.SOFORT],
+                            enabledPaymentTypes: [n.PaymentSourceTypes.PAYSAFE_CARD, n.PaymentSourceTypes.EPS, n.PaymentSourceTypes.SOFORT],
                             forceCountryCode: "AT",
                             validCountryCodes: ["AT"]
                         }
@@ -130,7 +130,7 @@
                         id: 14,
                         label: "Regional Payment Method for Netherlands",
                         config: {
-                            enabledPaymentTypes: [t.PaymentSourceTypes.PAYSAFE_CARD, t.PaymentSourceTypes.IDEAL, t.PaymentSourceTypes.SOFORT],
+                            enabledPaymentTypes: [n.PaymentSourceTypes.PAYSAFE_CARD, n.PaymentSourceTypes.IDEAL, n.PaymentSourceTypes.SOFORT],
                             forceCountryCode: "NL",
                             validCountryCodes: ["NL"]
                         }
@@ -138,7 +138,7 @@
                         id: 15,
                         label: "Launch Paysafecard and Sofort",
                         config: {
-                            enabledPaymentTypes: [t.PaymentSourceTypes.PAYSAFE_CARD, t.PaymentSourceTypes.SOFORT],
+                            enabledPaymentTypes: [n.PaymentSourceTypes.PAYSAFE_CARD, n.PaymentSourceTypes.SOFORT],
                             forceCountryCode: "ES",
                             validCountryCodes: ["ES", "IT"]
                         }
@@ -146,13 +146,13 @@
                         id: 16,
                         label: "Launch Cash App",
                         config: {
-                            enabledPaymentTypes: [t.PaymentSourceTypes.CASH_APP],
+                            enabledPaymentTypes: [n.PaymentSourceTypes.CASH_APP],
                             forceCountryCode: "US",
                             validCountryCodes: ["US"]
                         }
                     }]
                 });
-            let l = new Map([
+            let o = new Map([
                 ["abn_amro", "ABN AMRO"],
                 ["asn_bank", "ASN Bank"],
                 ["bunq", "Bunq"],
@@ -167,10 +167,10 @@
                 ["van_lanschot", "Van Lanschot"]
             ]);
 
-            function u(e) {
-                return void 0 !== e && l.has(e) ? l.get(e) : s.default.Messages.PAYMENT_SOURCE_UNKNOWN
+            function s(e) {
+                return void 0 !== e && o.has(e) ? o.get(e) : i.default.Messages.PAYMENT_SOURCE_UNKNOWN
             }
-            let d = new Map([
+            let c = new Map([
                 ["arzte_und_apotheker_bank", "\xc4rzte- und Apothekerbank"],
                 ["austrian_anadi_bank_ag", "Austrian Anadi Bank AG"],
                 ["bank_austria", "Bank Austria"],
@@ -200,6 +200,6 @@
                 ["vr_bank_braunau", "VR-Bank Braunau"]
             ]);
 
-            function i(e) {
-                return void 0 !== e && d.has(e) ? d.get(e) : s.default.Messages.PAYMENT_SOURCE_UNKNOWN
+            function d(e) {
+                return void 0 !== e && c.has(e) ? c.get(e) : i.default.Messages.PAYMENT_SOURCE_UNKNOWN
             }

@@ -1,150 +1,150 @@
             "use strict";
-            n.r(t), n.d(t, {
+            r.r(t), r.d(t, {
                 default: function() {
-                    return S
+                    return C
                 }
             });
-            var r, i = n("37983"),
-                a = n("884691"),
-                s = n("414456"),
-                o = n.n(s),
-                u = n("463928"),
-                l = n.n(u),
-                c = n("269936"),
-                d = n("647374"),
-                _ = n("47677"),
-                E = n("895530"),
-                f = n("238165"),
-                I = n("862839");
-            let p = new RegExp("https?://".concat(null !== (r = window.GLOBAL_ENV.CDN_HOST) && void 0 !== r ? r : ""));
+            var a, n = r("37983"),
+                i = r("884691"),
+                l = r("414456"),
+                o = r.n(l),
+                s = r("463928"),
+                c = r.n(s),
+                d = r("269936"),
+                u = r("647374"),
+                h = r("47677"),
+                p = r("895530"),
+                f = r("238165"),
+                m = r("862839");
+            let g = new RegExp("https?://".concat(null !== (a = window.GLOBAL_ENV.CDN_HOST) && void 0 !== a ? a : ""));
 
-            function A(e) {
-                return "string" == typeof e.content ? e.content : N(e.content)
+            function y(e) {
+                return "string" == typeof e.content ? e.content : k(e.content)
             }
-            let R = {
-                    ...l.defaultRules,
+            let b = {
+                    ...c.defaultRules,
                     heading: {
-                        ...l.defaultRules.heading,
-                        react(e, t, n) {
-                            let r = "h".concat(e.level);
-                            return (0, i.jsx)(E.default, {
-                                tag: r,
-                                children: t(e.content, n)
-                            }, n.key)
+                        ...c.defaultRules.heading,
+                        react(e, t, r) {
+                            let a = "h".concat(e.level);
+                            return (0, n.jsx)(p.default, {
+                                tag: a,
+                                children: t(e.content, r)
+                            }, r.key)
                         }
                     },
                     paragraph: {
-                        ...l.defaultRules.paragraph,
-                        react: (e, t, n) => (0, i.jsx)("div", {
+                        ...c.defaultRules.paragraph,
+                        react: (e, t, r) => (0, n.jsx)("div", {
                             className: f.paragraph,
-                            children: t(e.content, n)
-                        }, n.key)
+                            children: t(e.content, r)
+                        }, r.key)
                     },
                     strong: {
-                        ...l.defaultRules.strong,
+                        ...c.defaultRules.strong,
                         order: 6
                     },
                     em: {
-                        ...l.defaultRules.em,
+                        ...c.defaultRules.em,
                         order: 6
                     },
                     u: {
-                        ...l.defaultRules.u,
+                        ...c.defaultRules.u,
                         order: 5
                     },
                     del: {
-                        ...l.defaultRules.del,
+                        ...c.defaultRules.del,
                         order: 6
                     },
                     link: {
-                        ...d.default,
-                        ...(0, _.default)({
+                        ...u.default,
+                        ...(0, h.default)({
                             enableBuildOverrides: !1
                         }),
                         order: 6
                     },
                     blockQuote: {
-                        ...l.defaultRules.blockQuote,
-                        react: (e, t, n) => (0, i.jsx)("blockquote", {
+                        ...c.defaultRules.blockQuote,
+                        react: (e, t, r) => (0, n.jsx)("blockquote", {
                             className: f.blockquote,
-                            children: A(e)
-                        }, n.key)
+                            children: y(e)
+                        }, r.key)
                     },
                     image: {
-                        ...l.defaultRules.image,
+                        ...c.defaultRules.image,
                         order: 6,
-                        match(e, t, n) {
-                            let r = l.defaultRules.image;
-                            if (null == r || null == r.match) return !1;
-                            let i = r.match(e, t, n);
-                            if (null != i && Array.isArray(i) && i.length >= 3) {
-                                let e = i[2];
-                                if ("string" == typeof e) return null != e.match(p) ? i : null
+                        match(e, t, r) {
+                            let a = c.defaultRules.image;
+                            if (null == a || null == a.match) return !1;
+                            let n = a.match(e, t, r);
+                            if (null != n && Array.isArray(n) && n.length >= 3) {
+                                let e = n[2];
+                                if ("string" == typeof e) return null != e.match(g) ? n : null
                             }
                             return !1
                         }
                     },
                     inlineCode: {
-                        ...l.defaultRules.inlineCode,
+                        ...c.defaultRules.inlineCode,
                         order: 6,
-                        react: (e, t, n) => (0, i.jsx)("code", {
+                        react: (e, t, r) => (0, n.jsx)("code", {
                             className: f.codeInline,
-                            children: A(e)
-                        }, n.key)
+                            children: y(e)
+                        }, r.key)
                     },
                     codeBlock: {
-                        ...l.defaultRules.codeBlock,
-                        react(e, t, r) {
-                            let a = () => (0, i.jsx)("pre", {
-                                children: (0, i.jsx)("code", {
-                                    className: o(I.scrollbarGhostHairline, "hljs"),
-                                    children: A(e)
+                        ...c.defaultRules.codeBlock,
+                        react(e, t, a) {
+                            let i = () => (0, n.jsx)("pre", {
+                                children: (0, n.jsx)("code", {
+                                    className: o(m.scrollbarGhostHairline, "hljs"),
+                                    children: y(e)
                                 })
-                            }, r.key);
-                            return (0, i.jsx)(c.LazyLibrary, {
-                                createPromise: () => n.el("86256").then(n.bind(n, "86256")),
+                            }, a.key);
+                            return (0, n.jsx)(d.LazyLibrary, {
+                                createPromise: () => r.el("86256").then(r.bind(r, "86256")),
                                 webpackId: "86256",
-                                renderFallback: a,
+                                renderFallback: i,
                                 render: t => {
-                                    if (!(e.lang && t.hasLanguage(e.lang)) || "string" != typeof e.content) return a();
+                                    if (!(e.lang && t.hasLanguage(e.lang)) || "string" != typeof e.content) return i();
                                     {
-                                        let n = t.highlight(e.lang, e.content, !0);
-                                        return null == n ? a() : (0, i.jsx)("pre", {
-                                            children: (0, i.jsx)("code", {
-                                                className: o(I.scrollbarGhostHairline, "hljs", n.language),
+                                        let r = t.highlight(e.lang, e.content, !0);
+                                        return null == r ? i() : (0, n.jsx)("pre", {
+                                            children: (0, n.jsx)("code", {
+                                                className: o(m.scrollbarGhostHairline, "hljs", r.language),
                                                 dangerouslySetInnerHTML: {
-                                                    __html: n.value
+                                                    __html: r.value
                                                 }
                                             })
-                                        }, r.key)
+                                        }, a.key)
                                     }
                                 }
-                            }, r.key)
+                            }, a.key)
                         }
                     }
                 },
-                h = l.parserFor(R),
-                N = l.reactFor(l.ruleOutput(R, "react"));
-            class g extends a.PureComponent {
+                x = c.parserFor(b),
+                k = c.reactFor(c.ruleOutput(b, "react"));
+            class v extends i.PureComponent {
                 render() {
                     let {
                         className: e,
                         children: t,
-                        state: n,
-                        parser: r,
-                        output: a
-                    } = this.props, s = r("".concat(t, "\n\n"), {
+                        state: r,
+                        parser: a,
+                        output: i
+                    } = this.props, l = a("".concat(t, "\n\n"), {
                         inline: !1,
-                        ...n
-                    }), u = a(s);
-                    return (0, i.jsx)("div", {
+                        ...r
+                    }), s = i(l);
+                    return (0, n.jsx)("div", {
                         className: o(f.markdown, e),
-                        children: u
+                        children: s
                     })
                 }
             }
-            g.rules = R, g.defaultProps = {
-                parser: h,
-                output: N
+            v.rules = b, v.defaultProps = {
+                parser: x,
+                output: k
             };
-            var S = g
+            var C = v

@@ -1,103 +1,103 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return c
                 }
             }), n("222007");
-            var r = n("37983"),
-                i = n("884691"),
-                a = n("414456"),
-                s = n.n(a),
-                o = n("77078"),
+            var i = n("37983"),
+                r = n("884691"),
+                l = n("414456"),
+                o = n.n(l),
+                a = n("77078"),
                 u = n("782340"),
-                l = n("347129");
-            class c extends i.PureComponent {
+                s = n("347129");
+            class d extends r.PureComponent {
                 render() {
                     var e;
                     let {
                         title: t,
                         actionText: n,
-                        children: a,
-                        error: c,
-                        isLoading: d,
-                        maxLength: _,
+                        children: l,
+                        error: d,
+                        isLoading: c,
+                        maxLength: f,
                         transitionState: E,
-                        helpMessage: f,
-                        retryPrompt: I,
-                        retrySuccessMessage: p
+                        helpMessage: _,
+                        retryPrompt: p,
+                        retrySuccessMessage: S
                     } = this.props, {
-                        code: A,
-                        errorMessage: R,
-                        retrySuccess: h
-                    } = this.state, N = i.Children.count(a) > 0 ? (0, r.jsx)(o.Card, {
-                        type: o.Card.Types.WARNING,
-                        className: l.card,
-                        children: (0, r.jsx)(o.Text, {
+                        code: T,
+                        errorMessage: h,
+                        retrySuccess: I
+                    } = this.state, A = r.Children.count(l) > 0 ? (0, i.jsx)(a.Card, {
+                        type: a.Card.Types.WARNING,
+                        className: s.card,
+                        children: (0, i.jsx)(a.Text, {
                             variant: "text-md/normal",
-                            children: a
+                            children: l
                         })
-                    }) : null, g = null != I ? (0, r.jsxs)(o.Text, {
-                        className: s(l.submitText, l.spacing),
+                    }) : null, g = null != p ? (0, i.jsxs)(a.Text, {
+                        className: o(s.submitText, s.spacing),
                         variant: "text-sm/normal",
-                        children: [(0, r.jsx)("br", {}), (0, r.jsx)(o.Clickable, {
-                            className: s(l.spacing, l.link),
+                        children: [(0, i.jsx)("br", {}), (0, i.jsx)(a.Clickable, {
+                            className: o(s.spacing, s.link),
                             onClick: this.handleRetry,
-                            children: (0, r.jsx)(o.Anchor, {
-                                children: I
+                            children: (0, i.jsx)(a.Anchor, {
+                                children: p
                             })
                         })]
-                    }) : null, S = h ? (0, r.jsx)(o.Card, {
-                        type: o.Card.Types.SUCCESS,
-                        className: l.card,
-                        children: (0, r.jsx)(o.Text, {
+                    }) : null, N = I ? (0, i.jsx)(a.Card, {
+                        type: a.Card.Types.SUCCESS,
+                        className: s.card,
+                        children: (0, i.jsx)(a.Text, {
                             variant: "text-md/normal",
-                            children: p
+                            children: S
                         })
                     }) : null;
-                    return (0, r.jsx)(o.ModalRoot, {
+                    return (0, i.jsx)(a.ModalRoot, {
                         transitionState: E,
-                        children: (0, r.jsxs)("form", {
+                        children: (0, i.jsxs)("form", {
                             onSubmit: this.handleSubmit,
-                            children: [(0, r.jsx)(o.ModalHeader, {
+                            children: [(0, i.jsx)(a.ModalHeader, {
                                 separator: !1,
-                                children: (0, r.jsx)(o.Heading, {
+                                children: (0, i.jsx)(a.Heading, {
                                     variant: "heading-lg/semibold",
                                     children: t
                                 })
-                            }), (0, r.jsxs)(o.ModalContent, {
-                                children: [null != f ? (0, r.jsx)(o.Text, {
+                            }), (0, i.jsxs)(a.ModalContent, {
+                                children: [null != _ ? (0, i.jsx)(a.Text, {
                                     color: "text-normal",
                                     variant: "text-md/normal",
-                                    className: l.spacing,
-                                    children: f
-                                }) : null, N, S, (0, r.jsxs)(o.FormItem, {
+                                    className: s.spacing,
+                                    children: _
+                                }) : null, A, N, (0, i.jsxs)(a.FormItem, {
                                     title: this.getLabelText(),
-                                    className: l.spacing,
-                                    children: [(0, r.jsx)(o.TextInput, {
+                                    className: s.spacing,
+                                    children: [(0, i.jsx)(a.TextInput, {
                                         inputRef: this.setRef,
                                         onChange: this.handleCodeChange,
                                         placeholder: null !== (e = this.getPlaceholder()) && void 0 !== e ? e : void 0,
-                                        maxLength: null != _ ? _ : 10,
-                                        value: A,
+                                        maxLength: null != f ? f : 10,
+                                        value: T,
                                         autoComplete: "one-time-code",
                                         autoFocus: !0
-                                    }), this.errorPresent() ? (0, r.jsx)(o.Text, {
+                                    }), this.errorPresent() ? (0, i.jsx)(a.Text, {
                                         color: "text-danger",
                                         variant: "text-xs/normal",
-                                        className: l.error,
-                                        children: null != c ? c : R
+                                        className: s.error,
+                                        children: null != d ? d : h
                                     }) : null, g]
                                 })]
-                            }), (0, r.jsxs)(o.ModalFooter, {
-                                children: [(0, r.jsx)(o.Button, {
+                            }), (0, i.jsxs)(a.ModalFooter, {
+                                children: [(0, i.jsx)(a.Button, {
                                     type: "submit",
-                                    disabled: d || 0 === A.length,
+                                    disabled: c || 0 === T.length,
                                     children: null != n ? n : u.default.Messages.CONFIRM
-                                }), (0, r.jsx)(o.Button, {
+                                }), (0, i.jsx)(a.Button, {
                                     onClick: this.handleCancel,
-                                    disabled: d,
-                                    look: o.Button.Looks.LINK,
-                                    color: o.Button.Colors.PRIMARY,
+                                    disabled: c,
+                                    look: a.Button.Looks.LINK,
+                                    color: a.Button.Colors.PRIMARY,
                                     children: u.default.Messages.CANCEL
                                 })]
                             })]
@@ -148,11 +148,11 @@
                     }
                 }
             }
-            c.defaultProps = {
+            d.defaultProps = {
                 btnClass: "",
                 isLoading: !1,
                 disallowBackupCodes: !1,
                 error: null,
                 forceNoPlaceholder: !1
             };
-            var d = c
+            var c = d

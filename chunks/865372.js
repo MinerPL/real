@@ -1,74 +1,74 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return N
+                    return h
                 }
             }), n("424973");
-            var l = n("917351"),
-                i = n.n(l),
-                r = n("446674"),
-                s = n("913144"),
+            var i = n("917351"),
+                r = n.n(i),
+                l = n("446674"),
+                o = n("913144"),
                 a = n("80507"),
-                o = n("374363"),
-                u = n("364685"),
+                u = n("374363"),
+                s = n("364685"),
                 d = n("49111"),
                 c = n("397336");
-            let E = {
+            let f = {
                 pendingUsages: []
             };
             d.Durations.DAY;
-            let _ = new a.default({
+            let E = new a.default({
                     computeBonus: () => 100,
                     computeWeight: e => {
                         let t = 0;
                         return e <= 3 ? t = 100 : e <= 15 ? t = 70 : e <= 30 ? t = 50 : e <= 45 ? t = 30 : e <= 80 && (t = 10), t
                     },
-                    lookupKey: e => u.default.getStickerById(e),
+                    lookupKey: e => s.default.getStickerById(e),
                     afterCompute: () => {},
                     numFrequentlyItems: 20
                 }),
-                f = () => {
-                    u.default.isLoaded && _.compute()
+                _ = () => {
+                    s.default.isLoaded && E.compute()
                 },
-                I = () => {
-                    f()
+                p = () => {
+                    _()
                 };
 
-            function h() {
+            function S() {
                 var e;
-                let t = null === (e = o.default.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
+                let t = null === (e = u.default.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
                 if (null == t) return !1;
-                _.overwriteHistory(i.mapValues(t, e => ({
+                E.overwriteHistory(r.mapValues(t, e => ({
                     ...e,
                     recentUses: e.recentUses.map(Number).filter(e => e > 0)
-                })), E.pendingUsages)
+                })), f.pendingUsages)
             }
-            class g extends r.default.PersistedStore {
+            class T extends l.default.PersistedStore {
                 initialize(e) {
-                    this.waitFor(u.default), null != e && (E = e), this.syncWith([u.default], I), this.syncWith([o.default], h)
+                    this.waitFor(s.default), null != e && (f = e), this.syncWith([s.default], p), this.syncWith([u.default], S)
                 }
                 getState() {
-                    return E
+                    return f
                 }
                 hasPendingUsage() {
-                    return E.pendingUsages.length > 0
+                    return f.pendingUsages.length > 0
                 }
                 get stickerFrecencyWithoutFetchingLatest() {
-                    return _
+                    return E
                 }
             }
-            g.displayName = "StickersPersistedStore", g.persistKey = "StickersPersistedStoreV2";
-            var N = new g(s.default, {
+            T.displayName = "StickersPersistedStore", T.persistKey = "StickersPersistedStoreV2";
+            var h = new T(o.default, {
                 STICKER_TRACK_USAGE: e => {
                     let {
                         stickerIds: t
                     } = e;
                     null == t || t.forEach(e => {
-                        _.track(e), E.pendingUsages.push({
+                        E.track(e), f.pendingUsages.push({
                             key: e,
                             timestamp: Date.now()
                         })
-                    }), f()
+                    }), _()
                 },
                 USER_SETTINGS_PROTO_UPDATE: function(e) {
                     let {
@@ -78,6 +78,6 @@
                         wasSaved: n
                     } = e;
                     if (t !== c.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
-                    E.pendingUsages = []
+                    f.pendingUsages = []
                 }
             })

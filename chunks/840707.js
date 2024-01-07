@@ -1,55 +1,55 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return o
                 }
             });
-            var r = n("872717"),
-                i = n("599110");
+            var i = n("872717"),
+                r = n("599110");
 
-            function a(e, t, n) {
+            function l(e, t, n) {
                 let {
-                    trackedActionData: r,
-                    ...a
-                } = t, s = {
-                    url: a.url,
+                    trackedActionData: i,
+                    ...l
+                } = t, o = {
+                    url: l.url,
                     request_method: n
                 };
                 return new Promise((t, n) => {
-                    e(a).then(e => {
-                        let n = r.properties;
-                        "function" == typeof r.properties && (n = r.properties(e)), (0, i.trackNetworkAction)(r.event, {
+                    e(l).then(e => {
+                        let n = i.properties;
+                        "function" == typeof i.properties && (n = i.properties(e)), (0, r.trackNetworkAction)(i.event, {
                             status_code: e.status,
-                            ...s,
+                            ...o,
                             ...n
                         }), t(e)
                     }).catch(e => {
-                        var t, a;
-                        let o = r.properties;
-                        "function" == typeof r.properties && (o = r.properties(e)), (0, i.trackNetworkAction)(r.event, {
+                        var t, l;
+                        let a = i.properties;
+                        "function" == typeof i.properties && (a = i.properties(e)), (0, r.trackNetworkAction)(i.event, {
                             status_code: e.status,
                             error_code: null === (t = e.body) || void 0 === t ? void 0 : t.code,
-                            error_message: null === (a = e.body) || void 0 === a ? void 0 : a.message,
-                            ...s,
-                            ...o
+                            error_message: null === (l = e.body) || void 0 === l ? void 0 : l.message,
+                            ...o,
+                            ...a
                         }), n(e)
                     })
                 })
             }
-            var s = {
+            var o = {
                 get: function(e) {
-                    return a(r.default.get, e, "get")
+                    return l(i.default.get, e, "get")
                 },
                 post: function(e) {
-                    return a(r.default.post, e, "post")
+                    return l(i.default.post, e, "post")
                 },
                 put: function(e) {
-                    return a(r.default.put, e, "put")
+                    return l(i.default.put, e, "put")
                 },
                 patch: function(e) {
-                    return a(r.default.patch, e, "patch")
+                    return l(i.default.patch, e, "patch")
                 },
                 delete: function(e) {
-                    return a(r.default.delete, e, "del")
+                    return l(i.default.delete, e, "del")
                 }
             }

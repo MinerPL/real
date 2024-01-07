@@ -1,186 +1,186 @@
             "use strict";
             a.r(t), a.d(t, {
                 RatingsSelector: function() {
-                    return L
+                    return m
                 },
                 default: function() {
-                    return p
+                    return B
                 }
             }), a("222007");
             var l = a("37983"),
                 s = a("884691"),
                 n = a("414456"),
-                o = a.n(n),
+                r = a.n(n),
                 u = a("917351"),
                 i = a.n(u),
-                d = a("77078"),
+                o = a("77078"),
                 c = a("84339"),
-                r = a("229850"),
-                _ = a("145131"),
+                d = a("229850"),
+                E = a("145131"),
                 f = a("476765"),
-                E = a("561744"),
+                C = a("561744"),
                 O = a("701909"),
-                A = a("713640"),
-                C = a("200521"),
-                h = a("782340"),
-                m = a("279537");
-            let g = [{
-                className: m.emojiSad,
-                rating: C.FeedbackRating.BAD,
-                classNameSelected: m.selected
+                N = a("713640"),
+                D = a("200521"),
+                _ = a("782340"),
+                A = a("279537");
+            let R = [{
+                className: A.emojiSad,
+                rating: D.FeedbackRating.BAD,
+                classNameSelected: A.selected
             }, {
-                className: m.emojiNeutral,
-                rating: C.FeedbackRating.NEUTRAL,
-                classNameSelected: m.selected
+                className: A.emojiNeutral,
+                rating: D.FeedbackRating.NEUTRAL,
+                classNameSelected: A.selected
             }, {
-                className: m.emojiHappy,
-                rating: C.FeedbackRating.GOOD,
-                classNameSelected: m.selected
+                className: A.emojiHappy,
+                rating: D.FeedbackRating.GOOD,
+                classNameSelected: A.selected
             }];
 
-            function L(e) {
+            function m(e) {
                 let {
                     className: t,
                     selectedRating: a,
                     ratingConfigs: s,
                     onChangeRating: n
                 } = e;
-                return (0, l.jsx)(_.default, {
-                    justify: _.default.Justify.BETWEEN,
-                    align: _.default.Align.CENTER,
-                    className: o(m.ratingsSelector, t),
-                    children: (null != s ? s : g).map(e => {
+                return (0, l.jsx)(E.default, {
+                    justify: E.default.Justify.BETWEEN,
+                    align: E.default.Align.CENTER,
+                    className: r(A.ratingsSelector, t),
+                    children: (null != s ? s : R).map(e => {
                         let {
                             rating: t,
                             className: s,
                             classNameSelected: u
                         } = e;
-                        return (0, l.jsx)(d.Clickable, {
+                        return (0, l.jsx)(o.Clickable, {
                             onClick: () => n(t),
                             "aria-label": t,
                             children: (0, l.jsx)("div", {
-                                className: o(s, a === t ? u : null)
+                                className: r(s, a === t ? u : null)
                             })
                         }, t)
                     })
                 })
             }
 
-            function N() {
-                return (0, l.jsx)(d.Text, {
-                    className: m.helpdeskLink,
+            function I() {
+                return (0, l.jsx)(o.Text, {
+                    className: A.helpdeskLink,
                     variant: "text-xs/normal",
                     color: "text-muted",
-                    children: h.default.Messages.FEEDBACK_NEED_MORE_HELP.format({
+                    children: _.default.Messages.FEEDBACK_NEED_MORE_HELP.format({
                         helpdeskURL: O.default.getSubmitRequestURL()
                     })
                 })
             }
 
-            function p(e) {
+            function B(e) {
                 let {
                     header: t,
                     body: a,
                     problemTitle: n,
                     problems: u,
                     transitionState: O,
-                    ratingConfigs: g,
-                    feedbackProblems: p = [],
-                    otherKey: D,
-                    ratingsSelectorClassName: b,
-                    hideDontShowCheckbox: I,
-                    startRating: v = null,
-                    onSubmit: x,
-                    onClose: T
-                } = e, R = (0, c.default)(u), [B, S] = s.useState(!1), [M, j] = s.useState(v), [k, F] = s.useState(null), [K, H] = s.useState(i.shuffle(u)), [P, U] = s.useState(""), y = (0, f.useUID)(), w = (0, E.default)(M), G = (0, E.default)(B), V = (0, E.default)(k), z = (0, E.default)(x), Y = (0, E.default)(P), q = null != k && p.includes(k);
+                    ratingConfigs: R,
+                    feedbackProblems: B = [],
+                    otherKey: T,
+                    ratingsSelectorClassName: x,
+                    hideDontShowCheckbox: g,
+                    startRating: h = null,
+                    onSubmit: b,
+                    onClose: K
+                } = e, p = (0, c.default)(u), [L, U] = s.useState(!1), [j, G] = s.useState(h), [k, F] = s.useState(null), [v, M] = s.useState(i.shuffle(u)), [S, H] = s.useState(""), y = (0, f.useUID)(), P = (0, C.default)(j), V = (0, C.default)(L), Y = (0, C.default)(k), z = (0, C.default)(b), w = (0, C.default)(S), q = null != k && B.includes(k);
                 return s.useEffect(() => {
-                    !i.isEqual(R, u) && H((0, A.shuffleProblems)(u, D))
-                }, [u, R, D]), s.useEffect(() => () => {
+                    !i.isEqual(p, u) && M((0, N.shuffleProblems)(u, T))
+                }, [u, p, T]), s.useEffect(() => () => {
                     z.current({
-                        rating: w.current,
-                        problem: V.current,
-                        dontShowAgain: G.current,
-                        feedback: Y.current
+                        rating: P.current,
+                        problem: Y.current,
+                        dontShowAgain: V.current,
+                        feedback: w.current
                     })
-                }, []), (0, l.jsxs)(d.ModalRoot, {
+                }, []), (0, l.jsxs)(o.ModalRoot, {
                     transitionState: O,
-                    className: m.modalRoot,
+                    className: A.modalRoot,
                     "aria-labelledby": y,
-                    children: [(0, l.jsxs)(d.ModalHeader, {
+                    children: [(0, l.jsxs)(o.ModalHeader, {
                         separator: !1,
-                        className: m.headerContainer,
-                        children: [(0, l.jsx)(d.Heading, {
+                        className: A.headerContainer,
+                        children: [(0, l.jsx)(o.Heading, {
                             id: y,
                             variant: "heading-xl/extrabold",
                             color: "none",
                             children: t
-                        }), (0, l.jsx)(d.Text, {
+                        }), (0, l.jsx)(o.Text, {
                             variant: "text-md/normal",
                             color: "none",
-                            className: m.ratingBody,
+                            className: A.ratingBody,
                             children: a
-                        }), q ? null : (0, l.jsx)(L, {
-                            className: o(m.emojis, b),
-                            selectedRating: M,
+                        }), q ? null : (0, l.jsx)(m, {
+                            className: r(A.emojis, x),
+                            selectedRating: j,
                             onChangeRating: function(e) {
-                                j(e), e === C.FeedbackRating.GOOD && T()
+                                G(e), e === D.FeedbackRating.GOOD && K()
                             },
-                            ratingConfigs: g
+                            ratingConfigs: R
                         })]
-                    }), (0, l.jsxs)(d.ModalContent, {
-                        className: m.content,
-                        children: [null == M || M === C.FeedbackRating.GOOD || q ? null : (0, l.jsx)(d.FormItem, {
+                    }), (0, l.jsxs)(o.ModalContent, {
+                        className: A.content,
+                        children: [null == j || j === D.FeedbackRating.GOOD || q ? null : (0, l.jsx)(o.FormItem, {
                             title: n,
-                            className: m.problemInfo,
-                            children: (0, l.jsx)(r.default, {
-                                options: K,
+                            className: A.problemInfo,
+                            children: (0, l.jsx)(d.default, {
+                                options: v,
                                 onClick: function(e) {
                                     let {
                                         value: t
                                     } = e;
-                                    F(t), !p.includes(t) && T()
+                                    F(t), !B.includes(t) && K()
                                 },
                                 hideCaret: e => {
                                     let {
                                         value: t
                                     } = e;
-                                    return !p.includes(t)
+                                    return !B.includes(t)
                                 }
                             })
-                        }), q ? (0, l.jsxs)(d.FormItem, {
-                            title: h.default.Messages.FEEDBACK_DESCRIBE_ISSUE,
-                            className: m.problemInfo,
-                            children: [(0, l.jsx)(d.TextArea, {
-                                value: P,
-                                maxLength: C.FEEDBACK_FREEFORM_LENGTH,
-                                onChange: U
-                            }), (0, l.jsx)(N, {})]
+                        }), q ? (0, l.jsxs)(o.FormItem, {
+                            title: _.default.Messages.FEEDBACK_DESCRIBE_ISSUE,
+                            className: A.problemInfo,
+                            children: [(0, l.jsx)(o.TextArea, {
+                                value: S,
+                                maxLength: D.FEEDBACK_FREEFORM_LENGTH,
+                                onChange: H
+                            }), (0, l.jsx)(I, {})]
                         }) : null]
-                    }), (q || !I) && (0, l.jsx)(d.ModalFooter, {
-                        className: m.footer,
-                        direction: _.default.Direction.HORIZONTAL,
+                    }), (q || !g) && (0, l.jsx)(o.ModalFooter, {
+                        className: A.footer,
+                        direction: E.default.Direction.HORIZONTAL,
                         children: q ? (0, l.jsxs)(l.Fragment, {
-                            children: [(0, l.jsx)(d.Button, {
-                                size: d.Button.Sizes.SMALL,
-                                look: d.Button.Looks.LINK,
-                                color: d.Button.Colors.PRIMARY,
+                            children: [(0, l.jsx)(o.Button, {
+                                size: o.Button.Sizes.SMALL,
+                                look: o.Button.Looks.LINK,
+                                color: o.Button.Colors.PRIMARY,
                                 onClick: () => {
-                                    F(null), U("")
+                                    F(null), H("")
                                 },
-                                children: h.default.Messages.BACK
-                            }), (0, l.jsx)(d.Button, {
-                                size: d.Button.Sizes.SMALL,
-                                onClick: T,
-                                children: h.default.Messages.SUBMIT
+                                children: _.default.Messages.BACK
+                            }), (0, l.jsx)(o.Button, {
+                                size: o.Button.Sizes.SMALL,
+                                onClick: K,
+                                children: _.default.Messages.SUBMIT
                             })]
-                        }) : (0, l.jsx)(d.Checkbox, {
-                            type: d.Checkbox.Types.INVERTED,
+                        }) : (0, l.jsx)(o.Checkbox, {
+                            type: o.Checkbox.Types.INVERTED,
                             size: 18,
-                            value: B,
-                            onChange: () => S(!B),
-                            children: (0, l.jsx)(d.Text, {
+                            value: L,
+                            onChange: () => U(!L),
+                            children: (0, l.jsx)(o.Text, {
                                 variant: "text-sm/normal",
-                                children: h.default.Messages.DONT_SHOW_AGAIN
+                                children: _.default.Messages.DONT_SHOW_AGAIN
                             })
                         })
                     })]

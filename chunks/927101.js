@@ -4,20 +4,20 @@
                     return o
                 }
             });
-            var s = n("884691"),
-                a = n("446674"),
-                l = n("913144"),
-                r = n("694787"),
-                i = n("770032");
+            var a = n("884691"),
+                s = n("446674"),
+                i = n("913144"),
+                l = n("694787"),
+                r = n("770032");
 
             function o() {
-                let e = (0, a.useStateFromStoresObject)([i.default], () => ({
-                    isLoading: i.default.getIsValidatingUsers(),
-                    multiAccountUsers: i.default.getUsers()
+                let e = (0, s.useStateFromStoresObject)([r.default], () => ({
+                    isLoading: r.default.getIsValidatingUsers(),
+                    multiAccountUsers: r.default.getUsers()
                 }));
-                return s.useEffect(() => {
-                    l.default.wait(() => {
-                        r.validateMultiAccountTokens()
+                return a.useEffect(() => {
+                    i.default.wait(() => {
+                        l.validateMultiAccountTokens()
                     })
                 }, []), e
             }

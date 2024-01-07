@@ -1,11 +1,11 @@
             "use strict";
-            s.r(t), s.d(t, {
+            a.r(t), a.d(t, {
                 GuildHomeHeaderRedesignExperiment: function() {
                     return n
                 }
             });
-            var a = s("862205");
-            let n = (0, a.createExperiment)({
+            var l = a("862205");
+            let n = (0, l.createExperiment)({
                 kind: "guild",
                 id: "2022-12_home_header_redesign",
                 label: "Home New Header",

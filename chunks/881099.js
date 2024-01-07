@@ -1,20 +1,20 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return o
+                    return s
                 }
             });
-            var n = r("54493");
+            var a = r("54493");
 
-            function i(e, t) {
+            function n(e, t) {
                 for (var r = 0; r < t.length; r++) {
-                    var i = t[r];
-                    i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(e, (0, n.default)(i.key), i)
+                    var n = t[r];
+                    n.enumerable = n.enumerable || !1, n.configurable = !0, "value" in n && (n.writable = !0), Object.defineProperty(e, (0, a.default)(n.key), n)
                 }
             }
 
-            function o(e, t, r) {
-                return t && i(e.prototype, t), r && i(e, r), Object.defineProperty(e, "prototype", {
+            function s(e, t, r) {
+                return t && n(e.prototype, t), r && n(e, r), Object.defineProperty(e, "prototype", {
                     writable: !1
                 }), e
             }

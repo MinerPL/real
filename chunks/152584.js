@@ -4,60 +4,60 @@
                     return p
                 },
                 accountDetailsClose: function() {
-                    return I
+                    return S
                 },
                 disableAccount: function() {
-                    return S
+                    return T
                 },
                 saveAccountRequest: function() {
                     return h
                 },
                 saveAccountChanges: function() {
-                    return T
+                    return I
                 },
                 getHarvestStatus: function() {
-                    return N
+                    return A
                 },
                 requestHarvest: function() {
-                    return C
+                    return g
                 },
                 setPendingAvatar: function() {
-                    return v
+                    return N
                 },
                 setPendingGlobalNameName: function() {
-                    return g
+                    return C
                 },
                 setPendingAvatarDecoration: function() {
                     return m
                 },
                 setPendingProfileEffectId: function() {
-                    return A
+                    return v
                 },
                 clearErrors: function() {
-                    return L
-                },
-                resetPendingAccountChanges: function() {
-                    return U
-                },
-                resetAllPending: function() {
                     return R
                 },
+                resetPendingAccountChanges: function() {
+                    return O
+                },
+                resetAllPending: function() {
+                    return U
+                },
                 resetAndCloseUserProfileForm: function() {
-                    return P
+                    return y
                 },
                 setDisableSubmit: function() {
-                    return y
+                    return D
                 }
             });
             var i = n("872717"),
-                l = n("95410"),
-                r = n("819855"),
+                r = n("95410"),
+                l = n("819855"),
                 o = n("913144"),
-                s = n("393414"),
+                a = n("393414"),
                 u = n("599110"),
-                a = n("315102"),
-                c = n("730622"),
-                d = n("437822"),
+                s = n("315102"),
+                d = n("730622"),
+                c = n("437822"),
                 f = n("49111"),
                 E = n("191349"),
                 _ = n("782340");
@@ -68,17 +68,17 @@
                 })
             }
 
-            function I() {
+            function S() {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_CLOSE"
                 })
             }
 
-            function S(e, t) {
+            function T(e, t) {
                 let n = t ? _.default.Messages.DELETE_ACCOUNT : _.default.Messages.DISABLE_ACCOUNT,
-                    l = t ? f.Endpoints.DELETE_ACCOUNT : f.Endpoints.DISABLE_ACCOUNT;
-                return (0, c.default)(t => i.default.post({
-                    url: l,
+                    r = t ? f.Endpoints.DELETE_ACCOUNT : f.Endpoints.DISABLE_ACCOUNT;
+                return (0, d.default)(t => i.default.post({
+                    url: r,
                     body: {
                         password: e,
                         ...t
@@ -90,7 +90,7 @@
                     },
                     checkEnabled: !1
                 }).then(() => {
-                    d.default.logoutInternal(), (0, s.transitionTo)(f.Routes.DEFAULT_LOGGED_OUT)
+                    c.default.logoutInternal(), (0, a.transitionTo)(f.Routes.DEFAULT_LOGGED_OUT)
                 })
             }
             async function h(e) {
@@ -117,38 +117,38 @@
                 }), t
             }
 
-            function T(e) {
+            function I(e) {
                 let {
                     username: t,
                     discriminator: n,
                     email: i,
-                    emailToken: r,
-                    password: s,
-                    avatar: d,
+                    emailToken: l,
+                    password: a,
+                    avatar: c,
                     avatarDecoration: p,
-                    newPassword: I,
-                    globalName: S
+                    newPassword: S,
+                    globalName: T
                 } = e;
                 return o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SUBMIT"
-                }), (0, c.default)(e => {
+                }), (0, d.default)(e => {
                     let o = {
                         username: t,
                         email: i,
-                        email_token: r,
-                        password: s,
-                        avatar: d,
+                        email_token: l,
+                        password: a,
+                        avatar: c,
                         discriminator: n,
-                        global_name: S,
-                        new_password: I,
+                        global_name: T,
+                        new_password: S,
                         ...e
                     };
                     null === p && (o.avatar_decoration_id = null), null != p && (o.avatar_decoration_id = p.id, o.avatar_decoration_sku_id = p.skuId);
-                    let u = l.default.get(f.DEVICE_TOKEN),
-                        a = (0, E.getDevicePushProvider)();
-                    null != a && null != u && (o.push_provider = a, o.push_token = u);
-                    let c = l.default.get(f.DEVICE_VOIP_TOKEN);
-                    return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != c && (o.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, o.push_voip_token = c), h(o)
+                    let u = r.default.get(f.DEVICE_TOKEN),
+                        s = (0, E.getDevicePushProvider)();
+                    null != s && null != u && (o.push_provider = s, o.push_token = u);
+                    let d = r.default.get(f.DEVICE_VOIP_TOKEN);
+                    return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != d && (o.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, o.push_voip_token = d), h(o)
                 }, {
                     checkEnabled: !1,
                     modalProps: {
@@ -163,7 +163,7 @@
                 }).then(e => {
                     let t = e.body;
                     return u.default.track(f.AnalyticEvents.USER_AVATAR_UPDATED, {
-                        animated: (0, a.isAnimatedIconHash)(t.avatar)
+                        animated: (0, s.isAnimatedIconHash)(t.avatar)
                     }), o.default.dispatch({
                         type: "USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS"
                     }), e
@@ -173,28 +173,28 @@
                 }), e))
             }
 
-            function N() {
+            function A() {
                 return i.default.get({
                     url: f.Endpoints.USER_HARVEST,
                     oldFormErrors: !0
                 })
             }
 
-            function C() {
+            function g() {
                 return i.default.post({
                     url: f.Endpoints.USER_HARVEST,
                     oldFormErrors: !0
                 })
             }
 
-            function v(e) {
+            function N(e) {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR",
                     avatar: e
-                }), null == e ? r.AccessibilityAnnouncer.announce(_.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : r.AccessibilityAnnouncer.announce(_.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
+                }), null == e ? l.AccessibilityAnnouncer.announce(_.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : l.AccessibilityAnnouncer.announce(_.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
             }
 
-            function g(e) {
+            function C(e) {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME",
                     globalName: e
@@ -208,38 +208,38 @@
                 })
             }
 
-            function A(e) {
+            function v(e) {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID",
                     profileEffectId: e
                 })
             }
 
-            function L() {
+            function R() {
                 o.default.dispatch({
                     type: "USER_SETTINGS_CLEAR_ERRORS"
                 })
             }
 
-            function U() {
+            function O() {
                 o.default.dispatch({
                     type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
                 })
             }
 
-            function R() {
+            function U() {
                 o.default.dispatch({
                     type: "USER_SETTINGS_RESET_ALL_PENDING"
                 })
             }
 
-            function P() {
+            function y() {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM"
                 })
             }
 
-            function y(e) {
+            function D(e) {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT",
                     disable: e

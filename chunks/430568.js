@@ -1,26 +1,26 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return S
                 }
             }), n("222007"), n("70102"), n("843762"), n("424973");
-            var l = n("37983"),
-                a = n("884691"),
-                r = n("414456"),
-                i = n.n(r),
-                s = n("817736"),
-                u = n.n(s),
+            var i = n("37983"),
+                s = n("884691"),
+                l = n("414456"),
+                r = n.n(l),
+                a = n("817736"),
+                u = n.n(a),
                 o = n("118810"),
                 d = n("446674"),
                 c = n("407063"),
-                f = n("845579"),
-                h = n("901165"),
-                p = n("62843"),
-                C = n("315102"),
-                m = n("402671"),
-                v = n("866190"),
-                g = n("115279");
-            class S extends a.PureComponent {
+                h = n("845579"),
+                f = n("901165"),
+                m = n("62843"),
+                p = n("315102"),
+                I = n("402671"),
+                E = n("866190"),
+                v = n("115279");
+            class _ extends s.PureComponent {
                 componentWillUnmount() {
                     var e;
                     null === (e = this.cancelLoadImage) || void 0 === e || e.call(this)
@@ -30,11 +30,11 @@
                         {
                             src: t,
                             emojiId: n,
-                            emojiName: l,
-                            animated: a,
-                            shouldAnimate: r,
-                            isFocused: i,
-                            isInteracting: s,
+                            emojiName: i,
+                            animated: s,
+                            shouldAnimate: l,
+                            isFocused: r,
+                            isInteracting: a,
                             size: u = "default"
                         } = e,
                         {
@@ -42,51 +42,51 @@
                         } = this.state;
                     if (null != t) return t;
                     if (null != n) {
-                        let e = g.EMOJI_SIZE_MAP[u];
-                        return C.default.getEmojiURL({
+                        let e = v.EMOJI_SIZE_MAP[u];
+                        return p.default.getEmojiURL({
                             id: n,
-                            animated: i && !0 === a && (!0 === r || o || !0 === s),
+                            animated: r && !0 === s && (!0 === l || o || !0 === a),
                             size: e
                         })
                     }
-                    if (null != l) return m.default.getURL(l)
+                    if (null != i) return I.default.getURL(i)
                 }
                 render() {
                     var e;
                     let t;
                     let {
                         emojiName: n,
-                        animated: r,
-                        className: s,
+                        animated: l,
+                        className: a,
                         size: u = "default",
                         alt: o,
                         shouldAnimate: d,
                         isFocused: c,
-                        emojiId: f,
-                        autoplay: h,
-                        isInteracting: p,
-                        ...C
-                    } = this.props, m = this.getSrc();
-                    return null == m || "" === m ? (0, l.jsx)("span", {
-                        className: i("emoji", "emoji-text"),
+                        emojiId: h,
+                        autoplay: f,
+                        isInteracting: m,
+                        ...p
+                    } = this.props, I = this.getSrc();
+                    return null == I || "" === I ? (0, i.jsx)("span", {
+                        className: r("emoji", "emoji-text"),
                         children: n
-                    }) : (r && (t = {
+                    }) : (l && (t = {
                         onMouseEnter: this.onMouseEnter,
                         onMouseLeave: this.onMouseLeave
-                    }), (0, a.createElement)("img", {
-                        ...C,
+                    }), (0, s.createElement)("img", {
+                        ...p,
                         key: this.key,
-                        src: m,
+                        src: I,
                         alt: null !== (e = null != o ? o : n) && void 0 !== e ? e : void 0,
                         draggable: !1,
                         ...t,
-                        className: i("emoji", s, {
+                        className: r("emoji", a, {
                             jumboable: "jumbo" === u
                         }),
                         onError: this.onError,
                         "data-type": "emoji",
-                        ...null != f && "" !== f ? {
-                            "data-id": f
+                        ...null != h && "" !== h ? {
+                            "data-id": h
                         } : {
                             "data-name": n
                         }
@@ -119,95 +119,95 @@
                     }
                 }
             }
-            S.defaultProps = {
+            _.defaultProps = {
                 isInteracting: !1
             };
-            let E = function(e) {
+            let g = function(e) {
                 if (null == window.IntersectionObserver) return function(t) {
-                    return (0, l.jsx)(e, {
+                    return (0, i.jsx)(e, {
                         ...t,
                         shouldAnimate: t.animated
                     })
                 };
                 let t = [],
                     n = [],
-                    r = new window.IntersectionObserver(e => {
+                    l = new window.IntersectionObserver(e => {
                         e.forEach(e => {
-                            let l = n.find(t => {
+                            let i = n.find(t => {
                                 let [n] = t;
                                 return n === e.target
                             });
-                            if (null == l) return;
-                            let a = l[1];
+                            if (null == i) return;
+                            let s = i[1];
                             if (e.intersectionRatio >= .7) {
-                                var r, i;
-                                if (-1 !== t.indexOf(a)) return;
-                                let n = Math.abs(e.intersectionRect.bottom - Number(null === (r = e.rootBounds) || void 0 === r ? void 0 : r.bottom)) < Math.abs(e.intersectionRect.top - Number(null === (i = e.rootBounds) || void 0 === i ? void 0 : i.top));
-                                n ? t.unshift(a) : t.push(a), a.forceUpdate(), n && t.length > 100 && t[100].forceUpdate()
+                                var l, r;
+                                if (-1 !== t.indexOf(s)) return;
+                                let n = Math.abs(e.intersectionRect.bottom - Number(null === (l = e.rootBounds) || void 0 === l ? void 0 : l.bottom)) < Math.abs(e.intersectionRect.top - Number(null === (r = e.rootBounds) || void 0 === r ? void 0 : r.top));
+                                n ? t.unshift(s) : t.push(s), s.forceUpdate(), n && t.length > 100 && t[100].forceUpdate()
                             } else {
-                                let e = t.indexOf(a); - 1 !== e && (t.splice(e, 1), a.forceUpdate(), e < 100 && t.length >= 100 && t[99].forceUpdate())
+                                let e = t.indexOf(s); - 1 !== e && (t.splice(e, 1), s.forceUpdate(), e < 100 && t.length >= 100 && t[99].forceUpdate())
                             }
                         })
                     }, {
                         threshold: .7
                     });
 
-                function i(e) {
+                function r(e) {
                     let t = u.findDOMNode(e);
-                    (0, o.isElement)(t) && (n.push([t, e]), r.observe(t))
+                    (0, o.isElement)(t) && (n.push([t, e]), l.observe(t))
                 }
 
-                function s(e) {
-                    let l = u.findDOMNode(e);
-                    r.unobserve(l);
-                    let a = n.findIndex(t => {
-                        let [n, l] = t;
-                        return l === e
-                    }); - 1 !== a && (n.splice(a, 1), -1 !== (a = t.indexOf(e)) && (t.splice(a, 1), a < 100 && t.length >= 100 && t[99].forceUpdate()))
+                function a(e) {
+                    let i = u.findDOMNode(e);
+                    l.unobserve(i);
+                    let s = n.findIndex(t => {
+                        let [n, i] = t;
+                        return i === e
+                    }); - 1 !== s && (n.splice(s, 1), -1 !== (s = t.indexOf(e)) && (t.splice(s, 1), s < 100 && t.length >= 100 && t[99].forceUpdate()))
                 }
-                return class extends a.Component {
+                return class extends s.Component {
                     shouldAutoplay(e) {
                         return e.animated && e.autoplay
                     }
                     componentDidMount() {
-                        this.shouldAutoplay(this.props) && i(this)
+                        this.shouldAutoplay(this.props) && r(this)
                     }
                     componentDidUpdate(e) {
                         let t = this.shouldAutoplay(e),
                             n = this.shouldAutoplay(this.props);
-                        n !== t && (n ? i(this) : s(this))
+                        n !== t && (n ? r(this) : a(this))
                     }
                     componentWillUnmount() {
-                        this.shouldAutoplay(this.props) && s(this)
+                        this.shouldAutoplay(this.props) && a(this)
                     }
                     render() {
                         let n = t.indexOf(this),
                             {
-                                autoplay: a,
-                                allowAnimatedEmoji: r,
-                                ...i
+                                autoplay: s,
+                                allowAnimatedEmoji: l,
+                                ...r
                             } = this.props;
-                        return (0, l.jsx)(p.MessagesInteractionContext.Consumer, {
-                            children: t => (0, l.jsx)(e, {
-                                ...i,
-                                autoplay: a || !1,
-                                shouldAnimate: -1 !== n && n < 100 && !t.disableAnimations && r
+                        return (0, i.jsx)(m.MessagesInteractionContext.Consumer, {
+                            children: t => (0, i.jsx)(e, {
+                                ...r,
+                                autoplay: s || !1,
+                                shouldAnimate: -1 !== n && n < 100 && !t.disableAnimations && l
                             })
                         })
                     }
                 }
-            }(S);
+            }(_);
 
-            function I(e) {
-                let t = f.AnimateEmoji.useSetting(),
+            function S(e) {
+                let t = h.AnimateEmoji.useSetting(),
                     n = {
                         autoplay: null == e.autoplay ? t : e.autoplay,
                         allowAnimatedEmoji: t
                     },
-                    a = __OVERLAY__ ? (0, d.useStateFromStores)([h.default], () => h.default.isInstanceFocused()) : (0, v.useIsWindowFocused)();
-                return (0, l.jsx)(E, {
+                    s = __OVERLAY__ ? (0, d.useStateFromStores)([f.default], () => f.default.isInstanceFocused()) : (0, E.useIsWindowFocused)();
+                return (0, i.jsx)(g, {
                     ...e,
                     ...n,
-                    isFocused: a
+                    isFocused: s
                 })
             }

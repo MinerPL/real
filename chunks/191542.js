@@ -1,139 +1,139 @@
             "use strict";
-            let l;
-            n.r(t), n.d(t, {
+            let n;
+            u.r(t), u.d(t, {
                 default: function() {
-                    return N
+                    return E
                 }
             });
-            var i = n("446674"),
-                r = n("872717"),
-                s = n("913144"),
-                a = n("271938"),
-                o = n("401848"),
-                u = n("49111"),
-                d = n("724210");
-            let c = {},
-                E = Object.freeze({});
+            var r = u("446674"),
+                l = u("872717"),
+                a = u("913144"),
+                i = u("271938"),
+                o = u("401848"),
+                d = u("49111"),
+                s = u("724210");
+            let f = {},
+                c = Object.freeze({});
 
-            function _(e) {
+            function m(e) {
                 var t;
-                return null !== (t = c[e]) && void 0 !== t ? t : E
+                return null !== (t = f[e]) && void 0 !== t ? t : c
             }
 
-            function f(e) {
-                var t, n;
+            function g(e) {
+                var t, u;
                 let {
-                    channelId: l,
-                    userId: i
-                } = e, r = {
-                    ..._(l)
+                    channelId: n,
+                    userId: r
+                } = e, l = {
+                    ...m(n)
                 };
-                clearTimeout(r[i]), r[i] = (t = l, n = i, setTimeout(() => {
-                    s.default.dispatch({
+                clearTimeout(l[r]), l[r] = (t = n, u = r, setTimeout(() => {
+                    a.default.dispatch({
                         type: "TYPING_STOP",
                         channelId: t,
-                        userId: n
+                        userId: u
                     })
-                }, 1e4)), c[l] = r
+                }, 1e4)), f[n] = l
             }
 
-            function I(e) {
+            function S(e) {
                 let {
                     channelId: t,
-                    userId: n
-                } = e, l = c[t];
-                if (null == l || null == l[n]) return !1;
-                let i = {
-                    ...l
+                    userId: u
+                } = e, n = f[t];
+                if (null == n || null == n[u]) return !1;
+                let r = {
+                    ...n
                 };
-                clearTimeout(i[n]), delete i[n], c[t] = i
+                clearTimeout(r[u]), delete r[u], f[t] = r
             }
 
-            function h() {
-                c = {}
+            function T() {
+                f = {}
             }
-            class g extends i.default.Store {
+            class h extends r.default.Store {
                 getTypingUsers(e) {
-                    return _(e)
+                    return m(e)
                 }
                 isTyping(e, t) {
-                    return null != _(e)[t]
+                    return null != m(e)[t]
                 }
             }
-            g.displayName = "TypingStore";
-            var N = new g(s.default, {
-                TYPING_START: f,
-                TYPING_STOP: I,
+            h.displayName = "TypingStore";
+            var E = new h(a.default, {
+                TYPING_START: g,
+                TYPING_STOP: S,
                 TYPING_START_LOCAL: function(e) {
                     let {
                         channelId: t
-                    } = e, n = a.default.getId();
-                    if (null == n || t === d.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) return !1;
-                    null != l && l.channelId !== t && (null != l.timeout && clearTimeout(l.timeout), l = null);
-                    let i = Date.now(),
-                        c = 8e3;
-                    if (null != l && (null != l.timeout || l.prevSend + c > i)) return !1;
-                    let I = null == l || l.prevSend > i - 2 * c ? 1500 : 0,
-                        h = setTimeout(() => {
-                            if (null != l && l.channelId === t && n === a.default.getId() && null != l.timeout) l.timeout = null, !(function(e) {
-                                let t = _(e);
-                                return t === E ? 0 : Object.keys(t).length
-                            }(t) > 5) && r.default.post({
-                                url: u.Endpoints.TYPING(t),
+                    } = e, u = i.default.getId();
+                    if (null == u || t === s.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) return !1;
+                    null != n && n.channelId !== t && (null != n.timeout && clearTimeout(n.timeout), n = null);
+                    let r = Date.now(),
+                        f = 8e3;
+                    if (null != n && (null != n.timeout || n.prevSend + f > r)) return !1;
+                    let S = null == n || n.prevSend > r - 2 * f ? 1500 : 0,
+                        T = setTimeout(() => {
+                            if (null != n && n.channelId === t && u === i.default.getId() && null != n.timeout) n.timeout = null, !(function(e) {
+                                let t = m(e);
+                                return t === c ? 0 : Object.keys(t).length
+                            }(t) > 5) && l.default.post({
+                                url: d.Endpoints.TYPING(t),
                                 oldFormErrors: !0
                             }).then(e => {
                                 if (200 === e.status) {
-                                    var n, l;
-                                    let i = null !== (n = e.body.message_send_cooldown_ms) && void 0 !== n ? n : 0,
-                                        r = null !== (l = e.body.thread_create_cooldown_ms) && void 0 !== l ? l : 0;
-                                    i > 0 && s.default.dispatch({
+                                    var u, n;
+                                    let r = null !== (u = e.body.message_send_cooldown_ms) && void 0 !== u ? u : 0,
+                                        l = null !== (n = e.body.thread_create_cooldown_ms) && void 0 !== n ? n : 0;
+                                    r > 0 && a.default.dispatch({
                                         type: "SLOWMODE_SET_COOLDOWN",
                                         channelId: t,
                                         slowmodeType: o.SlowmodeType.SendMessage,
-                                        cooldownMs: i
-                                    }), r > 0 && s.default.dispatch({
+                                        cooldownMs: r
+                                    }), l > 0 && a.default.dispatch({
                                         type: "SLOWMODE_SET_COOLDOWN",
                                         channelId: t,
                                         slowmodeType: o.SlowmodeType.CreateThread,
-                                        cooldownMs: r
+                                        cooldownMs: l
                                     })
                                 }
                             })
-                        }, I);
-                    return l = {
+                        }, S);
+                    return n = {
                         channelId: t,
-                        timeout: h,
-                        prevSend: i
-                    }, f({
+                        timeout: T,
+                        prevSend: r
+                    }, g({
                         channelId: t,
-                        userId: n
+                        userId: u
                     })
                 },
                 TYPING_STOP_LOCAL: function(e) {
                     let {
                         channelId: t
-                    } = e, n = a.default.getId();
-                    return null != n && null != l && l.channelId === t && null != l.timeout && (clearTimeout(l.timeout), l = null, I({
+                    } = e, u = i.default.getId();
+                    return null != u && null != n && n.channelId === t && null != n.timeout && (clearTimeout(n.timeout), n = null, S({
                         channelId: t,
-                        userId: n
+                        userId: u
                     }))
                 },
-                CONNECTION_OPEN: h,
-                OVERLAY_INITIALIZE: h,
+                CONNECTION_OPEN: T,
+                OVERLAY_INITIALIZE: T,
                 MESSAGE_CREATE: function(e) {
                     let {
                         channelId: t,
                         message: {
-                            author: n
+                            author: u
                         },
-                        optimistic: i
+                        optimistic: r
                     } = e;
-                    return i && ! function(e) {
-                        if (null == l || l.channelId !== e) return;
-                        null != l.timeout && clearTimeout(l.timeout), l = null
-                    }(t), null != n && I({
+                    return r && ! function(e) {
+                        if (null == n || n.channelId !== e) return;
+                        null != n.timeout && clearTimeout(n.timeout), n = null
+                    }(t), null != u && S({
                         channelId: t,
-                        userId: n.id
+                        userId: u.id
                     })
                 }
             })

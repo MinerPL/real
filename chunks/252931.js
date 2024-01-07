@@ -7,15 +7,15 @@
                     return c
                 },
                 useInventoryGuildSettingsExperiment: function() {
-                    return _
+                    return E
                 }
             });
-            var l = n("65597"),
-                i = n("862205"),
-                r = n("697218"),
-                s = n("719923"),
+            var i = n("65597"),
+                r = n("862205"),
+                l = n("697218"),
+                o = n("719923"),
                 a = n("782340");
-            let o = (0, i.createExperiment)({
+            let u = (0, r.createExperiment)({
                     kind: "user",
                     id: "2023-05_inventory_guild_packs",
                     label: "Inventory Guild Packs Experiment",
@@ -108,21 +108,21 @@
                         }
                     }]
                 }),
-                u = e => {
+                s = e => {
                     let {
                         user: t,
                         config: n
                     } = e, {
-                        desktopViewAndUseAndCollectEnabled: l,
-                        mobileViewAndUseEnabled: i,
-                        mobileAndFreemiumCollectEnabled: r,
+                        desktopViewAndUseAndCollectEnabled: i,
+                        mobileViewAndUseEnabled: r,
+                        mobileAndFreemiumCollectEnabled: l,
                         autoUnfurlReactionTooltip: a,
-                        collectOffOverride: o
-                    } = n, u = s.default.isPremium(t);
+                        collectOffOverride: u
+                    } = n, s = o.default.isPremium(t);
                     return {
-                        viewAndUseEnabled: l,
-                        showTryPacksModalAndV2Copy: r,
-                        collectEnabled: !o && (u ? l : r),
+                        viewAndUseEnabled: i,
+                        showTryPacksModalAndV2Copy: l,
+                        collectEnabled: !u && (s ? i : l),
                         autoUnfurlReactionTooltip: a
                     }
                 },
@@ -136,9 +136,9 @@
                         showTryPacksModalAndV2Copy: !1,
                         collectEnabled: !1,
                         autoUnfurlReactionTooltip: !1
-                    } : u({
+                    } : s({
                         user: t,
-                        config: o.getCurrentConfig({
+                        config: u.getCurrentConfig({
                             location: "inventory_guild_packs_experiment"
                         }, {
                             autoTrackExposure: n
@@ -153,7 +153,7 @@
                     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
                         expressionSourceGuild: void 0,
                         autoTrackExposure: !0
-                    }, i = (0, l.default)([r.default], () => r.default.getCurrentUser()), s = o.useExperiment({
+                    }, r = (0, i.default)([l.default], () => l.default.getCurrentUser()), o = u.useExperiment({
                         location: "inventory_guild_setting_experiment"
                     }, {
                         autoTrackExposure: n
@@ -161,19 +161,19 @@
                         viewAndUseEnabled: a,
                         showTryPacksModalAndV2Copy: d,
                         collectEnabled: c,
-                        autoUnfurlReactionTooltip: E
-                    } = u({
-                        user: i,
-                        config: s
-                    }), _ = a && c && null != t && (null == t ? void 0 : null === (e = t.inventorySettings) || void 0 === e ? void 0 : e.isEmojiPackCollectible) !== !1;
+                        autoUnfurlReactionTooltip: f
+                    } = s({
+                        user: r,
+                        config: o
+                    }), E = a && c && null != t && (null == t ? void 0 : null === (e = t.inventorySettings) || void 0 === e ? void 0 : e.isEmojiPackCollectible) !== !1;
                     return {
                         viewAndUseEnabled: a,
-                        collectEnabled: _,
+                        collectEnabled: E,
                         showTryPacksModalAndV2Copy: d,
-                        autoUnfurlReactionTooltip: E
+                        autoUnfurlReactionTooltip: f
                     }
                 },
-                E = (0, i.createExperiment)({
+                f = (0, r.createExperiment)({
                     kind: "guild",
                     id: "2023-06_inventory_guild_setting",
                     label: "Inventory Guild Settings Experiment",
@@ -221,14 +221,14 @@
                         }
                     }]
                 }),
-                _ = function() {
+                E = function() {
                     let {
                         guildId: e,
                         autoTrackExposure: t = !0
                     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
                         guildId: void 0,
                         autoTrackExposure: !0
-                    }, n = E.useExperiment({
+                    }, n = f.useExperiment({
                         guildId: null != e ? e : "",
                         location: "482926_3"
                     }, {

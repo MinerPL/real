@@ -1,26 +1,26 @@
             "use strict";
-            n.r(t), n.d(t, {
+            r.r(t), r.d(t, {
                 default: function() {
                     return f
                 }
             });
-            var s = n("37983"),
-                i = n("884691"),
-                a = n("414456"),
-                l = n.n(a),
-                r = n("546671"),
-                u = n("341417");
-            let o = {
+            var n = r("37983"),
+                i = r("884691"),
+                s = r("414456"),
+                l = r.n(s),
+                a = r("546671"),
+                o = r("341417");
+            let u = {
                     UP: "up",
                     RIGHT: "right",
                     DOWN: "down",
                     LEFT: "left"
                 },
                 c = {
-                    [o.UP]: u.up,
-                    [o.RIGHT]: u.right,
-                    [o.DOWN]: u.down,
-                    [o.LEFT]: u.left
+                    [u.UP]: o.up,
+                    [u.RIGHT]: o.right,
+                    [u.DOWN]: o.down,
+                    [u.LEFT]: o.left
                 };
             class d extends i.PureComponent {
                 render() {
@@ -28,12 +28,12 @@
                         direction: e,
                         className: t
                     } = this.props;
-                    return (0, s.jsx)(r.default, {
-                        className: l(u.arrow, t, {
+                    return (0, n.jsx)(a.default, {
+                        className: l(o.arrow, t, {
                             [c[e]]: !0
                         })
                     })
                 }
             }
-            d.Directions = o;
+            d.Directions = u;
             var f = d

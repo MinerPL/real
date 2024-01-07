@@ -1,83 +1,83 @@
             "use strict";
             n.r(t), n.d(t, {
                 validateMultiAccountTokens: function() {
-                    return f
-                },
-                switchAccount: function() {
                     return E
                 },
+                switchAccount: function() {
+                    return f
+                },
                 removeAccount: function() {
-                    return h
+                    return _
                 }
             });
-            var s = n("171718"),
-                a = n("872717"),
-                l = n("913144"),
-                r = n("437822"),
-                i = n("605250"),
+            var a = n("171718"),
+                s = n("872717"),
+                i = n("913144"),
+                l = n("437822"),
+                r = n("605250"),
                 o = n("271938"),
                 u = n("770032"),
                 d = n("49111");
-            let c = new i.default("MultiAccountActionCreators");
+            let c = new r.default("MultiAccountActionCreators");
 
-            function f() {
+            function E() {
                 let e = o.default.getId(),
                     t = u.default.getUsers();
                 t.forEach(async t => {
                     let n, {
-                            id: r
+                            id: l
                         } = t,
-                        i = s.default.getToken(r);
-                    if (null == i || "" === i) {
-                        l.default.dispatch({
+                        r = a.default.getToken(l);
+                    if (null == r || "" === r) {
+                        i.default.dispatch({
                             type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE",
-                            userId: r
+                            userId: l
                         });
                         return
                     }
-                    l.default.dispatch({
+                    i.default.dispatch({
                         type: "MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST",
-                        userId: r
+                        userId: l
                     });
                     try {
-                        n = await a.default.get({
+                        n = await s.default.get({
                             url: d.Endpoints.ME,
                             headers: {
-                                authorization: i
+                                authorization: r
                             },
                             retries: 3
                         })
                     } catch (t) {
                         let e = (null == t ? void 0 : t.status) === 401 || (null == t ? void 0 : t.status) === 403;
-                        l.default.dispatch({
+                        i.default.dispatch({
                             type: e ? "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE" : "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS",
-                            userId: r
+                            userId: l
                         });
                         return
                     }
-                    l.default.dispatch({
-                        type: e === r ? "CURRENT_USER_UPDATE" : "USER_UPDATE",
+                    i.default.dispatch({
+                        type: e === l ? "CURRENT_USER_UPDATE" : "USER_UPDATE",
                         user: n.body
-                    }), l.default.dispatch({
+                    }), i.default.dispatch({
                         type: "MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS",
-                        userId: r
+                        userId: l
                     })
                 })
             }
 
-            function E(e, t) {
+            function f(e, t) {
                 c.log("Switching account to ".concat(e), {
                     switchSynchronously: t
                 });
-                let n = s.default.getToken(e);
-                return null == n ? (c.log("Switching accounts failed because there was no token"), l.default.dispatch({
+                let n = a.default.getToken(e);
+                return null == n ? (c.log("Switching accounts failed because there was no token"), i.default.dispatch({
                     type: "MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE",
                     userId: e
-                }), Promise.resolve()) : r.default.switchAccountToken(n, t)
+                }), Promise.resolve()) : l.default.switchAccountToken(n, t)
             }
 
-            function h(e) {
-                l.default.dispatch({
+            function _(e) {
+                i.default.dispatch({
                     type: "MULTI_ACCOUNT_REMOVE_ACCOUNT",
                     userId: e
                 })

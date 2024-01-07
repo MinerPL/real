@@ -1,27 +1,27 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return f
+                    return g
                 }
-            }), s("424973");
-            var a = s("446674"),
-                n = s("193990"),
-                l = s("845579"),
-                i = s("385649"),
-                r = s("599110"),
-                u = s("684581"),
-                d = s("49111"),
-                o = s("782340");
+            }), n("424973");
+            var s = n("446674"),
+                a = n("193990"),
+                i = n("845579"),
+                r = n("385649"),
+                l = n("599110"),
+                u = n("684581"),
+                o = n("49111"),
+                d = n("782340");
 
             function c() {
-                return _() && u.default.experiment.getCurrentConfig({
+                return m() && u.default.experiment.getCurrentConfig({
                     location: "holiday_events_is_eligible"
                 }, {
                     autoTrackExposure: !1
                 }).enabled
             }
 
-            function E() {
+            function f() {
                 let {
                     enabled: e
                 } = u.default.experiment.useExperiment({
@@ -29,18 +29,18 @@
                 }, {
                     autoTrackExposure: !1
                 });
-                return _() && e
+                return m() && e
             }
 
-            function T() {
+            function p() {
                 return null != u.default.ringtone && null != u.default.getRingtoneSettingsLabel
             }
 
-            function _() {
+            function m() {
                 let e = Date.now();
                 return e >= u.default.startTimeMs && e <= u.default.endTimeMs
             }
-            var f = {
+            var g = {
                 subscribe: function(e) {
                     return u.default.experiment.subscribe({
                         location: "holiday_events_subscribe"
@@ -48,43 +48,43 @@
                 },
                 isEligible: c,
                 isRingtoneDisabled: function() {
-                    return null == u.default.ringtone || i.default.isSoundDisabled(u.default.ringtone)
+                    return null == u.default.ringtone || r.default.isSoundDisabled(u.default.ringtone)
                 },
                 isRingtoneEligible: function() {
                     let e = c();
-                    return e && T()
+                    return e && p()
                 },
                 onRingtoneSettingValueChange: function(e) {
-                    let t = i.default.getDisabledSounds();
+                    let t = r.default.getDisabledSounds();
                     if (null == u.default.ringtone) return;
-                    let s = t.filter(e => e !== u.default.ringtone);
-                    !e && s.push(u.default.ringtone), n.default.setDisabledSounds(s), r.default.track(d.AnalyticEvents.EVENT_RINGTONE_TOGGLED, {
+                    let n = t.filter(e => e !== u.default.ringtone);
+                    !e && n.push(u.default.ringtone), a.default.setDisabledSounds(n), l.default.track(o.AnalyticEvents.EVENT_RINGTONE_TOGGLED, {
                         toggled_on: e,
                         sound_name: u.default.ringtone
                     })
                 },
-                useIsEligible: E,
+                useIsEligible: f,
                 useIsRingtoneDisabled: function() {
-                    return (0, a.useStateFromStores)([i.default], () => null == u.default.ringtone || i.default.isSoundDisabled(u.default.ringtone))
+                    return (0, s.useStateFromStores)([r.default], () => null == u.default.ringtone || r.default.isSoundDisabled(u.default.ringtone))
                 },
                 useIsRingtoneEligible: function() {
-                    let e = E();
-                    return e && T()
+                    let e = f();
+                    return e && p()
                 },
                 useRingtoneSettingDescription: function() {
-                    let e = l.NativePhoneIntegrationEnabled.useSetting();
-                    return e ? void 0 : o.default.Messages.ENABLE_PHONE_INTEGRATION
+                    let e = i.NativePhoneIntegrationEnabled.useSetting();
+                    return e ? void 0 : d.default.Messages.ENABLE_PHONE_INTEGRATION
                 },
                 useRingtoneSettingValue: function() {
-                    let e = (0, a.useStateFromStores)([i.default], () => i.default.getDisabledSounds()),
-                        t = l.NativePhoneIntegrationEnabled.useSetting();
+                    let e = (0, s.useStateFromStores)([r.default], () => r.default.getDisabledSounds()),
+                        t = i.NativePhoneIntegrationEnabled.useSetting();
                     return null != u.default.ringtone && t && !e.includes(u.default.ringtone)
                 },
                 getAppSpinnerSources: function() {
-                    return _() ? u.default.appSpinnerSources : null
+                    return m() ? u.default.appSpinnerSources : null
                 },
                 getLoadingTips: function() {
                     var e;
-                    return _() ? null === (e = u.default.getLoadingTips) || void 0 === e ? void 0 : e.call(u.default) : null
+                    return m() ? null === (e = u.default.getLoadingTips) || void 0 === e ? void 0 : e.call(u.default) : null
                 }
             }

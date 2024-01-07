@@ -5,39 +5,39 @@
                 }
             });
             var i = n("446674"),
-                l = n("913144");
-            let r = {
+                r = n("913144");
+            let s = {
                     premiumLikelihood: void 0,
                     isFetching: !1,
                     fetched: !1
                 },
-                o = r;
-            class s extends i.default.Store {
+                l = s;
+            class o extends i.default.Store {
                 initialize() {
-                    o = r
+                    l = s
                 }
                 getState() {
-                    return o
+                    return l
                 }
                 shouldFetchPremiumLikelihood() {
-                    return !o.isFetching && !o.fetched
+                    return !l.isFetching && !l.fetched
                 }
             }
-            s.displayName = "UserPremiumLikelihoodStore";
-            var u = new s(l.default, {
+            o.displayName = "UserPremiumLikelihoodStore";
+            var u = new o(r.default, {
                 BILLING_USER_PREMIUM_LIKELIHOOD_FETCH: function() {
-                    o.isFetching = !0
+                    l.isFetching = !0
                 },
                 BILLING_USER_PREMIUM_LIKELIHOOD_FETCH_SUCCESS: function(e) {
                     let {
                         premiumLikelihood: t
                     } = e;
-                    o.premiumLikelihood = t, o.fetched = !0, o.isFetching = !1
+                    l.premiumLikelihood = t, l.fetched = !0, l.isFetching = !1
                 },
                 BILLING_USER_PREMIUM_LIKELIHOOD_FETCH_ERROR: function() {
-                    o.isFetching = !1
+                    l.isFetching = !1
                 },
                 LOGOUT: function() {
-                    o.premiumLikelihood = void 0
+                    l.premiumLikelihood = void 0
                 }
             })

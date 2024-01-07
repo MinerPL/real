@@ -1,45 +1,45 @@
             "use strict";
-            n.r(t), n.d(t, {
+            t.r(s), t.d(s, {
                 QRCodeOverlaySizes: function() {
                     return o
                 },
                 QRCodeWithOverlay: function() {
-                    return f
+                    return C
                 },
                 default: function() {
-                    return C
+                    return _
                 }
             });
-            var s, o, r = n("37983"),
-                i = n("884691"),
-                a = n("82697"),
-                l = n("56701");
-            (s = o || (o = {})).SIZE_40 = "SIZE_40", s.SIZE_60 = "SIZE_60";
+            var r, o, a = t("37983"),
+                l = t("884691"),
+                n = t("82697"),
+                i = t("56701");
+            (r = o || (o = {})).SIZE_40 = "SIZE_40", r.SIZE_60 = "SIZE_60";
             let d = Object.freeze({
                     SIZE_40: "size-40",
                     SIZE_60: "size-60"
                 }),
-                c = n("527826");
-            class u extends i.PureComponent {
+                c = t("527826");
+            class u extends l.PureComponent {
                 render() {
                     let {
                         className: e,
-                        text: t,
-                        ...n
+                        text: s,
+                        ...t
                     } = this.props;
-                    return (0, r.jsx)("div", {
+                    return (0, a.jsx)("div", {
                         style: {
                             padding: 8,
                             borderRadius: 4,
-                            width: n.size,
-                            height: n.size,
-                            backgroundColor: n.bgColor
+                            width: t.size,
+                            height: t.size,
+                            backgroundColor: t.bgColor
                         },
                         className: e,
-                        children: (0, r.jsx)(a.default, {
-                            value: t,
+                        children: (0, a.jsx)(n.default, {
+                            value: s,
                             level: "M",
-                            ...n
+                            ...t
                         })
                     })
                 }
@@ -49,19 +49,19 @@
                 bgColor: "#ffffff",
                 fgColor: "#000000"
             };
-            class f extends i.PureComponent {
+            class C extends l.PureComponent {
                 render() {
                     let {
                         overlaySize: e
-                    } = this.props, t = d[null != e ? e : "SIZE_40"];
-                    return (0, r.jsxs)("div", {
-                        className: l.qrCodeContainer,
-                        children: [(0, r.jsx)(u, {
+                    } = this.props, s = d[null != e ? e : "SIZE_40"];
+                    return (0, a.jsxs)("div", {
+                        className: i.qrCodeContainer,
+                        children: [(0, a.jsx)(u, {
                             ...this.props
-                        }), (0, r.jsx)("div", {
-                            className: l.qrCodeOverlay,
-                            children: (0, r.jsx)("img", {
-                                className: l[t],
+                        }), (0, a.jsx)("div", {
+                            className: i.qrCodeOverlay,
+                            children: (0, a.jsx)("img", {
+                                className: i[s],
                                 src: c,
                                 alt: ""
                             })
@@ -69,9 +69,9 @@
                     })
                 }
             }
-            f.defaultProps = {
+            C.defaultProps = {
                 size: 144,
                 bgColor: "#ffffff",
                 fgColor: "#000000"
             };
-            var C = u
+            var _ = u

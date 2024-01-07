@@ -1,18 +1,18 @@
             "use strict";
-            s.r(t), s.d(t, {
+            A.r(t), A.d(t, {
                 default: function() {
-                    return i
+                    return r
                 }
             });
-            var a = s("336522"),
-                n = s("254490"),
-                l = s("782340");
+            var a = A("336522"),
+                l = A("254490"),
+                n = A("782340");
 
-            function i(e) {
+            function r(e) {
                 (0, a.openUploadError)({
-                    title: l.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-                    help: l.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
-                        maxSize: (0, n.sizeString)(e)
+                    title: n.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+                    help: n.default.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({
+                        maxSize: (0, l.sizeString)(e)
                     })
                 })
             }

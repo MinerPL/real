@@ -1,52 +1,52 @@
             "use strict";
-            l.r(t), l.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return E
                 }
-            }), l("222007"), l("424973");
-            var a = l("37983"),
-                n = l("884691"),
-                s = l("77078"),
-                r = l("20606"),
-                d = l("956089"),
-                u = l("822516"),
-                i = l("757767"),
-                c = l("782340"),
-                o = l("572721");
-            let E = new Set([0, 6]);
+            }), n("222007"), n("424973");
+            var l = n("37983"),
+                a = n("884691"),
+                r = n("77078"),
+                s = n("20606"),
+                i = n("956089"),
+                u = n("822516"),
+                o = n("757767"),
+                c = n("782340"),
+                d = n("572721");
+            let f = new Set([0, 6]);
 
-            function _(e) {
+            function E(e) {
                 let {
                     startDate: t,
-                    recurrenceRule: l,
-                    onRecurrenceChange: _
-                } = e, g = n.useMemo(() => (0, u.recurrenceRuleToOption)(t, l), [l, t]), f = function(e) {
+                    recurrenceRule: n,
+                    onRecurrenceChange: E
+                } = e, h = a.useMemo(() => (0, u.recurrenceRuleToOption)(t, n), [n, t]), g = function(e) {
                     let t = e.toDate(),
-                        l = Math.ceil(t.getDate() / 7),
-                        a = t.toLocaleString(c.default.getLocale(), {
+                        n = Math.ceil(t.getDate() / 7),
+                        l = t.toLocaleString(c.default.getLocale(), {
                             weekday: "long"
                         }),
-                        n = [{
-                            value: i.RecurrenceOptions.NONE,
+                        a = [{
+                            value: o.RecurrenceOptions.NONE,
                             label: c.default.Messages.CREATE_EVENT_RECUR_NONE
                         }, {
-                            value: i.RecurrenceOptions.WEEKLY,
+                            value: o.RecurrenceOptions.WEEKLY,
                             label: c.default.Messages.CREATE_EVENT_RECUR_WEEKLY.format({
-                                weekday: a
+                                weekday: l
                             })
                         }, {
-                            value: i.RecurrenceOptions.BIWEEKLY,
+                            value: o.RecurrenceOptions.BIWEEKLY,
                             label: c.default.Messages.CREATE_EVENT_RECUR_BIWEEKLY.format({
-                                weekday: a
+                                weekday: l
                             })
                         }, {
-                            value: i.RecurrenceOptions.MONTHLY,
+                            value: o.RecurrenceOptions.MONTHLY,
                             label: c.default.Messages.CREATE_EVENT_RECUR_MONTHLY.format({
-                                nth: l,
-                                weekday: a
+                                nth: n,
+                                weekday: l
                             })
                         }, {
-                            value: i.RecurrenceOptions.YEARLY,
+                            value: o.RecurrenceOptions.YEARLY,
                             label: c.default.Messages.CREATE_EVENT_RECUR_YEARLY.format({
                                 date: t.toLocaleString(c.default.getLocale(), {
                                     month: "short",
@@ -54,26 +54,26 @@
                                 })
                             })
                         }];
-                    return !E.has(t.getDay()) && n.push({
-                        value: i.RecurrenceOptions.WEEKDAY_ONLY,
+                    return !f.has(t.getDay()) && a.push({
+                        value: o.RecurrenceOptions.WEEKDAY_ONLY,
                         label: c.default.Messages.CREATE_EVENT_RECUR_WEEKDAYS
-                    }), n
-                }(t), h = e => e.toString(), R = (0, a.jsxs)("div", {
-                    className: o.title,
-                    children: [c.default.Messages.CREATE_EVENT_RECUR_LABEL, (0, a.jsx)(d.TextBadge, {
+                    }), a
+                }(t), _ = e => e.toString(), S = (0, l.jsxs)("div", {
+                    className: d.title,
+                    children: [c.default.Messages.CREATE_EVENT_RECUR_LABEL, (0, l.jsx)(i.TextBadge, {
                         text: c.default.Messages.NEW,
-                        color: r.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND
+                        color: s.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND
                     })]
                 });
-                return (0, a.jsx)(s.FormItem, {
-                    title: R,
+                return (0, l.jsx)(r.FormItem, {
+                    title: S,
                     required: !0,
-                    children: (0, a.jsx)(s.Select, {
+                    children: (0, l.jsx)(r.Select, {
                         placeholder: "gaming",
-                        options: f,
-                        select: _,
-                        serialize: h,
-                        isSelected: e => null != g && h(e) === h(g)
+                        options: g,
+                        select: E,
+                        serialize: _,
+                        isSelected: e => null != h && _(e) === _(h)
                     })
                 })
             }

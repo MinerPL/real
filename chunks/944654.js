@@ -1,18 +1,18 @@
             "use strict";
-            l.r(t), l.d(t, {
+            n.r(t), n.d(t, {
                 useScreenDimensions: function() {
                     return a
                 }
-            }), l("222007");
-            var i = l("884691");
+            }), n("222007");
+            var l = n("884691");
 
             function a() {
                 var e, t;
-                let [l, a] = i.useState({
+                let [n, a] = l.useState({
                     width: null !== (e = window.innerWidth) && void 0 !== e ? e : 1080,
                     height: null !== (t = window.innerHeight) && void 0 !== t ? t : 1080
                 });
-                return i.useLayoutEffect(() => {
+                return l.useLayoutEffect(() => {
                     function e() {
                         let e = window.innerWidth,
                             t = window.innerHeight;
@@ -22,5 +22,5 @@
                         })
                     }
                     return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e)
-                }, []), l
+                }, []), n
             }

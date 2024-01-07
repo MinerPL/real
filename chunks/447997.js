@@ -1,36 +1,36 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return r
                 }
             }), n("222007");
-            var s = n("37983"),
-                a = n("884691"),
-                l = n("907002"),
-                r = n("230606");
-            let i = () => {
-                let e = a.useRef(null),
-                    [t, n] = a.useState(0),
-                    s = a.useMemo(() => new r.default(e => {
+            var a = n("37983"),
+                s = n("884691"),
+                o = n("907002"),
+                i = n("230606");
+            let l = () => {
+                let e = s.useRef(null),
+                    [t, n] = s.useState(0),
+                    a = s.useMemo(() => new i.default(e => {
                         let [t] = e;
                         return n(t.contentRect.height)
                     }), []);
-                return a.useLayoutEffect(() => (null != e.current && s.observe(e.current), () => s.disconnect()), [s]), {
+                return s.useLayoutEffect(() => (null != e.current && a.observe(e.current), () => a.disconnect()), [a]), {
                     ref: e,
                     height: t
                 }
             };
 
-            function o(e) {
+            function r(e) {
                 let {
                     show: t,
                     children: n,
-                    top: a = 0,
-                    bottom: r = 0
+                    top: s = 0,
+                    bottom: i = 0
                 } = e, {
-                    ref: o,
+                    ref: r,
                     height: u
-                } = i(), d = (0, l.useSpring)({
+                } = l(), d = (0, o.useSpring)({
                     from: {
                         height: 0,
                         paddingBottom: "0px",
@@ -38,14 +38,14 @@
                     },
                     to: {
                         height: t ? u : 0,
-                        paddingBottom: t ? "".concat(r, "px") : "0px",
-                        marginTop: t ? "".concat(a, "px") : "0px"
+                        paddingBottom: t ? "".concat(i, "px") : "0px",
+                        marginTop: t ? "".concat(s, "px") : "0px"
                     },
                     config: {
                         tension: 170,
                         friction: 26
                     }
-                }), c = (0, l.useSpring)({
+                }), c = (0, o.useSpring)({
                     from: {
                         opacity: 0
                     },
@@ -57,18 +57,18 @@
                         easing: t ? e => e ** 4 : e => e * (2 - e)
                     }
                 });
-                return (0, s.jsx)(l.animated.div, {
+                return (0, a.jsx)(o.animated.div, {
                     style: {
                         overflow: "hidden",
                         height: d.height,
                         paddingBottom: d.paddingBottom,
                         marginTop: d.marginTop
                     },
-                    children: (0, s.jsx)(l.animated.div, {
+                    children: (0, a.jsx)(o.animated.div, {
                         style: {
                             opacity: c.opacity
                         },
-                        ref: o,
+                        ref: r,
                         children: n
                     })
                 })

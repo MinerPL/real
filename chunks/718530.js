@@ -1,3 +1,3 @@
             "use strict";
-            var n = r("503486");
-            t.exports = n.Promise
+            var r = n("503486");
+            e.exports = r.Promise

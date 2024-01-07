@@ -1,144 +1,144 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 updateRoleSort: function() {
-                    return i
-                },
-                init: function() {
-                    return r
-                },
-                updateRolePermissions: function() {
                     return o
                 },
+                init: function() {
+                    return l
+                },
+                updateRolePermissions: function() {
+                    return r
+                },
                 clearRolePermissions: function() {
-                    return d
-                },
-                updateRoleName: function() {
-                    return u
-                },
-                updateRoleColor: function() {
                     return c
                 },
-                toggleRoleSettings: function() {
-                    return E
+                updateRoleName: function() {
+                    return d
                 },
-                updateRoleIcon: function() {
+                updateRoleColor: function() {
+                    return u
+                },
+                toggleRoleSettings: function() {
                     return _
                 },
+                updateRoleIcon: function() {
+                    return E
+                },
                 updateRoleConnectionConfigurations: function() {
-                    return T
+                    return I
                 },
                 saveRoleSettings: function() {
-                    return I
+                    return S
                 }
-            }), s("222007");
-            var a = s("913144"),
-                n = s("851387"),
-                l = s("70919");
+            }), n("222007");
+            var s = n("913144"),
+                a = n("851387"),
+                i = n("70919");
 
-            function i(e) {
-                a.default.dispatch({
+            function o(e) {
+                s.default.dispatch({
                     type: "GUILD_SETTINGS_ROLES_SORT_UPDATE",
                     roles: e
                 })
             }
 
-            function r() {
-                a.default.dispatch({
+            function l() {
+                s.default.dispatch({
                     type: "GUILD_SETTINGS_ROLES_INIT"
                 })
             }
 
-            function o(e, t, s) {
-                a.default.dispatch({
+            function r(e, t, n) {
+                s.default.dispatch({
                     type: "GUILD_SETTINGS_ROLES_UPDATE_PERMISSIONS",
                     id: e,
                     flag: t,
-                    allow: s
+                    allow: n
                 })
             }
 
-            function d(e) {
-                a.default.dispatch({
+            function c(e) {
+                s.default.dispatch({
                     type: "GUILD_SETTINGS_ROLES_CLEAR_PERMISSIONS",
                     id: e
                 })
             }
 
-            function u(e, t) {
-                a.default.dispatch({
+            function d(e, t) {
+                s.default.dispatch({
                     type: "GUILD_SETTINGS_ROLES_UPDATE_NAME",
                     id: e,
                     name: t
                 })
             }
 
-            function c(e, t) {
-                a.default.dispatch({
+            function u(e, t) {
+                s.default.dispatch({
                     type: "GUILD_SETTINGS_ROLES_UPDATE_COLOR",
                     id: e,
                     color: t
                 })
             }
 
-            function E(e, t, s) {
-                a.default.dispatch({
+            function _(e, t, n) {
+                s.default.dispatch({
                     type: "GUILD_SETTINGS_ROLES_UPDATE_SETTINGS",
                     id: e,
                     hoist: t,
-                    mentionable: s
+                    mentionable: n
                 })
             }
 
-            function _(e, t, s) {
-                a.default.dispatch({
+            function E(e, t, n) {
+                s.default.dispatch({
                     type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON",
                     id: e,
                     icon: t,
-                    unicodeEmoji: s
+                    unicodeEmoji: n
                 })
             }
 
-            function T(e, t) {
-                a.default.dispatch({
+            function I(e, t) {
+                s.default.dispatch({
                     type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS",
                     roleId: e,
                     roleConnectionConfigurations: t
                 })
             }
-            async function I(e, t, s, i, r) {
-                a.default.dispatch({
+            async function S(e, t, n, o, l) {
+                s.default.dispatch({
                     type: "GUILD_SETTINGS_ROLES_SUBMITTING"
                 });
                 try {
-                    let a = async () => {
+                    let s = async () => {
                         if (null == t || 0 === t.length) return;
-                        let s = t.pop();
-                        if (null == s || "" === s.name) return a();
-                        await n.default.updateRole(e, s.id, {
-                            name: s.name,
-                            description: s.description,
-                            permissions: s.permissions,
-                            color: s.color,
-                            hoist: s.hoist,
-                            mentionable: s.mentionable,
-                            icon: s.icon,
-                            unicodeEmoji: s.unicodeEmoji
-                        }).then(a, a)
+                        let n = t.pop();
+                        if (null == n || "" === n.name) return s();
+                        await a.default.updateRole(e, n.id, {
+                            name: n.name,
+                            description: n.description,
+                            permissions: n.permissions,
+                            color: n.color,
+                            hoist: n.hoist,
+                            mentionable: n.mentionable,
+                            icon: n.icon,
+                            unicodeEmoji: n.unicodeEmoji
+                        }).then(s, s)
                     };
-                    if (null != s && s.length > 0 ? await n.default.batchRoleUpdate(e, s).then(a, a) : await a(), null != r && null != i)
-                        for await (let t of i) {
-                            let s = r.get(t);
-                            await (0, l.putRoleConnectionsConfigurations)(e, t, null != s ? s : [])
+                    if (null != n && n.length > 0 ? await a.default.batchRoleUpdate(e, n).then(s, s) : await s(), null != l && null != o)
+                        for await (let t of o) {
+                            let n = l.get(t);
+                            await (0, i.putRoleConnectionsConfigurations)(e, t, null != n ? n : [])
                         }
                 } catch (e) {
-                    var o, d;
-                    a.default.dispatch({
+                    var r, c;
+                    s.default.dispatch({
                         type: "GUILD_SETTINGS_ROLES_SAVE_FAIL",
-                        message: null !== (d = null === (o = e.body) || void 0 === o ? void 0 : o.message) && void 0 !== d ? d : Object.values(e.body)[0]
+                        message: null !== (c = null === (r = e.body) || void 0 === r ? void 0 : r.message) && void 0 !== c ? c : Object.values(e.body)[0]
                     });
                     return
                 }
-                a.default.dispatch({
+                s.default.dispatch({
                     type: "GUILD_SETTINGS_ROLES_SAVE_SUCCESS"
                 })
             }

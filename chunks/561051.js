@@ -1,6 +1,6 @@
-            "use strict";
-            var e = n("472960"),
-                i = n("366483");
-            t.exports = function(t, r) {
-                e(r) && "cause" in r && i(t, "cause", r.cause)
-            }
+                "use strict";
+                var e = r("472960"),
+                    o = r("366483");
+                t.exports = function(t, n) {
+                    e(n) && "cause" in n && o(t, "cause", n.cause)
+                }

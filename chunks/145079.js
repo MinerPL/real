@@ -1,29 +1,29 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return h
                 }
             });
             var l = n("37983");
             n("884691");
             var a = n("414456"),
-                r = n.n(a),
+                s = n.n(a),
                 i = n("446674"),
-                s = n("77078"),
+                r = n("77078"),
                 u = n("102985"),
                 o = n("79798"),
                 d = n("754474"),
                 c = n("158998"),
-                f = n("782340"),
-                h = n("892802");
+                E = n("782340"),
+                f = n("892802");
 
-            function p(e) {
+            function _(e) {
                 if (e.isSystemUser()) return d.BotTypes.SYSTEM_DM;
                 if (e.isClyde()) return d.BotTypes.AI;
                 if (e.bot) return d.BotTypes.BOT;
                 return null
             }
-            let C = e => {
+            let I = e => {
                 let {
                     primary: t,
                     secondary: n,
@@ -32,63 +32,63 @@
                     discriminatorClass: u,
                     className: d,
                     usernameClass: c,
-                    color: p,
-                    botClass: C,
-                    showStreamerModeTooltip: m
+                    color: _,
+                    botClass: I,
+                    showStreamerModeTooltip: h
                 } = e;
                 return (0, l.jsxs)("div", {
-                    className: r(h.info, d),
-                    children: [(0, l.jsx)(s.Tooltip, {
-                        text: f.default.Messages.STREAMER_MODE_ENABLED,
-                        shouldShow: m,
+                    className: s(f.info, d),
+                    children: [(0, l.jsx)(r.Tooltip, {
+                        text: E.default.Messages.STREAMER_MODE_ENABLED,
+                        shouldShow: h,
                         children: e => (0, l.jsx)("span", {
                             ...e,
-                            className: r(h.username, c),
-                            style: null != p ? {
-                                color: p
+                            className: s(f.username, c),
+                            style: null != _ ? {
+                                color: _
                             } : void 0,
                             children: t
                         })
                     }), null != n ? (0, l.jsx)("span", {
-                        className: r(h.infoSpacing, u),
+                        className: s(f.infoSpacing, u),
                         children: n
                     }) : void 0, null != a && (0, l.jsx)(o.default, {
                         type: a,
-                        className: r(h.infoSpacing, C),
+                        className: s(f.infoSpacing, I),
                         verified: i
                     })]
                 })
             };
-            var m = e => {
+            var h = e => {
                 let {
                     hideDiscriminator: t = !1,
                     user: n,
                     nick: a,
-                    forceUsername: r,
-                    showAccountIdentifier: s,
+                    forceUsername: s,
+                    showAccountIdentifier: r,
                     overrideDiscriminator: o,
-                    forcePomelo: f,
-                    ...h
-                } = e, m = (0, i.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), v = m || t || n.isNonUserBot(), g = n.toString(), S = c.default.getName(n), E = r ? g : null != a ? a : S, I = n.isPomelo() || f;
-                if (I || E !== g) {
-                    let e = E === g && I && r ? c.default.getUserTag(n, {
-                            forcePomelo: f
-                        }) : E,
-                        t = s && e !== "@".concat(g) ? c.default.getUserTag(n) : void 0;
-                    return (0, l.jsx)(C, {
+                    forcePomelo: E,
+                    ...f
+                } = e, h = (0, i.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), T = h || t || n.isNonUserBot(), N = n.toString(), v = c.default.getName(n), m = s ? N : null != a ? a : v, S = n.isPomelo() || E;
+                if (S || m !== N) {
+                    let e = m === N && S && s ? c.default.getUserTag(n, {
+                            forcePomelo: E
+                        }) : m,
+                        t = r && e !== "@".concat(N) ? c.default.getUserTag(n) : void 0;
+                    return (0, l.jsx)(I, {
                         primary: e,
                         secondary: t,
                         botVerified: n.isVerifiedBot(),
-                        botType: p(n),
-                        showStreamerModeTooltip: m && e !== S,
-                        ...h
+                        botType: _(n),
+                        showStreamerModeTooltip: h && e !== v,
+                        ...f
                     })
                 }
                 return (0, l.jsx)(d.default, {
-                    name: E,
-                    botType: p(n),
+                    name: m,
+                    botType: _(n),
                     botVerified: n.isVerifiedBot(),
-                    discriminator: v || E !== g ? null : null != o ? o : n.discriminator,
-                    ...h
+                    discriminator: T || m !== N ? null : null != o ? o : n.discriminator,
+                    ...f
                 })
             }
