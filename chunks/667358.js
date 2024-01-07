@@ -1,26 +1,26 @@
             "use strict";
-            t.r(n), t.d(n, {
+            s.r(t), s.d(t, {
                 default: function() {
                     return f
                 }
             });
-            var l = t("37983"),
-                a = t("884691"),
-                u = t("627445"),
-                o = t.n(u),
-                s = t("77078"),
-                c = t("599110"),
-                d = t("773336"),
-                r = t("49111"),
-                i = t("782340");
+            var a = s("37983"),
+                n = s("884691"),
+                l = s("627445"),
+                i = s.n(l),
+                d = s("77078"),
+                r = s("599110"),
+                u = s("773336"),
+                o = s("49111"),
+                c = s("782340");
 
             function f(e) {
-                let n = a.useCallback(() => {
-                    o(null != e, "text cannot be null"), c.default.track(r.AnalyticEvents.MESSAGE_MENU_GOOGLE_SEARCHED), window.open("https://www.google.com/search?q=".concat(encodeURIComponent(e)), "_blank")
+                let t = n.useCallback(() => {
+                    i(null != e, "text cannot be null"), r.default.track(o.AnalyticEvents.MESSAGE_MENU_GOOGLE_SEARCHED), window.open("https://www.google.com/search?q=".concat(encodeURIComponent(e)), "_blank")
                 }, [e]);
-                return d.isPlatformEmbedded && null != e && (null == e ? void 0 : e.length) !== 0 ? [(0, l.jsx)(s.MenuItem, {
+                return u.isPlatformEmbedded && null != e && (null == e ? void 0 : e.length) !== 0 ? [(0, a.jsx)(d.MenuItem, {
                     id: "search-google",
-                    label: i.default.Messages.SEARCH_WITH_GOOGLE,
-                    action: n
+                    label: c.default.Messages.SEARCH_WITH_GOOGLE,
+                    action: t
                 }, "search-google")] : null
             }

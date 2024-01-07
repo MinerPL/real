@@ -1,29 +1,29 @@
             "use strict";
-            r.r(e), r.d(e, {
+            a.r(t), a.d(t, {
                 makeAuthenticated: function() {
                     return u
                 }
             });
-            var n = r("37983");
-            r("884691");
-            var o = r("271938"),
-                a = r("831588"),
-                i = r("209535"),
-                l = r("49111");
+            var n = a("37983");
+            a("884691");
+            var r = a("271938"),
+                s = a("831588"),
+                o = a("209535"),
+                i = a("49111");
 
-            function u(t, e) {
-                var r, u;
-                let c = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
+            function u(e, t) {
+                var a, u;
+                let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
                     passProps: !0
                 };
 
-                function s(r) {
-                    if (!(0, a.isAuthenticated)() && o.default.getLoginStatus() !== l.LoginStates.LOGGING_IN && o.default.allowLogoutRedirect()) return null != e ? (0, n.jsx)(e, {
-                        renderRedirect: (0, n.jsx)(i.default, {})
-                    }) : (0, n.jsx)(i.default, {});
-                    return (0, n.jsx)(t, {
-                        ...c.passProps ? r : null
+                function c(a) {
+                    if (!(0, s.isAuthenticated)() && r.default.getLoginStatus() !== i.LoginStates.LOGGING_IN && r.default.allowLogoutRedirect()) return null != t ? (0, n.jsx)(t, {
+                        renderRedirect: (0, n.jsx)(o.default, {})
+                    }) : (0, n.jsx)(o.default, {});
+                    return (0, n.jsx)(e, {
+                        ...l.passProps ? a : null
                     })
                 }
-                return s.displayName = "Authenticated(".concat(null !== (u = null !== (r = t.displayName) && void 0 !== r ? r : t.name) && void 0 !== u ? u : "<Unknown>", ")"), s
+                return c.displayName = "Authenticated(".concat(null !== (u = null !== (a = e.displayName) && void 0 !== a ? a : e.name) && void 0 !== u ? u : "<Unknown>", ")"), c
             }

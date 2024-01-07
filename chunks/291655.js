@@ -1,51 +1,51 @@
             "use strict";
-            n.r(t), n.d(t, {
+            l.r(t), l.d(t, {
                 default: function() {
                     return E
                 }
             });
-            var i = n("37983"),
-                l = n("884691"),
-                r = n("414456"),
-                s = n.n(r),
-                a = n("193865"),
-                u = n("780571"),
-                o = n("39331"),
-                d = n("596368"),
-                c = n("227439"),
-                f = n("877671"),
-                E = l.memo(function(e) {
-                    var t, n, l;
+            var s = l("37983"),
+                a = l("884691"),
+                i = l("414456"),
+                o = l.n(i),
+                n = l("193865"),
+                r = l("780571"),
+                d = l("39331"),
+                u = l("596368"),
+                c = l("227439"),
+                C = l("877671"),
+                E = a.memo(function(e) {
+                    var t, l, a;
                     let {
-                        message: r,
+                        message: i,
                         channel: E,
-                        compact: _,
-                        className: p,
-                        isGroupStart: h,
-                        hideSimpleEmbedContent: S = !0,
-                        disableInteraction: m
-                    } = e, M = (0, a.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = r.editedTimestamp) && void 0 !== t ? t : r.timestamp).valueOf()), L = (0, a.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == E ? void 0 : E.guild_id) && void 0 !== n ? n : "", (null !== (l = r.editedTimestamp) && void 0 !== l ? l : r.timestamp).valueOf()), {
-                        content: A
-                    } = (0, o.default)(r, {
-                        hideSimpleEmbedContent: S,
-                        allowList: M.showListsAndHeaders || L.showListsAndHeaders,
-                        allowHeading: M.showListsAndHeaders || L.showListsAndHeaders,
-                        allowLinks: M.showMaskedLinks || L.showMaskedLinks,
-                        previewLinkTarget: M.showMaskedLinks || L.showMaskedLinks
+                        compact: m,
+                        className: I,
+                        isGroupStart: T,
+                        hideSimpleEmbedContent: L = !0,
+                        disableInteraction: f
+                    } = e, p = (0, n.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()), A = (0, n.useShowImprovedMarkdownGuildExperimentConfig)(null !== (l = null == E ? void 0 : E.guild_id) && void 0 !== l ? l : "", (null !== (a = i.editedTimestamp) && void 0 !== a ? a : i.timestamp).valueOf()), {
+                        content: _
+                    } = (0, d.default)(i, {
+                        hideSimpleEmbedContent: L,
+                        allowList: p.showListsAndHeaders || A.showListsAndHeaders,
+                        allowHeading: p.showListsAndHeaders || A.showListsAndHeaders,
+                        allowLinks: p.showMaskedLinks || A.showMaskedLinks,
+                        previewLinkTarget: p.showMaskedLinks || A.showMaskedLinks
                     });
-                    return (0, i.jsx)(u.default, {
-                        compact: _,
-                        className: s(p, {
-                            [f.message]: !0,
-                            [f.cozyMessage]: !_,
-                            [f.groupStart]: h
+                    return (0, s.jsx)(r.default, {
+                        compact: m,
+                        className: o(I, {
+                            [C.message]: !0,
+                            [C.cozyMessage]: !m,
+                            [C.groupStart]: T
                         }),
                         childrenHeader: (0, c.default)({
                             ...e,
                             channel: E,
                             guildId: void 0
                         }),
-                        childrenMessageContent: (0, d.default)(e, A),
-                        disableInteraction: m
+                        childrenMessageContent: (0, u.default)(e, _),
+                        disableInteraction: f
                     })
                 })

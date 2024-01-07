@@ -4,11 +4,11 @@
                     return a
                 }
             }), n("222007");
-            let l = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
+            let i = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
 
             function a(e) {
                 let {
                     allowPopups: t
-                } = e, n = l;
-                return t && (n = [...l, "allow-popups", "allow-popups-to-escape-sandbox"]), n.join(" ")
+                } = e, n = i;
+                return t && (n = [...i, "allow-popups", "allow-popups-to-escape-sandbox"]), n.join(" ")
             }

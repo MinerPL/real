@@ -1,43 +1,43 @@
             "use strict";
-            l.r(t), l.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
                     return I
                 }
-            }), l("222007");
-            var a, n, s = l("917351"),
-                r = l("446674"),
-                i = l("407846"),
-                o = l("913144"),
-                u = l("766274"),
-                d = l("271938"),
-                c = l("9759"),
-                f = l("837374");
-            (n = a || (a = {}))[n.INVALID = 0] = "INVALID", n[n.VALID_USER_ONLY = 1] = "VALID_USER_ONLY", n[n.VALID = 2] = "VALID";
-            let S = new Set,
+            }), n("222007");
+            var a, r, s = n("917351"),
+                i = n("446674"),
+                l = n("407846"),
+                u = n("913144"),
+                o = n("766274"),
+                d = n("271938"),
+                c = n("9759"),
+                f = n("837374");
+            (r = a || (a = {}))[r.INVALID = 0] = "INVALID", r[r.VALID_USER_ONLY = 1] = "VALID_USER_ONLY", r[r.VALID = 2] = "VALID";
+            let E = new Set,
                 h = new Set,
-                A = new Set,
-                g = [],
-                E = {
+                p = new Set,
+                S = [],
+                _ = {
                     BROADCASTS_BY_USER_ID: e => "user:".concat(e),
                     BROADCASTS_BY_CHANNEL_ID: e => "channel:".concat(e),
                     BROADCASTS_BY_VALIDITY: e => "validity:".concat(e)
                 },
-                T = new i.default(function(e) {
-                    let t = S.has(e.userId) ? 1 : 0;
-                    return null != e.viewers && (t = 2), [E.BROADCASTS_BY_USER_ID(e.userId), E.BROADCASTS_BY_CHANNEL_ID(e.channelId), E.BROADCASTS_BY_VALIDITY(t)]
+                C = new l.default(function(e) {
+                    let t = E.has(e.userId) ? 1 : 0;
+                    return null != e.viewers && (t = 2), [_.BROADCASTS_BY_USER_ID(e.userId), _.BROADCASTS_BY_CHANNEL_ID(e.channelId), _.BROADCASTS_BY_VALIDITY(t)]
                 }, e => e.channelId);
 
-            function _(e, t, l) {
+            function m(e, t, n) {
                 if (d.default.getId() === e) return !1;
                 if (null == t) {
-                    let t = T.get(e);
-                    return !!(null != t && (0, s.isEqual)(t.source, l)) && (T.delete(e), void 0)
-                }!S.has(e) && !h.has(e) && (A.add(e), g = [...A]);
-                let a = (0, f.broadcastFromServer)(t, e, l);
-                T.set(e, a)
+                    let t = C.get(e);
+                    return !!(null != t && (0, s.isEqual)(t.source, n)) && (C.delete(e), void 0)
+                }!E.has(e) && !h.has(e) && (p.add(e), S = [...p]);
+                let a = (0, f.broadcastFromServer)(t, e, n);
+                C.set(e, a)
             }
 
-            function R(e) {
+            function g(e) {
                 return null != e ? {
                     type: f.BroadcastSourceType.GUILD,
                     guildId: e
@@ -45,25 +45,25 @@
                     type: f.BroadcastSourceType.GLOBAL
                 }
             }
-            class p extends r.default.Store {
+            class T extends i.default.Store {
                 getBroadcasts() {
-                    return T.values(E.BROADCASTS_BY_VALIDITY(2))
+                    return C.values(_.BROADCASTS_BY_VALIDITY(2))
                 }
                 getBroadcastsToValidateChannels() {
-                    return T.values(E.BROADCASTS_BY_VALIDITY(1))
+                    return C.values(_.BROADCASTS_BY_VALIDITY(1))
                 }
                 getBroadcastByChannel(e) {
-                    return T.values(E.BROADCASTS_BY_CHANNEL_ID(e))[0]
+                    return C.values(_.BROADCASTS_BY_CHANNEL_ID(e))[0]
                 }
                 getBroadcastByUser(e) {
-                    return T.get(e)
+                    return C.get(e)
                 }
                 getUserIdsToValidate() {
-                    return g
+                    return S
                 }
             }
-            p.displayName = "BroadcastingStore";
-            var I = new p(o.default, {
+            T.displayName = "BroadcastingStore";
+            var I = new T(u.default, {
                 PRESENCE_UPDATES: function(e) {
                     let {
                         updates: t
@@ -71,10 +71,10 @@
                     return t.forEach(e => {
                         let {
                             user: t,
-                            broadcast: l,
+                            broadcast: n,
                             guildId: a
                         } = e;
-                        _(t.id, l, R(a))
+                        m(t.id, n, g(a))
                     })
                 },
                 PRESENCES_REPLACE: function(e) {
@@ -84,35 +84,35 @@
                     return t.forEach(e => {
                         let {
                             user: t,
-                            broadcast: l,
+                            broadcast: n,
                             guildId: a
                         } = e;
-                        _(t.id, l, R(a))
+                        m(t.id, n, g(a))
                     })
                 },
                 CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
                     let {
                         presences: t,
-                        guilds: l
+                        guilds: n
                     } = e;
                     t.forEach(e => {
                         let {
                             user: t,
-                            broadcast: l,
+                            broadcast: n,
                             guildId: a
                         } = e;
-                        _(t.id, l, R(a))
-                    }), l.forEach(e => {
+                        m(t.id, n, g(a))
+                    }), n.forEach(e => {
                         let {
                             presences: t,
-                            id: l
+                            id: n
                         } = e;
                         t.forEach(e => {
                             let {
                                 user: t,
                                 broadcast: a
                             } = e;
-                            _(t.id, a, R(l))
+                            m(t.id, a, g(n))
                         })
                     })
                 },
@@ -121,9 +121,9 @@
                         data: t
                     } = e;
                     Object.keys(t).forEach(e => {
-                        c.CAN_VIEW_BROADCASTS_BUCKETS.includes(t[e]) ? S.add(e) : h.add(e), A.clear(), g = [...A];
-                        let l = T.get(e);
-                        null != l && (T.delete(e), T.set(e, l))
+                        c.CAN_VIEW_BROADCASTS_BUCKETS.includes(t[e]) ? E.add(e) : h.add(e), p.clear(), S = [...p];
+                        let n = C.get(e);
+                        null != n && (C.delete(e), C.set(e, n))
                     })
                 },
                 BROADCAST_VIEWERS_UPDATE: function(e) {
@@ -131,48 +131,48 @@
                         viewers: t
                     } = e;
                     Object.entries(t).forEach(e => {
-                        let [t, l] = e, a = T.get(t);
-                        null != a && T.set(t, {
+                        let [t, n] = e, a = C.get(t);
+                        null != a && C.set(t, {
                             ...a,
-                            viewers: l
+                            viewers: n
                         })
                     })
                 },
                 CHANNEL_RECIPIENT_ADD: function(e) {
                     let {
                         channelId: t,
-                        user: l
-                    } = e, a = T.values(E.BROADCASTS_BY_CHANNEL_ID(t))[0];
-                    if (null == a || null == a.viewers || a.viewers.some(e => e.id === l.id)) return !1;
-                    T.set(a.userId, {
+                        user: n
+                    } = e, a = C.values(_.BROADCASTS_BY_CHANNEL_ID(t))[0];
+                    if (null == a || null == a.viewers || a.viewers.some(e => e.id === n.id)) return !1;
+                    C.set(a.userId, {
                         ...a,
-                        viewers: [...a.viewers, new u.default(l)]
+                        viewers: [...a.viewers, new o.default(n)]
                     })
                 },
                 CHANNEL_RECIPIENT_REMOVE: function(e) {
                     let {
                         channelId: t,
-                        user: l
-                    } = e, a = T.values(E.BROADCASTS_BY_CHANNEL_ID(t))[0];
+                        user: n
+                    } = e, a = C.values(_.BROADCASTS_BY_CHANNEL_ID(t))[0];
                     if (null == a || null == a.viewers) return !1;
-                    T.set(a.userId, {
+                    C.set(a.userId, {
                         ...a,
-                        viewers: a.viewers.filter(e => e.id !== l.id)
+                        viewers: a.viewers.filter(e => e.id !== n.id)
                     })
                 },
                 CHANNEL_CREATE: function(e) {
                     var t;
                     let {
-                        channel: l
-                    } = e, a = T.values(E.BROADCASTS_BY_CHANNEL_ID(l.id))[0];
+                        channel: n
+                    } = e, a = C.values(_.BROADCASTS_BY_CHANNEL_ID(n.id))[0];
                     if (null == a) return !1;
-                    let n = null !== (t = l.rawRecipients) && void 0 !== t ? t : [];
-                    T.set(a.userId, {
+                    let r = null !== (t = n.rawRecipients) && void 0 !== t ? t : [];
+                    C.set(a.userId, {
                         ...a,
-                        viewers: n.filter(e => e.id !== a.userId).map(e => new u.default(e))
+                        viewers: r.filter(e => e.id !== a.userId).map(e => new o.default(e))
                     })
                 },
                 LOGOUT: function() {
-                    S.clear(), h.clear(), A.clear(), g = [], T.clear()
+                    E.clear(), h.clear(), p.clear(), S = [], C.clear()
                 }
             })

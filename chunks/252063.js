@@ -1,43 +1,43 @@
             "use strict";
             n.r(t), n.d(t, {
                 usePrivateChannelIntegrationState: function() {
-                    return c
+                    return o
                 }
             }), n("222007");
-            var l = n("884691"),
-                i = n("446674"),
-                r = n("201155"),
-                s = n("21121"),
-                a = n("970755"),
-                o = n("140596");
+            var i = n("884691"),
+                a = n("446674"),
+                l = n("201155"),
+                r = n("21121"),
+                s = n("970755"),
+                u = n("140596");
 
-            function c(e) {
+            function o(e) {
                 let {
                     channelId: t
                 } = e;
-                (0, s.useInMainTabsExperiment)();
-                let n = (0, r.useShowApplicationInGDM)(t),
+                (0, r.useInMainTabsExperiment)();
+                let n = (0, l.useShowApplicationInGDM)(t),
                     {
-                        installedIntegrations: c,
-                        applicationsShelf: u,
-                        integrationsFetchState: d,
-                        applicationsShelfFetchState: f
-                    } = (0, i.useStateFromStoresObject)([o.default], () => ({
-                        installedIntegrations: o.default.getIntegrations(t),
-                        applicationsShelf: o.default.getApplicationsShelf(),
-                        integrationsFetchState: o.default.getIntegrationsFetchState(t),
-                        applicationsShelfFetchState: o.default.getApplicationsShelfFetchState()
+                        installedIntegrations: o,
+                        applicationsShelf: d,
+                        integrationsFetchState: c,
+                        applicationsShelfFetchState: E
+                    } = (0, a.useStateFromStoresObject)([u.default], () => ({
+                        installedIntegrations: u.default.getIntegrations(t),
+                        applicationsShelf: u.default.getApplicationsShelf(),
+                        integrationsFetchState: u.default.getIntegrationsFetchState(t),
+                        applicationsShelfFetchState: u.default.getApplicationsShelfFetchState()
                     }));
-                l.useEffect(() => {
-                    n && ((d === o.FetchState.NOT_FETCHED || d === o.FetchState.FETCH_FAILED) && (0, a.fetchPrivateChannelIntegrations)(t), (f === o.FetchState.NOT_FETCHED || f === o.FetchState.FETCH_FAILED) && (0, a.fetchApplicationsShelf)())
-                }, [n, t, d, f]);
-                let h = new Set(c.map(e => e.application.id)),
-                    C = u.filter(e => !h.has(e.id));
+                i.useEffect(() => {
+                    n && ((c === u.FetchState.NOT_FETCHED || c === u.FetchState.FETCH_FAILED) && (0, s.fetchPrivateChannelIntegrations)(t), (E === u.FetchState.NOT_FETCHED || E === u.FetchState.FETCH_FAILED) && (0, s.fetchApplicationsShelf)())
+                }, [n, t, c, E]);
+                let f = new Set(o.map(e => e.application.id)),
+                    _ = d.filter(e => !f.has(e.id));
                 return {
-                    installedIntegrations: c,
-                    availableApplications: C,
-                    applicationsShelf: u,
-                    fetched: d !== o.FetchState.NOT_FETCHED && d !== o.FetchState.FETCHING && f !== o.FetchState.NOT_FETCHED && f !== o.FetchState.FETCHING,
+                    installedIntegrations: o,
+                    availableApplications: _,
+                    applicationsShelf: d,
+                    fetched: c !== u.FetchState.NOT_FETCHED && c !== u.FetchState.FETCHING && E !== u.FetchState.NOT_FETCHED && E !== u.FetchState.FETCHING,
                     appsInGDMEnabled: n
                 }
             }

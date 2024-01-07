@@ -1,49 +1,49 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
                     return c
                 }
             });
-            var a = s("37983");
-            s("884691");
-            var n = s("77078"),
-                r = s("794538"),
-                o = s("145131"),
-                l = s("124969"),
-                i = s("782340"),
-                u = s("265445"),
-                d = s("926622");
+            var s = n("37983");
+            n("884691");
+            var a = n("77078"),
+                l = n("794538"),
+                r = n("145131"),
+                i = n("124969"),
+                o = n("782340"),
+                u = n("265445"),
+                d = n("926622");
 
             function c(e) {
                 let {
                     title: t,
-                    subtitle: s,
+                    subtitle: n,
                     error: c,
-                    onSubmit: h,
-                    onCancel: f
+                    onSubmit: f,
+                    onCancel: E
                 } = e;
-                return (0, a.jsxs)(o.default, {
-                    direction: o.default.Direction.VERTICAL,
-                    children: [(0, a.jsx)(l.Title, {
+                return (0, s.jsxs)(r.default, {
+                    direction: r.default.Direction.VERTICAL,
+                    children: [(0, s.jsx)(i.Title, {
                         className: d.marginBottom8,
                         children: t
-                    }), (0, a.jsx)(l.SubTitle, {
+                    }), (0, s.jsx)(i.SubTitle, {
                         className: u.subTitle,
-                        children: s
-                    }), (0, a.jsxs)("div", {
-                        children: [(0, a.jsx)(r.default, {
+                        children: n
+                    }), (0, s.jsxs)("div", {
+                        children: [(0, s.jsx)(l.default, {
                             inputClassName: u.codeInput,
-                            onSubmit: h
-                        }), null != c ? (0, a.jsx)(n.Text, {
+                            onSubmit: f
+                        }), null != c ? (0, s.jsx)(a.Text, {
                             className: u.error,
                             variant: "text-sm/normal",
                             children: c
                         }) : null]
-                    }), null != f && (0, a.jsx)(n.Button, {
+                    }), null != E && (0, s.jsx)(a.Button, {
                         className: u.button,
-                        onClick: f,
-                        color: n.Button.Colors.PRIMARY,
-                        children: i.default.Messages.CANCEL
+                        onClick: E,
+                        color: a.Button.Colors.PRIMARY,
+                        children: o.default.Messages.CANCEL
                     })]
                 })
             }

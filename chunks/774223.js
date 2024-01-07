@@ -1,30 +1,30 @@
             "use strict";
-            l.r(t), l.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
                     return r
                 }
             });
-            var a = l("37983");
-            l("884691");
-            var n = l("75196");
+            var l = n("37983");
+            n("884691");
+            var a = n("75196");
 
             function r(e) {
                 let {
                     width: t = 24,
-                    height: l = 24,
+                    height: n = 24,
                     color: r = "currentColor",
-                    className: u,
-                    foreground: C,
-                    ...s
+                    className: i,
+                    foreground: s,
+                    ...u
                 } = e;
-                return (0, a.jsx)("svg", {
-                    ...(0, n.default)(s),
-                    className: u,
+                return (0, l.jsx)("svg", {
+                    ...(0, a.default)(u),
+                    className: i,
                     width: t,
-                    height: l,
+                    height: n,
                     viewBox: "0 0 24 24",
-                    children: (0, a.jsx)("path", {
-                        className: C,
+                    children: (0, l.jsx)("path", {
+                        className: s,
                         fill: r,
                         fillRule: "evenodd",
                         clipRule: "evenodd",

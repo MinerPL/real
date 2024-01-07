@@ -1,16 +1,16 @@
             "use strict";
-            a.r(t), a.d(t, {
+            s.r(t), s.d(t, {
                 staffOnlyGuildSettingsAccess: function() {
-                    return d
+                    return r
                 },
                 useGuildAccessRateInsightExperiment: function() {
-                    return u
+                    return o
                 }
             });
-            var n = a("884691"),
-                i = a("862205"),
-                l = a("697218");
-            let s = (0, i.createExperiment)({
+            var a = s("884691"),
+                n = s("862205"),
+                l = s("697218");
+            let i = (0, n.createExperiment)({
                 kind: "guild",
                 id: "2022-03_guild_access_rate_insight_experiment",
                 label: "Guild Access Rate Insight Experiment",
@@ -26,23 +26,23 @@
                 }]
             });
 
-            function d(e) {
+            function r(e) {
                 var t;
-                let a = null === (t = l.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff();
-                return a && s.getCurrentConfig({
+                let s = null === (t = l.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff();
+                return s && i.getCurrentConfig({
                     guildId: e,
                     location: "77b4b2_1"
                 }).showAccessRate
             }
 
-            function u(e) {
+            function o(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                return n.useEffect(() => {
-                    !t && null != e && s.trackExposure({
+                return a.useEffect(() => {
+                    !t && null != e && i.trackExposure({
                         guildId: e,
                         location: "77b4b2_2"
                     })
-                }, [e, t]), s.useExperiment({
+                }, [e, t]), i.useExperiment({
                     guildId: null != e ? e : "",
                     location: "77b4b2_3"
                 }, {

@@ -1,13 +1,13 @@
             "use strict";
-            a.r(t), a.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return r
                 }
             });
-            var n = a("446674"),
-                u = a("42887"),
-                r = a("512244");
+            var i = n("446674"),
+                a = n("42887"),
+                l = n("512244");
 
-            function d() {
-                return (0, n.useStateFromStores)([u.default], () => (0, r.default)(u.default))
+            function r() {
+                return (0, i.useStateFromStores)([a.default], () => (0, l.default)(a.default))
             }

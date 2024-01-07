@@ -1,58 +1,58 @@
             "use strict";
             n.r(t), n.d(t, {
                 AUTOMATIC_APPROVAL_FORM_FIELDS: function() {
-                    return l
+                    return a
                 },
                 MANUAL_APPROVAL_FORM_FIELDS: function() {
-                    return o
+                    return s
                 },
                 MAX_FORM_ELEMENTS: function() {
-                    return a
+                    return o
                 },
                 MAX_NUM_RULES: function() {
                     return u
                 },
                 MAX_RULE_LENGTH: function() {
-                    return s
+                    return l
                 },
                 MAX_QUESTION_LENGTH: function() {
-                    return d
-                },
-                MAX_NUM_CHOICES: function() {
                     return c
                 },
+                MAX_NUM_CHOICES: function() {
+                    return d
+                },
                 MAX_CHOICE_LENGTH: function() {
-                    return f
+                    return _
                 },
                 MAX_TEXT_RESPONSE_LENGTH: function() {
                     return E
                 },
                 MAX_PARAGRAPH_RESPONSE_LENGTH: function() {
-                    return _
+                    return f
                 },
                 MAX_DESCRIPTION_LENGTH: function() {
-                    return p
+                    return I
                 },
                 MEMBER_VERIFICATION_TYPE: function() {
-                    return S
+                    return p
                 },
                 IN_APP_MEMBER_VERIFICATION_MODAL_KEY: function() {
-                    return T
+                    return A
                 }
             }), n("222007");
-            var i, r = n("567054");
-            r.VerificationFormFieldTypes.VERIFICATION;
-            let l = new Set([r.VerificationFormFieldTypes.TERMS]),
-                o = new Set([r.VerificationFormFieldTypes.MULTIPLE_CHOICE, r.VerificationFormFieldTypes.TEXT_INPUT, r.VerificationFormFieldTypes.PARAGRAPH]),
-                a = 5,
+            var r, i = n("567054");
+            i.VerificationFormFieldTypes.VERIFICATION;
+            let a = new Set([i.VerificationFormFieldTypes.TERMS]),
+                s = new Set([i.VerificationFormFieldTypes.MULTIPLE_CHOICE, i.VerificationFormFieldTypes.TEXT_INPUT, i.VerificationFormFieldTypes.PARAGRAPH]),
+                o = 5,
                 u = 16,
-                s = 300,
-                d = 300,
-                c = 8,
-                f = 150,
+                l = 300,
+                c = 300,
+                d = 8,
+                _ = 150,
                 E = 150,
-                _ = 1e3,
-                p = 300,
-                S = "Membership Gating",
-                T = "in-app-member-verification";
-            (i || (i = {})).VERIFICATION_INFO = "VERIFICATION_INFO"
+                f = 1e3,
+                I = 300,
+                p = "Membership Gating",
+                A = "in-app-member-verification";
+            (r || (r = {})).VERIFICATION_INFO = "VERIFICATION_INFO"

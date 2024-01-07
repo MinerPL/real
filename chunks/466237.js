@@ -1,11 +1,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return a
                 }
             });
             var r = n("792788");
 
-            function s() {
+            function a() {
                 return r.default.Messages.DynamicLinks.IOS_APP_PREVIEW_DESCRIPTION
             }

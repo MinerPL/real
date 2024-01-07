@@ -1,9 +1,9 @@
             "use strict";
-            var r = n("418855"),
-                i = n("472960"),
-                o = n("379792");
-            e.exports = function(e, t) {
-                if (r(e), i(t) && t.constructor === e) return t;
-                var n = o.f(e);
-                return (0, n.resolve)(t), n.promise
+            var n = r("418855"),
+                i = r("472960"),
+                u = r("379792");
+            t.exports = function(t, e) {
+                if (n(t), i(e) && e.constructor === t) return e;
+                var r = u.f(t);
+                return (0, r.resolve)(e), r.promise
             }

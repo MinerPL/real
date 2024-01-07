@@ -1,9 +1,9 @@
             "use strict";
-            var r = n("418855"),
-                i = n("338286"),
-                o = n("551544"),
-                a = n("174669")("species");
-            e.exports = function(e, t) {
-                var n, s = r(e).constructor;
-                return void 0 === s || o(n = r(s)[a]) ? t : i(n)
+            var n = r("418855"),
+                i = r("338286"),
+                u = r("551544"),
+                o = r("174669")("species");
+            t.exports = function(t, e) {
+                var r, s = n(t).constructor;
+                return void 0 === s || u(r = n(s)[o]) ? e : i(r)
             }

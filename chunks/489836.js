@@ -1,56 +1,56 @@
             "use strict";
-            a.r(t), a.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
                     return c
                 }
             });
-            var i = a("37983");
-            a("884691");
-            var n = a("446674"),
-                l = a("77078"),
-                d = a("736964"),
-                u = a("27618"),
-                s = a("697218"),
-                o = a("49111"),
-                r = a("782340");
+            var i = n("37983");
+            n("884691");
+            var l = n("446674"),
+                u = n("77078"),
+                o = n("736964"),
+                r = n("27618"),
+                a = n("697218"),
+                s = n("49111"),
+                d = n("782340");
 
             function c(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "ContextMenu",
                     {
-                        id: a
+                        id: n
                     } = e,
-                    c = (0, n.useStateFromStores)([s.default], () => {
+                    c = (0, l.useStateFromStores)([a.default], () => {
                         var e;
-                        return (null === (e = s.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === a
-                    }, [a]),
-                    f = (0, n.useStateFromStores)([u.default], () => u.default.isBlocked(a), [a]);
+                        return (null === (e = a.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === n
+                    }, [n]),
+                    E = (0, l.useStateFromStores)([r.default], () => r.default.isBlocked(n), [n]);
                 if (c) return null;
 
-                function I() {
-                    d.default.addRelationship({
-                        userId: a,
+                function f() {
+                    o.default.addRelationship({
+                        userId: n,
                         context: {
                             location: t
                         },
-                        type: o.RelationshipTypes.BLOCKED
+                        type: s.RelationshipTypes.BLOCKED
                     })
                 }
-                return (0, i.jsx)(l.MenuItem, {
+                return (0, i.jsx)(u.MenuItem, {
                     id: "block",
-                    label: f ? r.default.Messages.UNBLOCK : r.default.Messages.BLOCK,
-                    action: () => f ? d.default.unblockUser(a, {
+                    label: E ? d.default.Messages.UNBLOCK : d.default.Messages.BLOCK,
+                    action: () => E ? o.default.unblockUser(n, {
                         location: t
-                    }) : (0, l.openModal)(t => (0, i.jsx)(l.ConfirmModal, {
-                        header: r.default.Messages.CONFIRM_USER_BLOCK_TITLE.format({
+                    }) : (0, u.openModal)(t => (0, i.jsx)(u.ConfirmModal, {
+                        header: d.default.Messages.CONFIRM_USER_BLOCK_TITLE.format({
                             name: e.username
                         }),
-                        confirmText: r.default.Messages.BLOCK,
-                        cancelText: r.default.Messages.CANCEL,
-                        onConfirm: I,
+                        confirmText: d.default.Messages.BLOCK,
+                        cancelText: d.default.Messages.CANCEL,
+                        onConfirm: f,
                         ...t,
-                        children: (0, i.jsx)(l.Text, {
+                        children: (0, i.jsx)(u.Text, {
                             variant: "text-md/normal",
-                            children: r.default.Messages.CONFIRM_USER_BLOCK_BODY.format({
+                            children: d.default.Messages.CONFIRM_USER_BLOCK_BODY.format({
                                 name: e.username
                             })
                         })

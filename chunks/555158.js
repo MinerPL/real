@@ -1,64 +1,64 @@
             "use strict";
             n.r(t), n.d(t, {
                 HelpMessageTypes: function() {
-                    return u
+                    return a
                 },
                 default: function() {
-                    return _
+                    return p
                 }
             });
-            var l, u, a = n("37983");
+            var u, a, s = n("37983");
             n("884691");
-            var d = n("414456"),
-                i = n.n(d),
-                s = n("77078"),
-                r = n("36694"),
-                o = n("381546"),
-                c = n("68238"),
-                E = n("423487"),
-                f = n("557296");
-            (l = u || (u = {}))[l.WARNING = 0] = "WARNING", l[l.INFO = 1] = "INFO", l[l.ERROR = 2] = "ERROR", l[l.POSITIVE = 3] = "POSITIVE";
-            var _ = function(e) {
+            var r = n("414456"),
+                i = n.n(r),
+                l = n("77078"),
+                c = n("36694"),
+                d = n("381546"),
+                o = n("68238"),
+                f = n("423487"),
+                h = n("557296");
+            (u = a || (a = {}))[u.WARNING = 0] = "WARNING", u[u.INFO = 1] = "INFO", u[u.ERROR = 2] = "ERROR", u[u.POSITIVE = 3] = "POSITIVE";
+            var p = function(e) {
                 let {
                     children: t,
                     messageType: n,
-                    className: l,
-                    textColor: u = "text-normal",
-                    textVariant: d = "text-sm/medium"
-                } = e, _ = function(e) {
+                    className: u,
+                    textColor: a = "text-normal",
+                    textVariant: r = "text-sm/medium"
+                } = e, p = function(e) {
                     switch (e) {
                         case 0:
-                            return E.default;
+                            return f.default;
                         case 1:
-                            return c.default;
-                        case 2:
                             return o.default;
+                        case 2:
+                            return d.default;
                         case 3:
-                            return r.default
+                            return c.default
                     }
-                }(n), S = function(e) {
+                }(n), M = function(e) {
                     switch (e) {
                         case 0:
-                            return f.warning;
+                            return h.warning;
                         case 1:
-                            return f.info;
+                            return h.info;
                         case 2:
-                            return f.error;
+                            return h.error;
                         case 3:
-                            return f.positive
+                            return h.positive
                     }
                 }(n);
-                return (0, a.jsxs)("div", {
-                    className: i(f.container, S, l),
-                    children: [(0, a.jsx)("div", {
-                        className: f.iconDiv,
-                        children: (0, a.jsx)(_, {
-                            className: f.icon
+                return (0, s.jsxs)("div", {
+                    className: i(h.container, M, u),
+                    children: [(0, s.jsx)("div", {
+                        className: h.iconDiv,
+                        children: (0, s.jsx)(p, {
+                            className: h.icon
                         })
-                    }), (0, a.jsx)(s.Text, {
-                        className: f.text,
-                        color: u,
-                        variant: d,
+                    }), (0, s.jsx)(l.Text, {
+                        className: h.text,
+                        color: a,
+                        variant: r,
                         children: t
                     })]
                 })

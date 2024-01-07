@@ -1,27 +1,27 @@
             "use strict";
-            T.r(e), T.d(e, {
+            s.r(t), s.d(t, {
                 default: function() {
-                    return I
+                    return n
                 }
             });
-            var a = T("913144"),
-                I = {
-                    setDesktopType(t) {
+            var a = s("913144"),
+                n = {
+                    setDesktopType(e) {
                         a.default.dispatch({
                             type: "NOTIFICATIONS_SET_DESKTOP_TYPE",
-                            desktopType: t
+                            desktopType: e
                         })
                     },
-                    setTTSType(t) {
+                    setTTSType(e) {
                         a.default.dispatch({
                             type: "NOTIFICATIONS_SET_TTS_TYPE",
-                            ttsType: t
+                            ttsType: e
                         })
                     },
-                    setDisabledSounds(t) {
+                    setDisabledSounds(e) {
                         a.default.dispatch({
                             type: "NOTIFICATIONS_SET_DISABLED_SOUNDS",
-                            sounds: t
+                            sounds: e
                         })
                     },
                     toggleDisableAllSounds() {
@@ -29,44 +29,44 @@
                             type: "NOTIFICATIONS_TOGGLE_ALL_DISABLED"
                         })
                     },
-                    setDisableUnreadBadge(t) {
+                    setDisableUnreadBadge(e) {
                         a.default.dispatch({
                             type: "NOTIFICATIONS_SET_DISABLE_UNREAD_BADGE",
-                            disableUnreadBadge: t
+                            disableUnreadBadge: e
                         })
                     },
-                    setTaskbarFlash(t) {
+                    setTaskbarFlash(e) {
                         a.default.dispatch({
                             type: "NOTIFICATIONS_SET_TASKBAR_FLASH",
-                            taskbarFlash: t
+                            taskbarFlash: e
                         })
                     },
-                    setNotifyMessagesInSelectedChannel(t) {
+                    setNotifyMessagesInSelectedChannel(e) {
                         a.default.dispatch({
                             type: "NOTIFICATIONS_SET_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL",
-                            notify: t
+                            notify: e
                         })
                     },
-                    setPermissionsState(t, e) {
+                    setPermissionsState(e, t) {
                         a.default.dispatch({
                             type: "NOTIFICATIONS_SET_PERMISSION_STATE",
-                            enabled: t,
-                            source: e
+                            enabled: e,
+                            source: t
                         })
                     },
-                    showNotification(t, e, T, I) {
-                        let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+                    showNotification(e, t, s, n) {
+                        let l = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
                         a.default.dispatch({
                             type: "NOTIFICATION_CREATE",
-                            icon: t,
-                            title: e,
-                            body: T,
-                            trackingProps: I,
+                            icon: e,
+                            title: t,
+                            body: s,
+                            trackingProps: n,
                             options: {
-                                ...s,
+                                ...l,
                                 onClick() {
-                                    var t;
-                                    null === (t = s.onClick) || void 0 === t || t.call(s), a.default.dispatch({
+                                    var e;
+                                    null === (e = l.onClick) || void 0 === e || e.call(l), a.default.dispatch({
                                         type: "NOTIFICATION_CLICK"
                                     })
                                 }

@@ -1,16 +1,16 @@
             "use strict";
-            var a, n;
-            s.r(t), s.d(t, {
+            var s, a;
+            n.r(t), n.d(t, {
                 PhoneOrEmailSelectorForceMode: function() {
-                    return a
+                    return s
                 },
                 shouldShowCountryCodeSelector: function() {
-                    return l
+                    return i
                 }
-            }), (n = a || (a = {})).PHONE = "phone", n.EMAIL = "email";
-            let r = /^[-() \d]+$/,
-                o = e => e.startsWith("+");
+            }), (a = s || (s = {})).PHONE = "phone", a.EMAIL = "email";
+            let l = /^[-() \d]+$/,
+                r = e => e.startsWith("+");
 
-            function l(e, t) {
-                return "phone" === e ? !o(t) : "email" !== e && !(t.length < 3) && r.test(t)
+            function i(e, t) {
+                return "phone" === e ? !r(t) : "email" !== e && !(t.length < 3) && l.test(t)
             }

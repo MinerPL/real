@@ -1,50 +1,50 @@
             "use strict";
-            r.r(t), r.d(t, {
+            n.r(a), n.d(a, {
                 IconTypes: function() {
-                    return a
+                    return r
                 },
                 IconSizes: function() {
-                    return d
+                    return i
                 },
                 default: function() {
-                    return h
+                    return f
                 }
-            }), r("781738");
-            var a, n, i = r("37983"),
-                l = r("884691"),
-                o = r("414456"),
-                s = r.n(o),
-                c = r("30003");
-            (n = a || (a = {})).UNKNOWN = "unknown", n.VISA = "visa", n.DISCOVER = "discover", n.MASTERCARD = "mastercard", n.AMEX = "amex", n.PAYPAL = "paypal", n.PAYMENT_REQUEST = "paymentRequest", n.G_PAY = "gPay", n.DINERS = "diners", n.JCB = "jcb", n.UNIONPAY = "unionpay", n.SOFORT = "sofort", n.PRZELEWY24 = "przelewy24", n.GIROPAY = "giropay", n.PAYSAFECARD = "paysafecard", n.GCASH = "gcash", n.GRABPAY = "grabpay", n.MOMO_WALLET = "momo_wallet", n.VENMO = "venmo", n.KAKAOPAY = "kakaopay", n.GOPAY_WALLET = "gopay_wallet", n.BANCONTACT = "bancontact", n.EPS = "eps", n.IDEAL = "ideal", n.CASH_APP = "cash_app";
-            let d = {
-                SMALL: c.cardIconSmall,
-                MEDIUM: c.cardIconMedium,
-                LARGE: c.cardIconLarge,
-                XLARGE: c.cardIconXLarge
+            }), n("781738");
+            var r, t, s = n("37983"),
+                o = n("884691"),
+                l = n("414456"),
+                u = n.n(l),
+                d = n("30003");
+            (t = r || (r = {})).UNKNOWN = "unknown", t.VISA = "visa", t.DISCOVER = "discover", t.MASTERCARD = "mastercard", t.AMEX = "amex", t.PAYPAL = "paypal", t.PAYMENT_REQUEST = "paymentRequest", t.G_PAY = "gPay", t.DINERS = "diners", t.JCB = "jcb", t.UNIONPAY = "unionpay", t.SOFORT = "sofort", t.PRZELEWY24 = "przelewy24", t.GIROPAY = "giropay", t.PAYSAFECARD = "paysafecard", t.GCASH = "gcash", t.GRABPAY = "grabpay", t.MOMO_WALLET = "momo_wallet", t.VENMO = "venmo", t.KAKAOPAY = "kakaopay", t.GOPAY_WALLET = "gopay_wallet", t.BANCONTACT = "bancontact", t.EPS = "eps", t.IDEAL = "ideal", t.CASH_APP = "cash_app";
+            let i = {
+                SMALL: d.cardIconSmall,
+                MEDIUM: d.cardIconMedium,
+                LARGE: d.cardIconLarge,
+                XLARGE: d.cardIconXLarge
             };
-            class u extends l.PureComponent {
+            class c extends o.PureComponent {
                 static getType(e) {
                     if (null == e) return "unknown";
-                    let t = e.replace(/[^a-z0-9_]/gi, "").toUpperCase();
-                    return a[t] || "unknown"
+                    let a = e.replace(/[^a-z0-9_]/gi, "").toUpperCase();
+                    return r[a] || "unknown"
                 }
                 render() {
                     let {
                         flipped: e,
-                        type: t,
-                        className: r,
-                        size: a
+                        type: a,
+                        className: n,
+                        size: r
                     } = this.props;
-                    return (0, i.jsx)("div", {
-                        className: s(a, c[t], r, {
-                            [c.flipped]: e
+                    return (0, s.jsx)("div", {
+                        className: u(r, d[a], n, {
+                            [d.flipped]: e
                         }),
-                        children: t
+                        children: a
                     })
                 }
             }
-            u.Types = a, u.Sizes = d, u.defaultProps = {
-                size: d.SMALL,
+            c.Types = r, c.Sizes = i, c.defaultProps = {
+                size: i.SMALL,
                 flipped: !1
             };
-            var h = u
+            var f = c

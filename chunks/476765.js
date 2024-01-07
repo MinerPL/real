@@ -1,26 +1,26 @@
             "use strict";
             n.r(t), n.d(t, {
                 uid: function() {
-                    return u
-                },
-                useUID: function() {
                     return o
                 },
+                useUID: function() {
+                    return s
+                },
                 UID: function() {
-                    return d
+                    return u
                 }
             });
-            var s = n("995008"),
-                i = n.n(s),
-                a = n("775560");
-            let u = function() {
+            var i = n("995008"),
+                l = n.n(i),
+                r = n("775560");
+            let o = function() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "uid_";
-                    return i(e)
+                    return l(e)
                 },
-                o = () => (0, a.useLazyValue)(() => u()),
-                d = e => {
+                s = () => (0, r.useLazyValue)(() => o()),
+                u = e => {
                     let {
                         children: t
                     } = e;
-                    return t(o())
+                    return t(s())
                 }

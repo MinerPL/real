@@ -1,35 +1,35 @@
             "use strict";
-            n.r(t), n.d(t, {
+            s.r(t), s.d(t, {
                 default: function() {
-                    return u
+                    return d
                 }
             });
-            var i = n("37983");
-            n("884691");
-            var r = n("446674"),
-                l = n("77078"),
-                o = n("679653"),
-                s = n("42203"),
-                a = n("782340");
+            var a = s("37983");
+            s("884691");
+            var n = s("446674"),
+                l = s("77078"),
+                i = s("679653"),
+                r = s("42203"),
+                o = s("782340");
 
-            function u(e) {
+            function d(e) {
                 let {
                     onConfirm: t,
-                    onCancel: n,
-                    channelId: u
-                } = e, d = (0, r.useStateFromStores)([s.default], () => null != u ? s.default.getChannel(u) : null), c = (0, o.default)(d, !0);
-                return (0, i.jsx)(l.DeclarativeConfirmModal, {
+                    onCancel: s,
+                    channelId: d
+                } = e, u = (0, n.useStateFromStores)([r.default], () => null != d ? r.default.getChannel(d) : null), c = (0, i.default)(u, !0);
+                return (0, a.jsx)(l.DeclarativeConfirmModal, {
                     dismissable: !0,
-                    header: a.default.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_TITLE,
-                    confirmText: a.default.Messages.REMOVE,
-                    cancelText: a.default.Messages.CANCEL,
+                    header: o.default.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_TITLE,
+                    confirmText: o.default.Messages.REMOVE,
+                    cancelText: o.default.Messages.CANCEL,
                     onConfirm: t,
-                    onCancel: n,
-                    children: (0, i.jsx)(l.Text, {
+                    onCancel: s,
+                    children: (0, a.jsx)(l.Text, {
                         variant: "text-sm/normal",
-                        children: null != d ? a.default.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_BODY.format({
+                        children: null != u ? o.default.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_BODY.format({
                             channelName: c
-                        }) : a.default.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_BODY_GENERIC
+                        }) : o.default.Messages.WELCOME_CHANNEL_DELETE_CONFIRM_BODY_GENERIC
                     })
                 })
             }

@@ -1,42 +1,42 @@
             "use strict";
             n.r(t), n.d(t, {
                 getNickname: function() {
-                    return i
+                    return o
                 },
                 useName: function() {
-                    return d
+                    return c
                 },
                 default: function() {
-                    return f
+                    return _
                 }
             });
-            var u = n("446674"),
-                r = n("42203"),
-                a = n("26989"),
-                l = n("27618"),
-                o = n("158998"),
-                s = n("782340");
+            var i = n("446674"),
+                a = n("42203"),
+                l = n("26989"),
+                s = n("27618"),
+                r = n("158998"),
+                u = n("782340");
 
-            function i(e, t, n) {
+            function o(e, t, n) {
                 if (null == n) return null;
-                if (null != e) return a.default.getNick(e, n.id);
+                if (null != e) return l.default.getNick(e, n.id);
                 if (null != t) {
-                    let e = r.default.getChannel(t);
-                    if (null == e ? void 0 : e.isPrivate()) return l.default.getNickname(n.id)
+                    let e = a.default.getChannel(t);
+                    if (null == e ? void 0 : e.isPrivate()) return s.default.getNickname(n.id)
                 }
                 return null
             }
 
-            function c(e, t, n) {
-                var u;
-                return null == n ? s.default.Messages.UNKNOWN_USER : null !== (u = i(e, t, n)) && void 0 !== u ? u : o.default.getName(n)
+            function d(e, t, n) {
+                var i;
+                return null == n ? u.default.Messages.UNKNOWN_USER : null !== (i = o(e, t, n)) && void 0 !== i ? i : r.default.getName(n)
             }
 
-            function d(e, t, n) {
-                return (0, u.useStateFromStores)([a.default, r.default, l.default], () => c(e, t, n))
+            function c(e, t, n) {
+                return (0, i.useStateFromStores)([l.default, a.default, s.default], () => d(e, t, n))
             }
-            var f = {
-                getNickname: i,
-                getName: c,
-                useName: d
+            var _ = {
+                getNickname: o,
+                getName: d,
+                useName: c
             }

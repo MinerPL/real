@@ -1,22 +1,22 @@
             "use strict";
             n.r(t), n.d(t, {
                 savedMessageToServer: function() {
-                    return i
+                    return l
                 },
                 savedMessageToClient: function() {
-                    return r
+                    return s
                 },
                 savedMessageHasMetadata: function() {
-                    return l
+                    return d
                 },
                 MESSAGE_REMINDER_DURATION_ITEMS: function() {
                     return u
                 }
             });
-            var a = n("718517"),
-                s = n("782340");
+            var i = n("718517"),
+                a = n("782340");
 
-            function i(e) {
+            function l(e) {
                 var t;
                 return {
                     channel_id: e.channelId,
@@ -32,7 +32,7 @@
                 }
             }
 
-            function r(e) {
+            function s(e) {
                 return {
                     channelId: e.channel_id,
                     messageId: e.message_id,
@@ -47,22 +47,22 @@
                 }
             }
 
-            function l(e) {
+            function d(e) {
                 return null != e.authorSummary && e.authorSummary.length > 0 && null != e.channelSummary && e.channelSummary.length > 0 && null != e.messageSummary && e.messageSummary.length > 0 && null != e.authorId && e.authorId.length > 0
             }
             let u = [{
-                duration: a.default.Millis.HOUR,
-                getLabel: () => s.default.Messages.MESSAGE_REMINDERS_IN_ONE_HOUR
+                duration: i.default.Millis.HOUR,
+                getLabel: () => a.default.Messages.MESSAGE_REMINDERS_IN_ONE_HOUR
             }, {
-                duration: 2 * a.default.Millis.HOUR,
-                getLabel: () => s.default.Messages.MESSAGE_REMINDERS_IN_TWO_HOURS
+                duration: 2 * i.default.Millis.HOUR,
+                getLabel: () => a.default.Messages.MESSAGE_REMINDERS_IN_TWO_HOURS
             }, {
-                duration: 4 * a.default.Millis.HOUR,
-                getLabel: () => s.default.Messages.MESSAGE_REMINDERS_IN_FOUR_HOURS
+                duration: 4 * i.default.Millis.HOUR,
+                getLabel: () => a.default.Messages.MESSAGE_REMINDERS_IN_FOUR_HOURS
             }, {
-                duration: a.default.Millis.DAY,
-                getLabel: () => s.default.Messages.MESSAGE_REMINDERS_IN_ONE_DAY
+                duration: i.default.Millis.DAY,
+                getLabel: () => a.default.Messages.MESSAGE_REMINDERS_IN_ONE_DAY
             }, {
-                duration: a.default.Millis.WEEK,
-                getLabel: () => s.default.Messages.MESSAGE_REMINDERS_IN_ONE_WEEK
+                duration: i.default.Millis.WEEK,
+                getLabel: () => a.default.Messages.MESSAGE_REMINDERS_IN_ONE_WEEK
             }]

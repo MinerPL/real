@@ -1,0 +1,2 @@
+            "use strict";
+            I.exports = {}

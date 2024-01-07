@@ -1,13 +1,13 @@
             "use strict";
-            var r = n("727204"),
+            var n = r("727204"),
                 i = TypeError,
-                o = function(e) {
-                    var t, n;
-                    this.promise = new e(function(e, r) {
-                        if (void 0 !== t || void 0 !== n) throw i("Bad Promise constructor");
-                        t = e, n = r
-                    }), this.resolve = r(t), this.reject = r(n)
+                u = function(t) {
+                    var e, r;
+                    this.promise = new t(function(t, n) {
+                        if (void 0 !== e || void 0 !== r) throw i("Bad Promise constructor");
+                        e = t, r = n
+                    }), this.resolve = n(e), this.reject = n(r)
                 };
-            e.exports.f = function(e) {
-                return new o(e)
+            t.exports.f = function(t) {
+                return new u(t)
             }

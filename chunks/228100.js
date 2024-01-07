@@ -1,40 +1,40 @@
             "use strict";
-            A.r(t), A.d(t, {
+            s.r(t), s.d(t, {
                 default: function() {
                     return o
                 }
-            }), A("222007");
-            var a = A("884691"),
-                l = A("446674"),
-                n = A("448993"),
-                r = A("651057"),
-                s = A("299285");
+            }), s("222007");
+            var a = s("884691"),
+                n = s("446674"),
+                l = s("448993"),
+                i = s("651057"),
+                r = s("299285");
 
             function o(e, t) {
-                let A = (0, l.useStateFromStores)([s.default], () => s.default.getGuildApplication(e, t)),
-                    [o, i] = a.useState(null == A),
-                    [d, u] = a.useState(),
-                    [c, f] = a.useState(!1),
-                    C = a.useCallback(async () => {
-                        if (null == A && null != e) {
-                            f(!0), i(!0);
+                let s = (0, n.useStateFromStores)([r.default], () => r.default.getGuildApplication(e, t)),
+                    [o, d] = a.useState(null == s),
+                    [u, c] = a.useState(),
+                    [E, _] = a.useState(!1),
+                    T = a.useCallback(async () => {
+                        if (null == s && null != e) {
+                            _(!0), d(!0);
                             try {
-                                await r.default.getApplicationsForGuild(e, {
+                                await i.default.getApplicationsForGuild(e, {
                                     type: t,
                                     includeTeam: !0
                                 })
                             } catch (e) {
-                                u(new n.APIError(e))
+                                c(new l.APIError(e))
                             } finally {
-                                i(!1)
+                                d(!1)
                             }
                         }
-                    }, [A, t, e]);
+                    }, [s, t, e]);
                 return a.useEffect(() => {
-                    !c && C()
-                }, [c, C]), {
-                    application: A,
-                    error: d,
+                    !E && T()
+                }, [E, T]), {
+                    application: s,
+                    error: u,
                     loading: o
                 }
             }

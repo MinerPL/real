@@ -1,13 +1,13 @@
             "use strict";
-            n.r(e), n.d(e, {
+            s.r(t), s.d(t, {
                 MODAL_CAROUSEL_LAYOUT: function() {
                     return i
                 }
             });
-            var s = n("73579"),
-                o = n("49111");
+            var n = s("73579"),
+                a = s("49111");
             let i = {
-                [o.KeybindActions.MODAL_CAROUSEL_NEXT]: s.MODAL_CAROUSEL_NEXT,
-                [o.KeybindActions.MODAL_CAROUSEL_PREV]: s.MODAL_CAROUSEL_PREV,
-                [o.KeybindActions.CLOSE_MODAL]: s.MODAL_CAROUSEL_CLOSE
+                [a.KeybindActions.MODAL_CAROUSEL_NEXT]: n.MODAL_CAROUSEL_NEXT,
+                [a.KeybindActions.MODAL_CAROUSEL_PREV]: n.MODAL_CAROUSEL_PREV,
+                [a.KeybindActions.CLOSE_MODAL]: n.MODAL_CAROUSEL_CLOSE
             }

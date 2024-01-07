@@ -1,7 +1,7 @@
             "use strict";
-            var a, s;
+            var s, a;
             n.r(t), n.d(t, {
                 NewUserTypes: function() {
-                    return a
+                    return s
                 }
-            }), (s = a || (a = {}))[s.MARKETING_UNCLAIMED = 0] = "MARKETING_UNCLAIMED", s[s.INVITE_UNCLAIMED = 1] = "INVITE_UNCLAIMED", s[s.ORGANIC_REGISTERED = 2] = "ORGANIC_REGISTERED", s[s.ORGANIC_REGISTERED_GUILD_TEMPLATE = 3] = "ORGANIC_REGISTERED_GUILD_TEMPLATE"
+            }), (a = s || (s = {}))[a.MARKETING_UNCLAIMED = 0] = "MARKETING_UNCLAIMED", a[a.INVITE_UNCLAIMED = 1] = "INVITE_UNCLAIMED", a[a.ORGANIC_REGISTERED = 2] = "ORGANIC_REGISTERED", a[a.ORGANIC_REGISTERED_GUILD_TEMPLATE = 3] = "ORGANIC_REGISTERED_GUILD_TEMPLATE"

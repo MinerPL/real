@@ -1,71 +1,71 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return h
                 }
-            }), s("222007");
-            var a = s("37983"),
-                n = s("884691"),
-                r = s("414456"),
-                o = s.n(r),
-                l = s("907002"),
-                i = s("446674"),
-                u = s("77078"),
-                d = s("206230"),
-                c = s("878720"),
-                h = s("189613"),
-                f = s("393004");
+            }), n("222007");
+            var s = n("37983"),
+                a = n("884691"),
+                l = n("414456"),
+                r = n.n(l),
+                i = n("907002"),
+                o = n("446674"),
+                u = n("77078"),
+                d = n("206230"),
+                c = n("878720"),
+                f = n("189613"),
+                E = n("393004");
 
-            function m(e) {
+            function h(e) {
                 let {
                     show: t,
-                    alpha2: s,
-                    countryCode: r
-                } = e, m = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), p = n.useRef(null), [C, S] = n.useState(0), [g, T] = n.useState(!1);
-                n.useEffect(() => {
+                    alpha2: n,
+                    countryCode: l
+                } = e, h = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), _ = a.useRef(null), [m, g] = a.useState(0), [p, A] = a.useState(!1);
+                a.useEffect(() => {
                     function e() {
-                        var e, s;
-                        S(t && null !== (s = null === (e = p.current) || void 0 === e ? void 0 : e.getBoundingClientRect().width) && void 0 !== s ? s : 0)
+                        var e, n;
+                        g(t && null !== (n = null === (e = _.current) || void 0 === e ? void 0 : e.getBoundingClientRect().width) && void 0 !== n ? n : 0)
                     }
                     return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e)
-                }, [t, s, r]);
-                let A = (0, l.useSpring)({
-                        width: "".concat(C, "px"),
-                        immediate: m,
+                }, [t, n, l]);
+                let T = (0, i.useSpring)({
+                        width: "".concat(m, "px"),
+                        immediate: h,
                         onStart: () => {
-                            T(!0)
+                            A(!0)
                         },
                         onRest: () => {
-                            T(!1)
+                            A(!1)
                         }
                     }),
-                    N = e => {
+                    R = e => {
                         c.default.setCountryCode(e)
                     };
-                return (0, a.jsx)(u.Popout, {
+                return (0, s.jsx)(u.Popout, {
                     position: "top",
-                    renderPopout: e => (0, a.jsx)(h.default, {
-                        className: f.popout,
+                    renderPopout: e => (0, s.jsx)(f.default, {
+                        className: E.popout,
                         onClick: t => {
-                            N(t), e.closePopout()
+                            R(t), e.closePopout()
                         }
                     }),
-                    children: e => (0, a.jsx)("div", {
-                        className: o(f.outerContainer, {
-                            [f.hidden]: !(t || g)
+                    children: e => (0, s.jsx)("div", {
+                        className: r(E.outerContainer, {
+                            [E.hidden]: !(t || p)
                         }),
-                        children: (0, a.jsx)(l.animated.div, {
-                            className: f.container,
-                            style: A,
-                            children: (0, a.jsxs)("div", {
-                                className: f.innerContainer,
-                                ref: p,
-                                children: [(0, a.jsxs)(u.Clickable, {
+                        children: (0, s.jsx)(i.animated.div, {
+                            className: E.container,
+                            style: T,
+                            children: (0, s.jsxs)("div", {
+                                className: E.innerContainer,
+                                ref: _,
+                                children: [(0, s.jsxs)(u.Clickable, {
                                     ...e,
-                                    className: f.countryCode,
-                                    children: [s, " ", r]
-                                }), (0, a.jsx)("div", {
-                                    className: f.separator
+                                    className: E.countryCode,
+                                    children: [n, " ", l]
+                                }), (0, s.jsx)("div", {
+                                    className: E.separator
                                 })]
                             })
                         })

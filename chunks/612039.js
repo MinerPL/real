@@ -4,15 +4,15 @@
                     return l
                 }
             }), n("222007");
-            var r = n("884691"),
+            var s = n("884691"),
                 i = n("775560"),
-                o = n("862337");
+                a = n("862337");
 
             function l(e, t) {
-                let [n, l] = (0, r.useState)(e), s = (0, i.useLazyValue)(() => new o.Timeout);
-                (0, r.useEffect)(() => () => s.stop(), [s]);
-                let a = (0, r.useCallback)(n => {
-                    l(n), n !== e && s.start(t, () => l(e))
-                }, [t, e, s]);
-                return [n, a]
+                let [n, l] = (0, s.useState)(e), r = (0, i.useLazyValue)(() => new a.Timeout);
+                (0, s.useEffect)(() => () => r.stop(), [r]);
+                let u = (0, s.useCallback)(n => {
+                    l(n), n !== e && r.start(t, () => l(e))
+                }, [t, e, r]);
+                return [n, u]
             }

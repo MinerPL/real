@@ -1,39 +1,39 @@
             "use strict";
             n.r(t), n.d(t, {
                 subscribeMembers: function() {
-                    return l
+                    return r
                 },
                 unsubscribeMembers: function() {
-                    return u
-                },
-                subscribeChannel: function() {
                     return o
                 },
+                subscribeChannel: function() {
+                    return s
+                },
                 subscribeChannelDimensions: function() {
-                    return a
+                    return u
                 }
             }), n("424973");
-            var r = n("913144"),
-                i = n("696605");
+            var i = n("913144"),
+                l = n("696605");
 
-            function l(e, t) {
-                r.default.dispatch({
+            function r(e, t) {
+                i.default.dispatch({
                     type: "GUILD_SUBSCRIPTIONS_MEMBERS_ADD",
                     guildId: e,
                     userIds: t
                 })
             }
 
-            function u(e, t) {
-                r.default.dispatch({
+            function o(e, t) {
+                i.default.dispatch({
                     type: "GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE",
                     guildId: e,
                     userIds: t
                 })
             }
 
-            function o(e, t, n) {
-                r.default.dispatch({
+            function s(e, t, n) {
+                i.default.dispatch({
                     type: "GUILD_SUBSCRIPTIONS_CHANNEL",
                     guildId: e,
                     channelId: t,
@@ -41,28 +41,28 @@
                 })
             }
 
-            function a(e) {
+            function u(e) {
                 let {
                     guildId: t,
                     channelId: n,
-                    y: r,
-                    height: l,
-                    rowHeight: u
+                    y: i,
+                    height: r,
+                    rowHeight: o
                 } = e;
 
-                function a(e) {
+                function u(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-                    return Math.max(0, Math.ceil(Math.ceil(e / u)) + t)
+                    return Math.max(0, Math.ceil(Math.ceil(e / o)) + t)
                 }
-                let s = [];
+                let a = [];
 
                 function c(e) {
-                    let t = e + (i.MINIMUM_RANGE - 1);
-                    return s.push([e, t]), t + 1
+                    let t = e + (l.MINIMUM_RANGE - 1);
+                    return a.push([e, t]), t + 1
                 }
-                let d = a(.5 * l),
-                    f = a(r, -d),
-                    E = a(r + l, d);
-                for (f > 0 && (f = Math.max(c(0), f)), f = Math.floor(f / i.MINIMUM_RANGE) * i.MINIMUM_RANGE; f <= E;) f = c(f);
-                o(t, n, s)
+                let d = u(.5 * r),
+                    f = u(i, -d),
+                    E = u(i + r, d);
+                for (f > 0 && (f = Math.max(c(0), f)), f = Math.floor(f / l.MINIMUM_RANGE) * l.MINIMUM_RANGE; f <= E;) f = c(f);
+                s(t, n, a)
             }

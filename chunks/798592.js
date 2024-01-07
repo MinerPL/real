@@ -1,35 +1,35 @@
             "use strict";
-            n.r(t), n.d(t, {
+            n.r(e), n.d(e, {
                 default: function() {
-                    return o
+                    return a
                 }
             });
-            var i = n("884691"),
-                r = n("65597"),
-                s = n("526887"),
-                l = n("880731");
+            var r = n("884691"),
+                i = n("65597"),
+                o = n("526887"),
+                u = n("880731");
 
-            function o() {
+            function a() {
                 let {
-                    createMultipleConfettiAt: e
-                } = i.useContext(s.ConfettiCannonContext), t = (0, r.default)([l.default], () => l.default.getState()), n = i.useCallback(e => ({
+                    createMultipleConfettiAt: t
+                } = r.useContext(o.ConfettiCannonContext), e = (0, i.default)([u.default], () => u.default.getState()), n = r.useCallback(t => ({
                     size: {
                         type: "static-random",
-                        minValue: e.confettiSize - 7,
-                        maxValue: e.confettiSize + 7
+                        minValue: t.confettiSize - 7,
+                        maxValue: t.confettiSize + 7
                     }
-                }), []), o = i.useMemo(() => ({
-                    fire: (i, r, s) => {
-                        var l, o;
-                        let u = (null == s ? void 0 : s.settings) != null ? {
-                                ...t,
-                                ...s.settings
-                            } : t,
-                            a = n(u);
-                        e(i, r, a, (null !== (l = null == s ? void 0 : s.count) && void 0 !== l ? l : u.confettiCount) * (null !== (o = null == s ? void 0 : s.countMultiplier) && void 0 !== o ? o : 1), {
-                            sprite: null == s ? void 0 : s.sprite
+                }), []), a = r.useMemo(() => ({
+                    fire: (r, i, o) => {
+                        var u, a;
+                        let s = (null == o ? void 0 : o.settings) != null ? {
+                                ...e,
+                                ...o.settings
+                            } : e,
+                            l = n(s);
+                        t(r, i, l, (null !== (u = null == o ? void 0 : o.count) && void 0 !== u ? u : s.confettiCount) * (null !== (a = null == o ? void 0 : o.countMultiplier) && void 0 !== a ? a : 1), {
+                            sprite: null == o ? void 0 : o.sprite
                         })
                     }
-                }), [e, n, t]);
-                return o
+                }), [t, n, e]);
+                return a
             }

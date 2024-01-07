@@ -5,10 +5,10 @@
                 if (null == t) throw Error("[Utils] ClipboardUtils.copy(): assert failed: document.body != null");
                 let n = document.createRange(),
                     r = window.getSelection(),
-                    l = document.createElement("textarea");
-                l.value = e, l.contentEditable = "true", l.style.visibility = "none", t.appendChild(l), n.selectNodeContents(l), null == r || r.removeAllRanges(), null == r || r.addRange(n), l.focus(), l.setSelectionRange(0, e.length);
-                let s = document.execCommand("copy");
-                return t.removeChild(l), s
+                    i = document.createElement("textarea");
+                i.value = e, i.contentEditable = "true", i.style.visibility = "none", t.appendChild(i), n.selectNodeContents(i), null == r || r.removeAllRanges(), null == r || r.addRange(n), i.focus(), i.setSelectionRange(0, e.length);
+                let a = document.execCommand("copy");
+                return t.removeChild(i), a
             }
             n.r(t), n.d(t, {
                 copy: function() {

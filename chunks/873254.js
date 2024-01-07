@@ -1,38 +1,38 @@
             "use strict";
-            a.r(t), a.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return f
+                    return c
                 }
             });
-            var n = a("37983");
-            a("884691");
-            var u = a("446674"),
-                r = a("77078"),
-                d = a("648911"),
-                l = a("271938"),
-                s = a("42887"),
-                i = a("782340"),
-                o = a("431024");
+            var i = n("37983");
+            n("884691");
+            var a = n("446674"),
+                l = n("77078"),
+                r = n("648911"),
+                s = n("271938"),
+                u = n("42887"),
+                o = n("782340"),
+                d = n("431024");
 
-            function f(e) {
-                let t = (0, r.useModalContext)(),
-                    f = (0, u.useStateFromStores)([s.default], () => s.default.isVideoEnabled()),
-                    c = (0, u.useStateFromStores)([l.default], () => l.default.getId() === e),
-                    m = (0, d.default)();
-                return (!f || m) && c ? (0, n.jsx)(r.MenuItem, {
+            function c(e) {
+                let t = (0, l.useModalContext)(),
+                    c = (0, a.useStateFromStores)([u.default], () => u.default.isVideoEnabled()),
+                    E = (0, a.useStateFromStores)([s.default], () => s.default.getId() === e),
+                    f = (0, r.default)();
+                return (!c || f) && E ? (0, i.jsx)(l.MenuItem, {
                     id: "change-video-background",
-                    label: (0, n.jsx)("div", {
-                        className: o.item,
-                        children: f ? i.default.Messages.CAMERA_CHANGE_VIDEO_BACKGROUND_MENU_ITEM : i.default.Messages.CAMERA_PREVIEW_MENU_ITEM
+                    label: (0, i.jsx)("div", {
+                        className: d.item,
+                        children: c ? o.default.Messages.CAMERA_CHANGE_VIDEO_BACKGROUND_MENU_ITEM : o.default.Messages.CAMERA_PREVIEW_MENU_ITEM
                     }),
                     action: function() {
-                        (0, r.openModalLazy)(async () => {
+                        (0, l.openModalLazy)(async () => {
                             let {
                                 default: e
-                            } = await a.el("381736").then(a.bind(a, "381736"));
-                            return t => (0, n.jsx)(e, {
+                            } = await n.el("381736").then(n.bind(n, "381736"));
+                            return t => (0, i.jsx)(e, {
                                 ...t,
-                                videoEnabled: f
+                                videoEnabled: c
                             })
                         }, {
                             modalKey: "camera-preview",

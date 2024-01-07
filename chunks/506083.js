@@ -1,40 +1,40 @@
             "use strict";
-            var r = n("859514"),
-                i = n("140925"),
-                o = n("718530"),
-                a = n("664144"),
-                s = n("434978"),
-                c = n("125359"),
-                u = n("499460"),
-                d = n("33270"),
-                l = n("484784"),
-                p = o && o.prototype;
-            if (r({
+            var n = r("859514"),
+                i = r("140925"),
+                u = r("718530"),
+                o = r("664144"),
+                s = r("434978"),
+                a = r("125359"),
+                c = r("499460"),
+                l = r("33270"),
+                f = r("484784"),
+                d = u && u.prototype;
+            if (n({
                     target: "Promise",
                     proto: !0,
                     real: !0,
-                    forced: !!o && a(function() {
-                        p.finally.call({
+                    forced: !!u && o(function() {
+                        d.finally.call({
                             then: function() {}
                         }, function() {})
                     })
                 }, {
-                    finally: function(e) {
-                        var t = u(this, s("Promise")),
-                            n = c(e);
-                        return this.then(n ? function(n) {
-                            return d(t, e()).then(function() {
-                                return n
+                    finally: function(t) {
+                        var e = c(this, s("Promise")),
+                            r = a(t);
+                        return this.then(r ? function(r) {
+                            return l(e, t()).then(function() {
+                                return r
                             })
-                        } : e, n ? function(n) {
-                            return d(t, e()).then(function() {
-                                throw n
+                        } : t, r ? function(r) {
+                            return l(e, t()).then(function() {
+                                throw r
                             })
-                        } : e)
+                        } : t)
                     }
-                }), !i && c(o)) {
-                var _ = s("Promise").prototype.finally;
-                p.finally !== _ && l(p, "finally", _, {
+                }), !i && a(u)) {
+                var h = s("Promise").prototype.finally;
+                d.finally !== h && f(d, "finally", h, {
                     unsafe: !0
                 })
             }

@@ -1,56 +1,56 @@
             "use strict";
-            l.r(t), l.d(t, {
+            a.r(t), a.d(t, {
                 addInstallLocation: function() {
                     return n
                 },
                 removeInstallLocation: function() {
-                    return i
-                },
-                updateInstallLocation: function() {
                     return r
                 },
+                updateInstallLocation: function() {
+                    return i
+                },
                 fetchMetadata: function() {
-                    return c
+                    return d
                 }
-            }), l("222007");
-            var a = l("913144"),
-                s = l("152723");
+            }), a("222007");
+            var s = a("913144"),
+                l = a("152723");
 
             function n(e) {
-                s.default.queryDirectory(e, (t, l) => {
-                    null == t && null != l && a.default.dispatch({
+                l.default.queryDirectory(e, (t, a) => {
+                    null == t && null != a && s.default.dispatch({
                         type: "INSTALLATION_LOCATION_ADD",
                         path: e,
-                        metadata: l
+                        metadata: a
                     })
                 })
             }
 
-            function i(e) {
-                a.default.dispatch({
+            function r(e) {
+                s.default.dispatch({
                     type: "INSTALLATION_LOCATION_REMOVE",
                     path: e
                 })
             }
 
-            function r(e, t) {
+            function i(e, t) {
                 let {
-                    label: l,
-                    isDefault: s
+                    label: a,
+                    isDefault: l
                 } = t;
-                a.default.dispatch({
+                s.default.dispatch({
                     type: "INSTALLATION_LOCATION_UPDATE",
                     path: e,
-                    label: l,
-                    isDefault: s
+                    label: a,
+                    isDefault: l
                 })
             }
 
-            function c(e) {
+            function d(e) {
                 let t = {},
-                    l = 0;
-                for (let n of e) null != n && "string" == typeof n && s.default.queryDirectory(n, (s, i) => {
-                    ++l, null == s && null != i && (t[n] = i), l === e.length && a.default.dispatch({
+                    a = 0;
+                for (let n of e) null != n && "string" == typeof n && l.default.queryDirectory(n, (l, r) => {
+                    ++a, null == l && null != r && (t[n] = r), a === e.length && s.default.dispatch({
                         type: "INSTALLATION_LOCATION_FETCH_METADATA",
                         metadataPayload: t
                     })

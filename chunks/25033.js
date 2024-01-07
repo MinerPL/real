@@ -1,42 +1,42 @@
             "use strict";
-            let a;
+            let s;
             n.r(t), n.d(t, {
                 default: function() {
                     return d
                 }
             });
-            var s = n("446674"),
-                i = n("913144"),
-                l = n("988415");
-            let r = (0, l.getDefaultCountryCode)();
+            var a = n("446674"),
+                l = n("913144"),
+                r = n("988415");
+            let i = (0, r.getDefaultCountryCode)();
 
             function o(e) {
                 var t;
                 let {
                     countryCode: n
                 } = e;
-                null != n && (r = null !== (t = (0, l.getCountryCodeByAlpha2)(n)) && void 0 !== t ? t : (0, l.getDefaultCountryCode)())
+                null != n && (i = null !== (t = (0, r.getCountryCodeByAlpha2)(n)) && void 0 !== t ? t : (0, r.getDefaultCountryCode)())
             }
-            class u extends s.default.DeviceSettingsStore {
+            class u extends a.default.DeviceSettingsStore {
                 initialize(e) {
-                    null != e && (a = e.selectedCountryCode)
+                    null != e && (s = e.selectedCountryCode)
                 }
                 getUserAgnosticState() {
                     return {
-                        selectedCountryCode: a
+                        selectedCountryCode: s
                     }
                 }
                 getCountryCode() {
-                    return null != a ? a : r
+                    return null != s ? s : i
                 }
             }
             u.displayName = "PhoneStore", u.persistKey = "PhoneStore";
-            var d = new u(i.default, {
+            var d = new u(l.default, {
                 PHONE_SET_COUNTRY_CODE: function(e) {
                     let {
                         countryCode: t
                     } = e;
-                    a = t
+                    s = t
                 },
                 CONNECTION_OPEN: o,
                 SET_LOCATION_METADATA: o

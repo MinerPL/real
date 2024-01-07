@@ -1,15 +1,15 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return p
                 }
             });
             var i = n("37983");
             n("884691");
-            var r = n("414456"),
-                s = n.n(r),
-                l = n("384737"),
-                o = n("448052"),
+            var l = n("414456"),
+                r = n.n(l),
+                o = n("384737"),
+                s = n("448052"),
                 u = n("748802"),
                 a = n("260792"),
                 c = n("77078"),
@@ -25,40 +25,40 @@
                     let {
                         direction: t = E.DOWN,
                         width: n = 24,
-                        height: r = 24,
+                        height: l = 24,
                         color: _ = "currentColor",
-                        transition: I = f.transition,
-                        className: p,
-                        foreground: h,
-                        expanded: S,
+                        transition: p = f.transition,
+                        className: I,
+                        foreground: S,
+                        expanded: h,
                         ...T
                     } = e, {
                         enabled: N
                     } = (0, c.useRedesignIconContext)(), C = t;
-                    if (!0 === S ? C = E.DOWN : !1 === S && (C = E.RIGHT), N) {
+                    if (!0 === h ? C = E.DOWN : !1 === h && (C = E.RIGHT), N) {
                         let e = {
                             [E.UP]: a.ChevronSmallUpIcon,
-                            [E.DOWN]: l.ChevronSmallDownIcon,
-                            [E.LEFT]: o.ChevronSmallLeftIcon,
+                            [E.DOWN]: o.ChevronSmallDownIcon,
+                            [E.LEFT]: s.ChevronSmallLeftIcon,
                             [E.RIGHT]: u.ChevronSmallRightIcon
                         } [C];
                         return (0, i.jsx)(e, {
                             ...T,
-                            className: p,
+                            className: I,
                             width: n,
-                            height: r,
+                            height: l,
                             color: _,
-                            colorClass: h
+                            colorClass: S
                         })
                     }
                     return (0, i.jsx)("svg", {
-                        className: s(p, I, C),
+                        className: r(I, p, C),
                         width: n,
-                        height: r,
+                        height: l,
                         viewBox: "0 0 24 24",
                         ...(0, d.default)(T),
                         children: (0, i.jsx)("path", {
-                            className: h,
+                            className: S,
                             fill: "none",
                             stroke: _,
                             strokeWidth: "2",
@@ -70,4 +70,4 @@
                     })
                 };
             _.Directions = E;
-            var I = _
+            var p = _

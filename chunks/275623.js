@@ -1,22 +1,22 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return s
                 }
             });
-            var l = n("37983");
+            var i = n("37983");
             n("884691");
-            var i = n("414456"),
-                r = n.n(i),
-                s = n("164538");
+            var r = n("414456"),
+                l = n.n(r),
+                a = n("164538");
 
-            function a(e) {
+            function s(e) {
                 let {
                     className: t,
                     ...n
                 } = e;
-                return (0, l.jsx)("div", {
-                    className: r(s.gifTag, t),
+                return (0, i.jsx)("div", {
+                    className: l(a.gifTag, t),
                     ...n
                 })
             }

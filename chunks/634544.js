@@ -1,59 +1,59 @@
             "use strict";
-            n.r(t), n.d(t, {
+            s.r(t), s.d(t, {
                 default: function() {
                     return c
                 }
             });
-            var i = n("37983");
-            n("884691");
-            var r = n("414456"),
-                l = n.n(r),
-                a = n("77078"),
-                o = n("118503"),
-                u = n("427459"),
-                s = n("782340"),
-                d = n("884737"),
+            var a = s("37983");
+            s("884691");
+            var n = s("414456"),
+                l = s.n(n),
+                i = s("77078"),
+                r = s("118503"),
+                o = s("427459"),
+                d = s("782340"),
+                u = s("884737"),
                 c = e => {
-                    let t, n, r, {
+                    let t, s, n, {
                             guildFeature: c,
-                            guild: f,
-                            className: E,
-                            hideTooltip: _ = !1,
-                            tooltipPosition: p = "left",
-                            onClick: h
+                            guild: E,
+                            className: _,
+                            hideTooltip: T = !1,
+                            tooltipPosition: I = "left",
+                            onClick: S
                         } = e,
-                        T = f.hasFeature(c),
-                        S = (0, u.minimumRequiredTierForGuildFeature)(c);
-                    return (T ? (null != S && (r = s.default.Messages.PREMIUM_GUILD_INCLUDED), t = (0, i.jsxs)(i.Fragment, {
-                        children: [(0, i.jsx)(o.default, {
-                            className: d.unlockedIcon
-                        }), (0, i.jsx)(a.Heading, {
+                        N = E.hasFeature(c),
+                        g = (0, o.minimumRequiredTierForGuildFeature)(c);
+                    return (N ? (null != g && (n = d.default.Messages.PREMIUM_GUILD_INCLUDED), t = (0, a.jsxs)(a.Fragment, {
+                        children: [(0, a.jsx)(r.default, {
+                            className: u.unlockedIcon
+                        }), (0, a.jsx)(i.Heading, {
                             variant: "eyebrow",
-                            className: d.description,
-                            children: s.default.Messages.PREMIUM_GUILD_TIER_UNLOCKED
+                            className: u.description,
+                            children: d.default.Messages.PREMIUM_GUILD_TIER_UNLOCKED
                         })]
-                    })) : (null != S && (r = s.default.Messages.CLICK_TO_LEARN_MORE), t = (0, i.jsxs)(i.Fragment, {
-                        children: [(0, i.jsx)(o.default, {
-                            className: d.icon
-                        }), (0, i.jsx)(a.Heading, {
+                    })) : (null != g && (n = d.default.Messages.CLICK_TO_LEARN_MORE), t = (0, a.jsxs)(a.Fragment, {
+                        children: [(0, a.jsx)(r.default, {
+                            className: u.icon
+                        }), (0, a.jsx)(i.Heading, {
                             variant: "eyebrow",
-                            className: d.description,
-                            children: null != S && (0, u.getShortenedTierName)(S)
+                            className: u.description,
+                            children: null != g && (0, o.getShortenedTierName)(g)
                         })]
-                    })), n = _ || null == r ? (0, i.jsx)("div", {
-                        className: l(d.availabilityIndicator, E),
+                    })), s = T || null == n ? (0, a.jsx)("div", {
+                        className: l(u.availabilityIndicator, _),
                         children: t
-                    }) : (0, i.jsx)(a.Tooltip, {
-                        position: p,
-                        text: r,
-                        children: e => (0, i.jsx)("div", {
+                    }) : (0, a.jsx)(i.Tooltip, {
+                        position: I,
+                        text: n,
+                        children: e => (0, a.jsx)("div", {
                             ...e,
-                            className: l(d.availabilityIndicator, E),
+                            className: l(u.availabilityIndicator, _),
                             children: t
                         })
-                    }), null == h || T) ? n : (0, i.jsx)(a.Clickable, {
-                        onClick: h,
-                        className: d.clickable,
-                        children: n
+                    }), null == S || N) ? s : (0, a.jsx)(i.Clickable, {
+                        onClick: S,
+                        className: u.clickable,
+                        children: s
                     })
                 }

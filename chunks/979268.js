@@ -1,11 +1,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return l
                 }
             });
-            var a = n("862205");
-            let s = (0, a.createExperiment)({
+            var i = n("862205");
+            let a = (0, i.createExperiment)({
                 kind: "user",
                 id: "2022-08_message_todos_staff_only",
                 label: "Message TODO list",
@@ -20,4 +20,4 @@
                     }
                 }]
             });
-            var i = s
+            var l = a

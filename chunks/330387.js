@@ -1,26 +1,26 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return s
                 }
             });
-            var l = n("446674"),
-                a = n("913144");
-            let s = null;
-            class i extends l.default.Store {
+            var r = n("446674"),
+                u = n("913144");
+            let i = null;
+            class a extends r.default.Store {
                 hasAction() {
-                    return null != s
+                    return null != i
                 }
                 getAction() {
-                    return s
+                    return i
                 }
             }
 
-            function r(e) {
-                s = e.requiredAction
+            function c(e) {
+                i = e.requiredAction
             }
-            i.displayName = "UserRequiredActionStore";
-            var o = new i(a.default, {
-                CONNECTION_OPEN: r,
-                USER_REQUIRED_ACTION_UPDATE: r
+            a.displayName = "UserRequiredActionStore";
+            var s = new a(u.default, {
+                CONNECTION_OPEN: c,
+                USER_REQUIRED_ACTION_UPDATE: c
             })

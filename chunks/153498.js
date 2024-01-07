@@ -1,23 +1,23 @@
             "use strict";
 
-            function i(e) {
+            function r(e) {
                 let {} = e;
                 return !1
             }
 
-            function r(e, t) {
+            function i(e, t) {
                 return !1
             }
 
-            function l(e) {
+            function a(e) {
+                return !1
+            }
+
+            function s() {
                 return !1
             }
 
             function o() {
-                return !1
-            }
-
-            function a() {
                 return !1
             }
 
@@ -26,58 +26,58 @@
                 return !1
             }
 
-            function s(e, t) {
+            function l(e, t) {
                 return !1
             }
 
-            function d() {
+            function c() {
                 return !1
             }
 
-            function c(e) {}
+            function d(e) {}
 
-            function f(e) {}
+            function _(e) {}
 
             function E(e) {}
 
-            function _(e) {
+            function f(e) {
                 return !1
             }
             n.r(t), n.d(t, {
                 navigateToChannel: function() {
-                    return i
-                },
-                navigateToMemberVerification: function() {
                     return r
                 },
+                navigateToMemberVerification: function() {
+                    return i
+                },
                 navigateToRootTab: function() {
-                    return l
+                    return a
                 },
                 resetToAuthRoute: function() {
-                    return o
+                    return s
                 },
                 resetToPanelsUI: function() {
-                    return a
+                    return o
                 },
                 pushModal: function() {
                     return u
                 },
                 popModal: function() {
-                    return s
+                    return l
                 },
                 popAllModals: function() {
-                    return d
-                },
-                coerceChannelRoute: function() {
                     return c
                 },
+                coerceChannelRoute: function() {
+                    return d
+                },
                 coerceGuildsRoute: function() {
-                    return f
+                    return _
                 },
                 coerceModalRoute: function() {
                     return E
                 },
                 useIsModalOpen: function() {
-                    return _
+                    return f
                 }
             })

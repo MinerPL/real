@@ -1,22 +1,22 @@
             "use strict";
-            n.r(t), n.d(t, {
+            n.r(e), n.d(e, {
                 default: function() {
-                    return l
+                    return u
                 }
             });
-            var i = n("37983");
+            var r = n("37983");
             n("884691");
-            var r = n("65597"),
-                s = n("880731");
+            var i = n("65597"),
+                o = n("880731");
 
-            function l(e) {
+            function u(t) {
                 let {
-                    children: t,
+                    children: e,
                     confettiLocation: n
-                } = e, l = (0, r.default)([s.default], () => s.default.isEnabled({
+                } = t, u = (0, i.default)([o.default], () => o.default.isEnabled({
                     confettiLocation: n
                 }));
-                return l ? (0, i.jsx)(i.Fragment, {
-                    children: t
+                return u ? (0, r.jsx)(r.Fragment, {
+                    children: e
                 }) : null
             }

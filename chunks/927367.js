@@ -1,27 +1,27 @@
             "use strict";
             n.r(t), n.d(t, {
                 UploadErrorCodes: function() {
-                    return r
+                    return i
                 },
                 default: function() {
-                    return l
+                    return s
                 }
             });
-            var i, r, s = n("782340");
-            (i = r || (r = {}))[i.GENERAL = 0] = "GENERAL", i[i.NO_FILE = 1] = "NO_FILE", i[i.PROGRESS = 2] = "PROGRESS", i[i.UPLOAD = 3] = "UPLOAD", i[i.READ = 4] = "READ";
-            var l = class e {
+            var r, i, a = n("782340");
+            (r = i || (i = {}))[r.GENERAL = 0] = "GENERAL", r[r.NO_FILE = 1] = "NO_FILE", r[r.PROGRESS = 2] = "PROGRESS", r[r.UPLOAD = 3] = "UPLOAD", r[r.READ = 4] = "READ";
+            var s = class e {
                 get displayMessage() {
                     switch (this.code) {
                         case 1:
-                            return s.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_NO_FILE;
+                            return a.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_NO_FILE;
                         case 2:
-                            return s.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_PROGRESS;
+                            return a.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_PROGRESS;
                         case 3:
-                            return s.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_UPLOAD;
+                            return a.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_UPLOAD;
                         case 4:
-                            return s.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_READ;
+                            return a.default.Messages.UPLOAD_DEBUG_LOG_FAILURE_READ;
                         default:
-                            return s.default.Messages.UPLOAD_DEBUG_LOG_FAILURE
+                            return a.default.Messages.UPLOAD_DEBUG_LOG_FAILURE
                     }
                 }
                 constructor(e) {

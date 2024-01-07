@@ -1,29 +1,29 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return a
                 }
             });
-            var r = n("37983");
+            var l = n("37983");
             n("884691");
             var i = n("469563"),
-                l = n("390300"),
-                u = n("75196"),
-                o = (0, i.replaceIcon)(function(e) {
+                r = n("390300"),
+                s = n("75196"),
+                a = (0, i.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
                         height: n = 24,
                         color: i = "currentColor",
-                        foreground: l,
-                        ...o
+                        foreground: r,
+                        ...a
                     } = e;
-                    return (0, r.jsx)("svg", {
-                        ...(0, u.default)(o),
+                    return (0, l.jsx)("svg", {
+                        ...(0, s.default)(a),
                         width: t,
                         height: n,
                         viewBox: "0 0 24 24",
-                        children: (0, r.jsx)("path", {
-                            className: l,
+                        children: (0, l.jsx)("path", {
+                            className: r,
                             fill: i,
                             fillRule: "evenodd",
                             clipRule: "evenodd",
@@ -31,6 +31,6 @@
                             "aria-hidden": !0
                         })
                     })
-                }, l.VoiceNormalIcon, void 0, {
+                }, r.VoiceNormalIcon, void 0, {
                     size: 24
                 })

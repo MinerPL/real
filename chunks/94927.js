@@ -1,11 +1,11 @@
             "use strict";
-            n.r(t), n.d(t, {
+            s.r(t), s.d(t, {
                 default: function() {
-                    return i
+                    return l
                 }
             });
-            var s = n("862205");
-            let a = (0, s.createExperiment)({
+            var a = s("862205");
+            let n = (0, a.createExperiment)({
                 kind: "user",
                 id: "2023-12_2023_eoy_ringtone",
                 label: "EOY Ringtone 2023",
@@ -20,4 +20,4 @@
                     }
                 }]
             });
-            var i = a
+            var l = n

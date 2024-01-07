@@ -1,131 +1,131 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return L
+                    return I
                 }
             }), n("222007");
-            var a, s, l = n("37983"),
-                i = n("884691"),
-                r = n("414456"),
-                o = n.n(r),
-                u = n("597755"),
-                d = n.n(u),
-                c = n("394846"),
+            var r, a, l = n("37983"),
+                s = n("884691"),
+                o = n("414456"),
+                u = n.n(o),
+                i = n("597755"),
+                c = n.n(i),
+                d = n("394846"),
                 f = n("171718"),
                 m = n("446674"),
-                E = n("77078"),
-                _ = n("774146"),
-                h = n("161778"),
-                p = n("271938"),
-                I = n("697218"),
-                T = n("476765"),
-                g = n("599110"),
-                C = n("98013"),
-                S = n("49111"),
-                A = n("782340"),
+                p = n("77078"),
+                g = n("774146"),
+                v = n("161778"),
+                h = n("271938"),
+                x = n("697218"),
+                O = n("476765"),
+                D = n("599110"),
+                L = n("98013"),
+                A = n("49111"),
+                S = n("782340"),
                 N = n("777016");
-            (s = a || (a = {}))[s.OSX = 0] = "OSX", s[s.WINDOWS = 1] = "WINDOWS", s[s.LINUX = 2] = "LINUX", s[s.IOS = 3] = "IOS", s[s.ANDROID = 4] = "ANDROID";
-            let M = [{
-                    getOs: () => A.default.Messages.PLATFORM_MACOS,
+            (a = r || (r = {}))[a.OSX = 0] = "OSX", a[a.WINDOWS = 1] = "WINDOWS", a[a.LINUX = 2] = "LINUX", a[a.IOS = 3] = "IOS", a[a.ANDROID = 4] = "ANDROID";
+            let b = [{
+                    getOs: () => S.default.Messages.PLATFORM_MACOS,
                     icon: N.apple,
-                    url: () => (0, C.makeDesktopDownloadURL)("osx", !1),
+                    url: () => (0, L.makeDesktopDownloadURL)("osx", !1),
                     platformKey: 0
                 }, {
-                    getOs: () => A.default.Messages.PLATFORM_WINDOWS,
+                    getOs: () => S.default.Messages.PLATFORM_WINDOWS,
                     icon: N.windows,
-                    url: () => (0, C.makeDesktopDownloadURL)("win", !1),
+                    url: () => (0, L.makeDesktopDownloadURL)("win", !1),
                     platformKey: 1
                 }, {
-                    getOs: () => A.default.Messages.PLATFORM_LINUX,
+                    getOs: () => S.default.Messages.PLATFORM_LINUX,
                     icon: N.linux,
                     url: [{
-                        url: () => (0, C.makeDesktopDownloadURL)("linux", !1, "deb"),
-                        getText: () => A.default.Messages.DEB
+                        url: () => (0, L.makeDesktopDownloadURL)("linux", !1, "deb"),
+                        getText: () => S.default.Messages.DEB
                     }, {
-                        url: () => (0, C.makeDesktopDownloadURL)("linux", !1, "tar.gz"),
-                        getText: () => A.default.Messages.TAR_GZ
+                        url: () => (0, L.makeDesktopDownloadURL)("linux", !1, "tar.gz"),
+                        getText: () => S.default.Messages.TAR_GZ
                     }],
                     platformKey: 2
                 }],
-                v = [{
-                    getOs: () => A.default.Messages.PLATFORM_IOS,
+                R = [{
+                    getOs: () => S.default.Messages.PLATFORM_IOS,
                     icon: N.ios,
-                    url: () => S.DownloadLinks.IOS,
+                    url: () => A.DownloadLinks.IOS,
                     platformKey: 3
                 }, {
-                    getOs: () => A.default.Messages.PLATFORM_ANDROID,
+                    getOs: () => S.default.Messages.PLATFORM_ANDROID,
                     icon: N.android,
-                    url: () => S.DownloadLinks.ANDROID,
+                    url: () => A.DownloadLinks.ANDROID,
                     platformKey: 4
                 }],
-                x = e => {
+                M = e => {
                     let {
                         url: t,
                         text: n,
-                        onClick: a
+                        onClick: r
                     } = e;
-                    return (0, l.jsx)(E.Anchor, {
+                    return (0, l.jsx)(p.Anchor, {
                         useDefaultUnderlineStyles: !1,
                         href: t,
                         className: N.downloadButton,
-                        onClick: a,
+                        onClick: r,
                         children: n
                     })
                 },
-                O = e => {
+                w = e => {
                     let t, {
                             platform: n,
-                            onClick: a,
-                            onMouseEnter: s,
-                            isActive: i,
-                            claimed: r,
-                            theme: u
+                            onClick: r,
+                            onMouseEnter: a,
+                            isActive: s,
+                            claimed: o,
+                            theme: i
                         } = e,
                         {
-                            getOs: d,
-                            icon: c,
+                            getOs: c,
+                            icon: d,
                             url: f,
                             platformKey: m
                         } = n,
-                        _ = d(),
-                        h = o(N.icon, c, u);
+                        g = c(),
+                        v = u(N.icon, d, i);
                     if (Array.isArray(f)) t = f.map((e, t) => {
-                        let n = r ? e.url() : "";
-                        return (0, l.jsx)(x, {
+                        let n = o ? e.url() : "";
+                        return (0, l.jsx)(M, {
                             url: n,
-                            onClick: () => a(_),
+                            onClick: () => r(g),
                             text: e.getText()
                         }, "".concat(n, "-").concat(t))
                     });
                     else {
-                        let e = r ? f() : void 0;
-                        t = (0, l.jsx)(x, {
+                        let e = o ? f() : void 0;
+                        t = (0, l.jsx)(M, {
                             url: e,
-                            onClick: () => a(_),
-                            text: A.default.Messages.DOWNLOAD
+                            onClick: () => r(g),
+                            text: S.default.Messages.DOWNLOAD
                         })
                     }
                     return (0, l.jsx)("li", {
-                        className: o(N.platform, {
-                            [N.active]: i
+                        className: u(N.platform, {
+                            [N.active]: s
                         }),
-                        onMouseEnter: () => s(m),
+                        onMouseEnter: () => a(m),
                         children: (0, l.jsxs)("div", {
                             className: N.contentWrapper,
                             children: [(0, l.jsxs)("div", {
                                 className: N.iconWrap,
                                 children: [(0, l.jsx)("div", {
-                                    className: h
+                                    className: v
                                 }), (0, l.jsx)("div", {
-                                    className: o(N.active, h)
+                                    className: u(N.active, v)
                                 })]
                             }), (0, l.jsxs)("div", {
-                                children: [(0, l.jsx)(E.Heading, {
+                                children: [(0, l.jsx)(p.Heading, {
                                     className: N.platformName,
                                     variant: "heading-lg/semibold",
-                                    children: _
+                                    children: g
                                 }), (0, l.jsx)("div", {
-                                    className: o(N.downloadButtons, {
+                                    className: u(N.downloadButtons, {
                                         [N.list]: Array.isArray(t)
                                     }),
                                     children: t
@@ -135,14 +135,14 @@
                     })
                 };
 
-            function L(e) {
+            function I(e) {
                 let {
                     source: t,
                     onClose: n,
-                    transitionState: a
-                } = e, s = (0, m.useStateFromStores)([I.default], () => I.default.getCurrentUser()), r = (0, m.useStateFromStores)([h.default], () => h.default.theme), o = (0, m.useStateFromStores)([p.default], () => p.default.getFingerprint()), u = null == s || s.isClaimed(), [C, x] = i.useState(function() {
+                    transitionState: r
+                } = e, a = (0, m.useStateFromStores)([x.default], () => x.default.getCurrentUser()), o = (0, m.useStateFromStores)([v.default], () => v.default.theme), u = (0, m.useStateFromStores)([h.default], () => h.default.getFingerprint()), i = null == a || a.isClaimed(), [L, M] = s.useState(function() {
                     var e;
-                    switch (null === (e = d.os) || void 0 === e ? void 0 : e.family) {
+                    switch (null === (e = c.os) || void 0 === e ? void 0 : e.family) {
                         case "OS X":
                             return 0;
                         case "Windows":
@@ -163,89 +163,89 @@
                     }
                 }());
 
-                function L(e) {
-                    (null != f.default.getToken() || null != o) && g.default.track(S.AnalyticEvents.DOWNLOAD_APP, {
+                function I(e) {
+                    (null != f.default.getToken() || null != u) && D.default.track(A.AnalyticEvents.DOWNLOAD_APP, {
                         platform: e,
                         ptb: !1,
                         released: !0,
-                        has_e_mail: u,
+                        has_e_mail: i,
                         referring_location: t,
                         qr_code: !1
-                    }), !u && (n(), _.openClaimAccountModal())
+                    }), !i && (n(), g.openClaimAccountModal())
                 }
 
-                function R(e) {
-                    x(e)
+                function k(e) {
+                    M(e)
                 }
-                i.useEffect(() => {
-                    g.default.track(S.AnalyticEvents.OPEN_MODAL, {
+                s.useEffect(() => {
+                    D.default.track(A.AnalyticEvents.OPEN_MODAL, {
                         type: "Download App",
                         source: {
                             location: t
                         }
                     })
                 }, [t]);
-                let y = (0, T.useUID)();
-                return (0, l.jsx)(E.ModalRoot, {
+                let y = (0, O.useUID)();
+                return (0, l.jsx)(p.ModalRoot, {
                     className: N.downloadApps,
-                    transitionState: a,
+                    transitionState: r,
                     "aria-labelledby": y,
                     children: (0, l.jsx)("div", {
                         className: N.inner,
-                        children: (0, l.jsxs)(E.HeadingLevel, {
-                            component: (0, l.jsx)(E.HiddenVisually, {
-                                children: (0, l.jsx)(E.H, {
+                        children: (0, l.jsxs)(p.HeadingLevel, {
+                            component: (0, l.jsx)(p.HiddenVisually, {
+                                children: (0, l.jsx)(p.H, {
                                     id: y,
-                                    children: A.default.Messages.DOWNLOAD_APP
+                                    children: S.default.Messages.DOWNLOAD_APP
                                 })
                             }),
-                            children: [(0, l.jsx)(E.ModalCloseButton, {
+                            children: [(0, l.jsx)(p.ModalCloseButton, {
                                 onClick: n,
                                 className: N.modalCloseButton
-                            }), !c.isMobile && (0, l.jsx)("div", {
+                            }), !d.isMobile && (0, l.jsx)("div", {
                                 className: N.platformsWrap,
-                                children: (0, l.jsx)(E.HeadingLevel, {
-                                    component: (0, l.jsx)(E.Heading, {
+                                children: (0, l.jsx)(p.HeadingLevel, {
+                                    component: (0, l.jsx)(p.Heading, {
                                         variant: "heading-lg/semibold",
                                         className: N.header,
-                                        children: A.default.Messages.DOWNLOAD_DESKTOP_TITLE
+                                        children: S.default.Messages.DOWNLOAD_DESKTOP_TITLE
                                     }),
                                     children: (0, l.jsx)("ul", {
                                         className: N.platforms,
-                                        children: M.map(e => (0, l.jsx)(O, {
-                                            theme: r,
-                                            isActive: C === e.platformKey,
+                                        children: b.map(e => (0, l.jsx)(w, {
+                                            theme: o,
+                                            isActive: L === e.platformKey,
                                             platform: e,
-                                            onClick: L,
-                                            onMouseEnter: R,
-                                            claimed: u
+                                            onClick: I,
+                                            onMouseEnter: k,
+                                            claimed: i
                                         }, e.platformKey))
                                     })
                                 })
                             }), (0, l.jsx)("div", {
                                 className: N.platformsWrap,
-                                children: (0, l.jsxs)(E.HeadingLevel, {
+                                children: (0, l.jsxs)(p.HeadingLevel, {
                                     component: (0, l.jsx)(l.Fragment, {
-                                        children: !c.isMobile && (0, l.jsx)(E.Heading, {
+                                        children: !d.isMobile && (0, l.jsx)(p.Heading, {
                                             variant: "heading-lg/semibold",
                                             className: N.header,
-                                            children: A.default.Messages.DOWNLOAD_MOBILE_TITLE
+                                            children: S.default.Messages.DOWNLOAD_MOBILE_TITLE
                                         })
                                     }),
                                     children: [(0, l.jsx)("ul", {
                                         className: N.platforms,
-                                        children: v.map(e => (0, l.jsx)(O, {
-                                            theme: r,
-                                            isActive: C === e.platformKey,
+                                        children: R.map(e => (0, l.jsx)(w, {
+                                            theme: o,
+                                            isActive: L === e.platformKey,
                                             platform: e,
-                                            onClick: L,
-                                            onMouseEnter: R,
-                                            claimed: u
+                                            onClick: I,
+                                            onMouseEnter: k,
+                                            claimed: i
                                         }, e.platformKey))
-                                    }), (0, l.jsx)(E.Text, {
+                                    }), (0, l.jsx)(p.Text, {
                                         className: N.footer,
                                         variant: "text-sm/normal",
-                                        children: A.default.Messages.DOWNLOAD_DESKTOP_FOOTER.format()
+                                        children: S.default.Messages.DOWNLOAD_DESKTOP_FOOTER.format()
                                     })]
                                 })
                             })]

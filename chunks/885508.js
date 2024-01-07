@@ -1,22 +1,22 @@
             "use strict";
-            l.r(t), l.d(t, {
+            a.r(t), a.d(t, {
                 acceptPurchaseTerms: function() {
-                    return s
+                    return l
                 },
                 acceptEULA: function() {
                     return n
                 }
             });
-            var a = l("913144");
+            var s = a("913144");
 
-            function s() {
-                a.default.dispatch({
+            function l() {
+                s.default.dispatch({
                     type: "APPLICATION_STORE_ACCEPT_STORE_TERMS"
                 })
             }
 
             function n(e) {
-                a.default.dispatch({
+                s.default.dispatch({
                     type: "APPLICATION_STORE_ACCEPT_EULA",
                     eulaId: e
                 })

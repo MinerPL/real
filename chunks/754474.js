@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 BotTypes: function() {
-                    return r.BotTagTypes
+                    return s.BotTagTypes
                 },
                 default: function() {
                     return o
@@ -10,44 +10,44 @@
             var l = n("37983");
             n("884691");
             var a = n("414456"),
-                s = n.n(a),
+                r = n.n(a),
                 i = n("79798"),
-                r = n("988268"),
+                s = n("988268"),
                 u = n("888770"),
                 o = e => {
                     let {
                         name: t,
                         discriminator: n,
                         invertBotTagColor: a,
-                        nameColor: r,
+                        nameColor: s,
                         className: o,
                         botType: d,
                         usernameClass: c,
-                        discriminatorClass: E,
-                        botClass: f,
-                        botVerified: _ = !1,
-                        style: I,
-                        useRemSizes: h = !1,
-                        usernameIcon: T
+                        discriminatorClass: f,
+                        botClass: h,
+                        botVerified: p = !1,
+                        style: C,
+                        useRemSizes: m = !1,
+                        usernameIcon: v
                     } = e;
                     return (0, l.jsxs)("div", {
-                        className: s(o, u.nameTag),
-                        style: I,
+                        className: r(o, u.nameTag),
+                        style: C,
                         children: [(0, l.jsxs)("span", {
-                            className: s(u.username, c),
-                            style: null != r ? {
-                                color: r
+                            className: r(u.username, c),
+                            style: null != s ? {
+                                color: s
                             } : void 0,
-                            children: [T, t]
+                            children: [v, t]
                         }), null != n ? (0, l.jsxs)("span", {
-                            className: null != E ? E : void 0,
+                            className: null != f ? f : void 0,
                             children: ["#", n]
                         }) : null, null != d ? (0, l.jsx)(i.default, {
                             type: d,
                             invertColor: a,
-                            className: s(f, u.bot),
-                            verified: _,
-                            useRemSizes: h
+                            className: r(h, u.bot),
+                            verified: p,
+                            useRemSizes: m
                         }) : null]
                     })
                 }

@@ -1,69 +1,69 @@
             "use strict";
-            let r;
-            n.r(t), n.d(t, {
+            let n;
+            l.r(t), l.d(t, {
                 default: function() {
-                    return A
+                    return g
                 }
-            }), n("424973");
-            var i = n("917351"),
-                l = n.n(i),
-                s = n("693566"),
-                a = n.n(s),
-                o = n("851387"),
-                u = n("305961"),
-                d = n("697218"),
-                c = n("158998"),
-                _ = n("782340");
-            let E = new a({
+            }), l("424973");
+            var a = l("917351"),
+                r = l.n(a),
+                i = l("693566"),
+                u = l.n(i),
+                o = l("851387"),
+                s = l("305961"),
+                c = l("697218"),
+                d = l("158998"),
+                f = l("782340");
+            let p = new u({
                 maxAge: 6e4
             });
 
-            function I(e, t, n) {
-                null != r && clearTimeout(r), r = setTimeout(() => {
-                    let r = [],
-                        i = e => {
-                            r.push(e.id)
+            function h(e, t, l) {
+                null != n && clearTimeout(n), n = setTimeout(() => {
+                    let n = [],
+                        a = e => {
+                            n.push(e.id)
                         };
-                    if (null == e) l.forEach(u.default.getGuilds(), i);
+                    if (null == e) r.forEach(s.default.getGuilds(), a);
                     else if (Array.isArray(e)) e.forEach(e => {
-                        let t = u.default.getGuild(e);
-                        null != t && i(t)
+                        let t = s.default.getGuild(e);
+                        null != t && a(t)
                     });
                     else {
-                        let t = u.default.getGuild(e);
-                        null != t && i(t)
+                        let t = s.default.getGuild(e);
+                        null != t && a(t)
                     }
-                    r.length > 0 && o.default.requestMembers(r, t.toLocaleLowerCase(), n)
+                    n.length > 0 && o.default.requestMembers(n, t.toLocaleLowerCase(), l)
                 }, 200)
             }
 
-            function f(e, t) {
-                let n = "".concat(null != e ? e : "", ":").concat(t),
-                    r = E.get(n);
-                if (null != r) return r;
-                E.set(n, !0)
+            function E(e, t) {
+                let l = "".concat(null != e ? e : "", ":").concat(t),
+                    n = p.get(l);
+                if (null != n) return n;
+                p.set(l, !0)
             }
-            var A = {
+            var g = {
                 getGuildNameSuggestion: function(e) {
-                    let t = d.default.getCurrentUser(),
-                        n = c.getName(t);
-                    return null == n || 0 === n.length ? "" : _.default.Messages.CREATE_SERVER_DEFAULT_SERVER_NAME_FORMAT.format({
-                        username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n
+                    let t = c.default.getCurrentUser(),
+                        l = d.getName(t);
+                    return null == l || 0 === l.length ? "" : f.default.Messages.CREATE_SERVER_DEFAULT_SERVER_NAME_FORMAT.format({
+                        username: (null == e ? void 0 : e.truncateUsername) ? l.slice(0, 20) : l
                     })
                 },
                 requestMembers(e, t) {
-                    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
-                        r = Array.isArray(e),
-                        i = [],
-                        l = !1;
-                    if (r) e.forEach(e => {
-                        let n = f(e, t);
-                        null == n && i.push(e)
+                    let l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 10,
+                        n = Array.isArray(e),
+                        a = [],
+                        r = !1;
+                    if (n) e.forEach(e => {
+                        let l = E(e, t);
+                        null == l && a.push(e)
                     });
                     else {
-                        let n = f(e, t);
-                        null == n && (l = !0)
+                        let l = E(e, t);
+                        null == l && (r = !0)
                     }
-                    i.length > 0 && r ? I(i, t, n) : l && I(e, t, n)
+                    a.length > 0 && n ? h(a, t, l) : r && h(e, t, l)
                 }
             }

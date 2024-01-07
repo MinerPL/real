@@ -1,85 +1,85 @@
             "use strict";
             n.r(t), n.d(t, {
                 EmbedIFrameWithLoadingBackground: function() {
-                    return N
+                    return C
                 }
             }), n("222007"), n("313619"), n("654714"), n("287168"), n("956660");
-            var l = n("37983"),
+            var i = n("37983"),
                 a = n("884691"),
-                u = n("414456"),
-                o = n.n(u),
-                i = n("841076"),
+                l = n("414456"),
+                o = n.n(l),
+                r = n("841076"),
                 s = n("748820"),
-                r = n("446674"),
-                d = n("292687"),
+                d = n("446674"),
+                u = n("292687"),
                 c = n("614818"),
-                f = n("161778"),
-                E = n("659500"),
-                p = n("157945"),
-                m = n("828466"),
-                T = n("954016"),
-                _ = n("49111"),
-                S = n("165544");
+                p = n("161778"),
+                f = n("659500"),
+                m = n("157945"),
+                h = n("828466"),
+                v = n("954016"),
+                P = n("49111"),
+                I = n("165544");
 
-            function C(e) {
+            function S(e) {
                 let {
                     url: t,
                     className: n,
-                    style: u,
+                    style: l,
                     onLoad: o,
-                    shouldRefocus: S,
-                    queryParams: C,
-                    allowPopups: N = !1,
-                    referrerPolicy: I = "origin"
-                } = e, v = (0, r.useStateFromStores)([d.default], () => d.default.getWindow(_.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), O = (0, i.useMemoOne)(() => (0, s.v4)(), [t]), L = a.useRef(null), A = (0, p.default)(L, S, null == v ? window : v), h = {
-                    ...C,
-                    frame_id: O,
-                    platform: T.ActivityPlatform.DESKTOP
-                }, [y, M] = a.useState(!1), R = f.default.theme, g = {
-                    ...u
+                    shouldRefocus: I,
+                    queryParams: S,
+                    allowPopups: C = !1,
+                    referrerPolicy: g = "origin"
+                } = e, y = (0, d.useStateFromStores)([u.default], () => u.default.getWindow(P.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), E = (0, r.useMemoOne)(() => (0, s.v4)(), [t]), T = a.useRef(null), A = (0, m.default)(T, I, null == y ? window : y), x = {
+                    ...S,
+                    frame_id: E,
+                    platform: v.ActivityPlatform.DESKTOP
+                }, [N, _] = a.useState(!1), M = p.default.theme, j = {
+                    ...l
                 };
-                return R === _.ThemeTypes.LIGHT ? g.colorScheme = "light" : g.colorScheme = "dark", a.useEffect(() => (E.ComponentDispatch.dispatch(_.ComponentActions.IFRAME_MOUNT, {
-                    id: O
+                return M === P.ThemeTypes.LIGHT ? j.colorScheme = "light" : j.colorScheme = "dark", a.useEffect(() => (f.ComponentDispatch.dispatch(P.ComponentActions.IFRAME_MOUNT, {
+                    id: E
                 }), () => {
-                    E.ComponentDispatch.dispatch(_.ComponentActions.IFRAME_UNMOUNT, {
-                        id: O
+                    f.ComponentDispatch.dispatch(P.ComponentActions.IFRAME_UNMOUNT, {
+                        id: E
                     })
-                }), [O]), E.ComponentDispatch.subscribe(_.ComponentActions.MANUAL_IFRAME_RESIZING, e => {
+                }), [E]), f.ComponentDispatch.subscribe(P.ComponentActions.MANUAL_IFRAME_RESIZING, e => {
                     let {
                         resizing: t
                     } = e;
-                    M(t)
-                }), y && (g.pointerEvents = "none"), null != t ? (0, l.jsx)("iframe", {
-                    style: g,
+                    _(t)
+                }), N && (j.pointerEvents = "none"), null != t ? (0, i.jsx)("iframe", {
+                    style: j,
                     allow: "autoplay; encrypted-media",
-                    referrerPolicy: I,
+                    referrerPolicy: g,
                     onLoad: function(e) {
                         var n;
-                        null == o || o(e.target), L.current = e.target, A(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([c.default.HELLO, h], null != t ? t : "")
+                        null == o || o(e.target), T.current = e.target, A(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([c.default.HELLO, x], null != t ? t : "")
                     },
-                    sandbox: (0, m.default)({
-                        allowPopups: N
+                    sandbox: (0, h.default)({
+                        allowPopups: C
                     }),
                     className: n,
-                    src: "".concat(t, "?").concat(new URLSearchParams(h))
+                    src: "".concat(t, "?").concat(new URLSearchParams(x))
                 }) : null
             }
 
-            function N(e) {
+            function C(e) {
                 let {
                     onLoad: t
-                } = e, [n, u] = a.useState(!1), i = a.useCallback(e => {
-                    u(!0), null == t || t(e)
+                } = e, [n, l] = a.useState(!1), r = a.useCallback(e => {
+                    l(!0), null == t || t(e)
                 }, [t]);
-                return (0, l.jsxs)("div", {
-                    className: S.fillParent,
-                    children: [!n && (0, l.jsx)("div", {
-                        className: o(S.fillParent, S.iframePlaceholder)
-                    }), (0, l.jsx)("div", {
-                        className: o(S.fillParent, n ? void 0 : S.hiddenIframeContainer),
-                        children: (0, l.jsx)(C, {
+                return (0, i.jsxs)("div", {
+                    className: I.fillParent,
+                    children: [!n && (0, i.jsx)("div", {
+                        className: o(I.fillParent, I.iframePlaceholder)
+                    }), (0, i.jsx)("div", {
+                        className: o(I.fillParent, n ? void 0 : I.hiddenIframeContainer),
+                        children: (0, i.jsx)(S, {
                             ...e,
-                            onLoad: i
+                            onLoad: r
                         })
                     })]
                 })

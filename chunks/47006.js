@@ -1,33 +1,33 @@
             "use strict";
-            t.r(n), t.d(n, {
+            a.r(n), a.d(n, {
                 default: function() {
-                    return c
+                    return d
                 }
             });
-            var a = t("37983");
-            t("884691");
-            var u = t("446674"),
-                l = t("77078"),
-                s = t("18054"),
-                r = t("957255"),
-                i = t("49111"),
-                d = t("782340");
+            var t = a("37983");
+            a("884691");
+            var s = a("446674"),
+                u = a("77078"),
+                l = a("18054"),
+                i = a("957255"),
+                r = a("49111"),
+                c = a("782340");
 
-            function c(e) {
+            function d(e) {
                 let {
                     canManageChannels: n,
-                    canManageRoles: t,
-                    canManageWebhooks: c,
+                    canManageRoles: a,
+                    canManageWebhooks: d,
                     canAccessChannel: o
-                } = (0, u.useStateFromStoresObject)([r.default], () => ({
-                    canManageChannels: r.default.can(i.Permissions.MANAGE_CHANNELS, e),
-                    canManageRoles: r.default.can(i.Permissions.MANAGE_ROLES, e),
-                    canManageWebhooks: r.default.can(i.Permissions.MANAGE_WEBHOOKS, e),
-                    canAccessChannel: r.default.can(e.accessPermissions, e)
+                } = (0, s.useStateFromStoresObject)([i.default], () => ({
+                    canManageChannels: i.default.can(r.Permissions.MANAGE_CHANNELS, e),
+                    canManageRoles: i.default.can(r.Permissions.MANAGE_ROLES, e),
+                    canManageWebhooks: i.default.can(r.Permissions.MANAGE_WEBHOOKS, e),
+                    canAccessChannel: i.default.can(e.accessPermissions, e)
                 }), [e]);
-                return !__OVERLAY__ && o && (n || t || c) ? (0, a.jsx)(l.MenuItem, {
+                return !__OVERLAY__ && o && (n || a || d) ? (0, t.jsx)(u.MenuItem, {
                     id: "edit-channel",
-                    label: e.type === i.ChannelTypes.GUILD_CATEGORY ? d.default.Messages.EDIT_CATEGORY : d.default.Messages.EDIT_CHANNEL,
-                    action: () => s.default.open(e.id)
+                    label: e.type === r.ChannelTypes.GUILD_CATEGORY ? c.default.Messages.EDIT_CATEGORY : c.default.Messages.EDIT_CHANNEL,
+                    action: () => l.default.open(e.id)
                 }) : null
             }

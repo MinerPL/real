@@ -1,34 +1,34 @@
             "use strict";
-            a.r(t), a.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return u
                 }
             });
-            var n = a("37983");
-            a("884691");
-            var u = a("452804"),
-                r = a("135230"),
-                d = a("535348"),
-                l = a("782340");
+            var i = n("37983");
+            n("884691");
+            var a = n("452804"),
+                l = n("135230"),
+                r = n("535348"),
+                s = n("782340");
 
-            function s(e) {
+            function u(e) {
                 let {
                     type: t,
-                    onConfirm: a,
-                    ...s
-                } = e, i = t === d.SelfStreamAndVideoAlertType.STREAM ? l.default.Messages.HIDE_SELF_STREAM_CONFIRMATION_HEADER : l.default.Messages.HIDE_SELF_VIDEO_CONFIRMATION_HEADER, o = t === d.SelfStreamAndVideoAlertType.STREAM ? l.default.Messages.HIDE_SELF_STREAM_CONFIRMATION_BODY : l.default.Messages.HIDE_SELF_VIDEO_CONFIRMATION_BODY;
-                return (0, n.jsx)(r.default, {
-                    confirmText: l.default.Messages.CONFIRM,
-                    secondaryConfirmText: l.default.Messages.DONT_ASK_AGAIN,
-                    title: i,
-                    cancelText: l.default.Messages.CANCEL,
-                    onConfirm: a,
+                    onConfirm: n,
+                    ...u
+                } = e, o = t === r.SelfStreamAndVideoAlertType.STREAM ? s.default.Messages.HIDE_SELF_STREAM_CONFIRMATION_HEADER : s.default.Messages.HIDE_SELF_VIDEO_CONFIRMATION_HEADER, d = t === r.SelfStreamAndVideoAlertType.STREAM ? s.default.Messages.HIDE_SELF_STREAM_CONFIRMATION_BODY : s.default.Messages.HIDE_SELF_VIDEO_CONFIRMATION_BODY;
+                return (0, i.jsx)(l.default, {
+                    confirmText: s.default.Messages.CONFIRM,
+                    secondaryConfirmText: s.default.Messages.DONT_ASK_AGAIN,
+                    title: o,
+                    cancelText: s.default.Messages.CANCEL,
+                    onConfirm: n,
                     onConfirmSecondary: () => {
-                        u.default.updatedUnsyncedSettings({
+                        a.default.updatedUnsyncedSettings({
                             disableHideSelfStreamAndVideoConfirmationAlert: !0
-                        }), a()
+                        }), n()
                     },
-                    body: o,
-                    ...s
+                    body: d,
+                    ...u
                 })
             }

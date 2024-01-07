@@ -1,21 +1,21 @@
             "use strict";
-            a.r(t), a.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return u
                 }
             });
-            var n = a("37983");
-            a("884691");
-            var l = a("685665");
+            var i = n("37983");
+            n("884691");
+            var l = n("685665");
 
-            function i(e, t) {
-                return function(a) {
+            function u(e, t) {
+                return function(n) {
                     let {
-                        AnalyticsLocationProvider: i
+                        AnalyticsLocationProvider: u
                     } = (0, l.default)(t);
-                    return (0, n.jsx)(i, {
-                        children: (0, n.jsx)(e, {
-                            ...a
+                    return (0, i.jsx)(u, {
+                        children: (0, i.jsx)(e, {
+                            ...n
                         })
                     })
                 }

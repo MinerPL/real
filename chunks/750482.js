@@ -1,47 +1,47 @@
             "use strict";
-            a.r(e), a.d(e, {
+            s.r(t), s.d(t, {
                 default: function() {
-                    return o
+                    return d
                 },
                 MonetizationListingImageAspectStable: function() {
-                    return c
+                    return u
                 }
             });
-            var n = a("37983");
-            a("884691");
-            var s = a("617258"),
-                l = a("769846"),
-                i = a("801765"),
-                r = a("955735");
-            let u = (0, s.cssValueToNumber)(l.default.ASPECT_STABLE_IMAGE_CONTAINER_PADDING);
+            var a = s("37983");
+            s("884691");
+            var n = s("617258"),
+                l = s("769846"),
+                i = s("801765"),
+                r = s("955735");
+            let o = (0, n.cssValueToNumber)(l.default.ASPECT_STABLE_IMAGE_CONTAINER_PADDING);
 
-            function o(t) {
+            function d(e) {
                 let {
-                    listing: e,
-                    imageSize: a,
-                    alt: s,
+                    listing: t,
+                    imageSize: s,
+                    alt: n,
                     ...l
-                } = t, r = (0, i.useListingThumbnailUrl)(e, a);
-                return (0, n.jsx)("img", {
+                } = e, r = (0, i.useListingThumbnailUrl)(t, s);
+                return (0, a.jsx)("img", {
                     src: r,
-                    alt: s,
+                    alt: n,
                     ...l
                 })
             }
 
-            function c(t) {
+            function u(e) {
                 let {
-                    listing: e,
-                    aspectRatio: a = 16 / 9,
-                    height: s,
+                    listing: t,
+                    aspectRatio: s = 16 / 9,
+                    height: n,
                     ...l
-                } = t, o = (s - 2 * u) * a, c = (0, i.useListingThumbnailUrl)(e, o), d = (0, i.useListingThumbnailUrl)(e, o, {
+                } = e, d = (n - 2 * o) * s, u = (0, i.useListingThumbnailUrl)(t, d), c = (0, i.useListingThumbnailUrl)(t, d, {
                     shouldAnimate: !1
                 });
-                return (0, n.jsx)(r.default, {
-                    src: c,
-                    backgroundSrc: d,
-                    aspectRatio: a,
+                return (0, a.jsx)(r.default, {
+                    src: u,
+                    backgroundSrc: c,
+                    aspectRatio: s,
                     ...l
                 })
             }

@@ -1,36 +1,36 @@
             "use strict";
-            l.r(t), l.d(t, {
+            a.r(t), a.d(t, {
                 fetchBuildSize: function() {
-                    return r
+                    return i
                 }
             });
-            var a = l("872717"),
-                s = l("913144"),
-                n = l("677225"),
-                i = l("49111");
-            async function r(e, t, l, r) {
-                if (n.default.needsToFetchBuildSize(l)) {
-                    s.default.dispatch({
+            var s = a("872717"),
+                l = a("913144"),
+                n = a("677225"),
+                r = a("49111");
+            async function i(e, t, a, i) {
+                if (n.default.needsToFetchBuildSize(a)) {
+                    l.default.dispatch({
                         type: "APPLICATION_BUILD_SIZE_FETCH_START",
-                        buildId: l
+                        buildId: a
                     });
                     try {
-                        let n = await a.default.post({
-                            url: i.Endpoints.APPLICATION_BUILD_SIZE(e, t, l),
+                        let n = await s.default.post({
+                            url: r.Endpoints.APPLICATION_BUILD_SIZE(e, t, a),
                             body: {
-                                manifest_ids: r
+                                manifest_ids: i
                             },
                             oldFormErrors: !0
                         });
-                        s.default.dispatch({
+                        l.default.dispatch({
                             type: "APPLICATION_BUILD_SIZE_FETCH_SUCCESS",
-                            buildId: l,
+                            buildId: a,
                             sizeKB: n.body.size_kb
                         })
                     } catch (e) {
-                        s.default.dispatch({
+                        l.default.dispatch({
                             type: "APPLICATION_BUILD_SIZE_FETCH_FAIL",
-                            buildId: l
+                            buildId: a
                         })
                     }
                 }

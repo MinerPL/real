@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return r
                 }
             });
-            var i = {
+            var r = {
                 openCreateGuildModal: e => {
                     n.el("297267").then(n.bind(n, "297267")).then(t => {
                         let {

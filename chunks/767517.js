@@ -1,41 +1,41 @@
             "use strict";
-            n.r(t), n.d(t, {
+            s.r(t), s.d(t, {
                 default: function() {
-                    return o
+                    return d
                 }
             });
-            var s = n("872717"),
-                a = n("913144"),
-                l = n("619443"),
-                i = n("239380"),
-                r = n("305961"),
-                u = n("49111"),
-                o = {
-                    acceptGuildTemplate: (e, t, n) => (a.default.dispatch({
+            var a = s("872717"),
+                n = s("913144"),
+                l = s("619443"),
+                i = s("239380"),
+                r = s("305961"),
+                u = s("49111"),
+                d = {
+                    acceptGuildTemplate: (e, t, s) => (n.default.dispatch({
                         type: "GUILD_TEMPLATE_ACCEPT",
                         code: e
-                    }), new Promise((o, d) => {
-                        s.default.post({
+                    }), new Promise((d, o) => {
+                        a.default.post({
                             url: u.Endpoints.UNRESOLVED_GUILD_TEMPLATE(e),
                             body: {
                                 name: t,
-                                icon: n
+                                icon: s
                             },
                             oldFormErrors: !0
                         }).then(t => {
-                            let n = t.body;
-                            a.default.dispatch({
+                            let s = t.body;
+                            n.default.dispatch({
                                 type: "GUILD_TEMPLATE_ACCEPT_SUCCESS",
                                 code: e,
-                                guild: n
+                                guild: s
                             }), l.default.isConnected() ? r.default.addConditionalChangeListener(() => {
-                                if (null != r.default.getGuild(n.id)) return (0, i.transitionToGuild)(n.id), o(n), !1
-                            }) : ((0, i.transitionToGuild)(n.id), o(n))
+                                if (null != r.default.getGuild(s.id)) return (0, i.transitionToGuild)(s.id), d(s), !1
+                            }) : ((0, i.transitionToGuild)(s.id), d(s))
                         }, t => {
-                            a.default.dispatch({
+                            n.default.dispatch({
                                 type: "GUILD_TEMPLATE_ACCEPT_FAILURE",
                                 code: e
-                            }), d(t.body)
+                            }), o(t.body)
                         })
                     }))
                 }

@@ -1,26 +1,26 @@
             "use strict";
-            l.r(t), l.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
                     return s
                 }
             });
-            var n = l("37983");
-            l("884691");
-            var u = l("77078"),
-                i = l("450911"),
-                r = l("54239"),
-                o = l("271938"),
-                a = l("49111"),
-                d = l("782340");
+            var i = n("37983");
+            n("884691");
+            var l = n("77078"),
+                u = n("450911"),
+                o = n("54239"),
+                a = n("271938"),
+                r = n("49111"),
+                d = n("782340");
 
             function s(e, t) {
-                let l = o.default.getId(),
-                    s = t === a.AppContext.POPOUT;
-                return l === e || s ? null : (0, n.jsx)(u.MenuItem, {
+                let n = a.default.getId(),
+                    s = t === r.AppContext.POPOUT;
+                return n === e || s ? null : (0, i.jsx)(l.MenuItem, {
                     id: "message-user",
                     label: d.default.Messages.USER_POPOUT_MESSAGE,
                     action: () => {
-                        i.default.openPrivateChannel(e), (0, r.popLayer)()
+                        u.default.openPrivateChannel(e), (0, o.popLayer)()
                     }
                 })
             }

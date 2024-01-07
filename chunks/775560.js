@@ -1,15 +1,15 @@
             "use strict";
             n.r(t), n.d(t, {
                 useForceUpdate: function() {
-                    return i.default
-                },
-                useStableMemo: function() {
                     return r.default
                 },
+                useStableMemo: function() {
+                    return i.default
+                },
                 useLazyValue: function() {
-                    return s.default
+                    return a.default
                 }
             });
-            var i = n("14716"),
-                r = n("745510"),
-                s = n("315378")
+            var r = n("14716"),
+                i = n("745510"),
+                a = n("315378")

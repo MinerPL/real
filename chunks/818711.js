@@ -1,28 +1,28 @@
             "use strict";
-            s.r(e), s.d(e, {
+            n.r(t), n.d(t, {
                 calculateAdditionalPlansWithPremiumGuildAdjustment: function() {
                     return r
                 }
-            }), s("70102"), s("222007");
-            var n = s("627445"),
-                i = s.n(n),
-                l = s("10514"),
-                a = s("719923"),
-                u = s("646718"),
-                o = s("49111");
+            }), n("70102"), n("222007");
+            var l = n("627445"),
+                a = n.n(l),
+                s = n("10514"),
+                i = n("719923"),
+                u = n("646718"),
+                o = n("49111");
 
-            function r(t, e) {
-                let s = l.default.get(t.planId);
-                i(null != s, "missing premium subscription plan");
-                let n = l.default.getForSkuAndInterval(u.PremiumSubscriptionSKUs.GUILD, s.interval, s.intervalCount);
-                i(null != n, "missing premium guild plan");
-                let r = null != t.renewalMutations ? t.renewalMutations.additionalPlans : t.additionalPlans,
-                    d = t.status === o.SubscriptionStatusTypes.CANCELED ? 0 : (0, a.getNumPremiumGuildSubscriptions)(r),
-                    c = d + e,
-                    I = r.filter(t => t.planId !== n.id);
-                if (c < 0) throw Error("Invalid adjustment");
-                return 0 === c ? I : [...I, {
-                    planId: n.id,
-                    quantity: c
+            function r(e, t) {
+                let n = s.default.get(e.planId);
+                a(null != n, "missing premium subscription plan");
+                let l = s.default.getForSkuAndInterval(u.PremiumSubscriptionSKUs.GUILD, n.interval, n.intervalCount);
+                a(null != l, "missing premium guild plan");
+                let r = null != e.renewalMutations ? e.renewalMutations.additionalPlans : e.additionalPlans,
+                    c = e.status === o.SubscriptionStatusTypes.CANCELED ? 0 : (0, i.getNumPremiumGuildSubscriptions)(r),
+                    d = c + t,
+                    S = r.filter(e => e.planId !== l.id);
+                if (d < 0) throw Error("Invalid adjustment");
+                return 0 === d ? S : [...S, {
+                    planId: l.id,
+                    quantity: d
                 }]
             }
