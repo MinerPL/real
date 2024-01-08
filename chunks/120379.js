@@ -22,7 +22,7 @@
                 g = n("894488"),
                 S = n("49111");
 
-            function _(e) {
+            function A(e) {
                 var t, n;
                 if (null == e.jumpTargetId || !e.ready) return null;
                 let {
@@ -44,7 +44,7 @@
                     r = null !== (n = l[i + (Math.abs(a) > 0 ? a : 1)]) && void 0 !== n ? n : l[i - 1];
                 return null != r ? r : null
             }
-            let A = {
+            let _ = {
                 scrollTop: 0,
                 scrollHeight: 0,
                 offsetHeight: 0
@@ -119,7 +119,7 @@
                     }
                     if (null != e.messages.jumpTargetId) {
                         if (this.isLoading()) return;
-                        let n = _(e.messages);
+                        let n = A(e.messages);
                         if (null == n || this.isJumping() || e.messages.jumpSequenceId === t.jumpSequenceId) {
                             if (this.isJumping()) {
                                 null != n ? this.scrollToMessage(n, !0) : this.jumping = !1;
@@ -289,7 +289,7 @@
                 }
                 getScrollerState() {
                     var e, t;
-                    return null !== (t = null === (e = this.ref.current) || void 0 === e ? void 0 : e.getScrollerState()) && void 0 !== t ? t : A
+                    return null !== (t = null === (e = this.ref.current) || void 0 === e ? void 0 : e.getScrollerState()) && void 0 !== t ? t : _
                 }
                 isHeightChange(e, t) {
                     return e !== this.offsetHeightCache || t !== this.scrollHeightCache
@@ -347,7 +347,7 @@
                         hasUnreads: t
                     } = this.props;
                     if (null != e.jumpTargetId) {
-                        let n = _(e);
+                        let n = A(e);
                         if (null == n) return;
                         let s = this.getElementFromMessageId(n);
                         (0, i.isElement)(s) ? this.scrollTo(this.getOffsetOrientationFromNode(s, "middle", t ? this.newMessageBarBuffer() : g.MESSAGE_PADDING), !0): this.scrollToNewMessages(!0, "middle")
@@ -379,7 +379,7 @@
                         initialScrollTop: e
                     } = this;
                     this.initialScrollTop = void 0;
-                    let t = _(this.props.messages);
+                    let t = A(this.props.messages);
                     null != t ? this.scrollToMessage(t, !1) : this.props.hasUnreads && this.props.channel.type !== S.ChannelTypes.GUILD_VOICE && this.props.channel.type !== S.ChannelTypes.GUILD_STAGE_VOICE ? this.scrollToNewMessages() : null != e ? this.scrollTo(e + this.props.placeholderHeight, !1, this.handleScroll) : this.setScrollToBottom()
                 }
                 scrollTo(e) {

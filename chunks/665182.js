@@ -60,34 +60,34 @@
                         case 4:
                             return "homeSidebarWidth"
                     }
-                }(t), [g, S] = i.useState(h.default[E]), _ = i.useCallback(e => {
+                }(t), [g, S] = i.useState(h.default[E]), A = i.useCallback(e => {
                     c.default.updatedUnsyncedSettings({
                         [E]: e
                     })
-                }, [E]), A = (0, C.shouldChannelChatFloat)({
+                }, [E]), _ = (0, C.shouldChannelChatFloat)({
                     maxWidth: n
-                }), T = (0, u.clamp)(g, C.MIN_CHAT_SIDEBAR_WIDTH, n), M = A ? T : T + d.default.modules.chat.RESIZE_HANDLE_WIDTH;
+                }), T = (0, u.clamp)(g, C.MIN_CHAT_SIDEBAR_WIDTH, n), M = _ ? T : T + d.default.modules.chat.RESIZE_HANDLE_WIDTH;
                 i.useEffect(() => {
-                    null == s || s(T, A)
-                }, [T, s, A]);
+                    null == s || s(T, _)
+                }, [T, s, _]);
                 let I = (0, l.jsxs)(l.Fragment, {
                     children: [(0, l.jsx)("div", {
                         className: o(p.chatTarget, {
-                            [p.floating]: A,
-                            [p.notFloating]: !A
+                            [p.floating]: _,
+                            [p.notFloating]: !_
                         }),
                         style: {
                             width: M
                         }
-                    }), !A && (0, l.jsx)(m, {
+                    }), !_ && (0, l.jsx)(m, {
                         maxWidth: n,
                         resizableNode: f,
                         onResize: S,
-                        onResizeEnd: _
+                        onResizeEnd: A
                     }), (0, l.jsx)("div", {
                         ref: f,
                         className: o(p.container, {
-                            [p.floating]: A
+                            [p.floating]: _
                         }),
                         style: {
                             width: T
@@ -95,7 +95,7 @@
                         children: a
                     })]
                 });
-                if (A) {
+                if (_) {
                     let e = null != r ? r : i.Fragment;
                     return (0, l.jsx)(e, {
                         children: (0, l.jsx)("div", {

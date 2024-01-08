@@ -25,13 +25,13 @@
                         imageSrc: E,
                         animationSrc: g,
                         secondaryButtonText: S,
-                        onSecondaryButtonClick: _,
-                        children: A,
+                        onSecondaryButtonClick: A,
+                        children: _,
                         useReducedMotion: T = !1
                     } = e, M = (0, i.useStateFromStores)([o.default], () => o.default.getState().isMembersOpen);
                     if (l.isMobile && M) return null;
                     if (null == t) return (0, s.jsx)(s.Fragment, {
-                        children: a.Children.only(A)
+                        children: a.Children.only(_)
                     });
                     let I = null;
                     return null != E ? I = (0, s.jsx)("img", {
@@ -63,7 +63,7 @@
                             children: [null != S && (0, s.jsx)(r.Button, {
                                 className: c.button,
                                 size: r.Button.Sizes.SMALL,
-                                onClick: _,
+                                onClick: A,
                                 look: r.Button.Looks.LINK,
                                 color: r.Button.Colors.PRIMARY,
                                 submitting: p,

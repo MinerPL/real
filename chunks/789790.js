@@ -29,8 +29,8 @@
                         groupId: m,
                         compact: E = !1
                     }
-                } = e, g = C.state === r.MessageStates.SENDING, S = C.id === m, _ = (0, a.hasFlag)(C.flags, r.MessageFlags.EPHEMERAL), A = C.state === r.MessageStates.SEND_FAILED;
-                return g || _ && !A ? null : (0, s.jsx)(i.default, {
+                } = e, g = C.state === r.MessageStates.SENDING, S = C.id === m, A = (0, a.hasFlag)(C.flags, r.MessageFlags.EPHEMERAL), _ = C.state === r.MessageStates.SEND_FAILED;
+                return g || A && !_ ? null : (0, s.jsx)(i.default, {
                     className: o.buttons,
                     innerClassName: o.buttonsInner,
                     isHeader: !E && S && !(0, l.default)(C),

@@ -21,25 +21,25 @@
                 E = n("125667"),
                 g = n("901582"),
                 S = n("767993"),
-                _ = n("180748"),
-                A = n("206230"),
+                A = n("180748"),
+                _ = n("206230"),
                 T = n("716241"),
                 M = n("507217"),
                 I = n("118200"),
                 N = n("240249"),
-                L = n("524768"),
-                v = n("389153"),
+                v = n("524768"),
+                L = n("389153"),
                 x = n("916565"),
                 R = n("850391"),
                 y = n("149022"),
                 D = n("159492"),
                 O = n("998415"),
                 j = n("228800"),
-                b = n("681060"),
-                P = n("939563"),
+                P = n("681060"),
+                b = n("939563"),
                 F = n("538282"),
-                H = n("956967"),
-                U = n("952104"),
+                U = n("956967"),
+                H = n("952104"),
                 k = n("509"),
                 G = n("406043"),
                 w = n("68895"),
@@ -52,8 +52,8 @@
                 Y = n("880731"),
                 q = n("943551"),
                 X = n("667137"),
-                J = n("445499"),
-                Q = n("319939"),
+                Q = n("445499"),
+                J = n("319939"),
                 $ = n("529805"),
                 ee = n("685841"),
                 et = n("467094"),
@@ -75,14 +75,14 @@
                 eE = n("718422"),
                 eg = n("563680"),
                 eS = n("412861"),
-                e_ = n("834021"),
-                eA = n("685888"),
+                eA = n("834021"),
+                e_ = n("685888"),
                 eT = n("710216"),
                 eM = n("348652"),
                 eI = n("306588"),
                 eN = n("49111"),
-                eL = n("782340"),
-                ev = n("305794");
+                ev = n("782340"),
+                eL = n("305794");
 
             function ex(e) {
                 e.preventDefault()
@@ -137,14 +137,14 @@
                     } = this.props, {
                         commandKey: n,
                         interactionOptions: s
-                    } = (0, v.extractInteractionDataProps)(e.interactionData), {
+                    } = (0, L.extractInteractionDataProps)(e.interactionData), {
                         command: a,
                         application: l
                     } = N.getCachedCommand(t, n);
                     if (null != a) {
                         var i, r;
                         let e = null != l ? {
-                            type: L.ApplicationCommandSectionType.APPLICATION,
+                            type: v.ApplicationCommandSectionType.APPLICATION,
                             id: l.id,
                             icon: null !== (r = null == l ? void 0 : null === (i = l.bot) || void 0 === i ? void 0 : i.username) && void 0 !== r ? r : l.icon,
                             name: l.name,
@@ -154,7 +154,7 @@
                             channelId: t.id,
                             command: a,
                             section: e,
-                            location: L.ApplicationCommandTriggerLocations.RECALL,
+                            location: v.ApplicationCommandTriggerLocations.RECALL,
                             initialValues: (0, I.getInitialValuesFromInteractionOptions)(a, null != s ? s : [])
                         })
                     }
@@ -175,11 +175,11 @@
                         poggermodeEnabled: C
                     } = this.props, {
                         contentWarningProps: p
-                    } = this.state, m = (0, s.jsx)(b.default, {
+                    } = this.state, m = (0, s.jsx)(P.default, {
                         textValue: this.state.textValue,
                         richValue: this.state.richValue,
                         focused: t,
-                        className: ev.channelTextArea,
+                        className: eL.channelTextArea,
                         channel: e,
                         placeholder: d,
                         accessibilityLabel: f,
@@ -268,7 +268,7 @@
                             case eN.KeyboardKeys.ESCAPE:
                                 if (a || e.target !== e.currentTarget) return;
                                 if (e.preventDefault(), t) {
-                                    (0, _.disableKeyboardMode)();
+                                    (0, A.disableKeyboardMode)();
                                     return
                                 }
                                 if (ec.default.getUploadCount(s.id, el.DraftType.ChannelMessage) > 0) {
@@ -300,7 +300,7 @@
                         f.default.changeDraft(a, t, el.DraftType.ChannelMessage);
                         let l = "" !== t && n !== this.state.richValue,
                             i = l && !eR.test(t) && !t.startsWith("/") && (!this.isFirstChange || t !== this.state.textValue);
-                        this.isFirstChange = !1, i && this.state.textValue.length < t.length && this.handleIncrementCombo(), i ? C.default.startTyping(a) : "" === t && C.default.stopTyping(a), l && s && (0, _.disableKeyboardMode)(), this.setState({
+                        this.isFirstChange = !1, i && this.state.textValue.length < t.length && this.handleIncrementCombo(), i ? C.default.startTyping(a) : "" === t && C.default.stopTyping(a), l && s && (0, A.disableKeyboardMode)(), this.setState({
                             textValue: t,
                             richValue: n
                         })
@@ -324,7 +324,7 @@
                             chatInputType: d
                         } = this.props, c = !1;
                         if (null != a) {
-                            if (a.inputType === L.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return em.ComponentDispatch.dispatch(eN.ComponentActions.SHAKE_APP, {
+                            if (a.inputType === v.ApplicationCommandInputType.BUILT_IN_INTEGRATION) return em.ComponentDispatch.dispatch(eN.ComponentActions.SHAKE_APP, {
                                 duration: 200,
                                 intensity: 2
                             }), Promise.resolve({
@@ -339,7 +339,7 @@
                                     channel: o
                                 }
                             });
-                            if (a.inputType !== L.ApplicationCommandInputType.BUILT_IN_TEXT) return Promise.resolve({
+                            if (a.inputType !== v.ApplicationCommandInputType.BUILT_IN_TEXT) return Promise.resolve({
                                 shouldClear: !0,
                                 shouldRefocus: !0
                             });
@@ -382,8 +382,8 @@
                                 shouldRefocus: !0
                             };
                             if (null != n && n.length > 0) {
-                                let e = (0, e_.getWebUploadFiles)(n);
-                                if ((0, e_.filesExceedUploadLimits)(e, null == r ? void 0 : r.id)) return (0, eS.showUploadFileSizeExceededError)(o, e), {
+                                let e = (0, eA.getWebUploadFiles)(n);
+                                if ((0, eA.filesExceedUploadLimits)(e, null == r ? void 0 : r.id)) return (0, eS.showUploadFileSizeExceededError)(o, e), {
                                     shouldClear: !1,
                                     shouldRefocus: !1
                                 };
@@ -409,7 +409,7 @@
                     }, this.handleSetValue = e => {
                         var t, n;
                         let s = null === (t = this.editorRef) || void 0 === t ? void 0 : t.getSlateEditor();
-                        null != s && (P.SlateTransforms.select(s, []), s.insertText(e), null === (n = this.editorRef) || void 0 === n || n.focus())
+                        null != s && (b.SlateTransforms.select(s, []), s.insertText(e), null === (n = this.editorRef) || void 0 === n || n.focus())
                     }, this.renderAttachButton = (e, t) => (0, s.jsx)(j.default, {
                         className: t,
                         channel: this.props.channel,
@@ -463,13 +463,13 @@
                         communicationDisabledUntil: p,
                         shakeIntensity: m,
                         poggermodeEnabled: S,
-                        isSelectedResourceChannel: _,
-                        showAutomodUserProfileChatBlocker: A
+                        isSelectedResourceChannel: A,
+                        showAutomodUserProfileChatBlocker: _
                     } = this.props, {
                         textAreaFocused: T,
                         textAreaHighlighted: M
                     } = this.state, I = u === R.ChatInputTypes.SIDEBAR;
-                    t = I && n.type === eN.ChannelTypes.GUILD_VOICE ? eL.default.Messages.TEXT_IN_VOICE_A11Y_LABEL : I && n.type === eN.ChannelTypes.GUILD_STAGE_VOICE ? eL.default.Messages.TEXT_IN_STAGE_A11Y_LABEL : o.ChannelTypesSets.THREADS.has(n.type) ? eL.default.Messages.THREAD_A11Y_LABEL : eL.default.Messages.CHANNEL_A11Y_LABEL;
+                    t = I && n.type === eN.ChannelTypes.GUILD_VOICE ? ev.default.Messages.TEXT_IN_VOICE_A11Y_LABEL : I && n.type === eN.ChannelTypes.GUILD_STAGE_VOICE ? ev.default.Messages.TEXT_IN_STAGE_A11Y_LABEL : o.ChannelTypesSets.THREADS.has(n.type) ? ev.default.Messages.THREAD_A11Y_LABEL : ev.default.Messages.CHANNEL_A11Y_LABEL;
                     let N = (0, s.jsx)(en.default, {
                         tutorialId: "writing-messages",
                         position: "left",
@@ -508,7 +508,7 @@
                                     handler: this.handleOpenExpressionPicker
                                 }), (0, s.jsxs)(ey, {
                                     isSidebar: I,
-                                    className: ev.chatContent,
+                                    className: eL.chatContent,
                                     "aria-label": t.format({
                                         channelName: n.name
                                     }),
@@ -522,29 +522,29 @@
                                     }), (0, s.jsxs)(c.HeadingLevel, {
                                         component: (0, s.jsx)(c.HiddenVisually, {
                                             children: (0, s.jsx)(c.H, {
-                                                children: eL.default.Messages.CHANNEL_CHAT_HEADING.format({
+                                                children: ev.default.Messages.CHANNEL_CHAT_HEADING.format({
                                                     channelName: n.name
                                                 })
                                             })
                                         }),
                                         children: [(0, s.jsx)(z.default, {
                                             channel: n,
-                                            forceCozy: _,
+                                            forceCozy: A,
                                             filterAfterTimestamp: C,
                                             showingQuarantineBanner: h
                                         }), null == n.guild_id || I ? null : (0, s.jsx)(V.default, {
                                             guildId: n.guild_id,
                                             channel: n
-                                        }), _ ? null : null !== (e = this.renderMessageBanner({
+                                        }), A ? null : null !== (e = this.renderMessageBanner({
                                             channel: n,
                                             showQuarantinedUserBanner: h,
                                             guild: a,
                                             communicationDisabledUntil: p,
-                                            showAutomodUserProfileChatBlocker: A
+                                            showAutomodUserProfileChatBlocker: _
                                         })) && void 0 !== e ? e : (0, s.jsxs)("form", {
                                             ref: this.inputFormRef,
                                             onSubmit: ex,
-                                            className: ev.form,
+                                            className: eL.form,
                                             children: [S && (0, s.jsx)(X.default, {
                                                 channelId: n.id
                                             }), n.isPrivate() ? (0, s.jsx)(eM.default, {
@@ -643,10 +643,10 @@
                             communicationDisabledUntil: l,
                             showAutomodUserProfileChatBlocker: i
                         } = e;
-                        return t.type === eN.ChannelTypes.DM && n ? (0, s.jsx)(Q.default, {}) : null != l && (0, k.isCommunicationDisabled)(l) && null != a && !eu.default.can(eN.Permissions.ADMINISTRATOR, a) ? (0, s.jsx)(w.CommunicationDisabledBanner, {
+                        return t.type === eN.ChannelTypes.DM && n ? (0, s.jsx)(J.default, {}) : null != l && (0, k.isCommunicationDisabled)(l) && null != a && !eu.default.can(eN.Permissions.ADMINISTRATOR, a) ? (0, s.jsx)(w.CommunicationDisabledBanner, {
                             guild: a,
                             disabledUntil: l
-                        }) : i ? (0, s.jsx)(U.AutomodUserProfileQuarantineChatInputNotice, {
+                        }) : i ? (0, s.jsx)(H.AutomodUserProfileQuarantineChatInputNotice, {
                             guild: a
                         }) : null
                     }
@@ -661,16 +661,16 @@
                 } = e, {
                     placeholder: i,
                     accessibilityLabel: r
-                } = (0, eA.default)(t), o = (0, Q.useShouldBlockDMInputForQuarantinedUser)(ef.default.getCurrentUser(), t), [u] = (0, G.useCurrentUserCommunicationDisabled)(null == n ? void 0 : n.id), f = (0, H.useCurrentUserHasAutomodQuarantinedProfile)(null == n ? void 0 : n.id), h = (0, d.useStateFromStores)([ef.default], () => ef.default.getCurrentUser()), C = (0, d.useStateFromStores)([er.default], () => {
+                } = (0, e_.default)(t), o = (0, J.useShouldBlockDMInputForQuarantinedUser)(ef.default.getCurrentUser(), t), [u] = (0, G.useCurrentUserCommunicationDisabled)(null == n ? void 0 : n.id), f = (0, U.useCurrentUserHasAutomodQuarantinedProfile)(null == n ? void 0 : n.id), h = (0, d.useStateFromStores)([ef.default], () => ef.default.getCurrentUser()), C = (0, d.useStateFromStores)([er.default], () => {
                     var e, t, s;
                     return null != h && null !== (s = null === (e = er.default.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : "", null == h ? void 0 : h.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== s && s
-                }), p = (0, d.useStateFromStores)([Y.default], () => Y.default.isEnabled()), m = (0, J.default)(t.id), E = (0, B.default)(t.id);
+                }), p = (0, d.useStateFromStores)([Y.default], () => Y.default.isEnabled()), m = (0, Q.default)(t.id), E = (0, B.default)(t.id);
                 return (0, s.jsx)(eO, {
                     channel: t,
                     isEditing: null != (0, d.useStateFromStores)([ei.default], () => ei.default.getEditingMessageId(t.id)),
                     hasModalOpen: (0, c.useModalsStore)(c.hasAnyModalOpenSelector),
                     guild: n,
-                    keyboardModeEnabled: (0, d.useStateFromStores)([A.default], () => A.default.keyboardModeEnabled),
+                    keyboardModeEnabled: (0, d.useStateFromStores)([_.default], () => _.default.keyboardModeEnabled),
                     pendingReply: (0, d.useStateFromStores)([ee.default], () => ee.default.getPendingReply(t.id)),
                     chatInputType: a,
                     placeholder: i,

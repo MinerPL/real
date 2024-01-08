@@ -25,8 +25,8 @@
                     onCancel: E,
                     channel: g,
                     analyticsType: S,
-                    popoutText: _,
-                    animation: A
+                    popoutText: A,
+                    animation: _
                 } = e;
                 a.useEffect(() => {
                     c.default.track(f.AnalyticEvents.OPEN_POPOUT, {
@@ -45,10 +45,10 @@
                     let e;
                     let t = u.default.theme,
                         s = !1;
-                    return null != A && (async () => {
+                    return null != _ && (async () => {
                         let [{
                             default: a
-                        }, l] = await Promise.all([n.el("245749").then(n.t.bind(n, "245749", 23)), (0, i.isThemeDark)(t) ? A.dark() : A.light()]);
+                        }, l] = await Promise.all([n.el("245749").then(n.t.bind(n, "245749", 23)), (0, i.isThemeDark)(t) ? _.dark() : _.light()]);
                         !s && (e = a.loadAnimation({
                             container: I.current,
                             renderer: "svg",
@@ -59,14 +59,14 @@
                     })(), () => {
                         s = !0, null != e && (e.destroy(), e = void 0)
                     }
-                }, [A]), (0, s.jsx)(r.Dialog, {
+                }, [_]), (0, s.jsx)(r.Dialog, {
                     "aria-labelledby": "content-warning-popout-label",
                     children: (0, s.jsxs)("form", {
                         className: C.contentWarningPopout,
                         onSubmit: T,
                         children: [(0, s.jsxs)("div", {
                             className: C.body,
-                            children: [null != A && (0, s.jsx)("div", {
+                            children: [null != _ && (0, s.jsx)("div", {
                                 className: C.animation,
                                 ref: I
                             }), (0, s.jsxs)("div", {
@@ -78,7 +78,7 @@
                                     id: "content-warning-popout-label",
                                     className: p.markup,
                                     variant: "text-sm/normal",
-                                    children: _.body
+                                    children: A.body
                                 }), (0, s.jsxs)("div", {
                                     className: C.buttonWrapper,
                                     children: [(0, s.jsxs)("div", {
@@ -109,14 +109,14 @@
                                     })]
                                 })]
                             })]
-                        }), null != _.footer && "" !== _.footer ? (0, s.jsxs)("div", {
+                        }), null != A.footer && "" !== A.footer ? (0, s.jsxs)("div", {
                             className: C.footer,
                             children: [(0, s.jsx)(d.default, {
                                 color: l.default.unsafe_rawColors.PRIMARY_400.css,
                                 className: C.icon
                             }), (0, s.jsx)(r.Text, {
                                 variant: "text-sm/normal",
-                                children: _.footer
+                                children: A.footer
                             })]
                         }) : null]
                     })

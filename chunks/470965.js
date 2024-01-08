@@ -19,21 +19,21 @@
                 let {
                     inboxIconRef: t,
                     recentsPopoutShown: n
-                } = e, [E, h] = a.useState(!1), _ = (0, s.default)([o.default], () => o.default.getLastUnseenInvite()), S = (0, s.default)([d.default], () => null != _ ? d.default.getUser(_.inviter_id) : null);
+                } = e, [E, _] = a.useState(!1), h = (0, s.default)([o.default], () => o.default.getLastUnseenInvite()), S = (0, s.default)([d.default], () => null != h ? d.default.getUser(h.inviter_id) : null);
                 return (a.useEffect(() => {
-                    n && h(!1)
+                    n && _(!1)
                 }, [n]), a.useEffect(() => {
-                    if (null == _) {
-                        h(!1);
+                    if (null == h) {
+                        _(!1);
                         return
-                    }(0, u.updateInviteStatus)(_), h(!0);
+                    }(0, u.updateInviteStatus)(h), _(!0);
                     let e = new i.Timeout;
                     return e.start(5e3, () => {
-                        h(!1)
+                        _(!1)
                     }), () => {
                         e.stop()
                     }
-                }, [_]), E && null != _ && null != S) ? (0, l.jsxs)(r.TooltipLayer, {
+                }, [h]), E && null != h && null != S) ? (0, l.jsxs)(r.TooltipLayer, {
                     tooltipClassName: f.tooltip,
                     tooltipContentClassName: f.tooltipContent,
                     targetElementRef: t,
@@ -43,7 +43,7 @@
                         className: f.iconContainer,
                         children: [(0, l.jsx)("img", {
                             className: f.inviteImage,
-                            src: _.application_asset,
+                            src: h.application_asset,
                             alt: "Game Invite"
                         }), (0, l.jsx)("div", {
                             className: f.offsetAvatarContainer,
@@ -65,7 +65,7 @@
                         }), (0, l.jsx)(r.Text, {
                             className: f.subtitle,
                             variant: "text-xxs/medium",
-                            children: _.application_name
+                            children: h.application_name
                         })]
                     })]
                 }) : null
