@@ -1,55 +1,51 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return h
                 }
             });
             var a = n("37983");
             n("884691");
             var l = n("414456"),
                 s = n.n(l),
-                i = n("446674"),
-                r = n("77078"),
-                u = n("614175"),
-                o = n("84460"),
-                d = n("181114"),
-                c = n("82636"),
-                f = n("981913"),
-                h = n("782340"),
-                p = n("808554");
+                i = n("77078"),
+                r = n("614175"),
+                u = n("181114"),
+                o = n("82636"),
+                d = n("981913"),
+                c = n("782340"),
+                f = n("808554");
 
-            function m(e) {
+            function h(e) {
                 let t, {
                         isActivityActive: n,
                         ...l
                     } = e,
                     {
-                        enabled: m
-                    } = u.ActivitiesGameNightExperiment.useExperiment({
+                        enabled: h
+                    } = r.ActivitiesGameNightExperiment.useExperiment({
                         location: "9ab33d_1"
                     }, {
                         autoTrackExposure: !1
-                    }),
-                    E = (0, i.useStateFromStores)([o.default], () => o.default.getIsEnabled(), []);
-                return (E && (t = "yellow"), m) ? (0, a.jsxs)(d.default, {
+                    });
+                return h ? (0, a.jsxs)(u.default, {
                     disabled: l.disabled,
                     onClick: l.onClick,
                     onMouseEnter: l.onMouseEnter,
                     onMouseLeave: l.onMouseLeave,
-                    look: r.Button.Looks.BLANK,
-                    size: r.Button.Sizes.XLARGE,
-                    className: s(p.gameNightButton, {
-                        [p.gameNightActivityIsActive]: n && !l.disabled,
-                        [p.gameNightDeveloperActivityShelf]: E
+                    look: i.Button.Looks.BLANK,
+                    size: i.Button.Sizes.XLARGE,
+                    className: s(f.gameNightButton, {
+                        [f.gameNightActivityIsActive]: n && !l.disabled
                     }),
-                    innerClassName: p.gameNightButtonInner,
-                    children: [(0, a.jsx)(c.default, {
-                        className: p.gameNightRocket
-                    }), h.default.Messages.EMBEDDED_ACTIVITIES_GAME_NIGHT]
-                }) : (0, a.jsx)(f.CenterControlButton, {
+                    innerClassName: f.gameNightButtonInner,
+                    children: [(0, a.jsx)(o.default, {
+                        className: f.gameNightRocket
+                    }), c.default.Messages.EMBEDDED_ACTIVITIES_GAME_NIGHT]
+                }) : (0, a.jsx)(d.CenterControlButton, {
                     isActive: n,
                     color: t,
-                    iconComponent: c.default,
+                    iconComponent: o.default,
                     ...l
                 })
             }

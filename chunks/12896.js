@@ -4,8 +4,8 @@
                     return h
                 }
             });
-            var a = n("37983"),
-                s = n("884691"),
+            var s = n("37983"),
+                a = n("884691"),
                 l = n("817736"),
                 i = n("118810"),
                 r = n("446674"),
@@ -13,7 +13,7 @@
                 u = n("471671"),
                 d = n("53889"),
                 c = n("612246");
-            class f extends s.Component {
+            class f extends a.Component {
                 componentDidMount() {
                     let {
                         visible: e,
@@ -31,19 +31,19 @@
                     let {
                         position: t,
                         offsetX: n,
-                        offsetY: a,
-                        tutorialId: s,
+                        offsetY: s,
+                        tutorialId: a,
                         visible: l,
                         windowSize: i
                     } = e;
-                    s !== this.props.tutorialId ? o.default.hide(s) : (l !== this.props.visible || t !== this.props.position || n !== this.props.offsetX || a !== this.props.offsetY || i !== this.props.windowSize) && this.show(this.props.visible)
+                    a !== this.props.tutorialId ? o.default.hide(a) : (l !== this.props.visible || t !== this.props.position || n !== this.props.offsetX || s !== this.props.offsetY || i !== this.props.windowSize) && this.show(this.props.visible)
                 }
                 show(e) {
                     let {
                         tutorialId: t,
                         position: n,
-                        offsetX: a,
-                        offsetY: s,
+                        offsetX: s,
+                        offsetY: a,
                         visible: r,
                         inlineSpecs: u,
                         autoInvert: d
@@ -67,8 +67,8 @@
                                 y: r
                             },
                             offset: {
-                                x: a,
-                                y: s
+                                x: s,
+                                y: a
                             }
                         })
                     } else r && o.default.hide(t)
@@ -83,8 +83,8 @@
                         position: r,
                         autoInvert: o
                     } = this.props, u = c.default.getData()[t];
-                    return null != e && null != u ? (0, a.jsxs)(a.Fragment, {
-                        children: [n, l && (0, a.jsx)(d.TutorialIndicator, {
+                    return null != e && null != u ? (0, s.jsxs)(s.Fragment, {
+                        children: [n, l && (0, s.jsx)(d.TutorialIndicator, {
                             autoInvert: o,
                             position: r,
                             tutorialId: t,
@@ -92,18 +92,18 @@
                             focused: i,
                             ...e
                         })]
-                    }) : s.Children.only(n)
+                    }) : a.Children.only(n)
                 }
             }
 
             function h(e) {
                 let {
                     tutorialId: t
-                } = e, n = (0, r.useStateFromStores)([c.default], () => c.default.shouldShow(t), [t]), s = (0, r.useStateFromStores)([u.default], () => u.default.isFocused()), l = (0, r.useStateFromStores)([u.default], () => u.default.windowSize(), []);
-                return (0, a.jsx)(f, {
+                } = e, n = (0, r.useStateFromStores)([c.default], () => c.default.shouldShow(t), [t]), a = (0, r.useStateFromStores)([u.default], () => u.default.isFocused()), l = (0, r.useStateFromStores)([u.default], () => u.default.windowSize(), []);
+                return (0, s.jsx)(f, {
                     ...e,
                     visible: n,
-                    windowFocused: s,
+                    windowFocused: a,
                     windowSize: l
                 })
             }
