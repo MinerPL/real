@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("446674"),
-                o = n("77078"),
-                u = n("851387"),
+                u = n("77078"),
+                o = n("851387"),
                 d = n("697218"),
                 c = n("440351"),
                 f = n("701909"),
@@ -47,7 +47,7 @@
                         agreement: p.default.Messages.NSFW_ACCEPT,
                         disagreement: p.default.Messages.NSFW_DECLINE
                     });
-                    return (0, a.jsx)(o.AdvancedScroller, {
+                    return (0, a.jsx)(u.AdvancedScroller, {
                         ref: this.scroller,
                         className: m.scroller,
                         children: (0, a.jsx)("div", {
@@ -61,12 +61,12 @@
                         let {
                             guild: e
                         } = this.props;
-                        null != e && u.default.nsfwReturnToSafety(e.id)
+                        null != e && o.default.nsfwReturnToSafety(e.id)
                     }, this.handleAgree = () => {
                         let {
                             guild: e
                         } = this.props;
-                        null != e && u.default.nsfwAgree(e.id)
+                        null != e && o.default.nsfwAgree(e.id)
                     }
                 }
             }

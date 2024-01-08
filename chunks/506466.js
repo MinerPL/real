@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("748820"),
-                o = n("337062"),
-                u = n("77078"),
+                u = n("337062"),
+                o = n("77078"),
                 d = n("981913"),
                 c = n("782340"),
                 f = n("281848");
@@ -20,7 +20,7 @@
                     width: t = 24,
                     height: n = 24,
                     isBadged: s = !1
-                } = e, [i] = l.useState(() => (0, r.v4)()), d = (0, u.useRedesignIconContext)().enabled;
+                } = e, [i] = l.useState(() => (0, r.v4)()), d = (0, o.useRedesignIconContext)().enabled;
                 return (0, a.jsxs)("svg", {
                     width: t,
                     height: n,
@@ -41,7 +41,7 @@
                         })
                     }), d ? (0, a.jsx)("g", {
                         mask: "url(#".concat(i, ")"),
-                        children: (0, a.jsx)(o.HandRequestSpeakListIcon, {})
+                        children: (0, a.jsx)(u.HandRequestSpeakListIcon, {})
                     }) : (0, a.jsx)("path", {
                         fill: "currentColor",
                         fillRule: "evenodd",
@@ -61,7 +61,7 @@
                     className: i(f.raisedHandIcon, t),
                     children: [(0, a.jsx)(h, {
                         isBadged: l
-                    }), l ? (0, a.jsx)(u.Text, {
+                    }), l ? (0, a.jsx)(o.Text, {
                         className: f.raisedHandCount,
                         variant: "text-xs/semibold",
                         children: n > 99 ? "99+" : n
@@ -76,18 +76,18 @@
                     className: s,
                     numRequestToSpeak: i,
                     onClick: r,
-                    ...o
-                } = e, u = l.useCallback(() => {
+                    ...u
+                } = e, o = l.useCallback(() => {
                     null == r || r(), t()
                 }, [r, t]);
                 return (0, a.jsx)(d.default, {
-                    onClick: u,
+                    onClick: o,
                     label: n ? c.default.Messages.REQUEST_TO_SPEAK_AREA_CLOSE : c.default.Messages.REQUEST_TO_SPEAK_AREA_OPEN,
                     className: s,
                     iconComponent: () => (0, a.jsx)(p, {
                         numRequestToSpeak: i,
                         className: s
                     }),
-                    ...o
+                    ...u
                 })
             }

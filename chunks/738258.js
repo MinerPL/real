@@ -9,8 +9,8 @@
                 s = n("917351"),
                 i = n("245749"),
                 r = n.n(i),
-                o = n("397485"),
-                u = n("626334"),
+                u = n("397485"),
+                o = n("626334"),
                 d = n("505989");
             let c = async e => {
                 var t;
@@ -19,8 +19,8 @@
                     animationId: a,
                     url: l,
                     shouldResize: i
-                } = e, r = null !== (t = o.AnimationTypeToAnimations[n]) && void 0 !== t ? t : o.AnimationTypeToAnimations[u.VoiceChannelEffectAnimationType.BASIC], d = null != a && a < r.length ? r[a] : (0, s.sample)(r), c = JSON.parse(JSON.stringify(d));
-                return c.assets[0].p = i ? await (0, o.getResizedEmojiData)(l) : l, c
+                } = e, r = null !== (t = u.AnimationTypeToAnimations[n]) && void 0 !== t ? t : u.AnimationTypeToAnimations[o.VoiceChannelEffectAnimationType.BASIC], d = null != a && a < r.length ? r[a] : (0, s.sample)(r), c = JSON.parse(JSON.stringify(d));
+                return c.assets[0].p = i ? await (0, u.getResizedEmojiData)(l) : l, c
             };
 
             function f(e) {
@@ -43,7 +43,7 @@
                                 rendererSettings: {
                                     preserveAspectRatio: "xMidYMax slice"
                                 }
-                            }), n.animationType === u.VoiceChannelEffectAnimationType.PREMIUM && e.setSpeed(.8), e.addEventListener("complete", () => null == s ? void 0 : s(n.id))
+                            }), n.animationType === o.VoiceChannelEffectAnimationType.PREMIUM && e.setSpeed(.8), e.addEventListener("complete", () => null == s ? void 0 : s(n.id))
                         }
                     }(), () => {
                         null == e || e.destroy()

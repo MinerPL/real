@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return o
                 }
             }), n("222007");
             var a = n("37983"),
@@ -9,17 +9,17 @@
                 s = n("748820"),
                 i = n("469563"),
                 r = n("496061"),
-                o = n("75196"),
-                u = (0, i.replaceIcon)(function(e) {
+                u = n("75196"),
+                o = (0, i.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
                         height: n = 24,
                         color: i = "currentColor",
                         foreground: r,
-                        ...u
+                        ...o
                     } = e, [d] = l.useState(() => (0, s.v4)());
                     return (0, a.jsxs)("svg", {
-                        ...(0, o.default)(u),
+                        ...(0, u.default)(o),
                         width: t,
                         height: n,
                         viewBox: "0 0 24 24",

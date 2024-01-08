@@ -1,59 +1,59 @@
             "use strict";
             n.r(t), n.d(t, {
                 trackProfilePanelViewed: function() {
-                    return o
+                    return u
                 },
                 trackProfilePanelToggled: function() {
-                    return s
+                    return o
                 }
             });
-            var a = n("373469"),
+            var s = n("373469"),
                 i = n("824563"),
-                r = n("27618"),
-                l = n("599110"),
-                u = n("49111");
-            let o = e => {
+                l = n("27618"),
+                r = n("599110"),
+                a = n("49111");
+            let u = e => {
                     let {
                         displayProfile: t,
                         isMobile: n,
-                        loadDurationMs: a,
+                        loadDurationMs: s,
                         activity: i,
-                        customStatusActivity: r,
-                        status: o
+                        customStatusActivity: l,
+                        status: u
                     } = e;
-                    l.default.track(u.AnalyticEvents.DM_PROFILE_VIEWED, {
+                    r.default.track(a.AnalyticEvents.DM_PROFILE_VIEWED, {
                         has_mobile_indicator: n,
-                        has_activity: null != i && (null == i ? void 0 : i.type) !== u.ActivityTypes.CUSTOM_STATUS,
-                        has_game_activity: (null == i ? void 0 : i.type) === u.ActivityTypes.PLAYING,
-                        load_duration_ms: a,
-                        profile_user_status: o,
-                        has_custom_status: null != r,
+                        has_activity: null != i && (null == i ? void 0 : i.type) !== a.ActivityTypes.CUSTOM_STATUS,
+                        has_game_activity: (null == i ? void 0 : i.type) === a.ActivityTypes.PLAYING,
+                        load_duration_ms: s,
+                        profile_user_status: u,
+                        has_custom_status: null != l,
                         has_profile_effect: null != t.profileEffectId,
-                        ...d(t)
+                        ...c(t)
                     })
                 },
-                s = (e, t) => {
-                    l.default.track(u.AnalyticEvents.DM_PROFILE_TOGGLED, {
+                o = (e, t) => {
+                    r.default.track(a.AnalyticEvents.DM_PROFILE_TOGGLED, {
                         is_profile_open: t,
-                        ...d(e)
+                        ...c(e)
                     })
                 },
-                d = e => {
+                c = e => {
                     var t;
                     if (null == e) return {};
                     let n = e.userId,
-                        l = null != a.default.getAnyStreamForUser(n),
-                        o = i.default.findActivity(n, e => {
+                        r = null != s.default.getAnyStreamForUser(n),
+                        u = i.default.findActivity(n, e => {
                             let {
                                 type: t
                             } = e;
-                            return l ? t === u.ActivityTypes.PLAYING : t !== u.ActivityTypes.CUSTOM_STATUS
+                            return r ? t === a.ActivityTypes.PLAYING : t !== a.ActivityTypes.CUSTOM_STATUS
                         }),
-                        s = null == o ? void 0 : o.assets,
-                        d = r.default.isFriend(n);
+                        o = null == u ? void 0 : u.assets,
+                        c = l.default.isFriend(n);
                     return {
-                        has_images: !!(null !== (t = null == s ? void 0 : s.large_image) && void 0 !== t ? t : null == s ? void 0 : s.small_image),
-                        is_friend: d,
+                        has_images: !!(null !== (t = null == o ? void 0 : o.large_image) && void 0 !== t ? t : null == o ? void 0 : o.small_image),
+                        is_friend: c,
                         viewed_profile_user_id: n,
                         profile_has_nitro_customization: e.hasPremiumCustomization(),
                         profile_has_theme_color_customized: e.hasThemeColors(),

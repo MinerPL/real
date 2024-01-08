@@ -10,8 +10,8 @@
                 s = n("669491"),
                 i = n("77078"),
                 r = n("817963"),
-                o = n("42203"),
-                u = n("943232"),
+                u = n("42203"),
+                o = n("943232"),
                 d = n("374021"),
                 c = n("398604"),
                 f = n("534222"),
@@ -23,12 +23,12 @@
             function C(e) {
                 let {
                     channelId: t
-                } = e, C = (0, l.useStateFromStores)([o.default], () => o.default.getChannel(t), [t]), g = (0, f.useImminentUpcomingGuildEvents)(t), S = null != (0, f.useActiveEvent)(t), {
+                } = e, C = (0, l.useStateFromStores)([u.default], () => u.default.getChannel(t), [t]), S = (0, f.useImminentUpcomingGuildEvents)(t), g = null != (0, f.useActiveEvent)(t), {
                     canManageGuildEvent: _
-                } = (0, r.useManageResourcePermissions)(C), I = (0, l.useStateFromStoresObject)([c.default], () => g.reduce((e, t) => (e[t.id] = c.default.getUserCount(t.id, (0, h.getNextRecurrenceIdInEvent)(t)), e), {}));
-                return g.length < 1 || S ? null : (0, a.jsx)(a.Fragment, {
-                    children: g.map(e => (0, a.jsx)(p.default, {
-                        icon: (0, a.jsx)(u.default, {
+                } = (0, r.useManageResourcePermissions)(C), I = (0, l.useStateFromStoresObject)([c.default], () => S.reduce((e, t) => (e[t.id] = c.default.getUserCount(t.id, (0, h.getNextRecurrenceIdInEvent)(t)), e), {}));
+                return S.length < 1 || g ? null : (0, a.jsx)(a.Fragment, {
+                    children: S.map(e => (0, a.jsx)(p.default, {
+                        icon: (0, a.jsx)(o.default, {
                             height: 20,
                             width: 20
                         }),

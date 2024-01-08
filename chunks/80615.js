@@ -13,15 +13,15 @@
                     let {
                         connection: t,
                         user: r,
-                        theme: o
+                        theme: u
                     } = e, {
-                        guild: u,
+                        guild: o,
                         nick: d
                     } = t;
                     return (0, a.jsx)(i.GuildRow, {
-                        guild: u,
+                        guild: o,
                         nick: d,
-                        theme: o,
+                        theme: u,
                         user: r,
                         onContextMenu: function(e, t) {
                             (0, l.openContextMenuLazy)(e, async () => {

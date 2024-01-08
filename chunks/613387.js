@@ -1,19 +1,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return r
                 }
             });
             var a = n("446674"),
-                i = n("913144");
+                s = n("913144");
             let l = {};
-            class s extends a.default.Store {
+            class i extends a.default.Store {
                 getOptions(e) {
                     return l[e]
                 }
             }
-            s.displayName = "SendMessageOptionsStore";
-            var u = new s(i.default, {
+            i.displayName = "SendMessageOptionsStore";
+            var r = new i(s.default, {
                 MESSAGE_CREATE: function(e) {
                     let {
                         message: t,

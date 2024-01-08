@@ -9,8 +9,8 @@
                 s = n.n(l),
                 i = n("446674"),
                 r = n("593752"),
-                o = n("782340");
-            let u = [];
+                u = n("782340");
+            let o = [];
 
             function d(e, t) {
                 let {
@@ -20,12 +20,12 @@
                     version: r.default.getMemberListVersion(e),
                     members: r.default.getMemberListSections(e)
                 })), d = a.useMemo(() => {
-                    if (null == t) return u;
+                    if (null == t) return o;
                     let e = s(t.roles).values().filter(e => e.hoist).sortBy(e => e.position).reverse().map(e => e.id).value();
                     return e.push("online", "offline"), e.map(e => {
                         var n, a;
                         let s = t.roles[e],
-                            i = "online" === e ? o.default.Messages.STATUS_ONLINE : "offline" === e ? o.default.Messages.STATUS_OFFLINE : s.name,
+                            i = "online" === e ? u.default.Messages.STATUS_ONLINE : "offline" === e ? u.default.Messages.STATUS_OFFLINE : s.name,
                             r = null !== (a = null == l ? void 0 : null === (n = l[e]) || void 0 === n ? void 0 : n.userIds) && void 0 !== a ? a : [];
                         return {
                             label: i,
@@ -35,5 +35,5 @@
                         }
                     })
                 }, [null == t ? void 0 : t.roles, l, n]);
-                return null != l ? d : u
+                return null != l ? d : o
             }

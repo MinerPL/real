@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return S
                 }
             });
             var a = n("37983"),
@@ -9,8 +9,8 @@
                 s = n("446674"),
                 i = n("77078"),
                 r = n("987317"),
-                o = n("191145"),
-                u = n("233322"),
+                u = n("191145"),
+                o = n("233322"),
                 d = n("157186"),
                 c = n("679243"),
                 f = n("449008"),
@@ -19,15 +19,15 @@
                 m = n("782340"),
                 E = n("704414");
             let C = (e, t) => h.default.getName(e.getGuildId(), e.id, t.user);
-            var g = function(e) {
+            var S = function(e) {
                 var t, n;
                 let {
                     participants: h,
-                    channel: g,
-                    hasConnectPermission: S
-                } = e, _ = (0, d.useShowMemberVerificationGate)(g.guild_id), I = l.useCallback(() => {
-                    _ ? (0, u.openMemberVerificationModal)(g.guild_id, () => r.default.selectVoiceChannel(g.id)) : r.default.selectVoiceChannel(g.id)
-                }, [g.id, g.guild_id, _]), T = h.filter(e => e.type === p.StageChannelParticipantTypes.VOICE), v = 4 === T.length ? 2 : 3, x = (0, s.useStateFromStoresArray)([o.default], () => T.map(e => o.default.getParticipant(g.id, e.id)).filter(f.isNotNullish), [g.id, T]);
+                    channel: S,
+                    hasConnectPermission: g
+                } = e, _ = (0, d.useShowMemberVerificationGate)(S.guild_id), I = l.useCallback(() => {
+                    _ ? (0, o.openMemberVerificationModal)(S.guild_id, () => r.default.selectVoiceChannel(S.id)) : r.default.selectVoiceChannel(S.id)
+                }, [S.id, S.guild_id, _]), T = h.filter(e => e.type === p.StageChannelParticipantTypes.VOICE), v = 4 === T.length ? 2 : 3, x = (0, s.useStateFromStoresArray)([u.default], () => T.map(e => u.default.getParticipant(S.id, e.id)).filter(f.isNotNullish), [S.id, T]);
                 return (0, a.jsxs)("div", {
                     className: E.container,
                     children: [(0, a.jsx)("div", {
@@ -37,7 +37,7 @@
                         },
                         children: x.slice(0, 5).map(e => (0, a.jsx)(c.default, {
                             participant: e,
-                            channel: g,
+                            channel: S,
                             className: E.tile,
                             paused: !0,
                             inCall: !0,
@@ -48,13 +48,13 @@
                     }), (0, a.jsx)(i.Heading, {
                         className: E.channelName,
                         variant: "heading-xxl/semibold",
-                        children: g.name
+                        children: S.name
                     }), (0, a.jsx)("div", {
                         className: E.participantsRow,
                         children: (0, a.jsx)(i.Text, {
                             color: "header-secondary",
                             variant: "text-sm/normal",
-                            children: (t = g, 0 === (n = T).length ? m.default.Messages.CURRENTLY_IN_STAGE_EMPTY : 1 === n.length ? m.default.Messages.CURRENTLY_IN_STAGE_1.format({
+                            children: (t = S, 0 === (n = T).length ? m.default.Messages.CURRENTLY_IN_STAGE_EMPTY : 1 === n.length ? m.default.Messages.CURRENTLY_IN_STAGE_1.format({
                                 a: C(t, n[0])
                             }) : 2 === n.length ? m.default.Messages.CURRENTLY_IN_STAGE_2.format({
                                 a: C(t, n[0]),
@@ -66,12 +66,12 @@
                             }) : void 0)
                         })
                     }), (0, a.jsx)(i.Button, {
-                        disabled: !S,
+                        disabled: !g,
                         className: E.joinButton,
-                        color: S ? i.Button.Colors.GREEN : i.Button.Colors.PRIMARY,
+                        color: g ? i.Button.Colors.GREEN : i.Button.Colors.PRIMARY,
                         onClick: I,
                         size: i.Button.Sizes.MEDIUM,
-                        children: S ? m.default.Messages.STAGE_CHANNEL_JOIN : m.default.Messages.CHANNEL_LOCKED_SHORT
+                        children: g ? m.default.Messages.STAGE_CHANNEL_JOIN : m.default.Messages.CHANNEL_LOCKED_SHORT
                     })]
                 })
             }

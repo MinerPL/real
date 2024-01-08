@@ -14,8 +14,8 @@
                     context: n,
                     canvasWidth: i,
                     canvasHeight: r,
-                    fallbackColor: o,
-                    outlineColorDark: u,
+                    fallbackColor: u,
+                    outlineColorDark: o,
                     outlineColorLight: d,
                     linesDrawnAt: c,
                     deadDrawables: f
@@ -26,14 +26,14 @@
                     m = e => p + e.deltaTime,
                     E = e => m(e) + 1500 >= Date.now(),
                     C = e => m(e) <= Date.now() && E(e),
-                    g = h.find(C);
-                if (null == g) {
+                    S = h.find(C);
+                if (null == S) {
                     !E(t.points[t.points.length - 1]) && f.push(t);
                     return
                 }
-                let S = (e, t) => {
+                let g = (e, t) => {
                         let a = null;
-                        n.lineWidth = t * window.devicePixelRatio, n.strokeStyle = e, n.beginPath(), n.moveTo(g.x, g.y);
+                        n.lineWidth = t * window.devicePixelRatio, n.strokeStyle = e, n.beginPath(), n.moveTo(S.x, S.y);
                         for (let e = 1; e < h.length; e++) {
                             let t = h[e];
                             C(t) && (n.lineTo(t.x, t.y), a = t)
@@ -43,8 +43,8 @@
                     {
                         fillColor: _,
                         outlineColor: I
-                    } = (0, a.getUserColors)(t.userId, u, d, o),
-                    T = S(I, 6 + s.OUTLINE_WIDTH),
+                    } = (0, a.getUserColors)(t.userId, o, d, u),
+                    T = g(I, 6 + s.OUTLINE_WIDTH),
                     v = null != T && C(T);
-                v && (0, l.renderAvatarCursorOutline)(n, T.x, T.y, I, s.OUTLINE_WIDTH), S(_, 6), v && (0, l.renderAvatarCursor)(n, T.x, T.y, t.userId)
+                v && (0, l.renderAvatarCursorOutline)(n, T.x, T.y, I, s.OUTLINE_WIDTH), g(_, 6), v && (0, l.renderAvatarCursor)(n, T.x, T.y, t.userId)
             }

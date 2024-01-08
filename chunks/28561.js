@@ -9,8 +9,8 @@
                 s = n("446674"),
                 i = n("77078"),
                 r = n("545158"),
-                o = n("206230"),
-                u = n("164586"),
+                u = n("206230"),
+                o = n("164586"),
                 d = n("713135"),
                 c = n("305961"),
                 f = n("145131"),
@@ -19,8 +19,8 @@
                 m = n("335189"),
                 E = n("190045"),
                 C = n("680894"),
-                g = n("49111"),
-                S = n("994428"),
+                S = n("49111"),
+                g = n("994428"),
                 _ = n("782340"),
                 I = n("400496"),
                 T = n("382719"),
@@ -30,14 +30,14 @@
                 let {
                     channel: t,
                     markAsDismissed: n
-                } = e, [x, N] = l.useState(!0), A = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), M = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(t.guild_id)), R = (0, s.useStateFromStores)([d.default], () => {
+                } = e, [x, N] = l.useState(!0), A = (0, s.useStateFromStores)([u.default], () => u.default.useReducedMotion), M = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(t.guild_id)), R = (0, s.useStateFromStores)([d.default], () => {
                     var e;
                     return d.default.getGuildMemberProfile(C.CLYDE_AI_USER_ID, null !== (e = null == M ? void 0 : M.id) && void 0 !== e ? e : "")
                 }), j = () => {
                     var e;
-                    (0, E.default)(null !== (e = null == M ? void 0 : M.id) && void 0 !== e ? e : ""), n(S.ContentDismissActionType.UNKNOWN)
+                    (0, E.default)(null !== (e = null == M ? void 0 : M.id) && void 0 !== e ? e : ""), n(g.ContentDismissActionType.UNKNOWN)
                 }, L = () => {
-                    (0, r.default)(p.default.getArticleURL(g.HelpdeskArticles.CLYDE_AI), !0)
+                    (0, r.default)(p.default.getArticleURL(S.HelpdeskArticles.CLYDE_AI), !0)
                 };
                 return (l.useEffect(() => {
                     let e = async () => {
@@ -46,15 +46,15 @@
                         } catch {} else N(!1)
                     };
                     e()
-                }, [R, M]), null == M) ? null : (0, a.jsx)(u.default, {
-                    type: g.ChannelNoticeTypes.CLYDE_PERSONALITIES_NUX,
+                }, [R, M]), null == M) ? null : (0, a.jsx)(o.default, {
+                    type: S.ChannelNoticeTypes.CLYDE_PERSONALITIES_NUX,
                     image: A ? T : v,
                     imageStyles: {
                         borderRadius: "50%"
                     },
                     imageMarginTop: 8,
                     guild: M,
-                    onDismissed: () => n(S.ContentDismissActionType.UNKNOWN),
+                    onDismissed: () => n(g.ContentDismissActionType.UNKNOWN),
                     centerText: !0,
                     imageMarginX: 64,
                     title: _.default.Messages.CLYDE_PERSONALITY_NUX_HEADER,

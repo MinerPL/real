@@ -9,8 +9,8 @@
                 s = n("819855"),
                 i = n("77078"),
                 r = n("841098"),
-                o = n("716241"),
-                u = n("539938"),
+                u = n("716241"),
+                o = n("539938"),
                 d = n("593195"),
                 c = n("49111"),
                 f = n("782340"),
@@ -20,17 +20,17 @@
                 E = () => {
                     let e = (0, r.default)();
                     l.useEffect(() => {
-                        o.default.trackWithMetadata(c.AnalyticEvents.GUILD_OUTAGE_VIEWED, {})
+                        u.default.trackWithMetadata(c.AnalyticEvents.GUILD_OUTAGE_VIEWED, {})
                     }, []);
                     let t = (0, s.isThemeDark)(e) ? p : m;
                     return (0, a.jsxs)("div", {
                         className: h.container,
-                        children: [(0, a.jsxs)(u.default, {
+                        children: [(0, a.jsxs)(o.default, {
                             toolbar: (0, a.jsx)(l.Fragment, {}),
-                            children: [(0, a.jsx)(u.default.Icon, {
+                            children: [(0, a.jsx)(o.default.Icon, {
                                 icon: d.default,
                                 "aria-hidden": !0
-                            }), (0, a.jsx)(u.default.Title, {
+                            }), (0, a.jsx)(o.default.Title, {
                                 children: f.default.Messages.GUILD_UNAVAILABLE_HEADER
                             })]
                         }), (0, a.jsxs)("div", {

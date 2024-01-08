@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("446674"),
-                o = n("669491"),
-                u = n("77078"),
+                u = n("669491"),
+                o = n("77078"),
                 d = n("255397"),
                 c = n("789394"),
                 f = n("244201"),
@@ -19,8 +19,8 @@
                 m = n("679653"),
                 E = n("56947"),
                 C = n("76813"),
-                g = n("992207"),
-                S = n("95039"),
+                S = n("992207"),
+                g = n("95039"),
                 _ = n("539938"),
                 I = n("557809"),
                 T = n("311197"),
@@ -55,8 +55,8 @@
                     inPopout: t,
                     channel: n,
                     toggleRequestToSpeakSidebar: s,
-                    showRequestToSpeakSidebar: o
-                } = e, c = (0, f.useAppContext)(), m = (0, r.useStateFromStores)([h.default], () => h.default.getChatOpen(n.id)), S = (0, F.useCanModerateRequestToSpeak)(n.id), _ = (0, U.useStageParticipantsCount)(n.id, w.StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY), {
+                    showRequestToSpeakSidebar: u
+                } = e, c = (0, f.useAppContext)(), m = (0, r.useStateFromStores)([h.default], () => h.default.getChatOpen(n.id)), g = (0, F.useCanModerateRequestToSpeak)(n.id), _ = (0, U.useStageParticipantsCount)(n.id, w.StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY), {
                     preventIdle: I,
                     allowIdle: M
                 } = (0, v.usePreventIdle)("popup"), {
@@ -67,11 +67,11 @@
                     autoTrackExposure: !1
                 });
                 return (0, a.jsxs)(a.Fragment, {
-                    children: [(0, a.jsx)(g.default, {
+                    children: [(0, a.jsx)(S.default, {
                         channelId: n.id
-                    }, "clips-enabled-indicator"), (0, a.jsx)(u.Popout, {
+                    }, "clips-enabled-indicator"), (0, a.jsx)(o.Popout, {
                         position: "bottom",
-                        animation: u.Popout.Animation.NONE,
+                        animation: o.Popout.Animation.NONE,
                         align: "right",
                         renderPopout: e => (0, a.jsx)(x.default, {
                             children: (0, a.jsx)(H.default, {
@@ -99,24 +99,24 @@
                         onOpen: I,
                         onClose: M,
                         className: K.button
-                    }, "recents"), !o && S ? (0, a.jsx)("div", {
+                    }, "recents"), !u && g ? (0, a.jsx)("div", {
                         className: K.button,
                         children: (0, a.jsx)(B.default, {
                             toggleRequestToSpeakSidebar: () => {
                                 m && d.default.updateChatOpen(n.id, !1), s()
                             },
-                            showRequestToSpeakSidebar: o,
+                            showRequestToSpeakSidebar: u,
                             numRequestToSpeak: _
                         })
                     }) : null, (0, a.jsx)(p.CallscopeChannelCallIssueMarker, {
                         className: K.button
                     }), !m && (0, a.jsx)("div", {
                         className: i(K.button, {
-                            [K.sidebarOpen]: o
+                            [K.sidebarOpen]: u
                         }),
                         children: (0, a.jsx)(N.ChatButton, {
                             channelId: n.id,
-                            showRequestToSpeakSidebar: o,
+                            showRequestToSpeakSidebar: u,
                             toggleRequestToSpeakSidebar: s,
                             iconClassName: K.buttonIcon
                         })
@@ -131,7 +131,7 @@
                     channel: f,
                     toggleRequestToSpeakSidebar: h,
                     showRequestToSpeakSidebar: p
-                } = e, E = (0, m.default)(f), C = (0, r.useStateFromStores)([V.default], () => V.default.getStageInstanceByChannel(f.id)), g = (0, U.useActualStageSpeakerCount)(f.id), T = (0, U.useStageParticipantsCount)(f.id, w.StageChannelParticipantNamedIndex.AUDIENCE), v = (0, r.useStateFromStores)([M.default], () => M.default.getGuild(f.guild_id), [f.guild_id]), x = null !== (t = null == v ? void 0 : v.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, N = (null == v ? void 0 : v.isCommunity()) ? x < W.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED : (null == v ? void 0 : v.premiumTier) !== W.BoostedGuildTiers.TIER_3 && x <= W.MAX_STAGE_VIDEO_USER_LIMIT_TIER2, A = (0, G.default)(f), F = (0, r.useStateFromStores)([R.default], () => R.default.can(k.MODERATE_STAGE_CHANNEL_PERMISSIONS, f)), B = () => {
+                } = e, E = (0, m.default)(f), C = (0, r.useStateFromStores)([V.default], () => V.default.getStageInstanceByChannel(f.id)), S = (0, U.useActualStageSpeakerCount)(f.id), T = (0, U.useStageParticipantsCount)(f.id, w.StageChannelParticipantNamedIndex.AUDIENCE), v = (0, r.useStateFromStores)([M.default], () => M.default.getGuild(f.guild_id), [f.guild_id]), x = null !== (t = null == v ? void 0 : v.maxStageVideoChannelUsers) && void 0 !== t ? t : 0, N = (null == v ? void 0 : v.isCommunity()) ? x < W.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED : (null == v ? void 0 : v.premiumTier) !== W.BoostedGuildTiers.TIER_3 && x <= W.MAX_STAGE_VIDEO_USER_LIMIT_TIER2, A = (0, G.default)(f), F = (0, r.useStateFromStores)([R.default], () => R.default.can(k.MODERATE_STAGE_CHANNEL_PERMISSIONS, f)), B = () => {
                     d.default.updateStageVideoLimitBoostUpsellDismissed(f.id, !0), P.default.track(W.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
                         guild_id: f.guild_id,
                         type: Y.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
@@ -144,7 +144,7 @@
                         guild_id: f.guild_id,
                         type: Y.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
                         is_moderator: F,
-                        listener_count: g + T
+                        listener_count: S + T
                     })
                 }, [A]);
                 let {
@@ -171,7 +171,7 @@
                         disabled: !0,
                         "aria-label": z.default.Messages.STAGE_CHANNEL,
                         className: K.icon,
-                        color: null != C ? o.default.unsafe_rawColors.GREEN_360.css : void 0
+                        color: null != C ? u.default.unsafe_rawColors.GREEN_360.css : void 0
                     }), !X && q, (0, a.jsx)(b.default.Title, {
                         className: K.channelName,
                         wrapperClassName: K.channelNameWrapper,
@@ -182,17 +182,17 @@
                         children: [(0, a.jsx)(L.default, {
                             width: 16,
                             height: 16
-                        }), (0, a.jsx)(u.Text, {
+                        }), (0, a.jsx)(o.Text, {
                             variant: "text-xs/medium",
                             color: "header-secondary",
                             className: K.speakerCount,
                             children: z.default.Messages.SPEAKING_COUNT.format({
-                                count: g
+                                count: S
                             })
                         }), (0, a.jsx)(O.default, {
                             width: 16,
                             height: 16
-                        }), (0, a.jsx)(u.Text, {
+                        }), (0, a.jsx)(o.Text, {
                             variant: "text-xs/medium",
                             color: "header-secondary",
                             className: K.speakerCount,
@@ -207,11 +207,11 @@
                         className: K.boostUpsell,
                         children: [(0, a.jsx)(J, {}), (0, a.jsxs)("div", {
                             className: K.text,
-                            children: [(0, a.jsx)(u.Text, {
+                            children: [(0, a.jsx)(o.Text, {
                                 variant: "text-md/medium",
                                 color: "header-primary",
                                 children: N ? z.default.Messages.STAGE_FULL_MODERATOR_TITLE : z.default.Messages.STAGE_FULL_MODERATOR_MAX_TITLE
-                            }), (0, a.jsx)(u.Text, {
+                            }), (0, a.jsx)(o.Text, {
                                 variant: "text-xs/medium",
                                 color: "text-normal",
                                 children: N ? z.default.Messages.STAGE_FULL_MODERATOR_BODY : z.default.Messages.STAGE_FULL_MAX_BODY
@@ -219,16 +219,16 @@
                         }), (0, a.jsx)("div", {
                             className: K.buttons,
                             children: N ? (0, a.jsxs)(a.Fragment, {
-                                children: [(0, a.jsx)(u.Button, {
+                                children: [(0, a.jsx)(o.Button, {
                                     className: K.notNowButton,
                                     onClick: B,
-                                    look: u.Button.Looks.BLANK,
-                                    size: u.Button.Sizes.SMALL,
+                                    look: o.Button.Looks.BLANK,
+                                    size: o.Button.Sizes.SMALL,
                                     children: z.default.Messages.NOT_NOW
                                 }), (0, a.jsx)(j.default, {
-                                    size: u.Button.Sizes.SMALL,
+                                    size: o.Button.Sizes.SMALL,
                                     onClick: () => {
-                                        (0, S.openGuildBoostingMarketingModal)({
+                                        (0, g.openGuildBoostingMarketingModal)({
                                             guildId: f.guild_id,
                                             location: {
                                                 section: W.AnalyticsSections.STAGE_VIDEO_LIMIT
@@ -243,11 +243,11 @@
                                     className: K.boostButton,
                                     children: z.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
                                 })]
-                            }) : (0, a.jsx)(u.Button, {
+                            }) : (0, a.jsx)(o.Button, {
                                 className: K.notNowButton,
                                 onClick: B,
-                                look: u.Button.Looks.BLANK,
-                                size: u.Button.Sizes.SMALL,
+                                look: o.Button.Looks.BLANK,
+                                size: o.Button.Sizes.SMALL,
                                 children: z.default.Messages.DISMISS
                             })
                         })]

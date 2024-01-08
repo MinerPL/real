@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("917351"),
-                o = n("748820"),
-                u = n("446674"),
+                u = n("748820"),
+                o = n("446674"),
                 d = n("913144"),
                 c = n("430568"),
                 f = n("206230"),
@@ -21,12 +21,12 @@
                     let {
                         emoji: n,
                         onAnimationEnd: s
-                    } = e, o = (0, r.sample)(p), u = l.useCallback(() => {
+                    } = e, u = (0, r.sample)(p), o = l.useCallback(() => {
                         s(n.key)
                     }, [n.key, s]);
                     return (0, a.jsx)("div", {
-                        className: i(h.emoji, o),
-                        onAnimationEnd: u,
+                        className: i(h.emoji, u),
+                        onAnimationEnd: o,
                         children: (0, a.jsx)(c.default, {
                             emojiId: n.id,
                             emojiName: n.name,
@@ -39,7 +39,7 @@
                 let {
                     channelId: t,
                     callHeight: n
-                } = e, s = (0, u.useStateFromStores)([f.default], () => f.default.useReducedMotion), [i, r] = l.useState([]);
+                } = e, s = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), [i, r] = l.useState([]);
                 l.useEffect(() => {
                     function e(e) {
                         let {
@@ -47,7 +47,7 @@
                             emoji: a
                         } = e;
                         n === t && !s && null != a && r(e => [...e, {
-                            key: (0, o.v4)(),
+                            key: (0, u.v4)(),
                             ...a
                         }])
                     }

@@ -6,9 +6,9 @@
             });
             var s = n("37983");
             n("884691");
-            var r = n("414456"),
-                i = n.n(r),
-                l = n("77078"),
+            var i = n("414456"),
+                l = n.n(i),
+                r = n("77078"),
                 a = n("978970"),
                 u = n("36694"),
                 o = n("945330"),
@@ -18,16 +18,16 @@
                 let {
                     grantedPermissions: t,
                     disabledPermissions: n,
-                    grantedPermissionsHeader: r,
+                    grantedPermissionsHeader: i,
                     disabledPermissionsHeader: d,
                     className: f
                 } = e;
                 return (0, s.jsxs)("div", {
-                    className: i(c.list, f),
+                    className: l(c.list, f),
                     children: [null != t && t.length > 0 ? (0, s.jsxs)(s.Fragment, {
-                        children: [null != r ? (0, s.jsx)(l.FormTitle, {
+                        children: [null != i ? (0, s.jsx)(r.FormTitle, {
                             className: c.permissionHeader,
-                            children: r
+                            children: i
                         }) : null, (0, s.jsx)("div", {
                             className: c.container,
                             children: t.map(e => (0, s.jsxs)("div", {
@@ -36,14 +36,14 @@
                                     width: 16,
                                     height: 16,
                                     className: c.check
-                                }), (0, s.jsx)(l.Text, {
+                                }), (0, s.jsx)(r.Text, {
                                     variant: "text-sm/normal",
                                     children: (0, a.getPermissionName)(e)
                                 })]
                             }, e.toString()))
                         })]
                     }) : null, null != n && n.length > 0 ? (0, s.jsxs)(s.Fragment, {
-                        children: [null != d ? (0, s.jsx)(l.FormTitle, {
+                        children: [null != d ? (0, s.jsx)(r.FormTitle, {
                             className: c.permissionHeader,
                             children: d
                         }) : null, (0, s.jsx)("div", {
@@ -54,7 +54,7 @@
                                     width: 16,
                                     height: 16,
                                     className: c.cross
-                                }), (0, s.jsx)(l.Text, {
+                                }), (0, s.jsx)(r.Text, {
                                     variant: "text-sm/normal",
                                     children: (0, a.getPermissionName)(e)
                                 })]

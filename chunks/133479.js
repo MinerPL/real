@@ -91,9 +91,9 @@
                         title: h,
                         description: x,
                         color: H,
-                        Icon: p
+                        Icon: O
                     } = C[t.state],
-                    O = Object.keys(C).length;
+                    p = Object.keys(C).length;
                 return (0, n.jsxs)(d.Card, {
                     className: I.container,
                     outline: !1,
@@ -137,14 +137,14 @@
                                 return (0, n.jsxs)("div", {
                                     className: I.statusOption,
                                     ref: t => N.current[parseInt(s)] = t,
-                                    children: [l ? (0, n.jsx)(p, {
+                                    children: [l ? (0, n.jsx)(O, {
                                         className: I.marker,
                                         color: i.color
                                     }) : (0, n.jsx)("div", {
                                         className: I.marker,
                                         style: {
                                             marginLeft: 0 === a ? -6 : 0,
-                                            marginRight: a === O - 1 ? -6 : 0
+                                            marginRight: a === p - 1 ? -6 : 0
                                         },
                                         children: (0, n.jsx)("div", {
                                             className: I.empty

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 getBenefitKey: function() {
-                    return l
+                    return r
                 },
                 formatPlanInterval: function() {
                     return a
@@ -17,10 +17,10 @@
                 }
             });
             var s = n("677795"),
-                r = n("646718"),
-                i = n("782340");
+                i = n("646718"),
+                l = n("782340");
 
-            function l(e) {
+            function r(e) {
                 return "roles" in e ? "emoji-".concat(e.id) : "".concat(e.ref_type, "-").concat(e.emoji_id, "-").concat(e.name, "-").concat(e.ref_id)
             }
 
@@ -31,12 +31,12 @@
                 } = e;
                 return (function(e) {
                     switch (e) {
-                        case r.SubscriptionIntervalTypes.DAY:
-                            return i.default.Messages.DAY;
-                        case r.SubscriptionIntervalTypes.MONTH:
-                            return i.default.Messages.MONTH;
-                        case r.SubscriptionIntervalTypes.YEAR:
-                            return i.default.Messages.YEAR
+                        case i.SubscriptionIntervalTypes.DAY:
+                            return l.default.Messages.DAY;
+                        case i.SubscriptionIntervalTypes.MONTH:
+                            return l.default.Messages.MONTH;
+                        case i.SubscriptionIntervalTypes.YEAR:
+                            return l.default.Messages.YEAR
                     }
                 })(t).format({
                     count: n
@@ -49,19 +49,19 @@
                     interval_count: n
                 } = e;
                 switch (t) {
-                    case r.SubscriptionIntervalTypes.DAY:
-                        if (n > 0 && n % 7 == 0) return i.default.Messages.DURATION_WEEKS_CAPITALIZE.format({
+                    case i.SubscriptionIntervalTypes.DAY:
+                        if (n > 0 && n % 7 == 0) return l.default.Messages.DURATION_WEEKS_CAPITALIZE.format({
                             weeks: n / 7
                         });
-                        return i.default.Messages.DURATION_DAYS_CAPITALIZE.format({
+                        return l.default.Messages.DURATION_DAYS_CAPITALIZE.format({
                             days: n
                         });
-                    case r.SubscriptionIntervalTypes.MONTH:
-                        return i.default.Messages.DURATION_MONTHS_CAPITALIZE.format({
+                    case i.SubscriptionIntervalTypes.MONTH:
+                        return l.default.Messages.DURATION_MONTHS_CAPITALIZE.format({
                             months: n
                         });
-                    case r.SubscriptionIntervalTypes.YEAR:
-                        return i.default.Messages.DURATION_YEARS_CAPITALIZE.format({
+                    case i.SubscriptionIntervalTypes.YEAR:
+                        return l.default.Messages.DURATION_YEARS_CAPITALIZE.format({
                             years: n
                         })
                 }

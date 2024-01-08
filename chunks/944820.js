@@ -7,9 +7,9 @@
             var a, l, s = n("117362"),
                 i = n("449008"),
                 r = n("49111"),
-                o = n("782340");
+                u = n("782340");
 
-            function u() {
+            function o() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 30;
                 return e <= 5 ? 3 : e <= 15 ? 10 : 15
             }
@@ -50,17 +50,17 @@
 
             function f(e, t) {
                 if ("streamer" === e.type) {
-                    if (100 * e.packetLossRate > 10) return c(o.default.Messages.STREAM_BAD_STREAMER, "Packet Loss");
-                    if (e.frameRate <= u(t)) return c(o.default.Messages.STREAM_BAD_STREAMER, "Frame Rate Encode")
+                    if (100 * e.packetLossRate > 10) return c(u.default.Messages.STREAM_BAD_STREAMER, "Packet Loss");
+                    if (e.frameRate <= o(t)) return c(u.default.Messages.STREAM_BAD_STREAMER, "Frame Rate Encode")
                 } else {
-                    if (100 * e.packetLossRate > 10) return c(o.default.Messages.STREAM_BAD_SPECTATOR, "Packet Loss");
-                    if (e.frameRate <= u(t)) return c(o.default.Messages.STREAM_BAD_SPECTATOR, "Frame Rate Decode")
+                    if (100 * e.packetLossRate > 10) return c(u.default.Messages.STREAM_BAD_SPECTATOR, "Packet Loss");
+                    if (e.frameRate <= o(t)) return c(u.default.Messages.STREAM_BAD_SPECTATOR, "Frame Rate Decode")
                 }
                 return null
             }
 
             function h(e, t, n, a) {
-                if (n) return c(o.default.Messages.STREAM_SOUNDSHARE_FAILED, "Soundshare Failed");
+                if (n) return c(u.default.Messages.STREAM_SOUNDSHARE_FAILED, "Soundshare Failed");
                 if (null != t) {
                     let e = d(t, 5),
                         n = d(t, 30);
@@ -69,5 +69,5 @@
                         return null !== (l = f(e, null == a ? void 0 : a.maxFrameRate)) && void 0 !== l ? l : f(n, null == a ? void 0 : a.maxFrameRate)
                     }
                 }
-                return e === r.RTCConnectionQuality.BAD ? c(o.default.Messages.STREAM_NETWORK_QUALITY_ERROR, "Bad Connection") : null
+                return e === r.RTCConnectionQuality.BAD ? c(u.default.Messages.STREAM_NETWORK_QUALITY_ERROR, "Bad Connection") : null
             }

@@ -23,19 +23,19 @@
                     className: h,
                     selectable: E = !1,
                     onFocus: _,
-                    onBlur: I,
-                    onMouseOver: p,
+                    onBlur: p,
+                    onMouseOver: I,
                     onMouseLeave: T,
                     ...C
                 } = e, [S, N] = l.useState(!1), g = l.useCallback(() => {
                     N(!0), null == _ || _()
                 }, [_]), v = l.useCallback(() => {
-                    N(!1), null == I || I()
-                }, [I]), m = l.useCallback(() => {
-                    N(!0), null == p || p()
-                }, [p]), L = l.useCallback(() => {
+                    N(!1), null == p || p()
+                }, [p]), m = l.useCallback(() => {
+                    N(!0), null == I || I()
+                }, [I]), A = l.useCallback(() => {
                     N(!1), null == T || T()
-                }, [T]), A = l.useMemo(() => {
+                }, [T]), L = l.useMemo(() => {
                     if (t.type === u.ApplicationCommandSectionType.APPLICATION) {
                         var e;
                         return o.default.getApplicationIconURL({
@@ -57,7 +57,7 @@
                     onFocus: g,
                     onBlur: v,
                     onMouseOver: m,
-                    onMouseLeave: L,
+                    onMouseLeave: A,
                     children: (0, i.jsx)(a.default, {
                         className: d.mask,
                         mask: E && (n || S) ? a.MaskIDs.SQUIRCLE : a.MaskIDs.AVATAR_DEFAULT,
@@ -70,7 +70,7 @@
                                 width: r,
                                 height: f
                             },
-                            src: A
+                            src: L
                         })
                     })
                 })

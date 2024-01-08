@@ -5,17 +5,17 @@
                 }
             });
             var a = n("37983"),
-                i = n("884691"),
-                r = n("77078"),
+                r = n("884691"),
+                i = n("77078"),
                 l = n("390236"),
                 u = n("292508"),
                 o = n("383294"),
                 s = n("913452"),
                 d = n("533466"),
                 c = n("49111"),
-                f = n("268333");
+                p = n("268333");
 
-            function p(e) {
+            function f(e) {
                 let {
                     windowKey: t,
                     channel: n
@@ -25,7 +25,7 @@
                     windowKey: t,
                     title: n.name,
                     channelId: n.id,
-                    contentClassName: f.popoutContent,
+                    contentClassName: p.popoutContent,
                     children: (0, a.jsx)(l.default.Provider, {
                         value: n.guild_id,
                         children: (0, a.jsx)(d.default, {
@@ -37,8 +37,8 @@
 
             function h(e, t) {
                 let n = (0, s.useOpenInPopoutExperiment)(t),
-                    l = i.useCallback(() => {
-                        o.open("".concat(c.PopoutWindowKeys.CHANNEL_POPOUT, "-").concat(e.id), t => (0, a.jsx)(p, {
+                    l = r.useCallback(() => {
+                        o.open("".concat(c.PopoutWindowKeys.CHANNEL_POPOUT, "-").concat(e.id), t => (0, a.jsx)(f, {
                             windowKey: t,
                             channel: e
                         }), {
@@ -46,7 +46,7 @@
                             defaultHeight: 480
                         })
                     }, [e]);
-                return n ? (0, a.jsx)(r.MenuItem, {
+                return n ? (0, a.jsx)(i.MenuItem, {
                     id: "channel-pop-out",
                     label: "Open in Popout",
                     action: () => l()

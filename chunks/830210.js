@@ -8,14 +8,14 @@
                 }
             });
             var a = n("446674"),
-                i = n("305961"),
-                r = n("316133"),
+                r = n("305961"),
+                i = n("316133"),
                 l = n("49111");
 
             function u(e) {
-                return (0, a.useStateFromStoresObject)([r.default, i.default], () => {
-                    let t = r.default.countVoiceStatesForChannel(e.id),
-                        n = i.default.getGuild(e.getGuildId());
+                return (0, a.useStateFromStoresObject)([i.default, r.default], () => {
+                    let t = i.default.countVoiceStatesForChannel(e.id),
+                        n = r.default.getGuild(e.getGuildId());
                     return null == n ? {
                         reachedLimit: !1,
                         limit: -1
@@ -30,8 +30,8 @@
             }
 
             function o(e) {
-                let t = r.default.countVoiceStatesForChannel(e.id),
-                    n = i.default.getGuild(e.getGuildId());
+                let t = i.default.countVoiceStatesForChannel(e.id),
+                    n = r.default.getGuild(e.getGuildId());
                 return null == n ? {
                     reachedLimit: !1,
                     limit: -1

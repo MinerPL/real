@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("917351"),
-                o = n("907002"),
-                u = n("77078"),
+                u = n("907002"),
+                o = n("77078"),
                 d = n("430568"),
                 c = n("252744"),
                 f = n("788506"),
@@ -19,8 +19,8 @@
                 m = n("986632"),
                 E = n("252931"),
                 C = n("882641"),
-                g = n("476765"),
-                S = n("837899"),
+                S = n("476765"),
+                g = n("837899"),
                 _ = n("402671"),
                 I = n("449008"),
                 T = n("99795"),
@@ -38,11 +38,11 @@
                 } = e, r = l.useRef(null), f = (0, c.default)(r);
                 return (0, a.jsx)("span", {
                     ref: r,
-                    children: (0, a.jsx)(u.Button, {
+                    children: (0, a.jsx)(o.Button, {
                         onClick: s,
-                        look: u.Button.Looks.BLANK,
-                        size: u.Button.Sizes.NONE,
-                        children: (0, a.jsx)(o.Spring, {
+                        look: o.Button.Looks.BLANK,
+                        size: o.Button.Sizes.NONE,
+                        children: (0, a.jsx)(u.Spring, {
                             config: C.EMOJI_BUTTON_SPRING_CONFIG,
                             from: {
                                 value: 0
@@ -54,7 +54,7 @@
                                 let {
                                     value: l
                                 } = e;
-                                return (0, a.jsx)(o.animated.div, {
+                                return (0, a.jsx)(u.animated.div, {
                                     style: {
                                         transform: l.to([0, 1], [1, 1.14]).to(e => "scale(".concat(e, ")"))
                                     },
@@ -81,12 +81,12 @@
                     onFocus: s
                 } = e;
                 return (0, a.jsxs)(a.Fragment, {
-                    children: [t, (0, a.jsx)(u.Clickable, {
+                    children: [t, (0, a.jsx)(o.Clickable, {
                         className: N.dropDownContainer,
                         onClick: () => {
                             l(!n), s()
                         },
-                        children: (0, a.jsx)(S.default, {
+                        children: (0, a.jsx)(g.default, {
                             className: i(N.dropDown, {
                                 [N.dropDownOpen]: n
                             })
@@ -100,14 +100,14 @@
                     channel: t,
                     title: n,
                     closePopout: s,
-                    onFocus: o,
+                    onFocus: u,
                     onSelectEmoji: d,
                     onSelectDisabledEmoji: c,
                     onExpandedToggle: p,
                     emojiSearchProps: C,
-                    recentlyUsedEmojis: S,
+                    recentlyUsedEmojis: g,
                     analyticsOverride: I
-                } = e, L = (0, g.useUID)(), [O, y] = l.useState(!1), {
+                } = e, L = (0, S.useUID)(), [O, y] = l.useState(!1), {
                     viewAndUseEnabled: b
                 } = (0, E.useInventoryGuildPacksUserExperiment)({
                     autoTrackExposure: !1
@@ -117,7 +117,7 @@
                     intention: A,
                     canViewAndUsePackEmoji: b
                 })).slice(0, T.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT);
-                null != S && S.length > 0 && D.splice(D.length - 1, 1, S[0]);
+                null != g && g.length > 0 && D.splice(D.length - 1, 1, g[0]);
                 let U = e => {
                         y(e), null == p || p(e)
                     },
@@ -129,12 +129,12 @@
                         null != e && d(e);
                         U(!t), t && m.EmojiPickerStore.setSearchPlaceholder(null)
                     };
-                return (0, a.jsxs)(u.Dialog, {
+                return (0, a.jsxs)(o.Dialog, {
                     "aria-labelledby": L,
-                    children: [(0, a.jsx)(u.HeadingLevel, {
+                    children: [(0, a.jsx)(o.HeadingLevel, {
                         forceLevel: 2,
-                        children: (0, a.jsx)(u.HiddenVisually, {
-                            children: (0, a.jsx)(u.H, {
+                        children: (0, a.jsx)(o.HiddenVisually, {
+                            children: (0, a.jsx)(o.H, {
                                 id: L,
                                 children: n
                             })
@@ -161,7 +161,7 @@
                                     otherAccessories: null == C ? void 0 : C.accessory,
                                     isEmojiPickerExpanded: O,
                                     onSetExpanded: U,
-                                    onFocus: o
+                                    onFocus: u
                                 }),
                                 onKeyDown: e => {
                                     null != e && e.key !== x.KeyboardKeysUpdated.TAB && (e.key !== x.KeyboardKeysUpdated.ENTER || e.shiftKey ? U(!0) : U(!O))
@@ -180,12 +180,12 @@
                                     });
                                     return (0, a.jsx)("div", {
                                         className: N.slot,
-                                        children: (0, a.jsx)(u.TooltipContainer, {
+                                        children: (0, a.jsx)(o.TooltipContainer, {
                                             text: e.name,
                                             position: "top",
                                             "aria-label": e.name,
                                             tooltipClassName: N.tooltipContainer,
-                                            color: u.Tooltip.Colors.BRAND,
+                                            color: o.Tooltip.Colors.BRAND,
                                             children: (0, a.jsx)(R, {
                                                 emoji: e,
                                                 isDisabled: n,

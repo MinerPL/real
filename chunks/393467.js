@@ -9,8 +9,8 @@
                 s = n("513688");
             let i = [],
                 r = {},
-                o = {};
-            class u extends a.default.Store {
+                u = {};
+            class o extends a.default.Store {
                 getSearchState(e) {
                     var t;
                     return null !== (t = r[e]) && void 0 !== t ? t : {
@@ -20,16 +20,16 @@
                 }
                 getSearchResults(e, t) {
                     var n, a, l;
-                    return null !== (l = null === (a = o[e]) || void 0 === a ? void 0 : null === (n = a[t]) || void 0 === n ? void 0 : n.results) && void 0 !== l ? l : i
+                    return null !== (l = null === (a = u[e]) || void 0 === a ? void 0 : null === (n = a[t]) || void 0 === n ? void 0 : n.results) && void 0 !== l ? l : i
                 }
                 shouldFetch(e, t) {
                     var n, a;
-                    let l = null === (a = o[e]) || void 0 === a ? void 0 : null === (n = a[t]) || void 0 === n ? void 0 : n.lastSearchedAt;
+                    let l = null === (a = u[e]) || void 0 === a ? void 0 : null === (n = a[t]) || void 0 === n ? void 0 : n.lastSearchedAt;
                     return null == l || Date.now() - l > 12e4
                 }
             }
-            u.displayName = "GuildDirectorySearchStore";
-            var d = new u(l.default, {
+            o.displayName = "GuildDirectorySearchStore";
+            var d = new o(l.default, {
                 GUILD_DIRECTORY_SEARCH_START: function(e) {
                     let {
                         channelId: t,
@@ -54,8 +54,8 @@
                     a.forEach(e => {
                         let t = (0, s.guildDirectoryEntryFromServer)(e);
                         l.push(t)
-                    }), o[t] = {
-                        ...o[t],
+                    }), u[t] = {
+                        ...u[t],
                         [n]: {
                             results: (0, s.orderByTotalMemberCount)(l),
                             lastSearchedAt: Date.now()
@@ -97,11 +97,11 @@
                         guildId: a
                     } = e, l = null === (t = r[n]) || void 0 === t ? void 0 : t.mostRecentQuery;
                     if (null == l) return;
-                    let s = o[n][l];
+                    let s = u[n][l];
                     if (null == s) return;
                     let i = s.results.filter(e => e.guildId !== a);
-                    o[n] = {
-                        ...o[n],
+                    u[n] = {
+                        ...u[n],
                         [r[n].mostRecentQuery]: {
                             ...s,
                             results: i

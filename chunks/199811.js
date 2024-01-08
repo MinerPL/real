@@ -10,8 +10,8 @@
                 s = n.n(l),
                 i = n("446674"),
                 r = n("77078"),
-                o = n("244201"),
-                u = n("191145"),
+                u = n("244201"),
+                o = n("191145"),
                 d = n("769928"),
                 c = n("321135"),
                 f = n("976074"),
@@ -20,8 +20,8 @@
                 m = n("625399"),
                 E = n("47495"),
                 C = n("42203"),
-                g = n("957255"),
-                S = n("751661"),
+                S = n("957255"),
+                g = n("751661"),
                 _ = n("923510"),
                 I = n("834052"),
                 T = n("99795"),
@@ -33,7 +33,7 @@
                     closePopout: n,
                     appContext: l,
                     onSelect: x
-                } = e, N = (0, i.useStateFromStores)([u.default], () => u.default.getSelectedParticipant(t)), A = (null == N ? void 0 : N.type) === T.ParticipantTypes.STREAM ? N.stream : null, M = (0, h.default)(t);
+                } = e, N = (0, i.useStateFromStores)([o.default], () => o.default.getSelectedParticipant(t)), A = (null == N ? void 0 : N.type) === T.ParticipantTypes.STREAM ? N.stream : null, M = (0, h.default)(t);
                 return (0, a.jsxs)(r.Menu, {
                     navId: "stage-channel-call-overflow-popout",
                     onClose: n,
@@ -41,18 +41,18 @@
                     onSelect: x,
                     children: [function(e) {
                         let t = (0, i.useStateFromStores)([C.default], () => C.default.getChannel(e), [e]),
-                            n = (0, i.useStateFromStores)([g.default], () => g.default.can(_.MODERATE_STAGE_CHANNEL_PERMISSIONS, t)),
+                            n = (0, i.useStateFromStores)([S.default], () => S.default.can(_.MODERATE_STAGE_CHANNEL_PERMISSIONS, t)),
                             l = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(e), [e]),
-                            s = (0, o.useAppContext)(),
-                            u = () => null != t && (0, S.openStageChannelSettings)(t, s);
+                            s = (0, u.useAppContext)(),
+                            o = () => null != t && (0, g.openStageChannelSettings)(t, s);
                         return (null == t ? void 0 : t.isGuildStageVoice()) && n ? null != l ? (0, a.jsx)(r.MenuItem, {
                             id: "edit-stage",
                             label: v.default.Messages.EDIT_STAGE_SUBTITLE,
-                            action: u
+                            action: o
                         }) : (0, a.jsx)(r.MenuItem, {
                             id: "start-stage",
                             label: v.default.Messages.STAGE_CHANNEL_START_TITLE,
-                            action: u
+                            action: o
                         }) : null
                     }(t), function(e) {
                         let t = (0, i.useStateFromStores)([C.default], () => C.default.getChannel(e), [e]);
