@@ -1,11 +1,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 useGuildEventModalStore: function() {
-                    return s
+                    return u
                 }
             });
-            var i = n("308503");
-            let s = (0, i.default)(e => ({
+            var l = n("308503");
+            let u = (0, l.default)(e => ({
                 canCloseModal: !0,
                 onUpdateCanCloseModal(t) {
                     e({
