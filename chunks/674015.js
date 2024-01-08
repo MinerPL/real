@@ -4,9 +4,9 @@
                     return l
                 }
             });
-            var s = n("446674"),
-                a = n("288518");
+            var a = n("446674"),
+                s = n("288518");
 
             function l(e) {
-                return (0, s.useStateFromStores)([a.default], () => a.default.isMessageRequest(e), [e])
+                return (0, a.useStateFromStores)([s.default], () => s.default.isMessageRequest(e), [e])
             }

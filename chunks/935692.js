@@ -4,9 +4,9 @@
                     return u
                 }
             });
-            var s, a, l = n("446674"),
+            var a, s, l = n("446674"),
                 i = n("913144");
-            (s = a || (a = {})).FAILED = "failed", s.SUCCEEDED = "succeeded";
+            (a = s || (s = {})).FAILED = "failed", a.SUCCEEDED = "succeeded";
             let r = {};
             class o extends l.default.Store {
                 getFollowerStatsForChannel(e) {

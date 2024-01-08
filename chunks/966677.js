@@ -141,7 +141,7 @@
                                 timestamp: o
                             }), (0, n.jsx)(c.Heading, {
                                 variant: "heading-lg/normal",
-                                children: null !== s.guild_metadata ? N.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION_GUILD.format({
+                                children: null != s.guild_metadata ? N.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION_GUILD.format({
                                     guildName: null == s ? void 0 : null === (e = s.guild_metadata) || void 0 === e ? void 0 : e.guild_name,
                                     description: r,
                                     descriptionHook: t => (0, n.jsx)(c.Text, {

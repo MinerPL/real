@@ -16,7 +16,7 @@
                     return w
                 },
                 default: function() {
-                    return W
+                    return X
                 }
             }), n("70102");
             var i, o, l = n("102457"),
@@ -34,22 +34,22 @@
                 S = n("242149"),
                 I = n("714208"),
                 f = n("24312"),
-                N = n("30269"),
-                O = n("709079"),
+                O = n("30269"),
+                N = n("709079"),
                 L = n("356410"),
                 D = n("271524"),
                 R = n("333949"),
                 p = n("945924"),
                 h = n("648900"),
-                b = n("838021"),
-                G = n("745991"),
+                G = n("838021"),
+                b = n("745991"),
                 g = n("640968"),
                 M = n("347445"),
                 P = n("992642"),
                 U = n("200431"),
                 m = n("493334"),
-                y = n("809392"),
-                K = n("202035"),
+                K = n("809392"),
+                y = n("202035"),
                 H = n("49111"),
                 B = n("782340");
 
@@ -106,33 +106,33 @@
                 [H.KeybindActions.TEXTAREA_FOCUS]: p.TEXTAREA_FOCUS,
                 [H.KeybindActions.MARK_CHANNEL_READ]: A.MARK_CHANNEL_READ,
                 [H.KeybindActions.MARK_SERVER_READ]: c.MARK_SERVER_READ,
-                [H.KeybindActions.TOGGLE_CHANNEL_PINS]: G.TOGGLE_CHANNEL_PINS,
+                [H.KeybindActions.TOGGLE_CHANNEL_PINS]: b.TOGGLE_CHANNEL_PINS,
                 [H.KeybindActions.TOGGLE_INBOX_UNREADS_TAB]: P.TOGGLE_INBOX_UNREADS_TAB,
                 [H.KeybindActions.MARK_TOP_INBOX_CHANNEL_READ]: P.MARK_TOP_INBOX_CHANNEL_READ,
                 [H.KeybindActions.TOGGLE_USERS]: U.TOGGLE_USERS,
                 [H.KeybindActions.TOGGLE_HELP]: g.TOGGLE_HELP,
                 [H.KeybindActions.TOGGLE_MUTE]: h.TOGGLE_MUTE,
                 [H.KeybindActions.TOGGLE_DEAFEN]: h.TOGGLE_DEAFEN,
-                [H.KeybindActions.TOGGLE_CATEGORY_COLLAPSED]: b.TOGGLE_CATEGORY_COLLAPSED,
+                [H.KeybindActions.TOGGLE_CATEGORY_COLLAPSED]: G.TOGGLE_CATEGORY_COLLAPSED,
                 [H.KeybindActions.SCROLL_UP]: f.SCROLL_UP,
                 [H.KeybindActions.SCROLL_DOWN]: f.SCROLL_DOWN,
                 [H.KeybindActions.QUICKSWITCHER_SHOW]: S.QUICKSWITCHER_SHOW,
                 [H.KeybindActions.CREATE_DM_GROUP]: u.CREATE_DM_GROUP,
-                [H.KeybindActions.SEARCH_EMOJIS]: N.SEARCH_EMOJIS,
-                [H.KeybindActions.SEARCH_GIFS]: O.SEARCH_GIFS,
+                [H.KeybindActions.SEARCH_EMOJIS]: O.SEARCH_EMOJIS,
+                [H.KeybindActions.SEARCH_GIFS]: N.SEARCH_GIFS,
                 [H.KeybindActions.SEARCH_STICKERS]: L.SEARCH_STICKERS,
                 [H.KeybindActions.TOGGLE_HOTKEYS]: M.TOGGLE_HOTKEYS,
                 [H.KeybindActions.JUMP_TO_FIRST_UNREAD]: C.JUMP_TO_FIRST_UNREAD,
                 [H.KeybindActions.CREATE_GUILD]: d.CREATE_GUILD,
-                [H.KeybindActions.UPLOAD_FILE]: y.UPLOAD_FILE,
+                [H.KeybindActions.UPLOAD_FILE]: K.UPLOAD_FILE,
                 [H.KeybindActions.RETURN_TO_AUDIO_CHANNEL]: I.RETURN_TO_AUDIO_CHANNEL,
                 [H.KeybindActions.CALL_ACCEPT]: l.CALL_ACCEPT,
                 [H.KeybindActions.CALL_START]: l.CALL_START,
                 [H.KeybindActions.FOCUS_SEARCH]: E.FOCUS_SEARCH,
                 [H.KeybindActions.JUMP_TO_CURRENT_CALL]: r.JUMP_TO_CURRENT_CALL,
-                [H.KeybindActions.ZOOM_IN]: K.ZOOM_IN,
-                [H.KeybindActions.ZOOM_OUT]: K.ZOOM_OUT,
-                [H.KeybindActions.ZOOM_RESET]: K.ZOOM_RESET,
+                [H.KeybindActions.ZOOM_IN]: y.ZOOM_IN,
+                [H.KeybindActions.ZOOM_OUT]: y.ZOOM_OUT,
+                [H.KeybindActions.ZOOM_RESET]: y.ZOOM_RESET,
                 [H.KeybindActions.OPEN_APP_DIRECTORY]: T.OPEN_APP_DIRECTORY,
                 [H.KeybindActions.BROWSER_DEVTOOLS]: s.BROWSER_DEVTOOLS
             };
@@ -318,4 +318,4 @@
                     groupEnd: !0
                 }]
             }
-            var W = Y
+            var X = Y
