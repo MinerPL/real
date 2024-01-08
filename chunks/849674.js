@@ -12,7 +12,7 @@
                 o = l("327037"),
                 u = l("875212"),
                 d = l("619935"),
-                c = l("805172"),
+                c = l("411691"),
                 f = l("509802"),
                 m = l("697218"),
                 p = l("217513"),
@@ -30,13 +30,11 @@
                     location: T + "auto off",
                     autoTrackExposure: !1
                 });
-                let {
-                    marketingEnabled: h
-                } = (0, c.default)({
-                    location: T
-                }), {
-                    upsellSource: _
-                } = (0, E.useUserPopoutCollectiblesUpsellStore)(), S = (0, i.default)([m.default], () => m.default.getCurrentUser());
+                let h = (0, c.default)(T),
+                    {
+                        upsellSource: _
+                    } = (0, E.useUserPopoutCollectiblesUpsellStore)(),
+                    S = (0, i.default)([m.default], () => m.default.getCurrentUser());
                 s(null != S, "currentUser should not be null");
                 let I = (0, d.useBlockedPaymentsConfig)(),
                     g = (0, p.default)(S.id, a),
@@ -44,14 +42,14 @@
                 n.useEffect(() => {
                     null == g && (0, o.fetchProfile)(S.id)
                 }, [g, S]);
-                let v = h && (null == S ? void 0 : S.id) !== t.id && !I && !(null != _ && _ !== l),
+                let v = h !== c.CollectiblesShopMarketingVariants.DEFAULT && (null == S ? void 0 : S.id) !== t.id && !I && !(null != _ && _ !== l),
                     C = v && (null == S ? void 0 : S.avatarDecoration) == null && (null == t ? void 0 : t.avatarDecoration) != null,
                     N = v && null != g && null == g.profileEffectId && (null == A ? void 0 : A.profileEffectId) != null,
-                    [y, M] = (0, f.useDismissibleContentGroup)(C || N ? [r.DismissibleContent.SHOP_FOR_ALL_USER_POPOUT_UPSELL] : [], void 0, !0);
+                    [y, O] = (0, f.useDismissibleContentGroup)(C || N ? [r.DismissibleContent.SHOP_FOR_ALL_USER_POPOUT_UPSELL] : [], void 0, !0);
                 return {
                     shouldShow: y === r.DismissibleContent.SHOP_FOR_ALL_USER_POPOUT_UPSELL,
                     canShowAvatarDecorationUpsell: C,
                     canShowProfileEffectUpsell: N,
-                    onDismiss: M
+                    onDismiss: O
                 }
             }

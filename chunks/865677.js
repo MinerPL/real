@@ -28,8 +28,8 @@
                 C = l("953998"),
                 N = l("535974"),
                 y = l("773336"),
-                M = l("602043"),
-                O = l("191225"),
+                O = l("602043"),
+                M = l("191225"),
                 x = l("706508"),
                 R = l("612696"),
                 L = l("126808"),
@@ -58,13 +58,13 @@
                     channelId: H,
                     userId: V.id,
                     activity: t
-                }), J = (0, s.useStateFromStores)([A.default], () => A.default.getCurrentUser()), Q = (0, s.useStateFromStores)([_.default, m.default, N.default, E.default], () => W || (null == t ? void 0 : t.application_id) != null && (0, M.isLaunchable)({
+                }), J = (0, s.useStateFromStores)([A.default], () => A.default.getCurrentUser()), Q = (0, s.useStateFromStores)([_.default, m.default, N.default, E.default], () => W || (null == t ? void 0 : t.application_id) != null && (0, O.isLaunchable)({
                     LibraryApplicationStore: _.default,
                     LaunchableGameStore: m.default,
                     DispatchApplicationStore: N.default,
                     ConnectedAppsStore: E.default,
                     applicationId: t.application_id
-                })), q = (0, s.useStateFromStores)([O.default], () => Array.from(O.default.getSelfEmbeddedActivities().values()).some(e => {
+                })), q = (0, s.useStateFromStores)([M.default], () => Array.from(M.default.getSelfEmbeddedActivities().values()).some(e => {
                     let {
                         application_id: l,
                         channelId: n

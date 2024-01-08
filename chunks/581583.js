@@ -31,8 +31,8 @@
                 C = l("697218"),
                 N = l("145131"),
                 y = l("476765"),
-                M = l("945330"),
-                O = l("907566"),
+                O = l("945330"),
+                M = l("907566"),
                 x = l("151185"),
                 R = l("483093"),
                 L = l("991170"),
@@ -62,7 +62,7 @@
                     }), (0, n.jsxs)(N.default, {
                         className: U.overflowRolesPopoutHeader,
                         align: N.default.Align.CENTER,
-                        children: [(0, n.jsx)(O.default, {
+                        children: [(0, n.jsx)(M.default, {
                             color: m.default.unsafe_rawColors.PRIMARY_400.css,
                             className: U.overflowRolesPopoutHeaderIcon
                         }), (0, n.jsx)("div", {
@@ -92,7 +92,7 @@
                     onMouseDown: N
                 } = e, {
                     tabIndex: y,
-                    ...O
+                    ...M
                 } = (0, d.useListItem)(g.id), x = (0, I.useRoleIcon)({
                     roleId: g.id,
                     size: 16,
@@ -138,7 +138,7 @@
                         onMouseDown: N,
                         "aria-label": g.name,
                         tabIndex: y,
-                        ...O,
+                        ...M,
                         children: [(0, n.jsxs)(p.Clickable, {
                             className: U.roleRemoveButton,
                             onClick: T ? A : void 0,
@@ -150,7 +150,7 @@
                             "aria-label": D.default.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({
                                 roleName: g.name
                             }),
-                            children: [u, T ? (0, n.jsx)(M.default, {
+                            children: [u, T ? (0, n.jsx)(O.default, {
                                 color: G,
                                 className: U.roleRemoveIcon,
                                 "aria-hidden": !0
@@ -265,7 +265,7 @@
                         return a && !s ? 1 : !a && s ? -1 : 0
                     });
                     return null != A ? e.slice(0, A) : e
-                }, [s.roles, A, r]), M = r.length - y.length;
+                }, [s.roles, A, r]), O = r.length - y.length;
                 a.useLayoutEffect(() => {
                     if (c) return;
                     if ("number" != typeof f) throw Error("Unexpected null width");
@@ -282,10 +282,10 @@
                     }
                     N(t => e < y.length ? e : t)
                 }, [c, f, y]);
-                let O = C.default.getCurrentUser();
-                o(null != O, "MemberRolesList: currentUser cannot be undefined");
+                let M = C.default.getCurrentUser();
+                o(null != M, "MemberRolesList: currentUser cannot be undefined");
                 let x = !p && v.default.can(b.Permissions.MANAGE_ROLES, s),
-                    R = L.default.getHighestRole(s, O.id),
+                    R = L.default.getHighestRole(s, M.id),
                     P = a.useMemo(() => "roles-".concat((0, u.v4)()), []),
                     F = (0, d.default)({
                         id: P,
@@ -299,7 +299,7 @@
                         return (0, n.jsx)(w, {
                             className: E,
                             role: e,
-                            canRemove: x && L.default.isRoleHigher(s, O.id, R, e) || (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null && l.id === O.id,
+                            canRemove: x && L.default.isRoleHigher(s, M.id, R, e) || (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null && l.id === M.id,
                             onRemove: () => S(e),
                             ref: t => {
                                 var l, n;
@@ -309,9 +309,9 @@
                             disableBorderColor: h
                         }, e.id)
                     });
-                return null != A && 0 !== M ? t = (0, n.jsx)(G, {
+                return null != A && 0 !== O ? t = (0, n.jsx)(G, {
                     ...e,
-                    numRolesHidden: M
+                    numRolesHidden: O
                 }) : x && (t = (0, n.jsx)(k, {
                     ...e,
                     handleAddRole: I

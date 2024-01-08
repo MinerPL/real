@@ -25,8 +25,8 @@
                 N = s("982784"),
                 A = s("19530"),
                 g = s("215541"),
-                P = s("663411"),
-                C = s("126304"),
+                C = s("663411"),
+                P = s("126304"),
                 O = s("674065"),
                 M = s("771116"),
                 L = s("309920"),
@@ -153,7 +153,7 @@
                         superReactions: {
                             title: c.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION,
-                            imageSource: y(s, P, C),
+                            imageSource: y(s, C, P),
                             imageClassName: t.superReactionsImage
                         },
                         upload: {

@@ -13,7 +13,7 @@
                 u = s.n(i),
                 o = s("65597"),
                 d = s("77078"),
-                c = s("805172"),
+                c = s("411691"),
                 _ = s("521012"),
                 E = s("719923"),
                 I = s("367226"),
@@ -46,11 +46,7 @@
                     variant: s = "perks_discoverability",
                     noBackground: a = !1,
                     leftAlignHeaders: n = !1
-                } = e, i = l.useRef(null), o = (0, I.useShouldScrollToWhatsNew)(), {
-                    marketingEnabled: _
-                } = (0, c.default)({
-                    location: "perks-discoverability"
-                });
+                } = e, i = l.useRef(null), o = (0, I.useShouldScrollToWhatsNew)(), _ = (0, c.default)("perks-discoverability");
                 (0, I.useClearNewBadge)();
                 let E = "whats_new" === s;
                 l.useEffect(() => {
@@ -71,7 +67,7 @@
                         N = [S.profiles, S.clientThemes, S.serverBoosts];
                         break;
                     case "whats_new":
-                        N = [S.earlyAccess, _ ? S.specialShopPerks : S.specialMemberPricing, S.unlimitedSuperReactions]
+                        N = [S.earlyAccess, _ !== c.CollectiblesShopMarketingVariants.DEFAULT ? S.specialShopPerks : S.specialMemberPricing, S.unlimitedSuperReactions]
                 }
                 let A = N.some(e => null != e.pillText);
                 return (0, r.jsxs)("div", {

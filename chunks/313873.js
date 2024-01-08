@@ -29,8 +29,8 @@
                 C = l("342845"),
                 N = l("239380"),
                 y = l("118033"),
-                M = l("315102"),
-                O = l("568734"),
+                O = l("315102"),
+                M = l("568734"),
                 x = l("474293"),
                 R = l("339521"),
                 L = l("145131"),
@@ -137,7 +137,7 @@
                     }
                     if (null != n) {
                         var c;
-                        t = (0, O.hasFlag)(null !== (c = null == u ? void 0 : u.flags) && void 0 !== c ? c : 0, F.ActivityFlags.EMBEDDED) ? u.type === F.ActivityTypes.WATCHING ? G.default.Messages.EMBEDDED_ACTIVITIES_WATCHING_IN_GUILD.format({
+                        t = (0, M.hasFlag)(null !== (c = null == u ? void 0 : u.flags) && void 0 !== c ? c : 0, F.ActivityFlags.EMBEDDED) ? u.type === F.ActivityTypes.WATCHING ? G.default.Messages.EMBEDDED_ACTIVITIES_WATCHING_IN_GUILD.format({
                             guildName: n.name
                         }) : G.default.Messages.EMBEDDED_ACTIVITIES_PLAYING_IN_GUILD.format({
                             guildName: n.name
@@ -210,7 +210,7 @@
                             width: w.ImageSizes.SMALL,
                             height: w.ImageSizes.SMALL,
                             children: (0, s.jsx)("img", {
-                                src: null !== (n = M.default.getGuildIconURL({
+                                src: null !== (n = O.default.getGuildIconURL({
                                     id: t.guildId,
                                     icon: d.small_image,
                                     size: w.ImageSizes.SMALL

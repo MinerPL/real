@@ -25,8 +25,8 @@
                 N = s("299285"),
                 A = s("69927"),
                 g = s("791160"),
-                P = s("661579"),
-                C = s("539938"),
+                C = s("661579"),
+                P = s("539938"),
                 O = s("393414"),
                 M = s("915639"),
                 L = s("161778"),
@@ -169,28 +169,28 @@
                         channel: s,
                         isAuthenticated: r
                     } = this.props;
-                    return (0, a.jsx)(C.default, {
+                    return (0, a.jsx)(P.default, {
                         isAuthenticated: r,
                         toolbar: this.renderHeaderToolbar(e, t),
                         children: null != s ? (0, a.jsxs)(n.Fragment, {
-                            children: [(0, a.jsx)(C.default.Icon, {
+                            children: [(0, a.jsx)(P.default.Icon, {
                                 icon: W.default,
                                 "aria-label": ec.default.Messages.STORE_CHANNEL
-                            }), (0, a.jsx)(C.default.Title, {
+                            }), (0, a.jsx)(P.default.Title, {
                                 children: s.name
                             })]
                         }) : null != t && t.premium ? (0, a.jsxs)(n.Fragment, {
-                            children: [(0, a.jsx)(C.default.Icon, {
+                            children: [(0, a.jsx)(P.default.Icon, {
                                 icon: F.default,
                                 "aria-label": ec.default.Messages.PREMIUM
                             }), (0, a.jsx)(en.default, {
                                 sku: t
                             })]
                         }) : null != t ? (0, a.jsxs)(n.Fragment, {
-                            children: [(0, a.jsx)(C.default.Icon, {
+                            children: [(0, a.jsx)(P.default.Icon, {
                                 icon: W.default,
                                 "aria-label": ec.default.Messages.STORE_CHANNEL
-                            }), (0, a.jsx)(C.default.Title, {
+                            }), (0, a.jsx)(P.default.Title, {
                                 children: t.name
                             })]
                         }) : null
@@ -548,7 +548,7 @@
                                     className: l(e_.headerPurchase, {
                                         [e_.active]: o
                                     }),
-                                    children: [null != t ? (0, P.default)(t) : null, null != e && null != t ? (0, a.jsx)(f.default, {
+                                    children: [null != t ? (0, C.default)(t) : null, null != e && null != t ? (0, a.jsx)(f.default, {
                                         wrapperClassName: e_.headerActionButton,
                                         applicationId: e.id,
                                         skuId: t.id,

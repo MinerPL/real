@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return P
+                    return C
                 }
             });
             var a = s("37983"),
@@ -140,4 +140,4 @@
                     })
                 }
             }
-            var P = g
+            var C = g

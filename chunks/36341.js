@@ -51,7 +51,7 @@
                         }), !0
                     }
                     e.which === I.KeyboardKeys.SPACE && e.stopPropagation()
-                }, [s, t]), M = N ? g.default.Messages.QUICK_DM_BLOCKED : g.default.Messages.QUICK_DM_USER.format({
+                }, [s, t]), O = N ? g.default.Messages.QUICK_DM_BLOCKED : g.default.Messages.QUICK_DM_USER.format({
                     name: _.default.getName(t)
                 });
                 return (0, n.jsx)(d.TextInput, {
@@ -59,8 +59,8 @@
                     inputClassName: i(v, A.input),
                     inputRef: C,
                     autoFocus: l,
-                    placeholder: M,
-                    "aria-label": M,
+                    placeholder: O,
+                    "aria-label": O,
                     onKeyPress: y,
                     disabled: N
                 })

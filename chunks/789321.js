@@ -31,9 +31,9 @@
                 C = l("994428"),
                 N = l("782340"),
                 y = l("304118"),
-                M = l("604689");
+                O = l("604689");
 
-            function O(e) {
+            function M(e) {
                 let {
                     onClick: t
                 } = e;
@@ -71,7 +71,7 @@
                         onClick: l,
                         "aria-label": N.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
                         children: (0, n.jsx)(u.Avatar, {
-                            src: M,
+                            src: O,
                             avatarDecoration: a,
                             size: u.AvatarSizes.SIZE_48,
                             "aria-hidden": !0
@@ -86,7 +86,7 @@
                     onClose: p,
                     onDismiss: E,
                     isInSidebar: g = !1,
-                    canShowAvatarDecorationUpsell: M = !1,
+                    canShowAvatarDecorationUpsell: O = !1,
                     canShowProfileEffectUpsell: P = !1,
                     upsellSource: b
                 } = e, {
@@ -119,8 +119,8 @@
                     K = a.useCallback(() => {
                         null == E || E(C.ContentDismissActionType.DISMISS)
                     }, [E]);
-                if (!M && !P) return null;
-                let Z = (0, r.match)([M, P]).with([!0, !0], () => H && W && k ? N.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
+                if (!O && !P) return null;
+                let Z = (0, r.match)([O, P]).with([!0, !0], () => H && W && k ? N.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NITRO.format({
                     openShop: R
                 }) : H && W ? N.default.Messages.COMBINED_STARTER_COLLECTIBLES_SOCIAL_UPSELL_NON_NITRO.format({
                     openShop: R
@@ -146,11 +146,11 @@
                     ref: j,
                     children: (0, n.jsxs)("div", {
                         className: y.container,
-                        children: [M && (0, n.jsx)(L, {
+                        children: [O && (0, n.jsx)(L, {
                             user: l,
                             onClick: z
                         }), (0, n.jsx)(u.Clickable, {
-                            className: M ? y.contentWithAvatar : y.content,
+                            className: O ? y.contentWithAvatar : y.content,
                             onClick: z,
                             "aria-label": N.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP,
                             children: (0, n.jsx)(u.Text, {
@@ -161,7 +161,7 @@
                             })
                         }), (0, n.jsx)("div", {
                             className: y.buttons,
-                            children: (0, n.jsx)(O, {
+                            children: (0, n.jsx)(M, {
                                 onClick: K
                             })
                         })]

@@ -25,8 +25,8 @@
                 N = s("934570"),
                 A = s("641078"),
                 g = s("400307"),
-                P = s("159646"),
-                C = s("379521"),
+                C = s("159646"),
+                P = s("379521"),
                 O = s("958966"),
                 M = s("830648"),
                 L = s("627474"),
@@ -57,13 +57,13 @@
                     }, []), (0, a.jsxs)("div", {
                         className: j.container,
                         "data-cy": "tier-0-marketing-page",
-                        children: [(0, a.jsx)(P.default, {
+                        children: [(0, a.jsx)(C.default, {
                             premiumSubscription: W,
                             className: l(s ? j.fullscreenExistingSubscriberSpacing : j.existingSubscriberSpacing, {
                                 [j.zIndex1]: q
                             }),
                             isFullscreen: s
-                        }), s || q ? (0, a.jsx)(C.default, {
+                        }), s || q ? (0, a.jsx)(P.default, {
                             lifted: !s && q
                         }) : null, !s && Z ? (0, a.jsx)(N.default, {
                             localizedPricingPromo: z,

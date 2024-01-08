@@ -31,8 +31,8 @@
                         userId: C,
                         channelId: N,
                         guild: y,
-                        theme: M,
-                        onClose: O,
+                        theme: O,
+                        onClose: M,
                         className: x
                     } = e,
                     R = (0, d.default)(y, C, N),
@@ -57,7 +57,7 @@
                     let t = D.find(t => t.type === e);
                     return null == t ? null : (0, n.jsx)(E.ConnectedUserAccount, {
                         connectedAccount: t,
-                        theme: M,
+                        theme: O,
                         locale: F,
                         userId: C
                     }, "".concat(t.type, ":").concat(t.id))
@@ -79,7 +79,7 @@
                                     analyticsLocation: {
                                         section: S.AnalyticsSections.PROFILE_POPOUT
                                     }
-                                }), null == O || O()
+                                }), null == M || M()
                             },
                             className: g.connections,
                             children: [(0, n.jsx)(o.Text, {

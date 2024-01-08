@@ -28,8 +28,8 @@
                 C = l("102985"),
                 N = l("987772"),
                 y = l("164424"),
-                M = l("387111"),
-                O = l("158998"),
+                O = l("387111"),
+                M = l("158998"),
                 x = l("713135"),
                 R = l("765698"),
                 L = l("906889"),
@@ -83,11 +83,11 @@
                     autoTrackExposure: eh
                 }), [eS, eI] = a.useState(!1), [eg, eA] = a.useState(!1), ev = (0, r.useStateFromStores)([I.default], () => I.default.getChannel(er)), eC = (0, r.useStateFromStores)([A.default], () => A.default.can(J.Permissions.USE_CLYDE_AI, ev)), {
                     profileTheme: eN
-                } = (0, L.default)(en, ea), ey = a.useRef(null), [eM, eO] = a.useState(!0), ex = a.useCallback(() => {
+                } = (0, L.default)(en, ea), ey = a.useRef(null), [eO, eM] = a.useState(!0), ex = a.useCallback(() => {
                     let {
                         current: e
                     } = ey;
-                    null != e && eO(0 === e.getScrollerState().scrollTop)
+                    null != e && eM(0 === e.getScrollerState().scrollTop)
                 }, []), eR = (0, f.canEditClydeAIProfile)(es), eL = (0, m.canUseCustomClydeProfiles)(es), eP = (0, r.useStateFromStores)([g.default], () => g.default.isMember(null == es ? void 0 : es.id, en.id));
                 a.useLayoutEffect(() => {
                     var e;
@@ -120,7 +120,7 @@
                     className: q.usernameSection,
                     lastSection: !0
                 });
-                let ek = null !== (t = M.default.getNickname(null == es ? void 0 : es.id, er, en)) && void 0 !== t ? t : O.default.getName(en);
+                let ek = null !== (t = O.default.getNickname(null == es ? void 0 : es.id, er, en)) && void 0 !== t ? t : M.default.getName(en);
                 return (0, n.jsxs)(n.Fragment, {
                     children: [(0, n.jsx)(Z.default, {
                         className: q.usernameSection,
@@ -189,7 +189,7 @@
                             }) : null]
                         }) : null, (0, n.jsxs)(o.AdvancedScroller, {
                             className: i(q.scroller, {
-                                [q.scrollerSeparator]: !eM
+                                [q.scrollerSeparator]: !eO
                             }),
                             onScroll: ex,
                             ref: ey,

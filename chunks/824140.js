@@ -7,7 +7,7 @@
                     return y
                 },
                 ConnectedUserAccounts: function() {
-                    return M
+                    return O
                 }
             }), l("424973");
             var n = l("37983"),
@@ -39,8 +39,8 @@
                     connectedAccount: h,
                     theme: N,
                     locale: y,
-                    userId: M,
-                    className: O,
+                    userId: O,
+                    className: M,
                     showMetadata: x,
                     showInvisibleIcon: R
                 } = e;
@@ -80,7 +80,7 @@
                     href: j,
                     onClick: e => {
                         var t, l;
-                        t = h.type, l = M, (0, f.trackWithMetadata)(g.AnalyticEvents.CONNECTED_ACCOUNT_VIEWED, {
+                        t = h.type, l = O, (0, f.trackWithMetadata)(g.AnalyticEvents.CONNECTED_ACCOUNT_VIEWED, {
                             platform_type: t,
                             other_user_id: l
                         }), (0, I.handleClick)({
@@ -103,7 +103,7 @@
                         tooltipText: D
                     }) : null;
                 return (0, n.jsxs)("div", {
-                    className: i(C.connectedAccountContainer, null != a && a.length > 0 || null != P ? C.connectedAccountContainerWithMetadata : null, O),
+                    className: i(C.connectedAccountContainer, null != a && a.length > 0 || null != P ? C.connectedAccountContainerWithMetadata : null, M),
                     children: [(0, n.jsxs)("div", {
                         className: C.connectedAccount,
                         children: [(0, n.jsx)(u.Tooltip, {
@@ -205,7 +205,7 @@
                     })]
                 })
             }
-            let M = a.forwardRef(function(e, t) {
+            let O = a.forwardRef(function(e, t) {
                 let {
                     connectedAccounts: l,
                     theme: a,

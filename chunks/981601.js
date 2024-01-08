@@ -28,8 +28,8 @@
                 C = l("697218"),
                 N = l("599110"),
                 y = l("713135"),
-                M = l("561845"),
-                O = l("217513"),
+                O = l("561845"),
+                M = l("217513"),
                 x = l("641055"),
                 R = l("430312"),
                 L = l("763866"),
@@ -56,7 +56,7 @@
                     setPopoutRef: B,
                     disableUserProfileLink: Y = __OVERLAY__,
                     analyticsParams: V = {}
-                } = e, H = a.useRef(null), W = (0, O.default)(t.id, l), z = (0, d.default)(H), K = (0, r.useStateFromStores)([y.default], () => {
+                } = e, H = a.useRef(null), W = (0, M.default)(t.id, l), z = (0, d.default)(H), K = (0, r.useStateFromStores)([y.default], () => {
                     var e;
                     return null === (e = y.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
                 }), {
@@ -90,7 +90,7 @@
                     [l]: [t.id]
                 } : {}, [l, t.id]);
                 (0, f.useSubscribeGuildMembers)(es);
-                let ei = (0, M.default)(t.id, l),
+                let ei = (0, O.default)(t.id, l),
                     er = (0, U.useShouldShowUserPopoutCollectiblesUpsell)({
                         popoutUser: t,
                         source: b.UserPopoutUpsellSource.USER_POPOUT,

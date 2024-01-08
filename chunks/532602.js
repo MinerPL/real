@@ -29,8 +29,8 @@
                 C = l("865677"),
                 N = l("15874"),
                 y = l("774713"),
-                M = l("510788"),
-                O = l("756731"),
+                O = l("510788"),
+                M = l("756731"),
                 x = l("762806"),
                 R = l("438278"),
                 L = l("898481"),
@@ -87,7 +87,7 @@
                                 channelId: U,
                                 source: j
                             }, "spotify-activity-sync-button"),
-                            s = (0, n.jsx)(O.default, {
+                            s = (0, n.jsx)(M.default, {
                                 activity: l,
                                 user: a,
                                 color: F,
@@ -137,7 +137,7 @@
                                 channelId: U,
                                 isEmbedded: B
                             }, "join-activity-button"),
-                            i = (0, n.jsx)(M.default, {
+                            i = (0, n.jsx)(O.default, {
                                 activity: l,
                                 user: a,
                                 color: F,

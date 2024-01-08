@@ -26,8 +26,8 @@
                 N = s("782340"),
                 A = s("571685"),
                 g = s("994679"),
-                P = s("620826"),
-                C = s("333078"),
+                C = s("620826"),
+                P = s("333078"),
                 O = s("156591"),
                 M = s("913204"),
                 L = s("174433"),
@@ -61,7 +61,7 @@
                         descriptionCta: N.default.Messages.VISIT_THE_SHOP_CTA,
                         onCtaClick: B,
                         pillText: N.default.Messages.EARLY_ACCESS,
-                        perkImage: C,
+                        perkImage: P,
                         canReveal: j,
                         dismissibleContentType: l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
                     } : {
@@ -70,7 +70,7 @@
                         subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_NON_SUB,
                         description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_NON_SUB,
                         pillText: N.default.Messages.EARLY_ACCESS,
-                        perkImage: C,
+                        perkImage: P,
                         canReveal: j,
                         dismissibleContentType: l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
                     },
@@ -203,7 +203,7 @@
                                 analyticsLocations: e
                             })
                         },
-                        perkImage: P
+                        perkImage: C
                     },
                     specialMemberPricing: n ? {
                         name: "specialMemberPricing",
