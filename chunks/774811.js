@@ -51,8 +51,8 @@
                         className: N,
                         isDisabled: b = !1,
                         maxVisibleItems: M = 7,
-                        look: w = D.SelectLooks.FILLED,
-                        autoFocus: G = !1,
+                        look: G = D.SelectLooks.FILLED,
+                        autoFocus: w = !1,
                         popoutPosition: k = "bottom",
                         filter: V = !0,
                         debounceTime: B,
@@ -189,10 +189,10 @@
                             setFocus: eL,
                             disableClickOnSpace: !0
                         }),
-                        ew = (0, C.default)(eU),
-                        eG = (0, C.default)(em);
+                        eG = (0, C.default)(eU),
+                        ew = (0, C.default)(em);
                     r.useEffect(() => {
-                        let e = eG.current,
+                        let e = ew.current,
                             t = eA.current;
                         ec && null != t && !eT && requestAnimationFrame(() => {
                             let n = e_.current,
@@ -203,7 +203,7 @@
                             })
                         })
                     }, [ec, eT]), r.useEffect(() => {
-                        let e = ew.current;
+                        let e = eG.current;
                         if (ec && !eT) {
                             var t;
                             let n = eo.current;
@@ -244,11 +244,11 @@
                         eu(null), (!h || p) && eD(!1), ep(!1)
                     }, [n, em, h, p, l, s, eD]);
                     r.useLayoutEffect(() => {
-                        if (G) {
+                        if (w) {
                             var e;
                             null === (e = eo.current) || void 0 === e || e.focus()
                         }
-                    }, [G]);
+                    }, [w]);
                     let ex = r.useCallback(() => {
                             eE(""), ek(null), eD(!0)
                         }, [ek, eD]),
@@ -344,7 +344,7 @@
                                             },
                                             className: a(P.select, P.searchable, N, {
                                                 [P.open]: s,
-                                                [P.lookFilled]: w === D.SelectLooks.FILLED,
+                                                [P.lookFilled]: G === D.SelectLooks.FILLED,
                                                 [P.disabled]: b,
                                                 [P.multi]: h,
                                                 [P.selectPositionTop]: "top" === o
@@ -536,13 +536,13 @@
                 })
             }
 
-            function w(e, t) {
+            function G(e, t) {
                 if (null == e || null == t) return !1;
                 let n = Node.DOCUMENT_POSITION_CONTAINED_BY | Node.DOCUMENT_POSITION_FOLLOWING;
                 return (e.compareDocumentPosition(t) & n) === n
             }
 
-            function G(e) {
+            function w(e) {
                 let {
                     selectedOptions: t,
                     selectValue: n,
@@ -566,11 +566,11 @@
                     onKeyDown: c,
                     onFocus: e => {
                         let t = e.target;
-                        null != s.current && w(s.current, t) && f(t.getAttribute("data-option-pill-value"))
+                        null != s.current && G(s.current, t) && f(t.getAttribute("data-option-pill-value"))
                     },
                     onBlur: e => {
                         let t = e.relatedTarget;
-                        !w(s.current, t) && f(null)
+                        !G(s.current, t) && f(null)
                     },
                     children: t.map((e, t) => (0, i.jsx)("li", {
                         className: P.optionPillItem,
@@ -753,7 +753,7 @@
                     }
                 }(m, f, s);
                 return (0, i.jsxs)(i.Fragment, {
-                    children: [s.length > 0 && (0, i.jsx)(G, {
+                    children: [s.length > 0 && (0, i.jsx)(w, {
                         listRef: m,
                         selectedOptions: s,
                         renderOptionPrefix: E,

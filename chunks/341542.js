@@ -52,5 +52,9 @@
                     !0 !== e.guild.unavailable && c.delete(e.guild.id)
                 },
                 GUILD_CREATE: f,
-                GUILD_UPDATE: f
+                GUILD_UPDATE: f,
+                GUILD_GEO_RESTRICTED: function(e) {
+                    if (!c.has(e.guildId)) return !1;
+                    c.delete(e.guildId)
+                }
             })

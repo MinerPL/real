@@ -2,9 +2,9 @@
             let i;
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return g
                 }
-            }), n("222007");
+            }), n("222007"), n("424973");
             var r = n("917351"),
                 s = n.n(r),
                 a = n("446674"),
@@ -16,15 +16,16 @@
                 f = n("49111"),
                 E = n("695838");
             let h = {},
-                p = !1;
+                p = !1,
+                _ = [];
 
-            function _(e) {
+            function S(e) {
                 h = {}, i = 0, null != e.guilds && s.forEach(e.guilds, e => {
                     i++, h[e.id] = u.fromSerializedGuildRecord(e)
                 })
             }
 
-            function S(e) {
+            function m(e) {
                 let {
                     guildId: t,
                     role: n
@@ -34,7 +35,7 @@
                     [i.id]: i.upsertRole(c.fromServerRole(n))
                 })
             }
-            class m extends a.default.Store {
+            class T extends a.default.Store {
                 getGuild(e) {
                     if (null != e) return e === f.FAVORITES ? E.FAVORITES_GUILD_RECORD : h[e]
                 }
@@ -50,9 +51,12 @@
                 isLoaded() {
                     return p
                 }
+                getGeoRestrictedGuilds() {
+                    return _
+                }
             }
-            m.displayName = "GuildStore";
-            var T = new m(o.default, {
+            T.displayName = "GuildStore";
+            var g = new T(o.default, {
                 BACKGROUND_SYNC: function(e) {
                     for (let t of e.guilds) {
                         let e = h[t.id];
@@ -64,7 +68,7 @@
                 CONNECTION_OPEN: function(e) {
                     p = !0, h = {}, i = 0, e.guilds.forEach(e => {
                         i++, h[e.id] = u.fromServer(e)
-                    })
+                    }), _ = e.geoRestrictedGuilds
                 },
                 OVERLAY_INITIALIZE: function(e) {
                     var t;
@@ -72,8 +76,8 @@
                         i++, h[e.id] = new l.default(e)
                     })
                 },
-                CACHE_LOADED: _,
-                CACHE_LOADED_LAZY: _,
+                CACHE_LOADED: S,
+                CACHE_LOADED_LAZY: S,
                 GUILD_CREATE: function(e) {
                     let t = u.fromServer(e.guild, h[e.guild.id]);
                     null == h[t.id] && i++, h = {
@@ -97,8 +101,8 @@
                         ...h
                     }, delete h[t.id], i--
                 },
-                GUILD_ROLE_CREATE: S,
-                GUILD_ROLE_UPDATE: S,
+                GUILD_ROLE_CREATE: m,
+                GUILD_ROLE_UPDATE: m,
                 GUILD_ROLE_DELETE: function(e) {
                     let {
                         guildId: t,
@@ -125,5 +129,14 @@
                 },
                 GUILD_SETTINGS_SUBMIT_SUCCESS: function() {
                     return !0
+                },
+                GUILD_GEO_RESTRICTED: function(e) {
+                    _.push({
+                        id: e.guildId,
+                        name: e.name,
+                        icon: e.icon,
+                        unavailable: !0,
+                        geo_restricted: !0
+                    })
                 }
             })

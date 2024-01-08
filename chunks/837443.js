@@ -122,8 +122,8 @@
                         markerPosition: b = 0,
                         "aria-hidden": M,
                         "aria-label": U,
-                        "aria-labelledby": w,
-                        "aria-describedby": G
+                        "aria-labelledby": G,
+                        "aria-describedby": w
                     } = this.props, k = 0;
                     S ? null != a && (null != u ? k = a[u] : null != o && (k = a[o])) : k = this.scaleValue(t);
                     let x = "".concat(k, "%"),
@@ -167,8 +167,8 @@
                             "aria-orientation": R,
                             "aria-hidden": M,
                             "aria-label": U,
-                            "aria-labelledby": w,
-                            "aria-describedby": G,
+                            "aria-labelledby": G,
+                            "aria-describedby": w,
                             "aria-valuetext": B,
                             role: "slider",
                             tabIndex: 0,

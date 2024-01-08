@@ -61,26 +61,26 @@
                 }
             }
 
-            function w(e, t) {
+            function G(e, t) {
                 let n = (0, _.getComboId)(e, t);
                 return A.findIndex(e => e.comboId === n)
             }
 
-            function G(e, t, n, i) {
+            function w(e, t, n, i) {
                 let r = (0, _.getComboId)(e, t),
                     s = {
                         comboId: r,
                         action: i
                     },
                     a = R.indexOf(r); - 1 !== a && R.splice(a, 1);
-                let o = w(e, t);
+                let o = G(e, t);
                 0 !== o && (n ? -1 === o && (A.push(s), U()) : (o > 0 && A.splice(o, 1), A.unshift(s), U())), !n && N && S.default.resume(), M()
             }
 
             function k(e, t) {
                 let n = (0, _.getComboId)(e, t),
                     i = R.indexOf(n); - 1 !== i && R.splice(i, 1);
-                let r = w(e, t); - 1 !== r && (A.splice(r, 1), M()), U()
+                let r = G(e, t); - 1 !== r && (A.splice(r, 1), M()), U()
             }
 
             function x(e) {
@@ -138,7 +138,7 @@
                     return N
                 }
                 getQueuePosition(e, t) {
-                    return w(e, t)
+                    return G(e, t)
                 }
                 isCorruptInstallation() {
                     return L
@@ -151,7 +151,7 @@
                         applicationId: t,
                         branchId: n
                     } = e;
-                    P.set((0, _.getComboId)(t, n), "Install"), G(t, n, !1, "Patch")
+                    P.set((0, _.getComboId)(t, n), "Install"), w(t, n, !1, "Patch")
                 },
                 DISPATCH_APPLICATION_UPDATE: function(e) {
                     let {
@@ -159,7 +159,7 @@
                         branchId: n,
                         automatic: i
                     } = e;
-                    G(t, n, i, "Patch")
+                    w(t, n, i, "Patch")
                 },
                 DISPATCH_APPLICATION_UNINSTALL: function(e) {
                     x(e), F(e)
@@ -170,13 +170,13 @@
                         applicationId: t,
                         branchId: n
                     } = e;
-                    P.set((0, _.getComboId)(t, n), "Repair"), G(t, n, !1, "Repair")
+                    P.set((0, _.getComboId)(t, n), "Repair"), w(t, n, !1, "Repair")
                 },
                 DISPATCH_APPLICATION_MOVE_UP: function(e) {
                     let {
                         applicationId: t,
                         branchId: n
-                    } = e, i = w(t, n);
+                    } = e, i = G(t, n);
                     if (i < 1) return !1;
                     A.splice(0, 0, A.splice(i, 1)[0]), U(), N && S.default.resume(), M()
                 },

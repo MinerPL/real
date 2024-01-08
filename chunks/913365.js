@@ -419,7 +419,7 @@
                     statusBackdropColor: y,
                     "aria-hidden": P = !1,
                     "aria-label": L
-                } = e, b = (0, c.useStatusFillColor)(N, O), M = r.useId(), U = r.useId(), [w] = r.useState(() => ({
+                } = e, b = (0, c.useStatusFillColor)(N, O), M = r.useId(), U = r.useId(), [G] = r.useState(() => ({
                     fill: s,
                     ...v({
                         size: S,
@@ -427,7 +427,7 @@
                         isMobile: t,
                         isTyping: !1
                     })
-                })), G = r.useMemo(() => ({
+                })), w = r.useMemo(() => ({
                     fill: b,
                     ...v({
                         size: S,
@@ -446,8 +446,8 @@
                 } = (0, o.useSpring)({
                     immediate: !document.hasFocus(),
                     config: T,
-                    from: w,
-                    to: G
+                    from: G,
+                    to: w
                 }), Y = (0, h.getAvatarSize)(S), W = (0, h.getAvatarSpecs)(S), K = W.status * h.TYPING_WIDTH_RATIO, z = W.status * h.MOBILE_HEIGHT_RATIO, q = null != N ? (W.status * h.TYPING_WIDTH_RATIO - W.status) / 2 : 0, X = W.size - W.status - q - W.offset, Q = W.size - z - W.offset, Z = W.size + Math.ceil(q);
                 return (0, i.jsx)(A, {
                     ...e,

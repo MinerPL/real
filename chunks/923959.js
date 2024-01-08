@@ -46,11 +46,11 @@
                         name: C.default.Messages.UNCATEGORIZED
                     })
                 },
-                b = w("null"),
+                b = G("null"),
                 M = [],
                 U = {};
 
-            function w(e) {
+            function G(e) {
                 return {
                     id: e,
                     [v]: [],
@@ -60,7 +60,7 @@
                 }
             }
 
-            function G(e, t) {
+            function w(e, t) {
                 let {
                     comparator: n
                 } = e, {
@@ -75,7 +75,7 @@
 
             function x(e) {
                 var t;
-                let n = w(e);
+                let n = G(e);
                 return N[e] = n, P[e] = [], ! function(e) {
                         let {
                             id: t
@@ -110,7 +110,7 @@
                             let s = (i = r.type, (0, f.isGuildSelectableChannelType)(i) ? v : (0, f.isGuildVocalChannelType)(i) ? A : i);
                             r.type === I.ChannelTypes.GUILD_DIRECTORY && (null == P[t] && (P[t] = []), P[t].push(n)), null != e[s] && e[s].push(n)
                         })
-                    }(n), (t = n)[v].sort(G), t[A].sort(G), t[I.ChannelTypes.GUILD_CATEGORY].sort(G),
+                    }(n), (t = n)[v].sort(w), t[A].sort(w), t[I.ChannelTypes.GUILD_CATEGORY].sort(w),
                     function(e) {
                         let t = O[e.id] = {},
                             n = {};

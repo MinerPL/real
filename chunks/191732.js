@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return h
                 }
             }), n("222007");
             var a = n("37983"),
@@ -16,16 +16,16 @@
                 m = n("49111"),
                 f = n("782340"),
                 _ = n("553898"),
-                E = e => {
+                h = e => {
                     let {
                         userId: t,
                         reportId: n,
-                        reportName: E
-                    } = e, [h, v] = l.useState(!1), x = (0, r.useStateFromStores)([o.default], () => o.default.getUser(t), [t]), R = (0, r.useStateFromStores)([u.default], () => u.default.getRelationshipType(t), [t]) === m.RelationshipTypes.BLOCKED;
+                        reportName: h
+                    } = e, [E, v] = l.useState(!1), R = (0, r.useStateFromStores)([o.default], () => o.default.getUser(t), [t]), x = (0, r.useStateFromStores)([u.default], () => u.default.getRelationshipType(t), [t]) === m.RelationshipTypes.BLOCKED;
                     l.useEffect(() => {
-                        v(R)
-                    }, [R]);
-                    let g = l.useCallback(() => {
+                        v(x)
+                    }, [x]);
+                    let p = l.useCallback(() => {
                         v(!0), d.default.trackWithMetadata(m.AnalyticEvents.IAR_BLOCK_USER_BUTTON_CLICKED, {
                             other_user_id: t,
                             report_id: n
@@ -37,35 +37,35 @@
                             type: m.RelationshipTypes.BLOCKED
                         })
                     }, [t, n]);
-                    return null == x ? null : (0, a.jsxs)("div", {
+                    return null == R ? null : (0, a.jsxs)("div", {
                         className: _.container,
                         children: [(0, a.jsx)(s.Text, {
                             className: _.description,
                             variant: "text-sm/normal",
-                            children: E === c.ReportNames.USER ? f.default.Messages.REPORTS_BLOCK_USER_ELEMENT_DESCRIPTION : f.default.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_DESCRIPTION
+                            children: h === c.ReportNames.USER ? f.default.Messages.REPORTS_BLOCK_USER_ELEMENT_DESCRIPTION : f.default.Messages.MOBILE_REPORTS_BLOCK_ELEMENT_DESCRIPTION
                         }), (0, a.jsxs)("div", {
                             className: _.userContainer,
                             children: [(0, a.jsxs)("div", {
                                 className: _.userInfo,
                                 children: [(0, a.jsx)(s.Avatar, {
                                     size: s.AvatarSizes.SIZE_32,
-                                    src: x.getAvatarURL(void 0, 32),
+                                    src: R.getAvatarURL(void 0, 32),
                                     className: _.avatar,
-                                    "aria-label": x.username
+                                    "aria-label": R.username
                                 }), (0, a.jsx)(s.Text, {
                                     className: _.userName,
                                     variant: "text-sm/semibold",
-                                    children: x.username
-                                }), !x.isPomelo() && (0, a.jsxs)(s.Text, {
+                                    children: R.username
+                                }), !R.isPomelo() && (0, a.jsxs)(s.Text, {
                                     variant: "text-sm/normal",
-                                    children: ["#", x.discriminator]
+                                    children: ["#", R.discriminator]
                                 })]
                             }), (0, a.jsx)(s.Button, {
-                                onClick: () => g(),
-                                disabled: h,
+                                onClick: () => p(),
+                                disabled: E,
                                 size: s.Button.Sizes.SMALL,
                                 color: s.Button.Colors.RED,
-                                children: h ? f.default.Messages.BLOCKED : f.default.Messages.BLOCK
+                                children: E ? f.default.Messages.BLOCKED : f.default.Messages.BLOCK
                             })]
                         })]
                     })

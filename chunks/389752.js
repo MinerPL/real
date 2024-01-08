@@ -149,7 +149,7 @@
                             U = i.useCallback(() => {
                                 !R && (_ ? D(g(t, d), d) : L(!0))
                             }, [g, t, D, _, R, d, L]),
-                            w = i.useCallback(e => {
+                            G = i.useCallback(e => {
                                 !e.currentTarget.contains(e.relatedTarget) && requestAnimationFrame(() => {
                                     if (null == u(l(g, t, d))) {
                                         D(t);
@@ -158,19 +158,19 @@
                                     N(!1)
                                 })
                             }, [g, t, d, D]),
-                            G = i.useRef(null);
+                            w = i.useRef(null);
                         i.useLayoutEffect(() => {
-                            let e = G.current;
-                            if (null != e) return e.addEventListener("focusin", M), e.addEventListener("focus", U), e.addEventListener("focusout", w), () => {
-                                e.removeEventListener("focusin", M), e.removeEventListener("focus", U), e.removeEventListener("focusout", w)
+                            let e = w.current;
+                            if (null != e) return e.addEventListener("focusin", M), e.addEventListener("focus", U), e.addEventListener("focusout", G), () => {
+                                e.removeEventListener("focusin", M), e.removeEventListener("focus", U), e.removeEventListener("focusout", G)
                             }
-                        }, [U, M, w]);
+                        }, [U, M, G]);
                         let k = i.useCallback(() => ({
                                 role: "list",
                                 tabIndex: R && _ ? -1 : 0,
                                 id: t,
                                 onKeyDown: b,
-                                ref: G
+                                ref: w
                             }), [t, R, b, _]),
                             x = i.useCallback(e => {
                                 let {

@@ -48,7 +48,7 @@
                         className: b,
                         style: M,
                         ...U
-                    } = n, w = s.useRef(null), G = s.useRef(null), [k, x] = s.useState(!1), {
+                    } = n, G = s.useRef(null), w = s.useRef(null), [k, x] = s.useState(!1), {
                         scrollerRef: F,
                         scrollerState: V,
                         getScrollerState: B
@@ -101,8 +101,8 @@
                         ...(0, u.getAnimatedScrollHelpers)(F, B, Q)
                     }), [F, B, Z, Q, J]);
                     let ee = (0, r.useCallback)(e => {
-                        X(1), null == w.current ? x(!0) : clearTimeout(w.current), w.current = setTimeout(() => {
-                            w.current = null, x(!1)
+                        X(1), null == G.current ? x(!0) : clearTimeout(G.current), G.current = setTimeout(() => {
+                            G.current = null, x(!1)
                         }, 200), null != h && h(e)
                     }, [h, X]);
                     return (0, i.jsx)("div", {
@@ -116,13 +116,13 @@
                         style: (0, u.getMergedOrientationStyles)(M),
                         ...U,
                         children: (0, r.useMemo)(() => (0, i.jsx)(l.FocusRingScope, {
-                            containerRef: G,
+                            containerRef: w,
                             children: (0, i.jsx)("div", {
                                 style: {
                                     height: K
                                 },
                                 className: c.content,
-                                ref: G,
+                                ref: w,
                                 children: Object.keys(W).map(e => {
                                     let t = (0, u.getMasonryListSectionIndex)(e),
                                         n = j[e],

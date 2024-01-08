@@ -10,7 +10,7 @@
                     return A.isPremiumExactly
                 },
                 getPremiumPlanItem: function() {
-                    return w
+                    return G
                 },
                 getPrice: function() {
                     return k
@@ -181,11 +181,11 @@
                     ALL: [D.SubscriptionPlans.NONE_MONTH, D.SubscriptionPlans.NONE_YEAR, D.SubscriptionPlans.PREMIUM_YEAR_TIER_2, D.SubscriptionPlans.PREMIUM_MONTH_TIER_2, D.SubscriptionPlans.PREMIUM_YEAR_TIER_1, D.SubscriptionPlans.PREMIUM_MONTH_TIER_1, D.SubscriptionPlans.PREMIUM_YEAR_TIER_0, D.SubscriptionPlans.PREMIUM_MONTH_TIER_0]
                 };
 
-            function w(e) {
+            function G(e) {
                 return e.items.find(e => D.PREMIUM_PLANS.has(e.planId))
             }
 
-            function G(e) {
+            function w(e) {
                 var t;
                 let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -776,7 +776,7 @@
 
             function el(e, t, n) {
                 let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-                    r = null != t ? k(e.id, !1, i, t) : G(e.id, !1, i),
+                    r = null != t ? k(e.id, !1, i, t) : w(e.id, !1, i),
                     s = (0, R.formatPrice)(r.amount, r.currency);
                 return e.currency !== y.CurrencyCodes.USD && !0 === n && (s = s.concat("*")), s
             }
@@ -1082,7 +1082,7 @@
             }
 
             function eD(e) {
-                let t = null != e ? w(e) : null,
+                let t = null != e ? G(e) : null,
                     n = null != t ? Z(t.planId) : null;
                 return n
             }
@@ -1092,7 +1092,7 @@
                 isPremium: A.isPremium,
                 isPremiumExactly: A.isPremiumExactly,
                 getPrice: k,
-                getDefaultPrice: G,
+                getDefaultPrice: w,
                 getInterval: function(e) {
                     let t = D.SubscriptionPlanInfo[e];
                     if (null != t) return {
@@ -1240,21 +1240,21 @@
                 },
                 getBillingReviewSubheader: eE,
                 getIntervalForInvoice: eh,
-                getPremiumPlanItem: w,
+                getPremiumPlanItem: G,
                 getGuildBoostPlanItem: eO,
                 isBoostOnlySubscription: function(e) {
-                    return null != e && null == w(e) && null != eO(e)
+                    return null != e && null == G(e) && null != eO(e)
                 },
                 getPremiumSkuIdForSubscription: eD,
                 getPremiumTypeFromSubscription: function(e) {
                     if (null != e) {
-                        let t = w(e);
+                        let t = G(e);
                         if (null != t) return B(t.planId)
                     }
                 },
                 getPremiumTypeFromSubscriptionRenewalMutations: function(e) {
                     if (null != e && null != e.renewalMutations) {
-                        let t = w(e.renewalMutations);
+                        let t = G(e.renewalMutations);
                         if (null != t) return B(t.planId)
                     }
                 },

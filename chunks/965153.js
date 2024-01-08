@@ -22,16 +22,16 @@
                     return _
                 },
                 submitReportSecondLook: function() {
-                    return E
+                    return h
                 },
                 trackCloseReportModalAnalytics: function() {
-                    return R
+                    return x
                 },
                 showInAppReportsFeedbackModal: function() {
-                    return g
+                    return p
                 },
                 areRequiredElementsUnfilled: function() {
-                    return N
+                    return g
                 }
             }), n("70102"), n("808653");
             var a = n("872717"),
@@ -53,7 +53,7 @@
             }
             async function u(e, t) {
                 var n;
-                let l = h(e),
+                let l = E(e),
                     r = await a.default.get({
                         url: i.Endpoints.GET_UNAUTHENTICATED_REPORT_MENU(l),
                         query: (null == t ? void 0 : t.variant) != null ? {
@@ -68,7 +68,7 @@
                     l = await d(e, t);
                 await a.default.post({
                     url: i.Endpoints.SUBMIT_REPORT_MENU(n),
-                    body: x(l, e, [{
+                    body: R(l, e, [{
                         nodeRef: l.root_node_id,
                         destination: ["", l.success_node_id]
                     }])
@@ -78,15 +78,15 @@
             function c(e, t, n) {
                 return a.default.post({
                     url: i.Endpoints.SUBMIT_REPORT_MENU(v(t)),
-                    body: x(e, t, n)
+                    body: R(e, t, n)
                 })
             }
 
             function m(e, t, n, l) {
-                let r = h(t);
+                let r = E(t);
                 return a.default.post({
                     url: i.Endpoints.SUBMIT_UNAUTHENTICATED_REPORT_MENU(r),
-                    body: x(e, t, n, l)
+                    body: R(e, t, n, l)
                 })
             }
 
@@ -110,7 +110,7 @@
                 });
                 return l.body
             }
-            async function E(e) {
+            async function h(e) {
                 let t = await a.default.post({
                     url: i.Endpoints.SUBMIT_REPORT_SECOND_LOOK,
                     body: {
@@ -120,7 +120,7 @@
                 return t.body
             }
 
-            function h(e) {
+            function E(e) {
                 let t = e.name;
                 if (!Object.values(s.UnauthenticatedReportNames).includes(t)) throw Error("Invalid report type ".concat(e.name));
                 return t
@@ -131,7 +131,7 @@
                 if (!Object.values(s.ReportNames).includes(t)) throw Error("Invalid report type ".concat(e.name));
                 return t
             }
-            let x = (e, t, n, a) => {
+            let R = (e, t, n, a) => {
                 let {
                     version: l,
                     variant: r,
@@ -250,7 +250,7 @@
                 return null
             };
 
-            function R(e, t, n) {
+            function x(e, t, n) {
                 r.default.trackWithMetadata(i.AnalyticEvents.IAR_MODAL_CLOSE, {
                     report_type: e.name,
                     report_id: n,
@@ -263,7 +263,7 @@
                 })
             }
 
-            function g(e, t) {
+            function p(e, t) {
                 l.default.dispatch({
                     type: "IN_APP_REPORTS_SHOW_FEEDBACK",
                     reportId: t,
@@ -271,6 +271,6 @@
                 })
             }
 
-            function N(e, t, n, a, l) {
+            function g(e, t, n, a, l) {
                 return e.some(e => !0 === e.should_submit_data && ((null == a ? void 0 : a[e.name]) == null || (null == a ? void 0 : a[e.name]) === "")) || t.some(e => !0 === e.should_submit_data && ((null == a ? void 0 : a[e.name]) == null || (null == a ? void 0 : a[e.name]) === "")) || (null == n ? void 0 : n.should_submit_data) === !0 && (null == l || 0 === Object.keys(l).length)
             }

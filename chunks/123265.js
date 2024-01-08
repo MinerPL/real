@@ -1,6 +1,6 @@
             "use strict";
             n.r(t), n.d(t, {
-                default: function() {
+                showReportModal: function() {
                     return i
                 }
             }), n("424973");
@@ -17,18 +17,18 @@
                 try {
                     let m, f = u ? await (0, r.getReportMenu)(e, t) : await (0, r.getUnauthenticatedReportMenu)(e, t),
                         _ = [];
-                    let E = e => {
+                    let h = e => {
                             _.push(e)
                         },
-                        h = e => {
+                        E = e => {
                             m = e, null == n || n()
                         };
                     (0, l.openModal)(t => (0, a.jsx)(s.default, {
                         menu: f,
                         reportType: e,
                         modalProps: t,
-                        onNavigate: E,
-                        onSubmit: h,
+                        onNavigate: h,
+                        onSubmit: E,
                         isAuthenticated: u,
                         emailToken: o
                     }), {

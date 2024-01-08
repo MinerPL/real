@@ -22,14 +22,14 @@
                     },
                     onChange: f,
                     initialText: _,
-                    isRequired: E
-                } = e, [h, v] = l.useState(""), [x, R] = l.useState("");
+                    isRequired: h
+                } = e, [E, v] = l.useState(""), [R, x] = l.useState("");
                 l.useEffect(() => {
                     v(null != _ ? _ : "")
                 }, [_]);
-                let g = l.useCallback(e => {
+                let p = l.useCallback(e => {
                     let t = null != m ? new RegExp(m) : null;
-                    null != t && null == t.exec(e) ? (R(s.default.Messages.IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR), v(""), f("")) : null != e && (R(""), v(e), f(e))
+                    null != t && null == t.exec(e) ? (x(s.default.Messages.IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR), v(""), f("")) : null != e && (x(""), v(e), f(e))
                 }, [f, m]);
                 return (0, a.jsxs)("div", {
                     className: d.marginBottom8,
@@ -37,16 +37,16 @@
                         className: d.marginBottom8,
                         children: (0, a.jsxs)(r.Text, {
                             variant: "text-sm/bold",
-                            children: [t, E && (0, a.jsx)("span", {
+                            children: [t, h && (0, a.jsx)("span", {
                                 className: i.required,
                                 children: "*"
                             })]
                         })
                     }), (0, a.jsx)(r.TextArea, {
                         maxLength: c,
-                        onChange: g,
-                        value: h,
-                        error: x,
+                        onChange: p,
+                        value: E,
+                        error: R,
                         rows: o,
                         placeholder: u,
                         autoFocus: !0

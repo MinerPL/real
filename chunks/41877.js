@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return h
+                    return E
                 }
             });
             var a = n("37983");
@@ -17,23 +17,23 @@
                 m = n("93427"),
                 f = n("719347"),
                 _ = n("782340"),
-                E = n("929710"),
-                h = e => {
+                h = n("929710"),
+                E = e => {
                     let {
                         message: t
-                    } = e, n = (0, s.default)(t), h = (0, l.useStateFromStores)([d.default], () => d.default.getChannel(t.channel_id)), {
+                    } = e, n = (0, s.default)(t), E = (0, l.useStateFromStores)([d.default], () => d.default.getChannel(t.channel_id)), {
                         content: v
                     } = (0, i.default)(t, {
                         hideSimpleEmbedContent: !1
                     });
-                    return null == h ? null : (0, a.jsxs)("div", {
-                        className: E.container,
+                    return null == E ? null : (0, a.jsxs)("div", {
+                        className: h.container,
                         children: [(0, a.jsx)(r.Heading, {
-                            className: E.header,
+                            className: h.header,
                             variant: "heading-sm/semibold",
                             children: _.default.Messages.MOBILE_REPORTS_MESSAGE_PREVIEW_TITLE
                         }), (0, a.jsx)(r.Scroller, {
-                            className: E.messagePreviewContainer,
+                            className: h.messagePreviewContainer,
                             children: (0, a.jsx)(u.default, {
                                 childrenMessageContent: (() => {
                                     let e = null == v || "" === v || Array.isArray(v) && 0 === v.length;
@@ -41,7 +41,7 @@
                                         let {
                                             icon: e
                                         } = (0, m.renderSingleLineMessage)(t, v, !1, "", {
-                                            iconClass: E.attachmentIcon,
+                                            iconClass: h.attachmentIcon,
                                             iconSize: f.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
                                         });
                                         return e
@@ -53,9 +53,9 @@
                                 })(),
                                 childrenHeader: (0, a.jsx)(c.default, {
                                     message: t,
-                                    channel: h,
+                                    channel: E,
                                     author: n,
-                                    guildId: h.guild_id
+                                    guildId: E.guild_id
                                 }),
                                 disableInteraction: !0
                             })

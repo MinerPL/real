@@ -73,10 +73,10 @@
                     return U
                 },
                 INCREASED_VIDEO_UPLOAD_QUALITY: function() {
-                    return w
+                    return G
                 },
                 UPLOAD_LARGE_FILES: function() {
-                    return G
+                    return w
                 },
                 canUserUse: function() {
                     return x
@@ -136,12 +136,12 @@
             new s.default("increasedFileUploadSize", r.getUserMaxFileSize);
             let M = new c("increasedGuildLimit"),
                 U = new c("increasedMessageLength"),
-                w = new c("increasedVideoUploadQuality"),
-                G = new c("uploadLargeFiles"),
+                G = new c("increasedVideoUploadQuality"),
+                w = new c("uploadLargeFiles"),
                 k = Object.freeze({
-                    [o.PremiumSubscriptionSKUs.TIER_0]: new a.default(o.PremiumSubscriptionSKUs.TIER_0, [d, f, E, T, b, w, G, C]),
-                    [o.PremiumSubscriptionSKUs.TIER_1]: new a.default(o.PremiumSubscriptionSKUs.TIER_1, [d, f, _, S, T, A, O, y, w, G, C]),
-                    [o.PremiumSubscriptionSKUs.TIER_2]: new a.default(o.PremiumSubscriptionSKUs.TIER_2, [d, f, E, h, p, _, S, m, T, g, v, A, R, N, O, D, y, P, L, b, M, U, w, G, C, I])
+                    [o.PremiumSubscriptionSKUs.TIER_0]: new a.default(o.PremiumSubscriptionSKUs.TIER_0, [d, f, E, T, b, G, w, C]),
+                    [o.PremiumSubscriptionSKUs.TIER_1]: new a.default(o.PremiumSubscriptionSKUs.TIER_1, [d, f, _, S, T, A, O, y, G, w, C]),
+                    [o.PremiumSubscriptionSKUs.TIER_2]: new a.default(o.PremiumSubscriptionSKUs.TIER_2, [d, f, E, h, p, _, S, m, T, g, v, A, R, N, O, D, y, P, L, b, M, U, G, w, C, I])
                 });
 
             function x(e, t) {

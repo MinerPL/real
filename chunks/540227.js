@@ -18,17 +18,17 @@
                     let {
                         message: t,
                         reportId: n
-                    } = e, [f, _] = l.useState(!1), E = l.useCallback(() => {
+                    } = e, [f, _] = l.useState(!1), h = l.useCallback(() => {
                         _(!0), i.default.trackWithMetadata(o.AnalyticEvents.IAR_DELETE_MESSAGE_BUTTON_CLICKED, {
                             report_id: n
                         }), s.default.deleteMessage(t.getChannelId(), t.id)
-                    }, [t, n]), h = l.useMemo(() => {
+                    }, [t, n]), E = l.useMemo(() => {
                         let e = d.default.getChannel(t.getChannelId());
                         return null != e && e.type !== o.ChannelTypes.DM && e.type !== o.ChannelTypes.GROUP_DM && u.default.canWithPartialContext(o.Permissions.MANAGE_MESSAGES, {
                             channelId: e.id
                         })
                     }, [t]);
-                    return null != t && h ? (0, a.jsx)("div", {
+                    return null != t && E ? (0, a.jsx)("div", {
                         className: m.container,
                         children: (0, a.jsxs)("div", {
                             className: m.messageContainer,
@@ -39,7 +39,7 @@
                                     children: c.default.Messages.MOBILE_REPORTS_DELETE_MESSAGE_ELEMENT_DESCRIPTION
                                 })
                             }), (0, a.jsx)(r.Button, {
-                                onClick: () => E(),
+                                onClick: () => h(),
                                 disabled: f,
                                 size: r.Button.Sizes.SMALL,
                                 color: r.Button.Colors.RED,

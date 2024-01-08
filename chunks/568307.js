@@ -117,8 +117,8 @@
                 }],
                 M = !0,
                 U = new Set,
-                w = [],
                 G = [],
+                w = [],
                 k = [],
                 x = null,
                 F = [],
@@ -250,7 +250,7 @@
 
             function es() {
                 let e = !1;
-                return w = o.values(N.default.libraryApplications).reduce((t, n) => {
+                return G = o.values(N.default.libraryApplications).reduce((t, n) => {
                     let i = R.default.getDetectableGame(n.id);
                     if (null == i) return t;
                     let r = O.default.getLaunchOptions(n.id, n.branchId);
@@ -275,7 +275,7 @@
 
             function ea() {
                 if (!__OVERLAY__ && C.isPlatformEmbedded) {
-                    let e = [...w, ...o.values(H.gameOverrides)];
+                    let e = [...G, ...o.values(H.gameOverrides)];
                     v.default.setGameCandidateOverrides(e)
                 }
             }
@@ -428,7 +428,7 @@
                     return null != z && z === e
                 }
                 getCandidateGames() {
-                    return G.filter(e => e.hidden || null == e.id).filter(e => void 0 === H.gameOverrides[$(e)])
+                    return w.filter(e => e.hidden || null == e.id).filter(e => void 0 === H.gameOverrides[$(e)])
                 }
                 getRunningGames() {
                     return k
@@ -476,7 +476,7 @@
                     eo(k)
                 },
                 CANDIDATE_GAMES_CHANGE: function(e) {
-                    G = e.games
+                    w = e.games
                 },
                 PERMISSION_CLEAR_PTT_ADMIN_WARNING: function() {
                     M = !1
@@ -501,7 +501,7 @@
                     let n = e.pid,
                         i = k.find(e => e.pid === n);
                     if (null == i) {
-                        let e = G.find(e => e.pid === n);
+                        let e = w.find(e => e.pid === n);
                         if (null == e) return;
                         (i = {
                             ...e

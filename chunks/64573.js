@@ -20,24 +20,24 @@
                             onBackClicked: f
                         } = e,
                         _ = l.useRef(null),
-                        E = null != n && "cancel" !== n.type,
-                        h = m && (null == n ? void 0 : n.type) !== "done",
-                        v = E || h;
+                        h = null != n && "cancel" !== n.type,
+                        E = m && (null == n ? void 0 : n.type) !== "done",
+                        v = h || E;
                     if (l.useEffect(() => {
                             if ((null == n ? void 0 : n.type) === "submit" || (null == n ? void 0 : n.type) === "done") {
                                 var e;
                                 null === (e = _.current) || void 0 === e || e.focus()
                             }
                         }, [null == n ? void 0 : n.type]), !v) return null;
-                    let x = i.default.Messages.DONE;
-                    return (null == n ? void 0 : n.type) === "submit" ? (x = i.default.Messages.MOBILE_REPORTS_SUBMIT_REPORT, t = r.Button.Colors.RED) : (null == n ? void 0 : n.type) === "next" ? x = i.default.Messages.NEXT : (null == n ? void 0 : n.type) === "cancel" && (x = i.default.Messages.CANCEL, t = r.Button.Colors.TRANSPARENT), (0, a.jsxs)(r.ModalFooter, {
+                    let R = i.default.Messages.DONE;
+                    return (null == n ? void 0 : n.type) === "submit" ? (R = i.default.Messages.MOBILE_REPORTS_SUBMIT_REPORT, t = r.Button.Colors.RED) : (null == n ? void 0 : n.type) === "next" ? R = i.default.Messages.NEXT : (null == n ? void 0 : n.type) === "cancel" && (R = i.default.Messages.CANCEL, t = r.Button.Colors.TRANSPARENT), (0, a.jsxs)(r.ModalFooter, {
                         direction: s.default.Direction.HORIZONTAL,
-                        children: [h && (0, a.jsx)(r.Button, {
+                        children: [E && (0, a.jsx)(r.Button, {
                             onClick: f,
                             color: r.Button.Colors.TRANSPARENT,
                             disabled: u,
                             children: i.default.Messages.BACK
-                        }), E && (0, a.jsx)(r.Button, {
+                        }), h && (0, a.jsx)(r.Button, {
                             onClick: () => {
                                 null != n && c(n)
                             },
@@ -45,7 +45,7 @@
                             className: d.actionButton,
                             disabled: u || o,
                             buttonRef: _,
-                            children: x
+                            children: R
                         })]
                     })
                 }

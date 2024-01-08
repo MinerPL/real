@@ -130,7 +130,7 @@
                         v.current = !0
                     }
                 }, [u, t, S, D, _, y, P]);
-                let w = i.useMemo(() => ({
+                let G = i.useMemo(() => ({
                         wrap: T,
                         get from() {
                             if (!m) return;
@@ -143,23 +143,23 @@
                             return
                         }
                     }), [m, T]),
-                    G = i.useCallback(async () => {
-                        let e = await L.getNextFocusableElement(w),
+                    w = i.useCallback(async () => {
+                        let e = await L.getNextFocusableElement(G),
                             t = null == e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
                         null != t ? P(t) : null == e && null != h && h()
-                    }, [L, w, h, P]),
+                    }, [L, G, h, P]),
                     k = i.useCallback(async () => {
-                        let e = await L.getPreviousFocusableElement(w),
+                        let e = await L.getPreviousFocusableElement(G),
                             t = null == e ? void 0 : e.getAttribute(l.LIST_ITEM_ID_ATTRIBUTE);
                         null != t ? P(t) : null == e && null != E && E()
-                    }, [L, w, E, P]),
+                    }, [L, G, E, P]),
                     x = i.useCallback(e => {
                         if (!R.current || !m && !U.current) return;
                         let n = g === o.Orientations.HORIZONTAL ? o.Keys.RIGHT : o.Keys.DOWN,
                             i = g === o.Orientations.HORIZONTAL ? o.Keys.LEFT : o.Keys.UP;
                         switch (e.key) {
                             case n:
-                                e.stopPropagation(), e.preventDefault(), G();
+                                e.stopPropagation(), e.preventDefault(), w();
                                 return;
                             case i:
                                 e.stopPropagation(), e.preventDefault(), k();
@@ -194,7 +194,7 @@
                                 }
                             }
                         }
-                    }, [G, k, t, g, f, d, P, m]),
+                    }, [w, k, t, g, f, d, P, m]),
                     F = i.useCallback(e => {
                         let n = null != e ? (0, l.createListItemId)(t, e) : null;
                         C.current = n
@@ -219,11 +219,11 @@
                         null !== n && P(n)
                     },
                     focusPreviousItem: k,
-                    focusNextItem: G,
+                    focusNextItem: w,
                     focusedItemId() {
                         let e = C.current;
                         return e ? (0, l.getItemId)(e) : null
                     }
-                }), [t, x, g, b, S, F, k, G, P])
+                }), [t, x, g, b, S, F, k, w, P])
             }
             n.es(u, t)

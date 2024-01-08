@@ -131,7 +131,7 @@
                         }, [A, I]), i.useEffect(() => {
                             C && (!N && P(c, d), O(!1))
                         }, [c, d]);
-                        let w = i.useCallback(e => {
+                        let G = i.useCallback(e => {
                                 if (!g.current) return;
                                 if (!T && o.includes(e.key) && !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) && e.currentTarget === e.target) {
                                     e.preventDefault(), e.stopPropagation(), L();
@@ -179,7 +179,7 @@
                                         }), null != f ? f(c, d, e) : null != I && I.click()
                                 }
                             }, [L, p, m, I, f, c, d]),
-                            G = i.useCallback(e => e.currentTarget !== e.target ? (!C && (v(!0), O(!0)), !1) : C ? (L(!1), !1) : void(_ && null != I ? P(c, d) : L(!0)), [C, _, I, L, P, c, d]),
+                            w = i.useCallback(e => e.currentTarget !== e.target ? (!C && (v(!0), O(!0)), !1) : C ? (L(!1), !1) : void(_ && null != I ? P(c, d) : L(!0)), [C, _, I, L, P, c, d]),
                             k = i.useCallback(e => {
                                 if (e.target !== e.currentTarget) {
                                     if (e.currentTarget.contains(e.relatedTarget)) return !1;
@@ -193,10 +193,10 @@
                                 "aria-colcount": x,
                                 tabIndex: C && _ ? -1 : 0,
                                 "data-ref-id": t,
-                                onKeyDown: w,
-                                onFocus: G,
+                                onKeyDown: G,
+                                onFocus: w,
                                 onBlur: k
-                            }), [n.length, x, C, _, t, w, G, k]),
+                            }), [n.length, x, C, _, t, G, w, k]),
                             V = i.useCallback((e, n) => {
                                 let i = {
                                     role: "gridcell",

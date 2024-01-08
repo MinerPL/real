@@ -68,12 +68,12 @@
                     }, ...O]).slice(0, 200)
                 }, 200);
 
-            function w(e, t, n) {
+            function G(e, t, n) {
                 let i = n(T[t]),
                     r = n(e[t]);
                 return null != i && null != r && 0 !== i ? Math.max(r - i, 0) : 0
             }
-            class G extends a.default.Store {
+            class w extends a.default.Store {
                 initialize() {
                     this.waitFor(c.default)
                 }
@@ -131,8 +131,8 @@
                     })
                 }
             }
-            G.displayName = "DispatchApplicationStore";
-            var k = new G(o.default, {
+            w.displayName = "DispatchApplicationStore";
+            var k = new w(o.default, {
                 CONNECTION_OPEN: function() {
                     I = !1
                 },
@@ -262,11 +262,11 @@
                                     }
                                     throw Error("Invalid Dispatch State. state=".concat(e.state.type))
                                 }(i[e][t]), null != T[c]) {
-                                let e = w(n, c, y);
+                                let e = G(n, c, y);
                                 e > 0 && b(C += e);
-                                let i = w(n, c, P);
+                                let i = G(n, c, P);
                                 i > 0 && U(v += i);
-                                let s = w(n, c, L);
+                                let s = G(n, c, L);
                                 if (s > 0 && M(A += s), r === t) {
                                     let e = n[c];
                                     if (!0 !== e.paused && (e.type === m.LocalDispatchApplicationStates.UNINSTALLING || e.type === m.LocalDispatchApplicationStates.INSTALLING || e.type === m.LocalDispatchApplicationStates.UPDATING)) switch (e.stage) {

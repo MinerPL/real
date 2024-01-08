@@ -169,11 +169,11 @@
                 })
             }
 
-            function w(e) {
+            function G(e) {
                 return C(e.member.user)
             }
 
-            function G(e) {
+            function w(e) {
                 let {
                     request: t
                 } = e, {
@@ -361,8 +361,8 @@
                 GUILD_BAN_REMOVE: L,
                 CHANNEL_RECIPIENT_ADD: b,
                 CHANNEL_RECIPIENT_REMOVE: b,
-                GUILD_JOIN_REQUEST_CREATE: G,
-                GUILD_JOIN_REQUEST_UPDATE: G,
+                GUILD_JOIN_REQUEST_CREATE: w,
+                GUILD_JOIN_REQUEST_UPDATE: w,
                 GUILD_MEMBER_ADD: M,
                 GUILD_MEMBER_UPDATE: M,
                 GUILD_MEMBERS_CHUNK: function(e) {
@@ -440,8 +440,8 @@
                     } = e;
                     return t.members.reduce((e, t) => C(t.user) || e, !1)
                 },
-                LOBBY_MEMBER_CONNECT: w,
-                LOBBY_MEMBER_UPDATE: w,
+                LOBBY_MEMBER_CONNECT: G,
+                LOBBY_MEMBER_UPDATE: G,
                 GIFT_CODE_RESOLVE_SUCCESS: function(e) {
                     let {
                         giftCode: t
