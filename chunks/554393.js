@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return b
+                    return P
                 }
             }), n("222007");
             var s = n("37983"),
@@ -21,40 +21,40 @@
                 E = n("92981"),
                 g = n("592707"),
                 S = n("350134"),
-                A = n("755624"),
-                _ = n("263024"),
+                _ = n("755624"),
+                A = n("263024"),
                 T = n("42203"),
                 M = n("660279"),
                 I = n("36694"),
                 N = n("83900"),
-                v = n("404008"),
-                L = n("680986"),
+                L = n("404008"),
+                v = n("680986"),
                 x = n("612278"),
                 R = n("867965"),
                 y = n("688169"),
                 D = n("49111"),
                 O = n("782340"),
                 j = n("827152"),
-                P = n("550244");
+                b = n("550244");
 
-            function b(e) {
+            function P(e) {
                 let {
                     postId: t,
                     isFirstMessage: n,
                     isLastItem: l = !1,
-                    parentChannelId: b
+                    parentChannelId: P
                 } = e, {
                     ref: F,
-                    width: U
-                } = (0, d.default)(), [H, k] = a.useState(3), [G, w] = a.useState(!n), [B, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(t), [t]), {
+                    width: H
+                } = (0, d.default)(), [U, k] = a.useState(3), [G, w] = a.useState(!n), [B, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(t), [t]), {
                     firstMessage: Z
-                } = (0, x.useFirstForumPostMessage)(W), z = (0, o.useStateFromStores)([A.default], () => A.default.hasJoined(t)), {
+                } = (0, x.useFirstForumPostMessage)(W), z = (0, o.useStateFromStores)([_.default], () => _.default.hasJoined(t)), {
                     disableReactionUpdates: K,
                     disableReactionCreates: Y,
                     isLurking: q,
                     isGuest: X,
-                    isPendingMember: Q
-                } = (0, p.default)(W), J = (0, y.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(b)), ee = (0, L.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = a.useCallback(e => {
+                    isPendingMember: J
+                } = (0, p.default)(W), Q = (0, y.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(P)), ee = (0, v.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = a.useCallback(e => {
                     let t = e[0];
                     if (null != t && n) {
                         let e = t.intersectionRect,
@@ -75,11 +75,11 @@
                 });
                 let [es, ea] = a.useState(!0);
                 if (a.useEffect(() => {
-                        if (null != U) k(Math.floor((U - 280) / 58)), ea(!1)
-                    }, [U]), null == W || null == Z) return null;
+                        if (null != H) k(Math.floor((H - 280) / 58)), ea(!1)
+                    }, [H]), null == W || null == Z) return null;
                 let el = Z.reactions.length > 0,
                     ei = () => {
-                        z ? _.default.leaveThread(W, "Forum Toolbar") : _.default.joinThread(W, "Forum Toolbar")
+                        z ? A.default.leaveThread(W, "Forum Toolbar") : A.default.joinThread(W, "Forum Toolbar")
                     },
                     er = () => {
                         (0, R.trackForumPostLinkCopied)({
@@ -87,7 +87,7 @@
                             location: {
                                 section: D.AnalyticsSections.CHANNEL_HEADER
                             }
-                        }), (0, r.copy)((0, v.getChannelLinkToCopy)(W, $)), V(!0)
+                        }), (0, r.copy)((0, L.getChannelLinkToCopy)(W, $)), V(!0)
                     },
                     eo = z ? I.default : M.default;
                 return (0, s.jsxs)(s.Fragment, {
@@ -101,14 +101,14 @@
                                 [j.loading]: es
                             }),
                             children: [!el && !Y && null != ee && (0, s.jsx)("div", {
-                                className: P.reactions,
+                                className: b.reactions,
                                 children: (0, s.jsx)(S.Reaction, {
                                     message: Z,
                                     readOnly: !1,
                                     useChatFontScaling: !1,
                                     isLurking: q,
                                     isGuest: X,
-                                    isPendingMember: Q,
+                                    isPendingMember: J,
                                     emoji: ee,
                                     type: C.ReactionTypes.NORMAL,
                                     hideCount: !0,
@@ -120,12 +120,12 @@
                             }), (0, s.jsx)(g.default, {
                                 message: Z,
                                 channel: W,
-                                disableReactionCreates: !J || Y,
+                                disableReactionCreates: !Q || Y,
                                 disableReactionUpdates: K,
                                 isLurking: q,
                                 isGuest: X,
-                                isPendingMember: Q,
-                                maxReactions: H,
+                                isPendingMember: J,
+                                maxReactions: U,
                                 className: j.reactions,
                                 useChatFontScaling: !1,
                                 isForumToolbar: !0,

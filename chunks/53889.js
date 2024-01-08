@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 TutorialIndicator: function() {
-                    return _
+                    return A
                 },
                 default: function() {
                     return T
@@ -24,8 +24,8 @@
                 E = n("807061"),
                 g = n("826431"),
                 S = n("612246"),
-                A = n("933934");
-            class _ extends a.PureComponent {
+                _ = n("933934");
+            class A extends a.PureComponent {
                 componentDidMount() {
                     this.updateCache()
                 }
@@ -100,27 +100,27 @@
                     } = this.state, S = {
                         left: null != p ? a.x + p : void 0,
                         top: null != g ? a.y + g : void 0
-                    }, _ = e => {
+                    }, A = e => {
                         let t = n && !e;
                         return !0 !== d ? null : (0, s.jsxs)("div", {
                             children: [(0, s.jsx)("div", {
-                                className: i(A.top, {
-                                    [A.animating]: t,
-                                    [A.notAnimating]: !t
+                                className: i(_.top, {
+                                    [_.animating]: t,
+                                    [_.notAnimating]: !t
                                 })
                             }), (0, s.jsx)("div", {
-                                className: i(A.bottom, {
-                                    [A.animating]: t,
-                                    [A.notAnimating]: !t
+                                className: i(_.bottom, {
+                                    [_.animating]: t,
+                                    [_.notAnimating]: !t
                                 })
                             })]
                         })
                     }, T = e => {
                         let t = n && !e;
                         return {
-                            [A.animating]: t,
-                            [A.notAnimating]: !t,
-                            [A.highPriority]: d
+                            [_.animating]: t,
+                            [_.notAnimating]: !t,
+                            [_.highPriority]: d
                         }
                     }, M = this.getTutorialPopoutText();
                     return (0, s.jsx)(m.default, {
@@ -141,14 +141,14 @@
                             } = t;
                             return (0, s.jsx)(f.Clickable, {
                                 ...e,
-                                className: A.indicator,
+                                className: _.indicator,
                                 style: S,
                                 children: (0, s.jsxs)("div", {
-                                    className: i(A.animationContainer, T(n)),
-                                    children: [_(n), (0, s.jsx)("div", {
-                                        className: i(A.innerCircle, T(n))
+                                    className: i(_.animationContainer, T(n)),
+                                    children: [A(n), (0, s.jsx)("div", {
+                                        className: i(_.innerCircle, T(n))
                                     }), (0, s.jsx)("div", {
-                                        className: i(A.outerCircle, T(n))
+                                        className: i(_.outerCircle, T(n))
                                     })]
                                 })
                             })
@@ -179,7 +179,7 @@
                 return a ? (0, s.jsx)(s.Fragment, {
                     children: Object.entries(e).map(e => {
                         let [a, l] = e, i = t[a];
-                        return o(null != i, "Missing tutorial definition for ".concat(a)), (0, s.jsx)(_, {
+                        return o(null != i, "Missing tutorial definition for ".concat(a)), (0, s.jsx)(A, {
                             tutorialId: a,
                             tutorialDefinition: i,
                             focused: n,

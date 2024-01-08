@@ -24,14 +24,14 @@
                 E = n("970700"),
                 g = n("271938"),
                 S = n("305961"),
-                A = n("697218"),
-                _ = n("461380"),
+                _ = n("697218"),
+                A = n("461380"),
                 T = n("36694"),
                 M = n("659500"),
                 I = n("701909"),
                 N = n("773336"),
-                v = n("299039"),
-                L = n("172554"),
+                L = n("299039"),
+                v = n("172554"),
                 x = n("49111"),
                 R = n("188631"),
                 y = n("782340"),
@@ -67,9 +67,9 @@
                         className: i(D.checkmark, {
                             [D.animate]: d
                         })
-                    }) : (0, s.jsx)(_.default, {
+                    }) : (0, s.jsx)(A.default, {
                         className: D.arrow,
-                        direction: _.default.Directions.RIGHT
+                        direction: A.default.Directions.RIGHT
                     })]
                 })
             }
@@ -77,17 +77,17 @@
             function j(e) {
                 let {
                     channel: t
-                } = e, l = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != l && v.default.extractTimestamp(l.id) < Date.now() - x.WELCOME_OLD_GUILD_AGE_THRESHOLD, _ = (0, u.useStateFromStores)([g.default], () => (null == l ? void 0 : l.ownerId) === g.default.getId(), [l]), {
+                } = e, l = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != l && L.default.extractTimestamp(l.id) < Date.now() - x.WELCOME_OLD_GUILD_AGE_THRESHOLD, A = (0, u.useStateFromStores)([g.default], () => (null == l ? void 0 : l.ownerId) === g.default.getId(), [l]), {
                     canInvite: T,
                     canManageGuild: j,
-                    canMessage: P
-                } = (0, p.usePermissions)(t, l), b = (0, u.useStateFromStores)([A.default], () => {
+                    canMessage: b
+                } = (0, p.usePermissions)(t, l), P = (0, u.useStateFromStores)([_.default], () => {
                     var e, t;
-                    return (null === (e = A.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = A.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0
+                    return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0
                 }), {
                     guildPopulated: F,
-                    guildMessaged: U,
-                    guildPersonalized: H
+                    guildMessaged: H,
+                    guildPersonalized: U
                 } = (0, p.useCompletedStates)(l), {
                     handleInvite: k,
                     handleMessage: G,
@@ -169,7 +169,7 @@
                         handleDownload: r,
                         handleAddApplication: o
                     }
-                }(l), W = !(b || F || U || H), {
+                }(l), W = !(P || F || H || U), {
                     titleAnimatedStyle: Z,
                     opacities: z
                 } = function(e) {
@@ -235,10 +235,10 @@
                     children: (0, s.jsx)(O, {
                         iconUrl: n("215036"),
                         header: y.default.Messages.WELCOME_CTA_PERSONALIZE_TITLE,
-                        completed: H,
+                        completed: U,
                         onClick: w
                     })
-                }, "customize")), P && q.push((0, s.jsx)(o.default.div, {
+                }, "customize")), b && q.push((0, s.jsx)(o.default.div, {
                     className: D.cardWrapper,
                     style: W ? {
                         opacity: z[q.length]
@@ -246,7 +246,7 @@
                     children: (0, s.jsx)(O, {
                         iconUrl: n("505873"),
                         header: y.default.Messages.WELCOME_CTA_MESSAGE_TITLE,
-                        completed: U,
+                        completed: H,
                         onClick: G
                     })
                 }, "message")), (0, N.isWeb)() && q.push((0, s.jsx)(o.default.div, {
@@ -257,7 +257,7 @@
                     children: (0, s.jsx)(O, {
                         iconUrl: n("238032"),
                         header: y.default.Messages.WELCOME_CTA_DOWNLOAD_TITLE,
-                        completed: b,
+                        completed: P,
                         onClick: B
                     })
                 }, "download")), q.push((0, s.jsx)(o.default.div, {
@@ -272,10 +272,10 @@
                         onClick: V
                     })
                 }, "addapp")));
-                let X = _ ? y.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : y.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
+                let X = A ? y.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : y.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
                 f && (X = y.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
-                let Q = "".concat(I.default.getArticleURL(x.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
-                return (0, s.jsx)(L.default, {
+                let J = "".concat(I.default.getArticleURL(x.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
+                return (0, s.jsx)(v.default, {
                     channelId: t.id,
                     children: (0, s.jsx)("div", {
                         className: D.container,
@@ -297,7 +297,7 @@
                                     }),
                                     variant: "text-sm/normal",
                                     children: [X, " ", q.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
-                                        guideURL: Q
+                                        guideURL: J
                                     }) : null]
                                 })]
                             }), q]

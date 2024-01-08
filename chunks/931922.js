@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return P
+                    return b
                 }
             }), n("222007");
             var s = n("37983"),
@@ -21,14 +21,14 @@
                 E = n("592407"),
                 g = n("367376"),
                 S = n("305961"),
-                A = n("957255"),
-                _ = n("697218"),
+                _ = n("957255"),
+                A = n("697218"),
                 T = n("987772"),
                 M = n("155207"),
                 I = n("917686"),
                 N = n("317134"),
-                v = n("991170"),
-                L = n("158998"),
+                L = n("991170"),
+                v = n("158998"),
                 x = n("938244"),
                 R = n("172554"),
                 y = n("730859"),
@@ -36,37 +36,37 @@
                 O = n("782340"),
                 j = n("935107");
 
-            function P(e) {
+            function b(e) {
                 let {
                     channel: t
-                } = e, [n, l] = a.useState(!1), r = (0, p.default)(t, !0), P = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), b = (0, c.useStateFromStores)([_.default], () => _.default.getUser(null == P ? void 0 : P.ownerId)), F = a.useMemo(() => null != P ? o(P.roles).sortBy(e => -e.position).filter(e => e.id !== P.id).value() : [], [P]), U = a.useMemo(() => o(F).filter(e => {
-                    if (null == P) return !1;
-                    let n = v.default.computePermissionsForRoles({
+                } = e, [n, l] = a.useState(!1), r = (0, p.default)(t, !0), b = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), P = (0, c.useStateFromStores)([A.default], () => A.default.getUser(null == b ? void 0 : b.ownerId)), F = a.useMemo(() => null != b ? o(b.roles).sortBy(e => -e.position).filter(e => e.id !== b.id).value() : [], [b]), H = a.useMemo(() => o(F).filter(e => {
+                    if (null == b) return !1;
+                    let n = L.default.computePermissionsForRoles({
                         forceRoles: {
                             [e.id]: e
                         },
                         context: t
                     });
                     return u.default.has(n, D.Permissions.ADMINISTRATOR) || u.default.has(n, D.Permissions.VIEW_CHANNEL)
-                }).value(), [t, P, F]), H = (0, c.useStateFromStoresArray)([_.default], () => {
+                }).value(), [t, b, F]), U = (0, c.useStateFromStoresArray)([A.default], () => {
                     let e = {};
-                    for (let n of (null != b && (e[b.id] = b), Object.values(t.permissionOverwrites))) {
+                    for (let n of (null != P && (e[P.id] = P), Object.values(t.permissionOverwrites))) {
                         if (n.type !== C.PermissionOverwriteType.MEMBER || null != e[n.id]) continue;
-                        let t = _.default.getUser(n.id);
+                        let t = A.default.getUser(n.id);
                         null != t && (e[t.id] = t)
                     }
                     return o(e).filter(e => {
                         var n;
-                        let s = v.default.can({
+                        let s = L.default.can({
                                 permission: D.Permissions.ADMINISTRATOR,
                                 user: e,
                                 context: t
                             }),
-                            a = null !== (n = t.permissionOverwrites[e.id]) && void 0 !== n ? n : v.default.NONE,
+                            a = null !== (n = t.permissionOverwrites[e.id]) && void 0 !== n ? n : L.default.NONE,
                             l = u.default.has(a.allow, D.Permissions.VIEW_CHANNEL);
                         return s || l
                     }).value()
-                }, [t, b]), k = A.default.can(D.Permissions.MANAGE_CHANNELS, t) || A.default.can(D.Permissions.MANAGE_ROLES, t);
+                }, [t, P]), k = _.default.can(D.Permissions.MANAGE_CHANNELS, t) || _.default.can(D.Permissions.MANAGE_ROLES, t);
 
                 function G() {
                     h.default.open(t.id)
@@ -108,14 +108,14 @@
                     }) : null, (0, s.jsxs)("div", {
                         className: j.members,
                         children: [function() {
-                            if (1 !== H.length || U.length > 0) return (0, s.jsx)(y.default, {
+                            if (1 !== U.length || H.length > 0) return (0, s.jsx)(y.default, {
                                 guildId: t.guild_id,
                                 className: j.avatars,
                                 maxUsers: 5,
-                                users: H
+                                users: U
                             });
-                            let e = H[0],
-                                n = L.default.getName(e);
+                            let e = U[0],
+                                n = v.default.getName(e);
                             return (0, s.jsxs)("div", {
                                 className: j.avatars,
                                 children: [(0, s.jsx)(f.Avatar, {
@@ -134,13 +134,13 @@
                                     children: O.default.Messages.ROLE_REQUIRED_SINGLE_USER_MESSAGE
                                 })]
                             })
-                        }(), U.map((e, n) => {
+                        }(), H.map((e, n) => {
                             var a, l;
                             let r = null !== (l = e.colorString) && void 0 !== l ? l : (0, d.int2hex)(D.DEFAULT_ROLE_COLOR),
                                 o = (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) !== void 0;
                             return k ? (0, s.jsx)(I.default, {
                                 className: i(j.role, {
-                                    [j.last]: n === U.length - 1
+                                    [j.last]: n === H.length - 1
                                 }),
                                 roleName: e.name,
                                 roleColor: r,
@@ -151,7 +151,7 @@
                                 }
                             }, e.id) : (0, s.jsx)(N.default, {
                                 className: i(j.role, {
-                                    [j.last]: n === U.length - 1
+                                    [j.last]: n === H.length - 1
                                 }),
                                 roleName: e.name,
                                 roleColor: r,

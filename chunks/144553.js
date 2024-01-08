@@ -21,18 +21,18 @@
                 E = n("909917"),
                 g = n("380986"),
                 S = n("49111"),
-                A = n("782340");
-            let _ = a.memo(function(e) {
-                var t, n, _;
+                _ = n("782340");
+            let A = a.memo(function(e) {
+                var t, n, A;
                 let {
                     baseMessage: T,
                     referencedMessage: M,
                     channel: I,
                     compact: N = !1,
-                    referencedUsernameProfile: v,
-                    referencedAvatarProfile: L,
+                    referencedUsernameProfile: L,
+                    referencedAvatarProfile: v,
                     setPopout: x
-                } = e, R = M.state === c.ReferencedMessageState.LOADED ? M.message : void 0, y = (0, m.useNullableMessageAuthor)(R), D = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = T.editedTimestamp) && void 0 !== t ? t : T.timestamp).valueOf()), O = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == I ? void 0 : I.guild_id) && void 0 !== n ? n : "", (null !== (_ = T.editedTimestamp) && void 0 !== _ ? _ : T.timestamp).valueOf()), j = a.useMemo(() => {
+                } = e, R = M.state === c.ReferencedMessageState.LOADED ? M.message : void 0, y = (0, m.useNullableMessageAuthor)(R), D = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = T.editedTimestamp) && void 0 !== t ? t : T.timestamp).valueOf()), O = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == I ? void 0 : I.guild_id) && void 0 !== n ? n : "", (null !== (A = T.editedTimestamp) && void 0 !== A ? A : T.timestamp).valueOf()), j = a.useMemo(() => {
                     if (null == R) return null;
                     if (R.type === S.MessageTypes.USER_JOIN) return (0, i.astToString)(C.default.getSystemMessageUserJoin(R.id).astFormat({
                         username: null != y ? y.nick : R.author.username,
@@ -55,7 +55,7 @@
                         application: null == R ? void 0 : R.application,
                         username: null == y ? void 0 : y.nick
                     }));
-                    else if (R.type === S.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT) return "" !== R.content ? R.content : A.default.Messages.DEADCHAT_PROMPT_1;
+                    else if (R.type === S.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT) return "" !== R.content ? R.content : _.default.Messages.DEADCHAT_PROMPT_1;
                     if (null != R.content && "" !== R.content) {
                         let e = R.isFirstMessageInForumPost(I) ? {
                             formatInline: !0,
@@ -72,7 +72,7 @@
                         return (0, p.default)(R, e).content
                     }
                     return null
-                }, [R, y, I, D, O]), P = (0, l.useStateFromStores)([f.default], () => null != R && f.default.isBlocked(R.author.id), [R]), b = (0, g.useContextMenuUser)(null == R ? void 0 : R.author.id, I.id), F = (0, g.useClickReply)(T, R, P), U = (0, g.useClickReferencedMessageAuthorUsername)(R, I, v, x), H = (0, g.useClickReferencedMessageAuthorAvatar)(L, x), k = a.useCallback(() => x({
+                }, [R, y, I, D, O]), b = (0, l.useStateFromStores)([f.default], () => null != R && f.default.isBlocked(R.author.id), [R]), P = (0, g.useContextMenuUser)(null == R ? void 0 : R.author.id, I.id), F = (0, g.useClickReply)(T, R, b), H = (0, g.useClickReferencedMessageAuthorUsername)(R, I, L, x), U = (0, g.useClickReferencedMessageAuthorAvatar)(v, x), k = a.useCallback(() => x({
                     referencedUsernameProfile: !1,
                     referencedAvatarProfile: !1
                 }), [x]), G = (0, m.useNullableMessageAuthor)(T);
@@ -84,14 +84,14 @@
                     referencedMessage: M,
                     content: j,
                     compact: N,
-                    isReplyAuthorBlocked: P,
-                    showAvatarPopout: L,
-                    showUsernamePopout: v,
+                    isReplyAuthorBlocked: b,
+                    showAvatarPopout: v,
+                    showUsernamePopout: L,
                     renderPopout: E.default,
-                    onClickAvatar: H,
-                    onClickUsername: U,
+                    onClickAvatar: U,
+                    onClickUsername: H,
                     onClickReply: F,
-                    onContextMenu: b,
+                    onContextMenu: P,
                     onPopoutRequestClose: k
                 })
             });
@@ -104,7 +104,7 @@
                 } = e, {
                     referencedUsernameProfile: u,
                     referencedAvatarProfile: d
-                } = n, c = i.type === S.MessageTypes.REPLY && null != a && (0, s.jsx)(_, {
+                } = n, c = i.type === S.MessageTypes.REPLY && null != a && (0, s.jsx)(A, {
                     baseMessage: i,
                     replyReference: a,
                     referencedMessage: l,
