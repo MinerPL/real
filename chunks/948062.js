@@ -21,8 +21,8 @@
                 _ = n("587974"),
                 h = n("315102"),
                 C = n("794818"),
-                T = n("378662"),
-                I = n("574921"),
+                I = n("378662"),
+                T = n("574921"),
                 S = n("311092"),
                 N = n("613088"),
                 A = n("49111"),
@@ -92,16 +92,16 @@
                         }
                     }
                 };
-                s.useEffect(() => I.DiscoveryTagsExperiment.trackExposure({
+                s.useEffect(() => T.DiscoveryTagsExperiment.trackExposure({
                     location: "4302e4_1"
                 }));
                 let {
                     shouldDisplayTags: K
-                } = I.DiscoveryTagsExperiment.useExperiment({
+                } = T.DiscoveryTagsExperiment.useExperiment({
                     location: "4302e4_2"
                 }, {
                     autoTrackExposure: !1
-                }), z = (0, T.useCanSeeDiscoveryContextMenu)();
+                }), z = (0, I.useCanSeeDiscoveryContextMenu)();
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsxs)("div", {
                         className: p.card,

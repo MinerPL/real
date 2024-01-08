@@ -115,16 +115,14 @@
                 }
                 _getParticipantsForEmbeddedActivities() {
                     return this._getEmbeddedActivities().map((e, t) => {
-                        var n, i, a, l;
+                        var n, i;
                         return {
                             type: g.ParticipantTypes.ACTIVITY,
-                            id: e.application_id,
-                            activityType: e.type,
+                            id: e.applicationId,
+                            activityType: A.ActivityTypes.PLAYING,
                             activityUrl: e.url,
-                            participants: new Set(e.connections.keys()),
-                            canJoin: (null == e ? void 0 : null === (n = e.secrets) || void 0 === n ? void 0 : n.join) != null,
-                            joinSecret: null == e ? void 0 : null === (i = e.secrets) || void 0 === i ? void 0 : i.join,
-                            guildId: null !== (l = null === (a = f.default.getChannel(this.channelId)) || void 0 === a ? void 0 : a.getGuildId()) && void 0 !== l ? l : null,
+                            participants: new Set(e.userIds),
+                            guildId: null !== (i = null === (n = f.default.getChannel(this.channelId)) || void 0 === n ? void 0 : n.getGuildId()) && void 0 !== i ? i : null,
                             sortKey: t.toString()
                         }
                     })

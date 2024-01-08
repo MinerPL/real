@@ -19,8 +19,8 @@
                 _ = n("685665"),
                 h = n("42203"),
                 C = n("58608"),
-                T = n("599110"),
-                I = n("49111"),
+                I = n("599110"),
+                T = n("49111"),
                 S = n("994428"),
                 N = n("782340"),
                 A = n("314796");
@@ -81,12 +81,12 @@
                         AnalyticsLocationProvider: b
                     } = (0, _.default)(s);
                     l.useEffect(() => {
-                        T.default.track(I.AnalyticEvents.TOOLTIP_VIEWED, {
+                        I.default.track(T.AnalyticEvents.TOOLTIP_VIEWED, {
                             type: g
                         })
                     }, [g]);
                     let U = (0, d.useAppContext)(),
-                        G = U === I.AppContext.POPOUT,
+                        G = U === T.AppContext.POPOUT,
                         j = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t), [t]);
                     return (0, i.jsx)(b, {
                         children: (0, i.jsx)("div", {
@@ -139,10 +139,10 @@
                                                     channel: j.isGuildVoice() ? j : void 0,
                                                     guildId: j.guild_id,
                                                     locationObject: {
-                                                        page: I.AnalyticsPages.GUILD_CHANNEL,
-                                                        section: I.AnalyticsSections.GUILD_CHANNEL_LIST,
-                                                        object: I.AnalyticsObjects.ACTIVITIES_COACH_MARK,
-                                                        objectType: I.AnalyticsObjectTypes.ACTIVITY
+                                                        page: T.AnalyticsPages.GUILD_CHANNEL,
+                                                        section: T.AnalyticsSections.GUILD_CHANNEL_LIST,
+                                                        object: T.AnalyticsObjects.ACTIVITIES_COACH_MARK,
+                                                        objectType: T.AnalyticsObjectTypes.ACTIVITY
                                                     },
                                                     openInPopout: G,
                                                     analyticsLocations: x

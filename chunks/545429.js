@@ -19,7 +19,7 @@
                 h = n("697218"),
                 C = n("49111");
 
-            function T(e) {
+            function I(e) {
                 let t = h.default.getUser(e);
                 return {
                     user: t,
@@ -27,7 +27,7 @@
                 }
             }
 
-            function I(e) {
+            function T(e) {
                 return {
                     status: f.default.getStatus(e),
                     isMobile: f.default.isMobileOnline(e),
@@ -60,16 +60,16 @@
                             key: t,
                             type: e,
                             nickname: _.default.getNickname(t),
-                            ...T(t),
                             ...I(t),
+                            ...T(t),
                             ...S(t)
                         })),
                         t = s.map(u.default.getSuggestions(), e => new N({
                             key: e.key,
                             type: 99,
                             nickname: e.name,
-                            ...T(e.key),
                             ...I(e.key),
+                            ...T(e.key),
                             ...S(e.key)
                         }));
                     return new A(s.concat(e, t))
@@ -157,7 +157,7 @@
             }
             class y extends i.default.Store {
                 initialize() {
-                    this.waitFor(_.default, f.default, h.default, E.default, c.default, d.default, u.default), this.syncWith([_.default], P), this.syncWith([u.default], P), this.syncWith([h.default], D(T)), this.syncWith([f.default, d.default], D(I)), M()
+                    this.waitFor(_.default, f.default, h.default, E.default, c.default, d.default, u.default), this.syncWith([_.default], P), this.syncWith([u.default], P), this.syncWith([h.default], D(I)), this.syncWith([f.default, d.default], D(T)), M()
                 }
                 getState() {
                     return {

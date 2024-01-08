@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return I
                 }
             }), n("424973"), n("222007");
             var a = n("37983");
@@ -20,13 +20,13 @@
                 h = n("636174"),
                 C = n("49111");
 
-            function T(e) {
+            function I(e) {
                 let {
                     party: t,
                     onChannelContextMenu: n
                 } = e, {
-                    voiceChannels: T,
-                    currentActivities: I,
+                    voiceChannels: I,
+                    currentActivities: T,
                     partiedMembers: S,
                     applicationStreams: N,
                     guildContext: A
@@ -50,7 +50,7 @@
                 for (let {
                         activity: e
                     }
-                    of(T.length > 0 && T.forEach(e => {
+                    of(I.length > 0 && I.forEach(e => {
                         let {
                             members: t,
                             channel: s,
@@ -101,7 +101,7 @@
                             s.default.selectVoiceChannel(t.channelId), (0, i.watchStreamAndTransitionToStream)(t)
                         }
                     }, "application-stream-".concat(t.ownerId)))
-                }), I.forEach((e, t) => {
+                }), T.forEach((e, t) => {
                     var n, s, i, c, f, N, m, g;
                     let {
                         activity: R,
@@ -110,7 +110,7 @@
                         activityUser: v
                     } = e;
                     if (null == R || null == R.type) return null;
-                    if (I.length > 1 && R.type === C.ActivityTypes.PLAYING && !(0, l.default)(R) && null != O) p((0, a.jsx)(_.default.GameSection, {
+                    if (T.length > 1 && R.type === C.ActivityTypes.PLAYING && !(0, l.default)(R) && null != O) p((0, a.jsx)(_.default.GameSection, {
                         icon: O.getIconURL(h.ICON_SIZE),
                         name: O.name,
                         partySize: {
@@ -122,7 +122,7 @@
                     }, "game-".concat(null !== (n = R.session_id) && void 0 !== n ? n : t, "-").concat(null !== (s = R.application_id) && void 0 !== s ? s : t)));
                     else if ((0, r.default)(R)) {
                         let e = new Set(L.map(e => e.id)),
-                            t = null === (i = T.find(e => null != e)) || void 0 === i ? void 0 : i.channel;
+                            t = null === (i = I.find(e => null != e)) || void 0 === i ? void 0 : i.channel;
                         null != t && p((0, a.jsx)(_.default.EmbeddedActivitySection, {
                             activity: R,
                             participants: e,
@@ -134,7 +134,7 @@
                         getAssetImage: E.getAssetImage
                     }, "rich-presence-".concat(null !== (c = R.session_id) && void 0 !== c ? c : t, "-").concat(v.id)));
                     else if ((0, d.default)(R)) {
-                        let e = T.length > 0 && T[0].members.length > 1,
+                        let e = I.length > 0 && I[0].members.length > 1,
                             n = L.length > 1;
                         p((0, a.jsx)(_.default.TwitchSection, {
                             guildId: null == A ? void 0 : A.id,

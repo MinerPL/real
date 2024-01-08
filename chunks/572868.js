@@ -4,20 +4,20 @@
                     return i
                 }
             }), n("222007"), n("70102");
-            var i, l = n("44170"),
-                a = n("917351"),
-                r = n.n(a),
+            var i, a = n("44170"),
+                l = n("917351"),
+                r = n.n(l),
                 s = n("605250"),
-                o = n("402752"),
-                u = n("894488");
+                u = n("402752"),
+                o = n("894488");
             let d = new s.default("UploaderBase.tsx");
-            i = class extends l.EventEmitter {
+            i = class extends a.EventEmitter {
                 _addAttachmentsToPayload(e, t, n) {
                     let i = {
                             ...e
                         },
-                        l = [...r.get(i, t, []), ...n];
-                    return r.set(i, t, l)
+                        a = [...r.get(i, t, []), ...n];
+                    return r.set(i, t, a)
                 }
                 clearProcessingMessageInterval() {
                     null != this.processingMessageChangeInterval && (clearInterval(this.processingMessageChangeInterval), this.processingMessageChangeInterval = void 0)
@@ -52,8 +52,8 @@
                         this._cancel = e, !this.alreadyStarted && this.emit("start", this._file), this.alreadyStarted = !0
                     }, this._handleProgress = (e, t, n) => {
                         let i = Date.now(),
-                            l = (0, o.calculateProgress)(e, t),
-                            a = Math.floor((e - this._loaded) / ((i - this._lastUpdate) / 1e3));
+                            a = (0, u.calculateProgress)(e, t),
+                            l = Math.floor((e - this._loaded) / ((i - this._lastUpdate) / 1e3));
                         if (null != n) {
                             var r;
                             null === (r = this._file.items) || void 0 === r || r.forEach(e => {
@@ -63,13 +63,13 @@
                         this._lastUpdate = i, this._loaded = e, this._file = {
                             ...this._file,
                             currentSize: t,
-                            progress: l,
-                            rate: a
+                            progress: a,
+                            rate: l
                         }, this.emit("progress", this._file)
                     }, this._handleException = e => {
                         this._handleError({
                             reason: {
-                                type: u.FileUploadErrorTypes.ERROR_SOURCE_UNKNOWN,
+                                type: o.FileUploadErrorTypes.ERROR_SOURCE_UNKNOWN,
                                 msg: e.toString()
                             }
                         })

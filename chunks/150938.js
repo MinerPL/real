@@ -19,7 +19,7 @@
                 let {
                     type: t,
                     onClick: n
-                } = e, [s, E] = a.useState(!1), h = (0, i.useInDesktopNotificationCenterExperiment)(), S = () => {
+                } = e, [s, E] = a.useState(!1), _ = (0, i.useInDesktopNotificationCenterExperiment)(), S = () => {
                     n(), u.default.track(c.AnalyticEvents.INBOX_CHANNEL_ACKED, {
                         marked_all_channels_as_read: !0,
                         num_unread_channels_remaining: 0
@@ -28,7 +28,7 @@
                     e.shiftKey ? S() : E(!0)
                 };
                 return (0, l.jsxs)(l.Fragment, {
-                    children: [s ? (0, l.jsx)(_, {
+                    children: [s ? (0, l.jsx)(h, {
                         confirm: S,
                         cancel: () => E(!1)
                     }) : null, "bottom-floating" === t ? (0, l.jsx)(d.FloatingActionButton, {
@@ -36,7 +36,7 @@
                         icon: o.default,
                         onClick: T
                     }) : (0, l.jsx)(r.default, {
-                        tooltip: h ? f.default.Messages.MARK_ALL_AS_READ : f.default.Messages.UNREADS_MARK_READ,
+                        tooltip: _ ? f.default.Messages.MARK_ALL_AS_READ : f.default.Messages.UNREADS_MARK_READ,
                         color: r.CircleIconButtonColors.SECONDARY,
                         icon: (0, l.jsx)(o.default, {}),
                         onClick: T
@@ -44,7 +44,7 @@
                 })
             }
 
-            function _(e) {
+            function h(e) {
                 let {
                     cancel: t,
                     confirm: n

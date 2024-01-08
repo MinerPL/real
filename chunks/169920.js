@@ -34,7 +34,7 @@
                 if (l.useEffect(() => {
                         null == n && null != E ? (0, u.updateActivityPanelMode)(f.ActivityPanelModes.ACTION_BAR) : null != n && null == E && (0, u.updateFocusedActivityLayout)(f.FocusedActivityLayouts.NO_CHAT)
                     }, [n, E]), !m) return null;
-                let C = null == h ? void 0 : h.application_id;
+                let C = null == h ? void 0 : h.applicationId;
                 return p !== f.ActivityPanelModes.PANEL || null == C ? null : null == n || null == h || (0, d.default)(n) || null == C ? null : (0, a.jsx)(c.default, {
                     maxHeight: t,
                     connectedChannelId: n

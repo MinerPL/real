@@ -153,14 +153,14 @@
                     z = (0, I.default)([w.id])[0],
                     J = (0, u.useStateFromStores)([m.default], () => {
                         var e;
-                        return (null == d ? void 0 : d.channel) != null && (null === (e = m.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.application_id) === w.id
+                        return (null == d ? void 0 : d.channel) != null && (null === (e = m.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === w.id
                     }),
                     Z = (0, u.useStateFromStores)([m.default], () => {
                         var e;
                         let t = (null === (e = d.channel) || void 0 === e ? void 0 : e.id) != null ? m.default.getEmbeddedActivitiesForChannel(d.channel.id) : [];
                         return t.some(e => {
                             let {
-                                application_id: t
+                                applicationId: t
                             } = e;
                             return w.id === t
                         })
@@ -174,7 +174,7 @@
                         applicationId: w.id,
                         size: j
                     }),
-                    ee = (0, u.useStateFromStoresArray)([m.default], () => null != X ? m.default.getEmbeddedActivitiesForChannel(X.id).filter(e => e.application_id === w.id).flatMap(e => Array.from(e.connections.keys())) : [], [X, w.id]),
+                    ee = (0, u.useStateFromStoresArray)([m.default], () => null != X ? m.default.getEmbeddedActivitiesForChannel(X.id).filter(e => e.applicationId === w.id).flatMap(e => Array.from(e.userIds)) : [], [X, w.id]),
                     et = (0, u.useStateFromStoresArray)([N.default], () => ee.map(e => N.default.getUser(e)), [ee]),
                     en = d.state === R.InviteStates.ACCEPTING,
                     ea = null != K;

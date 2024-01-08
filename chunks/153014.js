@@ -25,8 +25,8 @@
                 _ = n("488464"),
                 h = n("998716"),
                 C = n("230324"),
-                T = n("834052"),
-                I = n("160870"),
+                I = n("834052"),
+                T = n("160870"),
                 S = n("957255"),
                 N = n("316133"),
                 A = n("660279"),
@@ -194,7 +194,7 @@
                     startDateTimeString: _,
                     upcomingEvent: h,
                     diffMinutes: C
-                } = (0, H.getEventTimeData)(E.toISOString(), null == f ? void 0 : f.toISOString()), T = h ? C > 0 ? K.default.Messages.STARTING_IN_MINUTES.format({
+                } = (0, H.getEventTimeData)(E.toISOString(), null == f ? void 0 : f.toISOString()), I = h ? C > 0 ? K.default.Messages.STARTING_IN_MINUTES.format({
                     minutes: C
                 }) : K.default.Messages.STARTING_SOON : K.default.Messages.STARTING_ON_DATE.format({
                     date: _
@@ -243,7 +243,7 @@
                             color: "header-secondary",
                             variant: "text-xs/normal",
                             className: z.startTime,
-                            children: T
+                            children: I
                         })]
                     }), (0, i.jsxs)("div", {
                         className: z.textBlock,
@@ -373,7 +373,7 @@
                     channel: t,
                     speakers: n,
                     voiceType: a
-                } = e, s = t.getGuildId(), u = l.useMemo(() => n.slice(0, 3), [n]), d = (0, r.useStateFromStores)([S.default], () => S.default.can(W.Permissions.CONNECT, t)), c = (0, I.default)(t.id), E = K.default.Messages.JOIN;
+                } = e, s = t.getGuildId(), u = l.useMemo(() => n.slice(0, 3), [n]), d = (0, r.useStateFromStores)([S.default], () => S.default.can(W.Permissions.CONNECT, t)), c = (0, T.default)(t.id), E = K.default.Messages.JOIN;
                 switch (a) {
                     case 1:
                         E = K.default.Messages.JOIN;
@@ -419,7 +419,7 @@
                     location: "Guild Channel Notice"
                 }, {
                     autoTrackExposure: !1
-                }), u = (0, r.useStateFromStores)([T.default], () => T.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
+                }), u = (0, r.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
                     isStageNoticeHidden: E,
                     isEventNoticeHidden: f
                 } = (0, r.useStateFromStoresObject)([b.default], () => ({

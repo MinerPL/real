@@ -18,17 +18,17 @@
                 n = i("442939"),
                 r = i("824563"),
                 d = i("697218"),
-                o = i("449008"),
-                u = i("191225");
+                u = i("449008"),
+                o = i("191225");
 
             function c(e, t) {
-                let i = (0, a.useStateFromStoresArray)([u.default], () => null != e && null != e.id && "" !== e.id ? u.default.getEmbeddedActivitiesForChannel(e.id) : u.NO_ACTIVITIES),
+                let i = (0, a.useStateFromStoresArray)([o.default], () => null != e && null != e.id && "" !== e.id ? o.default.getEmbeddedActivitiesForChannel(e.id) : o.NO_ACTIVITIES),
                     l = f(i, t);
                 return l
             }
 
             function s(e) {
-                let t = (0, a.useStateFromStores)([u.default], () => null != e ? u.default.getEmbeddedActivitiesForGuild(e) : u.NO_ACTIVITIES),
+                let t = (0, a.useStateFromStores)([o.default], () => null != e ? o.default.getEmbeddedActivitiesForGuild(e) : o.NO_ACTIVITIES),
                     i = f(t),
                     n = l.useMemo(() => {
                         let e = new Map;
@@ -43,16 +43,16 @@
             }
 
             function f(e, t) {
-                let i = e.map(e => e.application_id),
+                let i = e.map(e => e.applicationId),
                     r = (0, n.default)(i),
-                    u = new Set([]);
+                    o = new Set([]);
                 for (let t of e)
-                    for (let e of t.connections.keys()) u.add(e);
+                    for (let e of t.userIds) o.add(e);
                 let c = (0, a.useStateFromStoresArray)([d.default], () => {
                         let e = [];
-                        for (let t of u) e.push(d.default.getUser(t));
+                        for (let t of o) e.push(d.default.getUser(t));
                         return e
-                    }, [u]),
+                    }, [o]),
                     s = l.useMemo(() => {
                         let i = new Map;
                         c.forEach(e => {
@@ -62,7 +62,7 @@
                             let a = r[l],
                                 n = [];
                             if (null != n)
-                                for (let l of e.connections.keys()) {
+                                for (let l of e.userIds) {
                                     let e = i.get(l);
                                     if (null != e && null != t) {
                                         let i = t(e);
@@ -74,7 +74,7 @@
                                 application: a,
                                 userParticipantAvatarUrls: n
                             }
-                        }).filter(o.isNotNullish);
+                        }).filter(u.isNotNullish);
                         return l
                     }, [e, r, c, t]);
                 return s
@@ -84,17 +84,14 @@
                 let t = (0, a.useStateFromStores)([r.default], () => {
                     let t = new Map;
                     return e.forEach(e => {
-                        var i, l;
-                        let a = r.default.findActivity(null == e ? void 0 : e.embeddedActivity.connections.values().next().value.user_id, t => {
+                        var i;
+                        let l = r.default.findActivity(null == e ? void 0 : e.embeddedActivity.userIds.values().next().value, t => {
                             var i;
                             return t.application_id === (null == e ? void 0 : null === (i = e.application) || void 0 === i ? void 0 : i.id)
                         });
                         t.set(null == e ? void 0 : null === (i = e.application) || void 0 === i ? void 0 : i.id, {
                             ...e,
-                            embeddedActivity: {
-                                ...null == e ? void 0 : e.embeddedActivity,
-                                details: null !== (l = null == a ? void 0 : a.details) && void 0 !== l ? l : ""
-                            }
+                            presenceActivity: l
                         })
                     }), t
                 }, [e], a.statesWillNeverBeEqual);

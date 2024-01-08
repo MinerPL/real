@@ -4,12 +4,12 @@
                     return d
                 }
             }), n("222007");
-            var i = n("37983"),
-                a = n("884691"),
-                l = n("414456"),
-                o = n.n(l),
+            var a = n("37983"),
+                l = n("884691"),
+                i = n("414456"),
+                o = n.n(i),
                 r = n("764230");
-            class s extends a.PureComponent {
+            class s extends l.PureComponent {
                 static getDerivedStateFromProps(e, t) {
                     let {
                         streamId: n
@@ -38,21 +38,21 @@
                 renderVideo(e, t) {
                     let {
                         children: n,
-                        mirror: l,
+                        mirror: i,
                         paused: o,
                         component: s
                     } = this.props;
                     if (null == e) {
                         if (null == n) return null;
-                        let e = a.Children.only(n);
-                        return a.cloneElement(e, {
+                        let e = l.Children.only(n);
+                        return l.cloneElement(e, {
                             style: {
-                                display: t && !l ? void 0 : "none"
+                                display: t && !i ? void 0 : "none"
                             },
                             ...e.props
                         })
                     }
-                    return (0, i.jsx)(s, {
+                    return (0, a.jsx)(s, {
                         paused: o,
                         className: r.media,
                         streamId: e,
@@ -64,7 +64,7 @@
                         mirror: e,
                         className: t
                     } = this.props;
-                    return (0, i.jsxs)("div", {
+                    return (0, a.jsxs)("div", {
                         className: o(r.video, t, {
                             [r.mirror]: e
                         }),

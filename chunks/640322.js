@@ -18,8 +18,8 @@
                 _ = n("48821"),
                 h = n("388437"),
                 C = n("667048"),
-                T = n("580362"),
-                I = n("153014"),
+                I = n("580362"),
+                T = n("153014"),
                 S = n("79176"),
                 N = n("986321"),
                 A = n("519440"),
@@ -42,7 +42,7 @@
                 var t;
                 let {
                     guild: n
-                } = e, [o, _] = s.useState(null !== (t = r.default.get(P.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), I = e => {
+                } = e, [o, _] = s.useState(null !== (t = r.default.get(P.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), T = e => {
                     r.default.set(P.LAST_HIDDEN_CHANNEL_NOTICE, e), _(e)
                 }, N = (0, i.useStateFromStoresArray)(P.CHANNEL_NOTICE_STORES, () => P.CHANNEL_NOTICES.filter(e => {
                     let {
@@ -61,7 +61,7 @@
                             visibleContent: t,
                             markAsDismissed: s
                         } = e, i = () => {
-                            I(Date.now()), s(D.ContentDismissActionType.UNKNOWN)
+                            T(Date.now()), s(D.ContentDismissActionType.UNKNOWN)
                         }, r = (() => {
                             switch (t) {
                                 case l.DismissibleContent.CHANNEL_NOTICE_HUBLINK:
@@ -104,11 +104,11 @@
                             }
                         })();
                         if (null == r) {
-                            if (!A || (0, T.isContentDismissed)(l.DismissibleGuildContent.CLYDE_GUILD_NOTICE_NUX, n.id)) return null;
+                            if (!A || (0, I.isContentDismissed)(l.DismissibleGuildContent.CLYDE_GUILD_NOTICE_NUX, n.id)) return null;
                             r = (0, a.jsx)(c.default, {
                                 guild: n,
                                 markAsDismissed: () => {
-                                    (0, T.markContentAsDismissed)(l.DismissibleGuildContent.CLYDE_GUILD_NOTICE_NUX, n.id, !0)
+                                    (0, I.markContentAsDismissed)(l.DismissibleGuildContent.CLYDE_GUILD_NOTICE_NUX, n.id, !0)
                                 }
                             })
                         }
@@ -137,7 +137,7 @@
                             guild: t
                         });
                     case M.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
-                        return (0, a.jsx)(I.default, {
+                        return (0, a.jsx)(T.default, {
                             guild: t
                         });
                     case M.ConnectedChannelNotices.GUILD_MFA_WARNING:

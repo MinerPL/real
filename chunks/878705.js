@@ -37,8 +37,8 @@
                                 h = null == c ? void 0 : c.getGuildId();
                             if (null == c) throw new u.default(f.RPCErrors.INVALID_COMMAND, "Invalid channel");
                             let C = i.default.getApplication(l),
-                                T = (0, o.hasFlag)(null !== (t = null == C ? void 0 : C.flags) && void 0 !== t ? t : 0, _.ApplicationFlags.EMBEDDED_FIRST_PARTY);
-                            if (!T) throw new u.default(f.RPCErrors.INVALID_COMMAND, "This application cannot access this API");
+                                I = (0, o.hasFlag)(null !== (t = null == C ? void 0 : C.flags) && void 0 !== t ? t : 0, _.ApplicationFlags.EMBEDDED_FIRST_PARTY);
+                            if (!I) throw new u.default(f.RPCErrors.INVALID_COMMAND, "This application cannot access this API");
                             r.default.track(a, {
                                 ...s,
                                 activity_application_id: l,

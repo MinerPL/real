@@ -2,7 +2,7 @@
             let a, i;
             n.r(e), n.d(e, {
                 default: function() {
-                    return f
+                    return A
                 }
             }), n("222007");
             var l = n("446674"),
@@ -14,12 +14,12 @@
                 s = {},
                 E = {};
 
-            function p(t) {
+            function I(t) {
                 delete c[t];
                 let e = E[t];
                 null != e && delete s[e], delete E[t]
             }
-            class A extends l.default.Store {
+            class p extends l.default.Store {
                 getInteraction(t) {
                     let e = s[t.id];
                     return null != e ? c[e] : null
@@ -43,8 +43,8 @@
                     return a
                 }
             }
-            A.displayName = "InteractionStore";
-            var f = new A(r.default, {
+            p.displayName = "InteractionStore";
+            var A = new p(r.default, {
                 LOGOUT: function() {
                     c = {}, s = {}, E = {}
                 },
@@ -86,7 +86,7 @@
                     if (null == n) return !1;
                     let a = c[n];
                     if (null == a) return !1;
-                    null === (e = a.onSuccess) || void 0 === e || e.call(a), p(n)
+                    null === (e = a.onSuccess) || void 0 === e || e.call(a), I(n)
                 },
                 INTERACTION_FAILURE: function(t) {
                     var e;
@@ -98,7 +98,7 @@
                     if (null == n) return !1;
                     let l = c[n];
                     if (null == l) return !1;
-                    null === (e = l.onFailure) || void 0 === e || e.call(l, a, i), l.data.interactionType === u.InteractionTypes.APPLICATION_COMMAND ? p(n) : c[n] = {
+                    null === (e = l.onFailure) || void 0 === e || e.call(l, a, i), l.data.interactionType === u.InteractionTypes.APPLICATION_COMMAND ? I(n) : c[n] = {
                         ...l,
                         state: o.InteractionState.FAILED,
                         errorCode: a,
@@ -114,7 +114,7 @@
                         var n;
                         let t = c[e.nonce];
                         if (null == t) return !1;
-                        null === (n = t.onSuccess) || void 0 === n || n.call(t), p(e.nonce)
+                        null === (n = t.onSuccess) || void 0 === n || n.call(t), I(e.nonce)
                     }
                 },
                 CHANNEL_SELECT: function(t) {
@@ -122,7 +122,7 @@
                         channelId: e
                     } = t, n = d.default.getChannel(e);
                     if (null == n) return !1;
-                    for (let [t, e] of Object.entries(c)) e.state === o.InteractionState.FAILED && p(t)
+                    for (let [t, e] of Object.entries(c)) e.state === o.InteractionState.FAILED && I(t)
                 },
                 INTERACTION_IFRAME_MODAL_CREATE: function(t) {
                     let {

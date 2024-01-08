@@ -21,8 +21,8 @@
                 _ = n("69927"),
                 h = n("10641"),
                 C = n("539938"),
-                T = n("155084"),
-                I = n("970366"),
+                I = n("155084"),
+                T = n("970366"),
                 S = n("161778"),
                 N = n("845579"),
                 A = n("697218"),
@@ -144,7 +144,7 @@
                     p = null != e,
                     g = i && null != N && !p;
                 return (s.useEffect(() => {
-                    (0, I.trackAppUIViewed)("family-center"), L.default.initialPageLoad(), !n && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
+                    (0, T.trackAppUIViewed)("family-center"), L.default.initialPageLoad(), !n && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
                         dismissAction: w.ContentDismissActionType.AUTO,
                         forceTrack: !0
                     })
@@ -155,7 +155,7 @@
                         selected_teen_id: r,
                         initial_page: G.FamilyCenterSubPageAnalyticsIds[E],
                         source: G.FamilyCenterPageLocationAnalyticsIds[G.FamilyCenterPageLocation.SIDENAV]
-                    }), T.default.increment({
+                    }), I.default.increment({
                         name: o.MetricEvents.FAMILY_CENTER_VIEW
                     }))
                 }, [i, p]), g) ? ((0, f.openAgeGateModal)(k.AgeGateSource.FAMILY_CENTER), null) : (0, a.jsxs)("main", {
@@ -195,7 +195,7 @@
                     b = null != e,
                     U = i && null != x && !b;
                 if (s.useEffect(() => {
-                        E.setHomeLink(j.Routes.FAMILY_CENTER), (0, I.trackAppUIViewed)("family-center"), !v.default.isLoading() && v.default.canRefetch() && L.default.initialPageLoad(), !n && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
+                        E.setHomeLink(j.Routes.FAMILY_CENTER), (0, T.trackAppUIViewed)("family-center"), !v.default.isLoading() && v.default.canRefetch() && L.default.initialPageLoad(), !n && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
                             dismissAction: w.ContentDismissActionType.AUTO,
                             forceTrack: !0
                         })
@@ -206,7 +206,7 @@
                             selected_teen_id: r,
                             initial_page: G.FamilyCenterSubPageAnalyticsIds[p],
                             source: G.FamilyCenterPageLocationAnalyticsIds[G.FamilyCenterPageLocation.SIDENAV]
-                        }), T.default.increment({
+                        }), I.default.increment({
                             name: o.MetricEvents.FAMILY_CENTER_VIEW
                         }))
                     }, [i, b]), s.useEffect(() => {

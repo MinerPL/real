@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return I
                 }
             });
             var a = n("37983");
@@ -26,7 +26,7 @@
                 null != n && (0, c.audienceAckRequestToSpeak)(n, e)
             }
 
-            function T() {
+            function I() {
                 var e;
                 let t = (0, E.default)(),
                     n = null !== (e = (0, f.useStageBlockedUsersCount)(null == t ? void 0 : t.id)) && void 0 !== e ? e : 0;

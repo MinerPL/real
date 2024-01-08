@@ -4,10 +4,10 @@
                     return l
                 },
                 default: function() {
-                    return A
+                    return I
                 },
                 useEmbeddedActivityJoinability: function() {
-                    return I
+                    return A
                 }
             });
             var n, l, a = i("446674"),
@@ -21,7 +21,7 @@
                 _ = i("803353"),
                 E = i("49111");
 
-            function A(e) {
+            function I(e) {
                 var t, i, n;
                 let {
                     userId: l,
@@ -32,8 +32,8 @@
                     isActivitiesEnabledForCurrentPlatform: o,
                     ChannelStore: s,
                     VoiceStateStore: f,
-                    PermissionStore: A,
-                    GuildStore: I
+                    PermissionStore: I,
+                    GuildStore: A
                 } = e;
                 if (null == l) return 8;
                 if ((null == d ? void 0 : d.nsfwAllowed) === !1 && (null == u ? void 0 : null === (t = u.embeddedActivityConfig) || void 0 === t ? void 0 : t.requires_age_gate) === !0) return 7;
@@ -46,12 +46,12 @@
                 let v = C.getGuildId();
                 if (!C.isPrivate()) {
                     if (null == v) return 10;
-                    let e = I.getGuild(v);
+                    let e = A.getGuild(v);
                     if ((null == e ? void 0 : e.afkChannelId) === C.id) return 9;
                     let t = f.getCurrentClientVoiceChannelId(C.getGuildId()) === T,
-                        i = (0, c.isChannelFull)(C, f, I),
-                        n = A.can(E.Permissions.CONNECT, C),
-                        l = A.can(E.Permissions.USE_EMBEDDED_ACTIVITIES, C);
+                        i = (0, c.isChannelFull)(C, f, A),
+                        n = I.can(E.Permissions.CONNECT, C),
+                        l = I.can(E.Permissions.USE_EMBEDDED_ACTIVITIES, C);
                     if (!l) return 1;
                     if (C.isVocal() && !t) {
                         if (i) return 3;
@@ -61,13 +61,13 @@
                 return 0
             }
 
-            function I(e) {
+            function A(e) {
                 let {
                     userId: t,
                     activity: i,
                     channelId: n,
                     application: l
-                } = e, c = (0, f.useIsActivitiesEnabledForCurrentPlatform)(), _ = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()), E = (0, a.useStateFromStores)([u.default, s.default, d.default, r.default], () => A({
+                } = e, c = (0, f.useIsActivitiesEnabledForCurrentPlatform)(), _ = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()), E = (0, a.useStateFromStores)([u.default, s.default, d.default, r.default], () => I({
                     userId: t,
                     activity: i,
                     application: l,

@@ -31,15 +31,15 @@
                         uploadType: r,
                         guildId: h,
                         isTryItOutFlow: C
-                    } = e, T = u.default.isEditingClydeProfile(), I = T ? o.setPendingAvatar : null != h ? d.setPendingAvatar : l.setPendingAvatar, S = T ? o.setPendingBanner : null != h ? d.setPendingBanner : c.setPendingBanner, N = E.default.getCurrentUser();
+                    } = e, I = u.default.isEditingClydeProfile(), T = I ? o.setPendingAvatar : null != h ? d.setPendingAvatar : l.setPendingAvatar, S = I ? o.setPendingBanner : null != h ? d.setPendingBanner : c.setPendingBanner, N = E.default.getCurrentUser();
                     if (r === _.UploadTypes.AVATAR) {
                         if (C) {
                             (0, c.setTryItOutAvatar)(t);
                             return
                         }
                         let e = f.default.canUseAnimatedAvatar(N);
-                        if (e || "image/gif" !== i.type || T) {
-                            I(t);
+                        if (e || "image/gif" !== i.type || I) {
+                            T(t);
                             return
                         }(0, s.openModalLazy)(async () => {
                             let {
@@ -47,7 +47,7 @@
                             } = await n.el("745544").then(n.bind(n, "745544"));
                             return n => (0, a.jsx)(e, {
                                 avatarSrc: t,
-                                onSubscribe: () => I(t),
+                                onSubscribe: () => T(t),
                                 ...n
                             })
                         })
@@ -57,7 +57,7 @@
                             return
                         }
                         let e = f.default.canUsePremiumProfileCustomization(N);
-                        if (e || T) {
+                        if (e || I) {
                             S(t);
                             return
                         }(0, s.openModalLazy)(async () => {

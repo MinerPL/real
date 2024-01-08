@@ -18,8 +18,8 @@
                 _ = n("899633"),
                 h = n("835040"),
                 C = n("506885"),
-                T = n("981601"),
-                I = n("271938"),
+                I = n("981601"),
+                T = n("271938"),
                 S = n("42887"),
                 N = n("211248"),
                 A = n("200639"),
@@ -91,7 +91,7 @@
                     nick: u,
                     mute: d,
                     deaf: c,
-                    serverMute: I,
+                    serverMute: T,
                     serverDeaf: N
                 } = e, A = (0, r.useStateFromStores)([S.default], () => S.default.isLocalMute(o.id)), m = (0, _.default)({
                     userId: o.id,
@@ -116,7 +116,7 @@
                 }({
                     serverDeaf: N,
                     deaf: c,
-                    serverMute: I,
+                    serverMute: T,
                     mute: d,
                     localMute: A
                 })) && void 0 !== s ? s : {}, G = null != U ? L.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
@@ -153,7 +153,7 @@
                         channelId: i.id
                     }),
                     position: "top",
-                    renderPopout: e => (0, a.jsx)(T.default, {
+                    renderPopout: e => (0, a.jsx)(I.default, {
                         userId: o.id,
                         guildId: p,
                         channelId: i.id,
@@ -209,7 +209,7 @@
                         height: 16
                     }),
                     focusProps: M
-                }), f = (0, r.useStateFromStores)([I.default], () => I.default.getId(), []), [_, h] = function(e, t) {
+                }), f = (0, r.useStateFromStores)([T.default], () => T.default.getId(), []), [_, h] = function(e, t) {
                     let n = [];
                     for (let a of e) {
                         if (a.user.id !== t) {

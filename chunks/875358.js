@@ -18,8 +18,8 @@
                 _ = n("810567"),
                 h = n("791776"),
                 C = n("780009"),
-                T = n("49111"),
-                I = n("782340"),
+                I = n("49111"),
+                T = n("782340"),
                 S = n("948063");
             class N extends s.Component {
                 componentDidMount() {
@@ -73,7 +73,7 @@
                             },
                             maxLength: 100,
                             query: e,
-                            placeholder: I.default.Messages.APPLICATION_LIBRARY_FILTER_PLACEHOLDER
+                            placeholder: T.default.Messages.APPLICATION_LIBRARY_FILTER_PLACEHOLDER
                         })
                     })
                 }
@@ -94,10 +94,10 @@
                         if (a || e.ctrlKey || e.altKey || e.metaKey || null == i) return;
                         let l = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
                         if (!(l !== i.inputRef.current && (0, h.isInputLikeElement)(l))) switch (e.which) {
-                            case T.KeyboardKeys.ESCAPE:
+                            case I.KeyboardKeys.ESCAPE:
                                 e.target !== i.inputRef.current ? this.reset() : null != i.inputRef.current && i.blur();
                                 break;
-                            case T.KeyboardKeys.ENTER:
+                            case I.KeyboardKeys.ENTER:
                                 if (null != n) {
                                     e.preventDefault();
                                     let t = s.find(e => e.key === n);
@@ -105,19 +105,19 @@
                                     let a = t.libraryApplication;
                                     C.performDefaultLibraryApplicationAction(a, {
                                         analyticsParams: {
-                                            source: T.AnalyticsLocations.APPLICATION_LIBRARY,
+                                            source: I.AnalyticsLocations.APPLICATION_LIBRARY,
                                             location: {
-                                                page: T.AnalyticsPages.LIBRARY,
-                                                section: T.AnalyticsSections.LIBRARY_APPLICATION_LIST,
-                                                object: T.AnalyticsObjects.BUTTON_CTA
+                                                page: I.AnalyticsPages.LIBRARY,
+                                                section: I.AnalyticsSections.LIBRARY_APPLICATION_LIST,
+                                                object: I.AnalyticsObjects.BUTTON_CTA
                                             }
                                         }
                                     })
                                 }
                                 break;
-                            case T.KeyboardKeys.ARROW_DOWN:
-                            case T.KeyboardKeys.ARROW_UP:
-                                e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.which === T.KeyboardKeys.ARROW_DOWN ? 1 : -1);
+                            case I.KeyboardKeys.ARROW_DOWN:
+                            case I.KeyboardKeys.ARROW_UP:
+                                e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.which === I.KeyboardKeys.ARROW_DOWN ? 1 : -1);
                                 break;
                             default:
                                 null != i.inputRef.current && e.target !== i.inputRef.current && i.focus()

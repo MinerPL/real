@@ -19,8 +19,8 @@
                 _ = n("59811"),
                 h = n("341542"),
                 C = n("305961"),
-                T = n("162771"),
-                I = n("697218"),
+                I = n("162771"),
+                T = n("697218"),
                 S = n("449008"),
                 N = n("773336"),
                 A = n("165926"),
@@ -56,7 +56,7 @@
                             E.default.flowStart(L.FlowType.ORGANIC_MARKETING, L.RegistrationSteps.NUF_STARTED)
                     }
                     let r = !1,
-                        v = T.default.getGuildId();
+                        v = I.default.getGuildId();
                     if (l === p.NewUserTypes.INVITE_UNCLAIMED) {
                         let e = C.default.getGuild(v);
                         (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, f.fetchWelcomeScreen)(e.id))
@@ -119,14 +119,14 @@
                         open: e => u.openClaimAccountModal(N.isPlatformEmbedded, e),
                         predicate: () => {
                             var e;
-                            return !r && null != I.default.getCurrentUser() && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !O.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
+                            return !r && null != T.default.getCurrentUser() && !(null === (e = T.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !O.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
                         }
                     }, {
                         key: "Verification Gate with Claim Account",
                         open: e => (0, d.openMemberVerificationModal)(v, null != e ? e : void 0),
                         predicate: () => {
                             var e;
-                            return r && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !O.CONFERENCE_MODE_ENABLED
+                            return r && !(null === (e = T.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !O.CONFERENCE_MODE_ENABLED
                         }
                     }, {
                         key: "Guild Welcome Modal",

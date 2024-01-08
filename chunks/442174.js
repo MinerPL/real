@@ -18,8 +18,8 @@
                 _ = n("144491"),
                 h = n("208021"),
                 C = n("982108"),
-                T = n("945330"),
-                I = n("664336"),
+                I = n("945330"),
+                T = n("664336"),
                 S = n("679653"),
                 N = n("176347"),
                 A = n("782340"),
@@ -41,13 +41,13 @@
                     onError: D
                 });
                 if (null == t || !t.isDM()) return null;
-                let x = [(0, a.jsx)(I.default.Icon, {
-                    icon: T.default,
+                let x = [(0, a.jsx)(T.default.Icon, {
+                    icon: I.default,
                     tooltip: A.default.Messages.CLOSE,
                     onClick: () => h.default.closeChannelSidebar(n)
                 }, "close")];
                 return (0, a.jsxs)(a.Fragment, {
-                    children: [(0, a.jsx)(I.default, {
+                    children: [(0, a.jsx)(T.default, {
                         toolbar: x,
                         "aria-label": A.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
                         children: (0, o.renderTitle)({

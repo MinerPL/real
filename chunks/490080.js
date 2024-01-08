@@ -49,20 +49,23 @@
             }
 
             function L(e) {
-                var t, l, a;
                 let {
-                    activity: n,
-                    application: s,
-                    channel: d,
-                    guildId: o,
-                    large: u = !1
-                } = e, v = null !== (t = null == n ? void 0 : n.connections) && void 0 !== t ? t : [], m = (0, r.useStateFromStoresArray)([f.default], () => Array.from(v).map(e => {
-                    let [t] = e;
-                    return f.default.getUser(t)
-                }).filter(I.isNotNullish)), p = E.default.getName(o, null == d ? void 0 : d.id, null == m ? void 0 : m[0]);
-                if (p = (0, x.truncateText)(p, 15), null == n || 0 === m.length) {
-                    let e = "".concat((0, C.default)(null !== (l = s.maxParticipants) && void 0 !== l ? l : 0));
-                    return u && (e = null !== (a = s.description) && void 0 !== a ? a : ""), (0, i.jsx)(c.Text, {
+                    activity: t,
+                    application: l,
+                    channel: a,
+                    guildId: n,
+                    large: s = !1
+                } = e, d = (0, r.useStateFromStoresArray)([f.default], () => {
+                    var e;
+                    return Array.from(null !== (e = null == t ? void 0 : t.userIds) && void 0 !== e ? e : []).map(e => {
+                        let [t] = e;
+                        return f.default.getUser(t)
+                    }).filter(I.isNotNullish)
+                }), o = E.default.getName(n, null == a ? void 0 : a.id, null == d ? void 0 : d[0]);
+                if (o = (0, x.truncateText)(o, 15), null == t || 0 === d.length) {
+                    var u, v;
+                    let e = "".concat((0, C.default)(null !== (u = l.maxParticipants) && void 0 !== u ? u : 0));
+                    return s && (e = null !== (v = l.description) && void 0 !== v ? v : ""), (0, i.jsx)(c.Text, {
                         className: D.activitySubtitleText,
                         variant: "text-xs/normal",
                         color: "interactive-normal",
@@ -74,16 +77,16 @@
                     children: [(0, i.jsx)(c.Text, {
                         className: D.usersArePlayingText,
                         variant: "text-xs/normal",
-                        children: m.length > 1 ? j.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
-                            username: p,
-                            count: m.length - 1
+                        children: d.length > 1 ? j.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
+                            username: o,
+                            count: d.length - 1
                         }) : j.default.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
-                            username: p
+                            username: o
                         })
                     }), (0, i.jsx)(h.default, {
-                        size: u ? h.Sizes.SIZE_24 : h.Sizes.SIZE_16,
-                        guildId: o,
-                        users: m,
+                        size: s ? h.Sizes.SIZE_24 : h.Sizes.SIZE_16,
+                        guildId: n,
+                        users: d,
                         max: 6
                     })]
                 })

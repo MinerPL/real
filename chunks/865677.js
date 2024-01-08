@@ -66,7 +66,7 @@
                     applicationId: t.application_id
                 })), q = (0, s.useStateFromStores)([M.default], () => Array.from(M.default.getSelfEmbeddedActivities().values()).some(e => {
                     let {
-                        application_id: l,
+                        applicationId: l,
                         channelId: n
                     } = e;
                     return l === (null == t ? void 0 : t.application_id) && n === X
@@ -112,9 +112,9 @@
                 }, eo = async () => {
                     let e = !1;
                     if (W) {
-                        if (!et || null == X) return;
+                        if (!et || null == X || null == t.application_id) return;
                         e = await (0, x.default)({
-                            activity: t,
+                            applicationId: t.application_id,
                             currentEmbeddedApplication: l,
                             activityChannelId: X,
                             locationObject: el.location,

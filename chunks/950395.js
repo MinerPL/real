@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return T
                 }
             }), n("222007");
             var a = n("37983"),
@@ -26,7 +26,7 @@
                     [f.CloudSyncStateTypes.CONFLICT]: u.default,
                     [f.CloudSyncStateTypes.ERROR]: u.default
                 });
-            class T extends s.PureComponent {
+            class I extends s.PureComponent {
                 componentDidMount() {
                     this.getIsRecentlySynced() && this.setRecentlySyncedTimeout()
                 }
@@ -108,11 +108,11 @@
                     super(...e), this._doneTimer = new l.Timeout
                 }
             }
-            var I = i.default.connectStores([o.default], e => {
+            var T = i.default.connectStores([o.default], e => {
                 let {
                     libraryApplication: t
                 } = e;
                 return {
                     cloudSyncState: o.default.getState(t.id, t.branchId)
                 }
-            })(T)
+            })(I)

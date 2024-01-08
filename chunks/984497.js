@@ -25,7 +25,7 @@
                 let {
                     applicationId: n,
                     ...h
-                } = e, [C, T] = s.useState(!1), [I] = (0, r.default)([n]), S = null !== (t = null == I ? void 0 : I.name) && void 0 !== t ? t : "This Activity";
+                } = e, [C, I] = s.useState(!1), [T] = (0, r.default)([n]), S = null !== (t = null == T ? void 0 : T.name) && void 0 !== t ? t : "This Activity";
                 s.useEffect(() => {
                     u.default.track(c.AnalyticEvents.OPEN_MODAL, {
                         type: _
@@ -70,7 +70,7 @@
                             type: i.Checkbox.Types.INVERTED,
                             size: 18,
                             value: C,
-                            onChange: () => T(!C),
+                            onChange: () => I(!C),
                             children: (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
                                 children: E.default.Messages.DONT_SHOW_AGAIN

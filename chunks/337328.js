@@ -18,8 +18,8 @@
                 _ = n("731898"),
                 h = n("252744"),
                 C = n("502651"),
-                T = n("812204"),
-                I = n("685665"),
+                I = n("812204"),
+                T = n("685665"),
                 S = n("106803"),
                 N = n("861370"),
                 A = n("217513"),
@@ -82,7 +82,7 @@
                     closePopout: M
                 } = e, x = (0, f.useAnalyticsContext)(), {
                     AnalyticsLocationProvider: B
-                } = (0, I.default)(T.default.ACCOUNT_PROFILE_POPOUT), H = (0, A.default)(i.id, o), [V, Y, W, K] = (0, d.useStateFromStoresArray)([v.default], () => {
+                } = (0, T.default)(I.default.ACCOUNT_PROFILE_POPOUT), H = (0, A.default)(i.id, o), [V, Y, W, K] = (0, d.useStateFromStoresArray)([v.default], () => {
                     var e;
                     let t = i.id;
                     return "string" != typeof t ? [void 0, void 0, G.StatusTypes.UNKNOWN, !1] : [null !== (e = v.default.findActivity(t, e => e.type !== G.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, v.default.findActivity(i.id, e => e.type === G.ActivityTypes.CUSTOM_STATUS), v.default.getStatus(t), v.default.isMobileOnline(t)]

@@ -18,8 +18,8 @@
                 _ = n("845579"),
                 h = n("538137"),
                 C = n("956089"),
-                T = n("49111"),
-                I = n("853994"),
+                I = n("49111"),
+                T = n("853994"),
                 S = n("782340"),
                 N = n("724708"),
                 A = n("926622"),
@@ -60,7 +60,7 @@
                                     children: (0, a.jsx)(r.Link, {
                                         onClick: c.popLayer,
                                         to: {
-                                            pathname: T.Routes.FAMILY_CENTER,
+                                            pathname: I.Routes.FAMILY_CENTER,
                                             state: {
                                                 scrollRestoration: !1
                                             }
@@ -75,11 +75,11 @@
                             })
                         }) : null, (0, a.jsx)(d.FormSwitch, {
                             className: l(A.marginTop20, A.marginBottom20),
-                            value: !!t[I.EmailCategories.FAMILY_CENTER_DIGEST],
+                            value: !!t[T.EmailCategories.FAMILY_CENTER_DIGEST],
                             note: S.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
                             hideBorder: !0,
                             onChange: function(e) {
-                                (0, E.updateEmailSetting)(I.EmailCategories.FAMILY_CENTER_DIGEST, e)
+                                (0, E.updateEmailSetting)(T.EmailCategories.FAMILY_CENTER_DIGEST, e)
                             },
                             children: S.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH
                         })]

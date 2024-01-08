@@ -31,8 +31,8 @@
                 let t, {
                     title: n,
                     subtitle: C,
-                    guildsData: T,
-                    analyticsContext: I,
+                    guildsData: I,
+                    analyticsContext: T,
                     theme: S,
                     onViewGuild: N,
                     fetchGuilds: A,
@@ -49,11 +49,11 @@
                     {
                         analyticsLocations: v
                     } = (0, r.default)();
-                if (null == T) return null;
+                if (null == I) return null;
                 let {
                     guilds: M,
                     loading: P
-                } = T, D = null == M || 0 === M.length;
+                } = I, D = null == M || 0 === M.length;
                 if (!P && D) return null;
                 let y = async e => {
                     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
@@ -68,7 +68,7 @@
                     });
                     else {
                         let t = M.findIndex(t => t.id === e);
-                        await N(e, t, I, g)
+                        await N(e, t, T, g)
                     }
                 };
                 if (P || null == M) {

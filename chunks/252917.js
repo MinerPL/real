@@ -18,8 +18,8 @@
                 _ = n("241845"),
                 h = n("939443"),
                 C = n("597590"),
-                T = n("987697"),
-                I = n("464682"),
+                I = n("987697"),
+                T = n("464682"),
                 S = n("73749"),
                 N = n("191145"),
                 A = n("533466"),
@@ -90,13 +90,13 @@
                     name: "GuildHomePage",
                     renderLoader: ef
                 }),
-                eT = (0, d.makeLazy)({
+                eI = (0, d.makeLazy)({
                     createPromise: () => n.el("112265").then(n.bind(n, "112265")),
                     webpackId: "112265",
                     name: "MemberSafetyPage",
                     renderLoader: ef
                 }),
-                eI = (0, d.makeLazy)({
+                eT = (0, d.makeLazy)({
                     createPromise: () => n.el("534702").then(n.bind(n, "534702")),
                     webpackId: "534702",
                     name: "ChannelsAndRolesPage",
@@ -141,7 +141,7 @@
                                 guildId: s
                             });
                         case eu.StaticChannelRoute.CHANNEL_BROWSER:
-                            return (0, a.jsx)(eI, {
+                            return (0, a.jsx)(eT, {
                                 guildId: s,
                                 selectedSection: ed.GuildOnboardingTab.BROWSE
                             });
@@ -150,12 +150,12 @@
                                 guildId: s
                             });
                         case eu.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
-                            return (0, a.jsx)(eI, {
+                            return (0, a.jsx)(eT, {
                                 guildId: s,
                                 selectedSection: ed.GuildOnboardingTab.CUSTOMIZE
                             });
                         case eu.StaticChannelRoute.MEMBER_SAFETY:
-                            return (0, a.jsx)(eT, {
+                            return (0, a.jsx)(eI, {
                                 guildId: s
                             });
                         default:
@@ -238,10 +238,10 @@
                         })
                     }
                 },
-                eP = e => (0, a.jsx)(I.default, {
+                eP = e => (0, a.jsx)(T.default, {
                     ...e
                 }),
-                eD = () => (0, a.jsx)(T.default, {}),
+                eD = () => (0, a.jsx)(I.default, {}),
                 ey = () => (0, a.jsx)(Y.default, {}),
                 ex = () => (0, a.jsx)(G.default, {}),
                 eb = () => (0, a.jsx)(V.default, {}),
@@ -353,8 +353,8 @@
                     }(),
                     _ = (0, E.useStateFromStores)([k.default], () => k.default.getIsOpen()),
                     h = (0, o.useRouteMatch)([eo.Routes.CHANNEL(eo.ME, ":channelId"), eo.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")]),
-                    T = (null == h ? void 0 : null === (e = h.params) || void 0 === e ? void 0 : e.channelId) === eu.StaticChannelRoute.GUILD_ONBOARDING,
-                    I = s.useCallback(() => j.default.openSidebar(), []);
+                    I = (null == h ? void 0 : null === (e = h.params) || void 0 === e ? void 0 : e.channelId) === eu.StaticChannelRoute.GUILD_ONBOARDING,
+                    T = s.useCallback(() => j.default.openSidebar(), []);
                 return (0, a.jsx)(a.Fragment, {
                     children: (0, a.jsxs)("div", {
                         className: eE.container,
@@ -370,9 +370,9 @@
                                     children: [(0, a.jsx)(m.default, {}), (0, a.jsx)(eG, {
                                         hasNotice: t,
                                         sidebarTheme: n,
-                                        hideSidebar: i || l || d || f || T || !_
+                                        hideSidebar: i || l || d || f || I || !_
                                     }), (0, a.jsx)(C.default.Provider, {
-                                        value: I,
+                                        value: T,
                                         children: (0, a.jsxs)(o.Switch, {
                                             children: [(0, a.jsx)(S.default, {
                                                 path: eo.Routes.ACTIVITY,

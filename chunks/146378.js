@@ -18,8 +18,8 @@
                 _ = n("42887"),
                 h = n("109264"),
                 C = n("663745"),
-                T = n("158998"),
-                I = n("371449"),
+                I = n("158998"),
+                T = n("371449"),
                 S = n("224978"),
                 N = n("83916"),
                 A = n("559541"),
@@ -60,7 +60,7 @@
                         action: () => {
                             (0, o.openModal)(e => (0, a.jsx)(o.ConfirmModal, {
                                 header: g.default.Messages.REMOVE_FRIEND_TITLE.format({
-                                    name: T.default.getName(t)
+                                    name: I.default.getName(t)
                                 }),
                                 confirmText: g.default.Messages.REMOVE_FRIEND,
                                 cancelText: g.default.Messages.CANCEL,
@@ -69,7 +69,7 @@
                                 children: (0, a.jsx)(o.Text, {
                                     variant: "text-md/normal",
                                     children: g.default.Messages.REMOVE_FRIEND_BODY.format({
-                                        name: T.default.getName(t)
+                                        name: I.default.getName(t)
                                     })
                                 })
                             }))
@@ -120,12 +120,12 @@
                                 showAccountIdentifier: !0
                             }), (0, a.jsxs)("div", {
                                 className: R.actions,
-                                children: [(0, a.jsx)(I.default, {
+                                children: [(0, a.jsx)(T.default, {
                                     icon: h.default,
                                     tooltip: g.default.Messages.SEND_DM,
                                     onClick: this.handleOpenPrivateChannel,
                                     shouldHighlight: t
-                                }), (0, a.jsx)(I.default, {
+                                }), (0, a.jsx)(T.default, {
                                     icon: C.default,
                                     tooltip: g.default.Messages.MORE,
                                     onClick: this.handleOpenActionsMenu,

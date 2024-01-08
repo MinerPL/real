@@ -18,8 +18,8 @@
                 _ = n("945956"),
                 h = n("18494"),
                 C = n("162771"),
-                T = n("800762"),
-                I = n("49111"),
+                I = n("800762"),
+                T = n("49111"),
                 S = n("353927");
 
             function N() {
@@ -37,10 +37,10 @@
                         t = h.default.getChannelId(),
                         n = E.default.supports(S.Features.VIDEO);
                     if (!n) return !0;
-                    let a = o.default.getWindowOpen(I.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+                    let a = o.default.getWindowOpen(T.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
                     if (a) return !0;
                     let s = u.default.getAllActiveStreams().length > 0,
-                        i = null != e && Object.values(T.default.getVideoVoiceStatesForChannel(e)).some(e => {
+                        i = null != e && Object.values(I.default.getVideoVoiceStatesForChannel(e)).some(e => {
                             let {
                                 userId: t
                             } = e;
@@ -48,7 +48,7 @@
                         });
                     if (!(i || s)) return !0;
                     let l = c.default.hasLayers(),
-                        r = l && c.default.getLayers().includes(I.Layers.RTC_DEBUG);
+                        r = l && c.default.getLayers().includes(T.Layers.RTC_DEBUG);
                     if (r) return !1;
                     if (l) return !0;
                     let d = e === t;
@@ -57,17 +57,17 @@
                     var t;
                     let n = d.default.getChannel(e);
                     if (null == n || f.default.isOpen(e)) return !1;
-                    s.default.wait(() => i.open(n.id, I.PictureInPictureComponents.VIDEO, {
+                    s.default.wait(() => i.open(n.id, T.PictureInPictureComponents.VIDEO, {
                         channel: n
                     })), null === (t = _.default.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), a = e
                 }(e))
             }
             class m extends l.default {
                 _initialize() {
-                    h.default.addChangeListener(A), C.default.addChangeListener(A), _.default.addChangeListener(A), T.default.addChangeListener(A), c.default.addChangeListener(A), u.default.addChangeListener(A), o.default.addChangeListener(A), E.default.addChangeListener(A), r.default.addChangeListener(A)
+                    h.default.addChangeListener(A), C.default.addChangeListener(A), _.default.addChangeListener(A), I.default.addChangeListener(A), c.default.addChangeListener(A), u.default.addChangeListener(A), o.default.addChangeListener(A), E.default.addChangeListener(A), r.default.addChangeListener(A)
                 }
                 _terminate() {
-                    h.default.removeChangeListener(A), C.default.removeChangeListener(A), _.default.removeChangeListener(A), T.default.removeChangeListener(A), c.default.removeChangeListener(A), u.default.removeChangeListener(A), o.default.removeChangeListener(A), E.default.removeChangeListener(A), r.default.removeChangeListener(A)
+                    h.default.removeChangeListener(A), C.default.removeChangeListener(A), _.default.removeChangeListener(A), I.default.removeChangeListener(A), c.default.removeChangeListener(A), u.default.removeChangeListener(A), o.default.removeChangeListener(A), E.default.removeChangeListener(A), r.default.removeChangeListener(A)
                 }
             }
             var p = new m

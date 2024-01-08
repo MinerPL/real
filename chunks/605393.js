@@ -75,9 +75,9 @@
                 },
                 EMBEDDED_ACTIVITY_OPEN: function(e) {
                     let {
-                        embeddedActivity: t
+                        applicationId: t
                     } = e;
-                    m(t.application_id)
+                    m(t)
                 },
                 USER_SETTINGS_PROTO_UPDATE: function(e) {
                     let {

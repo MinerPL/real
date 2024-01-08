@@ -30,18 +30,18 @@
                     message: "Received invalid Date.now() when generating a heartbeat. Date.now() = ".concat(t, ", timeUntilNextHeartbeat = ").concat(n, ", latestHeartbeatEventTimestamp = ").concat(e)
                 }), e > t && (n = 0), u.default.addBreadcrumb({
                     message: "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ".concat(n / 1e3, " seconds. Scheduling Heartbeat")
-                }), T(!1), f = setTimeout(() => {
-                    I(), E = setInterval(() => {
-                        I()
+                }), I(!1), f = setTimeout(() => {
+                    T(), E = setInterval(() => {
+                        T()
                     }, 9e5)
                 }, Math.max(n, 0))
             }
 
-            function T() {
+            function I() {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
                 null != f && (clearTimeout(f), f = null), null != E && (clearInterval(E), E = null), null != _ && e && (clearTimeout(_), _ = null)
             }
-            async function I() {
+            async function T() {
                 let e = Date.now(),
                     t = await (0, a.getSession)(),
                     n = Date.now();
@@ -50,7 +50,7 @@
                     return
                 }
                 if (!h) {
-                    u.default.captureException(Error("Heartbeat scheduler not started when tracking session heartbeat.")), T();
+                    u.default.captureException(Error("Heartbeat scheduler not started when tracking session heartbeat.")), I();
                     return
                 }
                 u.default.addBreadcrumb({
@@ -78,7 +78,7 @@
                     u.default.captureException(e)
                 } else !h || (h = !1, u.default.addBreadcrumb({
                     message: "Stopping Analytics Heartbeat"
-                }), (0, a.setSessionExtendingEnabled)(!1), T())
+                }), (0, a.setSessionExtendingEnabled)(!1), I())
             }
 
             function m() {
@@ -88,7 +88,7 @@
             }
 
             function p() {
-                I()
+                T()
             }
 
             function g() {

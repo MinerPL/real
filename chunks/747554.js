@@ -19,8 +19,8 @@
                 _ = n("567054"),
                 h = n("982527"),
                 C = n("49111"),
-                T = n("724210"),
-                I = n("782340"),
+                I = n("724210"),
+                T = n("782340"),
                 S = n("884938"),
                 N = n("105029"),
                 A = () => {
@@ -29,7 +29,7 @@
                         A = (0, o.useStateFromStores)([d.default], () => d.default.getGuild(s), [s]),
                         m = (0, o.useStateFromStores)([h.default], () => null != s ? h.default.getRequest(s) : null, [s]),
                         p = (0, r.useLocation)(),
-                        g = (null === (e = (0, l.matchPath)(p.pathname, C.Routes.CHANNEL(null == A ? void 0 : A.id, T.StaticChannelRoute.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+                        g = (null === (e = (0, l.matchPath)(p.pathname, C.Routes.CHANNEL(null == A ? void 0 : A.id, I.StaticChannelRoute.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
                     if (null == A || !A.hasVerificationGate() || g) return null;
                     let R = null !== (t = null == m ? void 0 : m.applicationStatus) && void 0 !== t ? t : _.GuildJoinRequestApplicationStatuses.STARTED,
                         O = null,
@@ -38,23 +38,23 @@
                         M = [S.notice, N.notice];
                     switch (R) {
                         case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
-                            O = I.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, L = I.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, v = () => {
+                            O = T.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, L = T.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, v = () => {
                                 (0, u.openModal)(e => (0, a.jsx)(u.ConfirmModal, {
-                                    header: I.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
-                                    confirmText: I.default.Messages.CONFIRM,
-                                    cancelText: I.default.Messages.CANCEL,
+                                    header: T.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
+                                    confirmText: T.default.Messages.CONFIRM,
+                                    cancelText: T.default.Messages.CANCEL,
                                     onConfirm: () => E.default.removeGuildJoinRequest(A.id),
                                     confirmButtonColor: u.Button.Colors.BRAND,
                                     ...e,
                                     children: (0, a.jsx)(u.Text, {
                                         variant: "text-md/normal",
-                                        children: I.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION_SUBTITLE
+                                        children: T.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION_SUBTITLE
                                     })
                                 }))
                             };
                             break;
                         case _.GuildJoinRequestApplicationStatuses.REJECTED:
-                            O = I.default.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, L = I.default.Messages.MEMBER_VERIFICATION_LEARN_MORE, v = () => {
+                            O = T.default.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, L = T.default.Messages.MEMBER_VERIFICATION_LEARN_MORE, v = () => {
                                 (0, u.openModalLazy)(async () => {
                                     let {
                                         default: e
@@ -67,7 +67,7 @@
                             }, M.push(S.error);
                             break;
                         default:
-                            O = I.default.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, L = I.default.Messages.MEMBER_VERIFICATION_NOTICE_CTA, v = () => {
+                            O = T.default.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, L = T.default.Messages.MEMBER_VERIFICATION_NOTICE_CTA, v = () => {
                                 (0, f.openMemberVerificationModal)(A.id)
                             }
                     }

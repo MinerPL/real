@@ -18,8 +18,8 @@
                 _ = n("526253"),
                 h = n("567054"),
                 C = n("982527"),
-                T = n("444752"),
-                I = n("437942"),
+                I = n("444752"),
+                T = n("437942"),
                 S = n("267235"),
                 N = n("49111"),
                 A = n("289382"),
@@ -87,13 +87,13 @@
                                 children: (() => {
                                     switch (null == v ? void 0 : v.applicationStatus) {
                                         case h.GuildJoinRequestApplicationStatuses.SUBMITTED:
-                                            return (0, a.jsx)(I.default, {
+                                            return (0, a.jsx)(T.default, {
                                                 onCancel: x(m.default.Messages.MEMBER_VERIFICATION_CANCEL_PENDING_APPLICATION_MODAL_TITLE, U),
                                                 onLeave: G,
                                                 guild: D
                                             });
                                         case h.GuildJoinRequestApplicationStatuses.REJECTED:
-                                            return (0, a.jsx)(T.default, {
+                                            return (0, a.jsx)(I.default, {
                                                 reapplyText: m.default.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
                                                 onReapply: U,
                                                 confirmText: m.default.Messages.LEAVE_SERVER,

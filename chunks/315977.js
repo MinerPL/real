@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return I
                 }
             }), n("222007");
             var a = n("37983"),
@@ -59,7 +59,7 @@
                     }
                 }
             }
-            var T = (0, o.default)(l.default.connectStores([d.default], e => {
+            var I = (0, o.default)(l.default.connectStores([d.default], e => {
                 let {
                     channel: t,
                     inputSkuId: n

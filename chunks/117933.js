@@ -19,7 +19,7 @@
                     return C
                 },
                 displayTypeFromString: function() {
-                    return T
+                    return I
                 }
             }), n("222007");
             var a = n("866227"),
@@ -68,7 +68,7 @@
                 },
                 h = e => e.display_type === i.TeenActionDisplayType.USER_ADD || e.display_type === i.TeenActionDisplayType.USER_INTERACTION || e.display_type === i.TeenActionDisplayType.USER_CALLED,
                 C = e => e.display_type === i.TeenActionDisplayType.GUILD_ADD || e.display_type === i.TeenActionDisplayType.GUILD_INTERACTION,
-                T = e => {
+                I = e => {
                     let t = Object.values(i.TeenActionDisplayType);
                     for (let n of t)
                         if (n.toString() === e) return n

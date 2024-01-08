@@ -21,8 +21,8 @@
                 _ = f,
                 h = !1,
                 C = {},
-                T = {},
                 I = {},
+                T = {},
                 S = {
                     id: null,
                     justChanged: !1
@@ -61,7 +61,7 @@
                     return h
                 }
                 get lastDeviceConnected() {
-                    return I
+                    return T
                 }
                 get inputDevices() {
                     return C
@@ -70,7 +70,7 @@
                     return S
                 }
                 get outputDevices() {
-                    return T
+                    return I
                 }
                 get lastOutputSystemDevice() {
                     return N
@@ -98,27 +98,27 @@
                                 n !== N.id && (N.justChanged = !0), N.id = n
                             }
                         }), !h) {
-                        C = a, T = i, h = !0;
+                        C = a, I = i, h = !0;
                         return
                     }
                     let l = Object.keys(C),
                         r = Object.keys(a),
-                        o = Object.keys(T),
+                        o = Object.keys(I),
                         u = Object.keys(i),
                         d = s.difference(l, r),
                         f = s.difference(o, u);
-                    if (d.length > 0 || f.length > 0) I = {};
+                    if (d.length > 0 || f.length > 0) T = {};
                     else {
                         let e = s.difference(r, l);
                         e.forEach(e => {
-                            I[e] = p(I[e], e, c.ConnectedDeviceType.INPUT)
+                            T[e] = p(T[e], e, c.ConnectedDeviceType.INPUT)
                         });
                         let t = s.difference(u, o);
                         t.forEach(e => {
-                            I[e] = p(I[e], e, c.ConnectedDeviceType.OUTPUT)
+                            T[e] = p(T[e], e, c.ConnectedDeviceType.OUTPUT)
                         })
                     }
-                    return !(s.isEqual(l, r) && s.isEqual(o, u)) && (C = a, T = i, !0)
+                    return !(s.isEqual(l, r) && s.isEqual(o, u)) && (C = a, I = i, !0)
                 },
                 CONNECTED_DEVICE_SET: function(e) {
                     let {
@@ -132,19 +132,19 @@
                             null != t && l.default.wait(() => r.default.setInputDevice(t, n))
                         }
                         if (t === c.ConnectedDevicePreference.OUTPUT || t === c.ConnectedDevicePreference.INPUT_AND_OUTPUT) {
-                            let t = T[e];
+                            let t = I[e];
                             l.default.wait(() => r.default.setOutputDevice(t, n))
                         }
-                    }(t, n, a), delete I[t]
+                    }(t, n, a), delete T[t]
                 },
                 CONNECTED_DEVICE_IGNORE: function(e) {
                     let {
                         displayName: t
                     } = e;
-                    delete I[t]
+                    delete T[t]
                 },
                 CONNECTED_DEVICE_NEVER_SHOW_MODAL: function() {
-                    I = {}, _ = {
+                    T = {}, _ = {
                         neverShowModal: !0
                     }
                 }

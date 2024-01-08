@@ -25,8 +25,8 @@
                     onUserContextMenu: s
                 } = e, {
                     priorityMembers: C,
-                    guildContext: T
-                } = t, I = C[0], S = function(e) {
+                    guildContext: I
+                } = t, T = C[0], S = function(e) {
                     let {
                         priorityMembers: t,
                         partiedMembers: n
@@ -60,8 +60,8 @@
                         priorityMembers: s,
                         partiedMembers: d,
                         voiceChannels: C,
-                        currentActivities: T
-                    } = e, I = s.length, S = d.length - I, N = T[0], A = null == N ? void 0 : N.activity, m = null == N ? void 0 : N.startedPlayingTime, p = {
+                        currentActivities: I
+                    } = e, T = s.length, S = d.length - T, N = I[0], A = null == N ? void 0 : N.activity, m = null == N ? void 0 : N.startedPlayingTime, p = {
                         name: null !== (t = null == A ? void 0 : A.name) && void 0 !== t ? t : ""
                     };
                     if ((0, l.default)(A) && null != A) return {
@@ -72,7 +72,7 @@
                         }),
                         icon: null
                     };
-                    if (I + S === 1 && null != N) {
+                    if (T + S === 1 && null != N) {
                         let {
                             game: e
                         } = N;
@@ -131,12 +131,12 @@
                                 }
                         }
                     }
-                    if (0 === T.length) {
+                    if (0 === I.length) {
                         if (C.length > 0) return {
                             subtitle: h.default.Messages.ACTIVITY_FEED_NOW_PLAYING_IN_A_VOICE_CHANNEL,
                             icon: null
                         };
-                        let e = T[0];
+                        let e = I[0];
                         if (null != e) {
                             let {
                                 activity: t
@@ -152,8 +152,8 @@
                                 })
                             }
                         }
-                    } else if (1 === T.length) {
-                        let e = T.find(e => null != e.activity);
+                    } else if (1 === I.length) {
+                        let e = I.find(e => null != e.activity);
                         if (null == e) return {
                             subtitle: null,
                             icon: null
@@ -182,11 +182,11 @@
                     }
                 }(t);
                 return (0, a.jsx)(E.default.Header, {
-                    priorityUser: I,
-                    guildId: null == T ? void 0 : T.id,
+                    priorityUser: T,
+                    guildId: null == I ? void 0 : I.id,
                     title: S,
                     subtitle: N,
                     icon: A,
-                    onContextMenu: e => s(e, I.user)
+                    onContextMenu: e => s(e, T.user)
                 })
             }

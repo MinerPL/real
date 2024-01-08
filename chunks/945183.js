@@ -18,8 +18,8 @@
                 _ = n("233069"),
                 h = n("373469"),
                 C = n("271938"),
-                T = n("42203"),
-                I = n("305961"),
+                I = n("42203"),
+                T = n("305961"),
                 S = n("42887"),
                 N = n("385649"),
                 A = n("945956"),
@@ -61,8 +61,8 @@
             }
 
             function D() {
-                return M([T.default, A.default, m.default, d.default], () => {
-                    let e = T.default.getChannel(m.default.getVoiceChannelId()),
+                return M([I.default, A.default, m.default, d.default], () => {
+                    let e = I.default.getChannel(m.default.getVoiceChannelId()),
                         t = null == e ? void 0 : e.type,
                         n = null == e ? void 0 : e.getGuildId(),
                         a = A.default.getWasEverRtcConnected(),
@@ -132,7 +132,7 @@
             }
 
             function G() {
-                return M([m.default, h.default, C.default, g.default, T.default], () => {
+                return M([m.default, h.default, C.default, g.default, I.default], () => {
                     let e, t;
                     let n = m.default.getVoiceChannelId(),
                         a = C.default.getId();
@@ -141,7 +141,7 @@
                         l = 0,
                         r = h.default.getAllActiveStreams();
                     if (null != n) {
-                        let a = T.default.getChannel(n);
+                        let a = I.default.getChannel(n);
                         null != a && (e = a.type, t = R.default.countVoiceStatesForChannel(a.id) - (g.default.isInChannel(a.id) ? 1 : 0), s = h.default.getAllApplicationStreamsForChannel(a.id).map(e => e.ownerId))
                     }
                     let o = null;
@@ -166,11 +166,11 @@
                         currentUserId: o
                     } = t;
                     if (e.voiceChannelId !== a || null == a || function(e) {
-                            let t = T.default.getChannel(e);
+                            let t = I.default.getChannel(e);
                             if (null == t) return !1;
                             let n = t.getGuildId();
                             if (null == n) return !1;
-                            let a = I.default.getGuild(n);
+                            let a = T.default.getGuild(n);
                             return null != a && a.afkChannelId === t.id
                         }(a) || null != n && _.SILENT_JOIN_LEAVE_CHANNEL_TYPES.has(n)) return;
                     let u = null != l && e.singleActiveStreamKey === l,
@@ -211,9 +211,9 @@
                         autoTrackExposure: !1
                     }), r = !1;
                     e.channelActivities.length < i.length && (n = "activity_launch", r = !0);
-                    let u = e.channelActivities.find(e => e.connections.has(s)),
-                        d = i.find(e => e.connections.has(s));
-                    if (void 0 === d && (0, O.isNotNullish)(u) && (n = "activity_end", r = !0), void 0 === u && (0, O.isNotNullish)(d) && d.connections.size > 1 && (n = "activity_user_join", r = !0), (0, O.isNotNullish)(d) && (0, O.isNotNullish)(u) && (d.connections.size > u.connections.size && (n = "activity_user_join", r = !0), d.connections.size < u.connections.size && (n = "activity_user_left", r = !0)), r && o.ActivitiesSoundsExperiment.trackExposure({
+                    let u = e.channelActivities.find(e => e.userIds.has(s)),
+                        d = i.find(e => e.userIds.has(s));
+                    if (void 0 === d && (0, O.isNotNullish)(u) && (n = "activity_end", r = !0), void 0 === u && (0, O.isNotNullish)(d) && d.userIds.size > 1 && (n = "activity_user_join", r = !0), (0, O.isNotNullish)(d) && (0, O.isNotNullish)(u) && (d.userIds.size > u.userIds.size && (n = "activity_user_join", r = !0), d.userIds.size < u.userIds.size && (n = "activity_user_left", r = !0)), r && o.ActivitiesSoundsExperiment.trackExposure({
                             location: "5ef733_2"
                         }), l) return n
                 }), null

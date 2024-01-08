@@ -35,8 +35,8 @@
                 if (null == h) return null;
                 let {
                     header: C,
-                    body: T,
-                    imgSrc: I,
+                    body: I,
+                    imgSrc: T,
                     imgStyle: S
                 } = _(h.drop, h.config.streamLengthRequirement), N = () => {
                     t(c.ContentDismissActionType.DISMISS)
@@ -44,7 +44,7 @@
                 return (0, a.jsxs)("div", {
                     className: f.container,
                     children: [(0, a.jsx)("img", {
-                        src: I,
+                        src: T,
                         alt: "",
                         className: S
                     }), (0, a.jsx)(i.Clickable, {
@@ -63,7 +63,7 @@
                     }), (0, a.jsx)(i.Text, {
                         variant: "text-sm/medium",
                         className: f.subTitle,
-                        children: T
+                        children: I
                     }), h.config.autoEnrollment ? (0, a.jsx)(i.Button, {
                         look: i.Button.Looks.INVERTED,
                         fullWidth: !0,

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return I
                 }
             }), n("222007");
             var a = n("37983"),
@@ -18,14 +18,14 @@
                 _ = n("67211"),
                 h = n("892313"),
                 C = n("49111"),
-                T = e => {
+                I = e => {
                     let {
                         transitionState: t,
                         onClose: n
-                    } = e, i = (0, r.useStateFromStores)([E.default], () => E.default.getErrors()), T = (0, r.useStateFromStores)([E.default], () => E.default.getFormState()), I = (0, r.useStateFromStores)([f.default], () => {
+                    } = e, i = (0, r.useStateFromStores)([E.default], () => E.default.getErrors()), I = (0, r.useStateFromStores)([E.default], () => E.default.getFormState()), T = (0, r.useStateFromStores)([f.default], () => {
                         let e = f.default.getCurrentUser();
                         return l(null != e, "EmailVerificationModal: user cannot be undefined"), e
-                    }), S = (0, r.useStateFromStores)([c.default], () => c.default.getAction()), N = !h.default.isEmailReverification(S), A = null != I.email, [m, p] = s.useState(!0), g = T === C.FormStates.SUBMITTING;
+                    }), S = (0, r.useStateFromStores)([c.default], () => c.default.getAction()), N = !h.default.isEmailReverification(S), A = null != T.email, [m, p] = s.useState(!0), g = I === C.FormStates.SUBMITTING;
 
                     function R(e) {
                         var t, n;
@@ -35,7 +35,7 @@
                         L = R("password");
                     return (0, a.jsx)(_.default, {
                         transitionState: t,
-                        email: I.email,
+                        email: T.email,
                         emailError: O,
                         passwordError: L,
                         submitting: g,

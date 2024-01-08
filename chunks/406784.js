@@ -23,8 +23,8 @@
                 A = n("421602"),
                 g = n("692986"),
                 C = n("806179"),
-                N = n("816106"),
-                I = n("623879"),
+                I = n("816106"),
+                N = n("623879"),
                 U = n("49111"),
                 O = n("782340"),
                 h = (0, a.default)((0, o.default)(function(e) {
@@ -35,7 +35,7 @@
                         onSelect: a
                     } = e, d = (0, C.default)(t.id), U = (0, A.default)(t.id), h = (0, T.default)(t), R = (0, _.default)({
                         user: t
-                    }), v = (0, E.default)(t), m = (0, I.default)(t.id), P = (0, N.default)(t.id), y = (0, g.default)(t.id, o), b = (0, p.default)(t), w = (0, r.default)(null, t), D = (0, f.default)(t), L = (0, S.default)(t), M = (0, s.default)({
+                    }), v = (0, E.default)(t), m = (0, N.default)(t.id), P = (0, I.default)(t.id), y = (0, g.default)(t.id, o), b = (0, p.default)(t), w = (0, r.default)(null, t), D = (0, f.default)(t), L = (0, S.default)(t), M = (0, s.default)({
                         id: t.id,
                         label: O.default.Messages.COPY_ID_USER
                     }), G = (0, c.default)(t), k = t.isNonUserBot();

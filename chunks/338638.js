@@ -18,8 +18,8 @@
                 _ = n("599110"),
                 h = n("659500"),
                 C = n("794818"),
-                T = n("142813"),
-                I = n("197231"),
+                I = n("142813"),
+                T = n("197231"),
                 S = n("868246"),
                 N = n("447621"),
                 A = n("49111"),
@@ -98,7 +98,7 @@
                         isHandlingTagSearch: !1
                     })), !t.isSearching && r && C.trackSearchStarted(n, f, c), e.mostRecentQuery !== l && this.setState({
                         query: l,
-                        searchId: (0, I.makeAnalyticsID)(),
+                        searchId: (0, T.makeAnalyticsID)(),
                         isHandlingTagSearch: !0
                     })
                 }
@@ -186,7 +186,7 @@
                     })
                 }
                 constructor(e) {
-                    super(e), this._searchRef = s.createRef(), this.canSearch = e => e.trim().length >= 2 && !(0, T.searchQueryContainsBannedWord)(e), this.doSearch = (e, t, n, a) => {
+                    super(e), this._searchRef = s.createRef(), this.canSearch = e => e.trim().length >= 2 && !(0, I.searchQueryContainsBannedWord)(e), this.doSearch = (e, t, n, a) => {
                         var s;
                         let {
                             defaultLanguage: i,
@@ -198,7 +198,7 @@
                             approximate_member_count: C.MINIMUM_MEMBER_COUNT
                         };
                         a && c.getSearchResultsCount(r, u), this.setState({
-                            searchId: (0, I.makeAnalyticsID)(),
+                            searchId: (0, T.makeAnalyticsID)(),
                             queryHasChanged: !1,
                             isSearching: !0
                         }), c.doAlgoliaSearch(r, {
@@ -263,7 +263,7 @@
                         var e;
                         null === (e = this._searchRef.current) || void 0 === e || e.focus()
                     }, this.state = {
-                        searchId: (0, I.makeAnalyticsID)(),
+                        searchId: (0, T.makeAnalyticsID)(),
                         query: e.isSearchPage ? e.mostRecentQuery : "",
                         queryHasChanged: !1,
                         isSearching: !1,

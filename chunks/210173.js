@@ -18,8 +18,8 @@
                 _ = n("25132"),
                 h = n("424373"),
                 C = n("806468"),
-                T = n("863023"),
-                I = n("299387"),
+                I = n("863023"),
+                T = n("299387"),
                 S = n("154640"),
                 N = n("922832"),
                 A = n("782340"),
@@ -142,9 +142,9 @@
                     return null == l ? null : (0, a.jsx)(S.default, {
                         userId: l.id,
                         isLast: r,
-                        children: () => t === N.UserLinkStatus.ACTIVE ? (0, a.jsx)(T.UserLinkAcceptedRequestRow, {
+                        children: () => t === N.UserLinkStatus.ACTIVE ? (0, a.jsx)(I.UserLinkAcceptedRequestRow, {
                             user: l
-                        }) : (0, a.jsx)(I.UserLinkPendingRequestRow, {
+                        }) : (0, a.jsx)(T.UserLinkPendingRequestRow, {
                             user: l
                         })
                     }, l.id)

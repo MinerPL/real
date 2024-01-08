@@ -1,7 +1,7 @@
             "use strict";
             t.r(a), t.d(a, {
                 default: function() {
-                    return z
+                    return Y
                 }
             }), t("222007"), t("511434"), t("313619"), t("654714"), t("287168"), t("956660"), t("424973");
             var s = t("37983"),
@@ -21,14 +21,14 @@
                 E = t("428958"),
                 y = t("442939"),
                 g = t("843962"),
-                _ = t("679653"),
-                C = t("884351"),
-                I = t("42203"),
+                C = t("679653"),
+                I = t("884351"),
+                _ = t("42203"),
                 M = t("474643"),
-                v = t("305961"),
-                N = t("705955"),
-                S = t("27618"),
-                R = t("585722"),
+                N = t("305961"),
+                S = t("705955"),
+                R = t("27618"),
+                v = t("585722"),
                 x = t("697218"),
                 A = t("646240"),
                 w = t("578706"),
@@ -41,12 +41,13 @@
                 P = t("158998"),
                 L = t("50885"),
                 U = t("191225"),
-                B = t("49111"),
-                H = t("91366"),
-                G = t("782340"),
-                V = t("468738");
+                B = t("837707"),
+                H = t("49111"),
+                G = t("91366"),
+                V = t("782340"),
+                z = t("468738");
 
-            function z(e) {
+            function Y(e) {
                 let {
                     applicationId: a,
                     mediaUrl: t,
@@ -54,16 +55,16 @@
                     onClose: n,
                     transitionState: d,
                     ...g
-                } = e, _ = (0, u.useStateFromStores)([U.default], () => U.default.getSelfEmbeddedActivityForChannel(i));
+                } = e, C = (0, u.useStateFromStores)([U.default], () => U.default.getSelfEmbeddedActivityForChannel(i));
                 (0, E.default)({
                     type: o.ImpressionTypes.MODAL,
                     name: o.ImpressionNames.ACTIVITY_SHARE_MOMENT_MODAL,
                     properties: {
                         application_id: a,
-                        activity_session_id: null == _ ? void 0 : _.activity_id
+                        activity_session_id: (0, B.default)(C)
                     }
                 });
-                let [v] = (0, y.default)([a]), S = (0, u.useStateFromStores)([x.default], () => x.default.getCurrentUser()), [w, D] = l.useState(""), [b, F] = l.useState([]), [O, P] = l.useState(null), [L, z] = l.useState(null);
+                let [N] = (0, y.default)([a]), R = (0, u.useStateFromStores)([x.default], () => x.default.getCurrentUser()), [w, D] = l.useState(""), [b, F] = l.useState([]), [O, P] = l.useState(null), [L, Y] = l.useState(null);
                 l.useEffect(() => {
                     let e = async () => {
                         let e = r.basename(new URL(t).pathname),
@@ -74,35 +75,35 @@
                         let i = new FileReader;
                         i.onload = () => {
                             var e;
-                            return z(null == i ? void 0 : null === (e = i.result) || void 0 === e ? void 0 : e.toString())
+                            return Y(null == i ? void 0 : null === (e = i.result) || void 0 === e ? void 0 : e.toString())
                         }, i.readAsDataURL(l)
                     };
                     e()
                 }, [t, P]);
-                let K = (0, u.useStateFromStoresArray)([N.default], () => N.default.getInviteSuggestionRows());
+                let W = (0, u.useStateFromStoresArray)([S.default], () => S.default.getInviteSuggestionRows());
                 l.useEffect(() => {
                     (0, f.loadInviteSuggestions)({
                         omitUserIds: new Set,
                         applicationId: a,
-                        inviteTargetType: H.InviteTargetTypes.EMBEDDED_APPLICATION
+                        inviteTargetType: G.InviteTargetTypes.EMBEDDED_APPLICATION
                     })
                 }, [a]), l.useEffect(() => (0, f.searchInviteSuggestions)(w), [w]);
-                let W = l.useCallback(async () => {
+                let X = l.useCallback(async () => {
                     await Promise.all(b.map(async e => {
-                        let a = K.find(a => a.item.id === e);
+                        let a = W.find(a => a.item.id === e);
                         if (null != a) {
                             let e = a.item.id;
                             (a.type === k.RowTypes.DM || a.type === k.RowTypes.FRIEND) && (e = await m.default.ensurePrivateChannel(a.item.id)), p.default.clearAll(e, M.DraftType.ChannelMessage)
                         }
                     }))
-                }, [b, K]);
+                }, [b, W]);
                 l.useEffect(() => {
-                    d === c.ModalTransitionState.EXITING && W()
-                }, [W, d]);
-                let X = l.useCallback(async () => {
-                        await W(), n()
-                    }, [n, W]),
-                    q = l.useCallback(async () => {
+                    d === c.ModalTransitionState.EXITING && X()
+                }, [X, d]);
+                let q = l.useCallback(async () => {
+                        await X(), n()
+                    }, [n, X]),
+                    J = l.useCallback(async () => {
                         let e = 0,
                             t = 0,
                             s = 0;
@@ -120,13 +121,13 @@
                             }
                             let i = l.item.id;
                             (l.type === k.RowTypes.DM || l.type === k.RowTypes.FRIEND) && (i = await m.default.ensurePrivateChannel(l.item.id));
-                            let n = R.default.getUploads(i, M.DraftType.ChannelMessage),
-                                d = I.default.getChannel(i);
+                            let n = v.default.getUploads(i, M.DraftType.ChannelMessage),
+                                d = _.default.getChannel(i);
                             T.default.uploadFiles({
                                 channelId: i,
                                 uploads: n,
-                                parsedMessage: null != v ? C.default.parse(d, G.default.Messages.EMBEDDED_ACTIVITIES_SHARE_MOMENT_FROM_APP.format({
-                                    applicationName: "**".concat(v.name, "**")
+                                parsedMessage: null != N ? I.default.parse(d, V.default.Messages.EMBEDDED_ACTIVITIES_SHARE_MOMENT_FROM_APP.format({
+                                    applicationName: "**".concat(N.name, "**")
                                 })) : void 0,
                                 draftType: M.DraftType.ChannelMessage,
                                 options: {
@@ -134,25 +135,25 @@
                                 }
                             }), p.default.clearAll(i, M.DraftType.ChannelMessage)
                         }
-                        let i = N.default.getInviteSuggestionRows().filter(e => b.includes(e.item.id)).map(e => l(e));
-                        j.default.track(B.AnalyticEvents.ACTIVITY_SHARE_MOMENT_SEND, {
-                            user_id: null == S ? void 0 : S.id,
+                        let i = S.default.getInviteSuggestionRows().filter(e => b.includes(e.item.id)).map(e => l(e));
+                        j.default.track(H.AnalyticEvents.ACTIVITY_SHARE_MOMENT_SEND, {
+                            user_id: null == R ? void 0 : R.id,
                             application_id: a,
-                            activity_session_id: null == _ ? void 0 : _.activity_id,
+                            activity_session_id: (0, B.default)(C),
                             n_users: e,
                             n_gdms: t,
                             n_channels: s
                         });
                         try {
-                            await Promise.all(i), null != v && (0, c.showToast)((0, c.createToast)(G.default.Messages.EMBEDDED_ACTIVITIES_SHARE_MOMENT_FROM_APP.format({
-                                applicationName: v.name
+                            await Promise.all(i), null != N && (0, c.showToast)((0, c.createToast)(V.default.Messages.EMBEDDED_ACTIVITIES_SHARE_MOMENT_FROM_APP.format({
+                                applicationName: N.name
                             }), c.ToastType.SUCCESS))
                         } catch (e) {
-                            throw (0, c.showToast)((0, c.createToast)(G.default.Messages.UPLOAD_ERROR_TITLE, c.ToastType.FAILURE)), e
+                            throw (0, c.showToast)((0, c.createToast)(V.default.Messages.UPLOAD_ERROR_TITLE, c.ToastType.FAILURE)), e
                         }
-                        X()
-                    }, [_, v, a, b, X, S]),
-                    J = e => {
+                        q()
+                    }, [C, N, a, b, q, R]),
+                    Q = e => {
                         let a = async () => {
                             let a = e.item.id;
                             (e.type === k.RowTypes.DM || e.type === k.RowTypes.FRIEND) && (a = await m.default.ensurePrivateChannel(e.item.id));
@@ -176,67 +177,67 @@
                 return null == L ? (0, s.jsx)(c.Spinner, {}) : (0, s.jsxs)(c.ModalRoot, {
                     transitionState: d,
                     ...g,
-                    className: V.modalRoot,
+                    className: z.modalRoot,
                     children: [(0, s.jsxs)(c.ModalHeader, {
-                        className: V.header,
+                        className: z.header,
                         children: [(0, s.jsxs)("div", {
-                            className: V.headerTitle,
+                            className: z.headerTitle,
                             children: [(0, s.jsx)(c.Heading, {
                                 variant: "heading-md/semibold",
-                                children: G.default.Messages.EMBEDDED_ACTIVITIES_SHARE_MOMENT_HEADING
+                                children: V.default.Messages.EMBEDDED_ACTIVITIES_SHARE_MOMENT_HEADING
                             }), (0, s.jsx)(c.ModalCloseButton, {
-                                onClick: X
+                                onClick: q
                             })]
                         }), (0, s.jsx)("div", {
                             children: (0, s.jsx)("img", {
                                 alt: t,
-                                className: V.img,
+                                className: z.img,
                                 src: L
                             })
                         })]
                     }), (0, s.jsxs)(c.ModalContent, {
-                        className: V.modalContent,
+                        className: z.modalContent,
                         children: [(0, s.jsx)(A.default, {
-                            className: V.searchBar,
-                            placeholder: G.default.Messages.SEARCH,
-                            label: G.default.Messages.SEARCH,
+                            className: z.searchBar,
+                            placeholder: V.default.Messages.SEARCH,
+                            label: V.default.Messages.SEARCH,
                             searchTerm: w,
                             onChange: e => D(e),
                             onClear: () => D("")
-                        }), K.map((e, a) => (0, s.jsxs)(l.Fragment, {
+                        }), W.map((e, a) => (0, s.jsxs)(l.Fragment, {
                             children: [0 === a ? null : (0, s.jsx)("div", {
-                                className: V.rowDivider
-                            }), (0, s.jsx)(Y, {
+                                className: z.rowDivider
+                            }), (0, s.jsx)(Z, {
                                 row: e,
-                                onClick: J(e),
+                                onClick: Q(e),
                                 checked: b.includes(e.item.id),
                                 disabled: !b.includes(e.item.id) && b.length >= 10
                             })]
                         }, e.item.id))]
                     }), (0, s.jsx)(c.ModalFooter, {
-                        className: V.footer,
+                        className: z.footer,
                         children: (0, s.jsxs)("div", {
-                            className: V.copySendBar,
-                            children: [(0, s.jsx)(Z, {
+                            className: z.copySendBar,
+                            children: [(0, s.jsx)(K, {
                                 applicationId: a,
-                                activitySessionId: null == _ ? void 0 : _.activity_id,
+                                activitySessionId: (0, B.default)(C),
                                 mediaUrl: t
                             }), b.length >= 10 ? (0, s.jsx)(c.Text, {
                                 variant: "text-xs/normal",
-                                children: G.default.Messages.EMBEDDED_ACTIVITIES_SHARE_LIMIT_WARNING.format({
+                                children: V.default.Messages.EMBEDDED_ACTIVITIES_SHARE_LIMIT_WARNING.format({
                                     maxShares: 10
                                 })
                             }) : null, (0, s.jsx)(c.Button, {
-                                onClick: q,
+                                onClick: J,
                                 disabled: b.length <= 0,
-                                children: G.default.Messages.SEND
+                                children: V.default.Messages.SEND
                             })]
                         })
                     })]
                 })
             }
 
-            function Y(e) {
+            function Z(e) {
                 let {
                     row: a,
                     onClick: t,
@@ -254,19 +255,19 @@
                         break;
                     case k.RowTypes.GROUP_DM: {
                         let e = (0, g.getChannelIconURL)(a.item),
-                            t = (0, _.computeChannelName)(a.item, x.default, S.default);
+                            t = (0, C.computeChannelName)(a.item, x.default, R.default);
                         d = (0, s.jsx)(c.Avatar, {
                             src: e,
                             "aria-label": t,
                             size: c.AvatarSizes.SIZE_40
-                        }), r = (0, _.computeChannelName)(a.item, x.default, S.default);
+                        }), r = (0, C.computeChannelName)(a.item, x.default, R.default);
                         break
                     }
                     case k.RowTypes.CHANNEL: {
                         let e = a.item,
-                            t = v.default.getGuild(e.guild_id);
+                            t = N.default.getGuild(e.guild_id);
                         if (null == t) return null;
-                        if (r = "#".concat((0, _.computeChannelName)(e, x.default, S.default)), o = t.name, null != t.icon) {
+                        if (r = "#".concat((0, C.computeChannelName)(e, x.default, R.default)), o = t.name, null != t.icon) {
                             let a = b.default.getGuildIconURL({
                                 id: e.guild_id,
                                 icon: t.icon,
@@ -280,7 +281,7 @@
                         } else {
                             let e = (0, O.getAcronym)(t.name);
                             d = (0, s.jsx)("div", {
-                                className: V.acronym,
+                                className: z.acronym,
                                 "aria-hidden": !0,
                                 children: (0, s.jsx)(c.Text, {
                                     variant: "text-md/semibold",
@@ -292,26 +293,26 @@
                 }
                 return (0, s.jsxs)(c.Clickable, {
                     onClick: t,
-                    className: n(V.rowContainer, {
-                        [V.disabled]: i
+                    className: n(z.rowContainer, {
+                        [z.disabled]: i
                     }),
                     children: [(0, s.jsxs)("div", {
-                        className: V.rowLeft,
+                        className: z.rowLeft,
                         children: [(0, s.jsx)("div", {
-                            className: V.rowAvatar,
+                            className: z.rowAvatar,
                             children: d
                         }), (0, s.jsxs)("div", {
-                            className: V.rowNameContainer,
+                            className: z.rowNameContainer,
                             children: [(0, s.jsx)(c.Text, {
                                 variant: "text-md/semibold",
-                                className: n(V.rowName, {
-                                    [V.disabled]: i
+                                className: n(z.rowName, {
+                                    [z.disabled]: i
                                 }),
                                 children: r
                             }), (0, s.jsx)(c.Text, {
                                 variant: "text-xs/medium",
-                                className: n(V.rowSubName, {
-                                    [V.disabled]: i
+                                className: n(z.rowSubName, {
+                                    [z.disabled]: i
                                 }),
                                 children: o
                             })]
@@ -321,19 +322,19 @@
                         value: l,
                         type: c.Checkbox.Types.INVERTED,
                         displayOnly: !0,
-                        className: V.rowRight
+                        className: z.rowRight
                     })]
                 })
             }
 
-            function Z(e) {
+            function K(e) {
                 let {
                     applicationId: a,
                     mediaUrl: t,
                     activitySessionId: i
                 } = e, [n, d] = l.useState(!1), r = (0, u.useStateFromStores)([x.default], () => x.default.getCurrentUser());
                 async function o() {
-                    j.default.track(B.AnalyticEvents.ACTIVITY_SHARE_MOMENT_COPY, {
+                    j.default.track(H.AnalyticEvents.ACTIVITY_SHARE_MOMENT_COPY, {
                         user_id: null == r ? void 0 : r.id,
                         application_id: a,
                         activity_session_id: i
@@ -350,7 +351,7 @@
                     look: c.Button.Looks.LINK,
                     color: c.Button.Colors.LINK,
                     onClick: o,
-                    innerClassName: V.copyButton,
-                    children: [n ? (0, s.jsx)(w.default, {}) : (0, s.jsx)(D.default, {}), n ? G.default.Messages.COPIED : G.default.Messages.COPY_IMAGE_MENU_ITEM]
+                    innerClassName: z.copyButton,
+                    children: [n ? (0, s.jsx)(w.default, {}) : (0, s.jsx)(D.default, {}), n ? V.default.Messages.COPIED : V.default.Messages.COPY_IMAGE_MENU_ITEM]
                 }) : (0, s.jsx)("div", {})
             }

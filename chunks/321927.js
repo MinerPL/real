@@ -604,13 +604,13 @@
                     return S.default.getFlattenedGuildIds().forEach(C => {
                         X.default.getEmbeddedActivitiesForGuild(C).forEach(C => {
                             let s = p.default.getChannel(C.channelId);
-                            if (null == s || C.connections.has(e.id)) return;
+                            if (null == s || C.userIds.has(e.id)) return;
                             let l = (0, LL.default)({
                                     activityConfigs: a,
-                                    applicationId: C.application_id,
+                                    applicationId: C.applicationId,
                                     applications: t
                                 }),
-                                i = Array.from(C.connections.keys()).map(L => v.default.getUser(L)).filter(y.isNotNullish);
+                                i = Array.from(C.userIds).map(L => v.default.getUser(L)).filter(y.isNotNullish);
                             null != l && L.push({
                                 activityItem: l,
                                 channel: s,

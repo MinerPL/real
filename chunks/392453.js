@@ -130,8 +130,8 @@
                     if ((0, u.default)(d)) {
                         let t = (0, r.getIsActivitiesEnabledForCurrentPlatform)(),
                             n = (0, o.default)({
-                                userId: e.id,
                                 activity: d,
+                                userId: e.id,
                                 application: f,
                                 channelId: null === (s = y.default.getVoiceStateForUser(e.id)) || void 0 === s ? void 0 : s.channelId,
                                 currentUser: h,

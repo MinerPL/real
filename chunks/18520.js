@@ -18,7 +18,7 @@
                 _ = n("492249"),
                 h = n("49111");
             let C = "CachedTokens";
-            async function T(e, t, n) {
+            async function I(e, t, n) {
                 let a, {
                     client_id: i,
                     response_type: l = "code",
@@ -26,8 +26,8 @@
                     code_challenge: o,
                     code_challenge_method: h,
                     state: C,
-                    scope: T,
-                    permissions: I,
+                    scope: I,
+                    permissions: T,
                     guild_id: S,
                     channel_id: N,
                     prompt: A,
@@ -36,7 +36,7 @@
                 if (null == i) throw new f.default(_.RPCErrors.OAUTH2_ERROR, "No Client ID provided");
                 if (null != r) throw new f.default(_.RPCErrors.OAUTH2_ERROR, "Redirect URI cannot be used in the RPC OAuth2 Authorization flow");
                 let p = [];
-                "string" == typeof T ? p = T.split(" ").filter(e => e.length > 0) : Array.isArray(T) && (p = T);
+                "string" == typeof I ? p = I.split(" ").filter(e => e.length > 0) : Array.isArray(I) && (p = I);
                 let g = c.default.getCurrentUser();
                 if (null == g) throw new f.default(_.RPCErrors.OAUTH2_ERROR, "Client is not logged in");
                 try {
@@ -76,12 +76,12 @@
                 null == n || n(a.application);
                 let R = E.default.NONE;
                 try {
-                    R = s.default.deserialize(null != I ? I : 0)
+                    R = s.default.deserialize(null != T ? T : 0)
                 } catch (e) {}
                 return t(i, a, p, R, l, r, o, h, C, S, N, A, m)
             }
 
-            function I(e, t) {
+            function T(e, t) {
                 if (e.authorization.accessToken) throw new f.default(_.RPCErrors.INVALID_COMMAND, "Already authenticated");
                 if (e.authorization.authing) throw new f.default(_.RPCErrors.INVALID_COMMAND, "Already authenticating");
                 return e.authorization.authing = !0, i.default.get({
@@ -130,7 +130,7 @@
                                 let n = s.application.id;
                                 if (null == n) throw new f.default(_.RPCErrors.INVALID_COMMAND, "No application.");
                                 let l = h.OAuth2Scopes.IDENTIFY,
-                                    o = () => T({
+                                    o = () => I({
                                         client_id: n,
                                         scope: l,
                                         response_type: "token"
@@ -150,7 +150,7 @@
                                                 scope: n,
                                                 expires: Date.now() + a
                                             }, r.default.set(C, i)
-                                        }(n, i.access_token, i.scope, i.expires_in), I(s, i.access_token)
+                                        }(n, i.access_token, i.scope, i.expires_in), T(s, i.access_token)
                                     });
                                 return null != (i = function(e, t) {
                                     let n = r.default.get(C);
@@ -159,14 +159,14 @@
                                         if (!(a.scope !== t || a.expires <= Date.now())) return a.accessToken;
                                         delete n[e], r.default.set(C, n)
                                     }
-                                }(n, l)) ? I(s, i).catch(() => (! function(e) {
+                                }(n, l)) ? T(s, i).catch(() => (! function(e) {
                                     var t;
                                     let n = null !== (t = r.default.get(C)) && void 0 !== t ? t : {};
                                     delete n[e], r.default.set(C, n)
                                 }(n), o())) : o()
                             }
                             if (null == i) throw new f.default(_.RPCErrors.INVALID_TOKEN, "No access token provided");
-                            return I(s, i)
+                            return T(s, i)
                         }
                     }),
                     [h.RPCCommands.AUTHORIZE]: {
@@ -185,7 +185,7 @@
                                 let a = n.body;
                                 if (s.application.id !== a.id) throw new f.default(_.RPCErrors.INVALID_CLIENTID, "Application does not match the connection's");
                                 let i = l.scopes || l.scope;
-                                return delete l.scopes, T({
+                                return delete l.scopes, I({
                                     ...l,
                                     scope: i
                                 }, e, t)

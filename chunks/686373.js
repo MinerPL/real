@@ -80,7 +80,7 @@
                             t = [];
                         for (let s of a) {
                             var n, l;
-                            t.push(...null !== (l = null === (n = e.get(s)) || void 0 === n ? void 0 : n.flatMap(e => Array.from(e.connections.keys()))) && void 0 !== l ? l : [])
+                            t.push(...null !== (l = null === (n = e.get(s)) || void 0 === n ? void 0 : n.flatMap(e => Array.from(e.userIds))) && void 0 !== l ? l : [])
                         }
                         return t
                     }, [a]),

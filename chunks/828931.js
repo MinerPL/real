@@ -18,8 +18,8 @@
                 _ = n("442619"),
                 h = n("592407"),
                 C = n("465511"),
-                T = n("519119"),
-                I = n("5667"),
+                I = n("519119"),
+                T = n("5667"),
                 S = n("79798"),
                 N = n("599110"),
                 A = n("427459"),
@@ -106,7 +106,7 @@
                         switch (V) {
                             case i.DismissibleContent.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:
                                 return (0, a.jsx)(F, {
-                                    renderPopout: (0, a.jsx)(I.default, {
+                                    renderPopout: (0, a.jsx)(T.default, {
                                         onComponentMount: L,
                                         header: M.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
                                         asset: (0, a.jsx)("img", {
@@ -125,7 +125,7 @@
                                 });
                             case i.DismissibleContent.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK:
                                 return (0, a.jsx)(F, {
-                                    renderPopout: (0, a.jsx)(I.default, {
+                                    renderPopout: (0, a.jsx)(T.default, {
                                         onComponentMount: L,
                                         header: M.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
                                         asset: (0, a.jsx)("img", {
@@ -173,7 +173,7 @@
                                     }),
                                     t = (0, A.isTierUnlocked)(s, g.BoostedGuildTiers.TIER_1) ? M.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : M.default.Messages.LEARN_MORE;
                                 return (0, a.jsx)(F, {
-                                    renderPopout: (0, a.jsx)(I.default, {
+                                    renderPopout: (0, a.jsx)(T.default, {
                                         onComponentMount: B,
                                         header: M.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_TITLE,
                                         asset: (0, a.jsx)("img", {
@@ -199,7 +199,7 @@
                                 });
                             case i.DismissibleContent.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
                                 return (0, a.jsx)(F, {
-                                    renderPopout: (0, a.jsx)(I.default, {
+                                    renderPopout: (0, a.jsx)(T.default, {
                                         className: P.tooltipOverrideColor,
                                         header: M.default.Messages.ACTIVE_THREADS_UPSELL_HEADER,
                                         content: M.default.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
@@ -211,7 +211,7 @@
                                 });
                             case i.DismissibleContent.CLYDE_GUILD_HEADER_NUX:
                                 return (0, a.jsx)(F, {
-                                    renderPopout: (0, a.jsx)(I.default, {
+                                    renderPopout: (0, a.jsx)(T.default, {
                                         header: (0, a.jsxs)(a.Fragment, {
                                             children: [M.default.Messages.CLYDE_MODAL_TITLE, (0, a.jsx)(S.default, {
                                                 className: P.botTag,
@@ -239,7 +239,7 @@
                                 });
                             case i.DismissibleContent.GUILD_HEADER_SOUNDBOARD_PERMISSION:
                                 return (0, a.jsx)(F, {
-                                    renderPopout: (0, a.jsx)(I.default, {
+                                    renderPopout: (0, a.jsx)(T.default, {
                                         header: M.default.Messages.SOUNDBOARD_TOOLTIP_TITLE_NEW,
                                         content: M.default.Messages.SOUNDBOARD_TOOLTIP_BODY,
                                         buttonCTA: M.default.Messages.CHECK_IT_OUT,
@@ -258,7 +258,7 @@
                                 });
                             case i.DismissibleContent.MEDIA_CHANNEL_UPSELL:
                                 return (0, a.jsx)(F, {
-                                    renderPopout: (0, a.jsx)(T.default, {
+                                    renderPopout: (0, a.jsx)(I.default, {
                                         guildId: s.id,
                                         markAsDismissed: Y
                                     }),

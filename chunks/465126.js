@@ -18,8 +18,8 @@
                 _ = n("407063"),
                 h = n("845579"),
                 C = n("315102"),
-                T = n("794818"),
-                I = n("580357"),
+                I = n("794818"),
+                T = n("580357"),
                 S = n("587974"),
                 N = n("49111"),
                 A = n("782340"),
@@ -151,7 +151,7 @@
                                         className: m.guildInfo,
                                         children: [(0, a.jsxs)("div", {
                                             className: m.title,
-                                            children: [(0, a.jsx)(I.default, {
+                                            children: [(0, a.jsx)(T.default, {
                                                 className: m.guildBadge,
                                                 guild: t,
                                                 tooltipColor: o.Tooltip.Colors.PRIMARY
@@ -169,7 +169,7 @@
                                             tags: P,
                                             onTagClick: e => i(e, t.id),
                                             guildId: t.id,
-                                            section: T.AnalyticsContexts.POPULAR
+                                            section: I.AnalyticsContexts.POPULAR
                                         }), (0, a.jsxs)("div", {
                                             className: m.memberInfo,
                                             children: [null != v && (0, a.jsxs)("div", {

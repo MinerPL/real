@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return T
                 }
             });
             var a = n("37983"),
@@ -19,7 +19,7 @@
                 h = n("782340"),
                 C = n("443");
 
-            function T(e, t, n) {
+            function I(e, t, n) {
                 return (0, a.jsxs)("button", {
                     className: C.container,
                     onClick: n,
@@ -43,7 +43,7 @@
                 }, t)
             }
 
-            function I() {
+            function T() {
                 let e = Object.values(u.default.getGuilds()),
                     t = e.filter(e => e.hasFeature(_.GuildFeatures.HUB)),
                     n = e => {
@@ -61,13 +61,13 @@
                         })
                     }), (0, a.jsxs)("div", {
                         className: C.grid,
-                        children: [t.map(e => T(E.default.getGuildIconURL({
+                        children: [t.map(e => I(E.default.getGuildIconURL({
                             id: e.id,
                             icon: e.icon,
                             size: 240
                         }), e.name, () => {
                             n(e.id)
-                        })), T(d.default, h.default.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
+                        })), I(d.default, h.default.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
                             (0, l.clearSearch)(), c.default.track(_.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, r.transitionTo)(_.Routes.GUILD_DISCOVERY)
                         })]
                     })]

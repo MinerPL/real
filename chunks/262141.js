@@ -27,7 +27,6 @@
                     }), (0, l.jsx)("div", {
                         className: o.headerDivider
                     }), c.map((e, a) => (0, l.jsx)(i.default, {
-                        activity: e.embeddedActivity,
                         embeddedApp: e,
                         channel: t,
                         onAction: n

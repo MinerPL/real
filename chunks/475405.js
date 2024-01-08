@@ -19,8 +19,8 @@
                 _ = n("980215"),
                 h = n("49111"),
                 C = n("988268"),
-                T = n("994428"),
-                I = n("782340"),
+                I = n("994428"),
+                T = n("782340"),
                 S = n("445930"),
                 N = n("311492"),
                 A = n("382719");
@@ -30,7 +30,7 @@
                     guild: t,
                     markAsDismissed: n
                 } = e, m = (0, s.useStateFromStores)([l.default], () => l.default.useReducedMotion), p = (0, _.useClydeExperiment)(t) === f.ClydeExperimentState.ComingSoon, g = (0, s.useStateFromStores)([u.default], () => u.default.can(h.Permissions.ADMINISTRATOR, t)), R = p && g, O = () => {
-                    open(E.default.getArticleURL(h.HelpdeskArticles.CLYDE_AI)), n(T.ContentDismissActionType.UNKNOWN)
+                    open(E.default.getArticleURL(h.HelpdeskArticles.CLYDE_AI)), n(I.ContentDismissActionType.UNKNOWN)
                 };
                 return (0, a.jsx)(r.default, {
                     image: m ? A : N,
@@ -39,12 +39,12 @@
                     },
                     imageMarginTop: 8,
                     guild: t,
-                    onDismissed: () => n(T.ContentDismissActionType.UNKNOWN),
+                    onDismissed: () => n(I.ContentDismissActionType.UNKNOWN),
                     centerText: !0,
                     imageMarginX: 64,
                     onClick: R ? void 0 : O,
                     title: () => {
-                        let e = R ? I.default.Messages.CLYDE_NUX_ADMIN_CHANNEL_NOTICE_TITLE : I.default.Messages.CLYDE_NUX_USER_CHANNEL_NOTICE_TITLE;
+                        let e = R ? T.default.Messages.CLYDE_NUX_ADMIN_CHANNEL_NOTICE_TITLE : T.default.Messages.CLYDE_NUX_USER_CHANNEL_NOTICE_TITLE;
                         return (0, a.jsxs)("div", {
                             className: S.titleContainer,
                             children: [(0, a.jsx)(i.Text, {
@@ -57,7 +57,7 @@
                             })]
                         })
                     },
-                    message: R ? I.default.Messages.CLYDE_NUX_ADMIN_CHANNEL_NOTICE_MESSAGE : I.default.Messages.CLYDE_NUX_USER_CHANNEL_NOTICE_MESSAGE,
+                    message: R ? T.default.Messages.CLYDE_NUX_ADMIN_CHANNEL_NOTICE_MESSAGE : T.default.Messages.CLYDE_NUX_USER_CHANNEL_NOTICE_MESSAGE,
                     cta: R ? () => (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)(i.Button, {
                             className: S.button,
@@ -65,11 +65,11 @@
                             onClick: () => {
                                 o.default.open(t.id, h.GuildSettingsSections.INTEGRATIONS), c.default.track(h.AnalyticEvents.CLYDE_NUX_NOTICE_MANAGE_SETTINGS_CTA_CLICKED, {
                                     guild_id: t.id
-                                }), n(T.ContentDismissActionType.UNKNOWN)
+                                }), n(I.ContentDismissActionType.UNKNOWN)
                             },
                             fullWidth: !0,
                             color: i.Button.Colors.PRIMARY,
-                            children: I.default.Messages.CLYDE_NUX_ADMIN_CHANNEL_NOTICE_MANAGE_SETTINGS
+                            children: T.default.Messages.CLYDE_NUX_ADMIN_CHANNEL_NOTICE_MANAGE_SETTINGS
                         }), (0, a.jsx)(i.Button, {
                             className: S.button,
                             size: i.Button.Sizes.SMALL,
@@ -81,9 +81,9 @@
                                 }), O()
                             },
                             fullWidth: !0,
-                            children: I.default.Messages.CLYDE_NUX_CHANNEL_NOTICE_LEARN_MORE
+                            children: T.default.Messages.CLYDE_NUX_CHANNEL_NOTICE_LEARN_MORE
                         })]
-                    }) : I.default.Messages.CLYDE_NUX_CHANNEL_NOTICE_LEARN_MORE,
+                    }) : T.default.Messages.CLYDE_NUX_CHANNEL_NOTICE_LEARN_MORE,
                     trackingSource: R ? h.ChannelNoticeCtaSources.CLYDE_ADMIN_NUX_NOTICE : h.ChannelNoticeCtaSources.CLYDE_USER_NUX_NOTICE,
                     type: R ? h.ChannelNoticeTypes.CLYDE_ADMIN_NUX : h.ChannelNoticeTypes.CLYDE_USER_NUX
                 })

@@ -9,14 +9,14 @@
                 n = i("697218"),
                 r = i("719923"),
                 d = i("686569"),
-                o = i("743925"),
-                u = i("21002"),
+                u = i("743925"),
+                o = i("21002"),
                 c = i("673044"),
                 s = i("954016");
 
             function f(e, t) {
                 let i = (0, a.useStateFromStores)([n.default], () => n.default.getCurrentUser()),
-                    f = (0, o.useActivityShelfData)(e),
+                    f = (0, u.useActivityShelfData)(e),
                     {
                         enableBigShelf: p,
                         enableMinimalActivityDetails: v,
@@ -34,7 +34,7 @@
                     let a = null;
                     f.forEach(e => {
                         var n;
-                        let r = (0, u.default)(e, i),
+                        let r = (0, o.default)(e, i),
                             d = null !== (n = l.get(r)) && void 0 !== n ? n : [];
                         t && e.application.id === s.WATCH_YOUTUBE_PROD_APP_ID && !b ? a = e : (d.push(e), l.set(r, d))
                     });

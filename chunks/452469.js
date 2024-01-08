@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return I
                 }
             });
             var a = n("37983");
@@ -61,7 +61,7 @@
                 })
             }
 
-            function T(e) {
+            function I(e) {
                 let {
                     channel: t
                 } = e, n = (0, l.default)();

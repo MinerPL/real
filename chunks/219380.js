@@ -18,8 +18,8 @@
                 _ = n("376897"),
                 h = n("683805"),
                 C = n("825734"),
-                T = n("766383"),
-                I = n("696287"),
+                I = n("766383"),
+                T = n("696287"),
                 S = n("778117"),
                 N = n("195180"),
                 A = n("357147");
@@ -31,11 +31,11 @@
                     ..._.default,
                     ...h.default,
                     ...C.default,
-                    ...I.default,
+                    ...T.default,
                     ...N.default,
                     ...S.default,
                     ...E.default,
-                    ...T.default
+                    ...I.default
                 },
                 p = {
                     ...l.default,

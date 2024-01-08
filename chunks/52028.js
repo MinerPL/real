@@ -44,7 +44,7 @@
                 }), o.default.getSelfEmbeddedActivities().forEach(t => {
                     var n;
                     let {
-                        application_id: i
+                        applicationId: i
                     } = t;
                     if (r.has(i)) return;
                     let a = null === (n = d.default.getApplication(i)) || void 0 === n ? void 0 : n.name;

@@ -30,11 +30,8 @@
                     user: i,
                     embeddedApp: r,
                     onOpenSpotifyAlbum: d
-                } = e, {
-                    assets: c,
-                    application_id: f
-                } = s;
-                if (null == c || null == c.large_image && null == c.small_image) return null != r ? function(e) {
+                } = e, c = null == s ? void 0 : s.assets, f = null == s ? void 0 : s.application_id;
+                if (null == s || null == c || null == c.large_image && null == c.small_image) return null != r ? function(e) {
                     let t = m.default.getApplicationIconURL({
                             id: e.application.id,
                             icon: e.application.icon
@@ -82,12 +79,10 @@
                     activity: t,
                     embeddedApp: n,
                     onOpenSpotifyTrack: a
-                } = e, {
-                    details: s
-                } = t, i = t.name, r = i;
+                } = e, s = null == t ? void 0 : t.details, i = null == t ? void 0 : t.name, r = i;
                 if (null != n) r = n.application.name;
                 else {
-                    if (!(0, u.default)(t) || null == t.sync_id || null == s || null == a) return null;
+                    if (!(null != t && (0, u.default)(t)) || null == t.sync_id || null == s || null == a) return null;
                     i = s, r = (0, l.jsx)(o.Clickable, {
                         className: I.headerLink,
                         onClick: () => {
@@ -108,11 +103,8 @@
                     activity: t,
                     user: n,
                     onOpenSpotifyArtist: a
-                } = e, {
-                    details: s,
-                    state: r
-                } = t, o = s;
-                return ((0, u.default)(t) && null != r && (o = [(0, l.jsx)(f.default, {
+                } = e, s = null == t ? void 0 : t.details, r = null == t ? void 0 : t.state, o = s;
+                return (null != t && (0, u.default)(t) && null != r && (o = [(0, l.jsx)(f.default, {
                     artists: r,
                     linkClassName: I.bodyLink,
                     canOpen: null != t.sync_id,
@@ -128,9 +120,7 @@
             function A(e) {
                 let {
                     activity: t
-                } = e, {
-                    state: n
-                } = t;
+                } = e, n = null == t ? void 0 : t.state;
                 return null == n || "" === n || (0, u.default)(t) ? null : (0, l.jsx)("div", {
                     className: i(I.ellipsisRow, I.colorHeaderSecondary, I.bodyTextSize, I.activity),
                     children: n
@@ -141,7 +131,7 @@
                 let {
                     activity: t
                 } = e;
-                if (!(0, u.default)(t)) return null;
+                if (null == t || !(0, u.default)(t)) return null;
                 let {
                     timestamps: n
                 } = t;
@@ -170,7 +160,7 @@
                     onOpenSpotifyArtist: h,
                     onOpenSpotifyAlbum: p
                 } = e, m = [];
-                null != n ? m = Array.from(n.embeddedActivity.connections.keys()) : (0, u.default)(t) && null != c && (m = c.map(e => e.user.id));
+                null != n ? m = Array.from(n.embeddedActivity.userIds) : (0, u.default)(t) && null != c && (m = c.map(e => e.user.id));
                 let v = (0, r.useStateFromStoresArray)([d.default], () => m.map(e => d.default.getUser(e)).filter(E.isNotNullish)),
                     x = null != n || (0, u.default)(t),
                     R = a.useMemo(() => {

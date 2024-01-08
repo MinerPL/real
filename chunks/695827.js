@@ -23,8 +23,8 @@
                         dismissCurrentNotice: _
                     } = e, h = (null == t ? void 0 : t.metadata.premiumSubscription) != null, C = (0, o.useLocalizedPromoQuery)();
                     if ((0, u.useTrackLocalizedPricingPromoImpression)(d.AnalyticsSections.NOTIFICATION_BAR, null == C ? void 0 : C.countryCode), null == C) return null;
-                    let T = C.countryCode,
-                        I = C.currency,
+                    let I = C.countryCode,
+                        T = C.currency,
                         S = C.paymentSourceTypes.length > 0;
                     return (0, a.jsxs)(l.default, {
                         color: h ? l.NoticeColors.BRAND : l.NoticeColors.PREMIUM_TIER_2,
@@ -33,7 +33,7 @@
                             noticeType: n
                         }), !h && (0, a.jsx)(i.default, {
                             className: f.premiumIcon
-                        }), (0, r.getLocalizedPricingNotice)(T, I, S, h), (0, a.jsx)(l.PrimaryCTANoticeButton, {
+                        }), (0, r.getLocalizedPricingNotice)(I, T, S, h), (0, a.jsx)(l.PrimaryCTANoticeButton, {
                             onClick: () => {
                                 _(c.ContentDismissActionType.UNKNOWN), s.default.open(d.UserSettingsSections.PREMIUM)
                             },

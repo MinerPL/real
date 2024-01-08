@@ -3,7 +3,7 @@
                 default: function() {
                     return v
                 }
-            }), n("222007");
+            });
             var a = n("37983");
             n("884691");
             var l = n("446674"),
@@ -27,53 +27,54 @@
             let T = "ActivityPanelActionBar";
 
             function v() {
-                let e = (0, l.useStateFromStores)([d.default], () => d.default.getChannelId()),
-                    t = o.default.getChannel(e),
+                var e, t, n, v;
+                let x = (0, l.useStateFromStores)([d.default], () => d.default.getChannelId()),
+                    N = o.default.getChannel(x),
                     {
-                        analyticsLocations: n
+                        analyticsLocations: A
                     } = (0, u.default)(r.default.ACTIVITY_IN_TEXT_ACTIONBAR),
-                    v = (0, l.useStateFromStoresArray)([m.default], () => null != e ? m.default.getEmbeddedActivitiesForChannel(e) : [], [e]),
-                    x = (0, l.useStateFromStores)([m.default], () => m.default.getActivityPanelMode()),
-                    N = (0, C.useEmbeddedApps)(v),
-                    A = (0, C.useEmbeddedAppsWithPresence)(N),
-                    M = A.get(null === (O = N[0]) || void 0 === O ? void 0 : null === (L = O.application) || void 0 === L ? void 0 : L.id),
-                    R = (0, h.useIsActivitiesInTextEnabled)(e, T),
-                    j = (0, h.useIsActivitiesInTextActionBarEnabled)(e, T);
-                if (!(R && j) || null == M || x !== g.ActivityPanelModes.ACTION_BAR) return null;
-                var L, O, y, b = M.embeddedActivity.details;
-                (null == b || void 0 === b || "" === b) && (b = _.default.Messages.LOADING);
-                let P = Array.from(M.embeddedActivity.connections.values()).map(e => c.default.getUser(e.user_id)).filter(e => null != e && void 0 !== e);
+                    M = (0, l.useStateFromStoresArray)([m.default], () => null != x ? m.default.getEmbeddedActivitiesForChannel(x) : [], [x]),
+                    R = (0, l.useStateFromStores)([m.default], () => m.default.getActivityPanelMode()),
+                    j = (0, C.useEmbeddedApps)(M),
+                    L = (0, C.useEmbeddedAppsWithPresence)(j),
+                    O = L.get(null === (t = j[0]) || void 0 === t ? void 0 : null === (e = t.application) || void 0 === e ? void 0 : e.id),
+                    y = (0, h.useIsActivitiesInTextEnabled)(x, T),
+                    b = (0, h.useIsActivitiesInTextActionBarEnabled)(x, T);
+                if (!(y && b) || null == O || R !== g.ActivityPanelModes.ACTION_BAR) return null;
+                let P = null === (n = O.presenceActivity) || void 0 === n ? void 0 : n.details;
+                (null == P || void 0 === P || "" === P) && (P = _.default.Messages.LOADING);
+                let D = Array.from(O.embeddedActivity.userIds).map(e => c.default.getUser(e)).filter(e => null != e && void 0 !== e);
                 return (0, a.jsxs)(i.Clickable, {
                     className: I.actionBarContainer,
                     onClick: () => {
-                        null != t && null != M && ((0, E.maybeJoinEmbeddedActivity)({
-                            channelId: t.id,
-                            applicationId: M.application.id,
-                            activityId: M.embeddedActivity.activity_id,
-                            inputApplication: M.application,
-                            analyticsLocations: n,
+                        null != N && null != O && ((0, E.maybeJoinEmbeddedActivity)({
+                            channelId: N.id,
+                            applicationId: O.application.id,
+                            instanceId: O.embeddedActivity.instanceId,
+                            inputApplication: O.application,
+                            analyticsLocations: A,
                             embeddedActivitiesManager: S.default
                         }), (0, p.updateActivityPanelMode)(g.ActivityPanelModes.PANEL))
                     },
                     children: [(0, a.jsx)("img", {
                         alt: "",
-                        src: null !== (y = M.application.getIconURL(48)) && void 0 !== y ? y : void 0,
+                        src: null !== (v = O.application.getIconURL(48)) && void 0 !== v ? v : void 0,
                         className: I.applicationIcon
                     }), (0, a.jsxs)("div", {
                         className: I.textContainer,
                         children: [(0, a.jsx)(s.Text, {
                             color: "header-primary",
                             variant: "text-sm/semibold",
-                            children: M.application.name
+                            children: O.application.name
                         }), (0, a.jsx)(s.Text, {
                             color: "header-secondary",
                             variant: "text-xxs/medium",
                             className: I.textSubtitle,
-                            children: b
+                            children: P
                         })]
                     }), (0, a.jsx)(f.default, {
                         renderIcon: !1,
-                        users: P,
+                        users: D,
                         size: 24,
                         max: 3,
                         className: I.userSummaryContainer

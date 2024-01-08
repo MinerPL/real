@@ -3,7 +3,7 @@
                 default: function() {
                     return N
                 }
-            }), n("222007");
+            });
             var l = n("37983");
             n("884691");
             var a = n("414456"),
@@ -73,7 +73,7 @@
                     members: a,
                     embeddedApp: s,
                     onAction: r
-                } = e, p = null != s, m = p ? Array.from(s.embeddedActivity.connections.keys()) : [], E = (0, i.useStateFromStores)([C.default, h.default], () => {
+                } = e, p = null != s, m = p ? Array.from(s.embeddedActivity.userIds) : [], E = (0, i.useStateFromStores)([C.default, h.default], () => {
                     if (null != a) {
                         var e, t, l, s;
                         return a.length <= 0 ? null : p ? null !== (t = null === (e = a.find(e => e.voiceState.sessionId === (null == n ? void 0 : n.session_id))) || void 0 === e ? void 0 : e.user) && void 0 !== t ? t : C.default.getUser(m[0]) : null !== (s = null === (l = a.find(e => e.user.id !== h.default.getId())) || void 0 === l ? void 0 : l.user) && void 0 !== s ? s : a[0].user

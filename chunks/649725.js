@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return I
                 }
             });
             var a = n("37983");
@@ -68,4 +68,4 @@
                     })
                 };
             C.Icons = f.CategoryIcons;
-            var T = C
+            var I = C

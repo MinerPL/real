@@ -10,7 +10,7 @@
                     return C
                 },
                 useIsGuildDismissibleContentChannelNoticeShown: function() {
-                    return T
+                    return I
                 }
             });
             var a = n("446674"),
@@ -45,7 +45,7 @@
                 })
             }
 
-            function T(e) {
+            function I(e) {
                 let t = (0, l.default)(e, "guild_dismissible_content_utils");
                 return i.default.useExperiment({
                     guildId: e,

@@ -50,10 +50,10 @@
                 c = n("599417"),
                 s = n("299285"),
                 E = n("191145"),
-                p = n("752598"),
-                A = n("653047"),
-                f = n("271938"),
-                I = n("42203"),
+                I = n("752598"),
+                p = n("653047"),
+                A = n("271938"),
+                f = n("42203"),
                 _ = n("18494"),
                 T = n("697218"),
                 C = n("449008"),
@@ -69,43 +69,41 @@
                 let a = N.default.getSelfEmbeddedActivityForChannel(t);
                 null != a && O({
                     channelId: t,
-                    applicationId: a.application_id
+                    applicationId: a.applicationId
                 }), l.default.dispatch({
                     type: "EMBEDDED_ACTIVITY_OPEN",
                     channelId: t,
-                    embeddedActivity: e,
+                    applicationId: e,
                     analyticsLocations: n
                 });
-                let {
-                    application_id: i
-                } = e, r = (0, S.default)(t);
-                r ? (u.default.selectParticipant(t, i), u.default.updateLayout(t, m.ChannelLayouts.NO_CHAT)) : (0, D.default)(t)
+                let i = (0, S.default)(t);
+                i ? (u.default.selectParticipant(t, e), u.default.updateLayout(t, m.ChannelLayouts.NO_CHAT)) : (0, D.default)(t)
             }
             async function L(t) {
                 var e, n;
-                let i = I.default.getChannel(t),
+                let i = f.default.getChannel(t),
                     r = null !== (e = null == i ? void 0 : i.getGuildId()) && void 0 !== e ? e : void 0;
                 if (null == r && !(null !== (n = null == i ? void 0 : i.isPrivate()) && void 0 !== n && n)) return;
                 let u = N.default.getSelfEmbeddedActivityForChannel(t);
                 if (null === u) return;
-                let d = f.default.getSessionId();
+                let d = A.default.getSessionId();
                 try {
                     l.default.dispatch({
                             type: "EMBEDDED_ACTIVITY_LAUNCH_START",
                             embeddedActivity: u
                         }),
                         function(t, e) {
-                            let n = I.default.getChannel(t),
-                                a = N.default.getEmbeddedActivitiesForChannel(t).some(t => t.application_id === e);
+                            let n = f.default.getChannel(t),
+                                a = N.default.getEmbeddedActivitiesForChannel(t).some(t => t.applicationId === e);
                             if (a) return !1;
                             let i = (0, h.isActivitiesInTextEnabled)(n, "EmbeddedActivitiesActionCreators#isActivityInTextStart");
                             return !!((null == n ? void 0 : n.type) === m.ChannelTypes.GUILD_TEXT && i || null != n && n.isPrivate() && i && null == _.default.getVoiceChannelId()) || !1
-                        }(t, u.application_id) ? await (0, p.executePrimaryEntryPointInteraction)({
-                            applicationId: u.application_id,
+                        }(t, u.applicationId) ? await (0, I.executePrimaryEntryPointInteraction)({
+                            applicationId: u.applicationId,
                             channelId: t,
                             guildId: r
                         }) : await y.default.post({
-                            url: m.Endpoints.ACTIVITY_CHANNEL_LAUNCH(t, u.application_id),
+                            url: m.Endpoints.ACTIVITY_CHANNEL_LAUNCH(t, u.applicationId),
                             body: {
                                 session_id: d,
                                 guild_id: null != r ? r : void 0
@@ -115,7 +113,7 @@
                                 properties: {
                                     guild_id: r,
                                     channel_id: t,
-                                    application_id: u.application_id,
+                                    application_id: u.applicationId,
                                     session_id: d
                                 }
                             },
@@ -128,11 +126,11 @@
                     l.default.dispatch({
                         type: "EMBEDDED_ACTIVITY_LAUNCH_FAIL",
                         guildId: r,
-                        applicationId: u.application_id,
+                        applicationId: u.applicationId,
                         error: new c.default(e)
                     }), O({
                         channelId: t,
-                        applicationId: u.application_id,
+                        applicationId: u.applicationId,
                         showFeedback: !1
                     })
                 }
@@ -153,7 +151,7 @@
                 });
                 let r = E.default.getSelectedParticipantId(n),
                     d = null === (e = T.default.getCurrentUser()) || void 0 === e ? void 0 : e.id,
-                    o = N.default.getEmbeddedActivitiesForChannel(n).find(t => t.application_id === a);
+                    o = N.default.getEmbeddedActivitiesForChannel(n).find(t => t.applicationId === a);
                 null != o && null != d && "" !== d && r === a && u.default.selectParticipant(n, null)
             }
 
@@ -176,7 +174,7 @@
                             },
                             oldFormErrors: !0
                         }),
-                        e = t.body.map(t => A.default.createFromServer(t));
+                        e = t.body.map(t => p.default.createFromServer(t));
                     l.default.dispatch({
                         type: "DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS",
                         items: e
@@ -273,7 +271,7 @@
                         applications: o
                     }), {
                         activityConfigs: d,
-                        applications: o.map(t => A.default.createFromServer(t))
+                        applications: o.map(t => p.default.createFromServer(t))
                     }
                 } catch (t) {
                     return l.default.dispatch({
@@ -295,7 +293,7 @@
                     target_type: g.InviteTargetTypes.EMBEDDED_APPLICATION,
                     target_application_id: a
                 }, i);
-                null != I.default.getChannel(n) && o.default.sendInvite(n, l.code, i, null)
+                null != f.default.getChannel(n) && o.default.sendInvite(n, l.code, i, null)
             }
             async function G(t) {
                 let {
@@ -308,7 +306,7 @@
                     target_application_id: n
                 }, i);
                 r.default.ensurePrivateChannel(a).then(t => {
-                    null != I.default.getChannel(t) && o.default.sendInvite(t, l.code, i, null)
+                    null != f.default.getChannel(t) && o.default.sendInvite(t, l.code, i, null)
                 })
             }
 

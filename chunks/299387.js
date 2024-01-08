@@ -18,8 +18,8 @@
                 _ = n("768815"),
                 h = n("176661"),
                 C = n("922832"),
-                T = n("782340"),
-                I = n("850832");
+                I = n("782340"),
+                T = n("850832");
 
             function S(e) {
                 let {
@@ -59,30 +59,30 @@
                     })
                 }, [N, t]);
                 return (0, a.jsxs)("div", {
-                    className: I.container,
+                    className: T.container,
                     children: [(0, a.jsx)("div", {
-                        className: I.details,
+                        className: T.details,
                         children: (0, a.jsx)(h.default, {
                             otherUser: t,
                             status: C.UserLinkStatus.PENDING
                         })
                     }), (0, a.jsx)("div", {
-                        className: I.actions,
+                        className: T.actions,
                         children: i ? (0, a.jsx)(_.default, {
                             icon: c.default,
-                            className: I.actionDeny,
-                            tooltip: T.default.Messages.FAMILY_CENTER_LINK_ACTION_CANCEL,
+                            className: T.actionDeny,
+                            tooltip: I.default.Messages.FAMILY_CENTER_LINK_ACTION_CANCEL,
                             onClick: p
                         }) : (0, a.jsxs)(a.Fragment, {
                             children: [S ? null : (0, a.jsx)(_.default, {
                                 icon: d.default,
-                                className: I.actionAccept,
-                                tooltip: T.default.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
+                                className: T.actionAccept,
+                                tooltip: I.default.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
                                 onClick: A
                             }), (0, a.jsx)(_.default, {
                                 icon: c.default,
-                                className: I.actionDeny,
-                                tooltip: T.default.Messages.FAMILY_CENTER_LINK_ACTION_DECLINE,
+                                className: T.actionDeny,
+                                tooltip: I.default.Messages.FAMILY_CENTER_LINK_ACTION_DECLINE,
                                 onClick: m
                             })]
                         })

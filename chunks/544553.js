@@ -19,12 +19,12 @@
                 _ = n("447342"),
                 h = n("299138"),
                 C = n("893302"),
-                T = n("490013"),
-                I = n("922832"),
+                I = n("490013"),
+                T = n("922832"),
                 S = n("782340"),
                 N = n("54236"),
                 A = () => {
-                    let e = (0, E.useUserForLinkStatus)(I.UserLinkStatus.ACTIVE),
+                    let e = (0, E.useUserForLinkStatus)(T.UserLinkStatus.ACTIVE),
                         t = (0, c.useSelectedTeenUser)(),
                         n = (0, s.default)([r.default], () => r.default.getCurrentUser()),
                         A = (0, d.useAgeSpecificText)(S.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_TEEN, S.default.Messages.FAMILY_CENTER_FEATURE_CARD_MESSAGES_DESCRIPTION_PARENT),
@@ -48,7 +48,7 @@
                                 header: S.default.Messages.FAMILY_CENTER_FEATURE_CARD_SHARING_HEADER,
                                 description: m
                             }), (0, a.jsx)(C.default, {
-                                icon: g ? i.QrCodeCameraIcon : T.default,
+                                icon: g ? i.QrCodeCameraIcon : I.default,
                                 header: S.default.Messages.FAMILY_CENTER_FEATURE_CARD_PAIRING_HEADER,
                                 description: p
                             })]

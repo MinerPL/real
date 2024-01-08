@@ -27,9 +27,9 @@
                                 section: c.AnalyticsSections.FAMILY_CENTER
                             }
                         })
-                    }, [t]), T = () => {
+                    }, [t]), I = () => {
                         h(!0)
-                    }, I = () => {
+                    }, T = () => {
                         h(!1)
                     };
                     return (0, a.jsx)(u.ListNavigatorItem, {
@@ -47,8 +47,8 @@
                                     [E.last]: i,
                                     [E.active]: _
                                 }),
-                                onMouseEnter: T,
-                                onMouseLeave: I,
+                                onMouseEnter: I,
+                                onMouseLeave: T,
                                 onClick: C,
                                 ...e,
                                 children: n(_)

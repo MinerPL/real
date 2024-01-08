@@ -1386,6 +1386,17 @@
                             updateCode: t.update_code
                         });
                         break;
+                    case "EMBEDDED_ACTIVITY_UPDATE_V2":
+                        G({
+                            type: "EMBEDDED_ACTIVITY_INBOUND_UPDATE_V2",
+                            activitySessionId: t.activity_session_id,
+                            applicationId: t.application_id,
+                            channelId: t.channel_id,
+                            guildId: t.guild_id,
+                            instanceId: t.instance_id,
+                            userIds: t.user_ids
+                        });
+                        break;
                     case "AUTH_SESSION_CHANGE":
                         G({
                             type: "AUTH_SESSION_CHANGE",

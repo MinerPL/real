@@ -18,8 +18,8 @@
                 _ = n("505684"),
                 h = n("93427"),
                 C = n("389495"),
-                T = n("49111"),
-                I = n("719347"),
+                I = n("49111"),
+                T = n("719347"),
                 S = n("782340"),
                 N = n("863452"),
                 A = n("632215");
@@ -30,7 +30,7 @@
                     loaded: n,
                     error: i,
                     message: m
-                } = (0, C.useMessageRequestPreview)(t), p = (0, r.useStateFromStores)([f.default], () => null != m && f.default.isBlocked(m.author.id), [m]), g = (0, r.useStateFromStores)([E.default], () => E.default.can(T.Permissions.MANAGE_MESSAGES, t)), R = c.RenderSpoilers.useSetting(), {
+                } = (0, C.useMessageRequestPreview)(t), p = (0, r.useStateFromStores)([f.default], () => null != m && f.default.isBlocked(m.author.id), [m]), g = (0, r.useStateFromStores)([E.default], () => E.default.can(I.Permissions.MANAGE_MESSAGES, t)), R = c.RenderSpoilers.useSetting(), {
                     content: O
                 } = s.useMemo(() => (null == m ? void 0 : m.content) != null && "" !== m.content ? (0, d.default)(m, {
                     formatInline: !0,
@@ -57,7 +57,7 @@
                             renderedContent: t
                         } = (0, h.renderSingleLineMessage)(m, O, p, l(N.messageContent, A.inlineFormat, A.smallFontSize), {
                             iconClass: N.messageContentIcon,
-                            iconSize: I.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
+                            iconSize: T.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
                         });
                         L = null != t ? (0, a.jsx)(o.Text, {
                             variant: "text-sm/normal",

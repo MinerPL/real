@@ -53,7 +53,7 @@
                         if (null != e) {
                             let t = a.default.getSelfEmbeddedActivityForChannel(e);
                             if (null != t) return Promise.resolve({
-                                instance_id: t.activity_id
+                                instance_id: t.instanceId
                             })
                         }
                         return Promise.resolve(null)

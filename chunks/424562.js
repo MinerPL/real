@@ -1,120 +1,120 @@
             "use strict";
-            let r, i, l, u, o, a, s, c, d;
+            let i, a, l, r, s, u, o, d, c;
             n.r(t), n.d(t, {
                 default: function() {
-                    return A
+                    return C
                 }
             });
-            var f = n("446674"),
-                E = n("913144"),
-                _ = n("49111");
-            let I = _.FormStates.CLOSED,
-                T = {},
-                p = !1;
-
-            function S() {
-                I = _.FormStates.CLOSED, T = {}, s = null, c = void 0, d = []
-            }
+            var E = n("446674"),
+                _ = n("913144"),
+                I = n("49111");
+            let T = I.FormStates.CLOSED,
+                f = {},
+                S = !1;
 
             function N() {
-                C(), h(), T = {}, I = _.FormStates.OPEN
+                T = I.FormStates.CLOSED, f = {}, o = null, d = void 0, c = []
             }
 
-            function C() {
-                r = void 0, o = void 0
+            function p() {
+                h(), A(), f = {}, T = I.FormStates.OPEN
             }
 
             function h() {
-                i = void 0, l = void 0, u = void 0, a = void 0
+                i = void 0, s = void 0
             }
-            class v extends f.default.Store {
+
+            function A() {
+                a = void 0, l = void 0, r = void 0, u = void 0
+            }
+            class m extends E.default.Store {
                 getFormState() {
-                    return I
-                }
-                getErrors() {
                     return T
                 }
+                getErrors() {
+                    return f
+                }
                 showNotice() {
-                    return void 0 !== r || void 0 !== i || void 0 !== l || void 0 !== u || void 0 !== o || void 0 !== a
+                    return void 0 !== i || void 0 !== a || void 0 !== l || void 0 !== r || void 0 !== s || void 0 !== u
                 }
                 getPendingAvatar() {
-                    return r
+                    return i
                 }
                 getPendingBanner() {
-                    return i
+                    return a
                 }
                 getPendingBio() {
                     return l
                 }
                 getPendingNickname() {
-                    return o
+                    return s
                 }
                 getPendingPronouns() {
-                    return u
+                    return r
                 }
                 getPendingAccentColor() {
-                    return o
+                    return s
                 }
                 getPendingThemeColors() {
-                    return a
+                    return u
                 }
                 getAllPending() {
                     return {
-                        pendingAvatar: r,
-                        pendingBanner: i,
+                        pendingAvatar: i,
+                        pendingBanner: a,
                         pendingBio: l,
-                        pendingPronouns: u,
-                        pendingNickname: o,
-                        pendingThemeColors: a
+                        pendingPronouns: r,
+                        pendingNickname: s,
+                        pendingThemeColors: u
                     }
                 }
                 getGuild() {
-                    return s
+                    return o
                 }
                 getSource() {
-                    return c
-                }
-                getAnalyticsLocations() {
                     return d
                 }
+                getAnalyticsLocations() {
+                    return c
+                }
                 getIsDisableSubmit() {
-                    return p
+                    return S
                 }
             }
-            v.displayName = "GuildIdentitySettingsStore";
-            var A = new v(E.default, {
+            m.displayName = "GuildIdentitySettingsStore";
+            var C = new m(_.default, {
                 GUILD_IDENTITY_SETTINGS_INIT: function(e) {
-                    s = e.guild, I = _.FormStates.OPEN, T = {}, c = e.source, d = e.analyticsLocations
+                    o = e.guild, T = I.FormStates.OPEN, f = {}, d = e.source, c = e.analyticsLocations
                 },
-                GUILD_IDENTITY_SETTINGS_CLOSE: S,
+                GUILD_IDENTITY_SETTINGS_CLOSE: N,
                 GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function() {
-                    N(), S()
+                    p(), N()
                 },
                 GUILD_IDENTITY_SETTINGS_SET_GUILD: function(e) {
-                    s = e.guild, T = {}
+                    o = e.guild, f = {}
                 },
                 GUILD_IDENTITY_SETTINGS_SUBMIT: function() {
-                    I = _.FormStates.SUBMITTING, T = {}
+                    T = I.FormStates.SUBMITTING, f = {}
                 },
                 GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: function(e) {
                     var t;
-                    if (I !== _.FormStates.SUBMITTING) return !1;
-                    I = _.FormStates.OPEN, T = null !== (t = e.errors) && void 0 !== t ? t : {}
+                    if (T !== I.FormStates.SUBMITTING) return !1;
+                    T = I.FormStates.OPEN, f = null !== (t = e.errors) && void 0 !== t ? t : {}
                 },
                 USER_PROFILE_UPDATE_FAILURE: function(e) {
-                    I = _.FormStates.OPEN, T = e.errors
+                    T = I.FormStates.OPEN, f = e.errors
                 },
                 GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: function(e) {
                     let {
                         avatar: t
                     } = e;
-                    r = t
+                    i = t
                 },
                 GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER: function(e) {
                     let {
                         banner: t
                     } = e;
-                    i = t
+                    a = t
                 },
                 GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: function(e) {
                     let {
@@ -126,31 +126,31 @@
                     let {
                         pronouns: t
                     } = e;
-                    u = t
+                    r = t
                 },
                 GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: function(e) {
                     let {
                         nickname: t
                     } = e;
-                    o = t
+                    s = t
                 },
                 GUILD_IDENTITY_SETTINGS_SET_PENDING_THEME_COLORS: function(e) {
                     let {
                         themeColors: t
                     } = e;
-                    a = t
+                    u = t
                 },
-                GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: C,
-                GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: h,
-                GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: N,
-                GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: N,
+                GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: h,
+                GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: A,
+                GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: p,
+                GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: p,
                 GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function() {
-                    T = {}
+                    f = {}
                 },
                 GUILD_IDENTITY_SETTINGS_SET_DISABLE_SUBMIT: function(e) {
                     let {
                         disable: t
                     } = e;
-                    p = t
+                    S = t
                 }
             })

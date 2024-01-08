@@ -18,8 +18,8 @@
                 _ = n("843962"),
                 h = n("679653"),
                 C = n("393414"),
-                T = n("659558"),
-                I = n("439141"),
+                I = n("659558"),
+                T = n("439141"),
                 S = n("648911"),
                 N = n("999180"),
                 A = n("289180"),
@@ -60,8 +60,8 @@
                 return s.useEffect(() => {
                     let e = L.default.getCurrentUser();
                     if (l && null != e) {
-                        let t = (0, T.getLastUsedVideoBackgroundOption)(e);
-                        (0, I.applyBackgroundOptionPreview)(t, i, {
+                        let t = (0, I.getLastUsedVideoBackgroundOption)(e);
+                        (0, T.applyBackgroundOptionPreview)(t, i, {
                             track: !1
                         }).catch(b.NOOP)
                     }
@@ -150,7 +150,7 @@
                     y: n,
                     x: i,
                     channel: E
-                } = e, [C, T] = s.useState(!1), I = (0, _.getChannelIconURL)(E), S = (0, h.default)(E), [N, A] = (0, o.useStateFromStoresArray)([O.default], () => [O.default.supports(U.Features.VIDEO), Object.keys(O.default.getVideoDevices()).length]), m = (0, o.useStateFromStores)([v.default], () => v.default.isFocused()), p = (0, o.useStateFromStores)([y.default], () => y.default.getMode(E.id)), g = s.useCallback(e => {
+                } = e, [C, I] = s.useState(!1), T = (0, _.getChannelIconURL)(E), S = (0, h.default)(E), [N, A] = (0, o.useStateFromStoresArray)([O.default], () => [O.default.supports(U.Features.VIDEO), Object.keys(O.default.getVideoDevices()).length]), m = (0, o.useStateFromStores)([v.default], () => v.default.isFocused()), p = (0, o.useStateFromStores)([y.default], () => y.default.getMode(E.id)), g = s.useCallback(e => {
                     null != e.top && null != e.left && c.default.move(e.left, e.top)
                 }, []), R = (0, r.useSpring)({
                     value: C ? 1 : 0,
@@ -170,7 +170,7 @@
                         children: [(0, a.jsx)(P.default, {
                             className: j.icon,
                             ringing: m,
-                            src: null != I ? I : "",
+                            src: null != T ? T : "",
                             ringingType: P.default.RingingType.INCOMING,
                             size: C ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80
                         }), (0, a.jsxs)("div", {
@@ -226,7 +226,7 @@
                                 look: u.Button.Looks.LINK,
                                 color: u.Button.Colors.PRIMARY,
                                 className: j.previewButton,
-                                onClick: () => T(!0),
+                                onClick: () => I(!0),
                                 children: G.default.Messages.INCOMING_CALL_PREVIEW_CAMERA
                             }) : null]
                         })

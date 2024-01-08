@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return I
                 }
             }), n("70102"), n("222007");
             var a = n("308757"),
@@ -44,7 +44,7 @@
                         throw Error("Unexpected app context: ".concat(e))
                 }
             }
-            var T = {
+            var I = {
                 [E.RPCCommands.START_PURCHASE]: {
                     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE, c.RPC_LOCAL_SCOPE],
                     validation: e => (0, r.default)(e).required().keys({
@@ -67,17 +67,17 @@
                             context: d
                         } = h(t.transport !== c.TransportTypes.POST_MESSAGE ? s : null), f = (0, o.default)();
                         if (null == f) throw new l.default(c.RPCErrors.INVALID_CHANNEL, "Invalid channel");
-                        let T = {
+                        let I = {
                                 page: E.AnalyticsPages.IN_APP
                             },
-                            I = async () => {
+                            T = async () => {
                                 try {
                                     let e = await (0, a.openIAPPurchaseModal)({
                                         applicationId: i,
                                         skuId: n,
-                                        openPremiumPaymentModal: () => C(d, T),
+                                        openPremiumPaymentModal: () => C(d, I),
                                         analyticsLocations: _,
-                                        analyticsLocationObject: T,
+                                        analyticsLocationObject: I,
                                         context: d
                                     });
                                     return r(), e
@@ -89,7 +89,7 @@
                                     throw new l.default(c.RPCErrors.PURCHASE_CANCELED, "Purchase was canceled by the user.")
                                 }
                             };
-                        return I()
+                        return T()
                     }
                 },
                 [E.RPCCommands.START_PREMIUM_PURCHASE]: {

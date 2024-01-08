@@ -18,8 +18,8 @@
                 _ = n("913144"),
                 h = n("340626"),
                 C = n("444949"),
-                T = n("139245"),
-                I = n("69927"),
+                I = n("139245"),
+                T = n("69927"),
                 S = n("444497"),
                 N = n("349682"),
                 A = n("393414"),
@@ -60,7 +60,7 @@
                         mostRecentQuery: o
                     } = this.props;
                     if ((0, C.fetchActivityStatistics)(), (0, x.maybeFetchGuildDiscoveryCategories)(), null == O.default.getSearchIndex() && (0, h.createAlgoliaIndex)(), _.default.wait(() => {
-                            (0, T.markView)(F.ViewHistoryKeys.SERVER_DISCOVERY_BADGE)
+                            (0, I.markView)(F.ViewHistoryKeys.SERVER_DISCOVERY_BADGE)
                         }), !a && 0 === o.length && P.trackDiscoveryViewed({
                             loadId: this.loadId,
                             gamesYouPlayGuilds: s.guilds,
@@ -290,7 +290,7 @@
                     });
                     return (0, a.jsxs)("div", {
                         className: H.pageWrapper,
-                        children: [(0, a.jsx)(I.AppPageTitle, {
+                        children: [(0, a.jsx)(T.AppPageTitle, {
                             subsection: d ? i : void 0,
                             location: h
                         }), (0, a.jsx)("div", {

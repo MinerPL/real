@@ -23,17 +23,17 @@
                 var t, n;
                 let {
                     content: C,
-                    renderModalProps: T,
-                    analyticsLocations: I,
+                    renderModalProps: I,
+                    analyticsLocations: T,
                     analyticsLocation: S,
                     isLightTheme: N
                 } = e, A = "AnnouncementModalVariant1", {
                     onClose: m
-                } = T, p = null != C.button && "" !== C.button.copy ? C.button.copy : f.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, g = (null === (t = C.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = C.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+                } = I, p = null != C.button && "" !== C.button.copy ? C.button.copy : f.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, g = (null === (t = C.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = C.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
                     (0, r.transitionTo)(E.Routes.APPLICATION_STORE), m()
                 } : () => (0, l.default)({
                     subscriptionTier: c.PremiumSubscriptionSKUs.TIER_2,
-                    analyticsLocations: I,
+                    analyticsLocations: T,
                     analyticsObject: {
                         ...S,
                         object: E.AnalyticsObjects.BUTTON_CTA,
@@ -58,7 +58,7 @@
                     type: "image",
                     src: N ? C.heroArtImageLinkLightTheme : C.heroArtImageLinkDarkTheme
                 }), {
-                    renderModalProps: T,
+                    renderModalProps: I,
                     header: C.header,
                     subHeader: C.subheader,
                     subHeaderExtra: O,

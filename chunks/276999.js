@@ -4,10 +4,10 @@
                     return m
                 }
             });
-            var i = n("37983"),
-                a = n("884691"),
-                l = n("414456"),
-                o = n.n(l),
+            var a = n("37983"),
+                l = n("884691"),
+                i = n("414456"),
+                o = n.n(i),
                 r = n("458960"),
                 s = n("862337"),
                 d = n("266491"),
@@ -20,7 +20,7 @@
                 [c.ChannelLayouts.NO_CHAT]: p.noChat,
                 [c.ChannelLayouts.FULL_SCREEN]: p.fullScreen
             };
-            class m extends a.PureComponent {
+            class m extends l.PureComponent {
                 componentDidAppear() {
                     this.state.animation.setValue(1)
                 }
@@ -40,7 +40,7 @@
                     }).start(e)
                 }
                 render() {
-                    return (0, i.jsx)(r.default.div, {
+                    return (0, a.jsx)(r.default.div, {
                         className: o(p.videoBackgroundTransition, this.props.className),
                         style: {
                             opacity: this.state.animation
@@ -54,7 +54,7 @@
                     }
                 }
             }
-            class h extends a.PureComponent {
+            class h extends l.PureComponent {
                 componentDidMount() {
                     document.addEventListener("mousedown", this.handleMouseEvent, !0), document.addEventListener("mousemove", this.handleMouseEvent, !0)
                 }
@@ -78,13 +78,13 @@
                         background: e,
                         backgroundKey: t,
                         layout: n
-                    } = this.props, a = "".concat(n, "-").concat(null != t ? t : "");
-                    return (0, i.jsx)(d.default, {
+                    } = this.props, l = "".concat(n, "-").concat(null != t ? t : "");
+                    return (0, a.jsx)(d.default, {
                         className: p.videoBackground,
                         component: "div",
-                        children: (0, i.jsx)(m, {
+                        children: (0, a.jsx)(m, {
                             children: e
-                        }, a)
+                        }, l)
                     })
                 }
                 renderContents() {
@@ -92,34 +92,34 @@
                         top: e,
                         center: t,
                         bottom: n,
-                        layout: a,
-                        focused: l
+                        layout: l,
+                        focused: i
                     } = this.props, {
                         idle: r
                     } = this.state;
-                    return (0, i.jsx)(u.default, {
-                        className: o(p.video, f[a], {
+                    return (0, a.jsx)(u.default, {
+                        className: o(p.video, f[l], {
                             [p.idle]: r
                         }),
                         direction: u.default.Direction.VERTICAL,
                         justify: u.default.Justify.CENTER,
-                        children: (0, i.jsxs)(u.default, {
+                        children: (0, a.jsxs)(u.default, {
                             className: p.videoWrapper,
                             direction: u.default.Direction.VERTICAL,
-                            children: [this.renderBackground(), (0, i.jsxs)(u.default, {
+                            children: [this.renderBackground(), (0, a.jsxs)(u.default, {
                                 className: o(p.videoInner, {
-                                    [p.focused]: l
+                                    [p.focused]: i
                                 }),
                                 direction: u.default.Direction.VERTICAL,
                                 justify: u.default.Justify.BETWEEN,
-                                children: [(0, i.jsx)(u.default, {
+                                children: [(0, a.jsx)(u.default, {
                                     className: p.videoTop,
                                     grow: 0,
                                     children: e
-                                }), (0, i.jsx)(u.default, {
+                                }), (0, a.jsx)(u.default, {
                                     className: p.videoCenter,
                                     children: t
-                                }), (0, i.jsx)(u.default, {
+                                }), (0, a.jsx)(u.default, {
                                     className: p.videoBottom,
                                     grow: 0,
                                     children: n
@@ -134,7 +134,7 @@
                         className: t,
                         animated: n
                     } = this.props;
-                    return (0, i.jsx)("div", {
+                    return (0, a.jsx)("div", {
                         className: o(p.videoHeight, f[e], t, {
                             [p.animated]: n
                         }),

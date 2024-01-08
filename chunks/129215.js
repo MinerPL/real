@@ -18,8 +18,8 @@
                 _ = n("272030"),
                 h = n("190017"),
                 C = n("827825"),
-                T = n("86621"),
-                I = n("737960"),
+                I = n("86621"),
+                T = n("737960"),
                 S = n("299285"),
                 N = n("449918"),
                 A = n("161778"),
@@ -645,7 +645,7 @@
                     }), e
                 }, [])
             }
-            var ea = (0, I.default)(u.default.connectStores([S.default, p.default, g.default, A.default, R.default], () => {
+            var ea = (0, T.default)(u.default.connectStores([S.default, p.default, g.default, A.default, R.default], () => {
                 let e = en(g.default.activeItems, !1, S.default, p.default),
                     t = en(g.default.finishedItems, !0, S.default, p.default);
                 return {
@@ -654,4 +654,4 @@
                     isFocused: R.default.isFocused(),
                     theme: A.default.theme
                 }
-            })((0, T.default)(et)))
+            })((0, I.default)(et)))

@@ -96,7 +96,7 @@
                         activity: t,
                         embeddedActivity: n
                     } = this.props;
-                    return null != e && (null != n ? n.application_id === e.id : null != t && t.application_id === e.id && t.type === em.ActivityTypes.PLAYING && (0, N.default)(t, em.ActivityFlags.JOIN))
+                    return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === em.ActivityTypes.PLAYING && (0, N.default)(t, em.ActivityFlags.JOIN))
                 }
                 renderGoLiveButton() {
                     let e, t, n, a;
@@ -170,7 +170,7 @@
                     } = this.props;
                     return null == e || null == t ? null : (0, l.jsx)(er.default, {
                         tooltipText: eI.default.Messages.EMBEDDED_ACTIVITIES_LEAVE_ACTIVITY,
-                        onClick: this.handleClickLeaveEmbeddedActivityButton(e.application_id, t),
+                        onClick: this.handleClickLeaveEmbeddedActivityButton(e.applicationId, t),
                         icon: el.default,
                         iconForeground: eS.actionIcon
                     })
@@ -306,7 +306,7 @@
                         embeddedActivity: n,
                         channel: a
                     } = this.props;
-                    if (null == n || null == a) return null;
+                    if (null == n || null == a || null == t) return null;
                     let s = {
                         start: n.connectedSince
                     };
@@ -322,7 +322,7 @@
                                 onClick: this.handleApplicationLinkClick,
                                 children: (0, l.jsx)(eu.default, {
                                     className: eS.activityName,
-                                    children: n.name
+                                    children: t.name
                                 })
                             }), (0, l.jsx)(e_, {
                                 timestamps: s
@@ -438,7 +438,7 @@
                             channel: t,
                             embeddedActivity: n
                         } = this.props;
-                        o(null != t, "Channel is null during navigation click"), o(null != n, "Activity null during navigation click"), (0, B.isVoiceChannel)(t.type) && C.default.selectParticipant(t.id, n.application_id), p.default.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : em.ME, t.id), (0, B.isTextChannel)(t.type) && (0, S.updateActivityPanelMode)(eE.ActivityPanelModes.PANEL)
+                        o(null != t, "Channel is null during navigation click"), o(null != n, "Activity null during navigation click"), (0, B.isVoiceChannel)(t.type) && C.default.selectParticipant(t.id, n.applicationId), p.default.channelListScrollTo(null !== (e = t.guild_id) && void 0 !== e ? e : em.ME, t.id), (0, B.isTextChannel)(t.type) && (0, S.updateActivityPanelMode)(eE.ActivityPanelModes.PANEL)
                     }
                 }
             }
@@ -461,7 +461,7 @@
                 }), [A] = (0, T.default)([null !== (t = function() {
                     if (null != h && null != h.id) return h.id;
                     if (null != i && null != i.id) return i.id;
-                    if (null != S) return S.application_id
+                    if (null != S) return S.applicationId
                 }()) && void 0 !== t ? t : ""]), v = (0, u.useStateFromStores)([W.default], () => (0, G.default)(W.default) && (0, eh.isWindows)()), x = (0, u.useStateFromStores)([z.default], () => null != s ? z.default.findActivity(s, e => e.type === em.ActivityTypes.PLAYING) : null), O = null != f && f.ownerId === s && f.state !== em.ApplicationStreamStates.ENDED, y = (0, u.useStateFromStores)([q.default], () => q.default.getBroadcast()), D = (0, L.default)() && null != i;
                 return (0, l.jsx)(eN, {
                     ...a,

@@ -18,8 +18,8 @@
                 _ = n("644091"),
                 h = n("845579"),
                 C = n("52028"),
-                T = n("381546"),
-                I = n("304121"),
+                I = n("381546"),
+                T = n("304121"),
                 S = n("599110"),
                 N = n("158998"),
                 A = n("49111"),
@@ -73,7 +73,7 @@
                                 size: u.Button.Sizes.NONE,
                                 tabIndex: -1,
                                 "aria-hidden": !0,
-                                children: (0, a.jsx)(T.default, {
+                                children: (0, a.jsx)(I.default, {
                                     className: p.clearStatusIcon
                                 })
                             })
@@ -98,7 +98,7 @@
                 return (0, a.jsxs)("div", {
                     className: l(p.statusItem, p.statusItemNoPadding, p.customStatusContentIcon, p.switchAccountsItem),
                     "aria-label": m.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
-                    children: [(0, a.jsx)(I.default, {
+                    children: [(0, a.jsx)(T.default, {
                         width: 18,
                         height: 18,
                         className: p.switchAccountsIcon,

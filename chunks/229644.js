@@ -18,8 +18,8 @@
                 _ = n("450911"),
                 h = n("955153"),
                 C = n("503525"),
-                T = n("812204"),
-                I = n("716241"),
+                I = n("812204"),
+                T = n("716241"),
                 S = n("685665"),
                 N = n("9759"),
                 A = n("754493"),
@@ -72,8 +72,8 @@
                 e_ = n("524110"),
                 eh = n("49111"),
                 eC = n("782340"),
-                eT = n("592265");
-            let eI = e => {
+                eI = n("592265");
+            let eT = e => {
                     let {
                         selected: t,
                         ...n
@@ -88,7 +88,7 @@
                         icon: eo.default,
                         text: eC.default.Messages.FRIENDS,
                         onClick: () => {
-                            I.default.trackWithMetadata(eh.AnalyticEvents.BROADCAST_LIST_VISITED, {
+                            T.default.trackWithMetadata(eh.AnalyticEvents.BROADCAST_LIST_VISITED, {
                                 num_active_broadcasts: l.length,
                                 friends_tab_clicked: !0,
                                 is_broadcasting: u
@@ -99,9 +99,9 @@
                         children: [l.length > 0 && r && (0, a.jsx)(eu.TextBadge, {
                             color: O.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND,
                             text: (0, a.jsxs)("div", {
-                                className: eT.broadcastingBadge,
+                                className: eI.broadcastingBadge,
                                 children: [(0, a.jsx)(ea.default, {
-                                    className: eT.broadcastingIcon
+                                    className: eI.broadcastingIcon
                                 }), (0, a.jsx)(f.Text, {
                                     variant: "text-xs/semibold",
                                     color: "always-white",
@@ -127,8 +127,8 @@
                         ...s,
                         ...i,
                         children: (0, a.jsx)(e_.default, {
-                            className: l(eT.downloadProgressCircle, {
-                                [eT.hideGameUpdateProgressIndicator]: n
+                            className: l(eI.downloadProgressCircle, {
+                                [eI.hideGameUpdateProgressIndicator]: n
                             })
                         })
                     })
@@ -147,15 +147,15 @@
                         _ = (0, b.usePremiumDiscountOffer)(),
                         h = (0, d.useStateFromStores)([Z.default], () => Z.default.isLocalizedPromoEnabled),
                         C = h && null == f,
-                        T = (0, k.useIsEligibleForBogoPromotion)(),
-                        I = (0, B.default)(),
+                        I = (0, k.useIsEligibleForBogoPromotion)(),
+                        T = (0, B.default)(),
                         {
                             enabled: S
                         } = (0, x.default)(),
-                        N = s || null != f || null != _ || T || I || null != u && Date.now() - u.createdAt.getTime() > 2592e6 || (0, ed.hasPremiumSubscriptionToDisplay)(u, c);
-                    return N && (!S || s) ? (T ? n = (0, a.jsx)(G.default, {
+                        N = s || null != f || null != _ || I || T || null != u && Date.now() - u.createdAt.getTime() > 2592e6 || (0, ed.hasPremiumSubscriptionToDisplay)(u, c);
+                    return N && (!S || s) ? (I ? n = (0, a.jsx)(G.default, {
                         isNitroTab: !0
-                    }) : I ? n = (0, a.jsx)(F.default, {}) : null != _ ? n = (0, a.jsx)(w.PremiumDiscountOfferTabBadge, {
+                    }) : T ? n = (0, a.jsx)(F.default, {}) : null != _ ? n = (0, a.jsx)(w.PremiumDiscountOfferTabBadge, {
                         userDiscount: _,
                         isTabSelected: s,
                         includesAmountOff: !1
@@ -164,7 +164,7 @@
                         isTabSelected: s
                     }) : C && (n = (0, a.jsx)(j.LocalizedPricingBadgeIcon, {
                         entryPoint: j.BadgeEntryPoint.PrivateMessages
-                    }), !s && (t = eT.localizedPricingBadge)), (0, a.jsx)(eE.LinkButton, {
+                    }), !s && (t = eI.localizedPricingBadge)), (0, a.jsx)(eE.LinkButton, {
                         selected: s,
                         route: i,
                         icon: el.default,
@@ -187,8 +187,8 @@
                         selected: t,
                         route: n,
                         icon: et.default,
-                        iconClassName: l(eT.activitiesBirthdayIcon, {
-                            [eT.activitiesBirthdayIconLight]: "light" === u
+                        iconClassName: l(eI.activitiesBirthdayIcon, {
+                            [eI.activitiesBirthdayIconLight]: "light" === u
                         }),
                         text: eC.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_TAB_TITLE,
                         locationState: s,
@@ -223,7 +223,7 @@
                     let {
                         selected: t,
                         locationState: n
-                    } = e, s = (0, o.useListItem)("shop"), i = T.default.HOME_PAGE_SHOP_TAB, {
+                    } = e, s = (0, o.useListItem)("shop"), i = I.default.HOME_PAGE_SHOP_TAB, {
                         analyticsLocations: l
                     } = (0, S.default)(i), r = (0, R.default)(), u = (0, a.jsx)(eE.LinkButton, {
                         selected: t,
@@ -263,7 +263,7 @@
                         onMouseLeave: () => {
                             d(!1)
                         },
-                        interactiveClassName: eT.familyCenterLinkButton,
+                        interactiveClassName: eI.familyCenterLinkButton,
                         ...i,
                         children: (0, a.jsx)(eR, {
                             isParentHovered: u
@@ -287,7 +287,7 @@
                         },
                         "aria-label": eC.default.Messages.CLOSE
                     }) : s > 0 ? (0, a.jsx)("div", {
-                        className: eT.familyCenterPendingBadge,
+                        className: eI.familyCenterPendingBadge,
                         children: (0, a.jsx)(eu.NumberBadge, {
                             count: s
                         })
@@ -339,20 +339,20 @@
                     autoTrackExposure: !0
                 });
                 return (0, a.jsxs)("nav", {
-                    className: eT.privateChannels,
+                    className: eI.privateChannels,
                     "aria-label": eC.default.Messages.PRIVATE_CHANNELS_A11Y_LABEL,
                     children: [(0, a.jsx)(Y.default, {
                         tutorialId: "direct-messages",
                         position: "right",
                         offsetX: -52,
                         children: (0, a.jsx)("div", {
-                            className: l(eT.searchBar, {
-                                [eT.themedHeaderMobile]: u.isMobile
+                            className: l(eI.searchBar, {
+                                [eI.themedHeaderMobile]: u.isMobile
                             }),
                             children: (0, a.jsx)("button", {
                                 type: "button",
-                                className: l(eT.searchBarComponent, {
-                                    [eT.themedSearchBarMobile]: u.isMobile
+                                className: l(eI.searchBarComponent, {
+                                    [eI.themedSearchBarMobile]: u.isMobile
                                 }),
                                 onClick: eO,
                                 children: eC.default.Messages.DM_SEARCH_PLACEHOLDER
@@ -363,7 +363,7 @@
                         version: c,
                         selectedChannelId: d,
                         showDMHeader: !0,
-                        children: [(0, a.jsx)(eI, {
+                        children: [(0, a.jsx)(eT, {
                             selected: null != c ? c === eh.Routes.FRIENDS : s === eh.Routes.FRIENDS
                         }, "friends"), n && t ? (0, a.jsx)(eS, {
                             selected: null == c ? null != s && s.startsWith(eh.Routes.APPLICATION_LIBRARY) : c.startsWith(eh.Routes.APPLICATION_LIBRARY),

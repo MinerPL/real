@@ -23,9 +23,9 @@
                     channel: _
                 } = e, h = (0, u.useListHasSingleMessageRequest)(), C = s.useCallback(() => {
                     (0, i.showToast)((0, i.createToast)(E.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, i.ToastType.FAILURE))
-                }, []), T = s.useCallback(() => {
-                    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
                 }, []), I = s.useCallback(() => {
+                    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
+                }, []), T = s.useCallback(() => {
                     r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), h && (0, l.transitionToChannel)(_.id)
                 }, [_.id, h]), {
                     acceptMessageRequest: S,
@@ -37,8 +37,8 @@
                     isOptimisticRejected: R
                 } = (0, d.useMessageRequestActions)({
                     user: n,
-                    onAcceptSuccess: I,
-                    onRejectSuccess: T,
+                    onAcceptSuccess: T,
+                    onRejectSuccess: I,
                     onError: C
                 }), O = A || m || p || g || R;
                 return (0, a.jsxs)("div", {

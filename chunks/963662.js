@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return T
                 }
             });
             var a = n("37983"),
@@ -18,7 +18,7 @@
                 _ = n("782340"),
                 h = n("866241");
             let C = l.debounce(o.default.trackWithMetadata, 500),
-                T = e => {
+                I = e => {
                     let {
                         guild: t,
                         title: n,
@@ -26,8 +26,8 @@
                         image: l,
                         type: c,
                         imageMarginX: E,
-                        imageMarginTop: T,
-                        trackingSource: I,
+                        imageMarginTop: I,
+                        trackingSource: T,
                         undismissable: S,
                         onDismissed: N,
                         onClick: A,
@@ -46,7 +46,7 @@
                         size: r.Button.Sizes.SMALL,
                         onClick: () => {
                             null != c && d.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-                                source: I,
+                                source: T,
                                 guild_id: t.id,
                                 notice_type: c
                             }), null == A || A()
@@ -72,7 +72,7 @@
                         }), (0, a.jsx)("div", {
                             className: h.imageContainer,
                             style: {
-                                marginTop: "".concat(T, "px"),
+                                marginTop: "".concat(I, "px"),
                                 marginLeft: R,
                                 marginRight: R
                             },
@@ -94,13 +94,13 @@
                         })]
                     })
                 };
-            var I = function(e) {
+            var T = function(e) {
                 let {
                     showRedesignedChannelNotice: t
                 } = (0, c.useChannelNoticeRedesignExperiment)(!0);
                 return t ? (0, a.jsx)(E.default, {
                     ...e
-                }) : (0, a.jsx)(T, {
+                }) : (0, a.jsx)(I, {
                     ...e
                 })
             }

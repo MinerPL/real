@@ -16,9 +16,9 @@
                 _ = n("280168"),
                 h = n("773336"),
                 C = n("50885"),
-                T = n("49111");
+                I = n("49111");
             (s = a || (a = {})).DEFAULT = "DEFAULT", s.UNREAD = "UNREAD", s.CONNECTED = "CONNECTED", s.SPEAKING = "SPEAKING", s.MUTED = "MUTED", s.DEAFENED = "DEAFENED";
-            let I = (0, h.isMac)() ? null : "DEFAULT";
+            let T = (0, h.isMac)() ? null : "DEFAULT";
             class S extends i.PureComponent {
                 componentDidMount() {
                     C.default.setSystemTrayIcon(this.getIcon())
@@ -27,7 +27,7 @@
                     C.default.setSystemTrayIcon(this.getIcon())
                 }
                 componentWillUnmount() {
-                    C.default.setSystemTrayIcon(I)
+                    C.default.setSystemTrayIcon(T)
                 }
                 render() {
                     return null
@@ -40,14 +40,14 @@
                             speaking: n,
                             connected: a,
                             unread: s
-                        } = this.props, i = I;
+                        } = this.props, i = T;
                         return (0, h.isMac)() && !a ? i : (0, h.isLinux)() || !a ? (s && (i = "UNREAD"), i) : i = e ? "DEAFENED" : t ? "MUTED" : n ? "SPEAKING" : "CONNECTED"
                     }
                 }
             }
             let N = () => null;
             h.isPlatformEmbedded && (C.default.on("SYSTEM_TRAY_TOGGLE_MUTE", () => r.default.toggleSelfMute()), C.default.on("SYSTEM_TRAY_TOGGLE_DEAFEN", () => r.default.toggleSelfDeaf()), C.default.on("SYSTEM_TRAY_OPEN_VOICE_SETTINGS", () => {
-                o.default.open(T.UserSettingsSections.VOICE)
+                o.default.open(I.UserSettingsSections.VOICE)
             }), N = l.default.connectStores([E.default, d.default, _.default, u.default, f.default, c.default], () => {
                 let e = u.default.getTotalMentionCount(),
                     t = u.default.hasAnyUnread(),

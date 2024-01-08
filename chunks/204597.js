@@ -34,13 +34,13 @@
                         t.scrollToTop({
                             callback: () => requestAnimationFrame(() => e())
                         })
-                    }), []), T = s.useCallback(() => new Promise(e => {
+                    }), []), I = s.useCallback(() => new Promise(e => {
                         let t = h.current;
                         if (null == t) return e();
                         t.scrollToBottom({
                             callback: () => requestAnimationFrame(() => e())
                         })
-                    }), []), I = s.useCallback(e => {
+                    }), []), T = s.useCallback(e => {
                         let t = document.querySelector(e),
                             n = h.current;
                         null != t && null != n && n.scrollIntoViewNode({
@@ -52,8 +52,8 @@
                         id: "people-list",
                         isEnabled: _,
                         scrollToStart: C,
-                        scrollToEnd: T,
-                        setFocus: I
+                        scrollToEnd: I,
+                        setFocus: T
                     });
                     return (0, a.jsx)(i.ListNavigatorProvider, {
                         navigator: S,

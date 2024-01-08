@@ -18,8 +18,8 @@
             let _ = (0, d.createSoundForPack)("poggermode_applause", i.default.getSoundpack()),
                 h = !1,
                 C = !1,
-                T = [],
-                I = null,
+                I = [],
+                T = null,
                 S = () => {
                     !h && (_.loop(), h = !0)
                 },
@@ -34,25 +34,25 @@
                     return null != n && !0
                 },
                 m = () => {
-                    if (0 === T.length || !A() || C) return;
+                    if (0 === I.length || !A() || C) return;
                     C = !0;
-                    let [e, t] = T[T.length - 1];
-                    (0, d.playSound)(e, t), I = setTimeout(p, 1e3)
+                    let [e, t] = I[I.length - 1];
+                    (0, d.playSound)(e, t), T = setTimeout(p, 1e3)
                 },
                 p = () => {
-                    T.pop(), C = !1, m()
+                    I.pop(), C = !1, m()
                 },
                 g = function(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                         n = r.default.isConnected();
-                    T.push([e, t * (n ? .1 : 1)]), m()
+                    I.push([e, t * (n ? .1 : 1)]), m()
                 };
             class R extends s.default {
                 _initialize() {
                     E.default.addChangeListener(this.startAudio), a.default.subscribe("RTC_CONNECTION_STATE", this.setVolume), a.default.subscribe("TYPING_STOP", this.stopAudio), a.default.subscribe("TYPING_STOP_LOCAL", this.stopAudio), a.default.subscribe("CHANNEL_SELECT", this.stopAudio), a.default.subscribe("POGGERMODE_SETTINGS_UPDATE", this.stopAudio)
                 }
                 _terminate() {
-                    E.default.removeChangeListener(this.startAudio), a.default.unsubscribe("RTC_CONNECTION_STATE", this.setVolume), a.default.unsubscribe("TYPING_STOP", this.stopAudio), a.default.unsubscribe("TYPING_STOP_LOCAL", this.stopAudio), a.default.unsubscribe("CHANNEL_SELECT", this.stopAudio), a.default.unsubscribe("POGGERMODE_SETTINGS_UPDATE", this.stopAudio), clearTimeout(I)
+                    E.default.removeChangeListener(this.startAudio), a.default.unsubscribe("RTC_CONNECTION_STATE", this.setVolume), a.default.unsubscribe("TYPING_STOP", this.stopAudio), a.default.unsubscribe("TYPING_STOP_LOCAL", this.stopAudio), a.default.unsubscribe("CHANNEL_SELECT", this.stopAudio), a.default.unsubscribe("POGGERMODE_SETTINGS_UPDATE", this.stopAudio), clearTimeout(T)
                 }
                 setVolume(e) {
                     let {

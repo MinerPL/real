@@ -74,11 +74,10 @@
                     width: C
                 } = e;
                 let g = (a = C) > 400 ? 2 : a > 300 ? 1 : 0;
-                let [_] = (l = C) > 400 ? [o.AvatarSizes.SIZE_56, 56] : l > 300 ? [o.AvatarSizes.SIZE_32, 32] : [o.AvatarSizes.SIZE_24, 24], T = (0, u.useStateFromStoresArray)([x.default, v.default], () => Array.from(i).map(e => v.default.getId() === e ? null : x.default.getUser(e)).filter(A.isNotNullish)), N = (0, u.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.application_id === p.id)), {
+                let [_] = (l = C) > 400 ? [o.AvatarSizes.SIZE_56, 56] : l > 300 ? [o.AvatarSizes.SIZE_32, 32] : [o.AvatarSizes.SIZE_24, 24], T = (0, u.useStateFromStoresArray)([x.default, v.default], () => Array.from(i).map(e => v.default.getId() === e ? null : x.default.getUser(e)).filter(A.isNotNullish)), N = (0, u.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === p.id)), {
                     analyticsLocations: L
                 } = (0, I.default)(), y = (0, d.useAnalyticsContext)(), b = M.default.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), P = (0, h.useEmbeddedActivityJoinability)({
                     userId: null === (t = x.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
-                    activity: N,
                     channelId: E.id,
                     application: p
                 }), D = P === h.EmbeddedActivityJoinability.CAN_JOIN, U = null !== (n = E.getGuildId()) && void 0 !== n ? n : void 0;
@@ -113,7 +112,7 @@
                         children: D ? (0, s.jsx)(o.Button, {
                             onClick: function(e) {
                                 e.stopPropagation(), null != N && (0, f.default)({
-                                    activity: N,
+                                    applicationId: N.applicationId,
                                     currentEmbeddedApplication: m,
                                     activityChannelId: E.id,
                                     locationObject: y.location,
@@ -150,7 +149,7 @@
                     AnalyticsLocationProvider: r
                 } = (0, I.default)(_.default.ACTIVITY_TILE), {
                     id: u
-                } = t, o = (0, p.default)(), d = (null == o ? void 0 : o.channelId) === i.id && o.application_id === u, c = (0, m.default)(), [f] = (0, T.default)([u]), {
+                } = t, o = (0, p.default)(), d = (null == o ? void 0 : o.channelId) === i.id && o.applicationId === u, c = (0, m.default)(), [f] = (0, T.default)([u]), {
                     url: h
                 } = (0, E.default)({
                     applicationId: u,

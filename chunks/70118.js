@@ -107,7 +107,7 @@
                         }, n)
                     }),
                     C = E.map(e => e.id),
-                    T = (0, a.jsx)(i.MenuGroup, {
+                    I = (0, a.jsx)(i.MenuGroup, {
                         label: "".concat(u.default.Messages.ACTIVITY_FEED_OTHER_MEMBER_LIST_HEADER, " - ").concat(E.length),
                         children: d(t.filter(e => {
                             let {
@@ -116,5 +116,5 @@
                             return C.includes(t.id)
                         }), E.filter(e => !o.has(e.id)), E.length, void 0, null == r ? void 0 : r.id)
                     });
-                return [...h, T]
+                return [...h, I]
             }

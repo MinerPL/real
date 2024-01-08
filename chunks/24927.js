@@ -22,11 +22,11 @@
                         channel: _,
                         onClick: h,
                         isFocused: C,
-                        isActive: T,
-                        onOtherHover: I,
+                        isActive: I,
+                        onOtherHover: T,
                         className: S
                     } = e, [N, A] = s.useState(!1), [m, p] = s.useState(!1), g = () => {
-                        A(!0), C && !T && !m && (null == I || I())
+                        A(!0), C && !I && !m && (null == T || T())
                     }, R = () => {
                         A(!1)
                     }, O = (e, t) => {
@@ -53,7 +53,7 @@
                             },
                             children: (0, a.jsx)(r.default.div, {
                                 className: l(E.messageRequestItem, S, {
-                                    [E.active]: T || m,
+                                    [E.active]: I || m,
                                     [E.firstItem]: 0 === t
                                 }),
                                 onContextMenu: e => O(e, f),
@@ -65,7 +65,7 @@
                                     opacity: 1
                                 },
                                 ...e,
-                                children: i(N || T || m)
+                                children: i(N || I || m)
                             })
                         })
                     })

@@ -19,8 +19,8 @@
                 _ = n("235004"),
                 h = n("245463"),
                 C = n("520497"),
-                T = n("812809"),
-                I = n("435895"),
+                I = n("812809"),
+                T = n("435895"),
                 S = n("49111"),
                 N = n("353927");
             class A extends E.default {
@@ -47,10 +47,10 @@
                             let s = {
                                 soundKey: "".concat(a, "-").concat(e),
                                 soundURL: (0, C.default)(e),
-                                soundVolume: (0, T.default)(n),
+                                soundVolume: (0, I.default)(n),
                                 reportSoundStartedPlaying: () => (0, f.reportSoundStartedPlaying)(e, a)
                             };
-                            u.default.supports(N.Features.SAMPLE_PLAYBACK) ? await (0, I.playDesktopSound)(s) : await (0, I.playWebSound)(s, t.playingSoundsWeb)
+                            u.default.supports(N.Features.SAMPLE_PLAYBACK) ? await (0, T.playDesktopSound)(s) : await (0, T.playWebSound)(s, t.playingSoundsWeb)
                         } finally {
                             (0, f.reportSoundFinishedPlaying)(e, a)
                         }

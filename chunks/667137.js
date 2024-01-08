@@ -4,8 +4,8 @@
                     return N
                 }
             }), n("222007"), n("860677");
-            var a = n("37983"),
-                s = n("884691"),
+            var s = n("37983"),
+                a = n("884691"),
                 l = n("414456"),
                 i = n.n(l),
                 r = n("907002"),
@@ -21,15 +21,15 @@
                 E = n("880731"),
                 g = n("943551"),
                 S = n("119035"),
-                A = n("65626"),
-                _ = n("782340"),
+                _ = n("65626"),
+                A = n("782340"),
                 T = n("930752");
-            let M = s.memo(function(e) {
+            let M = a.memo(function(e) {
                     let {
                         channelId: t,
                         width: n
-                    } = e, l = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), i = (0, o.useStateFromStores)([g.default], () => g.default.getMostRecentMessageCombo(t), [t]), [d, f] = s.useState(!1);
-                    s.useEffect(() => {
+                    } = e, l = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), i = (0, o.useStateFromStores)([g.default], () => g.default.getMostRecentMessageCombo(t), [t]), [d, f] = a.useState(!1);
+                    a.useEffect(() => {
                         if (null == i ? void 0 : i.displayed) return;
                         f(!1), setImmediate(() => {
                             let e = null != i ? (0, S.getComboScore)(i.combo) : 0;
@@ -47,11 +47,11 @@
                         width: n,
                         config: l ? r.config.stiff : r.config.slow
                     });
-                    return (0, a.jsx)(a.Fragment, {
-                        children: null != i && (0, a.jsx)(r.animated.div, {
+                    return (0, s.jsx)(s.Fragment, {
+                        children: null != i && (0, s.jsx)(r.animated.div, {
                             className: T.messageComboScore,
                             style: h,
-                            children: (0, a.jsx)(u.Text, {
+                            children: (0, s.jsx)(u.Text, {
                                 className: T.comboScore,
                                 variant: "text-sm/bold",
                                 children: (0, S.getComboScore)(i.combo)
@@ -59,7 +59,7 @@
                         })
                     })
                 }),
-                I = s.memo(function(e) {
+                I = a.memo(function(e) {
                     let {
                         value: t,
                         multiplier: n
@@ -67,103 +67,103 @@
                         color: l,
                         square: r,
                         flair: o
-                    } = s.useMemo(() => (0, S.getComboStyles)(n), [n]), d = (0, f.getColor)(l);
-                    return (0, a.jsxs)(a.Fragment, {
-                        children: [(0, a.jsx)(u.Text, {
+                    } = a.useMemo(() => (0, S.getComboStyles)(n), [n]), d = (0, f.getColor)(l);
+                    return (0, s.jsxs)(s.Fragment, {
+                        children: [(0, s.jsx)(u.Text, {
                             className: T.comboValue,
                             variant: "text-sm/bold",
                             children: t
-                        }), (0, a.jsxs)("div", {
+                        }), (0, s.jsxs)("div", {
                             className: T.comboNameplate,
                             style: {
                                 color: d
                             },
-                            children: [(0, a.jsx)(u.Text, {
+                            children: [(0, s.jsx)(u.Text, {
                                 className: T.comboMultiplier,
                                 style: {
                                     color: d
                                 },
                                 variant: "text-sm/bold",
-                                children: _.default.Messages.POGGERMODE_COMBO.format({
+                                children: A.default.Messages.POGGERMODE_COMBO.format({
                                     multiplier: n
                                 })
-                            }), r && (0, a.jsxs)(a.Fragment, {
-                                children: [(0, a.jsx)("div", {
+                            }), r && (0, s.jsxs)(s.Fragment, {
+                                children: [(0, s.jsx)("div", {
                                     className: i(T.comboSquare, T.left),
                                     style: {
                                         backgroundColor: d
                                     }
-                                }), (0, a.jsx)("div", {
+                                }), (0, s.jsx)("div", {
                                     className: i(T.comboSquare, T.right),
                                     style: {
                                         backgroundColor: d
                                     }
                                 })]
-                            }), o && (0, a.jsxs)(a.Fragment, {
-                                children: [(0, a.jsx)("div", {
+                            }), o && (0, s.jsxs)(s.Fragment, {
+                                children: [(0, s.jsx)("div", {
                                     className: i(T.confettiIcon, T.left),
-                                    children: (0, a.jsx)(p.default, {
+                                    children: (0, s.jsx)(p.default, {
                                         width: 24,
                                         height: 24
                                     })
-                                }), (0, a.jsx)("div", {
+                                }), (0, s.jsx)("div", {
                                     className: i(T.confettiIcon, T.right),
-                                    children: (0, a.jsx)(p.default, {
+                                    children: (0, s.jsx)(p.default, {
                                         width: 24,
                                         height: 24
                                     })
                                 })]
-                            }), 1 === n && (0, a.jsx)(u.Text, {
+                            }), 1 === n && (0, s.jsx)(u.Text, {
                                 className: T.tip,
                                 variant: "text-sm/bold",
-                                children: _.default.Messages.POGGERMODE_COMBO_TIP
+                                children: A.default.Messages.POGGERMODE_COMBO_TIP
                             })]
                         })]
                     })
                 });
-            var N = s.memo(function(e) {
+            var N = a.memo(function(e) {
                 let {
                     channelId: t
                 } = e, n = (0, o.useStateFromStores)([h.default], () => h.default.getId()), l = (0, o.useStateFromStores)([C.default], () => C.default.isTyping(t, n), [t, n]), i = (0, o.useStateFromStores)([E.default], () => E.default.isEnabled()), u = (0, o.useStateFromStores)([g.default], () => g.default.isComboing(n, t), [t, n]), {
                     ref: f,
                     width: p = 0
-                } = (0, d.default)(), m = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [S, _] = s.useState(!1), N = (0, A.default)(t), v = i && u && l;
-                s.useEffect(() => {
-                    v && _(!0);
-                    let e = setTimeout(() => _(v), 1e3);
+                } = (0, d.default)(), m = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [S, A] = a.useState(!1), N = (0, _.default)(t), L = i && u && l;
+                a.useEffect(() => {
+                    L && A(!0);
+                    let e = setTimeout(() => A(L), 1e3);
                     return () => clearTimeout(e)
-                }, [v]);
-                let L = (0, r.useSpring)({
+                }, [L]);
+                let v = (0, r.useSpring)({
                         opacity: S ? 1 : 0,
                         transform: S ? "translateY(0)" : "translateY(100%)",
                         pointerEvents: "none",
                         config: r.config.stiff,
                         immediate: m
                     }),
-                    x = s.useMemo(() => null != N ? N : {
+                    x = a.useMemo(() => null != N ? N : {
                         value: 0,
                         multiplier: 1
                     }, [N]),
-                    R = s.useRef(x);
-                s.useEffect(() => {
+                    R = a.useRef(x);
+                a.useEffect(() => {
                     (x.multiplier > 1 || x.value > 0) && (R.current = x)
                 }, [x]);
                 let {
                     multiplier: y,
                     value: D
-                } = s.useMemo(() => ({
-                    value: v ? x.value : R.current.value,
-                    multiplier: v ? x.multiplier : R.current.multiplier
-                }), [v, x, R]);
-                return (0, a.jsxs)(a.Fragment, {
-                    children: [(0, a.jsx)(M, {
+                } = a.useMemo(() => ({
+                    value: L ? x.value : R.current.value,
+                    multiplier: L ? x.multiplier : R.current.multiplier
+                }), [L, x, R]);
+                return (0, s.jsxs)(s.Fragment, {
+                    children: [(0, s.jsx)(M, {
                         channelId: t,
                         width: p
-                    }), (0, a.jsx)(r.animated.div, {
+                    }), (0, s.jsx)(r.animated.div, {
                         ref: f,
                         className: T.combo,
-                        style: L,
-                        children: (0, a.jsx)(I, {
+                        style: v,
+                        children: (0, s.jsx)(I, {
                             value: D,
                             multiplier: y
                         })

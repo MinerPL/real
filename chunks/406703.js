@@ -19,16 +19,16 @@
 
             function p(e, t) {
                 let p = s.default.getId(),
-                    S = t === f.AppContext.POPOUT,
-                    _ = (0, n.useStateFromStores)([c.default, o.default], () => c.default.getVoiceChannelId() === o.default.getDMFromUserId(e.id)),
-                    T = (0, n.useStateFromStores)([r.default], () => r.default.isBlocked(e.id));
-                if (p === e.id || S || _ || e.bot) return null;
+                    T = t === f.AppContext.POPOUT,
+                    A = (0, n.useStateFromStores)([c.default, o.default], () => c.default.getVoiceChannelId() === o.default.getDMFromUserId(e.id)),
+                    S = (0, n.useStateFromStores)([r.default], () => r.default.isBlocked(e.id));
+                if (p === e.id || T || A || e.bot) return null;
                 let v = () => d.default.openPrivateChannel(e.id, !0),
-                    A = !u.default.disableCallUserConfirmationPrompt;
+                    _ = !u.default.disableCallUserConfirmationPrompt;
                 return (0, i.jsx)(l.MenuItem, {
                     id: "call",
                     label: I.default.Messages.CALL,
-                    action: A ? () => {
+                    action: _ ? () => {
                         (0, l.openModalLazy)(async () => {
                             let {
                                 default: e
@@ -39,6 +39,6 @@
                             })
                         })
                     } : v,
-                    disabled: T
+                    disabled: S
                 })
             }

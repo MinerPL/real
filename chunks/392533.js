@@ -27,8 +27,8 @@
                     shiftId: n,
                     onSelect: h,
                     closePopout: C,
-                    "aria-label": T
-                } = e, I = (0, r.default)({
+                    "aria-label": I
+                } = e, T = (0, r.default)({
                     id: t.id,
                     label: _.default.Messages.COPY_ID_GUILD,
                     shiftId: n,
@@ -45,7 +45,7 @@
                 return (0, a.jsxs)(i.Menu, {
                     onSelect: h,
                     navId: "guild-discovery-context-menu",
-                    "aria-label": null != T ? T : _.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+                    "aria-label": null != I ? I : _.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
                     onClose: l.closeContextMenu,
                     children: [(0, a.jsx)(i.MenuGroup, {
                         children: !N && A ? (0, a.jsx)(i.MenuItem, {
@@ -58,7 +58,7 @@
                             color: "danger"
                         }) : null
                     }), (0, a.jsx)(i.MenuGroup, {
-                        children: I
+                        children: T
                     })]
                 })
             }

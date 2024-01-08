@@ -765,7 +765,7 @@
                     let a = o.default.getEmbeddedActivitiesForChannel(e.id),
                         r = (null != a ? a : []).map(e => {
                             var t;
-                            return null === (t = u.default.getApplication(e.application_id)) || void 0 === t ? void 0 : t.name
+                            return null === (t = u.default.getApplication(e.applicationId)) || void 0 === t ? void 0 : t.name
                         }).filter(F.isNotNullish);
                     return r.length > 0 ? {
                         type: "embedded-activities",

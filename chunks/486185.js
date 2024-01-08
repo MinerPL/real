@@ -18,8 +18,8 @@
                 _ = n("754576"),
                 h = n("78581"),
                 C = n("429829"),
-                T = n("191191"),
-                I = n("994428"),
+                I = n("191191"),
+                T = n("994428"),
                 S = n("782340");
 
             function N(e) {
@@ -57,7 +57,7 @@
                         let {
                             closePopout: n
                         } = e;
-                        return (0, a.jsx)(T.default, {
+                        return (0, a.jsx)(I.default, {
                             guildId: P,
                             channel: t,
                             onClose: n,
@@ -78,7 +78,7 @@
                             disabled: L,
                             onClick: () => {
                                 var t, n;
-                                null == n || n(), null != y && y !== l.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && x(I.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), M(!v)
+                                null == n || n(), null != y && y !== l.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && x(T.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), M(!v)
                             },
                             onContextMenu: U,
                             fullWidth: !0,

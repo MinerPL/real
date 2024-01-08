@@ -16,8 +16,8 @@
                 c = n("599110"),
                 f = n("701909"),
                 E = n("158998"),
-                _ = n("49111"),
-                h = n("782340");
+                h = n("49111"),
+                _ = n("782340");
             let S = new Set(["ko", "ja"]);
 
             function T() {
@@ -30,12 +30,12 @@
                     tabIndex: -1,
                     children: (0, l.jsx)(d.Icon, {
                         color: n ? s.default.unsafe_rawColors.GREEN_360.css : "currentColor",
-                        onClick: () => c.default.track(_.AnalyticEvents.HELP_CLICKED, {
+                        onClick: () => c.default.track(h.AnalyticEvents.HELP_CLICKED, {
                             highlighted: n
                         }),
                         icon: u.default,
                         tooltipPosition: S.has(t) ? "left" : void 0,
-                        tooltip: h.default.Messages.HELP
+                        tooltip: _.default.Messages.HELP
                     })
                 })
             }

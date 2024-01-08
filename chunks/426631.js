@@ -11,5 +11,5 @@
                 let {
                     channelId: t
                 } = e;
-                return (0, a.useStateFromStores)([l.default], () => l.default.getEmbeddedActivitiesForChannel(t).some(e => e.connections.size > 0))
+                return (0, a.useStateFromStores)([l.default], () => l.default.getEmbeddedActivitiesForChannel(t).some(e => e.userIds.size > 0))
             }

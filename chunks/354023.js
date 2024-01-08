@@ -310,7 +310,7 @@
                 if (n === I.InviteTargetTypes.EMBEDDED_APPLICATION) {
                     if (null != t) {
                         for (let e of i.default.getEmbeddedActivitiesForChannel(t.id))
-                            if (e.application_id === l) return new Set(e.connections.keys())
+                            if (e.applicationId === l) return new Set(e.userIds)
                     }
                 }
                 return new Set

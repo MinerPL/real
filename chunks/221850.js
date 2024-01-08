@@ -19,8 +19,8 @@
                 _ = n("587984"),
                 h = n("292687"),
                 C = n("42203"),
-                T = n("52028"),
-                I = n("101125"),
+                I = n("52028"),
+                T = n("101125"),
                 S = n("471671"),
                 N = n("568734"),
                 A = n("449008"),
@@ -36,9 +36,9 @@
                 D = n("49111");
             async function y(e, t, n, a) {
                 let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-                    i = T.default.getApplicationActivity(t);
+                    i = I.default.getApplicationActivity(t);
                 if (null == i || null == i.secrets || !(0, R.validateActivityInvite)(a, i.party, i.secrets)) throw new g.default(P.RPCErrors.NO_ELIGIBLE_ACTIVITY, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
-                let o = (0, f.default)(i, I.default);
+                let o = (0, f.default)(i, T.default);
                 if (o) {
                     let {
                         lock: t

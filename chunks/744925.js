@@ -59,21 +59,14 @@
                 let x = null !== (t = null == E ? void 0 : E.filter(m.isNotNullish)) && void 0 !== t ? t : [],
                     R = e => t => [N.ActivityTypes.PLAYING, N.ActivityTypes.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId) || t.type === N.ActivityTypes.LISTENING,
                     M = (0, s.useStateFromStores)([C.default], () => {
-                        let e = new Map(L);
+                        let e = new Map;
                         return x.forEach(t => {
                             let n = C.default.findActivity(t.user.id, R(t));
                             if (null != n && (0, d.default)(n)) {
-                                let t = null != n.application_id ? e.get(n.application_id) : null;
+                                let t = null != n.application_id ? L.get(n.application_id) : null;
                                 null != t && null != n.application_id && e.set(n.application_id, {
                                     ...t,
-                                    embeddedActivity: {
-                                        ...n,
-                                        application_id: t.embeddedActivity.application_id,
-                                        connections: t.embeddedActivity.connections,
-                                        url: t.embeddedActivity.url,
-                                        guildId: t.embeddedActivity.guildId,
-                                        channelId: t.embeddedActivity.channelId
-                                    }
+                                    presenceActivity: n
                                 })
                             }
                         }), e
@@ -95,7 +88,7 @@
                     }, [x], s.statesWillNeverBeEqual),
                     y = Array.from(M.values()).map(e => ({
                         members: x,
-                        activity: e.embeddedActivity
+                        activity: e.presenceActivity
                     })),
                     D = [...y, ...O];
                 return 0 === D.length ? null : (0, l.jsxs)(i.Scroller, {

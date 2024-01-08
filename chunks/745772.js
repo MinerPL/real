@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return I
                 }
             });
             var a = n("37983"),
@@ -19,20 +19,20 @@
                 h = n("782340"),
                 C = n("578484");
 
-            function T(e) {
+            function I(e) {
                 let {
                     active: t,
                     user: n,
-                    channel: T
-                } = e, I = (0, c.useListHasSingleSpamMessageRequest)(), S = s.useCallback(() => {
+                    channel: I
+                } = e, T = (0, c.useListHasSingleSpamMessageRequest)(), S = s.useCallback(() => {
                     (0, l.showToast)((0, l.createToast)(h.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, l.ToastType.FAILURE)), r.default.increment({
                         name: i.MetricEvents.SPAM_MESSAGE_REQUEST_ERROR_VIEW
                     })
                 }, []), N = s.useCallback(() => {
                     u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
                 }, []), A = s.useCallback(() => {
-                    u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID), I && (0, o.transitionToChannel)(T.id)
-                }, [T.id, I]), {
+                    u.default.closeChannelSidebar(d.MESSAGE_REQUESTS_BASE_CHANNEL_ID), T && (0, o.transitionToChannel)(I.id)
+                }, [I.id, T]), {
                     acceptMessageRequest: m,
                     isAcceptLoading: p,
                     isUserProfileLoading: g,
@@ -47,7 +47,7 @@
                     className: C.container,
                     children: [(0, a.jsx)(f.default, {
                         otherUser: n,
-                        channel: T,
+                        channel: I,
                         active: t
                     }), (0, a.jsxs)("div", {
                         className: C.actions,
@@ -56,14 +56,14 @@
                             color: l.ButtonColors.PRIMARY,
                             size: l.Button.Sizes.SMALL,
                             onClick: e => {
-                                m(T.id), e.stopPropagation()
+                                m(I.id), e.stopPropagation()
                             },
                             disabled: L,
                             submitting: O,
                             children: h.default.Messages.MESSAGE_REQUESTS_SPAM_ACCEPT
                         }), (0, a.jsx)(_.default, {
                             className: C.button,
-                            channel: T,
+                            channel: I,
                             buttonSize: l.Button.Sizes.SMALL
                         })]
                     })]

@@ -2,10 +2,10 @@
             let a;
             n.r(e), n.d(e, {
                 cleanExecutablePath: function() {
-                    return p
+                    return I
                 },
                 default: function() {
-                    return A
+                    return p
                 }
             }), n("781738"), n("424973");
             var i = n("917351"),
@@ -24,14 +24,14 @@
                 null != t && "" !== t && (!(t = s(t)).endsWith("/") && (t += "/"), c.push(t))
             }
 
-            function p(t) {
+            function I(t) {
                 t = s(t);
                 let e = !1;
                 return (c.forEach(n => {
                     !e && t.startsWith(n) && (t = t.substr(n.length), e = !0)
                 }), e) ? t = t.includes("dosbox.exe") ? t.split("/").slice(-3).join("/") : t.split("/").slice(-2).join("/") : null
             }
-            async function A() {
+            async function p() {
                 if (null != a) return a;
                 try {
                     await o.default.ensureModule("discord_game_utils"), a = await o.default.requireModule("discord_game_utils")

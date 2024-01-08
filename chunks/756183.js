@@ -18,8 +18,8 @@
                 _ = n("27618"),
                 h = n("545429"),
                 C = n("471671"),
-                T = n("810567"),
-                I = n("791878"),
+                I = n("810567"),
+                T = n("791878"),
                 S = n("637824"),
                 N = n("146378"),
                 A = n("709410"),
@@ -38,7 +38,7 @@
                     } = e, {
                         rows: i,
                         section: P
-                    } = (0, r.useStateFromStoresObject)([h.default], () => h.default.getState()), D = (0, r.useStateFromStores)([C.default], () => C.default.isFocused()), y = (0, r.useStateFromStores)([_.default], () => _.default.getRelationshipCount()), x = (0, I.useIsClearIncomingFriendRequestsEnabled)(), [b, U] = s.useState(() => {
+                    } = (0, r.useStateFromStoresObject)([h.default], () => h.default.getState()), D = (0, r.useStateFromStores)([C.default], () => C.default.isFocused()), y = (0, r.useStateFromStores)([_.default], () => _.default.getRelationshipCount()), x = (0, T.useIsClearIncomingFriendRequestsEnabled)(), [b, U] = s.useState(() => {
                         let e = {};
                         for (let t of Object.values(L.FriendsSections)) e[t] = "";
                         return e
@@ -68,12 +68,12 @@
                         H = B && x && F >= O.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
                     return (0, a.jsxs)(c.default, {
                         section: L.AnalyticsSections.FRIENDS_LIST,
-                        children: [(0, a.jsx)(T.default, {
+                        children: [(0, a.jsx)(I.default, {
                             className: l(M.searchBar, w ? M.searchEmptyState : null),
                             query: b[t],
                             onChange: G,
                             onClear: j,
-                            size: T.default.Sizes.MEDIUM
+                            size: I.default.Sizes.MEDIUM
                         }), t === L.FriendsSections.ONLINE && "" === b[t] && (0, a.jsx)(f.default, {}), (0, a.jsxs)("div", {
                             className: M.sectionTitle,
                             children: [(0, a.jsx)(g.default, {

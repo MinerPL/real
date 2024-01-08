@@ -61,21 +61,23 @@
                 }(), b = (0, E.default)({
                     applicationId: l.id,
                     size: 1024
-                }), G = (0, m.default)(), B = (0, o.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(O).find(e => e.activity_id === x.id)), k = (0, o.useStateFromStoresArray)([C.default], () => (null == B ? void 0 : B.connections) == null ? [] : Array.from(B.connections.values()).map(e => C.default.getUser(e.user_id)).filter(A.isNotNullish)), w = (0, o.useStateFromStores)([g.default], () => {
-                    var e, t;
-                    let n = null == B ? void 0 : null === (e = B.connections) || void 0 === e ? void 0 : e.values().next().value;
-                    return null == n ? null : null === (t = g.default.findActivity(n.user_id, e => e.application_id === l.id)) || void 0 === t ? void 0 : t.details
+                }), G = (0, m.default)(), B = (0, o.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(O).find(e => e.instanceId === x.id)), k = (0, o.useStateFromStoresArray)([C.default], () => {
+                    var e;
+                    return Array.from(null !== (e = null == B ? void 0 : B.userIds) && void 0 !== e ? e : []).map(e => C.default.getUser(e)).filter(A.isNotNullish)
+                }), w = (0, o.useStateFromStores)([g.default], () => {
+                    var e;
+                    let t = null == B ? void 0 : B.userIds.values().next().value;
+                    return null == t ? null : null === (e = g.default.findActivity(t.user_id, e => e.application_id === l.id)) || void 0 === e ? void 0 : e.details
                 }), H = s.useMemo(() => {
                     let e = new I.default(l);
                     return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = N.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
                 }, [l]), F = function(e, t, n) {
                     let a = (0, o.useStateFromStores)([d.default], () => {
                             var n;
-                            return (null === (n = d.default.getSelfEmbeddedActivityForChannel(t)) || void 0 === n ? void 0 : n.application_id) === e.id
+                            return (null === (n = d.default.getSelfEmbeddedActivityForChannel(t)) || void 0 === n ? void 0 : n.applicationId) === e.id
                         }),
                         s = (0, f.useEmbeddedActivityJoinability)({
                             userId: T.default.getId(),
-                            activity: n,
                             channelId: t,
                             application: e
                         });
@@ -125,7 +127,7 @@
                         y(!0);
                         try {
                             await (0, c.default)({
-                                activity: B,
+                                applicationId: B.applicationId,
                                 currentEmbeddedApplication: G,
                                 activityChannelId: O,
                                 locationObject: D.location,

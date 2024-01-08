@@ -1,20 +1,20 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return i
                 }
             });
-            var i = n("884691"),
-                a = n("550766");
+            var a = n("884691"),
+                l = n("550766");
 
-            function l(e) {
+            function i(e) {
                 let {
                     channel: t,
                     userActivity: n,
-                    inActivity: l,
+                    inActivity: i,
                     embeddedActivitiesManager: o
                 } = e;
-                i.useEffect(() => {
-                    !l && (0, a.launchEmbeddedActivity)(t.id)
-                }, [null == n ? void 0 : n.application_id, t.id, l, o])
+                a.useEffect(() => {
+                    !i && (0, l.launchEmbeddedActivity)(t.id)
+                }, [null == n ? void 0 : n.applicationId, t.id, i, o])
             }

@@ -6,11 +6,11 @@
             });
             var i = n("37983");
             n("884691");
-            var l = n("77078"),
-                a = n("850572"),
+            var a = n("77078"),
+                l = n("850572"),
                 r = () => (0, i.jsx)("div", {
-                    className: a.loadingWrapper,
-                    children: (0, i.jsx)(l.Dots, {
+                    className: l.loadingWrapper,
+                    children: (0, i.jsx)(a.Dots, {
                         dotRadius: 4,
                         themed: !0
                     })

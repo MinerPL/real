@@ -9,6 +9,6 @@
 
             function a() {
                 let e = (0, l.default)(),
-                    [t] = (0, n.default)(null == e ? [] : [e.application_id]);
+                    [t] = (0, n.default)(null == e ? [] : [e.applicationId]);
                 return null != t ? t : void 0
             }

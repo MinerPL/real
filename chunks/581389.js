@@ -376,7 +376,7 @@
                     return (null !== (e = null == _ ? void 0 : _.channelId) && void 0 !== e ? e : en.default.getVoiceChannelId()) === t.id
                 }), A = (0, j.default)(t, !0), M = (0, f.useStateFromStores)([g.default], () => {
                     let e = g.default.getSelfEmbeddedActivityForChannel(t.id);
-                    return null != e ? e.application_id : null
+                    return null != e ? e.applicationId : null
                 }), {
                     reachedLimit: R,
                     limit: D

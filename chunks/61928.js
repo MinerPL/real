@@ -21,8 +21,8 @@
                 _ = n("485328"),
                 h = n("428958"),
                 C = n("878720"),
-                T = n("161778"),
-                I = n("330387"),
+                I = n("161778"),
+                T = n("330387"),
                 S = n("642400"),
                 N = n("668596"),
                 A = n("892313"),
@@ -37,9 +37,9 @@
                 let {
                     action: e,
                     theme: t
-                } = (0, l.useStateFromStoresObject)([I.default, T.default], () => ({
-                    action: I.default.getAction(),
-                    theme: T.default.theme
+                } = (0, l.useStateFromStoresObject)([T.default, I.default], () => ({
+                    action: T.default.getAction(),
+                    theme: I.default.theme
                 })), n = A.default.getVerificationTypes(e), [v, M] = s.useState(0), P = (0, f.default)(n);
                 (0, h.default)({
                     type: i.ImpressionTypes.MODAL,

@@ -12,7 +12,7 @@
                 subscribeToActivityInstanceConnectedParticipants: function() {
                     return h
                 }
-            }), n("222007");
+            });
             var a = n("917351"),
                 s = n.n(a),
                 i = n("913144"),
@@ -31,15 +31,13 @@
                 let {
                     guildId: t,
                     channelId: n
-                } = e, a = Array.from(e.connections.values(), e => {
-                    let {
-                        user_id: a
-                    } = e, s = r.default.getUser(a);
-                    if (null == s) return;
-                    let i = (0, u.getNickname)(t, n, s);
+                } = e, a = Array.from(e.userIds, e => {
+                    let a = r.default.getUser(e);
+                    if (null == a) return;
+                    let s = (0, u.getNickname)(t, n, a);
                     return {
-                        ...(0, d.default)(s),
-                        nickname: null != i ? i : void 0
+                        ...(0, d.default)(a),
+                        nickname: null != s ? s : void 0
                     }
                 }).filter(o.isNotNullish);
                 return {

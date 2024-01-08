@@ -18,8 +18,8 @@
                 _ = n("696675"),
                 h = n("780624"),
                 C = n("696526"),
-                T = n("197801"),
-                I = n("582601"),
+                I = n("197801"),
+                T = n("582601"),
                 S = n("77078"),
                 N = n("850068"),
                 A = n("272030"),
@@ -72,8 +72,8 @@
                 e_ = n("778588"),
                 eh = n("42887"),
                 eC = n("945956"),
-                eT = n("101125"),
-                eI = n("102985"),
+                eI = n("101125"),
+                eT = n("102985"),
                 eS = n("697218"),
                 eN = n("521012"),
                 eA = n("145131"),
@@ -618,9 +618,9 @@
                     {
                         streaming: u,
                         status: d
-                    } = (0, r.useStateFromStoresObject)([eT.default], () => ({
-                        streaming: null != eT.default.findActivity(e => e.type === eB.ActivityTypes.STREAMING),
-                        status: eT.default.getStatus()
+                    } = (0, r.useStateFromStoresObject)([eI.default], () => ({
+                        streaming: null != eI.default.findActivity(e => e.type === eB.ActivityTypes.STREAMING),
+                        status: eI.default.getStatus()
                     })),
                     c = (0, v.default)({
                         userId: n
@@ -628,7 +628,7 @@
                     E = ew.default.useUserTag(e, {
                         decoration: "never"
                     }),
-                    f = (0, r.useStateFromStores)([eI.default], () => eI.default.hidePersonalInformation),
+                    f = (0, r.useStateFromStores)([eT.default], () => eT.default.hidePersonalInformation),
                     _ = (0, r.useStateFromStores)([eC.default, ef.default], () => {
                         let e = eC.default.getChannelId();
                         return null != e ? ef.default.getChannel(e) : null
@@ -636,10 +636,10 @@
                     {
                         mute: h,
                         selfMute: C,
-                        suppress: T
+                        suppress: I
                     } = (0, ec.default)(_),
                     {
-                        selfDeaf: I,
+                        selfDeaf: T,
                         deaf: A
                     } = (0, ed.default)(_),
                     m = (0, r.useStateFromStores)([P.default], () => {
@@ -729,7 +729,7 @@
                     hidePrivateData: f,
                     occluded: x,
                     premiumSubscription: p,
-                    selfDeaf: I,
+                    selfDeaf: T,
                     selfMute: C,
                     serverDeaf: A,
                     serverMute: h,
@@ -740,7 +740,7 @@
                     speakingWhileMuted: g,
                     status: d,
                     streaming: u,
-                    suppress: T,
+                    suppress: I,
                     webBuildOverride: m,
                     awaitingRemote: U,
                     isEligibleForPomelo: b
@@ -754,7 +754,7 @@
                     onClick: s,
                     onContextMenu: i
                 } = e, l = (0, S.useRedesignIconContext)().enabled, r = null, o = eR.default;
-                return l ? o = null != t ? I.SettingsInfoIcon : n ? C.SettingsCircleIcon : T.SettingsIcon : null != t ? r = (0, a.jsx)(ev.default, {
+                return l ? o = null != t ? T.SettingsInfoIcon : n ? C.SettingsCircleIcon : I.SettingsIcon : null != t ? r = (0, a.jsx)(ev.default, {
                     width: 9,
                     height: 9,
                     className: eY.hasBuildOverride,

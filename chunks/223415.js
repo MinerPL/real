@@ -18,8 +18,8 @@
                 _ = n("385649"),
                 h = n("18494"),
                 C = n("102985"),
-                T = n("31957"),
-                I = n("709681"),
+                I = n("31957"),
+                T = n("709681"),
                 S = n("157246");
             let N = {
                     transform: "scale(0.7)",
@@ -31,13 +31,13 @@
                 };
             var m = () => {
                 let e = (0, u.useStateFromStores)([h.default], () => h.default.getChannelId()),
-                    t = (0, u.useStateFromStoresArray)([T.default], () => T.default.getIncomingCalls().filter(t => {
+                    t = (0, u.useStateFromStoresArray)([I.default], () => I.default.getIncomingCalls().filter(t => {
                         let {
                             channel: n
                         } = t;
                         return e !== n.id
                     })),
-                    n = (0, u.useStateFromStores)([T.default], () => T.default.hasIncomingCalls()),
+                    n = (0, u.useStateFromStores)([I.default], () => I.default.hasIncomingCalls()),
                     i = (0, u.useStateFromStores)([_.default], () => _.default.isSoundDisabled("call_ringing")),
                     m = E.default.useIsRingtoneEligible(),
                     p = E.default.useIsRingtoneDisabled(),
@@ -46,12 +46,12 @@
                     O = s.useRef(!1),
                     L = (0, r.useStableMemo)(() => {
                         let e = "call_ringing";
-                        if (m && !p) return (0, I.createSound)(c.default.ringtone, e);
+                        if (m && !p) return (0, T.createSound)(c.default.ringtone, e);
                         if (R === S.Soundpacks.CLASSIC) {
                             let t = 500 === l.random(1, 1e3) ? "call_ringing_beat" : "call_ringing";
-                            return (0, I.createSound)(t, e)
+                            return (0, T.createSound)(t, e)
                         }
-                        return (0, I.createSoundForPack)("call_ringing", R)
+                        return (0, T.createSoundForPack)("call_ringing", R)
                     }, [R, p, m]);
                 s.useEffect(() => () => {
                     L.stop()

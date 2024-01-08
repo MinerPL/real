@@ -13,14 +13,14 @@
                 _ = n("49111");
             let h = "ActivityTrackingStore",
                 C = null !== (a = i.default.get(h)) && void 0 !== a ? a : {},
-                T = {},
-                I = !1;
+                I = {},
+                T = !1;
 
             function S(e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
                 t && N(e, !0);
-                let n = T[e.applicationId];
-                null != n && (n.stop(), delete T[e.applicationId]), delete C[e.applicationId], i.default.set(h, C)
+                let n = I[e.applicationId];
+                null != n && (n.stop(), delete I[e.applicationId]), delete C[e.applicationId], i.default.set(h, C)
             }
 
             function N(e) {
@@ -35,8 +35,8 @@
                     duration: Math.floor(a / 1e3),
                     closed: t
                 }), e.updatedAt = n;
-                let s = T[e.applicationId];
-                null == s && (s = T[e.applicationId] = new l.Interval).start(18e5, () => N(e)), !t && (C[e.applicationId] = e, i.default.set(h, C))
+                let s = I[e.applicationId];
+                null == s && (s = I[e.applicationId] = new l.Interval).start(18e5, () => N(e)), !t && (C[e.applicationId] = e, i.default.set(h, C))
             }
 
             function A() {
@@ -60,7 +60,7 @@
 
             function m() {
                 for (let e of Object.keys(C)) S(C[e]);
-                I = !1
+                T = !1
             }
             class p extends s.default.Store {
                 initialize() {
@@ -73,9 +73,9 @@
             p.displayName = "ActivityTrackingStore", new p(r.default, {
                 RUNNING_GAMES_CHANGE: () => A(),
                 CONNECTION_OPEN: function() {
-                    if (I) return !1;
+                    if (T) return !1;
                     for (let e of Object.keys(C)) N(C[e]);
-                    A(!1), I = !0
+                    A(!1), T = !0
                 },
                 CONNECTION_CLOSED: function(e) {
                     let {

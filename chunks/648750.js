@@ -14,7 +14,7 @@
                 let {
                     onError: t,
                     onSuccess: n
-                } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [E, f] = a.useState(!1), [_, h] = a.useState(!1), [C, T] = a.useState(!1), [I, S] = a.useState(!1), [N, A] = a.useState(!1), [m, p] = a.useState(!1), g = o || d || E || _ || I || m, R = a.useCallback(async e => {
+                } = null != e ? e : {}, [o, u] = a.useState(!1), [d, c] = a.useState(!1), [E, f] = a.useState(!1), [_, h] = a.useState(!1), [C, I] = a.useState(!1), [T, S] = a.useState(!1), [N, A] = a.useState(!1), [m, p] = a.useState(!1), g = o || d || E || _ || T || m, R = a.useCallback(async e => {
                     if (!g) {
                         u(!0);
                         try {
@@ -64,14 +64,14 @@
                     }
                 }, [g, t, n]), M = a.useCallback(async () => {
                     if (!C) {
-                        T(!0);
+                        I(!0);
                         try {
                             await (0, i.getLinkCodeForCurrentUser)(), null == n || n()
                         } catch (n) {
                             let e = new s.APIError(n);
                             null == t || t(e)
                         } finally {
-                            T(!1)
+                            I(!1)
                         }
                     }
                 }, [C, t, n]), P = a.useCallback(async e => {
@@ -87,7 +87,7 @@
                         }
                     }
                 }, [N, t, n]), D = a.useCallback(async (e, a) => {
-                    if (!I) {
+                    if (!T) {
                         S(!0);
                         try {
                             await i.default.requestLink(e, a), null == n || n()
@@ -98,7 +98,7 @@
                             S(!1)
                         }
                     }
-                }, [I, t, n]), y = a.useCallback(async e => {
+                }, [T, t, n]), y = a.useCallback(async e => {
                     let n = l.default.getActionsForDisplayType(e),
                         a = n[n.length - 1],
                         r = l.default.getStartId(),
@@ -130,7 +130,7 @@
                     isCancelLoading: _,
                     isGetLinkCodeLoading: C,
                     isSelectTeenUserLoading: N,
-                    isRequestingLink: I,
+                    isRequestingLink: T,
                     isMoreLoading: m
                 }
             }

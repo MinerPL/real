@@ -16,28 +16,27 @@
                 f = i("800762"),
                 _ = i("191225"),
                 E = i("706508"),
-                A = i("501260"),
-                I = i("782340");
+                I = i("501260"),
+                A = i("782340");
             async function T(e) {
                 var t;
                 let {
                     channelId: i,
                     applicationId: T,
-                    activityId: C,
+                    instanceId: C,
                     inputApplication: v,
                     analyticsLocations: S,
                     embeddedActivitiesManager: N
-                } = e, p = _.default.getEmbeddedActivitiesForChannel(i), y = p.find(e => e.application_id === T && (null == C || e.activity_id === C)), h = v;
-                if (null == h) {
+                } = e, h = _.default.getEmbeddedActivitiesForChannel(i), p = h.find(e => e.applicationId === T && (null == C || e.instanceId === C)), y = v;
+                if (null == y) {
                     let e = await l.default.fetchApplication(T);
-                    h = r.default.createFromServer(e)
+                    y = r.default.createFromServer(e)
                 }
-                if (null == y || null == h) return;
+                if (null == p || null == y) return;
                 let D = c.default.getCurrentUser(),
-                    O = (0, A.default)({
+                    O = (0, I.default)({
                         userId: null == D ? void 0 : D.id,
-                        activity: y,
-                        application: h,
+                        application: y,
                         channelId: i,
                         currentUser: D,
                         isActivitiesEnabledForCurrentPlatform: !0,
@@ -47,7 +46,7 @@
                         GuildStore: o.default
                     }),
                     g = _.default.getSelfEmbeddedActivityForChannel(i),
-                    L = null == g ? void 0 : g.application_id,
+                    L = null == g ? void 0 : g.applicationId,
                     m = null != L && null !== (t = a.default.getApplication(L)) && void 0 !== t ? t : void 0;
                 ! function(e) {
                     let {
@@ -55,48 +54,48 @@
                         handleCanJoin: i
                     } = e;
                     switch (t) {
-                        case A.EmbeddedActivityJoinability.CAN_JOIN:
+                        case I.EmbeddedActivityJoinability.CAN_JOIN:
                             null == i || i();
                             break;
-                        case A.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
+                        case I.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
                             (0, u.showActivitiesInvalidPermissionsAlert)();
                             break;
-                        case A.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
+                        case I.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
                             n.default.show({
-                                title: I.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-                                body: I.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
+                                title: A.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+                                body: A.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
                                 hideActionSheet: !1
                             });
                             break;
-                        case A.EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS:
+                        case I.EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS:
                             n.default.show({
-                                title: I.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-                                body: I.default.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS,
+                                title: A.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+                                body: A.default.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS,
                                 hideActionSheet: !1
                             });
                             break;
-                        case A.EmbeddedActivityJoinability.ACTIVITY_AGE_GATED:
+                        case I.EmbeddedActivityJoinability.ACTIVITY_AGE_GATED:
                             n.default.show({
-                                title: I.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-                                body: I.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE,
+                                title: A.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+                                body: A.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE,
                                 hideActionSheet: !1
                             });
                             break;
-                        case A.EmbeddedActivityJoinability.NO_CHANNEL_CONNECT_PERMISSION:
-                        case A.EmbeddedActivityJoinability.CHANNEL_FULL:
-                        case A.EmbeddedActivityJoinability.NO_CHANNEL:
-                        case A.EmbeddedActivityJoinability.NO_USER:
+                        case I.EmbeddedActivityJoinability.NO_CHANNEL_CONNECT_PERMISSION:
+                        case I.EmbeddedActivityJoinability.CHANNEL_FULL:
+                        case I.EmbeddedActivityJoinability.NO_CHANNEL:
+                        case I.EmbeddedActivityJoinability.NO_USER:
                             n.default.show({
-                                title: I.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-                                body: I.default.Messages.ACTIVITIES_GENERIC_LAUNCH_FAILURE_DIALOG_BODY,
+                                title: A.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+                                body: A.default.Messages.ACTIVITIES_GENERIC_LAUNCH_FAILURE_DIALOG_BODY,
                                 hideActionSheet: !1
                             })
                     }
                 }({
                     embeddedActivityJoinability: O,
                     handleCanJoin: async function e() {
-                        null != y && await (0, E.default)({
-                            activity: y,
+                        null != p && await (0, E.default)({
+                            applicationId: p.applicationId,
                             currentEmbeddedApplication: m,
                             activityChannelId: i,
                             locationObject: {},

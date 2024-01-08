@@ -4,23 +4,23 @@
                     return o
                 }
             });
-            var i = n("446674"),
-                a = n("271938"),
-                l = n("191225");
+            var a = n("446674"),
+                l = n("271938"),
+                i = n("191225");
 
             function o(e) {
-                let t = a.default.getId(),
+                let t = l.default.getId(),
                     {
                         userActivity: n,
                         inActivity: o
-                    } = (0, i.useStateFromStoresObject)([l.default], () => {
+                    } = (0, a.useStateFromStoresObject)([i.default], () => {
                         var n;
-                        let i = l.default.getSelfEmbeddedActivityForChannel(e),
-                            a = l.default.getEmbeddedActivitiesForChannel(e),
-                            o = null === (n = a.find(e => e.application_id === (null == i ? void 0 : i.application_id))) || void 0 === n ? void 0 : n.connections,
+                        let a = i.default.getSelfEmbeddedActivityForChannel(e),
+                            l = i.default.getEmbeddedActivitiesForChannel(e),
+                            o = null === (n = l.find(e => e.applicationId === (null == a ? void 0 : a.applicationId))) || void 0 === n ? void 0 : n.userIds,
                             r = null == o ? void 0 : o.has(t);
                         return {
-                            userActivity: i,
+                            userActivity: a,
                             inActivity: null != r && r
                         }
                     });

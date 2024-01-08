@@ -19,8 +19,8 @@
                 _ = n("966003"),
                 h = n("363861"),
                 C = n("695827"),
-                T = n("425538"),
-                I = n("393414"),
+                I = n("425538"),
+                T = n("393414"),
                 S = n("600133"),
                 N = n("936629"),
                 A = n("489622"),
@@ -146,12 +146,12 @@
                                     })]
                                 });
                             case i.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
-                                return (0, a.jsx)(T.default, {
+                                return (0, a.jsx)(I.default, {
                                     dismissCurrentNotice: () => p(g.ContentDismissActionType.UNKNOWN),
                                     subscriptionTier: L.PremiumSubscriptionSKUs.TIER_2
                                 });
                             case i.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
-                                return (0, a.jsx)(T.default, {
+                                return (0, a.jsx)(I.default, {
                                     dismissCurrentNotice: () => p(g.ContentDismissActionType.UNKNOWN),
                                     subscriptionTier: L.PremiumSubscriptionSKUs.TIER_0
                                 });
@@ -198,7 +198,7 @@
                                     }), v.default.Messages.BOUNCED_EMAIL_DETECTED_NOTICE, (0, a.jsx)(A.PrimaryCTANoticeButton, {
                                         noticeType: P,
                                         onClick: () => {
-                                            (0, I.transitionTo)(R.Routes.SETTINGS("account"))
+                                            (0, T.transitionTo)(R.Routes.SETTINGS("account"))
                                         },
                                         children: v.default.Messages.CHANGE_EMAIL_SHORT
                                     })]
@@ -213,7 +213,7 @@
                                     }), v.default.Messages.GUILD_ROLE_SUBSCRIPTION_NAGBAR_TEXT, (0, a.jsx)(A.PrimaryCTANoticeButton, {
                                         noticeType: P,
                                         onClick: () => {
-                                            p(g.ContentDismissActionType.PRIMARY), (0, I.transitionTo)(1 === b.length ? R.Routes.GUILD_SETTINGS(b[0], "role-subscriptions") : R.Routes.PICK_GUILD_SETTINGS("role-subscriptions", void 0, "server-subscriptions-finish-setting-up"))
+                                            p(g.ContentDismissActionType.PRIMARY), (0, T.transitionTo)(1 === b.length ? R.Routes.GUILD_SETTINGS(b[0], "role-subscriptions") : R.Routes.PICK_GUILD_SETTINGS("role-subscriptions", void 0, "server-subscriptions-finish-setting-up"))
                                         },
                                         children: v.default.Messages.LETS_GO
                                     })]

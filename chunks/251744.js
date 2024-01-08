@@ -18,8 +18,8 @@
                 _ = n("697218"),
                 h = n("800762"),
                 C = n("861309"),
-                T = n("578287"),
-                I = n("65810"),
+                I = n("578287"),
+                T = n("65810"),
                 S = n("961400"),
                 N = n("694352"),
                 A = n("492249"),
@@ -33,7 +33,7 @@
                     },
                     socket: a
                 } = e, s = o.default.getChannel(n);
-                if (null == s || !(0, T.hasMessageReadPermission)(s, a.application.id, a.authorization.scopes)) throw new C.default(A.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(n));
+                if (null == s || !(0, I.hasMessageReadPermission)(s, a.application.id, a.authorization.scopes)) throw new C.default(A.RPCErrors.INVALID_CHANNEL, "Invalid channel id: ".concat(n));
                 if (s.isNSFW() && (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.nsfwAllowed) !== !0) throw new C.default(A.RPCErrors.INVALID_CHANNEL, "Invalid nsfw channel id: ".concat(s.id))
             }
 
@@ -108,7 +108,7 @@
                                     } = e;
                                     return t
                                 });
-                                e.forEach(e => a((0, T.transformVoiceState)(l, i.id, e)))
+                                e.forEach(e => a((0, I.transformVoiceState)(l, i.id, e)))
                             }
                             return r
                         }
@@ -139,7 +139,7 @@
                                     } = e;
                                     return t
                                 });
-                            return u.forEach(e => a((0, T.transformVoiceState)(l, i.id, e))), r
+                            return u.forEach(e => a((0, I.transformVoiceState)(l, i.id, e))), r
                         }
                     }
                 },
@@ -161,7 +161,7 @@
                             } = e, i = o.default.getChannel(t);
                             if (null == i) return;
                             let l = i.getGuildId(),
-                                r = Object.values(h.default.getVoiceStatesForChannel(i.id)).map(e => (0, T.transformVoiceState)(l, i.id, e)),
+                                r = Object.values(h.default.getVoiceStatesForChannel(i.id)).map(e => (0, I.transformVoiceState)(l, i.id, e)),
                                 u = s.differenceWith(r, n, s.isEqual);
                             return u.forEach(e => a(e)), r
                         }
@@ -176,7 +176,7 @@
                             prevState: t,
                             dispatch: n
                         } = e, a = {
-                            state: (0, T.getVoiceConnectionState)(E.default.getState()),
+                            state: (0, I.getVoiceConnectionState)(E.default.getState()),
                             hostname: E.default.getHostname(),
                             pings: E.default.getPings(),
                             average_ping: E.default.getAveragePing(),
@@ -261,7 +261,7 @@
                     },
                     handler() {}
                 },
-                [m.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: I.activityInstanceConnectedParticipantsUpdateEvent,
+                [m.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE]: T.activityInstanceConnectedParticipantsUpdateEvent,
                 [m.RPCEvents.THERMAL_STATE_UPDATE]: {
                     scope: {
                         [A.RPC_SCOPE_CONFIG.ANY]: [A.RPC_AUTHENTICATED_SCOPE]

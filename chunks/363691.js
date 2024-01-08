@@ -18,8 +18,8 @@
                 _ = n("794818"),
                 h = n("267567"),
                 C = n("49111"),
-                T = n("782340"),
-                I = n("600323"),
+                I = n("782340"),
+                T = n("600323"),
                 S = n("105029"),
                 N = () => {
                     let e = (0, r.useStateFromStores)([E.default], () => E.default.getGuildId(), []),
@@ -38,13 +38,13 @@
                         }
                     };
                     return (0, a.jsxs)("div", {
-                        className: l(I.notice, S.notice),
+                        className: l(T.notice, S.notice),
                         children: [(0, a.jsxs)(o.Button, {
                             look: o.Button.Looks.OUTLINED,
                             color: o.Button.Colors.WHITE,
                             size: o.Button.Sizes.NONE,
-                            className: l(I.button, I.back),
-                            innerClassName: I.iconButton,
+                            className: l(T.button, T.back),
+                            innerClassName: T.iconButton,
                             onClick: () => {
                                 let e = (0, d.getHistory)();
                                 null != n && null != n.location ? (0, d.replaceWith)({
@@ -54,20 +54,20 @@
                             children: [(0, a.jsx)(f.default, {
                                 width: 16,
                                 height: 16,
-                                className: I.arrow
-                            }), T.default.Messages.BACK]
+                                className: T.arrow
+                            }), I.default.Messages.BACK]
                         }), (0, a.jsx)(o.Text, {
-                            className: I.header,
+                            className: T.header,
                             variant: "text-sm/normal",
-                            children: T.default.Messages.LURKER_MODE_NAG_BAR_HEADER
+                            children: I.default.Messages.LURKER_MODE_NAG_BAR_HEADER
                         }), (0, a.jsx)(o.Button, {
-                            className: I.button,
+                            className: T.button,
                             look: o.Button.Looks.OUTLINED,
                             color: o.Button.Colors.WHITE,
                             size: o.Button.Sizes.NONE,
                             submitting: i,
                             onClick: A,
-                            children: T.default.Messages.LURKER_MODE_NAG_BAR_BUTTON.format({
+                            children: I.default.Messages.LURKER_MODE_NAG_BAR_BUTTON.format({
                                 guild: t.name
                             })
                         })]

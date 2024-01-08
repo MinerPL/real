@@ -16,8 +16,8 @@
                 _ = n("374021"),
                 h = n("398604"),
                 C = n("395869"),
-                T = n("824650"),
-                I = n("1339"),
+                I = n("824650"),
+                T = n("1339"),
                 S = n("593897"),
                 N = n("534222"),
                 A = n("841363"),
@@ -51,11 +51,11 @@
                 } = e, a = (0, S.useActiveEventOrStageInstanceChannel)(t.id), s = (0, N.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([L.default], () => L.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
                     isStageNoticeHidden: V,
                     isEventNoticeHidden: Y
-                } = (0, u.useStateFromStoresObject)([T.default], () => ({
-                    isStageNoticeHidden: T.default.isLiveChannelNoticeHidden({
+                } = (0, u.useStateFromStoresObject)([I.default], () => ({
+                    isStageNoticeHidden: I.default.isLiveChannelNoticeHidden({
                         stageId: null == r ? void 0 : r.id
                     }),
-                    isEventNoticeHidden: T.default.isLiveChannelNoticeHidden({
+                    isEventNoticeHidden: I.default.isLiveChannelNoticeHidden({
                         eventId: null == s ? void 0 : s.id
                     })
                 }), [r, s]), W = null == a ? void 0 : a.id, {
@@ -95,7 +95,7 @@
                         isEventNoticeHidden: d,
                         isStageNoticeHidden: E,
                         isStudyRoomNotice: _
-                    } = e, T = null != n && null != a && !E, S = null != t ? (0, m.getNextRecurrenceIdInEvent)(t) : null;
+                    } = e, I = null != n && null != a && !E, S = null != t ? (0, m.getNextRecurrenceIdInEvent)(t) : null;
                     if (_ && null != a) {
                         let e = (0, f.getChannelIconComponent)(a);
                         return {
@@ -114,7 +114,7 @@
                         }
                     }
                     if (null == t || d) {
-                        if (T) {
+                        if (I) {
                             let e = B.default.Messages.STAGE_CHANNEL_JOIN_BUTTON;
                             return (null == l ? void 0 : l.speaker) ? e = B.default.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != l && (e = B.default.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
                                 noticeType: 0,
@@ -147,7 +147,7 @@
                             }
                         }
                     } else {
-                        if (t.entity_type === F.GuildScheduledEventEntityTypes.STAGE_INSTANCE && T) {
+                        if (t.entity_type === F.GuildScheduledEventEntityTypes.STAGE_INSTANCE && I) {
                             let e = B.default.Messages.STAGE_CHANNEL_JOIN_BUTTON;
                             return (null == l ? void 0 : l.speaker) ? e = B.default.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != l && (e = B.default.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
                                 noticeType: 0,
@@ -188,7 +188,7 @@
                             return {
                                 noticeType: 1,
                                 title: t.name,
-                                location: (0, I.guildEventDetailsParser)(e, !0),
+                                location: (0, T.guildEventDetailsParser)(e, !0),
                                 locationIcon: (0, i.jsx)(G.default, {
                                     width: 16,
                                     height: 16,

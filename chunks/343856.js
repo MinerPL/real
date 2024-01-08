@@ -9,9 +9,9 @@
             var u = n("446674"),
                 r = n("669491"),
                 s = n("77078"),
-                l = n("450911"),
-                d = n("145079"),
-                i = n("87657"),
+                i = n("450911"),
+                l = n("145079"),
+                d = n("87657"),
                 o = n("697218"),
                 f = n("782340"),
                 c = n("839938");
@@ -66,7 +66,7 @@
                             header: f.default.Messages.TRANSFER_GROUP_OWNERSHIP,
                             confirmText: f.default.Messages.CONFIRM,
                             cancelText: f.default.Messages.CANCEL,
-                            onConfirm: () => l.default.setDMOwner(t.id, e.id),
+                            onConfirm: () => i.default.setDMOwner(t.id, e.id),
                             ...n,
                             children: [(0, a.jsx)(m, {
                                 color: r.default.unsafe_rawColors.PRIMARY_300.css
@@ -74,13 +74,13 @@
                                 className: c.fromToWrapper,
                                 children: [(0, a.jsx)("div", {
                                     className: c.from,
-                                    children: (0, a.jsx)(i.default, {
+                                    children: (0, a.jsx)(d.default, {
                                         user: u,
                                         size: s.AvatarSizes.SIZE_80
                                     })
                                 }), (0, a.jsx)("div", {
                                     className: c.to,
-                                    children: (0, a.jsx)(i.default, {
+                                    children: (0, a.jsx)(d.default, {
                                         user: e,
                                         size: s.AvatarSizes.SIZE_80
                                     })
@@ -88,7 +88,7 @@
                             }), (0, a.jsx)(s.Text, {
                                 variant: "text-md/normal",
                                 children: f.default.Messages.CONFIRM_CHANGE_DM_OWNER.format({
-                                    usernameHook: (t, n) => (0, a.jsx)(d.default, {
+                                    usernameHook: (t, n) => (0, a.jsx)(l.default, {
                                         usernameIcon: (0, a.jsx)(s.Avatar, {
                                             className: c.avatarIcon,
                                             src: e.getAvatarURL(void 0, 16),

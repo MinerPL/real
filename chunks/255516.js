@@ -17,8 +17,8 @@
                 _ = n("861309"),
                 h = n("856116"),
                 C = n("470313"),
-                T = n("56245"),
-                I = n("492249"),
+                I = n("56245"),
+                T = n("492249"),
                 S = n("49111"),
                 N = n("446825").Buffer;
             try {
@@ -121,7 +121,7 @@
                                 a === location.protocol && s === location.host ? t.setHeader("Location", n.get("callback")) : t.setHeader("Location", m), t.writeHead(301), t.end()
                             },
                             o = new M(i ? L.bind(null, e, t) : r, i ? v.bind(null, e, t, 400) : r, Number(n.get("v")), s);
-                        if (i)(0, T.validateSocketClient)(o, R(e.headers).origin, n.get("client_id")).then(() => {
+                        if (i)(0, I.validateSocketClient)(o, R(e.headers).origin, n.get("client_id")).then(() => {
                             let n = "";
                             e.on("data", e => n += e), e.on("error", () => v(e, t, 500, "Internal Server Error")), e.on("end", () => this.handleMessage(o, n))
                         }).catch(e => {
@@ -133,7 +133,7 @@
                         });
                         else {
                             var l;
-                            o.authorization.scopes = [I.RPC_PRIVATE_LIMITED_SCOPE], this.handleMessage(o, decodeURIComponent(null !== (l = n.get("payload")) && void 0 !== l ? l : ""))
+                            o.authorization.scopes = [T.RPC_PRIVATE_LIMITED_SCOPE], this.handleMessage(o, decodeURIComponent(null !== (l = n.get("payload")) && void 0 !== l ? l : ""))
                         }
                         return
                     }
@@ -152,7 +152,7 @@
                     }
                     p.info("Socket Opened: ".concat(a.id)), e.on("error", e => p.error("WS Error: ".concat(e.message))), e.on("close", (e, t) => {
                         p.info("Socket Closed: ".concat(a.id, ", code ").concat(e, ", message ").concat(t)), r.remove(g, e => e === a), this.emit("disconnect", a)
-                    }), (0, T.validateSocketClient)(a, i, s.get("client_id")).then(() => {
+                    }), (0, I.validateSocketClient)(a, i, s.get("client_id")).then(() => {
                         g.push(a), e.on("message", e => this.handleMessage(a, e)), this.emit("connect", a)
                     }).catch(e => {
                         let {

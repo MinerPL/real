@@ -18,8 +18,8 @@
                 _ = n("619443"),
                 h = n("539938"),
                 C = n("305961"),
-                T = n("160299"),
-                I = n("257869"),
+                I = n("160299"),
+                T = n("257869"),
                 S = n("638779"),
                 N = n("459736"),
                 A = n("967251"),
@@ -33,7 +33,7 @@
             function v(e) {
                 let {
                     guildId: t
-                } = e, n = (0, l.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), v = (0, l.useStateFromStores)([_.default], () => _.default.isConnected()), M = (0, E.default)(t), P = (0, S.default)(t), D = (0, l.useStateFromStores)([T.default], () => T.default.isSubscriptionFetching), y = (0, I.useGroupListingsFetchContext)(), {
+                } = e, n = (0, l.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), v = (0, l.useStateFromStores)([_.default], () => _.default.isConnected()), M = (0, E.default)(t), P = (0, S.default)(t), D = (0, l.useStateFromStores)([I.default], () => I.default.isSubscriptionFetching), y = (0, T.useGroupListingsFetchContext)(), {
                     shouldHideGuildPurchaseEntryPoints: x,
                     restrictionsLoading: b
                 } = (0, f.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !y || D || b;
@@ -84,7 +84,7 @@
                 let {
                     guildId: t
                 } = e;
-                return (0, a.jsx)(I.GroupListingsFetchContextProvider, {
+                return (0, a.jsx)(T.GroupListingsFetchContextProvider, {
                     guildId: t,
                     refetchOnMount: !0,
                     children: (0, a.jsx)(v, {

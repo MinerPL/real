@@ -18,8 +18,8 @@
                 _ = n("925877"),
                 h = n("701909"),
                 C = n("962541"),
-                T = n("762489"),
-                I = n("329858"),
+                I = n("762489"),
+                T = n("329858"),
                 S = n("49111"),
                 N = n("782340"),
                 A = n("234837");
@@ -37,11 +37,11 @@
                 }
                 renderTitle() {
                     return (0, a.jsxs)("div", {
-                        children: [(0, a.jsx)(I.default, {
+                        children: [(0, a.jsx)(T.default, {
                             children: this.isHost() ? N.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
                                 count: this.props.party.length
                             }) : N.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
-                        }), (0, a.jsx)(T.default, {
+                        }), (0, a.jsx)(I.default, {
                             children: N.default.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER
                         })]
                     })

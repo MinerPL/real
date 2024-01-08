@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return eI
+                    return eT
                 }
             });
             var a = n("37983"),
@@ -18,8 +18,8 @@
                 _ = n("215082"),
                 h = n("950926"),
                 C = n("987317"),
-                T = n("167359"),
-                I = n("55620"),
+                I = n("167359"),
+                T = n("55620"),
                 S = n("52289"),
                 N = n("518888"),
                 A = n("70614"),
@@ -99,25 +99,25 @@
                     untilAtLeast: l(e)
                 } : void 0)
             }
-            let eT = s.memo(function() {
+            let eI = s.memo(function() {
                 var e, t, i;
                 let l = (0, o.useStateFromStores)([Z.default], () => Z.default.getCurrentUser()),
                     _ = (0, o.useStateFromStores)([Q.default], () => Q.default.getGuildId()),
                     g = (0, o.useStateFromStores)([$.default], () => $.default.getNotice()),
                     er = (0, o.useStateFromStores)([K.default], () => K.default.getGuild(_)),
                     {
-                        analyticsLocations: eT
+                        analyticsLocations: eI
                     } = (0, R.default)(),
-                    eI = null == g ? void 0 : g.type,
+                    eT = null == g ? void 0 : g.type,
                     eS = (0, U.useShowMemberVerificationGate)(_);
                 if (s.useEffect(() => {
-                        null != eI && ! function(e, t) {
+                        null != eT && ! function(e, t) {
                             let n = {
                                 notice_type: e
                             };
                             null != t && (n.guild_id = t), ea.default.track(eo.AnalyticEvents.APP_NOTICE_VIEWED, n)
-                        }(eI, _)
-                    }, [eI, _]), s.useEffect(() => {
+                        }(eT, _)
+                    }, [eT, _]), s.useEffect(() => {
                         if (null != g && g.type === eo.NoticeTypes.SURVEY && null != g.metadata) {
                             let {
                                 metadata: e
@@ -276,7 +276,7 @@
                         return (0, a.jsxs)(en.default, {
                             color: en.NoticeColors.DEFAULT,
                             children: [(0, a.jsx)(en.NoticeCloseButton, {
-                                onClick: () => T.default.ackScheduledMaintenance(),
+                                onClick: () => I.default.ackScheduledMaintenance(),
                                 noticeType: eo.NoticeTypes.SCHEDULED_MAINTENANCE
                             }), eE.default.Messages.NOTICE_SCHEDULED_MAINTENANCE.format(g.metadata), (0, a.jsx)(en.NoticeButtonAnchor, {
                                 href: "".concat(eo.Links.STATUS, "/incidents/").concat(g.metadata.id),
@@ -357,11 +357,11 @@
                                         (0, B.default)({
                                             initialPlanId: null,
                                             subscriptionTier: eu.PremiumSubscriptionSKUs.TIER_2,
-                                            analyticsLocations: eT,
+                                            analyticsLocations: eI,
                                             analyticsObject: eD
                                         })
                                     },
-                                    analyticsLocations: eT,
+                                    analyticsLocations: eI,
                                     analyticsLocationObject: eD,
                                     context: __OVERLAY__ ? eo.AppContext.OVERLAY : eo.AppContext.APP
                                 }).then(() => E.dismiss(eM.id)),
@@ -556,7 +556,7 @@
                                     color: el.TestModeSKUButtonEnums.Colors.WHITE,
                                     look: el.TestModeSKUButtonEnums.Looks.OUTLINED,
                                     size: el.TestModeSKUButtonEnums.Sizes.MIN,
-                                    onSKUSelect: e => I.goToSKUStoreListing(e.id, {
+                                    onSKUSelect: e => T.goToSKUStoreListing(e.id, {
                                         analyticsSource: {
                                             page: null,
                                             section: eo.AnalyticsSections.NOTIFICATION_BAR,
@@ -635,7 +635,7 @@
                         return (0, a.jsxs)(en.default, {
                             color: en.NoticeColors.WARNING,
                             children: [(0, a.jsx)(en.NoticeCloseButton, {
-                                noticeType: eI,
+                                noticeType: eT,
                                 onClick: () => {
                                     eC(ej)
                                 }
@@ -722,7 +722,7 @@
                         };
                         return (0, a.jsx)(x.default, {
                             guildId: _,
-                            analyticsLocations: eT,
+                            analyticsLocations: eI,
                             analyticsLocation: e
                         })
                     }
@@ -827,11 +827,11 @@
                 }
             });
 
-            function eI() {
+            function eT() {
                 let {
                     AnalyticsLocationProvider: e
                 } = (0, R.default)(g.default.NOTICE);
                 return (0, a.jsx)(e, {
-                    children: (0, a.jsx)(eT, {})
+                    children: (0, a.jsx)(eI, {})
                 })
             }

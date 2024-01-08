@@ -14,13 +14,13 @@
                 u = n("18520"),
                 d = n("49111"),
                 c = (0, u.default)((e, t, n, r, o, u, d, c, E, f, _, h, C) => {
-                    let T = "OAuth2Authorize_".concat(e, "_").concat(f, "_").concat(_);
-                    return new Promise(I => {
+                    let I = "OAuth2Authorize_".concat(e, "_").concat(f, "_").concat(_);
+                    return new Promise(T => {
                         let S = e => {
                             let {
                                 location: t
                             } = e;
-                            I(t)
+                            T(t)
                         };
                         (0, s.openModal)(s => (0, a.jsx)(l.OAuth2AuthorizeModal, {
                             ...s,
@@ -39,9 +39,9 @@
                             prompt: h,
                             disableGuildSelect: "boolean" == typeof C ? C : "true" === C
                         }), {
-                            modalKey: T,
+                            modalKey: I,
                             onCloseRequest: () => {
-                                (0, s.closeModal)(T), I(void 0)
+                                (0, s.closeModal)(I), T(void 0)
                             }
                         }, (0, i.default)(t.application) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
                     })

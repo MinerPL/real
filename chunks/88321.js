@@ -74,10 +74,10 @@
                         }), Promise.resolve(_);
                         _.name = a.application.name, _.application_id = a.application.id;
                         let C = a.transport === c.TransportTypes.POST_MESSAGE,
-                            T = (0, u.computeActivityFlags)(_, C);
-                        T > 0 && (_.flags = T), delete _.instance, null === (t = _.party) || void 0 === t || delete t.privacy;
+                            I = (0, u.computeActivityFlags)(_, C);
+                        I > 0 && (_.flags = I), delete _.instance, null === (t = _.party) || void 0 === t || delete t.privacy;
                         let {
-                            assets: I,
+                            assets: T,
                             party: S,
                             secrets: N,
                             timestamps: A,
@@ -94,14 +94,14 @@
                                 button_urls: m.map(e => e.url)
                             }, _.buttons = m.map(e => e.label)), null != A)
                             for (let e of Object.keys(A)) Date.now().toString().length - A[e].toString().length > 2 && (A[e] = Math.floor(1e3 * A[e]));
-                        if (null == I) n = Promise.resolve([]);
+                        if (null == T) n = Promise.resolve([]);
                         else {
                             if (null == a.application || null == a.application.id) throw Error();
-                            n = (0, r.fetchAssetIds)(a.application.id, [I.large_image, I.small_image])
+                            n = (0, r.fetchAssetIds)(a.application.id, [T.large_image, T.small_image])
                         }
                         return n.then(e => {
                             let [t, n] = e;
-                            if (null != I && (null != t ? I.large_image = t : delete I.large_image, null != n ? I.small_image = n : delete I.small_image), !h()) return;
+                            if (null != T && (null != t ? T.large_image = t : delete T.large_image, null != n ? T.small_image = n : delete T.small_image), !h()) return;
                             i.default.dispatch({
                                 type: "LOCAL_ACTIVITY_UPDATE",
                                 socketId: a.id,
@@ -115,7 +115,7 @@
                                 application_id: a.application.id,
                                 type: _.type
                             };
-                            return null != s && (o.has_match_secret = !!s.match, o.has_join_secret = !!s.join), null != I && (o.has_images = !!(I.large_image || I.small_image)), null != r && (o.party_max = null != r.size ? r.size[1] : void 0, o.party_id = r.id), l.default.track(E.AnalyticEvents.ACTIVITY_UPDATED, o), _
+                            return null != s && (o.has_match_secret = !!s.match, o.has_join_secret = !!s.join), null != T && (o.has_images = !!(T.large_image || T.small_image)), null != r && (o.party_max = null != r.size ? r.size[1] : void 0, o.party_id = r.id), l.default.track(E.AnalyticEvents.ACTIVITY_UPDATED, o), _
                         })
                     }
                 }

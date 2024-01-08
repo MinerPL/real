@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return T
                 }
             }), n("222007");
             var a = n("37983");
@@ -19,21 +19,21 @@
                 _ = n("716724"),
                 h = n("880553"),
                 C = n("492249"),
-                T = n("49111"),
-                I = {
-                    [T.RPCCommands.TOGGLE_VIDEO]: {
+                I = n("49111"),
+                T = {
+                    [I.RPCCommands.TOGGLE_VIDEO]: {
                         scope: {
-                            [C.RPC_SCOPE_CONFIG.ALL]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_VIDEO_WRITE]
+                            [C.RPC_SCOPE_CONFIG.ALL]: [I.OAuth2Scopes.RPC, I.OAuth2Scopes.RPC_VIDEO_WRITE]
                         },
                         handler() {
                             let e = d.default.isVideoEnabled(),
                                 t = (0, h.default)();
-                            null != t && (e ? i.default.setVideoEnabled(!1) : (0, o.default)(() => i.default.setVideoEnabled(!0), T.AppContext.APP))
+                            null != t && (e ? i.default.setVideoEnabled(!1) : (0, o.default)(() => i.default.setVideoEnabled(!0), I.AppContext.APP))
                         }
                     },
-                    [T.RPCCommands.TOGGLE_SCREENSHARE]: {
+                    [I.RPCCommands.TOGGLE_SCREENSHARE]: {
                         scope: {
-                            [C.RPC_SCOPE_CONFIG.ALL]: [T.OAuth2Scopes.RPC, T.OAuth2Scopes.RPC_SCREENSHARE_WRITE]
+                            [C.RPC_SCOPE_CONFIG.ALL]: [I.OAuth2Scopes.RPC, I.OAuth2Scopes.RPC_SCREENSHARE_WRITE]
                         },
                         validation: e => (0, _.default)(e).optional().keys({
                             pid: e.number().optional().min(0)
@@ -57,7 +57,7 @@
                                 return t => (0, a.jsx)(e, {
                                     ...t,
                                     guildId: _.guild_id,
-                                    analyticsLocation: T.AnalyticsLocations.ACTIVITY_RPC
+                                    analyticsLocation: I.AnalyticsLocations.ACTIVITY_RPC
                                 })
                             }))
                         }

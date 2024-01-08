@@ -14,10 +14,10 @@
                 c = n("86878"),
                 s = n("546463"),
                 E = n("686470"),
-                p = n("535974"),
-                A = n("568734"),
-                f = n("269180"),
-                I = n("773336"),
+                I = n("535974"),
+                p = n("568734"),
+                A = n("269180"),
+                f = n("773336"),
                 _ = n("260365"),
                 T = n("438931"),
                 C = n("215082"),
@@ -34,7 +34,7 @@
                     embedded: r = !1,
                     analyticsLocations: u = []
                 } = t;
-                S(e, null, a, r, u).then(() => f.default.waitConnected(e)).then(() => Promise.race([f.default.waitSubscribed(e, y.RPCEvents.ACTIVITY_JOIN)])).then(() => {
+                S(e, null, a, r, u).then(() => A.default.waitConnected(e)).then(() => Promise.race([A.default.waitSubscribed(e, y.RPCEvents.ACTIVITY_JOIN)])).then(() => {
                     l.default.dispatch({
                         type: "ACTIVITY_JOIN",
                         applicationId: e,
@@ -51,26 +51,24 @@
             function S(t, e, n) {
                 let d = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
                     s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [];
-                if (d) return null == n ? Promise.reject(Error("Invalid channel ID")) : ((0, r.startEmbeddedActivity)(n, {
-                    application_id: t
-                }, s), Promise.resolve());
+                if (d) return null == n ? Promise.reject(Error("Invalid channel ID")) : ((0, r.startEmbeddedActivity)(n, t, s), Promise.resolve());
                 if (c.default.isConnected(t)) return Promise.resolve();
-                let A = null;
+                let p = null;
                 if (null == e) {
                     let n = E.default.getActiveLibraryApplication(t);
                     e = null != n ? n.branchId : t
                 }
-                if (p.default.isLaunchable(t, e)) {
-                    var I;
-                    let n = p.default.getState(t, e),
+                if (I.default.isLaunchable(t, e)) {
+                    var f;
+                    let n = I.default.getState(t, e),
                         l = E.default.getActiveLaunchOptionId(t, e);
                     if (null == n) throw Error("Missing dispatch game when launching");
                     let r = E.default.getLibraryApplication(t, e);
                     if (null == r) throw Error("Missing library application when launching");
-                    A = (I = t, i.default.post({
+                    p = (f = t, i.default.post({
                         url: y.Endpoints.OAUTH2_AUTHORIZE,
                         query: {
-                            client_id: I,
+                            client_id: f,
                             response_type: "token",
                             scope: [y.OAuth2Scopes.IDENTIFY].join(" ")
                         },
@@ -91,20 +89,20 @@
                     }, t => {
                         if (404 === t.status) return null;
                         throw t
-                    })).then(t => f.default.launchDispatchApplication(n, t, o.default.locale, r.getBranchName(), l))
+                    })).then(t => A.default.launchDispatchApplication(n, t, o.default.locale, r.getBranchName(), l))
                 } else {
                     let e = u.default.getApplication(t);
-                    A = null != e ? f.default.launch(e) : f.default.launchGame(t)
+                    p = null != e ? A.default.launch(e) : A.default.launchGame(t)
                 }
                 let _ = Error("game not found");
-                return null != A ? (l.default.dispatch({
+                return null != p ? (l.default.dispatch({
                     type: "LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE",
                     applicationId: t,
                     branchId: e
                 }), l.default.dispatch({
                     type: "GAME_LAUNCH_START",
                     applicationId: t
-                }), A.then(e => {
+                }), p.then(e => {
                     l.default.dispatch({
                         type: "GAME_LAUNCH_SUCCESS",
                         applicationId: t,
@@ -134,7 +132,7 @@
                     if (null != n) {
                         let t = E.default.getActiveLibraryApplication(n.id);
                         if (null != t) {
-                            let e = A.toggleFlag(t.getFlags(), y.LibraryApplicationFlags.OVERLAY_DISABLED);
+                            let e = p.toggleFlag(t.getFlags(), y.LibraryApplicationFlags.OVERLAY_DISABLED);
                             T.updateFlags(t.id, t.branchId, e);
                             return
                         }
@@ -231,7 +229,7 @@
                             url: y.Endpoints.UNVERIFIED_APPLICATIONS,
                             body: {
                                 name: e,
-                                os: (0, I.getPlatformName)(),
+                                os: (0, f.getPlatformName)(),
                                 icon: n,
                                 distributor_application: (s = r, E = u, null == s || "" === s ? null : {
                                     distributor: s,

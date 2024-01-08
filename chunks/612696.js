@@ -21,8 +21,8 @@
                     ChannelStore: f,
                     GuildStore: _,
                     GuildMemberCountStore: E,
-                    RelationshipStore: A,
-                    SelectedChannelStore: I,
+                    RelationshipStore: I,
+                    SelectedChannelStore: A,
                     VoiceStateStore: T,
                     PermissionStore: C
                 } = e, v = (0, l.getIsActivitiesEnabledForCurrentPlatform)();
@@ -40,9 +40,9 @@
                     GuildStore: _
                 }) === a.EmbeddedActivityJoinability.CAN_JOIN;
                 if (!(0, n.isDesktop)()) return !1;
-                if ((0, u.default)(i, r.ActivityFlags.PARTY_PRIVACY_FRIENDS) && A.isFriend(t.id)) return !0;
+                if ((0, u.default)(i, r.ActivityFlags.PARTY_PRIVACY_FRIENDS) && I.isFriend(t.id)) return !0;
                 if ((0, u.default)(i, r.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL)) {
-                    let e = f.getChannel(I.getVoiceChannelId());
+                    let e = f.getChannel(A.getVoiceChannelId());
                     if (null == e || !T.isInChannel(e.id, t.id)) return !1;
                     switch (e.type) {
                         case r.ChannelTypes.DM:

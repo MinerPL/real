@@ -1,59 +1,59 @@
             "use strict";
             n.r(t), n.d(t, {
                 fetchApplicationsShelf: function() {
-                    return o
+                    return u
                 },
                 fetchPrivateChannelIntegrations: function() {
-                    return c
+                    return o
                 },
                 deletePrivateChannelIntegration: function() {
-                    return u
+                    return d
                 }
             }), n("70102"), n("746379");
-            var l = n("981980"),
-                i = n("872717"),
-                r = n("913144");
+            var i = n("981980"),
+                a = n("872717"),
+                l = n("913144");
             n("253981");
-            var s = n("140596"),
-                a = n("49111");
+            var r = n("140596"),
+                s = n("49111");
             n("843455"), n("782340");
 
-            function o() {
-                s.default.getApplicationsShelfFetchState() === s.FetchState.NOT_FETCHED && (r.default.dispatch({
+            function u() {
+                r.default.getApplicationsShelfFetchState() === r.FetchState.NOT_FETCHED && (l.default.dispatch({
                     type: "APPLICATIONS_SHELF_FETCH_START"
-                }), i.default.get(a.Endpoints.APPLICATIONS_SHELF).then(e => r.default.dispatch({
+                }), a.default.get(s.Endpoints.APPLICATIONS_SHELF).then(e => l.default.dispatch({
                     type: "APPLICATIONS_SHELF_FETCH_SUCCESS",
                     applications: e.body.applications
-                })).catch(e => r.default.dispatch({
+                })).catch(e => l.default.dispatch({
                     type: "APPLICATIONS_SHELF_FETCH_FAIL"
                 })))
             }
 
-            function c(e) {
-                let t = new l.default(1e3, 5e3);
-                r.default.dispatch({
+            function o(e) {
+                let t = new i.default(1e3, 5e3);
+                l.default.dispatch({
                     type: "FETCH_PRIVATE_CHANNEL_INTEGRATIONS_START",
                     channelId: e
-                }), i.default.get({
-                    url: a.Endpoints.CHANNEL_INTEGRATIONS(e),
+                }), a.default.get({
+                    url: s.Endpoints.CHANNEL_INTEGRATIONS(e),
                     backoff: t,
                     retries: 10
                 }).then(t => {
-                    r.default.dispatch({
+                    l.default.dispatch({
                         type: "FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS",
                         channelId: e,
                         integrations: t.body
                     })
                 }).catch(() => {
-                    r.default.dispatch({
+                    l.default.dispatch({
                         type: "FETCH_PRIVATE_CHANNEL_INTEGRATIONS_FAIL",
                         channelId: e
                     })
                 })
             }
 
-            function u(e, t) {
-                return i.default.delete(a.Endpoints.CHANNEL_INTEGRATION(e, t)).then(e => {
+            function d(e, t) {
+                return a.default.delete(s.Endpoints.CHANNEL_INTEGRATION(e, t)).then(e => {
                     var t;
                     if (null === (t = e.body) || void 0 === t ? void 0 : t.message) throw Error(e.body.message)
                 })

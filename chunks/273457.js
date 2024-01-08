@@ -21,7 +21,7 @@
                     let {
                         guildId: t,
                         inviteCode: n
-                    } = e, [C, T] = s.useState(_.WaveStates.INITIAL), [I, S] = s.useState(null != n);
+                    } = e, [C, I] = s.useState(_.WaveStates.INITIAL), [T, S] = s.useState(null != n);
                     s.useEffect(() => {
                         null != n && l.default.resolveInvite(n, "Hub").finally(() => S(!1))
                     }, [n]);
@@ -31,7 +31,7 @@
                         null != A && (0, r.transitionTo)(f.Routes.CHANNEL(t))
                     }, [A, t]);
                     let m = s.useCallback(e => {
-                            T(t => Math.max(t, e))
+                            I(t => Math.max(t, e))
                         }, []),
                         p = (0, c.getArtForPath)();
                     return (0, a.jsx)("div", {
@@ -46,7 +46,7 @@
                                 className: h.dragRegion
                             }), (0, a.jsx)("div", {
                                 className: h.contentWrapper,
-                                children: !I && (0, a.jsx)(E.HubEmailConnectionModalView, {
+                                children: !T && (0, a.jsx)(E.HubEmailConnectionModalView, {
                                     invite: N
                                 })
                             })]

@@ -365,63 +365,62 @@
             let Q = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(X));
 
             function q(e) {
-                var t, n;
                 let {
-                    guild: a,
-                    channel: s,
-                    disableSorting: r,
-                    isFavoriteCategory: o,
-                    selected: u,
-                    collapsed: d,
-                    voiceStates: c
-                } = e, f = (0, i.useStateFromStoresObject)([j.default], () => ({
-                    unread: j.default.hasUnread(s.id),
-                    mentionCount: j.default.getMentionCount(s.id)
-                })), C = (0, i.useStateFromStores)([G.default], () => G.default.getChannelUnreadMode(s)), p = (0, i.useStateFromStoresObject)([O.default, D.default, b.default], () => {
-                    let e = O.default.getChannel(s.parent_id),
-                        t = D.default.getCheck(s.guild_id);
+                    guild: t,
+                    channel: n,
+                    disableSorting: a,
+                    isFavoriteCategory: s,
+                    selected: r,
+                    collapsed: o,
+                    voiceStates: u
+                } = e, d = (0, i.useStateFromStoresObject)([j.default], () => ({
+                    unread: j.default.hasUnread(n.id),
+                    mentionCount: j.default.getMentionCount(n.id)
+                })), c = (0, i.useStateFromStores)([G.default], () => G.default.getChannelUnreadMode(n)), f = (0, i.useStateFromStoresObject)([O.default, D.default, b.default], () => {
+                    let e = O.default.getChannel(n.parent_id),
+                        l = D.default.getCheck(n.guild_id);
                     return {
-                        canManageChannel: b.default.can(K.Permissions.MANAGE_CHANNELS, s),
-                        canReorderChannel: !0 !== r && (a.id === W.FAVORITES_RAW_GUILD_ID || (null != e ? b.default.can(K.Permissions.MANAGE_CHANNELS, e) : b.default.can(K.Permissions.MANAGE_CHANNELS, a))),
-                        canMoveMembers: b.default.can(K.Permissions.MOVE_MEMBERS, s),
-                        locked: !b.default.can(K.Permissions.CONNECT, s),
-                        bypassLimit: b.default.can(K.Permissions.MOVE_MEMBERS, s),
-                        unverifiedAccount: !t.canChat
+                        canManageChannel: b.default.can(K.Permissions.MANAGE_CHANNELS, n),
+                        canReorderChannel: !0 !== a && (t.id === W.FAVORITES_RAW_GUILD_ID || (null != e ? b.default.can(K.Permissions.MANAGE_CHANNELS, e) : b.default.can(K.Permissions.MANAGE_CHANNELS, t))),
+                        canMoveMembers: b.default.can(K.Permissions.MOVE_MEMBERS, n),
+                        locked: !b.default.can(K.Permissions.CONNECT, n),
+                        bypassLimit: b.default.can(K.Permissions.MOVE_MEMBERS, n),
+                        unverifiedAccount: !l.canChat
                     }
-                }), m = (0, i.useStateFromStores)([U.default], () => U.default.hasVideo(s.id)), g = (0, h.default)(s), I = (0, E.default)(s), _ = (0, A.useActiveEvent)(s.id), {
-                    isSubscriptionGated: N,
-                    needSubscriptionToAccess: L
-                } = (0, T.default)(s.id), x = (0, S.default)(), R = (0, i.useStateFromStores)([G.default], () => G.default.isFavorite(a.id, s.id)), M = e.connected || (null == x ? void 0 : x.channelId) === s.id, {
-                    enableHangStatus: y
+                }), C = (0, i.useStateFromStores)([U.default], () => U.default.hasVideo(n.id)), p = (0, h.default)(n), m = (0, E.default)(n), g = (0, A.useActiveEvent)(n.id), {
+                    isSubscriptionGated: I,
+                    needSubscriptionToAccess: _
+                } = (0, T.default)(n.id), N = (0, S.default)(), L = (0, i.useStateFromStores)([G.default], () => G.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
+                    enableHangStatus: R
                 } = v.HangStatusExperiment.useExperiment({
-                    guildId: s.guild_id,
+                    guildId: n.guild_id,
                     location: "VoiceChannel"
-                }), P = (0, B.default)({
-                    channel: s,
-                    isChannelSelected: u,
-                    isChannelCollapsed: d,
-                    voiceStates: c,
-                    isSubscriptionGated: N,
-                    needSubscriptionToAccess: L,
+                }), M = (0, B.default)({
+                    channel: n,
+                    isChannelSelected: r,
+                    isChannelCollapsed: o,
+                    voiceStates: u,
+                    isSubscriptionGated: I,
+                    needSubscriptionToAccess: _,
                     enableConnectedUserLimit: !0,
                     enableActivities: !0
-                }), w = M && null == P;
+                }), y = x && null == M;
                 return (0, l.jsx)(Q, {
-                    channelName: I,
-                    embeddedApps: g,
-                    embeddedActivityType: null === (n = g[0]) || void 0 === n ? void 0 : null === (t = n.embeddedActivity) || void 0 === t ? void 0 : t.type,
-                    video: m,
-                    hasActiveEvent: null != _,
-                    isSubscriptionGated: N,
-                    needSubscriptionToAccess: L,
+                    channelName: m,
+                    embeddedApps: p,
+                    embeddedActivityType: K.ActivityTypes.PLAYING,
+                    video: C,
+                    hasActiveEvent: null != g,
+                    isSubscriptionGated: I,
+                    needSubscriptionToAccess: _,
+                    ...d,
                     ...f,
-                    ...p,
                     ...e,
-                    connected: M,
-                    isFavoriteSuggestion: o && !R,
-                    forceShowButtons: w,
-                    channelInfo: P,
-                    enableHangStatus: y,
-                    unreadMode: C
+                    connected: x,
+                    isFavoriteSuggestion: s && !L,
+                    forceShowButtons: y,
+                    channelInfo: M,
+                    enableHangStatus: R,
+                    unreadMode: c
                 })
             }

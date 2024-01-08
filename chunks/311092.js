@@ -4,7 +4,7 @@
                     return C
                 },
                 DiscoveryTags: function() {
-                    return T
+                    return I
                 }
             }), n("222007");
             var a = n("37983"),
@@ -88,7 +88,7 @@
                     LIGHT: c.tagLight,
                     ALT: c.tagAlt
                 },
-                T = e => {
+                I = e => {
                     let {
                         tags: t,
                         onTagClick: n,
@@ -98,23 +98,23 @@
                         guildId: d,
                         section: _
                     } = e, {
-                        ref: T,
-                        width: I
+                        ref: I,
+                        width: T
                     } = (0, o.default)(), [S, N] = s.useState(null), A = t.filter(e => !E.includes(e.toLowerCase()));
                     return s.useLayoutEffect(() => {
-                        if (null == T.current || null == I || 0 === I) return;
+                        if (null == I.current || null == T || 0 === T) return;
                         let e = 0,
                             t = 0,
-                            n = I - 40 - 4;
+                            n = T - 40 - 4;
                         for (let a = 0; a < A.length; a++) {
-                            let s = T.current.children[a],
+                            let s = I.current.children[a],
                                 i = s.clientWidth;
                             if (t += i + 4, a === A.length - 1 ? t > n + 40 : t > n) break;
                             e++
                         }
                         N(t => e <= A.length ? e : t)
-                    }, [I, T, A]), (0, a.jsxs)("ul", {
-                        ref: T,
+                    }, [T, I, A]), (0, a.jsxs)("ul", {
+                        ref: I,
                         className: l(c.tagContainer, i, {
                             [c.invisible]: null == S
                         }),

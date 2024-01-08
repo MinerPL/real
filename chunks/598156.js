@@ -18,8 +18,8 @@
                 _ = n("74456"),
                 h = n("206230"),
                 C = n("302437"),
-                T = n("665182"),
-                I = n("442174"),
+                I = n("665182"),
+                T = n("442174"),
                 S = n("69927"),
                 N = n("10641"),
                 A = n("509802"),
@@ -74,11 +74,11 @@
                     {
                         channelId: h
                     } = (0, B.useMessageRequestSidebarState)(),
-                    T = s.useCallback(() => {
+                    I = s.useCallback(() => {
                         let e = n.map(e => e.channel.id);
                         E(e)
                     }, [n, E]),
-                    I = s.useCallback(e => {
+                    T = s.useCallback(e => {
                         var t, s;
                         let {
                             row: r
@@ -106,7 +106,7 @@
                                 tag: "span",
                                 children: "•"
                             }), (0, a.jsx)(c.Button, {
-                                onClick: T,
+                                onClick: I,
                                 look: c.ButtonLooks.LINK,
                                 color: c.ButtonColors.LINK,
                                 size: c.ButtonSizes.SMALL,
@@ -115,7 +115,7 @@
                                 children: X.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
                             })]
                         }) : null]
-                    }, "title"), [t, T, u]);
+                    }, "title"), [t, I, u]);
                 return (n.length !== t && p.default.increment({
                     name: o.MetricEvents.MESSAGE_REQUEST_COUNT_DRIFT
                 }), 0 === n.length) ? (0, a.jsx)(W.default, {
@@ -142,7 +142,7 @@
                                 sectionHeight: q.LIST_SECTION_HEIGHT,
                                 rowHeight: q.LIST_ROW_HEIGHT,
                                 renderSection: S,
-                                renderRow: I,
+                                renderRow: T,
                                 sections: [n.length],
                                 chunkSize: 30,
                                 fade: !0,
@@ -160,11 +160,11 @@
                 } = e, s = (0, u.useStateFromStores)([M.default], () => M.default.getSidebarState(M.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), i = (0, u.useStateFromStores)([P.default], () => P.default.getChannel(null == s ? void 0 : s.channelId));
                 if (null == s || s.type !== R.SidebarType.VIEW_MESSAGE_REQUEST || null == i || !i.isPrivate()) return null;
                 let l = t - Q.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
-                return (0, a.jsx)(T.default, {
-                    sidebarType: T.ChatSidebarType.MessageRequestSidebar,
+                return (0, a.jsx)(I.default, {
+                    sidebarType: I.ChatSidebarType.MessageRequestSidebar,
                     maxWidth: l,
                     onWidthChange: n,
-                    children: (0, a.jsx)(I.default, {
+                    children: (0, a.jsx)(T.default, {
                         channel: i,
                         baseChannelId: M.MESSAGE_REQUESTS_BASE_CHANNEL_ID
                     })

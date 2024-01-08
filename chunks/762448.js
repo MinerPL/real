@@ -18,8 +18,8 @@
                 _ = n("50885"),
                 h = n("782340"),
                 C = n("148738"),
-                T = n("926622");
-            class I extends s.PureComponent {
+                I = n("926622");
+            class T extends s.PureComponent {
                 renderDiskUsageCircle() {
                     let {
                         metadata: e
@@ -101,7 +101,7 @@
                                     })
                                 }), (0, a.jsx)(l.FormItem, {
                                     title: h.default.Messages.USER_SETTINGS_GAMES_INSTALL_LOCATION,
-                                    className: T.marginTop20,
+                                    className: I.marginTop20,
                                     children: (0, a.jsx)(l.TextInput, {
                                         disabled: !0,
                                         value: e
@@ -225,7 +225,7 @@
                                 path: i,
                                 label: l
                             } = e;
-                            return (0, a.jsx)(I, {
+                            return (0, a.jsx)(T, {
                                 path: i,
                                 label: l,
                                 metadata: t[i],

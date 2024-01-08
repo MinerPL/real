@@ -65,8 +65,8 @@
                 _ = n("233069"),
                 h = n("766274"),
                 C = n("42203"),
-                T = n("305961"),
-                I = n("42887"),
+                I = n("305961"),
+                T = n("42887"),
                 S = n("377253"),
                 N = n("824563"),
                 A = n("697218"),
@@ -169,9 +169,9 @@
                 if (null == u) throw Error("Invalid user id: ".concat(o));
                 return {
                     nick: p.default.getName(e, t, u),
-                    mute: I.default.isLocalMute(u.id),
-                    volume: I.default.getLocalVolume(u.id),
-                    pan: I.default.getLocalPan(u.id),
+                    mute: T.default.isLocalMute(u.id),
+                    volume: T.default.getLocalVolume(u.id),
+                    pan: T.default.getLocalPan(u.id),
                     voice_state: {
                         mute: a,
                         deaf: s,
@@ -209,7 +209,7 @@
             }
 
             function B(e, t, n) {
-                let a = T.default.getGuild(e.getGuildId()),
+                let a = I.default.getGuild(e.getGuildId()),
                     s = null != a ? a.getApplicationId() : e.getApplicationId();
                 return s === t || n.indexOf(v.OAuth2Scopes.MESSAGES_READ) > -1
             }
@@ -284,7 +284,7 @@
             }
 
             function q(e) {
-                let t = I.default.getSettings(),
+                let t = T.default.getSettings(),
                     n = e => Object.values(e).sort((e, t) => e.index - t.index).map(e => ({
                         id: e.id,
                         name: e.name
@@ -292,12 +292,12 @@
                     a = e(t);
                 return {
                     input: {
-                        available_devices: n(I.default.getInputDevices()),
+                        available_devices: n(T.default.getInputDevices()),
                         device_id: t.inputDeviceId,
                         volume: t.inputVolume
                     },
                     output: {
-                        available_devices: n(I.default.getOutputDevices()),
+                        available_devices: n(T.default.getOutputDevices()),
                         device_id: t.outputDeviceId,
                         volume: t.outputVolume
                     },
@@ -319,7 +319,7 @@
             }
 
             function Q(e, t) {
-                let n = I.default.getSettings(e),
+                let n = T.default.getSettings(e),
                     a = t(n);
                 return {
                     input_mode: {

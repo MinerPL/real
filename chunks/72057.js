@@ -22,14 +22,14 @@
                     guildId: a,
                     context: p
                 } = e, {
-                    id: S
+                    id: T
                 } = t, {
-                    loading: _,
-                    note: T
-                } = (0, d.default)(S), v = !_ && null != T && T.length > 0, A = p === c.AppContext.POPOUT, m = n.useContext(r.AnalyticsContext);
-                return S === s.default.getId() || o.default.hidePersonalInformation || A ? null : (0, i.jsx)(l.MenuItem, {
+                    loading: A,
+                    note: S
+                } = (0, d.default)(T), v = !A && null != S && S.length > 0, _ = p === c.AppContext.POPOUT, m = n.useContext(r.AnalyticsContext);
+                return T === s.default.getId() || o.default.hidePersonalInformation || _ ? null : (0, i.jsx)(l.MenuItem, {
                     id: "note",
-                    label: _ ? I.default.Messages.LOADING_NOTE : v ? I.default.Messages.EDIT_NOTE : I.default.Messages.ADD_NOTE,
+                    label: A ? I.default.Messages.LOADING_NOTE : v ? I.default.Messages.EDIT_NOTE : I.default.Messages.ADD_NOTE,
                     action: () => {
                         (0, u.openUserProfileModal)({
                             userId: t.id,

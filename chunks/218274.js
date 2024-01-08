@@ -175,7 +175,7 @@
                 } = e, {
                     AnalyticsLocationProvider: I,
                     analyticsLocations: E
-                } = (0, o.default)(d.default.ACTIVITY_CHANNEL_SELECTOR), S = (0, T.useActivityShelfItemData)(null != l ? l : null, null != t ? t : null), g = (0, A.default)(), _ = (0, n.useStateFromStores)([f.default, m.default], () => f.default.getChannel(m.default.getChannelId())), j = (0, n.useStateFromStores)([u.default], () => h && !u.default.disableInviteWithTextChannelActivityLaunch), V = (0, n.useStateFromStores)([p.default], () => null != v && "" !== v && p.default.getEmbeddedActivitiesForChannel(v).some(e => e.application_id === t)), R = L(l), b = async () => {
+                } = (0, o.default)(d.default.ACTIVITY_CHANNEL_SELECTOR), S = (0, T.useActivityShelfItemData)(null != l ? l : null, null != t ? t : null), g = (0, A.default)(), _ = (0, n.useStateFromStores)([f.default, m.default], () => f.default.getChannel(m.default.getChannelId())), j = (0, n.useStateFromStores)([u.default], () => h && !u.default.disableInviteWithTextChannelActivityLaunch), V = (0, n.useStateFromStores)([p.default], () => null != v && "" !== v && p.default.getEmbeddedActivitiesForChannel(v).some(e => e.applicationId === t)), R = L(l), b = async () => {
                     if (null == v || "" === v || null == S || null == l || "" === l) return;
                     let e = await (0, C.default)({
                         activityItem: S,

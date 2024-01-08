@@ -16,8 +16,8 @@
                 _ = n("376556"),
                 h = n("706508"),
                 C = n("287585"),
-                T = n("309570"),
-                I = n("985677"),
+                I = n("309570"),
+                T = n("985677"),
                 S = n("429928"),
                 N = n("502651"),
                 A = n("29088"),
@@ -95,7 +95,7 @@
                     } = this.props, {
                         timestamps: n
                     } = t;
-                    return null == n || !(0, I.default)(t) || (0, S.default)(t) ? null : J(e = (0, T.default)(t) ? (0, i.jsx)($, {
+                    return null == n || !(0, T.default)(t) || (0, S.default)(t) ? null : J(e = (0, I.default)(t) ? (0, i.jsx)($, {
                         timestamps: n
                     }) : (0, i.jsx)(U.default, {
                         start: n.start,
@@ -487,42 +487,42 @@
                     }), f]
                 })
             }, es.EmbeddedActivitySection = e => {
-                var t;
                 let {
-                    activity: n,
-                    channel: a,
-                    guildId: s,
-                    participants: r
-                } = e, o = (0, m.default)(), [d, E] = l.useState(null);
+                    activity: t,
+                    channel: n,
+                    guildId: a,
+                    participants: s
+                } = e, r = (0, m.default)(), [o, d] = l.useState(null), E = t.application_id;
                 l.useEffect(() => {
-                    null != n.application_id && (0, H.fetchAssetIds)(n.application_id, ["embedded_background"]).then(e => {
+                    null != E && (0, H.fetchAssetIds)(E, ["embedded_background"]).then(e => {
                         let [t] = e;
-                        return E(t)
+                        return d(t)
                     })
-                }, [n.application_id]);
-                let _ = (0, u.useStateFromStoresArray)([y.default, P.default], () => Array.from(r).map(e => P.default.getId() === e ? null : y.default.getUser(e)).filter(V.isNotNullish)),
+                }, [E]);
+                let _ = (0, u.useStateFromStoresArray)([y.default, P.default], () => Array.from(s).map(e => P.default.getId() === e ? null : y.default.getUser(e)).filter(V.isNotNullish)),
                     C = (0, f.useAnalyticsContext)(),
                     {
-                        analyticsLocations: T
-                    } = (0, g.default)(),
-                    I = R.default.getApplication(null !== (t = null == n ? void 0 : n.application_id) && void 0 !== t ? t : "");
-                if (null == I) return null;
-                let S = null != n.created_at && n.created_at > 0 ? {
-                        start: n.created_at
+                        analyticsLocations: I
+                    } = (0, g.default)();
+                if (null == E) return null;
+                let T = R.default.getApplication(E);
+                if (null == T) return null;
+                let S = null != t.created_at && t.created_at > 0 ? {
+                        start: t.created_at
                     } : void 0,
-                    N = (0, H.getAssetImage)(I.id, d, 300);
+                    N = (0, H.getAssetImage)(T.id, o, 300);
                 return (0, i.jsxs)(ee, {
                     children: [(0, i.jsxs)("div", {
                         className: q.embeddedActivityTopRow,
                         children: [(0, i.jsx)(b.default, {
-                            game: I,
+                            game: T,
                             size: b.default.Sizes.XSMALL,
                             className: q.embeddedActivityIcon
                         }), (0, i.jsx)("div", {
                             className: q.embeddedActivityName,
                             children: (0, i.jsx)(c.Text, {
                                 variant: "text-sm/semibold",
-                                children: I.name
+                                children: T.name
                             })
                         }), null != S ? (0, i.jsx)("div", {
                             className: q.embeddedActivityTimeElapsed,
@@ -540,26 +540,26 @@
                             className: q.embeddedActivityPlayerContainer,
                             children: [null != N ? (0, i.jsx)("img", {
                                 src: N,
-                                alt: I.name,
+                                alt: T.name,
                                 className: q.embeddedActivityImage
                             }) : null, (0, i.jsxs)("div", {
                                 className: q.embeddedActivityImageOverlay,
                                 children: [(0, i.jsx)(M.Avatars, {
                                     users: _,
-                                    guildId: s,
-                                    channelId: a.id
+                                    guildId: a,
+                                    channelId: n.id
                                 }), (0, i.jsx)("div", {
                                     className: q.embeddedActivityJoinWrapper,
                                     children: (0, i.jsx)(c.Button, {
                                         size: c.Button.Sizes.SMALL,
                                         onClick: e => {
                                             e.stopPropagation(), (0, h.default)({
-                                                activity: n,
-                                                currentEmbeddedApplication: o,
-                                                activityChannelId: a.id,
+                                                applicationId: E,
+                                                currentEmbeddedApplication: r,
+                                                activityChannelId: n.id,
                                                 locationObject: C.location,
                                                 embeddedActivitiesManager: p.default,
-                                                analyticsLocations: T
+                                                analyticsLocations: I
                                             })
                                         },
                                         children: z.default.Messages.JOIN

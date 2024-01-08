@@ -18,8 +18,8 @@
                 _ = n("860285"),
                 h = n("47319"),
                 C = n("86878"),
-                T = n("686470"),
-                I = n("568307"),
+                I = n("686470"),
+                T = n("568307"),
                 S = n("535974"),
                 N = n("599110"),
                 A = n("602043"),
@@ -51,17 +51,17 @@
                     let {
                         currentActivities: t
                     } = e, n = s.useContext(N.AnalyticsContext);
-                    return (0, i.useStateFromStoresArray)([I.default, T.default, _.default, S.default, C.default], () => t.filter(e => !(0, E.default)(e.activity)).map(e => {
+                    return (0, i.useStateFromStoresArray)([T.default, I.default, _.default, S.default, C.default], () => t.filter(e => !(0, E.default)(e.activity)).map(e => {
                         let {
                             activity: t,
                             game: a
-                        } = e, s = T.default.getActiveLibraryApplication(a.id);
+                        } = e, s = I.default.getActiveLibraryApplication(a.id);
                         return {
                             ...e,
                             libraryApplication: s,
                             canJoin: null != t && (0, c.default)(t, p.ActivityFlags.JOIN) && t.type === p.ActivityTypes.PLAYING,
                             canPlay: (0, A.isLaunchable)({
-                                LibraryApplicationStore: T.default,
+                                LibraryApplicationStore: I.default,
                                 LaunchableGameStore: _.default,
                                 DispatchApplicationStore: S.default,
                                 ConnectedAppsStore: C.default,
@@ -69,7 +69,7 @@
                                 branchId: null != s ? s.branchId : null
                             }),
                             isLaunching: _.default.launchingGames.has(a.id),
-                            isRunning: I.default.getRunningVerifiedApplicationIds().includes(a.id),
+                            isRunning: T.default.getRunningVerifiedApplicationIds().includes(a.id),
                             location: n.location
                         }
                     }), [n.location, t])

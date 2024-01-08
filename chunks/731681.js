@@ -19,8 +19,8 @@
                 _ = n("702411"),
                 h = n("226511"),
                 C = n("735201"),
-                T = n("957255"),
-                I = n("833781"),
+                I = n("957255"),
+                T = n("833781"),
                 S = n("572182"),
                 N = n("201952"),
                 A = n("427459"),
@@ -38,13 +38,13 @@
                     {
                         lastDismissedGracePeriod: s,
                         isGracePeriodVisible: p
-                    } = (0, l.useStateFromStoresObject)([I.default], () => ({
-                        lastDismissedGracePeriod: I.default.getLastDismissedGracePeriodForGuild(n),
-                        isGracePeriodVisible: I.default.isVisible(n)
+                    } = (0, l.useStateFromStoresObject)([T.default], () => ({
+                        lastDismissedGracePeriod: T.default.getLastDismissedGracePeriodForGuild(n),
+                        isGracePeriodVisible: T.default.isVisible(n)
                     })),
                     g = (0, l.useStateFromStores)([h.default], () => h.default.isVisible(e)),
                     R = (0, l.useStateFromStores)([N.default], () => N.default.isVisible(e)),
-                    O = (0, l.useStateFromStores)([T.default], () => T.default.can(m.Permissions.ADMINISTRATOR, e)),
+                    O = (0, l.useStateFromStores)([I.default], () => I.default.can(m.Permissions.ADMINISTRATOR, e)),
                     L = null != s && Date.now() - s <= m.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
                     v = null != e ? e.premiumSubscriberCount : 0,
                     M = (0, A.getGuildTierFromAppliedBoostCount)(v, n) !== m.BoostedGuildTiers.NONE,

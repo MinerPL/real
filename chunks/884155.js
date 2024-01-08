@@ -45,10 +45,10 @@
                     checkSoundSharing: !0
                 }), D = (0, r.useStateFromStores)([C.default], () => C.default.isGuestOrLurker(i.guild_id, x)), U = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
                     let {
-                        connections: t
+                        userIds: t
                     } = e;
                     return t.has(x)
-                }), [x, i.id]), w = (0, c.default)(null != U ? [U.application_id] : []), [F, k] = (0, r.useStateFromStoresArray)([m.default], () => [m.default.getStreamForUser(x, i.getGuildId()), m.default.getActiveStreamForUser(x, i.getGuildId())], [i, x]), V = (0, r.useStateFromStores)([I.default], () => I.default.getSessionById(u)), B = N.default.useName(s), H = (0, r.useStateFromStores)([v.default], () => v.default.getVoicePlatformForChannel(i.id, x), [i.id, x]), {
+                }), [x, i.id]), w = (0, c.default)(null != U ? [U.applicationId] : []), [F, k] = (0, r.useStateFromStoresArray)([m.default], () => [m.default.getStreamForUser(x, i.getGuildId()), m.default.getActiveStreamForUser(x, i.getGuildId())], [i, x]), V = (0, r.useStateFromStores)([I.default], () => I.default.getSessionById(u)), B = N.default.useName(s), H = (0, r.useStateFromStores)([v.default], () => v.default.getVoicePlatformForChannel(i.id, x), [i.id, x]), {
                     enableHangStatus: G
                 } = f.HangStatusExperiment.useExperiment({
                     guildId: i.guild_id,

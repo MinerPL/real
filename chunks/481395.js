@@ -18,8 +18,8 @@
                 _ = n("42887"),
                 h = n("385649"),
                 C = n("27618"),
-                T = n("18494"),
-                I = n("282109"),
+                I = n("18494"),
+                T = n("282109"),
                 S = n("697218"),
                 N = n("158998"),
                 A = n("76629"),
@@ -112,7 +112,7 @@
                 if (A || _.default.isSelfDeaf()) return !1;
                 let m = c.default.getChannel(f);
                 if (null == m) return !1;
-                let R = T.default.getChannelId(),
+                let R = I.default.getChannelId(),
                     L = d.default.getCurrentSidebarChannelId(R),
                     v = f === R || f === L,
                     M = o.EnableTTSCommand.getSetting() && S.tts && v,
@@ -122,7 +122,7 @@
                     if (O.indexOf(S.id) >= 0) return !1;
                     O.unshift(S.id) > 10 && O.pop();
                     let e = m.getGuildId();
-                    if (null != e && I.default.getMutedChannels(e).has(f)) return !1;
+                    if (null != e && T.default.getMutedChannels(e).has(f)) return !1;
                     let t = null !== (l = null !== (i = E.default.getNick(e, null === (a = S.author) || void 0 === a ? void 0 : a.id)) && void 0 !== i ? i : N.default.getName(S.author)) && void 0 !== l ? l : "",
                         n = S.type === g.MessageTypes.REPLY ? null === (s = S.referenced_message) || void 0 === s ? void 0 : s.author : null,
                         o = null != n ? null !== (r = E.default.getNick(e, null == n ? void 0 : n.id)) && void 0 !== r ? r : N.default.getName(n) : null,

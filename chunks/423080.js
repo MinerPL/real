@@ -118,7 +118,7 @@
                     let e = 0;
                     for (let t of I) e += S.default.getParticipantCount(t, h.StageChannelParticipantNamedIndex.AUDIENCE);
                     return e
-                }), O = (0, u.useStateFromStoresArray)([N.default], () => N.default.getAllApplicationStreams().filter(e => e.guildId === c).map(e => e.ownerId), [c]), U = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(c).flatMap(e => Array.from(e.connections.keys())), [c]), G = (0, u.useStateFromStoresArray)([v.default], () => U.map(e => v.default.getUser(e)), [U]), F = (0, u.useStateFromStoresArray)([v.default], () => O.map(e => v.default.getUser(e)), [O]), V = H(P.default, g.filter(e => !O.includes(e.id) && !U.includes(e.id)), c);
+                }), O = (0, u.useStateFromStoresArray)([N.default], () => N.default.getAllApplicationStreams().filter(e => e.guildId === c).map(e => e.ownerId), [c]), U = (0, u.useStateFromStoresArray)([f.default], () => f.default.getEmbeddedActivitiesForGuild(c).flatMap(e => Array.from(e.userIds)), [c]), G = (0, u.useStateFromStoresArray)([v.default], () => U.map(e => v.default.getUser(e)), [U]), F = (0, u.useStateFromStoresArray)([v.default], () => O.map(e => v.default.getUser(e)), [O]), V = H(P.default, g.filter(e => !O.includes(e.id) && !U.includes(e.id)), c);
                 let K = (t = c, i = _, s = R, 0 === i.length ? null : (0, n.jsxs)("div", {
                         className: k.row,
                         children: [(0, n.jsx)(L.default, {

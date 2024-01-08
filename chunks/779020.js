@@ -18,8 +18,8 @@
                 _ = n("70614"),
                 h = n("79112"),
                 C = n("206230"),
-                T = n("951212"),
-                I = n("827792"),
+                I = n("951212"),
+                T = n("827792"),
                 S = n("670984"),
                 N = n("141962"),
                 A = n("581516"),
@@ -72,8 +72,8 @@
                 e_ = n("1501"),
                 eh = n("838857"),
                 eC = n("393414"),
-                eT = n("828309"),
-                eI = n("29322"),
+                eI = n("828309"),
+                eT = n("29322"),
                 eS = n("208021"),
                 eN = n("582713"),
                 eA = n("949000"),
@@ -113,7 +113,7 @@
                 e1 = n("56235");
             n("72177"), n("392453"), n("366679"), n("848872"), n("189857"), n("144747"), n("698041"), n("552712"), n("367530"), n("429464"), n("205817"), n("767960"), n("26092"), n("790618"), n("424562"), n("900938"), n("492114"), n("161810"), n("901998"), n("684442"), n("799286"), n("470055"), n("140596");
             let e2 = !1;
-            (0, p.initSessionHeartbeatScheduler)(), o.default.initialize(), eT.default.loadServer(), eQ.isPlatformEmbedded && (eZ.default.on("USER_SETTINGS_OPEN", () => {
+            (0, p.initSessionHeartbeatScheduler)(), o.default.initialize(), eI.default.loadServer(), eQ.isPlatformEmbedded && (eZ.default.on("USER_SETTINGS_OPEN", () => {
                 !ew.default.getLayers().includes(eJ.Layers.USER_SETTINGS) && h.default.open(eJ.UserSettingsSections.ACCOUNT)
             }), eZ.default.on("LAUNCH_APPLICATION", (e, t) => {
                 let n = eF.default.getActiveLibraryApplication(t);
@@ -447,7 +447,7 @@
             }
             class ts extends s.PureComponent {
                 componentDidMount() {
-                    P.default.initialize(), eZ.default.setZoomFactor(C.default.zoom), eT.default.init(), v.default.initialize(), eo.default.initialize(), k.default.initialize(), ex.default.initialize(), w.default.initialize(), ed.default.initialize(), J.default.initialize(), T.default.init(), B.default.init(), F.default.init(), ea.default.initialize(), m.default.initialize(), j.default.initialize(), ec.default.initialize(), A.default.initialize(), ey.default.initialize(), er.default.initialize(), N.default.initialize(), Y.default.init(), Z.default.init(), eK.default.init(), eq.default.init(), S.default.initialize(), eO.default.init(), eW.default.init(), eY.default.init(), eM.default.init(), em.default.initialize(), ep.default.initialize(), ev.default.initialize(), eP.default.init(), G.default.initialize(), I.default.initialize(), eI.default.initialize(), eA.default.initialize(), ei.default.initialize(), es.default.initialize(), el.default.initialize(), D.default.initialize(), eE.default.initialize(), X.default.init({
+                    P.default.initialize(), eZ.default.setZoomFactor(C.default.zoom), eI.default.init(), v.default.initialize(), eo.default.initialize(), k.default.initialize(), ex.default.initialize(), w.default.initialize(), ed.default.initialize(), J.default.initialize(), I.default.init(), B.default.init(), F.default.init(), ea.default.initialize(), m.default.initialize(), j.default.initialize(), ec.default.initialize(), A.default.initialize(), ey.default.initialize(), er.default.initialize(), N.default.initialize(), Y.default.init(), Z.default.init(), eK.default.init(), eq.default.init(), S.default.initialize(), eO.default.init(), eW.default.init(), eY.default.init(), eM.default.init(), em.default.initialize(), ep.default.initialize(), ev.default.initialize(), eP.default.init(), G.default.initialize(), T.default.initialize(), eT.default.initialize(), eA.default.initialize(), ei.default.initialize(), es.default.initialize(), el.default.initialize(), D.default.initialize(), eE.default.initialize(), X.default.init({
                         hasModalOpen: u.hasAnyModalOpen,
                         openModal: () => (0, u.openModalLazy)(async () => {
                             let {
@@ -460,7 +460,7 @@
                     }), U.default.init(), $.default.initialize(), ef.default.initialize(), eu.default.initialize(), b.default.initialize(), this.rewriterUnlisten = e_.default.addRouteRewriter(this.ensureChannelMatchesGuild), this.historyUnlisten = e_.default.addRouteChangeListener(this.handleHistoryChange)
                 }
                 componentWillUnmount() {
-                    P.default.terminate(), ex.default.terminate(), ed.default.terminate(), eo.default.terminate(), v.default.terminate(), A.default.terminate(), ey.default.terminate(), N.default.terminate(), ec.default.terminate(), er.default.terminate(), ev.default.terminate(), S.default.terminate(), G.default.terminate(), $.default.terminate(), I.default.terminate(), ef.default.terminate(), eI.default.terminate(), eA.default.terminate(), ei.default.terminate(), es.default.terminate(), el.default.terminate(), D.default.terminate(), eu.default.terminate(), b.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
+                    P.default.terminate(), ex.default.terminate(), ed.default.terminate(), eo.default.terminate(), v.default.terminate(), A.default.terminate(), ey.default.terminate(), N.default.terminate(), ec.default.terminate(), er.default.terminate(), ev.default.terminate(), S.default.terminate(), G.default.terminate(), $.default.terminate(), T.default.terminate(), ef.default.terminate(), eT.default.terminate(), eA.default.terminate(), ei.default.terminate(), es.default.terminate(), el.default.terminate(), D.default.terminate(), eu.default.terminate(), b.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
                 }
                 handleHistoryChange(e) {
                     let {

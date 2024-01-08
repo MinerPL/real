@@ -18,11 +18,11 @@
                 _ = p(),
                 h = g(),
                 C = null,
-                T = function() {
+                I = function() {
                     var e, t, n, a;
                     return (null === (t = window) || void 0 === t ? void 0 : null === (e = t.location) || void 0 === e ? void 0 : e.pathname) === d.FAMILY_CENTER_SUB_ROUTES.FAMILY_CENTER_MY_FAMILY ? d.FamilyCenterSubPages.REQUESTS : (null === (a = window) || void 0 === a ? void 0 : null === (n = a.location) || void 0 === n ? void 0 : n.pathname) === d.FAMILY_CENTER_SUB_ROUTES.FAMILY_CENTER_SETTINGS ? d.FamilyCenterSubPages.SETTINGS : d.FamilyCenterSubPages.ACTIVITY
                 }(),
-                I = !1,
+                T = !1,
                 S = !1,
                 N = null,
                 A = null,
@@ -91,7 +91,7 @@
                     teenId: r,
                     rangeStartId: o
                 } = n;
-                c = r, E = o, L(s), O(l), v(i), R(t), S = !1, N = a.default.fromTimestamp(Date.now()), I = !0
+                c = r, E = o, L(s), O(l), v(i), R(t), S = !1, N = a.default.fromTimestamp(Date.now()), T = !0
             }
 
             function D(e) {
@@ -158,7 +158,7 @@
                 let {
                     tab: t
                 } = e;
-                T = t
+                I = t
             }
 
             function w(e) {
@@ -235,13 +235,13 @@
                     return m[e]
                 }
                 getSelectedTab() {
-                    return T
+                    return I
                 }
                 getStartId() {
                     return E
                 }
                 getIsInitialized() {
-                    return I
+                    return T
                 }
                 getUserCountry() {
                     return A

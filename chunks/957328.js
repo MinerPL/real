@@ -18,8 +18,8 @@
                 _ = n("206230"),
                 h = n("619443"),
                 C = n("488284"),
-                T = n("870696"),
-                I = n("168851"),
+                I = n("870696"),
+                T = n("168851"),
                 S = n("50647"),
                 N = n("15435"),
                 A = n("637888"),
@@ -233,11 +233,11 @@
                     }, this._connectedSound.volume = 1
                 }
             }
-            var M = d.default.connectStores([h.default, I.default, T.default, _.default], () => ({
+            var M = d.default.connectStores([h.default, T.default, I.default, _.default], () => ({
                 isTryingToConnect: h.default.isTryingToConnect(),
                 connected: h.default.isConnected(),
-                incident: I.default.getIncident(),
-                soundpack: T.default.getSoundpack(),
+                incident: T.default.getIncident(),
+                soundpack: I.default.getSoundpack(),
                 reducedMotion: _.default.useReducedMotion
             }))(e => {
                 let {
