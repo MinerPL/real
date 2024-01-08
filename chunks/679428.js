@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return p
                 }
             }), n("222007");
             var i = n("872717"),
@@ -74,4 +74,4 @@
                     }, this.saveUserGuildSettings = f, this.saveUserGuildSettingsBulk = h
                 }
             }
-            var I = new _
+            var p = new _
