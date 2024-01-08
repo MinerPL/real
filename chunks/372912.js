@@ -23,7 +23,7 @@
                 g = n("782340"),
                 S = n("881812");
 
-            function _(e) {
+            function A(e) {
                 var t, a;
                 let {
                     userId: u,
@@ -44,11 +44,11 @@
                         })
                     })
                 }
-                let _ = null !== (a = null !== (t = null == E ? void 0 : E.nick) && void 0 !== t ? t : p.default.getName(m)) && void 0 !== a ? a : "???",
-                    A = null == E ? void 0 : E.colorString;
+                let A = null !== (a = null !== (t = null == E ? void 0 : E.nick) && void 0 !== t ? t : p.default.getName(m)) && void 0 !== a ? a : "???",
+                    _ = null == E ? void 0 : E.colorString;
                 return null == m ? (0, s.jsx)("span", {
                     className: l(S.threadCreatorName, S.unknownCreatorName),
-                    children: _
+                    children: A
                 }) : (0, s.jsx)(r.Popout, {
                     preload: () => (0, d.default)(m.id, m.getAvatarURL(C.guild_id, 80), {
                         guildId: C.guild_id,
@@ -67,14 +67,14 @@
                         className: S.threadCreatorName,
                         onContextMenu: g,
                         children: (0, s.jsx)(r.NameWithRole, {
-                            name: _,
-                            color: null != A ? A : void 0
+                            name: A,
+                            color: null != _ ? _ : void 0
                         })
                     })
                 })
             }
 
-            function A(e) {
+            function _(e) {
                 let {
                     channel: t
                 } = e, {
@@ -91,7 +91,7 @@
                         children: (0, s.jsx)("div", {
                             className: S.subtitle,
                             children: g.default.Messages.THREAD_STARTED_BY.format({
-                                usernameHook: (e, n) => (0, s.jsx)(_, {
+                                usernameHook: (e, n) => (0, s.jsx)(A, {
                                     userId: t.ownerId,
                                     channel: t
                                 }, n)
@@ -119,7 +119,7 @@
                         })
                     }), (0, s.jsx)(m.EmptyMessageHeader, {
                         children: n.name
-                    }), (0, s.jsx)(A, {
+                    }), (0, s.jsx)(_, {
                         channel: n
                     })]
                 })

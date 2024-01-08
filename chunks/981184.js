@@ -1,21 +1,21 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return r
                 }
             });
             var a = n("37983");
             n("884691");
-            var r = n("364082"),
-                s = e => {
+            var s = n("364082"),
+                r = e => {
                     let {
                         children: t,
                         shouldAnimate: n
                     } = e;
                     return n ? (0, a.jsx)("div", {
-                        className: r.outerContainer,
+                        className: s.outerContainer,
                         children: (0, a.jsx)("div", {
-                            className: r.innerContainer,
+                            className: s.innerContainer,
                             children: t
                         })
                     }) : t

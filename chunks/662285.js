@@ -27,8 +27,8 @@
                 y = n("550368"),
                 v = n("613691"),
                 M = n("450484"),
-                L = n("49111");
-            let D = p.default.get(L.PlatformTypes.SPOTIFY),
+                D = n("49111");
+            let L = p.default.get(D.PlatformTypes.SPOTIFY),
                 U = "hm://pusher/v1/connections/";
             (r = s || (s = {})).PLAYER_STATE_CHANGED = "PLAYER_STATE_CHANGED", r.DEVICE_STATE_CHANGED = "DEVICE_STATE_CHANGED";
             let P = {
@@ -43,17 +43,17 @@
                 k = new E.Timeout,
                 F = new E.Timeout,
                 w = new E.Timeout,
+                V = new E.Timeout,
                 H = new E.Timeout,
-                x = new E.Timeout,
-                V = {},
+                x = {},
                 B = {},
                 Y = {},
                 K = !1,
                 j = null;
 
             function W() {
-                for (let e in V) {
-                    let t = V[e];
+                for (let e in x) {
+                    let t = x[e];
                     if (!t.connected || null == B[e]) continue;
                     let n = B[e].find(e => e.is_active);
                     if (null != n) return {
@@ -160,12 +160,12 @@
             }
 
             function Z(e, t) {
-                e in V ? (V[e].accessToken = t, G.info("Updated account access token: ".concat(e))) : (V[e] = new X(e, t), G.info("Added account: ".concat(e)))
+                e in x ? (x[e].accessToken = t, G.info("Updated account access token: ".concat(e))) : (x[e] = new X(e, t), G.info("Added account: ".concat(e)))
             }
 
             function J(e) {
-                if (!(e in V)) return;
-                V[e].disconnect(), delete V[e];
+                if (!(e in x)) return;
+                x[e].disconnect(), delete x[e];
                 let t = Y[e];
                 null != t && null != i && t.track.id === i.track.id && (i = null), delete Y[e], G.info("Removed account: ".concat(e))
             }
@@ -201,14 +201,14 @@
                     startTime: d
                 };
                 let f = "presence change";
-                n && (f = "started", R.default.track(L.AnalyticEvents.SPOTIFY_LISTEN_ALONG_STARTED, {
+                n && (f = "started", R.default.track(D.AnalyticEvents.SPOTIFY_LISTEN_ALONG_STARTED, {
                     party_id: u.id,
                     other_user_id: e
                 })), G.info("Listen along ".concat(f, ": ").concat(l.accountId, " to ").concat(e, " playing ").concat(r, " on ").concat(s.name))
             }
 
             function et() {
-                R.default.track(L.AnalyticEvents.SPOTIFY_LISTEN_ALONG_ENDED, {
+                R.default.track(D.AnalyticEvents.SPOTIFY_LISTEN_ALONG_ENDED, {
                     party_id: null != a ? a.partyId : null,
                     other_user_id: null != a ? a.userId : null
                 });
@@ -223,12 +223,12 @@
             }
 
             function en() {
-                let e = Object.keys(V),
+                let e = Object.keys(x),
                     t = S.default.getAccounts().filter(e => {
                         let {
                             type: t
                         } = e;
-                        return t === L.PlatformTypes.SPOTIFY
+                        return t === D.PlatformTypes.SPOTIFY
                     });
                 if (null == t) return !1;
                 let n = t.map(e => {
@@ -255,7 +255,7 @@
                 let {
                     socket: t
                 } = e;
-                K = !0, (0, v.pause)(t.accountId, t.accessToken), R.default.track(L.AnalyticEvents.SPOTIFY_AUTO_PAUSED), G.info("Playback auto paused")
+                K = !0, (0, v.pause)(t.accountId, t.accessToken), R.default.track(D.AnalyticEvents.SPOTIFY_AUTO_PAUSED), G.info("Playback auto paused")
             }
 
             function ea(e) {
@@ -358,15 +358,15 @@
                     })()), (0, v.fetchIsSpotifyProtocolRegistered)()
                 }
                 hasConnectedAccount() {
-                    return Object.keys(V).length > 0
+                    return Object.keys(x).length > 0
                 }
                 getActiveSocketAndDevice() {
                     return W()
                 }
                 getPlayableComputerDevices() {
                     let e = [];
-                    for (let t in V) {
-                        let n = V[t];
+                    for (let t in x) {
+                        let n = x[t];
                         if (!n.connected || null == B[t]) continue;
                         let i = B[t].find(e => !e.is_restricted && "Computer" === e.type);
                         null != i && e.push({
@@ -423,11 +423,11 @@
                         return t.replace(/;/g, "")
                     }).join("; "));
                     let f = {},
-                        h = null != s.image ? (0, y.getAssetFromImageURL)(L.PlatformTypes.SPOTIFY, s.image.url) : null;
+                        h = null != s.image ? (0, y.getAssetFromImageURL)(D.PlatformTypes.SPOTIFY, s.image.url) : null;
                     null != s.image && null != h && (f.large_image = h), "single" !== s.type && (f.large_text = s.name), null != _ && (t = _.uri), n = null != a && null != a.partyId ? a.partyId : "".concat(M.SPOTIFY_PARTY_PREFIX).concat(m.default.getId());
                     let p = r.length > 128 ? r.substring(0, 125) + "..." : r,
                         T = {
-                            name: D.name,
+                            name: L.name,
                             assets: f,
                             details: p,
                             state: e,
@@ -439,7 +439,7 @@
                                 id: n
                             }
                         };
-                    return !d && (T.sync_id = u, T.flags = L.ActivityFlags.PLAY | L.ActivityFlags.SYNC, T.metadata = {
+                    return !d && (T.sync_id = u, T.flags = D.ActivityFlags.PLAY | D.ActivityFlags.SYNC, T.metadata = {
                         context_uri: t,
                         album_id: s.id,
                         artist_ids: E.map(e => {
@@ -472,7 +472,7 @@
                     let {
                         accountId: t,
                         isPremium: n
-                    } = e, i = V[t];
+                    } = e, i = x[t];
                     if (null == i) return !1;
                     i.isPremium = n, G.info("Profile updated for ".concat(t, ": isPremium = ").concat(n))
                 },
@@ -498,7 +498,7 @@
                         } else B[t] = [u], c = !0
                     }
                     n ? null == j || j.start(3e4, ei) : (s = null, null == j || j.stop());
-                    let E = S.default.getAccount(t, L.PlatformTypes.SPOTIFY);
+                    let E = S.default.getAccount(t, D.PlatformTypes.SPOTIFY);
                     if (null == E) return c;
                     let f = Y[t],
                         h = null != s ? {
@@ -516,11 +516,11 @@
                         p = null != u && null != a && 0 === r && !n;
                     !p && (Y[t] = h);
                     let C = i;
-                    if (i = o.values(Y).find(e => null != e), ea(m.default.getId()), null == s || p ? H.stop() : H.start(s.duration - r + 5e3, () => z(E.id)), null != a && (!n && r > 0 || null == u || null != h && a.trackId !== h.track.id) ? (G.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(5e3, "ms")), x.start(5e3, () => {
+                    if (i = o.values(Y).find(e => null != e), ea(m.default.getId()), null == s || p ? V.stop() : V.start(s.duration - r + 5e3, () => z(E.id)), null != a && (!n && r > 0 || null == u || null != h && a.trackId !== h.track.id) ? (G.info("Listen along active but playback stopped or track changed. Stopping listen along in ".concat(5e3, "ms")), H.start(5e3, () => {
                             G.info("Stopping listening along"), (0, T.default)(), z(E.id)
-                        })) : x.isStarted() && (G.info("Listen along stop cancelled as playback of track resumed"), x.stop()), C === i || null == f && null == h || null != f && null != h && f.track.id === h.track.id && f.startTime === h.startTime) return c;
-                    null != s && R.default.track(L.AnalyticEvents.ACTIVITY_UPDATED, {
-                        party_platform: L.PlatformTypes.SPOTIFY,
+                        })) : H.isStarted() && (G.info("Listen along stop cancelled as playback of track resumed"), H.stop()), C === i || null == f && null == h || null != f && null != h && f.track.id === h.track.id && f.startTime === h.startTime) return c;
+                    null != s && R.default.track(D.AnalyticEvents.ACTIVITY_UPDATED, {
+                        party_platform: D.PlatformTypes.SPOTIFY,
                         track_id: s.id,
                         has_images: !0
                     })
@@ -599,7 +599,7 @@
                         let {
                             sourceId: e,
                             sound: n
-                        } = null == t ? void 0 : t.desktopSettings, i = null != e && A.default.getObservedAppNameForWindow(e) === D.name;
+                        } = null == t ? void 0 : t.desktopSettings, i = null != e && A.default.getObservedAppNameForWindow(e) === L.name;
                         i && n ? (j = new E.Interval).start(3e4, ei) : j = null
                     }
                 }

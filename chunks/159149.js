@@ -27,8 +27,8 @@
                     primaryTooltip: _,
                     primaryDisabled: p,
                     primarySubmitting: I,
-                    onPrimary: A,
-                    secondaryText: C,
+                    onPrimary: C,
+                    secondaryText: A,
                     onSecondary: h
                 } = e;
                 return (0, o.jsxs)(l.ModalFooter, {
@@ -43,7 +43,7 @@
                                 disabled: p,
                                 submitting: I,
                                 color: 0 === i ? l.Button.Colors.BRAND : l.Button.Colors.GREEN,
-                                onClick: A
+                                onClick: C
                             };
                         return null != _ ? (0, o.jsx)(l.Tooltip, {
                             text: _,
@@ -60,11 +60,11 @@
                                 className: d.primaryIcon
                             }), E]
                         })
-                    })(), null == C ? null : (0, o.jsx)(l.Button, {
+                    })(), null == A ? null : (0, o.jsx)(l.Button, {
                         color: l.Button.Colors.PRIMARY,
                         look: l.Button.Looks.LINK,
                         onClick: h,
-                        children: C
+                        children: A
                     }), (0, o.jsx)(u.default, {}), null == t ? null : (0, o.jsx)(l.Button, {
                         className: d.back,
                         color: l.Button.Colors.PRIMARY,

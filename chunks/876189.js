@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return v
                 }
             }), n("222007");
             var i = n("37983"),
@@ -13,61 +13,61 @@
                 u = n("817963"),
                 d = n("305961"),
                 c = n("957255"),
-                E = n("677099"),
-                f = n("697218"),
+                f = n("677099"),
+                E = n("697218"),
                 _ = n("476263"),
-                I = n("368121"),
-                h = n("427459"),
-                m = n("305122"),
-                A = n("235004"),
-                N = n("846325"),
+                h = n("368121"),
+                m = n("427459"),
+                g = n("305122"),
+                p = n("235004"),
+                I = n("846325"),
                 S = n("782340"),
-                g = n("151355");
+                A = n("151355");
 
-            function p(e) {
+            function N(e) {
                 let {
                     availableSlots: t,
                     className: n
                 } = e;
                 return (0, i.jsxs)(o.Text, {
-                    className: s(g.suffixNode, n),
+                    className: s(A.suffixNode, n),
                     variant: "text-sm/medium",
                     color: "text-primary",
-                    children: [(0, i.jsx)(I.default, {
-                        className: g.speakerIcon
+                    children: [(0, i.jsx)(h.default, {
+                        className: A.speakerIcon
                     }), S.default.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT_AVAILABLE_COUNT.format({
                         slots: t
                     })]
                 })
             }
 
-            function T(e) {
+            function v(e) {
                 let {
                     value: t,
                     className: n,
                     onChange: l
-                } = e, I = (0, a.useStateFromStoresObject)([E.default, c.default, f.default, d.default], () => {
+                } = e, h = (0, a.useStateFromStoresObject)([f.default, c.default, E.default, d.default], () => {
                     let e = {};
-                    for (let t of E.default.getFlattenedGuildIds()) {
+                    for (let t of f.default.getFlattenedGuildIds()) {
                         let n = d.default.getGuild(t);
                         if (null == n) continue;
-                        let i = (0, u.getManageResourcePermissions)(n, c.default, f.default);
+                        let i = (0, u.getManageResourcePermissions)(n, c.default, E.default);
                         i.canCreateExpressions && (e[n.id] = n)
                     }
                     return e
-                }), T = (0, a.useStateFromStoresObject)([A.default], () => {
+                }), v = (0, a.useStateFromStoresObject)([p.default], () => {
                     let e = {};
-                    for (let [n, i] of Object.entries(I)) {
+                    for (let [n, i] of Object.entries(h)) {
                         var t;
-                        let r = (0, h.getAvailableSoundboardSoundCount)(null !== (t = A.default.getSoundsForGuild(n)) && void 0 !== t ? t : N.EMPTY_SOUND_LIST, i.premiumTier);
+                        let r = (0, m.getAvailableSoundboardSoundCount)(null !== (t = p.default.getSoundsForGuild(n)) && void 0 !== t ? t : I.EMPTY_SOUND_LIST, i.premiumTier);
                         e[n] = r
                     }
                     return e
-                }, [I]);
+                }, [h]);
                 r.useEffect(() => {
-                    (0, m.maybeFetchSoundboardSounds)()
+                    (0, g.maybeFetchSoundboardSounds)()
                 }, []);
-                let C = r.useMemo(() => Object.values(I).map(e => {
+                let R = r.useMemo(() => Object.values(h).map(e => {
                         let {
                             name: t,
                             id: n
@@ -75,37 +75,37 @@
                         return {
                             label: t,
                             value: n,
-                            disabled: T[n] <= 0
+                            disabled: v[n] <= 0
                         }
-                    }), [I, T]),
-                    R = r.useCallback(e => null == e || "" === e.value ? null : (0, i.jsx)(_.default, {
-                        className: s(g.guildSelectOptionIcon, {
-                            [g.disabledOption]: e.disabled
+                    }), [h, v]),
+                    C = r.useCallback(e => null == e || "" === e.value ? null : (0, i.jsx)(_.default, {
+                        className: s(A.guildSelectOptionIcon, {
+                            [A.disabledOption]: e.disabled
                         }),
-                        guild: I[e.value],
+                        guild: h[e.value],
                         size: _.default.Sizes.SMOL,
                         active: !0
-                    }), [I]),
-                    O = r.useCallback(e => {
+                    }), [h]),
+                    T = r.useCallback(e => {
                         let t = null == e ? void 0 : e.value;
-                        return null == t || "" === t ? null : (0, i.jsx)(p, {
+                        return null == t || "" === t ? null : (0, i.jsx)(N, {
                             className: s({
-                                [g.disabledOption]: null == e ? void 0 : e.disabled
+                                [A.disabledOption]: null == e ? void 0 : e.disabled
                             }),
-                            availableSlots: T[t]
+                            availableSlots: v[t]
                         })
-                    }, [T]),
-                    v = r.useCallback(e => (0, i.jsx)("div", {
+                    }, [v]),
+                    O = r.useCallback(e => (0, i.jsx)("div", {
                         className: s({
-                            [g.disabledOption]: e.disabled
+                            [A.disabledOption]: e.disabled
                         }),
                         children: e.label
                     }), []),
                     L = r.useCallback(e => {
-                        !(T[e] <= 0) && l(e)
-                    }, [T, l]),
+                        !(v[e] <= 0) && l(e)
+                    }, [v, l]),
                     D = (() => {
-                        let e = T[null != t ? t : ""];
+                        let e = v[null != t ? t : ""];
                         return null == e || e > 0 ? t : void 0
                     })();
                 return (0, i.jsx)(o.SearchableSelect, {
@@ -113,10 +113,10 @@
                     onChange: L,
                     value: D,
                     multi: !1,
-                    options: C,
-                    renderOptionPrefix: R,
-                    renderOptionSuffix: O,
-                    renderOptionLabel: v,
-                    placeholder: 0 === C.length ? S.default.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT_NONE_AVAILABLE : S.default.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT_PLACEHOLDER
+                    options: R,
+                    renderOptionPrefix: C,
+                    renderOptionSuffix: T,
+                    renderOptionLabel: O,
+                    placeholder: 0 === R.length ? S.default.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT_NONE_AVAILABLE : S.default.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT_PLACEHOLDER
                 })
             }

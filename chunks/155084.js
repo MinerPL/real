@@ -1,48 +1,48 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return a
                 }
             }), n("222007"), n("424973");
             var i = n("615361"),
                 r = n("872717"),
-                l = n("773336"),
-                o = n("827032"),
-                a = n("49111");
+                s = n("773336"),
+                l = n("827032"),
+                o = n("49111");
             let u = new Set(["darwin", "linux", "win32", "ios", "android"]);
-            var s = new class e {
+            var a = new class e {
                 increment(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                         {
                             name: n,
                             tags: r
                         } = e,
-                        a = {
+                        o = {
                             name: n,
-                            tags: (0, o.getGlobalTagsArray)()
+                            tags: (0, l.getGlobalTagsArray)()
                         };
                     null != r && r.forEach(e => {
-                        a.tags.push(e)
+                        o.tags.push(e)
                     });
-                    let s = function() {
-                        if ((0, l.isWeb)()) return "web";
+                    let a = function() {
+                        if ((0, s.isWeb)()) return "web";
                         {
-                            let e = (0, l.getPlatformName)();
+                            let e = (0, s.getPlatformName)();
                             return u.has(e) ? e : null
                         }
                     }();
-                    null != s && a.tags.push("platform:".concat(s));
-                    let d = function() {
+                    null != a && o.tags.push("platform:".concat(a));
+                    let c = function() {
                         let e = "{{cf_shim}}RELEASE_CHANNEL{{/cf_shim}}";
                         return i.ReleaseChannelsSets.ALL.has(e) ? e : null
                     }();
-                    null != d && a.tags.push("release_channel:".concat(d)), this._metrics.push(a), (t || this._metrics.length >= 100) && this._flush()
+                    null != c && o.tags.push("release_channel:".concat(c)), this._metrics.push(o), (t || this._metrics.length >= 100) && this._flush()
                 }
                 _flush() {
                     if (this._metrics.length > 0) {
                         let e = [...this._metrics];
                         r.default.post({
-                            url: a.Endpoints.METRICS,
+                            url: o.Endpoints.METRICS,
                             body: {
                                 metrics: e
                             },

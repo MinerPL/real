@@ -2,25 +2,25 @@
             let i, r;
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return c
                 }
             }), n("70102");
-            var l = n("697218"),
-                o = n("615931");
-            let a = () => {
+            var s = n("697218"),
+                l = n("615931");
+            let o = () => {
                 throw Error("updateModal has not been implemented.")
             };
             {
                 let e = n("670924");
-                i = e.showModal, a = e.updateModalProps, r = n("551042").closeModal
+                i = e.showModal, o = e.updateModalProps, r = n("551042").closeModal
             }
 
             function u(e) {
                 let {
                     promiseFn: t,
                     resolve: n,
-                    reject: l,
-                    modalProps: o = {},
+                    reject: s,
+                    modalProps: l = {},
                     hooks: {
                         onEarlyClose: u
                     } = {}
@@ -29,82 +29,82 @@
                     null == u || u();
                     return
                 }
-                let d = i(_, c, o);
+                let c = i(_, d, l);
 
-                function c() {
+                function d() {
                     null == u || u()
                 }
 
                 function f(e) {
-                    r(d), n(e)
+                    r(c), n(e)
                 }
 
                 function E(e) {
-                    r(d), l(e)
+                    r(c), s(e)
                 }
 
                 function _(e) {
-                    return a(d, _, c, {
-                        ...o,
+                    return o(c, _, d, {
+                        ...l,
                         isLoading: !0
-                    }), s({
+                    }), a({
                         promiseFn: t,
                         resolve: f,
                         reject: E,
                         code: e,
-                        mfaCodeHandler: p,
+                        mfaCodeHandler: I,
                         isModalOpen: !0
                     })
                 }
 
-                function p(e) {
+                function I(e) {
                     let {
                         res: t
                     } = e;
-                    a(d, _, c, {
-                        ...o,
+                    o(c, _, d, {
+                        ...l,
                         error: t.body.message
                     })
                 }
             }
 
-            function s(e) {
+            function a(e) {
                 let {
                     promiseFn: t,
                     resolve: n,
                     reject: i,
                     code: r,
-                    mfaCodeHandler: l = u,
-                    isModalOpen: o = !1,
-                    ...a
+                    mfaCodeHandler: s = u,
+                    isModalOpen: l = !1,
+                    ...o
                 } = e;
                 return t(null != r ? {
                     code: r
                 } : {}).then(n, e => {
                     var r, u;
-                    if (r = e, u = o, r.body && 60008 === r.body.code || u && 429 === r.status) return l({
+                    if (r = e, u = l, r.body && 60008 === r.body.code || u && 429 === r.status) return s({
                         promiseFn: t,
                         resolve: n,
                         reject: i,
                         res: e,
-                        ...a
+                        ...o
                     });
                     i(e)
                 })
             }
 
-            function d(e, t) {
+            function c(e, t) {
                 var n, i;
                 let {
-                    checkEnabled: r = null !== (i = null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.mfaEnabled) && void 0 !== i && i,
-                    ...a
+                    checkEnabled: r = null !== (i = null === (n = s.default.getCurrentUser()) || void 0 === n ? void 0 : n.mfaEnabled) && void 0 !== i && i,
+                    ...o
                 } = null != t ? t : {};
                 return new Promise((t, n) => {
-                    ((0, o.resolveThunk)(r) ? u : s)({
+                    ((0, l.resolveThunk)(r) ? u : a)({
                         promiseFn: e,
                         resolve: t,
                         reject: n,
-                        ...a
+                        ...o
                     })
                 })
             }

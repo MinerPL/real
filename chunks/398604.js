@@ -13,7 +13,7 @@
                     return M
                 },
                 isGuildEventEnded: function() {
-                    return L
+                    return D
                 },
                 default: function() {
                     return U
@@ -141,10 +141,10 @@
                 return !d.GuildScheduledEventStatusDone.has(e.status)
             }
 
-            function L(e) {
+            function D(e) {
                 return null != e && d.GuildScheduledEventStatusDone.has(e.status)
             }
-            class D extends l.default.Store {
+            class L extends l.default.Store {
                 getGuildScheduledEvent(e) {
                     var t;
                     return null == e ? null : null !== (t = E.get(e)) && void 0 !== t ? t : null
@@ -204,8 +204,8 @@
                     return null !== (i = null === (n = T[e]) || void 0 === n ? void 0 : n[a]) && void 0 !== i ? i : {}
                 }
             }
-            D.displayName = "GuildScheduledEventStore";
-            var U = new D(r.default, {
+            L.displayName = "GuildScheduledEventStore";
+            var U = new L(r.default, {
                 CONNECTION_OPEN: function(e) {
                     let {
                         guilds: t

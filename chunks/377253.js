@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return x
+                    return H
                 }
             }), n("222007"), n("702976"), n("424973"), n("860677");
             var i = n("917351"),
@@ -32,8 +32,8 @@
                 y = n("162771"),
                 v = n("697218"),
                 M = n("49111");
-            let L = new Set,
-                D = new o.default("MessageStore");
+            let D = new Set,
+                L = new o.default("MessageStore");
 
             function U() {
                 r.default.forEach(e => {
@@ -41,7 +41,7 @@
                         ready: !1,
                         loadingMore: !1
                     }))
-                }), L.clear()
+                }), D.clear()
             }
 
             function P() {
@@ -105,7 +105,7 @@
                     return (null === (n = e.embeds) || void 0 === n ? void 0 : n.filter(c.isNotAutomodEmbed).length) > 0 && (e = e.set("embeds", [])), "MESSAGE_SEND_FAILED_AUTOMOD" === t && (e = e.set("flags", (0, T.addFlag)(e.flags, M.MessageFlags.EPHEMERAL))), e
                 }), r.default.commit(s)
             }
-            class H extends l.default.Store {
+            class V extends l.default.Store {
                 initialize() {
                     this.waitFor(v.default, m.default, S.default, g.default, p.default, R.default, y.default, A.default, O.default, I.default), this.syncWith([_.default], () => {})
                 }
@@ -157,8 +157,8 @@
                     return null != this.getMessages(e).findNewest(e => e.author.id === (null == t ? void 0 : t.id))
                 }
             }
-            H.displayName = "MessageStore";
-            var x = new H(s.default, {
+            V.displayName = "MessageStore";
+            var H = new V(s.default, {
                 BACKGROUND_SYNC_CHANNEL_MESSAGES: function(e) {
                     let {
                         changesByChannelId: t
@@ -168,7 +168,7 @@
                         if (null == n) continue;
                         let i = n.cached || true;
                         if (!i) {
-                            D.log("Skipping background message sync for ".concat(e, " cached:").concat(n.cached, " ") + "ready:".concat(n.ready, " hasMoreAfter:").concat(n.hasMoreAfter, " ") + "isConnected:".concat(!1));
+                            L.log("Skipping background message sync for ".concat(e, " cached:").concat(n.cached, " ") + "ready:".concat(n.ready, " hasMoreAfter:").concat(n.hasMoreAfter, " ") + "isConnected:".concat(!1));
                             continue
                         }
                         n.mergeDelta(t[e].new_messages, t[e].modified_messages, t[e].deleted_message_ids)
@@ -246,7 +246,7 @@
                         truncateBottom: n,
                         truncateTop: i
                     } = e;
-                    D.log("Truncating messages for ".concat(t, " bottom:").concat(n, " top:").concat(i));
+                    L.log("Truncating messages for ".concat(t, " bottom:").concat(n, " top:").concat(i));
                     let a = r.default.getOrCreate(t);
                     a = a.truncate(n, i), r.default.commit(a)
                 },
@@ -254,7 +254,7 @@
                     let {
                         channelId: t
                     } = e;
-                    D.log("Clearing messages for ".concat(t)), r.default.clear(t), L.clear()
+                    L.log("Clearing messages for ".concat(t)), r.default.clear(t), D.clear()
                 },
                 MESSAGE_CREATE: function(e) {
                     let {
@@ -263,11 +263,11 @@
                         isPushNotification: i
                     } = e, a = r.default.getOrCreate(t);
                     if (i) {
-                        D.log("Inserting message tapped on from a push notification", n.id, n.channel_id), r.default.commit(a.receivePushNotification(n));
+                        L.log("Inserting message tapped on from a push notification", n.id, n.channel_id), r.default.commit(a.receivePushNotification(n));
                         return
                     }
                     if (!a.ready) return !1;
-                    null != n.nonce && n.state !== M.MessageStates.SENDING && L.has(n.nonce) && (a = a.remove(n.nonce), L.delete(n.nonce)), a = a.receiveMessage(n, S.default.isAtBottom(t)), r.default.commit(a)
+                    null != n.nonce && n.state !== M.MessageStates.SENDING && D.has(n.nonce) && (a = a.remove(n.nonce), D.delete(n.nonce)), a = a.receiveMessage(n, S.default.isAtBottom(t)), r.default.commit(a)
                 },
                 MESSAGE_SEND_FAILED: function(e) {
                     let {
@@ -310,7 +310,7 @@
                             revealedMessageId: null
                         })
                     }
-                    i = i.remove(t), r.default.commit(i), L.delete(t)
+                    i = i.remove(t), r.default.commit(i), D.delete(t)
                 },
                 MESSAGE_DELETE_BULK: function(e) {
                     let {
@@ -329,7 +329,7 @@
                         })
                     }
                     r.default.commit(l), t.forEach(e => {
-                        L.delete(e)
+                        D.delete(e)
                     })
                 },
                 MESSAGE_REVEAL: function(e) {
@@ -394,24 +394,24 @@
                 LOGOUT: function() {
                     r.default.forEach(e => {
                         r.default.clear(e.channelId)
-                    }), L.clear()
+                    }), D.clear()
                 },
                 UPLOAD_START: function(e) {
                     let {
                         message: t
                     } = e;
-                    null != t.nonce && L.add(t.nonce)
+                    null != t.nonce && D.add(t.nonce)
                 },
                 UPLOAD_FAIL: function(e) {
                     let {
                         channelId: t,
                         messageRecord: n
                     } = e, i = null == n ? void 0 : n.nonce;
-                    if (null != i && L.has(i)) {
+                    if (null != i && D.has(i)) {
                         let e = r.default.getOrCreate(t),
                             n = e.get(i);
                         if (null == n) return;
-                        e = (e = e.remove(i)).merge([n]), L.delete(i), r.default.commit(e)
+                        e = (e = e.remove(i)).merge([n]), D.delete(i), r.default.commit(e)
                     }
                 }
             })

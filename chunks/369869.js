@@ -19,17 +19,17 @@
                 E = n("777003"),
                 A = n("49111"),
                 _ = n("782340"),
-                m = n("125234"),
-                S = n("814076");
+                S = n("125234"),
+                m = n("814076");
 
             function C(e) {
                 let {
                     guildName: t
                 } = e;
                 return (0, a.jsxs)("div", {
-                    className: m.guildMemberProfileTooltip,
+                    className: S.guildMemberProfileTooltip,
                     children: [(0, a.jsx)(d.default, {
-                        className: m.guildMemberProfileTooltipNitroWheel
+                        className: S.guildMemberProfileTooltipNitroWheel
                     }), _.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
                         guildName: t
                     })]
@@ -53,10 +53,10 @@
                     lastSection: g,
                     children: [(0, a.jsxs)(r.Heading, {
                         variant: "eyebrow",
-                        className: S.title,
+                        className: m.title,
                         children: [_.default.Messages.USER_POPOUT_ABOUT_ME, null != t && N && (0, a.jsx)(r.Tooltip, {
                             color: r.Tooltip.Colors.CUSTOM,
-                            tooltipClassName: m.aboutMeGuildIconTooltip,
+                            tooltipClassName: S.aboutMeGuildIconTooltip,
                             "aria-label": _.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
                                 guildName: t.name
                             }),
@@ -82,8 +82,8 @@
                                 },
                                 guild: t,
                                 size: c.default.Sizes.SMOL,
-                                className: s(m.aboutMeGuildIcon, {
-                                    [m.nonPremiumHoverState]: !O
+                                className: s(S.aboutMeGuildIcon, {
+                                    [S.nonPremiumHoverState]: !O
                                 })
                             })
                         })]

@@ -23,15 +23,15 @@
                     textClassName: T,
                     guild: E,
                     guildMember: A
-                } = e, _ = (0, l.default)([r.default], () => r.default.locale), m = null != E && null != A;
+                } = e, _ = (0, l.default)([r.default], () => r.default.locale), S = null != E && null != A;
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(s.Heading, {
                         variant: "eyebrow",
                         className: n,
-                        children: m ? d.default.Messages.USER_PROFILE_MEMBER_SINCE : d.default.Messages.USER_PROFILE_DISCORD_MEMBER_SINCE
+                        children: S ? d.default.Messages.USER_PROFILE_MEMBER_SINCE : d.default.Messages.USER_PROFILE_DISCORD_MEMBER_SINCE
                     }), (0, a.jsxs)("div", {
                         className: f.memberSinceContainer,
-                        children: [m && (0, a.jsx)(s.Tooltip, {
+                        children: [S && (0, a.jsx)(s.Tooltip, {
                             text: d.default.Messages.DISCORD_NAME,
                             children: e => (0, a.jsx)(o.default, {
                                 ...e,

@@ -7,10 +7,10 @@
                     return w
                 },
                 parseURLSafely: function() {
-                    return H
+                    return V
                 },
                 findCodedLink: function() {
-                    return x
+                    return H
                 }
             }), n("781738"), n("222007"), n("424973");
             var i, a, l, s, r, u, o = n("746379"),
@@ -36,10 +36,10 @@
                 y = G(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
                 v = G(null !== (i = window.GLOBAL_ENV.WEBAPP_ENDPOINT) && void 0 !== i ? i : "//canary.".concat(p.PRIMARY_DOMAIN)),
                 M = G("//canary.".concat(p.PRIMARY_DOMAIN)),
-                L = G("//ptb.".concat(p.PRIMARY_DOMAIN)),
-                D = G("discordapp.com"),
+                D = G("//ptb.".concat(p.PRIMARY_DOMAIN)),
+                L = G("discordapp.com"),
                 U = G("discord.com"),
-                P = [E.default.escape(null !== (a = R.host) && void 0 !== a ? a : ""), E.default.escape(null !== (l = y.host) && void 0 !== l ? l : ""), E.default.escape(null !== (s = v.host) && void 0 !== s ? s : ""), E.default.escape(null !== (r = D.host) && void 0 !== r ? r : ""), E.default.escape(null !== (u = U.host) && void 0 !== u ? u : "")].filter(Boolean),
+                P = [E.default.escape(null !== (a = R.host) && void 0 !== a ? a : ""), E.default.escape(null !== (l = y.host) && void 0 !== l ? l : ""), E.default.escape(null !== (s = v.host) && void 0 !== s ? s : ""), E.default.escape(null !== (r = L.host) && void 0 !== r ? r : ""), E.default.escape(null !== (u = U.host) && void 0 !== u ? u : "")].filter(Boolean),
                 b = RegExp("((https?://[^ ]*)|^|[^/][^/.])(".concat(P.join("|"), ")"), "g");
 
             function G(e) {
@@ -72,7 +72,7 @@
 
             function F(e) {
                 var t, n, i, a;
-                return null !== (a = null !== (i = null !== (n = null !== (t = k(v, e)) && void 0 !== t ? t : k(M, e)) && void 0 !== n ? n : k(L, e)) && void 0 !== i ? i : k(D, e)) && void 0 !== a ? a : k(U, e)
+                return null !== (a = null !== (i = null !== (n = null !== (t = k(v, e)) && void 0 !== t ? t : k(M, e)) && void 0 !== n ? n : k(D, e)) && void 0 !== i ? i : k(L, e)) && void 0 !== a ? a : k(U, e)
             }
 
             function w(e) {
@@ -85,11 +85,11 @@
                 for (let e of i) {
                     var a, l, s, r;
                     if (n.length >= 10) break;
-                    let i = H(e);
+                    let i = V(e);
                     if (null == i || null == i.pathname) continue;
                     let u = k(R, i),
                         o = k(y, i),
-                        E = null !== (r = null !== (s = null !== (l = null !== (a = k(v, i)) && void 0 !== a ? a : k(M, i)) && void 0 !== l ? l : k(L, i)) && void 0 !== s ? s : k(D, i)) && void 0 !== r ? r : k(U, i),
+                        E = null !== (r = null !== (s = null !== (l = null !== (a = k(v, i)) && void 0 !== a ? a : k(M, i)) && void 0 !== l ? l : k(D, i)) && void 0 !== s ? s : k(L, i)) && void 0 !== r ? r : k(U, i),
                         f = (e, i) => {
                             !t.has(i) && (t.add(i), n.push({
                                 type: e,
@@ -140,15 +140,15 @@
                         let e = F[1];
                         f(h.CodedLinkType.ACTIVITY_BOOKMARK, e)
                     }
-                    let x = null == E ? void 0 : E.match(A);
-                    null != x && f(h.CodedLinkType.GUILD_PRODUCT, "".concat(x[1], "-").concat(x[2]));
-                    let V = null == E ? void 0 : E.match(N);
-                    null != V && f(h.CodedLinkType.SERVER_SHOP, V[1])
+                    let H = null == E ? void 0 : E.match(A);
+                    null != H && f(h.CodedLinkType.GUILD_PRODUCT, "".concat(H[1], "-").concat(H[2]));
+                    let x = null == E ? void 0 : E.match(N);
+                    null != x && f(h.CodedLinkType.SERVER_SHOP, x[1])
                 }
                 return n
             }
 
-            function H(e) {
+            function V(e) {
                 try {
                     return (0, o.parse)(e)
                 } catch (e) {
@@ -156,6 +156,6 @@
                 }
             }
 
-            function x(e) {
+            function H(e) {
                 return w(e)[0]
             }

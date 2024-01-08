@@ -80,10 +80,10 @@
                         content: l
                     }), h = f(r), A = f(s), N = f(null != _ ? _ : ""), O = h.whitespaceSanitized, R = A.fullySanitized, y = N.fullySanitized, v = R.trim(), M = O.trim();
                     if (0 === M.length || 0 === v.length) return E();
-                    let L = u.unescapeUrl(r),
-                        D = g(L),
+                    let D = u.unescapeUrl(r),
+                        L = g(D),
                         U = (0, o.default)(s).length > 0 || (0, o.default)(_).length > 0;
-                    if (null == D || U) return E();
+                    if (null == L || U) return E();
                     let P = {
                             ...i,
                             allowEscape: !1,
@@ -94,10 +94,10 @@
                         k = [...m, ...S],
                         F = t(R, P),
                         w = I(F, G, [c.AST_KEY.EMOJI]),
-                        H = t(y, P),
-                        x = I(H, k);
-                    if (null == w || null == x) return E();
-                    let V = function e(t) {
+                        V = t(y, P),
+                        H = I(V, k);
+                    if (null == w || null == H) return E();
+                    let x = function e(t) {
                             let n = "";
                             for (let i of t) switch (i.type) {
                                 case c.AST_KEY.TEXT:
@@ -133,7 +133,7 @@
                             }
                             return n
                         }(w),
-                        B = 0 === V.trim().length;
+                        B = 0 === x.trim().length;
                     if (B) return E();
                     let {
                         default: {
@@ -141,7 +141,7 @@
                         }
                     } = n("888198"), K = u.parserFor(a.pick(Y, b)), j = K(A.whitespaceSanitized, P), W = N.whitespaceSanitized, {
                         target: z
-                    } = D;
+                    } = L;
                     return {
                         content: j,
                         target: z,

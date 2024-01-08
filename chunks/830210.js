@@ -1,21 +1,21 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return o
                 },
                 getChannelVideoLimit: function() {
-                    return o
+                    return u
                 }
             });
-            var a = n("446674"),
-                r = n("305961"),
+            var r = n("446674"),
+                a = n("305961"),
                 i = n("316133"),
                 l = n("49111");
 
-            function u(e) {
-                return (0, a.useStateFromStoresObject)([i.default, r.default], () => {
+            function o(e) {
+                return (0, r.useStateFromStoresObject)([i.default, a.default], () => {
                     let t = i.default.countVoiceStatesForChannel(e.id),
-                        n = r.default.getGuild(e.getGuildId());
+                        n = a.default.getGuild(e.getGuildId());
                     return null == n ? {
                         reachedLimit: !1,
                         limit: -1
@@ -29,9 +29,9 @@
                 }, [e])
             }
 
-            function o(e) {
+            function u(e) {
                 let t = i.default.countVoiceStatesForChannel(e.id),
-                    n = r.default.getGuild(e.getGuildId());
+                    n = a.default.getGuild(e.getGuildId());
                 return null == n ? {
                     reachedLimit: !1,
                     limit: -1

@@ -45,8 +45,8 @@
                 y = n("271938"),
                 v = n("449008"),
                 M = n("991170"),
-                L = n("253981"),
-                D = n("872825"),
+                D = n("253981"),
+                L = n("872825"),
                 U = n("8222"),
                 P = n("164386"),
                 b = n("978970"),
@@ -54,9 +54,9 @@
                 k = n("357974"),
                 F = n("580363"),
                 w = n("613070"),
-                H = n("530487"),
-                x = n("638992"),
-                V = n("223934"),
+                V = n("530487"),
+                H = n("638992"),
+                x = n("223934"),
                 B = n("267570"),
                 Y = n("941281"),
                 K = n("49111"),
@@ -67,7 +67,7 @@
 
             function Q() {
                 let e = (0, o.useLocation)(),
-                    t = u.useMemo(() => (0, D.parseOAuth2AuthorizeProps)(e.search), [e.search]);
+                    t = u.useMemo(() => (0, L.parseOAuth2AuthorizeProps)(e.search), [e.search]);
                 return (0, I.default)(), (0, r.jsx)(B.OAuth2Page, {
                     children: (0, r.jsx)(Z, {
                         ...t,
@@ -146,14 +146,14 @@
                         isEmbeddedFlow: e_ = !1,
                         userInstall: eE = !1
                     } = e,
-                    ef = u.useMemo(() => (0, D.filterScopes)(B), [B]),
+                    ef = u.useMemo(() => (0, L.filterScopes)(B), [B]),
                     eh = (0, o.useLocation)(),
                     ep = g.default.useExperiment({
                         location: "auth web"
                     }),
                     eT = ep.userAppsTreatment === g.UserAppsTreatment.ALLOWED;
                 !eT && (eE = !1);
-                let [eC, em] = u.useState(0), [eS, eI] = u.useState(null), [eg, eA] = u.useState(M.default.NONE), [eN, eO] = u.useState(1), [eR, ey] = u.useState(null), [ev] = u.useState(G.OrderedAccountScopes.filter(e => ef.includes(e))), [eM, eL] = u.useState(null != ee ? ee : null), [eD, eU] = u.useState(null != et ? et : null), [eP, eb] = u.useState(!1), eG = u.useMemo(() => {
+                let [eC, em] = u.useState(0), [eS, eI] = u.useState(null), [eg, eA] = u.useState(M.default.NONE), [eN, eO] = u.useState(1), [eR, ey] = u.useState(null), [ev] = u.useState(G.OrderedAccountScopes.filter(e => ef.includes(e))), [eM, eD] = u.useState(null != ee ? ee : null), [eL, eU] = u.useState(null != et ? et : null), [eP, eb] = u.useState(!1), eG = u.useMemo(() => {
                     var e;
                     return null == eS ? void 0 : null === (e = eS.guilds) || void 0 === e ? void 0 : e.find(e => e.id === eM)
                 }, [null == eS ? void 0 : eS.guilds, eM]), ek = (0, E.useStateFromStoresObject)([C.default, m.default], () => {
@@ -190,7 +190,7 @@
                             state: $,
                             permissions: _.default.remove(null != en ? en : M.default.NONE, eg),
                             guildId: null == eM || eE ? void 0 : eM,
-                            channelId: null != eD ? eD : void 0,
+                            channelId: null != eL ? eL : void 0,
                             userInstall: eE
                         });
                         if (null != er) er({
@@ -203,7 +203,7 @@
                                 host: e,
                                 path: n
                             } = c.parse(t.location);
-                            L.default.isDiscordHostname(e) && n === K.Routes.OAUTH2_AUTHORIZED ? (0, O.transitionTo)(K.Routes.OAUTH2_AUTHORIZED, {
+                            D.default.isDiscordHostname(e) && n === K.Routes.OAUTH2_AUTHORIZED ? (0, O.transitionTo)(K.Routes.OAUTH2_AUTHORIZED, {
                                 state: {
                                     application: null == eS ? void 0 : eS.application,
                                     guild: eG
@@ -214,14 +214,14 @@
                         let e = t.body;
                         (null == e ? void 0 : e.message) != null && "" !== e.message ? ey(Error(e.message)) : ey(e), eO(1), em(2), eb(!1)
                     }
-                }, [er, eu, N, Z, J, eg, eo, en, X, Q, ef, eM, eD, $, ed, null == eS ? void 0 : eS.application, eG, eE]), eH = u.useRef(!1), ex = u.useCallback(async () => {
+                }, [er, eu, N, Z, J, eg, eo, en, X, Q, ef, eM, eL, $, ed, null == eS ? void 0 : eS.application, eG, eE]), eV = u.useRef(!1), eH = u.useCallback(async () => {
                     if (0 === eC) {
                         if (em(1), !y.default.isAuthenticated()) {
                             (0, U.logoutWithRedirect)(eh);
                             return
                         }
-                        if (!eH.current) {
-                            eH.current = !0;
+                        if (!eV.current) {
+                            eV.current = !0;
                             try {
                                 let e = null != es ? es : await (0, U.fetchAuthorization)({
                                     clientId: N,
@@ -247,21 +247,21 @@
                                 }
                                 ey(Error(null != t.message ? t.message : "".concat(Object.keys(t)[0], ": ").concat(Object.values(t)[0]))), em(2)
                             } finally {
-                                eH.current = !1
+                                eV.current = !1
                             }
                         }
                     }
-                }, [es, N, Z, J, eC, eh, ei, X, Q, ef, ew, $, eE, eT]), eV = u.useCallback((e, t) => {
+                }, [es, N, Z, J, eC, eh, ei, X, Q, ef, ew, $, eE, eT]), ex = u.useCallback((e, t) => {
                     eA(n => e ? _.default.remove(n, t) : _.default.add(n, t))
                 }, []);
                 u.useEffect(() => {
                     let e = ef.filter(e => !G.ValidScopes.includes(e));
-                    0 === ef.length ? (ey(Error("No scopes were provided.")), em(2)) : e.length > 0 ? (ey(Error("Invalid scope: ".concat(e[0]))), em(2)) : (0, b.containsDisallowedPermission)(null != en ? en : M.default.NONE) ? (ey(Error("Invalid permission(s) provided.")), em(2)) : ex()
-                }, [ex, ef, en]);
-                let eB = null != eD ? null == eS ? void 0 : null === (t = eS.channels) || void 0 === t ? void 0 : t.find(e => e.id === eD) : null,
+                    0 === ef.length ? (ey(Error("No scopes were provided.")), em(2)) : e.length > 0 ? (ey(Error("Invalid scope: ".concat(e[0]))), em(2)) : (0, b.containsDisallowedPermission)(null != en ? en : M.default.NONE) ? (ey(Error("Invalid permission(s) provided.")), em(2)) : eH()
+                }, [eH, ef, en]);
+                let eB = null != eL ? null == eS ? void 0 : null === (t = eS.channels) || void 0 === t ? void 0 : t.find(e => e.id === eL) : null,
                     eY = null != eM ? null == eS ? void 0 : null === (n = eS.guilds) || void 0 === n ? void 0 : n.find(e => e.id === eM) : null;
                 if (u.useEffect(() => {
-                        null != eS && (null != eB ? eL(null) : null == eY && (eL(null), eU(null)))
+                        null != eS && (null != eB ? eD(null) : null == eY && (eD(null), eU(null)))
                     }, [eS, eY, eB]), eR instanceof Error) return {
                     body: (0, r.jsx)(Y.OAuth2Error, {
                         message: eR.message
@@ -284,30 +284,30 @@
                                 accountScopes: ev,
                                 errors: ez,
                                 isTrustedName: ec
-                            }), null == eB && eQ && !eE ? (0, r.jsx)(x.GuildSelector, {
+                            }), null == eB && eQ && !eE ? (0, r.jsx)(H.GuildSelector, {
                                 error: (null !== (s = null !== (l = ez[K.OAuth2Scopes.BOT]) && void 0 !== l ? l : ez[K.OAuth2Scopes.APPLICATIONS_COMMANDS]) && void 0 !== s ? s : [])[0],
                                 selectedGuildId: eM,
                                 onGuildChange: e => {
-                                    eL(e)
+                                    eD(e)
                                 },
                                 guilds: null != eq ? eq : [],
                                 disabled: "" !== eM && !0 === ea
-                            }) : null, ef.includes(K.OAuth2Scopes.WEBHOOK_INCOMING) ? (0, r.jsx)(x.WebhookGuildChannelSelector, {
+                            }) : null, ef.includes(K.OAuth2Scopes.WEBHOOK_INCOMING) ? (0, r.jsx)(H.WebhookGuildChannelSelector, {
                                 error: (null !== (d = ez[K.OAuth2Scopes.WEBHOOK_INCOMING]) && void 0 !== d ? d : [])[0],
-                                selectedChannelId: eD,
+                                selectedChannelId: eL,
                                 selectedGuildId: eM,
                                 onChannelChange: e => eU(e)
                             }) : null]
                         }), ef.includes(K.OAuth2Scopes.BOT) && !_.default.equals(en, M.default.NONE) && (A = 2);
-                        let eX = null != eY && ef.includes(K.OAuth2Scopes.WEBHOOK_INCOMING) && null == eD;
+                        let eX = null != eY && ef.includes(K.OAuth2Scopes.WEBHOOK_INCOMING) && null == eL;
                         eW = !eE && (eQ && null == eY && null == eB || eX);
                         break;
                     case 2:
-                        p = (0, r.jsx)(H.default, {
+                        p = (0, r.jsx)(V.default, {
                             application: eS.application,
                             permissions: null != en ? en : M.default.NONE,
                             deniedPermissions: eg,
-                            onPermissionsChange: eV,
+                            onPermissionsChange: ex,
                             guild: eY
                         }), I = 1
                 }
@@ -342,7 +342,7 @@
                             children: W.default.Messages.AUTHORIZE
                         })]
                     }),
-                    e$ = (0, r.jsx)(V.default, {
+                    e$ = (0, r.jsx)(x.default, {
                         id: q,
                         user: eK,
                         application: eS.application,
@@ -368,7 +368,7 @@
                     host: n,
                     path: i,
                     query: a
-                } = c.parse(t.location, !0), l = L.default.isDiscordHostname(n) || window.location.host === n;
+                } = c.parse(t.location, !0), l = D.default.isDiscordHostname(n) || window.location.host === n;
                 if (l && i === K.Routes.OAUTH2_AUTHORIZED)(0, h.openModal)(e => (0, r.jsx)(B.OAuth2Modal, {
                     ...e,
                     "aria-labelledby": q,
@@ -426,5 +426,5 @@
                     path: i,
                     query: a
                 } = c.parse(e);
-                return null != i && null != a && (L.default.isDiscordHostname(t) || n === window.location.host) && (i.startsWith("/api".concat(K.Endpoints.OAUTH2_AUTHORIZE)) || i.startsWith(K.Routes.OAUTH2_AUTHORIZE)) ? (0, D.parseOAuth2AuthorizeProps)(a) : null
+                return null != i && null != a && (D.default.isDiscordHostname(t) || n === window.location.host) && (i.startsWith("/api".concat(K.Endpoints.OAUTH2_AUTHORIZE)) || i.startsWith(K.Routes.OAUTH2_AUTHORIZE)) ? (0, L.parseOAuth2AuthorizeProps)(a) : null
             }(l = i || (i = {}))[l.NOT_LOADED = 0] = "NOT_LOADED", l[l.LOADING = 1] = "LOADING", l[l.LOADED = 2] = "LOADED", (s = a || (a = {}))[s.INSTALL_TYPE = 0] = "INSTALL_TYPE", s[s.AUTHORIZE_SCOPES = 1] = "AUTHORIZE_SCOPES", s[s.AUTHORIZE_BOT_PERMISSIONS = 2] = "AUTHORIZE_BOT_PERMISSIONS"

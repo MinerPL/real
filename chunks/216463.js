@@ -13,9 +13,9 @@
                 u = n("41594"),
                 d = n("652453"),
                 c = n("782340"),
-                E = n("435808"),
-                _ = n("926622");
-            let f = e => {
+                f = n("435808"),
+                E = n("926622");
+            let _ = e => {
                     let {
                         guild: t,
                         inviteChannel: n,
@@ -23,12 +23,12 @@
                     } = e, s = (0, o.default)(t.id), d = i.useMemo(() => s.reduce((e, t) => ({
                         ...e,
                         [t.id]: t
-                    }), {}), [s]), E = i.useMemo(() => Object.values(d).map(e => ({
+                    }), {}), [s]), f = i.useMemo(() => Object.values(d).map(e => ({
                         value: e.id,
                         label: e.name
                     })), [d]);
                     return (0, l.jsx)(a.SearchableSelect, {
-                        options: E,
+                        options: f,
                         value: null == n ? void 0 : n.id,
                         onChange: e => {
                             r(d[e])
@@ -55,21 +55,21 @@
                     return (0, l.jsxs)(l.Fragment, {
                         children: [(0, l.jsxs)(a.ModalHeader, {
                             children: [(0, l.jsx)(a.ModalCloseButton, {
-                                className: E.closeButton,
+                                className: f.closeButton,
                                 onClick: t
                             }), (0, l.jsx)("div", {
-                                className: E.headerContainer,
+                                className: f.headerContainer,
                                 children: (0, l.jsx)(a.FormTitle, {
                                     id: n,
                                     tag: "h2",
-                                    className: s(_.marginReset, E.headerCloseButtonSpacing, E.headerText),
+                                    className: s(E.marginReset, f.headerCloseButtonSpacing, f.headerText),
                                     children: c.default.Messages.INVITE_A_GUEST_VOICE_ONLY
                                 })
                             })]
                         }), (0, l.jsx)(a.ModalContent, {
-                            className: E.noScroll,
+                            className: f.noScroll,
                             children: (0, l.jsxs)("div", {
-                                className: E.guestBody,
+                                className: f.guestBody,
                                 children: [(0, l.jsx)(a.Text, {
                                     tag: "div",
                                     variant: "heading-sm/normal",
@@ -77,13 +77,13 @@
                                     children: c.default.Messages.INVITE_A_GUEST_EXPLANATION
                                 }), (0, l.jsx)(a.FormTitle, {
                                     tag: "h5",
-                                    className: E.guestSelectChannelHeader,
+                                    className: f.guestSelectChannelHeader,
                                     children: c.default.Messages.INVITE_A_GUEST_STEP_1
-                                }), (0, l.jsx)(f, {
+                                }), (0, l.jsx)(_, {
                                     ...e
                                 }), (0, l.jsx)(a.FormTitle, {
                                     tag: "h5",
-                                    className: E.guestSendInviteLinkHeader,
+                                    className: f.guestSendInviteLinkHeader,
                                     children: c.default.Messages.INVITE_A_GUEST_STEP_2
                                 }), (0, l.jsx)(d.InviteCopyInput, {
                                     ...e,

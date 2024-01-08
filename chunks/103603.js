@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 fit: function() {
-                    return s
+                    return u
                 },
                 zoomFit: function() {
                     return d
@@ -10,51 +10,51 @@
                     return c
                 },
                 getCoverRatio: function() {
-                    return f
+                    return _
                 },
                 makeCssUrlString: function() {
                     return E
                 },
                 getPalette: function() {
-                    return p
+                    return I
                 },
                 getPaletteForAvatar: function() {
-                    return S
+                    return A
                 },
                 readFileAsBase64: function() {
                     return h
                 },
                 dataUriFileSize: function() {
-                    return I
+                    return R
                 },
                 dataUrlToFile: function() {
-                    return A
+                    return N
                 },
                 isPNGAnimated: function() {
-                    return g
+                    return p
                 }
             }), n("424973"), n("101997"), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("70102");
-            var i = n("627445"),
-                r = n.n(i),
-                l = n("917351"),
-                o = n.n(l),
-                a = n("48648"),
-                u = n.n(a);
+            var r = n("627445"),
+                i = n.n(r),
+                a = n("917351"),
+                o = n.n(a),
+                s = n("48648"),
+                l = n.n(s);
 
-            function s(e) {
+            function u(e) {
                 let {
                     width: t,
                     height: n,
-                    maxWidth: i,
-                    maxHeight: r,
-                    minWidth: l = 0,
+                    maxWidth: r,
+                    maxHeight: i,
+                    minWidth: a = 0,
                     minHeight: o = 0
                 } = e;
-                if (t !== i || n !== r) {
-                    let e = t > i ? i / t : 1;
-                    t = Math.max(Math.round(t * e), l), n = Math.max(Math.round(n * e), o);
-                    let a = n > r ? r / n : 1;
-                    t = Math.max(Math.round(t * a), l), n = Math.max(Math.round(n * a), o)
+                if (t !== r || n !== i) {
+                    let e = t > r ? r / t : 1;
+                    t = Math.max(Math.round(t * e), a), n = Math.max(Math.round(n * e), o);
+                    let s = n > i ? i / n : 1;
+                    t = Math.max(Math.round(t * s), a), n = Math.max(Math.round(n * s), o)
                 }
                 return {
                     width: t,
@@ -64,11 +64,11 @@
 
             function d(e, t) {
                 let n = Math.min(Math.round(.65 * window.innerHeight), 2e3),
-                    i = Math.min(Math.round(.75 * window.innerWidth), 2e3);
-                return s({
+                    r = Math.min(Math.round(.75 * window.innerWidth), 2e3);
+                return u({
                     width: e,
                     height: t,
-                    maxWidth: i,
+                    maxWidth: r,
                     maxHeight: n
                 })
             }
@@ -77,91 +77,91 @@
                 let {
                     width: t,
                     height: n,
-                    maxWidth: i,
-                    maxHeight: r
-                } = e, l = 1;
-                t > i && (l = i / t), t = Math.round(t * l);
+                    maxWidth: r,
+                    maxHeight: i
+                } = e, a = 1;
+                t > r && (a = r / t), t = Math.round(t * a);
                 let o = 1;
-                return (n = Math.round(n * l)) > r && (o = r / n), Math.min(l * o, 1)
+                return (n = Math.round(n * a)) > i && (o = i / n), Math.min(a * o, 1)
             }
 
-            function f(e) {
+            function _(e) {
                 let {
                     width: t,
                     height: n,
-                    maxWidth: i,
-                    maxHeight: r
+                    maxWidth: r,
+                    maxHeight: i
                 } = e;
-                return t === n ? 1 : Math.min(Math.max(i / t, r / n), 1)
+                return t === n ? 1 : Math.min(Math.max(r / t, i / n), 1)
             }
 
             function E(e) {
                 return null == e || "" === e ? "none" : "url(".concat(e, ")")
             }
-            let _ = [
+            let f = [
                 [0, 0, 0]
             ];
 
-            function p(e, t, n) {
-                let i = document.createElement("canvas"),
-                    r = i.getContext("2d");
-                if (null == r) return _;
-                let l = i.width = 0 === e.width ? 128 : e.width,
-                    o = i.height = 0 === e.height ? 128 : e.height;
-                r.drawImage(e, 0, 0, l, o);
-                let a = r.getImageData(0, 0, l, o).data,
-                    s = function(e, t, n) {
-                        let i = [];
-                        for (let r = 0, l, o, a, u, s; r < t; r += n) o = e[(l = 4 * r) + 0], a = e[l + 1], u = e[l + 2], (void 0 === (s = e[l + 3]) || s >= 125) && !(o > 250 && a > 250 && u > 250) && i.push([o, a, u]);
-                        return i
-                    }(a, l * o, n),
-                    d = u(s, t);
-                return "boolean" == typeof d ? _ : d.palette()
+            function I(e, t, n) {
+                let r = document.createElement("canvas"),
+                    i = r.getContext("2d");
+                if (null == i) return f;
+                let a = r.width = 0 === e.width ? 128 : e.width,
+                    o = r.height = 0 === e.height ? 128 : e.height;
+                i.drawImage(e, 0, 0, a, o);
+                let s = i.getImageData(0, 0, a, o).data,
+                    u = function(e, t, n) {
+                        let r = [];
+                        for (let i = 0, a, o, s, l, u; i < t; i += n) o = e[(a = 4 * i) + 0], s = e[a + 1], l = e[a + 2], (void 0 === (u = e[a + 3]) || u >= 125) && !(o > 250 && s > 250 && l > 250) && r.push([o, s, l]);
+                        return r
+                    }(s, a * o, n),
+                    d = l(u, t);
+                return "boolean" == typeof d ? f : d.palette()
             }
-            let S = e => "number" == typeof e ? null : T(e),
-                T = o.memoize(e => new Promise((t, n) => {
-                    let i = new Image;
-                    i.crossOrigin = "Anonymous", i.onerror = e => {
-                        n(e), i.onerror = i.onload = null, i = null
-                    }, i.onload = () => {
-                        t(p(i, 5, 10)), i.onerror = i.onload = null, i = null
-                    }, i.src = e
+            let A = e => "number" == typeof e ? null : S(e),
+                S = o.memoize(e => new Promise((t, n) => {
+                    let r = new Image;
+                    r.crossOrigin = "Anonymous", r.onerror = e => {
+                        n(e), r.onerror = r.onload = null, r = null
+                    }, r.onload = () => {
+                        t(I(r, 5, 10)), r.onerror = r.onload = null, r = null
+                    }, r.src = e
                 }));
 
             function h(e) {
                 return new Promise((t, n) => {
-                    let i = new FileReader;
-                    i.readAsDataURL(e), i.onload = () => {
-                        r("string" == typeof i.result, "Result must be a string"), t(i.result)
-                    }, i.onerror = e => n(e)
+                    let r = new FileReader;
+                    r.readAsDataURL(e), r.onload = () => {
+                        i("string" == typeof r.result, "Result must be a string"), t(r.result)
+                    }, r.onerror = e => n(e)
                 })
             }
 
-            function I(e) {
+            function R(e) {
                 let t = e.split(";base64,");
-                return r(2 === t.length, "Input data is not a valid image."), atob(t[1]).length
+                return i(2 === t.length, "Input data is not a valid image."), atob(t[1]).length
             }
-            async function A(e, t, n) {
-                let i = function(e) {
+            async function N(e, t, n) {
+                let r = function(e) {
                         let t;
                         t = e.split(",")[0].indexOf("base64") >= 0 ? atob(e.split(",")[1]) : btoa(e.split(",")[1]);
                         let n = e.split(",")[0].split(":")[1].split(";")[0],
-                            i = new Uint8Array(t.length);
-                        for (var r = 0; r < t.length; r++) i[r] = t.charCodeAt(r);
-                        return new Blob([i], {
+                            r = new Uint8Array(t.length);
+                        for (var i = 0; i < t.length; i++) r[i] = t.charCodeAt(i);
+                        return new Blob([r], {
                             type: n
                         })
                     }(e),
-                    r = await i.arrayBuffer();
-                return new File([r], t, {
+                    i = await r.arrayBuffer();
+                return new File([i], t, {
                     type: n
                 })
             }
-            async function g(e) {
+            async function p(e) {
                 var t;
                 let n = null === (t = e.type) || void 0 === t ? void 0 : t.split(";")[0];
                 if ("image/png" !== n) throw Error("File is not a PNG");
-                let i = await e.text(),
-                    r = i.indexOf("IDAT");
-                return !!(r > 0) && -1 !== i.substring(0, r).indexOf("acTL") || !1
+                let r = await e.text(),
+                    i = r.indexOf("IDAT");
+                return !!(i > 0) && -1 !== r.substring(0, i).indexOf("acTL") || !1
             }

@@ -19,8 +19,8 @@
                 E = n("625634"),
                 _ = n("751433"),
                 h = n("599110"),
-                I = n("427459"),
-                m = n("903016"),
+                m = n("427459"),
+                I = n("903016"),
                 g = n("936992"),
                 S = n("658206"),
                 C = n("49111"),
@@ -34,16 +34,16 @@
                     selectedGuild: i,
                     locationSection: a,
                     transitionState: A,
-                    onClose: N
-                } = e, R = (0, I.getAvailableGuildBoostSlots)(E.default.boostSlots);
+                    onClose: R
+                } = e, N = (0, m.getAvailableGuildBoostSlots)(E.default.boostSlots);
                 o(null != r || null != i, "Must either provide slots or an initial selected guild"), o(!(null == r ? void 0 : r.some(e => e.isOnCooldown())), "If slots are provided, they must not be on cooldown");
                 let L = [null == r ? "UNUSED_QUANTITY_SELECT" : null, null == i ? "GUILD_SELECT" : null, "CONFIRM", "SUCCESS"].filter(e => null != e),
-                    [M, O] = (0, u.useStateFromStoresArray)([f.default], () => [f.default.isModifyingAppliedBoost, f.default.applyBoostError]),
-                    [x, y] = s.useState(""),
-                    [U, P] = s.useState(L[0]),
-                    [D, b] = s.useState(!1),
+                    [M, x] = (0, u.useStateFromStoresArray)([f.default], () => [f.default.isModifyingAppliedBoost, f.default.applyBoostError]),
+                    [y, O] = s.useState(""),
+                    [U, b] = s.useState(L[0]),
+                    [D, P] = s.useState(!1),
                     [w, B] = s.useState(i),
-                    [j, G] = s.useState(null != r ? r : R.slice(0, 1)),
+                    [j, G] = s.useState(null != r ? r : N.slice(0, 1)),
                     F = s.useMemo(() => null == j ? [] : j.map(e => {
                         let {
                             premiumGuildSubscription: t
@@ -55,14 +55,14 @@
                         return (null == j ? void 0 : null === (e = j[0]) || void 0 === e ? void 0 : e.premiumGuildSubscription) != null
                     }, [j]),
                     k = () => {
-                        N("SUCCESS" === U), h.default.track(C.AnalyticEvents.MODAL_DISMISSED, {
+                        R("SUCCESS" === U), h.default.track(C.AnalyticEvents.MODAL_DISMISSED, {
                             type: C.AnalyticsSections.PREMIUM_GUILD_SUBSCRIBE_MODAL,
                             location_section: a
                         })
                     },
                     H = {
                         UNUSED_QUANTITY_SELECT: {
-                            body: () => (o(!(null == r && 0 === R.length), "Cannot provide no slots if there are no other available slots"), (0, l.jsxs)("div", {
+                            body: () => (o(!(null == r && 0 === N.length), "Cannot provide no slots if there are no other available slots"), (0, l.jsxs)("div", {
                                 className: T.quantitySelectorBody,
                                 children: [(0, l.jsx)(c.Heading, {
                                     variant: "heading-md/semibold",
@@ -76,9 +76,9 @@
                                     className: T.quantitySelectorWrapper,
                                     children: [(0, l.jsx)(_.default, {
                                         value: j.length,
-                                        onChange: e => G(R.slice(0, e)),
+                                        onChange: e => G(N.slice(0, e)),
                                         minValue: 1,
-                                        maxValue: R.length
+                                        maxValue: N.length
                                     }), (0, l.jsx)(c.Text, {
                                         className: T.quantitySelectorLabel,
                                         variant: "text-md/normal",
@@ -88,7 +88,7 @@
                             })),
                             footer: () => (0, l.jsxs)(c.ModalFooter, {
                                 children: [(0, l.jsx)(c.Button, {
-                                    onClick: () => P("CONFIRM"),
+                                    onClick: () => b("CONFIRM"),
                                     children: v.default.Messages.PREMIUM_GUILD_SUBSCRIBE_UNUSED_SLOTS_NEXT
                                 }), (0, l.jsx)(c.Button, {
                                     look: c.Button.Looks.LINK,
@@ -101,27 +101,27 @@
                         GUILD_SELECT: {
                             header: () => (0, l.jsx)(g.GuildSelectModalHeader, {
                                 isTransfer: V,
-                                query: x,
-                                setQuery: y
+                                query: y,
+                                setQuery: O
                             }),
                             bodyClass: T.selectContent,
                             body: () => (0, l.jsx)(g.GuildSelectModalBody, {
                                 onClose: k,
                                 onSelectGuild: e => {
-                                    B(e), P("CONFIRM")
+                                    B(e), b("CONFIRM")
                                 },
                                 isTransfer: V,
                                 selectedSlotGuilds: F,
-                                query: x
+                                query: y
                             })
                         },
                         CONFIRM: {
                             body() {
                                 if (null == w) return null;
-                                let e = j.filter(e => (0, I.isGuildBoostSlotCanceled)(e)).length,
+                                let e = j.filter(e => (0, m.isGuildBoostSlotCanceled)(e)).length,
                                     t = j.length,
                                     n = F.length;
-                                return V ? (0, l.jsx)(m.default.TransferBody, {
+                                return V ? (0, l.jsx)(I.default.TransferBody, {
                                     fromGuilds: F,
                                     toGuild: w,
                                     blurb: v.default.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_TRANSFER_BLURB.format({
@@ -129,11 +129,11 @@
                                         guildCount: n
                                     }),
                                     imageClass: T.transferConfirmImage,
-                                    error: D ? O : null,
-                                    onDismissError: () => b(!1),
+                                    error: D ? x : null,
+                                    onDismissError: () => P(!1),
                                     slotCount: t,
                                     canceledCount: e
-                                }) : (0, l.jsx)(m.default.ApplyBody, {
+                                }) : (0, l.jsx)(I.default.ApplyBody, {
                                     guild: w,
                                     blurb: v.default.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_BLURB,
                                     warning: v.default.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_COOLDOWN_WARNING.format({
@@ -141,15 +141,15 @@
                                         slotCount: t
                                     }),
                                     imageClass: T.confirmImage,
-                                    error: D ? O : null,
-                                    onDismissError: () => b(!1),
+                                    error: D ? x : null,
+                                    onDismissError: () => P(!1),
                                     slotCount: t,
                                     canceledCount: e
                                 })
                             },
                             footer() {
                                 let e = j.length,
-                                    t = "CONFIRM" === L[0] ? k : () => P(L[L.indexOf(U) - 1]),
+                                    t = "CONFIRM" === L[0] ? k : () => b(L[L.indexOf(U) - 1]),
                                     n = async () => {
                                         if (null != w && (null == j ? void 0 : j.length) !== 0) {
                                             o(!j.some(e => e.isOnCooldown()), "Cannot use a premium guild subscription slot while on cooldown");
@@ -164,13 +164,13 @@
                                                         id: t
                                                     } = e;
                                                     return t
-                                                })), P("SUCCESS")
+                                                })), b("SUCCESS")
                                             } catch (e) {
-                                                b(!0)
+                                                P(!0)
                                             }
                                         }
                                     };
-                                return (0, l.jsx)(m.default.Footer, {
+                                return (0, l.jsx)(I.default.Footer, {
                                     confirmation: V ? v.default.Messages.PREMIUM_GUILD_SUBSCRIBE_TRANSFER_CONFIRM_CONFIRMATION.format({
                                         slotCount: e
                                     }) : v.default.Messages.PREMIUM_GUILD_SUBSCRIBE_CONFIRM_CONFIRMATION.format({

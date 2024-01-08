@@ -67,7 +67,9 @@
                     isPressed: !1
                 },
                 [g.GlobalKeybindActions.TOGGLE_MUTE]: {
-                    onTrigger: () => s.default.toggleSelfMute(),
+                    onTrigger: () => s.default.toggleSelfMute({
+                        usedKeybind: !0
+                    }),
                     keyEvents: {
                         keyup: !0,
                         keydown: !1

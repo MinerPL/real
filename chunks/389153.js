@@ -25,7 +25,7 @@
                     return M
                 },
                 hasAccess: function() {
-                    return L
+                    return D
                 },
                 getCommandAttachmentDraftType: function() {
                     return U
@@ -256,7 +256,7 @@
             }
             let M = o.default.deserialize(0);
 
-            function L(e) {
+            function D(e) {
                 let {
                     PermissionStore: t,
                     guild: n,
@@ -268,14 +268,14 @@
                 if (n.ownerId === i.userId || t.can(I.Permissions.ADMINISTRATOR, n)) return !0;
                 let r = n.id;
                 if (null != l) {
-                    let e = D(i, r, l);
+                    let e = L(i, r, l);
                     if ("boolean" == typeof e) return e
                 }
-                let u = D(i, r, a);
+                let u = L(i, r, a);
                 return ("boolean" != typeof u || !!u) && (null == s || !o.default.equals(s, M) && t.can(s, n))
             }
 
-            function D(e, t, n) {
+            function L(e, t, n) {
                 let i = n[(0, _.toPermissionKey)(e.userId, p.ApplicationCommandPermissionType.USER)];
                 if (null != i) return i.permission;
                 let a = !1;

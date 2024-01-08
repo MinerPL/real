@@ -14,9 +14,9 @@
                 u = n("45395"),
                 d = n("272091"),
                 c = n("49111"),
-                E = n("782340"),
-                _ = n("191455"),
-                f = n("149361");
+                f = n("782340"),
+                E = n("191455"),
+                _ = n("149361");
 
             function I(e) {
                 let {
@@ -28,32 +28,32 @@
                     type: i.ImpressionTypes.MODAL,
                     name: i.ImpressionNames.GUILD_PERMANENT_LINKS_UPSELL
                 }), h) ? (0, l.jsxs)("div", {
-                    className: _.container,
+                    className: E.container,
                     children: [(0, l.jsx)("div", {
-                        className: _.imageContainer,
+                        className: E.imageContainer,
                         children: (0, l.jsx)("img", {
-                            src: f,
-                            className: _.image,
-                            alt: E.default.Messages.GROWING_FRIEND_GUILD_PERMANENT_INVITE_LINKS_ALT_TEXT
+                            src: _,
+                            className: E.image,
+                            alt: f.default.Messages.GROWING_FRIEND_GUILD_PERMANENT_INVITE_LINKS_ALT_TEXT
                         })
                     }), (0, l.jsxs)("div", {
-                        className: _.textContainer,
+                        className: E.textContainer,
                         children: [(0, l.jsx)(r.Heading, {
                             variant: "heading-lg/semibold",
-                            className: _.header,
-                            children: E.default.Messages.GROWING_FRIEND_GUILD_PERMANENT_INVITE_LINKS_UPSELL_HEADER
+                            className: E.header,
+                            children: f.default.Messages.GROWING_FRIEND_GUILD_PERMANENT_INVITE_LINKS_UPSELL_HEADER
                         }), (0, l.jsx)(r.Text, {
                             variant: "text-sm/medium",
-                            className: _.description,
-                            children: E.default.Messages.GROWING_FRIEND_GUILD_PERMANENT_INVITE_LINKS_UPSELL_DESCRIPTION
+                            className: E.description,
+                            children: f.default.Messages.GROWING_FRIEND_GUILD_PERMANENT_INVITE_LINKS_UPSELL_DESCRIPTION
                         }), (0, l.jsx)(r.Button, {
                             size: r.ButtonSizes.SMALL,
                             color: r.Button.Colors.BRAND,
-                            className: _.button,
+                            className: E.button,
                             onClick: () => {
                                 s.default.trackWithMetadata(c.AnalyticEvents.PERMANENT_INVITE_COMMUNITY_UPSELL_CLICKED, {}), o.default.init(null != n ? n : ""), u.default.open(), I()
                             },
-                            children: E.default.Messages.GET_STARTED
+                            children: f.default.Messages.GET_STARTED
                         })]
                     })]
                 }) : null

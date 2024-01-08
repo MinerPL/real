@@ -24,8 +24,8 @@
                 E = n("635471"),
                 A = n("305961"),
                 _ = n("423487"),
-                m = n("587974"),
-                S = n("599110"),
+                S = n("587974"),
+                m = n("599110"),
                 C = n("719923"),
                 N = n("50885"),
                 g = n("713135"),
@@ -87,7 +87,7 @@
                     hasProfileEffect: v
                 } = e, {
                     profileTheme: M
-                } = l.useContext(h.UserProfileContext), L = l.useContext(S.AnalyticsContext), D = t.isNonUserBot() && !t.isClyde(), b = C.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, x.PremiumTypes.TIER_2), B = l.useMemo(() => (0, T.shouldDisableUserPresenceInChannel)(t, E), [t, E]), F = _ || t.isClyde(), {
+                } = l.useContext(h.UserProfileContext), L = l.useContext(m.AnalyticsContext), D = t.isNonUserBot() && !t.isClyde(), b = C.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, x.PremiumTypes.TIER_2), B = l.useMemo(() => (0, T.shouldDisableUserPresenceInChannel)(t, E), [t, E]), F = _ || t.isClyde(), {
                     avatarDecorationSrc: k,
                     avatarSrc: w,
                     eventHandlers: V
@@ -139,8 +139,8 @@
                         children: [W, !F && function() {
                             let e = null != k,
                                 t = e ? H : (0, c.getAvatarSize)(P);
-                            return (0, a.jsx)(m.default, {
-                                mask: null == o || o === R.StatusTypes.UNKNOWN || B ? m.default.Masks.AVATAR_DEFAULT : (0, r.match)([e, d]).with([!0, !0], () => m.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => m.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => m.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => m.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
+                            return (0, a.jsx)(S.default, {
+                                mask: null == o || o === R.StatusTypes.UNKNOWN || B ? S.default.Masks.AVATAR_DEFAULT : (0, r.match)([e, d]).with([!0, !0], () => S.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => S.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => S.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => S.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
                                 className: e ? j.avatarDecorationHint : j.avatarHint,
                                 style: e ? {
                                     borderRadius: .4 * t

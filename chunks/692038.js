@@ -43,14 +43,14 @@
                 let {
                     reactions: y,
                     interactionData: v
-                } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, M = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], L = null !== (f = e.mention_roles) && void 0 !== f ? f : [], D = null !== (T = e.mention_channels) && void 0 !== T ? T : [], U = e.message_reference, P = a(new Date(e.timestamp)), b = e.type === C.MessageTypes.THREAD_CREATED ? [] : (0, l.default)(e.content);
+                } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, M = null !== (r = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== r ? r : [], D = null !== (f = e.mention_roles) && void 0 !== f ? f : [], L = null !== (T = e.mention_channels) && void 0 !== T ? T : [], U = e.message_reference, P = a(new Date(e.timestamp)), b = e.type === C.MessageTypes.THREAD_CREATED ? [] : (0, l.default)(e.content);
                 let G = null == (I = e).author ? m : null != I.webhook_id ? new d.default(I.author) : null !== (g = E.default.getUser(I.author.id)) && void 0 !== g ? g : new d.default(I.author),
                     k = null == e ? void 0 : e.gift_info,
                     F = null != e.interaction ? u.default.createFromServer(e.interaction) : null,
                     w = e.type === C.MessageTypes.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
-                    H = e.type === C.MessageTypes.PREMIUM_REFERRAL ? e.content : void 0,
-                    x = e.content;
-                return e.type === C.MessageTypes.PREMIUM_REFERRAL && (x = ""), new o.default({
+                    V = e.type === C.MessageTypes.PREMIUM_REFERRAL ? e.content : void 0,
+                    H = e.content;
+                return e.type === C.MessageTypes.PREMIUM_REFERRAL && (H = ""), new o.default({
                     ...e,
                     author: G,
                     webhookId: e.webhook_id,
@@ -59,22 +59,22 @@
                     editedTimestamp: null != e.edited_timestamp ? a(new Date(e.edited_timestamp)) : null,
                     mentionEveryone: e.mention_everyone,
                     mentions: M,
-                    mentionRoles: L,
-                    mentionChannels: D,
+                    mentionRoles: D,
+                    mentionChannels: L,
                     messageReference: U,
                     mentioned: (0, p.isMentioned)({
                         userId: c.default.getId(),
                         channelId: e.channel_id,
                         mentionEveryone: null !== (S = e.mention_everyone) && void 0 !== S && S,
                         mentionUsers: M,
-                        mentionRoles: L
+                        mentionRoles: D
                     }),
                     attachments: A(e),
                     embeds: O(e),
                     codedLinks: b,
                     giftCodes: (0, h.isGiftCodeEmbed)(e) ? (0, h.findGiftCodes)((null == e ? void 0 : e.embeds[0]).url) : (0, h.findGiftCodes)(e.content),
-                    content: x,
-                    referralTrialOfferId: H,
+                    content: H,
+                    referralTrialOfferId: V,
                     call: N(e.call, P),
                     reactions: R(null != y ? y : e.reactions),
                     interaction: F,

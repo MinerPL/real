@@ -27,7 +27,7 @@
                     onMouseLeave: E
                 } = e, g = (0, r.useIsRelationshipTypeSpamReportable)(t), S = (0, o.useLongestChannelMessageBeforeReply)(n.id, t);
                 if (!g || null == S) return null;
-                let _ = () => {
+                let A = () => {
                     null == p || p(), l.default.closePrivateChannel(n.id, h)
                 };
                 return (0, s.jsx)(a.Button, {
@@ -36,7 +36,7 @@
                     color: a.Button.Colors.RED,
                     disabled: null == S,
                     onClick: () => {
-                        null == C || C(), (0, i.showReportModalForFirstDM)(S, _)
+                        null == C || C(), (0, i.showReportModalForFirstDM)(S, A)
                     },
                     onMouseEnter: m,
                     onMouseLeave: E,

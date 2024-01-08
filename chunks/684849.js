@@ -1,11 +1,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return E
                 }
             });
-            var i, l = n("666038");
-            i = class extends l.default {
+            var E, i = n("666038");
+            E = class extends i.default {
                 constructor(e) {
                     super(), this.id = e.id || "", this.widgets = e.widgets || []
                 }

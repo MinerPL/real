@@ -6,8 +6,8 @@
             });
             var a = n("37983");
             n("884691");
-            var r = n("414456"),
-                s = n.n(r),
+            var s = n("414456"),
+                r = n.n(s),
                 i = n("446674"),
                 l = n("77078"),
                 u = n("990766"),
@@ -24,7 +24,7 @@
                 let {
                     participant: t,
                     width: n,
-                    noArt: r = !1,
+                    noArt: s = !1,
                     selected: _ = !1
                 } = e, C = n < 195, m = (0, i.useStateFromStores)([o.default, d.default], () => o.default.getAllActiveStreams().some(e => {
                     let {
@@ -33,18 +33,18 @@
                     return t !== d.default.getId()
                 }));
                 return (0, a.jsx)("div", {
-                    className: s(p.content, p.streamHidden, {
+                    className: r(p.content, p.streamHidden, {
                         [p.small]: C
                     }),
                     children: (0, a.jsx)(E.default, {
                         className: p.streamHiddenEmptyState,
                         artURL: S,
-                        noArt: r,
+                        noArt: s,
                         selected: _,
                         size: (0, E.getSizeForWidth)(n),
                         header: C ? null : h.default.Messages.STREAM_HIDDEN,
                         description: _ ? null : (0, a.jsxs)("div", {
-                            className: s(p.streamHiddenCTA, {
+                            className: r(p.streamHiddenCTA, {
                                 [p.largePaddingTop]: !C
                             }),
                             children: [(0, a.jsx)(f.CallTileCTA, {

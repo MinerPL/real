@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 open: function() {
-                    return r
+                    return s
                 },
                 close: function() {
-                    return s
+                    return r
                 },
                 hide: function() {
                     return i
@@ -24,7 +24,7 @@
             });
             var a = n("913144");
 
-            function r(e, t) {
+            function s(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
                 a.default.dispatch({
                     type: "PICTURE_IN_PICTURE_OPEN",
@@ -34,7 +34,7 @@
                 })
             }
 
-            function s(e) {
+            function r(e) {
                 a.default.dispatch({
                     type: "PICTURE_IN_PICTURE_CLOSE",
                     id: e

@@ -2,7 +2,7 @@
             let a, l;
             n.r(t), n.d(t, {
                 CopiableField: function() {
-                    return m
+                    return S
                 }
             }), n("222007");
             var s = n("37983"),
@@ -18,20 +18,20 @@
                 A = n("782340"),
                 _ = n("491701");
 
-            function m(e) {
+            function S(e) {
                 var t;
                 let {
                     className: n,
                     copyValue: r,
-                    copyMetaData: m,
-                    children: S,
+                    copyMetaData: S,
+                    children: m,
                     disableCopy: C,
                     showCopyIcon: N
                 } = e, [g, p] = i.useState(0), [v, I] = i.useState(!1), [M, h] = i.useState(!1);
                 if (i.useEffect(() => (a = new o.Timeout, l = new o.Timeout, function() {
                         a.stop(), l.stop()
                     }), []), !T.SUPPORTS_COPY || C) return (0, s.jsx)(s.Fragment, {
-                    children: S
+                    children: m
                 });
                 let O = [A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_1, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_2, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_3, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_4, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_5, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_6, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_7, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_8, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_9, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_10, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_11],
                     U = Math.min(Math.max(g - 1, 0), O.length - 1),
@@ -44,7 +44,7 @@
                     },
                     H = e => {
                         (0, T.copy)(r), f.default.track(E.AnalyticEvents.TEXT_COPIED, {
-                            type: m
+                            type: S
                         }), "function" == typeof e && e(), !M && p(g + 1), h(!0), I(!0), a.start(1e3, () => h(!1)), l.start(2e3, () => p(0))
                     };
                 return (0, s.jsx)(c.Tooltip, {
@@ -78,7 +78,7 @@
                                 className: u(n, _.copiableWrapper),
                                 children: [(0, s.jsx)("div", {
                                     className: _.childWrapper,
-                                    children: S
+                                    children: m
                                 }), N ? (0, s.jsx)("div", {
                                     className: _.copyIconWrapper,
                                     children: (0, s.jsx)(d.default, {

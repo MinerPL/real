@@ -60,35 +60,35 @@
                         userLocale: _
                     } = e, {
                         countryCode: p,
-                        amount: A,
-                        currency: C,
+                        amount: C,
+                        currency: A,
                         paymentSourceTypes: h
-                    } = t, T = 0 !== h.length, S = I(p), R = (0, l.formatPrice)(A, C, {
+                    } = t, T = 0 !== h.length, S = I(p), R = (0, l.formatPrice)(C, A, {
                         style: "currency",
-                        currency: C,
+                        currency: A,
                         currencyDisplay: "symbol",
                         localeOverride: S
                     }), N = u.default.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY.format({
                         helpCenterLink: o.default.getArticleURL(s.HelpdeskArticles.LOCALIZED_PRICING),
-                        currencyISOCode: C.toUpperCase(),
+                        currencyISOCode: A.toUpperCase(),
                         localizedPriceWithCurrencySymbol: R
                     });
-                    if (d.has(C) && (N = u.default.Messages.LOCALIZED_PRICING_BANNER_BODY_EXISTING_CURRENCY.format({
+                    if (d.has(A) && (N = u.default.Messages.LOCALIZED_PRICING_BANNER_BODY_EXISTING_CURRENCY.format({
                             helpCenterLink: o.default.getArticleURL(s.HelpdeskArticles.LOCALIZED_PRICING),
                             localizedPriceWithCurrencySymbol: R
-                        })), c.has(C) && (N = u.default.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY_WITH_AMBIGUOUS_SYMBOL.format({
+                        })), c.has(A) && (N = u.default.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY_WITH_AMBIGUOUS_SYMBOL.format({
                             helpCenterLink: o.default.getArticleURL(s.HelpdeskArticles.LOCALIZED_PRICING),
-                            currencyISOCode: C.toUpperCase(),
+                            currencyISOCode: A.toUpperCase(),
                             localizedPriceWithCurrencySymbol: R
                         })), null != n && !n.hasPremiumNitroMonthly && (N = u.default.Messages.LOCALIZED_PRICING_BANNER_BODY_WITHOUT_PRICE.format({
                             helpCenterLink: o.default.getArticleURL(s.HelpdeskArticles.LOCALIZED_PRICING),
-                            currencyISOCode: C.toUpperCase()
-                        })), C === a.CurrencyCodes.EUR && (N = r ? u.default.Messages.LOCALIZED_PRICING_BANNER_NO_LOWERED_PRICE_SINGLE_STRING.format({
+                            currencyISOCode: A.toUpperCase()
+                        })), A === a.CurrencyCodes.EUR && (N = r ? u.default.Messages.LOCALIZED_PRICING_BANNER_NO_LOWERED_PRICE_SINGLE_STRING.format({
                             country: (0, i.getI18NCountryName)(p),
-                            currencyISOCode: C.toUpperCase(),
+                            currencyISOCode: A.toUpperCase(),
                             helpCenterLink: o.default.getArticleURL(s.HelpdeskArticles.LOCALIZED_PRICING)
                         }) : u.default.Messages.LOCALIZED_PRICING_BANNER_NO_LOWERED_PRICE.format({
-                            currencyISOCode: C.toUpperCase(),
+                            currencyISOCode: A.toUpperCase(),
                             helpCenterLink: o.default.getArticleURL(s.HelpdeskArticles.LOCALIZED_PRICING)
                         })), T) {
                         let e = E.filter(e => h.includes(e)),

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return h
+                    return m
                 }
             }), n("222007");
             var i = n("37983"),
@@ -13,70 +13,70 @@
                 u = n("77078"),
                 d = n("841098"),
                 c = n("449918"),
-                E = n("302185"),
-                f = n("89050"),
+                f = n("302185"),
+                E = n("89050"),
                 _ = n("843455"),
-                I = n("353295"),
-                h = r.memo(function(e) {
+                h = n("353295"),
+                m = r.memo(function(e) {
                     let {
                         file: t,
                         audio: n,
                         className: l,
-                        waveformSettings: h
-                    } = e, [m, A] = r.useState({
+                        waveformSettings: m
+                    } = e, [g, p] = r.useState({
                         width: 0,
                         height: 0
-                    }), N = r.useRef(null), S = r.useMemo(() => {
+                    }), I = r.useRef(null), S = r.useMemo(() => {
                         var e;
                         let t = null !== (e = null == n ? void 0 : n.duration) && void 0 !== e ? e : 1;
                         return {
                             fineTuning: -1,
-                            fineTuningResolution: t / f.defaultWaveformConfig.fineTuningScale,
+                            fineTuningResolution: t / E.defaultWaveformConfig.fineTuningScale,
                             duration: t,
-                            ...null != h ? h : {}
+                            ...null != m ? m : {}
                         }
-                    }, [n, h]), g = (0, E.useAudioBufferData)(t), p = (0, E.useAudioWaveformData)(g, N.current, S), T = (0, d.default)(), C = (0, c.useColorValue)((0, o.isThemeDark)(T) ? _.Color.PRIMARY_300 : _.Color.PRIMARY_700), R = null == g || null == p, O = 0 === m.width || 0 === m.height, v = (O || R) && null != t, L = r.useCallback(() => {
-                        null != N.current && A({
-                            width: N.current.offsetWidth,
-                            height: N.current.offsetHeight
+                    }, [n, m]), A = (0, f.useAudioBufferData)(t), N = (0, f.useAudioWaveformData)(A, I.current, S), v = (0, d.default)(), R = (0, c.useColorValue)((0, o.isThemeDark)(v) ? _.Color.PRIMARY_300 : _.Color.PRIMARY_700), C = null == A || null == N, T = 0 === g.width || 0 === g.height, O = (T || C) && null != t, L = r.useCallback(() => {
+                        null != I.current && p({
+                            width: I.current.offsetWidth,
+                            height: I.current.offsetHeight
                         })
                     }, []);
                     return r.useEffect(() => {
-                        if (null != N.current) {
+                        if (null != I.current) {
                             let e = new ResizeObserver((0, a.debounce)(L, 50));
-                            return e.observe(N.current), () => {
+                            return e.observe(I.current), () => {
                                 e.disconnect()
                             }
                         }
                     }, [L]), r.useEffect(() => {
-                        if (null == N.current) return;
-                        let e = N.current,
+                        if (null == I.current) return;
+                        let e = I.current,
                             t = e.getContext("2d");
                         if (null == t) return;
                         let {
                             width: n,
                             height: i
                         } = e;
-                        if (0 !== m.width && 0 !== m.height && null != p && p.length > 0) {
-                            let e = n / p.length,
-                                r = -(e * (f.defaultWaveformConfig.waveformBarWidth - 1));
-                            t.clearRect(0, 0, n, i), t.fillStyle = C.hex;
-                            for (let n = 0; n < p.length; n++) {
-                                let l = p[n] * i,
+                        if (0 !== g.width && 0 !== g.height && null != N && N.length > 0) {
+                            let e = n / N.length,
+                                r = -(e * (E.defaultWaveformConfig.waveformBarWidth - 1));
+                            t.clearRect(0, 0, n, i), t.fillStyle = R.hex;
+                            for (let n = 0; n < N.length; n++) {
+                                let l = N[n] * i,
                                     s = n * e + r,
                                     a = i / 2 - l / 2;
                                 t.fillRect(s, a, e - r, l)
                             }
                         }
-                    }, [C, m, T, p]), (0, i.jsxs)("div", {
-                        className: s(I.container, l),
+                    }, [R, g, v, N]), (0, i.jsxs)("div", {
+                        className: s(h.container, l),
                         children: [(0, i.jsx)("canvas", {
-                            className: I.waveformCanvas,
-                            ref: N,
-                            width: 4 * m.width,
-                            height: 4 * m.height
-                        }), v && (0, i.jsx)("div", {
-                            className: I.loading,
+                            className: h.waveformCanvas,
+                            ref: I,
+                            width: 4 * g.width,
+                            height: 4 * g.height
+                        }), O && (0, i.jsx)("div", {
+                            className: h.loading,
                             children: (0, i.jsx)(u.Spinner, {
                                 type: u.SpinnerTypes.SPINNING_CIRCLE
                             })

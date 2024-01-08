@@ -7,10 +7,10 @@
                     return v
                 },
                 watchStream: function() {
-                    return L
+                    return D
                 },
                 toggleSelfStreamHidden: function() {
-                    return D
+                    return L
                 },
                 watchStreamAndTransitionToStream: function() {
                     return U
@@ -34,13 +34,13 @@
                     return w
                 },
                 stopOwnStream: function() {
-                    return H
+                    return V
                 },
                 createBroadcastChannelOrStartStream: function() {
-                    return x
+                    return H
                 },
                 joinPrivateChannelAndWatchStream: function() {
-                    return V
+                    return x
                 }
             });
             var i = n("627445"),
@@ -95,7 +95,7 @@
                 return !i && (0, C.isChannelFull)(n, T.default, h.default)
             }
 
-            function L(e, t) {
+            function D(e, t) {
                 let n = null != u.default.getRemoteSessionId();
                 if (n) return;
                 let {
@@ -117,7 +117,7 @@
                 }), !s && (null == t || !t.noFocus) && A.default.selectParticipant(e.channelId, l)
             }
 
-            function D(e, t) {
+            function L(e, t) {
                 r.default.dispatch({
                     type: "STREAM_UPDATE_SELF_HIDDEN",
                     channelId: e,
@@ -131,7 +131,7 @@
                     channelId: i
                 } = e;
                 if (null != n && M(n, i)) return;
-                L(e, t);
+                D(e, t);
                 let a = c.default.getWindowOpen(O.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
                     l = p.default.getVoiceChannelId();
                 (!a || l !== i) && (0, d.default)(e)
@@ -216,13 +216,13 @@
                 })
             }
 
-            function H() {
+            function V() {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                     t = _.default.getCurrentUserActiveStream();
                 null != t && P((0, o.encodeStreamKey)(t), e)
             }
 
-            function x(e) {
+            function H(e) {
                 let {
                     channelId: t,
                     pid: n,
@@ -243,7 +243,7 @@
                 }))
             }
 
-            function V(e, t) {
+            function x(e, t) {
                 let n = E.default.getId(),
                     i = (0, o.decodeStreamKey)(t),
                     a = p.default.getVoiceChannelId();

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return A
                 }
             }), n("222007");
             var s = n("37983"),
@@ -118,4 +118,4 @@
                     }
                 }
             }
-            var _ = S
+            var A = S

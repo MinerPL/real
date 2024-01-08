@@ -1,7 +1,7 @@
             "use strict";
-            var a, r;
+            var a, s;
             n.r(t), n.d(t, {
                 ErrorLevels: function() {
                     return a
                 }
-            }), n("222007"), (r = a || (a = {})).FATAL = "fatal", r.ERROR = "error", r.WARNING = "warning", r.LOG = "log", r.INFO = "info", r.DEBUG = "debug"
+            }), n("222007"), (s = a || (a = {})).FATAL = "fatal", s.ERROR = "error", s.WARNING = "warning", s.LOG = "log", s.INFO = "info", s.DEBUG = "debug"

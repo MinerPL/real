@@ -7,12 +7,12 @@
                     return g
                 },
                 default: function() {
-                    return I
+                    return A
                 }
             }), n("222007");
             var a = n("446674"),
-                r = n("689988"),
-                s = n("42203"),
+                s = n("689988"),
+                r = n("42203"),
                 i = n("42887"),
                 l = n("18494"),
                 u = n("800762"),
@@ -32,7 +32,7 @@
                     _.stop(), S = !1;
                     return
                 }
-                let t = s.default.getChannel(e);
+                let t = r.default.getChannel(e);
                 if (!(null == t ? void 0 : t.isGuildStageVoice())) {
                     _.stop(), S = !1;
                     return
@@ -47,8 +47,8 @@
                     _.volume = p(i.default.getOutputVolume()), _.loop(), S = !0;
                     return
                 }
-                let r = E.default.isLive(e);
-                if (r) {
+                let s = E.default.isLive(e);
+                if (s) {
                     _.stop(), S = !1;
                     return
                 }
@@ -64,25 +64,25 @@
             function m(e) {
                 let t = (0, a.useStateFromStores)([l.default], () => l.default.getVoiceChannelId() === e),
                     n = (0, c.useStageParticipants)(e, f.StageChannelParticipantNamedIndex.SPEAKER),
-                    r = null != n.find(e => !e.voiceState.isVoiceMuted()),
-                    s = (0, a.useStateFromStores)([E.default], () => E.default.getStageInstanceByChannel(e));
-                return t && null == s && !r
+                    s = null != n.find(e => !e.voiceState.isVoiceMuted()),
+                    r = (0, a.useStateFromStores)([E.default], () => E.default.getStageInstanceByChannel(e));
+                return t && null == r && !s
             }
 
             function g(e) {
                 let t = l.default.getVoiceChannelId() === e,
                     n = d.default.getMutableParticipants(e, f.StageChannelParticipantNamedIndex.SPEAKER),
                     a = null != n.find(e => !e.voiceState.isVoiceMuted()),
-                    r = E.default.getStageInstanceByChannel(e);
-                return t && null == r && !a
+                    s = E.default.getStageInstanceByChannel(e);
+                return t && null == s && !a
             }
-            class T extends r.default {
+            class T extends s.default {
                 handleVoiceChannelSelect(e) {
                     let {
                         channelId: t
                     } = e;
                     if (null != t) {
-                        let e = s.default.getChannel(t);
+                        let e = r.default.getChannel(t);
                         (null == e ? void 0 : e.isGuildStageVoice()) ? C(): (_.stop(), S = !1)
                     } else _.stop(), S = !1
                 }
@@ -125,4 +125,4 @@
                     }
                 }
             }
-            var I = new T
+            var A = new T

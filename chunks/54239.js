@@ -4,10 +4,10 @@
                     return r
                 },
                 popLayer: function() {
-                    return l
+                    return s
                 },
                 popAllLayers: function() {
-                    return o
+                    return l
                 }
             });
             var i = n("913144");
@@ -19,13 +19,13 @@
                 })
             }
 
-            function l() {
+            function s() {
                 i.default.dispatch({
                     type: "LAYER_POP"
                 })
             }
 
-            function o() {
+            function l() {
                 i.default.dispatch({
                     type: "LAYER_POP_ALL"
                 })

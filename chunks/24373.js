@@ -22,10 +22,10 @@
                     return M
                 },
                 createStickerPackCategory: function() {
-                    return L
+                    return D
                 },
                 shouldAnimateSticker: function() {
-                    return D
+                    return L
                 },
                 shouldAttachSticker: function() {
                     return U
@@ -117,13 +117,13 @@
                     format_type: t
                 } = e;
                 return t === d.StickerFormat.APNG || t === d.StickerFormat.LOTTIE || t === d.StickerFormat.GIF
-            }), L = e => ({
+            }), D = e => ({
                 type: d.StickerCategoryTypes.PACK,
                 id: e.id,
                 name: e.name,
                 stickers: e.stickers,
                 previewSticker: g(e)
-            }), D = (e, t) => e === c.StickerAnimationSettings.ANIMATE_ON_INTERACTION ? t : e !== c.StickerAnimationSettings.NEVER_ANIMATE, U = (e, t, n, a) => {
+            }), L = (e, t) => e === c.StickerAnimationSettings.ANIMATE_ON_INTERACTION ? t : e !== c.StickerAnimationSettings.NEVER_ANIMATE, U = (e, t, n, a) => {
                 let l = s.default.getUploadCount(n, a);
                 if (l > 0) return !0;
                 let r = o.default.getStickerPreview(n, a),

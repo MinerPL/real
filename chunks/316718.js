@@ -4,83 +4,83 @@
                     return a
                 },
                 fetchUserEntitlements: function() {
-                    return u
+                    return s
                 },
                 fetchGiftableEntitlements: function() {
-                    return s
+                    return l
                 }
             });
-            var i = n("872717"),
-                r = n("913144"),
-                l = n("271560"),
-                o = n("49111");
+            var r = n("872717"),
+                i = n("913144"),
+                o = n("271560"),
+                u = n("49111");
 
             function a(e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                return r.default.wait(() => {
-                    r.default.dispatch({
+                return i.default.wait(() => {
+                    i.default.dispatch({
                         type: "ENTITLEMENT_FETCH_APPLICATION_START",
                         applicationId: e
                     })
-                }), i.default.get({
-                    url: o.Endpoints.ENTITLEMENTS_FOR_APPLICATION(e),
+                }), r.default.get({
+                    url: u.Endpoints.ENTITLEMENTS_FOR_APPLICATION(e),
                     oldFormErrors: !0,
                     query: {
                         exclude_consumed: t
                     }
-                }).then(t => (r.default.dispatch({
+                }).then(t => (i.default.dispatch({
                     type: "ENTITLEMENT_FETCH_APPLICATION_SUCCESS",
                     applicationId: e,
                     entitlements: t.body
                 }), t.body)).catch(() => {
-                    r.default.dispatch({
+                    i.default.dispatch({
                         type: "ENTITLEMENT_FETCH_APPLICATION_FAIL",
                         applicationId: e
                     })
                 })
             }
-            async function u(e) {
+            async function s(e) {
                 let {
                     withSku: t = !1,
                     withApplication: n = !1,
-                    entitlementType: l
+                    entitlementType: o
                 } = e;
-                r.default.dispatch({
+                i.default.dispatch({
                     type: "ENTITLEMENTS_FETCH_FOR_USER_START"
                 });
                 try {
-                    let e = await i.default.get({
-                        url: o.Endpoints.ENTITLEMENTS_FOR_USER,
+                    let e = await r.default.get({
+                        url: u.Endpoints.ENTITLEMENTS_FOR_USER,
                         query: {
                             with_sku: t,
                             with_application: n,
-                            entitlement_type: l
+                            entitlement_type: o
                         }
                     });
-                    r.default.dispatch({
+                    i.default.dispatch({
                         type: "ENTITLEMENTS_FETCH_FOR_USER_SUCCESS",
                         entitlements: e.body
                     })
                 } catch (e) {
-                    r.default.dispatch({
+                    i.default.dispatch({
                         type: "ENTITLEMENTS_FETCH_FOR_USER_FAIL"
                     })
                 }
             }
-            async function s() {
-                r.default.dispatch({
+            async function l() {
+                i.default.dispatch({
                     type: "ENTITLEMENTS_GIFTABLE_FETCH"
                 });
                 try {
-                    let e = await (0, l.httpGetWithCountryCodeQuery)({
-                        url: o.Endpoints.ENTITLEMENTS_GIFTABLE
+                    let e = await (0, o.httpGetWithCountryCodeQuery)({
+                        url: u.Endpoints.ENTITLEMENTS_GIFTABLE
                     });
-                    r.default.dispatch({
+                    i.default.dispatch({
                         type: "ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS",
                         entitlements: e.body
                     })
                 } catch (e) {
-                    r.default.dispatch({
+                    i.default.dispatch({
                         type: "ENTITLEMENTS_GIFTABLE_FETCH_FAIL"
                     })
                 }

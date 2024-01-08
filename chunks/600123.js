@@ -6,8 +6,8 @@
             });
             var a = n("37983");
             n("884691");
-            var r = n("607391"),
-                s = n("145131"),
+            var s = n("607391"),
+                r = n("145131"),
                 i = n("191933");
 
             function l(e) {
@@ -17,12 +17,12 @@
                     children: l,
                     size: u
                 } = e;
-                return (0, a.jsxs)(s.default, {
+                return (0, a.jsxs)(r.default, {
                     className: i.root,
-                    justify: s.default.Justify.CENTER,
-                    align: s.default.Align.CENTER,
-                    direction: s.default.Direction.VERTICAL,
-                    children: [(0, a.jsx)(r.default, {
+                    justify: r.default.Justify.CENTER,
+                    align: r.default.Align.CENTER,
+                    direction: r.default.Direction.VERTICAL,
+                    children: [(0, a.jsx)(s.default, {
                         header: t,
                         description: n,
                         size: u

@@ -44,7 +44,7 @@
                 return e
             }
 
-            function L(e) {
+            function D(e) {
                 let {
                     streamKey: t,
                     region: n,
@@ -61,7 +61,7 @@
                 }
             }
 
-            function D(e, t) {
+            function L(e, t) {
                 return e === A.StreamTypes.CALL || T.default.canWithPartialContext(g.Permissions.VIEW_CHANNEL, {
                     channelId: t
                 })
@@ -69,7 +69,7 @@
 
             function U(e) {
                 let t = f.default.getChannel(e.channelId);
-                return !!D(e.streamType, e.channelId) || null != t && (0, c.canWatchStream)(t, I.default, h.default, T.default, o.default)[0]
+                return !!L(e.streamType, e.channelId) || null != t && (0, c.canWatchStream)(t, I.default, h.default, T.default, o.default)[0]
             }
             class P extends r.default.Store {
                 initialize() {
@@ -134,10 +134,10 @@
                     return (0, _.default)(p.default) ? null !== (t = l[e]) && void 0 !== t ? t : null : null
                 }
                 getAllApplicationStreams() {
-                    return (0, _.default)(p.default) ? M().filter(e => null != e && D(e.streamType, e.channelId)) : []
+                    return (0, _.default)(p.default) ? M().filter(e => null != e && L(e.streamType, e.channelId)) : []
                 }
                 getAllApplicationStreamsForChannel(e) {
-                    return (0, _.default)(p.default) ? M().filter(t => null != t && t.channelId === e && D(t.streamType, t.channelId)) : []
+                    return (0, _.default)(p.default) ? M().filter(t => null != t && t.channelId === e && L(t.streamType, t.channelId)) : []
                 }
                 getViewerIds(e) {
                     if (!(0, _.default)(p.default)) return [];
@@ -240,8 +240,8 @@
                     } = e;
                     s[t] = null
                 },
-                STREAM_CREATE: L,
-                STREAM_UPDATE: L,
+                STREAM_CREATE: D,
+                STREAM_UPDATE: D,
                 STREAM_TIMED_OUT: function(e) {
                     let {
                         streamKey: t

@@ -1,25 +1,25 @@
             "use strict";
             n.r(t), n.d(t, {
                 AUTOMATIC_APPROVAL_FORM_FIELDS: function() {
-                    return l
+                    return s
                 },
                 MANUAL_APPROVAL_FORM_FIELDS: function() {
-                    return o
+                    return l
                 },
                 MAX_FORM_ELEMENTS: function() {
-                    return a
+                    return o
                 },
                 MAX_NUM_RULES: function() {
                     return u
                 },
                 MAX_RULE_LENGTH: function() {
-                    return s
+                    return a
                 },
                 MAX_QUESTION_LENGTH: function() {
-                    return d
+                    return c
                 },
                 MAX_NUM_CHOICES: function() {
-                    return c
+                    return d
                 },
                 MAX_CHOICE_LENGTH: function() {
                     return f
@@ -31,28 +31,28 @@
                     return _
                 },
                 MAX_DESCRIPTION_LENGTH: function() {
-                    return p
+                    return I
                 },
                 MEMBER_VERIFICATION_TYPE: function() {
-                    return S
+                    return p
                 },
                 IN_APP_MEMBER_VERIFICATION_MODAL_KEY: function() {
-                    return T
+                    return h
                 }
             }), n("222007");
             var i, r = n("567054");
             r.VerificationFormFieldTypes.VERIFICATION;
-            let l = new Set([r.VerificationFormFieldTypes.TERMS]),
-                o = new Set([r.VerificationFormFieldTypes.MULTIPLE_CHOICE, r.VerificationFormFieldTypes.TEXT_INPUT, r.VerificationFormFieldTypes.PARAGRAPH]),
-                a = 5,
+            let s = new Set([r.VerificationFormFieldTypes.TERMS]),
+                l = new Set([r.VerificationFormFieldTypes.MULTIPLE_CHOICE, r.VerificationFormFieldTypes.TEXT_INPUT, r.VerificationFormFieldTypes.PARAGRAPH]),
+                o = 5,
                 u = 16,
-                s = 300,
-                d = 300,
-                c = 8,
+                a = 300,
+                c = 300,
+                d = 8,
                 f = 150,
                 E = 150,
                 _ = 1e3,
-                p = 300,
-                S = "Membership Gating",
-                T = "in-app-member-verification";
+                I = 300,
+                p = "Membership Gating",
+                h = "in-app-member-verification";
             (i || (i = {})).VERIFICATION_INFO = "VERIFICATION_INFO"

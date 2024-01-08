@@ -1,99 +1,99 @@
             "use strict";
-            let l, a;
-            n.r(t), n.d(t, {
+            let l, u;
+            n.r(e), n.d(e, {
                 default: function() {
-                    return C
+                    return I
                 }
             });
-            var s = n("917351"),
-                i = n.n(s),
-                r = n("446674"),
+            var r = n("917351"),
+                i = n.n(r),
+                a = n("446674"),
                 o = n("913144"),
-                u = n("628454");
+                s = n("628454");
             let d = Object.freeze({}),
-                c = {};
+                f = {};
 
-            function f(e) {
+            function c(t) {
                 let {
-                    lobbyId: t
-                } = e;
-                delete c[t]
+                    lobbyId: e
+                } = t;
+                delete f[e]
             }
-            class h extends r.default.Store {
+            class E extends a.default.Store {
                 getAllVoiceStates() {
-                    return c
+                    return f
                 }
-                getVoiceStates(e) {
-                    var t;
-                    return null !== (t = c[e]) && void 0 !== t ? t : d
+                getVoiceStates(t) {
+                    var e;
+                    return null !== (e = f[t]) && void 0 !== e ? e : d
                 }
-                getVoiceState(e, t) {
-                    return this.getVoiceStates(e)[t]
+                getVoiceState(t, e) {
+                    return this.getVoiceStates(t)[e]
                 }
-                getLobbyIdsForUser(e) {
-                    return Object.keys(c).filter(t => null != c[t][e])
+                getLobbyIdsForUser(t) {
+                    return Object.keys(f).filter(e => null != f[e][t])
                 }
             }
-            h.displayName = "LobbyVoiceStateStore";
-            var C = new h(o.default, {
-                CONNECTION_OPEN: function(e) {
+            E.displayName = "LobbyVoiceStateStore";
+            var I = new E(o.default, {
+                CONNECTION_OPEN: function(t) {
                     let {
-                        user: t,
+                        user: e,
                         sessionId: n
-                    } = e;
-                    c = {}, l = t.id, a = n
+                    } = t;
+                    f = {}, l = e.id, u = n
                 },
-                OVERLAY_INITIALIZE: function(e) {
+                OVERLAY_INITIALIZE: function(t) {
                     let {
-                        lobbyVoiceStates: t,
+                        lobbyVoiceStates: e,
                         user: n,
-                        sessionId: s
-                    } = e;
-                    c = {}, i.each(t, (e, t) => {
-                        c[t] = {}, i.each(e, (e, n) => {
-                            c[t][n] = new u.default(e)
+                        sessionId: r
+                    } = t;
+                    f = {}, i.each(e, (t, e) => {
+                        f[e] = {}, i.each(t, (t, n) => {
+                            f[e][n] = new s.default(t)
                         })
-                    }), l = n.id, a = s
+                    }), l = n.id, u = r
                 },
-                LOBBY_VOICE_STATE_UPDATE: function(e) {
-                    var t;
+                LOBBY_VOICE_STATE_UPDATE: function(t) {
+                    var e;
                     let n, {
-                            sessionId: s,
+                            sessionId: r,
                             userId: i,
-                            lobbyId: r,
+                            lobbyId: a,
                             channelId: o,
                             mute: d,
-                            deaf: f,
-                            selfMute: h,
-                            selfDeaf: C
-                        } = e,
-                        p = i === l && s !== a,
-                        m = null !== (t = c[r]) && void 0 !== t ? t : {},
-                        E = m[i];
-                    if (null != o && !p && (n = null == E ? new u.default({
+                            deaf: c,
+                            selfMute: E,
+                            selfDeaf: I
+                        } = t,
+                        g = i === l && r !== u,
+                        S = null !== (e = f[a]) && void 0 !== e ? e : {},
+                        O = S[i];
+                    if (null != o && !g && (n = null == O ? new s.default({
                             userId: i,
-                            sessionId: s,
+                            sessionId: r,
                             channelId: o,
                             mute: d,
-                            deaf: f,
-                            selfMute: h,
-                            selfDeaf: C
-                        }) : E.merge({
+                            deaf: c,
+                            selfMute: E,
+                            selfDeaf: I
+                        }) : O.merge({
                             userId: i,
-                            sessionId: s,
+                            sessionId: r,
                             channelId: o,
                             mute: d,
-                            deaf: f,
-                            selfMute: h,
-                            selfDeaf: C
-                        })), E === n) return !1;
-                    null == n ? (m = {
-                        ...m
-                    }, delete m[i]) : m = {
-                        ...m,
+                            deaf: c,
+                            selfMute: E,
+                            selfDeaf: I
+                        })), O === n) return !1;
+                    null == n ? (S = {
+                        ...S
+                    }, delete S[i]) : S = {
+                        ...S,
                         [i]: n
-                    }, c[r] = m
+                    }, f[a] = S
                 },
-                LOBBY_DELETE: f,
-                LOBBY_DISCONNECT: f
+                LOBBY_DELETE: c,
+                LOBBY_DISCONNECT: c
             })

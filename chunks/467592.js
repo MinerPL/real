@@ -17,7 +17,7 @@
                 let {
                     src: t,
                     onSelect: n
-                } = e, d = (0, l.default)(t), _ = (0, o.default)(t, null);
+                } = e, d = (0, l.default)(t), c = (0, o.default)(t, null);
                 return s.isPlatformEmbedded ? (0, r.jsxs)(i.Menu, {
                     navId: "image-context",
                     onClose: a.closeContextMenu,
@@ -26,7 +26,7 @@
                     children: [(0, r.jsx)(i.MenuGroup, {
                         children: d
                     }), (0, r.jsx)(i.MenuGroup, {
-                        children: _
+                        children: c
                     })]
                 }) : null
             }

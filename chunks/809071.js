@@ -10,7 +10,7 @@
                     return I
                 },
                 getItemUnitPriceWithDiscount: function() {
-                    return A
+                    return C
                 }
             }), n("222007");
             var r = n("884691"),
@@ -157,7 +157,7 @@
                 return _(e, t)
             }
 
-            function A(e) {
+            function C(e) {
                 let t = e.subscriptionPlanPrice;
                 return e.discounts.forEach(n => {
                     let r = n.amount / e.quantity;

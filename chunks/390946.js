@@ -10,7 +10,7 @@
                     return y
                 },
                 hydratePreviouslyUnavailableGuild: function() {
-                    return D
+                    return L
                 }
             }), n("424973"), n("222007"), n("70102");
             var i = n("627445"),
@@ -103,8 +103,8 @@
                     let t = e.recipient_ids;
                     null != t && (e.recipients = t.map(e => (a(null != A[e], "Missing user in compressed ready payload"), A[e]))), delete e.recipient_ids
                 });
-                let O = null !== (n = null == S ? void 0 : S.map((e, t) => !0 === e.unavailable ? e : (e.members = v(A, null == p ? void 0 : p[t]), L(e)))) && void 0 !== n ? n : [],
-                    y = R(t, S, e => L(e));
+                let O = null !== (n = null == S ? void 0 : S.map((e, t) => !0 === e.unavailable ? e : (e.members = v(A, null == p ? void 0 : p[t]), D(e)))) && void 0 !== n ? n : [],
+                    y = R(t, S, e => D(e));
                 return null != y && O.push(y), {
                     ...g,
                     users: i,
@@ -122,7 +122,7 @@
             function y(e, t) {
                 var n, i, a;
                 let l = T.default.getGuild(e.id),
-                    s = D(e, null == l ? void 0 : {
+                    s = L(e, null == l ? void 0 : {
                         properties: m.toServer(l),
                         roles: l.roles,
                         emojis: null !== (i = null === (n = f.default.getGuilds()[l.id]) || void 0 === n ? void 0 : n.rawEmojis) && void 0 !== i ? i : null,
@@ -149,7 +149,7 @@
                 return delete I[e], t
             }
 
-            function L(e) {
+            function D(e) {
                 var t, n, i, a, l, s, r, u, o, d, c, _;
                 let E = M(e.id);
                 if ("partial" !== e.data_mode) return {
@@ -209,7 +209,7 @@
                 }
             }
 
-            function D(e, t) {
+            function L(e, t) {
                 var n, i, a, l, s, r, u, o, d, c, _, E;
                 if (null == t && (t = M(e.id)), "partial" !== e.data_mode) return {
                     id: e.id,

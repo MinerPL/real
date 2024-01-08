@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 renderOption: function() {
-                    return E
+                    return f
                 }
             });
             var l = n("37983");
@@ -46,7 +46,7 @@
                 })
             }
 
-            function E(e, t, n) {
+            function f(e, t, n) {
                 return (0, l.jsx)(c, {
                     text: e.label,
                     isLocked: t,

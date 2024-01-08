@@ -36,8 +36,8 @@
                     "aria-hidden": !0,
                     size: i.AvatarSizes.SIZE_80,
                     className: C.avatarSizeOverride
-                }), _ = null;
-                return _ = null != n ? (0, s.jsx)(f.default, {
+                }), A = null;
+                return A = null != n ? (0, s.jsx)(f.default, {
                     guild: n
                 }) : null != E ? (0, s.jsx)(i.Avatar, {
                     "aria-hidden": !0,
@@ -51,7 +51,7 @@
                         children: S
                     }), (0, s.jsx)("div", {
                         className: C.guildAvatar,
-                        children: _
+                        children: A
                     }), (0, s.jsx)("svg", {
                         className: C.illustration,
                         xmlns: "http://www.w3.org/2000/svg",

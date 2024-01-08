@@ -213,7 +213,7 @@
                     }(l, e, r, null != t)
                 }
             }
-            let L = {
+            let D = {
                     order: C.default.order,
                     requiredFirstCharacters: ["<"],
                     match: e => /^<#(\d+)>/.exec(e),
@@ -227,7 +227,7 @@
                         return null == a ? v(null, i, null, I(n.channelId)) : M(a, null, I(n.channelId))
                     }
                 },
-                D = {
+                L = {
                     order: a.defaultRules.url.order - .5,
                     requiredFirstCharacters: ["h"],
                     match(e) {
@@ -262,7 +262,7 @@
                     }
                 };
             var P = {
-                channelMention: L,
-                channelOrMessageUrl: D,
+                channelMention: D,
+                channelOrMessageUrl: L,
                 mediaPostLink: U
             }

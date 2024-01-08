@@ -1,117 +1,117 @@
             "use strict";
-            n.r(e), n.d(e, {
+            n.r(t), n.d(t, {
                 applyBackgroundOptionLive: function() {
-                    return D
+                    return m
                 },
                 applyBackgroundOptionPreview: function() {
                     return S
                 },
                 applyInitialVideoBackgroundOption: function() {
-                    return T
+                    return I
                 }
             }), n("332822"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341");
             var i = n("627445"),
-                u = n.n(i),
-                r = n("773364"),
-                o = n("697218"),
-                a = n("315102"),
-                s = n("659558"),
-                d = n("154867"),
-                l = n("870879"),
+                a = n.n(i),
+                l = n("773364"),
+                s = n("697218"),
+                r = n("315102"),
+                u = n("659558"),
+                o = n("154867"),
+                d = n("870879"),
                 c = n("239448"),
                 _ = n("977801"),
-                f = n("512244"),
-                E = n("917219"),
-                p = n("49111");
-            async function A(t) {
-                let e = await fetch(t),
-                    n = await e.blob();
+                E = n("512244"),
+                f = n("917219"),
+                h = n("49111");
+            async function p(e) {
+                let t = await fetch(e),
+                    n = await t.blob();
                 return new Uint8ClampedArray(await n.arrayBuffer())
             }
 
-            function O(t, e, n, i, u) {
-                (0, d.applyMediaFilterSettings)({
-                    [t]: {
+            function T(e, t, n, i, a) {
+                (0, o.applyMediaFilterSettings)({
+                    [e]: {
                         graph: n,
-                        target: e,
+                        target: t,
                         image: i,
-                        blob: u
+                        blob: a
                     }
                 })
             }
-            async function g(t, e, n) {
-                var i, o;
-                let s, l = !1;
-                if (null == n) return O(t, e, r.FilterSettingsGraph.NONE);
-                if (n === E.BLUR_BACKGROUND_OPTION) return O(t, e, r.FilterSettingsGraph.BACKGROUND_BLUR);
+            async function C(e, t, n) {
+                var i, s;
+                let u, d = !1;
+                if (null == n) return T(e, t, l.FilterSettingsGraph.NONE);
+                if (n === f.BLUR_BACKGROUND_OPTION) return T(e, t, l.FilterSettingsGraph.BACKGROUND_BLUR);
                 if ("string" == typeof n || "number" == typeof n) {
                     ;
-                    let t = (0, _.default)()[n];
-                    l = null !== (i = t.isVideo) && void 0 !== i && i, s = t.source
+                    let e = (0, _.default)()[n];
+                    d = null !== (i = e.isVideo) && void 0 !== i && i, u = e.source
                 } else {
-                    let t = n.asset;
-                    l = (0, a.isAnimatedIconHash)(t) || (0, a.isVideoAssetHash)(t), s = (0, a.getVideoFilterAssetURL)({
+                    let e = n.asset;
+                    d = (0, r.isAnimatedIconHash)(e) || (0, r.isVideoAssetHash)(e), u = (0, r.getVideoFilterAssetURL)({
                         userId: n.user_id,
                         assetId: n.id,
-                        assetHash: t,
-                        size: E.BACKGROUND_REPLACEMENT_SIZE.width
+                        assetHash: e,
+                        size: f.BACKGROUND_REPLACEMENT_SIZE.width
                     })
                 }
-                if (null != s) try {
+                if (null != u) try {
                     ;
-                    let n = l ? void 0 : await (o = s, new Promise((t, e) => {
+                    let n = d ? void 0 : await (s = u, new Promise((e, t) => {
                             let n = new Image;
                             n.crossOrigin = "anonymous", n.onload = () => {
-                                let e = document.createElement("canvas");
-                                e.width = E.BACKGROUND_REPLACEMENT_SIZE.width, e.height = E.BACKGROUND_REPLACEMENT_SIZE.height;
-                                let i = e.getContext("2d");
-                                u(null != i, "Canvas context is missing");
-                                let r = n.height / n.width,
-                                    o = E.BACKGROUND_REPLACEMENT_SIZE.height,
-                                    a = E.BACKGROUND_REPLACEMENT_SIZE.height / r,
-                                    s = (e.width - a) / 2,
-                                    d = (e.height - o) / 2;
-                                i.drawImage(n, s, d, a, o);
-                                let l = i.getImageData(0, 0, e.width, e.height);
-                                t({
-                                    data: l.data,
-                                    width: l.width,
-                                    height: l.height,
+                                let t = document.createElement("canvas");
+                                t.width = f.BACKGROUND_REPLACEMENT_SIZE.width, t.height = f.BACKGROUND_REPLACEMENT_SIZE.height;
+                                let i = t.getContext("2d");
+                                a(null != i, "Canvas context is missing");
+                                let l = n.height / n.width,
+                                    s = f.BACKGROUND_REPLACEMENT_SIZE.height,
+                                    r = f.BACKGROUND_REPLACEMENT_SIZE.height / l,
+                                    u = (t.width - r) / 2,
+                                    o = (t.height - s) / 2;
+                                i.drawImage(n, u, o, r, s);
+                                let d = i.getImageData(0, 0, t.width, t.height);
+                                e({
+                                    data: d.data,
+                                    width: d.width,
+                                    height: d.height,
                                     pixelFormat: "rgba"
                                 })
-                            }, n.onerror = t => e(t), n.src = o
+                            }, n.onerror = e => t(e), n.src = s
                         })),
-                        i = l ? await A(s) : void 0;
-                    O(t, e, r.FilterSettingsGraph.BACKGROUND_REPLACEMENT, n, i)
-                } catch (t) {
-                    (0, d.errorApplyingMediaFilterSettings)()
+                        i = d ? await p(u) : void 0;
+                    T(e, t, l.FilterSettingsGraph.BACKGROUND_REPLACEMENT, n, i)
+                } catch (e) {
+                    (0, o.errorApplyingMediaFilterSettings)()
                 }
             }
-            async function D(t, e) {
+            async function m(e, t) {
                 let {
                     track: n = !0,
                     location: i
-                } = e;
-                await g(r.FilterSettingsKey.CAMERA_BACKGROUND_LIVE, {
-                    type: r.FilterTargetType.INPUT_DEVICE
-                }, t), n && (0, c.trackBackgroundOptionUpdated)(t, i, "Enabled")
+                } = t;
+                await C(l.FilterSettingsKey.CAMERA_BACKGROUND_LIVE, {
+                    type: l.FilterTargetType.INPUT_DEVICE
+                }, e), n && (0, c.trackBackgroundOptionUpdated)(e, i, "Enabled")
             }
-            async function S(t, e, n) {
+            async function S(e, t, n) {
                 let {
                     track: i = !0,
-                    location: u
+                    location: a
                 } = n;
-                (0, d.startApplyMediaFilterSettings)(), await g(r.FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW, {
-                    type: r.FilterTargetType.STREAM,
-                    streamId: e
-                }, t), i && (0, c.trackBackgroundOptionUpdated)(t, u, "Preview")
+                (0, o.startApplyMediaFilterSettings)(), await C(l.FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW, {
+                    type: l.FilterTargetType.STREAM,
+                    streamId: t
+                }, e), i && (0, c.trackBackgroundOptionUpdated)(e, a, "Preview")
             }
 
-            function T() {
-                let t = o.default.getCurrentUser();
-                if (null == t) return;
-                let e = (0, s.getLastUsedVideoBackgroundOption)(t);
-                (0, f.default)() && !l.default.hasBeenApplied && null != e && D(e, {
+            function I() {
+                let e = s.default.getCurrentUser();
+                if (null == e) return;
+                let t = (0, u.getLastUsedVideoBackgroundOption)(e);
+                (0, E.default)() && !d.default.hasBeenApplied && null != t && m(t, {
                     track: !1
-                }).catch(p.NOOP)
+                }).catch(h.NOOP)
             }

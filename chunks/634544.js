@@ -1,59 +1,59 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return c
+                    return d
                 }
             });
-            var i = n("37983");
+            var a = n("37983");
             n("884691");
-            var r = n("414456"),
-                l = n.n(r),
-                a = n("77078"),
-                o = n("118503"),
-                u = n("427459"),
+            var i = n("414456"),
+                r = n.n(i),
+                l = n("77078"),
+                u = n("118503"),
+                o = n("427459"),
                 s = n("782340"),
-                d = n("884737"),
-                c = e => {
-                    let t, n, r, {
-                            guildFeature: c,
+                c = n("884737"),
+                d = e => {
+                    let t, n, i, {
+                            guildFeature: d,
                             guild: f,
                             className: E,
                             hideTooltip: _ = !1,
                             tooltipPosition: p = "left",
-                            onClick: h
+                            onClick: T
                         } = e,
-                        T = f.hasFeature(c),
-                        S = (0, u.minimumRequiredTierForGuildFeature)(c);
-                    return (T ? (null != S && (r = s.default.Messages.PREMIUM_GUILD_INCLUDED), t = (0, i.jsxs)(i.Fragment, {
-                        children: [(0, i.jsx)(o.default, {
-                            className: d.unlockedIcon
-                        }), (0, i.jsx)(a.Heading, {
+                        h = f.hasFeature(d),
+                        C = (0, o.minimumRequiredTierForGuildFeature)(d);
+                    return (h ? (null != C && (i = s.default.Messages.PREMIUM_GUILD_INCLUDED), t = (0, a.jsxs)(a.Fragment, {
+                        children: [(0, a.jsx)(u.default, {
+                            className: c.unlockedIcon
+                        }), (0, a.jsx)(l.Heading, {
                             variant: "eyebrow",
-                            className: d.description,
+                            className: c.description,
                             children: s.default.Messages.PREMIUM_GUILD_TIER_UNLOCKED
                         })]
-                    })) : (null != S && (r = s.default.Messages.CLICK_TO_LEARN_MORE), t = (0, i.jsxs)(i.Fragment, {
-                        children: [(0, i.jsx)(o.default, {
-                            className: d.icon
-                        }), (0, i.jsx)(a.Heading, {
+                    })) : (null != C && (i = s.default.Messages.CLICK_TO_LEARN_MORE), t = (0, a.jsxs)(a.Fragment, {
+                        children: [(0, a.jsx)(u.default, {
+                            className: c.icon
+                        }), (0, a.jsx)(l.Heading, {
                             variant: "eyebrow",
-                            className: d.description,
-                            children: null != S && (0, u.getShortenedTierName)(S)
+                            className: c.description,
+                            children: null != C && (0, o.getShortenedTierName)(C)
                         })]
-                    })), n = _ || null == r ? (0, i.jsx)("div", {
-                        className: l(d.availabilityIndicator, E),
+                    })), n = _ || null == i ? (0, a.jsx)("div", {
+                        className: r(c.availabilityIndicator, E),
                         children: t
-                    }) : (0, i.jsx)(a.Tooltip, {
+                    }) : (0, a.jsx)(l.Tooltip, {
                         position: p,
-                        text: r,
-                        children: e => (0, i.jsx)("div", {
+                        text: i,
+                        children: e => (0, a.jsx)("div", {
                             ...e,
-                            className: l(d.availabilityIndicator, E),
+                            className: r(c.availabilityIndicator, E),
                             children: t
                         })
-                    }), null == h || T) ? n : (0, i.jsx)(a.Clickable, {
-                        onClick: h,
-                        className: d.clickable,
+                    }), null == T || h) ? n : (0, a.jsx)(l.Clickable, {
+                        onClick: T,
+                        className: c.clickable,
                         children: n
                     })
                 }

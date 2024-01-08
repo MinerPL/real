@@ -18,7 +18,7 @@
                 E = n("423487"),
                 _ = n("782340"),
                 h = n("47274");
-            class I extends i.PureComponent {
+            class m extends i.PureComponent {
                 render() {
                     let {
                         onClose: e
@@ -36,7 +36,7 @@
                 }
             }
 
-            function m(e) {
+            function I(e) {
                 let {
                     imageClass: t,
                     children: n,
@@ -88,7 +88,7 @@
                     slotCount: o = 1,
                     canceledCount: d = 0
                 } = e;
-                return (0, r.jsxs)(m, {
+                return (0, r.jsxs)(I, {
                     imageClass: t,
                     error: s,
                     onDismissError: a,
@@ -150,7 +150,7 @@
                         canceledCount: _
                     } = this.props;
                     return (0, r.jsxs)(i.Fragment, {
-                        children: [(0, r.jsx)(I, {
+                        children: [(0, r.jsx)(m, {
                             text: t
                         }), (0, r.jsx)(u.ModalContent, {
                             children: (0, r.jsx)(S, {
@@ -172,7 +172,7 @@
                     })
                 }
             }
-            v.Header = I, v.ApplyBody = S, v.TransferBody = function(e) {
+            v.Header = m, v.ApplyBody = S, v.TransferBody = function(e) {
                 var t, n;
                 let {
                     imageClass: l,
@@ -183,8 +183,8 @@
                     onDismissError: f,
                     slotCount: p = 1,
                     canceledCount: E = 0
-                } = e, I = i.useRef(a), S = null === (t = I.current) || void 0 === t ? void 0 : t.length, C = null === (n = I.current) || void 0 === n ? void 0 : n.reduce((e, t) => (!e.hasOwnProperty(t.id) && (e[t.id] = []), e[t.id].push(t), e), {});
-                return (0, r.jsxs)(m, {
+                } = e, m = i.useRef(a), S = null === (t = m.current) || void 0 === t ? void 0 : t.length, C = null === (n = m.current) || void 0 === n ? void 0 : n.reduce((e, t) => (!e.hasOwnProperty(t.id) && (e[t.id] = []), e[t.id].push(t), e), {});
+                return (0, r.jsxs)(I, {
                     imageClass: l,
                     error: d,
                     onDismissError: f,

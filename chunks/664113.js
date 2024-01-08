@@ -19,7 +19,7 @@
                         disabled: r = !1,
                         onChange: c
                     } = e, {
-                        file: E
+                        file: f
                     } = (0, a.useAudioTrimmerStore)();
                     return (0, i.jsx)(l.FormSection, {
                         className: d.section,
@@ -30,7 +30,7 @@
                                 sound: t,
                                 volume: n,
                                 disabled: r
-                            }), null == t && null != E && (0, i.jsx)(s.default, {
+                            }), null == t && null != f && (0, i.jsx)(s.default, {
                                 className: d.audioTrimmer,
                                 volume: n,
                                 disabled: r,

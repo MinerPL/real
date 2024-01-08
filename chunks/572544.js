@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return L
+                    return D
                 }
             }), n("222007");
             var i = n("746379"),
@@ -61,7 +61,7 @@
                 analyticsLocations: []
             };
 
-            function L(e) {
+            function D(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : M,
                     i = (0, _.findCodedLink)(e),
                     {
@@ -110,8 +110,8 @@
                     hostname: S = "",
                     host: A,
                     query: y
-                } = a.parse(e), L = O.default.isDiscordHostname(S) || O.default.isDiscordLocalhost(A, S);
-                if (L && (null == r ? void 0 : r.startsWith("/application-directory"))) {
+                } = a.parse(e), D = O.default.isDiscordHostname(S) || O.default.isDiscordLocalhost(A, S);
+                if (D && (null == r ? void 0 : r.startsWith("/application-directory"))) {
                     let [, , e, t] = r.split("/"), i = null != e && (0, o.isSnowflake)(e) ? e : void 0;
                     return a => {
                         var s;
@@ -142,30 +142,30 @@
                         }), !0
                     }
                 }
-                if (null != r && L && O.default.isAppRoute(r)) {
+                if (null != r && D && O.default.isAppRoute(r)) {
                     let e = null != y ? {
                         search: y
                     } : null;
                     return t => (null == t || t.preventDefault(), (0, T.default)(r, e), !0)
                 }
-                if (null != r && L) {
+                if (null != r && D) {
                     let {
                         getOAuth2AuthorizeProps: t,
                         openOAuth2ModalWithCreateGuildModal: i
                     } = n("33942"), a = t(e);
                     if (null != a) return e => (null == e || e.preventDefault(), i(a), !0)
                 }
-                let D = (0, p.tryParseEventDetailsPath)(r);
-                if (null != r && L && null != D) return e => {
+                let L = (0, p.tryParseEventDetailsPath)(r);
+                if (null != r && D && null != L) return e => {
                     null == e || e.preventDefault();
                     let t = g.default.getGuildId();
-                    null != D.guildId && "" !== D.guildId && D.guildId !== t && (0, T.default)(R.Routes.CHANNEL(D.guildId));
-                    let n = f.default.getGuildScheduledEvent(D.guildEventId);
+                    null != L.guildId && "" !== L.guildId && L.guildId !== t && (0, T.default)(R.Routes.CHANNEL(L.guildId));
+                    let n = f.default.getGuildScheduledEvent(L.guildEventId);
                     return null != n && (0, E.openGuildEventDetails)({
                         eventId: n.id
                     }), !0
                 };
-                if (L && (null == r ? void 0 : r.startsWith("/settings/"))) {
+                if (D && (null == r ? void 0 : r.startsWith("/settings/"))) {
                     let {
                         default: e
                     } = n("777523"), t = e(r);

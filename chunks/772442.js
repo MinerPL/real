@@ -6,8 +6,8 @@
             });
             var a = n("37983");
             n("884691");
-            var r = n("990766"),
-                s = n("374014"),
+            var s = n("990766"),
+                r = n("374014"),
                 i = n("701909"),
                 l = n("607391"),
                 u = n("49111"),
@@ -30,7 +30,7 @@
                     description: o.default.Messages.STREAM_FAILED_DESCRIPTION.format({
                         helpUrl: i.default.getArticleURL(u.HelpdeskArticles.STREAM_FAILED)
                     }),
-                    onCTAClick: () => (0, r.closeStream)((0, s.encodeStreamKey)(t)),
+                    onCTAClick: () => (0, s.closeStream)((0, r.encodeStreamKey)(t)),
                     callToAction: o.default.Messages.CLOSE_STREAM
                 })
             }

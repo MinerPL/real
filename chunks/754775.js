@@ -5,8 +5,8 @@
                 }
             });
             var a = n("37983"),
-                r = n("884691"),
-                s = n("669491"),
+                s = n("884691"),
+                r = n("669491"),
                 i = n("77078"),
                 l = n("462274"),
                 u = n("181832"),
@@ -24,11 +24,11 @@
                         pulseSpeakingIndicator: S = !1,
                         speaking: _ = !1,
                         ...C
-                    } = e, m = null != h ? h : n, g = (0, l.default)(m, s.default.unsafe_rawColors.PRIMARY_800.css), T = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, I = (0, c.default)(null != p ? p : ""), A = null == I ? void 0 : I.getBannerURL({
+                    } = e, m = null != h ? h : n, g = (0, l.default)(m, r.default.unsafe_rawColors.PRIMARY_800.css), T = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, A = (0, c.default)(null != p ? p : ""), I = null == A ? void 0 : A.getBannerURL({
                         size: 1024,
                         canAnimate: f.GifAutoPlay.getSetting()
                     });
-                    if (r.useEffect(() => {
+                    if (s.useEffect(() => {
                             null != p && T && (0, d.default)(p, void 0, {
                                 dispatchWait: !0
                             })
@@ -42,7 +42,7 @@
                             ...t,
                             backgroundColor: g
                         };
-                    return null != A && _ && T && (M.backgroundImage = "url(".concat(A, ")"), M.backgroundSize = "cover"), (0, a.jsx)("div", {
+                    return null != I && _ && T && (M.backgroundImage = "url(".concat(I, ")"), M.backgroundSize = "cover"), (0, a.jsx)("div", {
                         style: M,
                         className: E.background,
                         children: S ? (0, a.jsx)(o.default, {

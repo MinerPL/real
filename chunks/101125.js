@@ -2,7 +2,7 @@
             let i, a;
             n.r(t), n.d(t, {
                 default: function() {
-                    return V
+                    return x
                 }
             }), n("222007");
             var l = n("714617"),
@@ -30,8 +30,8 @@
                 y = O.StatusTypes.ONLINE,
                 v = O.StatusTypes.UNKNOWN,
                 M = 0,
-                L = [],
-                D = !1,
+                D = [],
+                L = !1,
                 U = !0,
                 P = Object.freeze([]),
                 b = [];
@@ -60,15 +60,15 @@
 
             function F() {
                 var e;
-                M = null !== (e = S.default.getIdleSince()) && void 0 !== e ? e : 0, D = S.default.isAFK(), U ? (y = v, w()) : y = R ? O.StatusTypes.INVISIBLE : f.StatusSetting.getSetting(), y === O.StatusTypes.ONLINE && M > 0 && (y = O.StatusTypes.IDLE);
+                M = null !== (e = S.default.getIdleSince()) && void 0 !== e ? e : 0, L = S.default.isAFK(), U ? (y = v, w()) : y = R ? O.StatusTypes.INVISIBLE : f.StatusSetting.getSetting(), y === O.StatusTypes.ONLINE && M > 0 && (y = O.StatusTypes.IDLE);
                 let t = !1,
                     n = U || y === O.StatusTypes.INVISIBLE ? [] : g.default.getActivities().filter(k);
-                !s(L, n) && (L = n, t = !0);
+                !s(D, n) && (D = n, t = !0);
                 let i = N.default.getRemoteActivities();
                 if (P !== i && (P = i, t = !0), t) {
-                    let e = L.find(e => e.type === O.ActivityTypes.CUSTOM_STATUS),
-                        t = L.filter(e => e.type !== O.ActivityTypes.CUSTOM_STATUS);
-                    b = t.length > 0 ? L : null != e ? [e, ...u(P).filter(e => e.type !== O.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : u.uniqBy(P, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
+                    let e = D.find(e => e.type === O.ActivityTypes.CUSTOM_STATUS),
+                        t = D.filter(e => e.type !== O.ActivityTypes.CUSTOM_STATUS);
+                    b = t.length > 0 ? D : null != e ? [e, ...u(P).filter(e => e.type !== O.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : u.uniqBy(P, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
                 }
             }
 
@@ -76,10 +76,10 @@
                 i = void 0, a = void 0
             }
 
-            function H() {
+            function V() {
                 U = !1, v = O.StatusTypes.UNKNOWN, F(), A.default.setCurrentUserOnConnectionOpen(y, b)
             }
-            class x extends o.default.Store {
+            class H extends o.default.Store {
                 initialize() {
                     this.waitFor(S.default, h.default, g.default, N.default, I.default, m.default), this.syncWith([g.default], F)
                 }
@@ -87,8 +87,8 @@
                     return {
                         status: y,
                         since: M,
-                        activities: L,
-                        afk: D,
+                        activities: D,
+                        afk: L,
                         broadcast: a
                     }
                 }
@@ -97,11 +97,11 @@
                 }
                 getActivities() {
                     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-                    return e ? b : L
+                    return e ? b : D
                 }
                 getPrimaryActivity() {
                     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-                    return e ? b[0] : L[0]
+                    return e ? b[0] : D[0]
                 }
                 getApplicationActivity(e) {
                     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -115,12 +115,12 @@
                     return i
                 }
             }
-            x.displayName = "SelfPresenceStore";
-            var V = new x(d.default, {
+            H.displayName = "SelfPresenceStore";
+            var x = new H(d.default, {
                 START_SESSION: F,
-                CONNECTION_OPEN: H,
-                CONNECTION_OPEN_SUPPLEMENTAL: H,
-                OVERLAY_INITIALIZE: H,
+                CONNECTION_OPEN: V,
+                CONNECTION_OPEN_SUPPLEMENTAL: V,
+                OVERLAY_INITIALIZE: V,
                 CONNECTION_CLOSED: F,
                 IDLE: F,
                 AFK: F,

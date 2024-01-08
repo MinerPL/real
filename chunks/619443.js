@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return x
+                    return H
                 }
             }), n("808653"), n("70102");
             var i = n("917351"),
@@ -32,11 +32,11 @@
             let v = window.DiscordNative;
             (0, A.setDispatchSocketMessageFunction)(O.default);
             let M = new o.default("ConnectionStore"),
-                L = 0,
-                D = null,
+                D = 0,
+                L = null,
                 U = !0;
             async function P(e) {
-                L = Date.now(), D = e.sessionId, A.localPresenceState.handleConnectionOpen();
+                D = Date.now(), L = e.sessionId, A.localPresenceState.handleConnectionOpen();
                 let t = {},
                     n = m.default.getVoiceChannelId();
                 if (null != n) {
@@ -72,7 +72,7 @@
             function w(e) {
                 A.socket.isSessionEstablished() && A.socket.streamDelete(e)
             }
-            class H extends l.default.Store {
+            class V extends l.default.Store {
                 initialize() {
                     this.waitFor(_.default, m.default, f.default, E.default, h.default, c.default), this.syncWith([p.default], G), this.syncWith([S.default], k)
                 }
@@ -89,11 +89,11 @@
                     return A.socket.isSessionEstablished() || __OVERLAY__
                 }
                 lastTimeConnectedChanged() {
-                    return L
+                    return D
                 }
             }
-            H.displayName = "GatewayConnectionStore";
-            var x = new H(s.default, {
+            V.displayName = "GatewayConnectionStore";
+            var H = new V(s.default, {
                 START_SESSION: function() {
                     return A.socket.isClosed() ? (M.verbose("Socket is reconnecting because of starting new session"), A.socket.connect()) : (M.verbose("Socket is not reconnecting during a new session because it is not closed"), !1)
                 },
@@ -112,7 +112,7 @@
                     P(e)
                 },
                 CONNECTION_CLOSED: function() {
-                    M.verbose("connection closed dispatched"), L = Date.now()
+                    M.verbose("connection closed dispatched"), D = Date.now()
                 },
                 RTC_CONNECTION_STATE: function(e) {
                     if (e.state !== R.RTCConnectionStates.DISCONNECTED) return !1;
@@ -130,7 +130,7 @@
                     } = e;
                     return t.reduce((e, t) => {
                         if (_.default.getId() !== t.userId) return e;
-                        if (t.sessionId === D) A.localVoiceState.setState({
+                        if (t.sessionId === L) A.localVoiceState.setState({
                             guildId: t.guildId,
                             channelId: t.channelId
                         });

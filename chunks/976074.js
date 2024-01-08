@@ -6,8 +6,8 @@
             });
             var a = n("37983");
             n("884691");
-            var r = n("446674"),
-                s = n("77078"),
+            var s = n("446674"),
+                r = n("77078"),
                 i = n("374014"),
                 l = n("582415"),
                 u = n("271938"),
@@ -17,8 +17,8 @@
 
             function f(e, t, f) {
                 var E;
-                let h = (0, r.useStateFromStores)([o.default], () => (0, l.getStreamerApplication)(e, o.default), [e]),
-                    p = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
+                let h = (0, s.useStateFromStores)([o.default], () => (0, l.getStreamerApplication)(e, o.default), [e]),
+                    p = (0, s.useStateFromStores)([u.default], () => u.default.getId()),
                     S = null != e ? (0, i.encodeStreamKey)(e) : d.default.getActiveStreamKey(),
                     _ = null !== (E = d.default.getVideoStats(S)) && void 0 !== E ? E : {},
                     C = {
@@ -28,11 +28,11 @@
                         max_viewers: d.default.getMaxViewers(S),
                         ..._
                     };
-                return null == e ? null : (0, a.jsx)(s.MenuItem, {
+                return null == e ? null : (0, a.jsx)(r.MenuItem, {
                     id: "report-stream-problem",
                     label: c.default.Messages.STREAM_REPORT_PROBLEM_MENU_ITEM,
                     action: () => {
-                        null == f || f(), null != e && (0, s.openModalLazy)(async () => {
+                        null == f || f(), null != e && (0, r.openModalLazy)(async () => {
                             let {
                                 default: t
                             } = await n.el("485857").then(n.bind(n, "485857"));

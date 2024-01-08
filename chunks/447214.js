@@ -31,8 +31,8 @@
                 y = n("342797"),
                 v = n("340115"),
                 M = n("289362"),
-                L = n("571420"),
-                D = n("797785"),
+                D = n("571420"),
+                L = n("797785"),
                 U = n("49111");
             let P = new p.default("GatewaySocket"),
                 b = new R.default;
@@ -95,7 +95,7 @@
                         P.verbose("Skipping _connect because willReconnect is false");
                         return
                     }
-                    if (L.getIsPaused()) {
+                    if (D.getIsPaused()) {
                         P.info("Skipping _connect because socket is paused");
                         return
                     }
@@ -140,7 +140,7 @@
                                 }), o = u.state.open, d = u.state.identify, c = u.state.messages, _ = u.state.clientState
                             }
                         }
-                        null == t && ((t = (0, D.default)(n)).binaryType = "arraybuffer"), i(t), o && a(d, _), null != c && c.forEach(l), t.onopen = () => a(d, _), t.onmessage = l, t.onclose = r, t.onerror = s
+                        null == t && ((t = (0, L.default)(n)).binaryType = "arraybuffer"), i(t), o && a(d, _), null != c && c.forEach(l), t.onopen = () => a(d, _), t.onmessage = l, t.onclose = r, t.onerror = s
                     }({
                         gatewayURL: r.toString(),
                         newCallback: e => {

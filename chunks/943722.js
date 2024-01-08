@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 ActivityEmoji: function() {
-                    return I
+                    return M
                 },
                 default: function() {
-                    return h
+                    return O
                 }
             }), n("222007");
             var a = n("37983"),
@@ -21,22 +21,23 @@
                 E = n("32346"),
                 A = n("342845"),
                 _ = n("845579"),
-                m = n("271938"),
-                S = n("42203"),
+                S = n("271938"),
+                m = n("42203"),
                 C = n("957255"),
-                N = n("800762"),
-                g = n("137783"),
-                p = n("49111"),
-                v = n("205341");
+                N = n("824563"),
+                g = n("800762"),
+                p = n("137783"),
+                v = n("49111"),
+                I = n("205341");
 
-            function I(e) {
+            function M(e) {
                 let {
                     emoji: t,
                     className: n,
                     animate: l = !0,
                     hideTooltip: s
                 } = e, r = _.AnimateEmoji.useSetting(), c = null != t.id ? ":".concat(t.name, ":") : f.default.translateSurrogatesToInlineEmoji(t.name), d = {
-                    className: i(v.emoji, n),
+                    className: i(I.emoji, n),
                     emojiId: t.id,
                     emojiName: t.name,
                     autoplay: !0,
@@ -52,7 +53,7 @@
                     })
                 })
             }
-            let M = e => {
+            let h = e => {
                 let {
                     className: t,
                     text: n
@@ -77,7 +78,7 @@
                             ref: s,
                             children: n
                         }), (0, a.jsx)("div", {
-                            className: i(v.textRuler, t),
+                            className: i(I.textRuler, t),
                             ref: r,
                             "aria-hidden": !0,
                             children: n
@@ -85,7 +86,7 @@
                     })
                 })
             };
-            var h = e => {
+            var O = e => {
                 let {
                     activities: t,
                     applicationStream: n,
@@ -96,35 +97,37 @@
                     hideTooltip: o = !1,
                     hideEmoji: f = !1,
                     user: _
-                } = e, h = null != t ? t.find(e => e.type === p.ActivityTypes.CUSTOM_STATUS) : null, O = (0, r.useStateFromStores)([m.default], () => m.default.getId() === (null == _ ? void 0 : _.id)), U = (0, r.useStateFromStores)([E.default], () => O ? E.default.getHangStatusActivity() : null != t ? t.find(e => e.type === p.ActivityTypes.HANG_STATUS) : null), R = (0, r.useStateFromStores)([N.default, S.default], () => {
+                } = e, O = null != t ? t.find(e => e.type === v.ActivityTypes.CUSTOM_STATUS) : null, U = (0, r.useStateFromStores)([S.default], () => S.default.getId() === (null == _ ? void 0 : _.id)), R = (0, r.useStateFromStores)([E.default], () => U ? E.default.getHangStatusActivity() : null != t ? t.find(e => e.type === v.ActivityTypes.HANG_STATUS) : null), x = (0, r.useStateFromStores)([g.default, m.default], () => {
                     var e;
-                    return null != U && null != _ ? S.default.getChannel(null === (e = N.default.getVoiceStateForUser(_.id)) || void 0 === e ? void 0 : e.channelId) : null
+                    return null != R && null != _ ? m.default.getChannel(null === (e = g.default.getVoiceStateForUser(_.id)) || void 0 === e ? void 0 : e.channelId) : null
                 }), {
-                    enableHangStatus: x
+                    enableHangStatus: y
                 } = T.HangStatusExperiment.useExperiment({
-                    guildId: null == R ? void 0 : R.guild_id,
+                    guildId: null == x ? void 0 : x.guild_id,
                     location: "ActivityStatus"
-                }), y = null, j = x && null != U && C.default.can(p.Permissions.CONNECT, R);
-                j ? y = (0, a.jsx)(A.default, {
+                }), j = null, P = y && null != R && C.default.can(v.Permissions.CONNECT, x);
+                P ? j = (0, a.jsx)(A.default, {
                     className: i,
-                    hangStatusActivity: U
-                }) : null != h && null != h.emoji && !f && (y = (0, a.jsx)(I, {
-                    emoji: h.emoji,
+                    hangStatusActivity: R
+                }) : null != O && null != O.emoji && !f && (j = (0, a.jsx)(M, {
+                    emoji: O.emoji,
                     animate: u,
                     hideTooltip: o,
                     className: i
                 }));
-                let P = (0, d.default)(t, n, void 0, j),
-                    H = null != P && P.length > 0;
-                return null != y || H ? (0, a.jsxs)("div", {
+                let H = (0, r.useStateFromStores)([N.default], () => null != _ ? N.default.getStatus(_.id) : null),
+                    L = null !== H && [v.StatusTypes.OFFLINE, v.StatusTypes.INVISIBLE].includes(H),
+                    G = (0, d.default)(t, n, void 0, P),
+                    D = null != G && G.length > 0;
+                return L || null == j && !D ? null : (0, a.jsxs)("div", {
                     className: l,
-                    children: [y, (0, a.jsx)(M, {
-                        text: P,
+                    children: [j, (0, a.jsx)(h, {
+                        text: G,
                         className: s
-                    }), null != t && t.some(c.default) ? (0, a.jsx)(g.default, {
+                    }), null != t && t.some(c.default) ? (0, a.jsx)(p.default, {
                         width: 16,
                         height: 16,
-                        className: v.icon
+                        className: I.icon
                     }) : null]
-                }) : null
+                })
             }

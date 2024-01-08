@@ -5,30 +5,30 @@
                 }
             });
             var a = n("446674"),
-                r = n("913144");
-            let s = !1,
+                s = n("913144");
+            let r = !1,
                 i = !1;
             class l extends a.default.DeviceSettingsStore {
                 initialize(e) {
-                    null != e && (s = e)
+                    null != e && (r = e)
                 }
                 isMuted() {
-                    return s
+                    return r
                 }
                 shouldPlay() {
                     return i
                 }
                 getUserAgnosticState() {
-                    return s
+                    return r
                 }
             }
             l.displayName = "StageMusicStore", l.persistKey = "StageMusicStore";
-            var u = new l(r.default, {
+            var u = new l(s.default, {
                 STAGE_MUSIC_MUTE: function(e) {
                     let {
                         muted: t
                     } = e;
-                    s = t, i = !1
+                    r = t, i = !1
                 },
                 STAGE_MUSIC_PLAY: function(e) {
                     let {

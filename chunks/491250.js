@@ -25,12 +25,12 @@
                     usernameIcon: E,
                     identityCTA: A,
                     className: _,
-                    isTryItOut: m = !1,
-                    lastSection: S
+                    isTryItOut: S = !1,
+                    lastSection: m
                 } = e;
                 return (0, a.jsx)(c.default, {
                     className: s(f.container, _),
-                    lastSection: S,
+                    lastSection: m,
                     children: (0, a.jsxs)("div", {
                         className: n ? f.copiableNameTag : void 0,
                         children: [(0, a.jsx)(u.CopiableField, {
@@ -52,7 +52,7 @@
                                     usernameIcon: E,
                                     user: t,
                                     forceUsername: !0,
-                                    forcePomelo: m,
+                                    forcePomelo: S,
                                     className: null == l ? f.userTagNoNickname : f.userTagWithNickname,
                                     usernameClass: null == l ? f.userTagUsernameNoNickname : f.userTagUsernameBase,
                                     discriminatorClass: null == l ? f.userTagDiscriminatorNoNickname : f.discrimBase,

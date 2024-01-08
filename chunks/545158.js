@@ -8,11 +8,11 @@
             async function r(e, t) {
                 let {
                     default: r
-                } = await n.el("572544").then(n.bind(n, "572544")), l = r(e, {
+                } = await n.el("572544").then(n.bind(n, "572544")), s = r(e, {
                     skipExtensionCheck: t,
                     analyticsLocations: []
                 });
-                if (null != l) l(null);
+                if (null != s) s(null);
                 else if (i.isPlatformEmbedded) window.open(e);
                 else {
                     let t = document.createElement("a");

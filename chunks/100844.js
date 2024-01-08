@@ -6,8 +6,8 @@
             });
             var a = n("37983");
             n("884691");
-            var r = n("414456"),
-                s = n.n(r),
+            var s = n("414456"),
+                r = n.n(s),
                 i = n("77078"),
                 l = n("796863");
 
@@ -15,7 +15,7 @@
                 let {
                     children: t,
                     onClick: n,
-                    className: r,
+                    className: s,
                     tooltip: u
                 } = e;
                 return (0, a.jsx)(i.Tooltip, {
@@ -31,7 +31,7 @@
                                 null == n || n(e), null == u || u()
                             },
                             innerClassName: l.buttonReset,
-                            color: s(l.cta, r),
+                            color: r(l.cta, s),
                             size: i.Button.Sizes.MIN,
                             children: t
                         })

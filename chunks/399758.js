@@ -17,14 +17,14 @@
                     href: t,
                     textContent: n,
                     onSelect: u
-                } = e, _ = (0, s.default)(t, n);
-                return o.isPlatformEmbedded && null != _ ? (0, r.jsx)(i.Menu, {
+                } = e, d = (0, s.default)(t, n);
+                return o.isPlatformEmbedded && null != d ? (0, r.jsx)(i.Menu, {
                     navId: "image-context",
                     onClose: a.closeContextMenu,
                     "aria-label": l.default.Messages.IMAGE_ACTIONS_MENU_LABEL,
                     onSelect: u,
                     children: (0, r.jsx)(i.MenuGroup, {
-                        children: _
+                        children: d
                     })
                 }) : null
             }

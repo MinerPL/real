@@ -22,9 +22,9 @@
                     u = (0, a.useIsInGrowingFriendGuildCommunityUpsellExperiment)(null != e ? e : ""),
                     d = (0, l.default)([i.default], () => i.default.getGuild(e), [e]),
                     c = null == d ? void 0 : d.hasFeature(o.GuildFeatures.COMMUNITY),
-                    E = (0, l.default)([r.default], () => r.default.can(o.Permissions.ADMINISTRATOR, d), [d]),
-                    _ = (null == d ? void 0 : d.isOwner(n)) || E;
-                return !!u && !c && !!_ && !!t || !1
+                    f = (0, l.default)([r.default], () => r.default.can(o.Permissions.ADMINISTRATOR, d), [d]),
+                    E = (null == d ? void 0 : d.isOwner(n)) || f;
+                return !!u && !c && !!E && !!t || !1
             }
 
             function d(e, t) {

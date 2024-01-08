@@ -32,8 +32,8 @@
                 y = n("390946"),
                 v = n("509065"),
                 M = n("518916");
-            let L = new d.default("ConnectionStore"),
-                D = new v.default(M.socket, (e, t) => {
+            let D = new d.default("ConnectionStore"),
+                L = new v.default(M.socket, (e, t) => {
                     var n;
                     e = null != e ? e : {
                         type: "CHANNEL_UPDATES",
@@ -98,7 +98,7 @@
                                             requestToSpeakTimestamp: null !== (n = t.request_to_speak_timestamp) && void 0 !== n ? n : null
                                         }
                                     })
-                                }), L.log("Dispatched INITIAL_GUILD ".concat(t.id)))
+                                }), D.log("Dispatched INITIAL_GUILD ".concat(t.id)))
                             })
                         });
                         break;
@@ -214,12 +214,12 @@
                                     type: "UPDATE_TOKEN",
                                     token: t.auth_token,
                                     userId: t.user.id
-                                }), M.localPresenceState.update(), M.localVoiceState.update(), M.localLobbyVoiceStates.update(), H()
+                                }), M.localPresenceState.update(), M.localVoiceState.update(), M.localLobbyVoiceStates.update(), V()
                             })
                         });
                         break;
                     case "RESUMED":
-                        M.localPresenceState.forceUpdate(), M.localVoiceState.forceUpdate(), M.localLobbyVoiceStates.forceUpdate(), H(), G({
+                        M.localPresenceState.forceUpdate(), M.localVoiceState.forceUpdate(), M.localLobbyVoiceStates.forceUpdate(), V(), G({
                             type: "CONNECTION_RESUMED"
                         });
                         break;
@@ -343,7 +343,7 @@
                         });
                         break;
                     case "CHANNEL_UPDATE":
-                        D.add(t);
+                        L.add(t);
                         break;
                     case "THREAD_CREATE":
                     case "THREAD_UPDATE":
@@ -489,7 +489,7 @@
                                     activities: l,
                                     broadcast: s
                                 } = e;
-                                return x({
+                                return H({
                                     guildId: t.guild_id,
                                     user: n,
                                     status: i,
@@ -515,7 +515,7 @@
                                     activities: l,
                                     broadcast: s
                                 } = e;
-                                return x({
+                                return H({
                                     guildId: t.guild_id,
                                     user: n,
                                     status: i,
@@ -668,7 +668,7 @@
                         });
                         break;
                     case "PRESENCE_UPDATE":
-                        x({
+                        H({
                             guildId: t.guild_id,
                             user: t.user,
                             status: t.status,
@@ -922,7 +922,7 @@
                                 let {
                                     presence: i
                                 } = n;
-                                x({
+                                H({
                                     guildId: t.guild_id,
                                     user: i.user,
                                     status: i.status,
@@ -1635,13 +1635,13 @@
                 }))
             }
 
-            function H() {
+            function V() {
                 M.socket.isSessionEstablished() && I.default.getPendingLobbies().forEach(e => {
                     M.socket.lobbyConnect(e.id, e.secret)
                 })
             }
 
-            function x(e) {
+            function H(e) {
                 let {
                     guildId: t,
                     user: n,

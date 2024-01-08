@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 INVITE_ROW_HEIGHT: function() {
-                    return A
+                    return N
                 },
                 InviteRow: function() {
-                    return p
+                    return S
                 }
             }), n("222007");
             var l = n("37983"),
@@ -16,16 +16,16 @@
                 u = n("679653"),
                 d = n("161778"),
                 c = n("305961"),
-                E = n("705955"),
-                _ = n("27618"),
-                f = n("697218"),
+                f = n("705955"),
+                E = n("27618"),
+                _ = n("697218"),
                 I = n("315102"),
                 h = n("159885"),
                 g = n("158998"),
-                N = n("782340"),
-                T = n("435808");
-            let A = 44;
-            class p extends i.Component {
+                p = n("782340"),
+                m = n("435808");
+            let N = 44;
+            class S extends i.Component {
                 shouldComponentUpdate(e, t) {
                     return this.state.sending !== t.sending || this.state.invited !== t.invited || this.state.hovered !== t.hovered || this.props.user !== e.user || this.props.channel !== e.channel
                 }
@@ -36,7 +36,7 @@
                         channel: r
                     } = this.props;
                     if (null != i) t = i.getAvatarURL(null == r ? void 0 : r.guild_id, 32), n = g.default.getName(i);
-                    else if (null != r && (t = (0, o.getChannelIconURL)(r), n = (0, u.computeChannelName)(r, f.default, _.default), null == t && null != r.guild_id)) {
+                    else if (null != r && (t = (0, o.getChannelIconURL)(r), n = (0, u.computeChannelName)(r, _.default, E.default), null == t && null != r.guild_id)) {
                         let n = c.default.getGuild(r.guild_id);
                         null != n && (null != n.icon ? t = I.default.getGuildIconURL({
                             id: r.guild_id,
@@ -45,7 +45,7 @@
                         }) : e = (0, h.getAcronym)(n.name))
                     }
                     if (null == t || null == n) return null != e ? (0, l.jsx)("div", {
-                        className: T.acronym,
+                        className: m.acronym,
                         "aria-hidden": !0,
                         children: e
                     }) : null;
@@ -53,7 +53,7 @@
                         src: t,
                         "aria-label": n,
                         size: s.AvatarSizes.SIZE_32,
-                        className: T.inviteRowAvatar
+                        className: m.inviteRowAvatar
                     })
                 }
                 render() {
@@ -71,24 +71,24 @@
                         size: s.Button.Sizes.SMALL,
                         disabled: !0,
                         color: (0, r.isThemeDark)(d.default.theme) ? s.Button.Colors.WHITE : s.Button.Colors.BLACK,
-                        children: N.default.Messages.INVITE_FRIEND_MODAL_SENT
+                        children: p.default.Messages.INVITE_FRIEND_MODAL_SENT
                     }) : (0, l.jsx)(s.Button, {
                         color: s.Button.Colors.GREEN,
                         look: o ? s.Button.Looks.FILLED : s.Button.Looks.OUTLINED,
-                        className: T.inviteRowButton,
+                        className: m.inviteRowButton,
                         size: s.Button.Sizes.SMALL,
                         submitting: i,
                         onClick: this.handleClickInvite,
-                        children: N.default.Messages.INVITE_FRIEND_MODAL_INVITE
+                        children: p.default.Messages.INVITE_FRIEND_MODAL_INVITE
                     }), (0, l.jsxs)("div", {
-                        className: T.inviteRow,
+                        className: m.inviteRow,
                         onMouseEnter: this.handleMouseEnter,
                         onMouseLeave: this.handleMouseLeave,
                         children: [(0, l.jsxs)("div", {
-                            className: T.inviteRowInfo,
+                            className: m.inviteRowInfo,
                             children: [this.renderUserOrChannel(), (0, l.jsxs)("div", {
-                                className: T.inviteRowName,
-                                children: [g.default.getName(t), null != n ? (0, u.computeChannelName)(n, f.default, _.default, !0) : null]
+                                className: m.inviteRowName,
+                                children: [g.default.getName(t), null != n ? (0, u.computeChannelName)(n, _.default, E.default, !0) : null]
                             })]
                         }), e]
                     })
@@ -111,7 +111,7 @@
                         let {
                             row: t
                         } = this.props;
-                        return null !== (e = null != t ? E.default.getSelectedInviteMetadata(t) : null) && void 0 !== e ? e : null
+                        return null !== (e = null != t ? f.default.getSelectedInviteMetadata(t) : null) && void 0 !== e ? e : null
                     }, this.handleClickInvite = () => {
                         let {
                             user: e,

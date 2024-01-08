@@ -4,7 +4,7 @@
                     return d
                 },
                 useAudioWaveformData: function() {
-                    return E
+                    return f
                 }
             }), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
             var i = n("884691"),
@@ -31,12 +31,12 @@
                 ...s.defaultWaveformConfig
             };
 
-            function E(e, t, n) {
-                let [o, u] = i.useState(null), [d, E] = i.useState(null), [f, _] = i.useState(1), {
-                    setMaxVolume: I
-                } = (0, l.useAudioTrimmerStore)(), h = i.useCallback((e, t) => {
+            function f(e, t, n) {
+                let [o, u] = i.useState(null), [d, f] = i.useState(null), [E, _] = i.useState(1), {
+                    setMaxVolume: h
+                } = (0, l.useAudioTrimmerStore)(), m = i.useCallback((e, t) => {
                     var i, l, s, o, u;
-                    E(null), (i = e, l = t.offsetWidth, s = n, o = c, u = _, new Promise(e => {
+                    f(null), (i = e, l = t.offsetWidth, s = n, o = c, u = _, new Promise(e => {
                         let t = (0, r.v4)(),
                             n = i => {
                                 let {
@@ -55,13 +55,13 @@
                             width: l,
                             rawBufferData: i
                         })
-                    })).then(E)
+                    })).then(f)
                 }, [n]);
                 return i.useEffect(() => {
                     if (null == e || null == t) return;
                     let i = (0, s.getWaveformId)(e, n);
-                    o !== i && (u(i), h(e, t))
-                }, [e, h, t, n, o]), i.useEffect(() => {
-                    I(f)
-                }, [f, I]), d
+                    o !== i && (u(i), m(e, t))
+                }, [e, m, t, n, o]), i.useEffect(() => {
+                    h(E)
+                }, [E, h]), d
             }

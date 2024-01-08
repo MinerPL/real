@@ -30,13 +30,13 @@
                 y = {},
                 v = {},
                 M = {},
-                L = N.StreamLayouts.THEATRE,
-                D = {},
+                D = N.StreamLayouts.THEATRE,
+                L = {},
                 U = [];
 
             function P() {
-                u.forEach(D, (e, t) => {
-                    e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete D[t]
+                u.forEach(L, (e, t) => {
+                    e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete L[t]
                 })
             }
 
@@ -65,10 +65,10 @@
                     return (0, h.default)(S.default) ? a : null
                 }
                 getAllActiveStreamKeys() {
-                    return Object.keys(D)
+                    return Object.keys(L)
                 }
                 getRTCConnection(e) {
-                    return D[e]
+                    return L[e]
                 }
                 getStatsHistory(e, t, n) {
                     if (!(0, h.default)(S.default) || null == t) return null;
@@ -104,37 +104,37 @@
                 getQuality() {
                     if (!(0, h.default)(S.default)) return N.RTCConnectionQuality.UNKNOWN;
                     let e = this.getActiveStreamKey(),
-                        t = null != e ? D[e] : null;
+                        t = null != e ? L[e] : null;
                     return null != t ? t.quality : N.RTCConnectionQuality.UNKNOWN
                 }
                 getMediaSessionId(e) {
                     if (null == e) return null;
-                    let t = D[e];
+                    let t = L[e];
                     if (null != t) return null != t ? t.getMediaSessionId() : null
                 }
                 getRtcConnectionId(e) {
                     if (null == e) return null;
-                    let t = D[e];
+                    let t = L[e];
                     if (null != t) return null != t ? t.getRTCConnectionId() : null
                 }
                 getVideoStats(e) {
                     if (null == e) return null;
-                    let t = D[e];
+                    let t = L[e];
                     return null != t ? t.getVideoStats() : null
                 }
                 getHostname(e) {
                     if (null == e) return "";
-                    let t = D[e];
+                    let t = L[e];
                     return null != t ? null != t.hostname ? t.hostname : "" : ""
                 }
                 getRegion(e) {
                     if (null == e) return null;
-                    let t = D[e];
+                    let t = L[e];
                     return null != t ? t.getRegion() : null
                 }
                 getMaxViewers(e) {
                     if (null == e) return null;
-                    let t = D[e];
+                    let t = L[e];
                     return null != t ? t.getMaxViewers() : null
                 }
                 getStreamSourceId(e) {
@@ -153,7 +153,7 @@
                 RTC_CONNECTION_PING: G,
                 RTC_CONNECTION_LOSS_RATE: G,
                 RTC_CONNECTION_UPDATE_ID: function(e) {
-                    return u.some(D, t => t === e.connection)
+                    return u.some(L, t => t === e.connection)
                 },
                 STREAM_START: function(e) {
                     let {
@@ -169,7 +169,7 @@
                         channelId: i,
                         ownerId: C.default.getId()
                     });
-                    if (R[r] = a, u.forEach(D, e => {
+                    if (R[r] = a, u.forEach(L, e => {
                             let {
                                 analyticsContext: t
                             } = e;
@@ -188,7 +188,7 @@
                         appContext: t,
                         streamKey: n
                     } = e;
-                    R[n] = t, u.forEach(D, e => {
+                    R[n] = t, u.forEach(L, e => {
                         let {
                             analyticsContext: n
                         } = e;
@@ -203,7 +203,7 @@
                         viewerIds: r
                     } = e;
                     a = t;
-                    let u = D[t];
+                    let u = L[t];
                     if (null == u && null != n) {
                         var o, c, h;
                         null == v[t] && (y[t] = null);
@@ -233,16 +233,16 @@
                             sessionId: i,
                             streamKey: o,
                             serverId: c,
-                            initialLayout: L,
+                            initialLayout: D,
                             analyticsContext: h,
                             isStreamer: null != y[o],
                             parentMediaSessionId: g.default.getMediaSessionId()
-                        }), D[t] = u
+                        }), L[t] = u
                     }
                     U = [], S.default.getMediaEngine().on(d.MediaEngineEvent.ConnectionStats, b)
                 },
                 STREAM_SERVER_UPDATE: function(e) {
-                    let t = D[e.streamKey];
+                    let t = L[e.streamKey];
                     if (null == t) return !1;
                     t.connect(e.endpoint, e.token)
                 },
@@ -251,16 +251,16 @@
                         streamKey: t,
                         viewerIds: n,
                         paused: i
-                    } = e, a = D[t];
+                    } = e, a = L[t];
                     if (null == a) return !1;
                     null != n && a.analyticsContext.trackViewerCount(n.length), a.streamUpdate(i)
                 },
                 STREAM_DELETE: function(e) {
                     let {
                         streamKey: t
-                    } = e, n = D[t];
+                    } = e, n = L[t];
                     if (null == n) return !1;
-                    t === a && (a = null, S.default.getMediaEngine().off(d.MediaEngineEvent.ConnectionStats, b)), n.destroy("stream-end"), delete D[t]
+                    t === a && (a = null, S.default.getMediaEngine().off(d.MediaEngineEvent.ConnectionStats, b)), n.destroy("stream-end"), delete L[t]
                 },
                 STREAM_STATS_UPDATE: function(e) {
                     let {
@@ -273,6 +273,6 @@
                     let {
                         layout: t
                     } = e;
-                    L = t, Object.values(D).forEach(e => e.layoutChange(t))
+                    D = t, Object.values(L).forEach(e => e.layoutChange(t))
                 }
             })

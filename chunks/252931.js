@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 getInventoryGuildPacksUserExperimentConfig: function() {
-                    return d
+                    return c
                 },
                 useInventoryGuildPacksUserExperiment: function() {
-                    return c
+                    return d
                 },
                 useInventoryGuildSettingsExperiment: function() {
                     return E
@@ -12,9 +12,9 @@
             });
             var i = n("65597"),
                 r = n("862205"),
-                l = n("697218"),
-                o = n("719923"),
-                a = n("782340");
+                s = n("697218"),
+                l = n("719923"),
+                o = n("782340");
             let u = (0, r.createExperiment)({
                     kind: "user",
                     id: "2023-05_inventory_guild_packs",
@@ -108,25 +108,25 @@
                         }
                     }]
                 }),
-                s = e => {
+                a = e => {
                     let {
                         user: t,
                         config: n
                     } = e, {
                         desktopViewAndUseAndCollectEnabled: i,
                         mobileViewAndUseEnabled: r,
-                        mobileAndFreemiumCollectEnabled: l,
-                        autoUnfurlReactionTooltip: a,
+                        mobileAndFreemiumCollectEnabled: s,
+                        autoUnfurlReactionTooltip: o,
                         collectOffOverride: u
-                    } = n, s = o.default.isPremium(t);
+                    } = n, a = l.default.isPremium(t);
                     return {
                         viewAndUseEnabled: i,
-                        showTryPacksModalAndV2Copy: l,
-                        collectEnabled: !u && (s ? i : l),
-                        autoUnfurlReactionTooltip: a
+                        showTryPacksModalAndV2Copy: s,
+                        collectEnabled: !u && (a ? i : s),
+                        autoUnfurlReactionTooltip: o
                     }
                 },
-                d = e => {
+                c = e => {
                     let {
                         user: t,
                         autoTrackExposure: n = !0
@@ -136,7 +136,7 @@
                         showTryPacksModalAndV2Copy: !1,
                         collectEnabled: !1,
                         autoUnfurlReactionTooltip: !1
-                    } : s({
+                    } : a({
                         user: t,
                         config: u.getCurrentConfig({
                             location: "inventory_guild_packs_experiment"
@@ -145,7 +145,7 @@
                         })
                     })
                 },
-                c = function() {
+                d = function() {
                     var e;
                     let {
                         expressionSourceGuild: t,
@@ -153,23 +153,23 @@
                     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
                         expressionSourceGuild: void 0,
                         autoTrackExposure: !0
-                    }, r = (0, i.default)([l.default], () => l.default.getCurrentUser()), o = u.useExperiment({
+                    }, r = (0, i.default)([s.default], () => s.default.getCurrentUser()), l = u.useExperiment({
                         location: "inventory_guild_setting_experiment"
                     }, {
                         autoTrackExposure: n
                     }), {
-                        viewAndUseEnabled: a,
-                        showTryPacksModalAndV2Copy: d,
-                        collectEnabled: c,
+                        viewAndUseEnabled: o,
+                        showTryPacksModalAndV2Copy: c,
+                        collectEnabled: d,
                         autoUnfurlReactionTooltip: f
-                    } = s({
+                    } = a({
                         user: r,
-                        config: o
-                    }), E = a && c && null != t && (null == t ? void 0 : null === (e = t.inventorySettings) || void 0 === e ? void 0 : e.isEmojiPackCollectible) !== !1;
+                        config: l
+                    }), E = o && d && null != t && (null == t ? void 0 : null === (e = t.inventorySettings) || void 0 === e ? void 0 : e.isEmojiPackCollectible) !== !1;
                     return {
-                        viewAndUseEnabled: a,
+                        viewAndUseEnabled: o,
                         collectEnabled: E,
-                        showTryPacksModalAndV2Copy: d,
+                        showTryPacksModalAndV2Copy: c,
                         autoUnfurlReactionTooltip: f
                     }
                 },
@@ -216,8 +216,8 @@
                         config: {
                             showSettingsToggle: !0,
                             allowCollection: !0,
-                            getNewSettingsDescriptionLine1: () => a.default.Messages.INVENTORY_NEW_SETTING_ROLLBACK_DESCRIPTION_LINE_1,
-                            getNewSettingsDescriptionLine2: () => a.default.Messages.INVENTORY_NEW_SETTING_ROLLBACK_DESCRIPTION_LINE_2
+                            getNewSettingsDescriptionLine1: () => o.default.Messages.INVENTORY_NEW_SETTING_ROLLBACK_DESCRIPTION_LINE_1,
+                            getNewSettingsDescriptionLine2: () => o.default.Messages.INVENTORY_NEW_SETTING_ROLLBACK_DESCRIPTION_LINE_2
                         }
                     }]
                 }),

@@ -7,7 +7,7 @@
                     return v
                 },
                 PremiumPaymentAnimationTier2: function() {
-                    return R
+                    return N
                 },
                 PremiumPaymentGuildAnimation: function() {
                     return U
@@ -19,8 +19,8 @@
                 E = n.n(p),
                 _ = n("907002"),
                 h = n("458960"),
-                I = n("273108"),
-                m = n("635233");
+                m = n("273108"),
+                I = n("635233");
             (a = r || (r = {})).NORMAL = "normal", a.SPEED_START = "speed_start", a.SPEED_LOOP = "speed_loop", a.FINISH = "finish", a.IDLE = "idle";
             let g = {
                 normal: {
@@ -73,8 +73,8 @@
                         pause: i,
                         pauseWhileUnfocused: l
                     } = this.props;
-                    return (0, d.jsx)(I.default, {
-                        className: E(m.sequencedAnimation, e),
+                    return (0, d.jsx)(m.default, {
+                        className: E(I.sequencedAnimation, e),
                         importData: this.importDefault,
                         nextScene: i ? "idle" : t,
                         sceneSegments: g,
@@ -137,8 +137,8 @@
                         pause: i,
                         pauseWhileUnfocused: l
                     } = this.props;
-                    return (0, d.jsx)(I.default, {
-                        className: E(m.sequencedAnimation, e),
+                    return (0, d.jsx)(m.default, {
+                        className: E(I.sequencedAnimation, e),
                         importData: this.importDefault,
                         nextScene: i ? "idle" : t,
                         sceneSegments: C,
@@ -205,7 +205,7 @@
                         className: e
                     } = this.props;
                     return (0, d.jsxs)("div", {
-                        className: m.panningAnimation,
+                        className: I.panningAnimation,
                         children: [(0, d.jsx)(h.default.div, {
                             className: e,
                             style: this.getStyle(!1)
@@ -216,7 +216,7 @@
                     })
                 }
             }
-            let N = Object.freeze({
+            let R = Object.freeze({
                 IDLE_ENTRY: {
                     toValue: 1,
                     duration: 1500
@@ -237,19 +237,19 @@
                     delay: 1e3
                 }
             });
-            class R extends f.PureComponent {
+            class N extends f.PureComponent {
                 static getNextScene(e) {
                     switch (e) {
-                        case R.Scenes.IDLE_ENTRY:
-                            return R.Scenes.IDLE_LOOP;
-                        case R.Scenes.BOOST_START:
-                            return R.Scenes.BOOST_LOOP;
-                        case R.Scenes.BOOST_END:
-                            return R.Scenes.VICTORY;
-                        case R.Scenes.VICTORY:
-                            return R.Scenes.IDLE_ENTRY;
-                        case R.Scenes.ERROR:
-                            return R.Scenes.IDLE_LOOP;
+                        case N.Scenes.IDLE_ENTRY:
+                            return N.Scenes.IDLE_LOOP;
+                        case N.Scenes.BOOST_START:
+                            return N.Scenes.BOOST_LOOP;
+                        case N.Scenes.BOOST_END:
+                            return N.Scenes.VICTORY;
+                        case N.Scenes.VICTORY:
+                            return N.Scenes.IDLE_ENTRY;
+                        case N.Scenes.ERROR:
+                            return N.Scenes.IDLE_LOOP;
                         default:
                             return e
                     }
@@ -277,23 +277,23 @@
                     })]).start()
                 }
                 animateIdleEntry() {
-                    this.animateEntry(N.IDLE_ENTRY)
+                    this.animateEntry(R.IDLE_ENTRY)
                 }
                 animateError() {
-                    this.animateEntry(N.ERROR)
+                    this.animateEntry(R.ERROR)
                 }
                 animateIdleLoop() {
                     this.animateIdleLoopBackground(), this.animateIdleLoopForeground()
                 }
                 animateBoostStart() {
                     h.default.parallel([h.default.timing(this.foregroundAnimation.y, {
-                        toValue: N.BOOST_START.toValue,
-                        duration: N.BOOST_START.duration,
-                        delay: N.BOOST_START.delay
+                        toValue: R.BOOST_START.toValue,
+                        duration: R.BOOST_START.duration,
+                        delay: R.BOOST_START.delay
                     }), h.default.timing(this.backgroundAnimation.y, {
-                        toValue: N.BOOST_START.toValue,
-                        duration: 1.2 * N.BOOST_START.duration,
-                        delay: N.BOOST_START.delay
+                        toValue: R.BOOST_START.toValue,
+                        duration: 1.2 * R.BOOST_START.duration,
+                        delay: R.BOOST_START.delay
                     })]).start()
                 }
                 render() {
@@ -304,26 +304,26 @@
                         onSceneComplete: r
                     } = this.props;
                     return (0, d.jsxs)("div", {
-                        className: E(m.tier2Animation, e),
+                        className: E(I.tier2Animation, e),
                         children: [n ? (0, d.jsx)(d.Fragment, {
                             children: (0, d.jsxs)("div", {
-                                className: m.panningAnimation,
+                                className: I.panningAnimation,
                                 children: [(0, d.jsx)("div", {
-                                    className: m.tier2Background
+                                    className: I.tier2Background
                                 }), (0, d.jsx)("div", {
-                                    className: m.tier2Foreground
+                                    className: I.tier2Foreground
                                 })]
                             })
                         }) : (0, d.jsxs)(d.Fragment, {
                             children: [(0, d.jsx)(A, {
-                                className: m.tier2Background,
+                                className: I.tier2Background,
                                 animation: this.backgroundAnimation
                             }), (0, d.jsx)(A, {
-                                className: m.tier2Foreground,
+                                className: I.tier2Foreground,
                                 animation: this.foregroundAnimation
                             })]
-                        }), (0, d.jsx)(I.default, {
-                            className: m.sequencedAnimation,
+                        }), (0, d.jsx)(m.default, {
+                            className: I.sequencedAnimation,
                             importData: this.importData,
                             nextScene: n ? "idle_loop" : t,
                             sceneSegments: T,
@@ -343,15 +343,15 @@
                         y: 0
                     }), this.didUnmount = !1, this.animateIdleLoopBackground = () => {
                         !this.didUnmount && (this.backgroundAnimation.x.setValue(0), h.default.timing(this.backgroundAnimation.x, {
-                            toValue: N.IDLE_LOOP.toValue,
-                            duration: 1.2 * N.IDLE_LOOP.duration,
+                            toValue: R.IDLE_LOOP.toValue,
+                            duration: 1.2 * R.IDLE_LOOP.duration,
                             easing: h.default.Easing.linear
                         }).start(this.animateIdleLoopBackground))
                     }, this.animateIdleLoopForeground = () => {
                         !this.didUnmount && (this.foregroundAnimation.x.setValue(0), h.default.timing(this.foregroundAnimation.x, {
-                            toValue: N.IDLE_LOOP.toValue,
-                            duration: N.IDLE_LOOP.duration,
-                            easing: N.IDLE_LOOP.easing
+                            toValue: R.IDLE_LOOP.toValue,
+                            duration: R.IDLE_LOOP.duration,
+                            easing: R.IDLE_LOOP.easing
                         }).start(this.animateIdleLoopForeground))
                     }, this.handleScenePlay = e => {
                         switch (e) {
@@ -371,7 +371,7 @@
                     }
                 }
             }
-            R.Scenes = l, (c = s || (s = {})).ENTRY = "entry", c.IDLE = "idle", c.STARS = "stars", c.ERROR = "error", c.SUCCESS = "success";
+            N.Scenes = l, (c = s || (s = {})).ENTRY = "entry", c.IDLE = "idle", c.STARS = "stars", c.ERROR = "error", c.SUCCESS = "success";
             let L = {
                     entry: {
                         BEG: 0,
@@ -400,7 +400,7 @@
                     WHITE: "#ebf0f7",
                     PINK: "#fa6ef6"
                 }),
-                O = [{
+                x = [{
                     left: 29,
                     top: 100,
                     color: M.WHITE
@@ -425,7 +425,7 @@
                     top: 97,
                     color: M.PINK
                 }],
-                x = Object.freeze({
+                y = Object.freeze({
                     SCALE_INITIAL: 0,
                     SCALE_MIDDLE: 1,
                     SCALE_END: 0,
@@ -443,16 +443,16 @@
                     EASING_END: h.default.Easing.bezier(0, -.01, .99, 0)
                 });
 
-            function y(e) {
+            function O(e) {
                 let {
                     animate: t
-                } = e, [n, r] = f.useState(0), i = (0, _.useSprings)(O.length, O.map((e, i) => {
-                    let l = i > 0 ? x.DELAY_STAGGER * i + Math.random() * (x.DELAY_MAX - x.DELAY_MIN) + x.DELAY_MIN : 0,
-                        s = Math.random() * (x.SIZE_MAX - x.SIZE_MIN) + x.SIZE_MIN;
+                } = e, [n, r] = f.useState(0), i = (0, _.useSprings)(x.length, x.map((e, i) => {
+                    let l = i > 0 ? y.DELAY_STAGGER * i + Math.random() * (y.DELAY_MAX - y.DELAY_MIN) + y.DELAY_MIN : 0,
+                        s = Math.random() * (y.SIZE_MAX - y.SIZE_MIN) + y.SIZE_MIN;
                     return {
                         from: {
-                            scale: x.SCALE_INITIAL,
-                            rotate: x.ROTATE_INITIAL,
+                            scale: y.SCALE_INITIAL,
+                            rotate: y.ROTATE_INITIAL,
                             top: e.top,
                             left: e.left,
                             width: s,
@@ -460,37 +460,37 @@
                         },
                         to: async e => {
                             t ? (await e({
-                                scale: x.SCALE_MIDDLE,
-                                rotate: x.ROTATE_MIDDLE,
+                                scale: y.SCALE_MIDDLE,
+                                rotate: y.ROTATE_MIDDLE,
                                 delay: l,
                                 config: {
-                                    duration: x.DURATION_MIDDLE,
-                                    easing: x.EASING_MIDDLE
+                                    duration: y.DURATION_MIDDLE,
+                                    easing: y.EASING_MIDDLE
                                 }
                             }), await e({
-                                scale: x.SCALE_END,
-                                rotate: x.ROTATE_END,
+                                scale: y.SCALE_END,
+                                rotate: y.ROTATE_END,
                                 config: {
-                                    duration: x.DURATION_END,
-                                    easing: x.EASING_END
+                                    duration: y.DURATION_END,
+                                    easing: y.EASING_END
                                 }
                             }), await e({
-                                scale: x.SCALE_INITIAL,
-                                rotate: x.ROTATE_INITIAL,
+                                scale: y.SCALE_INITIAL,
+                                rotate: y.ROTATE_INITIAL,
                                 immediate: !0
-                            }), i === O.length - 1 && r(n + 1)) : await e({
-                                scale: x.SCALE_INITIAL,
-                                rotate: x.ROTATE_INITIAL
+                            }), i === x.length - 1 && r(n + 1)) : await e({
+                                scale: y.SCALE_INITIAL,
+                                rotate: y.ROTATE_INITIAL
                             })
                         }
                     }
                 }));
                 return (0, d.jsx)(d.Fragment, {
                     children: i.map((e, t) => {
-                        let n = O[t];
+                        let n = x[t];
                         return (0, d.jsx)(_.animated.svg, {
                             style: e,
-                            className: m.guildStar,
+                            className: I.guildStar,
                             xmlns: "http://www.w3.org/2000/svg",
                             viewBox: "0 0 12.14 12.24",
                             children: (0, d.jsx)("path", {
@@ -530,9 +530,9 @@
                         pauseWhileUnfocused: l
                     } = this.props;
                     return (0, d.jsxs)("div", {
-                        className: E(m.guildWrapper, e),
-                        children: [(0, d.jsx)(I.default, {
-                            className: m.guildBackground,
+                        className: E(I.guildWrapper, e),
+                        children: [(0, d.jsx)(m.default, {
+                            className: I.guildBackground,
                             importData: this.importData,
                             nextScene: n ? "idle" : t,
                             sceneSegments: L,
@@ -540,7 +540,7 @@
                             onSceneComplete: i,
                             pauseWhileUnfocused: l,
                             pause: n
-                        }), (0, d.jsx)(y, {
+                        }), (0, d.jsx)(O, {
                             animate: !n && "stars" === t
                         })]
                     })

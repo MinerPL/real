@@ -5,23 +5,23 @@
                 }
             });
             var a = n("37983"),
-                r = n("884691"),
-                s = n("414456"),
-                i = n.n(s),
+                s = n("884691"),
+                r = n("414456"),
+                i = n.n(r),
                 l = n("799869"),
-                u = r.forwardRef(function(e, t) {
+                u = s.forwardRef(function(e, t) {
                     let {
                         children: n,
-                        className: r,
-                        style: s,
+                        className: s,
+                        style: r,
                         noBorder: u = !1,
                         participantUserId: o
                     } = e;
                     return (0, a.jsx)("div", {
-                        className: i(r, l.tile, {
+                        className: i(s, l.tile, {
                             [l.noBorder]: u
                         }),
-                        style: s,
+                        style: r,
                         ref: t,
                         "data-selenium-video-tile": o,
                         children: n

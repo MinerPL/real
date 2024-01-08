@@ -93,7 +93,7 @@
                 }
             };
 
-            function L(e, t) {
+            function D(e, t) {
                 let {
                     forceBatchScan: n = !1,
                     jitter: i = !1
@@ -131,7 +131,7 @@
                     M(t, a)
                 }, Math.random() * N) : M(e, a)
             }
-            let D = e => null == e.content_scan_version || e.content_scan_version < 1,
+            let L = e => null == e.content_scan_version || e.content_scan_version < 1,
                 U = e => {
                     var t, n, i, a, l, s, r, u;
                     let o = null != (u = e).content_scan_version ? u.content_scan_version : null != u.contentScanVersion ? u.contentScanVersion : null;
@@ -156,7 +156,7 @@
                         numOfEmbedsPendingScan: 0
                     });
                     let d = e[t.channel_id];
-                    return d.numOfAttachments += null !== (s = null === (n = t.attachments) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0, d.numOfEmbeds += null !== (r = null === (i = t.embeds) || void 0 === i ? void 0 : i.length) && void 0 !== r ? r : 0, d.numOfAttachmentsPendingScan += null !== (u = null === (a = t.attachments) || void 0 === a ? void 0 : a.filter(D).length) && void 0 !== u ? u : 0, d.numOfEmbedsPendingScan += null !== (o = null == t ? void 0 : null === (l = t.embeds) || void 0 === l ? void 0 : l.filter(U).length) && void 0 !== o ? o : 0, {
+                    return d.numOfAttachments += null !== (s = null === (n = t.attachments) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0, d.numOfEmbeds += null !== (r = null === (i = t.embeds) || void 0 === i ? void 0 : i.length) && void 0 !== r ? r : 0, d.numOfAttachmentsPendingScan += null !== (u = null === (a = t.attachments) || void 0 === a ? void 0 : a.filter(L).length) && void 0 !== u ? u : 0, d.numOfEmbedsPendingScan += null !== (o = null == t ? void 0 : null === (l = t.embeds) || void 0 === l ? void 0 : l.filter(U).length) && void 0 !== o ? o : 0, {
                         ...e,
                         [t.channel_id]: d
                     }
@@ -176,7 +176,7 @@
                     attachmentIds: [],
                     embedIds: []
                 };
-                let c = null !== (r = null == e ? void 0 : null === (i = e.attachments) || void 0 === i ? void 0 : i.filter(D)) && void 0 !== r ? r : [],
+                let c = null !== (r = null == e ? void 0 : null === (i = e.attachments) || void 0 === i ? void 0 : i.filter(L)) && void 0 !== r ? r : [],
                     _ = null !== (u = null == e ? void 0 : null === (a = e.embeds) || void 0 === a ? void 0 : a.filter(U)) && void 0 !== u ? u : [];
                 return {
                     attachmentIds: c.map(e => e.id).filter(Boolean),
@@ -212,7 +212,7 @@
                         numOfEmbeds: n.numOfEmbeds,
                         numOfEmbedsPendingScan: n.numOfEmbedsPendingScan
                     })
-                }), !!(n.length > 0) && (L(n, t), !0)
+                }), !!(n.length > 0) && (D(n, t), !0)
             }
 
             function w(e) {
@@ -233,7 +233,7 @@
                 return null != E && F([E])
             }
 
-            function H(e) {
+            function V(e) {
                 var t, n;
                 let {
                     channelId: i,
@@ -254,7 +254,7 @@
                 })
             }
 
-            function x(e) {
+            function H(e) {
                 let {
                     channelId: t,
                     messages: n
@@ -266,7 +266,7 @@
                 return !!l && F(n)
             }
 
-            function V(e) {
+            function x(e) {
                 let {
                     messages: t
                 } = e;
@@ -360,22 +360,22 @@
                             numOfEmbeds: n.numOfEmbeds,
                             numOfEmbedsPendingScan: n.numOfEmbedsPendingScan
                         })
-                    }), !!(t.length > 0) && (L(t), !0)
+                    }), !!(t.length > 0) && (D(t), !0)
                 }(t)
             }
             class q extends u.default {
                 constructor(...e) {
                     super(...e), this.actions = {
-                        LOAD_MESSAGES_SUCCESS: x,
+                        LOAD_MESSAGES_SUCCESS: H,
                         LOAD_FORUM_POSTS: B,
                         LOAD_THREADS_SUCCESS: Y,
                         LOAD_ARCHIVED_THREADS_SUCCESS: Y,
-                        MESSAGE_CREATE: H,
+                        MESSAGE_CREATE: V,
                         MESSAGE_UPDATE: w,
                         LOGOUT: y,
-                        SEARCH_FINISH: V,
+                        SEARCH_FINISH: x,
                         CHANNEL_SELECT: K,
-                        LOAD_PINNED_MESSAGES_SUCCESS: V,
+                        LOAD_PINNED_MESSAGES_SUCCESS: x,
                         USER_SETTINGS_PROTO_UPDATE: j,
                         CHANNEL_RTC_UPDATE_CHAT_OPEN: W
                     }

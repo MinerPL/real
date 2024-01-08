@@ -16,13 +16,13 @@
                     return w
                 },
                 shouldShowCustomGiftExperience: function() {
-                    return H
+                    return V
                 },
                 makeComboId: function() {
-                    return x
+                    return H
                 },
                 parseComboId: function() {
-                    return V
+                    return x
                 },
                 isGiftCodeEmbed: function() {
                     return Y
@@ -89,10 +89,10 @@
                 y = [...R].join("|"),
                 v = RegExp("(?: |^|https?://)(?:".concat(y, ")/([a-z0-9-]+)"), "gi"),
                 M = (e, t) => Array(t).fill(void 0).map(() => "[".concat("abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789", "]{").concat(e, "}")).join("-?"),
-                L = M(4, 4),
-                D = M(4, 6),
+                D = M(4, 4),
+                L = M(4, 6),
                 U = M(5, 3),
-                P = [L, D, U, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
+                P = [D, L, U, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
                 b = new RegExp("^(".concat("WUMP-?", ")?(").concat(P, ")$")),
                 G = e => null != e && !0;
             (a = i || (i = {}))[a.DEFAULT = 0] = "DEFAULT", a[a.CUSTOM_STYLE = 1] = "CUSTOM_STYLE", a[a.CUSTOM_MESSAGE = 2] = "CUSTOM_MESSAGE", a[a.EMOJI_SOUNDBOARD = 3] = "EMOJI_SOUNDBOARD";
@@ -111,19 +111,19 @@
                         autoTrackExposure: t
                     }).enabled ? 1 : 0
                 },
-                H = function(e) {
+                V = function(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "shouldShowCustomGiftExperience";
                     return 0 !== w(e, t, n)
                 };
 
-            function x(e) {
+            function H(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                     n = arguments.length > 2 ? arguments[2] : void 0;
                 return "".concat(e, ":").concat(null != t ? t : "", ":").concat(null != n ? n : "")
             }
 
-            function V(e) {
+            function x(e) {
                 let [t, n, i] = e.split(":");
                 return {
                     skuId: t,

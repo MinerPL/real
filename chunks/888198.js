@@ -31,8 +31,8 @@
                 y = n("782340");
             let v = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
                 M = /^$|\n *$/,
-                L = /^ *>>> ?/,
-                D = /^ *> ?/gm;
+                D = /^ *>>> ?/,
+                L = /^ *> ?/gm;
 
             function U(e) {
                 let t = (0, C.punycodeLink)(e[1]);
@@ -82,8 +82,8 @@
                         },
                         parse(e, t, n) {
                             let i = e[0],
-                                a = !!L.exec(i),
-                                l = i.replace(a ? L : D, ""),
+                                a = !!D.exec(i),
+                                l = i.replace(a ? D : L, ""),
                                 s = n.inQuote || !1,
                                 r = n.inline || !1;
                             n.inQuote = !0, !a && (n.inline = !0);
@@ -353,8 +353,8 @@
                 k = (0, A.default)([G, I.default]),
                 F = a.omit(k, ["inlineCode", "codeBlock", "br", "blockQuote"]),
                 w = a.omit(k, ["inlineCode", "codeBlock", "br", "blockQuote", "url", "attachmentLink", "mention", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink"]),
-                H = a.omit(k, ["codeBlock", "br", "mention", "channel", "roleMention", "attachmentLink"]),
-                x = a.omit((0, A.default)([k, {
+                V = a.omit(k, ["codeBlock", "br", "mention", "channel", "roleMention", "attachmentLink"]),
+                H = a.omit((0, A.default)([k, {
                     inlineCode: {
                         match(e, t, n) {
                             let i = k.codeBlock.match(e, t, n);
@@ -364,7 +364,7 @@
                         }
                     }
                 }]), ["blockQuote", "codeBlock", "br"]),
-                V = a.omit(k, ["codeBlock", "br", "blockQuote"]),
+                x = a.omit(k, ["codeBlock", "br", "blockQuote"]),
                 B = a.omit(k, ["codeBlock", "br", "attachmentLink", "mention", "roleMention", "channel", "paragraph", "newline"]),
                 Y = a.omit(k, ["codeBlock", "blockQuote", "br"]),
                 K = a.omit(k, ["codeBlock", "br", "inlineCode"]);
@@ -411,9 +411,9 @@
                 RULES: k,
                 CHANNEL_TOPIC_RULES: F,
                 VOICE_CHANNEL_STATUS_RULES: w,
-                EMBED_TITLE_RULES: H,
-                INLINE_REPLY_RULES: x,
-                GUILD_VERIFICATION_FORM_RULES: V,
+                EMBED_TITLE_RULES: V,
+                INLINE_REPLY_RULES: H,
+                GUILD_VERIFICATION_FORM_RULES: x,
                 GUILD_EVENT_RULES: Y,
                 PROFILE_BIO_RULES: B,
                 AUTO_MODERATION_SYSTEM_MESSAGE_RULES: W,

@@ -6,8 +6,8 @@
             });
             var a = n("37983");
             n("884691");
-            var r = n("77078"),
-                s = n("990766"),
+            var s = n("77078"),
+                r = n("990766"),
                 i = n("773356"),
                 l = n("349171"),
                 u = n("292687"),
@@ -20,7 +20,7 @@
 
             function p(e, t, p) {
                 let S = u.default.getWindowOpen(E.PopoutWindowKeys.CHANNEL_CALL_POPOUT) ? E.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
-                if ((0, l.default)(S), f.isPlatformEmbedded)(0, r.openModalLazy)(async () => {
+                if ((0, l.default)(S), f.isPlatformEmbedded)(0, s.openModalLazy)(async () => {
                     let {
                         default: t
                     } = await n.el("451863").then(n.bind(n, "451863"));
@@ -40,7 +40,7 @@
                         height: 720
                     };
                     d.default.getMediaEngine().getDesktopSource(n, !0).then(n => {
-                        (0, s.startStream)(e, t, {
+                        (0, r.startStream)(e, t, {
                             pid: null,
                             sourceId: n,
                             sourceName: null

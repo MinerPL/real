@@ -21,9 +21,9 @@
                 E = n("568734"),
                 g = n("718422"),
                 S = n("49111"),
-                _ = n("877671");
+                A = n("877671");
 
-            function A(e) {
+            function _(e) {
                 let {
                     value: t,
                     channel: n
@@ -47,8 +47,8 @@
                     id: u
                 } = n, C = t.getGuildId(), m = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(C), [C]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, T = null != m && m.hasFeature(S.GuildFeatures.NEWS), I = g && T, {
                     editingMessage: N,
-                    editingTextValue: L,
-                    editingRichValue: v
+                    editingTextValue: v,
+                    editingRichValue: L
                 } = (0, l.useStateFromStoresObject)([c.default], () => ({
                     editingMessage: c.default.getEditingMessage(o),
                     editingTextValue: c.default.getEditingTextValue(o),
@@ -62,20 +62,20 @@
                     }), Promise.resolve()
                 }, [N, I, x, t]), y = a.useCallback(e => (0, a.createElement)(M, {
                     ...e,
-                    className: _.channelTextArea,
+                    className: A.channelTextArea,
                     key: u
                 }), [u]);
-                return null != L && null != v ? (0, s.jsx)(p.default, {
+                return null != v && null != L ? (0, s.jsx)(p.default, {
                     ref: void 0,
                     channel: t,
                     message: n,
-                    textValue: L,
-                    richValue: v,
+                    textValue: v,
+                    richValue: L,
                     onCancel: i.default.endEditMessage,
                     onChange: i.default.updateEditMessage,
                     onConfirmDelete: r.default.confirmDelete,
                     saveMessage: R,
-                    validateEdit: A,
+                    validateEdit: _,
                     children: y
                 }) : null
             }
@@ -93,7 +93,7 @@
                 return a.useEffect(() => (m.ComponentDispatch.subscribe(S.ComponentActions.TEXTAREA_FOCUS, C), m.ComponentDispatch.subscribe(S.ComponentActions.TEXTAREA_BLUR, p), () => {
                     m.ComponentDispatch.unsubscribe(S.ComponentActions.TEXTAREA_FOCUS, C), m.ComponentDispatch.unsubscribe(S.ComponentActions.TEXTAREA_BLUR, p)
                 }), [C, p]), (0, s.jsx)(u.default, {
-                    className: _.channelTextArea,
+                    className: A.channelTextArea,
                     textValue: t,
                     richValue: n,
                     channel: i,

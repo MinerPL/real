@@ -1,45 +1,45 @@
             "use strict";
             n.r(t), n.d(t, {
                 focus: function() {
-                    return E
+                    return u
                 },
                 hidden: function() {
-                    return o
+                    return r
                 },
                 resized: function() {
-                    return a
+                    return o
                 },
                 fullscreenChange: function() {
-                    return _
+                    return I
                 },
                 init: function() {
-                    return s
+                    return d
                 },
                 unload: function() {
-                    return A
+                    return a
                 }
             });
-            var i = n("917351"),
-                l = n("913144"),
-                u = n("563680"),
-                r = n("816454");
+            var E = n("917351"),
+                i = n("913144"),
+                l = n("563680"),
+                _ = n("816454");
 
-            function E(e, t) {
-                l.default.dispatch({
+            function u(e, t) {
+                i.default.dispatch({
                     type: "WINDOW_FOCUS",
-                    windowId: (0, r.getWindowId)(e),
+                    windowId: (0, _.getWindowId)(e),
                     focused: t
                 })
             }
 
-            function o(e) {
-                l.default.dispatch({
+            function r(e) {
+                i.default.dispatch({
                     type: "WINDOW_HIDDEN",
-                    windowId: (0, r.getWindowId)(e)
+                    windowId: (0, _.getWindowId)(e)
                 })
             }
-            let d = (0, i.memoize)(e => (0, i.debounce)((t, n) => {
-                l.default.dispatch({
+            let A = (0, E.memoize)(e => (0, E.debounce)((t, n) => {
+                i.default.dispatch({
                     type: "WINDOW_RESIZED",
                     windowId: e,
                     width: t,
@@ -47,37 +47,37 @@
                 })
             }, 100));
 
-            function a(e) {
-                let t = (0, r.getWindowId)(e),
-                    n = d(t);
+            function o(e) {
+                let t = (0, _.getWindowId)(e),
+                    n = A(t);
                 n(e.innerWidth, e.innerHeight)
             }
 
-            function _(e) {
-                let t = (0, r.getWindowId)(e);
-                l.default.dispatch({
+            function I(e) {
+                let t = (0, _.getWindowId)(e);
+                i.default.dispatch({
                     type: "WINDOW_FULLSCREEN_CHANGE",
                     windowId: t,
-                    isElementFullscreen: (0, u.isFullScreen)(null, e.document)
+                    isElementFullscreen: (0, l.isFullScreen)(null, e.document)
                 })
             }
 
-            function s(e) {
-                let t = (0, r.getWindowId)(e),
+            function d(e) {
+                let t = (0, _.getWindowId)(e),
                     n = e.document;
-                l.default.dispatch({
+                i.default.dispatch({
                     type: "WINDOW_INIT",
                     windowId: t,
-                    isElementFullscreen: (0, u.isFullScreen)(null, n),
+                    isElementFullscreen: (0, l.isFullScreen)(null, n),
                     focused: n.hasFocus(),
                     width: e.innerWidth,
                     height: e.innerHeight
                 })
             }
 
-            function A(e) {
-                l.default.dispatch({
+            function a(e) {
+                i.default.dispatch({
                     type: "WINDOW_UNLOAD",
-                    windowId: (0, r.getWindowId)(e)
+                    windowId: (0, _.getWindowId)(e)
                 })
             }

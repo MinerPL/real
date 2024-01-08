@@ -1,39 +1,39 @@
             "use strict";
             n.r(t), n.d(t, {
                 getDecorationSizeForAvatarSize: function() {
-                    return u
+                    return o
                 },
                 openAvatarDecorationModal: function() {
                     return s
                 }
             });
-            var i = n("37983");
+            var r = n("37983");
             n("884691");
-            var r = n("77078"),
-                l = n("393414");
+            var u = n("77078"),
+                i = n("393414");
             n("103603");
-            var o = n("573135"),
+            var l = n("573135"),
                 a = n("49111");
 
-            function u(e) {
-                return "number" != typeof e ? (0, r.getAvatarSize)(e) * o.DECORATION_TO_AVATAR_RATIO : e * o.DECORATION_TO_AVATAR_RATIO
+            function o(e) {
+                return "number" != typeof e ? (0, u.getAvatarSize)(e) * l.DECORATION_TO_AVATAR_RATIO : e * l.DECORATION_TO_AVATAR_RATIO
             }
             let s = e => {
                 let {
                     analyticsLocations: t,
-                    initialSelectedDecoration: o,
-                    isTryItOutFlow: u
+                    initialSelectedDecoration: l,
+                    isTryItOutFlow: o
                 } = e;
-                (0, r.openModalLazy)(async () => {
-                    (0, l.getHistory)().location.pathname === a.Routes.COLLECTIBLES_SHOP_FULLSCREEN && (0, l.transitionTo)(a.Routes.APP);
+                (0, u.openModalLazy)(async () => {
+                    (0, i.getHistory)().location.pathname === a.Routes.COLLECTIBLES_SHOP_FULLSCREEN && (0, i.transitionTo)(a.Routes.APP);
                     let {
                         default: e
                     } = await n.el("791050").then(n.bind(n, "791050"));
-                    return n => (0, i.jsx)(e, {
+                    return n => (0, r.jsx)(e, {
                         ...n,
                         analyticsLocations: t,
-                        initialSelectedDecoration: o,
-                        isTryItOutFlow: u
+                        initialSelectedDecoration: l,
+                        isTryItOutFlow: o
                     })
                 }, {})
             }

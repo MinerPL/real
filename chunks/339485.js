@@ -18,11 +18,11 @@
                     onConfirm: u,
                     onDismiss: d,
                     theme: c
-                } = e, E = (0, a.default)(t, 0 === n);
+                } = e, f = (0, a.default)(t, 0 === n);
                 return (0, l.jsxs)(i.Fragment, {
                     children: [(0, l.jsx)(s.Button, {
                         onClick: u,
-                        disabled: E,
+                        disabled: f,
                         children: o.default.Messages.GENERATE_A_NEW_LINK
                     }), (0, l.jsx)(s.Button, {
                         look: s.Button.Looks.LINK,

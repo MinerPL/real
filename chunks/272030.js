@@ -1,13 +1,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 closeContextMenu: function() {
-                    return a
-                },
-                openContextMenu: function() {
                     return o
                 },
+                openContextMenu: function() {
+                    return d
+                },
                 openContextMenuLazy: function() {
-                    return E
+                    return c
                 }
             }), n("506083");
             var i = n("913144"),
@@ -16,14 +16,14 @@
                 r = n("749866"),
                 s = n("49111");
 
-            function _(e) {
+            function a(e) {
                 i.default.dispatch({
                     type: "CONTEXT_MENU_OPEN",
                     contextMenu: e
                 })
             }
 
-            function a(e) {
+            function o(e) {
                 {
                     let {
                         flushSync: t
@@ -38,38 +38,38 @@
                 }
             }
 
-            function o(e, t, n, i) {
-                var a, o, E;
+            function d(e, t, n, i) {
+                var o, d, c;
                 if (e.stopPropagation(), null != e.currentTarget.contains && !e.currentTarget.contains(e.target)) return;
-                let d = 0,
-                    c = 0;
-                if ("pageX" in e && (d = e.pageX, c = e.pageY), 0 === d && 0 === c) {
-                    let t = null === (a = e.target) || void 0 === a ? void 0 : a.getBoundingClientRect(),
+                let g = 0,
+                    f = 0;
+                if ("pageX" in e && (g = e.pageX, f = e.pageY), 0 === g && 0 === f) {
+                    let t = null === (o = e.target) || void 0 === o ? void 0 : o.getBoundingClientRect(),
                         {
                             left: n = 0,
                             top: i = 0,
                             width: l = 0,
                             height: u = 0
                         } = null != t ? t : {};
-                    d = n + l / 2, c = i + u / 2
+                    g = n + l / 2, f = i + u / 2
                 }
-                let I = {
+                let h = {
                     render: t,
                     renderLazy: i,
-                    target: null !== (o = e.target) && void 0 !== o ? o : e.currentTarget,
-                    rect: new DOMRect(d, c, 0, 0),
+                    target: null !== (d = e.target) && void 0 !== d ? d : e.currentTarget,
+                    rect: new DOMRect(g, f, 0, 0),
                     config: {
-                        context: __OVERLAY__ ? s.AppContext.OVERLAY : null !== (E = (0, l.getCurrentlyInteractingAppContext)()) && void 0 !== E ? E : s.AppContext.APP,
+                        context: __OVERLAY__ ? s.AppContext.OVERLAY : null !== (c = (0, l.getCurrentlyInteractingAppContext)()) && void 0 !== c ? c : s.AppContext.APP,
                         ...n
                     }
                 };
                 if ((null == n ? void 0 : n.enableSpellCheck) && (0, u.isDesktop)()) {
                     let e = (0, r.addResultListener)(() => {
-                        e(), _(I)
+                        e(), a(h)
                     })
-                } else e.preventDefault(), _(I)
+                } else e.preventDefault(), a(h)
             }
 
-            function E(e, t, n) {
-                o(e, void 0, n, t)
+            function c(e, t, n) {
+                d(e, void 0, n, t)
             }

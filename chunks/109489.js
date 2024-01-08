@@ -5,9 +5,9 @@
                 }
             });
             var a = n("37983"),
-                r = n("884691"),
-                s = n("414456"),
-                i = n.n(s),
+                s = n("884691"),
+                r = n("414456"),
+                i = n.n(r),
                 l = n("255397"),
                 u = n("256170"),
                 o = n("155207"),
@@ -49,26 +49,26 @@
                 let {
                     channelId: t,
                     className: n,
-                    isParticipantsOpen: s,
+                    isParticipantsOpen: r,
                     isVertical: u = !1,
                     hideTooltip: o = !1
-                } = e, p = r.useCallback(e => {
+                } = e, p = s.useCallback(e => {
                     let {
                         className: t
                     } = e;
-                    return s ? (0, a.jsx)(h, {
+                    return r ? (0, a.jsx)(h, {
                         className: t,
                         isVertical: u
                     }) : (0, a.jsx)(E, {
                         className: t,
                         isVertical: u
                     })
-                }, [s, u]);
+                }, [r, u]);
                 return (0, a.jsx)(d.default, {
-                    label: s ? c.default.Messages.VIDEO_CALL_HIDE_MEMBERS : c.default.Messages.VIDEO_CALL_SHOW_MEMBERS,
+                    label: r ? c.default.Messages.VIDEO_CALL_HIDE_MEMBERS : c.default.Messages.VIDEO_CALL_SHOW_MEMBERS,
                     className: i(f.participantsButton, n),
                     onClick: function() {
-                        l.default.toggleParticipants(t, !s)
+                        l.default.toggleParticipants(t, !r)
                     },
                     iconComponent: p,
                     shouldShowTooltip: !o

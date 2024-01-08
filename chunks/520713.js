@@ -2,23 +2,23 @@
             let r;
             n.r(e), n.d(e, {
                 validateExpiry: function() {
-                    return s
+                    return I
                 },
                 getStripe: function() {
-                    return d
+                    return u
                 },
                 parseStripePaymentMethod: function() {
-                    return _
+                    return c
                 },
                 authenticatePaymentIntentForPaymentId: function() {
-                    return p
+                    return s
                 }
             }), n("222007");
-            var a, i, o = n("60979"),
-                l = n("872717"),
-                u = n("49111");
-            (i = a || (a = {})).REQUIRES_PAYMENT_METHOD = "requires_payment_method", i.REQUIRES_CONFIRMATION = "requires_confirmation", i.REQUIRES_ACTION = "requires_action", i.PROCESSING = "processing", i.CANCELED = "canceled", i.SUCCEEDED = "succeeded";
-            let c = t => {
+            var a, _, i = n("60979"),
+                o = n("872717"),
+                l = n("49111");
+            (_ = a || (a = {})).REQUIRES_PAYMENT_METHOD = "requires_payment_method", _.REQUIRES_CONFIRMATION = "requires_confirmation", _.REQUIRES_ACTION = "requires_action", _.PROCESSING = "processing", _.CANCELED = "canceled", _.SUCCEEDED = "succeeded";
+            let E = t => {
                     let e = e => "You passed an invalid expiration date ".concat(t) + "".concat(null != e ? e : "") + "Please pass a string containing a numeric month and year such as `01-17` or `2015 / 05`",
                         n = t.split(/[.\-/\s]+/g);
                     2 !== n.length && e();
@@ -26,13 +26,13 @@
                             let r = parseInt(t);
                             return isNaN(r) && e("".concat(n, " is not a number.")), r < 1 && e("".concat(r, " is less than one.")), r
                         }),
-                        [a, i] = r[0] > 12 ? [r[1], r[0]] : [r[0], r[1]];
-                    return a > 12 && e("Month must be a number 1-12, not ".concat(a, ".")), i < 100 && (i += 2e3), [a, i]
+                        [a, _] = r[0] > 12 ? [r[1], r[0]] : [r[0], r[1]];
+                    return a > 12 && e("Month must be a number 1-12, not ".concat(a, ".")), _ < 100 && (_ += 2e3), [a, _]
                 },
-                s = t => {
+                I = t => {
                     let e, n;
                     try {
-                        [e, n] = c(t)
+                        [e, n] = E(t)
                     } catch (t) {
                         return !1
                     }
@@ -41,61 +41,61 @@
                     return r.setMonth(r.getMonth() - 1), r.setMonth(r.getMonth() + 1, 1), r > a
                 };
 
-            function d() {
-                return null != r ? Promise.resolve(r) : (0, o.loadStripe)(u.PaymentSettings.STRIPE.KEY).then(t => (r = t, t))
+            function u() {
+                return null != r ? Promise.resolve(r) : (0, i.loadStripe)(l.PaymentSettings.STRIPE.KEY).then(t => (r = t, t))
             }
 
-            function _(t) {
-                var e, n, r, a, i, o, l, u;
+            function c(t) {
+                var e, n, r, a, _, i, o, l;
                 let {
-                    billing_details: c
-                } = t, s = null !== (e = c.address) && void 0 !== e ? e : {}, d = {
-                    name: null !== (n = c.name) && void 0 !== n ? n : "",
-                    line1: null !== (r = s.line1) && void 0 !== r ? r : "",
-                    line2: null !== (a = s.line2) && void 0 !== a ? a : "",
-                    city: null !== (i = s.city) && void 0 !== i ? i : "",
-                    state: null !== (o = s.state) && void 0 !== o ? o : "",
-                    country: null !== (l = s.country) && void 0 !== l ? l : "",
-                    postalCode: null !== (u = s.postal_code) && void 0 !== u ? u : ""
+                    billing_details: E
+                } = t, I = null !== (e = E.address) && void 0 !== e ? e : {}, u = {
+                    name: null !== (n = E.name) && void 0 !== n ? n : "",
+                    line1: null !== (r = I.line1) && void 0 !== r ? r : "",
+                    line2: null !== (a = I.line2) && void 0 !== a ? a : "",
+                    city: null !== (_ = I.city) && void 0 !== _ ? _ : "",
+                    state: null !== (i = I.state) && void 0 !== i ? i : "",
+                    country: null !== (o = I.country) && void 0 !== o ? o : "",
+                    postalCode: null !== (l = I.postal_code) && void 0 !== l ? l : ""
                 };
                 return {
                     token: t.id,
-                    billingAddressInfo: d
+                    billingAddressInfo: u
                 }
             }
-            async function p(t) {
+            async function s(t) {
                 try {
-                    let e = await l.default.get({
-                            url: u.Endpoints.BILLING_STRIPE_PAYMENT_INTENTS(t),
+                    let e = await o.default.get({
+                            url: l.Endpoints.BILLING_STRIPE_PAYMENT_INTENTS(t),
                             oldFormErrors: !0
                         }),
                         {
                             stripe_payment_intent_client_secret: n
                         } = e.body,
-                        r = await d();
+                        r = await u();
                     if (null == r) return {
                         error: "unable to load stripe"
                     };
                     let {
                         error: a,
-                        paymentIntent: i
+                        paymentIntent: _
                     } = await r.retrievePaymentIntent(n);
                     if (null != a) return {
                         error: a.message
                     };
-                    if (null == i) return {
+                    if (null == _) return {
                         error: "payment intent does not exist"
                     };
-                    let o = {};
-                    switch ("requires_payment_method" === i.status && null != i.last_payment_error && null != i.last_payment_error.payment_method && (o.payment_method = i.last_payment_error.payment_method.id), i.status) {
+                    let i = {};
+                    switch ("requires_payment_method" === _.status && null != _.last_payment_error && null != _.last_payment_error.payment_method && (i.payment_method = _.last_payment_error.payment_method.id), _.status) {
                         case "requires_payment_method":
                         case "requires_confirmation":
                         case "requires_action":
                             let {
-                                error: c
-                            } = await r.confirmCardPayment(n, o);
-                            if (null != c) return {
-                                error: c.message
+                                error: E
+                            } = await r.confirmCardPayment(n, i);
+                            if (null != E) return {
+                                error: E.message
                             };
                             return {};
                         case "succeeded":
@@ -103,7 +103,7 @@
                             return {};
                         default:
                             return {
-                                error: "Invalid Payment Intent status: ".concat(i.status)
+                                error: "Invalid Payment Intent status: ".concat(_.status)
                             }
                     }
                 } catch (t) {

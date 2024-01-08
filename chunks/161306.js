@@ -5,14 +5,14 @@
                 }
             });
             var a = n("99795"),
-                r = n("353927");
-            let s = Object.freeze({
-                [a.ParticipantTypes.STREAM]: r.MediaEngineContextTypes.STREAM,
-                [a.ParticipantTypes.HIDDEN_STREAM]: r.MediaEngineContextTypes.STREAM,
-                [a.ParticipantTypes.USER]: r.MediaEngineContextTypes.DEFAULT,
-                [a.ParticipantTypes.ACTIVITY]: r.MediaEngineContextTypes.DEFAULT
+                s = n("353927");
+            let r = Object.freeze({
+                [a.ParticipantTypes.STREAM]: s.MediaEngineContextTypes.STREAM,
+                [a.ParticipantTypes.HIDDEN_STREAM]: s.MediaEngineContextTypes.STREAM,
+                [a.ParticipantTypes.USER]: s.MediaEngineContextTypes.DEFAULT,
+                [a.ParticipantTypes.ACTIVITY]: s.MediaEngineContextTypes.DEFAULT
             });
 
             function i(e) {
-                return s[e]
+                return r[e]
             }

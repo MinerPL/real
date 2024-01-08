@@ -25,13 +25,13 @@
                 _ = n("49111"),
                 p = n("782340"),
                 I = n("653842"),
-                A = n("584503"),
-                C = n("45656");
+                C = n("584503"),
+                A = n("45656");
 
             function h(e) {
                 let {
                     className: t
-                } = e, n = (0, u.default)(), i = (0, s.isThemeDark)(n) ? A : C;
+                } = e, n = (0, u.default)(), i = (0, s.isThemeDark)(n) ? C : A;
                 return (0, r.jsxs)("div", {
                     className: o(I.container, t),
                     children: [(0, r.jsx)(a.Heading, {

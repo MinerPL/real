@@ -40,8 +40,8 @@
                 y = new Map,
                 v = new Map,
                 M = new Map,
-                L = new Map,
                 D = new Map,
+                L = new Map,
                 U = new Set([]);
             let P = p.ActivityPanelModes.ACTION_BAR,
                 b = p.FocusedActivityLayouts.NO_CHAT;
@@ -114,10 +114,10 @@
                 N = !1
             }
 
-            function H(e, t) {
+            function V(e, t) {
                 return "".concat(e, ":").concat(t)
             }
-            class x extends a.default.PersistedStore {
+            class H extends a.default.PersistedStore {
                 initialize(e) {
                     var t;
                     let n = new Map;
@@ -161,7 +161,7 @@
                     return A
                 }
                 getEmbeddedActivityDurationMs(e, t) {
-                    let n = D.get(H(e, t));
+                    let n = L.get(V(e, t));
                     return null == n ? null : Date.now() - n
                 }
                 isLaunchingActivity() {
@@ -199,7 +199,7 @@
                     return null !== (n = null !== (t = M.get(e)) && void 0 !== t ? t : v.get(e)) && void 0 !== n ? n : this.getOrientationLockStateForApp(e)
                 }
                 getLayoutModeForApp(e) {
-                    return L.get(e)
+                    return D.get(e)
                 }
                 getDismissedEmbeddedActivityMessageKeys() {
                     return Array.from(U)
@@ -223,7 +223,7 @@
                     if (null != t) return null !== (e = this.getSelfEmbeddedActivityForChannel(t)) && void 0 !== e ? e : void 0
                 }
             }
-            x.displayName = "EmbeddedActivitiesStore", x.persistKey = "EmbeddedActivities", x.migrations = [e => ({
+            H.displayName = "EmbeddedActivitiesStore", H.persistKey = "EmbeddedActivities", H.migrations = [e => ({
                 ...e,
                 seenFeaturedActivities: [],
                 shouldShowNewActivityIndicator: !1
@@ -244,13 +244,13 @@
                     seenUpdatedActivities: {}
                 }
             }];
-            let V = new x(l.default, {
+            let x = new H(l.default, {
                 ACTIVITY_LAYOUT_MODE_UPDATE: function(e) {
                     let {
                         applicationId: t,
                         layoutMode: n
                     } = e;
-                    L.set(t, n)
+                    D.set(t, n)
                 },
                 CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
                     let {
@@ -326,7 +326,7 @@
                         type: T.ActivityTypes.PLAYING,
                         connections: A,
                         connectedSince: Date.now()
-                    }), P = i !== d.default.getChannelId() || (0, h.default)(l) ? p.ActivityPanelModes.PIP : p.ActivityPanelModes.PANEL, D.set(H(l, o), Date.now())
+                    }), P = i !== d.default.getChannelId() || (0, h.default)(l) ? p.ActivityPanelModes.PIP : p.ActivityPanelModes.PANEL, L.set(V(l, o), Date.now())
                 },
                 EMBEDDED_ACTIVITY_CLOSE: function(e) {
                     let {
@@ -457,4 +457,4 @@
                     i !== t && P === p.ActivityPanelModes.PANEL && (P = p.ActivityPanelModes.PIP)
                 }
             });
-            var B = V
+            var B = x

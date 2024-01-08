@@ -1,85 +1,85 @@
             "use strict";
-            n.r(e), n.d(e, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return C
                 }
             }), n("808653");
             var i = n("446674"),
-                u = n("773364"),
-                r = n("913144"),
-                o = n("374363"),
-                a = n("42887"),
-                s = n("18494"),
-                d = n("697218"),
-                l = n("239448");
+                a = n("773364"),
+                l = n("913144"),
+                s = n("374363"),
+                r = n("42887"),
+                u = n("18494"),
+                o = n("697218"),
+                d = n("239448");
             let c = !1,
                 _ = null,
-                f = !1,
-                E = {};
+                E = !1,
+                f = {};
 
-            function p(t) {
-                var e;
-                let n = d.default.getCurrentUser();
+            function h(e) {
+                var t;
+                let n = o.default.getCurrentUser();
                 if (null == n) return !1;
-                let i = null != t ? t : (0, l.getVideoBackgroundOptionFromProto)(null === (e = o.default.settings.voiceAndVideo) || void 0 === e ? void 0 : e.videoBackgroundFilterDesktop, n.id);
-                return null != s.default.getVoiceChannelId() && a.default.isVideoEnabled() && null != i
+                let i = null != e ? e : (0, d.getVideoBackgroundOptionFromProto)(null === (t = s.default.settings.voiceAndVideo) || void 0 === t ? void 0 : t.videoBackgroundFilterDesktop, n.id);
+                return null != u.default.getVoiceChannelId() && r.default.isVideoEnabled() && null != i
             }
 
-            function A() {
-                _ !== s.default.getVoiceChannelId() && (f = !1), p() && (f = !0), _ = s.default.getVoiceChannelId()
+            function p() {
+                _ !== u.default.getVoiceChannelId() && (E = !1), h() && (E = !0), _ = u.default.getVoiceChannelId()
             }
-            class O extends i.default.Store {
+            class T extends i.default.Store {
                 initialize() {
-                    this.waitFor(o.default, s.default, a.default), this.syncWith([s.default, a.default], A)
+                    this.waitFor(s.default, u.default, r.default), this.syncWith([u.default, r.default], p)
                 }
                 get videoFilterAssets() {
-                    return E
+                    return f
                 }
                 get hasBeenApplied() {
                     return c
                 }
                 get hasUsedBackgroundInCall() {
-                    return f
+                    return E
                 }
             }
-            O.displayName = "VideoBackgroundStore";
-            var g = new O(r.default, {
-                VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function(t) {
+            T.displayName = "VideoBackgroundStore";
+            var C = new T(l.default, {
+                VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function(e) {
                     let {
-                        assets: e
-                    } = t;
-                    E = e.reduce((t, e) => ({
-                        ...t,
-                        [e.id]: e
+                        assets: t
+                    } = e;
+                    f = t.reduce((e, t) => ({
+                        ...e,
+                        [t.id]: t
                     }), {})
                 },
-                VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: function(t) {
+                VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: function(e) {
                     let {
-                        videoFilterAsset: e
-                    } = t;
-                    E = {
-                        ...E,
-                        [e.id]: e
+                        videoFilterAsset: t
+                    } = e;
+                    f = {
+                        ...f,
+                        [t.id]: t
                     }
                 },
-                VIDEO_FILTER_ASSET_DELETE_SUCCESS: function(t) {
+                VIDEO_FILTER_ASSET_DELETE_SUCCESS: function(e) {
                     let {
-                        videoFilterAsset: e
-                    } = t;
-                    E = {
-                        ...E
-                    }, delete E[e.id]
+                        videoFilterAsset: t
+                    } = e;
+                    f = {
+                        ...f
+                    }, delete f[t.id]
                 },
-                VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: function(t) {
+                VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: function(e) {
                     let {
-                        backgroundOption: e
-                    } = t;
-                    p(e) && (f = !0)
+                        backgroundOption: t
+                    } = e;
+                    h(t) && (E = !0)
                 },
-                MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function(t) {
+                MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function(e) {
                     let {
-                        settings: e
-                    } = t;
-                    u.FilterSettingsKey.CAMERA_BACKGROUND_LIVE in e && (c = !0)
+                        settings: t
+                    } = e;
+                    a.FilterSettingsKey.CAMERA_BACKGROUND_LIVE in t && (c = !0)
                 }
             })

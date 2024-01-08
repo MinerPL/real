@@ -34,8 +34,8 @@
                 y = n("393414"),
                 v = n("716214"),
                 M = n("233069"),
-                L = n("271938"),
-                D = n("42203"),
+                D = n("271938"),
+                L = n("42203"),
                 U = n("923959"),
                 P = n("26989"),
                 b = n("305961"),
@@ -43,9 +43,9 @@
                 k = n("330154"),
                 F = n("957255"),
                 w = n("697218"),
-                H = n("599110"),
-                x = n("840707"),
-                V = n("65300"),
+                V = n("599110"),
+                H = n("840707"),
+                x = n("65300"),
                 B = n("851387"),
                 Y = n("990766"),
                 K = n("49111"),
@@ -86,7 +86,7 @@
                     var i, a;
                     if ((null == n ? void 0 : n.targetType) === z.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE) return j.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
                     if ((null == n ? void 0 : n.targetType) == null && !M.GUILD_VOCAL_CHANNEL_TYPES.has(t.type) && ((0, p.canSeeGuildHome)(e) || (0, m.canSeeOnboardingHome)(e))) return j.StaticChannelRoute.GUILD_HOME;
-                    let l = D.default.getChannel(t.id);
+                    let l = L.default.getChannel(t.id);
                     return F.default.can(K.Permissions.VIEW_CHANNEL, l) ? t.id : null !== (a = null === (i = U.default.getDefaultChannel(e, !0, K.Permissions.CREATE_INSTANT_INVITE)) || void 0 === i ? void 0 : i.id) && void 0 !== a ? a : t.id
                 }(t, i, a), {
                     targetUserId: u,
@@ -126,9 +126,9 @@
             }
             let $ = function(e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-                    D.default.addConditionalChangeListener(() => {
+                    L.default.addConditionalChangeListener(() => {
                         var i;
-                        let a = D.default.getChannel(e),
+                        let a = L.default.getChannel(e),
                             l = w.default.getCurrentUser();
                         return null == a || null == l || (!a.nsfw || !!l.nsfwAllowed) && ((null == t ? void 0 : t.guildScheduledEvent) != null ? (! function(e) {
                             let {
@@ -297,7 +297,7 @@
                         code: t,
                         channel: n
                     } = e;
-                    return x.default.delete({
+                    return H.default.delete({
                         url: K.Endpoints.INVITE(t),
                         oldFormErrors: !0,
                         trackedActionData: {
@@ -324,7 +324,7 @@
                         context: s,
                         callback: r,
                         skipOnboarding: u
-                    } = e, c = (0, A.parseExtraDataFromInviteKey)(l), E = c.baseCode, f = L.default.getSessionId();
+                    } = e, c = (0, A.parseExtraDataFromInviteKey)(l), E = c.baseCode, f = D.default.getSessionId();
                     let h = (i = s, a = c, {
                             ...i,
                             invite_guild_scheduled_event_id: a.guildScheduledEventId
@@ -457,14 +457,14 @@
                             attemptId: t,
                             event: null == E ? void 0 : E.guildScheduledEventId,
                             iosFallbackLink: "https://discord.com/api/download/mobile?invite_code=".concat(f)
-                        }), H.default.track(K.AnalyticEvents.DEEP_LINK_CLICKED, {
+                        }), V.default.track(K.AnalyticEvents.DEEP_LINK_CLICKED, {
                             fingerprint: (0, u.maybeExtractId)(n),
                             attempt_id: t,
                             source: Q,
                             invite_code: f
                         })
                     } else "#" === (_ = null != t ? K.Routes.INVITE_PROXY(t) : "")[0] && (_ = _.slice(1)), _ = "discord://".concat(_);
-                    V.default.launch(_, t => {
+                    x.default.launch(_, t => {
                         d.default.dispatch(t ? {
                             type: "INVITE_APP_OPENED",
                             code: e

@@ -1,188 +1,188 @@
             "use strict";
 
-            function i(e) {
+            function E(e) {
                 return Math.max(Math.min(e, 1), 0)
+            }
+
+            function i(e, t) {
+                let {
+                    top: n,
+                    bottom: i,
+                    left: l,
+                    right: _
+                } = e;
+                return {
+                    top: null != n ? Math.floor(E(n) * t.height) : null,
+                    left: null != l ? Math.floor(E(l) * t.width) : null,
+                    bottom: null != i ? Math.floor(E(i) * t.height) : null,
+                    right: null != _ ? Math.floor(E(_) * t.width) : null
+                }
             }
 
             function l(e, t) {
                 let {
-                    top: n,
-                    bottom: l,
-                    left: u,
-                    right: r
+                    width: n,
+                    height: i
                 } = e;
                 return {
-                    top: null != n ? Math.floor(i(n) * t.height) : null,
-                    left: null != u ? Math.floor(i(u) * t.width) : null,
-                    bottom: null != l ? Math.floor(i(l) * t.height) : null,
-                    right: null != r ? Math.floor(i(r) * t.width) : null
+                    width: "auto" === n ? n : Math.floor(E(n) * t.width),
+                    height: "auto" === i ? i : Math.floor(E(i) * t.height)
+                }
+            }
+
+            function _(e, t) {
+                let {
+                    top: n,
+                    bottom: i,
+                    left: l,
+                    right: _
+                } = e;
+                return {
+                    top: null != n ? E(n / t.height) : null,
+                    left: null != l ? E(l / t.width) : null,
+                    bottom: null != i ? E(i / t.height) : null,
+                    right: null != _ ? E(_ / t.width) : null
                 }
             }
 
             function u(e, t) {
                 let {
                     width: n,
-                    height: l
-                } = e;
-                return {
-                    width: "auto" === n ? n : Math.floor(i(n) * t.width),
-                    height: "auto" === l ? l : Math.floor(i(l) * t.height)
-                }
-            }
-
-            function r(e, t) {
-                let {
-                    top: n,
-                    bottom: l,
-                    left: u,
-                    right: r
-                } = e;
-                return {
-                    top: null != n ? i(n / t.height) : null,
-                    left: null != u ? i(u / t.width) : null,
-                    bottom: null != l ? i(l / t.height) : null,
-                    right: null != r ? i(r / t.width) : null
-                }
-            }
-
-            function E(e, t) {
-                let {
-                    width: n,
-                    height: i
+                    height: E
                 } = e;
                 return {
                     width: "auto" === n ? n : n / t.width,
-                    height: "auto" === i ? i : i / t.height
+                    height: "auto" === E ? E : E / t.height
                 }
             }
 
-            function o(e, t, n, i, l) {
+            function r(e, t, n, E, i) {
                 let {
-                    top: u,
-                    bottom: r,
-                    left: E,
-                    right: o
+                    top: l,
+                    bottom: _,
+                    left: u,
+                    right: r
                 } = e;
-                if (null == u && null == r ? (u = 0, r = n - l) : null == u && null != r ? u = n - (r + l) : null != u && (r = n - (u + l)), null == E && null == o ? (E = 0, o = t - i) : null == E && null != o ? E = t - (o + i) : null == o && null != E && (o = t - (E + i)), null == u || null == r || null == E || null == o) throw Error("Logically this can never happen based on our if/else statements");
+                if (null == l && null == _ ? (l = 0, _ = n - i) : null == l && null != _ ? l = n - (_ + i) : null != l && (_ = n - (l + i)), null == u && null == r ? (u = 0, r = t - E) : null == u && null != r ? u = t - (r + E) : null == r && null != u && (r = t - (u + E)), null == l || null == _ || null == u || null == r) throw Error("Logically this can never happen based on our if/else statements");
                 return {
-                    top: u,
-                    left: E,
-                    bottom: r,
-                    right: o
+                    top: l,
+                    left: u,
+                    bottom: _,
+                    right: r
                 }
             }
 
-            function d(e) {
+            function A(e) {
                 let {
                     top: t,
                     left: n,
-                    bottom: i,
-                    right: l
+                    bottom: E,
+                    right: i
                 } = e;
-                return 0 === t || t <= i ? i = null : t = null, 0 === n || n <= l ? l = null : n = null, {
+                return 0 === t || t <= E ? E = null : t = null, 0 === n || n <= i ? i = null : n = null, {
                     top: t,
                     left: n,
-                    bottom: i,
-                    right: l
+                    bottom: E,
+                    right: i
                 }
             }
 
-            function a(e) {
+            function o(e) {
                 let {
                     top: t,
                     left: n,
-                    bottom: i,
-                    right: l
+                    bottom: E,
+                    right: i
                 } = e;
-                return i < 0 && (t += i, i = 0), t < 0 && (i += t, t = 0), l < 0 && (n += l, l = 0), n < 0 && (l += n, n = 0), {
+                return E < 0 && (t += E, E = 0), t < 0 && (E += t, t = 0), i < 0 && (n += i, i = 0), n < 0 && (i += n, n = 0), {
                     top: t,
                     left: n,
-                    bottom: i,
-                    right: l
+                    bottom: E,
+                    right: i
                 }
             }
 
-            function _(e, t, n) {
-                e = l(e, n);
+            function I(e, t, n) {
+                e = i(e, n);
                 let {
-                    width: i,
-                    height: r
-                } = u(t, n);
-                return i = "string" == typeof i ? 0 : i, r = "string" == typeof r ? 0 : r, o(e, n.width, n.height, i, r)
+                    width: E,
+                    height: _
+                } = l(t, n);
+                return E = "string" == typeof E ? 0 : E, _ = "string" == typeof _ ? 0 : _, r(e, n.width, n.height, E, _)
             }
 
-            function s(e, t, n) {
+            function d(e, t, n) {
                 let {
-                    top: i,
-                    left: l
+                    top: E,
+                    left: i
                 } = e, {
-                    x: u,
-                    y: _
+                    x: l,
+                    y: I
                 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
                     x: 0,
                     y: 0
                 }, {
-                    width: s,
-                    height: A
-                } = t, c = d(a(o({
-                    top: i + _,
-                    left: l + u,
+                    width: d,
+                    height: a
+                } = t, T = A(o(r({
+                    top: E + I,
+                    left: i + l,
                     bottom: null,
                     right: null
-                }, n.width, n.height, "number" == typeof s ? s : 0, "number" == typeof A ? A : 0)));
-                return [r(c, n), E(t, n)]
+                }, n.width, n.height, "number" == typeof d ? d : 0, "number" == typeof a ? a : 0)));
+                return [_(T, n), u(t, n)]
             }
 
-            function A(e, t, n) {
+            function a(e, t, n) {
                 let {
-                    top: i,
-                    right: l
+                    top: E,
+                    right: i
                 } = e, {
-                    x: u,
-                    y: _
+                    x: l,
+                    y: I
                 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
                     x: 0,
                     y: 0
                 }, {
-                    width: s,
-                    height: A
-                } = t, c = d(a(o({
-                    top: i + _,
+                    width: d,
+                    height: a
+                } = t, T = A(o(r({
+                    top: E + I,
                     left: null,
                     bottom: null,
-                    right: l - u
-                }, n.width, n.height, "number" == typeof s ? s : 0, "number" == typeof A ? A : 0)));
-                return [r(c, n), E(t, n)]
+                    right: i - l
+                }, n.width, n.height, "number" == typeof d ? d : 0, "number" == typeof a ? a : 0)));
+                return [_(T, n), u(t, n)]
             }
             n.r(t), n.d(t, {
                 getAnchorCoordsFromLayoutSize: function() {
-                    return l
+                    return i
                 },
                 getSizeFromLayoutSize: function() {
-                    return u
+                    return l
                 },
                 getAnchorPercentageFromLayoutSize: function() {
-                    return r
-                },
-                getSizePercentageFromSize: function() {
-                    return E
-                },
-                getFullCoordsFromAnchorCoords: function() {
-                    return o
-                },
-                getAnchorCoordsFromFullCoords: function() {
-                    return d
-                },
-                fitFullCoordsToContainer: function() {
-                    return a
-                },
-                getFullCoordsFromLayoutSize: function() {
                     return _
                 },
+                getSizePercentageFromSize: function() {
+                    return u
+                },
+                getFullCoordsFromAnchorCoords: function() {
+                    return r
+                },
+                getAnchorCoordsFromFullCoords: function() {
+                    return A
+                },
+                fitFullCoordsToContainer: function() {
+                    return o
+                },
+                getFullCoordsFromLayoutSize: function() {
+                    return I
+                },
                 getLeftWidgetSpecs: function() {
-                    return s
+                    return d
                 },
                 getRightWidgetSpecs: function() {
-                    return A
+                    return a
                 }
             }), n("70102")

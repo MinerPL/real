@@ -21,27 +21,27 @@
                             type: n,
                             name: E,
                             permissionOverwrites: _ = [],
-                            bitrate: I,
-                            userLimit: h,
-                            parentId: p,
-                            skuId: T,
-                            branchId: S
+                            bitrate: h,
+                            userLimit: p,
+                            parentId: I,
+                            skuId: S,
+                            branchId: g
                         } = e;
                         l.default.dispatch({
                             type: "CREATE_CHANNEL_MODAL_SUBMIT"
                         });
-                        let N = {
+                        let T = {
                             type: n,
                             name: E,
                             permission_overwrites: _
                         };
-                        if (null != I && I !== d.BITRATE_DEFAULT && (N.bitrate = I), null != h && h > 0 && (N.user_limit = h), null != p && (N.parent_id = p), n === d.ChannelTypes.GUILD_STORE) {
-                            if (null == T) throw Error("Unexpected missing SKU");
-                            N.sku_id = T, N.branch_id = S
+                        if (null != h && h !== d.BITRATE_DEFAULT && (T.bitrate = h), null != p && p > 0 && (T.user_limit = p), null != I && (T.parent_id = I), n === d.ChannelTypes.GUILD_STORE) {
+                            if (null == S) throw Error("Unexpected missing SKU");
+                            T.sku_id = S, T.branch_id = g
                         }
                         return u.default.post({
                             url: d.Endpoints.GUILD_CHANNELS(t),
-                            body: N,
+                            body: T,
                             oldFormErrors: !0,
                             trackedActionData: {
                                 event: i.NetworkActionNames.CHANNEL_CREATE,

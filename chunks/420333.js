@@ -1,34 +1,34 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return D
+                    return M
                 }
             }), n("222007");
-            var i = n("37983"),
-                r = n("884691"),
-                l = n("446674"),
-                a = n("77078"),
-                o = n("812204"),
-                u = n("685665"),
+            var a = n("37983"),
+                i = n("884691"),
+                r = n("446674"),
+                l = n("77078"),
+                u = n("812204"),
+                o = n("685665"),
                 s = n("473591"),
-                d = n("634544"),
-                c = n("694187"),
+                c = n("634544"),
+                d = n("694187"),
                 f = n("305961"),
                 E = n("162771"),
                 _ = n("697218"),
                 p = n("471671"),
-                h = n("887718"),
-                T = n("818643"),
-                S = n("216422"),
-                I = n("599110"),
-                A = n("719923"),
-                g = n("354460"),
-                m = n("424960"),
-                C = n("49111"),
-                N = n("75015"),
-                v = n("991207"),
-                R = n("782340"),
-                O = n("461300");
+                T = n("887718"),
+                h = n("818643"),
+                C = n("216422"),
+                A = n("599110"),
+                S = n("719923"),
+                N = n("354460"),
+                I = n("424960"),
+                v = n("49111"),
+                R = n("75015"),
+                m = n("991207"),
+                y = n("782340"),
+                g = n("461300");
             let U = [{
                 gif: n("6916"),
                 png: n("12412")
@@ -43,16 +43,16 @@
                 png: n("122574")
             }];
 
-            function y(e) {
+            function O(e) {
                 let {
                     shouldAnimate: t = !0
-                } = e, [n, l] = r.useState(!1);
-                return (0, i.jsx)("div", {
-                    className: O.gifGrid,
-                    onMouseMove: () => l(!0),
-                    onMouseLeave: () => l(!1),
-                    children: U.map(e => (0, i.jsx)("div", {
-                        className: O.gif,
+                } = e, [n, r] = i.useState(!1);
+                return (0, a.jsx)("div", {
+                    className: g.gifGrid,
+                    onMouseMove: () => r(!0),
+                    onMouseLeave: () => r(!1),
+                    children: U.map(e => (0, a.jsx)("div", {
+                        className: g.gif,
                         style: {
                             backgroundImage: "url(".concat(t || n ? e.gif : e.png, ")")
                         }
@@ -60,14 +60,14 @@
                 })
             }
 
-            function M(e) {
+            function P(e) {
                 let {
                     guildFeature: t,
                     guild: n
                 } = e;
-                return null == t || null == n ? null : (0, i.jsx)("div", {
-                    className: O.pillWrapper,
-                    children: (0, i.jsx)(d.default, {
+                return null == t || null == n ? null : (0, a.jsx)("div", {
+                    className: g.pillWrapper,
+                    children: (0, a.jsx)(c.default, {
                         guildFeature: t,
                         guild: n,
                         hideTooltip: !0
@@ -75,138 +75,138 @@
                 })
             }
 
-            function P(e) {
+            function L(e) {
                 let {
                     uploadType: t,
                     guild: n,
-                    showNitroWheel: r
+                    showNitroWheel: i
                 } = e;
-                return (0, i.jsxs)("div", {
-                    className: O.optionBoxText,
-                    children: [(0, i.jsx)(M, {
+                return (0, a.jsxs)("div", {
+                    className: g.optionBoxText,
+                    children: [(0, a.jsx)(P, {
                         guild: n,
-                        guildFeature: (0, g.getGuildFeatureFromUploadType)(t, {
+                        guildFeature: (0, N.getGuildFeatureFromUploadType)(t, {
                             isGIF: !0
                         })
-                    }), (0, i.jsxs)("div", {
-                        className: O.optionBoxDescription,
-                        children: [(0, g.shouldShowPremiumIconForGIFPickerOption)(t) && (0, i.jsx)(a.TooltipContainer, {
-                            className: O.nitroWheelFlairContainer,
-                            text: R.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
-                            children: r && (0, i.jsx)(S.default, {
-                                className: O.nitroWheelFlair
+                    }), (0, a.jsxs)("div", {
+                        className: g.optionBoxDescription,
+                        children: [(0, N.shouldShowPremiumIconForGIFPickerOption)(t) && (0, a.jsx)(l.TooltipContainer, {
+                            className: g.nitroWheelFlairContainer,
+                            text: y.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+                            children: i && (0, a.jsx)(C.default, {
+                                className: g.nitroWheelFlair
                             })
-                        }), R.default.Messages.SELECT_IMAGE_MODAL_CHOOSE_GIF]
+                        }), y.default.Messages.SELECT_IMAGE_MODAL_CHOOSE_GIF]
                     })]
                 })
             }
 
-            function L(e) {
+            function x(e) {
                 let {
                     title: t,
                     uploadType: n,
-                    guild: r
+                    guild: i
                 } = e;
-                return (0, i.jsxs)("div", {
-                    className: O.optionBoxText,
-                    children: [(0, i.jsx)(M, {
-                        guildFeature: (0, g.getGuildFeatureFromUploadType)(n, {
+                return (0, a.jsxs)("div", {
+                    className: g.optionBoxText,
+                    children: [(0, a.jsx)(P, {
+                        guildFeature: (0, N.getGuildFeatureFromUploadType)(n, {
                             isGIF: !1
                         }),
-                        guild: r
-                    }), (0, i.jsx)("div", {
-                        className: O.optionBoxDescription,
+                        guild: i
+                    }), (0, a.jsx)("div", {
+                        className: g.optionBoxDescription,
                         children: t
                     })]
                 })
             }
 
-            function D(e) {
+            function M(e) {
                 let {
                     transitionState: t,
-                    onClose: d,
-                    onComplete: S,
-                    uploadType: g,
+                    onClose: c,
+                    onComplete: C,
+                    uploadType: N,
                     maxFileSizeBytes: U,
-                    showUpsellHeader: M,
-                    filters: D,
-                    analyticsLocation: w,
-                    analyticsLocations: b = [],
-                    modalSubTitle: F,
-                    imageSpecifications: x,
-                    modalTitle: V = R.default.Messages.SELECT_IMAGE_MODAL_TITLE,
-                    uploadOptionTitle: G = R.default.Messages.UPLOAD_IMAGE
-                } = e, k = (0, l.useStateFromStores)([p.default], () => p.default.isFocused()), B = (0, l.useStateFromStores)([_.default], () => _.default.getCurrentUser()), H = (0, l.useStateFromStores)([E.default], () => E.default.getGuildId()), j = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(H)), W = (0, l.useStateFromStores)([s.default], () => s.default.isEditingClydeProfile()), {
-                    reducedMotion: Y
-                } = r.useContext(a.AccessibilityPreferencesContext), z = (0, a.useModalContext)(), K = !A.default.canUseAnimatedAvatar(B) && g === N.UploadTypes.AVATAR && !W, {
-                    analyticsLocations: Z
-                } = (0, u.default)(b, o.default.SELECT_IMAGE_MODAL);
+                    showUpsellHeader: P,
+                    filters: M,
+                    analyticsLocation: F,
+                    analyticsLocations: D = [],
+                    modalSubTitle: G,
+                    imageSpecifications: b,
+                    modalTitle: H = y.default.Messages.SELECT_IMAGE_MODAL_TITLE,
+                    uploadOptionTitle: j = y.default.Messages.UPLOAD_IMAGE
+                } = e, w = (0, r.useStateFromStores)([p.default], () => p.default.isFocused()), V = (0, r.useStateFromStores)([_.default], () => _.default.getCurrentUser()), k = (0, r.useStateFromStores)([E.default], () => E.default.getGuildId()), B = (0, r.useStateFromStores)([f.default], () => f.default.getGuild(k)), Z = (0, r.useStateFromStores)([s.default], () => s.default.isEditingClydeProfile()), {
+                    reducedMotion: W
+                } = i.useContext(l.AccessibilityPreferencesContext), z = (0, l.useModalContext)(), Y = !S.default.canUseAnimatedAvatar(V) && N === R.UploadTypes.AVATAR && !Z, {
+                    analyticsLocations: K
+                } = (0, o.default)(D, u.default.SELECT_IMAGE_MODAL);
 
-                function X(e, t) {
+                function q(e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                    d(), S(e, t, n)
+                    c(), C(e, t, n)
                 }
-                return r.useEffect(() => {
-                    K && I.default.track(C.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-                        type: C.AnalyticsSections.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
-                        location_stack: Z
-                    }), I.default.track(C.AnalyticEvents.OPEN_MODAL, {
-                        type: C.AnalyticsSections.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
-                        location: w
+                return i.useEffect(() => {
+                    Y && A.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+                        type: v.AnalyticsSections.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
+                        location_stack: K
+                    }), A.default.track(v.AnalyticEvents.OPEN_MODAL, {
+                        type: v.AnalyticsSections.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
+                        location: F
                     })
-                }, [K, w, Z]), (0, i.jsxs)(a.ModalRoot, {
+                }, [Y, F, K]), (0, a.jsxs)(l.ModalRoot, {
                     transitionState: t,
-                    size: a.ModalSize.SMALL,
-                    children: [(0, i.jsxs)(a.ModalHeader, {
-                        className: O.modalHeader,
+                    size: l.ModalSize.SMALL,
+                    children: [(0, a.jsxs)(l.ModalHeader, {
+                        className: g.modalHeader,
                         separator: !1,
-                        children: [(0, i.jsxs)("div", {
-                            children: [(0, i.jsx)(a.FormTitle, {
-                                tag: a.FormTitleTags.H1,
-                                className: O.modalTitle,
-                                children: V
-                            }), null != F ? (0, i.jsx)(a.Text, {
+                        children: [(0, a.jsxs)("div", {
+                            children: [(0, a.jsx)(l.FormTitle, {
+                                tag: l.FormTitleTags.H1,
+                                className: g.modalTitle,
+                                children: H
+                            }), null != G ? (0, a.jsx)(l.Text, {
                                 variant: "text-md/normal",
-                                children: F
+                                children: G
                             }) : null]
-                        }), (0, i.jsx)(a.ModalCloseButton, {
-                            onClick: d,
-                            className: O.modalCloseButton
+                        }), (0, a.jsx)(l.ModalCloseButton, {
+                            onClick: c,
+                            className: g.modalCloseButton
                         })]
-                    }), (0, i.jsxs)(a.ModalContent, {
-                        className: O.modalContent,
-                        children: [(0, i.jsxs)("div", {
-                            className: O.imagePickerContainer,
-                            children: [(0, i.jsxs)(a.Clickable, {
-                                className: O.optionBox,
-                                children: [(0, i.jsx)("div", {
-                                    className: O.contentCircle,
-                                    children: (0, i.jsx)(T.default, {
-                                        className: O.uploadIcon
+                    }), (0, a.jsxs)(l.ModalContent, {
+                        className: g.modalContent,
+                        children: [(0, a.jsxs)("div", {
+                            className: g.imagePickerContainer,
+                            children: [(0, a.jsxs)(l.Clickable, {
+                                className: g.optionBox,
+                                children: [(0, a.jsx)("div", {
+                                    className: g.contentCircle,
+                                    children: (0, a.jsx)(h.default, {
+                                        className: g.uploadIcon
                                     })
-                                }), (0, i.jsx)(a.Text, {
+                                }), (0, a.jsx)(l.Text, {
                                     variant: "text-sm/semibold",
                                     color: "interactive-normal",
-                                    children: (0, i.jsx)(L, {
-                                        title: G,
-                                        uploadType: g,
-                                        guild: j
+                                    children: (0, a.jsx)(x, {
+                                        title: j,
+                                        uploadType: N,
+                                        guild: B
                                     })
-                                }), (0, i.jsx)(c.default, {
+                                }), (0, a.jsx)(d.default, {
                                     onChange: function(e, t) {
-                                        if (t.type === v.FileTypes.MP4) return X(e, t);
-                                        (0, a.openModalLazy)(async () => {
+                                        if (t.type === m.FileTypes.MP4) return q(e, t);
+                                        (0, l.openModalLazy)(async () => {
                                             let {
-                                                default: r
+                                                default: i
                                             } = await n.el("57015").then(n.bind(n, "57015"));
-                                            return n => (0, i.jsx)(r, {
+                                            return n => (0, a.jsx)(i, {
                                                 imgURI: e,
                                                 file: t,
-                                                onCrop: X,
-                                                uploadType: g,
-                                                showUpsellHeader: M,
+                                                onCrop: q,
+                                                uploadType: N,
+                                                showUpsellHeader: P,
                                                 allowSkip: !0,
-                                                analyticsPage: null == w ? void 0 : w.page,
+                                                analyticsPage: null == F ? void 0 : F.page,
                                                 ...n
                                             })
                                         }, {
@@ -215,52 +215,52 @@
                                     },
                                     maxFileSizeBytes: U,
                                     onFileSizeError: function() {
-                                        d(), (0, m.default)(U)
+                                        c(), (0, I.default)(U)
                                     },
-                                    filters: D
+                                    filters: M
                                 })]
-                            }), (0, i.jsxs)(a.Clickable, {
-                                className: O.optionBox,
+                            }), (0, a.jsxs)(l.Clickable, {
+                                className: g.optionBox,
                                 onClick: function() {
-                                    (0, a.openModalLazy)(async () => {
+                                    (0, l.openModalLazy)(async () => {
                                         let {
                                             default: e
                                         } = await n.el("646077").then(n.bind(n, "646077"));
-                                        return t => (0, i.jsx)(e, {
-                                            uploadType: g,
-                                            onComplete: (e, t) => X(e, t, !0),
-                                            showUpsellHeader: M,
-                                            analyticsPage: null == w ? void 0 : w.page,
+                                        return t => (0, a.jsx)(e, {
+                                            uploadType: N,
+                                            onComplete: (e, t) => q(e, t, !0),
+                                            showUpsellHeader: P,
+                                            analyticsPage: null == F ? void 0 : F.page,
                                             ...t
                                         })
                                     }, {
                                         contextKey: z
                                     })
                                 },
-                                children: [(0, i.jsxs)("div", {
-                                    className: O.contentCircle,
-                                    children: [(0, i.jsx)(y, {
-                                        shouldAnimate: k && !Y.enabled
-                                    }), (0, i.jsx)("div", {
-                                        className: O.gifIconContainer,
-                                        children: (0, i.jsx)(h.default, {
-                                            className: O.gifIcon
+                                children: [(0, a.jsxs)("div", {
+                                    className: g.contentCircle,
+                                    children: [(0, a.jsx)(O, {
+                                        shouldAnimate: w && !W.enabled
+                                    }), (0, a.jsx)("div", {
+                                        className: g.gifIconContainer,
+                                        children: (0, a.jsx)(T.default, {
+                                            className: g.gifIcon
                                         })
                                     })]
-                                }), (0, i.jsx)(a.Text, {
+                                }), (0, a.jsx)(l.Text, {
                                     variant: "text-sm/semibold",
                                     color: "interactive-normal",
-                                    children: (0, i.jsx)(P, {
-                                        uploadType: g,
-                                        guild: j,
-                                        showNitroWheel: !W
+                                    children: (0, a.jsx)(L, {
+                                        uploadType: N,
+                                        guild: B,
+                                        showNitroWheel: !Z
                                     })
                                 })]
                             })]
-                        }), null != x ? (0, i.jsx)(a.Text, {
-                            className: O.imageSpecifications,
+                        }), null != b ? (0, a.jsx)(l.Text, {
+                            className: g.imageSpecifications,
                             variant: "text-sm/normal",
-                            children: x
+                            children: b
                         }) : null]
                     })]
                 })

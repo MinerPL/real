@@ -24,8 +24,8 @@
                 E = n("476263"),
                 _ = n("810567"),
                 h = n("427459"),
-                I = n("49111"),
-                m = n("782340"),
+                m = n("49111"),
+                I = n("782340"),
                 g = n("109396");
 
             function S(e) {
@@ -39,11 +39,11 @@
                     children: [(0, r.jsx)(o.Heading, {
                         className: g.selectHeader,
                         variant: "heading-md/semibold",
-                        children: t ? m.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_TRANSFER_HEADER : m.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_HEADER
+                        children: t ? I.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_TRANSFER_HEADER : I.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_HEADER
                     }), (0, r.jsx)(_.default, {
                         size: _.default.Sizes.MEDIUM,
-                        placeholder: m.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
-                        "aria-label": m.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
+                        placeholder: I.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
+                        "aria-label": I.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
                         className: g.selectSearch,
                         query: i,
                         onChange: n,
@@ -71,20 +71,20 @@
                 });
 
                 function T() {
-                    i(), (0, u.popLayer)(), (0, c.transitionTo)(I.Routes.GUILD_DISCOVERY)
+                    i(), (0, u.popLayer)(), (0, c.transitionTo)(m.Routes.GUILD_DISCOVERY)
                 }
                 return (0, r.jsxs)(r.Fragment, {
                     children: [0 === C.length && (0, r.jsx)("div", {
                         className: g.emptyStateWrapper,
                         children: (0, r.jsx)(o.Text, {
                             variant: "text-md/normal",
-                            children: 0 === S.length ? m.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_NON_GUILD_MEMBER.format({
+                            children: 0 === S.length ? I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_NON_GUILD_MEMBER.format({
                                 publicGuildDirectoryHook: (e, t) => (0, r.jsx)(o.Clickable, {
                                     onClick: T,
                                     tag: "a",
                                     children: e
                                 }, t)
-                            }) : m.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_GUILD_NOT_FOUND
+                            }) : I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_GUILD_NOT_FOUND
                         })
                     }), C.map(e => (0, r.jsxs)(o.Clickable, {
                         className: g.selectGuild,
@@ -111,7 +111,7 @@
                             className: g.selectGuildPseudoCta,
                             color: "always-white",
                             variant: "text-sm/medium",
-                            children: t ? m.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_HERE : m.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
+                            children: t ? I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_HERE : I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
                         })]
                     }, e.id))]
                 })

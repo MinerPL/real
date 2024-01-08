@@ -7,7 +7,7 @@
                     return d
                 },
                 trimAndEncodeAudio: function() {
-                    return E
+                    return f
                 }
             }), n("70102"), n("424973"), n("370692"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("311790");
             var i = n("627445"),
@@ -113,7 +113,7 @@
                     type: "audio/ogg"
                 })
             }
-            async function E(e, t) {
+            async function f(e, t) {
                 let n = await o(e),
                     i = function(e, t) {
                         let {
@@ -127,14 +127,14 @@
                         if (0 === n && u === o) return e;
                         let d = Math.floor(n / o * e.length),
                             c = Math.floor(u / o * e.length),
-                            E = a.createBuffer(l, c - d, r);
+                            f = a.createBuffer(l, c - d, r);
                         for (let t = 0; t < l; t++) {
-                            let n = E.getChannelData(t),
+                            let n = f.getChannelData(t),
                                 i = e.getChannelData(t),
                                 r = 0;
                             for (let e = d; e <= c; e++) n[r] = i[e], r++
                         }
-                        return E
+                        return f
                     }(n, t),
                     r = await c(i);
                 return new File([r], "sound.ogg", {

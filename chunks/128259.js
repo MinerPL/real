@@ -45,8 +45,8 @@
                         onClick: y,
                         onConfirm: v,
                         shouldConfirm: M,
-                        messageId: L,
-                        channelId: D
+                        messageId: D,
+                        channelId: L
                     } = e,
                     U = a.sanitizeUrl(e.href);
                 if (null == U) {
@@ -61,27 +61,27 @@
                 }
                 let P = null,
                     b = !1,
-                    G = L,
-                    k = D,
+                    G = D,
+                    k = L,
                     F = null;
-                if (null != L && null != D) {
-                    var w, H, x;
-                    let e = I.default.getMessage(D, L),
-                        t = T.default.getBasicChannel(D);
-                    P = null !== (x = null == t ? void 0 : t.guild_id) && void 0 !== x ? x : null;
+                if (null != D && null != L) {
+                    var w, V, H;
+                    let e = I.default.getMessage(L, D),
+                        t = T.default.getBasicChannel(L);
+                    P = null !== (H = null == t ? void 0 : t.guild_id) && void 0 !== H ? H : null;
                     let n = C.default.getGuild(P),
                         i = (null == e ? void 0 : null === (w = e.messageReference) || void 0 === w ? void 0 : w.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(O.MessageFlags.IS_CROSSPOST)) && null != P;
-                    i && (null == e ? void 0 : null === (H = e.messageReference) || void 0 === H ? void 0 : H.guild_id) != null ? (G = e.messageReference.message_id, k = e.messageReference.channel_id, F = e.messageReference.guild_id) : F = P;
+                    i && (null == e ? void 0 : null === (V = e.messageReference) || void 0 === V ? void 0 : V.guild_id) != null ? (G = e.messageReference.message_id, k = e.messageReference.channel_id, F = e.messageReference.guild_id) : F = P;
                     let a = (null == t ? void 0 : t.type) === O.ChannelTypes.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(O.GuildFeatures.COMMUNITY)) === !0,
                         l = (null == e ? void 0 : e.hasFlag(O.MessageFlags.EPHEMERAL)) === !0;
                     b = null != e && !l && (i || a)
                 }
-                let V = T.default.getChannel(A.default.getChannelId()),
-                    B = C.default.getGuild(null == V ? void 0 : V.getGuildId());
-                if (null != V && null != B && B.hasFeature(O.GuildFeatures.DISCOVERABLE) && N.default.track(O.AnalyticEvents.URL_CLICKED, {
+                let x = T.default.getChannel(A.default.getChannelId()),
+                    B = C.default.getGuild(null == x ? void 0 : x.getGuildId());
+                if (null != x && null != B && B.hasFeature(O.GuildFeatures.DISCOVERABLE) && N.default.track(O.AnalyticEvents.URL_CLICKED, {
                         url_domain: (0, S.getHostname)(U),
                         guild_id: B.id,
-                        channel_id: V.id
+                        channel_id: x.id
                     }), _.default.trackLinkClicked(U), null != y) {
                     if (y(t)) return
                 } else {
@@ -96,7 +96,7 @@
                 let Y = () => {
                         if (b && _.default.trackAnnouncementMessageLinkClicked({
                                 messageId: G,
-                                channelId: D,
+                                channelId: L,
                                 guildId: P,
                                 sourceChannelId: k,
                                 sourceGuildId: F
@@ -124,7 +124,7 @@
                 if (!z && (j || m.default.isTrustedDomain(U)) || z && m.default.isTrustedProtocol(U)) {
                     null == t || null != M && M ? Y() : b && _.default.trackAnnouncementMessageLinkClicked({
                         messageId: G,
-                        channelId: D,
+                        channelId: L,
                         guildId: P,
                         sourceChannelId: k,
                         sourceGuildId: F

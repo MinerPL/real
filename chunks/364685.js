@@ -95,14 +95,14 @@
                         })), S.set(e.id, s)
                     }
                 },
-                L = (e, t, n) => {
+                D = (e, t, n) => {
                     C.set(e.id, e);
                     let i = [...I];
                     if (t) {
                         let t = i.findIndex(t => t.id === e.id); - 1 !== t ? i[t] = e : i.push(e), I = i
                     }(t || n) && e.stickers.forEach(e => v(e))
                 },
-                D = () => {
+                L = () => {
                     N.forEach((e, t) => {
                         let n = E.default.getGuild(t);
                         null != n && e.forEach(e => M(e, n))
@@ -122,7 +122,7 @@
                     return 0 !== T
                 }
                 get stickerMetadata() {
-                    return y(), null == S && (S = new Map, D()), S
+                    return y(), null == S && (S = new Map, L()), S
                 }
                 get hasLoadedStickerPacks() {
                     return null != g && g + R > Date.now()
@@ -191,14 +191,14 @@
                     let {
                         packs: t
                     } = e;
-                    t.forEach(e => L(e, !0)), g = Date.now(), A = !1
+                    t.forEach(e => D(e, !0)), g = Date.now(), A = !1
                 },
                 STICKER_PACK_FETCH_SUCCESS: e => {
                     let {
                         pack: t,
                         ingestStickers: n
                     } = e;
-                    L(t, !1, n)
+                    D(t, !1, n)
                 },
                 GUILD_STICKERS_FETCH_SUCCESS: e => {
                     let {

@@ -9,15 +9,15 @@
                 return !1
             }
 
-            function l(e) {
+            function s(e) {
+                return !1
+            }
+
+            function l() {
                 return !1
             }
 
             function o() {
-                return !1
-            }
-
-            function a() {
                 return !1
             }
 
@@ -26,15 +26,15 @@
                 return !1
             }
 
-            function s(e, t) {
+            function a(e, t) {
                 return !1
             }
 
-            function d() {
+            function c() {
                 return !1
             }
 
-            function c(e) {}
+            function d(e) {}
 
             function f(e) {}
 
@@ -51,25 +51,25 @@
                     return r
                 },
                 navigateToRootTab: function() {
-                    return l
+                    return s
                 },
                 resetToAuthRoute: function() {
-                    return o
+                    return l
                 },
                 resetToPanelsUI: function() {
-                    return a
+                    return o
                 },
                 pushModal: function() {
                     return u
                 },
                 popModal: function() {
-                    return s
+                    return a
                 },
                 popAllModals: function() {
-                    return d
+                    return c
                 },
                 coerceChannelRoute: function() {
-                    return c
+                    return d
                 },
                 coerceGuildsRoute: function() {
                     return f
