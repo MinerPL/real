@@ -19,8 +19,8 @@
                 m = n("374014"),
                 E = n("336804"),
                 C = n("311197"),
-                S = n("830251"),
-                g = n("170643"),
+                g = n("830251"),
+                S = n("170643"),
                 _ = n("550410"),
                 I = n("124824"),
                 T = n("640553"),
@@ -46,7 +46,7 @@
                 let {
                     channelId: t,
                     guildId: n
-                } = e, l = Date.now(), s = (0, o.useStateFromStores)([R.default, y.default], () => u(R.default.getSpeakers()).map(e => y.default.getParticipant(t, e)).filter(e => null != e && e.type === U.ParticipantTypes.USER && e.speaking && !(0, S.default)(e)).sortBy(e => -R.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
+                } = e, l = Date.now(), s = (0, o.useStateFromStores)([R.default, y.default], () => u(R.default.getSpeakers()).map(e => y.default.getParticipant(t, e)).filter(e => null != e && e.type === U.ParticipantTypes.USER && e.speaking && !(0, g.default)(e)).sortBy(e => -R.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
                 return 0 === s.length ? null : (0, a.jsx)(a.Fragment, {
                     children: s.map((e, t) => (0, a.jsx)(d.Tooltip, {
                         position: "bottom",
@@ -76,15 +76,15 @@
                     inCall: i,
                     isChatOpen: r,
                     exitFullScreen: u
-                } = e, S = n.id, {
+                } = e, g = n.id, {
                     voiceParticipantsHidden: R,
                     selectedParticipant: L,
                     userParticipantCount: F
                 } = (0, o.useStateFromStoresObject)([y.default], () => ({
-                    selectedParticipant: y.default.getSelectedParticipant(S),
-                    voiceParticipantsHidden: y.default.getVoiceParticipantsHidden(S),
-                    userParticipantCount: y.default.getUserParticipantCount(S)
-                }), [S]), B = (0, b.default)(n), {
+                    selectedParticipant: y.default.getSelectedParticipant(g),
+                    voiceParticipantsHidden: y.default.getVoiceParticipantsHidden(g),
+                    userParticipantCount: y.default.getUserParticipantCount(g)
+                }), [g]), B = (0, b.default)(n), {
                     showClipsHeaderEntrypoint: H
                 } = f.ClipsExperiment.useExperiment({
                     location: "ChannelCallHeaderToolbar"
@@ -107,12 +107,12 @@
                     }, "invite-button"))
                 }
                 return R && Y.push((0, a.jsx)(V, {
-                    channelId: S,
+                    channelId: g,
                     guildId: n.guild_id
                 }, "current-speaker")), Y.push((0, a.jsx)(p.default, {
                     className: k.button,
-                    channelId: S
-                }, "clips-enabled-indicator")), (null == L ? void 0 : L.type) === U.ParticipantTypes.STREAM && (Y.push((0, a.jsx)(g.default, {
+                    channelId: g
+                }, "clips-enabled-indicator")), (null == L ? void 0 : L.type) === U.ParticipantTypes.STREAM && (Y.push((0, a.jsx)(S.default, {
                     className: k.button,
                     participant: L
                 }, "warning")), Y.push((0, a.jsx)(E.default, {
@@ -141,10 +141,10 @@
                     }
                 }, "call-members-popout")), i && Y.push(null != L ? (0, a.jsx)(x.default, {
                     className: k.button,
-                    channelId: S
+                    channelId: g
                 }, "deselect-participant") : (0, a.jsx)(M.default, {
                     className: k.button,
-                    channelId: S,
+                    channelId: g,
                     isHorizontal: !0
                 }, "select-participant")), H && !t && Y.push((0, a.jsx)(h.default, {
                     className: k.button
@@ -162,7 +162,7 @@
                         } = e;
                         return (0, a.jsx)(I.default, {
                             children: (0, a.jsx)(P.default, {
-                                channelId: S,
+                                channelId: g,
                                 onClose: t,
                                 appContext: s,
                                 exitFullScreen: u

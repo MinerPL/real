@@ -31,11 +31,11 @@
                 i.useEffect(() => {
                     n && ((c === u.FetchState.NOT_FETCHED || c === u.FetchState.FETCH_FAILED) && (0, s.fetchPrivateChannelIntegrations)(t), (E === u.FetchState.NOT_FETCHED || E === u.FetchState.FETCH_FAILED) && (0, s.fetchApplicationsShelf)())
                 }, [n, t, c, E]);
-                let _ = new Set(o.map(e => e.application.id)),
-                    I = d.filter(e => !_.has(e.id));
+                let f = new Set(o.map(e => e.application.id)),
+                    _ = d.filter(e => !f.has(e.id));
                 return {
                     installedIntegrations: o,
-                    availableApplications: I,
+                    availableApplications: _,
                     applicationsShelf: d,
                     fetched: c !== u.FetchState.NOT_FETCHED && c !== u.FetchState.FETCHING && E !== u.FetchState.NOT_FETCHED && E !== u.FetchState.FETCHING,
                     appsInGDMEnabled: n

@@ -20,8 +20,8 @@
                 m = n("456127"),
                 E = n("888814"),
                 C = n("943917"),
-                S = n("380116"),
-                g = n("149882"),
+                g = n("380116"),
+                S = n("149882"),
                 _ = n("568009"),
                 I = n("49111"),
                 T = n("621262");
@@ -55,10 +55,10 @@
                     });
                 return (0, a.jsxs)("div", {
                     className: T.voiceEffectsActionBar,
-                    children: [R && (0, a.jsx)(g.default, {
+                    children: [R && (0, a.jsx)(S.default, {
                         channel: t,
                         themeable: l
-                    }), j && (0, a.jsx)(S.default, {
+                    }), j && (0, a.jsx)(g.default, {
                         channel: t
                     }), A && M && (0, a.jsx)(m.default, {
                         channel: t

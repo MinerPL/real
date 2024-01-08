@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return g
                 }
             }), n("781738"), n("222007");
             var a = n("37983"),
@@ -113,6 +113,6 @@
                     }
                 }
             }
-            var S = r.default.connectStores([o.default], () => ({
+            var g = r.default.connectStores([o.default], () => ({
                 regions: o.default.getRegions(null)
             }))(C)

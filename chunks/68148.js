@@ -22,8 +22,8 @@
                 m = n("342845"),
                 E = n("437825"),
                 C = n("142303"),
-                S = n("462579"),
-                g = n("200639"),
+                g = n("462579"),
+                S = n("200639"),
                 _ = n("97347"),
                 I = n("998564"),
                 T = n("420145"),
@@ -144,7 +144,7 @@
                         disabled: c,
                         isWatching: p,
                         iconClassName: m,
-                        embeddedApplication: g,
+                        embeddedApplication: S,
                         otherClientSessionType: _,
                         voicePlatform: N,
                         hangStatusActivity: A,
@@ -174,8 +174,8 @@
                         children: (0, a.jsx)(E.default, {
                             className: i(L.icon, m)
                         })
-                    }, "video"))), null != g && P.push((0, a.jsx)(f.TooltipContainer, {
-                        text: (0, h.default)(g.name),
+                    }, "video"))), null != S && P.push((0, a.jsx)(f.TooltipContainer, {
+                        text: (0, h.default)(S.name),
                         className: L.iconSpacing,
                         children: (0, a.jsx)(v.default, {
                             className: i(L.icon, m)
@@ -198,7 +198,7 @@
                     }, "stream")) : p && P.push((0, a.jsx)(f.TooltipContainer, {
                         className: L.iconSpacing,
                         text: j.default.Messages.WATCH_STREAM_WATCHING,
-                        children: (0, a.jsx)(S.default, {
+                        children: (0, a.jsx)(g.default, {
                             className: i(L.icon, m)
                         })
                     }, "watch")), 0 !== P.length || null != U || O) ? (0, a.jsxs)("div", {
@@ -340,7 +340,7 @@
                             }),
                             color: "currentColor"
                         })
-                    } else e = (0, a.jsx)(g.default, {
+                    } else e = (0, a.jsx)(S.default, {
                         className: i(L.icon, t, {
                             [L.iconServer]: h
                         })

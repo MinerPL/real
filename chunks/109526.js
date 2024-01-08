@@ -23,11 +23,11 @@
             function C(e) {
                 let {
                     channelId: t
-                } = e, C = (0, l.useStateFromStores)([u.default], () => u.default.getChannel(t), [t]), S = (0, f.useImminentUpcomingGuildEvents)(t), g = null != (0, f.useActiveEvent)(t), {
+                } = e, C = (0, l.useStateFromStores)([u.default], () => u.default.getChannel(t), [t]), g = (0, f.useImminentUpcomingGuildEvents)(t), S = null != (0, f.useActiveEvent)(t), {
                     canManageGuildEvent: _
-                } = (0, r.useManageResourcePermissions)(C), I = (0, l.useStateFromStoresObject)([c.default], () => S.reduce((e, t) => (e[t.id] = c.default.getUserCount(t.id, (0, h.getNextRecurrenceIdInEvent)(t)), e), {}));
-                return S.length < 1 || g ? null : (0, a.jsx)(a.Fragment, {
-                    children: S.map(e => (0, a.jsx)(p.default, {
+                } = (0, r.useManageResourcePermissions)(C), I = (0, l.useStateFromStoresObject)([c.default], () => g.reduce((e, t) => (e[t.id] = c.default.getUserCount(t.id, (0, h.getNextRecurrenceIdInEvent)(t)), e), {}));
+                return g.length < 1 || S ? null : (0, a.jsx)(a.Fragment, {
+                    children: g.map(e => (0, a.jsx)(p.default, {
                         icon: (0, a.jsx)(o.default, {
                             height: 20,
                             width: 20

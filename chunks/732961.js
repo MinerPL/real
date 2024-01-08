@@ -19,8 +19,8 @@
                 m = n("876715"),
                 E = n("842044"),
                 C = n("329515"),
-                S = n("49111"),
-                g = n("99795"),
+                g = n("49111"),
+                S = n("99795"),
                 _ = n("111647"),
                 I = n("542377");
             let T = 16 / 9,
@@ -51,7 +51,7 @@
                     [B, H] = l.useState(null),
                     [G, W] = l.useState(!0),
                     [Y, z] = l.useState(!1),
-                    K = L.type === g.ParticipantTypes.ACTIVITY,
+                    K = L.type === S.ParticipantTypes.ACTIVITY,
                     Z = !K && null != L.streamId,
                     X = Z && null != B && B.width > 0 && B.height > 0 ? B.width / B.height : T,
                     J = D <= 2 * v + 144,
@@ -80,9 +80,9 @@
                             clamp: !0
                         },
                         onStart: () => z(!0),
-                        onChange: () => h.ComponentDispatch.dispatch(S.ComponentActions.REMEASURE_TARGET),
+                        onChange: () => h.ComponentDispatch.dispatch(g.ComponentActions.REMEASURE_TARGET),
                         onRest: () => {
-                            z(!1), h.ComponentDispatch.dispatch(S.ComponentActions.REMEASURE_TARGET)
+                            z(!1), h.ComponentDispatch.dispatch(g.ComponentActions.REMEASURE_TARGET)
                         }
                     }),
                     ei = (0, r.useSpring)({
@@ -178,7 +178,7 @@
                                         }, i) : null
                                     })
                                 })
-                            }), J || U === S.ChannelLayouts.MINIMUM || U === S.ChannelLayouts.NORMAL ? null : (0, a.jsx)(r.animated.div, {
+                            }), J || U === g.ChannelLayouts.MINIMUM || U === g.ChannelLayouts.NORMAL ? null : (0, a.jsx)(r.animated.div, {
                                 className: i(I.actionRow, {
                                     [I.idle]: w
                                 }),

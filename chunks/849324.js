@@ -26,8 +26,8 @@
                     comparator: m,
                     selected: E,
                     checked: C,
-                    onClick: S,
-                    onMouseEnter: g,
+                    onClick: g,
+                    onMouseEnter: S,
                     "aria-setsize": _,
                     "aria-posinset": I
                 } = e, T = (0, r.useStateFromStores)([c.default], () => c.default.getStatus(t.id)), v = (0, i.useListItem)(String(t.id));
@@ -35,10 +35,10 @@
                     id: "user-row-".concat(n),
                     className: p.friendWrapper,
                     onClick: () => {
-                        null != S && S(t.id)
+                        null != g && g(t.id)
                     },
                     onMouseEnter: () => {
-                        null != g && g(n)
+                        null != S && S(n)
                     },
                     ...v,
                     role: "option",

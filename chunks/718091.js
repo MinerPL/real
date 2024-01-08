@@ -19,8 +19,8 @@
                 m = n("913144"),
                 E = n("561288"),
                 C = n("450911"),
-                S = n("630086"),
-                g = n("970728"),
+                g = n("630086"),
+                S = n("970728"),
                 _ = n("369008"),
                 I = n("736964"),
                 T = n("304580"),
@@ -184,7 +184,7 @@
                     }, {
                         autoTrackExposure: !1
                     });
-                    g.default.createInvite(e.id, {
+                    S.default.createInvite(e.id, {
                         max_age: t
                     }, Q.InstantInviteSources.GROUP_DM)
                 }
@@ -578,7 +578,7 @@
                         } = this.props, l = !t.has(e);
                         l ? (_.default.addUser(e), n.length > 0 && _.default.clear(null == a ? void 0 : a.id)) : _.default.removeUser(e), this.forceFocus()
                     }, this.handleAddFriendNavigation = () => {
-                        (0, L.transitionTo)(Q.Routes.FRIENDS), S.default.setSection(Q.FriendsSections.ADD_FRIEND), this.props.onClose()
+                        (0, L.transitionTo)(Q.Routes.FRIENDS), g.default.setSection(Q.FriendsSections.ADD_FRIEND), this.props.onClose()
                     }, this.handleScroll = () => {
                         let e = this.scrollerRef.current;
                         null != e && this.setState({

@@ -1,40 +1,40 @@
             "use strict";
-            l.r(t), l.d(t, {
+            n.r(t), n.d(t, {
                 openDisableCommunication: function() {
-                    return u
+                    return s
                 },
                 openEnableCommunication: function() {
                     return i
                 }
             });
-            var a = l("37983");
-            l("884691");
-            var n = l("77078");
+            var a = n("37983");
+            n("884691");
+            var l = n("77078");
 
-            function u(e, t, u) {
-                (0, n.openModalLazy)(async () => {
+            function s(e, t, s) {
+                (0, l.openModalLazy)(async () => {
                     let {
-                        default: n
-                    } = await l.el("693120").then(l.bind(l, "693120"));
-                    return l => (0, a.jsx)(n, {
+                        default: l
+                    } = await n.el("693120").then(n.bind(n, "693120"));
+                    return n => (0, a.jsx)(l, {
                         guildId: e,
                         userId: t,
-                        anaylticsLocations: u,
-                        ...l
+                        anaylticsLocations: s,
+                        ...n
                     })
                 })
             }
 
-            function i(e, t, u) {
-                (0, n.openModalLazy)(async () => {
+            function i(e, t, s) {
+                (0, l.openModalLazy)(async () => {
                     let {
-                        default: n
-                    } = await l.el("750331").then(l.bind(l, "750331"));
-                    return l => (0, a.jsx)(n, {
+                        default: l
+                    } = await n.el("750331").then(n.bind(n, "750331"));
+                    return n => (0, a.jsx)(l, {
                         guildId: e,
                         userId: t,
-                        anaylticsLocations: u,
-                        ...l
+                        anaylticsLocations: s,
+                        ...n
                     })
                 })
             }

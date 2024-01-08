@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return S
                 }
             }), n("424973"), n("222007");
             var a = n("446674"),
@@ -45,7 +45,7 @@
                 }
             }
             C.displayName = "SharedCanvasStore";
-            let S = new C(l.default, {
+            let g = new C(l.default, {
                 SHARED_CANVAS_UPDATE_LINE_POINTS: function(e) {
                     let {
                         lineId: t,
@@ -120,4 +120,4 @@
                     p = !p
                 }
             });
-            var g = S
+            var S = g

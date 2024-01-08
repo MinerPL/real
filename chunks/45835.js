@@ -17,14 +17,14 @@
                 let c = o.default.getMessage(e.channelId, e.messageId),
                     f = u.default.getUser(e.authorId),
                     E = r.default.getChannel(e.channelId),
-                    h = null != f ? f : new i.default({
+                    _ = null != f ? f : new i.default({
                         id: e.authorId,
                         username: e.authorSummary
                     }),
-                    _ = new s.default({
+                    h = new s.default({
                         id: e.messageId,
                         channel_id: e.channelId,
-                        author: h,
+                        author: _,
                         content: e.messageSummary
                     }),
                     S = null == e.guildId ? new a.DMChannelRecord({
@@ -41,6 +41,6 @@
                     });
                 return {
                     channel: null != E ? E : S,
-                    message: null != c ? c : _
+                    message: null != c ? c : h
                 }
             }
