@@ -23,8 +23,8 @@
                 g = n("822516"),
                 S = n("93550"),
                 T = n("707916"),
-                N = n("255050"),
-                m = n("644189"),
+                m = n("255050"),
+                N = n("644189"),
                 I = n("965353"),
                 A = n("360538"),
                 R = n("403901"),
@@ -52,7 +52,7 @@
                 }), {
                     entity_type: S
                 } = t;
-                return a ? (0, i.jsx)(m.default, {
+                return a ? (0, i.jsx)(N.default, {
                     isActive: c,
                     isUserLurking: p,
                     rsvped: f,
@@ -79,7 +79,7 @@
                     transitionState: o,
                     initialRecurrenceId: C,
                     onClose: _
-                } = e, [T, m] = l.useState(C), U = (0, r.useStateFromStores)([E.default], () => E.default.getGuildScheduledEvent(t), [t]), b = null == U ? void 0 : U.id, P = null == U ? void 0 : U.guild_id, {
+                } = e, [T, N] = l.useState(C), U = (0, r.useStateFromStores)([E.default], () => E.default.getGuildScheduledEvent(t), [t]), b = null == U ? void 0 : U.id, P = null == U ? void 0 : U.guild_id, {
                     guild: O,
                     isMember: D
                 } = (0, p.default)(P, b), M = (0, a.default)(n), j = null == U ? void 0 : U.channel_id, V = (0, r.useStateFromStores)([u.default], () => u.default.getChannel(j), [j]), F = (0, d.useUID)(), [k, G] = l.useState(y.EventDetailSections.EVENT_INFO), B = (0, v.default)(b, T), H = (0, r.useStateFromStores)([E.default], () => E.default.getUserCount(b, T)), [Z, {
@@ -108,7 +108,7 @@
                     transitionState: o,
                     "aria-labelledby": F,
                     className: L.root,
-                    children: [(null == U ? void 0 : U.image) != null && (0, i.jsx)(N.default, {
+                    children: [(null == U ? void 0 : U.image) != null && (0, i.jsx)(m.default, {
                         source: (0, S.default)(U),
                         className: L.banner
                     }), (0, i.jsx)(I.default, {
@@ -141,7 +141,7 @@
                                         isHub: M,
                                         containerRef: Y,
                                         recurrenceId: J,
-                                        setRecurrenceId: m
+                                        setRecurrenceId: N
                                     })
                                 }), (0, i.jsx)(s.Slide, {
                                     id: y.EventDetailSections.RSVP_LIST,

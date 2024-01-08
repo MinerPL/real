@@ -23,8 +23,8 @@
                 g = n("882550"),
                 S = n("466148"),
                 T = n("189443"),
-                N = n("909151"),
-                m = n("427554"),
+                m = n("909151"),
+                N = n("427554"),
                 I = n("393745"),
                 A = n("586403"),
                 R = n("49111"),
@@ -192,7 +192,7 @@
                             guildId: n.id
                         }, D.id), null != t.description && (0, i.jsx)("div", {
                             className: y.description,
-                            children: (0, i.jsx)(N.default, {
+                            children: (0, i.jsx)(m.default, {
                                 description: t.description,
                                 truncate: !1,
                                 guildId: n.id
@@ -200,7 +200,7 @@
                         })]
                     }), null != M && (0, i.jsx)("hr", {
                         className: y.divider
-                    }), null != M && (0, i.jsx)(m.default, {
+                    }), null != M && (0, i.jsx)(N.default, {
                         guildId: n.id,
                         recurrenceRule: M,
                         guildEventId: t.id,

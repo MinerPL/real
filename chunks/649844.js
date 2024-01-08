@@ -95,7 +95,6 @@
                             application_id: O,
                             location_stack: I
                         }), (0, i.clearError)(), (0, u.clearPurchaseTokenAuthState)(), null == p || p(g), g && (null == m || m())
-                    },
-                    onCloseRequest: T.NOOP
+                    }
                 })
             }

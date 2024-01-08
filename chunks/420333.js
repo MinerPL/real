@@ -43,7 +43,7 @@
                 png: n("122574")
             }];
 
-            function O(e) {
+            function P(e) {
                 let {
                     shouldAnimate: t = !0
                 } = e, [n, r] = i.useState(!1);
@@ -60,7 +60,7 @@
                 })
             }
 
-            function P(e) {
+            function O(e) {
                 let {
                     guildFeature: t,
                     guild: n
@@ -83,7 +83,7 @@
                 } = e;
                 return (0, a.jsxs)("div", {
                     className: g.optionBoxText,
-                    children: [(0, a.jsx)(P, {
+                    children: [(0, a.jsx)(O, {
                         guild: n,
                         guildFeature: (0, N.getGuildFeatureFromUploadType)(t, {
                             isGIF: !0
@@ -109,7 +109,7 @@
                 } = e;
                 return (0, a.jsxs)("div", {
                     className: g.optionBoxText,
-                    children: [(0, a.jsx)(P, {
+                    children: [(0, a.jsx)(O, {
                         guildFeature: (0, N.getGuildFeatureFromUploadType)(n, {
                             isGIF: !1
                         }),
@@ -128,7 +128,7 @@
                     onComplete: C,
                     uploadType: N,
                     maxFileSizeBytes: U,
-                    showUpsellHeader: P,
+                    showUpsellHeader: O,
                     filters: M,
                     analyticsLocation: F,
                     analyticsLocations: D = [],
@@ -204,7 +204,7 @@
                                                 file: t,
                                                 onCrop: q,
                                                 uploadType: N,
-                                                showUpsellHeader: P,
+                                                showUpsellHeader: O,
                                                 allowSkip: !0,
                                                 analyticsPage: null == F ? void 0 : F.page,
                                                 ...n
@@ -229,7 +229,7 @@
                                         return t => (0, a.jsx)(e, {
                                             uploadType: N,
                                             onComplete: (e, t) => q(e, t, !0),
-                                            showUpsellHeader: P,
+                                            showUpsellHeader: O,
                                             analyticsPage: null == F ? void 0 : F.page,
                                             ...t
                                         })
@@ -239,7 +239,7 @@
                                 },
                                 children: [(0, a.jsxs)("div", {
                                     className: g.contentCircle,
-                                    children: [(0, a.jsx)(O, {
+                                    children: [(0, a.jsx)(P, {
                                         shouldAnimate: w && !W.enabled
                                     }), (0, a.jsx)("div", {
                                         className: g.gifIconContainer,

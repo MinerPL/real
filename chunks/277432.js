@@ -43,22 +43,22 @@
                     } = e, w = (0, C.useUID)(), [G, F] = r.useState(null != P ? P.channel_id : null), [V, B] = r.useState(null != P ? P.description : ""), [H, j] = r.useState(null != P ? {
                         id: P.emoji_id,
                         name: P.emoji_name
-                    } : null), [k, Y] = r.useState(!1), W = (0, l.useStateFromStores)([_.default], () => (null == H ? void 0 : H.id) != null ? _.default.getUsableCustomEmojiById(H.id) : null), K = (0, l.useStateFromStores)([S.default], () => S.default.getChannels(M)[S.GUILD_SELECTABLE_CHANNELS_KEY], [M]), Z = (0, l.useStateFromStores)([g.default], () => g.default.get(M)), z = null !== (n = null == Z ? void 0 : null === (t = Z.welcome_channels) || void 0 === t ? void 0 : t.map(e => e.channel_id)) && void 0 !== n ? n : [], [X, q] = r.useState(!1);
+                    } : null), [k, Y] = r.useState(!1), W = (0, l.useStateFromStores)([_.default], () => (null == H ? void 0 : H.id) != null ? _.default.getUsableCustomEmojiById(H.id) : null), K = (0, l.useStateFromStores)([S.default], () => S.default.getChannels(M)[S.GUILD_SELECTABLE_CHANNELS_KEY], [M]), Z = (0, l.useStateFromStores)([g.default], () => g.default.get(M)), z = null !== (n = null == Z ? void 0 : null === (t = Z.welcome_channels) || void 0 === t ? void 0 : t.map(e => e.channel_id)) && void 0 !== n ? n : [], [X, Q] = r.useState(!1);
                     r.useEffect(() => {
-                        !o.default.get(R.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY) && setTimeout(() => q(!0), 300)
+                        !o.default.get(R.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY) && setTimeout(() => Q(!0), 300)
                     }, []);
-                    let Q = [];
+                    let q = [];
                     K.forEach(e => {
                         let {
                             channel: t
                         } = e;
-                        v.default.canEveryoneRole(L.Permissions.VIEW_CHANNEL, t) && ((null == P ? void 0 : P.channel_id) === t.id || !z.includes(t.id)) && Q.push({
+                        v.default.canEveryoneRole(L.Permissions.VIEW_CHANNEL, t) && ((null == P ? void 0 : P.channel_id) === t.id || !z.includes(t.id)) && q.push({
                             value: t.id,
                             label: (0, d.computeChannelName)(t, p.default, h.default)
                         })
                     });
                     let J = () => {
-                            q(!1), x()
+                            Q(!1), x()
                         },
                         $ = r.useCallback(e => B(e), []),
                         ee = e => {
@@ -76,7 +76,7 @@
                             })
                         },
                         et = r.useCallback(() => {
-                            o.default.set(R.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY, !0), q(!1)
+                            o.default.set(R.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY, !0), Q(!1)
                         }, []);
                     return (0, i.jsx)(u.default, {
                         page: L.AnalyticsPages.CHANNEL_WELCOME_CREATE_MODAL,
@@ -96,7 +96,7 @@
                                 }), (0, i.jsxs)(s.FormSection, {
                                     className: U.formGroup,
                                     children: [(0, i.jsx)(s.SearchableSelect, {
-                                        options: Q,
+                                        options: q,
                                         onChange: e => F(e),
                                         value: G,
                                         renderOptionPrefix: e => {

@@ -13,7 +13,7 @@
             function u(e) {
                 return (0, a.jsx)(i.MenuItem, {
                     id: "delete-channel",
-                    label: l.default.Messages.DELETE_CATEGORY,
+                    label: l.default.Messages.REMOVE_CATEGORY,
                     subtext: l.default.Messages.DELETE_CATEGORY_SUBTEXT,
                     color: "danger",
                     action: () => (0, i.openModalLazy)(async () => {

@@ -25,7 +25,7 @@
                 S = n("782340"),
                 T = n("758024");
 
-            function N(e) {
+            function m(e) {
                 let {
                     children: t
                 } = e;
@@ -44,8 +44,8 @@
                 })
             }
 
-            function m() {
-                return (0, i.jsx)(N, {
+            function N() {
+                return (0, i.jsx)(m, {
                     children: (0, i.jsx)(a.Heading, {
                         color: "header-primary",
                         variant: "heading-xl/semibold",
@@ -56,7 +56,7 @@
             }
 
             function I() {
-                return (0, i.jsx)(N, {
+                return (0, i.jsx)(m, {
                     children: (0, i.jsx)(a.Heading, {
                         color: "header-secondary",
                         variant: "heading-md/semibold",
@@ -201,7 +201,7 @@
                 let h = 0;
                 return r.length >= g.MAX_RSVP_USER_DISPLAY_COUNT && f > g.MAX_RSVP_USER_DISPLAY_COUNT && (h = Math.max(f - r.length, 0)), 0 === r.length ? (0, i.jsx)(x, {
                     height: c,
-                    children: (0, i.jsx)(m, {})
+                    children: (0, i.jsx)(N, {})
                 }) : (0, i.jsx)(y, {
                     children: (0, i.jsx)(U, {
                         eventUsers: r,

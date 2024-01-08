@@ -35,7 +35,7 @@
                     x = L ? _ < p.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED : (null == S ? void 0 : S.premiumTier) !== p.BoostedGuildTiers.TIER_3 && _ <= p.MAX_STAGE_VIDEO_USER_LIMIT_TIER2,
                     A = a.default.can(h.MODERATE_STAGE_CHANNEL_PERMISSIONS, E);
                 n = L && (null == S ? void 0 : S.premiumTier) === p.BoostedGuildTiers.TIER_3 ? _ <= p.MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED ? C.default.Messages.STAGE_FULL_BOOST_MORE_BODY : C.default.Messages.STAGE_FULL_MAX_BODY : x ? C.default.Messages.STAGE_FULL_BODY : C.default.Messages.STAGE_FULL_MAX_BODY;
-                let R = () => {
+                let T = () => {
                         I(), u.default.track(p.AnalyticEvents.BOOSTING_UPSELL_CLICKED, {
                             guild_id: E.guild_id,
                             type: v.PremiumUpsellTypes.VIDEO_STAGE_LIMIT,
@@ -43,8 +43,8 @@
                             action: v.BoostingUpsellAction.DISMISS
                         })
                     },
-                    T = d.default.getMutableParticipants(E.id, f.StageChannelParticipantNamedIndex.SPEAKER),
-                    N = T.filter(e => e.type === f.StageChannelParticipantTypes.VOICE),
+                    R = d.default.getMutableParticipants(E.id, f.StageChannelParticipantNamedIndex.SPEAKER),
+                    N = R.filter(e => e.type === f.StageChannelParticipantTypes.VOICE),
                     y = N.length,
                     b = d.default.getParticipantCount(E.id, f.StageChannelParticipantNamedIndex.AUDIENCE);
                 return u.default.track(p.AnalyticEvents.BOOSTING_UPSELL_VIEWED, {
@@ -82,7 +82,7 @@
                                 className: m.noThanksButton,
                                 color: l.ButtonColors.CUSTOM,
                                 size: l.ButtonSizes.SMALL,
-                                onClick: R,
+                                onClick: T,
                                 children: C.default.Messages.NO_THANKS
                             }), (0, i.jsx)(c.default, {
                                 onClick: () => {
@@ -103,7 +103,7 @@
                                 children: C.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
                             })]
                         }) : (0, i.jsx)(l.Button, {
-                            onClick: R,
+                            onClick: T,
                             size: l.ButtonSizes.SMALL,
                             color: l.ButtonColors.CUSTOM,
                             className: m.boostButton,

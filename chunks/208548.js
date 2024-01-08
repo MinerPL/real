@@ -40,7 +40,7 @@
                 }, D = e => (t, n) => {
                     let r = (null == t ? void 0 : t.id) == null;
                     U(), r ? R(null == t ? void 0 : t.optionallyDiverseSequence) : (v && R(null == t ? void 0 : t.name), A(null == t ? void 0 : t.id)), n && e()
-                }, O = e => {
+                }, y = e => {
                     e.stopPropagation(), U()
                 };
                 return (0, r.jsx)(a.FormItem, {
@@ -87,7 +87,7 @@
                                     readOnly: !0
                                 }), P && null != L && (0, r.jsx)(c.default, {
                                     ...e,
-                                    onClick: O,
+                                    onClick: y,
                                     className: S.removeButton
                                 })]
                             })

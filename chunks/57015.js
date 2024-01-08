@@ -119,7 +119,7 @@
                             let e = Y();
                             return e.width !== e.height
                         },
-                        q = async () => {
+                        J = async () => {
                             let e;
                             if (null == j.current) return;
                             H(!0);
@@ -262,7 +262,7 @@
                                     }), (0, l.jsx)(s.Button, {
                                         submitting: B,
                                         size: s.ButtonSizes.SMALL,
-                                        onClick: q,
+                                        onClick: J,
                                         children: R.default.Messages.AVATAR_UPLOAD_APPLY
                                     })]
                                 })]
