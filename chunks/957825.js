@@ -21,8 +21,8 @@
                     navId: c,
                     label: f,
                     location: E,
-                    includeGuildMute: h
-                } = e, _ = (0, a.useStateFromStores)([u.default], () => u.default.getGuild(t.guild_id)), S = (0, o.default)(_);
+                    includeGuildMute: _
+                } = e, h = (0, a.useStateFromStores)([u.default], () => u.default.getGuild(t.guild_id)), S = (0, o.default)(h);
                 return (0, l.jsxs)(s.Menu, {
                     navId: c,
                     onClose: n,
@@ -30,7 +30,7 @@
                     onSelect: d,
                     children: [(0, l.jsx)(s.MenuGroup, {
                         children: (0, i.default)(t, E)
-                    }), h ? (0, l.jsx)(s.MenuGroup, {
+                    }), _ ? (0, l.jsx)(s.MenuGroup, {
                         children: S
                     }) : null, (0, l.jsx)(s.MenuGroup, {
                         children: (0, r.useChannelNotificationRadioItems)(t)

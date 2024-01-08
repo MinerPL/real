@@ -7,10 +7,10 @@
                     return P
                 },
                 ItemsPopout: function() {
-                    return F
+                    return b
                 },
                 default: function() {
-                    return b
+                    return F
                 }
             }), n("222007"), n("424973");
             var l = n("37983"),
@@ -24,8 +24,8 @@
                 c = n("77078"),
                 f = n("404118"),
                 E = n("819689"),
-                h = n("510889"),
-                _ = n("699473"),
+                _ = n("510889"),
+                h = n("699473"),
                 S = n("393414"),
                 T = n("161778"),
                 p = n("42203"),
@@ -146,7 +146,7 @@
                 }
             })(x);
 
-            function F(e) {
+            function b(e) {
                 let {
                     analyticsName: t,
                     items: n,
@@ -154,13 +154,13 @@
                     loading: r,
                     loadMore: f,
                     renderHeader: E,
-                    renderEmptyState: _,
+                    renderEmptyState: h,
                     renderItem: S,
                     getProTip: p,
                     scrollerClassName: N,
                     className: I,
                     listName: C
-                } = e, y = a.useRef(null), P = (0, h.default)(C, y), x = (0, d.useStateFromStores)([m.default], () => m.default.hasNotice()), U = (0, d.useStateFromStores)([A.default], () => A.default.windowSize());
+                } = e, y = a.useRef(null), P = (0, _.default)(C, y), x = (0, d.useStateFromStores)([m.default], () => m.default.hasNotice()), U = (0, d.useStateFromStores)([A.default], () => A.default.windowSize());
                 a.useEffect(() => {
                     R.default.track(O.AnalyticEvents.OPEN_POPOUT, {
                         type: t
@@ -183,20 +183,20 @@
                         M.ComponentDispatch.unsubscribe(O.ComponentActions.SCROLL_PAGE_DOWN, t), M.ComponentDispatch.unsubscribe(O.ComponentActions.SCROLL_PAGE_UP, e)
                     }
                 }, []);
-                let F = a.useCallback(() => {
+                let b = a.useCallback(() => {
                         var e;
                         let t = null === (e = y.current) || void 0 === e ? void 0 : e.getScrollerState();
                         null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && s && !r && (null == f || f())
                     }, [s, f, r]),
-                    b = [],
+                    F = [],
                     j = !0;
-                null == n ? b = [(0, l.jsx)("div", {
+                null == n ? F = [(0, l.jsx)("div", {
                     className: i(v.emptyPlaceholder, v.loadingPlaceholder),
                     children: (0, l.jsx)(c.Spinner, {})
-                }, "spinner")] : 0 === n.length ? b.push((0, l.jsx)(a.Fragment, {
-                    children: _(T.default.theme)
-                }, "empty-state")) : (j = !1, b = [], o.each(n, e => {
-                    b.push(...S(e))
+                }, "spinner")] : 0 === n.length ? F.push((0, l.jsx)(a.Fragment, {
+                    children: h(T.default.theme)
+                }, "empty-state")) : (j = !1, F = [], o.each(n, e => {
+                    F.push(...S(e))
                 }));
                 let G = null;
                 null != n && n.length > 0 && null != f && (G = r ? (0, l.jsx)("div", {
@@ -213,7 +213,7 @@
                     })
                 }) : (0, l.jsx)("div", {
                     className: v.scrollingFooterWrap,
-                    children: _(T.default.theme)
+                    children: h(T.default.theme)
                 }));
                 let k = null == p ? void 0 : p(),
                     w = j && null != k ? (0, l.jsx)("div", {
@@ -241,7 +241,7 @@
                         component: E(),
                         children: [(0, l.jsxs)(c.AdvancedScroller, {
                             className: i(v.messagesPopout, N),
-                            onScroll: H ? F : void 0,
+                            onScroll: H ? b : void 0,
                             ref: y,
                             children: [(0, l.jsx)(u.ListNavigatorProvider, {
                                 navigator: P,
@@ -254,7 +254,7 @@
                                         return (0, l.jsx)("div", {
                                             ref: t,
                                             ...n,
-                                            children: b
+                                            children: F
                                         })
                                     }
                                 })
@@ -264,7 +264,7 @@
                 })
             }
 
-            function b(e) {
+            function F(e) {
                 let {
                     analyticsName: t,
                     onFetch: n,
@@ -274,7 +274,7 @@
                     loading: o,
                     loadMore: u,
                     onJump: c,
-                    canCloseAllMessages: h = !1,
+                    canCloseAllMessages: _ = !1,
                     renderHeader: T,
                     renderEmptyState: I,
                     renderMessage: m,
@@ -314,7 +314,7 @@
                     message: e,
                     channel: s
                 })), [i, s]);
-                return (0, l.jsx)(F, {
+                return (0, l.jsx)(b, {
                     className: C,
                     scrollerClassName: g,
                     items: P,
@@ -335,7 +335,7 @@
                         let a = [];
                         return null == n ? [] : (a.push((0, l.jsxs)("div", {
                             className: v.messageGroupWrapper,
-                            children: [(0, l.jsx)(_.default, {
+                            children: [(0, l.jsx)(h.default, {
                                 className: v.messageGroupCozy,
                                 message: t,
                                 channel: n
@@ -343,7 +343,7 @@
                                 channel: s,
                                 message: t,
                                 jumping: D,
-                                canCloseAllMessages: h,
+                                canCloseAllMessages: _,
                                 jumpTo: y,
                                 onCloseMessage: R
                             })]

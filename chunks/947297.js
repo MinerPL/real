@@ -4,15 +4,15 @@
                     return l
                 },
                 default: function() {
-                    return i
+                    return r
                 }
             });
-            var i, s = n("376556"),
-                r = n("653047");
+            var r, i = n("376556"),
+                s = n("653047");
             let l = "xbox:";
-            i = class extends r.default {
+            r = class extends s.default {
                 getIconURL() {
-                    return s.default.get("xbox").icon.lightPNG
+                    return i.default.get("xbox").icon.lightPNG
                 }
                 constructor(e) {
                     super(e), this.id = "".concat(l).concat(e.name), this.name = e.name

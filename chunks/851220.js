@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return a
                 }
             }), n("222007");
-            var s, a = n("37983"),
+            var a, s = n("37983"),
                 l = n("884691"),
                 i = n("734570"),
                 r = n("884351"),
@@ -15,30 +15,30 @@
             function c(e) {
                 e.stopPropagation()
             }
-            s = class extends l.PureComponent {
+            a = class extends l.PureComponent {
                 render() {
                     let {
                         className: e,
                         textValue: t,
                         richValue: n,
-                        message: s,
+                        message: a,
                         channel: l,
                         onCancel: i,
                         children: r
                     } = this.props;
-                    return (0, a.jsxs)("div", {
+                    return (0, s.jsxs)("div", {
                         className: e,
                         ref: this.node,
                         onContextMenu: c,
                         children: [r({
                             textValue: t,
                             richValue: n,
-                            message: s,
+                            message: a,
                             channel: l,
                             onChange: this.onChange,
                             onSubmit: this.onSubmit,
                             onKeyDown: this.onKeyDown
-                        }), (0, a.jsx)("div", {
+                        }), (0, s.jsx)("div", {
                             className: d.operations,
                             children: u.default.Messages.EDIT_TEXTAREA_HELP.format({
                                 onCancel: () => i(l.id),
@@ -57,12 +57,12 @@
                         let {
                             message: t,
                             channel: n,
-                            onConfirmDelete: s,
-                            onCancel: a,
+                            onConfirmDelete: a,
+                            onCancel: s,
                             saveMessage: l,
                             validateEdit: o
                         } = this.props;
-                        return 0 === e.length ? (s(n, t), a(n.id), Promise.resolve({
+                        return 0 === e.length ? (a(n, t), s(n.id), Promise.resolve({
                             shouldClear: !1,
                             shouldRefocus: !1
                         })) : o({
@@ -70,9 +70,9 @@
                             channel: n
                         }).then(t => {
                             let {
-                                valid: s
+                                valid: a
                             } = t;
-                            if (!s) return Promise.resolve({
+                            if (!a) return Promise.resolve({
                                 shouldClear: !1,
                                 shouldRefocus: !1
                             });
@@ -82,17 +82,17 @@
                             });
                             (null == o ? void 0 : o.content) != null && (e = o.content);
                             let u = r.default.parse(this.props.channel, e);
-                            return u.content !== this.props.message.content && l(this.props.channel.id, this.props.message.id, u), a(n.id), Promise.resolve({
+                            return u.content !== this.props.message.content && l(this.props.channel.id, this.props.message.id, u), s(n.id), Promise.resolve({
                                 shouldClear: !0,
                                 shouldRefocus: !0
                             })
                         })
                     }, this.onChange = (e, t, n) => {
                         let {
-                            channel: s,
-                            onChange: a
+                            channel: a,
+                            onChange: s
                         } = this.props;
-                        a(s.id, t, n)
+                        s(a.id, t, n)
                     }, this.onKeyDown = e => {
                         if (e.keyCode === o.KeyboardKeys.ESCAPE && !e.shiftKey) {
                             let {
