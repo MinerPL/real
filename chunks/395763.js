@@ -11,8 +11,8 @@
             n("884691");
             var i = n("414456"),
                 r = n.n(i),
-                u = n("446674"),
-                o = n("77078"),
+                o = n("446674"),
+                u = n("77078"),
                 d = n("997289"),
                 c = n("191225"),
                 f = n("706508"),
@@ -21,8 +21,8 @@
                 m = n("698372"),
                 E = n("969380"),
                 C = n("401207"),
-                S = n("141962"),
-                g = n("320817"),
+                g = n("141962"),
+                S = n("320817"),
                 _ = n("812204"),
                 I = n("685665"),
                 T = n("442939"),
@@ -42,7 +42,7 @@
                     guildId: n,
                     channelId: a,
                     users: l
-                } = e, i = null != t ? t : o.AvatarSizes.SIZE_32, r = (0, o.getAvatarSize)(i);
+                } = e, i = null != t ? t : u.AvatarSizes.SIZE_32, r = (0, u.getAvatarSize)(i);
                 return (0, s.jsx)(N.default, {
                     size: r,
                     guildId: n,
@@ -51,9 +51,9 @@
                     renderUser: e => {
                         if (null == e) return null;
                         let t = M.default.getName(n, a, e);
-                        return (0, s.jsx)(o.TooltipContainer, {
+                        return (0, s.jsx)(u.TooltipContainer, {
                             text: t,
-                            color: o.TooltipColors.GREY,
+                            color: u.TooltipColors.GREY,
                             children: (0, s.jsx)("img", {
                                 src: e.getAvatarURL(n, r),
                                 alt: t,
@@ -73,8 +73,8 @@
                     channel: E,
                     width: C
                 } = e;
-                let g = (a = C) > 400 ? 2 : a > 300 ? 1 : 0;
-                let [_] = (l = C) > 400 ? [o.AvatarSizes.SIZE_56, 56] : l > 300 ? [o.AvatarSizes.SIZE_32, 32] : [o.AvatarSizes.SIZE_24, 24], T = (0, u.useStateFromStoresArray)([x.default, v.default], () => Array.from(i).map(e => v.default.getId() === e ? null : x.default.getUser(e)).filter(A.isNotNullish)), N = (0, u.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.application_id === p.id)), {
+                let S = (a = C) > 400 ? 2 : a > 300 ? 1 : 0;
+                let [_] = (l = C) > 400 ? [u.AvatarSizes.SIZE_56, 56] : l > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], T = (0, o.useStateFromStoresArray)([x.default, v.default], () => Array.from(i).map(e => v.default.getId() === e ? null : x.default.getUser(e)).filter(A.isNotNullish)), N = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.application_id === p.id)), {
                     analyticsLocations: L
                 } = (0, I.default)(), y = (0, d.useAnalyticsContext)(), b = M.default.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), P = (0, h.useEmbeddedActivityJoinability)({
                     userId: null === (t = x.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
@@ -89,10 +89,10 @@
                         guildId: U,
                         channelId: E.id,
                         users: T
-                    }), (0, s.jsx)(o.Text, {
+                    }), (0, s.jsx)(u.Text, {
                         className: r(j.subheader, {
-                            [j.small]: 0 === g,
-                            [j.medium]: 1 === g
+                            [j.small]: 0 === S,
+                            [j.medium]: 1 === S
                         }),
                         variant: "text-sm/normal",
                         children: T.length > 1 ? R.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
@@ -101,38 +101,38 @@
                         }) : R.default.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
                             username: b
                         })
-                    }), (0, s.jsx)(o.Text, {
+                    }), (0, s.jsx)(u.Text, {
                         className: r(j.header, {
-                            [j.small]: 0 === g,
-                            [j.medium]: 1 === g
+                            [j.small]: 0 === S,
+                            [j.medium]: 1 === S
                         }),
                         variant: "text-sm/normal",
                         children: p.name
                     }), (0, s.jsx)("div", {
                         className: j.buttons,
-                        children: D ? (0, s.jsx)(o.Button, {
+                        children: D ? (0, s.jsx)(u.Button, {
                             onClick: function(e) {
                                 e.stopPropagation(), null != N && (0, f.default)({
                                     activity: N,
                                     currentEmbeddedApplication: m,
                                     activityChannelId: E.id,
                                     locationObject: y.location,
-                                    embeddedActivitiesManager: S.default,
+                                    embeddedActivitiesManager: g.default,
                                     analyticsLocations: L
                                 })
                             },
                             size: function(e) {
                                 switch (e) {
                                     case 2:
-                                        return o.Button.Sizes.LARGE;
+                                        return u.Button.Sizes.LARGE;
                                     case 1:
-                                        return o.Button.Sizes.MEDIUM;
+                                        return u.Button.Sizes.MEDIUM;
                                     case 0:
-                                        return o.Button.Sizes.SMALL
+                                        return u.Button.Sizes.SMALL
                                 }
-                            }(g),
+                            }(S),
                             className: j.button,
-                            color: o.Button.Colors.PRIMARY,
+                            color: u.Button.Colors.PRIMARY,
                             children: R.default.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
                         }) : null
                     })]
@@ -149,22 +149,22 @@
                 } = e, {
                     AnalyticsLocationProvider: r
                 } = (0, I.default)(_.default.ACTIVITY_TILE), {
-                    id: u
-                } = t, o = (0, p.default)(), d = (null == o ? void 0 : o.channelId) === i.id && o.application_id === u, c = (0, m.default)(), [f] = (0, T.default)([u]), {
+                    id: o
+                } = t, u = (0, p.default)(), d = (null == u ? void 0 : u.channelId) === i.id && u.application_id === o, c = (0, m.default)(), [f] = (0, T.default)([o]), {
                     url: h
                 } = (0, E.default)({
-                    applicationId: u,
+                    applicationId: o,
                     names: L,
                     size: 1024
-                }), S = !d;
+                }), g = !d;
                 return (0, s.jsx)(r, {
                     children: (0, s.jsx)("div", {
                         className: j.container,
                         children: (0, s.jsxs)(s.Fragment, {
                             children: [!a && d && (0, s.jsx)(C.default, {
                                 className: j.iframe,
-                                embedId: (0, g.default)(i.id, u)
-                            }), S && null != f && null != h && "" !== h ? (0, s.jsx)("img", {
+                                embedId: (0, S.default)(i.id, o)
+                            }), g && null != f && null != h && "" !== h ? (0, s.jsx)("img", {
                                 className: j.splashImage,
                                 alt: f.name,
                                 src: h
@@ -174,7 +174,7 @@
                                 participants: t.participants,
                                 application: f,
                                 currentEmbeddedApplication: c
-                            }), l || S ? null : (0, s.jsx)("div", {
+                            }), l || g ? null : (0, s.jsx)("div", {
                                 className: j.clickShield
                             })]
                         })

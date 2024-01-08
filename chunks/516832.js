@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return g
                 }
             });
             var a = n("37983"),
@@ -9,8 +9,8 @@
                 s = n("907002"),
                 i = n("446674"),
                 r = n("413197"),
-                u = n("84339"),
-                o = n("485328"),
+                o = n("84339"),
+                u = n("485328"),
                 d = n("982108"),
                 c = n("561744"),
                 f = n("994906"),
@@ -29,24 +29,24 @@
                 }
             }
 
-            function S(e) {
+            function g(e) {
                 var t, n;
                 let {
-                    userId: S,
-                    guildId: g,
+                    userId: g,
+                    guildId: S,
                     onClose: _,
                     className: I
-                } = e, T = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(g), [g]), v = null !== (t = null == T ? void 0 : T.details.modViewPanel) && void 0 !== t ? t : m.ModViewPanel.INFO, x = (0, u.default)(S);
+                } = e, T = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(S), [S]), v = null !== (t = null == T ? void 0 : T.details.modViewPanel) && void 0 !== t ? t : m.ModViewPanel.INFO, x = (0, o.default)(g);
                 let N = null == (n = v) ? null : n === m.ModViewPanel.INFO ? "backwards" : "forwards",
                     A = (0, c.default)(N),
                     {
                         reducedMotion: M
                     } = l.useContext(r.AccessibilityPreferencesContext),
                     R = l.useCallback(e => {
-                        null != T && (0, f.openGuildMemberModViewSidebar)(g, S, T.baseChannelId, {
+                        null != T && (0, f.openGuildMemberModViewSidebar)(S, g, T.baseChannelId, {
                             modViewPanel: e
                         })
-                    }, [T, g, S]),
+                    }, [T, S, g]),
                     j = l.useMemo(() => ({
                         [E.KeybindActions.CLOSE_MODAL]: {
                             binds: ["esc"],
@@ -56,9 +56,9 @@
                             }
                         }
                     }), [_, v, R]);
-                l.useEffect(() => (o.default.enable(), o.default.enableTemp(j), () => o.default.disableTemp()), [j]);
+                l.useEffect(() => (u.default.enable(), u.default.enableTemp(j), () => u.default.disableTemp()), [j]);
                 let L = (0, s.useTransition)(v, {
-                    immediate: x !== S,
+                    immediate: x !== g,
                     value: 0,
                     from: {
                         value: 1
@@ -79,7 +79,7 @@
                     children: L((e, t, n) => {
                         var l, i, r;
                         let {
-                            key: u
+                            key: o
                         } = n;
                         return (0, a.jsx)(s.animated.div, {
                             style: {
@@ -100,15 +100,15 @@
                                 switch (e) {
                                     case m.ModViewPanel.INFO:
                                         return (0, a.jsx)(h.default, {
-                                            userId: S,
-                                            guildId: g,
+                                            userId: g,
+                                            guildId: S,
                                             onNavigate: R,
                                             className: I
                                         });
                                     case m.ModViewPanel.MESSAGE_HISTORY:
                                         return (0, a.jsx)(p.default, {
-                                            userId: S,
-                                            guildId: g,
+                                            userId: g,
+                                            guildId: S,
                                             onNavigate: () => R(m.ModViewPanel.INFO),
                                             className: I
                                         });
@@ -116,7 +116,7 @@
                                         return null
                                 }
                             }(t)
-                        }, u)
+                        }, o)
                     })
                 })
             }

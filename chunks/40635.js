@@ -9,8 +9,8 @@
                 s = n("446674"),
                 i = n("77078"),
                 r = n("913144"),
-                u = n("267363"),
-                o = n("27978"),
+                o = n("267363"),
+                u = n("27978"),
                 d = n("660478"),
                 c = n("599110"),
                 f = n("15433"),
@@ -19,8 +19,8 @@
                 m = n("209397"),
                 E = n("187163"),
                 C = n("132615"),
-                S = n("663685"),
-                g = n("516056"),
+                g = n("663685"),
+                S = n("516056"),
                 _ = n("30176"),
                 I = n("730647"),
                 T = n("49111"),
@@ -53,10 +53,10 @@
                     l.useEffect(() => () => {
                         let e = d.default.lastMessageId(x.id);
                         null != e && r.default.wait(() => {
-                            (0, u.ack)(x.id, !0, !0, e)
+                            (0, o.ack)(x.id, !0, !0, e)
                         })
                     }, [x.id]);
-                    let O = l.useMemo(() => null != M ? (0, g.generateDirectoryRows)(Object.values(M), A) : null, [M, A]),
+                    let O = l.useMemo(() => null != M ? (0, S.generateDirectoryRows)(Object.values(M), A) : null, [M, A]),
                         {
                             mostRecentQuery: y,
                             searchFetching: b,
@@ -76,7 +76,7 @@
                         w = "" !== y,
                         {
                             showHubEventsList: F
-                        } = o.default.useExperiment({
+                        } = u.default.useExperiment({
                             guildId: null !== (t = N.id) && void 0 !== t ? t : "",
                             location: "6f7fb0_1"
                         }, {
@@ -135,7 +135,7 @@
                             guild: N,
                             onAddGuild: V
                         })
-                    }) : (0, a.jsx)(S.default, {
+                    }) : (0, a.jsx)(g.default, {
                         channel: x,
                         searchQuery: D,
                         setSearchQuery: U,

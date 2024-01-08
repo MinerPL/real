@@ -10,8 +10,8 @@
             var a, l, s = n("37983"),
                 i = n("884691"),
                 r = n("414456"),
-                u = n.n(r),
-                o = n("77078"),
+                o = n.n(r),
+                u = n("77078"),
                 d = n("103723"),
                 c = n("474293"),
                 f = n("944832"),
@@ -28,19 +28,19 @@
                     mirror: m = !1,
                     paused: E = !1,
                     streamPreviewURL: C,
-                    videoSpinnerContext: S,
-                    userId: g
+                    videoSpinnerContext: g,
+                    userId: S
                 } = e, [_, I] = i.useState(!0), [T] = i.useState(() => new d.VideoSpinnerTimer("VideoStream"));
                 i.useEffect(() => {
-                    !E && (_ ? T.onSpinnerStarted() : null != t && T.trackSpinnerDuration(S, g, t))
-                }, [_, E, t, T, S, g]);
+                    !E && (_ ? T.onSpinnerStarted() : null != t && T.trackSpinnerDuration(g, S, t))
+                }, [_, E, t, T, g, S]);
                 let v = i.useCallback(() => {
                     I(!1)
                 }, []);
                 return (0, s.jsxs)("div", {
-                    className: u(h.wrapper, a),
+                    className: o(h.wrapper, a),
                     children: [null != t && (0, s.jsx)(l, {
-                        className: u(h.video, (0, c.getClass)(h, "video", p), {
+                        className: o(h.video, (0, c.getClass)(h, "video", p), {
                             [h.mirror]: m
                         }, r),
                         streamId: t,
@@ -48,7 +48,7 @@
                         onReady: v,
                         paused: E
                     }), E ? null : (0, s.jsx)("div", {
-                        className: u(h.previewWrapper, {
+                        className: o(h.previewWrapper, {
                             [h.loading]: _
                         }),
                         children: _ && (0, s.jsxs)(i.Fragment, {
@@ -62,7 +62,7 @@
                                 children: (0, s.jsx)("div", {
                                     className: h.emptyPreview
                                 })
-                            }), (0, s.jsx)(o.Spinner, {
+                            }), (0, s.jsx)(u.Spinner, {
                                 className: h.spinner
                             })]
                         })

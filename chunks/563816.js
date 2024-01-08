@@ -1,75 +1,75 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return C
+                    return p
                 }
             });
-            var i = n("37983"),
-                l = n("884691"),
+            var a = n("37983"),
+                i = n("884691"),
                 r = n("627445"),
-                s = n.n(r),
-                a = n("446674"),
-                o = n("77078"),
-                u = n("240249"),
+                u = n.n(r),
+                l = n("446674"),
+                s = n("77078"),
+                o = n("240249"),
                 d = n("916565"),
-                c = n("355263"),
-                f = n("633043"),
-                h = n("823026"),
-                E = n("305961"),
-                _ = n("697218"),
-                p = n("317041"),
-                I = n("782340"),
-                T = n("205735"),
-                C = e => {
+                f = n("355263"),
+                c = n("633043"),
+                E = n("823026"),
+                A = n("305961"),
+                C = n("697218"),
+                S = n("317041"),
+                N = n("782340"),
+                v = n("205735"),
+                p = e => {
                     let t, {
                             commandType: n,
                             commandTargetId: r,
-                            channel: C,
-                            guildId: S,
-                            onHeightUpdate: N,
-                            context: g
+                            channel: p,
+                            guildId: _,
+                            onHeightUpdate: I,
+                            context: T
                         } = e,
-                        v = (0, a.useStateFromStores)([E.default], () => E.default.getGuild(null != S ? S : C.guild_id)),
-                        m = (0, a.useStateFromStores)([_.default], () => _.default.getUser(r)),
-                        A = (0, h.default)({
-                            user: m,
-                            guildId: null == v ? void 0 : v.id,
-                            channel: C,
-                            context: g
+                        m = (0, l.useStateFromStores)([A.default], () => A.default.getGuild(null != _ ? _ : p.guild_id)),
+                        g = (0, l.useStateFromStores)([C.default], () => C.default.getUser(r)),
+                        h = (0, E.default)({
+                            user: g,
+                            guildId: null == m ? void 0 : m.id,
+                            channel: p,
+                            context: T
                         }),
                         {
-                            commands: L,
-                            sectionDescriptors: M,
-                            loading: R
-                        } = u.useDiscovery(C, {
+                            commands: F,
+                            sectionDescriptors: R,
+                            loading: M
+                        } = o.useDiscovery(p, {
                             commandType: n
                         }, {
-                            limit: p.CONTEXT_MENU_COMMANDS_QUERY_LIMIT
+                            limit: S.CONTEXT_MENU_COMMANDS_QUERY_LIMIT
                         }),
                         {
                             sections: O
-                        } = l.useMemo(() => {
+                        } = i.useMemo(() => {
                             let e = {};
-                            return M.forEach(t => {
+                            return R.forEach(t => {
                                 e[t.id] = t
                             }), {
                                 sections: e
                             }
-                        }, [M]),
-                        y = l.useRef(R.current);
-                    l.useEffect(() => {
-                        R.current !== y.current && (y.current = R.current, null == N || N())
-                    }, [R, N]);
-                    let G = l.useCallback(e => {
-                        s(null != C, "menu item should not show if channel is null");
+                        }, [R]),
+                        y = i.useRef(M.current);
+                    i.useEffect(() => {
+                        M.current !== y.current && (y.current = M.current, null == I || I())
+                    }, [M, I]);
+                    let D = i.useCallback(e => {
+                        u(null != p, "menu item should not show if channel is null");
                         let t = O[e.applicationId],
-                            n = null != t ? (0, c.getIconComponent)(t) : void 0;
-                        return (0, i.jsx)(o.MenuItem, {
+                            n = null != t ? (0, f.getIconComponent)(t) : void 0;
+                        return (0, a.jsx)(s.MenuItem, {
                             id: e.id,
                             label: e.displayName,
                             showIconFirst: !0,
-                            icon: () => null != n ? (0, i.jsx)(n, {
-                                channel: C,
+                            icon: () => null != n ? (0, a.jsx)(n, {
+                                channel: p,
                                 section: t,
                                 width: 18,
                                 height: 18,
@@ -80,28 +80,28 @@
                                     command: e,
                                     optionValues: {},
                                     context: {
-                                        channel: C,
-                                        guild: v
+                                        channel: p,
+                                        guild: m
                                     },
                                     commandTargetId: r
                                 })
                             }
                         }, e.id)
-                    }, [C, v, r, O]);
-                    return R.current ? t = (0, i.jsx)(o.MenuItem, {
+                    }, [p, m, r, O]);
+                    return M.current ? t = (0, a.jsx)(s.MenuItem, {
                         id: "menu-commands-placeholder",
-                        render: () => (0, i.jsx)(f.default, {}),
+                        render: () => (0, a.jsx)(c.default, {}),
                         disabled: !0
-                    }, "menu-commands-placeholder") : (t = 0 === L.length ? (0, i.jsx)(o.MenuItem, {
+                    }, "menu-commands-placeholder") : (t = 0 === F.length ? (0, a.jsx)(s.MenuItem, {
                         id: "menu-commands-empty",
-                        label: I.default.Messages.APPLICATION_COMMAND_NO_COMMANDS,
+                        label: N.default.Messages.APPLICATION_COMMAND_NO_COMMANDS,
                         disabled: !0
-                    }, "menu-commands-empty") : L.map(G), null != A && (t = (0, i.jsxs)(i.Fragment, {
-                        children: [t, (0, i.jsx)(o.MenuSeparator, {}, "separator"), A]
-                    }))), (0, i.jsx)(o.MenuItem, {
+                    }, "menu-commands-empty") : F.map(D), null != h && (t = (0, a.jsxs)(a.Fragment, {
+                        children: [t, (0, a.jsx)(s.MenuSeparator, {}, "separator"), h]
+                    }))), (0, a.jsx)(s.MenuItem, {
                         id: "apps",
-                        label: I.default.Messages.APPS,
-                        listClassName: T.list,
+                        label: N.default.Messages.APPS,
+                        listClassName: v.list,
                         children: t
                     })
                 }

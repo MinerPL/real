@@ -1,5 +1,5 @@
             "use strict";
-            a.r(t), a.d(t, {
+            n.r(t), n.d(t, {
                 fetchBugReportConfig: function() {
                     return u
                 },
@@ -10,16 +10,16 @@
                     return c
                 },
                 submitReport: function() {
-                    return m
+                    return f
                 }
-            }), a("424973");
-            var n = a("759843"),
-                l = a("872717"),
-                s = a("147746");
-            a("18108"), a("773336");
-            var i = a("840707"),
-                r = a("49111"),
-                o = a("782340");
+            }), n("424973");
+            var a = n("759843"),
+                l = n("872717"),
+                s = n("147746");
+            n("18108"), n("773336");
+            var i = n("840707"),
+                r = n("49111"),
+                o = n("782340");
             async function u() {
                 let e = await l.default.get({
                     url: r.Endpoints.BUG_REPORTS
@@ -28,8 +28,8 @@
             }
 
             function d(e) {
-                var t, a;
-                return null !== (a = null !== (t = null == e ? void 0 : e.name) && void 0 !== t ? t : "" + (null == e ? void 0 : e.squad)) && void 0 !== a ? a : ""
+                var t, n;
+                return null !== (n = null !== (t = null == e ? void 0 : e.name) && void 0 !== t ? t : "" + (null == e ? void 0 : e.squad)) && void 0 !== n ? n : ""
             }
 
             function c() {
@@ -55,7 +55,7 @@
                     value: 3
                 }]
             }
-            async function m(e, t, a) {
+            async function f(e, t, n) {
                 var l, o;
                 let u = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
                     d = [{
@@ -80,10 +80,10 @@
                     name: "asana_inbox_id",
                     value: "".concat(c)
                 });
-                let m = null === (o = e.feature) || void 0 === o ? void 0 : o.name;
-                null != m && "" !== m && d.push({
+                let f = null === (o = e.feature) || void 0 === o ? void 0 : o.name;
+                null != f && "" !== f && d.push({
                     name: "feature_name",
-                    value: m
+                    value: f
                 }), t.overridePlatformInformation && (d.push({
                     name: "device",
                     value: t.device
@@ -109,10 +109,10 @@
                 try {
                     return await i.default.post({
                         url: r.Endpoints.BUG_REPORTS,
-                        attachments: a,
+                        attachments: n,
                         fields: d,
                         trackedActionData: {
-                            event: n.NetworkActionNames.BUG_REPORT_SUBMIT,
+                            event: a.NetworkActionNames.BUG_REPORT_SUBMIT,
                             properties: {
                                 priority: e.priority,
                                 asana_inbox_id: c

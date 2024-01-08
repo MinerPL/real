@@ -9,14 +9,14 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("917351"),
-                u = n("77078"),
-                o = n("716241"),
+                o = n("77078"),
+                u = n("716241"),
                 d = n("945330"),
                 c = n("599110"),
                 f = n("49111"),
                 h = n("782340"),
                 p = n("832025");
-            let m = (0, r.debounce)(o.default.trackWithMetadata, 500);
+            let m = (0, r.debounce)(u.default.trackWithMetadata, 500);
             var E = function(e) {
                 let {
                     guild: t,
@@ -25,8 +25,8 @@
                     image: r,
                     type: E,
                     imageStyles: C,
-                    imageMarginX: S,
-                    imageMarginTop: g,
+                    imageMarginX: g,
+                    imageMarginTop: S,
                     trackingSource: _,
                     undismissable: I,
                     onDismissed: T,
@@ -42,9 +42,9 @@
                     })
                 }, [t.id, E]);
                 let M = null;
-                "function" == typeof x ? M = x() : null != x && (M = (0, a.jsx)(u.Button, {
+                "function" == typeof x ? M = x() : null != x && (M = (0, a.jsx)(o.Button, {
                     className: p.button,
-                    size: u.Button.Sizes.SMALL,
+                    size: o.Button.Sizes.SMALL,
                     onClick: () => {
                         null != E && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
                             source: _,
@@ -57,7 +57,7 @@
                     children: x
                 }));
                 let R = null;
-                "function" == typeof n ? R = n() : null != n && (R = (0, a.jsx)(u.Text, {
+                "function" == typeof n ? R = n() : null != n && (R = (0, a.jsx)(o.Text, {
                     variant: "text-md/medium",
                     color: "header-primary",
                     className: i(p.title, {
@@ -67,12 +67,12 @@
                     }),
                     children: n
                 }));
-                let j = null != S ? "".concat(S, "px") : "16px";
+                let j = null != g ? "".concat(g, "px") : "16px";
                 return (0, a.jsxs)("div", {
                     className: p.container,
-                    children: [!0 === I ? null : (0, a.jsx)(u.Clickable, {
+                    children: [!0 === I ? null : (0, a.jsx)(o.Clickable, {
                         onClick: () => {
-                            o.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
+                            u.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
                                 notice_type: E
                             }), null == T || T()
                         },
@@ -84,7 +84,7 @@
                     }), null != r && (0, a.jsx)("div", {
                         className: p.imageContainer,
                         style: {
-                            marginTop: "".concat(g, "px"),
+                            marginTop: "".concat(S, "px"),
                             marginLeft: j,
                             marginRight: j
                         },
@@ -96,7 +96,7 @@
                         })
                     }), (0, a.jsxs)("div", {
                         className: p.message,
-                        children: [R, (0, a.jsx)(u.Text, {
+                        children: [R, (0, a.jsx)(o.Text, {
                             className: i({
                                 [p.center]: A
                             }),

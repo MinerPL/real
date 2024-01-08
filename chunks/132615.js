@@ -9,8 +9,8 @@
                 s = n("77078"),
                 i = n("952999"),
                 r = n("49111"),
-                u = n("782340"),
-                o = n("760472"),
+                o = n("782340"),
+                u = n("760472"),
                 d = e => {
                     let {
                         guild: t,
@@ -31,31 +31,31 @@
                         })
                     }, [t]);
                     return (0, a.jsxs)("div", {
-                        className: o.emptyWrapper,
+                        className: u.emptyWrapper,
                         children: [(0, a.jsx)("img", {
-                            className: o.emptyImage,
+                            className: u.emptyImage,
                             alt: "",
                             src: n("704176")
                         }), (0, a.jsx)(s.Heading, {
-                            className: o.emptyTitle,
+                            className: u.emptyTitle,
                             variant: "heading-xl/semibold",
-                            children: u.default.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_TITLE.format({
+                            children: o.default.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_TITLE.format({
                                 guildName: t.name
                             })
                         }), (0, a.jsx)(s.Text, {
                             variant: "text-md/normal",
-                            className: o.emptySubtitle,
-                            children: u.default.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_SUBTITLE
+                            className: u.emptySubtitle,
+                            children: o.default.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_SUBTITLE
                         }), null != d ? (0, a.jsx)(i.WelcomeMessageCTA, {
-                            className: o.emptyCTA,
+                            className: u.emptyCTA,
                             iconUrl: n("233135"),
-                            header: u.default.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_ADD_SERVER,
+                            header: o.default.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_ADD_SERVER,
                             completed: !1,
                             onClick: d
                         }) : null, (0, a.jsx)(i.WelcomeMessageCTA, {
-                            className: o.emptyCTA,
+                            className: u.emptyCTA,
                             iconUrl: n("243826"),
-                            header: u.default.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_INVITE,
+                            header: o.default.Messages.HUB_DIRECTORY_CHANNEL_EMPTY_INVITE,
                             completed: !1,
                             onClick: c
                         })]

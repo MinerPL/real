@@ -10,15 +10,15 @@
                 s = n("77078"),
                 i = n("724038"),
                 r = n("305961"),
-                u = n("809167"),
-                o = n("782340"),
+                o = n("809167"),
+                u = n("782340"),
                 d = n("646839");
             let c = e => {
                 let {
                     onClose: t,
                     listing: n,
                     guildId: c
-                } = e, f = (0, l.useStateFromStores)([r.default], () => r.default.getGuild(c), [c]), h = (0, u.default)({
+                } = e, f = (0, l.useStateFromStores)([r.default], () => r.default.getGuild(c), [c]), h = (0, o.default)({
                     listing: n,
                     guildId: c
                 });
@@ -27,7 +27,7 @@
                     children: [(0, a.jsx)(s.Heading, {
                         className: d.confirmationHeader,
                         variant: "heading-lg/extrabold",
-                        children: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE.format({
+                        children: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE.format({
                             serverName: null == f ? void 0 : f.toString(),
                             tierName: n.name
                         })
@@ -35,18 +35,18 @@
                         className: d.confirmationSubtitle,
                         variant: "text-sm/normal",
                         color: "header-secondary",
-                        children: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({
+                        children: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({
                             benefits: h.asString()
                         })
                     }), (0, a.jsx)(s.Button, {
                         className: d.openDiscordButton,
                         onClick: () => (0, i.default)("role_sub_mweb_success_modal"),
-                        children: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_OPEN_DISCORD_BUTTON
+                        children: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_OPEN_DISCORD_BUTTON
                     }), (0, a.jsx)(s.Button, {
                         className: d.doneButton,
                         look: s.Button.Looks.BLANK,
                         onClick: () => t(!0),
-                        children: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
+                        children: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
                     })]
                 })
             }

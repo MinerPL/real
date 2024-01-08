@@ -13,8 +13,8 @@
                         isHovered: t,
                         closePopout: n,
                         onMouseEnter: r,
-                        onMouseLeave: u,
-                        onFocus: o,
+                        onMouseLeave: o,
+                        onFocus: u,
                         channel: d
                     } = e;
                     return l.useEffect(() => {
@@ -22,11 +22,11 @@
                     }, [n, t]), (0, a.jsx)(s.default, {
                         children: (0, a.jsx)("div", {
                             onMouseEnter: r,
-                            onMouseLeave: u,
+                            onMouseLeave: o,
                             children: (0, a.jsx)(i.default, {
                                 channel: d,
                                 closePopout: n,
-                                onFocus: o
+                                onFocus: u
                             })
                         })
                     })

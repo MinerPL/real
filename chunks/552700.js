@@ -12,8 +12,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("627445"),
-                u = n.n(r),
-                o = n("446674"),
+                o = n.n(r),
+                u = n("446674"),
                 d = n("669491"),
                 c = n("77078"),
                 f = n("272030"),
@@ -22,8 +22,8 @@
                 m = n("981601"),
                 E = n("26989"),
                 C = n("328275"),
-                S = n("118503"),
-                g = n("711486"),
+                g = n("118503"),
+                S = n("711486"),
                 _ = n("387111"),
                 I = n("808422"),
                 T = n("5668");
@@ -45,7 +45,7 @@
                             variant: "text-sm/normal",
                             color: "header-primary",
                             children: _.default.getName(t, n, l)
-                        }), s ? (0, a.jsx)(S.default, {
+                        }), s ? (0, a.jsx)(g.default, {
                             className: T.boost,
                             color: d.default.unsafe_rawColors.GUILD_BOOSTING_PINK.css
                         }) : null]
@@ -59,31 +59,31 @@
                         channel: s,
                         isPremium: r
                     } = e, {
-                        user: u,
-                        blocked: o,
+                        user: o,
+                        blocked: u,
                         rtsState: d
                     } = n, c = d === I.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK, f = d === I.RequestToSpeakStates.REQUESTED_TO_SPEAK || c;
                     return (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsxs)("div", {
                             className: T.avatarContainer,
-                            children: [f && (0, a.jsx)(g.default, {
+                            children: [f && (0, a.jsx)(S.default, {
                                 className: i(T.icon, {
                                     [T.invited]: c
                                 })
                             }), (0, a.jsx)("img", {
-                                src: null !== (t = u.getAvatarURL(s.guild_id, 56, !1)) && void 0 !== t ? t : void 0,
-                                alt: u.username,
-                                "aria-label": u.username,
+                                src: null !== (t = o.getAvatarURL(s.guild_id, 56, !1)) && void 0 !== t ? t : void 0,
+                                alt: o.username,
+                                "aria-label": o.username,
                                 className: i(T.avatar, {
-                                    [T.faded]: o
+                                    [T.faded]: u
                                 })
                             })]
                         }), (0, a.jsx)(v, {
                             guildId: l,
                             channelId: s.id,
-                            user: u,
+                            user: o,
                             isPremium: r,
-                            isBlocked: o
+                            isBlocked: u
                         })]
                     })
                 }),
@@ -97,11 +97,11 @@
                 } = e, {
                     user: r,
                     blocked: d
-                } = t, C = s.getGuildId(), S = (0, h.useAppContext)(), g = (0, o.useStateFromStores)([E.default], () => {
+                } = t, C = s.getGuildId(), g = (0, h.useAppContext)(), S = (0, u.useStateFromStores)([E.default], () => {
                     var e;
                     return null != C && (null === (e = E.default.getMember(C, r.id)) || void 0 === e ? void 0 : e.premiumSince) != null
                 }, [C, r.id]);
-                u(null != C, "Channel cannot be guildless");
+                o(null != C, "Channel cannot be guildless");
                 let _ = l.useCallback(e => {
                         (0, f.openContextMenuLazy)(e, async () => {
                             let {
@@ -117,9 +117,9 @@
                                 showChatItems: !1
                             })
                         }, {
-                            context: S
+                            context: g
                         })
-                    }, [r, C, s, S]),
+                    }, [r, C, s, g]),
                     I = l.useCallback(e => (0, a.jsx)(m.default, {
                         ...e,
                         guildId: C,
@@ -136,8 +136,8 @@
                     spacing: 8,
                     children: e => (0, a.jsx)(c.Clickable, {
                         className: i(T.tileContainer, {
-                            [T.singleIcon]: g || d,
-                            [T.doubleIcon]: g && d
+                            [T.singleIcon]: S || d,
+                            [T.doubleIcon]: S && d
                         }),
                         onContextMenu: _,
                         ...e,
@@ -145,7 +145,7 @@
                             participant: t,
                             guildId: C,
                             channel: s,
-                            isPremium: g
+                            isPremium: S
                         })
                     })
                 })

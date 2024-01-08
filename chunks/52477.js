@@ -24,8 +24,8 @@
                 s = n("509043"),
                 i = n("462274"),
                 r = n("697218"),
-                u = n("315841"),
-                o = n("827520");
+                o = n("315841"),
+                u = n("827520");
 
             function d(e) {
                 let t = e.current,
@@ -59,14 +59,14 @@
             }
 
             function p(e) {
-                return e.type === u.DrawableType.LINE
+                return e.type === o.DrawableType.LINE
             }
 
             function m(e, t, n, a) {
-                var u;
+                var o;
                 let d = r.default.getUser(e),
-                    c = null == d ? void 0 : d.getAvatarURL(null, o.AVATAR_COLOR_AVATAR_SIZE),
-                    f = null != c ? null === (u = i.useColorStore.getState().palette[c]) || void 0 === u ? void 0 : u[0] : null,
+                    c = null == d ? void 0 : d.getAvatarURL(null, u.AVATAR_COLOR_AVATAR_SIZE),
+                    f = null != c ? null === (o = i.useColorStore.getState().palette[c]) || void 0 === o ? void 0 : o[0] : null,
                     h = null != f ? "#".concat(l({
                         r: f[0],
                         g: f[1],

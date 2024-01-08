@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("77078"),
-                u = n("837899"),
-                o = n("849467"),
+                o = n("837899"),
+                u = n("849467"),
                 d = n("155207"),
                 c = n("980423"),
                 f = n("215536"),
@@ -33,7 +33,7 @@
                             width: 20,
                             height: 20,
                             className: h.micIcon
-                        }) : (0, a.jsx)(o.default, {
+                        }) : (0, a.jsx)(u.default, {
                             width: 20,
                             height: 20,
                             className: h.micIcon
@@ -47,7 +47,7 @@
                                 channel: E,
                                 speakers: m
                             }), C && (0, a.jsx)(c.default, {})]
-                        }), (0, a.jsx)(u.default, {
+                        }), (0, a.jsx)(o.default, {
                             width: 20,
                             height: 20,
                             className: i(h.downIcon, {

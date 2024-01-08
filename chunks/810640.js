@@ -10,8 +10,8 @@
                 s = n.n(l),
                 i = n("77078"),
                 r = n("673527"),
-                u = n("821391"),
-                o = n("782340"),
+                o = n("821391"),
+                u = n("782340"),
                 d = n("146789");
 
             function c(e) {
@@ -34,12 +34,12 @@
                             className: d.streamUnavailableText,
                             color: "always-white",
                             variant: n ? "text-sm/semibold" : "text-md/semibold",
-                            children: c ? o.default.Messages.CONSOLE_STREAMING : o.default.Messages.CONSOLE_STREAM_UNAVAILABLE
+                            children: c ? u.default.Messages.CONSOLE_STREAMING : u.default.Messages.CONSOLE_STREAM_UNAVAILABLE
                         }), (0, a.jsx)(i.TooltipContainer, {
-                            text: c ? o.default.Messages.CONSOLE_STREAMING_TOOLTIP : o.default.Messages.CONSOLE_STREAM_UNAVAILABLE_TOOLTIP,
+                            text: c ? u.default.Messages.CONSOLE_STREAMING_TOOLTIP : u.default.Messages.CONSOLE_STREAM_UNAVAILABLE_TOOLTIP,
                             className: d.darkCircle,
                             children: (0, a.jsx)("div", {
-                                children: (0, a.jsx)(u.default, {
+                                children: (0, a.jsx)(o.default, {
                                     className: d.stopStreamIcon,
                                     foreground: d.stopStreamForeground
                                 })

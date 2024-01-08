@@ -9,8 +9,8 @@
                 s = n("446674"),
                 i = n("913144"),
                 r = n("255397"),
-                u = n("716241"),
-                o = n("191145"),
+                o = n("716241"),
+                u = n("191145"),
                 d = n("383294"),
                 c = n("95032"),
                 f = n("18494"),
@@ -19,8 +19,8 @@
                 m = n("773336"),
                 E = n("563680"),
                 C = n("49111"),
-                S = n("580105");
-            let g = () => {
+                g = n("580105");
+            let S = () => {
                 i.default.wait(() => d.close(C.PopoutWindowKeys.CHANNEL_CALL_POPOUT))
             };
 
@@ -34,11 +34,11 @@
                 } = e, I = n === C.AppContext.POPOUT, T = l.useRef(null), {
                     currentLayout: v,
                     mode: x
-                } = (0, s.useStateFromStoresObject)([o.default], () => {
-                    let e = o.default.getMode(t.id),
+                } = (0, s.useStateFromStoresObject)([u.default], () => {
+                    let e = u.default.getMode(t.id),
                         a = n === C.AppContext.POPOUT;
                     a && (e = C.ChannelModes.VIDEO);
-                    let l = e === C.ChannelModes.VIDEO ? o.default.getLayout(t.id, n) : C.ChannelLayouts.MINIMUM;
+                    let l = e === C.ChannelModes.VIDEO ? u.default.getLayout(t.id, n) : C.ChannelLayouts.MINIMUM;
                     return a && l !== C.ChannelLayouts.FULL_SCREEN && (l = C.ChannelLayouts.NO_CHAT), {
                         currentLayout: l,
                         mode: e
@@ -82,18 +82,18 @@
                     }
                 }, [M, v, b, R]), l.useEffect(() => (h.default.track(C.AnalyticEvents.VIDEO_LAYOUT_TOGGLED, {
                     video_layout: I ? "popout" : v,
-                    ...(0, u.collectVoiceAnalyticsMetadata)(t.id)
+                    ...(0, o.collectVoiceAnalyticsMetadata)(t.id)
                 }), () => {
                     !(I && (0, m.isMac)()) && y(v)
                 }), [v, I]), l.useEffect(() => {
                     null != R && T.current === C.ChannelModes.VIDEO && x === C.ChannelModes.VOICE && (0, E.exitFullScreen)(R, M)
                 }, [M, x, T, R]), l.useEffect(() => {
-                    !N && I && g()
+                    !N && I && S()
                 }, [N, I]), L) ? (0, a.jsx)(c.default, {
                     themeable: !1,
                     node: R,
                     guestWindow: d,
-                    className: S.rightTrayIcon,
+                    className: g.rightTrayIcon,
                     onClick: b(v)
                 }) : null
             }

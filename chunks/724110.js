@@ -9,8 +9,8 @@
                 s = n("746379"),
                 i = n.n(s),
                 r = n("77078"),
-                u = n("716241"),
-                o = n("368639"),
+                o = n("716241"),
+                u = n("368639"),
                 d = n("33942"),
                 c = n("506885"),
                 f = n("401642"),
@@ -19,8 +19,8 @@
                 m = n("253981"),
                 E = n("252063"),
                 C = n("49111"),
-                S = n("782340"),
-                g = n("402739"),
+                g = n("782340"),
+                S = n("402739"),
                 _ = n("271861");
             let I = new Set(["Spacebar", " ", "Enter"]);
 
@@ -37,7 +37,7 @@
                     channelId: t
                 });
                 l.useEffect(() => {
-                    (0, u.trackWithMetadata)(C.AnalyticEvents.GDM_STARTER_APPS_VIEWED)
+                    (0, o.trackWithMetadata)(C.AnalyticEvents.GDM_STARTER_APPS_VIEWED)
                 }, []);
                 let N = e => {
                         var t;
@@ -63,32 +63,32 @@
                 return (0, a.jsxs)(r.ModalRoot, {
                     transitionState: n,
                     size: r.ModalSize.DYNAMIC,
-                    className: g.modal,
+                    className: S.modal,
                     children: [(0, a.jsx)(r.ModalContent, {
-                        className: g.modalContent,
+                        className: S.modalContent,
                         children: (0, a.jsxs)(a.Fragment, {
                             children: [(0, a.jsx)("img", {
                                 src: _,
                                 alt: "",
-                                className: g.image
+                                className: S.image
                             }), (0, a.jsxs)("div", {
-                                className: g.headingContainer,
+                                className: S.headingContainer,
                                 children: [(0, a.jsx)(r.Heading, {
                                     variant: "heading-xl/bold",
-                                    className: g.modalHeader,
-                                    children: S.default.Messages.PRIVATE_CHANNEL_AVAILABLE_APPS
+                                    className: S.modalHeader,
+                                    children: g.default.Messages.PRIVATE_CHANNEL_AVAILABLE_APPS
                                 }), (0, a.jsx)(r.Text, {
                                     variant: "text-md/medium",
-                                    className: g.modalHeader,
-                                    children: S.default.Messages.PRIVATE_CHANNEL_INTEGRATION_MORE_APPS_INFO_LINKED.format({
+                                    className: S.modalHeader,
+                                    children: g.default.Messages.PRIVATE_CHANNEL_INTEGRATION_MORE_APPS_INFO_LINKED.format({
                                         helpCenterLink: p.default.getArticleURL(C.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
                                     })
                                 })]
                             }), (0, a.jsx)("div", {
-                                className: g.applicationRowContainer,
+                                className: S.applicationRowContainer,
                                 children: T ? v.map(e => {
                                     if (null != x.find(t => t.application.id === e.id)) return null;
-                                    let n = null != e.description ? (0, o.parseBioReact)(e.description) : null,
+                                    let n = null != e.description ? (0, u.parseBioReact)(e.description) : null,
                                         l = h.default.getApplicationIconURL({
                                             id: e.id,
                                             icon: e.icon,
@@ -96,16 +96,16 @@
                                         }),
                                         s = (0, a.jsxs)(a.Fragment, {
                                             children: [null != l && (0, a.jsx)("img", {
-                                                className: g.applicationIcon,
+                                                className: S.applicationIcon,
                                                 alt: "",
                                                 "aria-hidden": !0,
                                                 src: l,
                                                 width: 40,
                                                 height: 40
                                             }), (0, a.jsxs)("div", {
-                                                className: g.applicationRowContent,
+                                                className: S.applicationRowContent,
                                                 children: [(0, a.jsxs)("div", {
-                                                    className: g.applicationText,
+                                                    className: S.applicationText,
                                                     children: [(0, a.jsx)(r.Heading, {
                                                         variant: "heading-md/medium",
                                                         children: e.name
@@ -117,7 +117,7 @@
                                                     })]
                                                 }), (0, a.jsx)(r.Button, {
                                                     type: "button",
-                                                    innerClassName: g.applicationButtonHack,
+                                                    innerClassName: S.applicationButtonHack,
                                                     onClick: n => {
                                                         n.stopPropagation(), (0, d.openOAuth2Modal)({
                                                             clientId: e.id,
@@ -129,7 +129,7 @@
                                                     },
                                                     size: r.Button.Sizes.SMALL,
                                                     color: r.Button.Colors.PRIMARY,
-                                                    children: S.default.Messages.ADD
+                                                    children: g.default.Messages.ADD
                                                 })]
                                             })]
                                         }),
@@ -139,7 +139,7 @@
                                     return null != i ? (0, a.jsx)(r.ClickableContainer, {
                                         onMouseDown: () => N(i),
                                         onKeyDown: e => A(e, i),
-                                        className: g.applicationRow,
+                                        className: S.applicationRow,
                                         onClick: () => {
                                             (0, f.openUserProfileModal)({
                                                 userId: i.id,
@@ -149,30 +149,30 @@
                                                 }
                                             })
                                         },
-                                        "aria-label": S.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADD_MODAL_ROW_INFO.format({
+                                        "aria-label": g.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADD_MODAL_ROW_INFO.format({
                                             appName: e.name
                                         }),
                                         children: s
                                     }, e.id) : (0, a.jsx)("div", {
-                                        className: g.applicationRow,
+                                        className: S.applicationRow,
                                         children: s
                                     }, e.id)
                                 }) : (0, a.jsx)(r.Spinner, {
-                                    className: g.spinner,
+                                    className: S.spinner,
                                     type: r.Spinner.Type.SPINNING_CIRCLE
                                 })
                             })]
                         })
                     }), (0, a.jsxs)(r.ModalFooter, {
-                        className: g.modalFooter,
+                        className: S.modalFooter,
                         children: [(0, a.jsx)(r.Button, {
                             onClick: s,
-                            children: S.default.Messages.DONE
+                            children: g.default.Messages.DONE
                         }), (0, a.jsx)(r.Button, {
                             look: r.Button.Looks.LINK,
                             onClick: s,
                             color: r.Button.Colors.PRIMARY,
-                            children: S.default.Messages.CANCEL
+                            children: g.default.Messages.CANCEL
                         })]
                     })]
                 })

@@ -4,10 +4,10 @@
                     return u
                 },
                 setChannelSafetyWarningFeedback: function() {
-                    return s
+                    return l
                 },
                 clearChannelSafetyWarnings: function() {
-                    return l
+                    return s
                 }
             });
             var a = n("872717"),
@@ -28,7 +28,7 @@
                 })
             }
 
-            function s(e, t, n) {
+            function l(e, t, n) {
                 i.default.dispatch({
                     type: "CHANNEL_SAFETY_WARNING_FEEDBACK",
                     channelId: e,
@@ -37,7 +37,7 @@
                 })
             }
 
-            function l(e) {
+            function s(e) {
                 i.default.dispatch({
                     type: "CLEAR_CHANNEL_SAFETY_WARNINGS",
                     channelId: e

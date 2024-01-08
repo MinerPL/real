@@ -1,34 +1,34 @@
             "use strict";
-            n.r(t), n.d(t, {
+            a.r(t), a.d(t, {
                 default: function() {
-                    return f
+                    return c
                 }
-            }), n("222007");
-            var i = n("37983");
-            n("884691");
-            var l = n("446674"),
-                u = n("77078"),
-                o = n("168973"),
-                a = n("301603"),
-                r = n("632616"),
-                d = n("535348"),
-                s = n("353927"),
-                c = n("782340");
+            }), a("222007");
+            var n = a("37983");
+            a("884691");
+            var u = a("446674"),
+                r = a("77078"),
+                d = a("168973"),
+                l = a("301603"),
+                s = a("632616"),
+                i = a("535348"),
+                o = a("353927"),
+                f = a("782340");
 
-            function f(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.MediaEngineContextTypes.DEFAULT,
-                    [n, f, E] = (0, a.default)(e, t),
-                    _ = (0, l.useStateFromStores)([o.default], () => o.default.disableHideSelfStreamAndVideoConfirmationAlert);
-                return n ? (0, i.jsx)(u.MenuCheckboxItem, {
+            function c(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.MediaEngineContextTypes.DEFAULT,
+                    [a, c, m] = (0, l.default)(e, t),
+                    M = (0, u.useStateFromStores)([d.default], () => d.default.disableHideSelfStreamAndVideoConfirmationAlert);
+                return a ? (0, n.jsx)(r.MenuCheckboxItem, {
                     id: "self-video-hide",
-                    label: c.default.Messages.SHOW_SELF_VIDEO,
-                    checked: !f,
+                    label: f.default.Messages.SHOW_SELF_VIDEO,
+                    checked: !c,
                     action: () => {
-                        if (_ || f) return E(!f);
-                        (0, u.openModal)(e => (0, i.jsx)(r.default, {
+                        if (M || c) return m(!c);
+                        (0, r.openModal)(e => (0, n.jsx)(s.default, {
                             ...e,
-                            type: d.SelfStreamAndVideoAlertType.VIDEO,
-                            onConfirm: () => E(!f)
+                            type: i.SelfStreamAndVideoAlertType.VIDEO,
+                            onConfirm: () => m(!c)
                         }))
                     }
                 }) : null

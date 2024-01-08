@@ -10,8 +10,8 @@
                 s = n("229997"),
                 i = n("763984"),
                 r = n("981913"),
-                u = n("99795"),
-                o = n("782340");
+                o = n("99795"),
+                u = n("782340");
 
             function d(e) {
                 let {
@@ -21,9 +21,9 @@
                 } = e;
                 return (0, a.jsx)(r.default, {
                     onClick: function() {
-                        l.default.selectParticipant(t, u.ParticipantSelectionTypes.AUTO)
+                        l.default.selectParticipant(t, o.ParticipantSelectionTypes.AUTO)
                     },
-                    label: o.default.Messages.VIDEO_CALL_AUTO_SELECT,
+                    label: u.default.Messages.VIDEO_CALL_AUTO_SELECT,
                     iconComponent: n ? s.default : i.default,
                     tooltipPosition: "bottom",
                     ...d

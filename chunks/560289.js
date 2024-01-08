@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("907002"),
-                u = n("446674"),
-                o = n("430568"),
+                o = n("446674"),
+                u = n("430568"),
                 d = n("206230"),
                 c = n("568088"),
                 f = n("151435");
@@ -24,7 +24,7 @@
                 } = e, {
                     emoji: p,
                     sentAt: m
-                } = n, E = (0, u.useStateFromStores)([d.default], () => d.default.useReducedMotion), [C, S] = l.useState(!0), g = !E, _ = (0, r.useTransition)(C, {
+                } = n, E = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), [C, g] = l.useState(!0), S = !E, _ = (0, r.useTransition)(C, {
                     from: {
                         rotate: -120
                     },
@@ -46,11 +46,11 @@
                 return (l.useEffect(() => {
                     let e;
                     return Date.now() - m >= 2e3 ? (0, c.clearVoiceChannelEffectForUser)(t) : e = setTimeout(() => {
-                        S(!1), g && (0, c.clearVoiceChannelEffectForUser)(t)
-                    }, g ? 2e3 : 6e3), () => {
+                        g(!1), S && (0, c.clearVoiceChannelEffectForUser)(t)
+                    }, S ? 2e3 : 6e3), () => {
                         null != e && clearTimeout(e)
                     }
-                }, [m, t, g]), g) ? null : _((e, t) => {
+                }, [m, t, S]), S) ? null : _((e, t) => {
                     var n;
                     let {
                         rotate: l
@@ -60,7 +60,7 @@
                         style: {
                             transform: l.to(h)
                         },
-                        children: (0, a.jsx)(o.default, {
+                        children: (0, a.jsx)(u.default, {
                             className: i(f.voiceChannelEffectEmoji),
                             emojiId: p.id,
                             emojiName: p.name,

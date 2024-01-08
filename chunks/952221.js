@@ -9,8 +9,8 @@
                 s = n("627445"),
                 i = n.n(s),
                 r = n("65597"),
-                u = n("550410"),
-                o = n("697218"),
+                o = n("550410"),
+                u = n("697218"),
                 d = n("780166"),
                 c = n("291499"),
                 f = n("154891"),
@@ -22,13 +22,13 @@
                     channelId: n,
                     streamerId: s,
                     stream: d
-                } = e, p = l.useRef(null), m = (0, r.default)([o.default], () => o.default.getCurrentUser());
+                } = e, p = l.useRef(null), m = (0, r.default)([u.default], () => u.default.getCurrentUser());
                 i(null != m, "user cannot be null"), (0, f.default)(p, m, s, n);
                 let {
                     handleClick: E,
                     handleMouseDown: C,
-                    handleMouseEnter: S,
-                    handleMouseMove: g,
+                    handleMouseEnter: g,
+                    handleMouseMove: S,
                     handleMouseUp: _
                 } = (0, c.default)({
                     user: m,
@@ -38,13 +38,13 @@
                     focused: t,
                     canvas: p.current
                 });
-                return (0, a.jsx)(u.default, {
+                return (0, a.jsx)(o.default, {
                     children: (0, a.jsx)("canvas", {
                         ref: p,
                         onClick: E,
                         onMouseDown: C,
-                        onMouseEnter: S,
-                        onMouseMove: g,
+                        onMouseEnter: g,
+                        onMouseMove: S,
                         onMouseUp: _,
                         className: h.sharedCanvas
                     })

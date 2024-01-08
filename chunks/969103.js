@@ -9,12 +9,12 @@
                 s = n("928265"),
                 i = n("204743"),
                 r = n("26989"),
-                u = n("697218"),
-                o = n("49111"),
+                o = n("697218"),
+                u = n("49111"),
                 d = n("237542"),
                 c = e => {
-                    let t = (0, l.useStateFromStores)([i.default], () => (null == e ? void 0 : e.hasFeature(o.GuildFeatures.HUB)) ? i.default.hasViewedPrompt(d.GuildPrompts.REAL_NAME_PROMPT, e.id) : null),
-                        n = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUser()),
+                    let t = (0, l.useStateFromStores)([i.default], () => (null == e ? void 0 : e.hasFeature(u.GuildFeatures.HUB)) ? i.default.hasViewedPrompt(d.GuildPrompts.REAL_NAME_PROMPT, e.id) : null),
+                        n = (0, l.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
                         c = (0, l.useStateFromStores)([r.default], () => (null == e ? void 0 : e.id) != null && null != n ? r.default.getMember(null == e ? void 0 : e.id, n.id) : null),
                         f = (null == c ? void 0 : c.nick) != null;
                     return a.useEffect(() => {

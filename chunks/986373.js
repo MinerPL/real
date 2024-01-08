@@ -1,58 +1,58 @@
             "use strict";
             n.r(t), n.d(t, {
                 useFavorite: function() {
-                    return E
-                },
-                useFavoritesCategories: function() {
                     return c
                 },
+                useFavoritesCategories: function() {
+                    return _
+                },
                 useFavoritesGuildSelected: function() {
-                    return C
+                    return E
                 },
                 useFavoriteAdded: function() {
-                    return N
+                    return T
                 }
             }), n("424973"), n("222007");
             var a = n("884691"),
-                i = n("298386"),
-                r = n("446674");
+                l = n("298386"),
+                i = n("446674");
             n("42203");
             var u = n("923959"),
-                s = n("162771"),
-                l = n("379881"),
-                o = n("498139"),
-                d = n("136569"),
+                r = n("162771"),
+                s = n("379881"),
+                d = n("498139"),
+                o = n("136569"),
                 f = n("49111");
 
-            function E(e) {
-                let t = (0, r.useStateFromStores)([l.default], () => l.default.getFavorite(e));
+            function c(e) {
+                let t = (0, i.useStateFromStores)([s.default], () => s.default.getFavorite(e));
                 return t
             }
 
-            function c() {
-                let e = (0, r.useStateFromStores)([u.default], () => u.default.getChannels(f.FAVORITES))[i.ChannelTypes.GUILD_CATEGORY];
+            function _() {
+                let e = (0, i.useStateFromStores)([u.default], () => u.default.getChannels(f.FAVORITES))[l.ChannelTypes.GUILD_CATEGORY];
                 return e.map(e => ({
                     id: "null" === e.channel.id ? null : e.channel.id,
                     name: e.channel.name
                 }))
             }
 
-            function C() {
-                let e = (0, r.useStateFromStores)([s.default], () => s.default.getGuildId());
+            function E() {
+                let e = (0, i.useStateFromStores)([r.default], () => r.default.getGuildId());
                 return e === f.FAVORITES
             }
 
-            function N() {
+            function T() {
                 let {
                     isFavoritesPerk: e
-                } = (0, o.useFavoritesServerExperiment)("useFavoriteAdded"), t = (0, d.useFavoritesTooltipStore)(), n = a.useCallback(() => {
+                } = (0, d.useFavoritesServerExperiment)("useFavoriteAdded"), t = (0, o.useFavoritesTooltipStore)(), n = a.useCallback(() => {
                     e && t.notifyFavoriteAdded()
-                }, [t, e]), i = a.useCallback(() => {
+                }, [t, e]), l = a.useCallback(() => {
                     e && t.clearFavoriteAdded()
                 }, [t, e]);
                 return {
                     favoriteAdded: t.favoriteAdded,
                     notifyFavoriteAdded: n,
-                    clearFavoriteAdded: i
+                    clearFavoriteAdded: l
                 }
             }

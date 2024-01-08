@@ -7,29 +7,29 @@
                     return u
                 },
                 default: function() {
-                    return N
+                    return C
                 }
             });
-            var a, i, r, u, s = n("446674"),
-                l = n("913144"),
+            var a, i, r, u, l = n("446674"),
+                s = n("913144"),
                 o = n("42203");
             (a = r || (r = {}))[a.STRANGER_DANGER = 1] = "STRANGER_DANGER", (i = u || (u = {}))[i.UPVOTE = 0] = "UPVOTE", i[i.DOWNVOTE = 1] = "DOWNVOTE";
             let d = [],
                 f = {};
 
-            function E(e) {
+            function c(e) {
                 let {
                     safetyWarnings: t
                 } = e;
                 null != t && (f[e.id] = t), null == t && null != f[e.id] && delete f[e.id]
             }
 
-            function c() {
+            function E() {
                 f = {}, Object.values(o.default.getMutablePrivateChannels()).forEach(e => {
-                    E(e)
+                    c(e)
                 })
             }
-            class C extends s.default.Store {
+            class A extends l.default.Store {
                 initialize() {
                     this.waitFor(o.default)
                 }
@@ -42,20 +42,20 @@
                     return null !== (t = f[e]) && void 0 !== t ? t : d
                 }
             }
-            var N = new C(l.default, {
+            var C = new A(s.default, {
                 CHANNEL_CREATE: function(e) {
-                    E(e.channel)
+                    c(e.channel)
                 },
                 CHANNEL_DELETE: function(e) {
                     null != f[e.channel.id] && delete f[e.channel.id]
                 },
                 CHANNEL_UPDATES: function(e) {
                     e.channels.forEach(e => {
-                        E(e)
+                        c(e)
                     })
                 },
-                CONNECTION_OPEN: c,
-                CONNECTION_OPEN_SUPPLEMENTAL: c,
+                CONNECTION_OPEN: E,
+                CONNECTION_OPEN_SUPPLEMENTAL: E,
                 CHANNEL_SAFETY_WARNING_FEEDBACK: function(e) {
                     let {
                         channelId: t,

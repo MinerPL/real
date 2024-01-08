@@ -1,83 +1,83 @@
             "use strict";
-            n.r(t), n.d(t, {
+            a.r(t), a.d(t, {
                 default: function() {
-                    return G
+                    return b
                 }
             });
-            var a = n("37983");
-            n("884691");
-            var u = n("77078"),
-                r = n("272030"),
-                s = n("838446"),
-                l = n("158534"),
-                d = n("846883"),
-                i = n("812204"),
-                o = n("243288"),
-                f = n("321135"),
-                c = n("873254"),
-                m = n("861370"),
-                h = n("726750"),
-                p = n("170990"),
-                g = n("304582"),
-                M = n("72057"),
-                v = n("489836"),
-                x = n("406703"),
-                S = n("343856"),
-                j = n("502533"),
-                _ = n("314838"),
-                C = n("383161"),
-                N = n("421602"),
-                E = n("432487"),
-                T = n("151200"),
-                O = n("692986"),
-                I = n("806179"),
-                R = n("816106"),
-                A = n("623879"),
-                P = n("49111"),
-                U = n("782340"),
-                G = (0, l.default)((0, s.default)(function(e) {
+            var n = a("37983");
+            a("884691");
+            var u = a("77078"),
+                r = a("272030"),
+                d = a("838446"),
+                l = a("158534"),
+                s = a("846883"),
+                i = a("812204"),
+                o = a("243288"),
+                f = a("321135"),
+                c = a("873254"),
+                m = a("861370"),
+                M = a("726750"),
+                S = a("170990"),
+                E = a("304582"),
+                g = a("72057"),
+                p = a("489836"),
+                h = a("406703"),
+                v = a("343856"),
+                _ = a("502533"),
+                A = a("314838"),
+                I = a("383161"),
+                x = a("421602"),
+                T = a("432487"),
+                C = a("151200"),
+                O = a("692986"),
+                N = a("806179"),
+                R = a("816106"),
+                j = a("623879"),
+                D = a("49111"),
+                F = a("782340"),
+                b = (0, l.default)((0, d.default)(function(e) {
                     var t;
                     let {
-                        user: n,
-                        channel: s,
+                        user: a,
+                        channel: d,
                         context: l,
                         showChatItems: i = !0,
-                        showMediaItems: P = !1,
-                        showChannelCallItems: G = !1,
-                        showModalItems: b = !0,
-                        onSelect: w
-                    } = e, y = (0, I.default)(n.id, null), L = (0, C.default)(n, null, l), F = (0, T.default)(n.id, s.id), k = (0, N.default)(n.id, l), D = (0, x.default)(n, l), z = (0, M.default)({
-                        user: n,
+                        showMediaItems: D = !1,
+                        showChannelCallItems: b = !1,
+                        showModalItems: U = !0,
+                        onSelect: y
+                    } = e, L = (0, N.default)(a.id, null), V = (0, I.default)(a, null, l), P = (0, C.default)(a.id, d.id), G = (0, x.default)(a.id, l), w = (0, h.default)(a, l), H = (0, g.default)({
+                        user: a,
                         context: l
-                    }), W = (0, g.default)(n), B = (0, R.default)(n.id), H = (0, E.default)(n.id, s.id), Y = (0, O.default)(n.id), X = (0, j.default)(n.id, s.id), Z = (0, _.default)(n), V = (0, d.default)(null, n), q = (0, p.default)(n), J = (0, v.default)(n), K = (0, m.default)({
-                        id: n.id,
-                        label: U.default.Messages.COPY_ID_USER
-                    }), Q = (0, A.default)(n.id), $ = (0, f.default)(n.id), ee = (0, o.default)(s.id), et = (0, h.default)(n), en = (0, c.default)(n.id), ea = (0, S.default)(n, s), eu = n.isNonUserBot(), er = s.isManaged(), es = null === (t = s.recipients) || void 0 === t ? void 0 : t.includes(n.id);
-                    return (0, a.jsxs)(u.Menu, {
+                    }), k = (0, E.default)(a), B = (0, R.default)(a.id), z = (0, T.default)(a.id, d.id), W = (0, O.default)(a.id), Y = (0, _.default)(a.id, d.id), K = (0, A.default)(a), X = (0, s.default)(null, a), Z = (0, S.default)(a), q = (0, p.default)(a), J = (0, m.default)({
+                        id: a.id,
+                        label: F.default.Messages.COPY_ID_USER
+                    }), Q = (0, j.default)(a.id), $ = (0, f.default)(a.id), ee = (0, o.default)(d.id), et = (0, M.default)(a), ea = (0, c.default)(a.id), en = (0, v.default)(a, d), eu = a.isNonUserBot(), er = d.isManaged(), ed = null === (t = d.recipients) || void 0 === t ? void 0 : t.includes(a.id);
+                    return (0, n.jsxs)(u.Menu, {
                         navId: "user-context",
                         onClose: r.closeContextMenu,
-                        "aria-label": U.default.Messages.USER_ACTIONS_MENU_LABEL,
-                        onSelect: w,
-                        children: [!eu && (0, a.jsxs)(a.Fragment, {
-                            children: [(0, a.jsx)(u.MenuGroup, {
+                        "aria-label": F.default.Messages.USER_ACTIONS_MENU_LABEL,
+                        onSelect: y,
+                        children: [!eu && (0, n.jsxs)(n.Fragment, {
+                            children: [(0, n.jsx)(u.MenuGroup, {
                                 children: et
-                            }), (0, a.jsxs)(u.MenuGroup, {
-                                children: [b && y, i && L, k, D, !er && F, b && z, b && W, Q]
-                            }), P && (0, a.jsx)(u.MenuGroup, {
+                            }), (0, n.jsxs)(u.MenuGroup, {
+                                children: [U && L, i && V, G, w, !er && P, U && H, U && k, Q]
+                            }), D && (0, n.jsx)(u.MenuGroup, {
                                 children: B
-                            }), es && (0, a.jsxs)(u.MenuGroup, {
-                                children: [!er && H, ea]
-                            }), (0, a.jsx)(u.MenuGroup, {
-                                children: b && V
-                            }), (0, a.jsxs)(u.MenuGroup, {
-                                children: [P && Y, P && X, b && Z, q, b && J, P && en]
-                            }), G && (0, a.jsxs)(u.MenuGroup, {
+                            }), ed && (0, n.jsxs)(u.MenuGroup, {
+                                children: [!er && z, en]
+                            }), (0, n.jsx)(u.MenuGroup, {
+                                children: U && X
+                            }), (0, n.jsxs)(u.MenuGroup, {
+                                children: [D && W, D && Y, U && K, Z, U && q, D && ea]
+                            }), b && (0, n.jsxs)(u.MenuGroup, {
                                 children: [ee, $]
                             })]
-                        }), (0, a.jsx)(u.MenuGroup, {
-                            children: K
+                        }), (0, n.jsx)(u.MenuGroup, {
+                            children: J
                         })]
                     })
                 }, {
-                    object: P.AnalyticsObjects.CONTEXT_MENU
+                    object: D.AnalyticsObjects.CONTEXT_MENU
                 }), [i.default.CONTEXT_MENU, i.default.GROUP_DM_USER_MENU])

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return u
                 }
             });
             var a = n("37983");
@@ -10,9 +10,9 @@
                 s = n("629109"),
                 i = n("135230"),
                 r = n("723872"),
-                u = n("782340");
+                o = n("782340");
 
-            function o(e, t) {
+            function u(e, t) {
                 if (t && (0, r.isRTCConnectedInHub)()) {
                     (0, l.openModalLazy)(async () => {
                         let {
@@ -27,16 +27,16 @@
                 if (t) {
                     (0, l.openModal)(e => (0, a.jsx)(i.default, {
                         ...e,
-                        title: u.default.Messages.SUPPRESSED,
-                        body: u.default.Messages.SUPPRESSED_PERMISSION_BODY
+                        title: o.default.Messages.SUPPRESSED,
+                        body: o.default.Messages.SUPPRESSED_PERMISSION_BODY
                     }));
                     return
                 }
                 if (e) {
                     (0, l.openModal)(e => (0, a.jsx)(i.default, {
                         ...e,
-                        title: u.default.Messages.SERVER_MUTED_DIALOG_TITLE,
-                        body: u.default.Messages.SERVER_MUTED_DIALOG_BODY
+                        title: o.default.Messages.SERVER_MUTED_DIALOG_TITLE,
+                        body: o.default.Messages.SERVER_MUTED_DIALOG_BODY
                     }));
                     return
                 }

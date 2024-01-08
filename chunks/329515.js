@@ -15,8 +15,8 @@
                 s = n("917351"),
                 i = n("246846"),
                 r = n("271938"),
-                u = n("449008"),
-                o = n("679243"),
+                o = n("449008"),
+                u = n("679243"),
                 d = n("99795"),
                 c = n("987162");
             let f = 112,
@@ -40,7 +40,7 @@
                 }, [t]);
                 let r = l.useRef({}),
                     {
-                        visibleParticipants: o,
+                        visibleParticipants: u,
                         participantTileWidth: c
                     } = l.useMemo(() => {
                         let n = Date.now(),
@@ -61,21 +61,21 @@
                                         }(e.lastSpoke)).concat((0, i.default)(e.userNick, e.user))
                                 }
                             })(e, n)),
-                            [l, o] = (0, s.partition)(a, d.isStreamParticipant),
-                            c = o.findIndex(p),
-                            f = null; - 1 !== c && (f = o[c], o.splice(c, 1));
+                            [l, u] = (0, s.partition)(a, d.isStreamParticipant),
+                            c = u.findIndex(p),
+                            f = null; - 1 !== c && (f = u[c], u.splice(c, 1));
                         let m = null != f ? e - h - 8 : e,
                             E = Math.max(0, Math.min(Math.floor((m - 8) / 132), 12, t.length)),
                             C = Math.min((m - 8) / E - 8, h),
-                            S = Math.max(0, E - l.length),
-                            g = l.slice(0, E),
-                            _ = o.slice(0, S),
-                            I = Array(S);
-                        if (S > 0) {
+                            g = Math.max(0, E - l.length),
+                            S = l.slice(0, E),
+                            _ = u.slice(0, g),
+                            I = Array(g);
+                        if (g > 0) {
                             let e = [];
                             for (let t of _) {
                                 let n = r.current[t.id];
-                                null != n && n < S ? I[n] = t : e.push(t)
+                                null != n && n < g ? I[n] = t : e.push(t)
                             }
                             for (let t = 0; t < I.length; t++) {
                                 if (null != I[t]) continue;
@@ -84,17 +84,17 @@
                                 I[t] = n
                             }
                         }
-                        let T = I.filter(u.isNotNullish),
+                        let T = I.filter(o.isNotNullish),
                             v = (0, s.keyBy)((0, s.range)(T.length), e => T[e].id);
                         r.current = v;
-                        let x = [...g, ...T];
+                        let x = [...S, ...T];
                         return null != f && x.push(f), {
                             visibleParticipants: x,
                             participantTileWidth: C
                         }
                     }, [e, t, n]);
                 return {
-                    visibleParticipants: o,
+                    visibleParticipants: u,
                     participantTileWidth: c
                 }
             }
@@ -107,7 +107,7 @@
                     onDoubleClick: s,
                     onContextMenu: i,
                     onClick: r,
-                    channel: u,
+                    channel: o,
                     inCall: d,
                     popoutWindow: f,
                     paused: m = !1
@@ -122,12 +122,12 @@
                             style: t ? {
                                 flexShrink: 0
                             } : void 0,
-                            children: (0, a.jsx)(o.default, {
+                            children: (0, a.jsx)(u.default, {
                                 participant: e,
                                 selected: l === e.id,
-                                channel: u,
+                                channel: o,
                                 className: c.tile,
-                                fit: o.CallTileFit.COVER,
+                                fit: u.CallTileFit.COVER,
                                 onClick: r,
                                 onDoubleClick: s,
                                 onContextMenu: i,

@@ -10,8 +10,8 @@
                 s = n("151426"),
                 i = n("343885"),
                 r = n("980215"),
-                u = n("28561"),
-                o = n("509802"),
+                o = n("28561"),
+                u = n("509802"),
                 d = n("305961"),
                 c = n("449008"),
                 f = n("994428");
@@ -29,7 +29,7 @@
                     location: "member_list_notices"
                 });
                 let E = [];
-                return m && (0, c.isNotNullish)(n.guild_id) && E.push(s.DismissibleContent.CLYDE_AI_PERSONALITIES_NUX_MODAL), (0, a.jsx)(o.default, {
+                return m && (0, c.isNotNullish)(n.guild_id) && E.push(s.DismissibleContent.CLYDE_AI_PERSONALITIES_NUX_MODAL), (0, a.jsx)(u.default, {
                     contentTypes: E,
                     groupName: f.DismissibleContentGroupName.MEMBER_LIST_HEADER,
                     children: e => {
@@ -37,7 +37,7 @@
                             visibleContent: t,
                             markAsDismissed: l
                         } = e, i = (() => {
-                            if (t === s.DismissibleContent.CLYDE_AI_PERSONALITIES_NUX_MODAL) return (0, a.jsx)(u.default, {
+                            if (t === s.DismissibleContent.CLYDE_AI_PERSONALITIES_NUX_MODAL) return (0, a.jsx)(o.default, {
                                 channel: n,
                                 markAsDismissed: () => l(f.ContentDismissActionType.UNKNOWN)
                             });

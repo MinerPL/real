@@ -6,18 +6,18 @@
             }), n("222007"), n("70102");
             var i, l = n("44170"),
                 r = n("917351"),
-                s = n.n(r),
-                a = n("605250"),
+                a = n.n(r),
+                s = n("605250"),
                 o = n("402752"),
                 u = n("894488");
-            let d = new a.default("UploaderBase.tsx");
+            let d = new s.default("UploaderBase.tsx");
             i = class extends l.EventEmitter {
                 _addAttachmentsToPayload(e, t, n) {
                     let i = {
                             ...e
                         },
-                        l = [...s.get(i, t, []), ...n];
-                    return s.set(i, t, l)
+                        l = [...a.get(i, t, []), ...n];
+                    return a.set(i, t, l)
                 }
                 clearProcessingMessageInterval() {
                     null != this.processingMessageChangeInterval && (clearInterval(this.processingMessageChangeInterval), this.processingMessageChangeInterval = void 0)
@@ -55,8 +55,8 @@
                             l = (0, o.calculateProgress)(e, t),
                             r = Math.floor((e - this._loaded) / ((i - this._lastUpdate) / 1e3));
                         if (null != n) {
-                            var s;
-                            null === (s = this._file.items) || void 0 === s || s.forEach(e => {
+                            var a;
+                            null === (a = this._file.items) || void 0 === a || a.forEach(e => {
                                 e.item.progress = n[e.id]
                             })
                         }
@@ -84,6 +84,6 @@
                         this.clearProcessingMessageInterval(), !this._aborted && (this._errored = !0, d.log("_handleError: ".concat(t, " (").concat(JSON.stringify(n), ") for ").concat(this.id)), this.emit("error", this._file, t, i, n), this.removeAllListeners())
                     }, this._handleComplete = e => {
                         this.clearProcessingMessageInterval(), d.log("_handleComplete for ".concat(this.id)), this.emit("complete", this._file, e), this.removeAllListeners()
-                    }, this.id = s.uniqueId("Uploader"), this._url = e, this._method = t, this._raiseEndpointErrors = null !== (i = null == n ? void 0 : n.raiseEndpointErrors) && void 0 !== i && i
+                    }, this.id = a.uniqueId("Uploader"), this._url = e, this._method = t, this._raiseEndpointErrors = null !== (i = null == n ? void 0 : n.raiseEndpointErrors) && void 0 !== i && i
                 }
             }

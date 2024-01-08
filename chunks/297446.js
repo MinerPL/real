@@ -12,8 +12,8 @@
                 s = n("627445"),
                 i = n.n(s),
                 r = n("446674"),
-                u = n("77078"),
-                o = n("255397"),
+                o = n("77078"),
+                u = n("255397"),
                 d = n("272030"),
                 c = n("990766"),
                 f = n("244201"),
@@ -22,8 +22,8 @@
                 m = n("374014"),
                 E = n("223913"),
                 C = n("506885"),
-                S = n("981601"),
-                g = n("373469"),
+                g = n("981601"),
+                S = n("373469"),
                 _ = n("305961"),
                 I = n("957255"),
                 T = n("800762"),
@@ -42,22 +42,22 @@
                         channel: s,
                         guildId: i,
                         user: r,
-                        width: o,
+                        width: u,
                         isModerator: d,
                         onContextMenu: c,
                         inPopout: f
                     } = e, {
                         reducedMotion: h
-                    } = l.useContext(u.AccessibilityPreferencesContext), {
+                    } = l.useContext(o.AccessibilityPreferencesContext), {
                         blocked: p,
                         id: m
                     } = t;
-                    return (0, a.jsx)(u.Popout, {
+                    return (0, a.jsx)(o.Popout, {
                         preload: null == n ? void 0 : () => (0, C.default)(n.user.id, n.user.getAvatarURL(s.guild_id, 80), {
                             guildId: s.guild_id,
                             channelId: s.id
                         }),
-                        renderPopout: e => (0, a.jsx)(S.default, {
+                        renderPopout: e => (0, a.jsx)(g.default, {
                             ...e,
                             guildId: i,
                             channelId: s.id,
@@ -65,7 +65,7 @@
                         }),
                         position: "right",
                         spacing: 8,
-                        children: e => (0, a.jsx)(u.Clickable, {
+                        children: e => (0, a.jsx)(o.Clickable, {
                             onContextMenu: e => c(n, e),
                             ...e,
                             children: (0, a.jsx)(N.default, {
@@ -78,7 +78,7 @@
                                 inPopout: f,
                                 paused: !1,
                                 pulseSpeakingIndicator: !h.enabled,
-                                width: o,
+                                width: u,
                                 children: d && (0, a.jsx)(A.default, {})
                             }, m)
                         })
@@ -94,11 +94,11 @@
                         onContextMenu: f,
                         inPopout: C
                     } = e, {
-                        reducedMotion: S
-                    } = l.useContext(u.AccessibilityPreferencesContext), {
+                        reducedMotion: g
+                    } = l.useContext(o.AccessibilityPreferencesContext), {
                         id: x,
                         blocked: O
-                    } = t, y = (0, r.useStateFromStoresArray)([g.default], () => g.default.getAllActiveStreams(), []), {
+                    } = t, y = (0, r.useStateFromStoresArray)([S.default], () => S.default.getAllActiveStreams(), []), {
                         selectedParticipant: b,
                         largeStream: P
                     } = (0, r.useStateFromStoresObject)([h.default], () => ({
@@ -113,7 +113,7 @@
                                     forceMultiple: t.shiftKey
                                 })
                             }
-                        }(null == b ? void 0 : b.id) === e.id ? P ? (o.default.selectParticipant(s.id, null), o.default.updateStageStreamSize(s.id, !1)) : o.default.updateStageStreamSize(s.id, !0) : (o.default.updateStageStreamSize(s.id, !1), o.default.selectParticipant(s.id, e.id))
+                        }(null == b ? void 0 : b.id) === e.id ? P ? (u.default.selectParticipant(s.id, null), u.default.updateStageStreamSize(s.id, !1)) : u.default.updateStageStreamSize(s.id, !0) : (u.default.updateStageStreamSize(s.id, !1), u.default.selectParticipant(s.id, e.id))
                     }, [y, s, b, P]);
                     return (0, a.jsx)(N.default, {
                         participant: n,
@@ -127,7 +127,7 @@
                         onClick: D,
                         onContextMenu: f,
                         paused: !1,
-                        pulseSpeakingIndicator: !S.enabled,
+                        pulseSpeakingIndicator: !g.enabled,
                         width: i,
                         children: d && n.type === R.ParticipantTypes.USER && (0, a.jsx)(A.default, {})
                     }, x)
@@ -137,8 +137,8 @@
                 let {
                     participant: l,
                     channel: s,
-                    width: u
-                } = e, o = (0, f.useAppContext)(), c = s.getGuildId();
+                    width: o
+                } = e, u = (0, f.useAppContext)(), c = s.getGuildId();
                 i(null != c, "Channel cannot be guildless");
                 let {
                     user: p
@@ -155,11 +155,11 @@
                                     return n => (0, a.jsx)(t, {
                                         ...n,
                                         stream: e.stream,
-                                        appContext: o,
+                                        appContext: u,
                                         exitFullscreen: () => {}
                                     })
                                 }, {
-                                    context: o
+                                    context: u
                                 });
                                 return;
                             case R.ParticipantTypes.USER:
@@ -178,32 +178,32 @@
                                         showChatItems: !1
                                     })
                                 }, {
-                                    context: o
+                                    context: u
                                 })
                         }
                     },
-                    S = m.type === R.ParticipantTypes.USER && !(null === (t = m.voiceState) || void 0 === t ? void 0 : t.selfVideo);
+                    g = m.type === R.ParticipantTypes.USER && !(null === (t = m.voiceState) || void 0 === t ? void 0 : t.selfVideo);
                 return (0, a.jsx)(a.Fragment, {
-                    children: S ? (0, a.jsx)(O, {
+                    children: g ? (0, a.jsx)(O, {
                         stageParticipant: l,
                         rtcParticipant: m,
                         channel: s,
                         guildId: c,
                         user: p,
-                        width: u,
+                        width: o,
                         isModerator: E,
                         onContextMenu: C,
-                        inPopout: o === M.AppContext.POPOUT
+                        inPopout: u === M.AppContext.POPOUT
                     }) : (0, a.jsx)(y, {
                         stageParticipant: l,
                         rtcParticipant: m,
                         channel: s,
                         guildId: c,
                         user: p,
-                        width: u,
+                        width: o,
                         isModerator: E,
                         onContextMenu: C,
-                        inPopout: o === M.AppContext.POPOUT
+                        inPopout: u === M.AppContext.POPOUT
                     })
                 })
             })

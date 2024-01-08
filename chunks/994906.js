@@ -11,7 +11,7 @@
 
             function r(e, t, n) {
                 var r;
-                let u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+                let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
                     modViewPanel: i.ModViewPanel.INFO
                 };
                 (0, s.canAccessGuildMemberModViewWithExperiment)(e) && a.default.openGuildSidebar({
@@ -22,8 +22,8 @@
                         type: l.SidebarOpenDetailsType.GUILD_MEMBER_MOD_VIEW,
                         userId: t,
                         guildId: e,
-                        ...u,
-                        modViewPanel: null !== (r = u.modViewPanel) && void 0 !== r ? r : i.ModViewPanel.INFO
+                        ...o,
+                        modViewPanel: null !== (r = o.modViewPanel) && void 0 !== r ? r : i.ModViewPanel.INFO
                     }
                 })
             }

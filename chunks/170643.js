@@ -14,13 +14,13 @@
                 let {
                     participant: t,
                     className: n
-                } = e, r = (0, l.default)(t), u = function(e) {
+                } = e, r = (0, l.default)(t), o = function(e) {
                     if (null == e) return null;
                     let t = i.default.isDeveloper;
                     return t ? "".concat(e.message, " (").concat(e.errorType, ")") : e.message
                 }(r);
-                return null != u ? (0, a.jsx)(s.default, {
+                return null != o ? (0, a.jsx)(s.default, {
                     className: n,
-                    errorMessage: u
+                    errorMessage: o
                 }) : null
             }

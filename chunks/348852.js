@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return o
                 }
             });
             var a = n("37983");
@@ -11,7 +11,7 @@
                 i = n("629109"),
                 r = n("42887");
 
-            function u() {
+            function o() {
                 let e = (0, l.useStateFromStores)([r.default], () => Object.values(r.default.getVideoDevices())),
                     t = (0, l.useStateFromStores)([r.default], () => r.default.getVideoDeviceId());
                 return e.map(e => {
