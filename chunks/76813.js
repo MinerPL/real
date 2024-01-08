@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return c
+                    return E
                 }
             });
             var l = n("37983");
@@ -10,25 +10,34 @@
                 s = n("77078"),
                 i = n("522049"),
                 r = n("664336"),
-                o = n("386045"),
-                u = n("80028"),
-                d = n("782340");
+                o = n("773336"),
+                u = n("56947"),
+                d = n("386045"),
+                c = n("80028"),
+                f = n("782340");
 
-            function c(e) {
+            function E(e) {
                 let {
                     className: t
                 } = e, {
-                    hasClips: c,
-                    hasNewClips: f
-                } = (0, a.useStateFromStoresObject)([o.default], () => ({
-                    hasClips: o.default.hasClips(),
-                    hasNewClips: o.default.getNewClipIds().length > 0
+                    showClipsHeaderEntrypoint: E,
+                    ignorePlatformRestriction: h
+                } = u.ClipsExperiment.useExperiment({
+                    location: "ClipsButton"
+                }, {
+                    autoTrackExposure: !1
+                }), {
+                    hasClips: _,
+                    hasNewClips: S
+                } = (0, a.useStateFromStoresObject)([d.default], () => ({
+                    hasClips: d.default.hasClips(),
+                    hasNewClips: d.default.getNewClipIds().length > 0
                 }));
-                return c ? (0, l.jsx)(r.Icon, {
+                return E && ((0, o.isWindows)() || h) && _ ? (0, l.jsx)(r.Icon, {
                     className: t,
                     icon: i.default,
-                    showBadge: f,
-                    tooltip: d.default.Messages.CLIPS_GALLERY_TOOLTIP,
+                    showBadge: S,
+                    tooltip: f.default.Messages.CLIPS_GALLERY_TOOLTIP,
                     onClick: function() {
                         (0, s.openModalLazy)(async () => {
                             let {
@@ -38,7 +47,7 @@
                                 ...t
                             })
                         }, {
-                            modalKey: u.CLIPS_GALLERY_MODAL_KEY
+                            modalKey: c.CLIPS_GALLERY_MODAL_KEY
                         })
                     }
                 }) : null

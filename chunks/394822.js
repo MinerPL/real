@@ -20,7 +20,7 @@
                     }
                 };
 
-            function o(t) {
+            function a(t) {
                 var e;
                 switch (this.encoding = function(t) {
                         var e = function(t) {
@@ -66,14 +66,14 @@
                 this.lastNeed = 0, this.lastTotal = 0, this.lastChar = i.allocUnsafe(e)
             }
 
-            function a(t) {
+            function o(t) {
                 if (t <= 127) return 0;
                 if (t >> 5 == 6) return 2;
                 if (t >> 4 == 14) return 3;
                 else if (t >> 3 == 30) return 4;
                 return t >> 6 == 2 ? -1 : -2
             }
-            e.StringDecoder = o, o.prototype.write = function(t) {
+            e.StringDecoder = a, a.prototype.write = function(t) {
                 var e, r;
                 if (0 === t.length) return "";
                 if (this.lastNeed) {
@@ -81,21 +81,21 @@
                     r = this.lastNeed, this.lastNeed = 0
                 } else r = 0;
                 return r < t.length ? e ? e + this.text(t, r) : this.text(t, r) : e || ""
-            }, o.prototype.end = function(t) {
+            }, a.prototype.end = function(t) {
                 var e = t && t.length ? this.write(t) : "";
                 return this.lastNeed ? e + "�" : e
-            }, o.prototype.text = function(t, e) {
+            }, a.prototype.text = function(t, e) {
                 var r = function(t, e, r) {
                     var i = e.length - 1;
                     if (i < r) return 0;
-                    var n = a(e[i]);
-                    return n >= 0 ? (n > 0 && (t.lastNeed = n - 1), n) : --i < r || -2 === n ? 0 : (n = a(e[i])) >= 0 ? (n > 0 && (t.lastNeed = n - 2), n) : --i < r || -2 === n ? 0 : (n = a(e[i])) >= 0 ? (n > 0 && (2 === n ? n = 0 : t.lastNeed = n - 3), n) : 0
+                    var n = o(e[i]);
+                    return n >= 0 ? (n > 0 && (t.lastNeed = n - 1), n) : --i < r || -2 === n ? 0 : (n = o(e[i])) >= 0 ? (n > 0 && (t.lastNeed = n - 2), n) : --i < r || -2 === n ? 0 : (n = o(e[i])) >= 0 ? (n > 0 && (2 === n ? n = 0 : t.lastNeed = n - 3), n) : 0
                 }(this, t, e);
                 if (!this.lastNeed) return t.toString("utf8", e);
                 this.lastTotal = r;
                 var i = t.length - (r - this.lastNeed);
                 return t.copy(this.lastChar, 0, i), t.toString("utf8", e, i)
-            }, o.prototype.fillLast = function(t) {
+            }, a.prototype.fillLast = function(t) {
                 if (this.lastNeed <= t.length) return t.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, this.lastNeed), this.lastChar.toString(this.encoding, 0, this.lastTotal);
                 t.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, t.length), this.lastNeed -= t.length
             };

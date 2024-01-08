@@ -11,18 +11,18 @@
                     t.writable && !1 === t.write(e) && r.pause && r.pause()
                 }
 
-                function o() {
+                function a() {
                     r.readable && r.resume && r.resume()
                 }
-                r.on("data", n), t.on("drain", o), !t._isStdio && (!e || !1 !== e.end) && (r.on("end", s), r.on("close", f));
-                var a = !1;
+                r.on("data", n), t.on("drain", a), !t._isStdio && (!e || !1 !== e.end) && (r.on("end", s), r.on("close", f));
+                var o = !1;
 
                 function s() {
-                    !a && (a = !0, t.end())
+                    !o && (o = !0, t.end())
                 }
 
                 function f() {
-                    !a && (a = !0, "function" == typeof t.destroy && t.destroy())
+                    !o && (o = !0, "function" == typeof t.destroy && t.destroy())
                 }
 
                 function h(t) {
@@ -30,7 +30,7 @@
                 }
 
                 function c() {
-                    r.removeListener("data", n), t.removeListener("drain", o), r.removeListener("end", s), r.removeListener("close", f), r.removeListener("error", h), t.removeListener("error", h), r.removeListener("end", c), r.removeListener("close", c), t.removeListener("close", c)
+                    r.removeListener("data", n), t.removeListener("drain", a), r.removeListener("end", s), r.removeListener("close", f), r.removeListener("error", h), t.removeListener("error", h), r.removeListener("end", c), r.removeListener("close", c), t.removeListener("close", c)
                 }
                 return r.on("error", h), t.on("error", h), r.on("end", c), r.on("close", c), t.on("close", c), t.emit("pipe", r), t
             }

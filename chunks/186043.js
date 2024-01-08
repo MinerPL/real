@@ -1,17 +1,17 @@
             r("854508");
             var i = r("687185"),
                 n = r("912065").Buffer,
-                o = r("135042");
+                a = r("135042");
             e.encrypt = function(t, e) {
                 var r = Math.ceil(e.length / 16),
-                    a = t._cache.length;
+                    o = t._cache.length;
                 t._cache = n.concat([t._cache, n.allocUnsafe(16 * r)]);
                 for (var s = 0; s < r; s++) {
                     var f = function(t) {
                             var e = t._cipher.encryptBlockRaw(t._prev);
-                            return o(t._prev), e
+                            return a(t._prev), e
                         }(t),
-                        h = a + 16 * s;
+                        h = o + 16 * s;
                     t._cache.writeUInt32BE(f[0], h + 0), t._cache.writeUInt32BE(f[1], h + 4), t._cache.writeUInt32BE(f[2], h + 8), t._cache.writeUInt32BE(f[3], h + 12)
                 }
                 var c = t._cache.slice(0, e.length);

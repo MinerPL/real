@@ -1,11 +1,11 @@
             var i = r("446825").Buffer;
             r("222007");
             var n = r("814548"),
-                o = r("839309");
+                a = r("839309");
             t.exports = function(t) {
                 return new s(t)
             };
-            var a = {
+            var o = {
                 secp256k1: {
                     name: "secp256k1",
                     byteLength: 32
@@ -37,7 +37,7 @@
             };
 
             function s(t) {
-                this.curveType = a[t], !this.curveType && (this.curveType = {
+                this.curveType = o[t], !this.curveType && (this.curveType = {
                     name: t
                 }), this.curve = new n.ec(this.curveType.name), this.keys = void 0
             }
@@ -46,12 +46,12 @@
                 !Array.isArray(t) && (t = t.toArray());
                 var n = new i(t);
                 if (r && n.length < r) {
-                    var o = new i(r - n.length);
-                    o.fill(0), n = i.concat([o, n])
+                    var a = new i(r - n.length);
+                    a.fill(0), n = i.concat([a, n])
                 }
                 return e ? n.toString(e) : n
             }
-            a.p224 = a.secp224r1, a.p256 = a.secp256r1 = a.prime256v1, a.p192 = a.secp192r1 = a.prime192v1, a.p384 = a.secp384r1, a.p521 = a.secp521r1, s.prototype.generateKeys = function(t, e) {
+            o.p224 = o.secp224r1, o.p256 = o.secp256r1 = o.prime256v1, o.p192 = o.secp192r1 = o.prime192v1, o.p384 = o.secp384r1, o.p521 = o.secp521r1, s.prototype.generateKeys = function(t, e) {
                 return this.keys = this.curve.genKeyPair(), this.getPublicKey(t, e)
             }, s.prototype.computeSecret = function(t, e, r) {
                 return e = e || "utf8", !i.isBuffer(t) && (t = new i(t, e)), f(this.curve.keyFromPublic(t).getPublic().mul(this.keys.getPrivate()).getX(), r, this.curveType.byteLength)
@@ -64,6 +64,6 @@
                 return e = e || "utf8", !i.isBuffer(t) && (t = new i(t, e)), this.keys._importPublic(t), this
             }, s.prototype.setPrivateKey = function(t, e) {
                 e = e || "utf8", !i.isBuffer(t) && (t = new i(t, e));
-                var r = new o(t);
+                var r = new a(t);
                 return r = r.toString(16), this.keys = this.curve.genKeyPair(), this.keys._importPrivate(r), this
             }

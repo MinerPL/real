@@ -1,8 +1,8 @@
             "use strict";
             var i = r("599235"),
                 n = r("708893"),
-                o = r("291954"),
-                a = r("622107"),
+                a = r("291954"),
+                o = r("622107"),
                 s = r("441270");
 
             function f(t) {
@@ -13,5 +13,5 @@
             }, f.prototype._final = function() {
                 return this._hash.digest()
             }, t.exports = function(t) {
-                return "md5" === (t = t.toLowerCase()) ? new n : "rmd160" === t || "ripemd160" === t ? new o : new f(a(t))
+                return "md5" === (t = t.toLowerCase()) ? new n : "rmd160" === t || "ripemd160" === t ? new a : new f(o(t))
             }

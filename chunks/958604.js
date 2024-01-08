@@ -1,7 +1,7 @@
             var i = r("446825").Buffer,
                 n = r("839309"),
-                o = new(r("925197")),
-                a = new n(24),
+                a = new(r("925197")),
+                o = new n(24),
                 s = new n(11),
                 f = new n(10),
                 h = new n(3),
@@ -35,10 +35,10 @@
                             n = [i, t.toString(16)].join("_");
                         if (n in b) return b[n];
                         var d = 0;
-                        if (t.isEven() || !u.simpleSieve || !u.fermatTest(t) || !o.test(t)) return d += 1, "02" === i || "05" === i ? d += 8 : d += 4, b[n] = d, d;
-                        switch (!o.test(t.shrn(1)) && (d += 2), i) {
+                        if (t.isEven() || !u.simpleSieve || !u.fermatTest(t) || !a.test(t)) return d += 1, "02" === i || "05" === i ? d += 8 : d += 4, b[n] = d, d;
+                        switch (!a.test(t.shrn(1)) && (d += 2), i) {
                             case "02":
-                                t.mod(a).cmp(s) && (d += 8);
+                                t.mod(o).cmp(s) && (d += 8);
                                 break;
                             case "05":
                                 (r = t.mod(f)).cmp(h) && r.cmp(c) && (d += 8);
@@ -55,8 +55,8 @@
                 var e = new i((t = (t = new n(t)).toRed(this._prime)).redPow(this._priv).fromRed().toArray()),
                     r = this.getPrime();
                 if (e.length < r.length) {
-                    var o = new i(r.length - e.length);
-                    o.fill(0), e = i.concat([o, e])
+                    var a = new i(r.length - e.length);
+                    a.fill(0), e = i.concat([a, e])
                 }
                 return e
             }, m.prototype.getPublicKey = function(t) {

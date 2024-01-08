@@ -2,9 +2,9 @@
             r("781738"), r("808653"), r("424973");
             var i = r("272074"),
                 n = r("766811"),
-                o = r("526504");
+                a = r("526504");
 
-            function a(t, e) {
+            function o(t, e) {
                 return e.encode ? e.strict ? i(t) : encodeURIComponent(t) : t
             }
             e.extract = function(t) {
@@ -50,8 +50,8 @@
                 return "string" == typeof t && (t = t.trim().replace(/^(\?|#|&)/, "")) ? (t.split("&").forEach(function(t) {
                     var e = t.replace(/\+/g, " ").split("="),
                         n = e.shift(),
-                        a = e.length > 0 ? e.join("=") : void 0;
-                    a = void 0 === a ? null : o(a), r(o(n), a, i)
+                        o = e.length > 0 ? e.join("=") : void 0;
+                    o = void 0 === o ? null : a(o), r(a(n), o, i)
                 }), Object.keys(i).sort().reduce(function(t, e) {
                     var r = i[e];
                     return r && "object" == typeof r && !Array.isArray(r) ? t[e] = function t(e) {
@@ -67,15 +67,15 @@
                     switch (t.arrayFormat) {
                         case "index":
                             return function(e, r, i) {
-                                return null === r ? [a(e, t), "[", i, "]"].join("") : [a(e, t), "[", a(i, t), "]=", a(r, t)].join("")
+                                return null === r ? [o(e, t), "[", i, "]"].join("") : [o(e, t), "[", o(i, t), "]=", o(r, t)].join("")
                             };
                         case "bracket":
                             return function(e, r) {
-                                return null === r ? a(e, t) : [a(e, t), "[]=", a(r, t)].join("")
+                                return null === r ? o(e, t) : [o(e, t), "[]=", o(r, t)].join("")
                             };
                         default:
                             return function(e, r) {
-                                return null === r ? a(e, t) : [a(e, t), "=", a(r, t)].join("")
+                                return null === r ? o(e, t) : [o(e, t), "=", o(r, t)].join("")
                             }
                     }
                 }(e = n({
@@ -86,14 +86,14 @@
                 return t ? Object.keys(t).sort().map(function(i) {
                     var n = t[i];
                     if (void 0 === n) return "";
-                    if (null === n) return a(i, e);
+                    if (null === n) return o(i, e);
                     if (Array.isArray(n)) {
-                        var o = [];
+                        var a = [];
                         return n.slice().forEach(function(t) {
-                            void 0 !== t && o.push(r(i, t, o.length))
-                        }), o.join("&")
+                            void 0 !== t && a.push(r(i, t, a.length))
+                        }), a.join("&")
                     }
-                    return a(i, e) + "=" + a(n, e)
+                    return o(i, e) + "=" + o(n, e)
                 }).filter(function(t) {
                     return t.length > 0
                 }).join("&") : ""

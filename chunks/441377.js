@@ -1,6 +1,6 @@
             r("860677"), r("70102");
-            var i, n, o = r("912065").Buffer,
-                a = r("463316"),
+            var i, n, a = r("912065").Buffer,
+                o = r("463316"),
                 s = r("408475"),
                 f = r("58492"),
                 h = r("127368"),
@@ -35,13 +35,13 @@
                         }
                     }, t, i << 3)
                 }).then(function(t) {
-                    return o.from(t)
+                    return a.from(t)
                 })
             }
             t.exports = function(t, e, n, b, m, g) {
                 "function" == typeof m && (g = m, m = void 0);
-                var y = u[(m = m || "sha1").toLowerCase()];
-                if (!y || "function" != typeof r.g.Promise) {
+                var v = u[(m = m || "sha1").toLowerCase()];
+                if (!v || "function" != typeof r.g.Promise) {
                     l()(function() {
                         var r;
                         try {
@@ -53,7 +53,7 @@
                     });
                     return
                 }
-                if (a(n, b), t = h(t, s, "Password"), e = h(e, s, "Salt"), "function" != typeof g) throw Error("No callback provided to pbkdf2");
+                if (o(n, b), t = h(t, s, "Password"), e = h(e, s, "Salt"), "function" != typeof g) throw Error("No callback provided to pbkdf2");
                 ! function(t, e) {
                     t.then(function(t) {
                         l()(function() {
@@ -67,13 +67,13 @@
                 }((function(t) {
                     if (r.g.process && !r.g.process.browser || !c || !c.importKey || !c.deriveBits) return Promise.resolve(!1);
                     if (void 0 !== d[t]) return d[t];
-                    var e = p(i = i || o.alloc(8), i, 10, 128, t).then(function() {
+                    var e = p(i = i || a.alloc(8), i, 10, 128, t).then(function() {
                         return !0
                     }).catch(function() {
                         return !1
                     });
                     return d[t] = e, e
-                })(y).then(function(r) {
-                    return r ? p(t, e, n, b, y) : f(t, e, n, b, m)
+                })(v).then(function(r) {
+                    return r ? p(t, e, n, b, v) : f(t, e, n, b, m)
                 }), g)
             }

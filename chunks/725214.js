@@ -9,5 +9,5 @@
                     GCM: r("186043")
                 },
                 n = r("541412");
-            for (var o in n) n[o].module = i[n[o].mode];
+            for (var a in n) n[a].module = i[n[a].mode];
             t.exports = n

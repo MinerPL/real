@@ -19,9 +19,9 @@
                 throw Error("Not implemented yet")
             });
             else try {
-                var n, o = r("778583");
-                if ("function" != typeof o.randomBytes) throw Error("Not supported");
+                var n, a = r("778583");
+                if ("function" != typeof a.randomBytes) throw Error("Not supported");
                 i.prototype._rand = function(t) {
-                    return o.randomBytes(t)
+                    return a.randomBytes(t)
                 }
             } catch (t) {}

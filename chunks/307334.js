@@ -5,10 +5,10 @@
                 throw Error("secure random number generation not supported by this browser\nuse chrome, FireFox or Internet Explorer 11")
             }
             r("70102"), r("311790"), r("477657"), r("811875"), r("90301"), r("652153"), r("28797"), r("817884"), r("597349"), r("667536"), r("690341");
-            var o = r("912065"),
-                a = r("664813"),
-                s = o.Buffer,
-                f = o.kMaxLength,
+            var a = r("912065"),
+                o = r("664813"),
+                s = a.Buffer,
+                f = a.kMaxLength,
                 h = r.g.crypto || r.g.msCrypto,
                 c = 4294967295;
 
@@ -36,8 +36,8 @@
 
             function l(t, e, r, n) {
                 if (i.browser) {
-                    var o = t.buffer,
-                        s = new Uint8Array(o, e, r);
+                    var a = t.buffer,
+                        s = new Uint8Array(a, e, r);
                     if (h.getRandomValues(s), n) {
                         i.nextTick(function() {
                             n(null, t)
@@ -47,11 +47,11 @@
                     return t
                 }
                 if (n) {
-                    a(r, function(r, i) {
+                    o(r, function(r, i) {
                         if (r) return n(r);
                         i.copy(t, e), n(null, t)
                     });
                     return
                 }
-                return a(r).copy(t, e), t
+                return o(r).copy(t, e), t
             }

@@ -5,11 +5,11 @@
                 return t & e ^ ~t & r
             }
 
-            function o(t, e, r) {
+            function a(t, e, r) {
                 return t & e ^ t & r ^ e & r
             }
 
-            function a(t, e, r) {
+            function o(t, e, r) {
                 return t ^ e ^ r
             }
             e.ft_1 = function(t, e, r, i) {
@@ -17,8 +17,8 @@
                     return t & e ^ ~t & r
                 }(e, r, i) : 1 === t || 3 === t ? function(t, e, r) {
                     return t ^ e ^ r
-                }(e, r, i) : 2 === t ? o(e, r, i) : void 0
-            }, e.ch32 = n, e.maj32 = o, e.p32 = a;
+                }(e, r, i) : 2 === t ? a(e, r, i) : void 0
+            }, e.ch32 = n, e.maj32 = a, e.p32 = o;
             e.s0_256 = function(t) {
                 return i(t, 2) ^ i(t, 13) ^ i(t, 22)
             };

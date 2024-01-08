@@ -11,11 +11,11 @@
                 }
             }
 
-            function o(t, e) {
+            function a(t, e) {
                 this.path = t, this.rethrow(e)
             }
             e.Reporter = n, n.prototype.isError = function(t) {
-                return t instanceof o
+                return t instanceof a
             }, n.prototype.save = function() {
                 let t = this._reporterState;
                 return {
@@ -46,8 +46,8 @@
             }, n.prototype.error = function(t) {
                 let e;
                 let r = this._reporterState,
-                    i = t instanceof o;
-                if (e = i ? t : new o(r.path.map(function(t) {
+                    i = t instanceof a;
+                if (e = i ? t : new a(r.path.map(function(t) {
                         return "[" + JSON.stringify(t) + "]"
                     }).join(""), t.message || t, t.stack), !r.options.partial) throw e;
                 return !i && r.errors.push(e), e
@@ -57,8 +57,8 @@
                     result: this.isError(t) ? null : t,
                     errors: e.errors
                 } : t
-            }, i(o, Error), o.prototype.rethrow = function(t) {
-                if (this.message = t + " at: " + (this.path || "(shallow)"), Error.captureStackTrace && Error.captureStackTrace(this, o), !this.stack) try {
+            }, i(a, Error), a.prototype.rethrow = function(t) {
+                if (this.message = t + " at: " + (this.path || "(shallow)"), Error.captureStackTrace && Error.captureStackTrace(this, a), !this.stack) try {
                     throw Error(this.message)
                 } catch (t) {
                     this.stack = t.stack

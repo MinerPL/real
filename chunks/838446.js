@@ -1,22 +1,22 @@
             "use strict";
-            a.r(t), a.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
                     return i
                 }
             });
-            var n = a("37983");
-            a("884691");
-            var l = a("901582");
+            var a = n("37983");
+            n("884691");
+            var l = n("901582");
 
             function i(e, t) {
-                return function(a) {
-                    return (0, n.jsx)(l.default, {
+                return function(n) {
+                    return (0, a.jsx)(l.default, {
                         page: t.page,
                         section: t.section,
                         object: t.object,
                         objectType: t.objectType,
-                        children: (0, n.jsx)(e, {
-                            ...a
+                        children: (0, a.jsx)(e, {
+                            ...n
                         })
                     })
                 }

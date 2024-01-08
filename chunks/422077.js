@@ -1,17 +1,17 @@
             var i = r("446825").Buffer,
                 n = r("839383"),
-                o = r("664813");
+                a = r("664813");
 
-            function a(t) {
+            function o(t) {
                 var e, r = t.modulus.byteLength();
-                do e = new n(o(r)); while (e.cmp(t.modulus) >= 0 || !e.umod(t.prime1) || !e.umod(t.prime2));
+                do e = new n(a(r)); while (e.cmp(t.modulus) >= 0 || !e.umod(t.prime1) || !e.umod(t.prime2));
                 return e
             }
 
             function s(t, e) {
-                var r, o, s = {
-                        blinder: (o = a(r = e)).toRed(n.mont(r.modulus)).redPow(new n(r.publicExponent)).fromRed(),
-                        unblinder: o.invm(r.modulus)
+                var r, a, s = {
+                        blinder: (a = o(r = e)).toRed(n.mont(r.modulus)).redPow(new n(r.publicExponent)).fromRed(),
+                        unblinder: a.invm(r.modulus)
                     },
                     f = e.modulus.byteLength(),
                     h = new n(t).mul(s.blinder).umod(e.modulus),
@@ -25,4 +25,4 @@
                     g = b.isub(m).imul(d).umod(l).imul(p);
                 return m.iadd(g).imul(s.unblinder).umod(e.modulus).toArrayLike(i, "be", f)
             }
-            s.getr = a, t.exports = s
+            s.getr = o, t.exports = s

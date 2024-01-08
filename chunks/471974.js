@@ -1,7 +1,7 @@
             "use strict";
             var i, n = r("390493");
 
-            function o(t, e, r) {
+            function a(t, e, r) {
                 return (e = function(t) {
                     var e = function(t, e) {
                         if ("object" != typeof t || null === t) return t;
@@ -22,7 +22,7 @@
                 }) : t[e] = r, t
             }
             r("70102");
-            var a = r("362796"),
+            var o = r("362796"),
                 s = Symbol("lastResolve"),
                 f = Symbol("lastReject"),
                 h = Symbol("error"),
@@ -50,24 +50,24 @@
                 n.nextTick(b, t)
             }
             var g = Object.getPrototypeOf(function() {}),
-                y = Object.setPrototypeOf((o(i = {
+                v = Object.setPrototypeOf((a(i = {
                     get stream() {
                         return this[l]
                     },
                     next: function() {
                         var t, e, r, i = this,
-                            o = this[h];
-                        if (null !== o) return Promise.reject(o);
+                            a = this[h];
+                        if (null !== a) return Promise.reject(a);
                         if (this[c]) return Promise.resolve(p(void 0, !0));
                         if (this[l].destroyed) return new Promise(function(t, e) {
                             n.nextTick(function() {
                                 i[h] ? e(i[h]) : t(p(void 0, !0))
                             })
                         });
-                        var a = this[u];
-                        if (a) {
+                        var o = this[u];
+                        if (o) {
                             ;
-                            r = new Promise((t = a, e = this, function(r, i) {
+                            r = new Promise((t = o, e = this, function(r, i) {
                                 t.then(function() {
                                     if (e[c]) {
                                         r(p(void 0, !0));
@@ -85,7 +85,7 @@
                     }
                 }, Symbol.asyncIterator, function() {
                     return this
-                }), o(i, "return", function() {
+                }), a(i, "return", function() {
                     var t = this;
                     return new Promise(function(e, r) {
                         t[l].destroy(null, function(t) {
@@ -98,29 +98,29 @@
                     })
                 }), i), g);
             t.exports = function(t) {
-                var e, r = Object.create(y, (o(e = {}, l, {
+                var e, r = Object.create(v, (a(e = {}, l, {
                     value: t,
                     writable: !0
-                }), o(e, s, {
+                }), a(e, s, {
                     value: null,
                     writable: !0
-                }), o(e, f, {
+                }), a(e, f, {
                     value: null,
                     writable: !0
-                }), o(e, h, {
+                }), a(e, h, {
                     value: null,
                     writable: !0
-                }), o(e, c, {
+                }), a(e, c, {
                     value: t._readableState.endEmitted,
                     writable: !0
-                }), o(e, d, {
+                }), a(e, d, {
                     value: function(t, e) {
                         var i = r[l].read();
                         i ? (r[u] = null, r[s] = null, r[f] = null, t(p(i, !1))) : (r[s] = t, r[f] = e)
                     },
                     writable: !0
                 }), e));
-                return r[u] = null, a(t, function(t) {
+                return r[u] = null, o(t, function(t) {
                     if (t && "ERR_STREAM_PREMATURE_CLOSE" !== t.code) {
                         var e = r[f];
                         null !== e && (r[u] = null, r[s] = null, r[f] = null, e(t)), r[h] = t;

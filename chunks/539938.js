@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 handleDoubleClick: function() {
-                    return C
+                    return g
                 },
                 default: function() {
-                    return L
+                    return O
                 }
             });
             var l = n("37983");
@@ -15,29 +15,28 @@
                 r = n("446674"),
                 o = n("812204"),
                 u = n("685665"),
-                d = n("56947"),
-                c = n("76813"),
-                f = n("311197"),
-                E = n("92790"),
-                h = n("697218"),
-                _ = n("664336"),
-                S = n("773336"),
-                T = n("50885"),
-                p = n("836056"),
-                N = n("922953"),
-                I = n("879035"),
-                m = n("49111"),
-                A = n("724210"),
-                g = n("122693");
-            async function C() {
-                if ((0, S.isMac)() && S.isPlatformEmbedded) {
+                d = n("76813"),
+                c = n("311197"),
+                f = n("92790"),
+                E = n("697218"),
+                h = n("664336"),
+                _ = n("773336"),
+                S = n("50885"),
+                T = n("836056"),
+                p = n("922953"),
+                N = n("879035"),
+                I = n("49111"),
+                m = n("724210"),
+                A = n("122693");
+            async function g() {
+                if ((0, _.isMac)() && _.isPlatformEmbedded) {
                     var e, t, n;
                     let l = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) || void 0 === e ? void 0 : e.call(t))) && void 0 !== n ? n : "Maximize";
-                    "Minimize" === l ? T.default.minimize() : "Maximize" === l && T.default.maximize()
+                    "Minimize" === l ? S.default.minimize() : "Maximize" === l && S.default.maximize()
                 }
             }
 
-            function R(e) {
+            function C(e) {
                 let {
                     children: t,
                     className: n,
@@ -45,43 +44,37 @@
                     guildId: s,
                     innerClassname: o,
                     transparent: u = !1,
-                    toolbar: S,
-                    mobileToolbar: T,
-                    "aria-label": m,
-                    "aria-labelledby": A,
-                    scrollable: R,
-                    role: M,
-                    hideSearch: O
-                } = e, L = (0, r.useStateFromStores)([h.default], () => h.default.getCurrentUser()), v = (null == L ? void 0 : L.isStaff()) || (null == L ? void 0 : L.isStaffPersonal()) || !1, {
-                    showClipsHeaderEntrypoint: D
-                } = d.ClipsExperiment.useExperiment({
-                    location: "HeaderBarLoggedIn"
-                }, {
-                    autoTrackExposure: !1
-                });
-                return (0, l.jsx)(_.default, {
+                    toolbar: _,
+                    mobileToolbar: S,
+                    "aria-label": I,
+                    "aria-labelledby": m,
+                    scrollable: C,
+                    role: R,
+                    hideSearch: M
+                } = e, O = (0, r.useStateFromStores)([E.default], () => E.default.getCurrentUser()), L = (null == O ? void 0 : O.isStaff()) || (null == O ? void 0 : O.isStaffPersonal()) || !1;
+                return (0, l.jsx)(h.default, {
                     className: n,
                     innerClassName: o,
                     toolbar: function() {
-                        if (null == S) return null;
-                        let e = null != a && !O;
-                        return i.isMobile ? T : (0, l.jsxs)(l.Fragment, {
-                            children: [S, e ? (0, l.jsx)(E.default, {
-                                className: g.search
-                            }, null != s ? s : a) : null, (0, l.jsx)(I.default, {}), D && (0, l.jsx)(c.default, {}), (0, l.jsx)(f.default, {}), v ? (0, l.jsx)(N.default, {}) : (0, l.jsx)(p.default, {})]
+                        if (null == _) return null;
+                        let e = null != a && !M;
+                        return i.isMobile ? S : (0, l.jsxs)(l.Fragment, {
+                            children: [_, e ? (0, l.jsx)(f.default, {
+                                className: A.search
+                            }, null != s ? s : a) : null, (0, l.jsx)(N.default, {}), (0, l.jsx)(d.default, {}), (0, l.jsx)(c.default, {}), L ? (0, l.jsx)(p.default, {}) : (0, l.jsx)(T.default, {})]
                         })
                     }(),
                     transparent: u,
-                    onDoubleClick: C,
-                    "aria-label": m,
-                    "aria-labelledby": A,
-                    role: M,
-                    scrollable: R,
+                    onDoubleClick: g,
+                    "aria-label": I,
+                    "aria-labelledby": m,
+                    role: R,
+                    scrollable: C,
                     children: t
                 })
             }
 
-            function M(e) {
+            function R(e) {
                 let {
                     children: t,
                     className: n,
@@ -89,9 +82,9 @@
                     "aria-labelledby": s,
                     role: i
                 } = e;
-                return (0, l.jsx)(_.default, {
+                return (0, l.jsx)(h.default, {
                     className: n,
-                    onDoubleClick: C,
+                    onDoubleClick: g,
                     "aria-label": a,
                     "aria-labelledby": s,
                     role: i,
@@ -99,24 +92,24 @@
                 })
             }
 
-            function O(e) {
+            function M(e) {
                 let {
                     isAuthenticated: t = !0,
                     ...n
                 } = e, {
                     AnalyticsLocationProvider: a
                 } = (0, u.default)(o.default.HEADER_BAR), i = s(n.className, {
-                    [g.forumOrHome]: null != n.channelType && m.ChannelTypesSets.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === A.StaticChannelRoute.GUILD_HOME
+                    [A.forumOrHome]: null != n.channelType && I.ChannelTypesSets.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === m.StaticChannelRoute.GUILD_HOME
                 });
                 return (0, l.jsx)(a, {
-                    children: t ? (0, l.jsx)(R, {
+                    children: t ? (0, l.jsx)(C, {
                         ...n,
                         className: i
-                    }) : (0, l.jsx)(M, {
+                    }) : (0, l.jsx)(R, {
                         ...n,
                         className: i
                     })
                 })
             }
-            O.Title = _.default.Title, O.Icon = _.default.Icon, O.Divider = _.default.Divider, O.Caret = _.default.Caret;
-            var L = O
+            M.Title = h.default.Title, M.Icon = h.default.Icon, M.Divider = h.default.Divider, M.Caret = h.default.Caret;
+            var O = M

@@ -1,14 +1,14 @@
             r("70102"), r("424973");
             var i = r("678304"),
                 n = r("678889"),
-                o = r("811527"),
-                a = r("891044"),
+                a = r("811527"),
+                o = r("891044"),
                 s = r("560422"),
                 f = r("912065").Buffer;
 
             function h(t) {
                 "object" == typeof t && !f.isBuffer(t) && (e = t.passphrase, t = t.key), "string" == typeof t && (t = f.from(t));
-                var e, r, h, c = o(t, e),
+                var e, r, h, c = a(t, e),
                     u = c.tag,
                     d = c.data;
                 switch (u) {
@@ -35,12 +35,12 @@
                         d = function(t, e) {
                             var r = t.algorithm.decrypt.kde.kdeparams.salt,
                                 i = parseInt(t.algorithm.decrypt.kde.kdeparams.iters.toString(), 10),
-                                o = n[t.algorithm.decrypt.cipher.algo.join(".")],
+                                a = n[t.algorithm.decrypt.cipher.algo.join(".")],
                                 h = t.algorithm.decrypt.cipher.iv,
                                 c = t.subjectPrivateKey,
-                                u = parseInt(o.split("-")[1], 10) / 8,
+                                u = parseInt(a.split("-")[1], 10) / 8,
                                 d = s.pbkdf2Sync(e, r, i, u, "sha1"),
-                                l = a.createDecipheriv(o, d, h),
+                                l = o.createDecipheriv(a, d, h),
                                 p = [];
                             return p.push(l.update(c)), p.push(l.final()), f.concat(p)
                         }(d = i.EncryptedPrivateKey.decode(d, "der"), e);

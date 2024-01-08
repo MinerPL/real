@@ -2,7 +2,7 @@
             r("781738"), r("70102");
             var i = "%[a-f0-9]{2}",
                 n = RegExp("(" + i + ")|([^%]+?)", "gi"),
-                o = RegExp("(" + i + ")+", "gi");
+                a = RegExp("(" + i + ")+", "gi");
             t.exports = function(t) {
                 if ("string" != typeof t) throw TypeError("Expected `encodedURI` to be of type `string`, got `" + typeof t + "`");
                 try {
@@ -12,7 +12,7 @@
                         for (var e = {
                                 "%FE%FF": "��",
                                 "%FF%FE": "��"
-                            }, r = o.exec(t); r;) {
+                            }, r = a.exec(t); r;) {
                             try {
                                 e[r[0]] = decodeURIComponent(r[0])
                             } catch (t) {
@@ -35,11 +35,11 @@
                                 }(r[0]);
                                 i !== r[0] && (e[r[0]] = i)
                             }
-                            r = o.exec(t)
+                            r = a.exec(t)
                         }
                         e["%C2"] = "�";
-                        for (var a = Object.keys(e), s = 0; s < a.length; s++) {
-                            var f = a[s];
+                        for (var o = Object.keys(e), s = 0; s < o.length; s++) {
+                            var f = o[s];
                             t = t.replace(RegExp(f, "g"), e[f])
                         }
                         return t

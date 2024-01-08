@@ -1,10 +1,10 @@
             "use strict";
             var i, n = r("145095"),
-                o = r("438543"),
-                a = r("550511").assert;
+                a = r("438543"),
+                o = r("550511").assert;
 
             function s(t) {
-                "short" === t.type ? this.curve = new o.short(t) : "edwards" === t.type ? this.curve = new o.edwards(t) : this.curve = new o.mont(t), this.g = this.curve.g, this.n = this.curve.n, this.hash = t.hash, a(this.g.validate(), "Invalid curve"), a(this.g.mul(this.n).isInfinity(), "Invalid curve, G*N != O")
+                "short" === t.type ? this.curve = new a.short(t) : "edwards" === t.type ? this.curve = new a.edwards(t) : this.curve = new a.mont(t), this.g = this.curve.g, this.n = this.curve.n, this.hash = t.hash, o(this.g.validate(), "Invalid curve"), o(this.g.mul(this.n).isInfinity(), "Invalid curve, G*N != O")
             }
 
             function f(t, r) {

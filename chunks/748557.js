@@ -3,14 +3,14 @@
             r("854508");
 
             function n(t, e) {
-                a(t, e), o(t)
+                o(t, e), a(t)
             }
 
-            function o(t) {
+            function a(t) {
                 if (!t._writableState || !!t._writableState.emitClose)(!t._readableState || t._readableState.emitClose) && t.emit("close")
             }
 
-            function a(t, e) {
+            function o(t, e) {
                 t.emit("error", e)
             }
             t.exports = {
@@ -18,8 +18,8 @@
                     var r = this,
                         s = this._readableState && this._readableState.destroyed,
                         f = this._writableState && this._writableState.destroyed;
-                    return s || f ? (e ? e(t) : t && (this._writableState ? !this._writableState.errorEmitted && (this._writableState.errorEmitted = !0, i.nextTick(a, this, t)) : i.nextTick(a, this, t)), this) : (this._readableState && (this._readableState.destroyed = !0), this._writableState && (this._writableState.destroyed = !0), this._destroy(t || null, function(t) {
-                        !e && t ? r._writableState ? r._writableState.errorEmitted ? i.nextTick(o, r) : (r._writableState.errorEmitted = !0, i.nextTick(n, r, t)) : i.nextTick(n, r, t) : e ? (i.nextTick(o, r), e(t)) : i.nextTick(o, r)
+                    return s || f ? (e ? e(t) : t && (this._writableState ? !this._writableState.errorEmitted && (this._writableState.errorEmitted = !0, i.nextTick(o, this, t)) : i.nextTick(o, this, t)), this) : (this._readableState && (this._readableState.destroyed = !0), this._writableState && (this._writableState.destroyed = !0), this._destroy(t || null, function(t) {
+                        !e && t ? r._writableState ? r._writableState.errorEmitted ? i.nextTick(a, r) : (r._writableState.errorEmitted = !0, i.nextTick(n, r, t)) : i.nextTick(n, r, t) : e ? (i.nextTick(a, r), e(t)) : i.nextTick(a, r)
                     }), this)
                 },
                 undestroy: function() {
