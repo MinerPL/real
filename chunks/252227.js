@@ -10,12 +10,12 @@
                 s = n("77078"),
                 i = n("629109"),
                 r = n("42887"),
-                o = n("773336"),
-                u = n("49111"),
+                u = n("773336"),
+                o = n("49111"),
                 d = n("782340");
 
             function c() {
-                let e = !o.isPlatformEmbedded,
+                let e = !u.isPlatformEmbedded,
                     t = (0, l.useStateFromStores)([r.default], () => r.default.getMode()),
                     n = (e, n) => (0, a.jsx)(s.MenuRadioItem, {
                         id: e,
@@ -24,5 +24,5 @@
                         checked: t === e,
                         action: () => i.default.setMode(e)
                     }, e);
-                return [n(u.InputModes.VOICE_ACTIVITY, d.default.Messages.INPUT_MODE_VAD), n(u.InputModes.PUSH_TO_TALK, e ? d.default.Messages.INPUT_MODE_PTT_LIMITED : d.default.Messages.INPUT_MODE_PTT)]
+                return [n(o.InputModes.VOICE_ACTIVITY, d.default.Messages.INPUT_MODE_VAD), n(o.InputModes.PUSH_TO_TALK, e ? d.default.Messages.INPUT_MODE_PTT_LIMITED : d.default.Messages.INPUT_MODE_PTT)]
             }

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return u
                 }
             });
             var a = n("446674"),
@@ -23,7 +23,7 @@
                 }
             }
             r.displayName = "CallChatToastsStore", r.persistKey = "CallChatToasts";
-            var o = new r(l.default, {
+            var u = new r(l.default, {
                 CALL_CHAT_TOASTS_SET_ENABLED: function(e) {
                     let {
                         channelId: t,

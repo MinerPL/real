@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return u
                 }
             });
             var a = n("37983");
@@ -11,21 +11,21 @@
                 i = n("880731"),
                 r = n("300586");
 
-            function o(e) {
+            function u(e) {
                 let {
                     isShaking: t,
                     shakeLocation: n,
-                    children: o,
-                    className: u
+                    children: u,
+                    className: o
                 } = e, d = (0, r.default)(n), c = (0, l.default)([i.default], () => i.default.isEnabled({
                     shakeLocation: n
                 }));
                 return c ? (0, a.jsx)(s.Shaker, {
                     isShaking: t,
                     intensity: d,
-                    className: u,
-                    children: o
+                    className: o,
+                    children: u
                 }) : (0, a.jsx)(a.Fragment, {
-                    children: o
+                    children: u
                 })
             }

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return S
                 }
             });
             var a = n("37983");
@@ -10,8 +10,8 @@
                 s = n.n(l),
                 i = n("446674"),
                 r = n("669491"),
-                o = n("77078"),
-                u = n("191145"),
+                u = n("77078"),
+                o = n("191145"),
                 d = n("373469"),
                 c = n("568307"),
                 f = n("522049"),
@@ -20,20 +20,20 @@
                 m = n("99795"),
                 E = n("782340"),
                 C = n("75606"),
-                g = e => {
+                S = e => {
                     let {
                         className: t,
                         channelId: n
-                    } = e, l = (0, i.useStateFromStores)([d.default, u.default, p.default, c.default], () => {
+                    } = e, l = (0, i.useStateFromStores)([d.default, o.default, p.default, c.default], () => {
                         var e;
                         if (null == n) return !1;
                         let t = d.default.getCurrentUserActiveStream(),
                             a = null === (e = c.default.getVisibleGame()) || void 0 === e ? void 0 : e.windowHandle;
-                        return null != t && !!p.default.getSettings().clipsEnabled || null != a && !!p.default.getSettings().decoupledClipsEnabled || u.default.getParticipants(n).some(e => e.type === m.ParticipantTypes.USER && p.default.isClipsEnabledForUser(e.user.id))
+                        return null != t && !!p.default.getSettings().clipsEnabled || null != a && !!p.default.getSettings().decoupledClipsEnabled || o.default.getParticipants(n).some(e => e.type === m.ParticipantTypes.USER && p.default.isClipsEnabledForUser(e.user.id))
                     });
-                    return l ? (0, a.jsxs)(o.TooltipContainer, {
+                    return l ? (0, a.jsxs)(u.TooltipContainer, {
                         text: E.default.Messages.CLIPS_ENABLED_VIEWER_TOOLTIP,
-                        color: o.TooltipColors.GREY,
+                        color: u.TooltipColors.GREY,
                         className: s(t, C.clipsEnabledIndicator),
                         children: [(0, a.jsx)(h.IconBadge, {
                             icon: f.default,

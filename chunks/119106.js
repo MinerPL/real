@@ -9,8 +9,8 @@
                 s = n("77078"),
                 i = n("987317"),
                 r = n("233322"),
-                o = n("157186"),
-                u = n("491519"),
+                u = n("157186"),
+                o = n("491519"),
                 d = n("679243"),
                 c = n("99795"),
                 f = n("782340"),
@@ -21,9 +21,9 @@
                         participants: p,
                         channel: m,
                         hasConnectPermission: E
-                    } = e, C = p.filter(c.isUserParticipant), g = (0, o.useShowMemberVerificationGate)(m.guild_id), S = l.useCallback(() => {
-                        g ? (0, r.openMemberVerificationModal)(m.guild_id, () => i.default.selectVoiceChannel(m.id)) : i.default.selectVoiceChannel(m.id)
-                    }, [m.id, m.guild_id, g]), _ = 4 === C.length ? 2 : 3;
+                    } = e, C = p.filter(c.isUserParticipant), S = (0, u.useShowMemberVerificationGate)(m.guild_id), g = l.useCallback(() => {
+                        S ? (0, r.openMemberVerificationModal)(m.guild_id, () => i.default.selectVoiceChannel(m.id)) : i.default.selectVoiceChannel(m.id)
+                    }, [m.id, m.guild_id, S]), _ = 4 === C.length ? 2 : 3;
                     return (0, a.jsxs)("div", {
                         className: h.container,
                         children: [(0, a.jsx)("div", {
@@ -51,13 +51,13 @@
                                 color: "header-secondary",
                                 variant: "text-sm/normal",
                                 children: (t = m, 0 === (n = C).length ? f.default.Messages.CURRENTLY_IN_VOICE_EMPTY : 1 === n.length ? f.default.Messages.CURRENTLY_IN_VOICE_1.format({
-                                    a: (0, u.default)(t, n[0])
+                                    a: (0, o.default)(t, n[0])
                                 }) : 2 === n.length ? f.default.Messages.CURRENTLY_IN_VOICE_2.format({
-                                    a: (0, u.default)(t, n[0]),
-                                    b: (0, u.default)(t, n[1])
+                                    a: (0, o.default)(t, n[0]),
+                                    b: (0, o.default)(t, n[1])
                                 }) : n.length > 2 ? f.default.Messages.CURRENTLY_IN_VOICE_2_N.format({
-                                    a: (0, u.default)(t, n[0]),
-                                    b: (0, u.default)(t, n[1]),
+                                    a: (0, o.default)(t, n[0]),
+                                    b: (0, o.default)(t, n[1]),
                                     n: n.length - 2
                                 }) : void 0)
                             })
@@ -65,7 +65,7 @@
                             disabled: !E,
                             className: h.joinButton,
                             color: E ? s.Button.Colors.GREEN : s.Button.Colors.PRIMARY,
-                            onClick: S,
+                            onClick: g,
                             size: s.Button.Sizes.MEDIUM,
                             children: E ? f.default.Messages.JOIN_VOICE : f.default.Messages.CHANNEL_LOCKED_SHORT
                         })]

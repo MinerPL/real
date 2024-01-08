@@ -9,8 +9,8 @@
             }), n("808653"), n("222007"), n("70102");
             var i, l = n("811022"),
                 r = n("994440"),
-                a = n("282928"),
-                s = n("142852"),
+                s = n("282928"),
+                a = n("142852"),
                 o = n("402752"),
                 u = n("572868"),
                 d = n("49111"),
@@ -22,16 +22,16 @@
                     n = arguments.length > 2 ? arguments[2] : void 0,
                     i = e.map(e => new Promise((i, l) => {
                         switch (e.status) {
-                            case a.CloudUploadStatus.NOT_STARTED:
+                            case s.CloudUploadStatus.NOT_STARTED:
                                 e.upload();
                                 break;
-                            case a.CloudUploadStatus.COMPLETED:
+                            case s.CloudUploadStatus.COMPLETED:
                                 i("complete");
                                 break;
-                            case a.CloudUploadStatus.ERROR:
+                            case s.CloudUploadStatus.ERROR:
                                 t && e.error !== d.AbortCodes.ENTITY_TOO_LARGE ? e.upload() : l(Error("File failed to upload"));
                                 break;
-                            case a.CloudUploadStatus.CANCELED:
+                            case s.CloudUploadStatus.CANCELED:
                                 l(Error("Upload is canceled"))
                         }
                         e.on("complete", () => {
@@ -53,7 +53,7 @@
                 }
                 async compressAndCheckFileSize() {
                     var e, t;
-                    let n = (0, s.getUploadTarget)(null === (t = this.files[0]) || void 0 === t ? void 0 : null === (e = t.item) || void 0 === e ? void 0 : e.target);
+                    let n = (0, a.getUploadTarget)(null === (t = this.files[0]) || void 0 === t ? void 0 : null === (e = t.item) || void 0 === e ? void 0 : e.target);
                     return this.files.length > n.getMaxAttachmentsCount() ? (h.log("Too many attachments for ".concat(this.id)), this._handleError({
                         code: d.AbortCodes.TOO_MANY_ATTACHMENTS
                     }), !1) : !(this._fileSize() > n.getMaxTotalAttachmentSize()) || (this._handleError({
@@ -114,7 +114,7 @@
                 async cancelItem(e) {
                     h.log("Cancel called for ".concat(this.id, " for item ").concat(e));
                     let t = this.files.find(t => t.id === e);
-                    if (null == t || t.status === a.CloudUploadStatus.CANCELED) return;
+                    if (null == t || t.status === s.CloudUploadStatus.CANCELED) return;
                     let n = this.files.indexOf(t);
                     this.files = [...this.files.slice(0, n), ...this.files.slice(n + 1)], this._file = {
                         ...this._file,
@@ -122,11 +122,11 @@
                     }, await (0, r.cancelGetAttachmentFile)(t), t.cancel(), this.emit("cancel-upload-item", this._file), 0 === this.files.length && this.cancel()
                 }
                 failed() {
-                    return this.files.some(e => e.status === a.CloudUploadStatus.ERROR)
+                    return this.files.some(e => e.status === s.CloudUploadStatus.ERROR)
                 }
                 _remainingUploadCount() {
                     let e = this.files;
-                    return e.length - e.filter(e => e.status === a.CloudUploadStatus.COMPLETED).length
+                    return e.length - e.filter(e => e.status === s.CloudUploadStatus.COMPLETED).length
                 }
                 clear() {
                     this.cancel(), this.files = []

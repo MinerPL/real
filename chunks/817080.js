@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("394846"),
-                o = n("77078"),
-                u = n("272030"),
+                u = n("77078"),
+                o = n("272030"),
                 d = n("754474"),
                 c = n("315102"),
                 f = n("506885"),
@@ -27,8 +27,8 @@
                     id: E.application.id,
                     icon: E.application.icon,
                     size: 40
-                }), g = l.useCallback(e => {
-                    (0, u.openContextMenuLazy)(e, async () => {
+                }), S = l.useCallback(e => {
+                    (0, o.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
                         } = await n.el("348866").then(n.bind(n, "348866"));
@@ -38,9 +38,9 @@
                             integration: E
                         })
                     })
-                }, [E, s]), S = (0, a.jsxs)("div", {
+                }, [E, s]), g = (0, a.jsxs)("div", {
                     className: p.listRow,
-                    onContextMenu: g,
+                    onContextMenu: S,
                     children: [(0, a.jsx)("img", {
                         className: i(p.listAvatar, m.icon),
                         alt: "",
@@ -61,8 +61,8 @@
                     bot: _
                 } = E.application;
                 return null == _ ? (0, a.jsx)("li", {
-                    children: S
-                }) : (0, a.jsx)(o.Popout, {
+                    children: g
+                }) : (0, a.jsx)(u.Popout, {
                     preload: () => (0, f.default)(_.id, C),
                     renderPopout: e => (0, a.jsx)(h.default, {
                         ...e,
@@ -72,7 +72,7 @@
                     position: r.isMobile ? "window_center" : "left",
                     children: e => (0, a.jsx)("li", {
                         ...e,
-                        children: S
+                        children: g
                     })
                 })
             }

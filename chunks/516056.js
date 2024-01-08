@@ -21,10 +21,10 @@
                     entries: i,
                     appendEndCard: !1
                 });
-                let o = e.filter(e => !r.has(e.guildId));
-                return (o = (0, a.orderByTotalMemberCount)(o)).length > 0 && n.push({
+                let u = e.filter(e => !r.has(e.guildId));
+                return (u = (0, a.orderByTotalMemberCount)(u)).length > 0 && n.push({
                     header: s.default.Messages.ALL_SERVERS,
-                    entries: o,
+                    entries: u,
                     appendEndCard: !0
                 }), n
             }

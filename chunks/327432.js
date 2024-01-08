@@ -9,8 +9,8 @@
                 s = n("446674"),
                 i = n("272030"),
                 r = n("264732"),
-                o = n("679653"),
-                u = n("176347"),
+                u = n("679653"),
+                o = n("176347"),
                 d = n("850391"),
                 c = n("557809"),
                 f = n("393414"),
@@ -19,16 +19,16 @@
                 m = n("474643"),
                 E = n("305961"),
                 C = n("664336"),
-                g = n("867965"),
-                S = n("782340"),
+                S = n("867965"),
+                g = n("782340"),
                 _ = n("435599");
 
             function I(e) {
                 let {
                     channelId: t
-                } = e, I = (0, s.useStateFromStores)([p.default], () => p.default.getChannel(t)), T = (0, s.useStateFromStores)([p.default], () => p.default.getChannel(null == I ? void 0 : I.parent_id)), v = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(null == I ? void 0 : I.getGuildId())), x = (0, o.default)(I), N = l.useRef(!1);
+                } = e, I = (0, s.useStateFromStores)([p.default], () => p.default.getChannel(t)), T = (0, s.useStateFromStores)([p.default], () => p.default.getChannel(null == I ? void 0 : I.parent_id)), v = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(null == I ? void 0 : I.getGuildId())), x = (0, u.default)(I), N = l.useRef(!1);
                 if (l.useEffect(() => {
-                        null != I && !N.current && (N.current = !0, (0, g.trackForumPostSidebarViewed)(I))
+                        null != I && !N.current && (N.current = !0, (0, S.trackForumPostSidebarViewed)(I))
                     }, [I]), null == I || null == v) return null;
                 let A = (0, a.jsx)(h.default, {
                     channel: I
@@ -39,7 +39,7 @@
                         draftType: m.DraftType.ChannelMessage
                     }), (0, a.jsx)(C.default, {
                         toolbar: A,
-                        "aria-label": S.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
+                        "aria-label": g.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
                         children: (0, c.renderTitle)({
                             channel: I,
                             parentChannel: T,
@@ -63,7 +63,7 @@
                         })
                     }), (0, a.jsx)("div", {
                         className: _.chat,
-                        children: (0, a.jsx)(u.default, {
+                        children: (0, a.jsx)(o.default, {
                             channel: I,
                             guild: v,
                             chatInputType: d.ChatInputTypes.SIDEBAR

@@ -14,12 +14,12 @@
                         forceLightTheme: n,
                         hideEditButton: i,
                         children: r,
-                        onRequestOpen: o,
-                        onRequestClose: u
+                        onRequestOpen: u,
+                        onRequestClose: o
                     } = e;
                     return (0, a.jsx)(l.Popout, {
-                        onRequestOpen: o,
-                        onRequestClose: u,
+                        onRequestOpen: u,
+                        onRequestClose: o,
                         animation: l.Popout.Animation.NONE,
                         position: "bottom",
                         spacing: 4,

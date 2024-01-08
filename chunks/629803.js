@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 fetchConsents: function() {
-                    return u
+                    return o
                 },
                 setConsents: function() {
                     return d
@@ -21,12 +21,12 @@
                 }), e.body
             }
 
-            function o(e) {
+            function u(e) {
                 let t;
                 throw Error(t = e.status >= 500 && e.status <= 599 ? i.default.Messages.DATA_PRIVACY_UPDATE_CONSENTS_FAILED : null != e && null != e.body && null != e.body.message ? e.body.message : i.default.Messages.DATA_PRIVACY_UPDATE_CONSENTS_FAILED)
             }
 
-            function u() {
+            function o() {
                 return a.default.get({
                     url: s.Endpoints.SETTINGS_CONSENT,
                     oldFormErrors: !0
@@ -41,5 +41,5 @@
                         revoke: t
                     },
                     oldFormErrors: !0
-                }).then(r, o)
+                }).then(r, u)
             }

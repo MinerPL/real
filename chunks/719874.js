@@ -15,9 +15,9 @@
                     hasPermission: t,
                     centerButton: n = !1,
                     ...r
-                } = e, o = n ? s.CenterControlButton : s.default, u = t ? i.default.Messages.SHARE_YOUR_SCREEN : i.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE;
-                return (0, a.jsx)(o, {
-                    label: u,
+                } = e, u = n ? s.CenterControlButton : s.default, o = t ? i.default.Messages.SHARE_YOUR_SCREEN : i.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE;
+                return (0, a.jsx)(u, {
+                    label: o,
                     disabled: !t,
                     iconComponent: l.default,
                     ...r

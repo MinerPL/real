@@ -10,8 +10,8 @@
                 s = n("77078"),
                 i = n("168973"),
                 r = n("236898"),
-                o = n("632616"),
-                u = n("535348"),
+                u = n("632616"),
+                o = n("535348"),
                 d = n("782340");
 
             function c(e, t) {
@@ -22,9 +22,9 @@
                     checked: !c,
                     action: () => {
                         if (h || c) return f(!c);
-                        (0, s.openModal)(e => (0, a.jsx)(o.default, {
+                        (0, s.openModal)(e => (0, a.jsx)(u.default, {
                             ...e,
-                            type: u.SelfStreamAndVideoAlertType.STREAM,
+                            type: o.SelfStreamAndVideoAlertType.STREAM,
                             onConfirm: () => f(!c)
                         }))
                     }

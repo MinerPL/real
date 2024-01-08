@@ -12,8 +12,8 @@
                 s = n("404118"),
                 i = n("783480"),
                 r = n("681736"),
-                o = n("578198"),
-                u = n("884351"),
+                u = n("578198"),
+                o = n("884351"),
                 d = n("474643"),
                 c = n("305961"),
                 f = n("254490"),
@@ -28,7 +28,7 @@
                     threadSettings: l,
                     privateThreadMode: s,
                     location: r,
-                    onThreadCreated: o,
+                    onThreadCreated: u,
                     useDefaultThreadName: c
                 } = e, f = a.useCallback((e, t, n, a) => {
                     i.default.uploadFiles({
@@ -38,7 +38,7 @@
                         options: {
                             stickerIds: a
                         },
-                        parsedMessage: u.default.parse(e, n)
+                        parsedMessage: o.default.parse(e, n)
                     })
                 }, []);
                 return (0, h.useCreateThreadCommon)({
@@ -47,7 +47,7 @@
                     threadSettings: l,
                     privateThreadMode: s,
                     location: r,
-                    onThreadCreated: o,
+                    onThreadCreated: u,
                     useDefaultThreadName: c,
                     uploadHandler: f
                 })
@@ -59,7 +59,7 @@
                 } = e, {
                     name: n,
                     appliedTags: a
-                } = (0, o.useForumPostComposerStore)(e => {
+                } = (0, u.useForumPostComposerStore)(e => {
                     let {
                         name: t,
                         appliedTags: n
@@ -75,8 +75,8 @@
                     appliedTags: a,
                     upload: function(e, n, a) {
                         return new Promise((l, i) => {
-                            let o = new r.default(e);
-                            o.on("error", (e, n, a) => {
+                            let u = new r.default(e);
+                            u.on("error", (e, n, a) => {
                                 if (n === p.AbortCodes.EXPLICIT_CONTENT) {
                                     var l;
                                     let e = c.default.getGuild(null !== (l = t.getGuildId()) && void 0 !== l ? l : "");
@@ -103,11 +103,11 @@
                                 i({
                                     body: a
                                 })
-                            }), o.on("complete", (e, t) => {
+                            }), u.on("complete", (e, t) => {
                                 l({
                                     body: t
                                 })
-                            }), o.uploadFiles(a, n, {
+                            }), u.uploadFiles(a, n, {
                                 addFilesTo: "message.attachments"
                             })
                         })

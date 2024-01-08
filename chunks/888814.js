@@ -10,8 +10,8 @@
                 s = n("760679"),
                 i = n("242260"),
                 r = n("315841"),
-                o = n("981913"),
-                u = n("987772"),
+                u = n("981913"),
+                o = n("987772"),
                 d = n("814711"),
                 c = n("782340");
 
@@ -29,11 +29,11 @@
                         let {
                             ...l
                         } = e;
-                        return (0, a.jsx)(o.default, {
+                        return (0, a.jsx)(u.default, {
                             ...l,
                             label: c.default.Messages.SHARED_CANVAS_DRAW_MODE_LINE,
                             isActive: t,
-                            iconComponent: u.default,
+                            iconComponent: o.default,
                             onClick: n
                         })
                     }

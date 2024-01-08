@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return S
                 }
             }), n("781738"), n("222007");
             var a = n("37983"),
@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("446674"),
-                o = n("363484"),
-                u = n("402904"),
+                u = n("363484"),
+                o = n("402904"),
                 d = n("145131"),
                 c = n("841283"),
                 f = n("782340"),
@@ -51,7 +51,7 @@
             }
             class C extends l.PureComponent {
                 componentDidMount() {
-                    null == this.props.regions && o.default.fetchRegions(null)
+                    null == this.props.regions && u.default.fetchRegions(null)
                 }
                 render() {
                     let {
@@ -109,10 +109,10 @@
                         } = e, {
                             channelId: n
                         } = this.props.call;
-                        o.default.changeCallRegion(n, t.id)
+                        u.default.changeCallRegion(n, t.id)
                     }
                 }
             }
-            var g = r.default.connectStores([u.default], () => ({
-                regions: u.default.getRegions(null)
+            var S = r.default.connectStores([o.default], () => ({
+                regions: o.default.getRegions(null)
             }))(C)

@@ -9,8 +9,8 @@
                 s = n("394846"),
                 i = n("446674"),
                 r = n("77078"),
-                o = n("120252"),
-                u = n("161778"),
+                u = n("120252"),
+                o = n("161778"),
                 d = n("162771"),
                 c = n("941886"),
                 f = n("664336"),
@@ -23,12 +23,12 @@
                     channelId: E
                 } = e;
                 l.useEffect(() => {
-                    o.default.loadThread(E)
+                    u.default.loadThread(E)
                 });
                 let C = (0, i.useStateFromStores)([d.default], () => d.default.getGuildId()),
-                    g = C === h.FAVORITES,
-                    S = (0, i.useStateFromStores)([u.default], () => u.default.theme);
-                return t = g ? (0, a.jsx)(c.EmptyStateText, {
+                    S = C === h.FAVORITES,
+                    g = (0, i.useStateFromStores)([o.default], () => o.default.theme);
+                return t = S ? (0, a.jsx)(c.EmptyStateText, {
                     note: p.default.Messages.FAVORITES_EMPTY_BODY,
                     children: p.default.Messages.FAVORITES_EMPTY_TITLE
                 }) : null != E ? (0, a.jsx)(r.Spinner, {
@@ -41,10 +41,10 @@
                     children: [s.isMobile && (0, a.jsx)(f.default, {
                         children: (0, a.jsx)(l.Fragment, {})
                     }), (0, a.jsxs)(c.default, {
-                        theme: S,
+                        theme: g,
                         children: [(0, a.jsx)(c.EmptyStateImage, {
-                            darkSrc: g ? n("41912") : n("605834"),
-                            lightSrc: g ? n("706692") : n("976585"),
+                            darkSrc: S ? n("41912") : n("605834"),
+                            lightSrc: S ? n("706692") : n("976585"),
                             width: 272,
                             height: 222
                         }), t]

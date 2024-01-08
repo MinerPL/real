@@ -10,23 +10,23 @@
                 s = n("77078"),
                 i = n("943232"),
                 r = n("842672"),
-                o = n("888237"),
-                u = n("782340");
+                u = n("888237"),
+                o = n("782340");
 
             function d(e) {
                 let {
                     className: t,
                     guildId: d
                 } = e, c = (0, r.default)();
-                return (0, a.jsx)(o.default, {
+                return (0, a.jsx)(u.default, {
                     className: t,
                     icon: (0, a.jsx)(i.default, {
                         height: 20,
                         width: 20
                     }),
                     color: l.default.unsafe_rawColors.BRAND_500.css,
-                    title: u.default.Messages.SCHEDULE_EVENT,
-                    description: u.default.Messages.SCHEDULE_EVENT_DESCRIPTION,
+                    title: o.default.Messages.SCHEDULE_EVENT,
+                    description: o.default.Messages.SCHEDULE_EVENT_DESCRIPTION,
                     onClick: function() {
                         (0, s.openModalLazy)(async () => {
                             let {

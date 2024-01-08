@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("907002"),
-                o = n("617258"),
-                u = n("446674"),
+                u = n("617258"),
+                o = n("446674"),
                 d = n("669491"),
                 c = n("769846"),
                 f = n("77078"),
@@ -19,8 +19,8 @@
                 m = n("506885"),
                 E = n("697218"),
                 C = n("216422"),
-                g = n("956089"),
-                S = n("980423"),
+                S = n("956089"),
+                g = n("980423"),
                 _ = n("599110"),
                 I = n("719923"),
                 T = n("12307"),
@@ -29,7 +29,7 @@
                 N = n("646718"),
                 A = n("782340"),
                 M = n("456802");
-            let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
+            let R = (0, u.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
                 j = {
                     opacity: 0,
                     transform: "translate3d(100%, 0, 0)"
@@ -59,7 +59,7 @@
                 U = e => {
                     let t, s, {
                             participant: r,
-                            isUpsellEnabled: o,
+                            isUpsellEnabled: u,
                             shape: c,
                             size: m,
                             didTrackUpsellViewed: R,
@@ -85,8 +85,8 @@
                         {
                             location: D
                         } = (0, h.useAnalyticsContext)(),
-                        U = (0, u.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
-                        w = o && !I.default.isPremium(U, N.PremiumTypes.TIER_1) && !I.default.canStreamQuality(I.default.StreamQuality.MID, U),
+                        U = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
+                        w = u && !I.default.isPremium(U, N.PremiumTypes.TIER_1) && !I.default.canStreamQuality(I.default.StreamQuality.MID, U),
                         F = l.useCallback(() => {
                             w && P && (0, f.openModalLazy)(async () => {
                                 let {
@@ -113,7 +113,7 @@
                         children: e => (0, a.jsxs)(f.Clickable, {
                             ...e,
                             onClick: F,
-                            className: i(M.qualityIndicator, m, S.LiveIndicatorShapes[c], b ? M.qualityIndicatorLowQuality : M.qualityIndicatorFullQuality, {
+                            className: i(M.qualityIndicator, m, g.LiveIndicatorShapes[c], b ? M.qualityIndicatorLowQuality : M.qualityIndicatorFullQuality, {
                                 [M.clickable]: w && P
                             }),
                             children: [P ? (0, a.jsx)(C.default, {
@@ -126,7 +126,7 @@
                             })]
                         })
                     });
-                    return (0, a.jsx)(g.TextBadge, {
+                    return (0, a.jsx)(S.TextBadge, {
                         text: k,
                         className: i(L, M.qualityIndicatorBadge),
                         color: d.default.unsafe_rawColors.PRIMARY_500.css,
@@ -138,8 +138,8 @@
                     participant: t,
                     showQuality: n,
                     isUpsellEnabled: s = !0,
-                    size: o,
-                    className: u
+                    size: u,
+                    className: o
                 } = e, [d, c] = l.useState(!1), h = (0, T.getMaxQuality)(t), {
                     reducedMotion: p
                 } = l.useContext(f.AccessibilityPreferencesContext), E = n && null != h;
@@ -173,8 +173,8 @@
                             children: (0, a.jsx)(U, {
                                 className: M.liveQualityIndicator,
                                 participant: t,
-                                size: o,
-                                shape: g.BadgeShapes.ROUND_LEFT,
+                                size: u,
+                                shape: S.BadgeShapes.ROUND_LEFT,
                                 isUpsellEnabled: s,
                                 didTrackUpsellViewed: d,
                                 setDidTrackUpsellViewed: c
@@ -182,14 +182,14 @@
                         }) : null), (0, a.jsx)(r.animated.div, {
                             style: _,
                             className: M.liveIndicator,
-                            children: (0, a.jsx)(S.default, {
-                                look: S.LiveIndicatorLooks.RED,
-                                size: o,
-                                shape: E ? g.BadgeShapes.ROUND_RIGHT : g.BadgeShapes.ROUND
+                            children: (0, a.jsx)(g.default, {
+                                look: g.LiveIndicatorLooks.RED,
+                                size: u,
+                                shape: E ? S.BadgeShapes.ROUND_RIGHT : S.BadgeShapes.ROUND
                             })
                         })]
                     })
                 })({
-                    className: u
+                    className: o
                 })
             }

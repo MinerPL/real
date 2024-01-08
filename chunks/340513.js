@@ -10,8 +10,8 @@
                 s = n("77078"),
                 i = n("884155"),
                 r = n("316133"),
-                o = n("49111"),
-                u = n("782340"),
+                u = n("49111"),
+                o = n("782340"),
                 d = n("162088");
 
             function c(e) {
@@ -23,7 +23,7 @@
                     children: [(0, a.jsx)(s.Text, {
                         variant: "text-xs/bold",
                         className: d.header,
-                        children: u.default.Messages.CHANNEL_CALL_MEMBERS_POPOUT_HEADER.format({
+                        children: o.default.Messages.CHANNEL_CALL_MEMBERS_POPOUT_HEADER.format({
                             count: n.length
                         })
                     }), (0, a.jsx)(s.Scroller, {
@@ -35,7 +35,7 @@
                             channel: t,
                             voiceStates: n,
                             collapsed: !1,
-                            location: o.AnalyticsLocations.CHANNEL_CALL
+                            location: u.AnalyticsLocations.CHANNEL_CALL
                         })
                     })]
                 })

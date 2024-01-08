@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("917351"),
-                o = n.n(r),
-                u = n("974667"),
+                u = n.n(r),
+                o = n("974667"),
                 d = n("394846"),
                 c = n("446674"),
                 f = n("233736"),
@@ -19,8 +19,8 @@
                 m = n("666020"),
                 E = n("352674"),
                 C = n("888503"),
-                g = n("206230"),
-                S = n("716241"),
+                S = n("206230"),
+                g = n("716241"),
                 _ = n("521803"),
                 I = n("95039"),
                 T = n("405645"),
@@ -68,15 +68,15 @@
                         user: s,
                         currentUser: i,
                         activities: r,
-                        applicationStream: o,
-                        status: u,
+                        applicationStream: u,
+                        status: o,
                         channel: c,
                         guildId: f,
                         isTyping: p,
                         isMobileOnline: m,
                         premiumSince: E,
-                        ...g
-                    } = this.props, S = null != E ? new Date(E) : null;
+                        ...S
+                    } = this.props, g = null != E ? new Date(E) : null;
                     return (0, a.jsx)(h.Popout, {
                         preload: () => (0, x.default)(s.id, s.getAvatarURL(f, 80), {
                             guildId: f,
@@ -97,11 +97,11 @@
                                 user: s,
                                 currentUser: i,
                                 nick: l,
-                                status: u,
+                                status: o,
                                 activities: r,
-                                applicationStream: o,
+                                applicationStream: u,
                                 isOwner: n,
-                                premiumSince: S,
+                                premiumSince: g,
                                 colorString: e,
                                 colorRoleName: t,
                                 isTyping: p,
@@ -110,7 +110,7 @@
                                 isMobile: m,
                                 onClickPremiumGuildIcon: this.openGuildSubscriptionModal,
                                 selected: E,
-                                itemProps: g,
+                                itemProps: S,
                                 ...d
                             })
                         }
@@ -168,14 +168,14 @@
                         channel: l,
                         user: s,
                         index: i
-                    } = e, r = (0, u.useListItem)("".concat(i)), o = (0, c.useStateFromStores)([R.default], () => R.default.isTyping(l.id, s.id)), d = (0, c.useStateFromStores)([j.default], () => j.default.getCurrentUser()), f = (0, c.useStateFromStores)([M.default], () => {
+                    } = e, r = (0, o.useListItem)("".concat(i)), u = (0, c.useStateFromStores)([R.default], () => R.default.isTyping(l.id, s.id)), d = (0, c.useStateFromStores)([j.default], () => j.default.getCurrentUser()), f = (0, c.useStateFromStores)([M.default], () => {
                         var e, n;
                         return null != t ? null === (n = M.default.getGuild(l.guild_id)) || void 0 === n ? void 0 : null === (e = n.getRole(t)) || void 0 === e ? void 0 : e.name : void 0
                     }, [l, t]);
                     return (0, a.jsx)(G, {
                         ...n,
                         ...r,
-                        isTyping: o,
+                        isTyping: u,
                         currentUser: d,
                         colorRoleName: f
                     })
@@ -216,7 +216,7 @@
             function z(e) {
                 let {
                     index: t
-                } = e, n = (0, u.useListItem)("".concat(t));
+                } = e, n = (0, o.useListItem)("".concat(t));
                 return (0, a.jsx)(C.default, {
                     itemProps: n
                 })
@@ -275,12 +275,12 @@
                                                 })
                                             })
                                         }),
-                                        children: (0, a.jsx)(u.ListNavigatorContainer, {
+                                        children: (0, a.jsx)(o.ListNavigatorContainer, {
                                             children: n => {
                                                 let {
                                                     ref: s,
                                                     role: r,
-                                                    ...o
+                                                    ...u
                                                 } = n;
                                                 return (0, a.jsx)(h.List, {
                                                     innerRole: r,
@@ -301,7 +301,7 @@
                                                     onScroll: this.handleScroll,
                                                     fade: !0,
                                                     customTheme: !0,
-                                                    ...o,
+                                                    ...u,
                                                     ...l
                                                 }, t)
                                             }
@@ -362,8 +362,8 @@
                                 colorRoleId: t,
                                 user: n,
                                 status: r,
-                                isOwner: o,
-                                isMobileOnline: u,
+                                isOwner: u,
+                                isMobileOnline: o,
                                 nick: d,
                                 activities: c,
                                 applicationStream: f,
@@ -374,20 +374,20 @@
                                 colorRoleId: t,
                                 user: n,
                                 status: r,
-                                isOwner: o,
+                                isOwner: u,
                                 nick: d,
                                 activities: c,
                                 applicationStream: f,
                                 channel: s,
                                 guildId: s.guild_id,
                                 premiumSince: h,
-                                isMobileOnline: u,
+                                isMobileOnline: o,
                                 index: l
                             }, "member-".concat(i.user.id))
                         }
                     }, this.handleScroll = () => {
                         this.updateSubscription()
-                    }, this.updateSubscription = o.debounce(() => {
+                    }, this.updateSubscription = u.debounce(() => {
                         let e = this._list;
                         if (null == e) return;
                         let {
@@ -421,7 +421,7 @@
                             num_users_visible_with_activity: 0,
                             num_users_visible_with_avatar_decoration: 0
                         });
-                        this.lastReportedAnalyticsChannel = this.props.channel.id, S.default.trackWithMetadata(w.AnalyticEvents.MEMBER_LIST_VIEWED, {
+                        this.lastReportedAnalyticsChannel = this.props.channel.id, g.default.trackWithMetadata(w.AnalyticEvents.MEMBER_LIST_VIEWED, {
                             ...l
                         })
                     }
@@ -432,8 +432,8 @@
                 let {
                     channel: t,
                     className: n
-                } = e, s = (0, c.useStateFromStores)([g.default], () => g.default.keyboardModeEnabled), r = (0, c.useStateFromStoresObject)([A.default], () => A.default.getProps(t.guild_id, t.id)), {
-                    rows: o,
+                } = e, s = (0, c.useStateFromStores)([S.default], () => S.default.keyboardModeEnabled), r = (0, c.useStateFromStoresObject)([A.default], () => A.default.getProps(t.guild_id, t.id)), {
+                    rows: u,
                     groups: d
                 } = r, f = l.useRef(null), h = l.useCallback((e, t) => {
                     let n = f.current;
@@ -468,7 +468,7 @@
                             requestAnimationFrame(() => setTimeout(e, 100))
                         }
                     })
-                }), []), E = (0, u.default)({
+                }), []), E = (0, o.default)({
                     id: "members-".concat(t.id),
                     setFocus: h,
                     isEnabled: s,
@@ -477,13 +477,13 @@
                 });
                 return (0, a.jsx)("div", {
                     className: i(k.container, n),
-                    children: (0, a.jsx)(u.ListNavigatorProvider, {
+                    children: (0, a.jsx)(o.ListNavigatorProvider, {
                         navigator: E,
                         children: (0, a.jsx)(K, {
                             ...e,
                             ...r,
                             groups: d,
-                            rows: o,
+                            rows: u,
                             listRef: f
                         })
                     })

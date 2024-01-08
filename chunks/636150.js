@@ -10,8 +10,8 @@
                 s = n.n(l),
                 i = n("446674"),
                 r = n("18346"),
-                o = n("261552"),
-                u = n("103979"),
+                u = n("261552"),
+                o = n("103979"),
                 d = n("780166"),
                 c = n("245463"),
                 f = n("42887"),
@@ -20,8 +20,8 @@
                 m = n("456127"),
                 E = n("888814"),
                 C = n("943917"),
-                g = n("380116"),
-                S = n("149882"),
+                S = n("380116"),
+                g = n("149882"),
                 _ = n("568009"),
                 I = n("49111"),
                 T = n("621262");
@@ -34,14 +34,14 @@
                 } = e, v = (0, i.useStateFromStores)([h.default], () => {
                     let e = h.default.getCurrentUser();
                     return s(null != e, "CenterControlTray: currentUser cannot be undefined"), e
-                }), x = (0, o.default)(), {
+                }), x = (0, u.default)(), {
                     isSharedCanvasEnabled: N
                 } = d.default.useExperiment({
                     guildId: null == t ? void 0 : t.guild_id,
                     location: "b7309a_1"
                 }), {
                     enableViewerClipping: A
-                } = u.default.useExperiment({
+                } = o.default.useExperiment({
                     location: "VoiceEffectsActionBar"
                 }, {
                     autoTrackExposure: !1
@@ -55,10 +55,10 @@
                     });
                 return (0, a.jsxs)("div", {
                     className: T.voiceEffectsActionBar,
-                    children: [R && (0, a.jsx)(S.default, {
+                    children: [R && (0, a.jsx)(g.default, {
                         channel: t,
                         themeable: l
-                    }), j && (0, a.jsx)(g.default, {
+                    }), j && (0, a.jsx)(S.default, {
                         channel: t
                     }), A && M && (0, a.jsx)(m.default, {
                         channel: t
