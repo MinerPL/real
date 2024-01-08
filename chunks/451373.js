@@ -10,13 +10,13 @@
                 i = l("77078"),
                 o = l("87657"),
                 d = l("841098"),
-                C = l("376556"),
-                r = l("572943"),
-                u = l("627490"),
+                r = l("376556"),
+                u = l("572943"),
+                C = l("627490"),
                 c = l("745633"),
                 f = l("83900"),
-                E = l("71216"),
-                m = l("741919"),
+                m = l("71216"),
+                E = l("741919"),
                 M = l("387111"),
                 T = l("835257"),
                 h = l("782340"),
@@ -44,7 +44,7 @@
                     }
                 },
                 A = e => {
-                    let t = C.default.get((0, r.useLegacyPlatformType)(e)),
+                    let t = r.default.get((0, u.useLegacyPlatformType)(e)),
                         l = (0, d.default)();
                     return null != t && [T.IntegrationType.TWITCH, T.IntegrationType.YOUTUBE].includes(e) ? "url('".concat((0, s.isThemeDark)(l) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null
                 },
@@ -58,7 +58,7 @@
                     [T.JoinSourceType.BOT]: {
                         type: T.JoinSourceType.BOT,
                         getJoinTypeLabel: () => h.default.Messages.MEMBER_SAFETY_JOIN_TYPE_BOT,
-                        icon: (0, a.jsx)(E.default, {
+                        icon: (0, a.jsx)(m.default, {
                             className: x.robot,
                             height: 12,
                             width: 12
@@ -68,7 +68,7 @@
                     [T.JoinSourceType.INTEGRATION]: {
                         type: T.JoinSourceType.INTEGRATION,
                         getJoinTypeLabel: () => h.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION,
-                        icon: (0, a.jsx)(m.default, {
+                        icon: (0, a.jsx)(E.default, {
                             height: 12,
                             width: 12
                         }),
@@ -77,7 +77,7 @@
                     [T.JoinSourceType.DISCOVERY]: {
                         type: T.JoinSourceType.DISCOVERY,
                         getJoinTypeLabel: () => h.default.Messages.MEMBER_SAFETY_JOIN_TYPE_DISCOVERY,
-                        icon: (0, a.jsx)(u.default, {
+                        icon: (0, a.jsx)(C.default, {
                             height: 12,
                             width: 12
                         }),
@@ -116,7 +116,7 @@
                     hasTooltip: n,
                     inviterUser: s,
                     inviterMember: d,
-                    joinSourceType: C
+                    joinSourceType: r
                 } = e;
                 return n ? (0, a.jsx)(i.Tooltip, {
                     "aria-label": h.default.Messages.MEMBER_SAFETY_COMMUNICATION_DISABLED_TOOLTIP,
@@ -126,7 +126,7 @@
                         className: x.inviterTooltipContainer,
                         children: [(0, a.jsx)(i.Text, {
                             variant: "text-sm/medium",
-                            children: C !== T.JoinSourceType.BOT ? h.default.Messages.MEMBER_SAFETY_INVITER_TOOLTIP : h.default.Messages.MEMBER_SAFETY_INVITER_BOT_TOOLTIP
+                            children: r !== T.JoinSourceType.BOT ? h.default.Messages.MEMBER_SAFETY_INVITER_TOOLTIP : h.default.Messages.MEMBER_SAFETY_INVITER_BOT_TOOLTIP
                         }), (0, a.jsx)(o.default, {
                             user: s,
                             size: i.AvatarSizes.SIZE_16

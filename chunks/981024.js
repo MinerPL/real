@@ -15,8 +15,8 @@
                 c = n("396539"),
                 f = n("673699"),
                 E = n("845579"),
-                _ = n("211248"),
-                h = n("11539"),
+                h = n("211248"),
+                _ = n("11539"),
                 S = n("599110"),
                 T = n("64318"),
                 p = n("49111"),
@@ -27,10 +27,10 @@
                 let {
                     onClick: t
                 } = e;
-                return (0, l.jsx)(_.default, {
+                return (0, l.jsx)(h.default, {
                     tooltip: N.default.Messages.MARK_ALL_AS_READ,
-                    color: _.CircleIconButtonColors.SECONDARY,
-                    icon: (0, l.jsx)(h.default, {}),
+                    color: h.CircleIconButtonColors.SECONDARY,
+                    icon: (0, l.jsx)(_.default, {}),
                     onClick: t
                 })
             }
@@ -39,9 +39,9 @@
                 let {
                     setTab: t,
                     badgeState: n,
-                    closePopout: _
+                    closePopout: h
                 } = e, {
-                    initialized: h,
+                    initialized: _,
                     items: N,
                     loading: A,
                     loadMore: g
@@ -60,7 +60,7 @@
                         tab: r.InboxTab.FOR_YOU,
                         setTab: t,
                         badgeState: n,
-                        closePopout: _,
+                        closePopout: h,
                         children: L ? (0, l.jsx)(m, {
                             onClick: () => {
                                 null != M && (E.NotificationCenterAckedBeforeId.updateSetting(M.id), S.default.track(p.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
@@ -69,7 +69,7 @@
                             }
                         }) : null
                     }), (0, l.jsx)(f.default, {
-                        initialized: h,
+                        initialized: _,
                         items: R,
                         loading: A,
                         loadMore: g

@@ -301,7 +301,14 @@
                     l(null != r, "Missing elementRef"), "function" != typeof n && null != n.current && S.set(r, n.current), d.ComponentDispatch.subscribe(p.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), d.ComponentDispatch.subscribe(p.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener("resize", this.handleLayerPopComplete), null == i || i()
                 }
                 componentDidUpdate(e, t) {
-                    if (T(e) !== T(this.props) && this.updatePosition(), t.position !== this.state.position) {
+                    if (T(e) !== T(this.props) ? this.updatePosition() : ! function(e, t) {
+                            if ("function" == typeof e && "function" == typeof t) {
+                                let n = e(),
+                                    i = t();
+                                return n.top === i.top && n.left === i.left
+                            }
+                            return e === t
+                        }(e.reference, this.props.reference) && this.updatePosition(), t.position !== this.state.position) {
                         var n, i;
                         null === (n = (i = this.props).onPositionChange) || void 0 === n || n.call(i, this.state.position)
                     }

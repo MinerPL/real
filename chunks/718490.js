@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return v
+                    return L
                 }
             }), n("222007");
             var s = n("37983"),
@@ -21,8 +21,8 @@
                 E = n("664336"),
                 g = n("811305"),
                 S = n("117362"),
-                A = n("449008"),
-                _ = n("49111"),
+                _ = n("449008"),
+                A = n("49111"),
                 T = n("590456"),
                 M = n("782340"),
                 I = n("961282");
@@ -58,7 +58,7 @@
                             return [t, n.map(e => {
                                 var t;
                                 return null === (t = f.default.getGuild(e)) || void 0 === t ? void 0 : t.name
-                            }).filter(A.isNotNullish)]
+                            }).filter(_.isNotNullish)]
                         }).value();
                         return n
                     }), this.renderMoreAvatars = () => (0, s.jsx)(o.TooltipContainer, {
@@ -76,14 +76,14 @@
                             userId: this.userId,
                             section: T.UserProfileSections.MUTUAL_GUILDS,
                             analyticsLocation: {
-                                section: _.AnalyticsSections.CHANNEL_HEADER
+                                section: A.AnalyticsSections.CHANNEL_HEADER
                             }
                         })
                     }, this.userId = e, this.user = t
                 }
             }
 
-            function v(e) {
+            function L(e) {
                 let {
                     channel: t
                 } = e, n = t.getRecipientId(), l = (0, u.useAvatarsWithGuilds)(n), i = Array(l.length).fill(null), d = function(e) {

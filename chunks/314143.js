@@ -1,7 +1,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return m
+                    return E
                 }
             }), l("222007");
             var a = l("37983"),
@@ -10,27 +10,27 @@
                 i = l.n(s),
                 o = l("65597"),
                 d = l("77078"),
-                C = l("691386"),
-                r = l("804160"),
-                u = l("178406"),
+                r = l("691386"),
+                u = l("804160"),
+                C = l("178406"),
                 c = l("645266"),
                 f = l("782340"),
-                E = l("32334");
+                m = l("32334");
 
-            function m(e) {
+            function E(e) {
                 let {
                     guildId: t,
                     onPageChange: l
-                } = e, [s, m] = n.useTransition(), M = (0, o.default)([u.default], () => u.default.getEstimatedMemberSearchCountByGuildId(t), [t]), T = (0, o.useStateFromStoresObject)([u.default], () => u.default.getPaginationStateByGuildId(t), [t]), h = (0, r.useIsMakingRequest)(t), x = n.useMemo(() => C.PAGINATION_PAGE_SIZE_OPTIONS.map(e => ({
+                } = e, [s, E] = n.useTransition(), M = (0, o.default)([C.default], () => C.default.getEstimatedMemberSearchCountByGuildId(t), [t]), T = (0, o.useStateFromStoresObject)([C.default], () => C.default.getPaginationStateByGuildId(t), [t]), h = (0, u.useIsMakingRequest)(t), x = n.useMemo(() => r.PAGINATION_PAGE_SIZE_OPTIONS.map(e => ({
                     value: e,
                     label: Number(e).toLocaleString()
                 })), []), _ = new Intl.NumberFormat(f.default.getLocale()).format(M), H = f.default.Messages.MEMBER_SAFETY_TABLE_PAGINATION_LABEL.format({
                     count: h ? "..." : _
-                }), A = M > T.pageSize || h, N = M > C.PAGINATION_PAGE_SIZE_OPTIONS[0];
+                }), A = M > T.pageSize || h, N = M > r.PAGINATION_PAGE_SIZE_OPTIONS[0];
                 return (0, a.jsxs)("div", {
-                    className: i(E.paginationContainer),
+                    className: i(m.paginationContainer),
                     children: [(0, a.jsx)("div", {
-                        className: i(E.pageSizeSelection),
+                        className: i(m.pageSizeSelection),
                         children: N ? (0, a.jsxs)(a.Fragment, {
                             children: [(0, a.jsx)(d.Text, {
                                 variant: "text-md/normal",
@@ -38,11 +38,11 @@
                                 children: f.default.Messages.MEMBER_SAFETY_TABLE_PAGINATION_PRE_LABEL
                             }), (0, a.jsx)(d.Select, {
                                 "aria-label": H,
-                                className: E.pageSizeInput,
+                                className: m.pageSizeInput,
                                 options: x,
                                 isSelected: e => e === T.pageSize,
                                 select: e => {
-                                    m(() => {
+                                    E(() => {
                                         (0, c.updateMemberSafetyTablePagination)(t, {
                                             ...T,
                                             pageSize: e
@@ -57,7 +57,7 @@
                                 children: e => (0, a.jsx)(d.Text, {
                                     variant: "text-md/normal",
                                     color: "text-muted",
-                                    className: i(E.pageLabel),
+                                    className: i(m.pageLabel),
                                     ...e,
                                     children: H
                                 })
@@ -70,9 +70,9 @@
                             })
                         })
                     }), (0, a.jsx)("div", {
-                        className: i(E.pagination),
+                        className: i(m.pagination),
                         children: A && (0, a.jsx)(d.Paginator, {
-                            className: i(E.paginationInput),
+                            className: i(m.paginationInput),
                             totalCount: M,
                             pageSize: T.pageSize,
                             disablePaginationGap: !0,
@@ -80,7 +80,7 @@
                             currentPage: T.currentPage,
                             onPageChange: e => {
                                 null == l || l(e), requestIdleCallback(() => {
-                                    m(() => {
+                                    E(() => {
                                         (0, c.updateMemberSafetyTablePagination)(t, {
                                             ...T,
                                             currentPage: e
@@ -88,7 +88,7 @@
                                     })
                                 })
                             },
-                            maxVisiblePages: C.MAX_VISIBLE_PAGES
+                            maxVisiblePages: r.MAX_VISIBLE_PAGES
                         })
                     })]
                 })

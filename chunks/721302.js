@@ -10,13 +10,13 @@
                 i = l.n(s),
                 o = l("483366"),
                 d = l.n(o),
-                C = l("969176"),
-                r = l.n(C),
-                u = l("65597"),
+                r = l("969176"),
+                u = l.n(r),
+                C = l("65597"),
                 c = l("77078"),
                 f = l("957255"),
-                E = l("810567"),
-                m = l("130037"),
+                m = l("810567"),
+                E = l("130037"),
                 M = l("178406"),
                 T = l("645266"),
                 h = l("843455"),
@@ -25,8 +25,8 @@
             let H = n.forwardRef(function(e, t) {
                 let {
                     guild: s
-                } = e, o = (0, u.default)([M.default], () => M.default.hasDefaultSearchStateByGuildId(s.id), [s.id]), C = (0, u.default)([f.default], () => f.default.can(h.Permissions.KICK_MEMBERS, s)), H = n.useCallback(() => {
-                    null != s && C && (0, c.openModalLazy)(async () => {
+                } = e, o = (0, C.default)([M.default], () => M.default.hasDefaultSearchStateByGuildId(s.id), [s.id]), r = (0, C.default)([f.default], () => f.default.can(h.Permissions.KICK_MEMBERS, s)), H = n.useCallback(() => {
+                    null != s && r && (0, c.openModalLazy)(async () => {
                         let {
                             default: e
                         } = await l.el("494440").then(l.bind(l, "494440"));
@@ -35,7 +35,7 @@
                             guild: s
                         })
                     })
-                }, [s, C]), A = (0, u.default)([M.default], () => M.default.getSearchStateByGuildId(s.id), [s.id], r), N = (0, m.useTrackMemberSearchUsed)(s.id), [p, g] = n.useState(A.query), S = n.useCallback(e => {
+                }, [s, r]), A = (0, C.default)([M.default], () => M.default.getSearchStateByGuildId(s.id), [s.id], u), N = (0, E.useTrackMemberSearchUsed)(s.id), [p, g] = n.useState(A.query), S = n.useCallback(e => {
                     let t = e.trim();
                     t.length > 0 && N(), (0, T.updateSearchState)(s.id, {
                         query: t
@@ -64,7 +64,7 @@
                         className: i(_.searchInput),
                         children: (0, a.jsx)("div", {
                             className: i(_.searchHeader),
-                            children: (0, a.jsx)(E.default, {
+                            children: (0, a.jsx)(m.default, {
                                 className: _.searchBar,
                                 query: p,
                                 placeholder: x.default.Messages.MEMBER_SAFETY_TABLE_SEARCH_PLACEHOLDER,
@@ -80,7 +80,7 @@
                         })
                     }), (0, a.jsx)("div", {
                         className: i(_.tableOptions),
-                        children: C && (0, a.jsx)(c.Button, {
+                        children: r && (0, a.jsx)(c.Button, {
                             className: i(_.pruneButton),
                             onClick: H,
                             "aria-label": x.default.Messages.PRUNE_MEMBERS,

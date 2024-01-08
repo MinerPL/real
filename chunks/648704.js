@@ -60,7 +60,7 @@
                 })), V = (0, o.useStateFromStores)([D.default], () => {
                     let e = (0, M.pageToEducationUpsellType)(A);
                     return null != e && !D.default.isEducationUpsellDismissed(e)
-                }), k = (0, o.useStateFromStores)([T.default], () => T.default.useReducedMotion), w = (0, _.default)(), Y = n.useRef(null), [{
+                }), w = (0, o.useStateFromStores)([T.default], () => T.default.useReducedMotion), k = (0, _.default)(), Y = n.useRef(null), [{
                     spring: K
                 }, W] = (0, r.useSpring)(() => ({
                     spring: 0
@@ -82,7 +82,7 @@
                 }, [W]);
                 let z = (0, E.useToken)(d.default.colors.BACKGROUND_FLOATING).hex(),
                     X = (0, E.useToken)(d.default.unsafe_rawColors.PRIMARY_160).hex(),
-                    Z = (0, c.isThemeDark)(w) ? z : X,
+                    Z = (0, c.isThemeDark)(k) ? z : X,
                     J = K.to({
                         range: [0, 1],
                         output: [(0, E.useToken)(d.default.unsafe_rawColors.WHITE_500).hex(), (0, E.useToken)(d.default.colors.TEXT_NORMAL).hex()]
@@ -181,7 +181,7 @@
                                     className: y.educationUpsellRoot,
                                     children: [(0, a.jsx)("img", {
                                         className: i(y.wumpus, {
-                                            [y.animated]: !k
+                                            [y.animated]: !w
                                         }),
                                         src: s("353773"),
                                         alt: "wumpus"

@@ -10,13 +10,13 @@
                 i = l.n(s),
                 o = l("714617"),
                 d = l.n(o),
-                C = l("907002"),
-                r = l("65597"),
-                u = l("750560"),
+                r = l("907002"),
+                u = l("65597"),
+                C = l("750560"),
                 c = l("206230"),
                 f = l("685665"),
-                E = l("334572"),
-                m = l("866190"),
+                m = l("334572"),
+                E = l("866190"),
                 M = l("130037"),
                 T = l("178406"),
                 h = l("645266"),
@@ -54,8 +54,8 @@
                         searchState: o,
                         compact: d,
                         onSelectRow: f,
-                        onResetForNewMembers: E
-                    } = e, M = (0, r.default)([c.default], () => c.default.useReducedMotion), p = (0, m.useIsWindowFocused)(), [b, O] = n.useState(!1), [D, V] = n.useState(!1);
+                        onResetForNewMembers: m
+                    } = e, M = (0, u.default)([c.default], () => c.default.useReducedMotion), p = (0, E.useIsWindowFocused)(), [b, O] = n.useState(!1), [D, V] = n.useState(!1);
                     n.useEffect(() => {
                         !p && (O(!1), V(!1))
                     }, [p]), n.useLayoutEffect(() => {
@@ -68,13 +68,13 @@
                         return window.addEventListener("keydown", e), window.addEventListener("keyup", t), () => {
                             window.removeEventListener("keydown", e), window.removeEventListener("keyup", t)
                         }
-                    }, []), (0, u.useSubscribeGuildMembers)({
+                    }, []), (0, C.useSubscribeGuildMembers)({
                         [l.id]: t
                     }), n.useEffect(() => {
                         (0, h.getMemberSupplemental)(l.id, t)
                     }, [l.id, t]);
                     let B = t.length > 30,
-                        y = (0, C.useTransition)(t, {
+                        y = (0, r.useTransition)(t, {
                             key: e => e,
                             trail: B ? 5 : 15,
                             immediate: M,
@@ -96,7 +96,7 @@
                             children: o === _.SearchState.SUCCESS_FULL || o === _.SearchState.LOADING ? (0, a.jsxs)(a.Fragment, {
                                 children: [(0, a.jsx)(N.default, {
                                     guild: l,
-                                    onSubmit: E
+                                    onSubmit: m
                                 }), y((e, t) => (0, a.jsx)(A.default, {
                                     userId: t,
                                     guildId: l.id,
@@ -127,13 +127,13 @@
                     className: i,
                     searchState: o,
                     compact: d,
-                    onSelectRow: C,
-                    onResetForNewMembers: u
-                } = e, c = (0, r.useStateFromStoresObject)([T.default], () => T.default.getPaginationStateByGuildId(s.id), [s.id]), [m] = (0, r.default)([T.default], () => T.default.getPagedMembersByGuildId(s.id), [s.id], E.isVersionEqual);
+                    onSelectRow: r,
+                    onResetForNewMembers: C
+                } = e, c = (0, u.useStateFromStoresObject)([T.default], () => T.default.getPaginationStateByGuildId(s.id), [s.id]), [E] = (0, u.default)([T.default], () => T.default.getPagedMembersByGuildId(s.id), [s.id], m.isVersionEqual);
                 n.useEffect(() => {
                     (0, h.initializeMemberSafetyStore)(s.id)
                 }, [s.id]);
-                let x = n.useDeferredValue(null !== (t = m[c.currentPage]) && void 0 !== t ? t : []),
+                let x = n.useDeferredValue(null !== (t = E[c.currentPage]) && void 0 !== t ? t : []),
                     {
                         analyticsLocations: _
                     } = (0, f.default)(),
@@ -146,7 +146,7 @@
                     className: i,
                     searchState: o,
                     compact: d,
-                    onSelectRow: C,
-                    onResetForNewMembers: u
+                    onSelectRow: r,
+                    onResetForNewMembers: C
                 })
             }

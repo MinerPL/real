@@ -115,11 +115,11 @@
                     expandedId: null,
                     lastExpandedId: null,
                     actionFilterQuery: ""
-                }), F = C.transformLogs(j, l), H = !1, V = n.useRef(null), k = (0, I.default)(b), w = (0, I.default)(F), Y = () => {
+                }), F = C.transformLogs(j, l), H = !1, V = n.useRef(null), w = (0, I.default)(b), k = (0, I.default)(F), Y = () => {
                     var e;
                     return (null === (e = V.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) || !1
                 };
-                O || (null == F ? void 0 : F.length) === (null == w ? void 0 : w.length) || null == V || Y();
+                O || (null == F ? void 0 : F.length) === (null == k ? void 0 : k.length) || null == V || Y();
                 let K = () => {
                         let s = {
                             expanded: null,
@@ -147,7 +147,7 @@
                         })), W = K())
                     });
                 n.useEffect(() => {
-                    b.expandedId !== (null == k ? void 0 : k.expandedId) && X()
+                    b.expandedId !== (null == w ? void 0 : w.expandedId) && X()
                 }, []);
                 let X = () => {
                         let e = V.current;

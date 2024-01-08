@@ -10,13 +10,13 @@
                 i = l("266491"),
                 o = l("708253"),
                 d = l("77078"),
-                C = l("851387"),
-                r = l("45299"),
-                u = l("716241"),
+                r = l("851387"),
+                u = l("45299"),
+                C = l("716241"),
                 c = l("685665"),
                 f = l("271938"),
-                E = l("965397"),
-                m = l("530346"),
+                m = l("965397"),
+                E = l("530346"),
                 M = l("781896"),
                 T = l("599110"),
                 h = l("130037"),
@@ -37,9 +37,9 @@
                     clearSelection: v
                 } = (0, _.default)(p), R = I.size > 0, j = async (e, t, l, a) => {
                     try {
-                        let n = await C.default.banMultipleUsers(e, t, l, a);
+                        let n = await r.default.banMultipleUsers(e, t, l, a);
                         (0, d.showToast)((0, d.createToast)(A.default.Messages.BAN_MULTIPLE_SUCCESS_TOAST, d.ToastType.SUCCESS)), T.default.track(H.AnalyticEvents.BULK_MODERATION_ACTION_COMPLETED, {
-                            ...(0, u.collectGuildAnalyticsMetadata)(e),
+                            ...(0, C.collectGuildAnalyticsMetadata)(e),
                             action_type: h.ModerationActionType.BAN,
                             target_user_ids: [...I],
                             mod_user_id: f.default.getId(),
@@ -73,7 +73,7 @@
                     })]
                 }), D = (0, a.jsxs)("span", {
                     className: N.buttonContainer,
-                    children: [(0, a.jsx)(m.default, {
+                    children: [(0, a.jsx)(E.default, {
                         width: 20,
                         height: 20
                     }), (0, a.jsx)(d.Text, {
@@ -84,11 +84,11 @@
                 return L ? (0, a.jsx)(i.default, {
                     component: "div",
                     className: N.saveNoticeContainer,
-                    children: R && (0, a.jsx)(E.default, {
-                        children: (0, a.jsx)(r.default, {
+                    children: R && (0, a.jsx)(m.default, {
+                        children: (0, a.jsx)(u.default, {
                             onSave: () => {
                                 T.default.track(H.AnalyticEvents.BULK_MODERATION_ACTION_STARTED, {
-                                    ...(0, u.collectGuildAnalyticsMetadata)(p),
+                                    ...(0, C.collectGuildAnalyticsMetadata)(p),
                                     action_type: h.ModerationActionType.BAN,
                                     target_user_ids: [...I],
                                     mod_user_id: f.default.getId(),

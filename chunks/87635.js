@@ -21,8 +21,8 @@
                 E = n("578706"),
                 g = n("347895"),
                 S = n("129092"),
-                A = n("726274"),
-                _ = n("290886"),
+                _ = n("726274"),
+                A = n("290886"),
                 T = n("205454"),
                 M = n("782340"),
                 I = n("719832");
@@ -46,7 +46,7 @@
                 })
             }
 
-            function v(e) {
+            function L(e) {
                 var t;
                 let {
                     channelId: n,
@@ -65,7 +65,7 @@
                 })
             }
 
-            function L(e) {
+            function v(e) {
                 var t, n, l, c;
                 let {
                     guildId: f,
@@ -73,29 +73,29 @@
                     className: C
                 } = e, {
                     channelAction: m,
-                    completed: _
-                } = (0, A.useMemberActionsForChannel)(f, h), T = (0, A.useNextMemberAction)(f, null == m ? void 0 : m.channelId), L = (0, o.default)([d.default], () => d.default.useReducedMotion), x = (null == m ? void 0 : m.actionType) === S.NewMemberActionTypes.VIEW, R = (0, u.useToken)(u.tokens.colors.WHITE), [y, D] = a.useState(!1), [O] = a.useState(new r.default.Value(0)), [j] = a.useState(new r.default.Value(0));
+                    completed: A
+                } = (0, _.useMemberActionsForChannel)(f, h), T = (0, _.useNextMemberAction)(f, null == m ? void 0 : m.channelId), v = (0, o.default)([d.default], () => d.default.useReducedMotion), x = (null == m ? void 0 : m.actionType) === S.NewMemberActionTypes.VIEW, R = (0, u.useToken)(u.tokens.colors.WHITE), [y, D] = a.useState(!1), [O] = a.useState(new r.default.Value(0)), [j] = a.useState(new r.default.Value(0));
                 a.useEffect(() => {
-                    _ ? r.default.timing(O, {
+                    A ? r.default.timing(O, {
                         toValue: 0,
-                        duration: L ? 1 : 350,
+                        duration: v ? 1 : 350,
                         easing: r.default.Easing.quad,
                         delay: x ? 0 : 500
                     }).start(() => D(!0)) : r.default.timing(O, {
                         toValue: 1,
-                        duration: L ? 1 : 350,
+                        duration: v ? 1 : 350,
                         easing: r.default.Easing.quad,
                         delay: 400
                     }).start()
-                }, [_, O, x, L]), a.useEffect(() => {
-                    _ && y && r.default.timing(j, {
+                }, [A, O, x, v]), a.useEffect(() => {
+                    A && y && r.default.timing(j, {
                         toValue: 1,
-                        duration: L ? 0 : 350,
+                        duration: v ? 0 : 350,
                         easing: r.default.Easing.quad,
                         delay: 400
                     }).start()
-                }, [_, j, y, L]);
-                let P = a.useCallback(() => {
+                }, [A, j, y, v]);
+                let b = a.useCallback(() => {
                     null != T && (0, g.selectNewMemberActionChannel)(f, T.channelId)
                 }, [f, T]);
                 return null == m || x && !y ? null : (0, s.jsx)("div", {
@@ -109,8 +109,8 @@
                         },
                         children: (0, s.jsxs)(u.Clickable, {
                             className: i(I.banner, I.clickable),
-                            onClick: P,
-                            children: [(0, s.jsx)(v, {
+                            onClick: b,
+                            children: [(0, s.jsx)(L, {
                                 channelId: T.channelId,
                                 emojiId: null === (t = T.emoji) || void 0 === t ? void 0 : t.id,
                                 emojiName: null == T ? void 0 : null === (n = T.emoji) || void 0 === n ? void 0 : n.name
@@ -143,7 +143,7 @@
                                 outputRange: [-60, 0]
                             })
                         },
-                        children: [(0, s.jsx)(v, {
+                        children: [(0, s.jsx)(L, {
                             channelId: m.channelId,
                             emojiId: null === (l = m.emoji) || void 0 === l ? void 0 : l.id,
                             emojiName: null == m ? void 0 : null === (c = m.emoji) || void 0 === c ? void 0 : c.name
@@ -158,7 +158,7 @@
                                 color: "text-muted",
                                 children: M.default.Messages.MEMBER_ACTION_CHAT
                             })]
-                        }), _ ? (0, s.jsx)(E.default, {
+                        }), A ? (0, s.jsx)(E.default, {
                             className: I.completed,
                             backgroundColor: R.hex(),
                             width: 20,
@@ -173,11 +173,11 @@
                     guildId: t,
                     channel: n,
                     className: a
-                } = e, l = (0, _.useCanSeeOnboardingHome)(t), i = (0, o.default)([C.default], () => {
+                } = e, l = (0, A.useCanSeeOnboardingHome)(t), i = (0, o.default)([C.default], () => {
                     var e;
                     return (null === (e = C.default.getSelfMember(t)) || void 0 === e ? void 0 : e.isPending) === !0
-                }), r = (0, A.useAllActionsCompleted)(t);
-                return r || i || !l ? null : (0, s.jsx)(L, {
+                }), r = (0, _.useAllActionsCompleted)(t);
+                return r || i || !l ? null : (0, s.jsx)(v, {
                     guildId: t,
                     channel: n,
                     className: a

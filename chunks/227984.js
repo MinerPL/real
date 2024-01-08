@@ -26,7 +26,7 @@
                         author: p,
                         repliedMessage: m,
                         roleIcon: E
-                    } = e, g = (0, d.useContextMenuUser)(t.author.id, n.id), S = (0, d.useClickMessageAuthorUsername)(t, n, f, C), A = (0, d.useClickMessageAuthorAvatar)(h, C), _ = a.useCallback(() => C({
+                    } = e, g = (0, d.useContextMenuUser)(t.author.id, n.id), S = (0, d.useClickMessageAuthorUsername)(t, n, f, C), _ = (0, d.useClickMessageAuthorAvatar)(h, C), A = a.useCallback(() => C({
                         usernameProfile: !1,
                         avatarProfile: !1,
                         referencedUsernameProfile: !1
@@ -43,10 +43,10 @@
                         renderPopout: u.default,
                         showAvatarPopout: h,
                         showUsernamePopout: f,
-                        onClickAvatar: A,
+                        onClickAvatar: _,
                         onClickUsername: S,
                         onContextMenu: g,
-                        onPopoutRequestClose: _,
+                        onPopoutRequestClose: A,
                         roleIcon: E
                     })
                 }),

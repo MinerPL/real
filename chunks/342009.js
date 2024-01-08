@@ -64,7 +64,7 @@
                     collapsedReason: u
                 } = e, {
                     hasJumpTarget: d = !1
-                } = n, [C, g] = a.useState(d), S = a.useCallback(() => g(e => !e), []), A = n.hasUnread ? n.content.length - 1 : n.content.length;
+                } = n, [C, g] = a.useState(d), S = a.useCallback(() => g(e => !e), []), _ = n.hasUnread ? n.content.length - 1 : n.content.length;
                 return (0, s.jsxs)("div", {
                     className: i({
                         [m.groupStart]: !0,
@@ -74,7 +74,7 @@
                         isUnread: !0,
                         id: o
                     }, "divider") : null, (0, s.jsx)(E, {
-                        count: A,
+                        count: _,
                         compact: r,
                         expanded: C,
                         onClick: S,

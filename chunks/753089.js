@@ -21,8 +21,8 @@
                 E = n("158998"),
                 g = n("913491"),
                 S = n("49111"),
-                A = n("782340"),
-                _ = n("649755");
+                _ = n("782340"),
+                A = n("649755");
             let T = "749054660769218631";
 
             function M(e) {
@@ -35,8 +35,8 @@
                 }, []);
                 let I = (0, r.useStateFromStores)([C.default, h.default], () => !!i(C.default.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== h.default.getId() && e.state === S.MessageStates.SENT && !(0, g.default)(e))),
                     N = (0, r.useStateFromStores)([p.default], () => p.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-                    v = null !== (t = E.default.useName(N)) && void 0 !== t ? t : A.default.Messages.WAVE_DEFAULT_RECIPIENT,
-                    L = (0, r.useStateFromStores)([c.default], () => c.default.getStickerById(T)),
+                    L = null !== (t = E.default.useName(N)) && void 0 !== t ? t : _.default.Messages.WAVE_DEFAULT_RECIPIENT,
+                    v = (0, r.useStateFromStores)([c.default], () => c.default.getStickerById(T)),
                     x = a.useCallback(async () => {
                         if (null == l || "" === l) try {
                             await u.default.sendGreetMessage(n.id, T), m.default.track(S.AnalyticEvents.DM_EMPTY_ACTION, {
@@ -46,40 +46,40 @@
                                 type: "Send wave"
                             })
                         } catch (e) {
-                            !e.ok && 429 === e.status && M(A.default.Messages.RATE_LIMITED)
+                            !e.ok && 429 === e.status && M(_.default.Messages.RATE_LIMITED)
                         }
                     }, [n.id, n.type, l]),
-                    R = A.default.Messages.WAVE_TO.format({
-                        username: v
+                    R = _.default.Messages.WAVE_TO.format({
+                        username: L
                     }),
                     y = null != l && "" !== l ? (0, s.jsx)(o.Text, {
-                        className: _.error,
+                        className: A.error,
                         color: "text-danger",
                         variant: "text-sm/normal",
                         children: l
                     }) : null;
                 return I ? (0, s.jsxs)("div", {
-                    className: _.containerCompact,
+                    className: A.containerCompact,
                     children: [(0, s.jsxs)(o.Clickable, {
-                        className: null != l && "" !== l ? _.compactButtonDisabled : _.compactButton,
-                        "aria-label": A.default.Messages.SEND_WAVE,
+                        className: null != l && "" !== l ? A.compactButtonDisabled : A.compactButton,
+                        "aria-label": _.default.Messages.SEND_WAVE,
                         onClick: x,
                         children: [(0, s.jsx)(f.default, {
-                            sticker: L,
+                            sticker: v,
                             size: 24
                         }), (0, s.jsx)(o.Text, {
-                            className: _.text,
+                            className: A.text,
                             variant: "text-md/medium",
                             children: R
                         })]
                     }), y]
                 }) : (0, s.jsxs)("div", {
-                    className: _.containerExpanded,
+                    className: A.containerExpanded,
                     children: [(0, s.jsx)(f.default, {
-                        sticker: L,
+                        sticker: v,
                         size: 160
                     }), (0, s.jsx)(o.Button, {
-                        className: _.button,
+                        className: A.button,
                         onClick: x,
                         disabled: !!l,
                         children: R

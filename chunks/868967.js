@@ -10,13 +10,13 @@
                 i = l.n(s),
                 o = l("65597"),
                 d = l("77078"),
-                C = l("4845"),
-                r = l("635731"),
-                u = l("491401"),
+                r = l("4845"),
+                u = l("635731"),
+                C = l("491401"),
                 c = l("864982"),
                 f = l("130037"),
-                E = l("536999"),
-                m = l("178406"),
+                m = l("536999"),
+                E = l("178406"),
                 M = l("645266"),
                 T = l("49111"),
                 h = l("782340"),
@@ -26,7 +26,7 @@
                 let {
                     guildId: t,
                     onClose: l
-                } = e, s = (0, o.default)([m.default], () => m.default.getSearchStateByGuildId(t), [t], i), _ = (0, f.useTrackMemberFilterSafetyFlagsUsed)(t), H = (0, E.isInMembersTableSafetySignalsExperiment)(t), A = n.useCallback(() => {
+                } = e, s = (0, o.default)([E.default], () => E.default.getSearchStateByGuildId(t), [t], i), _ = (0, f.useTrackMemberFilterSafetyFlagsUsed)(t), H = (0, m.isInMembersTableSafetySignalsExperiment)(t), A = n.useCallback(() => {
                     !s.requireUnusualDmActivity && _(f.MemberSafetyFlagType.UNUSUAL_DM_ACTIVITY), (0, M.updateSearchState)(t, {
                         ...s,
                         requireUnusualDmActivity: !s.requireUnusualDmActivity
@@ -57,7 +57,7 @@
                             id: "toggle-require-unusual-dm-activity",
                             label: (0, a.jsxs)("div", {
                                 className: x.checkboxLabel,
-                                children: [(0, a.jsx)(C.default, {
+                                children: [(0, a.jsx)(r.default, {
                                     width: 16,
                                     height: 16,
                                     className: x.unusualDMLabelIcon
@@ -69,7 +69,7 @@
                             id: "toggle-require-communication-disabled",
                             label: (0, a.jsxs)("div", {
                                 className: x.checkboxLabel,
-                                children: [(0, a.jsx)(u.default, {
+                                children: [(0, a.jsx)(C.default, {
                                     width: 16,
                                     height: 16,
                                     className: x.timeoutLabelIcon
@@ -94,7 +94,7 @@
                                 id: "toggle-require-username-quarantined",
                                 label: (0, a.jsxs)("div", {
                                     className: x.checkboxLabel,
-                                    children: [(0, a.jsx)(r.default, {
+                                    children: [(0, a.jsx)(u.default, {
                                         width: 16,
                                         height: 16,
                                         className: x.quarantinedLabelIcon

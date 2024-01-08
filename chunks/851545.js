@@ -83,7 +83,7 @@
                         canManageGuild: j
                     } = (0, l.useStateFromStoresObject)([N.default], () => ({
                         canManageGuild: N.default.can(M.Permissions.MANAGE_GUILD, s)
-                    })), P = (0, l.useStateFromStores)([h.default], () => h.default.isGuildMetadataLoaded()), y = (0, l.useStateFromStores)([h.default], () => null != s ? h.default.getMetadata() : null), b = (0, l.useStateFromStores)([h.default], () => null != s && (null == y ? void 0 : y.isPublished) ? h.default.getSlug() : null), [B, F] = n.useState([!0]), [H, V] = n.useState(!0), [k, w] = n.useState([!1]), [Y, K] = n.useState([""]), W = e => {
+                    })), P = (0, l.useStateFromStores)([h.default], () => h.default.isGuildMetadataLoaded()), y = (0, l.useStateFromStores)([h.default], () => null != s ? h.default.getMetadata() : null), b = (0, l.useStateFromStores)([h.default], () => null != s && (null == y ? void 0 : y.isPublished) ? h.default.getSlug() : null), [B, F] = n.useState([!0]), [H, V] = n.useState(!0), [w, k] = n.useState([!1]), [Y, K] = n.useState([""]), W = e => {
                         let t = Object.entries(G.ALLOWED_SOCIAL_LINKS_DOMAINS).filter(e => !Y.includes(e[1].presentation)).map(e => ({
                             label: e[1].presentation,
                             value: e[0]
@@ -188,8 +188,8 @@
                             a[t] = l, c.updateGuildDiscoveryMetadataSocialLinks(s.id, a)
                         },
                         en = e => {
-                            let t = [...k];
-                            t.splice(e, 1), w(t);
+                            let t = [...w];
+                            t.splice(e, 1), k(t);
                             let a = [...B];
                             a.splice(e, 1), F(a);
                             let n = [...Y];
@@ -232,8 +232,8 @@
                             value: e.categoryId
                         })),
                         ed = (e, t) => {
-                            let s = [...k];
-                            s[e] = t, w(s)
+                            let s = [...w];
+                            s[e] = t, k(s)
                         };
                     return (0, a.jsx)("div", {
                         className: p.settingsColumn,
@@ -481,7 +481,7 @@
                                                                 width: 20,
                                                                 height: 20
                                                             }, "validation-failed-" + t), j && (0, a.jsx)(o.default, {
-                                                                className: k[t] ? y.isPublished ? p.deleteButtonMax : p.deleteButtonMin : y.isPublished ? p.deleteButtonHiddenMax : p.deleteButtonHiddenMin,
+                                                                className: w[t] ? y.isPublished ? p.deleteButtonMax : p.deleteButtonMin : y.isPublished ? p.deleteButtonHiddenMax : p.deleteButtonHiddenMin,
                                                                 onClick: () => en(t)
                                                             }, "delete-button-" + t)]
                                                         }, "social-container-" + t)), (null == X ? void 0 : X.social_links) != null ? (0, a.jsx)(r.Text, {

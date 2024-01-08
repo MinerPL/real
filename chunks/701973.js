@@ -59,7 +59,7 @@
                 })
             }
 
-            function k(e) {
+            function w(e) {
                 let {
                     icon: t,
                     children: s,
@@ -101,7 +101,7 @@
                 })
             }
 
-            function w(e) {
+            function k(e) {
                 let {
                     title: t,
                     selectAllText: s,
@@ -115,7 +115,7 @@
                     className: b.section,
                     children: [a.length - n.size > 1 && (0, l.jsx)("div", {
                         className: b.list,
-                        children: (0, l.jsx)(k, {
+                        children: (0, l.jsx)(w, {
                             icon: (0, l.jsx)(D.default, {
                                 className: b.rowIcon
                             }),
@@ -131,7 +131,7 @@
                         })
                     }), (0, l.jsx)("div", {
                         className: b.list,
-                        children: a.map(e => (0, l.jsxs)(k, {
+                        children: a.map(e => (0, l.jsxs)(w, {
                             icon: (0, l.jsx)(V, {
                                 emojiId: e.emoji_id,
                                 emojiName: e.emoji_name,
@@ -194,14 +194,14 @@
                             })]
                         }), (0, l.jsxs)(I.ModalContent, {
                             className: b.modalContent,
-                            children: [(0, l.jsx)(w, {
+                            children: [(0, l.jsx)(k, {
                                 title: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_CHANNEL_BENEFITS_CHANNELS_TITLE,
                                 selectAllText: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_SELECT_ALL_CHANNEL_BENEFITS,
                                 benefits: T,
                                 dupeBenefits: N,
                                 selectedBenefits: u,
                                 onToggleBenefit: A
-                            }), (0, l.jsx)(w, {
+                            }), (0, l.jsx)(k, {
                                 title: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INTANGIBLE_BENEFITS_TITLE,
                                 selectAllText: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMPORT_BENEFITS_SELECT_ALL_INTANGIBLE_BENEFITS,
                                 benefits: S,
@@ -386,7 +386,7 @@
                         className: b.modalContent,
                         children: [E.length > 1 && (0, l.jsx)("div", {
                             className: b.list,
-                            children: (0, l.jsx)(k, {
+                            children: (0, l.jsx)(w, {
                                 icon: (0, l.jsx)(D.default, {}),
                                 checked: _.size === E.length,
                                 onChange: function(e) {
@@ -403,7 +403,7 @@
                             children: E.map(e => {
                                 var t;
                                 let s = null !== (t = (0, N.getSimpleChannelIconComponent)(e.type)) && void 0 !== t ? t : h.default;
-                                return (0, l.jsx)(k, {
+                                return (0, l.jsx)(w, {
                                     icon: (0, l.jsx)("div", {
                                         className: b.rowIcon,
                                         children: (0, l.jsx)(s, {

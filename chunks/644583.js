@@ -1,22 +1,22 @@
             "use strict";
             l.r(t), l.d(t, {
                 roleToPendingAddition: function() {
-                    return D
-                },
-                channelToPendingAddition: function() {
                     return V
                 },
+                channelToPendingAddition: function() {
+                    return B
+                },
                 default: function() {
-                    return F
+                    return w
                 }
             }), l("222007");
-            var a, n, s, i, o, d, C = l("37983"),
-                r = l("884691"),
-                u = l("414456"),
-                c = l.n(u),
+            var a, n, s, i, o, d, r = l("37983"),
+                u = l("884691"),
+                C = l("414456"),
+                c = l.n(C),
                 f = l("448105"),
-                E = l.n(f),
-                m = l("446674"),
+                m = l.n(f),
+                E = l("446674"),
                 M = l("77078"),
                 T = l("137223"),
                 h = l("679653"),
@@ -32,17 +32,18 @@
                 I = l("782340"),
                 v = l("159260");
             let R = (0, S.uid)(),
-                j = (0, S.uid)();
+                j = (0, S.uid)(),
+                b = "text-sm/medium";
 
-            function b(e) {
+            function O(e) {
                 return 1 === e.type
             }
 
-            function O(e) {
+            function D(e) {
                 return 0 === e.type
             }
 
-            function D(e) {
+            function V(e) {
                 let t = "".concat(e.name.includes(H.EVERYONE_ID) ? "" : "@").concat(e.name);
                 return {
                     tag: {
@@ -58,7 +59,7 @@
                 }
             }
 
-            function V(e) {
+            function B(e) {
                 let t = (0, h.computeChannelName)(e, g.default, p.default);
                 return {
                     tag: {
@@ -73,70 +74,76 @@
                     }
                 }
             }(i = a || (a = {}))[i.CHANNEL = 0] = "CHANNEL", i[i.ROLE = 1] = "ROLE";
-            let B = r.memo(function(e) {
+            let y = u.memo(function(e) {
+                var t;
                 let {
-                    row: t,
-                    guildId: l
+                    row: l,
+                    guildId: a,
+                    className: n
                 } = e, {
-                    id: a,
-                    name: n
-                } = t.record, s = (0, _.useRoleIcon)({
-                    guildId: l,
-                    roleId: a,
+                    id: s,
+                    name: i
+                } = l.record, o = (0, _.useRoleIcon)({
+                    guildId: a,
+                    roleId: s,
                     size: 16
-                }), i = n.includes(H.EVERYONE_ID) ? "" : "@";
-                return (0, C.jsx)("div", {
-                    className: v.roleTagContainer,
-                    children: (0, C.jsxs)("div", {
-                        className: v.roleTag,
-                        children: [null != s ? (0, C.jsx)(L.default, {
-                            className: v.roleTagIcon,
-                            ...s,
-                            enableTooltip: !1
-                        }) : i, (0, C.jsx)("span", {
-                            className: v.roleTagLabel,
-                            children: n
-                        })]
-                    })
-                }, a)
+                }), d = (0, E.useStateFromStores)([N.default], () => {
+                    let e = N.default.getGuild(a);
+                    return null == e ? null : e.roles[s]
+                }, [s, a]), u = i.includes(H.EVERYONE_ID) ? "" : "@", C = (0, M.useToken)(M.tokens.unsafe_rawColors.PRIMARY_300).hsl(), f = null !== (t = null == d ? void 0 : d.colorString) && void 0 !== t ? t : C;
+                return (0, r.jsxs)("div", {
+                    className: c(v.rowLabel, v.roleTagContainer, n),
+                    children: [(0, r.jsx)(M.RoleDot, {
+                        className: v.roleDot,
+                        color: f,
+                        background: !1,
+                        tooltip: !1
+                    }), null != o ? (0, r.jsx)(L.default, {
+                        className: v.roleTagIcon,
+                        ...o,
+                        enableTooltip: !1
+                    }) : u, (0, r.jsx)(M.Text, {
+                        variant: b,
+                        className: v.roleTagLabel,
+                        children: i
+                    })]
+                })
             });
-
-            function y(e, t) {
-                return b(e) ? (0, C.jsx)(B, {
-                    row: e,
-                    guildId: t
-                }) : O(e) ? (0, C.jsx)(U, {
-                    channel: e.record,
-                    className: v.noIndent,
-                    children: e.display
-                }, e.record.id) : null
-            }
 
             function U(e) {
                 let {
                     channel: t,
-                    children: l,
+                    row: l,
                     className: a
-                } = e, n = null != t.parent_id, s = (0, x.getChannelIconComponent)(t), i = (0, C.jsx)(M.Text, {
-                    variant: "text-xs/medium",
-                    children: l
-                });
-                return t.isCategory() && (i = (0, C.jsx)(M.Text, {
-                    variant: "eyebrow",
-                    children: l
-                })), (0, C.jsxs)("div", {
+                } = e, n = null != t.parent_id, s = (0, x.getChannelIconComponent)(t);
+                return (0, r.jsxs)("div", {
                     className: c(v.rowLabel, v.channelLabel, {
                         [v.hasParent]: n
                     }, a),
-                    children: [null != s && (0, C.jsx)(s, {
+                    children: [null != s && (0, r.jsx)(s, {
                         width: 16,
                         height: 16,
                         className: v.channelIcon
-                    }), i]
+                    }), (0, r.jsx)(M.Text, {
+                        variant: t.isCategory() ? "eyebrow" : b,
+                        children: l.display
+                    })]
                 })
             }
 
-            function F(e) {
+            function F(e, t, l) {
+                return O(e) ? (0, r.jsx)(y, {
+                    row: e,
+                    guildId: t,
+                    className: l
+                }, e.record.id) : D(e) ? (0, r.jsx)(U, {
+                    row: e,
+                    channel: e.record,
+                    className: l
+                }, e.record.id) : null
+            }
+
+            function w(e) {
                 let {
                     guildId: t,
                     roleRows: l = [],
@@ -144,145 +151,149 @@
                     selectedChannelIds: n = new Set,
                     selectedRoleIds: s = new Set,
                     onChange: i,
-                    placeholder: o
-                } = e, d = (0, m.useStateFromStores)([N.default], () => {
+                    placeholder: o,
+                    helperText: d,
+                    className: C
+                } = e, f = (0, E.useStateFromStores)([N.default], () => {
                     var e, l;
                     return null !== (l = null === (e = N.default.getGuild(t)) || void 0 === e ? void 0 : e.roles) && void 0 !== l ? l : {}
-                }, [t]), u = r.useMemo(() => (function(e, t, l) {
+                }, [t]), h = u.useMemo(() => (function(e, t, l) {
                     if (null == e) return {};
                     let a = {};
                     return e.forEach(e => {
                         let t = A.default.getChannel(e);
-                        null != t && (a[e] = V(t))
+                        null != t && (a[e] = B(t))
                     }), t.forEach(e => {
-                        e in l && (a[e] = D(l[e]))
+                        e in l && (a[e] = V(l[e]))
                     }), a
-                })(n, s, d), [n, s, d]), f = r.useMemo(() => Object.keys(u), [u]), [h, x] = r.useState(""), [_, H] = r.useState(!1), [p, g] = r.useState(!1), [S, L] = r.useState(!1), {
-                    sections: B,
-                    sectionCounts: F
-                } = r.useMemo(() => {
-                    let e = "" !== h ? a.filter(e => E(h, e.display.toLocaleLowerCase())) : a,
-                        t = "" !== h ? l.filter(e => E(h, e.display.toLocaleLowerCase())) : l,
+                })(n, s, f), [n, s, f]), x = u.useMemo(() => Object.keys(h), [h]), [_, H] = u.useState(""), [p, g] = u.useState(!1), [S, L] = u.useState(!1), [b, y] = u.useState(!1), U = u.useRef(null), {
+                    sections: w,
+                    sectionCounts: Z
+                } = u.useMemo(() => {
+                    let e = "" !== _ ? a.filter(e => m(_, e.display.toLocaleLowerCase())) : a,
+                        t = "" !== _ ? l.filter(e => m(_, e.display.toLocaleLowerCase())) : l,
                         n = [],
                         s = [];
                     return n[0] = e, s[0] = e.length, n[1] = t, s[1] = t.length, {
                         sections: n,
                         sectionCounts: s
                     }
-                }, [h, a, l]), w = r.useCallback(e => {
+                }, [_, a, l]), k = u.useCallback(e => {
                     let t = Object.values(e),
                         l = t.filter(e => {
                             let {
                                 row: t
                             } = e;
-                            return O(t)
+                            return D(t)
                         }).map(e => e.row.record.id),
                         a = t.filter(e => {
                             let {
                                 row: t
                             } = e;
-                            return b(t)
+                            return O(t)
                         }).map(e => e.row.record.id);
                     i(new Set(l), new Set(a))
-                }, [i]), Z = () => {
-                    H(!1), g(!1)
+                }, [i]), P = () => {
+                    g(!1), L(!1)
                 };
-                r.useEffect(() => {
+                u.useEffect(() => {
                     let e = setTimeout(() => {
-                        L(_ || p)
+                        y(p || S)
                     }, 32);
                     return () => {
                         clearTimeout(e)
                     }
-                }, [_, p]);
-                let P = (e, t, l) => {
-                        l.stopPropagation(), l.preventDefault(), 2 === t ? H(e) : (1 === t || H(e), g(e))
+                }, [p, S]);
+                let Y = (e, t, l) => {
+                        l.stopPropagation(), l.preventDefault(), 2 === t ? g(e) : (1 === t || g(e), L(e))
                     },
-                    k = r.useCallback(e => {
+                    G = u.useCallback(e => {
                         let t = {
-                            ...u
+                            ...h
                         };
-                        O(e) ? t[e.id] = V(e.record) : b(e) && (t[e.id] = D(e.record)), w(t), x(""), Z()
-                    }, [w, u]),
-                    Y = r.useCallback(e => {
+                        D(e) ? t[e.id] = B(e.record) : O(e) && (t[e.id] = V(e.record)), k(t), H(""), P(), setTimeout(() => {
+                            var e;
+                            let t = null === (e = U.current) || void 0 === e ? void 0 : e.containerRef.current,
+                                l = null == t ? void 0 : t.firstChild;
+                            null != l && l.scrollTo({
+                                top: l.scrollHeight,
+                                behavior: "smooth"
+                            })
+                        }, 16)
+                    }, [k, h]),
+                    J = u.useCallback(e => {
                         let {
                             section: l,
                             row: a
-                        } = e, n = B[l][a], s = O(n), i = b(n);
-                        return (0, C.jsx)(M.Clickable, {
+                        } = e, n = w[l][a];
+                        return (0, r.jsx)(M.Clickable, {
                             className: c(v.selectableSearchRow, v.rowHeight),
                             onClick: e => {
-                                e.stopPropagation(), k(n)
+                                e.stopPropagation(), G(n)
                             },
-                            children: (0, C.jsx)("div", {
+                            children: (0, r.jsx)("div", {
                                 className: v.rowContainer,
-                                children: s ? (0, C.jsx)(U, {
-                                    channel: n.record,
-                                    className: v.channelRowLabel,
-                                    children: n.display
-                                }, n.record.id) : i ? (0, C.jsx)(M.Text, {
-                                    className: c(v.rowLabel, v.roleLabel),
-                                    variant: "text-xs/medium",
-                                    children: y(n, t)
-                                }) : null
+                                children: F(n, t, v.searchRowLabel)
                             })
                         }, n.id)
-                    }, [t, k, B]),
-                    G = r.useMemo(() => f.map(e => {
+                    }, [t, G, w]),
+                    q = u.useMemo(() => x.map(e => {
                         var l, a;
-                        return l = u[e], a = t, {
+                        return l = h[e], a = t, {
                             ...l.tag,
-                            label: y(l.row, a)
+                            label: F(l.row, a, v.noIndent)
                         }
-                    }), [u, f, t]);
-                return (0, C.jsx)("div", {
-                    className: v.searchContainer,
-                    children: (0, C.jsxs)("div", {
+                    }), [h, x, t]);
+                return (0, r.jsxs)("div", {
+                    className: c(v.searchContainer, C),
+                    children: [(0, r.jsxs)("div", {
                         className: v.searchBox,
-                        children: [(0, C.jsx)(T.default, {
-                            tags: G,
+                        children: [(0, r.jsx)(T.default, {
+                            tags: q,
                             maxHeight: 98,
                             size: T.default.Sizes.MEDIUM,
-                            query: h,
+                            query: _,
+                            ref: U,
                             onRemoveTag: e => {
-                                let t = f[e],
+                                let t = x[e],
                                     {
                                         [t]: l,
                                         ...a
-                                    } = u;
-                                w(a), x(""), Z()
+                                    } = h;
+                                k(a), H(""), P()
                             },
                             onQueryChange: e => {
-                                x(e.trim().toLocaleLowerCase())
+                                H(e.trim().toLocaleLowerCase())
                             },
                             placeholder: null != o ? o : I.default.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_PLACEHOLDER,
-                            sections: [f.length],
+                            sections: [x.length],
                             inputProps: {
                                 "aria-labelledby": R,
                                 "aria-controls": j,
-                                "aria-expanded": S,
-                                onFocus: e => P(!0, 2, e),
-                                onBlur: e => P(!1, 2, e)
+                                "aria-expanded": b,
+                                onFocus: e => Y(!0, 2, e),
+                                onBlur: e => Y(!1, 2, e)
                             }
-                        }), S && (0, C.jsx)("div", {
+                        }), b && (0, r.jsx)("div", {
                             className: v.resultsListParent,
-                            onFocus: e => P(!0, 1, e),
-                            onBlur: e => P(!1, 1, e),
+                            onFocus: e => Y(!0, 1, e),
+                            onBlur: e => Y(!1, 1, e),
                             tabIndex: -1,
-                            children: (0, C.jsx)(M.ListAuto, {
-                                className: v.resultsList,
-                                sections: F,
-                                renderRow: Y,
-                                rowHeight: 24,
+                            children: (0, r.jsx)(M.ListAuto, {
+                                className: v.resultsListContainer,
+                                innerClassName: v.resultsList,
+                                sections: Z,
+                                renderRow: J,
+                                rowHeight: 34,
                                 renderSection: e => {
                                     let {
                                         section: t
                                     } = e;
-                                    return 0 === t ? (0, C.jsx)(M.FormTitle, {
+                                    return 0 === t ? (0, r.jsx)(M.FormTitle, {
                                         tag: "h5",
                                         className: c(v.sectionTitle, v.sectionHeight),
-                                        children: I.default.Messages.TEXT_CHANNELS
-                                    }, I.default.Messages.TEXT_CHANNELS) : 1 === t ? (0, C.jsx)(M.FormTitle, {
+                                        children: I.default.Messages.CHANNELS
+                                    }, I.default.Messages.CHANNELS) : 1 === t ? (0, r.jsx)(M.FormTitle, {
                                         tag: "h5",
                                         className: c(v.sectionTitle, v.sectionHeight),
                                         children: I.default.Messages.ROLES
@@ -292,15 +303,15 @@
                                     let {
                                         section: t
                                     } = e;
-                                    if (0 === t) return 0 === F[1] && F[0] > 0 ? null : (0, C.jsx)("div", {
+                                    if (0 === t) return 0 === Z[1] && Z[0] > 0 ? null : (0, r.jsx)("div", {
                                         className: v.sectionFooter,
-                                        children: (0, C.jsx)(M.FormDivider, {})
+                                        children: (0, r.jsx)(M.FormDivider, {})
                                     });
                                     return null
                                 },
-                                sectionHeight: 32,
+                                sectionHeight: 24,
                                 footerHeight: e => {
-                                    if (0 === e) return 0 === F[1] && F[0] > 0 ? 0 : 32;
+                                    if (0 === e) return 0 === Z[1] && Z[0] > 0 ? 0 : 32;
                                     return 0
                                 },
                                 role: void 0,
@@ -309,6 +320,11 @@
                                 innerAriaOrientation: "vertical"
                             })
                         })]
-                    })
+                    }), null != d && (0, r.jsx)(M.Text, {
+                        variant: "text-xs/normal",
+                        color: "text-muted",
+                        className: v.helperText,
+                        children: d
+                    })]
                 })
             }(o = n || (n = {}))[o.CHANNELS = 0] = "CHANNELS", o[o.ROLES = 1] = "ROLES", (d = s || (s = {}))[d.NONE = 0] = "NONE", d[d.LIST = 1] = "LIST", d[d.INPUT = 2] = "INPUT"

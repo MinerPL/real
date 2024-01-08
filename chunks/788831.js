@@ -46,8 +46,8 @@
                 F = s("245997"),
                 H = s("525065"),
                 V = s("957255"),
-                k = s("27618"),
-                w = s("697218"),
+                w = s("27618"),
+                k = s("697218"),
                 Y = s("145131"),
                 K = s("181114"),
                 W = s("612434"),
@@ -86,7 +86,7 @@
                     label: t,
                     channel: s,
                     category: n
-                } = e, l = (0, C.getChannelIconComponent)(s), i = null != n ? (0, m.computeChannelName)(n, w.default, k.default) : null;
+                } = e, l = (0, C.getChannelIconComponent)(s), i = null != n ? (0, m.computeChannelName)(n, k.default, w.default) : null;
                 return (0, a.jsx)(W.default, {
                     title: t,
                     icon: l,
@@ -97,7 +97,7 @@
             function ef(e) {
                 return {
                     value: e.id,
-                    label: (0, m.computeChannelName)(e, w.default, k.default),
+                    label: (0, m.computeChannelName)(e, k.default, w.default),
                     channel: e,
                     category: B.default.getChannel(e.parent_id)
                 }
@@ -959,7 +959,7 @@
                         isGuildAdmin: V.default.can(es.Permissions.ADMINISTRATOR, t)
                     })),
                     S = (0, c.useStateFromStores)([H.default], () => H.default.getMemberCount(null == t ? void 0 : t.id)),
-                    f = (0, c.useStateFromStores)([w.default], () => w.default.getCurrentUser());
+                    f = (0, c.useStateFromStores)([k.default], () => k.default.getCurrentUser());
                 o(null != f, "GuildSettingsOverview: currentUser cannot be undefined");
                 let {
                     enableDeadchat: m

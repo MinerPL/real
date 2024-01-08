@@ -77,7 +77,7 @@
                         } = e;
                         if (0 === N.length) return (0, a.jsx)(V, {}, "empty-role");
                         let o = N[l];
-                        return (0, a.jsx)(k, {
+                        return (0, a.jsx)(w, {
                             role: o,
                             guild: s,
                             highestRole: T,
@@ -115,7 +115,7 @@
                 })
             }
 
-            function k(e) {
+            function w(e) {
                 var t, l, o;
                 let {
                     role: d,
@@ -130,7 +130,7 @@
                     disableDrag: x,
                     setEditRoleId: p,
                     setSelectedSection: v
-                } = e, P = (0, U.useLockTooltip)(E, S, d), H = null != P, [V, k] = n.useState(!1), Y = n.useMemo(() => ({
+                } = e, P = (0, U.useLockTooltip)(E, S, d), H = null != P, [V, w] = n.useState(!1), Y = n.useMemo(() => ({
                     type: F,
                     item: () => (R(d.id), {
                         id: d.id,
@@ -208,8 +208,8 @@
                         className: i(b.dragIcon, B.dragSpacing, {
                             [b.dragIconHidden]: H || x
                         }),
-                        onMouseEnter: () => k(!0),
-                        onMouseLeave: () => k(!1),
+                        onMouseEnter: () => w(!0),
+                        onMouseLeave: () => w(!1),
                         children: (0, a.jsx)(A.default, {})
                     }), (0, a.jsxs)("div", {
                         className: i(b.roleNameContainer, B.roleNameSpacing),
@@ -217,7 +217,7 @@
                             className: b.roleFlowerStar,
                             color: d.colorString,
                             size: 24
-                        }) : (0, a.jsx)(w, {
+                        }) : (0, a.jsx)(k, {
                             guildId: E.id,
                             role: d,
                             size: 24,
@@ -286,7 +286,7 @@
                 })
             }
 
-            function w(e) {
+            function k(e) {
                 var t;
                 let {
                     guildId: s,

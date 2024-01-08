@@ -13,7 +13,7 @@
 
             function u(e) {
                 let [t, a] = l.useState(null), [u, c, d, E] = (0, i.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.lastActiveView, e.pickerId], n.default), f = r.ChatInputTypes.CREATE_POLL, _ = null != u && null != c && c === f, A = null != d ? d : e === s.PollLayoutTypes.DEFAULT ? o.ExpressionPickerViewType.EMOJI : o.ExpressionPickerViewType.GIF, m = l.useCallback(e => {
-                    a(e), (0, i.toggleExpressionPicker)(A, f)
+                    a(t => (t === e ? (0, i.toggleExpressionPicker)(A, f) : (0, i.openExpressionPicker)(A, f), e))
                 }, [A, f]), L = l.useCallback(() => {
                     (0, i.closeExpressionPicker)(f)
                 }, [f]);

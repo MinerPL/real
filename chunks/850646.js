@@ -10,13 +10,13 @@
                 i = l.n(s),
                 o = l("866227"),
                 d = l.n(o),
-                C = l("65597"),
-                r = l("77078"),
-                u = l("812204"),
+                r = l("65597"),
+                u = l("77078"),
+                C = l("812204"),
                 c = l("781896"),
                 f = l("493910"),
-                E = l("466818"),
-                m = l("178406"),
+                m = l("466818"),
+                E = l("178406"),
                 M = l("645266"),
                 T = l("782340"),
                 h = l("236807"),
@@ -26,13 +26,13 @@
                 let {
                     guild: t,
                     onSubmit: s
-                } = e, o = (0, C.default)([m.default], () => m.default.getMembersCountByGuildId(t.id, f.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER), [t.id]), _ = (0, C.default)([m.default], () => {
-                    let e = m.default.getNewMemberTimestamp(t.id);
+                } = e, o = (0, r.default)([E.default], () => E.default.getMembersCountByGuildId(t.id, f.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER), [t.id]), _ = (0, r.default)([E.default], () => {
+                    let e = E.default.getNewMemberTimestamp(t.id);
                     return d(e).format("h:mm A")
-                }, [t.id]), H = (0, C.default)([m.default], () => m.default.hasDefaultSearchStateByGuildId(t.id), [t.id]), A = n.useCallback(() => {
+                }, [t.id]), H = (0, r.default)([E.default], () => E.default.hasDefaultSearchStateByGuildId(t.id), [t.id]), A = n.useCallback(() => {
                     (0, M.refreshMemberSafetyTimestamp)(t.id), null == s || s()
                 }, [t.id, s]), N = n.useCallback(() => {
-                    H ? A() : (0, r.openModalLazy)(async () => {
+                    H ? A() : (0, u.openModalLazy)(async () => {
                         let {
                             default: e
                         } = await l.el("756912").then(l.bind(l, "756912"));
@@ -41,13 +41,13 @@
                             onConfirm: A
                         })
                     })
-                }, [A, H]), p = new Intl.NumberFormat(T.default.getLocale()).format(o), g = (0, E.useCanAccessInviteCodeFeature)(t.id), S = (0, E.useCanAccessBulkBanningFeature)(t.id, u.default.MEMBER_SAFETY_PAGE), L = n.useMemo(() => 1 + (g ? 1 : 0) + (S ? 1 : 0), [g, S]);
+                }, [A, H]), p = new Intl.NumberFormat(T.default.getLocale()).format(o), g = (0, m.useCanAccessInviteCodeFeature)(t.id), S = (0, m.useCanAccessBulkBanningFeature)(t.id, C.default.MEMBER_SAFETY_PAGE), L = n.useMemo(() => 1 + (g ? 1 : 0) + (S ? 1 : 0), [g, S]);
                 return 0 === o ? null : (0, a.jsxs)("tr", {
                     className: i(x.newMembersNotice),
                     onClick: N,
                     children: [(0, a.jsx)("td", {
                         colSpan: 3,
-                        children: (0, a.jsx)(r.Text, {
+                        children: (0, a.jsx)(u.Text, {
                             variant: "text-sm/normal",
                             color: "always-white",
                             children: T.default.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_LABEL.format({
@@ -61,12 +61,12 @@
                         colSpan: 2,
                         children: (0, a.jsx)("div", {
                             className: i(h.actionCell),
-                            children: (0, a.jsx)(r.Button, {
-                                size: r.Button.Sizes.SMALL,
-                                color: r.Button.Colors.TRANSPARENT,
-                                look: r.Button.Looks.LINK,
+                            children: (0, a.jsx)(u.Button, {
+                                size: u.Button.Sizes.SMALL,
+                                color: u.Button.Colors.TRANSPARENT,
+                                look: u.Button.Looks.LINK,
                                 className: i(x.memberNoticeActionButton),
-                                children: (0, a.jsxs)(r.Text, {
+                                children: (0, a.jsxs)(u.Text, {
                                     variant: "text-sm/normal",
                                     color: "always-white",
                                     className: i(x.memberNoticeAction),

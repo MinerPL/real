@@ -21,9 +21,9 @@
                 E = n("145131"),
                 g = n("49111"),
                 S = n("782340"),
-                A = n("816456");
+                _ = n("816456");
             (r = a || (a = {})).CENTER = "center", r.LEFT = "left", (o = l || (l = {})).TOP = "top", o.MIDDLE = "middle";
-            class _ extends d.PureComponent {
+            class A extends d.PureComponent {
                 componentDidMount() {
                     let {
                         uniqueId: e
@@ -50,25 +50,25 @@
                         onClickSkipAll: r
                     } = this.props, o = "left" === t || n, d = "center" === t || !o;
                     return (0, u.jsxs)(C.Dialog, {
-                        className: f(A.popoutRoot, l),
+                        className: f(_.popoutRoot, l),
                         children: [null != e && (0, u.jsx)(E.default, {
-                            className: A.mediaContainer,
+                            className: _.mediaContainer,
                             justify: o ? E.default.Justify.START : E.default.Justify.CENTER,
                             children: e()
                         }), (0, u.jsx)(C.H, {
                             className: f({
-                                [A.titleCenter]: d,
-                                [A.titleLeft]: o
+                                [_.titleCenter]: d,
+                                [_.titleLeft]: o
                             }),
                             children: s
                         }), (0, u.jsx)("string" == typeof a ? "p" : "div", {
                             className: f({
-                                [A.bodyCenter]: d,
-                                [A.bodyLeft]: o
+                                [_.bodyCenter]: d,
+                                [_.bodyLeft]: o
                             }),
                             children: a
                         }), (0, u.jsxs)(E.default, {
-                            className: A.buttonContainer,
+                            className: _.buttonContainer,
                             justify: o ? E.default.Justify.BETWEEN : E.default.Justify.CENTER,
                             children: [(0, u.jsx)(C.Button, {
                                 size: C.ButtonSizes.SMALL,
@@ -79,7 +79,7 @@
                                 look: C.Button.Looks.BLANK,
                                 onClick: r,
                                 color: (0, h.isThemeLight)(i) ? C.Button.Colors.PRIMARY : C.Button.Colors.WHITE,
-                                className: o ? A.buttonSkipLeftAlign : A.buttonSkipCenterAlign,
+                                className: o ? _.buttonSkipLeftAlign : _.buttonSkipCenterAlign,
                                 children: S.default.Messages.SKIP_ALL_TIPS
                             })]
                         })]
@@ -142,19 +142,19 @@
                             arrowAlignment: l,
                             renderMedia: i
                         } = this.props, r = null != i;
-                        return (0, u.jsx)(_, {
+                        return (0, u.jsx)(A, {
                             ...this.props,
                             className: f({
-                                [A.bottom]: "bottom" === n,
-                                [A.contentNarrowNoMedia]: !a && !r,
-                                [A.contentNarrowWithMedia]: !a && r,
-                                [A.contentWideNoMedia]: a && !r,
-                                [A.contentWideWithMedia]: a && r,
-                                [A.right]: "right" === n,
-                                [A.top]: "top" === n,
-                                [A.left]: "left" === n,
-                                [A.arrowAlignmentTop]: "top" === l,
-                                [A.arrowAlignmentMiddle]: "middle" === l,
+                                [_.bottom]: "bottom" === n,
+                                [_.contentNarrowNoMedia]: !a && !r,
+                                [_.contentNarrowWithMedia]: !a && r,
+                                [_.contentWideNoMedia]: a && !r,
+                                [_.contentWideWithMedia]: a && r,
+                                [_.right]: "right" === n,
+                                [_.top]: "top" === n,
+                                [_.left]: "left" === n,
+                                [_.arrowAlignmentTop]: "top" === l,
+                                [_.arrowAlignmentMiddle]: "middle" === l,
                                 "force-theme": null != s
                             }, (0, m.getThemeClass)(s)),
                             onClickComplete: () => this.onClickComplete(t),

@@ -68,7 +68,7 @@
                                 null != e && !t.didDrop() && f(e.channel, null, !0)
                             }
                         }),
-                        [, k] = (0, d.useDrop)({
+                        [, w] = (0, d.useDrop)({
                             accept: y,
                             hover: e => {
                                 f(e.channel, C, !1)
@@ -77,9 +77,9 @@
                                 f(e.channel, C, !0)
                             }
                         });
-                    return n.useLayoutEffect(() => (V(k(M)), () => {
-                        V(null), k(null)
-                    }), [V, k]), l = b ? null != p || null != o.emoji_name ? (0, a.jsx)(_.default, {
+                    return n.useLayoutEffect(() => (V(w(M)), () => {
+                        V(null), w(null)
+                    }), [V, w]), l = b ? null != p || null != o.emoji_name ? (0, a.jsx)(_.default, {
                         emojiId: null == p ? void 0 : p.id,
                         emojiName: null != p ? p.name : o.emoji_name,
                         animated: !!(null == p ? void 0 : p.animated)
@@ -182,13 +182,13 @@
                     if (null != l) e !== d.enabled && ((0, f.saveWelcomeScreen)(l.id, {
                         enabled: e
                     }), m(!E), N(!0))
-                }, k = e => {
+                }, w = e => {
                     if (null == e) return;
                     let t = [...null != G ? G : [], e];
                     (0, f.updateSettings)({
                         channels: t
                     }), H(t)
-                }, w = e => t => {
+                }, k = e => t => {
                     let s = [...null != G ? G : []];
                     null == t ? s.splice(e, 1) : s[e] = t, (0, f.updateSettings)({
                         channels: s
@@ -210,7 +210,7 @@
                     return t => (0, a.jsx)(e, {
                         ...t,
                         guildId: l.id,
-                        onSave: k
+                        onSave: w
                     })
                 }, {
                     onCloseRequest: () => v.NOOP_NULL
@@ -335,7 +335,7 @@
                             }), null == G ? void 0 : G.map((e, t) => (0, a.jsx)(b, {
                                 guildId: l.id,
                                 welcomeChannel: e,
-                                onEdit: w(t),
+                                onEdit: k(t),
                                 onChannelReorder: Y,
                                 isDropHovered: t === _,
                                 index: t
@@ -347,7 +347,7 @@
                                     return t => (0, a.jsx)(e, {
                                         ...t,
                                         guildId: l.id,
-                                        onSave: k
+                                        onSave: w
                                     })
                                 }, {
                                     onCloseRequest: () => v.NOOP_NULL

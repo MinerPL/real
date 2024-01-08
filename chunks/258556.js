@@ -69,57 +69,58 @@
             }
 
             function el(e) {
+                var t, l;
                 let {
-                    category: t,
-                    className: l,
-                    isPremiumUser: r,
-                    initialItemCardRef: i,
-                    isGiftEasterEggEnabled: d,
-                    setIsGiftEasterEggEnabled: f,
-                    showEasterEggToggle: m
-                } = e, E = s.useRef(10 + 70 * Math.random()), p = (0, M.usePurchasedProductsSort)(t.products), g = (0, o.groupBy)(p, "type"), h = (0, c.default)([j.default], () => j.default.initialProductSkuId), {
-                    tallerCardsEnabled: T
+                    category: r,
+                    className: i,
+                    isPremiumUser: d,
+                    initialItemCardRef: f,
+                    isGiftEasterEggEnabled: m,
+                    setIsGiftEasterEggEnabled: E,
+                    showEasterEggToggle: p
+                } = e, g = s.useRef(10 + 70 * Math.random()), h = (0, M.usePurchasedProductsSort)(r.products), T = (0, o.groupBy)(h, "type"), b = (0, c.default)([j.default], () => j.default.initialProductSkuId), {
+                    tallerCardsEnabled: x
                 } = (0, B.useCollectiblesShopTallerCardsExperiment)({
                     location: "CollectiblesShop"
-                }), b = T ? Y.default : U.default, x = s.useCallback(e => t => {
-                    e.skuId === h && (i.current = t.current)
-                }, [h, i]), v = (e, s) => 0 === e.length ? null : (0, a.jsxs)("div", {
+                }), v = x ? Y.default : U.default, _ = s.useCallback(e => t => {
+                    e.skuId === b && (f.current = t.current)
+                }, [b, f]), N = (e, t) => 0 === e.length ? null : (0, a.jsxs)("div", {
                     children: [(0, a.jsx)(C.Text, {
                         className: n(ee.itemTypeTitle, {
-                            [ee.itemTypeTitleForTallerCard]: T
+                            [ee.itemTypeTitleForTallerCard]: x
                         }),
                         color: "header-secondary",
                         variant: "text-sm/bold",
-                        children: s
+                        children: t
                     }), (0, a.jsx)("div", {
-                        className: n(ee.cardsContainer, T ? ee.tallerShopCard : ee.regularShopCard, l),
-                        children: e.map(e => (0, a.jsx)(b, {
-                            onMount: x(e),
-                            isPremiumUser: r,
-                            category: t,
+                        className: n(ee.cardsContainer, x ? ee.tallerShopCard : ee.regularShopCard, i),
+                        children: e.map(e => (0, a.jsx)(v, {
+                            onMount: _(e),
+                            isPremiumUser: d,
+                            category: r,
                             product: e,
-                            isGiftEasterEggEnabled: d
+                            isGiftEasterEggEnabled: m
                         }, e.skuId))
                     })]
                 });
                 return (0, a.jsxs)("div", {
                     className: ee.categoryWrapper,
-                    children: [m && (0, a.jsx)(C.Clickable, {
+                    children: [p && (0, a.jsx)(C.Clickable, {
                         className: n(ee.hiddenWumpus, {
-                            [ee.hiddenWumpusEnabled]: d
+                            [ee.hiddenWumpusEnabled]: m
                         }),
-                        onClick: () => f(!0),
+                        onClick: () => E(!0),
                         style: {
-                            left: "".concat(E.current, "%")
+                            left: "".concat(g.current, "%")
                         },
                         children: (0, a.jsx)(I.default, {
                             idleAnimationState: L.AnimationState.IDLE,
                             giftStyle: S.PremiumGiftStyles.BOX
                         })
                     }), (0, a.jsx)(H.default, {
-                        category: t,
-                        className: T ? ee.tallerShopCardBanner : void 0
-                    }), v(g[u.CollectiblesItemType.AVATAR_DECORATION], Q.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER), v(g[u.CollectiblesItemType.PROFILE_EFFECT], Q.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE)]
+                        category: r,
+                        className: x ? ee.tallerShopCardBanner : void 0
+                    }), N(null !== (t = T[u.CollectiblesItemType.AVATAR_DECORATION]) && void 0 !== t ? t : [], Q.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER), N(null !== (l = T[u.CollectiblesItemType.PROFILE_EFFECT]) && void 0 !== l ? l : [], Q.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE)]
                 })
             }
             var ea = function(e) {

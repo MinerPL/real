@@ -26,14 +26,14 @@
                     senderId: g
                 } = e, S = a.useCallback(() => {
                     (0, d.dismissChannelSafetyWarnings)(t, [E])
-                }, [t, E]), A = a.useCallback(() => {
+                }, [t, E]), _ = a.useCallback(() => {
                     S(), (0, c.trackCtaEvent)({
                         channelId: t,
                         warningId: E,
                         senderId: g,
                         cta: c.CtaEventTypes.DISMISS
                     })
-                }, [S, t, E, g]), _ = a.useCallback(e => () => {
+                }, [S, t, E, g]), A = a.useCallback(e => () => {
                     r.default.addRelationship({
                         userId: g,
                         context: {
@@ -87,7 +87,7 @@
                             return n => (0, s.jsx)(i, {
                                 ...n,
                                 userId: g,
-                                confirmBlock: _(e),
+                                confirmBlock: A(e),
                                 onCancel: () => {
                                     null == l || l(), (0, c.trackCtaEvent)({
                                         channelId: t,
@@ -142,7 +142,7 @@
                         })]
                     }), (0, s.jsx)(i.Clickable, {
                         className: p.closeButton,
-                        onClick: A,
+                        onClick: _,
                         role: "button",
                         "aria-label": C.default.Messages.DISMISS,
                         children: (0, s.jsx)(u.default, {

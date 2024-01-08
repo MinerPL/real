@@ -25,16 +25,16 @@
                     onAcceptSuccess: n,
                     onRejectSuccess: a,
                     onError: E
-                } = e, g = (0, C.default)(), [S, A] = s.useState(!1), [_, T] = s.useState(!1), [M, I] = s.useState(!1), [N, v] = s.useState(!1), [L, x] = s.useState(!1), R = S || _ || M, y = s.useCallback(async e => {
+                } = e, g = (0, C.default)(), [S, _] = s.useState(!1), [A, T] = s.useState(!1), [M, I] = s.useState(!1), [N, L] = s.useState(!1), [v, x] = s.useState(!1), R = S || A || M, y = s.useCallback(async e => {
                     if (!R) {
-                        A(!0);
+                        _(!0);
                         try {
-                            await (0, f.acceptMessageRequest)(e), v(!0), null == n || n()
+                            await (0, f.acceptMessageRequest)(e), L(!0), null == n || n()
                         } catch (t) {
                             let e = new i.APIError(t);
                             null == E || E(e)
                         } finally {
-                            A(!1)
+                            _(!1)
                         }
                     }
                 }, [R, n, E]), D = s.useCallback(async e => {
@@ -99,7 +99,7 @@
                             })
                         }
                     })
-                }, [y, R, t]), P = s.useCallback((e, t, n) => {
+                }, [y, R, t]), b = s.useCallback((e, t, n) => {
                     let s = (s, a) => {
                             a && d.NonSpamRetrainingOptIn.updateSetting(s), s && null != t && (0, r.submitHamReportForFirstDM)(t), y(e.id), c.default.track(m.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
                                 action: p.MessageRequestAnalyticsAction.ACCEPT_HAM_CONFIRMATION_PROMPT,
@@ -124,11 +124,11 @@
                     acceptMessageRequest: g ? j : y,
                     rejectMessageRequest: D,
                     rejectAll: O,
-                    markAsNotSpam: P,
+                    markAsNotSpam: b,
                     isAcceptLoading: S,
-                    isRejectLoading: _,
+                    isRejectLoading: A,
                     isUserProfileLoading: M,
                     isOptimisticAccepted: N,
-                    isOptimisticRejected: L
+                    isOptimisticRejected: v
                 }
             }

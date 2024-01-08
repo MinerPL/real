@@ -10,13 +10,13 @@
                 i = l.n(s),
                 o = l("969176"),
                 d = l.n(o),
-                C = l("65597"),
-                r = l("95410"),
-                u = l("77078"),
+                r = l("65597"),
+                u = l("95410"),
+                C = l("77078"),
                 c = l("685665"),
                 f = l("305961"),
-                E = l("957255"),
-                m = l("118530"),
+                m = l("957255"),
+                E = l("118530"),
                 M = l("536999"),
                 T = l("466818"),
                 h = l("178406"),
@@ -40,21 +40,21 @@
                 } = e;
                 return (0, a.jsx)("th", {
                     className: i(S.tableHeaderCellContainer, s),
-                    children: (0, a.jsxs)(u.Clickable, {
+                    children: (0, a.jsxs)(C.Clickable, {
                         ...o,
                         onClick: l,
                         className: i(S.tableHeaderCell, {
                             [S.tableHeaderCellWithFilter]: null != l
                         }),
-                        children: [(0, a.jsx)(u.Text, {
+                        children: [(0, a.jsx)(C.Text, {
                             variant: "eyebrow",
                             color: n ? "text-brand" : "header-secondary",
                             children: t
                         }), null != l && (0, a.jsx)("div", {
                             className: S.filterIconButton,
-                            children: (0, a.jsx)(m.default, {
+                            children: (0, a.jsx)(E.default, {
                                 className: S.filterIcon,
-                                color: n ? u.tokens.colors.CONTROL_BRAND_FOREGROUND.css : u.tokens.colors.TEXT_MUTED.css,
+                                color: n ? C.tokens.colors.CONTROL_BRAND_FOREGROUND.css : C.tokens.colors.TEXT_MUTED.css,
                                 width: 16,
                                 height: 16
                             })
@@ -69,31 +69,31 @@
                 let {
                     guildId: l,
                     currentPagedMembers: s
-                } = e, o = (0, C.default)([h.default], () => h.default.getSearchStateByGuildId(l), [l], d), m = (0, C.default)([E.default, f.default], () => E.default.can(p.Permissions.MANAGE_GUILD, f.default.getGuild(l)), [l]), {
+                } = e, o = (0, r.default)([h.default], () => h.default.getSearchStateByGuildId(l), [l], d), E = (0, r.default)([m.default, f.default], () => m.default.can(p.Permissions.MANAGE_GUILD, f.default.getGuild(l)), [l]), {
                     selectedUserIds: R,
                     addUsers: j,
                     clearSelection: b
-                } = (0, x.default)(l), O = o.requireUnusualDmActivity || o.requireCommunicationDisabled || o.requireUnusualAccountActivity || o.requireUsernameQuarantined, D = o.selectedRoleIds.size > 0, V = null != o.selectedJoinDateOption.afterDate, B = null != o.selectedAccountAgeOption.afterDate, [y, U] = n.useState(null == r.default.get(v, null)), F = n.useCallback(() => {
-                    r.default.set(v, Date.now()), U(!1)
+                } = (0, x.default)(l), O = o.requireUnusualDmActivity || o.requireCommunicationDisabled || o.requireUnusualAccountActivity || o.requireUsernameQuarantined, D = o.selectedRoleIds.size > 0, V = null != o.selectedJoinDateOption.afterDate, B = null != o.selectedAccountAgeOption.afterDate, [y, U] = n.useState(null == u.default.get(v, null)), F = n.useCallback(() => {
+                    u.default.set(v, Date.now()), U(!1)
                 }, []), {
                     analyticsLocations: w
-                } = (0, c.default)(), Z = null !== (t = null == w ? void 0 : w[0]) && void 0 !== t ? t : null, P = (0, T.useCanAccessBulkBanningFeature)(l, Z, !0), k = (0, M.isInMembersTablesAdditionalFilteringExperiment)(l), Y = n.useMemo(() => s.filter(e => (0, T.canBulkBanUser)(l, P, e)), [P, s, l]), G = Y.length > 0, J = Y.filter(e => !R.has(e)), q = 0 === J.length, K = n.useCallback(() => {
+                } = (0, c.default)(), Z = null !== (t = null == w ? void 0 : w[0]) && void 0 !== t ? t : null, k = (0, T.useCanAccessBulkBanningFeature)(l, Z, !0), P = (0, M.isInMembersTablesAdditionalFilteringExperiment)(l), Y = n.useMemo(() => s.filter(e => (0, T.canBulkBanUser)(l, k, e)), [k, s, l]), G = Y.length > 0, J = Y.filter(e => !R.has(e)), q = 0 === J.length, K = n.useCallback(() => {
                     G && (q ? b() : j(Y))
                 }, [G, q, b, j, Y]);
                 return (0, a.jsx)("thead", {
                     children: (0, a.jsxs)("tr", {
                         className: S.tableHeaderRow,
-                        children: [P && (0, a.jsx)("th", {
+                        children: [k && (0, a.jsx)("th", {
                             className: i(S.tableHeaderCellContainer, L.xsmallCol),
-                            children: (0, a.jsx)(u.Tooltip, {
+                            children: (0, a.jsx)(C.Tooltip, {
                                 shouldShow: !G,
                                 text: g.default.Messages.MEMBER_SAFETY_CANNOT_SELECT_ALL,
-                                children: e => (0, a.jsx)(u.Clickable, {
+                                children: e => (0, a.jsx)(C.Clickable, {
                                     ...e,
                                     onClick: K,
                                     className: S.tableHeaderCell,
-                                    children: (0, a.jsx)(u.Checkbox, {
-                                        type: u.Checkbox.Types.INVERTED,
+                                    children: (0, a.jsx)(C.Checkbox, {
+                                        type: C.Checkbox.Types.INVERTED,
                                         value: q,
                                         disabled: !G
                                     })
@@ -101,9 +101,9 @@
                             })
                         }), (0, a.jsx)(I, {
                             label: g.default.Messages.MEMBER_SAFETY_TABLE_HEADER_NAME
-                        }), k ? (0, a.jsxs)(a.Fragment, {
-                            children: [(0, a.jsx)(u.Popout, {
-                                animation: u.Popout.Animation.FADE,
+                        }), P ? (0, a.jsxs)(a.Fragment, {
+                            children: [(0, a.jsx)(C.Popout, {
+                                animation: C.Popout.Animation.FADE,
                                 position: "bottom",
                                 spacing: 4,
                                 align: "left",
@@ -124,8 +124,8 @@
                                         ...l
                                     })
                                 }
-                            }), (0, a.jsx)(u.Popout, {
-                                animation: u.Popout.Animation.FADE,
+                            }), (0, a.jsx)(C.Popout, {
+                                animation: C.Popout.Animation.FADE,
                                 position: "bottom",
                                 spacing: 4,
                                 align: "left",
@@ -155,11 +155,11 @@
                                 label: g.default.Messages.MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE,
                                 className: L.smallCol
                             })]
-                        }), m && (0, a.jsx)(I, {
+                        }), E && (0, a.jsx)(I, {
                             label: g.default.Messages.MEMBER_SAFETY_TABLE_HEADER_JOIN_METHOD,
                             className: L.smallCol
-                        }), (0, a.jsx)(u.Popout, {
-                            animation: u.Popout.Animation.FADE,
+                        }), (0, a.jsx)(C.Popout, {
+                            animation: C.Popout.Animation.FADE,
                             position: "bottom",
                             spacing: 4,
                             align: "left",
@@ -185,15 +185,15 @@
                                     ...l
                                 })
                             }
-                        }), (0, a.jsx)(u.Tooltip, {
+                        }), (0, a.jsx)(C.Tooltip, {
                             text: g.default.Messages.MEMBER_SAFETY_SIGNALS_DESCRIPTION,
                             position: "top",
                             align: "left",
                             forceOpen: y,
                             shouldShow: !0,
-                            color: u.Tooltip.Colors.BRAND,
-                            children: e => (0, a.jsx)(u.Popout, {
-                                animation: u.Popout.Animation.FADE,
+                            color: C.Tooltip.Colors.BRAND,
+                            children: e => (0, a.jsx)(C.Popout, {
+                                animation: C.Popout.Animation.FADE,
                                 position: "bottom",
                                 spacing: 4,
                                 align: "left",

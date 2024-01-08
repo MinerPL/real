@@ -1,7 +1,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return E
+                    return m
                 }
             }), l("222007");
             var a = l("37983"),
@@ -10,9 +10,9 @@
                 i = l.n(s),
                 o = l("907002"),
                 d = l("458960"),
-                C = l("669491"),
-                r = l("77078"),
-                u = l("84339");
+                r = l("669491"),
+                u = l("77078"),
+                C = l("84339");
             let c = {
                     duration: 100,
                     easing: d.default.Easing.inOut(d.default.Easing.back()),
@@ -24,18 +24,18 @@
                     clamp: !0
                 };
 
-            function E(e) {
+            function m(e) {
                 let {
                     value: t,
                     children: l,
                     equalityFn: s = i,
                     style: d,
-                    ...E
-                } = e, m = (0, u.default)(t), [{
+                    ...m
+                } = e, E = (0, C.default)(t), [{
                     spring: M
                 }, T] = (0, o.useSpring)(() => ({
                     spring: 0
-                })), h = (0, r.useToken)(C.default.colors.BACKGROUND_PRIMARY).hex(), x = (0, r.useToken)(C.default.colors.CONTROL_BRAND_FOREGROUND).hex(), _ = n.useCallback(() => {
+                })), h = (0, u.useToken)(r.default.colors.BACKGROUND_PRIMARY).hex(), x = (0, u.useToken)(r.default.colors.CONTROL_BRAND_FOREGROUND).hex(), _ = n.useCallback(() => {
                     T({
                         spring: 1,
                         config: c
@@ -46,8 +46,8 @@
                     })
                 }, [T]);
                 n.useEffect(() => {
-                    if (null != t && null != m) !s(t, m) && _()
-                }, [_, t, m, s]);
+                    if (null != t && null != E) !s(t, E) && _()
+                }, [_, t, E, s]);
                 let H = null == M ? void 0 : M.to({
                         range: [0, 1],
                         output: ["".concat(h, "00"), "".concat(x, "27")]
@@ -59,7 +59,7 @@
                         backgroundColor: H
                     };
                 return (0, a.jsx)(o.animated.tr, {
-                    ...E,
+                    ...m,
                     style: A,
                     children: l
                 })

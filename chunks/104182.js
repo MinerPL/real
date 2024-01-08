@@ -18,12 +18,12 @@
                 let a = e.id,
                     E = l.useRef();
                 null == E.current && (E.current = [(0, c.generateEmptyPollAnswer)(), (0, c.generateEmptyPollAnswer)()]);
-                let [_, A] = l.useState(E.current), [m, L] = l.useState(""), [p, T] = l.useState(n.PollLayoutTypes.DEFAULT), [C, x] = l.useState(!1), [O, R] = l.useState(d.PollDurations.ONE_DAY), h = _.filter(e => (0, c.isAnswerFilled)(e, p)), I = _.filter(e => (0, c.isIncompleteAnswer)(e, p)), N = m.length > 0 && h.length >= d.MIN_NUMBER_OF_ANSWERS_PER_POLL && 0 === I.length, [P, {
+                let [_, A] = l.useState(E.current), [m, L] = l.useState(""), [p, T] = l.useState(n.PollLayoutTypes.DEFAULT), [C, x] = l.useState(!1), [O, R] = l.useState(d.PollDurations.ONE_DAY), N = _.filter(e => (0, c.isAnswerFilled)(e, p)), P = _.filter(e => (0, c.isIncompleteAnswer)(e, p)), I = m.length > 0 && N.length >= d.MIN_NUMBER_OF_ANSWERS_PER_POLL && 0 === P.length, [h, {
                     error: g,
                     loading: v
-                }] = (0, s.default)(u.default.createPoll), M = _.length < d.MAX_NUMBER_OF_ANSWERS_PER_POLL, j = l.useCallback(() => {
+                }] = (0, s.default)(u.default.createPoll), M = _.length < d.MAX_NUMBER_OF_ANSWERS_PER_POLL, S = l.useCallback(() => {
                     M && A(e => [...e, (0, c.generateEmptyPollAnswer)()])
-                }, [M]), S = l.useCallback((e, t) => {
+                }, [M]), j = l.useCallback((e, t) => {
                     A(a => {
                         let l = [...a];
                         return l[t] = {
@@ -62,7 +62,7 @@
                         stickerId: void 0,
                         gifAttachmentState: void 0
                     }, t)
-                }, [a, D, y]), w = l.useCallback(e => {
+                }, [a, D, y]), U = l.useCallback(e => {
                     y(a, e), A(t => {
                         let a = [...t];
                         return a.splice(e, 1), a
@@ -71,17 +71,17 @@
                 l.useEffect(() => () => {
                     o.removeAllPollUploadAttachments(a)
                 }, [a]);
-                let U = l.useCallback(async () => {
-                    await P({
+                let w = l.useCallback(async () => {
+                    await h({
                         channel: e,
                         question: m,
-                        answers: h,
+                        answers: N,
                         allowMultiSelect: C,
                         duration: O,
                         layout: p,
                         onClose: t
                     })
-                }, [m, h, C, O, P, e, p, t]);
+                }, [m, N, C, O, h, e, p, t]);
                 return {
                     answers: _,
                     question: m,
@@ -92,14 +92,14 @@
                     setAllowMultiSelect: x,
                     duration: O,
                     setDuration: R,
-                    canPost: N,
+                    canPost: I,
                     canAddMoreAnswers: M,
-                    handleAddAnswer: j,
-                    handleAnswerTextChange: S,
+                    handleAddAnswer: S,
+                    handleAnswerTextChange: j,
                     handleGifSelect: b,
                     handleEmojiSelect: k,
-                    handleRemoveAnswer: w,
-                    createPoll: U,
+                    handleRemoveAnswer: U,
+                    createPoll: w,
                     submitting: v,
                     createPollError: g
                 }

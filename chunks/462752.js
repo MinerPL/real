@@ -109,13 +109,13 @@
                         onCompleteApplication: e => H(h.GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE, e)
                     })
                 }
-                let k = null;
-                if (0 === B.length) k = (0, a.jsx)(p, {
+                let w = null;
+                if (0 === B.length) w = (0, a.jsx)(p, {
                     handleAddVerificationClicked: V,
                     locked: l
                 });
                 else if (B.length > 0) {
-                    var w, Y;
+                    var k, Y;
                     let e = null;
                     B.length < 10 && (e = (0, a.jsx)(u.Button, {
                         className: i(D.addVerificationButton, D.addVerificationButtonAppend),
@@ -128,8 +128,8 @@
                             className: D.addVerificationButtonAppendTextContainer,
                             children: [(0, a.jsx)(T.default, {}), R.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_ADD_CONNECTION]
                         })
-                    })), k = (0, a.jsxs)(a.Fragment, {
-                        children: [(w = () => (0, g.updateRoleConnectionConfigurations)(s.id, []), Y = l, (0, a.jsxs)(a.Fragment, {
+                    })), w = (0, a.jsxs)(a.Fragment, {
+                        children: [(k = () => (0, g.updateRoleConnectionConfigurations)(s.id, []), Y = l, (0, a.jsxs)(a.Fragment, {
                             children: [(0, a.jsxs)("div", {
                                 className: D.headerTitleContainer,
                                 children: [(0, a.jsx)("div", {
@@ -143,7 +143,7 @@
                                     size: u.Button.Sizes.TINY,
                                     look: u.Button.Looks.LINK,
                                     color: u.Button.Colors.LINK,
-                                    onClick: w,
+                                    onClick: k,
                                     disabled: Y,
                                     children: R.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_CLEAR_ALL
                                 })]
@@ -256,7 +256,7 @@
                                 color: "text-normal",
                                 children: R.default.Messages.ROLE_EDIT_CONNECTIONS_CONTROLS_MEMBERS_WARNING
                             })]
-                        }) : null, k]
+                        }) : null, w]
                     })
                 })
             }
