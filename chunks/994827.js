@@ -24,8 +24,8 @@
                 g = n("400501"),
                 N = n("542640"),
                 m = n("255228"),
-                A = n("772371"),
-                M = n("604656"),
+                M = n("772371"),
+                A = n("604656"),
                 I = n("782340"),
                 v = (0, u.default)(function(e) {
                     let {
@@ -34,7 +34,7 @@
                     } = e, u = (0, f.default)(t), r = (0, _.default)(t), v = (0, m.default)(t), p = (0, o.default)(t), O = (0, h.default)(t), U = (0, c.default)(t), F = (0, s.default)({
                         id: t.id,
                         label: I.default.Messages.COPY_ID_THREAD
-                    }), L = (0, T.default)(t, "Context Menu"), R = (0, C.default)(t), G = (0, A.default)(t), y = (0, g.default)(t), D = (0, N.default)(t.id), b = (0, S.default)(t), P = (0, M.default)(t), x = (0, E.default)(t, {
+                    }), L = (0, T.default)(t, "Context Menu"), R = (0, C.default)(t), G = (0, M.default)(t), y = (0, g.default)(t), D = (0, N.default)(t.id), b = (0, S.default)(t), P = (0, A.default)(t), x = (0, E.default)(t, {
                         hoist: !0
                     }), H = (0, d.useAddToFavoritesItem)(t), j = (0, d.useRemoveFromFavoritesItem)(t);
                     return (0, a.jsxs)(l.Menu, {

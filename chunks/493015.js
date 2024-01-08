@@ -1,7 +1,7 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return S
+                    return M
                 }
             });
             var n = a("37983");
@@ -20,15 +20,15 @@
                 _ = a("271938"),
                 A = a("136207"),
                 v = a("44141"),
-                E = a("531674"),
-                T = a("49111"),
+                T = a("531674"),
+                E = a("49111"),
                 y = a("782340"),
-                S = (0, s.default)((0, u.default)(function(e) {
+                M = (0, s.default)((0, u.default)(function(e) {
                     let {
                         channel: t,
                         selected: u,
                         onSelect: s
-                    } = e, r = t.isOwner(_.default.getId()), T = (0, v.default)(t), S = (0, E.default)(t), M = (0, A.default)(t, u), h = (0, c.default)({
+                    } = e, r = t.isOwner(_.default.getId()), E = (0, v.default)(t), M = (0, T.default)(t), S = (0, A.default)(t, u), h = (0, c.default)({
                         id: t.id,
                         label: y.default.Messages.COPY_ID_CHANNEL
                     }), m = (0, o.default)(t), C = (0, f.useAddToFavoritesItem)(t), N = (0, f.useRemoveFromFavoritesItem)(t), g = (0, I.default)(t), O = (0, p.default)(t);
@@ -38,7 +38,7 @@
                         onClose: d.closeContextMenu,
                         onSelect: s,
                         children: [(0, n.jsx)(l.MenuGroup, {
-                            children: T
+                            children: E
                         }), (0, n.jsxs)(l.MenuGroup, {
                             children: [C, g, O]
                         }), (0, n.jsxs)(l.MenuGroup, {
@@ -76,9 +76,9 @@
                         }), (0, n.jsx)(l.MenuGroup, {
                             children: m
                         }), (0, n.jsx)(l.MenuGroup, {
-                            children: S
-                        }), (0, n.jsx)(l.MenuGroup, {
                             children: M
+                        }), (0, n.jsx)(l.MenuGroup, {
+                            children: S
                         }), (0, n.jsx)(l.MenuGroup, {
                             children: N
                         }), (0, n.jsx)(l.MenuGroup, {
@@ -86,5 +86,5 @@
                         })]
                     })
                 }, {
-                    object: T.AnalyticsObjects.CONTEXT_MENU
+                    object: E.AnalyticsObjects.CONTEXT_MENU
                 }), [r.default.CONTEXT_MENU, r.default.GROUP_DM_MENU])

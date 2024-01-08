@@ -27,41 +27,40 @@
 
             function A(e) {
                 let t = (0, d.useStateFromStores)([s.default], () => s.default.getChannels(I.FAVORITES))[I.ChannelTypes.GUILD_CATEGORY],
-                    [
-                        [a], l
-                    ] = i.partition(t, e => "null" === e.channel.id),
                     {
-                        favoritesEnabled: p,
-                        isFavoritesPerk: A
+                        isFavoritesPerk: a
                     } = (0, f.useFavoritesServerExperiment)("58e21a_1"),
                     {
-                        notifyFavoriteAdded: v
+                        notifyFavoriteAdded: l
                     } = (0, c.useFavoriteAdded)(),
-                    E = (0, d.useStateFromStores)([o.default], () => o.default.isFavorite(e.id));
-                if (__OVERLAY__ || E || !p) return null;
+                    o = (0, c.useCanFavoriteChannel)(e);
+                if (!o) return null;
+                let [
+                    [p], A
+                ] = i.partition(t, e => "null" === e.channel.id);
 
-                function T(t) {
-                    v(), (0, r.addFavoriteChannel)(e.id, t)
+                function v(t) {
+                    l(), (0, r.addFavoriteChannel)(e.id, t)
                 }
-                return 0 === l.length ? (0, n.jsx)(u.MenuItem, {
+                return 0 === A.length ? (0, n.jsx)(u.MenuItem, {
                     id: "favorite-channel",
                     label: _(e, !1),
-                    action: () => T(null)
+                    action: () => v(null)
                 }) : (0, n.jsxs)(u.MenuItem, {
                     id: "favorite-channel",
                     label: _(e, !1),
-                    action: () => T(null),
-                    children: [A && (0, n.jsx)(u.MenuGroup, {
+                    action: () => v(null),
+                    children: [a && (0, n.jsx)(u.MenuGroup, {
                         children: (0, n.jsx)(u.MenuItem, {
-                            id: "favorite-".concat(a.channel.id),
-                            label: a.channel.name,
-                            action: () => T("null" === a.channel.id ? null : a.channel.id)
-                        }, a.channel.id)
+                            id: "favorite-".concat(p.channel.id),
+                            label: p.channel.name,
+                            action: () => v("null" === p.channel.id ? null : p.channel.id)
+                        }, p.channel.id)
                     }), (0, n.jsx)(u.MenuGroup, {
-                        children: l.map(e => (0, n.jsx)(u.MenuItem, {
+                        children: A.map(e => (0, n.jsx)(u.MenuItem, {
                             id: "favorite-".concat(e.channel.id),
                             label: e.channel.name,
-                            action: () => T(e.channel.id)
+                            action: () => v(e.channel.id)
                         }, e.channel.id))
                     })]
                 })

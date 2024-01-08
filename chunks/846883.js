@@ -20,11 +20,11 @@
                 _ = a("486150"),
                 A = a("555759"),
                 v = a("271938"),
-                E = a("42203"),
-                T = a("525065"),
+                T = a("42203"),
+                E = a("525065"),
                 y = a("305961"),
-                S = a("957255"),
-                M = a("824563"),
+                M = a("957255"),
+                S = a("824563"),
                 h = a("27618"),
                 m = a("18494"),
                 C = a("101125"),
@@ -49,7 +49,7 @@
             function w(e, t) {
                 let {
                     analyticsLocations: w
-                } = (0, o.default)(), H = (0, l.useStateFromStores)([N.default], () => N.default.getCurrentUser()), K = (0, l.useStateFromStores)([j.default], () => j.default.getSelfEmbeddedActivities()), X = (0, l.useStateFromStoresArray)([C.default], () => C.default.getActivities().filter(e => null != e.application_id && !(null == K ? void 0 : K.has(e.application_id)))), B = (0, l.useStateFromStoresArray)([M.default], () => null != t ? M.default.getActivities(t.id, null == e ? void 0 : e.getGuildId()) : [], [t, e]), z = (0, l.useStateFromStoresArray)([j.default], () => {
+                } = (0, o.default)(), H = (0, l.useStateFromStores)([N.default], () => N.default.getCurrentUser()), K = (0, l.useStateFromStores)([j.default], () => j.default.getSelfEmbeddedActivities()), X = (0, l.useStateFromStoresArray)([C.default], () => C.default.getActivities().filter(e => null != e.application_id && !(null == K ? void 0 : K.has(e.application_id)))), B = (0, l.useStateFromStoresArray)([S.default], () => null != t ? S.default.getActivities(t.id, null == e ? void 0 : e.getGuildId()) : [], [t, e]), z = (0, l.useStateFromStoresArray)([j.default], () => {
                     let a = (null == e ? void 0 : e.id) != null ? j.default.getEmbeddedActivitiesForChannel(e.id) : j.NO_ACTIVITIES;
                     return null != t ? a.filter(e => {
                         let {
@@ -57,20 +57,20 @@
                         } = e;
                         return a.has(t.id)
                     }) : a
-                }, [t, e]), Q = (0, V.default)(), q = (0, l.useStateFromStores)([S.default], () => null == e || e.isPrivate() || S.default.can(P.Permissions.SEND_MESSAGES, e), [e]), W = (0, l.useStateFromStoresArray)([O.default], () => [...B.map(e => null != e.application_id && O.default.getState(e.application_id, P.ActivityActionTypes.JOIN) === P.ActivityActionStates.LOADING), ...z.map(e => O.default.getState(e.application_id, P.ActivityActionTypes.JOIN) === P.ActivityActionStates.LOADING)], [B, z]), Z = (0, r.default)([...B.filter(e => (null == e ? void 0 : e.application_id) != null).map(e => e.application_id), ...z.map(e => e.application_id)]), $ = null == e ? void 0 : e.id, ee = (0, l.useStateFromStoresArray)([E.default, y.default, T.default, h.default, m.default, g.default, S.default], () => [...B.map(e => (0, F.default)({
+                }, [t, e]), Q = (0, V.default)(), q = (0, l.useStateFromStores)([M.default], () => null == e || e.isPrivate() || M.default.can(P.Permissions.SEND_MESSAGES, e), [e]), W = (0, l.useStateFromStoresArray)([O.default], () => [...B.map(e => null != e.application_id && O.default.getState(e.application_id, P.ActivityActionTypes.JOIN) === P.ActivityActionStates.LOADING), ...z.map(e => O.default.getState(e.application_id, P.ActivityActionTypes.JOIN) === P.ActivityActionStates.LOADING)], [B, z]), Z = (0, r.default)([...B.filter(e => (null == e ? void 0 : e.application_id) != null).map(e => e.application_id), ...z.map(e => e.application_id)]), $ = null == e ? void 0 : e.id, ee = (0, l.useStateFromStoresArray)([T.default, y.default, E.default, h.default, m.default, g.default, M.default], () => [...B.map(e => (0, F.default)({
                     user: null != t ? t : H,
                     activity: e,
                     application: Z.find(t => (null == t ? void 0 : t.id) === e.application_id),
                     channelId: $,
                     currentUser: H,
                     isEmbedded: (0, R.default)(e),
-                    ChannelStore: E.default,
+                    ChannelStore: T.default,
                     GuildStore: y.default,
-                    GuildMemberCountStore: T.default,
+                    GuildMemberCountStore: E.default,
                     RelationshipStore: h.default,
                     SelectedChannelStore: m.default,
                     VoiceStateStore: g.default,
-                    PermissionStore: S.default
+                    PermissionStore: M.default
                 })), ...z.map(e => (0, F.default)({
                     user: null != t ? t : H,
                     activity: e,
@@ -78,13 +78,13 @@
                     channelId: $,
                     currentUser: H,
                     isEmbedded: !0,
-                    ChannelStore: E.default,
+                    ChannelStore: T.default,
                     GuildStore: y.default,
-                    GuildMemberCountStore: T.default,
+                    GuildMemberCountStore: E.default,
                     RelationshipStore: h.default,
                     SelectedChannelStore: m.default,
                     VoiceStateStore: g.default,
-                    PermissionStore: S.default
+                    PermissionStore: M.default
                 }))], [B, Z, $, H, z, t]), et = (0, l.useStateFromStoresArray)([c.default, v.default], () => B.map(e => e.type === P.ActivityTypes.LISTENING && null != t ? (0, p.default)(c.default, v.default, t, e) : void 0), [t, B]), ea = (0, s.useAnalyticsContext)();
                 if (!q) return null;
                 let en = (a, n) => {
@@ -101,7 +101,7 @@
                         })
                     },
                     el = (l, d) => {
-                        let u = E.default.getChannel(l),
+                        let u = T.default.getChannel(l),
                             s = null == u ? void 0 : y.default.getGuild(u.guild_id);
                         if (null != u && null != s) {
                             if (null != t) return G.sendEmbeddedActivityInviteUser({
@@ -163,7 +163,7 @@
                     }, eu = [];
                 return null == K || K.forEach(a => {
                     let l = (null == t ? void 0 : t.id) != null && a.connections.has(null == t ? void 0 : t.id),
-                        d = S.default.can(P.Permissions.CREATE_INSTANT_INVITE, e);
+                        d = M.default.can(P.Permissions.CREATE_INSTANT_INVITE, e);
                     null != a.activity_id && !l && d && eu.push((0, n.jsx)(i.MenuItem, {
                         id: "invite-to-join-embedded",
                         label: k.default.Messages.USER_ACTIVITY_ACTION_INVITE_TO_JOIN,

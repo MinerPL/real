@@ -19,10 +19,10 @@
                     return A
                 },
                 updateFavoriteChannelParent: function() {
-                    return T
+                    return S
                 },
                 toggleFavoriteServerMuted: function() {
-                    return S
+                    return T
                 }
             }), n("222007");
             var a = n("249654"),
@@ -110,13 +110,13 @@
                 }, r.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
 
-            function T(e, t) {
+            function S(e, t) {
                 r.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
                     n.favoriteChannels[e].parentId = null != t ? t : "0"
                 }, r.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
 
-            function S() {
+            function T() {
                 r.PreloadedUserSettingsActionCreators.updateAsync("favorites", e => {
                     e.muted = !e.muted
                 }, r.UserSettingsDelay.INFREQUENT_USER_ACTION)

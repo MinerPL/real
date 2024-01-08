@@ -4,7 +4,7 @@
                     return A
                 },
                 default: function() {
-                    return S
+                    return T
                 }
             }), n("222007");
             var a = n("37983");
@@ -41,7 +41,7 @@
                     value: N.MuteUntilSeconds.ALWAYS,
                     label: _.default.Messages.MUTE_DURATION_ALWAYS
                 }],
-                T = e => {
+                S = e => {
                     let t = e > 0 ? r().add(e, "second").toISOString() : null;
                     return {
                         muted: !0,
@@ -52,10 +52,10 @@
                     }
                 };
 
-            function S(e, t) {
+            function T(e, t) {
                 let [n, i] = (0, u.useStateFromStoresArray)([f.default], () => [f.default.isChannelMuted(e.guild_id, e.id), f.default.getChannelMuteConfig(e.guild_id, e.id)]), r = (0, d.useMutedUntilText)(i), N = (0, c.default)(e, !0);
 
-                function S(t) {
+                function T(t) {
                     t && e.type === C.ChannelTypes.GUILD_CATEGORY && (0, l.categoryCollapse)(e.id), o.default.updateChannelOverrideSettings(e.guild_id, e.id, {
                         muted: t
                     }, E.NotificationLabel.muted(t))
@@ -83,11 +83,11 @@
                     id: "unmute-channel",
                     label: p,
                     subtext: r,
-                    action: () => S(!1)
+                    action: () => T(!1)
                 }) : (0, a.jsx)(s.MenuItem, {
                     id: "mute-channel",
                     label: v,
-                    action: () => S(!0),
+                    action: () => T(!0),
                     children: A().map(n => {
                         let {
                             value: i,
@@ -98,7 +98,7 @@
                             label: r,
                             action: () => (function(n) {
                                 e.type === C.ChannelTypes.GUILD_CATEGORY && (0, l.categoryCollapse)(e.id);
-                                let a = T(n);
+                                let a = S(n);
                                 o.default.updateChannelOverrideSettings(e.guild_id, e.id, a, E.NotificationLabels.Muted, t)
                             })(i)
                         }, i)
