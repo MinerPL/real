@@ -1,63 +1,63 @@
             "use strict";
-            l.r(t), l.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return A
+                    return _
                 }
-            }), l("424973");
-            var u = l("37983"),
-                n = l("884691"),
-                i = l("446674"),
-                d = l("77078"),
-                a = l("713841"),
-                s = l("79112"),
-                o = l("988721"),
-                r = l("592407"),
-                c = l("305961"),
-                f = l("957255"),
-                p = l("49111"),
-                v = l("782340");
+            }), n("424973");
+            var i = n("37983"),
+                l = n("884691"),
+                r = n("446674"),
+                s = n("77078"),
+                a = n("713841"),
+                o = n("79112"),
+                u = n("988721"),
+                d = n("592407"),
+                c = n("305961"),
+                f = n("957255"),
+                h = n("49111"),
+                E = n("782340");
 
-            function A(e) {
+            function _(e) {
                 let {
                     user: t,
-                    guildId: l,
-                    channel: A,
-                    context: M
-                } = e, E = c.default.getGuild(l), I = (0, i.useStateFromStores)([f.default], () => null != E ? f.default.can(p.Permissions.MANAGE_GUILD, E) : null), N = (0, o.useContextIndexState)(A, !0, !0), S = (0, o.useUserIndexState)(!0, !0), {
-                    isUserApp: U,
-                    isGuildApp: _
-                } = n.useMemo(() => {
-                    var e, l, u, n;
+                    guildId: n,
+                    channel: _,
+                    context: p
+                } = e, I = c.default.getGuild(n), T = (0, r.useStateFromStores)([f.default], () => null != I ? f.default.can(h.Permissions.MANAGE_GUILD, I) : null), C = (0, u.useContextIndexState)(_, !0, !0), S = (0, u.useUserIndexState)(!0, !0), {
+                    isUserApp: N,
+                    isGuildApp: g
+                } = l.useMemo(() => {
+                    var e, n, i, l;
                     if ((null == t ? void 0 : t.id) == null) return {
                         isGuildApp: !1,
                         isUserApp: !1
                     };
-                    let i = Object.values(null !== (u = null === (e = N.result) || void 0 === e ? void 0 : e.sections) && void 0 !== u ? u : {}),
-                        d = Object.values(null !== (n = null === (l = S.result) || void 0 === l ? void 0 : l.sections) && void 0 !== n ? n : {});
+                    let r = Object.values(null !== (i = null === (e = C.result) || void 0 === e ? void 0 : e.sections) && void 0 !== i ? i : {}),
+                        s = Object.values(null !== (l = null === (n = S.result) || void 0 === n ? void 0 : n.sections) && void 0 !== l ? l : {});
                     return {
-                        isGuildApp: i.some(e => {
-                            var l;
-                            return (null === (l = e.descriptor.application) || void 0 === l ? void 0 : l.id) === (null == t ? void 0 : t.id)
+                        isGuildApp: r.some(e => {
+                            var n;
+                            return (null === (n = e.descriptor.application) || void 0 === n ? void 0 : n.id) === (null == t ? void 0 : t.id)
                         }),
-                        isUserApp: d.some(e => {
-                            var l;
-                            return (null === (l = e.descriptor.application) || void 0 === l ? void 0 : l.id) === (null == t ? void 0 : t.id)
+                        isUserApp: s.some(e => {
+                            var n;
+                            return (null === (n = e.descriptor.application) || void 0 === n ? void 0 : n.id) === (null == t ? void 0 : t.id)
                         })
                     }
-                }, [N, S, null == t ? void 0 : t.id]), G = n.useCallback(() => {
-                    (null == E ? void 0 : E.id) != null && (r.default.open(E.id, p.GuildSettingsSections.INTEGRATIONS), a.default.setSection(p.IntegrationSettingsSections.APPLICATION, null == t ? void 0 : t.id))
-                }, [null == t ? void 0 : t.id, null == E ? void 0 : E.id]), g = n.useCallback(() => {
-                    s.default.open(p.UserSettingsSections.AUTHORIZED_APPS)
-                }, []), h = M === p.AppContext.POPOUT;
-                if (!(null == t ? void 0 : t.bot) || !I || h || !_ && !U) return null;
-                let j = [];
-                return _ && j.push((0, u.jsx)(d.MenuItem, {
+                }, [C, S, null == t ? void 0 : t.id]), v = l.useCallback(() => {
+                    (null == I ? void 0 : I.id) != null && (d.default.open(I.id, h.GuildSettingsSections.INTEGRATIONS), a.default.setSection(h.IntegrationSettingsSections.APPLICATION, null == t ? void 0 : t.id))
+                }, [null == t ? void 0 : t.id, null == I ? void 0 : I.id]), m = l.useCallback(() => {
+                    o.default.open(h.UserSettingsSections.AUTHORIZED_APPS)
+                }, []), A = p === h.AppContext.POPOUT;
+                if (!(null == t ? void 0 : t.bot) || !T || A || !g && !N) return null;
+                let L = [];
+                return g && L.push((0, i.jsx)(s.MenuItem, {
                     id: "manage-integration",
-                    label: v.default.Messages.MANAGE_INTEGRATION,
-                    action: G
-                }, "manage-integration")), U && j.push((0, u.jsx)(d.MenuItem, {
+                    label: E.default.Messages.MANAGE_INTEGRATION,
+                    action: v
+                }, "manage-integration")), N && L.push((0, i.jsx)(s.MenuItem, {
                     id: "manage-authorized-app",
-                    label: v.default.Messages.MANAGE_AUTHORIZED_APP,
-                    action: g
-                }, "manage-authorized-app")), j
+                    label: E.default.Messages.MANAGE_AUTHORIZED_APP,
+                    action: m
+                }, "manage-authorized-app")), L
             }
