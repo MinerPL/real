@@ -4,8 +4,8 @@
                     return C
                 }
             }), n("222007");
-            var a = n("917351"),
-                s = n.n(a),
+            var s = n("917351"),
+                a = n.n(s),
                 l = n("446674"),
                 i = n("872717"),
                 r = n("913144"),
@@ -21,8 +21,8 @@
                     id: t
                 } = e, {
                     loaded: n,
-                    message: a,
-                    error: s
+                    message: s,
+                    error: a
                 } = (0, l.useStateFromStoresObject)([d.default, o.default, u.default], () => {
                     let e = u.default.lastMessageId(t),
                         n = d.default.getMessageRequestPreview(t);
@@ -36,17 +36,17 @@
                     }
                     return n
                 }, [t]), i = (0, l.useStateFromStores)([d.default], () => d.default.shouldLoadMessageRequestPreview(t), [t]);
-                return !n && null == a && i && function(e) {
+                return !n && null == s && i && function(e) {
                     f.add(e), null == h && (h = setTimeout(p, 0))
                 }(t), {
                     loaded: n,
-                    error: s,
-                    message: a
+                    error: a,
+                    message: s
                 }
             }
             async function p() {
                 try {
-                    for (; !s.isEmpty(f);) await m()
+                    for (; !a.isEmpty(f);) await m()
                 } finally {
                     h = null
                 }

@@ -7,15 +7,15 @@
             });
             var n = r("446674"),
                 s = r("913144");
-            let i = [],
-                u = i,
+            let u = [],
+                i = u,
                 l = null,
                 o = e => {
-                    u = i, l = null
+                    i = u, l = null
                 };
             class c extends n.default.Store {
                 get analyticsLocations() {
-                    return u
+                    return i
                 }
                 get analyticsSource() {
                     return l
@@ -25,7 +25,7 @@
                 }
                 getAnalytics() {
                     return {
-                        analyticsLocations: u,
+                        analyticsLocations: i,
                         analyticsSource: l
                     }
                 }
@@ -34,7 +34,7 @@
             var d = new c(s.default, {
                 COLLECTIBLES_SHOP_OPEN: e => {
                     var t, r;
-                    u = null !== (t = e.analyticsLocations) && void 0 !== t ? t : i, l = null !== (r = e.analyticsSource) && void 0 !== r ? r : null, a = e.initialProductSkuId
+                    i = null !== (t = e.analyticsLocations) && void 0 !== t ? t : u, l = null !== (r = e.analyticsSource) && void 0 !== r ? r : null, a = e.initialProductSkuId
                 },
                 COLLECTIBLES_SHOP_CLOSE: o,
                 COLLECTIBLES_PRODUCT_DETAILS_OPEN: e => {

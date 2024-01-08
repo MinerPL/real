@@ -8,8 +8,8 @@
             r("884691");
             var n = r("414456"),
                 s = r.n(n),
-                i = r("506838"),
-                u = r("446674"),
+                u = r("506838"),
+                i = r("446674"),
                 l = r("77078"),
                 o = r("491232"),
                 c = r("984002"),
@@ -36,7 +36,7 @@
                 p = e => {
                     let {
                         purchase: t
-                    } = e, r = (0, u.useStateFromStores)([E.default], () => E.default.locale), n = (0, o.isPremiumCollectiblesPurchase)(t);
+                    } = e, r = (0, i.useStateFromStores)([E.default], () => E.default.locale), n = (0, o.isPremiumCollectiblesPurchase)(t);
                     return (0, a.jsxs)("div", {
                         className: A.purchaseInfo,
                         children: [(0, a.jsx)(l.Text, {
@@ -65,7 +65,7 @@
                     user: t,
                     avatarDecorationOverride: r,
                     className: n
-                } = e, E = (0, u.useStateFromStores)([_.default], () => _.default.getStatus(t.id)), {
+                } = e, E = (0, i.useStateFromStores)([_.default], () => _.default.getStatus(t.id)), {
                     category: h,
                     product: m,
                     purchase: T
@@ -86,7 +86,7 @@
                             children: m.name
                         }), (0, a.jsx)(l.Text, {
                             variant: "text-sm/normal",
-                            children: R ? I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, i.match)([v, L]).with([!0, !0], () => I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
+                            children: R ? I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED : (0, u.match)([v, L]).with([!0, !0], () => I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM).with([!0, !1], () => I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER).otherwise(() => I.default.Messages.CHANGE_DECORATION_MODAL_PREVIEW_PURCHASE_PREMIUM)
                         })]
                     })]
                 }) : (0, a.jsxs)("div", {

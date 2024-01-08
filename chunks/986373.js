@@ -1,70 +1,70 @@
             "use strict";
             n.r(t), n.d(t, {
                 useCanFavoriteChannel: function() {
-                    return h
+                    return c
                 },
                 useFavorite: function() {
-                    return E
+                    return C
                 },
                 useFavoritesCategories: function() {
-                    return _
+                    return N
                 },
                 useFavoritesGuildSelected: function() {
-                    return p
+                    return _
                 },
                 useFavoriteAdded: function() {
-                    return I
+                    return A
                 }
             }), n("424973"), n("222007");
-            var i = n("884691"),
-                l = n("298386"),
-                a = n("446674");
+            var a = n("884691"),
+                i = n("298386"),
+                r = n("446674");
             n("42203");
-            var r = n("923959"),
+            var u = n("923959"),
                 s = n("162771"),
-                o = n("697218"),
-                u = n("379881"),
+                l = n("697218"),
+                o = n("379881"),
                 d = n("498139"),
-                c = n("136569"),
-                f = n("49111");
+                f = n("136569"),
+                E = n("49111");
 
-            function h(e) {
+            function c(e) {
                 let {
                     favoritesEnabled: t,
                     isFavoritesPerk: n
-                } = (0, d.useFavoritesServerExperiment)("useCanFavoriteChannel"), i = (0, a.useStateFromStores)([u.default], () => u.default.isFavorite(e.id)), l = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()), r = e.isDM() || e.isThread(), s = !r || n && (null == l ? void 0 : l.isStaff()) === !0;
-                return t && !__OVERLAY__ && !i && s
+                } = (0, d.useFavoritesServerExperiment)("useCanFavoriteChannel"), a = (0, r.useStateFromStores)([o.default], () => o.default.isFavorite(e.id)), i = (0, r.useStateFromStores)([l.default], () => l.default.getCurrentUser()), u = e.isDM() || e.isThread(), s = !u || n && (null == i ? void 0 : i.isStaff()) === !0;
+                return t && !__OVERLAY__ && !a && s
             }
 
-            function E(e) {
-                let t = (0, a.useStateFromStores)([u.default], () => u.default.getFavorite(e));
+            function C(e) {
+                let t = (0, r.useStateFromStores)([o.default], () => o.default.getFavorite(e));
                 return t
             }
 
-            function _() {
-                let e = (0, a.useStateFromStores)([r.default], () => r.default.getChannels(f.FAVORITES))[l.ChannelTypes.GUILD_CATEGORY];
+            function N() {
+                let e = (0, r.useStateFromStores)([u.default], () => u.default.getChannels(E.FAVORITES))[i.ChannelTypes.GUILD_CATEGORY];
                 return e.map(e => ({
                     id: "null" === e.channel.id ? null : e.channel.id,
                     name: e.channel.name
                 }))
             }
 
-            function p() {
-                let e = (0, a.useStateFromStores)([s.default], () => s.default.getGuildId());
-                return e === f.FAVORITES
+            function _() {
+                let e = (0, r.useStateFromStores)([s.default], () => s.default.getGuildId());
+                return e === E.FAVORITES
             }
 
-            function I() {
+            function A() {
                 let {
                     isFavoritesPerk: e
-                } = (0, d.useFavoritesServerExperiment)("useFavoriteAdded"), t = (0, c.useFavoritesTooltipStore)(), n = i.useCallback(() => {
+                } = (0, d.useFavoritesServerExperiment)("useFavoriteAdded"), t = (0, f.useFavoritesTooltipStore)(), n = a.useCallback(() => {
                     e && t.notifyFavoriteAdded()
-                }, [t, e]), l = i.useCallback(() => {
+                }, [t, e]), i = a.useCallback(() => {
                     e && t.clearFavoriteAdded()
                 }, [t, e]);
                 return {
                     favoriteAdded: t.favoriteAdded,
                     notifyFavoriteAdded: n,
-                    clearFavoriteAdded: l
+                    clearFavoriteAdded: i
                 }
             }

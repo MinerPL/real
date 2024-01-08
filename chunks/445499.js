@@ -4,8 +4,8 @@
                     return d
                 }
             });
-            var a = n("446674"),
-                s = n("271938"),
+            var s = n("446674"),
+                a = n("271938"),
                 l = n("191542"),
                 i = n("880731"),
                 r = n("943551"),
@@ -14,8 +14,8 @@
 
             function d(e) {
                 let t = (0, o.default)(u.ShakeLocation.CHAT_INPUT),
-                    n = (0, a.useStateFromStores)([i.default], () => i.default.isEnabled({
+                    n = (0, s.useStateFromStores)([i.default], () => i.default.isEnabled({
                         shakeLocation: u.ShakeLocation.CHAT_INPUT
                     }));
-                return (0, a.useStateFromStores)([l.default, r.default, s.default], () => n && l.default.isTyping(e, s.default.getId()) ? r.default.getUserComboShakeIntensity(s.default.getId(), e, t) : 0)
+                return (0, s.useStateFromStores)([l.default, r.default, a.default], () => n && l.default.isTyping(e, a.default.getId()) ? r.default.getUserComboShakeIntensity(a.default.getId(), e, t) : 0)
             }

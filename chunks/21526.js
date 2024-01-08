@@ -31,8 +31,8 @@
             var a = r("872717"),
                 n = r("913144"),
                 s = r("54239"),
-                i = r("448993"),
-                u = r("514296"),
+                u = r("448993"),
+                i = r("514296"),
                 l = r("407788"),
                 o = r("489134"),
                 c = r("49111");
@@ -66,13 +66,13 @@
                         let e = await a.default.get(c.Endpoints.COLLECTIBLES_CATEGORIES);
                         n.default.dispatch({
                             type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS",
-                            categories: e.body.map(u.default.fromServer)
+                            categories: e.body.map(i.default.fromServer)
                         })
                     } catch (e) {
                         throw n.default.dispatch({
                             type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE",
                             error: e
-                        }), new i.APIError(e)
+                        }), new u.APIError(e)
                     }
                 }, C = async () => {
                     n.default.dispatch({
@@ -88,7 +88,7 @@
                         throw n.default.dispatch({
                             type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE",
                             error: e
-                        }), new i.APIError(e)
+                        }), new u.APIError(e)
                     }
                 }, I = async e => {
                     n.default.dispatch({
@@ -104,7 +104,7 @@
                         throw n.default.dispatch({
                             type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE",
                             error: e
-                        }), new i.APIError(e)
+                        }), new u.APIError(e)
                     }
                 }, A = async e => {
                     n.default.dispatch({
@@ -129,7 +129,7 @@
                             type: "COLLECTIBLES_CLAIM_FAILURE",
                             skuId: e,
                             error: t
-                        }), new i.APIError(t)
+                        }), new u.APIError(t)
                     }
                 }, S = async (e, t) => {
                     try {
@@ -142,7 +142,7 @@
                         });
                         return r.body.valid
                     } catch (e) {
-                        throw new i.APIError(e)
+                        throw new u.APIError(e)
                     }
                 }, p = e => {
                     n.default.dispatch({

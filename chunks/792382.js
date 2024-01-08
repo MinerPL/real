@@ -12,12 +12,12 @@
                         sku_id: a,
                         unpublished_at: n,
                         ...s
-                    } = t, i = null != n ? new Date(n) : null;
+                    } = t, u = null != n ? new Date(n) : null;
                     return new e({
                         ...s,
                         storeListingId: r,
                         skuId: a,
-                        unpublishedAt: i
+                        unpublishedAt: u
                     })
                 }
                 constructor(e) {

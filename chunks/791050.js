@@ -7,8 +7,8 @@
             var a = r("37983"),
                 n = r("884691"),
                 s = r("265586"),
-                i = r("446674"),
-                u = r("77078"),
+                u = r("446674"),
+                i = r("77078"),
                 l = r("812204"),
                 o = r("685665"),
                 c = r("21526"),
@@ -34,7 +34,7 @@
                     user: t,
                     categories: r,
                     analyticsLocations: s,
-                    onClose: i,
+                    onClose: u,
                     initialSelectedDecoration: o,
                     isTryItOutFlow: _
                 } = e, {
@@ -54,26 +54,26 @@
                     product: N,
                     purchase: D
                 } = (0, E.default)(null == L ? void 0 : L.skuId), P = p.default.canUseCollectibles(t), M = n.useRef(null), y = (0, f.default)(s), H = (0, h.isEqualAvatarDecoration)(L, void 0 === A ? null == t ? void 0 : t.avatarDecoration : A), x = () => {
-                    S(L), i()
+                    S(L), u()
                 }, w = n.useCallback(() => {
-                    i(), (0, c.openCollectiblesShop)({
+                    u(), (0, c.openCollectiblesShop)({
                         analyticsLocations: s,
                         analyticsSource: l.default.EDIT_AVATAR_DECORATION_MODAL,
                         initialProductSkuId: null != L ? L.skuId : void 0
                     })
-                }, [s, i, L]);
+                }, [s, u, L]);
                 return (0, a.jsxs)(a.Fragment, {
-                    children: [(0, a.jsxs)(u.ModalHeader, {
+                    children: [(0, a.jsxs)(i.ModalHeader, {
                         separator: !1,
                         className: R.modalHeader,
-                        children: [(0, a.jsx)(u.Heading, {
+                        children: [(0, a.jsx)(i.Heading, {
                             variant: "heading-lg/semibold",
                             children: v.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
-                        }), (0, a.jsx)(u.ModalCloseButton, {
+                        }), (0, a.jsx)(i.ModalCloseButton, {
                             className: R.modalCloseButton,
-                            onClick: i
+                            onClick: u
                         })]
-                    }), (0, a.jsxs)(u.ModalContent, {
+                    }), (0, a.jsxs)(i.ModalContent, {
                         className: R.modalContent,
                         scrollbarType: "none",
                         children: [(0, a.jsx)(T.default, {
@@ -89,17 +89,17 @@
                             user: t,
                             avatarDecorationOverride: L
                         })]
-                    }), (0, a.jsxs)(u.ModalFooter, {
+                    }), (0, a.jsxs)(i.ModalFooter, {
                         className: R.modalFooter,
                         children: [(() => {
                             let e = null != D && (!(0, d.isPremiumCollectiblesPurchase)(D) || P);
-                            if (e || null === L) return (0, a.jsx)(u.Button, {
+                            if (e || null === L) return (0, a.jsx)(i.Button, {
                                 onClick: x,
                                 disabled: H,
                                 children: v.default.Messages.AVATAR_DECORATION_MODAL_APPLY
                             });
                             let r = P || !(0, d.isPremiumCollectiblesProduct)(N);
-                            return r ? (0, a.jsx)(u.Button, {
+                            return r ? (0, a.jsx)(i.Button, {
                                 className: R.modalFooterShopButton,
                                 onClick: w,
                                 children: v.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
@@ -107,10 +107,10 @@
                                 subscriptionTier: O.PremiumSubscriptionSKUs.TIER_2,
                                 buttonText: p.default.isPremium(t) ? v.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : v.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
                             })
-                        })(), (0, a.jsx)(u.Button, {
-                            look: u.Button.Looks.LINK,
-                            color: u.Button.Colors.PRIMARY,
-                            onClick: i,
+                        })(), (0, a.jsx)(i.Button, {
+                            look: i.Button.Looks.LINK,
+                            color: i.Button.Colors.PRIMARY,
+                            onClick: u,
                             children: v.default.Messages.CANCEL
                         })]
                     })]
@@ -124,7 +124,7 @@
                     onClose: d,
                     initialSelectedDecoration: E,
                     isTryItOutFlow: f
-                } = e, C = (0, i.useStateFromStores)([A.default], () => A.default.getCurrentUser()), {
+                } = e, C = (0, u.useStateFromStores)([A.default], () => A.default.getCurrentUser()), {
                     AnalyticsLocationProvider: I,
                     analyticsLocations: p
                 } = (0, o.default)(r, l.default.EDIT_AVATAR_DECORATION_MODAL), {
@@ -144,13 +144,13 @@
                         itemTypes: [s.CollectiblesItemType.AVATAR_DECORATION]
                     })
                 }, [h]), null == C ? null : (0, a.jsx)(I, {
-                    children: (0, a.jsx)(u.ModalRoot, {
+                    children: (0, a.jsx)(i.ModalRoot, {
                         transitionState: t,
                         className: R.modal,
-                        size: v ? u.ModalSize.DYNAMIC : u.ModalSize.MEDIUM,
-                        children: v ? (0, a.jsx)(u.Spinner, {
+                        size: v ? i.ModalSize.DYNAMIC : i.ModalSize.MEDIUM,
+                        children: v ? (0, a.jsx)(i.Spinner, {
                             className: R.spinner,
-                            type: u.Spinner.Type.SPINNING_CIRCLE
+                            type: i.Spinner.Type.SPINNING_CIRCLE
                         }) : (0, a.jsx)(g, {
                             user: C,
                             categories: h,
