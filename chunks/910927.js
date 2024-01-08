@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 makeEmptyTitleError: function() {
-                    return u
+                    return o
                 },
                 makeEmptyMessageError: function() {
                     return d
@@ -23,11 +23,11 @@
                 }
             }
 
-            function o(e) {
+            function u(e) {
                 return r(0, e)
             }
 
-            function u() {
+            function o() {
                 return r(0, i.default.Messages.FORM_THREAD_NAME_REQUIRED_ERROR)
             }
 

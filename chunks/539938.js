@@ -19,8 +19,8 @@
                 c = n("76813"),
                 f = n("311197"),
                 E = n("92790"),
-                h = n("697218"),
-                _ = n("664336"),
+                _ = n("697218"),
+                h = n("664336"),
                 S = n("773336"),
                 T = n("50885"),
                 p = n("836056"),
@@ -52,14 +52,14 @@
                     scrollable: R,
                     role: M,
                     hideSearch: O
-                } = e, L = (0, r.useStateFromStores)([h.default], () => h.default.getCurrentUser()), v = (null == L ? void 0 : L.isStaff()) || (null == L ? void 0 : L.isStaffPersonal()) || !1, {
+                } = e, L = (0, r.useStateFromStores)([_.default], () => _.default.getCurrentUser()), v = (null == L ? void 0 : L.isStaff()) || (null == L ? void 0 : L.isStaffPersonal()) || !1, {
                     showClipsHeaderEntrypoint: D
                 } = d.ClipsExperiment.useExperiment({
                     location: "HeaderBarLoggedIn"
                 }, {
                     autoTrackExposure: !1
                 });
-                return (0, l.jsx)(_.default, {
+                return (0, l.jsx)(h.default, {
                     className: n,
                     innerClassName: o,
                     toolbar: function() {
@@ -89,7 +89,7 @@
                     "aria-labelledby": s,
                     role: i
                 } = e;
-                return (0, l.jsx)(_.default, {
+                return (0, l.jsx)(h.default, {
                     className: n,
                     onDoubleClick: C,
                     "aria-label": a,
@@ -118,5 +118,5 @@
                     })
                 })
             }
-            O.Title = _.default.Title, O.Icon = _.default.Icon, O.Divider = _.default.Divider, O.Caret = _.default.Caret;
+            O.Title = h.default.Title, O.Icon = h.default.Icon, O.Divider = h.default.Divider, O.Caret = h.default.Caret;
             var L = O

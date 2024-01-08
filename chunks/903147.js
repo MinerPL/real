@@ -11,14 +11,14 @@
                 u = n("393027"),
                 d = n("42203"),
                 s = n("957255"),
-                r = n("18494"),
-                E = n("677099"),
+                E = n("18494"),
+                r = n("677099"),
                 _ = n("330338"),
                 A = n("722525"),
                 c = n("49111"),
                 C = o.throttle(function() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-                        t = E.default.getFlattenedGuildIds(),
+                        t = r.default.getFlattenedGuildIds(),
                         n = function(e) {
                             let t = u.default.getState().guildId;
                             if (null == t) return -2;
@@ -31,6 +31,6 @@
                         return
                     }
                     let i = -1 === n ? c.FAVORITES : t[n],
-                        o = r.default.getChannelId(i);
+                        o = E.default.getChannelId(i);
                     (0, A.transitionToChannel)(i, o === i ? null : o, !1)
                 }, c.NAVIGATION_THROTTLE)

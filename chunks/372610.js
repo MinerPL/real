@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return u
                 }
             });
             var a = n("884691"),
@@ -10,15 +10,15 @@
                 i = n("702173");
             let r = e => null != e && "" !== e;
 
-            function o(e, t) {
+            function u(e, t) {
                 let n = (0, s.useIsActivitiesEnabledForCurrentPlatform)(),
-                    o = (0, i.default)(t),
-                    u = r(e) || o;
+                    u = (0, i.default)(t),
+                    o = r(e) || u;
                 a.useEffect(() => {
-                    u && n && (0, l.fetchShelf)({
+                    o && n && (0, l.fetchShelf)({
                         guildId: e
                     })
-                }, [e, n, u]);
-                let d = u && n;
+                }, [e, n, o]);
+                let d = o && n;
                 return d
             }

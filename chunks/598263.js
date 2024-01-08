@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("917351"),
-                o = n("65597"),
-                u = n("891722"),
+                u = n("65597"),
+                o = n("891722"),
                 d = n("77078"),
                 c = n("419135"),
                 f = n("574933"),
@@ -19,8 +19,8 @@
                 m = n("535260"),
                 E = n("982108"),
                 C = n("26989"),
-                g = n("697218"),
-                S = n("994906"),
+                S = n("697218"),
+                g = n("994906"),
                 _ = n("180968"),
                 I = n("789150"),
                 T = n("782340"),
@@ -37,7 +37,7 @@
                         children: (0, a.jsxs)(d.Clickable, {
                             className: i(v.backButton),
                             onClick: () => null == t ? void 0 : t(I.ModViewPanel.INFO),
-                            children: [(0, a.jsx)(u.ArrowSmallLeftIcon, {
+                            children: [(0, a.jsx)(o.ArrowSmallLeftIcon, {
                                 className: i(v.backButtonIcon),
                                 width: 20,
                                 height: 20
@@ -61,13 +61,13 @@
                 var t, n;
                 let {
                     userId: s,
-                    guildId: u,
+                    guildId: o,
                     location: T,
                     className: N,
                     onNavigate: A
-                } = e, M = l.useRef(null), R = (0, o.default)([E.default], () => E.default.getGuildSidebarState(u), [u]), j = l.useRef(0), [L, O] = l.useState(null !== (t = null == R ? void 0 : R.details.additionalSearchQuery) && void 0 !== t ? t : {}), {
+                } = e, M = l.useRef(null), R = (0, u.default)([E.default], () => E.default.getGuildSidebarState(o), [o]), j = l.useRef(0), [L, O] = l.useState(null !== (t = null == R ? void 0 : R.details.additionalSearchQuery) && void 0 !== t ? t : {}), {
                     messageHistoryState: y
-                } = (0, _.useServerActivityForUser)(s, u, L), b = (0, o.default)([g.default], () => g.default.getUser(s), [s]), P = (0, o.default)([C.default], () => C.default.getMember(u, s), [u, s]);
+                } = (0, _.useServerActivityForUser)(s, o, L), b = (0, u.default)([S.default], () => S.default.getUser(s), [s]), P = (0, u.default)([C.default], () => C.default.getMember(o, s), [o, s]);
                 l.useLayoutEffect(() => {
                     let e = null == R ? void 0 : R.details.scrollOffset;
                     if (null != e) {
@@ -81,12 +81,12 @@
                 let D = l.useCallback(e => {
                         if (null == R) return;
                         let t = e.target.scrollTop;
-                        j.current = t, (0, S.openGuildMemberModViewSidebar)(u, s, R.baseChannelId, {
+                        j.current = t, (0, g.openGuildMemberModViewSidebar)(o, s, R.baseChannelId, {
                             modViewPanel: I.ModViewPanel.MESSAGE_HISTORY,
                             additionalSearchQuery: L,
                             scrollOffset: j.current
                         })
-                    }, [u, s, R, L]),
+                    }, [o, s, R, L]),
                     U = (0, r.throttle)(D, 300),
                     w = l.useCallback(e => {
                         if (null == R) return;
@@ -94,14 +94,14 @@
                             ...L,
                             offset: 25 * e
                         };
-                        O(t), (0, S.openGuildMemberModViewSidebar)(u, s, R.baseChannelId, {
+                        O(t), (0, g.openGuildMemberModViewSidebar)(o, s, R.baseChannelId, {
                             modViewPanel: I.ModViewPanel.MESSAGE_HISTORY,
                             additionalSearchQuery: t,
                             scrollOffset: j.current
                         })
-                    }, [u, s, R, L]),
+                    }, [o, s, R, L]),
                     F = null !== (n = null == L ? void 0 : L.offset) && void 0 !== n ? n : 0,
-                    k = (0, o.default)([f.default], () => {
+                    k = (0, u.default)([f.default], () => {
                         if (null == y.result) return [];
                         let e = y.result.messages,
                             t = (0, c.createASTHighlighter)("");

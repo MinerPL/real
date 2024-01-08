@@ -4,31 +4,31 @@
                     return f
                 }
             }), n("222007");
-            var a = n("37983");
+            var i = n("37983");
             n("884691");
             var l = n("446674"),
-                i = n("77078"),
-                u = n("168973"),
-                d = n("301603"),
-                s = n("632616"),
-                r = n("535348"),
-                o = n("353927"),
+                u = n("77078"),
+                o = n("168973"),
+                a = n("301603"),
+                r = n("632616"),
+                d = n("535348"),
+                s = n("353927"),
                 c = n("782340");
 
             function f(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.MediaEngineContextTypes.DEFAULT,
-                    [n, f, _] = (0, d.default)(e, t),
-                    E = (0, l.useStateFromStores)([u.default], () => u.default.disableHideSelfStreamAndVideoConfirmationAlert);
-                return n ? (0, a.jsx)(i.MenuCheckboxItem, {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.MediaEngineContextTypes.DEFAULT,
+                    [n, f, E] = (0, a.default)(e, t),
+                    _ = (0, l.useStateFromStores)([o.default], () => o.default.disableHideSelfStreamAndVideoConfirmationAlert);
+                return n ? (0, i.jsx)(u.MenuCheckboxItem, {
                     id: "self-video-hide",
                     label: c.default.Messages.SHOW_SELF_VIDEO,
                     checked: !f,
                     action: () => {
-                        if (E || f) return _(!f);
-                        (0, i.openModal)(e => (0, a.jsx)(s.default, {
+                        if (_ || f) return E(!f);
+                        (0, u.openModal)(e => (0, i.jsx)(r.default, {
                             ...e,
-                            type: r.SelfStreamAndVideoAlertType.VIDEO,
-                            onConfirm: () => _(!f)
+                            type: d.SelfStreamAndVideoAlertType.VIDEO,
+                            onConfirm: () => E(!f)
                         }))
                     }
                 }) : null

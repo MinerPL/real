@@ -1,15 +1,15 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return h
+                    return p
                 }
             });
             var s = n("37983");
             n("884691");
-            var r = n("90915"),
-                i = n("73749"),
+            var i = n("90915"),
+                a = n("73749"),
                 l = n("468560"),
-                a = n("271081"),
+                r = n("271081"),
                 u = n("298557"),
                 o = n("176162"),
                 c = n("750947"),
@@ -19,25 +19,25 @@
                     match: t
                 } = e, {
                     applicationId: n,
-                    section: r
-                } = t.params, i = (0, l.default)(c.ApplicationDirectoryProfileSections, r);
+                    section: i
+                } = t.params, a = (0, l.default)(c.ApplicationDirectoryProfileSections, i);
                 return (0, s.jsx)(u.default, {
                     applicationId: n,
-                    initialSection: i
+                    initialSection: a
                 })
             };
 
-            function h() {
-                return (0, s.jsxs)(r.Switch, {
-                    children: [(0, s.jsx)(i.default, {
+            function p() {
+                return (0, s.jsxs)(i.Switch, {
+                    children: [(0, s.jsx)(a.default, {
                         path: d.Routes.APPLICATION_DIRECTORY_SEARCH,
                         component: o.default
-                    }), (0, s.jsx)(i.default, {
+                    }), (0, s.jsx)(a.default, {
                         path: d.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId", ":section?"),
                         render: f
-                    }), (0, s.jsx)(i.default, {
+                    }), (0, s.jsx)(a.default, {
                         path: d.Routes.APPLICATION_DIRECTORY,
-                        component: a.default
+                        component: r.default
                     })]
                 })
             }

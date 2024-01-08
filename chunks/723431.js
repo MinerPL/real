@@ -10,8 +10,8 @@
                 s = n("793237"),
                 i = n("347738"),
                 r = n("909004"),
-                o = n("664336"),
-                u = n("599110"),
+                u = n("664336"),
+                o = n("599110"),
                 d = n("49111"),
                 c = n("995307"),
                 f = n("782340");
@@ -20,10 +20,10 @@
                 let {
                     channel: t
                 } = e, n = (0, l.useStateFromStores)([i.default], () => i.default.shouldShowTopicsBar());
-                return (0, a.jsx)(o.default.Icon, {
+                return (0, a.jsx)(u.default.Icon, {
                     icon: r.default,
                     onClick: () => {
-                        u.default.track(d.AnalyticEvents.SUMMARIES_SIDEBAR_TOGGLED, {
+                        o.default.track(d.AnalyticEvents.SUMMARIES_SIDEBAR_TOGGLED, {
                             summaries_sidebar_open: !n,
                             source: c.SummariesSidebarToggledSource.TOOLBAR_BUTTON,
                             guild_id: t.guild_id,

@@ -10,8 +10,8 @@
                 s = n.n(l),
                 i = n("394846"),
                 r = n("77078"),
-                o = n("548683"),
-                u = n("158238");
+                u = n("548683"),
+                o = n("158238");
 
             function d(e) {
                 let {
@@ -23,23 +23,23 @@
                     handleScroll: c,
                     handleSetScrollerRef: f,
                     handleSetContainerRef: h
-                } = (0, o.default)(t), p = (0, a.jsx)("div", {
-                    className: u.tierPreviewsContainer,
+                } = (0, u.default)(t), p = (0, a.jsx)("div", {
+                    className: o.tierPreviewsContainer,
                     children: (0, a.jsx)("div", {
-                        className: s(u.tierPreviews, l),
+                        className: s(o.tierPreviews, l),
                         children: n
                     })
                 });
                 return !i.isMobile && (p = (0, a.jsxs)(a.Fragment, {
                     children: [d, (0, a.jsx)(r.AdvancedScroller, {
-                        className: u.scroller,
+                        className: o.scroller,
                         orientation: "horizontal",
                         ref: f,
                         onScroll: c,
                         children: p
                     })]
                 })), (0, a.jsx)("div", {
-                    className: u.carouselMaxWidth,
+                    className: o.carouselMaxWidth,
                     ref: h,
                     children: p
                 })

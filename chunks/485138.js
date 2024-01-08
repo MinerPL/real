@@ -1,16 +1,16 @@
             "use strict";
             n.r(t), n.d(t, {
                 useTrackLocalizedPricingPromoImpression: function() {
-                    return i
+                    return s
                 }
             });
-            var s = n("759843"),
-                r = n("428958");
+            var r = n("759843"),
+                i = n("428958");
 
-            function i(e, t) {
-                (0, r.default)({
-                    type: s.ImpressionTypes.VIEW,
-                    name: s.ImpressionNames.LOCALIZED_PRICING_UPSELL_VIEWED,
+            function s(e, t) {
+                (0, i.default)({
+                    type: r.ImpressionTypes.VIEW,
+                    name: r.ImpressionNames.LOCALIZED_PRICING_UPSELL_VIEWED,
                     properties: {
                         country_code: t,
                         action_location: e

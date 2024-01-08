@@ -10,13 +10,13 @@
                 s = n("46829"),
                 i = n("981913"),
                 r = n("782340"),
-                o = n("614182");
-            let u = (0, l.animated)(e => {
+                u = n("614182");
+            let o = (0, l.animated)(e => {
                 let {
                     percentComplete: t
                 } = e, n = 20;
                 return (0, a.jsx)("svg", {
-                    className: o.countdown,
+                    className: u.countdown,
                     width: 40,
                     height: 40,
                     viewBox: "0 0 ".concat(40, " ").concat(40),
@@ -24,7 +24,7 @@
                         style: {
                             strokeDashoffset: Math.round(100 * t)
                         },
-                        className: o.progress,
+                        className: u.progress,
                         cx: n,
                         cy: n,
                         r: n - 6,
@@ -46,23 +46,23 @@
                     isActive: p = !1,
                     isCenterButton: m = !1,
                     ...E
-                } = e, C = n > 0, g = (0, l.useSpring)({
+                } = e, C = n > 0, S = (0, l.useSpring)({
                     percentComplete: 0 !== n ? (t - n) / t : 0,
                     config: {
                         ...l.config.molasses,
                         duration: 1e3
                     }
-                }), S = C ? r.default.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({
+                }), g = C ? r.default.Messages.VOICE_CHANNEL_EFFECTS_COOLDOWN.format({
                     seconds: n
                 }) : void 0, _ = m ? i.CenterControlButton : i.default;
                 return (0, a.jsxs)("div", {
-                    className: o.container,
-                    children: [C ? (0, a.jsx)(u, {
-                        percentComplete: g.percentComplete
+                    className: u.container,
+                    children: [C ? (0, a.jsx)(o, {
+                        percentComplete: S.percentComplete
                     }) : null, (0, a.jsx)(_, {
                         ...E,
                         disabled: C,
-                        label: S,
+                        label: g,
                         iconComponent: s.default,
                         onClick: d,
                         onKeyDown: c,

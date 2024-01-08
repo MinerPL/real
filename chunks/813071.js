@@ -8,8 +8,8 @@
                 s = n("884691"),
                 i = n("811022"),
                 r = n("517001"),
-                o = n("697218");
-            let u = new i.default("ErrorBoundary"),
+                u = n("697218");
+            let o = new i.default("ErrorBoundary"),
                 d = {
                     error: null,
                     componentStack: null
@@ -25,7 +25,7 @@
                     let {
                         componentStack: n
                     } = t;
-                    u.error("JANK ErrorBoundary", {
+                    o.error("JANK ErrorBoundary", {
                         error: e,
                         componentStack: n
                     });
@@ -45,7 +45,7 @@
                         error: n,
                         componentStack: a
                     } = this.state;
-                    if (!(0, r.isStaffEnv)(o.default.getCurrentUser())) return t;
+                    if (!(0, r.isStaffEnv)(u.default.getCurrentUser())) return t;
                     if (null != n) {
                         if ("function" == typeof e) {
                             let t = {

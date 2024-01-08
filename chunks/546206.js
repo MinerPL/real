@@ -7,7 +7,7 @@
                     return C
                 },
                 setCallscopeIssue: function() {
-                    return g
+                    return S
                 }
             }), n("424973"), n("222007");
             var a = n("811022"),
@@ -15,8 +15,8 @@
                 s = n("398183"),
                 i = n("913144"),
                 r = n("629803"),
-                o = n("367632"),
-                u = n("147746"),
+                u = n("367632"),
+                o = n("147746"),
                 d = n("271938"),
                 c = n("697218"),
                 f = n("773336"),
@@ -46,13 +46,13 @@
                         t = JSON.stringify(e, void 0, 4);
                     console.log("[callscope] Submitting issues...\n".concat(t));
                     try {
-                        await (0, u.uploadDebugLogFiles)(h.DebugLogCategory.RTC, e)
+                        await (0, o.uploadDebugLogFiles)(h.DebugLogCategory.RTC, e)
                     } catch (e) {
                         console.error("[callscope] Error uploading logs", e)
                     }
                     try {
                         let e = c.default.getCurrentUser();
-                        await (0, o.submitReport)({
+                        await (0, u.submitReport)({
                             name: "Issue from ".concat(null == e ? void 0 : e.username, "#").concat(null == e ? void 0 : e.discriminator),
                             priority: 2,
                             description: t,
@@ -81,13 +81,13 @@
                 return m.shouldShowUI()
             }
 
-            function g(e) {
+            function S(e) {
                 m.issues.push({
                     date: new Date,
                     description: e
                 }), m.hasIssues = !0
             }
-            let S = new a.default("CallscopeStore");
+            let g = new a.default("CallscopeStore");
             class _ {
                 static async shouldUpload() {
                     var e, t;
@@ -98,12 +98,12 @@
                 static async handleDisconnected(e) {
                     if (e.state !== h.RTCConnectionStates.DISCONNECTED || null == e.channelId || null == e.rtcLogEphemeralKey) return;
                     if (!await _.shouldUpload()) {
-                        S.info("CallscopeManager: USAGE_STATISTICS is disabled or is not desktop. Not uploading.");
+                        g.info("CallscopeManager: USAGE_STATISTICS is disabled or is not desktop. Not uploading.");
                         return
                     }
-                    S.info("CallscopeManager: Uploading rtc logs in ".concat(1e4, " ms..."));
+                    g.info("CallscopeManager: Uploading rtc logs in ".concat(1e4, " ms..."));
                     let t = d.default.getId();
-                    await (0, s.sleep)(1e4), await (0, u.uploadCallscopeLogs)(e.channelId, t, e.rtcLogEphemeralKey, e.context)
+                    await (0, s.sleep)(1e4), await (0, o.uploadCallscopeLogs)(e.channelId, t, e.rtcLogEphemeralKey, e.context)
                 }
             }
             class I extends l.default.Store {}
@@ -120,7 +120,7 @@
                         case h.RTCConnectionStates.RTC_CONNECTED:
                             if (null != e.rtcLogEphemeralKey) {
                                 let t = d.default.getId(),
-                                    a = (0, u.getBlindIds)(e.channelId, t, e.rtcLogEphemeralKey);
+                                    a = (0, o.getBlindIds)(e.channelId, t, e.rtcLogEphemeralKey);
                                 0 === m.rtcConnections.size && (m.callStartedAt = new Date), m.isInCallscopeCall = !0, m.blindIds.push({
                                     date: new Date,
                                     context: e.context,

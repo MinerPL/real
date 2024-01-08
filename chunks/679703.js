@@ -10,8 +10,8 @@
                 s = n("669491"),
                 i = n("77078"),
                 r = n("888237"),
-                o = n("18517"),
-                u = n("109526"),
+                u = n("18517"),
+                o = n("109526"),
                 d = n("487984"),
                 c = n("817963"),
                 f = n("957255"),
@@ -20,8 +20,8 @@
                 m = n("923510"),
                 E = n("759718"),
                 C = n("58763"),
-                g = n("119184"),
-                S = n("782340"),
+                S = n("119184"),
+                g = n("782340"),
                 _ = n("563040");
 
             function I(e) {
@@ -36,8 +36,8 @@
                         width: 20
                     }),
                     color: s.default.unsafe_rawColors.PRIMARY_700.css,
-                    title: S.default.Messages.STAGE_CONTINUE_PROMPT_TITLE,
-                    description: S.default.Messages.STAGE_CONTINUE_PROMPT_SUBTITLE,
+                    title: g.default.Messages.STAGE_CONTINUE_PROMPT_TITLE,
+                    description: g.default.Messages.STAGE_CONTINUE_PROMPT_SUBTITLE,
                     onClick: t
                 })
             }
@@ -61,15 +61,15 @@
                         color: "header-secondary",
                         children: function(e) {
                             if (0 === e.length) return "";
-                            if (1 === e.length) return S.default.Messages.STAGE_AUDIENCE_WAITING_ONE.format({
+                            if (1 === e.length) return g.default.Messages.STAGE_AUDIENCE_WAITING_ONE.format({
                                 first: e[0].userNick
                             });
-                            if (2 === e.length) return S.default.Messages.STAGE_AUDIENCE_WAITING_TWO.format({
+                            if (2 === e.length) return g.default.Messages.STAGE_AUDIENCE_WAITING_TWO.format({
                                 first: e[0].userNick,
                                 second: e[1].userNick
                             });
                             let t = e.length - 2;
-                            return S.default.Messages.STAGE_AUDIENCE_WAITING_MANY.format({
+                            return g.default.Messages.STAGE_AUDIENCE_WAITING_MANY.format({
                                 first: e[0].userNick,
                                 second: e[1].userNick,
                                 numOthers: t
@@ -89,7 +89,7 @@
                     usersInSummary: x
                 } = (0, E.default)(t.id);
                 return (0, a.jsxs)("div", {
-                    children: [(0, a.jsx)(g.default, {
+                    children: [(0, a.jsx)(S.default, {
                         children: (0, a.jsx)("div", {
                             className: _.iconBackground,
                             children: (0, a.jsx)(h.default, {
@@ -103,18 +103,18 @@
                         children: [(0, a.jsx)(i.Heading, {
                             className: _.title,
                             variant: "heading-xl/semibold",
-                            children: S.default.Messages.STAGE_START_PROMPT_TITLE_MODERATOR
+                            children: g.default.Messages.STAGE_START_PROMPT_TITLE_MODERATOR
                         }), (0, a.jsx)(i.Text, {
                             className: _.subtitle,
                             variant: "text-sm/normal",
-                            children: S.default.Messages.STAGE_START_PROMPT_SUBTITLE
+                            children: g.default.Messages.STAGE_START_PROMPT_SUBTITLE
                         })]
-                    }), v ? null : (0, a.jsx)(u.default, {
+                    }), v ? null : (0, a.jsx)(o.default, {
                         channelId: t.id
                     }), s ? (0, a.jsx)(d.default, {
                         className: _.eventPrompt,
                         channel: t
-                    }) : null, p ? (0, a.jsx)(o.default, {
+                    }) : null, p ? (0, a.jsx)(u.default, {
                         className: _.eventPrompt,
                         guildId: r
                     }) : null, (s || x.length > 0) && (0, a.jsx)("hr", {

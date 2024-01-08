@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return u
                 },
                 useCanCreateOrAddGuildInDirectory: function() {
-                    return u
+                    return o
                 }
             });
             var a = n("446674"),
@@ -13,18 +13,18 @@
                 i = n("957255"),
                 r = n("49111");
 
-            function o(e) {
+            function u(e) {
                 let t = (0, a.useStateFromStores)([s.default], () => s.default.getGuild(e.guildId)),
                     n = (0, a.useStateFromStores)([l.default], () => l.default.getChannel(e.channelId)),
-                    o = (0, a.useStateFromStores)([i.default], () => i.default.can(r.Permissions.ADMINISTRATOR, t)),
-                    u = (0, a.useStateFromStores)([i.default], () => i.default.can(r.Permissions.MANAGE_MESSAGES, n));
+                    u = (0, a.useStateFromStores)([i.default], () => i.default.can(r.Permissions.ADMINISTRATOR, t)),
+                    o = (0, a.useStateFromStores)([i.default], () => i.default.can(r.Permissions.MANAGE_MESSAGES, n));
                 return {
-                    isEntryAdmin: o,
-                    canEdit: o || u,
-                    canRemove: o || u
+                    isEntryAdmin: u,
+                    canEdit: u || o,
+                    canRemove: u || o
                 }
             }
 
-            function u(e) {
+            function o(e) {
                 return (0, a.useStateFromStores)([i.default], () => i.default.can(r.Permissions.SEND_MESSAGES, e))
             }

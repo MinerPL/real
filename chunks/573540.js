@@ -10,8 +10,8 @@
                 s = n.n(l),
                 i = n("446674"),
                 r = n("77078"),
-                o = n("206230"),
-                u = n("700507"),
+                u = n("206230"),
+                o = n("700507"),
                 d = n("491605"),
                 c = n("782340"),
                 f = n("594180");
@@ -19,7 +19,7 @@
             function h(e) {
                 let {
                     height: t
-                } = e, l = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
+                } = e, l = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion);
                 return (0, a.jsxs)("div", {
                     className: f.root,
                     children: [(0, a.jsx)(d.default, {
@@ -41,7 +41,7 @@
                         variant: "text-md/normal",
                         color: "header-secondary",
                         children: c.default.Messages.CONSOLE_TRANSFERRING_SUBTITLE.format({
-                            onCancel: u.disconnectRemote
+                            onCancel: o.disconnectRemote
                         })
                     })]
                 })

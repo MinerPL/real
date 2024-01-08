@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 MARK_SERVER_READ: function() {
-                    return E
+                    return r
                 }
             });
             var i = n("819689"),
@@ -11,8 +11,8 @@
                 u = n("18494"),
                 d = n("162771"),
                 s = n("659500"),
-                r = n("49111");
-            let E = {
+                E = n("49111");
+            let r = {
                 binds: ["shift+esc"],
                 comboKeysBindGlobal: !0,
                 action() {
@@ -22,6 +22,6 @@
                     let t = u.default.getChannelId(e);
                     if (null == t) return;
                     let n = a.default.getMessages(t);
-                    n.hasMoreAfter ? i.default.jumpToPresent(t, r.MAX_MESSAGES_PER_CHANNEL) : s.ComponentDispatch.dispatch(r.ComponentActions.SCROLLTO_PRESENT)
+                    n.hasMoreAfter ? i.default.jumpToPresent(t, E.MAX_MESSAGES_PER_CHANNEL) : s.ComponentDispatch.dispatch(E.ComponentActions.SCROLLTO_PRESENT)
                 }
             }

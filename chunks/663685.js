@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("65597"),
-                o = n("77078"),
-                u = n("737960"),
+                u = n("77078"),
+                o = n("737960"),
                 d = n("305961"),
                 c = n("957255"),
                 f = n("646240"),
@@ -19,44 +19,44 @@
                 m = n("730647"),
                 E = n("49111"),
                 C = n("782340"),
-                g = n("512233"),
-                S = n("373586"),
+                S = n("512233"),
+                g = n("373586"),
                 _ = n("981726"),
                 I = n("529547");
-            let T = (0, u.default)(e => {
+            let T = (0, o.default)(e => {
                 let {
                     searchQuery: t,
                     setSearchQuery: n,
                     handleClearSearch: l,
                     handleSearchKeyPress: s,
                     width: r
-                } = e, u = null != r && r <= 800;
+                } = e, o = null != r && r <= 800;
                 return (0, a.jsxs)("div", {
-                    className: S.header,
+                    className: g.header,
                     children: [(0, a.jsx)("img", {
                         alt: "",
-                        className: S.headerImage,
-                        src: u ? I : _
+                        className: g.headerImage,
+                        src: o ? I : _
                     }), (0, a.jsx)("div", {
-                        className: S.headerContentWrapper,
+                        className: g.headerContentWrapper,
                         children: (0, a.jsxs)("div", {
-                            className: i(S.headerContent, {
-                                [S.headerContentSmall]: u
+                            className: i(g.headerContent, {
+                                [g.headerContentSmall]: o
                             }),
-                            children: [(0, a.jsx)(o.Heading, {
+                            children: [(0, a.jsx)(u.Heading, {
                                 variant: "heading-xl/semibold",
-                                className: S.searchTitle,
+                                className: g.searchTitle,
                                 children: C.default.Messages.HUB_DIRECTORY_SEARCH_TITLE
-                            }), (0, a.jsx)(o.Text, {
+                            }), (0, a.jsx)(u.Text, {
                                 variant: "text-md/normal",
-                                className: S.searchSubtitle,
+                                className: g.searchSubtitle,
                                 children: C.default.Messages.HUB_DIRECTORY_SEARCH_SUBTITLE
                             }), (0, a.jsx)(f.default, {
                                 searchTerm: t,
-                                className: S.searchBox,
-                                inputClassName: S.searchBoxInput,
-                                closeIconClassName: S.closeIcon,
-                                searchIconClassName: S.searchIcon,
+                                className: g.searchBox,
+                                inputClassName: g.searchBoxInput,
+                                closeIconClassName: g.closeIcon,
+                                searchIconClassName: g.searchIcon,
                                 label: C.default.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
                                 placeholder: C.default.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
                                 onChange: n,
@@ -75,7 +75,7 @@
                     directoryEntries: n,
                     handleCreateOrAddGuild: l,
                     isLoading: s
-                } = e, u = (0, r.default)([c.default], () => c.default.can(E.Permissions.ADMINISTRATOR, t)), d = [];
+                } = e, o = (0, r.default)([c.default], () => c.default.can(E.Permissions.ADMINISTRATOR, t)), d = [];
                 null != n && n.forEach(e => {
                     d = d.concat(e.entries)
                 }), d.sort((e, t) => {
@@ -87,22 +87,22 @@
                     splash: t.splash
                 });
                 return (0, a.jsx)("div", {
-                    className: g.pageContainer,
-                    children: (0, a.jsxs)(o.AdvancedScrollerAuto, {
-                        className: g.scroller,
+                    className: S.pageContainer,
+                    children: (0, a.jsxs)(u.AdvancedScrollerAuto, {
+                        className: S.scroller,
                         children: [(0, a.jsxs)("div", {
-                            className: S.header,
+                            className: g.header,
                             children: [null != f ? (0, a.jsx)("img", {
                                 alt: "",
-                                className: i(S.headerImage, S.headerImageSimple),
+                                className: i(g.headerImage, g.headerImageSimple),
                                 src: f
                             }) : null, (0, a.jsx)("div", {
-                                className: S.headerImageBG
+                                className: g.headerImageBG
                             }), (0, a.jsx)("div", {
-                                className: S.headerContentWrapper,
+                                className: g.headerContentWrapper,
                                 children: (0, a.jsx)("div", {
-                                    className: i(S.headerContent, S.headerContentSmall),
-                                    children: (0, a.jsx)(o.Heading, {
+                                    className: i(g.headerContent, g.headerContentSmall),
+                                    children: (0, a.jsx)(u.Heading, {
                                         variant: "heading-xl/semibold",
                                         color: "always-white",
                                         children: C.default.Messages.GUILD_DISCOVERY_CATEGORY_SEARCH_PLACEHOLDER.format({
@@ -111,13 +111,13 @@
                                     })
                                 })
                             })]
-                        }), s && null == n ? (0, a.jsx)(o.Spinner, {
-                            className: g.spinner
+                        }), s && null == n ? (0, a.jsx)(u.Spinner, {
+                            className: S.spinner
                         }) : (0, a.jsxs)("div", {
-                            className: g.cardsContainer,
+                            className: S.cardsContainer,
                             children: [d.map(e => (0, a.jsx)(p.default, {
                                 entry: e
-                            }, e.guildId)), u && null != l ? (0, a.jsx)(p.AddEntryCard, {
+                            }, e.guildId)), o && null != l ? (0, a.jsx)(p.AddEntryCard, {
                                 onClick: l
                             }) : null]
                         })]
@@ -130,7 +130,7 @@
                     directoryEntries: n,
                     handleCreateOrAddGuild: s,
                     searchQuery: i,
-                    setSearchQuery: u,
+                    setSearchQuery: o,
                     handleClearSearch: c,
                     handleSearchKeyPress: f,
                     currentCategoryId: h,
@@ -145,26 +145,26 @@
                     handleCreateOrAddGuild: s,
                     isLoading: N
                 }) : (0, a.jsx)("div", {
-                    className: g.pageContainer,
-                    children: (0, a.jsxs)(o.AdvancedScrollerAuto, {
-                        className: g.scroller,
+                    className: S.pageContainer,
+                    children: (0, a.jsxs)(u.AdvancedScrollerAuto, {
+                        className: S.scroller,
                         children: [(0, a.jsx)(T, {
                             searchQuery: i,
-                            setSearchQuery: u,
+                            setSearchQuery: o,
                             handleClearSearch: c,
                             handleSearchKeyPress: f
-                        }), (0, a.jsx)(o.AdvancedScrollerThin, {
+                        }), (0, a.jsx)(u.AdvancedScrollerThin, {
                             orientation: "horizontal",
-                            children: (0, a.jsxs)(o.TabBar, {
-                                className: S.tabBar,
+                            children: (0, a.jsxs)(u.TabBar, {
+                                className: g.tabBar,
                                 type: "top",
                                 look: "brand",
                                 selectedItem: h,
                                 onItemSelect: e => {
                                     _(e)
                                 },
-                                children: [(0, a.jsx)(o.TabBar.Item, {
-                                    className: S.tabBarItem,
+                                children: [(0, a.jsx)(u.TabBar.Item, {
+                                    className: g.tabBarItem,
                                     id: m.DirectoryEntryCategories.ALL,
                                     children: "".concat(C.default.Messages.DIRECTORY_CATEGORY_ALL, " (").concat(x, ")")
                                 }, m.DirectoryEntryCategories.ALL), (0, m.getHubCategories)(t.id).map(e => {
@@ -172,22 +172,22 @@
                                         value: t,
                                         label: n
                                     } = e;
-                                    return (0, a.jsx)(o.TabBar.Item, {
-                                        className: S.tabBarItem,
+                                    return (0, a.jsx)(u.TabBar.Item, {
+                                        className: g.tabBarItem,
                                         id: t,
                                         children: "".concat(n, " ").concat(null != I[t] ? "(".concat(I[t], ")") : "")
                                     }, t)
                                 })]
                             })
-                        }), N && null == n ? (0, a.jsx)(o.Spinner, {
-                            className: g.spinner
+                        }), N && null == n ? (0, a.jsx)(u.Spinner, {
+                            className: S.spinner
                         }) : null == n ? void 0 : n.map((e, t) => (0, a.jsxs)(l.Fragment, {
-                            children: [void 0 !== e.header ? (0, a.jsx)(o.Text, {
+                            children: [void 0 !== e.header ? (0, a.jsx)(u.Text, {
                                 variant: "text-md/semibold",
-                                className: S.sectionHeader,
+                                className: g.sectionHeader,
                                 children: e.header
                             }) : null, (0, a.jsxs)("div", {
-                                className: g.cardsContainer,
+                                className: S.cardsContainer,
                                 children: [e.entries.map(e => (0, a.jsx)(p.default, {
                                     entry: e
                                 }, e.guildId)), e.appendEndCard && null != s ? (0, a.jsx)(p.AddEntryCard, {

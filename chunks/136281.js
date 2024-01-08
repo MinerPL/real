@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 USER_MOD_ICON_SIZE_PX: function() {
-                    return u
+                    return o
                 },
                 UserModInfoItem: function() {
                     return d
@@ -16,8 +16,8 @@
                 s = n.n(l),
                 i = n("426383"),
                 r = n("77078"),
-                o = n("558595");
-            let u = 16;
+                u = n("558595");
+            let o = 16;
 
             function d(e) {
                 let {
@@ -28,21 +28,21 @@
                 } = e;
                 return (0, a.jsxs)(r.Clickable, {
                     onClick: d,
-                    className: s(o.modInfoItem, null != d && o.modInfoAction),
+                    className: s(u.modInfoItem, null != d && u.modInfoAction),
                     children: [null != l && (0, a.jsx)("div", {
-                        className: s(o.modInfoItemIcon),
+                        className: s(u.modInfoItemIcon),
                         children: l
                     }), null != n && (0, a.jsx)("div", {
-                        className: s(o.modInfoItemName),
+                        className: s(u.modInfoItemName),
                         children: n
                     }), (0, a.jsx)("div", {
-                        className: s(o.modInfoItemDescription),
+                        className: s(u.modInfoItemDescription),
                         children: t
                     }), null != d && (0, a.jsx)("div", {
-                        className: s(o.modInfoItemActionIcon),
+                        className: s(u.modInfoItemActionIcon),
                         children: (0, a.jsx)(i.ChevronLargeRightIcon, {
-                            width: u,
-                            height: u
+                            width: o,
+                            height: o
                         })
                     })]
                 })
@@ -53,7 +53,7 @@
                     children: t
                 } = e;
                 return (0, a.jsx)("div", {
-                    className: s(o.modInfoItemContainer),
+                    className: s(u.modInfoItemContainer),
                     children: t
                 })
             }

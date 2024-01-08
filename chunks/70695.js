@@ -9,15 +9,15 @@
                 s = n("242740"),
                 i = n("393414"),
                 r = n("42203"),
-                o = n("800762"),
-                u = n("848848"),
+                u = n("800762"),
+                o = n("848848"),
                 d = n("49111");
 
             function c(e, t) {
                 let n = (0, a.useStateFromStores)([r.default], () => r.default.getChannel(t)),
                     {
                         needSubscriptionToAccess: c
-                    } = (0, u.default)(null == n ? void 0 : n.id);
+                    } = (0, o.default)(null == n ? void 0 : n.id);
                 if (null == n || c) return null;
                 let f = n.isGuildVocal(),
                     h = (0, l.default)({
@@ -27,7 +27,7 @@
                     navigateToChannel: () => {
                         f ? s.default.handleVoiceConnect({
                             channel: n,
-                            connected: o.default.isInChannel(n.id),
+                            connected: u.default.isInChannel(n.id),
                             needSubscriptionToAccess: !1,
                             routeDirectlyToChannel: !0
                         }) : (0, i.transitionTo)(d.Routes.CHANNEL(e, n.id))

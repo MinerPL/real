@@ -10,8 +10,8 @@
                 s = n.n(l),
                 i = n("65597"),
                 r = n("77078"),
-                o = n("450911"),
-                u = n("509"),
+                u = n("450911"),
+                o = n("509"),
                 d = n("278483"),
                 c = n("700179"),
                 f = n("130037"),
@@ -20,8 +20,8 @@
                 m = n("305961"),
                 E = n("957255"),
                 C = n("824563"),
-                g = n("101125"),
-                S = n("697218"),
+                S = n("101125"),
+                g = n("697218"),
                 _ = n("530346"),
                 I = n("109264"),
                 T = n("491401"),
@@ -40,7 +40,7 @@
                     user: t,
                     guildId: n,
                     onClose: l
-                } = e, s = t.id, o = (0, i.default)([g.default, C.default, h.default], () => s === h.default.getId() ? g.default.getStatus() : C.default.getStatus(s, n), [s, n]);
+                } = e, s = t.id, u = (0, i.default)([S.default, C.default, h.default], () => s === h.default.getId() ? S.default.getStatus() : C.default.getStatus(s, n), [s, n]);
                 return (0, a.jsxs)("div", {
                     className: O.topRow,
                     children: [(0, a.jsxs)("div", {
@@ -51,7 +51,7 @@
                                 src: t.getAvatarURL(n, 48),
                                 "aria-label": t.username,
                                 size: r.AvatarSizes.SIZE_48,
-                                status: o
+                                status: u
                             })
                         }), (0, a.jsx)("div", {
                             className: O.memberName,
@@ -91,10 +91,10 @@
                     disabled: n,
                     children: l,
                     onClick: i,
-                    ...o
+                    ...u
                 } = e;
                 return (0, a.jsx)(r.Clickable, {
-                    ...o,
+                    ...u,
                     tag: t,
                     className: s(O.bottomRowAction, {
                         [O.bottomRowActionDisabled]: n
@@ -112,13 +112,13 @@
                     location: h
                 } = e, p = (0, i.default)([m.default], () => m.default.getGuild(s)), {
                     canKickUser: C,
-                    canBanUser: g,
+                    canBanUser: S,
                     canModerateMembers: v
-                } = (0, i.useStateFromStoresObject)([E.default, S.default, m.default], () => ({
+                } = (0, i.useStateFromStoresObject)([E.default, g.default, m.default], () => ({
                     canKickUser: null != p && E.default.canManageUser(j.Permissions.KICK_MEMBERS, t, p),
                     canBanUser: null != p && E.default.canManageUser(j.Permissions.BAN_MEMBERS, t, p),
-                    canModerateMembers: null != p && (0, c.canToggleCommunicationDisableOnUser)(p.id, t.id, [S.default, m.default, E.default])
-                }), [t, p]), M = (0, u.isMemberCommunicationDisabled)(l), R = null != h ? [h] : [], y = (0, f.useTrackModerationAction)(s, {
+                    canModerateMembers: null != p && (0, c.canToggleCommunicationDisableOnUser)(p.id, t.id, [g.default, m.default, E.default])
+                }), [t, p]), M = (0, o.isMemberCommunicationDisabled)(l), R = null != h ? [h] : [], y = (0, f.useTrackModerationAction)(s, {
                     targetUserId: t.id,
                     location: h
                 });
@@ -127,7 +127,7 @@
                     children: [(0, a.jsxs)(b, {
                         "aria-label": L.default.Messages.SEND_DM,
                         onClick: () => {
-                            o.default.openPrivateChannel(t.id)
+                            u.default.openPrivateChannel(t.id)
                         },
                         children: [(0, a.jsx)(I.default, {
                             width: 22,
@@ -163,7 +163,7 @@
                             children: L.default.Messages.KICK
                         })]
                     }), (0, a.jsxs)(b, {
-                        disabled: !g,
+                        disabled: !S,
                         "aria-label": L.default.Messages.BAN,
                         onClick: () => {
                             (0, r.openModalLazy)(async () => {
@@ -226,7 +226,7 @@
                     userId: t,
                     guildId: n,
                     onClose: l
-                } = e, s = (0, i.default)([S.default], () => S.default.getUser(t), [t]), r = (0, i.default)([p.default], () => p.default.getMember(n, t), [n, t]);
+                } = e, s = (0, i.default)([g.default], () => g.default.getUser(t), [t]), r = (0, i.default)([p.default], () => p.default.getMember(n, t), [n, t]);
                 return null == s || null == r ? null : (0, a.jsxs)("div", {
                     className: O.container,
                     children: [(0, a.jsx)(y, {

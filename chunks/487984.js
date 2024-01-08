@@ -10,8 +10,8 @@
                 s = n("244201"),
                 i = n("751661"),
                 r = n("228427"),
-                o = n("888237"),
-                u = n("782340");
+                u = n("888237"),
+                o = n("782340");
 
             function d(e) {
                 let {
@@ -19,7 +19,7 @@
                     channel: n,
                     highlight: d
                 } = e, c = (0, s.useAppContext)();
-                return (0, a.jsx)(o.default, {
+                return (0, a.jsx)(u.default, {
                     highlight: null != d && d,
                     className: t,
                     icon: (0, a.jsx)(r.default, {
@@ -27,8 +27,8 @@
                         width: 20
                     }),
                     color: l.default.unsafe_rawColors.GREEN_360.css,
-                    title: u.default.Messages.STAGE_CHANNEL_START_TITLE,
-                    description: u.default.Messages.STAGE_CHANNEL_START_SUBTITLE,
+                    title: o.default.Messages.STAGE_CHANNEL_START_TITLE,
+                    description: o.default.Messages.STAGE_CHANNEL_START_SUBTITLE,
                     onClick: function() {
                         (0, i.openStageChannelSettings)(n, c)
                     }

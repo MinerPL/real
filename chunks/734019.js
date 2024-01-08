@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return u
                 }
             });
             var a = n("271938"),
@@ -10,15 +10,15 @@
                 i = n("325861"),
                 r = n("834052");
 
-            function o(e) {
+            function u(e) {
                 if (!e.isGuildStageVoice()) return !1;
                 let t = r.default.isLive(e.id);
                 if (!t) return !1;
                 let n = a.default.getId(),
-                    o = i.default.isModerator(n, e.id);
-                if (!o) return !1;
-                let u = i.default.isSpeaker(n, e.id);
+                    u = i.default.isModerator(n, e.id);
                 if (!u) return !1;
+                let o = i.default.isSpeaker(n, e.id);
+                if (!o) return !1;
                 let d = l.default.getMutableParticipants(e.id),
                     c = d.find(t => t.user.id !== n && i.default.isModerator(t.user.id, e.id));
                 if (null == c) return !0;

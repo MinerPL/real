@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("65597"),
-                o = n("77078"),
-                u = n("987317"),
+                u = n("77078"),
+                o = n("987317"),
                 d = n("271938"),
                 c = n("957255"),
                 f = n("945956"),
@@ -19,8 +19,8 @@
                 m = n("315102"),
                 E = n("233965"),
                 C = n("699209"),
-                g = n("925749"),
-                S = n("342845"),
+                S = n("925749"),
+                g = n("342845"),
                 _ = n("661743"),
                 I = n("49111"),
                 T = n("782340"),
@@ -60,25 +60,25 @@
                                 className: v.contentContainer,
                                 children: [(0, a.jsxs)("div", {
                                     className: v.statusGroup,
-                                    children: [(0, a.jsx)(o.Text, {
+                                    children: [(0, a.jsx)(u.Text, {
                                         variant: "text-xs/medium",
                                         color: "text-muted",
                                         children: T.default.Messages.STATUS_LEAD_IN_JUST
-                                    }), (0, a.jsx)(o.Text, {
+                                    }), (0, a.jsx)(u.Text, {
                                         variant: "text-sm/semibold",
                                         color: "text-normal",
-                                        children: (0, g.getHangStatusText)(t)
+                                        children: (0, S.getHangStatusText)(t)
                                     })]
                                 }), (0, a.jsxs)("div", {
                                     className: v.iconGroup,
-                                    children: [(0, a.jsx)(S.default, {
+                                    children: [(0, a.jsx)(g.default, {
                                         className: v.statusIcon,
                                         hangStatusActivity: t
                                     }), (0, a.jsxs)("div", {
                                         className: v.avatarWrapper,
-                                        children: [(0, a.jsx)(o.Avatar, {
+                                        children: [(0, a.jsx)(u.Avatar, {
                                             className: v.avatar,
-                                            size: o.AvatarSizes.SIZE_40,
+                                            size: u.AvatarSizes.SIZE_40,
                                             src: (0, m.getUserAvatarURL)(R),
                                             "aria-hidden": !0
                                         }), (0, a.jsx)("div", {
@@ -86,23 +86,23 @@
                                         })]
                                     })]
                                 })]
-                            }), !j && L ? (0, a.jsx)(o.Button, {
+                            }), !j && L ? (0, a.jsx)(u.Button, {
                                 className: v.cta,
-                                size: o.Button.Sizes.SMALL,
+                                size: u.Button.Sizes.SMALL,
                                 onClick: () => {
-                                    !j && L && (u.default.selectVoiceChannel(x.id), p.default.track(I.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
+                                    !j && L && (o.default.selectVoiceChannel(x.id), p.default.track(I.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
                                         source: "HangStatusPopout",
                                         guild_id: x.guild_id,
                                         channel_id: x.id
                                     }))
                                 },
                                 children: T.default.Messages.CUSTOM_HANG_STATUS_CTA
-                            }) : null, j ? (0, a.jsx)(o.Button, {
+                            }) : null, j ? (0, a.jsx)(u.Button, {
                                 className: v.cta,
-                                size: o.Button.Sizes.SMALL,
+                                size: u.Button.Sizes.SMALL,
                                 onClick: () => {
                                     let e = t.state;
-                                    e === I.HangStatusTypes.CUSTOM ? (0, o.openModalLazy)(async () => {
+                                    e === I.HangStatusTypes.CUSTOM ? (0, u.openModalLazy)(async () => {
                                         let {
                                             default: e
                                         } = await n.el("579371").then(n.bind(n, "579371"));

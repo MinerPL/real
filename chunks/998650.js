@@ -16,10 +16,10 @@
                         color: l = "currentColor",
                         foreground: s,
                         background: r,
-                        ...o
+                        ...u
                     } = e;
                     return (0, a.jsxs)("svg", {
-                        ...(0, i.default)(o),
+                        ...(0, i.default)(u),
                         width: t,
                         height: n,
                         viewBox: "0 0 24 24",

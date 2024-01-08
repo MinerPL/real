@@ -9,8 +9,8 @@
                 s = n("446674"),
                 i = n("913144"),
                 r = n("600965"),
-                o = n("292687"),
-                u = n("659500"),
+                u = n("292687"),
+                o = n("659500"),
                 d = n("191225"),
                 c = n("420444"),
                 f = n("577261"),
@@ -28,11 +28,11 @@
                         className: i,
                         style: r
                     } = e,
-                    E = (0, s.useStateFromStores)([o.default], () => o.default.getWindow(p.PopoutWindowKeys.CHANNEL_CALL_POPOUT)),
+                    E = (0, s.useStateFromStores)([u.default], () => u.default.getWindow(p.PopoutWindowKeys.CHANNEL_CALL_POPOUT)),
                     C = (0, f.default)(),
-                    g = (0, s.useStateFromStores)([d.default], () => d.default.getActivityPanelMode()),
-                    S = null != C && !(0, c.default)(C.channelId) && g === h.ActivityPanelModes.PANEL;
-                if (S) t = window;
+                    S = (0, s.useStateFromStores)([d.default], () => d.default.getActivityPanelMode()),
+                    g = null != C && !(0, c.default)(C.channelId) && S === h.ActivityPanelModes.PANEL;
+                if (g) t = window;
                 else {
                     var _;
                     t = null !== (_ = null == E ? void 0 : E.window) && void 0 !== _ ? _ : window
@@ -47,8 +47,8 @@
                             }))
                         }
                     }, [n, t]);
-                return l.useEffect(() => (t.addEventListener("resize", T), u.ComponentDispatch.subscribe(p.ComponentActions.REMEASURE_TARGET, T), () => {
-                    t.removeEventListener("resize", T), u.ComponentDispatch.unsubscribe(p.ComponentActions.REMEASURE_TARGET, T)
+                return l.useEffect(() => (t.addEventListener("resize", T), o.ComponentDispatch.subscribe(p.ComponentActions.REMEASURE_TARGET, T), () => {
+                    t.removeEventListener("resize", T), o.ComponentDispatch.unsubscribe(p.ComponentActions.REMEASURE_TARGET, T)
                 }), [T, t]), l.useLayoutEffect(() => {
                     let e = I.current;
                     if (null == e) return;

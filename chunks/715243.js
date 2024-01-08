@@ -1,30 +1,30 @@
             "use strict";
-            n.r(t), n.d(t, {
+            t.r(n), t.d(n, {
                 default: function() {
-                    return r
+                    return d
                 }
             });
-            var a = n("37983");
-            n("884691");
-            var l = n("446674"),
-                i = n("77078"),
-                u = n("957255"),
-                d = n("49111"),
-                s = n("782340");
+            var a = t("37983");
+            t("884691");
+            var u = t("446674"),
+                l = t("77078"),
+                s = t("957255"),
+                r = t("49111"),
+                i = t("782340");
 
-            function r(e, t) {
-                let r = (0, l.useStateFromStores)([u.default], () => u.default.can(d.Permissions.MANAGE_CHANNELS, e), [e]);
-                return __OVERLAY__ || !r ? null : (0, a.jsx)(i.MenuItem, {
+            function d(e, n) {
+                let d = (0, u.useStateFromStores)([s.default], () => s.default.can(r.Permissions.MANAGE_CHANNELS, e), [e]);
+                return __OVERLAY__ || !d ? null : (0, a.jsx)(l.MenuItem, {
                     id: "clone-channel",
-                    label: s.default.Messages.CLONE_CHANNEL,
-                    action: () => (0, i.openModalLazy)(async () => {
+                    label: i.default.Messages.CLONE_CHANNEL,
+                    action: () => (0, l.openModalLazy)(async () => {
                         let {
-                            default: l
-                        } = await n.el("581354").then(n.bind(n, "581354"));
-                        return n => (0, a.jsx)(l, {
-                            ...n,
+                            default: u
+                        } = await t.el("581354").then(t.bind(t, "581354"));
+                        return t => (0, a.jsx)(u, {
+                            ...t,
                             channelType: e.type,
-                            guildId: t.id,
+                            guildId: n.id,
                             categoryId: e.parent_id,
                             cloneChannelId: e.id
                         })

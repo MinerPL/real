@@ -9,8 +9,8 @@
                 s = n("446674"),
                 i = n("151426"),
                 r = n("77078"),
-                o = n("561288"),
-                u = n("987317"),
+                u = n("561288"),
+                o = n("987317"),
                 d = n("244201"),
                 c = n("206230"),
                 f = n("702173"),
@@ -19,8 +19,8 @@
                 m = n("509802"),
                 E = n("889014"),
                 C = n("5667"),
-                g = n("19065"),
-                S = n("727284"),
+                S = n("19065"),
+                g = n("727284"),
                 _ = n("950104"),
                 I = n("778588"),
                 T = n("42887"),
@@ -52,14 +52,14 @@
                         callActive: l,
                         callUnavailable: s,
                         isBlocked: i,
-                        channel: o,
-                        mode: u
+                        channel: u,
+                        mode: o
                     } = this.props;
-                    if (n || l && u === y.ChannelModes.VOICE) return null;
-                    let d = o.isManaged(),
+                    if (n || l && o === y.ChannelModes.VOICE) return null;
+                    let d = u.isManaged(),
                         c = null,
                         f = !1;
-                    return T.default.supports(P.Features.VIDEO) ? i ? (c = D.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, f = !0) : l && u === y.ChannelModes.VIDEO ? (t = this.handleJoinVideoCall, c = d ? D.default.Messages.CONNECT : D.default.Messages.JOIN_VIDEO_CALL) : (t = this.handleStartVideoCall, c = d ? D.default.Messages.CONNECT : D.default.Messages.START_VIDEO_CALL) : (f = !0, t = this.handleBrowserNotSupported, c = D.default.Messages.BROWSER_NOT_SUPPORTED), (0, a.jsx)(R.default.Icon, {
+                    return T.default.supports(P.Features.VIDEO) ? i ? (c = D.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, f = !0) : l && o === y.ChannelModes.VIDEO ? (t = this.handleJoinVideoCall, c = d ? D.default.Messages.CONNECT : D.default.Messages.JOIN_VIDEO_CALL) : (t = this.handleStartVideoCall, c = d ? D.default.Messages.CONNECT : D.default.Messages.START_VIDEO_CALL) : (f = !0, t = this.handleBrowserNotSupported, c = D.default.Messages.BROWSER_NOT_SUPPORTED), (0, a.jsx)(R.default.Icon, {
                         icon: M.default,
                         onClick: t,
                         disabled: f || s,
@@ -74,18 +74,18 @@
                         canShowTooltip: n,
                         callActive: l,
                         callUnavailable: s,
-                        isBlocked: o,
-                        channel: u,
+                        isBlocked: u,
+                        channel: o,
                         canShowActivityGdmTooltip: d,
                         dismissibleContentTypes: c,
                         useReducedMotion: f
                     } = this.props;
                     if (t) return null;
-                    let h = u.isManaged(),
+                    let h = o.isManaged(),
                         p = "",
                         E = !1;
-                    s ? (p = h ? D.default.Messages.VOICE_UNAVAILABLE : D.default.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, E = !0) : o ? (p = D.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, E = !0) : p = l ? h ? D.default.Messages.CONNECT : D.default.Messages.JOIN_VOICE_CALL : h ? D.default.Messages.CONNECT : D.default.Messages.START_VOICE_CALL;
-                    let g = (0, a.jsx)(R.default.Icon, {
+                    s ? (p = h ? D.default.Messages.VOICE_UNAVAILABLE : D.default.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, E = !0) : u ? (p = D.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, E = !0) : p = l ? h ? D.default.Messages.CONNECT : D.default.Messages.JOIN_VOICE_CALL : h ? D.default.Messages.CONNECT : D.default.Messages.START_VOICE_CALL;
+                    let S = (0, a.jsx)(R.default.Icon, {
                         icon: A.default,
                         onClick: this.handleVoiceClick,
                         disabled: E,
@@ -141,9 +141,9 @@
                                         className: U.tooltip
                                     })
                                 },
-                                children: () => g
+                                children: () => S
                             });
-                            return g
+                            return S
                         }
                     })
                 }
@@ -158,10 +158,10 @@
                             channel: n,
                             notFriend: a,
                             appContext: l
-                        } = this.props, s = a ? n.getRecipientId() : null, i = () => o.default.call(n.id, t, !a && !n.isManaged() && !(null == e ? void 0 : e.shiftKey), s);
-                        t ? (0, S.default)(i, l) : i()
+                        } = this.props, s = a ? n.getRecipientId() : null, i = () => u.default.call(n.id, t, !a && !n.isManaged() && !(null == e ? void 0 : e.shiftKey), s);
+                        t ? (0, g.default)(i, l) : i()
                     }, this.handleJoinCall = e => {
-                        u.default.selectVoiceChannel(this.props.channel.id, e)
+                        o.default.selectVoiceChannel(this.props.channel.id, e)
                     }, this.handleVoiceClick = e => {
                         let {
                             callUnavailable: t,
@@ -179,9 +179,9 @@
                         let {
                             appContext: e
                         } = this.props;
-                        (0, S.default)(() => this.handleJoinCall(!0), e)
+                        (0, g.default)(() => this.handleJoinCall(!0), e)
                     }, this.handleBrowserNotSupported = () => {
-                        (0, g.default)()
+                        (0, S.default)()
                     }
                 }
             }
@@ -189,15 +189,15 @@
             function F(e) {
                 let {
                     channel: t
-                } = e, n = (0, E.default)(), r = (0, s.useStateFromStores)([h.default], () => h.default.getMode(t.id)), o = (0, s.useStateFromStores)([N.default], () => N.default.isInChannel(t.id)), u = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
+                } = e, n = (0, E.default)(), r = (0, s.useStateFromStores)([h.default], () => h.default.getMode(t.id)), u = (0, s.useStateFromStores)([N.default], () => N.default.isInChannel(t.id)), o = (0, s.useStateFromStores)([c.default], () => c.default.useReducedMotion), {
                     callActive: p,
                     callUnavailable: m
                 } = (0, s.useStateFromStoresObject)([_.default], () => ({
                     callActive: _.default.isCallActive(t.id),
                     callUnavailable: _.default.isCallUnavailable(t.id)
                 })), C = t.getRecipientId(), {
-                    notFriend: g,
-                    isBlocked: S
+                    notFriend: S,
+                    isBlocked: g
                 } = (0, s.useStateFromStoresObject)([v.default], () => ({
                     notFriend: t.type === y.ChannelTypes.DM && null != C && !v.default.isFriend(C),
                     isBlocked: t.type === y.ChannelTypes.DM && null != C && v.default.isBlocked(C)
@@ -212,15 +212,15 @@
                 }, []), n || (null == T ? void 0 : T.bot)) ? null : (0, a.jsx)(w, {
                     channel: t,
                     mode: r,
-                    inCall: o,
+                    inCall: u,
                     callActive: p,
                     callUnavailable: m,
-                    notFriend: g,
-                    isBlocked: S,
+                    notFriend: S,
+                    isBlocked: g,
                     appContext: A,
                     canShowTooltip: L,
                     canShowActivityGdmTooltip: R,
                     dismissibleContentTypes: M,
-                    useReducedMotion: u
+                    useReducedMotion: o
                 })
             }

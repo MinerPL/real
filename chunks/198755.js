@@ -4,10 +4,10 @@
                     return r
                 },
                 VoiceChannelEffectsLayerProvider: function() {
-                    return o
+                    return u
                 },
                 default: function() {
-                    return u
+                    return o
                 }
             });
             var a = n("77078");
@@ -15,5 +15,5 @@
                 Layer: l,
                 LayerContainer: s,
                 LayerProvider: i
-            } = (0, a.createLayer)("VoiceChannelEffectsCall"), r = s, o = i;
-            var u = l
+            } = (0, a.createLayer)("VoiceChannelEffectsCall"), r = s, u = i;
+            var o = l

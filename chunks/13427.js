@@ -1,14 +1,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 StrangerDangerTeensExperiment: function() {
-                    return a
+                    return s
                 },
                 useIsEligibleForStrangerDangerTeens: function() {
                     return l
                 }
             });
-            var s = n("862205");
-            let a = (0, s.createExperiment)({
+            var a = n("862205");
+            let s = (0, a.createExperiment)({
                 kind: "user",
                 id: "2023-08_self_mod_stranger_danger_teens",
                 label: "Stranger Danger Teens",
@@ -25,7 +25,7 @@
             });
 
             function l(e) {
-                return a.useExperiment({
+                return s.useExperiment({
                     location: e
                 }, {
                     autoTrackExposure: !1

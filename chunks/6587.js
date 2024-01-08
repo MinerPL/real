@@ -14,18 +14,18 @@
                 u = n("233069"),
                 d = n("870691"),
                 s = n("952451"),
-                r = n("49111"),
-                E = n("695838");
+                E = n("49111"),
+                r = n("695838");
 
             function _(e, t, n) {
-                let i = e === E.FAVORITES_RAW_GUILD_ID || e === r.FAVORITES ? (0, a.computeFavoritesState)() : l.default.getGuildWithoutChangingCommunityRows(e).guildChannels;
+                let i = e === r.FAVORITES_RAW_GUILD_ID || e === E.FAVORITES ? (0, a.computeFavoritesState)() : l.default.getGuildWithoutChangingCommunityRows(e).guildChannels;
                 return c(i, t, n)
             }
 
             function A(e, t, n, l, a) {
                 let u = (0, o.useStateFromStores)([s.default], () => s.default.getGuildChangeSentinel(e)),
-                    r = (0, o.useStateFromStores)([d.default], () => d.default.version);
-                return (0, i.useMemo)(() => c(t, l, a).map(e => e.id), [t, n, u, r])
+                    E = (0, o.useStateFromStores)([d.default], () => d.default.version);
+                return (0, i.useMemo)(() => c(t, l, a).map(e => e.id), [t, n, u, E])
             }
 
             function c(e, t, n) {

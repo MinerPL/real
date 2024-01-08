@@ -1,7 +1,7 @@
             "use strict";
-            var a, l;
+            var i, l;
             n.r(t), n.d(t, {
                 SelfStreamAndVideoAlertType: function() {
-                    return a
+                    return i
                 }
-            }), (l = a || (a = {}))[l.STREAM = 0] = "STREAM", l[l.VIDEO = 1] = "VIDEO"
+            }), (l = i || (i = {}))[l.STREAM = 0] = "STREAM", l[l.VIDEO = 1] = "VIDEO"
