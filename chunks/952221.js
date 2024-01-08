@@ -27,8 +27,8 @@
                 let {
                     handleClick: E,
                     handleMouseDown: C,
-                    handleMouseEnter: g,
-                    handleMouseMove: S,
+                    handleMouseEnter: S,
+                    handleMouseMove: g,
                     handleMouseUp: _
                 } = (0, c.default)({
                     user: m,
@@ -43,8 +43,8 @@
                         ref: p,
                         onClick: E,
                         onMouseDown: C,
-                        onMouseEnter: g,
-                        onMouseMove: S,
+                        onMouseEnter: S,
+                        onMouseMove: g,
                         onMouseUp: _,
                         className: h.sharedCanvas
                     })

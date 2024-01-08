@@ -119,30 +119,30 @@
                     let {
                         channelId: m,
                         entry: E
-                    } = e, C = (0, s.guildDirectoryEntryFromServer)(E), g = null === (t = o[m]) || void 0 === t ? void 0 : t[C.guildId];
+                    } = e, C = (0, s.guildDirectoryEntryFromServer)(E), S = null === (t = o[m]) || void 0 === t ? void 0 : t[C.guildId];
                     o[m] = {
                         ...o[m],
                         [C.guildId]: {
-                            ...g,
+                            ...S,
                             ...C
                         }
                     };
-                    let S = null !== (l = null == g ? void 0 : g.primaryCategoryId) && void 0 !== l ? l : i.DirectoryEntryCategories.UNCATEGORIZED,
+                    let g = null !== (l = null == S ? void 0 : S.primaryCategoryId) && void 0 !== l ? l : i.DirectoryEntryCategories.UNCATEGORIZED,
                         _ = null !== (r = C.primaryCategoryId) && void 0 !== r ? r : i.DirectoryEntryCategories.UNCATEGORIZED,
-                        I = Object.assign({}, null === (n = c[m]) || void 0 === n ? void 0 : n[S]);
-                    null != g && S !== _ && delete I[C.guildId], c[m] = {
+                        I = Object.assign({}, null === (n = c[m]) || void 0 === n ? void 0 : n[g]);
+                    null != S && g !== _ && delete I[C.guildId], c[m] = {
                         ...c[m],
-                        [S]: I,
+                        [g]: I,
                         [_]: {
                             ...null === (a = c[m]) || void 0 === a ? void 0 : a[_],
                             [C.guildId]: {
-                                ...g,
+                                ...S,
                                 ...C
                             }
                         }
-                    }, _ !== S && null != f[m] && (f[m] = {
+                    }, _ !== g && null != f[m] && (f[m] = {
                         ...f[m],
-                        [S]: (null === (u = f[m]) || void 0 === u ? void 0 : u[S]) > 0 ? (null === (d = f[m]) || void 0 === d ? void 0 : d[S]) - 1 : 0,
+                        [g]: (null === (u = f[m]) || void 0 === u ? void 0 : u[g]) > 0 ? (null === (d = f[m]) || void 0 === d ? void 0 : d[g]) - 1 : 0,
                         [_]: (null !== (p = null === (h = f[m]) || void 0 === h ? void 0 : h[_]) && void 0 !== p ? p : 0) + 1
                     })
                 },

@@ -19,8 +19,8 @@
                 m = n("76393"),
                 E = n("479788"),
                 C = n("398604"),
-                g = n("109526"),
-                S = n("487984"),
+                S = n("109526"),
+                g = n("487984"),
                 _ = n("817963"),
                 I = n("999180"),
                 T = n("830210"),
@@ -141,8 +141,8 @@
                     canManageGuildEvent: s
                 } = (0, _.useManageResourcePermissions)(t), o = (0, r.useStateFromStores)([J.default], () => J.default.getStageInstanceByChannel(t.id), [t.id]), c = (0, r.useStateFromStores)([C.default], () => C.default.getGuildScheduledEvent(null == o ? void 0 : o.guild_scheduled_event_id)), f = (0, r.useStateFromStores)([P.default], () => P.default.getVoiceChannelId() === t.id, [t.id]), {
                     suppress: h
-                } = (0, x.default)(t), p = O.default.getId(), [m] = (0, el.default)(t), E = X.default.isModerator(p, t.id), g = (0, K.useCanModerateRequestToSpeak)(t.id), S = s(c);
-                return f ? (E || S) && null != o ? (0, a.jsx)(u.Popout, {
+                } = (0, x.default)(t), p = O.default.getId(), [m] = (0, el.default)(t), E = X.default.isModerator(p, t.id), S = (0, K.useCanModerateRequestToSpeak)(t.id), g = s(c);
+                return f ? (E || g) && null != o ? (0, a.jsx)(u.Popout, {
                     renderPopout: e => {
                         let {
                             closePopout: s
@@ -188,7 +188,7 @@
                             popoutOpen: i
                         })
                     }
-                }) : h && !g || m ? (0, a.jsx)(u.Button, {
+                }) : h && !S || m ? (0, a.jsx)(u.Button, {
                     size: u.Button.Sizes.MEDIUM,
                     color: u.Button.Colors.RED,
                     className: i(er.buttonSpacing, er.buttonWithTextButton),
@@ -306,8 +306,8 @@
                     mute: s
                 } = (0, x.default)(t), o = (0, K.useCanModerateRequestToSpeak)(t.id), d = (0, r.useStateFromStores)([m.default], () => null != m.default.getAwaitingRemoteSessionInfo()), {
                     cameraUnavailable: C,
-                    enabled: g
-                } = (0, I.default)(), S = (0, v.default)(t), {
+                    enabled: S
+                } = (0, I.default)(), g = (0, v.default)(t), {
                     limit: _,
                     reachedLimit: R
                 } = (0, T.default)(t), O = (0, r.useStateFromStores)([D.default], () => D.default.getCurrentUser()), b = (0, r.useStateFromStores)([y.default], () => (0, E.default)(y.default)), U = (0, r.useStateFromStores)([P.default], () => P.default.getVoiceChannelId() === t.id, [t.id]), w = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), F = (0, q.useStageHasMedia)(t.id), k = _ > 0, V = R && !F || null != w && w.user.id !== (null == O ? void 0 : O.id);
@@ -335,8 +335,8 @@
                             } = t;
                             return (0, a.jsx)(L.default, {
                                 centerButton: !0,
-                                hasPermission: S,
-                                enabled: g,
+                                hasPermission: g,
+                                enabled: S,
                                 cameraUnavailable: C,
                                 onChange: N.handleToggleVideo,
                                 onCameraUnavailable: A.default,
@@ -351,7 +351,7 @@
                         currentUser: O,
                         exitFullScreen: () => null,
                         canGoLive: b,
-                        hasPermission: S,
+                        hasPermission: g,
                         disabled: V
                     })]
                 });
@@ -431,11 +431,11 @@
                     className: er.containerColumn,
                     children: [(0, a.jsxs)("div", {
                         className: er.eventPrompts,
-                        children: [d ? (0, a.jsx)(g.default, {
+                        children: [d ? (0, a.jsx)(S.default, {
                             channelId: null == t ? void 0 : t.id
                         }) : null, (0, a.jsx)("div", {
                             className: er.separator
-                        }), d && i ? (0, a.jsx)(S.default, {
+                        }), d && i ? (0, a.jsx)(g.default, {
                             highlight: !0,
                             channel: t
                         }) : null, (0, a.jsx)("div", {

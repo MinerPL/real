@@ -55,6 +55,6 @@
                     [f, p] = l,
                     [m, E] = (0, u.useThrottledState)(l, n, [t[h.StageChannelParticipantNamedIndex.AUDIENCE]]),
                     C = [f[a ? 3 : 0], f[1], m[2]],
-                    g = [p[a ? 3 : 0], p[1], E[2]];
-                return [C, g]
+                    S = [p[a ? 3 : 0], p[1], E[2]];
+                return [C, S]
             }(l = a || (a = {}))[l.SELECTED = 0] = "SELECTED", l[l.SPEAKER = 1] = "SPEAKER", l[l.AUDIENCE = 2] = "AUDIENCE", l[l.MEDIA = 3] = "MEDIA"

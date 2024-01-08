@@ -22,8 +22,8 @@
                 m = n("95045"),
                 E = n("574073"),
                 C = n("24373"),
-                g = n("41170"),
-                S = n("377253"),
+                S = n("41170"),
+                g = n("377253"),
                 _ = n("27618"),
                 I = n("93427"),
                 T = n("315102"),
@@ -38,7 +38,7 @@
                 var t;
                 let {
                     message: n
-                } = e, s = (0, o.useStateFromStores)([_.default], () => _.default.isBlocked(n.author.id)), r = (0, E.useNullableMessageAuthor)(n), u = l.useContext(p.default), [c, S] = l.useState(!1), v = l.useCallback(e => {
+                } = e, s = (0, o.useStateFromStores)([_.default], () => _.default.isBlocked(n.author.id)), r = (0, E.useNullableMessageAuthor)(n), u = l.useContext(p.default), [c, g] = l.useState(!1), v = l.useCallback(e => {
                     "A" !== e.target.nodeName && (f.default.updateChatOpen(n.channel_id, !0), h.default.jumpToMessage({
                         channelId: n.channel_id,
                         messageId: n.id,
@@ -53,7 +53,7 @@
                 } = (0, I.renderSingleLineMessage)(n, x, s, M.messageContent, {
                     iconClass: M.messageContentIcon,
                     iconSize: A.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
-                }), L = (0, C.getMessageStickers)(n), O = L.length > 0, y = O ? L.map(e => (0, a.jsx)(g.default, {
+                }), L = (0, C.getMessageStickers)(n), O = L.length > 0, y = O ? L.map(e => (0, a.jsx)(S.default, {
                     className: M.sticker,
                     size: 128,
                     sticker: e,
@@ -62,10 +62,10 @@
                 return (0, a.jsxs)(d.Clickable, {
                     className: M.toast,
                     onMouseEnter: () => {
-                        S(!0)
+                        g(!0)
                     },
                     onMouseLeave: () => {
-                        S(!1)
+                        g(!1)
                     },
                     onClick: v,
                     children: [(0, a.jsxs)("div", {
@@ -124,7 +124,7 @@
                         })
                     }, [r]), a && null == h.current ? h.current = r : !a && null != h.current && (h.current = null);
                     let E = null !== (t = h.current) && void 0 !== t ? t : r,
-                        C = (0, o.useStateFromStoresArray)([S.default], () => E.map(e => S.default.getMessage(n, e)), [n, E]);
+                        C = (0, o.useStateFromStoresArray)([g.default], () => E.map(e => g.default.getMessage(n, e)), [n, E]);
                     return {
                         toastsHidden: d,
                         toastMessages: C.filter(v.isNotNullish)
@@ -146,12 +146,12 @@
                         e[a.id] = t, t += l + 8
                     }!(0, r.isEqual)(e, m) && E(e)
                 }, [h]);
-                let g = h.map(e => ({
+                let S = h.map(e => ({
                         message: e,
                         height: p.current[e.id],
                         y: m[e.id]
                     })),
-                    _ = (0, u.useTransition)(g, {
+                    _ = (0, u.useTransition)(S, {
                         keys: e => e.message.id,
                         from: () => ({
                             opacity: 0

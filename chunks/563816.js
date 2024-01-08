@@ -14,10 +14,10 @@
                 d = n("916565"),
                 c = n("355263"),
                 E = n("633043"),
-                f = n("823026"),
-                _ = n("305961"),
-                I = n("697218"),
-                T = n("317041"),
+                _ = n("823026"),
+                I = n("305961"),
+                T = n("697218"),
+                f = n("317041"),
                 S = n("782340"),
                 N = n("205735"),
                 p = e => {
@@ -29,38 +29,38 @@
                             onHeightUpdate: A,
                             context: m
                         } = e,
-                        C = (0, s.useStateFromStores)([_.default], () => _.default.getGuild(null != h ? h : p.guild_id)),
-                        g = (0, s.useStateFromStores)([I.default], () => I.default.getUser(l)),
-                        O = (0, f.default)({
+                        C = (0, s.useStateFromStores)([I.default], () => I.default.getGuild(null != h ? h : p.guild_id)),
+                        g = (0, s.useStateFromStores)([T.default], () => T.default.getUser(l)),
+                        G = (0, _.default)({
                             user: g,
                             guildId: null == C ? void 0 : C.id,
                             channel: p,
                             context: m
                         }),
                         {
-                            commands: M,
-                            sectionDescriptors: G,
+                            commands: O,
+                            sectionDescriptors: M,
                             loading: D
                         } = o.useDiscovery(p, {
                             commandType: n
                         }, {
-                            limit: T.CONTEXT_MENU_COMMANDS_QUERY_LIMIT
+                            limit: f.CONTEXT_MENU_COMMANDS_QUERY_LIMIT
                         }),
                         {
                             sections: v
                         } = a.useMemo(() => {
                             let e = {};
-                            return G.forEach(t => {
+                            return M.forEach(t => {
                                 e[t.id] = t
                             }), {
                                 sections: e
                             }
-                        }, [G]),
-                        R = a.useRef(D.current);
+                        }, [M]),
+                        U = a.useRef(D.current);
                     a.useEffect(() => {
-                        D.current !== R.current && (R.current = D.current, null == A || A())
+                        D.current !== U.current && (U.current = D.current, null == A || A())
                     }, [D, A]);
-                    let L = a.useCallback(e => {
+                    let R = a.useCallback(e => {
                         r(null != p, "menu item should not show if channel is null");
                         let t = v[e.applicationId],
                             n = null != t ? (0, c.getIconComponent)(t) : void 0;
@@ -92,12 +92,12 @@
                         id: "menu-commands-placeholder",
                         render: () => (0, i.jsx)(E.default, {}),
                         disabled: !0
-                    }, "menu-commands-placeholder") : (t = 0 === M.length ? (0, i.jsx)(u.MenuItem, {
+                    }, "menu-commands-placeholder") : (t = 0 === O.length ? (0, i.jsx)(u.MenuItem, {
                         id: "menu-commands-empty",
                         label: S.default.Messages.APPLICATION_COMMAND_NO_COMMANDS,
                         disabled: !0
-                    }, "menu-commands-empty") : M.map(L), null != O && (t = (0, i.jsxs)(i.Fragment, {
-                        children: [t, (0, i.jsx)(u.MenuSeparator, {}, "separator"), O]
+                    }, "menu-commands-empty") : O.map(R), null != G && (t = (0, i.jsxs)(i.Fragment, {
+                        children: [t, (0, i.jsx)(u.MenuSeparator, {}, "separator"), G]
                     }))), (0, i.jsx)(u.MenuItem, {
                         id: "apps",
                         label: S.default.Messages.APPS,

@@ -19,8 +19,8 @@
                 m = n("867805"),
                 E = n("252931"),
                 C = n("5667"),
-                g = n("697218"),
-                S = n("402671"),
+                S = n("697218"),
+                g = n("402671"),
                 _ = n("449008"),
                 I = n("719923"),
                 T = n("229502"),
@@ -51,11 +51,11 @@
                     channel: n,
                     closePopout: m,
                     onFocus: _
-                } = e, y = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), V = (0, i.useStateFromStores)([g.default], () => g.default.getCurrentUser()), B = I.default.canUseFancyVoiceChannelReactions(V), H = (0, i.useStateFromStores)([v.default], () => v.default.getState().animationType), {
+                } = e, y = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), V = (0, i.useStateFromStores)([S.default], () => S.default.getCurrentUser()), B = I.default.canUseFancyVoiceChannelReactions(V), H = (0, i.useStateFromStores)([v.default], () => v.default.getState().animationType), {
                     viewAndUseEnabled: G
                 } = (0, E.useInventoryGuildPacksUserExperiment)({
                     autoTrackExposure: !1
-                }), W = l.useRef(!1), Y = (0, p.useFrequentlyUsedEmojis)(n.guild_id), z = (0, s.uniqBy)([...Y, ...k], "name").filter(e => !S.default.isEmojiFilteredOrLocked({
+                }), W = l.useRef(!1), Y = (0, p.useFrequentlyUsedEmojis)(n.guild_id), z = (0, s.uniqBy)([...Y, ...k], "name").filter(e => !g.default.isEmojiFilteredOrLocked({
                     emoji: e,
                     channel: n,
                     intention: w,

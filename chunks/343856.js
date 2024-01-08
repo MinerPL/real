@@ -1,17 +1,17 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return h
                 }
             });
             var a = n("37983");
             n("884691");
             var u = n("446674"),
                 r = n("669491"),
-                d = n("77078"),
-                s = n("450911"),
+                s = n("77078"),
+                i = n("450911"),
                 l = n("145079"),
-                i = n("87657"),
+                d = n("87657"),
                 o = n("697218"),
                 f = n("782340"),
                 c = n("839938");
@@ -53,20 +53,20 @@
                 })
             }
 
-            function S(e, t) {
+            function h(e, t) {
                 let n = (0, u.useStateFromStores)([o.default], () => o.default.getCurrentUser());
-                return null == n || t.ownerId !== n.id || e.id === n.id || (null == t ? void 0 : t.isBroadcastChannel()) ? null : (0, a.jsx)(d.MenuItem, {
+                return null == n || t.ownerId !== n.id || e.id === n.id || (null == t ? void 0 : t.isBroadcastChannel()) ? null : (0, a.jsx)(s.MenuItem, {
                     id: "make-dm-owner",
                     color: "danger",
                     label: f.default.Messages.CHANGE_DM_OWNER,
                     action: () => {
                         var u;
-                        return u = n, void(0, d.openModal)(n => (0, a.jsxs)(d.ConfirmModal, {
+                        return u = n, void(0, s.openModal)(n => (0, a.jsxs)(s.ConfirmModal, {
                             bodyClassName: c.confirmModal,
                             header: f.default.Messages.TRANSFER_GROUP_OWNERSHIP,
                             confirmText: f.default.Messages.CONFIRM,
                             cancelText: f.default.Messages.CANCEL,
-                            onConfirm: () => s.default.setDMOwner(t.id, e.id),
+                            onConfirm: () => i.default.setDMOwner(t.id, e.id),
                             ...n,
                             children: [(0, a.jsx)(m, {
                                 color: r.default.unsafe_rawColors.PRIMARY_300.css
@@ -74,25 +74,25 @@
                                 className: c.fromToWrapper,
                                 children: [(0, a.jsx)("div", {
                                     className: c.from,
-                                    children: (0, a.jsx)(i.default, {
+                                    children: (0, a.jsx)(d.default, {
                                         user: u,
-                                        size: d.AvatarSizes.SIZE_80
+                                        size: s.AvatarSizes.SIZE_80
                                     })
                                 }), (0, a.jsx)("div", {
                                     className: c.to,
-                                    children: (0, a.jsx)(i.default, {
+                                    children: (0, a.jsx)(d.default, {
                                         user: e,
-                                        size: d.AvatarSizes.SIZE_80
+                                        size: s.AvatarSizes.SIZE_80
                                     })
                                 })]
-                            }), (0, a.jsx)(d.Text, {
+                            }), (0, a.jsx)(s.Text, {
                                 variant: "text-md/normal",
                                 children: f.default.Messages.CONFIRM_CHANGE_DM_OWNER.format({
                                     usernameHook: (t, n) => (0, a.jsx)(l.default, {
-                                        usernameIcon: (0, a.jsx)(d.Avatar, {
+                                        usernameIcon: (0, a.jsx)(s.Avatar, {
                                             className: c.avatarIcon,
                                             src: e.getAvatarURL(void 0, 16),
-                                            size: d.AvatarSizes.SIZE_16,
+                                            size: s.AvatarSizes.SIZE_16,
                                             "aria-hidden": !0
                                         }),
                                         className: c.discordTag,

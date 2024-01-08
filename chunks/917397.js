@@ -7,10 +7,10 @@
                     return a
                 },
                 useUserRulesAgreementLevel: function() {
-                    return g
+                    return S
                 },
                 useUserEmailVerification: function() {
-                    return S
+                    return g
                 },
                 useUserAccountAgeDate: function() {
                     return _
@@ -40,7 +40,7 @@
                 return null != t && t.isPhoneVerified()
             }
 
-            function g(e, t) {
+            function S(e, t) {
                 var n, a;
                 let l = (0, u.default)([c.default], () => c.default.getUser(e), [e]),
                     s = (0, u.default)([o.default], () => o.default.getMember(t, e), [t, e]),
@@ -49,7 +49,7 @@
                 return r ? null == l || null == s || null == i ? 1 : (0, f.hasFlag)(null !== (n = s.flags) && void 0 !== n ? n : 0, E.GuildMemberFlags.BYPASSES_VERIFICATION) || (0, f.hasFlag)(null !== (a = s.flags) && void 0 !== a ? a : 0, E.GuildMemberFlags.COMPLETED_ONBOARDING) ? 2 : 1 : 0
             }
 
-            function S(e) {
+            function g(e) {
                 let t = (0, u.default)([c.default], () => c.default.getUser(e), [e]);
                 if (null == t) return !1;
                 let n = (null == t ? void 0 : t.isPhoneVerified()) || (null == t ? void 0 : t.isStaff());

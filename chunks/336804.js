@@ -19,8 +19,8 @@
                 m = n("506885"),
                 E = n("697218"),
                 C = n("216422"),
-                g = n("956089"),
-                S = n("980423"),
+                S = n("956089"),
+                g = n("980423"),
                 _ = n("599110"),
                 I = n("719923"),
                 T = n("12307"),
@@ -113,7 +113,7 @@
                         children: e => (0, a.jsxs)(f.Clickable, {
                             ...e,
                             onClick: F,
-                            className: i(M.qualityIndicator, m, S.LiveIndicatorShapes[c], b ? M.qualityIndicatorLowQuality : M.qualityIndicatorFullQuality, {
+                            className: i(M.qualityIndicator, m, g.LiveIndicatorShapes[c], b ? M.qualityIndicatorLowQuality : M.qualityIndicatorFullQuality, {
                                 [M.clickable]: w && P
                             }),
                             children: [P ? (0, a.jsx)(C.default, {
@@ -126,7 +126,7 @@
                             })]
                         })
                     });
-                    return (0, a.jsx)(g.TextBadge, {
+                    return (0, a.jsx)(S.TextBadge, {
                         text: k,
                         className: i(L, M.qualityIndicatorBadge),
                         color: d.default.unsafe_rawColors.PRIMARY_500.css,
@@ -174,7 +174,7 @@
                                 className: M.liveQualityIndicator,
                                 participant: t,
                                 size: u,
-                                shape: g.BadgeShapes.ROUND_LEFT,
+                                shape: S.BadgeShapes.ROUND_LEFT,
                                 isUpsellEnabled: s,
                                 didTrackUpsellViewed: d,
                                 setDidTrackUpsellViewed: c
@@ -182,10 +182,10 @@
                         }) : null), (0, a.jsx)(r.animated.div, {
                             style: _,
                             className: M.liveIndicator,
-                            children: (0, a.jsx)(S.default, {
-                                look: S.LiveIndicatorLooks.RED,
+                            children: (0, a.jsx)(g.default, {
+                                look: g.LiveIndicatorLooks.RED,
                                 size: u,
-                                shape: E ? g.BadgeShapes.ROUND_RIGHT : g.BadgeShapes.ROUND
+                                shape: E ? S.BadgeShapes.ROUND_RIGHT : S.BadgeShapes.ROUND
                             })
                         })]
                     })

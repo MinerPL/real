@@ -19,8 +19,8 @@
                 m = n("986632"),
                 E = n("252931"),
                 C = n("882641"),
-                g = n("476765"),
-                S = n("837899"),
+                S = n("476765"),
+                g = n("837899"),
                 _ = n("402671"),
                 I = n("449008"),
                 T = n("99795"),
@@ -86,7 +86,7 @@
                         onClick: () => {
                             l(!n), s()
                         },
-                        children: (0, a.jsx)(S.default, {
+                        children: (0, a.jsx)(g.default, {
                             className: i(N.dropDown, {
                                 [N.dropDownOpen]: n
                             })
@@ -105,9 +105,9 @@
                     onSelectDisabledEmoji: c,
                     onExpandedToggle: p,
                     emojiSearchProps: C,
-                    recentlyUsedEmojis: S,
+                    recentlyUsedEmojis: g,
                     analyticsOverride: I
-                } = e, L = (0, g.useUID)(), [O, y] = l.useState(!1), {
+                } = e, L = (0, S.useUID)(), [O, y] = l.useState(!1), {
                     viewAndUseEnabled: b
                 } = (0, E.useInventoryGuildPacksUserExperiment)({
                     autoTrackExposure: !1
@@ -117,7 +117,7 @@
                     intention: A,
                     canViewAndUsePackEmoji: b
                 })).slice(0, T.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT);
-                null != S && S.length > 0 && D.splice(D.length - 1, 1, S[0]);
+                null != g && g.length > 0 && D.splice(D.length - 1, 1, g[0]);
                 let U = e => {
                         y(e), null == p || p(e)
                     },

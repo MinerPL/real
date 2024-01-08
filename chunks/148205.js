@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return g
                 }
             });
             var a = n("37983"),
@@ -19,11 +19,11 @@
                 m = n("664336"),
                 E = n("659500"),
                 C = n("49111"),
-                g = n("782340"),
-                S = l.memo(function(e) {
+                S = n("782340"),
+                g = l.memo(function(e) {
                     let {
                         channel: t
-                    } = e, n = (0, o.default)(), s = (0, r.useStateFromStores)([h.default], () => h.default.isInChannel(t.id)), S = (0, r.useStateFromStores)([h.default], () => !i.isEmpty(h.default.getVoiceStatesForChannel(t.id))), _ = (0, r.useStateFromStores)([f.default], () => f.default.can(C.Permissions.CONNECT, t)), {
+                    } = e, n = (0, o.default)(), s = (0, r.useStateFromStores)([h.default], () => h.default.isInChannel(t.id)), g = (0, r.useStateFromStores)([h.default], () => !i.isEmpty(h.default.getVoiceStatesForChannel(t.id))), _ = (0, r.useStateFromStores)([f.default], () => f.default.can(C.Permissions.CONNECT, t)), {
                         needSubscriptionToAccess: I
                     } = (0, d.default)(t.id), T = (0, c.useIsActiveChannelOrUnarchivableThread)(t), v = l.useCallback(() => {
                         u.default.handleVoiceConnect({
@@ -43,6 +43,6 @@
                     }).enabled && !n && !s && _ && T && t.isVocalThread()) ? (0, a.jsx)(m.default.Icon, {
                         icon: p.default,
                         onClick: v,
-                        tooltip: S ? g.default.Messages.JOIN_VOICE_CALL : g.default.Messages.START_VOICE_CALL
+                        tooltip: g ? S.default.Messages.JOIN_VOICE_CALL : S.default.Messages.START_VOICE_CALL
                     }) : null
                 })

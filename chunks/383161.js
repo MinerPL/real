@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 mentionUser: function() {
-                    return _
+                    return I
                 },
                 default: function() {
-                    return I
+                    return T
                 }
             }), n("222007");
             var i = n("37983");
@@ -18,9 +18,9 @@
                 d = n("659500"),
                 c = n("158998"),
                 E = n("49111"),
-                f = n("782340");
+                _ = n("782340");
 
-            function _(e, t) {
+            function I(e, t) {
                 let {
                     id: n
                 } = e, i = "@".concat(c.default.getUserTag(e, {
@@ -32,7 +32,7 @@
                 }), null != t && r.default.startTyping(t)
             }
 
-            function I(e, t, n) {
+            function T(e, t, n) {
                 let [r, d] = (0, a.useStateFromStoresArray)([o.default, s.default, u.default], () => {
                     let e = o.default.getChannelId(t),
                         n = s.default.getChannel(e),
@@ -41,9 +41,9 @@
                 }, [t]), c = n === E.AppContext.POPOUT;
                 return !d || c ? null : (0, i.jsx)(l.MenuItem, {
                     id: "mention",
-                    label: f.default.Messages.MENTION,
+                    label: _.default.Messages.MENTION,
                     action: function() {
-                        _(e, r)
+                        I(e, r)
                     }
                 })
             }

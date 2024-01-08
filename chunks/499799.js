@@ -4,8 +4,8 @@
                     return l
                 }
             });
-            var s = n("862205");
-            let a = (0, s.createExperiment)({
+            var a = n("862205");
+            let s = (0, a.createExperiment)({
                 kind: "user",
                 id: "2023-10_staff_teen_safety_assist_age_bypass",
                 label: "Staff Teen Safety Assist Age Bypass",
@@ -22,7 +22,7 @@
             });
 
             function l(e) {
-                return a.useExperiment({
+                return s.useExperiment({
                     location: e
                 }, {
                     autoTrackExposure: !0

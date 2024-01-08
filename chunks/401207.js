@@ -30,9 +30,9 @@
                     } = e,
                     E = (0, s.useStateFromStores)([u.default], () => u.default.getWindow(p.PopoutWindowKeys.CHANNEL_CALL_POPOUT)),
                     C = (0, f.default)(),
-                    g = (0, s.useStateFromStores)([d.default], () => d.default.getActivityPanelMode()),
-                    S = null != C && !(0, c.default)(C.channelId) && g === h.ActivityPanelModes.PANEL;
-                if (S) t = window;
+                    S = (0, s.useStateFromStores)([d.default], () => d.default.getActivityPanelMode()),
+                    g = null != C && !(0, c.default)(C.channelId) && S === h.ActivityPanelModes.PANEL;
+                if (g) t = window;
                 else {
                     var _;
                     t = null !== (_ = null == E ? void 0 : E.window) && void 0 !== _ ? _ : window

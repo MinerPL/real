@@ -20,8 +20,8 @@
                 m = n("191225"),
                 E = n("885829"),
                 C = n("575136"),
-                g = n("141962"),
-                S = n("272505"),
+                S = n("141962"),
+                g = n("272505"),
                 _ = n("782340"),
                 I = n("131279");
             let T = "ActivityPanelActionBar";
@@ -40,7 +40,7 @@
                     O = L.get(null === (t = j[0]) || void 0 === t ? void 0 : null === (e = t.application) || void 0 === e ? void 0 : e.id),
                     y = (0, h.useIsActivitiesInTextEnabled)(x, T),
                     b = (0, h.useIsActivitiesInTextActionBarEnabled)(x, T);
-                if (!(y && b) || null == O || R !== S.ActivityPanelModes.ACTION_BAR) return null;
+                if (!(y && b) || null == O || R !== g.ActivityPanelModes.ACTION_BAR) return null;
                 let P = null === (n = O.presenceActivity) || void 0 === n ? void 0 : n.details;
                 (null == P || void 0 === P || "" === P) && (P = _.default.Messages.LOADING);
                 let D = Array.from(O.embeddedActivity.userIds).map(e => c.default.getUser(e)).filter(e => null != e && void 0 !== e);
@@ -53,8 +53,8 @@
                             instanceId: O.embeddedActivity.instanceId,
                             inputApplication: O.application,
                             analyticsLocations: A,
-                            embeddedActivitiesManager: g.default
-                        }), (0, p.updateActivityPanelMode)(S.ActivityPanelModes.PANEL))
+                            embeddedActivitiesManager: S.default
+                        }), (0, p.updateActivityPanelMode)(g.ActivityPanelModes.PANEL))
                     },
                     children: [(0, a.jsx)("img", {
                         alt: "",
