@@ -4,16 +4,16 @@
                     return a
                 },
                 default: function() {
-                    return r
+                    return i
                 }
             });
-            var r, i = n("376556"),
-                s = n("653047"),
+            var i, s = n("376556"),
+                r = n("653047"),
                 l = n("782340");
             let a = "twitch:";
-            r = class extends s.default {
+            i = class extends r.default {
                 getIconURL() {
-                    return i.default.get("twitch").icon.lightPNG
+                    return s.default.get("twitch").icon.lightPNG
                 }
                 constructor(e) {
                     super(e), this.id = "".concat(a).concat(e.url), this.name = l.default.Messages.GAME_FEED_ACTIVITY_STREAMING_TWITCH

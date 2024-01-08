@@ -4,20 +4,20 @@
                     return l
                 }
             }), n("222007");
-            var a = n("446674"),
-                s = n("377253");
+            var s = n("446674"),
+                a = n("377253");
 
             function l(e, t) {
-                return (0, a.useStateFromStores)([s.default], () => {
+                return (0, s.useStateFromStores)([a.default], () => {
                     if (null == t) return;
-                    let n = s.default.getMessages(e),
-                        a = n.findOldest(e => e.author.id === t);
-                    if (null == a) return;
+                    let n = a.default.getMessages(e),
+                        s = n.findOldest(e => e.author.id === t);
+                    if (null == s) return;
                     let l = n.toArray();
                     for (let e of l) {
                         if (e.author.id !== t) break;
-                        e.content.length > (null == a ? void 0 : a.content.length) && (a = e)
+                        e.content.length > (null == s ? void 0 : s.content.length) && (s = e)
                     }
-                    return a
+                    return s
                 }, [e, t])
             }
