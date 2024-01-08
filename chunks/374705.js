@@ -1,53 +1,53 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return x
+                    return b
                 }
             });
-            var i = n("37983");
+            var s = n("37983");
             n("884691");
-            var s = n("627445"),
-                a = n.n(s),
+            var i = n("627445"),
+                a = n.n(i),
                 l = n("446674"),
                 u = n("77078"),
-                o = n("272030"),
-                d = n("812204"),
-                r = n("685665"),
+                r = n("272030"),
+                o = n("812204"),
+                d = n("685665"),
                 c = n("861370"),
-                S = n("255812"),
-                f = n("529932"),
-                g = n("47495"),
-                E = n("724026"),
+                f = n("255812"),
+                S = n("529932"),
+                E = n("47495"),
+                g = n("724026"),
                 _ = n("271938"),
                 N = n("923959"),
                 M = n("697218"),
                 h = n("578411"),
                 I = n("230947"),
-                T = n("544955"),
+                p = n("544955"),
                 A = n("747867"),
-                L = n("555914"),
+                T = n("555914"),
                 O = n("513472"),
-                U = n("527660"),
-                m = n("823772"),
-                p = n("177508"),
-                G = n("263673"),
+                m = n("527660"),
+                U = n("823772"),
+                L = n("177508"),
+                v = n("263673"),
                 R = n("58622"),
                 C = n("49111"),
-                b = n("782340");
+                G = n("782340");
 
-            function v(e) {
+            function x(e) {
                 let {
                     guild: t,
-                    onSelect: s,
-                    hideSettings: d
-                } = e, r = t.id, v = N.default.getDefaultChannel(r), x = (0, f.useExpressionSourceGuildDataForGuildLeaveModal)(t), j = (0, l.useStateFromStores)([M.default], () => {
+                    onSelect: i,
+                    hideSettings: o
+                } = e, d = t.id, x = N.default.getDefaultChannel(d), b = (0, S.useExpressionSourceGuildDataForGuildLeaveModal)(t), j = (0, l.useStateFromStores)([M.default], () => {
                     let e = M.default.getCurrentUser();
                     return a(null != e, "GuildContextMenu: user cannot be undefined"), t.isOwner(e)
-                }, [t]), F = (0, R.default)({
+                }, [t]), H = (0, R.default)({
                     guild: t,
                     source: C.InstantInviteSources.GUILD_CONTEXT_MENU,
-                    channel: v
-                }), P = (0, G.default)(r), D = (0, O.default)(t), y = (0, U.default)(t), H = (0, p.default)(t), w = (0, I.default)({
+                    channel: x
+                }), P = (0, v.default)(d), F = (0, O.default)(t), D = (0, m.default)(t), y = (0, L.default)(t), w = (0, I.default)({
                     guildId: t.id,
                     userId: _.default.getId(),
                     analyticsLocation: {
@@ -55,95 +55,95 @@
                         section: C.AnalyticsSections.CHAT_USERNAME,
                         object: C.AnalyticsObjects.CONTEXT_MENU_ITEM
                     }
-                }), k = (0, T.default)(t), Y = (0, S.default)(t.id), V = (0, c.default)({
+                }), V = (0, p.default)(t), k = (0, f.default)(t.id), Y = (0, c.default)({
                     id: t.id,
-                    label: b.default.Messages.COPY_ID_GUILD
-                }), B = (0, L.default)(t, {
+                    label: G.default.Messages.COPY_ID_GUILD
+                }), B = (0, T.default)(t, {
                     section: C.AnalyticsSections.GUILD_LIST
-                }), Z = (0, E.default)(t.id), W = (0, m.default)(t.id), X = (0, A.default)(t), z = (0, g.useShouldUseNewNotificationSystem)("GuildContextMenu"), K = t.hasFeature(C.GuildFeatures.HUB);
+                }), Z = (0, g.default)(t.id), z = (0, U.default)(t.id), W = (0, A.default)(t), X = (0, E.useShouldUseNewNotificationSystem)("GuildContextMenu"), K = t.hasFeature(C.GuildFeatures.HUB);
 
                 function q() {
-                    (0, u.openModal)(e => (0, i.jsx)(h.GuildLeaveConfirmModalContents, {
+                    (0, u.openModal)(e => (0, s.jsx)(h.GuildLeaveConfirmModalContents, {
                         ...e,
                         guild: t,
-                        discoverableGuildData: x
+                        discoverableGuildData: b
                     }))
                 }
-                return K ? (0, i.jsxs)(u.Menu, {
+                return K ? (0, s.jsxs)(u.Menu, {
                     navId: "guild-context",
-                    onClose: o.closeContextMenu,
-                    "aria-label": b.default.Messages.GUILD_ACTIONS_MENU_LABEL,
-                    onSelect: s,
-                    children: [(0, i.jsxs)(u.MenuGroup, {
-                        children: [F, (0, i.jsx)(u.MenuItem, {
+                    onClose: r.closeContextMenu,
+                    "aria-label": G.default.Messages.GUILD_ACTIONS_MENU_LABEL,
+                    onSelect: i,
+                    children: [(0, s.jsxs)(u.MenuGroup, {
+                        children: [H, (0, s.jsx)(u.MenuItem, {
                             id: "privacy",
-                            label: b.default.Messages.HUB_PRIVACY_SETTINGS,
+                            label: G.default.Messages.HUB_PRIVACY_SETTINGS,
                             action: () => (0, u.openModalLazy)(async () => {
                                 let {
                                     default: e
                                 } = await n.el("349406").then(n.bind(n, "349406"));
-                                return n => (0, i.jsx)(e, {
+                                return n => (0, s.jsx)(e, {
                                     ...n,
                                     guild: t
                                 })
                             })
                         }), w]
-                    }), j ? null : (0, i.jsx)(u.MenuGroup, {
-                        children: (0, i.jsx)(u.MenuItem, {
+                    }), j ? null : (0, s.jsx)(u.MenuGroup, {
+                        children: (0, s.jsx)(u.MenuItem, {
                             id: "leave-guild",
-                            label: b.default.Messages.LEAVE_HUB,
+                            label: G.default.Messages.LEAVE_HUB,
                             action: q,
                             color: "danger"
                         })
-                    }), (0, i.jsx)(u.MenuGroup, {
-                        children: V
+                    }), (0, s.jsx)(u.MenuGroup, {
+                        children: Y
                     })]
-                }) : (0, i.jsxs)(u.Menu, {
+                }) : (0, s.jsxs)(u.Menu, {
                     navId: "guild-context",
-                    onClose: o.closeContextMenu,
-                    "aria-label": b.default.Messages.GUILD_ACTIONS_MENU_LABEL,
-                    onSelect: s,
-                    children: [(0, i.jsx)(u.MenuGroup, {
+                    onClose: r.closeContextMenu,
+                    "aria-label": G.default.Messages.GUILD_ACTIONS_MENU_LABEL,
+                    onSelect: i,
+                    children: [(0, s.jsx)(u.MenuGroup, {
                         children: B
-                    }), (0, i.jsx)(u.MenuGroup, {
-                        children: F
-                    }), (0, i.jsxs)(u.MenuGroup, {
-                        children: [D, z || __OVERLAY__ ? null : y, z && !__OVERLAY__ ? W : null, P, Z]
-                    }), (0, i.jsxs)(u.MenuGroup, {
-                        children: [d ? null : H, __OVERLAY__ ? null : (0, i.jsx)(u.MenuItem, {
+                    }), (0, s.jsx)(u.MenuGroup, {
+                        children: H
+                    }), (0, s.jsxs)(u.MenuGroup, {
+                        children: [F, X || __OVERLAY__ ? null : D, X && !__OVERLAY__ ? z : null, P, Z]
+                    }), (0, s.jsxs)(u.MenuGroup, {
+                        children: [o ? null : y, __OVERLAY__ ? null : (0, s.jsx)(u.MenuItem, {
                             id: "privacy",
-                            label: b.default.Messages.PRIVACY_SETTINGS,
+                            label: G.default.Messages.PRIVACY_SETTINGS,
                             action: () => (0, u.openModalLazy)(async () => {
                                 let {
                                     default: e
                                 } = await n.el("349406").then(n.bind(n, "349406"));
-                                return n => (0, i.jsx)(e, {
+                                return n => (0, s.jsx)(e, {
                                     ...n,
                                     guild: t
                                 })
                             })
                         }), w]
-                    }), (0, i.jsxs)(u.MenuGroup, {
-                        children: [k, Y]
-                    }), (0, i.jsxs)(u.MenuGroup, {
-                        children: [X, !j && (0, i.jsx)(u.MenuItem, {
+                    }), (0, s.jsxs)(u.MenuGroup, {
+                        children: [V, k]
+                    }), (0, s.jsxs)(u.MenuGroup, {
+                        children: [W, !j && (0, s.jsx)(u.MenuItem, {
                             id: "leave-guild",
-                            label: b.default.Messages.LEAVE_SERVER,
+                            label: G.default.Messages.LEAVE_SERVER,
                             action: q,
                             color: "danger"
                         })]
-                    }), (0, i.jsx)(u.MenuGroup, {
-                        children: V
+                    }), (0, s.jsx)(u.MenuGroup, {
+                        children: Y
                     })]
                 })
             }
 
-            function x(e) {
+            function b(e) {
                 let {
                     AnalyticsLocationProvider: t
-                } = (0, r.default)(d.default.CONTEXT_MENU);
-                return (0, i.jsx)(t, {
-                    children: (0, i.jsx)(v, {
+                } = (0, d.default)(o.default.CONTEXT_MENU);
+                return (0, s.jsx)(t, {
+                    children: (0, s.jsx)(x, {
                         ...e
                     })
                 })

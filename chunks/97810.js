@@ -4,21 +4,21 @@
                     return d
                 }
             });
-            var s = n("37983"),
-                a = n("884691"),
+            var a = n("37983"),
+                s = n("884691"),
                 l = n("414456"),
                 i = n.n(l),
                 r = n("898260"),
                 o = n("877671");
-            let u = a.forwardRef(function(e, t) {
+            let u = s.forwardRef(function(e, t) {
                 let {
                     className: n,
-                    isBeforeGroup: a = !1,
+                    isBeforeGroup: s = !1,
                     ...l
                 } = e, {
                     children: u
                 } = l;
-                return (0, s.jsx)(r.default, {
+                return (0, a.jsx)(r.default, {
                     ...l,
                     ref: t,
                     role: "separator",
@@ -26,8 +26,8 @@
                     className: i(n, {
                         [o.divider]: !0,
                         [o.hasContent]: null != u,
-                        [o.beforeGroup]: a
+                        [o.beforeGroup]: s
                     })
                 })
             });
-            var d = a.memo(u)
+            var d = s.memo(u)

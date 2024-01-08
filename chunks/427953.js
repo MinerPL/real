@@ -1,5 +1,8 @@
             "use strict";
             n.r(t), n.d(t, {
+                isActivityInTextSupportedForChannelType: function() {
+                    return o
+                },
                 isActivitiesInTextEnabled: function() {
                     return d
                 },
@@ -64,12 +67,12 @@
                 });
 
             function o(e) {
-                return null != e && [i.ChannelTypes.GUILD_TEXT, i.ChannelTypes.GROUP_DM, i.ChannelTypes.DM].includes(e.type)
+                return [i.ChannelTypes.GUILD_TEXT, i.ChannelTypes.GROUP_DM, i.ChannelTypes.DM].includes(e)
             }
 
             function d(e, t) {
                 if (null == e) return !1;
-                let n = o(e);
+                let n = o(e.type);
                 return (null == e ? void 0 : e.guild_id) != null ? u.getCurrentConfig({
                     guildId: e.guild_id,
                     location: t
@@ -83,16 +86,17 @@
             }
 
             function c(e, t) {
-                let n = (0, a.useStateFromStores)([s.default], () => s.default.getChannel(e)),
-                    i = o(n),
-                    l = (null == n ? void 0 : n.guild_id) != null ? u : r,
-                    d = l.useExperiment({
-                        guildId: null == n ? void 0 : n.guild_id,
+                var n;
+                let i = (0, a.useStateFromStores)([s.default], () => s.default.getChannel(e));
+                let l = null != (n = i) && o(n.type),
+                    d = (null == i ? void 0 : i.guild_id) != null ? u : r,
+                    c = d.useExperiment({
+                        guildId: null == i ? void 0 : i.guild_id,
                         location: t
                     }, {
                         autoTrackExposure: !1
                     });
-                return d.enabled && i
+                return c.enabled && l
             }
 
             function _(e, t) {
