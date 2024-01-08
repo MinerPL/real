@@ -7,9 +7,9 @@
             var a, l, s = n("37983"),
                 i = n("884691"),
                 r = n("414456"),
-                u = n.n(r),
-                o = n("627445"),
-                d = n.n(o),
+                o = n.n(r),
+                u = n("627445"),
+                d = n.n(u),
                 c = n("446674"),
                 f = n("77078"),
                 h = n("272030"),
@@ -17,8 +17,8 @@
                 m = n("750560"),
                 E = n("506885"),
                 C = n("981601"),
-                S = n("26989"),
-                g = n("957255"),
+                g = n("26989"),
+                S = n("957255"),
                 _ = n("824563"),
                 I = n("945330"),
                 T = n("277174"),
@@ -44,7 +44,7 @@
                     });
                     return (0, s.jsxs)(x.default, {
                         toolbar: a,
-                        className: u(b.headerContainer, {
+                        className: o(b.headerContainer, {
                             [b.chatOpen]: n
                         }),
                         children: [(0, s.jsx)(x.default.Icon, {
@@ -61,23 +61,23 @@
                         channel: t,
                         participant: a,
                         tempDisableOnInit: l = !1
-                    } = e, [r, o] = i.useState(l);
+                    } = e, [r, u] = i.useState(l);
                     i.useEffect(() => {
                         if (!r) return;
-                        let e = setTimeout(() => o(!1), 1e3);
+                        let e = setTimeout(() => u(!1), 1e3);
                         return () => clearTimeout(e)
                     }, []);
-                    let g = t.getGuildId();
-                    d(null != g, "Channel cannot be guildless");
+                    let S = t.getGuildId();
+                    d(null != S, "Channel cannot be guildless");
                     let {
                         isMobile: v,
                         status: x
                     } = (0, c.useStateFromStoresObject)([_.default], () => ({
                         isMobile: _.default.isMobileOnline(a.user.id),
-                        status: _.default.getStatus(a.user.id, g)
-                    })), A = (0, c.useStateFromStores)([S.default], () => S.default.getMember(g, a.user.id)), j = i.useMemo(() => ({
-                        [g]: [a.user.id]
-                    }), [g, a.user.id]);
+                        status: _.default.getStatus(a.user.id, S)
+                    })), A = (0, c.useStateFromStores)([g.default], () => g.default.getMember(S, a.user.id)), j = i.useMemo(() => ({
+                        [S]: [a.user.id]
+                    }), [S, a.user.id]);
                     (0, m.useSubscribeGuildMembers)(j);
                     let L = a.rtsState === R.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 
@@ -96,7 +96,7 @@
                             return n => (0, s.jsx)(e, {
                                 ...n,
                                 user: a.user,
-                                guildId: g,
+                                guildId: S,
                                 channel: t,
                                 showMediaItems: !0
                             })
@@ -112,7 +112,7 @@
                             renderPopout: e => (0, s.jsx)(C.default, {
                                 ...e,
                                 userId: a.user.id,
-                                guildId: g,
+                                guildId: S,
                                 channelId: t.id
                             }),
                             position: "left",
@@ -161,7 +161,7 @@
                             text: y.default.Messages.REQUEST_TO_SPEAK_DECLINE,
                             children: e => (0, s.jsx)(f.Button, {
                                 ...e,
-                                innerClassName: u(b.buttonContainer, b.buttonMargin),
+                                innerClassName: o(b.buttonContainer, b.buttonMargin),
                                 look: f.Button.Looks.BLANK,
                                 size: f.Button.Sizes.NONE,
                                 onClick: P,
@@ -206,9 +206,9 @@
                     channel: t,
                     toggleRequestToSpeakSidebar: n,
                     chatOpen: a
-                } = e, l = (0, A.useSortedRequestToSpeakParticipants)(t.id), i = (0, c.useStateFromStores)([g.default], () => g.default.can(O.Permissions.MANAGE_CHANNELS, t) || g.default.can(O.Permissions.MANAGE_ROLES, t)), r = [i ? 1 : 0, Math.max(1, l.length)];
+                } = e, l = (0, A.useSortedRequestToSpeakParticipants)(t.id), i = (0, c.useStateFromStores)([S.default], () => S.default.can(O.Permissions.MANAGE_CHANNELS, t) || S.default.can(O.Permissions.MANAGE_ROLES, t)), r = [i ? 1 : 0, Math.max(1, l.length)];
                 return (0, s.jsxs)("div", {
-                    className: u(b.container, {
+                    className: o(b.container, {
                         [b.chatOpen]: a
                     }),
                     children: [(0, s.jsx)(P, {

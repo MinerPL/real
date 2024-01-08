@@ -9,8 +9,8 @@
                 s = n("669491"),
                 i = n("77078"),
                 r = n("462274"),
-                u = n("800762"),
-                o = n("760679"),
+                o = n("800762"),
+                u = n("760679"),
                 d = n("242260"),
                 c = n("315841"),
                 f = n("52477"),
@@ -20,8 +20,8 @@
             let E = 1e3 / 60;
 
             function C(e, t, n, C) {
-                let S = (0, i.useToken)(s.default.unsafe_rawColors.BRAND_500).hex(),
-                    g = (0, i.useToken)(s.default.unsafe_rawColors.BLACK_500).hex(),
+                let g = (0, i.useToken)(s.default.unsafe_rawColors.BRAND_500).hex(),
+                    S = (0, i.useToken)(s.default.unsafe_rawColors.BLACK_500).hex(),
                     _ = (0, i.useToken)(s.default.unsafe_rawColors.WHITE_500).hex(),
                     I = a.useRef({}),
                     T = a.useRef(new l.Interval),
@@ -46,11 +46,11 @@
                             let {
                                 width: E,
                                 height: C
-                            } = f.getBoundingClientRect(), S = [];
+                            } = f.getBoundingClientRect(), g = [];
                             n.forEach(e => {
-                                let t = null != u.default.getVoiceStateForChannel(i, e.userId);
+                                let t = null != o.default.getVoiceStateForChannel(i, e.userId);
                                 if (!t) {
-                                    S.push(e);
+                                    g.push(e);
                                     return
                                 }! function(e) {
                                     let {
@@ -61,8 +61,8 @@
                                         fallbackColor: s,
                                         outlineColorDark: i,
                                         outlineColorLight: r,
-                                        linesDrawnAt: u,
-                                        streamerId: o,
+                                        linesDrawnAt: o,
+                                        streamerId: u,
                                         deadDrawables: d
                                     } = e;
                                     switch (t.type) {
@@ -75,7 +75,7 @@
                                                 fallbackColor: s,
                                                 outlineColorDark: i,
                                                 outlineColorLight: r,
-                                                linesDrawnAt: u,
+                                                linesDrawnAt: o,
                                                 deadDrawables: d
                                             });
                                         case c.DrawableType.EMOJI_HOSE:
@@ -87,7 +87,7 @@
                                                 fallbackColor: s,
                                                 outlineColorDark: i,
                                                 outlineColorLight: r,
-                                                streamerId: o,
+                                                streamerId: u,
                                                 deadDrawables: d
                                             })
                                     }
@@ -100,21 +100,21 @@
                                     outlineColorDark: r,
                                     outlineColorLight: d,
                                     linesDrawnAt: l,
-                                    deadDrawables: S,
+                                    deadDrawables: g,
                                     streamerId: s
                                 })
-                            }), S.length > 0 && (0, o.clearDrawables)(S, s)
+                            }), g.length > 0 && (0, u.clearDrawables)(g, s)
                         }({
                             canvasRef: e,
                             drawables: n,
-                            fallbackColor: S,
+                            fallbackColor: g,
                             linesDrawnAt: I,
                             streamerId: t,
-                            outlineColorDark: g,
+                            outlineColorDark: S,
                             outlineColorLight: _,
                             channelId: C
                         })
-                    }, [e, C, S, g, _]);
+                    }, [e, C, g, S, _]);
                 a.useEffect(() => {
                     let t = new ResizeObserver(() => {
                         let t = e.current;

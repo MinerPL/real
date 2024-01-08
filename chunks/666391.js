@@ -14,8 +14,8 @@
                 let {
                     initialPlanId: t,
                     activeSubscription: r,
-                    trialId: u,
-                    trialFooterMessageOverride: o,
+                    trialId: o,
+                    trialFooterMessageOverride: u,
                     onClose: d,
                     analyticsObject: c,
                     analyticsLocation: f,
@@ -24,8 +24,8 @@
                     renderHeader: m,
                     renderPurchaseConfirmation: E,
                     planGroup: C,
-                    reviewWarningMessage: S,
-                    skuId: g
+                    reviewWarningMessage: g,
+                    skuId: S
                 } = e;
                 (0, l.openModalLazy)(async () => {
                     let {
@@ -43,7 +43,7 @@
                         return (0, a.jsx)(e, {
                             activeSubscription: r,
                             stepConfigs: i,
-                            skuIDs: [g],
+                            skuIDs: [S],
                             children: (0, a.jsx)(s.GiftContextProvider, {
                                 children: (0, a.jsx)(l, {
                                     ...I,
@@ -55,13 +55,13 @@
                                     analyticsObject: c,
                                     analyticsLocation: f,
                                     analyticsSubscriptionType: p,
-                                    skuId: g,
+                                    skuId: S,
                                     renderHeader: m,
                                     renderPurchaseConfirmation: E,
                                     planGroup: C,
-                                    trialId: u,
-                                    trialFooterMessageOverride: o,
-                                    reviewWarningMessage: S
+                                    trialId: o,
+                                    trialFooterMessageOverride: u,
+                                    reviewWarningMessage: g
                                 })
                             })
                         })

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return o
                 }
             }), n("222007");
             var a = n("917351"),
@@ -10,7 +10,7 @@
                 i = n("42887"),
                 r = n("353927");
 
-            function u() {
+            function o() {
                 let {
                     enabled: e,
                     cameraUnavailable: t

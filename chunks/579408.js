@@ -14,8 +14,8 @@
                     resizableNode: t,
                     onResize: n,
                     onResizeEnd: r,
-                    minHeight: u,
-                    maxHeight: o
+                    minHeight: o,
+                    maxHeight: u
                 } = e, [d, c] = l.useState(null);
                 l.useEffect(() => {
                     var e, n;
@@ -23,8 +23,8 @@
                 }, [t]);
                 let f = (0, s.default)({
                     initialElementDimension: d,
-                    minDimension: u,
-                    maxDimension: o,
+                    minDimension: o,
+                    maxDimension: u,
                     resizableDomNodeRef: t,
                     onElementResize: n,
                     onElementResizeEnd: r,

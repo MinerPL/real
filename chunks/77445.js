@@ -1,17 +1,17 @@
             "use strict";
-            n.r(t), n.d(t, {
+            l.r(t), l.d(t, {
                 default: function() {
-                    return a
+                    return d
                 }
             });
-            var i = n("446674"),
-                l = n("271938"),
-                u = n("18494"),
-                o = n("808422");
+            var u = l("446674"),
+                a = l("271938"),
+                n = l("18494"),
+                r = l("808422");
 
-            function a() {
-                let e = (0, i.useStateFromStores)([u.default], () => u.default.getVoiceChannelId()),
-                    t = (0, i.useStateFromStores)([l.default], () => l.default.getId()),
-                    n = (0, o.default)(t, e);
-                return n === o.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
+            function d() {
+                let e = (0, u.useStateFromStores)([n.default], () => n.default.getVoiceChannelId()),
+                    t = (0, u.useStateFromStores)([a.default], () => a.default.getId()),
+                    l = (0, r.default)(t, e);
+                return l === r.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
             }

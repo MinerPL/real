@@ -10,8 +10,8 @@
                 s = n("760679"),
                 i = n("242260"),
                 r = n("315841"),
-                u = n("124824"),
-                o = n("981913"),
+                o = n("124824"),
+                u = n("981913"),
                 d = n("258901"),
                 c = n("472037"),
                 f = n("814711"),
@@ -33,7 +33,7 @@
                             closePopout: n,
                             onFocus: l
                         } = e;
-                        return (0, a.jsx)(u.default, {
+                        return (0, a.jsx)(o.default, {
                             children: (0, a.jsx)(d.default, {
                                 title: h.default.Messages.SHARED_CANVAS_DRAW_MODE_EMOJI_HOSE,
                                 channel: t,
@@ -43,7 +43,7 @@
                             })
                         })
                     },
-                    children: e => (0, a.jsx)(o.default, {
+                    children: e => (0, a.jsx)(u.default, {
                         ...e,
                         iconComponent: c.default,
                         isActive: p || e.isActive,

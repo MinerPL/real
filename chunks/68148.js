@@ -12,8 +12,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("966900"),
-                u = n("838048"),
-                o = n("359902"),
+                o = n("838048"),
+                u = n("359902"),
                 d = n("780624"),
                 c = n("120606"),
                 f = n("77078"),
@@ -22,8 +22,8 @@
                 m = n("342845"),
                 E = n("437825"),
                 C = n("142303"),
-                S = n("462579"),
-                g = n("200639"),
+                g = n("462579"),
+                S = n("200639"),
                 _ = n("97347"),
                 I = n("998564"),
                 T = n("420145"),
@@ -116,15 +116,15 @@
                         speaking: l,
                         userNameClassName: s,
                         mute: r,
-                        serverMute: u,
-                        isGuest: o
+                        serverMute: o,
+                        isGuest: u
                     } = this.props;
                     return n ? null : (0, a.jsxs)("div", {
                         className: i(s, {
                             [L.username]: !0,
-                            [L.usernameSpeaking]: !r && !u && l
+                            [L.usernameSpeaking]: !r && !o && l
                         }),
-                        children: [null != e ? e : N.default.getName(t), o ? (0, a.jsxs)("span", {
+                        children: [null != e ? e : N.default.getName(t), u ? (0, a.jsxs)("span", {
                             className: L.guestSuffix,
                             children: ["\xa0", j.default.Messages.GUEST_NAME_SUFFIX]
                         }) : ""]
@@ -138,20 +138,20 @@
                         serverMute: l,
                         deaf: s,
                         serverDeaf: r,
-                        collapsed: u,
-                        video: o,
+                        collapsed: o,
+                        video: u,
                         isStreaming: d,
                         disabled: c,
                         isWatching: p,
                         iconClassName: m,
-                        embeddedApplication: g,
+                        embeddedApplication: S,
                         otherClientSessionType: _,
                         voicePlatform: N,
                         hangStatusActivity: A,
                         showHangStatus: O,
                         isSelf: b
                     } = this.props;
-                    if (u || c) return null;
+                    if (o || c) return null;
                     let P = [],
                         U = (0, a.jsx)(D, {
                             iconClassName: m,
@@ -161,7 +161,7 @@
                             deaf: s,
                             serverDeaf: r
                         });
-                    return (o && (n ? P.push((0, a.jsx)(f.TooltipContainer, {
+                    return (u && (n ? P.push((0, a.jsx)(f.TooltipContainer, {
                         className: L.iconSpacing,
                         text: j.default.Messages.LOCAL_VIDEO_DISABLED,
                         children: (0, a.jsx)(C.default, {
@@ -174,8 +174,8 @@
                         children: (0, a.jsx)(E.default, {
                             className: i(L.icon, m)
                         })
-                    }, "video"))), null != g && P.push((0, a.jsx)(f.TooltipContainer, {
-                        text: (0, h.default)(g.name),
+                    }, "video"))), null != S && P.push((0, a.jsx)(f.TooltipContainer, {
+                        text: (0, h.default)(S.name),
                         className: L.iconSpacing,
                         children: (0, a.jsx)(v.default, {
                             className: i(L.icon, m)
@@ -198,7 +198,7 @@
                     }, "stream")) : p && P.push((0, a.jsx)(f.TooltipContainer, {
                         className: L.iconSpacing,
                         text: j.default.Messages.WATCH_STREAM_WATCHING,
-                        children: (0, a.jsx)(S.default, {
+                        children: (0, a.jsx)(g.default, {
                             className: i(L.icon, m)
                         })
                     }, "watch")), 0 !== P.length || null != U || O) ? (0, a.jsxs)("div", {
@@ -218,20 +218,20 @@
                         size: l,
                         className: s,
                         selected: r,
-                        disabled: u,
-                        overlap: o,
+                        disabled: o,
+                        overlap: u,
                         "aria-label": d,
                         tabIndex: c
                     } = this.props;
                     return (0, a.jsx)(f.Clickable, {
                         className: i(s, {
                             [L.voiceUser]: !0,
-                            [L.overlap]: o,
+                            [L.overlap]: u,
                             [L.selected]: r,
                             [L.clickable]: null != e,
                             [L.userSmall]: l === A.OverlayAvatarSizes.SMALL,
                             [L.userLarge]: l === A.OverlayAvatarSizes.LARGE,
-                            [L.disabled]: !r && u
+                            [L.disabled]: !r && o
                         }),
                         onClick: this.handleClick,
                         onDoubleClick: this.handleDoubleClick,
@@ -312,7 +312,7 @@
                     let e;
                     if (p) {
                         let n;
-                        n = s ? o.MicrophoneDenyIcon : l ? o.MicrophoneDenyIcon : d.MicrophoneSlashIcon, e = (0, a.jsx)(n, {
+                        n = s ? u.MicrophoneDenyIcon : l ? u.MicrophoneDenyIcon : d.MicrophoneSlashIcon, e = (0, a.jsx)(n, {
                             className: i(L.icon, t, {
                                 [L.iconServer]: s
                             }),
@@ -333,14 +333,14 @@
                 if (h || c) {
                     let e;
                     if (p) {
-                        let n = h ? r.HeadphonesDenyIcon : u.HeadphonesSlashIcon;
+                        let n = h ? r.HeadphonesDenyIcon : o.HeadphonesSlashIcon;
                         e = (0, a.jsx)(n, {
                             className: i(L.icon, t, {
                                 [L.iconServer]: h
                             }),
                             color: "currentColor"
                         })
-                    } else e = (0, a.jsx)(g.default, {
+                    } else e = (0, a.jsx)(S.default, {
                         className: i(L.icon, t, {
                             [L.iconServer]: h
                         })

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return o
                 }
             });
             var a = n("446674"),
@@ -10,13 +10,13 @@
                 i = n("387111"),
                 r = n("782340");
 
-            function u(e, t, n) {
-                let u = (0, a.useStateFromStores)([s.default], () => null != n ? (0, l.getStreamerApplication)(n, s.default) : null, [n]),
-                    o = i.default.getName(e.getGuildId(), e.id, t);
-                return null == n ? o : (null == u ? void 0 : u.name) != null ? r.default.Messages.GO_LIVE_USER_PLAYING.format({
-                    applicationName: null == u ? void 0 : u.name,
-                    username: o
+            function o(e, t, n) {
+                let o = (0, a.useStateFromStores)([s.default], () => null != n ? (0, l.getStreamerApplication)(n, s.default) : null, [n]),
+                    u = i.default.getName(e.getGuildId(), e.id, t);
+                return null == n ? u : (null == o ? void 0 : o.name) != null ? r.default.Messages.GO_LIVE_USER_PLAYING.format({
+                    applicationName: null == o ? void 0 : o.name,
+                    username: u
                 }) : r.default.Messages.GO_LIVE_TILE_SCREEN.format({
-                    username: o
+                    username: u
                 })
             }

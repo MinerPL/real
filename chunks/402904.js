@@ -9,8 +9,8 @@
                 s = n("446674"),
                 i = n("913144"),
                 r = n("305961");
-            let u = null,
-                o = {};
+            let o = null,
+                u = {};
             class d extends s.default.Store {
                 initialize() {
                     this.waitFor(r.default)
@@ -42,16 +42,16 @@
                     return null != t ? t.id : null
                 }
                 getRegions(e) {
-                    return null != e ? o[e] : u
+                    return null != e ? u[e] : o
                 }
             }
             d.displayName = "RegionStore";
             var c = new d(i.default, {
                 LOAD_REGIONS: function(e) {
                     let t = l.sortBy(e.regions, e => e.name);
-                    null != e.guildId ? o[e.guildId] = t : u = t
+                    null != e.guildId ? u[e.guildId] = t : o = t
                 },
                 GUILD_DELETE: function(e) {
-                    delete o[e.guild.id]
+                    delete u[e.guild.id]
                 }
             })

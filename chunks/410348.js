@@ -9,8 +9,8 @@
                 s = n("446674"),
                 i = n("913144"),
                 r = n("990766"),
-                u = n("374014"),
-                o = n("706530");
+                o = n("374014"),
+                u = n("706530");
             let d = {},
                 c = {},
                 f = new Set;
@@ -20,8 +20,8 @@
             }
             class p extends s.default.Store {
                 getPreviewURL(e, t, n) {
-                    let a = (0, u.encodeStreamKey)({
-                            streamType: null != e ? o.StreamTypes.GUILD : o.StreamTypes.CALL,
+                    let a = (0, o.encodeStreamKey)({
+                            streamType: null != e ? u.StreamTypes.GUILD : u.StreamTypes.CALL,
                             guildId: e,
                             channelId: t,
                             ownerId: n
@@ -36,12 +36,12 @@
                         guildId: t,
                         channelId: n,
                         ownerId: a
-                    } = (0, u.decodeStreamKey)(e);
+                    } = (0, o.decodeStreamKey)(e);
                     return this.getPreviewURL(t, n, a)
                 }
                 getIsPreviewLoading(e, t, n) {
-                    let a = (0, u.encodeStreamKey)({
-                        streamType: null != e ? o.StreamTypes.GUILD : o.StreamTypes.CALL,
+                    let a = (0, o.encodeStreamKey)({
+                        streamType: null != e ? u.StreamTypes.GUILD : u.StreamTypes.CALL,
                         guildId: e,
                         channelId: t,
                         ownerId: n
@@ -92,8 +92,8 @@
                             selfStream: s
                         } = t;
                         if (s) return e;
-                        let i = (0, u.encodeStreamKey)({
-                            streamType: null != a ? o.StreamTypes.GUILD : o.StreamTypes.CALL,
+                        let i = (0, o.encodeStreamKey)({
+                            streamType: null != a ? u.StreamTypes.GUILD : u.StreamTypes.CALL,
                             guildId: a,
                             channelId: l,
                             ownerId: n

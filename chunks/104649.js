@@ -10,22 +10,22 @@
                 s = n("272030"),
                 i = n("824563"),
                 r = n("401642"),
-                u = n("69682"),
-                o = n("49111"),
+                o = n("69682"),
+                u = n("49111"),
                 d = e => {
                     let {
                         connection: t
                     } = e, {
                         user: d
                     } = t, c = d.isNonUserBot(), f = (0, l.useStateFromStores)([i.default], () => c ? null : i.default.getStatus(d.id));
-                    return (0, a.jsx)(u.FriendRow, {
+                    return (0, a.jsx)(o.FriendRow, {
                         user: d,
-                        status: null != f ? f : o.StatusTypes.UNKNOWN,
+                        status: null != f ? f : u.StatusTypes.UNKNOWN,
                         onSelect: () => {
                             (0, r.openUserProfileModal)({
                                 userId: d.id,
                                 analyticsLocation: {
-                                    section: o.AnalyticsSections.DM_PROFILE
+                                    section: u.AnalyticsSections.DM_PROFILE
                                 }
                             })
                         },

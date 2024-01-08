@@ -10,15 +10,15 @@
                 s = n.n(l),
                 i = n("77078"),
                 r = n("484456"),
-                u = n("559979"),
-                o = n("70695"),
+                o = n("559979"),
+                u = n("70695"),
                 d = n("441641");
 
             function c(e) {
                 let {
                     benefit: t,
                     guildId: n
-                } = e, l = (0, o.default)(n, t.ref_id), c = (0, a.jsx)(r.default, {
+                } = e, l = (0, u.default)(n, t.ref_id), c = (0, a.jsx)(r.default, {
                     guildId: n,
                     emojiId: t.emoji_id,
                     emojiName: t.emoji_name
@@ -31,13 +31,13 @@
                         variant: "text-md/medium",
                         color: "header-primary",
                         className: s(d.name, d.linkedName),
-                        children: (0, u.default)(t)
+                        children: (0, o.default)(t)
                     })
                 }) : (0, a.jsx)(i.Text, {
                     variant: "text-md/medium",
                     color: "header-primary",
                     className: d.name,
-                    children: (0, u.default)(t)
+                    children: (0, o.default)(t)
                 });
                 return (0, a.jsxs)("div", {
                     className: d.container,

@@ -9,8 +9,8 @@
                 s = n("65597"),
                 i = n("151426"),
                 r = n("551042"),
-                u = n("77078"),
-                o = n("509802"),
+                o = n("77078"),
+                u = n("509802"),
                 d = n("619443"),
                 c = n("162771"),
                 f = n("994428");
@@ -24,7 +24,7 @@
                             let e = (0, s.default)([d.default], () => d.default.isConnected());
                             return e ? [] : []
                         }(),
-                        [t, p] = (0, o.useDismissibleContentGroup)(e, f.DismissibleContentGroupName.GUILD_TAKEOVER_MODAL),
+                        [t, p] = (0, u.useDismissibleContentGroup)(e, f.DismissibleContentGroupName.GUILD_TAKEOVER_MODAL),
                         m = (0, r.useHasAnyModalOpen)(),
                         E = l.useRef(null);
                     l.useEffect(() => {
@@ -39,7 +39,7 @@
                                 onCloseCallback: e => l(null != e ? e : f.ContentDismissActionType.UNKNOWN),
                                 modalKey: h(t)
                             }, r = c.default.getGuildId();
-                            if (t === i.DismissibleContent.SERVER_SHOP_UPSELL) null != r && (0, u.openModalLazy)(async () => {
+                            if (t === i.DismissibleContent.SERVER_SHOP_UPSELL) null != r && (0, o.openModalLazy)(async () => {
                                 let {
                                     default: e
                                 } = await n.el("730801").then(n.bind(n, "730801"));

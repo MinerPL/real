@@ -18,8 +18,8 @@
                 f = l("397680"),
                 h = l("393745"),
                 C = l("745049"),
-                N = l("782340"),
-                v = l("157624");
+                v = l("782340"),
+                N = l("157624");
 
             function g(e) {
                 let {
@@ -32,7 +32,7 @@
                 if (null == I) return null;
                 let {
                     is_canceled: T = !1
-                } = null != _ ? _ : {}, M = (null == _ ? void 0 : _.scheduled_start_time) != null ? new Date(null == _ ? void 0 : _.scheduled_start_time) : s, p = e => {
+                } = null != _ ? _ : {}, p = (null == _ ? void 0 : _.scheduled_start_time) != null ? new Date(null == _ ? void 0 : _.scheduled_start_time) : s, R = e => {
                     e.stopPropagation(), null != m && (0, o.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
@@ -48,40 +48,40 @@
                     })
                 };
                 return (0, n.jsxs)(a.ClickableContainer, {
-                    className: u(v.container, {
-                        [v.canceled]: T,
-                        [v.clickable]: null != S,
-                        [v.active]: L
+                    className: u(N.container, {
+                        [N.canceled]: T,
+                        [N.clickable]: null != S,
+                        [N.active]: L
                     }),
                     onClick: e => {
                         e.stopPropagation(), !T && (null == S || S(t))
                     },
-                    onContextMenu: p,
+                    onContextMenu: R,
                     "aria-label": "",
                     children: [(0, n.jsx)(h.GuildEventTimeStatus, {
-                        startTime: M.toISOString(),
+                        startTime: p.toISOString(),
                         status: T ? C.GuildScheduledEventStatus.CANCELED : C.GuildScheduledEventStatus.SCHEDULED,
                         eventType: I.entity_type,
                         guildEventId: I.id,
                         recurrenceId: t,
-                        className: v.timeStatus
+                        className: N.timeStatus
                     }), T && (0, n.jsx)(a.Text, {
                         variant: "text-sm/semibold",
                         color: "text-danger",
-                        className: v.canceledStatus,
-                        children: N.default.Messages.EVENT_CANCELED
+                        className: N.canceledStatus,
+                        children: v.default.Messages.EVENT_CANCELED
                     }), (0, n.jsx)(a.Tooltip, {
-                        text: N.default.Messages.MORE,
+                        text: v.default.Messages.MORE,
                         position: "top",
-                        "aria-label": N.default.Messages.EDIT,
+                        "aria-label": v.default.Messages.EDIT,
                         children: e => (0, n.jsx)(a.Clickable, {
                             ...e,
-                            onClick: p,
-                            className: v.iconButton,
+                            onClick: R,
+                            className: N.iconButton,
                             children: (0, n.jsx)(c.default, {
                                 width: 20,
                                 height: 20,
-                                className: v.icon
+                                className: N.icon
                             })
                         })
                     })]

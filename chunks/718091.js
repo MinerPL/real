@@ -9,9 +9,9 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("917351"),
-                u = n.n(r),
-                o = n("866227"),
-                d = n.n(o),
+                o = n.n(r),
+                u = n("866227"),
+                d = n.n(u),
                 c = n("394846"),
                 f = n("249654"),
                 h = n("446674"),
@@ -19,8 +19,8 @@
                 m = n("913144"),
                 E = n("561288"),
                 C = n("450911"),
-                S = n("630086"),
-                g = n("970728"),
+                g = n("630086"),
+                S = n("970728"),
                 _ = n("369008"),
                 I = n("736964"),
                 T = n("304580"),
@@ -138,7 +138,7 @@
                         })]
                     })
                 };
-            class eu extends l.PureComponent {
+            class eo extends l.PureComponent {
                 componentDidMount() {
                     let {
                         channel: e
@@ -184,7 +184,7 @@
                     }, {
                         autoTrackExposure: !1
                     });
-                    g.default.createInvite(e.id, {
+                    S.default.createInvite(e.id, {
                         max_age: t
                     }, Q.InstantInviteSources.GROUP_DM)
                 }
@@ -263,10 +263,10 @@
                         selectedUsers: r
                     } = this.props;
                     if (!n || this.isNotFriends()) return null;
-                    let u = [];
+                    let o = [];
                     return r.forEach(e => {
                         let t = k.default.getUser(e);
-                        null != t && u.push(X.default.getName(t))
+                        null != t && o.push(X.default.getName(t))
                     }), (0, a.jsxs)(V.default, {
                         className: i(ee.searchBar, en.marginTop20),
                         children: [(0, a.jsx)(v.default, {
@@ -279,7 +279,7 @@
                             query: t,
                             selectedRow: s,
                             sections: [null !== (e = null == l ? void 0 : l.length) && void 0 !== e ? e : 0],
-                            tags: u,
+                            tags: o,
                             onSelect: this.handleSelect,
                             onSelectionChange: this.handleSelectionChange,
                             onQueryChange: this.handleQueryChange,
@@ -525,15 +525,15 @@
                             selectedUsers: s,
                             selectedRow: i,
                             hideDiscriminator: r
-                        } = this.props, u = l[n];
-                        if (null == u) return null;
+                        } = this.props, o = l[n];
+                        if (null == o) return null;
                         let {
-                            user: o,
+                            user: u,
                             comparator: d
-                        } = u, c = s.has(o.id);
+                        } = o, c = s.has(u.id);
                         return (0, a.jsx)(q.default, {
                             row: n,
-                            user: o,
+                            user: u,
                             hideDiscriminator: r,
                             comparator: d,
                             checked: c,
@@ -542,7 +542,7 @@
                             onMouseEnter: this.focusResult,
                             "aria-posinset": n + 1,
                             "aria-setsize": l.length
-                        }, o.id)
+                        }, u.id)
                     }, this.forceFocus = () => {
                         let e = this.searchBarRef.current;
                         null == e || e.focus()
@@ -578,7 +578,7 @@
                         } = this.props, l = !t.has(e);
                         l ? (_.default.addUser(e), n.length > 0 && _.default.clear(null == a ? void 0 : a.id)) : _.default.removeUser(e), this.forceFocus()
                     }, this.handleAddFriendNavigation = () => {
-                        (0, L.transitionTo)(Q.Routes.FRIENDS), S.default.setSection(Q.FriendsSections.ADD_FRIEND), this.props.onClose()
+                        (0, L.transitionTo)(Q.Routes.FRIENDS), g.default.setSection(Q.FriendsSections.ADD_FRIEND), this.props.onClose()
                     }, this.handleScroll = () => {
                         let e = this.scrollerRef.current;
                         null != e && this.setState({
@@ -640,8 +640,8 @@
                     }
                 }
             }
-            eu.contextType = x.default;
-            let eo = h.default.connectStores([P.default, b.default, F.default], e => {
+            eo.contextType = x.default;
+            let eu = h.default.connectStores([P.default, b.default, F.default], e => {
                 let t, {
                     channel: n
                 } = e;
@@ -651,7 +651,7 @@
                     hideDiscriminator: F.default.hidePersonalInformation,
                     hideInstantInvites: F.default.hideInstantInvites
                 }
-            })(eu);
+            })(eo);
 
             function ed(e) {
                 let {
@@ -660,21 +660,21 @@
                     icon: s,
                     tooltip: i,
                     tooltipPosition: r = "bottom",
-                    popoutPosition: u = "bottom",
-                    popoutAlign: o = "right",
+                    popoutPosition: o = "bottom",
+                    popoutAlign: u = "right",
                     subscribeToGlobalHotkey: d = !1
                 } = e, [c, f] = l.useState(null != t && t.isGroupDM() && 0 === t.recipients.length), h = (0, A.useIsBroadcastingGDM)(null == t ? void 0 : t.id), m = l.useCallback(() => f(e => !e), []);
                 return (l.useEffect(() => (d && K.ComponentDispatch.subscribe(Q.ComponentActions.TOGGLE_DM_CREATE, m), () => {
                     K.ComponentDispatch.unsubscribe(Q.ComponentActions.TOGGLE_DM_CREATE, m)
                 }), [d, m]), h) ? null : (0, a.jsx)(p.Popout, {
-                    renderPopout: e => (0, a.jsx)(eo, {
+                    renderPopout: e => (0, a.jsx)(eu, {
                         ...e,
                         onClose: e.closePopout,
                         channel: t
                     }),
-                    position: u,
+                    position: o,
                     shouldShow: c,
-                    align: o,
+                    align: u,
                     onRequestClose: () => f(!1),
                     animation: p.Popout.Animation.NONE,
                     children: e => (0, a.jsx)(W.default.Icon, {
@@ -691,7 +691,7 @@
 
             function ec(e) {
                 let t = ef(e);
-                return new Set(u(y.default.getMutablePrivateChannels()).values().filter(e => (0, O.isMultiUserDM)(e.type)).filter(e => ef(e.recipients) === t).map(e => e.id).value())
+                return new Set(o(y.default.getMutablePrivateChannels()).values().filter(e => (0, O.isMultiUserDM)(e.type)).filter(e => ef(e.recipients) === t).map(e => e.id).value())
             }
 
             function ef(e) {

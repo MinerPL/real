@@ -9,8 +9,8 @@
                 s = n("446674"),
                 i = n("151426"),
                 r = n("77078"),
-                u = n("997289"),
-                o = n("244201"),
+                o = n("997289"),
+                u = n("244201"),
                 d = n("886860"),
                 c = n("614175"),
                 f = n("903178"),
@@ -19,8 +19,8 @@
                 m = n("191225"),
                 E = n("426631"),
                 C = n("380691"),
-                S = n("943349"),
-                g = n("702173"),
+                g = n("943349"),
+                S = n("702173"),
                 _ = n("801852"),
                 I = n("10524"),
                 T = n("478272"),
@@ -41,7 +41,7 @@
                     location: "7152d0_1"
                 }, {
                     autoTrackExposure: !0
-                }), L = (0, s.useStateFromStores)([m.default], () => m.default.isLaunchingActivity()), O = (0, S.useEmbeddedActivityLaunchability)(t.id), y = (0, S.getEmbeddedActivityLaunchabilityLabel)(O), b = O !== S.EmbeddedActivityLaunchability.CAN_LAUNCH || L, {
+                }), L = (0, s.useStateFromStores)([m.default], () => m.default.isLaunchingActivity()), O = (0, g.useEmbeddedActivityLaunchability)(t.id), y = (0, g.getEmbeddedActivityLaunchabilityLabel)(O), b = O !== g.EmbeddedActivityLaunchability.CAN_LAUNCH || L, {
                     isHovered: P,
                     setIsHovered: D,
                     onMouseEnter: U,
@@ -56,7 +56,7 @@
                     channelId: t.id
                 }), H = !b && n, G = l.useCallback(e => {
                     "focus" !== e.type && U()
-                }, [U]), W = (0, u.useAnalyticsContext)(), Y = (0, o.useAppContext)(), z = Y === M.AppContext.POPOUT, {
+                }, [U]), W = (0, o.useAnalyticsContext)(), Y = (0, u.useAppContext)(), z = Y === M.AppContext.POPOUT, {
                     analyticsLocations: K
                 } = (0, v.default)(), Z = l.useCallback(() => {
                     (0, T.default)({
@@ -68,7 +68,7 @@
                     })
                 }, [W.location, K, t, z]), X = [];
                 n && !b && X.push(i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES);
-                let J = (0, g.default)(t.id);
+                let J = (0, S.default)(t.id);
                 J && !b && X.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE);
                 let q = (0, f.useIsWatchTogetherPromoEnabled)(),
                     Q = (0, h.useIsWatchTogetherPromoWeek1SparklesEnabled)(),

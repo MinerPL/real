@@ -7,8 +7,8 @@
             var i = n("37983");
             n("884691");
             var l = n("446674"),
-                u = n("77078"),
-                o = n("255397"),
+                o = n("77078"),
+                u = n("255397"),
                 a = n("191145"),
                 r = n("800762"),
                 d = n("49111"),
@@ -22,9 +22,9 @@
                             l = i === d.ChannelLayouts.MINIMUM || i === d.ChannelLayouts.NORMAL;
                         return !n || l
                     }, [t, e]);
-                return c ? null : (0, i.jsx)(u.MenuItem, {
+                return c ? null : (0, i.jsx)(o.MenuItem, {
                     id: "focus-video",
                     label: n ? s.default.Messages.UNFOCUS_PARTICIPANT : s.default.Messages.FOCUS_PARTICIPANT,
-                    action: () => o.default.selectParticipant(t, n ? null : e)
+                    action: () => u.default.selectParticipant(t, n ? null : e)
                 })
             }

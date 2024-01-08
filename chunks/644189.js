@@ -23,8 +23,8 @@
                     isDetailsView: f = !1,
                     isMember: h,
                     onJoinGuildClick: C,
-                    guildName: N,
-                    onInviteClick: v,
+                    guildName: v,
+                    onInviteClick: N,
                     canInvite: g,
                     isChannelPublic: S
                 } = e;
@@ -45,7 +45,7 @@
                             })
                         })
                     }) : null, h && (0, n.jsx)(i.GuildEventShareButton, {
-                        onInviteClick: v,
+                        onInviteClick: N,
                         canInvite: g,
                         isChannelPublic: S
                     }), l && !t && (0, n.jsx)(i.GuildEventLurkerInterestedButton, {
@@ -69,7 +69,7 @@
                         onClick: C,
                         color: s.Button.Colors.GREEN,
                         children: a.default.Messages.HUB_EVENTS_JOIN_GUILD.format({
-                            guildName: N
+                            guildName: v
                         })
                     })]
                 })

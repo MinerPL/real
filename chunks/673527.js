@@ -12,8 +12,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("446674"),
-                u = n("77078"),
-                o = n("410348"),
+                o = n("77078"),
+                u = n("410348"),
                 d = n("782340"),
                 c = n("557840");
 
@@ -25,10 +25,10 @@
                 } = e;
                 return (0, a.jsx)("div", {
                     className: i(c.emptyPreviewContainer, l),
-                    children: t ? (0, a.jsx)(u.Spinner, {}) : (0, a.jsxs)(a.Fragment, {
+                    children: t ? (0, a.jsx)(o.Spinner, {}) : (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)("div", {
                             className: c.emptyPreviewImage
-                        }), n ? null : (0, a.jsx)(u.Text, {
+                        }), n ? null : (0, a.jsx)(o.Text, {
                             variant: "text-sm/normal",
                             color: "none",
                             className: c.emptyPreviewText,
@@ -44,16 +44,16 @@
                     className: n,
                     noText: s = !1
                 } = e, {
-                    url: u,
+                    url: o,
                     isLoading: d
-                } = (0, r.useStateFromStoresObject)([o.default], () => ({
-                    url: o.default.getPreviewURL(t.guildId, t.channelId, t.ownerId),
-                    isLoading: o.default.getIsPreviewLoading(t.guildId, t.channelId, t.ownerId)
-                })), h = l.useRef(d ? null : u);
+                } = (0, r.useStateFromStoresObject)([u.default], () => ({
+                    url: u.default.getPreviewURL(t.guildId, t.channelId, t.ownerId),
+                    isLoading: u.default.getIsPreviewLoading(t.guildId, t.channelId, t.ownerId)
+                })), h = l.useRef(d ? null : o);
                 l.useEffect(() => {
-                    !d && (h.current = u)
-                }, [u, d]);
-                let p = null == u || d ? h.current : u;
+                    !d && (h.current = o)
+                }, [o, d]);
+                let p = null == o || d ? h.current : o;
                 return null == p ? (0, a.jsx)(f, {
                     className: n,
                     isLoading: d,

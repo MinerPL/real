@@ -123,7 +123,7 @@
                     })
                 }, [e]), (0, a.jsxs)("div", {
                     ref: s,
-                    className: i(N.container, (0, r.match)(l).with(_.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => N.shopForAllWinterBackground).otherwise(() => C ? N.shopForAllBackgroundImage : void 0)),
+                    className: i(N.container, (0, r.match)(l).with(_.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => N.shopForAllWinterBackground).with(_.CollectiblesShopMarketingVariants.MONSTER_DROP, () => N.shopForAllBackgroundImage).otherwise(() => C ? N.shopForAllBackgroundImage : void 0)),
                     children: [(0, a.jsx)(O, {
                         variation: l
                     }), (0, a.jsx)(d.Button, {

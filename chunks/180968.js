@@ -10,8 +10,8 @@
             var a, l, s = n("884691"),
                 i = n("308503"),
                 r = n("16470"),
-                u = n("84339"),
-                o = n("390933"),
+                o = n("84339"),
+                u = n("390933"),
                 d = n("49111");
             let c = -1;
             (l = a || (a = {})).MENTIONS = "mentions", l.MESSAGES = "messages";
@@ -44,7 +44,7 @@
                             return "guild_".concat(t, "_search_").concat(n, "_for_").concat(e, "_with_additonal_").concat(l)
                         })(e, t, n, a), [e, t, n, a]),
                         i = m(l),
-                        r = (0, u.default)(l),
+                        r = (0, o.default)(l),
                         [h, E] = s.useState({});
                     return s.useEffect(() => {
                         if (r !== l) {
@@ -61,7 +61,7 @@
                                             }
                                     }
                                 }(e, n, a),
-                                i = new o.default(t, d.SearchTypes.GUILD, s);
+                                i = new u.default(t, d.SearchTypes.GUILD, s);
                             p(l, {
                                 searchFetcher: i,
                                 messageCount: c,

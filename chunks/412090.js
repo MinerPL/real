@@ -4,10 +4,10 @@
                     return r
                 },
                 ChannelCallChatLayerProvider: function() {
-                    return u
+                    return o
                 },
                 default: function() {
-                    return o
+                    return u
                 }
             });
             var a = n("77078");
@@ -15,5 +15,5 @@
                 Layer: l,
                 LayerContainer: s,
                 LayerProvider: i
-            } = (0, a.createLayer)("ChannelCallChat"), r = s, u = i;
-            var o = l
+            } = (0, a.createLayer)("ChannelCallChat"), r = s, o = i;
+            var u = l

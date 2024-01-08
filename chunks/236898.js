@@ -15,8 +15,8 @@
                         let t = s.default.getCurrentUserActiveStream();
                         return null != t && t.channelId === e
                     }, [e]),
-                    u = (0, a.useStateFromStores)([s.default], () => s.default.isSelfStreamHidden(e), [e]);
-                return [(null == t || t === n) && r, u, t => {
+                    o = (0, a.useStateFromStores)([s.default], () => s.default.isSelfStreamHidden(e), [e]);
+                return [(null == t || t === n) && r, o, t => {
                     (0, l.toggleSelfStreamHidden)(e, t)
                 }]
             }

@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("446674"),
-                u = n("577776"),
-                o = n("452804"),
+                o = n("577776"),
+                u = n("452804"),
                 d = n("579408"),
                 c = n("168973"),
                 f = n("981913"),
@@ -19,8 +19,8 @@
                 m = n("717018"),
                 E = n("659500"),
                 C = n("550766"),
-                S = n("191225"),
-                g = n("698372"),
+                g = n("191225"),
+                S = n("698372"),
                 _ = n("401207"),
                 I = n("320817"),
                 T = n("803997"),
@@ -38,10 +38,10 @@
                 let {
                     maxHeight: n,
                     connectedChannelId: s
-                } = e, R = (0, g.default)(), j = l.useCallback(() => {
+                } = e, R = (0, S.default)(), j = l.useCallback(() => {
                     (0, C.updateActivityPanelMode)(v.ActivityPanelModes.PIP)
-                }, []), L = l.useRef(null), O = (0, r.useStateFromStores)([S.default], () => S.default.getFocusedLayout()), y = O !== v.FocusedActivityLayouts.NO_CHAT, [b, P] = l.useState(null !== (t = c.default.activityPanelHeight) && void 0 !== t ? t : n), D = l.useCallback(e => {
-                    o.default.updatedUnsyncedSettings({
+                }, []), L = l.useRef(null), O = (0, r.useStateFromStores)([g.default], () => g.default.getFocusedLayout()), y = O !== v.FocusedActivityLayouts.NO_CHAT, [b, P] = l.useState(null !== (t = c.default.activityPanelHeight) && void 0 !== t ? t : n), D = l.useCallback(e => {
+                    u.default.updatedUnsyncedSettings({
                         activityPanelHeight: e
                     })
                 }, []), U = l.useRef(null), [w, F] = l.useState({
@@ -88,7 +88,7 @@
                                 iconClassName: A.minimizeIcon,
                                 themeable: !0
                             })
-                        }), (0, a.jsx)(u.Text, {
+                        }), (0, a.jsx)(o.Text, {
                             color: "header-primary",
                             variant: "text-md/semibold",
                             className: A.headerTitle,

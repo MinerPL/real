@@ -9,8 +9,8 @@
                 s = n("77078"),
                 i = n("981913"),
                 r = n("697218"),
-                u = n("471654"),
-                o = n("413709"),
+                o = n("471654"),
+                u = n("413709"),
                 d = n("50885"),
                 c = n("316194"),
                 f = n("546206"),
@@ -28,21 +28,21 @@
                 };
 
             function C() {
-                return (0, a.jsx)(u.default, {
+                return (0, a.jsx)(o.default, {
                     width: "1em",
                     height: "1em"
                 })
             }
 
-            function S(e) {
-                let [t, n] = l.useState(""), [i, u] = l.useState(null);
+            function g(e) {
+                let [t, n] = l.useState(""), [i, o] = l.useState(null);
                 l.useEffect(() => {
                     (async () => {
                         let e = (0, f.getCallscopeState)();
-                        u(await e.getDescription())
+                        o(await e.getDescription())
                     })()
                 }, []);
-                let o = l.useCallback(() => {
+                let u = l.useCallback(() => {
                         console.log("[callscope] Issue marker closed ".concat(t, ".")), (0, f.setCallscopeIssue)(t), e.onClose()
                     }, [e, t]),
                     d = l.useCallback(() => {
@@ -98,7 +98,7 @@
                         }), c]
                     }), (0, a.jsxs)(s.ModalFooter, {
                         children: [(0, a.jsx)(s.Button, {
-                            onClick: o,
+                            onClick: u,
                             children: "Submit Issue"
                         }), (0, a.jsx)(s.Button, {
                             look: s.ButtonLooks.BLANK,
@@ -112,7 +112,7 @@
                 })
             }
 
-            function g(e) {
+            function S(e) {
                 let t = l.useCallback(() => {
                     d.default.copy(e.text)
                 }, [e.text]);
@@ -120,7 +120,7 @@
                     style: E,
                     onClick: t,
                     title: "Copy to clipboard",
-                    children: (0, a.jsx)(o.default, {
+                    children: (0, a.jsx)(u.default, {
                         width: "1em",
                         height: "1em"
                     })
@@ -152,7 +152,7 @@
                                                 userSelect: "text"
                                             },
                                             children: n.blindChannelId
-                                        }), (0, a.jsx)(g, {
+                                        }), (0, a.jsx)(S, {
                                             text: n.blindChannelId
                                         })]
                                     }), (0, a.jsxs)("li", {
@@ -163,7 +163,7 @@
                                                 userSelect: "text"
                                             },
                                             children: n.blindUserId
-                                        }), (0, a.jsx)(g, {
+                                        }), (0, a.jsx)(S, {
                                             text: n.blindUserId
                                         })]
                                     })]
@@ -184,7 +184,7 @@
                         (0, s.closeModal)(I)
                     }, []),
                     r = l.useCallback(() => {
-                        (0, c.setRtcLogMarker)(), (0, s.openModalLazy)(() => Promise.resolve(e => (0, a.jsx)(S, {
+                        (0, c.setRtcLogMarker)(), (0, s.openModalLazy)(() => Promise.resolve(e => (0, a.jsx)(g, {
                             onClose: n
                         })), {
                             contextKey: t,
@@ -193,7 +193,7 @@
                     }, [t, n]);
                 return (0, f.shouldShowCallscopeUI)() ? (0, a.jsx)(i.default, {
                     onClick: r,
-                    iconComponent: u.default,
+                    iconComponent: o.default,
                     "aria-label": h.default.Messages.NOTICE_CALLSCOPE_MARK_ISSUE,
                     className: e.className,
                     label: h.default.Messages.NOTICE_CALLSCOPE_MARK_ISSUE

@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("907002"),
-                u = n("84339"),
-                o = n("109489"),
+                o = n("84339"),
+                u = n("109489"),
                 d = n("271938"),
                 c = n("42887"),
                 f = n("944832"),
@@ -19,8 +19,8 @@
                 m = n("876715"),
                 E = n("842044"),
                 C = n("329515"),
-                S = n("49111"),
-                g = n("99795"),
+                g = n("49111"),
+                S = n("99795"),
                 _ = n("111647"),
                 I = n("542377");
             let T = 16 / 9,
@@ -51,12 +51,12 @@
                     [B, H] = l.useState(null),
                     [G, W] = l.useState(!0),
                     [Y, z] = l.useState(!1),
-                    K = L.type === g.ParticipantTypes.ACTIVITY,
+                    K = L.type === S.ParticipantTypes.ACTIVITY,
                     Z = !K && null != L.streamId,
                     X = Z && null != B && B.width > 0 && B.height > 0 ? B.width / B.height : T,
                     J = D <= 2 * v + 144,
                     q = O && !J,
-                    Q = (0, u.default)(q),
+                    Q = (0, o.default)(q),
                     $ = 0;
                 (K || q) && ($ += 72), K && !q && ($ += 48), q && ($ += .5 * v + 8);
                 let ee = D - 2 * $,
@@ -80,9 +80,9 @@
                             clamp: !0
                         },
                         onStart: () => z(!0),
-                        onChange: () => h.ComponentDispatch.dispatch(S.ComponentActions.REMEASURE_TARGET),
+                        onChange: () => h.ComponentDispatch.dispatch(g.ComponentActions.REMEASURE_TARGET),
                         onRest: () => {
-                            z(!1), h.ComponentDispatch.dispatch(S.ComponentActions.REMEASURE_TARGET)
+                            z(!1), h.ComponentDispatch.dispatch(g.ComponentActions.REMEASURE_TARGET)
                         }
                     }),
                     ei = (0, r.useSpring)({
@@ -100,14 +100,14 @@
                         },
                         immediate: Q === q && ei.value.idle
                     }),
-                    eu = (0, r.useSpring)({
+                    eo = (0, r.useSpring)({
                         value: t,
                         config: {
                             ...r.config.stiff,
                             clamp: !0
                         }
                     }),
-                    eo = (0, r.useTransition)(L, {
+                    eu = (0, r.useTransition)(L, {
                         keys: e => null == e ? void 0 : e.id,
                         config: {
                             ...r.config.stiff,
@@ -152,7 +152,7 @@
                                 children: (0, a.jsx)(f.default, {
                                     className: _.videoSizer,
                                     aspectRatio: X,
-                                    children: eo((e, t, l) => {
+                                    children: eu((e, t, l) => {
                                         let {
                                             key: i
                                         } = l;
@@ -178,14 +178,14 @@
                                         }, i) : null
                                     })
                                 })
-                            }), J || U === S.ChannelLayouts.MINIMUM || U === S.ChannelLayouts.NORMAL ? null : (0, a.jsx)(r.animated.div, {
+                            }), J || U === g.ChannelLayouts.MINIMUM || U === g.ChannelLayouts.NORMAL ? null : (0, a.jsx)(r.animated.div, {
                                 className: i(I.actionRow, {
                                     [I.idle]: w
                                 }),
                                 style: {
-                                    bottom: eu.value
+                                    bottom: eo.value
                                 },
-                                children: (0, a.jsx)(o.default, {
+                                children: (0, a.jsx)(u.default, {
                                     channelId: j.id,
                                     isParticipantsOpen: O,
                                     isVertical: !0

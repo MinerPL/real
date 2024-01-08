@@ -12,8 +12,8 @@
                 s = n("305961"),
                 i = n("957255"),
                 r = n("800762"),
-                u = n("316133"),
-                o = n("49111");
+                o = n("316133"),
+                u = n("49111");
             let d = "DRAGGABLE_USER";
 
             function c(e) {
@@ -22,8 +22,8 @@
                         var t, n;
                         let {
                             channel: a
-                        } = e, l = a.getGuildId(), d = null !== (n = null === (t = s.default.getGuild(l)) || void 0 === t ? void 0 : t.maxVideoChannelUsers) && void 0 !== n ? n : -1, c = u.default.countVoiceStatesForChannel(a.id), f = null != l && r.default.hasVideo(a.id) && d > 0 && c >= d + 1;
-                        return i.default.can(o.Permissions.MOVE_MEMBERS, a) && i.default.can(o.Permissions.CONNECT, a) && !f
+                        } = e, l = a.getGuildId(), d = null !== (n = null === (t = s.default.getGuild(l)) || void 0 === t ? void 0 : t.maxVideoChannelUsers) && void 0 !== n ? n : -1, c = o.default.countVoiceStatesForChannel(a.id), f = null != l && r.default.hasVideo(a.id) && d > 0 && c >= d + 1;
+                        return i.default.can(u.Permissions.MOVE_MEMBERS, a) && i.default.can(u.Permissions.CONNECT, a) && !f
                     },
                     drop(e, t) {
                         let {

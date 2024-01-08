@@ -10,8 +10,8 @@
                 s = n.n(l),
                 i = n("65597"),
                 r = n("77078"),
-                u = n("26989"),
-                o = n("697218"),
+                o = n("26989"),
+                u = n("697218"),
                 d = n("703433"),
                 c = n("21363"),
                 f = n("608973"),
@@ -45,21 +45,21 @@
                     location: l,
                     className: r,
                     onNavigate: E
-                } = e, C = (0, i.default)([o.default], () => o.default.getUser(t), [t]), S = (0, i.default)([u.default], () => u.default.getMember(n, t), [n, t]);
-                return null == C || null == S ? null : (0, a.jsxs)("div", {
+                } = e, C = (0, i.default)([u.default], () => u.default.getUser(t), [t]), g = (0, i.default)([o.default], () => o.default.getMember(n, t), [n, t]);
+                return null == C || null == g ? null : (0, a.jsxs)("div", {
                     className: s(p.container, r),
                     children: [(0, a.jsx)(m, {}), (0, a.jsxs)("div", {
                         className: s(p.innerContainer),
                         children: [(0, a.jsx)(f.default, {
-                            member: S
+                            member: g
                         }), (0, a.jsx)(h.default, {
                             userId: t,
                             guildId: n,
                             onNavigate: E
                         }), (0, a.jsx)(c.default, {
-                            member: S
+                            member: g
                         }), (0, a.jsx)(d.default, {
-                            member: S
+                            member: g
                         })]
                     })]
                 })

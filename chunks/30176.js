@@ -10,8 +10,8 @@
                 s = n("646240"),
                 i = n("246053"),
                 r = n("791679"),
-                u = n("782340"),
-                o = n("512233"),
+                o = n("782340"),
+                u = n("512233"),
                 d = n("64298"),
                 c = n("16873"),
                 f = e => {
@@ -23,23 +23,23 @@
                         handleSearchKeyPress: m,
                         handleCreateOrAddGuild: E,
                         searchResults: C,
-                        searchFetching: S
+                        searchFetching: g
                     } = e;
-                    if (S) t = (0, a.jsx)("div", {
-                        className: o.pageContainer,
+                    if (g) t = (0, a.jsx)("div", {
+                        className: u.pageContainer,
                         children: (0, a.jsx)(l.Spinner, {
-                            className: o.spinner
+                            className: u.spinner
                         })
                     });
                     else if (0 === C.length) {
-                        let e = null != E ? u.default.Messages.DIRECTORY_SEARCH_NO_RESULTS_SUBTITLE.format({
+                        let e = null != E ? o.default.Messages.DIRECTORY_SEARCH_NO_RESULTS_SUBTITLE.format({
                             addServerHook: function(e, t) {
                                 return (0, a.jsx)(l.Anchor, {
                                     onClick: E,
                                     children: e
                                 }, t)
                             }
-                        }) : u.default.Messages.DIRECTORY_SEARCH_NO_RESULTS_NO_ADD;
+                        }) : o.default.Messages.DIRECTORY_SEARCH_NO_RESULTS_NO_ADD;
                         t = (0, a.jsxs)("div", {
                             className: d.emptySearchWrapper,
                             children: [(0, a.jsx)("img", {
@@ -50,7 +50,7 @@
                                 variant: "heading-xl/semibold",
                                 color: "header-primary",
                                 className: d.emptySearchTitle,
-                                children: u.default.Messages.DIRECTORY_SEARCH_NO_RESULTS_TITLE
+                                children: o.default.Messages.DIRECTORY_SEARCH_NO_RESULTS_TITLE
                             }), (0, a.jsx)(l.Text, {
                                 variant: "text-md/normal",
                                 color: "header-secondary",
@@ -59,15 +59,15 @@
                             })]
                         })
                     } else t = (0, a.jsx)("div", {
-                        className: o.cardsContainer,
+                        className: u.cardsContainer,
                         children: C.map(e => (0, a.jsx)(r.default, {
                             entry: e
                         }, e.guildId))
                     });
                     return (0, a.jsx)("div", {
-                        className: o.pageContainer,
+                        className: u.pageContainer,
                         children: (0, a.jsxs)(l.ScrollerAuto, {
-                            className: o.scroller,
+                            className: u.scroller,
                             children: [(0, a.jsxs)("div", {
                                 className: d.searchHeader,
                                 children: [(0, a.jsxs)("div", {
@@ -81,7 +81,7 @@
                                     }), (0, a.jsx)(l.Heading, {
                                         variant: "heading-xl/semibold",
                                         className: d.searchPageTitle,
-                                        children: u.default.Messages.DIRECTORY_SEARCH_RESULTS_HEADER.format({
+                                        children: o.default.Messages.DIRECTORY_SEARCH_RESULTS_HEADER.format({
                                             numResults: C.length,
                                             query: h
                                         })
@@ -90,12 +90,12 @@
                                     searchTerm: n,
                                     className: d.searchPageBox,
                                     inputClassName: d.searchPageInput,
-                                    label: u.default.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
-                                    placeholder: u.default.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
+                                    label: o.default.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
+                                    placeholder: o.default.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
                                     onChange: f,
                                     onClear: p,
                                     onKeyPress: m,
-                                    cta: null != n && n.length > 0 ? u.default.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
+                                    cta: null != n && n.length > 0 ? o.default.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
                                 })]
                             }), t]
                         })

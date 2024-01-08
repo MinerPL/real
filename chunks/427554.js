@@ -1,7 +1,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return v
+                    return N
                 }
             }), l("222007");
             var n = l("37983"),
@@ -17,14 +17,14 @@
                 f = l("822516"),
                 h = l("123030"),
                 C = l("782340"),
-                N = l("849882");
+                v = l("849882");
 
-            function v(e) {
+            function N(e) {
                 let {
                     guildId: t,
                     recurrenceRule: l,
                     guildEventId: u,
-                    onRecurrenceClick: v,
+                    onRecurrenceClick: N,
                     hideScroller: g = !1,
                     activeRecurrenceId: S
                 } = e, L = (0, o.useStateFromStores)([E.default], () => E.default.getGuildScheduledEvent(u)), [I, _] = s.useState(null != l && null != L ? (0, f.generateNextRecurrences)(4, (0, f.getRRule)(l), new Date(L.scheduled_start_time)) : []);
@@ -43,22 +43,22 @@
                     return null != s && !(s > e) && !0
                 }, [l, I, null == L ? void 0 : L.scheduled_start_time]);
                 return (0, n.jsxs)("div", {
-                    className: N.recurrences,
+                    className: v.recurrences,
                     children: [(0, n.jsx)(r.Heading, {
                         variant: "heading-sm/medium",
-                        className: N.heading,
+                        className: v.heading,
                         children: C.default.Messages.GUILD_SCHEDULED_EVENT_REPEATS
                     }), (0, n.jsxs)(r.Scroller, {
-                        className: i(N.scroller, {
-                            [N.showScroller]: !g
+                        className: i(v.scroller, {
+                            [v.showScroller]: !g
                         }),
                         children: [I.map(e => {
-                            let t = a.default.fromTimestamp(Math.floor(e.getTime() / d.default.Millis.SECOND) * d.default.Millis.SECOND);
+                            let t = a.default.fromTimestamp(e.getTime());
                             return (0, n.jsx)(h.default, {
                                 recurrenceId: t,
                                 originalScheduledStartTime: e,
                                 guildEventId: u,
-                                onClick: v,
+                                onClick: N,
                                 isActive: t === S
                             }, t)
                         }), m && (0, n.jsx)(r.Button, {
@@ -72,7 +72,7 @@
                             look: r.Button.Looks.LINK,
                             size: r.Button.Sizes.MIN,
                             color: r.Button.Colors.LINK,
-                            className: N.button,
+                            className: v.button,
                             children: C.default.Messages.GUILD_SCHEDULED_EVENT_VIEW_MORE_RECURRENCES
                         })]
                     })]

@@ -13,9 +13,9 @@
             var a, l, s = n("37983"),
                 i = n("884691"),
                 r = n("414456"),
-                u = n.n(r),
-                o = n("627445"),
-                d = n.n(o),
+                o = n.n(r),
+                u = n("627445"),
+                d = n.n(u),
                 c = n("907002"),
                 f = n("446674"),
                 h = n("77078"),
@@ -23,8 +23,8 @@
                 m = n("987317"),
                 E = n("990766"),
                 C = n("901582"),
-                S = n("244201"),
-                g = n("191225"),
+                g = n("244201"),
+                S = n("191225"),
                 _ = n("372610"),
                 I = n("812204"),
                 T = n("685665"),
@@ -67,8 +67,8 @@
                 es = n("991170"),
                 ei = n("999180"),
                 er = n("830210"),
-                eu = n("289180"),
-                eo = n("244390"),
+                eo = n("289180"),
+                eu = n("244390"),
                 ed = n("252234"),
                 ec = n("696405"),
                 ef = n("951691"),
@@ -77,8 +77,8 @@
                 em = n("799808"),
                 eE = n("727284"),
                 eC = n("49111"),
-                eS = n("99795"),
-                eg = n("143561");
+                eg = n("99795"),
+                eS = n("143561");
 
             function e_(e, t) {
                 if (ee.default.isVideoEnabled() === e) return;
@@ -93,11 +93,11 @@
                     exitFullScreen: a,
                     canGoLive: l,
                     hasPermission: r,
-                    disabled: u
-                } = e, o = (0, S.useAppContext)(), d = (0, f.useStateFromStoresArray)([Q.default], () => Q.default.getAllActiveStreams()), c = d.find(e => e.ownerId === n.id), p = t.getGuildId(), m = i.useCallback(() => {
+                    disabled: o
+                } = e, u = (0, g.useAppContext)(), d = (0, f.useStateFromStoresArray)([Q.default], () => Q.default.getAllActiveStreams()), c = d.find(e => e.ownerId === n.id), p = t.getGuildId(), m = i.useCallback(() => {
                     if (null == a || a(), !l) return (0, ep.default)();
                     (0, em.default)(p, t.id, eC.AnalyticsPages.GUILD_CHANNEL)
-                }, [p, t.id, l, a]), C = (0, f.useStateFromStores)([et.default, el.default], () => (0, w.default)(et.default, el.default)), g = (0, N.default)(), _ = (0, x.default)() && null != C, I = () => {
+                }, [p, t.id, l, a]), C = (0, f.useStateFromStores)([et.default, el.default], () => (0, w.default)(et.default, el.default)), S = (0, N.default)(), _ = (0, x.default)() && null != C, I = () => {
                     _ && (null == c ? (0, E.createBroadcastChannelOrStartStream)({
                         channelId: t.id,
                         pid: null == C ? void 0 : C.pid
@@ -112,7 +112,7 @@
                         return
                     }(0, ep.default)()
                 }, A = () => {
-                    if (g) {
+                    if (S) {
                         (0, M.openStopBroadcastConfirmModal)(() => (0, F.default)(c));
                         return
                     }(0, F.default)(c)
@@ -122,11 +122,11 @@
                         ...a
                     } = null != e ? e : {
                         onClick: void 0
-                    }, l = null != c && !g;
+                    }, l = null != c && !S;
                     return null != c ? (0, s.jsx)(X.default, {
                         ...a,
                         centerButton: !0,
-                        className: eg.controlButton,
+                        className: eS.controlButton,
                         onClick: A,
                         isSelfStream: !0,
                         onPopoutClick: l ? n : null,
@@ -135,16 +135,16 @@
                     }) : (0, s.jsx)(J.default, {
                         ...a,
                         centerButton: !0,
-                        className: eg.controlButton,
+                        className: eS.controlButton,
                         hasPermission: r,
                         onClick: T,
                         onPopoutClick: l ? n : null,
                         popoutOpen: t,
                         shouldShowTooltip: !t,
-                        disabled: u
+                        disabled: o
                     })
                 };
-                return g ? R() : (0, s.jsx)(H.default, {
+                return S ? R() : (0, s.jsx)(H.default, {
                     children: (0, s.jsx)(h.Popout, {
                         renderPopout: e => {
                             let {
@@ -157,7 +157,7 @@
                                     activeStreams: null != c ? [c] : [],
                                     handleGoLive: m,
                                     onClose: a,
-                                    appContext: o
+                                    appContext: u
                                 })
                             })
                         },
@@ -183,7 +183,7 @@
                     channel: t
                 } = e, n = t.getGuildId(), a = (0, _.default)(n, t.id);
                 return a ? (0, s.jsx)("div", {
-                    className: eg.buttonContainer,
+                    className: eS.buttonContainer,
                     children: (0, s.jsx)(ed.CenterControlTrayActivityButton, {
                         channel: t
                     })
@@ -196,26 +196,26 @@
                     onDisconnectCall: a,
                     channel: l
                 } = e, r = (0, f.useStateFromStores)([R.default], () => R.default.getSelectedParticipant(l.id)), {
-                    reducedMotion: u
-                } = i.useContext(h.AccessibilityPreferencesContext), [o, d] = i.useState(!1), p = null == r ? void 0 : r.id, C = (0, f.useStateFromStores)([Q.default], () => null != p ? Q.default.getActiveStreamForStreamKey(p) : null, [p]), S = (null == r ? void 0 : r.type) === eS.ParticipantTypes.STREAM && null != C && C.ownerId !== (null == n ? void 0 : n.id), g = (0, f.useStateFromStoresArray)([Q.default], () => Q.default.getAllActiveStreamsForChannel(l.id).filter(e => {
+                    reducedMotion: o
+                } = i.useContext(h.AccessibilityPreferencesContext), [u, d] = i.useState(!1), p = null == r ? void 0 : r.id, C = (0, f.useStateFromStores)([Q.default], () => null != p ? Q.default.getActiveStreamForStreamKey(p) : null, [p]), g = (null == r ? void 0 : r.type) === eg.ParticipantTypes.STREAM && null != C && C.ownerId !== (null == n ? void 0 : n.id), S = (0, f.useStateFromStoresArray)([Q.default], () => Q.default.getAllActiveStreamsForChannel(l.id).filter(e => {
                     let {
                         ownerId: t
                     } = e;
                     return t !== (null == n ? void 0 : n.id)
                 })), _ = (0, k.useActiveEvent)(l.id), I = (0, N.useIsBroadcastingInChannel)(l.id), T = i.useCallback(() => {
-                    if ((null == r ? void 0 : r.type) === eS.ParticipantTypes.ACTIVITY && r.id === t) return "ACTIVITY";
-                    if (S) return "STREAM";
+                    if ((null == r ? void 0 : r.type) === eg.ParticipantTypes.ACTIVITY && r.id === t) return "ACTIVITY";
+                    if (g) return "STREAM";
                     if (null != _) return "EVENT";
                     return "CALL"
-                }, [r, t, S, _]), [v, x] = i.useState(T()), M = (0, c.useSpring)({
-                    opacity: o ? .2 : 1,
-                    transform: o && !u.enabled ? "scale(0.7)" : "scale(1)",
+                }, [r, t, g, _]), [v, x] = i.useState(T()), M = (0, c.useSpring)({
+                    opacity: u ? .2 : 1,
+                    transform: u && !o.enabled ? "scale(0.7)" : "scale(1)",
                     config: {
                         mass: 2,
-                        tension: o ? 600 : 1e3,
+                        tension: u ? 600 : 1e3,
                         friction: 45,
                         precision: .01,
-                        clamp: o
+                        clamp: u
                     },
                     onRest: () => {
                         x(T()), d(!1)
@@ -228,12 +228,12 @@
                 let j = i.useCallback(() => {
                         if (null != C)(0, E.stopStream)((0, D.encodeStreamKey)(C));
                         else
-                            for (let e of g)(0, E.stopStream)((0, D.encodeStreamKey)(e))
-                    }, [g, C]),
+                            for (let e of S)(0, E.stopStream)((0, D.encodeStreamKey)(e))
+                    }, [S, C]),
                     L = (e, t) => {
                         let i = {
                             centerButton: !0,
-                            className: eg.controlButton,
+                            className: eS.controlButton,
                             popoutOpen: e
                         };
                         switch (v) {
@@ -244,14 +244,14 @@
                                     applicationId: r.id,
                                     color: "red",
                                     channelId: l.id,
-                                    onPopoutClick: g.length > 0 ? t : null
+                                    onPopoutClick: S.length > 0 ? t : null
                                 });
                             case "STREAM":
                                 return (0, s.jsx)(X.default, {
                                     ...i,
                                     color: "red",
                                     onClick: j,
-                                    onPopoutClick: g.length > 1 ? t : null,
+                                    onPopoutClick: S.length > 1 ? t : null,
                                     isSelfStream: !1
                                 });
                             case "CALL":
@@ -259,7 +259,7 @@
                                     ...i,
                                     color: "red",
                                     onClick: () => null == a ? void 0 : a(),
-                                    onPopoutClick: g.length > 0 ? t : null,
+                                    onPopoutClick: S.length > 0 ? t : null,
                                     channel: l
                                 });
                             case "EVENT":
@@ -281,7 +281,7 @@
                         }) : (0, s.jsx)(ef.default, {
                             channel: l,
                             currentUser: n,
-                            activeStreams: g,
+                            activeStreams: S,
                             handleGoLive: eC.NOOP_NULL,
                             hideSelfOptions: !0,
                             onClose: t
@@ -310,8 +310,8 @@
                     cameraUnavailable: n,
                     hasCameraPermission: a,
                     currentUser: l
-                } = e, r = (0, S.useAppContext)(), {
-                    reachedLimit: o,
+                } = e, r = (0, g.useAppContext)(), {
+                    reachedLimit: u,
                     limit: d
                 } = (0, er.default)(t), c = i.useCallback(() => {
                     (0, eE.default)(() => m.default.selectVoiceChannel(t.id, !0), r)
@@ -329,25 +329,25 @@
                         centerButton: !0,
                         join: !0,
                         color: "green",
-                        channelLimitReached: o,
+                        channelLimitReached: u,
                         channelLimit: d,
                         channel: t,
                         cameraUnavailable: n,
                         hasPermission: a,
                         onCameraUnavailable: p,
-                        className: eg.controlButton,
-                        iconClassName: eg.joinIcon,
+                        className: eS.controlButton,
+                        iconClassName: eS.joinIcon,
                         onChange: c
                     }), (0, s.jsx)(Y.default, {
                         centerButton: !0,
                         color: "green",
                         channel: t,
-                        className: u(eg.controlButton, eg.lastButton),
+                        className: o(eS.controlButton, eS.lastButton),
                         onClick: h
                     }), E ? (0, s.jsx)(W.default, {
                         color: "red",
                         channel: t,
-                        className: eg.controlButton
+                        className: eS.controlButton
                     }) : null]
                 })
             }
@@ -362,20 +362,20 @@
                     return d(null != e, "CenterControlTray: currentUser cannot be undefined"), e
                 }), {
                     cameraUnavailable: r,
-                    enabled: o
-                } = (0, ei.default)(), c = (0, eu.default)(t), {
+                    enabled: u
+                } = (0, ei.default)(), c = (0, eo.default)(t), {
                     suppress: p,
                     selfMute: m,
                     mute: E
-                } = (0, eo.default)(t), {
-                    canGoLive: S
+                } = (0, eu.default)(t), {
+                    canGoLive: g
                 } = (0, f.useStateFromStoresObject)([ee.default], () => ({
                     canGoLive: (0, U.default)(ee.default)
                 })), _ = (0, P.default)(), v = (0, f.useStateFromStores)([b.default], () => null != b.default.getAwaitingRemoteSessionInfo()), x = null != _, N = (0, f.useStateFromStores)([en.default], () => {
                     var e;
                     return (null !== (e = null == _ ? void 0 : _.channelId) && void 0 !== e ? e : en.default.getVoiceChannelId()) === t.id
-                }), A = (0, j.default)(t, !0), M = (0, f.useStateFromStores)([g.default], () => {
-                    let e = g.default.getSelfEmbeddedActivityForChannel(t.id);
+                }), A = (0, j.default)(t, !0), M = (0, f.useStateFromStores)([S.default], () => {
+                    let e = S.default.getSelfEmbeddedActivityForChannel(t.id);
                     return null != e ? e.application_id : null
                 }), {
                     reachedLimit: R,
@@ -400,12 +400,12 @@
                     children: (0, s.jsxs)(C.default, {
                         section: eC.AnalyticsSections.VOICE_CONTROL_TRAY,
                         children: [(0, s.jsx)("div", {
-                            className: eg.eventPromptsContainer,
+                            className: eS.eventPromptsContainer,
                             children: (0, s.jsx)(B.default, {
                                 channelId: t.id
                             })
                         }), (0, s.jsxs)("div", {
-                            className: u(eg.wrapper, n),
+                            className: o(eS.wrapper, n),
                             children: [!x && (0, s.jsx)(h.Popout, {
                                 renderPopout: e => {
                                     let {
@@ -429,8 +429,8 @@
                                     return (0, s.jsx)(q.default, {
                                         centerButton: !0,
                                         hasPermission: c,
-                                        className: eg.controlButton,
-                                        enabled: o,
+                                        className: eS.controlButton,
+                                        enabled: u,
                                         cameraUnavailable: r,
                                         onChange: e_,
                                         onCameraUnavailable: eh.default,
@@ -446,7 +446,7 @@
                                 channel: t,
                                 currentUser: i,
                                 exitFullScreen: l,
-                                canGoLive: S,
+                                canGoLive: g,
                                 hasPermission: c
                             }), (0, s.jsx)(h.Popout, {
                                 renderPopout: e => {
@@ -474,7 +474,7 @@
                                     return (0, s.jsx)(Z.default, {
                                         centerButton: !0,
                                         onPopoutClick: x ? null : n,
-                                        className: eg.controlButton,
+                                        className: eS.controlButton,
                                         selfMute: m,
                                         serverMute: E,
                                         suppress: p,
@@ -484,7 +484,7 @@
                                     })
                                 }
                             }), F && !x ? (0, s.jsx)("div", {
-                                className: eg.buttonContainer,
+                                className: eS.buttonContainer,
                                 children: (0, s.jsx)(ec.default, {
                                     channel: t
                                 })

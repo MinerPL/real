@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return o
                 }
             });
             var a = n("37983");
@@ -11,7 +11,7 @@
                 i = n("981913"),
                 r = n("782340");
 
-            function u(e) {
+            function o(e) {
                 let {
                     channelId: t,
                     ...n

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return o
                 }
             });
             var a = n("37983");
@@ -11,16 +11,16 @@
                 i = n("981913"),
                 r = n("782340");
 
-            function u(e) {
+            function o(e) {
                 let {
                     popoutWindowAlwaysOnTop: t,
                     onToggleStayOnTop: n,
-                    ...u
-                } = e, o = t ? r.default.Messages.POPOUT_REMOVE_FROM_TOP : r.default.Messages.POPOUT_STAY_ON_TOP, d = t ? s.default : l.default;
+                    ...o
+                } = e, u = t ? r.default.Messages.POPOUT_REMOVE_FROM_TOP : r.default.Messages.POPOUT_STAY_ON_TOP, d = t ? s.default : l.default;
                 return (0, a.jsx)(i.default, {
                     onClick: () => n(!t),
-                    label: o,
+                    label: u,
                     iconComponent: d,
-                    ...u
+                    ...o
                 })
             }

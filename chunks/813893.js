@@ -10,8 +10,8 @@
                 s = n.n(l),
                 i = n("917351"),
                 r = n.n(i),
-                u = n("5667"),
-                o = n("49111"),
+                o = n("5667"),
+                u = n("49111"),
                 d = n("782340"),
                 c = n("591526"),
                 f = n("21719"),
@@ -29,14 +29,14 @@
                 let m = null,
                     E = null;
                 switch (p) {
-                    case o.PlatformTypes.XBOX:
+                    case u.PlatformTypes.XBOX:
                         m = d.default.Messages.CONSOLE_NUX_TOOLTIP_BODY_XBOX, E = h;
                         break;
-                    case o.PlatformTypes.PLAYSTATION:
-                    case o.PlatformTypes.PLAYSTATION_STAGING:
+                    case u.PlatformTypes.PLAYSTATION:
+                    case u.PlatformTypes.PLAYSTATION_STAGING:
                         m = d.default.Messages.CONSOLE_NUX_TOOLTIP_BODY_PS5, E = f
                 }
-                return (0, a.jsx)(u.default, {
+                return (0, a.jsx)(o.default, {
                     header: d.default.Messages.CONSOLE_NUX_TOOLTIP_HEADER,
                     content: m,
                     asset: (0, a.jsx)("img", {
@@ -49,6 +49,6 @@
                     markAsDismissed: t,
                     buttonCTA: d.default.Messages.CONSOLE_NUX_TOOLTIP_ACCEPT,
                     secondaryButtonCTA: d.default.Messages.CONSOLE_NUX_TOOLTIP_DISMISS,
-                    caretPosition: "top" === l ? u.CaretPosition.BOTTOM_LEFT : u.CaretPosition.TOP_LEFT
+                    caretPosition: "top" === l ? o.CaretPosition.BOTTOM_LEFT : o.CaretPosition.TOP_LEFT
                 })
             }

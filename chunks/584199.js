@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return o
                 }
             });
             var a = n("37983");
@@ -11,12 +11,12 @@
                 i = n("944832"),
                 r = n("929018");
 
-            function u(e) {
+            function o(e) {
                 let {
                     aspectRatio: t,
                     blocked: n,
-                    channel: u,
-                    className: o,
+                    channel: o,
+                    className: u,
                     focused: d,
                     children: c,
                     inCall: f,
@@ -25,8 +25,8 @@
                     onClick: m,
                     onContextMenu: E,
                     onDoubleClick: C,
-                    onVideoResize: S,
-                    paused: g,
+                    onVideoResize: g,
+                    paused: S,
                     pulseSpeakingIndicator: _,
                     participant: I,
                     width: T,
@@ -42,8 +42,8 @@
                         aspectRatio: t,
                         children: [(0, a.jsx)(l.default, {
                             blocked: n,
-                            channel: u,
-                            className: o,
+                            channel: o,
+                            className: u,
                             focused: d,
                             inCall: f,
                             inPopout: h,
@@ -51,9 +51,9 @@
                             onClick: m,
                             onContextMenu: E,
                             onDoubleClick: C,
-                            onVideoResize: S,
+                            onVideoResize: g,
                             participant: I,
-                            paused: g,
+                            paused: S,
                             pulseSpeakingIndicator: _,
                             videoComponent: x,
                             width: T,

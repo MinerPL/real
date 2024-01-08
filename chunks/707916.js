@@ -1,10 +1,10 @@
             "use strict";
             l.r(t), l.d(t, {
                 GuildEventShareButton: function() {
-                    return N
+                    return v
                 },
                 GuildEventInterestedButton: function() {
-                    return v
+                    return N
                 },
                 GuildEventLurkerInterestedButton: function() {
                     return g
@@ -42,7 +42,7 @@
                 })
             }
 
-            function N(e) {
+            function v(e) {
                 let {
                     onInviteClick: t,
                     canInvite: l,
@@ -51,7 +51,7 @@
                 s.useEffect(() => () => {
                     d.stop()
                 }, []);
-                let N = e => {
+                let v = e => {
                     null != t && t(e), C(!0), d.start(1e3, () => C(!1))
                 };
                 return null == t ? null : (0, n.jsx)(i.Tooltip, {
@@ -78,7 +78,7 @@
                         size: i.Button.Sizes.SMALL,
                         disabled: E,
                         look: E ? i.Button.Looks.OUTLINED : i.Button.Looks.FILLED,
-                        onClick: N,
+                        onClick: v,
                         children: [E ? (0, n.jsx)(o.default, {
                             width: 16,
                             height: 16
@@ -90,7 +90,7 @@
                 })
             }
 
-            function v(e) {
+            function N(e) {
                 let {
                     isUserRsvped: t,
                     isUserLurking: l,
@@ -122,7 +122,7 @@
                     position: "top",
                     tooltipClassName: h.tooltips,
                     "aria-label": f.default.Messages.SHARE_LINK,
-                    children: t => (0, n.jsx)(v, {
+                    children: t => (0, n.jsx)(N, {
                         ...t,
                         ...e
                     })
@@ -163,7 +163,7 @@
                                 className: h.icon
                             })
                         })
-                    }) : null, (0, n.jsx)(N, {
+                    }) : null, (0, n.jsx)(v, {
                         onInviteClick: I,
                         canInvite: u,
                         isChannelPublic: a
@@ -185,7 +185,7 @@
                     }) : null, l && !t && (0, n.jsx)(g, {
                         isUserRsvped: s,
                         isUserLurking: l
-                    }), !l && !t && null != S && (0, n.jsx)(v, {
+                    }), !l && !t && null != S && (0, n.jsx)(N, {
                         isUserRsvped: s,
                         isUserLurking: l,
                         onRsvpClick: S

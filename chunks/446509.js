@@ -13,8 +13,8 @@
                 s = n.n(l),
                 i = n("446674"),
                 r = n("819855"),
-                u = n("77078"),
-                o = n("272030"),
+                o = n("77078"),
+                u = n("272030"),
                 d = n("54239"),
                 c = n("841098"),
                 f = n("449918"),
@@ -23,8 +23,8 @@
                 m = n("158998"),
                 E = n("713135"),
                 C = n("49111"),
-                S = n("782340"),
-                g = n("568719"),
+                g = n("782340"),
+                S = n("568719"),
                 _ = n("175321");
 
             function I(e) {
@@ -33,36 +33,36 @@
                     nick: n,
                     theme: l,
                     onSelect: i,
-                    onContextMenu: o,
+                    onContextMenu: u,
                     user: d
                 } = e, c = d.hasAvatarForGuild(t.id);
-                return (0, a.jsxs)(u.Clickable, {
+                return (0, a.jsxs)(o.Clickable, {
                     focusProps: {
                         offset: {
                             right: 8
                         }
                     },
-                    className: g.listRow,
+                    className: S.listRow,
                     onClick: () => i(t.id),
-                    onContextMenu: e => o(e, t),
+                    onContextMenu: e => u(e, t),
                     children: [(0, a.jsx)(p.default, {
                         tabIndex: -1,
                         guild: t,
                         showBadge: !0,
-                        className: s(g.listAvatar, null == t.icon ? _.guildAvatarWithoutIcon : null),
+                        className: s(S.listAvatar, null == t.icon ? _.guildAvatarWithoutIcon : null),
                         badgeStrokeColor: (0, f.getColor)((0, r.isThemeDark)(l) ? C.Color.PRIMARY_600 : C.Color.WHITE_500),
                         size: p.default.Sizes.MEDIUM,
                         active: !0
                     }), (0, a.jsxs)("div", {
-                        className: g.listRowContent,
+                        className: S.listRowContent,
                         children: [(0, a.jsx)("div", {
-                            className: g.listName,
+                            className: S.listName,
                             children: t.toString()
                         }), c || null != n ? (0, a.jsxs)("div", {
                             className: _.guildNick,
-                            children: [c && (0, a.jsx)(u.Avatar, {
+                            children: [c && (0, a.jsx)(o.Avatar, {
                                 src: d.getAvatarURL(t.id, 16),
-                                size: u.AvatarSizes.SIZE_16,
+                                size: o.AvatarSizes.SIZE_16,
                                 className: _.guildAvatar,
                                 "aria-hidden": !0
                             }), null != n ? n : m.default.getName(d)]
@@ -84,7 +84,7 @@
                 }
 
                 function m(e, t) {
-                    (0, o.openContextMenuLazy)(e, async () => {
+                    (0, u.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
                         } = await n.el("374705").then(n.bind(n, "374705"));
@@ -95,12 +95,12 @@
                     })
                 }
                 return t = null == r || 0 === r.length ? (0, a.jsxs)("div", {
-                    className: g.empty,
+                    className: S.empty,
                     children: [(0, a.jsx)("div", {
-                        className: g.emptyIconGuilds
+                        className: S.emptyIconGuilds
                     }), (0, a.jsx)("div", {
-                        className: g.emptyText,
-                        children: S.default.Messages.NO_MUTUAL_GUILDS
+                        className: S.emptyText,
+                        children: g.default.Messages.NO_MUTUAL_GUILDS
                     })]
                 }) : r.map(e => {
                     let {
@@ -115,8 +115,8 @@
                         onSelect: p,
                         onContextMenu: m
                     }, t.id)
-                }), (0, a.jsx)(u.ScrollerThin, {
-                    className: g.listScroller,
+                }), (0, a.jsx)(o.ScrollerThin, {
+                    className: S.listScroller,
                     fade: !0,
                     children: t
                 })
