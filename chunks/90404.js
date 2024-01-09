@@ -5,22 +5,22 @@
                 }
             });
             var a = n("37983"),
-                s = n("884691"),
-                r = n("414456"),
-                i = n.n(r),
+                r = n("884691"),
+                s = n("414456"),
+                i = n.n(s),
                 l = n("77078"),
                 u = n("145131"),
                 o = n("648324");
-            class d extends s.PureComponent {
+            class d extends r.PureComponent {
                 render() {
                     let {
                         note: e,
                         title: t,
                         action: n,
-                        className: s
+                        className: r
                     } = this.props;
                     return (0, a.jsx)("div", {
-                        className: i(o.wrapper, s),
+                        className: i(o.wrapper, r),
                         children: (0, a.jsxs)(u.default, {
                             className: o.flexWrapper,
                             direction: u.default.Direction.VERTICAL,

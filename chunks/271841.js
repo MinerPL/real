@@ -22,7 +22,7 @@
                     return p
                 },
                 ButtonLink: function() {
-                    return T
+                    return I
                 }
             });
             var i = n("37983"),
@@ -120,17 +120,17 @@
                     size: S = h.MEDIUM,
                     fullWidth: g = !1,
                     grow: p = !0,
-                    disabled: T = !1,
-                    submitting: I = !1,
-                    type: A = "button",
-                    style: v,
+                    disabled: I = !1,
+                    submitting: T = !1,
+                    type: v = "button",
+                    style: A,
                     wrapperClassName: N,
                     className: C,
                     innerClassName: R,
                     onClick: O,
                     onDoubleClick: L,
-                    onMouseDown: D,
-                    onMouseUp: y,
+                    onMouseDown: y,
+                    onMouseUp: D,
                     onMouseEnter: P,
                     onMouseLeave: M,
                     onKeyDown: U,
@@ -140,9 +140,9 @@
                     focusProps: F,
                     "aria-label": k,
                     submittingStartedLabel: B,
-                    submittingFinishedLabel: H,
-                    ...x
-                } = e, V = T || I, W = V && (null != P || null != M), Y = function(e, t) {
+                    submittingFinishedLabel: x,
+                    ...H
+                } = e, V = I || T, W = V && (null != P || null != M), Y = function(e, t) {
                     var n, i, r, o;
                     let s = null == e ? void 0 : e.offset;
                     if (t === f.LINK || t === f.BLANK) return s;
@@ -156,26 +156,26 @@
                     }
                 }(F, t), z = r.useRef(!1);
                 r.useEffect(() => {
-                    !0 === I && (z.current = !0, a.AccessibilityAnnouncer.announce(null != B ? B : d.default.Messages.A11Y_LOADING_STARTED)), !1 === I && !0 === z.current && a.AccessibilityAnnouncer.announce(null != H ? H : d.default.Messages.A11Y_LOADING_FINISHED)
-                }, [I, B, H]);
+                    !0 === T && (z.current = !0, a.AccessibilityAnnouncer.announce(null != B ? B : d.default.Messages.A11Y_LOADING_STARTED)), !1 === T && !0 === z.current && a.AccessibilityAnnouncer.announce(null != x ? x : d.default.Messages.A11Y_LOADING_FINISHED)
+                }, [T, B, x]);
                 let j = (0, i.jsx)(u.FocusRing, {
                     ...F,
                     offset: Y,
                     children: (0, i.jsxs)("button", {
-                        ...V ? null : x,
+                        ...V ? null : H,
                         "aria-label": k,
-                        "aria-busy": !!I || void 0,
+                        "aria-busy": !!T || void 0,
                         ref: G,
                         onClick: V ? e => e.preventDefault() : O,
                         onDoubleClick: V ? e => e.preventDefault() : L,
-                        onMouseUp: T ? void 0 : y,
-                        onMouseDown: T ? void 0 : D,
+                        onMouseUp: I ? void 0 : D,
+                        onMouseDown: I ? void 0 : y,
                         onMouseEnter: P,
                         onMouseLeave: M,
-                        onKeyDown: T ? void 0 : U,
-                        type: A,
-                        disabled: T,
-                        style: v,
+                        onKeyDown: I ? void 0 : U,
+                        type: v,
+                        disabled: I,
+                        style: A,
                         rel: b,
                         className: s(C, m({
                             look: t,
@@ -185,10 +185,10 @@
                             size: S,
                             fullWidth: g,
                             grow: p,
-                            submitting: I,
-                            disabled: T
+                            submitting: T,
+                            disabled: I
                         }), W ? null : N),
-                        children: [I && !T ? (0, i.jsx)(c.Spinner, {
+                        children: [T && !I ? (0, i.jsx)(c.Spinner, {
                             type: c.Spinner.Type.PULSING_ELLIPSIS,
                             className: _.spinner,
                             itemClassName: _.spinnerItem
@@ -211,7 +211,7 @@
                 }) : j
             }
 
-            function T(e) {
+            function I(e) {
                 let {
                     look: t = f.FILLED,
                     color: n = E.BRAND,
@@ -224,19 +224,19 @@
                     className: S,
                     innerClassName: m,
                     to: p,
-                    onClick: T,
-                    onMouseDown: I,
-                    onMouseUp: A,
-                    children: v,
+                    onClick: I,
+                    onMouseDown: T,
+                    onMouseUp: v,
+                    children: A,
                     rel: N,
                     ...C
                 } = e;
                 return (0, i.jsx)(l.Link, {
                     ...C,
                     to: p,
-                    onClick: T,
-                    onMouseUp: A,
-                    onMouseDown: I,
+                    onClick: I,
+                    onMouseUp: v,
+                    onMouseDown: T,
                     style: d,
                     rel: N,
                     className: s(S, _.button, t, n, r, o, a, {
@@ -246,8 +246,8 @@
                     }),
                     children: (0, i.jsx)("span", {
                         className: s(_.contents, m),
-                        children: v
+                        children: A
                     })
                 })
             }
-            p.Looks = f, p.Colors = E, p.BorderColors = S, p.Hovers = g, p.Sizes = h, p.Link = T
+            p.Looks = f, p.Colors = E, p.BorderColors = S, p.Hovers = g, p.Sizes = h, p.Link = I

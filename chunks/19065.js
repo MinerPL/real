@@ -6,13 +6,13 @@
             });
             var a = n("37983");
             n("884691");
-            var s = n("77078"),
-                r = n("42887"),
+            var r = n("77078"),
+                s = n("42887"),
                 i = n("353927"),
                 l = n("782340");
 
             function u(e) {
-                r.default.supports(i.Features.VIDEO) ? (0, s.openModalLazy)(async () => {
+                s.default.supports(i.Features.VIDEO) ? (0, r.openModalLazy)(async () => {
                     let {
                         default: t
                     } = await n.el("861054").then(n.bind(n, "861054"));
@@ -23,17 +23,17 @@
                         confirmText: l.default.Messages.OKAY,
                         onConfirm: e
                     })
-                }) : (0, s.openModalLazy)(async () => {
+                }) : (0, r.openModalLazy)(async () => {
                     let {
                         default: t
                     } = await n.el("861054").then(n.bind(n, "861054"));
-                    return r => (0, a.jsx)(t, {
-                        ...r,
+                    return s => (0, a.jsx)(t, {
+                        ...s,
                         header: l.default.Messages.VIDEO_UNSUPPORTED_BROWSER_TITLE,
                         body: l.default.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY,
                         confirmText: l.default.Messages.DOWNLOAD_APP,
                         onConfirm: () => {
-                            null == e || e(), (0, s.openModalLazy)(async () => {
+                            null == e || e(), (0, r.openModalLazy)(async () => {
                                 let {
                                     default: e
                                 } = await n.el("649486").then(n.bind(n, "649486"));

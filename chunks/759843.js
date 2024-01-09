@@ -43,10 +43,10 @@
                 h = n("612481"),
                 m = n("615582"),
                 p = n("660516");
-            let T = "deviceProperties",
-                I = "referralProperties",
-                A = {},
+            let I = "deviceProperties",
+                T = "referralProperties",
                 v = {},
+                A = {},
                 N = window.DiscordNative;
             if (null != N) {
                 let e;
@@ -131,12 +131,12 @@
                 }
             }
 
-            function D(e) {
-                return null != A[e] && A[e] > Date.now()
+            function y(e) {
+                return null != v[e] && v[e] > Date.now()
             }
             if (null == i) try {
                 let e, t, n;
-                e = f.default.get(T), null == e && (e = function() {
+                e = f.default.get(I), null == e && (e = function() {
                     let e = {},
                         t = function() {
                             let {
@@ -181,10 +181,10 @@
                         else if (/iPad/.test(e)) return "iPad";
                         else return ""
                     }(), e.system_locale = (0, _.getSystemLocale)(), e
-                }(), f.default.set(T, e)), t = f.default.get(I), null == t && (t = L(), f.default.set(I, t)), n = E.default.get(I), null == n && (n = function(e, t) {
+                }(), f.default.set(I, e)), t = f.default.get(T), null == t && (t = L(), f.default.set(T, t)), n = E.default.get(T), null == n && (n = function(e, t) {
                     let n = {};
                     return Object.keys(e).map(i => n["".concat(i).concat(t)] = e[i]), n
-                }(L(), "_current"), E.default.set(I, n)), i = {
+                }(L(), "_current"), E.default.set(T, n)), i = {
                     ...e,
                     ... function() {
                         var e, t;
@@ -204,18 +204,18 @@
                 i = {}
             }
 
-            function y(e) {
+            function D(e) {
                 i = {
                     ...i,
                     ...e
                 }, r = (0, h.default)(i)
             }
-            y(function() {
+            D(function() {
                 var e, t, n;
                 let i = {},
                     r = window.GLOBAL_ENV.RELEASE_CHANNEL;
                 r && (i.release_channel = r.split("-")[0]);
-                let o = parseInt((n = "258281", "258281"), 10);
+                let o = parseInt((n = "258285", "258285"), 10);
                 !isNaN(o) && (i.client_build_number = o);
                 let s = null == N ? void 0 : null === (e = (t = N.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
                 return !isNaN(s) && (i.native_build_number = s), i.client_event_source = function() {
@@ -239,13 +239,13 @@
                     if (null != a) {
                         if ("throttlePeriod" in a) {
                             let t = [e, ...a.throttleKeys(s)].join("_");
-                            if (D(t)) return Promise.resolve();
+                            if (y(t)) return Promise.resolve();
                             if (a.deduplicate) {
-                                let e = v[t];
+                                let e = A[t];
                                 if (l(e, s)) return Promise.resolve();
-                                v[t] = s
+                                A[t] = s
                             }
-                            A[t] = Date.now() + a.throttlePeriod
+                            v[t] = Date.now() + a.throttlePeriod
                         } else if ("throttlePercent" in a) {
                             if (Math.random() > a.throttlePercent) return Promise.resolve()
                         } else u(!1, "Unsupported analytics event config: ".concat(a))
@@ -254,9 +254,9 @@
                 }
             };
             var M = {
-                isThrottled: D,
+                isThrottled: y,
                 encodeProperties: h.default,
                 getSuperProperties: () => i,
                 getSuperPropertiesBase64: () => r,
-                extendSuperProperties: y
+                extendSuperProperties: D
             }

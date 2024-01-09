@@ -28,16 +28,16 @@
                     return p
                 },
                 useHasAnyModalOpen: function() {
-                    return T
-                },
-                useIsModalAtTop: function() {
                     return I
                 },
+                useIsModalAtTop: function() {
+                    return T
+                },
                 closeAllModals: function() {
-                    return A
+                    return v
                 },
                 hasModalOpenSelector: function() {
-                    return v
+                    return A
                 },
                 hasModalOpen: function() {
                     return N
@@ -162,12 +162,12 @@
                 return m(f.getState())
             }
 
-            function T() {
+            function I() {
                 let e = f();
                 return m(e)
             }
 
-            function I(e) {
+            function T(e) {
                 var t, n;
                 let {
                     default: i,
@@ -176,18 +176,18 @@
                 return r.length > 0 ? (null === (t = r.at(-1)) || void 0 === t ? void 0 : t.key) === e : (null === (n = i.at(-1)) || void 0 === n ? void 0 : n.key) === e
             }
 
-            function A() {
+            function v() {
                 let e = f.getState();
                 for (let t in e)
                     for (let n of e[t]) g(n.key, t)
             }
 
-            function v(e, t) {
+            function A(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.DEFAULT_MODAL_CONTEXT,
                     i = e[n];
                 return null != i && i.some(e => e.key === t)
             }
 
             function N(e, t) {
-                return v(f.getState(), e, t)
+                return A(f.getState(), e, t)
             }

@@ -1,14 +1,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return s
                 }
             }), n("222007");
             var a = n("294707"),
-                s = n("686298");
+                r = n("686298");
 
-            function r(e, t, n, r, i) {
-                for (let l of s.ApplicationStreamSettingRequirements)
-                    if ((null == l.preset || e === l.preset) && t === l.resolution && n === l.fps && (0, a.default)(l, r, i)) return !0;
+            function s(e, t, n, s, i) {
+                for (let l of r.ApplicationStreamSettingRequirements)
+                    if ((null == l.preset || e === l.preset) && t === l.resolution && n === l.fps && (0, a.default)(l, s, i)) return !0;
                 return !1
             }

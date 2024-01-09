@@ -22,16 +22,16 @@
                     return p
                 },
                 StickerPickerCollapsedSections: function() {
-                    return T
-                },
-                SoundboardPickerCollapsedSections: function() {
                     return I
                 },
+                SoundboardPickerCollapsedSections: function() {
+                    return T
+                },
                 ViewImageDescriptions: function() {
-                    return A
+                    return v
                 },
                 ShowCommandSuggestions: function() {
-                    return v
+                    return A
                 },
                 AlwaysPreviewVideo: function() {
                     return N
@@ -49,10 +49,10 @@
                     return L
                 },
                 InstallShortcutStartMenu: function() {
-                    return D
+                    return y
                 },
                 AllowActivityPartyPrivacyFriends: function() {
-                    return y
+                    return D
                 },
                 AllowActivityPartyPrivacyVoiceChannel: function() {
                     return P
@@ -79,10 +79,10 @@
                     return B
                 },
                 ConvertEmoticons: function() {
-                    return H
+                    return x
                 },
                 MessageDisplayCompact: function() {
-                    return x
+                    return H
                 },
                 SoundboardSettings: function() {
                     return V
@@ -169,10 +169,10 @@
                     return ep
                 },
                 ActivityRestrictedGuilds: function() {
-                    return eI
+                    return eT
                 },
                 ActivityJoiningRestrictedGuilds: function() {
-                    return ev
+                    return eA
                 },
                 DefaultGuildsActivityRestricted: function() {
                     return eN
@@ -243,15 +243,15 @@
             }));
             let m = [],
                 p = (0, l.defineProtoSetting)("textAndImages", "emojiPickerCollapsedSections", e => null != e ? e : m, e => e),
-                T = (0, l.defineProtoSetting)("textAndImages", "stickerPickerCollapsedSections", e => null != e ? e : m, e => e),
-                I = (0, l.defineProtoSetting)("textAndImages", "soundboardPickerCollapsedSections", e => null != e ? e : m, e => e),
-                A = (0, l.defineProtoSetting)("textAndImages", "viewImageDescriptions", e => {
+                I = (0, l.defineProtoSetting)("textAndImages", "stickerPickerCollapsedSections", e => null != e ? e : m, e => e),
+                T = (0, l.defineProtoSetting)("textAndImages", "soundboardPickerCollapsedSections", e => null != e ? e : m, e => e),
+                v = (0, l.defineProtoSetting)("textAndImages", "viewImageDescriptions", e => {
                     var t;
                     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
                 }, e => o.BoolValue.create({
                     value: e
                 })),
-                v = (0, l.defineProtoSetting)("textAndImages", "showCommandSuggestions", e => {
+                A = (0, l.defineProtoSetting)("textAndImages", "showCommandSuggestions", e => {
                     var t;
                     return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
                 }, e => o.BoolValue.create({
@@ -280,13 +280,13 @@
                 }, e => o.BoolValue.create({
                     value: e
                 })),
-                D = (0, l.defineProtoSetting)("gameLibrary", "installShortcutStartMenu", e => {
+                y = (0, l.defineProtoSetting)("gameLibrary", "installShortcutStartMenu", e => {
                     var t;
                     return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
                 }, e => o.BoolValue.create({
                     value: e
                 })),
-                y = (0, l.defineProtoSetting)("privacy", "allowActivityPartyPrivacyFriends", e => {
+                D = (0, l.defineProtoSetting)("privacy", "allowActivityPartyPrivacyFriends", e => {
                     var t;
                     return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
                 }, e => o.BoolValue.create({
@@ -335,13 +335,13 @@
                 }, e => o.BoolValue.create({
                     value: e
                 })),
-                H = (0, l.defineProtoSetting)("textAndImages", "convertEmoticons", e => {
+                x = (0, l.defineProtoSetting)("textAndImages", "convertEmoticons", e => {
                     var t;
                     return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
                 }, e => o.BoolValue.create({
                     value: e
                 })),
-                x = (0, l.defineProtoSetting)("textAndImages", "messageDisplayCompact", e => {
+                H = (0, l.defineProtoSetting)("textAndImages", "messageDisplayCompact", e => {
                     var t;
                     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
                 }, e => o.BoolValue.create({
@@ -530,10 +530,10 @@
                     var e;
                     return null === (e = a.default.getOverride("animateStickers")) || void 0 === e ? void 0 : e.value
                 })),
-                eT = [],
-                eI = (0, l.defineProtoSetting)("privacy", "activityRestrictedGuildIds", e => null != e ? e : eT, e => e),
-                eA = [],
-                ev = (0, l.defineProtoSetting)("privacy", "activityJoiningRestrictedGuildIds", e => null != e ? e : eA, e => e),
+                eI = [],
+                eT = (0, l.defineProtoSetting)("privacy", "activityRestrictedGuildIds", e => null != e ? e : eI, e => e),
+                ev = [],
+                eA = (0, l.defineProtoSetting)("privacy", "activityJoiningRestrictedGuildIds", e => null != e ? e : ev, e => e),
                 eN = (0, l.defineProtoSetting)("privacy", "defaultGuildsActivityRestricted", e => e === r.GuildActivityStatusRestrictionDefault.ON_FOR_LARGE_GUILDS, e => !0 === e ? r.GuildActivityStatusRestrictionDefault.ON_FOR_LARGE_GUILDS : r.GuildActivityStatusRestrictionDefault.OFF),
                 eC = (0, l.defineProtoSetting)("communities", "disableHomeAutoNav", e => {
                     var t;

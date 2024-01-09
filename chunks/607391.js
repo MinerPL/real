@@ -9,8 +9,8 @@
             });
             var a = n("37983");
             n("884691");
-            var s = n("414456"),
-                r = n.n(s),
+            var r = n("414456"),
+                s = n.n(r),
                 i = n("77078"),
                 l = n("145131"),
                 u = n("929422");
@@ -23,7 +23,7 @@
                 let {
                     onCTAClick: t,
                     callToAction: n,
-                    header: s,
+                    header: r,
                     description: o,
                     size: d,
                     className: c,
@@ -40,15 +40,15 @@
                         padding: 4
                     },
                     children: [!E && null != f && (0, a.jsx)("div", {
-                        className: r(u.art, u[d]),
+                        className: s(u.art, u[d]),
                         style: {
                             backgroundImage: "url(".concat(f, ")")
                         }
-                    }), null != s ? (0, a.jsx)(i.Text, {
+                    }), null != r ? (0, a.jsx)(i.Text, {
                         color: "none",
                         variant: "text-md/semibold",
                         className: u.header,
-                        children: s
+                        children: r
                     }) : null, null != o ? (0, a.jsx)(i.Text, {
                         color: "none",
                         className: u.description,

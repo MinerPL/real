@@ -1,13 +1,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return L
+                    return y
                 }
             });
             var a = n("37983");
             n("884691");
-            var s = n("414456"),
-                r = n.n(s),
+            var r = n("414456"),
+                s = n.n(r),
                 i = n("446674"),
                 l = n("77078"),
                 u = n("368598"),
@@ -24,8 +24,8 @@
                 m = n("773336"),
                 g = n("439932"),
                 T = n("50885"),
-                A = n("782340"),
-                I = n("793804");
+                I = n("782340"),
+                A = n("793804");
             let v = e => T.default.close(e),
                 M = e => T.default.minimize(e),
                 O = (e, t) => {
@@ -35,81 +35,81 @@
                     let {
                         windowKey: t,
                         themeOverride: n,
-                        hasOpenLayer: s
+                        hasOpenLayer: r
                     } = e;
                     return (0, a.jsxs)("div", {
-                        className: r(I.typeWindows, (0, g.getThemeClass)(n), {
-                            [I.withBackgroundOverride]: !s
+                        className: s(A.typeWindows, (0, g.getThemeClass)(n), {
+                            [A.withBackgroundOverride]: !r
                         }),
                         children: [(0, a.jsx)("div", {
-                            className: I.wordmarkWindows,
+                            className: A.wordmarkWindows,
                             children: (0, a.jsx)(f.default, {})
                         }), (0, a.jsx)(l.Clickable, {
-                            className: I.winButtonClose,
+                            className: A.winButtonClose,
                             onClick: () => v(t),
-                            "aria-label": A.default.Messages.TITLE_BAR_CLOSE_WINDOW,
+                            "aria-label": I.default.Messages.TITLE_BAR_CLOSE_WINDOW,
                             tabIndex: -1,
                             children: (0, a.jsx)(E.default, {})
                         }), (0, a.jsx)(l.Clickable, {
-                            className: I.winButtonMinMax,
+                            className: A.winButtonMinMax,
                             onClick: e => O(t, e),
-                            "aria-label": A.default.Messages.TITLE_BAR_MAXIMIZE_WINDOW,
+                            "aria-label": I.default.Messages.TITLE_BAR_MAXIMIZE_WINDOW,
                             tabIndex: -1,
                             children: (0, a.jsx)(p.default, {})
                         }), (0, a.jsx)(l.Clickable, {
-                            className: I.winButtonMinMax,
+                            className: A.winButtonMinMax,
                             onClick: () => M(t),
-                            "aria-label": A.default.Messages.TITLE_BAR_MINIMIZE_WINDOW,
+                            "aria-label": I.default.Messages.TITLE_BAR_MINIMIZE_WINDOW,
                             tabIndex: -1,
                             children: (0, a.jsx)(_.default, {})
                         })]
                     })
                 },
-                D = e => {
+                L = e => {
                     let {
                         focused: t,
                         windowKey: n,
-                        frame: s,
+                        frame: r,
                         themeOverride: i,
                         hasOpenLayer: u
                     } = e;
                     return (0, a.jsxs)(l.Clickable, {
-                        className: r(s ? I.typeMacOSWithFrame : I.typeMacOS, t ? I.focused : I.unfocused, (0, g.getThemeClass)(i), {
-                            [I.withBackgroundOverride]: !u
+                        className: s(r ? A.typeMacOSWithFrame : A.typeMacOS, t ? A.focused : A.unfocused, (0, g.getThemeClass)(i), {
+                            [A.withBackgroundOverride]: !u
                         }),
                         onDoubleClick: () => T.default.maximize(n),
                         tabIndex: -1,
                         children: [o.default.window.USE_OSX_NATIVE_TRAFFIC_LIGHTS ? (0, a.jsx)("div", {
-                            className: I.macDragRegion
+                            className: A.macDragRegion
                         }) : (0, a.jsxs)("div", {
-                            className: I.macButtons,
+                            className: A.macButtons,
                             children: [(0, a.jsx)(l.Clickable, {
-                                className: I.macButtonClose,
+                                className: A.macButtonClose,
                                 onClick: () => v(n),
-                                "aria-label": A.default.Messages.TITLE_BAR_CLOSE_WINDOW,
+                                "aria-label": I.default.Messages.TITLE_BAR_CLOSE_WINDOW,
                                 tabIndex: -1,
                                 children: (0, a.jsx)(h.default, {
                                     color: "#4c0000"
                                 })
                             }), (0, a.jsx)(l.Clickable, {
-                                className: I.macButtonMinimize,
+                                className: A.macButtonMinimize,
                                 onClick: () => M(n),
-                                "aria-label": A.default.Messages.TITLE_BAR_MINIMIZE_WINDOW,
+                                "aria-label": I.default.Messages.TITLE_BAR_MINIMIZE_WINDOW,
                                 tabIndex: -1,
                                 children: (0, a.jsx)(C.default, {
                                     color: "#975500"
                                 })
                             }), (0, a.jsx)(l.Clickable, {
-                                className: I.macButtonMaximize,
+                                className: A.macButtonMaximize,
                                 onClick: e => O(n, e),
-                                "aria-label": A.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
+                                "aria-label": I.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
                                 tabIndex: -1,
                                 children: (0, a.jsx)(S.default, {
                                     color: "#006500"
                                 })
                             })]
-                        }), s ? (0, a.jsx)("div", {
-                            className: I.wordmarkMacOS,
+                        }), r ? (0, a.jsx)("div", {
+                            className: A.wordmarkMacOS,
                             children: (0, a.jsx)(f.default, {
                                 color: "#ffffff"
                             })
@@ -117,27 +117,27 @@
                     })
                 };
 
-            function L(e) {
+            function y(e) {
                 let {
                     focused: t,
                     type: n,
-                    windowKey: s,
-                    macOSFrame: r = !1,
+                    windowKey: r,
+                    macOSFrame: s = !1,
                     themeOverride: l
                 } = e, o = (0, d.useAppContext)(), f = (0, i.useStateFromStores)([c.default], () => c.default.isFullscreenInContext(o)), E = (0, u.default)();
                 if (f) return null;
                 switch (n) {
                     case m.PlatformTypes.WINDOWS:
                         return (0, a.jsx)(N, {
-                            windowKey: s,
+                            windowKey: r,
                             themeOverride: l,
                             hasOpenLayer: E
                         });
                     case m.PlatformTypes.OSX:
-                        return (0, a.jsx)(D, {
+                        return (0, a.jsx)(L, {
                             focused: t,
-                            windowKey: s,
-                            frame: r,
+                            windowKey: r,
+                            frame: s,
                             themeOverride: l,
                             hasOpenLayer: E
                         });

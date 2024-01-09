@@ -6,8 +6,8 @@
             });
             var a = n("37983");
             n("884691");
-            var s = n("987317"),
-                r = n("713726"),
+            var r = n("987317"),
+                s = n("713726"),
                 i = n("754493"),
                 l = n("293137"),
                 u = n("981913"),
@@ -23,7 +23,7 @@
                 return (0, a.jsx)(f, {
                     ...c,
                     onClick: () => {
-                        h && (0, r.stopBroadcast)(), s.default.disconnect(), null == d || d()
+                        h && (0, s.stopBroadcast)(), r.default.disconnect(), null == d || d()
                     },
                     iconComponent: l.default,
                     label: h ? o.default.Messages.STOP_BROADCASTING : E ? o.default.Messages.LEAVE_BROADCAST : o.default.Messages.DISCONNECT_SELF

@@ -32,10 +32,10 @@
                     getScrollerState: S,
                     getAnchorId: g
                 } = e, h = (0, o.default)(), m = (0, i.useRef)(l), [p] = (0, i.useState)(() => new r.default), {
-                    dirty: T,
-                    chunkStart: I,
-                    chunkEnd: A,
-                    forceUpdateOnChunkChange: v
+                    dirty: I,
+                    chunkStart: T,
+                    chunkEnd: v,
+                    forceUpdateOnChunkChange: A
                 } = (0, s.default)({
                     chunkSize: _,
                     getScrollerState: S,
@@ -60,10 +60,10 @@
                     }
                 }
                 let O = (0, i.useMemo)(() => {
-                        let e = Math.max(0, I * _);
+                        let e = Math.max(0, T * _);
                         return null != c && e < c
-                    }, [_, I, c]),
-                    L = (0, i.useMemo)(() => T > 0 ? m.current : (p.mergeProps({
+                    }, [_, T, c]),
+                    L = (0, i.useMemo)(() => I > 0 ? m.current : (p.mergeProps({
                         sectionHeight: n,
                         rowHeight: a,
                         footerHeight: u,
@@ -72,11 +72,11 @@
                         paddingTop: f,
                         sections: t,
                         getAnchorId: g
-                    }), p.compute(Math.max(0, I * _), A * _)), [T, I, A, n, a, u, d, E, f, t, p, _, g]);
+                    }), p.compute(Math.max(0, T * _), v * _)), [I, T, v, n, a, u, d, E, f, t, p, _, g]);
                 return (0, i.useLayoutEffect)(() => void(m.current = L)), {
                     ...L,
                     listComputer: p,
-                    forceUpdateOnChunkChange: v,
+                    forceUpdateOnChunkChange: A,
                     anchor: C,
                     isSidebarVisible: O
                 }

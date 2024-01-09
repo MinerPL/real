@@ -17,8 +17,8 @@
                 }
             });
             var a = n("872717"),
-                s = n("913144"),
-                r = n("374014"),
+                r = n("913144"),
+                s = n("374014"),
                 i = n("766274"),
                 l = n("271938"),
                 u = n("42203"),
@@ -44,7 +44,7 @@
                     autoTrackExposure: !1
                 });
                 if (!n) return;
-                let a = (0, r.decodeStreamKey)(e),
+                let a = (0, s.decodeStreamKey)(e),
                     {
                         ownerId: i,
                         channelId: f
@@ -61,13 +61,13 @@
                     var t;
                     let n = d.default.getGameForPID(e),
                         a = h(n),
-                        s = o.default.getGameByName(a);
-                    return null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : "0"
+                        r = o.default.getGameByName(a);
+                    return null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : "0"
                 }(t);
                 null != C && ! function(e) {
                     let t = l.default.getId(),
                         n = l.default.getSessionId();
-                    null != t && null != n && s.default.dispatch({
+                    null != t && null != n && r.default.dispatch({
                         type: "BROADCAST_START",
                         broadcast: e
                     })
@@ -81,7 +81,7 @@
             }
 
             function S() {
-                s.default.dispatch({
+                r.default.dispatch({
                     type: "BROADCAST_STOP"
                 })
             }
@@ -90,7 +90,7 @@
                 let t = {};
                 e.forEach(e => {
                     t[e] = -1
-                }), s.default.dispatch({
+                }), r.default.dispatch({
                     type: "BROADCASTER_BUCKETS_RECEIVED",
                     data: t
                 })
@@ -109,7 +109,7 @@
                         e.forEach(e => {
                             var a;
                             n[e] = null !== (a = t.body[e]) && void 0 !== a ? a : -1
-                        }), s.default.dispatch({
+                        }), r.default.dispatch({
                             type: "BROADCASTER_BUCKETS_RECEIVED",
                             data: n
                         })
@@ -134,9 +134,9 @@
                         t.forEach(e => {
                             var t;
                             let a = f.default.getBroadcastByChannel(e.id).userId,
-                                s = null !== (t = e.recipients) && void 0 !== t ? t : [];
-                            n[a] = s.map(e => new i.default(e)).filter(e => e.id !== a)
-                        }), s.default.dispatch({
+                                r = null !== (t = e.recipients) && void 0 !== t ? t : [];
+                            n[a] = r.map(e => new i.default(e)).filter(e => e.id !== a)
+                        }), r.default.dispatch({
                             type: "BROADCAST_VIEWERS_UPDATE",
                             viewers: n
                         })

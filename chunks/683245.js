@@ -5,8 +5,8 @@
                 }
             });
             var a = n("37983"),
-                s = n("884691"),
-                r = n("446674"),
+                r = n("884691"),
+                s = n("446674"),
                 i = n("990766"),
                 l = n("374014"),
                 u = n("42203"),
@@ -20,8 +20,8 @@
                     width: n,
                     noArt: f = !1,
                     selected: E = !1
-                } = e, h = (0, r.useStateFromStores)([u.default], () => u.default.getChannel(t.channelId));
-                return s.useEffect(() => {
+                } = e, h = (0, s.useStateFromStores)([u.default], () => u.default.getChannel(t.channelId));
+                return r.useEffect(() => {
                     (null == h ? void 0 : h.isGuildStageVoice()) && (0, i.closeStream)((0, l.encodeStreamKey)(t), !1)
                 }, []), (0, a.jsx)(o.default, {
                     artURL: c,

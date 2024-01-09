@@ -8,9 +8,9 @@
                 }
             }), n("222007");
             var a = n("37983"),
-                s = n("884691"),
-                r = n("414456"),
-                i = n.n(r),
+                r = n("884691"),
+                s = n("414456"),
+                i = n.n(s),
                 l = n("817736"),
                 u = n("773336"),
                 o = n("325753"),
@@ -22,7 +22,7 @@
                 bottom: 132,
                 left: 80
             };
-            class h extends s.PureComponent {
+            class h extends r.PureComponent {
                 componentDidMount() {
                     this.setPosition(this.props.position)
                 }
@@ -42,12 +42,12 @@
                     let {
                         edgeOffsetTop: n,
                         edgeOffsetLeft: a,
-                        edgeOffsetBottom: s,
-                        edgeOffsetRight: r,
+                        edgeOffsetBottom: r,
+                        edgeOffsetRight: s,
                         maxX: i,
                         maxY: o,
                         dockedRect: c
-                    } = this.props, f = Math.round(n), E = Math.round(o - s - this._height), h = Math.round(a), p = Math.round(i - r - this._width), S = (0, u.getPlatform)(), _ = S !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
+                    } = this.props, f = Math.round(n), E = Math.round(o - r - this._height), h = Math.round(a), p = Math.round(i - s - this._width), S = (0, u.getPlatform)(), _ = S !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
                     if (null != c) {
                         var C, m;
                         return {
@@ -86,9 +86,9 @@
                     var n;
                     let {
                         x: a,
-                        y: s
+                        y: r
                     } = this.getPosition(e);
-                    null === (n = this._draggable) || void 0 === n || n.animateToPosition(a, s, {}, t)
+                    null === (n = this._draggable) || void 0 === n || n.animateToPosition(a, r, {}, t)
                 }
                 calculateDecayingPosition(e, t, n, a) {
                     return {
@@ -132,8 +132,8 @@
                         maxX: e,
                         maxY: t,
                         dockedRect: n,
-                        hidden: s,
-                        roundCorners: r,
+                        hidden: r,
+                        roundCorners: s,
                         className: l
                     } = this.props, u = {};
                     return null != n && (u = {
@@ -144,8 +144,8 @@
                         dragAnywhere: !0,
                         ref: this.handleSetDraggableRef,
                         className: i(c.pictureInPictureWindow, l, {
-                            [c.hidden]: s,
-                            [c.borderRadius]: r
+                            [c.hidden]: r,
+                            [c.borderRadius]: s
                         }),
                         maxX: e,
                         maxY: t,
@@ -182,9 +182,9 @@
                         let n;
                         let {
                             maxX: a,
-                            maxY: s
-                        } = this.props, r = this.calculateDecayingPosition(e, t, this._velocityX, this._velocityY), i = !0, l = !0;
-                        if (r.x > a / 2 && (l = !1), r.y > s / 2 && (i = !1), n = i && l ? d.PictureInPicturePositions.TOP_LEFT : i && !l ? d.PictureInPicturePositions.TOP_RIGHT : !i && l ? d.PictureInPicturePositions.BOTTOM_LEFT : d.PictureInPicturePositions.BOTTOM_RIGHT, this.animateToPosition(n, this.ensureIsInPosition), n !== this.props.position) {
+                            maxY: r
+                        } = this.props, s = this.calculateDecayingPosition(e, t, this._velocityX, this._velocityY), i = !0, l = !0;
+                        if (s.x > a / 2 && (l = !1), s.y > r / 2 && (i = !1), n = i && l ? d.PictureInPicturePositions.TOP_LEFT : i && !l ? d.PictureInPicturePositions.TOP_RIGHT : !i && l ? d.PictureInPicturePositions.BOTTOM_LEFT : d.PictureInPicturePositions.BOTTOM_RIGHT, this.animateToPosition(n, this.ensureIsInPosition), n !== this.props.position) {
                             let {
                                 id: e,
                                 onMove: t
@@ -198,12 +198,12 @@
                 hidden: !1,
                 roundCorners: !0
             };
-            var p = s.memo(e => {
+            var p = r.memo(e => {
                 let {
                     selectedPIPWindow: t,
                     pipWindows: n,
-                    maxX: s,
-                    maxY: r,
+                    maxX: r,
+                    maxY: s,
                     onWindowMove: l,
                     dockedRect: u,
                     pictureInPictureComponents: o,
@@ -229,8 +229,8 @@
                             id: t.id,
                             hidden: t.hidden,
                             onMove: l,
-                            maxX: s,
-                            maxY: r,
+                            maxX: r,
+                            maxY: s,
                             dockedRect: u,
                             edgeOffsetTop: E.top,
                             edgeOffsetBottom: E.bottom,

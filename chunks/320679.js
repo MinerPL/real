@@ -5,8 +5,8 @@
                 }
             });
             var a = n("37983"),
-                s = n("884691"),
-                r = n("118810"),
+                r = n("884691"),
+                s = n("118810"),
                 i = n("446674"),
                 l = n("77078"),
                 u = n("599110"),
@@ -21,10 +21,10 @@
                 if (n || e.keyCode !== f.KeyboardKeys.TAB || null == e.target) return;
                 let {
                     target: a
-                } = e, s = null === (t = (0, o.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
-                (0, r.isElement)(a) && u.default.track(f.AnalyticEvents.KEYBOARD_SHORTCUT_USED, {
+                } = e, r = null === (t = (0, o.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
+                (0, s.isElement)(a) && u.default.track(f.AnalyticEvents.KEYBOARD_SHORTCUT_USED, {
                     shortcut_name: "tab_navigation",
-                    source_class_list: null != s ? Array.from(s.classList) : [],
+                    source_class_list: null != r ? Array.from(r.classList) : [],
                     location_object: a.tagName
                 })
             }
@@ -35,16 +35,16 @@
                 } = e, n = (0, i.useStateFromStoresObject)([d.default], () => ({
                     enabled: d.default.useReducedMotion,
                     rawValue: d.default.rawPrefersReducedMotion
-                })), r = (0, i.useStateFromStoresObject)([d.default], () => ({
+                })), s = (0, i.useStateFromStoresObject)([d.default], () => ({
                     enabled: d.default.useForcedColors,
                     rawValue: d.default.systemForcedColors
-                })), u = (0, i.useStateFromStores)([d.default], () => d.default.alwaysShowLinkDecorations), o = s.useMemo(() => ({
+                })), u = (0, i.useStateFromStores)([d.default], () => d.default.alwaysShowLinkDecorations), o = r.useMemo(() => ({
                     reducedMotion: n,
                     prefersCrossfades: !1,
-                    forcedColors: r,
+                    forcedColors: s,
                     alwaysShowLinkDecorations: u
-                }), [n, r, u]);
-                return s.useEffect(() => ((0, c.insertAccessibilityLabelElements)(), window.addEventListener("keydown", E), () => window.removeEventListener("keydown", E)), []), (0, a.jsx)(l.AccessibilityPreferencesContext.Provider, {
+                }), [n, s, u]);
+                return r.useEffect(() => ((0, c.insertAccessibilityLabelElements)(), window.addEventListener("keydown", E), () => window.removeEventListener("keydown", E)), []), (0, a.jsx)(l.AccessibilityPreferencesContext.Provider, {
                     value: o,
                     children: t
                 })

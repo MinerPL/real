@@ -13,10 +13,10 @@
                     return L
                 },
                 ModalFooter: function() {
-                    return D
+                    return y
                 },
                 ModalCloseButton: function() {
-                    return y
+                    return D
                 },
                 ModalListContent: function() {
                     return P
@@ -37,10 +37,10 @@
                 h = n("433600"),
                 m = n("446662"),
                 p = n("145131"),
-                T = n("945330"),
-                I = n("625611"),
-                A = n("843455"),
-                v = n("782340"),
+                I = n("945330"),
+                T = n("625611"),
+                v = n("843455"),
+                A = n("782340"),
                 N = n("760021");
             (i = r || (r = {})).SMALL = "small", i.MEDIUM = "medium", i.LARGE = "large", i.DYNAMIC = "dynamic";
             let C = Object.freeze({
@@ -60,33 +60,33 @@
                     className: f,
                     fullscreenOnMobile: g = !0,
                     hideShadow: h = !1,
-                    onAnimationEnd: m = A.NOOP,
+                    onAnimationEnd: m = v.NOOP,
                     returnRef: p,
-                    ...T
-                } = e, v = n === I.ModalTransitionState.ENTERING || n === I.ModalTransitionState.ENTERED, {
+                    ...I
+                } = e, A = n === T.ModalTransitionState.ENTERING || n === T.ModalTransitionState.ENTERED, {
                     reducedMotion: R
                 } = s.useContext(_.AccessibilityPreferencesContext), O = (0, u.useSpring)({
-                    opacity: v ? 1 : 0,
-                    transform: v || R.enabled ? "scale(1)" : "scale(0.7)",
+                    opacity: A ? 1 : 0,
+                    transform: A || R.enabled ? "scale(1)" : "scale(0.7)",
                     config: {
-                        duration: v ? 300 : 100,
-                        easing: v ? d.default.Easing.inOut(d.default.Easing.back()) : d.default.Easing.quad,
+                        duration: A ? 300 : 100,
+                        easing: A ? d.default.Easing.inOut(d.default.Easing.back()) : d.default.Easing.quad,
                         clamp: !0
                     },
                     onRest: m
-                }), L = s.useRef(null), D = null != T["aria-label"], y = null != T["aria-labelledby"], P = s.useId(), M = null !== (t = T["aria-labelledby"]) && void 0 !== t ? t : P, U = s.useMemo(() => ({
+                }), L = s.useRef(null), y = null != I["aria-label"], D = null != I["aria-labelledby"], P = s.useId(), M = null !== (t = I["aria-labelledby"]) && void 0 !== t ? t : P, U = s.useMemo(() => ({
                     headerId: M,
-                    headerIdIsManaged: y
-                }), [M, y]);
-                return (0, o.jsx)(I.ModalContentContext.Provider, {
+                    headerIdIsManaged: D
+                }), [M, D]);
+                return (0, o.jsx)(T.ModalContentContext.Provider, {
                     value: U,
                     children: (0, o.jsx)(E.Dialog, {
                         className: N.focusLock,
                         role: l,
                         returnRef: p,
                         impressionType: c.ImpressionTypes.MODAL,
-                        "aria-labelledby": D ? void 0 : U.headerId,
-                        ...T,
+                        "aria-labelledby": y ? void 0 : U.headerId,
+                        ...I,
                         children: (0, o.jsx)(u.animated.div, {
                             className: a(f, N.root, C[r], {
                                 [N.fullscreenOnMobile]: g,
@@ -108,7 +108,7 @@
                 let {
                     headerId: u,
                     headerIdIsManaged: c
-                } = s.useContext(I.ModalContentContext);
+                } = s.useContext(T.ModalContentContext);
                 return (0, o.jsx)(p.default, {
                     grow: 0,
                     shrink: 0,
@@ -151,7 +151,7 @@
                 })
             }
 
-            function D(e) {
+            function y(e) {
                 var t, n, i, r, s;
                 return (0, o.jsx)(p.default, {
                     grow: 0,
@@ -169,10 +169,10 @@
                 })
             }
 
-            function y(e) {
+            function D(e) {
                 return (0, o.jsx)(f.Button, {
                     focusProps: e.focusProps,
-                    "aria-label": v.default.Messages.CLOSE,
+                    "aria-label": A.default.Messages.CLOSE,
                     look: f.Button.Looks.BLANK,
                     size: f.Button.Sizes.NONE,
                     onClick: e.onClick,
@@ -183,7 +183,7 @@
                         [N.hideOnFullscreen]: e.hideOnFullscreen,
                         [N.close]: !e.withCircleBackground
                     }),
-                    children: (0, o.jsx)(T.default, {
+                    children: (0, o.jsx)(I.default, {
                         width: 24,
                         height: 24,
                         className: N.closeIcon

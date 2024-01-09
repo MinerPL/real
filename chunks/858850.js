@@ -25,24 +25,24 @@
                         style: m,
                         ...p
                     } = u, {
-                        scrollerRef: T,
-                        getScrollerState: I
-                    } = (0, a.useUncachedScrollerState)(), A = (0, a.useScrollSpring)(T, E);
+                        scrollerRef: I,
+                        getScrollerState: T
+                    } = (0, a.useUncachedScrollerState)(), v = (0, a.useScrollSpring)(I, E);
                     r.useImperativeHandle(c, () => ({
-                        getScrollerNode: () => T.current,
-                        getScrollerState: I,
-                        ...(0, a.getAnimatedScrollHelpers)(T, I, A, E)
-                    }), [T, I, E, A]);
-                    let v = (0, a.usePaddingFixes)({
+                        getScrollerNode: () => I.current,
+                        getScrollerState: T,
+                        ...(0, a.getAnimatedScrollHelpers)(I, T, v, E)
+                    }), [I, T, E, v]);
+                    let A = (0, a.usePaddingFixes)({
                         paddingFix: h,
                         orientation: E,
                         dir: f,
                         className: _,
-                        scrollerRef: T,
+                        scrollerRef: I,
                         specs: o
                     });
                     return (0, i.jsx)("div", {
-                        ref: T,
+                        ref: I,
                         className: s(_, {
                             [e]: !0,
                             [t]: S,
@@ -52,8 +52,8 @@
                         dir: f,
                         ...p,
                         children: (0, i.jsxs)(l.FocusRingScope, {
-                            containerRef: T,
-                            children: [d, v]
+                            containerRef: I,
+                            children: [d, A]
                         })
                     })
                 })

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return h
                 }
             });
             var i = n("446674"),
@@ -11,16 +11,16 @@
                 l = n("845579"),
                 a = n("374363"),
                 u = n("922932"),
-                c = n("727538"),
-                d = n("49111"),
-                _ = n("894488");
-            let f = {
-                    fontSize: d.Accessibility.FONT_SIZE_DEFAULT,
-                    zoom: d.Accessibility.ZOOM_DEFAULT,
+                c = n("49111"),
+                d = n("894488");
+            let _ = {
+                    fontSize: c.Accessibility.FONT_SIZE_DEFAULT,
+                    zoom: c.Accessibility.ZOOM_DEFAULT,
                     keyboardModeEnabled: !1,
                     colorblindMode: !1,
                     lowContrastMode: !1,
                     saturation: 1,
+                    contrast: 1,
                     desaturateUserColors: !1,
                     forcedColorsModalSeen: !1,
                     keyboardNavigationExplainerModalSeen: !1,
@@ -34,11 +34,10 @@
                     alwaysShowLinkDecorations: !1,
                     roleStyle: "username",
                     submitButtonEnabled: !1,
-                    syncProfileThemeWithUserTheme: !1,
-                    contrastMode: c.AccessibilityContrastMode.DEFAULT
+                    syncProfileThemeWithUserTheme: !1
                 },
-                E = f,
-                S = {
+                f = _,
+                E = {
                     12: "font-size-12",
                     14: "font-size-14",
                     15: "font-size-15",
@@ -47,129 +46,129 @@
                     20: "font-size-20",
                     24: "font-size-24"
                 };
-            class g extends i.default.DeviceSettingsStore {
+            class S extends i.default.DeviceSettingsStore {
                 initialize(e) {
-                    this.waitFor(a.default), isNaN((E = {
-                        ...f,
+                    this.waitFor(a.default), isNaN((f = {
+                        ..._,
                         ...null != e ? e : null
-                    }).fontSize) && (E.fontSize = d.Accessibility.FONT_SIZE_DEFAULT), 0 > _.MESSAGE_GROUP_SPACING.indexOf(null != E.messageGroupSpacing ? E.messageGroupSpacing : -1) && (E.messageGroupSpacing = null)
+                    }).fontSize) && (f.fontSize = c.Accessibility.FONT_SIZE_DEFAULT), 0 > d.MESSAGE_GROUP_SPACING.indexOf(null != f.messageGroupSpacing ? f.messageGroupSpacing : -1) && (f.messageGroupSpacing = null)
                 }
                 get fontScale() {
-                    return E.fontSize / d.Accessibility.FONT_SIZE_DEFAULT * 100
+                    return f.fontSize / c.Accessibility.FONT_SIZE_DEFAULT * 100
                 }
                 get fontSize() {
-                    return E.fontSize
+                    return f.fontSize
                 }
                 get isFontScaledUp() {
-                    return E.fontSize > d.Accessibility.FONT_SIZE_DEFAULT
+                    return f.fontSize > c.Accessibility.FONT_SIZE_DEFAULT
                 }
                 get isFontScaledDown() {
-                    return E.fontSize < d.Accessibility.FONT_SIZE_DEFAULT
+                    return f.fontSize < c.Accessibility.FONT_SIZE_DEFAULT
                 }
                 get fontScaleClass() {
                     var e;
-                    let t = null !== (e = S[this.fontSize]) && void 0 !== e ? e : "";
+                    let t = null !== (e = E[this.fontSize]) && void 0 !== e ? e : "";
                     return this.isFontScaledUp ? "a11y-font-scaled-up ".concat(t) : this.isFontScaledDown ? "a11y-font-scaled-down ".concat(t) : "".concat(t)
                 }
                 get zoom() {
-                    return E.zoom
+                    return f.zoom
                 }
                 get isZoomedIn() {
-                    return E.zoom > d.Accessibility.ZOOM_DEFAULT
+                    return f.zoom > c.Accessibility.ZOOM_DEFAULT
                 }
                 get isZoomedOut() {
-                    return E.zoom < d.Accessibility.ZOOM_DEFAULT
+                    return f.zoom < c.Accessibility.ZOOM_DEFAULT
                 }
                 get keyboardModeEnabled() {
-                    return E.keyboardModeEnabled
+                    return f.keyboardModeEnabled
                 }
                 get colorblindMode() {
-                    return E.colorblindMode
+                    return f.colorblindMode
                 }
                 get lowContrastMode() {
-                    return E.lowContrastMode
+                    return f.lowContrastMode
                 }
                 get saturation() {
-                    return E.saturation
+                    return f.saturation
+                }
+                get contrast() {
+                    return f.contrast
                 }
                 get desaturateUserColors() {
-                    return E.desaturateUserColors
+                    return f.desaturateUserColors
                 }
                 get forcedColorsModalSeen() {
-                    return E.forcedColorsModalSeen
+                    return f.forcedColorsModalSeen
                 }
                 get keyboardNavigationExplainerModalSeen() {
-                    return E.keyboardNavigationExplainerModalSeen
+                    return f.keyboardNavigationExplainerModalSeen
                 }
                 get messageGroupSpacing() {
-                    return null != E.messageGroupSpacing ? E.messageGroupSpacing : l.MessageDisplayCompact.getSetting() ? _.DEFAULT_COMPACT_SPACING : _.DEFAULT_COZY_SPACING
+                    return null != f.messageGroupSpacing ? f.messageGroupSpacing : l.MessageDisplayCompact.getSetting() ? d.DEFAULT_COMPACT_SPACING : d.DEFAULT_COZY_SPACING
                 }
                 get isMessageGroupSpacingIncreased() {
-                    let e = l.MessageDisplayCompact.getSetting() ? _.DEFAULT_COMPACT_SPACING : _.DEFAULT_COZY_SPACING;
+                    let e = l.MessageDisplayCompact.getSetting() ? d.DEFAULT_COMPACT_SPACING : d.DEFAULT_COZY_SPACING;
                     return this.messageGroupSpacing > e
                 }
                 get isMessageGroupSpacingDecreased() {
-                    let e = l.MessageDisplayCompact.getSetting() ? _.DEFAULT_COMPACT_SPACING : _.DEFAULT_COZY_SPACING;
+                    let e = l.MessageDisplayCompact.getSetting() ? d.DEFAULT_COMPACT_SPACING : d.DEFAULT_COZY_SPACING;
                     return this.messageGroupSpacing < e
                 }
                 get isSubmitButtonEnabled() {
-                    return E.submitButtonEnabled
+                    return f.submitButtonEnabled
                 }
                 get syncProfileThemeWithUserTheme() {
-                    return E.syncProfileThemeWithUserTheme
+                    return f.syncProfileThemeWithUserTheme
                 }
                 get systemPrefersReducedMotion() {
-                    return E.systemPrefersReducedMotion
+                    return f.systemPrefersReducedMotion
                 }
                 get rawPrefersReducedMotion() {
-                    return E.prefersReducedMotion
+                    return f.prefersReducedMotion
                 }
                 get useReducedMotion() {
-                    switch (E.prefersReducedMotion) {
+                    switch (f.prefersReducedMotion) {
                         case "no-preference":
                             return !1;
                         case "reduce":
                             return !0;
                         default:
-                            return "reduce" === E.systemPrefersReducedMotion
+                            return "reduce" === f.systemPrefersReducedMotion
                     }
                 }
                 get systemForcedColors() {
-                    return E.systemForcedColors
+                    return f.systemForcedColors
                 }
                 get syncForcedColors() {
-                    return E.syncForcedColors
+                    return f.syncForcedColors
                 }
                 get useForcedColors() {
-                    return !!E.syncForcedColors && "active" === E.systemForcedColors || !1
+                    return !!f.syncForcedColors && "active" === f.systemForcedColors || !1
                 }
                 get systemPrefersContrast() {
-                    return E.systemPrefersContrast
+                    return f.systemPrefersContrast
                 }
                 get systemPrefersCrossfades() {
-                    return E.systemPrefersCrossfades
+                    return f.systemPrefersCrossfades
                 }
                 get alwaysShowLinkDecorations() {
-                    return E.alwaysShowLinkDecorations
+                    return f.alwaysShowLinkDecorations
                 }
                 get roleStyle() {
-                    return E.roleStyle
-                }
-                get contrastMode() {
-                    return E.contrastMode
+                    return f.roleStyle
                 }
                 getUserAgnosticState() {
-                    return E
+                    return f
                 }
             }
-            g.displayName = "AccessibilityStore", g.persistKey = "AccessibilityStore", g.migrations = [() => {
+            S.displayName = "AccessibilityStore", S.persistKey = "AccessibilityStore", S.migrations = [() => {
                 let e = {
                         FONT_SCALE: "a11yFontScale",
                         ZOOM: "a11yZoom",
                         COLORBLIND_MODE: "a11yColorblindMode"
                     },
                     t = r.default.get(e.FONT_SCALE) || 100,
-                    n = r.default.get(e.ZOOM) || d.Accessibility.ZOOM_DEFAULT,
+                    n = r.default.get(e.ZOOM) || c.Accessibility.ZOOM_DEFAULT,
                     i = r.default.get(e.COLORBLIND_MODE) || !1;
                 return r.default.remove(e.FONT_SCALE), r.default.remove(e.ZOOM), r.default.remove(e.COLORBLIND_MODE), {
                     fontScale: t,
@@ -219,114 +218,114 @@
                 ...e,
                 alwaysShowLinkDecorations: e.saturation <= o.LOW_SATURATION_THRESHOLD
             })];
-            let h = new g(s.default, {
+            let g = new S(s.default, {
                 ACCESSIBILITY_SET_FONT_SIZE: function(e) {
                     var t;
-                    let n = (t = e.fontSize, d.Accessibility.FONT_SIZES.indexOf(t) >= 0 ? t : d.Accessibility.FONT_SIZE_DEFAULT);
-                    if (n > d.Accessibility.FONT_SIZE_MAX || n < d.Accessibility.FONT_SIZE_MIN || E.fontSize === n) return !1;
-                    (E = {
-                        ...E
+                    let n = (t = e.fontSize, c.Accessibility.FONT_SIZES.indexOf(t) >= 0 ? t : c.Accessibility.FONT_SIZE_DEFAULT);
+                    if (n > c.Accessibility.FONT_SIZE_MAX || n < c.Accessibility.FONT_SIZE_MIN || f.fontSize === n) return !1;
+                    (f = {
+                        ...f
                     }).fontSize = n
                 },
                 ACCESSIBILITY_SET_ZOOM: function(e) {
-                    if (e.zoom < d.Accessibility.ZOOM_MIN || e.zoom > d.Accessibility.ZOOM_MAX || E.zoom === e.zoom) return !1;
-                    (E = {
-                        ...E
-                    }).zoom = e.zoom, u.default.setZoomFactor(E.zoom)
+                    if (e.zoom < c.Accessibility.ZOOM_MIN || e.zoom > c.Accessibility.ZOOM_MAX || f.zoom === e.zoom) return !1;
+                    (f = {
+                        ...f
+                    }).zoom = e.zoom, u.default.setZoomFactor(f.zoom)
                 },
                 ACCESSIBILITY_RESET_TO_DEFAULT: function() {
-                    let e = E.fontSize !== d.Accessibility.FONT_SIZE_DEFAULT,
-                        t = E.zoom !== d.Accessibility.ZOOM_DEFAULT;
+                    let e = f.fontSize !== c.Accessibility.FONT_SIZE_DEFAULT,
+                        t = f.zoom !== c.Accessibility.ZOOM_DEFAULT;
                     if (!e && !t) return !1;
-                    (E = {
-                        ...E
-                    }).fontSize !== d.Accessibility.FONT_SIZE_DEFAULT && (E.fontSize = d.Accessibility.FONT_SIZE_DEFAULT), E.zoom !== d.Accessibility.ZOOM_DEFAULT && (E.zoom = d.Accessibility.ZOOM_DEFAULT, u.default.setZoomFactor(E.zoom))
+                    (f = {
+                        ...f
+                    }).fontSize !== c.Accessibility.FONT_SIZE_DEFAULT && (f.fontSize = c.Accessibility.FONT_SIZE_DEFAULT), f.zoom !== c.Accessibility.ZOOM_DEFAULT && (f.zoom = c.Accessibility.ZOOM_DEFAULT, u.default.setZoomFactor(f.zoom))
                 },
                 ACCESSIBILITY_KEYBOARD_MODE_ENABLE: function() {
-                    if (E.keyboardModeEnabled) return !1;
-                    (E = {
-                        ...E
+                    if (f.keyboardModeEnabled) return !1;
+                    (f = {
+                        ...f
                     }).keyboardModeEnabled = !0
                 },
                 ACCESSIBILITY_KEYBOARD_MODE_DISABLE: function() {
-                    if (!E.keyboardModeEnabled) return !1;
-                    (E = {
-                        ...E
+                    if (!f.keyboardModeEnabled) return !1;
+                    (f = {
+                        ...f
                     }).keyboardModeEnabled = !1
                 },
                 ACCESSIBILITY_COLORBLIND_TOGGLE: function() {
-                    (E = {
-                        ...E
-                    }).colorblindMode = !E.colorblindMode
+                    (f = {
+                        ...f
+                    }).colorblindMode = !f.colorblindMode
                 },
                 ACCESSIBILITY_LOW_CONTRAST_TOGGLE: function() {
-                    (E = {
-                        ...E
-                    }).lowContrastMode = !E.lowContrastMode
+                    (f = {
+                        ...f
+                    }).lowContrastMode = !f.lowContrastMode
                 },
                 ACCESSIBILITY_SET_SATURATION: function(e) {
-                    (E = {
-                        ...E
+                    (f = {
+                        ...f
                     }).saturation = e.saturation
                 },
                 ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: function() {
-                    (E = {
-                        ...E
-                    }).desaturateUserColors = !E.desaturateUserColors
+                    (f = {
+                        ...f
+                    }).desaturateUserColors = !f.desaturateUserColors
                 },
                 ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: function(e) {
                     var t;
-                    return E = {
-                        ...E,
+                    return f = {
+                        ...f,
                         systemForcedColors: null !== (t = e.systemForcedColors) && void 0 !== t ? t : "none"
                     }, !0
                 },
                 ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: function(e) {
-                    if (E.systemPrefersContrast === e.systemPrefersContrast) return !1;
-                    E = {
-                        ...E,
+                    if (f.systemPrefersContrast === e.systemPrefersContrast) return !1;
+                    f = {
+                        ...f,
                         systemPrefersContrast: e.systemPrefersContrast
                     }
                 },
                 ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: function(e) {
-                    if (E.systemPrefersReducedMotion === e.systemPrefersReducedMotion) return !1;
-                    E = {
-                        ...E,
+                    if (f.systemPrefersReducedMotion === e.systemPrefersReducedMotion) return !1;
+                    f = {
+                        ...f,
                         systemPrefersReducedMotion: e.systemPrefersReducedMotion
                     }
                 },
                 ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: function(e) {
-                    if (E.systemPrefersCrossfades === e.systemPrefersCrossfades) return !1;
-                    E = {
-                        ...E,
+                    if (f.systemPrefersCrossfades === e.systemPrefersCrossfades) return !1;
+                    f = {
+                        ...f,
                         systemPrefersCrossfades: e.systemPrefersCrossfades
                     }
                 },
                 ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: function(e) {
-                    if (E.prefersReducedMotion === e.prefersReducedMotion) return !1;
-                    E = {
-                        ...E,
+                    if (f.prefersReducedMotion === e.prefersReducedMotion) return !1;
+                    f = {
+                        ...f,
                         prefersReducedMotion: e.prefersReducedMotion
                     }
                 },
                 ACCESSIBILITY_SET_SYNC_FORCED_COLORS: function(e) {
-                    E.syncForcedColors = e.syncForcedColors
+                    f.syncForcedColors = e.syncForcedColors
                 },
                 ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: function(e) {
-                    E = {
-                        ...E,
+                    f = {
+                        ...f,
                         alwaysShowLinkDecorations: e.alwaysShowLinkDecorations
                     }
                 },
                 ACCESSIBILITY_SET_ROLE_STYLE: function(e) {
-                    E.roleStyle = e.roleStyle
+                    f.roleStyle = e.roleStyle
                 },
                 ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: function() {
-                    E.forcedColorsModalSeen = !0
+                    f.forcedColorsModalSeen = !0
                 },
                 KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: function() {
-                    E = {
-                        ...E,
+                    f = {
+                        ...f,
                         keyboardNavigationExplainerModalSeen: !0
                     }
                 },
@@ -334,29 +333,29 @@
                     let {
                         messageGroupSpacing: t
                     } = e;
-                    E = {
-                        ...E,
+                    f = {
+                        ...f,
                         messageGroupSpacing: t
                     }
                 },
                 ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: function() {
-                    (E = {
-                        ...E
-                    }).submitButtonEnabled = !E.submitButtonEnabled
+                    (f = {
+                        ...f
+                    }).submitButtonEnabled = !f.submitButtonEnabled
                 },
                 ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: function() {
-                    (E = {
-                        ...E
-                    }).syncProfileThemeWithUserTheme = !E.syncProfileThemeWithUserTheme
+                    (f = {
+                        ...f
+                    }).syncProfileThemeWithUserTheme = !f.syncProfileThemeWithUserTheme
                 },
-                ACCESSIBILITY_SET_CONTRAST_MODE: function(e) {
+                ACCESSIBILITY_SET_CONTRAST: function(e) {
                     let {
-                        contrastMode: t
+                        contrast: t
                     } = e;
-                    E = {
-                        ...E,
-                        contrastMode: t
+                    f = {
+                        ...f,
+                        contrast: t
                     }
                 }
             });
-            var m = h
+            var h = g

@@ -5,8 +5,8 @@
                 }
             });
             var a = n("446674"),
-                s = n("913144");
-            let r = {
+                r = n("913144");
+            let s = {
                     enabled: !1
                 },
                 i = {},
@@ -14,7 +14,7 @@
                 u = !1;
             class o extends a.default.DeviceSettingsStore {
                 initialize() {
-                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r;
+                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s;
                     u = e.enabled
                 }
                 getWaitingHighFive(e, t) {
@@ -35,7 +35,7 @@
                 }
             }
             o.persistKey = "HighFiveStore";
-            var d = new o(s.default, {
+            var d = new o(r.default, {
                 HIGH_FIVE_QUEUE: function(e) {
                     let {
                         userId: t,
@@ -66,13 +66,13 @@
                     let {
                         completingEmoji: n,
                         completingUserId: a,
-                        waitingUserId: s,
-                        channelId: r
-                    } = e, u = null !== (t = i[r]) && void 0 !== t ? t : {}, o = u[s];
-                    if (delete u[s], null == o) return !1;
-                    l[r] = {
-                        ...l[r],
-                        [s]: [o, n],
+                        waitingUserId: r,
+                        channelId: s
+                    } = e, u = null !== (t = i[s]) && void 0 !== t ? t : {}, o = u[r];
+                    if (delete u[r], null == o) return !1;
+                    l[s] = {
+                        ...l[s],
+                        [r]: [o, n],
                         [a]: [n, o]
                     }
                 },
@@ -81,8 +81,8 @@
                     let {
                         firstUserId: n,
                         secondUserId: a,
-                        channelId: s
-                    } = e, r = null !== (t = l[s]) && void 0 !== t ? t : {};
-                    delete r[n], delete r[a]
+                        channelId: r
+                    } = e, s = null !== (t = l[r]) && void 0 !== t ? t : {};
+                    delete s[n], delete s[a]
                 }
             })

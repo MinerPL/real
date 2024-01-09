@@ -38,17 +38,17 @@
                         return 0 !== g.length && (null != r ? null != i : null != s())
                     }
 
-                    function T() {
-                        null == o && p() && (o = f(I, {
+                    function I() {
+                        null == o && p() && (o = f(T, {
                             timeout: _
                         }))
                     }
 
-                    function I() {
+                    function T() {
                         if (o = null, !p()) return;
                         let e = g.slice();
                         g = [];
-                        let t = A(e);
+                        let t = v(e);
                         t.then(() => {
                             e.forEach(e => {
                                 var t;
@@ -63,7 +63,7 @@
                         })
                     }
 
-                    function A(e) {
+                    function v(e) {
                         let t = Date.now(),
                             n = e.map(e => ({
                                 ...e,
@@ -86,11 +86,11 @@
                             analyticsToken: t,
                             user: n
                         } = e;
-                        return null != t && (i = t), null != n.id && (r = n.id), T(), !1
+                        return null != t && (i = t), null != n.id && (r = n.id), I(), !1
                     }, S.handleConnectionClosed = function() {
-                        return I(), i = null, r = null, !1
+                        return T(), i = null, r = null, !1
                     }, S.handleFingerprint = function() {
-                        return I(), !1
+                        return T(), !1
                     }, S.handleTrack = function(e) {
                         let {
                             event: t,
@@ -115,16 +115,16 @@
                                     let t = e.fingerprint || s();
                                     return null != t ? (0, l.extractId)(t) : null
                                 }(u);
-                            null != c && (u.properties.client_uuid = E.generate(c)), g.push(u), g.length > 1e4 && (g = g.slice(-1e4)), i ? I() : T()
+                            null != c && (u.properties.client_uuid = E.generate(c)), g.push(u), g.length > 1e4 && (g = g.slice(-1e4)), i ? T() : I()
                         }), !1
                     };
-                    class v extends a.default.Store {
+                    class A extends a.default.Store {
                         initialize() {
                             null != m && this.waitFor(...m)
                         }
                         constructor(...e) {
-                            super(...e), this.submitEventsImmediately = A
+                            super(...e), this.submitEventsImmediately = v
                         }
                     }
-                    return v.displayName = "AnalyticsTrackingStore", new v(t, n)
+                    return A.displayName = "AnalyticsTrackingStore", new A(t, n)
                 }

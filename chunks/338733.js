@@ -8,12 +8,12 @@
                 }
             });
             var a = n("884691"),
-                s = n("446674"),
-                r = n("714657");
+                r = n("446674"),
+                s = n("714657");
             let i = "data-client-themes",
                 l = "custom-theme-background",
                 u = () => {
-                    let e = (0, s.useStateFromStores)([r.default], () => r.default.getLinearGradient()),
+                    let e = (0, r.useStateFromStores)([s.default], () => s.default.getLinearGradient()),
                         t = (0, a.useMemo)(() => null == e ? null : ".".concat(l, " {\n      --custom-theme-background: ").concat(e, ";\n    }"), [e]);
                     return t
                 };

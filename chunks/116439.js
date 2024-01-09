@@ -9,8 +9,8 @@
             });
             var a = n("37983");
             n("884691");
-            var s = n("414456"),
-                r = n.n(s),
+            var r = n("414456"),
+                s = n.n(r),
                 i = n("244201"),
                 l = n("289656"),
                 u = n("437825"),
@@ -22,8 +22,8 @@
                 let t = (0, l.getVideoButtonLabel)(e),
                     {
                         enabled: n,
-                        cameraUnavailable: s,
-                        onChange: r,
+                        cameraUnavailable: r,
+                        onChange: s,
                         onCameraUnavailable: d,
                         hasPermission: c,
                         children: f,
@@ -31,7 +31,7 @@
                         join: h
                     } = e,
                     p = (0, i.useAppContext)(),
-                    S = s ? () => d() : () => r(!e.enabled, p);
+                    S = r ? () => d() : () => s(!e.enabled, p);
                 return (0, a.jsx)(a.Fragment, {
                     children: f({
                         onClick: S,
@@ -39,7 +39,7 @@
                         disabled: !n && (!c || E),
                         iconComponent: h || n ? u.default : o.default,
                         label: t,
-                        unavailable: s
+                        unavailable: r
                     })
                 })
             }
@@ -48,7 +48,7 @@
                 let {
                     enabled: t,
                     join: n,
-                    channel: s,
+                    channel: r,
                     onChange: i,
                     onCameraUnavailable: l,
                     cameraUnavailable: u,
@@ -63,7 +63,7 @@
                 return (0, a.jsx)(f, {
                     enabled: t,
                     join: n,
-                    channel: s,
+                    channel: r,
                     onChange: i,
                     onCameraUnavailable: l,
                     cameraUnavailable: u,
@@ -73,13 +73,13 @@
                     children: e => {
                         let {
                             unavailable: n,
-                            ...s
+                            ...r
                         } = e;
                         return (0, a.jsx)(m, {
-                            ...s,
+                            ...r,
                             ...C,
                             isActive: t,
-                            className: r(E, {
+                            className: s(E, {
                                 [c.fauxDisabled]: n
                             }),
                             onPopoutClick: _

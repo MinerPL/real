@@ -33,17 +33,17 @@
                         onResize: h = null,
                         onContentResize: m = null,
                         dir: p = "ltr",
-                        sections: T,
-                        sectionHeight: I,
-                        rowHeight: A,
-                        footerHeight: v = 0,
+                        sections: I,
+                        sectionHeight: T,
+                        rowHeight: v,
+                        footerHeight: A = 0,
                         sidebarHeight: N,
                         listHeaderHeight: C = 0,
                         renderSection: R,
                         renderRow: O,
                         renderFooter: L,
-                        renderSidebar: D,
-                        renderListHeader: y,
+                        renderSidebar: y,
+                        renderListHeader: D,
                         wrapSection: P,
                         getAnchorId: M,
                         paddingTop: U,
@@ -53,8 +53,8 @@
                         chunkSize: F,
                         style: k,
                         innerId: B,
-                        innerRole: H,
-                        innerAriaLabel: x,
+                        innerRole: x,
+                        innerAriaLabel: H,
                         innerAriaMultiselectable: V,
                         innerAriaOrientation: W,
                         innerClassName: Y,
@@ -81,10 +81,10 @@
                         forceUpdateOnChunkChange: eo,
                         anchor: es
                     } = (0, c.useVirtualizedState)({
-                        sections: T,
-                        sectionHeight: I,
-                        rowHeight: A,
-                        footerHeight: v,
+                        sections: I,
+                        sectionHeight: T,
+                        rowHeight: v,
+                        footerHeight: A,
                         sidebarHeight: N,
                         listHeaderHeight: C,
                         paddingTop: U,
@@ -141,7 +141,7 @@
                                 }
                                 return [0, 0]
                             }, [])
-                        }(T);
+                        }(I);
                     r.useImperativeHandle(E, () => ({
                         getScrollerNode: () => J.current,
                         getScrollerState: $,
@@ -176,8 +176,8 @@
                         ...j,
                         children: [r.useMemo(() => (0, i.jsx)(z, {
                             id: B,
-                            role: H,
-                            "aria-label": x,
+                            role: x,
+                            "aria-label": H,
                             "aria-multiselectable": V,
                             "aria-orientation": W,
                             style: {
@@ -224,7 +224,7 @@
                                     return a(c)
                                 }({
                                     items: en,
-                                    renderListHeader: y,
+                                    renderListHeader: D,
                                     renderSection: R,
                                     renderRow: O,
                                     renderFooter: L,
@@ -232,7 +232,7 @@
                                     spacerTop: ee
                                 })
                             })
-                        }), [B, H, x, V, W, Y, z, et, en, R, O, L, y, P, ee]), r.useMemo(() => (function(e) {
+                        }), [B, x, H, V, W, Y, z, et, en, R, O, L, D, P, ee]), r.useMemo(() => (function(e) {
                             let {
                                 renderSidebar: t,
                                 sidebarHeight: n,
@@ -242,10 +242,10 @@
                             return null == n || null == t ? null : t(r, i)
                         })({
                             isSidebarVisible: ei,
-                            renderSidebar: D,
+                            renderSidebar: y,
                             sidebarHeight: N,
                             isListVisible: 0 !== en.length
-                        }), [ei, D, N, en.length])]
+                        }), [ei, y, N, en.length])]
                     })
                 })
             }

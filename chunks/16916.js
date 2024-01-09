@@ -5,8 +5,8 @@
                 }
             });
             var a = n("629109"),
-                s = n("990766"),
-                r = n("271938"),
+                r = n("990766"),
+                s = n("271938"),
                 i = n("374014");
 
             function l(e) {
@@ -23,5 +23,5 @@
                     channelId: u,
                     ownerId: o
                 });
-                o === r.default.getId() && a.default.setGoLiveSource(null), s.stopStream(d, t)
+                o === s.default.getId() && a.default.setGoLiveSource(null), r.stopStream(d, t)
             }

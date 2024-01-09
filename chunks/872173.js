@@ -4,16 +4,16 @@
                     return S.UserSettingsDelay
                 },
                 PreloadedUserSettingsActionCreators: function() {
-                    return T
-                },
-                FrecencyUserSettingsActionCreators: function() {
                     return I
                 },
+                FrecencyUserSettingsActionCreators: function() {
+                    return T
+                },
                 UserSettingsActionCreatorsByType: function() {
-                    return A
+                    return v
                 },
                 updateUserGuildSettings: function() {
-                    return v
+                    return A
                 },
                 updateUserChannelSettings: function() {
                     return N
@@ -270,43 +270,43 @@
                     }, this.logger = new o.default(this.ProtoClass.typeName)
                 }
             }
-            let T = new p(a.PreloadedUserSettings, S.UserSettingsTypes.PRELOADED_USER_SETTINGS),
-                I = new p(l.FrecencyUserSettings, S.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
-                A = {
-                    [S.UserSettingsTypes.PRELOADED_USER_SETTINGS]: T,
-                    [S.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: I
+            let I = new p(a.PreloadedUserSettings, S.UserSettingsTypes.PRELOADED_USER_SETTINGS),
+                T = new p(l.FrecencyUserSettings, S.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
+                v = {
+                    [S.UserSettingsTypes.PRELOADED_USER_SETTINGS]: I,
+                    [S.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: T
                 };
 
-            function v(e, t, n) {
-                return T.updateAsync("guilds", n => (0, E.mutateUserGuildSettingsInternal)(n, e, t), n)
+            function A(e, t, n) {
+                return I.updateAsync("guilds", n => (0, E.mutateUserGuildSettingsInternal)(n, e, t), n)
             }
 
             function N(e, t, n, i) {
-                return v(e, e => (0, E.mutateUserChannelSettingsInternal)(e, t, n), i)
+                return A(e, e => (0, E.mutateUserChannelSettingsInternal)(e, t, n), i)
             }
 
             function C(e) {
-                return T.updateAsync("userContent", t => {
+                return I.updateAsync("userContent", t => {
                     if ((0, d.hasBit)(t.dismissedContents, e)) return !1;
                     t.dismissedContents = (0, d.addBit)(t.dismissedContents, e)
                 }, S.UserSettingsDelay.INFREQUENT_USER_ACTION)
             }
 
             function R(e) {
-                return T.updateAsync("userContent", t => {
+                return I.updateAsync("userContent", t => {
                     if (!(0, d.hasBit)(t.dismissedContents, e)) return !1;
                     t.dismissedContents = (0, d.removeBit)(t.dismissedContents, e)
                 }, S.UserSettingsDelay.INFREQUENT_USER_ACTION)
             }
 
             function O() {
-                return T.updateAsync("userContent", e => {
+                return I.updateAsync("userContent", e => {
                     e.dismissedContents = new Uint8Array
                 }, S.UserSettingsDelay.INFREQUENT_USER_ACTION)
             }
 
             function L() {
-                return T.updateAsync("userContent", e => {
+                return I.updateAsync("userContent", e => {
                     let t = new Uint8Array;
                     for (let e of Object.keys(a.DismissibleContent)) t = (0, d.addBit)(t, a.DismissibleContent[e]);
                     e.dismissedContents = t

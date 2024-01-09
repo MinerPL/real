@@ -23,9 +23,8 @@
                 }
             }), n("702976"), n("70102");
             var i, r, o = n("37983"),
-                s = n("884691");
-            n("727538");
-            var l = n("843455");
+                s = n("884691"),
+                l = n("843455");
 
             function a(e, t) {
                 return e | t
@@ -44,7 +43,9 @@
                 secondaryColor: null,
                 gradient: null,
                 key: "light-false-null-null-null",
-                flags: 0
+                flags: 0,
+                contrast: 1,
+                saturation: 1
             });
 
             function d(e) {
@@ -54,16 +55,20 @@
                     primaryColor: i = null,
                     secondaryColor: r = null,
                     gradient: a = null,
-                    flags: d = 0
-                } = e, _ = s.useMemo(() => u({
+                    flags: d = 0,
+                    contrast: _ = 1,
+                    saturation: f = 1
+                } = e, E = s.useMemo(() => u({
                     theme: n,
                     primaryColor: i,
                     secondaryColor: r,
                     gradient: a,
-                    flags: d
-                }), [n, d, i, r, a]);
+                    flags: d,
+                    contrast: _,
+                    saturation: f
+                }), [n, i, r, a, d, _, f]);
                 return (0, o.jsx)(c.Provider, {
-                    value: _,
+                    value: E,
                     children: t
                 })
             }
@@ -75,16 +80,20 @@
                     primaryColor: i,
                     secondaryColor: r,
                     gradient: l,
-                    flags: a
-                } = e, d = s.useContext(c), _ = s.useMemo(() => u({
-                    theme: null != n ? n : d.theme,
-                    primaryColor: null != i ? i : d.primaryColor,
-                    secondaryColor: null != r ? r : d.secondaryColor,
-                    gradient: null != l ? l : d.gradient,
-                    flags: null != a ? a : d.flags
-                }), [n, a, i, r, d, l]);
+                    flags: a,
+                    contrast: d,
+                    saturation: _
+                } = e, f = s.useContext(c), E = s.useMemo(() => u({
+                    theme: null != n ? n : f.theme,
+                    primaryColor: null != i ? i : f.primaryColor,
+                    secondaryColor: null != r ? r : f.secondaryColor,
+                    gradient: null != l ? l : f.gradient,
+                    flags: null != a ? a : f.flags,
+                    contrast: null != d ? d : f.contrast,
+                    saturation: null != _ ? _ : f.saturation
+                }), [n, f.theme, f.primaryColor, f.secondaryColor, f.gradient, f.flags, f.contrast, f.saturation, i, r, l, a, d, _]);
                 return (0, o.jsx)(c.Provider, {
-                    value: _,
+                    value: E,
                     children: t
                 })
             }

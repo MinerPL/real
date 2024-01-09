@@ -5,8 +5,8 @@
                 }
             }), n("222007");
             var a = n("37983"),
-                s = n("884691"),
-                r = n("817736"),
+                r = n("884691"),
+                s = n("817736"),
                 i = n("759843"),
                 l = n("446674"),
                 u = n("77078"),
@@ -29,26 +29,26 @@
                     align: E,
                     impressionName: p,
                     impressionProperties: S
-                } = e, C = s.useRef(null);
-                s.useEffect(() => {
+                } = e, C = r.useRef(null);
+                r.useEffect(() => {
                     var e, t;
-                    let a = (0, r.findDOMNode)(C.current);
+                    let a = (0, s.findDOMNode)(C.current);
                     if (null == a) return;
-                    let s = e => {
+                    let r = e => {
                         let t = e.target,
-                            a = (0, r.findDOMNode)(C.current);
+                            a = (0, s.findDOMNode)(C.current);
                         !(null != a && (0, u.referencePortalAwareContains)(a, t)) && (window.getSelection().removeAllRanges(), n())
                     };
-                    return null === (e = a.ownerDocument) || void 0 === e || e.addEventListener("click", s, !0), null === (t = a.ownerDocument) || void 0 === t || t.addEventListener("contextmenu", s, !0), () => {
+                    return null === (e = a.ownerDocument) || void 0 === e || e.addEventListener("click", r, !0), null === (t = a.ownerDocument) || void 0 === t || t.addEventListener("contextmenu", r, !0), () => {
                         var e, t;
-                        null === (e = a.ownerDocument) || void 0 === e || e.removeEventListener("click", s, !0), null === (t = a.ownerDocument) || void 0 === t || t.removeEventListener("contextmenu", s, !0)
+                        null === (e = a.ownerDocument) || void 0 === e || e.removeEventListener("click", r, !0), null === (t = a.ownerDocument) || void 0 === t || t.removeEventListener("contextmenu", r, !0)
                     }
                 }, [n]);
-                let m = s.useRef(l);
-                s.useEffect(() => void(m.current = l)), s.useEffect(() => () => {
+                let m = r.useRef(l);
+                r.useEffect(() => void(m.current = l)), r.useEffect(() => () => {
                     var e;
                     return null === (e = m.current) || void 0 === e ? void 0 : e.call(m)
-                }, []), s.useLayoutEffect(() => {
+                }, []), r.useLayoutEffect(() => {
                     var e;
                     null === (e = C.current) || void 0 === e || e.updatePosition()
                 }), (0, c.default)({
@@ -57,15 +57,15 @@
                     properties: S
                 });
                 let g = (0, d.useWindowDispatch)(),
-                    T = s.useCallback(() => {
+                    T = r.useCallback(() => {
                         g.dispatch(_.ComponentActions.POPOUT_SHOW)
                     }, [g]),
-                    A = s.useCallback(() => {
+                    I = r.useCallback(() => {
                         g.dispatch(_.ComponentActions.POPOUT_HIDE)
                     }, [g]);
                 return (0, a.jsx)(h.AppReferencePositionLayer, {
                     onMount: T,
-                    onUnmount: A,
+                    onUnmount: I,
                     reference: () => o,
                     position: null != f ? f : "right",
                     align: null != E ? E : "top",
@@ -75,7 +75,7 @@
                     children: t
                 })
             };
-            class m extends s.PureComponent {
+            class m extends r.PureComponent {
                 componentDidMount() {
                     let {
                         renderLazy: e,
@@ -114,12 +114,12 @@
                     let {
                         appContext: t,
                         target: n,
-                        isOpen: s,
-                        theme: r,
+                        isOpen: r,
+                        theme: s,
                         config: i,
                         rect: l
                     } = this.props, u = null !== (e = this.state.render) && void 0 !== e ? e : this.props.render;
-                    return s && null != l && null != i && null != n && null != u && i.context === t ? (0, a.jsx)(C, {
+                    return r && null != l && null != i && null != n && null != u && i.context === t ? (0, a.jsx)(C, {
                         rect: l,
                         close: this.close,
                         onUnmount: i.onClose,
@@ -129,12 +129,12 @@
                         impressionProperties: i.impressionProperties,
                         children: (e, a) => {
                             let {
-                                position: s
+                                position: r
                             } = e;
                             return u({
                                 className: S.ContextMenuClassName,
-                                position: s,
-                                theme: r,
+                                position: r,
+                                theme: s,
                                 onHeightUpdate: a,
                                 config: i,
                                 target: n,
@@ -170,16 +170,16 @@
                     contextMenu: E.default.getContextMenu(),
                     version: E.default.version,
                     isOpen: E.default.isOpen()
-                })), r = (0, l.useStateFromStores)([f.default], () => f.default.theme), {
+                })), s = (0, l.useStateFromStores)([f.default], () => f.default.theme), {
                     appContext: i,
                     renderWindow: u
-                } = s.useContext(d.default);
+                } = r.useContext(d.default);
                 return (0, a.jsx)(m, {
                     appContext: i,
                     renderWindow: u,
                     ...e,
                     isOpen: n,
-                    theme: r,
+                    theme: s,
                     closeContextMenu: o.closeContextMenu
                 }, t)
             }

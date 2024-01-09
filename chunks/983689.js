@@ -5,8 +5,8 @@
                 }
             });
             var a = n("884691"),
-                s = n("446674"),
-                r = n("551042"),
+                r = n("446674"),
+                s = n("551042"),
                 i = n("77078"),
                 l = n("485328"),
                 u = n("180748"),
@@ -20,22 +20,22 @@
 
             function S(e) {
                 let t = e.ctrlKey || e.altKey || e.metaKey;
-                e.key === p.KeyboardEventKey.Tab && !t && !__OVERLAY__ && !(0, r.hasAnyModalOpen)() && d.default.maybeShowKeyboardNavigationExplainerModal()
+                e.key === p.KeyboardEventKey.Tab && !t && !__OVERLAY__ && !(0, s.hasAnyModalOpen)() && d.default.maybeShowKeyboardNavigationExplainerModal()
             }
 
             function _() {
                 (0, u.disableKeyboardMode)()
             }
             var C = function(e, t) {
-                let n = (0, s.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled);
+                let n = (0, r.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled);
                 (0, i.useFocusJumpSectionManager)(n);
-                let r = (0, a.useCallback)(e => {
+                let s = (0, a.useCallback)(e => {
                     ! function(e, t) {
                         var n, a;
-                        let s = (0, f.isInputLikeElement)(null === (n = (0, f.eventOwnerDocument)(e)) || void 0 === n ? void 0 : n.activeElement);
-                        if (s && e.key !== p.KeyboardEventKey.Tab) return;
-                        let r = e.ctrlKey || e.altKey || e.metaKey || e.key !== p.KeyboardEventKey.Tab && e.shiftKey;
-                        if (r) return;
+                        let r = (0, f.isInputLikeElement)(null === (n = (0, f.eventOwnerDocument)(e)) || void 0 === n ? void 0 : n.activeElement);
+                        if (r && e.key !== p.KeyboardEventKey.Tab) return;
+                        let s = e.ctrlKey || e.altKey || e.metaKey || e.key !== p.KeyboardEventKey.Tab && e.shiftKey;
+                        if (s) return;
                         let i = function(e) {
                             let t = E.keyToCode("shift"),
                                 n = E.keyToCode("tab");
@@ -52,10 +52,10 @@
                             }
                             return null
                         }(e);
-                        null != i && !c.default.hasExactKeybind(i) && !l.default.hasBind(null !== (a = E.codeToKey(i[0])) && void 0 !== a ? a : "") && ((0, u.enableKeyboardMode)(), s && !t && e.preventDefault())
+                        null != i && !c.default.hasExactKeybind(i) && !l.default.hasBind(null !== (a = E.codeToKey(i[0])) && void 0 !== a ? a : "") && ((0, u.enableKeyboardMode)(), r && !t && e.preventDefault())
                     }(e, t)
                 }, [t]);
-                return (0, a.useLayoutEffect)(() => (n ? (e.addEventListener("mousedown", _), e.addEventListener("keydown", S)) : e.addEventListener("keydown", r), () => {
-                    n ? (e.removeEventListener("mousedown", _), e.removeEventListener("keydown", S)) : e.removeEventListener("keydown", r)
-                }), [e, r, n]), n
+                return (0, a.useLayoutEffect)(() => (n ? (e.addEventListener("mousedown", _), e.addEventListener("keydown", S)) : e.addEventListener("keydown", s), () => {
+                    n ? (e.removeEventListener("mousedown", _), e.removeEventListener("keydown", S)) : e.removeEventListener("keydown", s)
+                }), [e, s, n]), n
             }

@@ -58,26 +58,26 @@
                         durationMin: g,
                         durationMax: h,
                         ...m
-                    } = n, p = t._value, T = f(n.duration, g, h), I = f(n.toValue, o, s), A = i[E](t, {
+                    } = n, p = t._value, I = f(n.duration, g, h), T = f(n.toValue, o, s), v = i[E](t, {
                         ...m,
-                        toValue: I,
+                        toValue: T,
                         tension: l,
                         friction: a,
-                        duration: T
-                    }), v = A;
+                        duration: I
+                    }), A = v;
                     if (c || d) {
                         let e = f(n.duration, g, h);
                         r = i[E](t, {
                             ...m,
-                            toValue: c ? p : -I,
+                            toValue: c ? p : -T,
                             tension: l,
                             friction: a,
                             duration: e
-                        }), v = i.sequence([A, r])
+                        }), A = i.sequence([v, r])
                     }
-                    u ? v.start(() => {
+                    u ? A.start(() => {
                         (!S || S && S()) && (_ ? _(e.bind(null, t, n)) : e(t, n))
-                    }) : v.start(_)
+                    }) : A.start(_)
                 },
                 interpolate: function(e) {
                     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];

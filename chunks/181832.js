@@ -1,11 +1,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 useCallBannerBackgroundExperiment: function() {
-                    return r
+                    return s
                 }
             });
             var a = n("862205");
-            let s = (0, a.createExperiment)({
+            let r = (0, a.createExperiment)({
                 kind: "user",
                 id: "2023-10_call_banner_bg",
                 label: "Call Banner Background Experiment",
@@ -21,8 +21,8 @@
                 }]
             });
 
-            function r(e, t) {
-                return s.useExperiment({
+            function s(e, t) {
+                return r.useExperiment({
                     location: t
                 }, {
                     autoTrackExposure: e

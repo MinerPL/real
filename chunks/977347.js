@@ -6,12 +6,12 @@
             });
             var a = n("37983");
             n("884691");
-            var s = n("77078"),
-                r = n("782340");
+            var r = n("77078"),
+                s = n("782340");
 
             function i() {
                 function e() {
-                    (0, s.openModalLazy)(async () => {
+                    (0, r.openModalLazy)(async () => {
                         let {
                             default: e
                         } = await n.el("649486").then(n.bind(n, "649486"));
@@ -20,15 +20,15 @@
                             ...t
                         })
                     })
-                }(0, s.openModalLazy)(async () => {
+                }(0, r.openModalLazy)(async () => {
                     let {
                         default: t
                     } = await n.el("861054").then(n.bind(n, "861054"));
                     return n => (0, a.jsx)(t, {
                         ...n,
-                        header: r.default.Messages.SCREENSHARE_UNAVAILABLE,
-                        body: r.default.Messages.SCREENSHARE_UNAVAILABLE_DOWNLOAD_APP,
-                        confirmText: r.default.Messages.DOWNLOAD_APP,
+                        header: s.default.Messages.SCREENSHARE_UNAVAILABLE,
+                        body: s.default.Messages.SCREENSHARE_UNAVAILABLE_DOWNLOAD_APP,
+                        confirmText: s.default.Messages.DOWNLOAD_APP,
                         onConfirm: e
                     })
                 })
