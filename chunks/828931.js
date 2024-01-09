@@ -12,7 +12,7 @@
                 o = n("685665"),
                 u = n("593094"),
                 d = n("951169"),
-                c = n("509802"),
+                c = n("384997"),
                 E = n("379532"),
                 f = n("526843"),
                 _ = n("442619"),
@@ -100,7 +100,7 @@
                         },
                         location_stack: E
                     })
-                }, H = (0, l.isThemeDark)(n) ? x : b, [V, Y] = (0, c.useDismissibleContentGroup)(t, O.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
+                }, H = (0, l.isThemeDark)(n) ? x : b, [V, Y] = (0, c.useSelectedDismissibleContent)(t, O.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
                 return (0, a.jsx)(a.Fragment, {
                     children: (() => {
                         switch (V) {

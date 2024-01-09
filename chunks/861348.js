@@ -5,8 +5,8 @@
                 }
             });
             var n = a("37983"),
-                s = a("884691"),
-                i = a("432710"),
+                i = a("884691"),
+                s = a("432710"),
                 l = a("77078"),
                 r = a("155084"),
                 c = a("489622"),
@@ -17,8 +17,8 @@
                 S = a("422671"),
                 f = a("792105"),
                 T = a("133479"),
-                A = a("966677"),
-                E = a("49111"),
+                E = a("966677"),
+                A = a("49111"),
                 I = a("782340"),
                 g = a("302713");
 
@@ -27,13 +27,13 @@
                     e = (0, S.useSafetyHubInitialized)(),
                     a = (0, d.useSafetyHubAccountStanding)(),
                     N = (0, _.useSafetyHubFetchError)();
-                return (s.useEffect(() => {
+                return (i.useEffect(() => {
                     o.getSafetyHubData()
-                }, []), s.useEffect(() => {
-                    e && (u.default.track(E.AnalyticEvents.SAFETY_HUB_VIEWED, {
+                }, []), i.useEffect(() => {
+                    e && (u.default.track(A.AnalyticEvents.SAFETY_HUB_VIEWED, {
                         account_standing: a.state
                     }), r.default.increment({
-                        name: i.MetricEvents.SAFETY_HUB_VIEW
+                        name: s.MetricEvents.SAFETY_HUB_VIEW
                     }))
                 }, [e]), t) ? (0, n.jsx)("div", {
                     children: (0, n.jsx)(l.Spinner, {})
@@ -46,6 +46,6 @@
                     })]
                 }) : (0, n.jsxs)("div", {
                     className: g.container,
-                    children: [(0, n.jsx)(T.default, {}), (0, n.jsx)(A.ConnectedSafetyHubViolationsContainer, {})]
+                    children: [(0, n.jsx)(T.default, {}), (0, n.jsx)(E.ConnectedSafetyHubViolationsContainer, {})]
                 })
             }

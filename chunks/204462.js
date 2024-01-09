@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return h
+                    return T
                 }
             });
             var a = n("37983");
@@ -20,12 +20,12 @@
                 m = n("315102"),
                 g = n("402671"),
                 I = n("49111"),
-                p = n("958706"),
-                S = n("782340"),
-                A = n("791507");
-            let v = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
+                S = n("958706"),
+                p = n("782340"),
+                _ = n("791507");
+            let A = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
 
-            function _(e) {
+            function v(e) {
                 var t;
                 let {
                     emoji: n,
@@ -45,19 +45,19 @@
                     spacing: 16,
                     forceOpen: i,
                     children: e => (0, a.jsx)("div", {
-                        "aria-label": S.default.Messages.ADD_REACTION_NAMED.format({
+                        "aria-label": p.default.Messages.ADD_REACTION_NAMED.format({
                             emojiName: n.name
                         }),
-                        className: l(A.button, {
-                            [A.focused]: i
+                        className: l(_.button, {
+                            [_.focused]: i
                         }),
                         ...e,
                         children: null == r || "" === r.trim() ? (0, a.jsx)("span", {
-                            className: l("emoji", "emoji-text", A.icon),
+                            className: l("emoji", "emoji-text", _.icon),
                             ...e,
                             children: d
                         }) : (0, a.jsx)("img", {
-                            className: A.icon,
+                            className: _.icon,
                             src: r,
                             alt: ""
                         })
@@ -65,7 +65,7 @@
                 }, null !== (t = n.id) && void 0 !== t ? t : n.name)
             }
 
-            function h(e, t) {
+            function T(e, t) {
                 let n = (0, r.useEmojiInPriorityOrder)(t.guild_id),
                     {
                         viewAndUseEnabled: i
@@ -74,22 +74,22 @@
                     }),
                     l = n.filter(e => {
                         var n;
-                        return !(e.useSpriteSheet && v.indexOf(null !== (n = e.uniqueName) && void 0 !== n ? n : "") >= 0) && !g.default.isEmojiPremiumLocked({
+                        return !(e.useSpriteSheet && A.indexOf(null !== (n = e.uniqueName) && void 0 !== n ? n : "") >= 0) && !g.default.isEmojiPremiumLocked({
                             emoji: e,
                             channel: t,
-                            intention: p.EmojiIntention.REACTION,
+                            intention: S.EmojiIntention.REACTION,
                             canViewAndUsePackEmoji: i
                         })
                     });
                 l.length > 4 && (l.length = 4);
                 let m = E.RenderReactions.useSetting(),
-                    S = (0, f.useIsActiveChannelOrUnarchivableThread)(t),
-                    h = (0, s.useStateFromStores)([M.default], () => m && S && (t.isPrivate() || M.default.can(I.Permissions.ADD_REACTIONS, t)), [t, S, m]),
-                    T = n => {
+                    p = (0, f.useIsActiveChannelOrUnarchivableThread)(t),
+                    T = (0, s.useStateFromStores)([M.default], () => m && p && (t.isPrivate() || M.default.can(I.Permissions.ADD_REACTIONS, t)), [t, p, m]),
+                    h = n => {
                         (0, o.addReaction)(t.id, e.id, (0, c.toReactionEmoji)(n), void 0)
                     };
-                return h && l.length > 0 ? (0, a.jsx)(u.MenuGroup, {
-                    className: A.wrapper,
+                return T && l.length > 0 ? (0, a.jsx)(u.MenuGroup, {
+                    className: _.wrapper,
                     children: l.map((e, t) => {
                         var n;
                         return (0, a.jsx)(u.MenuItem, {
@@ -98,12 +98,12 @@
                                 let {
                                     isFocused: n
                                 } = t;
-                                return (0, a.jsx)(_, {
+                                return (0, a.jsx)(v, {
                                     emoji: e,
                                     isFocused: n
                                 })
                             },
-                            action: () => T(e),
+                            action: () => h(e),
                             dontCloseOnActionIfHoldingShiftKey: !0
                         }, t)
                     })

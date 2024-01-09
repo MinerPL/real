@@ -1,6 +1,6 @@
             "use strict";
             l.r(t), l.d(t, {
-                useDismissibleContentGroup: function() {
+                useSelectedDismissibleContent: function() {
                     return d
                 },
                 default: function() {

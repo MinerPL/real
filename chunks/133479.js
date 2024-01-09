@@ -5,8 +5,8 @@
                 }
             }), a("222007");
             var n = a("37983"),
-                s = a("884691"),
-                i = a("917351"),
+                i = a("884691"),
+                s = a("917351"),
                 l = a("446674"),
                 r = a("669491"),
                 c = a("891128"),
@@ -17,72 +17,72 @@
                 S = a("908539"),
                 f = a("132206"),
                 T = a("260883"),
-                A = a("170213"),
-                E = a("782340"),
+                E = a("170213"),
+                A = a("782340"),
                 I = a("122698");
 
             function g() {
                 let t = (0, f.useSafetyHubAccountStanding)(),
                     e = (0, l.useStateFromStores)([_.default], () => _.default.getCurrentUser()),
-                    [a, g] = s.useState(36),
-                    N = s.useRef({
+                    [a, g] = i.useState(36),
+                    N = i.useRef({
                         [S.AccountStandingState.ALL_GOOD]: null,
                         [S.AccountStandingState.LIMITED]: null,
                         [S.AccountStandingState.VERY_LIMITED]: null,
                         [S.AccountStandingState.AT_RISK]: null,
                         [S.AccountStandingState.SUSPENDED]: null
                     }),
-                    m = s.useCallback(() => {
+                    m = i.useCallback(() => {
                         let t = Math.max(...Object.values(N.current).map(t => {
                             var e;
                             return null !== (e = null == t ? void 0 : t.getBoundingClientRect().height) && void 0 !== e ? e : 36
                         }));
                         g(Math.max(t, 36))
                     }, []);
-                s.useEffect(() => {
+                i.useEffect(() => {
                     m();
-                    let t = (0, i.debounce)(m, 100);
+                    let t = (0, s.debounce)(m, 100);
                     window.addEventListener("resize", t)
                 }, [m]);
                 let C = {
                         [S.AccountStandingState.ALL_GOOD]: {
-                            title: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE,
-                            description: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION.format({
-                                termsOfService: A.SafetyHubLinks.TOS_LINK,
-                                communityGuidelines: A.SafetyHubLinks.COMMUNITY_GUIDELINES
+                            title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE,
+                            description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION.format({
+                                termsOfService: E.SafetyHubLinks.TOS_LINK,
+                                communityGuidelines: E.SafetyHubLinks.COMMUNITY_GUIDELINES
                             }),
-                            status: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_SHORT,
+                            status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_SHORT,
                             Icon: c.CircleCheckIcon,
                             color: r.default.colors.STATUS_POSITIVE
                         },
                         [S.AccountStandingState.LIMITED]: {
-                            title: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_TITLE,
-                            description: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_DESCRIPTION,
-                            status: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_SHORT,
+                            title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_TITLE,
+                            description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_DESCRIPTION,
+                            status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_SHORT,
                             Icon: u.CircleExclamationPointIcon,
                             color: r.default.colors.STATUS_WARNING
                         },
                         [S.AccountStandingState.VERY_LIMITED]: {
-                            title: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_TITLE,
-                            description: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_DESCRIPTION,
-                            status: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_SHORT,
+                            title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_TITLE,
+                            description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_DESCRIPTION,
+                            status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_SHORT,
                             Icon: u.CircleExclamationPointIcon,
                             color: r.default.unsafe_rawColors.ORANGE_345
                         },
                         [S.AccountStandingState.AT_RISK]: {
-                            title: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_TITLE,
-                            description: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_DESCRIPTION,
-                            status: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_SHORT,
+                            title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_TITLE,
+                            description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_DESCRIPTION,
+                            status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_SHORT,
                             Icon: u.CircleExclamationPointIcon,
                             color: r.default.colors.STATUS_DANGER
                         },
                         [S.AccountStandingState.SUSPENDED]: {
-                            title: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_TITLE,
-                            description: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_DESCRIPTION.format({
-                                termsOfService: A.SafetyHubLinks.TOS_LINK,
-                                communityGuidelines: A.SafetyHubLinks.COMMUNITY_GUIDELINES
+                            title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_TITLE,
+                            description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_DESCRIPTION.format({
+                                termsOfService: E.SafetyHubLinks.TOS_LINK,
+                                communityGuidelines: E.SafetyHubLinks.COMMUNITY_GUIDELINES
                             }),
-                            status: E.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_SHORT,
+                            status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_SHORT,
                             Icon: o.CircleXIcon,
                             color: r.default.colors.ICON_MUTED
                         }
@@ -90,10 +90,10 @@
                     {
                         title: h,
                         description: x,
-                        color: H,
-                        Icon: O
+                        color: p,
+                        Icon: H
                     } = C[t.state],
-                    p = Object.keys(C).length;
+                    D = Object.keys(C).length;
                 return (0, n.jsxs)(d.Card, {
                     className: I.container,
                     outline: !1,
@@ -113,7 +113,7 @@
                                 children: h.format({
                                     hook: t => (0, n.jsx)(d.Text, {
                                         style: {
-                                            color: H.css
+                                            color: p.css
                                         },
                                         variant: "heading-lg/bold",
                                         tag: "span",
@@ -133,23 +133,23 @@
                             children: [(0, n.jsx)("div", {
                                 className: I.line
                             }), Object.entries(C).map((e, a) => {
-                                let [s, i] = e, l = parseInt(s) === t.state;
+                                let [i, s] = e, l = parseInt(i) === t.state;
                                 return (0, n.jsxs)("div", {
                                     className: I.statusOption,
-                                    ref: t => N.current[parseInt(s)] = t,
-                                    children: [l ? (0, n.jsx)(O, {
+                                    ref: t => N.current[parseInt(i)] = t,
+                                    children: [l ? (0, n.jsx)(H, {
                                         className: I.marker,
-                                        color: i.color
+                                        color: s.color
                                     }) : (0, n.jsx)("div", {
                                         className: I.marker,
                                         style: {
                                             marginLeft: 0 === a ? -6 : 0,
-                                            marginRight: a === p - 1 ? -6 : 0
+                                            marginRight: a === D - 1 ? -6 : 0
                                         },
                                         children: (0, n.jsx)("div", {
                                             className: I.empty
                                         })
-                                    }), i.status.format({
+                                    }), s.status.format({
                                         hook: t => (0, n.jsx)(d.Text, {
                                             color: "text-normal",
                                             variant: "text-sm/normal",

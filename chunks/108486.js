@@ -20,7 +20,7 @@
                 f = s("812204"),
                 p = s("685665"),
                 x = s("10641"),
-                h = s("509802"),
+                h = s("384997"),
                 j = s("649844"),
                 F = s("53253"),
                 m = s("977591"),
@@ -145,7 +145,7 @@
                     autoTrackExposure: A
                 }), I = [];
                 y && A && I.push(a.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
-                let [Z, G] = (0, h.useDismissibleContentGroup)(I), H = null != Z, w = (0, v.useDirectMessageRecipient)(s), R = null != w, {
+                let [Z, G] = (0, h.useSelectedDismissibleContent)(I), H = null != Z, w = (0, v.useDirectMessageRecipient)(s), R = null != w, {
                     enabled: U
                 } = m.ExpandedGiftingRevampExperiment.useExperiment({
                     location: "ChannelPremiumGiftButton"

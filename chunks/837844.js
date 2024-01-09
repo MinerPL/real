@@ -10,7 +10,7 @@
                 l = n.n(i),
                 r = n("65597"),
                 o = n("151426"),
-                u = n("509802"),
+                u = n("384997"),
                 d = n("131143"),
                 c = n("162771"),
                 E = n("120363"),
@@ -46,7 +46,7 @@
             function C() {
                 let e = (0, r.default)([c.default], () => c.default.getGuildId()),
                     t = (0, E.useChannelListUpsells)(e),
-                    [n, s] = (0, u.useDismissibleContentGroup)(Object.values(t).filter(e => {
+                    [n, s] = (0, u.useSelectedDismissibleContent)(Object.values(t).filter(e => {
                         let {
                             disabled: t
                         } = e;

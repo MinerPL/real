@@ -7,7 +7,7 @@
             var l = a("37983"),
                 n = a("884691"),
                 s = a("151426"),
-                i = a("509802"),
+                i = a("384997"),
                 d = a("67076"),
                 r = a("994428");
             let u = [s.DismissibleContent.GUILD_FEED_NUX_CARD];

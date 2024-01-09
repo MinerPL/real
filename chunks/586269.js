@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 QUARANTINE_APPEAL_LINK: function() {
-                    return a
+                    return s
                 }
             });
-            let a = "https://dis.gd/appeal"
+            let s = "https://dis.gd/appeal"

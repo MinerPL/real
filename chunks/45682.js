@@ -14,7 +14,7 @@
                 c = i("856567"),
                 d = i("77078"),
                 f = i("206230"),
-                E = i("509802"),
+                E = i("384997"),
                 m = i("697218"),
                 I = i("181114"),
                 p = i("216422"),
@@ -58,7 +58,7 @@
                     checked: t,
                     onClick: i,
                     id: s = "burst-reaction-toggle-button"
-                } = e, p = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), N = m.default.getCurrentUser(), A = null != N && !(0, g.isPremium)(N), y = A ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [v, j] = (0, E.useDismissibleContentGroup)(y), [R, O] = l.useState(!1), [M, x] = (0, r.useSpring)(() => ({})), P = (0, r.animated)(c.SuperReactionIcon);
+                } = e, p = (0, o.useStateFromStores)([f.default], () => f.default.useReducedMotion), N = m.default.getCurrentUser(), A = null != N && !(0, g.isPremium)(N), y = A ? [] : [u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP], [v, j] = (0, E.useSelectedDismissibleContent)(y), [R, O] = l.useState(!1), [M, x] = (0, r.useSpring)(() => ({})), P = (0, r.animated)(c.SuperReactionIcon);
                 l.useEffect(() => {
                     let e = v === u.DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
                     e && (j(_.ContentDismissActionType.DISMISS), setTimeout(() => O(e), 200))
