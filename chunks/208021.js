@@ -1,38 +1,38 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return E
                 }
             });
-            var l = n("913144"),
-                a = n("819689"),
-                s = n("115718"),
-                i = n("347895"),
-                r = n("341329"),
-                o = n("582713"),
-                u = n("724210"),
-                d = {
+            var i = n("913144"),
+                o = n("819689"),
+                l = n("115718"),
+                a = n("347895"),
+                u = n("341329"),
+                d = n("582713"),
+                s = n("724210"),
+                E = {
                     openPrivateChannelAsSidebar(e) {
                         let {
                             channelId: t,
                             messageId: n,
-                            baseChannelId: s,
-                            hasSingleMessageRequest: i
+                            baseChannelId: l,
+                            hasSingleMessageRequest: a
                         } = e;
-                        l.default.dispatch({
+                        i.default.dispatch({
                             type: "SIDEBAR_VIEW_CHANNEL",
-                            sidebarType: o.SidebarType.VIEW_MESSAGE_REQUEST,
-                            baseChannelId: s,
+                            sidebarType: d.SidebarType.VIEW_MESSAGE_REQUEST,
+                            baseChannelId: l,
                             channelId: t,
                             details: {
-                                type: o.SidebarOpenDetailsType.MESSAGE_REQUEST,
-                                hasSingleMessageRequest: i
+                                type: d.SidebarOpenDetailsType.MESSAGE_REQUEST,
+                                hasSingleMessageRequest: a
                             }
-                        }), null != n ? a.default.jumpToMessage({
+                        }), null != n ? o.default.jumpToMessage({
                             channelId: t,
                             messageId: n,
                             flash: !0
-                        }) : r.default.fetchMessages({
+                        }) : u.default.fetchMessages({
                             channelId: t
                         })
                     },
@@ -40,25 +40,25 @@
                         let {
                             guildId: t,
                             channelId: n,
-                            baseChannelId: i,
-                            flash: u = !0,
-                            details: d
+                            baseChannelId: a,
+                            flash: s = !0,
+                            details: E
                         } = e;
-                        l.default.dispatch({
+                        i.default.dispatch({
                             type: "SIDEBAR_VIEW_CHANNEL",
-                            sidebarType: o.SidebarType.VIEW_CHANNEL,
+                            sidebarType: d.SidebarType.VIEW_CHANNEL,
                             guildId: t,
-                            baseChannelId: i,
+                            baseChannelId: a,
                             channelId: n,
-                            details: d
+                            details: E
                         });
-                        let c = null == d ? void 0 : d.initialMessageId;
-                        null != c ? a.default.jumpToMessage({
+                        let r = null == E ? void 0 : E.initialMessageId;
+                        null != r ? o.default.jumpToMessage({
                             channelId: n,
-                            messageId: c,
-                            flash: u,
-                            jumpType: s.JumpTypes.INSTANT
-                        }) : r.default.fetchMessages({
+                            messageId: r,
+                            flash: s,
+                            jumpType: l.JumpTypes.INSTANT
+                        }) : u.default.fetchMessages({
                             guildId: t,
                             channelId: n
                         })
@@ -68,11 +68,11 @@
                             guildId: t,
                             channelId: n
                         } = e;
-                        null != t && ((0, i.selectHomeResourceChannel)(t, n, !1), l.default.dispatch({
+                        null != t && ((0, a.selectHomeResourceChannel)(t, n, !1), i.default.dispatch({
                             type: "SIDEBAR_VIEW_CHANNEL",
-                            sidebarType: o.SidebarType.VIEW_CHANNEL,
+                            sidebarType: d.SidebarType.VIEW_CHANNEL,
                             guildId: t,
-                            baseChannelId: u.StaticChannelRoute.GUILD_HOME,
+                            baseChannelId: s.StaticChannelRoute.GUILD_HOME,
                             channelId: n
                         }))
                     },
@@ -80,28 +80,28 @@
                         let {
                             guildId: t,
                             baseChannelId: n,
-                            channelId: i,
-                            flash: u = !0,
-                            details: d
+                            channelId: a,
+                            flash: s = !0,
+                            details: E
                         } = e;
-                        l.default.dispatch({
+                        i.default.dispatch({
                             type: "SIDEBAR_VIEW_CHANNEL",
-                            sidebarType: o.SidebarType.VIEW_THREAD,
+                            sidebarType: d.SidebarType.VIEW_THREAD,
                             baseChannelId: n,
-                            channelId: i,
-                            details: d
-                        }), (null == d ? void 0 : d.initialMessageId) != null ? a.default.jumpToMessage({
-                            channelId: i,
-                            messageId: d.initialMessageId,
-                            flash: u,
-                            jumpType: s.JumpTypes.INSTANT
-                        }) : r.default.fetchMessages({
+                            channelId: a,
+                            details: E
+                        }), (null == E ? void 0 : E.initialMessageId) != null ? o.default.jumpToMessage({
+                            channelId: a,
+                            messageId: E.initialMessageId,
+                            flash: s,
+                            jumpType: l.JumpTypes.INSTANT
+                        }) : u.default.fetchMessages({
                             guildId: t,
-                            channelId: i
+                            channelId: a
                         })
                     },
                     closeChannelSidebar(e) {
-                        l.default.dispatch({
+                        i.default.dispatch({
                             type: "SIDEBAR_CLOSE",
                             baseChannelId: e
                         })
@@ -110,19 +110,19 @@
                         let {
                             guildId: t,
                             baseChannelId: n,
-                            sidebarType: a,
-                            details: s
+                            sidebarType: o,
+                            details: l
                         } = e;
-                        l.default.dispatch({
+                        i.default.dispatch({
                             type: "SIDEBAR_VIEW_GUILD",
-                            sidebarType: a,
+                            sidebarType: o,
                             baseChannelId: n,
                             guildId: t,
-                            details: s
+                            details: l
                         })
                     },
                     closeGuildSidebar(e) {
-                        l.default.dispatch({
+                        i.default.dispatch({
                             type: "SIDEBAR_CLOSE_GUILD",
                             guildId: e
                         })

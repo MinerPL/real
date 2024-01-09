@@ -9,15 +9,15 @@
                 s = a("917351"),
                 l = a("446674"),
                 r = a("669491"),
-                c = a("891128"),
-                u = a("165984"),
+                u = a("891128"),
+                c = a("165984"),
                 o = a("505088"),
                 d = a("77078"),
                 _ = a("697218"),
                 S = a("908539"),
                 f = a("132206"),
-                T = a("260883"),
-                E = a("170213"),
+                E = a("260883"),
+                T = a("170213"),
                 A = a("782340"),
                 I = a("122698");
 
@@ -48,39 +48,39 @@
                         [S.AccountStandingState.ALL_GOOD]: {
                             title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE,
                             description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION.format({
-                                termsOfService: E.SafetyHubLinks.TOS_LINK,
-                                communityGuidelines: E.SafetyHubLinks.COMMUNITY_GUIDELINES
+                                termsOfService: T.SafetyHubLinks.TOS_LINK,
+                                communityGuidelines: T.SafetyHubLinks.COMMUNITY_GUIDELINES
                             }),
                             status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_SHORT,
-                            Icon: c.CircleCheckIcon,
+                            Icon: u.CircleCheckIcon,
                             color: r.default.colors.STATUS_POSITIVE
                         },
                         [S.AccountStandingState.LIMITED]: {
                             title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_TITLE,
                             description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_DESCRIPTION,
                             status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_SHORT,
-                            Icon: u.CircleExclamationPointIcon,
+                            Icon: c.CircleExclamationPointIcon,
                             color: r.default.colors.STATUS_WARNING
                         },
                         [S.AccountStandingState.VERY_LIMITED]: {
                             title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_TITLE,
                             description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_DESCRIPTION,
                             status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_SHORT,
-                            Icon: u.CircleExclamationPointIcon,
+                            Icon: c.CircleExclamationPointIcon,
                             color: r.default.unsafe_rawColors.ORANGE_345
                         },
                         [S.AccountStandingState.AT_RISK]: {
                             title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_TITLE,
                             description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_DESCRIPTION,
                             status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_SHORT,
-                            Icon: u.CircleExclamationPointIcon,
+                            Icon: c.CircleExclamationPointIcon,
                             color: r.default.colors.STATUS_DANGER
                         },
                         [S.AccountStandingState.SUSPENDED]: {
                             title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_TITLE,
                             description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_DESCRIPTION.format({
-                                termsOfService: E.SafetyHubLinks.TOS_LINK,
-                                communityGuidelines: E.SafetyHubLinks.COMMUNITY_GUIDELINES
+                                termsOfService: T.SafetyHubLinks.TOS_LINK,
+                                communityGuidelines: T.SafetyHubLinks.COMMUNITY_GUIDELINES
                             }),
                             status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_SHORT,
                             Icon: o.CircleXIcon,
@@ -90,8 +90,8 @@
                     {
                         title: h,
                         description: x,
-                        color: p,
-                        Icon: H
+                        color: H,
+                        Icon: p
                     } = C[t.state],
                     D = Object.keys(C).length;
                 return (0, n.jsxs)(d.Card, {
@@ -99,7 +99,7 @@
                     outline: !1,
                     children: [(0, n.jsx)("div", {
                         className: I.profile,
-                        children: (0, n.jsx)(T.default, {
+                        children: (0, n.jsx)(E.default, {
                             user: e,
                             size: d.AvatarSizes.SIZE_80
                         })
@@ -113,7 +113,7 @@
                                 children: h.format({
                                     hook: t => (0, n.jsx)(d.Text, {
                                         style: {
-                                            color: p.css
+                                            color: H.css
                                         },
                                         variant: "heading-lg/bold",
                                         tag: "span",
@@ -137,7 +137,7 @@
                                 return (0, n.jsxs)("div", {
                                     className: I.statusOption,
                                     ref: t => N.current[parseInt(i)] = t,
-                                    children: [l ? (0, n.jsx)(H, {
+                                    children: [l ? (0, n.jsx)(p, {
                                         className: I.marker,
                                         color: s.color
                                     }) : (0, n.jsx)("div", {

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return C
                 }
             });
             var i = n("816494"),
@@ -19,8 +19,10 @@
                 E = null,
                 _ = null,
                 p = !1,
-                h = null;
-            class I extends l.default.Store {
+                h = null,
+                I = !1,
+                S = null;
+            class T extends l.default.Store {
                 isFetching() {
                     return d
                 }
@@ -51,9 +53,15 @@
                 getAppealSignal() {
                     return h
                 }
+                getIsSubmitting() {
+                    return I
+                }
+                getSubmitError() {
+                    return S
+                }
             }
-            I.displayName = "SafetyHubStore";
-            var S = new I(a.default, {
+            T.displayName = "SafetyHubStore";
+            var C = new T(a.default, {
                 SAFETY_HUB_FETCH_START: function(e) {
                     d = !0
                 },
@@ -102,6 +110,20 @@
                         signal: t
                     } = e;
                     h = t
+                },
+                SAFETY_HUB_REQUEST_REVIEW_START: function(e) {
+                    let {} = e;
+                    I = !0, S = null
+                },
+                SAFETY_HUB_REQUEST_REVIEW_SUCCESS: function(e) {
+                    let {} = e;
+                    I = !1, S = null
+                },
+                SAFETY_HUB_REQUEST_REVIEW_FAILURE: function(e) {
+                    let {
+                        error: t
+                    } = e;
+                    I = !1, S = t
                 },
                 LOGOUT: function() {
                     d = !1, s = {}, c = {

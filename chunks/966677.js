@@ -1,7 +1,7 @@
             "use strict";
             a.r(e), a.d(e, {
                 ConnectedSafetyHubViolationsContainer: function() {
-                    return U
+                    return v
                 }
             }), a("222007");
             var n = a("37983"),
@@ -9,15 +9,15 @@
                 s = a("414456"),
                 l = a.n(s),
                 r = a("779807"),
-                c = a("77078"),
-                u = a("461380"),
+                u = a("77078"),
+                c = a("461380"),
                 o = a("543289"),
                 d = a("300113"),
                 _ = a("599110"),
                 S = a("299039"),
                 f = a("667963"),
-                T = a("736393"),
-                E = a("310888"),
+                E = a("736393"),
+                T = a("310888"),
                 A = a("132206"),
                 I = a("698609"),
                 g = a("170213"),
@@ -31,19 +31,19 @@
                         opened: i,
                         count: s
                     } = t;
-                    return (0, n.jsxs)(c.Clickable, {
+                    return (0, n.jsxs)(u.Clickable, {
                         className: C.header,
                         onClick: a,
                         children: [(0, n.jsx)("div", {
                             className: C.headerIconWrapper,
                             children: (0, n.jsx)(r.WarningIcon, {
-                                color: "active" === e ? c.tokens.colors.INTERACTIVE_ACTIVE : c.tokens.colors.INTERACTIVE_MUTED,
+                                color: "active" === e ? u.tokens.colors.INTERACTIVE_ACTIVE : u.tokens.colors.INTERACTIVE_MUTED,
                                 width: 24,
                                 height: 24
                             })
                         }), (0, n.jsxs)("div", {
                             className: C.title,
-                            children: [(0, n.jsx)(c.Heading, {
+                            children: [(0, n.jsx)(u.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "text-normal",
                                 children: "active" === e ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_ACTIVE.format({
@@ -51,17 +51,17 @@
                                 }) : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_HEADER_EXPIRED.format({
                                     count: s.toString()
                                 })
-                            }), (0, n.jsx)(c.Heading, {
+                            }), (0, n.jsx)(u.Heading, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
                                 children: "active" === e ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_ACTIVE : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_SUBHEADER_EXPIRED
                             })]
                         }), (0, n.jsx)("div", {
                             className: C.caret,
-                            children: (0, n.jsx)(u.default, {
+                            children: (0, n.jsx)(c.default, {
                                 width: 18,
                                 height: 18,
-                                direction: i ? u.default.Directions.UP : u.default.Directions.DOWN
+                                direction: i ? c.default.Directions.UP : c.default.Directions.DOWN
                             })
                         })]
                     })
@@ -78,51 +78,51 @@
                         }), (0, n.jsx)(o.default, {
                             className: C.stars
                         })]
-                    }), (0, n.jsx)(c.Heading, {
+                    }), (0, n.jsx)(u.Heading, {
                         variant: "heading-md/bold",
                         className: C.emptyStateText,
                         children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_ACTIVE
-                    }), (0, n.jsx)(c.Text, {
+                    }), (0, n.jsx)(u.Text, {
                         variant: "text-xs/normal",
                         className: C.emptyStateSubtext,
                         children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_SUBTEXT_ACTIVE
                     })]
                 }),
-                p = () => (0, n.jsx)("div", {
+                H = () => (0, n.jsx)("div", {
                     className: C.emptyState,
-                    children: (0, n.jsx)(c.Text, {
+                    children: (0, n.jsx)(u.Text, {
                         variant: "text-xs/normal",
                         className: C.emptyStateSubtext,
                         children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_EXPIRED
                     })
                 }),
-                H = t => {
+                p = t => {
                     let {
                         timestamp: e
                     } = t;
-                    return (0, n.jsx)(c.Text, {
+                    return (0, n.jsx)(u.Text, {
                         variant: "text-xs/normal",
                         className: C.timestamp,
-                        children: (0, T.getClassificationRelativeIncidentTime)(e)
+                        children: (0, E.getClassificationRelativeIncidentTime)(e)
                     })
                 },
-                D = () => (0, n.jsx)(c.Text, {
+                D = () => (0, n.jsx)(u.Text, {
                     variant: "text-xs/bold",
                     className: C.newBadge,
                     children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_NEW
                 }),
-                O = t => {
+                U = t => {
                     var e;
                     let {
                         classification: i
                     } = t, {
                         id: s,
                         description: r,
-                        max_expiration_time: u
-                    } = i, o = S.default.extractTimestamp(s), d = (0, E.useIsNewClassification)(i), _ = (0, f.useIsSafetyHubDisplayGuildViolationsEnabled)("violations_container"), T = new Date(u), A = T.toDateString();
-                    return (0, n.jsx)(c.Clickable, {
+                        max_expiration_time: c
+                    } = i, o = S.default.extractTimestamp(s), d = (0, T.useIsNewClassification)(i), _ = (0, f.useIsSafetyHubDisplayGuildViolationsEnabled)("violations_container"), E = new Date(c), A = E.toDateString();
+                    return (0, n.jsx)(u.Clickable, {
                         onClick: () => {
-                            (0, c.openModalLazy)(async () => {
+                            (0, u.openModalLazy)(async () => {
                                 let {
                                     default: t
                                 } = await a.el("825138").then(a.bind(a, "825138"));
@@ -138,30 +138,30 @@
                         }),
                         children: (0, n.jsxs)("div", {
                             className: C.descriptionContainer,
-                            children: [d ? (0, n.jsx)(D, {}) : (0, n.jsx)(H, {
+                            children: [d ? (0, n.jsx)(D, {}) : (0, n.jsx)(p, {
                                 timestamp: o
-                            }), (0, n.jsx)(c.Heading, {
+                            }), (0, n.jsx)(u.Heading, {
                                 variant: "heading-lg/normal",
                                 children: _ && null != i.guild_metadata ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION_GUILD.format({
                                     guildName: null == i ? void 0 : null === (e = i.guild_metadata) || void 0 === e ? void 0 : e.guild_name,
                                     description: r,
-                                    descriptionHook: t => (0, n.jsx)(c.Text, {
+                                    descriptionHook: t => (0, n.jsx)(u.Text, {
                                         tag: "span",
                                         variant: "heading-lg/bold",
                                         children: t
                                     })
                                 }) : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION.format({
                                     description: r,
-                                    descriptionHook: t => (0, n.jsx)(c.Text, {
+                                    descriptionHook: t => (0, n.jsx)(u.Text, {
                                         tag: "span",
                                         variant: "heading-lg/bold",
                                         children: t
                                     })
                                 })
-                            }), (0, n.jsx)(c.Text, {
+                            }), (0, n.jsx)(u.Text, {
                                 variant: "text-sm/normal",
                                 className: C.expirationDate,
-                                children: T > new Date ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_ACTIVE.format({
+                                children: E > new Date ? m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_ACTIVE.format({
                                     expirationDate: A
                                 }) : m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EXPIRATION_DATE_EXPIRED.format({
                                     expirationDate: A
@@ -170,11 +170,11 @@
                         })
                     }, s)
                 },
-                v = t => {
+                O = t => {
                     let {
                         status: e,
                         classifications: a
-                    } = t, [s, l] = i.useState(!1), [r, u] = i.useState(3), o = (0, A.useSafetyHubAccountStanding)(), d = i.useMemo(() => a.slice(0, r), [a, r]);
+                    } = t, [s, l] = i.useState(!1), [r, c] = i.useState(3), o = (0, A.useSafetyHubAccountStanding)(), d = i.useMemo(() => a.slice(0, r), [a, r]);
                     i.useEffect(() => {
                         s && _.default.track(N.AnalyticEvents.SAFETY_HUB_ACTION, {
                             action: g.SafetyHubAnalyticsActions.ViewViolationsDropdown,
@@ -194,38 +194,38 @@
                             count: a.length
                         }), s && (0, n.jsxs)("div", {
                             className: C.items,
-                            children: [(0, n.jsx)(c.TabBar.Separator, {
+                            children: [(0, n.jsx)(u.TabBar.Separator, {
                                 style: {
                                     height: "1px",
                                     width: "100%"
                                 }
-                            }), d.length > 0 && d.map(t => (0, n.jsx)(O, {
+                            }), d.length > 0 && d.map(t => (0, n.jsx)(U, {
                                 classification: t
                             }, t.id)), d.length < a.length && (0, n.jsxs)(n.Fragment, {
-                                children: [(0, n.jsx)(c.TabBar.Separator, {
+                                children: [(0, n.jsx)(u.TabBar.Separator, {
                                     style: {
                                         height: "1px",
                                         width: "100%"
                                     }
                                 }), (0, n.jsx)("button", {
                                     className: C.paginationButton,
-                                    onClick: () => u(t => t + S),
+                                    onClick: () => c(t => t + S),
                                     children: m.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_PAGINATION_BUTTON.format({
                                         nextPageSize: S
                                     })
                                 })]
-                            }), 0 === d.length && "active" === e && (0, n.jsx)(x, {}), 0 === d.length && "expired" === e && (0, n.jsx)(p, {})]
+                            }), 0 === d.length && "active" === e && (0, n.jsx)(x, {}), 0 === d.length && "expired" === e && (0, n.jsx)(H, {})]
                         })]
                     })
                 },
-                U = () => {
+                v = () => {
                     let t = (0, I.useActiveSafetyHubClassifications)(),
                         e = (0, I.useExpiredSafetyHubClassifications)();
                     return 0 === t.length && 0 === e.length ? null : (0, n.jsxs)("div", {
-                        children: [(0, n.jsx)(v, {
+                        children: [(0, n.jsx)(O, {
                             status: "active",
                             classifications: t
-                        }), (0, n.jsx)(v, {
+                        }), (0, n.jsx)(O, {
                             status: "expired",
                             classifications: e
                         })]

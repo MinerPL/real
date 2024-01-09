@@ -14,7 +14,7 @@
                 let {
                     user: e,
                     size: a
-                } = t, r = (0, i.getAvatarSpecs)(a), c = null != e ? e.getAvatarURL(null, r.size) : l;
+                } = t, r = (0, i.getAvatarSpecs)(a), u = null != e ? e.getAvatarURL(null, r.size) : l;
                 return (0, n.jsx)("div", {
                     className: s.avatarBackground,
                     children: (0, n.jsx)("div", {
@@ -24,7 +24,7 @@
                             height: r.size
                         },
                         children: (0, n.jsx)(i.Avatar, {
-                            src: c,
+                            src: u,
                             "aria-hidden": !0,
                             size: a
                         })

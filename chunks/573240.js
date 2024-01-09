@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return y
+                    return R
                 }
             });
             var i = n("37983"),
@@ -162,7 +162,7 @@
                         }), a]
                     })
                 };
-            var y = e => {
+            var R = e => {
                 var t, n;
                 let {
                     classificationId: l,

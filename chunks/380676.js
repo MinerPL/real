@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 ClassificationEvidence: function() {
-                    return y
+                    return R
                 }
             });
             var i = n("37983");
@@ -125,7 +125,7 @@
                         })
                     })
                 },
-                y = e => {
+                R = e => {
                     var t;
                     let {
                         flaggedContent: n
