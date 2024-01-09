@@ -4,14 +4,14 @@
                     return a
                 }
             });
-            var i = n("37983");
+            var s = n("37983");
             n("884691");
-            var r = n("469563"),
-                s = n("7037"),
-                l = n("246053"),
-                a = (0, r.replaceIcon)(function(e) {
-                    return (0, i.jsx)(l.default, {
+            var i = n("469563"),
+                l = n("7037"),
+                r = n("246053"),
+                a = (0, i.replaceIcon)(function(e) {
+                    return (0, s.jsx)(r.default, {
                         ...e,
-                        direction: l.default.Directions.UP
+                        direction: r.default.Directions.UP
                     })
-                }, s.ArrowSmallUpIcon)
+                }, l.ArrowSmallUpIcon)
