@@ -1,70 +1,70 @@
             "use strict";
             n.r(t), n.d(t, {
                 useCanFavoriteChannel: function() {
-                    return c
+                    return h
                 },
                 useFavorite: function() {
-                    return C
+                    return E
                 },
                 useFavoritesCategories: function() {
-                    return N
-                },
-                useFavoritesGuildSelected: function() {
                     return _
                 },
+                useFavoritesGuildSelected: function() {
+                    return p
+                },
                 useFavoriteAdded: function() {
-                    return A
+                    return I
                 }
             }), n("424973"), n("222007");
-            var a = n("884691"),
-                i = n("298386"),
-                r = n("446674");
+            var i = n("884691"),
+                l = n("298386"),
+                a = n("446674");
             n("42203");
-            var u = n("923959"),
+            var r = n("923959"),
                 s = n("162771"),
-                l = n("697218"),
-                o = n("379881"),
+                o = n("697218"),
+                u = n("379881"),
                 d = n("498139"),
-                f = n("136569"),
-                E = n("49111");
+                c = n("136569"),
+                f = n("49111");
 
-            function c(e) {
+            function h(e) {
                 let {
                     favoritesEnabled: t,
                     isFavoritesPerk: n
-                } = (0, d.useFavoritesServerExperiment)("useCanFavoriteChannel"), a = (0, r.useStateFromStores)([o.default], () => o.default.isFavorite(e.id)), i = (0, r.useStateFromStores)([l.default], () => l.default.getCurrentUser()), u = e.isDM() || e.isThread(), s = !u || n && (null == i ? void 0 : i.isStaff()) === !0;
-                return t && !__OVERLAY__ && !a && s
+                } = (0, d.useFavoritesServerExperiment)("useCanFavoriteChannel"), i = (0, a.useStateFromStores)([u.default], () => u.default.isFavorite(e.id)), l = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()), r = e.isDM() || e.isThread(), s = !r || n && (null == l ? void 0 : l.isStaff()) === !0;
+                return t && !__OVERLAY__ && !i && s
             }
 
-            function C(e) {
-                let t = (0, r.useStateFromStores)([o.default], () => o.default.getFavorite(e));
+            function E(e) {
+                let t = (0, a.useStateFromStores)([u.default], () => u.default.getFavorite(e));
                 return t
             }
 
-            function N() {
-                let e = (0, r.useStateFromStores)([u.default], () => u.default.getChannels(E.FAVORITES))[i.ChannelTypes.GUILD_CATEGORY];
+            function _() {
+                let e = (0, a.useStateFromStores)([r.default], () => r.default.getChannels(f.FAVORITES))[l.ChannelTypes.GUILD_CATEGORY];
                 return e.map(e => ({
                     id: "null" === e.channel.id ? null : e.channel.id,
                     name: e.channel.name
                 }))
             }
 
-            function _() {
-                let e = (0, r.useStateFromStores)([s.default], () => s.default.getGuildId());
-                return e === E.FAVORITES
+            function p() {
+                let e = (0, a.useStateFromStores)([s.default], () => s.default.getGuildId());
+                return e === f.FAVORITES
             }
 
-            function A() {
+            function I() {
                 let {
                     isFavoritesPerk: e
-                } = (0, d.useFavoritesServerExperiment)("useFavoriteAdded"), t = (0, f.useFavoritesTooltipStore)(), n = a.useCallback(() => {
+                } = (0, d.useFavoritesServerExperiment)("useFavoriteAdded"), t = (0, c.useFavoritesTooltipStore)(), n = i.useCallback(() => {
                     e && t.notifyFavoriteAdded()
-                }, [t, e]), i = a.useCallback(() => {
+                }, [t, e]), l = i.useCallback(() => {
                     e && t.clearFavoriteAdded()
                 }, [t, e]);
                 return {
                     favoriteAdded: t.favoriteAdded,
                     notifyFavoriteAdded: n,
-                    clearFavoriteAdded: i
+                    clearFavoriteAdded: l
                 }
             }

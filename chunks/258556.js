@@ -33,8 +33,8 @@
                 k = l("599110"),
                 O = l("719923"),
                 F = l("439932"),
-                y = l("21526"),
-                R = l("411691"),
+                R = l("21526"),
+                y = l("411691"),
                 j = l("216719"),
                 B = l("702953"),
                 P = l("235898"),
@@ -60,8 +60,8 @@
             function et(e) {
                 let {
                     isFullScreen: t
-                } = e, l = (0, R.default)("CollectiblesShop");
-                return (0, i.match)(l).with(R.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => (0, a.jsx)(z.default, {
+                } = e, l = (0, y.default)("CollectiblesShop");
+                return (0, i.match)(l).with(y.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => (0, a.jsx)(z.default, {
                     isFullScreen: t
                 })).otherwise(() => (0, a.jsx)(G.default, {
                     isFullScreen: t
@@ -134,7 +134,7 @@
                     analyticsLocations: i
                 } = (0, h.default)([...r, g.default.COLLECTIBLES_SHOP]), L = (0, c.default)([v.default], () => v.default.getLayers().includes(Z.Layers.COLLECTIBLES_SHOP)), S = (0, f.useHasAnyModalOpen)(), {
                     onClose: I
-                } = (0, V.useCollectiblesShopRouting)(), R = (0, c.default)([_.default], () => _.default.getCurrentUser()), M = O.default.canUseCollectibles(R), {
+                } = (0, V.useCollectiblesShopRouting)(), y = (0, c.default)([_.default], () => _.default.getCurrentUser()), M = O.default.canUseCollectibles(y), {
                     categories: H,
                     isFetchingCategories: U,
                     error: G
@@ -171,7 +171,7 @@
                 }, []), s.useEffect(() => {
                     !t && (0, m.setHomeLink)(Z.Routes.COLLECTIBLES_SHOP)
                 }, [t]), s.useEffect(() => () => {
-                    (0, y.setCollectiblesCategoryItemsViewed)({
+                    (0, R.setCollectiblesCategoryItemsViewed)({
                         categories: [...H.values()],
                         itemTypes: [u.CollectiblesItemType.AVATAR_DECORATION, u.CollectiblesItemType.PROFILE_EFFECT]
                     })
@@ -183,7 +183,7 @@
                     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
                 }, [t, L, S, I]);
                 let ec = () => {
-                        (0, y.fetchCollectiblesCategories)()
+                        (0, R.fetchCollectiblesCategories)()
                     },
                     ed = (0, p.default)();
                 return (0, a.jsxs)(o, {
@@ -236,7 +236,7 @@
                                 }), t && (0, a.jsx)("div", {
                                     children: (0, a.jsx)(E.default, {
                                         className: ee.close,
-                                        closeAction: L ? y.closeCollectiblesShop : I,
+                                        closeAction: L ? R.closeCollectiblesShop : I,
                                         keybind: "ESC"
                                     })
                                 })]

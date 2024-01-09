@@ -22,10 +22,10 @@
                     return E
                 },
                 sendHeartbeat: function() {
-                    return h
+                    return _
                 },
                 fetchProgress: function() {
-                    return _
+                    return h
                 }
             });
             var l = n("872717"),
@@ -129,7 +129,7 @@
                 }), a.default.dispatch({
                     type: "DROPS_ENROLL_SUCCESS"
                 })
-            }, h = async (e, t, n) => {
+            }, _ = async (e, t, n) => {
                 let r = s.default.getViewerIds(t);
                 try {
                     let s = await l.default.post({
@@ -154,7 +154,7 @@
                         statusCode: null == t ? void 0 : t.status
                     })
                 }
-            }, _ = async e => {
+            }, h = async e => {
                 try {
                     let t = await l.default.get({
                         url: i.Endpoints.DROPS_PROGRESS(e)

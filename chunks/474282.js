@@ -20,11 +20,11 @@
                     markGuildRead: c,
                     deleteChannel: f,
                     toggle: E,
-                    getNumUnreadChannels: h
-                } = t, _ = null;
+                    getNumUnreadChannels: _
+                } = t, h = null;
                 return s.flatMap(e, e => {
-                    let t = e.sortOrder !== _;
-                    _ = e.sortOrder;
+                    let t = e.sortOrder !== h;
+                    h = e.sortOrder;
                     let s = [];
                     return t && (e.hasLoadedAnything && e.sortOrder === o.SortOrder.ReallyOldChannel ? s.push((0, l.jsx)(i.default, {
                         className: d.divider,
@@ -41,7 +41,7 @@
                         toggle: E,
                         deleteChannel: f,
                         onJump: n,
-                        getNumUnreadChannels: h
+                        getNumUnreadChannels: _
                     }, e.channelId)), s
                 })
             }

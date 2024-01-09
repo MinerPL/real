@@ -4,9 +4,9 @@
                     return E
                 }
             }), n("222007");
-            var s = n("37983");
+            var a = n("37983");
             n("884691");
-            var a = n("446674"),
+            var s = n("446674"),
                 l = n("77078"),
                 i = n("594864"),
                 r = n("271938"),
@@ -24,13 +24,13 @@
                 let {
                     guild: t,
                     disabledUntil: n
-                } = e, [E, g] = (0, f.useCommunicationDisabledNoticeStore)(t.id), S = (0, a.useStateFromStores)([o.default, r.default], () => o.default.getMember(t.id, r.default.getId()), [t.id]);
-                return (0, c.useCommunicationDisabledCountdownCleanup)(S), (0, s.jsxs)("div", {
-                    children: [E ? (0, s.jsx)(h.default, {
+                } = e, [E, g] = (0, f.useCommunicationDisabledNoticeStore)(t.id), S = (0, s.useStateFromStores)([o.default, r.default], () => o.default.getMember(t.id, r.default.getId()), [t.id]);
+                return (0, c.useCommunicationDisabledCountdownCleanup)(S), (0, a.jsxs)("div", {
+                    children: [E ? (0, a.jsx)(h.default, {
                         onClose: () => g(t.id),
                         guildName: t.name
-                    }) : null, (0, s.jsx)(i.MessageNoticeBanner, {
-                        bannerIcon: (0, s.jsx)(d.default, {
+                    }) : null, (0, a.jsx)(i.MessageNoticeBanner, {
+                        bannerIcon: (0, a.jsx)(d.default, {
                             className: m.bannerIcon
                         }),
                         bannerHeader: p.default.Messages.GUILD_COMMUNICATION_DISABLED_NOTICE_HEADER,
@@ -39,9 +39,9 @@
                         }),
                         containerStyles: m.bannerContainer,
                         headerStyles: m.bannerHeader,
-                        children: (0, s.jsx)(l.Text, {
+                        children: (0, a.jsx)(l.Text, {
                             variant: "text-sm/semibold",
-                            children: (0, s.jsx)(u.default, {
+                            children: (0, a.jsx)(u.default, {
                                 deadline: new Date(n),
                                 showUnits: !0,
                                 stopAtOneSec: !0

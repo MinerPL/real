@@ -4,8 +4,8 @@
                     return d
                 }
             });
-            var s = n("446674"),
-                a = n("913144"),
+            var a = n("446674"),
+                s = n("913144"),
                 l = n("267567");
             let i = null,
                 r = null;
@@ -14,7 +14,7 @@
                 let e = l.default.mostRecentLurkedGuildId();
                 null != e ? (i = e, r = null) : (null != i ? r = i : r = null, i = null)
             }
-            class u extends s.default.Store {
+            class u extends a.default.Store {
                 initialize() {
                     this.syncWith([l.default], o)
                 }
@@ -23,4 +23,4 @@
                 }
             }
             u.displayName = "LurkerModePopoutStore";
-            var d = new u(a.default)
+            var d = new u(s.default)

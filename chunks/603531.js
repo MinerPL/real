@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return F
+                    return b
                 }
             }), n("702976");
             var l = n("37983"),
@@ -15,8 +15,8 @@
                 c = n("256572"),
                 f = n("845579"),
                 E = n("42203"),
-                h = n("27618"),
-                _ = n("945330"),
+                _ = n("27618"),
+                h = n("945330"),
                 S = n("780571"),
                 T = n("304198"),
                 p = n("568734"),
@@ -36,13 +36,13 @@
                 P = n("782340"),
                 x = n("555821"),
                 U = n("877671"),
-                F = a.memo(function e(t) {
+                b = a.memo(function e(t) {
                     var n, a, s;
-                    let _;
+                    let h;
                     let {
                         channel: T,
                         message: x,
-                        compact: F = !1,
+                        compact: b = !1,
                         className: j,
                         onContextMenu: G,
                         onClick: k,
@@ -60,7 +60,7 @@
                         allowHeading: X.showListsAndHeaders || Z.showListsAndHeaders,
                         allowLinks: X.showMaskedLinks || Z.showMaskedLinks,
                         previewLinkTarget: X.showMaskedLinks || Z.showMaskedLinks
-                    }), en = (0, m.default)(x), el = (0, r.useStateFromStores)([E.default], () => x.hasFlag(y.MessageFlags.HAS_THREAD) && E.default.getChannel(x.id)), ea = x.type === y.MessageTypes.THREAD_STARTER_MESSAGE && Y.state === c.ReferencedMessageState.LOADED && null != K, es = !ea && void 0 === _, ei = (0, R.default)({
+                    }), en = (0, m.default)(x), el = (0, r.useStateFromStores)([E.default], () => x.hasFlag(y.MessageFlags.HAS_THREAD) && E.default.getChannel(x.id)), ea = x.type === y.MessageTypes.THREAD_STARTER_MESSAGE && Y.state === c.ReferencedMessageState.LOADED && null != K, es = !ea && void 0 === h, ei = (0, R.default)({
                         message: x,
                         channel: T,
                         enabled: es
@@ -70,19 +70,19 @@
                         message: Y.message,
                         channel: K,
                         hasThread: !1
-                    }) : (h.default.isBlocked(x.author.id) ? _ = P.default.Messages.BLOCKED_MESSAGE_COUNT : (0, N.isSpam)(x) && H && (_ = P.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== _) ? (0, l.jsx)(b, {
+                    }) : (_.default.isBlocked(x.author.id) ? h = P.default.Messages.BLOCKED_MESSAGE_COUNT : (0, N.isSpam)(x) && H && (h = P.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== h) ? (0, l.jsx)(F, {
                         className: j,
-                        compact: F,
+                        compact: b,
                         count: 1,
-                        collapsedReason: _
+                        collapsedReason: h
                     }) : (0, l.jsx)(S.default, {
-                        compact: F,
+                        compact: b,
                         className: i(j, {
                             [U.ephemeral]: (0, p.hasFlag)(x.flags, y.MessageFlags.EPHEMERAL),
                             [U.disableInteraction]: w,
                             [U.groupStart]: t.isGroupStart
                         }),
-                        childrenRepliedMessage: (0, D.default)(x, T, V, Y, F),
+                        childrenRepliedMessage: (0, D.default)(x, T, V, Y, b),
                         childrenHeader: (0, O.default)({
                             ...t,
                             author: en,
@@ -92,7 +92,7 @@
                             channel: T,
                             message: x,
                             hasSpoilerEmbeds: et,
-                            compact: F,
+                            compact: b,
                             canSuppressEmbeds: !1,
                             canDeleteAttachments: !1,
                             disableReactionReads: !1,
@@ -110,7 +110,7 @@
                             showClydeAiEmbeds: !1,
                             shouldRedactExplicitContent: er
                         }),
-                        childrenExecutedCommand: (0, v.default)(x, T, F),
+                        childrenExecutedCommand: (0, v.default)(x, T, b),
                         childrenMessageContent: (0, M.default)(t, ee),
                         childrenSystemMessage: (0, L.default)(t),
                         onContextMenu: G,
@@ -122,7 +122,7 @@
                     })
                 });
 
-            function b(e) {
+            function F(e) {
                 let {
                     className: t,
                     count: n,
@@ -136,7 +136,7 @@
                     childrenMessageContent: (0, l.jsx)(T.default, {
                         compact: a,
                         className: x.blockedSystemMessage,
-                        iconNode: (0, l.jsx)(_.default, {
+                        iconNode: (0, l.jsx)(h.default, {
                             className: x.blockedIcon
                         }),
                         children: (0, l.jsx)("div", {

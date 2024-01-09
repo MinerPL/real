@@ -4,12 +4,12 @@
                     return S
                 },
                 useCompletedStates: function() {
-                    return _
+                    return A
                 }
             }), n("222007");
-            var s = n("884691"),
-                a = n("917351"),
-                l = n.n(a),
+            var a = n("884691"),
+                s = n("917351"),
+                l = n.n(s),
                 i = n("446674"),
                 r = n("242757"),
                 o = n("913491"),
@@ -33,7 +33,7 @@
                 }), [t, e])
             }
 
-            function _(e) {
+            function A(e) {
                 var t;
                 return {
                     guildPopulated: function(e) {
@@ -41,14 +41,14 @@
                             n = (0, i.useStateFromStoresArray)([p.default], () => null != t ? p.default.getMessages(t.id).toArray() : []);
                         return (0, i.useStateFromStores)([f.default], () => {
                             var t;
-                            let s = null !== (t = f.default.getMemberCount(null == e ? void 0 : e.id)) && void 0 !== t ? t : 0,
-                                a = n.some(e => e.type === g.MessageTypes.USER_JOIN);
-                            return s > 1 || a
+                            let a = null !== (t = f.default.getMemberCount(null == e ? void 0 : e.id)) && void 0 !== t ? t : 0,
+                                s = n.some(e => e.type === g.MessageTypes.USER_JOIN);
+                            return a > 1 || s
                         }, [e, n])
                     }(e),
                     guildMessaged: function(e) {
                         let t = (0, i.useStateFromStores)([d.default], () => null != e ? d.default.getMutableBasicGuildChannelsForGuild(e.id) : null),
-                            n = s.useMemo(() => null == t ? [] : l.values(t), [t]);
+                            n = a.useMemo(() => null == t ? [] : l.values(t), [t]);
                         return function(e) {
                             let t = (0, i.useStateFromStores)([u.default], () => u.default.getId());
                             return (0, i.useStateFromStores)([p.default], () => l.some(e, e => {
@@ -66,10 +66,10 @@
                         let e = c.default.getChannels(null == t ? void 0 : t.id),
                             n = e[c.GUILD_VOCAL_CHANNELS_KEY];
 
-                        function s(e) {
+                        function a(e) {
                             return null != t && E.default.extractTimestamp(e.channel.id) - E.default.extractTimestamp(t.id) > 500
                         }
-                        return e[0, c.GUILD_SELECTABLE_CHANNELS_KEY].some(s) || n.some(s)
+                        return e[0, c.GUILD_SELECTABLE_CHANNELS_KEY].some(a) || n.some(a)
                     }, [t]))
                 }
             }

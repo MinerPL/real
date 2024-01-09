@@ -33,8 +33,8 @@
                 k = l("775416"),
                 O = l("491232"),
                 F = l("342676"),
-                y = l("450492"),
-                R = l("920580"),
+                R = l("450492"),
+                y = l("920580"),
                 j = l("54809"),
                 B = l("408381"),
                 P = l("264579"),
@@ -103,7 +103,7 @@
                     backgroundColors: es
                 } = (0, D.default)(t.categorySkuId), er = (0, O.getFormattedPriceForCollectiblesProduct)(t, I), en = (0, O.isPremiumCollectiblesProduct)(t), eo = (0, O.isFreeCollectiblesProduct)(t), [ei, eu, ec] = (0, o.useStateFromStoresArray)([k.default], () => [k.default.getPurchase(t.skuId), k.default.isClaiming === t.skuId, null != k.default.isClaiming && k.default.isClaiming !== t.skuId]), ed = (0, T.useCanUseProfileEffects)({
                     location: "CollectiblesShopCard"
-                });
+                }), ef = s.useRef(null);
                 s.useEffect(() => {
                     let {
                         current: e
@@ -114,11 +114,11 @@
                         e.removeEventListener("focusin", t)
                     }
                 }, []);
-                let ef = (0, h.default)({
+                let eC = (0, h.default)({
                         analyticsLocations: K
                     }),
-                    eC = () => {
-                        if ((0, c.popLayer)(), ef(), (null == Q ? void 0 : Q.type) === u.CollectiblesItemType.AVATAR_DECORATION) {
+                    em = () => {
+                        if ((0, c.popLayer)(), eC(), (null == Q ? void 0 : Q.type) === u.CollectiblesItemType.AVATAR_DECORATION) {
                             (0, m.openAvatarDecorationModal)({
                                 initialSelectedDecoration: Q,
                                 analyticsLocations: K
@@ -129,17 +129,18 @@
                             analyticsLocations: K
                         })
                     },
-                    em = e => () => {
-                        (0, j.openCollectiblesShopProductDetailsModal)({
+                    eE = e => a => {
+                        ef.current = a.currentTarget, (0, j.openCollectiblesShopProductDetailsModal)({
                             product: t,
                             category: l,
                             analyticsLocations: K,
-                            analyticsSource: e
+                            analyticsSource: e,
+                            returnRef: ef
                         })
                     },
-                    eE = em(f.default.COLLECTIBLES_SHOP_CARD),
-                    ep = em(f.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
-                    eg = () => (0, a.jsx)("div", {
+                    ep = eE(f.default.COLLECTIBLES_SHOP_CARD),
+                    eg = eE(f.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+                    eh = () => (0, a.jsx)("div", {
                         className: H.hoverUpsellContainer,
                         children: (0, a.jsx)(g.default, {
                             fullWidth: !0,
@@ -153,7 +154,7 @@
                 s.useEffect(() => {
                     null == r || r(Y)
                 }, [r]);
-                let eh = () => null != ei ? (0, a.jsx)(i.Text, {
+                let eT = () => null != ei ? (0, a.jsx)(i.Text, {
                         color: "always-white",
                         variant: "text-md/semibold",
                         className: H.priceTag,
@@ -163,26 +164,26 @@
                         variant: "text-md/semibold",
                         className: H.priceTag,
                         children: w.default.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
-                    }) : (0, a.jsx)(R.default, {
+                    }) : (0, a.jsx)(y.default, {
                         product: t,
                         className: H.priceTag,
                         disableTooltipPointerEvents: !0
                     }),
-                    eT = () => en ? null : eo ? (0, a.jsx)(V, {
+                    eb = () => en ? null : eo ? (0, a.jsx)(V, {
                         style: null != ea ? {
                             background: ea.secondary.toHslString(),
                             color: ea.text.toHslString()
                         } : void 0,
                         className: H.defaultPreviewButtonColor,
-                        onClick: ep
-                    }) : (0, a.jsx)(y.default, {
+                        onClick: eg
+                    }) : (0, a.jsx)(R.default, {
                         product: t,
                         returnRef: Y,
                         isGiftEasterEggEnabled: N,
                         tooltipDelay: 250
                     }),
-                    eb = () => {
-                        if (en && !I && !eo) return eg();
+                    ex = () => {
+                        if (en && !I && !eo) return eh();
                         let e = null != ea ? {
                                 background: (0, B.getBackgroundGradient)(ea, 90),
                                 color: ea.text.toHslString()
@@ -217,13 +218,13 @@
                             }) : (0, a.jsx)(z, {
                                 style: e,
                                 disabled: ec,
-                                onClick: eC,
+                                onClick: em,
                                 children: w.default.Messages.COLLECTIBLES_USE_NOW
-                            }), eT()]
+                            }), eb()]
                         })
                     };
                 if (!1 === ed) return null;
-                let ex = null != es ? {
+                let eL = null != es ? {
                     background: "".concat((0, B.getBackgroundGradient)(es), " border-box border-box"),
                     borderColor: es.border.toHslString(),
                     boxShadow: $ ? "0 0 25px 1px ".concat(es.primary.toHslString()) : "none"
@@ -233,8 +234,8 @@
                         innerRef: Y,
                         className: H.shopCard,
                         onBlur: () => q(!1),
-                        onClick: eE,
-                        style: ex,
+                        onClick: ep,
+                        style: eL,
                         id: "shop-item-".concat(t.skuId),
                         children: [en && (0, a.jsx)(i.Tooltip, {
                             tooltipContentClassName: H.premiumWheelTooltipContent,
@@ -290,10 +291,10 @@
                                         className: H.description,
                                         variant: "text-md/normal",
                                         children: t.summary
-                                    }), eh()]
+                                    }), eT()]
                                 }), (0, a.jsx)("div", {
                                     className: H.innerHover,
-                                    children: eb()
+                                    children: ex()
                                 })]
                             })]
                         }), (0, a.jsx)(F.default, {

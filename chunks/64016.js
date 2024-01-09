@@ -1,26 +1,26 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return u
                 }
             });
-            var a = n("37983");
+            var l = n("37983");
             n("884691");
-            var l = n("446674"),
-                i = n("77078"),
-                u = n("755624"),
+            var a = n("446674"),
+                s = n("77078"),
+                i = n("755624"),
                 r = n("263024"),
-                s = n("782340");
+                o = n("782340");
 
-            function d(e, t) {
-                let n = (0, l.useStateFromStores)([u.default], () => u.default.hasJoined(e.id));
-                return n ? (0, a.jsx)(i.MenuItem, {
+            function u(e, t) {
+                let n = (0, a.useStateFromStores)([i.default], () => i.default.hasJoined(e.id));
+                return n ? (0, l.jsx)(s.MenuItem, {
                     id: "leave-thread",
-                    label: e.isForumPost() ? s.default.Messages.LEAVE_FORUM_POST : s.default.Messages.LEAVE_THREAD,
+                    label: e.isForumPost() ? o.default.Messages.LEAVE_FORUM_POST : o.default.Messages.LEAVE_THREAD,
                     action: () => r.default.leaveThread(e, t)
-                }) : (0, a.jsx)(i.MenuItem, {
+                }) : (0, l.jsx)(s.MenuItem, {
                     id: "join-thread",
-                    label: e.isForumPost() ? s.default.Messages.JOIN_FORUM_POST : s.default.Messages.JOIN_THREAD,
+                    label: e.isForumPost() ? o.default.Messages.JOIN_FORUM_POST : o.default.Messages.JOIN_THREAD,
                     action: () => r.default.joinThread(e, t)
                 })
             }
