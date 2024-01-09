@@ -1,123 +1,123 @@
             "use strict";
             n.r(t), n.d(t, {
                 addFavoriteChannel: function() {
-                    return E
+                    return f
                 },
                 removeFavoriteChannel: function() {
-                    return c
-                },
-                setFavoriteChannelNickname: function() {
                     return C
                 },
+                setFavoriteChannelNickname: function() {
+                    return v
+                },
                 addFavoriteCategory: function() {
-                    return N
+                    return h
                 },
                 removeFavoriteCategory: function() {
-                    return _
+                    return p
                 },
                 updateFavoriteChannels: function() {
-                    return A
+                    return E
                 },
                 updateFavoriteChannelParent: function() {
-                    return S
+                    return A
                 },
                 toggleFavoriteServerMuted: function() {
-                    return T
+                    return g
                 }
             }), n("222007");
-            var a = n("249654"),
-                i = n("151426"),
-                r = n("872173"),
-                u = n("42203"),
-                s = n("957255"),
-                l = n("379881"),
-                o = n("843455");
+            var r = n("249654"),
+                a = n("151426"),
+                i = n("872173"),
+                o = n("42203"),
+                u = n("957255"),
+                s = n("379881"),
+                l = n("843455");
 
-            function d() {
-                let e = l.default.getFavoriteChannels(),
+            function c() {
+                let e = s.default.getFavoriteChannels(),
                     t = 1;
                 for (let n in e) t = Math.max(t, e[n].order);
                 return t + 1
             }
 
-            function f(e) {
+            function d(e) {
                 for (let t in e) {
                     let n = e[t];
                     if (null == n) {
                         delete e[t];
                         continue
                     }
-                    if (n.type === i.FavoriteChannelType.CATEGORY) continue;
-                    let a = u.default.getChannel(t);
-                    if (null == a || !a.isPrivate() && !s.default.can(o.Permissions.VIEW_CHANNEL, a)) {
+                    if (n.type === a.FavoriteChannelType.CATEGORY) continue;
+                    let r = o.default.getChannel(t);
+                    if (null == r || !r.isPrivate() && !u.default.can(l.Permissions.VIEW_CHANNEL, r)) {
                         delete e[t];
                         continue
                     }
                 }
             }
 
-            function E(e, t) {
-                let n = l.default.isFavorite(e);
-                !n && r.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
-                    n.favoriteChannels[e] = i.FavoriteChannel.create({
+            function f(e, t) {
+                let n = s.default.isFavorite(e);
+                !n && i.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+                    n.favoriteChannels[e] = a.FavoriteChannel.create({
                         nickname: "",
-                        type: i.FavoriteChannelType.REFERENCE_ORIGINAL,
-                        position: d(),
+                        type: a.FavoriteChannelType.REFERENCE_ORIGINAL,
+                        position: c(),
                         parentId: null != t ? t : "0"
-                    }), f(n.favoriteChannels)
-                }, r.UserSettingsDelay.FREQUENT_USER_ACTION)
+                    }), d(n.favoriteChannels)
+                }, i.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
 
-            function c(e) {
-                let t = l.default.getFavorite(e);
-                null != t && r.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
-                    if (delete n.favoriteChannels[e], t.type === i.FavoriteChannelType.CATEGORY)
+            function C(e) {
+                let t = s.default.getFavorite(e);
+                null != t && i.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+                    if (delete n.favoriteChannels[e], t.type === a.FavoriteChannelType.CATEGORY)
                         for (let t in n.favoriteChannels) n.favoriteChannels[t].parentId === e && (n.favoriteChannels[t].parentId = "0");
-                    f(n.favoriteChannels)
-                }, r.UserSettingsDelay.FREQUENT_USER_ACTION)
+                    d(n.favoriteChannels)
+                }, i.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
 
-            function C(e, t) {
-                let n = l.default.isFavorite(e);
-                n && r.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+            function v(e, t) {
+                let n = s.default.isFavorite(e);
+                n && i.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
                     n.favoriteChannels[e].nickname = null != t ? t : ""
-                }, r.UserSettingsDelay.FREQUENT_USER_ACTION)
+                }, i.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
 
-            function N(e) {
-                let t = a.default.fromTimestamp(Date.now());
-                r.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
-                    n.favoriteChannels[t] = i.FavoriteChannel.create({
+            function h(e) {
+                let t = r.default.fromTimestamp(Date.now());
+                i.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+                    n.favoriteChannels[t] = a.FavoriteChannel.create({
                         nickname: e,
-                        type: i.FavoriteChannelType.CATEGORY,
-                        position: d(),
+                        type: a.FavoriteChannelType.CATEGORY,
+                        position: c(),
                         parentId: "0"
                     })
-                }, r.UserSettingsDelay.FREQUENT_USER_ACTION)
+                }, i.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
 
-            function _(e) {
-                c(e)
+            function p(e) {
+                C(e)
             }
 
-            function A(e) {
-                r.PreloadedUserSettingsActionCreators.updateAsync("favorites", t => {
-                    for (let a of e)
-                        if (null != a.position && (t.favoriteChannels[a.id].position = a.position), void 0 !== a.parent_id) {
+            function E(e) {
+                i.PreloadedUserSettingsActionCreators.updateAsync("favorites", t => {
+                    for (let r of e)
+                        if (null != r.position && (t.favoriteChannels[r.id].position = r.position), void 0 !== r.parent_id) {
                             var n;
-                            t.favoriteChannels[a.id].parentId = null !== (n = a.parent_id) && void 0 !== n ? n : "0"
+                            t.favoriteChannels[r.id].parentId = null !== (n = r.parent_id) && void 0 !== n ? n : "0"
                         }
-                }, r.UserSettingsDelay.FREQUENT_USER_ACTION)
+                }, i.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
 
-            function S(e, t) {
-                r.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
+            function A(e, t) {
+                i.PreloadedUserSettingsActionCreators.updateAsync("favorites", n => {
                     n.favoriteChannels[e].parentId = null != t ? t : "0"
-                }, r.UserSettingsDelay.FREQUENT_USER_ACTION)
+                }, i.UserSettingsDelay.FREQUENT_USER_ACTION)
             }
 
-            function T() {
-                r.PreloadedUserSettingsActionCreators.updateAsync("favorites", e => {
+            function g() {
+                i.PreloadedUserSettingsActionCreators.updateAsync("favorites", e => {
                     e.muted = !e.muted
-                }, r.UserSettingsDelay.INFREQUENT_USER_ACTION)
+                }, i.UserSettingsDelay.INFREQUENT_USER_ACTION)
             }

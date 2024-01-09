@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return a
                 }
             });
-            var s = Object.freeze({
+            var a = Object.freeze({
                 "voice-conversations": {
                     popoutOffset: {
                         x: 45,
