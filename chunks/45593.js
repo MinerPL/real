@@ -20,9 +20,9 @@
                 let p = (0, i.useStateFromStores)([d.default], () => d.default.can(c.Permissions.MANAGE_CHANNELS, t)),
                     _ = (0, i.useStateFromStores)([d.default], () => d.default.can(c.Permissions.SET_VOICE_CHANNEL_STATUS, e)),
                     E = (0, o.useIsConnectedToVoiceChannel)(e),
-                    m = (0, i.useStateFromStores)([r.default], () => r.default.getChannelStatus(e)),
-                    S = null != m && m.length > 0;
-                return e.isGuildVoice() && (p || _) ? !E && p && S ? (0, a.jsx)(s.MenuItem, {
+                    S = (0, i.useStateFromStores)([r.default], () => r.default.getChannelStatus(e)),
+                    m = null != S && S.length > 0;
+                return e.isGuildVoice() && (p || _) ? !E && p && m ? (0, a.jsx)(s.MenuItem, {
                     id: "clear-status",
                     label: f.default.Messages.VOICE_CHANNEL_CLEAR_STATUS,
                     action: () => {

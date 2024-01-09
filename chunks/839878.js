@@ -18,21 +18,21 @@
                 p = n("233069"),
                 g = n("950104"),
                 m = n("42203"),
-                E = n("305961"),
-                S = n("27618"),
+                S = n("305961"),
+                E = n("27618"),
                 v = n("18494"),
                 y = n("887657"),
                 C = n("293137"),
-                N = n("945330"),
-                O = n("673220"),
+                I = n("945330"),
+                N = n("673220"),
                 T = n("960086"),
-                I = n("519794"),
+                O = n("519794"),
                 _ = n("393900"),
                 A = n("560995"),
                 x = n("423741"),
                 R = n("782340"),
-                M = n("972607");
-            class L extends a.Component {
+                L = n("972607");
+            class M extends a.Component {
                 componentDidUpdate() {
                     this.props.locked && this.state.showOpacitySlider && this.setState({
                         showOpacitySlider: !1
@@ -73,16 +73,16 @@
                         showOpacitySlider: p
                     } = this.state;
                     return p && !n ? (0, i.jsxs)(A.default.Bar, {
-                        className: M.opacityHeader,
+                        className: L.opacityHeader,
                         children: [(0, i.jsx)(x.default, {}), (0, i.jsx)(f.default.Icon, {
-                            icon: N.default,
+                            icon: I.default,
                             onClick: this.handleCloseOpacitySettings,
                             tooltip: R.default.Messages.CLOSE
                         })]
                     }) : (0, i.jsx)(A.default.Background, {
                         opacityOverride: n || u ? null : 1,
                         children: (0, i.jsx)("div", {
-                            className: s(e, t, M.headerContainer),
+                            className: s(e, t, L.headerContainer),
                             onMouseDown: r,
                             onContextMenu: d,
                             children: (0, i.jsxs)(f.default, {
@@ -90,8 +90,8 @@
                                 channelId: a.id,
                                 toolbar: this.renderWidgetButtons(),
                                 transparent: !0,
-                                children: [u || n || c ? null : (0, i.jsx)(O.default, {
-                                    className: s(M.dragIcon, t),
+                                children: [u || n || c ? null : (0, i.jsx)(N.default, {
+                                    className: s(L.dragIcon, t),
                                     width: 20,
                                     height: 20
                                 }), (0, h.renderTitle)({
@@ -147,7 +147,7 @@
                                 tooltip: R.default.Messages.FORM_LABEL_OVERLAY_CHAT_OPACITY,
                                 onClick: this.handleOpenOpacitySettings
                             }) : null, (0, i.jsx)(f.default.Icon, {
-                                icon: n ? _.default : I.default,
+                                icon: n ? _.default : O.default,
                                 tooltip: l,
                                 selected: n,
                                 onClick: t
@@ -164,8 +164,8 @@
                 } = e, a = (0, o.useStateFromStores)([v.default, m.default], () => {
                     let e = v.default.getVoiceChannelId();
                     return m.default.getChannel(e)
-                }), l = (0, o.useStateFromStores)([E.default], () => E.default.getGuild(t.guild_id)), s = (0, o.useStateFromStores)([g.default], () => g.default.isCallActive(t.id)), r = (0, c.default)(t), d = (0, o.useStateFromStores)([S.default], () => !!t.isDM() && null != t.getRecipientId() && S.default.isBlocked(t.getRecipientId()));
-                return (0, i.jsx)(L, {
+                }), l = (0, o.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), s = (0, o.useStateFromStores)([g.default], () => g.default.isCallActive(t.id)), r = (0, c.default)(t), d = (0, o.useStateFromStores)([E.default], () => !!t.isDM() && null != t.getRecipientId() && E.default.isBlocked(t.getRecipientId()));
+                return (0, i.jsx)(M, {
                     channel: t,
                     channelName: r,
                     guild: l,

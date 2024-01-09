@@ -16,14 +16,14 @@
                 _ = s("516322"),
                 E = s("441413"),
                 I = s("238956"),
-                T = s("837899"),
-                f = s("425190"),
+                f = s("837899"),
+                T = s("425190"),
                 S = s("599110"),
                 R = s("331358"),
                 p = s("49111"),
-                m = s("782340"),
+                A = s("782340"),
                 N = s("305224");
-            let A = e => {
+            let m = e => {
                     let {
                         isShowingAll: t,
                         onClick: s
@@ -31,9 +31,9 @@
                     return (0, a.jsxs)(u.Clickable, {
                         onClick: s,
                         className: N.customButton,
-                        children: [t ? m.default.Messages.PREMIUM_MARKETING_PERKS_SEE_LESS : m.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, t ? (0, a.jsx)(f.default, {
+                        children: [t ? A.default.Messages.PREMIUM_MARKETING_PERKS_SEE_LESS : A.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, t ? (0, a.jsx)(T.default, {
                             className: N.arrow
-                        }) : (0, a.jsx)(T.default, {
+                        }) : (0, a.jsx)(f.default, {
                             className: N.arrow
                         })]
                     })
@@ -47,19 +47,19 @@
                         imageClassName: i,
                         titleBadge: o,
                         isNew: I = !1,
-                        isEarlyAccess: T = !1
+                        isEarlyAccess: f = !1
                     } = e, {
-                        AnalyticsLocationProvider: f,
+                        AnalyticsLocationProvider: T,
                         analyticsLocations: S
                     } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD);
-                    return (0, a.jsx)(f, {
+                    return (0, a.jsx)(T, {
                         children: (0, a.jsxs)("div", {
                             className: l(N.perkCard, n),
                             children: [I ? (0, a.jsx)(E.default, {
                                 className: N.perkCardNewBadge,
                                 shouldInheritBackgroundColor: !0,
                                 shouldInheritTextColor: !0
-                            }) : null, T ? (0, a.jsx)(_.default, {
+                            }) : null, f ? (0, a.jsx)(_.default, {
                                 className: N.perkCardEarlyAccessBadge
                             }) : null, (0, a.jsx)("img", {
                                 src: r,
@@ -86,8 +86,8 @@
                 } = e, [r, d] = n.useState(!1), _ = (0, R.usePerkCards)({
                     styles: N
                 }), E = (0, i.default)([o.default], () => o.default.useReducedMotion), {
-                    analyticsLocations: T
-                } = (0, c.default)(), f = (0, I.useIsRemixANitroPerk)(), P = [_.emoji, _.streaming, _.upload, _.customAppIcons, _.soundboard, f ? _.remix : _.videoBackground, _.superReactions, _.stickersPerkDiscoverability, _.badgeAlt];
+                    analyticsLocations: f
+                } = (0, c.default)(), T = (0, I.useIsRemixANitroPerk)(), P = [_.emoji, _.streaming, _.upload, _.customAppIcons, _.soundboard, T ? _.remix : _.videoBackground, _.superReactions, _.stickersPerkDiscoverability, _.badgeAlt];
                 return (0, a.jsxs)("div", {
                     className: l(N.perksContainer, t, {
                         [N.partiallyHidden]: s && !r,
@@ -97,7 +97,7 @@
                     children: [(0, a.jsx)(u.Heading, {
                         variant: "heading-xxl/extrabold",
                         className: N.perksTitle,
-                        children: s ? m.default.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : m.default.Messages.PREMIUM_MARKETING_PERKS_TITLE
+                        children: s ? A.default.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : A.default.Messages.PREMIUM_MARKETING_PERKS_TITLE
                     }), (0, a.jsx)("div", {
                         className: l(N.perkCardContainer, {
                             [N.perkCardContainerExpanded]: r
@@ -111,10 +111,10 @@
                                 [N.sizeGizmo]: !r,
                                 [N.sizeGizmoExpanded]: r
                             }),
-                            children: (0, a.jsx)(A, {
+                            children: (0, a.jsx)(m, {
                                 onClick: () => {
                                     S.default.track(p.AnalyticEvents.PREMIUM_MARKETING_PERKS_SEE_ALL_CLICKED, {
-                                        location_stack: T,
+                                        location_stack: f,
                                         was_expanded: r
                                     }), d(!r)
                                 },

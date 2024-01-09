@@ -11,8 +11,8 @@
                 i = n("404118"),
                 d = n("629109"),
                 o = n("235004"),
-                c = n("42887"),
-                r = n("945956"),
+                r = n("42887"),
+                c = n("945956"),
                 l = n("162771"),
                 p = n("697218"),
                 f = n("423487"),
@@ -31,18 +31,18 @@
                     A = (0, a.useStateFromStores)([o.default], () => o.default.isLocalSoundboardMuted(e)),
                     {
                         muted: D,
-                        deafened: b = !1,
-                        localVideoDisabled: I = !1,
+                        deafened: I = !1,
+                        localVideoDisabled: b = !1,
                         localVideoAutoDisabled: v = !1
-                    } = (0, a.useStateFromStoresObject)([c.default], () => n ? {
-                        muted: c.default.isSelfMute(t),
-                        deafened: c.default.isSelfDeaf(t)
+                    } = (0, a.useStateFromStoresObject)([r.default], () => n ? {
+                        muted: r.default.isSelfMute(t),
+                        deafened: r.default.isSelfDeaf(t)
                     } : {
-                        muted: c.default.isLocalMute(e, t),
-                        localVideoDisabled: c.default.isLocalVideoDisabled(e, t),
-                        localVideoAutoDisabled: c.default.isLocalVideoAutoDisabled(e, t)
+                        muted: r.default.isLocalMute(e, t),
+                        localVideoDisabled: r.default.isLocalVideoDisabled(e, t),
+                        localVideoAutoDisabled: r.default.isLocalVideoAutoDisabled(e, t)
                     }, [n, t, e]),
-                    O = c.default.supports(E.Features.DISABLE_VIDEO) && !n ? (0, s.jsx)(u.MenuCheckboxItem, {
+                    O = r.default.supports(E.Features.DISABLE_VIDEO) && !n ? (0, s.jsx)(u.MenuCheckboxItem, {
                         id: "disable-video",
                         label: g.default.Messages.DISABLE_VIDEO,
                         action: () => {
@@ -56,10 +56,10 @@
                                 });
                                 return
                             }
-                            let n = I ? m.VideoToggleState.MANUAL_ENABLED : m.VideoToggleState.DISABLED;
+                            let n = b ? m.VideoToggleState.MANUAL_ENABLED : m.VideoToggleState.DISABLED;
                             d.default.setDisableLocalVideo(e, n, t)
                         },
-                        checked: I,
+                        checked: b,
                         subtext: v ? (0, s.jsxs)("div", {
                             className: S.videoPaused,
                             children: [(0, s.jsx)(f.default, {
@@ -72,7 +72,7 @@
                         id: "soundboard-sound-mute",
                         label: g.default.Messages.MUTE_SOUNDBOARD,
                         action: () => {
-                            let n = r.default.getRTCConnection();
+                            let n = c.default.getRTCConnection();
                             _.default.track(m.AnalyticEvents.AUDIO_LOCAL_SOUNDBOARD_MUTE_TOGGLED, {
                                 guild_id: l.default.getGuildId(),
                                 target_user_id: e,
@@ -96,7 +96,7 @@
                     action: () => d.default.toggleSelfDeaf({
                         context: t
                     }),
-                    checked: b
+                    checked: I
                 }, "self-deafen"), O] : [(0, s.jsx)(u.MenuCheckboxItem, {
                     id: "mute",
                     label: g.default.Messages.SOUND_MUTE,

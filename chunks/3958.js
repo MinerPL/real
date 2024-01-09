@@ -4,7 +4,7 @@
                     return s
                 },
                 default: function() {
-                    return S
+                    return D
                 }
             }), n("222007");
             var s, i, a = n("37983"),
@@ -25,7 +25,7 @@
                 DEFAULT: E.default,
                 RECORDING: E.recording
             };
-            class D extends u.PureComponent {
+            class S extends u.PureComponent {
                 componentWillUnmount() {
                     null != this._unregisterNativeRecorder && this._unregisterNativeRecorder()
                 }
@@ -130,4 +130,4 @@
                     }
                 }
             }
-            var S = D
+            var D = S

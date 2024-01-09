@@ -16,14 +16,14 @@
                 _ = s("984376"),
                 E = s("267567"),
                 I = s("393414"),
-                T = s("239380"),
-                f = s("813006"),
+                f = s("239380"),
+                T = s("813006"),
                 S = s("305961"),
                 R = s("895530"),
                 p = s("145131"),
-                m = s("476263"),
+                A = s("476263"),
                 N = s("36694"),
-                A = s("75576"),
+                m = s("75576"),
                 g = s("49111"),
                 P = s("782340"),
                 C = s("214197");
@@ -64,7 +64,7 @@
                         pageSize: u
                     } = this.props;
                     if (t && s) return null;
-                    let d = new f.default(e),
+                    let d = new T.default(e),
                         c = P.default.Messages.LURKER_MODE_VIEW_GUILD,
                         _ = this.handleJoinOrView,
                         E = o.Button.Looks.FILLED,
@@ -77,17 +77,17 @@
                             className: C.joinedCheckmark
                         })]
                     })) : n && t && (c = P.default.Messages.JOIN_GUILD) : (c = P.default.Messages._LOGIN, _ = this.handleLogin), (0, a.jsxs)("div", {
-                        className: l(i, u === A.PageSizes.SMALL ? C.inviteSmall : C.inviteLarge),
+                        className: l(i, u === m.PageSizes.SMALL ? C.inviteSmall : C.inviteLarge),
                         children: [(0, a.jsx)(R.default, {
                             children: P.default.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD
                         }), (0, a.jsxs)("div", {
                             className: C.content,
                             children: [(0, a.jsxs)("div", {
                                 className: C.info,
-                                children: [(0, a.jsx)(m.default, {
+                                children: [(0, a.jsx)(A.default, {
                                     guild: d,
                                     active: !0,
-                                    size: m.default.Sizes.LARGE,
+                                    size: A.default.Sizes.LARGE,
                                     className: C.guildIcon
                                 }), (0, a.jsxs)("div", {
                                     className: C.infoText,
@@ -115,7 +115,7 @@
                             skuId: t,
                             isInGuild: s,
                             isLurking: a
-                        } = this.props, n = () => (0, T.transitionToGuild)(e.id);
+                        } = this.props, n = () => (0, f.transitionToGuild)(e.id);
                         if (a)(0, c.joinPublishedStoreListingSkuGuild)(t).then(n);
                         else if (s) n();
                         else try {

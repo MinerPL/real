@@ -4,10 +4,10 @@
                     return d
                 }
             });
-            var s = n("37983");
+            var a = n("37983");
             n("884691");
-            var a = n("414456"),
-                l = n.n(a),
+            var s = n("414456"),
+                l = n.n(s),
                 i = n("77078"),
                 r = n("945330"),
                 o = n("317134"),
@@ -17,24 +17,24 @@
                 let {
                     className: t,
                     roleColor: n,
-                    roleName: a,
+                    roleName: s,
                     hasRemoveIcon: d = !1,
                     onClick: c,
                     disabled: f = !1,
                     verified: h = !1
                 } = e;
-                return (0, s.jsx)(i.Button, {
+                return (0, a.jsx)(i.Button, {
                     className: l(t, u.button),
                     look: i.Button.Looks.BLANK,
                     size: i.Button.Sizes.NONE,
                     onClick: c,
                     disabled: f,
-                    children: (0, s.jsx)(o.default, {
+                    children: (0, a.jsx)(o.default, {
                         className: u.role,
                         roleColor: n,
-                        roleName: a,
+                        roleName: s,
                         verified: h,
-                        children: d && (0, s.jsx)(r.default, {
+                        children: d && (0, a.jsx)(r.default, {
                             height: 6,
                             width: 6,
                             className: u.removeRole,

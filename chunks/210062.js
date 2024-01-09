@@ -4,8 +4,8 @@
                     return d
                 }
             });
-            var s = n("884691"),
-                a = n("65597"),
+            var a = n("884691"),
+                s = n("65597"),
                 l = n("913144"),
                 i = n("206230"),
                 r = n("166257"),
@@ -14,19 +14,19 @@
 
             function d() {
                 let e = o.AnimateEmoji.useSetting(),
-                    t = (0, a.default)([i.default], () => i.default.useReducedMotion);
-                s.useEffect(() => {
+                    t = (0, s.default)([i.default], () => i.default.useReducedMotion);
+                a.useEffect(() => {
                     function n(n) {
                         let {
-                            messageId: s,
-                            channelId: a,
+                            messageId: a,
+                            channelId: s,
                             emoji: l,
                             optimistic: i,
                             burst: o
                         } = n;
                         !i && o && e && !t && (0, r.playBurstReaction)({
-                            channelId: a,
-                            messageId: s,
+                            channelId: s,
+                            messageId: a,
                             emoji: l,
                             key: u.BurstReactionEffectSource.EXTERNAL
                         })

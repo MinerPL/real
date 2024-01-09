@@ -7,7 +7,7 @@
                     return I
                 },
                 default: function() {
-                    return T
+                    return f
                 }
             }), s("222007");
             var a = s("884691"),
@@ -45,7 +45,7 @@
                         a = null != s && t.includes(s) && !e;
                     a && (0, i.markDismissibleContentAsDismissed)(s)
                 };
-            var T = () => {
+            var f = () => {
                 let e = (0, l.useBlockedPaymentsConfig)(),
                     t = (0, n.default)([o.default], () => o.default.hasLoaded(c.UserSettingsTypes.PRELOADED_USER_SETTINGS)),
                     s = _.map(e => {

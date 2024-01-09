@@ -16,14 +16,14 @@
                 _ = s("599560"),
                 E = s("316718"),
                 I = s("55620"),
-                T = s("901582"),
-                f = s("790219"),
+                f = s("901582"),
+                T = s("790219"),
                 S = s("151540"),
                 R = s("86621"),
                 p = s("984376"),
-                m = s("84460"),
+                A = s("84460"),
                 N = s("299285"),
-                A = s("69927"),
+                m = s("69927"),
                 g = s("791160"),
                 P = s("661579"),
                 C = s("539938"),
@@ -397,7 +397,7 @@
                             children: this.renderListing()
                         });
                         return (0, a.jsxs)(n.Fragment, {
-                            children: [(0, a.jsx)(A.AppPageTitle, {
+                            children: [(0, a.jsx)(m.AppPageTitle, {
                                 location: e.name
                             }), this.renderJsonLD(), this.renderHeader(e, t), (0, a.jsx)(et.default, {
                                 game: e
@@ -406,17 +406,17 @@
                     }
                     return l ? (0, a.jsxs)("div", {
                         className: e_.listingWrapper,
-                        children: [(0, a.jsx)(A.AppPageTitle, {
+                        children: [(0, a.jsx)(m.AppPageTitle, {
                             location: e.name
-                        }), this.renderJsonLD(), (0, a.jsx)(T.default, {
+                        }), this.renderJsonLD(), (0, a.jsx)(f.default, {
                             section: eo.AnalyticsSections.NAVIGATION,
                             children: this.renderHeader(e, t)
-                        }), (0, a.jsx)(T.default, {
+                        }), (0, a.jsx)(f.default, {
                             section: eo.AnalyticsSections.BODY,
                             children: this.renderListing()
                         })]
                     }) : (0, a.jsxs)("div", {
-                        children: [(0, a.jsx)(A.AppPageTitle, {
+                        children: [(0, a.jsx)(m.AppPageTitle, {
                             location: e.name
                         }), this.renderJsonLD(), this.renderHeader(e, t), this.renderListing()]
                     })
@@ -548,7 +548,7 @@
                                     className: l(e_.headerPurchase, {
                                         [e_.active]: o
                                     }),
-                                    children: [null != t ? (0, P.default)(t) : null, null != e && null != t ? (0, a.jsx)(f.default, {
+                                    children: [null != t ? (0, P.default)(t) : null, null != e && null != t ? (0, a.jsx)(T.default, {
                                         wrapperClassName: e_.headerActionButton,
                                         applicationId: e.id,
                                         skuId: t.id,
@@ -571,7 +571,7 @@
                             pageSize: s,
                             isFocused: n
                         } = this.props;
-                        return (0, a.jsx)(T.default, {
+                        return (0, a.jsx)(f.default, {
                             section: eo.AnalyticsSections.HERO,
                             children: (0, a.jsx)(ee.default, {
                                 pageSize: s,
@@ -596,7 +596,7 @@
                     }
                 }
             }
-            var eI = (0, R.default)((0, p.default)(i.default.connectStores([U.default, L.default, M.default, y.default, j.default, b.default, G.default, m.default, N.default, v.default, h.default, D.default], e => {
+            var eI = (0, R.default)((0, p.default)(i.default.connectStores([U.default, L.default, M.default, y.default, j.default, b.default, G.default, A.default, N.default, v.default, h.default, D.default], e => {
                 let t, s, a, {
                     inputSkuId: n,
                     applicationId: r,
@@ -611,7 +611,7 @@
                     if (null == r) throw Error("Needs applicationId or skuId");
                     null != (a = N.default.getApplication(r)) && (t = a.destinationSkuId), s = null != t ? b.default.get(t) : null
                 }(null == s ? void 0 : s.flags) != null && (0, Y.hasFlag)(s.flags, eo.SKUFlags.STICKER_PACK) && (s = null);
-                let o = null != r && (G.default.inTestModeForApplication(r) || m.default.inDevModeForApplication(r));
+                let o = null != r && (G.default.inTestModeForApplication(r) || A.default.inDevModeForApplication(r));
                 return {
                     skuId: t,
                     application: null != r ? N.default.getApplication(r) : null,

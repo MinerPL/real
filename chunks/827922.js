@@ -4,7 +4,7 @@
                     return m
                 },
                 default: function() {
-                    return E
+                    return S
                 }
             }), n("222007");
             var i = n("37983");
@@ -36,7 +36,7 @@
                 }
             }
 
-            function E(e) {
+            function S(e) {
                 let {
                     markAsDismissed: t
                 } = e, {

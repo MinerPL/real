@@ -20,8 +20,8 @@
                 h = n("49111"),
                 E = n("353927"),
                 g = n("782340"),
-                D = n("686084"),
-                S = n("926622");
+                S = n("686084"),
+                D = n("926622");
             let T = (0, _.uid)(),
                 I = (0, _.uid)(),
                 O = (0, _.uid)();
@@ -35,7 +35,7 @@
                     } = this.props;
                     return (0, s.jsx)(_.UID, {
                         children: t => (0, s.jsxs)(f.default, {
-                            className: S.marginBottom4,
+                            className: D.marginBottom4,
                             children: [(0, s.jsx)(d.FormTitle, {
                                 tag: d.FormTitleTags.H3,
                                 children: (0, s.jsx)("label", {
@@ -65,7 +65,7 @@
                 render() {
                     return (0, s.jsxs)(d.FormItem, {
                         title: g.default.Messages.FORM_LABEL_INPUT_SENSITIVTY,
-                        className: S.marginBottom8,
+                        className: D.marginBottom8,
                         children: [this.renderAutomaticVADToggle(), this.renderSlider()]
                     })
                 }
@@ -112,14 +112,14 @@
                         vadAutoThreshold: f,
                         inputDevices: _,
                         inputDeviceId: E,
-                        inputVolume: D,
+                        inputVolume: S,
                         outputDeviceId: v,
                         outputDevices: b,
                         outputVolume: N,
-                        speaking: x = !1
+                        speaking: C = !1
                     } = e,
-                    C = u.first(_),
-                    M = null != C && C.disabled,
+                    x = u.first(_),
+                    M = null != x && x.disabled,
                     U = u.first(b),
                     R = null != U && U.disabled,
                     y = [{
@@ -132,7 +132,7 @@
                 return t = a === h.InputModes.PUSH_TO_TALK ? (0, s.jsxs)(i.Fragment, {
                     children: [(0, s.jsx)(d.FormItem, {
                         title: g.default.Messages.FORM_LABEL_SHORTCUT,
-                        className: S.marginBottom20,
+                        className: D.marginBottom20,
                         children: (0, s.jsx)(l.default, {
                             defaultValue: o,
                             onChange: e => r.default.setMode(a, {
@@ -140,7 +140,7 @@
                             }, n)
                         })
                     }), (0, s.jsxs)(d.FormItem, {
-                        className: S.marginBottom8,
+                        className: D.marginBottom8,
                         children: [(0, s.jsx)(d.FormTitle, {
                             id: T,
                             children: g.default.Messages.INPUT_MODE_PTT_RELEASE_DELAY
@@ -155,7 +155,7 @@
                         })]
                     })]
                 }) : (0, s.jsx)(A, {
-                    speaking: x,
+                    speaking: C,
                     inputMode: a,
                     threshold: p,
                     autoThreshold: f,
@@ -166,7 +166,7 @@
                 }), (0, s.jsxs)(i.Fragment, {
                     children: [(0, s.jsx)(d.FormItem, {
                         title: g.default.Messages.FORM_LABEL_INPUT_DEVICE,
-                        className: S.marginBottom20,
+                        className: D.marginBottom20,
                         children: (0, s.jsx)(d.SingleSelect, {
                             value: E,
                             onChange: e => r.default.setInputDevice(e, "Voice Settings"),
@@ -183,18 +183,18 @@
                             isDisabled: M
                         })
                     }), (0, s.jsxs)(d.FormItem, {
-                        className: S.marginBottom20,
+                        className: D.marginBottom20,
                         children: [(0, s.jsx)(d.FormTitle, {
                             id: I,
                             children: g.default.Messages.FORM_LABEL_INPUT_VOLUME
                         }), (0, s.jsx)(d.Slider, {
-                            initialValue: (0, m.amplitudeToPerceptual)(D),
+                            initialValue: (0, m.amplitudeToPerceptual)(S),
                             asValueChanges: e => r.default.setInputVolume((0, m.perceptualToAmplitude)(e)),
                             "aria-labelledby": I
                         })]
                     }), (0, s.jsx)(d.FormItem, {
                         title: g.default.Messages.FORM_LABEL_OUTPUT_DEVICE,
-                        className: S.marginBottom20,
+                        className: D.marginBottom20,
                         children: (0, s.jsx)(d.SingleSelect, {
                             value: v,
                             onChange: e => r.default.setOutputDevice(e, "Voice Settings"),
@@ -211,7 +211,7 @@
                             isDisabled: R
                         })
                     }), (0, s.jsxs)(d.FormItem, {
-                        className: S.marginBottom20,
+                        className: D.marginBottom20,
                         children: [(0, s.jsx)(d.FormTitle, {
                             id: O,
                             children: g.default.Messages.FORM_LABEL_OUTPUT_VOLUME
@@ -223,7 +223,7 @@
                         })]
                     }), (0, s.jsx)(d.FormItem, {
                         title: g.default.Messages.FORM_LABEL_INPUT_MODE,
-                        className: S.marginBottom20,
+                        className: D.marginBottom20,
                         children: (0, s.jsx)(d.RadioGroup, {
                             onChange: e => {
                                 let {
@@ -249,11 +249,11 @@
                         children: [(0, s.jsxs)(f.default.Child, {
                             children: [(0, s.jsx)(d.FormTitle, {
                                 tag: "h1",
-                                className: S.marginReset,
+                                className: D.marginReset,
                                 children: g.default.Messages.VOICE_SETTINGS
                             }), (0, s.jsx)(d.Text, {
                                 variant: "text-xs/normal",
-                                className: D.title,
+                                className: S.title,
                                 children: e.title
                             })]
                         }), (0, s.jsx)(f.default.Child, {

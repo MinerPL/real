@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return A
+                    return m
                 }
             });
             var a = s("37983");
@@ -17,12 +17,12 @@
                 _ = s("539938"),
                 E = s("595426"),
                 I = s("697218"),
-                T = s("145131"),
-                f = s("216422"),
+                f = s("145131"),
+                T = s("216422"),
                 S = s("49111"),
                 R = s("646718"),
                 p = s("782340"),
-                m = s("309285");
+                A = s("309285");
             let N = r.default.connectStores([I.default], () => ({
                 user: I.default.getCurrentUser()
             }))((0, o.default)((0, u.default)(e => {
@@ -33,25 +33,25 @@
                     user: r
                 } = e;
                 return s ? (0, a.jsxs)("div", {
-                    className: m.homeWrapperNormal,
+                    className: A.homeWrapperNormal,
                     children: [(0, a.jsx)(i.default, {
                         section: S.AnalyticsSections.NAVIGATION,
                         children: (0, a.jsxs)(_.default, {
                             isAuthenticated: s,
-                            className: m.headerBar,
+                            className: A.headerBar,
                             children: [(0, a.jsx)(_.default.Icon, {
-                                icon: f.default,
+                                icon: T.default,
                                 "aria-hidden": !0
                             }), (0, a.jsx)(_.default.Title, {
                                 children: p.default.Messages.PREMIUM
                             })]
                         })
                     }), (0, a.jsx)(t, {
-                        children: null == r ? (0, a.jsx)(T.default, {
-                            align: T.default.Align.CENTER,
-                            justify: T.default.Justify.CENTER,
+                        children: null == r ? (0, a.jsx)(f.default, {
+                            align: f.default.Align.CENTER,
+                            justify: f.default.Justify.CENTER,
                             children: (0, a.jsx)(l.Spinner, {
-                                className: m.spinner
+                                className: A.spinner
                             })
                         }) : (0, a.jsx)(E.default, {
                             entrypoint: R.PremiumMarketingEntrypoints.ApplicationStoreHome
@@ -61,4 +61,4 @@
                     to: S.Routes.LOGIN
                 })
             })));
-            var A = N
+            var m = N

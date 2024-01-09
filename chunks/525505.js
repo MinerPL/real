@@ -16,14 +16,14 @@
                 _ = s("812204"),
                 E = s("685665"),
                 I = s("308592"),
-                T = s("915639"),
-                f = s("697218"),
+                f = s("915639"),
+                T = s("697218"),
                 S = s("521012"),
                 R = s("36694"),
                 p = s("945330"),
-                m = s("719923"),
+                A = s("719923"),
                 N = s("153160"),
-                A = s("324878"),
+                m = s("324878"),
                 g = s("917247"),
                 P = s("641078"),
                 C = s("400307"),
@@ -61,7 +61,7 @@
                         } = e,
                         n = (0, c.default)();
                     t = s === L.PremiumTypes.TIER_0 ? (0, u.isThemeDark)(n) ? U : D : (0, u.isThemeDark)(n) ? b : j;
-                    let r = (0, m.getPremiumTypeDisplayName)(s);
+                    let r = (0, A.getPremiumTypeDisplayName)(s);
                     return (0, a.jsx)("img", {
                         src: t,
                         className: v.logo,
@@ -195,15 +195,15 @@
                 });
                 let z = (0, c.default)(),
                     Z = (0, u.isThemeLight)(z),
-                    X = (0, i.useStateFromStores)([f.default], () => f.default.getCurrentUser()),
-                    Q = (0, m.isPremiumExactly)(X, L.PremiumTypes.TIER_2),
+                    X = (0, i.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
+                    Q = (0, A.isPremiumExactly)(X, L.PremiumTypes.TIER_2),
                     J = (0, g.usePremiumTrialOffer)(),
                     q = null == J ? void 0 : null === (t = J.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-                    $ = (0, A.useCurrentPremiumTrialTier)(),
+                    $ = (0, m.useCurrentPremiumTrialTier)(),
                     ee = (0, P.useIsEligibleForBogoPromotion)();
                 if (!w || !V) return null;
-                let et = m.default.getDefaultPrice(L.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-                    es = m.default.getDefaultPrice(L.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
+                let et = A.default.getDefaultPrice(L.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+                    es = A.default.getDefaultPrice(L.SubscriptionPlans.PREMIUM_MONTH_TIER_2),
                     ea = {
                         label: (0, a.jsx)(o.Heading, {
                             className: v.textColor,
@@ -223,12 +223,12 @@
                         }),
                         column1: (0, a.jsx)(a.Fragment, {
                             children: (0, a.jsx)(H, {
-                                text: m.default.formatPriceString(et, L.SubscriptionIntervalTypes.MONTH)
+                                text: A.default.formatPriceString(et, L.SubscriptionIntervalTypes.MONTH)
                             })
                         }),
                         column2: (0, a.jsx)(a.Fragment, {
                             children: (0, a.jsx)(H, {
-                                text: m.default.formatPriceString(es, L.SubscriptionIntervalTypes.MONTH)
+                                text: A.default.formatPriceString(es, L.SubscriptionIntervalTypes.MONTH)
                             })
                         })
                     }, {
@@ -276,10 +276,10 @@
                             text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_UPLOAD
                         }),
                         column1: (0, a.jsx)(H, {
-                            text: (0, m.getMaxFileSizeForPremiumType)(L.PremiumTypes.TIER_0)
+                            text: (0, A.getMaxFileSizeForPremiumType)(L.PremiumTypes.TIER_0)
                         }),
                         column2: (0, a.jsx)(H, {
-                            text: (0, m.getMaxFileSizeForPremiumType)(L.PremiumTypes.TIER_2)
+                            text: (0, A.getMaxFileSizeForPremiumType)(L.PremiumTypes.TIER_2)
                         })
                     }, {
                         label: (0, a.jsx)(k, {
@@ -295,7 +295,7 @@
                         label: (0, a.jsx)(k, {
                             text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BOOSTS.format({
                                 numBoosts: L.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
-                                percentageOff: (0, N.formatPercent)(T.default.locale, L.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+                                percentageOff: (0, N.formatPercent)(f.default.locale, L.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
                             })
                         }),
                         column1: (0, a.jsx)(K, {

@@ -1,20 +1,20 @@
             "use strict";
-            i.r(t), i.d(t, {
+            n.r(t), n.d(t, {
                 useMutedUntilText: function() {
-                    return a
+                    return r
                 },
                 default: function() {
-                    return r
+                    return s
                 }
             });
-            var n = i("37983");
-            i("884691");
-            var l = i("77078"),
-                s = i("782340");
+            var i = n("37983");
+            n("884691");
+            var l = n("77078"),
+                a = n("782340");
 
-            function a(e) {
-                return null == e || null == e.end_time ? null : s.default.Messages.MUTED_UNTIL_TIME.format({
-                    endTime: new Date(e.end_time).toLocaleString(s.default.getLocale(), {
+            function r(e) {
+                return null == e || null == e.end_time ? null : a.default.Messages.MUTED_UNTIL_TIME.format({
+                    endTime: new Date(e.end_time).toLocaleString(a.default.getLocale(), {
                         month: "numeric",
                         day: "numeric",
                         hour: "numeric",
@@ -23,15 +23,15 @@
                 })
             }
 
-            function r(e) {
+            function s(e) {
                 let {
                     muteConfig: t,
-                    className: i
-                } = e, s = a(t);
-                return null != s ? (0, n.jsx)(l.Text, {
+                    className: n
+                } = e, a = r(t);
+                return null != a ? (0, i.jsx)(l.Text, {
                     variant: "text-xs/normal",
                     color: "text-muted",
-                    className: i,
-                    children: s
+                    className: n,
+                    children: a
                 }) : null
             }

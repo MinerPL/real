@@ -16,14 +16,14 @@
                 _ = s("685665"),
                 E = s("521012"),
                 I = s("594098"),
-                T = s("599110"),
-                f = s("719923"),
+                f = s("599110"),
+                T = s("719923"),
                 S = s("182650"),
                 R = s("300962"),
                 p = s("959905"),
-                m = s("154889"),
+                A = s("154889"),
                 N = s("917247"),
-                A = s("460680"),
+                m = s("460680"),
                 g = s("411205"),
                 P = s("934570"),
                 C = s("641078"),
@@ -47,7 +47,7 @@
                     var t;
                     let {
                         isFullscreen: s
-                    } = e, r = n.useRef(null), [F, W] = n.useState(!1), [w, V] = n.useState(!1), [Y, z] = n.useState(!1), [Z, X] = n.useState(!1), Q = (0, i.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()), J = null != Q ? (0, f.getPremiumPlanItem)(Q) : null, q = null != J ? f.default.getSkuIdForPlan(J.planId) : null, $ = null !== q && q !== G.PremiumSubscriptionSKUs.TIER_2 ? G.PremiumSubscriptionSKUs.TIER_2 : null, ee = (0, p.useLocalizedPromoQuery)(), et = null != ee, es = (0, m.usePremiumDiscountOffer)(), ea = (0, N.usePremiumTrialOffer)(), en = null == ea ? void 0 : null === (t = ea.subscription_trial) || void 0 === t ? void 0 : t.sku_id, er = (0, S.useIsInPremiumOfferExperience)(), el = (0, C.useIsEligibleForBogoPromotion)(), {
+                    } = e, r = n.useRef(null), [F, W] = n.useState(!1), [w, V] = n.useState(!1), [Y, z] = n.useState(!1), [Z, X] = n.useState(!1), Q = (0, i.useStateFromStores)([E.default], () => E.default.getPremiumTypeSubscription()), J = null != Q ? (0, T.getPremiumPlanItem)(Q) : null, q = null != J ? T.default.getSkuIdForPlan(J.planId) : null, $ = null !== q && q !== G.PremiumSubscriptionSKUs.TIER_2 ? G.PremiumSubscriptionSKUs.TIER_2 : null, ee = (0, p.useLocalizedPromoQuery)(), et = null != ee, es = (0, A.usePremiumDiscountOffer)(), ea = (0, N.usePremiumTrialOffer)(), en = null == ea ? void 0 : null === (t = ea.subscription_trial) || void 0 === t ? void 0 : t.sku_id, er = (0, S.useIsInPremiumOfferExperience)(), el = (0, C.useIsEligibleForBogoPromotion)(), {
                         enabled: ei
                     } = (0, R.default)(), {
                         analyticsLocations: eu
@@ -95,7 +95,7 @@
                                 })
                             }), (0, a.jsxs)("div", {
                                 className: s ? B.premiumTierCardsContainerFullscreen : B.premiumTierCardsContainerSettings,
-                                children: [(0, a.jsx)(A.default, {
+                                children: [(0, a.jsx)(m.default, {
                                     isFullscreen: s
                                 }), s && et && (0, a.jsx)(g.default, {
                                     localizedPricingPromo: ee
@@ -177,7 +177,7 @@
                                 subscriptionTier: $
                             }), (0, a.jsx)(u.VisibilitySensor, {
                                 onChange: e => {
-                                    e && !Y && (T.default.track(y.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                                    e && !Y && (f.default.track(y.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                                         location_stack: eu
                                     }), z(!0))
                                 },

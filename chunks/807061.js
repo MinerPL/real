@@ -4,9 +4,9 @@
                     return u
                 }
             });
-            var s = n("37983");
+            var a = n("37983");
             n("884691");
-            var a = n("808072"),
+            var s = n("808072"),
                 l = n("714307"),
                 i = n("894383"),
                 r = n("556684");
@@ -14,15 +14,15 @@
                     "voice-conversations": {
                         popoutPosition: "right",
                         highPriority: !0,
-                        textAlign: a.TextAlignments.CENTER,
-                        media: () => (0, s.jsx)(i.default, {})
+                        textAlign: s.TextAlignments.CENTER,
+                        media: () => (0, a.jsx)(i.default, {})
                     },
                     "writing-messages": {
                         popoutPosition: "top",
                         highPriority: !0,
-                        textAlign: a.TextAlignments.CENTER,
+                        textAlign: s.TextAlignments.CENTER,
                         spacing: 10,
-                        media: () => (0, s.jsx)(r.default, {})
+                        media: () => (0, a.jsx)(r.default, {})
                     },
                     "direct-messages": {
                         popoutPosition: "right"
@@ -33,9 +33,9 @@
                     },
                     "organize-by-topic": {
                         popoutPosition: "right",
-                        textAlign: a.TextAlignments.CENTER,
+                        textAlign: s.TextAlignments.CENTER,
                         spacing: 8,
-                        media: () => (0, s.jsx)(l.default, {})
+                        media: () => (0, a.jsx)(l.default, {})
                     },
                     "instant-invite": {
                         popoutPosition: "right",
