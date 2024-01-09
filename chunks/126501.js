@@ -1,23 +1,23 @@
             "use strict";
-            a.r(t), a.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
                     return u
                 }
             });
-            var l = a("913144"),
-                n = a("679428"),
-                s = a("282109"),
+            var a = n("913144"),
+                i = n("679428"),
+                s = n("282109"),
                 u = {
                     update(e) {
-                        l.default.dispatch({
+                        a.default.dispatch({
                             type: "CHANNEL_COLLAPSE",
                             channelId: e
                         })
                     },
                     toggleCollapseGuild(e) {
-                        n.default.saveUserGuildSettings(e, {
+                        i.default.saveUserGuildSettings(e, {
                             hide_muted_channels: !s.default.isGuildCollapsed(e)
-                        }), l.default.dispatch({
+                        }), a.default.dispatch({
                             type: "GUILD_TOGGLE_COLLAPSE_MUTED",
                             guildId: e
                         })

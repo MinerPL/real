@@ -46,7 +46,7 @@
                 })
             }
 
-            function L(e) {
+            function v(e) {
                 var t;
                 let {
                     channelId: n,
@@ -65,7 +65,7 @@
                 })
             }
 
-            function v(e) {
+            function L(e) {
                 var t, n, l, c;
                 let {
                     guildId: f,
@@ -74,27 +74,27 @@
                 } = e, {
                     channelAction: m,
                     completed: A
-                } = (0, _.useMemberActionsForChannel)(f, h), T = (0, _.useNextMemberAction)(f, null == m ? void 0 : m.channelId), v = (0, o.default)([d.default], () => d.default.useReducedMotion), x = (null == m ? void 0 : m.actionType) === S.NewMemberActionTypes.VIEW, R = (0, u.useToken)(u.tokens.colors.WHITE), [y, D] = a.useState(!1), [O] = a.useState(new r.default.Value(0)), [j] = a.useState(new r.default.Value(0));
+                } = (0, _.useMemberActionsForChannel)(f, h), T = (0, _.useNextMemberAction)(f, null == m ? void 0 : m.channelId), L = (0, o.default)([d.default], () => d.default.useReducedMotion), x = (null == m ? void 0 : m.actionType) === S.NewMemberActionTypes.VIEW, R = (0, u.useToken)(u.tokens.colors.WHITE), [y, O] = a.useState(!1), [D] = a.useState(new r.default.Value(0)), [j] = a.useState(new r.default.Value(0));
                 a.useEffect(() => {
-                    A ? r.default.timing(O, {
+                    A ? r.default.timing(D, {
                         toValue: 0,
-                        duration: v ? 1 : 350,
+                        duration: L ? 1 : 350,
                         easing: r.default.Easing.quad,
                         delay: x ? 0 : 500
-                    }).start(() => D(!0)) : r.default.timing(O, {
+                    }).start(() => O(!0)) : r.default.timing(D, {
                         toValue: 1,
-                        duration: v ? 1 : 350,
+                        duration: L ? 1 : 350,
                         easing: r.default.Easing.quad,
                         delay: 400
                     }).start()
-                }, [A, O, x, v]), a.useEffect(() => {
+                }, [A, D, x, L]), a.useEffect(() => {
                     A && y && r.default.timing(j, {
                         toValue: 1,
-                        duration: v ? 0 : 350,
+                        duration: L ? 0 : 350,
                         easing: r.default.Easing.quad,
                         delay: 400
                     }).start()
-                }, [A, j, y, v]);
+                }, [A, j, y, L]);
                 let b = a.useCallback(() => {
                     null != T && (0, g.selectNewMemberActionChannel)(f, T.channelId)
                 }, [f, T]);
@@ -110,7 +110,7 @@
                         children: (0, s.jsxs)(u.Clickable, {
                             className: i(I.banner, I.clickable),
                             onClick: b,
-                            children: [(0, s.jsx)(L, {
+                            children: [(0, s.jsx)(v, {
                                 channelId: T.channelId,
                                 emojiId: null === (t = T.emoji) || void 0 === t ? void 0 : t.id,
                                 emojiName: null == T ? void 0 : null === (n = T.emoji) || void 0 === n ? void 0 : n.name
@@ -138,12 +138,12 @@
                     }) : (0, s.jsxs)(r.default.div, {
                         className: I.banner,
                         style: {
-                            marginBottom: O.interpolate({
+                            marginBottom: D.interpolate({
                                 inputRange: [0, 1],
                                 outputRange: [-60, 0]
                             })
                         },
-                        children: [(0, s.jsx)(L, {
+                        children: [(0, s.jsx)(v, {
                             channelId: m.channelId,
                             emojiId: null === (l = m.emoji) || void 0 === l ? void 0 : l.id,
                             emojiName: null == m ? void 0 : null === (c = m.emoji) || void 0 === c ? void 0 : c.name
@@ -177,7 +177,7 @@
                     var e;
                     return (null === (e = C.default.getSelfMember(t)) || void 0 === e ? void 0 : e.isPending) === !0
                 }), r = (0, _.useAllActionsCompleted)(t);
-                return r || i || !l ? null : (0, s.jsx)(v, {
+                return r || i || !l ? null : (0, s.jsx)(L, {
                     guildId: t,
                     channel: n,
                     className: a

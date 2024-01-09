@@ -35,36 +35,36 @@
                     activities: M,
                     newClipsCount: I,
                     canPostPolls: N,
-                    appContext: L
-                } = e, v = [];
-                return t && (v.push({
+                    appContext: v
+                } = e, L = [];
+                return t && (L.push({
                     type: "UPLOAD_A_FILE",
                     icon: g.default,
                     display: _.default.Messages.CHAT_ATTACH_UPLOAD_A_FILE
-                }), v.push({
+                }), L.push({
                     type: "UPLOAD_TEXT_AS_FILE",
                     icon: m.default,
                     display: _.default.Messages.CHAT_ATTACH_UPLOAD_TEXT_AS_FILE
-                })), A && t && L !== S.AppContext.POPOUT && v.push({
+                })), A && t && v !== S.AppContext.POPOUT && L.push({
                     type: "CLIPS",
                     icon: f.default,
                     display: _.default.Messages.CLIPS_SHARE_A_CLIP,
                     badgeVal: I,
                     badgeColor: o.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND
-                }), n && v.push({
+                }), n && L.push({
                     type: "CREATE_THREAD",
                     icon: E.default,
                     display: _.default.Messages.CREATE_THREAD
-                }), N && v.push({
+                }), N && L.push({
                     type: "POLL",
                     icon: l.PollsIcon,
                     display: _.default.Messages.CREATE_POLL
-                }), s && a && v.push({
+                }), s && a && L.push({
                     type: "SLASH_COMMAND",
                     icon: c.default,
                     display: _.default.Messages.CHAT_ATTACH_USE_SLASH_COMMAND
                 }), M.forEach(e => {
-                    !(0, i.default)(e, S.ActivityFlags.EMBEDDED) && (e.type === S.ActivityTypes.PLAYING && (0, i.default)(e, S.ActivityFlags.JOIN) && v.push({
+                    !(0, i.default)(e, S.ActivityFlags.EMBEDDED) && (e.type === S.ActivityTypes.PLAYING && (0, i.default)(e, S.ActivityFlags.JOIN) && L.push({
                         type: "INVITE_TO_GAME",
                         icon: C.default,
                         display: _.default.Messages.CHAT_ATTACH_INVITE_TO_PLAY_GAME.format({
@@ -72,7 +72,7 @@
                             game: null != e ? e.name : ""
                         }),
                         activity: e
-                    }), e.type === S.ActivityTypes.LISTENING && (0, i.default)(e, S.ActivityFlags.SYNC) && v.push({
+                    }), e.type === S.ActivityTypes.LISTENING && (0, i.default)(e, S.ActivityFlags.SYNC) && L.push({
                         type: "INVITE_TO_LISTEN",
                         icon: p.default,
                         display: _.default.Messages.CHAT_ATTACH_INVITE_TO_LISTEN.format({
@@ -80,7 +80,7 @@
                             name: null != e ? e.name : ""
                         }),
                         activity: e
-                    }), e.type === S.ActivityTypes.WATCHING && (0, i.default)(e, S.ActivityFlags.SYNC) && v.push({
+                    }), e.type === S.ActivityTypes.WATCHING && (0, i.default)(e, S.ActivityFlags.SYNC) && L.push({
                         type: "INVITE_TO_WATCH",
                         icon: h.default,
                         display: _.default.Messages.CHAT_ATTACH_INVITE_TO_WATCH.format({
@@ -89,5 +89,5 @@
                         }),
                         activity: e
                     }))
-                }), v
+                }), L
             }(a = s || (s = {})).UPLOAD_A_FILE = "UPLOAD_A_FILE", a.UPLOAD_TEXT_AS_FILE = "UPLOAD_TEXT_AS_FILE", a.INVITE_TO_PLAY_GAME = "INVITE_TO_GAME", a.INVITE_TO_LISTEN = "INVITE_TO_LISTEN", a.INVITE_TO_WATCH = "INVITE_TO_WATCH", a.CREATE_THREAD = "CREATE_THREAD", a.SLASH_COMMAND = "SLASH_COMMAND", a.CLIPS = "CLIPS", a.POLL = "POLL"

@@ -27,19 +27,19 @@
                 M = n("625149"),
                 I = n("300322"),
                 N = n("845579"),
-                L = n("271938"),
-                v = n("836417"),
+                v = n("271938"),
+                L = n("836417"),
                 x = n("26989"),
                 R = n("305961"),
                 y = n("88093"),
-                D = n("957255"),
-                O = n("886074"),
+                O = n("957255"),
+                D = n("886074"),
                 j = n("36562"),
                 b = n("662255"),
                 P = n("85175"),
-                F = n("68238"),
-                H = n("83900"),
-                U = n("993477"),
+                U = n("68238"),
+                F = n("83900"),
+                H = n("993477"),
                 k = n("733160"),
                 G = n("100300"),
                 w = n("433487"),
@@ -143,7 +143,7 @@
                                 children: [(0, s.jsx)(i, {
                                     className: ec.icon,
                                     ...r
-                                }), m && (0, s.jsx)(O.default, {})]
+                                }), m && (0, s.jsx)(D.default, {})]
                             }), p && (0, s.jsx)(X.Separator, {})]
                         })
                     }
@@ -163,8 +163,8 @@
                     canReact: _,
                     canConfigureJoin: A,
                     canReply: T,
-                    canStartThread: v,
-                    canViewThread: O,
+                    canStartThread: L,
+                    canViewThread: D,
                     isExpanded: Z,
                     showMoreUtilities: X,
                     showEmojiPicker: ei,
@@ -190,31 +190,31 @@
                         isFocused: d
                     } = e, {
                         author: h
-                    } = n, C = (0, u.useStateFromStores)([R.default], () => R.default.getGuild(t.guild_id), [t.guild_id]), p = (0, u.useStateFromStores)([L.default], () => L.default.getId()), m = (0, I.useIsActiveChannelOrUnarchivableThread)(t), _ = (0, I.useIsNonModInLockedThread)(t), A = N.RenderReactions.useSetting(), T = N.DeveloperMode.useSetting(), v = (0, u.useStateFromStores)([y.default], () => null == t.guild_id || y.default.canChatInGuild(t.guild_id), [t]), {
-                        canManageMessages: O,
+                    } = n, C = (0, u.useStateFromStores)([R.default], () => R.default.getGuild(t.guild_id), [t.guild_id]), p = (0, u.useStateFromStores)([v.default], () => v.default.getId()), m = (0, I.useIsActiveChannelOrUnarchivableThread)(t), _ = (0, I.useIsNonModInLockedThread)(t), A = N.RenderReactions.useSetting(), T = N.DeveloperMode.useSetting(), L = (0, u.useStateFromStores)([y.default], () => null == t.guild_id || y.default.canChatInGuild(t.guild_id), [t]), {
+                        canManageMessages: D,
                         canAddNewReactions: j
-                    } = (0, u.useStateFromStoresObject)([D.default], () => ({
-                        canAddNewReactions: v && D.default.can(eo.Permissions.ADD_REACTIONS, t),
-                        canManageMessages: D.default.can(eo.Permissions.MANAGE_MESSAGES, t)
-                    }), [t, v]), b = (0, M.useCanReplyToMessage)(t, n), P = (0, I.useCanStartPublicThread)(t, n), F = (0, I.useCanViewThreadForMessage)(n), H = (0, u.useStateFromStores)([E.default], () => null != t.guild_id && E.default.isLurking(t.guild_id), [t]), U = (0, u.useStateFromStores)([x.default], () => null != t.guild_id && x.default.isCurrentUserGuest(t.guild_id), [t]), k = h.id === p, G = (O || k) && m && n.type in eo.MessageTypesDeletable;
-                    n.type === eo.MessageTypes.AUTO_MODERATION_ACTION && (G = G && O);
+                    } = (0, u.useStateFromStoresObject)([O.default], () => ({
+                        canAddNewReactions: L && O.default.can(eo.Permissions.ADD_REACTIONS, t),
+                        canManageMessages: O.default.can(eo.Permissions.MANAGE_MESSAGES, t)
+                    }), [t, L]), b = (0, M.useCanReplyToMessage)(t, n), P = (0, I.useCanStartPublicThread)(t, n), U = (0, I.useCanViewThreadForMessage)(n), F = (0, u.useStateFromStores)([E.default], () => null != t.guild_id && E.default.isLurking(t.guild_id), [t]), H = (0, u.useStateFromStores)([x.default], () => null != t.guild_id && x.default.isCurrentUserGuest(t.guild_id), [t]), k = h.id === p, G = (D || k) && m && n.type in eo.MessageTypesDeletable;
+                    n.type === eo.MessageTypes.AUTO_MODERATION_ACTION && (G = G && D);
                     let w = (0, ee.canReportMessage)(n),
-                        B = (0, en.default)(n, t, O),
+                        B = (0, en.default)(n, t, D),
                         V = !t.isSystemDM() && (0, et.default)(n, p) && m && !_,
                         {
                             disableReactionCreates: W
                         } = (0, es.default)({
                             channel: t,
-                            canChat: v,
+                            canChat: L,
                             renderReactions: A,
                             canAddNewReactions: j,
-                            isLurking: H,
-                            isGuest: U,
+                            isLurking: F,
+                            isGuest: H,
                             isActiveChannelOrUnarchivableThread: m
                         }),
-                        Z = t.type === eo.ChannelTypes.GUILD_ANNOUNCEMENT && null != C && C.hasFeature(eo.GuildFeatures.NEWS) && (k || O) && n.type === eo.MessageTypes.DEFAULT,
+                        Z = t.type === eo.ChannelTypes.GUILD_ANNOUNCEMENT && null != C && C.hasFeature(eo.GuildFeatures.NEWS) && (k || D) && n.type === eo.MessageTypes.DEFAULT,
                         z = t.getGuildId(),
-                        K = null != z && (n.type === eo.MessageTypes.USER_JOIN || n.type === eo.MessageTypes.GUILD_INVITE_REMINDER) && D.default.canWithPartialContext(eo.Permissions.MANAGE_GUILD, {
+                        K = null != z && (n.type === eo.MessageTypes.USER_JOIN || n.type === eo.MessageTypes.GUILD_INVITE_REMINDER) && O.default.canWithPartialContext(eo.Permissions.MANAGE_GUILD, {
                             guildId: z
                         }),
                         {
@@ -237,7 +237,7 @@
                         canReport: w,
                         canReply: b,
                         canStartThread: P,
-                        canViewThread: F,
+                        canViewThread: U,
                         canCopy: Q.SUPPORTS_COPY,
                         hasDeveloperMode: T,
                         canReact: !W && A,
@@ -256,7 +256,7 @@
                         isFocused: d,
                         isGuildInviteReminder: n.type === eo.MessageTypes.GUILD_INVITE_REMINDER
                     }
-                }(e), [eM, eI] = a.useState(!1), [eN, eL] = a.useState(!1), ev = a.useCallback(() => {
+                }(e), [eM, eI] = a.useState(!1), [eN, ev] = a.useState(!1), eL = a.useCallback(() => {
                     !X && J.default.track(eo.AnalyticEvents.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                         message_id: n.id,
                         channel: n.channel_id
@@ -282,7 +282,7 @@
                             channel: t,
                             message: n,
                             label: ed.default.Messages.COPY_LINK,
-                            icon: H.default,
+                            icon: F.default,
                             onClick: ea.copyLink
                         }) : null, A ? eC({
                             key: "configure",
@@ -303,7 +303,7 @@
                             channel: t,
                             message: n,
                             label: ed.default.Messages.MARK_UNREAD,
-                            icon: U.default,
+                            icon: H.default,
                             onClick: ea.markMessageUnread
                         }) : null, i ? eC({
                             key: "pin",
@@ -325,7 +325,7 @@
                         channel: t,
                         message: n,
                         label: em ? ed.default.Messages.CLYDE_VIEW_SOURCE_HIDE_TOOLTIP : ed.default.Messages.CLYDE_VIEW_SOURCE_SHOW_TOOLTIP,
-                        icon: F.default,
+                        icon: U.default,
                         onClick: () => {
                             eg(!em), J.default.track(eo.AnalyticEvents.CLYDE_AI_THOUGHTS_VIEWED, {
                                 message_id: n.id
@@ -342,7 +342,7 @@
                         },
                         onClick: () => {
                             let e = !eM;
-                            eI(e), eL(!1), e && (J.default.track(eo.AnalyticEvents.CLYDE_AI_MESSAGE_RATED, {
+                            eI(e), ev(!1), e && (J.default.track(eo.AnalyticEvents.CLYDE_AI_MESSAGE_RATED, {
                                 message_id: n.id,
                                 rating: 1,
                                 has_custom_personality: eS
@@ -359,7 +359,7 @@
                         },
                         onClick: () => {
                             let e = !eN;
-                            eL(e), eI(!1), e && (0, h.openClydeFeedbackModal)(n.id, eS, eI, eL)
+                            ev(e), eI(!1), e && (0, h.openClydeFeedbackModal)(n.id, eS, eI, ev)
                         }
                     }) : null, _ && !eA ? (0, s.jsx)(el.default, {
                         channel: t,
@@ -382,14 +382,14 @@
                         label: ed.default.Messages.EDIT,
                         icon: B.default,
                         onClick: ea.editMessage
-                    }) : null, v ? eC({
+                    }) : null, L ? eC({
                         key: "thread",
                         channel: t,
                         message: n,
                         label: ed.default.Messages.CREATE_THREAD,
                         icon: z.default,
                         onClick: ea.createThread
-                    }) : null, !v && O ? eC({
+                    }) : null, !L && D ? eC({
                         key: "view-thread",
                         channel: t,
                         message: n,
@@ -428,7 +428,7 @@
                             })
                         },
                         shouldShow: X,
-                        onRequestClose: ev,
+                        onRequestClose: eL,
                         position: "left",
                         align: "top",
                         animation: d.Popout.Animation.NONE,
@@ -446,7 +446,7 @@
                                 channel: t,
                                 message: n,
                                 selected: i,
-                                onClick: ev,
+                                onClick: eL,
                                 ...l
                             })
                         }
@@ -509,7 +509,7 @@
                     channel: t,
                     message: n,
                     isHeader: a
-                } = e, l = (0, u.useStateFromStores)([v.default], () => v.default.isEditing(t.id, n.id), [t.id, n.id]), r = function(e) {
+                } = e, l = (0, u.useStateFromStores)([L.default], () => L.default.isEditing(t.id, n.id), [t.id, n.id]), r = function(e) {
                     let {
                         channel: t,
                         message: n

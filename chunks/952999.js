@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 WelcomeMessageCTA: function() {
-                    return O
+                    return D
                 },
                 default: function() {
                     return j
@@ -30,14 +30,14 @@
                 M = n("659500"),
                 I = n("701909"),
                 N = n("773336"),
-                L = n("299039"),
-                v = n("172554"),
+                v = n("299039"),
+                L = n("172554"),
                 x = n("49111"),
                 R = n("188631"),
                 y = n("782340"),
-                D = n("508328");
+                O = n("508328");
 
-            function O(e) {
+            function D(e) {
                 let {
                     className: t,
                     iconUrl: n,
@@ -49,26 +49,26 @@
                 return a.useEffect(() => {
                     null != C && o !== C && (h(!0), setTimeout(() => h(!1), 1e3))
                 }, [o, C]), (0, s.jsxs)(c.Clickable, {
-                    className: i(t, D.card, {
-                        [D.completed]: o
+                    className: i(t, O.card, {
+                        [O.completed]: o
                     }),
                     onClick: u,
                     children: [null != l ? l : (0, s.jsx)("div", {
-                        className: D.icon,
+                        className: O.icon,
                         style: {
                             backgroundImage: "url('".concat(n, "')")
                         }
                     }), (0, s.jsx)(c.Text, {
                         color: "header-primary",
-                        className: i(D.cardTextContainer, D.cardHeader),
+                        className: i(O.cardTextContainer, O.cardHeader),
                         variant: "text-sm/normal",
                         children: r
                     }), o ? (0, s.jsx)(T.default, {
-                        className: i(D.checkmark, {
-                            [D.animate]: d
+                        className: i(O.checkmark, {
+                            [O.animate]: d
                         })
                     }) : (0, s.jsx)(A.default, {
-                        className: D.arrow,
+                        className: O.arrow,
                         direction: A.default.Directions.RIGHT
                     })]
                 })
@@ -77,7 +77,7 @@
             function j(e) {
                 let {
                     channel: t
-                } = e, l = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != l && L.default.extractTimestamp(l.id) < Date.now() - x.WELCOME_OLD_GUILD_AGE_THRESHOLD, A = (0, u.useStateFromStores)([g.default], () => (null == l ? void 0 : l.ownerId) === g.default.getId(), [l]), {
+                } = e, l = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != l && v.default.extractTimestamp(l.id) < Date.now() - x.WELCOME_OLD_GUILD_AGE_THRESHOLD, A = (0, u.useStateFromStores)([g.default], () => (null == l ? void 0 : l.ownerId) === g.default.getId(), [l]), {
                     canInvite: T,
                     canManageGuild: j,
                     canMessage: b
@@ -85,9 +85,9 @@
                     var e, t;
                     return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0
                 }), {
-                    guildPopulated: F,
-                    guildMessaged: H,
-                    guildPersonalized: U
+                    guildPopulated: U,
+                    guildMessaged: F,
+                    guildPersonalized: H
                 } = (0, p.useCompletedStates)(l), {
                     handleInvite: k,
                     handleMessage: G,
@@ -169,7 +169,7 @@
                         handleDownload: r,
                         handleAddApplication: o
                     }
-                }(l), W = !(P || F || H || U), {
+                }(l), W = !(P || U || F || H), {
                     titleAnimatedStyle: Z,
                     opacities: z
                 } = function(e) {
@@ -217,55 +217,55 @@
                     }, [l]), null == l) return null;
                 let q = [];
                 !f && (T && q.push((0, s.jsx)(o.default.div, {
-                    className: D.cardWrapper,
+                    className: O.cardWrapper,
                     style: W ? {
                         opacity: z[q.length]
                     } : {},
-                    children: (0, s.jsx)(O, {
+                    children: (0, s.jsx)(D, {
                         iconUrl: n("243826"),
                         header: y.default.Messages.WELCOME_CTA_INVITE_TITLE,
-                        completed: F,
+                        completed: U,
                         onClick: k
                     })
                 }, "invite")), j && q.push((0, s.jsx)(o.default.div, {
-                    className: D.cardWrapper,
+                    className: O.cardWrapper,
                     style: W ? {
                         opacity: z[q.length]
                     } : {},
-                    children: (0, s.jsx)(O, {
+                    children: (0, s.jsx)(D, {
                         iconUrl: n("215036"),
                         header: y.default.Messages.WELCOME_CTA_PERSONALIZE_TITLE,
-                        completed: U,
+                        completed: H,
                         onClick: w
                     })
                 }, "customize")), b && q.push((0, s.jsx)(o.default.div, {
-                    className: D.cardWrapper,
+                    className: O.cardWrapper,
                     style: W ? {
                         opacity: z[q.length]
                     } : {},
-                    children: (0, s.jsx)(O, {
+                    children: (0, s.jsx)(D, {
                         iconUrl: n("505873"),
                         header: y.default.Messages.WELCOME_CTA_MESSAGE_TITLE,
-                        completed: H,
+                        completed: F,
                         onClick: G
                     })
                 }, "message")), (0, N.isWeb)() && q.push((0, s.jsx)(o.default.div, {
-                    className: D.cardWrapper,
+                    className: O.cardWrapper,
                     style: W ? {
                         opacity: z[q.length]
                     } : {},
-                    children: (0, s.jsx)(O, {
+                    children: (0, s.jsx)(D, {
                         iconUrl: n("238032"),
                         header: y.default.Messages.WELCOME_CTA_DOWNLOAD_TITLE,
                         completed: P,
                         onClick: B
                     })
                 }, "download")), q.push((0, s.jsx)(o.default.div, {
-                    className: D.cardWrapper,
+                    className: O.cardWrapper,
                     style: W ? {
                         opacity: z[q.length]
                     } : {},
-                    children: (0, s.jsx)(O, {
+                    children: (0, s.jsx)(D, {
                         iconUrl: n("356451"),
                         header: y.default.Messages.WELCOME_CTA_APPS_RECOMMENDATION_TITLE,
                         completed: Y,
@@ -275,16 +275,16 @@
                 let X = A ? y.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : y.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
                 f && (X = y.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
                 let J = "".concat(I.default.getArticleURL(x.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
-                return (0, s.jsx)(v.default, {
+                return (0, s.jsx)(L.default, {
                     channelId: t.id,
                     children: (0, s.jsx)("div", {
-                        className: D.container,
+                        className: O.container,
                         children: (0, s.jsxs)("div", {
-                            className: D.inner,
+                            className: O.inner,
                             children: [(0, s.jsxs)(o.default.div, {
                                 style: Z,
                                 children: [(0, s.jsx)(c.Heading, {
-                                    className: D.titleName,
+                                    className: O.titleName,
                                     variant: "heading-xxl/semibold",
                                     children: y.default.Messages.WELCOME_CTA_TITLE.format({
                                         guildName: l.name
@@ -292,8 +292,8 @@
                                 }), (0, s.jsxs)(c.Text, {
                                     color: "header-secondary",
                                     className: i({
-                                        [D.subtitle]: !0,
-                                        [D.noChildren]: 0 === q.length
+                                        [O.subtitle]: !0,
+                                        [O.noChildren]: 0 === q.length
                                     }),
                                     variant: "text-sm/normal",
                                     children: [X, " ", q.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({

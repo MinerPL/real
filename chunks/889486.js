@@ -4,18 +4,18 @@
                     return o
                 }
             });
-            var l = n("627445"),
-                u = n.n(l),
-                a = n("629109"),
-                i = n("987317"),
-                d = n("42887"),
-                r = n("700507"),
-                s = n("780338");
+            var i = n("627445"),
+                a = n.n(i),
+                l = n("629109"),
+                s = n("987317"),
+                u = n("42887"),
+                d = n("700507"),
+                r = n("780338");
 
             function o(e, t) {
                 var n;
-                let l = null !== (n = e.sessionId) && void 0 !== n ? n : "";
-                (0, r.remoteDisconnect)(l), (0, r.disconnectRemote)();
+                let i = null !== (n = e.sessionId) && void 0 !== n ? n : "";
+                (0, d.remoteDisconnect)(i), (0, d.disconnectRemote)();
                 let o = null != t ? t : e.channelId;
-                u(null != o, "attempted to transfer to unknown channel"), e.selfMute !== d.default.isSelfMute() && a.default.toggleSelfMute(), e.selfDeaf !== d.default.isSelfDeaf() && a.default.toggleSelfDeaf(), (0, s.default)(o, "discord_client", l), i.default.selectVoiceChannel(o, !1)
+                a(null != o, "attempted to transfer to unknown channel"), e.selfMute !== u.default.isSelfMute() && l.default.toggleSelfMute(), e.selfDeaf !== u.default.isSelfDeaf() && l.default.toggleSelfDeaf(), (0, r.default)(o, "discord_client", i), s.default.selectVoiceChannel(o, !1)
             }

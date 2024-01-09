@@ -1,43 +1,43 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return f
                 }
             });
-            var l = n("37983");
+            var a = n("37983");
             n("884691");
-            var u = n("446674"),
-                a = n("77078"),
-                d = n("817963"),
-                i = n("244480"),
-                r = n("398604"),
-                s = n("322224"),
-                o = n("745049"),
+            var i = n("446674"),
+                s = n("77078"),
+                u = n("817963"),
+                l = n("244480"),
+                o = n("398604"),
+                r = n("322224"),
+                d = n("745049"),
                 c = n("782340");
 
-            function E(e, t, n) {
+            function f(e, t, n) {
                 let {
-                    canManageGuildEvent: E
-                } = (0, d.useManageResourcePermissions)(null != n ? n : t), f = (0, u.useStateFromStores)([r.default], () => r.default.isActive(e)), _ = (0, u.useStateFromStores)([r.default], () => r.default.getGuildScheduledEvent(e), [e]), S = E(_);
-                if (null == e || !S || !f || (null == _ ? void 0 : _.entity_type) === o.GuildScheduledEventEntityTypes.EXTERNAL) return null;
-                let T = () => {
+                    canManageGuildEvent: f
+                } = (0, u.useManageResourcePermissions)(null != n ? n : t), _ = (0, i.useStateFromStores)([o.default], () => o.default.isActive(e)), p = (0, i.useStateFromStores)([o.default], () => o.default.getGuildScheduledEvent(e), [e]), E = f(p);
+                if (null == e || !E || !_ || (null == p ? void 0 : p.entity_type) === d.GuildScheduledEventEntityTypes.EXTERNAL) return null;
+                let S = () => {
                     if (null == n ? void 0 : n.isGuildStageVoice()) {
-                        (0, i.endStage)(n);
+                        (0, l.endStage)(n);
                         return
                     }
-                    null != e && s.default.endEvent(e, t.id), (0, a.closeAllModals)()
+                    null != e && r.default.endEvent(e, t.id), (0, s.closeAllModals)()
                 };
-                return (0, l.jsx)(a.MenuItem, {
+                return (0, a.jsx)(s.MenuItem, {
                     id: c.default.Messages.END_EVENT,
                     label: c.default.Messages.END_EVENT,
                     action: function() {
-                        (0, a.openModal)(e => (0, l.jsx)(a.ConfirmModal, {
+                        (0, s.openModal)(e => (0, a.jsx)(s.ConfirmModal, {
                             ...e,
                             header: c.default.Messages.END_EVENT,
                             confirmText: c.default.Messages.GUILD_EVENT_END_PROMPT_CONFIRM,
                             cancelText: c.default.Messages.CANCEL,
-                            onConfirm: T,
-                            children: (0, l.jsx)(a.Text, {
+                            onConfirm: S,
+                            children: (0, a.jsx)(s.Text, {
                                 variant: "text-md/normal",
                                 children: c.default.Messages.GUILD_EVENT_EXTERNAL_END_PROMPT_TITLE
                             })

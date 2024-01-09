@@ -1,10 +1,10 @@
             "use strict";
             s.r(a), s.d(a, {
                 useCustomizeGuildSlide: function() {
-                    return A
+                    return c
                 },
                 default: function() {
-                    return c
+                    return A
                 }
             }), s("222007");
             var n = s("37983"),
@@ -23,18 +23,18 @@
                 o = s("782340"),
                 I = s("852243");
 
-            function A(e) {
+            function c(e) {
                 var a;
                 let {
                     guildTemplate: s,
                     onClose: l,
-                    onBack: A,
-                    onHubGuildInfoSet: c,
+                    onBack: c,
+                    onHubGuildInfoSet: A,
                     onGuildCreated: p,
                     isSlideReady: N,
                     hasFooter: G = !0,
-                    isCommunity: m = !1
-                } = e, [f, U] = t.useState(L.default.getGuildNameSuggestion()), [D, O] = t.useState(null), [h, g] = t.useState(!1), [y, R] = t.useState(null), x = !!(null === (a = T.default.getCurrentUser()) || void 0 === a ? void 0 : a.isStaff()), [P, S] = t.useState(x), j = (0, u.useUID)(), H = t.useRef(null);
+                    isCommunity: f = !1
+                } = e, [m, U] = t.useState(L.default.getGuildNameSuggestion()), [D, O] = t.useState(null), [h, g] = t.useState(!1), [y, R] = t.useState(null), x = !!(null === (a = T.default.getCurrentUser()) || void 0 === a ? void 0 : a.isStaff()), [P, S] = t.useState(x), j = (0, u.useUID)(), H = t.useRef(null);
                 t.useEffect(() => {
                     var e;
                     N && (null === (e = H.current) || void 0 === e || e.focus())
@@ -43,9 +43,9 @@
                         if (e.preventDefault(), null != s) {
                             g(!0), R(null);
                             try {
-                                if (null != c) c(f, D);
+                                if (null != A) A(m, D);
                                 else {
-                                    let e = await M.default.createGuildFromTemplate(f, D, s, m, P);
+                                    let e = await M.default.createGuildFromTemplate(m, D, s, f, P);
                                     d.default.transitionToGuildSync(e.id), null == p || p(e.id)
                                 }
                             } catch (e) {
@@ -53,19 +53,19 @@
                             }
                             g(!1)
                         }
-                    }, [s, D, f, p, c, m, P]),
+                    }, [s, D, m, p, A, f, P]),
                     F = (0, n.jsxs)(n.Fragment, {
                         children: [(0, n.jsx)(_.Button, {
                             color: _.Button.Colors.BRAND,
                             onClick: V,
-                            disabled: 0 === f.length,
+                            disabled: 0 === m.length,
                             submitting: h,
-                            children: null != c ? o.default.Messages.NEXT : o.default.Messages.CREATE
+                            children: null != A ? o.default.Messages.NEXT : o.default.Messages.CREATE
                         }), (0, n.jsx)(_.Button, {
                             className: I.backButton,
                             look: _.Button.Looks.BLANK,
                             size: _.Button.Sizes.MIN,
-                            onClick: A,
+                            onClick: c,
                             children: o.default.Messages.BACK
                         })]
                     }),
@@ -106,7 +106,7 @@
                                         children: o.default.Messages.FORM_LABEL_SERVER_NAME
                                     }), (0, n.jsx)(_.TextInput, {
                                         type: "text",
-                                        value: f,
+                                        value: m,
                                         maxLength: 100,
                                         onChange: U,
                                         inputRef: H,
@@ -146,9 +146,9 @@
                 }
             }
 
-            function c(e) {
+            function A(e) {
                 let {
                     content: a
-                } = A(e);
+                } = c(e);
                 return a
             }

@@ -27,13 +27,13 @@
                 M = n("660279"),
                 I = n("36694"),
                 N = n("83900"),
-                L = n("404008"),
-                v = n("680986"),
+                v = n("404008"),
+                L = n("680986"),
                 x = n("612278"),
                 R = n("867965"),
                 y = n("688169"),
-                D = n("49111"),
-                O = n("782340"),
+                O = n("49111"),
+                D = n("782340"),
                 j = n("827152"),
                 b = n("550244");
 
@@ -44,9 +44,9 @@
                     isLastItem: l = !1,
                     parentChannelId: P
                 } = e, {
-                    ref: F,
-                    width: H
-                } = (0, d.default)(), [U, k] = a.useState(3), [G, w] = a.useState(!n), [B, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(t), [t]), {
+                    ref: U,
+                    width: F
+                } = (0, d.default)(), [H, k] = a.useState(3), [G, w] = a.useState(!n), [B, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(t), [t]), {
                     firstMessage: Z
                 } = (0, x.useFirstForumPostMessage)(W), z = (0, o.useStateFromStores)([_.default], () => _.default.hasJoined(t)), {
                     disableReactionUpdates: K,
@@ -54,7 +54,7 @@
                     isLurking: q,
                     isGuest: X,
                     isPendingMember: J
-                } = (0, p.default)(W), Q = (0, y.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(P)), ee = (0, v.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = a.useCallback(e => {
+                } = (0, p.default)(W), Q = (0, y.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(P)), ee = (0, L.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = a.useCallback(e => {
                     let t = e[0];
                     if (null != t && n) {
                         let e = t.intersectionRect,
@@ -64,7 +64,7 @@
                     }
                 }, [n]);
                 a.useLayoutEffect(() => {
-                    let e = F.current;
+                    let e = U.current;
                     if (null == e || !n) return;
                     let t = new IntersectionObserver(en, {
                         threshold: 1
@@ -75,8 +75,8 @@
                 });
                 let [es, ea] = a.useState(!0);
                 if (a.useEffect(() => {
-                        if (null != H) k(Math.floor((H - 280) / 58)), ea(!1)
-                    }, [H]), null == W || null == Z) return null;
+                        if (null != F) k(Math.floor((F - 280) / 58)), ea(!1)
+                    }, [F]), null == W || null == Z) return null;
                 let el = Z.reactions.length > 0,
                     ei = () => {
                         z ? A.default.leaveThread(W, "Forum Toolbar") : A.default.joinThread(W, "Forum Toolbar")
@@ -85,9 +85,9 @@
                         (0, R.trackForumPostLinkCopied)({
                             postId: W.id,
                             location: {
-                                section: D.AnalyticsSections.CHANNEL_HEADER
+                                section: O.AnalyticsSections.CHANNEL_HEADER
                             }
-                        }), (0, r.copy)((0, L.getChannelLinkToCopy)(W, $)), V(!0)
+                        }), (0, r.copy)((0, v.getChannelLinkToCopy)(W, $)), V(!0)
                     },
                     eo = z ? I.default : M.default;
                 return (0, s.jsxs)(s.Fragment, {
@@ -95,7 +95,7 @@
                         className: i(j.container, {
                             [j.header]: G
                         }),
-                        ref: F,
+                        ref: U,
                         children: [(0, s.jsxs)("div", {
                             className: i(j.reactButtons, {
                                 [j.loading]: es
@@ -125,7 +125,7 @@
                                 isLurking: q,
                                 isGuest: X,
                                 isPendingMember: J,
-                                maxReactions: U,
+                                maxReactions: H,
                                 className: j.reactions,
                                 useChatFontScaling: !1,
                                 isForumToolbar: !0,
@@ -137,12 +137,12 @@
                                 useChatFontScaling: !1,
                                 className: j.addReactButton,
                                 isForumToolbar: !0,
-                                children: !el && O.default.Messages.FORUM_REACT_TO_POST
+                                children: !el && D.default.Messages.FORUM_REACT_TO_POST
                             })]
                         }), (0, s.jsxs)("div", {
                             className: j.buttons,
                             children: [(0, s.jsx)(u.Tooltip, {
-                                text: O.default.Messages.FORUM_FOLLOW_TOOLTIP,
+                                text: D.default.Messages.FORUM_FOLLOW_TOOLTIP,
                                 children: e => (0, s.jsxs)(u.Button, {
                                     ...e,
                                     look: u.Button.Looks.BLANK,
@@ -155,10 +155,10 @@
                                     children: [(0, s.jsx)(eo, {
                                         width: 16,
                                         height: 16
-                                    }), z ? O.default.Messages.FORUM_FOLLOWING_POST : O.default.Messages.FOLLOW]
+                                    }), z ? D.default.Messages.FORUM_FOLLOWING_POST : D.default.Messages.FOLLOW]
                                 })
                             }), (0, s.jsx)(u.Tooltip, {
-                                text: O.default.Messages.COPY_LINK,
+                                text: D.default.Messages.COPY_LINK,
                                 children: e => (0, s.jsxs)(u.Button, {
                                     ...e,
                                     look: u.Button.Looks.BLANK,
@@ -172,7 +172,7 @@
                                     }) : (0, s.jsx)(N.default, {
                                         width: 16,
                                         height: 16
-                                    }), B ? O.default.Messages.COPIED : null]
+                                    }), B ? D.default.Messages.COPIED : null]
                                 })
                             })]
                         })]

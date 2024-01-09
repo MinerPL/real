@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return L
+                    return v
                 }
             });
             var s = n("37983"),
@@ -73,7 +73,7 @@
                     })]
                 })
             });
-            var L = a.memo(function(e) {
+            var v = a.memo(function(e) {
                 var t, n;
                 let {
                     className: l,
@@ -82,20 +82,20 @@
                     children: p,
                     content: m,
                     onUpdate: E
-                } = e, _ = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), L = a.useRef(!1), v = (0, u.useStateFromStores)([h.default], () => h.default.getMessage(d.id), [d.id]), x = a.useCallback(() => {
-                    (null == v ? void 0 : v.isBlockedEdit) ? (0, f.removeAutomodMessageNotice)(d.id) : c.default.deleteMessage(d.channel_id, d.id, !0)
-                }, [d, v]);
+                } = e, _ = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), v = a.useRef(!1), L = (0, u.useStateFromStores)([h.default], () => h.default.getMessage(d.id), [d.id]), x = a.useCallback(() => {
+                    (null == L ? void 0 : L.isBlockedEdit) ? (0, f.removeAutomodMessageNotice)(d.id) : c.default.deleteMessage(d.channel_id, d.id, !0)
+                }, [d, L]);
                 return a.useLayoutEffect(() => {
-                    L.current ? null != E && E() : L.current = !0
+                    v.current ? null != E && E() : v.current = !0
                 }, [E, d.content, m, _, p]), (0, s.jsxs)("div", {
                     id: (0, C.getMessageContentId)(d),
                     className: i(l, M.markup, {
                         [I.messageContent]: !0,
                         [I.markupRtl]: "rtl" === o(d.content),
-                        [T.blockedEdit]: null == v ? void 0 : v.isBlockedEdit,
-                        [T.blockedSend]: !(null == v ? void 0 : v.isBlockedEdit)
+                        [T.blockedEdit]: null == L ? void 0 : L.isBlockedEdit,
+                        [T.blockedSend]: !(null == L ? void 0 : L.isBlockedEdit)
                     }),
-                    children: [null != p ? p : (0, g.getContent)(d, m), (null == v ? void 0 : v.isBlockedEdit) && null != d.timestamp && (0, s.jsxs)(s.Fragment, {
+                    children: [null != p ? p : (0, g.getContent)(d, m), (null == L ? void 0 : L.isBlockedEdit) && null != d.timestamp && (0, s.jsxs)(s.Fragment, {
                         children: [" ", (0, s.jsx)(S.default, {
                             timestamp: d.timestamp,
                             isEdited: !0,
@@ -106,7 +106,7 @@
                             })
                         })]
                     }), (0, s.jsx)(N, {
-                        notice: null !== (n = null == v ? void 0 : v.errorMessage) && void 0 !== n ? n : A.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
+                        notice: null !== (n = null == L ? void 0 : L.errorMessage) && void 0 !== n ? n : A.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
                         message: d,
                         compact: r,
                         onDismiss: x

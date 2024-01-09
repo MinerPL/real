@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 useVoiceActivityNotificationSettingsExperiment: function() {
-                    return u
+                    return l
                 },
                 hasVoiceChannelActivityNotifsEnabled: function() {
-                    return r
+                    return o
                 }
             });
             var a = n("862205"),
@@ -24,7 +24,7 @@
                         }
                     }]
                 }),
-                l = (0, a.createExperiment)({
+                u = (0, a.createExperiment)({
                     kind: "guild",
                     id: "2023-11_voice_activity_notification_guild",
                     label: "General Voice Channel Notifications for Guild",
@@ -40,11 +40,11 @@
                     }]
                 });
 
-            function u(e) {
+            function l(e) {
                 var t;
                 let {
                     voiceChannelActivityNotifsEnabled: n
-                } = l.useExperiment({
+                } = u.useExperiment({
                     location: "useVoiceActivityNotificationSettingsExperiment",
                     guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : ""
                 }, {
@@ -61,11 +61,11 @@
                 return (null == e ? void 0 : e.type) === i.ChannelTypes.GUILD_VOICE && n && a
             }
 
-            function r(e) {
+            function o(e) {
                 var t;
                 let {
                     voiceChannelActivityNotifsEnabled: n
-                } = l.getCurrentConfig({
+                } = u.getCurrentConfig({
                     guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : "",
                     location: "hasVoiceChannelActivityNotifsEnabled"
                 });

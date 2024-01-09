@@ -8,8 +8,8 @@
                 a = s("884691"),
                 i = s("77078"),
                 n = s("350956"),
-                r = s("145131"),
-                d = s("496693"),
+                d = s("145131"),
+                r = s("496693"),
                 o = s("730647"),
                 u = s("782340"),
                 c = s("968501");
@@ -19,13 +19,13 @@
                     guildTemplate: t,
                     onClick: s,
                     autoFocus: i
-                } = e, r = a.useCallback(() => {
+                } = e, d = a.useCallback(() => {
                     s(t)
                 }, [t, s]);
                 return (0, l.jsx)(n.default, {
-                    icon: d.GUILD_TEMPLATE_ICONS[t.id],
+                    icon: r.GUILD_TEMPLATE_ICONS[t.id],
                     message: t.label,
-                    onClick: r,
+                    onClick: d,
                     autoFocus: i
                 })
             }
@@ -36,10 +36,10 @@
                     onBack: s,
                     onChooseTemplate: a,
                     directoryGuildName: n
-                } = e, d = (0, o.getHubGuildTemplatesMap)();
+                } = e, r = (0, o.getHubGuildTemplatesMap)();
                 return (0, l.jsxs)(l.Fragment, {
                     children: [(0, l.jsxs)(i.ModalHeader, {
-                        direction: r.default.Direction.VERTICAL,
+                        direction: d.default.Direction.VERTICAL,
                         className: c.header,
                         separator: !1,
                         children: [(0, l.jsx)(i.Heading, {
@@ -62,7 +62,7 @@
                         paddingFix: !1,
                         children: [(0, l.jsx)(C, {
                             guildTemplate: {
-                                ...d[o.HubGuildTemplateId.CREATE],
+                                ...r[o.HubGuildTemplateId.CREATE],
                                 label: u.default.Messages.HUB_CREATE_GUILD_CTA
                             },
                             onClick: a
@@ -72,22 +72,22 @@
                             variant: "text-xs/bold",
                             children: u.default.Messages.GUILD_TEMPLATE_SELECTOR_OPTION_HEADER
                         }), (0, l.jsx)(C, {
-                            guildTemplate: d[o.HubGuildTemplateId.HUB_STUDY],
+                            guildTemplate: r[o.HubGuildTemplateId.HUB_STUDY],
                             onClick: a
                         }), (0, l.jsx)(C, {
-                            guildTemplate: d[o.HubGuildTemplateId.HUB_SCHOOL_CLUB],
+                            guildTemplate: r[o.HubGuildTemplateId.HUB_SCHOOL_CLUB],
                             onClick: a
                         }), (0, l.jsx)(C, {
-                            guildTemplate: d[o.HubGuildTemplateId.HUB_CLASS],
+                            guildTemplate: r[o.HubGuildTemplateId.HUB_CLASS],
                             onClick: a
                         }), (0, l.jsx)(C, {
-                            guildTemplate: d[o.HubGuildTemplateId.HUB_SOCIAL],
+                            guildTemplate: r[o.HubGuildTemplateId.HUB_SOCIAL],
                             onClick: a
                         }), (0, l.jsx)(C, {
-                            guildTemplate: d[o.HubGuildTemplateId.HUB_MAJOR],
+                            guildTemplate: r[o.HubGuildTemplateId.HUB_MAJOR],
                             onClick: a
                         }), (0, l.jsx)(C, {
-                            guildTemplate: d[o.HubGuildTemplateId.HUB_DORM],
+                            guildTemplate: r[o.HubGuildTemplateId.HUB_DORM],
                             onClick: a
                         })]
                     }), (0, l.jsx)(i.ModalFooter, {

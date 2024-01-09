@@ -1,19 +1,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return u
                 }
             });
-            var l = n("446674"),
-                u = n("271938"),
-                a = n("800762"),
-                i = n("76393");
+            var i = n("446674"),
+                a = n("271938"),
+                l = n("800762"),
+                s = n("76393");
 
-            function d() {
-                let e = (0, l.useStateFromStores)([u.default], () => u.default.getId()),
-                    t = (0, l.useStateFromStores)([i.default], () => i.default.getRemoteSessionId());
-                return (0, l.useStateFromStores)([a.default], () => {
+            function u() {
+                let e = (0, i.useStateFromStores)([a.default], () => a.default.getId()),
+                    t = (0, i.useStateFromStores)([s.default], () => s.default.getRemoteSessionId());
+                return (0, i.useStateFromStores)([l.default], () => {
                     var n;
-                    return null !== (n = a.default.getVoiceStateForSession(e, t)) && void 0 !== n ? n : void 0
+                    return null !== (n = l.default.getVoiceStateForSession(e, t)) && void 0 !== n ? n : void 0
                 })
             }

@@ -1,35 +1,35 @@
             "use strict";
-            s.r(t), s.d(t, {
+            i.r(t), i.d(t, {
                 default: function() {
                     return r
                 }
             });
-            var i = s("37983");
-            s("884691");
-            var l = s("77078"),
-                a = s("145131"),
-                n = s("997324"),
+            var n = i("37983");
+            i("884691");
+            var s = i("77078"),
+                a = i("145131"),
+                l = i("997324"),
                 r = e => {
                     let {
                         title: t,
-                        subtitle: s,
+                        subtitle: i,
                         icon: r
                     } = e;
-                    return (0, i.jsxs)(a.default, {
-                        className: n.wrapper,
+                    return (0, n.jsxs)(a.default, {
+                        className: l.wrapper,
                         align: a.default.Align.BASELINE,
-                        children: [null != r && (0, i.jsx)(r, {
+                        children: [null != r && (0, n.jsx)(r, {
                             width: 16,
                             height: 16,
-                            className: n.icon
-                        }), (0, i.jsx)(l.Text, {
+                            className: l.icon
+                        }), (0, n.jsx)(s.Text, {
                             variant: "text-md/normal",
-                            className: n.title,
+                            className: l.title,
                             children: t
-                        }), null != s && "" !== s ? (0, i.jsx)(l.Text, {
+                        }), null != i && "" !== i ? (0, n.jsx)(s.Text, {
                             variant: "text-xs/semibold",
-                            className: n.subtitle,
-                            children: s
+                            className: l.subtitle,
+                            children: i
                         }) : null]
                     })
                 }

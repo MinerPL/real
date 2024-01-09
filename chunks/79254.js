@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return L
+                    return v
                 }
             });
             var s = n("37983"),
@@ -44,17 +44,17 @@
             }
             let N = /(.*)```(\w+)\n(.*)```(.*)/s;
 
-            function L(e) {
+            function v(e) {
                 let {
                     channel: t,
                     options: r,
-                    onFileUpload: L,
-                    onClose: v,
+                    onFileUpload: v,
+                    onClose: L,
                     onSelect: x,
                     draftType: R,
                     editorTextContent: y,
-                    setValue: D,
-                    openClips: O
+                    setValue: O,
+                    openClips: D
                 } = e;
                 (0, u.useMaybeFetchPremiumLikelihood)(d.default);
                 let {
@@ -73,14 +73,14 @@
                 }
 
                 function P() {
-                    C.default.track(_.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D("/", (0, g.toRichValue)("/"))
+                    C.default.track(_.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), O("/", (0, g.toRichValue)("/"))
+                }
+
+                function U() {
+                    D()
                 }
 
                 function F() {
-                    O()
-                }
-
-                function H() {
                     (0, i.openModalLazy)(async () => {
                         let {
                             default: e
@@ -94,7 +94,7 @@
                     })
                 }
 
-                function U() {
+                function H() {
                     let e = y,
                         n = "txt",
                         s = "",
@@ -108,7 +108,7 @@
                 return (0, s.jsx)(i.Menu, {
                     onSelect: x,
                     navId: "channel-attach",
-                    onClose: v,
+                    onClose: L,
                     "aria-label": T.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                     className: M.menu,
                     children: r.map(function(e) {
@@ -141,26 +141,26 @@
                                             }, t)
                                         })
                                     }),
-                                    action: L
+                                    action: v
                                 }, "upload-file");
                             case S.AttachmentTypes.UPLOAD_TEXT_AS_FILE:
                                 if ("" === y) return null;
                                 return (0, s.jsx)(i.MenuItem, {
                                     id: "upload-text-as-file",
                                     label: a,
-                                    action: U
+                                    action: H
                                 }, "upload-text-as-file");
                             case S.AttachmentTypes.CLIPS:
                                 return (0, s.jsx)(i.MenuItem, {
                                     id: "clips",
                                     label: a,
-                                    action: F
+                                    action: U
                                 }, "clips");
                             case S.AttachmentTypes.POLL:
                                 return (0, s.jsx)(i.MenuItem, {
                                     id: "poll",
                                     label: a,
-                                    action: H
+                                    action: F
                                 }, "poll");
                             case S.AttachmentTypes.INVITE_TO_PLAY_GAME:
                                 return (0, s.jsx)(i.MenuItem, {

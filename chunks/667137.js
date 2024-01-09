@@ -127,13 +127,13 @@
                 } = e, n = (0, o.useStateFromStores)([h.default], () => h.default.getId()), l = (0, o.useStateFromStores)([C.default], () => C.default.isTyping(t, n), [t, n]), i = (0, o.useStateFromStores)([E.default], () => E.default.isEnabled()), u = (0, o.useStateFromStores)([g.default], () => g.default.isComboing(n, t), [t, n]), {
                     ref: f,
                     width: p = 0
-                } = (0, d.default)(), m = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [S, A] = a.useState(!1), N = (0, _.default)(t), L = i && u && l;
+                } = (0, d.default)(), m = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [S, A] = a.useState(!1), N = (0, _.default)(t), v = i && u && l;
                 a.useEffect(() => {
-                    L && A(!0);
-                    let e = setTimeout(() => A(L), 1e3);
+                    v && A(!0);
+                    let e = setTimeout(() => A(v), 1e3);
                     return () => clearTimeout(e)
-                }, [L]);
-                let v = (0, r.useSpring)({
+                }, [v]);
+                let L = (0, r.useSpring)({
                         opacity: S ? 1 : 0,
                         transform: S ? "translateY(0)" : "translateY(100%)",
                         pointerEvents: "none",
@@ -150,11 +150,11 @@
                 }, [x]);
                 let {
                     multiplier: y,
-                    value: D
+                    value: O
                 } = a.useMemo(() => ({
-                    value: L ? x.value : R.current.value,
-                    multiplier: L ? x.multiplier : R.current.multiplier
-                }), [L, x, R]);
+                    value: v ? x.value : R.current.value,
+                    multiplier: v ? x.multiplier : R.current.multiplier
+                }), [v, x, R]);
                 return (0, s.jsxs)(s.Fragment, {
                     children: [(0, s.jsx)(M, {
                         channelId: t,
@@ -162,9 +162,9 @@
                     }), (0, s.jsx)(r.animated.div, {
                         ref: f,
                         className: T.combo,
-                        style: v,
+                        style: L,
                         children: (0, s.jsx)(I, {
-                            value: D,
+                            value: O,
                             multiplier: y
                         })
                     })]

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return U
+                    return H
                 }
             }), n("222007");
             var s = n("37983"),
@@ -27,18 +27,18 @@
                 M = n("660478"),
                 I = n("462495"),
                 N = n("697218"),
-                L = n("505684"),
-                v = n("378765"),
+                v = n("505684"),
+                L = n("378765"),
                 x = n("70845"),
                 R = n("51714"),
                 y = n("88243"),
-                D = n("31511"),
-                O = n("120379"),
+                O = n("31511"),
+                D = n("120379"),
                 j = n("221068"),
                 b = n("49111"),
                 P = n("782340"),
-                F = n("278224");
-            let H = a.memo(function(e) {
+                U = n("278224");
+            let F = a.memo(function(e) {
                 var t, n;
                 let {
                     className: l,
@@ -54,10 +54,10 @@
                     hasUnreads: M,
                     editingMessageId: I,
                     fontSize: N,
-                    keyboardModeEnabled: L,
+                    keyboardModeEnabled: v,
                     filterAfterTimestamp: x,
                     showingQuarantineBanner: R
-                } = e, [H, U] = a.useState(!1), k = a.useMemo(() => S ? (0, y.generateMessageSpecs)({
+                } = e, [F, H] = a.useState(!1), k = a.useMemo(() => S ? (0, y.generateMessageSpecs)({
                     compact: !0,
                     messageGroups: 30,
                     groupRange: 4,
@@ -71,7 +71,7 @@
                     attachments: 8,
                     fontSize: N,
                     groupSpacing: c
-                }), [S, N, c]), G = (0, O.default)({
+                }), [S, N, c]), G = (0, D.default)({
                     messages: m,
                     channel: C,
                     compact: S,
@@ -79,12 +79,12 @@
                     focusId: I,
                     placeholderHeight: k.totalHeight,
                     canLoadMore: null == x,
-                    handleScrollToBottom: a.useCallback(() => U(!0), [U]),
-                    handleScrollFromBottom: a.useCallback(() => U(!1), [U])
-                }), w = (0, D.default)({
+                    handleScrollToBottom: a.useCallback(() => H(!0), [H]),
+                    handleScrollFromBottom: a.useCallback(() => H(!1), [H])
+                }), w = (0, O.default)({
                     scrollerRef: G.ref,
                     isEditing: null != I,
-                    keyboardModeEnabled: L,
+                    keyboardModeEnabled: v,
                     hasMoreAfter: m.hasMoreAfter
                 });
                 let B = (n = C, (0, o.useStateFromStores)([p.default], () => {
@@ -110,7 +110,7 @@
                         specs: k,
                         filterAfterTimestamp: null != x ? x : B,
                         showingQuarantineBanner: R,
-                        isAtBottom: H,
+                        isAtBottom: F,
                         jumpToPresent: () => {
                             if (m.hasPresent()) {
                                 var e;
@@ -137,13 +137,13 @@
                                 animate: !f.default.useReducedMotion
                             })
                         }, [e]);
-                    (0, v.useComponentAction)({
+                    (0, L.useComponentAction)({
                         event: b.ComponentActions.SCROLLTO_PRESENT,
                         handler: t
-                    }), (0, v.useComponentAction)({
+                    }), (0, L.useComponentAction)({
                         event: b.ComponentActions.SCROLL_PAGE_UP,
                         handler: n
-                    }), (0, v.useComponentAction)({
+                    }), (0, L.useComponentAction)({
                         event: b.ComponentActions.SCROLL_PAGE_DOWN,
                         handler: s
                     })
@@ -160,12 +160,12 @@
                 return (0, s.jsx)(r.ListNavigatorProvider, {
                     navigator: w,
                     children: (0, s.jsxs)("div", {
-                        className: i(F.messagesWrapper, l, "group-spacing-".concat(c)),
+                        className: i(U.messagesWrapper, l, "group-spacing-".concat(c)),
                         children: [null != K ? K : W, (0, s.jsxs)(u.PinToBottomScrollerAuto, {
                             ref: J,
                             customTheme: !0,
-                            className: i(h, F.scroller),
-                            contentClassName: F.scrollerContent,
+                            className: i(h, U.scroller),
+                            contentClassName: U.scrollerContent,
                             onResize: G.handleResize,
                             onScroll: G.handleScroll,
                             onMouseDown: G.handleMouseDown,
@@ -174,21 +174,21 @@
                             tabIndex: -1,
                             role: "group",
                             children: [z, (0, s.jsxs)("ol", {
-                                className: F.scrollerInner,
+                                className: U.scrollerInner,
                                 "aria-label": P.default.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({
                                     channelName: C.name
                                 }),
                                 ...X,
                                 children: [(0, s.jsx)("span", {
-                                    className: F.navigationDescription,
+                                    className: U.navigationDescription,
                                     id: "messagesNavigationDescription",
                                     "aria-hidden": !0,
                                     children: P.default.Messages.CHANNEL_MESSAGES_A11Y_DESCRIPTION
                                 }), V, (0, s.jsx)("div", {
                                     className: i({
-                                        [F.scrollerSpacer]: !R,
-                                        [F.empty]: 0 === m.length && !m.loadingMore,
-                                        [F.emptyForum]: 1 === m.length && !m.loadingMore && C.isForumPost() && (null === (t = m.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(C))
+                                        [U.scrollerSpacer]: !R,
+                                        [U.empty]: 0 === m.length && !m.loadingMore,
+                                        [U.emptyForum]: 1 === m.length && !m.loadingMore && C.isForumPost() && (null === (t = m.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(C))
                                     })
                                 })]
                             })]
@@ -196,7 +196,7 @@
                     })
                 })
             }, (e, t) => null != e.isHidden && null != t.isHidden && e.isHidden && t.isHidden);
-            var U = a.memo(function(e) {
+            var H = a.memo(function(e) {
                 let {
                     channel: t,
                     showingQuarantineBanner: n,
@@ -223,10 +223,10 @@
                         canManageMessages: s
                     }
                 }(t), {
-                    messageGroupSpacing: v,
+                    messageGroupSpacing: L,
                     fontSize: y,
-                    messageDisplayCompact: D,
-                    renderSpoilers: O,
+                    messageDisplayCompact: O,
+                    renderSpoilers: D,
                     keyboardModeEnabled: j
                 } = function() {
                     let e = E.MessageDisplayCompact.useSetting(),
@@ -256,8 +256,8 @@
                     }
                 }(), {
                     messages: P,
-                    channelStream: F,
-                    oldestUnreadMessageId: U,
+                    channelStream: U,
+                    oldestUnreadMessageId: H,
                     editingMessageId: k
                 } = function(e) {
                     var t, n;
@@ -300,20 +300,20 @@
                         editingMessageId: _
                     }
                 }(t);
-                return (0, s.jsx)(L.ObscuredDisplayContext.Provider, {
-                    value: (0, x.default)(O, u),
-                    children: (0, s.jsx)(H, {
+                return (0, s.jsx)(v.ObscuredDisplayContext.Provider, {
+                    value: (0, x.default)(D, u),
+                    children: (0, s.jsx)(F, {
                         ...r,
-                        messageGroupSpacing: v,
+                        messageGroupSpacing: L,
                         showNewMessagesBar: !0,
                         channel: t,
-                        messageDisplayCompact: !i && (l || D),
+                        messageDisplayCompact: !i && (l || O),
                         messages: P,
-                        channelStream: F,
+                        channelStream: U,
                         permissionVersion: d,
                         uploads: (0, o.useStateFromStores)([I.default], () => I.default.getFiles(t.id), [t]),
                         unreadCount: (0, o.useStateFromStores)([M.default], () => M.default.getUnreadCount(t.id), [t]),
-                        hasUnreads: null != U,
+                        hasUnreads: null != H,
                         canChat: p,
                         editingMessageId: k,
                         fontSize: y,

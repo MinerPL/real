@@ -29,10 +29,10 @@
                     referencedMessage: M,
                     channel: I,
                     compact: N = !1,
-                    referencedUsernameProfile: L,
-                    referencedAvatarProfile: v,
+                    referencedUsernameProfile: v,
+                    referencedAvatarProfile: L,
                     setPopout: x
-                } = e, R = M.state === c.ReferencedMessageState.LOADED ? M.message : void 0, y = (0, m.useNullableMessageAuthor)(R), D = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = T.editedTimestamp) && void 0 !== t ? t : T.timestamp).valueOf()), O = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == I ? void 0 : I.guild_id) && void 0 !== n ? n : "", (null !== (A = T.editedTimestamp) && void 0 !== A ? A : T.timestamp).valueOf()), j = a.useMemo(() => {
+                } = e, R = M.state === c.ReferencedMessageState.LOADED ? M.message : void 0, y = (0, m.useNullableMessageAuthor)(R), O = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = T.editedTimestamp) && void 0 !== t ? t : T.timestamp).valueOf()), D = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == I ? void 0 : I.guild_id) && void 0 !== n ? n : "", (null !== (A = T.editedTimestamp) && void 0 !== A ? A : T.timestamp).valueOf()), j = a.useMemo(() => {
                     if (null == R) return null;
                     if (R.type === S.MessageTypes.USER_JOIN) return (0, i.astToString)(C.default.getSystemMessageUserJoin(R.id).astFormat({
                         username: null != y ? y.nick : R.author.username,
@@ -62,17 +62,17 @@
                             noStyleAndInteraction: !0,
                             allowHeading: !0,
                             allowList: !0,
-                            allowLinks: D.showMaskedLinks || O.showMaskedLinks
+                            allowLinks: O.showMaskedLinks || D.showMaskedLinks
                         } : {
                             formatInline: !0,
-                            allowHeading: D.showListsAndHeaders || O.showListsAndHeaders,
-                            allowList: D.showListsAndHeaders || O.showListsAndHeaders,
-                            allowLinks: D.showMaskedLinks || O.showMaskedLinks
+                            allowHeading: O.showListsAndHeaders || D.showListsAndHeaders,
+                            allowList: O.showListsAndHeaders || D.showListsAndHeaders,
+                            allowLinks: O.showMaskedLinks || D.showMaskedLinks
                         };
                         return (0, p.default)(R, e).content
                     }
                     return null
-                }, [R, y, I, D, O]), b = (0, l.useStateFromStores)([f.default], () => null != R && f.default.isBlocked(R.author.id), [R]), P = (0, g.useContextMenuUser)(null == R ? void 0 : R.author.id, I.id), F = (0, g.useClickReply)(T, R, b), H = (0, g.useClickReferencedMessageAuthorUsername)(R, I, L, x), U = (0, g.useClickReferencedMessageAuthorAvatar)(v, x), k = a.useCallback(() => x({
+                }, [R, y, I, O, D]), b = (0, l.useStateFromStores)([f.default], () => null != R && f.default.isBlocked(R.author.id), [R]), P = (0, g.useContextMenuUser)(null == R ? void 0 : R.author.id, I.id), U = (0, g.useClickReply)(T, R, b), F = (0, g.useClickReferencedMessageAuthorUsername)(R, I, v, x), H = (0, g.useClickReferencedMessageAuthorAvatar)(L, x), k = a.useCallback(() => x({
                     referencedUsernameProfile: !1,
                     referencedAvatarProfile: !1
                 }), [x]), G = (0, m.useNullableMessageAuthor)(T);
@@ -85,12 +85,12 @@
                     content: j,
                     compact: N,
                     isReplyAuthorBlocked: b,
-                    showAvatarPopout: v,
-                    showUsernamePopout: L,
+                    showAvatarPopout: L,
+                    showUsernamePopout: v,
                     renderPopout: E.default,
-                    onClickAvatar: U,
-                    onClickUsername: H,
-                    onClickReply: F,
+                    onClickAvatar: H,
+                    onClickUsername: F,
+                    onClickReply: U,
                     onContextMenu: P,
                     onPopoutRequestClose: k
                 })

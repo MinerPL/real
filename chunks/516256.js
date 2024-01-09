@@ -13,10 +13,10 @@
                     return L
                 },
                 ModalFooter: function() {
-                    return y
+                    return D
                 },
                 ModalCloseButton: function() {
-                    return D
+                    return y
                 },
                 ModalListContent: function() {
                     return P
@@ -74,10 +74,10 @@
                         clamp: !0
                     },
                     onRest: m
-                }), L = s.useRef(null), y = null != I["aria-label"], D = null != I["aria-labelledby"], P = s.useId(), M = null !== (t = I["aria-labelledby"]) && void 0 !== t ? t : P, U = s.useMemo(() => ({
+                }), L = s.useRef(null), D = null != I["aria-label"], y = null != I["aria-labelledby"], P = s.useId(), M = null !== (t = I["aria-labelledby"]) && void 0 !== t ? t : P, U = s.useMemo(() => ({
                     headerId: M,
-                    headerIdIsManaged: D
-                }), [M, D]);
+                    headerIdIsManaged: y
+                }), [M, y]);
                 return (0, o.jsx)(T.ModalContentContext.Provider, {
                     value: U,
                     children: (0, o.jsx)(E.Dialog, {
@@ -85,7 +85,7 @@
                         role: l,
                         returnRef: p,
                         impressionType: c.ImpressionTypes.MODAL,
-                        "aria-labelledby": y ? void 0 : U.headerId,
+                        "aria-labelledby": D ? void 0 : U.headerId,
                         ...I,
                         children: (0, o.jsx)(u.animated.div, {
                             className: a(f, N.root, C[r], {
@@ -151,7 +151,7 @@
                 })
             }
 
-            function y(e) {
+            function D(e) {
                 var t, n, i, r, s;
                 return (0, o.jsx)(p.default, {
                     grow: 0,
@@ -169,7 +169,7 @@
                 })
             }
 
-            function D(e) {
+            function y(e) {
                 return (0, o.jsx)(f.Button, {
                     focusProps: e.focusProps,
                     "aria-label": A.default.Messages.CLOSE,

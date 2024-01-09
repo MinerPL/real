@@ -1,58 +1,58 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return C
+                    return E
                 }
             });
-            var l = n("37983");
+            var a = n("37983");
             n("884691");
-            var u = n("446674"),
-                a = n("77078"),
-                i = n("18054"),
-                d = n("819689"),
-                r = n("430475"),
-                s = n("610730"),
+            var l = n("446674"),
+                i = n("77078"),
+                u = n("18054"),
+                r = n("819689"),
+                s = n("430475"),
+                d = n("610730"),
                 o = n("271938"),
-                c = n("957255"),
-                f = n("49111"),
-                E = n("782340");
+                f = n("957255"),
+                c = n("49111"),
+                _ = n("782340");
 
-            function C(e) {
+            function E(e) {
                 let t = e.isForumPost(),
-                    C = (0, u.useStateFromStores)([o.default], () => e.isOwner(o.default.getId()), [e]),
+                    E = (0, l.useStateFromStores)([o.default], () => e.isOwner(o.default.getId()), [e]),
                     {
-                        canManageChannel: S,
-                        canAccessChannel: h
-                    } = (0, u.useStateFromStoresObject)([c.default], () => ({
-                        canAccessChannel: c.default.can(e.accessPermissions, e),
-                        canManageChannel: c.default.can(e.isThread() ? f.Permissions.MANAGE_THREADS : f.Permissions.MANAGE_CHANNELS, e)
+                        canManageChannel: T,
+                        canAccessChannel: S
+                    } = (0, l.useStateFromStoresObject)([f.default], () => ({
+                        canAccessChannel: f.default.can(e.accessPermissions, e),
+                        canManageChannel: f.default.can(e.isThread() ? c.Permissions.MANAGE_THREADS : c.Permissions.MANAGE_CHANNELS, e)
                     }), [e]),
-                    _ = (0, u.useStateFromStores)([s.default], () => {
+                    h = (0, l.useStateFromStores)([d.default], () => {
                         var t;
-                        return null !== (t = s.default.getCount(e.id)) && void 0 !== t ? t : 0
+                        return null !== (t = d.default.getCount(e.id)) && void 0 !== t ? t : 0
                     }, [e.id]),
                     {
-                        firstMessage: N
-                    } = (0, u.useStateFromStores)([r.default], () => r.default.getMessage(e.id), [e.id]),
-                    T = t && (S || C && _ < 1),
-                    v = t && C && !S && _ > 0 && null != N;
-                return h && (S || T || v) ? (0, l.jsx)(a.MenuItem, {
+                        firstMessage: C
+                    } = (0, l.useStateFromStores)([s.default], () => s.default.getMessage(e.id), [e.id]),
+                    g = t && (T || E && h < 1),
+                    N = t && E && !T && h > 0 && null != C;
+                return S && (T || g || N) ? (0, a.jsx)(i.MenuItem, {
                     id: "delete-channel",
                     label: (() => {
-                        if (e.type === f.ChannelTypes.GUILD_CATEGORY) return E.default.Messages.DELETE_CATEGORY;
-                        if (e.isForumPost()) return T ? E.default.Messages.DELETE_FORUM_POST : E.default.Messages.DELETE_MESSAGE;
-                        if (e.isThread()) return E.default.Messages.DELETE_THREAD;
-                        return E.default.Messages.DELETE_CHANNEL
+                        if (e.type === c.ChannelTypes.GUILD_CATEGORY) return _.default.Messages.DELETE_CATEGORY;
+                        if (e.isForumPost()) return g ? _.default.Messages.DELETE_FORUM_POST : _.default.Messages.DELETE_MESSAGE;
+                        if (e.isThread()) return _.default.Messages.DELETE_THREAD;
+                        return _.default.Messages.DELETE_CHANNEL
                     })(),
                     color: "danger",
-                    action: () => (0, a.openModalLazy)(async () => {
+                    action: () => (0, i.openModalLazy)(async () => {
                         let {
                             default: t
                         } = await n.el("575351").then(n.bind(n, "575351"));
-                        return n => (0, l.jsx)(t, {
+                        return n => (0, a.jsx)(t, {
                             ...n,
                             onConfirm: () => {
-                                n.onClose(), v ? d.default.deleteMessage(e.id, e.id) : i.default.deleteChannel(e.id)
+                                n.onClose(), N ? r.default.deleteMessage(e.id, e.id) : u.default.deleteChannel(e.id)
                             },
                             channel: e
                         })

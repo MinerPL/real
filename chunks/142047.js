@@ -1,12 +1,12 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return v
+                    return U
                 }
             });
-            var a = n("37983");
+            var i = n("37983");
             n("884691");
-            var i = n("77078"),
+            var a = n("77078"),
                 s = n("272030"),
                 l = n("158534"),
                 u = n("812204"),
@@ -15,77 +15,77 @@
                 d = n("390008"),
                 f = n("47495"),
                 c = n("178261"),
-                E = n("852275"),
-                _ = n("963150"),
-                N = n("308798"),
-                g = n("47006"),
-                C = n("44141"),
+                _ = n("852275"),
+                S = n("963150"),
+                g = n("308798"),
+                E = n("47006"),
+                N = n("44141"),
                 M = n("531674"),
                 A = n("619436"),
-                S = n("625399"),
-                T = n("339876"),
-                L = n("295189"),
-                O = n("782340");
+                T = n("625399"),
+                O = n("339876"),
+                C = n("295189"),
+                h = n("782340");
 
-            function h(e) {
+            function L(e) {
                 let {
                     channel: t,
                     onSelect: n
-                } = e, l = (0, C.default)(t), u = (0, M.default)(t), o = (0, A.default)(t), _ = (0, E.default)(t), N = (0, c.default)(t), g = (0, d.default)(t), T = (0, L.default)(t), h = (0, r.default)({
+                } = e, l = (0, N.default)(t), u = (0, M.default)(t), o = (0, A.default)(t), S = (0, _.default)(t), g = (0, c.default)(t), E = (0, d.default)(t), O = (0, C.default)(t), L = (0, r.default)({
                     id: t.id,
-                    label: O.default.Messages.COPY_ID_CHANNEL
-                }), p = (0, f.useShouldUseNewNotificationSystem)("ChannelCategoryFavoritesMenu"), v = (0, S.default)(t);
-                return (0, a.jsxs)(i.Menu, {
+                    label: h.default.Messages.COPY_ID_CHANNEL
+                }), I = (0, f.useShouldUseNewNotificationSystem)("ChannelCategoryFavoritesMenu"), U = (0, T.default)(t);
+                return (0, i.jsxs)(a.Menu, {
                     navId: "channel-context",
                     onClose: s.closeContextMenu,
-                    "aria-label": O.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+                    "aria-label": h.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                     onSelect: n,
-                    children: [(0, a.jsx)(i.MenuGroup, {
+                    children: [(0, i.jsx)(a.MenuGroup, {
                         children: l
-                    }), (0, a.jsxs)(i.MenuGroup, {
-                        children: [u, p ? v : o]
-                    }), (0, a.jsxs)(i.MenuGroup, {
-                        children: [_, N, g]
-                    }), (0, a.jsx)(i.MenuGroup, {
-                        children: T
-                    }), (0, a.jsx)(i.MenuGroup, {
-                        children: h
+                    }), (0, i.jsxs)(a.MenuGroup, {
+                        children: [u, I ? U : o]
+                    }), (0, i.jsxs)(a.MenuGroup, {
+                        children: [S, g, E]
+                    }), (0, i.jsx)(a.MenuGroup, {
+                        children: O
+                    }), (0, i.jsx)(a.MenuGroup, {
+                        children: L
                     })]
                 })
             }
 
-            function p(e) {
+            function I(e) {
                 let {
                     channel: t,
                     guild: n,
                     onSelect: l
-                } = e, u = (0, C.default)(t), o = (0, M.default)(t), L = (0, A.default)(t), h = (0, E.default)(t), p = (0, c.default)(t), v = (0, g.default)(t), U = (0, d.default)(t), I = (0, _.default)(t, n), m = (0, N.default)(t), R = (0, r.default)({
+                } = e, u = (0, N.default)(t), o = (0, M.default)(t), C = (0, A.default)(t), L = (0, _.default)(t), I = (0, c.default)(t), U = (0, E.default)(t), p = (0, d.default)(t), v = (0, S.default)(t, n), m = (0, g.default)(t), R = (0, r.default)({
                     id: t.id,
-                    label: O.default.Messages.COPY_ID_CHANNEL
-                }), y = (0, T.default)(t), F = (0, f.useShouldUseNewNotificationSystem)("ChannelCategoryNormalMenu"), G = (0, S.default)(t);
-                return (0, a.jsxs)(i.Menu, {
+                    label: h.default.Messages.COPY_ID_CHANNEL
+                }), F = (0, O.default)(t), G = (0, f.useShouldUseNewNotificationSystem)("ChannelCategoryNormalMenu"), y = (0, T.default)(t);
+                return (0, i.jsxs)(a.Menu, {
                     navId: "channel-context",
                     onClose: s.closeContextMenu,
-                    "aria-label": O.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+                    "aria-label": h.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                     onSelect: l,
-                    children: [(0, a.jsx)(i.MenuGroup, {
+                    children: [(0, i.jsx)(a.MenuGroup, {
                         children: u
-                    }, "mark-as-read"), (0, a.jsxs)(i.MenuGroup, {
-                        children: [y, h, p]
-                    }, "channel-actions"), (0, a.jsxs)(i.MenuGroup, {
-                        children: [o, F ? G : L]
-                    }, "notifications"), (0, a.jsxs)(i.MenuGroup, {
-                        children: [v, U, I, m]
-                    }, "admin-actions"), (0, a.jsx)(i.MenuGroup, {
+                    }, "mark-as-read"), (0, i.jsxs)(a.MenuGroup, {
+                        children: [F, L, I]
+                    }, "channel-actions"), (0, i.jsxs)(a.MenuGroup, {
+                        children: [o, G ? y : C]
+                    }, "notifications"), (0, i.jsxs)(a.MenuGroup, {
+                        children: [U, p, v, m]
+                    }, "admin-actions"), (0, i.jsx)(a.MenuGroup, {
                         children: R
                     }, "developer-actions")]
                 })
             }
-            var v = (0, l.default)(function(e) {
+            var U = (0, l.default)(function(e) {
                 let t = (0, o.default)();
-                return t ? (0, a.jsx)(h, {
+                return t ? (0, i.jsx)(L, {
                     ...e
-                }) : (0, a.jsx)(p, {
+                }) : (0, i.jsx)(I, {
                     ...e
                 })
             }, [u.default.CONTEXT_MENU, u.default.CHANNEL_CATEGORY_MENU])

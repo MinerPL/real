@@ -27,19 +27,19 @@
                 M = n("719926"),
                 I = n("957255"),
                 N = n("660478"),
-                L = n("18494"),
-                v = n("697218"),
+                v = n("18494"),
+                L = n("697218"),
                 x = n("410889"),
                 R = n("888400"),
                 y = n("299039"),
-                D = n("154864"),
-                O = n("383667"),
+                O = n("154864"),
+                D = n("383667"),
                 j = n("459776"),
                 b = n("366757"),
                 P = n("699473"),
-                F = n("556118"),
-                H = n("342009"),
-                U = n("97810"),
+                U = n("556118"),
+                F = n("342009"),
+                H = n("97810"),
                 k = n("933629"),
                 G = n("88243"),
                 w = n("753089"),
@@ -98,7 +98,7 @@
                         filterAfterTimestamp: et,
                         showingQuarantineBanner: en
                     } = e,
-                    es = v.default.getCurrentUser(),
+                    es = L.default.getCurrentUser(),
                     ea = () => $.isInitialized() || x.ready,
                     el = (0, b.useShowConvoStarterInDM)(u),
                     ei = x.length > 0 && (null === (t = x.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(u)),
@@ -126,7 +126,7 @@
                                 item: e,
                                 channel: u,
                                 isBeforeGroup: null == e.content && K(J[t + 1])
-                            }) : (0, s.jsx)(U.default, {
+                            }) : (0, s.jsx)(H.default, {
                                 isUnread: l,
                                 isBeforeGroup: null == e.content && K(J[t + 1]),
                                 id: l ? V.NEW_MESSAGE_BAR_ID : void 0,
@@ -141,7 +141,7 @@
                         }, "forum-post-action-bar-".concat(u.id));
                         if (e.type === W.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED || e.type === W.ChannelStreamTypes.MESSAGE_GROUP_SPAMMER) {
                             let t;
-                            return t = e.type === W.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED ? z.default.Messages.BLOCKED_MESSAGE_COUNT : z.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT, (0, s.jsx)(H.default, {
+                            return t = e.type === W.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED ? z.default.Messages.BLOCKED_MESSAGE_COUNT : z.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT, (0, s.jsx)(F.default, {
                                 unreadId: V.NEW_MESSAGE_BAR_ID,
                                 messages: e,
                                 channel: u,
@@ -151,17 +151,17 @@
                         }
                         if (null != et && et > 1e3 * e.content.timestamp.unix()) return;
                         let l = I.default.can(W.Permissions.CREATE_INSTANT_INVITE, u);
-                        if ((0, O.default)(e.content, l)) return;
+                        if ((0, D.default)(e.content, l)) return;
                         e.type === W.ChannelStreamTypes.MESSAGE && null == ef && (ef = e);
                         let i = e.groupId === (null == ef ? void 0 : ef.groupId) ? ef.content.id : e.groupId,
-                            r = e.type === W.ChannelStreamTypes.THREAD_STARTER_MESSAGE ? F.ThreadStarterChatMessage : F.default;
+                            r = e.type === W.ChannelStreamTypes.THREAD_STARTER_MESSAGE ? U.ThreadStarterChatMessage : U.default;
                         return (0, s.jsx)(r, {
                             compact: X,
                             channel: u,
                             message: e.content,
                             groupId: i,
                             flashKey: e.flashKey,
-                            id: (0, D.getMessageDOMId)(u.id, e.content.id),
+                            id: (0, O.getMessageDOMId)(u.id, e.content.id),
                             isLastItem: t >= J.length - 1,
                             renderContentOnly: ec
                         }, e.content.id)
@@ -328,7 +328,7 @@
                     }) : (0, s.jsx)(k.JumpToPresentBar, {
                         onClick: () => (function(e) {
                             o.default.jumpToPresent(e.id, W.MAX_MESSAGES_PER_CHANNEL);
-                            let t = L.default.getChannelId();
+                            let t = v.default.getChannelId();
                             e.id === t && (0, E.transitionToChannel)(e.id)
                         })(u)
                     })

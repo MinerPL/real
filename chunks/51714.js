@@ -26,7 +26,7 @@
                     S = null != h ? i.default.extractTimestamp(h) : null,
                     _ = null;
                 return f.forEach(e => {
-                    var a, A, T, M, I, N, L, v;
+                    var a, A, T, M, I, N, v, L;
                     if (null != p && p.length > 0) {
                         ;
                         let t = i.default.extractTimestamp(e.id);
@@ -53,18 +53,18 @@
                     }), t = x);
                     let R = E[E.length - 1],
                         y = null,
-                        D = (0, o.isSpam)(e);
-                    g = g || D;
-                    let O = function(e, t, n) {
+                        O = (0, o.isSpam)(e);
+                    g = g || O;
+                    let D = function(e, t, n) {
                         if (s.MessageTypesSets.NON_COLLAPSIBLE.has(t.type));
                         else if (t.blocked) return u.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED;
                         else if ((0, o.isSpamSupported)(e) && n) return u.ChannelStreamTypes.MESSAGE_GROUP_SPAMMER;
                         return null
-                    }(c, e, D && C);
-                    if (null !== O) {
+                    }(c, e, O && C);
+                    if (null !== D) {
                         ;
                         let t, n;
-                        [y, R] = (A = E, T = e, M = O, n = I = R, null == I || I.type !== M ? (t = {
+                        [y, R] = (A = E, T = e, M = D, n = I = R, null == I || I.type !== M ? (t = {
                             type: M,
                             content: [],
                             key: T.id
@@ -74,9 +74,9 @@
                         if (null != R && R.type === u.ChannelStreamTypes.DIVIDER) R.unreadId = e.id, S = null;
                         else if (null !== y) {
                             ;
-                            N = y, L = c, (v = e).isFirstMessageInForumPost(L) || N.content.push({
+                            N = y, v = c, (L = e).isFirstMessageInForumPost(v) || N.content.push({
                                 type: u.ChannelStreamTypes.DIVIDER,
-                                unreadId: v.id
+                                unreadId: L.id
                             }), N.hasUnread = !0, S = null
                         } else !e.isFirstMessageInForumPost(c) && E.push({
                             type: u.ChannelStreamTypes.DIVIDER,
@@ -96,10 +96,10 @@
                     n === e.id && (d = b);
                     let {
                         jumpSequenceId: P,
-                        jumpFlash: F,
-                        jumpTargetId: H
+                        jumpFlash: U,
+                        jumpTargetId: F
                     } = f;
-                    F && e.id === H && null != P && (b.flashKey = P), f.jumpTargetId === e.id && (b.jumpTarget = !0), null != m && e.id === m.startId && m.count > 1 && E.push({
+                    U && e.id === F && null != P && (b.flashKey = P), f.jumpTargetId === e.id && (b.jumpTarget = !0), null != m && e.id === m.startId && m.count > 1 && E.push({
                         type: u.ChannelStreamTypes.DIVIDER,
                         content: m.topic,
                         contentKey: m.startId,

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return r
                 }
             });
             var a = n("37983");
@@ -12,7 +12,7 @@
                 l = n("816092"),
                 o = n("782340");
 
-            function d(e) {
+            function r(e) {
                 let t = (0, i.useStateFromStores)([l.default], () => l.default.isCollapsed(e.id), [e.id]);
                 return __OVERLAY__ ? null : (0, a.jsx)(s.MenuCheckboxItem, {
                     id: "hide-voice-names",

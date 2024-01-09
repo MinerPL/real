@@ -49,10 +49,10 @@
                     return L
                 },
                 InstallShortcutStartMenu: function() {
-                    return y
+                    return D
                 },
                 AllowActivityPartyPrivacyFriends: function() {
-                    return D
+                    return y
                 },
                 AllowActivityPartyPrivacyVoiceChannel: function() {
                     return P
@@ -280,13 +280,13 @@
                 }, e => o.BoolValue.create({
                     value: e
                 })),
-                y = (0, l.defineProtoSetting)("gameLibrary", "installShortcutStartMenu", e => {
+                D = (0, l.defineProtoSetting)("gameLibrary", "installShortcutStartMenu", e => {
                     var t;
                     return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
                 }, e => o.BoolValue.create({
                     value: e
                 })),
-                D = (0, l.defineProtoSetting)("privacy", "allowActivityPartyPrivacyFriends", e => {
+                y = (0, l.defineProtoSetting)("privacy", "allowActivityPartyPrivacyFriends", e => {
                     var t;
                     return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
                 }, e => o.BoolValue.create({

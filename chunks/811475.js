@@ -4,7 +4,7 @@
                     return N
                 },
                 default: function() {
-                    return v
+                    return L
                 }
             }), n("222007");
             var s = n("37983"),
@@ -30,7 +30,7 @@
                 M = n("782340"),
                 I = n("216220");
             let N = "ActivityInvite";
-            class L extends a.PureComponent {
+            class v extends a.PureComponent {
                 componentDidMount() {
                     this.fetchApplication()
                 }
@@ -240,7 +240,7 @@
                     }
                 }
             }
-            var v = r.default.connectStores([_.default, C.default], e => {
+            var L = r.default.connectStores([_.default, C.default], e => {
                 let {
                     channel: t,
                     activity: n
@@ -249,4 +249,4 @@
                     cooldown: _.default.getSlowmodeCooldownGuess(t.id),
                     application: null != n.application_id ? C.default.getApplication(n.application_id) : S.SpotifyApplication
                 }
-            })(L)
+            })(v)

@@ -35,8 +35,8 @@
                 }, []);
                 let I = (0, r.useStateFromStores)([C.default, h.default], () => !!i(C.default.getMessages(n.id).toArray()).reverse().find(e => e.author.id !== h.default.getId() && e.state === S.MessageStates.SENT && !(0, g.default)(e))),
                     N = (0, r.useStateFromStores)([p.default], () => p.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-                    L = null !== (t = E.default.useName(N)) && void 0 !== t ? t : _.default.Messages.WAVE_DEFAULT_RECIPIENT,
-                    v = (0, r.useStateFromStores)([c.default], () => c.default.getStickerById(T)),
+                    v = null !== (t = E.default.useName(N)) && void 0 !== t ? t : _.default.Messages.WAVE_DEFAULT_RECIPIENT,
+                    L = (0, r.useStateFromStores)([c.default], () => c.default.getStickerById(T)),
                     x = a.useCallback(async () => {
                         if (null == l || "" === l) try {
                             await u.default.sendGreetMessage(n.id, T), m.default.track(S.AnalyticEvents.DM_EMPTY_ACTION, {
@@ -50,7 +50,7 @@
                         }
                     }, [n.id, n.type, l]),
                     R = _.default.Messages.WAVE_TO.format({
-                        username: L
+                        username: v
                     }),
                     y = null != l && "" !== l ? (0, s.jsx)(o.Text, {
                         className: A.error,
@@ -65,7 +65,7 @@
                         "aria-label": _.default.Messages.SEND_WAVE,
                         onClick: x,
                         children: [(0, s.jsx)(f.default, {
-                            sticker: v,
+                            sticker: L,
                             size: 24
                         }), (0, s.jsx)(o.Text, {
                             className: A.text,
@@ -76,7 +76,7 @@
                 }) : (0, s.jsxs)("div", {
                     className: A.containerExpanded,
                     children: [(0, s.jsx)(f.default, {
-                        sticker: v,
+                        sticker: L,
                         size: 160
                     }), (0, s.jsx)(o.Button, {
                         className: A.button,

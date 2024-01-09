@@ -25,11 +25,11 @@
                     onAcceptSuccess: n,
                     onRejectSuccess: a,
                     onError: E
-                } = e, g = (0, C.default)(), [S, _] = s.useState(!1), [A, T] = s.useState(!1), [M, I] = s.useState(!1), [N, L] = s.useState(!1), [v, x] = s.useState(!1), R = S || A || M, y = s.useCallback(async e => {
+                } = e, g = (0, C.default)(), [S, _] = s.useState(!1), [A, T] = s.useState(!1), [M, I] = s.useState(!1), [N, v] = s.useState(!1), [L, x] = s.useState(!1), R = S || A || M, y = s.useCallback(async e => {
                     if (!R) {
                         _(!0);
                         try {
-                            await (0, f.acceptMessageRequest)(e), L(!0), null == n || n()
+                            await (0, f.acceptMessageRequest)(e), v(!0), null == n || n()
                         } catch (t) {
                             let e = new i.APIError(t);
                             null == E || E(e)
@@ -37,7 +37,7 @@
                             _(!1)
                         }
                     }
-                }, [R, n, E]), D = s.useCallback(async e => {
+                }, [R, n, E]), O = s.useCallback(async e => {
                     if (!R) {
                         T(!0);
                         try {
@@ -49,7 +49,7 @@
                             T(!1)
                         }
                     }
-                }, [R, a, E]), O = s.useCallback(async e => {
+                }, [R, a, E]), D = s.useCallback(async e => {
                     if (R) return;
                     T(!0);
                     let t = l(e, p.BATCH_REJECT_LIMIT);
@@ -122,13 +122,13 @@
                 }, [y]);
                 return {
                     acceptMessageRequest: g ? j : y,
-                    rejectMessageRequest: D,
-                    rejectAll: O,
+                    rejectMessageRequest: O,
+                    rejectAll: D,
                     markAsNotSpam: b,
                     isAcceptLoading: S,
                     isRejectLoading: A,
                     isUserProfileLoading: M,
                     isOptimisticAccepted: N,
-                    isOptimisticRejected: v
+                    isOptimisticRejected: L
                 }
             }

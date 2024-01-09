@@ -1,32 +1,32 @@
             "use strict";
-            n.r(t), n.d(t, {
+            t.r(n), t.d(n, {
                 default: function() {
                     return f
                 }
             });
-            var l = n("37983");
-            n("884691");
-            var u = n("281071"),
-                a = n("65597"),
-                i = n("77078"),
-                d = n("867965"),
-                r = n("42203"),
-                s = n("404008"),
-                o = n("49111"),
-                c = n("782340");
+            var l = t("37983");
+            t("884691");
+            var i = t("281071"),
+                u = t("65597"),
+                o = t("77078"),
+                a = t("867965"),
+                c = t("42203"),
+                s = t("404008"),
+                r = t("49111"),
+                d = t("782340");
 
-            function f(e, t, n) {
-                let f = (0, a.default)([r.default], () => r.default.getChannel(e.parent_id));
-                return (0, l.jsx)(i.MenuItem, {
+            function f(e, n, t) {
+                let f = (0, u.default)([c.default], () => c.default.getChannel(e.parent_id));
+                return (0, l.jsx)(o.MenuItem, {
                     id: "channel-copy-link",
-                    label: c.default.Messages.COPY_LINK,
+                    label: d.default.Messages.COPY_LINK,
                     action: () => {
-                        e.isForumPost() && (0, d.trackForumPostLinkCopied)({
+                        e.isForumPost() && (0, a.trackForumPostLinkCopied)({
                             postId: e.id,
                             location: {
-                                section: o.AnalyticsSections.CONTEXT_MENU
+                                section: r.AnalyticsSections.CONTEXT_MENU
                             }
-                        }), (0, u.copy)((0, s.getChannelLinkToCopy)(e, f, t, n))
+                        }), (0, i.copy)((0, s.getChannelLinkToCopy)(e, f, n, t))
                     }
                 })
             }

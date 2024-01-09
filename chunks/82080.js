@@ -47,8 +47,8 @@
                     id: u
                 } = n, C = t.getGuildId(), m = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(C), [C]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, T = null != m && m.hasFeature(S.GuildFeatures.NEWS), I = g && T, {
                     editingMessage: N,
-                    editingTextValue: L,
-                    editingRichValue: v
+                    editingTextValue: v,
+                    editingRichValue: L
                 } = (0, l.useStateFromStoresObject)([c.default], () => ({
                     editingMessage: c.default.getEditingMessage(o),
                     editingTextValue: c.default.getEditingTextValue(o),
@@ -65,12 +65,12 @@
                     className: _.channelTextArea,
                     key: u
                 }), [u]);
-                return null != L && null != v ? (0, s.jsx)(p.default, {
+                return null != v && null != L ? (0, s.jsx)(p.default, {
                     ref: void 0,
                     channel: t,
                     message: n,
-                    textValue: L,
-                    richValue: v,
+                    textValue: v,
+                    richValue: L,
                     onCancel: i.default.endEditMessage,
                     onChange: i.default.updateEditMessage,
                     onConfirmDelete: r.default.confirmDelete,

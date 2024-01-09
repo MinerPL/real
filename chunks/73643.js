@@ -42,8 +42,8 @@
                         renderSection: R,
                         renderRow: O,
                         renderFooter: L,
-                        renderSidebar: y,
-                        renderListHeader: D,
+                        renderSidebar: D,
+                        renderListHeader: y,
                         wrapSection: P,
                         getAnchorId: M,
                         paddingTop: U,
@@ -224,7 +224,7 @@
                                     return a(c)
                                 }({
                                     items: en,
-                                    renderListHeader: D,
+                                    renderListHeader: y,
                                     renderSection: R,
                                     renderRow: O,
                                     renderFooter: L,
@@ -232,7 +232,7 @@
                                     spacerTop: ee
                                 })
                             })
-                        }), [B, x, H, V, W, Y, z, et, en, R, O, L, D, P, ee]), r.useMemo(() => (function(e) {
+                        }), [B, x, H, V, W, Y, z, et, en, R, O, L, y, P, ee]), r.useMemo(() => (function(e) {
                             let {
                                 renderSidebar: t,
                                 sidebarHeight: n,
@@ -242,10 +242,10 @@
                             return null == n || null == t ? null : t(r, i)
                         })({
                             isSidebarVisible: ei,
-                            renderSidebar: y,
+                            renderSidebar: D,
                             sidebarHeight: N,
                             isListVisible: 0 !== en.length
-                        }), [ei, y, N, en.length])]
+                        }), [ei, D, N, en.length])]
                     })
                 })
             }
