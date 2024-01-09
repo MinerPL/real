@@ -18,8 +18,8 @@
                 p = n("162771"),
                 g = n("697218"),
                 m = n("901165"),
-                S = n("819068"),
-                E = n("49111");
+                E = n("819068"),
+                S = n("49111");
             class v extends i.Component {
                 componentDidUpdate(e) {
                     if (this.props.locked) return null;
@@ -31,7 +31,7 @@
                         hasPreviewEnabled: l,
                         postableChannelCount: d
                     } = this.props;
-                    if ((t !== e.selectedGuild || a && !e.isMemberPending) && (0, o.trackWithOverlayMetadata)(E.AnalyticEvents.GUILD_VIEWED, {
+                    if ((t !== e.selectedGuild || a && !e.isMemberPending) && (0, o.trackWithOverlayMetadata)(S.AnalyticEvents.GUILD_VIEWED, {
                             ...a ? {
                                 is_pending: a,
                                 preview_enabled: l
@@ -39,7 +39,7 @@
                             postable_channels: d
                         }), null != n && n !== e.selectedChannel) {
                         let e = (0, s.collectThreadMetadata)(r.default.getChannel(n), !0);
-                        (0, o.trackWithOverlayMetadata)(E.AnalyticEvents.CHANNEL_OPENED, {
+                        (0, o.trackWithOverlayMetadata)(S.AnalyticEvents.CHANNEL_OPENED, {
                             channel_is_nsfw: i,
                             ...e
                         })
@@ -61,16 +61,16 @@
                         let {
                             channel: t
                         } = e;
-                        return f.default.can(a.default.combine(E.Permissions.SEND_MESSAGES, E.Permissions.VIEW_CHANNEL), t)
+                        return f.default.can(a.default.combine(S.Permissions.SEND_MESSAGES, S.Permissions.VIEW_CHANNEL), t)
                     }).length : 0,
-                    I = null != v && null != i && null !== (n = null === (e = u.default.getMember(i, v.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== n && n;
+                    N = null != v && null != i && null !== (n = null === (e = u.default.getMember(i, v.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== n && n;
                 return {
                     selectedGuild: i,
                     selectedChannel: l,
                     isNSFWChannel: null == s ? void 0 : s.nsfw,
-                    locked: m.default.isUILocked((0, S.getPID)()),
-                    hasPreviewEnabled: null == o ? void 0 : o.features.has(E.GuildFeatures.PREVIEW_ENABLED),
-                    isMemberPending: I,
+                    locked: m.default.isUILocked((0, E.getPID)()),
+                    hasPreviewEnabled: null == o ? void 0 : o.features.has(S.GuildFeatures.PREVIEW_ENABLED),
+                    isMemberPending: N,
                     postableChannelCount: C
                 }
             })(v)

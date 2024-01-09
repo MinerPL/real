@@ -19,8 +19,8 @@
                 m = n("209397"),
                 E = n("187163"),
                 C = n("132615"),
-                S = n("663685"),
-                g = n("516056"),
+                g = n("663685"),
+                S = n("516056"),
                 _ = n("30176"),
                 I = n("730647"),
                 T = n("49111"),
@@ -56,7 +56,7 @@
                             (0, u.ack)(x.id, !0, !0, e)
                         })
                     }, [x.id]);
-                    let O = l.useMemo(() => null != M ? (0, g.generateDirectoryRows)(Object.values(M), A) : null, [M, A]),
+                    let O = l.useMemo(() => null != M ? (0, S.generateDirectoryRows)(Object.values(M), A) : null, [M, A]),
                         {
                             mostRecentQuery: y,
                             searchFetching: b,
@@ -135,7 +135,7 @@
                             guild: N,
                             onAddGuild: V
                         })
-                    }) : (0, a.jsx)(S.default, {
+                    }) : (0, a.jsx)(g.default, {
                         channel: x,
                         searchQuery: D,
                         setSearchQuery: U,

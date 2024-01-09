@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return S
                 }
             }), n("222007");
             var i = n("37983"),
@@ -32,7 +32,7 @@
                 },
                 m = [d.OverlayNotificationPositions.DISABLED, d.OverlayNotificationPositions.TOP_LEFT, d.OverlayNotificationPositions.TOP_RIGHT, d.OverlayNotificationPositions.BOTTOM_LEFT, d.OverlayNotificationPositions.BOTTOM_RIGHT];
 
-            function S(e) {
+            function E(e) {
                 let {
                     position: t,
                     onChange: n
@@ -74,5 +74,5 @@
                     })]
                 })
             }
-            S.Positions = d.OverlayNotificationPositions;
-            var E = S
+            E.Positions = d.OverlayNotificationPositions;
+            var S = E

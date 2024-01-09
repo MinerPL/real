@@ -10,7 +10,7 @@
                     return g
                 },
                 default: function() {
-                    return I
+                    return L
                 }
             }), n("222007");
             var l = n("37983"),
@@ -55,7 +55,7 @@
                     null != t && t(e), C(!0), d.start(1e3, () => C(!1))
                 };
                 return null == t ? null : (0, l.jsx)(i.Tooltip, {
-                    text: L(n, a),
+                    text: I(n, a),
                     position: "top",
                     tooltipClassName: h.tooltips,
                     "aria-label": E.default.Messages.SHARE_LINK,
@@ -129,9 +129,9 @@
                 })
             }
             let S = e => null == e || e,
-                L = (e, t) => S(e) ? E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE : S(t) ? E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_WITHOUT_PERMISSION : E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_PRIVATE_CHANNEL;
+                I = (e, t) => S(e) ? E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE : S(t) ? E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_WITHOUT_PERMISSION : E.default.Messages.GUILD_EVENT_TOOLTIP_COPY_INVITE_PRIVATE_CHANNEL;
 
-            function I(e) {
+            function L(e) {
                 let {
                     isActive: t,
                     isUserLurking: n,
@@ -142,8 +142,8 @@
                     onContextMenu: r,
                     onJoinClick: c,
                     onRsvpClick: S,
-                    onStartClick: L,
-                    onInviteClick: I,
+                    onStartClick: I,
+                    onInviteClick: L,
                     onEndClick: _,
                     isJoined: m = !1
                 } = e, x = void 0 !== c;
@@ -164,7 +164,7 @@
                             })
                         })
                     }) : null, (0, l.jsx)(v, {
-                        onInviteClick: I,
+                        onInviteClick: L,
                         canInvite: u,
                         isChannelPublic: a
                     }), t && o !== f.GuildScheduledEventEntityTypes.EXTERNAL ? (0, l.jsx)(C, {
@@ -189,11 +189,11 @@
                         isUserRsvped: s,
                         isUserLurking: n,
                         onRsvpClick: S
-                    }), t || null == L ? null : (0, l.jsx)(i.Button, {
+                    }), t || null == I ? null : (0, l.jsx)(i.Button, {
                         className: h.button,
                         innerClassName: h.innerButton,
                         size: i.Button.Sizes.SMALL,
-                        onClick: L,
+                        onClick: I,
                         color: i.Button.Colors.GREEN,
                         children: E.default.Messages.START
                     }), t && null != _ ? (0, l.jsx)(i.Button, {

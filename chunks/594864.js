@@ -4,40 +4,40 @@
                     return r
                 }
             });
-            var a = n("37983");
+            var s = n("37983");
             n("884691");
-            var s = n("414456"),
-                l = n.n(s),
+            var a = n("414456"),
+                l = n.n(a),
                 i = n("46716");
 
             function r(e) {
                 let {
                     bannerIcon: t,
                     bannerHeader: n,
-                    bannerSubtext: s,
+                    bannerSubtext: a,
                     containerStyles: r,
                     headerStyles: o,
                     children: u
                 } = e;
-                return (0, a.jsxs)("div", {
+                return (0, s.jsxs)("div", {
                     className: i.spamBanner,
-                    children: [(0, a.jsxs)("div", {
+                    children: [(0, s.jsxs)("div", {
                         className: l(i.bannerTextContainer, r),
-                        children: ["string" == typeof t ? (0, a.jsx)("img", {
+                        children: ["string" == typeof t ? (0, s.jsx)("img", {
                             src: t,
                             alt: "",
                             className: i.bannerIcon
-                        }) : t, (0, a.jsxs)("div", {
+                        }) : t, (0, s.jsxs)("div", {
                             className: i.bannerText,
-                            children: [(0, a.jsx)("div", {
+                            children: [(0, s.jsx)("div", {
                                 className: l(i.bannerHeader, o),
                                 children: n
-                            }), (0, a.jsx)("div", {
+                            }), (0, s.jsx)("div", {
                                 className: i.bannerSubtext,
-                                children: s
+                                children: a
                             })]
                         })]
-                    }), (0, a.jsx)("div", {
+                    }), (0, s.jsx)("div", {
                         className: i.actionButtons,
                         children: u
                     })]

@@ -19,8 +19,8 @@
                 m = n("459824"),
                 E = n("813071"),
                 C = n("516832"),
-                S = n("986358"),
-                g = n("590456"),
+                g = n("986358"),
+                S = n("590456"),
                 _ = n("623529");
 
             function I(e) {
@@ -53,14 +53,14 @@
                     children: (0, a.jsx)(f.default, {
                         user: N,
                         guildId: n,
-                        profileType: g.UserProfileTypes.MODAL,
+                        profileType: S.UserProfileTypes.MODAL,
                         forceShowPremium: !0,
                         className: i(_.profileThemedContainer),
                         children: (0, a.jsx)("div", {
                             className: i(_.innerContainer),
                             children: (0, a.jsx)(E.default, {
                                 children: (0, a.jsxs)(a.Fragment, {
-                                    children: [(0, a.jsx)(S.default, {
+                                    children: [(0, a.jsx)(g.default, {
                                         userId: t,
                                         guildId: n,
                                         onClose: s

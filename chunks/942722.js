@@ -19,8 +19,8 @@
                 m = n("191542"),
                 E = n("697218"),
                 C = n("79798"),
-                S = n("151185"),
-                g = n("11056"),
+                g = n("151185"),
+                S = n("11056"),
                 _ = n("826684"),
                 I = n("599110"),
                 T = n("315102"),
@@ -45,7 +45,7 @@
                 } = (0, i.useStateFromStoresObject)([p.default, E.default, h.default], () => p.default.isFriend(t.id) || t === E.default.getCurrentUser() ? {
                     status: h.default.getStatus(t.id),
                     activities: h.default.getActivities(t.id)
-                } : {}), S = (0, i.useStateFromStores)([m.default], () => null != m.default.getTypingUsers(l.id)[t.id]), g = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()), _ = (0, i.useStateFromStores)([h.default], () => h.default.isMobileOnline(t.id)), I = (0, i.useStateFromStores)([p.default], () => p.default.getNickname(t.id)), T = e => {
+                } : {}), g = (0, i.useStateFromStores)([m.default], () => null != m.default.getTypingUsers(l.id)[t.id]), S = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()), _ = (0, i.useStateFromStores)([h.default], () => h.default.isMobileOnline(t.id)), I = (0, i.useStateFromStores)([p.default], () => p.default.getNickname(t.id)), T = e => {
                     (0, u.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
@@ -78,11 +78,11 @@
                     },
                     children: e => (0, a.jsx)(M.default, {
                         user: t,
-                        currentUser: g,
+                        currentUser: S,
                         isOwner: t.id === l.ownerId,
                         ownerTooltipText: j.default.Messages.GROUP_OWNER,
                         shouldAnimateStatus: y,
-                        isTyping: S,
+                        isTyping: g,
                         status: d,
                         activities: C,
                         channel: l,
@@ -125,7 +125,7 @@
                     }),
                     position: s.isMobile ? "window_center" : "left",
                     spacing: 16,
-                    children: e => (0, a.jsx)(g.default, {
+                    children: e => (0, a.jsx)(S.default, {
                         onContextMenu: d,
                         className: L.member,
                         name: (0, a.jsx)("span", {
@@ -202,7 +202,7 @@
                             }), f.map(e => (0, a.jsx)(P, {
                                 integration: e,
                                 channel: t
-                            }, e.application.id)), T.length > 0 && (0, a.jsx)(g.default, {
+                            }, e.application.id)), T.length > 0 && (0, a.jsx)(S.default, {
                                 className: L.member,
                                 onClick: () => {
                                     (0, r.openModalLazy)(async () => {
@@ -217,7 +217,7 @@
                                 },
                                 avatar: (0, a.jsx)("div", {
                                     className: O.appIconWrapper,
-                                    children: (0, a.jsx)(S.default, {
+                                    children: (0, a.jsx)(g.default, {
                                         width: 18,
                                         height: 18
                                     })

@@ -84,14 +84,14 @@
                 return null != t ? t : (0, c.default)(e) ? K(e.name) : (0, f.default)(e) && null != e.url ? W(e.url) : (null != e.application_id && Z(e.application_id), t)
             }
 
-            function Q(e) {
+            function X(e) {
                 let t = y.default.getVoiceStateForUser(e);
                 return (null == t ? void 0 : t.channelId) != null && v.default.canWithPartialContext(j.Permissions.VIEW_CHANNEL, {
                     channelId: t.channelId
                 }) ? t.channelId : null
             }
 
-            function X(e) {
+            function Q(e) {
                 return R.default.isFriend(e.id)
             }
 
@@ -158,7 +158,7 @@
                             n = null != t ? z(t) : null;
                         return null != n && n.id === f.id
                     });
-                    (x = a.orderBy(x, [X], ["desc"])).length !== t.length && (R = !0), j.add(f.id), M.push({
+                    (x = a.orderBy(x, [Q], ["desc"])).length !== t.length && (R = !0), j.add(f.id), M.push({
                         game: f,
                         activity: d,
                         activityUser: e,
@@ -171,7 +171,7 @@
                     F = new Set,
                     B = new Set;
                 for (let e of t) {
-                    let n = Q(e.id),
+                    let n = X(e.id),
                         l = N.default.getChannel(n),
                         s = null != l ? l.getGuildId() : null,
                         i = L.default.getGuild(s);
@@ -182,7 +182,7 @@
                                 userId: t
                             } = e;
                             return O.default.getUser(t)
-                        }).filter(D.isNotNullish).orderBy([X], ["desc"]).value();
+                        }).filter(D.isNotNullish).orderBy([Q], ["desc"]).value();
                         e.filter(e => !p.includes(e.id)).forEach(e => t.push(e)), P ? !B.has(s) && (f = null) : (f = i, P = !0), B.add(s), F.add(n), w.push({
                             channel: l,
                             guild: i,
@@ -222,7 +222,7 @@
                         }, []),
                         t = a(e).groupBy(e => {
                             var t;
-                            let n = Q(e.id),
+                            let n = X(e.id),
                                 l = Y(e.id);
                             return null != n ? "".concat("channel-", "-").concat(n) : (null == l ? void 0 : null === (t = l.party) || void 0 === t ? void 0 : t.id) != null ? "".concat("party-", "-").concat(l.party.id) : "".concat("user-", "-").concat(e.id)
                         }),

@@ -21,8 +21,8 @@
                 m = n("698372"),
                 E = n("969380"),
                 C = n("401207"),
-                S = n("141962"),
-                g = n("320817"),
+                g = n("141962"),
+                S = n("320817"),
                 _ = n("812204"),
                 I = n("685665"),
                 T = n("442939"),
@@ -73,7 +73,7 @@
                     channel: E,
                     width: C
                 } = e;
-                let g = (a = C) > 400 ? 2 : a > 300 ? 1 : 0;
+                let S = (a = C) > 400 ? 2 : a > 300 ? 1 : 0;
                 let [_] = (l = C) > 400 ? [o.AvatarSizes.SIZE_56, 56] : l > 300 ? [o.AvatarSizes.SIZE_32, 32] : [o.AvatarSizes.SIZE_24, 24], T = (0, u.useStateFromStoresArray)([x.default, v.default], () => Array.from(i).map(e => v.default.getId() === e ? null : x.default.getUser(e)).filter(A.isNotNullish)), N = (0, u.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === p.id)), {
                     analyticsLocations: L
                 } = (0, I.default)(), y = (0, d.useAnalyticsContext)(), b = M.default.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), P = (0, h.useEmbeddedActivityJoinability)({
@@ -90,8 +90,8 @@
                         users: T
                     }), (0, s.jsx)(o.Text, {
                         className: r(j.subheader, {
-                            [j.small]: 0 === g,
-                            [j.medium]: 1 === g
+                            [j.small]: 0 === S,
+                            [j.medium]: 1 === S
                         }),
                         variant: "text-sm/normal",
                         children: T.length > 1 ? R.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
@@ -102,8 +102,8 @@
                         })
                     }), (0, s.jsx)(o.Text, {
                         className: r(j.header, {
-                            [j.small]: 0 === g,
-                            [j.medium]: 1 === g
+                            [j.small]: 0 === S,
+                            [j.medium]: 1 === S
                         }),
                         variant: "text-sm/normal",
                         children: p.name
@@ -116,7 +116,7 @@
                                     currentEmbeddedApplication: m,
                                     activityChannelId: E.id,
                                     locationObject: y.location,
-                                    embeddedActivitiesManager: S.default,
+                                    embeddedActivitiesManager: g.default,
                                     analyticsLocations: L
                                 })
                             },
@@ -129,7 +129,7 @@
                                     case 0:
                                         return o.Button.Sizes.SMALL
                                 }
-                            }(g),
+                            }(S),
                             className: j.button,
                             color: o.Button.Colors.PRIMARY,
                             children: R.default.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
@@ -155,15 +155,15 @@
                     applicationId: u,
                     names: L,
                     size: 1024
-                }), S = !d;
+                }), g = !d;
                 return (0, s.jsx)(r, {
                     children: (0, s.jsx)("div", {
                         className: j.container,
                         children: (0, s.jsxs)(s.Fragment, {
                             children: [!a && d && (0, s.jsx)(C.default, {
                                 className: j.iframe,
-                                embedId: (0, g.default)(i.id, u)
-                            }), S && null != f && null != h && "" !== h ? (0, s.jsx)("img", {
+                                embedId: (0, S.default)(i.id, u)
+                            }), g && null != f && null != h && "" !== h ? (0, s.jsx)("img", {
                                 className: j.splashImage,
                                 alt: f.name,
                                 src: h
@@ -173,7 +173,7 @@
                                 participants: t.participants,
                                 application: f,
                                 currentEmbeddedApplication: c
-                            }), l || S ? null : (0, s.jsx)("div", {
+                            }), l || g ? null : (0, s.jsx)("div", {
                                 className: j.clickShield
                             })]
                         })

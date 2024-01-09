@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return S
                 }
             });
             var a = n("37983"),
@@ -19,18 +19,18 @@
                 m = n("249561"),
                 E = n("49111"),
                 C = n("782340");
-            let S = [];
+            let g = [];
 
-            function g(e) {
+            function S(e) {
                 let {
                     channel: t,
-                    onJump: g
+                    onJump: S
                 } = e, {
                     messages: _,
                     loading: I
                 } = (0, s.useStateFromStoresObject)([c.default], () => {
                     let e = c.default.getPinnedMessages(t.id),
-                        n = null != e ? e.messages : S;
+                        n = null != e ? e.messages : g;
                     return {
                         messages: n,
                         loading: null == n || null != e && e.loading
@@ -59,7 +59,7 @@
                         onCloseMessage: function(e, n) {
                             null != e && (n.shiftKey ? u.default.unpinMessage(t, e.id) : m.default.confirmUnpin(t, e))
                         },
-                        onJump: g,
+                        onJump: S,
                         getProTip: function() {
                             return t.isPrivate() ? t.type === E.ChannelTypes.DM ? C.default.Messages.PINNED_MESSAGES_PRO_TIP_BODY_DM.format({
                                 other: v

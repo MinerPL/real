@@ -4,8 +4,8 @@
                     return C
                 }
             });
-            var a = n("37983"),
-                s = n("884691"),
+            var s = n("37983"),
+                a = n("884691"),
                 l = n("414456"),
                 i = n.n(l),
                 r = n("446674"),
@@ -15,17 +15,17 @@
                 c = n("426969"),
                 f = n("13030"),
                 h = n("151431"),
-                C = s.memo(function() {
+                C = a.memo(function() {
                     let e = (0, r.useStateFromStores)([c.default], () => c.default.shouldShowPopup()),
-                        t = s.useCallback(() => {
+                        t = a.useCallback(() => {
                             e ? d.dismissAppLauncherPopup() : d.showAppLauncherPopup()
                         }, [e]);
-                    return (0, a.jsx)(o.Tooltip, {
+                    return (0, s.jsx)(o.Tooltip, {
                         text: "Use an App",
-                        children: e => (0, a.jsx)("div", {
+                        children: e => (0, s.jsx)("div", {
                             ...e,
                             className: i(f.CHAT_INPUT_BUTTON_CLASSNAME, h.buttonContainer),
-                            children: (0, a.jsx)(u.default, {
+                            children: (0, s.jsx)(u.default, {
                                 onClick: t,
                                 tabIndex: 0,
                                 focusProps: {

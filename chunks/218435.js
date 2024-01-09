@@ -22,7 +22,7 @@
                         giftMessage: n,
                         subscriptionTier: E,
                         ...I
-                    } = e, f = (0, u.default)(), T = (0, l.isThemeDark)(f) || s, S = T ? i.ButtonColors.WHITE : i.ButtonColors.BRAND, R = E === d.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.GIFT_NITRO_TIER_0 : c.default.Messages.GIFT_NITRO;
+                    } = e, T = (0, u.default)(), f = (0, l.isThemeDark)(T) || s, S = f ? i.ButtonColors.WHITE : i.ButtonColors.BRAND, R = E === d.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.GIFT_NITRO_TIER_0 : c.default.Messages.GIFT_NITRO;
                     return (0, a.jsx)(o.default, {
                         isGift: !0,
                         color: S,
@@ -30,7 +30,7 @@
                         hover: i.ButtonHovers.BRAND,
                         buttonText: R,
                         giftMessage: n,
-                        className: r(t, T ? _.buttonWhite : _.buttonBrand),
+                        className: r(t, f ? _.buttonWhite : _.buttonBrand),
                         subscriptionTier: E,
                         ...I
                     })

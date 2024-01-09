@@ -23,8 +23,8 @@
                 m = n("158998"),
                 E = n("713135"),
                 C = n("49111"),
-                S = n("782340"),
-                g = n("568719"),
+                g = n("782340"),
+                S = n("568719"),
                 _ = n("175321");
 
             function I(e) {
@@ -42,21 +42,21 @@
                             right: 8
                         }
                     },
-                    className: g.listRow,
+                    className: S.listRow,
                     onClick: () => i(t.id),
                     onContextMenu: e => o(e, t),
                     children: [(0, a.jsx)(p.default, {
                         tabIndex: -1,
                         guild: t,
                         showBadge: !0,
-                        className: s(g.listAvatar, null == t.icon ? _.guildAvatarWithoutIcon : null),
+                        className: s(S.listAvatar, null == t.icon ? _.guildAvatarWithoutIcon : null),
                         badgeStrokeColor: (0, f.getColor)((0, r.isThemeDark)(l) ? C.Color.PRIMARY_600 : C.Color.WHITE_500),
                         size: p.default.Sizes.MEDIUM,
                         active: !0
                     }), (0, a.jsxs)("div", {
-                        className: g.listRowContent,
+                        className: S.listRowContent,
                         children: [(0, a.jsx)("div", {
-                            className: g.listName,
+                            className: S.listName,
                             children: t.toString()
                         }), c || null != n ? (0, a.jsxs)("div", {
                             className: _.guildNick,
@@ -95,12 +95,12 @@
                     })
                 }
                 return t = null == r || 0 === r.length ? (0, a.jsxs)("div", {
-                    className: g.empty,
+                    className: S.empty,
                     children: [(0, a.jsx)("div", {
-                        className: g.emptyIconGuilds
+                        className: S.emptyIconGuilds
                     }), (0, a.jsx)("div", {
-                        className: g.emptyText,
-                        children: S.default.Messages.NO_MUTUAL_GUILDS
+                        className: S.emptyText,
+                        children: g.default.Messages.NO_MUTUAL_GUILDS
                     })]
                 }) : r.map(e => {
                     let {
@@ -116,7 +116,7 @@
                         onContextMenu: m
                     }, t.id)
                 }), (0, a.jsx)(u.ScrollerThin, {
-                    className: g.listScroller,
+                    className: S.listScroller,
                     fade: !0,
                     children: t
                 })

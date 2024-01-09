@@ -19,8 +19,8 @@
                 m = n("315102"),
                 E = n("233965"),
                 C = n("699209"),
-                S = n("925749"),
-                g = n("342845"),
+                g = n("925749"),
+                S = n("342845"),
                 _ = n("661743"),
                 I = n("49111"),
                 T = n("782340"),
@@ -67,11 +67,11 @@
                                     }), (0, a.jsx)(u.Text, {
                                         variant: "text-sm/semibold",
                                         color: "text-normal",
-                                        children: (0, S.getHangStatusText)(t)
+                                        children: (0, g.getHangStatusText)(t)
                                     })]
                                 }), (0, a.jsxs)("div", {
                                     className: v.iconGroup,
-                                    children: [(0, a.jsx)(g.default, {
+                                    children: [(0, a.jsx)(S.default, {
                                         className: v.statusIcon,
                                         hangStatusActivity: t
                                     }), (0, a.jsxs)("div", {

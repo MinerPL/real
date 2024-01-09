@@ -16,10 +16,10 @@
                     return E
                 },
                 resetPermissions: function() {
-                    return _
+                    return f
                 },
                 updateApplicationCommandPermissions: function() {
-                    return I
+                    return _
                 }
             });
             var i = n("872717"),
@@ -91,13 +91,13 @@
                 })
             }
 
-            function _(e) {
+            function f(e) {
                 a.default.dispatch({
                     commandId: e,
                     type: "INTEGRATION_PERMISSION_SETTINGS_RESET"
                 })
             }
-            async function I(e) {
+            async function _(e) {
                 let {
                     applicationId: t,
                     commandId: n,

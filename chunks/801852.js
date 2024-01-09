@@ -19,8 +19,8 @@
                 m = n("685665"),
                 E = n("393414"),
                 C = n("161778"),
-                S = n("124824"),
-                g = n("772280"),
+                g = n("124824"),
+                S = n("772280"),
                 _ = n("82636"),
                 I = n("599110"),
                 T = n("614175"),
@@ -199,7 +199,7 @@
                             })]
                         }) : null;
                     return (0, a.jsx)(el, {
-                        children: (0, a.jsx)(S.default, {
+                        children: (0, a.jsx)(g.default, {
                             children: (0, a.jsxs)(d.Dialog, {
                                 ref: t,
                                 "aria-labelledby": H,
@@ -233,7 +233,7 @@
                                             children: [(0, a.jsx)(d.Text, {
                                                 variant: "eyebrow",
                                                 children: P.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
-                                            }), (0, a.jsx)(g.default, {
+                                            }), (0, a.jsx)(S.default, {
                                                 width: 12,
                                                 height: 12,
                                                 color: "var(--interactive-active)",

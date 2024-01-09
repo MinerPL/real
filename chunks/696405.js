@@ -25,17 +25,17 @@
                         isHovered: s,
                         setIsHovered: E,
                         onMouseEnter: C,
-                        onMouseLeave: S,
-                        cancelTimers: g
+                        onMouseLeave: g,
+                        cancelTimers: S
                     } = (0, d.default)(200, 300), [_, I] = l.useState(!1), T = (0, r.useStateFromStores)([f.default], () => f.default.effectCooldownEndTime), v = l.useMemo(() => null != T ? (T.getTime() - Date.now()) / 1e3 : 0, [T]), {
                         seconds: x
                     } = (0, o.default)(null != T ? T : new Date), N = x > 0, A = l.useCallback(e => {
                         if ("focus" !== e.type) !_ && !N && C()
                     }, [_, N, C]), M = l.useCallback(() => {
-                        !_ && S()
-                    }, [S, _]), R = l.useCallback((e, t) => {
-                        g(), I(!_), (!s || _) && (null == t || t(e))
-                    }, [g, _, s]), j = s || _;
+                        !_ && g()
+                    }, [g, _]), R = l.useCallback((e, t) => {
+                        S(), I(!_), (!s || _) && (null == t || t(e))
+                    }, [S, _, s]), j = s || _;
                     return (0, a.jsx)(u.Popout, {
                         shouldShow: j,
                         animationPosition: "bottom",

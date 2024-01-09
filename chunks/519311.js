@@ -34,22 +34,22 @@
                 return E("Thing", e)
             }
 
-            function f(e) {
+            function T(e) {
                 return E("Product", e)
             }
-            f.Image = function(e) {
+            T.Image = function(e) {
                 if (null == e) return null;
                 let t = e.filter(e => null != e && "" !== e);
                 return 0 === t.length ? null : 1 === t.length ? t[0] : t
             };
 
-            function T(e) {
+            function f(e) {
                 return E("Offer", e)
             }
 
             function S(e) {
                 return E("QuantitativeValue", e)
-            }(u = n || (n = {})).DAMAGED = "http://schema.org/DamagedCondition", u.NEW = "http://schema.org/NewCondition", u.REFURBISHED = "http://schema.org/RefurbishedCondition", u.USED = "http://schema.org/UsedCondition", (o = r || (r = {})).DISCONTINUED = "http://schema.org/Discontinued", o.IN_STOCK = "http://schema.org/InStock", o.IN_STORE_ONLY = "http://schema.org/InStoreOnly", o.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability", o.ONLINE_ONLY = "http://schema.org/OnlineOnly", o.OUT_OF_STOCK = "http://schema.org/OutOfStock", o.PREORDER = "http://schema.org/PreOrder", o.PRESALE = "http://schema.org/PreSale", o.SOLD_OUT = "http://schema.org/SoldOut", T.ItemConditions = n, T.ItemAvailability = r, (d = l || (l = {})).YEARLY = "ANN", d.MONTHLY = "MON", S.UnitCodes = l;
+            }(u = n || (n = {})).DAMAGED = "http://schema.org/DamagedCondition", u.NEW = "http://schema.org/NewCondition", u.REFURBISHED = "http://schema.org/RefurbishedCondition", u.USED = "http://schema.org/UsedCondition", (o = r || (r = {})).DISCONTINUED = "http://schema.org/Discontinued", o.IN_STOCK = "http://schema.org/InStock", o.IN_STORE_ONLY = "http://schema.org/InStoreOnly", o.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability", o.ONLINE_ONLY = "http://schema.org/OnlineOnly", o.OUT_OF_STOCK = "http://schema.org/OutOfStock", o.PREORDER = "http://schema.org/PreOrder", o.PRESALE = "http://schema.org/PreSale", o.SOLD_OUT = "http://schema.org/SoldOut", f.ItemConditions = n, f.ItemAvailability = r, (d = l || (l = {})).YEARLY = "ANN", d.MONTHLY = "MON", S.UnitCodes = l;
             class R extends _.Component {
                 render() {
                     let {
@@ -71,7 +71,7 @@
                 return E("Organization", e)
             }, R.ItemPage = function(e) {
                 return E("ItemPage", e)
-            }, R.Product = f, R.Offer = T, R.Rating = function(e) {
+            }, R.Product = T, R.Offer = f, R.Rating = function(e) {
                 return E("Rating", e)
             }, R.AggregateRating = function(e) {
                 return E("AggregateRating", e)

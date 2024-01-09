@@ -17,14 +17,14 @@
                 _ = s("38766"),
                 E = s("42887"),
                 I = s("521012"),
-                f = s("701909"),
-                T = s("719923"),
+                T = s("701909"),
+                f = s("719923"),
                 S = s("184684"),
                 R = s("646718"),
                 p = s("49111"),
-                A = s("397336"),
+                m = s("397336"),
                 N = s("782340"),
-                m = s("571685"),
+                A = s("571685"),
                 g = s("994679"),
                 P = s("620826"),
                 C = s("333078"),
@@ -40,12 +40,12 @@
             var b = () => {
                 let {
                     analyticsLocations: e
-                } = (0, o.default)(u.default.PREMIUM_MARKETING_PERK_CARD), t = (0, r.default)([I.default], () => I.default.getPremiumTypeSubscription()), s = null != t ? T.default.getPremiumPlanItem(t) : null, a = null != s ? T.default.getSkuIdForPlan(s.planId) : null, n = a === R.PremiumSubscriptionSKUs.TIER_2, {
+                } = (0, o.default)(u.default.PREMIUM_MARKETING_PERK_CARD), t = (0, r.default)([I.default], () => I.default.getPremiumTypeSubscription()), s = null != t ? f.default.getPremiumPlanItem(t) : null, a = null != s ? f.default.getSkuIdForPlan(s.planId) : null, n = a === R.PremiumSubscriptionSKUs.TIER_2, {
                     flipped: b
                 } = (0, S.useWhatsNewAvatarDecoRollout)(), {
                     flipped: j
                 } = (0, S.useWhatsNewProfileFXRollout)(), G = (0, d.default)(E.default), y = (0, _.default)({
-                    scrollPosition: A.ProfileCustomizationScrollPositions.TRY_IT_OUT,
+                    scrollPosition: m.ProfileCustomizationScrollPositions.TRY_IT_OUT,
                     analyticsLocations: e
                 }), B = () => {
                     (0, c.openCollectiblesShop)({
@@ -86,7 +86,7 @@
                                 analyticsLocations: e
                             })
                         },
-                        perkImage: m
+                        perkImage: A
                     },
                     clips: n ? {
                         name: "clips",
@@ -101,7 +101,7 @@
                                 analyticsLocations: e
                             })
                         } : () => {
-                            window.open(f.default.getArticleURL(p.HelpdeskArticles.CLIPS), "_blank")
+                            window.open(T.default.getArticleURL(p.HelpdeskArticles.CLIPS), "_blank")
                         },
                         perkImage: O
                     } : {
@@ -133,7 +133,7 @@
                         description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
                         descriptionCta: N.default.Messages.TAKE_ME_THERE,
                         onCtaClick: () => {
-                            i.default.open(p.UserSettingsSections.VOICE, A.SOUNDBOARD_SUBSECTION, {
+                            i.default.open(p.UserSettingsSections.VOICE, m.SOUNDBOARD_SUBSECTION, {
                                 openWithoutBackstack: !0,
                                 analyticsLocations: e
                             })

@@ -19,8 +19,8 @@
                 m = n("115531"),
                 E = n("585513"),
                 C = n("981913"),
-                S = n("49111"),
-                g = n("782340");
+                g = n("49111"),
+                S = n("782340");
 
             function _(e) {
                 let t = (0, u.useStateFromStores)([h.default], () => !(0, r.isEmpty)(h.default.getTypingUsers(e)), [e]),
@@ -116,14 +116,14 @@
                         null === (e = x.current) || void 0 === e || e.focus()
                     }, []);
                 (0, p.useComponentAction)({
-                    event: S.ComponentActions.FOCUS_CHAT_BUTTON,
+                    event: g.ComponentActions.FOCUS_CHAT_BUTTON,
                     handler: v ? null : O
                 });
                 let [y, b] = l.useState(!1), P = l.useCallback(() => {
                     f && b(!0)
                 }, [f]);
                 (0, p.useComponentAction)({
-                    event: S.ComponentActions.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
+                    event: g.ComponentActions.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
                     handler: P
                 }), l.useEffect(() => {
                     let e;
@@ -132,11 +132,11 @@
                     }, 3e3)), () => {
                         clearTimeout(e)
                     }
-                }, [y]), t = f && v ? g.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : N ? g.default.Messages.VIDEO_CALL_HIDE_CHAT : g.default.Messages.VIDEO_CALL_SHOW_CHAT;
+                }, [y]), t = f && v ? S.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : N ? S.default.Messages.VIDEO_CALL_HIDE_CHAT : S.default.Messages.VIDEO_CALL_SHOW_CHAT;
                 let D = [t];
-                return R > 0 && D.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+                return R > 0 && D.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
                     mentionCount: R
-                })), M > 0 && D.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, a.jsx)(C.default, {
+                })), M > 0 && D.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, a.jsx)(C.default, {
                     buttonRef: x,
                     onClick: j,
                     label: t,
