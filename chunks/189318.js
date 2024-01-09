@@ -4,9 +4,9 @@
                     return C
                 }
             });
-            var a = n("37983");
+            var s = n("37983");
             n("884691");
-            var s = n("77078"),
+            var a = n("77078"),
                 l = n("928328"),
                 i = n("599110"),
                 r = n("680894"),
@@ -28,13 +28,13 @@
                 let {
                     transitionState: t,
                     onClose: n,
-                    onSubmit: s
+                    onSubmit: a
                 } = e;
-                return (0, a.jsx)(l.default, {
+                return (0, s.jsx)(l.default, {
                     header: d.default.Messages.CLYDE_FEEDBACK_HEADER,
                     body: d.default.Messages.CLYDE_FEEDBACK_BODY,
                     problemTitle: d.default.Messages.CLYDE_FEEDBACK_PROBLEM_TITLE,
-                    onSubmit: s,
+                    onSubmit: a,
                     onClose: n,
                     ratingConfigs: f,
                     transitionState: t,
@@ -47,12 +47,12 @@
                 })
             }
             let C = (e, t, n, l) => {
-                let d = a => {
+                let d = s => {
                     let {
                         rating: d,
                         problem: c,
                         feedback: f
-                    } = a;
+                    } = s;
                     d === u.FeedbackRating.GOOD && (n(!0), l(!1)), i.default.track(o.AnalyticEvents.CLYDE_AI_MESSAGE_RATED, {
                         reason: c,
                         location,
@@ -69,10 +69,10 @@
                         feedback: f,
                         message_id: e,
                         has_custom_personality: t
-                    }), (0, s.showToast)((0, s.createToast)((0, r.randomClydeThanks)(), s.ToastType.SUCCESS))
+                    }), (0, a.showToast)((0, a.createToast)((0, r.randomClydeThanks)(), a.ToastType.SUCCESS))
                 };
-                (0, s.openModalLazy)(() => new Promise(e => {
-                    e(e => (0, a.jsx)(h, {
+                (0, a.openModalLazy)(() => new Promise(e => {
+                    e(e => (0, s.jsx)(h, {
                         ...e,
                         onSubmit: d
                     }))

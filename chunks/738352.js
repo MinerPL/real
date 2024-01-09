@@ -4,8 +4,8 @@
                     return r
                 }
             }), n("222007");
-            var a = n("37983"),
-                s = n("884691"),
+            var s = n("37983"),
+                a = n("884691"),
                 l = n("907002"),
                 i = n("77078");
 
@@ -24,7 +24,7 @@
                         backgroundColor: o
                     }
                 }));
-                return s.useEffect(() => {
+                return a.useEffect(() => {
                     c({
                         reset: !0,
                         immediate: !0,
@@ -38,7 +38,7 @@
                             backgroundColor: u
                         }
                     })
-                }, [r, c]), (0, a.jsx)(l.animated.div, {
+                }, [r, c]), (0, s.jsx)(l.animated.div, {
                     style: d,
                     className: n,
                     children: t

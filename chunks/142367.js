@@ -5,7 +5,7 @@
                     return _
                 }
             }), n("781738");
-            var a = n("463928"),
+            var a = n("132710"),
                 s = n.n(a),
                 r = n("290689");
             let o = s.defaultRules.lheading,

@@ -4,7 +4,7 @@
                     return o
                 }
             });
-            var i = n("463928"),
+            var i = n("132710"),
                 a = n.n(i),
                 l = n("862205");
             let s = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/,

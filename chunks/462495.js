@@ -4,8 +4,8 @@
                     return E
                 }
             }), n("222007"), n("860677");
-            var a = n("446674"),
-                s = n("913144"),
+            var s = n("446674"),
+                a = n("913144"),
                 l = n("377253");
             let i = Object.freeze([]),
                 r = {},
@@ -32,13 +32,13 @@
                     ...e,
                     ...t
                 } : e);
-                let a = u[t.id];
-                null != a && null != d[a.id] && (d[a.id] = {
-                    ...d[a.id],
+                let s = u[t.id];
+                null != s && null != d[s.id] && (d[s.id] = {
+                    ...d[s.id],
                     ...t
                 })
             }
-            class m extends a.default.Store {
+            class m extends s.default.Store {
                 initialize() {
                     this.waitFor(l.default)
                 }
@@ -57,7 +57,7 @@
                 }
             }
             m.displayName = "UploadStore";
-            var E = new m(s.default, {
+            var E = new m(a.default, {
                 CONNECTION_OPEN: function() {
                     c = {}
                 },
@@ -68,18 +68,18 @@
                     var t;
                     let {
                         channelId: n,
-                        file: a,
-                        uploader: s,
+                        file: s,
+                        uploader: a,
                         message: l
                     } = e;
-                    if (s._aborted || s._errored) return;
+                    if (a._aborted || a._errored) return;
                     let c = null !== (t = r[n]) && void 0 !== t ? t : i;
-                    o[a.id] = s, r[n] = [...c, a], u[a.id] = l;
+                    o[s.id] = a, r[n] = [...c, s], u[s.id] = l;
                     let {
                         items: f
-                    } = a;
+                    } = s;
                     null != f && (d[l.id] = {
-                        ...a,
+                        ...s,
                         items: f
                     }), l.nonce
                 },
@@ -125,16 +125,16 @@
                     let {
                         file: t,
                         itemId: n
-                    } = e, a = o[t.id];
-                    if (null == a) return !1;
-                    setImmediate(() => a.cancelItem(n))
+                    } = e, s = o[t.id];
+                    if (null == s) return !1;
+                    setImmediate(() => s.cancelItem(n))
                 },
                 UPLOAD_FILE_UPDATE: function(e) {
                     let {
                         channelId: t,
                         file: n
-                    } = e, a = u[n.id];
-                    null != a && a.nonce, p(t, n)
+                    } = e, s = u[n.id];
+                    null != s && s.nonce, p(t, n)
                 },
                 UPLOAD_RESTORE_FAILED_UPLOAD: function(e) {
                     let {
