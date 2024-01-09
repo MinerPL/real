@@ -7,7 +7,7 @@
                     return C
                 },
                 setCallscopeIssue: function() {
-                    return S
+                    return g
                 }
             }), n("424973"), n("222007");
             var a = n("811022"),
@@ -81,13 +81,13 @@
                 return m.shouldShowUI()
             }
 
-            function S(e) {
+            function g(e) {
                 m.issues.push({
                     date: new Date,
                     description: e
                 }), m.hasIssues = !0
             }
-            let g = new a.default("CallscopeStore");
+            let S = new a.default("CallscopeStore");
             class _ {
                 static async shouldUpload() {
                     var e, t;
@@ -98,10 +98,10 @@
                 static async handleDisconnected(e) {
                     if (e.state !== h.RTCConnectionStates.DISCONNECTED || null == e.channelId || null == e.rtcLogEphemeralKey) return;
                     if (!await _.shouldUpload()) {
-                        g.info("CallscopeManager: USAGE_STATISTICS is disabled or is not desktop. Not uploading.");
+                        S.info("CallscopeManager: USAGE_STATISTICS is disabled or is not desktop. Not uploading.");
                         return
                     }
-                    g.info("CallscopeManager: Uploading rtc logs in ".concat(1e4, " ms..."));
+                    S.info("CallscopeManager: Uploading rtc logs in ".concat(1e4, " ms..."));
                     let t = d.default.getId();
                     await (0, s.sleep)(1e4), await (0, o.uploadCallscopeLogs)(e.channelId, t, e.rtcLogEphemeralKey, e.context)
                 }

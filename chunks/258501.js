@@ -23,8 +23,8 @@
                 m = n("837008"),
                 E = n("41391"),
                 C = n("833531"),
-                S = n("393381"),
-                g = n("677795"),
+                g = n("393381"),
+                S = n("677795"),
                 _ = n("782340"),
                 I = n("751071");
             let T = e => {
@@ -33,7 +33,7 @@
                         listing: n,
                         step: l,
                         guildId: i
-                    } = e, u = (0, m.useSubscriptionsSettings)(i), c = (0, o.default)(g.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY), p = (() => {
+                    } = e, u = (0, m.useSubscriptionsSettings)(i), c = (0, o.default)(S.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY), p = (() => {
                         var e;
                         if (c) return null;
                         let t = (null == u ? void 0 : null === (e = u.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null ? (0, h.getAssetURL)(u.cover_image_asset.application_id, u.cover_image_asset, 440) : void 0;
@@ -100,7 +100,7 @@
                                 children: _.default.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_CHANNEL_PREVIEW
                             }), (0, a.jsx)("div", {
                                 className: I.confirmationBenefits,
-                                children: h.map(e => (0, a.jsx)(S.default, {
+                                children: h.map(e => (0, a.jsx)(g.default, {
                                     benefit: e,
                                     guildId: l,
                                     onClick: () => t(!0)

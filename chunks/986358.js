@@ -20,8 +20,8 @@
                 m = n("305961"),
                 E = n("957255"),
                 C = n("824563"),
-                S = n("101125"),
-                g = n("697218"),
+                g = n("101125"),
+                S = n("697218"),
                 _ = n("530346"),
                 I = n("109264"),
                 T = n("491401"),
@@ -40,7 +40,7 @@
                     user: t,
                     guildId: n,
                     onClose: l
-                } = e, s = t.id, u = (0, i.default)([S.default, C.default, h.default], () => s === h.default.getId() ? S.default.getStatus() : C.default.getStatus(s, n), [s, n]);
+                } = e, s = t.id, u = (0, i.default)([g.default, C.default, h.default], () => s === h.default.getId() ? g.default.getStatus() : C.default.getStatus(s, n), [s, n]);
                 return (0, a.jsxs)("div", {
                     className: O.topRow,
                     children: [(0, a.jsxs)("div", {
@@ -112,12 +112,12 @@
                     location: h
                 } = e, p = (0, i.default)([m.default], () => m.default.getGuild(s)), {
                     canKickUser: C,
-                    canBanUser: S,
+                    canBanUser: g,
                     canModerateMembers: v
-                } = (0, i.useStateFromStoresObject)([E.default, g.default, m.default], () => ({
+                } = (0, i.useStateFromStoresObject)([E.default, S.default, m.default], () => ({
                     canKickUser: null != p && E.default.canManageUser(j.Permissions.KICK_MEMBERS, t, p),
                     canBanUser: null != p && E.default.canManageUser(j.Permissions.BAN_MEMBERS, t, p),
-                    canModerateMembers: null != p && (0, c.canToggleCommunicationDisableOnUser)(p.id, t.id, [g.default, m.default, E.default])
+                    canModerateMembers: null != p && (0, c.canToggleCommunicationDisableOnUser)(p.id, t.id, [S.default, m.default, E.default])
                 }), [t, p]), M = (0, o.isMemberCommunicationDisabled)(l), R = null != h ? [h] : [], y = (0, f.useTrackModerationAction)(s, {
                     targetUserId: t.id,
                     location: h
@@ -163,7 +163,7 @@
                             children: L.default.Messages.KICK
                         })]
                     }), (0, a.jsxs)(b, {
-                        disabled: !S,
+                        disabled: !g,
                         "aria-label": L.default.Messages.BAN,
                         onClick: () => {
                             (0, r.openModalLazy)(async () => {
@@ -226,7 +226,7 @@
                     userId: t,
                     guildId: n,
                     onClose: l
-                } = e, s = (0, i.default)([g.default], () => g.default.getUser(t), [t]), r = (0, i.default)([p.default], () => p.default.getMember(n, t), [n, t]);
+                } = e, s = (0, i.default)([S.default], () => S.default.getUser(t), [t]), r = (0, i.default)([p.default], () => p.default.getMember(n, t), [n, t]);
                 return null == s || null == r ? null : (0, a.jsxs)("div", {
                     className: O.container,
                     children: [(0, a.jsx)(y, {

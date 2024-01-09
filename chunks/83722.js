@@ -4,8 +4,8 @@
                     return C
                 }
             }), n("222007");
-            var a = n("446674"),
-                s = n("913144"),
+            var s = n("446674"),
+                a = n("913144"),
                 l = n("692038"),
                 i = n("697218"),
                 r = n("288518"),
@@ -20,14 +20,14 @@
             function f(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                 if (!c(e) || null != t && e !== (null == t ? void 0 : t.channel_id)) return;
-                let a = null == t ? null : (0, l.createMessageRecord)(t);
+                let s = null == t ? null : (0, l.createMessageRecord)(t);
                 u[e] = {
                     loaded: !0,
                     error: n,
-                    message: a
+                    message: s
                 }
             }
-            class h extends a.default.Store {
+            class h extends s.default.Store {
                 initialize() {
                     this.waitFor(r.default, o.default, i.default)
                 }
@@ -43,7 +43,7 @@
                 }
             }
             h.displayName = "MessageRequestPreviewStore";
-            var C = new h(s.default, {
+            var C = new h(a.default, {
                 CONNECTION_OPEN: function() {
                     u = {}, d.clear()
                 },
@@ -91,10 +91,10 @@
                     let {
                         requestedChannelIds: t,
                         supplementalData: n
-                    } = e, a = new Set([...t]);
+                    } = e, s = new Set([...t]);
                     for (let e of (n.forEach(e => {
-                            f(e.channel_id, e.message_preview), a.delete(e.channel_id)
-                        }), Array.from(a))) f(e, null)
+                            f(e.channel_id, e.message_preview), s.delete(e.channel_id)
+                        }), Array.from(s))) f(e, null)
                 },
                 LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_ERROR: function(e) {
                     let {

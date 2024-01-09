@@ -15,8 +15,8 @@
                 c = n("195812"),
                 f = n("733350"),
                 E = n("664336"),
-                _ = n("868308"),
-                h = n("782340"),
+                h = n("868308"),
+                _ = n("782340"),
                 S = n("122693");
             class T extends a.PureComponent {
                 static getDerivedStateFromProps(e, t) {
@@ -36,7 +36,7 @@
                         case "UPDATE_AVAILABLE":
                             return (0, l.jsx)(E.Icon, {
                                 hideOnClick: !1,
-                                tooltip: h.default.Messages.UPDATE_AVAILABLE,
+                                tooltip: _.default.Messages.UPDATE_AVAILABLE,
                                 foreground: S.downloadArrow,
                                 background: S.cloud,
                                 icon: f.default
@@ -44,7 +44,7 @@
                         case "UPDATE_MANUALLY":
                         case "UPDATE_DOWNLOADED":
                             return (0, l.jsx)(E.Icon, {
-                                tooltip: h.default.Messages.UPDATE_DOWNLOADED,
+                                tooltip: _.default.Messages.UPDATE_DOWNLOADED,
                                 foreground: S.updateIconForeground,
                                 onClick: this.handleInstallDownload,
                                 icon: c.default
@@ -59,16 +59,16 @@
                         clicked: !1
                     }, this.handleInstallDownload = () => {
                         d.default.isConnected() ? r.default.show({
-                            title: h.default.Messages.UPDATE_DURING_CALL_TITLE,
-                            body: h.default.Messages.UPDATE_DURING_CALL_BODY,
+                            title: _.default.Messages.UPDATE_DURING_CALL_TITLE,
+                            body: _.default.Messages.UPDATE_DURING_CALL_BODY,
                             onConfirm: this.doUpdate,
-                            cancelText: h.default.Messages.CANCEL,
-                            confirmText: h.default.Messages.UPDATE_DURING_CALL_CONTINUE
+                            cancelText: _.default.Messages.CANCEL,
+                            confirmText: _.default.Messages.UPDATE_DURING_CALL_CONTINUE
                         }) : this.doUpdate()
                     }, this.doUpdate = () => {
                         !this.state.clicked && (this.setState({
                             clicked: !0
-                        }), (0, _.quitAndInstall)())
+                        }), (0, h.quitAndInstall)())
                     }
                 }
             }

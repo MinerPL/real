@@ -22,8 +22,8 @@
                 m = n("425190"),
                 E = n("68238"),
                 C = n("315102"),
-                S = n("577357"),
-                g = n("837008"),
+                g = n("577357"),
+                S = n("837008"),
                 _ = n("167109"),
                 I = n("176687"),
                 T = n("595197"),
@@ -65,7 +65,7 @@
                                 children: (0, a.jsx)(R.default, {
                                     guildId: s,
                                     benefit: e
-                                }, (0, S.getBenefitKey)(e))
+                                }, (0, g.getBenefitKey)(e))
                             }, t))
                         }), d && (0, a.jsx)(k, {
                             isViewAll: i,
@@ -183,7 +183,7 @@
                     guildId: s,
                     groupListingId: h,
                     analyticsLocation: p
-                } = e, m = (0, g.useSubscriptionListing)(n), {
+                } = e, m = (0, S.useSubscriptionListing)(n), {
                     openModal: C,
                     canOpenModal: v,
                     cannotOpenReason: x,
@@ -201,7 +201,7 @@
                     children: [q && (0, a.jsxs)("div", {
                         className: i(D.tierTrialIndicator, D.tierTopIndicator),
                         children: [P.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_PERIOD.format({
-                            trialPeriodDuration: (0, S.formatPlanIntervalDuration)({
+                            trialPeriodDuration: (0, g.formatPlanIntervalDuration)({
                                 interval: Z.interval,
                                 interval_count: Z.interval_count
                             })

@@ -22,8 +22,8 @@
                 m = n("981601"),
                 E = n("26989"),
                 C = n("328275"),
-                S = n("118503"),
-                g = n("711486"),
+                g = n("118503"),
+                S = n("711486"),
                 _ = n("387111"),
                 I = n("808422"),
                 T = n("5668");
@@ -45,7 +45,7 @@
                             variant: "text-sm/normal",
                             color: "header-primary",
                             children: _.default.getName(t, n, l)
-                        }), s ? (0, a.jsx)(S.default, {
+                        }), s ? (0, a.jsx)(g.default, {
                             className: T.boost,
                             color: d.default.unsafe_rawColors.GUILD_BOOSTING_PINK.css
                         }) : null]
@@ -66,7 +66,7 @@
                     return (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsxs)("div", {
                             className: T.avatarContainer,
-                            children: [f && (0, a.jsx)(g.default, {
+                            children: [f && (0, a.jsx)(S.default, {
                                 className: i(T.icon, {
                                     [T.invited]: c
                                 })
@@ -97,7 +97,7 @@
                 } = e, {
                     user: r,
                     blocked: d
-                } = t, C = s.getGuildId(), S = (0, h.useAppContext)(), g = (0, o.useStateFromStores)([E.default], () => {
+                } = t, C = s.getGuildId(), g = (0, h.useAppContext)(), S = (0, o.useStateFromStores)([E.default], () => {
                     var e;
                     return null != C && (null === (e = E.default.getMember(C, r.id)) || void 0 === e ? void 0 : e.premiumSince) != null
                 }, [C, r.id]);
@@ -117,9 +117,9 @@
                                 showChatItems: !1
                             })
                         }, {
-                            context: S
+                            context: g
                         })
-                    }, [r, C, s, S]),
+                    }, [r, C, s, g]),
                     I = l.useCallback(e => (0, a.jsx)(m.default, {
                         ...e,
                         guildId: C,
@@ -136,8 +136,8 @@
                     spacing: 8,
                     children: e => (0, a.jsx)(c.Clickable, {
                         className: i(T.tileContainer, {
-                            [T.singleIcon]: g || d,
-                            [T.doubleIcon]: g && d
+                            [T.singleIcon]: S || d,
+                            [T.doubleIcon]: S && d
                         }),
                         onContextMenu: _,
                         ...e,
@@ -145,7 +145,7 @@
                             participant: t,
                             guildId: C,
                             channel: s,
-                            isPremium: g
+                            isPremium: S
                         })
                     })
                 })

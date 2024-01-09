@@ -20,8 +20,8 @@
             let E = 1e3 / 60;
 
             function C(e, t, n, C) {
-                let S = (0, i.useToken)(s.default.unsafe_rawColors.BRAND_500).hex(),
-                    g = (0, i.useToken)(s.default.unsafe_rawColors.BLACK_500).hex(),
+                let g = (0, i.useToken)(s.default.unsafe_rawColors.BRAND_500).hex(),
+                    S = (0, i.useToken)(s.default.unsafe_rawColors.BLACK_500).hex(),
                     _ = (0, i.useToken)(s.default.unsafe_rawColors.WHITE_500).hex(),
                     I = a.useRef({}),
                     T = a.useRef(new l.Interval),
@@ -46,11 +46,11 @@
                             let {
                                 width: E,
                                 height: C
-                            } = f.getBoundingClientRect(), S = [];
+                            } = f.getBoundingClientRect(), g = [];
                             n.forEach(e => {
                                 let t = null != u.default.getVoiceStateForChannel(i, e.userId);
                                 if (!t) {
-                                    S.push(e);
+                                    g.push(e);
                                     return
                                 }! function(e) {
                                     let {
@@ -100,21 +100,21 @@
                                     outlineColorDark: r,
                                     outlineColorLight: d,
                                     linesDrawnAt: l,
-                                    deadDrawables: S,
+                                    deadDrawables: g,
                                     streamerId: s
                                 })
-                            }), S.length > 0 && (0, o.clearDrawables)(S, s)
+                            }), g.length > 0 && (0, o.clearDrawables)(g, s)
                         }({
                             canvasRef: e,
                             drawables: n,
-                            fallbackColor: S,
+                            fallbackColor: g,
                             linesDrawnAt: I,
                             streamerId: t,
-                            outlineColorDark: g,
+                            outlineColorDark: S,
                             outlineColorLight: _,
                             channelId: C
                         })
-                    }, [e, C, S, g, _]);
+                    }, [e, C, g, S, _]);
                 a.useEffect(() => {
                     let t = new ResizeObserver(() => {
                         let t = e.current;

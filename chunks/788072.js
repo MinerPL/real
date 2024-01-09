@@ -15,8 +15,8 @@
                 c = n("954732"),
                 f = n("362189"),
                 E = n("211248"),
-                _ = n("64318"),
-                h = n("833150"),
+                h = n("64318"),
+                _ = n("833150"),
                 S = n("782340"),
                 T = n("643000");
 
@@ -37,7 +37,7 @@
                 }, []);
                 return (0, l.jsxs)("div", {
                     className: T.container,
-                    children: [(0, l.jsx)(_.default, {
+                    children: [(0, l.jsx)(h.default, {
                         tab: o.InboxTab.GAME_INVITES,
                         setTab: t,
                         badgeState: n,
@@ -60,7 +60,7 @@
                                 children: [(0, l.jsx)(N, {
                                     title: S.default.Messages.GAME_INVITES_RECENT_HEADER
                                 }), (0, l.jsx)(l.Fragment, {
-                                    children: A.map(e => (0, l.jsx)(h.default, {
+                                    children: A.map(e => (0, l.jsx)(_.default, {
                                         invite: e,
                                         expired: !1
                                     }, e.invite_id))
@@ -69,7 +69,7 @@
                                 children: [(0, l.jsx)(N, {
                                     title: S.default.Messages.GAME_INVITES_EXPIRED_HEADER
                                 }), (0, l.jsx)(l.Fragment, {
-                                    children: g.map(e => (0, l.jsx)(h.default, {
+                                    children: g.map(e => (0, l.jsx)(_.default, {
                                         invite: e,
                                         expired: !0
                                     }, e.invite_id))
