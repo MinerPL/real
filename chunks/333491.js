@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return h
                 }
             }), n("222007");
             var l = n("37983"),
@@ -44,7 +44,7 @@
                 }
             }
 
-            function _(e) {
+            function h(e) {
                 let {
                     className: t
                 } = e, {
