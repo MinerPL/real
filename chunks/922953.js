@@ -15,8 +15,8 @@
                 c = n("496657"),
                 f = n("758710"),
                 E = n("664336"),
-                h = n("701909"),
-                _ = n("782340");
+                _ = n("701909"),
+                h = n("782340");
 
             function S() {
                 let e = (0, s.useStateFromStores)([u.default], () => u.default.devToolsEnabled),
@@ -48,11 +48,11 @@
                                 navId: "staff-help-popout",
                                 variant: "fixed",
                                 onClose: t,
-                                "aria-label": _.default.Messages.GUILD_ACTIONS_MENU_LABEL,
+                                "aria-label": h.default.Messages.GUILD_ACTIONS_MENU_LABEL,
                                 children: (0, l.jsxs)(i.MenuGroup, {
                                     children: [(0, l.jsx)(i.MenuItem, {
                                         id: "staff-help-bug-reporter",
-                                        label: _.default.Messages.BUG_REPORT_TITLE,
+                                        label: h.default.Messages.BUG_REPORT_TITLE,
                                         icon: d.default,
                                         action: () => (0, i.openModalLazy)(async () => {
                                             let {
@@ -71,7 +71,7 @@
                                         id: "staff-help-center",
                                         label: "Go to Help Center",
                                         icon: f.default,
-                                        action: () => (0, r.default)(h.SUPPORT_LOCATION)
+                                        action: () => (0, r.default)(_.SUPPORT_LOCATION)
                                     })]
                                 })
                             })
@@ -86,7 +86,7 @@
                             return (0, l.jsx)(E.Icon, {
                                 ...e,
                                 icon: d.default,
-                                "aria-label": _.default.Messages.HELP,
+                                "aria-label": h.default.Messages.HELP,
                                 selected: n
                             })
                         }
