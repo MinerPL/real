@@ -6,16 +6,16 @@
             }), s("222007");
             var l, a, i = s("37983"),
                 n = s("884691"),
-                d = s("414456"),
-                r = s.n(d),
+                r = s("414456"),
+                d = s.n(r),
                 o = s("446674"),
                 u = s("77078"),
                 c = s("145131"),
                 C = s("476263"),
                 m = s("433487"),
                 f = s("209397"),
-                E = s("175703"),
-                T = s("782340"),
+                T = s("175703"),
+                E = s("782340"),
                 _ = s("653609"),
                 x = s("631662"),
                 I = s("529861");
@@ -59,7 +59,7 @@
                         className: _.guildName,
                         variant: "text-md/normal",
                         children: s.name
-                    }), (0, i.jsx)(E.default, {
+                    }), (0, i.jsx)(T.default, {
                         entry: l,
                         forceLightTheme: !0,
                         children: e => (0, i.jsx)(m.default, {
@@ -75,17 +75,17 @@
                         directoryChannelId: s,
                         onClose: l,
                         onGuildChosen: a,
-                        handleChooseCreate: d,
+                        handleChooseCreate: r,
                         directoryGuildName: o,
                         availableGuilds: C,
                         addedGuilds: m,
                         loading: f
                     } = e,
-                    [E, I] = n.useState(0);
+                    [T, I] = n.useState(0);
                 return t = f ? (0, i.jsx)("div", {
                     className: _.emptyContainer,
                     children: (0, i.jsx)(u.Spinner, {})
-                }) : 0 === E ? 0 === C.length ? (0, i.jsxs)("div", {
+                }) : 0 === T ? 0 === C.length ? (0, i.jsxs)("div", {
                     className: _.emptyContainer,
                     children: [(0, i.jsx)("img", {
                         src: x,
@@ -95,7 +95,7 @@
                         className: _.emptyText,
                         color: "header-secondary",
                         variant: "text-md/normal",
-                        children: T.default.Messages.HUB_CHOOSE_GUILD_EMPTY
+                        children: E.default.Messages.HUB_CHOOSE_GUILD_EMPTY
                     })]
                 }) : C.map(e => (0, i.jsx)(L, {
                     guild: e,
@@ -110,7 +110,7 @@
                         className: _.emptyText,
                         color: "header-secondary",
                         variant: "text-md/normal",
-                        children: T.default.Messages.HUB_CHOOSE_GUILD_ADDED_EMPTY
+                        children: E.default.Messages.HUB_CHOOSE_GUILD_ADDED_EMPTY
                     })]
                 }) : m.map(e => (0, i.jsx)(h, {
                     directoryChannelId: s,
@@ -126,32 +126,32 @@
                         }), (0, i.jsx)(u.Heading, {
                             className: _.title,
                             variant: "heading-xl/semibold",
-                            children: T.default.Messages.HUB_CHOOSE_GUILD_TITLE.format({
+                            children: E.default.Messages.HUB_CHOOSE_GUILD_TITLE.format({
                                 guildName: o
                             })
                         }), (0, i.jsx)(u.Text, {
                             className: _.subtitle,
                             color: "header-secondary",
                             variant: "text-md/normal",
-                            children: T.default.Messages.HUB_CHOOSE_GUILD_SUBTITLE
+                            children: E.default.Messages.HUB_CHOOSE_GUILD_SUBTITLE
                         }), (0, i.jsxs)(u.TabBar, {
                             className: _.tabBar,
-                            selectedItem: E,
+                            selectedItem: T,
                             onItemSelect: I,
                             type: "top",
                             look: "brand",
                             children: [(0, i.jsx)(u.TabBar.Item, {
-                                className: r(_.tabBarItem, {
-                                    [_.selectedTab]: 0 === E
+                                className: d(_.tabBarItem, {
+                                    [_.selectedTab]: 0 === T
                                 }),
                                 id: 0,
-                                children: T.default.Messages.HUB_CHOOSE_GUILD_CHOOSE_TAB
+                                children: E.default.Messages.HUB_CHOOSE_GUILD_CHOOSE_TAB
                             }), (0, i.jsx)(u.TabBar.Item, {
-                                className: r(_.tabBarItem, {
-                                    [_.selectedTab]: 1 === E
+                                className: d(_.tabBarItem, {
+                                    [_.selectedTab]: 1 === T
                                 }),
                                 id: 1,
-                                children: T.default.Messages.HUB_CHOOSE_GUILD_ADDED_TAB
+                                children: E.default.Messages.HUB_CHOOSE_GUILD_ADDED_TAB
                             })]
                         })]
                     }), (0, i.jsx)(u.ModalContent, {
@@ -163,12 +163,12 @@
                         children: [(0, i.jsx)(u.Heading, {
                             variant: "heading-lg/semibold",
                             className: _.footerTitle,
-                            children: T.default.Messages.HUB_CREATE_GUILD_LABEL
+                            children: E.default.Messages.HUB_CREATE_GUILD_LABEL
                         }), (0, i.jsx)(u.Button, {
                             className: _.footerButton,
                             color: u.Button.Colors.PRIMARY,
-                            onClick: d,
-                            children: T.default.Messages.HUB_CREATE_GUILD_CTA
+                            onClick: r,
+                            children: E.default.Messages.HUB_CREATE_GUILD_CTA
                         })]
                     })]
                 })

@@ -9,8 +9,8 @@
             var a = s("627445"),
                 i = s.n(a),
                 n = s("77078"),
-                d = s("393414"),
-                r = s("145131"),
+                r = s("393414"),
+                d = s("145131"),
                 o = s("476263"),
                 u = s("782340"),
                 c = s("690522");
@@ -24,7 +24,7 @@
                 } = e;
                 return i(null != s, "Missing guild in Hub add guild confirmation"), (0, l.jsxs)(l.Fragment, {
                     children: [(0, l.jsxs)(n.ModalHeader, {
-                        direction: r.default.Direction.VERTICAL,
+                        direction: d.default.Direction.VERTICAL,
                         className: c.header,
                         separator: !1,
                         children: [null != C && (0, l.jsx)(n.ModalCloseButton, {
@@ -65,7 +65,7 @@
                                 className: c.createConfirmButton,
                                 color: n.Button.Colors.BRAND,
                                 onClick: () => {
-                                    (0, d.transitionToGuild)(s.id), null == C || C()
+                                    (0, r.transitionToGuild)(s.id), null == C || C()
                                 },
                                 children: u.default.Messages.HUB_CREATE_SERVER_CONFIRMATION_GO
                             })]

@@ -38,13 +38,13 @@
                     })
                 });
 
-                function c(e) {
+                function A(e) {
                     d.default.track(T.AnalyticEvents.GUILD_CREATION_INTENT_SELECTED, {
                         skipped: null == e,
                         is_community: !!e
                     }), t(!!e)
                 }
-                let A = (0, n.jsxs)(n.Fragment, {
+                let c = (0, n.jsxs)(n.Fragment, {
                     children: [(0, n.jsxs)(E.ModalHeader, {
                         direction: _.default.Direction.VERTICAL,
                         className: u.header,
@@ -68,28 +68,28 @@
                             children: [(0, n.jsx)(i.default, {
                                 icon: L,
                                 message: r.default.Messages.CREATION_INTENT_OPTION_FRIENDS,
-                                onClick: () => c(!1)
+                                onClick: () => A(!1)
                             }), (0, n.jsx)(i.default, {
                                 icon: M,
                                 message: r.default.Messages.CREATION_INTENT_OPTION_COMMUNITY,
-                                onClick: () => c(!0)
+                                onClick: () => A(!0)
                             })]
                         }) : (0, n.jsxs)(n.Fragment, {
                             children: [(0, n.jsx)(i.default, {
                                 icon: M,
                                 message: r.default.Messages.CREATION_INTENT_OPTION_COMMUNITY,
-                                onClick: () => c(!0)
+                                onClick: () => A(!0)
                             }), (0, n.jsx)(i.default, {
                                 icon: L,
                                 message: r.default.Messages.CREATION_INTENT_OPTION_FRIENDS,
-                                onClick: () => c(!1)
+                                onClick: () => A(!1)
                             })]
                         }), (0, n.jsx)(E.Text, {
                             className: u.skip,
                             color: "header-secondary",
                             variant: "text-sm/normal",
                             children: r.default.Messages.CREATION_INTENT_SKIP.format({
-                                onSkip: () => c(null)
+                                onSkip: () => A(null)
                             })
                         })]
                     }), o && (0, n.jsx)(E.ModalFooter, {
@@ -98,7 +98,7 @@
                     })]
                 });
                 return {
-                    content: A,
+                    content: c,
                     footer: I
                 }
             }
