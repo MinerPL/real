@@ -7,13 +7,13 @@
                     return i
                 }
             });
-            var i, s = n("376556"),
-                r = n("653047"),
+            var i, r = n("376556"),
+                s = n("653047"),
                 l = n("782340");
             let a = "twitch:";
-            i = class extends r.default {
+            i = class extends s.default {
                 getIconURL() {
-                    return s.default.get("twitch").icon.lightPNG
+                    return r.default.get("twitch").icon.lightPNG
                 }
                 constructor(e) {
                     super(e), this.id = "".concat(a).concat(e.url), this.name = l.default.Messages.GAME_FEED_ACTIVITY_STREAMING_TWITCH

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return r
                 }
             });
             var l = n("77078"),
@@ -9,7 +9,7 @@
                 a = n("558286"),
                 d = n("49111");
             let i = "guild-event-modal";
-            var s = () => {
+            var r = () => {
                 let e = (0, u.useAppContext)(),
                     t = e === d.AppContext.POPOUT ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT;
                 return {

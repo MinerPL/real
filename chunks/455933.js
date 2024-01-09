@@ -10,8 +10,8 @@
                 a = n.n(u),
                 d = n("866227"),
                 i = n.n(d),
-                s = n("730290"),
-                r = n("446674"),
+                r = n("730290"),
+                s = n("446674"),
                 o = n("77078"),
                 c = n("49671"),
                 E = n("884351"),
@@ -24,19 +24,19 @@
                 N = n("745049"),
                 g = n("782340");
             let m = "YYYYMMDDTHHmmss",
-                h = "YYYY-MM-DDTHH:mm:ss",
-                R = /RRULE:.*/;
+                R = "YYYY-MM-DDTHH:mm:ss",
+                h = /RRULE:.*/;
 
             function p(e, t, n, u) {
                 var d, p, M;
                 let C;
-                let D = (0, r.useStateFromStores)([S.default], () => S.default.isActive(e)),
+                let D = (0, s.useStateFromStores)([S.default], () => S.default.isActive(e)),
                     {
                         startTime: O,
                         endTime: A
                     } = (0, T.default)(null != e ? e : "", u),
-                    L = (0, r.useStateFromStores)([S.default], () => S.default.getGuildScheduledEvent(e), [e]),
-                    x = (0, r.useStateFromStores)([f.default], () => f.default.getGuild(t), [t]);
+                    L = (0, s.useStateFromStores)([S.default], () => S.default.getGuildScheduledEvent(e), [e]),
+                    x = (0, s.useStateFromStores)([f.default], () => f.default.getGuild(t), [t]);
                 if (D || null == L) return null;
                 C = L.entity_type === N.GuildScheduledEventEntityTypes.EXTERNAL ? L.entity_metadata.location : null != n && null != x ? g.default.Messages.CALENDAR_CHANNEL_LOCATION.format({
                     channelName: n.name,
@@ -76,9 +76,9 @@
                                     details: V,
                                     action: "TEMPLATE",
                                     location: C,
-                                    recur: null != t ? null === (e = R.exec(t)) || void 0 === e ? void 0 : e[0] : void 0
+                                    recur: null != t ? null === (e = h.exec(t)) || void 0 === e ? void 0 : e[0] : void 0
                                 },
-                                l = "https://calendar.google.com/calendar/render?".concat((0, s.stringify)(n));
+                                l = "https://calendar.google.com/calendar/render?".concat((0, r.stringify)(n));
                             window.open(l, "_blank")
                         }
                     }), (0, l.jsx)(o.MenuItem, {
@@ -97,7 +97,7 @@
                                     desc: V,
                                     in_loc: C
                                 },
-                                t = "https://calendar.yahoo.com/?".concat((0, s.stringify)(e));
+                                t = "https://calendar.yahoo.com/?".concat((0, r.stringify)(e));
                             window.open(t, "_blank")
                         }
                     }), (0, l.jsx)(o.MenuItem, {
@@ -107,14 +107,14 @@
                             let e = {
                                     path: "/calendar/action/compose",
                                     rru: "addevent",
-                                    startdt: b.format(h),
-                                    enddt: w.format(h),
+                                    startdt: b.format(R),
+                                    enddt: w.format(R),
                                     subject: L.name,
                                     body: V,
                                     location: C,
                                     allday: !1
                                 },
-                                t = "https://outlook.live.com/calendar/0/deeplink/compose?".concat((0, s.stringify)(e));
+                                t = "https://outlook.live.com/calendar/0/deeplink/compose?".concat((0, r.stringify)(e));
                             window.open(t, "_blank")
                         }
                     })]

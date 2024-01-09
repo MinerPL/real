@@ -11,8 +11,8 @@
             n("884691");
             var d = n("414456"),
                 i = n.n(d),
-                s = n("77078"),
-                r = n("36694"),
+                r = n("77078"),
+                s = n("36694"),
                 o = n("381546"),
                 c = n("68238"),
                 E = n("423487"),
@@ -34,7 +34,7 @@
                         case 2:
                             return o.default;
                         case 3:
-                            return r.default
+                            return s.default
                     }
                 }(n), S = function(e) {
                     switch (e) {
@@ -55,7 +55,7 @@
                         children: (0, a.jsx)(_, {
                             className: f.icon
                         })
-                    }), (0, a.jsx)(s.Text, {
+                    }), (0, a.jsx)(r.Text, {
                         className: f.text,
                         color: u,
                         variant: d,

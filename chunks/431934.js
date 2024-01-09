@@ -9,15 +9,15 @@
                 a = n("271938"),
                 d = n("398604"),
                 i = n("49129"),
-                s = n("745049");
-            let r = {},
+                r = n("745049");
+            let s = {},
                 o = {};
 
             function c(e) {
                 let t = {
-                    ...r
+                    ...s
                 };
-                delete t[e], r = t;
+                delete t[e], s = t;
                 let n = {
                     ...o
                 };
@@ -27,14 +27,14 @@
                 initialize(e) {
                     if (null != e) {
                         var t, n;
-                        r = null !== (t = e.upcomingEventDismissals) && void 0 !== t ? t : {}, o = null !== (n = e.upcomingEventSeenTimestamps) && void 0 !== n ? n : {}
+                        s = null !== (t = e.upcomingEventDismissals) && void 0 !== t ? t : {}, o = null !== (n = e.upcomingEventSeenTimestamps) && void 0 !== n ? n : {}
                     }
                 }
                 getGuildEventNoticeDismissalTime(e) {
-                    return r[e]
+                    return s[e]
                 }
                 getAllEventDismissals() {
-                    return r
+                    return s
                 }
                 getUpcomingNoticeSeenTime(e) {
                     return o[e]
@@ -44,7 +44,7 @@
                 }
                 getState() {
                     return {
-                        upcomingEventDismissals: r,
+                        upcomingEventDismissals: s,
                         upcomingEventSeenTimestamps: o
                     }
                 }
@@ -55,15 +55,15 @@
                     let {
                         eventId: t
                     } = e, n = {
-                        ...r
+                        ...s
                     };
-                    n[t] = Date.now(), r = n
+                    n[t] = Date.now(), s = n
                 },
                 GUILD_SCHEDULED_EVENT_UPDATE: function(e) {
                     let {
                         guildScheduledEvent: t
                     } = e;
-                    (t.status === s.GuildScheduledEventStatus.CANCELED || t.status === s.GuildScheduledEventStatus.COMPLETED) && c(t.id)
+                    (t.status === r.GuildScheduledEventStatus.CANCELED || t.status === r.GuildScheduledEventStatus.COMPLETED) && c(t.id)
                 },
                 GUILD_SCHEDULED_EVENT_DELETE: function(e) {
                     let {
@@ -78,16 +78,16 @@
                     } = e, l = a.default.getId();
                     if (t !== l) return;
                     let u = d.default.getGuildScheduledEvent(n);
-                    if (null == u || u.status !== s.GuildScheduledEventStatus.SCHEDULED) return;
-                    let c = r[n];
+                    if (null == u || u.status !== r.GuildScheduledEventStatus.SCHEDULED) return;
+                    let c = s[n];
                     if (null != c) return;
                     let E = o[n],
                         f = (0, i.getNextShownUpcomingEventNoticeType)(u, void 0, E, !1);
-                    if (f === s.UpcomingGuildEventNoticeTypes.NEW_EVENT) {
+                    if (f === r.UpcomingGuildEventNoticeTypes.NEW_EVENT) {
                         let e = {
-                            ...r
+                            ...s
                         };
-                        e[n] = Date.now(), r = e
+                        e[n] = Date.now(), s = e
                     }
                 },
                 UPCOMING_GUILD_EVENT_NOTICE_SEEN: function(e) {

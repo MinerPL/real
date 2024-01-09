@@ -13,7 +13,7 @@
                     return s
                 },
                 getInitialGuildEventData: function() {
-                    return y
+                    return _
                 }
             });
             var u, l, r = n("271938"),
@@ -65,10 +65,10 @@
                     scheduledStartTime: c,
                     scheduledEndTime: E,
                     entityType: s,
-                    entityMetadata: y,
-                    image: _,
+                    entityMetadata: _,
+                    image: y,
                     recurrenceRule: R,
-                    eventExceptions: v
+                    eventExceptions: h
                 } = e;
                 return {
                     id: null != n ? n : a.FAKE_EVENT_ID,
@@ -78,14 +78,14 @@
                     scheduled_start_time: c,
                     scheduled_end_time: E,
                     entity_type: s,
-                    entity_metadata: null != y ? y : null,
-                    image: null != _ ? _ : void 0,
+                    entity_metadata: null != _ ? _ : null,
+                    image: null != y ? y : void 0,
                     channel_id: i,
                     guild_id: t,
                     creator_id: r.default.getId(),
                     status: a.GuildScheduledEventStatus.SCHEDULED,
                     recurrence_rule: o(R),
-                    guild_scheduled_event_exceptions: v.map(e => ({
+                    guild_scheduled_event_exceptions: h.map(e => ({
                         event_exception_id: e.eventExceptionId,
                         event_id: e.eventId,
                         guild_id: e.guildId,
@@ -96,9 +96,9 @@
                 }
             }
 
-            function y(e, t) {
-                var n, u, l, r, c, o, s, y;
-                let _ = {
+            function _(e, t) {
+                var n, u, l, r, c, o, s, _;
+                let y = {
                     name: null !== (n = null == e ? void 0 : e.name) && void 0 !== n ? n : "",
                     privacyLevel: null !== (u = null == e ? void 0 : e.privacy_level) && void 0 !== u ? u : a.GuildScheduledEventPrivacyLevel.GUILD_ONLY,
                     description: null !== (l = null == e ? void 0 : e.description) && void 0 !== l ? l : "",
@@ -119,11 +119,11 @@
                         isCanceled: e.is_canceled
                     }))
                 };
-                if (null != (y = e) && "id" in y && (null == e ? void 0 : e.entity_type) === a.GuildScheduledEventEntityTypes.EXTERNAL) {
+                if (null != (_ = e) && "id" in _ && (null == e ? void 0 : e.entity_type) === a.GuildScheduledEventEntityTypes.EXTERNAL) {
                     let t = (0, d.getLocationFromEvent)(e);
-                    null != t && (_.entityMetadata = {
+                    null != t && (y.entityMetadata = {
                         location: t
                     })
-                } else null == _.channelId && null != t && (_.channelId = t.id, t.isGuildStageVoice() ? _.entityType = a.GuildScheduledEventEntityTypes.STAGE_INSTANCE : t.isGuildVoice() && (_.entityType = a.GuildScheduledEventEntityTypes.VOICE));
-                return _
+                } else null == y.channelId && null != t && (y.channelId = t.id, t.isGuildStageVoice() ? y.entityType = a.GuildScheduledEventEntityTypes.STAGE_INSTANCE : t.isGuildVoice() && (y.entityType = a.GuildScheduledEventEntityTypes.VOICE));
+                return y
             }
