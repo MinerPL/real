@@ -73,7 +73,7 @@
                 }, {
                     title: t.SUPPORT,
                     links: [{
-                        route: "//support.discordapp.com/hc/".concat(e),
+                        route: "//support.discord.com/hc/".concat(e),
                         linkClicked: "helpandsupport",
                         title: t.HELP_AND_SUPPORT,
                         external: !0

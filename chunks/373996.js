@@ -12,12 +12,12 @@
                 s = A("77078"),
                 o = A("973262"),
                 i = A("191814"),
-                d = A("476765"),
-                u = A("422403"),
+                u = A("476765"),
+                d = A("422403"),
                 c = A("49111"),
                 f = A("782340"),
                 C = A("513706");
-            let g = (0, d.uid)();
+            let g = (0, u.uid)();
 
             function h(e) {
                 let {
@@ -25,7 +25,7 @@
                     setNewRoleParams: A
                 } = e, {
                     name: l,
-                    color: d
+                    color: u
                 } = t, h = e => A(t => (n(null != t, "newRoleParams should be defined"), {
                     ...t,
                     color: e
@@ -47,12 +47,12 @@
                         className: C.roleColorContainer,
                         children: [(0, a.jsx)(s.HiddenVisually, {
                             children: f.default.Messages.GUILD_PRODUCT_SETTINGS_SELECT_ROLE_COLOR_ARIA.format({
-                                color: (0, r.int2hex)(d)
+                                color: (0, r.int2hex)(u)
                             })
                         }), (0, a.jsx)("div", {
                             className: C.roleColorPreview,
                             style: {
-                                backgroundColor: (0, r.int2hex)(d)
+                                backgroundColor: (0, r.int2hex)(u)
                             }
                         }), (0, a.jsx)(i.default, {
                             size: 8,
@@ -60,7 +60,7 @@
                         }), (0, a.jsx)(s.Popout, {
                             renderPopout: e => (0, a.jsx)(o.CustomColorPicker, {
                                 ...e,
-                                value: d,
+                                value: u,
                                 onChange: h
                             }),
                             children: e => (0, a.jsx)(s.Clickable, {
@@ -68,7 +68,7 @@
                                 tag: "span",
                                 "aria-label": f.default.Messages.GUILD_PRODUCT_SETTINGS_CREATE_ROLE_SELECT_COLOR_ARIA,
                                 className: C.dropperIconContainer,
-                                children: (0, a.jsx)(u.default, {
+                                children: (0, a.jsx)(d.default, {
                                     width: 16,
                                     height: 16,
                                     className: C.dropperIcon

@@ -4,7 +4,7 @@
                     return Q
                 },
                 HelmetProvider: function() {
-                    return U
+                    return B
                 }
             }), n("808653"), n("781738"), n("424973"), n("70102");
             var r = n("884691"),
@@ -147,7 +147,7 @@
                 x = function(e) {
                     return Array.isArray(e) ? e.join("") : e
                 },
-                E = function(e, t) {
+                O = function(e, t) {
                     return Array.isArray(e) ? e.reduce(function(e, n) {
                         return ! function(e, t) {
                             for (var n = Object.keys(e), r = 0; r < n.length; r += 1)
@@ -161,7 +161,7 @@
                         default: e
                     }
                 },
-                O = function(e, t) {
+                E = function(e, t) {
                     var n;
                     return p({}, e, ((n = {})[t] = void 0, n))
                 },
@@ -256,7 +256,7 @@
                             }
                         };
                     if (e.prioritizeSeoTags) {
-                        var p, m, h, _, M, w, k, L = (m = (p = e).linkTags, h = p.scriptTags, _ = p.encode, M = E(p.metaTags, b), w = E(m, g), k = E(h, v), {
+                        var p, m, h, _, M, w, k, L = (m = (p = e).linkTags, h = p.scriptTags, _ = p.encode, M = O(p.metaTags, b), w = O(m, g), k = O(h, v), {
                             priorityMethods: {
                                 toComponent: function() {
                                     return [].concat(F(y.META, M.priority), F(y.LINK, w.priority), F(y.SCRIPT, k.priority))
@@ -320,8 +320,8 @@
                         titleAttributes: {}
                     }))
                 },
-                W = a.createContext({}),
-                z = i.shape({
+                z = a.createContext({}),
+                W = i.shape({
                     setHelmet: i.func,
                     helmetInstances: i.shape({
                         get: i.func,
@@ -329,26 +329,26 @@
                         remove: i.func
                     })
                 }),
-                U = function(e) {
+                B = function(e) {
                     function t(n) {
                         var r;
                         return (r = e.call(this, n) || this).helmetData = new R(r.props.context, t.canUseDOM), r
                     }
                     return m(t, e), t.prototype.render = function() {
-                        return a.createElement(W.Provider, {
+                        return a.createElement(z.Provider, {
                             value: this.helmetData.value
                         }, this.props.children)
                     }, t
                 }(r.Component);
-            U.canUseDOM = "undefined" != typeof document, U.propTypes = {
+            B.canUseDOM = "undefined" != typeof document, B.propTypes = {
                 context: i.shape({
                     helmet: i.shape()
                 }),
                 children: i.node.isRequired
-            }, U.defaultProps = {
+            }, B.defaultProps = {
                 context: {}
-            }, U.displayName = "HelmetProvider";
-            var B = function(e, t) {
+            }, B.displayName = "HelmetProvider";
+            var U = function(e, t) {
                     var n, r = document.head || document.querySelector(y.HEAD),
                         a = r.querySelectorAll(e + "[data-rh]"),
                         o = [].slice.call(a),
@@ -381,7 +381,7 @@
                         a.length === o.length ? n.removeAttribute("data-rh") : n.getAttribute("data-rh") !== i.join(",") && n.setAttribute("data-rh", i.join(","))
                     }
                 },
-                J = function(e, t) {
+                V = function(e, t) {
                     var n, r, a = e.baseTag,
                         o = e.htmlAttributes,
                         i = e.linkTags,
@@ -394,12 +394,12 @@
                         p = e.titleAttributes;
                     K(y.BODY, e.bodyAttributes), K(y.HTML, o), n = f, r = p, void 0 !== n && document.title !== n && (document.title = x(n)), K(y.TITLE, r);
                     var m = {
-                            baseTag: B(y.BASE, a),
-                            linkTags: B(y.LINK, i),
-                            metaTags: B(y.META, s),
-                            noscriptTags: B(y.NOSCRIPT, u),
-                            scriptTags: B(y.SCRIPT, c),
-                            styleTags: B(y.STYLE, d)
+                            baseTag: U(y.BASE, a),
+                            linkTags: U(y.LINK, i),
+                            metaTags: U(y.META, s),
+                            noscriptTags: U(y.NOSCRIPT, u),
+                            scriptTags: U(y.SCRIPT, c),
+                            styleTags: U(y.STYLE, d)
                         },
                         h = {},
                         _ = {};
@@ -410,7 +410,7 @@
                         n.length && (h[e] = n), r.length && (_[e] = m[e].oldTags)
                     }), t && t(), l(e, h, _)
                 },
-                V = null,
+                J = null,
                 G = function(e) {
                     function t() {
                         for (var t, n = arguments.length, r = Array(n), a = 0; a < n; a++) r[a] = arguments[a];
@@ -458,11 +458,11 @@
                                 titleAttributes: T("titleAttributes", t),
                                 prioritizeSeoTags: Y(t, "prioritizeSeoTags")
                             };
-                        U.canUseDOM ? (V && cancelAnimationFrame(V), o.defer ? V = requestAnimationFrame(function() {
-                            J(o, function() {
-                                V = null
+                        B.canUseDOM ? (J && cancelAnimationFrame(J), o.defer ? J = requestAnimationFrame(function() {
+                            V(o, function() {
+                                J = null
                             })
-                        }) : (J(o), V = null)) : N && (a = N(o)), r(a)
+                        }) : (V(o), J = null)) : N && (a = N(o)), r(a)
                     }, n.init = function() {
                         this.rendered || (this.rendered = !0, this.props.context.helmetInstances.add(this), this.emitChange())
                     }, n.render = function() {
@@ -470,7 +470,7 @@
                     }, t
                 }(r.Component);
             G.propTypes = {
-                context: z.isRequired
+                context: W.isRequired
             }, G.displayName = "HelmetDispatcher";
             var q = ["children"],
                 $ = ["children"],
@@ -481,7 +481,7 @@
                     m(t, e);
                     var n = t.prototype;
                     return n.shouldComponentUpdate = function(e) {
-                        return !u(O(this.props, "helmetData"), O(e, "helmetData"))
+                        return !u(E(this.props, "helmetData"), E(e, "helmetData"))
                     }, n.mapNestedChildrenToProps = function(e, t) {
                         if (!t) return null;
                         switch (e.type) {
@@ -579,7 +579,7 @@
                         return t && (r = this.mapChildrenToProps(t, r)), !o || o instanceof R || (o = new R(o.context, o.instances)), o ? a.createElement(G, p({}, r, {
                             context: o.value,
                             helmetData: void 0
-                        })) : a.createElement(W.Consumer, null, function(e) {
+                        })) : a.createElement(z.Consumer, null, function(e) {
                             return a.createElement(G, p({}, r, {
                                 context: e
                             }))

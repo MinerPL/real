@@ -35,15 +35,15 @@
                     S = e.rects.popper,
                     Y = e.elements[void 0 !== w && w ? T : M],
                     x = (0, r.default)((0, l.isElement)(Y) ? Y : Y.contextElement || (0, a.default)(e.elements.popper), y, v, h),
-                    E = (0, o.default)(e.elements.reference),
-                    O = (0, i.default)({
-                        reference: E,
+                    O = (0, o.default)(e.elements.reference),
+                    E = (0, i.default)({
+                        reference: O,
                         element: S,
                         strategy: "absolute",
                         placement: p
                     }),
-                    P = (0, s.default)(Object.assign({}, S, O)),
-                    j = M === u.popper ? P : E,
+                    P = (0, s.default)(Object.assign({}, S, E)),
+                    j = M === u.popper ? P : O,
                     C = {
                         top: x.top - j.top + D.top,
                         bottom: j.bottom - x.bottom + D.bottom,

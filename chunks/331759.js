@@ -24,16 +24,16 @@
                 let {
                     applicationId: E,
                     stream: C,
-                    channel: g,
-                    exitFullScreen: S,
+                    channel: S,
+                    exitFullScreen: g,
                     appContext: _,
                     analyticsLocation: I,
                     guildScheduledEvent: T,
                     ...v
-                } = e, x = (0, u.useAppContext)(), N = null == g ? void 0 : g.getGuildId(), A = (0, i.useStateFromStores)([o.default], () => null != N ? o.default.getGuild(N) : null, [N]);
-                return (t = A, l = g, null != t && null != l && d.default.can(p.Permissions.CREATE_INSTANT_INVITE, l)) ? (0, a.jsx)(h.default, {
+                } = e, x = (0, u.useAppContext)(), N = null == S ? void 0 : S.getGuildId(), A = (0, i.useStateFromStores)([o.default], () => null != N ? o.default.getGuild(N) : null, [N]);
+                return (t = A, l = S, null != t && null != l && d.default.can(p.Permissions.CREATE_INSTANT_INVITE, l)) ? (0, a.jsx)(h.default, {
                     onClick: () => {
-                        s(null != A, "guild cannot be null"), s(null != g, "channel cannot be null"), ! function(e) {
+                        s(null != A, "guild cannot be null"), s(null != S, "channel cannot be null"), ! function(e) {
                             let {
                                 guild: t,
                                 channel: l,
@@ -64,11 +64,11 @@
                             })
                         }({
                             guild: A,
-                            channel: g,
+                            channel: S,
                             streamUserId: null == C ? void 0 : C.ownerId,
                             applicationId: E,
                             appContext: null != _ ? _ : x,
-                            exitFullScreen: S,
+                            exitFullScreen: g,
                             analyticsLocation: I,
                             guildScheduledEvent: T
                         })

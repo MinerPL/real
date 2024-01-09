@@ -13,7 +13,7 @@
             function o(e, t) {
                 let A = (0, l.useStateFromStores)([s.default], () => s.default.getGuildApplication(e, t)),
                     [o, i] = a.useState(null == A),
-                    [d, u] = a.useState(),
+                    [u, d] = a.useState(),
                     [c, f] = a.useState(!1),
                     C = a.useCallback(async () => {
                         if (null == A && null != e) {
@@ -24,7 +24,7 @@
                                     includeTeam: !0
                                 })
                             } catch (e) {
-                                u(new n.APIError(e))
+                                d(new n.APIError(e))
                             } finally {
                                 i(!1)
                             }
@@ -34,7 +34,7 @@
                     !c && C()
                 }, [c, C]), {
                     application: A,
-                    error: d,
+                    error: u,
                     loading: o
                 }
             }

@@ -50,15 +50,15 @@
                             body: a,
                             signal: e
                         },
-                        d = "POST" === this._method ? l.default.post : l.default.patch;
+                        u = "POST" === this._method ? l.default.post : l.default.patch;
                     try {
-                        let e = await d(i);
+                        let e = await u(i);
                         return this._handleComplete(e.body), e.body
                     } catch (e) {
-                        var u;
+                        var d;
                         if (this._raiseEndpointErrors) throw new n.APIError(e);
                         this._handleError({
-                            code: null == e ? void 0 : null === (u = e.body) || void 0 === u ? void 0 : u.code,
+                            code: null == e ? void 0 : null === (d = e.body) || void 0 === d ? void 0 : d.code,
                             body: null == e ? void 0 : e.body
                         })
                     }

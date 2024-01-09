@@ -18,8 +18,8 @@
                 s = A("65597"),
                 o = A("77078"),
                 i = A("305961"),
-                d = A("191814"),
-                u = A("945330"),
+                u = A("191814"),
+                d = A("945330"),
                 c = A("152224"),
                 f = A("228220"),
                 C = A("204203"),
@@ -51,7 +51,7 @@
                         style: {
                             backgroundColor: (0, r.int2hex)(l.color)
                         }
-                    }), (0, a.jsx)(d.default, {
+                    }), (0, a.jsx)(u.default, {
                         size: 8,
                         horizontal: !0
                     }), (0, a.jsx)(o.Text, {
@@ -59,14 +59,14 @@
                         color: "text-normal",
                         children: l.name
                     }), null != A && (0, a.jsxs)(a.Fragment, {
-                        children: [(0, a.jsx)(d.default, {
+                        children: [(0, a.jsx)(u.default, {
                             size: 12,
                             horizontal: !0
                         }), (0, a.jsx)(o.Clickable, {
                             "aria-label": m.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ATTACHED_ROLE_ARIA,
                             onClick: A,
                             className: p.attachedRoleClose,
-                            children: (0, a.jsx)(u.default, {
+                            children: (0, a.jsx)(d.default, {
                                 width: 16,
                                 height: 16,
                                 className: p.attachedRoleCloseIcon
@@ -113,7 +113,7 @@
                         children: [(0, a.jsx)(c.default, {
                             height: 18,
                             width: 18
-                        }), (0, a.jsx)(d.default, {
+                        }), (0, a.jsx)(u.default, {
                             horizontal: !0,
                             size: 8
                         }), m.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_SECTION_1_TITLE]
@@ -128,7 +128,7 @@
                         children: [(0, a.jsx)(f.default, {
                             height: 18,
                             width: 18
-                        }), (0, a.jsx)(d.default, {
+                        }), (0, a.jsx)(u.default, {
                             horizontal: !0,
                             size: 8
                         }), m.default.Messages.GUILD_PRODUCT_SETTINGS_REMOVE_ROLE_MODAL_SECTION_2_TITLE]
@@ -145,7 +145,7 @@
                     newRoleParams: t,
                     setNewRoleParams: l,
                     guildId: r,
-                    productId: u,
+                    productId: d,
                     listingRoleId: c,
                     error: f
                 } = e, g = (0, s.default)([i.default], () => {
@@ -157,7 +157,7 @@
                 return null === t ? (0, a.jsxs)(o.FormItem, {
                     title: (0, a.jsxs)("div", {
                         className: p.warningTitle,
-                        children: [(0, a.jsx)(v, {}), (0, a.jsx)(d.default, {
+                        children: [(0, a.jsx)(v, {}), (0, a.jsx)(u.default, {
                             horizontal: !0,
                             size: 4
                         }), m.default.Messages.GUILD_PRODUCT_SETTINGS_DETACHED_ROLE_HEADER]
@@ -169,14 +169,14 @@
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: m.default.Messages.GUILD_PRODUCT_SETTINGS_DETACHED_ROLE_DESCRIPTION
-                    }), (0, a.jsx)(d.default, {
+                    }), (0, a.jsx)(u.default, {
                         size: 8
                     }), (0, a.jsxs)("div", {
                         className: p.reattachRoleRow,
                         children: [(0, a.jsx)(I, {
                             role: g,
                             onRemove: void 0
-                        }), (0, a.jsx)(d.default, {
+                        }), (0, a.jsx)(u.default, {
                             horizontal: !0,
                             size: 8
                         }), (0, a.jsxs)(o.Button, {
@@ -189,7 +189,7 @@
                                 variant: "text-md/normal",
                                 color: "none",
                                 children: m.default.Messages.GUILD_PRODUCT_SETTINGS_DETACHED_ROLE_UNDO_CTA
-                            }), (0, a.jsx)(d.default, {
+                            }), (0, a.jsx)(u.default, {
                                 horizontal: !0,
                                 size: 8
                             }), (0, a.jsx)(C.default, {
@@ -207,12 +207,12 @@
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: m.default.Messages.GUILD_PRODUCT_SETTINGS_ATTACHED_ROLE_DESCRIPTION
-                    }), (0, a.jsx)(d.default, {
+                    }), (0, a.jsx)(u.default, {
                         size: 8
                     }), (0, a.jsx)(I, {
                         role: g,
                         onRemove: () => {
-                            n(null != u, "productId cannot be null"), n(null != g, "no role attached"), ! function(e) {
+                            n(null != d, "productId cannot be null"), n(null != g, "no role attached"), ! function(e) {
                                 let {
                                     onConfirm: t,
                                     roleName: l
@@ -248,7 +248,7 @@
                         variant: "text-xs/normal",
                         color: "text-muted",
                         children: m.default.Messages.GUILD_PRODUCT_SETTINGS_ADD_ROLE_DESCRIPTION
-                    }), (0, a.jsx)(d.default, {
+                    }), (0, a.jsx)(u.default, {
                         size: 8
                     }), (0, a.jsx)(h.default, {
                         newRoleParams: t,

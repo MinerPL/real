@@ -6,7 +6,7 @@
             });
             var r = n("195548"),
                 a = n("31644"),
-                o = n("819839"),
+                o = n("843279"),
                 i = n("986257"),
                 s = n("774728"),
                 u = n("903751"),
@@ -39,9 +39,9 @@
                                 S = T ? "y" === _ ? T.clientHeight || 0 : T.clientWidth || 0 : 0,
                                 Y = b[w],
                                 x = S - M[y] - b[k],
-                                E = S / 2 - M[y] / 2 + (L / 2 - D / 2),
-                                O = (0, u.within)(Y, E, x);
-                            n.modifiersData[o] = ((t = {})[_] = O, t.centerOffset = O - E, t)
+                                O = S / 2 - M[y] / 2 + (L / 2 - D / 2),
+                                E = (0, u.within)(Y, O, x);
+                            n.modifiersData[o] = ((t = {})[_] = E, t.centerOffset = E - O, t)
                         }
                     },
                     effect: function(e) {

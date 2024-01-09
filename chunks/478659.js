@@ -31,8 +31,8 @@
                 S = n("528980"),
                 Y = n("585874"),
                 x = n("41160"),
-                E = n("703398"),
-                O = n("59976"),
+                O = n("703398"),
+                E = n("59976"),
                 P = n("497982"),
                 j = n("129148"),
                 C = {
@@ -63,8 +63,8 @@
                     m: new S.MinuteParser,
                     s: new Y.SecondParser,
                     S: new x.FractionOfSecondParser,
-                    X: new E.ISOTimezoneWithZParser,
-                    x: new O.ISOTimezoneParser,
+                    X: new O.ISOTimezoneWithZParser,
+                    x: new E.ISOTimezoneParser,
                     t: new P.TimestampSecondsParser,
                     T: new j.TimestampMillisecondsParser
                 }

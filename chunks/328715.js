@@ -20,8 +20,8 @@
                 m = n("619335"),
                 E = n("534222"),
                 C = n("822516"),
-                g = n("941298"),
-                S = n("539938"),
+                S = n("941298"),
+                g = n("539938"),
                 _ = n("557809"),
                 I = n("367376"),
                 T = n("616718"),
@@ -124,7 +124,7 @@
                             focusedParticipant: l
                         })]
                     })
-                } else d && (t = (0, a.jsx)(g.default, {
+                } else d && (t = (0, a.jsx)(S.default, {
                     guildEvent: u,
                     recurrenceId: o
                 }));
@@ -147,7 +147,7 @@
                 } = (0, i.useStateFromStoresObject)([j.default], () => ({
                     focusedParticipant: j.default.getSelectedParticipant(t.id),
                     participantsOpen: j.default.getParticipantsOpen(t.id)
-                }), [t.id]), g = (0, p.default)(t), T = (0, m.default)(t), [v] = (0, f.default)((null == C ? void 0 : C.type) === P.ParticipantTypes.ACTIVITY ? [C.id] : []), N = w.default.Messages.VOICE_CHANNEL;
+                }), [t.id]), S = (0, p.default)(t), T = (0, m.default)(t), [v] = (0, f.default)((null == C ? void 0 : C.type) === P.ParticipantTypes.ACTIVITY ? [C.id] : []), N = w.default.Messages.VOICE_CHANNEL;
                 t.isDM() ? N = w.default.Messages.DM : t.isGroupDM() && (N = w.default.Messages.GROUP_DM);
                 let {
                     enabled: L,
@@ -201,7 +201,7 @@
                 return (0, a.jsx)("div", {
                     className: F.subtitleContainer,
                     children: (0, a.jsxs)(M.default, {
-                        onDoubleClick: S.handleDoubleClick,
+                        onDoubleClick: g.handleDoubleClick,
                         transparent: !0,
                         className: (0, R.getThemeClass)(U.ThemeTypes.DARK),
                         childrenBottom: Y,
@@ -218,7 +218,7 @@
                             disabled: !0,
                             "aria-label": N
                         }) : null, !y && V, (0, a.jsx)(M.default.Title, {
-                            children: g
+                            children: S
                         }), (0, a.jsx)(_.HeaderGuildBreadcrumb, {
                             channel: t,
                             guild: l

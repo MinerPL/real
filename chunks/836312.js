@@ -13,7 +13,7 @@
                 o = A("782340");
 
             function i(e, t, i) {
-                var d, u, c;
+                var u, d, c;
                 switch (e.code) {
                     case s.AbortCodes.TOO_MANY_PUBLISHED_PRODUCT_LISTINGS:
                         (0, r.openErrorDialog)(o.default.Messages.GUILD_PRODUCT_TOO_MANY_PUBLISHED_PRODUCT_ERROR_TITLE, o.default.Messages.GUILD_PRODUCT_TOO_MANY_PUBLISHED_PRODUCT_ERROR_BODY, n.IconVariant.DANGER);
@@ -26,12 +26,12 @@
                         break;
                     case s.AbortCodes.MONETIZATION_TERMS_NOT_ACCEPTED:
                         ;
-                        d = t, (0, l.openModalLazy)(async () => {
+                        u = t, (0, l.openModalLazy)(async () => {
                             let {
                                 default: e
                             } = await A.el("300770").then(A.bind(A, "300770"));
                             return t => (0, a.jsx)(e, {
-                                guildId: d,
+                                guildId: u,
                                 ...t
                             })
                         });
@@ -47,7 +47,7 @@
                         break;
                     default:
                         ;
-                        let g = null !== (c = e.getFirstFieldErrorMessage(["published"])) && void 0 !== c ? c : (null === (u = e.hasFieldErrors) || void 0 === u ? void 0 : u.call(e)) ? void 0 : e.message;
+                        let g = null !== (c = e.getFirstFieldErrorMessage(["published"])) && void 0 !== c ? c : (null === (d = e.hasFieldErrors) || void 0 === d ? void 0 : d.call(e)) ? void 0 : e.message;
                         if (null != g)(0, r.openErrorDialog)(o.default.Messages.GUILD_PRODUCT_GENERIC_ERROR_TITLE, g, n.IconVariant.WARNING)
                 }
             }

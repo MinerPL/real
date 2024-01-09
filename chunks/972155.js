@@ -19,8 +19,8 @@
                 m = n("393171"),
                 E = n("242757"),
                 C = n("305961"),
-                g = n("957255"),
-                S = n("466079"),
+                S = n("957255"),
+                g = n("466079"),
                 _ = n("444657"),
                 I = n("679243"),
                 T = n("832897"),
@@ -51,7 +51,7 @@
                         dismissedActivityEntryPointTileChannel: null
                     })
                 }, [R.id, U]);
-                let k = (0, i.useStateFromStores)([g.default], () => R.isPrivate() || (0, E.canViewInviteModal)(g.default, D, R), [D, R]),
+                let k = (0, i.useStateFromStores)([S.default], () => R.isPrivate() || (0, E.canViewInviteModal)(S.default, D, R), [D, R]),
                     V = (null == D ? void 0 : D.afkChannelId) === R.id,
                     B = R.userLimit <= 0 || R.userLimit > 1,
                     {
@@ -130,7 +130,7 @@
                     var n, a;
                     return null !== (a = null === (n = t[e]) || void 0 === n ? void 0 : n.id) && void 0 !== a ? a : "empty-tile"
                 }, [t]);
-                return (0, a.jsx)(S.default, {
+                return (0, a.jsx)(g.default, {
                     className: j,
                     keyExtractor: J,
                     paddingTop: 64,

@@ -33,7 +33,7 @@
                                         flipVariations: M,
                                         allowedAutoPlacements: w
                                     }) : n)
-                                }, []), S = t.rects.reference, Y = t.rects.popper, x = new Map, E = !0, O = T[0], P = 0; P < T.length; P++) {
+                                }, []), S = t.rects.reference, Y = t.rects.popper, x = new Map, O = !0, E = T[0], P = 0; P < T.length; P++) {
                                 var j = T[P],
                                     C = (0, a.default)(j),
                                     H = (0, l.default)(j) === u.start,
@@ -49,27 +49,27 @@
                                     A = F ? H ? u.right : u.left : H ? u.bottom : u.top;
                                 S[I] > Y[I] && (A = (0, r.default)(A));
                                 var R = (0, r.default)(A),
-                                    W = [];
-                                if (f && W.push(N[C] <= 0), m && W.push(N[A] <= 0, N[R] <= 0), W.every(function(e) {
+                                    z = [];
+                                if (f && z.push(N[C] <= 0), m && z.push(N[A] <= 0, N[R] <= 0), z.every(function(e) {
                                         return e
                                     })) {
-                                    O = j, E = !1;
+                                    E = j, O = !1;
                                     break
                                 }
-                                x.set(j, W)
+                                x.set(j, z)
                             }
-                            if (E) {
-                                for (var z = M ? 3 : 1, U = function(e) {
+                            if (O) {
+                                for (var W = M ? 3 : 1, B = function(e) {
                                         var t = T.find(function(t) {
                                             var n = x.get(t);
                                             if (n) return n.slice(0, e).every(function(e) {
                                                 return e
                                             })
                                         });
-                                        if (t) return O = t, "break"
-                                    }, B = z; B > 0 && "break" !== U(B); B--);
+                                        if (t) return E = t, "break"
+                                    }, U = W; U > 0 && "break" !== B(U); U--);
                             }
-                            t.placement !== O && (t.modifiersData[c]._skip = !0, t.placement = O, t.reset = !0)
+                            t.placement !== E && (t.modifiersData[c]._skip = !0, t.placement = E, t.reset = !0)
                         }
                     },
                     requiresIfExists: ["offset"],

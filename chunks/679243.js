@@ -22,8 +22,8 @@
                 m = n("901582"),
                 E = n("442939"),
                 C = n("161306"),
-                g = n("397443"),
-                S = n("170152"),
+                S = n("397443"),
+                g = n("170152"),
                 _ = n("431923"),
                 I = n("719761"),
                 T = n("835040"),
@@ -83,12 +83,12 @@
                     fit: es = j.VideoStreamFit.CONTAIN,
                     paused: ei = !1,
                     pulseSpeakingIndicator: er = !1
-                } = e, eu = l.useContext(v.IdleStateContext), [eo, ed] = l.useState(!1), ec = (0, r.useStateFromStores)([A.default], () => A.default.getId()), ef = d.type === J.ParticipantTypes.ACTIVITY ? null : null === (t = d.user) || void 0 === t ? void 0 : t.id, [eh] = (0, E.default)(d.type === J.ParticipantTypes.ACTIVITY ? [d.id] : []), ep = (0, r.useStateFromStores)([S.default], () => S.default.getEnabled()), em = (0, r.useStateFromStores)([M.default], () => null != ef && M.default.isLocalVideoDisabled(ef, (0, C.default)(d.type)), [ef, d.type]), eE = (0, r.useStateFromStores)([M.default], () => null != ef ? M.default.getVideoToggleState(ef, (0, C.default)(d.type)) : X.VideoToggleState.NONE, [ef, d.type]);
+                } = e, eu = l.useContext(v.IdleStateContext), [eo, ed] = l.useState(!1), ec = (0, r.useStateFromStores)([A.default], () => A.default.getId()), ef = d.type === J.ParticipantTypes.ACTIVITY ? null : null === (t = d.user) || void 0 === t ? void 0 : t.id, [eh] = (0, E.default)(d.type === J.ParticipantTypes.ACTIVITY ? [d.id] : []), ep = (0, r.useStateFromStores)([g.default], () => g.default.getEnabled()), em = (0, r.useStateFromStores)([M.default], () => null != ef && M.default.isLocalVideoDisabled(ef, (0, C.default)(d.type)), [ef, d.type]), eE = (0, r.useStateFromStores)([M.default], () => null != ef ? M.default.getVideoToggleState(ef, (0, C.default)(d.type)) : X.VideoToggleState.NONE, [ef, d.type]);
                 et = eE === X.VideoToggleState.AUTO_PROBING;
                 let {
                     speaking: eC,
-                    ringing: eg,
-                    hasVideo: eS
+                    ringing: eS,
+                    hasVideo: eg
                 } = (0, Z.default)(d, ec), e_ = function(e, t, n) {
                     var a, l, s, i;
                     let u = (0, r.useStateFromStoresObject)([R.default], () => {
@@ -202,7 +202,7 @@
                     section: X.AnalyticsSections.VOICE_CHANNEL_TILE,
                     children: (0, a.jsx)("div", {
                         className: i(ee.wrapper, {
-                            [ee.ringing]: eg
+                            [ee.ringing]: eS
                         }, P),
                         children: (0, a.jsxs)(T.default, {
                             shakeLocation: q.ShakeLocation.VOICE_USER,
@@ -235,7 +235,7 @@
                                         userId: ef
                                     }) : null, d.type === J.ParticipantTypes.USER ? (0, a.jsx)("div", {
                                         className: ee.voiceChannelEffectsContainer,
-                                        children: (0, a.jsx)(g.default, {
+                                        children: (0, a.jsx)(S.default, {
                                             userId: ef,
                                             channelId: U.id,
                                             guildId: U.getGuildId(),
@@ -257,7 +257,7 @@
                                         width: w,
                                         inCall: V,
                                         participantType: d.type,
-                                        hasVideo: null != eS && eS,
+                                        hasVideo: null != eg && eg,
                                         ...e_,
                                         idle: eu,
                                         platform: ev,
@@ -326,8 +326,8 @@
                     serverDeafened: p,
                     idle: m,
                     title: E,
-                    width: g,
-                    hasVideo: S,
+                    width: S,
+                    hasVideo: g,
                     inCall: _,
                     localVideoDisabled: I,
                     videoToggleState: T,
@@ -339,9 +339,9 @@
                     onContextMenu: j,
                     onToggleMute: D,
                     platform: U
-                } = e, F = null, k = null, H = null, G = (0, K.isVideoCompact)(g), W = (0, K.isNamesCompact)(g), Y = (0, r.useStateFromStores)([M.default], () => null != R && M.default.isLocalVideoAutoDisabled(R, (0, C.default)(A)), [R, A]), z = (0, h.useRedesignIconContext)().enabled;
+                } = e, F = null, k = null, H = null, G = (0, K.isVideoCompact)(S), W = (0, K.isNamesCompact)(S), Y = (0, r.useStateFromStores)([M.default], () => null != R && M.default.isLocalVideoAutoDisabled(R, (0, C.default)(A)), [R, A]), z = (0, h.useRedesignIconContext)().enabled;
                 if (!N) {
-                    if (l && A === J.ParticipantTypes.STREAM && S && !v) F = (0, a.jsx)(h.Tooltip, {
+                    if (l && A === J.ParticipantTypes.STREAM && g && !v) F = (0, a.jsx)(h.Tooltip, {
                         text: $.default.Messages.UNMUTE,
                         children: e => {
                             let {
@@ -358,7 +358,7 @@
                             })
                         }
                     });
-                    else if (l || A !== J.ParticipantTypes.STREAM || !S || G || v) {
+                    else if (l || A !== J.ParticipantTypes.STREAM || !g || G || v) {
                         if (z) {
                             let e;
                             p ? e = o.HeadphonesDenyIcon : s ? e = c.MicrophoneDenyIcon : n ? e = d.HeadphonesSlashIcon : l ? e = c.MicrophoneDenyIcon : t && (e = f.MicrophoneSlashIcon), F = null != e ? (0, a.jsx)(e, {
@@ -390,9 +390,9 @@
                         }
                     })
                 }
-                return _ && M.default.supports(Q.Features.VIDEO) || !S ? _ && S && I && !Y && (k = (0, a.jsx)(y.default, {
+                return _ && M.default.supports(Q.Features.VIDEO) || !g ? _ && g && I && !Y && (k = (0, a.jsx)(y.default, {
                     foreground: ee.localMuteStrikethrough
-                })) : k = (0, a.jsx)(O.default, {}), A === J.ParticipantTypes.STREAM && !v && S && (H = (0, a.jsx)(h.Tooltip, {
+                })) : k = (0, a.jsx)(O.default, {}), A === J.ParticipantTypes.STREAM && !v && g && (H = (0, a.jsx)(h.Tooltip, {
                     text: $.default.Messages.OPTIONS,
                     children: e => {
                         let {
@@ -412,7 +412,7 @@
                     className: ee.overlayContainer,
                     children: [(0, a.jsx)("div", {
                         className: i(ee.overlayTop, {
-                            [ee.small]: g < 195
+                            [ee.small]: S < 195
                         }),
                         children: Y || T === X.VideoToggleState.AUTO_PROBING ? m ? (0, a.jsx)("div", {
                             className: ee.status,
@@ -430,7 +430,7 @@
                         }) : null
                     }), (0, a.jsxs)("div", {
                         className: i(ee.overlayBottom, {
-                            [ee.small]: g < 195
+                            [ee.small]: S < 195
                         }),
                         children: [W ? (0, a.jsx)("div", {}) : (0, a.jsxs)(h.Text, {
                             className: i(ee.overlayTitle, {

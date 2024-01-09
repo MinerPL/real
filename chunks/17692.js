@@ -1,38 +1,38 @@
             "use strict";
-            A.r(t), A.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return c
                 }
             });
-            var a = A("37983"),
-                l = A("884691"),
-                n = A("414456"),
-                r = A.n(n),
-                s = A("77078"),
-                o = A("931164"),
-                i = A("289162"),
-                d = A("632215");
+            var a = n("37983"),
+                s = n("884691"),
+                l = n("414456"),
+                i = n.n(l),
+                r = n("77078"),
+                o = n("931164"),
+                u = n("289162"),
+                d = n("632215");
 
-            function u(e) {
+            function c(e) {
                 let {
                     color: t,
-                    className: A,
-                    variant: n,
-                    text: u,
-                    lineClamp: c
-                } = e, f = (0, s.usePrivateHeadingLevel)(), C = l.useMemo(() => null == u ? null : (0, o.default)(u, !0, {
-                    allowHeading: null == c,
-                    allowList: null == c,
-                    initialHeaderLevel: f
-                }), [u, c, f]);
-                return (0, a.jsx)(s.Text, {
-                    className: r(A, d.markup, {
-                        [i.lineClamp2Plus]: null != c && c > 1,
-                        [i.lineClamp1]: 1 === c
+                    className: n,
+                    variant: l,
+                    text: c,
+                    lineClamp: f
+                } = e, m = (0, r.usePrivateHeadingLevel)(), E = s.useMemo(() => null == c ? null : (0, o.default)(c, !0, {
+                    allowHeading: null == f,
+                    allowList: null == f,
+                    initialHeaderLevel: m
+                }), [c, f, m]);
+                return (0, a.jsx)(r.Text, {
+                    className: i(n, d.markup, {
+                        [u.lineClamp2Plus]: null != f && f > 1,
+                        [u.lineClamp1]: 1 === f
                     }),
                     color: t,
-                    variant: n,
-                    lineClamp: c,
-                    children: C
+                    variant: l,
+                    lineClamp: f,
+                    children: E
                 })
             }

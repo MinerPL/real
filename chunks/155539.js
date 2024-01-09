@@ -11,8 +11,8 @@
                 s = A("77078"),
                 o = A("160864"),
                 i = A("966724"),
-                d = A("20606"),
-                u = A("191814"),
+                u = A("20606"),
+                d = A("191814"),
                 c = A("476765"),
                 f = A("857171"),
                 C = A("945330"),
@@ -45,8 +45,8 @@
                         children: [(0, a.jsx)(g.default, {
                             width: 16,
                             height: 16,
-                            color: d.default.INTERACTIVE_MUTED
-                        }), (0, a.jsx)(u.default, {
+                            color: u.default.INTERACTIVE_MUTED
+                        }), (0, a.jsx)(d.default, {
                             size: 10,
                             horizontal: !0
                         }), (0, a.jsx)(s.Text, {
@@ -81,14 +81,14 @@
                     uploads: A,
                     canAttachFiles: n,
                     canAttachArchives: r,
-                    addAttachment: d,
+                    addAttachment: u,
                     deleteAttachment: c,
                     fileUploadProgresses: C
                 } = (0, T.useGuildProductAttachmentManagerContext)(), g = l.useRef(!1);
 
                 function m(e) {
                     try {
-                        for (let t of e) d({
+                        for (let t of e) u({
                             platform: i.UploadPlatform.WEB,
                             file: t
                         });
@@ -127,7 +127,7 @@
                             color: "always-white",
                             children: I.default.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON
                         })]
-                    }), (0, a.jsx)(u.default, {
+                    }), (0, a.jsx)(d.default, {
                         size: 12
                     }), (0, a.jsx)(s.Text, {
                         id: E,

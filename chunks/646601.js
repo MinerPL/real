@@ -633,10 +633,10 @@
                         return "function" == typeof t.merge ? t.merge.apply(t, e) : e[e.length - 1]
                     })
                 }, Map.prototype.mergeDeep = function() {
-                    return t8(this, t6, arguments)
+                    return t8(this, t2, arguments)
                 }, Map.prototype.mergeDeepWith = function(t) {
                     var e = l.call(arguments, 1);
-                    return t8(this, t2(t), e)
+                    return t8(this, t6(t), e)
                 }, Map.prototype.mergeDeepIn = function(t) {
                     var e = l.call(arguments, 1);
                     return this.updateIn(t, tZ(), function(t) {
@@ -899,11 +899,11 @@
                     return t3(t, e, n)
                 }
 
-                function t6(t, e, r) {
+                function t2(t, e, r) {
                     return t && t.mergeDeep && y(e) ? t.mergeDeep(e) : tv(t, e) ? t : e
                 }
 
-                function t2(t) {
+                function t6(t) {
                     return function(e, r, n) {
                         if (e && e.mergeDeepWith && y(r)) return e.mergeDeepWith(t, r);
                         var i = t(e, r, n);
@@ -1004,10 +1004,10 @@
                     var e = l.call(arguments, 1);
                     return ed(this, t, e)
                 }, ee.prototype.mergeDeep = function() {
-                    return ed(this, t6, arguments)
+                    return ed(this, t2, arguments)
                 }, ee.prototype.mergeDeepWith = function(t) {
                     var e = l.call(arguments, 1);
-                    return ed(this, t2(t), e)
+                    return ed(this, t6(t), e)
                 }, ee.prototype.setSize = function(t) {
                     return eh(this, 0, t)
                 }, ee.prototype.slice = function(t, e) {
@@ -1860,15 +1860,15 @@
                 }, e1.prototype.toString = function() {
                     return this.__toString("OrderedSet {", "}")
                 }, e1.isOrderedSet = e8;
-                var e6 = e1.prototype;
+                var e2 = e1.prototype;
 
-                function e2(t, e) {
-                    var r = Object.create(e6);
+                function e6(t, e) {
+                    var r = Object.create(e2);
                     return r.size = t ? t.size : 0, r._map = t, r.__ownerID = e, r
                 }
 
                 function e3() {
-                    return s || (s = e2(e_()))
+                    return s || (s = e6(e_()))
                 }
 
                 function e4(t) {
@@ -1878,7 +1878,7 @@
                 function e9(t) {
                     return !!(t && t[e7])
                 }
-                e6[x] = !0, e6.__empty = e3, e6.__make = e2, f(e4, tk), e4.of = function() {
+                e2[x] = !0, e2.__empty = e3, e2.__make = e6, f(e4, tk), e4.of = function() {
                     return this(arguments)
                 }, e4.prototype.toString = function() {
                     return this.__toString("Stack [", "]")

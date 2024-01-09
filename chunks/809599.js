@@ -1,7 +1,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 createStyling: function() {
-                    return w
+                    return k
                 },
                 invertTheme: function() {
                     return x
@@ -41,7 +41,7 @@
             }
             var h = o.default,
                 p = Object.keys(h),
-                g = function(e) {
+                y = function(e) {
                     var t, r = u(e),
                         a = (0, f.rgb2yuv)(r.array()),
                         n = (0, s.default)(a, 3),
@@ -52,7 +52,7 @@
                         b = (0, f.yuv2rgb)(l);
                     return u.rgb(b).hex()
                 },
-                y = function(e) {
+                g = function(e) {
                     return function(t) {
                         return {
                             className: [t.className, e.className].filter(Boolean).join(" "),
@@ -71,14 +71,14 @@
                                 case "string":
                                     return [t, e].filter(Boolean).join(" ");
                                 case "object":
-                                    return y({
+                                    return g({
                                         className: e,
                                         style: t
                                     });
                                 case "function":
                                     return function(r) {
                                         for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++) n[s - 1] = arguments[s];
-                                        return y({
+                                        return g({
                                             className: e
                                         })(t.apply(void 0, [r].concat(n)))
                                     }
@@ -87,7 +87,7 @@
                         case "object":
                             switch (n) {
                                 case "string":
-                                    return y({
+                                    return g({
                                         className: t,
                                         style: e
                                     });
@@ -96,7 +96,7 @@
                                 case "function":
                                     return function(r) {
                                         for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++) n[s - 1] = arguments[s];
-                                        return y({
+                                        return g({
                                             style: e
                                         })(t.apply(void 0, [r].concat(n)))
                                     }
@@ -107,14 +107,14 @@
                                 case "string":
                                     return function(r) {
                                         for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++) n[s - 1] = arguments[s];
-                                        return e.apply(void 0, [y(r)({
+                                        return e.apply(void 0, [g(r)({
                                             className: t
                                         })].concat(n))
                                     };
                                 case "object":
                                     return function(r) {
                                         for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++) n[s - 1] = arguments[s];
-                                        return e.apply(void 0, [y(r)({
+                                        return e.apply(void 0, [g(r)({
                                             style: t
                                         })].concat(n))
                                     };
@@ -147,18 +147,18 @@
                     });
                     return !o.className && delete o.className, 0 === Object.keys(o.style).length && delete o.style, o
                 },
-                k = function(e) {
+                w = function(e) {
                     return Object.keys(e).reduce(function(t, r) {
-                        return t[r] = /^base/.test(r) ? g(e[r]) : "scheme" === r ? e[r] + ":inverted" : e[r], t
+                        return t[r] = /^base/.test(r) ? y(e[r]) : "scheme" === r ? e[r] + ":inverted" : e[r], t
                     }, {})
                 },
-                w = l(function(e) {
+                k = l(function(e) {
                     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
                         a = t.defaultBase16,
                         n = void 0 === a ? h : a,
                         s = t.base16Themes,
-                        o = j(r, void 0 === s ? null : s);
+                        o = E(r, void 0 === s ? null : s);
                     o && (r = d(d({}, o), r));
                     for (var i = p.reduce(function(e, t) {
                             return e[t] = r[t] || n[t], e
@@ -167,25 +167,25 @@
                         }, {}), e(i)), c = arguments.length, f = Array(c > 3 ? c - 3 : 0), b = 3; b < c; b++) f[b - 3] = arguments[b];
                     return l(O, 2).apply(void 0, [u].concat(f))
                 }, 3),
-                E = function(e) {
+                j = function(e) {
                     return !!e.extend
                 },
-                j = function(e, t) {
-                    if (e && E(e) && e.extend && (e = e.extend), "string" == typeof e) {
+                E = function(e, t) {
+                    if (e && j(e) && e.extend && (e = e.extend), "string" == typeof e) {
                         var r = e.split(":"),
                             a = (0, s.default)(r, 2),
                             n = a[0],
                             i = a[1];
-                        e = t ? t[n] : o[n], "inverted" === i && (e = k(e))
+                        e = t ? t[n] : o[n], "inverted" === i && (e = w(e))
                     }
                     return e && Object.prototype.hasOwnProperty.call(e, "base00") ? e : void 0
                 },
                 x = function(e) {
                     if ("string" == typeof e) return "".concat(e, ":inverted");
-                    if (e && E(e) && e.extend) return "string" == typeof e.extend ? d(d({}, e), {}, {
+                    if (e && j(e) && e.extend) return "string" == typeof e.extend ? d(d({}, e), {}, {
                         extend: "".concat(e.extend, ":inverted")
                     }) : d(d({}, e), {}, {
-                        extend: k(e.extend)
+                        extend: w(e.extend)
                     });
-                    return e ? k(e) : e
+                    return e ? w(e) : e
                 }

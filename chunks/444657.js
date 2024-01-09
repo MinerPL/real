@@ -19,8 +19,8 @@
                 m = n("812204"),
                 E = n("685665"),
                 C = n("10641"),
-                g = n("36562"),
-                S = n("945330"),
+                S = n("36562"),
+                g = n("945330"),
                 _ = n("381546"),
                 I = n("564875"),
                 T = n("82636"),
@@ -291,7 +291,7 @@
                                     n_participants: d
                                 }), (0, C.markDismissibleContentAsDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT)
                             },
-                            children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(o.Text, {
+                            children: [(0, a.jsx)(S.default, {}), (0, a.jsx)(o.Text, {
                                 variant: "text-sm/medium",
                                 children: j.default.Messages.DONT_SHOW_AGAIN
                             })]
@@ -304,7 +304,7 @@
                                     n_participants: d
                                 }), s()
                             },
-                            children: (0, a.jsx)(S.default, {
+                            children: (0, a.jsx)(g.default, {
                                 className: L.closeButton
                             })
                         })]

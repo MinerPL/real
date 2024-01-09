@@ -19,8 +19,8 @@
                 m = n("117399"),
                 E = n("400501"),
                 C = n("542640"),
-                g = n("604656"),
-                S = n("861370"),
+                S = n("604656"),
+                g = n("861370"),
                 _ = n("845579"),
                 I = n("800762"),
                 T = n("433487"),
@@ -71,10 +71,10 @@
                     channel: t,
                     closePopout: n,
                     onSelect: l
-                } = e, s = (0, o.default)(t), T = (0, p.default)(t), v = (0, C.default)(t.id), A = (0, E.default)(t), M = (0, S.default)({
+                } = e, s = (0, o.default)(t), T = (0, p.default)(t), v = (0, C.default)(t.id), A = (0, E.default)(t), M = (0, g.default)({
                     id: t.id,
                     label: N.default.Messages.COPY_ID_THREAD
-                }), R = (0, d.default)(t), j = (0, c.default)(t), L = (0, f.default)(t, "Toolbar Overflow"), O = (0, m.default)(t), y = (0, h.default)(t), b = (0, g.default)(t), P = _.UseThreadSidebar.useSetting(), D = (0, r.useStateFromStores)([I.default], () => !i.isEmpty(I.default.getVoiceStatesForChannel(t.id)));
+                }), R = (0, d.default)(t), j = (0, c.default)(t), L = (0, f.default)(t, "Toolbar Overflow"), O = (0, m.default)(t), y = (0, h.default)(t), b = (0, S.default)(t), P = _.UseThreadSidebar.useSetting(), D = (0, r.useStateFromStores)([I.default], () => !i.isEmpty(I.default.getVoiceStatesForChannel(t.id)));
                 return (0, a.jsxs)(u.Menu, {
                     navId: "thread-context",
                     onClose: n,

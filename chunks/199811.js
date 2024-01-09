@@ -20,8 +20,8 @@
                 m = n("625399"),
                 E = n("47495"),
                 C = n("42203"),
-                g = n("957255"),
-                S = n("751661"),
+                S = n("957255"),
+                g = n("751661"),
                 _ = n("923510"),
                 I = n("834052"),
                 T = n("99795"),
@@ -41,10 +41,10 @@
                     onSelect: x,
                     children: [function(e) {
                         let t = (0, i.useStateFromStores)([C.default], () => C.default.getChannel(e), [e]),
-                            n = (0, i.useStateFromStores)([g.default], () => g.default.can(_.MODERATE_STAGE_CHANNEL_PERMISSIONS, t)),
+                            n = (0, i.useStateFromStores)([S.default], () => S.default.can(_.MODERATE_STAGE_CHANNEL_PERMISSIONS, t)),
                             l = (0, i.useStateFromStores)([I.default], () => I.default.getStageInstanceByChannel(e), [e]),
                             s = (0, u.useAppContext)(),
-                            o = () => null != t && (0, S.openStageChannelSettings)(t, s);
+                            o = () => null != t && (0, g.openStageChannelSettings)(t, s);
                         return (null == t ? void 0 : t.isGuildStageVoice()) && n ? null != l ? (0, a.jsx)(r.MenuItem, {
                             id: "edit-stage",
                             label: v.default.Messages.EDIT_STAGE_SUBTITLE,

@@ -18,7 +18,7 @@
                 h = r("149142"),
                 p = ["getItemString", "keyPath", "labelRenderer", "styling", "value", "valueRenderer", "isCustomNode"];
 
-            function g(e, t) {
+            function y(e, t) {
                 var r = Object.keys(e);
                 if (Object.getOwnPropertySymbols) {
                     var a = Object.getOwnPropertySymbols(e);
@@ -29,12 +29,12 @@
                 return r
             }
 
-            function y(e) {
+            function g(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var r = null != arguments[t] ? arguments[t] : {};
-                    t % 2 ? g(Object(r), !0).forEach(function(t) {
+                    t % 2 ? y(Object(r), !0).forEach(function(t) {
                         (0, n.default)(e, t, r[t])
-                    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r)) : g(Object(r)).forEach(function(t) {
+                    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r)) : y(Object(r)).forEach(function(t) {
                         Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t))
                     })
                 }
@@ -47,9 +47,9 @@
                     o = e.styling,
                     u = e.value,
                     c = e.valueRenderer,
-                    g = e.isCustomNode,
+                    y = e.isCustomNode,
                     v = (0, s.default)(e, p),
-                    m = g(u) ? "Custom" : (0, l.default)(u),
+                    m = y(u) ? "Custom" : (0, l.default)(u),
                     O = {
                         getItemString: t,
                         key: r[0],
@@ -60,22 +60,22 @@
                         value: u,
                         valueRenderer: c
                     },
-                    k = y(y(y({}, v), O), {}, {
+                    w = g(g(g({}, v), O), {}, {
                         data: u,
-                        isCustomNode: g
+                        isCustomNode: y
                     });
                 switch (m) {
                     case "Object":
                     case "Error":
                     case "WeakMap":
                     case "WeakSet":
-                        return i.createElement(f.default, k);
+                        return i.createElement(f.default, w);
                     case "Array":
-                        return i.createElement(b.default, k);
+                        return i.createElement(b.default, w);
                     case "Iterable":
                     case "Map":
                     case "Set":
-                        return i.createElement(d.default, k);
+                        return i.createElement(d.default, w);
                     case "String":
                         return i.createElement(h.default, (0, a.default)({}, O, {
                             valueGetter: function(e) {

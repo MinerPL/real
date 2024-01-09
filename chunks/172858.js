@@ -1,34 +1,34 @@
             "use strict";
-            A.r(t), A.d(t, {
+            n.r(t), n.d(t, {
                 DUCK_CONFETTI_SPRITE: function() {
-                    return n
-                },
-                COMMON_CONFETTI_COLORS: function() {
-                    return r
-                },
-                COMMON_CONFETTI_SPRITES: function() {
                     return s
                 },
-                COMMON_CONFETTI_MAX_SPRITE_SIZE: function() {
+                COMMON_CONFETTI_COLORS: function() {
+                    return l
+                },
+                COMMON_CONFETTI_SPRITES: function() {
                     return o
                 },
+                COMMON_CONFETTI_MAX_SPRITE_SIZE: function() {
+                    return u
+                },
                 COMMON_CONFETTI_BASE_CONFIG: function() {
-                    return i
+                    return a
                 },
                 COMMON_CONFETTI_ENVIRONMENT: function() {
-                    return d
+                    return c
                 }
             });
-            var a = A("516555"),
-                l = A("839491");
-            let n = l,
-                r = ["#FF73FA", "#FFC0FF", "#FFD836", "#FF9A15", "#A5F7DE", "#51BC9D", "#AEC7FF", "#3E70DD"],
-                s = [A("606863"), n, A("164654"), A("540346"), A("526094"), A("367469"), A("23933"), {
-                    src: A("283397"),
+            var i = n("516555"),
+                r = n("839491");
+            let s = r,
+                l = ["#FF73FA", "#FFC0FF", "#FFD836", "#FF9A15", "#A5F7DE", "#51BC9D", "#AEC7FF", "#3E70DD"],
+                o = [n("606863"), s, n("164654"), n("540346"), n("526094"), n("367469"), n("23933"), {
+                    src: n("283397"),
                     colorize: !1
                 }],
-                o = 28,
-                i = {
+                u = 28,
+                a = {
                     velocity: {
                         type: "static-random",
                         minValue: {
@@ -50,7 +50,7 @@
                     size: {
                         type: "static-random",
                         minValue: 14,
-                        maxValue: o
+                        maxValue: u
                     }
                 },
-                d = new a.Environment
+                c = new i.Environment

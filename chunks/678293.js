@@ -42,8 +42,8 @@
                         y: Y
                     };
                 T = x.x, Y = x.y;
-                var E = v.hasOwnProperty("x"),
-                    O = v.hasOwnProperty("y"),
+                var O = v.hasOwnProperty("x"),
+                    E = v.hasOwnProperty("y"),
                     P = r.left,
                     j = r.top,
                     C = window;
@@ -66,7 +66,7 @@
                     x: T,
                     y: Y
                 };
-                return (T = A.x, Y = A.y, M) ? Object.assign({}, N, ((m = {})[j] = O ? "0" : "", m[P] = E ? "0" : "", m.transform = 1 >= (C.devicePixelRatio || 1) ? "translate(" + T + "px, " + Y + "px)" : "translate3d(" + T + "px, " + Y + "px, 0)", m)) : Object.assign({}, N, ((p = {})[j] = O ? Y + "px" : "", p[P] = E ? T + "px" : "", p.transform = "", p))
+                return (T = A.x, Y = A.y, M) ? Object.assign({}, N, ((m = {})[j] = E ? "0" : "", m[P] = O ? "0" : "", m.transform = 1 >= (C.devicePixelRatio || 1) ? "translate(" + T + "px, " + Y + "px)" : "translate3d(" + T + "px, " + Y + "px, 0)", m)) : Object.assign({}, N, ((p = {})[j] = E ? Y + "px" : "", p[P] = O ? T + "px" : "", p.transform = "", p))
             }
             var p = {
                 name: "computeStyles",

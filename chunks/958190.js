@@ -91,7 +91,7 @@
                 })) : t.toString(36)
             }
 
-            function E(e, t, n) {
+            function O(e, t, n) {
                 if (null == e) return e;
                 var o = [],
                     i = 0;
@@ -141,7 +141,7 @@
                 }), o
             }
 
-            function O(e) {
+            function E(e) {
                 if (-1 === e._status) {
                     var t = e._result;
                     (t = t()).then(function(t) {
@@ -160,20 +160,20 @@
                     transition: null
                 };
             t.Children = {
-                map: E,
+                map: O,
                 forEach: function(e, t, n) {
-                    E(e, function() {
+                    O(e, function() {
                         t.apply(this, arguments)
                     }, n)
                 },
                 count: function(e) {
                     var t = 0;
-                    return E(e, function() {
+                    return O(e, function() {
                         t++
                     }), t
                 },
                 toArray: function(e) {
-                    return E(e, function(e) {
+                    return O(e, function(e) {
                         return e
                     }) || []
                 },
@@ -243,7 +243,7 @@
                         _status: -1,
                         _result: e
                     },
-                    _init: O
+                    _init: E
                 }
             }, t.memo = function(e, t) {
                 return {

@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 savedMessageToServer: function() {
-                    return r
+                    return i
                 },
                 savedMessageToClient: function() {
-                    return i
+                    return r
                 },
                 savedMessageHasMetadata: function() {
                     return u
@@ -16,7 +16,7 @@
             var a = n("718517"),
                 s = n("782340");
 
-            function r(e) {
+            function i(e) {
                 var t;
                 return {
                     channel_id: e.channelId,
@@ -32,7 +32,7 @@
                 }
             }
 
-            function i(e) {
+            function r(e) {
                 return {
                     channelId: e.channel_id,
                     messageId: e.message_id,

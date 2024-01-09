@@ -147,9 +147,9 @@
                 } else if (h <= n && !d) return b(l, f).entries;
                 if ("Iterable" === e) {
                     var p = b(l, l + n - 1),
-                        g = p.hasMore,
-                        y = p.entries;
-                    c = g ? [].concat((0, a.default)(y), (0, a.default)(o(l + n, l + 2 * n - 1, n))) : y
+                        y = p.hasMore,
+                        g = p.entries;
+                    c = y ? [].concat((0, a.default)(g), (0, a.default)(o(l + n, l + 2 * n - 1, n))) : g
                 } else c = d ? o(l, f, n) : [].concat((0, a.default)(b(0, n - 5).entries), (0, a.default)(o(n - 4, h - 5, n)), (0, a.default)(b(h - 4, h - 1).entries));
                 return c
             }

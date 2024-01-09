@@ -11,15 +11,15 @@
                 s = A("748820"),
                 o = A("77078"),
                 i = A("149022"),
-                d = A("681060"),
-                u = A("233069"),
+                u = A("681060"),
+                d = A("233069"),
                 c = A("474643"),
                 f = A("49111"),
                 C = A("782340"),
                 g = A("68233"),
                 h = A("253469");
             let T = (0, s.v4)(),
-                m = (0, u.createChannelRecord)({
+                m = (0, d.createChannelRecord)({
                     id: "1",
                     type: f.ChannelTypes.DM
                 });
@@ -55,7 +55,7 @@
                     "aria-labelledby": A,
                     className: n,
                     id: s,
-                    autoFocus: u,
+                    autoFocus: d,
                     maxLength: f,
                     onChange: h,
                     onSubmit: I,
@@ -65,13 +65,13 @@
                     value: N,
                     enableThemedBackground: q = !1,
                     parentModalKey: O
-                } = e, R = (0, o.useFormContext)(), [L, D] = l.useState(() => (0, i.toRichValue)(N)), P = l.useRef(!0 === u), V = null != A ? A : null == R ? void 0 : R.titleId, j = null !== (t = null == R ? void 0 : R.errorId) && void 0 !== t ? t : T, b = l.useMemo(() => ({
+                } = e, R = (0, o.useFormContext)(), [L, D] = l.useState(() => (0, i.toRichValue)(N)), P = l.useRef(!0 === d), V = null != A ? A : null == R ? void 0 : R.titleId, j = null !== (t = null == R ? void 0 : R.errorId) && void 0 !== t ? t : T, b = l.useMemo(() => ({
                     analyticsName: "simple",
                     autocomplete: {
                         alwaysUseLayer: !0,
                         small: !0
                     },
-                    disableAutoFocus: !0 !== u,
+                    disableAutoFocus: !0 !== d,
                     drafts: {
                         type: c.DraftType.ChannelMessage
                     },
@@ -85,8 +85,8 @@
                         useDisabledStylesOnSubmit: !0,
                         disableEnterToSubmit: !0
                     }
-                }), [u]);
-                return (0, a.jsxs)(d.default, {
+                }), [d]);
+                return (0, a.jsxs)(u.default, {
                     "aria-describedby": j,
                     "aria-labelledby": V,
                     innerClassName: r(n, g.textArea),

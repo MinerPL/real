@@ -1,7 +1,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return g
+                    return y
                 }
             }), r("426094");
             var a = r("261438"),
@@ -17,7 +17,7 @@
                 d = r("493110"),
                 h = r.n(d),
                 p = r("19421"),
-                g = function(e) {
+                y = function(e) {
                     (0, i.default)(d, e);
                     var t, r, f = (t = d, r = function() {
                         if ("undefined" == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
@@ -67,7 +67,7 @@
                         }
                     }]), d
                 }(b.Component);
-            (0, l.default)(g, "propTypes", {
+            (0, l.default)(y, "propTypes", {
                 styling: h.func.isRequired,
                 from: h.number.isRequired,
                 to: h.number.isRequired,

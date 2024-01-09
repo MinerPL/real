@@ -1,13 +1,13 @@
-            A("70102");
-            var a = A("478098"),
-                l = A("952133");
-            e.exports = function(e, t, A) {
-                var n = !0,
-                    r = !0;
-                if ("function" != typeof e) throw TypeError("Expected a function");
-                return l(A) && (n = "leading" in A ? !!A.leading : n, r = "trailing" in A ? !!A.trailing : r), a(e, t, {
-                    leading: n,
-                    maxWait: t,
-                    trailing: r
+            r("70102");
+            var n = r("478098"),
+                i = r("952133");
+            t.exports = function(t, e, r) {
+                var o = !0,
+                    a = !0;
+                if ("function" != typeof t) throw TypeError("Expected a function");
+                return i(r) && (o = "leading" in r ? !!r.leading : o, a = "trailing" in r ? !!r.trailing : a), n(t, e, {
+                    leading: o,
+                    maxWait: e,
+                    trailing: a
                 })
             }

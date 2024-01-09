@@ -1,7 +1,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return E
+                    return j
                 }
             }), r("424973"), r("426094");
             var a = r("8967"),
@@ -17,8 +17,8 @@
                 d = r.n(b),
                 h = r("493110"),
                 p = r.n(h),
-                g = r("19421"),
-                y = r("222817"),
+                y = r("19421"),
+                g = r("222817"),
                 v = r("311559"),
                 m = r("898475");
 
@@ -33,7 +33,7 @@
                 return r
             }
 
-            function k(e) {
+            function w(e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var r = null != arguments[t] ? arguments[t] : {};
                     t % 2 ? O(Object(r), !0).forEach(function(t) {
@@ -45,12 +45,12 @@
                 return e
             }
 
-            function w(e) {
+            function k(e) {
                 return {
                     expanded: !e.isCircular && e.shouldExpandNode(e.keyPath, e.data, e.level)
                 }
             }
-            var E = function(e) {
+            var j = function(e) {
                 (0, o.default)(h, e);
                 var t, r, b = (t = h, r = function() {
                     if ("undefined" == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
@@ -75,13 +75,13 @@
                         t.props.expandable && t.setState({
                             expanded: !t.state.expanded
                         })
-                    }), t.state = w(e), t
+                    }), t.state = k(e), t
                 }
                 return (0, n.default)(h, [{
                     key: "UNSAFE_componentWillReceiveProps",
                     value: function(e) {
-                        var t = w(e);
-                        w(this.props).expanded !== t.expanded && this.setState(t)
+                        var t = k(e);
+                        k(this.props).expanded !== t.expanded && this.setState(t)
                     }
                 }, {
                     key: "shouldComponentUpdate",
@@ -116,7 +116,7 @@
                                     c = t.postprocessValue,
                                     b = t.sortObjectKeys,
                                     h = [];
-                                return (0, y.default)(n, s, b, o, r, a).forEach(function(r) {
+                                return (0, g.default)(n, s, b, o, r, a).forEach(function(r) {
                                     if (void 0 !== r.to) h.push(d.createElement(m.default, (0, f.default)({}, t, {
                                         key: "ItemRange--".concat(r.from, "-").concat(r.to),
                                         from: r.from,
@@ -139,27 +139,27 @@
                                         })))
                                     }
                                 }), h
-                            }(k(k({}, this.props), {}, {
+                            }(w(w({}, this.props), {}, {
                                 level: this.props.level + 1
                             })) : null,
-                            w = t(a, n, d.createElement("span", i("nestedNodeItemType", p), r), o(n, u), c),
-                            E = [c, a, p, h];
-                        return s ? d.createElement("li", i.apply(void 0, ["rootNode"].concat(E)), d.createElement("ul", i.apply(void 0, ["rootNodeChildren"].concat(E)), O)) : d.createElement("li", i.apply(void 0, ["nestedNode"].concat(E)), h && d.createElement(g.default, {
+                            k = t(a, n, d.createElement("span", i("nestedNodeItemType", p), r), o(n, u), c),
+                            j = [c, a, p, h];
+                        return s ? d.createElement("li", i.apply(void 0, ["rootNode"].concat(j)), d.createElement("ul", i.apply(void 0, ["rootNodeChildren"].concat(j)), O)) : d.createElement("li", i.apply(void 0, ["nestedNode"].concat(j)), h && d.createElement(y.default, {
                             styling: i,
                             nodeType: a,
                             expanded: p,
                             onClick: this.handleClick
                         }), d.createElement("label", (0, f.default)({}, i.apply(void 0, [
                             ["label", "nestedNodeLabel"]
-                        ].concat(E)), {
+                        ].concat(j)), {
                             onClick: this.handleClick
-                        }), b.apply(void 0, E)), d.createElement("span", (0, f.default)({}, i.apply(void 0, ["nestedNodeItemString"].concat(E)), {
+                        }), b.apply(void 0, j)), d.createElement("span", (0, f.default)({}, i.apply(void 0, ["nestedNodeItemString"].concat(j)), {
                             onClick: this.handleClick
-                        }), w), d.createElement("ul", i.apply(void 0, ["nestedNodeChildren"].concat(E)), O))
+                        }), k), d.createElement("ul", i.apply(void 0, ["nestedNodeChildren"].concat(j)), O))
                     }
                 }]), h
             }(d.Component);
-            (0, c.default)(E, "propTypes", {
+            (0, c.default)(j, "propTypes", {
                 getItemString: p.func.isRequired,
                 nodeTypeIndicator: p.any,
                 nodeType: p.string.isRequired,
@@ -175,7 +175,7 @@
                 sortObjectKeys: p.oneOfType([p.func, p.bool]),
                 isCircular: p.bool,
                 expandable: p.bool
-            }), (0, c.default)(E, "defaultProps", {
+            }), (0, c.default)(j, "defaultProps", {
                 data: [],
                 circularCache: [],
                 level: 0,

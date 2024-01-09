@@ -80,12 +80,12 @@
                                 value: "select",
                                 description: '"select"'
                             },
-                            E = {
+                            O = {
                                 type: "literal",
                                 value: "=",
                                 description: '"="'
                             },
-                            O = "offset:",
+                            E = "offset:",
                             P = {
                                 type: "literal",
                                 value: "offset:",
@@ -117,29 +117,29 @@
                                 value: "[0-9a-f]i",
                                 description: "[0-9a-f]i"
                             },
-                            W = {
+                            z = {
                                 type: "literal",
                                 value: "0",
                                 description: '"0"'
                             },
-                            z = /^[1-9]/,
-                            U = {
+                            W = /^[1-9]/,
+                            B = {
                                 type: "class",
                                 value: "[1-9]",
                                 description: "[1-9]"
                             },
-                            B = /^[^{}\\\0-\x1F \t\n\r]/,
+                            U = /^[^{}\\\0-\x1F \t\n\r]/,
                             K = {
                                 type: "class",
                                 value: "[^{}\\\\\\0-\\x1F\x7f \\t\\n\\r]",
                                 description: "[^{}\\\\\\0-\\x1F\x7f \\t\\n\\r]"
                             },
-                            J = {
+                            V = {
                                 type: "literal",
                                 value: "\\\\",
                                 description: '"\\\\\\\\"'
                             },
-                            V = {
+                            J = {
                                 type: "literal",
                                 value: "\\#",
                                 description: '"\\\\#"'
@@ -322,7 +322,7 @@
                             var t, n, r, a, o, i, s, u, c, d;
                             if (t = Q, (n = ec()) !== l) {
                                 ;
-                                if (s = Q, u = Q, 61 === e.charCodeAt(Q) ? (c = "=", Q++) : (c = l, 0 === en && er(E)), c !== l && (d = ep()) !== l ? u = c = [c, d] : (Q = u, u = l), u !== l && (u = e.substring(s, Q)), (s = u) === l && (s = eh()), (r = s) !== l) {
+                                if (s = Q, u = Q, 61 === e.charCodeAt(Q) ? (c = "=", Q++) : (c = l, 0 === en && er(O)), c !== l && (d = ep()) !== l ? u = c = [c, d] : (Q = u, u = l), u !== l && (u = e.substring(s, Q)), (s = u) === l && (s = eh()), (r = s) !== l) {
                                     if (ec() !== l) {
                                         if (123 === e.charCodeAt(Q) ? (a = "{", Q++) : (a = l, 0 === en && er(h)), a !== l) {
                                             if (ec() !== l) {
@@ -348,7 +348,7 @@
                             var t, n, r, a;
                             if (t = Q, (n = function() {
                                     var t, n, r;
-                                    if (t = Q, e.substr(Q, 7) === O ? (n = O, Q += 7) : (n = l, 0 === en && er(P)), n !== l) {
+                                    if (t = Q, e.substr(Q, 7) === E ? (n = E, Q += 7) : (n = l, 0 === en && er(P)), n !== l) {
                                         if (ec() !== l) {
                                             if ((r = ep()) !== l) t = n = r;
                                             else Q = t, t = l
@@ -397,8 +397,8 @@
 
                         function ep() {
                             var t, n, r, a, o, i;
-                            if (t = Q, 48 === e.charCodeAt(Q) ? (n = "0", Q++) : (n = l, 0 === en && er(W)), n === l) {
-                                if (n = Q, r = Q, z.test(e.charAt(Q)) ? (a = e.charAt(Q), Q++) : (a = l, 0 === en && er(U)), a !== l) {
+                            if (t = Q, 48 === e.charCodeAt(Q) ? (n = "0", Q++) : (n = l, 0 === en && er(z)), n === l) {
+                                if (n = Q, r = Q, W.test(e.charAt(Q)) ? (a = e.charAt(Q), Q++) : (a = l, 0 === en && er(B)), a !== l) {
                                     for (o = [], i = ed(); i !== l;) o.push(i), i = ed();
                                     o !== l ? r = a = [a, o] : (Q = r, r = l)
                                 } else Q = r, r = l;
@@ -410,7 +410,7 @@
 
                         function em() {
                             var t, n, r, a, o, i, s, u;
-                            if (B.test(e.charAt(Q)) ? (t = e.charAt(Q), Q++) : (t = l, 0 === en && er(K)), t === l && (t = Q, "\\\\" === e.substr(Q, 2) ? (n = "\\\\", Q += 2) : (n = l, 0 === en && er(J)), n !== l && (n = "\\"), (t = n) === l && (t = Q, "\\#" === e.substr(Q, 2) ? (n = "\\#", Q += 2) : (n = l, 0 === en && er(V)), n !== l && (n = "\\#"), (t = n) === l && (t = Q, "\\{" === e.substr(Q, 2) ? (n = "\\{", Q += 2) : (n = l, 0 === en && er(G)), n !== l && (n = "{"), (t = n) === l && (t = Q, "\\}" === e.substr(Q, 2) ? (n = "\\}", Q += 2) : (n = l, 0 === en && er(q)), n !== l && (n = "}"), (t = n) === l))))) {
+                            if (U.test(e.charAt(Q)) ? (t = e.charAt(Q), Q++) : (t = l, 0 === en && er(K)), t === l && (t = Q, "\\\\" === e.substr(Q, 2) ? (n = "\\\\", Q += 2) : (n = l, 0 === en && er(V)), n !== l && (n = "\\"), (t = n) === l && (t = Q, "\\#" === e.substr(Q, 2) ? (n = "\\#", Q += 2) : (n = l, 0 === en && er(J)), n !== l && (n = "\\#"), (t = n) === l && (t = Q, "\\{" === e.substr(Q, 2) ? (n = "\\{", Q += 2) : (n = l, 0 === en && er(G)), n !== l && (n = "{"), (t = n) === l && (t = Q, "\\}" === e.substr(Q, 2) ? (n = "\\}", Q += 2) : (n = l, 0 === en && er(q)), n !== l && (n = "}"), (t = n) === l))))) {
                                 if (t = Q, "\\u" === e.substr(Q, 2) ? (n = "\\u", Q += 2) : (n = l, 0 === en && er($)), n !== l) {
                                     if (r = Q, a = Q, (o = ef()) !== l && (i = ef()) !== l && (s = ef()) !== l && (u = ef()) !== l ? a = o = [o, i, s, u] : (Q = a, a = l), a !== l && (a = e.substring(r, Q)), (r = a) !== l) t = n = String.fromCharCode(parseInt(r, 16));
                                     else Q = t, t = l

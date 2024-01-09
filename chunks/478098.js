@@ -1,54 +1,54 @@
-            A("70102");
-            var a = A("952133"),
-                l = A("645942"),
-                n = A("261497"),
-                r = Math.max,
-                s = Math.min;
-            e.exports = function(e, t, A) {
-                var o, i, d, u, c, f, C = 0,
-                    g = !1,
+            r("70102");
+            var n = r("952133"),
+                i = r("645942"),
+                o = r("261497"),
+                a = Math.max,
+                c = Math.min;
+            t.exports = function(t, e, r) {
+                var l, u, s, f, p, d, v = 0,
                     h = !1,
-                    T = !0;
-                if ("function" != typeof e) throw TypeError("Expected a function");
+                    g = !1,
+                    m = !0;
+                if ("function" != typeof t) throw TypeError("Expected a function");
 
-                function m(t) {
-                    var A = o,
-                        a = i;
-                    return o = i = void 0, C = t, u = e.apply(a, A)
+                function b(e) {
+                    var r = l,
+                        n = u;
+                    return l = u = void 0, v = e, f = t.apply(n, r)
                 }
-                t = n(t) || 0, a(A) && (g = !!A.leading, d = (h = "maxWait" in A) ? r(n(A.maxWait) || 0, t) : d, T = "trailing" in A ? !!A.trailing : T);
+                e = o(e) || 0, n(r) && (h = !!r.leading, s = (g = "maxWait" in r) ? a(o(r.maxWait) || 0, e) : s, m = "trailing" in r ? !!r.trailing : m);
 
-                function p(e) {
-                    var A = e - f,
-                        a = e - C;
-                    return void 0 === f || A >= t || A < 0 || h && a >= d
-                }
-
-                function U() {
-                    var e, A, a, n, r = l();
-                    if (p(r)) return I(r);
-                    c = setTimeout(U, (A = (e = r) - f, a = e - C, n = t - A, h ? s(n, d - a) : n))
+                function y(t) {
+                    var r = t - d,
+                        n = t - v;
+                    return void 0 === d || r >= e || r < 0 || g && n >= s
                 }
 
-                function I(e) {
-                    return (c = void 0, T && o) ? m(e) : (o = i = void 0, u)
+                function w() {
+                    var t, r, n, o, a = i();
+                    if (y(a)) return x(a);
+                    p = setTimeout(w, (r = (t = a) - d, n = t - v, o = e - r, g ? c(o, s - n) : o))
                 }
 
-                function v() {
-                    var e, A = l(),
-                        a = p(A);
-                    if (o = arguments, i = this, f = A, a) {
-                        if (void 0 === c) {
+                function x(t) {
+                    return (p = void 0, m && l) ? b(t) : (l = u = void 0, f)
+                }
+
+                function O() {
+                    var t, r = i(),
+                        n = y(r);
+                    if (l = arguments, u = this, d = r, n) {
+                        if (void 0 === p) {
                             ;
-                            return C = e = f, c = setTimeout(U, t), g ? m(e) : u
+                            return v = t = d, p = setTimeout(w, e), h ? b(t) : f
                         }
-                        if (h) return clearTimeout(c), c = setTimeout(U, t), m(f)
+                        if (g) return clearTimeout(p), p = setTimeout(w, e), b(d)
                     }
-                    return void 0 === c && (c = setTimeout(U, t)), u
+                    return void 0 === p && (p = setTimeout(w, e)), f
                 }
-                return v.cancel = function() {
-                    void 0 !== c && clearTimeout(c), C = 0, o = f = i = c = void 0
-                }, v.flush = function() {
-                    return void 0 === c ? u : I(l())
-                }, v
+                return O.cancel = function() {
+                    void 0 !== p && clearTimeout(p), v = 0, l = d = u = p = void 0
+                }, O.flush = function() {
+                    return void 0 === p ? f : x(i())
+                }, O
             }

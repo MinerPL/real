@@ -11,8 +11,8 @@
                 s = A("77078"),
                 o = A("694187"),
                 i = A("818643"),
-                d = A("987772"),
-                u = A("228220"),
+                u = A("987772"),
+                d = A("228220"),
                 c = A("782340"),
                 f = A("610828");
             let C = "custom-image",
@@ -23,24 +23,24 @@
                         disabled: n = !1,
                         name: o,
                         alt: i,
-                        data: d
-                    } = e, u = o === A, c = (0, s.useRadioItem)({
-                        isSelected: u,
+                        data: u
+                    } = e, d = o === A, c = (0, s.useRadioItem)({
+                        isSelected: d,
                         label: i
                     }), C = n ? void 0 : () => {
-                        l(d, o)
+                        l(u, o)
                     };
                     return (0, a.jsx)(s.Clickable, {
                         ref: t,
                         className: r(f.radioOption, {
-                            [f.selected]: u,
+                            [f.selected]: d,
                             [f.disabled]: n
                         }),
                         onClick: C,
                         "aria-disabled": n,
                         ...c,
                         children: (0, a.jsx)("img", {
-                            src: d,
+                            src: u,
                             alt: i,
                             className: f.radioOptionImage
                         })
@@ -121,7 +121,7 @@
                                 "aria-label": c.default.Messages.CUSTOM_IMAGE_SELECTOR_EDIT_CUSTOM_IMAGE_ARIA_LABEL.format({
                                     filename: x
                                 }),
-                                children: (0, a.jsx)(d.default, {
+                                children: (0, a.jsx)(u.default, {
                                     className: f.editIcon
                                 })
                             })
@@ -135,7 +135,7 @@
                                 "aria-label": c.default.Messages.CUSTOM_IMAGE_SELECTOR_DELETE_CUSTOM_IMAGE_ARIA_LABEL.format({
                                     filename: x
                                 }),
-                                children: (0, a.jsx)(u.default, {
+                                children: (0, a.jsx)(d.default, {
                                     className: f.deleteIcon
                                 })
                             })

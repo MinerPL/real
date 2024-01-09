@@ -436,7 +436,7 @@
                 }
             }
 
-            function E(e, t) {
+            function O(e, t) {
                 for (var n, r = 0, a = t.length; r < a && !n;) {
                     var i = t[r],
                         s = String(i).replace(L, ""),
@@ -454,10 +454,10 @@
                 return u
             }
 
-            function O(e, t, n, r, a) {
+            function E(e, t, n, r, a) {
                 if (0 === e.length) throw ReferenceError("No locale data has been provided for this object yet.");
-                if ("lookup" === n["[[localeMatcher]]"]) var o = E(e, t);
-                else var o = E(e, t);
+                if ("lookup" === n["[[localeMatcher]]"]) var o = O(e, t);
+                else var o = O(e, t);
                 var i = o["[[locale]]"];
                 if (u.call(o, "[[extension]]")) var s = o["[[extension]]"],
                     l = o["[[extensionIndex]]"],
@@ -543,7 +543,7 @@
                     c = j(n, "localeMatcher", "string", new Q("lookup", "best fit"), "best fit");
                 u["[[localeMatcher]]"] = c;
                 var d = g.NumberFormat["[[localeData]]"],
-                    f = O(g.NumberFormat["[[availableLocales]]"], i, u, g.NumberFormat["[[relevantExtensionKeys]]"], d);
+                    f = E(g.NumberFormat["[[availableLocales]]"], i, u, g.NumberFormat["[[relevantExtensionKeys]]"], d);
                 a["[[locale]]"] = f["[[locale]]"], a["[[numberingSystem]]"] = f["[[nu]]"], a["[[dataLocale]]"] = f["[[dataLocale]]"];
                 var p = f["[[dataLocale]]"],
                     m = j(n, "style", "string", new Q("decimal", "percent", "currency"), "decimal");
@@ -571,8 +571,8 @@
                 (void 0 !== D || void 0 !== S) && (D = C(n, "minimumSignificantDigits", 1, 21, 1), S = C(n, "maximumSignificantDigits", D, 21, 21), a["[[minimumSignificantDigits]]"] = D, a["[[maximumSignificantDigits]]"] = S);
                 var x = j(n, "useGrouping", "boolean", void 0, !0);
                 a["[[useGrouping]]"] = x;
-                var E = d[p].patterns[m];
-                return a["[[positivePattern]]"] = E.positivePattern, a["[[negativePattern]]"] = E.negativePattern, a["[[boundFormat]]"] = void 0, a["[[initializedNumberFormat]]"] = !0, s && (e.format = I.call(e)), o.exp.test(o.input), e
+                var O = d[p].patterns[m];
+                return a["[[positivePattern]]"] = O.positivePattern, a["[[negativePattern]]"] = O.negativePattern, a["[[boundFormat]]"] = void 0, a["[[initializedNumberFormat]]"] = !0, s && (e.format = I.call(e)), o.exp.test(o.input), e
             }
             l(Intl, "NumberFormat", {
                 configurable: !0,
@@ -702,10 +702,10 @@
             function R() {
                 var e = arguments[0],
                     t = arguments[1];
-                return this && this !== Intl ? W(ee(this), e, t) : new Intl.DateTimeFormat(e, t)
+                return this && this !== Intl ? z(ee(this), e, t) : new Intl.DateTimeFormat(e, t)
             }
 
-            function W(e, t, n) {
+            function z(e, t, n) {
                 var r = et(e),
                     o = X();
                 if (!0 === r["[[initializedIntlObject]]"]) throw TypeError("`this` object has already been initialized as an Intl object");
@@ -715,19 +715,19 @@
                     }
                 }), r["[[initializedIntlObject]]"] = !0;
                 var i = Y(t),
-                    n = U(n, "any", "date"),
+                    n = B(n, "any", "date"),
                     c = new $;
                 k = j(n, "localeMatcher", "string", new Q("lookup", "best fit"), "best fit"), c["[[localeMatcher]]"] = k;
                 var d = g.DateTimeFormat,
                     f = d["[[localeData]]"],
-                    p = O(d["[[availableLocales]]"], i, c, d["[[relevantExtensionKeys]]"], f);
+                    p = E(d["[[availableLocales]]"], i, c, d["[[relevantExtensionKeys]]"], f);
                 r["[[locale]]"] = p["[[locale]]"], r["[[calendar]]"] = p["[[ca]]"], r["[[numberingSystem]]"] = p["[[nu]]"], r["[[dataLocale]]"] = p["[[dataLocale]]"];
                 var m = p["[[dataLocale]]"],
                     h = n.timeZone;
                 if (void 0 !== h && "UTC" !== (h = Z(h))) throw RangeError("timeZone is not supported.");
-                for (var _ in r["[[timeZone]]"] = h, c = new $, z)
-                    if (u.call(z, _)) {
-                        var y = j(n, _, "string", z[_]);
+                for (var _ in r["[[timeZone]]"] = h, c = new $, W)
+                    if (u.call(W, _)) {
+                        var y = j(n, _, "string", W[_]);
                         c["[[" + _ + "]]"] = y
                     } var b, M = f[m],
                     w = function(e) {
@@ -735,11 +735,11 @@
                     }(M.formats),
                     k = j(n, "formatMatcher", "string", new Q("basic", "best fit"), "best fit");
                 for (var _ in M.formats = w, b = "basic" === k ? function(e, t) {
-                        return B(e, t)
+                        return U(e, t)
                     }(c, w) : function(e, t) {
-                        return B(e, t, !0)
-                    }(c, w), z)
-                    if (u.call(z, _) && u.call(b, _)) {
+                        return U(e, t, !0)
+                    }(c, w), W)
+                    if (u.call(W, _) && u.call(b, _)) {
                         var L = b[_];
                         r["[[" + _ + "]]"] = L
                     } var D, T = j(n, "hour12", "boolean");
@@ -774,7 +774,7 @@
             }), l(R, "prototype", {
                 writable: !1
             });
-            var z = {
+            var W = {
                 weekday: ["narrow", "short", "long"],
                 era: ["narrow", "short", "long"],
                 year: ["2-digit", "numeric"],
@@ -786,7 +786,7 @@
                 timeZoneName: ["short", "long"]
             };
 
-            function U(e, t, n) {
+            function B(e, t, n) {
                 if (void 0 === e) e = null;
                 else {
                     var r = ee(e);
@@ -797,12 +797,12 @@
                 return ("date" === t || "any" === t) && (void 0 !== e.weekday || void 0 !== e.year || void 0 !== e.month || void 0 !== e.day) && (o = !1), ("time" === t || "any" === t) && (void 0 !== e.hour || void 0 !== e.minute || void 0 !== e.second) && (o = !1), o && ("date" === n || "all" === n) && (e.year = e.month = e.day = "numeric"), o && ("time" === n || "all" === n) && (e.hour = e.minute = e.second = "numeric"), e
             }
 
-            function B(e, t, n) {
+            function U(e, t, n) {
                 for (var r, a = -1 / 0, o = 0, i = t.length; o < i;) {
                     var s = t[o],
                         l = 0;
-                    for (var d in z)
-                        if (u.call(z, d)) {
+                    for (var d in W)
+                        if (u.call(W, d)) {
                             var f = e["[[" + d + "]]"],
                                 p = u.call(s, d) ? s[d] : void 0;
                             if (void 0 === f && void 0 !== p) l -= 20;
@@ -824,14 +824,14 @@
                 if (void 0 === e["[[boundFormat]]"]) {
                     var t = y.call(function() {
                         var e = Number(0 == arguments.length ? Date.now() : arguments[0]);
-                        return J(this, e)
+                        return V(this, e)
                     }, this);
                     e["[[boundFormat]]"] = t
                 }
                 return e["[[boundFormat]]"]
             }
 
-            function J(e, t) {
+            function V(e, t) {
                 if (!isFinite(t)) throw RangeError("Invalid valid date passed to format");
                 var n = e.__getInternalProperties(v),
                     r = X(),
@@ -862,7 +862,7 @@
                     c = n["[[dataLocale]]"],
                     d = g.DateTimeFormat["[[localeData]]"][c].calendars,
                     f = n["[[calendar]]"];
-                for (var p in z)
+                for (var p in W)
                     if (u.call(n, "[[" + p + "]]")) {
                         var m, h, _ = n["[[" + p + "]]"],
                             y = s["[[" + p + "]]"];
@@ -917,37 +917,37 @@
                     return d({}, t)
                 }
             });
-            var V = Intl.__localeSensitiveProtos = {
+            var J = Intl.__localeSensitiveProtos = {
                 Number: {},
                 Date: {}
             };
-            V.Number.toLocaleString = function() {
+            J.Number.toLocaleString = function() {
                 if ("[object Number]" !== Object.prototype.toString.call(this)) throw TypeError("`this` value must be a number for Number.prototype.toLocaleString()");
                 return N(new H(arguments[0], arguments[1]), this)
-            }, V.Date.toLocaleString = function() {
+            }, J.Date.toLocaleString = function() {
                 if ("[object Date]" !== Object.prototype.toString.call(this)) throw TypeError("`this` value must be a Date instance for Date.prototype.toLocaleString()");
                 var e = +this;
                 if (isNaN(e)) return "Invalid Date";
                 var t = arguments[0],
                     n = arguments[1],
-                    n = U(n, "any", "all");
-                return J(new R(t, n), e)
-            }, V.Date.toLocaleDateString = function() {
+                    n = B(n, "any", "all");
+                return V(new R(t, n), e)
+            }, J.Date.toLocaleDateString = function() {
                 if ("[object Date]" !== Object.prototype.toString.call(this)) throw TypeError("`this` value must be a Date instance for Date.prototype.toLocaleDateString()");
                 var e = +this;
                 if (isNaN(e)) return "Invalid Date";
                 var t = arguments[0],
                     n = arguments[1],
-                    n = U(n, "date", "date");
-                return J(new R(t, n), e)
-            }, V.Date.toLocaleTimeString = function() {
+                    n = B(n, "date", "date");
+                return V(new R(t, n), e)
+            }, J.Date.toLocaleTimeString = function() {
                 if ("[object Date]" !== Object.prototype.toString.call(this)) throw TypeError("`this` value must be a Date instance for Date.prototype.toLocaleTimeString()");
                 var e = +this;
                 if (isNaN(e)) return "Invalid Date";
                 var t = arguments[0],
                     n = arguments[1],
-                    n = U(n, "time", "time");
-                return J(new R(t, n), e)
+                    n = B(n, "time", "time");
+                return V(new R(t, n), e)
             }, l(Intl, "__applyLocaleSensitivePrototypes", {
                 writable: !0,
                 configurable: !0,
@@ -955,15 +955,15 @@
                     for (var e in l(Number.prototype, "toLocaleString", {
                             writable: !0,
                             configurable: !0,
-                            value: V.Number.toLocaleString
+                            value: J.Number.toLocaleString
                         }), l(Date.prototype, "toLocaleString", {
                             writable: !0,
                             configurable: !0,
-                            value: V.Date.toLocaleString
-                        }), V.Date) u.call(V.Date, e) && l(Date.prototype, e, {
+                            value: J.Date.toLocaleString
+                        }), J.Date) u.call(J.Date, e) && l(Date.prototype, e, {
                         writable: !0,
                         configurable: !0,
-                        value: V.Date[e]
+                        value: J.Date[e]
                     })
                 }
             }), l(Intl, "__addLocaleData", {
@@ -974,7 +974,7 @@
                         var n, r = [t],
                             a = t.split("-");
                         for (a.length > 2 && 4 === a[1].length && m.call(r, a[0] + "-" + a[2]); n = _.call(r);) m.call(g.NumberFormat["[[availableLocales]]"], n), g.NumberFormat["[[localeData]]"][n] = e.number, e.date && (e.date.nu = e.number.nu, m.call(g.DateTimeFormat["[[availableLocales]]"], n), g.DateTimeFormat["[[localeData]]"][n] = e.date);
-                        void 0 === o && (o = t), !M && (F(Intl.NumberFormat.prototype), M = !0), e.date && !w && (W(Intl.DateTimeFormat.prototype), w = !0)
+                        void 0 === o && (o = t), !M && (F(Intl.NumberFormat.prototype), M = !0), e.date && !w && (z(Intl.DateTimeFormat.prototype), w = !0)
                     })(e, e.locale)
                 }
             });

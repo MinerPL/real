@@ -13429,7 +13429,7 @@
             let o = /rgba?\((\d{1,3}), ?(\d{1,3}), ?(\d{1,3})\)?(?:, ?(\d(?:\.\d*)?)\))?/;
 
             function R(_) {
-                return 1 == _.length ? "0".concat(_) : _
+                return 1 === _.length ? "0".concat(_) : _
             }
 
             function t(_) {

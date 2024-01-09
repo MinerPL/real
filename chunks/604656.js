@@ -1,26 +1,26 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return d
                 }
             });
             var a = n("37983");
             n("884691");
             var l = n("77078"),
-                s = n("263024"),
-                i = n("300322"),
+                i = n("263024"),
+                u = n("300322"),
                 r = n("49111"),
-                u = n("782340");
+                s = n("782340");
 
-            function o(e) {
+            function d(e) {
                 var t, n;
-                let o = (0, i.useIsThreadModerator)(e);
-                if (!o || e.type !== r.ChannelTypes.PRIVATE_THREAD) return null;
-                let d = null === (n = null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.invitable) || void 0 === n || n;
+                let d = (0, u.useIsThreadModerator)(e);
+                if (!d || e.type !== r.ChannelTypes.PRIVATE_THREAD) return null;
+                let o = null === (n = null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.invitable) || void 0 === n || n;
                 return (0, a.jsx)(l.MenuCheckboxItem, {
                     id: "toggle-thread-invitable",
-                    label: u.default.Messages.THREAD_INVITABLE_TOGGLE_LABEL,
-                    checked: d,
-                    action: () => s.default.setInvitable(e, !d)
+                    label: s.default.Messages.THREAD_INVITABLE_TOGGLE_LABEL,
+                    checked: o,
+                    action: () => i.default.setInvitable(e, !o)
                 })
             }

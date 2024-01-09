@@ -53,8 +53,8 @@
                     S = T.state,
                     Y = T.styles,
                     x = T.forceUpdate,
-                    E = T.update,
-                    O = r.useMemo(function() {
+                    O = T.update,
+                    E = r.useMemo(function() {
                         return {
                             ref: M,
                             style: Y.popper,
@@ -66,8 +66,8 @@
                                 ref: L
                             },
                             forceUpdate: x || s,
-                            update: E || u
+                            update: O || u
                         }
-                    }, [M, L, n, S, Y, E, x]);
-                return (0, o.unwrapArray)(y)(O)
+                    }, [M, L, n, S, Y, O, x]);
+                return (0, o.unwrapArray)(y)(E)
             }

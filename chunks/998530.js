@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return h
+                    return _
                 }
             });
             var l = n("37983");
@@ -18,14 +18,14 @@
             var f = n("49111"),
                 E = n("782340");
 
-            function _(e) {
+            function h(e) {
                 let {
                     closePopout: t,
                     onSelect: n
                 } = e, u = (0, a.useStateFromStores)([r.default, o.default], () => r.default.getChannel(o.default.getChannelId())), {
                     everyoneFilter: d,
-                    roleFilter: _,
-                    guildFilter: h
+                    roleFilter: h,
+                    guildFilter: _
                 } = (0, a.useStateFromStoresObject)([c.default], () => {
                     let {
                         everyoneFilter: e,
@@ -57,24 +57,24 @@
                         label: E.default.Messages.RECENT_MENTIONS_FILTER_ROLES,
                         action: function() {
                             i.default.setGuildFilter({
-                                roleFilter: !_
+                                roleFilter: !h
                             })
                         },
-                        checked: _
+                        checked: h
                     }), null == u || u.isPrivate() ? null : (0, l.jsx)(s.MenuCheckboxItem, {
                         id: "All Servers",
                         label: E.default.Messages.RECENT_MENTIONS_FILTER_ALL_SERVERS,
                         action: function() {
                             i.default.setGuildFilter({
-                                guildFilter: h === f.RecentMentionsFilters.THIS_SERVER ? f.RecentMentionsFilters.ALL_SERVERS : f.RecentMentionsFilters.THIS_SERVER
+                                guildFilter: _ === f.RecentMentionsFilters.THIS_SERVER ? f.RecentMentionsFilters.ALL_SERVERS : f.RecentMentionsFilters.THIS_SERVER
                             })
                         },
-                        checked: h === f.RecentMentionsFilters.ALL_SERVERS
+                        checked: _ === f.RecentMentionsFilters.ALL_SERVERS
                     })]
                 })
             }
 
-            function h() {
+            function _() {
                 return (0, l.jsx)(s.Popout, {
                     align: "right",
                     animation: s.Popout.Animation.NONE,
@@ -83,7 +83,7 @@
                         let {
                             closePopout: t
                         } = e;
-                        return (0, l.jsx)(_, {
+                        return (0, l.jsx)(h, {
                             closePopout: t
                         })
                     },

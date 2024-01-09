@@ -22,8 +22,8 @@
                 m = n("374014"),
                 E = n("223913"),
                 C = n("506885"),
-                g = n("981601"),
-                S = n("373469"),
+                S = n("981601"),
+                g = n("373469"),
                 _ = n("305961"),
                 I = n("957255"),
                 T = n("800762"),
@@ -57,7 +57,7 @@
                             guildId: s.guild_id,
                             channelId: s.id
                         }),
-                        renderPopout: e => (0, a.jsx)(g.default, {
+                        renderPopout: e => (0, a.jsx)(S.default, {
                             ...e,
                             guildId: i,
                             channelId: s.id,
@@ -94,11 +94,11 @@
                         onContextMenu: f,
                         inPopout: C
                     } = e, {
-                        reducedMotion: g
+                        reducedMotion: S
                     } = l.useContext(u.AccessibilityPreferencesContext), {
                         id: x,
                         blocked: O
-                    } = t, y = (0, r.useStateFromStoresArray)([S.default], () => S.default.getAllActiveStreams(), []), {
+                    } = t, y = (0, r.useStateFromStoresArray)([g.default], () => g.default.getAllActiveStreams(), []), {
                         selectedParticipant: b,
                         largeStream: P
                     } = (0, r.useStateFromStoresObject)([h.default], () => ({
@@ -127,7 +127,7 @@
                         onClick: D,
                         onContextMenu: f,
                         paused: !1,
-                        pulseSpeakingIndicator: !g.enabled,
+                        pulseSpeakingIndicator: !S.enabled,
                         width: i,
                         children: d && n.type === R.ParticipantTypes.USER && (0, a.jsx)(A.default, {})
                     }, x)
@@ -182,9 +182,9 @@
                                 })
                         }
                     },
-                    g = m.type === R.ParticipantTypes.USER && !(null === (t = m.voiceState) || void 0 === t ? void 0 : t.selfVideo);
+                    S = m.type === R.ParticipantTypes.USER && !(null === (t = m.voiceState) || void 0 === t ? void 0 : t.selfVideo);
                 return (0, a.jsx)(a.Fragment, {
-                    children: g ? (0, a.jsx)(O, {
+                    children: S ? (0, a.jsx)(O, {
                         stageParticipant: l,
                         rtcParticipant: m,
                         channel: s,

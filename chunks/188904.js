@@ -75,16 +75,16 @@
                     return (t /= r / 2) < 1 ? -u / 2 * (Math.sqrt(1 - t * t) - 1) + n : u / 2 * (Math.sqrt(1 - (t -= 2) * t) + 1) + n
                 },
                 easeInElastic: function(t, n, e, r) {
-                    var u, o, a, i = e - n;
-                    return (a = 1.70158, o = 0, u = i, 0 === t) ? n : 1 == (t /= r) ? n + i : (!o && (o = .3 * r), u < Math.abs(i) ? (u = i, a = o / 4) : a = o / (2 * Math.PI) * Math.asin(i / u), -(u * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * r - a) * (2 * Math.PI) / o)) + n)
+                    var u, o, i, a = e - n;
+                    return (i = 1.70158, o = 0, u = a, 0 === t) ? n : 1 == (t /= r) ? n + a : (!o && (o = .3 * r), u < Math.abs(a) ? (u = a, i = o / 4) : i = o / (2 * Math.PI) * Math.asin(a / u), -(u * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * r - i) * (2 * Math.PI) / o)) + n)
                 },
                 easeOutElastic: function(t, n, e, r) {
-                    var u, o, a, i = e - n;
-                    return (a = 1.70158, o = 0, u = i, 0 === t) ? n : 1 == (t /= r) ? n + i : (!o && (o = .3 * r), u < Math.abs(i) ? (u = i, a = o / 4) : a = o / (2 * Math.PI) * Math.asin(i / u), u * Math.pow(2, -10 * t) * Math.sin((t * r - a) * (2 * Math.PI) / o) + i + n)
+                    var u, o, i, a = e - n;
+                    return (i = 1.70158, o = 0, u = a, 0 === t) ? n : 1 == (t /= r) ? n + a : (!o && (o = .3 * r), u < Math.abs(a) ? (u = a, i = o / 4) : i = o / (2 * Math.PI) * Math.asin(a / u), u * Math.pow(2, -10 * t) * Math.sin((t * r - i) * (2 * Math.PI) / o) + a + n)
                 },
                 easeInOutElastic: function(t, n, e, r) {
-                    var u, o, a, i = e - n;
-                    return (a = 1.70158, o = 0, u = i, 0 === t) ? n : 2 == (t /= r / 2) ? n + i : (!o && (o = r * (.3 * 1.5)), u < Math.abs(i) ? (u = i, a = o / 4) : a = o / (2 * Math.PI) * Math.asin(i / u), t < 1) ? -.5 * (u * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * r - a) * (2 * Math.PI) / o)) + n : u * Math.pow(2, -10 * (t -= 1)) * Math.sin((t * r - a) * (2 * Math.PI) / o) * .5 + i + n
+                    var u, o, i, a = e - n;
+                    return (i = 1.70158, o = 0, u = a, 0 === t) ? n : 2 == (t /= r / 2) ? n + a : (!o && (o = r * (.3 * 1.5)), u < Math.abs(a) ? (u = a, i = o / 4) : i = o / (2 * Math.PI) * Math.asin(a / u), t < 1) ? -.5 * (u * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * r - i) * (2 * Math.PI) / o)) + n : u * Math.pow(2, -10 * (t -= 1)) * Math.sin((t * r - i) * (2 * Math.PI) / o) * .5 + a + n
                 },
                 easeInBack: function(t, n, e, r, u) {
                     return void 0 === u && (u = 1.70158), (e - n) * (t /= r) * t * ((u + 1) * t - u) + n
@@ -97,8 +97,8 @@
                     return (void 0 === u && (u = 1.70158), (t /= r / 2) < 1) ? o / 2 * (t * t * (((u *= 1.525) + 1) * t - u)) + n : o / 2 * ((t -= 2) * t * (((u *= 1.525) + 1) * t + u) + 2) + n
                 },
                 easeInBounce: function(t, n, e, u) {
-                    var o, a = e - n;
-                    return o = r.easeOutBounce(u - t, 0, a, u), a - o + n
+                    var o, i = e - n;
+                    return o = r.easeOutBounce(u - t, 0, i, u), i - o + n
                 },
                 easeOutBounce: function(t, n, e, r) {
                     var u = e - n;
@@ -108,8 +108,8 @@
                     else return u * (7.5625 * (t -= 2.625 / 2.75) * t + .984375) + n
                 },
                 easeInOutBounce: function(t, n, e, u) {
-                    var o, a = e - n;
-                    return t < u / 2 ? .5 * (o = r.easeInBounce(2 * t, 0, a, u)) + n : .5 * (o = r.easeOutBounce(2 * t - u, 0, a, u)) + .5 * a + n
+                    var o, i = e - n;
+                    return t < u / 2 ? .5 * (o = r.easeInBounce(2 * t, 0, i, u)) + n : .5 * (o = r.easeOutBounce(2 * t - u, 0, i, u)) + .5 * i + n
                 }
             };
             t.exports = r

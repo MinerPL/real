@@ -1,30 +1,30 @@
             "use strict";
-            A.r(t), A.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return c
+                    return f
                 }
             });
-            var a = A("917351"),
-                l = A.n(a),
-                n = A("270926"),
-                r = A("888198"),
-                s = A("367376");
-            let o = l.omit(r.default.RULES, ["codeBlock", "heading"]),
-                i = {
-                    ...n.default,
-                    parse: function(e, t, A) {
+            var a = n("917351"),
+                s = n.n(a),
+                l = n("270926"),
+                i = n("888198"),
+                r = n("367376");
+            let o = s.omit(i.default.RULES, ["codeBlock", "heading"]),
+                u = {
+                    ...l.default,
+                    parse: function(e, t, n) {
                         var a;
-                        let l = n.default.parse(e, t, A),
-                            r = null !== (a = A.initialHeaderLevel) && void 0 !== a ? a : 3,
-                            s = Math.min(6, r + l.level);
+                        let s = l.default.parse(e, t, n),
+                            i = null !== (a = n.initialHeaderLevel) && void 0 !== a ? a : 3,
+                            r = Math.min(6, i + s.level);
                         return {
-                            ...l,
-                            level: s
+                            ...s,
+                            level: r
                         }
                     }
                 },
-                d = s.default.combineAndInjectMentionRule(o, [s.default.createReactRules(s.default.defaultReactRuleOptions), {
-                    header: i
+                d = r.default.combineAndInjectMentionRule(o, [r.default.createReactRules(r.default.defaultReactRuleOptions), {
+                    header: u
                 }]),
-                u = s.default.reactParserFor(d);
-            var c = u
+                c = r.default.reactParserFor(d);
+            var f = c

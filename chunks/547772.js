@@ -20,14 +20,14 @@
                     onSelect: d,
                     navId: c,
                     label: f
-                } = e, E = (0, s.default)(t, "Notifications Bell"), _ = (0, i.default)(t), h = (0, o.useThreadNotificationSetting)(t);
+                } = e, E = (0, s.default)(t, "Notifications Bell"), h = (0, i.default)(t), _ = (0, o.useThreadNotificationSetting)(t);
                 return (0, l.jsxs)(a.Menu, {
                     navId: c,
                     onClose: n,
                     "aria-label": f,
                     onSelect: d,
                     children: [(0, l.jsxs)(a.MenuGroup, {
-                        children: [t.isForumPost() ? E : null, _]
+                        children: [t.isForumPost() ? E : null, h]
                     }), (0, l.jsx)(a.MenuGroup, {
                         children: (0, u.getThreadNotificationOptions)().map(e => {
                             let {
@@ -41,7 +41,7 @@
                                 action: () => r.default.setNotificationSettings(t, {
                                     flags: n
                                 }),
-                                checked: n === h
+                                checked: n === _
                             }, n)
                         })
                     })]

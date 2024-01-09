@@ -11,8 +11,8 @@
                 s = A("77078"),
                 o = A("476765"),
                 i = A("952479"),
-                d = A("867544"),
-                u = A("782340"),
+                u = A("867544"),
+                d = A("782340"),
                 c = A("972623");
 
             function f(e) {
@@ -35,12 +35,12 @@
                         children: [(0, a.jsx)(s.Heading, {
                             variant: "text-sm/semibold",
                             color: "header-primary",
-                            children: n ? u.default.Messages.GUILD_PRODUCT_UNPUBLISH_TITLE : u.default.Messages.GUILD_PRODUCT_PUBLISH_TITLE
+                            children: n ? d.default.Messages.GUILD_PRODUCT_UNPUBLISH_TITLE : d.default.Messages.GUILD_PRODUCT_PUBLISH_TITLE
                         }), (0, a.jsx)(s.Text, {
                             id: g,
                             variant: "text-sm/normal",
                             color: "text-normal",
-                            children: n ? u.default.Messages.GUILD_PRODUCT_UNPUBLISH_DESCRIPTION : u.default.Messages.GUILD_PRODUCT_PUBLISH_DESCRIPTION
+                            children: n ? d.default.Messages.GUILD_PRODUCT_UNPUBLISH_DESCRIPTION : d.default.Messages.GUILD_PRODUCT_PUBLISH_DESCRIPTION
                         })]
                     }), (0, a.jsx)(s.Tooltip, {
                         text: t ? A : void 0,
@@ -58,7 +58,7 @@
                             grow: !1,
                             onClick: t ? void 0 : C,
                             submitting: f,
-                            children: [n ? u.default.Messages.GUILD_PRODUCT_EDIT_MODAL_UNPUBLISH_BUTTON : u.default.Messages.GUILD_PRODUCT_EDIT_MODAL_PUBLISH_BUTTON, n ? (0, a.jsx)(d.default, {
+                            children: [n ? d.default.Messages.GUILD_PRODUCT_EDIT_MODAL_UNPUBLISH_BUTTON : d.default.Messages.GUILD_PRODUCT_EDIT_MODAL_PUBLISH_BUTTON, n ? (0, a.jsx)(u.default, {
                                 className: c.buttonIcon,
                                 color: "currentColor",
                                 foregroundColor: "currentColor"

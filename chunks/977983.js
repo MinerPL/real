@@ -22,16 +22,16 @@
                 var t, n;
                 let {
                     channel: m
-                } = e, E = (0, o.useCanManageChannel)(m), C = (0, l.useStateFromStores)([s.default], () => s.default.hasHidden(m.id)), g = (0, d.isOnboardingDismissed)(m.id), {
-                    sortOrder: S,
+                } = e, E = (0, o.useCanManageChannel)(m), C = (0, l.useStateFromStores)([s.default], () => s.default.hasHidden(m.id)), S = (0, d.isOnboardingDismissed)(m.id), {
+                    sortOrder: g,
                     tagFilter: _
                 } = (0, u.useForumChannelStore)(m.id), I = (0, l.useStateFromStores)([r.default, c.default], () => {
-                    let e = r.default.getThreadIds(m.id, S, _);
+                    let e = r.default.getThreadIds(m.id, g, _);
                     if (e.length > 0) return !0;
-                    let t = c.default.getThreads(m.id, S, _);
+                    let t = c.default.getThreads(m.id, g, _);
                     return !!(t.length > 0) || !1
-                }, [m.id, S, _]), T = m.isMediaChannel();
-                if (!E || g || T && I) return null;
+                }, [m.id, g, _]), T = m.isMediaChannel();
+                if (!E || S || T && I) return null;
                 let v = (t = C, n = T, t ? n ? p.default.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_SHOW : p.default.Messages.FORUM_CHANNEL_ONBOARDING_SHOW : n ? p.default.Messages.MEDIA_CHANNEL_ADMIN_EDUCATION_HIDE : p.default.Messages.FORUM_CHANNEL_ONBOARDING_HIDE);
                 return (0, a.jsx)(h.Icon, {
                     tooltip: v,

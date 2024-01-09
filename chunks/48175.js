@@ -12,8 +12,8 @@
                 s = A("414456"),
                 o = A.n(s),
                 i = A("627445"),
-                d = A.n(i),
-                u = A("171210"),
+                u = A.n(i),
+                d = A("171210"),
                 c = A("65597"),
                 f = A("266491"),
                 C = A("77078"),
@@ -37,8 +37,8 @@
                 V = A("866190"),
                 j = A("949435"),
                 b = A("565559"),
-                M = A("757515"),
-                S = A("740259"),
+                S = A("757515"),
+                M = A("740259"),
                 F = A("492724"),
                 _ = A("155539"),
                 G = A("959875"),
@@ -47,8 +47,8 @@
                 W = A("795785"),
                 X = A("850861"),
                 z = A("570114"),
-                Q = A("307785"),
-                y = A("49111"),
+                y = A("307785"),
+                Q = A("49111"),
                 Z = A("988268"),
                 H = A("782340"),
                 w = A("496848");
@@ -107,9 +107,9 @@
                     setPriceTier: a
                 } = e, {
                     priceTiers: l
-                } = (0, p.usePriceTiers)(t, y.PriceTierTypes.GUILD_PRODUCTS), s = r.useMemo(() => (null != l ? l : null != A ? [A] : []).map(e => ({
+                } = (0, p.usePriceTiers)(t, Q.PriceTierTypes.GUILD_PRODUCTS), s = r.useMemo(() => (null != l ? l : null != A ? [A] : []).map(e => ({
                     value: e,
-                    label: (0, D.formatPrice)(e, y.CurrencyCodes.USD)
+                    label: (0, D.formatPrice)(e, Q.CurrencyCodes.USD)
                 })), [l, A]);
                 return (0, n.jsx)(C.SearchableSelect, {
                     value: A,
@@ -131,29 +131,29 @@
                     onClose: el
                 } = e, [en, er] = r.useState(ee), es = (0, c.default)([b.default], () => null == en ? null : b.default.getGuildProduct(en), [en]), eo = (null == es ? void 0 : es.published) === !0, {
                     application: ei
-                } = (0, m.default)(R, Z.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS), ed = S.PRODUCT_IMAGE_PRESETS[0], eu = (0, c.default)([T.default], () => T.default.useReducedMotion), ec = E.GifAutoPlay.useSetting(), ef = (0, V.useIsWindowFocused)(), eC = r.useCallback(() => {
+                } = (0, m.default)(R, Z.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS), eu = M.PRODUCT_IMAGE_PRESETS[0], ed = (0, c.default)([T.default], () => T.default.useReducedMotion), ec = E.GifAutoPlay.useSetting(), ef = (0, V.useIsWindowFocused)(), eC = r.useCallback(() => {
                     var e;
-                    return (null == es ? void 0 : null === (e = es.image_asset) || void 0 === e ? void 0 : e.application_id) == null ? ed.data : (0, P.getAssetURL)(es.image_asset.application_id, es.image_asset, 600, ef && ec ? void 0 : "webp")
-                }, [ed, es, ef, ec]), {
+                    return (null == es ? void 0 : null === (e = es.image_asset) || void 0 === e ? void 0 : e.application_id) == null ? eu.data : (0, P.getAssetURL)(es.image_asset.application_id, es.image_asset, 600, ef && ec ? void 0 : "webp")
+                }, [eu, es, ef, ec]), {
                     shouldRestrictUpdatingCreatorMonetizationSettings: eg
                 } = (0, I.useShouldRestrictUpdatingCreatorMonetizationSettings)(R);
                 r.useEffect(() => {
                     eg && (el(), (0, K.openErrorDialog)(H.default.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_TITLE, H.default.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_BODY))
                 }, [eg, el]);
-                let [eh, eT] = r.useState(null !== (l = null == es ? void 0 : es.name) && void 0 !== l ? l : ""), [em, ep] = r.useState(null !== (s = null == es ? void 0 : es.description) && void 0 !== s ? s : ""), [eU, eI] = r.useState(null !== (o = null == es ? void 0 : es.price_tier) && void 0 !== o ? o : void 0), [ev, eE] = r.useState(eC), [ex, eN] = r.useState(null !== (i = null == es ? void 0 : null === (t = es.image_asset) || void 0 === t ? void 0 : t.filename) && void 0 !== i ? i : ed.name), [eq, eO] = r.useState(!1), [eR, eL] = r.useState(), eD = r.useMemo(() => null != eU ? (0, D.formatPrice)(eU, y.CurrencyCodes.USD) : void 0, [eU]), [eP, eV] = r.useState(!0), {
+                let [eh, eT] = r.useState(null !== (l = null == es ? void 0 : es.name) && void 0 !== l ? l : ""), [em, ep] = r.useState(null !== (s = null == es ? void 0 : es.description) && void 0 !== s ? s : ""), [eU, eI] = r.useState(null !== (o = null == es ? void 0 : es.price_tier) && void 0 !== o ? o : void 0), [ev, eE] = r.useState(eC), [ex, eN] = r.useState(null !== (i = null == es ? void 0 : null === (t = es.image_asset) || void 0 === t ? void 0 : t.filename) && void 0 !== i ? i : eu.name), [eq, eO] = r.useState(!1), [eR, eL] = r.useState(), eD = r.useMemo(() => null != eU ? (0, D.formatPrice)(eU, Q.CurrencyCodes.USD) : void 0, [eU]), [eP, eV] = r.useState(!0), {
                     changesSaving: ej,
                     saveError: eb,
-                    saveProductWithAttachments: eM,
-                    hasUnsavedAttachmentChanges: eS,
+                    saveProductWithAttachments: eS,
+                    hasUnsavedAttachmentChanges: eM,
                     cancelUnusedUploads: eF
-                } = (0, j.useGuildProductAttachmentManagerContext)(), e_ = (null == es ? void 0 : es.attachments) != null && (null == es ? void 0 : es.attachments.length) > 0, eG = null != eb ? eb : eR, eK = null != ej && "published" in ej, eB = null != ej && !eK, eW = null !== (p = null == es ? void 0 : es.role_id) && void 0 !== p ? p : null, [eX, ez] = r.useState(), eQ = null != eX || null != eW, ey = (0, c.default)([x.default], () => {
+                } = (0, j.useGuildProductAttachmentManagerContext)(), e_ = (null == es ? void 0 : es.attachments) != null && (null == es ? void 0 : es.attachments.length) > 0, eG = null != eb ? eb : eR, eK = null != ej && "published" in ej, eB = null != ej && !eK, eW = null !== (p = null == es ? void 0 : es.role_id) && void 0 !== p ? p : null, [eX, ez] = r.useState(), ey = null != eX || null != eW, eQ = (0, c.default)([x.default], () => {
                     if (null != eW && null !== eX) {
                         let e = x.default.getGuild(R);
                         return null == e ? void 0 : e.roles[eW]
                     }
                     return null != eX ? eX : void 0
                 }, [eX, eW, R]), eZ = "";
-                eQ && eP ? eZ = H.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE : eQ ? eZ = H.default.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE : eP && (eZ = H.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE);
+                ey && eP ? eZ = H.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE : ey ? eZ = H.default.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE : eP && (eZ = H.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE);
                 let eH = () => {
                         eV(!1), eF()
                     },
@@ -164,7 +164,7 @@
                         canSaveForDraft: e$,
                         canSaveForPublished: e0,
                         canPublishOrUnpublish: e1
-                    } = r.useMemo(() => (0, M.computeProductChanges)({
+                    } = r.useMemo(() => (0, S.computeProductChanges)({
                         guildProductListing: es,
                         name: eh,
                         priceTier: eU,
@@ -174,16 +174,16 @@
                         isImageChanged: eq,
                         newRoleParams: eX,
                         hasSavedAttachments: e_,
-                        hasUnsavedAttachmentChanges: eS
-                    }), [es, eh, eU, em, ev, ex, eq, eX, e_, eS]),
+                        hasUnsavedAttachmentChanges: eM
+                    }), [es, eh, eU, em, ev, ex, eq, eX, e_, eM]),
                     e6 = r.useMemo(() => eJ || null == ew || "publish" === ew || null != eG ? null : (0, n.jsx)(q.default, {
                         className: w.successNotice,
                         children: (0, n.jsx)(h.default, {
                             message: (0, n.jsxs)("div", {
                                 className: w.successNoticeMessage,
                                 children: [(0, n.jsx)(L.default, {
-                                    color: u.default.BUTTON_POSITIVE_BACKGROUND,
-                                    backgroundColor: u.default.WHITE
+                                    color: d.default.BUTTON_POSITIVE_BACKGROUND,
+                                    backgroundColor: d.default.WHITE
                                 }), (0, n.jsx)(C.Text, {
                                     variant: "text-md/medium",
                                     children: "draft" === ew ? H.default.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_SAVE_DRAFT_SUCCESS : "update_publish" === ew ? H.default.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_MODAL_UPDATE_PUBLISH_SUCCESS : H.default.Messages.GUILD_PRODUCT_EDIT_NOTICE_BAR_MODAL_UNPUBLISH_SUCCESS
@@ -205,22 +205,22 @@
                         }) : el()
                     }, [el, eJ]);
                 r.useEffect(() => {
-                    (0, C.updateModal)(Q.GUILD_PRODUCT_EDIT_MODAL_KEY, e => (0, n.jsx)(ea, {
+                    (0, C.updateModal)(y.GUILD_PRODUCT_EDIT_MODAL_KEY, e => (0, n.jsx)(ea, {
                         guildId: R,
                         productId: en,
                         ...e
                     }), e3)
                 }, [R, e3, en]);
                 let e9 = async e => {
-                    let t = (0, M.describeProductChangeValidation)({
+                    let t = (0, S.describeProductChangeValidation)({
                         newRoleParams: eX
                     });
                     if (eL(t), null != t) return;
-                    let A = await eM(e);
+                    let A = await eS(e);
                     if (eO(!1), null != A) {
                         if (null != e.name && eT(A.name), null != e.description && ep(A.description), null != eX) {
                             let e = A.role_id;
-                            d(null != e, "Cannot update role without role ID"), await g.default.updateRole(R, e, eX)
+                            u(null != e, "Cannot update role without role ID"), await g.default.updateRole(R, e, eX)
                         }
                         ez(void 0), er(A.id), "published" in e && !0 === e.published && el()
                     }
@@ -296,7 +296,7 @@
                                         maxLength: 1500,
                                         placeholder: H.default.Messages.GUILD_PRODUCT_EDIT_MODAL_DESCRIPTION_PLACEHOLDER,
                                         showCharacterCount: em.length > 0,
-                                        parentModalKey: Q.GUILD_PRODUCT_EDIT_MODAL_KEY,
+                                        parentModalKey: y.GUILD_PRODUCT_EDIT_MODAL_KEY,
                                         required: !0
                                     })
                                 }), (0, n.jsx)(C.FormItem, {
@@ -320,7 +320,7 @@
                                     }), (0, n.jsx)(O.default, {
                                         size: 10
                                     }), (0, n.jsx)(W.default, {
-                                        presetImages: S.PRODUCT_IMAGE_PRESETS,
+                                        presetImages: M.PRODUCT_IMAGE_PRESETS,
                                         radioGroupAriaLabel: H.default.Messages.GUILD_PRODUCT_EDIT_MODAL_THUMBNAIL_RADIO_GROUP_ARIA_LABEL,
                                         image: ev,
                                         imageName: ex,
@@ -344,8 +344,8 @@
                                             })
                                         }
                                     })
-                                }) : null, eQ ? (0, n.jsx)(z.default, {
-                                    error: null !== (v = null == eG ? void 0 : eG.getFirstFieldErrorMessage(M.ROLE_FIELD_NAME)) && void 0 !== v ? v : void 0,
+                                }) : null, ey ? (0, n.jsx)(z.default, {
+                                    error: null !== (v = null == eG ? void 0 : eG.getFirstFieldErrorMessage(S.ROLE_FIELD_NAME)) && void 0 !== v ? v : void 0,
                                     newRoleParams: eX,
                                     setNewRoleParams: ez,
                                     guildId: R,
@@ -363,7 +363,7 @@
                                     disabledTooltip: eo ? H.default.Messages.GUILD_PRODUCT_UNPUBLISH_REQUIRES_SAVE : H.default.Messages.GUILD_PRODUCT_PUBLISH_REQUIRES_SAVE,
                                     published: eo,
                                     onClick: () => {
-                                        d(e1, "Attempting to publish/unpublish when not allowed"), ek(eo ? "unpublish" : "publish"), e9({
+                                        u(e1, "Attempting to publish/unpublish when not allowed"), ek(eo ? "unpublish" : "publish"), e9({
                                             ...eY,
                                             published: !eo
                                         })
@@ -389,11 +389,11 @@
                                     name: "" === eh ? H.default.Messages.GUILD_PRODUCT_CARD_EMPTY_NAME : eh,
                                     description: "" === em ? H.default.Messages.GUILD_PRODUCT_CARD_EMPTY_DESCRIPTION : em,
                                     formattedPrice: eD,
-                                    role: ey,
+                                    role: eQ,
                                     productType: eZ,
                                     ctaComponent: (0, n.jsx)(N.default, {
                                         shineSize: N.default.ShineSizes.SMALL,
-                                        pauseAnimation: eu || !ef,
+                                        pauseAnimation: ed || !ef,
                                         className: w.productPreviewCtaButton,
                                         children: H.default.Messages.GUILD_PRODUCT_CARD_PURCHASE_BUTTON
                                     }),
@@ -409,7 +409,7 @@
                                 className: w.footerActionLeftButtons,
                                 children: [(0, n.jsx)($, {
                                     text: H.default.Messages.GUILD_PRODUCT_SETTINGS_INCLUDE_ROLE_TOGGLE_LABEL,
-                                    value: eQ,
+                                    value: ey,
                                     onChange: e => {
                                         e ? ez((0, z.getInitialNewRoleParams)()) : ez(void 0)
                                     },
@@ -419,7 +419,7 @@
                                     text: H.default.Messages.GUILD_PRODUCT_SETTINGS_INCLUDE_ATTACHMENTS_TOGGLE_LABEL,
                                     value: eP,
                                     onChange: e => {
-                                        e ? eV(!0) : eS ? (0, C.openModalLazy)(async () => {
+                                        e ? eV(!0) : eM ? (0, C.openModalLazy)(async () => {
                                             let {
                                                 ConfirmModal: e
                                             } = await A.el("77078").then(A.bind(A, "77078"));
@@ -445,7 +445,7 @@
                                     disabled: !e0,
                                     submitting: eB,
                                     onClick: () => {
-                                        d(e0, "cannot save changes for published product without adding all fields"), ek("update_publish"), e9(eY)
+                                        u(e0, "cannot save changes for published product without adding all fields"), ek("update_publish"), e9(eY)
                                     },
                                     children: H.default.Messages.GUILD_PRODUCT_EDIT_MODAL_SAVE_CHANGES_BUTTON
                                 }) : (0, n.jsx)(n.Fragment, {
@@ -454,7 +454,7 @@
                                         disabled: !e$,
                                         submitting: eB,
                                         onClick: () => {
-                                            d(e$, "cannot save changes without name or price tier"), ek("draft"), e9(eY)
+                                            u(e$, "cannot save changes without name or price tier"), ek("draft"), e9(eY)
                                         },
                                         children: H.default.Messages.GUILD_PRODUCT_EDIT_MODAL_SAVE_DRAFT_BUTTON
                                     })
@@ -474,7 +474,7 @@
                 return (0, n.jsx)(j.GuildProductAttachmentManagerContextProvider, {
                     guildId: e.guildId,
                     editSkuId: null !== (t = e.productId) && void 0 !== t ? t : void 0,
-                    onFileSizeError: () => (0, v.default)(Q.MAX_ATTACHMENT_UPLOAD_FILESIZE_BYTES),
+                    onFileSizeError: () => (0, v.default)(y.MAX_ATTACHMENT_UPLOAD_FILESIZE_BYTES),
                     children: (0, n.jsx)(eA, {
                         ...e
                     })

@@ -44,7 +44,7 @@
                 }(e, t);
                 if (ArrayBuffer.isView(e)) return d(e);
                 if (null == e) throw TypeError("The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type " + typeof e);
-                if (O(e, ArrayBuffer) || e && O(e.buffer, ArrayBuffer) || "undefined" != typeof SharedArrayBuffer && (O(e, SharedArrayBuffer) || e && O(e.buffer, SharedArrayBuffer))) return f(e, t, n);
+                if (E(e, ArrayBuffer) || e && E(e.buffer, ArrayBuffer) || "undefined" != typeof SharedArrayBuffer && (E(e, SharedArrayBuffer) || e && E(e.buffer, SharedArrayBuffer))) return f(e, t, n);
                 if ("number" == typeof e) throw TypeError('The "value" argument must not be of type number. Received type number');
                 var r = e.valueOf && e.valueOf();
                 if (null != r && r !== e) return s.from(r, t, n);
@@ -111,7 +111,7 @@
 
             function m(e, t) {
                 if (s.isBuffer(e)) return e.length;
-                if (ArrayBuffer.isView(e) || O(e, ArrayBuffer)) return e.byteLength;
+                if (ArrayBuffer.isView(e) || E(e, ArrayBuffer)) return e.byteLength;
                 if ("string" != typeof e) throw TypeError('The "string" argument must be one of type string, Buffer, or ArrayBuffer. Received type ' + typeof e);
                 var n = e.length,
                     r = arguments.length > 2 && !0 === arguments[2];
@@ -242,7 +242,7 @@
             s.isBuffer = function(e) {
                 return null != e && !0 === e._isBuffer && e !== s.prototype
             }, s.compare = function(e, t) {
-                if (O(e, Uint8Array) && (e = s.from(e, e.offset, e.byteLength)), O(t, Uint8Array) && (t = s.from(t, t.offset, t.byteLength)), !s.isBuffer(e) || !s.isBuffer(t)) throw TypeError('The "buf1", "buf2" arguments must be one of type Buffer or Uint8Array');
+                if (E(e, Uint8Array) && (e = s.from(e, e.offset, e.byteLength)), E(t, Uint8Array) && (t = s.from(t, t.offset, t.byteLength)), !s.isBuffer(e) || !s.isBuffer(t)) throw TypeError('The "buf1", "buf2" arguments must be one of type Buffer or Uint8Array');
                 if (e === t) return 0;
                 for (var n = e.length, r = t.length, a = 0, o = Math.min(n, r); a < o; ++a)
                     if (e[a] !== t[a]) {
@@ -275,7 +275,7 @@
                     a = 0;
                 for (n = 0; n < e.length; ++n) {
                     var o = e[n];
-                    if (O(o, Uint8Array) && (o = s.from(o)), !s.isBuffer(o)) throw TypeError('"list" argument must be an Array of Buffers');
+                    if (E(o, Uint8Array) && (o = s.from(o)), !s.isBuffer(o)) throw TypeError('"list" argument must be an Array of Buffers');
                     o.copy(r, a), a += o.length
                 }
                 return r
@@ -305,7 +305,7 @@
                     n = t.INSPECT_MAX_BYTES;
                 return e = this.toString("hex", 0, n).replace(/(.{2})/g, "$1 ").trim(), this.length > n && (e += " ... "), "<Buffer " + e + ">"
             }, o && (s.prototype[o] = s.prototype.inspect), s.prototype.compare = function(e, t, n, r, a) {
-                if (O(e, Uint8Array) && (e = s.from(e, e.offset, e.byteLength)), !s.isBuffer(e)) throw TypeError('The "target" argument must be one of type Buffer or Uint8Array. Received type ' + typeof e);
+                if (E(e, Uint8Array) && (e = s.from(e, e.offset, e.byteLength)), !s.isBuffer(e)) throw TypeError('The "target" argument must be one of type Buffer or Uint8Array. Received type ' + typeof e);
                 if (void 0 === t && (t = 0), void 0 === n && (n = e ? e.length : 0), void 0 === r && (r = 0), void 0 === a && (a = this.length), t < 0 || n > e.length || r < 0 || a > this.length) throw RangeError("out of range index");
                 if (r >= a && t >= n) return 0;
                 if (r >= a) return -1;
@@ -325,7 +325,7 @@
             };
 
             function v(e, t, n, r) {
-                return E(Y(t), e, n, r)
+                return O(Y(t), e, n, r)
             }
             s.prototype.write = function(e, t, n, r) {
                 if (void 0 === t) r = "utf8", n = this.length, t = 0;
@@ -355,25 +355,25 @@
                     case "utf8":
                     case "utf-8":
                         ;
-                        return a = this, o = e, i = t, s = n, E(S(o, a.length - i), a, i, s);
+                        return a = this, o = e, i = t, s = n, O(S(o, a.length - i), a, i, s);
                     case "ascii":
                         ;
-                        return u = this, l = e, c = t, d = n, E(Y(l), u, c, d);
+                        return u = this, l = e, c = t, d = n, O(Y(l), u, c, d);
                     case "latin1":
                     case "binary":
                         return function(e, t, n, r) {
                             var a, o, i, s;
-                            return a = e, o = t, i = n, s = r, E(Y(o), a, i, s)
+                            return a = e, o = t, i = n, s = r, O(Y(o), a, i, s)
                         }(this, e, t, n);
                     case "base64":
                         ;
-                        return f = this, p = e, m = t, h = n, E(x(p), f, m, h);
+                        return f = this, p = e, m = t, h = n, O(x(p), f, m, h);
                     case "ucs2":
                     case "ucs-2":
                     case "utf16le":
                     case "utf-16le":
                         ;
-                        return _ = this, y = e, g = t, v = n, E(function(e, t) {
+                        return _ = this, y = e, g = t, v = n, O(function(e, t) {
                             for (var n, r, a, o = [], i = 0; i < e.length && !((t -= 2) < 0); ++i) r = (n = e.charCodeAt(i)) >> 8, a = n % 256, o.push(a), o.push(r);
                             return o
                         }(y, _.length - g), _, g, v);
@@ -646,12 +646,12 @@
                 }(e))
             }
 
-            function E(e, t, n, r) {
+            function O(e, t, n, r) {
                 for (var a = 0; a < r && !(a + n >= t.length) && !(a >= e.length); ++a) t[a + n] = e[a];
                 return a
             }
 
-            function O(e, t) {
+            function E(e, t) {
                 return e instanceof t || null != e && null != e.constructor && null != e.constructor.name && e.constructor.name === t.name
             }
 
