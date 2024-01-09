@@ -4,9 +4,9 @@
                     return d
                 }
             });
-            var a = n("37983");
+            var s = n("37983");
             n("884691");
-            var s = n("77078"),
+            var a = n("77078"),
                 l = n("450911"),
                 i = n("377114"),
                 r = n("949067"),
@@ -16,7 +16,7 @@
             function d(e) {
                 let {
                     channel: t,
-                    buttonSize: n = s.ButtonSizes.TINY,
+                    buttonSize: n = a.ButtonSizes.TINY,
                     className: d,
                     onReportClick: c,
                     onReportSubmit: f,
@@ -30,10 +30,10 @@
                 let S = () => {
                     null == f || f(), l.default.closePrivateChannel(t.id)
                 };
-                return (0, a.jsx)(s.Button, {
+                return (0, s.jsx)(a.Button, {
                     className: d,
                     size: n,
-                    color: s.Button.Colors.RED,
+                    color: a.Button.Colors.RED,
                     disabled: null == g,
                     onClick: e => {
                         e.stopPropagation(), null == c || c(), null != g && (0, i.showReportModalForFirstDM)(g, S)

@@ -80,15 +80,15 @@
                         x(null), M(0), clearTimeout(v)
                     };
                 if (null == n) return null;
-                let X = H.default.Messages.DIRECT_MESSAGES;
-                A && (X = r.default.get(B.DISCODO_STORAGE_KEY) ? H.default.Messages.DISCODO_ENABLED : H.default.Messages.DISCODO_DISABLED), K.length > 0 && C.default.trackExposure({
+                let Q = H.default.Messages.DIRECT_MESSAGES;
+                A && (Q = r.default.get(B.DISCODO_STORAGE_KEY) ? H.default.Messages.DISCODO_ENABLED : H.default.Messages.DISCODO_DISABLED), K.length > 0 && C.default.trackExposure({
                     location: "home_button"
                 });
-                let Q = null;
-                !t && m ? Q = (0, l.jsx)(d.default, {
+                let X = null;
+                !t && m ? X = (0, l.jsx)(d.default, {
                     className: k.downloadProgress,
                     determineOwnVisibility: !1
-                }) : W && (Q = (0, l.jsx)(O.default, {
+                }) : W && (X = (0, l.jsx)(O.default, {
                     className: k.broadcastBadge
                 }));
                 let q = t || _ || S,
@@ -96,7 +96,7 @@
                         highlight: W,
                         selected: q,
                         lowerBadge: h > 0 ? (0, F.renderMentionBadge)(h) : null,
-                        upperBadge: Q,
+                        upperBadge: X,
                         lowerBadgeWidth: (0, D.getBadgeWidthForValue)(h),
                         children: (0, l.jsx)(b.default, {
                             onMouseEnter: () => T(!0),
@@ -165,7 +165,7 @@
                             }), null != $ ? $ : (0, l.jsx)(w.default, {
                                 color: o.Tooltip.Colors.PRIMARY,
                                 hideOnClick: !0,
-                                text: X,
+                                text: Q,
                                 selected: t,
                                 children: J
                             })]

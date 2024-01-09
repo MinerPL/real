@@ -70,9 +70,9 @@
                     collect: e => ({
                         dragging: e.isDragging()
                     })
-                }), X = a.useCallback(e => {
+                }), Q = a.useCallback(e => {
                     K(e)
-                }, []), Q = a.useCallback(e => {
+                }, []), X = a.useCallback(e => {
                     ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && G()
                 }, [G, d]), q = null != B && "" !== B ? B : null != M && "" !== M ? M : _.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = V.length * (L + v), et = (0, o.useTransition)(!Z && d, {
                     from: {
@@ -117,7 +117,7 @@
                                 onClick: G,
                                 onContextMenu: U,
                                 onHoverChange: k,
-                                onKeyDown: Q,
+                                onKeyDown: X,
                                 treeItemProps: J,
                                 folderIconContent: w
                             })
@@ -125,7 +125,7 @@
                     }), y ? (0, l.jsx)(E.default, {
                         name: q,
                         targetNode: t,
-                        onDragOverChanged: X
+                        onDragOverChanged: Q
                     }) : null]
                 });
                 return (0, l.jsxs)("div", {

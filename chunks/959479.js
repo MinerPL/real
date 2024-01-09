@@ -45,11 +45,11 @@
                 }
             }
 
-            function E(e) {
+            function S(e) {
                 return "auto" === e || null == e ? "auto" : "".concat(e, "px")
             }
 
-            function S(e, t) {
+            function E(e, t) {
                 let n = 0,
                     i = 0;
                 return n = "auto" === t.width ? null != e ? e.clientWidth : 0 : t.width, {
@@ -137,13 +137,13 @@
                     let {
                         width: g,
                         height: m
-                    } = S(n, this.size), E = t - h, y = e - f, C = (0, u.fitFullCoordsToContainer)((0, u.getFullCoordsFromAnchorCoords)({
-                        top: E,
+                    } = E(n, this.size), S = t - h, y = e - f, C = (0, u.fitFullCoordsToContainer)((0, u.getFullCoordsFromAnchorCoords)({
+                        top: S,
                         left: y,
                         bottom: null,
                         right: null
-                    }, a, l, g, m)), N = c ? (0, u.getAnchorCoordsFromFullCoords)(C) : v("RESIZE_SOUTH_EAST", C);
-                    this.setDOMPositions(N), !p && (null != r && r(), this.setState({
+                    }, a, l, g, m)), I = c ? (0, u.getAnchorCoordsFromFullCoords)(C) : v("RESIZE_SOUTH_EAST", C);
+                    this.setDOMPositions(I), !p && (null != r && r(), this.setState({
                         operationStarted: !0
                     })), null != d && d(i, "MOVE", this.anchor, this.size)
                 }
@@ -170,7 +170,7 @@
                         startY: h,
                         offsetWidth: p,
                         offsetHeight: g
-                    } = this.dragState, m = 0, E = 0;
+                    } = this.dragState, m = 0, S = 0;
                     if (null != u) {
                         switch (e = Math.max(Math.min(a, e), s), t = Math.max(Math.min(l, t), o), u) {
                             case "RESIZE_EAST":
@@ -187,14 +187,14 @@
                             case "RESIZE_SOUTH":
                             case "RESIZE_SOUTH_WEST":
                             case "RESIZE_SOUTH_EAST":
-                                E -= h - t;
+                                S -= h - t;
                                 break;
                             case "RESIZE_NORTH":
                             case "RESIZE_NORTH_WEST":
                             case "RESIZE_NORTH_EAST":
-                                E += h - t
+                                S += h - t
                         }
-                        p = Math.max(p + m, i.width), g = Math.max(g + E, i.height), this.setDOMSize({
+                        p = Math.max(p + m, i.width), g = Math.max(g + S, i.height), this.setDOMSize({
                             width: p,
                             height: g
                         }), !c && (null != r && r(), this.setState({
@@ -216,7 +216,7 @@
                         left: n,
                         bottom: i,
                         right: a
-                    }, null != l && (l.style.top = E(t), l.style.bottom = E(i), l.style.left = E(n), l.style.right = E(a))
+                    }, null != l && (l.style.top = S(t), l.style.bottom = S(i), l.style.left = S(n), l.style.right = S(a))
                 }
                 setDOMSize(e) {
                     let {
@@ -228,7 +228,7 @@
                     t = "auto" === this.size.width ? "auto" : t, n = "auto" === this.size.height ? "auto" : n, this.size = {
                         width: t,
                         height: n
-                    }, null != i && (i.style.width = E(t), i.style.height = E(n))
+                    }, null != i && (i.style.width = S(t), i.style.height = S(n))
                 }
                 renderResizeHandles() {
                     let {
@@ -376,7 +376,7 @@
                         let {
                             width: o,
                             height: r
-                        } = S(i, this.size), d = (0, u.getFullCoordsFromAnchorCoords)(this.anchor, l, s, o, r);
+                        } = E(i, this.size), d = (0, u.getFullCoordsFromAnchorCoords)(this.anchor, l, s, o, r);
                         if ("MOVE" === e) {
                             let {
                                 x: e,
@@ -427,7 +427,7 @@
                                 onUpdate: t,
                                 id: n
                             } = this.props;
-                            t(e, n, this.anchor, this.size, S(this.ref.current, this.size))
+                            t(e, n, this.anchor, this.size, E(this.ref.current, this.size))
                         } : void 0;
                         if (t) {
                             let {
@@ -436,7 +436,7 @@
                             } = this.props.container, {
                                 width: i,
                                 height: a
-                            } = S(this.ref.current, this.size), l = (0, u.getFullCoordsFromAnchorCoords)(this.anchor, e, t, i, a), s = (0, u.getAnchorCoordsFromFullCoords)(l);
+                            } = E(this.ref.current, this.size), l = (0, u.getFullCoordsFromAnchorCoords)(this.anchor, e, t, i, a), s = (0, u.getAnchorCoordsFromFullCoords)(l);
                             this.setDOMPositions(s), this.setDOMSize({
                                 width: i,
                                 height: a

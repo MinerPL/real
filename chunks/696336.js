@@ -50,8 +50,8 @@
                 W = n("504957"),
                 Z = n("199218"),
                 z = n("624531"),
-                X = n("785343"),
-                Q = n("22567"),
+                Q = n("785343"),
+                X = n("22567"),
                 q = n("49111"),
                 J = n("782340"),
                 $ = n("5457");
@@ -216,9 +216,9 @@
                                 onScroll: em.handleScroll,
                                 children: [(0, l.jsx)(k.HomeButton, {}), eT ? (0, l.jsx)(T.default, {}) : null, (0, l.jsx)(F.default, {}), (0, l.jsx)(Y.default, {
                                     isOnHubVerificationRoute: eS
-                                }), (0, l.jsx)(P.default, {}), E.map(e => (0, l.jsx)(Q.default, {
+                                }), (0, l.jsx)(P.default, {}), E.map(e => (0, l.jsx)(X.default, {
                                     guildId: e
-                                }, e)), g ? (0, l.jsx)(X.default, {}) : null, !n && e_ ? (0, l.jsx)(H.default, {
+                                }, e)), g ? (0, l.jsx)(Q.default, {}) : null, !n && e_ ? (0, l.jsx)(H.default, {
                                     ref: em.guildDiscoveryRef,
                                     selected: eI,
                                     tooltip: J.default.Messages.GUILD_DISCOVERY_TOOLTIP

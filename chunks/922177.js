@@ -4,16 +4,16 @@
                     return l
                 }
             });
-            var a = n("37983");
+            var s = n("37983");
             n("884691");
-            var s = n("324898");
+            var a = n("324898");
 
             function l(e, t) {
                 let {
                     message: n,
                     compact: l
                 } = e;
-                return (0, a.jsx)(s.default, {
+                return (0, s.jsx)(a.default, {
                     message: n,
                     content: t,
                     compact: l
