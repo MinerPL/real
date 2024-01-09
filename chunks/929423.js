@@ -19,16 +19,16 @@
                     return E
                 },
                 setPendingBanner: function() {
-                    return f
-                },
-                setPendingBio: function() {
                     return _
                 },
-                setPendingPronouns: function() {
+                setPendingBio: function() {
                     return I
                 },
-                setPendingNickname: function() {
+                setPendingPronouns: function() {
                     return T
+                },
+                setPendingNickname: function() {
+                    return f
                 },
                 setPendingThemeColors: function() {
                     return S
@@ -121,28 +121,28 @@
                 })
             }
 
-            function f(e) {
+            function _(e) {
                 a.default.dispatch({
                     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_BANNER",
                     banner: e
                 })
             }
 
-            function _(e) {
+            function I(e) {
                 a.default.dispatch({
                     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO",
                     bio: e
                 })
             }
 
-            function I(e) {
+            function T(e) {
                 a.default.dispatch({
                     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS",
                     pronouns: e
                 })
             }
 
-            function T(e) {
+            function f(e) {
                 a.default.dispatch({
                     type: "GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME",
                     nickname: e

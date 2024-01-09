@@ -11,8 +11,8 @@
                 u = n("217513"),
                 d = n("893980"),
                 s = n("982108"),
-                r = n("42203"),
-                E = n("18494"),
+                E = n("42203"),
+                r = n("18494"),
                 _ = n("162771"),
                 A = n("49111");
             let c = {
@@ -20,8 +20,8 @@
                 comboKeysBindGlobal: !0,
                 action() {
                     let e = _.default.getGuildId(),
-                        t = E.default.getChannelId(e),
-                        n = r.default.getChannel(t);
+                        t = r.default.getChannelId(e),
+                        n = E.default.getChannel(t);
                     if (null != t && null != n && n.type === i.ChannelTypes.GUILD_VOICE) return o.default.updateChatOpen(t, !a.default.getChatOpen(t)), !1;
                     if (null != t && null != n && n.type === i.ChannelTypes.DM) {
                         let e = s.default.getSection(t, null == n ? void 0 : n.isDM()),

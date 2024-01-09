@@ -4,14 +4,14 @@
                     return i
                 }
             });
-            var s = n("446674"),
-                a = n("697218"),
+            var a = n("446674"),
+                s = n("697218"),
                 l = n("499799");
 
             function i(e) {
-                let t = (0, s.useStateFromStores)([a.default], () => {
+                let t = (0, a.useStateFromStores)([s.default], () => {
                         var e;
-                        return null === (e = a.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed
+                        return null === (e = s.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed
                     }),
                     n = (0, l.useStaffTeenSafetyAssistAgeBypass)(e);
                 return !1 === t || n

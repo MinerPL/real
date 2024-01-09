@@ -110,8 +110,10 @@
             }
 
             function N(e) {
-                if (null != e.users)
-                    for (let t of e.users) _[t.id] = new d.default(t)
+                if (null != e.users) {
+                    for (let t of e.users)
+                        if (!(t.id in _ && !("incomplete" in t))) _[t.id] = new d.default(t)
+                }
             }
 
             function O(e) {

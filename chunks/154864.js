@@ -1,14 +1,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 MESSAGE_ID_PREFIX: function() {
-                    return s
+                    return a
                 },
                 getMessageDOMId: function() {
-                    return a
+                    return s
                 }
             });
-            let s = "chat-messages";
+            let a = "chat-messages";
 
-            function a(e, t) {
-                return "".concat(s, "-").concat(e, "-").concat(t)
+            function s(e, t) {
+                return "".concat(a, "-").concat(e, "-").concat(t)
             }

@@ -19,7 +19,7 @@
                 m = n("925749"),
                 E = n("782340"),
                 C = n("492013");
-            let g = e => {
+            let S = e => {
                     e.stopPropagation(), (0, o.openModalLazy)(async () => {
                         let {
                             default: e
@@ -29,7 +29,7 @@
                         })
                     })
                 },
-                S = e => {
+                g = e => {
                     let {
                         style: t,
                         className: n,
@@ -65,7 +65,7 @@
                                 return (0, a.jsx)(o.Clickable, {
                                     "aria-label": l.title,
                                     onClick: e => r(e, n),
-                                    children: (0, a.jsx)(S, {
+                                    children: (0, a.jsx)(g, {
                                         className: i(C.iconWidget, {
                                             [C.selectedWidget]: n === (null == t ? void 0 : t.state)
                                         }),
@@ -83,7 +83,7 @@
                             }), (0, a.jsx)(o.Clickable, {
                                 "aria-label": E.default.Messages.STATUS_POPOUT_CLEAR_STATUS,
                                 onClick: I,
-                                children: (0, a.jsx)(S, {
+                                children: (0, a.jsx)(g, {
                                     className: C.optionButton,
                                     name: E.default.Messages.STATUS_POPOUT_CLEAR_STATUS,
                                     icon: (0, a.jsx)(c.default, {
@@ -101,7 +101,7 @@
                                 return (0, a.jsx)(o.Clickable, {
                                     "aria-label": e.status,
                                     onClick: t => _(t, e),
-                                    children: (0, a.jsx)(S, {
+                                    children: (0, a.jsx)(g, {
                                         className: i(C.iconWidget, {
                                             [C.selectedWidget]: l
                                         }),
@@ -120,8 +120,8 @@
                                 }, "custom-status-".concat(n))
                             }), n.current.length > 0 ? (0, a.jsx)(o.Clickable, {
                                 "aria-label": null != t ? E.default.Messages.STATUS_POPOUT_EDIT_CUSTOM : E.default.Messages.STATUS_POPOUT_SET_CUSTOM,
-                                onClick: g,
-                                children: (0, a.jsx)(S, {
+                                onClick: S,
+                                children: (0, a.jsx)(g, {
                                     className: C.optionButton,
                                     name: null != t ? E.default.Messages.STATUS_POPOUT_EDIT_CUSTOM : E.default.Messages.STATUS_POPOUT_SET_CUSTOM,
                                     icon: (0, a.jsx)(f.default, {
@@ -132,7 +132,7 @@
                                 })
                             }, "custom-status-edit") : (0, a.jsxs)(o.Clickable, {
                                 "aria-label": E.default.Messages.STATUS_POPOUT_SET_CUSTOM,
-                                onClick: g,
+                                onClick: S,
                                 className: C.setCustomButton,
                                 children: [(0, a.jsx)(f.default, {
                                     className: C.editIcon,

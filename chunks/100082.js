@@ -19,8 +19,8 @@
                 m = n("679653"),
                 E = n("76813"),
                 C = n("992207"),
-                g = n("95039"),
-                S = n("539938"),
+                S = n("95039"),
+                g = n("539938"),
                 _ = n("557809"),
                 I = n("311197"),
                 T = n("550410"),
@@ -55,7 +55,7 @@
                     channel: n,
                     toggleRequestToSpeakSidebar: s,
                     showRequestToSpeakSidebar: u
-                } = e, c = (0, f.useAppContext)(), m = (0, r.useStateFromStores)([h.default], () => h.default.getChatOpen(n.id)), g = (0, w.useCanModerateRequestToSpeak)(n.id), S = (0, D.useStageParticipantsCount)(n.id, U.StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY), {
+                } = e, c = (0, f.useAppContext)(), m = (0, r.useStateFromStores)([h.default], () => h.default.getChatOpen(n.id)), S = (0, w.useCanModerateRequestToSpeak)(n.id), g = (0, D.useStageParticipantsCount)(n.id, U.StageChannelParticipantNamedIndex.REQUESTED_TO_SPEAK_ONLY), {
                     preventIdle: _,
                     allowIdle: A
                 } = (0, T.usePreventIdle)("popup");
@@ -92,14 +92,14 @@
                         onOpen: _,
                         onClose: A,
                         className: z.button
-                    }, "recents"), !u && g ? (0, a.jsx)("div", {
+                    }, "recents"), !u && S ? (0, a.jsx)("div", {
                         className: z.button,
                         children: (0, a.jsx)(V.default, {
                             toggleRequestToSpeakSidebar: () => {
                                 m && d.default.updateChatOpen(n.id, !1), s()
                             },
                             showRequestToSpeakSidebar: u,
-                            numRequestToSpeak: S
+                            numRequestToSpeak: g
                         })
                     }) : null, (0, a.jsx)(p.CallscopeChannelCallIssueMarker, {
                         className: z.button
@@ -156,7 +156,7 @@
                         showRequestToSpeakSidebar: p,
                         channel: f
                     }),
-                    onDoubleClick: S.handleDoubleClick,
+                    onDoubleClick: g.handleDoubleClick,
                     transparent: !0,
                     className: i((0, P.getThemeClass)(G.ThemeTypes.DARK), z.participants),
                     children: [J && q, (0, a.jsx)(y.default.Icon, {
@@ -221,7 +221,7 @@
                                 }), (0, a.jsx)(R.default, {
                                     size: o.Button.Sizes.SMALL,
                                     onClick: () => {
-                                        (0, g.openGuildBoostingMarketingModal)({
+                                        (0, S.openGuildBoostingMarketingModal)({
                                             guildId: f.guild_id,
                                             location: {
                                                 section: G.AnalyticsSections.STAGE_VIDEO_LIMIT

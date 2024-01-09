@@ -4,20 +4,20 @@
                     return i
                 }
             });
-            var a = n("913144"),
+            var r = n("913144"),
                 i = {
                     toggleMembersSection() {
-                        a.default.dispatch({
+                        r.default.dispatch({
                             type: "CHANNEL_TOGGLE_MEMBERS_SECTION"
                         })
                     },
                     toggleProfilePanelSection() {
-                        a.default.dispatch({
+                        r.default.dispatch({
                             type: "PROFILE_PANEL_TOGGLE_SECTION"
                         })
                     },
                     toggleSummariesSection() {
-                        a.default.dispatch({
+                        r.default.dispatch({
                             type: "CHANNEL_TOGGLE_SUMMARIES_SECTION"
                         })
                     }

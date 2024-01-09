@@ -10,7 +10,7 @@
                     return s
                 },
                 default: function() {
-                    return r
+                    return E
                 }
             });
             var i = n("180748"),
@@ -35,7 +35,7 @@
                     comboKeysBindGlobal: !0,
                     action: () => ((0, i.setZoom)(l.Accessibility.ZOOM_DEFAULT), !1)
                 };
-            var r = {
+            var E = {
                 ZOOM_IN: u,
                 ZOOM_OUT: d,
                 ZOOM_RESET: s

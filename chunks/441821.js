@@ -17,8 +17,8 @@
                 m = n("216422"),
                 E = n("719923"),
                 C = n("439932"),
-                g = n("15264"),
-                S = n("607573"),
+                S = n("15264"),
+                g = n("607573"),
                 _ = n("817039"),
                 I = n("687292"),
                 T = n("141962"),
@@ -44,7 +44,7 @@
                     imageBackground: O,
                     activityAction: y,
                     labelType: b
-                } = (0, S.default)({
+                } = (0, g.default)({
                     channel: n,
                     activityItem: a,
                     guildId: null !== (t = n.getGuildId()) && void 0 !== t ? t : void 0,
@@ -65,7 +65,7 @@
                             labelType: b
                         })
                     })
-                }), [a.application.name, b]), V = i.useMemo(() => (0, g.default)(a.activity) ? null : E.default.canUsePremiumActivities(j) ? (0, s.jsx)("div", {
+                }), [a.application.name, b]), V = i.useMemo(() => (0, S.default)(a.activity) ? null : E.default.canUsePremiumActivities(j) ? (0, s.jsx)("div", {
                     className: N.iconOuterContainer,
                     children: (0, s.jsx)("div", {
                         className: u(N.iconInnerContainer, N.nitroIconContainer),
@@ -87,7 +87,7 @@
                     })
                 }), [a.activity, F, j]), B = i.useMemo(() => {
                     switch (y) {
-                        case S.ActivityAction.JOIN:
+                        case g.ActivityAction.JOIN:
                             return (0, s.jsx)("div", {
                                 className: N.activityAction,
                                 children: (0, s.jsx)("div", {
@@ -99,7 +99,7 @@
                                     })
                                 })
                             });
-                        case S.ActivityAction.LEAVE:
+                        case g.ActivityAction.LEAVE:
                             return (0, s.jsx)("div", {
                                 className: N.activityAction,
                                 children: (0, s.jsx)("div", {
@@ -111,7 +111,7 @@
                                     })
                                 })
                             });
-                        case S.ActivityAction.START:
+                        case g.ActivityAction.START:
                         default:
                             return (0, s.jsx)(s.Fragment, {})
                     }

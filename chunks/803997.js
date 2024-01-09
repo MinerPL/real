@@ -19,8 +19,8 @@
                 m = n("550766"),
                 E = n("191225"),
                 C = n("272505"),
-                g = n("49111"),
-                S = n("782340"),
+                S = n("49111"),
+                g = n("782340"),
                 _ = n("369026");
 
             function I(e) {
@@ -52,14 +52,14 @@
                     null === (e = s.current) || void 0 === e || e.focus()
                 }, []);
                 (0, p.useComponentAction)({
-                    event: g.ComponentActions.FOCUS_CHAT_BUTTON,
+                    event: S.ComponentActions.FOCUS_CHAT_BUTTON,
                     handler: N
                 });
-                let A = I ? S.default.Messages.HIDE_CHAT : S.default.Messages.SHOW_CHAT,
+                let A = I ? g.default.Messages.HIDE_CHAT : g.default.Messages.SHOW_CHAT,
                     M = [A];
-                x > 0 && M.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+                x > 0 && M.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
                     mentionCount: x
-                })), v > 0 && M.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
+                })), v > 0 && M.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
                 let R = (0, u.useStateFromStores)([E.default], () => E.default.getFocusedLayout()),
                     j = v > 0;
                 return (0, a.jsxs)("div", {

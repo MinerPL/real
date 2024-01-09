@@ -54,7 +54,7 @@
                     } = e,
                     C = (0, s.useStateFromStores)([c.default], () => c.default.getMutualFriends(o.id));
 
-                function g(e) {
+                function S(e) {
                     d(), (0, f.openUserProfileModal)({
                         userId: e,
                         analyticsLocation: {
@@ -63,7 +63,7 @@
                     })
                 }
 
-                function S(e, t) {
+                function g(e, t) {
                     (0, r.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
@@ -90,8 +90,8 @@
                 }) : C.map(e => (0, a.jsx)(E, {
                     user: e.user,
                     status: e.status,
-                    onSelect: g,
-                    onContextMenu: S
+                    onSelect: S,
+                    onContextMenu: g
                 }, e.key)), (0, a.jsx)(i.ScrollerThin, {
                     className: m.listScroller,
                     fade: !0,

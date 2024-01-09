@@ -19,8 +19,8 @@
                 m = n("373469"),
                 E = n("271938"),
                 C = n("26989"),
-                g = n("42887"),
-                S = n("957255"),
+                S = n("42887"),
+                g = n("957255"),
                 _ = n("824563"),
                 I = n("235660"),
                 T = n("280168"),
@@ -39,8 +39,8 @@
                     user: s,
                     channel: i,
                     sessionId: u,
-                    nick: S
-                } = e, x = s.id, j = (0, r.useStateFromStores)([E.default], () => E.default.getId() === x, [x]), [L, O, y] = (0, r.useStateFromStoresArray)([g.default], () => j ? [!g.default.isSupported() || g.default.isSelfMute() || g.default.isSelfMutedTemporarily(), g.default.isSelfDeaf(), !1] : [!g.default.isSupported() || g.default.isLocalMute(x), !1, g.default.isLocalVideoDisabled(x)], [j, x]), b = (0, r.useStateFromStores)([T.default], () => T.default.isPrioritySpeaker(x)), P = (0, o.default)({
+                    nick: g
+                } = e, x = s.id, j = (0, r.useStateFromStores)([E.default], () => E.default.getId() === x, [x]), [L, O, y] = (0, r.useStateFromStoresArray)([S.default], () => j ? [!S.default.isSupported() || S.default.isSelfMute() || S.default.isSelfMutedTemporarily(), S.default.isSelfDeaf(), !1] : [!S.default.isSupported() || S.default.isLocalMute(x), !1, S.default.isLocalVideoDisabled(x)], [j, x]), b = (0, r.useStateFromStores)([T.default], () => T.default.isPrioritySpeaker(x)), P = (0, o.default)({
                     userId: x,
                     checkSoundSharing: !0
                 }), D = (0, r.useStateFromStores)([C.default], () => C.default.isGuestOrLurker(i.guild_id, x)), U = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
@@ -59,7 +59,7 @@
                     isShaking: P,
                     children: (0, a.jsx)(A.default, {
                         ...e,
-                        nick: null != S ? S : B,
+                        nick: null != g ? g : B,
                         canDrag: e.canDrag && !D,
                         otherClientSessionType: null == V ? void 0 : null === (t = V.clientInfo) || void 0 === t ? void 0 : t.os,
                         voicePlatform: H,
@@ -116,7 +116,7 @@
                                 sessionId: null !== (s = f.sessionId) && void 0 !== s ? s : "",
                                 channel: e,
                                 collapsed: l,
-                                canDrag: t && S.default.can(M.Permissions.MOVE_MEMBERS, e),
+                                canDrag: t && g.default.can(M.Permissions.MOVE_MEMBERS, e),
                                 showPreview: this.handleShowPreview,
                                 hidePreview: this.handleHidePreview,
                                 previewIsOpen: d,

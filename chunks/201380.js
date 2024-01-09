@@ -25,8 +25,8 @@
                 m = n("845038"),
                 E = n("374014"),
                 C = n("223913"),
-                g = n("709463"),
-                S = n("264429"),
+                S = n("709463"),
+                g = n("264429"),
                 _ = n("930291"),
                 I = n("506885"),
                 T = n("981601"),
@@ -156,7 +156,7 @@
                             channelId: t.id,
                             guildId: t.guild_id
                         };
-                        v.default.getId() !== e.id && c.default.selectVoiceChannel(t.id), n ? ((0, g.default)(l), o.default.selectParticipant(l.channelId, (0, E.encodeStreamKey)(l))) : (0, f.watchStreamAndTransitionToStream)(l), null == a || a(e.id)
+                        v.default.getId() !== e.id && c.default.selectVoiceChannel(t.id), n ? ((0, S.default)(l), o.default.selectParticipant(l.channelId, (0, E.encodeStreamKey)(l))) : (0, f.watchStreamAndTransitionToStream)(l), null == a || a(e.id)
                     }, this.handleJoinVoice = () => {
                         let {
                             user: e,
@@ -200,7 +200,7 @@
                             previewIsOpen: n,
                             location: l
                         } = this.props;
-                        return (0, a.jsx)(S.default, {
+                        return (0, a.jsx)(g.default, {
                             user: e,
                             channel: t,
                             onWatch: this.handleWatchStream,
@@ -235,8 +235,8 @@
                             priority: p,
                             collapsed: E,
                             isStreaming: C,
-                            isGuest: g,
-                            nick: S,
+                            isGuest: S,
+                            nick: g,
                             video: _,
                             serverMute: I,
                             serverDeaf: T,
@@ -255,11 +255,11 @@
                             localMute: o,
                             localVideoDisabled: d,
                             isStreaming: C,
-                            isGuest: g,
+                            isGuest: S,
                             video: _,
                             priority: p,
                             deaf: h,
-                            nick: S,
+                            nick: g,
                             collapsed: E,
                             overlap: E,
                             serverMute: I,

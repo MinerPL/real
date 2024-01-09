@@ -19,25 +19,25 @@
                 m = n("697218"),
                 E = n("49111");
             let C = !1,
-                g = "",
-                S = 0,
+                S = "",
+                g = 0,
                 _ = [],
                 I = !1,
                 T = new Set,
                 v = null;
 
             function x() {
-                g = "", S = 0, _ = [], T = new Set, C = !1, v = null
+                S = "", g = 0, _ = [], T = new Set, C = !1, v = null
             }
 
             function N(e) {
-                g = e, S = 0, A()
+                S = e, g = 0, A()
             }
 
             function A() {
                 if (!C) return !1;
                 let e = f.default.getChannel(v);
-                if (0 === g.trim().length) return null != a && a.clearQuery(), _ = function(e) {
+                if (0 === S.trim().length) return null != a && a.clearQuery(), _ = function(e) {
                     let t = p.default.getFriendIDs();
                     return (null == e ? void 0 : e.isPrivate()) && (t = t.filter(t => !e.recipients.includes(t))), t.reduce((e, t) => {
                         let n = m.default.getUser(t);
@@ -47,7 +47,7 @@
                     }, []).sort(R)
                 }(e), !0;
                 let t = null != e ? e.recipients : [];
-                return null != a && a.setQuery(g, {
+                return null != a && a.setQuery(S, {
                     friends: !0
                 }, t, function() {
                     let e = h.default.getFrequentlyWithoutFetchingLatest(),
@@ -83,7 +83,7 @@
                 let {
                     results: t
                 } = e;
-                C && "" !== g && (_ = t.map(e => {
+                C && "" !== S && (_ = t.map(e => {
                     let {
                         id: t
                     } = e;
@@ -124,12 +124,12 @@
                     return T
                 }
                 getQuery() {
-                    return g
+                    return S
                 }
                 getState() {
                     return {
-                        query: g,
-                        selectedRow: S,
+                        query: S,
+                        selectedRow: g,
                         selectedUsers: T,
                         results: _,
                         hasFriends: I
@@ -162,7 +162,7 @@
                     v = e.channelId, N(e.query)
                 },
                 PRIVATE_CHANNEL_RECIPIENTS_INVITE_SELECT: function(e) {
-                    S = e.row
+                    g = e.row
                 },
                 PRIVATE_CHANNEL_RECIPIENTS_ADD_USER: function(e) {
                     let {

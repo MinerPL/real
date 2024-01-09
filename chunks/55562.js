@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 CHANNEL_NEXT: function() {
-                    return E
+                    return r
                 },
                 CHANNEL_PREV: function() {
                     return _
@@ -23,8 +23,8 @@
                 u = n("18494"),
                 d = n("162771"),
                 s = n("773336"),
-                r = n("49111");
-            let E = {
+                E = n("49111");
+            let r = {
                     binds: ["alt+down"],
                     comboKeysBindGlobal: !0,
                     action: () => ((0, i.default)(), !1)
@@ -40,7 +40,7 @@
                     action() {
                         let e;
                         let t = d.default.getGuildId();
-                        if (null != t) e = r.ME;
+                        if (null != t) e = E.ME;
                         else {
                             let t = d.default.getLastSelectedGuildId();
                             null != t && (e = t, (0, o.transitionToChannel)(t, u.default.getChannelId(t)))

@@ -23,6 +23,6 @@
                     m = (0, a.useStateFromStores)([s.default], () => s.default.getGuild(e.guild_id), [e.guild_id]),
                     E = (0, a.useStateFromStores)([i.default], () => i.default.can(o.MODERATE_STAGE_CHANNEL_PERMISSIONS, e), [e]),
                     C = null !== (t = null == m ? void 0 : m.maxStageVideoChannelUsers) && void 0 !== t ? t : 0,
-                    g = !(null == m ? void 0 : m.isCommunity()) && C > c.MAX_STAGE_VIDEO_USER_LIMIT_TIER3;
-                return p && !n && E && !g && f + h >= C
+                    S = !(null == m ? void 0 : m.isCommunity()) && C > c.MAX_STAGE_VIDEO_USER_LIMIT_TIER3;
+                return p && !n && E && !S && f + h >= C
             }

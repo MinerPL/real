@@ -18,29 +18,29 @@
                 M = n("49111"),
                 m = n("143460"),
                 g = n("782340"),
-                p = n("490291");
-            let I = m.AutomodTriggerType.KEYWORD;
+                I = n("490291");
+            let p = m.AutomodTriggerType.KEYWORD;
 
             function S(e, t) {
                 let {
                     perGuildMaxCount: n
-                } = r.triggerConfigs[I], {
+                } = r.triggerConfigs[p], {
                     isLoading: m,
                     saveRule: S
                 } = (0, o.useAutomodEditingRuleActions)(), {
-                    createNewEditingRule: v
-                } = (0, o.useAutomodEditingRuleState)(), [A, _] = i.useState(!1), [h, T] = (0, u.useSyncAutomodRules)(t), {
+                    createNewEditingRule: A
+                } = (0, o.useAutomodEditingRuleState)(), [v, _] = i.useState(!1), [h, T] = (0, u.useSyncAutomodRules)(t), {
                     rulesByTriggerType: C,
                     updateRule: R
                 } = (0, u.useAutomodRulesList)(t), O = i.useMemo(() => {
                     var e;
-                    return null !== (e = C[I]) && void 0 !== e ? e : []
+                    return null !== (e = C[p]) && void 0 !== e ? e : []
                 }, [C]), x = 0 === O.length, y = n > O.length && !x, N = i.useMemo(() => (0, d.canCurrentUserManageMessageFilters)(t), [t]);
                 if (!N || null == e || 0 === e.length || null == t) return null;
                 let b = e.split(" ").length,
                     j = () => {
                         null != t && ((0, s.closeContextMenu)(), E.default.open(t, M.GuildSettingsSections.GUILD_AUTOMOD), setTimeout(() => {
-                            v(t, I, {
+                            A(t, p, {
                                 triggerMetadata: {
                                     keywordFilter: [e],
                                     regexPatterns: [],
@@ -75,7 +75,7 @@
                         action: j,
                         disabled: m
                     }), O.map(e => {
-                        let t = (0, r.getAvailableActionTypes)(I).reduce((t, n) => {
+                        let t = (0, r.getAvailableActionTypes)(p).reduce((t, n) => {
                             let a = e.actions.find(e => {
                                 let {
                                     type: t
@@ -91,7 +91,7 @@
                             label: e.name,
                             subtext: (0, a.jsx)(l.Text, {
                                 color: "text-muted",
-                                className: p.actionTextHeader,
+                                className: I.actionTextHeader,
                                 variant: "text-xs/normal",
                                 children: t.slice(2)
                             }),
@@ -114,7 +114,7 @@
                         keywordCount: b
                     }),
                     onFocus: () => {
-                        !A && (_(!0), T())
+                        !v && (_(!0), T())
                     },
                     children: G
                 })

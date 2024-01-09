@@ -67,15 +67,15 @@
                         let m = null != f ? e - h - 8 : e,
                             E = Math.max(0, Math.min(Math.floor((m - 8) / 132), 12, t.length)),
                             C = Math.min((m - 8) / E - 8, h),
-                            g = Math.max(0, E - l.length),
-                            S = l.slice(0, E),
-                            _ = o.slice(0, g),
-                            I = Array(g);
-                        if (g > 0) {
+                            S = Math.max(0, E - l.length),
+                            g = l.slice(0, E),
+                            _ = o.slice(0, S),
+                            I = Array(S);
+                        if (S > 0) {
                             let e = [];
                             for (let t of _) {
                                 let n = r.current[t.id];
-                                null != n && n < g ? I[n] = t : e.push(t)
+                                null != n && n < S ? I[n] = t : e.push(t)
                             }
                             for (let t = 0; t < I.length; t++) {
                                 if (null != I[t]) continue;
@@ -87,7 +87,7 @@
                         let T = I.filter(u.isNotNullish),
                             v = (0, s.keyBy)((0, s.range)(T.length), e => T[e].id);
                         r.current = v;
-                        let x = [...S, ...T];
+                        let x = [...g, ...T];
                         return null != f && x.push(f), {
                             visibleParticipants: x,
                             participantTileWidth: C

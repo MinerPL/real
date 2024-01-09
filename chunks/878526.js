@@ -1,17 +1,17 @@
             "use strict";
-            n.r(t), n.d(t, {
+            t.r(n), t.d(n, {
                 default: function() {
-                    return i
+                    return l
                 }
             });
-            var a = n("58622"),
-                l = n("49111");
+            var a = t("58622"),
+                u = t("49111");
 
-            function i(e, t, n) {
+            function l(e, n, t) {
                 return (0, a.default)({
-                    guild: t,
+                    guild: n,
                     channel: e,
-                    stageInstance: n,
-                    source: l.InstantInviteSources.CONTEXT_MENU
+                    stageInstance: t,
+                    source: u.InstantInviteSources.CONTEXT_MENU
                 })
             }
