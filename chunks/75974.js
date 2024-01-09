@@ -1,7 +1,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return p
+                    return g
                 }
             }), l("808653"), l("222007");
             var n = l("37983"),
@@ -21,7 +21,7 @@
                 h = l("770420"),
                 _ = l("926622");
 
-            function p(e) {
+            function g(e) {
                 let {
                     selectedSource: t,
                     onChangeVideoDeviceSource: l,
@@ -29,16 +29,16 @@
                 } = e;
                 r(null != t, "Camera capture device cannot be null");
                 let i = (0, S.default)(),
-                    p = (0, d.useStateFromStores)([f.default], () => f.default.getInputDevices()),
-                    [g, N] = a.useState(function(e, t, l) {
+                    g = (0, d.useStateFromStores)([f.default], () => f.default.getInputDevices()),
+                    [p, N] = a.useState(function(e, t, l) {
                         if (null != t && null != l) {
                             let n = t.find(t => t.id === e);
                             if (null == n) return;
                             let a = u.reduce(l, (e, t) => (0, o.stringSimilarity)(n.name, t.name) > (0, o.stringSimilarity)(n.name, e.name) ? t : e);
                             if (null != a) return a.id
                         }
-                    }(t.id, i, p));
-                return null != g && s(g), (0, n.jsx)(a.Fragment, {
+                    }(t.id, i, g));
+                return null != p && s(p), (0, n.jsx)(a.Fragment, {
                     children: (0, n.jsxs)(c.FormItem, {
                         title: "Capture Device",
                         className: h.modalContent,
@@ -60,12 +60,12 @@
                             className: _.marginTop8,
                             title: C.default.Messages.GO_LIVE_FORM_LABEL_AUDIO_DEVICE,
                             children: (0, n.jsx)(c.SingleSelect, {
-                                value: g,
+                                value: p,
                                 className: _.marginaTop8,
                                 onChange: e => {
                                     N(e), s(e)
                                 },
-                                options: u.map(p, e => {
+                                options: u.map(g, e => {
                                     let {
                                         id: t,
                                         name: l

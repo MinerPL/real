@@ -20,8 +20,8 @@
                 E = l("386045"),
                 h = l("30591"),
                 _ = l("803725"),
-                p = l("49111"),
-                g = l("994428"),
+                g = l("49111"),
+                p = l("994428"),
                 N = l("782340"),
                 I = l("173266"),
                 x = l("770420");
@@ -38,7 +38,7 @@
                     })
                 }, [t]);
                 let L = (e, t) => {
-                    e.stopPropagation(), e.preventDefault(), null == t || t(), R(g.ContentDismissActionType.UNKNOWN)
+                    e.stopPropagation(), e.preventDefault(), null == t || t(), R(p.ContentDismissActionType.UNKNOWN)
                 };
                 return (0, n.jsx)(o.Popout, {
                     shouldShow: T,
@@ -66,7 +66,7 @@
                                     color: "always-white",
                                     className: I.warningText,
                                     children: N.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
-                                        url: S.default.getArticleURL(p.HelpdeskArticles.CLIPS)
+                                        url: S.default.getArticleURL(g.HelpdeskArticles.CLIPS)
                                     })
                                 }) : null]
                             }),
@@ -90,7 +90,7 @@
                 let {
                     isAnimationDone: t,
                     guildId: l
-                } = e, a = (0, i.useStateFromStores)([E.default], () => E.default.getSettings().clipsEnabled), s = (0, i.useStateFromStores)([m.default], () => m.default.getKeybindForAction(p.GlobalKeybindActions.SAVE_CLIP));
+                } = e, a = (0, i.useStateFromStores)([E.default], () => E.default.getSettings().clipsEnabled), s = (0, i.useStateFromStores)([m.default], () => m.default.getKeybindForAction(g.GlobalKeybindActions.SAVE_CLIP));
                 r(null != s, "Clips keybind should be set");
                 let u = C.toString(s.shortcut, !0);
                 return (0, n.jsx)(o.FormItem, {

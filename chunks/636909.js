@@ -20,8 +20,8 @@
                 E = l("42203"),
                 h = l("525065"),
                 _ = l("305961"),
-                p = l("42887"),
-                g = l("568307"),
+                g = l("42887"),
+                p = l("568307"),
                 N = l("18494"),
                 I = l("697218"),
                 x = l("703370"),
@@ -36,14 +36,14 @@
                 D = l("701909"),
                 P = l("773336"),
                 b = l("767960"),
-                U = l("375202"),
-                y = l("916262"),
-                G = l("75974"),
+                G = l("375202"),
+                U = l("916262"),
+                y = l("75974"),
                 H = l("359812"),
                 V = l("273405"),
                 w = l("326620"),
-                F = l("985997"),
-                k = l("16750"),
+                k = l("985997"),
+                F = l("16750"),
                 B = l("706530"),
                 W = l("49111"),
                 z = l("782340"),
@@ -56,9 +56,9 @@
                     selectSource: l,
                     sourceChanged: a,
                     onChangeSource: s
-                } = e, r = (0, i.useStateFromStores)([g.default, x.default], () => (0, P.isWindows)() ? (0, U.default)(g.default, x.default) : null), o = (0, i.useStateFromStores)([d.default], () => (null == r ? void 0 : r.id) != null ? d.default.getApplication(r.id) : null), c = (0, i.useStateFromStores)([g.default], () => g.default.getRunningGames()), f = (0, i.useStateFromStoresArray)([d.default], () => c.map(e => null != e.id ? d.default.getApplication(e.id) : null).filter(j.isNotNullish), [c]), m = null;
+                } = e, r = (0, i.useStateFromStores)([p.default, x.default], () => (0, P.isWindows)() ? (0, G.default)(p.default, x.default) : null), o = (0, i.useStateFromStores)([d.default], () => (null == r ? void 0 : r.id) != null ? d.default.getApplication(r.id) : null), c = (0, i.useStateFromStores)([p.default], () => p.default.getRunningGames()), f = (0, i.useStateFromStoresArray)([d.default], () => c.map(e => null != e.id ? d.default.getApplication(e.id) : null).filter(j.isNotNullish), [c]), m = null;
                 if (null != t ? m = t.name : null != r && (m = r.name), null == m) return null;
-                let S = (0, k.default)(r, t, c),
+                let S = (0, F.default)(r, t, c),
                     C = a ? f.find(e => {
                         let {
                             id: t
@@ -190,79 +190,80 @@
                     selectedPreset: r,
                     selectedResolution: u,
                     sourceChanged: d,
-                    guildId: C,
-                    selectSource: h,
-                    selectGuild: _,
-                    sound: g,
-                    onClose: x,
-                    onChangeSelectedFPS: v,
-                    onChangeSelectedResolution: A,
-                    onChangeSelectedPreset: R,
-                    onChangeSelectedChannelId: T,
-                    onChangeSource: L,
-                    onChangeAudioDevice: M,
-                    onChangeGuild: O,
-                    onChangeSound: j,
-                    isAnimationDone: U
-                } = e, w = (0, i.useStateFromStores)([N.default, E.default], () => E.default.getChannel(N.default.getVoiceChannelId())), k = (0, i.useStateFromStores)([b.default], () => b.default.GPUDriversOutdated), B = (0, i.useStateFromStores)([b.default], () => b.default.problematicGPUDriver), K = (0, i.useStateFromStores)([p.default], () => p.default.getSoundshareEnabled()), Y = (0, i.useStateFromStores)([I.default], () => I.default.getCurrentUser()), $ = (0, f.useEnableClips)(), ee = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
-                    autoTrackExposure: !$
-                }), et = (0, y.default)();
-                null != t && t.id.startsWith("screen") && !p.default.supportsScreenSoundshare() ? et = z.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND : null == et && p.default.supportsEnableSoundshare() && K !== W.SoundshareEnableState.ENABLED && (et = z.default.Messages.GO_LIVE_SCREENSHARE_ENABLE_FOR_SOUNDSHARE.format({
+                    selectedGuildId: C,
+                    targetGuildPremiumTier: h,
+                    selectSource: _,
+                    selectGuild: p,
+                    sound: x,
+                    onClose: v,
+                    onChangeSelectedFPS: A,
+                    onChangeSelectedResolution: R,
+                    onChangeSelectedPreset: T,
+                    onChangeSelectedChannelId: L,
+                    onChangeSource: M,
+                    onChangeAudioDevice: O,
+                    onChangeGuild: j,
+                    onChangeSound: G,
+                    isAnimationDone: w
+                } = e, F = (0, i.useStateFromStores)([N.default, E.default], () => E.default.getChannel(N.default.getVoiceChannelId())), B = (0, i.useStateFromStores)([b.default], () => b.default.GPUDriversOutdated), K = (0, i.useStateFromStores)([b.default], () => b.default.problematicGPUDriver), Y = (0, i.useStateFromStores)([g.default], () => g.default.getSoundshareEnabled()), $ = (0, i.useStateFromStores)([I.default], () => I.default.getCurrentUser()), ee = (0, f.useEnableClips)(), et = (0, f.useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock)({
+                    autoTrackExposure: !ee
+                }), el = (0, U.default)();
+                null != t && t.id.startsWith("screen") && !g.default.supportsScreenSoundshare() ? el = z.default.Messages.GO_LIVE_SCREENSHARE_NO_SOUND : null == el && g.default.supportsEnableSoundshare() && Y !== W.SoundshareEnableState.ENABLED && (el = z.default.Messages.GO_LIVE_SCREENSHARE_ENABLE_FOR_SOUNDSHARE.format({
                     onVoiceSettingsClick: () => {
-                        x(), o.default.open(W.UserSettingsSections.VOICE)
+                        v(), o.default.open(W.UserSettingsSections.VOICE)
                     }
                 }));
-                let el = $ ? (0, n.jsx)(S.default, {
+                let en = ee ? (0, n.jsx)(S.default, {
                         guildId: C,
-                        isAnimationDone: U
-                    }) : ee ? (0, n.jsx)(m.default, {}) : void 0,
-                    en = !!(null == t ? void 0 : t.id.startsWith("camera")),
-                    ea = null != Y && Y.verified && !Y.bot,
-                    es = null != w && !(0, c.isPrivateGuildChannel)(w);
+                        isAnimationDone: w
+                    }) : et ? (0, n.jsx)(m.default, {}) : void 0,
+                    ea = !!(null == t ? void 0 : t.id.startsWith("camera")),
+                    es = null != $ && $.verified && !$.bot,
+                    er = null != F && !(0, c.isPrivateGuildChannel)(F);
                 return (0, n.jsxs)(a.Fragment, {
-                    children: [en ? (0, n.jsx)(G.default, {
+                    children: [ea ? (0, n.jsx)(y.default, {
                         selectedSource: t,
-                        onChangeVideoDeviceSource: L,
-                        onChangeAudioDevice: M
+                        onChangeVideoDeviceSource: M,
+                        onChangeAudioDevice: O
                     }) : (0, n.jsxs)("div", {
                         children: [(0, n.jsx)(Z, {
-                            selectSource: h,
+                            selectSource: _,
                             sourceChanged: d,
-                            onChangeSource: L,
+                            onChangeSource: M,
                             selectedSource: t
-                        }), null != et ? (0, n.jsx)(X, {
-                            text: et
-                        }) : null, (0, P.isWindows)() && null != t && t.id.startsWith("screen") && null == et ? (0, n.jsx)(q, {
-                            enabled: g,
-                            onChange: j
+                        }), null != el ? (0, n.jsx)(X, {
+                            text: el
+                        }) : null, (0, P.isWindows)() && null != t && t.id.startsWith("screen") && null == el ? (0, n.jsx)(q, {
+                            enabled: x,
+                            onChange: G
                         }) : null]
-                    }), _ && null != C ? (0, n.jsx)(J, {
+                    }), p && null != C ? (0, n.jsx)(J, {
                         guildId: C,
-                        onChange: O
-                    }) : null, null != w ? (0, n.jsx)(V.default, {
-                        channel: w
+                        onChange: j
+                    }) : null, null != F ? (0, n.jsx)(V.default, {
+                        channel: F
                     }) : (0, n.jsx)(H.default, {
                         guildId: C,
                         selectedChannelId: s,
-                        onChangeSelectedChannelId: T
-                    }), null != C && ea && es ? (0, n.jsx)(Q, {
+                        onChangeSelectedChannelId: L
+                    }), null != C && es && er ? (0, n.jsx)(Q, {
                         guildId: C
-                    }) : null, k ? (0, n.jsx)(X, {
-                        text: z.default.Messages.GO_LIVE_VIDEO_DRIVERS_OUTDATED
                     }) : null, B ? (0, n.jsx)(X, {
+                        text: z.default.Messages.GO_LIVE_VIDEO_DRIVERS_OUTDATED
+                    }) : null, K ? (0, n.jsx)(X, {
                         text: z.default.Messages.PROBLEMATIC_GPU_DRIVER_DETECTED.format({
                             helpCenterLink: D.default.getArticleURL(W.HelpdeskArticles.NVIDIA_DRIVER_ISSUES)
                         })
-                    }) : null, (0, n.jsx)(F.default, {
+                    }) : null, (0, n.jsx)(k.default, {
                         selectedPreset: r,
                         selectedFPS: l,
                         selectedResolution: u,
-                        guildId: C,
-                        onClose: x,
-                        onFPSChange: v,
-                        onResolutionChange: A,
-                        onPresetChange: R,
-                        captureDeviceSelected: en
-                    }), el]
+                        targetGuildPremiumTier: h,
+                        onClose: v,
+                        onFPSChange: A,
+                        onResolutionChange: R,
+                        onPresetChange: T,
+                        captureDeviceSelected: ea
+                    }), en]
                 })
             }

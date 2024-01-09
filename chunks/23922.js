@@ -20,8 +20,8 @@
                 E = l("145131"),
                 h = l("162933"),
                 _ = l("773336"),
-                p = l("301834"),
-                g = l("756898"),
+                g = l("301834"),
+                p = l("756898"),
                 N = l("375202"),
                 I = l("321443"),
                 x = l("444276"),
@@ -89,7 +89,7 @@
             function M(e) {
                 let t = (0, _.isWindows)() ? (0, N.default)(S.default, C.default) : null,
                     l = S.default.getRunningGames();
-                return null != t && (0, g.default)(e.id, t.windowHandle) ? 2 : null != l.find(t => (0, g.default)(e.id, t.windowHandle)) ? 1 : 0
+                return null != t && (0, p.default)(e.id, t.windowHandle) ? 2 : null != l.find(t => (0, p.default)(e.id, t.windowHandle)) ? 1 : 0
             }
 
             function O(e) {
@@ -98,9 +98,9 @@
                     onChangeSelectedSource: l
                 } = e, {
                     enableGoLiveCaptureCard: s
-                } = p.default.useExperiment({
+                } = g.default.useExperiment({
                     location: "GoLive_Source_Select"
-                }), i = m.default.supports(v.Features.GO_LIVE_HARDWARE), [o, f] = a.useState(null), [S, C] = a.useState(null), [_, g] = a.useState(null), N = null != _ && _.length > 0, [L, M] = a.useState(u.DesktopSources.WINDOW), [O, j] = a.useState(!1), D = a.useRef(null), P = a.useRef(new d.Interval);
+                }), i = m.default.supports(v.Features.GO_LIVE_HARDWARE), [o, f] = a.useState(null), [S, C] = a.useState(null), [_, p] = a.useState(null), N = null != _ && _.length > 0, [L, M] = a.useState(u.DesktopSources.WINDOW), [O, j] = a.useState(!1), D = a.useRef(null), P = a.useRef(new d.Interval);
                 a.useEffect(() => {
                     let e = P.current;
                     return T().then(e => {
@@ -109,14 +109,14 @@
                             windowSources: l,
                             cameraSources: n
                         } = e;
-                        f(t), C(l), g(n)
+                        f(t), C(l), p(n)
                     }), e.start(1e3, async () => {
                         let {
                             screenSources: e,
                             windowSources: t,
                             cameraSources: l
                         } = await T();
-                        f(e), C(t), g(l)
+                        f(e), C(t), p(l)
                     }), () => {
                         e.stop()
                     }
@@ -127,7 +127,7 @@
                             D.current = e, j((t = !e.isScrolledToTop(), t))
                         }
                     }, []),
-                    U = function(e) {
+                    G = function(e) {
                         switch (e) {
                             case u.DesktopSources.WINDOW:
                                 return S;
@@ -137,13 +137,13 @@
                                 return _
                         }
                     }(L);
-                if (null == U) return (0, n.jsx)(E.default, {
+                if (null == G) return (0, n.jsx)(E.default, {
                     className: R.spinner,
                     justify: E.default.Justify.CENTER,
                     align: E.default.Align.CENTER,
                     children: (0, n.jsx)(c.Spinner, {})
                 });
-                let y = U.map(e => {
+                let U = G.map(e => {
                     let {
                         id: a
                     } = e, s = (null == t ? void 0 : t.id) === a;
@@ -159,7 +159,7 @@
                     }, a)
                 });
 
-                function G() {
+                function y() {
                     let e = D.current;
                     null != e && j(!e.isScrolledToTop())
                 }
@@ -197,23 +197,23 @@
                         children: (0, n.jsx)(c.AdvancedScroller, {
                             ref: b,
                             className: R.sourceScroller,
-                            onScroll: G,
+                            onScroll: y,
                             children: (0, n.jsx)(h.default, {
                                 layout: h.default.Layout.WRAP,
                                 columns: 2,
                                 className: R.sourceContainer,
-                                children: y
+                                children: U
                             })
                         })
                     }) : (0, n.jsx)(c.AdvancedScroller, {
                         ref: b,
                         className: R.sourceScroller,
-                        onScroll: G,
+                        onScroll: y,
                         children: (0, n.jsx)(h.default, {
                             layout: h.default.Layout.WRAP,
                             columns: 2,
                             className: R.sourceContainer,
-                            children: y
+                            children: U
                         })
                     })]
                 })

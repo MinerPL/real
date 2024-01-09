@@ -20,8 +20,8 @@
                 E = l("190986"),
                 h = l("721618"),
                 _ = l("733160"),
-                p = l("990864"),
-                g = l("274652"),
+                g = l("990864"),
+                p = l("274652"),
                 N = l("922744"),
                 I = l("155207"),
                 x = l("745183"),
@@ -40,8 +40,8 @@
                         let l = (0, n.getIsBroadcastingGDM)(e.id);
                         return l ? d.default : I.default;
                     case M.ChannelTypes.GUILD_ANNOUNCEMENT:
-                        if (e.isNSFW()) return g.default;
-                        if ((0, L.default)(e)) return p.default;
+                        if (e.isNSFW()) return p.default;
+                        if ((0, L.default)(e)) return g.default;
                         else return _.default;
                     case M.ChannelTypes.GUILD_TEXT:
                         if (e.id === (null == t ? void 0 : t.rulesChannelId)) return r.default;

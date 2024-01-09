@@ -24,8 +24,8 @@
                         headerClassName: E,
                         contentClassName: h,
                         tryItText: _,
-                        dismissText: p,
-                        onTryFeature: g,
+                        dismissText: g,
+                        onTryFeature: p,
                         onClose: N,
                         className: I,
                         inlineArt: x = !1,
@@ -38,9 +38,9 @@
                         art: O,
                         isPremiumEarlyAccess: j = !1,
                         maxWidth: D = 280
-                    } = e, P = A ? i.Button.Sizes.LARGE : i.Button.Sizes.MAX, [b, U] = a.useState(!1), {
-                        ref: y,
-                        width: G
+                    } = e, P = A ? i.Button.Sizes.LARGE : i.Button.Sizes.MAX, [b, G] = a.useState(!1), {
+                        ref: U,
+                        width: y
                     } = (0, u.default)();
 
                     function H(e) {
@@ -50,9 +50,9 @@
                     }
                     return a.useEffect(() => {
                         var e, t;
-                        let l = (null !== (t = null === (e = y.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
-                        !b && l > D && U(!0)
-                    }, [b, G, y, D]), a.useEffect(() => {
+                        let l = (null !== (t = null === (e = U.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
+                        !b && l > D && G(!0)
+                    }, [b, y, U, D]), a.useEffect(() => {
                         (0, o.requestMarkDismissibleContentAsShown)(T)
                     }, [T]), (0, n.jsx)("div", {
                         className: I,
@@ -92,14 +92,14 @@
                                     children: l
                                 }) : l]
                             }), (0, n.jsx)("div", {
-                                ref: y,
+                                ref: U,
                                 className: b || !A ? S.buttonContainerVertical : S.buttonContainerHorizontal,
-                                children: null != g ? (0, n.jsxs)(n.Fragment, {
+                                children: null != p ? (0, n.jsxs)(n.Fragment, {
                                     children: [(0, n.jsx)(i.Button, {
                                         className: S.button,
                                         size: P,
                                         onClick: e => {
-                                            null == N || N(e), g(e), H(f.ContentDismissActionType.PRIMARY)
+                                            null == N || N(e), p(e), H(f.ContentDismissActionType.PRIMARY)
                                         },
                                         color: v || j ? i.Button.Colors.BRAND : i.Button.Colors.WHITE,
                                         look: v || j ? i.Button.Looks.INVERTED : i.Button.Looks.FILLED,
@@ -112,7 +112,7 @@
                                         },
                                         color: v || j ? i.Button.Colors.WHITE : i.Button.Colors.BRAND,
                                         look: v || j ? i.Button.Looks.LINK : i.Button.Looks.FILLED,
-                                        children: null != p ? p : m.default.Messages.EDUCATION_NEW_FEATURE_DISMISS
+                                        children: null != g ? g : m.default.Messages.EDUCATION_NEW_FEATURE_DISMISS
                                     })]
                                 }) : (0, n.jsx)(i.Button, {
                                     className: S.button,
