@@ -16,8 +16,8 @@
                 c = n("679653"),
                 f = n("419830"),
                 E = n("373469"),
-                h = n("42203"),
-                _ = n("305961"),
+                _ = n("42203"),
+                h = n("305961"),
                 S = n("824563"),
                 T = n("697218"),
                 p = n("220677"),
@@ -98,7 +98,7 @@
                 let {
                     channel: t,
                     gotoChannel: n
-                } = e, a = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(t.guild_id));
+                } = e, a = (0, r.useStateFromStores)([h.default], () => h.default.getGuild(t.guild_id));
                 return null == a ? null : (0, l.jsx)(N.default, {
                     "aria-hidden": !0,
                     className: A.guildIcon,
@@ -115,7 +115,7 @@
                     channel: t,
                     gotoChannel: n,
                     mentionCount: a
-                } = e, i = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(t.guild_id)), u = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t.parent_id)), d = (0, f.getChannelIconComponent)(t, i), E = (0, c.default)(t, !1), S = null == u ? null == i ? void 0 : i.name : "".concat(null == i ? void 0 : i.name, " › ").concat(u.name), T = t.isMultiUserDM() ? m.default.Messages.MEMBERS_HEADER.format({
+                } = e, i = (0, r.useStateFromStores)([h.default], () => h.default.getGuild(t.guild_id)), u = (0, r.useStateFromStores)([_.default], () => _.default.getChannel(t.parent_id)), d = (0, f.getChannelIconComponent)(t, i), E = (0, c.default)(t, !1), S = null == u ? null == i ? void 0 : i.name : "".concat(null == i ? void 0 : i.name, " › ").concat(u.name), T = t.isMultiUserDM() ? m.default.Messages.MEMBERS_HEADER.format({
                     members: t.recipients.length + 1
                 }) : t.isPrivate() ? (0, l.jsx)(v, {
                     channel: t

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return g
                 }
             });
             var a = n("37983");
@@ -20,7 +20,7 @@
                 m = n("99795"),
                 E = n("782340"),
                 C = n("75606"),
-                S = e => {
+                g = e => {
                     let {
                         className: t,
                         channelId: n

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return I
                 }
             }), n("424973");
             var i = n("37983"),
@@ -14,16 +14,16 @@
                 d = n("592407"),
                 c = n("305961"),
                 E = n("957255"),
-                _ = n("49111"),
-                I = n("782340");
+                f = n("49111"),
+                _ = n("782340");
 
-            function T(e) {
+            function I(e) {
                 let {
                     user: t,
                     guildId: n,
-                    channel: T,
-                    context: f
-                } = e, S = c.default.getGuild(n), N = (0, l.useStateFromStores)([E.default], () => null != S ? E.default.can(_.Permissions.MANAGE_GUILD, S) : null), p = (0, o.useContextIndexState)(T, !0, !0), h = (0, o.useUserIndexState)(!0, !0), {
+                    channel: I,
+                    context: T
+                } = e, S = c.default.getGuild(n), N = (0, l.useStateFromStores)([E.default], () => null != S ? E.default.can(f.Permissions.MANAGE_GUILD, S) : null), p = (0, o.useContextIndexState)(I, !0, !0), h = (0, o.useUserIndexState)(!0, !0), {
                     isUserApp: A,
                     isGuildApp: m
                 } = a.useMemo(() => {
@@ -45,19 +45,19 @@
                         })
                     }
                 }, [p, h, null == t ? void 0 : t.id]), C = a.useCallback(() => {
-                    (null == S ? void 0 : S.id) != null && (d.default.open(S.id, _.GuildSettingsSections.INTEGRATIONS), s.default.setSection(_.IntegrationSettingsSections.APPLICATION, null == t ? void 0 : t.id))
+                    (null == S ? void 0 : S.id) != null && (d.default.open(S.id, f.GuildSettingsSections.INTEGRATIONS), s.default.setSection(f.IntegrationSettingsSections.APPLICATION, null == t ? void 0 : t.id))
                 }, [null == t ? void 0 : t.id, null == S ? void 0 : S.id]), g = a.useCallback(() => {
-                    u.default.open(_.UserSettingsSections.AUTHORIZED_APPS)
-                }, []), G = f === _.AppContext.POPOUT;
-                if (!(null == t ? void 0 : t.bot) || !N || G || !m && !A) return null;
-                let O = [];
-                return m && O.push((0, i.jsx)(r.MenuItem, {
+                    u.default.open(f.UserSettingsSections.AUTHORIZED_APPS)
+                }, []), O = T === f.AppContext.POPOUT;
+                if (!(null == t ? void 0 : t.bot) || !N || O || !m && !A) return null;
+                let M = [];
+                return m && M.push((0, i.jsx)(r.MenuItem, {
                     id: "manage-integration",
-                    label: I.default.Messages.MANAGE_INTEGRATION,
+                    label: _.default.Messages.MANAGE_INTEGRATION,
                     action: C
-                }, "manage-integration")), A && O.push((0, i.jsx)(r.MenuItem, {
+                }, "manage-integration")), A && M.push((0, i.jsx)(r.MenuItem, {
                     id: "manage-authorized-app",
-                    label: I.default.Messages.MANAGE_AUTHORIZED_APP,
+                    label: _.default.Messages.MANAGE_AUTHORIZED_APP,
                     action: g
-                }, "manage-authorized-app")), O
+                }, "manage-authorized-app")), M
             }

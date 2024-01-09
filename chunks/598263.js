@@ -19,8 +19,8 @@
                 m = n("535260"),
                 E = n("982108"),
                 C = n("26989"),
-                S = n("697218"),
-                g = n("994906"),
+                g = n("697218"),
+                S = n("994906"),
                 _ = n("180968"),
                 I = n("789150"),
                 T = n("782340"),
@@ -67,7 +67,7 @@
                     onNavigate: A
                 } = e, M = l.useRef(null), R = (0, u.default)([E.default], () => E.default.getGuildSidebarState(o), [o]), j = l.useRef(0), [L, O] = l.useState(null !== (t = null == R ? void 0 : R.details.additionalSearchQuery) && void 0 !== t ? t : {}), {
                     messageHistoryState: y
-                } = (0, _.useServerActivityForUser)(s, o, L), b = (0, u.default)([S.default], () => S.default.getUser(s), [s]), P = (0, u.default)([C.default], () => C.default.getMember(o, s), [o, s]);
+                } = (0, _.useServerActivityForUser)(s, o, L), b = (0, u.default)([g.default], () => g.default.getUser(s), [s]), P = (0, u.default)([C.default], () => C.default.getMember(o, s), [o, s]);
                 l.useLayoutEffect(() => {
                     let e = null == R ? void 0 : R.details.scrollOffset;
                     if (null != e) {
@@ -81,7 +81,7 @@
                 let D = l.useCallback(e => {
                         if (null == R) return;
                         let t = e.target.scrollTop;
-                        j.current = t, (0, g.openGuildMemberModViewSidebar)(o, s, R.baseChannelId, {
+                        j.current = t, (0, S.openGuildMemberModViewSidebar)(o, s, R.baseChannelId, {
                             modViewPanel: I.ModViewPanel.MESSAGE_HISTORY,
                             additionalSearchQuery: L,
                             scrollOffset: j.current
@@ -94,7 +94,7 @@
                             ...L,
                             offset: 25 * e
                         };
-                        O(t), (0, g.openGuildMemberModViewSidebar)(o, s, R.baseChannelId, {
+                        O(t), (0, S.openGuildMemberModViewSidebar)(o, s, R.baseChannelId, {
                             modViewPanel: I.ModViewPanel.MESSAGE_HISTORY,
                             additionalSearchQuery: t,
                             scrollOffset: j.current

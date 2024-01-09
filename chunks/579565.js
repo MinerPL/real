@@ -10,10 +10,10 @@
                     return E
                 },
                 getEligibleGameLastSeenStartTimeSeconds: function() {
-                    return h
+                    return _
                 },
                 isDropGameDetected: function() {
-                    return _
+                    return h
                 },
                 getEligibilityByRunningGameDetection: function() {
                     return S
@@ -68,11 +68,11 @@
                 })) || !1
             }
 
-            function h() {
+            function _() {
                 return Math.floor(Date.now() / 1e3) - u.DROPS_ELIGIBILITY_SEEN_GAMES_LOOKBACK_SECONDS
             }
 
-            function _(e, t, n) {
+            function h(e, t, n) {
                 var l, a, s, i;
                 let r = m(e);
                 if (null == r) return !1;
@@ -87,7 +87,7 @@
 
             function S(e) {
                 let t = r.default.getGamesSeen(!1);
-                return _(e, t, h())
+                return h(e, t, _())
             }
 
             function T(e, t) {

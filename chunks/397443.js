@@ -24,7 +24,7 @@
                     guildId: n,
                     userId: E,
                     containerDimensions: C
-                } = e, S = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion), [g, _] = l.useState([]), I = g.length < 50;
+                } = e, g = (0, i.useStateFromStores)([u.default], () => u.default.useReducedMotion), [S, _] = l.useState([]), I = S.length < 50;
                 l.useEffect(() => {
                     function e(e) {
                         var a;
@@ -37,7 +37,7 @@
                         } = e;
                         if (null != E && E !== i || d.default.getEnabled() && (0, c.default)(null !== (a = null == r ? void 0 : r.name) && void 0 !== a ? a : "")) return;
                         let m = null != r && null != u && null != h;
-                        if (l === t && !S && I && m) {
+                        if (l === t && !g && I && m) {
                             let e = (0, f.getEffectUrl)(r),
                                 a = null != r.id && !r.animated,
                                 l = {
@@ -57,7 +57,7 @@
                     return r.default.subscribe("VOICE_CHANNEL_EFFECT_SEND", e), () => {
                         r.default.unsubscribe("VOICE_CHANNEL_EFFECT_SEND", e)
                     }
-                }, [t, n, E, S, I]);
+                }, [t, n, E, g, I]);
                 let T = l.useCallback(e => {
                     _(t => {
                         let n = [...t],
@@ -65,14 +65,14 @@
                         return n.splice(a, 1), n
                     })
                 }, []);
-                return S ? null : (0, a.jsx)("div", {
+                return g ? null : (0, a.jsx)("div", {
                     className: m.effectsWrapper,
                     style: {
                         width: C.width
                     },
                     children: (0, a.jsx)("div", {
                         className: m.effects,
-                        children: g.map(e => (0, a.jsx)(h.default, {
+                        children: S.map(e => (0, a.jsx)(h.default, {
                             containerDimensions: C,
                             effect: e,
                             onComplete: T

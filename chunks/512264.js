@@ -28,12 +28,12 @@
                     mirror: m = !1,
                     paused: E = !1,
                     streamPreviewURL: C,
-                    videoSpinnerContext: S,
-                    userId: g
+                    videoSpinnerContext: g,
+                    userId: S
                 } = e, [_, I] = i.useState(!0), [T] = i.useState(() => new d.VideoSpinnerTimer("VideoStream"));
                 i.useEffect(() => {
-                    !E && (_ ? T.onSpinnerStarted() : null != t && T.trackSpinnerDuration(S, g, t))
-                }, [_, E, t, T, S, g]);
+                    !E && (_ ? T.onSpinnerStarted() : null != t && T.trackSpinnerDuration(g, S, t))
+                }, [_, E, t, T, g, S]);
                 let v = i.useCallback(() => {
                     I(!1)
                 }, []);

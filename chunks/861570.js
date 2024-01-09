@@ -19,8 +19,8 @@
                 m = n("850391"),
                 E = n("557809"),
                 C = n("144491"),
-                S = n("42203"),
-                g = n("474643"),
+                g = n("42203"),
+                S = n("474643"),
                 _ = n("305961"),
                 I = n("800762"),
                 T = n("664336"),
@@ -35,7 +35,7 @@
                     channelId: t,
                     baseChannelId: s,
                     channelViewSource: R = "Split View"
-                } = e, j = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(t)), L = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(null == j ? void 0 : j.getGuildId())), O = (0, h.default)(j);
+                } = e, j = (0, r.useStateFromStores)([g.default], () => g.default.getChannel(t)), L = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(null == j ? void 0 : j.getGuildId())), O = (0, h.default)(j);
                 (function(e) {
                     let t = (0, r.useStateFromStores)([I.default], () => null != e && !i.isEmpty(I.default.getVoiceStatesForChannel(e.id)));
                     l.useEffect(() => {
@@ -49,7 +49,7 @@
                 if (l.useEffect(() => {
                         if (null == j || y.current) return;
                         y.current = !0;
-                        let e = (0, f.collectThreadMetadata)(S.default.getChannel(j.id), !0);
+                        let e = (0, f.collectThreadMetadata)(g.default.getChannel(j.id), !0);
                         (0, c.trackWithMetadata)(N.AnalyticEvents.CHANNEL_OPENED, {
                             ...e,
                             channel_id: j.id,
@@ -65,7 +65,7 @@
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(d.default, {
                         channel: j,
-                        draftType: g.DraftType.ChannelMessage
+                        draftType: S.DraftType.ChannelMessage
                     }), (0, a.jsx)(T.default, {
                         toolbar: b,
                         "aria-label": A.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,

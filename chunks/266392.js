@@ -25,13 +25,13 @@
                     renderInputDevices: m = !1,
                     renderInputModes: E = !1,
                     renderInputVolume: C = !1,
-                    renderOutputVolume: S = !1,
-                    onSelect: g
+                    renderOutputVolume: g = !1,
+                    onSelect: S
                 } = e, _ = (0, c.default)(), I = (0, o.default)(), T = (0, d.default)(), v = (0, i.default)(), x = (0, r.default)(), N = (0, u.default)();
                 return (0, a.jsx)(s.default, {
                     object: f.AnalyticsObjects.CONTEXT_MENU,
                     children: (0, a.jsxs)(l.Menu, {
-                        onSelect: g,
+                        onSelect: S,
                         className: p.menu,
                         onClose: t,
                         navId: "audio-device-context",
@@ -46,7 +46,7 @@
                             label: h.default.Messages.FORM_LABEL_INPUT_MODE,
                             children: v
                         }) : null, (0, a.jsxs)(l.MenuGroup, {
-                            children: [C ? x : null, S ? N : null, _]
+                            children: [C ? x : null, g ? N : null, _]
                         })]
                     })
                 })

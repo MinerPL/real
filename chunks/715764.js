@@ -19,8 +19,8 @@
                 m = n("271938"),
                 E = n("26989"),
                 C = n("42887"),
-                S = n("471671"),
-                g = n("754775"),
+                g = n("471671"),
+                S = n("754775"),
                 _ = n("512264"),
                 I = n("387111"),
                 T = n("830251"),
@@ -48,7 +48,7 @@
                     user: F,
                     streamId: k,
                     speaking: V
-                } = t, B = F.id === w, H = (0, T.default)(t), G = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(v.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([C.default], () => null != F.id && C.default.isLocalVideoDisabled(F.id, (0, f.default)(t.type)), [F.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, F.id)), K = I.default.getName(n.getGuildId(), n.id, F) + (z ? " ".concat(N.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = V && (W || G), X = u < 124 ? R : M, {
+                } = t, B = F.id === w, H = (0, T.default)(t), G = (0, r.useStateFromStores)([g.default], () => g.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(v.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([C.default], () => null != F.id && C.default.isLocalVideoDisabled(F.id, (0, f.default)(t.type)), [F.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, F.id)), K = I.default.getName(n.getGuildId(), n.id, F) + (z ? " ".concat(N.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = V && (W || G), X = u < 124 ? R : M, {
                     avatarSrc: J,
                     avatarDecorationSrc: q
                 } = (0, p.default)({
@@ -74,7 +74,7 @@
                     className: i(A.content, {
                         [A.blockedAvatar]: b
                     }),
-                    children: (0, a.jsx)(g.default, {
+                    children: (0, a.jsx)(S.default, {
                         "aria-label": K,
                         src: J,
                         avatarDecoration: q,

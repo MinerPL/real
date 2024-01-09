@@ -19,8 +19,8 @@
                 m = n("685665"),
                 E = n("850391"),
                 C = n("149022"),
-                S = n("681060"),
-                g = n("376215"),
+                g = n("681060"),
+                S = n("376215"),
                 _ = n("172554"),
                 I = n("699473"),
                 T = n("328511"),
@@ -119,8 +119,8 @@
                         updateThreadSettings: s
                     }
                 }(t, n), {
-                    textAreaState: S,
-                    setTextAreaState: g
+                    textAreaState: g,
+                    setTextAreaState: S
                 } = function(e, t) {
                     let [n, a] = l.useState((0, C.createEmptyState)());
                     return l.useEffect(() => {
@@ -204,7 +204,7 @@
                     parentMessageId: n,
                     threadSettings: p,
                     privateThreadMode: I,
-                    textAreaState: S,
+                    textAreaState: g,
                     location: s
                 }), R = (0, k.getIsPrivate)(p, I) ? y.default : b.default;
                 return (0, a.jsx)("div", {
@@ -251,8 +251,8 @@
                                 className: Y.submitContainer,
                                 children: [(0, a.jsx)(Q, {
                                     parentChannel: t,
-                                    textAreaState: S,
-                                    setTextAreaState: g,
+                                    textAreaState: g,
+                                    setTextAreaState: S,
                                     submit: M,
                                     error: N
                                 }), (0, a.jsx)(c.default, {
@@ -372,7 +372,7 @@
                         content: n.textValue
                     });
                 return (0, a.jsxs)(a.Fragment, {
-                    children: [(0, a.jsx)(g.default, {
+                    children: [(0, a.jsx)(S.default, {
                         channelId: t.id,
                         type: K,
                         canAttachFiles: I
@@ -381,7 +381,7 @@
                         children: (0, a.jsx)(u.InputError, {
                             error: T
                         })
-                    }), (0, a.jsx)(S.default, {
+                    }), (0, a.jsx)(g.default, {
                         type: K,
                         channel: t,
                         placeholder: W.default.Messages.FORM_THREAD_STARTER_MESSAGE_PLACEHOLDER,

@@ -19,8 +19,8 @@
                 m = n("336804"),
                 E = n("311197"),
                 C = n("830251"),
-                S = n("170643"),
-                g = n("550410"),
+                g = n("170643"),
+                S = n("550410"),
                 _ = n("124824"),
                 I = n("640553"),
                 T = n("104815"),
@@ -86,7 +86,7 @@
                 }), [C]), V = (0, y.default)(n), {
                     preventIdle: B,
                     allowIdle: H
-                } = (0, g.usePreventIdle)("popup"), G = [];
+                } = (0, S.usePreventIdle)("popup"), G = [];
                 if (V) {
                     let e = (null == j ? void 0 : j.type) === D.ParticipantTypes.STREAM ? (0, p.decodeStreamKey)(j.id) : void 0,
                         t = (null == j ? void 0 : j.type) === D.ParticipantTypes.ACTIVITY ? j.id : void 0;
@@ -105,7 +105,7 @@
                 }, "current-speaker")), G.push((0, a.jsx)(h.default, {
                     className: F.button,
                     channelId: C
-                }, "clips-enabled-indicator")), (null == j ? void 0 : j.type) === D.ParticipantTypes.STREAM && (G.push((0, a.jsx)(S.default, {
+                }, "clips-enabled-indicator")), (null == j ? void 0 : j.type) === D.ParticipantTypes.STREAM && (G.push((0, a.jsx)(g.default, {
                     className: F.button,
                     participant: j
                 }, "warning")), G.push((0, a.jsx)(m.default, {

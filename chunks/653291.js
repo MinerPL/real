@@ -15,8 +15,8 @@
                 c = n("866227"),
                 f = n.n(c),
                 E = n("868233"),
-                h = n("446674"),
-                _ = n("77078"),
+                _ = n("446674"),
+                h = n("77078"),
                 S = n("378438"),
                 T = n("425773"),
                 p = n("76385"),
@@ -36,8 +36,8 @@
                 P = n("228220"),
                 x = n("659500"),
                 U = n("701909"),
-                F = n("751520"),
-                b = n("158998"),
+                b = n("751520"),
+                F = n("158998"),
                 j = n("49111"),
                 G = n("782340"),
                 k = n("813069");
@@ -58,7 +58,7 @@
                     let u = v.default.getUser(r.id),
                         d = A.default.getChannel(e),
                         c = (null == d ? void 0 : d.isPrivate()) ? C.default.getNickname(r.id) : null,
-                        f = null !== (s = null !== (a = g.default.getNick(e, r.id)) && void 0 !== a ? a : c) && void 0 !== s ? s : b.default.getName(r),
+                        f = null !== (s = null !== (a = g.default.getNick(e, r.id)) && void 0 !== a ? a : c) && void 0 !== s ? s : F.default.getName(r),
                         E = null !== (i = null == u ? void 0 : u.getAvatarURL(e, 20)) && void 0 !== i ? i : r.getAvatarURL(null == d ? void 0 : d.guild_id, 20);
                     return [(0, l.jsx)("img", {
                         alt: "",
@@ -69,7 +69,7 @@
                         children: f
                     }, "display-nick-".concat(t, "-").concat(r.id)), (0, l.jsx)("span", {
                         className: k.displayUsername,
-                        children: b.default.getUserTag(r, {
+                        children: F.default.getUserTag(r, {
                             identifiable: L.default.enabled && L.default.hidePersonalInformation ? "never" : "always"
                         })
                     }, "display-username-".concat(t, "-").concat(r.id))]
@@ -107,7 +107,7 @@
                         tabIndex: c,
                         "aria-selected": f,
                         onSelect: E,
-                        onFocus: h,
+                        onFocus: _,
                         showFilter: S,
                         renderResult: T
                     } = e;
@@ -120,11 +120,11 @@
                     }
                     return n = null != T ? T(s, o, r) : (0, l.jsx)("strong", {
                         children: r.text
-                    }), (0, l.jsxs)(_.Clickable, {
+                    }), (0, l.jsxs)(h.Clickable, {
                         tag: "li",
                         className: i(k.option, u),
                         onClick: E,
-                        onFocus: h,
+                        onFocus: _,
                         id: a,
                         role: d,
                         tabIndex: c,
@@ -170,7 +170,7 @@
                             let {
                                 searchId: t
                             } = e;
-                            return (0, l.jsx)(_.Tooltip, {
+                            return (0, l.jsx)(h.Tooltip, {
                                 text: G.default.Messages.SEARCH_CLEAR_HISTORY,
                                 position: "left",
                                 children: e => {
@@ -178,7 +178,7 @@
                                         onMouseEnter: n,
                                         onMouseLeave: a
                                     } = e;
-                                    return (0, l.jsx)(_.Clickable, {
+                                    return (0, l.jsx)(h.Clickable, {
                                         onClick: () => (0, S.clearHistory)(t),
                                         onMouseEnter: n,
                                         onMouseLeave: a,
@@ -201,9 +201,9 @@
                                 group: d,
                                 ...c
                             } = e, f = "", E = a.useMemo(() => (function(e) {
-                                let t = F.tokenizeQuery(e).map((e, t, n) => F.filterHasAnswer(e, n[t + 1]) ? e : new p.Token(e.getFullMatch(), p.NON_TOKEN_TYPE));
+                                let t = b.tokenizeQuery(e).map((e, t, n) => b.filterHasAnswer(e, n[t + 1]) ? e : new p.Token(e.getFullMatch(), p.NON_TOKEN_TYPE));
                                 return t
-                            })(s.text), [s.text]), h = E.map(e => {
+                            })(s.text), [s.text]), _ = E.map(e => {
                                 let t = e.getFullMatch();
                                 if ("" === t.trim()) return null;
                                 let n = j.IS_SEARCH_FILTER_TOKEN.test(e.type),
@@ -217,7 +217,7 @@
                                     children: t
                                 }, e.type + t)
                             });
-                            return (0, l.jsxs)(_.Clickable, {
+                            return (0, l.jsxs)(h.Clickable, {
                                 className: i(k.option, k.history),
                                 onClick: t,
                                 onFocus: n,
@@ -225,7 +225,7 @@
                                 "aria-label": G.default.Messages.SEARCH_FROM_SUGGESTIONS.format({
                                     suggestion: f
                                 }),
-                                children: [h, (0, l.jsx)(y.default, {
+                                children: [_, (0, l.jsx)(y.default, {
                                     className: k.plusIcon
                                 })]
                             })
@@ -233,13 +233,13 @@
                     },
                     [j.SearchAutocompleteGroups.SEARCH_OPTIONS]: {
                         titleText: () => G.default.Messages.SEARCH_GROUP_HEADER_SEARCH_OPTIONS,
-                        groupTip: () => (0, l.jsx)(_.Tooltip, {
+                        groupTip: () => (0, l.jsx)(h.Tooltip, {
                             text: G.default.Messages.LEARN_MORE,
                             position: "left",
                             children: e => (0, l.jsx)("div", {
                                 className: k.searchLearnMore,
                                 ...e,
-                                children: (0, l.jsx)(_.Anchor, {
+                                children: (0, l.jsx)(h.Anchor, {
                                     href: U.default.getArticleURL(j.HelpdeskArticles.USING_SEARCH),
                                     title: G.default.Messages.LEARN_MORE,
                                     children: (0, l.jsx)(D.default, {})
@@ -255,8 +255,8 @@
                                 showFilter: r,
                                 searchId: o,
                                 ...u
-                            } = e, d = F.getSearchOptionAnswer(null !== (t = n.token) && void 0 !== t ? t : "");
-                            return (0, l.jsxs)(_.Clickable, {
+                            } = e, d = b.getSearchOptionAnswer(null !== (t = n.token) && void 0 !== t ? t : "");
+                            return (0, l.jsxs)(h.Clickable, {
                                 className: i(k.option, k.searchOption),
                                 onClick: a,
                                 onFocus: s,
@@ -335,9 +335,9 @@
                         } = e;
                         if (s.type !== r.mode.type) this.setSelectedIndex(-1);
                         else if (t.selectedIndex >= 0 && (t.selectedIndex === n || r.autocompletes.length !== i.length)) {
-                            let e = F.getFlattenedStringArray(r.autocompletes, r.mode.type),
+                            let e = b.getFlattenedStringArray(r.autocompletes, r.mode.type),
                                 n = e[t.selectedIndex - 1],
-                                l = F.getFlattenedStringArray(i, s.type),
+                                l = b.getFlattenedStringArray(i, s.type),
                                 o = l.indexOf(n); - 1 !== o ? this.setSelectedIndex(o) : t.selectedIndex >= a && this.setSelectedIndex(a - 1)
                         }
                     }, this.focusNextOption = () => {
@@ -350,14 +350,14 @@
                         } = this.state, {
                             resultsState: n
                         } = this.props;
-                        !F.showDatePicker(n.mode.filter) && this.focusOption(t + e)
+                        !b.showDatePicker(n.mode.filter) && this.focusOption(t + e)
                     }, this.focusOption = e => {
                         let t = e,
                             {
                                 autocompletes: n
                             } = this.props.resultsState,
                             l = this.shouldShowSearchQuery();
-                        t < -1 || !l && t < 0 ? t = F.getTotalResults(n) - 1 : l && t >= F.getTotalResults(n) ? t = -1 : !l && t >= F.getTotalResults(n) && (t = 0), this.setSelectedIndex(t)
+                        t < -1 || !l && t < 0 ? t = b.getTotalResults(n) - 1 : l && t >= b.getTotalResults(n) ? t = -1 : !l && t >= b.getTotalResults(n) && (t = 0), this.setSelectedIndex(t)
                     }, this.selectOption = e => {
                         let t = e;
                         if (null == t && (t = this.state.selectedIndex), t < 0) return !1;
@@ -365,8 +365,8 @@
                             autocompletes: n,
                             mode: l
                         } = this.props.resultsState;
-                        if (F.showDatePicker(l.filter)) return;
-                        let a = F.getFlattenedStringArray(n, l.type);
+                        if (b.showDatePicker(l.filter)) return;
+                        let a = b.getFlattenedStringArray(n, l.type);
                         if (t >= a.length) return !1;
                         let s = a[t],
                             i = function(e) {
@@ -396,7 +396,7 @@
                         let {
                             mode: e
                         } = this.props.resultsState;
-                        return e.type !== j.SearchPopoutModes.FILTER && e.type !== j.SearchPopoutModes.EMPTY && !F.showDatePicker(e.filter)
+                        return e.type !== j.SearchPopoutModes.FILTER && e.type !== j.SearchPopoutModes.EMPTY && !b.showDatePicker(e.filter)
                     }, this.renderDatePicker = () => (0, l.jsxs)("div", {
                         className: k.datePicker,
                         children: [(0, l.jsx)(B, {
@@ -408,7 +408,7 @@
                             children: [(0, l.jsxs)("span", {
                                 className: k.hint,
                                 children: [G.default.Messages.SEARCH_DATE_PICKER_HINT, "\xa0"]
-                            }), (0, l.jsx)(_.Clickable, {
+                            }), (0, l.jsx)(h.Clickable, {
                                 tag: "span",
                                 className: k.hintValue,
                                 onClick: this.handleHintClick,
@@ -429,7 +429,7 @@
                             autocompletes: a,
                             mode: s
                         } = this.props.resultsState;
-                        if (F.showDatePicker(s.filter)) return this.renderDatePicker();
+                        if (b.showDatePicker(s.filter)) return this.renderDatePicker();
                         let i = -1;
                         return a.map(a => {
                             var r, o, u;
@@ -442,21 +442,21 @@
                                 children: f.titleText()
                             }));
                             let E = null !== (o = f.groupTip) && void 0 !== o ? o : null,
-                                h = null != E ? (0, l.jsx)(E, {
+                                _ = null != E ? (0, l.jsx)(E, {
                                     searchId: n
                                 }) : null,
-                                _ = null !== (u = f.component) && void 0 !== u ? u : Y,
+                                h = null !== (u = f.component) && void 0 !== u ? u : Y,
                                 S = s.type === j.SearchPopoutModes.FILTER_ALL;
                             return (0, l.jsxs)("ul", {
                                 role: "group",
                                 "aria-labelledby": c,
                                 className: k.resultsGroup,
-                                children: [d, h, a.results.map(s => {
+                                children: [d, _, a.results.map(s => {
                                     var r, o;
                                     if (null == s || null == a) return null;
                                     i += 1;
                                     let u = e === i;
-                                    return (0, l.jsx)(_, {
+                                    return (0, l.jsx)(h, {
                                         searchId: n,
                                         group: null !== (r = s.group) && void 0 !== r ? r : a.group,
                                         result: s,
@@ -472,13 +472,13 @@
                 }
             }
             var W = a.forwardRef((e, t) => {
-                let [n, a, s] = (0, h.useStateFromStoresArray)([O.default, M.default, R.default], () => {
+                let [n, a, s] = (0, _.useStateFromStoresArray)([O.default, M.default, R.default], () => {
                     let e = O.default.getGuildId(),
                         t = M.default.getChannelId(),
                         n = null != e ? e : t;
                     o(null != n, "SearchPopout.getStateFromStores - invalid searchId");
                     let l = R.default.getState(n),
-                        a = F.getTotalResults(l.autocompletes);
+                        a = b.getTotalResults(l.autocompletes);
                     return [n, l, a]
                 });
                 return (0, l.jsx)(z, {

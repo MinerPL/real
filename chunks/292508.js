@@ -19,8 +19,8 @@
                 m = n("320679"),
                 E = n("191225"),
                 C = n("229661"),
-                S = n("812204"),
-                g = n("685665"),
+                g = n("812204"),
+                S = n("685665"),
                 _ = n("338733"),
                 I = n("779601"),
                 T = n("967889"),
@@ -122,8 +122,8 @@
                         reducedMotionEnabled: p,
                         fontScaleClass: E,
                         saturation: C,
-                        withTitleBar: S,
-                        guestWindow: g,
+                        withTitleBar: g,
+                        guestWindow: S,
                         clientThemesClassName: _,
                         contentClassName: x
                     } = this.props, N = (0, b.getPlatform)(), M = i(E, {
@@ -149,11 +149,11 @@
                                                 children: (0, a.jsxs)(T.default, {
                                                     children: [(0, a.jsx)(y.MaskLibrary, {}), (0, a.jsx)(h.AppWindowContextProvider, {
                                                         appContext: F.AppContext.POPOUT,
-                                                        renderWindow: g,
+                                                        renderWindow: S,
                                                         children: (0, a.jsxs)(O.AppLayerProvider, {
                                                             children: [(0, a.jsxs)("div", {
                                                                 className: V.popout,
-                                                                children: [S && null != N ? (0, a.jsx)(v.default, {
+                                                                children: [g && null != N ? (0, a.jsx)(v.default, {
                                                                     focused: n,
                                                                     type: N,
                                                                     windowKey: r,
@@ -226,7 +226,7 @@
                 let v = (0, N.default)(n, l),
                     {
                         AnalyticsLocationProvider: A
-                    } = (0, g.default)(S.default.POPOUT_WINDOW),
+                    } = (0, S.default)(g.default.POPOUT_WINDOW),
                     {
                         clientThemesClassName: j,
                         clientThemesCSS: O

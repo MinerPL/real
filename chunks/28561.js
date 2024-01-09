@@ -19,8 +19,8 @@
                 m = n("335189"),
                 E = n("190045"),
                 C = n("680894"),
-                S = n("49111"),
-                g = n("994428"),
+                g = n("49111"),
+                S = n("994428"),
                 _ = n("782340"),
                 I = n("400496"),
                 T = n("382719"),
@@ -35,9 +35,9 @@
                     return d.default.getGuildMemberProfile(C.CLYDE_AI_USER_ID, null !== (e = null == M ? void 0 : M.id) && void 0 !== e ? e : "")
                 }), j = () => {
                     var e;
-                    (0, E.default)(null !== (e = null == M ? void 0 : M.id) && void 0 !== e ? e : ""), n(g.ContentDismissActionType.UNKNOWN)
+                    (0, E.default)(null !== (e = null == M ? void 0 : M.id) && void 0 !== e ? e : ""), n(S.ContentDismissActionType.UNKNOWN)
                 }, L = () => {
-                    (0, r.default)(p.default.getArticleURL(S.HelpdeskArticles.CLYDE_AI), !0)
+                    (0, r.default)(p.default.getArticleURL(g.HelpdeskArticles.CLYDE_AI), !0)
                 };
                 return (l.useEffect(() => {
                     let e = async () => {
@@ -47,14 +47,14 @@
                     };
                     e()
                 }, [R, M]), null == M) ? null : (0, a.jsx)(o.default, {
-                    type: S.ChannelNoticeTypes.CLYDE_PERSONALITIES_NUX,
+                    type: g.ChannelNoticeTypes.CLYDE_PERSONALITIES_NUX,
                     image: A ? T : v,
                     imageStyles: {
                         borderRadius: "50%"
                     },
                     imageMarginTop: 8,
                     guild: M,
-                    onDismissed: () => n(g.ContentDismissActionType.UNKNOWN),
+                    onDismissed: () => n(S.ContentDismissActionType.UNKNOWN),
                     centerText: !0,
                     imageMarginX: 64,
                     title: _.default.Messages.CLYDE_PERSONALITY_NUX_HEADER,

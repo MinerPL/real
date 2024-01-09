@@ -48,11 +48,11 @@
                     "focus" !== e.type && !d && p()
                 }
 
-                function S() {
+                function g() {
                     !d && m()
                 }
 
-                function g(e) {
+                function S(e) {
                     E(), c(!d), (!f || d) && e()
                 }
                 let _ = f || d;
@@ -69,7 +69,7 @@
                         isHovered: _,
                         onFocus: () => c(!0),
                         onMouseEnter: p,
-                        onMouseLeave: S,
+                        onMouseLeave: g,
                         renderPopout: t,
                         ...e
                     }),
@@ -80,14 +80,14 @@
                         } = e;
                         return (0, a.jsx)(a.Fragment, {
                             children: n({
-                                onClick: e => g(() => t(e)),
+                                onClick: e => S(() => t(e)),
                                 onKeyDown: e => {
                                     var t, n;
-                                    return t = e, n = l, void((t.key === r.KeyboardKeysUpdated.ENTER || t.key === r.KeyboardKeysUpdated.SPACE) && g(() => n(t)))
+                                    return t = e, n = l, void((t.key === r.KeyboardKeysUpdated.ENTER || t.key === r.KeyboardKeysUpdated.SPACE) && S(() => n(t)))
                                 },
                                 className: u.actionBarButton,
                                 onMouseEnter: C,
-                                onMouseLeave: S,
+                                onMouseLeave: g,
                                 isActive: _
                             })
                         })
