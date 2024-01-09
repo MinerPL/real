@@ -4,8 +4,8 @@
                     return E
                 }
             });
-            var s = n("37983"),
-                a = n("884691"),
+            var a = n("37983"),
+                s = n("884691"),
                 l = n("432710"),
                 i = n("77078"),
                 r = n("736964"),
@@ -24,16 +24,16 @@
                     channelId: t,
                     warningId: E,
                     senderId: g
-                } = e, S = a.useCallback(() => {
+                } = e, S = s.useCallback(() => {
                     (0, d.dismissChannelSafetyWarnings)(t, [E])
-                }, [t, E]), _ = a.useCallback(() => {
+                }, [t, E]), A = s.useCallback(() => {
                     S(), (0, c.trackCtaEvent)({
                         channelId: t,
                         warningId: E,
                         senderId: g,
                         cta: c.CtaEventTypes.DISMISS
                     })
-                }, [S, t, E, g]), A = a.useCallback(e => () => {
+                }, [S, t, E, g]), _ = s.useCallback(e => () => {
                     r.default.addRelationship({
                         userId: g,
                         context: {
@@ -47,7 +47,7 @@
                         cta: e
                     })
                 }, [S, t, E, g]);
-                a.useEffect(() => {
+                s.useEffect(() => {
                     (0, c.trackViewedEvent)(h.AnalyticEvents.SAFETY_WARNING_VIEWED, {
                         channelId: t,
                         warningId: E,
@@ -63,11 +63,11 @@
                             } = await n.el("664639").then(n.bind(n, "664639"));
                             return n => {
                                 let {
-                                    transitionState: a,
+                                    transitionState: s,
                                     onClose: l
                                 } = n;
-                                return (0, s.jsx)(e, {
-                                    transitionState: a,
+                                return (0, a.jsx)(e, {
+                                    transitionState: s,
                                     onClose: l,
                                     channelId: t,
                                     warningId: E,
@@ -79,48 +79,48 @@
                             }
                         })
                     },
-                    M = (e, a, l) => {
+                    M = (e, s, l) => {
                         (0, i.openModalLazy)(async () => {
                             let {
                                 default: i
                             } = await n.el("968710").then(n.bind(n, "968710"));
-                            return n => (0, s.jsx)(i, {
+                            return n => (0, a.jsx)(i, {
                                 ...n,
                                 userId: g,
-                                confirmBlock: A(e),
+                                confirmBlock: _(e),
                                 onCancel: () => {
                                     null == l || l(), (0, c.trackCtaEvent)({
                                         channelId: t,
                                         warningId: E,
                                         senderId: g,
-                                        cta: a
+                                        cta: s
                                     })
                                 }
                             })
                         })
                     };
-                return (0, s.jsxs)("div", {
+                return (0, a.jsxs)("div", {
                     className: p.strangerDangerBanner,
-                    children: [(0, s.jsxs)("div", {
+                    children: [(0, a.jsxs)("div", {
                         className: p.shieldAndHeading,
-                        children: [(0, s.jsx)("img", {
+                        children: [(0, a.jsx)("img", {
                             className: p.safetyShieldIcon,
                             src: m,
                             alt: ""
-                        }), (0, s.jsxs)("div", {
-                            children: [(0, s.jsx)(i.Heading, {
+                        }), (0, a.jsxs)("div", {
+                            children: [(0, a.jsx)(i.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "text-primary",
                                 children: C.default.Messages.STRANGER_DANGER_BANNER_HEADER
-                            }), (0, s.jsx)(i.Text, {
+                            }), (0, a.jsx)(i.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-primary",
                                 children: C.default.Messages.STRANGER_DANGER_BANNER_DESCRIPTION
                             })]
                         })]
-                    }), (0, s.jsxs)("div", {
+                    }), (0, a.jsxs)("div", {
                         className: p.buttons,
-                        children: [(0, s.jsx)(i.Button, {
+                        children: [(0, a.jsx)(i.Button, {
                             size: i.Button.Sizes.SMALL,
                             color: i.Button.Colors.BRAND,
                             "aria-label": C.default.Messages.STRANGER_DANGER_BANNER_MORE_TIPS,
@@ -133,19 +133,19 @@
                                 })
                             },
                             children: C.default.Messages.STRANGER_DANGER_BANNER_MORE_TIPS
-                        }), (0, s.jsx)(i.Button, {
+                        }), (0, a.jsx)(i.Button, {
                             size: i.Button.Sizes.SMALL,
                             color: i.Button.Colors.RED,
                             "aria-label": C.default.Messages.STRANGER_DANGER_BANNER_BLOCK,
                             onClick: () => M(c.CtaEventTypes.USER_BANNER_BLOCK_CONFIRM, c.CtaEventTypes.USER_BANNER_BLOCK_CANCEL),
                             children: C.default.Messages.STRANGER_DANGER_BANNER_BLOCK
                         })]
-                    }), (0, s.jsx)(i.Clickable, {
+                    }), (0, a.jsx)(i.Clickable, {
                         className: p.closeButton,
-                        onClick: _,
+                        onClick: A,
                         role: "button",
                         "aria-label": C.default.Messages.DISMISS,
-                        children: (0, s.jsx)(u.default, {
+                        children: (0, a.jsx)(u.default, {
                             width: 24,
                             height: 24,
                             className: p.closeButton

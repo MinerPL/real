@@ -1,18 +1,18 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return s
                 }
             });
-            var s = n("118810");
+            var a = n("118810");
 
-            function a(e, t) {
+            function s(e, t) {
                 let n = e.offsetTop,
-                    a = e.offsetParent;
-                for (; null != a;) {
+                    s = e.offsetParent;
+                for (; null != s;) {
                     var l;
-                    if (a === t || !(0, s.isElement)(a, HTMLElement)) break;
-                    n += null !== (l = a.offsetTop) && void 0 !== l ? l : 0, a = a.offsetParent
+                    if (s === t || !(0, a.isElement)(s, HTMLElement)) break;
+                    n += null !== (l = s.offsetTop) && void 0 !== l ? l : 0, s = s.offsetParent
                 }
                 return n
             }
