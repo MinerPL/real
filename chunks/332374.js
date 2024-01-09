@@ -1,16 +1,16 @@
             "use strict";
             n.r(t), n.d(t, {
                 MIN_CHAT_SIDEBAR_WIDTH: function() {
-                    return a
+                    return s
                 },
                 shouldChannelChatFloat: function() {
-                    return s
+                    return a
                 }
             });
-            let a = 450,
-                s = e => {
+            let s = 450,
+                a = e => {
                     let {
                         maxWidth: t
                     } = e;
-                    return t <= a
+                    return t <= s
                 }

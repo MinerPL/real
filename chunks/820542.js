@@ -4,10 +4,10 @@
                     return l
                 },
                 categoryExpand: function() {
-                    return a
+                    return r
                 },
                 categoryCollapseAll: function() {
-                    return r
+                    return a
                 },
                 categoryExpandAll: function() {
                     return s
@@ -22,14 +22,14 @@
                 })
             }
 
-            function a(e) {
+            function r(e) {
                 i.default.dispatch({
                     type: "CATEGORY_EXPAND",
                     id: e
                 })
             }
 
-            function r(e) {
+            function a(e) {
                 i.default.dispatch({
                     type: "CATEGORY_COLLAPSE_ALL",
                     guildId: e

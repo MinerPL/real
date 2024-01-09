@@ -175,7 +175,7 @@
                         [O, L], v, M
                     ] = await Promise.all([S, C, N, A]),
                     P = performance.now() - h;
-                if (b.verbose("cache loaded in ".concat(P, "ms (legacy ").concat(m, "ms, channel_history ").concat(O, "ms)")), null == R || null == L) return b.verbose("finished without dispatching CACHE_LOADED"), [!1, null, 0];
+                if (b.verbose("cache loaded in ".concat(P, "ms (legacy ").concat(m, "ms, channel_history ").concat(O, "ms)")), null == R || null == L) return null == R && null == L ? (0, y.default)("database:legacy_and_history_cache_null") : null == R ? (0, y.default)("database:legacy_cache_null") : (0, y.default)("database:history_cache_null"), b.verbose("finished without dispatching CACHE_LOADED"), [!1, null, 0];
                 {
                     let s = Object.fromEntries(L.members.map(e => [e.userId, e])),
                         l = null != v.guild && null != v.channels,
@@ -229,7 +229,7 @@
                     var a, l, o;
                     let u = performance.now();
                     if (!1 === _) {
-                        V("database: not ok"), r.default.dispatch({
+                        (0, y.default)("database:not_ok"), V("database: not ok"), r.default.dispatch({
                             type: "CACHE_LOADED_LAZY_NO_CACHE"
                         });
                         return
@@ -247,13 +247,13 @@
                         return
                     }
                     if (B) {
-                        b.log("Skipping lazy cache; already connected."), r.default.dispatch({
+                        (0, y.default)("already_connected"), b.log("Skipping lazy cache; already connected."), r.default.dispatch({
                             type: "CACHE_LOADED_LAZY_NO_CACHE"
                         });
                         return
                     }
                     if (null == E) {
-                        b.log("Lazy cache was missing"), r.default.dispatch({
+                        b.log("Lazy cache was missing"), (0, y.default)("cache:lazy_cache_missing"), r.default.dispatch({
                             type: "CACHE_LOADED_LAZY_NO_CACHE"
                         });
                         return
@@ -353,7 +353,7 @@
                 async loadCacheAsync(e, t) {
                     let n = (0, M.callOnce)(t);
                     if ("initializing" !== k) {
-                        n(), setTimeout(() => {
+                        (0, y.default)("cache:lazy_cache_not_initializing"), n(), setTimeout(() => {
                             var e;
                             return null === (e = I.default.getSocket()) || void 0 === e ? void 0 : e.processDispatchQueue()
                         }, 0);
@@ -368,7 +368,7 @@
                         })), Promise.resolve()))
                     } catch (e) {
                         var a;
-                        b.error("clearing cache. exception encountered while loading cache.", e, e.stack), V("loadCacheAsync"), n(), null === (a = I.default.getSocket()) || void 0 === a || a.resetSocketOnError(e, "loadCacheAsync", {
+                        b.error("clearing cache. exception encountered while loading cache.", e, e.stack), (0, y.default)("cache:exception"), V("loadCacheAsync"), n(), null === (a = I.default.getSocket()) || void 0 === a || a.resetSocketOnError(e, "loadCacheAsync", {
                             sentry: !0,
                             immediate: !0
                         })

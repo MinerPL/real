@@ -1,13 +1,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 removeAutomodMessageNotice: function() {
-                    return s
+                    return a
                 }
             });
-            var a = n("913144");
+            var s = n("913144");
 
-            function s(e) {
-                a.default.dispatch({
+            function a(e) {
+                s.default.dispatch({
                     type: "REMOVE_AUTOMOD_MESSAGE_NOTICE",
                     messageId: e
                 })

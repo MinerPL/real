@@ -4,27 +4,27 @@
                     return o
                 },
                 CtaEventTypes: function() {
-                    return s
+                    return a
                 },
                 trackCtaEvent: function() {
                     return u
                 }
             });
-            var a, s, l = n("599110"),
+            var s, a, l = n("599110"),
                 i = n("764828"),
                 r = n("49111");
 
             function o(e, t) {
                 let {
                     channelId: n,
-                    warningId: a,
-                    senderId: s
+                    warningId: s,
+                    senderId: a
                 } = t;
                 l.default.track(e, {
                     channel_id: n,
-                    warning_id: parseInt(a),
+                    warning_id: parseInt(s),
                     warning_type: i.SafetyWarningTypes.STRANGER_DANGER,
-                    other_user_id: s
+                    other_user_id: a
                 })
             }
 
@@ -32,14 +32,14 @@
                 let {
                     channelId: t,
                     warningId: n,
-                    senderId: a,
-                    cta: s
+                    senderId: s,
+                    cta: a
                 } = e;
                 l.default.track(r.AnalyticEvents.SAFETY_WARNING_CTA_CLICKED, {
                     channel_id: t,
                     warning_id: parseInt(n),
                     warning_type: i.SafetyWarningTypes.STRANGER_DANGER,
-                    other_user_id: a,
-                    cta: s
+                    other_user_id: s,
+                    cta: a
                 })
-            }(a = s || (s = {})).DISMISS = "dismiss", a.OPEN_MORE_TIPS = "open_more_tips", a.USER_BANNER_BLOCK_CONFIRM = "user_banner_block_confirm", a.USER_BANNER_BLOCK_CANCEL = "user_banner_block_cancel", a.USER_MODAL_BLOCK_CONFIRM = "user_modal_block_confirm", a.USER_MODAL_BLOCK_CANCEL = "user_modal_block_cancel", a.USER_MODAL_MUTE = "user_modal_mute", a.USER_MODAL_UNMUTE = "user_modal_unmute", a.FEEDBACK_UPVOTE = "feedback_upvote", a.FEEDBACK_DOWNVOTE = "feedback_downvote"
+            }(s = a || (a = {})).DISMISS = "dismiss", s.OPEN_MORE_TIPS = "open_more_tips", s.USER_BANNER_BLOCK_CONFIRM = "user_banner_block_confirm", s.USER_BANNER_BLOCK_CANCEL = "user_banner_block_cancel", s.USER_MODAL_BLOCK_CONFIRM = "user_modal_block_confirm", s.USER_MODAL_BLOCK_CANCEL = "user_modal_block_cancel", s.USER_MODAL_MUTE = "user_modal_mute", s.USER_MODAL_UNMUTE = "user_modal_unmute", s.FEEDBACK_UPVOTE = "feedback_upvote", s.FEEDBACK_DOWNVOTE = "feedback_downvote"
