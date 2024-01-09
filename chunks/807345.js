@@ -8,7 +8,7 @@
                 r = n("913144"),
                 l = n("374363");
 
-            function a() {
+            function s() {
                 return {
                     hasFetchedConsumedInboundPromotionId: !1,
                     consumedInboundPromotionId: null,
@@ -16,7 +16,7 @@
                     bogoPromotion: null
                 }
             }
-            let s = a(),
+            let a = s(),
                 o = !1,
                 u = null,
                 d = !1,
@@ -36,13 +36,13 @@
             }
             class T extends i.default.PersistedStore {
                 initialize(e) {
-                    null != e && (s = e), this.waitFor(l.default), this.syncWith([l.default], E)
+                    null != e && (a = e), this.waitFor(l.default), this.syncWith([l.default], E)
                 }
                 get outboundPromotions() {
                     return m
                 }
                 get lastSeenOutboundPromotionStartDate() {
-                    return s.lastSeenOutboundPromotionStartDate
+                    return a.lastSeenOutboundPromotionStartDate
                 }
                 get lastDismissedOutboundPromotionStartDate() {
                     return f
@@ -54,13 +54,13 @@
                     return d
                 }
                 get hasFetchedConsumedInboundPromotionId() {
-                    return s.hasFetchedConsumedInboundPromotionId
+                    return a.hasFetchedConsumedInboundPromotionId
                 }
                 get consumedInboundPromotionId() {
-                    return s.consumedInboundPromotionId
+                    return a.consumedInboundPromotionId
                 }
                 get bogoPromotion() {
-                    return s.bogoPromotion
+                    return a.bogoPromotion
                 }
                 get isFetchingActiveBogoPromotion() {
                     return o
@@ -69,7 +69,7 @@
                     return u
                 }
                 getState() {
-                    return s
+                    return a
                 }
             }
             T.displayName = "PromotionsStore", T.persistKey = "PromotionsPersistedStore";
@@ -79,7 +79,7 @@
                         activeOutboundPromotions: t,
                         consumedInboundPromotionId: n
                     } = e;
-                    m = t, c = Date.now(), d = !1, !s.hasFetchedConsumedInboundPromotionId && (s.hasFetchedConsumedInboundPromotionId = !0, s.consumedInboundPromotionId = n)
+                    m = t, c = Date.now(), d = !1, !a.hasFetchedConsumedInboundPromotionId && (a.hasFetchedConsumedInboundPromotionId = !0, a.consumedInboundPromotionId = n)
                 },
                 ACTIVE_OUTBOUND_PROMOTIONS_FETCH: function() {
                     d = !0
@@ -91,13 +91,13 @@
                     let {
                         activePromotion: t
                     } = e;
-                    s.bogoPromotion = t, u = Date.now(), o = !1
+                    a.bogoPromotion = t, u = Date.now(), o = !1
                 },
                 ACTIVE_BOGO_PROMOTION_FETCH: function() {
                     o = !0
                 },
                 ACTIVE_BOGO_PROMOTION_FETCH_FAIL: function() {
-                    s.bogoPromotion = null, o = !1
+                    a.bogoPromotion = null, o = !1
                 },
                 OUTBOUND_PROMOTION_NOTICE_DISMISS: function() {
                     if (0 === m.length) return !1;
@@ -107,9 +107,9 @@
                 OUTBOUND_PROMOTIONS_SEEN: function() {
                     if (0 === m.length) return !1;
                     let e = _();
-                    null != e && (f = e, s.lastSeenOutboundPromotionStartDate = e)
+                    null != e && (f = e, a.lastSeenOutboundPromotionStartDate = e)
                 },
                 LOGOUT: function() {
-                    s = a(), d = !1, c = null, o = !1, u = null, m = []
+                    a = s(), d = !1, c = null, o = !1, u = null, m = []
                 }
             })

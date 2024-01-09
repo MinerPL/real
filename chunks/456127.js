@@ -28,12 +28,12 @@
                 }, {
                     autoTrackExposure: !1
                 }), {
-                    viewerClippingAllowed: g,
-                    isAtMaxSavingClipOperations: S
+                    viewerClippingAllowed: S,
+                    isAtMaxSavingClipOperations: g
                 } = (0, s.useStateFromStoresObject)([i.default], () => ({
                     viewerClippingAllowed: null != E && (i.default.isViewerClippingAllowedForUser(E.ownerId) || C),
                     isAtMaxSavingClipOperations: i.default.getIsAtMaxSaveClipOperations()
-                })), _ = (null == E ? void 0 : E.ownerId) === c.default.getId(), I = !(_ || g) || S || null == n;
+                })), _ = (null == E ? void 0 : E.ownerId) === c.default.getId(), I = !(_ || S) || g || null == n;
                 return (0, a.jsx)(o.default, {
                     onClick: () => {
                         !I && (_ ? (0, r.saveClip)() : (0, r.saveClip)(n.id))
@@ -43,6 +43,6 @@
                         ...e,
                         color: "currentColor"
                     }),
-                    label: null == E ? p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : _ || g ? S ? void 0 : p.default.Messages.CLIPS_SAVE : p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP
+                    label: null == E ? p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_FOCUS_TOOLTIP : _ || S ? g ? void 0 : p.default.Messages.CLIPS_SAVE : p.default.Messages.CLIPS_VIEWERSIDE_BUTTON_DISABLED_TOOLTIP
                 })
             }

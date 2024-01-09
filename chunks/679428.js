@@ -1,20 +1,20 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return p
                 }
             }), n("222007");
             var i = n("872717"),
                 l = n("689988"),
-                r = n("870691"),
-                a = n("42203"),
+                a = n("870691"),
+                r = n("42203"),
                 s = n("49111");
             let o = {},
                 u = 0;
 
             function d() {
                 o = {
-                    ...r.default.getCollapsedCategories()
+                    ...a.default.getCollapsedCategories()
                 }
             }
 
@@ -32,16 +32,16 @@
             async function h(e) {
                 clearTimeout(u);
                 let t = 0 !== Object.keys(e).length,
-                    n = r.default.getCollapsedCategories(),
+                    n = a.default.getCollapsedCategories(),
                     l = function() {
                         let e = {},
-                            t = r.default.getCollapsedCategories();
+                            t = a.default.getCollapsedCategories();
                         for (let n in t) t[n] !== o[n] && (e[n] = !0);
                         for (let n in o) t[n] !== o[n] && (e[n] = !0);
                         return e
                     }();
                 for (let i in l) {
-                    let l = a.default.getChannel(i);
+                    let l = r.default.getChannel(i);
                     null != l && null != l.guild_id && (!(l.guild_id in e) && (e[l.guild_id] = {}), null == e[l.guild_id].channel_overrides && (e[l.guild_id].channel_overrides = {}), e[l.guild_id].channel_overrides[l.id] = {
                         ...e[l.guild_id].channel_overrides[l.id],
                         collapsed: l.id in n
@@ -59,7 +59,7 @@
 
             function E() {
                 o = {
-                    ...r.default.getCollapsedCategories()
+                    ...a.default.getCollapsedCategories()
                 }
             }
             class _ extends l.default {
@@ -74,4 +74,4 @@
                     }, this.saveUserGuildSettings = f, this.saveUserGuildSettingsBulk = h
                 }
             }
-            var I = new _
+            var p = new _

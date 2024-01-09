@@ -73,7 +73,7 @@
                         discount: []
                     }
                 }
-            }, L = async () => {
+            }, E = async () => {
                 try {
                     await o.default.delete({
                         url: x.Endpoints.USER_OFFERS
@@ -83,17 +83,17 @@
                 }
             };
 
-            function E(e) {
+            function L(e) {
                 var t, r, i, o;
                 let {
                     offer: s,
                     offerOptions: u,
                     forceRefetch: h
-                } = e, [b, x] = n.useState(!1), [v, S] = n.useState(!1), [j, N] = n.useState(!1), [L, E] = n.useState(!1);
+                } = e, [b, x] = n.useState(!1), [v, S] = n.useState(!1), [j, N] = n.useState(!1), [E, L] = n.useState(!1);
                 n.useEffect(() => {
-                    j && E(!0);
+                    j && L(!0);
                     let e = setTimeout(() => {
-                        E(!1)
+                        L(!1)
                     }, 500);
                     return () => {
                         clearTimeout(e)
@@ -105,13 +105,13 @@
                     redeemed_at: R,
                     trial_id: P,
                     subscription_trial: O
-                } = s, M = null !== (r = null === (t = u.find(e => {
+                } = s, I = null !== (r = null === (t = u.find(e => {
                     let {
                         value: t
                     } = e;
                     return t === P
-                })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", I = null != A, B = null != A && new Date(A).getTime() < Date.now(), D = (null == O ? void 0 : O.sku_id) === k.PremiumSubscriptionSKUs.TIER_0, H = async () => {
-                    N(!0), I ? await w(_, "trial") : await (0, d.acknowledgeUserOffer)(s), h(), N(!1)
+                })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", M = null != A, B = null != A && new Date(A).getTime() < Date.now(), D = (null == O ? void 0 : O.sku_id) === k.PremiumSubscriptionSKUs.TIER_0, H = async () => {
+                    N(!0), M ? await w(_, "trial") : await (0, d.acknowledgeUserOffer)(s), h(), N(!1)
                 };
                 n.useEffect(() => {
                     if (b) {
@@ -131,15 +131,15 @@
                         }
                     }
                 }, [b, v]);
-                let F = "Active";
-                return I && (F = "Acknowledged"), B && (F = "Expired"), (0, a.jsxs)("div", {
+                let G = "Active";
+                return M && (G = "Acknowledged"), B && (G = "Expired"), (0, a.jsxs)("div", {
                     className: l(C.card, D ? C.gradientWrapperTier0 : C.gradientWrapperTier2),
                     children: [(0, a.jsxs)("div", {
                         className: l(C.row, C.nameRow),
                         children: [(0, a.jsx)(c.Heading, {
                             variant: "heading-lg/semibold",
                             color: "always-white",
-                            children: M
+                            children: I
                         }), (0, a.jsx)(c.Clickable, {
                             onClick: async () => {
                                 N(!0), await T(_, "trial"), h(), N(!1)
@@ -191,13 +191,13 @@
                         children: [(0, a.jsx)(c.Clickable, {
                             onClick: H,
                             className: l(C.badge, C.clickable, {
-                                [C.acked]: I,
+                                [C.acked]: M,
                                 [C.expired]: B
                             }),
                             children: (0, a.jsx)(c.Text, {
                                 variant: "eyebrow",
-                                color: "Acknowledged" === F ? void 0 : "always-white",
-                                children: F
+                                color: "Acknowledged" === G ? void 0 : "always-white",
+                                children: G
                             })
                         }), null != R && (0, a.jsx)("div", {
                             className: l(C.badge, C.badgeBottom, C.redeemed),
@@ -209,7 +209,7 @@
                         })]
                     }), (0, a.jsx)("div", {
                         className: l(C.loadingContainer, {
-                            [C.isLoading]: j || L
+                            [C.isLoading]: j || E
                         }),
                         children: (0, a.jsx)(c.Spinner, {})
                     })]
@@ -235,14 +235,14 @@
                 let {
                     id: j,
                     expires_at: N,
-                    applied_at: L,
-                    discount_id: E,
+                    applied_at: E,
+                    discount_id: L,
                     discount: _
                 } = i, A = null !== (r = null === (t = o.find(e => {
                     let {
                         value: t
                     } = e;
-                    return t === E
+                    return t === L
                 })) || void 0 === t ? void 0 : t.label) && void 0 !== r ? r : "Unknown", R = null != N, P = null != N && new Date(N).getTime() < Date.now(), O = async () => {
                     k(!0), R ? await w(j, "discount") : await (0, d.acknowledgeUserOffer)(void 0, i), s(), k(!1)
                 };
@@ -264,8 +264,8 @@
                         }
                     }
                 }, [u, y]);
-                let M = "Active";
-                return P && (M = "Expired"), R && (M = "Acknowledged"), (0, a.jsxs)("div", {
+                let I = "Active";
+                return P && (I = "Expired"), R && (I = "Acknowledged"), (0, a.jsxs)("div", {
                     className: l(C.card, C.discount),
                     children: [(0, a.jsxs)("div", {
                         className: l(C.row, C.nameRow),
@@ -298,12 +298,12 @@
                     }), (0, a.jsxs)(c.Clickable, {
                         className: l(C.row, C.idRow),
                         onClick: () => {
-                            (0, g.copy)(E), b(!0)
+                            (0, g.copy)(L), b(!0)
                         },
                         children: [(0, a.jsxs)(c.Text, {
                             variant: "eyebrow",
                             color: "text-normal",
-                            children: ["Discount: ", E]
+                            children: ["Discount: ", L]
                         }), y ? (0, a.jsx)(f.default, {
                             className: l(C.icon, C.noMargin)
                         }) : (0, a.jsx)(p.default, {
@@ -325,10 +325,10 @@
                             }),
                             children: (0, a.jsx)(c.Text, {
                                 variant: "eyebrow",
-                                color: "Acknowledged" === M ? void 0 : "always-white",
-                                children: M
+                                color: "Acknowledged" === I ? void 0 : "always-white",
+                                children: I
                             })
-                        }), null != L && (0, a.jsx)("div", {
+                        }), null != E && (0, a.jsx)("div", {
                             className: l(C.badge, C.badgeBottom, C.redeemed),
                             children: (0, a.jsx)(c.Text, {
                                 variant: "eyebrow",
@@ -372,7 +372,7 @@
                 }, R = async () => {
                     null != f && (await j(f, "discount"), w(!0))
                 }, P = async () => {
-                    await L(), w(!0)
+                    await E(), w(!0)
                 };
                 return (0, a.jsx)(c.ScrollerThin, {
                     className: l(v.panel),
@@ -444,7 +444,7 @@
                             children: [(0, a.jsx)(c.Heading, {
                                 variant: "heading-md/semibold",
                                 children: "Existing Trial Offers"
-                            }), g.map(t => (0, a.jsx)(E, {
+                            }), g.map(t => (0, a.jsx)(L, {
                                 offer: t,
                                 offerOptions: e,
                                 forceRefetch: () => w(!0)

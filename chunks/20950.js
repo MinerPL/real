@@ -29,7 +29,7 @@
                 T = r("782340"),
                 w = r("185187"),
                 N = r("694735");
-            let L = [{
+            let E = [{
                     key: "id",
                     cellClassName: w.eventColumn,
                     render(e) {
@@ -57,7 +57,7 @@
                         return t.toLocaleString()
                     }
                 }],
-                E = [{
+                L = [{
                     id: "details",
                     name: "Details",
                     render: e => {
@@ -141,7 +141,7 @@
                     TabBar: y,
                     renderSelectedTab: b
                 } = (0, j.default)({
-                    tabs: E
+                    tabs: L
                 }, []), v = (0, u.useStateFromStores)([x.default], () => x.default.trackTriggers), _ = n.useCallback(e => {
                     p.default.dispatch({
                         type: "SET_TRACK_TRIGGERS",
@@ -182,7 +182,7 @@
                     }), (0, a.jsx)(h.ScrollerThin, {
                         className: w.tableContainer,
                         children: (0, a.jsx)(S.default, {
-                            columns: L,
+                            columns: E,
                             data: o,
                             selectedRowKey: c,
                             onClickRow: d

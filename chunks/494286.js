@@ -19,8 +19,8 @@
                 m = n("272030"),
                 E = n("987317"),
                 C = n("990766"),
-                g = n("452804"),
-                S = n("654978"),
+                S = n("452804"),
+                g = n("654978"),
                 _ = n("901582"),
                 I = n("731898"),
                 T = n("84339"),
@@ -73,8 +73,8 @@
                 em = n("404008"),
                 eE = n("659500"),
                 eC = n("773336"),
-                eg = n("439932"),
-                eS = n("50885"),
+                eS = n("439932"),
+                eg = n("50885"),
                 e_ = n("563680"),
                 eI = n("191145"),
                 eT = n("161306"),
@@ -134,7 +134,7 @@
                     e.inCall && !n && this.inPopout && h.default.wait(() => this.handleClosePopout())
                 }
                 get nativePopoutSupported() {
-                    return eC.isPlatformEmbedded && eS.default.supportsFeature(ey.NativeFeatures.POPOUT_WINDOWS)
+                    return eC.isPlatformEmbedded && eg.default.supportsFeature(ey.NativeFeatures.POPOUT_WINDOWS)
                 }
                 get popoutSupported() {
                     return !eC.isPlatformEmbedded || this.nativePopoutSupported
@@ -216,7 +216,7 @@
                         layout: h,
                         forceShowControls: p,
                         awaitingRemoteSessionInfo: m
-                    } = this.props, E = h === ey.ChannelLayouts.MINIMUM, C = E || h === ey.ChannelLayouts.NORMAL, g = n && s === ey.ChannelModes.VIDEO;
+                    } = this.props, E = h === ey.ChannelLayouts.MINIMUM, C = E || h === ey.ChannelLayouts.NORMAL, S = n && s === ey.ChannelModes.VIDEO;
                     return this._lastIdleProps = e, (0, a.jsx)(K.default, {
                         renderHeader: this.renderHeader,
                         renderBottomLeft: this.renderBottomLeft,
@@ -239,7 +239,7 @@
                             participants: u,
                             filteredParticipants: o,
                             participantsVersion: d,
-                            selectedParticipant: g ? t : null,
+                            selectedParticipant: S ? t : null,
                             layout: h,
                             idle: e.idle,
                             mode: s,
@@ -281,7 +281,7 @@
                         } : void 0,
                         children: [(0, a.jsx)("div", {
                             className: i(eP.callContainer, {
-                                [(0, eg.getThemeClass)(ey.ThemeTypes.DARK)]: f
+                                [(0, eS.getThemeClass)(ey.ThemeTypes.DARK)]: f
                             }),
                             ref: e => {
                                 this._callContainerRef.current = e, this.props.callContainerRef.current = e
@@ -457,7 +457,7 @@
                             channel: n,
                             layout: l
                         } = this.props;
-                        return !this.inPopout && l !== ey.ChannelLayouts.FULL_SCREEN && null != t && !n.isManaged() && (e = (0, a.jsx)(S.default, {
+                        return !this.inPopout && l !== ey.ChannelLayouts.FULL_SCREEN && null != t && !n.isManaged() && (e = (0, a.jsx)(g.default, {
                             call: t
                         })), (0, a.jsx)(ef.default, {
                             justify: ef.default.Justify.END,
@@ -666,7 +666,7 @@
                     ref: p
                 } = (0, I.default)(), {
                     ref: m
-                } = (0, I.default)(), E = (0, v.useAppContext)(), C = (0, b.default)(), S = (0, o.useStateFromStores)([eo.default], () => {
+                } = (0, I.default)(), E = (0, v.useAppContext)(), C = (0, b.default)(), g = (0, o.useStateFromStores)([eo.default], () => {
                     var e;
                     return (null !== (e = null == C ? void 0 : C.channelId) && void 0 !== e ? e : eo.default.getVoiceChannelId()) === n.id
                 }), {
@@ -704,7 +704,7 @@
                     popoutWindow: F.default.getWindow(ey.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
                     popoutWindowAlwaysOnTop: F.default.getIsAlwaysOnTop(ey.PopoutWindowKeys.CHANNEL_CALL_POPOUT)
                 })), J = (0, o.useStateFromStores)([er.default], () => er.default.can(ey.Permissions.CONNECT, n)), q = (0, o.useStateFromStores)([el.default], () => el.default.getToastsEnabled(n.id)), Q = (0, o.useStateFromStores)([y.default], () => y.default.getAwaitingRemoteSessionInfo()), $ = (0, o.useStateFromStores)([V.default], () => V.default.callHeaderHeight), ee = l.useCallback(e => {
-                    g.default.updatedUnsyncedSettings({
+                    S.default.updatedUnsyncedSettings({
                         callHeaderHeight: e
                     })
                 }, []), et = null !== (t = null == W ? void 0 : W.id) && void 0 !== t ? t : null, ed = (0, A.default)(et, n.id), ec = (0, o.useStateFromStores)([x.default], () => x.default.getFetchState(), []), ef = (0, T.default)(ec);
@@ -716,12 +716,12 @@
                     let e = !1,
                         t = null,
                         n = async () => {
-                            S && D === ey.ChannelModes.VIDEO && (t = await eS.default.blockDisplaySleep(), e && null != t && eS.default.unblockDisplaySleep(t))
+                            g && D === ey.ChannelModes.VIDEO && (t = await eg.default.blockDisplaySleep(), e && null != t && eg.default.unblockDisplaySleep(t))
                         };
                     return n(), () => {
-                        null != t ? eS.default.unblockDisplaySleep(t) : e = !0
+                        null != t ? eg.default.unblockDisplaySleep(t) : e = !0
                     }
-                }, [S, D]);
+                }, [g, D]);
                 let ep = (0, ev.default)(n, !0),
                     em = (0, O.useIsContentShown)(d.DismissibleContent.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
                     {
@@ -745,7 +745,7 @@
                                     mentionCount: z,
                                     selectedStream: G,
                                     mode: D,
-                                    inCall: S,
+                                    inCall: g,
                                     participants: M,
                                     filteredParticipants: j,
                                     participantsVersion: P,

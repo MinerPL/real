@@ -1,15 +1,15 @@
             "use strict";
-            r.r(t), r.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
                     return f
                 }
             });
-            var n = r("37983"),
-                i = r("884691"),
-                s = r("414456"),
-                l = r.n(s),
-                a = r("546671"),
-                o = r("341417");
+            var r = n("37983"),
+                i = n("884691"),
+                s = n("414456"),
+                l = n.n(s),
+                a = n("546671"),
+                o = n("341417");
             let u = {
                     UP: "up",
                     RIGHT: "right",
@@ -28,7 +28,7 @@
                         direction: e,
                         className: t
                     } = this.props;
-                    return (0, n.jsx)(a.default, {
+                    return (0, r.jsx)(a.default, {
                         className: l(o.arrow, t, {
                             [c[e]]: !0
                         })

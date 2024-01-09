@@ -12,7 +12,7 @@
                     file: n,
                     uploadType: r,
                     guildId: l,
-                    isTryItOutFlow: a = !1
+                    isTryItOutFlow: s = !1
                 } = e;
                 i.default.dispatch({
                     type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL",
@@ -20,6 +20,6 @@
                     file: n,
                     uploadType: r,
                     guildId: l,
-                    isTryItOutFlow: a
+                    isTryItOutFlow: s
                 })
             }

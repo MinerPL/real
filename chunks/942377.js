@@ -4,7 +4,7 @@
                     return l
                 },
                 getHighestLikelihood: function() {
-                    return a
+                    return s
                 }
             });
             var i = n("716849"),
@@ -14,7 +14,7 @@
                 return null == e ? r.PremiumTypes.TIER_2 : e[r.PremiumSubscriptionSKUs.TIER_0] * t > e[r.PremiumSubscriptionSKUs.TIER_2] * n ? r.PremiumTypes.TIER_0 : r.PremiumTypes.TIER_2
             }
 
-            function a(e) {
+            function s(e) {
                 if (null == e) return r.PremiumTypes.TIER_0;
                 let t = e[i.NON_SUBSCRIBER_SENTINEL],
                     n = e[r.PremiumSubscriptionSKUs.TIER_0],

@@ -4,10 +4,10 @@
                     return a
                 },
                 resetChannelUnreadFlags: function() {
-                    return l
+                    return o
                 },
                 withChannelUnreadFlags: function() {
-                    return u
+                    return l
                 }
             });
             var i = n("568734"),
@@ -17,8 +17,8 @@
                 var n;
                 return i.addFlag((n = e, i.removeFlags(n, s.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES, s.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)), t)
             }
-            let l = e => i.removeFlags(e, s.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES, s.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS);
+            let o = e => i.removeFlags(e, s.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES, s.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS);
 
-            function u(e, t) {
-                return i.addFlag(l(e), t)
+            function l(e, t) {
+                return i.addFlag(o(e), t)
             }

@@ -7,8 +7,8 @@
             var i = n("37983"),
                 r = n("884691"),
                 l = n("414456"),
-                a = n.n(l),
-                s = n("446674"),
+                s = n.n(l),
+                a = n("446674"),
                 o = n("77078"),
                 u = n("109036"),
                 d = n("697218"),
@@ -39,7 +39,7 @@
                         location: T.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL
                     }),
                     g = !C && M === T.PremiumTypes.TIER_0,
-                    L = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
+                    L = (0, a.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
                     U = (0, i.jsx)(u.default, {
                         icons: p.DEFAULT_FILE_UPLOAD_ICONS
                     });
@@ -68,7 +68,7 @@
                         }
                         return n
                     }, [L]),
-                    v = (0, i.jsxs)("div", {
+                    N = (0, i.jsxs)("div", {
                         className: S.body,
                         children: [(0, i.jsx)("span", {
                             children: h
@@ -79,11 +79,11 @@
                     });
                 return (0, i.jsx)(E.default, {
                     artElement: U,
-                    artContainerClassName: a(S.artContainer),
+                    artContainerClassName: s(S.artContainer),
                     enableArtBoxShadow: !1,
                     type: T.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
                     title: P.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-                    body: v,
+                    body: N,
                     context: P.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
                         maxSize: P.default.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD
                     }),

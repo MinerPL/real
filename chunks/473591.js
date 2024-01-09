@@ -1,5 +1,5 @@
             "use strict";
-            let i, r, l, a, s, o;
+            let i, r, l, s, a, o;
             n.r(t), n.d(t, {
                 default: function() {
                     return S
@@ -16,7 +16,7 @@
                 I = {};
 
             function p() {
-                i = void 0, r = void 0, l = void 0, a = void 0, s = void 0, f = null
+                i = void 0, r = void 0, l = void 0, s = void 0, a = void 0, f = null
             }
             class P extends u.default.Store {
                 getSettings(e) {
@@ -38,15 +38,15 @@
                     return f
                 }
                 hasPendingChanges() {
-                    return void 0 !== i || void 0 !== r || void 0 !== l || void 0 !== a || void 0 !== s
+                    return void 0 !== i || void 0 !== r || void 0 !== l || void 0 !== s || void 0 !== a
                 }
                 getPendingUpdates() {
                     return {
                         pendingAvatar: l,
                         pendingNick: r,
                         pendingPersonality: i,
-                        pendingBanner: a,
-                        pendingThemeColors: s
+                        pendingBanner: s,
+                        pendingThemeColors: a
                     }
                 }
                 isSavingSettings() {
@@ -126,13 +126,13 @@
                     let {
                         banner: t
                     } = e;
-                    a = t
+                    s = t
                 },
                 CLYDE_SET_PENDING_THEME_COLORS: function(e) {
                     let {
                         themeColors: t
                     } = e;
-                    s = t
+                    a = t
                 },
                 CLYDE_GUILD_SETTINGS_SAVE_START: function() {
                     f = null, c = !0

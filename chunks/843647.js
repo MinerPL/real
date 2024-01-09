@@ -7,8 +7,8 @@
             var i = n("446674"),
                 r = n("697218"),
                 l = n("10514"),
-                a = n("719923"),
-                s = n("716849"),
+                s = n("719923"),
+                a = n("716849"),
                 o = n("676572"),
                 u = n("942377"),
                 d = n("917247"),
@@ -19,8 +19,8 @@
                     autoTrackExposure: t,
                     experiment: n,
                     location: m
-                } = e, f = (0, i.useStateFromStores)([r.default], () => r.default.getCurrentUser()), _ = (0, d.usePremiumTrialOffer)(), E = null != _, T = null != f && (0, a.isPremium)(f);
-                (0, s.useMaybeFetchPremiumLikelihood)(n);
+                } = e, f = (0, i.useStateFromStores)([r.default], () => r.default.getCurrentUser()), _ = (0, d.usePremiumTrialOffer)(), E = null != _, T = null != f && (0, s.isPremium)(f);
+                (0, a.useMaybeFetchPremiumLikelihood)(n);
                 let {
                     enabled: I,
                     useExpectedValue: p,
@@ -46,9 +46,9 @@
                     if (p) {
                         let {
                             amount: e
-                        } = (0, a.getPrice)(c.SubscriptionPlans.PREMIUM_MONTH_TIER_0), {
+                        } = (0, s.getPrice)(c.SubscriptionPlans.PREMIUM_MONTH_TIER_0), {
                             amount: t
-                        } = (0, a.getPrice)(c.SubscriptionPlans.PREMIUM_MONTH_TIER_2);
+                        } = (0, s.getPrice)(c.SubscriptionPlans.PREMIUM_MONTH_TIER_2);
                         M = (0, u.getHigherExpectedValue)(S, e, t)
                     } else P && (M = (0, u.getHighestLikelihood)(S))
                 }

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return S
                 }
             }), n("222007");
             var a = n("37983"),
@@ -20,10 +20,10 @@
                 E = n("782340"),
                 C = n("290236");
 
-            function g(e) {
+            function S(e) {
                 let {
                     channel: t
-                } = e, n = (0, i.useRedesignIconContext)().enabled, [g, S] = (0, s.useStateFromStoresArray)([u.default], () => [u.default.isChannelMuted(t.getGuildId(), t.id), u.default.resolvedMessageNotifications(t)], [t]), [_, I] = l.useState(!1);
+                } = e, n = (0, i.useRedesignIconContext)().enabled, [S, g] = (0, s.useStateFromStoresArray)([u.default], () => [u.default.isChannelMuted(t.getGuildId(), t.id), u.default.resolvedMessageNotifications(t)], [t]), [_, I] = l.useState(!1);
                 l.useEffect(() => {
                     let e = () => I(!0);
                     return f.ComponentDispatch.subscribe(m.ComponentActions.OPEN_THREAD_NOTIFICATION_SETTINGS, e), () => {
@@ -32,8 +32,8 @@
                 }, []);
                 let T = e => {
                         e.shiftKey ? r.default.updateChannelOverrideSettings(t.guild_id, t.id, {
-                            muted: !g
-                        }, h.NotificationLabel.muted(!g)) : I(e => !e)
+                            muted: !S
+                        }, h.NotificationLabel.muted(!S)) : I(e => !e)
                     },
                     v = E.default.Messages.NOTIFICATION_SETTINGS;
                 return (0, a.jsx)(i.Popout, {
@@ -57,8 +57,8 @@
                             ...e,
                             onClick: T,
                             tooltip: l ? null : v,
-                            icon: g || S !== m.UserNotificationSettings.ALL_MESSAGES ? d.default : o.default,
-                            foreground: g && !n ? C.strikethrough : null,
+                            icon: S || g !== m.UserNotificationSettings.ALL_MESSAGES ? d.default : o.default,
+                            foreground: S && !n ? C.strikethrough : null,
                             "aria-label": v,
                             selected: l
                         })

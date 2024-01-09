@@ -22,11 +22,11 @@
                     isListingPublished: n,
                     expanded: p,
                     onToggleExpanded: m
-                } = e, E = (0, d.default)(), [C] = o.useName(t), [g] = o.useImage(t, E), [S] = o.useSubscriptionPlan(t);
+                } = e, E = (0, d.default)(), [C] = o.useName(t), [S] = o.useImage(t, E), [g] = o.useSubscriptionPlan(t);
                 return (0, a.jsxs)("div", {
                     className: h.container,
                     children: [(0, a.jsx)(c.GuildRoleSubscriptionCardTierImage, {
-                        image: g
+                        image: S
                     }), (0, a.jsxs)("div", {
                         className: h.tierTextInfoContainer,
                         children: [(0, a.jsx)(c.GuildRoleSubscriptionCardTierName, {
@@ -36,10 +36,10 @@
                             children: [!n && (0, a.jsx)(c.GuildRoleSubscriptionCardDraftTierBadge, {}), (0, a.jsxs)(l.Text, {
                                 variant: "text-xs/normal",
                                 className: h.tierPrice,
-                                children: [(0, r.formatPrice)(S.price, S.currency), " ", f.default.Messages.GUILD_ROLE_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
+                                children: [(0, r.formatPrice)(g.price, g.currency), " ", f.default.Messages.GUILD_ROLE_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
                                     period: (0, u.formatPlanInterval)({
-                                        interval: S.interval,
-                                        interval_count: S.interval_count
+                                        interval: g.interval,
+                                        interval_count: g.interval_count
                                     })
                                 })]
                             })]

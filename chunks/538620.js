@@ -13,8 +13,8 @@
             var i = n("872717"),
                 r = n("750028"),
                 l = n("913144"),
-                a = n("316718"),
-                s = n("915639"),
+                s = n("316718"),
+                a = n("915639"),
                 o = n("872173"),
                 u = n("772465"),
                 d = n("44678"),
@@ -34,7 +34,7 @@
                         n = await i.default.get({
                             url: t,
                             query: {
-                                locale: s.default.locale
+                                locale: a.default.locale
                             },
                             oldFormErrors: !0
                         }),
@@ -42,7 +42,7 @@
                         o = c.default.consumedInboundPromotionId;
                     if (!c.default.hasFetchedConsumedInboundPromotionId) {
                         var e;
-                        let t = await (0, a.fetchUserEntitlementsForApplication)(m.PREMIUM_SUBSCRIPTION_APPLICATION, !1),
+                        let t = await (0, s.fetchUserEntitlementsForApplication)(m.PREMIUM_SUBSCRIPTION_APPLICATION, !1),
                             n = t.find(e => null != e.promotion_id && !0 === e.consumed);
                         o = null !== (e = null == n ? void 0 : n.promotion_id) && void 0 !== e ? e : null
                     }
@@ -65,7 +65,7 @@
                     let e = await i.default.get({
                             url: f.Endpoints.BOGO_PROMOTIONS,
                             query: {
-                                locale: s.default.locale
+                                locale: a.default.locale
                             }
                         }),
                         t = e.body;

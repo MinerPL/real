@@ -1,7 +1,7 @@
             "use strict";
             r.r(t), r.d(t, {
                 default: function() {
-                    return L
+                    return E
                 }
             }), r("222007");
             var a = r("37983"),
@@ -186,7 +186,7 @@
                 }
             }];
 
-            function L() {
+            function E() {
                 let e = n.useRef(null),
                     t = function(e) {
                         let [t, r] = n.useState([...e.logs]), a = n.useCallback(() => r([...e.logs]), [e]);

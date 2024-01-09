@@ -7,10 +7,10 @@
                     return l
                 },
                 openEditor: function() {
-                    return a
+                    return s
                 },
                 closeEditor: function() {
-                    return s
+                    return a
                 },
                 resetPreviewClientTheme: function() {
                     return o
@@ -29,12 +29,12 @@
                         presetId: null
                     })
                 },
-                a = () => {
+                s = () => {
                     i.default.dispatch({
                         type: "CLIENT_THEMES_EDITOR_OPEN"
                     })
                 },
-                s = () => {
+                a = () => {
                     i.default.dispatch({
                         type: "CLIENT_THEMES_EDITOR_CLOSE"
                     })

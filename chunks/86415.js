@@ -4,13 +4,13 @@
                     return d
                 }
             });
-            var s = n("446674"),
-                a = n("913144"),
+            var a = n("446674"),
+                s = n("913144"),
                 l = n("42203"),
                 i = n("724210");
             let r = {},
                 o = {};
-            class u extends s.default.PersistedStore {
+            class u extends a.default.PersistedStore {
                 initialize(e) {
                     var t;
                     r = null !== (t = null == e ? void 0 : e.selectedResourceChannelIdByGuildId) && void 0 !== t ? t : {}
@@ -29,17 +29,17 @@
                 }
             }
             u.displayName = "GuildOnboardingHomeNavigationStore", u.persistKey = "GuildOnboardingHomeNavigationStore";
-            var d = new u(a.default, {
+            var d = new u(s.default, {
                 CHANNEL_SELECT: function(e) {
                     let {
                         channelId: t,
                         guildId: n
                     } = e;
                     if (null == n || t === i.StaticChannelRoute.GUILD_HOME) return;
-                    let s = l.default.getChannel(t),
-                        a = r[n],
+                    let a = l.default.getChannel(t),
+                        s = r[n],
                         u = o[n];
-                    !((null == s ? void 0 : s.isThread()) && (null == s ? void 0 : s.parent_id) != null && [u, a].includes(null == s ? void 0 : s.parent_id)) && (t !== a && delete r[n], t !== u && delete o[n])
+                    !((null == a ? void 0 : a.isThread()) && (null == a ? void 0 : a.parent_id) != null && [u, s].includes(null == a ? void 0 : a.parent_id)) && (t !== s && delete r[n], t !== u && delete o[n])
                 },
                 SELECT_HOME_RESOURCE_CHANNEL: function(e) {
                     let {

@@ -49,9 +49,9 @@
                     ...A(y.semanticColorTokens),
                     ...A(f.componentColorTokens)
                 },
-                L = ["100", "130", "160", "200", "230", "260", "300", "330", "345", "360", "400", "430", "460", "500", "530", "560", "600", "630", "645", "660", "700", "730", "760", "800", "830", "860", "900"];
+                E = ["100", "130", "160", "200", "230", "260", "300", "330", "345", "360", "400", "430", "460", "500", "530", "560", "600", "630", "645", "660", "700", "730", "760", "800", "830", "860", "900"];
 
-            function E(e) {
+            function L(e) {
                 var t;
                 let r = "string" == typeof e ? 1 : null !== (t = e.opacity) && void 0 !== t ? t : 1,
                     a = "string" == typeof e ? e : e.color;
@@ -74,10 +74,10 @@
                         return "name" in r ? e(r) : r
                     }(a);
                     t[r] = {
-                        light: E(a.light),
-                        dark: E(a.dark),
-                        darker: E(null != a.darker ? a.darker : a.dark),
-                        midnight: E(null != a.midnight ? a.midnight : a.dark)
+                        light: L(a.light),
+                        dark: L(a.dark),
+                        darker: L(null != a.darker ? a.darker : a.dark),
+                        midnight: L(null != a.midnight ? a.midnight : a.dark)
                     }
                 }), t
             }
@@ -113,7 +113,7 @@
                     }),
                     [f, m] = i.useState(""),
                     [y, w] = i.useState({}),
-                    [E, _] = i.useState({}),
+                    [L, _] = i.useState({}),
                     A = i.useMemo(() => {
                         let e = Object.keys(t);
                         return e.reduce((e, t) => [...e, {
@@ -157,9 +157,9 @@
                                 }(r), l = u.kebabCase(e);
                                 return ["--".concat(l, "-hsl: ").concat(a, " calc(var(--saturation-factor, 1) * ").concat(n, "%) ").concat(i, "% !important;"), "--".concat(l, ": hsl(var(--").concat(l, "-hsl)) !important;")]
                             });
-                        return "\n      .theme-".concat(e, " {\n        ").concat(a.join("\n"), "\n\n        ").concat(Object.keys(y).filter(e => y[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(E).filter(e => E[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(n.join("\n"), "\n      }\n    ")
-                    }, [e, r, t, y, E]),
-                    M = i.useCallback(e => {
+                        return "\n      .theme-".concat(e, " {\n        ").concat(a.join("\n"), "\n\n        ").concat(Object.keys(y).filter(e => y[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n\n        ").concat(Object.keys(L).filter(e => L[e]).map(e => "--".concat(e, ": magenta !important;")).join("\n"), "\n      }\n\n      html {\n        ").concat(n.join("\n"), "\n      }\n    ")
+                    }, [e, r, t, y, L]),
+                    I = i.useCallback(e => {
                         let t = "",
                             r = "",
                             a = !1;
@@ -185,12 +185,12 @@
                             return "".concat(a ? "\n" : "").concat(u)
                         }).join(",\n"))
                     }, []),
-                    I = i.useCallback(e => c(T(), Object.keys(e).map(t => '"'.concat(t, '": {hex: "').concat(e[t].hex, '"}'))), []),
+                    M = i.useCallback(e => c(T(), Object.keys(e).map(t => '"'.concat(t, '": {hex: "').concat(e[t].hex, '"}'))), []),
                     B = i.useCallback(e => {
                         let t = {};
                         Object.keys(e).forEach(r => {
                             Object.keys(e[r]).map(a => {
-                                let n = [...L];
+                                let n = [...E];
                                 "primary" !== r && (n = n.filter(e => "645" !== e)), t["".concat(r, ".").concat(n[+a])] = {
                                     hex: e[r][a]
                                 }
@@ -243,7 +243,7 @@
                             }), (0, n.jsx)(b.Button, {
                                 size: b.Button.Sizes.MIN,
                                 onClick: () => {
-                                    navigator.clipboard.writeText(I(t))
+                                    navigator.clipboard.writeText(M(t))
                                 },
                                 children: "Export"
                             })]
@@ -257,7 +257,7 @@
                             }), (0, n.jsx)(b.Button, {
                                 size: b.Button.Sizes.MIN,
                                 onClick: () => {
-                                    navigator.clipboard.writeText(M(r))
+                                    navigator.clipboard.writeText(I(r))
                                 },
                                 children: "Export"
                             })]

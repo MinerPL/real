@@ -7,8 +7,8 @@
             var i = n("884691"),
                 r = n("77078"),
                 l = n("606292"),
-                a = n("688318"),
-                s = n("19287");
+                s = n("688318"),
+                a = n("19287");
 
             function o(e) {
                 let {
@@ -24,7 +24,7 @@
                     avatarSrc: _,
                     isAvatarAnimating: E,
                     eventHandlers: T
-                } = (0, s.useAnimatedAvatarSrc)({
+                } = (0, a.useAnimatedAvatarSrc)({
                     user: t,
                     guildId: n,
                     size: (0, r.getAvatarSize)(o),
@@ -35,7 +35,7 @@
                     avatarPlaceholderSrc: I,
                     avatarDecorationSrc: p,
                     eventHandlers: P
-                } = (0, a.default)({
+                } = (0, s.default)({
                     user: t,
                     size: (0, l.getDecorationSizeForAvatarSize)(o),
                     showPending: u,

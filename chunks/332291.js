@@ -7,8 +7,8 @@
             var i = n("37983"),
                 r = n("884691"),
                 l = n("414456"),
-                a = n.n(l),
-                s = n("446674"),
+                s = n.n(l),
+                a = n("446674"),
                 o = n("77078"),
                 u = n("106435"),
                 d = n("446488"),
@@ -16,7 +16,7 @@
                 m = n("760068");
 
             function f() {
-                let e = (0, s.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3)),
+                let e = (0, a.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3)),
                     t = e[0],
                     {
                         avatarSrc: n,
@@ -41,7 +41,7 @@
                         size: o.AvatarSizes.SIZE_24,
                         ...l
                     }), (0, i.jsx)(o.Text, {
-                        className: a(m.text),
+                        className: s(m.text),
                         variant: "text-sm/normal",
                         color: "always-white",
                         children: _

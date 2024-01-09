@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return S
                 }
             }), n("222007");
             var a = n("37983"),
@@ -19,14 +19,14 @@
                 m = n("659500"),
                 E = n("49111"),
                 C = n("782340"),
-                g = function(e) {
+                S = function(e) {
                     let {
                         channel: t
                     } = e, n = (0, s.useStateFromStores)([d.default, f.default], () => {
                         let e = f.default.getCurrentUser();
                         return null == e || t.isNSFW() && (!e.nsfwAllowed || !d.default.didAgree(t.getGuildId()))
-                    }, [t]), [g, S] = l.useState(!1), _ = (0, s.useStateFromStores)([c.default], () => c.default.hasUnreadPins(t.id), [t]), I = (0, u.useWindowDispatch)(), T = (0, o.useIsBroadcastingGDM)(t.id), v = l.useCallback(() => {
-                        !n && S(e => !e)
+                    }, [t]), [S, g] = l.useState(!1), _ = (0, s.useStateFromStores)([c.default], () => c.default.hasUnreadPins(t.id), [t]), I = (0, u.useWindowDispatch)(), T = (0, o.useIsBroadcastingGDM)(t.id), v = l.useCallback(() => {
+                        !n && g(e => !e)
                     }, [n]);
 
                     function x(e) {
@@ -35,13 +35,13 @@
                     return (l.useEffect(() => (m.ComponentDispatch.subscribe(E.ComponentActions.TOGGLE_CHANNEL_PINS, v), () => {
                         m.ComponentDispatch.unsubscribe(E.ComponentActions.TOGGLE_CHANNEL_PINS, v)
                     }), [v]), T) ? null : (0, a.jsx)(i.Popout, {
-                        shouldShow: g,
+                        shouldShow: S,
                         animation: i.Popout.Animation.NONE,
                         position: "bottom",
                         align: "right",
                         autoInvert: !1,
                         ignoreModalClicks: !0,
-                        onRequestClose: () => S(!1),
+                        onRequestClose: () => g(!1),
                         renderPopout: function(e) {
                             return (0, a.jsx)(r.default, {
                                 ...e,

@@ -39,9 +39,9 @@
                     width: 0,
                     height: 0
                 }), {
-                    width: g,
-                    height: S
-                } = E, _ = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, I = g - 16, T = S - (p + m), {
+                    width: S,
+                    height: g
+                } = E, _ = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, I = S - 16, T = g - (p + m), {
                     tileStyle: v,
                     tileWidth: x,
                     rows: N,
@@ -85,7 +85,7 @@
                         rows: a,
                         columns: l
                     }
-                })(_, I, T), [_, I, T]), M = A + 1, R = M * x + (M - 1) * 8, j = R <= g, L = Math.floor(x / d) + 8, O = Math.max(0, T - L * N) / 2;
+                })(_, I, T), [_, I, T]), M = A + 1, R = M * x + (M - 1) * 8, j = R <= S, L = Math.floor(x / d) + 8, O = Math.max(0, T - L * N) / 2;
                 return (0, a.jsx)(u.default, {
                     fade: !0,
                     className: n,

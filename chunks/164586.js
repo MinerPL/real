@@ -25,8 +25,8 @@
                     image: r,
                     type: E,
                     imageStyles: C,
-                    imageMarginX: g,
-                    imageMarginTop: S,
+                    imageMarginX: S,
+                    imageMarginTop: g,
                     trackingSource: _,
                     undismissable: I,
                     onDismissed: T,
@@ -67,7 +67,7 @@
                     }),
                     children: n
                 }));
-                let j = null != g ? "".concat(g, "px") : "16px";
+                let j = null != S ? "".concat(S, "px") : "16px";
                 return (0, a.jsxs)("div", {
                     className: p.container,
                     children: [!0 === I ? null : (0, a.jsx)(u.Clickable, {
@@ -84,7 +84,7 @@
                     }), null != r && (0, a.jsx)("div", {
                         className: p.imageContainer,
                         style: {
-                            marginTop: "".concat(S, "px"),
+                            marginTop: "".concat(g, "px"),
                             marginLeft: j,
                             marginRight: j
                         },

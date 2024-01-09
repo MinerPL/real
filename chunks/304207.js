@@ -30,15 +30,15 @@
                 T = r("172248"),
                 w = r("811199"),
                 N = r("175768"),
-                L = r("358344"),
-                E = r("34971"),
+                E = r("358344"),
+                L = r("34971"),
                 _ = r("134034"),
                 A = r("79953"),
                 R = r("388557"),
                 P = r("238161"),
                 O = r("20950"),
-                M = r("724209"),
-                I = r("782340"),
+                I = r("724209"),
+                M = r("782340"),
                 B = r("978482"),
                 D = r("694735");
 
@@ -60,7 +60,7 @@
                 })
             }
 
-            function F() {
+            function G() {
                 var e;
                 let t = n.useMemo(() => {
                         let e = [{
@@ -107,7 +107,7 @@
                         }), e.push({
                             id: "permissions",
                             name: "Permissions",
-                            render: () => (0, a.jsx)(E.default, {})
+                            render: () => (0, a.jsx)(L.default, {})
                         }), e.push({
                             id: "modals",
                             name: "Modals",
@@ -119,7 +119,7 @@
                         }), e.push({
                             id: "payments",
                             name: "Payments",
-                            render: () => (0, a.jsx)(L.default, {})
+                            render: () => (0, a.jsx)(E.default, {})
                         }), e.push({
                             id: "subscriptions",
                             name: "Subscriptions",
@@ -134,7 +134,7 @@
                         TabBar: r,
                         renderSelectedTab: i,
                         selectedTabId: l
-                    } = (0, M.default)({
+                    } = (0, I.default)({
                         tabs: t,
                         initialSelectedTabId: null !== (e = b.default.lastOpenTabId) && void 0 !== e ? e : void 0,
                         onChangeTab: e => {
@@ -154,7 +154,7 @@
                         className: D.headerBar,
                         toolbar: (0, a.jsx)(g.default.Icon, {
                             icon: f.default,
-                            tooltip: I.default.Messages.CLOSE,
+                            tooltip: M.default.Messages.CLOSE,
                             onClick: y.toggleDisplayDevTools
                         }),
                         children: [(0, a.jsx)(g.default.Icon, {
@@ -169,7 +169,7 @@
                 })
             }
 
-            function G() {
+            function F() {
                 let e = n.useRef(null),
                     t = (0, s.useStateFromStores)([b.default], () => b.default.sidebarWidth),
                     [r, i] = n.useState(null),
@@ -191,7 +191,7 @@
                         onResizeEnd: o
                     }), (0, a.jsx)("div", {
                         className: B.sidebarContent,
-                        children: (0, a.jsx)(F, {})
+                        children: (0, a.jsx)(G, {})
                     })]
                 })
             }
@@ -202,7 +202,7 @@
                     className: l(B.container, B.mobileContainerExpanded),
                     children: (0, a.jsx)("div", {
                         className: B.sidebarContent,
-                        children: (0, a.jsx)(F, {})
+                        children: (0, a.jsx)(G, {})
                     })
                 }) : (0, a.jsx)("div", {
                     className: B.container,
@@ -228,5 +228,5 @@
                 let {
                     mobile: t
                 } = e;
-                return t ? (0, a.jsx)(U, {}) : (0, a.jsx)(G, {})
+                return t ? (0, a.jsx)(U, {}) : (0, a.jsx)(F, {})
             }

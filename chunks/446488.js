@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return a
                 }
             });
             var i = n("446674"),
@@ -10,7 +10,7 @@
                 fetched: !1,
                 affinities: []
             };
-            class a extends i.default.Store {
+            class s extends i.default.Store {
                 get hasFetched() {
                     return l.fetched
                 }
@@ -18,7 +18,7 @@
                     return l.affinities
                 }
             }
-            var s = new a(r.default, {
+            var a = new s(r.default, {
                 BILLING_NITRO_AFFINITY_FETCHED: function(e) {
                     let {} = e;
                     l.fetched = !0

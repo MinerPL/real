@@ -4,8 +4,8 @@
                     return i
                 }
             });
-            var s = n("884691"),
-                a = n("174727"),
+            var a = n("884691"),
+                s = n("174727"),
                 l = n("658536");
 
             function i(e) {
@@ -13,8 +13,8 @@
                     communicationDisabledUntil: t,
                     userId: n,
                     guildId: i
-                } = null != e ? e : {}, r = (0, a.default)(null != t ? Date.parse(t) : Date.now()), o = r.seconds, u = (0, s.useRef)(null);
-                return (0, s.useEffect)(() => {
+                } = null != e ? e : {}, r = (0, s.default)(null != t ? Date.parse(t) : Date.now()), o = r.seconds, u = (0, a.useRef)(null);
+                return (0, a.useEffect)(() => {
                     if (null == e || null == i || null == n) {
                         clearTimeout(u.current);
                         return

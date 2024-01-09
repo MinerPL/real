@@ -1,27 +1,30 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return u
                 }
             });
             var i = n("872717"),
-                r = n("913144"),
-                l = n("49111"),
-                a = {
+                r = n("151426"),
+                l = n("913144"),
+                s = n("10641"),
+                a = n("872173"),
+                o = n("49111"),
+                u = {
                     async fetchUserTrialOffer() {
                         try {
                             let {
                                 body: e
                             } = await i.default.get({
-                                url: l.Endpoints.USER_TRIAL_OFFER,
+                                url: o.Endpoints.USER_TRIAL_OFFER,
                                 oldFormErrors: !0
                             });
-                            r.default.dispatch({
+                            null == e && (0, s.isDismissibleContentDismissed)(r.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (0, a.removeDismissedContent)(r.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING), l.default.dispatch({
                                 type: "BILLING_USER_TRIAL_OFFER_FETCH_SUCCESS",
                                 userTrialOffer: e
                             })
                         } catch (e) {
-                            r.default.dispatch({
+                            l.default.dispatch({
                                 type: "BILLING_USER_TRIAL_OFFER_FETCH_SUCCESS"
                             })
                         }
@@ -31,14 +34,14 @@
                             let {
                                 body: t
                             } = await i.default.post({
-                                url: l.Endpoints.USER_TRIAL_OFFER_ACKNOWLEDGED(e.id)
+                                url: o.Endpoints.USER_TRIAL_OFFER_ACKNOWLEDGED(e.id)
                             });
-                            r.default.dispatch({
+                            l.default.dispatch({
                                 type: "BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS",
                                 userTrialOffer: t
                             })
                         } catch (e) {
-                            404 === e.status && r.default.dispatch({
+                            404 === e.status && l.default.dispatch({
                                 type: "BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS",
                                 userTrialOffer: null
                             })

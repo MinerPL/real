@@ -4,8 +4,8 @@
                     return E
                 }
             }), n("222007"), n("781738");
-            var s = n("132710"),
-                a = n.n(s),
+            var a = n("132710"),
+                s = n.n(a),
                 l = n("223468"),
                 i = n("819689"),
                 r = n("716241"),
@@ -53,38 +53,38 @@
                         }
                     },
                     reaction: {
-                        match: a.anyScopeRegex(/^\+:(.+?): *$/),
+                        match: s.anyScopeRegex(/^\+:(.+?): *$/),
                         action(e, t) {
                             let {
                                 isEdit: n,
-                                channel: s
+                                channel: a
                             } = t;
-                            if (n || !f.default.hasPresent(s.id)) return;
-                            let a = f.default.getMessages(s.id).last();
-                            if (null == a || null == a.id) return;
-                            let l = o.default.getDisambiguatedEmojiContext(s.guild_id).getByName(e.trim().slice(2, -1));
-                            if (null != l) return (0, u.addReaction)(s.id, a.id, (0, d.toReactionEmoji)(l)), {
+                            if (n || !f.default.hasPresent(a.id)) return;
+                            let s = f.default.getMessages(a.id).last();
+                            if (null == s || null == s.id) return;
+                            let l = o.default.getDisambiguatedEmojiContext(a.guild_id).getByName(e.trim().slice(2, -1));
+                            if (null != l) return (0, u.addReaction)(a.id, s.id, (0, d.toReactionEmoji)(l)), {
                                 content: ""
                             }
                         }
                     },
                     searchReplace: {
-                        match: a.anyScopeRegex(/^s\/((?:.+?)[^\\]|.)\/(.*)/),
+                        match: s.anyScopeRegex(/^s\/((?:.+?)[^\\]|.)\/(.*)/),
                         action(e, t) {
                             var n;
                             let {
-                                isEdit: s,
-                                channel: a
+                                isEdit: a,
+                                channel: s
                             } = t;
-                            if (s) return;
-                            let l = f.default.getLastEditableMessage(a.id);
+                            if (a) return;
+                            let l = f.default.getLastEditableMessage(s.id);
                             if (null == l || null == l.id) return {
                                 content: ""
                             };
                             let [, r, o] = Array.from(null !== (n = e.match(this.match.regex)) && void 0 !== n ? n : []);
                             r = r.replace(C, (e, t) => t), o = o.replace(C, (e, t) => t);
                             let u = l.content.replace(r, o);
-                            return (null == u || "" === u) && 0 === l.attachments.length ? i.default.deleteMessage(a.id, l.id) : e !== l.content && i.default.editMessage(a.id, l.id, {
+                            return (null == u || "" === u) && 0 === l.attachments.length ? i.default.deleteMessage(s.id, l.id) : e !== l.content && i.default.editMessage(s.id, l.id, {
                                 content: u
                             }), {
                                 content: ""
@@ -98,24 +98,24 @@
                     }
                 };
 
-            function m(e, t, n, s) {
+            function m(e, t, n, a) {
                 return r.default.trackWithMetadata(h.AnalyticEvents.SLASH_COMMAND_USED, {
                     command: e
-                }), t.action(n, s)
+                }), t.action(n, a)
             }
 
             function E(e, t) {
-                for (let s in p) {
-                    let a = p[s];
-                    if (null != a.match) {
+                for (let a in p) {
+                    let s = p[a];
+                    if (null != s.match) {
                         var n;
-                        if (null === (n = a.match.regex) || void 0 === n ? void 0 : n.test(e)) return m(s, a, e, t);
+                        if (null === (n = s.match.regex) || void 0 === n ? void 0 : n.test(e)) return m(a, s, e, t);
                         continue
                     }
                     if (c.UseLegacyChatInput.getSetting() && "/" === e[0]) {
                         let n = e.split(" "),
                             l = n[0].slice(1);
-                        if (s === l && null != a.action) return m(s, a, n.slice(1).join(" "), t)
+                        if (a === l && null != s.action) return m(a, s, n.slice(1).join(" "), t)
                     }
                 }
             }

@@ -13,8 +13,8 @@
             var i = n("884691"),
                 r = n("446674"),
                 l = n("913144"),
-                a = n("697218"),
-                s = n("719923"),
+                s = n("697218"),
+                a = n("719923"),
                 o = n("324878"),
                 u = n("44678"),
                 d = n("538620"),
@@ -36,7 +36,7 @@
             function _() {
                 let e = (0, r.useStateFromStores)([c.default], () => c.default.lastFetchedActivePromotions),
                     t = f(),
-                    n = (0, r.useStateFromStores)([a.default], () => a.default.getCurrentUser()),
+                    n = (0, r.useStateFromStores)([s.default], () => s.default.getCurrentUser()),
                     _ = (0, o.useHasActiveTrial)(),
                     [E, T] = i.useState(!1),
                     [I, p] = i.useState([]);
@@ -51,7 +51,7 @@
                             return n.id === e.promotion.id
                         }) ? t : [...t, e])
                     }, []),
-                    S = (0, s.isPremiumExactly)(n, m.PremiumTypes.TIER_2);
+                    S = (0, a.isPremiumExactly)(n, m.PremiumTypes.TIER_2);
                 i.useEffect(() => {
                     l.default.wait(() => {
                         S && null == e && d.default.fetchActiveOutboundPromotions()

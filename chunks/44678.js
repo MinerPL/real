@@ -34,8 +34,8 @@
             var i = n("872717"),
                 r = n("819855"),
                 l = n("915639"),
-                a = n("521012"),
-                s = n("568734"),
+                s = n("521012"),
+                a = n("568734"),
                 o = n("773336"),
                 u = n("78345"),
                 d = n("807345"),
@@ -110,7 +110,7 @@
                             id: t,
                             flags: i
                         } = e;
-                        return t !== n && !(0, s.hasFlag)(i, u.PromotionFlags.SUPPRESS_NOTIFICATION)
+                        return t !== n && !(0, a.hasFlag)(i, u.PromotionFlags.SUPPRESS_NOTIFICATION)
                     }),
                     r = null == e ? i : i.filter(t => {
                         let {
@@ -119,7 +119,7 @@
                         return new Date(n) > new Date(e)
                     }),
                     l = d.default.lastDismissedOutboundPromotionStartDate,
-                    o = a.default.getPremiumTypeSubscription(),
+                    o = s.default.getPremiumTypeSubscription(),
                     c = (null == o ? void 0 : o.trialId) != null,
                     m = c ? r.filter(e => R(e)) : r;
                 return 0 !== m.length && (null == l || m.some(e => {
@@ -131,11 +131,11 @@
             }
 
             function S(e) {
-                return !(0, o.isIOS)() || !(0, s.hasFlag)(e.flags, u.PromotionFlags.IS_BLOCKED_IOS)
+                return !(0, o.isIOS)() || !(0, a.hasFlag)(e.flags, u.PromotionFlags.IS_BLOCKED_IOS)
             }
 
             function R(e) {
-                return (0, s.hasFlag)(e.flags, u.PromotionFlags.IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS)
+                return (0, a.hasFlag)(e.flags, u.PromotionFlags.IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS)
             }
 
             function C(e, t) {

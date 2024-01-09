@@ -59,7 +59,7 @@
                 })
             }
 
-            function L(e) {
+            function E(e) {
                 let {
                     name: t,
                     children: r
@@ -74,7 +74,7 @@
                     })]
                 })
             }
-            let E = [{
+            let L = [{
                     id: "details",
                     name: "Details",
                     render: e => {
@@ -118,7 +118,7 @@
                             }), (0, a.jsx)(N, {
                                 children: Object.entries(r).map(e => {
                                     let [t, r] = e;
-                                    return (0, a.jsx)(L, {
+                                    return (0, a.jsx)(E, {
                                         name: "".concat(t, ":"),
                                         children: null != r ? (0, a.jsx)("code", {
                                             children: JSON.stringify(r)
@@ -174,7 +174,7 @@
                         TabBar: p,
                         renderSelectedTab: m
                     } = (0, C.default)({
-                        tabs: E
+                        tabs: L
                     }, []);
                 return (0, a.jsxs)("div", {
                     ref: e,

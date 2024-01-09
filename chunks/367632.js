@@ -1,7 +1,7 @@
             "use strict";
-            n.r(t), n.d(t, {
+            a.r(t), a.d(t, {
                 fetchBugReportConfig: function() {
-                    return o
+                    return u
                 },
                 getFeatureId: function() {
                     return d
@@ -10,17 +10,17 @@
                     return c
                 },
                 submitReport: function() {
-                    return f
+                    return m
                 }
-            }), n("424973");
-            var a = n("759843"),
-                l = n("872717"),
-                s = n("147746");
-            n("18108"), n("773336");
-            var i = n("840707"),
-                r = n("49111"),
-                u = n("782340");
-            async function o() {
+            }), a("424973");
+            var n = a("759843"),
+                l = a("872717"),
+                s = a("147746");
+            a("18108"), a("773336");
+            var i = a("840707"),
+                r = a("49111"),
+                o = a("782340");
+            async function u() {
                 let e = await l.default.get({
                     url: r.Endpoints.BUG_REPORTS
                 });
@@ -28,36 +28,36 @@
             }
 
             function d(e) {
-                var t, n;
-                return null !== (n = null !== (t = null == e ? void 0 : e.name) && void 0 !== t ? t : "" + (null == e ? void 0 : e.squad)) && void 0 !== n ? n : ""
+                var t, a;
+                return null !== (a = null !== (t = null == e ? void 0 : e.name) && void 0 !== t ? t : "" + (null == e ? void 0 : e.squad)) && void 0 !== a ? a : ""
             }
 
             function c() {
                 return [{
-                    title: u.default.Messages.BUG_REPORT_PRIORITY_CRITICAL_TITLE,
-                    description: u.default.Messages.BUG_REPORT_PRIORITY_CRITICAL_DESCRIPTION.format(),
+                    title: o.default.Messages.BUG_REPORT_PRIORITY_CRITICAL_TITLE,
+                    description: o.default.Messages.BUG_REPORT_PRIORITY_CRITICAL_DESCRIPTION.format(),
                     emoji: "801497159479722084",
                     value: 0
                 }, {
-                    title: u.default.Messages.BUG_REPORT_PRIORITY_HIGH_TITLE,
-                    description: u.default.Messages.BUG_REPORT_PRIORITY_HIGH_DESCRIPTION.format(),
+                    title: o.default.Messages.BUG_REPORT_PRIORITY_HIGH_TITLE,
+                    description: o.default.Messages.BUG_REPORT_PRIORITY_HIGH_DESCRIPTION.format(),
                     emoji: "410336837563973632",
                     value: 1
                 }, {
-                    title: u.default.Messages.BUG_REPORT_PRIORITY_LOW_TITLE,
-                    description: u.default.Messages.BUG_REPORT_PRIORITY_LOW_DESCRIPTION.format(),
+                    title: o.default.Messages.BUG_REPORT_PRIORITY_LOW_TITLE,
+                    description: o.default.Messages.BUG_REPORT_PRIORITY_LOW_DESCRIPTION.format(),
                     emoji: "841420679643529296",
                     value: 2
                 }, {
-                    title: u.default.Messages.BUG_REPORT_PRIORITY_VERY_LOW_TITLE,
-                    description: u.default.Messages.BUG_REPORT_PRIORITY_VERY_LOW_DESCRIPTION.format(),
+                    title: o.default.Messages.BUG_REPORT_PRIORITY_VERY_LOW_TITLE,
+                    description: o.default.Messages.BUG_REPORT_PRIORITY_VERY_LOW_DESCRIPTION.format(),
                     emoji: "827645852352512021",
                     value: 3
                 }]
             }
-            async function f(e, t, n) {
-                var l, u;
-                let o = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
+            async function m(e, t, a) {
+                var l, o;
+                let u = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
                     d = [{
                         name: "name",
                         value: e.name
@@ -80,10 +80,10 @@
                     name: "asana_inbox_id",
                     value: "".concat(c)
                 });
-                let f = null === (u = e.feature) || void 0 === u ? void 0 : u.name;
-                null != f && "" !== f && d.push({
+                let m = null === (o = e.feature) || void 0 === o ? void 0 : o.name;
+                null != m && "" !== m && d.push({
                     name: "feature_name",
-                    value: f
+                    value: m
                 }), t.overridePlatformInformation && (d.push({
                     name: "device",
                     value: t.device
@@ -105,14 +105,14 @@
                 }), d.push({
                     name: "locale",
                     value: t.locale
-                })), o && (0, s.uploadDebugLogFiles)(r.DebugLogCategory.WEB_APP);
+                })), u && (0, s.uploadDebugLogFiles)(r.DebugLogCategory.WEB_APP);
                 try {
                     return await i.default.post({
                         url: r.Endpoints.BUG_REPORTS,
-                        attachments: n,
+                        attachments: a,
                         fields: d,
                         trackedActionData: {
-                            event: a.NetworkActionNames.BUG_REPORT_SUBMIT,
+                            event: n.NetworkActionNames.BUG_REPORT_SUBMIT,
                             properties: {
                                 priority: e.priority,
                                 asana_inbox_id: c
