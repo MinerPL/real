@@ -4,7 +4,7 @@
                 default: function() {
                     return g
                 }
-            }), n("222007"), n("424973");
+            }), n("222007");
             var r = n("917351"),
                 s = n.n(r),
                 a = n("446674"),
@@ -95,7 +95,11 @@
                 GUILD_DELETE: function(e) {
                     let {
                         guild: t
-                    } = e;
+                    } = e, n = _.findIndex(e => e.id === t.id);
+                    if (-1 !== n) {
+                        _.splice(n, 1), _ = [..._];
+                        return
+                    }
                     if (null == h[t.id] || t.unavailable) return !1;
                     h = {
                         ...h
@@ -131,12 +135,12 @@
                     return !0
                 },
                 GUILD_GEO_RESTRICTED: function(e) {
-                    _.push({
+                    _ = [..._, {
                         id: e.guildId,
                         name: e.name,
                         icon: e.icon,
                         unavailable: !0,
                         geo_restricted: !0
-                    })
+                    }]
                 }
             })

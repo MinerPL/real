@@ -7,8 +7,8 @@
                     return m
                 }
             });
-            var a = n("37983"),
-                s = n("884691"),
+            var s = n("37983"),
+                a = n("884691"),
                 l = n("414456"),
                 i = n.n(l),
                 r = n("77078"),
@@ -25,22 +25,22 @@
                     channel: t,
                     narrow: n
                 } = e, l = (0, c.useCanUnarchiveThread)(t);
-                return s.useEffect(() => {
+                return a.useEffect(() => {
                     u.default.track(f.AnalyticEvents.CHANNEL_BANNER_VIEWED, {
                         ...(0, o.collectGuildAnalyticsMetadata)(t.getGuildId()),
                         ...(0, o.collectChannelAnalyticsMetadata)(t),
                         banner_type: "thread"
                     })
-                }, [t]), (0, a.jsxs)("div", {
+                }, [t]), (0, s.jsxs)("div", {
                     className: i(C.chatHeaderBar, {
                         [C.narrow]: n
                     }),
-                    children: [(0, a.jsx)(r.Text, {
+                    children: [(0, s.jsx)(r.Text, {
                         className: C.chatHeaderBarText,
                         variant: "text-sm/normal",
                         color: "header-secondary",
                         children: t.isForumPost() ? h.default.Messages.FORUM_POST_HEADER_NOTICE_LOCKED : h.default.Messages.THREAD_HEADER_NOTICE_LOCKED
-                    }), l ? (0, a.jsx)(r.Button, {
+                    }), l ? (0, s.jsx)(r.Button, {
                         size: n ? r.Button.Sizes.SMALL : r.Button.Sizes.TINY,
                         className: C.chatHeaderBarButton,
                         color: r.Button.Colors.PRIMARY,
@@ -62,22 +62,22 @@
                     channel: t,
                     narrow: n
                 } = e, l = (0, c.useIsThreadModerator)(t);
-                return s.useEffect(() => {
+                return a.useEffect(() => {
                     u.default.track(f.AnalyticEvents.CHANNEL_BANNER_VIEWED, {
                         ...(0, o.collectGuildAnalyticsMetadata)(t.getGuildId()),
                         ...(0, o.collectChannelAnalyticsMetadata)(t),
                         banner_type: "thread"
                     })
-                }, [t]), (0, a.jsxs)("div", {
+                }, [t]), (0, s.jsxs)("div", {
                     className: i(C.chatHeaderBar, {
                         [C.narrow]: n
                     }),
-                    children: [(0, a.jsx)(r.Text, {
+                    children: [(0, s.jsx)(r.Text, {
                         className: C.chatHeaderBarText,
                         variant: "text-sm/normal",
                         color: "header-secondary",
                         children: t.isForumPost() ? h.default.Messages.FORUM_POST_HEADER_NOTICE_ACTIVE_LOCKED : h.default.Messages.THREAD_HEADER_NOTICE_ACTIVE_LOCKED
-                    }), l ? (0, a.jsx)(r.Button, {
+                    }), l ? (0, s.jsx)(r.Button, {
                         size: n ? r.Button.Sizes.SMALL : r.Button.Sizes.TINY,
                         className: C.chatHeaderBarButton,
                         color: r.Button.Colors.PRIMARY,

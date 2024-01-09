@@ -4,49 +4,49 @@
                     return c
                 }
             }), n("222007");
-            var a = n("37983"),
-                s = n("884691"),
+            var s = n("37983"),
+                a = n("884691"),
                 l = n("414456"),
                 i = n.n(l),
                 r = n("77078"),
                 o = n("145131"),
                 u = n("9461");
-            class d extends s.PureComponent {
+            class d extends a.PureComponent {
                 render() {
                     let e;
                     let {
                         renderFooter: t,
                         selectable: n,
-                        renderHeader: s,
+                        renderHeader: a,
                         className: l,
                         onClose: d,
                         children: c
                     } = this.props;
-                    return null != t && (e = (0, a.jsx)(r.ModalFooter, {
+                    return null != t && (e = (0, s.jsx)(r.ModalFooter, {
                         direction: o.default.Direction.HORIZONTAL,
                         children: t()
-                    })), (0, a.jsx)(r.Modal, {
+                    })), (0, s.jsx)(r.Modal, {
                         onCloseRequest: d,
                         renderModal: t => {
                             let {
                                 onClose: f,
                                 ...h
                             } = t;
-                            return (0, a.jsxs)(r.ModalRoot, {
+                            return (0, s.jsxs)(r.ModalRoot, {
                                 className: u.modal,
                                 ...h,
-                                children: [(0, a.jsxs)(r.ModalHeader, {
+                                children: [(0, s.jsxs)(r.ModalHeader, {
                                     align: o.default.Justify.BETWEEN,
                                     separator: !1,
-                                    children: [s(), (0, a.jsx)(o.default.Child, {
+                                    children: [a(), (0, s.jsx)(o.default.Child, {
                                         grow: 0,
-                                        children: (0, a.jsx)(r.ModalCloseButton, {
+                                        children: (0, s.jsx)(r.ModalCloseButton, {
                                             onClick: () => {
                                                 null != d && d(), f()
                                             }
                                         })
                                     })]
-                                }), (0, a.jsx)(r.ModalContent, {
+                                }), (0, s.jsx)(r.ModalContent, {
                                     className: i(l, u.content, {
                                         selectable: n
                                     }),
@@ -59,7 +59,7 @@
                     })
                 }
                 constructor(...e) {
-                    super(...e), this.scrollerRef = s.createRef(), this.handleScroll = () => {
+                    super(...e), this.scrollerRef = a.createRef(), this.handleScroll = () => {
                         let {
                             current: e
                         } = this.scrollerRef;

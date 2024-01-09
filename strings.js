@@ -18279,7 +18279,7 @@
                 u = E("782340");
             (0, a.setUpdateRules)(s.default), (0, n.default)(u.default, o.default, T.default), i.default.Emitter.injectBatchEmitChanges(r.batchUpdates), i.default.PersistedStore.disableWrites = __OVERLAY__, i.default.initialize();
             let L = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            new(0, O.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("258265", ", Version Hash: ").concat("0e15f534c2af0aee61616129faf5838862ead046")), t.default.setTags({
+            new(0, O.default)().log("[BUILD INFO] Release Channel: ".concat(L, ", Build Number: ").concat("258272", ", Version Hash: ").concat("65bc67f356af3b22d7370815f83d9d99cb8d6d69")), t.default.setTags({
                 appContext: l.CURRENT_APP_CONTEXT
             }), S.default.initBasic(), N.default.init(), I.FocusRingManager.init(), A.init(), (0, R.cleanupTempFiles)()
         },
@@ -20752,8 +20752,8 @@
 
             function o() {
                 var e;
-                let _ = parseInt((e = "258265", "258265"));
-                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("258265")), _ = 0), _
+                let _ = parseInt((e = "258272", "258272"));
+                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("258272")), _ = 0), _
             }
         },
         990629: function(e, _, E) {
@@ -22343,19 +22343,29 @@
                 id: "2023-10_emoji_captions",
                 label: "Emoji Captions Experiment",
                 defaultConfig: {
-                    isEnabled: !1
+                    isEnabledOnDesktop: !1,
+                    isAutosuggestEnabled: !1
                 },
                 treatments: [{
                     id: 1,
                     label: "Enabled",
                     config: {
-                        isEnabled: !0
+                        isEnabledOnDesktop: !0,
+                        isAutosuggestEnabled: !1
                     }
                 }, {
                     id: 2,
                     label: "Enabled with more captions from post-processing",
                     config: {
-                        isEnabled: !0
+                        isEnabledOnDesktop: !0,
+                        isAutosuggestEnabled: !1
+                    }
+                }, {
+                    id: 3,
+                    label: "Enabled with mobile autosuggest",
+                    config: {
+                        isEnabledOnDesktop: !0,
+                        isAutosuggestEnabled: !0
                     }
                 }]
             });
@@ -22392,7 +22402,7 @@
                 let E = (0, n.getEmojiCaptionsExperimentConfig)({
                     location: e
                 });
-                if (!E.isEnabled) {
+                if (!E.isEnabledOnDesktop) {
                     r.default.hasPersistedState() && r.default.clear();
                     return
                 }
