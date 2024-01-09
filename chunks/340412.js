@@ -59,8 +59,9 @@
                     return (0, u.isPremium)(t) ? [] : Object.values(E.userTrialOffers).filter(t => e.includes(t.trial_id) && null != t.expires_at)
                 }
                 getUnacknowledgedDiscountOffers() {
-                    let e = n.default.getCurrentUser();
-                    return (0, u.isPremium)(e) ? [] : Object.values(E.userDiscountOffers).filter(e => null == e.expires_at)
+                    var e;
+                    let t = n.default.getCurrentUser();
+                    return (0, u.isPremium)(t) ? [] : Object.values(null !== (e = E.userDiscountOffers) && void 0 !== e ? e : {}).filter(e => null == e.expires_at)
                 }
                 getUnacknowledgedOffers(e) {
                     let t = n.default.getCurrentUser();
