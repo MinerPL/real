@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return a
                 }
             }), n("222007");
-            var s, a = n("37983"),
+            var a, s = n("37983"),
                 l = n("884691"),
                 i = n("414456"),
                 r = n.n(i),
@@ -15,10 +15,10 @@
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
                     t = arguments.length > 1 ? arguments[1] : void 0,
                     n = arguments.length > 2 ? arguments[2] : void 0,
-                    s = "" !== e ? e : null != n.value && "" !== n.value ? n.value : "";
-                return (null == t.minLen || !(s.length < t.minLen)) && (null == t.maxLen || !(s.length > t.maxLen)) && !0
+                    a = "" !== e ? e : null != n.value && "" !== n.value ? n.value : "";
+                return (null == t.minLen || !(a.length < t.minLen)) && (null == t.maxLen || !(a.length > t.maxLen)) && !0
             }
-            s = class extends l.Component {
+            a = class extends l.Component {
                 componentDidUpdate(e, t) {
                     if (t.focused !== this.state.focused && this.state.focused) {
                         var n;
@@ -33,7 +33,7 @@
                     let {
                         className: t,
                         name: n,
-                        autoComplete: s,
+                        autoComplete: a,
                         maxLen: l
                     } = this.props, i = {
                         position: "absolute",
@@ -44,11 +44,11 @@
                     return this.state.focused ? e = {
                         visibility: "hidden",
                         pointerEvents: "none"
-                    } : i.opacity = 0, (0, a.jsx)("div", {
+                    } : i.opacity = 0, (0, s.jsx)("div", {
                         className: r(u.outer, t),
-                        children: (0, a.jsxs)("div", {
+                        children: (0, s.jsxs)("div", {
                             className: u.container,
-                            children: [(0, a.jsx)("input", {
+                            children: [(0, s.jsx)("input", {
                                 type: "text",
                                 className: u.input,
                                 ref: this.inputRef,
@@ -56,12 +56,12 @@
                                 value: this.state.value,
                                 name: n,
                                 maxLength: l,
-                                autoComplete: s,
+                                autoComplete: a,
                                 onKeyPress: this.handleKeyPress,
                                 onChange: this.handleChange,
                                 onFocus: this.handleFocus,
                                 onBlur: this.handleBlur
-                            }), (0, a.jsx)("div", {
+                            }), (0, s.jsx)("div", {
                                 className: u.input,
                                 style: e,
                                 children: this.state.value

@@ -1,12 +1,12 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return s
                 }
             });
-            var s = n("916650");
+            var a = n("916650");
 
-            function a() {
-                let e = (0, s.default)();
+            function s() {
+                let e = (0, a.default)();
                 return e
             }

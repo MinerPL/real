@@ -52,7 +52,7 @@
                 } = (0, v.default)(E.default.CLIPS_GALLERY_ITEM), [I, S] = s.useState(!1), N = s.useRef(null), A = (0, x.default)(null !== (a = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== a ? a : 0), j = s.useRef(new f.DelayedCall(500, () => {
                     var e;
                     let t = N.current;
-                    null != t && (t.currentTime = A.current, null === (e = N.current) || void 0 === e || e.play())
+                    null != t && t.paused && (t.currentTime = A.current, null === (e = N.current) || void 0 === e || e.play())
                 })), y = s.useCallback(() => {
                     var e;
                     S(!0), null === (e = j.current) || void 0 === e || e.delay()
