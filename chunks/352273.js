@@ -7,10 +7,10 @@
                     return E
                 },
                 fetchNotificationCenterItems: function() {
-                    return _
+                    return h
                 },
                 markNotificationCenterItemAcked: function() {
-                    return h
+                    return _
                 },
                 deleteNotificationCenterItem: function() {
                     return T
@@ -38,7 +38,7 @@
                     type: "RESET_NOTIFICATION_CENTER"
                 })
             }
-            async function _(e, t) {
+            async function h(e, t) {
                 if (u.default.loading) return;
                 await i.default.dispatch({
                     type: "LOAD_NOTIFICATION_CENTER_ITEMS"
@@ -76,7 +76,7 @@
                 }
             }
 
-            function h(e) {
+            function _(e) {
                 null != e.local_id ? function(e) {
                     i.default.dispatch({
                         type: "NOTIFICATION_CENTER_ITEMS_LOCAL_ACK",
