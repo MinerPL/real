@@ -92,11 +92,10 @@
                 let {
                     className: e,
                     channel: E,
-                    guild: n,
-                    locked: l,
-                    hasActiveThreads: F,
-                    withGuildIcon: a
-                } = B, o = (0, i.useStateFromStores)([c.default], () => c.default.getGuild(E.guild_id), [E.guild_id]), r = a ? null == o ? void 0 : o.getIconURL(48) : null, D = null != r, s = function(B, e, E) {
+                    locked: n,
+                    hasActiveThreads: l,
+                    withGuildIcon: F
+                } = B, a = (0, i.useStateFromStores)([c.default], () => c.default.getGuild(E.guild_id), [E.guild_id]), o = F ? null == a ? void 0 : a.getIconURL(48) : null, r = null != o, D = function(B, e, E) {
                     switch (B.type) {
                         case S.ChannelTypes.DM:
                             return function() {
@@ -113,33 +112,33 @@
                         default:
                             return (0, d.getChannelIconComponent)(B, e, E)
                     }
-                }(E, n, {
-                    locked: l,
-                    hasActiveThreads: F
+                }(E, a, {
+                    locked: n,
+                    hasActiveThreads: l
                 });
-                if (null == s) return null;
-                let A = (0, d.getChannelIconTooltipText)(E, n, l, F),
-                    _ = D && null != o ? "".concat(o.name, " - ").concat(A, " icon") : "".concat(A, " icon");
+                if (null == D) return null;
+                let s = (0, d.getChannelIconTooltipText)(E, a, n, l),
+                    A = r && null != a ? "".concat(a.name, " - ").concat(s, " icon") : "".concat(s, " icon");
                 return (0, C.jsx)(u.Tooltip, {
-                    text: A,
+                    text: s,
                     delay: 500,
                     children: B => (0, C.jsxs)("div", {
                         ...B,
                         role: "img",
-                        "aria-label": _,
+                        "aria-label": A,
                         className: t(p.iconContainer, {
-                            [p.iconContainerWithGuildIcon]: D
+                            [p.iconContainerWithGuildIcon]: r
                         }),
-                        children: [D && (0, C.jsx)(h.default, {
+                        children: [r && (0, C.jsx)(h.default, {
                             mask: h.MaskIDs.GUILD_ICON_WITH_CHANNEL_TYPE,
                             children: (0, C.jsx)("img", {
                                 alt: "",
-                                src: r,
+                                src: o,
                                 className: p.channelGuildIcon
                             })
-                        }), (0, C.jsx)(s, {
+                        }), (0, C.jsx)(D, {
                             className: t(p.icon, {
-                                [p.iconWithGuildIcon]: D
+                                [p.iconWithGuildIcon]: r
                             }, e)
                         })]
                     })
