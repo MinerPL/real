@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return T
+                    return f
                 }
             }), s("424973"), s("222007");
             var a = s("37983"),
@@ -16,7 +16,7 @@
                 _ = s("454589"),
                 E = s("49111"),
                 I = s("870103");
-            class f extends n.PureComponent {
+            class T extends n.PureComponent {
                 componentDidMount() {
                     let {
                         sku: e,
@@ -68,7 +68,7 @@
                     })
                 }
             }
-            var T = (0, i.default)(r.default.connectStores([u.default, c.default], e => {
+            var f = (0, i.default)(r.default.connectStores([u.default, c.default], e => {
                 let {
                     sku: t
                 } = e, s = null != t ? u.default.getApplication(t.applicationId) : null, a = null != s && null != s.primarySkuId && s.primarySkuId !== t.id ? s.primarySkuId : null;
@@ -77,4 +77,4 @@
                     isFetchingPrimarySku: null != a && c.default.isFetching(a),
                     primarySku: null != a ? c.default.get(a) : null
                 }
-            })(f))
+            })(T))

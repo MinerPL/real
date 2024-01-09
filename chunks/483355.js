@@ -19,23 +19,23 @@
                     x: 0,
                     y: 0
                 },
-                S = !1;
+                E = !1;
 
-            function E(e) {
+            function S(e) {
                 let {
                     clientX: t,
                     clientY: n
                 } = e;
-                S = !0, m.x = t, m.y = n
+                E = !0, m.x = t, m.y = n
             }
             let v = new Map;
 
             function y(e, t) {
-                if (null == t) v.delete(e), 0 === v.size && (window.removeEventListener("mousemove", E), S = !1);
+                if (null == t) v.delete(e), 0 === v.size && (window.removeEventListener("mousemove", S), E = !1);
                 else {
                     let n = v.get(e);
                     if (null != n && (0, u.default)(n.zone, t.zone)) return;
-                    0 === v.size && window.addEventListener("mousemove", E), v.set(e, t)
+                    0 === v.size && window.addEventListener("mousemove", S), v.set(e, t)
                 }
                 if (p.isPlatformEmbedded) {
                     f.default.setClickZones(Array.from(v.values()).map(e => {
@@ -65,7 +65,7 @@
                             let e = g.default.requireModule("discord_overlay2");
                             e.setClickZoneCallback((e, t, n) => {
                                 let i = v.get(e);
-                                null != i && (!S && (m.x = t, m.y = n), i.instance.click())
+                                null != i && (!E && (m.x = t, m.y = n), i.instance.click())
                             }), C = !0
                         }()
                 }

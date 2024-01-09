@@ -7,10 +7,10 @@
                     return r
                 },
                 categoryCollapseAll: function() {
-                    return a
+                    return s
                 },
                 categoryExpandAll: function() {
-                    return s
+                    return a
                 }
             });
             var i = n("913144");
@@ -29,14 +29,14 @@
                 })
             }
 
-            function a(e) {
+            function s(e) {
                 i.default.dispatch({
                     type: "CATEGORY_COLLAPSE_ALL",
                     guildId: e
                 })
             }
 
-            function s(e) {
+            function a(e) {
                 i.default.dispatch({
                     type: "CATEGORY_EXPAND_ALL",
                     guildId: e

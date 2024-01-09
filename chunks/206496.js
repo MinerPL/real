@@ -18,12 +18,12 @@
                 p = n("819068"),
                 g = n("233102"),
                 m = n("628480"),
-                S = n("37207"),
-                E = n("880584"),
+                E = n("37207"),
+                S = n("880584"),
                 v = n("440899"),
                 y = n("522019"),
                 C = n("49111");
-            let I = {
+            let N = {
                 [C.OverlayWidgets.TEXT](e) {
                     let {
                         dragging: t,
@@ -86,7 +86,7 @@
                         locked: l,
                         pinned: s
                     } = e;
-                    return (0, i.jsx)(S.default, {
+                    return (0, i.jsx)(E.default, {
                         anchor: n,
                         id: t,
                         locked: l,
@@ -96,7 +96,7 @@
                     })
                 }
             };
-            class N extends a.PureComponent {
+            class O extends a.PureComponent {
                 componentDidUpdate(e) {
                     this.props.locked && !e.locked && null != this.state.lastLayoutUpdate && (o.default.track(C.AnalyticEvents.OVERLAY_LAYOUT_UPDATED, this.state.lastLayoutUpdate), this.setState({
                         lastLayoutUpdate: null
@@ -111,7 +111,7 @@
                         state: {
                             dragging: l
                         }
-                    } = this, s = I[e.type];
+                    } = this, s = N[e.type];
                     if (null == s) throw Error("OverlayLayout: Widget does not exist in WidgetMap");
                     return o => s({
                         id: e.id,
@@ -142,14 +142,14 @@
                         anchor: c
                     } = e, p = (0, h.getSizeFromLayoutSize)(u, n), g = (0, h.getAnchorCoordsFromLayoutSize)(c, n), {
                         minSize: m,
-                        resizeX: S,
+                        resizeX: E,
                         resizeY: v,
                         dragAnywhere: y
-                    } = t, C = (0, E.isWidgetContainerVisible)({
+                    } = t, C = (0, S.isWidgetContainerVisible)({
                         locked: a,
                         isPreviewingInGame: l,
                         pinned: r
-                    }), I = {
+                    }), N = {
                         minX: 0,
                         minY: 0,
                         maxX: n.width,
@@ -159,10 +159,10 @@
                         id: o,
                         size: p,
                         anchor: g,
-                        container: I,
+                        container: N,
                         minSize: m,
                         hidden: !C,
-                        resizeX: S,
+                        resizeX: E,
                         resizeY: v,
                         style: {
                             zIndex: d
@@ -241,9 +241,9 @@
                     isPreviewingInGame: u.default.isPreviewingInGame(),
                     isActiveRegion: null != n && i.has(n.type)
                 }
-            })(N);
+            })(O);
 
-            function O(e, t) {
+            function I(e, t) {
                 return (0, i.jsx)(T, {
                     widgetId: e,
                     layoutSize: t
@@ -252,5 +252,5 @@
             var _ = l.default.connectStores([d.default, c.default], () => ({
                 layout: d.default.getLayout(p.OVERLAY_LAYOUT_ID),
                 layoutSize: c.default.windowSize(),
-                renderWidget: O
+                renderWidget: I
             }))(r.default)

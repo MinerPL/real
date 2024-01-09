@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return o
+                    return E
                 }
             }), s("222007");
             var a = s("446674"),
@@ -11,11 +11,20 @@
                 l = 0,
                 u = new Set;
 
-            function d(e) {
+            function d(e, t) {
+                i = new Map(i);
+                let s = i.get(e);
+                null != s && i.set(e, {
+                    ...s,
+                    ...t
+                })
+            }
+
+            function c(e) {
                 let t = new Set(u);
                 t.delete(e), u = t
             }
-            class c extends a.default.Store {
+            class o extends a.default.Store {
                 get quests() {
                     return i
                 }
@@ -29,8 +38,8 @@
                     return u.has(e)
                 }
             }
-            c.displayName = "QuestsStore";
-            var o = new c(n.default, {
+            o.displayName = "QuestsStore";
+            var E = new o(n.default, {
                 LOGOUT: function() {
                     r = !1, i = new Map, l = 0, u = new Set
                 },
@@ -51,10 +60,7 @@
                         questId: t,
                         userStatus: s
                     } = e;
-                    i = new Map(i);
-                    let a = i.get(t);
-                    null != a && i.set(t, {
-                        ...a,
+                    d(t, {
                         userStatus: s
                     })
                 },
@@ -67,16 +73,15 @@
                 QUESTS_ENROLL_SUCCESS: function(e) {
                     let {
                         enrolledQuestUserStatus: t
-                    } = e, s = new Map(i), a = s.get(t.questId);
-                    null != a && s.set(t.questId, {
-                        ...a,
+                    } = e;
+                    d(t.questId, {
                         userStatus: t
-                    }), i = s, d(t.questId)
+                    }), c(t.questId)
                 },
                 QUESTS_ENROLL_FAILURE: function(e) {
                     let {
                         questId: t
                     } = e;
-                    d(t)
+                    c(t)
                 }
             })

@@ -19,7 +19,7 @@
             function I(e) {
                 let {
                     smallerText: t
-                } = e, s = (0, i.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3).reverse()), r = s.map((e, t) => (0, a.jsx)(f, {
+                } = e, s = (0, i.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3).reverse()), r = s.map((e, t) => (0, a.jsx)(T, {
                     affinity: e,
                     applyMask: t !== s.length - 1
                 }, e.id)), l = e => null != e.globalName ? e.globalName : e.username, o = n.useMemo(() => 3 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
@@ -52,7 +52,7 @@
                 })
             }
 
-            function f(e) {
+            function T(e) {
                 let {
                     affinity: t,
                     applyMask: s

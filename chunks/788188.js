@@ -16,15 +16,15 @@
                 _ = s("685665"),
                 E = s("539938"),
                 I = s("595426"),
-                f = s("697218"),
-                T = s("145131"),
+                T = s("697218"),
+                f = s("145131"),
                 S = s("216422"),
                 R = s("49111"),
                 p = s("646718"),
-                A = s("782340"),
-                m = s("309285");
-            let N = l.default.connectStores([f.default], () => ({
-                user: f.default.getCurrentUser()
+                m = s("782340"),
+                N = s("309285");
+            let A = l.default.connectStores([T.default], () => ({
+                user: T.default.getCurrentUser()
             }))((0, d.default)((0, o.default)(e => {
                 let {
                     AnalyticsLocationProvider: t
@@ -33,31 +33,31 @@
                     user: o
                 } = e;
                 return l ? (0, a.jsxs)("div", {
-                    className: m.homeWrapperNormal,
+                    className: N.homeWrapperNormal,
                     children: [(0, a.jsx)(u.default, {
                         section: R.AnalyticsSections.NAVIGATION,
                         children: (0, a.jsxs)(E.default, {
                             isAuthenticated: l,
-                            className: m.headerBar,
+                            className: N.headerBar,
                             children: [(0, a.jsx)(E.default.Icon, {
                                 icon: S.default,
                                 "aria-hidden": !0
                             }), (0, a.jsx)(E.default.Title, {
-                                children: A.default.Messages.PREMIUM
+                                children: m.default.Messages.PREMIUM
                             })]
                         })
                     }), (0, a.jsx)(t, {
                         children: (0, a.jsx)(i.AdvancedScrollerAuto, {
-                            className: m.scroller,
+                            className: N.scroller,
                             ref: s,
-                            children: null == o ? (0, a.jsx)(T.default, {
-                                align: T.default.Align.CENTER,
-                                justify: T.default.Justify.CENTER,
+                            children: null == o ? (0, a.jsx)(f.default, {
+                                align: f.default.Align.CENTER,
+                                justify: f.default.Justify.CENTER,
                                 children: (0, a.jsx)(i.Spinner, {
-                                    className: m.spinner
+                                    className: N.spinner
                                 })
                             }) : (0, a.jsx)("div", {
-                                className: m.premiumContainer,
+                                className: N.premiumContainer,
                                 children: (0, a.jsx)(I.default, {
                                     entrypoint: p.PremiumMarketingEntrypoints.ApplicationStoreHome
                                 })
@@ -68,4 +68,4 @@
                     to: R.Routes.LOGIN
                 })
             })));
-            var g = N
+            var g = A

@@ -146,8 +146,8 @@
                     "aria-setsize": j
                 } = e, [G, K] = a.useState(!1), W = a.useRef(null), Z = a.useRef(null), {
                     avatarSrc: z,
-                    avatarDecorationSrc: Q,
-                    eventHandlers: X
+                    avatarDecorationSrc: X,
+                    eventHandlers: Q
                 } = (0, N.default)({
                     user: r,
                     size: h.AvatarSizes.SIZE_32,
@@ -233,7 +233,7 @@
                     }) : null
                 }, ed = () => {
                     if (t.isMultiUserDM()) return (0, l.jsx)(V, {
-                        ...X,
+                        ...Q,
                         src: (0, g.getChannelIconURL)(t),
                         "aria-hidden": !0,
                         className: B.avatar,
@@ -242,10 +242,10 @@
                     o(null != r, "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");
                     let e = null;
                     return !r.isSystemUser() && (e = (0, m.default)(c) ? w.StatusTypes.STREAMING : v), (0, l.jsx)(V, {
-                        ...X,
+                        ...Q,
                         size: h.AvatarSizes.SIZE_32,
                         src: z,
-                        avatarDecoration: Q,
+                        avatarDecoration: X,
                         status: e,
                         isMobile: R,
                         isTyping: A,

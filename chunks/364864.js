@@ -21,8 +21,8 @@
             function g(e, t, n, g) {
                 var m;
                 let {
-                    icon: S,
-                    title: E,
+                    icon: E,
+                    title: S,
                     body: v
                 } = (0, d.makeTextChatNotification)(e, t, n), {
                     trackView: y,
@@ -38,8 +38,8 @@
                 });
                 return {
                     colorScheme: r.ColorSchemes.PRIMARY,
-                    icon: S,
-                    title: E,
+                    icon: E,
+                    title: S,
                     body: v,
                     renderFooter: e => e ? (0, i.jsx)("div", {
                         style: {

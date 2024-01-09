@@ -4,30 +4,30 @@
                     return d
                 }
             });
-            var r = n("446674"),
+            var s = n("446674"),
                 i = n("95410"),
                 l = n("913144"),
-                s = n("49111");
+                r = n("49111");
             let a = {
                     lastViewedPath: null,
                     lastViewedNonVoicePath: null
                 },
                 u = a,
                 o = "LAST_VIEWED_PATH";
-            class c extends r.default.PersistedStore {
+            class c extends s.default.PersistedStore {
                 initialize() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a;
                     u = null != e ? e : a
                 }
                 get defaultRoute() {
-                    return s.Routes.ME
+                    return r.Routes.ME
                 }
                 get lastNonVoiceRoute() {
                     var e;
-                    return null !== (e = u.lastViewedNonVoicePath) && void 0 !== e ? e : s.Routes.ME
+                    return null !== (e = u.lastViewedNonVoicePath) && void 0 !== e ? e : r.Routes.ME
                 }
                 get fallbackRoute() {
-                    return s.Routes.ME
+                    return r.Routes.ME
                 }
                 getState() {
                     return u

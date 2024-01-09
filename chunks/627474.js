@@ -4,7 +4,7 @@
                     return n
                 },
                 default: function() {
-                    return m
+                    return N
                 }
             });
             var a, n, r = s("37983"),
@@ -17,13 +17,13 @@
                 _ = s("521012"),
                 E = s("719923"),
                 I = s("367226"),
-                f = s("628550"),
-                T = s("558566"),
+                T = s("628550"),
+                f = s("558566"),
                 S = s("646718"),
                 R = s("782340"),
                 p = s("650734");
             (a = n || (n = {})).PERKS_DISCOVERABILITY = "perks_discoverability", a.WHATS_NEW = "whats_new";
-            let A = e => {
+            let m = e => {
                 let t = (0, o.default)([_.default], () => _.default.getPremiumTypeSubscription()),
                     s = null != t ? E.default.getPremiumPlanItem(t) : null,
                     a = null != s ? E.default.getSkuIdForPlan(s.planId) : null,
@@ -40,7 +40,7 @@
                     subtitle: R.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_SUBTITLE
                 }
             };
-            var m = e => {
+            var N = e => {
                 let {
                     className: t,
                     variant: s = "perks_discoverability",
@@ -59,17 +59,17 @@
                     });
                     return () => cancelAnimationFrame(t)
                 }, [i, o, E]);
-                let S = (0, f.default)(),
-                    R = A(E),
-                    m = [];
+                let S = (0, T.default)(),
+                    R = m(E),
+                    N = [];
                 switch (s) {
                     case "perks_discoverability":
-                        m = [S.profiles, S.clientThemes, S.serverBoosts];
+                        N = [S.profiles, S.clientThemes, S.serverBoosts];
                         break;
                     case "whats_new":
-                        m = [S.earlyAccess, _ !== c.CollectiblesShopMarketingVariants.DEFAULT ? S.specialShopPerks : S.specialMemberPricing, S.unlimitedSuperReactions]
+                        N = [S.earlyAccess, _ !== c.CollectiblesShopMarketingVariants.DEFAULT ? S.specialShopPerks : S.specialMemberPricing, S.unlimitedSuperReactions]
                 }
-                let N = m.some(e => null != e.pillText);
+                let A = N.some(e => null != e.pillText);
                 return (0, r.jsxs)("div", {
                     ref: i,
                     className: u(p.section, {
@@ -86,14 +86,14 @@
                         color: "header-primary",
                         className: u(p.subtitle, {
                             [p.fullWidth]: E || n,
-                            [p.moreSubtitleMargin]: N,
+                            [p.moreSubtitleMargin]: A,
                             [p.leftAlignSubtitle]: n,
                             [p.centerAlignSubtitle]: !n
                         }),
                         children: R.subtitle
                     }), (0, r.jsx)("div", {
                         className: p.cardContainer,
-                        children: m.map((e, t) => (0, r.jsx)(T.default, {
+                        children: N.map((e, t) => (0, r.jsx)(f.default, {
                             ...e,
                             forceShadow: a
                         }, "".concat(e.name, "_").concat(t)))

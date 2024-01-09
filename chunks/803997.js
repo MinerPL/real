@@ -61,7 +61,8 @@
                     mentionCount: x
                 })), v > 0 && M.push(g.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD);
                 let R = (0, u.useStateFromStores)([E.default], () => E.default.getFocusedLayout()),
-                    j = v > 0;
+                    j = x > 0 ? x : v,
+                    L = j > 0;
                 return (0, a.jsxs)("div", {
                     className: _.wrapper,
                     children: [(0, a.jsx)(d.default, {
@@ -74,9 +75,9 @@
                         themeable: !0,
                         className: i(_.circularButton, R === C.FocusedActivityLayouts.NO_CHAT ? _.upArrow : _.downArrow),
                         ...n
-                    }), j ? (0, a.jsx)(o.default, {
+                    }), L ? (0, a.jsx)(o.default, {
                         hasMentions: x > 0,
-                        truncatedCount: v > 99 ? "99+" : v,
+                        truncatedCount: j > 99 ? "99+" : j,
                         className: _.badge
                     }) : null]
                 })

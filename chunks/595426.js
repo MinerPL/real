@@ -16,21 +16,21 @@
                 _ = s("583367"),
                 E = s("775433"),
                 I = s("642950"),
-                f = s("812204"),
-                T = s("685665"),
+                T = s("812204"),
+                f = s("685665"),
                 S = s("619935"),
                 R = s("308592"),
                 p = s("245187"),
-                A = s("102985"),
-                m = s("697218"),
-                N = s("521012"),
+                m = s("102985"),
+                N = s("697218"),
+                A = s("521012"),
                 g = s("599110"),
-                P = s("764364"),
-                C = s("446488"),
+                C = s("764364"),
+                P = s("446488"),
                 O = s("456015"),
                 M = s("982457"),
-                h = s("300962"),
-                L = s("781084"),
+                L = s("300962"),
+                h = s("781084"),
                 x = s("959905"),
                 v = s("154889"),
                 U = s("917247"),
@@ -46,9 +46,9 @@
                         AnalyticsLocationProvider: r,
                         sourceAnalyticsLocations: B,
                         analyticsLocations: k
-                    } = (0, T.default)(f.default.PREMIUM_MARKETING), {
+                    } = (0, f.default)(T.default.PREMIUM_MARKETING), {
                         enabled: H
-                    } = (0, h.default)(), K = (0, i.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), F = (0, i.useStateFromStores)([m.default], () => m.default.getCurrentUser()), W = (0, U.usePremiumTrialOffer)(), w = (0, v.usePremiumDiscountOffer)(), V = (0, R.useSubscriptionPlansLoaded)(), [Y, z] = n.useState(!0), Z = n.useRef(0), X = (0, P.isPremiumExactly)(F, b.PremiumTypes.TIER_2), Q = (0, x.useLocalizedPromoQuery)(), J = null == Q ? void 0 : Q.countryCode, q = (0, i.useStateFromStores)([C.default], () => C.default.hasFetched);
+                    } = (0, L.default)(), K = (0, i.useStateFromStores)([A.default], () => A.default.hasFetchedSubscriptions()), F = (0, i.useStateFromStores)([N.default], () => N.default.getCurrentUser()), W = (0, U.usePremiumTrialOffer)(), w = (0, v.usePremiumDiscountOffer)(), V = (0, R.useSubscriptionPlansLoaded)(), [Y, z] = n.useState(!0), Z = n.useRef(0), X = (0, C.isPremiumExactly)(F, b.PremiumTypes.TIER_2), Q = (0, x.useLocalizedPromoQuery)(), J = null == Q ? void 0 : Q.countryCode, q = (0, i.useStateFromStores)([P.default], () => P.default.hasFetched);
                     n.useEffect(() => {
                         !q && c.getNitroAffinity()
                     }, [q]), n.useEffect(() => {
@@ -60,7 +60,7 @@
                         if (s && (null != W || null != w)) {
                             let {
                                 enabled: e
-                            } = L.default.getCurrentConfig({
+                            } = h.default.getCurrentConfig({
                                 location: "PremiumMarketingPage"
                             }, {
                                 autoTrackExposure: !1
@@ -73,7 +73,7 @@
                             load_duration_ms: Z.current
                         })
                     }, [B, Y]);
-                    let [$, ee] = n.useState(!1), et = (0, i.useStateFromStores)([A.default], () => A.default.enabled);
+                    let [$, ee] = n.useState(!1), et = (0, i.useStateFromStores)([m.default], () => m.default.enabled);
                     if (et) return (0, a.jsx)(I.default, {});
                     if (s) return (0, a.jsx)(p.BlockedPaymentsContentSettings, {});
                     let es = t === b.PremiumMarketingEntrypoints.ApplicationStoreHome;
