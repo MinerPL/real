@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return I
                 }
             }), n("222007");
             var i = n("872717"),
@@ -62,7 +62,7 @@
                     ...r.default.getCollapsedCategories()
                 }
             }
-            class p extends l.default {
+            class _ extends l.default {
                 constructor(...e) {
                     super(...e), this.actions = {
                         CATEGORY_COLLAPSE: c,
@@ -74,4 +74,4 @@
                     }, this.saveUserGuildSettings = f, this.saveUserGuildSettingsBulk = h
                 }
             }
-            var _ = new p
+            var I = new _

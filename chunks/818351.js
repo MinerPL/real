@@ -27,32 +27,32 @@
                     hasFooter: s = !0,
                     onClose: o,
                     onChannelPromptCompleted: I,
-                    isSlideReady: A
-                } = e, [c, p] = t.useState(""), [N, G] = t.useState(null), [m, f] = t.useState(!1), U = (0, L.useUID)(), D = (0, l.useStateFromStores)([T.default], () => T.default.getGuild(a), [a]), O = t.useRef(null);
+                    isSlideReady: c
+                } = e, [A, p] = t.useState(""), [N, G] = t.useState(null), [f, m] = t.useState(!1), U = (0, L.useUID)(), D = (0, l.useStateFromStores)([T.default], () => T.default.getGuild(a), [a]), O = t.useRef(null);
                 t.useEffect(() => {
                     var e;
-                    A && (null === (e = O.current) || void 0 === e || e.focus())
-                }, [A]);
+                    c && (null === (e = O.current) || void 0 === e || e.focus())
+                }, [c]);
                 let h = t.useCallback(async e => {
                         if (e.preventDefault(), null == D) return;
-                        f(!0), G(null);
+                        m(!0), G(null);
                         let a = i.default.getDefaultChannel(D.id);
                         try {
                             let e = M.default.Messages.NUF_CHANNEL_PROMPT_CHANNEL_TOPIC_TEMPLATE.format({
-                                topic: c
+                                topic: A
                             });
-                            await _.default.createTextChannel(D.id, c, null == a ? void 0 : a.parent_id, e), I()
+                            await _.default.createTextChannel(D.id, A, null == a ? void 0 : a.parent_id, e), I()
                         } catch (e) {
                             G(new d.V6OrEarlierAPIError(e))
                         }
-                        f(!1)
-                    }, [D, c, I]),
+                        m(!1)
+                    }, [D, A, I]),
                     g = (0, n.jsxs)(n.Fragment, {
                         children: [(0, n.jsx)(E.Button, {
                             color: E.Button.Colors.BRAND,
                             onClick: h,
-                            disabled: 0 === c.length,
-                            submitting: m,
+                            disabled: 0 === A.length,
+                            submitting: f,
                             children: M.default.Messages.DONE
                         }), (0, n.jsx)(E.Button, {
                             className: C.skipButton,
@@ -98,7 +98,7 @@
                                     error: null == N ? void 0 : N.getFieldMessage("name"),
                                     children: (0, n.jsx)(E.TextInput, {
                                         type: "text",
-                                        value: c,
+                                        value: A,
                                         id: U,
                                         onChange: p,
                                         placeholder: M.default.Messages.NUF_CHANNEL_PROMPT_TOPIC_PLACEHOLDER,
