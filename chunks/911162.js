@@ -1,15 +1,15 @@
             "use strict";
             n.r(t), n.d(t, {
                 isFirstMessageIdInMediaPost: function() {
-                    return a
+                    return s
                 }
             }), n("65597");
-            var s = n("42203");
+            var a = n("42203");
 
-            function a(e, t) {
+            function s(e, t) {
                 if (e !== t) return !1;
-                let n = s.default.getChannel(t);
+                let n = a.default.getChannel(t);
                 if (null == n || !n.isForumPost()) return !1;
-                let a = s.default.getChannel(n.parent_id);
-                return (null == a ? void 0 : a.isMediaChannel()) === !0
+                let s = a.default.getChannel(n.parent_id);
+                return (null == s ? void 0 : s.isMediaChannel()) === !0
             }

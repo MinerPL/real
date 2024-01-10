@@ -15,8 +15,8 @@
                 c = n("152637"),
                 f = n("578198"),
                 E = n("689275"),
-                h = n("967241"),
-                _ = n("42203"),
+                _ = n("967241"),
+                h = n("42203"),
                 S = n("449008"),
                 T = n("648564"),
                 p = n("419309");
@@ -26,7 +26,7 @@
                     channel: t,
                     channelRecord: n,
                     deleteChannel: s
-                } = e, N = (0, o.useStateFromStoresArray)([E.default, _.default], () => i(E.default.getThreadsForParent(n.guild_id, n.id)).values().filter(e => {
+                } = e, N = (0, o.useStateFromStoresArray)([E.default, h.default], () => i(E.default.getThreadsForParent(n.guild_id, n.id)).values().filter(e => {
                     let {
                         id: n
                     } = e;
@@ -35,9 +35,9 @@
                     let {
                         id: t
                     } = e;
-                    return _.default.getChannel(t)
+                    return h.default.getChannel(t)
                 }).filter(S.isNotNullish).sort((e, t) => r.default.compare(e.id, t.id)).value(), [t.oldestReadMessageId, n.guild_id, n.id]), I = a.useCallback((e, t) => {
-                    (0, h.openThreadSidebarForViewing)(e, t, T.OpenThreadAnalyticsLocations.INBOX)
+                    (0, _.openThreadSidebarForViewing)(e, t, T.OpenThreadAnalyticsLocations.INBOX)
                 }, []);
                 return a.useEffect(() => {
                     null != n && t.isFullyLoaded && !t.hasError && !t.collapsed && 0 === N.length && u.default.wait(() => {

@@ -4,8 +4,8 @@
                     return v
                 }
             });
-            var s = n("37983"),
-                a = n("884691"),
+            var a = n("37983"),
+                s = n("884691"),
                 l = n("414456"),
                 i = n.n(l),
                 r = n("717837"),
@@ -25,42 +25,42 @@
                 A = n("782340"),
                 T = n("676831"),
                 M = n("632215"),
-                I = n("741566");
-            let N = a.memo(function(e) {
+                N = n("741566");
+            let I = s.memo(function(e) {
                 let {
                     message: t,
                     notice: n,
-                    compact: a = !1,
+                    compact: s = !1,
                     onDismiss: l
                 } = e;
-                return (0, s.jsxs)(s.Fragment, {
-                    children: [(0, s.jsxs)("div", {
+                return (0, a.jsxs)(a.Fragment, {
+                    children: [(0, a.jsxs)("div", {
                         className: i(T.blockedNoticeContainer, {
-                            [T.compact]: a
+                            [T.compact]: s
                         }),
-                        children: [(0, s.jsx)("div", {
+                        children: [(0, a.jsx)("div", {
                             className: T.blockedNoticeIcon,
-                            children: (0, s.jsx)(p.default, {
+                            children: (0, a.jsx)(p.default, {
                                 className: T.shieldIcon,
                                 width: 16,
                                 height: 16
                             })
-                        }), (0, s.jsx)("div", {
+                        }), (0, a.jsx)("div", {
                             className: T.blockedNotice,
-                            children: (0, s.jsx)(d.Text, {
+                            children: (0, a.jsx)(d.Text, {
                                 variant: "text-sm/normal",
                                 color: "interactive-normal",
                                 children: n
                             })
                         })]
-                    }), (0, s.jsx)("div", {
+                    }), (0, a.jsx)("div", {
                         className: i(T.ephemeralAccessories, {
-                            [T.compact]: a
+                            [T.compact]: s
                         }),
-                        children: (0, s.jsx)(E.default, {
+                        children: (0, a.jsx)(E.default, {
                             message: t,
                             onDeleteMessage: l,
-                            children: (0, s.jsx)(d.Text, {
+                            children: (0, a.jsx)(d.Text, {
                                 variant: "text-xs/normal",
                                 color: "interactive-normal",
                                 tag: "span",
@@ -73,7 +73,7 @@
                     })]
                 })
             });
-            var v = a.memo(function(e) {
+            var v = s.memo(function(e) {
                 var t, n;
                 let {
                     className: l,
@@ -82,34 +82,34 @@
                     children: p,
                     content: m,
                     onUpdate: E
-                } = e, _ = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), v = a.useRef(!1), L = (0, u.useStateFromStores)([h.default], () => h.default.getMessage(d.id), [d.id]), x = a.useCallback(() => {
+                } = e, _ = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), v = s.useRef(!1), L = (0, u.useStateFromStores)([h.default], () => h.default.getMessage(d.id), [d.id]), R = s.useCallback(() => {
                     (null == L ? void 0 : L.isBlockedEdit) ? (0, f.removeAutomodMessageNotice)(d.id) : c.default.deleteMessage(d.channel_id, d.id, !0)
                 }, [d, L]);
-                return a.useLayoutEffect(() => {
+                return s.useLayoutEffect(() => {
                     v.current ? null != E && E() : v.current = !0
-                }, [E, d.content, m, _, p]), (0, s.jsxs)("div", {
+                }, [E, d.content, m, _, p]), (0, a.jsxs)("div", {
                     id: (0, C.getMessageContentId)(d),
                     className: i(l, M.markup, {
-                        [I.messageContent]: !0,
-                        [I.markupRtl]: "rtl" === o(d.content),
+                        [N.messageContent]: !0,
+                        [N.markupRtl]: "rtl" === o(d.content),
                         [T.blockedEdit]: null == L ? void 0 : L.isBlockedEdit,
                         [T.blockedSend]: !(null == L ? void 0 : L.isBlockedEdit)
                     }),
-                    children: [null != p ? p : (0, g.getContent)(d, m), (null == L ? void 0 : L.isBlockedEdit) && null != d.timestamp && (0, s.jsxs)(s.Fragment, {
-                        children: [" ", (0, s.jsx)(S.default, {
+                    children: [null != p ? p : (0, g.getContent)(d, m), (null == L ? void 0 : L.isBlockedEdit) && null != d.timestamp && (0, a.jsxs)(a.Fragment, {
+                        children: [" ", (0, a.jsx)(S.default, {
                             timestamp: d.timestamp,
                             isEdited: !0,
                             isInline: !1,
-                            children: (0, s.jsxs)("span", {
-                                className: I.edited,
+                            children: (0, a.jsxs)("span", {
+                                className: N.edited,
                                 children: ["(", A.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_EDIT_POSTFIX, ")"]
                             })
                         })]
-                    }), (0, s.jsx)(N, {
+                    }), (0, a.jsx)(I, {
                         notice: null !== (n = null == L ? void 0 : L.errorMessage) && void 0 !== n ? n : A.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
                         message: d,
                         compact: r,
-                        onDismiss: x
+                        onDismiss: R
                     })]
                 })
             }, g.memoizeMessageProps)

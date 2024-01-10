@@ -1,14 +1,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 activityInviteKey: function() {
-                    return N
+                    return I
                 },
                 default: function() {
                     return L
                 }
             }), n("222007");
-            var s = n("37983"),
-                a = n("884691"),
+            var a = n("37983"),
+                s = n("884691"),
                 l = n("627445"),
                 i = n.n(l),
                 r = n("446674"),
@@ -28,9 +28,9 @@
                 A = n("718422"),
                 T = n("49111"),
                 M = n("782340"),
-                I = n("216220");
-            let N = "ActivityInvite";
-            class v extends a.PureComponent {
+                N = n("216220");
+            let I = "ActivityInvite";
+            class v extends s.PureComponent {
                 componentDidMount() {
                     this.fetchApplication()
                 }
@@ -65,7 +65,7 @@
                         textValue: e,
                         richValue: t,
                         textFocused: n,
-                        contentWarningProps: a
+                        contentWarningProps: s
                     } = this.state, {
                         activity: l,
                         analyticsLocations: r,
@@ -78,51 +78,51 @@
                     } = this.props, S = h > 0, _ = S ? M.default.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
                         seconds: Math.round((h + 1e3) / 1e3)
                     }) : null;
-                    return (0, s.jsxs)(o.ModalRoot, {
+                    return (0, a.jsxs)(o.ModalRoot, {
                         size: o.ModalSize.SMALL,
                         transitionState: m,
                         "aria-label": this.renderTitle(),
-                        children: [(0, s.jsx)(o.ModalHeader, {
+                        children: [(0, a.jsx)(o.ModalHeader, {
                             separator: !1,
-                            children: (0, s.jsx)(o.Heading, {
+                            children: (0, a.jsx)(o.Heading, {
                                 variant: "heading-lg/semibold",
                                 children: this.renderTitle()
                             })
-                        }), (0, s.jsxs)(o.ModalContent, {
-                            children: [(0, s.jsx)("div", {
-                                className: I.subHeader,
+                        }), (0, a.jsxs)(o.ModalContent, {
+                            children: [(0, a.jsx)("div", {
+                                className: N.subHeader,
                                 children: M.default.Messages.MESSAGE_PREVIEW
-                            }), (0, s.jsx)(d.default, {
+                            }), (0, a.jsx)(d.default, {
                                 activityActionType: f,
                                 activity: l,
-                                className: I.preview,
+                                className: N.preview,
                                 application: C,
                                 partyId: null != l.party ? l.party.id : null,
                                 isPreview: !0,
                                 analyticsLocations: r
-                            }), (0, s.jsx)("div", {
-                                className: I.subHeader,
+                            }), (0, a.jsx)("div", {
+                                className: N.subHeader,
                                 children: M.default.Messages.ADD_A_COMMENT_OPTIONAL
-                            }), (0, s.jsx)(o.Popout, {
+                            }), (0, a.jsx)(o.Popout, {
                                 position: "top",
                                 onRequestClose: () => {
                                     var e;
-                                    null == a || null === (e = a.onCancel) || void 0 === e || e.call(a), this.setState({
+                                    null == s || null === (e = s.onCancel) || void 0 === e || e.call(s), this.setState({
                                         contentWarningProps: null
                                     })
                                 },
-                                shouldShow: null != a,
+                                shouldShow: null != s,
                                 renderPopout: e => {
                                     let {
                                         closePopout: t
                                     } = e;
-                                    return i(null != a, "ActivityInvite.render - renderPopout: contentWarningProps cannot be null"), (0, s.jsx)(c.default, {
+                                    return i(null != s, "ActivityInvite.render - renderPopout: contentWarningProps cannot be null"), (0, a.jsx)(c.default, {
                                         onClose: t,
-                                        ...a
+                                        ...s
                                     })
                                 },
-                                children: () => (0, s.jsx)(E.default, {
-                                    className: I.textArea,
+                                children: () => (0, a.jsx)(E.default, {
+                                    className: N.textArea,
                                     textValue: e,
                                     richValue: t,
                                     focused: n,
@@ -130,21 +130,21 @@
                                     onChange: this.handleTextChange,
                                     onSubmit: this.handleShare,
                                     type: p.ChatInputTypes.FORM,
-                                    parentModalKey: N
+                                    parentModalKey: I
                                 })
                             })]
-                        }), (0, s.jsxs)(o.ModalFooter, {
-                            children: [(0, s.jsx)(o.Tooltip, {
+                        }), (0, a.jsxs)(o.ModalFooter, {
+                            children: [(0, a.jsx)(o.Tooltip, {
                                 text: _,
-                                children: e => (0, s.jsx)("div", {
+                                children: e => (0, a.jsx)("div", {
                                     ...e,
-                                    children: (0, s.jsx)(o.Button, {
+                                    children: (0, a.jsx)(o.Button, {
                                         disabled: S,
                                         onClick: this.handleShare,
                                         children: M.default.Messages.INVITE_EMBED_SEND_INVITE
                                     })
                                 })
-                            }), (0, s.jsx)(o.Button, {
+                            }), (0, a.jsx)(o.Button, {
                                 look: o.Button.Looks.LINK,
                                 color: o.Button.Colors.PRIMARY,
                                 onClick: g,
@@ -163,20 +163,20 @@
                             let {
                                 activity: t,
                                 channel: n,
-                                activityActionType: s
-                            } = this.props, a = "";
-                            switch (s) {
+                                activityActionType: a
+                            } = this.props, s = "";
+                            switch (a) {
                                 case T.ActivityActionTypes.JOIN:
-                                    a = "Invite to Join";
+                                    s = "Invite to Join";
                                     break;
                                 case T.ActivityActionTypes.LISTEN:
-                                    a = "Invite to Listen";
+                                    s = "Invite to Listen";
                                     break;
                                 case T.ActivityActionTypes.WATCH:
-                                    a = "Invite to Watch"
+                                    s = "Invite to Watch"
                             }
                             return f.default.trackWithMetadata(T.AnalyticEvents.INVITE_SENT, {
-                                location: "Channel Text Area - ".concat(a),
+                                location: "Channel Text Area - ".concat(s),
                                 invite_type: t.type === T.ActivityTypes.LISTENING ? T.LoggingInviteTypes.SPOTIFY : T.LoggingInviteTypes.APPLICATION,
                                 application_id: t.application_id,
                                 guild_id: n.getGuildId(),
@@ -194,13 +194,13 @@
                             channel: e,
                             activity: t,
                             activityActionType: n,
-                            cooldown: s,
-                            onClose: a
+                            cooldown: a,
+                            onClose: s
                         } = this.props, {
                             textValue: l,
                             contentWarningProps: i
                         } = this.state;
-                        if (s > 0) return Promise.resolve({
+                        if (a > 0) return Promise.resolve({
                             shouldClear: !1,
                             shouldRefocus: !0
                         });
@@ -213,7 +213,7 @@
                             contentWarningProps: null
                         }), u.default.sendMessage(e.id, r, !0, {
                             activityAction: o
-                        }).then(e => this.trackInvite(e)), a(), Promise.resolve({
+                        }).then(e => this.trackInvite(e)), s(), Promise.resolve({
                             shouldClear: !0,
                             shouldRefocus: !0
                         })) : (0, A.applyChatRestrictions)({
@@ -229,7 +229,7 @@
                             } = t;
                             return n ? (u.default.sendMessage(e.id, r, !0, {
                                 activityAction: o
-                            }).then(e => this.trackInvite(e)), a(), {
+                            }).then(e => this.trackInvite(e)), s(), {
                                 shouldClear: !1,
                                 shouldRefocus: !1
                             }) : {

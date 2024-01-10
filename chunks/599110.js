@@ -150,6 +150,16 @@
                     throttlePeriod: 864e5,
                     throttleKeys: () => []
                 },
+                [E.AnalyticEvents.RPC_COMMAND_SENT]: {
+                    throttlePeriod: 864e5,
+                    throttleKeys: e => [e.application_id, e.command],
+                    throttlePercent: .001
+                },
+                [E.AnalyticEvents.RPC_SUBSCRIPTION_REQUESTED]: {
+                    throttlePeriod: 864e5,
+                    throttleKeys: e => [e.application_id, e.event],
+                    throttlePercent: .001
+                },
                 [E.AnalyticEvents.CHANNEL_BANNER_VIEWED]: {
                     throttlePeriod: 864e5,
                     throttleKeys: e => [e.banner_type, e.channel_id]
