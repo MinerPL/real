@@ -23,8 +23,8 @@
                 N = n("654017"),
                 I = n("913491"),
                 m = n("574073"),
-                A = n("359132"),
-                g = n("723931"),
+                g = n("359132"),
+                A = n("723931"),
                 C = n("39331"),
                 R = n("68480"),
                 M = n("596368"),
@@ -51,7 +51,7 @@
                         treatSpam: H
                     } = t, V = y.MessageTypesWithLazyLoadedReferences.has(P.type) ? P.messageReference : void 0, Y = (0, r.useStateFromStores)([c.default], () => c.default.getMessageByReference(V)), K = (0, r.useStateFromStores)([E.default], () => P.type === y.MessageTypes.THREAD_STARTER_MESSAGE && Y.state === c.ReferencedMessageState.LOADED ? E.default.getChannel(Y.message.channel_id) : null), Q = f.InlineAttachmentMedia.useSetting(), z = f.InlineEmbedMedia.useSetting(), W = f.RenderEmbeds.useSetting() && !P.author.isClyde(), q = f.GifAutoPlay.useSetting(), X = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (n = P.editedTimestamp) && void 0 !== n ? n : P.timestamp).valueOf()), Z = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (a = null == T ? void 0 : T.guild_id) && void 0 !== a ? a : "", (null !== (s = P.editedTimestamp) && void 0 !== s ? s : P.timestamp).valueOf()), J = (0, d.default)(null == T ? void 0 : T.id), {
                         disableReactionCreates: $
-                    } = (0, A.default)(T), {
+                    } = (0, g.default)(T), {
                         content: ee,
                         hasSpoilerEmbeds: et
                     } = (0, C.default)(P, {
@@ -88,7 +88,7 @@
                             author: en,
                             guildId: T.guild_id
                         }),
-                        childrenAccessories: (0, l.jsx)(g.MessageAccessories, {
+                        childrenAccessories: (0, l.jsx)(A.MessageAccessories, {
                             channel: T,
                             message: P,
                             hasSpoilerEmbeds: et,

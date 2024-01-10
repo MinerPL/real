@@ -14516,7 +14516,7 @@
                 VOICE_MESSAGES_LIMIT_SEND: "Osiągnięto limit! Zwolnij, aby wysłać",
                 VOICE_MESSAGES_LIMIT_CANCEL: "Osiągnięto limit! Zwolnij, aby anulować",
                 VOICE_MESSAGES_TAP: "Przytrzymaj, aby nagrać",
-                VOICE_MESSAGES_SENT_NOTIFICATION: "Wyślij wiadomość głosową",
+                VOICE_MESSAGES_SENT_NOTIFICATION: "Wysłano wiadomość głosową",
                 VOICE_MESSAGES_UPSELL_TITLE: "Wiadomości głosowe",
                 VOICE_MESSAGES_UPSELL_LABEL_DM: "Przytrzymaj, aby nagrać! Dostępne tylko w prywatnych wiadomościach.",
                 VOICE_MESSAGES_UPSELL_LABEL_GUILD: "Przytrzymaj, aby nagrać! Dostępne na wybranych serwerach.",
