@@ -1,23 +1,23 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return r
                 }
             });
-            var r = n("913144"),
-                i = {
+            var i = n("913144"),
+                r = {
                     toggleMembersSection() {
-                        r.default.dispatch({
+                        i.default.dispatch({
                             type: "CHANNEL_TOGGLE_MEMBERS_SECTION"
                         })
                     },
                     toggleProfilePanelSection() {
-                        r.default.dispatch({
+                        i.default.dispatch({
                             type: "PROFILE_PANEL_TOGGLE_SECTION"
                         })
                     },
                     toggleSummariesSection() {
-                        r.default.dispatch({
+                        i.default.dispatch({
                             type: "CHANNEL_TOGGLE_SUMMARIES_SECTION"
                         })
                     }

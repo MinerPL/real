@@ -25,15 +25,15 @@
                 A = n("300322"),
                 T = n("845579"),
                 M = n("982108"),
-                N = n("778588"),
-                I = n("957255"),
+                I = n("778588"),
+                N = n("957255"),
                 L = n("101125"),
                 v = n("351825"),
-                R = n("738602"),
-                x = n("430025"),
+                x = n("738602"),
+                R = n("430025"),
                 y = n("659500"),
-                D = n("773336"),
-                O = n("412861"),
+                O = n("773336"),
+                D = n("412861"),
                 j = n("79254"),
                 b = n("64096"),
                 P = n("49111"),
@@ -48,9 +48,9 @@
                             draftType: B,
                             editorTextContent: V,
                             setValue: W,
-                            canOnlyUseTextCommands: z
+                            canOnlyUseTextCommands: Z
                         } = e,
-                        Z = (0, f.useAppContext)(),
+                        z = (0, f.useAppContext)(),
                         K = a.useRef(null),
                         Y = (0, r.useStateFromStores)([L.default], () => L.default.getActivities()),
                         q = (0, r.useStateFromStores)([m.default], () => m.default.getSettings().clipsEnabled),
@@ -66,16 +66,16 @@
                         }),
                         ee = (0, r.useStateFromStores)([g.HotspotStore], () => g.HotspotStore.hasHotspot(g.HotspotLocations.CLIPS_CHANNEL_ATTACH_REMINDER)),
                         et = (0, u.useModalsStore)(e => (0, u.hasModalOpenSelector)(e, U.CLIPS_GALLERY_MODAL_KEY)),
-                        en = (0, r.useStateFromStores)([N.default], () => N.default.hasLayers()),
+                        en = (0, r.useStateFromStores)([I.default], () => I.default.hasLayers()),
                         es = (0, r.useStateFromStores)([m.default], () => m.default.hasClips()),
                         [ea, el] = a.useState(null),
                         ei = (0, p.useEnableClips)() && (q || es),
                         er = w.isPrivate(),
-                        eo = (0, r.useStateFromStores)([I.default], () => er || I.default.can(P.Permissions.ATTACH_FILES, w) && I.default.can(P.Permissions.SEND_MESSAGES, w)),
+                        eo = (0, r.useStateFromStores)([N.default], () => er || N.default.can(P.Permissions.ATTACH_FILES, w) && N.default.can(P.Permissions.SEND_MESSAGES, w)),
                         eu = (0, c.default)(X);
                     (null == eu ? void 0 : eu.newClipIds.length) !== (null == X ? void 0 : X.newClipIds.length) && (null !== (t = null == X ? void 0 : X.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ea && ee && Q && !et && !$ && !en && el("recentClips");
                     let ed = (e, t, n) => {
-                        null != t && "ETOOLARGE" === t.code ? (0, O.showUploadFileSizeExceededError)(w, []) : (0, O.promptToUpload)(e, w, B, {
+                        null != t && "ETOOLARGE" === t.code ? (0, D.showUploadFileSizeExceededError)(w, []) : (0, D.promptToUpload)(e, w, B, {
                             requireConfirm: !0,
                             showLargeMessageDialog: n
                         }), y.ComponentDispatch.dispatchToLastSubscribed(P.ComponentActions.TEXTAREA_FOCUS)
@@ -105,8 +105,8 @@
                     });
                     let ef = (0, A.useCanStartPublicThread)(w),
                         eh = (0, A.useCanStartPrivateThread)(w),
-                        eC = !T.UseLegacyChatInput.useSetting() && !(0, D.isAndroidWeb)() && null != window.ResizeObserver,
-                        ep = (0, r.useStateFromStores)([I.default, _.default], () => (0, C.canUseApplicationCommands)(I.default, _.default, z, w)),
+                        eC = !T.UseLegacyChatInput.useSetting() && !(0, O.isAndroidWeb)() && null != window.ResizeObserver,
+                        ep = (0, r.useStateFromStores)([N.default, _.default], () => (0, C.canUseApplicationCommands)(N.default, _.default, Z, w)),
                         em = (0, S.useCanPostPollsInChannel)(null != w ? w : void 0),
                         eE = (0, u.useRedesignIconContext)().enabled,
                         eg = null !== (l = null == J ? void 0 : J.length) && void 0 !== l ? l : 0,
@@ -120,7 +120,7 @@
                             activities: Y,
                             newClipsCount: eg,
                             canPostPolls: em,
-                            appContext: Z
+                            appContext: z
                         });
                     if (0 === eS.length) return null;
                     let e_ = Y.some(e => (0, h.default)(e, P.ActivityFlags.SYNC)),
@@ -128,13 +128,13 @@
                     k = eE ? (0, s.jsx)(o.CirclePlusIcon, {
                         className: H.attachButtonIcon,
                         colorClass: H.attachButtonPlus
-                    }) : eA ? (0, s.jsx)(x.default, {
+                    }) : eA ? (0, s.jsx)(R.default, {
                         className: H.attachButtonIcon,
                         foreground: H.attachButtonPlay,
                         background: H.attachButtonPlus,
                         width: 24,
                         height: 24
-                    }) : eg > 0 ? (0, s.jsx)(R.default, {
+                    }) : eg > 0 ? (0, s.jsx)(x.default, {
                         className: H.attachButtonIcon,
                         foreground: H.attachButtonClip,
                         background: H.attachButtonPlus,

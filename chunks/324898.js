@@ -25,8 +25,8 @@
                 A = n("782340"),
                 T = n("676831"),
                 M = n("632215"),
-                N = n("741566");
-            let I = a.memo(function(e) {
+                I = n("741566");
+            let N = a.memo(function(e) {
                 let {
                     message: t,
                     notice: n,
@@ -82,7 +82,7 @@
                     children: p,
                     content: m,
                     onUpdate: E
-                } = e, _ = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), L = a.useRef(!1), v = (0, u.useStateFromStores)([h.default], () => h.default.getMessage(d.id), [d.id]), R = a.useCallback(() => {
+                } = e, _ = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), L = a.useRef(!1), v = (0, u.useStateFromStores)([h.default], () => h.default.getMessage(d.id), [d.id]), x = a.useCallback(() => {
                     (null == v ? void 0 : v.isBlockedEdit) ? (0, f.removeAutomodMessageNotice)(d.id) : c.default.deleteMessage(d.channel_id, d.id, !0)
                 }, [d, v]);
                 return a.useLayoutEffect(() => {
@@ -90,8 +90,8 @@
                 }, [E, d.content, m, _, p]), (0, s.jsxs)("div", {
                     id: (0, C.getMessageContentId)(d),
                     className: i(l, M.markup, {
-                        [N.messageContent]: !0,
-                        [N.markupRtl]: "rtl" === o(d.content),
+                        [I.messageContent]: !0,
+                        [I.markupRtl]: "rtl" === o(d.content),
                         [T.blockedEdit]: null == v ? void 0 : v.isBlockedEdit,
                         [T.blockedSend]: !(null == v ? void 0 : v.isBlockedEdit)
                     }),
@@ -101,15 +101,15 @@
                             isEdited: !0,
                             isInline: !1,
                             children: (0, s.jsxs)("span", {
-                                className: N.edited,
+                                className: I.edited,
                                 children: ["(", A.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_EDIT_POSTFIX, ")"]
                             })
                         })]
-                    }), (0, s.jsx)(I, {
+                    }), (0, s.jsx)(N, {
                         notice: null !== (n = null == v ? void 0 : v.errorMessage) && void 0 !== n ? n : A.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
                         message: d,
                         compact: r,
-                        onDismiss: R
+                        onDismiss: x
                     })]
                 })
             }, g.memoizeMessageProps)

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return b
+                    return F
                 }
             }), n("702976");
             var l = n("37983"),
@@ -36,13 +36,13 @@
                 x = n("782340"),
                 P = n("555821"),
                 U = n("877671"),
-                b = a.memo(function e(t) {
+                F = a.memo(function e(t) {
                     var n, a, s;
                     let _;
                     let {
                         channel: T,
                         message: P,
-                        compact: b = !1,
+                        compact: F = !1,
                         className: j,
                         onContextMenu: G,
                         onClick: k,
@@ -70,19 +70,19 @@
                         message: Y.message,
                         channel: K,
                         hasThread: !1
-                    }) : (h.default.isBlocked(P.author.id) ? _ = x.default.Messages.BLOCKED_MESSAGE_COUNT : (0, N.isSpam)(P) && H && (_ = x.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== _) ? (0, l.jsx)(F, {
+                    }) : (h.default.isBlocked(P.author.id) ? _ = x.default.Messages.BLOCKED_MESSAGE_COUNT : (0, N.isSpam)(P) && H && (_ = x.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== _) ? (0, l.jsx)(b, {
                         className: j,
-                        compact: b,
+                        compact: F,
                         count: 1,
                         collapsedReason: _
                     }) : (0, l.jsx)(S.default, {
-                        compact: b,
+                        compact: F,
                         className: i(j, {
                             [U.ephemeral]: (0, p.hasFlag)(P.flags, y.MessageFlags.EPHEMERAL),
                             [U.disableInteraction]: w,
                             [U.groupStart]: t.isGroupStart
                         }),
-                        childrenRepliedMessage: (0, D.default)(P, T, V, Y, b),
+                        childrenRepliedMessage: (0, D.default)(P, T, V, Y, F),
                         childrenHeader: (0, O.default)({
                             ...t,
                             author: en,
@@ -92,7 +92,7 @@
                             channel: T,
                             message: P,
                             hasSpoilerEmbeds: et,
-                            compact: b,
+                            compact: F,
                             canSuppressEmbeds: !1,
                             canDeleteAttachments: !1,
                             disableReactionReads: !1,
@@ -110,7 +110,7 @@
                             showClydeAiEmbeds: !1,
                             shouldRedactExplicitContent: er
                         }),
-                        childrenExecutedCommand: (0, v.default)(P, T, b),
+                        childrenExecutedCommand: (0, v.default)(P, T, F),
                         childrenMessageContent: (0, M.default)(t, ee),
                         childrenSystemMessage: (0, L.default)(t),
                         onContextMenu: G,
@@ -122,7 +122,7 @@
                     })
                 });
 
-            function F(e) {
+            function b(e) {
                 let {
                     className: t,
                     count: n,
