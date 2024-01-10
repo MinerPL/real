@@ -1,13 +1,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 ChatSidebarType: function() {
-                    return a
+                    return s
                 },
                 default: function() {
                     return E
                 }
             }), n("222007");
-            var a, s, l = n("37983"),
+            var s, a, l = n("37983"),
                 i = n("884691"),
                 r = n("414456"),
                 o = n.n(r),
@@ -18,20 +18,20 @@
                 h = n("168973"),
                 C = n("332374"),
                 p = n("207058");
-            (s = a || (a = {}))[s.PostSidebar = 0] = "PostSidebar", s[s.ThreadSidebar = 1] = "ThreadSidebar", s[s.CallChatSidebar = 2] = "CallChatSidebar", s[s.MessageRequestSidebar = 3] = "MessageRequestSidebar", s[s.HomeSidebar = 4] = "HomeSidebar";
+            (a = s || (s = {}))[a.PostSidebar = 0] = "PostSidebar", a[a.ThreadSidebar = 1] = "ThreadSidebar", a[a.CallChatSidebar = 2] = "CallChatSidebar", a[a.MessageRequestSidebar = 3] = "MessageRequestSidebar", a[a.HomeSidebar = 4] = "HomeSidebar";
 
             function m(e) {
                 let {
                     resizableNode: t,
                     onResize: n,
-                    onResizeEnd: a,
-                    maxWidth: s
+                    onResizeEnd: s,
+                    maxWidth: a
                 } = e, i = (0, f.default)({
                     minDimension: C.MIN_CHAT_SIDEBAR_WIDTH,
-                    maxDimension: s,
+                    maxDimension: a,
                     resizableDomNodeRef: t,
                     onElementResize: n,
-                    onElementResizeEnd: a,
+                    onElementResizeEnd: s,
                     orientation: f.ResizeOrientation.HORIZONTAL_LEFT
                 });
                 return (0, l.jsx)("div", {
@@ -44,8 +44,8 @@
                 let {
                     sidebarType: t,
                     maxWidth: n,
-                    onWidthChange: a,
-                    children: s,
+                    onWidthChange: s,
+                    children: a,
                     floatingLayer: r
                 } = e, f = i.useRef(null), E = function(e) {
                     switch (e) {
@@ -68,9 +68,9 @@
                     maxWidth: n
                 }), T = (0, u.clamp)(g, C.MIN_CHAT_SIDEBAR_WIDTH, n), M = A ? T : T + d.default.modules.chat.RESIZE_HANDLE_WIDTH;
                 i.useEffect(() => {
-                    null == a || a(T, A)
-                }, [T, a, A]);
-                let N = (0, l.jsxs)(l.Fragment, {
+                    null == s || s(T, A)
+                }, [T, s, A]);
+                let I = (0, l.jsxs)(l.Fragment, {
                     children: [(0, l.jsx)("div", {
                         className: o(p.chatTarget, {
                             [p.floating]: A,
@@ -92,7 +92,7 @@
                         style: {
                             width: T
                         },
-                        children: s
+                        children: a
                     })]
                 });
                 if (A) {
@@ -100,11 +100,11 @@
                     return (0, l.jsx)(e, {
                         children: (0, l.jsx)("div", {
                             className: p.chatLayerWrapper,
-                            children: N
+                            children: I
                         })
                     })
                 }
                 return (0, l.jsx)(l.Fragment, {
-                    children: N
+                    children: I
                 })
             }

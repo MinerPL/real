@@ -4,12 +4,12 @@
                     return l
                 }
             });
-            var a = n("759843"),
-                s = n("428958");
+            var s = n("759843"),
+                a = n("428958");
 
             function l(e) {
-                return (0, s.default)({
-                    type: a.ImpressionTypes.VIEW,
-                    name: a.ImpressionNames.NOTIFICATION_SETTING_UNREAD_NUDGE
+                return (0, a.default)({
+                    type: s.ImpressionTypes.VIEW,
+                    name: s.ImpressionNames.NOTIFICATION_SETTING_UNREAD_NUDGE
                 }, void 0, [e.id]), null
             }

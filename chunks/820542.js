@@ -4,13 +4,13 @@
                     return l
                 },
                 categoryExpand: function() {
-                    return a
-                },
-                categoryCollapseAll: function() {
                     return r
                 },
-                categoryExpandAll: function() {
+                categoryCollapseAll: function() {
                     return s
+                },
+                categoryExpandAll: function() {
+                    return a
                 }
             });
             var i = n("913144");
@@ -22,21 +22,21 @@
                 })
             }
 
-            function a(e) {
+            function r(e) {
                 i.default.dispatch({
                     type: "CATEGORY_EXPAND",
                     id: e
                 })
             }
 
-            function r(e) {
+            function s(e) {
                 i.default.dispatch({
                     type: "CATEGORY_COLLAPSE_ALL",
                     guildId: e
                 })
             }
 
-            function s(e) {
+            function a(e) {
                 i.default.dispatch({
                     type: "CATEGORY_EXPAND_ALL",
                     guildId: e

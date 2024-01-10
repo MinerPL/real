@@ -20,8 +20,8 @@
                 c = n("917351"),
                 f = n.n(c),
                 E = n("913144"),
-                _ = n("819689"),
-                h = n("267363"),
+                h = n("819689"),
+                _ = n("267363"),
                 S = n("206230"),
                 T = n("379881"),
                 p = n("542827"),
@@ -41,8 +41,8 @@
                 P = n("957255"),
                 x = n("660478"),
                 U = n("677099"),
-                b = n("282109"),
-                F = n("449008"),
+                F = n("282109"),
+                b = n("449008"),
                 j = n("299039"),
                 G = n("49111"),
                 k = n("648564");
@@ -83,7 +83,7 @@
                             isFullyLoaded: t,
                             hasLoadedAnything: t
                         }
-                    } else(0, F.assertNever)(e)
+                    } else(0, b.assertNever)(e)
                 }
                 clearScrollToChannelIndex() {
                     this.setState({
@@ -91,8 +91,8 @@
                     })
                 }
                 loadChannelMessages(e) {
-                    _.default.clearChannel(e.channelId);
-                    let t = _.default.fetchMessages({
+                    h.default.clearChannel(e.channelId);
+                    let t = h.default.fetchMessages({
                         channelId: e.channelId,
                         limit: G.MAX_MESSAGES_PER_CHANNEL,
                         jump: {
@@ -163,7 +163,7 @@
                             channelId: t,
                             newestUnreadMessageId: n
                         } = e;
-                        if (E.default.wait(() => h.ack(t, !0, void 0, n, {
+                        if (E.default.wait(() => _.ack(t, !0, void 0, n, {
                                 section: G.AnalyticsSections.INBOX
                             })), 1 === this.state.channels.length) {
                             this.deleteChannel(t);
@@ -185,7 +185,7 @@
                             channels: this.state.channels.filter(t => t.channelId !== e)
                         }), this.maybeLoadMore()
                     }, this.markAllRead = () => {
-                        h.bulkAck(this.state.channels.map(e => ({
+                        _.bulkAck(this.state.channels.map(e => ({
                             channelId: e.channelId,
                             messageId: e.newestUnreadMessageId
                         }))), this.setState({
@@ -212,7 +212,7 @@
                             }))
                         }), r.collapsed ? !r.isFullyLoaded && this.loadMore() : this.maybeLoadMore()
                     }, this.handleUserGuildSettingsStoreChange = () => {
-                        let e = this.state.channels.filter(e => !b.default.isGuildOrCategoryOrChannelMuted(e.guildId, e.channelId));
+                        let e = this.state.channels.filter(e => !F.default.isGuildOrCategoryOrChannelMuted(e.guildId, e.channelId));
                         e.length !== this.state.channels.length && this.setState({
                             channels: e
                         })
@@ -300,7 +300,7 @@
                 let a = O.default.getChannel(l);
                 if (null == a) return;
                 let s = M.THREAD_CHANNEL_TYPES.has(a.type);
-                if (!s && b.default.isGuildOrCategoryOrChannelMuted(n, a.id)) return;
+                if (!s && F.default.isGuildOrCategoryOrChannelMuted(n, a.id)) return;
                 if (a.isPrivate()) {
                     if (0 === x.default.getMentionCount(l)) return
                 } else if (!(0, N.getHasImportantUnread)(a) && 0 === x.default.getMentionCount(l)) return;
@@ -343,8 +343,8 @@
                             let e = (0, g.computeThreadNotificationSetting)(l);
                             return e === k.ThreadMemberFlags.ALL_MESSAGES ? 3 : e === k.ThreadMemberFlags.NO_MESSAGES ? 6 : 4
                         } {
-                            let n = b.default.getChannelMessageNotifications(e, t),
-                                l = n === G.UserNotificationSettings.NULL ? b.default.getMessageNotifications(e) : n;
+                            let n = F.default.getChannelMessageNotifications(e, t),
+                                l = n === G.UserNotificationSettings.NULL ? F.default.getMessageNotifications(e) : n;
                             return l === G.UserNotificationSettings.ALL_MESSAGES ? 3 : l === G.UserNotificationSettings.NO_MESSAGES ? 6 : 4
                         }
                     }(n, l, o)
@@ -374,5 +374,5 @@
                     let t = Date.now(),
                         r = V();
                     0 === r.channels.length || t - s.current < 1e4 ? a(!0) : (s.current = Date.now(), n(new B(r, e)))
-                }, [i, l, e]), r.useLayoutEffect(t.maybeLoadMore, [null == i ? void 0 : i.channels, null == i ? void 0 : i.loadState]), r.useEffect(() => (y.default.addChangeListener(t.reloadMessages), () => y.default.removeChangeListener(t.reloadMessages)), [t.reloadMessages]), r.useEffect(() => (b.default.addChangeListener(t.handleUserGuildSettingsStoreChange), () => b.default.removeChangeListener(t.handleUserGuildSettingsStoreChange)), [t]), r.useEffect(() => (A.default.addChangeListener(t.handleJoinedThreadsStoreChange), () => A.default.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]), r.useEffect(() => (m.default.addChangeListener(t.handleActiveThreadsStoreChange), () => m.default.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]), [i, t]
+                }, [i, l, e]), r.useLayoutEffect(t.maybeLoadMore, [null == i ? void 0 : i.channels, null == i ? void 0 : i.loadState]), r.useEffect(() => (y.default.addChangeListener(t.reloadMessages), () => y.default.removeChangeListener(t.reloadMessages)), [t.reloadMessages]), r.useEffect(() => (F.default.addChangeListener(t.handleUserGuildSettingsStoreChange), () => F.default.removeChangeListener(t.handleUserGuildSettingsStoreChange)), [t]), r.useEffect(() => (A.default.addChangeListener(t.handleJoinedThreadsStoreChange), () => A.default.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]), r.useEffect(() => (m.default.addChangeListener(t.handleActiveThreadsStoreChange), () => m.default.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]), [i, t]
             }

@@ -1,19 +1,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 SafetyWarningTypes: function() {
-                    return a
+                    return u
                 },
                 SafetyWarningFeedbackTypes: function() {
-                    return r
+                    return l
                 },
                 default: function() {
-                    return _
+                    return N
                 }
             });
-            var i, l, a, r, s = n("446674"),
-                o = n("913144"),
-                u = n("42203");
-            (i = a || (a = {}))[i.STRANGER_DANGER = 1] = "STRANGER_DANGER", (l = r || (r = {}))[l.UPVOTE = 0] = "UPVOTE", l[l.DOWNVOTE = 1] = "DOWNVOTE";
+            var a, i, u, l, s = n("446674"),
+                r = n("913144"),
+                o = n("42203");
+            (a = u || (u = {}))[a.STRANGER_DANGER = 1] = "STRANGER_DANGER", (i = l || (l = {}))[i.UPVOTE = 0] = "UPVOTE", i[i.DOWNVOTE = 1] = "DOWNVOTE";
             let d = [],
                 c = {};
 
@@ -24,14 +24,14 @@
                 null != t && (c[e.id] = t), null == t && null != c[e.id] && delete c[e.id]
             }
 
-            function h() {
-                c = {}, Object.values(u.default.getMutablePrivateChannels()).forEach(e => {
+            function E() {
+                c = {}, Object.values(o.default.getMutablePrivateChannels()).forEach(e => {
                     f(e)
                 })
             }
-            class E extends s.default.Store {
+            class C extends s.default.Store {
                 initialize() {
-                    this.waitFor(u.default)
+                    this.waitFor(o.default)
                 }
                 getChannelSafetyWarning(e, t) {
                     var n;
@@ -42,7 +42,7 @@
                     return null !== (t = c[e]) && void 0 !== t ? t : d
                 }
             }
-            var _ = new E(o.default, {
+            var N = new C(r.default, {
                 CHANNEL_CREATE: function(e) {
                     f(e.channel)
                 },
@@ -54,17 +54,17 @@
                         f(e)
                     })
                 },
-                CONNECTION_OPEN: h,
-                CONNECTION_OPEN_SUPPLEMENTAL: h,
+                CONNECTION_OPEN: E,
+                CONNECTION_OPEN_SUPPLEMENTAL: E,
                 CHANNEL_SAFETY_WARNING_FEEDBACK: function(e) {
                     let {
                         channelId: t,
                         warningId: n,
-                        feedbackType: i
-                    } = e, l = c[t];
-                    null != l && (c[t] = l.map(e => e.id === n ? {
+                        feedbackType: a
+                    } = e, i = c[t];
+                    null != i && (c[t] = i.map(e => e.id === n ? {
                         ...e,
-                        feedback_type: i
+                        feedback_type: a
                     } : e))
                 },
                 CLEAR_CHANNEL_SAFETY_WARNINGS: function(e) {
@@ -80,12 +80,12 @@
                     let {
                         channelId: t,
                         warningIds: n
-                    } = e, i = c[t];
-                    if (null == i) return;
-                    let l = Date.now().toString();
-                    c[t] = i.map(e => n.includes(e.id) ? {
+                    } = e, a = c[t];
+                    if (null == a) return;
+                    let i = Date.now().toString();
+                    c[t] = a.map(e => n.includes(e.id) ? {
                         ...e,
-                        dismiss_timestamp: l
+                        dismiss_timestamp: i
                     } : e)
                 }
             })

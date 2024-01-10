@@ -4,9 +4,9 @@
                     return l
                 }
             });
-            var a = n("446674"),
-                s = n("486503");
+            var s = n("446674"),
+                a = n("486503");
 
             function l(e) {
-                return (0, a.useStateFromStores)([s.default], () => s.default.isSpam(e), [e])
+                return (0, s.useStateFromStores)([a.default], () => a.default.isSpam(e), [e])
             }

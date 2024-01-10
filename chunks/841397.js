@@ -4,9 +4,9 @@
                     return d
                 }
             });
-            var a = n("37983");
+            var s = n("37983");
             n("884691");
-            var s = n("77078"),
+            var a = n("77078"),
                 l = n("450911"),
                 i = n("377114"),
                 r = n("61505"),
@@ -17,7 +17,7 @@
                 let {
                     otherUserId: t,
                     channel: n,
-                    buttonSize: d = s.ButtonSizes.TINY,
+                    buttonSize: d = a.ButtonSizes.TINY,
                     className: c,
                     buttonText: f,
                     navigateAwayOnReportSuccess: h = !0,
@@ -30,10 +30,10 @@
                 let _ = () => {
                     null == p || p(), l.default.closePrivateChannel(n.id, h)
                 };
-                return (0, a.jsx)(s.Button, {
+                return (0, s.jsx)(a.Button, {
                     className: c,
                     size: d,
-                    color: s.Button.Colors.RED,
+                    color: a.Button.Colors.RED,
                     disabled: null == S,
                     onClick: () => {
                         null == C || C(), (0, i.showReportModalForFirstDM)(S, _)

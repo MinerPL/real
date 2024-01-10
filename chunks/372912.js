@@ -4,10 +4,10 @@
                     return T
                 }
             });
-            var a = n("37983");
+            var s = n("37983");
             n("884691");
-            var s = n("414456"),
-                l = n.n(s),
+            var a = n("414456"),
+                l = n.n(a),
                 i = n("446674"),
                 r = n("77078"),
                 o = n("272030"),
@@ -24,7 +24,7 @@
                 S = n("881812");
 
             function _(e) {
-                var t, s;
+                var t, a;
                 let {
                     userId: u,
                     channel: C
@@ -36,7 +36,7 @@
                         let {
                             default: e
                         } = await n.el("721429").then(n.bind(n, "721429"));
-                        return t => (0, a.jsx)(e, {
+                        return t => (0, s.jsx)(e, {
                             ...t,
                             user: m,
                             guildId: C.guild_id,
@@ -44,29 +44,29 @@
                         })
                     })
                 }
-                let _ = null !== (s = null !== (t = null == E ? void 0 : E.nick) && void 0 !== t ? t : p.default.getName(m)) && void 0 !== s ? s : "???",
+                let _ = null !== (a = null !== (t = null == E ? void 0 : E.nick) && void 0 !== t ? t : p.default.getName(m)) && void 0 !== a ? a : "???",
                     A = null == E ? void 0 : E.colorString;
-                return null == m ? (0, a.jsx)("span", {
+                return null == m ? (0, s.jsx)("span", {
                     className: l(S.threadCreatorName, S.unknownCreatorName),
                     children: _
-                }) : (0, a.jsx)(r.Popout, {
+                }) : (0, s.jsx)(r.Popout, {
                     preload: () => (0, d.default)(m.id, m.getAvatarURL(C.guild_id, 80), {
                         guildId: C.guild_id,
                         channelId: C.id
                     }),
-                    renderPopout: e => (0, a.jsx)(c.default, {
+                    renderPopout: e => (0, s.jsx)(c.default, {
                         userId: m.id,
                         guildId: C.guild_id,
                         channelId: C.id,
                         ...e
                     }),
                     position: "right",
-                    children: e => (0, a.jsx)(r.Clickable, {
+                    children: e => (0, s.jsx)(r.Clickable, {
                         ...e,
                         tag: "span",
                         className: S.threadCreatorName,
                         onContextMenu: g,
-                        children: (0, a.jsx)(r.NameWithRole, {
+                        children: (0, s.jsx)(r.NameWithRole, {
                             name: _,
                             color: null != A ? A : void 0
                         })
@@ -80,24 +80,24 @@
                 } = e, {
                     threadMetadata: n
                 } = t;
-                return null == n ? (0, a.jsx)("div", {
+                return null == n ? (0, s.jsx)("div", {
                     style: {
                         marginTop: -8
                     }
-                }) : (0, a.jsxs)(a.Fragment, {
-                    children: [(0, a.jsx)(r.Text, {
+                }) : (0, s.jsxs)(s.Fragment, {
+                    children: [(0, s.jsx)(r.Text, {
                         variant: "text-md/normal",
                         color: "header-secondary",
-                        children: (0, a.jsx)("div", {
+                        children: (0, s.jsx)("div", {
                             className: S.subtitle,
                             children: g.default.Messages.THREAD_STARTED_BY.format({
-                                usernameHook: (e, n) => (0, a.jsx)(_, {
+                                usernameHook: (e, n) => (0, s.jsx)(_, {
                                     userId: t.ownerId,
                                     channel: t
                                 }, n)
                             })
                         })
-                    }), t.type === E.ChannelTypes.PRIVATE_THREAD ? (0, a.jsx)(r.Text, {
+                    }), t.type === E.ChannelTypes.PRIVATE_THREAD ? (0, s.jsx)(r.Text, {
                         variant: "text-md/normal",
                         color: "header-secondary",
                         children: g.default.Messages.EMPTY_MESSAGE_PRIVATE_THREAD_INSTRUCTIONS
@@ -109,17 +109,17 @@
                 var t;
                 let {
                     channel: n
-                } = e, s = null !== (t = (0, u.default)(n)) && void 0 !== t ? t : C.default;
-                return (0, a.jsxs)(m.default, {
+                } = e, a = null !== (t = (0, u.default)(n)) && void 0 !== t ? t : C.default;
+                return (0, s.jsxs)(m.default, {
                     channelId: n.id,
-                    children: [(0, a.jsx)("div", {
+                    children: [(0, s.jsx)("div", {
                         className: S.iconWrapper,
-                        children: (0, a.jsx)(s, {
+                        children: (0, s.jsx)(a, {
                             className: S.icon
                         })
-                    }), (0, a.jsx)(m.EmptyMessageHeader, {
+                    }), (0, s.jsx)(m.EmptyMessageHeader, {
                         children: n.name
-                    }), (0, a.jsx)(A, {
+                    }), (0, s.jsx)(A, {
                         channel: n
                     })]
                 })

@@ -1,16 +1,16 @@
             "use strict";
             n.r(t), n.d(t, {
                 recordChannelVisit: function() {
-                    return s
+                    return a
                 },
                 recordBannerRender: function() {
                     return l
                 }
             });
-            var a = n("913144");
+            var s = n("913144");
 
-            function s(e, t) {
-                a.default.dispatch({
+            function a(e, t) {
+                s.default.dispatch({
                     guildId: e,
                     channelId: t,
                     type: "UNREAD_SETTING_NOTICE_CHANNEL_VISIT"
@@ -18,7 +18,7 @@
             }
 
             function l(e, t) {
-                a.default.dispatch({
+                s.default.dispatch({
                     guildId: e,
                     channelId: t,
                     type: "UNREAD_SETTING_NOTICE_RENDERED"
