@@ -19,8 +19,8 @@
                 m = n("773336"),
                 E = n("563680"),
                 C = n("49111"),
-                g = n("580105");
-            let S = () => {
+                S = n("580105");
+            let g = () => {
                 i.default.wait(() => d.close(C.PopoutWindowKeys.CHANNEL_CALL_POPOUT))
             };
 
@@ -88,12 +88,12 @@
                 }), [v, I]), l.useEffect(() => {
                     null != R && T.current === C.ChannelModes.VIDEO && x === C.ChannelModes.VOICE && (0, E.exitFullScreen)(R, M)
                 }, [M, x, T, R]), l.useEffect(() => {
-                    !N && I && S()
+                    !N && I && g()
                 }, [N, I]), L) ? (0, a.jsx)(c.default, {
                     themeable: !1,
                     node: R,
                     guestWindow: d,
-                    className: g.rightTrayIcon,
+                    className: S.rightTrayIcon,
                     onClick: b(v)
                 }) : null
             }

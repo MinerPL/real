@@ -24,15 +24,15 @@
                     hideEditButton: E = !1
                 } = e, {
                     isEntryAdmin: C,
-                    canEdit: g,
-                    canRemove: S
+                    canEdit: S,
+                    canRemove: g
                 } = (0, c.default)(t), _ = (0, r.default)({
                     id: t.guildId,
                     label: f.default.Messages.COPY_ID_GUILD,
                     onSuccess: p
                 });
                 l.useEffect(() => {
-                    !g && !S && null == _ && (0, i.closeContextMenu)()
+                    !S && !g && null == _ && (0, i.closeContextMenu)()
                 });
                 let I = () => {
                     d.removeDirectoryGuildEntry(t.channelId, t.guildId)
@@ -48,7 +48,7 @@
                     "aria-label": f.default.Messages.GUILD_ACTIONS_MENU_LABEL,
                     onSelect: h,
                     children: [(0, a.jsxs)(s.MenuGroup, {
-                        children: [g && !E ? (0, a.jsx)(s.MenuItem, {
+                        children: [S && !E ? (0, a.jsx)(s.MenuItem, {
                             id: "update-entry",
                             label: f.default.Messages.HUB_ENTRY_UPDATE,
                             action: function() {
@@ -62,7 +62,7 @@
                                     })
                                 }), T()
                             }
-                        }) : null, S ? (0, a.jsx)(s.MenuItem, {
+                        }) : null, g ? (0, a.jsx)(s.MenuItem, {
                             id: "remove-from-hub",
                             label: f.default.Messages.HUB_ENTRY_REMOVE,
                             action: function() {

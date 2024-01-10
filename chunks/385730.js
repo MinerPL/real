@@ -18,8 +18,8 @@
                 c = n("151426"),
                 f = n("77078"),
                 E = n("913144"),
-                _ = n("206230"),
-                h = n("510889"),
+                h = n("206230"),
+                _ = n("510889"),
                 S = n("826267"),
                 T = n("599110"),
                 p = n("659500"),
@@ -44,8 +44,8 @@
                     loadState: x,
                     channels: U
                 } = y, {
-                    maybeLoadMore: b,
-                    markAllRead: F
+                    maybeLoadMore: F,
+                    markAllRead: b
                 } = P;
                 (function(e, t, n) {
                     a.useLayoutEffect(() => {
@@ -88,8 +88,8 @@
                 }, []), a.useEffect(() => (E.default.subscribe("CONNECTION_OPEN", O), () => {
                     E.default.unsubscribe("CONNECTION_OPEN", O)
                 }), [O]);
-                let j = (0, d.useStateFromStores)([_.default], () => _.default.messageGroupSpacing),
-                    G = (0, h.default)("unreads", D);
+                let j = (0, d.useStateFromStores)([h.default], () => h.default.messageGroupSpacing),
+                    G = (0, _.default)("unreads", D);
                 if (0 === U.length) {
                     var k;
                     return (0, l.jsxs)("div", {
@@ -116,7 +116,7 @@
                         closePopout: O,
                         children: (0, l.jsx)(N.default, {
                             type: "top-header",
-                            onClick: F
+                            onClick: b
                         })
                     }), (0, l.jsx)(u.ListNavigatorProvider, {
                         navigator: G,
@@ -132,7 +132,7 @@
                                         D.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
                                     },
                                     ...a,
-                                    onScroll: x === g.LoadState.Done ? void 0 : b,
+                                    onScroll: x === g.LoadState.Done ? void 0 : F,
                                     className: M.scroller,
                                     children: [s ? (0, l.jsx)(L, {
                                         setSeenTutorial: r

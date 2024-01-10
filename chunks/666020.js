@@ -62,7 +62,7 @@
                 }
                 let c = u(.5 * l),
                     E = u(i, -c),
-                    f = u(i + l, c);
-                for (E > 0 && (E = Math.max(d(0), E)), E = Math.floor(E / a.MINIMUM_RANGE) * a.MINIMUM_RANGE; E <= f;) E = d(E);
+                    _ = u(i + l, c);
+                for (E > 0 && (E = Math.max(d(0), E)), E = Math.floor(E / a.MINIMUM_RANGE) * a.MINIMUM_RANGE; E <= _;) E = d(E);
                 s(t, n, o)
             }

@@ -19,8 +19,8 @@
                 m = n("384997"),
                 E = n("889014"),
                 C = n("5667"),
-                g = n("19065"),
-                S = n("727284"),
+                S = n("19065"),
+                g = n("727284"),
                 _ = n("950104"),
                 I = n("778588"),
                 T = n("42887"),
@@ -85,7 +85,7 @@
                         p = "",
                         E = !1;
                     s ? (p = h ? D.default.Messages.VOICE_UNAVAILABLE : D.default.Messages.CALL_UNAVAILABLE, e = r.Tooltip.Colors.RED, E = !0) : u ? (p = D.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, E = !0) : p = l ? h ? D.default.Messages.CONNECT : D.default.Messages.JOIN_VOICE_CALL : h ? D.default.Messages.CONNECT : D.default.Messages.START_VOICE_CALL;
-                    let g = (0, a.jsx)(R.default.Icon, {
+                    let S = (0, a.jsx)(R.default.Icon, {
                         icon: A.default,
                         onClick: this.handleVoiceClick,
                         disabled: E,
@@ -141,9 +141,9 @@
                                         className: U.tooltip
                                     })
                                 },
-                                children: () => g
+                                children: () => S
                             });
-                            return g
+                            return S
                         }
                     })
                 }
@@ -159,7 +159,7 @@
                             notFriend: a,
                             appContext: l
                         } = this.props, s = a ? n.getRecipientId() : null, i = () => u.default.call(n.id, t, !a && !n.isManaged() && !(null == e ? void 0 : e.shiftKey), s);
-                        t ? (0, S.default)(i, l) : i()
+                        t ? (0, g.default)(i, l) : i()
                     }, this.handleJoinCall = e => {
                         o.default.selectVoiceChannel(this.props.channel.id, e)
                     }, this.handleVoiceClick = e => {
@@ -179,9 +179,9 @@
                         let {
                             appContext: e
                         } = this.props;
-                        (0, S.default)(() => this.handleJoinCall(!0), e)
+                        (0, g.default)(() => this.handleJoinCall(!0), e)
                     }, this.handleBrowserNotSupported = () => {
-                        (0, g.default)()
+                        (0, S.default)()
                     }
                 }
             }
@@ -196,8 +196,8 @@
                     callActive: _.default.isCallActive(t.id),
                     callUnavailable: _.default.isCallUnavailable(t.id)
                 })), C = t.getRecipientId(), {
-                    notFriend: g,
-                    isBlocked: S
+                    notFriend: S,
+                    isBlocked: g
                 } = (0, s.useStateFromStoresObject)([v.default], () => ({
                     notFriend: t.type === y.ChannelTypes.DM && null != C && !v.default.isFriend(C),
                     isBlocked: t.type === y.ChannelTypes.DM && null != C && v.default.isBlocked(C)
@@ -215,8 +215,8 @@
                     inCall: u,
                     callActive: p,
                     callUnavailable: m,
-                    notFriend: g,
-                    isBlocked: S,
+                    notFriend: S,
+                    isBlocked: g,
                     appContext: A,
                     canShowTooltip: L,
                     canShowActivityGdmTooltip: R,

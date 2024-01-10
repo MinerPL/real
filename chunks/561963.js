@@ -19,8 +19,8 @@
                 m = n("206230"),
                 E = n("95039"),
                 C = n("405645"),
-                g = n("256648"),
-                S = n("593752"),
+                S = n("256648"),
+                g = n("593752"),
                 _ = n("506885"),
                 I = n("981601"),
                 T = n("373469"),
@@ -56,29 +56,29 @@
                     } = e, u = (0, c.useStateFromStores)([M.default], () => M.default.isTyping(t.id, i)), m = (0, c.useStateFromStores)([v.default], () => v.default.getMember(t.guild_id, i)), C = (0, c.useStateFromStores)([x.default], () => {
                         var e, n;
                         return (null == m ? void 0 : m.colorRoleId) != null ? null === (n = x.default.getGuild(t.guild_id)) || void 0 === n ? void 0 : null === (e = n.getRole(m.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
-                    }, [t.guild_id, m]), g = (0, c.useStateFromStores)([R.default], () => R.default.getUser(i)), j = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), L = (null == g ? void 0 : g.id) === (null == j ? void 0 : j.id), O = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getStatus() : N.default.getStatus(i, t.guild_id)), y = (0, c.useStateFromStores)([N.default], () => N.default.isMobileOnline(i)), b = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getActivities() : N.default.getActivities(i, t.guild_id)), P = (0, c.useStateFromStores)([T.default], () => T.default.getAnyStreamForUser(i)), U = (0, o.useListItem)(i), F = (0, c.useStateFromStores)([S.default], () => S.default.canUserViewChannel(t.id, s, i)), H = (null == g ? void 0 : g.id) != null && g.id === r, G = l.useCallback(e => {
-                        null != g && (0, h.openContextMenuLazy)(e, async () => {
+                    }, [t.guild_id, m]), S = (0, c.useStateFromStores)([R.default], () => R.default.getUser(i)), j = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), L = (null == S ? void 0 : S.id) === (null == j ? void 0 : j.id), O = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getStatus() : N.default.getStatus(i, t.guild_id)), y = (0, c.useStateFromStores)([N.default], () => N.default.isMobileOnline(i)), b = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getActivities() : N.default.getActivities(i, t.guild_id)), P = (0, c.useStateFromStores)([T.default], () => T.default.getAnyStreamForUser(i)), U = (0, o.useListItem)(i), F = (0, c.useStateFromStores)([g.default], () => g.default.canUserViewChannel(t.id, s, i)), H = (null == S ? void 0 : S.id) != null && S.id === r, G = l.useCallback(e => {
+                        null != S && (0, h.openContextMenuLazy)(e, async () => {
                             let {
                                 default: e
                             } = await n.el("721429").then(n.bind(n, "721429"));
                             return n => (0, a.jsx)(e, {
                                 ...n,
-                                user: g,
+                                user: S,
                                 guildId: t.guild_id,
                                 channel: t
                             })
                         })
-                    }, [g, t]), Y = l.useCallback(() => {
-                        if (null == g) return;
-                        let e = "@".concat(w.default.getUserTag(g, {
+                    }, [S, t]), Y = l.useCallback(() => {
+                        if (null == S) return;
+                        let e = "@".concat(w.default.getUserTag(S, {
                                 decoration: "never"
                             })),
-                            n = "<@".concat(g.id, ">");
+                            n = "<@".concat(S.id, ">");
                         D.ComponentDispatch.dispatchToLastSubscribed(V.ComponentActions.INSERT_TEXT, {
                             plainText: e,
                             rawText: n
                         }), p.default.startTyping(t.id)
-                    }, [g, t]), z = l.useCallback(e => {
+                    }, [S, t]), z = l.useCallback(e => {
                         e.stopPropagation(), (0, E.openGuildBoostingMarketingModal)({
                             guildId: t.guild_id,
                             location: {
@@ -87,16 +87,16 @@
                             }
                         })
                     }, [t.guild_id]);
-                    if (null == g) return null;
+                    if (null == S) return null;
                     let K = null == m ? void 0 : m.premiumSince;
                     return (0, a.jsx)(f.Popout, {
-                        preload: () => (0, _.default)(g.id, g.getAvatarURL(t.guild_id, 80), {
+                        preload: () => (0, _.default)(S.id, S.getAvatarURL(t.guild_id, 80), {
                             guildId: t.guild_id,
                             channelId: t.id
                         }),
                         renderPopout: e => (0, a.jsx)(I.default, {
                             ...e,
-                            userId: g.id,
+                            userId: S.id,
                             guildId: t.guild_id,
                             channelId: t.id
                         }),
@@ -110,7 +110,7 @@
                             return (0, a.jsx)(k.default, {
                                 onContextMenu: G,
                                 shouldAnimateStatus: W,
-                                user: g,
+                                user: S,
                                 currentUser: j,
                                 nick: null == m ? void 0 : m.nick,
                                 status: O,
@@ -192,7 +192,7 @@
                 let {
                     channel: t,
                     guild: n
-                } = e, s = "members-".concat(t.id), r = (0, g.useThreadMemberListSections)(t.id, n), d = r.filter(e => e.userIds.length > 0).reverse()[0], {
+                } = e, s = "members-".concat(t.id), r = (0, S.useThreadMemberListSections)(t.id, n), d = r.filter(e => e.userIds.length > 0).reverse()[0], {
                     navigator: h,
                     listRef: p
                 } = function(e, t) {
@@ -256,7 +256,7 @@
                     channel: t
                 });
                 let C = u.omit(h.containerProps, ["ref"]),
-                    S = U.default.getGuildVisualOwnerId(n);
+                    g = U.default.getGuildVisualOwnerId(n);
                 return (0, a.jsx)(o.ListNavigatorProvider, {
                     navigator: h,
                     children: (0, a.jsx)(f.FocusJumpSection, {
@@ -291,7 +291,7 @@
                                         channel: t,
                                         sectionId: i,
                                         userId: s[l],
-                                        guildOwnerId: S
+                                        guildOwnerId: g
                                     }, s[l])
                                 },
                                 footerHeight: e => r[e] === d && t.type === V.ChannelTypes.PRIVATE_THREAD ? 80 : 0,

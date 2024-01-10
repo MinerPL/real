@@ -33,7 +33,7 @@
                     isSelected: u,
                     selectable: c = !1,
                     ...E
-                } = e, f = d(t);
+                } = e, _ = d(t);
                 return (0, i.jsx)("div", {
                     className: l(o.wrapper, n, {
                         [o.selectable]: c,
@@ -44,7 +44,7 @@
                         height: r,
                         padding: null != s ? s : 0
                     },
-                    children: null != f ? (0, i.jsx)(f, {
+                    children: null != _ ? (0, i.jsx)(_, {
                         className: o.icon,
                         width: a,
                         height: r,
