@@ -33,8 +33,8 @@
                     hasClips: A,
                     channel: T,
                     activities: M,
-                    newClipsCount: I,
-                    canPostPolls: N,
+                    newClipsCount: N,
+                    canPostPolls: I,
                     appContext: L
                 } = e, v = [];
                 return t && (v.push({
@@ -49,13 +49,13 @@
                     type: "CLIPS",
                     icon: f.default,
                     display: _.default.Messages.CLIPS_SHARE_A_CLIP,
-                    badgeVal: I,
+                    badgeVal: N,
                     badgeColor: o.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND
                 }), n && v.push({
                     type: "CREATE_THREAD",
                     icon: E.default,
                     display: _.default.Messages.CREATE_THREAD
-                }), N && v.push({
+                }), I && v.push({
                     type: "POLL",
                     icon: l.PollsIcon,
                     display: _.default.Messages.CREATE_POLL

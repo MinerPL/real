@@ -4,24 +4,24 @@
                     return a
                 },
                 isSpammer: function() {
-                    return o
+                    return s
                 },
                 isSpam: function() {
                     return u
                 }
             });
-            var l = n("697218"),
-                r = n("49111");
+            var r = n("697218"),
+                l = n("49111");
 
             function a(e) {
-                return void 0 !== e && e.type !== r.ChannelTypes.DM
+                return void 0 !== e && e.type !== l.ChannelTypes.DM
             }
 
-            function o(e) {
+            function s(e) {
                 var t, n;
-                return null !== (n = null === (t = l.default.getUser(e)) || void 0 === t ? void 0 : t.hasFlag(r.UserFlags.SPAMMER)) && void 0 !== n && n
+                return null !== (n = null === (t = r.default.getUser(e)) || void 0 === t ? void 0 : t.hasFlag(l.UserFlags.SPAMMER)) && void 0 !== n && n
             }
 
             function u(e) {
-                return o(e.author.id)
+                return s(e.author.id)
             }
