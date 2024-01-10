@@ -33,7 +33,7 @@
                     if (this.userId === e) {
                         if (t === this.speaking) return;
                         if (t !== a.SpeakingFlags.NONE) {
-                            let e = Object.values(r.default.getVoiceStatesForChannel(this.channelId)).filter(e => e.userId !== this.userId && !e.selfDeaf && !e.deaf);
+                            let e = Object.values(r.default.getVoiceStatesForChannel(this.channelId)).filter(e => !e.selfDeaf && !e.deaf);
                             e.forEach(e => this.totalListeners.add(e.userId)), this.maxListenerCount = Math.max(e.length, this.maxListenerCount)
                         }
                         this.speaking = t

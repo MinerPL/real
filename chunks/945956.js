@@ -83,12 +83,12 @@
                             channelId: n
                         })
                     })
-                }), null == m && (m = new l.default(f.default.getId(), t)), T = null, g = !1, I = !1, u
+                }), m = new l.default(f.default.getId(), t), T = null, g = !1, I = !1, u
             }
 
             function v() {
                 if (null == i) return !1;
-                T = i.getDuration(), i.destroy(), i = null
+                T = i.getDuration(), i.destroy(), i = null, m = null
             }
 
             function A() {
