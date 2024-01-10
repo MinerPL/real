@@ -23,8 +23,8 @@
                 N = n("520899"),
                 I = n("988864"),
                 m = n("960808"),
-                A = n("45835"),
-                g = n("699473"),
+                g = n("45835"),
+                A = n("699473"),
                 C = n("393414"),
                 R = n("845579"),
                 M = n("42203"),
@@ -100,7 +100,7 @@
                     {
                         message: f,
                         channel: I
-                    } = (0, A.getSavedMessageAndChannel)(s),
+                    } = (0, g.getSavedMessageAndChannel)(s),
                     m = M.default.getChannel(I.id),
                     y = (0, T.default)(m, !0),
                     P = null != y ? y : I.name,
@@ -179,7 +179,7 @@
                         className: i(G.messageContainer, j.unloadedMessage, {
                             [j.disabledMessage]: r
                         }),
-                        children: [(0, l.jsx)(g.default, {
+                        children: [(0, l.jsx)(A.default, {
                             message: f,
                             channel: I,
                             className: G.message,
