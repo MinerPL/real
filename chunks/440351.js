@@ -1,57 +1,57 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
                     return f
                 }
             });
-            var i = s("37983"),
-                n = s("884691"),
-                a = s("414456"),
-                l = s.n(a),
-                o = s("77078"),
-                r = s("145131"),
-                u = s("296165"),
-                d = s("926622");
-            class c extends n.PureComponent {
+            var l = n("37983"),
+                a = n("884691"),
+                s = n("414456"),
+                i = n.n(s),
+                r = n("77078"),
+                o = n("145131"),
+                u = n("296165"),
+                d = n("926622");
+            class c extends a.PureComponent {
                 render() {
                     let {
                         title: e,
                         description: t,
-                        agreement: s,
-                        disagreement: n,
-                        onAgree: a,
+                        agreement: n,
+                        disagreement: a,
+                        onAgree: s,
                         onDisagree: c,
                         imageClassName: f
                     } = this.props;
-                    return (0, i.jsxs)(r.default, {
+                    return (0, l.jsxs)(o.default, {
                         className: u.gatedContent,
-                        justify: r.default.Justify.CENTER,
-                        align: r.default.Align.CENTER,
-                        direction: r.default.Direction.VERTICAL,
-                        children: [(0, i.jsx)("div", {
-                            className: l(u.image, f)
-                        }), (0, i.jsx)("div", {
-                            className: l(u.title, d.marginBottom8),
+                        justify: o.default.Justify.CENTER,
+                        align: o.default.Align.CENTER,
+                        direction: o.default.Direction.VERTICAL,
+                        children: [(0, l.jsx)("div", {
+                            className: i(u.image, f)
+                        }), (0, l.jsx)("div", {
+                            className: i(u.title, d.marginBottom8),
                             children: e
-                        }), (0, i.jsx)("div", {
-                            className: l(u.description, d.marginBottom20),
+                        }), (0, l.jsx)("div", {
+                            className: i(u.description, d.marginBottom20),
                             children: t
-                        }), (0, i.jsxs)(r.default, {
-                            justify: r.default.Justify.CENTER,
-                            align: r.default.Align.CENTER,
+                        }), (0, l.jsxs)(o.default, {
+                            justify: o.default.Justify.CENTER,
+                            align: o.default.Align.CENTER,
                             grow: 0,
-                            children: [null != n ? (0, i.jsx)(o.Button, {
+                            children: [null != a ? (0, l.jsx)(r.Button, {
                                 className: u.action,
-                                size: o.ButtonSizes.LARGE,
-                                color: o.ButtonColors.PRIMARY,
+                                size: r.ButtonSizes.LARGE,
+                                color: r.ButtonColors.PRIMARY,
                                 onClick: c,
-                                children: n
-                            }) : null, null != s ? (0, i.jsx)(o.Button, {
+                                children: a
+                            }) : null, null != n ? (0, l.jsx)(r.Button, {
                                 className: u.action,
-                                color: o.Button.Colors.RED,
-                                size: o.ButtonSizes.LARGE,
-                                onClick: a,
-                                children: s
+                                color: r.Button.Colors.RED,
+                                size: r.ButtonSizes.LARGE,
+                                onClick: s,
+                                children: n
                             }) : null]
                         })]
                     })

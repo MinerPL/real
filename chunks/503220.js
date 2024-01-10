@@ -19,8 +19,8 @@
                 m = n("604656"),
                 E = n("861370"),
                 C = n("565298"),
-                S = n("144491"),
-                g = n("945330"),
+                g = n("144491"),
+                S = n("945330"),
                 _ = n("758710"),
                 I = n("433487"),
                 T = n("664336"),
@@ -73,13 +73,13 @@
                     channel: t,
                     closePopout: n,
                     onSelect: l
-                } = e, C = (0, u.default)(t, "Sidebar Overflow"), g = (0, d.default)(t), I = (0, h.default)(t), T = (0, p.default)(t), x = (0, i.default)(t), N = (0, o.default)(t), R = (0, f.default)(t.id), j = (0, c.default)(t), L = (0, r.default)(t), O = (0, E.default)({
+                } = e, C = (0, u.default)(t, "Sidebar Overflow"), S = (0, d.default)(t), I = (0, h.default)(t), T = (0, p.default)(t), x = (0, i.default)(t), N = (0, o.default)(t), R = (0, f.default)(t.id), j = (0, c.default)(t), L = (0, r.default)(t), O = (0, E.default)({
                     id: t.id,
                     label: M.default.Messages.COPY_ID_THREAD
                 }), y = (0, m.default)(t);
 
                 function b() {
-                    (0, S.transitionToChannel)(t.id)
+                    (0, g.transitionToChannel)(t.id)
                 }
                 return (0, a.jsxs)(s.Menu, {
                     navId: "thread-context",
@@ -95,7 +95,7 @@
                     }), (0, a.jsxs)(s.MenuGroup, {
                         children: [I, T]
                     }), (0, a.jsxs)(s.MenuGroup, {
-                        children: [j, g, R]
+                        children: [j, S, R]
                     }), (0, a.jsxs)(s.MenuGroup, {
                         children: [(0, a.jsx)(s.MenuItem, {
                             id: "search",
@@ -135,7 +135,7 @@
                     }), (0, a.jsx)(R, {
                         channel: t
                     }), (0, a.jsx)(T.default.Icon, {
-                        icon: g.default,
+                        icon: S.default,
                         tooltip: M.default.Messages.CLOSE,
                         onClick: () => (0, N.closeThreadSidebar)((0, C.getGuildIdForGenericRedirect)(t), null != n ? n : t.parent_id)
                     })]

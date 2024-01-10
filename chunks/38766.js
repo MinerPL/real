@@ -21,7 +21,7 @@
                     openWithoutBackstack: c = !1
                 } = e, {
                     analyticsLocations: E
-                } = (0, l.default)(), _ = (0, i.useCallback)(() => {
+                } = (0, l.default)(), f = (0, i.useCallback)(() => {
                     null != t && (0, r.initGuildIdentitySettings)(t, null != d ? d : E), a.default.open(s.UserSettingsSections.PROFILE_CUSTOMIZATION, null != t ? u.ProfileCustomizationSubsection.GUILD : u.ProfileCustomizationSubsection.USER_PROFILE, {
                         scrollPosition: n,
                         analyticsLocation: o,
@@ -29,5 +29,5 @@
                         openWithoutBackstack: c
                     })
                 }, [t, n, o, d, c, E]);
-                return _
+                return f
             }

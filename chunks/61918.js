@@ -19,8 +19,8 @@
                 m = n("666020"),
                 E = n("352674"),
                 C = n("888503"),
-                S = n("206230"),
-                g = n("716241"),
+                g = n("206230"),
+                S = n("716241"),
                 _ = n("521803"),
                 I = n("95039"),
                 T = n("405645"),
@@ -75,8 +75,8 @@
                         isTyping: p,
                         isMobileOnline: m,
                         premiumSince: E,
-                        ...S
-                    } = this.props, g = null != E ? new Date(E) : null;
+                        ...g
+                    } = this.props, S = null != E ? new Date(E) : null;
                     return (0, a.jsx)(h.Popout, {
                         preload: () => (0, x.default)(s.id, s.getAvatarURL(f, 80), {
                             guildId: f,
@@ -101,7 +101,7 @@
                                 activities: r,
                                 applicationStream: u,
                                 isOwner: n,
-                                premiumSince: g,
+                                premiumSince: S,
                                 colorString: e,
                                 colorRoleName: t,
                                 isTyping: p,
@@ -110,7 +110,7 @@
                                 isMobile: m,
                                 onClickPremiumGuildIcon: this.openGuildSubscriptionModal,
                                 selected: E,
-                                itemProps: S,
+                                itemProps: g,
                                 ...d
                             })
                         }
@@ -421,7 +421,7 @@
                             num_users_visible_with_activity: 0,
                             num_users_visible_with_avatar_decoration: 0
                         });
-                        this.lastReportedAnalyticsChannel = this.props.channel.id, g.default.trackWithMetadata(w.AnalyticEvents.MEMBER_LIST_VIEWED, {
+                        this.lastReportedAnalyticsChannel = this.props.channel.id, S.default.trackWithMetadata(w.AnalyticEvents.MEMBER_LIST_VIEWED, {
                             ...l
                         })
                     }
@@ -432,7 +432,7 @@
                 let {
                     channel: t,
                     className: n
-                } = e, s = (0, c.useStateFromStores)([S.default], () => S.default.keyboardModeEnabled), r = (0, c.useStateFromStoresObject)([A.default], () => A.default.getProps(t.guild_id, t.id)), {
+                } = e, s = (0, c.useStateFromStores)([g.default], () => g.default.keyboardModeEnabled), r = (0, c.useStateFromStoresObject)([A.default], () => A.default.getProps(t.guild_id, t.id)), {
                     rows: u,
                     groups: d
                 } = r, f = l.useRef(null), h = l.useCallback((e, t) => {

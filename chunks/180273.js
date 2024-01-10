@@ -15,8 +15,8 @@
                 c = n("376152"),
                 f = n("579565"),
                 E = n("411511");
-            let h = null,
-                _ = null,
+            let _ = null,
+                h = null,
                 S = {},
                 T = {},
                 p = E.TooltipActions.LOADING_INITIAL_PROGRESS,
@@ -55,8 +55,8 @@
                 getIsPartnerGameQuestComplete(e) {
                     var t;
                     let n = (0, f.getDrop)(e);
-                    if (null == n || null == _) return !1;
-                    let l = !!(null === (t = _[n.dropsQuestId]) || void 0 === t ? void 0 : t.completed_at),
+                    if (null == n || null == h) return !1;
+                    let l = !!(null === (t = h[n.dropsQuestId]) || void 0 === t ? void 0 : t.completed_at),
                         a = I.completed && I.gameTitle === n.title || l;
                     return a
                 }
@@ -64,10 +64,10 @@
                     return S
                 }
                 get platformAvailability() {
-                    return h
+                    return _
                 }
                 get userStatus() {
-                    return _
+                    return h
                 }
                 get activityPanelTooltipAction() {
                     return p
@@ -100,14 +100,14 @@
                     S[e.dropsQuestId] = e.isEligible
                 },
                 DROPS_PLATFORM_AVAILABILITY_SUCCESS: e => {
-                    h = e.availablePlatforms.filter(e => E.DROPS_PLATFORMS.includes(e))
+                    _ = e.availablePlatforms.filter(e => E.DROPS_PLATFORMS.includes(e))
                 },
                 DROPS_USER_STATUS_FETCH_SUCCESS: e => {
                     var t;
-                    _ = null !== (t = e.codes) && void 0 !== t ? t : {}
+                    h = null !== (t = e.codes) && void 0 !== t ? t : {}
                 },
                 DROPS_USER_STATUS_FETCH_FAILURE: e => {
-                    _ = {}
+                    h = {}
                 },
                 DROPS_ENROLLED_USER_FETCH_SUCCESS: e => {
                     T[e.dropsQuestId] = {
@@ -134,7 +134,7 @@
                     p = E.TooltipActions.STREAM_CTA, 403 === n ? S[t] = !1 : I.interrupted = !0
                 },
                 DROPS_UNENROLL_USER: e => {
-                    _ = null, S = {
+                    h = null, S = {
                         ...S
                     }, delete S[e.dropsQuestId], T = {
                         ...T
@@ -162,26 +162,26 @@
                         ownerId: u.default.getId()
                     });
                     if (null == s) return;
-                    let h = d.default.getGameForPID(s);
-                    if (null == h) return;
-                    let _ = Object.values(E.DROPS_GAMES).find(e => e.gameSearchTerm.find(e => {
+                    let _ = d.default.getGameForPID(s);
+                    if (null == _) return;
+                    let h = Object.values(E.DROPS_GAMES).find(e => e.gameSearchTerm.find(e => {
                         var t;
-                        return e.toLowerCase() === (null === (t = h.name) || void 0 === t ? void 0 : t.toLowerCase())
+                        return e.toLowerCase() === (null === (t = _.name) || void 0 === t ? void 0 : t.toLowerCase())
                     }));
-                    if (null == _ || (0, f.getDropExpired)(_)) return;
-                    let S = null === (t = (0, f.getDropsExperimentForDrop)(_)) || void 0 === t ? void 0 : t.getCurrentConfig({
+                    if (null == h || (0, f.getDropExpired)(h)) return;
+                    let S = null === (t = (0, f.getDropsExperimentForDrop)(h)) || void 0 === t ? void 0 : t.getCurrentConfig({
                         location: "1"
                     }, {
                         autoTrackExposure: !1
                     });
                     if (null == S || !S.dropsEnabled) return;
                     let p = S.autoEnrollment;
-                    null != T[_.dropsQuestId] && T[_.dropsQuestId].isEnrolled || p ? g(_, h, i) : r.default.wait(async () => {
+                    null != T[h.dropsQuestId] && T[h.dropsQuestId].isEnrolled || p ? g(h, _, i) : r.default.wait(async () => {
                         var e;
-                        await (0, c.fetchEnrolledUser)(_.dropsQuestId), (null === (e = T[_.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && g(_, h, i)
+                        await (0, c.fetchEnrolledUser)(h.dropsQuestId), (null === (e = T[h.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && g(h, _, i)
                     })
                 },
                 LOGOUT: function() {
-                    S = {}, T = {}, _ = {}, N.stop()
+                    S = {}, T = {}, h = {}, N.stop()
                 }
             })

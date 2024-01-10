@@ -27,7 +27,7 @@
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-e103822a63af75b76f453c7c8c9fe63cafb0b56f",
+                    release: "discord_web-bcef06c917b7e9b5365d05b15457f5f31bdd4545",
                     beforeSend: e => {
                         var t, n;
                         return !(null != (t = e).exception && null != t.exception.values && t.exception.values.every(e => null == e.stacktrace || null != e.stacktrace.frames && 1 === e.stacktrace.frames.length) && "canary" !== window.GLOBAL_ENV.RELEASE_CHANNEL || s.some(e => window.navigator.appVersion.toLowerCase().indexOf(e) >= 0)) && !i() && !("Aborted" === (n = e).message || "cancel captcha" === n.message) && l() ? e : null
@@ -45,7 +45,7 @@
                     })],
                     ignoreErrors: ["EADDRINUSE", "BetterDiscord", "EnhancedDiscord", "Powercord", "RecipeWebview", "jQuery", "localStorage", "has already been declared", "Cannot call hover while not dragging.", "Cannot call beginDrag while dragging.", "getHostNode", "setupCSS", "on missing remote object", "ChunkLoadError", "Cannot find module 'discord_utils'", "Failed to setup Krisp module", "Error invoking remote method 'DISCORD_NATIVE_MODULES_INSTALL': Error: Module updater is not available!", "Non-Error promise rejection captured with keys:", "Request has been terminated", "Cannot resolve a Slate point from DOM point", "Failed to fetch", "no suitable image found", "ResizeObserver loop limit exceeded", "The play() request was interrupted", "could not play audio", "notosans-400-normalitalic"],
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
-                }), a.setTag("buildNumber", (e = "258417", "258417")), a.setTag("builtAt", String("1704848356823"));
+                }), a.setTag("buildNumber", (e = "258436", "258436")), a.setTag("builtAt", String("1704851055940"));
                 let t = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != t && "object" == typeof t)
                     for (let e in t) a.setTag(e, t[e]);

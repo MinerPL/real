@@ -16,11 +16,11 @@
                 d = new Map,
                 c = [],
                 E = 0,
-                _ = [];
-            class I extends l.default.Store {
+                f = [];
+            class _ extends l.default.Store {
                 getIntegrations(e) {
                     var t;
-                    return null !== (t = o.get(e)) && void 0 !== t ? t : _
+                    return null !== (t = o.get(e)) && void 0 !== t ? t : f
                 }
                 getIntegration(e, t) {
                     var n;
@@ -41,11 +41,11 @@
                 }
             }
 
-            function T(e) {
+            function I(e) {
                 return e.sort((e, t) => e.application.name.localeCompare(t.application.name))
             }
-            I.displayName = "PrivateChannelIntegrationStore";
-            let f = new I(r.default, {
+            _.displayName = "PrivateChannelIntegrationStore";
+            let T = new _(r.default, {
                 LOGOUT() {
                     o.clear()
                 },
@@ -82,7 +82,7 @@
                         channelId: t,
                         integrations: n
                     } = e;
-                    o.set(t, T(n.map(u.createPrivateChannelIntegration))), d.set(t, 2)
+                    o.set(t, I(n.map(u.createPrivateChannelIntegration))), d.set(t, 2)
                 },
                 FETCH_PRIVATE_CHANNEL_INTEGRATIONS_FAIL(e) {
                     let {
@@ -95,7 +95,7 @@
                         integration: t
                     } = e, n = o.get(t.channel_id);
                     if (null == n) return !1;
-                    o.set(t.channel_id, T([...n, (0, u.createPrivateChannelIntegration)(t)]))
+                    o.set(t.channel_id, I([...n, (0, u.createPrivateChannelIntegration)(t)]))
                 },
                 PRIVATE_CHANNEL_INTEGRATION_UPDATE(e) {
                     let {
@@ -104,7 +104,7 @@
                     if (null == n) return !1;
                     let i = (0, u.createPrivateChannelIntegration)(t),
                         a = n.findIndex(e => e.application.id === i.application.id),
-                        l = [...n]; - 1 === a ? l.push(i) : l[a] = i, o.set(i.channel_id, T(l))
+                        l = [...n]; - 1 === a ? l.push(i) : l[a] = i, o.set(i.channel_id, I(l))
                 },
                 PRIVATE_CHANNEL_INTEGRATION_DELETE(e) {
                     let {
@@ -121,4 +121,4 @@
                     return o.delete(t.id)
                 }
             });
-            var S = f
+            var S = T

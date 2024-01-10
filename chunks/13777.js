@@ -1,39 +1,39 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return p
                 }
             });
             var a = n("37983"),
                 l = n("884691"),
-                i = n("917351"),
-                u = n.n(i),
+                s = n("917351"),
+                i = n.n(s),
                 r = n("446674"),
-                s = n("77078"),
-                d = n("848848"),
-                o = n("300322"),
-                f = n("800762"),
-                c = n("242740"),
-                _ = n("782340");
+                u = n("77078"),
+                o = n("848848"),
+                d = n("300322"),
+                c = n("800762"),
+                f = n("242740"),
+                h = n("782340");
 
-            function E(e) {
-                let t = (0, o.useCanJoinThreadVoice)(e),
-                    n = (0, r.useStateFromStores)([f.default], () => f.default.isInChannel(e.id)),
-                    i = (0, r.useStateFromStores)([f.default], () => !u.isEmpty(f.default.getVoiceStatesForChannel(e.id))),
+            function p(e) {
+                let t = (0, d.useCanJoinThreadVoice)(e),
+                    n = (0, r.useStateFromStores)([c.default], () => c.default.isInChannel(e.id)),
+                    s = (0, r.useStateFromStores)([c.default], () => !i.isEmpty(c.default.getVoiceStatesForChannel(e.id))),
                     {
-                        needSubscriptionToAccess: E
-                    } = (0, d.default)(e.id),
-                    T = l.useCallback(() => {
-                        c.default.handleVoiceConnect({
+                        needSubscriptionToAccess: p
+                    } = (0, o.default)(e.id),
+                    m = l.useCallback(() => {
+                        f.default.handleVoiceConnect({
                             channel: e,
                             connected: n,
-                            needSubscriptionToAccess: E,
+                            needSubscriptionToAccess: p,
                             locked: !1
                         })
-                    }, [e, n, E]);
-                return n || !t ? null : (0, a.jsx)(s.MenuItem, {
+                    }, [e, n, p]);
+                return n || !t ? null : (0, a.jsx)(u.MenuItem, {
                     id: "join-thread-voice",
-                    label: i ? _.default.Messages.JOIN_CALL : _.default.Messages.START_CALL,
-                    action: T
+                    label: s ? h.default.Messages.JOIN_CALL : h.default.Messages.START_CALL,
+                    action: m
                 })
             }

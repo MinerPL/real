@@ -1,24 +1,24 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return o
                 }
             });
             var i = n("446674"),
-                l = n("629109"),
-                u = n("271938"),
-                o = n("42887"),
-                a = n("49111"),
-                r = n("353927");
+                a = n("629109"),
+                l = n("271938"),
+                r = n("42887"),
+                s = n("49111"),
+                u = n("353927");
 
-            function d(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.MediaEngineContextTypes.DEFAULT,
-                    n = (0, i.useStateFromStores)([u.default], () => u.default.getId()),
-                    d = (0, i.useStateFromStores)([o.default], () => o.default.supports(r.Features.DISABLE_VIDEO) && o.default.isVideoEnabled()),
-                    s = (0, i.useStateFromStores)([o.default], () => o.default.isLocalVideoDisabled(n, t), [n, t]),
+            function o(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.MediaEngineContextTypes.DEFAULT,
+                    n = (0, i.useStateFromStores)([l.default], () => l.default.getId()),
+                    o = (0, i.useStateFromStores)([r.default], () => r.default.supports(u.Features.DISABLE_VIDEO) && r.default.isVideoEnabled()),
+                    d = (0, i.useStateFromStores)([r.default], () => r.default.isLocalVideoDisabled(n, t), [n, t]),
                     c = null == e || e === n;
-                return [c && (d || s), s, e => {
-                    let i = e ? a.VideoToggleState.DISABLED : a.VideoToggleState.MANUAL_ENABLED;
-                    l.default.setDisableLocalVideo(n, i, t)
+                return [c && (o || d), d, e => {
+                    let i = e ? s.VideoToggleState.DISABLED : s.VideoToggleState.MANUAL_ENABLED;
+                    a.default.setDisableLocalVideo(n, i, t)
                 }]
             }

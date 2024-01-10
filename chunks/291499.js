@@ -21,7 +21,7 @@
                     stream: f,
                     focused: h,
                     canvas: p
-                } = e, m = a.useRef(!1), E = (0, l.default)([s.default], () => s.default.getDrawMode()), C = (0, u.default)((0, o.default)(t.id, n, c), f), S = (0, u.default)((0, d.default)(t.id, n, c), f), g = a.useCallback((e, t, n) => {
+                } = e, m = a.useRef(!1), E = (0, l.default)([s.default], () => s.default.getDrawMode()), C = (0, u.default)((0, o.default)(t.id, n, c), f), g = (0, u.default)((0, d.default)(t.id, n, c), f), S = a.useCallback((e, t, n) => {
                     if (null == p) return;
                     let {
                         x: a,
@@ -31,23 +31,23 @@
                         case i.DrawableType.LINE:
                             return C[e](t, a, l);
                         case i.DrawableType.EMOJI_HOSE:
-                            return S[e](t, a, l)
+                            return g[e](t, a, l)
                     }
-                }, [p, C, S]), _ = a.useCallback(e => {
-                    h && null != E && (e.stopPropagation(), m.current = !0, g("handleMouseDown", E, e))
-                }, [g, E, h]), I = a.useCallback(e => {
-                    h && null != E && (e.stopPropagation(), m.current && g("handleMouseMove", E, e))
-                }, [g, E, h]), T = a.useCallback(e => {
-                    h && null != E && (e.stopPropagation(), m.current = !1, g("handleMouseUp", E, e))
-                }, [g, E, h]), v = a.useCallback(e => {
-                    m.current && null != E && g("handleMouseEnter", E, e)
-                }, [g, E]);
+                }, [p, C, g]), _ = a.useCallback(e => {
+                    h && null != E && (e.stopPropagation(), m.current = !0, S("handleMouseDown", E, e))
+                }, [S, E, h]), I = a.useCallback(e => {
+                    h && null != E && (e.stopPropagation(), m.current && S("handleMouseMove", E, e))
+                }, [S, E, h]), T = a.useCallback(e => {
+                    h && null != E && (e.stopPropagation(), m.current = !1, S("handleMouseUp", E, e))
+                }, [S, E, h]), v = a.useCallback(e => {
+                    m.current && null != E && S("handleMouseEnter", E, e)
+                }, [S, E]);
                 a.useEffect(() => {
                     let e = e => {
-                        null != E && (m.current = !1, g("handleMouseUp", E, e))
+                        null != E && (m.current = !1, S("handleMouseUp", E, e))
                     };
                     return window.addEventListener("mouseup", e), () => window.removeEventListener("mouseup", e)
-                }, [g, E]);
+                }, [S, E]);
                 let x = a.useCallback(e => {
                     h && null != E && e.stopPropagation()
                 }, [E, h]);

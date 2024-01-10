@@ -19,8 +19,8 @@
                 m = n("724110"),
                 E = n("373469"),
                 C = n("42203"),
-                S = n("957255"),
-                g = n("824563"),
+                g = n("957255"),
+                S = n("824563"),
                 _ = n("102985"),
                 I = n("697218"),
                 T = n("800762"),
@@ -87,34 +87,34 @@
                             isApplicationStreaming: em,
                             isMobile: eE,
                             status: eC
-                        } = (0, o.useStateFromStoresObject)([E.default, g.default, S.default], () => {
+                        } = (0, o.useStateFromStoresObject)([E.default, S.default, g.default], () => {
                             let e = null != E.default.getAnyStreamForUser(en.id);
                             return {
-                                activity: g.default.findActivity(en.id, t => {
+                                activity: S.default.findActivity(en.id, t => {
                                     let {
                                         type: n
                                     } = t;
                                     return e ? n === X.ActivityTypes.PLAYING : n !== X.ActivityTypes.CUSTOM_STATUS && n !== X.ActivityTypes.HANG_STATUS
                                 }),
-                                hangStatusActivity: ec && null != ed && S.default.can(X.Permissions.CONNECT, ed) ? g.default.findActivity(en.id, e => {
+                                hangStatusActivity: ec && null != ed && g.default.can(X.Permissions.CONNECT, ed) ? S.default.findActivity(en.id, e => {
                                     let {
                                         type: t
                                     } = e;
                                     return t === X.ActivityTypes.HANG_STATUS
                                 }) : null,
-                                customStatusActivity: g.default.findActivity(en.id, e => {
+                                customStatusActivity: S.default.findActivity(en.id, e => {
                                     let {
                                         type: t
                                     } = e;
                                     return t === X.ActivityTypes.CUSTOM_STATUS
                                 }),
                                 isApplicationStreaming: e,
-                                isMobile: g.default.isMobileOnline(en.id),
-                                status: ea ? null : g.default.getStatus(en.id)
+                                isMobile: S.default.isMobileOnline(en.id),
+                                status: ea ? null : S.default.getStatus(en.id)
                             }
                         }),
-                        eS = null != ef || null != eh || em,
-                        eg = null !== (t = v.default.getNickname(null, n.id, en)) && void 0 !== t ? t : x.default.getName(en),
+                        eg = null != ef || null != eh || em,
+                        eS = null !== (t = v.default.getNickname(null, n.id, en)) && void 0 !== t ? t : x.default.getName(en),
                         e_ = (0, o.useStateFromStores)([_.default], () => _.default.hidePersonalInformation),
                         [eI, eT, ev, ex, eN] = (0, o.useStateFromStoresArray)([N.default], () => [N.default.getMutualFriendsCount(en.id), N.default.getMutualFriends(en.id), N.default.getMutualGuilds(en.id), N.default.isFetchingProfile(en.id), N.default.isFetchingFriends(en.id)]),
                         eA = (0, B.useGetVoiceChannelInfoForVoiceActivitySection)(en.id),
@@ -191,7 +191,7 @@
                                 }), (0, a.jsxs)(O.default.Inner, {
                                     children: [(0, a.jsx)(V.default, {
                                         user: en,
-                                        nickname: eg,
+                                        nickname: eS,
                                         pronouns: null == el ? void 0 : el.pronouns
                                     }), (0, a.jsx)(w.default, {
                                         customStatusActivity: ep,
@@ -216,7 +216,7 @@
                                         voiceChannel: eA.voiceChannel,
                                         color: q.appButtonColor
                                     })
-                                }) : null, eS ? (0, a.jsx)(O.default.Inner, {
+                                }) : null, eg ? (0, a.jsx)(O.default.Inner, {
                                     children: (0, a.jsx)(D.default, {
                                         activity: null != ef ? ef : eh,
                                         user: en,

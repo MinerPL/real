@@ -24,7 +24,7 @@
                 } = e, {
                     emoji: p,
                     sentAt: m
-                } = n, E = (0, u.useStateFromStores)([d.default], () => d.default.useReducedMotion), [C, S] = l.useState(!0), g = !E, _ = (0, r.useTransition)(C, {
+                } = n, E = (0, u.useStateFromStores)([d.default], () => d.default.useReducedMotion), [C, g] = l.useState(!0), S = !E, _ = (0, r.useTransition)(C, {
                     from: {
                         rotate: -120
                     },
@@ -46,11 +46,11 @@
                 return (l.useEffect(() => {
                     let e;
                     return Date.now() - m >= 2e3 ? (0, c.clearVoiceChannelEffectForUser)(t) : e = setTimeout(() => {
-                        S(!1), g && (0, c.clearVoiceChannelEffectForUser)(t)
-                    }, g ? 2e3 : 6e3), () => {
+                        g(!1), S && (0, c.clearVoiceChannelEffectForUser)(t)
+                    }, S ? 2e3 : 6e3), () => {
                         null != e && clearTimeout(e)
                     }
-                }, [m, t, g]), g) ? null : _((e, t) => {
+                }, [m, t, S]), S) ? null : _((e, t) => {
                     var n;
                     let {
                         rotate: l

@@ -19,8 +19,8 @@
                 m = n("732961"),
                 E = n("153984"),
                 C = n("49111"),
-                S = n("99795"),
-                g = n("111647"),
+                g = n("99795"),
+                S = n("111647"),
                 _ = (0, r.default)(e => {
                     let {
                         participants: t,
@@ -47,7 +47,7 @@
                     l.useEffect(() => {
                         c.ComponentDispatch.dispatch(C.ComponentActions.REMEASURE_TARGET)
                     }, [L, O]);
-                    let U = l.useMemo(() => n.filter(e => e.type !== S.ParticipantTypes.ACTIVITY || !e.participants.has(o.default.getId())), [n, r]);
+                    let U = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.has(o.default.getId())), [n, r]);
                     if ((null == D ? void 0 : D.channelId) === x.id) return (0, a.jsx)(h.default, {
                         height: O
                     });
@@ -59,21 +59,21 @@
                     if (b === C.ChannelModes.VOICE) return (0, a.jsx)(u.default, {
                         guildId: x.guild_id,
                         width: L,
-                        className: g.voiceCallWrapper,
+                        className: S.voiceCallWrapper,
                         participants: t,
                         onContextMenu: T
                     });
                     if (n = M ? n : t, null == s) return 0 === n.length ? (0, a.jsx)(E.default, {
-                        className: i(g.videoGrid, g.hiddenParticipants),
+                        className: i(S.videoGrid, S.hiddenParticipants),
                         channelId: x.id,
                         width: L
                     }) : (0, a.jsx)(d.default, {
-                        className: g.videoGridWrapper,
+                        className: S.videoGridWrapper,
                         justify: d.default.Justify.CENTER,
                         align: d.default.Align.CENTER,
                         children: (0, a.jsx)(p.default, {
                             channel: x,
-                            className: g.videoGrid,
+                            className: S.videoGrid,
                             participants: U,
                             totalNumberOfParticipants: t.length,
                             onClick: I,

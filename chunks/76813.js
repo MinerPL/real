@@ -21,19 +21,19 @@
                     className: t
                 } = e, {
                     showClipsHeaderEntrypoint: E,
-                    ignorePlatformRestriction: h
+                    ignorePlatformRestriction: _
                 } = u.ClipsExperiment.useExperiment({
                     location: "ClipsButton"
                 }, {
                     autoTrackExposure: !1
                 }), {
-                    hasClips: _,
+                    hasClips: h,
                     hasNewClips: S
                 } = (0, a.useStateFromStoresObject)([d.default], () => ({
                     hasClips: d.default.hasClips(),
                     hasNewClips: d.default.getNewClipIds().length > 0
                 }));
-                return E && ((0, o.isWindows)() || h) && _ ? (0, l.jsx)(r.Icon, {
+                return E && ((0, o.isWindows)() || _) && h ? (0, l.jsx)(r.Icon, {
                     className: t,
                     icon: i.default,
                     showBadge: S,
