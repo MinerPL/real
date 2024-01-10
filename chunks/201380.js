@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 MoreVoiceUser: function() {
-                    return P
+                    return b
                 },
                 AudienceVoiceUser: function() {
                     return D
@@ -15,8 +15,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("316693"),
-                u = n("77078"),
-                o = n("255397"),
+                o = n("77078"),
+                u = n("255397"),
                 d = n("272030"),
                 c = n("987317"),
                 f = n("990766"),
@@ -25,8 +25,8 @@
                 m = n("845038"),
                 E = n("374014"),
                 C = n("223913"),
-                S = n("709463"),
-                g = n("264429"),
+                g = n("709463"),
+                S = n("264429"),
                 _ = n("930291"),
                 I = n("506885"),
                 T = n("981601"),
@@ -40,15 +40,15 @@
                 L = n("171644"),
                 O = n("706530"),
                 y = n("782340"),
-                b = n("375674");
+                P = n("375674");
 
-            function P(e) {
+            function b(e) {
                 let {
                     numUsers: t
                 } = e;
                 return (0, a.jsx)("div", {
-                    className: b.moreContainer,
-                    children: (0, a.jsxs)(u.Text, {
+                    className: P.moreContainer,
+                    children: (0, a.jsxs)(o.Text, {
                         color: "text-muted",
                         variant: "text-sm/medium",
                         children: ["+", t]
@@ -64,15 +64,15 @@
                     count: t
                 });
                 return (0, a.jsxs)("div", {
-                    className: i(b.audienceContainer, {
-                        [b.audienceContainerCollapsed]: n
+                    className: i(P.audienceContainer, {
+                        [P.audienceContainerCollapsed]: n
                     }),
                     children: [(0, a.jsx)("div", {
-                        className: b.audienceIconContainer,
+                        className: P.audienceIconContainer,
                         children: (0, a.jsx)(M.default, {
-                            className: b.audienceIcon
+                            className: P.audienceIcon
                         })
-                    }), (0, a.jsx)(u.Text, {
+                    }), (0, a.jsx)(o.Text, {
                         color: "text-muted",
                         variant: "text-sm/medium",
                         children: l
@@ -97,11 +97,11 @@
                         user: s,
                         channel: i
                     } = this.props, r = (0, a.jsx)("div", {
-                        className: b.draggable,
+                        className: P.draggable,
                         "data-dnd-name": i.name,
                         onMouseEnter: l ? void 0 : this.handleMouseEnter,
                         onMouseLeave: l ? void 0 : this.handleHidePreview,
-                        children: (0, a.jsx)(u.Popout, {
+                        children: (0, a.jsx)(o.Popout, {
                             preload: () => (0, I.default)(s.id, s.getAvatarURL(i.guild_id, 80), {
                                 guildId: i.guild_id,
                                 channelId: i.id
@@ -156,7 +156,7 @@
                             channelId: t.id,
                             guildId: t.guild_id
                         };
-                        v.default.getId() !== e.id && c.default.selectVoiceChannel(t.id), n ? ((0, S.default)(l), o.default.selectParticipant(l.channelId, (0, E.encodeStreamKey)(l))) : (0, f.watchStreamAndTransitionToStream)(l), null == a || a(e.id)
+                        v.default.getId() !== e.id && c.default.selectVoiceChannel(t.id), n ? ((0, g.default)(l), u.default.selectParticipant(l.channelId, (0, E.encodeStreamKey)(l))) : (0, f.watchStreamAndTransitionToStream)(l), null == a || a(e.id)
                     }, this.handleJoinVoice = () => {
                         let {
                             user: e,
@@ -200,7 +200,7 @@
                             previewIsOpen: n,
                             location: l
                         } = this.props;
-                        return (0, a.jsx)(g.default, {
+                        return (0, a.jsx)(S.default, {
                             user: e,
                             channel: t,
                             onWatch: this.handleWatchStream,
@@ -227,7 +227,7 @@
                             voicePlatform: l,
                             shouldShowPreview: s,
                             mute: r,
-                            localMute: o,
+                            localMute: u,
                             localVideoDisabled: d,
                             speaking: c,
                             user: f,
@@ -235,8 +235,8 @@
                             priority: p,
                             collapsed: E,
                             isStreaming: C,
-                            isGuest: S,
-                            nick: g,
+                            isGuest: g,
+                            nick: S,
                             video: _,
                             serverMute: I,
                             serverDeaf: T,
@@ -248,18 +248,18 @@
                             isSelf: j
                         } = this.props, {
                             userPopoutOpen: O
-                        } = this.state, P = L.GAME_CONSOLE_SESSIONS.has(null != n ? n : ""), D = {
+                        } = this.state, b = L.GAME_CONSOLE_SESSIONS.has(null != n ? n : ""), D = {
                             user: f,
                             speaking: c,
                             mute: r,
-                            localMute: o,
+                            localMute: u,
                             localVideoDisabled: d,
                             isStreaming: C,
-                            isGuest: S,
+                            isGuest: g,
                             video: _,
                             priority: p,
                             deaf: h,
-                            nick: g,
+                            nick: S,
                             collapsed: E,
                             overlap: E,
                             serverMute: I,
@@ -269,11 +269,11 @@
                             voicePlatform: l,
                             embeddedApplication: x,
                             avatarContainerClass: i({
-                                [b.userAvatar]: !0
+                                [P.userAvatar]: !0
                             }),
-                            disabled: t && !P,
+                            disabled: t && !b,
                             selected: O,
-                            onClick: P ? void 0 : this.handleClickUser,
+                            onClick: b ? void 0 : this.handleClickUser,
                             onDoubleClick: this.handleWatchStream,
                             onContextMenu: this.handleUserContextMenu,
                             guildId: N.guild_id,
@@ -283,7 +283,7 @@
                         };
                         if (t) {
                             var U;
-                            return (0, a.jsx)(u.Tooltip, {
+                            return (0, a.jsx)(o.Tooltip, {
                                 text: null !== (U = (0, m.default)(n)) && void 0 !== U ? U : y.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
                                 children: e => {
                                     let {
@@ -298,7 +298,7 @@
                                 }
                             })
                         }
-                        return (0, a.jsx)(u.Popout, {
+                        return (0, a.jsx)(o.Popout, {
                             position: "right",
                             renderPopout: C ? this.renderStreamPopout : this.renderHangStatusPopout,
                             shouldShow: s && !O,

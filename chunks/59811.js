@@ -7,13 +7,13 @@
                     return _
                 }
             });
-            var i = n("446674"),
-                l = n("913144");
+            var l = n("446674"),
+                i = n("913144");
             let r = {},
                 s = {},
                 a = {},
-                u = !1,
                 o = !1,
+                u = !1,
                 d = !1;
 
             function c(e) {
@@ -30,19 +30,19 @@
                 } = e;
                 s[n] = null != t ? t : r
             }
-            class E extends i.default.Store {
+            class E extends l.default.Store {
                 get(e) {
                     if (null != e) return s[e]
                 }
                 isFetching() {
-                    return o
+                    return u
                 }
                 hasError() {
                     return d
                 }
                 hasSeen(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                    return null != e && (t ? u : a[e] || !1)
+                    return null != e && (t ? o : a[e] || !1)
                 }
                 isEmpty(e) {
                     if (null == e) return !0;
@@ -51,7 +51,7 @@
                 }
             }
             E.displayName = "WelcomeScreenStore";
-            var _ = new E(l.default, {
+            var _ = new E(i.default, {
                 INVITE_RESOLVE_SUCCESS: c,
                 INVITE_ACCEPT_SUCCESS: c,
                 WELCOME_SCREEN_SUBMIT_SUCCESS: f,
@@ -61,10 +61,10 @@
                         guildId: t,
                         isLurking: n
                     } = e;
-                    a[t] = !0, n && (u = !0)
+                    a[t] = !0, n && (o = !0)
                 },
                 GUILD_STOP_LURKING: function() {
-                    u = !1
+                    o = !1
                 },
                 GUILD_DELETE: function(e) {
                     let {
@@ -75,10 +75,10 @@
                     a[t] = !1
                 },
                 WELCOME_SCREEN_FETCH_START: function() {
-                    o = !0, d = !1
+                    u = !0, d = !1
                 },
                 WELCOME_SCREEN_FETCH_SUCCESS: function(e) {
-                    o = !1, d = !1;
+                    u = !1, d = !1;
                     let {
                         welcomeScreen: t,
                         guildId: n
@@ -86,6 +86,6 @@
                     s[n] = null != t ? t : r
                 },
                 WELCOME_SCREEN_FETCH_FAIL: function() {
-                    o = !1, d = !0
+                    u = !1, d = !0
                 }
             })

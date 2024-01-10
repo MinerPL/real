@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return C
                 }
             });
             var a = n("37983");
@@ -10,20 +10,27 @@
                 s = n.n(l),
                 i = n("65597"),
                 r = n("77078"),
-                u = n("26989"),
-                o = n("697218"),
-                d = n("703433"),
-                c = n("21363"),
-                f = n("608973"),
-                h = n("132881"),
-                p = n("63893");
+                o = n("26989"),
+                u = n("697218"),
+                d = n("763225"),
+                c = n("703433"),
+                f = n("21363"),
+                h = n("608973"),
+                p = n("132881"),
+                m = n("63893");
 
-            function m(e) {
-                let {} = e;
+            function E(e) {
+                let {
+                    userId: t,
+                    guildId: n
+                } = e, l = (0, d.useProfileThemedPanelBackground)(t, n, .7, r.tokens.colors.BACKGROUND_PRIMARY);
                 return (0, a.jsxs)("div", {
-                    className: s(p.header),
+                    className: s(m.header),
+                    style: {
+                        backgroundColor: l
+                    },
                     children: [(0, a.jsx)("div", {
-                        className: s(p.headerTitle),
+                        className: s(m.headerTitle),
                         children: (0, a.jsx)(r.Heading, {
                             variant: "heading-md/semibold",
                             children: "Mod View"
@@ -31,34 +38,40 @@
                     }), (0, a.jsx)("div", {
                         children: (0, a.jsx)(r.KeyCombo, {
                             shortcut: "esc",
-                            keyClassName: p.keyComboInner,
-                            className: p.keyComboContainer
+                            keyClassName: m.keyComboInner,
+                            className: m.keyComboContainer
                         })
                     })]
                 })
             }
 
-            function E(e) {
+            function C(e) {
                 let {
                     userId: t,
                     guildId: n,
                     location: l,
                     className: r,
-                    onNavigate: E
-                } = e, C = (0, i.default)([o.default], () => o.default.getUser(t), [t]), S = (0, i.default)([u.default], () => u.default.getMember(n, t), [n, t]);
-                return null == C || null == S ? null : (0, a.jsxs)("div", {
-                    className: s(p.container, r),
-                    children: [(0, a.jsx)(m, {}), (0, a.jsxs)("div", {
-                        className: s(p.innerContainer),
-                        children: [(0, a.jsx)(f.default, {
+                    onNavigate: C
+                } = e, g = (0, i.default)([u.default], () => u.default.getUser(t), [t]), S = (0, i.default)([o.default], () => o.default.getMember(n, t), [n, t]), _ = (0, d.useProfileThemedPanelBackground)(t, n);
+                return null == g || null == S ? null : (0, a.jsxs)("div", {
+                    className: s(m.container, r),
+                    style: {
+                        backgroundColor: _
+                    },
+                    children: [(0, a.jsx)(E, {
+                        userId: t,
+                        guildId: n
+                    }), (0, a.jsxs)("div", {
+                        className: s(m.innerContainer),
+                        children: [(0, a.jsx)(h.default, {
                             member: S
-                        }), (0, a.jsx)(h.default, {
+                        }), (0, a.jsx)(p.default, {
                             userId: t,
                             guildId: n,
-                            onNavigate: E
-                        }), (0, a.jsx)(c.default, {
+                            onNavigate: C
+                        }), (0, a.jsx)(f.default, {
                             member: S
-                        }), (0, a.jsx)(d.default, {
+                        }), (0, a.jsx)(c.default, {
                             member: S
                         })]
                     })]

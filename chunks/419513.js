@@ -25,8 +25,8 @@
                 x = l("646718"),
                 L = l("782340"),
                 S = l("927694");
-            let v = (0, b.getLogoSize)(96),
-                I = e => {
+            let I = (0, b.getLogoSize)(96),
+                v = e => {
                     let {
                         category: t
                     } = e, {
@@ -82,14 +82,14 @@
                     }), (0, a.jsx)("img", {
                         className: S.categoryLogo,
                         src: (0, p.getCollectiblesAssetURL)(t.logo, {
-                            size: v
+                            size: I
                         }),
                         alt: t.name
                     }), (0, a.jsx)(u.Text, {
                         className: S.summary,
                         variant: "text-md/normal",
                         color: "always-white",
-                        children: t.skuId === o.CollectiblesCategorySkuId.DISXCORE ? (0, a.jsx)(I, {
+                        children: t.skuId === o.CollectiblesCategorySkuId.DISXCORE ? (0, a.jsx)(v, {
                             category: t
                         }) : t.summary
                     }), (0, a.jsx)(h.default, {

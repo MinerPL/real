@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("446674"),
-                u = n("77078"),
-                o = n("255397"),
+                o = n("77078"),
+                u = n("255397"),
                 d = n("103723"),
                 c = n("191145"),
                 f = n("161306"),
@@ -19,8 +19,8 @@
                 m = n("271938"),
                 E = n("26989"),
                 C = n("42887"),
-                S = n("471671"),
-                g = n("754775"),
+                g = n("471671"),
+                S = n("754775"),
                 _ = n("512264"),
                 I = n("387111"),
                 T = n("830251"),
@@ -28,27 +28,27 @@
                 x = n("353927"),
                 N = n("782340"),
                 A = n("146789");
-            let M = u.AvatarSizes.SIZE_80,
-                R = u.AvatarSizes.SIZE_40;
+            let M = o.AvatarSizes.SIZE_80,
+                R = o.AvatarSizes.SIZE_40;
 
             function j(e) {
                 let {
                     participant: t,
                     channel: n,
                     inCall: s,
-                    width: u,
+                    width: o,
                     paused: j,
                     selected: L,
                     fit: O,
                     onVideoResize: y,
-                    blocked: b,
-                    noVideoRender: P = !1,
+                    blocked: P,
+                    noVideoRender: b = !1,
                     pulseSpeakingIndicator: D = !1
                 } = e, U = C.default.getVideoComponent(), w = (0, r.useStateFromStores)([m.default], () => m.default.getId()), {
                     user: F,
                     streamId: k,
                     speaking: V
-                } = t, B = F.id === w, H = (0, T.default)(t), G = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(v.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([C.default], () => null != F.id && C.default.isLocalVideoDisabled(F.id, (0, f.default)(t.type)), [F.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, F.id)), K = I.default.getName(n.getGuildId(), n.id, F) + (z ? " ".concat(N.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = V && (W || G), X = u < 124 ? R : M, {
+                } = t, B = F.id === w, H = (0, T.default)(t), G = (0, r.useStateFromStores)([g.default], () => g.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(v.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([C.default], () => null != F.id && C.default.isLocalVideoDisabled(F.id, (0, f.default)(t.type)), [F.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, F.id)), K = I.default.getName(n.getGuildId(), n.id, F) + (z ? " ".concat(N.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = V && (W || G), X = o < 124 ? R : M, {
                     avatarSrc: J,
                     avatarDecorationSrc: q
                 } = (0, p.default)({
@@ -58,8 +58,8 @@
                     animateOnHover: !Z
                 }), Q = (0, r.useStateFromStores)([c.default], () => c.default.getSelectedParticipant(n.id));
                 return (l.useEffect(() => {
-                    n.isGuildStageVoice() && !H && (null == Q ? void 0 : Q.id) === F.id && o.default.selectParticipant(n.id, null)
-                }, [H]), s && !Y && !P && H && !L && null != U && C.default.supports(x.Features.VIDEO)) ? (0, a.jsx)(_.default, {
+                    n.isGuildStageVoice() && !H && (null == Q ? void 0 : Q.id) === F.id && u.default.selectParticipant(n.id, null)
+                }, [H]), s && !Y && !b && H && !L && null != U && C.default.supports(x.Features.VIDEO)) ? (0, a.jsx)(_.default, {
                     onResize: y,
                     wrapperClassName: A.videoWrapper,
                     className: A.content,
@@ -72,9 +72,9 @@
                     userId: F.id
                 }, k) : (0, a.jsx)("div", {
                     className: i(A.content, {
-                        [A.blockedAvatar]: b
+                        [A.blockedAvatar]: P
                     }),
-                    children: (0, a.jsx)(g.default, {
+                    children: (0, a.jsx)(S.default, {
                         "aria-label": K,
                         src: J,
                         avatarDecoration: q,

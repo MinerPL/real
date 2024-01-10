@@ -74,17 +74,17 @@
                     analyticsLocations: T
                 } = (0, o.default)(), x = s.useRef(null), L = (0, n.default)(x), {
                     buttonColors: S
-                } = (0, d.default)(t.categorySkuId), v = null == S || b ? void 0 : {
+                } = (0, d.default)(t.categorySkuId), I = null == S || b ? void 0 : {
                     background: S.secondary.toHslString(),
                     color: S.text.toHslString()
-                }, I = b || (null == S ? void 0 : S.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
+                }, v = b || (null == S ? void 0 : S.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
                 return (0, a.jsx)(r.Tooltip, {
                     text: C.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
                     delay: g,
                     children: e => (0, a.jsx)(r.Button, {
                         ...e,
                         buttonRef: x,
-                        style: v,
+                        style: I,
                         className: E.giftButton,
                         color: b ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
                         look: r.Button.Looks.FILLED,
@@ -105,7 +105,7 @@
                         children: h ? (0, a.jsx)(i.SeasonalGiftIcon, {
                             hovered: L,
                             isContentDismissed: !0,
-                            themeOverride: I,
+                            themeOverride: v,
                             boxColors: m
                         }) : (0, a.jsx)(c.default, {
                             width: 24,

@@ -31,8 +31,8 @@
                 A = n("560995"),
                 x = n("423741"),
                 R = n("782340"),
-                M = n("972607");
-            class L extends a.Component {
+                L = n("972607");
+            class M extends a.Component {
                 componentDidUpdate() {
                     this.props.locked && this.state.showOpacitySlider && this.setState({
                         showOpacitySlider: !1
@@ -73,7 +73,7 @@
                         showOpacitySlider: p
                     } = this.state;
                     return p && !n ? (0, i.jsxs)(A.default.Bar, {
-                        className: M.opacityHeader,
+                        className: L.opacityHeader,
                         children: [(0, i.jsx)(x.default, {}), (0, i.jsx)(f.default.Icon, {
                             icon: N.default,
                             onClick: this.handleCloseOpacitySettings,
@@ -82,7 +82,7 @@
                     }) : (0, i.jsx)(A.default.Background, {
                         opacityOverride: n || u ? null : 1,
                         children: (0, i.jsx)("div", {
-                            className: s(e, t, M.headerContainer),
+                            className: s(e, t, L.headerContainer),
                             onMouseDown: r,
                             onContextMenu: d,
                             children: (0, i.jsxs)(f.default, {
@@ -91,7 +91,7 @@
                                 toolbar: this.renderWidgetButtons(),
                                 transparent: !0,
                                 children: [u || n || c ? null : (0, i.jsx)(O.default, {
-                                    className: s(M.dragIcon, t),
+                                    className: s(L.dragIcon, t),
                                     width: 20,
                                     height: 20
                                 }), (0, h.renderTitle)({
@@ -165,7 +165,7 @@
                     let e = v.default.getVoiceChannelId();
                     return m.default.getChannel(e)
                 }), l = (0, o.useStateFromStores)([E.default], () => E.default.getGuild(t.guild_id)), s = (0, o.useStateFromStores)([g.default], () => g.default.isCallActive(t.id)), r = (0, c.default)(t), d = (0, o.useStateFromStores)([S.default], () => !!t.isDM() && null != t.getRecipientId() && S.default.isBlocked(t.getRecipientId()));
-                return (0, i.jsx)(L, {
+                return (0, i.jsx)(M, {
                     channel: t,
                     channelName: r,
                     guild: l,

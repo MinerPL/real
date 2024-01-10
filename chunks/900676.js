@@ -1,7 +1,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return T
+                    return N
                 }
             }), l("70102");
             var n = l("37983"),
@@ -16,7 +16,7 @@
                 f = l("468759"),
                 m = l("752736"),
                 I = l("926622");
-            class N extends a.PureComponent {
+            class T extends a.PureComponent {
                 getOverwriteValue(e) {
                     let {
                         allow: t,
@@ -59,25 +59,25 @@
                         permissions: r,
                         locked: u,
                         permissionRender: f
-                    } = this.props, I = null == f ? void 0 : f(s), N = !!(u || I), T = "string" == typeof I ? this.renderDisabledIndicator(I) : null, E = i({
-                        [m.title]: null != T
+                    } = this.props, I = null == f ? void 0 : f(s), T = !!(u || I), N = "string" == typeof I ? this.renderDisabledIndicator(I) : null, E = i({
+                        [m.title]: null != N
                     });
                     return null == r ? (0, n.jsxs)(c.default, {
-                        disabled: N,
+                        disabled: T,
                         value: this.getOverwriteValue(s),
                         onChange: e => this.handleChange(s, e),
                         note: (0, o.renderDescription)(l),
                         helpdeskArticleId: a,
-                        children: [T, (0, n.jsx)("span", {
+                        children: [N, (0, n.jsx)("span", {
                             className: E,
                             children: t
                         })]
                     }, String(s)) : (0, n.jsxs)(d.FormSwitch, {
-                        disabled: N,
+                        disabled: T,
                         value: this.getPermissionValue(s, r),
                         onChange: e => this.handleChange(s, e),
                         note: (0, o.renderDescription)(l),
-                        children: [T, (0, n.jsx)("span", {
+                        children: [N, (0, n.jsx)("span", {
                             className: E,
                             children: t
                         })]
@@ -106,4 +106,4 @@
                     })
                 }
             }
-            var T = N
+            var N = T

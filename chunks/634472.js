@@ -10,20 +10,20 @@
                 s = n.n(l),
                 i = n("446674"),
                 r = n("629109"),
-                u = n("42887"),
-                o = n("316680"),
+                o = n("42887"),
+                u = n("316680"),
                 d = n("829536"),
                 c = n("773336"),
                 f = n("550410"),
                 h = n("397651"),
-                p = i.default.connectStores([u.default], e => {
+                p = i.default.connectStores([o.default], e => {
                     let {
                         userId: t,
                         context: n
                     } = e;
                     return {
-                        currentVolume: u.default.getLocalVolume(t, n),
-                        muted: u.default.isLocalMute(t, n)
+                        currentVolume: o.default.getLocalVolume(t, n),
+                        muted: o.default.isLocalMute(t, n)
                     }
                 })(function(e) {
                     let {
@@ -31,18 +31,18 @@
                         iconClassName: n,
                         sliderClassName: l,
                         userId: i,
-                        currentVolume: u,
+                        currentVolume: o,
                         muted: p,
                         context: m,
                         currentWindow: E = window
                     } = e;
                     return (0, a.jsx)(f.default, {
-                        children: (0, a.jsx)(o.default, {
+                        children: (0, a.jsx)(u.default, {
                             currentWindow: E,
                             iconClassName: s(n, h.controlIcon),
                             sliderClassName: l,
                             className: t,
-                            value: (0, d.amplitudeToPerceptual)(u),
+                            value: (0, d.amplitudeToPerceptual)(o),
                             muted: p,
                             maxValue: c.isPlatformEmbedded ? 200 : 100,
                             onValueChange: e => {

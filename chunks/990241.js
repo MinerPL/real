@@ -1,7 +1,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return T
+                    return N
                 }
             });
             var n = l("37983"),
@@ -16,9 +16,9 @@
                 f = l("167356"),
                 m = l("29106"),
                 I = l("782340"),
-                N = l("640624");
+                T = l("640624");
 
-            function T(e) {
+            function N(e) {
                 let {
                     application: t,
                     canNavigate: l,
@@ -56,7 +56,7 @@
                     selectedPermissionCount: i
                 } = (0, c.default)(l, t);
                 return (0, n.jsx)("div", {
-                    className: N.applicationPermissions,
+                    className: T.applicationPermissions,
                     children: (0, n.jsx)(m.default, {
                         applicationId: t,
                         guildId: l,

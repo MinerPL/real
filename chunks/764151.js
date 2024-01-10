@@ -46,8 +46,8 @@
                 F = s("592407"),
                 H = s("900938"),
                 V = s("435076"),
-                w = s("642807"),
-                k = s("49111"),
+                k = s("642807"),
+                w = s("49111"),
                 Y = s("944305"),
                 K = s("75015"),
                 W = s("453252"),
@@ -129,7 +129,7 @@
                     drag: B,
                     dragSourcePosition: F,
                     drop: H,
-                    setIsDraggable: w
+                    setIsDraggable: k
                 } = (0, _.default)({
                     type: "NEW_MEMBER_ACTION",
                     index: S,
@@ -137,7 +137,7 @@
                     onDragStart: m,
                     onDragComplete: C,
                     onDragReset: O
-                }), k = n.useCallback((e, t) => {
+                }), w = n.useCallback((e, t) => {
                     (0, V.updateNewMemberActionIconData)(e.channelId, t)
                 }, []), Y = n.useCallback(() => {
                     if (null != T) return (0, d.openModalLazy)(async () => {
@@ -150,10 +150,10 @@
                             action: I,
                             onSave: (e, t) => A(S, e, t),
                             onDelete: () => L(S),
-                            onIconUpload: k
+                            onIconUpload: w
                         })
                     })
-                }, [T, I, S, A, L, k]);
+                }, [T, I, S, A, L, w]);
                 if (null == R || null == M) return null;
                 let K = null !== (c = (0, E.getChannelIconComponent)(R)) && void 0 !== c ? c : G.default;
                 return (0, a.jsxs)("div", {
@@ -167,8 +167,8 @@
                         ref: e => B(H(e)),
                         children: [(0, a.jsx)("div", {
                             className: X.dragContainer,
-                            onMouseEnter: () => w(!0),
-                            onMouseLeave: () => w(!1),
+                            onMouseEnter: () => k(!0),
+                            onMouseLeave: () => k(!1),
                             children: (0, a.jsx)(U.default, {
                                 className: X.dragIcon
                             })
@@ -229,14 +229,14 @@
             function et(e) {
                 let {
                     guildId: t
-                } = e, s = (0, r.useStateFromStoresArray)([w.default], () => {
+                } = e, s = (0, r.useStateFromStoresArray)([k.default], () => {
                     var e;
-                    let t = w.default.getSettings();
+                    let t = k.default.getSettings();
                     return null !== (e = t.newMemberActions) && void 0 !== e ? e : []
                 }), l = n.useCallback((e, s) => {
                     if (null == t) return;
                     (0, V.addNewMemberAction)(e);
-                    let a = w.default.getSettings();
+                    let a = k.default.getSettings();
                     if (null == a) return;
                     let {
                         channelId: n
@@ -249,9 +249,9 @@
                     if (null == t) return;
                     let i = null === (l = s[e]) || void 0 === l ? void 0 : l.channelId;
                     if (null == i) return;
-                    let r = w.default.getSettings();
+                    let r = k.default.getSettings();
                     if (null == r) return;
-                    let o = w.default.hasActionIconChanged(i);
+                    let o = k.default.hasActionIconChanged(i);
                     (0, V.updateNewMemberAction)(i, a), (0, V.saveHomeSettings)(t, r, !0).then(() => {
                         (0, V.updateNewMemberActionIcon)(t, i, n, o)
                     })
@@ -367,7 +367,7 @@
                 var t;
                 let {
                     guildId: l
-                } = e, i = (0, r.default)([D.default], () => D.default.getGuild(l)), o = null !== (t = null == i ? void 0 : i.hasFeature(k.GuildFeatures.BANNER)) && void 0 !== t && t, u = n.useCallback((e, t) => {
+                } = e, i = (0, r.default)([D.default], () => D.default.getGuild(l)), o = null !== (t = null == i ? void 0 : i.hasFeature(w.GuildFeatures.BANNER)) && void 0 !== t && t, u = n.useCallback((e, t) => {
                     if (null != l) {
                         if (null == e || void 0 === t) {
                             F.default.updateGuild({
@@ -390,19 +390,19 @@
                         })
                     }
                 }, [l]), E = n.useCallback(e => {
-                    e.preventDefault(), e.stopPropagation(), null != i && ((0, c.trackWithMetadata)(k.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
+                    e.preventDefault(), e.stopPropagation(), null != i && ((0, c.trackWithMetadata)(w.AnalyticEvents.PREMIUM_GUILD_PROMOTION_OPENED, {
                         location: {
-                            section: k.AnalyticsSections.GUILD_SETTINGS_ONBOARDING,
-                            object: k.AnalyticsObjects.LEARN_MORE
+                            section: w.AnalyticsSections.GUILD_SETTINGS_ONBOARDING,
+                            object: w.AnalyticsObjects.LEARN_MORE
                         },
                         guild_id: null == i ? void 0 : i.id,
                         location_stack: []
                     }), (0, S.default)({
                         analyticsLocations: [],
                         analyticsSourceLocation: {
-                            section: k.AnalyticsSections.GUILD_SETTINGS_ONBOARDING,
-                            object: k.AnalyticsObjects.ONBOARDING_EDIT,
-                            page: k.AnalyticsPages.GUILD_SETTINGS
+                            section: w.AnalyticsSections.GUILD_SETTINGS_ONBOARDING,
+                            object: w.AnalyticsObjects.ONBOARDING_EDIT,
+                            page: w.AnalyticsPages.GUILD_SETTINGS
                         },
                         guild: i,
                         perks: (0, Y.guildBannerUpsellPerks)()
@@ -431,7 +431,7 @@
                         }), (0, a.jsx)(I.default, {
                             className: X.boostIndicator,
                             guild: i,
-                            guildFeature: k.GuildFeatures.BANNER,
+                            guildFeature: w.GuildFeatures.BANNER,
                             onClick: E
                         })]
                     }), (0, a.jsxs)("div", {
@@ -465,7 +465,7 @@
                         }), (0, a.jsx)(I.default, {
                             className: X.boostIndicator,
                             guild: i,
-                            guildFeature: k.GuildFeatures.BANNER,
+                            guildFeature: w.GuildFeatures.BANNER,
                             onClick: E
                         })]
                     }), (0, a.jsxs)("div", {
@@ -542,7 +542,7 @@
                     }, [l.channelId]),
                     x = n.useCallback((e, s) => {
                         if (null == t) return;
-                        let a = w.default.getSettings();
+                        let a = k.default.getSettings();
                         null != a && ((0, V.updateResourceChannel)(l.channelId, e), (0, V.saveHomeSettings)(t, a).then(() => {
                             (0, V.updateResourceChannelIcon)(t, e.channelId, s)
                         }))
@@ -665,11 +665,11 @@
             function eo(e) {
                 let {
                     guildId: t
-                } = e, s = (0, r.default)([D.default], () => D.default.getGuild(t)), l = (0, r.useStateFromStoresArray)([w.default], () => {
+                } = e, s = (0, r.default)([D.default], () => D.default.getGuild(t)), l = (0, r.useStateFromStoresArray)([k.default], () => {
                     var e, t;
-                    let s = w.default.getSettings();
+                    let s = k.default.getSettings();
                     return null !== (t = null === (e = s.resourceChannels) || void 0 === e ? void 0 : e.map(e => e.channelId)) && void 0 !== t ? t : []
-                }), i = (0, r.useStateFromStoresArray)([w.default], () => w.default.getDismissedSuggestedChannelIds(t)), o = (0, r.default)([R.default], () => null == t ? [] : R.default.getSelectableChannels(t)), u = o.filter(e => !i.includes(e.channel.id) && !l.includes(e.channel.id) && e.channel.type === k.ChannelTypes.GUILD_TEXT && B.default.canEveryoneRole(k.Permissions.VIEW_CHANNEL, e.channel) && !B.default.canEveryoneRole(k.Permissions.SEND_MESSAGES, e.channel) && e.channel.id !== (null == s ? void 0 : s.rulesChannelId)).slice(0, 5), c = n.useCallback(() => {
+                }), i = (0, r.useStateFromStoresArray)([k.default], () => k.default.getDismissedSuggestedChannelIds(t)), o = (0, r.default)([R.default], () => null == t ? [] : R.default.getSelectableChannels(t)), u = o.filter(e => !i.includes(e.channel.id) && !l.includes(e.channel.id) && e.channel.type === w.ChannelTypes.GUILD_TEXT && B.default.canEveryoneRole(w.Permissions.VIEW_CHANNEL, e.channel) && !B.default.canEveryoneRole(w.Permissions.SEND_MESSAGES, e.channel) && e.channel.id !== (null == s ? void 0 : s.rulesChannelId)).slice(0, 5), c = n.useCallback(() => {
                     let e = u.map(e => e.channel.id);
                     (0, V.dismissSuggestedChannels)(t, e)
                 }, [t, u]);
@@ -712,9 +712,9 @@
             function ed(e) {
                 let {
                     guildId: t
-                } = e, l = (0, r.useStateFromStoresArray)([w.default], () => {
+                } = e, l = (0, r.useStateFromStoresArray)([k.default], () => {
                     var e;
-                    let t = w.default.getSettings();
+                    let t = k.default.getSettings();
                     return null !== (e = t.resourceChannels) && void 0 !== e ? e : []
                 }), i = l.map(e => ({
                     ...e,
@@ -725,7 +725,7 @@
                     handleDragComplete: c
                 } = (0, T.default)(i, V.reorderResourceChannels), E = n.useCallback((e, s) => {
                     if (null == t) return;
-                    let a = w.default.getSettings();
+                    let a = k.default.getSettings();
                     null != a && ((0, V.addResourceChannel)(e), (0, V.saveHomeSettings)(t, a).then(() => {
                         (0, V.updateResourceChannelIcon)(t, e.channelId, s)
                     }))
@@ -777,9 +777,9 @@
                 let {
                     saveOnClose: t,
                     guildId: s
-                } = e, l = (0, r.useStateFromStoresObject)([w.default], () => {
+                } = e, l = (0, r.useStateFromStoresObject)([k.default], () => {
                     var e;
-                    let t = w.default.getSettings();
+                    let t = k.default.getSettings();
                     return null !== (e = t.welcomeMessage) && void 0 !== e ? e : {
                         authorIds: [],
                         message: ""
@@ -793,7 +793,7 @@
                 }], E = (0, r.default)([C.default], () => C.default.theme);
                 return n.useEffect(() => () => {
                     if (null == s) return;
-                    let e = w.default.getSettings();
+                    let e = k.default.getSettings();
                     (0, V.saveHomeSettings)(s, e)
                 }, [t, s]), (0, a.jsxs)("div", {
                     className: X.page,
@@ -913,8 +913,8 @@
 
             function eE() {
                 let e = (0, r.default)([H.default], () => H.default.getGuild()),
-                    t = (0, r.default)([w.default], () => w.default.getSettings()),
-                    s = (0, r.default)([w.default], () => w.default.getSubmitting());
+                    t = (0, r.default)([k.default], () => k.default.getSettings()),
+                    s = (0, r.default)([k.default], () => k.default.getSubmitting());
                 return null == e ? null : (0, a.jsx)(u.default, {
                     onSave: () => {
                         try {

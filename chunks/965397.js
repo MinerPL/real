@@ -1,21 +1,21 @@
             "use strict";
-            n.r(t), n.d(t, {
+            A.r(t), A.d(t, {
                 default: function() {
-                    return f
+                    return c
                 }
-            }), n("222007");
-            var l = n("37983"),
-                a = n("884691"),
-                s = n("414456"),
-                i = n.n(s),
-                u = n("458960"),
-                r = n("77078"),
-                o = n("866893");
-            let d = {
+            }), A("222007");
+            var a = A("37983"),
+                l = A("884691"),
+                n = A("414456"),
+                r = A.n(n),
+                s = A("458960"),
+                o = A("77078"),
+                i = A("866893");
+            let u = {
                 friction: 7,
                 tension: 60
             };
-            class c extends a.Component {
+            class d extends l.Component {
                 componentWillAppear(e) {
                     this.animateTo(1).start(e)
                 }
@@ -26,11 +26,11 @@
                     let {
                         reducedMotion: t
                     } = this.context;
-                    t.enabled ? this.animateTo(0).start(e) : u.default.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(e)
+                    t.enabled ? this.animateTo(0).start(e) : s.default.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(e)
                 }
                 animateTo(e) {
-                    return u.default.spring(this.animation, {
-                        ...d,
+                    return s.default.spring(this.animation, {
+                        ...u,
                         toValue: e
                     })
                 }
@@ -38,7 +38,7 @@
                     let {
                         reducedMotion: e
                     } = this.context;
-                    return u.default.accelerate({
+                    return s.default.accelerate({
                         opacity: this.animation,
                         transform: e.enabled ? void 0 : [{
                             translateY: this.animation.interpolate({
@@ -53,15 +53,15 @@
                         className: e,
                         children: t
                     } = this.props;
-                    return (0, l.jsx)(u.default.div, {
-                        className: i(e, o.slider),
+                    return (0, a.jsx)(s.default.div, {
+                        className: r(e, i.slider),
                         style: this.getAnimatedStyle(),
                         children: t
                     })
                 }
                 constructor(...e) {
-                    super(...e), this.animation = new u.default.Value(0)
+                    super(...e), this.animation = new s.default.Value(0)
                 }
             }
-            c.contextType = r.AccessibilityPreferencesContext;
-            var f = c
+            d.contextType = o.AccessibilityPreferencesContext;
+            var c = d

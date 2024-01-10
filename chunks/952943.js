@@ -15,8 +15,8 @@
                 f = l("900938"),
                 m = l("49111");
             let I = [],
-                N = [],
-                T = null,
+                T = [],
+                N = null,
                 E = null,
                 h = null,
                 g = !1,
@@ -43,7 +43,7 @@
                     let e = f.default.getProps().integrations;
                     null == e && (p = !0), I = null != e ? e : []
                 } else I = [];
-                if (N = null != n && u.default.can(m.Permissions.MANAGE_WEBHOOKS, n) ? c.default.getWebhooksForGuild(n.id) : [], !e && null != E) {
+                if (T = null != n && u.default.can(m.Permissions.MANAGE_WEBHOOKS, n) ? c.default.getWebhooksForGuild(n.id) : [], !e && null != E) {
                     let e = v(E.id);
                     null != e && (E = e)
                 }
@@ -51,7 +51,7 @@
                     let e = L(h.id);
                     null != e && (h = e)
                 }
-                T = null, S = m.FormStates.OPEN, O = {}, _ = !1
+                N = null, S = m.FormStates.OPEN, O = {}, _ = !1
             }
             let M = i.debounce(() => {
                 _ && (null != E ? i.isEqual(E, v(E.id)) && (_ = !1) : null != h && i.isEqual(h, L(h.id)) && (_ = !1), !_ && b.emitChange())
@@ -67,7 +67,7 @@
             }
 
             function L(e) {
-                return N.find(t => {
+                return T.find(t => {
                     let {
                         id: l
                     } = t;
@@ -91,10 +91,10 @@
                     return C
                 }
                 get webhooks() {
-                    return N
+                    return T
                 }
                 get editedCommandId() {
-                    return T
+                    return N
                 }
                 get editedIntegration() {
                     return E
@@ -155,21 +155,21 @@
                     let {
                         commandId: t
                     } = e;
-                    T = t, E = null, h = null, O = {}, _ = !0
+                    N = t, E = null, h = null, O = {}, _ = !0
                 },
                 INTEGRATION_SETTINGS_STOP_EDITING_COMMAND: function(e) {
                     let {
                         commandId: t
                     } = e;
-                    if (null == T || T !== t) return !1;
-                    T = null, O = {}, _ = !1
+                    if (null == N || N !== t) return !1;
+                    N = null, O = {}, _ = !1
                 },
                 INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: function(e) {
                     let {
                         integrationId: t
                     } = e, l = v(t);
                     if (null == l) return !1;
-                    E = l, T = null, h = null, O = {}, _ = !1
+                    E = l, N = null, h = null, O = {}, _ = !1
                 },
                 INTEGRATION_SETTINGS_STOP_EDITING_INTEGRATION: function() {
                     E = null, O = {}, _ = !1
@@ -197,13 +197,13 @@
                         webhookId: t
                     } = e, l = L(t);
                     if (null == l) return !1;
-                    h = l, T = null, E = null, O = {}, _ = !1
+                    h = l, N = null, E = null, O = {}, _ = !1
                 },
                 INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function() {
                     h = null, O = {}, _ = !1
                 },
                 GUILD_SETTINGS_CLOSE: function() {
-                    n = null, I = [], N = [], T = null, E = null, h = null, S = m.FormStates.CLOSED, _ = !1
+                    n = null, I = [], T = [], N = null, E = null, h = null, S = m.FormStates.CLOSED, _ = !1
                 },
                 GUILD_SETTINGS_LOADED_INTEGRATIONS: function(e) {
                     let {
@@ -257,8 +257,8 @@
                     } = e;
                     if (null == n || t !== n.id || null == a || S === m.FormStates.SUBMITTING) return !1;
                     g = !1;
-                    for (let e = N.length - 1; e >= 0; e--) {
-                        let t = N[e];
+                    for (let e = T.length - 1; e >= 0; e--) {
+                        let t = T[e];
                         if (null != l && (null == t ? void 0 : t.channel_id) !== l) continue;
                         let n = a.find(e => {
                             let {
@@ -271,19 +271,19 @@
                                 ...t,
                                 ...n
                             };
-                            N[e] = l, !_ && (null == h ? void 0 : h.id) === l.id && (h = l)
-                        } else(null == h ? void 0 : h.id) === t.id && (h = null), N.splice(e, 1)
+                            T[e] = l, !_ && (null == h ? void 0 : h.id) === l.id && (h = l)
+                        } else(null == h ? void 0 : h.id) === t.id && (h = null), T.splice(e, 1)
                     }
                     for (let e of a) {
-                        let t = N.find(t => {
+                        let t = T.find(t => {
                             let {
                                 id: l
                             } = t;
                             if (l === e.id) return !0
                         });
-                        null == t && N.push(e)
+                        null == t && T.push(e)
                     }
-                    N = [...N], M()
+                    T = [...T], M()
                 },
                 INTEGRATION_SETTINGS_SUBMITTING: function() {
                     S = m.FormStates.SUBMITTING, O = {}

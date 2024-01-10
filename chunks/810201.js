@@ -16,8 +16,8 @@
                 f = l("421475"),
                 m = l("49111"),
                 I = l("782340"),
-                N = l("788933"),
-                T = l("277482"),
+                T = l("788933"),
+                N = l("277482"),
                 E = l("57213");
 
             function h(e) {
@@ -72,10 +72,10 @@
                             developersArticle: m.MarketingURLs.API_DOCS_WEBHOOKS
                         })
                     }), (0, n.jsx)(i.FormDivider, {
-                        className: N.headerDivider
+                        className: T.headerDivider
                     }), g.length > 0 ? (0, n.jsxs)(n.Fragment, {
                         children: [(0, n.jsx)(i.Button, {
-                            className: N.createButton,
+                            className: T.createButton,
                             size: i.Button.Sizes.SMALL,
                             disabled: !j,
                             onClick: L,
@@ -89,19 +89,19 @@
                             canNavigate: A
                         })]
                     }) : function(e, t, l) {
-                        let a = (0, s.isThemeDark)(e) ? T : E;
+                        let a = (0, s.isThemeDark)(e) ? N : E;
                         return (0, n.jsxs)(u.default, {
                             direction: u.default.Direction.VERTICAL,
                             align: u.default.Align.CENTER,
                             children: [(0, n.jsx)("img", {
                                 alt: "",
                                 src: a,
-                                className: N.emptyStateImage
+                                className: T.emptyStateImage
                             }), (0, n.jsx)(i.Heading, {
                                 variant: "heading-md/semibold",
                                 children: I.default.Messages.INTEGRATIONS_WEBHOOKS_EMPTY
                             }), (0, n.jsx)(i.Button, {
-                                className: N.emptyStateButton,
+                                className: T.emptyStateButton,
                                 disabled: !t,
                                 onClick: l,
                                 children: I.default.Messages.INTEGRATIONS_WEBHOOKS_EMPTY_BUTTON

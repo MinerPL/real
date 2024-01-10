@@ -23,18 +23,18 @@
                         let l = u.default.getHighestRole(e);
                         return !u.default.isRoleHigher(e, l, t)
                     }),
-                    N = [],
-                    T = (0, f.default)(e, t);
-                null != T && N.push(T);
+                    T = [],
+                    N = (0, f.default)(e, t);
+                null != N && T.push(N);
                 let E = (0, d.default)({
                     id: t.id,
                     label: m.default.Messages.COPY_ID_ROLE
                 });
-                null != E && N.push(E);
+                null != E && T.push(E);
                 let h = (null === (l = t.tags) || void 0 === l ? void 0 : l.guild_connections) === null,
                     g = t.managed && !h,
                     p = null != t && t.id === e.id;
-                return !I && !g && !p && N.push((0, n.jsx)(s.MenuGroup, {
+                return !I && !g && !p && T.push((0, n.jsx)(s.MenuGroup, {
                     children: (0, n.jsx)(s.MenuItem, {
                         id: "delete-role",
                         label: m.default.Messages.DELETE,
@@ -53,5 +53,5 @@
                             })
                         }
                     })
-                }, "delete-role")), N
+                }, "delete-role")), T
             }

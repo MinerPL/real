@@ -16,8 +16,8 @@
                 f = l("611183"),
                 m = l("608684"),
                 I = l("766274"),
-                N = l("145131"),
-                T = l("461380"),
+                T = l("145131"),
+                N = l("461380"),
                 E = l("841811"),
                 h = l("315102"),
                 g = l("306160"),
@@ -106,13 +106,13 @@
                     className: C.body,
                     children: [(0, n.jsx)(d.FormDivider, {
                         className: C.topDivider
-                    }), (0, n.jsxs)(N.default, {
-                        children: [(0, n.jsx)(N.default.Child, {
+                    }), (0, n.jsxs)(T.default, {
+                        children: [(0, n.jsx)(T.default.Child, {
                             shrink: 1,
                             grow: 0,
-                            children: (0, n.jsxs)(N.default, {
+                            children: (0, n.jsxs)(T.default, {
                                 className: C.avatarWrapper,
-                                direction: N.default.Direction.VERTICAL,
+                                direction: T.default.Direction.VERTICAL,
                                 children: [(0, n.jsx)(m.default, {
                                     image: s.avatar,
                                     onChange: e => {
@@ -127,10 +127,10 @@
                                     children: M.avatar
                                 }) : null]
                             })
-                        }), (0, n.jsxs)(N.default, {
-                            direction: N.default.Direction.VERTICAL,
-                            children: [(0, n.jsxs)(N.default, {
-                                children: [(0, n.jsx)(N.default.Child, {
+                        }), (0, n.jsxs)(T.default, {
+                            direction: T.default.Direction.VERTICAL,
+                            children: [(0, n.jsxs)(T.default, {
+                                children: [(0, n.jsx)(T.default.Child, {
                                     basis: "50%",
                                     children: (0, n.jsx)(d.FormItem, {
                                         title: A.default.Messages.WEBHOOK_FORM_NAME,
@@ -145,7 +145,7 @@
                                             error: M.name
                                         })
                                     })
-                                }), (0, n.jsx)(N.default.Child, {
+                                }), (0, n.jsx)(T.default.Child, {
                                     basis: "50%",
                                     children: (0, n.jsx)(d.FormItem, {
                                         title: A.default.Messages.CHANNEL,
@@ -163,7 +163,7 @@
                                 })]
                             }), (0, n.jsx)(d.FormDivider, {
                                 className: C.bottomDivider
-                            }), (0, n.jsxs)(N.default, {
+                            }), (0, n.jsxs)(T.default, {
                                 children: [(0, n.jsx)(d.Tooltip, {
                                     text: A.default.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL,
                                     forceOpen: L,
@@ -203,19 +203,19 @@
                     editable: !0,
                     id: t,
                     className: i(C.card, S ? C.pulse : null),
-                    children: (0, n.jsxs)(N.default, {
-                        direction: N.default.Direction.VERTICAL,
+                    children: (0, n.jsxs)(T.default, {
+                        direction: T.default.Direction.VERTICAL,
                         children: [(0, n.jsx)(d.Clickable, {
                             className: C.header,
                             "aria-expanded": h,
                             onClick: v,
-                            children: (0, n.jsxs)(N.default, {
-                                align: N.default.Align.CENTER,
+                            children: (0, n.jsxs)(T.default, {
+                                align: T.default.Align.CENTER,
                                 children: [(0, n.jsx)(O.default, {
                                     name: l.name,
                                     imageSrc: P,
                                     details: G
-                                }), (0, n.jsx)(T.default, {
+                                }), (0, n.jsx)(N.default, {
                                     className: C.expandIcon,
                                     expanded: h,
                                     "aria-hidden": !0

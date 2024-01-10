@@ -19,13 +19,13 @@
                     return p
                 }
             });
-            var i = n("592407"),
-                l = n("393414"),
+            var l = n("592407"),
+                i = n("393414"),
                 r = n("305961"),
                 s = n("466818"),
                 a = n("447038"),
-                u = n("49111"),
-                o = n("724210");
+                o = n("49111"),
+                u = n("724210");
             async function d(e) {
                 return await (0, a.initializeMemberSafetyStoreV2)(e)
             }
@@ -49,5 +49,5 @@
             function p(e) {
                 let t = (0, s.canAccessMemberSafetyPage)(e),
                     n = r.default.getGuild(e);
-                return !!t && null != n && (n.hasFeature(u.GuildFeatures.COMMUNITY) || n.hasFeature(u.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? ((0, l.transitionTo)(u.Routes.CHANNEL(e, o.StaticChannelRoute.MEMBER_SAFETY)), !0) : (i.default.open(n.id, u.GuildSettingsSections.MEMBERS), !0))
+                return !!t && null != n && (n.hasFeature(o.GuildFeatures.COMMUNITY) || n.hasFeature(o.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? ((0, i.transitionTo)(o.Routes.CHANNEL(e, u.StaticChannelRoute.MEMBER_SAFETY)), !0) : (l.default.open(n.id, o.GuildSettingsSections.MEMBERS), !0))
             }

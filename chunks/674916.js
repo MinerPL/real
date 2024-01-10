@@ -23,8 +23,8 @@
                     imageSrc: f,
                     iconBackgroundColor: m,
                     iconClassName: I,
-                    details: N,
-                    detailsClassName: T,
+                    details: T,
+                    detailsClassName: N,
                     isHeader: E,
                     isPremium: h
                 } = e;
@@ -65,7 +65,7 @@
                             detailsClassName: f,
                             isHeader: m,
                             isPremium: I
-                        } = e, N = null == a ? void 0 : a.map((e, t) => {
+                        } = e, T = null == a ? void 0 : a.map((e, t) => {
                             let {
                                 icon: l,
                                 text: a
@@ -106,14 +106,14 @@
                                 direction: r.default.Direction.HORIZONTAL,
                                 align: r.default.Align.CENTER,
                                 wrap: r.default.Wrap.WRAP,
-                                children: N
+                                children: T
                             })]
                         })
                     }({
                         name: t,
                         description: l,
-                        details: N,
-                        detailsClassName: T,
+                        details: T,
+                        detailsClassName: N,
                         isHeader: E,
                         isPremium: h
                     })]

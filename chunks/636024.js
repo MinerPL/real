@@ -1,7 +1,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 useIntegrationPermissionMemberSearch: function() {
-                    return N
+                    return T
                 }
             }), l("424973"), l("222007"), l("843762");
             var n = l("884691"),
@@ -17,12 +17,12 @@
                 m = l("978900"),
                 I = l("49111");
 
-            function N(e) {
+            function T(e) {
                 let t = (0, r.useStateFromStores)([d.default], () => d.default.getGuild(e));
                 s(null != t, "guild must be present to be editing its integration settings");
                 let l = (0, r.useStateFromStores)([u.default], () => u.default.getHighestRole(t)),
                     a = (0, r.useStateFromStoresArray)([o.default], () => o.default.getMembers(e), [e]),
-                    N = (0, r.useStateFromStoresObject)([c.default], () => c.default.getUsers()),
+                    T = (0, r.useStateFromStoresObject)([c.default], () => c.default.getUsers()),
                     h = (0, r.useStateFromStoresArray)([d.default], () => {
                         var t, l;
                         return Object.values(null !== (l = null === (t = d.default.getGuild(e)) || void 0 === t ? void 0 : t.roles) && void 0 !== l ? l : {})
@@ -30,7 +30,7 @@
                     g = n.useMemo(() => {
                         let e = [];
                         for (let l of a) {
-                            let n = N[l.userId];
+                            let n = T[l.userId];
                             if (null == n || n.bot) continue;
                             let a = n.id !== t.ownerId && !f.default.can({
                                 permission: I.Permissions.ADMINISTRATOR,
@@ -45,7 +45,7 @@
                             })
                         }
                         return e
-                    }, [t, a, N]),
+                    }, [t, a, T]),
                     p = e => {
                         var t;
                         return e.managed && (null === (t = e.tags) || void 0 === t ? void 0 : t.bot_id) != null
@@ -70,7 +70,7 @@
                                 return e.startsWith("@") ? e.substr(1) : e
                             }(O),
                             l = O.startsWith("@") ? S.filter(t => t.id === e) : S,
-                            n = (0, m.filterPermissionSearchItems)(g, T, t),
+                            n = (0, m.filterPermissionSearchItems)(g, N, t),
                             a = (0, m.filterPermissionSearchItems)(l, E, t);
                         return {
                             members: n,
@@ -85,7 +85,7 @@
                 }
             }
 
-            function T(e) {
+            function N(e) {
                 let t = [e.username];
                 return (null == e ? void 0 : e.nick) != null && t.push(e.nick), {
                     id: e.id,

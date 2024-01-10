@@ -16,8 +16,8 @@
                 f = l("669491"),
                 m = l("77078"),
                 I = l("970728"),
-                N = l("133403"),
-                T = l("145079"),
+                T = l("133403"),
+                N = l("145079"),
                 E = l("534291"),
                 h = l("87657"),
                 g = l("841098"),
@@ -68,7 +68,7 @@
                                     user: t,
                                     size: m.AvatarSizes.SIZE_20,
                                     className: P.avatar
-                                }), (0, n.jsx)(T.default, {
+                                }), (0, n.jsx)(N.default, {
                                     className: P.username,
                                     discriminatorClass: P.discriminator,
                                     user: t
@@ -114,7 +114,7 @@
                                 deadline: a.getExpiresAt()
                             })
                         })
-                    }), (0, n.jsx)(N.default, {
+                    }), (0, n.jsx)(T.default, {
                         className: P.revokeInvite,
                         onClick: () => {
                             I.default.revokeInvite(a)
@@ -131,10 +131,10 @@
                     channel: r = null,
                     showChannel: d = !1,
                     loading: I = !1,
-                    canCreateInvites: N = !1
+                    canCreateInvites: T = !1
                 } = e;
                 o(null != s, "guild is required");
-                let T = (0, L.useInvitesDisabledPermission)(s),
+                let N = (0, L.useInvitesDisabledPermission)(s),
                     {
                         enableInvitesDisabled: h
                     } = (0, L.useInvitesDisabledExperiment)(s),
@@ -145,11 +145,11 @@
                     C = s.hasFeature(j.GuildFeatures.INVITES_DISABLED) || p && (null == A ? void 0 : A.invitesDisabledUntil) != null && new Date(A.invitesDisabledUntil) > new Date,
                     [x, D] = a.useState(!1);
                 a.useEffect(() => {
-                    T && L.InvitesDisabledExperiment.trackExposure({
+                    N && L.InvitesDisabledExperiment.trackExposure({
                         guildId: s.id,
                         location: "5c23b0_1"
                     })
-                }, [T, h, s.id]);
+                }, [N, h, s.id]);
                 let H = (0, g.default)(),
                     k = a.useMemo(() => null == t || I ? [] : u(t).sortBy(e => {
                         var t, l;
@@ -259,7 +259,7 @@
                                 children: [(0, n.jsx)(m.FormText, {
                                     className: y.marginBottom20,
                                     type: m.FormTextTypes.DESCRIPTION,
-                                    children: N ? b.default.Messages.SETTINGS_INVITE_TIP.format({
+                                    children: T ? b.default.Messages.SETTINGS_INVITE_TIP.format({
                                         onCreateInvite: U
                                     }) : b.default.Messages.SETTINGS_INVITE_TIP_WITHOUT_CREATE
                                 }), (h || p || C) && (0, n.jsxs)("div", {
@@ -267,7 +267,7 @@
                                     children: [(0, n.jsx)(m.Button, {
                                         size: m.Button.Sizes.SMALL,
                                         color: C ? m.Button.Colors.BRAND : m.Button.Colors.RED,
-                                        disabled: !T,
+                                        disabled: !N,
                                         submitting: x,
                                         onClick: w,
                                         children: C ? b.default.Messages.ENABLE_INVITES : b.default.Messages.DISABLE_INVITES

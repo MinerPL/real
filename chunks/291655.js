@@ -4,18 +4,18 @@
                     return E
                 }
             });
-            var i = n("37983"),
-                l = n("884691"),
+            var l = n("37983"),
+                i = n("884691"),
                 r = n("414456"),
                 s = n.n(r),
                 a = n("193865"),
-                u = n("780571"),
-                o = n("39331"),
+                o = n("780571"),
+                u = n("39331"),
                 d = n("596368"),
                 c = n("227439"),
                 f = n("877671"),
-                E = l.memo(function(e) {
-                    var t, n, l;
+                E = i.memo(function(e) {
+                    var t, n, i;
                     let {
                         message: r,
                         channel: E,
@@ -23,17 +23,17 @@
                         className: p,
                         isGroupStart: h,
                         hideSimpleEmbedContent: S = !0,
-                        disableInteraction: m
-                    } = e, M = (0, a.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = r.editedTimestamp) && void 0 !== t ? t : r.timestamp).valueOf()), L = (0, a.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == E ? void 0 : E.guild_id) && void 0 !== n ? n : "", (null !== (l = r.editedTimestamp) && void 0 !== l ? l : r.timestamp).valueOf()), {
-                        content: A
-                    } = (0, o.default)(r, {
+                        disableInteraction: T
+                    } = e, m = (0, a.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = r.editedTimestamp) && void 0 !== t ? t : r.timestamp).valueOf()), C = (0, a.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == E ? void 0 : E.guild_id) && void 0 !== n ? n : "", (null !== (i = r.editedTimestamp) && void 0 !== i ? i : r.timestamp).valueOf()), {
+                        content: M
+                    } = (0, u.default)(r, {
                         hideSimpleEmbedContent: S,
-                        allowList: M.showListsAndHeaders || L.showListsAndHeaders,
-                        allowHeading: M.showListsAndHeaders || L.showListsAndHeaders,
-                        allowLinks: M.showMaskedLinks || L.showMaskedLinks,
-                        previewLinkTarget: M.showMaskedLinks || L.showMaskedLinks
+                        allowList: m.showListsAndHeaders || C.showListsAndHeaders,
+                        allowHeading: m.showListsAndHeaders || C.showListsAndHeaders,
+                        allowLinks: m.showMaskedLinks || C.showMaskedLinks,
+                        previewLinkTarget: m.showMaskedLinks || C.showMaskedLinks
                     });
-                    return (0, i.jsx)(u.default, {
+                    return (0, l.jsx)(o.default, {
                         compact: _,
                         className: s(p, {
                             [f.message]: !0,
@@ -45,7 +45,7 @@
                             channel: E,
                             guildId: void 0
                         }),
-                        childrenMessageContent: (0, d.default)(e, A),
-                        disableInteraction: m
+                        childrenMessageContent: (0, d.default)(e, M),
+                        disableInteraction: T
                     })
                 })

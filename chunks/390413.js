@@ -10,8 +10,8 @@
             var a, l, s = n("37983"),
                 i = n("884691"),
                 r = n("414456"),
-                u = n.n(r),
-                o = n("77078"),
+                o = n.n(r),
+                u = n("77078"),
                 d = n("461380"),
                 c = n("67602"),
                 f = n("89195"),
@@ -28,21 +28,21 @@
                     className: m,
                     onHover: E,
                     onFocus: C
-                } = e, [S, g] = i.useState(!0), _ = (0, s.jsx)("div", {
+                } = e, [g, S] = i.useState(!0), _ = (0, s.jsx)("div", {
                     className: f.iconWrapper,
                     children: (0, s.jsx)(d.default, {
-                        direction: S ? d.default.Directions.RIGHT : d.default.Directions.DOWN
+                        direction: g ? d.default.Directions.RIGHT : d.default.Directions.DOWN
                     })
                 });
                 return (0, s.jsxs)("div", {
-                    className: u(f.listWrapper, m),
-                    children: [(0, s.jsx)(o.Button, {
+                    className: o(f.listWrapper, m),
+                    children: [(0, s.jsx)(u.Button, {
                         className: f.collapseBtn,
                         innerClassName: f.collapseBtnContent,
-                        color: o.ButtonColors.CUSTOM,
+                        color: u.ButtonColors.CUSTOM,
                         onMouseEnter: E,
                         onFocus: C,
-                        onClick: () => g(!S),
+                        onClick: () => S(!g),
                         children: l ? (0, s.jsxs)(s.Fragment, {
                             children: [(0, s.jsx)(c.ContentBlob, {
                                 width: 34,
@@ -52,19 +52,19 @@
                                 opacity: .08
                             })]
                         }) : (0, s.jsxs)(s.Fragment, {
-                            children: [(0, s.jsx)(o.Text, {
+                            children: [(0, s.jsx)(u.Text, {
                                 variant: "text-sm/medium",
                                 children: t
                             }), _]
                         })
                     }), (0, s.jsx)("ul", {
-                        className: u(f.connectionList, {
-                            [f.isCollapsed]: S
+                        className: o(f.connectionList, {
+                            [f.isCollapsed]: g
                         }),
                         children: r ? Array.from({
                             length: p
                         }).map((e, t) => (0, s.jsxs)("div", {
-                            className: u({
+                            className: o({
                                 [h.mutualFriendItem]: 0 === a,
                                 [h.mutualGuildsItem]: 1 === a
                             }),

@@ -50,7 +50,7 @@
                 H = s("782340"),
                 V = s("761356");
 
-            function w(e) {
+            function k(e) {
                 let {
                     guild: t
                 } = e, s = t.canHaveRaidActivityAlerts(), l = (0, o.useStateFromStores)([m.default], () => null != t && m.default.can(F.Permissions.MANAGE_GUILD, t), [t]), {
@@ -195,7 +195,7 @@
                 }) : null
             }
 
-            function k(e) {
+            function w(e) {
                 let {
                     guild: t
                 } = e, s = (0, o.useStateFromStores)([m.default], () => null != t && m.default.can(F.Permissions.MANAGE_GUILD, t), [t]), l = n.useCallback(async e => {
@@ -417,7 +417,7 @@
                     titleClassName: V.headerContainer,
                     children: [(0, a.jsx)(W, {
                         guild: t
-                    }), (0, a.jsx)(k, {
+                    }), (0, a.jsx)(w, {
                         guild: t
                     }), (0, a.jsx)(z, {
                         guild: t,
@@ -433,7 +433,7 @@
                                 guild: t
                             })
                         })]
-                    }) : (0, a.jsx)(w, {
+                    }) : (0, a.jsx)(k, {
                         guild: t
                     })]
                 })

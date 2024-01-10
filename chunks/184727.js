@@ -9,8 +9,8 @@
                 s = n("77078"),
                 i = n("272030"),
                 r = n("861370"),
-                u = n("377114"),
-                o = n("907566"),
+                o = n("377114"),
+                u = n("907566"),
                 d = n("71102"),
                 c = n("187163"),
                 f = n("782340");
@@ -24,15 +24,15 @@
                     hideEditButton: E = !1
                 } = e, {
                     isEntryAdmin: C,
-                    canEdit: S,
-                    canRemove: g
+                    canEdit: g,
+                    canRemove: S
                 } = (0, c.default)(t), _ = (0, r.default)({
                     id: t.guildId,
                     label: f.default.Messages.COPY_ID_GUILD,
                     onSuccess: p
                 });
                 l.useEffect(() => {
-                    !S && !g && null == _ && (0, i.closeContextMenu)()
+                    !g && !S && null == _ && (0, i.closeContextMenu)()
                 });
                 let I = () => {
                     d.removeDirectoryGuildEntry(t.channelId, t.guildId)
@@ -48,7 +48,7 @@
                     "aria-label": f.default.Messages.GUILD_ACTIONS_MENU_LABEL,
                     onSelect: h,
                     children: [(0, a.jsxs)(s.MenuGroup, {
-                        children: [S && !E ? (0, a.jsx)(s.MenuItem, {
+                        children: [g && !E ? (0, a.jsx)(s.MenuItem, {
                             id: "update-entry",
                             label: f.default.Messages.HUB_ENTRY_UPDATE,
                             action: function() {
@@ -62,7 +62,7 @@
                                     })
                                 }), T()
                             }
-                        }) : null, g ? (0, a.jsx)(s.MenuItem, {
+                        }) : null, S ? (0, a.jsx)(s.MenuItem, {
                             id: "remove-from-hub",
                             label: f.default.Messages.HUB_ENTRY_REMOVE,
                             action: function() {
@@ -86,9 +86,9 @@
                                 id: "report-server-listing",
                                 label: f.default.Messages.REPORT_SERVER_NO_NAME,
                                 action: function() {
-                                    null != t && ((0, u.showReportModalForGuildDirectoryEntry)(t), T())
+                                    null != t && ((0, o.showReportModalForGuildDirectoryEntry)(t), T())
                                 },
-                                icon: o.default,
+                                icon: u.default,
                                 color: "danger"
                             })
                         })]

@@ -16,10 +16,10 @@
                         color: l = "currentColor",
                         className: s,
                         foreground: r,
-                        ...u
+                        ...o
                     } = e;
                     return (0, a.jsx)("svg", {
-                        ...(0, i.default)(u),
+                        ...(0, i.default)(o),
                         className: s,
                         width: t,
                         height: n,

@@ -16,8 +16,8 @@
                 f = l("26989"),
                 m = l("305961"),
                 I = l("957255"),
-                N = l("555158"),
-                T = l("68238"),
+                T = l("555158"),
+                N = l("68238"),
                 E = l("482391"),
                 h = l("683830"),
                 g = l("464782"),
@@ -169,14 +169,14 @@
                     title: null == s ? x.default.Messages.CHANNELS : x.default.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_CHANNEL_HEADER
                 }];
                 return (0, n.jsxs)(a.Fragment, {
-                    children: [K > 0 ? (0, n.jsx)(N.default, {
-                        messageType: N.HelpMessageTypes.WARNING,
+                    children: [K > 0 ? (0, n.jsx)(T.default, {
+                        messageType: T.HelpMessageTypes.WARNING,
                         children: x.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_NOTICE_TEXT.format({
                             removeCount: K
                         })
                     }) : null, y ? (0, n.jsxs)("div", {
                         className: R.requiredPermissionsBanner,
-                        children: [(0, n.jsx)(T.default, {
+                        children: [(0, n.jsx)(N.default, {
                             className: R.icon,
                             height: 18,
                             width: 18

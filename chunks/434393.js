@@ -25,16 +25,16 @@
                 x = l("493390"),
                 L = l("697218"),
                 S = l("944441"),
-                v = l("462579"),
-                I = l("216422"),
+                I = l("462579"),
+                v = l("216422"),
                 _ = l("956089"),
                 N = l("50885"),
                 A = l("21526"),
                 k = l("775416"),
                 F = l("491232"),
                 O = l("342676"),
-                R = l("450492"),
-                y = l("920580"),
+                y = l("450492"),
+                R = l("920580"),
                 j = l("54809"),
                 B = l("408381"),
                 P = l("264579"),
@@ -74,7 +74,7 @@
                         innerClassName: H.previewButtonInner,
                         "aria-label": w.default.Messages.PREVIEW,
                         ...l,
-                        children: (0, a.jsx)(v.default, {
+                        children: (0, a.jsx)(I.default, {
                             width: 24,
                             height: 24
                         })
@@ -85,7 +85,7 @@
                     product: t,
                     category: l,
                     onMount: r,
-                    isPremiumUser: v = !1,
+                    isPremiumUser: I = !1,
                     isGiftEasterEggEnabled: N
                 } = e, {
                     analyticsLocations: K
@@ -101,7 +101,7 @@
                 }), {
                     buttonColors: ea,
                     backgroundColors: es
-                } = (0, D.default)(t.categorySkuId), er = (0, F.getFormattedPriceForCollectiblesProduct)(t, v), en = (0, F.isPremiumCollectiblesProduct)(t), eo = (0, F.isFreeCollectiblesProduct)(t), [ei, eu, ec] = (0, o.useStateFromStoresArray)([k.default], () => [k.default.getPurchase(t.skuId), k.default.isClaiming === t.skuId, null != k.default.isClaiming && k.default.isClaiming !== t.skuId]), ed = (0, b.useCanUseProfileEffects)({
+                } = (0, D.default)(t.categorySkuId), er = (0, F.getFormattedPriceForCollectiblesProduct)(t, I), en = (0, F.isPremiumCollectiblesProduct)(t), eo = (0, F.isFreeCollectiblesProduct)(t), [ei, eu, ec] = (0, o.useStateFromStoresArray)([k.default], () => [k.default.getPurchase(t.skuId), k.default.isClaiming === t.skuId, null != k.default.isClaiming && k.default.isClaiming !== t.skuId]), ed = (0, b.useCanUseProfileEffects)({
                     location: "CollectiblesShopCard"
                 }), ef = s.useRef(null);
                 s.useEffect(() => {
@@ -164,7 +164,7 @@
                         variant: "text-md/semibold",
                         className: H.priceTag,
                         children: w.default.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
-                    }) : (0, a.jsx)(y.default, {
+                    }) : (0, a.jsx)(R.default, {
                         product: t,
                         className: H.priceTag,
                         disableTooltipPointerEvents: !0
@@ -176,14 +176,14 @@
                         } : void 0,
                         className: H.defaultPreviewButtonColor,
                         onClick: eg
-                    }) : (0, a.jsx)(R.default, {
+                    }) : (0, a.jsx)(y.default, {
                         product: t,
                         returnRef: Y,
                         isGiftEasterEggEnabled: N,
                         tooltipDelay: 250
                     }),
                     ex = () => {
-                        if (en && !v && !eo) return eh();
+                        if (en && !I && !eo) return eh();
                         let e = null != ea ? {
                                 background: (0, B.getBackgroundGradient)(ea, 90),
                                 color: ea.text.toHslString()
@@ -244,7 +244,7 @@
                             children: e => (0, a.jsx)(_.TextBadge, {
                                 ...e,
                                 className: H.premiumWheelBadge,
-                                text: (0, a.jsx)(I.default, {
+                                text: (0, a.jsx)(v.default, {
                                     className: H.premiumWheel
                                 })
                             })
@@ -277,7 +277,7 @@
                             }),
                             children: [(0, a.jsx)("div", {
                                 className: H.productName,
-                                children: v && (0, a.jsx)(i.Text, {
+                                children: I && (0, a.jsx)(i.Text, {
                                     color: "always-white",
                                     variant: "text-lg/bold",
                                     children: t.name

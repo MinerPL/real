@@ -7,10 +7,10 @@
                     return a
                 },
                 resetWelcomeScreen: function() {
-                    return u
+                    return o
                 },
                 clearWelcomeScreenSettings: function() {
-                    return o
+                    return u
                 },
                 updateSettings: function() {
                     return d
@@ -19,55 +19,55 @@
                     return c
                 }
             });
-            var i = n("872717"),
-                l = n("913144"),
+            var l = n("872717"),
+                i = n("913144"),
                 r = n("49111");
             let s = function(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                    l.default.dispatch({
+                    i.default.dispatch({
                         type: "WELCOME_SCREEN_VIEW",
                         guildId: e,
                         isLurking: t
                     })
                 },
                 a = async e => {
-                    l.default.dispatch({
+                    i.default.dispatch({
                         type: "WELCOME_SCREEN_FETCH_START"
                     });
                     try {
-                        let t = await i.default.get({
+                        let t = await l.default.get({
                             url: r.Endpoints.GUILD_WELCOME_SCREEN(e),
                             oldFormErrors: !0
                         });
-                        return l.default.dispatch({
+                        return i.default.dispatch({
                             type: "WELCOME_SCREEN_FETCH_SUCCESS",
                             guildId: e,
                             welcomeScreen: t.body
                         }), t.body
                     } catch (e) {
-                        l.default.dispatch({
+                        i.default.dispatch({
                             type: "WELCOME_SCREEN_FETCH_FAIL"
                         })
                     }
-                }, u = () => {
-                    l.default.dispatch({
+                }, o = () => {
+                    i.default.dispatch({
                         type: "WELCOME_SCREEN_SETTINGS_RESET"
                     })
-                }, o = () => {
-                    l.default.dispatch({
+                }, u = () => {
+                    i.default.dispatch({
                         type: "WELCOME_SCREEN_SETTINGS_CLEAR"
                     })
                 }, d = e => {
-                    l.default.dispatch({
+                    i.default.dispatch({
                         type: "WELCOME_SCREEN_SETTINGS_UPDATE",
                         settings: e
                     })
                 }, c = async (e, t) => {
-                    l.default.dispatch({
+                    i.default.dispatch({
                         type: "WELCOME_SCREEN_SUBMIT"
                     });
                     try {
-                        let n = await i.default.patch({
+                        let n = await l.default.patch({
                             url: r.Endpoints.GUILD_WELCOME_SCREEN(e),
                             body: {
                                 description: t.description,
@@ -76,13 +76,13 @@
                             },
                             oldFormErrors: !0
                         });
-                        l.default.dispatch({
+                        i.default.dispatch({
                             type: "WELCOME_SCREEN_SUBMIT_SUCCESS",
                             guildId: e,
                             welcomeScreen: n.body
                         })
                     } catch (e) {
-                        l.default.dispatch({
+                        i.default.dispatch({
                             type: "WELCOME_SCREEN_SUBMIT_FAILURE"
                         })
                     }

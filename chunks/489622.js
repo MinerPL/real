@@ -1,140 +1,140 @@
             "use strict";
             n.r(t), n.d(t, {
                 NoticeColors: function() {
-                    return N
+                    return p
                 },
                 NoticeButton: function() {
-                    return A
-                },
-                PrimaryCTANoticeButton: function() {
-                    return u
-                },
-                NoticeButtonAnchor: function() {
                     return _
                 },
+                PrimaryCTANoticeButton: function() {
+                    return m
+                },
+                NoticeButtonAnchor: function() {
+                    return E
+                },
                 NoticeCloseButton: function() {
-                    return T
+                    return I
                 },
                 default: function() {
-                    return d
+                    return h
                 }
             });
-            var i = n("37983");
+            var r = n("37983");
             n("884691");
-            var E = n("414456"),
-                o = n.n(E),
-                r = n("394846"),
+            var i = n("414456"),
+                s = n.n(i),
+                l = n("394846"),
                 a = n("77078"),
-                c = n("945330"),
-                s = n("599110"),
-                l = n("49111"),
-                I = n("782340"),
-                S = n("105029");
-            let N = Object.freeze({
-                DEFAULT: S.colorDefault,
-                NEUTRAL: S.colorNeutral,
-                BRAND: S.colorBrand,
-                WARNING: S.colorWarning,
-                DANGER: S.colorDanger,
-                INFO: S.colorInfo,
-                STREAMER_MODE: S.colorStreamerMode,
-                CUSTOM: S.colorCustom,
-                SPOTIFY: S.colorSpotify,
-                PLAYSTATION: S.colorPlayStation,
-                PREMIUM_TIER_0: S.colorPremiumTier0,
-                PREMIUM_TIER_1: S.colorPremiumTier1,
-                PREMIUM_TIER_2: S.colorPremiumTier2
+                o = n("945330"),
+                u = n("599110"),
+                c = n("49111"),
+                d = n("782340"),
+                f = n("105029");
+            let p = Object.freeze({
+                DEFAULT: f.colorDefault,
+                NEUTRAL: f.colorNeutral,
+                BRAND: f.colorBrand,
+                WARNING: f.colorWarning,
+                DANGER: f.colorDanger,
+                INFO: f.colorInfo,
+                STREAMER_MODE: f.colorStreamerMode,
+                CUSTOM: f.colorCustom,
+                SPOTIFY: f.colorSpotify,
+                PLAYSTATION: f.colorPlayStation,
+                PREMIUM_TIER_0: f.colorPremiumTier0,
+                PREMIUM_TIER_1: f.colorPremiumTier1,
+                PREMIUM_TIER_2: f.colorPremiumTier2
             });
 
-            function A(e) {
+            function _(e) {
                 let {
                     children: t,
                     className: n,
-                    minor: E = !1,
-                    ...r
+                    minor: i = !1,
+                    ...l
                 } = e;
-                return (0, i.jsx)(a.FocusRing, {
-                    children: (0, i.jsx)("button", {
-                        className: o(S.button, n, {
-                            [S.buttonMinor]: E
+                return (0, r.jsx)(a.FocusRing, {
+                    children: (0, r.jsx)("button", {
+                        className: s(f.button, n, {
+                            [f.buttonMinor]: i
                         }),
-                        ...r,
+                        ...l,
                         children: t
                     })
                 })
             }
 
-            function u(e) {
+            function m(e) {
                 let {
                     children: t,
                     noticeType: n,
-                    additionalTrackingProps: E,
-                    ...o
+                    additionalTrackingProps: i,
+                    ...s
                 } = e;
-                return (0, i.jsx)(A, {
-                    ...o,
+                return (0, r.jsx)(_, {
+                    ...s,
                     onClick: e => {
-                        var t, i;
-                        null != o.onClick && o.onClick(e), t = n, i = E, null != t && s.default.track(l.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
+                        var t, r;
+                        null != s.onClick && s.onClick(e), t = n, r = i, null != t && u.default.track(c.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
                             notice_type: t,
-                            ...i
+                            ...r
                         })
                     },
                     children: t
                 })
             }
 
-            function _(e) {
+            function E(e) {
                 let {
                     children: t,
                     href: n,
-                    ...E
+                    ...i
                 } = e;
-                return (0, i.jsx)(a.Anchor, {
-                    ...E,
-                    className: S.button,
+                return (0, r.jsx)(a.Anchor, {
+                    ...i,
+                    className: f.button,
                     href: n,
                     children: t
                 })
             }
 
-            function T(e) {
+            function I(e) {
                 let {
                     onClick: t,
                     noticeType: n
                 } = e;
-                return (0, i.jsx)(a.Clickable, {
+                return (0, r.jsx)(a.Clickable, {
                     focusProps: {
                         offset: 6
                     },
-                    className: S.closeButton,
+                    className: f.closeButton,
                     onClick: () => {
                         var e;
-                        t(), null != (e = n) && s.default.track(l.AnalyticEvents.APP_NOTICE_CLOSED, {
+                        t(), null != (e = n) && u.default.track(c.AnalyticEvents.APP_NOTICE_CLOSED, {
                             notice_type: e
                         })
                     },
-                    "aria-label": I.default.Messages.DISMISS,
-                    children: (0, i.jsx)(c.default, {
-                        className: S.closeIcon,
+                    "aria-label": d.default.Messages.DISMISS,
+                    children: (0, r.jsx)(o.default, {
+                        className: f.closeIcon,
                         width: 18,
                         height: 18
                     })
                 })
             }
 
-            function d(e) {
+            function h(e) {
                 let {
-                    color: t = N.DEFAULT,
+                    color: t = p.DEFAULT,
                     className: n,
-                    style: E,
+                    style: i,
                     children: a
                 } = e;
-                return (0, i.jsx)("div", {
-                    className: o(S.notice, {
-                        [S.isMobile]: r.isMobile
+                return (0, r.jsx)("div", {
+                    className: s(f.notice, {
+                        [f.isMobile]: l.isMobile
                     }, n, t),
-                    style: null != E ? E : void 0,
+                    style: null != i ? i : void 0,
                     children: a
                 })
             }

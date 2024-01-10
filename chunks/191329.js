@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 GuildSettingsDiscoveryNotice: function() {
-                    return w
+                    return k
                 },
                 default: function() {
                     return Y
@@ -46,7 +46,7 @@
                 F = s("447621"),
                 H = s("782340"),
                 V = s("15145");
-            let w = i.default.connectStores([v.default], () => {
+            let k = i.default.connectStores([v.default], () => {
                 let {
                     guild: e,
                     originalGuild: t,
@@ -82,7 +82,7 @@
                     }
                 }
             })(o.default);
-            class k extends n.PureComponent {
+            class w extends n.PureComponent {
                 async componentDidMount() {
                     let {
                         guild: e
@@ -512,4 +512,4 @@
                     primaryCategoryOptions: d,
                     localeOptions: c
                 }
-            })(k)
+            })(w)

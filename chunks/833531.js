@@ -4,10 +4,10 @@
                     return r
                 }
             });
-            var i = n("446674"),
-                l = n("42203");
+            var l = n("446674"),
+                i = n("42203");
 
             function r(e) {
-                let t = (0, i.useStateFromStoresArray)([l.default], () => e.filter(e => l.default.hasChannel(e.ref_id)), [e]);
+                let t = (0, l.useStateFromStoresArray)([i.default], () => e.filter(e => i.default.hasChannel(e.ref_id)), [e]);
                 return t
             }

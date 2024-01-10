@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return S
+                    return g
                 }
             }), n("222007");
             var a = n("37983"),
@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("446674"),
-                u = n("819855"),
-                o = n("77078"),
+                o = n("819855"),
+                u = n("77078"),
                 d = n("731898"),
                 c = n("841098"),
                 f = n("206230"),
@@ -20,13 +20,13 @@
                 E = n("277842"),
                 C = n("833345");
 
-            function S(e) {
+            function g(e) {
                 let {
                     checked: t,
                     labelText: n,
                     tooltipText: s,
-                    canToggle: S,
-                    iconAltText: g,
+                    canToggle: g,
+                    iconAltText: S,
                     onChange: _,
                     tooltipColor: I,
                     className: T,
@@ -34,20 +34,20 @@
                     collapseWhenChecked: x = !0,
                     onClick: N,
                     disabled: A
-                } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, j] = l.useState(!1), L = (0, c.default)(), O = (0, u.isThemeDark)(L) || t ? C : E, {
+                } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, j] = l.useState(!1), L = (0, c.default)(), O = (0, o.isThemeDark)(L) || t ? C : E, {
                     width: y = 0,
-                    ref: b
+                    ref: P
                 } = (0, d.default)(), {
-                    width: P = 0,
+                    width: b = 0,
                     ref: D
                 } = (0, d.default)();
-                return (0, a.jsxs)(o.TooltipContainer, {
+                return (0, a.jsxs)(u.TooltipContainer, {
                     text: (0, a.jsx)(h.NitroTooltipLabel, {
                         textColor: "always-white",
                         tooltipText: s
                     }),
                     position: "top",
-                    color: null != I ? I : A ? o.Tooltip.Colors.BLACK : o.Tooltip.Colors.BRAND,
+                    color: null != I ? I : A ? u.Tooltip.Colors.BLACK : u.Tooltip.Colors.BRAND,
                     "aria-label": s,
                     tooltipClassName: m.tooltip,
                     className: m.tooltipContainer,
@@ -55,7 +55,7 @@
                         className: m.visuallyHidden,
                         checked: t,
                         onChange: function() {
-                            if (S) {
+                            if (g) {
                                 let e = !t;
                                 j(!0), null == _ || _(e)
                             }
@@ -69,21 +69,21 @@
                         className: i(m.label, T, {
                             [m.transition]: R,
                             [m.labelChecked]: t,
-                            [m.labelUnchecked]: !t && !S
+                            [m.labelUnchecked]: !t && !g
                         }),
                         style: x ? {
-                            width: t ? y : y + P
+                            width: t ? y : y + b
                         } : void 0,
                         children: [t ? (0, a.jsx)(p.Shine, {
                             className: m.shine,
                             shinePaused: M
                         }) : null, (0, a.jsx)("img", {
-                            ref: b,
+                            ref: P,
                             src: O,
-                            alt: g
+                            alt: S
                         }), (0, a.jsx)("span", {
                             ref: D,
-                            children: (0, a.jsx)(o.Text, {
+                            children: (0, a.jsx)(u.Text, {
                                 className: i(m.burstText, {
                                     [m.visuallyHidden]: t && x,
                                     [m.burstTextChecked]: t

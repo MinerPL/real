@@ -1588,6 +1588,18 @@
                         G({
                             type: "PREMIUM_MARKETING_PREVIEW",
                             properties: t.properties
+                        });
+                        break;
+                    case "USER_APPLICATION_UPDATE":
+                        G({
+                            type: "USER_APPLICATION_UPDATE",
+                            applicationId: t.application_id
+                        });
+                        break;
+                    case "USER_APPLICATION_REMOVE":
+                        G({
+                            type: "USER_APPLICATION_REMOVE",
+                            applicationId: t.application_id
                         })
                 }
             }

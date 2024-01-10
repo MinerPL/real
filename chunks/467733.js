@@ -16,8 +16,8 @@
                 f = l("186211"),
                 m = l("926994"),
                 I = l("923959"),
-                N = l("957255"),
-                T = l("454589"),
+                T = l("957255"),
+                N = l("454589"),
                 E = l("145131"),
                 h = l("659500"),
                 g = l("701909"),
@@ -63,7 +63,7 @@
                     refToScroller: y,
                     errors: G,
                     hasChanges: B
-                } = e, H = (0, r.useStateFromStores)([I.default], () => null != s ? I.default.getDefaultChannel(s.id) : null), k = (0, r.useStateFromStoresObject)([I.default], () => I.default.getChannels(null == s ? void 0 : s.id)), U = (0, r.useStateFromStoresObject)([N.default], () => i.keyBy(k.SELECTABLE.map(e => e.channel).filter(e => N.default.can(C.Permissions.MANAGE_WEBHOOKS, e)), "id")), F = (0, r.useStateFromStoresObject)([N.default], () => i.keyBy(k.VOCAL.map(e => e.channel).filter(e => e.isGuildVocal() && N.default.can(C.Permissions.MANAGE_WEBHOOKS, e)), "id")), w = null != v ? v : H, W = t === C.IntegrationSettingsSections.APPLICATION ? l : null, [V, Y] = a.useState(u.SHAKE_INTENSITY_DEFAULT), K = a.useCallback(() => B() ? (h.ComponentDispatch.dispatch(C.ComponentActions.SHAKE_APP, {
+                } = e, H = (0, r.useStateFromStores)([I.default], () => null != s ? I.default.getDefaultChannel(s.id) : null), k = (0, r.useStateFromStoresObject)([I.default], () => I.default.getChannels(null == s ? void 0 : s.id)), U = (0, r.useStateFromStoresObject)([T.default], () => i.keyBy(k.SELECTABLE.map(e => e.channel).filter(e => T.default.can(C.Permissions.MANAGE_WEBHOOKS, e)), "id")), F = (0, r.useStateFromStoresObject)([T.default], () => i.keyBy(k.VOCAL.map(e => e.channel).filter(e => e.isGuildVocal() && T.default.can(C.Permissions.MANAGE_WEBHOOKS, e)), "id")), w = null != v ? v : H, W = t === C.IntegrationSettingsSections.APPLICATION ? l : null, [V, Y] = a.useState(u.SHAKE_INTENSITY_DEFAULT), K = a.useCallback(() => B() ? (h.ComponentDispatch.dispatch(C.ComponentActions.SHAKE_APP, {
                     duration: 300,
                     intensity: V
                 }), Y(Math.min(V + u.SHAKE_INTENSITY_INCREMENT, u.SHAKE_INTENSITY_MAX)), h.ComponentDispatch.dispatch(C.ComponentActions.EMPHASIZE_NOTICE), !1) : (Y(u.SHAKE_INTENSITY_DEFAULT), !0), [B, V]), z = a.useCallback(e => !!K() && (d.default.setSection(e), !0), [K]), {
@@ -223,7 +223,7 @@
                         children: t === C.IntegrationSettingsSections.OVERVIEW ? (0, n.jsx)(o.FormTitle, {
                             tag: "h1",
                             children: M(C.IntegrationSettingsSections.OVERVIEW)
-                        }) : (0, n.jsx)(T.default, {
+                        }) : (0, n.jsx)(N.default, {
                             activeId: t.toString(),
                             breadcrumbs: [C.IntegrationSettingsSections.OVERVIEW, t].map(e => ({
                                 id: e.toString(),

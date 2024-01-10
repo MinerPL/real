@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("917351"),
-                u = n.n(r),
-                o = n("974667"),
+                o = n.n(r),
+                u = n("974667"),
                 d = n("394846"),
                 c = n("446674"),
                 f = n("77078"),
@@ -19,8 +19,8 @@
                 m = n("206230"),
                 E = n("95039"),
                 C = n("405645"),
-                S = n("256648"),
-                g = n("593752"),
+                g = n("256648"),
+                S = n("593752"),
                 _ = n("506885"),
                 I = n("981601"),
                 T = n("373469"),
@@ -34,8 +34,8 @@
                 L = n("45029"),
                 O = n("155207"),
                 y = n("826684"),
-                b = n("483093"),
-                P = n("599110"),
+                P = n("483093"),
+                b = n("599110"),
                 D = n("659500"),
                 U = n("991170"),
                 w = n("158998"),
@@ -53,32 +53,32 @@
                         sectionId: s,
                         userId: i,
                         guildOwnerId: r
-                    } = e, u = (0, c.useStateFromStores)([M.default], () => M.default.isTyping(t.id, i)), m = (0, c.useStateFromStores)([v.default], () => v.default.getMember(t.guild_id, i)), C = (0, c.useStateFromStores)([x.default], () => {
+                    } = e, o = (0, c.useStateFromStores)([M.default], () => M.default.isTyping(t.id, i)), m = (0, c.useStateFromStores)([v.default], () => v.default.getMember(t.guild_id, i)), C = (0, c.useStateFromStores)([x.default], () => {
                         var e, n;
                         return (null == m ? void 0 : m.colorRoleId) != null ? null === (n = x.default.getGuild(t.guild_id)) || void 0 === n ? void 0 : null === (e = n.getRole(m.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
-                    }, [t.guild_id, m]), S = (0, c.useStateFromStores)([R.default], () => R.default.getUser(i)), j = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), L = (null == S ? void 0 : S.id) === (null == j ? void 0 : j.id), O = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getStatus() : N.default.getStatus(i, t.guild_id)), y = (0, c.useStateFromStores)([N.default], () => N.default.isMobileOnline(i)), b = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getActivities() : N.default.getActivities(i, t.guild_id)), P = (0, c.useStateFromStores)([T.default], () => T.default.getAnyStreamForUser(i)), U = (0, o.useListItem)(i), F = (0, c.useStateFromStores)([g.default], () => g.default.canUserViewChannel(t.id, s, i)), H = (null == S ? void 0 : S.id) != null && S.id === r, G = l.useCallback(e => {
-                        null != S && (0, h.openContextMenuLazy)(e, async () => {
+                    }, [t.guild_id, m]), g = (0, c.useStateFromStores)([R.default], () => R.default.getUser(i)), j = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), L = (null == g ? void 0 : g.id) === (null == j ? void 0 : j.id), O = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getStatus() : N.default.getStatus(i, t.guild_id)), y = (0, c.useStateFromStores)([N.default], () => N.default.isMobileOnline(i)), P = (0, c.useStateFromStores)([N.default, A.default], () => L ? A.default.getActivities() : N.default.getActivities(i, t.guild_id)), b = (0, c.useStateFromStores)([T.default], () => T.default.getAnyStreamForUser(i)), U = (0, u.useListItem)(i), F = (0, c.useStateFromStores)([S.default], () => S.default.canUserViewChannel(t.id, s, i)), H = (null == g ? void 0 : g.id) != null && g.id === r, G = l.useCallback(e => {
+                        null != g && (0, h.openContextMenuLazy)(e, async () => {
                             let {
                                 default: e
                             } = await n.el("721429").then(n.bind(n, "721429"));
                             return n => (0, a.jsx)(e, {
                                 ...n,
-                                user: S,
+                                user: g,
                                 guildId: t.guild_id,
                                 channel: t
                             })
                         })
-                    }, [S, t]), Y = l.useCallback(() => {
-                        if (null == S) return;
-                        let e = "@".concat(w.default.getUserTag(S, {
+                    }, [g, t]), Y = l.useCallback(() => {
+                        if (null == g) return;
+                        let e = "@".concat(w.default.getUserTag(g, {
                                 decoration: "never"
                             })),
-                            n = "<@".concat(S.id, ">");
+                            n = "<@".concat(g.id, ">");
                         D.ComponentDispatch.dispatchToLastSubscribed(V.ComponentActions.INSERT_TEXT, {
                             plainText: e,
                             rawText: n
                         }), p.default.startTyping(t.id)
-                    }, [S, t]), z = l.useCallback(e => {
+                    }, [g, t]), z = l.useCallback(e => {
                         e.stopPropagation(), (0, E.openGuildBoostingMarketingModal)({
                             guildId: t.guild_id,
                             location: {
@@ -87,16 +87,16 @@
                             }
                         })
                     }, [t.guild_id]);
-                    if (null == S) return null;
+                    if (null == g) return null;
                     let K = null == m ? void 0 : m.premiumSince;
                     return (0, a.jsx)(f.Popout, {
-                        preload: () => (0, _.default)(S.id, S.getAvatarURL(t.guild_id, 80), {
+                        preload: () => (0, _.default)(g.id, g.getAvatarURL(t.guild_id, 80), {
                             guildId: t.guild_id,
                             channelId: t.id
                         }),
                         renderPopout: e => (0, a.jsx)(I.default, {
                             ...e,
-                            userId: S.id,
+                            userId: g.id,
                             guildId: t.guild_id,
                             channelId: t.id
                         }),
@@ -110,19 +110,19 @@
                             return (0, a.jsx)(k.default, {
                                 onContextMenu: G,
                                 shouldAnimateStatus: W,
-                                user: S,
+                                user: g,
                                 currentUser: j,
                                 nick: null == m ? void 0 : m.nick,
                                 status: O,
-                                activities: b,
+                                activities: P,
                                 colorString: null == m ? void 0 : m.colorString,
                                 colorRoleName: C,
-                                isTyping: u,
+                                isTyping: o,
                                 channel: t,
                                 guildId: t.guild_id,
                                 isMobile: y,
                                 selected: l,
-                                applicationStream: P,
+                                applicationStream: b,
                                 premiumSince: null == K ? null : new Date(K),
                                 onClickPremiumGuildIcon: z,
                                 itemProps: U,
@@ -155,7 +155,7 @@
                             title: n,
                             count: l
                         }),
-                        children: [null != i ? (0, a.jsx)(b.default, {
+                        children: [null != i ? (0, a.jsx)(P.default, {
                             className: G.roleIcon,
                             ...i
                         }) : null, (0, a.jsxs)("span", {
@@ -192,7 +192,7 @@
                 let {
                     channel: t,
                     guild: n
-                } = e, s = "members-".concat(t.id), r = (0, S.useThreadMemberListSections)(t.id, n), d = r.filter(e => e.userIds.length > 0).reverse()[0], {
+                } = e, s = "members-".concat(t.id), r = (0, g.useThreadMemberListSections)(t.id, n), d = r.filter(e => e.userIds.length > 0).reverse()[0], {
                     navigator: h,
                     listRef: p
                 } = function(e, t) {
@@ -203,11 +203,11 @@
                             if (null == l) return;
                             let s = parseInt(n, 10),
                                 [i, r] = l.getSectionRowFromIndex(s),
-                                u = 0 === i && 0 === r ? t : 0;
+                                o = 0 === i && 0 === r ? t : 0;
                             l.scrollToIndex({
                                 section: i,
                                 row: r,
-                                padding: u,
+                                padding: o,
                                 callback: () => {
                                     requestAnimationFrame(() => {
                                         var t;
@@ -234,7 +234,7 @@
                                 }
                             })
                         }), []),
-                        u = (0, o.default)({
+                        o = (0, u.default)({
                             id: e,
                             setFocus: s,
                             isEnabled: n,
@@ -242,12 +242,12 @@
                             scrollToEnd: r
                         });
                     return {
-                        navigator: u,
+                        navigator: o,
                         listRef: a
                     }
                 }(s, Y), E = 0 === r.length || r.every(e => 0 === e.userIds.length);
                 if (l.useEffect(() => {
-                        P.default.track(V.AnalyticEvents.MEMBER_LIST_VIEWED, {
+                        b.default.track(V.AnalyticEvents.MEMBER_LIST_VIEWED, {
                             channel_id: t.id,
                             channel_type: t.type,
                             guild_id: t.guild_id
@@ -255,9 +255,9 @@
                     }, [t.guild_id, t.id, t.type]), E) return (0, a.jsx)(J, {
                     channel: t
                 });
-                let C = u.omit(h.containerProps, ["ref"]),
-                    g = U.default.getGuildVisualOwnerId(n);
-                return (0, a.jsx)(o.ListNavigatorProvider, {
+                let C = o.omit(h.containerProps, ["ref"]),
+                    S = U.default.getGuildVisualOwnerId(n);
+                return (0, a.jsx)(u.ListNavigatorProvider, {
                     navigator: h,
                     children: (0, a.jsx)(f.FocusJumpSection, {
                         children: e => (0, a.jsx)("div", {
@@ -291,7 +291,7 @@
                                         channel: t,
                                         sectionId: i,
                                         userId: s[l],
-                                        guildOwnerId: g
+                                        guildOwnerId: S
                                     }, s[l])
                                 },
                                 footerHeight: e => r[e] === d && t.type === V.ChannelTypes.PRIVATE_THREAD ? 80 : 0,

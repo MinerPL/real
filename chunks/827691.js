@@ -21,8 +21,8 @@
                     guild: f,
                     platformType: m,
                     labelText: I,
-                    descriptionText: N,
-                    helpText: T,
+                    descriptionText: T,
+                    helpText: N,
                     canNavigate: E
                 } = e, h = r.default.get(m), g = a.useCallback(async e => {
                     E() && (await o.default.enableIntegration(f.id, e.type, e.id), i.default.startEditingIntegration(e.id))
@@ -37,7 +37,7 @@
                         icon: null == h ? void 0 : h.icon.whiteSVG,
                         iconBackgroundColor: null == h ? void 0 : h.color,
                         iconClassName: c.platformIcon,
-                        description: N,
+                        description: T,
                         isHeader: !0
                     }), (0, n.jsx)(s.FormDivider, {
                         className: c.headerDivider
@@ -53,7 +53,7 @@
                         className: c.helpText,
                         color: "text-muted",
                         variant: "text-sm/normal",
-                        children: T
+                        children: N
                     })]
                 })
             }

@@ -10,13 +10,13 @@
                 s = n("760679"),
                 i = n("242260"),
                 r = n("981913"),
-                u = n("462579"),
-                o = n("814711"),
+                o = n("462579"),
+                u = n("814711"),
                 d = n("782340");
 
             function c() {
                 let e = (0, l.default)([i.default], () => !i.default.visibleOverlayCanvas);
-                return (0, a.jsx)(o.default, {
+                return (0, a.jsx)(u.default, {
                     renderPopout: () => null,
                     children: t => {
                         let {
@@ -26,7 +26,7 @@
                             ...n,
                             label: d.default.Messages.SHARED_CANVAS_HIDE_OVERLAY_DRAWINGS,
                             isActive: e,
-                            iconComponent: u.default,
+                            iconComponent: o.default,
                             onClick: s.toggleOverlayCanvas
                         })
                     }

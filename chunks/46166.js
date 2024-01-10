@@ -43,14 +43,14 @@
                     } = e, d = (0, D.useSubscriptionsSettings)(l.id), {
                         loading: c,
                         updateSubscriptionsSettings: A
-                    } = (0, D.useUpdateSubscriptionsSettings)(), [R, j] = n.useState(l.hasFeature(M.GuildFeatures.CREATOR_STORE_PAGE)), [P, y] = n.useState(null !== (t = null == d ? void 0 : d.store_page_primary_color) && void 0 !== t ? t : v), [b, B] = n.useState(null == d ? void 0 : d.store_page_trailer_url), F = null == b || null != b.match(U), [H, V] = n.useState(null !== (s = null == d ? void 0 : d.store_page_show_subscriber_count) && void 0 !== s && s), w = n.useRef(null == d ? void 0 : d.store_page_slug).current, k = R !== l.hasFeature(M.GuildFeatures.CREATOR_STORE_PAGE) || (null == d ? void 0 : d.store_page_primary_color) == null && P !== v || (null == d ? void 0 : d.store_page_primary_color) != null && P !== (null == d ? void 0 : d.store_page_primary_color) || b !== (null == d ? void 0 : d.store_page_trailer_url) || null != H && H !== (null == d ? void 0 : d.store_page_show_subscriber_count), Y = async () => {
+                    } = (0, D.useUpdateSubscriptionsSettings)(), [R, j] = n.useState(l.hasFeature(M.GuildFeatures.CREATOR_STORE_PAGE)), [P, y] = n.useState(null !== (t = null == d ? void 0 : d.store_page_primary_color) && void 0 !== t ? t : v), [b, B] = n.useState(null == d ? void 0 : d.store_page_trailer_url), F = null == b || null != b.match(U), [H, V] = n.useState(null !== (s = null == d ? void 0 : d.store_page_show_subscriber_count) && void 0 !== s && s), k = n.useRef(null == d ? void 0 : d.store_page_slug).current, w = R !== l.hasFeature(M.GuildFeatures.CREATOR_STORE_PAGE) || (null == d ? void 0 : d.store_page_primary_color) == null && P !== v || (null == d ? void 0 : d.store_page_primary_color) != null && P !== (null == d ? void 0 : d.store_page_primary_color) || b !== (null == d ? void 0 : d.store_page_trailer_url) || null != H && H !== (null == d ? void 0 : d.store_page_show_subscriber_count), Y = async () => {
                         o(null != d, "Settings must be defined");
                         let e = {};
                         R !== l.hasFeature(M.GuildFeatures.CREATOR_STORE_PAGE) && (e.store_page_enabled = R), ((null == d ? void 0 : d.store_page_primary_color) == null && P !== v || (null == d ? void 0 : d.store_page_primary_color) != null && P !== (null == d ? void 0 : d.store_page_primary_color)) && (e.store_page_primary_color = P), b !== (null == d ? void 0 : d.store_page_trailer_url) && (e.store_page_trailer_url = b), H !== (null == d ? void 0 : d.store_page_show_subscriber_count) && (e.store_page_show_subscriber_count = H), !u.isEmpty(e) && (await A(l.id, e), "store_page_enabled" in e && h.default.track(M.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_TOGGLED, {
                             enabled: R,
                             ...(0, g.collectGuildAnalyticsMetadata)(l.id)
                         }))
-                    }, K = M.MarketingURLs.ROLE_SUBSCRIPTION_STORE_PAGE(w), W = null != b && b === (null == d ? void 0 : d.store_page_trailer_url), {
+                    }, K = M.MarketingURLs.ROLE_SUBSCRIPTION_STORE_PAGE(k), W = null != b && b === (null == d ? void 0 : d.store_page_trailer_url), {
                         shouldRestrictUpdatingCreatorMonetizationSettings: z
                     } = (0, f.useShouldRestrictUpdatingCreatorMonetizationSettings)(l.id), X = z || !F;
                     return (0, a.jsxs)("div", {
@@ -181,7 +181,7 @@
                         }), (0, a.jsx)(_.default, {
                             component: "div",
                             className: x.contentRegion,
-                            children: k && (0, a.jsx)(m.default, {
+                            children: w && (0, a.jsx)(m.default, {
                                 children: (0, a.jsx)(S.default, {
                                     submitting: c,
                                     onReset: () => {

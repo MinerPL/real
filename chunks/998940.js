@@ -4,16 +4,16 @@
                     return a
                 },
                 MEMBER_JOIN_DATE_TOOLTIP_CONFIG: function() {
-                    return u
+                    return o
                 },
                 MembersTableDateFormats: function() {
-                    return l
+                    return i
                 },
                 formatDateRelativeTime: function() {
                     return c
                 }
             });
-            var i, l, r = n("319126"),
+            var l, i, r = n("319126"),
                 s = n("782340");
             let a = {
                     month: "short",
@@ -22,15 +22,15 @@
                     hour: "numeric",
                     minute: "2-digit"
                 },
-                u = {
+                o = {
                     month: "short",
                     day: "numeric",
                     year: "numeric",
                     hour: "numeric",
                     minute: "2-digit"
                 };
-            (i = l || (l = {}))[i.JOINED_AT = 0] = "JOINED_AT", i[i.ACCOUNT_AGE = 1] = "ACCOUNT_AGE";
-            let o = () => ({
+            (l = i || (i = {}))[l.JOINED_AT = 0] = "JOINED_AT", l[l.ACCOUNT_AGE = 1] = "ACCOUNT_AGE";
+            let u = () => ({
                     seconds: s.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS,
                     minutes: s.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES,
                     hours: s.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS,
@@ -46,6 +46,6 @@
                 }),
                 c = (e, t) => {
                     var n;
-                    let i = 0 === (n = t) ? o : 1 === n ? d : void 0;
-                    return (0, r.default)(e, i, !1)
+                    let l = 0 === (n = t) ? u : 1 === n ? d : void 0;
+                    return (0, r.default)(e, l, !1)
                 }

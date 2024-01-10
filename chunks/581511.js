@@ -16,8 +16,8 @@
                 f = l("272030"),
                 m = l("524768"),
                 I = l("389153"),
-                N = l("419830"),
-                T = l("405645"),
+                T = l("419830"),
+                N = l("405645"),
                 E = l("42203"),
                 h = l("26989"),
                 g = l("102985"),
@@ -90,7 +90,7 @@
                 } = e, d = (0, I.allChannelsSentinel)(t.id), {
                     icon: f,
                     name: m,
-                    categoryName: T
+                    categoryName: N
                 } = (0, u.useStateFromStoresObject)([E.default], () => {
                     if (d === l) return {
                         name: R.default.Messages.INTEGRATIONS_APPLICATION_ALL_CHANNELS,
@@ -98,7 +98,7 @@
                     };
                     let e = E.default.getChannel(l),
                         n = (null == e ? void 0 : e.parent_id) != null ? E.default.getChannel(e.parent_id) : null,
-                        a = null != e ? (0, N.getChannelIconComponent)(e, t) : null;
+                        a = null != e ? (0, T.getChannelIconComponent)(e, t) : null;
                     return {
                         icon: a,
                         name: null == e ? void 0 : e.name,
@@ -119,10 +119,10 @@
                         color: "header-primary",
                         variant: "text-md/normal",
                         children: m
-                    }), null != T ? (0, n.jsxs)(c.Text, {
+                    }), null != N ? (0, n.jsxs)(c.Text, {
                         className: M.tag,
                         variant: "text-sm/normal",
-                        children: ["(", T, ")"]
+                        children: ["(", N, ")"]
                     }) : null, s ? (0, n.jsx)(P, {
                         tooltipText: r
                     }) : null]
@@ -136,11 +136,11 @@
                     id: r,
                     isLocked: o,
                     lockTooltipText: u
-                } = e, m = null == s ? void 0 : s.getRole(r), I = (0, T.useRoleIcon)({
+                } = e, m = null == s ? void 0 : s.getRole(r), I = (0, N.useRoleIcon)({
                     guildId: s.id,
                     roleId: r,
                     size: 24
-                }), N = a.useCallback(e => {
+                }), T = a.useCallback(e => {
                     null != s && null != m && (0, f.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
@@ -153,7 +153,7 @@
                     })
                 }, [s, m]);
                 return (null == m ? void 0 : m.name) == null ? null : (0, n.jsxs)("div", {
-                    onContextMenu: N,
+                    onContextMenu: T,
                     className: M.identifier,
                     children: [null != I ? (0, n.jsx)(A.default, {
                         className: i(M.icon, M.image),

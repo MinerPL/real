@@ -22,8 +22,8 @@
                     note: f,
                     helpdeskArticleId: m,
                     style: I,
-                    disabled: N = !1,
-                    hideBorder: T = !1,
+                    disabled: T = !1,
+                    hideBorder: N = !1,
                     className: E = u.marginBottom20
                 } = e, h = (0, o.useUID)();
                 return (0, n.jsxs)(i.default, {
@@ -36,7 +36,7 @@
                                 id: h,
                                 className: u.marginReset,
                                 tag: a.FormTitleTags.H3,
-                                disabled: N,
+                                disabled: T,
                                 children: c
                             })
                         }), (0, n.jsx)(i.default.Child, {
@@ -45,7 +45,7 @@
                             children: (0, n.jsx)(r.default, {
                                 value: t,
                                 onChange: l,
-                                disabled: N,
+                                disabled: T,
                                 labelledBy: h
                             })
                         })]
@@ -58,14 +58,14 @@
                     }), null != m && (0, n.jsx)(i.default.Child, {
                         className: u.marginTop4,
                         children: (0, n.jsx)(a.FormText, {
-                            disabled: N,
+                            disabled: T,
                             type: a.FormTextTypes.DESCRIPTION,
                             children: (0, n.jsx)(a.Anchor, {
                                 href: s.default.getArticleURL(m),
                                 children: d.default.Messages.LEARN_MORE
                             })
                         })
-                    }), !T && (0, n.jsx)(i.default.Child, {
+                    }), !N && (0, n.jsx)(i.default.Child, {
                         className: u.marginTop20,
                         children: (0, n.jsx)(a.FormDivider, {})
                     })]

@@ -7,52 +7,52 @@
                     return p
                 }
             }), n("222007");
-            var i = n("37983"),
-                l = n("884691"),
+            var l = n("37983"),
+                i = n("884691"),
                 r = n("414456"),
                 s = n.n(r),
                 a = n("974667"),
-                u = n("77078"),
-                o = n("145131"),
+                o = n("77078"),
+                u = n("145131"),
                 d = n("476765"),
                 c = n("79808");
-            class f extends l.PureComponent {
+            class f extends i.PureComponent {
                 render() {
                     let {
                         label: e,
                         value: t,
                         renderValue: n,
-                        className: l
+                        className: i
                     } = this.props;
-                    return (0, i.jsxs)(o.default, {
-                        className: s(c.quickSelect, l),
-                        align: o.default.Align.CENTER,
-                        children: [(0, i.jsx)("div", {
+                    return (0, l.jsxs)(u.default, {
+                        className: s(c.quickSelect, i),
+                        align: u.default.Align.CENTER,
+                        children: [(0, l.jsx)("div", {
                             className: c.quickSelectLabel,
                             children: e
-                        }), (0, i.jsxs)(o.default, {
-                            align: o.default.Align.CENTER,
+                        }), (0, l.jsxs)(u.default, {
+                            align: u.default.Align.CENTER,
                             className: c.quickSelectClick,
-                            children: [(0, i.jsx)("div", {
+                            children: [(0, l.jsx)("div", {
                                 className: c.quickSelectValue,
                                 children: null != n ? n(t) : t.label
-                            }), (0, i.jsx)("div", {
+                            }), (0, l.jsx)("div", {
                                 className: c.quickSelectArrow
                             })]
                         })]
                     })
                 }
             }
-            class E extends l.PureComponent {
+            class E extends i.PureComponent {
                 render() {
                     let {
                         selected: e,
                         renderOption: t,
                         option: n
                     } = this.props;
-                    return (0, i.jsx)(a.ListNavigatorItem, {
+                    return (0, l.jsx)(a.ListNavigatorItem, {
                         id: n.key,
-                        children: l => (0, i.jsx)(u.Clickable, {
+                        children: i => (0, l.jsx)(o.Clickable, {
                             focusProps: {
                                 enabled: !1
                             },
@@ -60,7 +60,7 @@
                                 selected: e
                             }),
                             onClick: this.handleClick,
-                            ...l,
+                            ...i,
                             role: "option",
                             children: t(n, e)
                         })
@@ -81,20 +81,20 @@
                 let {
                     options: t,
                     value: n,
-                    scroller: l,
+                    scroller: i,
                     renderOption: r,
-                    onChange: o,
+                    onChange: u,
                     className: f
                 } = e, _ = s(c.quickSelectPopout, f, {
-                    [c.quickSelectPopoutScroll]: l
+                    [c.quickSelectPopoutScroll]: i
                 }), p = t.map(e => {
                     let t = null != n && e.value === n.value,
-                        l = t ? void 0 : o;
-                    return (0, i.jsx)(E, {
+                        i = t ? void 0 : u;
+                    return (0, l.jsx)(E, {
                         className: c.quickSelectPopoutOption,
                         renderOption: r,
                         option: e,
-                        onChange: l,
+                        onChange: i,
                         selected: t
                     }, e.key || e.value)
                 }), h = (0, d.useUID)(), S = (0, a.default)({
@@ -104,17 +104,17 @@
                     async scrollToStart() {},
                     async scrollToEnd() {}
                 }), {
-                    ref: m,
-                    ...M
+                    ref: T,
+                    ...m
                 } = S.containerProps;
-                return (0, u.useFocusLock)(m), (0, i.jsx)(a.ListNavigatorProvider, {
+                return (0, o.useFocusLock)(T), (0, l.jsx)(a.ListNavigatorProvider, {
                     navigator: S,
-                    children: (0, i.jsx)("div", {
-                        ref: m,
+                    children: (0, l.jsx)("div", {
+                        ref: T,
                         className: _,
-                        ...M,
+                        ...m,
                         role: "listbox",
-                        children: l ? (0, i.jsx)(u.Scroller, {
+                        children: i ? (0, l.jsx)(o.Scroller, {
                             className: c.quickSelectScroller,
                             children: p
                         }) : p

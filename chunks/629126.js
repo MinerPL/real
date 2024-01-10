@@ -4,13 +4,13 @@
                     return r
                 }
             });
-            var i = n("446674"),
-                l = n("385976"),
+            var l = n("446674"),
+                i = n("385976"),
                 r = function(e, t) {
-                    return (0, i.useStateFromStores)([l.default], () => {
+                    return (0, l.useStateFromStores)([i.default], () => {
                         var n;
                         if (null == t) return null;
-                        let i = l.default.getDisambiguatedEmojiContext(e);
-                        return null !== (n = i.getById(t)) && void 0 !== n ? n : i.getByName(t)
+                        let l = i.default.getDisambiguatedEmojiContext(e);
+                        return null !== (n = l.getById(t)) && void 0 !== n ? n : l.getByName(t)
                     }, [e, t])
                 }

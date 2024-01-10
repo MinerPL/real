@@ -5,16 +5,16 @@
                 }
             }), n("222007");
             var i = n("37983"),
-                s = n("884691"),
-                r = n("414456"),
-                l = n.n(r),
+                r = n("884691"),
+                s = n("414456"),
+                l = n.n(s),
                 a = n("77078"),
                 u = n("54239"),
                 o = n("79112"),
                 c = n("49111"),
                 d = n("782340"),
                 f = n("519409");
-            class p extends s.Component {
+            class p extends r.Component {
                 render() {
                     return (0, i.jsxs)("div", {
                         className: f.streamerModeEnabled,

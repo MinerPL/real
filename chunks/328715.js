@@ -10,8 +10,8 @@
                 s = n.n(l),
                 i = n("446674"),
                 r = n("77078"),
-                u = n("308289"),
-                o = n("789394"),
+                o = n("308289"),
+                u = n("789394"),
                 d = n("244201"),
                 c = n("204947"),
                 f = n("442939"),
@@ -20,8 +20,8 @@
                 m = n("619335"),
                 E = n("534222"),
                 C = n("822516"),
-                S = n("941298"),
-                g = n("539938"),
+                g = n("941298"),
+                S = n("539938"),
                 _ = n("557809"),
                 I = n("367376"),
                 T = n("616718"),
@@ -35,8 +35,8 @@
                 L = n("598785"),
                 O = n("2830"),
                 y = n("836087"),
-                b = n("843624"),
-                P = n("99795"),
+                P = n("843624"),
+                b = n("99795"),
                 D = n("49111"),
                 U = n("843455"),
                 w = n("782340"),
@@ -68,7 +68,7 @@
                     color: s
                 } = e, i = (0, T.default)(n, t, l);
                 return null == t || null == l ? null : (0, a.jsxs)(a.Fragment, {
-                    children: [(0, a.jsx)(u.default, {
+                    children: [(0, a.jsx)(o.default, {
                         className: F.avatar,
                         size: r.AvatarSizes.SIZE_24,
                         user: t,
@@ -89,10 +89,10 @@
                         channel: s
                     } = e,
                     i = (0, L.default)(s, !0),
-                    u = (0, E.useActiveEvent)(s.id),
-                    o = null != u ? (0, C.getNextRecurrenceIdInEvent)(u) : null,
-                    d = null != u;
-                if ((null == l ? void 0 : l.type) === P.ParticipantTypes.ACTIVITY) null != n && (t = (0, a.jsxs)(a.Fragment, {
+                    o = (0, E.useActiveEvent)(s.id),
+                    u = null != o ? (0, C.getNextRecurrenceIdInEvent)(o) : null,
+                    d = null != o;
+                if ((null == l ? void 0 : l.type) === b.ParticipantTypes.ACTIVITY) null != n && (t = (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(M.default.Divider, {
                         className: F.divider
                     }), (0, a.jsx)(N.default, {
@@ -108,7 +108,7 @@
                         focusedParticipant: l
                     })]
                 }));
-                else if ((null == l ? void 0 : l.type) === P.ParticipantTypes.STREAM) {
+                else if ((null == l ? void 0 : l.type) === b.ParticipantTypes.STREAM) {
                     let e = l.user,
                         n = l.stream;
                     t = (0, a.jsxs)(a.Fragment, {
@@ -124,9 +124,9 @@
                             focusedParticipant: l
                         })]
                     })
-                } else d && (t = (0, a.jsx)(S.default, {
-                    guildEvent: u,
-                    recurrenceId: o
+                } else d && (t = (0, a.jsx)(g.default, {
+                    guildEvent: o,
+                    recurrenceId: u
                 }));
                 return (0, a.jsx)("div", {
                     className: F.container,
@@ -138,7 +138,7 @@
                 let {
                     channel: t,
                     guild: l,
-                    appContext: u,
+                    appContext: o,
                     inCall: d,
                     isChatOpen: c,
                     exitFullScreen: E
@@ -147,12 +147,12 @@
                 } = (0, i.useStateFromStoresObject)([j.default], () => ({
                     focusedParticipant: j.default.getSelectedParticipant(t.id),
                     participantsOpen: j.default.getParticipantsOpen(t.id)
-                }), [t.id]), S = (0, p.default)(t), T = (0, m.default)(t), [v] = (0, f.default)((null == C ? void 0 : C.type) === P.ParticipantTypes.ACTIVITY ? [C.id] : []), N = w.default.Messages.VOICE_CHANNEL;
+                }), [t.id]), g = (0, p.default)(t), T = (0, m.default)(t), [v] = (0, f.default)((null == C ? void 0 : C.type) === b.ParticipantTypes.ACTIVITY ? [C.id] : []), N = w.default.Messages.VOICE_CHANNEL;
                 t.isDM() ? N = w.default.Messages.DM : t.isGroupDM() && (N = w.default.Messages.GROUP_DM);
                 let {
                     enabled: L,
                     left: y
-                } = o.ChannelEmojisExperiment.useExperiment({
+                } = u.ChannelEmojisExperiment.useExperiment({
                     location: "7b48cc_2"
                 }, {
                     autoTrackExposure: !1
@@ -195,20 +195,20 @@
                             ...n
                         })
                     }, {
-                        modalKey: b.VOICE_CHANNEL_STATUS_MODAL_KEY
+                        modalKey: P.VOICE_CHANNEL_STATUS_MODAL_KEY
                     })
                 }
                 return (0, a.jsx)("div", {
                     className: F.subtitleContainer,
                     children: (0, a.jsxs)(M.default, {
-                        onDoubleClick: g.handleDoubleClick,
+                        onDoubleClick: S.handleDoubleClick,
                         transparent: !0,
                         className: (0, R.getThemeClass)(U.ThemeTypes.DARK),
                         childrenBottom: Y,
                         toolbar: (0, a.jsx)(O.default, {
-                            inPopout: u === D.AppContext.POPOUT,
+                            inPopout: o === D.AppContext.POPOUT,
                             channel: t,
-                            appContext: u,
+                            appContext: o,
                             inCall: d,
                             isChatOpen: c,
                             exitFullScreen: E
@@ -218,7 +218,7 @@
                             disabled: !0,
                             "aria-label": N
                         }) : null, !y && V, (0, a.jsx)(M.default.Title, {
-                            children: S
+                            children: g
                         }), (0, a.jsx)(_.HeaderGuildBreadcrumb, {
                             channel: t,
                             guild: l

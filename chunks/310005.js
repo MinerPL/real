@@ -16,8 +16,8 @@
                 f = l("376556"),
                 m = l("412707"),
                 I = l("646186"),
-                N = l("926994"),
-                T = l("47319"),
+                T = l("926994"),
+                N = l("47319"),
                 E = l("957255"),
                 h = l("145131"),
                 g = l("810567"),
@@ -79,9 +79,9 @@
                 } = e, K = (0, c.default)(), [z, Z] = a.useState(""), {
                     isFetchingConnections: q,
                     accounts: J
-                } = (0, r.useStateFromStoresObject)([T.default], () => ({
-                    isFetchingConnections: T.default.isFetching(),
-                    accounts: T.default.getAccounts()
+                } = (0, r.useStateFromStoresObject)([N.default], () => ({
+                    isFetchingConnections: N.default.isFetching(),
+                    accounts: N.default.getAccounts()
                 }), []), {
                     canManageWebhooks: X,
                     canManageGuild: Q
@@ -169,7 +169,7 @@
                             }, "integration-".concat(o.id))
                         }(t, e, Y, eu, l)
                     }),
-                    eN = (0, n.jsx)("div", {
+                    eT = (0, n.jsx)("div", {
                         className: b.footerImage
                     });
                 0 === eI.length && Q && (eI = function(e, t, l) {
@@ -222,8 +222,8 @@
                             })
                         });
                     return t > 0 ? s : i
-                }(K, ei, null == t ? void 0 : t.id), eN = null);
-                let eT = C.default.getArticleURL(L.HelpdeskArticles.INTEGRATIONS),
+                }(K, ei, null == t ? void 0 : t.id), eT = null);
+                let eN = C.default.getArticleURL(L.HelpdeskArticles.INTEGRATIONS),
                     eE = null != l ? j.default.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_CHANNEL : j.default.Messages.INTEGRATIONS_OVERVIEW_DESCRIPTION_GUILD,
                     eh = [];
                 if (X) {
@@ -263,7 +263,7 @@
                     let r = f.default.get(L.PlatformTypes.TWITCH);
                     return e > 0 ? (a = j.default.Messages.INTEGRATIONS_TWITCH_BUTTON, s = j.default.Messages.INTEGRATIONS_TWITCH_SUMMARY.format({
                         count: t
-                    }), i = () => l(L.PlatformTypes.TWITCH)) : (a = j.default.Messages.INTEGRATIONS_TWITCH_EMPTY_BUTTON, s = j.default.Messages.INTEGRATIONS_TWITCH_EMPTY_SUMMARY, i = () => (0, N.default)(L.PlatformTypes.TWITCH, "Integration Settings")), (0, n.jsx)(M.default, {
+                    }), i = () => l(L.PlatformTypes.TWITCH)) : (a = j.default.Messages.INTEGRATIONS_TWITCH_EMPTY_BUTTON, s = j.default.Messages.INTEGRATIONS_TWITCH_EMPTY_SUMMARY, i = () => (0, T.default)(L.PlatformTypes.TWITCH, "Integration Settings")), (0, n.jsx)(M.default, {
                         name: j.default.Messages.INTEGRATIONS_TWITCH,
                         icon: r.icon.whiteSVG,
                         iconBackgroundColor: r.color,
@@ -280,7 +280,7 @@
                     let r = f.default.get(L.PlatformTypes.YOUTUBE);
                     return e > 0 ? (a = j.default.Messages.INTEGRATIONS_YOUTUBE_BUTTON, s = j.default.Messages.INTEGRATIONS_YOUTUBE_SUMMARY.format({
                         count: t
-                    }), i = () => l(L.PlatformTypes.YOUTUBE)) : (a = j.default.Messages.INTEGRATIONS_YOUTUBE_EMPTY_BUTTON, s = j.default.Messages.INTEGRATIONS_YOUTUBE_EMPTY_SUMMARY, i = () => (0, N.default)(L.PlatformTypes.YOUTUBE, "Integration Settings")), (0, n.jsx)(M.default, {
+                    }), i = () => l(L.PlatformTypes.YOUTUBE)) : (a = j.default.Messages.INTEGRATIONS_YOUTUBE_EMPTY_BUTTON, s = j.default.Messages.INTEGRATIONS_YOUTUBE_EMPTY_SUMMARY, i = () => (0, T.default)(L.PlatformTypes.YOUTUBE, "Integration Settings")), (0, n.jsx)(M.default, {
                         name: j.default.Messages.INTEGRATIONS_YOUTUBE,
                         icon: r.icon.whiteSVG,
                         iconBackgroundColor: r.color,
@@ -293,11 +293,11 @@
                         }]
                     }, "integrations-youtube")
                 }(ee, el, w)), (0, n.jsxs)(d.FormSection, {
-                    className: i(null != eN ? b.footerPlaceholder : null),
+                    className: i(null != eT ? b.footerPlaceholder : null),
                     children: [(0, n.jsx)(d.FormText, {
                         type: d.FormTextTypes.DESCRIPTION,
                         children: eE.format({
-                            helpdeskArticle: eT
+                            helpdeskArticle: eN
                         })
                     }), (0, n.jsx)(d.FormDivider, {
                         className: b.divider
@@ -316,7 +316,7 @@
                                 query: z,
                                 setQuery: Z
                             }) : null, eI]
-                        }) : null, eN]
+                        }) : null, eT]
                     })]
                 })
             }

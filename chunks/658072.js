@@ -16,8 +16,8 @@
                 f = l("485422"),
                 m = l("957255"),
                 I = l("145131"),
-                N = l("841811"),
-                T = l("781896"),
+                T = l("841811"),
+                N = l("781896"),
                 E = l("71216"),
                 h = l("8161"),
                 g = l("741919"),
@@ -85,13 +85,13 @@
                     }))
                 }, [D, P, l, y]), F = a.useMemo(() => {
                     let e = [{
-                        icon: N.default,
+                        icon: T.default,
                         text: M.default.Messages.INTEGRATION_ADDED_DATE.format({
                             timestamp: S.default.extractTimestamp(y.id)
                         })
                     }];
                     return null != y.user && e.push({
-                        icon: T.default,
+                        icon: N.default,
                         text: M.default.Messages.INTEGRATION_ADDED_USER.format({
                             user: O.default.getUserTag(y.user)
                         })

@@ -1,7 +1,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return N
+                    return T
                 }
             }), l("424973"), l("222007");
             var n = l("37983"),
@@ -17,12 +17,12 @@
                 m = l("782340"),
                 I = l("808201");
 
-            function N(e) {
+            function T(e) {
                 let {
                     webhooks: t,
                     selectableWebhookChannels: l,
-                    lastCreatedWebhookId: N,
-                    editedWebhook: T,
+                    lastCreatedWebhookId: T,
+                    editedWebhook: N,
                     errors: E,
                     canNavigate: h
                 } = e, g = a.useMemo(() => Object.values(l).map(e => ({
@@ -40,8 +40,8 @@
                             })
                         } return Object.values(e).sort((e, t) => e.channel.name.localeCompare(t.channel.name))
                 }, [l, t]), S = a.useCallback(e => {
-                    h() && (e === (null == T ? void 0 : T.id) ? i.default.stopEditingWebhook() : i.default.startEditingWebhook(e))
-                }, [h, T]);
+                    h() && (e === (null == N ? void 0 : N.id) ? i.default.stopEditingWebhook() : i.default.startEditingWebhook(e))
+                }, [h, N]);
                 return (0, n.jsx)("div", {
                     className: I.list,
                     children: p.map(e => {
@@ -55,8 +55,8 @@
                                 webhooks: l,
                                 channelOptions: a,
                                 lastCreatedWebhookId: i,
-                                editedWebhook: N,
-                                errors: T,
+                                editedWebhook: T,
+                                errors: N,
                                 toggleWebhookExpand: E
                             } = e;
                             return (0, n.jsxs)("div", {
@@ -72,21 +72,21 @@
                                     var t;
                                     if (e.type === f.WebhookTypes.CHANNEL_FOLLOWER) return (0, n.jsx)(u.default, {
                                         webhook: e,
-                                        editedWebhook: N,
+                                        editedWebhook: T,
                                         channelOptions: a,
-                                        isExpanded: (null == N ? void 0 : N.id) === e.id,
+                                        isExpanded: (null == T ? void 0 : T.id) === e.id,
                                         onToggleExpand: () => E(e.id),
-                                        errors: T
+                                        errors: N
                                     }, e.id);
                                     return (0, n.jsx)(c.default, {
                                         id: (t = e.id, "settings-integrations-webhook-".concat(t)),
                                         webhook: e,
-                                        editedWebhook: N,
+                                        editedWebhook: T,
                                         channelOptions: a,
-                                        isExpanded: (null == N ? void 0 : N.id) === e.id,
+                                        isExpanded: (null == T ? void 0 : T.id) === e.id,
                                         isNew: i === e.id,
                                         onToggleExpand: () => E(e.id),
-                                        errors: T
+                                        errors: N
                                     }, e.id)
                                 })]
                             }, t.id)
@@ -94,8 +94,8 @@
                             channel: t,
                             webhooks: l,
                             channelOptions: g,
-                            lastCreatedWebhookId: N,
-                            editedWebhook: T,
+                            lastCreatedWebhookId: T,
+                            editedWebhook: N,
                             errors: E,
                             toggleWebhookExpand: S
                         })

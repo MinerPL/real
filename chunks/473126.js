@@ -45,7 +45,7 @@
                 return null == e ? null : (0, a.jsx)(c.FormSection, {
                     tag: c.FormTitleTags.H1,
                     title: P.default.Messages.GUILD_SETTINGS_SOUNDBOARD,
-                    children: (0, a.jsx)(k, {
+                    children: (0, a.jsx)(w, {
                         guild: e
                     })
                 })
@@ -125,7 +125,7 @@
                         children: e => s(e)
                     })
                 },
-                w = () => (0, a.jsx)(V, {
+                k = () => (0, a.jsx)(V, {
                     renderPopoutBody: () => (0, a.jsx)(c.Text, {
                         variant: "text-sm/normal",
                         color: "header-secondary",
@@ -138,7 +138,7 @@
                     })
                 });
 
-            function k(e) {
+            function w(e) {
                 let {
                     guild: t
                 } = e, [l, i] = (0, d.useStateFromStoresArray)([g.default], () => {
@@ -178,7 +178,7 @@
                     },
                     disabled: _ <= 0 || !r,
                     children: P.default.Messages.GUILD_SETTINGS_SOUNDBOARD_UPLOAD_SOUND
-                }) : (0, a.jsx)(w, {});
+                }) : (0, a.jsx)(k, {});
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsxs)("div", {
                         children: [(0, a.jsx)(c.Text, {

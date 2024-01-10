@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("748820"),
-                u = n("469563"),
-                o = n("733154"),
+                o = n("469563"),
+                u = n("733154"),
                 d = n("77078"),
                 c = n("996496"),
                 f = n("574586");
@@ -21,7 +21,7 @@
                     height: n = 24,
                     isBadged: s = !1,
                     isTyping: i = !1
-                } = e, [c] = l.useState(() => (0, r.v4)()), f = (0, u.useRedesignIconContext)().enabled;
+                } = e, [c] = l.useState(() => (0, r.v4)()), f = (0, o.useRedesignIconContext)().enabled;
                 return (0, a.jsxs)("svg", {
                     width: t,
                     height: n,
@@ -50,7 +50,7 @@
                         })
                     }), f ? (0, a.jsx)("g", {
                         mask: "url(#".concat(c, ")"),
-                        children: (0, a.jsx)(o.ChatIcon, {
+                        children: (0, a.jsx)(u.ChatIcon, {
                             width: t,
                             height: n,
                             color: "currentColor"
@@ -70,15 +70,15 @@
                     unreadCount: l,
                     mentionCount: s,
                     isTyping: r,
-                    canBadge: u
-                } = e, o = null != s && s > 0, d = null !== (t = o ? s : l) && void 0 !== t ? t : 0, p = u && null != l && l > 0;
+                    canBadge: o
+                } = e, u = null != s && s > 0, d = null !== (t = u ? s : l) && void 0 !== t ? t : 0, p = o && null != l && l > 0;
                 return (0, a.jsxs)("div", {
                     className: i(f.chatIcon, n),
                     children: [(0, a.jsx)(h, {
                         isBadged: p,
                         isTyping: r
                     }), p && (0, a.jsx)(c.default, {
-                        hasMentions: o,
+                        hasMentions: u,
                         truncatedCount: d > 99 ? "99+" : d,
                         className: f.badge
                     })]

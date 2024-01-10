@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("446674"),
-                u = n("577776"),
-                o = n("452804"),
+                o = n("577776"),
+                u = n("452804"),
                 d = n("579408"),
                 c = n("168973"),
                 f = n("981913"),
@@ -19,8 +19,8 @@
                 m = n("717018"),
                 E = n("659500"),
                 C = n("439932"),
-                S = n("550766"),
-                g = n("191225"),
+                g = n("550766"),
+                S = n("191225"),
                 _ = n("698372"),
                 I = n("401207"),
                 T = n("320817"),
@@ -40,9 +40,9 @@
                     maxHeight: n,
                     connectedChannelId: s
                 } = e, j = (0, _.default)(), L = l.useCallback(() => {
-                    (0, S.updateActivityPanelMode)(x.ActivityPanelModes.PIP)
-                }, []), O = l.useRef(null), y = (0, r.useStateFromStores)([g.default], () => g.default.getFocusedLayout()), b = y !== x.FocusedActivityLayouts.NO_CHAT, [P, D] = l.useState(null !== (t = c.default.activityPanelHeight) && void 0 !== t ? t : n), U = l.useCallback(e => {
-                    o.default.updatedUnsyncedSettings({
+                    (0, g.updateActivityPanelMode)(x.ActivityPanelModes.PIP)
+                }, []), O = l.useRef(null), y = (0, r.useStateFromStores)([S.default], () => S.default.getFocusedLayout()), P = y !== x.FocusedActivityLayouts.NO_CHAT, [b, D] = l.useState(null !== (t = c.default.activityPanelHeight) && void 0 !== t ? t : n), U = l.useCallback(e => {
+                    u.default.updatedUnsyncedSettings({
                         activityPanelHeight: e
                     })
                 }, []), w = l.useRef(null), [F, k] = l.useState({
@@ -72,10 +72,10 @@
                 return null == j ? null : (0, a.jsxs)("div", {
                     className: i(M.wrapper, R[y], (0, C.getThemeClass)(N.ThemeTypes.DARK)),
                     ref: O,
-                    style: b && null != P ? {
+                    style: P && null != b ? {
                         minHeight: 200,
                         maxHeight: n,
-                        height: P
+                        height: b
                     } : void 0,
                     children: [(0, a.jsxs)("div", {
                         className: M.header,
@@ -89,7 +89,7 @@
                                 iconClassName: M.minimizeIcon,
                                 themeable: !0
                             })
-                        }), (0, a.jsx)(u.Text, {
+                        }), (0, a.jsx)(o.Text, {
                             color: "header-primary",
                             variant: "text-md/semibold",
                             className: M.headerTitle,
@@ -123,7 +123,7 @@
                         children: (0, a.jsx)(v.default, {
                             channelId: z
                         })
-                    }) : null, b ? (0, a.jsx)(d.default, {
+                    }) : null, P ? (0, a.jsx)(d.default, {
                         minHeight: 480,
                         maxHeight: n,
                         resizableNode: O,

@@ -1,16 +1,16 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return T
                 }
             });
-            var i = n("37983"),
-                l = n("884691"),
+            var l = n("37983"),
+                i = n("884691"),
                 r = n("414456"),
                 s = n.n(r),
                 a = n("446674"),
-                u = n("405645"),
-                o = n("692038"),
+                o = n("405645"),
+                u = n("692038"),
                 d = n("815297"),
                 c = n("291655"),
                 f = n("697218"),
@@ -20,37 +20,37 @@
                 h = n("782340"),
                 S = n("515476");
 
-            function m(e) {
+            function T(e) {
                 var t;
                 let {
                     guildId: n,
                     role: r,
-                    theme: m,
-                    content: M = h.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT,
-                    className: L
-                } = e, A = (0, a.useStateFromStores)([f.default], () => f.default.getCurrentUser()), C = E.default.useName(n, null, A), v = (0, u.getRoleIconProps)(r), g = l.useMemo(() => (0, o.createMessageRecord)({
+                    theme: T,
+                    content: m = h.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT,
+                    className: C
+                } = e, M = (0, a.useStateFromStores)([f.default], () => f.default.getCurrentUser()), g = E.default.useName(n, null, M), v = (0, o.getRoleIconProps)(r), I = i.useMemo(() => (0, u.createMessageRecord)({
                     ...(0, d.default)({
                         channelId: "0",
-                        content: M,
+                        content: m,
                         tts: void 0,
                         type: void 0,
                         messageReference: void 0,
                         allowedMentions: void 0,
-                        author: A
+                        author: M
                     }),
                     state: p.MessageStates.SENT,
                     id: "0"
-                }), [A, M]), T = {
-                    nick: C,
+                }), [M, m]), A = {
+                    nick: g,
                     colorString: null !== (t = r.colorString) && void 0 !== t ? t : void 0
                 };
-                return (0, i.jsx)("div", {
-                    className: s((0, _.getThemeClass)(m), S.container, L),
-                    children: (0, i.jsx)(c.default, {
+                return (0, l.jsx)("div", {
+                    className: s((0, _.getThemeClass)(T), S.container, C),
+                    children: (0, l.jsx)(c.default, {
                         hideTimestamp: !0,
-                        author: T,
+                        author: A,
                         roleIcon: v,
-                        message: g,
+                        message: I,
                         isGroupStart: !0,
                         disableInteraction: !0
                     })

@@ -20,38 +20,38 @@
                 let {
                     applicationIcon: t,
                     applicationName: I,
-                    canNavigate: N,
-                    command: T,
+                    canNavigate: T,
+                    command: N,
                     guildId: E
                 } = e, h = a.useMemo(() => {
                     var e;
-                    return 0 !== Object.keys(null !== (e = T.permissions) && void 0 !== e ? e : {}).length
-                }, [T.permissions]), g = a.useCallback(() => {
-                    null != T && N() && (0, s.openModalLazy)(async () => {
+                    return 0 !== Object.keys(null !== (e = N.permissions) && void 0 !== e ? e : {}).length
+                }, [N.permissions]), g = a.useCallback(() => {
+                    null != N && T() && (0, s.openModalLazy)(async () => {
                         let {
                             default: e
                         } = await l.el("555022").then(l.bind(l, "555022"));
                         return l => (0, n.jsx)(e, {
                             applicationIcon: t,
-                            applicationId: T.applicationId,
+                            applicationId: N.applicationId,
                             applicationName: I,
-                            command: T,
+                            command: N,
                             guildId: E,
                             ...l
                         })
                     })
-                }, [t, I, N, T, E]), p = a.useCallback(e => {
+                }, [t, I, T, N, E]), p = a.useCallback(e => {
                     (0, i.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
                         } = await l.el("443070").then(l.bind(l, "443070"));
                         return t => (0, n.jsx)(e, {
                             ...t,
-                            id: T.id,
+                            id: N.id,
                             label: f.default.Messages.COPY_ID_COMMAND
                         })
                     })
-                }, [T]), S = T.type === r.ApplicationCommandType.CHAT ? o.default : d.default, O = (0, c.commandName)(T.type, T.displayName);
+                }, [N]), S = N.type === r.ApplicationCommandType.CHAT ? o.default : d.default, O = (0, c.commandName)(N.type, N.displayName);
                 return (0, n.jsxs)(s.Clickable, {
                     onClick: g,
                     className: m.item,

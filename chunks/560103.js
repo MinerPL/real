@@ -14,11 +14,11 @@
                     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
                         l = arguments.length > 3 ? arguments[3] : void 0,
                         i = r(s, t, n, l),
-                        u = a.useRef(e);
+                        o = a.useRef(e);
                     return a.useEffect(() => {
                         let t = i(e);
-                        u.current = t
-                    }, [e, i]), 0 === t ? e : u.current
+                        o.current = t
+                    }, [e, i]), 0 === t ? e : o.current
                 },
                 r = function(e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],

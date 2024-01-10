@@ -16,8 +16,8 @@
                 f = l("376556"),
                 m = l("385976"),
                 I = l("592407"),
-                N = l("766274"),
-                T = l("102985"),
+                T = l("766274"),
+                N = l("102985"),
                 E = l("145131"),
                 h = l("461380"),
                 g = l("841811"),
@@ -41,7 +41,7 @@
                         onEnable: j
                     } = e,
                     [b, P] = a.useState(!1),
-                    D = (0, d.useStateFromStores)([T.default], () => T.default.hidePersonalInformation),
+                    D = (0, d.useStateFromStores)([N.default], () => N.default.hidePersonalInformation),
                     y = a.useCallback(() => {
                         P(!0), j(s)
                     }, [s, j]),
@@ -125,7 +125,7 @@
                     text: D ? C.default.Messages.INTEGRATION_ADDED_DATE.format({
                         timestamp: O.default.extractTimestamp(s.id)
                     }) : C.default.Messages.INTEGRATION_ADDED_USER_DATE.format({
-                        user: null != s.user ? new N.default(s.user).tag : null,
+                        user: null != s.user ? new T.default(s.user).tag : null,
                         timestamp: O.default.extractTimestamp(s.id)
                     })
                 }];

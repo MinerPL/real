@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("917351"),
-                u = n.n(r),
-                o = n("446674"),
+                o = n.n(r),
+                u = n("446674"),
                 d = n("77078"),
                 c = n("777274"),
                 f = n("76813"),
@@ -19,8 +19,8 @@
                 m = n("336804"),
                 E = n("311197"),
                 C = n("830251"),
-                S = n("170643"),
-                g = n("550410"),
+                g = n("170643"),
+                S = n("550410"),
                 _ = n("124824"),
                 I = n("640553"),
                 T = n("104815"),
@@ -34,8 +34,8 @@
                 L = n("980423"),
                 O = n("191145"),
                 y = n("598785"),
-                b = n("226735"),
-                P = n("340513"),
+                P = n("226735"),
+                b = n("340513"),
                 D = n("99795"),
                 U = n("49111"),
                 w = n("782340"),
@@ -45,7 +45,7 @@
                 let {
                     channelId: t,
                     guildId: n
-                } = e, l = Date.now(), s = (0, o.useStateFromStores)([M.default, O.default], () => u(M.default.getSpeakers()).map(e => O.default.getParticipant(t, e)).filter(e => null != e && e.type === D.ParticipantTypes.USER && e.speaking && !(0, C.default)(e)).sortBy(e => -M.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
+                } = e, l = Date.now(), s = (0, u.useStateFromStores)([M.default, O.default], () => o(M.default.getSpeakers()).map(e => O.default.getParticipant(t, e)).filter(e => null != e && e.type === D.ParticipantTypes.USER && e.speaking && !(0, C.default)(e)).sortBy(e => -M.default.getSpeakingDuration(e.user.id, l)).slice(0, 3).value());
                 return 0 === s.length ? null : (0, a.jsx)(a.Fragment, {
                     children: s.map((e, t) => (0, a.jsx)(d.Tooltip, {
                         position: "bottom",
@@ -74,19 +74,19 @@
                     appContext: s,
                     inCall: i,
                     isChatOpen: r,
-                    exitFullScreen: u
+                    exitFullScreen: o
                 } = e, C = n.id, {
                     voiceParticipantsHidden: M,
                     selectedParticipant: j,
                     userParticipantCount: w
-                } = (0, o.useStateFromStoresObject)([O.default], () => ({
+                } = (0, u.useStateFromStoresObject)([O.default], () => ({
                     selectedParticipant: O.default.getSelectedParticipant(C),
                     voiceParticipantsHidden: O.default.getVoiceParticipantsHidden(C),
                     userParticipantCount: O.default.getUserParticipantCount(C)
                 }), [C]), V = (0, y.default)(n), {
                     preventIdle: B,
                     allowIdle: H
-                } = (0, g.usePreventIdle)("popup"), G = [];
+                } = (0, S.usePreventIdle)("popup"), G = [];
                 if (V) {
                     let e = (null == j ? void 0 : j.type) === D.ParticipantTypes.STREAM ? (0, p.decodeStreamKey)(j.id) : void 0,
                         t = (null == j ? void 0 : j.type) === D.ParticipantTypes.ACTIVITY ? j.id : void 0;
@@ -95,7 +95,7 @@
                         channel: n,
                         applicationId: t,
                         stream: e,
-                        exitFullScreen: u,
+                        exitFullScreen: o,
                         analyticsLocation: n.type === U.ChannelTypes.GUILD_VOICE ? U.AnalyticsPages.GUILD_CHANNEL : U.AnalyticsPages.DM_CHANNEL
                     }, "invite-button"))
                 }
@@ -105,7 +105,7 @@
                 }, "current-speaker")), G.push((0, a.jsx)(h.default, {
                     className: F.button,
                     channelId: C
-                }, "clips-enabled-indicator")), (null == j ? void 0 : j.type) === D.ParticipantTypes.STREAM && (G.push((0, a.jsx)(S.default, {
+                }, "clips-enabled-indicator")), (null == j ? void 0 : j.type) === D.ParticipantTypes.STREAM && (G.push((0, a.jsx)(g.default, {
                     className: F.button,
                     participant: j
                 }, "warning")), G.push((0, a.jsx)(m.default, {
@@ -116,7 +116,7 @@
                 }, "live-indicator"))), M && G.push((0, a.jsx)(d.Popout, {
                     position: "bottom",
                     renderPopout: () => (0, a.jsx)(_.default, {
-                        children: (0, a.jsx)(P.default, {
+                        children: (0, a.jsx)(b.default, {
                             channel: n
                         })
                     }),
@@ -154,11 +154,11 @@
                             closePopout: t
                         } = e;
                         return (0, a.jsx)(_.default, {
-                            children: (0, a.jsx)(b.default, {
+                            children: (0, a.jsx)(P.default, {
                                 channelId: C,
                                 onClose: t,
                                 appContext: s,
-                                exitFullScreen: u
+                                exitFullScreen: o
                             })
                         })
                     },

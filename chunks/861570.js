@@ -9,8 +9,8 @@
                 s = n("917351"),
                 i = n.n(s),
                 r = n("446674"),
-                u = n("913144"),
-                o = n("272030"),
+                o = n("913144"),
+                u = n("272030"),
                 d = n("264732"),
                 c = n("716241"),
                 f = n("701916"),
@@ -19,8 +19,8 @@
                 m = n("850391"),
                 E = n("557809"),
                 C = n("144491"),
-                S = n("42203"),
-                g = n("474643"),
+                g = n("42203"),
+                S = n("474643"),
                 _ = n("305961"),
                 I = n("800762"),
                 T = n("664336"),
@@ -35,11 +35,11 @@
                     channelId: t,
                     baseChannelId: s,
                     channelViewSource: R = "Split View"
-                } = e, j = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(t)), L = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(null == j ? void 0 : j.getGuildId())), O = (0, h.default)(j);
+                } = e, j = (0, r.useStateFromStores)([g.default], () => g.default.getChannel(t)), L = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(null == j ? void 0 : j.getGuildId())), O = (0, h.default)(j);
                 (function(e) {
                     let t = (0, r.useStateFromStores)([I.default], () => null != e && !i.isEmpty(I.default.getVoiceStatesForChannel(e.id)));
                     l.useEffect(() => {
-                        t && null != e && (u.default.dispatch({
+                        t && null != e && (o.default.dispatch({
                             type: "SIDEBAR_CLOSE",
                             baseChannelId: e.parent_id
                         }), (0, C.transitionToThread)(e, x.OpenThreadAnalyticsLocations.VOICE_AUTO_OPEN))
@@ -49,7 +49,7 @@
                 if (l.useEffect(() => {
                         if (null == j || y.current) return;
                         y.current = !0;
-                        let e = (0, f.collectThreadMetadata)(S.default.getChannel(j.id), !0);
+                        let e = (0, f.collectThreadMetadata)(g.default.getChannel(j.id), !0);
                         (0, c.trackWithMetadata)(N.AnalyticEvents.CHANNEL_OPENED, {
                             ...e,
                             channel_id: j.id,
@@ -58,16 +58,16 @@
                             channel_view: R
                         })
                     }, [j, R]), null == j || null == L) return null;
-                let b = (0, a.jsx)(v.default, {
+                let P = (0, a.jsx)(v.default, {
                     channel: j,
                     baseChannelId: s
                 });
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(d.default, {
                         channel: j,
-                        draftType: g.DraftType.ChannelMessage
+                        draftType: S.DraftType.ChannelMessage
                     }), (0, a.jsx)(T.default, {
-                        toolbar: b,
+                        toolbar: P,
                         "aria-label": A.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
                         children: (0, E.renderTitle)({
                             channel: j,
@@ -75,7 +75,7 @@
                             guild: L,
                             inSidebar: !0,
                             handleContextMenu: function(e) {
-                                (0, o.openContextMenuLazy)(e, async () => {
+                                (0, u.openContextMenuLazy)(e, async () => {
                                     let {
                                         default: e
                                     } = await n.el("994827").then(n.bind(n, "994827"));

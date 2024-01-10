@@ -11,8 +11,8 @@
             n("884691");
             var i = n("414456"),
                 r = n.n(i),
-                u = n("145131"),
-                o = n("600123"),
+                o = n("145131"),
+                u = n("600123"),
                 d = n("434018");
 
             function c(e) {
@@ -35,23 +35,23 @@
                         children: null == n ? void 0 : n()
                     }), null == r ? void 0 : r(), (0, s.jsxs)("div", {
                         className: d.bottomControls,
-                        children: [(0, s.jsx)(u.default, {
+                        children: [(0, s.jsx)(o.default, {
                             grow: 0,
                             shrink: 1,
                             basis: "50%",
-                            align: u.default.Align.CENTER,
+                            align: o.default.Align.CENTER,
                             children: null == a ? void 0 : a()
-                        }), (0, s.jsx)(u.default, {
+                        }), (0, s.jsx)(o.default, {
                             grow: 1,
-                            justify: u.default.Justify.CENTER,
-                            align: u.default.Align.CENTER,
+                            justify: o.default.Justify.CENTER,
+                            align: o.default.Align.CENTER,
                             children: null == l ? void 0 : l()
-                        }), (0, s.jsx)(u.default, {
+                        }), (0, s.jsx)(o.default, {
                             grow: 0,
                             shrink: 1,
-                            justify: u.default.Justify.END,
+                            justify: o.default.Justify.END,
                             basis: "50%",
-                            align: u.default.Align.CENTER,
+                            align: o.default.Align.CENTER,
                             children: null == i ? void 0 : i()
                         })]
                     })]
@@ -65,7 +65,7 @@
                     onActive: a,
                     onForceIdle: l,
                     idle: i,
-                    children: u,
+                    children: o,
                     renderChatButton: f,
                     renderChatToasts: h,
                     renderVoiceChannelEffects: p,
@@ -81,7 +81,7 @@
                     onMouseDown: a,
                     onMouseLeave: l,
                     onDoubleClick: n,
-                    children: [u, null != t ? (0, s.jsx)(o.default, {
+                    children: [o, null != t ? (0, s.jsx)(u.default, {
                         size: "large",
                         ...t
                     }) : null, (0, s.jsx)(c, {

@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("944832"),
-                u = n("124299"),
-                o = n("127868");
+                o = n("124299"),
+                u = n("127868");
             let d = 16 / 9;
 
             function c(e, t) {
@@ -39,9 +39,9 @@
                     width: 0,
                     height: 0
                 }), {
-                    width: S,
-                    height: g
-                } = E, _ = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, I = S - 16, T = g - (p + m), {
+                    width: g,
+                    height: S
+                } = E, _ = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, I = g - 16, T = S - (p + m), {
                     tileStyle: v,
                     tileWidth: x,
                     rows: N,
@@ -85,8 +85,8 @@
                         rows: a,
                         columns: l
                     }
-                })(_, I, T), [_, I, T]), M = A + 1, R = M * x + (M - 1) * 8, j = R <= S, L = Math.floor(x / d) + 8, O = Math.max(0, T - L * N) / 2;
-                return (0, a.jsx)(u.default, {
+                })(_, I, T), [_, I, T]), M = A + 1, R = M * x + (M - 1) * 8, j = R <= g, L = Math.floor(x / d) + 8, O = Math.max(0, T - L * N) / 2;
+                return (0, a.jsx)(o.default, {
                     fade: !0,
                     className: n,
                     listPadding: [p + O, 0, m + O - 8, 8],
@@ -94,19 +94,19 @@
                         var t;
                         let n = e * A;
                         return (0, a.jsx)("div", {
-                            className: o.row,
+                            className: u.row,
                             children: null == s ? void 0 : null === (t = s.slice(n, n + A)) || void 0 === t ? void 0 : t.map((e, t) => {
                                 var l;
                                 let s = n + t;
                                 return (0, a.jsx)("div", {
                                     style: v,
-                                    className: i(o.tile, {
-                                        [o.padColumn]: j,
-                                        [o.noVerticalMargin]: s >= (N - 1) * A,
-                                        [o.noHorizontalMargin]: (s + 1) % A == 0 || s === _ - 1
+                                    className: i(u.tile, {
+                                        [u.padColumn]: j,
+                                        [u.noVerticalMargin]: s >= (N - 1) * A,
+                                        [u.noHorizontalMargin]: (s + 1) % A == 0 || s === _ - 1
                                     }),
                                     children: (0, a.jsx)(r.default, {
-                                        className: o.tileSizer,
+                                        className: u.tileSizer,
                                         aspectRatio: d,
                                         children: e(x)
                                     })

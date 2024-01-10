@@ -16,8 +16,8 @@
                 f = l("716241"),
                 m = l("524768"),
                 I = l("389153"),
-                N = l("702411"),
-                T = l("15639"),
+                T = l("702411"),
+                N = l("15639"),
                 E = l("5667"),
                 h = l("271938"),
                 g = l("305961"),
@@ -42,7 +42,7 @@
                     guildId: s,
                     noneSelectedText: r,
                     overwrites: f,
-                    hasAccessToMutatePermissions: N
+                    hasAccessToMutatePermissions: T
                 } = e, E = (0, d.useStateFromStores)([g.default], () => g.default.getGuild(s), [s]);
                 i(null != E, "");
                 let [h, S] = a.useState(new Set), O = a.useMemo(() => {
@@ -105,7 +105,7 @@
                         var t;
                         return (null === (t = e.application) || void 0 === t ? void 0 : t.id) === L
                     })),
-                    P = (0, d.useStateFromStores)([T.default], () => void 0 !== j && T.default.canShowToggleTooltip(j.id));
+                    P = (0, d.useStateFromStores)([N.default], () => void 0 !== j && N.default.canShowToggleTooltip(j.id));
                 return (0, n.jsx)(a.Fragment, {
                     children: O.length > 0 ? O.map(e => (0, n.jsx)(D, {
                         guild: E,
@@ -115,7 +115,7 @@
                         overwrite: e,
                         integration: j,
                         canShowMigrationTooltip: P,
-                        hasAccessToMutatePermissions: N
+                        hasAccessToMutatePermissions: T
                     }, e.id)) : (0, n.jsx)("div", {
                         className: b.noItemsSelected,
                         children: (0, n.jsx)(u.Text, {
@@ -134,17 +134,17 @@
                         commandId: o,
                         onChange: d,
                         onRemove: c,
-                        overwrite: T,
+                        overwrite: N,
                         integration: g,
                         canShowMigrationTooltip: p,
                         hasAccessToMutatePermissions: S
                     } = e,
-                    _ = T.id === r.id || T.id === (0, I.allChannelsSentinel)(r.id),
+                    _ = N.id === r.id || N.id === (0, I.allChannelsSentinel)(r.id),
                     A = null == g ? void 0 : null === (l = g.application) || void 0 === l ? void 0 : null === (t = l.bot) || void 0 === t ? void 0 : t.username,
-                    C = !T.canWrite || !S,
+                    C = !N.canWrite || !S,
                     x = h.default.getId();
-                S ? !T.canWrite && (T.type === m.ApplicationCommandPermissionType.USER ? i = T.id === x ? j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_SELF : j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_OTHER : T.type === m.ApplicationCommandPermissionType.ROLE && (i = j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_ROLE)) : i = null != o ? j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION;
-                let R = p && null != g && T.id === r.id && void 0 !== A && !T.permission;
+                S ? !N.canWrite && (N.type === m.ApplicationCommandPermissionType.USER ? i = N.id === x ? j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_SELF : j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_USER_OTHER : N.type === m.ApplicationCommandPermissionType.ROLE && (i = j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_ROLE)) : i = null != o ? j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : j.default.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION;
+                let R = p && null != g && N.id === r.id && void 0 !== A && !N.permission;
                 a.useEffect(() => {
                     if (R) {
                         var e;
@@ -165,9 +165,9 @@
                             ...e,
                             children: (0, n.jsx)(v.default, {
                                 isDisabled: C,
-                                currentValue: T.permission,
+                                currentValue: N.permission,
                                 onChange: R ? e => {
-                                    N.default.dismissToggleTooltip(null == g ? void 0 : g.id), d(e)
+                                    T.default.dismissToggleTooltip(null == g ? void 0 : g.id), d(e)
                                 } : d
                             })
                         })
@@ -175,7 +175,7 @@
                     D = (0, n.jsx)(u.Popout, {
                         renderPopout: () => (0, n.jsx)(u.Clickable, {
                             onClick: e => {
-                                e.stopPropagation(), N.default.dismissToggleTooltip(r.id, g)
+                                e.stopPropagation(), T.default.dismissToggleTooltip(r.id, g)
                             },
                             children: (0, n.jsx)(E.default, {
                                 className: b.tooltip,
@@ -189,7 +189,7 @@
                         position: "bottom",
                         align: "center",
                         animation: u.Popout.Animation.TRANSLATE,
-                        onRequestClose: () => N.default.dismissToggleTooltip(r.id, g),
+                        onRequestClose: () => T.default.dismissToggleTooltip(r.id, g),
                         shouldShow: R,
                         closeOnScroll: !0,
                         children: () => P
@@ -200,8 +200,8 @@
                         className: b.entryName,
                         children: (0, n.jsx)(M.default, {
                             guild: r,
-                            id: T.id,
-                            type: T.type,
+                            id: N.id,
+                            type: N.type,
                             isLocked: C,
                             lockTooltipText: i
                         })
@@ -214,7 +214,7 @@
                             onRemove: c
                         }), D]
                     })]
-                }, T.id)
+                }, N.id)
             }
 
             function y(e) {

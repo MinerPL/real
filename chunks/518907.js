@@ -25,16 +25,16 @@
                 x = l("662286"),
                 L = l("601095"),
                 S = l("493390"),
-                v = l("161778"),
-                I = l("697218"),
+                I = l("161778"),
+                v = l("697218"),
                 _ = l("944441"),
                 N = l("462579"),
                 A = l("216422"),
                 k = l("956089"),
                 F = l("50885"),
                 O = l("21526"),
-                R = l("775416"),
-                y = l("491232"),
+                y = l("775416"),
+                R = l("491232"),
                 j = l("342676"),
                 B = l("450492"),
                 P = l("920580"),
@@ -91,7 +91,7 @@
                     isGiftEasterEggEnabled: F
                 } = e, {
                     analyticsLocations: X
-                } = (0, m.default)(E.default.COLLECTIBLES_SHOP_CARD), Z = s.useRef(null), q = (0, C.default)(Z), [$, J] = s.useState(!1), Q = q || $, ee = (0, o.default)([I.default], () => I.default.getCurrentUser()), [et] = t.items, {
+                } = (0, m.default)(E.default.COLLECTIBLES_SHOP_CARD), Z = s.useRef(null), q = (0, C.default)(Z), [$, J] = s.useState(!1), Q = q || $, ee = (0, o.default)([v.default], () => v.default.getCurrentUser()), [et] = t.items, {
                     avatarDecorationSrc: el,
                     eventHandlers: ea,
                     avatarPlaceholderSrc: es
@@ -102,9 +102,9 @@
                     animateOnHover: !Q
                 }), {
                     backgroundColors: er
-                } = (0, w.default)(t.categorySkuId), en = (0, y.getFormattedPriceForCollectiblesProduct)(t, N), eo = (0, y.isPremiumCollectiblesProduct)(t), ei = (0, y.isFreeCollectiblesProduct)(t), [eu, ec, ed] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.getPurchase(t.skuId), R.default.isClaiming === t.skuId, null != R.default.isClaiming && R.default.isClaiming !== t.skuId]), ef = (0, x.useCanUseProfileEffects)({
+                } = (0, w.default)(t.categorySkuId), en = (0, R.getFormattedPriceForCollectiblesProduct)(t, N), eo = (0, R.isPremiumCollectiblesProduct)(t), ei = (0, R.isFreeCollectiblesProduct)(t), [eu, ec, ed] = (0, o.useStateFromStoresArray)([y.default], () => [y.default.getPurchase(t.skuId), y.default.isClaiming === t.skuId, null != y.default.isClaiming && y.default.isClaiming !== t.skuId]), ef = (0, x.useCanUseProfileEffects)({
                     location: "CollectiblesShopCard"
-                }), eC = (0, o.default)([v.default], () => (0, u.isThemeDark)(v.default.theme));
+                }), eC = (0, o.default)([I.default], () => (0, u.isThemeDark)(I.default.theme));
                 s.useEffect(() => {
                     let {
                         current: e
@@ -215,7 +215,7 @@
                         })
                     };
                 if (!1 === ef) return null;
-                let ev = eC ? "0 0 15px 1px ".concat(i.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)";
+                let eI = eC ? "0 0 15px 1px ".concat(i.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)";
                 return (0, a.jsx)(c.FocusRing, {
                     children: (0, a.jsxs)(c.Clickable, {
                         innerRef: Z,
@@ -225,7 +225,7 @@
                         style: null != er ? {
                             backgroundColor: eC ? "var(--background-floating)" : "var(--background-secondary)",
                             borderColor: "var(--chat-border)",
-                            boxShadow: Q ? ev : "none"
+                            boxShadow: Q ? eI : "none"
                         } : void 0,
                         id: "shop-item-".concat(t.skuId),
                         children: [eo && (0, a.jsx)(c.Tooltip, {

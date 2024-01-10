@@ -2,7 +2,7 @@
             let n, a, s;
             l.r(t), l.d(t, {
                 default: function() {
-                    return N
+                    return T
                 }
             }), l("222007");
             var i = l("446674"),
@@ -40,7 +40,7 @@
                 }
             }
             I.displayName = "IntegrationPermissionStore";
-            var N = new I(r.default, {
+            var T = new I(r.default, {
                 LOGOUT: m,
                 INTEGRATION_PERMISSION_SETTINGS_APPLICATION_PERMISSIONS_FETCH_FAILURE: function(e) {
                     let {

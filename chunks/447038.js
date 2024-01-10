@@ -10,23 +10,23 @@
                     return a
                 },
                 updateSearchStateV2: function() {
-                    return u
+                    return o
                 },
                 getMemberSupplementalV2: function() {
-                    return o
+                    return u
                 }
             });
-            var i = n("913144"),
-                l = n("835257");
+            var l = n("913144"),
+                i = n("835257");
             async function r(e) {
-                await i.default.dispatch({
+                await l.default.dispatch({
                     type: "INITIALIZE_MEMBER_SAFETY_STORE",
                     guildId: e
                 })
             }
 
             function s(e) {
-                i.default.dispatch({
+                l.default.dispatch({
                     type: "MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH",
                     guildId: e
                 })
@@ -35,24 +35,24 @@
             function a(e, t) {
                 let {
                     continuationToken: n,
-                    ...l
+                    ...i
                 } = t;
-                i.default.dispatch({
+                l.default.dispatch({
                     type: "MEMBER_SAFETY_PAGINATION_UPDATE",
                     guildId: e,
-                    pagination: l
+                    pagination: i
                 })
             }
-            async function u(e, t) {
-                await i.default.dispatch({
+            async function o(e, t) {
+                await l.default.dispatch({
                     type: "MEMBER_SAFETY_SEARCH_STATE_UPDATE",
                     guildId: e,
                     searchState: t
                 })
             }
-            async function o(e, t) {
-                let n = await (0, l.fetchMemberSupplemental)(e, t);
-                return 0 === n.length ? [] : (await i.default.dispatch({
+            async function u(e, t) {
+                let n = await (0, i.fetchMemberSupplemental)(e, t);
+                return 0 === n.length ? [] : (await l.default.dispatch({
                     type: "FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS",
                     guildId: e,
                     memberSupplementals: n

@@ -20,7 +20,7 @@
             (n = a || (a = {})).DENY = "DENY", n.PASSTHROUGH = "PASSTHROUGH", n.ALLOW = "ALLOW";
             let I = Object.keys(a);
 
-            function N(e) {
+            function T(e) {
                 let {
                     value: t = "PASSTHROUGH",
                     onChange: l,
@@ -36,7 +36,7 @@
                         [m.disabled]: a
                     }),
                     ...i,
-                    children: I.map(e => (0, s.jsx)(T, {
+                    children: I.map(e => (0, s.jsx)(N, {
                         type: e,
                         isSelected: t === e,
                         onSelect: e => {
@@ -46,7 +46,7 @@
                 })
             }
 
-            function T(e) {
+            function N(e) {
                 let t, l, n, {
                     type: a,
                     onSelect: i,
@@ -62,7 +62,7 @@
                     default:
                         n = f.default.Messages.PERMISSION_OVERRIDE_PASSTHROUGH, t = c.default, l = m.passthrough
                 }
-                let N = (0, o.useRadioItem)({
+                let T = (0, o.useRadioItem)({
                     isSelected: I,
                     label: n
                 });
@@ -71,12 +71,12 @@
                         [m.selected]: I
                     }),
                     onClick: () => i(a),
-                    ...N,
+                    ...T,
                     children: (0, s.jsx)(t, {
                         width: 16,
                         height: 16
                     })
                 })
             }
-            N.Types = a;
-            var E = N
+            T.Types = a;
+            var E = T

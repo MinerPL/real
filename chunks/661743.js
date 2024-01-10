@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("917351"),
-                u = n.n(r),
-                o = n("77078"),
+                o = n.n(r),
+                u = n("77078"),
                 d = n("943722"),
                 c = n("468759"),
                 f = n("987772"),
@@ -19,8 +19,8 @@
                 m = n("925749"),
                 E = n("782340"),
                 C = n("492013");
-            let S = e => {
-                    e.stopPropagation(), (0, o.openModalLazy)(async () => {
+            let g = e => {
+                    e.stopPropagation(), (0, u.openModalLazy)(async () => {
                         let {
                             default: e
                         } = await n.el("579371").then(n.bind(n, "579371"));
@@ -29,14 +29,14 @@
                         })
                     })
                 },
-                g = e => {
+                S = e => {
                     let {
                         style: t,
                         className: n,
                         name: l,
                         icon: s
                     } = e;
-                    return (0, a.jsx)(o.Tooltip, {
+                    return (0, a.jsx)(u.Tooltip, {
                         text: l,
                         children: e => (0, a.jsx)("div", {
                             className: i(n, C.iconWidget),
@@ -62,10 +62,10 @@
                             className: C.iconsContainer,
                             children: [Object.entries(s).map(e => {
                                 let [n, l] = e;
-                                return (0, a.jsx)(o.Clickable, {
+                                return (0, a.jsx)(u.Clickable, {
                                     "aria-label": l.title,
                                     onClick: e => r(e, n),
-                                    children: (0, a.jsx)(g, {
+                                    children: (0, a.jsx)(S, {
                                         className: i(C.iconWidget, {
                                             [C.selectedWidget]: n === (null == t ? void 0 : t.state)
                                         }),
@@ -80,10 +80,10 @@
                                         } : {}
                                     })
                                 }, n)
-                            }), (0, a.jsx)(o.Clickable, {
+                            }), (0, a.jsx)(u.Clickable, {
                                 "aria-label": E.default.Messages.STATUS_POPOUT_CLEAR_STATUS,
                                 onClick: I,
-                                children: (0, a.jsx)(g, {
+                                children: (0, a.jsx)(S, {
                                     className: C.optionButton,
                                     name: E.default.Messages.STATUS_POPOUT_CLEAR_STATUS,
                                     icon: (0, a.jsx)(c.default, {
@@ -97,11 +97,11 @@
                         }), (0, a.jsxs)("div", {
                             className: C.iconsContainer,
                             children: [n.current.map((e, n) => {
-                                let l = e.status === (null == t ? void 0 : t.details) && u.isEqual(e.emoji, null == t ? void 0 : t.emoji);
-                                return (0, a.jsx)(o.Clickable, {
+                                let l = e.status === (null == t ? void 0 : t.details) && o.isEqual(e.emoji, null == t ? void 0 : t.emoji);
+                                return (0, a.jsx)(u.Clickable, {
                                     "aria-label": e.status,
                                     onClick: t => _(t, e),
-                                    children: (0, a.jsx)(g, {
+                                    children: (0, a.jsx)(S, {
                                         className: i(C.iconWidget, {
                                             [C.selectedWidget]: l
                                         }),
@@ -118,10 +118,10 @@
                                         }
                                     })
                                 }, "custom-status-".concat(n))
-                            }), n.current.length > 0 ? (0, a.jsx)(o.Clickable, {
+                            }), n.current.length > 0 ? (0, a.jsx)(u.Clickable, {
                                 "aria-label": null != t ? E.default.Messages.STATUS_POPOUT_EDIT_CUSTOM : E.default.Messages.STATUS_POPOUT_SET_CUSTOM,
-                                onClick: S,
-                                children: (0, a.jsx)(g, {
+                                onClick: g,
+                                children: (0, a.jsx)(S, {
                                     className: C.optionButton,
                                     name: null != t ? E.default.Messages.STATUS_POPOUT_EDIT_CUSTOM : E.default.Messages.STATUS_POPOUT_SET_CUSTOM,
                                     icon: (0, a.jsx)(f.default, {
@@ -130,14 +130,14 @@
                                         foreground: C.editIconColor
                                     })
                                 })
-                            }, "custom-status-edit") : (0, a.jsxs)(o.Clickable, {
+                            }, "custom-status-edit") : (0, a.jsxs)(u.Clickable, {
                                 "aria-label": E.default.Messages.STATUS_POPOUT_SET_CUSTOM,
-                                onClick: S,
+                                onClick: g,
                                 className: C.setCustomButton,
                                 children: [(0, a.jsx)(f.default, {
                                     className: C.editIcon,
                                     foreground: C.editIconColor
-                                }), (0, a.jsx)(o.Text, {
+                                }), (0, a.jsx)(u.Text, {
                                     variant: "text-xs/medium",
                                     color: "interactive-active",
                                     children: E.default.Messages.STATUS_POPOUT_SET_CUSTOM

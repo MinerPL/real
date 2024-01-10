@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("446674"),
-                u = n("862337"),
-                o = n("899633"),
+                o = n("862337"),
+                u = n("899633"),
                 d = n("191225"),
                 c = n("442939"),
                 f = n("699209"),
@@ -19,8 +19,8 @@
                 m = n("373469"),
                 E = n("271938"),
                 C = n("26989"),
-                S = n("42887"),
-                g = n("957255"),
+                g = n("42887"),
+                S = n("957255"),
                 _ = n("824563"),
                 I = n("235660"),
                 T = n("280168"),
@@ -38,9 +38,9 @@
                     deaf: l,
                     user: s,
                     channel: i,
-                    sessionId: u,
-                    nick: g
-                } = e, x = s.id, j = (0, r.useStateFromStores)([E.default], () => E.default.getId() === x, [x]), [L, O, y] = (0, r.useStateFromStoresArray)([S.default], () => j ? [!S.default.isSupported() || S.default.isSelfMute() || S.default.isSelfMutedTemporarily(), S.default.isSelfDeaf(), !1] : [!S.default.isSupported() || S.default.isLocalMute(x), !1, S.default.isLocalVideoDisabled(x)], [j, x]), b = (0, r.useStateFromStores)([T.default], () => T.default.isPrioritySpeaker(x)), P = (0, o.default)({
+                    sessionId: o,
+                    nick: S
+                } = e, x = s.id, j = (0, r.useStateFromStores)([E.default], () => E.default.getId() === x, [x]), [L, O, y] = (0, r.useStateFromStoresArray)([g.default], () => j ? [!g.default.isSupported() || g.default.isSelfMute() || g.default.isSelfMutedTemporarily(), g.default.isSelfDeaf(), !1] : [!g.default.isSupported() || g.default.isLocalMute(x), !1, g.default.isLocalVideoDisabled(x)], [j, x]), P = (0, r.useStateFromStores)([T.default], () => T.default.isPrioritySpeaker(x)), b = (0, u.default)({
                     userId: x,
                     checkSoundSharing: !0
                 }), D = (0, r.useStateFromStores)([C.default], () => C.default.isGuestOrLurker(i.guild_id, x)), U = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
@@ -48,7 +48,7 @@
                         userIds: t
                     } = e;
                     return t.has(x)
-                }), [x, i.id]), w = (0, c.default)(null != U ? [U.applicationId] : []), [F, k] = (0, r.useStateFromStoresArray)([m.default], () => [m.default.getStreamForUser(x, i.getGuildId()), m.default.getActiveStreamForUser(x, i.getGuildId())], [i, x]), V = (0, r.useStateFromStores)([I.default], () => I.default.getSessionById(u)), B = N.default.useName(s), H = (0, r.useStateFromStores)([v.default], () => v.default.getVoicePlatformForChannel(i.id, x), [i.id, x]), {
+                }), [x, i.id]), w = (0, c.default)(null != U ? [U.applicationId] : []), [F, k] = (0, r.useStateFromStoresArray)([m.default], () => [m.default.getStreamForUser(x, i.getGuildId()), m.default.getActiveStreamForUser(x, i.getGuildId())], [i, x]), V = (0, r.useStateFromStores)([I.default], () => I.default.getSessionById(o)), B = N.default.useName(s), H = (0, r.useStateFromStores)([v.default], () => v.default.getVoicePlatformForChannel(i.id, x), [i.id, x]), {
                     enableHangStatus: G
                 } = f.HangStatusExperiment.useExperiment({
                     guildId: i.guild_id,
@@ -56,10 +56,10 @@
                 }), W = (0, r.useStateFromStores)([_.default, h.default], () => G ? j ? h.default.getHangStatusActivity() : _.default.findActivity(s.id, e => e.type === M.ActivityTypes.HANG_STATUS) : null);
                 return (0, a.jsx)(p.default, {
                     shakeLocation: R.ShakeLocation.VOICE_USER,
-                    isShaking: P,
+                    isShaking: b,
                     children: (0, a.jsx)(A.default, {
                         ...e,
-                        nick: null != g ? g : B,
+                        nick: null != S ? S : B,
                         canDrag: e.canDrag && !D,
                         otherClientSessionType: null == V ? void 0 : null === (t = V.clientInfo) || void 0 === t ? void 0 : t.os,
                         voicePlatform: H,
@@ -67,8 +67,8 @@
                         localVideoDisabled: y,
                         mute: n || L,
                         deaf: l || O,
-                        speaking: P,
-                        priority: b,
+                        speaking: b,
+                        priority: P,
                         embeddedApplication: w[0],
                         isStreaming: null != F && F.channelId === i.id,
                         isWatching: null != k && k.state !== M.ApplicationStreamStates.ENDED,
@@ -90,9 +90,9 @@
                         collapsedMax: s = 6,
                         tabIndex: i,
                         location: r,
-                        numAudience: u
+                        numAudience: o
                     } = this.props, {
-                        previewUserId: o,
+                        previewUserId: u,
                         previewIsOpen: d
                     } = this.state;
                     if (null == n || 0 === n.length) return null;
@@ -100,14 +100,14 @@
                         f = c.map(n => {
                             var s;
                             let {
-                                user: u,
+                                user: o,
                                 nick: c,
                                 voiceState: f
                             } = n;
                             return (0, a.jsx)(L, {
-                                user: u,
+                                user: o,
                                 nick: c,
-                                isSelfOnOtherClient: E.default.getId() === u.id && f.sessionId !== E.default.getSessionId(),
+                                isSelfOnOtherClient: E.default.getId() === o.id && f.sessionId !== E.default.getSessionId(),
                                 mute: f.isVoiceMuted(),
                                 deaf: f.isVoiceDeafened(),
                                 video: f.selfVideo,
@@ -116,18 +116,18 @@
                                 sessionId: null !== (s = f.sessionId) && void 0 !== s ? s : "",
                                 channel: e,
                                 collapsed: l,
-                                canDrag: t && g.default.can(M.Permissions.MOVE_MEMBERS, e),
+                                canDrag: t && S.default.can(M.Permissions.MOVE_MEMBERS, e),
                                 showPreview: this.handleShowPreview,
                                 hidePreview: this.handleHidePreview,
                                 previewIsOpen: d,
-                                shouldShowPreview: o === u.id,
+                                shouldShowPreview: u === o.id,
                                 tabIndex: i,
                                 location: r
-                            }, u.id)
+                            }, o.id)
                         });
-                    return null != u && u > 0 ? f.push((0, a.jsx)(A.AudienceVoiceUser, {
+                    return null != o && o > 0 ? f.push((0, a.jsx)(A.AudienceVoiceUser, {
                         collapsed: l,
-                        numAudience: u
+                        numAudience: o
                     })) : l && n.length > s + 1 && f.push((0, a.jsx)(A.MoreVoiceUser, {
                         numUsers: n.length - s
                     })), f
@@ -148,11 +148,11 @@
                     })
                 }
                 constructor(...e) {
-                    super(...e), this.showPreview = new u.DelayedCall(50, () => {
+                    super(...e), this.showPreview = new o.DelayedCall(50, () => {
                         this.setState({
                             previewUserId: this.previewUserIdAfterDelay
                         }), this.previewUserIdAfterDelay = null
-                    }), this.hidePreview = new u.DelayedCall(175, () => {
+                    }), this.hidePreview = new o.DelayedCall(175, () => {
                         this.setState({
                             previewUserId: null
                         })

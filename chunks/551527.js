@@ -16,8 +16,8 @@
                 f = l("766274"),
                 m = l("26989"),
                 I = l("79798"),
-                N = l("145131"),
-                T = l("449008"),
+                T = l("145131"),
+                N = l("449008"),
                 E = l("991170"),
                 h = l("782340"),
                 g = l("992693");
@@ -36,7 +36,7 @@
                 let C = a.useMemo(() => {
                     var e, t, n;
                     let a = l.getRole(l.id),
-                        i = null !== (t = null == _ ? void 0 : null === (e = _.roles) || void 0 === e ? void 0 : e.map(e => l.getRole(e)).filter(T.isNotNullish)) && void 0 !== t ? t : [],
+                        i = null !== (t = null == _ ? void 0 : null === (e = _.roles) || void 0 === e ? void 0 : e.map(e => l.getRole(e)).filter(N.isNotNullish)) && void 0 !== t ? t : [],
                         r = null !== (n = null == a ? void 0 : a.permissions) && void 0 !== n ? n : E.default.NONE;
                     for (let e of i) r = s.default.add(r, e.permissions);
                     return r
@@ -44,10 +44,10 @@
                 return null == O ? null : (0, n.jsx)(r.Card, {
                     editable: !0,
                     className: g.card,
-                    children: (0, n.jsxs)(N.default, {
-                        direction: N.default.Direction.VERTICAL,
-                        children: [(0, n.jsxs)(N.default, {
-                            align: N.default.Align.CENTER,
+                    children: (0, n.jsxs)(T.default, {
+                        direction: T.default.Direction.VERTICAL,
+                        children: [(0, n.jsxs)(T.default, {
+                            align: T.default.Align.CENTER,
                             children: [(0, n.jsx)("img", {
                                 alt: "",
                                 src: O.getAvatarURL(l.id, 32),

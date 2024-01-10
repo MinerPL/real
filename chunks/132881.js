@@ -10,8 +10,8 @@
                 s = n("109264"),
                 i = n("180968"),
                 r = n("136281"),
-                u = n("789150"),
-                o = n("782340"),
+                o = n("789150"),
+                u = n("782340"),
                 d = n("63893");
 
             function c(e) {
@@ -21,9 +21,11 @@
                     onNavigate: c
                 } = e, {
                     messageHistoryState: f
-                } = (0, i.useServerActivityForUser)(t, n), h = new Intl.NumberFormat(o.default.getLocale()).format(f.messageCount);
+                } = (0, i.useServerActivityForUser)(t, n), {
+                    messageCount: h
+                } = f, p = new Intl.NumberFormat(u.default.getLocale()).format(h);
                 return (0, a.jsx)(l.FormItem, {
-                    title: o.default.Messages.GUILD_MEMBER_MOD_VIEW_GUILD_MESSAGE_ACTIVITY_TITLE,
+                    title: u.default.Messages.GUILD_MEMBER_MOD_VIEW_GUILD_MESSAGE_ACTIVITY_TITLE,
                     titleClassName: d.infoTitle,
                     children: (0, a.jsx)(r.UserModInfoItemContainer, {
                         children: (0, a.jsx)(r.UserModInfoItem, {
@@ -34,17 +36,17 @@
                             name: (0, a.jsx)(l.Text, {
                                 variant: "text-sm/semibold",
                                 color: "text-normal",
-                                children: o.default.Messages.MESSAGES
+                                children: u.default.Messages.MESSAGES
                             }),
-                            description: f.messageCount === i.HAS_NO_COUNT ? (0, a.jsx)(l.Spinner, {
+                            description: h === i.HAS_NO_COUNT ? (0, a.jsx)(l.Spinner, {
                                 type: l.SpinnerTypes.SPINNING_CIRCLE,
                                 className: d.loadingSpinner
                             }) : (0, a.jsx)(l.Text, {
                                 variant: "text-sm/semibold",
-                                color: "none",
-                                children: h
+                                color: "interactive-normal",
+                                children: p
                             }),
-                            onNavigate: () => null == c ? void 0 : c(u.ModViewPanel.MESSAGE_HISTORY)
+                            onNavigate: h > 0 ? () => null == c ? void 0 : c(o.ModViewPanel.MESSAGE_HISTORY) : void 0
                         })
                     })
                 })

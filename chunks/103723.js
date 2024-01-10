@@ -10,8 +10,8 @@
             var a, l, s = n("811022"),
                 i = n("398183"),
                 r = n("271938"),
-                u = n("42203"),
-                o = n("985365"),
+                o = n("42203"),
+                u = n("985365"),
                 d = n("945956"),
                 c = n("800762"),
                 f = n("599110"),
@@ -45,7 +45,7 @@
                                 if (e.isGroupDM()) return "group_dm"
                             }
                             return null
-                        }(u.default.getChannel(m));
+                        }(o.default.getChannel(m));
                     f.default.track(h.AnalyticEvents.VIDEO_SPINNER_SHOWN_V2, {
                         video_spinner_context: e,
                         duration_video_spinner_visible_ms: l,
@@ -56,9 +56,9 @@
                         channel_id: m,
                         channel_type: E,
                         spinning_user_id: t,
-                        connection_type: o.default.getType(),
-                        effective_connection_speed: o.default.getEffectiveConnectionSpeed(),
-                        service_provider: o.default.getServiceProvider()
+                        connection_type: u.default.getType(),
+                        effective_connection_speed: u.default.getEffectiveConnectionSpeed(),
+                        service_provider: u.default.getServiceProvider()
                     })
                 }
                 constructor(e) {

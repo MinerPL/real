@@ -10,8 +10,8 @@
                 s = n.n(l),
                 i = n("77078"),
                 r = n("772280"),
-                u = n("782340"),
-                o = n("317797");
+                o = n("782340"),
+                u = n("317797");
 
             function d(e) {
                 let {
@@ -26,37 +26,37 @@
                     highlight: m
                 } = e;
                 return (0, a.jsxs)(i.Clickable, {
-                    className: s(o.container, t, null != m && {
-                        [o.pulse]: m
+                    className: s(u.container, t, null != m && {
+                        [u.pulse]: m
                     }),
                     onClick: p,
                     children: [(0, a.jsx)("div", {
                         style: {
                             backgroundColor: d
                         },
-                        className: s(o.icon, n),
+                        className: s(u.icon, n),
                         children: l
                     }), (0, a.jsxs)("div", {
-                        className: o.textContainer,
+                        className: u.textContainer,
                         children: [(0, a.jsx)(i.Heading, {
                             variant: "heading-md/semibold",
                             children: c
                         }), (0, a.jsx)(i.Text, {
                             variant: "text-xs/normal",
                             color: "header-secondary",
-                            className: o.inline,
+                            className: u.inline,
                             children: f
                         }), null != h && h > 0 ? (0, a.jsxs)(a.Fragment, {
                             children: [(0, a.jsx)(i.Text, {
                                 variant: "text-xs/normal",
                                 color: "header-secondary",
-                                className: o.dot,
+                                className: u.dot,
                                 children: "•"
                             }), (0, a.jsx)(i.Text, {
                                 variant: "text-xs/normal",
                                 color: "header-secondary",
-                                className: o.inline,
-                                children: u.default.Messages.GUILD_EVENT_INTERESTED.format({
+                                className: u.inline,
+                                children: o.default.Messages.GUILD_EVENT_INTERESTED.format({
                                     count: h
                                 })
                             })]
@@ -64,7 +64,7 @@
                     }), (0, a.jsx)(r.default, {
                         height: 16,
                         width: 16,
-                        className: o.caret
+                        className: u.caret
                     })]
                 })
             }

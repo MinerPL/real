@@ -10,8 +10,8 @@
                 s = n.n(l),
                 i = n("974667"),
                 r = n("446674"),
-                u = n("77078"),
-                o = n("145079"),
+                o = n("77078"),
+                u = n("145079"),
                 d = n("87657"),
                 c = n("824563"),
                 f = n("145131"),
@@ -26,19 +26,19 @@
                     comparator: m,
                     selected: E,
                     checked: C,
-                    onClick: S,
-                    onMouseEnter: g,
+                    onClick: g,
+                    onMouseEnter: S,
                     "aria-setsize": _,
                     "aria-posinset": I
                 } = e, T = (0, r.useStateFromStores)([c.default], () => c.default.getStatus(t.id)), v = (0, i.useListItem)(String(t.id));
-                return (0, a.jsx)(u.Clickable, {
+                return (0, a.jsx)(o.Clickable, {
                     id: "user-row-".concat(n),
                     className: p.friendWrapper,
                     onClick: () => {
-                        null != S && S(t.id)
+                        null != g && g(t.id)
                     },
                     onMouseEnter: () => {
-                        null != g && g(n)
+                        null != S && S(n)
                     },
                     ...v,
                     role: "option",
@@ -57,13 +57,13 @@
                         }), (0, a.jsxs)(f.default, {
                             className: p.match,
                             align: f.default.Align.BASELINE,
-                            children: [(0, a.jsx)(u.Text, {
+                            children: [(0, a.jsx)(o.Text, {
                                 tag: "strong",
                                 className: p.nickname,
                                 "aria-hidden": !0,
                                 variant: "text-md/medium",
                                 children: null != m && m === t.tag ? h.default.getName(t) : null != m && "" !== m ? m : h.default.getName(t)
-                            }), (0, a.jsx)(o.default, {
+                            }), (0, a.jsx)(u.default, {
                                 user: t,
                                 hideDiscriminator: l,
                                 className: p.discordTag,
@@ -71,7 +71,7 @@
                                 discriminatorClass: p.weightMedium,
                                 forceUsername: !0
                             })]
-                        }), (0, a.jsx)(u.Checkbox, {
+                        }), (0, a.jsx)(o.Checkbox, {
                             displayOnly: !0,
                             size: 22,
                             value: C,

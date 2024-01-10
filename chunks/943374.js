@@ -1,7 +1,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return N
+                    return T
                 }
             });
             var n = l("37983");
@@ -18,12 +18,12 @@
                 m = l("277482"),
                 I = l("57213");
 
-            function N(e) {
+            function T(e) {
                 let {
                     followedChannelWebhooks: t,
                     editedWebhook: l,
-                    selectableWebhookChannels: N,
-                    errors: T,
+                    selectableWebhookChannels: T,
+                    errors: N,
                     canNavigate: E
                 } = e, h = (0, i.default)();
                 return (0, n.jsxs)(s.FormSection, {
@@ -37,8 +37,8 @@
                     }), t.length > 0 ? (0, n.jsx)(d.default, {
                         webhooks: t,
                         editedWebhook: l,
-                        selectableWebhookChannels: N,
-                        errors: T,
+                        selectableWebhookChannels: T,
+                        errors: N,
                         canNavigate: E
                     }) : function(e, t) {
                         let l = (0, a.isThemeDark)(e) ? m : I;

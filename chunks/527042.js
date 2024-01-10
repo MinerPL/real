@@ -49,14 +49,14 @@
                 F = s("341569"),
                 H = s("405879");
             let V = u.throttle(I.fetchEmoji, 1e3),
-                w = e => {
+                k = e => {
                     let {
                         currentTarget: t,
                         which: s
                     } = e;
                     13 === s && t.blur()
                 },
-                k = e => {
+                w = e => {
                     let {
                         guildId: t,
                         emoji: s,
@@ -91,7 +91,7 @@
                                 }),
                                 inputClassName: F.emojiInput,
                                 placeholder: B.default.Messages.GUILD_SETTINGS_EMOJI_ALIAS_PLACEHOLDER,
-                                onKeyPress: w,
+                                onKeyPress: k,
                                 onChange: d,
                                 onBlur: () => {
                                     o !== s.name && (0, I.updateEmoji)({
@@ -234,7 +234,7 @@
                                 className: F.columnLabel,
                                 children: B.default.Messages.UPLOADED_BY
                             })]
-                        }), r.map(e => (0, a.jsx)(k, {
+                        }), r.map(e => (0, a.jsx)(w, {
                             guildId: s.id,
                             emoji: e,
                             onEdit: l,
@@ -300,7 +300,7 @@
                     let t = null == T ? void 0 : T.filter(t => !(0, m.isRoleSubscriptionEmoji)(t, e.id)),
                         [s, a] = u.partition(t, e => !e.animated);
                     return [s, a]
-                }, [T, e.id]), H = e.getMaxEmojiSlots(), w = Math.max(H - x.length, H - p.length), k = (s, a, n) => (0, A.uploadEmojiFile)({
+                }, [T, e.id]), H = e.getMaxEmojiSlots(), k = Math.max(H - x.length, H - p.length), w = (s, a, n) => (0, A.uploadEmojiFile)({
                     data: s,
                     file: a,
                     image: n,
@@ -312,7 +312,7 @@
                     l(a), M.default.track(y.AnalyticEvents.EMOJI_UPLOAD_STARTED, {
                         guild_id: e.id,
                         upload_id: t
-                    }), await (0, C.processImages)(s, k), L(!0)
+                    }), await (0, C.processImages)(s, w), L(!0)
                 }, W = () => {
                     null !== G.current && ((0, _.closeModal)(G.current), G.current = null)
                 }, X = async e => {
@@ -328,7 +328,7 @@
                 }, Z = (0, f.isCreatorMonetizationEnabledGuild)(e);
                 return (0, a.jsxs)("div", {
                     className: F.emojiSettings,
-                    children: [0 === w ? null : (0, a.jsx)(N.default, {
+                    children: [0 === k ? null : (0, a.jsx)(N.default, {
                         className: F.emojiUploadContainer,
                         onDrop: X
                     }), (0, a.jsxs)(_.FormSection, {
@@ -391,15 +391,15 @@
                                         upload_id: t
                                     })
                                 },
-                                disabled: R || 0 === w || !r,
+                                disabled: R || 0 === k || !r,
                                 submitting: R,
                                 focusProps: {
                                     within: !0
                                 },
-                                children: [B.default.Messages.UPLOAD_EMOJI, w > 0 ? (0, a.jsx)(C.default, {
-                                    disabled: R || 0 === w || !r,
+                                children: [B.default.Messages.UPLOAD_EMOJI, k > 0 ? (0, a.jsx)(C.default, {
+                                    disabled: R || 0 === k || !r,
                                     tabIndex: 0,
-                                    onChange: k,
+                                    onChange: w,
                                     setLoading: D,
                                     multiple: !0
                                 }) : null]

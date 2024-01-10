@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("627445"),
-                u = n.n(r),
-                o = n("90915"),
+                o = n.n(r),
+                u = n("90915"),
                 d = n("446674"),
                 c = n("77078"),
                 f = n("988738"),
@@ -19,8 +19,8 @@
                 m = n("320679"),
                 E = n("191225"),
                 C = n("229661"),
-                S = n("812204"),
-                g = n("685665"),
+                g = n("812204"),
+                S = n("685665"),
                 _ = n("338733"),
                 I = n("779601"),
                 T = n("967889"),
@@ -34,8 +34,8 @@
                 L = n("471671"),
                 O = n("983782"),
                 y = n("587974"),
-                b = n("773336"),
-                P = n("439932"),
+                P = n("773336"),
+                b = n("439932"),
                 D = n("50885"),
                 U = n("336921"),
                 w = n("292687"),
@@ -72,14 +72,14 @@
                         saturation: e,
                         guestWindow: t
                     } = this.props, n = t.document.documentElement;
-                    u(null != n, "Window document element was null"), n.style.setProperty("--saturation-factor", e.toString())
+                    o(null != n, "Window document element was null"), n.style.setProperty("--saturation-factor", e.toString())
                 }
                 updateLocale() {
                     let {
                         locale: e,
                         guestWindow: t
                     } = this.props, n = t.document.documentElement;
-                    u(null != n, "Window document element was null"), n.lang = e
+                    o(null != n, "Window document element was null"), n.lang = e
                 }
                 updateTitle() {
                     let {
@@ -93,14 +93,14 @@
                         fontScale: e,
                         guestWindow: t
                     } = this.props, n = t.document.documentElement;
-                    u(null != n, "Window document element was null"), n.style.fontSize = "".concat(e, "%")
+                    o(null != n, "Window document element was null"), n.style.fontSize = "".concat(e, "%")
                 }
                 updateClientTheme() {
                     let {
                         clientThemesCSS: e,
                         guestWindow: t
                     } = this.props, n = t.document, a = (0, n.head);
-                    u(null != a, "Window document ".concat("head", " was null"));
+                    o(null != a, "Window document ".concat("head", " was null"));
                     let l = a.querySelector("style[".concat(_.CLIENT_THEMES_DATA_ATTRIBUTE, "]"));
                     if (null != l) {
                         l.textContent = e;
@@ -117,24 +117,24 @@
                         appFocused: l,
                         children: s,
                         windowKey: r,
-                        mouseModeEnabled: u,
+                        mouseModeEnabled: o,
                         keyboardModeEnabled: d,
                         reducedMotionEnabled: p,
                         fontScaleClass: E,
                         saturation: C,
-                        withTitleBar: S,
-                        guestWindow: g,
+                        withTitleBar: g,
+                        guestWindow: S,
                         clientThemesClassName: _,
                         contentClassName: x
-                    } = this.props, N = (0, b.getPlatform)(), M = i(E, {
-                        "mouse-mode": u,
+                    } = this.props, N = (0, P.getPlatform)(), M = i(E, {
+                        "mouse-mode": o,
                         "reduce-motion": p,
                         "full-motion": !p,
                         "keyboard-mode": d,
                         "app-focused": n || l,
                         "low-saturation": C <= .4
                     });
-                    return (0, a.jsx)(o.BrowserRouter, {
+                    return (0, a.jsx)(u.BrowserRouter, {
                         children: (0, a.jsx)(A.default, {
                             children: (0, a.jsx)(c.ThemeContextProvider, {
                                 theme: e,
@@ -142,18 +142,18 @@
                                     children: (0, a.jsx)("div", {
                                         "data-popout-root": !0,
                                         ref: this.rootRef,
-                                        className: i((0, P.getThemeClass)(e), (0, I.default)(), M, _),
+                                        className: i((0, b.getThemeClass)(e), (0, I.default)(), M, _),
                                         children: (0, a.jsx)(c.FocusRingScope, {
                                             containerRef: this.rootRef,
                                             children: (0, a.jsx)(m.default, {
                                                 children: (0, a.jsxs)(T.default, {
                                                     children: [(0, a.jsx)(y.MaskLibrary, {}), (0, a.jsx)(h.AppWindowContextProvider, {
                                                         appContext: F.AppContext.POPOUT,
-                                                        renderWindow: g,
+                                                        renderWindow: S,
                                                         children: (0, a.jsxs)(O.AppLayerProvider, {
                                                             children: [(0, a.jsxs)("div", {
                                                                 className: V.popout,
-                                                                children: [S && null != N ? (0, a.jsx)(v.default, {
+                                                                children: [g && null != N ? (0, a.jsx)(v.default, {
                                                                     focused: n,
                                                                     type: N,
                                                                     windowKey: r,
@@ -176,8 +176,8 @@
                 }
                 constructor(...e) {
                     super(...e), this.rootRef = l.createRef(), this._cleanupWindowActionCreators = void 0, this.warnPopoutClose = e => {
-                        this.props.connectedToEmbeddedActivity && !j.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = k.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, b.isPlatformEmbedded && (0, C.default)(() => {
-                            w.default.unmountWindow(this.props.windowKey), b.isPlatformEmbedded && D.default.close(this.props.windowKey)
+                        this.props.connectedToEmbeddedActivity && !j.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = k.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, P.isPlatformEmbedded && (0, C.default)(() => {
+                            w.default.unmountWindow(this.props.windowKey), P.isPlatformEmbedded && D.default.close(this.props.windowKey)
                         }))
                     }, this.handleBlur = () => {
                         var e, t;
@@ -198,7 +198,7 @@
                     guestWindow: w.default.getWindow(e.windowKey),
                     focused: w.default.getWindowFocused(e.windowKey)
                 }));
-                u(null != n, "Missing guestWindow reference");
+                o(null != n, "Missing guestWindow reference");
                 let s = (0, d.useStateFromStores)([L.default], () => L.default.isFocused()),
                     {
                         locale: i,
@@ -207,7 +207,7 @@
                         locale: M.default.locale,
                         theme: R.default.theme
                     })),
-                    o = (0, d.useStateFromStores)([p.default], () => p.default.useForcedColors ? "yes" : "no"),
+                    u = (0, d.useStateFromStores)([p.default], () => p.default.useForcedColors ? "yes" : "no"),
                     {
                         fontScale: f,
                         keyboardModeEnabled: h,
@@ -226,7 +226,7 @@
                 let v = (0, N.default)(n, l),
                     {
                         AnalyticsLocationProvider: A
-                    } = (0, g.default)(S.default.POPOUT_WINDOW),
+                    } = (0, S.default)(g.default.POPOUT_WINDOW),
                     {
                         clientThemesClassName: j,
                         clientThemesCSS: O
@@ -241,7 +241,7 @@
                             appFocused: s,
                             locale: i,
                             theme: r,
-                            forcedColors: o,
+                            forcedColors: u,
                             fontScale: f,
                             keyboardModeEnabled: h,
                             mouseModeEnabled: v,

@@ -12,8 +12,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("446674"),
-                u = n("77078"),
-                o = n("834897"),
+                o = n("77078"),
+                u = n("834897"),
                 d = n("38654"),
                 c = n("160299"),
                 f = n("191814"),
@@ -22,8 +22,8 @@
                 m = n("425190"),
                 E = n("68238"),
                 C = n("315102"),
-                S = n("577357"),
-                g = n("837008"),
+                g = n("577357"),
+                S = n("837008"),
                 _ = n("167109"),
                 I = n("176687"),
                 T = n("595197"),
@@ -37,20 +37,20 @@
                 L = n("97116"),
                 O = n("320946"),
                 y = n("677795"),
-                b = n("49111"),
-                P = n("782340"),
+                P = n("49111"),
+                b = n("782340"),
                 D = n("938088");
             let U = e => {
                     let {
                         benefits: t,
                         header: n,
                         guildId: s
-                    } = e, [i, r] = l.useState(!1), o = i ? t : t.slice(0, 5), d = t.length > 5, c = t.length - 5, p = P.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION_WITH_ITEMS.format({
+                    } = e, [i, r] = l.useState(!1), u = i ? t : t.slice(0, 5), d = t.length > 5, c = t.length - 5, p = b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION_WITH_ITEMS.format({
                         numTruncated: c
                     }), m = (0, h.useUID)();
                     return 0 === t.length ? null : (0, a.jsxs)("div", {
                         className: D.benefitsSection,
-                        children: [(0, a.jsx)(u.Heading, {
+                        children: [(0, a.jsx)(o.Heading, {
                             variant: "text-xs/bold",
                             color: "header-secondary",
                             className: D.sectionHeader,
@@ -61,11 +61,11 @@
                         }), (0, a.jsx)("ul", {
                             className: D.benefitsList,
                             "aria-labelledby": m,
-                            children: o.map((e, t) => (0, a.jsx)("li", {
+                            children: u.map((e, t) => (0, a.jsx)("li", {
                                 children: (0, a.jsx)(R.default, {
                                     guildId: s,
                                     benefit: e
-                                }, (0, S.getBenefitKey)(e))
+                                }, (0, g.getBenefitKey)(e))
                             }, t))
                         }), d && (0, a.jsx)(k, {
                             isViewAll: i,
@@ -81,11 +81,11 @@
                     } = e, l = (0, v.default)(t), [s] = _.useTierEmojiIds(n, t), i = l.filter(e => s.has(e.id));
                     return 0 === i.length ? null : (0, a.jsxs)("div", {
                         className: D.benefitsSection,
-                        children: [(0, a.jsx)(u.Heading, {
+                        children: [(0, a.jsx)(o.Heading, {
                             variant: "text-xs/bold",
                             color: "header-secondary",
                             className: D.sectionHeader,
-                            children: P.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_EMOJI_SECTION_TITLE.format({
+                            children: b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_EMOJI_SECTION_TITLE.format({
                                 count: i.length
                             })
                         }), (0, a.jsx)(f.default, {
@@ -94,7 +94,7 @@
                             className: D.emojiList,
                             children: i.map((e, t) => {
                                 var n;
-                                return (0, a.jsx)(u.Tooltip, {
+                                return (0, a.jsx)(o.Tooltip, {
                                     text: e.name,
                                     "aria-label": !1,
                                     children: t => {
@@ -122,15 +122,15 @@
                         listingId: t,
                         guildId: n,
                         className: l
-                    } = e, s = (0, x.default)(n, t), [r] = _.useChannelBenefits(t), o = (0, N.default)(r), [d] = _.useIntangibleBenefits(t), c = _.useRole(t, n), [h] = _.useTierEmojiIds(t, n);
-                    return null == s && 0 === o.length && 0 === d.length && 0 === h.size ? null : (0, a.jsxs)("div", {
+                    } = e, s = (0, x.default)(n, t), [r] = _.useChannelBenefits(t), u = (0, N.default)(r), [d] = _.useIntangibleBenefits(t), c = _.useRole(t, n), [h] = _.useTierEmojiIds(t, n);
+                    return null == s && 0 === u.length && 0 === d.length && 0 === h.size ? null : (0, a.jsxs)("div", {
                         className: i(D.subscriptionPerks, l),
-                        children: [null != s && (0, a.jsxs)(u.HeadingLevel, {
-                            component: (0, a.jsx)(u.Heading, {
+                        children: [null != s && (0, a.jsxs)(o.HeadingLevel, {
+                            component: (0, a.jsx)(o.Heading, {
                                 variant: "text-xs/bold",
                                 color: "header-secondary",
                                 className: D.sectionHeader,
-                                children: P.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_MEMBER_PREVIEW
+                                children: b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_MEMBER_PREVIEW
                             }),
                             children: [(0, a.jsx)(f.default, {
                                 size: 8
@@ -140,11 +140,11 @@
                                 className: D.roleMessagePreview
                             })]
                         }), (0, a.jsx)(U, {
-                            header: P.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_EXCLUSIVE_CHANNELS_SECTION_TITLE,
-                            benefits: o,
+                            header: b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_EXCLUSIVE_CHANNELS_SECTION_TITLE,
+                            benefits: u,
                             guildId: n
                         }), (0, a.jsx)(U, {
-                            header: P.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_ADDITIONAL_BENEFITS_SECTION_TITLE,
+                            header: b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_ADDITIONAL_BENEFITS_SECTION_TITLE,
                             benefits: d,
                             guildId: n
                         }), (0, a.jsx)(w, {
@@ -160,16 +160,16 @@
                         showMoreText: s
                     } = e;
                     return t = l ? (0, a.jsxs)(a.Fragment, {
-                        children: [P.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_LESS_DESCRIPTION, (0, a.jsx)(m.default, {
+                        children: [b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_LESS_DESCRIPTION, (0, a.jsx)(m.default, {
                             className: D.toggleTruncationButtonIcon
                         })]
                     }) : (0, a.jsxs)(a.Fragment, {
                         children: [s, (0, a.jsx)(p.default, {
                             className: D.toggleTruncationButtonIcon
                         })]
-                    }), (0, a.jsx)(u.Button, {
-                        look: u.Button.Looks.BLANK,
-                        size: u.Button.Sizes.NONE,
+                    }), (0, a.jsx)(o.Button, {
+                        look: o.Button.Looks.BLANK,
+                        size: o.Button.Sizes.NONE,
                         className: D.toggleTruncationButton,
                         innerClassName: D.toggleTruncationButtonInner,
                         onClick: n,
@@ -183,7 +183,7 @@
                     guildId: s,
                     groupListingId: h,
                     analyticsLocation: p
-                } = e, m = (0, g.useSubscriptionListing)(n), {
+                } = e, m = (0, S.useSubscriptionListing)(n), {
                     openModal: C,
                     canOpenModal: v,
                     cannotOpenReason: x,
@@ -191,23 +191,23 @@
                 } = (0, O.default)(m, s, h, p), M = (0, r.useStateFromStores)([c.default], () => c.default.isSyncing), {
                     activeSubscription: R,
                     activeSubscriptionListing: U
-                } = (0, I.default)(h), w = (null == U ? void 0 : U.id) === n, V = (null == R ? void 0 : R.status) === b.SubscriptionStatusTypes.CANCELED, [B, H] = l.useState(!1), [G, W] = l.useState(!1), Y = l.useCallback(e => {
+                } = (0, I.default)(h), w = (null == U ? void 0 : U.id) === n, V = (null == R ? void 0 : R.status) === P.SubscriptionStatusTypes.CANCELED, [B, H] = l.useState(!1), [G, W] = l.useState(!1), Y = l.useCallback(e => {
                     let t = !1;
                     null != e && (t = e.scrollHeight - e.clientHeight > 1), W(t)
-                }, []), [z] = _.useName(n), [K] = _.useDescription(n), [Z] = _.useTrialInterval(n), [X] = _.useTrialLimit(n), J = (0, T.default)(s, n), q = null != Z && null == R && J, Q = (0, o.default)(y.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), [$, ee] = l.useState(!1), et = $ || !Q, en = (0, r.useStateFromStores)([d.default], () => d.default.isViewingSubscriptionRoles(s)), ea = (null == m ? void 0 : m.published) === !0, el = (null == m ? void 0 : m.soft_deleted) === !0, es = P.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
+                }, []), [z] = _.useName(n), [K] = _.useDescription(n), [Z] = _.useTrialInterval(n), [X] = _.useTrialLimit(n), J = (0, T.default)(s, n), q = null != Z && null == R && J, Q = (0, u.default)(y.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), [$, ee] = l.useState(!1), et = $ || !Q, en = (0, r.useStateFromStores)([d.default], () => d.default.isViewingSubscriptionRoles(s)), ea = (null == m ? void 0 : m.published) === !0, el = (null == m ? void 0 : m.soft_deleted) === !0, es = b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
                 return (ea || en) && !el ? (0, a.jsxs)("article", {
                     className: D.container,
                     "aria-label": z,
                     children: [q && (0, a.jsxs)("div", {
                         className: i(D.tierTrialIndicator, D.tierTopIndicator),
-                        children: [P.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_PERIOD.format({
-                            trialPeriodDuration: (0, S.formatPlanIntervalDuration)({
+                        children: [b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_PERIOD.format({
+                            trialPeriodDuration: (0, g.formatPlanIntervalDuration)({
                                 interval: Z.interval,
                                 interval_count: Z.interval_count
                             })
-                        }), (0, a.jsx)(u.Tooltip, {
+                        }), (0, a.jsx)(o.Tooltip, {
                             clickableOnMobile: !0,
-                            text: P.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format({
+                            text: b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format({
                                 activeTrialUserLimit: null != X ? X : 0
                             }),
                             children: e => (0, a.jsx)(E.default, {
@@ -230,13 +230,13 @@
                             }), et && (0, a.jsxs)(a.Fragment, {
                                 children: [Q && (0, a.jsx)("div", {
                                     className: D.divider
-                                }), w ? (0, a.jsx)(u.Button, {
+                                }), w ? (0, a.jsx)(o.Button, {
                                     fullWidth: !0,
-                                    look: u.Button.Looks.OUTLINED,
-                                    color: u.Button.Colors.PRIMARY,
+                                    look: o.Button.Looks.OUTLINED,
+                                    color: o.Button.Colors.PRIMARY,
                                     disabled: !0,
-                                    children: V ? P.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : P.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
-                                }) : (0, a.jsx)(u.Tooltip, {
+                                    children: V ? b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
+                                }) : (0, a.jsx)(o.Tooltip, {
                                     text: v ? null : x,
                                     "aria-label": null !== (t = v && x) && void 0 !== t && t,
                                     children: e => (0, a.jsx)(A.default, {
@@ -246,11 +246,11 @@
                                         submitting: N,
                                         onClick: C,
                                         onlyShineOnHover: !0,
-                                        children: P.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL
+                                        children: b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL
                                     })
                                 }), (0, a.jsx)(f.default, {
                                     size: 16
-                                }), (0, a.jsx)(u.Text, {
+                                }), (0, a.jsx)(o.Text, {
                                     variant: "text-sm/normal",
                                     color: "text-normal",
                                     className: i((!G || !B) && D.tierDescriptionTruncate),
@@ -264,7 +264,7 @@
                                     showMoreText: es
                                 })]
                             })]
-                        }), et && (0, a.jsx)(u.HeadingLevel, {
+                        }), et && (0, a.jsx)(o.HeadingLevel, {
                             children: (0, a.jsx)(F, {
                                 listingId: n,
                                 guildId: s

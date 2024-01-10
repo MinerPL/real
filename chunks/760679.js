@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 drawLinePoint: function() {
-                    return u
+                    return o
                 },
                 addLinePoints: function() {
-                    return o
+                    return u
                 },
                 updateLinePoints: function() {
                     return d
@@ -37,7 +37,7 @@
                 i = n("315841"),
                 r = n("49111");
 
-            function u(e, t, n, a, l) {
+            function o(e, t, n, a, l) {
                 s.default.dispatch({
                     type: "SHARED_CANVAS_DRAW_LINE_POINT",
                     channelId: e,
@@ -48,7 +48,7 @@
                 })
             }
 
-            function o(e, t, n, a) {
+            function u(e, t, n, a) {
                 return l.default.post({
                     url: r.Endpoints.SHARED_CANVAS_LINES(e, n),
                     body: {

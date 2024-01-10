@@ -54,7 +54,7 @@
                         isTrendingDown: t < 0
                     }
                 },
-                w = function(e) {
+                k = function(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                     return t || e === D.AbortCodes.NOT_ENOUGH_GUILD_MEMBERS ? (0, a.jsx)(c.FormErrorBlock, {
                         icon: f.default,
@@ -67,7 +67,7 @@
                     })
                 };
 
-            function k(e) {
+            function w(e) {
                 L.default.track(D.AnalyticEvents.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, {
                     guild_id: e
                 });
@@ -91,7 +91,7 @@
                 return (0, a.jsx)(c.Button, {
                     className: p.developerPortalCta,
                     onClick: () => {
-                        t(!0), k(s).then(() => {
+                        t(!0), w(s).then(() => {
                             t(!1)
                         })
                     },
@@ -265,7 +265,7 @@
                                     variant: "text-sm/normal",
                                     children: x.default.Messages.ACCESS_RATE_ACTION_SUCCESS.format({
                                         insightsHook: (e, s) => (0, a.jsx)(g.default, {
-                                            onClick: () => k(t),
+                                            onClick: () => w(t),
                                             className: p.link,
                                             children: e
                                         }, s)
@@ -328,7 +328,7 @@
                     children: [(0, a.jsx)(c.FormText, {
                         type: c.FormTextTypes.DESCRIPTION,
                         children: x.default.Messages.GUILD_ANALYTICS_DESCRIPTION.format()
-                    }), w(o, d), null != e ? (0, a.jsx)(K, {
+                    }), k(o, d), null != e ? (0, a.jsx)(K, {
                         guildId: e
                     }) : null, (0, a.jsxs)("div", {
                         className: p.developerPortalCtaWrapper,

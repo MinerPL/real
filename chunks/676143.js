@@ -10,10 +10,10 @@
                     return R
                 },
                 useChannelBrowserSections: function() {
-                    return M
+                    return L
                 },
                 useChannelBrowserChannelCount: function() {
-                    return L
+                    return M
                 },
                 getActiveAgoTimestamp: function() {
                     return D
@@ -95,7 +95,7 @@
                 }))), null != n && (0, E.transitionTo)(C.Routes.CHANNEL(e, n))
             }
 
-            function M(e, t, n, i) {
+            function L(e, t, n, i) {
                 let a = (0, h.useIsDismissibleContentDismissed)(u.DismissibleContent.CHANNEL_BROWSER_NUX),
                     l = (0, d.useStateFromStoresObject)([S.default], () => {
                         let t = {},
@@ -124,7 +124,7 @@
                 }), s
             }
 
-            function L(e) {
+            function M(e) {
                 var t, n;
                 let i = (0, d.useStateFromStores)([v.default], () => v.default.getCategories(e)),
                     a = i._categories.length,

@@ -16,8 +16,8 @@
                 f = l("5667"),
                 m = l("766274"),
                 I = l("145131"),
-                N = l("83910"),
-                T = l("772280"),
+                T = l("83910"),
+                N = l("772280"),
                 E = l("71216"),
                 h = l("741919"),
                 g = l("599110"),
@@ -51,7 +51,7 @@
                         children: [(0, n.jsx)(o.Text, {
                             variant: "text-sm/normal",
                             children: t
-                        }), s ? (0, n.jsx)(T.default, {
+                        }), s ? (0, n.jsx)(N.default, {
                             width: 10,
                             height: 10,
                             className: C.caret
@@ -140,7 +140,7 @@
                                         })
                                     }, "webhooks")), (null == r ? void 0 : null === (a = r.scopes) || void 0 === a ? void 0 : a.includes(_.OAuth2Scopes.APPLICATIONS_COMMANDS)) === !0 && l && s.push((0, n.jsx)("div", {
                                         className: C.feature,
-                                        children: (0, n.jsx)(N.default, {
+                                        children: (0, n.jsx)(T.default, {
                                             width: 24,
                                             height: 24,
                                             className: C.featureIcon

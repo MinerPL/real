@@ -1,22 +1,22 @@
             "use strict";
             r.r(t), r.d(t, {
                 useMembersSearchRecordStore: function() {
-                    return y
+                    return I
                 },
                 getChunkIndex: function() {
-                    return A
+                    return D
                 },
                 getChunkNumbers: function() {
-                    return D
+                    return T
                 },
                 useIsMakingRequest: function() {
                     return G
                 },
                 useIsStillIndexing: function() {
-                    return w
+                    return P
                 },
                 default: function() {
-                    return q
+                    return w
                 }
             }), r("222007"), r("70102");
             var n, u, l, a, i = r("714617"),
@@ -31,14 +31,14 @@
                 h = r("770115"),
                 g = r("490931"),
                 R = r("225982"),
-                b = r("178406");
-            let m = new c.default("MemberSafetySearchManager");
+                C = r("178406");
+            let y = new c.default("MemberSafetySearchManager");
 
-            function C(e) {
+            function b(e) {
                 return "guild_".concat(e)
             }
 
-            function M(e) {
+            function m(e) {
                 return {
                     requestState: e,
                     abortController: null,
@@ -48,41 +48,41 @@
                     previousPagination: null
                 }
             }(l = n || (n = {}))[l.FAILED = 0] = "FAILED", l[l.UNFETCHED = 1] = "UNFETCHED", l[l.PENDING = 2] = "PENDING", l[l.SUCCEEDED = 3] = "SUCCEEDED", l[l.STILL_INDEXING = 4] = "STILL_INDEXING";
-            let y = (0, s.default)(e => ({}));
+            let I = (0, s.default)(e => ({}));
 
-            function I(e, t) {
-                let r = y.getState()[e];
-                return null == r && (r = M(1)), r = {
+            function M(e, t) {
+                let r = I.getState()[e];
+                return null == r && (r = m(1)), r = {
                     ...r,
                     ...t
-                }, y.setState(t => ({
+                }, I.setState(t => ({
                     ...t,
                     [e]: r
                 })), r
             }
 
             function v(e) {
-                return y.getState()[e]
+                return I.getState()[e]
             }
 
             function p(e) {
                 let t = v(e);
-                return null == t && I(e, t = M(1)), t
+                return null == t && M(e, t = m(1)), t
             }
 
-            function N(e) {
+            function U(e) {
                 let t = v(e);
-                null != t && I(e, {
+                null != t && M(e, {
                     requestState: 3,
                     abortController: null,
                     lastUpdated: Date.now()
                 })
             }
 
-            function U(e) {
+            function N(e) {
                 var t;
-                let r = C(e);
-                t = r, y.setState(e => {
+                let r = b(e);
+                t = r, I.setState(e => {
                     let r = {
                         ...e
                     };
@@ -90,26 +90,26 @@
                 })
             }
 
-            function A(e, t) {
+            function D(e, t) {
                 return Math.floor(Math.max(e - 1, 0) / t)
             }
 
-            function D(e) {
+            function T(e) {
                 let t = (0, f.getSearchChunkLimit)(e),
                     r = e.pageSize * (e.currentPage - 1),
                     n = e.pageSize * e.currentPage,
                     u = e.pageSize * (e.currentPage + 1);
                 return {
-                    previousPageChunkNumber: A(r, t),
-                    currentPageChunkNumber: A(n, t),
-                    nextPageChunkNumber: A(u, t)
+                    previousPageChunkNumber: D(r, t),
+                    currentPageChunkNumber: D(n, t),
+                    nextPageChunkNumber: D(u, t)
                 }
             }(a = u || (u = {}))[a.FIRST_PAGE_CHUNK = 0] = "FIRST_PAGE_CHUNK", a[a.CURRENT_SEARCH_CHUNK = 1] = "CURRENT_SEARCH_CHUNK", a[a.NEXT_SEARCH_CHUNK = 2] = "NEXT_SEARCH_CHUNK", a[a.PREVIOUS_SEARCH_CHUNK = 3] = "PREVIOUS_SEARCH_CHUNK";
-            async function T(e) {
+            async function A(e) {
                 var t, r, n, u;
-                let l = b.default.getSearchStateByGuildId(e),
-                    a = b.default.getPaginationStateByGuildId(e),
-                    i = C(e),
+                let l = C.default.getSearchStateByGuildId(e),
+                    a = C.default.getPaginationStateByGuildId(e),
+                    i = b(e),
                     s = p(i),
                     [c, E] = function(e, t, r) {
                         var n, u, l, a, i, o;
@@ -119,9 +119,9 @@
                                     currentPageChunkNumber: n,
                                     previousPageChunkNumber: u,
                                     nextPageChunkNumber: l
-                                } = D(t), {
+                                } = T(t), {
                                     previousPagination: a
-                                } = p(C(e)), i = t.currentPage, o = null !== (r = null == a ? void 0 : a.currentPage) && void 0 !== r ? r : 0, d = b.default.getElasticSearchPaginationByGuildId(e);
+                                } = p(b(e)), i = t.currentPage, o = null !== (r = null == a ? void 0 : a.currentPage) && void 0 !== r ? r : 0, d = C.default.getElasticSearchPaginationByGuildId(e);
                                 switch (!0) {
                                     case null == d:
                                     case n === l && 0 === n:
@@ -137,11 +137,11 @@
                                         return 1
                                 }
                             }(e, r),
-                            s = b.default.getElasticSearchPaginationByGuildId(e),
+                            s = C.default.getElasticSearchPaginationByGuildId(e),
                             c = (0, f.getSearchChunkLimit)(r);
                         switch (d) {
                             case 0: {
-                                let t = b.default.getLastCursorTimestamp(e);
+                                let t = C.default.getLastCursorTimestamp(e);
                                 return [null, {
                                     limit: c,
                                     after: {
@@ -169,7 +169,7 @@
                                 (0, S.assertNever)(d)
                         }
                     }(e, s, a);
-                let M = (t = function(e) {
+                let m = (t = function(e) {
                     var t, r, n;
                     let u = {
                             or_query: {},
@@ -237,14 +237,14 @@
                 if (function(e, t) {
                         let r = p(e);
                         return o(r.query, t)
-                    }(i, M) && (0, d.isEqual)(c, s.cursor)) return;
-                let y = function(e, t, r, n) {
+                    }(i, m) && (0, d.isEqual)(c, s.cursor)) return;
+                let I = function(e, t, r, n) {
                     let u = v(e);
                     if ((null == u ? void 0 : u.requestState) === 2) {
                         var l;
                         null === (l = u.abortController) || void 0 === l || l.abort()
                     }
-                    return I(e, {
+                    return M(e, {
                         requestState: 2,
                         abortController: new AbortController,
                         lastUpdated: Date.now(),
@@ -252,21 +252,21 @@
                         cursor: r,
                         previousPagination: n
                     })
-                }(i, M, c, a);
+                }(i, m, c, a);
                 try {
                     ;
-                    if (m.info("Making member search request", {
-                            query: y.query,
+                    if (y.info("Making member search request", {
+                            query: I.query,
                             guildId: e
-                        }), null == y.query) throw Error("Query is null");
-                    await (0, R.searchGuildMembers)(e, y.query, {
-                        signal: null !== (u = null === (n = y.abortController) || void 0 === n ? void 0 : n.signal) && void 0 !== u ? u : void 0
+                        }), null == I.query) throw Error("Query is null");
+                    await (0, R.searchGuildMembers)(e, I.query, {
+                        signal: null !== (u = null === (n = I.abortController) || void 0 === n ? void 0 : n.signal) && void 0 !== u ? u : void 0
                     })
                 } catch (e) {
                     if (-1 === e.code) return;
                     ! function(e) {
                         let t = v(e);
-                        null != t && I(e, {
+                        null != t && M(e, {
                             requestState: 0,
                             abortController: null,
                             lastUpdated: Date.now()
@@ -274,60 +274,60 @@
                     }(i);
                     return
                 }
-                N(i)
+                U(i)
             }
 
             function G(e) {
-                return y(t => {
+                return I(t => {
                     var r;
-                    let n = C(e);
+                    let n = b(e);
                     return (null === (r = t[n]) || void 0 === r ? void 0 : r.requestState) === 2
                 })
             }
 
-            function w(e) {
-                return y(t => {
+            function P(e) {
+                return I(t => {
                     var r;
-                    let n = C(e);
+                    let n = b(e);
                     return (null === (r = t[n]) || void 0 === r ? void 0 : r.requestState) === 4
                 })
             }
-            class P extends E.default {
+            class q extends E.default {
                 handleInitialize(e) {
                     let {
                         guildId: t
                     } = e;
-                    return U(t), T(t)
+                    return N(t), A(t)
                 }
                 handleGuildDelete(e) {
                     let {
                         guild: t
                     } = e;
-                    return U(t.id)
+                    return N(t.id)
                 }
                 handleSearchStateUpdate(e) {
                     let {
                         guildId: t
                     } = e;
-                    return T(t)
+                    return A(t)
                 }
                 handlePaginationUpdate(e) {
                     let {
                         guildId: t
                     } = e;
-                    return T(t)
+                    return A(t)
                 }
                 handleGuildMemberSearchSuccess(e) {
                     let {
                         guildId: t
-                    } = e, r = C(t);
-                    return N(r)
+                    } = e, r = b(t);
+                    return U(r)
                 }
                 handleGuildMemberSearchStillIndexing(e) {
                     let {
                         guildId: t
-                    } = e, r = C(t);
-                    I(r, {
+                    } = e, r = b(t);
+                    M(r, {
                         requestState: 4,
                         abortController: null,
                         lastUpdated: Date.now()
@@ -337,7 +337,7 @@
                     let {
                         guildId: t
                     } = e;
-                    return T(t)
+                    return A(t)
                 }
                 constructor(...e) {
                     super(...e), this.actions = {
@@ -351,4 +351,4 @@
                     }
                 }
             }
-            var q = new P
+            var w = new q

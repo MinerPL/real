@@ -16,8 +16,8 @@
                 f = l("42203"),
                 m = l("305961"),
                 I = l("957255"),
-                N = l("697218"),
-                T = l("449008"),
+                T = l("697218"),
+                N = l("449008"),
                 E = l("683830"),
                 h = l("892692"),
                 g = l("49111");
@@ -67,9 +67,9 @@
                         let l = (0, o.useStateFromStores)([m.default], () => m.default.getGuild(e), [e]);
                         s(null != l, "guild must be present to be editing its integration settings");
                         let a = (0, o.useStateFromStores)([I.default], () => I.default.getHighestRole(l), [l]),
-                            i = (0, o.useStateFromStores)([N.default], () => {
+                            i = (0, o.useStateFromStores)([T.default], () => {
                                 var e;
-                                return null === (e = N.default.getCurrentUser()) || void 0 === e ? void 0 : e.id
+                                return null === (e = T.default.getCurrentUser()) || void 0 === e ? void 0 : e.id
                             });
                         s(null != i, "useComputePermissions: currentUserId must not be null");
                         let r = i === l.ownerId,
@@ -88,9 +88,9 @@
                                     userIds: n
                                 }
                             }, [t]),
-                            p = (0, o.useStateFromStoresObject)([f.default], () => Object.fromEntries(d.map(f.default.getChannel).filter(T.isNotNullish).map(e => [e.id, e])), [d]),
-                            S = n.useMemo(() => Object.fromEntries(E.map(e => l.getRole(e)).filter(T.isNotNullish).map(e => [e.id, e])), [l, E]),
-                            O = (0, o.useStateFromStoresObject)([N.default], () => Object.fromEntries(h.map(N.default.getUser).filter(T.isNotNullish).map(e => [e.id, e])), [h]);
+                            p = (0, o.useStateFromStoresObject)([f.default], () => Object.fromEntries(d.map(f.default.getChannel).filter(N.isNotNullish).map(e => [e.id, e])), [d]),
+                            S = n.useMemo(() => Object.fromEntries(E.map(e => l.getRole(e)).filter(N.isNotNullish).map(e => [e.id, e])), [l, E]),
+                            O = (0, o.useStateFromStoresObject)([T.default], () => Object.fromEntries(h.map(T.default.getUser).filter(N.isNotNullish).map(e => [e.id, e])), [h]);
                         return n.useMemo(() => {
                             let e = l.id,
                                 n = (0, c.allChannelsSentinel)(l.id),

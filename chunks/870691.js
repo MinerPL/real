@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return _
                 }
             }), n("222007");
             var i = n("446674"),
@@ -40,7 +40,7 @@
                 }
             }
             E.displayName = "CategoryCollapseStore", E.persistKey = "collapsedCategories";
-            var p = new E(l.default, {
+            var _ = new E(l.default, {
                 CONNECTION_OPEN: function(e) {
                     for (let t of (!e.userGuildSettings.partial && (d = {}), e.userGuildSettings.entries))
                         if (null != t.channel_overrides)

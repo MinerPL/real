@@ -22,16 +22,16 @@
                     guildId: m
                 } = e, {
                     results: I,
-                    query: N,
-                    setQuery: T,
+                    query: T,
+                    setQuery: N,
                     unfilteredCount: E
                 } = (0, r.useIntegrationPermissionCommandSearch)();
                 return (0, n.jsx)(a.Fragment, {
                     children: null != I && E > 0 ? (0, n.jsx)(d.default, {
                         bar: (0, n.jsx)(i.default, {
-                            query: N,
-                            onChange: T,
-                            onClear: () => T("")
+                            query: T,
+                            onChange: N,
+                            onClear: () => N("")
                         }),
                         inModal: !1,
                         title: u.default.Messages.COMMANDS,

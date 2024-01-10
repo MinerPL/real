@@ -9,8 +9,8 @@
                 s = n("414456"),
                 i = n.n(s),
                 r = n("77078"),
-                u = n("272030"),
-                o = n("899633"),
+                o = n("272030"),
+                u = n("899633"),
                 d = n("244201"),
                 c = n("506885"),
                 f = n("981601"),
@@ -25,10 +25,10 @@
                     className: h
                 } = e, E = (0, d.useAppContext)(), {
                     reducedMotion: C
-                } = l.useContext(r.AccessibilityPreferencesContext), S = (0, o.default)({
+                } = l.useContext(r.AccessibilityPreferencesContext), g = (0, u.default)({
                     userId: s.id
-                }), g = null != s.member ? (0, p.getGuildMemberAvatarURL)(s.member) : null, _ = e => {
-                    (0, u.openContextMenuLazy)(e, async () => {
+                }), S = null != s.member ? (0, p.getGuildMemberAvatarURL)(s.member) : null, _ = e => {
+                    (0, o.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
                         } = await n.el("834247").then(n.bind(n, "834247"));
@@ -69,11 +69,11 @@
                             },
                             onContextMenu: _,
                             children: (0, a.jsx)(r.Avatar, {
-                                src: null != g ? g : s.user.getAvatarURL(t.guild_id, 24),
+                                src: null != S ? S : s.user.getAvatarURL(t.guild_id, 24),
                                 size: r.AvatarSizes.SIZE_24,
                                 className: i(m.avatar, h),
                                 "aria-label": s.userNick,
-                                isSpeaking: S && !C.enabled
+                                isSpeaking: g && !C.enabled
                             })
                         })
                     })

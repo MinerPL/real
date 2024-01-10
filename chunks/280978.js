@@ -16,8 +16,8 @@
                 f = l("315102"),
                 m = l("674916"),
                 I = l("49111"),
-                N = l("782340"),
-                T = l("385197");
+                T = l("782340"),
+                N = l("385197");
 
             function E(e) {
                 let {
@@ -37,22 +37,22 @@
                 }, [t]), O = a.useCallback(() => {
                     (0, s.openModal)(e => (0, n.jsx)(s.ConfirmModal, {
                         ...e,
-                        header: N.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE_TITLE.format({
+                        header: T.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE_TITLE.format({
                             name: t.name
                         }),
-                        confirmText: N.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE,
-                        cancelText: N.default.Messages.CANCEL,
+                        confirmText: T.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE,
+                        cancelText: T.default.Messages.CANCEL,
                         onConfirm: () => {
                             o.default.delete(t.guild_id, t.id).catch(() => {
                                 i.default.show({
-                                    title: N.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_ERROR_DELETING,
-                                    body: N.default.Messages.WEBHOOK_ERROR_INTERNAL_SERVER_ERROR
+                                    title: T.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_ERROR_DELETING,
+                                    body: T.default.Messages.WEBHOOK_ERROR_INTERNAL_SERVER_ERROR
                                 })
                             })
                         },
                         children: (0, n.jsx)(s.Text, {
                             variant: "text-md/normal",
-                            children: N.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE_BODY
+                            children: T.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE_BODY
                         })
                     }))
                 }, [t.guild_id, t.id, t.name]), _ = [];
@@ -61,10 +61,10 @@
                     text: t.source_channel.name
                 }), _.push({
                     text: (0, n.jsx)("span", {
-                        className: T.guildSource,
-                        children: N.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_GUILD_SOURCE.format({
+                        className: N.guildSource,
+                        children: T.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_GUILD_SOURCE.format({
                             guildHook: () => (0, n.jsx)("span", {
-                                className: T.sourceName,
+                                className: N.sourceName,
                                 children: t.source_guild.name
                             }, t.id)
                         })
@@ -72,9 +72,9 @@
                 }));
                 let A = null;
                 return h && null != l && (A = (0, n.jsxs)("div", {
-                    className: T.body,
+                    className: N.body,
                     children: [(0, n.jsx)(s.FormDivider, {
-                        className: T.topDivider
+                        className: N.topDivider
                     }), (0, n.jsx)(d.default, {
                         children: (0, n.jsxs)(d.default, {
                             direction: d.default.Direction.VERTICAL,
@@ -82,7 +82,7 @@
                                 children: [(0, n.jsx)(d.default.Child, {
                                     basis: "50%",
                                     children: (0, n.jsx)(s.FormItem, {
-                                        title: N.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_NAME,
+                                        title: T.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_NAME,
                                         children: (0, n.jsx)(s.TextInput, {
                                             value: l.name,
                                             onChange: e => {
@@ -97,7 +97,7 @@
                                 }), (0, n.jsx)(d.default.Child, {
                                     basis: "50%",
                                     children: (0, n.jsx)(s.FormItem, {
-                                        title: N.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DEST_CHANNEL,
+                                        title: T.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DEST_CHANNEL,
                                         children: (0, n.jsx)(s.SingleSelect, {
                                             value: l.channel_id,
                                             options: E,
@@ -110,26 +110,26 @@
                                     })
                                 })]
                             }), (0, n.jsx)(s.FormDivider, {
-                                className: T.bottomDivider
+                                className: N.bottomDivider
                             }), (0, n.jsx)(d.default, {
                                 children: (0, n.jsx)(s.Button, {
                                     onClick: O,
                                     size: s.Button.Sizes.SMALL,
                                     color: s.Button.Colors.RED,
                                     look: s.Button.Looks.LINK,
-                                    className: T.removeButton,
-                                    children: N.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE
+                                    className: N.removeButton,
+                                    children: T.default.Messages.INTEGRATIONS_FOLLOWED_CHANNEL_DELETE
                                 })
                             })]
                         })
                     })]
                 })), (0, n.jsx)(s.Card, {
                     editable: !0,
-                    className: T.card,
+                    className: N.card,
                     children: (0, n.jsxs)(d.default, {
                         direction: d.default.Direction.VERTICAL,
                         children: [(0, n.jsx)(s.Clickable, {
-                            className: T.header,
+                            className: N.header,
                             "aria-expanded": h,
                             onClick: p,
                             children: (0, n.jsxs)(d.default, {
@@ -137,10 +137,10 @@
                                 children: [(0, n.jsx)(m.default, {
                                     name: t.name,
                                     imageSrc: S,
-                                    detailsClassName: T.description,
+                                    detailsClassName: N.description,
                                     details: _
                                 }), (0, n.jsx)(u.default, {
-                                    className: T.expandIcon,
+                                    className: N.expandIcon,
                                     expanded: h,
                                     "aria-hidden": !0
                                 })]
