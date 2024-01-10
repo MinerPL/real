@@ -33,17 +33,17 @@
                     achievementId: n,
                     unlocked: E,
                     size: C = i.AvatarSizes.SIZE_40
-                } = e, I = (0, l.default)(), T = (0, c.getPoggermodeAchievementData)(n);
-                if (null == T) return null;
+                } = e, T = (0, l.default)(), I = (0, c.getPoggermodeAchievementData)(n);
+                if (null == I) return null;
                 let S = (0, i.getAvatarSpecs)(C),
                     {
                         name: N,
                         rarity: A
-                    } = T,
+                    } = I,
                     {
-                        color: m
+                        color: p
                     } = (0, c.getAchievementStyles)(A),
-                    p = (0, s.isThemeDark)(I) ? _ : h,
+                    m = (0, s.isThemeDark)(T) ? _ : h,
                     g = (S.size - S.offset - 2 * S.stroke) * .8,
                     R = S.size - S.stroke,
                     O = {
@@ -68,7 +68,7 @@
                     children: [(0, a.jsx)("div", {
                         className: f.trophyIconContainer,
                         children: (0, a.jsx)(d.default, {
-                            color: E ? m : (0, r.getColor)(p.trophy),
+                            color: E ? p : (0, r.getColor)(m.trophy),
                             width: g,
                             height: g
                         })
@@ -76,7 +76,7 @@
                         className: f.lockContainer,
                         style: L,
                         children: (0, a.jsx)(u.default, {
-                            color: (0, r.getColor)(p.locked),
+                            color: (0, r.getColor)(m.locked),
                             ...O
                         })
                     }), E && A === c.PoggermodeAchievementRarity.LEGENDARY && (0, a.jsx)("div", {

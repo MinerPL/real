@@ -19,7 +19,7 @@
                 let {
                     transitionState: t
                 } = e, f = (0, i.default)([o.default], () => o.default.getAction()), [_, h] = s.useState(!1), C = (0, u.useUID)();
-                async function I() {
+                async function T() {
                     if (h(!0), f === d.UserRequiredActions.AGREEMENTS) {
                         let e = await (0, r.acceptAgreements)();
                         h(e)
@@ -71,7 +71,7 @@
                     }), (0, a.jsx)(l.ModalFooter, {
                         children: (0, a.jsx)(l.Button, {
                             submitting: _,
-                            onClick: I,
+                            onClick: T,
                             color: l.Button.Colors.GREEN,
                             children: c.default.Messages.AGREE
                         })

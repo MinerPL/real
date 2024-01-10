@@ -4,7 +4,7 @@
                     return O
                 },
                 default: function() {
-                    return P
+                    return b
                 }
             }), n("424973"), n("222007");
             var a = n("37983"),
@@ -70,7 +70,7 @@
                         })
                     }, "hang-status")
                 };
-            class b extends l.Component {
+            class P extends l.Component {
                 renderPrioritySpeaker() {
                     let {
                         speaking: e,
@@ -149,10 +149,10 @@
                         voicePlatform: N,
                         hangStatusActivity: A,
                         showHangStatus: O,
-                        isSelf: b
+                        isSelf: P
                     } = this.props;
                     if (o || c) return null;
-                    let P = [],
+                    let b = [],
                         U = (0, a.jsx)(D, {
                             iconClassName: m,
                             mute: e,
@@ -161,52 +161,52 @@
                             deaf: s,
                             serverDeaf: r
                         });
-                    return (u && (n ? P.push((0, a.jsx)(f.TooltipContainer, {
+                    return (u && (n ? b.push((0, a.jsx)(f.TooltipContainer, {
                         className: L.iconSpacing,
                         text: j.default.Messages.LOCAL_VIDEO_DISABLED,
                         children: (0, a.jsx)(C.default, {
                             className: i(L.icon, m),
                             foreground: L.strikethrough
                         })
-                    }, "video")) : P.push((0, a.jsx)(f.TooltipContainer, {
+                    }, "video")) : b.push((0, a.jsx)(f.TooltipContainer, {
                         className: L.iconSpacing,
                         text: j.default.Messages.VIDEO,
                         children: (0, a.jsx)(E.default, {
                             className: i(L.icon, m)
                         })
-                    }, "video"))), null != S && P.push((0, a.jsx)(f.TooltipContainer, {
+                    }, "video"))), null != S && b.push((0, a.jsx)(f.TooltipContainer, {
                         text: (0, h.default)(S.name),
                         className: L.iconSpacing,
                         children: (0, a.jsx)(v.default, {
                             className: i(L.icon, m)
                         })
-                    }, "activity")), _ === R.GameConsoleTypes.XBOX || N === M.VoicePlatforms.XBOX ? P.push((0, a.jsx)("div", {
+                    }, "activity")), _ === R.GameConsoleTypes.XBOX || N === M.VoicePlatforms.XBOX ? b.push((0, a.jsx)("div", {
                         className: i(L.iconSpacing),
                         children: (0, a.jsx)(T.default, {
                             className: i(L.icon, m)
                         })
-                    }, "xbox")) : (_ === R.GameConsoleTypes.PLAYSTATION || N === M.VoicePlatforms.PLAYSTATION) && P.push((0, a.jsx)("div", {
+                    }, "xbox")) : (_ === R.GameConsoleTypes.PLAYSTATION || N === M.VoicePlatforms.PLAYSTATION) && b.push((0, a.jsx)("div", {
                         className: i(L.iconSpacing),
                         children: (0, a.jsx)(I.default, {
                             className: i(L.icon, m)
                         })
-                    }, "playstation")), d ? P.push((0, a.jsx)("div", {
+                    }, "playstation")), d ? b.push((0, a.jsx)("div", {
                         className: i(L.iconSpacing, L.liveIconSpacing),
                         children: (0, a.jsx)(x.default, {
                             size: x.default.Sizes.SMALL
                         })
-                    }, "stream")) : p && P.push((0, a.jsx)(f.TooltipContainer, {
+                    }, "stream")) : p && b.push((0, a.jsx)(f.TooltipContainer, {
                         className: L.iconSpacing,
                         text: j.default.Messages.WATCH_STREAM_WATCHING,
                         children: (0, a.jsx)(g.default, {
                             className: i(L.icon, m)
                         })
-                    }, "watch")), 0 !== P.length || null != U || O) ? (0, a.jsxs)("div", {
+                    }, "watch")), 0 !== b.length || null != U || O) ? (0, a.jsxs)("div", {
                         className: L.icons,
-                        children: [U, P, O && (0, a.jsx)(y, {
+                        children: [U, b, O && (0, a.jsx)(y, {
                             hangStatusActivity: A,
                             iconClassName: m,
-                            isSelf: b
+                            isSelf: P
                         })]
                     }) : null
                 }
@@ -290,14 +290,14 @@
                     }
                 }
             }
-            b.defaultProps = {
+            P.defaultProps = {
                 avatarContainerClass: L.avatarContainer,
                 userNameClassName: L.usernameFont,
                 size: A.OverlayAvatarSizes.SMALL,
                 selected: !1,
                 disabled: !1
             };
-            var P = b;
+            var b = P;
 
             function D(e) {
                 let {

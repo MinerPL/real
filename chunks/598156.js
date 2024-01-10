@@ -18,13 +18,13 @@
                 _ = n("74456"),
                 h = n("206230"),
                 C = n("302437"),
-                I = n("665182"),
-                T = n("442174"),
+                T = n("665182"),
+                I = n("442174"),
                 S = n("69927"),
                 N = n("10641"),
                 A = n("384997"),
-                m = n("539938"),
-                p = n("155084"),
+                p = n("539938"),
+                m = n("155084"),
                 g = n("393414"),
                 R = n("582713"),
                 O = n("970366"),
@@ -74,11 +74,11 @@
                     {
                         channelId: h
                     } = (0, B.useMessageRequestSidebarState)(),
-                    I = s.useCallback(() => {
+                    T = s.useCallback(() => {
                         let e = n.map(e => e.channel.id);
                         E(e)
                     }, [n, E]),
-                    T = s.useCallback(e => {
+                    I = s.useCallback(e => {
                         var t, s;
                         let {
                             row: r
@@ -106,7 +106,7 @@
                                 tag: "span",
                                 children: "•"
                             }), (0, a.jsx)(c.Button, {
-                                onClick: I,
+                                onClick: T,
                                 look: c.ButtonLooks.LINK,
                                 color: c.ButtonColors.LINK,
                                 size: c.ButtonSizes.SMALL,
@@ -115,8 +115,8 @@
                                 children: X.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
                             })]
                         }) : null]
-                    }, "title"), [t, I, u]);
-                return (n.length !== t && p.default.increment({
+                    }, "title"), [t, T, u]);
+                return (n.length !== t && m.default.increment({
                     name: o.MetricEvents.MESSAGE_REQUEST_COUNT_DRIFT
                 }), 0 === n.length) ? (0, a.jsx)(W.default, {
                     section: q.MessageRequestSections.REQUESTS
@@ -142,7 +142,7 @@
                                 sectionHeight: q.LIST_SECTION_HEIGHT,
                                 rowHeight: q.LIST_ROW_HEIGHT,
                                 renderSection: S,
-                                renderRow: T,
+                                renderRow: I,
                                 sections: [n.length],
                                 chunkSize: 30,
                                 fade: !0,
@@ -160,11 +160,11 @@
                 } = e, s = (0, u.useStateFromStores)([M.default], () => M.default.getSidebarState(M.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), i = (0, u.useStateFromStores)([P.default], () => P.default.getChannel(null == s ? void 0 : s.channelId));
                 if (null == s || s.type !== R.SidebarType.VIEW_MESSAGE_REQUEST || null == i || !i.isPrivate()) return null;
                 let l = t - Q.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
-                return (0, a.jsx)(I.default, {
-                    sidebarType: I.ChatSidebarType.MessageRequestSidebar,
+                return (0, a.jsx)(T.default, {
+                    sidebarType: T.ChatSidebarType.MessageRequestSidebar,
                     maxWidth: l,
                     onWidthChange: n,
-                    children: (0, a.jsx)(T.default, {
+                    children: (0, a.jsx)(I.default, {
                         channel: i,
                         baseChannelId: M.MESSAGE_REQUESTS_BASE_CHANNEL_ID
                     })
@@ -239,7 +239,7 @@
                 s.useEffect(() => {
                     E.setHomeLink(Q.Routes.MESSAGE_REQUESTS), (0, O.trackAppUIViewed)("message-requests"), b.default.track(Q.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
                         num_message_requests: n
-                    }), p.default.increment({
+                    }), m.default.increment({
                         name: o.MetricEvents.MESSAGE_REQUEST_VIEW
                     })
                 }, []);
@@ -259,17 +259,17 @@
                             [$.threadSidebarOpen]: _,
                             [$.threadSidebarFloating]: _ && d
                         }),
-                        children: [(0, a.jsxs)(m.default, {
+                        children: [(0, a.jsxs)(p.default, {
                             className: (0, U.getThemeClass)(i),
                             toolbar: !0,
-                            children: [(0, a.jsx)(m.default.Icon, {
+                            children: [(0, a.jsx)(p.default.Icon, {
                                 icon: y.default,
                                 "aria-hidden": !0
                             }), (0, a.jsx)(ea, {
-                                children: (0, a.jsx)(m.default.Title, {
+                                children: (0, a.jsx)(p.default.Title, {
                                     children: X.default.Messages.MESSAGE_REQUESTS
                                 })
-                            }), (0, a.jsx)(m.default.Divider, {}), (0, a.jsxs)(c.TabBar, {
+                            }), (0, a.jsx)(p.default.Divider, {}), (0, a.jsxs)(c.TabBar, {
                                 "aria-label": X.default.Messages.MESSAGE_REQUESTS,
                                 selectedItem: h,
                                 type: "top-pill",

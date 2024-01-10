@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return T
                 }
             }), n("222007");
             var a = n("37983");
@@ -19,7 +19,7 @@
                 _ = n("861309"),
                 h = n("492249"),
                 C = n("49111"),
-                I = {
+                T = {
                     [C.RPCCommands.VALIDATE_APPLICATION]: {
                         scope: h.RPC_LOCAL_SCOPE,
                         handler(e) {

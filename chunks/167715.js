@@ -39,7 +39,7 @@
                 }), d = null != s ? s : u;
                 if (null == d || !E.GAME_CONSOLE_SESSIONS.has(d)) return null;
                 let C = null != n,
-                    I = C ? d === E.GameConsoleTypes.XBOX ? f.default.Messages.XBOX_TRANSFERRING_ELLIPSIS : f.default.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS : d === E.GameConsoleTypes.XBOX ? f.default.Messages.XBOX_REMOTE_CONNECTED.format() : f.default.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
+                    T = C ? d === E.GameConsoleTypes.XBOX ? f.default.Messages.XBOX_TRANSFERRING_ELLIPSIS : f.default.Messages.PLAYSTATION_TRANSFERRING_ELLIPSIS : d === E.GameConsoleTypes.XBOX ? f.default.Messages.XBOX_REMOTE_CONNECTED.format() : f.default.Messages.PLAYSTATION_REMOTE_CONNECTED.format();
                 return (0, a.jsxs)("div", {
                     className: i(_.root, C ? _.connecting : _.connected),
                     children: [(0, a.jsx)(h, {
@@ -47,7 +47,7 @@
                     }), (0, a.jsx)(r.Text, {
                         color: C ? "header-primary" : "always-white",
                         variant: "text-xs/medium",
-                        children: I
+                        children: T
                     })]
                 })
             }

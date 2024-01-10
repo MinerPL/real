@@ -23,8 +23,8 @@
                 N = n("945330"),
                 I = n("138217"),
                 m = n("530686"),
-                g = n("998530"),
-                A = n("814744"),
+                A = n("998530"),
+                g = n("814744"),
                 C = n("805614"),
                 R = n("64318"),
                 M = n("49111"),
@@ -56,7 +56,7 @@
                     hasMore: p,
                     loading: N,
                     guildFilter: m,
-                    roleFilter: A,
+                    roleFilter: g,
                     everyoneFilter: C
                 } = (0, s.useStateFromStoresObject)([I.default], () => ({
                     messages: I.default.getMentions(),
@@ -65,13 +65,13 @@
                     guildFilter: I.default.guildFilter,
                     roleFilter: I.default.roleFilter,
                     everyoneFilter: I.default.everyoneFilter
-                })), v = (0, u.default)(m), y = (0, u.default)(A), x = (0, u.default)(C);
+                })), v = (0, u.default)(m), y = (0, u.default)(g), x = (0, u.default)(C);
                 a.useEffect(() => {
                     if (!I.default.hasLoadedEver) {
                         D(_, !0);
                         return
-                    }(null != v && m !== v || null != y && A !== y || null != x && C !== x) && D(_, !0)
-                }, [v, m, y, A, x, C, _, !0]);
+                    }(null != v && m !== v || null != y && g !== y || null != x && C !== x) && D(_, !0)
+                }, [v, m, y, g, x, C, _, !0]);
                 a.useEffect(() => {
                     d.AttachmentLinkRefreshExperiment.getCurrentConfig({
                         location: "mentions"
@@ -84,7 +84,7 @@
                     setTab: t,
                     badgeState: f,
                     closePopout: E,
-                    children: (0, l.jsx)(g.default, {})
+                    children: (0, l.jsx)(A.default, {})
                 }), [!0, t, f, E]);
                 return (0, l.jsx)(l.Fragment, {
                     children: (0, l.jsx)(o.default, {
@@ -106,7 +106,7 @@
                         },
                         canCloseAllMessages: !0,
                         renderHeader: U,
-                        renderEmptyState: b,
+                        renderEmptyState: F,
                         renderMessage: P,
                         "aria-label": O.default.Messages.RECENT_MENTIONS,
                         listName: "recents"
@@ -142,7 +142,7 @@
                     o = !!s.isNSFW() && !i;
                 return (0, l.jsxs)("div", {
                     className: L.container,
-                    children: [(0, l.jsx)(A.default, {
+                    children: [(0, l.jsx)(g.default, {
                         channel: s,
                         gotoChannel: n,
                         children: null != a ? (0, l.jsx)(T.default, {
@@ -174,7 +174,7 @@
                 })
             }
 
-            function b(e) {
+            function F(e) {
                 return (0, l.jsx)(C.default, {
                     Icon: p.default,
                     header: O.default.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,

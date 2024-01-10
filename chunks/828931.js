@@ -18,13 +18,13 @@
                 _ = n("442619"),
                 h = n("592407"),
                 C = n("465511"),
-                I = n("519119"),
-                T = n("5667"),
+                T = n("519119"),
+                I = n("5667"),
                 S = n("79798"),
                 N = n("599110"),
                 A = n("427459"),
-                m = n("701909"),
-                p = n("246351"),
+                p = n("701909"),
+                m = n("246351"),
                 g = n("49111"),
                 R = n("988268"),
                 O = n("994428"),
@@ -106,7 +106,7 @@
                         switch (V) {
                             case i.DismissibleContent.GUILD_HEADER_PREMIUM_GUILD_PROGRESS:
                                 return (0, a.jsx)(F, {
-                                    renderPopout: (0, a.jsx)(T.default, {
+                                    renderPopout: (0, a.jsx)(I.default, {
                                         onComponentMount: L,
                                         header: M.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_TOOLTIP_TITLE,
                                         asset: (0, a.jsx)("img", {
@@ -125,7 +125,7 @@
                                 });
                             case i.DismissibleContent.GUILD_HEADER_PROGRESS_BAR_SIZE_COACH_MARK:
                                 return (0, a.jsx)(F, {
-                                    renderPopout: (0, a.jsx)(T.default, {
+                                    renderPopout: (0, a.jsx)(I.default, {
                                         onComponentMount: L,
                                         header: M.default.Messages.PREMIUM_PROGRESS_BAR_GUILD_HEADER_SIZE_TOOLTIP_TITLE,
                                         asset: (0, a.jsx)("img", {
@@ -173,7 +173,7 @@
                                     }),
                                     t = (0, A.isTierUnlocked)(s, g.BoostedGuildTiers.TIER_1) ? M.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_CTA_PRIMARY_ROLE_SETTINGS : M.default.Messages.LEARN_MORE;
                                 return (0, a.jsx)(F, {
-                                    renderPopout: (0, a.jsx)(T.default, {
+                                    renderPopout: (0, a.jsx)(I.default, {
                                         onComponentMount: B,
                                         header: M.default.Messages.INVITE_SPLASH_GUILD_HEADER_TOOLTIP_TITLE,
                                         asset: (0, a.jsx)("img", {
@@ -199,7 +199,7 @@
                                 });
                             case i.DismissibleContent.GUILD_HEADER_ACTIVE_THREADS_NOTICE:
                                 return (0, a.jsx)(F, {
-                                    renderPopout: (0, a.jsx)(T.default, {
+                                    renderPopout: (0, a.jsx)(I.default, {
                                         className: P.tooltipOverrideColor,
                                         header: M.default.Messages.ACTIVE_THREADS_UPSELL_HEADER,
                                         content: M.default.Messages.ACTIVE_THREADS_UPSELL_CONTENT,
@@ -211,7 +211,7 @@
                                 });
                             case i.DismissibleContent.CLYDE_GUILD_HEADER_NUX:
                                 return (0, a.jsx)(F, {
-                                    renderPopout: (0, a.jsx)(T.default, {
+                                    renderPopout: (0, a.jsx)(I.default, {
                                         header: (0, a.jsxs)(a.Fragment, {
                                             children: [M.default.Messages.CLYDE_MODAL_TITLE, (0, a.jsx)(S.default, {
                                                 className: P.botTag,
@@ -226,7 +226,7 @@
                                             className: P.clydeTooltipAsset
                                         }),
                                         content: M.default.Messages.CLYDE_GUILD_TOOLTIP_DETAILS.format({
-                                            learnMoreURL: m.default.getArticleURL(g.HelpdeskArticles.CLYDE_AI)
+                                            learnMoreURL: p.default.getArticleURL(g.HelpdeskArticles.CLYDE_AI)
                                         }),
                                         buttonCTA: M.default.Messages.ENABLE,
                                         onClick: () => {
@@ -239,7 +239,7 @@
                                 });
                             case i.DismissibleContent.GUILD_HEADER_SOUNDBOARD_PERMISSION:
                                 return (0, a.jsx)(F, {
-                                    renderPopout: (0, a.jsx)(T.default, {
+                                    renderPopout: (0, a.jsx)(I.default, {
                                         header: M.default.Messages.SOUNDBOARD_TOOLTIP_TITLE_NEW,
                                         content: M.default.Messages.SOUNDBOARD_TOOLTIP_BODY,
                                         buttonCTA: M.default.Messages.CHECK_IT_OUT,
@@ -258,7 +258,7 @@
                                 });
                             case i.DismissibleContent.MEDIA_CHANNEL_UPSELL:
                                 return (0, a.jsx)(F, {
-                                    renderPopout: (0, a.jsx)(I.default, {
+                                    renderPopout: (0, a.jsx)(T.default, {
                                         guildId: s.id,
                                         markAsDismissed: Y
                                     }),
@@ -274,7 +274,7 @@
                                 });
                             case i.DismissibleContent.INVENTORY_GUILD_SETTINGS_MODMIN_COACHMARK_ROLLBACK:
                                 return (0, a.jsx)(F, {
-                                    renderPopout: (0, a.jsx)(p.default, {
+                                    renderPopout: (0, a.jsx)(m.default, {
                                         guild: s,
                                         markAsDismissed: Y
                                     }),

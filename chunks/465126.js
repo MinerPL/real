@@ -18,13 +18,13 @@
                 _ = n("407063"),
                 h = n("845579"),
                 C = n("315102"),
-                I = n("794818"),
-                T = n("580357"),
+                T = n("794818"),
+                I = n("580357"),
                 S = n("587974"),
                 N = n("49111"),
                 A = n("782340"),
-                m = n("362962"),
-                p = n("68422"),
+                p = n("362962"),
+                m = n("68422"),
                 g = n("578817"),
                 R = n("855237");
             class O extends s.PureComponent {
@@ -32,7 +32,7 @@
                     if (t) return R;
                     switch (e) {
                         case N.ThemeTypes.DARK:
-                            return p;
+                            return m;
                         case N.ThemeTypes.LIGHT:
                             return g
                     }
@@ -46,7 +46,7 @@
                         onTagClick: i
                     } = this.props, {
                         loaded: u,
-                        hasBeenSeen: p,
+                        hasBeenSeen: m,
                         isVisible: g,
                         submitting: R
                     } = this.state, {
@@ -90,50 +90,50 @@
                         threshold: .1,
                         children: g ? (0, a.jsx)(r.VisibilitySensor, {
                             onChange: this.handleVisibilityChange,
-                            active: !p,
+                            active: !m,
                             threshold: .55,
                             children: (0, a.jsxs)("div", {
                                 className: l(n, {
-                                    [m.loaded]: u,
-                                    [m.loading]: !u
+                                    [p.loaded]: u,
+                                    [p.loading]: !u
                                 }),
                                 children: [R ? (0, a.jsx)(o.Spinner, {
                                     type: o.Spinner.Type.PULSING_ELLIPSIS,
-                                    className: m.spinner
+                                    className: p.spinner
                                 }) : null, (0, a.jsxs)(o.Clickable, {
                                     onClick: this.handleClickView,
-                                    className: l(m.card, {
-                                        [m.submitting]: R,
-                                        [m.cardWithTags]: U
+                                    className: l(p.card, {
+                                        [p.submitting]: R,
+                                        [p.cardWithTags]: U
                                     }),
                                     onContextMenu: this.handleContextMenu,
                                     children: [(0, a.jsxs)("div", {
-                                        className: m.cardHeader,
+                                        className: p.cardHeader,
                                         children: [(0, a.jsx)("div", {
-                                            className: m.splash,
+                                            className: p.splash,
                                             children: (0, a.jsx)("img", {
                                                 src: x,
                                                 alt: "",
-                                                className: l(m.splashImage, {
-                                                    [m.splashImageHeight]: !D
+                                                className: l(p.splashImage, {
+                                                    [p.splashImageHeight]: !D
                                                 }),
                                                 onLoad: () => this.setState({
                                                     loaded: !0
                                                 })
                                             })
                                         }), j || G ? (0, a.jsx)("div", {
-                                            className: m.actionButtons,
+                                            className: p.actionButtons,
                                             children: (0, a.jsx)(f.default, {
                                                 guild: t
                                             })
                                         }) : null, (0, a.jsx)("div", {
-                                            className: m.guildIcon,
+                                            className: p.guildIcon,
                                             children: (0, a.jsx)(S.default, {
                                                 mask: S.default.Masks.SQUIRCLE,
                                                 width: 48,
                                                 height: 48,
                                                 children: (0, a.jsx)("div", {
-                                                    className: m.iconMask,
+                                                    className: p.iconMask,
                                                     children: (0, a.jsx)(S.default, {
                                                         mask: S.default.Masks.SQUIRCLE,
                                                         width: 40,
@@ -141,27 +141,27 @@
                                                         children: (0, a.jsx)("img", {
                                                             src: b,
                                                             alt: "",
-                                                            className: m.avatar
+                                                            className: p.avatar
                                                         })
                                                     })
                                                 })
                                             })
                                         })]
                                     }), (0, a.jsxs)("div", {
-                                        className: m.guildInfo,
+                                        className: p.guildInfo,
                                         children: [(0, a.jsxs)("div", {
-                                            className: m.title,
-                                            children: [(0, a.jsx)(T.default, {
-                                                className: m.guildBadge,
+                                            className: p.title,
+                                            children: [(0, a.jsx)(I.default, {
+                                                className: p.guildBadge,
                                                 guild: t,
                                                 tooltipColor: o.Tooltip.Colors.PRIMARY
                                             }), (0, a.jsx)(o.Heading, {
                                                 variant: "heading-md/semibold",
-                                                className: m.guildName,
+                                                className: p.guildName,
                                                 children: O
                                             })]
                                         }), (0, a.jsx)(o.Text, {
-                                            className: m.description,
+                                            className: p.description,
                                             variant: "text-sm/normal",
                                             color: "header-secondary",
                                             children: L
@@ -169,13 +169,13 @@
                                             tags: P,
                                             onTagClick: e => i(e, t.id),
                                             guildId: t.id,
-                                            section: I.AnalyticsContexts.POPULAR
+                                            section: T.AnalyticsContexts.POPULAR
                                         }), (0, a.jsxs)("div", {
-                                            className: m.memberInfo,
+                                            className: p.memberInfo,
                                             children: [null != v && (0, a.jsxs)("div", {
-                                                className: m.memberCount,
+                                                className: p.memberCount,
                                                 children: [(0, a.jsx)("div", {
-                                                    className: m.dotOnline
+                                                    className: p.dotOnline
                                                 }), (0, a.jsx)(o.Text, {
                                                     variant: "text-xs/normal",
                                                     color: "header-secondary",
@@ -184,9 +184,9 @@
                                                     })
                                                 })]
                                             }), null != M && (0, a.jsxs)("div", {
-                                                className: m.memberCount,
+                                                className: p.memberCount,
                                                 children: [(0, a.jsx)("div", {
-                                                    className: m.dotOffline
+                                                    className: p.dotOffline
                                                 }), (0, a.jsx)(o.Text, {
                                                     variant: "text-xs/normal",
                                                     color: "header-secondary",
@@ -200,8 +200,8 @@
                                 })]
                             })
                         }) : (0, a.jsx)("div", {
-                            className: l(m.card, {
-                                [m.cardWithTags]: U
+                            className: l(p.card, {
+                                [p.cardWithTags]: U
                             })
                         })
                     })
@@ -257,6 +257,6 @@
                 }
             }
             O.Placeholder = e => (0, a.jsx)("div", {
-                className: l(e.className, m.cardPlaceholder)
+                className: l(e.className, p.cardPlaceholder)
             });
             var L = O

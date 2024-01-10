@@ -15,20 +15,20 @@
             let c = null,
                 E = null,
                 f = {},
-                _ = p(),
+                _ = m(),
                 h = g(),
                 C = null,
-                I = function() {
+                T = function() {
                     var e, t, n, a;
                     return (null === (t = window) || void 0 === t ? void 0 : null === (e = t.location) || void 0 === e ? void 0 : e.pathname) === d.FAMILY_CENTER_SUB_ROUTES.FAMILY_CENTER_MY_FAMILY ? d.FamilyCenterSubPages.REQUESTS : (null === (a = window) || void 0 === a ? void 0 : null === (n = a.location) || void 0 === n ? void 0 : n.pathname) === d.FAMILY_CENTER_SUB_ROUTES.FAMILY_CENTER_SETTINGS ? d.FamilyCenterSubPages.SETTINGS : d.FamilyCenterSubPages.ACTIVITY
                 }(),
-                T = !1,
+                I = !1,
                 S = !1,
                 N = null,
                 A = null,
-                m = {};
+                p = {};
 
-            function p() {
+            function m() {
                 return {
                     [d.TeenActionDisplayType.USER_ADD]: {},
                     [d.TeenActionDisplayType.GUILD_ADD]: {},
@@ -62,7 +62,7 @@
             }
 
             function L(e, t) {
-                let n = t ? _ : p();
+                let n = t ? _ : m();
                 return _ = e.reduce((e, t) => {
                     let a = t.display_type;
                     return void 0 !== n[a] && void 0 === n[a][t.event_id] && (e[a][t.event_id] = t), e
@@ -70,10 +70,10 @@
             }
 
             function v(e) {
-                m = e.reduce((e, t) => ({
+                p = e.reduce((e, t) => ({
                     ...e,
                     [t.id]: new o.FamilyCenterGuild(t)
-                }), m)
+                }), p)
             }
 
             function M() {
@@ -91,7 +91,7 @@
                     teenId: r,
                     rangeStartId: o
                 } = n;
-                c = r, E = o, L(s), O(l), v(i), R(t), S = !1, N = a.default.fromTimestamp(Date.now()), T = !0
+                c = r, E = o, L(s), O(l), v(i), R(t), S = !1, N = a.default.fromTimestamp(Date.now()), I = !0
             }
 
             function D(e) {
@@ -158,7 +158,7 @@
                 let {
                     tab: t
                 } = e;
-                I = t
+                T = t
             }
 
             function w(e) {
@@ -185,7 +185,7 @@
             }
 
             function B() {
-                c = null, E = null, f = {}, _ = p(), h = g(), m = {}, S = !1, N = null
+                c = null, E = null, f = {}, _ = m(), h = g(), p = {}, S = !1, N = null
             }
             class H extends i.default {
                 takeSnapshot() {
@@ -204,7 +204,7 @@
                                     e.push(...Object.values(a))
                                 }), e
                             }(),
-                            guilds: Object.values(m)
+                            guilds: Object.values(p)
                         }
                     }
                 }
@@ -232,16 +232,16 @@
                     return C
                 }
                 getGuild(e) {
-                    return m[e]
+                    return p[e]
                 }
                 getSelectedTab() {
-                    return I
+                    return T
                 }
                 getStartId() {
                     return E
                 }
                 getIsInitialized() {
-                    return T
+                    return I
                 }
                 getUserCountry() {
                     return A

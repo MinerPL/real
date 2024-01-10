@@ -37,8 +37,8 @@
                 L = n("328275"),
                 O = n("437825"),
                 y = n("142303"),
-                b = n("200639"),
-                P = n("97347"),
+                P = n("200639"),
+                b = n("97347"),
                 D = n("216947"),
                 U = n("267675"),
                 w = n("433487"),
@@ -67,8 +67,8 @@
                     onContextMenu: f,
                     onClick: L,
                     onMouseDown: y,
-                    onKeyDown: b,
-                    className: P,
+                    onKeyDown: P,
+                    className: b,
                     style: D,
                     channel: U,
                     width: w,
@@ -203,7 +203,7 @@
                     children: (0, a.jsx)("div", {
                         className: i(ee.wrapper, {
                             [ee.ringing]: eg
-                        }, P),
+                        }, b),
                         children: (0, a.jsxs)(T.default, {
                             shakeLocation: q.ShakeLocation.VOICE_USER,
                             isShaking: eC,
@@ -225,7 +225,7 @@
                                     onContextMenu: eM,
                                     onClick: eN,
                                     onMouseDown: y,
-                                    onKeyDown: b,
+                                    onKeyDown: P,
                                     focusProps: {
                                         offset: 1
                                     },
@@ -365,7 +365,7 @@
                                 color: o.default.colors.WHITE
                             }) : null
                         } else if (n || t || l) {
-                            let e = n ? b.default : P.default;
+                            let e = n ? P.default : b.default;
                             F = (0, a.jsx)(e, {
                                 foreground: i({
                                     [ee.localMuteStrikethrough]: l && !n

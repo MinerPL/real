@@ -28,8 +28,8 @@
                     return e
                 }, [h]);
                 if (0 === C.length) return null;
-                let I = "";
-                return I = 1 === C.length ? E.default.Messages.ONE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
+                let T = "";
+                return T = 1 === C.length ? E.default.Messages.ONE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
                     a: C[0].name
                 }) : 2 === C.length ? E.default.Messages.TWO_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
                     a: C[0].name,
@@ -41,7 +41,7 @@
                 }) : E.default.Messages.MORE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT, (0, a.jsx)(r.default, {
                     guild: t,
                     onDismissed: _,
-                    message: I,
+                    message: T,
                     type: c.ChannelNoticeTypes.APPLICATION_SUBSCRIPTION_EXPIRATION,
                     image: f,
                     onClick: () => {

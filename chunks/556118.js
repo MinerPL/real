@@ -31,15 +31,15 @@
                 A = n("836417"),
                 T = n("780571"),
                 M = n("568734"),
-                N = n("154864"),
-                I = n("913491"),
+                I = n("154864"),
+                N = n("913491"),
                 L = n("574073"),
                 v = n("738352"),
                 R = n("865343"),
                 x = n("380986"),
                 y = n("85470"),
-                D = n("969706"),
-                O = n("39331"),
+                O = n("969706"),
+                D = n("39331"),
                 j = n("68480"),
                 b = n("115859"),
                 P = n("922177"),
@@ -55,7 +55,7 @@
                 z = n("877671");
 
             function Z(e, t, n) {
-                return e.getElementById((0, N.getMessageDOMId)(t, n))
+                return e.getElementById((0, I.getMessageDOMId)(t, n))
             }
 
             function K(e) {
@@ -75,7 +75,7 @@
                 } = (0, u.useListItem)(null !== (t = e.id) && void 0 !== t ? t : ""), h = (0, d.useStateFromStores)([E.default], () => E.default.getMessageByReference(l)), {
                     popouts: C,
                     setPopout: p
-                } = (0, D.default)(a.id, B.DEFAULT_POPOUTS), m = (0, L.default)(a), g = (0, R.getMessageAriaLabelledBy)(a), S = (0, R.getMessageAriaDescribedBy)(a);
+                } = (0, O.default)(a.id, B.DEFAULT_POPOUTS), m = (0, L.default)(a), g = (0, R.getMessageAriaLabelledBy)(a), S = (0, R.getMessageAriaDescribedBy)(a);
                 return a.type === V.MessageTypes.THREAD_STARTER_MESSAGE && null != h && h.state === E.ReferencedMessageState.LOADED ? (0, s.jsx)(Y, {
                     ...e,
                     message: h.message,
@@ -115,7 +115,7 @@
                         channel_id: A
                     },
                     channel: {
-                        guild_id: N
+                        guild_id: I
                     },
                     compact: v = !1,
                     className: j,
@@ -131,14 +131,14 @@
                     popouts: X,
                     selected: J,
                     setPopout: Q
-                } = (0, D.default)(m.id, B.DEFAULT_POPOUTS), $ = S.InlineEmbedMedia.useSetting(), ee = S.RenderEmbeds.useSetting(), et = (0, d.useStateFromStores)([E.default], () => E.default.getMessageByReference(U)), en = (0, h.useShowImprovedMarkdownUserExperimentConfig)((null !== (l = m.editedTimestamp) && void 0 !== l ? l : m.timestamp).valueOf()), es = (0, h.useShowImprovedMarkdownGuildExperimentConfig)(null !== (r = null === (t = e.channel) || void 0 === t ? void 0 : t.guild_id) && void 0 !== r ? r : "", (null !== (o = m.editedTimestamp) && void 0 !== o ? o : m.timestamp).valueOf()), {
+                } = (0, O.default)(m.id, B.DEFAULT_POPOUTS), $ = S.InlineEmbedMedia.useSetting(), ee = S.RenderEmbeds.useSetting(), et = (0, d.useStateFromStores)([E.default], () => E.default.getMessageByReference(U)), en = (0, h.useShowImprovedMarkdownUserExperimentConfig)((null !== (l = m.editedTimestamp) && void 0 !== l ? l : m.timestamp).valueOf()), es = (0, h.useShowImprovedMarkdownGuildExperimentConfig)(null !== (r = null === (t = e.channel) || void 0 === t ? void 0 : t.guild_id) && void 0 !== r ? r : "", (null !== (o = m.editedTimestamp) && void 0 !== o ? o : m.timestamp).valueOf()), {
                     handleMouseEnter: ea,
                     handleMouseLeave: el,
                     isHovered: ei
                 } = (0, x.useHoveredMessage)(P, m.author.id, J), er = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), eo = J || er && K, eu = eo || ei, {
                     content: ed,
                     hasSpoilerEmbeds: ec
-                } = (0, O.default)(m, {
+                } = (0, D.default)(m, {
                     hideSimpleEmbedContent: $ && ee,
                     isInteracting: eu,
                     formatInline: !1,
@@ -146,8 +146,8 @@
                     allowHeading: en.showListsAndHeaders || es.showListsAndHeaders,
                     allowLinks: en.showMaskedLinks || es.showMaskedLinks,
                     previewLinkTarget: en.showMaskedLinks || es.showMaskedLinks
-                }), ef = (0, y.default)(_, A, er), eh = (0, L.default)(m), eC = (0, R.getMessageAriaLabelledBy)(m, P), ep = (0, R.getMessageAriaDescribedBy)(m), em = (0, H.default)(e, ed, !1), eE = a.useCallback(() => (0, g.transitionToGuild)(N, A, _), [N, A, _]), eg = (0, p.useRoleIcon)({
-                    guildId: N,
+                }), ef = (0, y.default)(_, A, er), eh = (0, L.default)(m), eC = (0, R.getMessageAriaLabelledBy)(m, P), ep = (0, R.getMessageAriaDescribedBy)(m), em = (0, H.default)(e, ed, !1), eE = a.useCallback(() => (0, g.transitionToGuild)(I, A, _), [I, A, _]), eg = (0, p.useRoleIcon)({
+                    guildId: I,
                     roleId: eh.iconRoleId
                 });
                 return (0, s.jsxs)("div", {
@@ -164,9 +164,9 @@
                         className: i(j, {
                             [z.message]: !0,
                             [z.cozyMessage]: !v,
-                            [z.mentioned]: m.mentioned && !(0, I.default)(m),
+                            [z.mentioned]: m.mentioned && !(0, N.default)(m),
                             [z.ephemeral]: (0, M.hasFlag)(m.flags, V.MessageFlags.EPHEMERAL),
-                            [z.systemMessage]: (0, I.default)(m),
+                            [z.systemMessage]: (0, N.default)(m),
                             [z.groupStart]: m.id === P || m.type === V.MessageTypes.REPLY,
                             [z.selected]: eo
                         }),
@@ -207,7 +207,7 @@
                 let r;
                 let {
                     id: g,
-                    message: N,
+                    message: I,
                     message: {
                         id: Z
                     },
@@ -221,8 +221,8 @@
                     groupId: Q,
                     renderContentOnly: $
                 } = e;
-                o(N.type !== V.MessageTypes.THREAD_STARTER_MESSAGE, "Message must not be a thread starter message");
-                let ee = V.MessageTypesWithLazyLoadedReferences.has(N.type) ? N.messageReference : void 0,
+                o(I.type !== V.MessageTypes.THREAD_STARTER_MESSAGE, "Message must not be a thread starter message");
+                let ee = V.MessageTypesWithLazyLoadedReferences.has(I.type) ? I.messageReference : void 0,
                     {
                         onFocus: et,
                         ...en
@@ -234,15 +234,15 @@
                         popouts: ei,
                         selected: er,
                         setPopout: eo
-                    } = (0, D.default)(N.id, B.DEFAULT_POPOUTS),
-                    eu = (0, x.useContextMenuMessage)(N, K, eo),
-                    ed = (0, x.useClickMessage)(N, K),
+                    } = (0, O.default)(I.id, B.DEFAULT_POPOUTS),
+                    eu = (0, x.useContextMenuMessage)(I, K, eo),
+                    ed = (0, x.useClickMessage)(I, K),
                     {
                         handleMouseEnter: ec,
                         handleMouseLeave: ef,
                         hasHovered: eh,
                         isHovered: eC
-                    } = (0, x.useHoveredMessage)(Q, N.author.id, er),
+                    } = (0, x.useHoveredMessage)(Q, I.author.id, er),
                     {
                         isFocused: ep,
                         hasFocused: em,
@@ -253,26 +253,26 @@
                     e_ = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled),
                     eA = er || eS || e_ && ep,
                     eT = eA || eC,
-                    eM = (0, d.useStateFromStores)([_.default], () => N.hasFlag(V.MessageFlags.HAS_THREAD) && _.default.getChannel(N.id)),
-                    eN = N.isFirstMessageInForumPost(K),
-                    eI = (0, h.useShowImprovedMarkdownUserExperimentConfig)((null !== (n = N.editedTimestamp) && void 0 !== n ? n : N.timestamp).valueOf()),
-                    eL = (0, h.useShowImprovedMarkdownGuildExperimentConfig)(K.guild_id, (null !== (l = N.editedTimestamp) && void 0 !== l ? l : N.timestamp).valueOf()),
+                    eM = (0, d.useStateFromStores)([_.default], () => I.hasFlag(V.MessageFlags.HAS_THREAD) && _.default.getChannel(I.id)),
+                    eI = I.isFirstMessageInForumPost(K),
+                    eN = (0, h.useShowImprovedMarkdownUserExperimentConfig)((null !== (n = I.editedTimestamp) && void 0 !== n ? n : I.timestamp).valueOf()),
+                    eL = (0, h.useShowImprovedMarkdownGuildExperimentConfig)(K.guild_id, (null !== (l = I.editedTimestamp) && void 0 !== l ? l : I.timestamp).valueOf()),
                     {
                         content: ev,
                         hasSpoilerEmbeds: eR
-                    } = (0, O.default)(N, {
+                    } = (0, D.default)(I, {
                         hideSimpleEmbedContent: es && ea,
                         isInteracting: eT,
                         formatInline: !1,
-                        allowList: eN || eI.showListsAndHeaders || eL.showListsAndHeaders,
-                        allowHeading: eN || eI.showListsAndHeaders || eL.showListsAndHeaders,
-                        allowLinks: eI.showMaskedLinks || eL.showMaskedLinks,
-                        previewLinkTarget: eI.showMaskedLinks || eL.showMaskedLinks
+                        allowList: eI || eN.showListsAndHeaders || eL.showListsAndHeaders,
+                        allowHeading: eI || eN.showListsAndHeaders || eL.showListsAndHeaders,
+                        allowLinks: eN.showMaskedLinks || eL.showMaskedLinks,
+                        previewLinkTarget: eN.showMaskedLinks || eL.showMaskedLinks
                     }),
                     ex = (0, y.default)(Z, Y, e_),
-                    ey = (0, L.default)(N),
-                    eD = (0, d.useStateFromStores)([m.default], () => m.default.getPendingReply(Y)),
-                    eO = function(e) {
+                    ey = (0, L.default)(I),
+                    eO = (0, d.useStateFromStores)([m.default], () => m.default.getPendingReply(Y)),
+                    eD = function(e) {
                         let t = a.useRef(e);
                         return a.useEffect(() => void(t.current = null != e ? e : t.current)), null != e ? e : t.current
                     }(J),
@@ -280,17 +280,17 @@
                         guildId: K.guild_id,
                         roleId: ey.iconRoleId
                     }),
-                    eb = (0, R.getMessageAriaLabelledBy)(N, Q),
-                    eP = (0, R.getMessageAriaDescribedBy)(N),
+                    eb = (0, R.getMessageAriaLabelledBy)(I, Q),
+                    eP = (0, R.getMessageAriaDescribedBy)(I),
                     eU = (0, d.useStateFromStores)([C.default], () => C.default.getMessage(Z), [Z]),
                     [eF, eH] = a.useState(!1),
                     ek = (0, j.default)({
-                        message: N,
+                        message: I,
                         channel: K
                     }),
                     eG = null != eU;
-                r = N.type === V.MessageTypes.CUSTOM_GIFT ? "" : !eS && eG ? (0, P.default)(e, ev) : (0, H.default)(e, ev, eS);
-                let ew = N.id === Q,
+                r = I.type === V.MessageTypes.CUSTOM_GIFT ? "" : !eS && eG ? (0, P.default)(e, ev) : (0, H.default)(e, ev, eS);
+                let ew = I.id === Q,
                     eB = (0, s.jsx)(c.FocusRing, {
                         offset: {
                             left: 4,
@@ -316,13 +316,13 @@
                                 className: i(X, {
                                     [z.message]: !0,
                                     [z.cozyMessage]: !q,
-                                    [z.mentioned]: N.mentioned && !(0, I.default)(N),
-                                    [z.ephemeral]: (0, M.hasFlag)(N.flags, V.MessageFlags.EPHEMERAL),
-                                    [z.systemMessage]: (0, I.default)(N),
-                                    [z.groupStart]: !$ && (ew || N.type === V.MessageTypes.REPLY),
+                                    [z.mentioned]: I.mentioned && !(0, N.default)(I),
+                                    [z.ephemeral]: (0, M.hasFlag)(I.flags, V.MessageFlags.EPHEMERAL),
+                                    [z.systemMessage]: (0, N.default)(I),
+                                    [z.groupStart]: !$ && (ew || I.type === V.MessageTypes.REPLY),
                                     [z.selected]: eA,
-                                    [z.replying]: (null == eD ? void 0 : eD.message.id) === N.id,
-                                    [z.interactionSending]: N.isCommandType() && N.state === V.MessageStates.SENDING,
+                                    [z.replying]: (null == eO ? void 0 : eO.message.id) === I.id,
+                                    [z.interactionSending]: I.isCommandType() && I.state === V.MessageStates.SENDING,
                                     [z.automodMessage]: eG
                                 }),
                                 zalgo: !eS,
@@ -357,18 +357,18 @@
                                 childrenMessageContent: r,
                                 onMouseMove: ec,
                                 onMouseLeave: ef,
-                                hasThread: !$ && N.hasFlag(V.MessageFlags.HAS_THREAD) && null != eM,
-                                isSystemMessage: (0, I.default)(N),
-                                hasReply: N.type === V.MessageTypes.REPLY,
+                                hasThread: !$ && I.hasFlag(V.MessageFlags.HAS_THREAD) && null != eM,
+                                isSystemMessage: (0, N.default)(I),
+                                hasReply: I.type === V.MessageTypes.REPLY,
                                 messageRef: ek
                             })
                         })
                     });
-                return null != eO ? (0, s.jsx)(v.default, {
-                    flashKey: eO,
+                return null != eD ? (0, s.jsx)(v.default, {
+                    flashKey: eD,
                     className: i({
                         [z.backgroundFlash]: !0,
-                        [z.groupStart]: !q && N.id === Q
+                        [z.groupStart]: !q && I.id === Q
                     }),
                     children: eB
                 }, "bg-flash-".concat(g)) : eB

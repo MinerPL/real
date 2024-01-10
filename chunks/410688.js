@@ -23,24 +23,24 @@
                     channel: _
                 } = e, h = (0, u.useListHasSingleMessageRequest)(), C = s.useCallback(() => {
                     (0, i.showToast)((0, i.createToast)(E.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, i.ToastType.FAILURE))
-                }, []), I = s.useCallback(() => {
-                    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
                 }, []), T = s.useCallback(() => {
+                    r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID)
+                }, []), I = s.useCallback(() => {
                     r.default.closeChannelSidebar(o.MESSAGE_REQUESTS_BASE_CHANNEL_ID), h && (0, l.transitionToChannel)(_.id)
                 }, [_.id, h]), {
                     acceptMessageRequest: S,
                     rejectMessageRequest: N,
                     isAcceptLoading: A,
-                    isRejectLoading: m,
-                    isUserProfileLoading: p,
+                    isRejectLoading: p,
+                    isUserProfileLoading: m,
                     isOptimisticAccepted: g,
                     isOptimisticRejected: R
                 } = (0, d.useMessageRequestActions)({
                     user: n,
-                    onAcceptSuccess: T,
-                    onRejectSuccess: I,
+                    onAcceptSuccess: I,
+                    onRejectSuccess: T,
                     onError: C
-                }), O = A || m || p || g || R;
+                }), O = A || p || m || g || R;
                 return (0, a.jsxs)("div", {
                     className: f.container,
                     children: [(0, a.jsx)(c.default, {
@@ -57,7 +57,7 @@
                                 e.stopPropagation(), N(_.id)
                             },
                             disabled: O,
-                            submitting: m || R,
+                            submitting: p || R,
                             children: E.default.Messages.MESSAGE_REQUEST_IGNORE
                         }), (0, a.jsx)(i.Button, {
                             className: f.button,
@@ -67,7 +67,7 @@
                                 e.stopPropagation(), S(_.id)
                             },
                             disabled: O,
-                            submitting: A || p || g,
+                            submitting: A || m || g,
                             children: E.default.Messages.MESSAGE_REQUEST_ACCEPT
                         })]
                     })]

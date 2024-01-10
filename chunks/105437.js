@@ -18,11 +18,11 @@
                 _ = n("50885"),
                 h = n("69927"),
                 C = n("49111"),
-                I = n("782340");
-            let T = new Set(["Blink", "Gecko", "WebKit"]),
+                T = n("782340");
+            let I = new Set(["Blink", "Gecko", "WebKit"]),
                 S = C.NOOP;
             if (f.isPlatformEmbedded) S = e => _.default.setBadge(e);
-            else if (T.has(r.layout)) {
+            else if (I.has(r.layout)) {
                 let e = new i({
                     animation: "none"
                 });
@@ -47,7 +47,7 @@
                     if (!e) return;
                     let t = _.default.bounceDock("critical"),
                         n = (0, h.flashPageTitle)({
-                            messages: [I.default.Messages.INCOMING_CALL],
+                            messages: [T.default.Messages.INCOMING_CALL],
                             count: 50
                         });
                     return () => {

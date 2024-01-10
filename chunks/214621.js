@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return m
                 }
             });
             var a = n("37983"),
@@ -18,26 +18,26 @@
                 _ = n("505684"),
                 h = n("93427"),
                 C = n("389495"),
-                I = n("49111"),
-                T = n("719347"),
+                T = n("49111"),
+                I = n("719347"),
                 S = n("782340"),
                 N = n("863452"),
                 A = n("632215");
-            let m = s.memo(function(e) {
+            let p = s.memo(function(e) {
                 let {
                     channel: t
                 } = e, {
                     loaded: n,
                     error: i,
-                    message: m
-                } = (0, C.useMessageRequestPreview)(t), p = (0, r.useStateFromStores)([f.default], () => null != m && f.default.isBlocked(m.author.id), [m]), g = (0, r.useStateFromStores)([E.default], () => E.default.can(I.Permissions.MANAGE_MESSAGES, t)), R = c.RenderSpoilers.useSetting(), {
+                    message: p
+                } = (0, C.useMessageRequestPreview)(t), m = (0, r.useStateFromStores)([f.default], () => null != p && f.default.isBlocked(p.author.id), [p]), g = (0, r.useStateFromStores)([E.default], () => E.default.can(T.Permissions.MANAGE_MESSAGES, t)), R = c.RenderSpoilers.useSetting(), {
                     content: O
-                } = s.useMemo(() => (null == m ? void 0 : m.content) != null && "" !== m.content ? (0, d.default)(m, {
+                } = s.useMemo(() => (null == p ? void 0 : p.content) != null && "" !== p.content ? (0, d.default)(p, {
                     formatInline: !0,
                     noStyleAndInteraction: !0
                 }) : {
                     content: null
-                }, [m]), L = null;
+                }, [p]), L = null;
                 if (i) L = (0, a.jsx)(o.Text, {
                     className: N.messageReplacement,
                     variant: "text-sm/normal",
@@ -45,19 +45,19 @@
                     children: S.default.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
                 });
                 else if (n) {
-                    if (null != m && p) L = (0, a.jsx)(o.Text, {
+                    if (null != p && m) L = (0, a.jsx)(o.Text, {
                         className: N.messageReplacement,
                         variant: "text-sm/normal",
                         color: "text-muted",
                         children: S.default.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
                     });
-                    else if (null != m) {
+                    else if (null != p) {
                         let {
                             contentPlaceholder: e,
                             renderedContent: t
-                        } = (0, h.renderSingleLineMessage)(m, O, p, l(N.messageContent, A.inlineFormat, A.smallFontSize), {
+                        } = (0, h.renderSingleLineMessage)(p, O, m, l(N.messageContent, A.inlineFormat, A.smallFontSize), {
                             iconClass: N.messageContentIcon,
-                            iconSize: T.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
+                            iconSize: I.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
                         });
                         L = null != t ? (0, a.jsx)(o.Text, {
                             variant: "text-sm/normal",
@@ -86,4 +86,4 @@
                     })
                 })
             });
-            var p = m
+            var m = p

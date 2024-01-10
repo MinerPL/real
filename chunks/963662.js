@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return I
                 }
             });
             var a = n("37983"),
@@ -18,7 +18,7 @@
                 _ = n("782340"),
                 h = n("866241");
             let C = l.debounce(o.default.trackWithMetadata, 500),
-                I = e => {
+                T = e => {
                     let {
                         guild: t,
                         title: n,
@@ -26,13 +26,13 @@
                         image: l,
                         type: c,
                         imageMarginX: E,
-                        imageMarginTop: I,
-                        trackingSource: T,
+                        imageMarginTop: T,
+                        trackingSource: I,
                         undismissable: S,
                         onDismissed: N,
                         onClick: A,
-                        cta: m,
-                        ctaColor: p
+                        cta: p,
+                        ctaColor: m
                     } = e;
                     s.useEffect(() => {
                         C(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
@@ -41,19 +41,19 @@
                         })
                     }, [t.id, c]);
                     let g = null;
-                    "function" == typeof m ? g = m() : null != m && (g = (0, a.jsx)(r.Button, {
+                    "function" == typeof p ? g = p() : null != p && (g = (0, a.jsx)(r.Button, {
                         className: h.btn,
                         size: r.Button.Sizes.SMALL,
                         onClick: () => {
                             null != c && d.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-                                source: T,
+                                source: I,
                                 guild_id: t.id,
                                 notice_type: c
                             }), null == A || A()
                         },
                         fullWidth: !0,
-                        color: p,
-                        children: m
+                        color: m,
+                        children: p
                     }));
                     let R = null != E ? "".concat(E, "px") : "16px";
                     return (0, a.jsxs)("div", {
@@ -72,7 +72,7 @@
                         }), (0, a.jsx)("div", {
                             className: h.imageContainer,
                             style: {
-                                marginTop: "".concat(I, "px"),
+                                marginTop: "".concat(T, "px"),
                                 marginLeft: R,
                                 marginRight: R
                             },
@@ -94,13 +94,13 @@
                         })]
                     })
                 };
-            var T = function(e) {
+            var I = function(e) {
                 let {
                     showRedesignedChannelNotice: t
                 } = (0, c.useChannelNoticeRedesignExperiment)(!0);
                 return t ? (0, a.jsx)(E.default, {
                     ...e
-                }) : (0, a.jsx)(I, {
+                }) : (0, a.jsx)(T, {
                     ...e
                 })
             }

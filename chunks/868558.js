@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return T
                 }
             }), n("222007");
             var a = n("862337"),
@@ -45,4 +45,4 @@
                     })
                 }
             }
-            var I = new C
+            var T = new C

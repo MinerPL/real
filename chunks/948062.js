@@ -21,17 +21,17 @@
                 _ = n("587974"),
                 h = n("315102"),
                 C = n("794818"),
-                I = n("378662"),
-                T = n("574921"),
+                T = n("378662"),
+                I = n("574921"),
                 S = n("311092"),
                 N = n("613088"),
                 A = n("49111"),
-                m = n("782340"),
-                p = n("750408"),
+                p = n("782340"),
+                m = n("750408"),
                 g = n("68422"),
                 R = n("578817");
             let O = () => (0, a.jsx)("div", {
-                className: p.placeholder
+                className: m.placeholder
             });
             var L = e => {
                 var t;
@@ -92,26 +92,26 @@
                         }
                     }
                 };
-                s.useEffect(() => T.DiscoveryTagsExperiment.trackExposure({
+                s.useEffect(() => I.DiscoveryTagsExperiment.trackExposure({
                     location: "4302e4_1"
                 }));
                 let {
                     shouldDisplayTags: K
-                } = T.DiscoveryTagsExperiment.useExperiment({
+                } = I.DiscoveryTagsExperiment.useExperiment({
                     location: "4302e4_2"
                 }, {
                     autoTrackExposure: !1
-                }), z = (0, I.useCanSeeDiscoveryContextMenu)();
+                }), z = (0, T.useCanSeeDiscoveryContextMenu)();
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsxs)("div", {
-                        className: p.card,
+                        className: m.card,
                         children: [w ? (0, a.jsx)(r.Spinner, {
                             type: r.Spinner.Type.PULSING_ELLIPSIS,
-                            className: p.spinner
+                            className: m.spinner
                         }) : null, (0, a.jsxs)(r.Clickable, {
-                            className: l(p.container, {
-                                [p.hover]: j,
-                                [p.submitting]: w
+                            className: l(m.container, {
+                                [m.hover]: j,
+                                [m.submitting]: w
                             }),
                             onClick: W,
                             onContextMenu: e => {
@@ -128,21 +128,21 @@
                             onMouseEnter: () => k(!0),
                             onMouseLeave: () => k(!1),
                             children: [(0, a.jsx)("div", {
-                                className: l(p.splashContainer, {
-                                    [p.splashContainerWithTags]: K
+                                className: l(m.splashContainer, {
+                                    [m.splashContainerWithTags]: K
                                 }),
                                 children: (0, a.jsx)("img", {
                                     src: V,
                                     alt: "",
-                                    className: p.splashImage,
+                                    className: m.splashImage,
                                     width: 240
                                 })
                             }), (0, a.jsxs)("div", {
-                                className: l(p.content, {
-                                    [p.contentWithTags]: K
+                                className: l(m.content, {
+                                    [m.contentWithTags]: K
                                 }),
                                 children: [(0, a.jsxs)("div", {
-                                    className: p.header,
+                                    className: m.header,
                                     children: [(0, a.jsx)(_.default, {
                                         mask: _.default.Masks.SQUIRCLE,
                                         width: 32,
@@ -150,24 +150,24 @@
                                         children: (0, a.jsx)("img", {
                                             src: Y,
                                             alt: "",
-                                            className: p.avatar
+                                            className: m.avatar
                                         })
                                     }), (0, a.jsxs)("div", {
-                                        className: p.headerName,
+                                        className: m.headerName,
                                         children: [(0, a.jsx)("div", {
                                             children: (0, a.jsx)(f.default, {
                                                 guild: i,
-                                                className: p.guildBadge,
+                                                className: m.guildBadge,
                                                 size: 16
                                             })
                                         }), (0, a.jsx)(r.Heading, {
                                             variant: "heading-md/semibold",
-                                            className: p.headerTitle,
+                                            className: m.headerTitle,
                                             children: y
                                         })]
                                     })]
                                 }), (0, a.jsx)(r.Text, {
-                                    className: p.description,
+                                    className: m.description,
                                     variant: "text-sm/normal",
                                     children: x
                                 }), K && null != G && null != v && (0, a.jsx)(S.DiscoveryTags, {
@@ -177,25 +177,25 @@
                                     tags: G,
                                     section: C.AnalyticsContexts.SEARCH
                                 }), (0, a.jsxs)("div", {
-                                    className: p.memberInfo,
+                                    className: m.memberInfo,
                                     children: [null != b && (0, a.jsx)("div", {
-                                        className: p.memberCount,
+                                        className: m.memberCount,
                                         children: (0, a.jsx)(r.Text, {
                                             variant: "text-xs/normal",
                                             color: "header-secondary",
-                                            children: m.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                                            children: p.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                                                 membersOnline: b
                                             })
                                         })
                                     }), null != U && (0, a.jsxs)(a.Fragment, {
                                         children: [(0, a.jsx)("div", {
-                                            className: p.dotSeparator
+                                            className: m.dotSeparator
                                         }), (0, a.jsx)("div", {
-                                            className: p.memberCount,
+                                            className: m.memberCount,
                                             children: (0, a.jsx)(r.Text, {
                                                 variant: "text-xs/normal",
                                                 color: "header-secondary",
-                                                children: m.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                                                children: p.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                                                     count: U
                                                 })
                                             })
@@ -203,14 +203,14 @@
                                     })]
                                 })]
                             }), z ? (0, a.jsx)("div", {
-                                className: p.actionButtons,
+                                className: m.actionButtons,
                                 children: (0, a.jsx)(N.default, {
                                     guild: i
                                 })
                             }) : null]
                         })]
                     }), (0, a.jsx)("hr", {
-                        className: p.separator
+                        className: m.separator
                     })]
                 })
             }

@@ -18,17 +18,17 @@
                 _ = n("697218"),
                 h = n("392453"),
                 C = n("599110"),
-                I = n("744923"),
-                T = n("333705"),
+                T = n("744923"),
+                I = n("333705"),
                 S = n("749554"),
                 N = n("62659"),
                 A = n("36512"),
-                m = n("638441"),
-                p = n("49111"),
+                p = n("638441"),
+                m = n("49111"),
                 g = n("988268"),
                 R = n("782340"),
                 O = n("561368");
-            let L = (0, m.default)(function(e) {
+            let L = (0, p.default)(function(e) {
                     let {
                         party: t,
                         onUserContextMenu: n,
@@ -36,7 +36,7 @@
                     } = e, l = (0, a.jsx)(S.default, {
                         party: t,
                         onUserContextMenu: n
-                    }), r = (0, a.jsx)(T.default, {
+                    }), r = (0, a.jsx)(I.default, {
                         party: t,
                         onChannelContextMenu: i
                     }), {
@@ -44,19 +44,19 @@
                         applicationStreams: c,
                         currentActivities: E,
                         voiceChannels: f
-                    } = t, _ = u.length, h = c.length, I = E.length, m = f.length > 0, R = s.useCallback(() => {
+                    } = t, _ = u.length, h = c.length, T = E.length, p = f.length > 0, R = s.useCallback(() => {
                         let e = E.filter(e => {
                             var t, n;
                             return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === g.ApplicationTypes.GAME
                         }).map(e => e.game.name);
-                        C.default.track(p.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
+                        C.default.track(m.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
                             num_users: _,
                             num_streams: h,
-                            num_activities: I,
-                            in_voice_channel: m,
+                            num_activities: T,
+                            in_voice_channel: p,
                             games_detected: e
                         })
-                    }, [_, h, I, m, E]), L = o(R, 9e5);
+                    }, [_, h, T, p, E]), L = o(R, 9e5);
                     return null != l || null != r ? (0, a.jsx)(d.Popout, {
                         position: "left",
                         renderPopout: e => {
@@ -102,7 +102,7 @@
                     fetching: f.default.getFetching(),
                     currentUser: _.default.getCurrentUser()
                 }));
-                s.useEffect(() => (c.default.wait(() => I.mount()), () => c.default.wait(() => I.unmount())), [null == l ? void 0 : l.id]), s.useEffect(() => {
+                s.useEffect(() => (c.default.wait(() => T.mount()), () => c.default.wait(() => T.unmount())), [null == l ? void 0 : l.id]), s.useEffect(() => {
                     n && !i && v()
                 }, [n, i]);
                 let r = null;

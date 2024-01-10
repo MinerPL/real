@@ -25,22 +25,22 @@
                 let s = n.hasFeature(c.GuildFeatures.VERIFIED) || n.hasFeature(c.GuildFeatures.PARTNERED),
                     h = n.toString(),
                     C = n.getIconURL(40, !0),
-                    I = null,
-                    T = _[_.length - 1];
+                    T = null,
+                    I = _[_.length - 1];
                 if (null == n.icon && null != h) {
                     var S;
-                    T = null !== (S = _[(I = (0, l.getAcronym)(h)).length - 1]) && void 0 !== S ? S : _[_.length - 1]
+                    I = null !== (S = _[(T = (0, l.getAcronym)(h)).length - 1]) && void 0 !== S ? S : _[_.length - 1]
                 }
                 return (0, a.jsxs)("div", {
                     className: f.container,
                     children: [(0, a.jsxs)("div", {
                         style: {
-                            fontSize: T
+                            fontSize: I
                         },
-                        children: [null != I ? (0, a.jsx)("div", {
+                        children: [null != T ? (0, a.jsx)("div", {
                             className: i(f.childWrapper, f.acronym),
                             "aria-hidden": !0,
-                            children: I
+                            children: T
                         }) : null, null != C ? (0, a.jsx)(o.Avatar, {
                             src: n.getIconURL(40, !0),
                             size: o.AvatarSizes.SIZE_40,

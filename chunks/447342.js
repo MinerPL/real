@@ -18,13 +18,13 @@
                 _ = n("117933"),
                 h = n("368874"),
                 C = n("648750"),
-                I = n("710514"),
-                T = n("339853"),
+                T = n("710514"),
+                I = n("339853"),
                 S = n("775032"),
                 N = n("25132"),
                 A = n("453479"),
-                m = n("975344"),
-                p = n("57"),
+                p = n("975344"),
+                m = n("57"),
                 g = n("863972"),
                 R = n("884706"),
                 O = n("424373"),
@@ -60,13 +60,13 @@
                     displayType: t
                 } = e, n = s.useCallback(() => {
                     (0, o.showToast)((0, o.createToast)(M.default.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE))
-                }, []), i = (0, S.default)(), r = (0, I.useActionsForDisplayType)(t), u = (0, I.useActionTotalsForDisplayType)(t), {
+                }, []), i = (0, S.default)(), r = (0, T.useActionsForDisplayType)(t), u = (0, T.useActionTotalsForDisplayType)(t), {
                     loadMore: d,
                     isMoreLoading: c
                 } = (0, C.useFamilyCenterActions)({
                     onError: n
-                }), f = L.ACTION_TO_TEXT.get(t), [h, T] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), N = s.useCallback(() => {
-                    T(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
+                }), f = L.ACTION_TO_TEXT.get(t), [h, I] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), N = s.useCallback(() => {
+                    I(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
                 }, [t, d]);
                 l(f, "No text for action type");
                 let A = f.sectionHeader(u),
@@ -74,11 +74,11 @@
                         let {
                             row: t
                         } = e, n = r[t];
-                        return (0, _.isUserAction)(n) ? (0, a.jsx)(p.default, {
+                        return (0, _.isUserAction)(n) ? (0, a.jsx)(m.default, {
                             userId: n.entity_id,
                             timestamp: E.default.extractTimestamp(n.event_id),
                             timestampFormatter: f.timestampFormatter
-                        }, n.event_id) : (0, _.isGuildAction)(n) ? (0, a.jsx)(m.default, {
+                        }, n.event_id) : (0, _.isGuildAction)(n) ? (0, a.jsx)(p.default, {
                             guildId: n.entity_id
                         }, n.event_id) : void 0
                     }, [r, f.timestampFormatter]),
@@ -149,7 +149,7 @@
                         userId: t,
                         subText: n,
                         avatarSize: s = o.AvatarSizes.SIZE_40
-                    } = e, i = (0, T.useTeenUserForId)(t);
+                    } = e, i = (0, I.useTeenUserForId)(t);
                     return void 0 === i ? null : (0, a.jsxs)("div", {
                         className: P.accountRow,
                         children: [(0, a.jsx)(g.FamilyCenterAvatar, {
@@ -210,7 +210,7 @@
             var j = e => {
                 let {
                     user: t
-                } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, I.useHasActionForAnyDisplayType)(), i = (0, _.getEmptyActivityFormatter)(), l = (0, N.useActivityWindowTimeStamp)(i);
+                } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, T.useHasActionForAnyDisplayType)(), i = (0, _.getEmptyActivityFormatter)(), l = (0, N.useActivityWindowTimeStamp)(i);
                 return (0, a.jsxs)("div", {
                     className: P.container,
                     children: [(0, a.jsxs)("div", {

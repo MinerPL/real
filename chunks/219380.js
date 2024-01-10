@@ -18,12 +18,12 @@
                 _ = n("376897"),
                 h = n("683805"),
                 C = n("825734"),
-                I = n("766383"),
-                T = n("696287"),
+                T = n("766383"),
+                I = n("696287"),
                 S = n("778117"),
                 N = n("195180"),
                 A = n("357147");
-            let m = {
+            let p = {
                     ...i.crossPlatformCommands,
                     ...d.default,
                     ...c.default,
@@ -31,21 +31,21 @@
                     ..._.default,
                     ...h.default,
                     ...C.default,
-                    ...T.default,
+                    ...I.default,
                     ...N.default,
                     ...S.default,
                     ...E.default,
-                    ...I.default
+                    ...T.default
                 },
-                p = {
+                m = {
                     ...l.default,
                     ...o.overlayEventHandlers,
                     ...u.voiceSettingsEventHandlers
                 };
             var g = {
                 server: r.default,
-                commands: m,
-                events: p,
+                commands: p,
+                events: m,
                 stores: [a.default],
                 transports: [A.default],
                 registerTransportsForEmbeddedPlatform: function() {

@@ -18,26 +18,26 @@
                 _ = n("599110"),
                 h = n("803524"),
                 C = n("7643"),
-                I = n("785770"),
-                T = n("521702"),
+                T = n("785770"),
+                I = n("521702"),
                 S = n("452229"),
                 N = n("196986"),
                 A = n("92918"),
-                m = n("973199"),
-                p = n("49111"),
+                p = n("973199"),
+                m = n("49111"),
                 g = n("782340"),
                 R = n("127671");
 
             function O() {
                 let e = s.useRef(null),
-                    t = (0, T.default)(),
+                    t = (0, I.default)(),
                     n = (0, S.useSpamMessageRequestCount)(),
                     i = (0, h.useListHasSingleSpamMessageRequest)(),
                     O = (0, d.useIsRejectAllMessageRequestsEnabled)(),
                     L = (0, c.default)("message-requests-spam-list"),
                     {
                         channelId: v
-                    } = (0, I.useMessageRequestSidebarState)(),
+                    } = (0, T.useMessageRequestSidebarState)(),
                     M = s.useCallback(() => {
                         (0, u.showToast)((0, u.createToast)(g.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
                     }, []),
@@ -51,7 +51,7 @@
                         P(e)
                     }, [t, P]);
                 s.useEffect(() => {
-                    _.default.track(p.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
+                    _.default.track(m.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
                         num_spam_message_requests: n
                     }), E.default.increment({
                         name: o.MetricEvents.SPAM_MESSAGE_REQUEST_VIEW
@@ -96,7 +96,7 @@
                         }) : null]
                     }, "message-requests-spam-title"), [n, D, O]);
                 return 0 === t.length ? (0, a.jsx)(N.default, {
-                    section: m.MessageRequestSections.SPAM
+                    section: p.MessageRequestSections.SPAM
                 }) : (0, a.jsx)(r.ListNavigatorProvider, {
                     navigator: L,
                     children: (0, a.jsx)(r.ListNavigatorContainer, {
@@ -116,8 +116,8 @@
                                 },
                                 paddingTop: 24,
                                 paddingBottom: 24,
-                                sectionHeight: m.LIST_SECTION_HEIGHT,
-                                rowHeight: m.LIST_ROW_HEIGHT,
+                                sectionHeight: p.LIST_SECTION_HEIGHT,
+                                rowHeight: p.LIST_ROW_HEIGHT,
                                 renderSection: x,
                                 renderRow: y,
                                 sections: [t.length],

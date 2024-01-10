@@ -18,16 +18,16 @@
                 _ = n("925877"),
                 h = n("701909"),
                 C = n("962541"),
-                I = n("762489"),
-                T = n("329858"),
+                T = n("762489"),
+                I = n("329858"),
                 S = n("49111"),
                 N = n("782340"),
                 A = n("234837");
-            let m = {
+            let p = {
                 HOST: 5,
                 LISTENER: 4
             };
-            class p extends s.PureComponent {
+            class m extends s.PureComponent {
                 isHost() {
                     let {
                         currentUser: e,
@@ -37,11 +37,11 @@
                 }
                 renderTitle() {
                     return (0, a.jsxs)("div", {
-                        children: [(0, a.jsx)(T.default, {
+                        children: [(0, a.jsx)(I.default, {
                             children: this.isHost() ? N.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
                                 count: this.props.party.length
                             }) : N.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
-                        }), (0, a.jsx)(I.default, {
+                        }), (0, a.jsx)(T.default, {
                             children: N.default.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER
                         })]
                     })
@@ -73,7 +73,7 @@
                             className: A.party,
                             children: (0, a.jsx)(E.default, {
                                 users: this.props.party,
-                                max: this.isHost() ? m.HOST : m.LISTENER,
+                                max: this.isHost() ? p.HOST : p.LISTENER,
                                 renderUser: this.renderPartyMember,
                                 renderMoreUsers: this.renderPartyMemberOverflow
                             })
@@ -137,4 +137,4 @@
                     }
                 }
             }
-            var g = p
+            var g = m

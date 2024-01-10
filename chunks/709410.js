@@ -4,7 +4,7 @@
                     return a
                 },
                 default: function() {
-                    return I
+                    return T
                 }
             }), n("70102"), n("222007");
             var a, s = n("37983"),
@@ -161,7 +161,7 @@
                     }
                 }
             }
-            var I = r.default.connectStores([u.default], () => ({
+            var T = r.default.connectStores([u.default], () => ({
                 theme: u.default.theme
             }), {
                 forwardRef: !0

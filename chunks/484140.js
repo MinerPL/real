@@ -18,13 +18,13 @@
                 _ = n("271938"),
                 h = n("546463"),
                 C = n("18494"),
-                I = n("697218"),
-                T = n("953109"),
+                T = n("697218"),
+                I = n("953109"),
                 S = n("277174"),
                 N = n("368121"),
                 A = n("811305"),
-                m = n("158998"),
-                p = n("882278"),
+                p = n("158998"),
+                m = n("882278"),
                 g = n("754493"),
                 R = n("813531"),
                 O = n("49111"),
@@ -61,10 +61,10 @@
                     applicationId: N,
                     channelId: A,
                     streamKey: D
-                } = n, [y, x] = s.useState(!1), b = (0, i.useStateFromStores)([I.default], () => I.default.getUser(l)), U = (0, i.useStateFromStores)([h.default], () => {
+                } = n, [y, x] = s.useState(!1), b = (0, i.useStateFromStores)([T.default], () => T.default.getUser(l)), U = (0, i.useStateFromStores)([h.default], () => {
                     var e, t;
                     return null !== (t = null === (e = h.default.getDetectableGame(N)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : ""
-                }), [G] = (0, c.default)([U]), j = null !== (t = m.default.getGlobalName(b)) && void 0 !== t ? t : m.default.getUserTag(b), k = (0, R.default)(), w = (0, i.useStateFromStores)([f.default], () => f.default.getPreviewURL(null, A, l)), F = (0, i.useStateFromStores)([C.default], () => C.default.getVoiceChannelId()), B = (0, g.default)(), H = (0, p.default)(A);
+                }), [G] = (0, c.default)([U]), j = null !== (t = p.default.getGlobalName(b)) && void 0 !== t ? t : p.default.getUserTag(b), k = (0, R.default)(), w = (0, i.useStateFromStores)([f.default], () => f.default.getPreviewURL(null, A, l)), F = (0, i.useStateFromStores)([C.default], () => C.default.getVoiceChannelId()), B = (0, g.default)(), H = (0, m.default)(A);
                 if (s.useEffect(() => {
                         y && F === A && x(!1)
                     }, [F, y, A]), null == b || null == j) return null;
@@ -134,9 +134,9 @@
                             ownerId: l,
                             channelId: A
                         }
-                    }) : (0, a.jsx)(T.default, {
+                    }) : (0, a.jsx)(I.default, {
                         game: G,
-                        size: T.default.Sizes.LARGE,
+                        size: I.default.Sizes.LARGE,
                         className: M.gameIcon
                     })]
                 })

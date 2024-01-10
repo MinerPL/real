@@ -21,23 +21,23 @@
                 _ = n("794818"),
                 h = n("961098"),
                 C = n("338638"),
-                I = n("719369"),
-                T = n("447621"),
+                T = n("719369"),
+                I = n("447621"),
                 S = n("782340"),
                 N = n("492898");
             let A = 12,
-                m = () => {
+                p = () => {
                     let e = (0, c.getHistory)(),
                         t = e.location.search,
                         n = null != t && t.length > 0 && t.startsWith("?");
                     return n ? r.parse(t) : {}
                 },
-                p = e => {
+                m = e => {
                     let {
                         categoryId: t,
                         categoryName: n,
                         onClick: s
-                    } = e, i = t === T.DISCOVERY_ALL_CATEGORIES_ID, l = i ? S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
+                    } = e, i = t === I.DISCOVERY_ALL_CATEGORIES_ID, l = i ? S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
                         categoryName: n
                     }), r = i ? S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({
                         onClick: s
@@ -91,9 +91,9 @@
                     total: k
                 } = n, [w, F] = s.useState(!1), {
                     tag: B
-                } = m(), [H, V] = s.useState(B), Y = (0, o.useStateFromStores)([E.default], () => E.default.hasSearchError()), W = (e, t, n) => {
+                } = p(), [H, V] = s.useState(B), Y = (0, o.useStateFromStores)([E.default], () => E.default.hasSearchError()), W = (e, t, n) => {
                     d.doAlgoliaSearch(i, {
-                        categoryId: n ? T.DISCOVERY_ALL_CATEGORIES_ID : M,
+                        categoryId: n ? I.DISCOVERY_ALL_CATEGORIES_ID : M,
                         preferredLocale: r.code,
                         offset: e,
                         length: t,
@@ -110,10 +110,10 @@
                     let {
                         offset: e,
                         tag: t
-                    } = m(), n = null != e ? Math.floor(parseInt(e, 10) / A) + 1 : 1;
+                    } = p(), n = null != e ? Math.floor(parseInt(e, 10) / A) + 1 : 1;
                     V(!!t), 1 === n && F(!0)
                 }, [i]);
-                let z = M === T.DISCOVERY_ALL_CATEGORIES_ID ? S.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
+                let z = M === I.DISCOVERY_ALL_CATEGORIES_ID ? S.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
                     count: null != k ? k.toLocaleString() : "0",
                     query: i
                 }) : S.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_CATEGORY_HEADER.format({
@@ -150,11 +150,11 @@
                         isSearchPage: !0,
                         currentCategoryId: M,
                         isTagSearch: H
-                    }), Y ? (0, a.jsx)(g, {}) : k <= 0 ? (0, a.jsx)(p, {
+                    }), Y ? (0, a.jsx)(g, {}) : k <= 0 ? (0, a.jsx)(m, {
                         categoryId: M,
                         categoryName: P,
                         onClick: () => {
-                            d.selectCategory(T.DISCOVERY_ALL_CATEGORIES_ID), W(0, A, !0)
+                            d.selectCategory(I.DISCOVERY_ALL_CATEGORIES_ID), W(0, A, !0)
                         }
                     }) : (0, a.jsx)("div", {
                         className: N.results,
@@ -172,7 +172,7 @@
                                 } = e;
                                 return (0, a.jsxs)("section", {
                                     "aria-labelledby": U,
-                                    children: [(0, a.jsx)(I.default, {
+                                    children: [(0, a.jsx)(T.default, {
                                         guilds: G,
                                         loading: j,
                                         loadingPlaceholderCount: A,

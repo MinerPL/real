@@ -48,7 +48,7 @@
                 } = e, N = (0, p.default)(), A = (0, s.useStateFromStores)([h.default], () => {
                     var e, t;
                     return null === (e = h.default.getSessionById(null !== (t = null == N ? void 0 : N.sessionId) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.clientInfo.os
-                }), M = (0, s.useStateFromStores)([f.default], () => f.default.hasLayers()), [R, j] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.getMode(t.id), o.default.getLayout(t.id)]), L = (0, r.useModalsStore)(r.hasAnyModalOpenSelector), O = (0, m.default)(), y = O.filter(e => e.twoWayLink), [b, P] = l.useState(!1);
+                }), M = (0, s.useStateFromStores)([f.default], () => f.default.hasLayers()), [R, j] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.getMode(t.id), o.default.getLayout(t.id)]), L = (0, r.useModalsStore)(r.hasAnyModalOpenSelector), O = (0, m.default)(), y = O.filter(e => e.twoWayLink), [P, b] = l.useState(!1);
                 if (null == N && 0 === O.length || t.isBroadcastChannel()) return null;
                 let D = _.ChannelModes.VOICE !== R && [_.ChannelLayouts.NO_CHAT, _.ChannelLayouts.FULL_SCREEN].includes(j) ? "top" : "bottom",
                     U = [];
@@ -66,8 +66,8 @@
                                 position: D,
                                 spacing: o ? 16 : void 0,
                                 positionKey: "".concat(R, ":").concat(j),
-                                onRequestClose: () => P(!1),
-                                shouldShow: (o || b) && !M && !L,
+                                onRequestClose: () => b(!1),
+                                shouldShow: (o || P) && !M && !L,
                                 renderPopout: e => {
                                     let {
                                         closePopout: n
@@ -77,7 +77,7 @@
                                             popoutPosition: D,
                                             onDismiss: () => s(I.ContentDismissActionType.UNKNOWN),
                                             onAccept: () => {
-                                                s(I.ContentDismissActionType.UNKNOWN), P(!0)
+                                                s(I.ContentDismissActionType.UNKNOWN), b(!0)
                                             },
                                             gameConsoleAccounts: y
                                         }) : (0, a.jsx)(x, {
@@ -93,7 +93,7 @@
                                     return (0, a.jsx)(c.default, {
                                         ...e,
                                         ...g,
-                                        onClick: () => P(!0),
+                                        onClick: () => b(!0),
                                         label: null != (t = A) ? t === S.GameConsoleTypes.XBOX ? T.default.Messages.XBOX_REMOTE_CONNECTED_RAW : T.default.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW : T.default.Messages.CONSOLE_TRANSFER,
                                         iconComponent: (0, C.default)(A)
                                     })

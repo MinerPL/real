@@ -18,13 +18,13 @@
                 _ = n("913144"),
                 h = n("340626"),
                 C = n("444949"),
-                I = n("139245"),
-                T = n("69927"),
+                T = n("139245"),
+                I = n("69927"),
                 S = n("444497"),
                 N = n("349682"),
                 A = n("393414"),
-                m = n("970366"),
-                p = n("915639"),
+                p = n("970366"),
+                m = n("915639"),
                 g = n("161778"),
                 R = n("350522"),
                 O = n("926787"),
@@ -60,7 +60,7 @@
                         mostRecentQuery: o
                     } = this.props;
                     if ((0, C.fetchActivityStatistics)(), (0, x.maybeFetchGuildDiscoveryCategories)(), null == O.default.getSearchIndex() && (0, h.createAlgoliaIndex)(), _.default.wait(() => {
-                            (0, I.markView)(F.ViewHistoryKeys.SERVER_DISCOVERY_BADGE)
+                            (0, T.markView)(F.ViewHistoryKeys.SERVER_DISCOVERY_BADGE)
                         }), !a && 0 === o.length && P.trackDiscoveryViewed({
                             loadId: this.loadId,
                             gamesYouPlayGuilds: s.guilds,
@@ -88,7 +88,7 @@
                         c = null !== (t = null === (e = d.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
                     c > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({
                         to: c
-                    })), (0, m.trackAppUIViewed)("guild_discovery")
+                    })), (0, p.trackAppUIViewed)("guild_discovery")
                 }
                 componentDidUpdate(e) {
                     let {
@@ -290,7 +290,7 @@
                     });
                     return (0, a.jsxs)("div", {
                         className: H.pageWrapper,
-                        children: [(0, a.jsx)(T.AppPageTitle, {
+                        children: [(0, a.jsx)(I.AppPageTitle, {
                             subsection: d ? i : void 0,
                             location: h
                         }), (0, a.jsx)("div", {
@@ -433,10 +433,10 @@
                     }
                 }
             }
-            let K = E.default.connectStores([g.default, p.default, v.default, R.default, O.default, b.default, L.default], () => {
+            let K = E.default.connectStores([g.default, m.default, v.default, R.default, O.default, b.default, L.default], () => {
                 var e;
                 let t = w.LANGUAGE_OPTIONS,
-                    n = p.default.locale,
+                    n = m.default.locale,
                     a = null !== (e = o.find(t, {
                         code: n
                     })) && void 0 !== e ? e : t[0],

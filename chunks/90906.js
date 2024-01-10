@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return m
                 }
             }), n("222007"), n("70102");
             var a = n("446825"),
@@ -28,11 +28,11 @@
                 null != e.setHandshakeComplete ? e.setHandshakeComplete(t) : e._didHandshake = t
             }
 
-            function I(e) {
+            function T(e) {
                 return null != e.getHandshakeComplete ? e.getHandshakeComplete() : e._didHandshake
             }
 
-            function T(e) {
+            function I(e) {
                 return new Promise((t, n) => {
                     "string" == typeof e && (e = f.net.createConnection(e)), e.pause(), e.on("readable", () => {
                         try {
@@ -88,11 +88,11 @@
                         e.emit("pong", l);
                         break;
                     case h.HANDSHAKE:
-                        if (I(e)) throw Error("already did handshake");
+                        if (T(e)) throw Error("already did handshake");
                         C(e, !0), e.emit("handshake", l);
                         break;
                     case h.FRAME:
-                        if (!I(e)) throw Error("did not handshake");
+                        if (!T(e)) throw Error("did not handshake");
                         e.emit("request", l);
                         break;
                     case h.CLOSE:
@@ -114,7 +114,7 @@
                     super("ipc", t, n), this.socket = e
                 }
             }
-            class m extends s.EventEmitter {
+            class p extends s.EventEmitter {
                 handleConnection(e) {
                     C(e, !1), e.pause(), e.on("readable", () => {
                         try {
@@ -156,7 +156,7 @@
                 constructor() {
                     super();
                     let e = f.net.createServer(e => this.handleConnection(e));
-                    e.on("error", e => _.error("Error: ".concat(e.message))), f.getAvailableSocket(T).then(t => {
+                    e.on("error", e => _.error("Error: ".concat(e.message))), f.getAvailableSocket(I).then(t => {
                         e.listen(t, () => {
                             let t = "function" == typeof e.listening ? e.listening() : e.listening;
                             t && _.info("Starting on ".concat(e.address()))
@@ -164,4 +164,4 @@
                     })
                 }
             }
-            var p = new m
+            var m = new p

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return T
                 }
             });
             var a = n("37983"),
@@ -19,12 +19,12 @@
                 h = n("782340"),
                 C = n("858401");
 
-            function I(e) {
+            function T(e) {
                 let {
                     user: t,
                     nickname: n,
-                    status: I,
-                    isFocused: T
+                    status: T,
+                    isFocused: I
                 } = e, S = s.useContext(d.AnalyticsContext), N = e => {
                     null == e || e.stopPropagation(), i.default.addRelationship({
                         userId: t.id,
@@ -37,9 +37,9 @@
                     })
                 }, A = e => {
                     null == e || e.stopPropagation(), l.default.ignore(t.id)
-                }, m = I === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : I;
+                }, p = T === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : T;
                 return (0, a.jsx)(E.default, {
-                    isFocused: T,
+                    isFocused: I,
                     user: t,
                     onClick: () => (0, r.openUserProfileModal)({
                         userId: t.id,
@@ -66,7 +66,7 @@
                             children: [(0, a.jsx)(f.default, {
                                 user: t,
                                 hovered: e,
-                                status: m,
+                                status: p,
                                 subText: n,
                                 className: C.userInfo
                             }), (0, a.jsx)("div", {

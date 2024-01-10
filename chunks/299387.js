@@ -18,8 +18,8 @@
                 _ = n("768815"),
                 h = n("176661"),
                 C = n("922832"),
-                I = n("782340"),
-                T = n("850832");
+                T = n("782340"),
+                I = n("850832");
 
             function S(e) {
                 let {
@@ -35,7 +35,7 @@
                             otherUser: t
                         })
                     })
-                }, [N, t]), m = s.useCallback(() => {
+                }, [N, t]), p = s.useCallback(() => {
                     l(void 0 !== N, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
                         let {
                             default: e
@@ -46,7 +46,7 @@
                             otherUser: t
                         })
                     })
-                }, [N, t]), p = s.useCallback(() => {
+                }, [N, t]), m = s.useCallback(() => {
                     l(void 0 !== N, "User must be logged in to decline a link request"), (0, o.openModalLazy)(async () => {
                         let {
                             default: e
@@ -59,31 +59,31 @@
                     })
                 }, [N, t]);
                 return (0, a.jsxs)("div", {
-                    className: T.container,
+                    className: I.container,
                     children: [(0, a.jsx)("div", {
-                        className: T.details,
+                        className: I.details,
                         children: (0, a.jsx)(h.default, {
                             otherUser: t,
                             status: C.UserLinkStatus.PENDING
                         })
                     }), (0, a.jsx)("div", {
-                        className: T.actions,
+                        className: I.actions,
                         children: i ? (0, a.jsx)(_.default, {
                             icon: c.default,
-                            className: T.actionDeny,
-                            tooltip: I.default.Messages.FAMILY_CENTER_LINK_ACTION_CANCEL,
-                            onClick: p
+                            className: I.actionDeny,
+                            tooltip: T.default.Messages.FAMILY_CENTER_LINK_ACTION_CANCEL,
+                            onClick: m
                         }) : (0, a.jsxs)(a.Fragment, {
                             children: [S ? null : (0, a.jsx)(_.default, {
                                 icon: d.default,
-                                className: T.actionAccept,
-                                tooltip: I.default.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
+                                className: I.actionAccept,
+                                tooltip: T.default.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
                                 onClick: A
                             }), (0, a.jsx)(_.default, {
                                 icon: c.default,
-                                className: T.actionDeny,
-                                tooltip: I.default.Messages.FAMILY_CENTER_LINK_ACTION_DECLINE,
-                                onClick: m
+                                className: I.actionDeny,
+                                tooltip: T.default.Messages.FAMILY_CENTER_LINK_ACTION_DECLINE,
+                                onClick: p
                             })]
                         })
                     })]

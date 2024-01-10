@@ -25,15 +25,15 @@
                 A = n("339670"),
                 T = n("21763"),
                 M = n("719926"),
-                N = n("957255"),
-                I = n("660478"),
+                I = n("957255"),
+                N = n("660478"),
                 L = n("18494"),
                 v = n("697218"),
                 R = n("410889"),
                 x = n("888400"),
                 y = n("299039"),
-                D = n("154864"),
-                O = n("383667"),
+                O = n("154864"),
+                D = n("383667"),
                 j = n("459776"),
                 b = n("366757"),
                 P = n("699473"),
@@ -150,8 +150,8 @@
                             }, e.key)
                         }
                         if (null != et && et > 1e3 * e.content.timestamp.unix()) return;
-                        let l = N.default.can(W.Permissions.CREATE_INSTANT_INVITE, u);
-                        if ((0, O.default)(e.content, l)) return;
+                        let l = I.default.can(W.Permissions.CREATE_INSTANT_INVITE, u);
+                        if ((0, D.default)(e.content, l)) return;
                         e.type === W.ChannelStreamTypes.MESSAGE && null == ef && (ef = e);
                         let i = e.groupId === (null == ef ? void 0 : ef.groupId) ? ef.content.id : e.groupId,
                             r = e.type === W.ChannelStreamTypes.THREAD_STARTER_MESSAGE ? U.ThreadStarterChatMessage : U.default;
@@ -161,7 +161,7 @@
                             message: e.content,
                             groupId: i,
                             flashKey: e.flashKey,
-                            id: (0, D.getMessageDOMId)(u.id, e.content.id),
+                            id: (0, O.getMessageDOMId)(u.id, e.content.id),
                             isLastItem: t >= J.length - 1,
                             renderContentOnly: ec
                         }, e.content.id)
@@ -204,12 +204,12 @@
                         channel: u
                     })), P > 0 && q && ea()) {
                     let e, t;
-                    let n = I.default.getOldestUnreadTimestamp(u.id),
+                    let n = N.default.getOldestUnreadTimestamp(u.id),
                         l = 0 !== n ? n : y.default.extractTimestamp(u.id),
                         r = (0, x.isSameDay)(i(), i(new Date(l)));
-                    if (I.default.isEstimated(u.id) ? (e = r ? Z.default.Messages.NEW_MESSAGES_ESTIMATED : Z.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = Z.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = r ? Z.default.Messages.NEW_MESSAGES : Z.default.Messages.NEW_MESSAGES_WITH_DATE, t = Z.default.Messages.NEW_MESSAGES_SUMMARIES), er && (0, d.channelEligibleForSummaries)(u)) {
-                        let n = I.default.ackMessageId(u.id),
-                            i = (0, A.getUnreadTopicsCount)(u.id, I.default.getOldestUnreadMessageId(u.id));
+                    if (N.default.isEstimated(u.id) ? (e = r ? Z.default.Messages.NEW_MESSAGES_ESTIMATED : Z.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = Z.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = r ? Z.default.Messages.NEW_MESSAGES : Z.default.Messages.NEW_MESSAGES_WITH_DATE, t = Z.default.Messages.NEW_MESSAGES_SUMMARIES), er && (0, d.channelEligibleForSummaries)(u)) {
+                        let n = N.default.ackMessageId(u.id),
+                            i = (0, A.getUnreadTopicsCount)(u.id, N.default.getOldestUnreadMessageId(u.id));
                         if ((0, f.trackWithMetadata)(W.AnalyticEvents.SUMMARIES_UNREAD_BAR_VIEWED, {
                                 num_unread_summaries: i,
                                 num_unread_messages: P,

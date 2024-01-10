@@ -18,13 +18,13 @@
                 _ = n("233069"),
                 h = n("373469"),
                 C = n("271938"),
-                I = n("42203"),
-                T = n("305961"),
+                T = n("42203"),
+                I = n("305961"),
                 S = n("42887"),
                 N = n("385649"),
                 A = n("945956"),
-                m = n("18494"),
-                p = n("280168"),
+                p = n("18494"),
+                m = n("280168"),
                 g = n("800762"),
                 R = n("316133"),
                 O = n("449008"),
@@ -44,8 +44,8 @@
             }
 
             function P() {
-                return M([S.default, m.default], () => ({
-                    inVoiceChannel: null != m.default.getVoiceChannelId(),
+                return M([S.default, p.default], () => ({
+                    inVoiceChannel: null != p.default.getVoiceChannelId(),
                     selfMute: S.default.isSelfMute(),
                     selfDeaf: S.default.isSelfDeaf(),
                     audioPermissionReady: S.default.isNativeAudioPermissionReady()
@@ -61,8 +61,8 @@
             }
 
             function D() {
-                return M([I.default, A.default, m.default, d.default], () => {
-                    let e = I.default.getChannel(m.default.getVoiceChannelId()),
+                return M([T.default, A.default, p.default, d.default], () => {
+                    let e = T.default.getChannel(p.default.getVoiceChannelId()),
                         t = null == e ? void 0 : e.type,
                         n = null == e ? void 0 : e.getGuildId(),
                         a = A.default.getWasEverRtcConnected(),
@@ -95,7 +95,7 @@
             }
 
             function y() {
-                return M([p.default], () => p.default.isCurrentUserSpeaking(), (e, t) => {
+                return M([m.default], () => m.default.isCurrentUserSpeaking(), (e, t) => {
                     if (e !== t) {
                         let e = S.default.isSelfMute(),
                             n = S.default.getMode();
@@ -121,8 +121,8 @@
             }
 
             function U() {
-                return M([m.default, g.default], () => {
-                    let e = m.default.getVoiceChannelId();
+                return M([p.default, g.default], () => {
+                    let e = p.default.getVoiceChannelId();
                     if (null == e) return f.RequestToSpeakStates.NONE;
                     let t = g.default.getVoiceStateForChannel(e);
                     return (0, f.getAudienceRequestToSpeakState)(t)
@@ -132,16 +132,16 @@
             }
 
             function G() {
-                return M([m.default, h.default, C.default, g.default, I.default], () => {
+                return M([p.default, h.default, C.default, g.default, T.default], () => {
                     let e, t;
-                    let n = m.default.getVoiceChannelId(),
+                    let n = p.default.getVoiceChannelId(),
                         a = C.default.getId();
                     let s = [],
                         i = null,
                         l = 0,
                         r = h.default.getAllActiveStreams();
                     if (null != n) {
-                        let a = I.default.getChannel(n);
+                        let a = T.default.getChannel(n);
                         null != a && (e = a.type, t = R.default.countVoiceStatesForChannel(a.id) - (g.default.isInChannel(a.id) ? 1 : 0), s = h.default.getAllApplicationStreamsForChannel(a.id).map(e => e.ownerId))
                     }
                     let o = null;
@@ -166,11 +166,11 @@
                         currentUserId: o
                     } = t;
                     if (e.voiceChannelId !== a || null == a || function(e) {
-                            let t = I.default.getChannel(e);
+                            let t = T.default.getChannel(e);
                             if (null == t) return !1;
                             let n = t.getGuildId();
                             if (null == n) return !1;
-                            let a = T.default.getGuild(n);
+                            let a = I.default.getGuild(n);
                             return null != a && a.afkChannelId === t.id
                         }(a) || null != n && _.SILENT_JOIN_LEAVE_CHANNEL_TYPES.has(n)) return;
                     let u = null != l && e.singleActiveStreamKey === l,
@@ -187,8 +187,8 @@
             }
 
             function j() {
-                return M([m.default, u.default, C.default], () => {
-                    let e = m.default.getVoiceChannelId(),
+                return M([p.default, u.default, C.default], () => {
+                    let e = p.default.getVoiceChannelId(),
                         t = C.default.getId(),
                         n = (0, O.isNotNullish)(e) ? u.default.getEmbeddedActivitiesForChannel(e) : u.NO_ACTIVITIES;
                     return {
@@ -220,10 +220,10 @@
             }
 
             function k() {
-                return M([E.default, m.default], () => ({
+                return M([E.default, p.default], () => ({
                     hangStatus: E.default.getCurrentHangStatus(),
                     customHangStatus: E.default.getCustomHangStatus(),
-                    inVoice: null != m.default.getVoiceChannelId()
+                    inVoice: null != p.default.getVoiceChannelId()
                 }), (e, t) => {
                     var n, a;
                     let {

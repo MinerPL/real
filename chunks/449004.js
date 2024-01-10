@@ -19,7 +19,7 @@
                 h = new Set,
                 C = new Set;
 
-            function I(e, t) {
+            function T(e, t) {
                 var n;
                 return {
                     key: e.suggested_user.id,
@@ -29,7 +29,7 @@
                     isUnseen: !t && !e.is_viewed
                 }
             }(0, a.debounce)(e => d.default.viewSuggestions(e), 15e3);
-            class T extends i.default.Store {
+            class I extends i.default.Store {
                 initialize() {
                     this.waitFor(u.default)
                 }
@@ -46,13 +46,13 @@
                     return c[e]
                 }
             }
-            T.displayName = "FriendSuggestionStore";
-            var S = new T(l.default, {
+            I.displayName = "FriendSuggestionStore";
+            var S = new I(l.default, {
                 CONNECTION_OPEN: function(e) {
                     c = {}, (E = e.friendSuggestionCount) > 0 && (_ = !0, f || !_ || (f = !0, _ = !1, d.default.fetch()))
                 },
                 FRIEND_SUGGESTION_CREATE: function(e) {
-                    let t = I(e.suggestion);
+                    let t = T(e.suggestion);
                     if (null != c[t.key]) return !1;
                     E++, c = {
                         ...c,
@@ -66,7 +66,7 @@
                     f = !1, c = function(e) {
                         let t = e.reduce((e, t) => e + (t.is_viewed ? 0 : 1), 0) === e.length,
                             n = !(0, r.isInFriendSuggestionSeenStateExperiment)() || t;
-                        return s.chain(e).map(e => I(e, n)).keyBy(e => e.key).value()
+                        return s.chain(e).map(e => T(e, n)).keyBy(e => e.key).value()
                     }(e.suggestions), E = s.keys(c).length
                 },
                 LOAD_FRIEND_SUGGESTIONS_FAILURE: function() {

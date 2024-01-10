@@ -18,17 +18,17 @@
                 _ = n("269936"),
                 h = n("161778"),
                 C = n("778588"),
-                I = n("708169"),
-                T = n("659500"),
+                T = n("708169"),
+                I = n("659500"),
                 S = n("439932"),
                 N = n("49111"),
                 A = n("350828");
-            let m = (0, _.makeLazy)({
+            let p = (0, _.makeLazy)({
                     createPromise: () => n.el("420610").then(n.bind(n, "420610")),
                     webpackId: "420610",
                     name: "UserSettings"
                 }),
-                p = (0, _.makeLazy)({
+                m = (0, _.makeLazy)({
                     createPromise: () => n.el("995865").then(n.bind(n, "995865")),
                     webpackId: "995865",
                     name: "ChannelSettings"
@@ -44,8 +44,8 @@
                     name: "GuildSettings"
                 }),
                 O = {
-                    [N.Layers.USER_SETTINGS]: () => (0, a.jsx)(m, {}),
-                    [N.Layers.CHANNEL_SETTINGS]: () => (0, a.jsx)(p, {}),
+                    [N.Layers.USER_SETTINGS]: () => (0, a.jsx)(p, {}),
+                    [N.Layers.CHANNEL_SETTINGS]: () => (0, a.jsx)(m, {}),
                     [N.Layers.GUILD_SETTINGS]: () => (0, a.jsx)(R, {}),
                     [N.Layers.COLLECTIBLES_SHOP]: () => (0, a.jsx)(g, {})
                 },
@@ -111,14 +111,14 @@
                         opacity: t,
                         scale: n
                     } = this.state;
-                    T.ComponentDispatch.dispatch(N.ComponentActions.LAYER_POP_START), r.default.parallel([r.default.spring(t, {
+                    I.ComponentDispatch.dispatch(N.ComponentActions.LAYER_POP_START), r.default.parallel([r.default.spring(t, {
                         toValue: 0,
                         ...M
                     }), r.default.spring(n, {
                         toValue: 1.1,
                         ...M
                     })]).start(() => {
-                        e(), T.ComponentDispatch.dispatch(N.ComponentActions.LAYER_POP_COMPLETE)
+                        e(), I.ComponentDispatch.dispatch(N.ComponentActions.LAYER_POP_COMPLETE)
                     })
                 }
                 animateUnder() {
@@ -198,10 +198,10 @@
             }, D.contextType = d.AccessibilityPreferencesContext;
             class y extends s.PureComponent {
                 componentDidMount() {
-                    T.ComponentDispatch.subscribe(N.ComponentActions.LAYER_POP_ESCAPE_KEY, c.popLayer)
+                    I.ComponentDispatch.subscribe(N.ComponentActions.LAYER_POP_ESCAPE_KEY, c.popLayer)
                 }
                 componentWillUnmount() {
-                    T.ComponentDispatch.unsubscribe(N.ComponentActions.LAYER_POP_ESCAPE_KEY, c.popLayer)
+                    I.ComponentDispatch.unsubscribe(N.ComponentActions.LAYER_POP_ESCAPE_KEY, c.popLayer)
                 }
                 renderLayers() {
                     let {
@@ -243,7 +243,7 @@
             function x(e) {
                 let t = (0, o.useStateFromStores)([h.default], () => h.default.darkSidebar) ? N.ThemeTypes.DARK : void 0,
                     n = (0, o.useStateFromStores)([C.default], () => C.default.getLayers()),
-                    s = (0, I.useFullScreenLayerStore)(e => e.fullScreenLayers.length > 0);
+                    s = (0, T.useFullScreenLayerStore)(e => e.fullScreenLayers.length > 0);
                 return (0, a.jsx)(y, {
                     ...e,
                     sidebarTheme: t,

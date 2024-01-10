@@ -18,7 +18,7 @@
                 _ = n("492249"),
                 h = n("49111");
             let C = "CachedTokens";
-            async function I(e, t, n) {
+            async function T(e, t, n) {
                 let a, {
                     client_id: i,
                     response_type: l = "code",
@@ -26,23 +26,23 @@
                     code_challenge: o,
                     code_challenge_method: h,
                     state: C,
-                    scope: I,
-                    permissions: T,
+                    scope: T,
+                    permissions: I,
                     guild_id: S,
                     channel_id: N,
                     prompt: A,
-                    disable_guild_select: m
+                    disable_guild_select: p
                 } = e;
                 if (null == i) throw new f.default(_.RPCErrors.OAUTH2_ERROR, "No Client ID provided");
                 if (null != r) throw new f.default(_.RPCErrors.OAUTH2_ERROR, "Redirect URI cannot be used in the RPC OAuth2 Authorization flow");
-                let p = [];
-                "string" == typeof I ? p = I.split(" ").filter(e => e.length > 0) : Array.isArray(I) && (p = I);
+                let m = [];
+                "string" == typeof T ? m = T.split(" ").filter(e => e.length > 0) : Array.isArray(T) && (m = T);
                 let g = c.default.getCurrentUser();
                 if (null == g) throw new f.default(_.RPCErrors.OAUTH2_ERROR, "Client is not logged in");
                 try {
                     a = await (0, u.fetchAuthorization)({
                         clientId: i,
-                        scopes: p,
+                        scopes: m,
                         responseType: l,
                         redirectUri: r,
                         codeChallenge: o,
@@ -59,7 +59,7 @@
                     let e = await (0, u.authorize)({
                         authorize: !0,
                         clientId: i,
-                        scopes: p,
+                        scopes: m,
                         responseType: l,
                         redirectUri: r,
                         codeChallenge: o,
@@ -76,12 +76,12 @@
                 null == n || n(a.application);
                 let R = E.default.NONE;
                 try {
-                    R = s.default.deserialize(null != T ? T : 0)
+                    R = s.default.deserialize(null != I ? I : 0)
                 } catch (e) {}
-                return t(i, a, p, R, l, r, o, h, C, S, N, A, m)
+                return t(i, a, m, R, l, r, o, h, C, S, N, A, p)
             }
 
-            function T(e, t) {
+            function I(e, t) {
                 if (e.authorization.accessToken) throw new f.default(_.RPCErrors.INVALID_COMMAND, "Already authenticated");
                 if (e.authorization.authing) throw new f.default(_.RPCErrors.INVALID_COMMAND, "Already authenticating");
                 return e.authorization.authing = !0, i.default.get({
@@ -130,7 +130,7 @@
                                 let n = s.application.id;
                                 if (null == n) throw new f.default(_.RPCErrors.INVALID_COMMAND, "No application.");
                                 let l = h.OAuth2Scopes.IDENTIFY,
-                                    o = () => I({
+                                    o = () => T({
                                         client_id: n,
                                         scope: l,
                                         response_type: "token"
@@ -150,7 +150,7 @@
                                                 scope: n,
                                                 expires: Date.now() + a
                                             }, r.default.set(C, i)
-                                        }(n, i.access_token, i.scope, i.expires_in), T(s, i.access_token)
+                                        }(n, i.access_token, i.scope, i.expires_in), I(s, i.access_token)
                                     });
                                 return null != (i = function(e, t) {
                                     let n = r.default.get(C);
@@ -159,14 +159,14 @@
                                         if (!(a.scope !== t || a.expires <= Date.now())) return a.accessToken;
                                         delete n[e], r.default.set(C, n)
                                     }
-                                }(n, l)) ? T(s, i).catch(() => (! function(e) {
+                                }(n, l)) ? I(s, i).catch(() => (! function(e) {
                                     var t;
                                     let n = null !== (t = r.default.get(C)) && void 0 !== t ? t : {};
                                     delete n[e], r.default.set(C, n)
                                 }(n), o())) : o()
                             }
                             if (null == i) throw new f.default(_.RPCErrors.INVALID_TOKEN, "No access token provided");
-                            return T(s, i)
+                            return I(s, i)
                         }
                     }),
                     [h.RPCCommands.AUTHORIZE]: {
@@ -185,7 +185,7 @@
                                 let a = n.body;
                                 if (s.application.id !== a.id) throw new f.default(_.RPCErrors.INVALID_CLIENTID, "Application does not match the connection's");
                                 let i = l.scopes || l.scope;
-                                return delete l.scopes, I({
+                                return delete l.scopes, T({
                                     ...l,
                                     scope: i
                                 }, e, t)

@@ -19,8 +19,8 @@
                 _ = n("694787"),
                 h = n("770032"),
                 C = n("927101"),
-                I = n("891964"),
-                T = n("49111"),
+                T = n("891964"),
+                I = n("49111"),
                 S = n("782340"),
                 N = n("962101");
 
@@ -31,13 +31,13 @@
                         multiAccountUsers: n
                     } = (0, C.useMultiAccountUsers)(),
                     A = t => {
-                        t !== (null == e ? void 0 : e.id) && (E.default.track(T.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+                        t !== (null == e ? void 0 : e.id) && (E.default.track(I.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
                             location: {
-                                section: T.AnalyticsSections.PROFILE_POPOUT
+                                section: I.AnalyticsSections.PROFILE_POPOUT
                             }
                         }), _.switchAccount(t))
                     },
-                    m = n.map(n => {
+                    p = n.map(n => {
                         let s = new r.default(n),
                             o = s.id === (null == e ? void 0 : e.id),
                             u = n.tokenStatus === h.MultiAccountTokenStatus.INVALID,
@@ -70,14 +70,14 @@
                                             children: E
                                         })]
                                     }), o && (0, a.jsx)(d.default, {
-                                        color: (0, l.getColor)(r ? T.Color.WHITE_500 : T.Color.BRAND_500),
-                                        backgroundColor: (0, l.getColor)(r ? T.Color.BRAND_500 : T.Color.WHITE_500),
+                                        color: (0, l.getColor)(r ? I.Color.WHITE_500 : I.Color.BRAND_500),
+                                        backgroundColor: (0, l.getColor)(r ? I.Color.BRAND_500 : I.Color.WHITE_500),
                                         width: 18,
                                         height: 18,
                                         className: N.activeIcon
                                     }), u && (0, a.jsx)(c.default, {
-                                        color: (0, l.getColor)(T.Color.RED_400),
-                                        backgroundColor: (0, l.getColor)(T.Color.WHITE_500),
+                                        color: (0, l.getColor)(I.Color.RED_400),
+                                        backgroundColor: (0, l.getColor)(I.Color.WHITE_500),
                                         width: 15,
                                         height: 15,
                                         className: N.activeIcon
@@ -85,15 +85,15 @@
                                 })
                             },
                             action: () => {
-                                u ? (0, I.default)() : A(s.id)
+                                u ? (0, T.default)() : A(s.id)
                             }
                         }, s.id)
                     });
-                return m.push((0, a.jsxs)(a.Fragment, {
+                return p.push((0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(i.MenuSeparator, {}), (0, a.jsx)(i.MenuItem, {
                         id: "manage-accounts",
                         label: S.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNTS,
-                        action: I.default
+                        action: T.default
                     })]
-                })), m
+                })), p
             }

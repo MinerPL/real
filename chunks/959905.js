@@ -4,16 +4,16 @@
                     return s
                 }
             });
-            var r = n("446674"),
-                i = n("160299");
+            var i = n("446674"),
+                r = n("160299");
 
             function s() {
                 let {
                     localizedPricingPromo: e,
                     hasError: t
-                } = (0, r.useStateFromStoresObject)([i.default], () => ({
-                    localizedPricingPromo: i.default.localizedPricingPromo,
-                    hasError: i.default.localizedPricingPromoHasError
+                } = (0, i.useStateFromStoresObject)([r.default], () => ({
+                    localizedPricingPromo: r.default.localizedPricingPromo,
+                    hasError: r.default.localizedPricingPromoHasError
                 }));
                 return t ? null : e
             }

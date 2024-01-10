@@ -32,8 +32,8 @@
                 let {
                     body: h,
                     imgSrc: C,
-                    imgStyle: I
-                } = f(_.drop, _.config.streamLengthRequirement), T = () => {
+                    imgStyle: T
+                } = f(_.drop, _.config.streamLengthRequirement), I = () => {
                     t(d.ContentDismissActionType.DISMISS)
                 };
                 return (0, a.jsxs)("div", {
@@ -41,11 +41,11 @@
                     children: [(0, a.jsx)("img", {
                         src: C,
                         alt: "",
-                        className: I
+                        className: T
                     }), (0, a.jsx)(i.Clickable, {
                         className: E.buttonClose,
                         "aria-label": c.default.Messages.CLOSE,
-                        onClick: T,
+                        onClick: I,
                         children: (0, a.jsx)(r.default, {
                             width: 16,
                             height: 16,
@@ -69,7 +69,7 @@
                     }), (0, a.jsx)(i.Button, {
                         className: E.linkButtonContainer,
                         innerClassName: E.linkButton,
-                        onClick: T,
+                        onClick: I,
                         look: i.Button.Looks.LINK,
                         fullWidth: !0,
                         color: i.Button.Colors.WHITE,

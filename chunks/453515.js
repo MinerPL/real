@@ -13,14 +13,14 @@
                 _ = n("49111");
             let h = "ActivityTrackingStore",
                 C = null !== (a = i.default.get(h)) && void 0 !== a ? a : {},
-                I = {},
-                T = !1;
+                T = {},
+                I = !1;
 
             function S(e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
                 t && N(e, !0);
-                let n = I[e.applicationId];
-                null != n && (n.stop(), delete I[e.applicationId]), delete C[e.applicationId], i.default.set(h, C)
+                let n = T[e.applicationId];
+                null != n && (n.stop(), delete T[e.applicationId]), delete C[e.applicationId], i.default.set(h, C)
             }
 
             function N(e) {
@@ -35,8 +35,8 @@
                     duration: Math.floor(a / 1e3),
                     closed: t
                 }), e.updatedAt = n;
-                let s = I[e.applicationId];
-                null == s && (s = I[e.applicationId] = new l.Interval).start(18e5, () => N(e)), !t && (C[e.applicationId] = e, i.default.set(h, C))
+                let s = T[e.applicationId];
+                null == s && (s = T[e.applicationId] = new l.Interval).start(18e5, () => N(e)), !t && (C[e.applicationId] = e, i.default.set(h, C))
             }
 
             function A() {
@@ -58,11 +58,11 @@
                 for (let t of Object.keys(C)) !n.has(t) && S(C[t], e)
             }
 
-            function m() {
+            function p() {
                 for (let e of Object.keys(C)) S(C[e]);
-                T = !1
+                I = !1
             }
-            class p extends s.default.Store {
+            class m extends s.default.Store {
                 initialize() {
                     this.waitFor(f.default, u.default, E.default), this.syncWith([u.default], A)
                 }
@@ -70,20 +70,20 @@
                     return C
                 }
             }
-            p.displayName = "ActivityTrackingStore", new p(r.default, {
+            m.displayName = "ActivityTrackingStore", new m(r.default, {
                 RUNNING_GAMES_CHANGE: () => A(),
                 CONNECTION_OPEN: function() {
-                    if (T) return !1;
+                    if (I) return !1;
                     for (let e of Object.keys(C)) N(C[e]);
-                    A(!1), T = !0
+                    A(!1), I = !0
                 },
                 CONNECTION_CLOSED: function(e) {
                     let {
                         code: t
                     } = e;
-                    4004 === t && m()
+                    4004 === t && p()
                 },
-                LOGOUT: m,
+                LOGOUT: p,
                 ACTIVITY_UPDATE_SUCCESS: function(e) {
                     let {
                         applicationId: t,

@@ -26,7 +26,7 @@
                     S = null != h ? i.default.extractTimestamp(h) : null,
                     _ = null;
                 return f.forEach(e => {
-                    var a, A, T, M, N, I, L, v;
+                    var a, A, T, M, I, N, L, v;
                     if (null != p && p.length > 0) {
                         ;
                         let t = i.default.extractTimestamp(e.id);
@@ -53,31 +53,31 @@
                     }), t = R);
                     let x = E[E.length - 1],
                         y = null,
-                        D = (0, o.isSpam)(e);
-                    g = g || D;
-                    let O = function(e, t, n) {
+                        O = (0, o.isSpam)(e);
+                    g = g || O;
+                    let D = function(e, t, n) {
                         if (s.MessageTypesSets.NON_COLLAPSIBLE.has(t.type));
                         else if (t.blocked) return u.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED;
                         else if ((0, o.isSpamSupported)(e) && n) return u.ChannelStreamTypes.MESSAGE_GROUP_SPAMMER;
                         return null
-                    }(c, e, D && C);
-                    if (null !== O) {
+                    }(c, e, O && C);
+                    if (null !== D) {
                         ;
                         let t, n;
-                        [y, x] = (A = E, T = e, M = O, n = N = x, null == N || N.type !== M ? (t = {
+                        [y, x] = (A = E, T = e, M = D, n = I = x, null == I || I.type !== M ? (t = {
                             type: M,
                             content: [],
                             key: T.id
-                        }, A.push(t)) : n = (t = N).content[t.content.length - 1], [t, n])
+                        }, A.push(t)) : n = (t = I).content[t.content.length - 1], [t, n])
                     }
                     if (h === e.id && null != S) {
                         if (null != x && x.type === u.ChannelStreamTypes.DIVIDER) x.unreadId = e.id, S = null;
                         else if (null !== y) {
                             ;
-                            I = y, L = c, (v = e).isFirstMessageInForumPost(L) || I.content.push({
+                            N = y, L = c, (v = e).isFirstMessageInForumPost(L) || N.content.push({
                                 type: u.ChannelStreamTypes.DIVIDER,
                                 unreadId: v.id
-                            }), I.hasUnread = !0, S = null
+                            }), N.hasUnread = !0, S = null
                         } else !e.isFirstMessageInForumPost(c) && E.push({
                             type: u.ChannelStreamTypes.DIVIDER,
                             unreadId: e.id

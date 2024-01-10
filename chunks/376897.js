@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return I
                 }
             }), n("222007");
             var a = n("37983");
@@ -19,9 +19,9 @@
                 _ = n("716724"),
                 h = n("56245"),
                 C = n("492249"),
-                I = n("49111"),
-                T = {
-                    [I.RPCCommands.SET_OVERLAY_LOCKED]: {
+                T = n("49111"),
+                I = {
+                    [T.RPCCommands.SET_OVERLAY_LOCKED]: {
                         scope: C.RPC_LOCAL_SCOPE,
                         validation: e => (0, _.default)(e).required().keys({
                             locked: e.boolean().required(),
@@ -41,10 +41,10 @@
                             o.default.setLocked(t, n)
                         }
                     },
-                    [I.RPCCommands.OPEN_OVERLAY_ACTIVITY_INVITE]: {
+                    [T.RPCCommands.OPEN_OVERLAY_ACTIVITY_INVITE]: {
                         scope: C.RPC_LOCAL_SCOPE,
                         validation: e => (0, _.default)(e).required().keys({
-                            type: e.number().required().valid([I.ActivityActionTypes.JOIN]),
+                            type: e.number().required().valid([T.ActivityActionTypes.JOIN]),
                             pid: e.number().min(0).required()
                         }),
                         handler(e) {
@@ -66,7 +66,7 @@
                             })
                         }
                     },
-                    [I.RPCCommands.OPEN_OVERLAY_GUILD_INVITE]: {
+                    [T.RPCCommands.OPEN_OVERLAY_GUILD_INVITE]: {
                         scope: C.RPC_LOCAL_SCOPE,
                         validation: e => (0, _.default)(e).required().keys({
                             code: e.string().required(),
@@ -103,7 +103,7 @@
                             })
                         }
                     },
-                    [I.RPCCommands.OPEN_OVERLAY_VOICE_SETTINGS]: {
+                    [T.RPCCommands.OPEN_OVERLAY_VOICE_SETTINGS]: {
                         scope: C.RPC_LOCAL_SCOPE,
                         validation: e => (0, _.default)(e).required().keys({
                             pid: e.number().min(0).required()

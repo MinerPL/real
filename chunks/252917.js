@@ -18,13 +18,13 @@
                 _ = n("241845"),
                 h = n("939443"),
                 C = n("597590"),
-                I = n("987697"),
-                T = n("464682"),
+                T = n("987697"),
+                I = n("464682"),
                 S = n("73749"),
                 N = n("191145"),
                 A = n("533466"),
-                m = n("837844"),
-                p = n("171984"),
+                p = n("837844"),
+                m = n("171984"),
                 g = n("551254"),
                 R = n("893399"),
                 O = n("353681"),
@@ -90,13 +90,13 @@
                     name: "GuildHomePage",
                     renderLoader: ef
                 }),
-                eI = (0, d.makeLazy)({
+                eT = (0, d.makeLazy)({
                     createPromise: () => n.el("112265").then(n.bind(n, "112265")),
                     webpackId: "112265",
                     name: "MemberSafetyPage",
                     renderLoader: ef
                 }),
-                eT = (0, d.makeLazy)({
+                eI = (0, d.makeLazy)({
                     createPromise: () => n.el("534702").then(n.bind(n, "534702")),
                     webpackId: "534702",
                     name: "ChannelsAndRolesPage",
@@ -141,7 +141,7 @@
                                 guildId: s
                             });
                         case eu.StaticChannelRoute.CHANNEL_BROWSER:
-                            return (0, a.jsx)(eT, {
+                            return (0, a.jsx)(eI, {
                                 guildId: s,
                                 selectedSection: ed.GuildOnboardingTab.BROWSE
                             });
@@ -150,12 +150,12 @@
                                 guildId: s
                             });
                         case eu.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
-                            return (0, a.jsx)(eT, {
+                            return (0, a.jsx)(eI, {
                                 guildId: s,
                                 selectedSection: ed.GuildOnboardingTab.CUSTOMIZE
                             });
                         case eu.StaticChannelRoute.MEMBER_SAFETY:
-                            return (0, a.jsx)(eI, {
+                            return (0, a.jsx)(eT, {
                                 guildId: s
                             });
                         default:
@@ -187,7 +187,7 @@
                     }, e) : (0, a.jsx)(es.default, {})
                 });
 
-            function em(e) {
+            function ep(e) {
                 let t = (0, W.default)(e => {
                     let {
                         guildId: t
@@ -199,7 +199,7 @@
                     guildId: t
                 })
             }
-            let ep = e => (0, a.jsx)(eN, {
+            let em = e => (0, a.jsx)(eN, {
                     ...e
                 }),
                 eg = e => {
@@ -232,16 +232,16 @@
                 eM = function() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                     return function(t) {
-                        return (0, a.jsx)(p.default, {
+                        return (0, a.jsx)(m.default, {
                             isFullScreen: e,
                             ...t
                         })
                     }
                 },
-                eP = e => (0, a.jsx)(T.default, {
+                eP = e => (0, a.jsx)(I.default, {
                     ...e
                 }),
-                eD = () => (0, a.jsx)(I.default, {}),
+                eD = () => (0, a.jsx)(T.default, {}),
                 ey = () => (0, a.jsx)(Y.default, {}),
                 ex = () => (0, a.jsx)(G.default, {}),
                 eb = () => (0, a.jsx)(V.default, {}),
@@ -311,7 +311,7 @@
                         "aria-label": ec.default.Messages.ACCOUNT_A11Y_LABEL,
                         children: [(0, a.jsx)(B.default, {}), (0, a.jsx)(ei.default, {
                             section: eo.AnalyticsSections.ACTIVITY_PANEL,
-                            children: (0, a.jsx)(em, {
+                            children: (0, a.jsx)(ep, {
                                 className: eE.activityPanel
                             })
                         }), (0, a.jsx)(ei.default, {
@@ -353,8 +353,8 @@
                     }(),
                     _ = (0, E.useStateFromStores)([k.default], () => k.default.getIsOpen()),
                     h = (0, o.useRouteMatch)([eo.Routes.CHANNEL(eo.ME, ":channelId"), eo.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")]),
-                    I = (null == h ? void 0 : null === (e = h.params) || void 0 === e ? void 0 : e.channelId) === eu.StaticChannelRoute.GUILD_ONBOARDING,
-                    T = s.useCallback(() => j.default.openSidebar(), []);
+                    T = (null == h ? void 0 : null === (e = h.params) || void 0 === e ? void 0 : e.channelId) === eu.StaticChannelRoute.GUILD_ONBOARDING,
+                    I = s.useCallback(() => j.default.openSidebar(), []);
                 return (0, a.jsx)(a.Fragment, {
                     children: (0, a.jsxs)("div", {
                         className: eE.container,
@@ -367,12 +367,12 @@
                                 className: eE.base,
                                 children: [c.isMobile ? null : (0, a.jsx)(ea.default, {}), (0, a.jsxs)("div", {
                                     className: eE.content,
-                                    children: [(0, a.jsx)(m.default, {}), (0, a.jsx)(eG, {
+                                    children: [(0, a.jsx)(p.default, {}), (0, a.jsx)(eG, {
                                         hasNotice: t,
                                         sidebarTheme: n,
-                                        hideSidebar: i || l || d || f || I || !_
+                                        hideSidebar: i || l || d || f || T || !_
                                     }), (0, a.jsx)(C.default.Provider, {
-                                        value: T,
+                                        value: I,
                                         children: (0, a.jsxs)(o.Switch, {
                                             children: [(0, a.jsx)(S.default, {
                                                 path: eo.Routes.ACTIVITY,
@@ -438,7 +438,7 @@
                                                 disableTrack: !0
                                             }), (0, a.jsx)(S.default, {
                                                 path: [eo.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), eo.Routes.CHANNEL(eo.ME, ":channelId"), eo.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")],
-                                                render: ep,
+                                                render: em,
                                                 impressionName: u.ImpressionNames.GUILD_CHANNEL,
                                                 disableTrack: !0
                                             }), (0, a.jsx)(S.default, {

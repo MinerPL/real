@@ -27,12 +27,12 @@
                 let {
                     baseMessage: T,
                     referencedMessage: M,
-                    channel: N,
-                    compact: I = !1,
+                    channel: I,
+                    compact: N = !1,
                     referencedUsernameProfile: L,
                     referencedAvatarProfile: v,
                     setPopout: R
-                } = e, x = M.state === c.ReferencedMessageState.LOADED ? M.message : void 0, y = (0, m.useNullableMessageAuthor)(x), D = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = T.editedTimestamp) && void 0 !== t ? t : T.timestamp).valueOf()), O = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == N ? void 0 : N.guild_id) && void 0 !== n ? n : "", (null !== (A = T.editedTimestamp) && void 0 !== A ? A : T.timestamp).valueOf()), j = a.useMemo(() => {
+                } = e, x = M.state === c.ReferencedMessageState.LOADED ? M.message : void 0, y = (0, m.useNullableMessageAuthor)(x), O = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = T.editedTimestamp) && void 0 !== t ? t : T.timestamp).valueOf()), D = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == I ? void 0 : I.guild_id) && void 0 !== n ? n : "", (null !== (A = T.editedTimestamp) && void 0 !== A ? A : T.timestamp).valueOf()), j = a.useMemo(() => {
                     if (null == x) return null;
                     if (x.type === S.MessageTypes.USER_JOIN) return (0, i.astToString)(C.default.getSystemMessageUserJoin(x.id).astFormat({
                         username: null != y ? y.nick : x.author.username,
@@ -40,7 +40,7 @@
                     }));
                     if (x.type === S.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE) return (0, i.astToString)((0, u.getRoleSubscriptionPurchaseSystemMessageAstFormattedContent)({
                         username: null != y ? y.nick : x.author.username,
-                        guildId: null == N ? void 0 : N.guild_id,
+                        guildId: null == I ? void 0 : I.guild_id,
                         roleSubscriptionData: x.roleSubscriptionData
                     }));
                     if (x.type === S.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION) return (0, i.astToString)((0, r.getApplicationSubscriptionSystemMessageASTContent)({
@@ -57,33 +57,33 @@
                     }));
                     else if (x.type === S.MessageTypes.GUILD_DEADCHAT_REVIVE_PROMPT) return "" !== x.content ? x.content : _.default.Messages.DEADCHAT_PROMPT_1;
                     if (null != x.content && "" !== x.content) {
-                        let e = x.isFirstMessageInForumPost(N) ? {
+                        let e = x.isFirstMessageInForumPost(I) ? {
                             formatInline: !0,
                             noStyleAndInteraction: !0,
                             allowHeading: !0,
                             allowList: !0,
-                            allowLinks: D.showMaskedLinks || O.showMaskedLinks
+                            allowLinks: O.showMaskedLinks || D.showMaskedLinks
                         } : {
                             formatInline: !0,
-                            allowHeading: D.showListsAndHeaders || O.showListsAndHeaders,
-                            allowList: D.showListsAndHeaders || O.showListsAndHeaders,
-                            allowLinks: D.showMaskedLinks || O.showMaskedLinks
+                            allowHeading: O.showListsAndHeaders || D.showListsAndHeaders,
+                            allowList: O.showListsAndHeaders || D.showListsAndHeaders,
+                            allowLinks: O.showMaskedLinks || D.showMaskedLinks
                         };
                         return (0, p.default)(x, e).content
                     }
                     return null
-                }, [x, y, N, D, O]), b = (0, l.useStateFromStores)([f.default], () => null != x && f.default.isBlocked(x.author.id), [x]), P = (0, g.useContextMenuUser)(null == x ? void 0 : x.author.id, N.id), U = (0, g.useClickReply)(T, x, b), F = (0, g.useClickReferencedMessageAuthorUsername)(x, N, L, R), H = (0, g.useClickReferencedMessageAuthorAvatar)(v, R), k = a.useCallback(() => R({
+                }, [x, y, I, O, D]), b = (0, l.useStateFromStores)([f.default], () => null != x && f.default.isBlocked(x.author.id), [x]), P = (0, g.useContextMenuUser)(null == x ? void 0 : x.author.id, I.id), U = (0, g.useClickReply)(T, x, b), F = (0, g.useClickReferencedMessageAuthorUsername)(x, I, L, R), H = (0, g.useClickReferencedMessageAuthorAvatar)(v, R), k = a.useCallback(() => R({
                     referencedUsernameProfile: !1,
                     referencedAvatarProfile: !1
                 }), [R]), G = (0, m.useNullableMessageAuthor)(T);
                 return (0, s.jsx)(h.default, {
                     repliedAuthor: y,
                     baseMessage: T,
-                    channel: N,
+                    channel: I,
                     baseAuthor: G,
                     referencedMessage: M,
                     content: j,
-                    compact: I,
+                    compact: N,
                     isReplyAuthorBlocked: b,
                     showAvatarPopout: v,
                     showUsernamePopout: L,

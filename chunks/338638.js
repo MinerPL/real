@@ -18,13 +18,13 @@
                 _ = n("599110"),
                 h = n("659500"),
                 C = n("794818"),
-                I = n("142813"),
-                T = n("197231"),
+                T = n("142813"),
+                I = n("197231"),
                 S = n("868246"),
                 N = n("447621"),
                 A = n("49111"),
-                m = n("782340"),
-                p = n("708417");
+                p = n("782340"),
+                m = n("708417");
             let g = o.throttle(C.trackSearchResultsViewed, 1e3, {
                     leading: !1,
                     trailing: !0
@@ -39,11 +39,11 @@
                     } = e;
                     return (0, a.jsx)(d.Clickable, {
                         onClick: () => n(s),
-                        className: l(p.categoryPill, {
-                            [p.selected]: t
+                        className: l(m.categoryPill, {
+                            [m.selected]: t
                         }),
                         children: (0, a.jsx)(d.Text, {
-                            className: p.categoryLabel,
+                            className: m.categoryLabel,
                             variant: "text-sm/normal",
                             children: null != r ? "".concat(i, " (").concat(r, ")") : i
                         })
@@ -98,7 +98,7 @@
                         isHandlingTagSearch: !1
                     })), !t.isSearching && r && C.trackSearchStarted(n, f, c), e.mostRecentQuery !== l && this.setState({
                         query: l,
-                        searchId: (0, T.makeAnalyticsID)(),
+                        searchId: (0, I.makeAnalyticsID)(),
                         isHandlingTagSearch: !0
                     })
                 }
@@ -123,7 +123,7 @@
                         }
                     });
                     return (0, a.jsx)(d.SingleSelect, {
-                        className: p.languageSelector,
+                        className: m.languageSelector,
                         options: s,
                         value: null !== (e = null == n ? void 0 : n.name) && void 0 !== e ? e : "",
                         onChange: this.handleLanguageChange,
@@ -136,12 +136,12 @@
                         countsByCategory: t
                     } = this.props;
                     return (0, a.jsx)("div", {
-                        className: p.categories,
+                        className: m.categories,
                         children: null == t ? void 0 : t.map(t => {
                             let [n, s] = t;
                             return (0, a.jsx)(R, {
                                 categoryId: n,
-                                name: n === N.DISCOVERY_ALL_CATEGORIES_ID ? m.default.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : S.default.getCategoryName(n),
+                                name: n === N.DISCOVERY_ALL_CATEGORIES_ID ? p.default.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : S.default.getCategoryName(n),
                                 onCategoryChange: this.handleCategoryChange,
                                 isSelected: e === n,
                                 count: s
@@ -159,19 +159,19 @@
                     } = this.props;
                     return (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsxs)("div", {
-                            className: l(p.container, {
-                                [p.searchPage]: s
+                            className: l(m.container, {
+                                [m.searchPage]: s
                             }),
                             children: [(0, a.jsx)("div", {
-                                className: p.search,
+                                className: m.search,
                                 children: (0, a.jsx)(f.default, {
                                     ref: this._searchRef,
                                     searchTerm: e,
-                                    className: s ? void 0 : p.searchBox,
-                                    inputClassName: s ? void 0 : p.searchBoxInput,
-                                    closeIconClassName: s ? void 0 : p.closeIcon,
-                                    searchIconClassName: s ? void 0 : p.searchIcon,
-                                    label: m.default.Messages.GUILD_DISCOVERY_SEARCH_LABEL,
+                                    className: s ? void 0 : m.searchBox,
+                                    inputClassName: s ? void 0 : m.searchBoxInput,
+                                    closeIconClassName: s ? void 0 : m.closeIcon,
+                                    searchIconClassName: s ? void 0 : m.searchIcon,
+                                    label: p.default.Messages.GUILD_DISCOVERY_SEARCH_LABEL,
                                     placeholder: n,
                                     onChange: this.handleQueryChanged,
                                     onClear: this.handleQueryCleared,
@@ -179,14 +179,14 @@
                                     onBlur: this.handleSearchBlurred,
                                     onKeyPress: this.handleSearchKeyPress,
                                     autoFocus: !s,
-                                    cta: t && null != e && e.length > 1 ? m.default.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
+                                    cta: t && null != e && e.length > 1 ? p.default.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
                                 })
                             }), s ? this.renderSearchOptions() : null]
                         }), s ? this.renderCategories() : null]
                     })
                 }
                 constructor(e) {
-                    super(e), this._searchRef = s.createRef(), this.canSearch = e => e.trim().length >= 2 && !(0, I.searchQueryContainsBannedWord)(e), this.doSearch = (e, t, n, a) => {
+                    super(e), this._searchRef = s.createRef(), this.canSearch = e => e.trim().length >= 2 && !(0, T.searchQueryContainsBannedWord)(e), this.doSearch = (e, t, n, a) => {
                         var s;
                         let {
                             defaultLanguage: i,
@@ -198,7 +198,7 @@
                             approximate_member_count: C.MINIMUM_MEMBER_COUNT
                         };
                         a && c.getSearchResultsCount(r, u), this.setState({
-                            searchId: (0, T.makeAnalyticsID)(),
+                            searchId: (0, I.makeAnalyticsID)(),
                             queryHasChanged: !1,
                             isSearching: !0
                         }), c.doAlgoliaSearch(r, {
@@ -263,7 +263,7 @@
                         var e;
                         null === (e = this._searchRef.current) || void 0 === e || e.focus()
                     }, this.state = {
-                        searchId: (0, T.makeAnalyticsID)(),
+                        searchId: (0, I.makeAnalyticsID)(),
                         query: e.isSearchPage ? e.mostRecentQuery : "",
                         queryHasChanged: !1,
                         isSearching: !1,

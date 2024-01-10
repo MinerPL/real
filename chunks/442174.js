@@ -18,13 +18,13 @@
                 _ = n("144491"),
                 h = n("208021"),
                 C = n("982108"),
-                I = n("945330"),
-                T = n("664336"),
+                T = n("945330"),
+                I = n("664336"),
                 S = n("679653"),
                 N = n("176347"),
                 A = n("782340"),
-                m = n("768922"),
-                p = n("421202");
+                p = n("768922"),
+                m = n("421202");
 
             function g(e) {
                 let {
@@ -41,13 +41,13 @@
                     onError: D
                 });
                 if (null == t || !t.isDM()) return null;
-                let x = [(0, a.jsx)(T.default.Icon, {
-                    icon: I.default,
+                let x = [(0, a.jsx)(I.default.Icon, {
+                    icon: T.default,
                     tooltip: A.default.Messages.CLOSE,
                     onClick: () => h.default.closeChannelSidebar(n)
                 }, "close")];
                 return (0, a.jsxs)(a.Fragment, {
-                    children: [(0, a.jsx)(T.default, {
+                    children: [(0, a.jsx)(I.default, {
                         toolbar: x,
                         "aria-label": A.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
                         children: (0, o.renderTitle)({
@@ -56,19 +56,19 @@
                             inSidebar: !0
                         })
                     }), v && (0, a.jsxs)("div", {
-                        className: p.hamBanner,
+                        className: m.hamBanner,
                         children: [(0, a.jsx)(l.Text, {
-                            className: p.hamBannerText,
+                            className: m.hamBannerText,
                             variant: "text-sm/normal",
                             children: A.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_HEADER
                         }), (0, a.jsx)(l.Button, {
-                            className: p.hamBannerButton,
+                            className: m.hamBannerButton,
                             size: l.ButtonSizes.SMALL,
                             onClick: () => y(t, M),
                             children: A.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
                         })]
                     }), (0, a.jsx)("div", {
-                        className: m.chat,
+                        className: p.chat,
                         children: (0, a.jsx)(N.default, {
                             channel: t,
                             guild: null,

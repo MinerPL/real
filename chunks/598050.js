@@ -50,14 +50,14 @@
                     selectedParticipantId: u.default.getSelectedParticipantId(a.id),
                     largeStream: u.default.getStageStreamSize(a.id),
                     chatOpen: u.default.getChatOpen(a.id)
-                }), [a.id]), M = (0, c.useActualStageSpeakerCount)(a.id), R = (0, c.useStageParticipantsCount)(a.id, f.StageChannelParticipantNamedIndex.AUDIENCE), j = (0, r.useStateFromStores)([d.default], () => null != I ? d.default.getParticipant(a.id, I) : null), L = (0, c.useStageParticipants)(a.id, f.StageChannelParticipantNamedIndex.SPEAKER), O = L.filter(e => e.type === f.StageChannelParticipantTypes.VOICE), y = null != L.find(e => e.type === f.StageChannelParticipantTypes.STREAM), b = x(l), P = v(l, A), D = {
-                    [f.StageChannelParticipantNamedIndex.SPEAKER]: P,
-                    [f.StageChannelParticipantNamedIndex.AUDIENCE]: b,
+                }), [a.id]), M = (0, c.useActualStageSpeakerCount)(a.id), R = (0, c.useStageParticipantsCount)(a.id, f.StageChannelParticipantNamedIndex.AUDIENCE), j = (0, r.useStateFromStores)([d.default], () => null != I ? d.default.getParticipant(a.id, I) : null), L = (0, c.useStageParticipants)(a.id, f.StageChannelParticipantNamedIndex.SPEAKER), O = L.filter(e => e.type === f.StageChannelParticipantTypes.VOICE), y = null != L.find(e => e.type === f.StageChannelParticipantTypes.STREAM), P = x(l), b = v(l, A), D = {
+                    [f.StageChannelParticipantNamedIndex.SPEAKER]: b,
+                    [f.StageChannelParticipantNamedIndex.AUDIENCE]: P,
                     [f.StageChannelParticipantNamedIndex.SELECTED]: 1
                 }, U = (0, h.useThrottleDurationForChannel)(a.id), [w, F] = (0, h.useStageChannelParticipantsListThrottled)(a.id, D, U), k = [Math.max(null !== (t = w[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = w[1]) && void 0 !== n ? n : 1, 1), w[2]], {
                     speakerTileWidth: V,
                     speakerTileHeight: B
-                } = T(l, P), H = N ? l - 32 : Math.min(l - 64, 3 * V + 8), G = e => e === w.length - 1 || 0 === R && 1 === e, [W, Y] = i.useState(!1), [z, K] = i.useState(!1);
+                } = T(l, b), H = N ? l - 32 : Math.min(l - 64, 3 * V + 8), G = e => e === w.length - 1 || 0 === R && 1 === e, [W, Y] = i.useState(!1), [z, K] = i.useState(!1);
                 return (0, s.jsx)(m.default, {
                     sections: k,
                     renderSection: e => {
@@ -117,7 +117,7 @@
                                 return (0, s.jsx)(p.default, {
                                     channel: a,
                                     participants: l,
-                                    maxTiles: b
+                                    maxTiles: P
                                 }, "audience-".concat(t, "-").concat(n));
                             default:
                                 return null

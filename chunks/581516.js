@@ -2,7 +2,7 @@
             let a;
             n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return p
                 }
             });
             var s = n("913144"),
@@ -18,8 +18,8 @@
                 _ = n("800762"),
                 h = n("191225"),
                 C = n("420444"),
-                I = n("320817"),
-                T = n("49111");
+                T = n("320817"),
+                I = n("49111");
 
             function S() {
                 let e = c.default.getChannelId(),
@@ -33,10 +33,10 @@
                     null != e && d.default.isOpen(e) && (s.default.wait(() => i.close(e)), a = null)
                 }();
                 {
-                    let e = (0, I.default)(t, n.applicationId);
+                    let e = (0, T.default)(t, n.applicationId);
                     return function(e, t) {
                         if (d.default.isOpen(t)) return !1;
-                        s.default.wait(() => i.open(t, T.PictureInPictureComponents.EMBED_IFRAME, {
+                        s.default.wait(() => i.open(t, I.PictureInPictureComponents.EMBED_IFRAME, {
                             channel: e
                         })), a = t
                     }(r, e)
@@ -45,7 +45,7 @@
 
             function N() {
                 let e = u.default.hasLayers(),
-                    t = r.default.getWindowOpen(T.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+                    t = r.default.getWindowOpen(I.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
                 return e && !t ? function() {
                     let e = a;
                     null != e && d.default.isOpen(e) && s.default.wait(() => i.hide(e))
@@ -62,4 +62,4 @@
                     E.default.removeChangeListener(S), f.default.removeChangeListener(S), c.default.removeChangeListener(S), _.default.removeChangeListener(S), r.default.removeChangeListener(S), h.default.removeChangeListener(S), u.default.removeChangeListener(N)
                 }
             }
-            var m = new A
+            var p = new A

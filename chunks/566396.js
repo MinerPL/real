@@ -18,8 +18,8 @@
                 _ = n("27618"),
                 h = n("697218"),
                 C = n("663449"),
-                I = n("449008"),
-                T = n("782340");
+                T = n("449008"),
+                I = n("782340");
             class S extends s.PureComponent {
                 hasParty(e) {
                     return e.length > 1
@@ -66,7 +66,7 @@
                         } = this.props;
                         return (0, a.jsx)(u.default, {
                             party: e,
-                            header: T.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENING_ALONG_COUNT.format({
+                            header: I.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENING_ALONG_COUNT.format({
                                 count: e.length
                             })
                         })
@@ -81,7 +81,7 @@
                     i = [];
                 if (null != n ? (e = h.default.getUser(n.userId), t = n.partyId) : null != a && null != a.party && null != a.party.id && (e = s, t = a.party.id), null != t) {
                     var r;
-                    i = l(Array.from(null !== (r = f.default.getParty(t)) && void 0 !== r ? r : [])).map(e => h.default.getUser(e)).filter(I.isNotNullish).orderBy([t => null == e || e.id === t.id, e => _.default.isFriend(e.id)], ["desc", "desc"]).value()
+                    i = l(Array.from(null !== (r = f.default.getParty(t)) && void 0 !== r ? r : [])).map(e => h.default.getUser(e)).filter(T.isNotNullish).orderBy([t => null == e || e.id === t.id, e => _.default.isFriend(e.id)], ["desc", "desc"]).value()
                 }
                 return {
                     currentUser: s,

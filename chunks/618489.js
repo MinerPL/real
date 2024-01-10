@@ -18,13 +18,13 @@
                 _ = n("406189"),
                 h = n("32296"),
                 C = n("412026"),
-                I = n("86621"),
-                T = n("997289"),
+                T = n("86621"),
+                I = n("997289"),
                 S = n("244201"),
                 N = n("266790"),
                 A = n("191225"),
-                m = n("372610"),
-                p = n("380691"),
+                p = n("372610"),
+                m = n("380691"),
                 g = n("943349"),
                 R = n("702173"),
                 O = n("10524"),
@@ -72,13 +72,13 @@
                 e_ = n("945956"),
                 eh = n("27618"),
                 eC = n("697218"),
-                eI = n("800762"),
-                eT = n("316133"),
+                eT = n("800762"),
+                eI = n("316133"),
                 eS = n("145131"),
                 eN = n("437825"),
                 eA = n("142303"),
-                em = n("406019"),
-                ep = n("220075"),
+                ep = n("406019"),
+                em = n("220075"),
                 eg = n("82636"),
                 eR = n("394832"),
                 eO = n("394640"),
@@ -181,16 +181,16 @@
                     limit: h
                 } = (0, $.default)(t), C = s.useCallback(() => {
                     (0, en.default)()
-                }, []), I = (0, S.useAppContext)(), T = s.useCallback(e => {
+                }, []), T = (0, S.useAppContext)(), I = s.useCallback(e => {
                     if (eE.default.isVideoEnabled() === e) return;
                     let n = () => {
                         var n;
                         E.default.setVideoEnabled(e), e && (0, B.transitionTo)(eU.Routes.CHANNEL(null !== (n = t.getGuildId()) && void 0 !== n ? n : eU.ME, t.id))
                     };
-                    e ? (0, ei.default)(n, I) : n()
-                }, [t, I]), N = u || n || f;
+                    e ? (0, ei.default)(n, T) : n()
+                }, [t, T]), N = u || n || f;
                 return (0, a.jsx)(el.VideoButtonWrapper, {
-                    onChange: T,
+                    onChange: I,
                     onCameraUnavailable: C,
                     hasPermission: o,
                     channelLimit: h,
@@ -279,9 +279,9 @@
                     } = (0, d.useStateFromStoresObject)([A.default], () => ({
                         userInActivity: null != A.default.getSelfEmbeddedActivityForChannel(t.id)
                     })),
-                    h = (0, T.useAnalyticsContext)(),
-                    C = (0, p.useShowActivityIndicator)(),
-                    I = u !== g.EmbeddedActivityLaunchability.CAN_LAUNCH;
+                    h = (0, I.useAnalyticsContext)(),
+                    C = (0, m.useShowActivityIndicator)(),
+                    T = u !== g.EmbeddedActivityLaunchability.CAN_LAUNCH;
                 return n ? (0, a.jsx)(c.Tooltip, {
                     text: E,
                     children: e => (0, a.jsxs)(c.Button, {
@@ -298,10 +298,10 @@
                                 analyticsLocations: i
                             }), null === (n = e.onClick) || void 0 === n || n.call(e)
                         },
-                        disabled: I,
+                        disabled: T,
                         className: l(ek.button, ek.buttonColor, {
                             [ek.buttonActive]: _ || null != f,
-                            [ek.disabled]: I
+                            [ek.disabled]: T
                         }),
                         innerClassName: ek.buttonContents,
                         wrapperClassName: ek.button,
@@ -328,18 +328,18 @@
                     _ = n.getGuildId(),
                     h = (0, d.useStateFromStoresObject)([A.default], () => null != A.default.getSelfEmbeddedActivityForChannel(n.id)),
                     C = (0, H.default)(n),
-                    I = s.useCallback(() => {
+                    T = s.useCallback(() => {
                         (0, es.default)(_, n.id, eU.AnalyticsSections.ACTIVITY_PANEL)
                     }, [_, n.id]),
-                    T = E.find(e => e.ownerId === (null == u ? void 0 : u.id)),
+                    I = E.find(e => e.ownerId === (null == u ? void 0 : u.id)),
                     S = (0, et.useOtherStreams)(n, u, E);
-                t = null == T ? i ? I : ea.default : () => (0, j.default)(T);
-                let N = null != T || S.length > 0,
-                    m = f ? ej.default.Messages.SHARE_YOUR_SCREEN : ej.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE,
-                    p = h || r || C,
+                t = null == I ? i ? T : ea.default : () => (0, j.default)(I);
+                let N = null != I || S.length > 0,
+                    p = f ? ej.default.Messages.SHARE_YOUR_SCREEN : ej.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE,
+                    m = h || r || C,
                     g = (0, a.jsx)(eR.default, {
                         className: l(ek.buttonIcon, {
-                            [ek.withText]: !p
+                            [ek.withText]: !m
                         })
                     });
                 return (0, a.jsx)(c.Popout, {
@@ -352,7 +352,7 @@
                             currentUser: u,
                             activeStreams: E,
                             onClose: t,
-                            handleGoLive: i ? I : ea.default
+                            handleGoLive: i ? T : ea.default
                         })
                     },
                     position: "top",
@@ -364,7 +364,7 @@
                             ...s
                         } = e;
                         return (0, a.jsx)(c.Tooltip, {
-                            text: m,
+                            text: p,
                             children: e => (0, a.jsx)(c.Button, {
                                 ...e,
                                 size: c.Button.Sizes.SMALL,
@@ -374,13 +374,13 @@
                                 },
                                 disabled: !f || o,
                                 className: l(ek.button, ek.buttonColor, {
-                                    [ek.buttonActive]: null != T,
+                                    [ek.buttonActive]: null != I,
                                     [ek.disabled]: !f || o
                                 }),
                                 ...N ? s : null,
                                 innerClassName: ek.buttonContents,
                                 wrapperClassName: ek.button,
-                                children: p ? g : (0, a.jsxs)(eS.default, {
+                                children: m ? g : (0, a.jsxs)(eS.default, {
                                     align: eS.default.Align.CENTER,
                                     children: [g, ej.default.Messages.GO_LIVE_SHARE_SCREEN]
                                 })
@@ -448,7 +448,7 @@
                                 "aria-label": t,
                                 tooltipText: null,
                                 disabled: !0,
-                                icon: ep.default
+                                icon: em.default
                             })
                         }
                     }) : (0, a.jsx)(c.Popout, {
@@ -463,7 +463,7 @@
                                 ...t,
                                 tooltipClassName: ek.noiseCancellationTooltip,
                                 tooltipText: s ? null : ej.default.Messages.NOISE_CANCELLATION_TOOLTIP,
-                                icon: e ? em.default : ep.default
+                                icon: e ? ep.default : em.default
                             })
                         }
                     }, "krisp-popout")
@@ -618,7 +618,7 @@
                     })
                 }
             }
-            var ez = (0, I.default)(function(e) {
+            var ez = (0, T.default)(function(e) {
                 let t = (0, b.default)(),
                     n = (0, d.useStateFromStores)([x.default], () => x.default.getAwaitingRemoteSessionInfo()),
                     i = (0, d.useStateFromStores)([eC.default], () => eC.default.getCurrentUser()),
@@ -646,13 +646,13 @@
                         canGoLive: (0, G.default)(eE.default)
                     })),
                     _ = (0, d.useStateFromStores)([eE.default, w.default], () => w.default.hasHotspot(eG.HotspotLocations.VOICE_PANEL_INTRODUCTION) && (0, ey.isNewUser)(i) && !eE.default.isInteractionRequired() && !(null == o ? void 0 : o.isGuildStageVoice())),
-                    h = (0, d.useStateFromStores)([eI.default], () => null != l && eI.default.hasVideo(l), [l]),
+                    h = (0, d.useStateFromStores)([eT.default], () => null != l && eT.default.hasVideo(l), [l]),
                     C = (0, d.useStateFromStores)([er.default], () => er.default.getCurrentUserActiveStream()),
-                    I = (0, d.useStateFromStores)([ec.default], () => ec.default.hasLayers()),
-                    T = (0, d.useStateFromStores)([F.default], () => F.default.isViewingRoles(u)),
-                    S = (0, d.useStateFromStores)([ef.default], () => T && !ef.default.can(eU.Permissions.VIEW_CHANNEL, o), [T, o]),
+                    T = (0, d.useStateFromStores)([ec.default], () => ec.default.hasLayers()),
+                    I = (0, d.useStateFromStores)([F.default], () => F.default.isViewingRoles(u)),
+                    S = (0, d.useStateFromStores)([ef.default], () => I && !ef.default.can(eU.Permissions.VIEW_CHANNEL, o), [I, o]),
                     N = X.RtcPanelShowVoiceStates.useSetting(),
-                    [A, p, g] = (0, d.useStateFromStoresArray)([eT.default, Y.default], () => (null == o ? void 0 : o.isGuildStageVoice()) ? [Y.default.getMutableParticipants(o.id, W.StageChannelParticipantNamedIndex.SPEAKER), Y.default.getParticipantsVersion(o.id), null] : [null, null, null != o ? eT.default.getVoiceStatesForChannel(o) : null], [o]),
+                    [A, m, g] = (0, d.useStateFromStoresArray)([eI.default, Y.default], () => (null == o ? void 0 : o.isGuildStageVoice()) ? [Y.default.getMutableParticipants(o.id, W.StageChannelParticipantNamedIndex.SPEAKER), Y.default.getParticipantsVersion(o.id), null] : [null, null, null != o ? eI.default.getVoiceStatesForChannel(o) : null], [o]),
                     O = s.useMemo(() => {
                         var e, t;
                         return null !== (t = null !== (e = null == A ? void 0 : A.map(e => {
@@ -667,14 +667,14 @@
                                 voiceState: a
                             }
                         })) && void 0 !== e ? e : g) && void 0 !== t ? t : []
-                    }, [A, p, g]),
+                    }, [A, m, g]),
                     [L, D] = s.useState(!1);
                 s.useEffect(() => {
-                    (T || S) && D(!1)
-                }, [T, S, D]);
+                    (I || S) && D(!1)
+                }, [I, S, D]);
                 let {
                     AnalyticsLocationProvider: y
-                } = (0, M.default)(v.default.RTC_PANEL), j = (0, m.default)(null != u ? u : "", null == o ? void 0 : o.id), k = (0, R.default)(null == o ? void 0 : o.id), B = (0, P.default)();
+                } = (0, M.default)(v.default.RTC_PANEL), j = (0, p.default)(null != u ? u : "", null == o ? void 0 : o.id), k = (0, R.default)(null == o ? void 0 : o.id), B = (0, P.default)();
                 return (0, a.jsx)(y, {
                     children: (0, a.jsxs)("div", {
                         className: ek.wrapper,
@@ -691,13 +691,13 @@
                             channel: o,
                             hasVideo: h,
                             selfStream: C,
-                            hasLayers: I,
+                            hasLayers: T,
                             voiceStates: O,
                             showVoiceStates: N,
                             shouldShowVoicePanelIntroduction: _,
                             isPrivateChannelWithEnabledActivities: k,
                             isBroadcasting: B
-                        }), !L && T && null != u ? (0, a.jsxs)("div", {
+                        }), !L && I && null != u ? (0, a.jsxs)("div", {
                             className: ek.viewAsRolesWarning,
                             children: [(0, a.jsx)(c.Text, {
                                 variant: "text-sm/normal",

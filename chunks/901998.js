@@ -17,13 +17,13 @@
                 _ = n("606762");
             let h = new Set,
                 C = f.FormStates.CLOSED,
-                I = !1,
-                T = null,
+                T = !1,
+                I = null,
                 S = null,
                 N = null,
                 A = null,
-                m = null,
                 p = null,
+                m = null,
                 g = o.default.get(_.ADVANCED_MODE_ON_KEY) || !1;
 
             function R(e) {
@@ -37,29 +37,29 @@
             function O() {
                 if (N = c.default.getChannel(), A = c.default.getCategory(), null == N) return !1;
                 let e = N.getGuildId();
-                S = T = R(N), null == T[m] && (m = e), s = null != A, a = d.default.areChannelsLocked(N, A), p = null, I = !1, C = f.FormStates.CLOSED, h.clear()
+                S = I = R(N), null == I[p] && (p = e), s = null != A, a = d.default.areChannelsLocked(N, A), m = null, T = !1, C = f.FormStates.CLOSED, h.clear()
             }
             class L extends r.default.Store {
                 initialize() {
                     this.waitFor(c.default, E.default)
                 }
                 hasChanges() {
-                    return I
+                    return T
                 }
                 showNotice() {
                     return this.hasChanges()
                 }
                 getPermissionOverwrite(e) {
-                    return null == T ? void 0 : T[e]
+                    return null == I ? void 0 : I[e]
                 }
                 get editedPermissionIds() {
                     return Array.from(h)
                 }
                 get permissionOverwrites() {
-                    return T
+                    return I
                 }
                 get selectedOverwriteId() {
-                    return m
+                    return p
                 }
                 get formState() {
                     return C
@@ -95,29 +95,29 @@
                         id: t,
                         allow: n,
                         deny: s
-                    } = e, i = null == T ? void 0 : T[t];
+                    } = e, i = null == I ? void 0 : I[t];
                     if (null == i || null == N) return !1;
                     i = {
                         ...i,
                         allow: n,
                         deny: s
-                    }, T = {
-                        ...T,
+                    }, I = {
+                        ...I,
                         [t]: i
-                    }, h.add(t), C = f.FormStates.OPEN, I = !l.isEqual(T, S), a = d.default.areChannelsLocked(N, A)
+                    }, h.add(t), C = f.FormStates.OPEN, T = !l.isEqual(I, S), a = d.default.areChannelsLocked(N, A)
                 },
                 CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION: function(e) {
                     let {
                         id: t
                     } = e;
-                    if (null != T && null != T[t]) m = t;
+                    if (null != I && null != I[t]) p = t;
                     else {
                         if (null == N) return !1;
-                        p = t
+                        m = t
                     }
                 },
                 CHANNEL_SETTINGS_CLOSE: function() {
-                    C = f.FormStates.CLOSED, T = null, S = null, N = null, A = null, I = !1, h.clear(), m = null, p = null
+                    C = f.FormStates.CLOSED, I = null, S = null, N = null, A = null, T = !1, h.clear(), p = null, m = null
                 },
                 CHANNEL_UPDATES: function(e) {
                     let {
@@ -133,11 +133,11 @@
                         S = R(N);
                         let n = {};
                         return h.forEach(e => {
-                            null != T && (n[e] = T[e])
-                        }), null == n[t] && null == N.permissionOverwrites[t] && (n[t] = d.default.makeEveryoneOverwrite(t)), null == (T = {
+                            null != I && (n[e] = I[e])
+                        }), null == n[t] && null == N.permissionOverwrites[t] && (n[t] = d.default.makeEveryoneOverwrite(t)), null == (I = {
                             ...N.permissionOverwrites,
                             ...n
-                        })[m] ? m = t : null != p && null != T[p] && (m = p, p = null), a = d.default.areChannelsLocked(N, A), !0
+                        })[p] ? p = t : null != m && null != I[m] && (p = m, m = null), a = d.default.areChannelsLocked(N, A), !0
                     }(e.id) && (n = !0);
                     return n
                 },

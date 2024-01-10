@@ -27,11 +27,11 @@
                     h = i.some(o.default.lastDeviceConnected, e => c.has(e.displayName) || e.displayName === f || e.displayName === _);
                 if (h) return;
                 let C = i.some(o.default.lastDeviceConnected, e => r.default.isCertified(o.default.inputDevices[e.displayName]) || r.default.isCertified(o.default.outputDevices[e.displayName])),
-                    I = t === d.DEFAULT_DEVICE_ID && o.default.lastInputSystemDevice.justChanged || s === d.DEFAULT_DEVICE_ID && o.default.lastOutputSystemDevice.justChanged;
-                if (I && !C) return;
-                let T = i.first(Object.keys(o.default.lastDeviceConnected)),
-                    S = null != T && "" !== T ? o.default.lastDeviceConnected[T] : null;
-                null != S && (o.default.initialized && null != T && (r.default.isCertified(o.default.inputDevices[T]) ? e = r.default.getCertifiedDevice(o.default.inputDevices[T]) : r.default.isCertified(o.default.outputDevices[T]) && (e = r.default.getCertifiedDevice(o.default.outputDevices[T]))), E = !0, (0, l.openModalLazy)(async () => {
+                    T = t === d.DEFAULT_DEVICE_ID && o.default.lastInputSystemDevice.justChanged || s === d.DEFAULT_DEVICE_ID && o.default.lastOutputSystemDevice.justChanged;
+                if (T && !C) return;
+                let I = i.first(Object.keys(o.default.lastDeviceConnected)),
+                    S = null != I && "" !== I ? o.default.lastDeviceConnected[I] : null;
+                null != S && (o.default.initialized && null != I && (r.default.isCertified(o.default.inputDevices[I]) ? e = r.default.getCertifiedDevice(o.default.inputDevices[I]) : r.default.isCertified(o.default.outputDevices[I]) && (e = r.default.getCertifiedDevice(o.default.outputDevices[I]))), E = !0, (0, l.openModalLazy)(async () => {
                     let {
                         default: t
                     } = await n.el("134064").then(n.bind(n, "134064"));

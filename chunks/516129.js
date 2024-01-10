@@ -23,24 +23,24 @@
                 var t, n;
                 let {
                     content: C,
-                    renderModalProps: I,
-                    analyticsLocations: T,
+                    renderModalProps: T,
+                    analyticsLocations: I,
                     analyticsLocation: S,
                     isLightTheme: N
                 } = e, A = "AnnouncementModalVariant1", {
-                    onClose: m
-                } = I, p = null != C.button && "" !== C.button.copy ? C.button.copy : f.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, g = (null === (t = C.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = C.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
-                    (0, r.transitionTo)(E.Routes.APPLICATION_STORE), m()
+                    onClose: p
+                } = T, m = null != C.button && "" !== C.button.copy ? C.button.copy : f.default.Messages.BILLING_SUBSCRIBE_TO_PLAN, g = (null === (t = C.button) || void 0 === t ? void 0 : t.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? "jump_to_mkt_button" : "get_nitro_button", R = (null === (n = C.button) || void 0 === n ? void 0 : n.buttonAction) === s.ButtonAction.OPEN_MARKETING_PAGE ? () => {
+                    (0, r.transitionTo)(E.Routes.APPLICATION_STORE), p()
                 } : () => (0, l.default)({
                     subscriptionTier: c.PremiumSubscriptionSKUs.TIER_2,
-                    analyticsLocations: T,
+                    analyticsLocations: I,
                     analyticsObject: {
                         ...S,
                         object: E.AnalyticsObjects.BUTTON_CTA,
                         objectType: E.AnalyticsObjectTypes.TIER_2
                     },
                     onClose: e => {
-                        e && m()
+                        e && p()
                     }
                 }), O = "" !== C.helpArticleId ? () => (0, a.jsx)(i.Anchor, {
                     className: _.termsApplyAnchor,
@@ -58,7 +58,7 @@
                     type: "image",
                     src: N ? C.heroArtImageLinkLightTheme : C.heroArtImageLinkDarkTheme
                 }), {
-                    renderModalProps: I,
+                    renderModalProps: T,
                     header: C.header,
                     subHeader: C.subheader,
                     subHeaderExtra: O,
@@ -89,7 +89,7 @@
                                 alt: "",
                                 className: _.nitroIconSubHeader,
                                 src: h
-                            }), p]
+                            }), m]
                         })
                     },
                     modalDismissibleContent: "" !== C.dismissKey ? Number(C.dismissKey) : void 0

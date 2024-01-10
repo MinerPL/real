@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return N
                 }
             }), n("222007"), n("860677");
             var s = n("37983"),
@@ -59,7 +59,7 @@
                         })
                     })
                 }),
-                N = a.memo(function(e) {
+                I = a.memo(function(e) {
                     let {
                         value: t,
                         multiplier: n
@@ -121,13 +121,13 @@
                         })]
                     })
                 });
-            var I = a.memo(function(e) {
+            var N = a.memo(function(e) {
                 let {
                     channelId: t
                 } = e, n = (0, o.useStateFromStores)([h.default], () => h.default.getId()), l = (0, o.useStateFromStores)([C.default], () => C.default.isTyping(t, n), [t, n]), i = (0, o.useStateFromStores)([E.default], () => E.default.isEnabled()), u = (0, o.useStateFromStores)([g.default], () => g.default.isComboing(n, t), [t, n]), {
                     ref: f,
                     width: p = 0
-                } = (0, d.default)(), m = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [S, A] = a.useState(!1), I = (0, _.default)(t), L = i && u && l;
+                } = (0, d.default)(), m = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [S, A] = a.useState(!1), N = (0, _.default)(t), L = i && u && l;
                 a.useEffect(() => {
                     L && A(!0);
                     let e = setTimeout(() => A(L), 1e3);
@@ -140,17 +140,17 @@
                         config: r.config.stiff,
                         immediate: m
                     }),
-                    R = a.useMemo(() => null != I ? I : {
+                    R = a.useMemo(() => null != N ? N : {
                         value: 0,
                         multiplier: 1
-                    }, [I]),
+                    }, [N]),
                     x = a.useRef(R);
                 a.useEffect(() => {
                     (R.multiplier > 1 || R.value > 0) && (x.current = R)
                 }, [R]);
                 let {
                     multiplier: y,
-                    value: D
+                    value: O
                 } = a.useMemo(() => ({
                     value: L ? R.value : x.current.value,
                     multiplier: L ? R.multiplier : x.current.multiplier
@@ -163,8 +163,8 @@
                         ref: f,
                         className: T.combo,
                         style: v,
-                        children: (0, s.jsx)(N, {
-                            value: D,
+                        children: (0, s.jsx)(I, {
+                            value: O,
                             multiplier: y
                         })
                     })]

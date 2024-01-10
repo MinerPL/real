@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return I
                 }
             });
             var a = n("37983");
@@ -26,7 +26,7 @@
                     s = null === (n = r.default.getChannel(t)) || void 0 === n ? void 0 : n.isNSFW();
                 s && null != a && null == a.nsfwAllowed && (0, c.openAgeGateModal)(_.AgeGateSource.NSFW_CHANNEL)
             }
-            class I extends l.default {
+            class T extends l.default {
                 _initialize() {
                     i.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.subscribe("CHANNEL_SELECT", this.handleChannelSelect), i.default.subscribe("AGE_GATE_MODAL_OPEN", this.handleAgeGateModalOpen), i.default.subscribe("AGE_GATE_MODAL_CLOSE", this.handleAgeGateModalClose), i.default.subscribe("AGE_GATE_SUCCESS_MODAL_OPEN", this.handleAgeGateSuccess), i.default.subscribe("AGE_GATE_FAILURE_MODAL_OPEN", this.handleAgeGateFailure)
                 }
@@ -80,4 +80,4 @@
                     (0, s.closeModal)(_.EXISTING_USER_AGE_GATE_MODAL_KEY)
                 }
             }
-            var T = new I
+            var I = new T

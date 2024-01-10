@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return m
                 }
             }), n("222007");
             var a = n("446674"),
@@ -21,8 +21,8 @@
                 _ = new Map,
                 h = new Set,
                 C = 0,
-                I = 0,
-                T = !1;
+                T = 0,
+                I = !1;
 
             function S(e) {
                 if (null == e || null == _.get(e)) return !1;
@@ -41,7 +41,7 @@
                     _.set(t, {
                         channel: e,
                         x: C + n,
-                        y: I + n
+                        y: T + n
                     }), (h = new Set(h)).add(t)
                 } else {
                     if (!h.has(t) || a) return !1;
@@ -49,35 +49,35 @@
                 }
             }! function() {
                 let e = s.default.get(d);
-                if (null != e) C = +e.x, I = +e.y;
+                if (null != e) C = +e.x, T = +e.y;
                 else {
                     let e = n("471671").default.windowSize();
-                    C = e.width / 2 - c.width / 2, I = e.height / 2 - c.height / 2
+                    C = e.width / 2 - c.width / 2, T = e.height / 2 - c.height / 2
                 }
             }();
 
             function A() {
-                T = o.default.getStatus() === u.StatusTypes.DND
+                I = o.default.getStatus() === u.StatusTypes.DND
             }
-            class m extends a.default.Store {
+            class p extends a.default.Store {
                 initialize() {
                     this.waitFor(r.default, o.default), this.syncWith([o.default], A)
                 }
                 getIncomingCalls() {
-                    return T ? f : Array.from(_.values())
+                    return I ? f : Array.from(_.values())
                 }
                 getIncomingCallChannelIds() {
-                    return T ? E : h
+                    return I ? E : h
                 }
                 getFirstIncomingCallId() {
-                    return T ? null : h.values().next().value
+                    return I ? null : h.values().next().value
                 }
                 hasIncomingCalls() {
-                    return !T && h.size > 0
+                    return !I && h.size > 0
                 }
             }
-            m.displayName = "IncomingCallStore";
-            var p = new m(i.default, {
+            p.displayName = "IncomingCallStore";
+            var m = new p(i.default, {
                 CALL_CREATE: N,
                 CALL_UPDATE: N,
                 CALL_DELETE: function(e) {
@@ -97,9 +97,9 @@
                         x: t,
                         y: n
                     } = e;
-                    return C = t, I = n, s.default.set(d, {
+                    return C = t, T = n, s.default.set(d, {
                         x: C,
-                        y: I
+                        y: T
                     }), !1
                 },
                 CHANNEL_DELETE: function(e) {

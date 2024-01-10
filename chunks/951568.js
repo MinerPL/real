@@ -19,14 +19,14 @@
                 _ = n("685665"),
                 h = n("42203"),
                 C = n("58608"),
-                I = n("599110"),
-                T = n("49111"),
+                T = n("599110"),
+                I = n("49111"),
                 S = n("994428"),
                 N = n("782340"),
                 A = n("314796");
             (a = s || (s = {})).BOOSTING = "BOOSTING", a.NITRO = "NITRO", a.BASH_OUT = "BASH_OUT", a.GARTIC_PHONE = "GARTIC_PHONE", a.GAME_NIGHT = "GAME_NIGHT", a.KRUNKER_STRIKE = "KRUNKER_STRIKE";
-            let m = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4",
-                p = "https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png",
+            let p = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356018217/Activities_NUX_GL_1.mp4",
+                m = "https://cdn.discordapp.com/attachments/887469171804356628/916446867586416660/activities-video-poster-512.png",
                 g = e => {
                     let {
                         channelId: t,
@@ -47,11 +47,11 @@
                         switch (e) {
                             case "BOOSTING":
                                 return {
-                                    analyticsLocation: f.default.ACTIVITY_COACH_MARK_BOOSTING, analyticsType: "embedded_activity_discovery_tutorial", description: N.default.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION, learnMore: !0, title: N.default.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE, videoPosterUrl: p, videoUrl: m, ctaText: N.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: N.default.Messages.DISMISS
+                                    analyticsLocation: f.default.ACTIVITY_COACH_MARK_BOOSTING, analyticsType: "embedded_activity_discovery_tutorial", description: N.default.Messages.EMBEDDED_ACTIVITY_NOTICE_WTP_DESCRIPTION, learnMore: !0, title: N.default.Messages.EMBEDDED_ACTIVITY_NOTICE_TITLE, videoPosterUrl: m, videoUrl: p, ctaText: N.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: N.default.Messages.DISMISS
                                 };
                             case "NITRO":
                                 return {
-                                    analyticsLocation: f.default.ACTIVITY_COACH_MARK_NITRO, analyticsType: "embedded_activity_nitro_discovery_tutorial", description: N.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION, learnMore: !0, title: N.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE, videoPosterUrl: p, videoUrl: m, ctaText: N.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: N.default.Messages.DISMISS
+                                    analyticsLocation: f.default.ACTIVITY_COACH_MARK_NITRO, analyticsType: "embedded_activity_nitro_discovery_tutorial", description: N.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_DESCRIPTION, learnMore: !0, title: N.default.Messages.EMBEDDED_ACTIVITY_NOTICE_NITRO_TITLE, videoPosterUrl: m, videoUrl: p, ctaText: N.default.Messages.EMBEDDED_ACTIVITIES_TRY_IT_OUT, dismissText: N.default.Messages.DISMISS
                                 };
                             case "BASH_OUT":
                                 return {
@@ -81,12 +81,12 @@
                         AnalyticsLocationProvider: b
                     } = (0, _.default)(s);
                     l.useEffect(() => {
-                        I.default.track(T.AnalyticEvents.TOOLTIP_VIEWED, {
+                        T.default.track(I.AnalyticEvents.TOOLTIP_VIEWED, {
                             type: g
                         })
                     }, [g]);
                     let U = (0, d.useAppContext)(),
-                        G = U === T.AppContext.POPOUT,
+                        G = U === I.AppContext.POPOUT,
                         j = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t), [t]);
                     return (0, i.jsx)(b, {
                         children: (0, i.jsx)("div", {
@@ -139,10 +139,10 @@
                                                     channel: j.isGuildVoice() ? j : void 0,
                                                     guildId: j.guild_id,
                                                     locationObject: {
-                                                        page: T.AnalyticsPages.GUILD_CHANNEL,
-                                                        section: T.AnalyticsSections.GUILD_CHANNEL_LIST,
-                                                        object: T.AnalyticsObjects.ACTIVITIES_COACH_MARK,
-                                                        objectType: T.AnalyticsObjectTypes.ACTIVITY
+                                                        page: I.AnalyticsPages.GUILD_CHANNEL,
+                                                        section: I.AnalyticsSections.GUILD_CHANNEL_LIST,
+                                                        object: I.AnalyticsObjects.ACTIVITIES_COACH_MARK,
+                                                        objectType: I.AnalyticsObjectTypes.ACTIVITY
                                                     },
                                                     openInPopout: G,
                                                     analyticsLocations: x

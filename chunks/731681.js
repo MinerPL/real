@@ -4,7 +4,7 @@
                     return s
                 },
                 default: function() {
-                    return p
+                    return m
                 }
             });
             var a, s, i = n("884691"),
@@ -19,14 +19,14 @@
                 _ = n("702411"),
                 h = n("226511"),
                 C = n("735201"),
-                I = n("957255"),
-                T = n("833781"),
+                T = n("957255"),
+                I = n("833781"),
                 S = n("572182"),
                 N = n("201952"),
                 A = n("427459"),
-                m = n("49111");
+                p = n("49111");
 
-            function p(e) {
+            function m(e) {
                 var t;
                 let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "",
                     {
@@ -37,17 +37,17 @@
                     })),
                     {
                         lastDismissedGracePeriod: s,
-                        isGracePeriodVisible: p
-                    } = (0, l.useStateFromStoresObject)([T.default], () => ({
-                        lastDismissedGracePeriod: T.default.getLastDismissedGracePeriodForGuild(n),
-                        isGracePeriodVisible: T.default.isVisible(n)
+                        isGracePeriodVisible: m
+                    } = (0, l.useStateFromStoresObject)([I.default], () => ({
+                        lastDismissedGracePeriod: I.default.getLastDismissedGracePeriodForGuild(n),
+                        isGracePeriodVisible: I.default.isVisible(n)
                     })),
                     g = (0, l.useStateFromStores)([h.default], () => h.default.isVisible(e)),
                     R = (0, l.useStateFromStores)([N.default], () => N.default.isVisible(e)),
-                    O = (0, l.useStateFromStores)([I.default], () => I.default.can(m.Permissions.ADMINISTRATOR, e)),
-                    L = null != s && Date.now() - s <= m.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
+                    O = (0, l.useStateFromStores)([T.default], () => T.default.can(p.Permissions.ADMINISTRATOR, e)),
+                    L = null != s && Date.now() - s <= p.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
                     v = null != e ? e.premiumSubscriberCount : 0,
-                    M = (0, A.getGuildTierFromAppliedBoostCount)(v, n) !== m.BoostedGuildTiers.NONE,
+                    M = (0, A.getGuildTierFromAppliedBoostCount)(v, n) !== p.BoostedGuildTiers.NONE,
                     P = null != a && Date.now() - a <= 432e5,
                     D = !P && !L && O && M,
                     y = (0, c.useGuildHasLiveChannelNotice)(n),
@@ -58,7 +58,7 @@
                         enableStudyGroup: G
                     } = (0, f.useHubStudyGroupExperiment)(e),
                     j = U.length > 0,
-                    k = G && !(null == e ? void 0 : e.hasFeature(m.GuildFeatures.HUB)),
+                    k = G && !(null == e ? void 0 : e.hasFeature(p.GuildFeatures.HUB)),
                     {
                         canSeeUpcomingEventsNotices: w
                     } = d.default.useExperiment({
@@ -78,7 +78,7 @@
                             window.clearTimeout(e)
                         }
                     }, [n, D]), g) return 0;
-                if (p) return 1;
+                if (m) return 1;
                 if (R) return 2;
                 else if (y || w && null != F) return 3;
                 else if (x) return 4;

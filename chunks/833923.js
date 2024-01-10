@@ -78,18 +78,18 @@
                             C.addColorStop(0, "rgba(".concat(e, ", ").concat(t, ", ").concat(n, ", 0)"))
                         }
                         C.addColorStop(1, this.fillColor), f.fillStyle = C;
-                        let I = s.length >= o ? o : s.length;
+                        let T = s.length >= o ? o : s.length;
                         f.setTransform(1, 0, 0, -1, 0, a.height), f.clearRect(0, 0, a.width, a.height), f.translate(0, .5 * f.lineWidth);
-                        let T = Math.floor(a.width / (I - 3)),
-                            S = .5 * T;
-                        f.translate(T - T * E, 0), f.beginPath();
-                        let N = -T;
+                        let I = Math.floor(a.width / (T - 3)),
+                            S = .5 * I;
+                        f.translate(I - I * E, 0), f.beginPath();
+                        let N = -I;
                         s.forEach((e, a) => {
                             t = {
                                 x: N,
                                 y: h * e / _
-                            }, 0 === a ? f.moveTo(t.x, t.y) : f.bezierCurveTo(n.x + S, n.y, t.x - S, t.y, t.x, t.y), n = t, N += T
-                        }), f.stroke(), f.lineTo(N - T, 0), f.lineTo(0, 0), f.fill(), d && E < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation))
+                            }, 0 === a ? f.moveTo(t.x, t.y) : f.bezierCurveTo(n.x + S, n.y, t.x - S, t.y, t.x, t.y), n = t, N += I
+                        }), f.stroke(), f.lineTo(N - I, 0), f.lineTo(0, 0), f.fill(), d && E < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation))
                     }
                 }
             }

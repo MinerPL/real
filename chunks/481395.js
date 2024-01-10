@@ -18,13 +18,13 @@
                 _ = n("42887"),
                 h = n("385649"),
                 C = n("27618"),
-                I = n("18494"),
-                T = n("282109"),
+                T = n("18494"),
+                I = n("282109"),
                 S = n("697218"),
                 N = n("158998"),
                 A = n("76629"),
-                m = n("981957"),
-                p = n("357046"),
+                p = n("981957"),
+                m = n("357046"),
                 g = n("49111"),
                 R = n("782340");
             let O = [],
@@ -110,9 +110,9 @@
                     optimistic: A
                 } = e;
                 if (A || _.default.isSelfDeaf()) return !1;
-                let m = c.default.getChannel(f);
-                if (null == m) return !1;
-                let R = I.default.getChannelId(),
+                let p = c.default.getChannel(f);
+                if (null == p) return !1;
+                let R = T.default.getChannelId(),
                     L = d.default.getCurrentSidebarChannelId(R),
                     v = f === R || f === L,
                     M = o.EnableTTSCommand.getSetting() && S.tts && v,
@@ -121,13 +121,13 @@
                 if ((M || y) && ((null === (n = S.author) || void 0 === n ? void 0 : n.id) == null || !C.default.isBlocked(S.author.id))) {
                     if (O.indexOf(S.id) >= 0) return !1;
                     O.unshift(S.id) > 10 && O.pop();
-                    let e = m.getGuildId();
-                    if (null != e && T.default.getMutedChannels(e).has(f)) return !1;
+                    let e = p.getGuildId();
+                    if (null != e && I.default.getMutedChannels(e).has(f)) return !1;
                     let t = null !== (l = null !== (i = E.default.getNick(e, null === (a = S.author) || void 0 === a ? void 0 : a.id)) && void 0 !== i ? i : N.default.getName(S.author)) && void 0 !== l ? l : "",
                         n = S.type === g.MessageTypes.REPLY ? null === (s = S.referenced_message) || void 0 === s ? void 0 : s.author : null,
                         o = null != n ? null !== (r = E.default.getNick(e, null == n ? void 0 : n.id)) && void 0 !== r ? r : N.default.getName(n) : null,
                         u = D(S.content, t, e, o);
-                    b(u, !1, m.id, S.id, p.MAX_TTS_LENGTH)
+                    b(u, !1, p.id, S.id, m.MAX_TTS_LENGTH)
                 }
                 return !1
             }
@@ -136,7 +136,7 @@
                 let {
                     id: t,
                     channelId: n
-                } = e, a = m.default.currentMessage;
+                } = e, a = p.default.currentMessage;
                 return null != a && t === a.messageId && n === a.channelId && ((0, A.stopSpeaking)(), !0)
             }
 

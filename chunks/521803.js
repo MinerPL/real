@@ -1,50 +1,43 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return h
                 }
             }), n("424973");
             var a = n("37983");
             n("884691");
             var l = n("446674"),
                 s = n("151426"),
-                i = n("343885"),
-                r = n("980215"),
-                o = n("28561"),
-                u = n("384997"),
-                d = n("305961"),
-                c = n("449008"),
-                f = n("994428");
+                i = n("980215"),
+                r = n("28561"),
+                o = n("384997"),
+                u = n("305961"),
+                d = n("449008"),
+                c = n("994428");
 
-            function h(e) {
+            function f(e) {
                 e.stopPropagation()
             }
-            var p = function(e) {
-                var t;
+            var h = function(e) {
                 let {
-                    channel: n
-                } = e, p = (0, l.useStateFromStores)([d.default], () => d.default.getGuild(n.guild_id)), m = (0, r.useClydeProfilesEnabled)(p, !0, "member_list_notices");
-                i.default.useExperiment({
-                    guildId: null !== (t = null == p ? void 0 : p.id) && void 0 !== t ? t : "",
-                    location: "member_list_notices"
-                });
-                let E = [];
-                return m && (0, c.isNotNullish)(n.guild_id) && E.push(s.DismissibleContent.CLYDE_AI_PERSONALITIES_NUX_MODAL), (0, a.jsx)(u.default, {
-                    contentTypes: E,
-                    groupName: f.DismissibleContentGroupName.MEMBER_LIST_HEADER,
+                    channel: t
+                } = e, n = (0, l.useStateFromStores)([u.default], () => u.default.getGuild(t.guild_id)), h = (0, i.useClydeProfilesEnabled)(n, !0, "member_list_notices"), p = [];
+                return h && (0, d.isNotNullish)(t.guild_id) && p.push(s.DismissibleContent.CLYDE_AI_PERSONALITIES_NUX_MODAL), (0, a.jsx)(o.default, {
+                    contentTypes: p,
+                    groupName: c.DismissibleContentGroupName.MEMBER_LIST_HEADER,
                     children: e => {
                         let {
-                            visibleContent: t,
+                            visibleContent: n,
                             markAsDismissed: l
                         } = e, i = (() => {
-                            if (t === s.DismissibleContent.CLYDE_AI_PERSONALITIES_NUX_MODAL) return (0, a.jsx)(o.default, {
-                                channel: n,
-                                markAsDismissed: () => l(f.ContentDismissActionType.UNKNOWN)
+                            if (n === s.DismissibleContent.CLYDE_AI_PERSONALITIES_NUX_MODAL) return (0, a.jsx)(r.default, {
+                                channel: t,
+                                markAsDismissed: () => l(c.ContentDismissActionType.UNKNOWN)
                             });
                             return null
                         })();
                         return (0, a.jsx)("div", {
-                            onContextMenu: h,
+                            onContextMenu: f,
                             children: i
                         })
                     }

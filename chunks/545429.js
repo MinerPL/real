@@ -19,7 +19,7 @@
                 h = n("697218"),
                 C = n("49111");
 
-            function I(e) {
+            function T(e) {
                 let t = h.default.getUser(e);
                 return {
                     user: t,
@@ -27,7 +27,7 @@
                 }
             }
 
-            function T(e) {
+            function I(e) {
                 return {
                     status: f.default.getStatus(e),
                     isMobile: f.default.isMobileOnline(e),
@@ -60,16 +60,16 @@
                             key: t,
                             type: e,
                             nickname: _.default.getNickname(t),
-                            ...I(t),
                             ...T(t),
+                            ...I(t),
                             ...S(t)
                         })),
                         t = s.map(u.default.getSuggestions(), e => new N({
                             key: e.key,
                             type: 99,
                             nickname: e.name,
-                            ...I(e.key),
                             ...T(e.key),
+                            ...I(e.key),
                             ...S(e.key)
                         }));
                     return new A(s.concat(e, t))
@@ -128,8 +128,8 @@
                     this._rows = e
                 }
             }
-            let m = !0,
-                p = !1,
+            let p = !0,
+                m = !1,
                 g = C.FriendsSections.ONLINE,
                 R = new A,
                 O = !0,
@@ -137,11 +137,11 @@
 
             function v() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                m && (e || g !== C.FriendsSections.ONLINE && g !== C.FriendsSections.ADD_FRIEND) && !p && (m = !1, p = !0, r.default.fetchRelationships())
+                p && (e || g !== C.FriendsSections.ONLINE && g !== C.FriendsSections.ADD_FRIEND) && !m && (p = !1, m = !0, r.default.fetchRelationships())
             }
 
             function M() {
-                if (m = !0, O ? p = !1 : v(), R = R.reset(), L) return;
+                if (p = !0, O ? m = !1 : v(), R = R.reset(), L) return;
                 let e = R.getRelationshipCounts();
                 g = 0 === e[C.RelationshipTypes.FRIEND] ? 0 !== e[C.RelationshipTypes.PENDING_INCOMING] ? C.FriendsSections.PENDING : C.FriendsSections.ADD_FRIEND : C.FriendsSections.ONLINE
             }
@@ -157,11 +157,11 @@
             }
             class y extends i.default.Store {
                 initialize() {
-                    this.waitFor(_.default, f.default, h.default, E.default, c.default, d.default, u.default), this.syncWith([_.default], P), this.syncWith([u.default], P), this.syncWith([h.default], D(I)), this.syncWith([f.default, d.default], D(T)), M()
+                    this.waitFor(_.default, f.default, h.default, E.default, c.default, d.default, u.default), this.syncWith([_.default], P), this.syncWith([u.default], P), this.syncWith([h.default], D(T)), this.syncWith([f.default, d.default], D(I)), M()
                 }
                 getState() {
                     return {
-                        fetching: p,
+                        fetching: m,
                         section: g,
                         pendingCount: _.default.getPendingCount(),
                         rows: R
@@ -183,10 +183,10 @@
                     return O = null != t, P(), !O
                 },
                 LOAD_RELATIONSHIPS_SUCCESS: function() {
-                    p = !1
+                    m = !1
                 },
                 LOAD_RELATIONSHIPS_FAILURE: function() {
-                    m = !0, p = !0
+                    p = !0, m = !0
                 },
                 DRAWER_SELECT_TAB: function(e) {
                     let {

@@ -18,8 +18,8 @@
                 _ = n("404008"),
                 h = n("861309"),
                 C = n("578287"),
-                I = n("716724"),
-                T = n("613652"),
+                T = n("716724"),
+                I = n("613652"),
                 S = n("492249"),
                 N = n("49111"),
                 A = {
@@ -79,7 +79,7 @@
                     [N.RPCCommands.GET_CHANNEL_PERMISSIONS]: {
                         scope: N.OAuth2Scopes.GUILDS_MEMBERS_READ,
                         handler(e) {
-                            let t = (0, T.default)();
+                            let t = (0, I.default)();
                             if (null == t) throw new h.default(S.RPCErrors.INVALID_CHANNEL, "Invalid channel");
                             return {
                                 permissions: c.default.computePermissions(t)
@@ -88,7 +88,7 @@
                     },
                     [N.RPCCommands.SELECT_VOICE_CHANNEL]: {
                         scope: N.OAuth2Scopes.RPC,
-                        validation: e => (0, I.default)(e).required().keys({
+                        validation: e => (0, T.default)(e).required().keys({
                             channel_id: e.string().allow(null),
                             timeout: e.number().min(0).max(60),
                             force: e.boolean(),
@@ -102,12 +102,12 @@
                                     channel_id: a,
                                     timeout: s = 0,
                                     force: i = !1,
-                                    navigate: I = !1
+                                    navigate: T = !1
                                 }
                             } = e;
                             if (!a) return l.default.selectVoiceChannel(null), null;
-                            let T = E.default.getVoiceChannelId();
-                            if (null != T && T !== a && !1 === i) throw new h.default(S.RPCErrors.SELECT_VOICE_FORCE_REQUIRED, "User is already joined to a voice channel.");
+                            let I = E.default.getVoiceChannelId();
+                            if (null != I && I !== a && !1 === i) throw new h.default(S.RPCErrors.SELECT_VOICE_FORCE_REQUIRED, "User is already joined to a voice channel.");
                             return t.storeWait(n, () => u.default.getChannel(a), s).catch(() => {
                                 throw new h.default(S.RPCErrors.SELECT_CHANNEL_TIMED_OUT, "Request to select voice channel timed out.")
                             }).then(e => {
@@ -120,7 +120,7 @@
                                     if ((0, _.isChannelFull)(t, f.default, d.default)) throw new h.default(S.RPCErrors.INVALID_CHANNEL, "Channel is full");
                                     if (!c.default.can(N.Permissions.CONNECT, t)) throw new h.default(S.RPCErrors.INVALID_PERMISSIONS, "Connect permission required to join channel")
                                 }
-                                return l.default.selectVoiceChannel(t.id), I && (0, r.replaceWith)(N.Routes.CHANNEL(t.guild_id, t.id)), n
+                                return l.default.selectVoiceChannel(t.id), T && (0, r.replaceWith)(N.Routes.CHANNEL(t.guild_id, t.id)), n
                             })
                         }
                     },
@@ -137,7 +137,7 @@
                     },
                     [N.RPCCommands.SELECT_TEXT_CHANNEL]: {
                         scope: N.OAuth2Scopes.RPC,
-                        validation: e => (0, I.default)(e).required().keys({
+                        validation: e => (0, T.default)(e).required().keys({
                             channel_id: e.string().allow(null),
                             timeout: e.number().min(0).max(60)
                         }),

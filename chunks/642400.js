@@ -18,8 +18,8 @@
                 _ = n("782340"),
                 h = n("291273"),
                 C = n("926622");
-            let I = d.default.getArticleURL(f.HelpdeskArticles.VERIFICATION_FAQ);
-            class T extends s.PureComponent {
+            let T = d.default.getArticleURL(f.HelpdeskArticles.VERIFICATION_FAQ);
+            class I extends s.PureComponent {
                 renderFields() {
                     let {
                         types: e,
@@ -58,7 +58,7 @@
                             }), (0, a.jsx)("div", {
                                 className: l(h.body, C.marginTop4, C.marginBottom20),
                                 children: _.default.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({
-                                    helpCenterURL: I
+                                    helpCenterURL: T
                                 })
                             }), (0, a.jsx)(c.default, {
                                 grow: 0,
@@ -98,9 +98,9 @@
                     }
                 }
             }
-            T.defaultProps = {
+            I.defaultProps = {
                 types: [f.VerificationTypes.CAPTCHA],
                 onCaptchaVerify: f.NOOP,
                 onLogout: f.NOOP
             };
-            var S = T
+            var S = I

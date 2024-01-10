@@ -18,13 +18,13 @@
                 _ = n("69927"),
                 h = n("449004"),
                 C = n("539938"),
-                I = n("718091"),
-                T = n("698343"),
+                T = n("718091"),
+                I = n("698343"),
                 S = n("970366"),
                 N = n("161778"),
                 A = n("545429"),
-                m = n("476765"),
-                p = n("564875"),
+                p = n("476765"),
+                m = n("564875"),
                 g = n("956089"),
                 R = n("439932"),
                 O = n("161011"),
@@ -37,7 +37,7 @@
             function y() {
                 return (0, a.jsxs)("div", {
                     className: D.inviteToolbar,
-                    children: [(0, a.jsx)(I.default, {
+                    children: [(0, a.jsx)(T.default, {
                         tooltip: P.default.Messages.NEW_GROUP_DM
                     }), (0, a.jsx)(C.default.Divider, {})]
                 })
@@ -59,27 +59,27 @@
                 }), s.useEffect(() => {
                     null != t && f.default.setInitialSection(t)
                 }, [t]);
-                let I = (0, u.useStateFromStores)([N.default], () => N.default.theme),
+                let T = (0, u.useStateFromStores)([N.default], () => N.default.theme),
                     {
                         section: x,
                         pendingCount: b
                     } = (0, u.useStateFromStoresObject)([A.default], () => A.default.getState()),
                     U = (0, u.useStateFromStoresObject)([h.default], () => h.default.getSuggestionCount()),
-                    G = (0, m.useUID)(),
-                    j = (0, m.useUID)();
+                    G = (0, p.useUID)(),
+                    j = (0, p.useUID)();
                 return (0, a.jsxs)("main", {
                     className: D.container,
                     "aria-label": P.default.Messages.FRIENDS,
                     children: [(0, a.jsx)(_.AppPageTitle, {
                         location: P.default.Messages.FRIENDS
                     }), (0, a.jsxs)(C.default, {
-                        className: (0, R.getThemeClass)(I),
+                        className: (0, R.getThemeClass)(T),
                         toolbar: (0, a.jsx)(y, {}),
                         scrollable: o.isMobile,
                         role: "navigation",
                         "aria-labelledby": G,
                         children: [(0, a.jsx)(C.default.Icon, {
-                            icon: p.default,
+                            icon: m.default,
                             "aria-hidden": !0
                         }), (0, a.jsx)(C.default.Title, {
                             id: G,
@@ -147,7 +147,7 @@
                             })
                         }), (0, a.jsx)("div", {
                             className: D.nowPlayingColumn,
-                            children: (0, a.jsx)(T.default, {})
+                            children: (0, a.jsx)(I.default, {})
                         })]
                     })]
                 })

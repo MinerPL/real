@@ -18,13 +18,13 @@
                 _ = n("27618"),
                 h = n("545429"),
                 C = n("471671"),
-                I = n("810567"),
-                T = n("791878"),
+                T = n("810567"),
+                I = n("791878"),
                 S = n("637824"),
                 N = n("146378"),
                 A = n("709410"),
-                m = n("411676"),
-                p = n("86959"),
+                p = n("411676"),
+                m = n("86959"),
                 g = n("748753"),
                 R = n("144521"),
                 O = n("59678"),
@@ -38,7 +38,7 @@
                     } = e, {
                         rows: i,
                         section: P
-                    } = (0, r.useStateFromStoresObject)([h.default], () => h.default.getState()), D = (0, r.useStateFromStores)([C.default], () => C.default.isFocused()), y = (0, r.useStateFromStores)([_.default], () => _.default.getRelationshipCount()), x = (0, T.useIsClearIncomingFriendRequestsEnabled)(), [b, U] = s.useState(() => {
+                    } = (0, r.useStateFromStoresObject)([h.default], () => h.default.getState()), D = (0, r.useStateFromStores)([C.default], () => C.default.isFocused()), y = (0, r.useStateFromStores)([_.default], () => _.default.getRelationshipCount()), x = (0, I.useIsClearIncomingFriendRequestsEnabled)(), [b, U] = s.useState(() => {
                         let e = {};
                         for (let t of Object.values(L.FriendsSections)) e[t] = "";
                         return e
@@ -68,12 +68,12 @@
                         H = B && x && F >= O.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
                     return (0, a.jsxs)(c.default, {
                         section: L.AnalyticsSections.FRIENDS_LIST,
-                        children: [(0, a.jsx)(I.default, {
+                        children: [(0, a.jsx)(T.default, {
                             className: l(M.searchBar, w ? M.searchEmptyState : null),
                             query: b[t],
                             onChange: G,
                             onClear: j,
-                            size: I.default.Sizes.MEDIUM
+                            size: T.default.Sizes.MEDIUM
                         }), t === L.FriendsSections.ONLINE && "" === b[t] && (0, a.jsx)(f.default, {}), (0, a.jsxs)("div", {
                             className: M.sectionTitle,
                             children: [(0, a.jsx)(g.default, {
@@ -118,7 +118,7 @@
                             children: (0, a.jsx)(A.default, {
                                 type: A.FriendsSearchStatus.SECTION_NO_RESULTS
                             }, P)
-                        }) : (0, a.jsx)(p.default, {
+                        }) : (0, a.jsx)(m.default, {
                             relationshipCount: y,
                             statusSections: [k],
                             renderRow: function(e) {
@@ -129,7 +129,7 @@
                                             isFocused: D
                                         });
                                     case L.FriendsSections.PENDING:
-                                        return (0, a.jsx)(m.default, {
+                                        return (0, a.jsx)(p.default, {
                                             ...e,
                                             isFocused: D
                                         });

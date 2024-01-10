@@ -27,8 +27,8 @@
                     shiftId: n,
                     onSelect: h,
                     closePopout: C,
-                    "aria-label": I
-                } = e, T = (0, r.default)({
+                    "aria-label": T
+                } = e, I = (0, r.default)({
                     id: t.id,
                     label: _.default.Messages.COPY_ID_GUILD,
                     shiftId: n,
@@ -39,26 +39,26 @@
                     location: "0e35b9_1"
                 }, {
                     autoTrackExposure: !1
-                }), m = () => {
+                }), p = () => {
                     (0, l.closeContextMenu)(), null == C || C()
                 };
                 return (0, a.jsxs)(i.Menu, {
                     onSelect: h,
                     navId: "guild-discovery-context-menu",
-                    "aria-label": null != I ? I : _.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+                    "aria-label": null != T ? T : _.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
                     onClose: l.closeContextMenu,
                     children: [(0, a.jsx)(i.MenuGroup, {
                         children: !N && A ? (0, a.jsx)(i.MenuItem, {
                             id: "report-guild-discovery-listing",
                             label: _.default.Messages.REPORT_SERVER_NO_NAME,
                             action: () => {
-                                (0, o.showReportModalForDiscoverableGuild)(t), m()
+                                (0, o.showReportModalForDiscoverableGuild)(t), p()
                             },
                             icon: c.default,
                             color: "danger"
                         }) : null
                     }), (0, a.jsx)(i.MenuGroup, {
-                        children: T
+                        children: I
                     })]
                 })
             }

@@ -19,13 +19,13 @@
                 _ = n("587984"),
                 h = n("292687"),
                 C = n("42203"),
-                I = n("52028"),
-                T = n("101125"),
+                T = n("52028"),
+                I = n("101125"),
                 S = n("471671"),
                 N = n("568734"),
                 A = n("449008"),
-                m = n("253981"),
-                p = n("563680"),
+                p = n("253981"),
+                m = n("563680"),
                 g = n("861309"),
                 R = n("578287"),
                 O = n("716724"),
@@ -36,9 +36,9 @@
                 D = n("49111");
             async function y(e, t, n, a) {
                 let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-                    i = I.default.getApplicationActivity(t);
+                    i = T.default.getApplicationActivity(t);
                 if (null == i || null == i.secrets || !(0, R.validateActivityInvite)(a, i.party, i.secrets)) throw new g.default(P.RPCErrors.NO_ELIGIBLE_ACTIVITY, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
-                let o = (0, f.default)(i, T.default);
+                let o = (0, f.default)(i, I.default);
                 if (o) {
                     let {
                         lock: t
@@ -158,7 +158,7 @@
                         } = (0, v.validateOpenInviteDialog)(), r = h.default.getWindow(D.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
                         (null == r ? void 0 : r.closed) && (r = null);
                         let o = null != r ? D.AppContext.POPOUT : D.AppContext.APP;
-                        (0, p.exitFullScreen)({}, null == r ? void 0 : r.document), (0, i.openModalLazy)(async () => {
+                        (0, m.exitFullScreen)({}, null == r ? void 0 : r.document), (0, i.openModalLazy)(async () => {
                             let {
                                 default: e
                             } = await n.el("310688").then(n.bind(n, "310688"));
@@ -235,7 +235,7 @@
                         if (!i) throw new g.default(P.RPCErrors.INVALID_COMMAND, "This application cannot access this API");
                         let l = (0, L.default)();
                         if (null == l) throw new g.default(P.RPCErrors.INVALID_COMMAND, "No channel found");
-                        if (!m.default.isDiscordCdnUrl(a)) throw new g.default(P.RPCErrors.INVALID_PAYLOAD, "mediaUrl must be a Discord CDN url");
+                        if (!p.default.isDiscordCdnUrl(a)) throw new g.default(P.RPCErrors.INVALID_PAYLOAD, "mediaUrl must be a Discord CDN url");
                         (0, _.openActivityShareMomentModal)({
                             applicationId: s,
                             channelId: l.id,

@@ -18,13 +18,13 @@
                 _ = n("272030"),
                 h = n("190017"),
                 C = n("827825"),
-                I = n("86621"),
-                T = n("737960"),
+                T = n("86621"),
+                I = n("737960"),
                 S = n("299285"),
                 N = n("449918"),
                 A = n("161778"),
-                m = n("686470"),
-                p = n("535974"),
+                p = n("686470"),
+                m = n("535974"),
                 g = n("352326"),
                 R = n("471671"),
                 O = n("145131"),
@@ -376,7 +376,7 @@
                 }
                 renderProgressPatching() {
                     return (0, a.jsx)(G.default, {
-                        getHistoricalTotalBytes: p.default.getHistoricalTotalBytesWritten,
+                        getHistoricalTotalBytes: m.default.getHistoricalTotalBytesWritten,
                         updateInterval: 5e3,
                         children: this.renderProgressPatchingBody
                     })
@@ -573,13 +573,13 @@
                             children: [(0, a.jsx)(j.default, {
                                 className: l(F.headerCell, F.networkProgress),
                                 title: w.default.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
-                                getHistoricalTotalBytes: p.default.getHistoricalTotalBytesDownloaded,
+                                getHistoricalTotalBytes: m.default.getHistoricalTotalBytesDownloaded,
                                 color: k.Color.GREEN_360,
                                 animate: s
                             }), (0, a.jsx)(j.default, {
                                 className: l(F.headerCell, F.diskProgress),
                                 title: w.default.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
-                                getHistoricalTotalBytes: p.default.getHistoricalTotalBytesWritten,
+                                getHistoricalTotalBytes: m.default.getHistoricalTotalBytesWritten,
                                 color: k.Color.BLUE_345,
                                 animate: s
                             })]
@@ -639,19 +639,19 @@
                         branchId: r,
                         state: u,
                         application: o,
-                        libraryApplication: m.default.getLibraryApplication(l, r),
+                        libraryApplication: p.default.getLibraryApplication(l, r),
                         finished: t,
                         index: i
                     }), e
                 }, [])
             }
-            var ea = (0, T.default)(u.default.connectStores([S.default, p.default, g.default, A.default, R.default], () => {
-                let e = en(g.default.activeItems, !1, S.default, p.default),
-                    t = en(g.default.finishedItems, !0, S.default, p.default);
+            var ea = (0, I.default)(u.default.connectStores([S.default, m.default, g.default, A.default, R.default], () => {
+                let e = en(g.default.activeItems, !1, S.default, m.default),
+                    t = en(g.default.finishedItems, !0, S.default, m.default);
                 return {
                     applications: [...e, ...t],
                     paused: g.default.paused,
                     isFocused: R.default.isFocused(),
                     theme: A.default.theme
                 }
-            })((0, I.default)(et)))
+            })((0, T.default)(et)))

@@ -25,15 +25,15 @@
                 A = n("377253"),
                 T = n("957255"),
                 M = n("660478"),
-                N = n("462495"),
-                I = n("697218"),
+                I = n("462495"),
+                N = n("697218"),
                 L = n("505684"),
                 v = n("378765"),
                 R = n("70845"),
                 x = n("51714"),
                 y = n("88243"),
-                D = n("31511"),
-                O = n("120379"),
+                O = n("31511"),
+                D = n("120379"),
                 j = n("221068"),
                 b = n("49111"),
                 P = n("782340"),
@@ -52,8 +52,8 @@
                     channelStream: _,
                     uploads: A,
                     hasUnreads: M,
-                    editingMessageId: N,
-                    fontSize: I,
+                    editingMessageId: I,
+                    fontSize: N,
                     keyboardModeEnabled: L,
                     filterAfterTimestamp: R,
                     showingQuarantineBanner: x
@@ -62,28 +62,28 @@
                     messageGroups: 30,
                     groupRange: 4,
                     attachments: 8,
-                    fontSize: I,
+                    fontSize: N,
                     groupSpacing: c
                 }) : (0, y.generateMessageSpecs)({
                     compact: !1,
                     messageGroups: 26,
                     groupRange: 4,
                     attachments: 8,
-                    fontSize: I,
+                    fontSize: N,
                     groupSpacing: c
-                }), [S, I, c]), G = (0, O.default)({
+                }), [S, N, c]), G = (0, D.default)({
                     messages: m,
                     channel: C,
                     compact: S,
                     hasUnreads: M,
-                    focusId: N,
+                    focusId: I,
                     placeholderHeight: k.totalHeight,
                     canLoadMore: null == R,
                     handleScrollToBottom: a.useCallback(() => H(!0), [H]),
                     handleScrollFromBottom: a.useCallback(() => H(!1), [H])
-                }), w = (0, D.default)({
+                }), w = (0, O.default)({
                     scrollerRef: G.ref,
-                    isEditing: null != N,
+                    isEditing: null != I,
                     keyboardModeEnabled: L,
                     hasMoreAfter: m.hasMoreAfter
                 });
@@ -225,8 +225,8 @@
                 }(t), {
                     messageGroupSpacing: v,
                     fontSize: y,
-                    messageDisplayCompact: D,
-                    renderSpoilers: O,
+                    messageDisplayCompact: O,
+                    renderSpoilers: D,
                     keyboardModeEnabled: j
                 } = function() {
                     let e = E.MessageDisplayCompact.useSetting(),
@@ -273,7 +273,7 @@
                         }, {
                             autoTrackExposure: !1
                         }),
-                        r = null !== (n = null === (t = I.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(b.UserFlags.SPAMMER)) && void 0 !== n && n,
+                        r = null !== (n = null === (t = N.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(b.UserFlags.SPAMMER)) && void 0 !== n && n,
                         u = (0, c.useChannelSummariesExperiment)(e),
                         d = (0, h.default)("use_topic_dividers_in_chat"),
                         f = (0, o.useStateFromStoresArray)([m.default], () => {
@@ -301,17 +301,17 @@
                     }
                 }(t);
                 return (0, s.jsx)(L.ObscuredDisplayContext.Provider, {
-                    value: (0, R.default)(O, u),
+                    value: (0, R.default)(D, u),
                     children: (0, s.jsx)(F, {
                         ...r,
                         messageGroupSpacing: v,
                         showNewMessagesBar: !0,
                         channel: t,
-                        messageDisplayCompact: !i && (l || D),
+                        messageDisplayCompact: !i && (l || O),
                         messages: P,
                         channelStream: U,
                         permissionVersion: d,
-                        uploads: (0, o.useStateFromStores)([N.default], () => N.default.getFiles(t.id), [t]),
+                        uploads: (0, o.useStateFromStores)([I.default], () => I.default.getFiles(t.id), [t]),
                         unreadCount: (0, o.useStateFromStores)([M.default], () => M.default.getUnreadCount(t.id), [t]),
                         hasUnreads: null != H,
                         canChat: p,

@@ -22,7 +22,7 @@
                     user: t,
                     key: n,
                     isFocused: h
-                } = e, C = s.useContext(o.AnalyticsContext), I = e => {
+                } = e, C = s.useContext(o.AnalyticsContext), T = e => {
                     e.stopPropagation(), i.default.unblockUser(t.id, {
                         location: "Friends"
                     })
@@ -45,7 +45,7 @@
                             icon: r.default,
                             actionType: u.default.ActionTypes.DENY,
                             tooltip: f.default.Messages.UNBLOCK,
-                            onClick: I,
+                            onClick: T,
                             shouldHighlight: e
                         })]
                     })

@@ -36,9 +36,9 @@
                 y = (e, t, n, s) => {
                     let r;
                     let y = (0, u.useStateFromStores)([g.default], () => g.default.isLurking(t)),
-                        b = (0, C.useShowMemberVerificationGate)(t),
-                        P = (0, u.useStateFromStores)([E.default], () => null != t ? E.default.getRequest(t) : null),
-                        D = (null == P ? void 0 : P.applicationStatus) === m.GuildJoinRequestApplicationStatuses.SUBMITTED,
+                        P = (0, C.useShowMemberVerificationGate)(t),
+                        b = (0, u.useStateFromStores)([E.default], () => null != t ? E.default.getRequest(t) : null),
+                        D = (null == b ? void 0 : b.applicationStatus) === m.GuildJoinRequestApplicationStatuses.SUBMITTED,
                         U = null == e ? void 0 : e.subscription_plans[0],
                         w = null == U ? void 0 : U.id,
                         F = (null == e ? void 0 : e.published) === !0,
@@ -65,7 +65,7 @@
                             analyticsLocations: Q
                         } = (0, h.default)(),
                         $ = (null == B ? void 0 : B.paymentGateway) === L.PaymentGateways.APPLE_PARTNER;
-                    D ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : y && !b ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : z === w ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({
+                    D ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : y && !P ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : z === w ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({
                         changeDate: null != B ? o(B.currentPeriodEnd).format("MMM DD, YYYY") : ""
                     }) : K ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION : Z ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL : $ && (r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
                     let ee = (0, f.default)(j.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY);
@@ -123,7 +123,7 @@
                             (0, p.openMemberVerificationModal)(t)
                         }, [t]);
                     return {
-                        openModal: b ? en : et,
+                        openModal: P ? en : et,
                         canOpenModal: !y && null != V && G && !D && !K && !Z && !$,
                         cannotOpenReason: r,
                         isCheckingTrialEligibility: X

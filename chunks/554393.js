@@ -25,15 +25,15 @@
                 A = n("263024"),
                 T = n("42203"),
                 M = n("660279"),
-                N = n("36694"),
-                I = n("83900"),
+                I = n("36694"),
+                N = n("83900"),
                 L = n("404008"),
                 v = n("680986"),
                 R = n("612278"),
                 x = n("867965"),
                 y = n("688169"),
-                D = n("49111"),
-                O = n("782340"),
+                O = n("49111"),
+                D = n("782340"),
                 j = n("827152"),
                 b = n("550244");
 
@@ -85,11 +85,11 @@
                         (0, x.trackForumPostLinkCopied)({
                             postId: W.id,
                             location: {
-                                section: D.AnalyticsSections.CHANNEL_HEADER
+                                section: O.AnalyticsSections.CHANNEL_HEADER
                             }
                         }), (0, r.copy)((0, L.getChannelLinkToCopy)(W, $)), V(!0)
                     },
-                    eo = Z ? N.default : M.default;
+                    eo = Z ? I.default : M.default;
                 return (0, s.jsxs)(s.Fragment, {
                     children: [(0, s.jsxs)("div", {
                         className: i(j.container, {
@@ -137,12 +137,12 @@
                                 useChatFontScaling: !1,
                                 className: j.addReactButton,
                                 isForumToolbar: !0,
-                                children: !el && O.default.Messages.FORUM_REACT_TO_POST
+                                children: !el && D.default.Messages.FORUM_REACT_TO_POST
                             })]
                         }), (0, s.jsxs)("div", {
                             className: j.buttons,
                             children: [(0, s.jsx)(u.Tooltip, {
-                                text: O.default.Messages.FORUM_FOLLOW_TOOLTIP,
+                                text: D.default.Messages.FORUM_FOLLOW_TOOLTIP,
                                 children: e => (0, s.jsxs)(u.Button, {
                                     ...e,
                                     look: u.Button.Looks.BLANK,
@@ -155,10 +155,10 @@
                                     children: [(0, s.jsx)(eo, {
                                         width: 16,
                                         height: 16
-                                    }), Z ? O.default.Messages.FORUM_FOLLOWING_POST : O.default.Messages.FOLLOW]
+                                    }), Z ? D.default.Messages.FORUM_FOLLOWING_POST : D.default.Messages.FOLLOW]
                                 })
                             }), (0, s.jsx)(u.Tooltip, {
-                                text: O.default.Messages.COPY_LINK,
+                                text: D.default.Messages.COPY_LINK,
                                 children: e => (0, s.jsxs)(u.Button, {
                                     ...e,
                                     look: u.Button.Looks.BLANK,
@@ -166,13 +166,13 @@
                                     onClick: er,
                                     className: j.button,
                                     innerClassName: j.buttonInner,
-                                    children: [B ? (0, s.jsx)(N.default, {
+                                    children: [B ? (0, s.jsx)(I.default, {
                                         width: 16,
                                         height: 16
-                                    }) : (0, s.jsx)(I.default, {
+                                    }) : (0, s.jsx)(N.default, {
                                         width: 16,
                                         height: 16
-                                    }), B ? O.default.Messages.COPIED : null]
+                                    }), B ? D.default.Messages.COPIED : null]
                                 })
                             })]
                         })]

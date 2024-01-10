@@ -21,13 +21,13 @@
                 _ = n("485328"),
                 h = n("428958"),
                 C = n("878720"),
-                I = n("161778"),
-                T = n("330387"),
+                T = n("161778"),
+                I = n("330387"),
                 S = n("642400"),
                 N = n("668596"),
                 A = n("892313"),
-                m = n("126667"),
-                p = n("601745"),
+                p = n("126667"),
+                m = n("601745"),
                 g = n("49111"),
                 R = n("482931"),
                 O = n("782340");
@@ -37,9 +37,9 @@
                 let {
                     action: e,
                     theme: t
-                } = (0, l.useStateFromStoresObject)([T.default, I.default], () => ({
-                    action: T.default.getAction(),
-                    theme: I.default.theme
+                } = (0, l.useStateFromStoresObject)([I.default, T.default], () => ({
+                    action: I.default.getAction(),
+                    theme: T.default.theme
                 })), n = A.default.getVerificationTypes(e), [v, M] = s.useState(0), P = (0, f.default)(n);
                 (0, h.default)({
                     type: i.ImpressionTypes.MODAL,
@@ -50,7 +50,7 @@
                     }
                 }, {}, [n.toString()]);
                 let D = () => {
-                    (0, c.accountDetailsInit)(), (0, o.openModal)(e => (0, a.jsx)(m.default, {
+                    (0, c.accountDetailsInit)(), (0, o.openModal)(e => (0, a.jsx)(p.default, {
                         ...e
                     }), {
                         modalKey: L,
@@ -86,7 +86,7 @@
                     },
                     theme: t,
                     onClick: e => {
-                        e === g.VerificationTypes.EMAIL_OR_PHONE || e === g.VerificationTypes.EMAIL || e === g.VerificationTypes.REVERIFY_EMAIL ? D() : (0, o.openModal)(e => (0, a.jsx)(p.default, {
+                        e === g.VerificationTypes.EMAIL_OR_PHONE || e === g.VerificationTypes.EMAIL || e === g.VerificationTypes.REVERIFY_EMAIL ? D() : (0, o.openModal)(e => (0, a.jsx)(m.default, {
                             reason: C.ChangePhoneReason.USER_ACTION_REQUIRED,
                             ...e
                         }), {

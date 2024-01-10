@@ -16,13 +16,13 @@
                 _ = n("374021"),
                 h = n("398604"),
                 C = n("395869"),
-                I = n("824650"),
-                T = n("1339"),
+                T = n("824650"),
+                I = n("1339"),
                 S = n("593897"),
                 N = n("534222"),
                 A = n("841363"),
-                m = n("822516"),
-                p = n("393414"),
+                p = n("822516"),
+                m = n("393414"),
                 g = n("716214"),
                 R = n("488464"),
                 O = n("998716"),
@@ -51,11 +51,11 @@
                 } = e, a = (0, S.useActiveEventOrStageInstanceChannel)(t.id), s = (0, N.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([L.default], () => L.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
                     isStageNoticeHidden: V,
                     isEventNoticeHidden: Y
-                } = (0, u.useStateFromStoresObject)([I.default], () => ({
-                    isStageNoticeHidden: I.default.isLiveChannelNoticeHidden({
+                } = (0, u.useStateFromStoresObject)([T.default], () => ({
+                    isStageNoticeHidden: T.default.isLiveChannelNoticeHidden({
                         stageId: null == r ? void 0 : r.id
                     }),
-                    isEventNoticeHidden: I.default.isLiveChannelNoticeHidden({
+                    isEventNoticeHidden: T.default.isLiveChannelNoticeHidden({
                         eventId: null == s ? void 0 : s.id
                     })
                 }), [r, s]), W = null == a ? void 0 : a.id, {
@@ -95,7 +95,7 @@
                         isEventNoticeHidden: d,
                         isStageNoticeHidden: E,
                         isStudyRoomNotice: _
-                    } = e, I = null != n && null != a && !E, S = null != t ? (0, m.getNextRecurrenceIdInEvent)(t) : null;
+                    } = e, T = null != n && null != a && !E, S = null != t ? (0, p.getNextRecurrenceIdInEvent)(t) : null;
                     if (_ && null != a) {
                         let e = (0, f.getChannelIconComponent)(a);
                         return {
@@ -114,7 +114,7 @@
                         }
                     }
                     if (null == t || d) {
-                        if (I) {
+                        if (T) {
                             let e = B.default.Messages.STAGE_CHANNEL_JOIN_BUTTON;
                             return (null == l ? void 0 : l.speaker) ? e = B.default.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != l && (e = B.default.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
                                 noticeType: 0,
@@ -147,7 +147,7 @@
                             }
                         }
                     } else {
-                        if (t.entity_type === F.GuildScheduledEventEntityTypes.STAGE_INSTANCE && I) {
+                        if (t.entity_type === F.GuildScheduledEventEntityTypes.STAGE_INSTANCE && T) {
                             let e = B.default.Messages.STAGE_CHANNEL_JOIN_BUTTON;
                             return (null == l ? void 0 : l.speaker) ? e = B.default.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != l && (e = B.default.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
                                 noticeType: 0,
@@ -188,7 +188,7 @@
                             return {
                                 noticeType: 1,
                                 title: t.name,
-                                location: (0, T.guildEventDetailsParser)(e, !0),
+                                location: (0, I.guildEventDetailsParser)(e, !0),
                                 locationIcon: (0, i.jsx)(G.default, {
                                     width: 16,
                                     height: 16,
@@ -320,7 +320,7 @@
                         size: c.Button.Sizes.SMALL,
                         color: c.Button.Colors.GREEN,
                         onClick: () => {
-                            if (en) null != a && null != a.getGuildId() && ((0, g.connectAndOpen)(a), (0, p.transitionToGuild)(a.getGuildId(), a.id));
+                            if (en) null != a && null != a.getGuildId() && ((0, g.connectAndOpen)(a), (0, m.transitionToGuild)(a.getGuildId(), a.id));
                             else {
                                 if (null == s) return;
                                 (0, _.openGuildEventDetails)({

@@ -31,29 +31,29 @@
                 let t, {
                     title: n,
                     subtitle: C,
-                    guildsData: I,
-                    analyticsContext: T,
+                    guildsData: T,
+                    analyticsContext: I,
                     theme: S,
                     onViewGuild: N,
                     fetchGuilds: A,
-                    onGuildCardSeen: m,
-                    currentCategoryId: p,
+                    onGuildCardSeen: p,
+                    currentCategoryId: m,
                     loadId: g,
                     onTagClick: R,
                     showMoreCards: O = !1
                 } = e;
                 s.useEffect(() => {
                     l.default.wait(() => A())
-                }, [p]);
+                }, [m]);
                 let L = (0, c.default)(O ? h : _),
                     {
                         analyticsLocations: v
                     } = (0, r.default)();
-                if (null == I) return null;
+                if (null == T) return null;
                 let {
                     guilds: M,
                     loading: P
-                } = I, D = null == M || 0 === M.length;
+                } = T, D = null == M || 0 === M.length;
                 if (!P && D) return null;
                 let y = async e => {
                     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
@@ -68,7 +68,7 @@
                     });
                     else {
                         let t = M.findIndex(t => t.id === e);
-                        await N(e, t, T, g)
+                        await N(e, t, I, g)
                     }
                 };
                 if (P || null == M) {
@@ -80,7 +80,7 @@
                     guild: e,
                     onView: y,
                     theme: S,
-                    onGuildCardSeen: m,
+                    onGuildCardSeen: p,
                     onTagClick: R
                 }, e.id));
                 return (0, a.jsx)("section", {

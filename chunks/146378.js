@@ -18,13 +18,13 @@
                 _ = n("42887"),
                 h = n("109264"),
                 C = n("663745"),
-                I = n("158998"),
-                T = n("371449"),
+                T = n("158998"),
+                I = n("371449"),
                 S = n("224978"),
                 N = n("83916"),
                 A = n("885795"),
-                m = n("49111"),
-                p = n("353927"),
+                p = n("49111"),
+                m = n("353927"),
                 g = n("782340"),
                 R = n("889195");
 
@@ -36,7 +36,7 @@
                     c.default.removeFriend(t.id, {
                         location: "Friends"
                     })
-                }, i = (0, r.useStateFromStores)([_.default], () => _.default.supports(p.Features.VIDEO));
+                }, i = (0, r.useStateFromStores)([_.default], () => _.default.supports(m.Features.VIDEO));
                 return (0, a.jsxs)(o.Menu, {
                     navId: "friend-row",
                     "aria-label": g.default.Messages.USER_ACTIONS_MENU_LABEL,
@@ -60,7 +60,7 @@
                         action: () => {
                             (0, o.openModal)(e => (0, a.jsx)(o.ConfirmModal, {
                                 header: g.default.Messages.REMOVE_FRIEND_TITLE.format({
-                                    name: I.default.getName(t)
+                                    name: T.default.getName(t)
                                 }),
                                 confirmText: g.default.Messages.REMOVE_FRIEND,
                                 cancelText: g.default.Messages.CANCEL,
@@ -69,7 +69,7 @@
                                 children: (0, a.jsx)(o.Text, {
                                     variant: "text-md/normal",
                                     children: g.default.Messages.REMOVE_FRIEND_BODY.format({
-                                        name: I.default.getName(t)
+                                        name: T.default.getName(t)
                                     })
                                 })
                             }))
@@ -120,12 +120,12 @@
                                 showAccountIdentifier: !0
                             }), (0, a.jsxs)("div", {
                                 className: R.actions,
-                                children: [(0, a.jsx)(T.default, {
+                                children: [(0, a.jsx)(I.default, {
                                     icon: h.default,
                                     tooltip: g.default.Messages.SEND_DM,
                                     onClick: this.handleOpenPrivateChannel,
                                     shouldHighlight: t
-                                }), (0, a.jsx)(T.default, {
+                                }), (0, a.jsx)(I.default, {
                                     icon: C.default,
                                     tooltip: g.default.Messages.MORE,
                                     onClick: this.handleOpenActionsMenu,
@@ -143,8 +143,8 @@
                             user: t
                         } = this.props;
                         e.stopPropagation();
-                        let n = l.find(f.default.getMutablePrivateChannels(), e => e.type === m.ChannelTypes.DM && e.getRecipientId() === t.id);
-                        null != n ? (0, E.transitionTo)(m.Routes.CHANNEL(m.ME, n.id)) : u.default.openPrivateChannel(t.id)
+                        let n = l.find(f.default.getMutablePrivateChannels(), e => e.type === p.ChannelTypes.DM && e.getRecipientId() === t.id);
+                        null != n ? (0, E.transitionTo)(p.Routes.CHANNEL(p.ME, n.id)) : u.default.openPrivateChannel(t.id)
                     }, this.handleOpenActionsMenu = e => {
                         let {
                             user: t

@@ -25,7 +25,7 @@
                     onAcceptSuccess: n,
                     onRejectSuccess: a,
                     onError: E
-                } = e, g = (0, C.default)(), [S, _] = s.useState(!1), [A, T] = s.useState(!1), [M, N] = s.useState(!1), [I, L] = s.useState(!1), [v, R] = s.useState(!1), x = S || A || M, y = s.useCallback(async e => {
+                } = e, g = (0, C.default)(), [S, _] = s.useState(!1), [A, T] = s.useState(!1), [M, I] = s.useState(!1), [N, L] = s.useState(!1), [v, R] = s.useState(!1), x = S || A || M, y = s.useCallback(async e => {
                     if (!x) {
                         _(!0);
                         try {
@@ -37,7 +37,7 @@
                             _(!1)
                         }
                     }
-                }, [x, n, E]), D = s.useCallback(async e => {
+                }, [x, n, E]), O = s.useCallback(async e => {
                     if (!x) {
                         T(!0);
                         try {
@@ -49,7 +49,7 @@
                             T(!1)
                         }
                     }
-                }, [x, a, E]), O = s.useCallback(async e => {
+                }, [x, a, E]), D = s.useCallback(async e => {
                     if (x) return;
                     T(!0);
                     let t = l(e, p.BATCH_REJECT_LIMIT);
@@ -65,14 +65,14 @@
                 }, [x, a, E]), j = s.useCallback(async e => {
                     if (x) return;
                     if (null != t && null == o.default.getMutualGuilds(t.id)) {
-                        N(!0);
+                        I(!0);
                         try {
                             await (0, u.default)(t.id, t.getAvatarURL(void 0, 80), {
                                 withMutualGuilds: !0,
                                 withMutualFriendsCount: !0
                             })
                         } catch (e) {} finally {
-                            N(!1)
+                            I(!1)
                         }
                     }
                     let n = async () => {
@@ -122,13 +122,13 @@
                 }, [y]);
                 return {
                     acceptMessageRequest: g ? j : y,
-                    rejectMessageRequest: D,
-                    rejectAll: O,
+                    rejectMessageRequest: O,
+                    rejectAll: D,
                     markAsNotSpam: b,
                     isAcceptLoading: S,
                     isRejectLoading: A,
                     isUserProfileLoading: M,
-                    isOptimisticAccepted: I,
+                    isOptimisticAccepted: N,
                     isOptimisticRejected: v
                 }
             }

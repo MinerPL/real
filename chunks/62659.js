@@ -16,13 +16,13 @@
                 _ = n("376556"),
                 h = n("706508"),
                 C = n("287585"),
-                I = n("309570"),
-                T = n("985677"),
+                T = n("309570"),
+                I = n("985677"),
                 S = n("429928"),
                 N = n("502651"),
                 A = n("29088"),
-                m = n("698372"),
-                p = n("141962"),
+                p = n("698372"),
+                m = n("141962"),
                 g = n("685665"),
                 R = n("299285"),
                 O = n("679653"),
@@ -95,7 +95,7 @@
                     } = this.props, {
                         timestamps: n
                     } = t;
-                    return null == n || !(0, T.default)(t) || (0, S.default)(t) ? null : J(e = (0, I.default)(t) ? (0, i.jsx)($, {
+                    return null == n || !(0, I.default)(t) || (0, S.default)(t) ? null : J(e = (0, T.default)(t) ? (0, i.jsx)($, {
                         timestamps: n
                     }) : (0, i.jsx)(U.default, {
                         start: n.start,
@@ -492,7 +492,7 @@
                     channel: n,
                     guildId: a,
                     participants: s
-                } = e, r = (0, m.default)(), [o, d] = l.useState(null), E = t.application_id;
+                } = e, r = (0, p.default)(), [o, d] = l.useState(null), E = t.application_id;
                 l.useEffect(() => {
                     null != E && (0, H.fetchAssetIds)(E, ["embedded_background"]).then(e => {
                         let [t] = e;
@@ -502,27 +502,27 @@
                 let _ = (0, u.useStateFromStoresArray)([y.default, P.default], () => Array.from(s).map(e => P.default.getId() === e ? null : y.default.getUser(e)).filter(V.isNotNullish)),
                     C = (0, f.useAnalyticsContext)(),
                     {
-                        analyticsLocations: I
+                        analyticsLocations: T
                     } = (0, g.default)();
                 if (null == E) return null;
-                let T = R.default.getApplication(E);
-                if (null == T) return null;
+                let I = R.default.getApplication(E);
+                if (null == I) return null;
                 let S = null != t.created_at && t.created_at > 0 ? {
                         start: t.created_at
                     } : void 0,
-                    N = (0, H.getAssetImage)(T.id, o, 300);
+                    N = (0, H.getAssetImage)(I.id, o, 300);
                 return (0, i.jsxs)(ee, {
                     children: [(0, i.jsxs)("div", {
                         className: q.embeddedActivityTopRow,
                         children: [(0, i.jsx)(b.default, {
-                            game: T,
+                            game: I,
                             size: b.default.Sizes.XSMALL,
                             className: q.embeddedActivityIcon
                         }), (0, i.jsx)("div", {
                             className: q.embeddedActivityName,
                             children: (0, i.jsx)(c.Text, {
                                 variant: "text-sm/semibold",
-                                children: T.name
+                                children: I.name
                             })
                         }), null != S ? (0, i.jsx)("div", {
                             className: q.embeddedActivityTimeElapsed,
@@ -540,7 +540,7 @@
                             className: q.embeddedActivityPlayerContainer,
                             children: [null != N ? (0, i.jsx)("img", {
                                 src: N,
-                                alt: T.name,
+                                alt: I.name,
                                 className: q.embeddedActivityImage
                             }) : null, (0, i.jsxs)("div", {
                                 className: q.embeddedActivityImageOverlay,
@@ -558,8 +558,8 @@
                                                 currentEmbeddedApplication: r,
                                                 activityChannelId: n.id,
                                                 locationObject: C.location,
-                                                embeddedActivitiesManager: p.default,
-                                                analyticsLocations: I
+                                                embeddedActivitiesManager: m.default,
+                                                analyticsLocations: T
                                             })
                                         },
                                         children: z.default.Messages.JOIN

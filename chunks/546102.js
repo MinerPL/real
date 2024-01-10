@@ -18,13 +18,13 @@
                 _ = n("526253"),
                 h = n("567054"),
                 C = n("982527"),
-                I = n("444752"),
-                T = n("437942"),
+                T = n("444752"),
+                I = n("437942"),
                 S = n("267235"),
                 N = n("49111"),
                 A = n("289382"),
-                m = n("782340"),
-                p = n("936791"),
+                p = n("782340"),
+                m = n("936791"),
                 g = e => {
                     var t;
                     let {
@@ -47,10 +47,10 @@
                         }, []),
                         x = (e, t) => () => {
                             (0, l.openModal)(n => (0, a.jsx)(l.ConfirmModal, {
-                                header: m.default.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
-                                cancelText: m.default.Messages.NEVERMIND,
+                                header: p.default.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
+                                cancelText: p.default.Messages.NEVERMIND,
                                 onConfirm: t,
-                                confirmText: m.default.Messages.YES_TEXT,
+                                confirmText: p.default.Messages.YES_TEXT,
                                 confirmButtonColor: l.Button.Colors.RED,
                                 ...n,
                                 children: (0, a.jsx)(l.Text, {
@@ -64,7 +64,7 @@
                             await f.default.submitVerificationForm(n, e)
                         }, U = () => {
                             E.default.resetGuildJoinRequest(n)
-                        }, G = x(m.default.Messages.LEAVE_SERVER_BODY.format({
+                        }, G = x(p.default.Messages.LEAVE_SERVER_BODY.format({
                             name: null == M ? void 0 : M.toString()
                         }), () => {
                             O(Math.max(R, A.WaveStates.FILLING)), E.default.removeGuildJoinRequest(n), (0, r.transitionTo)(N.Routes.ME)
@@ -73,7 +73,7 @@
                             splash: L.guild.splash
                         }) : (0, d.getArtForPath)();
                     return (0, a.jsx)("div", {
-                        className: p.page,
+                        className: m.page,
                         children: (0, a.jsxs)(u.default, {
                             embedded: !0,
                             splash: j,
@@ -81,22 +81,22 @@
                             showLogo: !1,
                             updateWaveState: y,
                             children: [(0, a.jsx)("div", {
-                                className: p.dragRegion
+                                className: m.dragRegion
                             }), (0, a.jsx)("div", {
-                                className: p.contentWrapper,
+                                className: m.contentWrapper,
                                 children: (() => {
                                     switch (null == v ? void 0 : v.applicationStatus) {
                                         case h.GuildJoinRequestApplicationStatuses.SUBMITTED:
-                                            return (0, a.jsx)(T.default, {
-                                                onCancel: x(m.default.Messages.MEMBER_VERIFICATION_CANCEL_PENDING_APPLICATION_MODAL_TITLE, U),
+                                            return (0, a.jsx)(I.default, {
+                                                onCancel: x(p.default.Messages.MEMBER_VERIFICATION_CANCEL_PENDING_APPLICATION_MODAL_TITLE, U),
                                                 onLeave: G,
                                                 guild: D
                                             });
                                         case h.GuildJoinRequestApplicationStatuses.REJECTED:
-                                            return (0, a.jsx)(I.default, {
-                                                reapplyText: m.default.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
+                                            return (0, a.jsx)(T.default, {
+                                                reapplyText: p.default.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
                                                 onReapply: U,
-                                                confirmText: m.default.Messages.LEAVE_SERVER,
+                                                confirmText: p.default.Messages.LEAVE_SERVER,
                                                 onConfirm: G,
                                                 rejectionReason: null == v ? void 0 : v.rejectionReason,
                                                 guild: D

@@ -16,22 +16,22 @@
                 _ = n("45894"),
                 h = n("49111");
             let C = [],
-                I = null,
-                T = !1,
+                T = null,
+                I = !1,
                 S = h.FormStates.CLOSED,
                 N = {},
                 A = !1,
-                m = null;
+                p = null;
 
-            function p() {
-                if (a = null != (s = c.default.getChannel()) ? E.default.getGuild(s.guild_id) : null, C = null != s && null != a && f.default.can(h.Permissions.MANAGE_WEBHOOKS, s) ? _.default.getWebhooksForChannel(a.id, s.id) : [], null != I) {
-                    let e = R(I.id);
-                    null != e && (I = e)
+            function m() {
+                if (a = null != (s = c.default.getChannel()) ? E.default.getGuild(s.guild_id) : null, C = null != s && null != a && f.default.can(h.Permissions.MANAGE_WEBHOOKS, s) ? _.default.getWebhooksForChannel(a.id, s.id) : [], null != T) {
+                    let e = R(T.id);
+                    null != e && (T = e)
                 }
                 S = h.FormStates.OPEN, N = {}, A = !1
             }
             let g = r.debounce(() => {
-                A && ((null == I || r.isEqual(I, R(I.id))) && (A = !1), !A && L.emitChange())
+                A && ((null == T || r.isEqual(T, R(T.id))) && (A = !1), !A && L.emitChange())
             }, 500);
 
             function R(e) {
@@ -53,7 +53,7 @@
                     return C
                 }
                 get editedWebhook() {
-                    return I
+                    return T
                 }
                 get formState() {
                     return S
@@ -68,19 +68,19 @@
                     return {
                         submitting: S === h.FormStates.SUBMITTING,
                         webhooks: C,
-                        editedWebhook: I,
+                        editedWebhook: T,
                         section: i,
-                        sectionId: m,
+                        sectionId: p,
                         hasChanges: this.hasChanges(),
-                        isFetching: T,
+                        isFetching: I,
                         errors: N
                     }
                 }
             }
             O.displayName = "ChannelSettingsIntegrationsStore";
             let L = new O(u.default, __OVERLAY__ ? {} : {
-                INTEGRATION_SETTINGS_INIT: p,
-                INTEGRATION_SETTINGS_SAVE_SUCCESS: p,
+                INTEGRATION_SETTINGS_INIT: m,
+                INTEGRATION_SETTINGS_SAVE_SUCCESS: m,
                 CHANNEL_SETTINGS_SET_SECTION: function(e) {
                     let {
                         section: t
@@ -89,7 +89,7 @@
                     if (i = h.IntegrationSettingsSections.OVERVIEW, null == a) {
                         let e = c.default.getChannel(),
                             t = null == e ? void 0 : e.getGuildId();
-                        null != e && null != t && (d.default.fetchForChannel(t, e.id), T = !0), p()
+                        null != e && null != t && (d.default.fetchForChannel(t, e.id), I = !0), m()
                     }
                 },
                 INTEGRATION_SETTINGS_SET_SECTION: function(e) {
@@ -97,29 +97,29 @@
                         section: t,
                         sectionId: n
                     } = e;
-                    i = t, m = n
+                    i = t, p = n
                 },
                 INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function(e) {
                     let {
                         webhookId: t
                     } = e, n = R(t);
                     if (null == n) return !1;
-                    I = n, N = {}, A = !1
+                    T = n, N = {}, A = !1
                 },
                 INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function() {
-                    I = null, N = {}, A = !1
+                    T = null, N = {}, A = !1
                 },
                 INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function(e) {
                     let {
                         settings: t
                     } = e;
-                    if (null == I) return !1;
-                    I = {
-                        ...I
-                    }, null != t.name && I.name !== t.name && (I.name = t.name, A = !0), void 0 !== t.avatar && I.avatar !== t.avatar && (I.avatar = t.avatar, A = !0), null != t.channelId && I.channel_id !== t.channelId && (I.channel_id = t.channelId, A = !0), A && g()
+                    if (null == T) return !1;
+                    T = {
+                        ...T
+                    }, null != t.name && T.name !== t.name && (T.name = t.name, A = !0), void 0 !== t.avatar && T.avatar !== t.avatar && (T.avatar = t.avatar, A = !0), null != t.channelId && T.channel_id !== t.channelId && (T.channel_id = t.channelId, A = !0), A && g()
                 },
                 CHANNEL_SETTINGS_CLOSE: function() {
-                    s = null, a = null, C = [], I = null, S = h.FormStates.CLOSED
+                    s = null, a = null, C = [], T = null, S = h.FormStates.CLOSED
                 },
                 WEBHOOKS_UPDATE: function(e) {
                     let {
@@ -128,7 +128,7 @@
                         webhooks: i
                     } = e;
                     if (null == a || t !== a.id || null == s || n !== s.id || null == i || S === h.FormStates.SUBMITTING) return !1;
-                    T = !1;
+                    I = !1;
                     for (let e = C.length - 1; e >= 0; e--) {
                         let t = C[e];
                         if (null != n && (null == t ? void 0 : t.channel_id) !== n) continue;
@@ -143,8 +143,8 @@
                                 ...t,
                                 ...a
                             };
-                            C[e] = n, !A && (null == I ? void 0 : I.id) === n.id && (I = n)
-                        } else(null == I ? void 0 : I.id) === t.id && (I = null), C.splice(e, 1)
+                            C[e] = n, !A && (null == T ? void 0 : T.id) === n.id && (T = n)
+                        } else(null == T ? void 0 : T.id) === t.id && (T = null), C.splice(e, 1)
                     }
                     for (let e of i) {
                         let t = C.find(t => {

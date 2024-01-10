@@ -21,8 +21,8 @@
                 _ = n("230962"),
                 h = n("599110"),
                 C = n("49111"),
-                I = n("782340"),
-                T = n("626009");
+                T = n("782340"),
+                I = n("626009");
             class S extends s.PureComponent {
                 componentDidMount() {
                     this._initTimeout.start(1e3, this.setupVoiceActivity)
@@ -82,7 +82,7 @@
                         isDetectingInput: s
                     } = this.state;
                     return (0, a.jsx)(d.FormText, {
-                        className: T.micTestCaption,
+                        className: I.micTestCaption,
                         type: d.FormText.Types.DESCRIPTION,
                         children: n ? s ? e : t : null
                     })
@@ -101,19 +101,19 @@
                     } = this.props, {
                         isMicTesting: c,
                         volume: E
-                    } = this.state, f = e && !c ? I.default.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
+                    } = this.state, f = e && !c ? T.default.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
                     return c && e && !u && this._micTestStop(), (0, a.jsxs)("div", {
-                        className: T.container,
+                        className: I.container,
                         children: [(0, a.jsx)(d.FormTitle, {
                             tag: d.FormTitleTags.H5,
-                            className: T.title,
+                            className: I.title,
                             children: t
                         }), null != n && (0, a.jsx)(d.FormText, {
                             type: d.FormText.Types.DESCRIPTION,
-                            className: T.description,
+                            className: I.description,
                             children: n
                         }), (0, a.jsxs)("div", {
-                            className: T.micTest,
+                            className: I.micTest,
                             children: [(0, a.jsx)(d.Tooltip, {
                                 text: f,
                                 children: e => {

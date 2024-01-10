@@ -18,13 +18,13 @@
                 _ = n("644091"),
                 h = n("845579"),
                 C = n("52028"),
-                I = n("381546"),
-                T = n("304121"),
+                T = n("381546"),
+                I = n("304121"),
                 S = n("599110"),
                 N = n("158998"),
                 A = n("49111"),
-                m = n("782340"),
-                p = n("304169");
+                p = n("782340"),
+                m = n("304169");
 
             function g(e) {
                 let {
@@ -33,17 +33,17 @@
                     focused: s
                 } = e;
                 return (0, a.jsxs)("div", {
-                    className: p.statusItem,
+                    className: m.statusItem,
                     children: [(0, a.jsx)(u.Status, {
                         status: t,
-                        className: p.icon,
+                        className: m.icon,
                         size: 10,
                         color: s ? "currentColor" : void 0
                     }), (0, a.jsx)("div", {
-                        className: p.status,
+                        className: m.status,
                         children: (0, N.humanizeStatus)(t)
                     }), null != n && (0, a.jsx)("div", {
-                        className: p.description,
+                        className: m.description,
                         children: n
                     })]
                 })
@@ -56,37 +56,37 @@
                     e.stopPropagation(), h.CustomStatusSetting.updateSetting(void 0)
                 };
                 return null != t ? (0, a.jsx)("div", {
-                    "aria-label": m.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
+                    "aria-label": p.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
                     children: (0, a.jsx)(c.default, {
-                        className: null != t.emoji ? p.customStatusWithEmoji : p.customStatusItem,
+                        className: null != t.emoji ? m.customStatusWithEmoji : m.customStatusItem,
                         activity: t,
-                        emojiClassName: p.customEmoji,
-                        textClassName: p.customText,
-                        placeholderText: m.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
+                        emojiClassName: m.customEmoji,
+                        textClassName: m.customText,
+                        placeholderText: p.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
                         children: (0, a.jsx)(u.Tooltip, {
-                            text: m.default.Messages.CUSTOM_STATUS_CLEAR_CUSTOM_STATUS,
+                            text: p.default.Messages.CUSTOM_STATUS_CLEAR_CUSTOM_STATUS,
                             children: e => (0, a.jsx)(u.Button, {
                                 ...e,
-                                className: p.clearStatusButton,
+                                className: m.clearStatusButton,
                                 onClick: n,
                                 look: u.Button.Looks.BLANK,
                                 size: u.Button.Sizes.NONE,
                                 tabIndex: -1,
                                 "aria-hidden": !0,
-                                children: (0, a.jsx)(I.default, {
-                                    className: p.clearStatusIcon
+                                children: (0, a.jsx)(T.default, {
+                                    className: m.clearStatusIcon
                                 })
                             })
                         })
                     })
                 }) : (0, a.jsxs)("div", {
-                    className: l(p.statusItem, p.customStatusContentIcon),
-                    "aria-label": m.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS,
+                    className: l(m.statusItem, m.customStatusContentIcon),
+                    "aria-label": p.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS,
                     children: [(0, a.jsx)("div", {
-                        className: p.customEmojiPlaceholder
+                        className: m.customEmojiPlaceholder
                     }), (0, a.jsx)("div", {
-                        className: p.status,
-                        children: m.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS
+                        className: m.status,
+                        children: p.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS
                     })]
                 })
             }
@@ -96,16 +96,16 @@
                     focused: t
                 } = e;
                 return (0, a.jsxs)("div", {
-                    className: l(p.statusItem, p.statusItemNoPadding, p.customStatusContentIcon, p.switchAccountsItem),
-                    "aria-label": m.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
-                    children: [(0, a.jsx)(T.default, {
+                    className: l(m.statusItem, m.statusItemNoPadding, m.customStatusContentIcon, m.switchAccountsItem),
+                    "aria-label": p.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
+                    children: [(0, a.jsx)(I.default, {
                         width: 18,
                         height: 18,
-                        className: p.switchAccountsIcon,
+                        className: m.switchAccountsIcon,
                         color: t ? o.default.unsafe_rawColors.WHITE_500.css : "currentColor"
                     }), (0, a.jsx)("div", {
-                        className: p.status,
-                        children: m.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE
+                        className: m.status,
+                        children: p.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE
                     })]
                 })
             }
@@ -131,7 +131,7 @@
                 return (0, a.jsxs)(u.Menu, {
                     navId: "status-picker",
                     variant: "fixed",
-                    "aria-label": m.default.Messages.SET_STATUS,
+                    "aria-label": p.default.Messages.SET_STATUS,
                     onClose: i,
                     onSelect: r,
                     children: [(0, a.jsx)(u.MenuItem, {
@@ -169,7 +169,7 @@
                             } = e;
                             return (0, a.jsx)(g, {
                                 status: u.StatusTypes.DND,
-                                description: m.default.Messages.STATUS_DND_HELP,
+                                description: p.default.Messages.STATUS_DND_HELP,
                                 focused: t
                             })
                         },
@@ -183,7 +183,7 @@
                             } = e;
                             return (0, a.jsx)(g, {
                                 status: u.StatusTypes.INVISIBLE,
-                                description: m.default.Messages.STATUS_INVISIBLE_HELPER,
+                                description: p.default.Messages.STATUS_INVISIBLE_HELPER,
                                 focused: t
                             })
                         },

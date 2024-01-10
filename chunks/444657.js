@@ -49,7 +49,7 @@
                 }, {
                     autoTrackExposure: !1
                 });
-                return l < 250 ? (0, a.jsx)(b, {
+                return l < 250 ? (0, a.jsx)(P, {
                     channel: t,
                     guild: n,
                     width: l,
@@ -63,7 +63,7 @@
                     inPopout: s,
                     handleClose: i,
                     userParticipantCount: r
-                }) : (0, a.jsx)(P, {
+                }) : (0, a.jsx)(b, {
                     channel: t,
                     guild: n,
                     width: l,
@@ -71,7 +71,7 @@
                 })
             }
 
-            function b(e) {
+            function P(e) {
                 let {
                     channel: t,
                     inPopout: n,
@@ -129,7 +129,7 @@
                 })
             }
 
-            function P(e) {
+            function b(e) {
                 let {
                     channel: t,
                     guild: s,

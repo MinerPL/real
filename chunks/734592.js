@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return T
                 }
             }), n("222007");
             var a = n("913144"),
@@ -39,8 +39,8 @@
                         _ = u.default.isFocused(),
                         h = l.default.getWindowFocused(d.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
                         C = r.default.isLocalVideoDisabled(t, n),
-                        I = f.has(t);
-                    i && !_ && !h && !C && !I && (E.add(t), s.default.setDisableLocalVideo(t, d.VideoToggleState.DISABLED, n, !1))
+                        T = f.has(t);
+                    i && !_ && !h && !C && !T && (E.add(t), s.default.setDisableLocalVideo(t, d.VideoToggleState.DISABLED, n, !1))
                 }
                 handleManualLocalVideoToggle(e) {
                     let {
@@ -65,4 +65,4 @@
                     }
                 }
             }
-            var I = new C
+            var T = new C

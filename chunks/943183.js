@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 initSessionHeartbeatScheduler: function() {
-                    return m
+                    return p
                 }
             }), n("70102");
             var a = n("976255"),
@@ -30,18 +30,18 @@
                     message: "Received invalid Date.now() when generating a heartbeat. Date.now() = ".concat(t, ", timeUntilNextHeartbeat = ").concat(n, ", latestHeartbeatEventTimestamp = ").concat(e)
                 }), e > t && (n = 0), u.default.addBreadcrumb({
                     message: "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ".concat(n / 1e3, " seconds. Scheduling Heartbeat")
-                }), I(!1), f = setTimeout(() => {
-                    T(), E = setInterval(() => {
-                        T()
+                }), T(!1), f = setTimeout(() => {
+                    I(), E = setInterval(() => {
+                        I()
                     }, 9e5)
                 }, Math.max(n, 0))
             }
 
-            function I() {
+            function T() {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
                 null != f && (clearTimeout(f), f = null), null != E && (clearInterval(E), E = null), null != _ && e && (clearTimeout(_), _ = null)
             }
-            async function T() {
+            async function I() {
                 let e = Date.now(),
                     t = await (0, a.getSession)(),
                     n = Date.now();
@@ -50,7 +50,7 @@
                     return
                 }
                 if (!h) {
-                    u.default.captureException(Error("Heartbeat scheduler not started when tracking session heartbeat.")), I();
+                    u.default.captureException(Error("Heartbeat scheduler not started when tracking session heartbeat.")), T();
                     return
                 }
                 u.default.addBreadcrumb({
@@ -78,17 +78,17 @@
                     u.default.captureException(e)
                 } else !h || (h = !1, u.default.addBreadcrumb({
                     message: "Stopping Analytics Heartbeat"
-                }), (0, a.setSessionExtendingEnabled)(!1), I())
-            }
-
-            function m() {
-                u.default.addBreadcrumb({
-                    message: "Initializing SessionHeartbeatScheduler"
-                }), l.default.addChangeListener(g), i.default.subscribe("WINDOW_FOCUS", R), i.default.subscribe("APP_STATE_UPDATE", O), i.default.subscribe("LOGIN_SUCCESS", p), A()
+                }), (0, a.setSessionExtendingEnabled)(!1), T())
             }
 
             function p() {
-                T()
+                u.default.addBreadcrumb({
+                    message: "Initializing SessionHeartbeatScheduler"
+                }), l.default.addChangeListener(g), i.default.subscribe("WINDOW_FOCUS", R), i.default.subscribe("APP_STATE_UPDATE", O), i.default.subscribe("LOGIN_SUCCESS", m), A()
+            }
+
+            function m() {
+                I()
             }
 
             function g() {

@@ -21,9 +21,9 @@
                 var t;
                 let h = (0, r.useCanCurrentUserViewDisableUnsafeGuildSettingsNotice)(e),
                     C = _.MODERATOR_PERMISSIONS.some(t => (null == e ? void 0 : e.id) !== f.FAVORITES_RAW_GUILD_ID && u.default.canEveryone(t, e)),
-                    I = (null == e ? void 0 : e.defaultMessageNotifications) === c.UserNotificationSettings.ALL_MESSAGES,
-                    T = (0, d.useIsContentDismissed)(i.DismissibleGuildContent.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : ""),
-                    S = h && (C || I) && !T,
+                    T = (null == e ? void 0 : e.defaultMessageNotifications) === c.UserNotificationSettings.ALL_MESSAGES,
+                    I = (0, d.useIsContentDismissed)(i.DismissibleGuildContent.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : ""),
+                    S = h && (C || T) && !I,
                     N = s.useCallback(() => {
                         var t;
                         (0, d.markContentAsDismissed)(i.DismissibleGuildContent.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE, null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "", !0, E.ContentDismissActionType.DISMISS)
@@ -39,7 +39,7 @@
                             return n => (0, a.jsx)(t, {
                                 guild: e,
                                 canEveryoneModerate: C,
-                                isDefaultNotificationsAllMessages: I,
+                                isDefaultNotificationsAllMessages: T,
                                 ...n
                             })
                         }, {
@@ -49,5 +49,5 @@
                             guild_id: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : ""
                         }), A.current = !0
                     }
-                }, [C, e, N, I, S])
+                }, [C, e, N, T, S])
             }

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return m
                 }
             }), n("222007");
             var a = n("37983"),
@@ -18,8 +18,8 @@
                 _ = n("894282"),
                 h = n("782340"),
                 C = n("636478"),
-                I = n("926622");
-            let T = {
+                T = n("926622");
+            let I = {
                     canSend: !1,
                     hint: null,
                     success: null,
@@ -29,17 +29,17 @@
                 N = "".concat(S, "-decription"),
                 A = "".concat(S, "-error");
 
-            function m(e, t) {
+            function p(e, t) {
                 switch (t.type) {
                     case "RESET":
-                        return T;
+                        return I;
                     case "SUCCESS":
                         return {
-                            ...T, success: t.text
+                            ...I, success: t.text
                         };
                     case "HINT":
                         return {
-                            ...T, canSend: !0, hint: t.text
+                            ...I, canSend: !0, hint: t.text
                         };
                     case "ERROR":
                         return {
@@ -48,19 +48,19 @@
                 }
             }
 
-            function p() {
+            function m() {
                 let e = s.createRef(),
                     t = s.createRef(),
-                    [n, i] = s.useReducer(m, T),
+                    [n, i] = s.useReducer(p, I),
                     {
                         canSend: r,
                         hint: c,
-                        success: p,
+                        success: m,
                         error: g
                     } = n;
                 return s.useEffect(() => {
-                    null != p && (o(null != e.current, "Input is submitting when not mounted"), e.current.value = "", e.current.focus())
-                }, [p, e]), (0, a.jsxs)("form", {
+                    null != m && (o(null != e.current, "Input is submitting when not mounted"), e.current.value = "", e.current.focus())
+                }, [m, e]), (0, a.jsxs)("form", {
                     onSubmit: t => {
                         t.preventDefault(), o(null != e.current, "Input is submitted when not mounted");
                         let n = e.current.value.trim();
@@ -103,7 +103,7 @@
                         children: (0, a.jsxs)("div", {
                             ref: t,
                             className: l(C.addFriendInputWrapper, {
-                                [C.success]: p,
+                                [C.success]: m,
                                 [C.error]: g
                             }),
                             children: [(0, a.jsx)(u.TextInput, {
@@ -160,13 +160,13 @@
                         role: "alert",
                         id: A,
                         type: u.FormText.Types.ERROR,
-                        className: I.marginTop8,
+                        className: T.marginTop8,
                         children: g
-                    }), null != p && (0, a.jsx)(u.FormText, {
+                    }), null != m && (0, a.jsx)(u.FormText, {
                         role: "status",
                         type: u.FormText.Types.SUCCESS,
-                        className: I.marginTop8,
-                        children: p
+                        className: T.marginTop8,
+                        children: m
                     })]
                 })
             }

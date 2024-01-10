@@ -34,8 +34,8 @@
                 L = n("685665"),
                 O = n("862853"),
                 y = n("76393"),
-                b = n("261552"),
-                P = n("710560"),
+                P = n("261552"),
+                b = n("710560"),
                 D = n("374014"),
                 U = n("223913"),
                 w = n("383294"),
@@ -88,16 +88,16 @@
                 eL = n("636150"),
                 eO = n("99795"),
                 ey = n("49111"),
-                eb = n("782340"),
-                eP = n("806390");
+                eP = n("782340"),
+                eb = n("806390");
             let eD = {
-                    [ey.ChannelLayouts.NORMAL]: eP.normal,
-                    [ey.ChannelLayouts.MINIMUM]: eP.minimum,
-                    [ey.ChannelLayouts.NO_CHAT]: eP.noChat,
-                    [ey.ChannelLayouts.FULL_SCREEN]: eP.fullScreen
+                    [ey.ChannelLayouts.NORMAL]: eb.normal,
+                    [ey.ChannelLayouts.MINIMUM]: eb.minimum,
+                    [ey.ChannelLayouts.NO_CHAT]: eb.noChat,
+                    [ey.ChannelLayouts.FULL_SCREEN]: eb.fullScreen
                 },
                 eU = {
-                    [ey.AppContext.POPOUT]: eP.popout,
+                    [ey.AppContext.POPOUT]: eb.popout,
                     [ey.AppContext.APP]: null,
                     [ey.AppContext.OVERLAY]: null
                 };
@@ -153,7 +153,7 @@
                 }
                 get screenMessage() {
                     return this.popoutOpen && !this.inPopout && this.props.inCall ? {
-                        mainText: eb.default.Messages.POPOUT_PLAYER_OPENED
+                        mainText: eP.default.Messages.POPOUT_PLAYER_OPENED
                     } : null
                 }
                 get paused() {
@@ -266,10 +266,10 @@
                         resizedHeight: c
                     } = this.state, f = l === ey.ChannelModes.VIDEO, h = e !== ey.ChannelLayouts.NO_CHAT && e !== ey.ChannelLayouts.FULL_SCREEN && null != u;
                     return (0, a.jsxs)("div", {
-                        className: i(eP.wrapper, eD[e], eU[r], {
-                            [eP.poppedOut]: this.popoutOpen && !this.inPopout && e !== ey.ChannelLayouts.NO_CHAT && t.isPrivate(),
-                            [eP.video]: f,
-                            [eP.chatSidebarOpen]: s
+                        className: i(eb.wrapper, eD[e], eU[r], {
+                            [eb.poppedOut]: this.popoutOpen && !this.inPopout && e !== ey.ChannelLayouts.NO_CHAT && t.isPrivate(),
+                            [eb.video]: f,
+                            [eb.chatSidebarOpen]: s
                         }),
                         ref: e => {
                             this._wrapperRef.current = e, this.props.wrapperRef.current = e
@@ -280,7 +280,7 @@
                             height: c
                         } : void 0,
                         children: [(0, a.jsx)("div", {
-                            className: i(eP.callContainer, {
+                            className: i(eb.callContainer, {
                                 [(0, eg.getThemeClass)(ey.ThemeTypes.DARK)]: f
                             }),
                             ref: e => {
@@ -297,7 +297,7 @@
                             onResize: this.handleCallResize,
                             onResizeEnd: this.props.updateStoredCallHeaderHeight
                         }), (0, a.jsx)("div", {
-                            className: eP.channelChatWrapper,
+                            className: eb.channelChatWrapper,
                             ref: e => {
                                 this._channelChatRef.current = e, this.props.channelChatRef.current = e
                             },
@@ -503,33 +503,33 @@
                                 stream: (null == r ? void 0 : r.type) === eO.ParticipantTypes.STREAM ? (0, D.decodeStreamKey)(r.id) : void 0,
                                 applicationId: (null == r ? void 0 : r.type) === eO.ParticipantTypes.ACTIVITY ? r.id : void 0,
                                 appContext: l,
-                                className: eP.leftTrayIcon,
+                                className: eb.leftTrayIcon,
                                 exitFullScreen: this.maybeLeaveFullScreen,
                                 analyticsLocation: n.type === ey.ChannelTypes.GUILD_VOICE ? ey.AnalyticsPages.GUILD_CHANNEL : ey.AnalyticsPages.DM_CHANNEL
                             }) : (0, a.jsx)(q.default, {
                                 channel: n,
                                 stream: (null == r ? void 0 : r.type) === eO.ParticipantTypes.STREAM ? (0, D.decodeStreamKey)(r.id) : void 0,
-                                className: eP.leftTrayIcon,
+                                className: eb.leftTrayIcon,
                                 exitFullScreen: this.maybeLeaveFullScreen,
                                 analyticsLocation: n.type === ey.ChannelTypes.GUILD_VOICE ? ey.AnalyticsPages.GUILD_CHANNEL : ey.AnalyticsPages.DM_CHANNEL
                             });
                         return (0, a.jsxs)(a.Fragment, {
                             children: [E && !o ? C : null, m ? (0, a.jsxs)(ef.default, {
-                                className: eP.iconWrapper,
+                                className: eb.iconWrapper,
                                 align: ef.default.Align.CENTER,
                                 grow: 0,
                                 children: [(0, a.jsx)(Z.default, {
-                                    label: f ? eb.default.Messages.SHOW_CHAT : eb.default.Messages.HIDE_CHAT,
+                                    label: f ? eP.default.Messages.SHOW_CHAT : eP.default.Messages.HIDE_CHAT,
                                     direction: c,
-                                    className: eP.leftTrayIcon,
+                                    className: eb.leftTrayIcon,
                                     onClick: p
                                 }), f && t > 0 ? (0, a.jsx)(eh.NumberBadge, {
-                                    className: eP.badge,
+                                    className: eb.badge,
                                     count: t
                                 }) : null]
                             }) : null, (null == r ? void 0 : r.type) !== eO.ParticipantTypes.STREAM && (null == r ? void 0 : r.type) !== eO.ParticipantTypes.ACTIVITY || o ? null : (0, a.jsx)(Y.default, {
                                 children: (0, a.jsx)(eM.default, {
-                                    className: i(eP.leftTrayIcon, eP.viewersButton),
+                                    className: i(eb.leftTrayIcon, eb.viewersButton),
                                     participant: r,
                                     maxVisibleUsers: 4,
                                     guildId: n.getGuildId(),
@@ -540,10 +540,10 @@
                                 channel: n,
                                 hasActiveStream: h,
                                 themeable: this.viewProperties.useTheme
-                            }), (0, a.jsx)(P.default, {
+                            }), (0, a.jsx)(b.default, {
                                 showLeftDivider: o,
                                 themeable: this.viewProperties.useTheme,
-                                className: eP.leftTrayIcon,
+                                className: eb.leftTrayIcon,
                                 channel: n
                             })]
                         })
@@ -564,23 +564,23 @@
                                 context: (0, eT.default)(l.type),
                                 userId: l.user.id,
                                 currentWindow: this.inPopout ? null != e ? e : void 0 : window,
-                                sliderClassName: eP.volumeSlider,
-                                className: eP.rightTrayIcon
+                                sliderClassName: eb.volumeSlider,
+                                className: eb.rightTrayIcon
                             }) : null, i ? (0, a.jsx)($.default, {
-                                className: eP.rightTrayIcon,
+                                className: eb.rightTrayIcon,
                                 popoutWindowAlwaysOnTop: t,
                                 onToggleStayOnTop: this.handleStayOnTop
                             }) : null, r ? (0, a.jsx)(Q.default, {
                                 themeable: o,
                                 popoutOpen: this.popoutOpen,
-                                className: eP.rightTrayIcon,
+                                className: eb.rightTrayIcon,
                                 onOpenPopout: this.handleOpenPopout,
                                 onClosePopout: this.handleClosePopout
                             }) : null, s ? (0, a.jsx)(J.default, {
                                 themeable: o,
                                 node: this.getRootNode(),
                                 guestWindow: e,
-                                className: eP.rightTrayIcon,
+                                className: eb.rightTrayIcon,
                                 onClick: this.handleFullScreen
                             }) : null]
                         })
@@ -607,7 +607,7 @@
                         } = this.props;
                         return !e || t || this.popoutOpen && !this.inPopout && l ? null : (0, a.jsx)(ex.default, {
                             children: (0, a.jsx)(z.default, {
-                                className: eP.chatToasts,
+                                className: eb.chatToasts,
                                 channelId: n.id
                             })
                         })
@@ -637,7 +637,7 @@
                         } = this.viewProperties;
                         return u ? (0, a.jsxs)(Y.default, {
                             children: [(0, a.jsx)("div", {
-                                className: eP.headerWrapper,
+                                className: eb.headerWrapper,
                                 children: r ? null == e ? void 0 : e() : (0, a.jsx)(eA.default, {
                                     channel: t,
                                     guild: n,
@@ -666,13 +666,13 @@
                     ref: p
                 } = (0, I.default)(), {
                     ref: m
-                } = (0, I.default)(), E = (0, v.useAppContext)(), C = (0, b.default)(), S = (0, u.useStateFromStores)([eu.default], () => {
+                } = (0, I.default)(), E = (0, v.useAppContext)(), C = (0, P.default)(), S = (0, u.useStateFromStores)([eu.default], () => {
                     var e;
                     return (null !== (e = null == C ? void 0 : C.channelId) && void 0 !== e ? e : eu.default.getVoiceChannelId()) === n.id
                 }), {
                     participants: M,
                     filteredParticipants: j,
-                    participantsVersion: P,
+                    participantsVersion: b,
                     mode: D,
                     layout: U,
                     participantsOpen: w,
@@ -709,7 +709,7 @@
                     })
                 }, []), et = null !== (t = null == W ? void 0 : W.id) && void 0 !== t ? t : null, ed = (0, A.default)(et, n.id), ec = (0, u.useStateFromStores)([x.default], () => x.default.getFetchState(), []), ef = (0, T.default)(ec);
                 l.useEffect(() => {
-                    "errored" === ec && "errored" !== ef && (0, f.showToast)((0, f.createToast)(eb.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FETCH_ERROR, f.ToastType.FAILURE))
+                    "errored" === ec && "errored" !== ef && (0, f.showToast)((0, f.createToast)(eP.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FETCH_ERROR, f.ToastType.FAILURE))
                 }, [ec, ef]);
                 let eh = (0, u.useStateFromStores)([N.default], () => null != N.default.getSelfEmbeddedActivityForChannel(n.id), [n]);
                 l.useEffect(() => {
@@ -748,7 +748,7 @@
                                     inCall: S,
                                     participants: M,
                                     filteredParticipants: j,
-                                    participantsVersion: P,
+                                    participantsVersion: b,
                                     layout: U,
                                     chatOpen: k,
                                     maxSidebarWidth: r - 550,

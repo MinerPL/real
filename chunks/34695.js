@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return O
+                    return D
                 }
             });
             var s = n("37983"),
@@ -25,15 +25,15 @@
                 A = n("172643"),
                 T = n("710357"),
                 M = n("931922"),
-                N = n("582724"),
-                I = n("834744"),
+                I = n("582724"),
+                N = n("834744"),
                 L = n("372912"),
                 v = n("952999"),
                 R = n("49111"),
                 x = n("782340"),
                 y = n("926622");
 
-            function D(e) {
+            function O(e) {
                 let {
                     canManageRoles: t,
                     channel: n
@@ -51,12 +51,12 @@
                 else if (a) return (0, s.jsx)(M.default, {
                     channel: n
                 });
-                return (0, s.jsx)(I.default, {
+                return (0, s.jsx)(N.default, {
                     channel: n
                 })
             }
 
-            function O(e) {
+            function D(e) {
                 var t;
                 let {
                     channel: n,
@@ -65,7 +65,7 @@
                     type: C
                 } = n, p = (0, l.useStateFromStores)([E.default], () => n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null), A = g.default.useUserTag(p), {
                     canManageRoles: M,
-                    canReadMessageHistory: I
+                    canReadMessageHistory: N
                 } = (0, l.useStateFromStoresObject)([m.default], () => ({
                     canManageRoles: m.default.can(R.Permissions.MANAGE_ROLES, n),
                     canReadMessageHistory: m.default.can(R.Permissions.READ_MESSAGE_HISTORY, n)
@@ -80,7 +80,7 @@
                         C === R.ChannelTypes.DM && null == L && null != p && r.default.wait(() => (0, h.default)(n.getRecipientId(), p.getAvatarURL(null, 80), {
                             withMutualGuilds: !0
                         }))
-                    }, [L, C, n, p]), n.isSystemDM()) return v ? (0, s.jsx)(N.default, {
+                    }, [L, C, n, p]), n.isSystemDM()) return v ? (0, s.jsx)(I.default, {
                     channel: n
                 }) : (0, s.jsx)(T.default, {
                     channel: n,
@@ -116,7 +116,7 @@
                         name: d
                     })
                 });
-                return I ? (0, s.jsx)(D, {
+                return N ? (0, s.jsx)(O, {
                     channel: n,
                     canManageRoles: M
                 }) : (0, s.jsx)(_.default, {

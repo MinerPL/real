@@ -18,13 +18,13 @@
                 _ = n("899633"),
                 h = n("835040"),
                 C = n("506885"),
-                I = n("981601"),
-                T = n("271938"),
+                T = n("981601"),
+                I = n("271938"),
                 S = n("42887"),
                 N = n("211248"),
                 A = n("200639"),
-                m = n("97347"),
-                p = n("151185"),
+                p = n("97347"),
+                m = n("151185"),
                 g = n("342169"),
                 R = n("158998"),
                 O = n("39141"),
@@ -40,7 +40,7 @@
                         getStatus: () => L.default.Messages.SERVER_DEAFENED
                     },
                     serverMute: {
-                        icon: m.default,
+                        icon: p.default,
                         colorize: !0,
                         getStatus: () => L.default.Messages.SERVER_MUTED
                     },
@@ -50,7 +50,7 @@
                         getStatus: () => L.default.Messages.VOICE_CHANNEL_DEAFENED
                     },
                     mute: {
-                        icon: m.default,
+                        icon: p.default,
                         colorize: !1,
                         getStatus: () => L.default.Messages.VOICE_CHANNEL_MUTED
                     }
@@ -91,12 +91,12 @@
                     nick: u,
                     mute: d,
                     deaf: c,
-                    serverMute: T,
+                    serverMute: I,
                     serverDeaf: N
-                } = e, A = (0, r.useStateFromStores)([S.default], () => S.default.isLocalMute(o.id)), m = (0, _.default)({
+                } = e, A = (0, r.useStateFromStores)([S.default], () => S.default.isLocalMute(o.id)), p = (0, _.default)({
                     userId: o.id,
                     checkSoundSharing: !0
-                }), p = null !== (t = i.getGuildId()) && void 0 !== t ? t : void 0, g = o.getAvatarURL(i.guild_id, 24), y = null != u ? u : R.default.getName(o), {
+                }), m = null !== (t = i.getGuildId()) && void 0 !== t ? t : void 0, g = o.getAvatarURL(i.guild_id, 24), y = null != u ? u : R.default.getName(o), {
                     icon: x,
                     colorize: b,
                     getStatus: U
@@ -116,7 +116,7 @@
                 }({
                     serverDeaf: N,
                     deaf: c,
-                    serverMute: T,
+                    serverMute: I,
                     mute: d,
                     localMute: A
                 })) && void 0 !== s ? s : {}, G = null != U ? L.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
@@ -125,14 +125,14 @@
                 }) : y;
 
                 function j(e) {
-                    null != p ? (0, f.openContextMenuLazy)(e, async () => {
+                    null != m ? (0, f.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
                         } = await n.el("834247").then(n.bind(n, "834247"));
                         return t => (0, a.jsx)(e, {
                             ...t,
                             user: o,
-                            guildId: p,
+                            guildId: m,
                             channel: i,
                             showMediaItems: !0
                         })
@@ -148,14 +148,14 @@
                     })
                 }
                 return (0, a.jsx)(E.Popout, {
-                    preload: () => (0, C.default)(o.id, o.getAvatarURL(p, 80), {
-                        guildId: p,
+                    preload: () => (0, C.default)(o.id, o.getAvatarURL(m, 80), {
+                        guildId: m,
                         channelId: i.id
                     }),
                     position: "top",
-                    renderPopout: e => (0, a.jsx)(I.default, {
+                    renderPopout: e => (0, a.jsx)(T.default, {
                         userId: o.id,
-                        guildId: p,
+                        guildId: m,
                         channelId: i.id,
                         ...e
                     }),
@@ -169,10 +169,10 @@
                             focusProps: M,
                             children: (0, a.jsx)(h.default, {
                                 shakeLocation: O.ShakeLocation.VOICE_USER,
-                                isShaking: m,
+                                isShaking: p,
                                 children: (0, a.jsx)("div", {
                                     className: l(v.avatar, {
-                                        [v.speaking]: m
+                                        [v.speaking]: p
                                     }),
                                     style: {
                                         backgroundImage: "url(".concat(g, ")")
@@ -198,7 +198,7 @@
                     voiceStates: t,
                     channel: n,
                     className: i
-                } = e, [o, u] = s.useState(!1), d = o ? g.default : p.default, c = (0, a.jsx)(N.default, {
+                } = e, [o, u] = s.useState(!1), d = o ? g.default : m.default, c = (0, a.jsx)(N.default, {
                     className: v.expandButton,
                     onClick: () => u(!o),
                     color: N.CircleIconButtonColors.PRIMARY,
@@ -209,7 +209,7 @@
                         height: 16
                     }),
                     focusProps: M
-                }), f = (0, r.useStateFromStores)([T.default], () => T.default.getId(), []), [_, h] = function(e, t) {
+                }), f = (0, r.useStateFromStores)([I.default], () => I.default.getId(), []), [_, h] = function(e, t) {
                     let n = [];
                     for (let a of e) {
                         if (a.user.id !== t) {

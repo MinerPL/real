@@ -18,8 +18,8 @@
                 _ = n("754576"),
                 h = n("78581"),
                 C = n("429829"),
-                I = n("191191"),
-                T = n("994428"),
+                T = n("191191"),
+                I = n("994428"),
                 S = n("782340");
 
             function N(e) {
@@ -27,8 +27,8 @@
                     channel: t,
                     iconClassName: N,
                     className: A,
-                    innerClassName: m,
-                    ...p
+                    innerClassName: p,
+                    ...m
                 } = e, {
                     mute: g,
                     suppress: R
@@ -57,7 +57,7 @@
                         let {
                             closePopout: n
                         } = e;
-                        return (0, a.jsx)(I.default, {
+                        return (0, a.jsx)(T.default, {
                             guildId: P,
                             channel: t,
                             onClose: n,
@@ -74,16 +74,16 @@
                             ...t,
                             className: A,
                             wrapperClassName: A,
-                            innerClassName: m,
+                            innerClassName: p,
                             disabled: L,
                             onClick: () => {
                                 var t, n;
-                                null == n || n(), null != y && y !== l.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && x(T.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), M(!v)
+                                null == n || n(), null != y && y !== l.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && x(I.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), M(!v)
                             },
                             onContextMenu: U,
                             fullWidth: !0,
                             size: r.Button.Sizes.SMALL,
-                            ...p,
+                            ...m,
                             children: (0, a.jsx)(_.default, {
                                 className: N
                             })

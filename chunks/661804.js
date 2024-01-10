@@ -17,8 +17,8 @@
                 _ = n("778043"),
                 h = n("875358"),
                 C = n("737295"),
-                I = n("153034"),
-                T = n("129215"),
+                T = n("153034"),
+                I = n("129215"),
                 S = n("49111"),
                 N = n("492249"),
                 A = n("677654");
@@ -35,7 +35,7 @@
                     } = this.state, t = (0, s.jsx)("div", {
                         children: (0, s.jsx)(f.default, {
                             section: S.AnalyticsSections.LIBRARY_INSTALL_MODULE,
-                            children: (0, s.jsx)(T.default, {
+                            children: (0, s.jsx)(I.default, {
                                 onHeightTallerThanHalfViewportChange: this.handleHeightTallerThanHalfViewportChange
                             })
                         })
@@ -49,7 +49,7 @@
                             ref: this._scrollerRef,
                             children: [e ? t : null, (0, s.jsx)(f.default, {
                                 section: S.AnalyticsSections.LIBRARY_APPLICATION_LIST,
-                                children: (0, s.jsx)(I.default, {
+                                children: (0, s.jsx)(T.default, {
                                     stickyHeader: !e,
                                     scrollToRow: this.scrollToRow
                                 })

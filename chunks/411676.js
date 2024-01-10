@@ -18,8 +18,8 @@
                 _ = n("224978"),
                 h = n("885795"),
                 C = n("49111"),
-                I = n("782340"),
-                T = n("819745");
+                T = n("782340"),
+                I = n("819745");
 
             function S(e) {
                 let {
@@ -27,18 +27,18 @@
                     type: n,
                     status: S,
                     isFocused: N
-                } = e, A = s.useContext(E.AnalyticsContext), m = e => {
+                } = e, A = s.useContext(E.AnalyticsContext), p = e => {
                     e.stopPropagation(), l.default.cancelFriendRequest(t.id, {
                         location: "Friends"
                     })
-                }, p = e => {
+                }, m = e => {
                     e.stopPropagation(), l.default.addRelationship({
                         userId: t.id,
                         context: {
                             location: "Friends"
                         }
                     })
-                }, g = S === C.StatusTypes.OFFLINE ? C.StatusTypes.UNKNOWN : S, R = n === C.RelationshipTypes.PENDING_INCOMING ? I.default.Messages.INCOMING_FRIEND_REQUEST : I.default.Messages.OUTGOING_FRIEND_REQUEST;
+                }, g = S === C.StatusTypes.OFFLINE ? C.StatusTypes.UNKNOWN : S, R = n === C.RelationshipTypes.PENDING_INCOMING ? T.default.Messages.INCOMING_FRIEND_REQUEST : T.default.Messages.OUTGOING_FRIEND_REQUEST;
                 return (0, a.jsx)(_.default, {
                     isFocused: N,
                     user: t,
@@ -50,42 +50,42 @@
                         var s;
                         let l = n === C.RelationshipTypes.PENDING_INCOMING ? (0, a.jsxs)(a.Fragment, {
                             children: [(null === (s = o.default.getCurrentUser()) || void 0 === s ? void 0 : s.isStaff()) && (null == t ? void 0 : t.isStaff()) && (0, a.jsx)("div", {
-                                className: T.staffIndicator,
+                                className: I.staffIndicator,
                                 children: (0, a.jsx)(c.TextBadge, {
                                     color: i.default.unsafe_rawColors.BRAND_500.css,
-                                    text: I.default.Messages.STAFF_BADGE_TOOLTIP
+                                    text: T.default.Messages.STAFF_BADGE_TOOLTIP
                                 })
                             }), (0, a.jsx)(f.default, {
                                 icon: u.default,
                                 actionType: f.default.ActionTypes.ACCEPT,
-                                tooltip: I.default.Messages.FRIEND_REQUEST_ACCEPT,
-                                onClick: p,
+                                tooltip: T.default.Messages.FRIEND_REQUEST_ACCEPT,
+                                onClick: m,
                                 shouldHighlight: e
                             }), (0, a.jsx)(f.default, {
                                 icon: d.default,
                                 actionType: f.default.ActionTypes.DENY,
-                                tooltip: I.default.Messages.FRIEND_REQUEST_IGNORE,
-                                onClick: m,
+                                tooltip: T.default.Messages.FRIEND_REQUEST_IGNORE,
+                                onClick: p,
                                 shouldHighlight: e
                             })]
                         }) : (0, a.jsx)(f.default, {
                             icon: d.default,
                             actionType: f.default.ActionTypes.DENY,
-                            tooltip: I.default.Messages.FRIEND_REQUEST_CANCEL,
-                            onClick: m,
+                            tooltip: T.default.Messages.FRIEND_REQUEST_CANCEL,
+                            onClick: p,
                             shouldHighlight: e
                         });
                         return (0, a.jsxs)("div", {
-                            className: T.listItemContents,
+                            className: I.listItemContents,
                             children: [(0, a.jsx)(h.default, {
                                 user: t,
                                 hovered: e,
                                 showAccountIdentifier: !0,
                                 status: g,
                                 subText: R,
-                                className: T.userInfo
+                                className: I.userInfo
                             }), (0, a.jsx)("div", {
-                                className: T.actions,
+                                className: I.actions,
                                 children: l
                             })]
                         })

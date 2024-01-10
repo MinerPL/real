@@ -18,13 +18,13 @@
                 _ = n("619443"),
                 h = n("539938"),
                 C = n("305961"),
-                I = n("160299"),
-                T = n("257869"),
+                T = n("160299"),
+                I = n("257869"),
                 S = n("638779"),
                 N = n("459736"),
                 A = n("967251"),
-                m = n("663831"),
-                p = n("170185"),
+                p = n("663831"),
+                m = n("170185"),
                 g = n("277860"),
                 R = n("724210"),
                 O = n("782340"),
@@ -33,7 +33,7 @@
             function v(e) {
                 let {
                     guildId: t
-                } = e, n = (0, l.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), v = (0, l.useStateFromStores)([_.default], () => _.default.isConnected()), M = (0, E.default)(t), P = (0, S.default)(t), D = (0, l.useStateFromStores)([I.default], () => I.default.isSubscriptionFetching), y = (0, T.useGroupListingsFetchContext)(), {
+                } = e, n = (0, l.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), v = (0, l.useStateFromStores)([_.default], () => _.default.isConnected()), M = (0, E.default)(t), P = (0, S.default)(t), D = (0, l.useStateFromStores)([T.default], () => T.default.isSubscriptionFetching), y = (0, I.useGroupListingsFetchContext)(), {
                     shouldHideGuildPurchaseEntryPoints: x,
                     restrictionsLoading: b
                 } = (0, f.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !y || D || b;
@@ -47,8 +47,8 @@
                     }, []), s.useEffect(() => {
                         G && !i.isMobile && (0, c.handleInaccessiblePage)(t, R.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
                     }, [t, G]), i.isMobile && G) {
-                    let e = null == n ? m.GuildRoleSubscriptionsOverviewErrorType.NOT_GUILD_MEMBER : m.GuildRoleSubscriptionsOverviewErrorType.GUILD_NOT_ELIGIBLE;
-                    return (0, a.jsx)(m.GuildRoleSubscriptionsOverviewErrorPage, {
+                    let e = null == n ? p.GuildRoleSubscriptionsOverviewErrorType.NOT_GUILD_MEMBER : p.GuildRoleSubscriptionsOverviewErrorType.GUILD_NOT_ELIGIBLE;
+                    return (0, a.jsx)(p.GuildRoleSubscriptionsOverviewErrorPage, {
                         errorType: e
                     })
                 }
@@ -75,7 +75,7 @@
                                     guild: n
                                 })
                             })
-                        }) : (0, a.jsx)(p.default, {})
+                        }) : (0, a.jsx)(m.default, {})
                     })]
                 })
             }
@@ -84,7 +84,7 @@
                 let {
                     guildId: t
                 } = e;
-                return (0, a.jsx)(T.GroupListingsFetchContextProvider, {
+                return (0, a.jsx)(I.GroupListingsFetchContextProvider, {
                     guildId: t,
                     refetchOnMount: !0,
                     children: (0, a.jsx)(v, {

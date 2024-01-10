@@ -34,8 +34,8 @@
                 L = n("476765"),
                 O = n("826684"),
                 y = n("483093"),
-                b = n("659500"),
-                P = n("449008"),
+                P = n("659500"),
+                b = n("449008"),
                 D = n("158998"),
                 U = n("50885"),
                 w = n("49111"),
@@ -137,7 +137,7 @@
                         } = this.props, n = "@".concat(D.default.getUserTag(e, {
                             decoration: "never"
                         })), a = "<@".concat(e.id, ">");
-                        b.ComponentDispatch.dispatchToLastSubscribed(w.ComponentActions.INSERT_TEXT, {
+                        P.ComponentDispatch.dispatchToLastSubscribed(w.ComponentActions.INSERT_TEXT, {
                             plainText: n,
                             rawText: a
                         }), E.default.startTyping(t.id)
@@ -412,7 +412,7 @@
                                 rowsVisible: n
                             } = this.getDimensions();
                         if (void 0 === n || 0 === n || null == t) return;
-                        let a = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(P.isNotNullish);
+                        let a = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(b.isNotNullish);
                         if (0 === a.length) return;
                         let l = a.reduce((e, t) => t.type !== A.MemberListRowTypes.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some(e => e.type === w.ActivityTypes.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e), {
                             num_users_visible: 0,

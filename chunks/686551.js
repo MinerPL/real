@@ -35,10 +35,10 @@
                             return
                         }
                         let C = o.default.getChannel(h),
-                            I = null == C ? void 0 : C.isGuildStageVoice();
-                        if (!I) return;
-                        let T = (0, d.getAudienceRequestToSpeakState)(_) === d.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-                        if (null != C && T) {
+                            T = null == C ? void 0 : C.isGuildStageVoice();
+                        if (!T) return;
+                        let I = (0, d.getAudienceRequestToSpeakState)(_) === d.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+                        if (null != C && I) {
                             if ((0, s.hasModalOpen)(E)) return;
                             (0, s.openModalLazy)(async () => {
                                 let {

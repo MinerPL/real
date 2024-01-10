@@ -18,13 +18,13 @@
                 _ = n("731898"),
                 h = n("252744"),
                 C = n("502651"),
-                I = n("812204"),
-                T = n("685665"),
+                T = n("812204"),
+                I = n("685665"),
                 S = n("106803"),
                 N = n("861370"),
                 A = n("217513"),
-                m = n("430312"),
-                p = n("763866"),
+                p = n("430312"),
+                m = n("763866"),
                 g = n("10532"),
                 R = n("935409"),
                 O = n("373469"),
@@ -82,7 +82,7 @@
                     closePopout: M
                 } = e, x = (0, f.useAnalyticsContext)(), {
                     AnalyticsLocationProvider: B
-                } = (0, T.default)(I.default.ACCOUNT_PROFILE_POPOUT), H = (0, A.default)(i.id, o), [V, Y, W, K] = (0, d.useStateFromStoresArray)([v.default], () => {
+                } = (0, I.default)(T.default.ACCOUNT_PROFILE_POPOUT), H = (0, A.default)(i.id, o), [V, Y, W, K] = (0, d.useStateFromStoresArray)([v.default], () => {
                     var e;
                     let t = i.id;
                     return "string" != typeof t ? [void 0, void 0, G.StatusTypes.UNKNOWN, !1] : [null !== (e = v.default.findActivity(t, e => e.type !== G.ActivityTypes.CUSTOM_STATUS)) && void 0 !== e ? e : void 0, v.default.findActivity(i.id, e => e.type === G.ActivityTypes.CUSTOM_STATUS), v.default.getStatus(t), v.default.isMobileOnline(t)]
@@ -119,7 +119,7 @@
                         className: w.popoutContainer,
                         children: (0, a.jsx)("div", {
                             ref: q,
-                            children: (0, a.jsxs)(m.default, {
+                            children: (0, a.jsxs)(p.default, {
                                 user: i,
                                 profileType: j.UserProfileTypes.POPOUT,
                                 children: [(0, a.jsx)(R.default, {
@@ -132,8 +132,8 @@
                                     disableUserProfileLink: __OVERLAY__,
                                     isHovering: Q,
                                     showPremiumBadgeUpsell: !1
-                                }), (0, a.jsxs)(m.default.Inner, {
-                                    children: [(0, a.jsx)(p.default, {
+                                }), (0, a.jsxs)(p.default.Inner, {
+                                    children: [(0, a.jsx)(m.default, {
                                         activity: V,
                                         customStatusActivity: Y,
                                         displayProfile: H,

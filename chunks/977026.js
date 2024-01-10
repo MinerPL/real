@@ -34,8 +34,8 @@
                 L = n("116439"),
                 O = n("271938"),
                 y = n("42887"),
-                b = n("957255"),
-                P = n("18494"),
+                P = n("957255"),
+                b = n("18494"),
                 D = n("697218"),
                 U = n("887657"),
                 w = n("293137"),
@@ -80,7 +80,7 @@
                 var t, n;
                 let {
                     channel: l
-                } = e, s = (0, en.default)(l.id), [i, o] = (0, el.default)(l), u = (0, r.useStateFromStores)([b.default], () => b.default.can(es.Permissions.REQUEST_TO_SPEAK, l));
+                } = e, s = (0, en.default)(l.id), [i, o] = (0, el.default)(l), u = (0, r.useStateFromStores)([P.default], () => P.default.can(es.Permissions.REQUEST_TO_SPEAK, l));
                 if (s) return null;
                 return (0, a.jsx)(R.CenterControlButton, {
                     isActive: i,
@@ -96,7 +96,7 @@
             let ed = l.memo(function(e) {
                 let {
                     channel: t
-                } = e, n = (0, r.useStateFromStores)([P.default], () => P.default.getVoiceChannelId() === t.id, [t.id]);
+                } = e, n = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]);
                 return (0, a.jsxs)("div", {
                     className: er.container,
                     children: [(0, a.jsx)(ep, {
@@ -139,7 +139,7 @@
                     onSelect: n
                 } = e, l = (0, d.useAppContext)(), {
                     canManageGuildEvent: s
-                } = (0, _.useManageResourcePermissions)(t), u = (0, r.useStateFromStores)([J.default], () => J.default.getStageInstanceByChannel(t.id), [t.id]), c = (0, r.useStateFromStores)([C.default], () => C.default.getGuildScheduledEvent(null == u ? void 0 : u.guild_scheduled_event_id)), f = (0, r.useStateFromStores)([P.default], () => P.default.getVoiceChannelId() === t.id, [t.id]), {
+                } = (0, _.useManageResourcePermissions)(t), u = (0, r.useStateFromStores)([J.default], () => J.default.getStageInstanceByChannel(t.id), [t.id]), c = (0, r.useStateFromStores)([C.default], () => C.default.getGuildScheduledEvent(null == u ? void 0 : u.guild_scheduled_event_id)), f = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]), {
                     suppress: h
                 } = (0, x.default)(t), p = O.default.getId(), [m] = (0, el.default)(t), E = X.default.isModerator(p, t.id), g = (0, K.useCanModerateRequestToSpeak)(t.id), S = s(c);
                 return f ? (E || S) && null != u ? (0, a.jsx)(o.Popout, {
@@ -310,7 +310,7 @@
                 } = (0, I.default)(), S = (0, v.default)(t), {
                     limit: _,
                     reachedLimit: R
-                } = (0, T.default)(t), O = (0, r.useStateFromStores)([D.default], () => D.default.getCurrentUser()), b = (0, r.useStateFromStores)([y.default], () => (0, E.default)(y.default)), U = (0, r.useStateFromStores)([P.default], () => P.default.getVoiceChannelId() === t.id, [t.id]), w = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), F = (0, q.useStageHasMedia)(t.id), k = _ > 0, V = R && !F || null != w && w.user.id !== (null == O ? void 0 : O.id);
+                } = (0, T.default)(t), O = (0, r.useStateFromStores)([D.default], () => D.default.getCurrentUser()), P = (0, r.useStateFromStores)([y.default], () => (0, E.default)(y.default)), U = (0, r.useStateFromStores)([b.default], () => b.default.getVoiceChannelId() === t.id, [t.id]), w = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), F = (0, q.useStageHasMedia)(t.id), k = _ > 0, V = R && !F || null != w && w.user.id !== (null == O ? void 0 : O.id);
                 if (null == O) return null;
                 let B = (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(o.Popout, {
@@ -350,7 +350,7 @@
                         channel: t,
                         currentUser: O,
                         exitFullScreen: () => null,
-                        canGoLive: b,
+                        canGoLive: P,
                         hasPermission: S,
                         disabled: V
                     })]
@@ -424,7 +424,7 @@
                 let {
                     channel: t,
                     isOnStartStageScreen: n
-                } = e, l = (0, en.default)(t.id), s = (0, K.useCanModerateRequestToSpeak)(t.id), i = (0, r.useStateFromStores)([b.default], () => b.default.can(Z.MODERATE_STAGE_CHANNEL_PERMISSIONS, t), [t]), o = (0, ea.default)(t.id), u = (0, r.useStateFromStores)([c.default], () => null != t ? c.default.getSelectedParticipant(t.id) : null), d = !o && null == u;
+                } = e, l = (0, en.default)(t.id), s = (0, K.useCanModerateRequestToSpeak)(t.id), i = (0, r.useStateFromStores)([P.default], () => P.default.can(Z.MODERATE_STAGE_CHANNEL_PERMISSIONS, t), [t]), o = (0, ea.default)(t.id), u = (0, r.useStateFromStores)([c.default], () => null != t ? c.default.getSelectedParticipant(t.id) : null), d = !o && null == u;
                 return n ? (0, a.jsx)(eE, {
                     channel: t
                 }) : l || s ? (0, a.jsxs)("div", {

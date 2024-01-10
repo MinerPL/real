@@ -19,8 +19,8 @@
                 _ = n("443504"),
                 h = n("247820"),
                 C = n("641078"),
-                I = n("953314"),
-                T = n("518151");
+                T = n("953314"),
+                I = n("518151");
             let S = "PremiumServerDriveAnnouncementModal";
             class N extends l.default {
                 _initialize() {
@@ -31,7 +31,7 @@
                 }
                 constructor(...e) {
                     super(...e), this.maybeOpenServerDriveAnnouncementModal = (e, t) => {
-                        let i = (0, T.extractAnnouncementModalContent)({
+                        let i = (0, I.extractAnnouncementModalContent)({
                             content: e,
                             isPreview: t
                         });
@@ -71,7 +71,7 @@
                             t = (0, r.getInventoryGuildPacksUserExperimentConfig)({
                                 user: e
                             });
-                        !(0, s.hasAnyModalOpen)() && t.showTryPacksModalAndV2Copy && t.collectEnabled && (0, I.isEligibleForTryPacksModal)((0, c.isPremium)(e)) && (0, s.openModalLazy)(async () => {
+                        !(0, s.hasAnyModalOpen)() && t.showTryPacksModalAndV2Copy && t.collectEnabled && (0, T.isEligibleForTryPacksModal)((0, c.isPremium)(e)) && (0, s.openModalLazy)(async () => {
                             let {
                                 default: e
                             } = await n.el("953314").then(n.bind(n, "953314"));

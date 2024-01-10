@@ -1,8 +1,5 @@
             "use strict";
             n.r(t), n.d(t, {
-                useClydeExperiment: function() {
-                    return o
-                },
                 useClydeProfilesEnabled: function() {
                     return d
                 },

@@ -21,13 +21,13 @@
                 _ = n("69927"),
                 h = n("10641"),
                 C = n("539938"),
-                I = n("155084"),
-                T = n("970366"),
+                T = n("155084"),
+                I = n("970366"),
                 S = n("161778"),
                 N = n("845579"),
                 A = n("697218"),
-                m = n("476765"),
-                p = n("155207"),
+                p = n("476765"),
+                m = n("155207"),
                 g = n("956089"),
                 R = n("599110"),
                 O = n("439932"),
@@ -93,7 +93,7 @@
                     theme: t,
                     section: n,
                     handleItemSelect: s
-                } = e, i = (0, m.useUID)(), o = (0, y.usePendingRequestCount)();
+                } = e, i = (0, p.useUID)(), o = (0, y.usePendingRequestCount)();
                 return (0, a.jsxs)(C.default, {
                     className: l((0, O.getThemeClass)(t), B.sidebarTabBar),
                     scrollable: r.isMobile,
@@ -101,7 +101,7 @@
                     "aria-labelledby": i,
                     toolbar: !0,
                     children: [(0, a.jsx)(C.default.Icon, {
-                        icon: p.default,
+                        icon: m.default,
                         "aria-hidden": !0
                     }), (0, a.jsx)(C.default.Title, {
                         id: i,
@@ -139,26 +139,26 @@
                         selectedTab: E,
                         handleTabChange: C
                     } = (0, M.default)(),
-                    S = (0, m.useUID)(),
+                    S = (0, p.useUID)(),
                     N = A.default.getCurrentUser(),
-                    p = null != e,
-                    g = i && null != N && !p;
+                    m = null != e,
+                    g = i && null != N && !m;
                 return (s.useEffect(() => {
-                    (0, T.trackAppUIViewed)("family-center"), L.default.initialPageLoad(), !n && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
+                    (0, I.trackAppUIViewed)("family-center"), L.default.initialPageLoad(), !n && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
                         dismissAction: w.ContentDismissActionType.AUTO,
                         forceTrack: !0
                     })
                 }, []), s.useEffect(() => {
-                    i && p && (R.default.track(j.AnalyticEvents.FAMILY_CENTER_VIEWED, {
+                    i && m && (R.default.track(j.AnalyticEvents.FAMILY_CENTER_VIEWED, {
                         is_considered_adult: e,
                         num_of_accepted_links: t,
                         selected_teen_id: r,
                         initial_page: G.FamilyCenterSubPageAnalyticsIds[E],
                         source: G.FamilyCenterPageLocationAnalyticsIds[G.FamilyCenterPageLocation.SIDENAV]
-                    }), I.default.increment({
+                    }), T.default.increment({
                         name: o.MetricEvents.FAMILY_CENTER_VIEW
                     }))
-                }, [i, p]), g) ? ((0, f.openAgeGateModal)(k.AgeGateSource.FAMILY_CENTER), null) : (0, a.jsxs)("main", {
+                }, [i, m]), g) ? ((0, f.openAgeGateModal)(k.AgeGateSource.FAMILY_CENTER), null) : (0, a.jsxs)("main", {
                     className: l(B.container),
                     "aria-label": F.default.Messages.FAMILY_CENTER_TITLE,
                     children: [(0, a.jsx)(_.AppPageTitle, {
@@ -187,15 +187,15 @@
                     r = (0, P.useSelectedTeenId)(),
                     C = (0, u.default)([S.default], () => S.default.theme),
                     {
-                        selectedTab: p,
+                        selectedTab: m,
                         handleTabChange: g
                     } = (0, M.default)(),
-                    O = (0, m.useUID)(),
+                    O = (0, p.useUID)(),
                     x = A.default.getCurrentUser(),
                     b = null != e,
                     U = i && null != x && !b;
                 if (s.useEffect(() => {
-                        E.setHomeLink(j.Routes.FAMILY_CENTER), (0, T.trackAppUIViewed)("family-center"), !v.default.isLoading() && v.default.canRefetch() && L.default.initialPageLoad(), !n && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
+                        E.setHomeLink(j.Routes.FAMILY_CENTER), (0, I.trackAppUIViewed)("family-center"), !v.default.isLoading() && v.default.canRefetch() && L.default.initialPageLoad(), !n && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE, {
                             dismissAction: w.ContentDismissActionType.AUTO,
                             forceTrack: !0
                         })
@@ -204,16 +204,16 @@
                             is_considered_adult: e,
                             num_of_accepted_links: t,
                             selected_teen_id: r,
-                            initial_page: G.FamilyCenterSubPageAnalyticsIds[p],
+                            initial_page: G.FamilyCenterSubPageAnalyticsIds[m],
                             source: G.FamilyCenterPageLocationAnalyticsIds[G.FamilyCenterPageLocation.SIDENAV]
-                        }), I.default.increment({
+                        }), T.default.increment({
                             name: o.MetricEvents.FAMILY_CENTER_VIEW
                         }))
                     }, [i, b]), s.useEffect(() => {
                         let t = N.FamilyCenterEnabled.getSetting();
                         i && e && void 0 === t && N.FamilyCenterEnabled.updateSetting(!0)
                     }, [i, e]), U) return (0, f.openAgeGateModal)(k.AgeGateSource.FAMILY_CENTER), null;
-                let H = p !== G.FamilyCenterSubPages.SETTINGS ? p : G.FamilyCenterSubPages.ACTIVITY,
+                let H = m !== G.FamilyCenterSubPages.SETTINGS ? m : G.FamilyCenterSubPages.ACTIVITY,
                     Y = V[H];
                 return (0, a.jsxs)("main", {
                     className: l(B.container, B.containerSidenav),

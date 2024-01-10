@@ -18,13 +18,13 @@
                 _ = n("259083"),
                 h = n("790219"),
                 C = n("827825"),
-                I = n("577427"),
-                T = n("946749"),
+                T = n("577427"),
+                I = n("946749"),
                 S = n("145131"),
                 N = n("953109"),
                 A = n("280174"),
-                m = n("158352"),
-                p = n("867544"),
+                p = n("158352"),
+                m = n("867544"),
                 g = n("216422"),
                 R = n("688342"),
                 O = n("599110"),
@@ -130,7 +130,7 @@
                                 children: [(0, a.jsx)(G, {
                                     flag: P.LibraryApplicationFlags.PRIVATE,
                                     item: e,
-                                    icon: p.default,
+                                    icon: m.default,
                                     tooltip: D.default.Messages.GAME_LIBRARY_PRIVATE_TOOLTIP
                                 }), (0, a.jsx)(G, {
                                     flag: P.LibraryApplicationFlags.OVERLAY_DISABLED,
@@ -316,7 +316,7 @@
                         highlightedApplicationKey: o
                     } = this.state;
                     return (0, a.jsxs)(s.Fragment, {
-                        children: [n.length > 0 ? (0, a.jsx)(m.default, {
+                        children: [n.length > 0 ? (0, a.jsx)(p.default, {
                             columns: j,
                             data: n,
                             sortData: !1,
@@ -397,21 +397,21 @@
                         applicationViewItems: i,
                         filterQuery: l,
                         fetched: u
-                    } = (0, o.useStateFromStoresObject)([I.default], () => ({
-                        applicationViewItems: I.default.sortedFilteredLibraryApplicationViewItems,
-                        filterQuery: I.default.applicationFilterQuery,
-                        fetched: I.default.hasFetchedApplications
+                    } = (0, o.useStateFromStoresObject)([T.default], () => ({
+                        applicationViewItems: T.default.sortedFilteredLibraryApplicationViewItems,
+                        filterQuery: T.default.applicationFilterQuery,
+                        fetched: T.default.hasFetchedApplications
                     })),
                     {
                         sortKey: d,
                         sortDirection: c,
                         activeRowKey: E,
                         isNavigatingByKeyboard: f
-                    } = (0, o.useStateFromStoresObject)([T.default], () => ({
-                        sortKey: T.default.sortKey,
-                        sortDirection: T.default.sortDirection,
-                        activeRowKey: T.default.activeRowKey,
-                        isNavigatingByKeyboard: T.default.isNavigatingByKeyboard
+                    } = (0, o.useStateFromStoresObject)([I.default], () => ({
+                        sortKey: I.default.sortKey,
+                        sortDirection: I.default.sortDirection,
+                        activeRowKey: I.default.activeRowKey,
+                        isNavigatingByKeyboard: I.default.isNavigatingByKeyboard
                     }));
                 return (0, a.jsx)(w, {
                     ...e,

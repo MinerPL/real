@@ -18,13 +18,13 @@
                 _ = n("696675"),
                 h = n("780624"),
                 C = n("696526"),
-                I = n("197801"),
-                T = n("582601"),
+                T = n("197801"),
+                I = n("582601"),
                 S = n("77078"),
                 N = n("850068"),
                 A = n("272030"),
-                m = n("79112"),
-                p = n("146350"),
+                p = n("79112"),
+                m = n("146350"),
                 g = n("901582"),
                 R = n("415929"),
                 O = n("687531"),
@@ -72,13 +72,13 @@
                 e_ = n("778588"),
                 eh = n("42887"),
                 eC = n("945956"),
-                eI = n("101125"),
-                eT = n("102985"),
+                eT = n("101125"),
+                eI = n("102985"),
                 eS = n("697218"),
                 eN = n("521012"),
                 eA = n("145131"),
-                em = n("398288"),
-                ep = n("837899"),
+                ep = n("398288"),
+                em = n("837899"),
                 eg = n("425190"),
                 eR = n("474571"),
                 eO = n("272339"),
@@ -144,7 +144,7 @@
                     let r = ew.default.getName(i),
                         o = null != l && l !== eB.StatusTypes.UNKNOWN,
                         u = null != n;
-                    return (u || o && i.isPomelo()) && (e = (0, a.jsx)(em.default, {
+                    return (u || o && i.isPomelo()) && (e = (0, a.jsx)(ep.default, {
                         hoverText: s,
                         forceHover: t,
                         children: u ? (0, a.jsx)(k.default, {
@@ -256,7 +256,7 @@
                                     }),
                                     children: r ? (0, a.jsx)(eD.default, {
                                         tooltipText: null,
-                                        icon: d.isShown ? ep.default : eg.default,
+                                        icon: d.isShown ? em.default : eg.default,
                                         role: "switch",
                                         "aria-label": eV.default.Messages.SET_STATUS
                                     }) : this.renderNameTag()
@@ -465,7 +465,7 @@
                         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eB.UserSettingsSections.ACCOUNT,
                             t = arguments.length > 1 ? arguments[1] : void 0,
                             n = arguments.length > 2 ? arguments[2] : void 0;
-                        m.default.open(e, t, n)
+                        p.default.open(e, t, n)
                     }, this.handleOpenSettingsContextMenu = e => {
                         let {
                             currentUser: t
@@ -595,7 +595,7 @@
                                 })
                             })
                         }
-                        return (0, a.jsx)(p.default, {
+                        return (0, a.jsx)(m.default, {
                             onClose: () => {
                                 this.handleMouseLeave(), null == t || t()
                             }
@@ -618,9 +618,9 @@
                     {
                         streaming: u,
                         status: d
-                    } = (0, r.useStateFromStoresObject)([eI.default], () => ({
-                        streaming: null != eI.default.findActivity(e => e.type === eB.ActivityTypes.STREAMING),
-                        status: eI.default.getStatus()
+                    } = (0, r.useStateFromStoresObject)([eT.default], () => ({
+                        streaming: null != eT.default.findActivity(e => e.type === eB.ActivityTypes.STREAMING),
+                        status: eT.default.getStatus()
                     })),
                     c = (0, v.default)({
                         userId: n
@@ -628,7 +628,7 @@
                     E = ew.default.useUserTag(e, {
                         decoration: "never"
                     }),
-                    f = (0, r.useStateFromStores)([eT.default], () => eT.default.hidePersonalInformation),
+                    f = (0, r.useStateFromStores)([eI.default], () => eI.default.hidePersonalInformation),
                     _ = (0, r.useStateFromStores)([eC.default, ef.default], () => {
                         let e = eC.default.getChannelId();
                         return null != e ? ef.default.getChannel(e) : null
@@ -636,17 +636,17 @@
                     {
                         mute: h,
                         selfMute: C,
-                        suppress: I
+                        suppress: T
                     } = (0, ec.default)(_),
                     {
-                        selfDeaf: T,
+                        selfDeaf: I,
                         deaf: A
                     } = (0, ed.default)(_),
-                    m = (0, r.useStateFromStores)([P.default], () => {
+                    p = (0, r.useStateFromStores)([P.default], () => {
                         var e;
                         return (0, D.probablyHasBuildOverride)() ? null === (e = P.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
                     }),
-                    p = (0, r.useStateFromStores)([eN.default], () => eN.default.getPremiumTypeSubscription()),
+                    m = (0, r.useStateFromStores)([eN.default], () => eN.default.getPremiumTypeSubscription()),
                     g = (0, r.useStateFromStores)([eh.default], () => eh.default.getEverSpeakingWhileMuted()),
                     M = (0, r.useStateFromStores)([e_.default], () => e_.default.hasLayers()),
                     y = (0, S.useModalsStore)(S.hasAnyModalOpenSelector),
@@ -716,8 +716,8 @@
                     };
                 if (!x) {
                     if (eu && eA.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), t) {
-                        var em;
-                        eA.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && W === (null === (em = (0, V.getDrop)(eH.PartnerGame.FORTNITE)) || void 0 === em ? void 0 : em.title) && eA.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)
+                        var ep;
+                        eA.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && W === (null === (ep = (0, V.getDrop)(eH.PartnerGame.FORTNITE)) || void 0 === ep ? void 0 : ep.title) && eA.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)
                     }
                     Q && $ && eA.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), en && (1 === ea ? eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), er && eA.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), es && eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING)
                 }
@@ -728,8 +728,8 @@
                     userTag: E,
                     hidePrivateData: f,
                     occluded: x,
-                    premiumSubscription: p,
-                    selfDeaf: T,
+                    premiumSubscription: m,
+                    selfDeaf: I,
                     selfMute: C,
                     serverDeaf: A,
                     serverMute: h,
@@ -740,8 +740,8 @@
                     speakingWhileMuted: g,
                     status: d,
                     streaming: u,
-                    suppress: I,
-                    webBuildOverride: m,
+                    suppress: T,
+                    webBuildOverride: p,
                     awaitingRemote: U,
                     isEligibleForPomelo: b
                 })
@@ -754,7 +754,7 @@
                     onClick: s,
                     onContextMenu: i
                 } = e, l = (0, S.useRedesignIconContext)().enabled, r = null, o = eR.default;
-                return l ? o = null != t ? T.SettingsInfoIcon : n ? C.SettingsCircleIcon : I.SettingsIcon : null != t ? r = (0, a.jsx)(ev.default, {
+                return l ? o = null != t ? I.SettingsInfoIcon : n ? C.SettingsCircleIcon : T.SettingsIcon : null != t ? r = (0, a.jsx)(ev.default, {
                     width: 9,
                     height: 9,
                     className: eY.hasBuildOverride,

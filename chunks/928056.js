@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return p
                 }
             }), n("222007");
             var a = n("37983"),
@@ -18,8 +18,8 @@
                 _ = n("602043"),
                 h = n("737295"),
                 C = n("762448"),
-                I = n("49111"),
-                T = n("782340"),
+                T = n("49111"),
+                I = n("782340"),
                 S = n("352561");
 
             function N(e) {
@@ -40,7 +40,7 @@
                                 children: e.libraryApplication.getBranchedName(e.application)
                             }), null != t ? (0, a.jsx)("div", {
                                 className: S.applicationSubText,
-                                children: I.DistributorNames[t]
+                                children: T.DistributorNames[t]
                             }) : null]
                         }), (0, a.jsx)(l.Clickable, {
                             className: S.restoreButton,
@@ -55,7 +55,7 @@
                     className: S.hiddenLibraryApplications,
                     children: [(0, a.jsx)(l.FormTitle, {
                         className: S.hiddenLibraryApplicationsTitle,
-                        children: T.default.Messages.SETTINGS_GAMES_HIDDEN_LIBRARY_APPLICATIONS_LABEL
+                        children: I.default.Messages.SETTINGS_GAMES_HIDDEN_LIBRARY_APPLICATIONS_LABEL
                     }), s]
                 })
             }
@@ -67,7 +67,7 @@
                     o.InstallShortcutStartMenu.updateSetting(e)
                 }
                 trackRestoreApplication(e, t) {
-                    E.default.track(I.AnalyticEvents.APPLICATION_SETTINGS_UPDATED, {
+                    E.default.track(T.AnalyticEvents.APPLICATION_SETTINGS_UPDATED, {
                         hidden_enabled: t,
                         ...e.getAnalyticsData()
                     })
@@ -84,13 +84,13 @@
                             children: [(0, a.jsx)(l.FormSwitch, {
                                 value: t,
                                 onChange: this.handleToggleShortcutDesktop,
-                                note: T.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP_NOTE,
-                                children: T.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP
+                                note: I.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP_NOTE,
+                                children: I.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP
                             }), (0, a.jsx)(l.FormSwitch, {
                                 value: n,
                                 onChange: this.handleToggleShortcutStartMenu,
-                                note: T.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU_NOTE,
-                                children: T.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU
+                                note: I.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU_NOTE,
+                                children: I.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU
                             }), (0, a.jsx)(C.default, {})]
                         }) : null, (0, a.jsx)(N, {
                             restoreApplication: this.handleRestoreHiddenLibraryApplication,
@@ -101,7 +101,7 @@
                 render() {
                     return (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)(h.default, {
-                            currentRoute: I.Routes.APPLICATION_LIBRARY_SETTINGS
+                            currentRoute: T.Routes.APPLICATION_LIBRARY_SETTINGS
                         }), (0, a.jsx)(l.ScrollerAuto, {
                             className: S.scroller,
                             children: this.renderBody()
@@ -110,13 +110,13 @@
                 }
                 constructor(...e) {
                     super(...e), this.handleRestoreHiddenLibraryApplication = e => {
-                        let t = f.toggleFlag(e.getFlags(), I.LibraryApplicationFlags.HIDDEN);
-                        r.updateFlags(e.id, e.branchId, t), this.trackRestoreApplication(e, f.hasFlag(t, I.LibraryApplicationFlags.HIDDEN))
+                        let t = f.toggleFlag(e.getFlags(), T.LibraryApplicationFlags.HIDDEN);
+                        r.updateFlags(e.id, e.branchId, t), this.trackRestoreApplication(e, f.hasFlag(t, T.LibraryApplicationFlags.HIDDEN))
                     }
                 }
             }
 
-            function m() {
+            function p() {
                 let e = {
                     installShortcutDesktop: o.InstallShortcutDesktop.useSetting(),
                     installShortcutStartMenu: o.InstallShortcutStartMenu.useSetting(),

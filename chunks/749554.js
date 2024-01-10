@@ -25,8 +25,8 @@
                     onUserContextMenu: s
                 } = e, {
                     priorityMembers: C,
-                    guildContext: I
-                } = t, T = C[0], S = function(e) {
+                    guildContext: T
+                } = t, I = C[0], S = function(e) {
                     let {
                         priorityMembers: t,
                         partiedMembers: n
@@ -60,19 +60,19 @@
                         priorityMembers: s,
                         partiedMembers: d,
                         voiceChannels: C,
-                        currentActivities: I
-                    } = e, T = s.length, S = d.length - T, N = I[0], A = null == N ? void 0 : N.activity, m = null == N ? void 0 : N.startedPlayingTime, p = {
+                        currentActivities: T
+                    } = e, I = s.length, S = d.length - I, N = T[0], A = null == N ? void 0 : N.activity, p = null == N ? void 0 : N.startedPlayingTime, m = {
                         name: null !== (t = null == A ? void 0 : A.name) && void 0 !== t ? t : ""
                     };
                     if ((0, l.default)(A) && null != A) return {
                         subtitle: (0, a.jsx)(u.default, {
-                            start: m,
+                            start: p,
                             location: u.default.Locations.ACTIVITY_FEED_NEW,
-                            messageProps: p
+                            messageProps: m
                         }),
                         icon: null
                     };
-                    if (T + S === 1 && null != N) {
+                    if (I + S === 1 && null != N) {
                         let {
                             game: e
                         } = N;
@@ -92,9 +92,9 @@
                                 };
                                 return {
                                     subtitle: (0, a.jsx)(u.default, {
-                                        start: m,
+                                        start: p,
                                         location: u.default.Locations.ACTIVITY_FEED_NEW,
-                                        messageProps: p
+                                        messageProps: m
                                     }), icon: null != e ? (0, a.jsx)(E.default.Header.Icon, {
                                         src: null != e.getIconURL(f.ICON_SIZE) ? e.getIconURL(f.ICON_SIZE) : n("992739")
                                     }) : null
@@ -131,12 +131,12 @@
                                 }
                         }
                     }
-                    if (0 === I.length) {
+                    if (0 === T.length) {
                         if (C.length > 0) return {
                             subtitle: h.default.Messages.ACTIVITY_FEED_NOW_PLAYING_IN_A_VOICE_CHANNEL,
                             icon: null
                         };
-                        let e = I[0];
+                        let e = T[0];
                         if (null != e) {
                             let {
                                 activity: t
@@ -152,8 +152,8 @@
                                 })
                             }
                         }
-                    } else if (1 === I.length) {
-                        let e = I.find(e => null != e.activity);
+                    } else if (1 === T.length) {
+                        let e = T.find(e => null != e.activity);
                         if (null == e) return {
                             subtitle: null,
                             icon: null
@@ -167,7 +167,7 @@
                             subtitle: (0, a.jsx)(u.default, {
                                 start: s,
                                 location: u.default.Locations.ACTIVITY_FEED_NEW,
-                                messageProps: p
+                                messageProps: m
                             }),
                             icon: null != n && null != n.getIconURL(f.ICON_SIZE) ? (0, a.jsx)(E.default.Header.Icon, {
                                 src: n.getIconURL(f.ICON_SIZE)
@@ -182,11 +182,11 @@
                     }
                 }(t);
                 return (0, a.jsx)(E.default.Header, {
-                    priorityUser: T,
-                    guildId: null == I ? void 0 : I.id,
+                    priorityUser: I,
+                    guildId: null == T ? void 0 : T.id,
                     title: S,
                     subtitle: N,
                     icon: A,
-                    onContextMenu: e => s(e, T.user)
+                    onContextMenu: e => s(e, I.user)
                 })
             }
