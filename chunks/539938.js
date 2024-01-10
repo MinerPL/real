@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 handleDoubleClick: function() {
-                    return A
+                    return g
                 },
                 default: function() {
                     return O
@@ -27,8 +27,8 @@
                 N = n("879035"),
                 I = n("49111"),
                 m = n("724210"),
-                g = n("122693");
-            async function A() {
+                A = n("122693");
+            async function g() {
                 if ((0, _.isMac)() && _.isPlatformEmbedded) {
                     var e, t, n;
                     let l = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) || void 0 === e ? void 0 : e.call(t))) && void 0 !== n ? n : "Maximize";
@@ -50,8 +50,9 @@
                     "aria-labelledby": m,
                     scrollable: C,
                     role: R,
-                    hideSearch: M
-                } = e, O = (0, r.useStateFromStores)([E.default], () => E.default.getCurrentUser()), L = (null == O ? void 0 : O.isStaff()) || (null == O ? void 0 : O.isStaffPersonal()) || !1;
+                    hideSearch: M,
+                    showDivider: O
+                } = e, L = (0, r.useStateFromStores)([E.default], () => E.default.getCurrentUser()), v = (null == L ? void 0 : L.isStaff()) || (null == L ? void 0 : L.isStaffPersonal()) || !1;
                 return (0, l.jsx)(h.default, {
                     className: n,
                     innerClassName: o,
@@ -60,14 +61,14 @@
                         let e = null != a && !M;
                         return i.isMobile ? S : (0, l.jsxs)(l.Fragment, {
                             children: [_, e ? (0, l.jsx)(f.default, {
-                                className: g.search
-                            }, null != s ? s : a) : null, (0, l.jsx)(N.default, {}), (0, l.jsx)(d.default, {
+                                className: A.search
+                            }, null != s ? s : a) : null, O && (0, l.jsx)(h.default.Divider, {}), (0, l.jsx)(N.default, {}), (0, l.jsx)(d.default, {
                                 canShowReminder: !0
-                            }), (0, l.jsx)(c.default, {}), L ? (0, l.jsx)(p.default, {}) : (0, l.jsx)(T.default, {})]
+                            }), (0, l.jsx)(c.default, {}), v ? (0, l.jsx)(p.default, {}) : (0, l.jsx)(T.default, {})]
                         })
                     }(),
                     transparent: u,
-                    onDoubleClick: A,
+                    onDoubleClick: g,
                     "aria-label": I,
                     "aria-labelledby": m,
                     role: R,
@@ -86,7 +87,7 @@
                 } = e;
                 return (0, l.jsx)(h.default, {
                     className: n,
-                    onDoubleClick: A,
+                    onDoubleClick: g,
                     "aria-label": a,
                     "aria-labelledby": s,
                     role: i,
@@ -101,7 +102,7 @@
                 } = e, {
                     AnalyticsLocationProvider: a
                 } = (0, u.default)(o.default.HEADER_BAR), i = s(n.className, {
-                    [g.forumOrHome]: null != n.channelType && I.ChannelTypesSets.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === m.StaticChannelRoute.GUILD_HOME
+                    [A.forumOrHome]: null != n.channelType && I.ChannelTypesSets.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === m.StaticChannelRoute.GUILD_HOME
                 });
                 return (0, l.jsx)(a, {
                     children: t ? (0, l.jsx)(C, {

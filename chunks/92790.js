@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return b
+                    return F
                 }
             }), n("781738");
             var l = n("37983"),
@@ -23,8 +23,8 @@
                 N = n("42203"),
                 I = n("923959"),
                 m = n("744983"),
-                g = n("18494"),
-                A = n("476765"),
+                A = n("18494"),
+                g = n("476765"),
                 C = n("659500"),
                 R = n("202752"),
                 M = n("751520"),
@@ -34,7 +34,7 @@
                 D = n("782340"),
                 y = n("84691");
             n("525840");
-            let x = (0, A.uid)(),
+            let x = (0, g.uid)(),
                 P = u(f.search, 500);
             class U extends a.PureComponent {
                 componentDidMount() {
@@ -214,7 +214,7 @@
                             this.focusEditor();
                             return
                         }
-                        let n = g.default.getChannelId(),
+                        let n = A.default.getChannelId(),
                             l = N.default.getChannel(n);
                         if ((null == l ? void 0 : l.isThread()) && (l = N.default.getChannel(null == l ? void 0 : l.parent_id)), null == l || l.isPrivate()) {
                             this.focusEditor();
@@ -354,7 +354,7 @@
                     }, M.clearTokenCache()
                 }
             }
-            var b = d.default.connectStores([T.default, m.default], () => {
+            var F = d.default.connectStores([T.default, m.default], () => {
                 var e;
                 let t = m.default.getCurrentSearchId(),
                     n = m.default.getSearchType(),

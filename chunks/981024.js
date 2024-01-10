@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return A
                 }
             }), n("222007");
             var l = n("37983"),
@@ -35,7 +35,7 @@
                 })
             }
 
-            function g(e) {
+            function A(e) {
                 let {
                     setTab: t,
                     badgeState: n,
@@ -43,8 +43,8 @@
                 } = e, {
                     initialized: _,
                     items: N,
-                    loading: g,
-                    loadMore: A
+                    loading: A,
+                    loadMore: g
                 } = (0, c.useDesktopNotificationCenterItemsLoader)(), C = (0, i.useStateFromStores)([o.default], () => o.default.localItems), R = a.useMemo(() => [...[...N, ...C].sort((e, t) => -1 * s.default.compare(e.id, t.id))], [N, C]), M = N.length > 0 ? N[0] : null, O = E.NotificationCenterAckedBeforeId.useSetting(), L = a.useMemo(() => {
                     let e = null != M && 0 >= s.default.compare(M.id, O);
                     if (e) return !1;
@@ -71,8 +71,8 @@
                     }), (0, l.jsx)(f.default, {
                         initialized: _,
                         items: R,
-                        loading: g,
-                        loadMore: A
+                        loading: A,
+                        loadMore: g
                     })]
                 })
             }

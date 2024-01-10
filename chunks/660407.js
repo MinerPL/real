@@ -23,8 +23,8 @@
                 N = n("36694"),
                 I = n("11539"),
                 m = n("815978"),
-                g = n("814744"),
-                A = n("879165"),
+                A = n("814744"),
+                g = n("879165"),
                 C = n("609023"),
                 R = n("49111"),
                 M = n("782340"),
@@ -100,7 +100,7 @@
                 return (0, l.jsx)("div", {
                     className: O.channel,
                     children: (0, l.jsx)(u.HeadingLevel, {
-                        component: (0, l.jsxs)(g.default, {
+                        component: (0, l.jsxs)(A.default, {
                             channel: r,
                             gotoChannel: T,
                             mentionCount: t.mentionCount,
@@ -118,7 +118,7 @@
                             channel: t,
                             channelRecord: r,
                             gotoChannel: T
-                        }) : "forum" === t.type ? (0, l.jsx)(A.default, {
+                        }) : "forum" === t.type ? (0, l.jsx)(g.default, {
                             channel: t,
                             channelRecord: r,
                             deleteChannel: s

@@ -660,16 +660,18 @@
                             showCall: r,
                             hasVideo: u,
                             channelEmojiLeftOfIcon: d,
-                            headerGuildBreadcrumbPosition: c
+                            headerGuildBreadcrumbPosition: c,
+                            headerToolbarDivider: f
                         } = this.props;
                         o(null != e, "Missing channel in Channel.renderHeaderBar"), o(null != t, "Should not be null if channel is not null.");
-                        let f = e.isDM() && !e.isSystemDM() ? this.openUserProfile : void 0,
-                            h = (null == n ? void 0 : n.guild_id) != null && (null == n ? void 0 : n.id) != null ? this.handleTitleParentClick : void 0;
+                        let h = e.isDM() && !e.isSystemDM() ? this.openUserProfile : void 0,
+                            p = (null == n ? void 0 : n.guild_id) != null && (null == n ? void 0 : n.id) != null ? this.handleTitleParentClick : void 0;
                         return (0, a.jsxs)(q.default, {
                             guildId: s,
                             channelId: e.id,
                             channelType: e.type,
-                            hideSearch: e.isDirectory(),
+                            hideSearch: e.isDirectory() || f,
+                            showDivider: f,
                             toolbar: this.renderHeaderToolbar(),
                             mobileToolbar: this.renderMobileToolbar(),
                             className: i(eQ.title, u && r ? (0, ew.getThemeClass)(eY.ThemeTypes.DARK) : null),
@@ -687,8 +689,8 @@
                                 hasVideo: u,
                                 handleContextMenu: this.handleContextMenu,
                                 handleParentContextMenu: this.handleParentContextMenu,
-                                handleClick: f,
-                                handleParentClick: h,
+                                handleClick: h,
+                                handleParentClick: p,
                                 renderFollowButton: this.renderFollowButton,
                                 channelEmojiLeftOfIcon: d
                             }), "right" === c && (0, a.jsx)(Q.HeaderGuildBreadcrumb, {
@@ -785,6 +787,7 @@
                     nsfwAllowed: (null == F ? void 0 : F.nsfwAllowed) === !0,
                     showChannelSummaries: Q,
                     channelEmojiLeftOfIcon: en,
+                    headerToolbarDivider: K,
                     headerGuildBreadcrumbPosition: K ? "left" : "right"
                 })
             })
