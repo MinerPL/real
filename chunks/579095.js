@@ -17,34 +17,37 @@
                 h = n("15304"),
                 C = a.memo(function(e) {
                     let {
-                        className: t,
-                        channel: n,
-                        selectedChannel: a,
-                        selectedVoiceChannelId: s,
-                        sortedThreadIds: C
-                    } = e, p = (0, r.useStateFromStoresArray)([o.default], () => C.map(e => o.default.getChannel(e)).filter(d.isNotNullish), [C]), m = (0, r.useStateFromStores)([u.default], () => {
+                        channel: t,
+                        selectedChannel: n,
+                        selectedVoiceChannelId: a,
+                        sortedThreadIds: s,
+                        withGuildIcon: C
+                    } = e, p = (0, r.useStateFromStoresArray)([o.default], () => s.map(e => o.default.getChannel(e)).filter(d.isNotNullish), [s]), m = (0, r.useStateFromStores)([u.default], () => {
                         let e = p[p.length - 1];
                         if (null == e) return 0;
                         let t = u.default.getVoiceStates(e.guild_id)[e.id];
-                        return null == t || 0 === t.length ? 0 : s !== e.id ? 40 : 32 * t.length + 8
+                        return null == t || 0 === t.length ? 0 : a !== e.id ? 40 : 32 * t.length + 8
                     });
                     return (0, l.jsx)("li", {
-                        className: i(h.container, t),
+                        className: h.container,
                         children: (0, l.jsxs)("ul", {
                             role: "group",
                             "aria-label": f.default.Messages.THREAD_GROUP_A11Y_LABEL.format({
-                                channelName: n.name
+                                channelName: t.name
                             }),
                             children: [(0, l.jsx)("div", {
-                                className: h.spineBorder,
+                                className: i(h.spineBorder, {
+                                    [h.spineBorderWithGuildIcon]: C
+                                }),
                                 style: {
                                     bottom: 24 + m
                                 }
                             }), p.map((e, t) => (0, l.jsx)(c.default, {
                                 thread: e,
-                                isSelectedChannel: (null == a ? void 0 : a.id) === e.id,
-                                isSelectedVoice: s === e.id,
-                                isLast: t === p.length - 1
+                                isSelectedChannel: (null == n ? void 0 : n.id) === e.id,
+                                isSelectedVoice: a === e.id,
+                                isLast: t === p.length - 1,
+                                withGuildIcon: C
                             }, e.id))]
                         })
                     })

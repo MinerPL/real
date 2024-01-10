@@ -23,8 +23,8 @@
                 N = n("955513"),
                 I = n("679653"),
                 m = n("419830"),
-                A = n("42203"),
-                g = n("26989"),
+                g = n("42203"),
+                A = n("26989"),
                 C = n("27618"),
                 R = n("712611"),
                 M = n("18494"),
@@ -56,9 +56,9 @@
                         children: o
                     });
                     let u = v.default.getUser(r.id),
-                        d = A.default.getChannel(e),
+                        d = g.default.getChannel(e),
                         c = (null == d ? void 0 : d.isPrivate()) ? C.default.getNickname(r.id) : null,
-                        f = null !== (s = null !== (a = g.default.getNick(e, r.id)) && void 0 !== a ? a : c) && void 0 !== s ? s : F.default.getName(r),
+                        f = null !== (s = null !== (a = A.default.getNick(e, r.id)) && void 0 !== a ? a : c) && void 0 !== s ? s : F.default.getName(r),
                         E = null !== (i = null == u ? void 0 : u.getAvatarURL(e, 20)) && void 0 !== i ? i : r.getAvatarURL(null == d ? void 0 : d.guild_id, 20);
                     return [(0, l.jsx)("img", {
                         alt: "",
@@ -82,7 +82,7 @@
                     if (null == a) return (0, l.jsx)("strong", {
                         children: s
                     });
-                    let i = A.default.getChannel(a.parent_id),
+                    let i = g.default.getChannel(a.parent_id),
                         r = (0, m.getChannelIconComponent)(a);
                     return (0, l.jsxs)("div", {
                         className: k.resultChannel,
