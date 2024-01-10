@@ -3,23 +3,20 @@
                 generateEmptyPollAnswer: function() {
                     return o
                 },
-                generateUploadId: function() {
+                filterOutUUID: function() {
                     return c
                 },
-                filterOutUUID: function() {
+                useCanPostPollsInChannel: function() {
                     return E
                 },
-                useCanPostPollsInChannel: function() {
+                isAnswerFilled: function() {
                     return f
                 },
-                isAnswerFilled: function() {
+                isIncompleteAnswer: function() {
                     return _
                 },
-                isIncompleteAnswer: function() {
-                    return g
-                },
                 createPollServerDataFromCreateRequest: function() {
-                    return h
+                    return g
                 }
             }), n("781738");
             var a = n("748820"),
@@ -34,19 +31,17 @@
                 return {
                     text: void 0,
                     image: void 0,
-                    uploadId: c()
+                    localCreationAnswerId: function() {
+                        return (0, a.v4)()
+                    }()
                 }
             }
 
-            function c() {
-                return (0, a.v4)()
-            }
-
-            function E(e) {
+            function c(e) {
                 return e.replace(/\b[a-f\d]{8}-(?:[a-f\d]{4}-){3}[a-f\d]{12}-\b/i, "")
             }
 
-            function f(e) {
+            function E(e) {
                 let {
                     enabled: t
                 } = d.PollsExperiment.useExperiment({
@@ -59,15 +54,15 @@
                 return !!u.ChannelTypesSets.POLLS.has(e.type) && (e.isPrivate() ? n.every(e => (null == e ? void 0 : e.isStaff()) === !0) : t && i.default.can(u.Permissions.SEND_MESSAGES, e))
             }
 
-            function _(e, t) {
+            function f(e, t) {
                 return t === s.PollLayoutTypes.IMAGE_ONLY_ANSWERS ? null != e.image : null != e.text && e.text.length > 0
             }
 
-            function g(e, t) {
+            function _(e, t) {
                 return t === s.PollLayoutTypes.DEFAULT && null != e.image && (null == e.text || 0 === e.text.length)
             }
 
-            function h(e) {
+            function g(e) {
                 var t, n;
                 if (null == e) return;
                 let a = null == e ? void 0 : null === (t = e.answers) || void 0 === t ? void 0 : t.map((e, t) => {

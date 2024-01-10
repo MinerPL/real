@@ -4,7 +4,7 @@
                     return N
                 },
                 default: function() {
-                    return I
+                    return h
                 }
             });
             var l = a("37983"),
@@ -22,9 +22,9 @@
                 A = a("562228"),
                 m = a("714411"),
                 L = a("356581"),
-                p = a("264317"),
-                T = a("186859"),
-                C = a("13030"),
+                T = a("264317"),
+                C = a("186859"),
+                p = a("13030"),
                 x = a("782340"),
                 O = a("177037"),
                 R = a("877055");
@@ -56,24 +56,24 @@
             function P(e) {
                 let {
                     channelId: t,
-                    uploadId: a,
+                    localCreationAnswerId: a,
                     buttonImage: s,
                     layout: i,
                     handleTogglePollExpressionPicker: c,
                     answerIndex: d
                 } = e, {
                     pollExpressionPickerId: E
-                } = (0, p.default)(i), {
+                } = (0, T.default)(i), {
                     emoji: _,
                     isLoadingGif: m,
-                    hasUpload: T,
+                    hasUpload: C,
                     gifUrl: R,
                     gifFilename: P
                 } = (0, L.default)({
                     channelId: t,
-                    uploadId: a,
+                    localCreationAnswerId: a,
                     image: s
-                }), I = i === u.PollLayoutTypes.DEFAULT, h = n.useMemo(() => T ? x.default.Messages.CREATE_POLL_EDIT_IMAGE_ARIA.format({
+                }), h = i === u.PollLayoutTypes.DEFAULT, I = n.useMemo(() => C ? x.default.Messages.CREATE_POLL_EDIT_IMAGE_ARIA.format({
                     imageName: (0, A.filterOutUUID)(P),
                     answerNumber: d + 1
                 }) : null != _ ? x.default.Messages.CREATE_POLL_EDIT_IMAGE_ARIA.format({
@@ -81,29 +81,29 @@
                     answerNumber: d + 1
                 }) : x.default.Messages.CREATE_POLL_ADD_IMAGE_ARIA.format({
                     answerNumber: d + 1
-                }), [T, _, d, P]);
+                }), [C, _, d, P]);
                 return m ? (0, l.jsx)(o.Spinner, {
-                    className: I ? O.spinnerWrapperDefault : O.spinnerWrapperImageOnly
+                    className: h ? O.spinnerWrapperDefault : O.spinnerWrapperImageOnly
                 }) : (0, l.jsx)(o.Clickable, {
                     onClick: c,
                     "aria-controls": E,
-                    "aria-label": h,
-                    className: r(C.CHAT_INPUT_BUTTON_CLASSNAME, i === u.PollLayoutTypes.IMAGE_ONLY_ANSWERS ? O.expressionPickerButtonImageOnly : O.expressionPickerButtonDefault),
+                    "aria-label": I,
+                    className: r(p.CHAT_INPUT_BUTTON_CLASSNAME, i === u.PollLayoutTypes.IMAGE_ONLY_ANSWERS ? O.expressionPickerButtonImageOnly : O.expressionPickerButtonDefault),
                     "data-menu-item": "true",
                     children: (0, l.jsx)(N, {
-                        hasUpload: T,
+                        hasUpload: C,
                         gifUrl: R,
                         gifFilename: P,
-                        imageClassName: r(O.media, I ? O.gifDefault : O.gifJumbo),
+                        imageClassName: r(O.media, h ? O.gifDefault : O.gifJumbo),
                         emoji: _,
-                        emojiClassName: r(O.media, I ? O.emojiDefault : O.emojiJumbo),
+                        emojiClassName: r(O.media, h ? O.emojiDefault : O.emojiJumbo),
                         fallback: (0, l.jsx)(f.default, {
-                            className: I ? O.expressionPickerIconDefault : O.expressionPickerIconImageOnly
+                            className: h ? O.expressionPickerIconDefault : O.expressionPickerIconImageOnly
                         })
                     })
                 })
             }
-            var I = n.forwardRef(function(e, t) {
+            var h = n.forwardRef(function(e, t) {
                 let {
                     channelId: n,
                     answer: s,
@@ -112,7 +112,7 @@
                     onAnswerTextChange: f,
                     handleTogglePollExpressionPicker: A,
                     onRemoveAnswer: L
-                } = e, p = () => {
+                } = e, T = () => {
                     (0, o.openModalLazy)(async () => {
                         let {
                             default: e
@@ -125,12 +125,12 @@
                             ...t
                         })
                     })
-                }, C = (0, l.jsx)(P, {
+                }, p = (0, l.jsx)(P, {
                     channelId: n,
                     buttonImage: s.image,
                     layout: E,
                     handleTogglePollExpressionPicker: A,
-                    uploadId: s.uploadId,
+                    localCreationAnswerId: s.localCreationAnswerId,
                     answerIndex: c
                 }), N = null != s.text && s.text.length > 0;
                 return (0, l.jsx)(l.Fragment, {
@@ -139,7 +139,7 @@
                         children: [(0, l.jsxs)("div", {
                             className: r(R.formInput, O.defaultContainer),
                             ref: t,
-                            children: [C, (0, l.jsx)(o.TextInput, {
+                            children: [p, (0, l.jsx)(o.TextInput, {
                                 "aria-label": x.default.Messages.CREATE_POLL_ANSWER_INPUT_LABEL.format({
                                     answerNumber: c + 1
                                 }),
@@ -148,7 +148,7 @@
                                 className: O.defaultTextInput,
                                 inputClassName: r(R.formInput, O.defaultTextInput),
                                 onChange: e => f(e, c),
-                                maxLength: T.MAX_POLL_ANSWER_LENGTH
+                                maxLength: C.MAX_POLL_ANSWER_LENGTH
                             })]
                         }), (0, l.jsx)(o.Clickable, {
                             onClick: () => L(c),
@@ -166,14 +166,14 @@
                         ref: t,
                         children: [(0, l.jsxs)("div", {
                             className: O.imagePreviewContainer,
-                            children: [C, N && (0, l.jsxs)(l.Fragment, {
+                            children: [p, N && (0, l.jsxs)(l.Fragment, {
                                 children: [(0, l.jsx)(o.Text, {
                                     variant: "text-xs/semibold",
                                     className: O.altBadge,
                                     "aria-hidden": !0,
                                     children: x.default.Messages.IMAGE_ALT
                                 }), (0, l.jsxs)("div", {
-                                    onClick: p,
+                                    onClick: T,
                                     children: [(0, l.jsx)(i.VisuallyHidden, {
                                         children: x.default.Messages.CREATE_POLL_ALT_TEXT_SCREEN_READER_HINT
                                     }), (0, l.jsx)(o.Text, {
@@ -192,7 +192,7 @@
                                 }) : x.default.Messages.CREATE_POLL_ADD_ALT_ARIA_LABEL.format({
                                     answerNumber: c + 1
                                 }),
-                                onClick: p,
+                                onClick: T,
                                 children: (0, l.jsx)(m.ImageAltIcon, {
                                     "aria-hidden": !0
                                 })

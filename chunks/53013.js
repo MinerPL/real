@@ -26,19 +26,19 @@
                     showPollExpressionPicker: A,
                     closePollExpressionPicker: m,
                     chatInputType: L
-                } = (0, u.default)(a), p = n.useCallback(e => {
+                } = (0, u.default)(a), T = n.useCallback(e => {
                     r(null != d, "Expected to have an active input"), (null == e ? void 0 : e.gifSrc) != null && f(t.id, d, (0, o.makeTenorProxyURL)(e.gifSrc)), m()
-                }, [m, d, f, t.id]), T = n.useCallback(e => {
+                }, [m, d, f, t.id]), C = n.useCallback(e => {
                     r(null != d, "Expected to have an active input"), r(null != e, "Expected to have an emoji"), E(e, d), m()
-                }, [d, E, m]), C = n.useCallback(() => {}, []);
+                }, [d, E, m]), p = n.useCallback(() => {}, []);
                 return A ? (0, l.jsx)(i.default, {
                     positionTargetRef: _,
                     type: L,
                     hideGifFavorites: !0,
                     includeCreateEmojiButton: !1,
-                    onSelectGIF: p,
-                    onSelectEmoji: T,
-                    onSelectSticker: C,
+                    onSelectGIF: T,
+                    onSelectEmoji: C,
+                    onSelectSticker: p,
                     channel: t,
                     parentModalKey: s,
                     closeOnModalOuterClick: !0,

@@ -19,16 +19,16 @@
                 A = a("151185"),
                 m = a("562228"),
                 L = a("104182"),
-                p = a("741138"),
-                T = a("362415"),
-                C = a("418298"),
+                T = a("741138"),
+                C = a("362415"),
+                p = a("418298"),
                 x = a("612805"),
                 O = a("53013"),
                 R = a("233365"),
                 N = a("264317"),
                 P = a("186859"),
-                I = a("660516"),
-                h = a("782340"),
+                h = a("660516"),
+                I = a("782340"),
                 g = a("877055");
             let v = (0, _.uid)();
 
@@ -36,7 +36,7 @@
                 let {
                     selectedDuration: t,
                     onSelect: a
-                } = e, n = (0, p.default)(), s = n[t];
+                } = e, n = (0, T.default)(), s = n[t];
                 return (0, l.jsxs)("div", {
                     className: g.duration,
                     children: [(0, l.jsx)(u.Text, {
@@ -44,9 +44,9 @@
                         color: "text-muted",
                         tag: "label",
                         "aria-hidden": !0,
-                        children: h.default.Messages.CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION
+                        children: I.default.Messages.CREATE_POLL_TEXT_PRECEDING_DURATION_SELECTION
                     }), (0, l.jsx)(u.Select, {
-                        "aria-label": h.default.Messages.CREATE_POLL_DURATION_SELECTION_ARIA_LABEL.format({
+                        "aria-label": I.default.Messages.CREATE_POLL_DURATION_SELECTION_ARIA_LABEL.format({
                             duration: s
                         }),
                         className: g.durationSelect,
@@ -76,20 +76,20 @@
                     onClose: s
                 } = e;
                 (0, E.default)({
-                    type: I.ImpressionTypes.MODAL,
+                    type: h.ImpressionTypes.MODAL,
                     name: c.ImpressionNames.POLL_EDITOR_VIEWED
                 });
                 let {
                     answers: i,
                     question: _,
-                    setQuestion: p,
+                    setQuestion: T,
                     selectedLayoutType: j,
                     setSelectedLayoutType: D,
                     allowMultiSelect: y,
                     setAllowMultiSelect: b,
                     duration: k,
-                    setDuration: U,
-                    canPost: w,
+                    setDuration: w,
+                    canPost: U,
                     canAddMoreAnswers: G,
                     handleAddAnswer: B,
                     handleAnswerTextChange: H,
@@ -101,7 +101,7 @@
                     submitting: z
                 } = (0, L.default)(t, s), {
                     trackPollCreationCancelled: X
-                } = (0, T.useTrackPollCreationEvents)(_, i, y, j), Z = n.useRef([]), {
+                } = (0, C.useTrackPollCreationEvents)(_, i, y, j), Z = n.useRef([]), {
                     togglePollExpressionPicker: J,
                     lastActiveParentIndex: Q
                 } = (0, N.default)(j), q = n.useCallback(() => {
@@ -113,10 +113,10 @@
                 }, [s, X]), et = n.useCallback(() => {
                     let e = _.length > 0 || i.some(e => (0, m.isAnswerFilled)(e, j));
                     e ? (0, R.default)({
-                        title: h.default.Messages.CREATE_POLL_MODAL_WARNING_MODAL_TITLE,
-                        body: h.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY,
-                        cta: h.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_CTA_EXIT,
-                        closeLabel: h.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BACK_TO_EDITING,
+                        title: I.default.Messages.CREATE_POLL_MODAL_WARNING_MODAL_TITLE,
+                        body: I.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY,
+                        cta: I.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_CTA_EXIT,
+                        closeLabel: I.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BACK_TO_EDITING,
                         onConfirm: () => {
                             ee()
                         }
@@ -129,7 +129,7 @@
                     }), et)
                 }, [et, t]);
                 let ea = (0, f.default)({
-                    disabled: !w,
+                    disabled: !U,
                     onSubmit: Y
                 });
                 return (0, l.jsxs)(u.ModalRoot, {
@@ -145,7 +145,7 @@
                             variant: "text-lg/semibold",
                             className: g.headerText,
                             id: v,
-                            children: h.default.Messages.CREATE_POLL_HEADING
+                            children: I.default.Messages.CREATE_POLL_HEADING
                         }), (0, l.jsx)(u.ModalCloseButton, {
                             onClick: et
                         })]
@@ -155,11 +155,11 @@
                         children: [null != K && (0, l.jsx)(u.FormErrorBlock, {
                             children: K.getAnyErrorMessage()
                         }), (0, l.jsx)(u.TextInput, {
-                            "aria-label": h.default.Messages.CREATE_POLL_QUESTION_INPUT_LABEL,
-                            placeholder: h.default.Messages.CREATE_POLL_QUESTION_PLACEHOLDER,
+                            "aria-label": I.default.Messages.CREATE_POLL_QUESTION_INPUT_LABEL,
+                            placeholder: I.default.Messages.CREATE_POLL_QUESTION_PLACEHOLDER,
                             value: _,
                             inputClassName: g.questionInput,
-                            onChange: p,
+                            onChange: T,
                             maxLength: P.MAX_POLL_QUESTION_LENGTH,
                             autoFocus: !0
                         }), (0, l.jsx)(x.default, {
@@ -168,8 +168,8 @@
                         }), (0, l.jsxs)("div", {
                             className: r(g.answerInputsContainer, $ ? g.defaultContainer : g.imageOnlyContainer),
                             role: "group",
-                            "aria-label": h.default.Messages.POLL_OPTIONS_ARIA,
-                            children: [i.map((e, a) => (0, l.jsx)(C.default, {
+                            "aria-label": I.default.Messages.POLL_OPTIONS_ARIA,
+                            children: [i.map((e, a) => (0, l.jsx)(p.default, {
                                 answer: e,
                                 channelId: t.id,
                                 index: a,
@@ -178,21 +178,21 @@
                                 layout: j,
                                 onAnswerTextChange: H,
                                 onRemoveAnswer: V
-                            }, e.uploadId)), G && (0, l.jsxs)(u.Clickable, {
+                            }, e.localCreationAnswerId)), G && (0, l.jsxs)(u.Clickable, {
                                 className: $ ? g.addAnswerButtonDefault : g.addAnswerButtonImageOnly,
                                 onClick: G ? B : void 0,
-                                "aria-label": h.default.Messages.CREATE_POLL_ADD_ANSWER_BUTTON,
+                                "aria-label": I.default.Messages.CREATE_POLL_ADD_ANSWER_BUTTON,
                                 children: [(0, l.jsx)(A.default, {
                                     className: $ ? g.addAnswerIconDefault : g.addAnswerIconImageOnly
                                 }), $ && (0, l.jsx)(u.Text, {
                                     variant: "text-md/normal",
                                     color: "text-muted",
-                                    children: h.default.Messages.CREATE_POLL_ADD_ANSWER_BUTTON
+                                    children: I.default.Messages.CREATE_POLL_ADD_ANSWER_BUTTON
                                 })]
                             })]
                         }), (0, l.jsx)(M, {
                             selectedDuration: k,
-                            onSelect: U
+                            onSelect: w
                         })]
                     }), (0, l.jsxs)(u.ModalFooter, {
                         className: g.footer,
@@ -204,7 +204,7 @@
                             children: (0, l.jsx)(u.Text, {
                                 variant: "text-md/normal",
                                 color: "text-normal",
-                                children: h.default.Messages.CREATE_POLL_MULTIPLE_ANSWERS
+                                children: I.default.Messages.CREATE_POLL_MULTIPLE_ANSWERS
                             })
                         }), (0, l.jsx)(u.Button, {
                             look: u.ButtonLooks.FILLED,
@@ -212,11 +212,11 @@
                             className: g.postButton,
                             onClick: Y,
                             submitting: z,
-                            disabled: !w,
+                            disabled: !U,
                             children: (0, l.jsx)(u.Text, {
                                 variant: "text-md/semibold",
                                 className: g.postButtonText,
-                                children: h.default.Messages.CREATE_POLL_POST
+                                children: I.default.Messages.CREATE_POLL_POST
                             })
                         })]
                     }), (0, l.jsx)(O.default, {

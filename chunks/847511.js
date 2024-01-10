@@ -241,7 +241,7 @@
                         onClose: r
                     } = e, o = p.default.getUploads(t.id, _.DraftType.Poll), c = a.map(e => {
                         var t;
-                        let n = null == o ? void 0 : o.findIndex(t => t.id === e.uploadId),
+                        let n = null == o ? void 0 : o.findIndex(t => t.id === e.localCreationAnswerId),
                             a = {
                                 attachment_ids: -1 !== n ? ["".concat(n)] : []
                             };

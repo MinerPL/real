@@ -14,7 +14,7 @@
                 var t, a;
                 let {
                     channelId: o,
-                    uploadId: u,
+                    localCreationAnswerId: u,
                     image: c
                 } = e, d = null == c ? void 0 : c.emoji, E = (null == c ? void 0 : null === (t = c.gifAttachmentState) || void 0 === t ? void 0 : t.status) === i.PollGifUploadAttachmentStatus.PREPARING, f = (0, n.useStateFromStores)([r.default], () => r.default.getUpload(o, u, s.DraftType.Poll)), [_, A] = l.useState(), [m, L] = l.useState("");
                 return l.useEffect(() => {

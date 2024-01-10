@@ -18,7 +18,7 @@
                 let a = e.id,
                     E = l.useRef();
                 null == E.current && (E.current = [(0, c.generateEmptyPollAnswer)(), (0, c.generateEmptyPollAnswer)()]);
-                let [_, A] = l.useState(E.current), [m, L] = l.useState(""), [p, T] = l.useState(n.PollLayoutTypes.DEFAULT), [C, x] = l.useState(!1), [O, R] = l.useState(d.PollDurations.ONE_DAY), N = _.filter(e => (0, c.isAnswerFilled)(e, p)), P = _.filter(e => (0, c.isIncompleteAnswer)(e, p)), I = m.length > 0 && N.length >= d.MIN_NUMBER_OF_ANSWERS_PER_POLL && 0 === P.length, [h, {
+                let [_, A] = l.useState(E.current), [m, L] = l.useState(""), [T, C] = l.useState(n.PollLayoutTypes.DEFAULT), [p, x] = l.useState(!1), [O, R] = l.useState(d.PollDurations.ONE_DAY), N = _.filter(e => (0, c.isAnswerFilled)(e, T)), P = _.filter(e => (0, c.isIncompleteAnswer)(e, T)), h = m.length > 0 && N.length >= d.MIN_NUMBER_OF_ANSWERS_PER_POLL && 0 === P.length, [I, {
                     error: g,
                     loading: v
                 }] = (0, s.default)(u.default.createPoll), M = _.length < d.MAX_NUMBER_OF_ANSWERS_PER_POLL, S = l.useCallback(() => {
@@ -31,27 +31,24 @@
                             text: e
                         }, l
                     })
-                }, []), D = l.useCallback((e, t, a) => {
-                    A(l => {
-                        var n;
-                        let s = [...l];
-                        return s[t] = {
-                            ...s[t],
-                            image: e,
-                            uploadId: null != a ? a : null === (n = s[t]) || void 0 === n ? void 0 : n.uploadId
-                        }, s
+                }, []), D = l.useCallback((e, t) => {
+                    A(a => {
+                        let l = [...a];
+                        return l[t] = {
+                            ...l[t],
+                            image: e
+                        }, l
                     })
                 }, []), y = l.useCallback((e, t, a) => {
-                    var l, n;
-                    let s = _[t],
-                        i = null === (n = _[t]) || void 0 === n ? void 0 : null === (l = n.image) || void 0 === l ? void 0 : l.gifAttachmentState;
-                    null != s && null != i && i.gifUrl !== a && o.removePollUploadAttachment(e, s.uploadId, (0, r.getFileNameFromGifUrl)(s.uploadId, i.gifUrl))
+                    var l;
+                    let n = _[t],
+                        s = null === (l = n.image) || void 0 === l ? void 0 : l.gifAttachmentState;
+                    null != s && s.gifUrl !== a && o.removePollUploadAttachment(e, n.localCreationAnswerId, (0, r.getFileNameFromGifUrl)(n.localCreationAnswerId, s.gifUrl))
                 }, [_]), b = l.useCallback(async (e, t, a) => {
-                    var l, n;
-                    let s = null !== (n = null === (l = _[t]) || void 0 === l ? void 0 : l.uploadId) && void 0 !== n ? n : (0, c.generateUploadId)();
-                    y(e, t), D(f(a, i.PollGifUploadAttachmentStatus.PREPARING), t, s);
-                    let r = await o.handlePollGifAttachmentAdd(e, s, a);
-                    if (null == r) {
+                    let l = _[t].localCreationAnswerId;
+                    y(e, t), D(f(a, i.PollGifUploadAttachmentStatus.PREPARING), t);
+                    let n = await o.handlePollGifAttachmentAdd(e, l, a);
+                    if (null == n) {
                         D(f(a, i.PollGifUploadAttachmentStatus.ERROR), t);
                         return
                     }
@@ -62,7 +59,7 @@
                         stickerId: void 0,
                         gifAttachmentState: void 0
                     }, t)
-                }, [a, D, y]), U = l.useCallback(e => {
+                }, [a, D, y]), w = l.useCallback(e => {
                     y(a, e), A(t => {
                         let a = [...t];
                         return a.splice(e, 1), a
@@ -71,35 +68,35 @@
                 l.useEffect(() => () => {
                     o.removeAllPollUploadAttachments(a)
                 }, [a]);
-                let w = l.useCallback(async () => {
-                    await h({
+                let U = l.useCallback(async () => {
+                    await I({
                         channel: e,
                         question: m,
                         answers: N,
-                        allowMultiSelect: C,
+                        allowMultiSelect: p,
                         duration: O,
-                        layout: p,
+                        layout: T,
                         onClose: t
                     })
-                }, [m, N, C, O, h, e, p, t]);
+                }, [m, N, p, O, I, e, T, t]);
                 return {
                     answers: _,
                     question: m,
                     setQuestion: L,
-                    selectedLayoutType: p,
-                    setSelectedLayoutType: T,
-                    allowMultiSelect: C,
+                    selectedLayoutType: T,
+                    setSelectedLayoutType: C,
+                    allowMultiSelect: p,
                     setAllowMultiSelect: x,
                     duration: O,
                     setDuration: R,
-                    canPost: I,
+                    canPost: h,
                     canAddMoreAnswers: M,
                     handleAddAnswer: S,
                     handleAnswerTextChange: j,
                     handleGifSelect: b,
                     handleEmojiSelect: k,
-                    handleRemoveAnswer: U,
-                    createPoll: w,
+                    handleRemoveAnswer: w,
+                    createPoll: U,
                     submitting: v,
                     createPollError: g
                 }
