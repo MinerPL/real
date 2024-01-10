@@ -4,8 +4,8 @@
                     return v
                 }
             }), n("222007");
-            var a = n("37983"),
-                s = n("884691"),
+            var s = n("37983"),
+                a = n("884691"),
                 l = n("917351"),
                 i = n.n(l),
                 r = n("446674"),
@@ -25,8 +25,8 @@
                 A = n("49111"),
                 T = n("590456"),
                 M = n("782340"),
-                N = n("961282");
-            class I {
+                I = n("961282");
+            class N {
                 updateData(e, t) {
                     this.userId = e, this.user = t
                 }
@@ -35,17 +35,17 @@
                 }
                 renderNicknamePairs() {
                     return this.getNicknameGuildPairs().map((e, t) => {
-                        let [n, l] = e, i = (0, a.jsx)(o.Clickable, {
+                        let [n, l] = e, i = (0, s.jsx)(o.Clickable, {
                             tag: "span",
                             onClick: this.handleClick,
                             children: n
                         });
-                        return l.length > 0 && (i = (0, a.jsx)(o.TooltipContainer, {
-                            className: N.tooltip,
+                        return l.length > 0 && (i = (0, s.jsx)(o.TooltipContainer, {
+                            className: I.tooltip,
                             text: l.join(", "),
                             position: "bottom",
                             children: i
-                        })), (0, a.jsxs)(s.Fragment, {
+                        })), (0, s.jsxs)(a.Fragment, {
                             children: [0 !== t ? ", " : null, i]
                         }, t)
                     })
@@ -61,14 +61,14 @@
                             }).filter(_.isNotNullish)]
                         }).value();
                         return n
-                    }), this.renderMoreAvatars = () => (0, a.jsx)(o.TooltipContainer, {
+                    }), this.renderMoreAvatars = () => (0, s.jsx)(o.TooltipContainer, {
                         text: M.default.Messages.AKA_MORE_AVATARS_OVERFLOW,
                         position: "bottom",
-                        children: (0, a.jsx)(o.Clickable, {
-                            className: N.moreAvatars,
+                        children: (0, s.jsx)(o.Clickable, {
+                            className: I.moreAvatars,
                             onClick: this.handleClick,
-                            children: (0, a.jsx)(p.default, {
-                                className: N.plusIcon
+                            children: (0, s.jsx)(p.default, {
+                                className: I.plusIcon
                             })
                         })
                     }, "more-avatars"), this.handleClick = () => {
@@ -88,30 +88,30 @@
                     channel: t
                 } = e, n = t.getRecipientId(), l = (0, u.useAvatarsWithGuilds)(n), i = Array(l.length).fill(null), d = function(e) {
                     let t = (0, r.useStateFromStores)([h.default], () => h.default.getUser(e), [e]),
-                        [n] = s.useState(() => new I(e, null != t ? t : void 0));
+                        [n] = a.useState(() => new N(e, null != t ? t : void 0));
                     return n.updateData(e, null != t ? t : void 0), n
                 }(n);
-                return 0 === d.getNicknameGuildPairs().length && 0 === l.length ? (0, a.jsx)("div", {
-                    className: N.spacer
-                }) : (0, a.jsxs)(a.Fragment, {
-                    children: [(0, a.jsx)(E.Divider, {}), (0, a.jsx)(m.TextBadge, {
+                return 0 === d.getNicknameGuildPairs().length && 0 === l.length ? (0, s.jsx)("div", {
+                    className: I.spacer
+                }) : (0, s.jsxs)(s.Fragment, {
+                    children: [(0, s.jsx)(E.Divider, {}), (0, s.jsx)(m.TextBadge, {
                         text: M.default.Messages.AKA,
                         disableColor: !0,
-                        className: N.akaBadge
-                    }), l.length > 0 ? (0, a.jsx)(g.default, {
+                        className: I.akaBadge
+                    }), l.length > 0 ? (0, s.jsx)(g.default, {
                         size: 16,
                         users: i,
                         showUserPopout: !1,
                         renderUser: (e, t, n) => {
-                            var s;
+                            var a;
                             let i = d.user,
                                 r = l[n];
-                            return null == r || null == i ? null : (0, a.jsx)(o.TooltipContainer, {
-                                text: null === (s = f.default.getGuild(r)) || void 0 === s ? void 0 : s.name,
+                            return null == r || null == i ? null : (0, s.jsx)(o.TooltipContainer, {
+                                text: null === (a = f.default.getGuild(r)) || void 0 === a ? void 0 : a.name,
                                 position: "bottom",
-                                children: (0, a.jsx)("img", {
+                                children: (0, s.jsx)("img", {
                                     alt: "",
-                                    className: N.avatar,
+                                    className: I.avatar,
                                     onClick: d.handleClick,
                                     src: i.getAvatarURL(r, 16),
                                     "aria-hidden": !0
@@ -121,10 +121,10 @@
                         renderMoreUsers: d.renderMoreAvatars,
                         guildId: void 0,
                         max: 3,
-                        className: N.avatars
-                    }) : null, d.getNicknameGuildPairs().length > 0 ? (0, a.jsx)(C.default, {
+                        className: I.avatars
+                    }) : null, d.getNicknameGuildPairs().length > 0 ? (0, s.jsx)(C.default, {
                         position: "bottom",
-                        className: N.nicknames,
+                        className: I.nicknames,
                         children: d.renderNicknamePairs()
                     }) : null]
                 })

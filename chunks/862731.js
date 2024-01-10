@@ -4,12 +4,12 @@
                     return d
                 }
             }), n("843762");
-            var a = n("693566"),
-                s = n.n(a),
+            var s = n("693566"),
+                a = n.n(s),
                 l = n("446674"),
                 i = n("913144");
             let r = {
-                channelVisits: new s({
+                channelVisits: new a({
                     max: 1e3
                 }),
                 bannerRenders: []
@@ -38,9 +38,9 @@
                     return n.filter(t => t >= Date.now() - 1e3 * e).length
                 }
                 getNumberOfChannelVisitsSince(e, t, n) {
-                    var a;
-                    let s = null !== (a = r.channelVisits.get(e + t)) && void 0 !== a ? a : [];
-                    return s.filter(e => e >= Date.now() - 1e3 * n).length
+                    var s;
+                    let a = null !== (s = r.channelVisits.get(e + t)) && void 0 !== s ? s : [];
+                    return a.filter(e => e >= Date.now() - 1e3 * n).length
                 }
             }
             u.displayName = "UnreadSettingNoticeStore", u.persistKey = "UnreadSettingNoticeStore";
@@ -52,8 +52,8 @@
                     var t;
                     let {
                         guildId: n,
-                        channelId: a
-                    } = e, s = n + a, l = null !== (t = r.channelVisits.get(s)) && void 0 !== t ? t : [];
-                    l.length > 100 && l.pop(), l.unshift(Date.now()), r.channelVisits.set(s, l)
+                        channelId: s
+                    } = e, a = n + s, l = null !== (t = r.channelVisits.get(a)) && void 0 !== t ? t : [];
+                    l.length > 100 && l.pop(), l.unshift(Date.now()), r.channelVisits.set(a, l)
                 }
             })

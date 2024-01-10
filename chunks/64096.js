@@ -1,13 +1,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 AttachmentTypes: function() {
-                    return a
+                    return s
                 },
                 default: function() {
                     return A
                 }
             }), n("424973");
-            var a, s, l = n("167115"),
+            var s, a, l = n("167115"),
                 i = n("871388"),
                 r = n("679653"),
                 o = n("20606"),
@@ -28,13 +28,13 @@
                 let {
                     canAttachFiles: t,
                     canStartThreads: n,
-                    useSlate: a,
-                    canUseApplicationCommands: s,
+                    useSlate: s,
+                    canUseApplicationCommands: a,
                     hasClips: A,
                     channel: T,
                     activities: M,
-                    newClipsCount: N,
-                    canPostPolls: I,
+                    newClipsCount: I,
+                    canPostPolls: N,
                     appContext: v
                 } = e, L = [];
                 return t && (L.push({
@@ -49,17 +49,17 @@
                     type: "CLIPS",
                     icon: f.default,
                     display: _.default.Messages.CLIPS_SHARE_A_CLIP,
-                    badgeVal: N,
+                    badgeVal: I,
                     badgeColor: o.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND
                 }), n && L.push({
                     type: "CREATE_THREAD",
                     icon: E.default,
                     display: _.default.Messages.CREATE_THREAD
-                }), I && L.push({
+                }), N && L.push({
                     type: "POLL",
                     icon: l.PollsIcon,
                     display: _.default.Messages.CREATE_POLL
-                }), a && s && L.push({
+                }), s && a && L.push({
                     type: "SLASH_COMMAND",
                     icon: c.default,
                     display: _.default.Messages.CHAT_ATTACH_USE_SLASH_COMMAND
@@ -90,4 +90,4 @@
                         activity: e
                     }))
                 }), L
-            }(s = a || (a = {})).UPLOAD_A_FILE = "UPLOAD_A_FILE", s.UPLOAD_TEXT_AS_FILE = "UPLOAD_TEXT_AS_FILE", s.INVITE_TO_PLAY_GAME = "INVITE_TO_GAME", s.INVITE_TO_LISTEN = "INVITE_TO_LISTEN", s.INVITE_TO_WATCH = "INVITE_TO_WATCH", s.CREATE_THREAD = "CREATE_THREAD", s.SLASH_COMMAND = "SLASH_COMMAND", s.CLIPS = "CLIPS", s.POLL = "POLL"
+            }(a = s || (s = {})).UPLOAD_A_FILE = "UPLOAD_A_FILE", a.UPLOAD_TEXT_AS_FILE = "UPLOAD_TEXT_AS_FILE", a.INVITE_TO_PLAY_GAME = "INVITE_TO_GAME", a.INVITE_TO_LISTEN = "INVITE_TO_LISTEN", a.INVITE_TO_WATCH = "INVITE_TO_WATCH", a.CREATE_THREAD = "CREATE_THREAD", a.SLASH_COMMAND = "SLASH_COMMAND", a.CLIPS = "CLIPS", a.POLL = "POLL"

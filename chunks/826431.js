@@ -4,26 +4,26 @@
                     return f
                 }
             }), n("781738");
-            var a = n("37983");
+            var s = n("37983");
             n("884691");
-            var s = n("446674"),
+            var a = n("446674"),
                 l = n("305961"),
                 i = n("162771"),
                 r = n("76539"),
                 o = n("782340"),
                 u = n("141987");
-            let d = () => (0, a.jsx)(a.Fragment, {
+            let d = () => (0, s.jsx)(s.Fragment, {
                     children: o.default.Messages.TIP_INSTANT_INVITE_BODY3.format({
                         shareIcon: o.default.Messages.INSTANT_INVITE,
-                        shareIconHook: () => (0, a.jsx)(r.default, {
+                        shareIconHook: () => (0, s.jsx)(r.default, {
                             className: u.icon
                         }, "icon")
                     })
                 }),
                 c = () => {
-                    let e = (0, s.useStateFromStores)([l.default, i.default], () => l.default.getGuild(i.default.getGuildId()), []),
+                    let e = (0, a.useStateFromStores)([l.default, i.default], () => l.default.getGuild(i.default.getGuildId()), []),
                         t = null == e ? void 0 : e.name;
-                    return (0, a.jsx)(a.Fragment, {
+                    return (0, s.jsx)(s.Fragment, {
                         children: o.default.Messages.TIP_WRITING_MESSAGES_BODY3.format({
                             serverName: t
                         })
@@ -31,23 +31,23 @@
                 },
                 f = e => {
                     var t, n;
-                    let s = {
+                    let a = {
                             VOICE_CONVERSATIONS: {
-                                title: (0, a.jsx)("div", {
+                                title: (0, s.jsx)("div", {
                                     className: u.voiceChannelsTitle,
                                     children: o.default.Messages.NUF_VOICE_CHANNELS_TITLE
                                 }),
                                 body: o.default.Messages.NUF_VOICE_CHANNELS_DESCRIPTION
                             },
                             WRITING_MESSAGES: {
-                                title: (0, a.jsx)("div", {
+                                title: (0, s.jsx)("div", {
                                     className: u.writingMessagesTitle,
                                     children: o.default.Messages.TIP_WRITING_MESSAGES_TITLE3
                                 }),
-                                body: (0, a.jsx)(c, {})
+                                body: (0, s.jsx)(c, {})
                             },
                             ORGANIZE_BY_TOPIC: {
-                                title: (0, a.jsx)("div", {
+                                title: (0, s.jsx)("div", {
                                     className: u.channelsTitle,
                                     children: o.default.Messages.NUF_CHANNELS_TITLE
                                 }),
@@ -59,7 +59,7 @@
                             },
                             INSTANT_INVITE: {
                                 title: o.default.Messages.TIP_INSTANT_INVITE_TITLE3,
-                                body: (0, a.jsx)(d, {})
+                                body: (0, s.jsx)(d, {})
                             },
                             SERVER_SETTINGS: {
                                 title: o.default.Messages.TIP_SERVER_SETTINGS_TITLE3,
@@ -83,7 +83,7 @@
                             }
                         },
                         l = e.replace(/-/g, "_").toUpperCase(),
-                        i = null !== (t = s[l]) && void 0 !== t ? t : {};
+                        i = null !== (t = a[l]) && void 0 !== t ? t : {};
                     return {
                         title: i.title,
                         body: i.body,

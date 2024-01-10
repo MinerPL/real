@@ -1,14 +1,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return p
                 }
             }), n("222007");
             var i = n("446674"),
                 l = n("913144"),
-                a = n("449008"),
-                r = n("42203"),
-                s = n("341542"),
+                r = n("449008"),
+                s = n("42203"),
+                a = n("341542"),
                 o = n("923959"),
                 u = n("49111");
             let d = {},
@@ -24,7 +24,7 @@
             }
             class E extends i.default.PersistedStore {
                 initialize(e) {
-                    this.waitFor(r.default, s.default), this.removeChangeListener(f), this.addChangeListener(f), d = null != e ? e : {}
+                    this.waitFor(s.default, a.default), this.removeChangeListener(f), this.addChangeListener(f), d = null != e ? e : {}
                 }
                 getState() {
                     return d
@@ -40,7 +40,7 @@
                 }
             }
             E.displayName = "CategoryCollapseStore", E.persistKey = "collapsedCategories";
-            var _ = new E(l.default, {
+            var p = new E(l.default, {
                 CONNECTION_OPEN: function(e) {
                     for (let t of (!e.userGuildSettings.partial && (d = {}), e.userGuildSettings.entries))
                         if (null != t.channel_overrides)
@@ -49,9 +49,9 @@
                 USER_GUILD_SETTINGS_FULL_UPDATE: function(e) {
                     let {
                         userGuildSettings: t
-                    } = e, n = new Set(t.map(e => e.guild_id).filter(a.isNotNullish));
+                    } = e, n = new Set(t.map(e => e.guild_id).filter(r.isNotNullish));
                     for (let e in d) {
-                        let t = r.default.getChannel(e);
+                        let t = s.default.getChannel(e);
                         null != t && null != t.guild_id && n.has(t.guild_id) && delete d[t.id]
                     }
                     for (let e of t)

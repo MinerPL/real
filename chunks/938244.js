@@ -4,9 +4,9 @@
                     return r
                 }
             });
-            var a = n("37983");
+            var s = n("37983");
             n("884691");
-            var s = n("77078"),
+            var a = n("77078"),
                 l = n("145131"),
                 i = n("661569");
 
@@ -16,17 +16,17 @@
                     onClick: n,
                     label: r
                 } = e;
-                return (0, a.jsx)(s.Button, {
-                    look: s.Button.Looks.BLANK,
-                    size: s.Button.Sizes.MIN,
+                return (0, s.jsx)(a.Button, {
+                    look: a.Button.Looks.BLANK,
+                    size: a.Button.Sizes.MIN,
                     className: i.button,
                     onClick: n,
-                    children: (0, a.jsxs)(l.default, {
+                    children: (0, s.jsxs)(l.default, {
                         align: l.default.Align.CENTER,
-                        children: [(0, a.jsx)("div", {
+                        children: [(0, s.jsx)("div", {
                             className: i.buttonIcon,
                             children: t
-                        }), (0, a.jsx)(s.Text, {
+                        }), (0, s.jsx)(a.Text, {
                             variant: "text-md/normal",
                             color: "none",
                             children: r
