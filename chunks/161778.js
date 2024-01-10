@@ -86,7 +86,6 @@
             }];
             var O = new N(l.default, {
                 CONNECTION_OPEN: v,
-                LOGIN_SUCCESS: A,
                 LOGOUT: function(e) {
                     return !e.isSwitchingAccount && T !== S.ThemeTypes.DARK && (T = S.ThemeTypes.DARK, function() {
                         !__OVERLAY__ && f.isPlatformEmbedded && d.default.setApplicationBackgroundColor((0, o.isThemeDark)(C()) ? a.default.unsafe_rawColors.PRIMARY_700.resolve({
