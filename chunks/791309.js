@@ -23,11 +23,11 @@
                         className: d,
                         variant: f = "heading-md/semibold",
                         alwaysWhiteText: C = !0
-                    } = e, m = (0, o.formatPrice)(l, s);
+                    } = e, E = (0, o.formatPrice)(l, s);
                     return (0, a.jsxs)(n.Heading, {
                         variant: f,
                         color: C ? "always-white" : "none",
                         className: r(i.heading, d),
-                        children: [c, null !== (t = null == u ? void 0 : u(m)) && void 0 !== t ? t : m]
+                        children: [c, null !== (t = null == u ? void 0 : u(E)) && void 0 !== t ? t : E]
                     })
                 }

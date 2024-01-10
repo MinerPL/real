@@ -21,8 +21,8 @@
                         size: l = d.MAX_CONTENT_WIDTH,
                         className: s,
                         style: C,
-                        children: m
-                    } = e, E = (0, n.default)([i.default], () => i.default.saturation);
+                        children: E
+                    } = e, m = (0, n.default)([i.default], () => i.default.saturation);
                     return (0, a.jsx)("div", {
                         className: r(f.banner, s),
                         style: (() => {
@@ -31,12 +31,12 @@
                                 size: l,
                                 format: "jpg"
                             });
-                            if (1 === E) return {
+                            if (1 === m) return {
                                 ...C,
                                 backgroundImage: "url(".concat(e, ")"),
                                 backgroundSize: "cover"
                             };
-                            let a = (0, u.hexOpacityToRgba)(o.default.unsafe_rawColors.BLACK_500, 1 - E);
+                            let a = (0, u.hexOpacityToRgba)(o.default.unsafe_rawColors.BLACK_500, 1 - m);
                             return {
                                 ...C,
                                 backgroundImage: "linear-gradient(".concat(a, ", ").concat(a, "), url(").concat(e, ")"),
@@ -44,6 +44,6 @@
                                 backgroundSize: "cover"
                             }
                         })(),
-                        children: m
+                        children: E
                     })
                 }

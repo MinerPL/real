@@ -7,7 +7,7 @@
                     return f
                 },
                 default: function() {
-                    return b
+                    return T
                 }
             }), l("222007");
             var a = l("656280"),
@@ -23,10 +23,10 @@
                 C = s(o.default.unsafe_rawColors.WHITE_500.resolve({
                     saturation: 1
                 }).hex()),
-                m = s(o.default.unsafe_rawColors.BLACK_500.resolve({
+                E = s(o.default.unsafe_rawColors.BLACK_500.resolve({
                     saturation: 1
                 }).hex()),
-                E = (e, t) => {
+                m = (e, t) => {
                     let l = e.toRgb(),
                         a = t.toRgb(),
                         [r, n, o] = (0, u.getValueInColorGradientByPercentage)([l.r, l.g, l.b], [a.r, a.g, a.b], 50);
@@ -39,7 +39,7 @@
                 p = (e, t) => {
                     let l = s(e),
                         a = s(t),
-                        r = E(l, a);
+                        r = m(l, a);
                     return {
                         primary: l,
                         secondary: a,
@@ -49,11 +49,11 @@
                 g = (e, t) => {
                     let l = s(e),
                         a = s(t),
-                        r = E(l, a);
+                        r = m(l, a);
                     return {
                         primary: l,
                         secondary: a,
-                        text: s(r.isLight() ? m : C)
+                        text: s(r.isLight() ? E : C)
                     }
                 },
                 h = (e, t) => {
@@ -68,7 +68,7 @@
                         l: r
                     })
                 },
-                T = {
+                b = {
                     [r.CollectiblesCategorySkuId.FANTASY]: {
                         backgroundColors: p("#146144", "#021A0E"),
                         buttonColors: g("#028737", "#00694A"),
@@ -122,10 +122,10 @@
                         confettiColors: ["#00C49A", "#F8B531", "#F24E7E", "#64CC6F", "#BB5CF0"]
                     }
                 };
-            var b = e => {
+            var T = e => {
                 let t = (0, n.default)([i.default], () => i.default.saturation);
                 if (null == e) return {};
-                let l = T[e];
+                let l = b[e];
                 return (null == l ? void 0 : l.backgroundColors) == null || 1 === t ? null != l ? l : {} : {
                     ...l,
                     backgroundColors: {

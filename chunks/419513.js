@@ -15,24 +15,24 @@
                 d = l("649844"),
                 f = l("697218"),
                 C = l("153769"),
-                m = l("270227"),
-                E = l("719923"),
+                E = l("270227"),
+                m = l("719923"),
                 p = l("491232"),
                 g = l("716120"),
                 h = l("342676"),
-                T = l("408381"),
-                b = l("57940"),
+                b = l("408381"),
+                T = l("57940"),
                 x = l("646718"),
                 L = l("782340"),
                 S = l("927694");
-            let I = (0, T.getLogoSize)(96),
-                v = e => {
+            let v = (0, b.getLogoSize)(96),
+                I = e => {
                     let {
                         category: t
                     } = e, {
                         analyticsLocations: l
                     } = (0, c.default)(), r = s.useRef(null), n = (0, i.default)([f.default], () => f.default.getCurrentUser());
-                    return E.default.canUseCollectibles(n) ? (0, a.jsx)(a.Fragment, {
+                    return m.default.canUseCollectibles(n) ? (0, a.jsx)(a.Fragment, {
                         children: t.summary
                     }) : (0, a.jsx)(a.Fragment, {
                         children: L.default.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
@@ -64,32 +64,32 @@
                     className: l
                 } = e, {
                     backgroundColors: s
-                } = (0, b.default)(t.skuId);
+                } = (0, T.default)(t.skuId);
                 return (0, a.jsxs)(g.default, {
                     asset: t.banner,
                     className: n(S.shopBanner, l),
                     style: null != s ? {
-                        background: "".concat((0, T.getBackgroundGradient)(s), " border-box border-box"),
+                        background: "".concat((0, b.getBackgroundGradient)(s), " border-box border-box"),
                         outlineColor: s.border.toHslString()
                     } : void 0,
                     children: [(0, a.jsxs)("div", {
                         className: S.discordLogo,
                         children: [(0, a.jsx)(C.default, {
                             className: S.discordIcon
-                        }), (0, a.jsx)(m.default, {
+                        }), (0, a.jsx)(E.default, {
                             className: S.discordWordmark
                         })]
                     }), (0, a.jsx)("img", {
                         className: S.categoryLogo,
                         src: (0, p.getCollectiblesAssetURL)(t.logo, {
-                            size: I
+                            size: v
                         }),
                         alt: t.name
                     }), (0, a.jsx)(u.Text, {
                         className: S.summary,
                         variant: "text-md/normal",
                         color: "always-white",
-                        children: t.skuId === o.CollectiblesCategorySkuId.DISXCORE ? (0, a.jsx)(v, {
+                        children: t.skuId === o.CollectiblesCategorySkuId.DISXCORE ? (0, a.jsx)(I, {
                             category: t
                         }) : t.summary
                     }), (0, a.jsx)(h.default, {

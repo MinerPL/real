@@ -20,8 +20,8 @@
                     isGift: d = !1,
                     giftMessage: f,
                     onClose: C,
-                    onComplete: m,
-                    analyticsLocations: E,
+                    onComplete: E,
+                    analyticsLocations: m,
                     analyticsObject: p
                 } = e, g = !1, h = (0, s.v4)();
                 (0, r.openModalLazy)(async () => {
@@ -40,12 +40,12 @@
                             skuId: t,
                             isGift: d,
                             giftMessage: f,
-                            analyticsLocations: E,
+                            analyticsLocations: m,
                             onClose: e => {
                                 s(), null == C || C(e)
                             },
                             onComplete: () => {
-                                g = !0, null == m || m()
+                                g = !0, null == E || E()
                             },
                             returnRef: r
                         })
@@ -57,7 +57,7 @@
                             payment_type: c.PurchaseTypeToAnalyticsPaymentType[c.PurchaseTypes.ONE_TIME],
                             location: p,
                             is_gift: !1,
-                            location_stack: E
+                            location_stack: m
                         }), (0, n.clearError)(), (0, o.clearPurchaseTokenAuthState)(), null == C || C(g), g && (0, i.fetchCollectiblesPurchases)()
                     },
                     onCloseRequest: c.NOOP

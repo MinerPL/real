@@ -16,8 +16,8 @@
                 d = l("216422"),
                 f = l("719923"),
                 C = l("491232"),
-                m = l("791309"),
-                E = l("49111"),
+                E = l("791309"),
+                m = l("49111"),
                 p = l("782340"),
                 g = l("173046");
 
@@ -27,24 +27,24 @@
                     className: l,
                     disableTooltipPointerEvents: s,
                     alwaysWhiteText: h = !0
-                } = e, T = (0, n.default)([c.default], () => c.default.getCurrentUser()), b = (0, n.default)([u.default], () => (0, o.isThemeDark)(u.default.theme)), x = (0, C.extractPriceByPurchaseTypes)(t, E.PriceSetAssignmentPurchaseTypes.DEFAULT);
+                } = e, b = (0, n.default)([c.default], () => c.default.getCurrentUser()), T = (0, n.default)([u.default], () => (0, o.isThemeDark)(u.default.theme)), x = (0, C.extractPriceByPurchaseTypes)(t, m.PriceSetAssignmentPurchaseTypes.DEFAULT);
                 if (null == x) return null;
                 if (x.amount <= 0) return (0, a.jsx)("div", {
                     className: r(g.priceTagsContainer, l),
-                    children: (0, a.jsx)(m.default, {
+                    children: (0, a.jsx)(E.default, {
                         alwaysWhiteText: h,
                         price: x
                     })
                 });
-                let L = (0, C.extractPriceByPurchaseTypes)(t, E.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
-                    S = !f.default.canUseCollectibles(T);
+                let L = (0, C.extractPriceByPurchaseTypes)(t, m.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
+                    S = !f.default.canUseCollectibles(b);
                 return (0, a.jsxs)("div", {
                     className: r(g.priceTagsContainer, l),
-                    children: [(0, a.jsx)(m.default, {
+                    children: [(0, a.jsx)(E.default, {
                         alwaysWhiteText: h,
                         price: x,
                         className: S ? void 0 : g.strikedPrice
-                    }), null != L && (0, a.jsx)(m.default, {
+                    }), null != L && (0, a.jsx)(E.default, {
                         price: L,
                         alwaysWhiteText: h,
                         renderPrice: S ? e => p.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
@@ -65,7 +65,7 @@
                                     className: r(g.premiumIcon, {
                                         [g.fullPrice]: S
                                     }),
-                                    color: h || b ? "white" : "black"
+                                    color: h || T ? "white" : "black"
                                 })
                             }
                         })

@@ -1,7 +1,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 useProductDetailsLinkableRoute: function() {
-                    return m
+                    return E
                 },
                 useProductDetailsDeepLinking: function() {
                     return p
@@ -18,7 +18,7 @@
             let d = "".concat("#").concat("itemSkuId", "="),
                 f = new RegExp("^".concat(d, "(\\d+)$")),
                 C = [c.Routes.COLLECTIBLES_SHOP, c.Routes.COLLECTIBLES_SHOP_FULLSCREEN],
-                m = e => {
+                E = e => {
                     let t = (0, s.useLocation)();
                     a.useEffect(() => {
                         if (null != e && C.includes(t.pathname)) return window.location.replace("".concat(d).concat(e.skuId)), () => {
@@ -26,7 +26,7 @@
                         }
                     }, [])
                 },
-                E = e => {
+                m = e => {
                     let {
                         categories: t,
                         productSkuId: l,
@@ -64,12 +64,12 @@
                         isFetchingCategories: l,
                         isLayer: u,
                         initialItemCardRef: d
-                    } = e, C = a.useRef(null), m = (0, s.useLocation)(), p = m.pathname === c.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : m.pathname === c.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
+                    } = e, C = a.useRef(null), E = (0, s.useLocation)(), p = E.pathname === c.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : E.pathname === c.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
                         analyticsLocations: g
                     } = (0, o.default)(p);
                     a.useEffect(() => {
                         if (u) return;
-                        let e = f.exec(m.hash);
+                        let e = f.exec(E.hash);
                         if (null != e) {
                             let t = e[1];
                             C.current = t
@@ -82,7 +82,7 @@
                         if (u && null != h && (e = h), !u && null != C.current && (e = C.current), null != e) {
                             let l = [],
                                 a = setTimeout(() => {
-                                    let a = E({
+                                    let a = m({
                                         categories: t,
                                         productSkuId: e,
                                         analyticsLocations: g,
