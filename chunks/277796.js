@@ -1,24 +1,24 @@
             "use strict";
             n.r(t), n.d(t, {
                 withGuildUnreadFlags: function() {
-                    return a
+                    return s
                 },
                 resetChannelUnreadFlags: function() {
-                    return l
+                    return u
                 },
                 withChannelUnreadFlags: function() {
-                    return u
+                    return l
                 }
             });
-            var i = n("568734"),
-                s = n("397336");
+            var a = n("568734"),
+                i = n("397336");
 
-            function a(e, t) {
+            function s(e, t) {
                 var n;
-                return i.addFlag((n = e, i.removeFlags(n, s.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES, s.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)), t)
+                return a.addFlag((n = e, a.removeFlags(n, i.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES, i.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)), t)
             }
-            let l = e => i.removeFlags(e, s.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES, s.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS);
+            let u = e => a.removeFlags(e, i.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES, i.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS);
 
-            function u(e, t) {
-                return i.addFlag(l(e), t)
+            function l(e, t) {
+                return a.addFlag(u(e), t)
             }

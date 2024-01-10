@@ -7,51 +7,51 @@
             var s = n("37983");
             n("884691");
             var i = n("414456"),
-                r = n.n(i),
+                a = n.n(i),
                 l = n("77078"),
-                a = n("254686"),
-                u = n("851706");
+                u = n("254686"),
+                r = n("851706");
             let o = Object.freeze({
-                    SIZE_10: u.size10,
-                    SIZE_12: u.size12,
-                    SIZE_14: u.size14,
-                    SIZE_16: u.size16,
-                    SIZE_20: u.size20,
-                    SIZE_24: u.size24,
-                    SIZE_32: u.size32
+                    SIZE_10: r.size10,
+                    SIZE_12: r.size12,
+                    SIZE_14: r.size14,
+                    SIZE_16: r.size16,
+                    SIZE_20: r.size20,
+                    SIZE_24: r.size24,
+                    SIZE_32: r.size32
                 }),
                 d = e => {
                     let {
                         id: t,
                         muted: n = !1,
-                        className: i = a.wrapper,
-                        size: u = o.SIZE_14,
+                        className: i = u.wrapper,
+                        size: r = o.SIZE_14,
                         selectable: d = !1,
                         children: c,
-                        color: h,
-                        onClick: f,
-                        onContextMenu: m,
-                        style: p,
-                        title: I,
-                        uppercase: v
+                        color: f,
+                        onClick: S,
+                        onContextMenu: E,
+                        style: g,
+                        title: _,
+                        uppercase: N
                     } = e;
                     return (0, s.jsx)(l.H, {
-                        role: null != f ? "button" : void 0,
-                        onClick: f,
-                        onContextMenu: m,
+                        role: null != S ? "button" : void 0,
+                        onClick: S,
+                        onContextMenu: E,
                         id: t,
-                        className: r(i, {
-                            [a.base]: !0,
-                            [u]: !0,
-                            [a.selectable]: d,
-                            [a.muted]: n,
-                            [a.uppercase]: v
+                        className: a(i, {
+                            [u.base]: !0,
+                            [r]: !0,
+                            [u.selectable]: d,
+                            [u.muted]: n,
+                            [u.uppercase]: N
                         }),
-                        title: I,
-                        style: null != h ? {
-                            ...p,
-                            color: h
-                        } : p,
+                        title: _,
+                        style: null != f ? {
+                            ...g,
+                            color: f
+                        } : g,
                         children: c
                     })
                 };
