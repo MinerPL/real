@@ -25,15 +25,15 @@
                 A = n("697218"),
                 T = n("987772"),
                 M = n("155207"),
-                I = n("917686"),
-                N = n("317134"),
+                N = n("917686"),
+                I = n("317134"),
                 L = n("991170"),
                 v = n("158998"),
-                x = n("938244"),
-                R = n("172554"),
+                R = n("938244"),
+                x = n("172554"),
                 y = n("730859"),
-                O = n("49111"),
-                D = n("782340"),
+                D = n("49111"),
+                O = n("782340"),
                 j = n("935107");
 
             function b(e) {
@@ -47,7 +47,7 @@
                         },
                         context: t
                     });
-                    return u.default.has(n, O.Permissions.ADMINISTRATOR) || u.default.has(n, O.Permissions.VIEW_CHANNEL)
+                    return u.default.has(n, D.Permissions.ADMINISTRATOR) || u.default.has(n, D.Permissions.VIEW_CHANNEL)
                 }).value(), [t, b, U]), H = (0, c.useStateFromStoresArray)([A.default], () => {
                     let e = {};
                     for (let n of (null != P && (e[P.id] = P), Object.values(t.permissionOverwrites))) {
@@ -58,31 +58,31 @@
                     return o(e).filter(e => {
                         var n;
                         let s = L.default.can({
-                                permission: O.Permissions.ADMINISTRATOR,
+                                permission: D.Permissions.ADMINISTRATOR,
                                 user: e,
                                 context: t
                             }),
                             a = null !== (n = t.permissionOverwrites[e.id]) && void 0 !== n ? n : L.default.NONE,
-                            l = u.default.has(a.allow, O.Permissions.VIEW_CHANNEL);
+                            l = u.default.has(a.allow, D.Permissions.VIEW_CHANNEL);
                         return s || l
                     }).value()
-                }, [t, P]), k = _.default.can(O.Permissions.MANAGE_CHANNELS, t) || _.default.can(O.Permissions.MANAGE_ROLES, t);
+                }, [t, P]), k = _.default.can(D.Permissions.MANAGE_CHANNELS, t) || _.default.can(D.Permissions.MANAGE_ROLES, t);
 
                 function G() {
                     h.default.open(t.id)
                 }
                 let w = a.useCallback(() => l(!1), []);
-                return (0, s.jsxs)(R.default, {
+                return (0, s.jsxs)(x.default, {
                     channelId: t.id,
-                    children: [(0, s.jsx)(R.EmptyMessageIcon, {
+                    children: [(0, s.jsx)(x.EmptyMessageIcon, {
                         locked: !0,
                         channelType: t.type
-                    }), (0, s.jsx)(R.EmptyMessageHeader, {
-                        children: D.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
+                    }), (0, s.jsx)(x.EmptyMessageHeader, {
+                        children: O.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
                             channelName: r
                         })
-                    }), (0, s.jsx)(R.EmptyMessageBody, {
-                        children: D.default.Messages.BEGINNING_ROLE_REQUIRED_CHANNEL_DESCRIPTION.format({
+                    }), (0, s.jsx)(x.EmptyMessageBody, {
+                        children: O.default.Messages.BEGINNING_ROLE_REQUIRED_CHANNEL_DESCRIPTION.format({
                             channelName: r,
                             topicHook: () => g.default.parseTopic(t.topic, !0, {
                                 channelId: t.id
@@ -90,15 +90,15 @@
                         })
                     }), k ? (0, s.jsxs)("div", {
                         className: j.channelSettingButtons,
-                        children: [(0, s.jsx)(x.default, {
-                            label: D.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
+                        children: [(0, s.jsx)(R.default, {
+                            label: O.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
                             onClick: () => l(!0),
                             icon: (0, s.jsx)(M.default, {
                                 width: 16,
                                 height: 16
                             })
-                        }), (0, s.jsx)(x.default, {
-                            label: D.default.Messages.EDIT_CHANNEL,
+                        }), (0, s.jsx)(R.default, {
+                            label: O.default.Messages.EDIT_CHANNEL,
                             onClick: G,
                             icon: (0, s.jsx)(T.default, {
                                 width: 16,
@@ -131,14 +131,14 @@
                                     tag: "span",
                                     variant: "text-md/normal",
                                     color: "text-muted",
-                                    children: D.default.Messages.ROLE_REQUIRED_SINGLE_USER_MESSAGE
+                                    children: O.default.Messages.ROLE_REQUIRED_SINGLE_USER_MESSAGE
                                 })]
                             })
                         }(), F.map((e, n) => {
                             var a, l;
-                            let r = null !== (l = e.colorString) && void 0 !== l ? l : (0, d.int2hex)(O.DEFAULT_ROLE_COLOR),
+                            let r = null !== (l = e.colorString) && void 0 !== l ? l : (0, d.int2hex)(D.DEFAULT_ROLE_COLOR),
                                 o = (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) !== void 0;
-                            return k ? (0, s.jsx)(I.default, {
+                            return k ? (0, s.jsx)(N.default, {
                                 className: i(j.role, {
                                     [j.last]: n === F.length - 1
                                 }),
@@ -147,9 +147,9 @@
                                 disabled: !k,
                                 verified: o,
                                 onClick: () => {
-                                    E.default.open(t.guild_id, O.GuildSettingsSections.MEMBERS), E.default.selectRole(e.id)
+                                    E.default.open(t.guild_id, D.GuildSettingsSections.MEMBERS), E.default.selectRole(e.id)
                                 }
-                            }, e.id) : (0, s.jsx)(N.default, {
+                            }, e.id) : (0, s.jsx)(I.default, {
                                 className: i(j.role, {
                                     [j.last]: n === F.length - 1
                                 }),

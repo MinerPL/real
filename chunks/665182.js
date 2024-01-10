@@ -70,7 +70,7 @@
                 i.useEffect(() => {
                     null == s || s(T, A)
                 }, [T, s, A]);
-                let I = (0, l.jsxs)(l.Fragment, {
+                let N = (0, l.jsxs)(l.Fragment, {
                     children: [(0, l.jsx)("div", {
                         className: o(p.chatTarget, {
                             [p.floating]: A,
@@ -100,11 +100,11 @@
                     return (0, l.jsx)(e, {
                         children: (0, l.jsx)("div", {
                             className: p.chatLayerWrapper,
-                            children: I
+                            children: N
                         })
                     })
                 }
                 return (0, l.jsx)(l.Fragment, {
-                    children: I
+                    children: N
                 })
             }

@@ -1,22 +1,22 @@
             "use strict";
-            a.r(t), a.d(t, {
+            n.r(t), n.d(t, {
                 createAudioMP4FromVideoMP4: function() {
                     return i
                 }
-            }), a("222007"), a("424973");
-            var n = a("469520"),
-                l = a.n(n);
+            }), n("222007"), n("424973");
+            var a = n("469520"),
+                l = n.n(a);
             async function i(e) {
                 let t = l.createFile(),
-                    a = l.createFile(),
-                    n = {};
+                    n = l.createFile(),
+                    a = {};
                 e.fileStart = 0, t.onReady = e => {
-                    for (let l of (a.init({
+                    for (let l of (n.init({
                             duration: e.duration,
                             timescale: e.timescale
-                        }), e.audioTracks)) n[l.id] = l, t.setExtractionOptions(l.id, null, {
+                        }), e.audioTracks)) a[l.id] = l, t.setExtractionOptions(l.id, null, {
                         nbSamples: 1 / 0
-                    }), a.addTrack({
+                    }), n.addTrack({
                         id: l.id,
                         timescale: l.timescale,
                         hdlr: "soun",
@@ -32,16 +32,16 @@
                 };
                 let i = new Promise(e => {
                     t.onSamples = (l, i, r) => {
-                        for (let e of r) a.addSample(l, e.data, e);
-                        t.releaseUsedSamples(l, r.length), delete n[l];
-                        let s = a.getTrackById(l),
+                        for (let e of r) n.addSample(l, e.data, e);
+                        t.releaseUsedSamples(l, r.length), delete a[l];
+                        let s = n.getTrackById(l),
                             u = t.getTrackById(l);
                         if (null != u.edts) {
                             let e = u.edts.elst;
                             s.add("edts").boxes.push(e)
                         }
-                        0 === Object.keys(n).length && e()
+                        0 === Object.keys(a).length && e()
                     }
                 });
-                return t.appendBuffer(e), t.flush(), await i, a.getBuffer()
+                return t.appendBuffer(e), t.flush(), await i, n.getBuffer()
             }

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 activityInviteKey: function() {
-                    return N
+                    return I
                 },
                 default: function() {
                     return v
@@ -28,8 +28,8 @@
                 A = n("718422"),
                 T = n("49111"),
                 M = n("782340"),
-                I = n("216220");
-            let N = "ActivityInvite";
+                N = n("216220");
+            let I = "ActivityInvite";
             class L extends a.PureComponent {
                 componentDidMount() {
                     this.fetchApplication()
@@ -90,18 +90,18 @@
                             })
                         }), (0, s.jsxs)(o.ModalContent, {
                             children: [(0, s.jsx)("div", {
-                                className: I.subHeader,
+                                className: N.subHeader,
                                 children: M.default.Messages.MESSAGE_PREVIEW
                             }), (0, s.jsx)(d.default, {
                                 activityActionType: f,
                                 activity: l,
-                                className: I.preview,
+                                className: N.preview,
                                 application: C,
                                 partyId: null != l.party ? l.party.id : null,
                                 isPreview: !0,
                                 analyticsLocations: r
                             }), (0, s.jsx)("div", {
-                                className: I.subHeader,
+                                className: N.subHeader,
                                 children: M.default.Messages.ADD_A_COMMENT_OPTIONAL
                             }), (0, s.jsx)(o.Popout, {
                                 position: "top",
@@ -122,7 +122,7 @@
                                     })
                                 },
                                 children: () => (0, s.jsx)(E.default, {
-                                    className: I.textArea,
+                                    className: N.textArea,
                                     textValue: e,
                                     richValue: t,
                                     focused: n,
@@ -130,7 +130,7 @@
                                     onChange: this.handleTextChange,
                                     onSubmit: this.handleShare,
                                     type: p.ChatInputTypes.FORM,
-                                    parentModalKey: N
+                                    parentModalKey: I
                                 })
                             })]
                         }), (0, s.jsxs)(o.ModalFooter, {

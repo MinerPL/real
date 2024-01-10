@@ -1,115 +1,115 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return f
+                    return S
                 }
             });
-            var i = n("37983");
+            var s = n("37983");
             n("884691");
-            var s = n("446674"),
+            var i = n("446674"),
                 a = n("77078"),
                 l = n("519705"),
                 u = n("503950"),
-                o = n("282109"),
-                d = n("34676"),
-                r = n("49111"),
+                r = n("282109"),
+                o = n("34676"),
+                d = n("49111"),
                 c = n("782340");
 
-            function S() {
+            function f() {
                 return [{
-                    setting: r.UserNotificationSettings.ALL_MESSAGES,
+                    setting: d.UserNotificationSettings.ALL_MESSAGES,
                     label: c.default.Messages.FORM_LABEL_ALL_MESSAGES
                 }, {
-                    setting: r.UserNotificationSettings.ONLY_MENTIONS,
+                    setting: d.UserNotificationSettings.ONLY_MENTIONS,
                     label: c.default.Messages.FORM_LABEL_ONLY_MENTIONS.format()
                 }, {
-                    setting: r.UserNotificationSettings.NO_MESSAGES,
+                    setting: d.UserNotificationSettings.NO_MESSAGES,
                     label: c.default.Messages.FORM_LABEL_NOTHING
                 }]
             }
 
-            function f(e) {
-                var t, f;
-                let g = function(e) {
+            function S(e) {
+                var t, S;
+                let E = function(e) {
                         let {
                             suppressEveryone: t,
                             suppressRoles: n,
-                            mobilePush: f,
-                            messageNotifications: g,
-                            notifyHighlights: E
-                        } = (0, s.useStateFromStoresObject)([o.default], () => ({
-                            suppressEveryone: o.default.isSuppressEveryoneEnabled(e.id),
-                            suppressRoles: o.default.isSuppressRolesEnabled(e.id),
-                            mobilePush: o.default.isMobilePushEnabled(e.id),
-                            messageNotifications: o.default.getMessageNotifications(e.id),
-                            notifyHighlights: o.default.getNotifyHighlights(e.id)
-                        }), [e.id]), _ = E === r.HighlightSettings.DISABLED, N = (0, u.default)(e.id);
+                            mobilePush: S,
+                            messageNotifications: E,
+                            notifyHighlights: g
+                        } = (0, i.useStateFromStoresObject)([r.default], () => ({
+                            suppressEveryone: r.default.isSuppressEveryoneEnabled(e.id),
+                            suppressRoles: r.default.isSuppressRolesEnabled(e.id),
+                            mobilePush: r.default.isMobilePushEnabled(e.id),
+                            messageNotifications: r.default.getMessageNotifications(e.id),
+                            notifyHighlights: r.default.getNotifyHighlights(e.id)
+                        }), [e.id]), _ = g === d.HighlightSettings.DISABLED, N = (0, u.default)(e.id);
 
                         function M(t, n) {
                             l.default.updateGuildNotificationSettings(e.id, t, n)
                         }
-                        return (0, i.jsxs)(i.Fragment, {
-                            children: [(0, i.jsx)(a.MenuGroup, {
-                                children: S().map(e => {
+                        return (0, s.jsxs)(s.Fragment, {
+                            children: [(0, s.jsx)(a.MenuGroup, {
+                                children: f().map(e => {
                                     let {
                                         setting: t,
                                         label: n
                                     } = e;
-                                    return (0, i.jsx)(a.MenuRadioItem, {
+                                    return (0, s.jsx)(a.MenuRadioItem, {
                                         group: "guild-notifications",
                                         id: "".concat(t),
                                         label: n,
                                         action: () => M({
                                             message_notifications: t
-                                        }, d.NotificationLabel.notifications(t)),
-                                        checked: t === g
+                                        }, o.NotificationLabel.notifications(t)),
+                                        checked: t === E
                                     }, t)
                                 })
-                            }), (0, i.jsxs)(a.MenuGroup, {
-                                children: [(0, i.jsx)(a.MenuCheckboxItem, {
+                            }), (0, s.jsxs)(a.MenuGroup, {
+                                children: [(0, s.jsx)(a.MenuCheckboxItem, {
                                     id: "suppress-everyone",
                                     label: c.default.Messages.FORM_LABEL_SUPPRESS_EVERYONE.format(),
                                     action: () => M({
                                         suppress_everyone: !t
-                                    }, d.NotificationLabel.suppressEveryone(!t)),
+                                    }, o.NotificationLabel.suppressEveryone(!t)),
                                     checked: t
-                                }), (0, i.jsx)(a.MenuCheckboxItem, {
+                                }), (0, s.jsx)(a.MenuCheckboxItem, {
                                     id: "suppress-roles",
                                     label: c.default.Messages.FORM_LABEL_SUPPRESS_ROLES,
                                     action: () => M({
                                         suppress_roles: !n
-                                    }, d.NotificationLabel.suppressRoles(!n)),
+                                    }, o.NotificationLabel.suppressRoles(!n)),
                                     checked: n
-                                }), (0, i.jsx)(a.MenuCheckboxItem, {
+                                }), (0, s.jsx)(a.MenuCheckboxItem, {
                                     id: "suppress-highlights",
                                     label: c.default.Messages.FORM_LABEL_SUPPRESS_HIGHLIGHTS,
                                     action: () => {
                                         M({
-                                            notify_highlights: _ ? r.HighlightSettings.ENABLED : r.HighlightSettings.DISABLED
-                                        }, d.NotificationLabel.highlights(_))
+                                            notify_highlights: _ ? d.HighlightSettings.ENABLED : d.HighlightSettings.DISABLED
+                                        }, o.NotificationLabel.highlights(_))
                                     },
                                     checked: _
                                 }), N]
-                            }), (0, i.jsx)(a.MenuGroup, {
-                                children: (0, i.jsx)(a.MenuCheckboxItem, {
+                            }), (0, s.jsx)(a.MenuGroup, {
+                                children: (0, s.jsx)(a.MenuCheckboxItem, {
                                     id: "mobile-push",
                                     label: c.default.Messages.FORM_LABEL_MOBILE_PUSH_NOTIFICATIONS,
                                     action: () => M({
-                                        mobile_push: !f
-                                    }, d.NotificationLabel.mobilePush(!f)),
-                                    checked: f
+                                        mobile_push: !S
+                                    }, o.NotificationLabel.mobilePush(!S)),
+                                    checked: S
                                 })
                             })]
                         })
                     }(e),
-                    E = (0, s.useStateFromStores)([o.default], () => o.default.getMessageNotifications(e.id), [e.id]),
-                    _ = null === (f = S()) || void 0 === f ? void 0 : null === (t = f.find(e => {
+                    g = (0, i.useStateFromStores)([r.default], () => r.default.getMessageNotifications(e.id), [e.id]),
+                    _ = null === (S = f()) || void 0 === S ? void 0 : null === (t = S.find(e => {
                         let {
                             setting: t
                         } = e;
-                        return t === E
+                        return t === g
                     })) || void 0 === t ? void 0 : t.label;
-                return null != g ? (0, i.jsx)(a.MenuItem, {
+                return null != E ? (0, s.jsx)(a.MenuItem, {
                     id: "guild-notifications",
                     label: c.default.Messages.NOTIFICATION_SETTINGS,
                     subtext: _,
@@ -117,11 +117,11 @@
                         let {
                             default: t
                         } = await n.el("747593").then(n.bind(n, "747593"));
-                        return n => (0, i.jsx)(t, {
+                        return n => (0, s.jsx)(t, {
                             ...n,
                             guildId: e.id
                         })
                     }),
-                    children: g
+                    children: E
                 }) : null
             }
