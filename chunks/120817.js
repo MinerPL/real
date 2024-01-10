@@ -53,8 +53,8 @@
                 W = n("738552"),
                 Z = n("630062"),
                 z = n("873774"),
-                Q = n("677777"),
-                X = n("579095"),
+                X = n("677777"),
+                Q = n("579095"),
                 q = n("333896"),
                 J = n("446380"),
                 $ = n("919429"),
@@ -531,7 +531,7 @@
                                         selected: o === er.StaticChannelRoute.ROLE_SUBSCRIPTIONS
                                     }, ea.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS);
                                 case ea.ChannelListCommunityRow.GUILD_SHOP:
-                                    return (0, l.jsx)(Q.default, {
+                                    return (0, l.jsx)(X.default, {
                                         guild: s,
                                         selected: o === er.StaticChannelRoute.GUILD_SHOP
                                     }, ea.ChannelListCommunityRow.GUILD_SHOP);
@@ -590,7 +590,7 @@
                                         canBeNewChannel: p && t === c.recentsSectionNumber,
                                         isFavoriteCategory: N,
                                         withGuildIcon: m
-                                    }), _.threadCount > 0 ? (0, l.jsx)(X.default, {
+                                    }), _.threadCount > 0 ? (0, l.jsx)(Q.default, {
                                         className: i({
                                             [eu.threadListWithGuildIcon]: m
                                         }),

@@ -18,9 +18,9 @@
                 p = n("890291"),
                 g = n("758547"),
                 m = n("782340"),
-                S = n("893908");
+                E = n("893908");
 
-            function E(e) {
+            function S(e) {
                 let {
                     closePopout: t
                 } = e;
@@ -39,13 +39,13 @@
                         onDragStart: this.onDragStart
                     }, e) : (0, i.jsx)(g.default, {
                         title: m.default.Messages.DIRECT_MESSAGES,
-                        renderSettings: E,
+                        renderSettings: S,
                         onDragStart: this.onDragStart,
                         children: (0, i.jsx)(p.default, {})
                     }), l = n ? "div" : c.default;
                     return (0, i.jsxs)(l, {
-                        className: s(S.base, {
-                            [S.widget]: !n
+                        className: s(E.base, {
+                            [E.widget]: !n
                         }),
                         children: [(0, i.jsx)(r.default, {
                             isOverlay: !0,

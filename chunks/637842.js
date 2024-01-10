@@ -16,43 +16,43 @@
                 p = n("314892"),
                 g = n("50885"),
                 m = n("13798"),
-                S = n("999819"),
-                E = n("49111"),
+                E = n("999819"),
+                S = n("49111"),
                 v = n("782340"),
                 y = n("406638"),
                 C = n("926622");
             (a = i || (i = {})).GENERAL = "GENERAL", a.VOICE = "VOICE", a.DEVELOPER = "DEVELOPER";
-            let I = () => [{
-                    value: E.OverlayAvatarSizes.LARGE,
+            let N = () => [{
+                    value: S.OverlayAvatarSizes.LARGE,
                     name: v.default.Messages.AVATAR_SIZE_OPTION_LARGE
                 }, {
-                    value: E.OverlayAvatarSizes.SMALL,
+                    value: S.OverlayAvatarSizes.SMALL,
                     name: v.default.Messages.AVATAR_SIZE_OPTION_SMALL
                 }],
-                N = () => [{
-                    value: E.OverlayDisplayNames.ALWAYS,
+                O = () => [{
+                    value: S.OverlayDisplayNames.ALWAYS,
                     name: v.default.Messages.DISPLAY_OPTION_ALWAYS
                 }, {
-                    value: E.OverlayDisplayNames.ONLY_WHILE_SPEAKING,
+                    value: S.OverlayDisplayNames.ONLY_WHILE_SPEAKING,
                     name: v.default.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING
                 }, {
-                    value: E.OverlayDisplayNames.NEVER,
+                    value: S.OverlayDisplayNames.NEVER,
                     name: v.default.Messages.DISPLAY_OPTION_NEVER
                 }],
                 T = () => [{
-                    value: E.OverlayDisplayUsers.ALWAYS,
+                    value: S.OverlayDisplayUsers.ALWAYS,
                     name: v.default.Messages.DISPLAY_OPTION_ALWAYS
                 }, {
-                    value: E.OverlayDisplayUsers.ONLY_WHILE_SPEAKING,
+                    value: S.OverlayDisplayUsers.ONLY_WHILE_SPEAKING,
                     name: v.default.Messages.DISPLAY_OPTION_ONLY_WHILE_SPEAKING
                 }];
 
-            function O() {
+            function I() {
                 let e = f.default.getNotificationPositionMode(),
-                    t = e !== E.OverlayNotificationPositions.DISABLED,
+                    t = e !== S.OverlayNotificationPositions.DISABLED,
                     n = c.default.getOverlayKeybind(),
                     i = c.default.getOverlayChatKeybind();
-                d.default.track(E.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, {
+                d.default.track(S.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, {
                     enabled: !0,
                     notifications_enabled: t,
                     notifications_position: t ? e : null,
@@ -64,14 +64,14 @@
             }
             class _ extends s.PureComponent {
                 componentDidMount() {
-                    d.default.track(E.AnalyticEvents.SETTINGS_PANE_VIEWED, {
+                    d.default.track(S.AnalyticEvents.SETTINGS_PANE_VIEWED, {
                         settings_type: "overlay",
                         destination_pane: "OVERLAY SETTINGS",
                         origin_pane: null
                     })
                 }
                 handleChangeNotificationPositionMode(e, t) {
-                    d.default.setNotificationPositionMode(t), O()
+                    d.default.setNotificationPositionMode(t), I()
                 }
                 handleChangeAvatarSizeMode(e) {
                     let {
@@ -159,7 +159,7 @@
                         notificationPositionMode: t,
                         shouldShowKeybindIndicators: n,
                         showKeybindIndicators: i
-                    } = this.props, a = t !== E.OverlayNotificationPositions.DISABLED;
+                    } = this.props, a = t !== S.OverlayNotificationPositions.DISABLED;
                     return (0, l.jsxs)(s.Fragment, {
                         children: [(0, l.jsx)(r.FormItem, {
                             title: v.default.Messages.FORM_LABEL_NOTIFICATION_POSITION,
@@ -169,7 +169,7 @@
                                 onChange: this.handleChangeNotificationPositionMode
                             })
                         }), (0, l.jsx)(r.FormSwitch, {
-                            value: a && e === E.OverlayNotificationTextChatTypes.ENABLED,
+                            value: a && e === S.OverlayNotificationTextChatTypes.ENABLED,
                             onChange: this.handleToggleTextChatNotifications,
                             disabled: !a,
                             hideBorder: !0,
@@ -194,7 +194,7 @@
                             className: C.marginBottom20,
                             children: (0, l.jsx)(r.RadioGroup, {
                                 onChange: this.handleChangeAvatarSizeMode,
-                                options: I(),
+                                options: N(),
                                 value: e,
                                 size: r.RadioGroup.Sizes.SMALL
                             })
@@ -203,7 +203,7 @@
                             className: C.marginBottom20,
                             children: (0, l.jsx)(r.RadioGroup, {
                                 onChange: this.handleChangeDisplayNameMode,
-                                options: N(),
+                                options: O(),
                                 value: t,
                                 size: r.RadioGroup.Sizes.SMALL
                             })
@@ -268,8 +268,8 @@
                         let {
                             ENABLED: e,
                             DISABLED: t
-                        } = E.OverlayNotificationTextChatTypes, n = this.props.textChatNotificationMode === e ? t : e;
-                        d.default.setTextChatNotificationMode(n), O()
+                        } = S.OverlayNotificationTextChatTypes, n = this.props.textChatNotificationMode === e ? t : e;
+                        d.default.setTextChatNotificationMode(n), I()
                     }
                 }
             }
@@ -293,7 +293,7 @@
                     shouldShowKeybindIndicators: f.default.showKeybindIndicators
                 })), {
                     showKeybindIndicators: u
-                } = S.default.useExperiment({
+                } = E.default.useExperiment({
                     location: "Overlay Settings"
                 });
                 return (0, l.jsx)(_, {

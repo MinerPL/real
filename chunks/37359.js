@@ -23,7 +23,7 @@
                     g = t.getAvatarURL(e.guild_id, 80),
                     {
                         trackView: m,
-                        trackClick: S
+                        trackClick: E
                     } = (0, r.makeAnalyticsTrackers)(u.OverlayNotificationType.ActivityInvite, {
                         notif_type: u.OverlayNotificationType.ActivityInvite,
                         notif_user_id: t.id,
@@ -47,13 +47,13 @@
                             type: d.ActivityActionTypes.JOIN,
                             activity: f,
                             location: s.default.isInstanceUILocked() ? d.AnalyticsLocations.LOCKED_OVERLAY : d.AnalyticsLocations.UNLOCKED_OVERLAY
-                        }), S("join"), a.default.updateNotificationStatus(n)
+                        }), E("join"), a.default.updateNotificationStatus(n)
                     },
                     onCancelClick: (t, n) => {
-                        (0, l.ack)(e.id, !0, !0), a.default.updateNotificationStatus(n), S("decline")
+                        (0, l.ack)(e.id, !0, !0), a.default.updateNotificationStatus(n), E("decline")
                     },
                     onDismissClick: () => {
-                        S("dismiss")
+                        E("dismiss")
                     }
                 }
             }

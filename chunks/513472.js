@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return h
                 }
             });
             var l = n("37983");
@@ -17,20 +17,20 @@
                 f = n("34676"),
                 E = n("782340");
 
-            function _(e, t) {
+            function h(e, t) {
                 let n = null == e ? void 0 : e.id,
                     {
                         muted: a,
-                        muteConfig: _
+                        muteConfig: h
                     } = (0, i.useStateFromStoresObject)([c.default], () => ({
                         muted: null != n ? c.default.isMuted(n) : void 0,
                         muteConfig: null != n ? c.default.getMuteConfig(n) : void 0
                     }), [n]),
-                    h = (0, d.useMutedUntilText)(_);
+                    _ = (0, d.useMutedUntilText)(h);
                 return null == n ? null : a ? (0, l.jsx)(r.MenuItem, {
                     id: "unmute-guild",
                     label: E.default.Messages.UNMUTE_SERVER,
-                    subtext: h,
+                    subtext: _,
                     action: () => o.default.updateGuildNotificationSettings(n, {
                         muted: !1
                     }, f.NotificationLabels.Unmuted)

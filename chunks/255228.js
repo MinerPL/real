@@ -19,7 +19,7 @@
             function E(e) {
                 let [t, n, a] = (0, i.useStateFromStoresArray)([u.default], () => [u.default.isMuted(e.id), u.default.getMuteConfig(e.id), u.default.hasJoined(e.id)]), E = (0, o.useMutedUntilText)(n);
 
-                function _(t) {
+                function h(t) {
                     d.default.setNotificationSettings(e, {
                         muted: t
                     })
@@ -28,11 +28,11 @@
                     id: "unmute-channel",
                     label: e.isForumPost() ? f.default.Messages.UNMUTE_FORUM_POST : f.default.Messages.UNMUTE_THREAD,
                     subtext: E,
-                    action: () => _(!1)
+                    action: () => h(!1)
                 }) : (0, l.jsx)(r.MenuItem, {
                     id: "mute-channel",
                     label: e.isForumPost() ? f.default.Messages.MUTE_FORUM_POST : f.default.Messages.MUTE_THREAD,
-                    action: () => _(!0),
+                    action: () => h(!0),
                     children: (0, c.getMuteTimes)().map(t => {
                         let {
                             value: n,

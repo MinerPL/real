@@ -38,7 +38,7 @@
                         className: f.header,
                         color: "header-primary",
                         variant: "heading-md/extrabold",
-                        children: c.default.Messages.CLIPS_SESSION_ENDED_TOOLTIP_HEADER.format({
+                        children: c.default.Messages.CLIPS_YOU_HAVE_NEW_CLIPS.format({
                             count: n.newClipIds.length
                         })
                     }), (0, s.jsx)(i.Text, {

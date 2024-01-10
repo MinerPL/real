@@ -15,8 +15,8 @@
                 c = n("446674"),
                 f = n("151426"),
                 E = n("77078"),
-                _ = n("272030"),
-                h = n("819689"),
+                h = n("272030"),
+                _ = n("819689"),
                 S = n("843962"),
                 T = n("679653"),
                 p = n("931318"),
@@ -33,8 +33,8 @@
                 v = n("476263"),
                 D = n("93393"),
                 y = n("11539"),
-                P = n("672571"),
-                x = n("805614"),
+                x = n("672571"),
+                P = n("805614"),
                 U = n("64318"),
                 b = n("49111"),
                 F = n("782340"),
@@ -103,7 +103,7 @@
                     } = (0, A.getSavedMessageAndChannel)(s),
                     m = M.default.getChannel(I.id),
                     y = (0, T.default)(m, !0),
-                    x = null != y ? y : I.name,
+                    P = null != y ? y : I.name,
                     U = (0, c.useStateFromStores)([O.default], () => O.default.getGuild(null == I ? void 0 : I.guild_id)),
                     w = null != I ? (0, S.getChannelIconURL)(I) : null,
                     B = null;
@@ -131,14 +131,14 @@
                                     variant: "text-md/medium",
                                     color: "header-primary",
                                     selectable: !0,
-                                    children: x
+                                    children: P
                                 })]
                             }), null != s.notes && s.notes.length > 0 ? (0, l.jsxs)(E.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
                                 className: j.notes,
                                 selectable: !0,
-                                children: [(0, l.jsx)(P.default, {
+                                children: [(0, l.jsx)(x.default, {
                                     width: 12,
                                     height: 12
                                 }), s.notes]
@@ -155,7 +155,7 @@
                             children: [(0, l.jsx)(E.TooltipContainer, {
                                 text: F.default.Messages.MESSAGE_REMINDERS_SNOOZE,
                                 children: (0, l.jsx)(E.Clickable, {
-                                    onClick: e => (0, _.openContextMenuLazy)(e, async () => {
+                                    onClick: e => (0, h.openContextMenuLazy)(e, async () => {
                                         let {
                                             default: e
                                         } = await n.el("763582").then(n.bind(n, "763582"));
@@ -191,7 +191,7 @@
                             className: j.actions,
                             children: [null == u ? (0, l.jsx)(E.Button, {
                                 onClick: () => {
-                                    h.default.fetchMessages({
+                                    _.default.fetchMessages({
                                         channelId: s.channelId,
                                         limit: 1,
                                         jump: {
@@ -227,7 +227,7 @@
 
             function H() {
                 let e = (0, c.useStateFromStores)([N.default], () => N.default.getMessageReminders().length > 0);
-                return e ? null : (0, l.jsx)(x.default, {
+                return e ? null : (0, l.jsx)(P.default, {
                     Icon: y.default,
                     header: F.default.Messages.MESSAGE_REMINDERS_EMPTY,
                     tip: F.default.Messages.MESSAGE_REMINDERS_EMPTY_TIP

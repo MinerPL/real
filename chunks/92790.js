@@ -15,8 +15,8 @@
                 c = n("77078"),
                 f = n("378438"),
                 E = n("137223"),
-                _ = n("76385"),
-                h = n("955513"),
+                h = n("76385"),
+                _ = n("955513"),
                 S = n("180748"),
                 T = n("206230"),
                 p = n("716241"),
@@ -34,8 +34,8 @@
                 D = n("782340"),
                 y = n("84691");
             n("525840");
-            let P = (0, g.uid)(),
-                x = u(f.search, 500);
+            let x = (0, g.uid)(),
+                P = u(f.search, 500);
             class U extends a.PureComponent {
                 componentDidMount() {
                     var e, t;
@@ -56,8 +56,8 @@
                     C.ComponentDispatch.unsubscribe(v.ComponentActions.PERFORM_SEARCH, this.search), C.ComponentDispatch.unsubscribe(v.ComponentActions.SET_SEARCH_QUERY, this.handleSetSearchQuery), C.ComponentDispatch.unsubscribe(v.ComponentActions.FOCUS_SEARCH, this.handleFocusSearch)
                 }
                 tokenize(e) {
-                    let t = M.tokenizeQuery(R.getFirstTextBlock(e)).filter(e => e.type !== _.default.NON_TOKEN_TYPE);
-                    return R.applyTokensAsEntities(t, e, h.default)
+                    let t = M.tokenizeQuery(R.getFirstTextBlock(e)).filter(e => e.type !== h.default.NON_TOKEN_TYPE);
+                    return R.applyTokensAsEntities(t, e, _.default)
                 }
                 clearSearch() {
                     let {
@@ -96,7 +96,7 @@
                         onChange: this.setEditorState,
                         role: "combobox",
                         ariaExpanded: e,
-                        ariaControls: e ? P : void 0,
+                        ariaControls: e ? x : void 0,
                         ariaLabel: D.default.Messages.SEARCH,
                         ariaAutocomplete: "list"
                     })
@@ -167,12 +167,12 @@
                         i = R.setCollapsedSelection(o, i), this.setEditorState(i), a && this.search(R.getFirstTextBlock(i))
                     }, this.handleSelectedIndexChanged = e => {
                         var t, n;
-                        null === (n = this._editorRef) || void 0 === n || null === (t = n.editor) || void 0 === t || t.setAttribute("aria-activedescendant", null != e ? "".concat(P, "-").concat(e) : void 0), this.setState({
+                        null === (n = this._editorRef) || void 0 === n || null === (t = n.editor) || void 0 === t || t.setAttribute("aria-activedescendant", null != e ? "".concat(x, "-").concat(e) : void 0), this.setState({
                             selectedIndex: e
                         })
                     }, this.renderPopout = () => (0, l.jsx)(L.default, {
                         ref: this._searchPopoutRef,
-                        navId: P,
+                        navId: x,
                         onSelectedIndexChanged: this.handleSelectedIndexChanged
                     }), this.search = e => {
                         let {
@@ -190,7 +190,7 @@
                                 l = M.getSearchQueryFromTokens(n);
                             for (let t = 0; t < n.length; t++) !M.filterHasAnswer(n[t], n[t + 1]) && (e = e.substring(0, n[t].start) + e.substring(n[t].end));
                             if (0 === n.length || 0 === Object.keys(l).length) return !1;
-                            x(t, l, e), this.onBlur()
+                            P(t, l, e), this.onBlur()
                         }
                         return !0
                     }, this.handleClearSearch = e => {
@@ -224,7 +224,7 @@
                             s = a[l.id],
                             i = null != s ? s.name : l.name;
                         this.handleSetSearchQuery({
-                            query: h.default[v.SearchTokenTypes.FILTER_IN].key + "#".concat(i, " "),
+                            query: _.default[v.SearchTokenTypes.FILTER_IN].key + "#".concat(i, " "),
                             replace: !0
                         })
                     }, this.focusEditor = () => {
@@ -359,7 +359,7 @@
                 let t = m.default.getCurrentSearchId(),
                     n = m.default.getSearchType(),
                     l = null != t && m.default.isSearching(t),
-                    a = null != t && null !== (e = m.default.getEditorState(t)) && void 0 !== e ? e : R.createEmptyEditorState(O.generateDecorators(h.default)),
+                    a = null != t && null !== (e = m.default.getEditorState(t)) && void 0 !== e ? e : R.createEmptyEditorState(O.generateDecorators(_.default)),
                     s = T.default.keyboardModeEnabled;
                 return {
                     searchId: t,

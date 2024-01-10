@@ -15,8 +15,8 @@
                 c = n("913796"),
                 f = n("872173"),
                 E = n("374363"),
-                _ = n("659500"),
-                h = n("981024"),
+                h = n("659500"),
+                _ = n("981024"),
                 S = n("519540"),
                 T = n("80649"),
                 p = n("385730"),
@@ -62,14 +62,14 @@
                         showTutorial: l,
                         setSeenTutorial: n
                     }
-                }(L), P = a.useCallback(() => {
+                }(L), x = a.useCallback(() => {
                     O(!1), M && (null == n || n())
-                }, [n, M]), x = a.useCallback(() => {
+                }, [n, M]), P = a.useCallback(() => {
                     O(!M), M ? null == n || n() : null == t || t()
                 }, [n, t, M]), U = a.useCallback(() => {
-                    x(), v(r.InboxTab.UNREADS)
-                }, [v, x]);
-                a.useEffect(() => (_.ComponentDispatch.subscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, U), () => void _.ComponentDispatch.unsubscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, U)), [U]);
+                    P(), v(r.InboxTab.UNREADS)
+                }, [v, P]);
+                a.useEffect(() => (h.ComponentDispatch.subscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, U), () => void h.ComponentDispatch.unsubscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, U)), [U]);
                 let {
                     showReminders: b
                 } = d.default.useExperiment({
@@ -85,39 +85,39 @@
                     !b && L === r.InboxTab.TODOS && v(r.InboxTab.MENTIONS)
                 });
                 let G = a.useCallback(e => {
-                    !e.shiftKey && P()
-                }, [P]);
+                    !e.shiftKey && x()
+                }, [x]);
                 return (0, l.jsx)(o.Popout, {
                     animation: o.Popout.Animation.NONE,
                     position: C,
                     align: R,
                     autoInvert: !1,
                     shouldShow: M,
-                    onRequestClose: P,
+                    onRequestClose: x,
                     renderPopout: function() {
                         return (0, l.jsx)(o.Dialog, {
                             "aria-label": m.default.Messages.INBOX,
-                            children: L === r.InboxTab.FOR_YOU && F ? (0, l.jsx)(h.default, {
+                            children: L === r.InboxTab.FOR_YOU && F ? (0, l.jsx)(_.default, {
                                 setTab: v,
                                 badgeState: g,
-                                closePopout: P
+                                closePopout: x
                             }) : L === r.InboxTab.MENTIONS ? (0, l.jsx)(T.default, {
                                 setTab: v,
                                 onJump: G,
                                 badgeState: g,
-                                closePopout: P
+                                closePopout: x
                             }) : j && L === r.InboxTab.GAME_INVITES ? (0, l.jsx)(N.default, {
                                 setTab: v,
                                 badgeState: g,
-                                closePopout: P
+                                closePopout: x
                             }) : b && L === r.InboxTab.TODOS ? (0, l.jsx)(S.default, {
                                 setTab: v,
                                 onJump: G,
-                                closePopout: P
+                                closePopout: x
                             }) : (0, l.jsx)(s.ErrorBoundary, {
                                 fallback: (0, l.jsx)(p.UnreadsCrashed, {
                                     setTab: v,
-                                    closePopout: P,
+                                    closePopout: x,
                                     badgeState: g
                                 }),
                                 children: (0, l.jsx)(p.default, {
@@ -125,7 +125,7 @@
                                     onJump: G,
                                     showTutorial: D,
                                     setSeenTutorial: y,
-                                    closePopout: P,
+                                    closePopout: x,
                                     badgeState: g
                                 })
                             })
@@ -136,7 +136,7 @@
                         let {
                             isShown: n
                         } = t;
-                        return A(x, n, e)
+                        return A(P, n, e)
                     }
                 })
             }

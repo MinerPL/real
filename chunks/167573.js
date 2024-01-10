@@ -43,7 +43,9 @@
                     }
                 }, {
                     disableTrack: R
-                }, [U.length, R]), n.useEffect(() => _.clearNewClipIds, []);
+                }, [U.length, R]), n.useEffect(() => ((0, _.clearClipsSession)(), () => {
+                    (0, _.clearClipsSession)(), (0, _.clearNewClipIds)()
+                }), []);
                 let B = n.useMemo(() => o(U).filter(e => {
                     if ("" === D.trim()) return !0;
                     let t = D.toLowerCase();

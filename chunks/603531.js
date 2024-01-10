@@ -15,8 +15,8 @@
                 c = n("256572"),
                 f = n("845579"),
                 E = n("42203"),
-                _ = n("27618"),
-                h = n("945330"),
+                h = n("27618"),
+                _ = n("945330"),
                 S = n("780571"),
                 T = n("304198"),
                 p = n("568734"),
@@ -33,15 +33,15 @@
                 v = n("611792"),
                 D = n("554372"),
                 y = n("49111"),
-                P = n("782340"),
-                x = n("555821"),
+                x = n("782340"),
+                P = n("555821"),
                 U = n("877671"),
                 b = a.memo(function e(t) {
                     var n, a, s;
-                    let h;
+                    let _;
                     let {
                         channel: T,
-                        message: x,
+                        message: P,
                         compact: b = !1,
                         className: j,
                         onContextMenu: G,
@@ -49,40 +49,40 @@
                         disableInteraction: w = !1,
                         hasThread: B,
                         treatSpam: H
-                    } = t, V = y.MessageTypesWithLazyLoadedReferences.has(x.type) ? x.messageReference : void 0, Y = (0, r.useStateFromStores)([c.default], () => c.default.getMessageByReference(V)), K = (0, r.useStateFromStores)([E.default], () => x.type === y.MessageTypes.THREAD_STARTER_MESSAGE && Y.state === c.ReferencedMessageState.LOADED ? E.default.getChannel(Y.message.channel_id) : null), Q = f.InlineAttachmentMedia.useSetting(), z = f.InlineEmbedMedia.useSetting(), W = f.RenderEmbeds.useSetting() && !x.author.isClyde(), q = f.GifAutoPlay.useSetting(), X = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (n = x.editedTimestamp) && void 0 !== n ? n : x.timestamp).valueOf()), Z = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (a = null == T ? void 0 : T.guild_id) && void 0 !== a ? a : "", (null !== (s = x.editedTimestamp) && void 0 !== s ? s : x.timestamp).valueOf()), J = (0, d.default)(null == T ? void 0 : T.id), {
+                    } = t, V = y.MessageTypesWithLazyLoadedReferences.has(P.type) ? P.messageReference : void 0, Y = (0, r.useStateFromStores)([c.default], () => c.default.getMessageByReference(V)), K = (0, r.useStateFromStores)([E.default], () => P.type === y.MessageTypes.THREAD_STARTER_MESSAGE && Y.state === c.ReferencedMessageState.LOADED ? E.default.getChannel(Y.message.channel_id) : null), Q = f.InlineAttachmentMedia.useSetting(), z = f.InlineEmbedMedia.useSetting(), W = f.RenderEmbeds.useSetting() && !P.author.isClyde(), q = f.GifAutoPlay.useSetting(), X = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (n = P.editedTimestamp) && void 0 !== n ? n : P.timestamp).valueOf()), Z = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (a = null == T ? void 0 : T.guild_id) && void 0 !== a ? a : "", (null !== (s = P.editedTimestamp) && void 0 !== s ? s : P.timestamp).valueOf()), J = (0, d.default)(null == T ? void 0 : T.id), {
                         disableReactionCreates: $
                     } = (0, A.default)(T), {
                         content: ee,
                         hasSpoilerEmbeds: et
-                    } = (0, C.default)(x, {
+                    } = (0, C.default)(P, {
                         hideSimpleEmbedContent: z && W,
                         allowList: X.showListsAndHeaders || Z.showListsAndHeaders,
                         allowHeading: X.showListsAndHeaders || Z.showListsAndHeaders,
                         allowLinks: X.showMaskedLinks || Z.showMaskedLinks,
                         previewLinkTarget: X.showMaskedLinks || Z.showMaskedLinks
-                    }), en = (0, m.default)(x), el = (0, r.useStateFromStores)([E.default], () => x.hasFlag(y.MessageFlags.HAS_THREAD) && E.default.getChannel(x.id)), ea = x.type === y.MessageTypes.THREAD_STARTER_MESSAGE && Y.state === c.ReferencedMessageState.LOADED && null != K, es = !ea && void 0 === h, ei = (0, R.default)({
-                        message: x,
+                    }), en = (0, m.default)(P), el = (0, r.useStateFromStores)([E.default], () => P.hasFlag(y.MessageFlags.HAS_THREAD) && E.default.getChannel(P.id)), ea = P.type === y.MessageTypes.THREAD_STARTER_MESSAGE && Y.state === c.ReferencedMessageState.LOADED && null != K, es = !ea && void 0 === _, ei = (0, R.default)({
+                        message: P,
                         channel: T,
                         enabled: es
-                    }), er = (0, u.useShouldRedactExplicitContent)(T.id, x.author.id);
+                    }), er = (0, u.useShouldRedactExplicitContent)(T.id, P.author.id);
                     return ea ? (0, l.jsx)(e, {
                         ...t,
                         message: Y.message,
                         channel: K,
                         hasThread: !1
-                    }) : (_.default.isBlocked(x.author.id) ? h = P.default.Messages.BLOCKED_MESSAGE_COUNT : (0, N.isSpam)(x) && H && (h = P.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== h) ? (0, l.jsx)(F, {
+                    }) : (h.default.isBlocked(P.author.id) ? _ = x.default.Messages.BLOCKED_MESSAGE_COUNT : (0, N.isSpam)(P) && H && (_ = x.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== _) ? (0, l.jsx)(F, {
                         className: j,
                         compact: b,
                         count: 1,
-                        collapsedReason: h
+                        collapsedReason: _
                     }) : (0, l.jsx)(S.default, {
                         compact: b,
                         className: i(j, {
-                            [U.ephemeral]: (0, p.hasFlag)(x.flags, y.MessageFlags.EPHEMERAL),
+                            [U.ephemeral]: (0, p.hasFlag)(P.flags, y.MessageFlags.EPHEMERAL),
                             [U.disableInteraction]: w,
                             [U.groupStart]: t.isGroupStart
                         }),
-                        childrenRepliedMessage: (0, D.default)(x, T, V, Y, b),
+                        childrenRepliedMessage: (0, D.default)(P, T, V, Y, b),
                         childrenHeader: (0, O.default)({
                             ...t,
                             author: en,
@@ -90,7 +90,7 @@
                         }),
                         childrenAccessories: (0, l.jsx)(g.MessageAccessories, {
                             channel: T,
-                            message: x,
+                            message: P,
                             hasSpoilerEmbeds: et,
                             compact: b,
                             canSuppressEmbeds: !1,
@@ -110,14 +110,14 @@
                             showClydeAiEmbeds: !1,
                             shouldRedactExplicitContent: er
                         }),
-                        childrenExecutedCommand: (0, v.default)(x, T, b),
+                        childrenExecutedCommand: (0, v.default)(P, T, b),
                         childrenMessageContent: (0, M.default)(t, ee),
                         childrenSystemMessage: (0, L.default)(t),
                         onContextMenu: G,
                         onClick: k,
-                        hasThread: !1 !== B && null != el && x.hasFlag(y.MessageFlags.HAS_THREAD),
-                        hasReply: x.type === y.MessageTypes.REPLY,
-                        isSystemMessage: (0, I.default)(x),
+                        hasThread: !1 !== B && null != el && P.hasFlag(y.MessageFlags.HAS_THREAD),
+                        hasReply: P.type === y.MessageTypes.REPLY,
+                        isSystemMessage: (0, I.default)(P),
                         messageRef: ei
                     })
                 });
@@ -135,12 +135,12 @@
                     role: "group",
                     childrenMessageContent: (0, l.jsx)(T.default, {
                         compact: a,
-                        className: x.blockedSystemMessage,
-                        iconNode: (0, l.jsx)(h.default, {
-                            className: x.blockedIcon
+                        className: P.blockedSystemMessage,
+                        iconNode: (0, l.jsx)(_.default, {
+                            className: P.blockedIcon
                         }),
                         children: (0, l.jsx)("div", {
-                            className: x.blockedMessageText,
+                            className: P.blockedMessageText,
                             children: s.format({
                                 count: n
                             })

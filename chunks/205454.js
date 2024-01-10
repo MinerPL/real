@@ -1,40 +1,40 @@
             "use strict";
             n.r(t), n.d(t, {
                 CTAEmojiSize: function() {
-                    return a
+                    return o
                 },
                 default: function() {
-                    return o
+                    return r
                 }
             });
-            var r = n("37983");
+            var i = n("37983");
             n("884691");
-            var i = n("430568"),
-                s = n("569912"),
-                l = n("286667");
-            let a = {
-                SMALL: l.small,
-                MEDIUM: l.medium,
-                LARGE: l.large
+            var a = n("430568"),
+                l = n("569912"),
+                s = n("286667");
+            let o = {
+                SMALL: s.small,
+                MEDIUM: s.medium,
+                LARGE: s.large
             };
 
-            function o(e) {
+            function r(e) {
                 let {
                     emojiId: t,
                     emojiName: n,
-                    defaultComponent: l,
-                    size: o = a.MEDIUM
+                    defaultComponent: s,
+                    size: r = o.MEDIUM
                 } = e, {
-                    customEmoji: u,
-                    unicodeEmoji: c
-                } = (0, s.default)(t, n);
-                return null == u && null == c ? (0, r.jsx)(r.Fragment, {
-                    children: l
-                }) : (0, r.jsx)(i.default, {
-                    emojiName: null != u ? null == u ? void 0 : u.name : n,
-                    animated: null != u && u.animated,
-                    emojiId: null == u ? void 0 : u.id,
+                    customEmoji: d,
+                    unicodeEmoji: u
+                } = (0, l.default)(t, n);
+                return null == d && null == u ? (0, i.jsx)(i.Fragment, {
+                    children: s
+                }) : (0, i.jsx)(a.default, {
+                    emojiName: null != d ? null == d ? void 0 : d.name : n,
+                    animated: null != d && d.animated,
+                    emojiId: null == d ? void 0 : d.id,
                     autoplay: !0,
-                    className: o
+                    className: r
                 })
             }

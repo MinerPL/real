@@ -7,7 +7,7 @@
                     return s
                 },
                 clearAnalyticsLog: function() {
-                    return d
+                    return u
                 }
             });
             var i = n("913144"),
@@ -26,7 +26,7 @@
                 })
             }
 
-            function d() {
+            function u() {
                 i.default.dispatch({
                     type: "ANALYTICS_LOG_CLEAR"
                 })

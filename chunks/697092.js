@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return T
+                    return f
                 }
             }), s("70102");
             var a, n, r = s("37983");
@@ -41,7 +41,7 @@
                         })]
                     })
                 }),
-                f = e => {
+                T = e => {
                     let {
                         data: t,
                         className: s
@@ -65,5 +65,5 @@
                     }
                     throw Error("Unknown type")
                 };
-            f.Types = a;
-            var T = f
+            T.Types = a;
+            var f = T

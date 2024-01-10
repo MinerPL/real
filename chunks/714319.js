@@ -4,10 +4,10 @@
                     return u
                 }
             });
-            var s = n("37983");
+            var l = n("37983");
             n("884691");
             var a = n("414456"),
-                l = n.n(a),
+                s = n.n(a),
                 i = n("446674"),
                 r = n("386045"),
                 o = n("471888");
@@ -18,8 +18,8 @@
                     let t = null === (e = r.default.getLastClipsSession()) || void 0 === e ? void 0 : e.newClipIds;
                     return null == t ? [] : r.default.getClips().slice(0, 4).filter(e => t.includes(e.id))
                 });
-                return (0, s.jsx)("div", {
-                    className: l(o.thumbnailStack, {
+                return (0, l.jsx)("div", {
+                    className: s(o.thumbnailStack, {
                         [o["height-1"]]: 1 === e.length,
                         [o["height-2"]]: 2 === e.length,
                         [o["height-3"]]: 3 === e.length,
@@ -28,10 +28,10 @@
                     children: Array.from({
                         ...e,
                         length: 4
-                    }).map((e, t) => null != e ? (0, s.jsx)("img", {
+                    }).map((e, t) => null != e ? (0, l.jsx)("img", {
                         alt: "",
                         className: o.thumbnail,
                         src: e.thumbnail
-                    }, e.id) : (0, s.jsx)("div", {}, "placeholder-".concat(t))).reverse()
+                    }, e.id) : (0, l.jsx)("div", {}, "placeholder-".concat(t))).reverse()
                 })
             }

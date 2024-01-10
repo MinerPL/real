@@ -18,8 +18,8 @@
                 p = n("866681"),
                 g = n("791106"),
                 m = n("983782"),
-                S = n("587974"),
-                E = n("601415"),
+                E = n("587974"),
+                S = n("601415"),
                 v = n("357506"),
                 y = n("49111");
             n("551184"), n("762017"), l.default.initialize();
@@ -28,8 +28,8 @@
                     f.default.terminate(), d.default.terminate()
                 }), []), (0, i.jsxs)(a.Fragment, {
                     children: [(0, i.jsx)(u.default, {}), (0, i.jsx)(c.default, {
-                        children: (0, i.jsxs)(E.default, {
-                            children: [(0, i.jsx)(S.MaskLibrary, {}), (0, i.jsx)(g.default, {}), (0, i.jsx)(r.AppWindowContextProvider, {
+                        children: (0, i.jsxs)(S.default, {
+                            children: [(0, i.jsx)(E.MaskLibrary, {}), (0, i.jsx)(g.default, {}), (0, i.jsx)(r.AppWindowContextProvider, {
                                 appContext: y.AppContext.OVERLAY,
                                 renderWindow: window,
                                 children: (0, i.jsxs)(m.AppLayerProvider, {

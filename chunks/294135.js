@@ -16,17 +16,17 @@
                 _ = s("599560"),
                 E = s("316718"),
                 I = s("55620"),
-                f = s("901582"),
-                T = s("790219"),
+                T = s("901582"),
+                f = s("790219"),
                 S = s("151540"),
                 R = s("86621"),
                 p = s("984376"),
-                A = s("84460"),
+                m = s("84460"),
                 N = s("299285"),
-                m = s("69927"),
+                A = s("69927"),
                 g = s("791160"),
-                P = s("661579"),
-                C = s("539938"),
+                C = s("661579"),
+                P = s("539938"),
                 O = s("393414"),
                 M = s("915639"),
                 L = s("161778"),
@@ -35,8 +35,8 @@
                 v = s("71010"),
                 U = s("290877"),
                 D = s("437712"),
-                b = s("552712"),
-                j = s("698041"),
+                j = s("552712"),
+                b = s("698041"),
                 G = s("167726"),
                 y = s("471671"),
                 B = s("895530"),
@@ -169,28 +169,28 @@
                         channel: s,
                         isAuthenticated: r
                     } = this.props;
-                    return (0, a.jsx)(C.default, {
+                    return (0, a.jsx)(P.default, {
                         isAuthenticated: r,
                         toolbar: this.renderHeaderToolbar(e, t),
                         children: null != s ? (0, a.jsxs)(n.Fragment, {
-                            children: [(0, a.jsx)(C.default.Icon, {
+                            children: [(0, a.jsx)(P.default.Icon, {
                                 icon: W.default,
                                 "aria-label": ec.default.Messages.STORE_CHANNEL
-                            }), (0, a.jsx)(C.default.Title, {
+                            }), (0, a.jsx)(P.default.Title, {
                                 children: s.name
                             })]
                         }) : null != t && t.premium ? (0, a.jsxs)(n.Fragment, {
-                            children: [(0, a.jsx)(C.default.Icon, {
+                            children: [(0, a.jsx)(P.default.Icon, {
                                 icon: F.default,
                                 "aria-label": ec.default.Messages.PREMIUM
                             }), (0, a.jsx)(en.default, {
                                 sku: t
                             })]
                         }) : null != t ? (0, a.jsxs)(n.Fragment, {
-                            children: [(0, a.jsx)(C.default.Icon, {
+                            children: [(0, a.jsx)(P.default.Icon, {
                                 icon: W.default,
                                 "aria-label": ec.default.Messages.STORE_CHANNEL
-                            }), (0, a.jsx)(C.default.Title, {
+                            }), (0, a.jsx)(P.default.Title, {
                                 children: t.name
                             })]
                         }) : null
@@ -397,7 +397,7 @@
                             children: this.renderListing()
                         });
                         return (0, a.jsxs)(n.Fragment, {
-                            children: [(0, a.jsx)(m.AppPageTitle, {
+                            children: [(0, a.jsx)(A.AppPageTitle, {
                                 location: e.name
                             }), this.renderJsonLD(), this.renderHeader(e, t), (0, a.jsx)(et.default, {
                                 game: e
@@ -406,17 +406,17 @@
                     }
                     return l ? (0, a.jsxs)("div", {
                         className: e_.listingWrapper,
-                        children: [(0, a.jsx)(m.AppPageTitle, {
+                        children: [(0, a.jsx)(A.AppPageTitle, {
                             location: e.name
-                        }), this.renderJsonLD(), (0, a.jsx)(f.default, {
+                        }), this.renderJsonLD(), (0, a.jsx)(T.default, {
                             section: eo.AnalyticsSections.NAVIGATION,
                             children: this.renderHeader(e, t)
-                        }), (0, a.jsx)(f.default, {
+                        }), (0, a.jsx)(T.default, {
                             section: eo.AnalyticsSections.BODY,
                             children: this.renderListing()
                         })]
                     }) : (0, a.jsxs)("div", {
-                        children: [(0, a.jsx)(m.AppPageTitle, {
+                        children: [(0, a.jsx)(A.AppPageTitle, {
                             location: e.name
                         }), this.renderJsonLD(), this.renderHeader(e, t), this.renderListing()]
                     })
@@ -548,7 +548,7 @@
                                     className: l(e_.headerPurchase, {
                                         [e_.active]: o
                                     }),
-                                    children: [null != t ? (0, P.default)(t) : null, null != e && null != t ? (0, a.jsx)(T.default, {
+                                    children: [null != t ? (0, C.default)(t) : null, null != e && null != t ? (0, a.jsx)(f.default, {
                                         wrapperClassName: e_.headerActionButton,
                                         applicationId: e.id,
                                         skuId: t.id,
@@ -571,7 +571,7 @@
                             pageSize: s,
                             isFocused: n
                         } = this.props;
-                        return (0, a.jsx)(f.default, {
+                        return (0, a.jsx)(T.default, {
                             section: eo.AnalyticsSections.HERO,
                             children: (0, a.jsx)(ee.default, {
                                 pageSize: s,
@@ -596,7 +596,7 @@
                     }
                 }
             }
-            var eI = (0, R.default)((0, p.default)(i.default.connectStores([U.default, L.default, M.default, y.default, j.default, b.default, G.default, A.default, N.default, v.default, h.default, D.default], e => {
+            var eI = (0, R.default)((0, p.default)(i.default.connectStores([U.default, L.default, M.default, y.default, b.default, j.default, G.default, m.default, N.default, v.default, h.default, D.default], e => {
                 let t, s, a, {
                     inputSkuId: n,
                     applicationId: r,
@@ -606,12 +606,12 @@
                 } = e;
                 if (null == r) {
                     if (null == n) throw Error("Needs applicationId or skuId");
-                    t = n, null != (r = null != (s = b.default.get(n)) ? s.applicationId : null) && (a = N.default.getApplication(r))
+                    t = n, null != (r = null != (s = j.default.get(n)) ? s.applicationId : null) && (a = N.default.getApplication(r))
                 } else if (null == n) {
                     if (null == r) throw Error("Needs applicationId or skuId");
-                    null != (a = N.default.getApplication(r)) && (t = a.destinationSkuId), s = null != t ? b.default.get(t) : null
+                    null != (a = N.default.getApplication(r)) && (t = a.destinationSkuId), s = null != t ? j.default.get(t) : null
                 }(null == s ? void 0 : s.flags) != null && (0, Y.hasFlag)(s.flags, eo.SKUFlags.STICKER_PACK) && (s = null);
-                let o = null != r && (G.default.inTestModeForApplication(r) || A.default.inDevModeForApplication(r));
+                let o = null != r && (G.default.inTestModeForApplication(r) || m.default.inDevModeForApplication(r));
                 return {
                     skuId: t,
                     application: null != r ? N.default.getApplication(r) : null,
@@ -620,7 +620,7 @@
                     shouldFetchStatistics: i && null != r && v.default.shouldFetchStatisticsForApplication(r),
                     sku: s,
                     isFocused: y.default.isFocused(),
-                    storeListing: j.default.getStoreListing({
+                    storeListing: b.default.getStoreListing({
                         storeListingId: l,
                         skuId: t,
                         channelId: null != u ? u.id : null,

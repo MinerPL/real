@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return b
+                    return P
                 }
             }), n("222007");
             var i = n("37983"),
@@ -18,15 +18,15 @@
                 p = n("331306"),
                 g = n("679653"),
                 m = n("305961"),
-                S = n("42887"),
-                E = n("27618"),
+                E = n("42887"),
+                S = n("27618"),
                 v = n("697218"),
                 y = n("800762"),
                 C = n("783419"),
-                I = n("145131"),
-                N = n("293137"),
+                N = n("145131"),
+                O = n("293137"),
                 T = n("272339"),
-                O = n("200639"),
+                I = n("200639"),
                 _ = n("849467"),
                 A = n("97347"),
                 x = n("560995"),
@@ -37,7 +37,7 @@
                 j = n("79415"),
                 w = n("833076");
 
-            function P(e) {
+            function k(e) {
                 let {
                     lobbyId: t
                 } = e, n = (0, r.useStateFromStoresObject)([C.default], () => ({
@@ -52,7 +52,7 @@
                     ...n
                 })
             }
-            class k extends a.PureComponent {
+            class b extends a.PureComponent {
                 handleDisconnect() {
                     f.default.selectVoiceChannel(null)
                 }
@@ -65,7 +65,7 @@
                 renderChannelLink(e) {
                     let {
                         guild: t
-                    } = this.props, n = (0, g.computeChannelName)(e, v.default, E.default), a = null != t ? "".concat(n, " / ").concat(t.name) : n, l = null != t ? t.id : M.ME;
+                    } = this.props, n = (0, g.computeChannelName)(e, v.default, S.default), a = null != t ? "".concat(n, " / ").concat(t.name) : n, l = null != t ? t.id : M.ME;
                     return (0, i.jsx)(o.Link, {
                         to: M.Routes.CHANNEL(l),
                         onClick: t => {
@@ -115,7 +115,7 @@
                                         })
                                     })
                                 })
-                            }), (0, i.jsxs)(I.default, {
+                            }), (0, i.jsxs)(N.default, {
                                 grow: 0,
                                 children: [(0, i.jsx)(R.default, {
                                     tooltipText: p ? D.default.Messages.UNMUTE : D.default.Messages.MUTE,
@@ -124,13 +124,13 @@
                                     onClick: this.handleToggleSelfMute
                                 }), (0, i.jsx)(R.default, {
                                     tooltipText: f ? D.default.Messages.UNDEAFEN : D.default.Messages.DEAFEN,
-                                    icon: f ? O.default : T.default,
+                                    icon: f ? I.default : T.default,
                                     onClick: this.handleToggleSelfDeaf,
                                     iconForeground: f ? j.strikethrough : null
                                 }), null == a && (0, i.jsx)(R.default, {
                                     tooltipText: D.default.Messages.DISCONNECT_SELF,
                                     onClick: this.handleDisconnect,
-                                    icon: N.default
+                                    icon: O.default
                                 })]
                             })]
                         })
@@ -155,21 +155,21 @@
                         let {
                             lobbyId: e
                         } = this.props;
-                        return (0, i.jsx)(P, {
+                        return (0, i.jsx)(k, {
                             lobbyId: e
                         })
                     }
                 }
             }
 
-            function b(e) {
+            function P(e) {
                 let {
                     context: t,
                     lobbyId: n,
                     channel: a,
                     ...l
-                } = e, s = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(null == a ? void 0 : a.getGuildId())), o = (0, r.useStateFromStores)([y.default], () => null != a && y.default.hasVideo(a.id)), [d, u] = (0, r.useStateFromStoresArray)([S.default], () => [S.default.isSelfMute(t) || S.default.isSelfMutedTemporarily(t), S.default.isSelfDeaf(t)]), [c, f, h] = (0, r.useStateFromStoresArray)([C.default], () => [C.default.getConnectionState(n), C.default.getLastPing(n), C.default.getQuality(n)]);
-                return (0, i.jsx)(k, {
+                } = e, s = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(null == a ? void 0 : a.getGuildId())), o = (0, r.useStateFromStores)([y.default], () => null != a && y.default.hasVideo(a.id)), [d, u] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.isSelfMute(t) || E.default.isSelfMutedTemporarily(t), E.default.isSelfDeaf(t)]), [c, f, h] = (0, r.useStateFromStoresArray)([C.default], () => [C.default.getConnectionState(n), C.default.getLastPing(n), C.default.getQuality(n)]);
+                return (0, i.jsx)(b, {
                     ...l,
                     context: t,
                     lobbyId: n,

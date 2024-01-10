@@ -18,8 +18,8 @@
                 c = n("151426"),
                 f = n("77078"),
                 E = n("913144"),
-                _ = n("206230"),
-                h = n("510889"),
+                h = n("206230"),
+                _ = n("510889"),
                 S = n("826267"),
                 T = n("599110"),
                 p = n("659500"),
@@ -40,13 +40,13 @@
                     setSeenTutorial: r,
                     closePopout: O,
                     badgeState: v
-                } = e, D = a.useRef(null), [y, P] = (0, g.default)(D), {
-                    loadState: x,
+                } = e, D = a.useRef(null), [y, x] = (0, g.default)(D), {
+                    loadState: P,
                     channels: U
                 } = y, {
                     maybeLoadMore: b,
                     markAllRead: F
-                } = P;
+                } = x;
                 (function(e, t, n) {
                     a.useLayoutEffect(() => {
                         var l;
@@ -70,7 +70,7 @@
                             to: r.offsetTop
                         })
                     })
-                })(D, y, P),
+                })(D, y, x),
                 function(e, t) {
                     a.useEffect(() => {
                         let n = () => {
@@ -81,15 +81,15 @@
                             p.ComponentDispatch.unsubscribe(C.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n)
                         }
                     }, [t, e.channels])
-                }(y, P), a.useEffect(() => {
+                }(y, x), a.useEffect(() => {
                     T.default.track(C.AnalyticEvents.OPEN_POPOUT, {
                         type: "Inbox"
                     })
                 }, []), a.useEffect(() => (E.default.subscribe("CONNECTION_OPEN", O), () => {
                     E.default.unsubscribe("CONNECTION_OPEN", O)
                 }), [O]);
-                let j = (0, d.useStateFromStores)([_.default], () => _.default.messageGroupSpacing),
-                    G = (0, h.default)("unreads", D);
+                let j = (0, d.useStateFromStores)([h.default], () => h.default.messageGroupSpacing),
+                    G = (0, _.default)("unreads", D);
                 if (0 === U.length) {
                     var k;
                     return (0, l.jsxs)("div", {
@@ -132,11 +132,11 @@
                                         D.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
                                     },
                                     ...a,
-                                    onScroll: x === g.LoadState.Done ? void 0 : b,
+                                    onScroll: P === g.LoadState.Done ? void 0 : b,
                                     className: M.scroller,
                                     children: [s ? (0, l.jsx)(L, {
                                         setSeenTutorial: r
-                                    }) : null, (0, A.default)(U, P, n), x === g.LoadState.Done ? null : (0, l.jsx)(f.Spinner, {
+                                    }) : null, (0, A.default)(U, x, n), P === g.LoadState.Done ? null : (0, l.jsx)(f.Spinner, {
                                         className: M.spinner
                                     })]
                                 })

@@ -15,8 +15,8 @@
                 c = n("787336"),
                 f = n("699473"),
                 E = n("845579"),
-                _ = n("42203"),
-                h = n("247013"),
+                h = n("42203"),
+                _ = n("247013"),
                 S = n("18494"),
                 T = n("211248"),
                 p = n("116320"),
@@ -51,7 +51,7 @@
                     onJump: n,
                     badgeState: f,
                     closePopout: E
-                } = e, h = (0, s.useStateFromStores)([_.default, S.default], () => _.default.getChannel(S.default.getChannelId())), {
+                } = e, _ = (0, s.useStateFromStores)([h.default, S.default], () => h.default.getChannel(S.default.getChannelId())), {
                     messages: T,
                     hasMore: p,
                     loading: N,
@@ -65,17 +65,17 @@
                     guildFilter: I.default.guildFilter,
                     roleFilter: I.default.roleFilter,
                     everyoneFilter: I.default.everyoneFilter
-                })), v = (0, u.default)(m), y = (0, u.default)(g), P = (0, u.default)(C);
+                })), v = (0, u.default)(m), y = (0, u.default)(g), x = (0, u.default)(C);
                 a.useEffect(() => {
                     if (!I.default.hasLoadedEver) {
-                        D(h, !0);
+                        D(_, !0);
                         return
-                    }(null != v && m !== v || null != y && g !== y || null != P && C !== P) && D(h, !0)
-                }, [v, m, y, g, P, C, h, !0]);
+                    }(null != v && m !== v || null != y && g !== y || null != x && C !== x) && D(_, !0)
+                }, [v, m, y, g, x, C, _, !0]);
                 a.useEffect(() => {
                     d.AttachmentLinkRefreshExperiment.getCurrentConfig({
                         location: "mentions"
-                    }).enabled && (null == T ? void 0 : T.some(c.messageHasExpiredAttachmentUrl)) && (r.default.clearMentions(), D(h, !0))
+                    }).enabled && (null == T ? void 0 : T.some(c.messageHasExpiredAttachmentUrl)) && (r.default.clearMentions(), D(_, !0))
                 }, []), a.useEffect(() => () => {
                     r.default.truncateMentions(M.MAX_MENTIONS_PER_FETCH)
                 }, []);
@@ -95,33 +95,33 @@
                         onCloseMessage: function(e) {
                             r.default.deleteRecentMention(e.id)
                         },
-                        channel: h,
+                        channel: _,
                         messages: T,
                         loading: N,
                         hasMore: p,
                         analyticsName: "Recent Mentions",
                         loadMore: function() {
                             let e = null != T && T.length > 0 ? T[T.length - 1].id : null;
-                            D(h, !0, e)
+                            D(_, !0, e)
                         },
                         canCloseAllMessages: !0,
                         renderHeader: U,
                         renderEmptyState: b,
-                        renderMessage: x,
+                        renderMessage: P,
                         "aria-label": O.default.Messages.RECENT_MENTIONS,
                         listName: "recents"
                     })
                 })
             }
 
-            function P(e, t) {
+            function x(e, t) {
                 return [(0, l.jsx)(U, {
                     message: e,
                     gotoMessage: t
                 }, e.id)]
             }
 
-            function x(e, t) {
+            function P(e, t) {
                 return [(0, l.jsx)(U, {
                     message: e,
                     gotoMessage: t,
@@ -136,9 +136,9 @@
                     dismissible: a
                 } = e;
                 if (null == t) return null;
-                let s = _.default.getChannel(t.channel_id);
+                let s = h.default.getChannel(t.channel_id);
                 if (null == s) return null;
-                let i = h.default.didAgree(s.getGuildId()),
+                let i = _.default.didAgree(s.getGuildId()),
                     o = !!s.isNSFW() && !i;
                 return (0, l.jsxs)("div", {
                     className: L.container,

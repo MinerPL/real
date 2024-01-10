@@ -75,12 +75,12 @@
                 let t = O.default.getVoiceStateForChannel(e);
                 return null != t
             }
-            class Q extends a.default.Store {
+            class X extends a.default.Store {
                 initialize() {
                     this.waitFor(M.default, _.default, T.default, N.default, I.default, L.default, A.default, O.default, p.default)
                 }
             }
-            Q.displayName = "NotificationStore", new Q(i.default, __OVERLAY__ ? {} : {
+            X.displayName = "NotificationStore", new X(i.default, __OVERLAY__ ? {} : {
                 NOTIFICATIONS_SET_PERMISSION_STATE: function(e) {
                     let {
                         enabled: t

@@ -4,7 +4,7 @@
                     return a
                 },
                 createThumbnailFromVideo: function() {
-                    return u
+                    return l
                 }
             }), n("70102");
             var i = n("80028");
@@ -22,17 +22,17 @@
                 if ("string" != typeof n) throw Error("Thumbnail creation failed");
                 return n
             }
-            async function u(e, t) {
+            async function l(e, t) {
                 let n = document.createElement("video");
                 n.muted = !0, n.src = e, n.currentTime = t, await n.play(), n.pause();
                 let a = i.CLIPS_THUMBNAIL_MAX_WIDTH / n.videoWidth,
-                    u = i.CLIPS_THUMBNAIL_MAX_HEIGHT / n.videoHeight,
-                    r = Math.min(a, u),
-                    o = n.videoWidth * r,
-                    s = n.videoHeight * r,
-                    d = document.createElement("canvas");
-                d.width = o, d.height = s;
-                let l = d.getContext("2d");
-                if (null == l) throw Error("Could not create canvas context");
-                return l.drawImage(n, 0, 0, n.videoWidth, n.videoHeight, 0, 0, o, s), d.toDataURL("image/jpeg", .9)
+                    l = i.CLIPS_THUMBNAIL_MAX_HEIGHT / n.videoHeight,
+                    s = Math.min(a, l),
+                    u = n.videoWidth * s,
+                    d = n.videoHeight * s,
+                    r = document.createElement("canvas");
+                r.width = u, r.height = d;
+                let o = r.getContext("2d");
+                if (null == o) throw Error("Could not create canvas context");
+                return o.drawImage(n, 0, 0, n.videoWidth, n.videoHeight, 0, 0, u, d), r.toDataURL("image/jpeg", .9)
             }

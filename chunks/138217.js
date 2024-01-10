@@ -15,8 +15,8 @@
                 c = n("913491"),
                 f = n("915639"),
                 E = n("719926"),
-                _ = n("271938"),
-                h = n("42203"),
+                h = n("271938"),
+                _ = n("42203"),
                 S = n("377253"),
                 T = n("660478"),
                 p = n("27618"),
@@ -37,9 +37,9 @@
                 v = !1,
                 D = 0,
                 y = !1,
-                P = !1;
+                x = !1;
 
-            function x(e) {
+            function P(e) {
                 if (e instanceof E.default) return e;
                 let t = S.default.getMessage(e.channel_id, e.id);
                 return null != t ? t : (0, u.createMessageRecord)(e)
@@ -50,12 +50,12 @@
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
                 if ((0, c.default)(e)) return null;
                 null == n && (n = e.channel_id);
-                let l = h.default.getChannel(n);
+                let l = _.default.getChannel(n);
                 if (null == l || l.type === A.ChannelTypes.DM || L.guildFilter === A.RecentMentionsFilters.THIS_SERVER && l.getGuildId() !== N.default.getGuildId()) return null;
                 let a = null === (t = e.author) || void 0 === t ? void 0 : t.id,
-                    s = _.default.getId();
+                    s = h.default.getId();
                 if (null != a && p.default.isBlocked(a) || a === s) return null;
-                e = x(e);
+                e = P(e);
                 let i = !L.everyoneFilter,
                     r = !L.roleFilter;
                 return (0, d.default)({
@@ -63,12 +63,12 @@
                     userId: s,
                     suppressEveryone: i,
                     suppressRoles: r
-                }) ? (P && T.default.ackMessageId(l.id) !== e.id && (0, d.default)({
+                }) ? (x && T.default.ackMessageId(l.id) !== e.id && (0, d.default)({
                     message: e,
                     userId: s,
                     suppressEveryone: I.default.isSuppressEveryoneEnabled(l.getGuildId()),
                     suppressRoles: I.default.isSuppressRolesEnabled(l.getGuildId())
-                }) && (P = !1), e) : null
+                }) && (x = !1), e) : null
             }
 
             function b(e) {
@@ -104,7 +104,7 @@
             }
 
             function G() {
-                C = [], R = {}, v = !1, P = !1
+                C = [], R = {}, v = !1, x = !1
             }
 
             function k() {
@@ -125,7 +125,7 @@
             }
             class H extends s.default.Store {
                 initialize() {
-                    this.waitFor(m.default, h.default, S.default, T.default)
+                    this.waitFor(m.default, _.default, S.default, T.default)
                 }
                 isOpen() {
                     return y
@@ -158,7 +158,7 @@
                     return L.roleFilter
                 }
                 get mentionsAreStale() {
-                    return P
+                    return x
                 }
             }
             H.displayName = "RecentMentionsStore";
@@ -176,7 +176,7 @@
                         hasMoreAfter: t,
                         messages: n,
                         isAfter: l
-                    } = e, s = a.map(n, x);
+                    } = e, s = a.map(n, P);
                     l ? C = C.concat(s) : (C = s, R = {}), a.forEach(s, e => {
                         R[e.id] = !0
                     }), M = !1, O = t, D = (0, r.now)(), v = !0
@@ -206,7 +206,7 @@
                         guild: t
                     } = e;
                     C = a.filter(C, e => {
-                        let n = h.default.getChannel(e.channel_id);
+                        let n = _.default.getChannel(e.channel_id);
                         return null != n && n.getGuildId() !== t.id || (delete R[e.id], !1)
                     })
                 },
@@ -259,6 +259,6 @@
                     y = !1
                 },
                 SET_RECENT_MENTIONS_STALE: function(e) {
-                    P = !0
+                    x = !0
                 }
             })

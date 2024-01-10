@@ -20,8 +20,8 @@
                 c = n("917351"),
                 f = n.n(c),
                 E = n("913144"),
-                _ = n("819689"),
-                h = n("267363"),
+                h = n("819689"),
+                _ = n("267363"),
                 S = n("206230"),
                 T = n("379881"),
                 p = n("542827"),
@@ -38,8 +38,8 @@
                 v = n("247013"),
                 D = n("305961"),
                 y = n("377253"),
-                P = n("957255"),
-                x = n("660478"),
+                x = n("957255"),
+                P = n("660478"),
                 U = n("677099"),
                 b = n("282109"),
                 F = n("449008"),
@@ -91,8 +91,8 @@
                     })
                 }
                 loadChannelMessages(e) {
-                    _.default.clearChannel(e.channelId);
-                    let t = _.default.fetchMessages({
+                    h.default.clearChannel(e.channelId);
+                    let t = h.default.fetchMessages({
                         channelId: e.channelId,
                         limit: G.MAX_MESSAGES_PER_CHANNEL,
                         jump: {
@@ -163,7 +163,7 @@
                             channelId: t,
                             newestUnreadMessageId: n
                         } = e;
-                        if (E.default.wait(() => h.ack(t, !0, void 0, n, {
+                        if (E.default.wait(() => _.ack(t, !0, void 0, n, {
                                 section: G.AnalyticsSections.INBOX
                             })), 1 === this.state.channels.length) {
                             this.deleteChannel(t);
@@ -185,7 +185,7 @@
                             channels: this.state.channels.filter(t => t.channelId !== e)
                         }), this.maybeLoadMore()
                     }, this.markAllRead = () => {
-                        h.bulkAck(this.state.channels.map(e => ({
+                        _.bulkAck(this.state.channels.map(e => ({
                             channelId: e.channelId,
                             messageId: e.newestUnreadMessageId
                         }))), this.setState({
@@ -302,18 +302,18 @@
                 let s = M.THREAD_CHANNEL_TYPES.has(a.type);
                 if (!s && b.default.isGuildOrCategoryOrChannelMuted(n, a.id)) return;
                 if (a.isPrivate()) {
-                    if (0 === x.default.getMentionCount(l)) return
-                } else if (!(0, N.getHasImportantUnread)(a) && 0 === x.default.getMentionCount(l)) return;
-                if (!a.isPrivate() && !P.default.can(G.Permissions.READ_MESSAGE_HISTORY, a)) return;
-                let i = x.default.ackMessageId(l);
+                    if (0 === P.default.getMentionCount(l)) return
+                } else if (!(0, N.getHasImportantUnread)(a) && 0 === P.default.getMentionCount(l)) return;
+                if (!a.isPrivate() && !x.default.can(G.Permissions.READ_MESSAGE_HISTORY, a)) return;
+                let i = P.default.ackMessageId(l);
                 if (null == i) {
                     let e = D.default.getGuild(a.guild_id);
                     if (null == e || null == e.joinedAt) return;
                     i = j.default.fromTimestamp(e.joinedAt.getTime())
                 }
-                let r = x.default.getOldestUnreadMessageId(l),
-                    o = x.default.lastMessageId(l),
-                    u = x.default.getMentionCount(l),
+                let r = P.default.getOldestUnreadMessageId(l),
+                    o = P.default.lastMessageId(l),
+                    u = P.default.getMentionCount(l),
                     d = u > 0 || a.isPrivate();
                 if (null == o || j.default.compare(i, o) >= 0) return;
                 let c = {
@@ -333,7 +333,7 @@
                         let l = O.default.getChannel(t);
                         if (T.default.isFavorite(t)) return 0;
                         if (l.isPrivate()) return 1;
-                        if (x.default.getMentionCount(t) > 0) return 2;
+                        if (P.default.getMentionCount(t) > 0) return 2;
                         if (null != n) {
                             let e = j.default.extractTimestamp(n);
                             if (Date.now() - e > 864e6) return 7;

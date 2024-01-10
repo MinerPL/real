@@ -31,6 +31,7 @@
                         frameRate: h.ApplicationStreamFPS.FPS_30
                     },
                     clipsLength: f.ClipsLengthSettings.SECONDS_30,
+                    remindersEnabled: !0,
                     decoupledClipsEnabled: !1,
                     viewerClipsEnabled: !0,
                     viewerConnectivity: f.ClipsViewerConnectivitySettings.ALL
@@ -167,7 +168,16 @@
                     ...e.clipsSettings,
                     clipsQuality: "number" == typeof e.clipsSettings.clipsQuality || null == e.clipsSettings.clipsQuality ? C.clipsQuality : e.clipsSettings.clipsQuality
                 }
-            })];
+            }), e => {
+                var t;
+                return {
+                    ...e,
+                    clipsSettings: {
+                        ...e.clipsSettings,
+                        remindersEnabled: null !== (t = e.clipsSettings.remindersEnabled) && void 0 !== t ? t : C.remindersEnabled
+                    }
+                }
+            }];
             let N = new R(r.default, {
                 CLIPS_SETTINGS_UPDATE: function(e) {
                     let {

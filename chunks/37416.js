@@ -51,7 +51,7 @@
                 W = n("695838"),
                 Z = n("782340"),
                 z = n("708995");
-            class Q extends F.default {
+            class X extends F.default {
                 componentWillUnmount() {
                     this.activitiesHideTimeout.stop()
                 }
@@ -362,7 +362,7 @@
                     }
                 }
             }
-            let X = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(Q));
+            let Q = (0, c.makeChannelSortable)((0, f.makeVoiceUserDroppable)(X));
 
             function q(e) {
                 let {
@@ -405,7 +405,7 @@
                     enableConnectedUserLimit: !0,
                     enableActivities: !0
                 }), y = x && null == M;
-                return (0, l.jsx)(X, {
+                return (0, l.jsx)(Q, {
                     channelName: m,
                     embeddedApps: p,
                     embeddedActivityType: K.ActivityTypes.PLAYING,

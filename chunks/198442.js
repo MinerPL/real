@@ -70,14 +70,14 @@
                     contextMenu: W = b,
                     draggable: Z = !1,
                     sorting: z = !1,
-                    preloadOnClick: Q = !0,
-                    guildJoinRequestStatus: X
+                    preloadOnClick: X = !0,
+                    guildJoinRequestStatus: Q
                 } = e, {
                     id: q,
                     parentId: J
                 } = j, $ = null !== (t = e.upperBadge) && void 0 !== t ? t : Y ? (0, R.renderUnavailableBadge)() : null != k ? (0, R.renderMediaBadge)(k) : void 0, ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
-                null == ee && K > 0 ? ee = null !== (s = (0, R.renderMentionBadge)(K)) && void 0 !== s ? s : void 0 : null == ee && null != X && (ee = null !== (h = (0, R.renderGuildJoinRequestBadge)({
-                    guildJoinRequestStatus: X
+                null == ee && K > 0 ? ee = null !== (s = (0, R.renderMentionBadge)(K)) && void 0 !== s ? s : void 0 : null == ee && null != Q && (ee = null !== (h = (0, R.renderGuildJoinRequestBadge)({
+                    guildJoinRequestStatus: Q
                 })) && void 0 !== h ? h : void 0);
                 let et = null !== (M = e.lowerBadgeWidth) && void 0 !== M ? M : (0, S.getBadgeWidthForValue)(K),
                     [{
@@ -115,10 +115,10 @@
                         })
                     }, [q, w]),
                     eC = a.useCallback(() => {
-                        if (null != w || null == F || Y || !Q) return;
+                        if (null != w || null == F || Y || !X) return;
                         let e = (0, m.getChannelIdForGuildTransition)(F.id);
                         null != e && f.default.preload(F.id, e)
-                    }, [w, F, Y, Q]),
+                    }, [w, F, Y, X]),
                     ep = (0, u.default)([E.default], () => E.default.isCurrentUserGuest(q)),
                     em = a.useCallback(e => {
                         null != F && !ep && W(e, F)
