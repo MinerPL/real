@@ -23,9 +23,9 @@
                 } else
                     for (var i = 0; i < t.length; i++) {
                         var n = t.charCodeAt(i),
-                            a = n >> 8,
-                            o = 255 & n;
-                        a ? r.push(a, o) : r.push(o)
+                            o = n >> 8,
+                            a = 255 & n;
+                        o ? r.push(o, a) : r.push(a)
                     }
                 return r
             }, e.zero2 = i, e.toHex = n, e.encode = function(t, e) {

@@ -3,13 +3,13 @@
             let i = r("599235"),
                 n = r("246305");
 
-            function a(t) {
+            function o(t) {
                 n.call(this, t), this.enc = "pem"
             }
-            i(a, n), t.exports = a, a.prototype.encode = function(t, e) {
+            i(o, n), t.exports = o, o.prototype.encode = function(t, e) {
                 let r = n.prototype.encode.call(this, t),
                     i = r.toString("base64"),
-                    a = ["-----BEGIN " + e.label + "-----"];
-                for (let t = 0; t < i.length; t += 64) a.push(i.slice(t, t + 64));
-                return a.push("-----END " + e.label + "-----"), a.join("\n")
+                    o = ["-----BEGIN " + e.label + "-----"];
+                for (let t = 0; t < i.length; t += 64) o.push(i.slice(t, t + 64));
+                return o.push("-----END " + e.label + "-----"), o.join("\n")
             }

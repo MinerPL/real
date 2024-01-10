@@ -1,8 +1,8 @@
             var i = r("664813");
             t.exports = g, g.simpleSieve = b, g.fermatTest = m;
             var n = r("839309"),
-                a = new n(24),
-                o = new(r("925197")),
+                o = new n(24),
+                a = new(r("925197")),
                 s = new n(1),
                 f = new n(2),
                 h = new n(5);
@@ -46,7 +46,7 @@
                         if (!e.cmp(h))
                             for (; r.mod(c).cmp(u);) r.iadd(l)
                     } else
-                        for (; r.mod(a).cmp(d);) r.iadd(l);
-                    if (b(p = r.shrn(1)) && b(r) && m(p) && m(r) && o.test(p) && o.test(r)) return r
+                        for (; r.mod(o).cmp(d);) r.iadd(l);
+                    if (b(p = r.shrn(1)) && b(r) && m(p) && m(r) && a.test(p) && a.test(r)) return r
                 }
             }

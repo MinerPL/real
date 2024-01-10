@@ -2,8 +2,8 @@
             r("424973"), t.exports = c;
             var i = r("129752").codes,
                 n = i.ERR_METHOD_NOT_IMPLEMENTED,
-                a = i.ERR_MULTIPLE_CALLBACK,
-                o = i.ERR_TRANSFORM_ALREADY_TRANSFORMING,
+                o = i.ERR_MULTIPLE_CALLBACK,
+                a = i.ERR_TRANSFORM_ALREADY_TRANSFORMING,
                 s = i.ERR_TRANSFORM_WITH_LENGTH_0,
                 f = r("388765");
 
@@ -11,7 +11,7 @@
                 var r = this._transformState;
                 r.transforming = !1;
                 var i = r.writecb;
-                if (null === i) return this.emit("error", new a);
+                if (null === i) return this.emit("error", new o);
                 r.writechunk = null, r.writecb = null, null != e && this.push(e), i(t);
                 var n = this._readableState;
                 n.reading = !1, (n.needReadable || n.length < n.highWaterMark) && this._read(n.highWaterMark)
@@ -39,7 +39,7 @@
             function d(t, e, r) {
                 if (e) return t.emit("error", e);
                 if (null != r && t.push(r), t._writableState.length) throw new s;
-                if (t._transformState.transforming) throw new o;
+                if (t._transformState.transforming) throw new a;
                 return t.push(null)
             }
             r("599235")(c, f), c.prototype.push = function(t, e) {

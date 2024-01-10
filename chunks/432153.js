@@ -1,60 +1,63 @@
             "use strict";
             n.r(t), n.d(t, {
                 useChannelWithTemplateFallback: function() {
-                    return p
+                    return S
                 },
                 useSuggestedUnusedPrices: function() {
-                    return h
-                },
-                announceCreateTemplateChannels: function() {
                     return T
                 },
-                announceDeleteTemplateChannels: function() {
-                    return m
-                },
-                createChannelsFromTemplateTierBenefits: function() {
+                announceCreateTemplateChannels: function() {
                     return C
                 },
-                getTemplateTierCreationAnalyticsContext: function() {
+                announceDeleteTemplateChannels: function() {
                     return M
                 },
-                isEligibleForNewBadge: function() {
+                createChannelsFromTemplateTierBenefits: function() {
                     return g
+                },
+                getTemplateTierCreationAnalyticsContext: function() {
+                    return v
+                },
+                isEligibleForNewBadge: function() {
+                    return I
                 }
             }), n("424973"), n("222007"), n("462568");
-            var l = n("65597"),
-                i = n("913144"),
-                r = n("437140"),
-                s = n("42203"),
-                a = n("808388"),
-                o = n("648825"),
-                u = n("971150"),
-                d = n("65722"),
-                c = n("736880"),
-                f = n("49111"),
-                E = n("724210");
-            let _ = {};
+            var l = n("642852"),
+                i = n.n(l),
+                r = n("65597"),
+                s = n("913144"),
+                a = n("437140"),
+                o = n("42203"),
+                u = n("808388"),
+                d = n("648825"),
+                c = n("971150"),
+                f = n("65722"),
+                E = n("736880"),
+                _ = n("49111"),
+                p = n("724210");
+            i.shim();
+            let h = {};
 
-            function p(e) {
-                let t = (0, l.default)([s.default], () => s.default.getChannel(e)),
-                    n = (0, l.default)([c.default], () => c.default.getChannel(e));
+            function S(e) {
+                let t = (0, r.default)([o.default], () => o.default.getChannel(e)),
+                    n = (0, r.default)([E.default], () => E.default.getChannel(e));
                 return null != t ? t : n
             }
 
-            function h(e, t, n) {
-                let i = (0, l.default)([o.default], () => o.default.getSubscriptionListingsForGuild(e)),
-                    r = (0, u.useEditStateStore)(t => t.editStateIdsForGroup[e]),
-                    s = (0, u.useEditStateStore)(e => e.listings);
+            function T(e, t, n) {
+                let l = (0, r.default)([d.default], () => d.default.getSubscriptionListingsForGuild(e)),
+                    i = (0, c.useEditStateStore)(t => t.editStateIdsForGroup[e]),
+                    s = (0, c.useEditStateStore)(e => e.listings);
                 if (void 0 === n || void 0 === t) return null;
-                let a = i.filter(e => !e.soft_deleted && !e.archived),
-                    d = a.map(e => e.subscription_plans[0].price),
-                    c = [];
-                void 0 !== r && r.forEach(e => {
+                let a = l.filter(e => !e.soft_deleted && !e.archived),
+                    o = a.map(e => e.subscription_plans[0].price),
+                    u = [];
+                void 0 !== i && i.forEach(e => {
                     let t = s[e],
                         n = null == t ? void 0 : t.priceTier;
-                    null != n && c.push(n)
+                    null != n && u.push(n)
                 });
-                let f = new Set(c.concat(d));
+                let f = new Set(u.concat(o));
                 if (!f.has(n)) return null;
                 let E = t.indexOf(n);
                 if (-1 === E) return null;
@@ -63,20 +66,20 @@
                 return _
             }
 
-            function S(e) {
-                let t = u.useEditStateStore.getState().editStateIdsForGroup[e],
-                    n = u.useEditStateStore.getState().listings,
+            function m(e) {
+                let t = c.useEditStateStore.getState().editStateIdsForGroup[e],
+                    n = c.useEditStateStore.getState().listings,
                     l = new Set;
                 null != t && t.forEach(e => {
                     var t;
                     let i = null === (t = n[e]) || void 0 === t ? void 0 : t.channelBenefits;
                     null == i || i.forEach(e => {
-                        null != c.default.getChannel(e.ref_id) && l.add(e.ref_id)
+                        null != E.default.getChannel(e.ref_id) && l.add(e.ref_id)
                     })
                 });
                 let i = [];
                 for (let t of l) {
-                    let n = c.default.getChannel(t);
+                    let n = E.default.getChannel(t);
                     if (null != n) {
                         let t = n.set("guild_id", e);
                         i.push(t)
@@ -85,41 +88,41 @@
                 return i
             }
 
-            function T(e) {
-                let t = S(e);
-                _[e] = t, t.forEach(e => {
-                    let t = e.set("flags", E.ChannelFlags.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
-                    i.default.dispatch({
+            function C(e) {
+                let t = m(e);
+                h[e] = t, t.forEach(e => {
+                    let t = e.set("flags", p.ChannelFlags.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
+                    s.default.dispatch({
                         type: "CHANNEL_CREATE",
                         channel: t
                     })
                 })
             }
 
-            function m(e) {
+            function M(e) {
                 var t;
-                let n = null !== (t = _[e]) && void 0 !== t ? t : S(e);
+                let n = null !== (t = h[e]) && void 0 !== t ? t : m(e);
                 n.forEach(e => {
-                    i.default.dispatch({
+                    s.default.dispatch({
                         type: "CHANNEL_DELETE",
                         channel: e
                     })
                 })
             }
-            async function C(e, t) {
+            async function g(e, t) {
                 let n = [],
                     l = [];
                 if (t.forEach(t => {
-                        let i = c.default.getChannel(t.ref_id);
-                        null != i && (n.push(r.default.createRoleSubscriptionTemplateChannel(e, i.name, i.type, i.topic)), l.push(i))
+                        let i = E.default.getChannel(t.ref_id);
+                        null != i && (n.push(a.default.createRoleSubscriptionTemplateChannel(e, i.name, i.type, i.topic)), l.push(i))
                     }), 0 === n.length) return;
                 let i = await Promise.allSettled(n);
                 i.forEach((n, i) => {
                     let r = l[i].id;
                     if ("fulfilled" === n.status) {
                         let t = n.value.body,
-                            l = u.useEditStateStore.getState().editStateIdsForGroup[e],
-                            i = u.useEditStateStore.getState().listings;
+                            l = c.useEditStateStore.getState().editStateIdsForGroup[e],
+                            i = c.useEditStateStore.getState().listings;
                         null != l && l.forEach(e => {
                             var n;
                             let l = null === (n = i[e]) || void 0 === n ? void 0 : n.channelBenefits;
@@ -133,15 +136,15 @@
                 })
             }
 
-            function M(e, t) {
+            function v(e, t) {
                 var n, l;
-                let i = u.useEditStateStore.getState().listings[e],
+                let i = c.useEditStateStore.getState().listings[e],
                     r = null == i ? void 0 : i.usedTemplate;
                 if (null == r) return {
                     templateCategory: null,
                     hasChangeFromTemplate: null
                 };
-                let s = c.default.getTemplateWithCategory(t, r);
+                let s = E.default.getTemplateWithCategory(t, r);
                 if (null == s) return {
                     templateCategory: null,
                     hasChangeFromTemplate: null
@@ -173,6 +176,6 @@
                 }
             }
 
-            function g(e) {
-                return (0, d.canManageGuildRoleSubscriptions)(e) && e.hasFeature(f.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) && (0, a.isUserEligibleForTierTemplates)() && (0, a.isGuildEligibleForTierTemplates)(e.id)
+            function I(e) {
+                return (0, f.canManageGuildRoleSubscriptions)(e) && e.hasFeature(_.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) && (0, u.isUserEligibleForTierTemplates)() && (0, u.isGuildEligibleForTierTemplates)(e.id)
             }

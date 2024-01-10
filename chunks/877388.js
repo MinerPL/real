@@ -16,7 +16,7 @@
                     var r = null != arguments[e] ? arguments[e] : {};
                     e % 2 ? i(Object(r), !0).forEach(function(e) {
                         (function(t, e, r) {
-                            (e = o(e)) in t ? Object.defineProperty(t, e, {
+                            (e = a(e)) in t ? Object.defineProperty(t, e, {
                                 value: r,
                                 enumerable: !0,
                                 configurable: !0,
@@ -31,14 +31,14 @@
             }
             r("424973"), r("70102");
 
-            function a(t, e) {
+            function o(t, e) {
                 for (var r = 0; r < e.length; r++) {
                     var i = e[r];
-                    i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(t, o(i.key), i)
+                    i.enumerable = i.enumerable || !1, i.configurable = !0, "value" in i && (i.writable = !0), Object.defineProperty(t, a(i.key), i)
                 }
             }
 
-            function o(t) {
+            function a(t) {
                 var e = function(t, e) {
                     if ("object" != typeof t || null === t) return t;
                     var r = t[Symbol.toPrimitive];
@@ -104,9 +104,9 @@
                     key: "concat",
                     value: function(t) {
                         if (0 === this.length) return s.alloc(0);
-                        for (var e, r, i, n = s.allocUnsafe(t >>> 0), a = this.head, o = 0; a;) {
+                        for (var e, r, i, n = s.allocUnsafe(t >>> 0), o = this.head, a = 0; o;) {
                             ;
-                            e = a.data, r = n, i = o, s.prototype.copy.call(e, r, i), o += a.data.length, a = a.next
+                            e = o.data, r = n, i = a, s.prototype.copy.call(e, r, i), a += o.data.length, o = o.next
                         }
                         return n
                     }
@@ -129,9 +129,9 @@
                             i = e.data;
                         for (t -= i.length; e = e.next;) {
                             var n = e.data,
-                                a = t > n.length ? n.length : t;
-                            if (a === n.length ? i += n : i += n.slice(0, t), 0 == (t -= a)) {
-                                a === n.length ? (++r, e.next ? this.head = e.next : this.head = this.tail = null) : (this.head = e, e.data = n.slice(a));
+                                o = t > n.length ? n.length : t;
+                            if (o === n.length ? i += n : i += n.slice(0, t), 0 == (t -= o)) {
+                                o === n.length ? (++r, e.next ? this.head = e.next : this.head = this.tail = null) : (this.head = e, e.data = n.slice(o));
                                 break
                             }++r
                         }
@@ -145,9 +145,9 @@
                             i = 1;
                         for (r.data.copy(e), t -= r.data.length; r = r.next;) {
                             var n = r.data,
-                                a = t > n.length ? n.length : t;
-                            if (n.copy(e, e.length - t, 0, a), 0 == (t -= a)) {
-                                a === n.length ? (++i, r.next ? this.head = r.next : this.head = this.tail = null) : (this.head = r, r.data = n.slice(a));
+                                o = t > n.length ? n.length : t;
+                            if (n.copy(e, e.length - t, 0, o), 0 == (t -= o)) {
+                                o === n.length ? (++i, r.next ? this.head = r.next : this.head = this.tail = null) : (this.head = r, r.data = n.slice(o));
                                 break
                             }++i
                         }
@@ -161,7 +161,7 @@
                             customInspect: !1
                         }))
                     }
-                }], a(t.prototype, e), r && a(t, r), Object.defineProperty(t, "prototype", {
+                }], o(t.prototype, e), r && o(t, r), Object.defineProperty(t, "prototype", {
                     writable: !1
                 }), i
             }()

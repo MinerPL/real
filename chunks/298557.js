@@ -345,11 +345,11 @@
                         guildId: E
                     }),
                     e3 = (null == eY ? void 0 : eY.id) === "936929561302675456",
-                    [e6, e5] = a.useState(!1),
-                    [e2, te] = a.useState(!1),
+                    [e6, e2] = a.useState(!1),
+                    [e5, te] = a.useState(!1),
                     [tt, tl] = a.useState(!0),
                     ti = e => {
-                        null != e && e5(e.scrollHeight > e.clientHeight)
+                        null != e && e2(e.scrollHeight > e.clientHeight)
                     },
                     ta = null != ez && ez.length > 0,
                     tn = (null == eY ? void 0 : eY.flags) != null,
@@ -368,8 +368,8 @@
                                     }), (0, i.jsx)("div", {
                                         ref: ti,
                                         className: s({
-                                            [em.descriptionClamp]: !e2,
-                                            [em.descriptionClampSafari]: !e2 && "Safari" === c.name
+                                            [em.descriptionClamp]: !e5,
+                                            [em.descriptionClampSafari]: !e5 && "Safari" === c.name
                                         }),
                                         children: (0, i.jsx)(Y.default, {
                                             className: em.detailedDescription,
@@ -377,8 +377,8 @@
                                             output: eh,
                                             children: n
                                         })
-                                    }), (e6 || e2) && (0, i.jsx)(eR, {
-                                        isViewAll: e2,
+                                    }), (e6 || e5) && (0, i.jsx)(eR, {
+                                        isViewAll: e5,
                                         onToggle: () => {
                                             te(e => !e)
                                         }
@@ -480,7 +480,7 @@
                             className: em.section,
                             children: e
                         }, t))
-                    }, [eY, e9, eq, ej, ez, eX, eD, eS, e2, e6, ta, tn]),
+                    }, [eY, e9, eq, ej, ez, eX, eD, eS, e5, e6, ta, tn]),
                     tr = a.useMemo(() => {
                         let e = H.current === m,
                             t = e && !er.current,

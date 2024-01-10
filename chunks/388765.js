@@ -7,17 +7,17 @@
                 return e
             };
             t.exports = c;
-            var a = r("245387"),
-                o = r("769419");
-            r("599235")(c, a);
-            for (var s = n(o.prototype), f = 0; f < s.length; f++) {
+            var o = r("245387"),
+                a = r("769419");
+            r("599235")(c, o);
+            for (var s = n(a.prototype), f = 0; f < s.length; f++) {
                 var h = s[f];
-                !c.prototype[h] && (c.prototype[h] = o.prototype[h])
+                !c.prototype[h] && (c.prototype[h] = a.prototype[h])
             }
 
             function c(t) {
                 if (!(this instanceof c)) return new c(t);
-                a.call(this, t), o.call(this, t), this.allowHalfOpen = !0, t && (!1 === t.readable && (this.readable = !1), !1 === t.writable && (this.writable = !1), !1 === t.allowHalfOpen && (this.allowHalfOpen = !1, this.once("end", u)))
+                o.call(this, t), a.call(this, t), this.allowHalfOpen = !0, t && (!1 === t.readable && (this.readable = !1), !1 === t.writable && (this.writable = !1), !1 === t.allowHalfOpen && (this.allowHalfOpen = !1, this.once("end", u)))
             }
 
             function u() {

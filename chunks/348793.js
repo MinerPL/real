@@ -2,9 +2,9 @@
             r("424973");
             let i = r("599235"),
                 n = r("839309"),
-                a = r("13020").DecoderBuffer,
+                o = r("13020").DecoderBuffer,
                 Node = r("747336"),
-                o = r("335036");
+                a = r("335036");
 
             function s(t) {
                 this.enc = "der", this.name = t.name, this.entity = t, this.tree = new f, this.tree._init(t.body)
@@ -17,7 +17,7 @@
             function h(t, e) {
                 let r = t.readUInt8(e);
                 if (t.isError(r)) return r;
-                let i = o.tagClass[r >> 6],
+                let i = a.tagClass[r >> 6],
                     n = (32 & r) == 0;
                 if ((31 & r) == 31) {
                     let i = r;
@@ -27,12 +27,12 @@
                         r <<= 7, r |= 127 & i
                     }
                 } else r &= 31;
-                let a = o.tag[r];
+                let o = a.tag[r];
                 return {
                     cls: i,
                     primitive: n,
                     tag: r,
-                    tagStr: a
+                    tagStr: o
                 }
             }
 
@@ -53,7 +53,7 @@
                 return i
             }
             t.exports = s, s.prototype.decode = function(t, e) {
-                return !a.isDecoderBuffer(t) && (t = new a(t, e)), this.tree._decode(t, e)
+                return !o.isDecoderBuffer(t) && (t = new o(t, e)), this.tree._decode(t, e)
             }, i(f, Node), f.prototype._peekTag = function(t, e, r) {
                 if (t.isEmpty()) return !1;
                 let i = t.save(),
@@ -66,9 +66,9 @@
                 if (t.isError(n)) return n;
                 if (!r && i.tag !== e && i.tagStr !== e && i.tagStr + "of" !== e) return t.error('Failed to match tag: "' + e + '"');
                 if (i.primitive || null !== n) return t.skip(n, 'Failed to match body of: "' + e + '"');
-                let a = t.save(),
-                    o = this._skipUntilEnd(t, 'Failed to skip indefinite length body: "' + this.tag + '"');
-                return t.isError(o) ? o : (n = t.offset - a.offset, t.restore(a), t.skip(n, 'Failed to match body of: "' + e + '"'))
+                let o = t.save(),
+                    a = this._skipUntilEnd(t, 'Failed to skip indefinite length body: "' + this.tag + '"');
+                return t.isError(a) ? a : (n = t.offset - o.offset, t.restore(o), t.skip(n, 'Failed to match body of: "' + e + '"'))
             }, f.prototype._skipUntilEnd = function(t, e) {
                 for (;;) {
                     let r;
@@ -84,9 +84,9 @@
                 for (; !t.isEmpty();) {
                     let e = this._peekTag(t, "end");
                     if (t.isError(e)) return e;
-                    let a = r.decode(t, "der", i);
-                    if (t.isError(a) && e) break;
-                    n.push(a)
+                    let o = r.decode(t, "der", i);
+                    if (t.isError(o) && e) break;
+                    n.push(o)
                 }
                 return n
             }, f.prototype._decodeStr = function(t, e) {
@@ -117,10 +117,10 @@
             }, f.prototype._decodeObjid = function(t, e, r) {
                 let i;
                 let n = [],
-                    a = 0,
-                    o = 0;
-                for (; !t.isEmpty();) o = t.readUInt8(), a <<= 7, a |= 127 & o, (128 & o) == 0 && (n.push(a), a = 0);
-                128 & o && n.push(a);
+                    o = 0,
+                    a = 0;
+                for (; !t.isEmpty();) a = t.readUInt8(), o <<= 7, o |= 127 & a, (128 & a) == 0 && (n.push(o), o = 0);
+                128 & a && n.push(o);
                 let s = n[0] / 40 | 0,
                     f = n[0] % 40;
                 if (i = r ? n : [s, f].concat(n.slice(1)), e) {
@@ -129,14 +129,14 @@
                 }
                 return i
             }, f.prototype._decodeTime = function(t, e) {
-                let r, i, n, a, o, s;
+                let r, i, n, o, a, s;
                 let f = t.raw().toString();
-                if ("gentime" === e) r = 0 | f.slice(0, 4), i = 0 | f.slice(4, 6), n = 0 | f.slice(6, 8), a = 0 | f.slice(8, 10), o = 0 | f.slice(10, 12), s = 0 | f.slice(12, 14);
+                if ("gentime" === e) r = 0 | f.slice(0, 4), i = 0 | f.slice(4, 6), n = 0 | f.slice(6, 8), o = 0 | f.slice(8, 10), a = 0 | f.slice(10, 12), s = 0 | f.slice(12, 14);
                 else {
                     if ("utctime" !== e) return t.error("Decoding " + e + " time is not supported yet");
-                    r = 0 | f.slice(0, 2), i = 0 | f.slice(2, 4), n = 0 | f.slice(4, 6), a = 0 | f.slice(6, 8), o = 0 | f.slice(8, 10), s = 0 | f.slice(10, 12), r = r < 70 ? 2e3 + r : 1900 + r
+                    r = 0 | f.slice(0, 2), i = 0 | f.slice(2, 4), n = 0 | f.slice(4, 6), o = 0 | f.slice(6, 8), a = 0 | f.slice(8, 10), s = 0 | f.slice(10, 12), r = r < 70 ? 2e3 + r : 1900 + r
                 }
-                return Date.UTC(r, i - 1, n, a, o, s, 0)
+                return Date.UTC(r, i - 1, n, o, a, s, 0)
             }, f.prototype._decodeNull = function() {
                 return null
             }, f.prototype._decodeBool = function(t) {

@@ -2,7 +2,7 @@
             r("70102");
             var i = Object.getOwnPropertySymbols,
                 n = Object.prototype.hasOwnProperty,
-                a = Object.prototype.propertyIsEnumerable;
+                o = Object.prototype.propertyIsEnumerable;
             t.exports = ! function() {
                 try {
                     if (!Object.assign) return !1;
@@ -22,14 +22,14 @@
                     return !1
                 }
             }() ? function(t, e) {
-                for (var r, o, s = function(t) {
+                for (var r, a, s = function(t) {
                         if (null == t) throw TypeError("Object.assign cannot be called with null or undefined");
                         return Object(t)
                     }(t), f = 1; f < arguments.length; f++) {
                     for (var h in r = Object(arguments[f]), r) n.call(r, h) && (s[h] = r[h]);
                     if (i) {
-                        o = i(r);
-                        for (var c = 0; c < o.length; c++) a.call(r, o[c]) && (s[o[c]] = r[o[c]])
+                        a = i(r);
+                        for (var c = 0; c < a.length; c++) o.call(r, a[c]) && (s[a[c]] = r[a[c]])
                     }
                 }
                 return s

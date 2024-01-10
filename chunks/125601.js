@@ -2,8 +2,8 @@
             r("70102"), r("781738"), r("424973"), r("222007");
             let i = /^xn--/,
                 n = /[^\0-\x7E]/,
-                a = /[\x2E\u3002\uFF0E\uFF61]/g,
-                o = {
+                o = /[\x2E\u3002\uFF0E\uFF61]/g,
+                a = {
                     overflow: "Overflow: input needs wider integers to process",
                     "not-basic": "Illegal input >= 0x80 (not a basic code point)",
                     "invalid-input": "Invalid input"
@@ -13,21 +13,21 @@
                 h = String.fromCharCode;
 
             function c(t) {
-                throw RangeError(o[t])
+                throw RangeError(a[t])
             }
 
             function u(t, e) {
                 let r = t.split("@"),
                     i = "";
-                r.length > 1 && (i = r[0] + "@", t = r[1]), t = t.replace(a, ".");
+                r.length > 1 && (i = r[0] + "@", t = r[1]), t = t.replace(o, ".");
                 let n = t.split("."),
-                    o = (function(t, e) {
+                    a = (function(t, e) {
                         let r = [],
                             i = t.length;
                         for (; i--;) r[i] = e(t[i]);
                         return r
                     })(n, e).join(".");
-                return i + o
+                return i + a
             }
 
             function d(t) {
@@ -56,24 +56,24 @@
                         r = t.length,
                         i = 0,
                         n = 128,
-                        a = 72,
-                        o = t.lastIndexOf("-");
-                    o < 0 && (o = 0);
-                    for (let r = 0; r < o; ++r) t.charCodeAt(r) >= 128 && c("not-basic"), e.push(t.charCodeAt(r));
-                    for (let h = o > 0 ? o + 1 : 0; h < r;) {
-                        let o = i;
+                        o = 72,
+                        a = t.lastIndexOf("-");
+                    a < 0 && (a = 0);
+                    for (let r = 0; r < a; ++r) t.charCodeAt(r) >= 128 && c("not-basic"), e.push(t.charCodeAt(r));
+                    for (let h = a > 0 ? a + 1 : 0; h < r;) {
+                        let a = i;
                         for (let e = 1, n = 36;; n += 36) {
                             var s;
                             h >= r && c("invalid-input");
-                            let o = (s = t.charCodeAt(h++)) - 48 < 10 ? s - 22 : s - 65 < 26 ? s - 65 : s - 97 < 26 ? s - 97 : 36;
-                            (o >= 36 || o > f((2147483647 - i) / e)) && c("overflow"), i += o * e;
-                            let u = n <= a ? 1 : n >= a + 26 ? 26 : n - a;
-                            if (o < u) break;
+                            let a = (s = t.charCodeAt(h++)) - 48 < 10 ? s - 22 : s - 65 < 26 ? s - 65 : s - 97 < 26 ? s - 97 : 36;
+                            (a >= 36 || a > f((2147483647 - i) / e)) && c("overflow"), i += a * e;
+                            let u = n <= o ? 1 : n >= o + 26 ? 26 : n - o;
+                            if (a < u) break;
                             let d = 36 - u;
                             e > f(2147483647 / d) && c("overflow"), e *= d
                         }
                         let u = e.length + 1;
-                        a = p(i - o, u, 0 == o), f(i / u) > 2147483647 - n && c("overflow"), n += f(i / u), i %= u, e.splice(i++, 0, n)
+                        o = p(i - a, u, 0 == a), f(i / u) > 2147483647 - n && c("overflow"), n += f(i / u), i %= u, e.splice(i++, 0, n)
                     }
                     return String.fromCodePoint(...e)
                 },
@@ -82,11 +82,11 @@
                         r = (t = d(t)).length,
                         i = 128,
                         n = 0,
-                        a = 72;
+                        o = 72;
                     for (let r of t) r < 128 && e.push(h(r));
-                    let o = e.length,
-                        s = o;
-                    for (o && e.push("-"); s < r;) {
+                    let a = e.length,
+                        s = a;
+                    for (a && e.push("-"); s < r;) {
                         let r = 2147483647;
                         for (let e of t) e >= i && e < r && (r = e);
                         let u = s + 1;
@@ -94,13 +94,13 @@
                             if (d < i && ++n > 2147483647 && c("overflow"), d == i) {
                                 let t = n;
                                 for (let r = 36;; r += 36) {
-                                    let i = r <= a ? 1 : r >= a + 26 ? 26 : r - a;
+                                    let i = r <= o ? 1 : r >= o + 26 ? 26 : r - o;
                                     if (t < i) break;
                                     let n = t - i,
-                                        o = 36 - i;
-                                    e.push(h(l(i + n % o, 0))), t = f(n / o)
+                                        a = 36 - i;
+                                    e.push(h(l(i + n % a, 0))), t = f(n / a)
                                 }
-                                e.push(h(l(t, 0))), a = p(n, u, s == o), n = 0, ++s
+                                e.push(h(l(t, 0))), o = p(n, u, s == a), n = 0, ++s
                             }++ n, ++i
                     }
                     return e.join("")

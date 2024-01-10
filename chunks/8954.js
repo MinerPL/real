@@ -6,6 +6,6 @@
                     var r;
                     t._cache = i.concat([t._cache, ((r = t)._prev = r._cipher.encryptBlock(r._prev), r._prev)])
                 }
-                var a = t._cache.slice(0, e.length);
-                return t._cache = t._cache.slice(e.length), n(e, a)
+                var o = t._cache.slice(0, e.length);
+                return t._cache = t._cache.slice(e.length), n(e, o)
             }

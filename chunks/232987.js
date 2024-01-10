@@ -1,8 +1,8 @@
             r("424973"), r("70102");
             var i = r("391149"),
                 n = r("912065").Buffer,
-                a = r("725214"),
-                o = r("421630"),
+                o = r("725214"),
+                a = r("421630"),
                 s = r("441270"),
                 f = r("619127"),
                 h = r("786561");
@@ -43,14 +43,14 @@
             };
 
             function d(t, e, r) {
-                var s = a[t.toLowerCase()];
+                var s = o[t.toLowerCase()];
                 if (!s) throw TypeError("invalid suite type");
                 if ("string" == typeof r && (r = n.from(r)), "GCM" !== s.mode && r.length !== s.iv) throw TypeError("invalid iv length " + r.length);
                 if ("string" == typeof e && (e = n.from(e)), e.length !== s.key / 8) throw TypeError("invalid key length " + e.length);
-                return "stream" === s.type ? new o(s.module, e, r, !0) : "auth" === s.type ? new i(s.module, e, r, !0) : new c(s.module, e, r)
+                return "stream" === s.type ? new a(s.module, e, r, !0) : "auth" === s.type ? new i(s.module, e, r, !0) : new c(s.module, e, r)
             }
             e.createDecipher = function(t, e) {
-                var r = a[t.toLowerCase()];
+                var r = o[t.toLowerCase()];
                 if (!r) throw TypeError("invalid suite type");
                 var i = h(e, !1, r.key, r.iv);
                 return d(t, i.key, i.iv)

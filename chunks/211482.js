@@ -1,8 +1,8 @@
             "use strict";
             var i = r("555671"),
                 n = r("256385"),
-                a = i.rotl32,
-                o = i.sum32,
+                o = i.rotl32,
+                a = i.sum32,
                 s = i.sum32_3,
                 f = i.sum32_4,
                 h = n.BlockHash;
@@ -20,23 +20,23 @@
                 else return e ^ (r | ~i)
             }
             i.inherits(c, h), e.ripemd160 = c, c.blockSize = 512, c.outSize = 160, c.hmacStrength = 192, c.padLength = 64, c.prototype._update = function(t, e) {
-                for (var r = this.h[0], i = this.h[1], n = this.h[2], h = this.h[3], c = this.h[4], m = r, g = i, v = n, y = h, _ = c, w = 0; w < 80; w++) {
-                    var M = o(a(f(r, u(w, i, n, h), t[d[w] + e], function(t) {
+                for (var r = this.h[0], i = this.h[1], n = this.h[2], h = this.h[3], c = this.h[4], m = r, g = i, y = n, v = h, _ = c, w = 0; w < 80; w++) {
+                    var M = a(o(f(r, u(w, i, n, h), t[d[w] + e], function(t) {
                         if (t <= 15) return 0;
                         if (t <= 31) return 1518500249;
                         if (t <= 47) return 1859775393;
                         else if (t <= 63) return 2400959708;
                         else return 2840853838
                     }(w)), p[w]), c);
-                    r = c, c = h, h = a(n, 10), n = i, i = M, M = o(a(f(m, u(79 - w, g, v, y), t[l[w] + e], function(t) {
+                    r = c, c = h, h = o(n, 10), n = i, i = M, M = a(o(f(m, u(79 - w, g, y, v), t[l[w] + e], function(t) {
                         if (t <= 15) return 1352829926;
                         if (t <= 31) return 1548603684;
                         if (t <= 47) return 1836072691;
                         else if (t <= 63) return 2053994217;
                         else return 0
-                    }(w)), b[w]), _), m = _, _ = y, y = a(v, 10), v = g, g = M
+                    }(w)), b[w]), _), m = _, _ = v, v = o(y, 10), y = g, g = M
                 }
-                M = s(this.h[1], n, y), this.h[1] = s(this.h[2], h, _), this.h[2] = s(this.h[3], c, m), this.h[3] = s(this.h[4], r, g), this.h[4] = s(this.h[0], i, v), this.h[0] = M
+                M = s(this.h[1], n, v), this.h[1] = s(this.h[2], h, _), this.h[2] = s(this.h[3], c, m), this.h[3] = s(this.h[4], r, g), this.h[4] = s(this.h[0], i, y), this.h[0] = M
             }, c.prototype._digest = function(t) {
                 return "hex" === t ? i.toHex32(this.h, "little") : i.split32(this.h, "little")
             };

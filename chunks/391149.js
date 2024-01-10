@@ -1,30 +1,30 @@
             r("854508"), r("70102");
             var i = r("619127"),
                 n = r("912065").Buffer,
-                a = r("441270"),
-                o = r("599235"),
+                o = r("441270"),
+                a = r("599235"),
                 s = r("820457"),
                 f = r("687185"),
                 h = r("135042");
 
-            function c(t, e, r, o) {
-                a.call(this);
+            function c(t, e, r, a) {
+                o.call(this);
                 var f = n.alloc(4, 0);
                 this._cipher = new i.AES(e);
                 var c = this._cipher.encryptBlock(f);
                 this._ghash = new s(c), r = function(t, e, r) {
                     if (12 === e.length) return t._finID = n.concat([e, n.from([0, 0, 0, 1])]), n.concat([e, n.from([0, 0, 0, 2])]);
                     var i = new s(r),
-                        a = e.length,
-                        o = a % 16;
-                    i.update(e), o && (o = 16 - o, i.update(n.alloc(o, 0))), i.update(n.alloc(8, 0));
+                        o = e.length,
+                        a = o % 16;
+                    i.update(e), a && (a = 16 - a, i.update(n.alloc(a, 0))), i.update(n.alloc(8, 0));
                     var f = n.alloc(8);
-                    f.writeUIntBE(8 * a, 0, 8), i.update(f), t._finID = i.state;
+                    f.writeUIntBE(8 * o, 0, 8), i.update(f), t._finID = i.state;
                     var c = n.from(t._finID);
                     return h(c), c
-                }(this, r, c), this._prev = n.from(r), this._cache = n.allocUnsafe(0), this._secCache = n.allocUnsafe(0), this._decrypt = o, this._alen = 0, this._len = 0, this._mode = t, this._authTag = null, this._called = !1
+                }(this, r, c), this._prev = n.from(r), this._cache = n.allocUnsafe(0), this._secCache = n.allocUnsafe(0), this._decrypt = a, this._alen = 0, this._len = 0, this._mode = t, this._authTag = null, this._called = !1
             }
-            o(c, a), c.prototype._update = function(t) {
+            a(c, o), c.prototype._update = function(t) {
                 if (!this._called && this._alen) {
                     var e = 16 - this._alen % 16;
                     e < 16 && (e = n.alloc(e, 0), this._ghash.update(e))

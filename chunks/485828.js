@@ -1,7 +1,7 @@
             "use strict";
 
             function i(t) {
-                if (this._capacity = o(t), this._length = 0, this._front = 0, this._makeCapacity(), n(t)) {
+                if (this._capacity = a(t), this._length = 0, this._front = 0, this._makeCapacity(), n(t)) {
                     for (var e = t.length, r = 0; r < e; ++r) this[r] = t[r];
                     this._length = e
                 }
@@ -17,12 +17,12 @@
                     if (r + e > i) {
                         for (var n = 0; n < e; ++n) {
                             this._checkCapacity(r + 1);
-                            var a = this._front + r & this._capacity - 1;
-                            this[a] = arguments[n], r++, this._length = r
+                            var o = this._front + r & this._capacity - 1;
+                            this[o] = arguments[n], r++, this._length = r
                         }
                         return r
                     }
-                    for (var a = this._front, n = 0; n < e; ++n) this[a + r & i - 1] = arguments[n], a++;
+                    for (var o = this._front, n = 0; n < e; ++n) this[o + r & i - 1] = arguments[n], o++;
                     return this._length = r + e, r + e
                 }
                 if (0 === e) return r;
@@ -52,16 +52,16 @@
                         for (var n = r - 1; n >= 0; n--) {
                             this._checkCapacity(e + 1);
                             var i = this._capacity,
-                                a = (this._front - 1 & i - 1 ^ i) - i;
-                            this[a] = arguments[n], e++, this._length = e, this._front = a
+                                o = (this._front - 1 & i - 1 ^ i) - i;
+                            this[o] = arguments[n], e++, this._length = e, this._front = o
                         }
                         return e
                     }
-                    for (var o = this._front, n = r - 1; n >= 0; n--) {
-                        var a = (o - 1 & i - 1 ^ i) - i;
-                        this[a] = arguments[n], o = a
+                    for (var a = this._front, n = r - 1; n >= 0; n--) {
+                        var o = (a - 1 & i - 1 ^ i) - i;
+                        this[o] = arguments[n], a = o
                     }
-                    return this._front = o, this._length = e + r, e + r
+                    return this._front = a, this._length = e + r, e + r
                 }
                 if (0 === r) return e;
                 this._checkCapacity(e + 1);
@@ -95,25 +95,25 @@
             }), i.prototype._makeCapacity = function() {
                 for (var t = this._capacity, e = 0; e < t; ++e) this[e] = void 0
             }, i.prototype._checkCapacity = function(t) {
-                this._capacity < t && this._resizeTo(o(1.5 * this._capacity + 16))
+                this._capacity < t && this._resizeTo(a(1.5 * this._capacity + 16))
             }, i.prototype._resizeTo = function(t) {
                 var e = this._front,
                     r = this._capacity,
                     i = Array(r),
                     n = this._length;
-                if (a(this, 0, i, 0, r), this._capacity = t, this._makeCapacity(), this._front = 0, e + n <= r) a(i, e, this, 0, n);
+                if (o(this, 0, i, 0, r), this._capacity = t, this._makeCapacity(), this._front = 0, e + n <= r) o(i, e, this, 0, n);
                 else {
-                    var o = n - (e + n & r - 1);
-                    a(i, e, this, 0, o), a(i, 0, this, o, n - o)
+                    var a = n - (e + n & r - 1);
+                    o(i, e, this, 0, a), o(i, 0, this, a, n - a)
                 }
             };
             var n = Array.isArray;
 
-            function a(t, e, r, i, n) {
-                for (var a = 0; a < n; ++a) r[a + i] = t[a + e]
+            function o(t, e, r, i, n) {
+                for (var o = 0; o < n; ++o) r[o + i] = t[o + e]
             }
 
-            function o(t) {
+            function a(t) {
                 var e;
                 if ("number" != typeof t) {
                     if (!n(t)) return 16;

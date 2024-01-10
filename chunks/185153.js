@@ -1,70 +1,88 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return S
+                },
+                GuildSelector: function() {
+                    return p
                 }
-            }), s("843762");
-            var a = s("37983"),
-                n = s("884691"),
-                l = s("414456"),
-                i = s.n(l),
-                r = s("446674"),
-                o = s("77078"),
-                d = s("570697"),
-                u = s("305961"),
-                c = s("677099"),
-                S = s("476263"),
-                E = s("449008"),
-                f = s("424562"),
-                m = s("782340"),
-                T = s("764347");
+            }), n("843762");
+            var r = n("37983"),
+                a = n("884691"),
+                i = n("414456"),
+                l = n.n(i),
+                o = n("446674"),
+                s = n("77078"),
+                u = n("570697"),
+                d = n("305961"),
+                c = n("677099"),
+                f = n("476263"),
+                v = n("449008"),
+                h = n("424562"),
+                C = n("782340"),
+                m = n("764347");
 
-            function _(e) {
+            function S(e) {
                 let {
                     guildId: t,
-                    className: s,
-                    globalOption: l,
-                    hideDivider: _ = !1,
-                    onChange: g,
-                    renderOptionSuffix: h
-                } = e, I = (0, r.useStateFromStores)([c.default], () => c.default.getFlattenedGuildIds()), N = (0, r.useStateFromStores)([u.default], () => u.default.getGuilds()), p = (0, r.useStateFromStores)([f.default], () => f.default.showNotice()), C = n.useMemo(() => {
-                    let e = I.map(e => {
-                        let t = N[e];
+                    className: n,
+                    globalOption: a,
+                    hideDivider: i = !1,
+                    onChange: o,
+                    renderOptionSuffix: s
+                } = e;
+                return (0, r.jsx)(u.default, {
+                    className: l(m.section, n),
+                    title: C.default.Messages.PROFILE_CUSTOMIZATION_GUILD_SELECT_TITLE,
+                    hideDivider: i,
+                    forcedDivider: !0,
+                    children: (0, r.jsx)(p, {
+                        guildId: t,
+                        onChange: o,
+                        renderOptionSuffix: s,
+                        globalOption: a
+                    })
+                })
+            }
+
+            function p(e) {
+                let {
+                    guildId: t,
+                    globalOption: n,
+                    onChange: i,
+                    renderOptionSuffix: l
+                } = e, u = (0, o.useStateFromStores)([h.default], () => h.default.showNotice()), S = (0, o.useStateFromStores)([c.default], () => c.default.getFlattenedGuildIds()), p = (0, o.useStateFromStores)([d.default], () => d.default.getGuilds()), g = a.useMemo(() => {
+                    let e = S.map(e => {
+                        let t = p[e];
                         return null == t ? null : {
                             label: t.name,
                             value: t.id
                         }
-                    }).filter(E.isNotNullish);
-                    return null != l && e.unshift(l), e
-                }, [I, N, l]), A = n.useCallback(e => {
-                    let t = (null == e ? void 0 : e.label) === (null == l ? void 0 : l.label) && (null == e ? void 0 : e.value) === (null == l ? void 0 : l.value);
-                    return null == e || "" === e.value || t ? null : (0, a.jsx)(S.default, {
-                        className: T.guildSelectOptionIcon,
-                        guild: N[e.value],
-                        size: S.default.Sizes.SMOL,
+                    }).filter(v.isNotNullish);
+                    return null != n && e.unshift(n), e
+                }, [S, p, n]), F = a.useCallback(e => {
+                    let t = (null == e ? void 0 : e.label) === (null == n ? void 0 : n.label) && (null == e ? void 0 : e.value) === (null == n ? void 0 : n.value);
+                    return null == e || "" === e.value || t ? null : (0, r.jsx)(f.default, {
+                        className: m.guildSelectOptionIcon,
+                        guild: p[e.value],
+                        size: f.default.Sizes.SMOL,
                         active: !0
                     })
-                }, [N, l]);
-                return (0, a.jsx)(d.default, {
-                    className: i(T.section, s),
-                    title: m.default.Messages.PROFILE_CUSTOMIZATION_GUILD_SELECT_TITLE,
-                    hideDivider: _,
-                    forcedDivider: !0,
-                    children: (0, a.jsx)(o.SearchableSelect, {
-                        isDisabled: p,
-                        onChange: e => {
-                            if ("" === e || e === (null == l ? void 0 : l.value)) {
-                                g(null);
-                                return
-                            }
-                            let t = N[e];
-                            null != t && g(t)
-                        },
-                        value: t,
-                        options: C,
-                        renderOptionPrefix: A,
-                        renderOptionSuffix: h,
-                        placeholder: m.default.Messages.PROFILE_CUSTOMIZATION_GUILD_SELECT_PLACEHOLDER
-                    })
+                }, [p, n]);
+                return (0, r.jsx)(s.SearchableSelect, {
+                    isDisabled: u,
+                    onChange: e => {
+                        if ("" === e || e === (null == n ? void 0 : n.value)) {
+                            i(null);
+                            return
+                        }
+                        let t = p[e];
+                        null != t && i(t)
+                    },
+                    value: t,
+                    options: g,
+                    renderOptionPrefix: F,
+                    renderOptionSuffix: l,
+                    placeholder: C.default.Messages.PROFILE_CUSTOMIZATION_GUILD_SELECT_PLACEHOLDER
                 })
             }

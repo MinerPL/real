@@ -6,11 +6,11 @@
             }
             n.prototype.update = function(t, e) {
                 "string" == typeof t && (e = e || "utf8", t = i.from(t, e));
-                for (var r = this._block, n = this._blockSize, a = t.length, o = this._len, s = 0; s < a;) {
-                    for (var f = o % n, h = Math.min(a - s, n - f), c = 0; c < h; c++) r[f + c] = t[s + c];
-                    o += h, s += h, o % n == 0 && this._update(r)
+                for (var r = this._block, n = this._blockSize, o = t.length, a = this._len, s = 0; s < o;) {
+                    for (var f = a % n, h = Math.min(o - s, n - f), c = 0; c < h; c++) r[f + c] = t[s + c];
+                    a += h, s += h, a % n == 0 && this._update(r)
                 }
-                return this._len += a, this
+                return this._len += o, this
             }, n.prototype.digest = function(t) {
                 var e = this._len % this._blockSize;
                 this._block[e] = 128, this._block.fill(0, e + 1), e >= this._finalSize && (this._update(this._block), this._block.fill(0));

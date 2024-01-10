@@ -35,8 +35,8 @@
                 N = n("913491"),
                 L = n("574073"),
                 v = n("738352"),
-                x = n("865343"),
-                R = n("380986"),
+                R = n("865343"),
+                x = n("380986"),
                 y = n("85470"),
                 D = n("969706"),
                 O = n("39331"),
@@ -75,7 +75,7 @@
                 } = (0, u.useListItem)(null !== (t = e.id) && void 0 !== t ? t : ""), h = (0, d.useStateFromStores)([E.default], () => E.default.getMessageByReference(l)), {
                     popouts: C,
                     setPopout: p
-                } = (0, D.default)(a.id, w.DEFAULT_POPOUTS), m = (0, L.default)(a), g = (0, x.getMessageAriaLabelledBy)(a), S = (0, x.getMessageAriaDescribedBy)(a);
+                } = (0, D.default)(a.id, w.DEFAULT_POPOUTS), m = (0, L.default)(a), g = (0, R.getMessageAriaLabelledBy)(a), S = (0, R.getMessageAriaDescribedBy)(a);
                 return a.type === V.MessageTypes.THREAD_STARTER_MESSAGE && null != h && h.state === E.ReferencedMessageState.LOADED ? (0, s.jsx)(Y, {
                     ...e,
                     message: h.message,
@@ -127,7 +127,7 @@
                     isFocused: K,
                     handleFocus: Y,
                     handleBlur: q
-                } = (0, R.useFocusInside)(k), {
+                } = (0, x.useFocusInside)(k), {
                     popouts: X,
                     selected: J,
                     setPopout: Q
@@ -135,7 +135,7 @@
                     handleMouseEnter: ea,
                     handleMouseLeave: el,
                     isHovered: ei
-                } = (0, R.useHoveredMessage)(P, m.author.id, J), er = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), eo = J || er && K, eu = eo || ei, {
+                } = (0, x.useHoveredMessage)(P, m.author.id, J), er = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), eo = J || er && K, eu = eo || ei, {
                     content: ed,
                     hasSpoilerEmbeds: ec
                 } = (0, O.default)(m, {
@@ -146,7 +146,7 @@
                     allowHeading: en.showListsAndHeaders || es.showListsAndHeaders,
                     allowLinks: en.showMaskedLinks || es.showMaskedLinks,
                     previewLinkTarget: en.showMaskedLinks || es.showMaskedLinks
-                }), ef = (0, y.default)(_, A, er), eh = (0, L.default)(m), eC = (0, x.getMessageAriaLabelledBy)(m, P), ep = (0, x.getMessageAriaDescribedBy)(m), em = (0, H.default)(e, ed, !1), eE = a.useCallback(() => (0, g.transitionToGuild)(I, A, _), [I, A, _]), eg = (0, p.useRoleIcon)({
+                }), ef = (0, y.default)(_, A, er), eh = (0, L.default)(m), eC = (0, R.getMessageAriaLabelledBy)(m, P), ep = (0, R.getMessageAriaDescribedBy)(m), em = (0, H.default)(e, ed, !1), eE = a.useCallback(() => (0, g.transitionToGuild)(I, A, _), [I, A, _]), eg = (0, p.useRoleIcon)({
                     guildId: I,
                     roleId: eh.iconRoleId
                 });
@@ -235,20 +235,20 @@
                         selected: er,
                         setPopout: eo
                     } = (0, D.default)(I.id, w.DEFAULT_POPOUTS),
-                    eu = (0, R.useContextMenuMessage)(I, K, eo),
-                    ed = (0, R.useClickMessage)(I, K),
+                    eu = (0, x.useContextMenuMessage)(I, K, eo),
+                    ed = (0, x.useClickMessage)(I, K),
                     {
                         handleMouseEnter: ec,
                         handleMouseLeave: ef,
                         hasHovered: eh,
                         isHovered: eC
-                    } = (0, R.useHoveredMessage)(Q, I.author.id, er),
+                    } = (0, x.useHoveredMessage)(Q, I.author.id, er),
                     {
                         isFocused: ep,
                         hasFocused: em,
                         handleFocus: eE,
                         handleBlur: eg
-                    } = (0, R.useFocusInside)(et),
+                    } = (0, x.useFocusInside)(et),
                     eS = (0, d.useStateFromStores)([A.default], () => A.default.isEditing(Y, Z), [Y, Z]),
                     e_ = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled),
                     eA = er || eS || e_ && ep,
@@ -259,7 +259,7 @@
                     eL = (0, h.useShowImprovedMarkdownGuildExperimentConfig)(K.guild_id, (null !== (l = I.editedTimestamp) && void 0 !== l ? l : I.timestamp).valueOf()),
                     {
                         content: ev,
-                        hasSpoilerEmbeds: ex
+                        hasSpoilerEmbeds: eR
                     } = (0, O.default)(I, {
                         hideSimpleEmbedContent: es && ea,
                         isInteracting: eT,
@@ -269,7 +269,7 @@
                         allowLinks: eN.showMaskedLinks || eL.showMaskedLinks,
                         previewLinkTarget: eN.showMaskedLinks || eL.showMaskedLinks
                     }),
-                    eR = (0, y.default)(Z, Y, e_),
+                    ex = (0, y.default)(Z, Y, e_),
                     ey = (0, L.default)(I),
                     eD = (0, d.useStateFromStores)([m.default], () => m.default.getPendingReply(Y)),
                     eO = function(e) {
@@ -280,8 +280,8 @@
                         guildId: K.guild_id,
                         roleId: ey.iconRoleId
                     }),
-                    eb = (0, x.getMessageAriaLabelledBy)(I, Q),
-                    eP = (0, x.getMessageAriaDescribedBy)(I),
+                    eb = (0, R.getMessageAriaLabelledBy)(I, Q),
+                    eP = (0, R.getMessageAriaDescribedBy)(I),
                     eF = (0, d.useStateFromStores)([C.default], () => C.default.getMessage(Z), [Z]),
                     [eU, eH] = a.useState(!1),
                     ek = (0, j.default)({
@@ -309,7 +309,7 @@
                                 onFocus: eE,
                                 onBlur: eg,
                                 onContextMenu: eu,
-                                onKeyDown: eR,
+                                onKeyDown: ex,
                                 onClick: ed,
                                 compact: q,
                                 contentOnly: $,
@@ -339,7 +339,7 @@
                                 }),
                                 childrenAccessories: (0, b.default)({
                                     channelMessageProps: e,
-                                    hasSpoilerEmbeds: ex,
+                                    hasSpoilerEmbeds: eR,
                                     handleContextMenu: eu,
                                     isInteracting: eT,
                                     isAutomodBlockedMessage: eG,

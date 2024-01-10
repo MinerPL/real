@@ -1,8 +1,8 @@
             "use strict";
             var i = r("446825").Buffer,
                 n = r("599235"),
-                a = r("82221"),
-                o = Array(16),
+                o = r("82221"),
+                a = Array(16),
                 s = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 7, 4, 13, 1, 10, 6, 15, 3, 12, 0, 9, 5, 2, 14, 11, 8, 3, 10, 14, 4, 9, 15, 8, 1, 2, 7, 0, 6, 13, 11, 5, 12, 1, 9, 11, 10, 0, 8, 12, 4, 13, 3, 7, 15, 14, 5, 6, 2, 4, 0, 5, 9, 7, 12, 2, 10, 14, 1, 3, 8, 11, 6, 15, 13],
                 f = [5, 14, 7, 0, 9, 2, 11, 4, 13, 6, 15, 8, 1, 10, 3, 12, 6, 11, 3, 7, 0, 13, 5, 10, 14, 15, 8, 12, 4, 9, 1, 2, 15, 5, 1, 3, 7, 14, 6, 9, 11, 8, 12, 2, 10, 0, 4, 13, 8, 6, 4, 1, 3, 11, 15, 0, 5, 12, 2, 13, 9, 7, 10, 14, 12, 15, 10, 4, 1, 5, 8, 7, 6, 2, 13, 14, 0, 3, 9, 11],
                 h = [11, 14, 15, 12, 5, 8, 7, 9, 11, 13, 14, 15, 6, 7, 9, 8, 7, 6, 8, 13, 11, 9, 7, 15, 7, 12, 15, 9, 11, 7, 13, 12, 11, 13, 6, 7, 14, 9, 13, 15, 14, 8, 13, 6, 5, 12, 7, 5, 11, 12, 14, 15, 14, 15, 9, 8, 9, 14, 5, 6, 8, 6, 5, 12, 9, 15, 5, 11, 6, 8, 13, 12, 5, 12, 13, 14, 11, 8, 5, 6],
@@ -11,57 +11,57 @@
                 d = [1352829926, 1548603684, 1836072691, 2053994217, 0];
 
             function l() {
-                a.call(this, 64), this._a = 1732584193, this._b = 4023233417, this._c = 2562383102, this._d = 271733878, this._e = 3285377520
+                o.call(this, 64), this._a = 1732584193, this._b = 4023233417, this._c = 2562383102, this._d = 271733878, this._e = 3285377520
             }
 
             function p(t, e) {
                 return t << e | t >>> 32 - e
             }
 
-            function b(t, e, r, i, n, a, o, s) {
-                return p(t + (e ^ r ^ i) + a + o | 0, s) + n | 0
+            function b(t, e, r, i, n, o, a, s) {
+                return p(t + (e ^ r ^ i) + o + a | 0, s) + n | 0
             }
 
-            function m(t, e, r, i, n, a, o, s) {
-                return p(t + (e & r | ~e & i) + a + o | 0, s) + n | 0
+            function m(t, e, r, i, n, o, a, s) {
+                return p(t + (e & r | ~e & i) + o + a | 0, s) + n | 0
             }
 
-            function g(t, e, r, i, n, a, o, s) {
-                return p(t + ((e | ~r) ^ i) + a + o | 0, s) + n | 0
+            function g(t, e, r, i, n, o, a, s) {
+                return p(t + ((e | ~r) ^ i) + o + a | 0, s) + n | 0
             }
 
-            function v(t, e, r, i, n, a, o, s) {
-                return p(t + (e & i | r & ~i) + a + o | 0, s) + n | 0
+            function y(t, e, r, i, n, o, a, s) {
+                return p(t + (e & i | r & ~i) + o + a | 0, s) + n | 0
             }
 
-            function y(t, e, r, i, n, a, o, s) {
-                return p(t + (e ^ (r | ~i)) + a + o | 0, s) + n | 0
+            function v(t, e, r, i, n, o, a, s) {
+                return p(t + (e ^ (r | ~i)) + o + a | 0, s) + n | 0
             }
-            n(l, a), l.prototype._update = function() {
-                for (var t, e, r = 0; r < 16; ++r) o[r] = this._block.readInt32LE(4 * r);
-                for (var i = 0 | this._a, n = 0 | this._b, a = 0 | this._c, u = 0 | this._d, d = 0 | this._e, l = 0 | this._a, b = 0 | this._b, m = 0 | this._c, g = 0 | this._d, v = 0 | this._e, y = 0; y < 80; y += 1) y < 16 ? (t = function(t, e, r, i, n, a, o, s) {
-                    return p(t + (e ^ r ^ i) + a + o | 0, s) + n | 0
-                }(i, n, a, u, d, o[s[y]], 0, h[y]), e = function(t, e, r, i, n, a, o, s) {
-                    return p(t + (e ^ (r | ~i)) + a + o | 0, s) + n | 0
-                }(l, b, m, g, v, o[f[y]], 1352829926, c[y])) : y < 32 ? (t = function(t, e, r, i, n, a, o, s) {
-                    return p(t + (e & r | ~e & i) + a + o | 0, s) + n | 0
-                }(i, n, a, u, d, o[s[y]], 1518500249, h[y]), e = function(t, e, r, i, n, a, o, s) {
-                    return p(t + (e & i | r & ~i) + a + o | 0, s) + n | 0
-                }(l, b, m, g, v, o[f[y]], 1548603684, c[y])) : y < 48 ? (t = function(t, e, r, i, n, a, o, s) {
-                    return p(t + ((e | ~r) ^ i) + a + o | 0, s) + n | 0
-                }(i, n, a, u, d, o[s[y]], 1859775393, h[y]), e = function(t, e, r, i, n, a, o, s) {
-                    return p(t + ((e | ~r) ^ i) + a + o | 0, s) + n | 0
-                }(l, b, m, g, v, o[f[y]], 1836072691, c[y])) : y < 64 ? (t = function(t, e, r, i, n, a, o, s) {
-                    return p(t + (e & i | r & ~i) + a + o | 0, s) + n | 0
-                }(i, n, a, u, d, o[s[y]], 2400959708, h[y]), e = function(t, e, r, i, n, a, o, s) {
-                    return p(t + (e & r | ~e & i) + a + o | 0, s) + n | 0
-                }(l, b, m, g, v, o[f[y]], 2053994217, c[y])) : (t = function(t, e, r, i, n, a, o, s) {
-                    return p(t + (e ^ (r | ~i)) + a + o | 0, s) + n | 0
-                }(i, n, a, u, d, o[s[y]], 2840853838, h[y]), e = function(t, e, r, i, n, a, o, s) {
-                    return p(t + (e ^ r ^ i) + a + o | 0, s) + n | 0
-                }(l, b, m, g, v, o[f[y]], 0, c[y])), i = d, d = u, u = p(a, 10), a = n, n = t, l = v, v = g, g = p(m, 10), m = b, b = e;
-                var _ = this._b + a + g | 0;
-                this._b = this._c + u + v | 0, this._c = this._d + d + l | 0, this._d = this._e + i + b | 0, this._e = this._a + n + m | 0, this._a = _
+            n(l, o), l.prototype._update = function() {
+                for (var t, e, r = 0; r < 16; ++r) a[r] = this._block.readInt32LE(4 * r);
+                for (var i = 0 | this._a, n = 0 | this._b, o = 0 | this._c, u = 0 | this._d, d = 0 | this._e, l = 0 | this._a, b = 0 | this._b, m = 0 | this._c, g = 0 | this._d, y = 0 | this._e, v = 0; v < 80; v += 1) v < 16 ? (t = function(t, e, r, i, n, o, a, s) {
+                    return p(t + (e ^ r ^ i) + o + a | 0, s) + n | 0
+                }(i, n, o, u, d, a[s[v]], 0, h[v]), e = function(t, e, r, i, n, o, a, s) {
+                    return p(t + (e ^ (r | ~i)) + o + a | 0, s) + n | 0
+                }(l, b, m, g, y, a[f[v]], 1352829926, c[v])) : v < 32 ? (t = function(t, e, r, i, n, o, a, s) {
+                    return p(t + (e & r | ~e & i) + o + a | 0, s) + n | 0
+                }(i, n, o, u, d, a[s[v]], 1518500249, h[v]), e = function(t, e, r, i, n, o, a, s) {
+                    return p(t + (e & i | r & ~i) + o + a | 0, s) + n | 0
+                }(l, b, m, g, y, a[f[v]], 1548603684, c[v])) : v < 48 ? (t = function(t, e, r, i, n, o, a, s) {
+                    return p(t + ((e | ~r) ^ i) + o + a | 0, s) + n | 0
+                }(i, n, o, u, d, a[s[v]], 1859775393, h[v]), e = function(t, e, r, i, n, o, a, s) {
+                    return p(t + ((e | ~r) ^ i) + o + a | 0, s) + n | 0
+                }(l, b, m, g, y, a[f[v]], 1836072691, c[v])) : v < 64 ? (t = function(t, e, r, i, n, o, a, s) {
+                    return p(t + (e & i | r & ~i) + o + a | 0, s) + n | 0
+                }(i, n, o, u, d, a[s[v]], 2400959708, h[v]), e = function(t, e, r, i, n, o, a, s) {
+                    return p(t + (e & r | ~e & i) + o + a | 0, s) + n | 0
+                }(l, b, m, g, y, a[f[v]], 2053994217, c[v])) : (t = function(t, e, r, i, n, o, a, s) {
+                    return p(t + (e ^ (r | ~i)) + o + a | 0, s) + n | 0
+                }(i, n, o, u, d, a[s[v]], 2840853838, h[v]), e = function(t, e, r, i, n, o, a, s) {
+                    return p(t + (e ^ r ^ i) + o + a | 0, s) + n | 0
+                }(l, b, m, g, y, a[f[v]], 0, c[v])), i = d, d = u, u = p(o, 10), o = n, n = t, l = y, y = g, g = p(m, 10), m = b, b = e;
+                var _ = this._b + o + g | 0;
+                this._b = this._c + u + y | 0, this._c = this._d + d + l | 0, this._d = this._e + i + b | 0, this._e = this._a + n + m | 0, this._a = _
             }, l.prototype._digest = function() {
                 this._block[this._blockOffset++] = 128, this._blockOffset > 56 && (this._block.fill(0, this._blockOffset, 64), this._update(), this._blockOffset = 0), this._block.fill(0, this._blockOffset, 56), this._block.writeUInt32LE(this._length[0], 56), this._block.writeUInt32LE(this._length[1], 60), this._update();
                 var t = i.alloc ? i.alloc(20) : new i(20);

@@ -5,14 +5,14 @@
                 this.seq().obj(this.key("version").int(), this.key("modulus").int(), this.key("publicExponent").int(), this.key("privateExponent").int(), this.key("prime1").int(), this.key("prime2").int(), this.key("exponent1").int(), this.key("exponent2").int(), this.key("coefficient").int())
             });
             e.RSAPrivateKey = n;
-            var a = i.define("RSAPublicKey", function() {
+            var o = i.define("RSAPublicKey", function() {
                 this.seq().obj(this.key("modulus").int(), this.key("publicExponent").int())
             });
-            e.RSAPublicKey = a;
-            var o = i.define("SubjectPublicKeyInfo", function() {
+            e.RSAPublicKey = o;
+            var a = i.define("SubjectPublicKeyInfo", function() {
                 this.seq().obj(this.key("algorithm").use(s), this.key("subjectPublicKey").bitstr())
             });
-            e.PublicKey = o;
+            e.PublicKey = a;
             var s = i.define("AlgorithmIdentifier", function() {
                     this.seq().obj(this.key("algorithm").objid(), this.key("none").null_().optional(), this.key("curve").objid().optional(), this.key("params").seq().obj(this.key("p").int(), this.key("q").int(), this.key("g").int()).optional())
                 }),

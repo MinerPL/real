@@ -2,8 +2,8 @@
             r("424973"), r("70102");
             let i = r("571405").Reporter,
                 n = r("13020").EncoderBuffer,
-                a = r("13020").DecoderBuffer,
-                o = r("463483"),
+                o = r("13020").DecoderBuffer,
+                a = r("463483"),
                 s = ["seq", "seqof", "set", "setof", "objid", "bool", "gentime", "utctime", "null_", "enum", "int", "objDesc", "bitstr", "bmpstr", "charstr", "genstr", "graphstr", "ia5str", "iso646str", "numstr", "octstr", "printstr", "t61str", "unistr", "utf8str", "videostr"],
                 f = ["key", "obj", "use", "optional", "explicit", "implicit", "def", "choice", "any", "contains"].concat(s);
 
@@ -31,9 +31,9 @@
                 }, this)
             }, Node.prototype._init = function(t) {
                 let e = this._baseState;
-                o(null === e.parent), t.call(this), e.children = e.children.filter(function(t) {
+                a(null === e.parent), t.call(this), e.children = e.children.filter(function(t) {
                     return t._baseState.parent === this
-                }, this), o.equal(e.children.length, 1, "Root node can have only one child")
+                }, this), a.equal(e.children.length, 1, "Root node can have only one child")
             }, Node.prototype._useArgs = function(t) {
                 let e = this._baseState,
                     r = t.filter(function(t) {
@@ -41,9 +41,9 @@
                     }, this);
                 t = t.filter(function(t) {
                     return !(t instanceof this.constructor)
-                }, this), 0 !== r.length && (o(null === e.children), e.children = r, r.forEach(function(t) {
+                }, this), 0 !== r.length && (a(null === e.children), e.children = r, r.forEach(function(t) {
                     t._baseState.parent = this
-                }, this)), 0 !== t.length && (o(null === e.args), e.args = t, e.reverseArgs = t.map(function(t) {
+                }, this)), 0 !== t.length && (a(null === e.args), e.args = t, e.reverseArgs = t.map(function(t) {
                     if ("object" != typeof t || t.constructor !== Object) return t;
                     let e = {};
                     return Object.keys(t).forEach(function(r) {
@@ -61,64 +61,64 @@
                 Node.prototype[t] = function() {
                     let e = this._baseState,
                         r = Array.prototype.slice.call(arguments);
-                    return o(null === e.tag), e.tag = t, this._useArgs(r), this
+                    return a(null === e.tag), e.tag = t, this._useArgs(r), this
                 }
             }), Node.prototype.use = function(t) {
-                o(t);
+                a(t);
                 let e = this._baseState;
-                return o(null === e.use), e.use = t, this
+                return a(null === e.use), e.use = t, this
             }, Node.prototype.optional = function() {
                 let t = this._baseState;
                 return t.optional = !0, this
             }, Node.prototype.def = function(t) {
                 let e = this._baseState;
-                return o(null === e.default), e.default = t, e.optional = !0, this
+                return a(null === e.default), e.default = t, e.optional = !0, this
             }, Node.prototype.explicit = function(t) {
                 let e = this._baseState;
-                return o(null === e.explicit && null === e.implicit), e.explicit = t, this
+                return a(null === e.explicit && null === e.implicit), e.explicit = t, this
             }, Node.prototype.implicit = function(t) {
                 let e = this._baseState;
-                return o(null === e.explicit && null === e.implicit), e.implicit = t, this
+                return a(null === e.explicit && null === e.implicit), e.implicit = t, this
             }, Node.prototype.obj = function() {
                 let t = this._baseState,
                     e = Array.prototype.slice.call(arguments);
                 return t.obj = !0, 0 !== e.length && this._useArgs(e), this
             }, Node.prototype.key = function(t) {
                 let e = this._baseState;
-                return o(null === e.key), e.key = t, this
+                return a(null === e.key), e.key = t, this
             }, Node.prototype.any = function() {
                 let t = this._baseState;
                 return t.any = !0, this
             }, Node.prototype.choice = function(t) {
                 let e = this._baseState;
-                return o(null === e.choice), e.choice = t, this._useArgs(Object.keys(t).map(function(e) {
+                return a(null === e.choice), e.choice = t, this._useArgs(Object.keys(t).map(function(e) {
                     return t[e]
                 })), this
             }, Node.prototype.contains = function(t) {
                 let e = this._baseState;
-                return o(null === e.use), e.contains = t, this
+                return a(null === e.use), e.contains = t, this
             }, Node.prototype._decode = function(t, e) {
                 let r;
                 let i = this._baseState;
                 if (null === i.parent) return t.wrapResult(i.children[0]._decode(t, e));
                 let n = i.default,
-                    o = !0,
+                    a = !0,
                     s = null;
                 if (null !== i.key && (s = t.enterKey(i.key)), i.optional) {
                     let r = null;
                     if (null !== i.explicit ? r = i.explicit : null !== i.implicit ? r = i.implicit : null !== i.tag && (r = i.tag), null !== r || i.any) {
-                        if (o = this._peekTag(t, r, i.any), t.isError(o)) return o
+                        if (a = this._peekTag(t, r, i.any), t.isError(a)) return a
                     } else {
                         let r = t.save();
                         try {
-                            null === i.choice ? this._decodeGeneric(i.tag, t, e) : this._decodeChoice(t, e), o = !0
+                            null === i.choice ? this._decodeGeneric(i.tag, t, e) : this._decodeChoice(t, e), a = !0
                         } catch (t) {
-                            o = !1
+                            a = !1
                         }
                         t.restore(r)
                     }
                 }
-                if (i.obj && o && (r = t.enterObject()), o) {
+                if (i.obj && a && (r = t.enterObject()), a) {
                     if (null !== i.explicit) {
                         let e = this._decodeTag(t, i.explicit);
                         if (t.isError(e)) return e;
@@ -136,11 +136,11 @@
                     if (!i.any && null === i.choice && null !== i.children && i.children.forEach(function(r) {
                             r._decode(t, e)
                         }), i.contains && ("octstr" === i.tag || "bitstr" === i.tag)) {
-                        let r = new a(n);
+                        let r = new o(n);
                         n = this._getUse(i.contains, t._reporterState.obj)._decode(r, e)
                     }
                 }
-                return i.obj && o && (n = t.leaveObject(r)), null !== i.key && (null !== n || !0 === o) ? t.leaveKey(s, i.key, n) : null !== s && t.exitKey(s), n
+                return i.obj && a && (n = t.leaveObject(r)), null !== i.key && (null !== n || !0 === a) ? t.leaveKey(s, i.key, n) : null !== s && t.exitKey(s), n
             }, Node.prototype._decodeGeneric = function(t, e, r) {
                 let i = this._baseState;
                 if ("seq" === t || "set" === t) return null;
@@ -156,23 +156,23 @@
                 return null !== i.use ? this._getUse(i.use, e._reporterState.obj)._decode(e, r) : e.error("unknown tag: " + t)
             }, Node.prototype._getUse = function(t, e) {
                 let r = this._baseState;
-                return r.useDecoder = this._use(t, e), o(null === r.useDecoder._baseState.parent), r.useDecoder = r.useDecoder._baseState.children[0], r.implicit !== r.useDecoder._baseState.implicit && (r.useDecoder = r.useDecoder.clone(), r.useDecoder._baseState.implicit = r.implicit), r.useDecoder
+                return r.useDecoder = this._use(t, e), a(null === r.useDecoder._baseState.parent), r.useDecoder = r.useDecoder._baseState.children[0], r.implicit !== r.useDecoder._baseState.implicit && (r.useDecoder = r.useDecoder.clone(), r.useDecoder._baseState.implicit = r.implicit), r.useDecoder
             }, Node.prototype._decodeChoice = function(t, e) {
                 let r = this._baseState,
                     i = null,
                     n = !1;
-                return (Object.keys(r.choice).some(function(a) {
-                    let o = t.save(),
-                        s = r.choice[a];
+                return (Object.keys(r.choice).some(function(o) {
+                    let a = t.save(),
+                        s = r.choice[o];
                     try {
                         let r = s._decode(t, e);
                         if (t.isError(r)) return !1;
                         i = {
-                            type: a,
+                            type: o,
                             value: r
                         }, n = !0
                     } catch (e) {
-                        return t.restore(o), !1
+                        return t.restore(a), !1
                     }
                     return !0
                 }, this), n) ? i : t.error("Choice not matched")
@@ -188,17 +188,17 @@
             }, Node.prototype._encodeValue = function(t, e, r) {
                 let n = this._baseState;
                 if (null === n.parent) return n.children[0]._encode(t, e || new i);
-                let a = null;
+                let o = null;
                 if (this.reporter = e, n.optional && void 0 === t) {
                     if (null === n.default) return;
                     t = n.default
                 }
-                let o = null,
+                let a = null,
                     s = !1;
-                if (n.any) a = this._createEncoderBuffer(t);
-                else if (n.choice) a = this._encodeChoice(t, e);
-                else if (n.contains) o = this._getUse(n.contains, r)._encode(t, e), s = !0;
-                else if (n.children) o = n.children.map(function(r) {
+                if (n.any) o = this._createEncoderBuffer(t);
+                else if (n.choice) o = this._encodeChoice(t, e);
+                else if (n.contains) a = this._getUse(n.contains, r)._encode(t, e), s = !0;
+                else if (n.children) a = n.children.map(function(r) {
                     if ("null_" === r._baseState.tag) return r._encode(null, e, t);
                     if (null === r._baseState.key) return e.error("Child should have a key");
                     let i = e.enterKey(r._baseState.key);
@@ -207,26 +207,26 @@
                     return e.leaveKey(i), n
                 }, this).filter(function(t) {
                     return t
-                }), o = this._createEncoderBuffer(o);
+                }), a = this._createEncoderBuffer(a);
                 else if ("seqof" === n.tag || "setof" === n.tag) {
                     if (!(n.args && 1 === n.args.length)) return e.error("Too many args for : " + n.tag);
                     if (!Array.isArray(t)) return e.error("seqof/setof, but data is not Array");
                     let r = this.clone();
-                    r._baseState.implicit = null, o = this._createEncoderBuffer(t.map(function(r) {
+                    r._baseState.implicit = null, a = this._createEncoderBuffer(t.map(function(r) {
                         let i = this._baseState;
                         return this._getUse(i.args[0], t)._encode(r, e)
                     }, r))
-                } else null !== n.use ? a = this._getUse(n.use, r)._encode(t, e) : (o = this._encodePrimitive(n.tag, t), s = !0);
+                } else null !== n.use ? o = this._getUse(n.use, r)._encode(t, e) : (a = this._encodePrimitive(n.tag, t), s = !0);
                 if (!n.any && null === n.choice) {
                     let t = null !== n.implicit ? n.implicit : n.tag,
                         r = null === n.implicit ? "universal" : "context";
-                    null === t ? null === n.use && e.error("Tag could be omitted only for .use()") : null === n.use && (a = this._encodeComposite(t, s, r, o))
+                    null === t ? null === n.use && e.error("Tag could be omitted only for .use()") : null === n.use && (o = this._encodeComposite(t, s, r, a))
                 }
-                return null !== n.explicit && (a = this._encodeComposite(n.explicit, !1, "context", a)), a
+                return null !== n.explicit && (o = this._encodeComposite(n.explicit, !1, "context", o)), o
             }, Node.prototype._encodeChoice = function(t, e) {
                 let r = this._baseState,
                     i = r.choice[t.type];
-                return !i && o(!1, t.type + " not found in " + JSON.stringify(Object.keys(r.choice))), i._encode(t.value, e)
+                return !i && a(!1, t.type + " not found in " + JSON.stringify(Object.keys(r.choice))), i._encode(t.value, e)
             }, Node.prototype._encodePrimitive = function(t, e) {
                 let r = this._baseState;
                 if (/str$/.test(t)) return this._encodeStr(e, t);

@@ -6,9 +6,9 @@
                     var r, i, n = e.shift();
                     if (!!n) {
                         if ("object" != typeof n) throw TypeError(n + "must be non-object");
-                        for (var a in n) {
+                        for (var o in n) {
                             ;
-                            if (r = n, i = a, Object.prototype.hasOwnProperty.call(r, i)) t[a] = n[a]
+                            if (r = n, i = o, Object.prototype.hasOwnProperty.call(r, i)) t[o] = n[o]
                         }
                     }
                 }
@@ -22,23 +22,23 @@
                             t.set(e.subarray(r, r + i), n);
                             return
                         }
-                        for (var a = 0; a < i; a++) t[n + a] = e[r + a]
+                        for (var o = 0; o < i; o++) t[n + o] = e[r + o]
                     },
                     flattenChunks: function(t) {
-                        var e, r, i, n, a, o;
+                        var e, r, i, n, o, a;
                         for (e = 0, i = 0, r = t.length; e < r; e++) i += t[e].length;
-                        for (e = 0, o = new Uint8Array(i), n = 0, r = t.length; e < r; e++) a = t[e], o.set(a, n), n += a.length;
-                        return o
+                        for (e = 0, a = new Uint8Array(i), n = 0, r = t.length; e < r; e++) o = t[e], a.set(o, n), n += o.length;
+                        return a
                     }
                 },
-                a = {
+                o = {
                     arraySet: function(t, e, r, i, n) {
-                        for (var a = 0; a < i; a++) t[n + a] = e[r + a]
+                        for (var o = 0; o < i; o++) t[n + o] = e[r + o]
                     },
                     flattenChunks: function(t) {
                         return [].concat.apply([], t)
                     }
                 };
             e.setTyped = function(t) {
-                t ? (e.Buf8 = Uint8Array, e.Buf16 = Uint16Array, e.Buf32 = Int32Array, e.assign(e, n)) : (e.Buf8 = Array, e.Buf16 = Array, e.Buf32 = Array, e.assign(e, a))
+                t ? (e.Buf8 = Uint8Array, e.Buf16 = Uint16Array, e.Buf32 = Int32Array, e.assign(e, n)) : (e.Buf8 = Array, e.Buf16 = Array, e.Buf32 = Array, e.assign(e, o))
             }, e.setTyped(i)

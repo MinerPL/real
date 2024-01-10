@@ -6,17 +6,17 @@
                         generalTime: this.gentime()
                     })
                 }),
-                a = i.define("AttributeTypeValue", function() {
+                o = i.define("AttributeTypeValue", function() {
                     this.seq().obj(this.key("type").objid(), this.key("value").any())
                 }),
-                o = i.define("AlgorithmIdentifier", function() {
+                a = i.define("AlgorithmIdentifier", function() {
                     this.seq().obj(this.key("algorithm").objid(), this.key("parameters").optional(), this.key("curve").objid().optional())
                 }),
                 s = i.define("SubjectPublicKeyInfo", function() {
-                    this.seq().obj(this.key("algorithm").use(o), this.key("subjectPublicKey").bitstr())
+                    this.seq().obj(this.key("algorithm").use(a), this.key("subjectPublicKey").bitstr())
                 }),
                 f = i.define("RelativeDistinguishedName", function() {
-                    this.setof(a)
+                    this.setof(o)
                 }),
                 h = i.define("RDNSequence", function() {
                     this.seqof(f)
@@ -33,9 +33,9 @@
                     this.seq().obj(this.key("extnID").objid(), this.key("critical").bool().def(!1), this.key("extnValue").octstr())
                 }),
                 l = i.define("TBSCertificate", function() {
-                    this.seq().obj(this.key("version").explicit(0).int().optional(), this.key("serialNumber").int(), this.key("signature").use(o), this.key("issuer").use(c), this.key("validity").use(u), this.key("subject").use(c), this.key("subjectPublicKeyInfo").use(s), this.key("issuerUniqueID").implicit(1).bitstr().optional(), this.key("subjectUniqueID").implicit(2).bitstr().optional(), this.key("extensions").explicit(3).seqof(d).optional())
+                    this.seq().obj(this.key("version").explicit(0).int().optional(), this.key("serialNumber").int(), this.key("signature").use(a), this.key("issuer").use(c), this.key("validity").use(u), this.key("subject").use(c), this.key("subjectPublicKeyInfo").use(s), this.key("issuerUniqueID").implicit(1).bitstr().optional(), this.key("subjectUniqueID").implicit(2).bitstr().optional(), this.key("extensions").explicit(3).seqof(d).optional())
                 }),
                 p = i.define("X509Certificate", function() {
-                    this.seq().obj(this.key("tbsCertificate").use(l), this.key("signatureAlgorithm").use(o), this.key("signatureValue").bitstr())
+                    this.seq().obj(this.key("tbsCertificate").use(l), this.key("signatureAlgorithm").use(a), this.key("signatureValue").bitstr())
                 });
             t.exports = p
