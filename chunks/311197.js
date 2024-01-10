@@ -15,8 +15,8 @@
                 c = n("826267"),
                 f = n("664336"),
                 E = n("333491"),
-                h = n("263362"),
-                _ = n("470965"),
+                _ = n("263362"),
+                h = n("470965"),
                 S = n("133335"),
                 T = n("782340"),
                 p = n("759956");
@@ -33,7 +33,7 @@
                 }, {
                     autoTrackExposure: !1
                 }), R = (0, s.useStateFromStores)([i.default], () => C && i.default.getUnseenInviteCount() > 0);
-                return (0, l.jsx)(h.RecentsPopout, {
+                return (0, l.jsx)(_.RecentsPopout, {
                     onOpen: t,
                     onClose: n,
                     badgeState: {
@@ -44,7 +44,7 @@
                     children: (e, t, n) => (0, l.jsxs)("div", {
                         ref: A,
                         className: p.recentsIcon,
-                        children: [C && (0, l.jsx)(_.default, {
+                        children: [C && (0, l.jsx)(h.default, {
                             inboxIconRef: A,
                             recentsPopoutShown: t
                         }), (0, l.jsx)(f.Icon, {
