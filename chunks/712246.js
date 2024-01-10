@@ -1,12 +1,12 @@
             "use strict";
-            s.r(t), s.d(t, {
+            a.r(t), a.d(t, {
                 default: function() {
                     return u
                 }
             });
-            var a = s("627445"),
-                l = s.n(a),
-                n = s("413524");
+            var s = a("627445"),
+                l = a.n(s),
+                n = a("413524");
 
             function u(e) {
                 if (e !== n.ClearAfterValues.TODAY) return l("number" == typeof e, "Invalid custom status clear timeout"), e;

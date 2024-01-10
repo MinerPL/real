@@ -1,5 +1,5 @@
             "use strict";
-            s.r(t), s.d(t, {
+            a.r(t), a.d(t, {
                 STATUS_MAX_LENGTH: function() {
                     return l
                 },
@@ -7,11 +7,11 @@
                     return n
                 }
             });
-            let a = 36e5,
+            let s = 36e5,
                 l = 128,
                 n = Object.freeze({
                     MINUTES_30: 18e5,
-                    HOURS_1: 1 * a,
-                    HOURS_4: 4 * a,
+                    HOURS_1: 1 * s,
+                    HOURS_4: 4 * s,
                     TODAY: "TODAY"
                 })

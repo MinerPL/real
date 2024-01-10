@@ -31,7 +31,7 @@
             function h(e) {
                 let {
                     favoritesEnabled: t,
-                    isFavoritesPerk: n
+                    hasStaffPrivileges: n
                 } = (0, d.useFavoritesServerExperiment)("useCanFavoriteChannel"), i = (0, a.useStateFromStores)([u.default], () => u.default.isFavorite(e.id)), l = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()), r = e.isDM() || e.isThread(), s = !r || n && (null == l ? void 0 : l.isStaff()) === !0;
                 return t && !__OVERLAY__ && !i && s
             }
