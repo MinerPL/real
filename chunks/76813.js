@@ -33,13 +33,13 @@
                     hasClips: N,
                     hasNewClips: I,
                     lastClipsSession: m,
-                    remindersEnabled: g
+                    remindersEnabled: A
                 } = (0, s.useStateFromStoresObject)([f.default], () => ({
                     hasClips: f.default.hasClips(),
                     hasNewClips: f.default.getNewClipIds().length > 0,
                     lastClipsSession: f.default.getLastClipsSession(),
                     remindersEnabled: f.default.getSettings().remindersEnabled
-                })), A = null != m && m.newClipIds.length > 0, [C, R] = a.useState(null), M = (0, s.useStateFromStores)([r.default], () => r.default.hasLayers());
+                })), g = null != m && m.newClipIds.length > 0, [C, R] = a.useState(null), M = (0, s.useStateFromStores)([r.default], () => r.default.hasLayers());
 
                 function O() {
                     (0, i.openModalLazy)(async () => {
@@ -54,7 +54,7 @@
                     })
                 }
                 return T && ((0, d.isWindows)() || p) && N ? (0, l.jsxs)(l.Fragment, {
-                    children: [null != C && t && g && A && !(0, i.hasAnyModalOpen)() && !M && (0, l.jsx)(E.default, {
+                    children: [null != C && t && A && g && !(0, i.hasAnyModalOpen)() && !M && (0, l.jsx)(E.default, {
                         clipIconRef: C,
                         lastClipsSession: m,
                         onOpenClipsGallery: O

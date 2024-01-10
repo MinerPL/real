@@ -6,35 +6,35 @@
             }), n("222007");
             var a = n("446674"),
                 s = n("913144"),
-                i = n("718517");
-            let r = [],
+                r = n("718517");
+            let i = [],
                 u = new Set,
                 l = 0;
             class d extends a.default.Store {
                 initialize() {
                     setInterval(() => {
                         this.emitChange()
-                    }, 1 * i.default.Millis.MINUTE)
+                    }, 1 * r.default.Millis.MINUTE)
                 }
                 getMessageReminders() {
-                    return r
+                    return i
                 }
                 isMessageReminder(e) {
-                    let t = r.find(t => t.messageId === e);
+                    let t = i.find(t => t.messageId === e);
                     return null != t && !t.complete
                 }
                 getOverdueMessageReminderCount() {
-                    return r.filter(e => null == e.dueAt || new Date > e.dueAt).length
+                    return i.filter(e => null == e.dueAt || new Date > e.dueAt).length
                 }
                 recentlyFetched() {
-                    return new Date().getTime() - l < 1 * i.default.Millis.MINUTE
+                    return new Date().getTime() - l < 1 * r.default.Millis.MINUTE
                 }
                 hasSentNotification(e) {
                     return u.has(e)
                 }
                 getState() {
                     return {
-                        messages: r
+                        messages: i
                     }
                 }
             }
@@ -44,7 +44,7 @@
                     let {
                         messages: t
                     } = e;
-                    l = new Date().getTime(), r = t.map(e => ({
+                    l = new Date().getTime(), i = t.map(e => ({
                         ...e,
                         complete: !1
                     })), t.forEach(e => {
@@ -55,10 +55,10 @@
                     let {
                         messageId: t,
                         complete: n
-                    } = e, a = r.findIndex(e => e.messageId === t);
+                    } = e, a = i.findIndex(e => e.messageId === t);
                     if (-1 === a) return !1;
-                    r[a] = {
-                        ...r[a],
+                    i[a] = {
+                        ...i[a],
                         complete: n
                     }
                 },
