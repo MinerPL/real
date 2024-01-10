@@ -4,8 +4,8 @@
                     return c
                 }
             });
-            var s = n("884691"),
-                a = n("446674"),
+            var a = n("884691"),
+                s = n("446674"),
                 l = n("233069"),
                 i = n("282109"),
                 r = n("47495"),
@@ -16,21 +16,21 @@
             function c(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     n = (0, r.useShouldUseNewNotificationSystem)("useShouldRenderBanner"),
-                    c = (0, a.useStateFromStores)([u.default, i.default], () => {
+                    c = (0, s.useStateFromStores)([u.default, i.default], () => {
                         let {
                             guild_id: t,
                             id: n
                         } = e;
                         if (!l.CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING.has(e.type)) return !1;
-                        let s = i.default.resolveUnreadSetting(e),
-                            a = i.default.getChannelUnreadSetting(t, n),
+                        let a = i.default.resolveUnreadSetting(e),
+                            s = i.default.getChannelUnreadSetting(t, n),
                             r = u.default.getNumberOfRendersSince(7200),
                             o = u.default.getNumberOfChannelVisitsSince(t, n, 86400);
-                        return a === d.UnreadSetting.UNSET && s !== d.UnreadSetting.ALL_MESSAGES && r <= 2 && o >= 2
+                        return s === d.UnreadSetting.UNSET && a !== d.UnreadSetting.ALL_MESSAGES && r <= 2 && o >= 2
                     }, [e]);
-                return s.useEffect(() => {
+                return a.useEffect(() => {
                     t && c && (0, o.recordBannerRender)(e.guild_id, e.id)
-                }, [t, c, e.guild_id, e.id]), s.useEffect(() => {
+                }, [t, c, e.guild_id, e.id]), a.useEffect(() => {
                     l.CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING.has(e.type) && (0, o.recordChannelVisit)(e.guild_id, e.id)
                 }, [e.guild_id, e.id, e.type]), {
                     canRenderNotice: c && n,

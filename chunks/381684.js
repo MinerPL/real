@@ -14,13 +14,13 @@
                 c = n("957255"),
                 f = n("162771"),
                 E = n("697218"),
-                h = n("49111");
-            let _ = {
+                _ = n("49111");
+            let h = {
                     hiddenSurveys: {},
                     surveyOverride: null,
                     lastFetched: null
                 },
-                S = _,
+                S = h,
                 T = {},
                 p = null;
             (a = l || (l = {})).IS_OWNER = "is_owner", a.IS_ADMIN = "is_admin", a.IS_COMMUNITY = "is_community", a.GUILD_SIZE = "guild_size", a.IS_HUB = "is_hub", a.IS_VIEWING = "is_viewing", a.GUILD_PERMISSIONS = "guild_permissions", a.GUILD_SIZE_ALL = "guild_size_all";
@@ -46,7 +46,7 @@
                             continue
                         }
                     }
-                    if (t.includes("is_community") && !o.hasFeature(h.GuildFeatures.COMMUNITY) || t.includes("is_hub") && !o.hasFeature(h.GuildFeatures.HUB)) continue;
+                    if (t.includes("is_community") && !o.hasFeature(_.GuildFeatures.COMMUNITY) || t.includes("is_hub") && !o.hasFeature(_.GuildFeatures.HUB)) continue;
                     if (t.includes("guild_permissions")) {
                         if (0 === l.length) continue;
                         let e = !1;
@@ -61,8 +61,8 @@
                     }
                     let r = E.default.getCurrentUser(),
                         d = (null == r ? void 0 : r.id) === o.ownerId,
-                        _ = c.default.can(h.Permissions.ADMINISTRATOR, o);
-                    if (t.includes("is_owner") && !d || t.includes("is_admin") && !_) continue;
+                        h = c.default.can(_.Permissions.ADMINISTRATOR, o);
+                    if (t.includes("is_owner") && !d || t.includes("is_admin") && !h) continue;
                     null == (T = null != T ? T : {})[e.key] && (T[e.key] = e);
                     let S = f.default.getGuildId(),
                         p = null != S && S === o.id;
@@ -99,7 +99,7 @@
             }
             class g extends i.default.PersistedStore {
                 initialize(e) {
-                    S = null != e ? e : _, this.syncWith([f.default], A)
+                    S = null != e ? e : h, this.syncWith([f.default], A)
                 }
                 getState() {
                     return S

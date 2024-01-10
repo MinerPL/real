@@ -4,8 +4,8 @@
                     return E
                 }
             }), n("222007");
-            var s = n("394846"),
-                a = n("446674"),
+            var a = n("394846"),
+                s = n("446674"),
                 l = n("913144"),
                 i = n("619443"),
                 r = n("624309"),
@@ -32,13 +32,13 @@
                         }
                 }
             }
-            class m extends a.default.Store {
+            class m extends s.default.Store {
                 initialize() {
                     p(), this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type), this.waitFor(i.default)
                 }
                 shouldShow(e) {
                     var t;
-                    return !(!h || c || o.CONFERENCE_MODE_ENABLED || (t = e, s.isMobile && ["writing-messages", "organize-by-topic"].includes(t))) && (f[e] || !1)
+                    return !(!h || c || o.CONFERENCE_MODE_ENABLED || (t = e, a.isMobile && ["writing-messages", "organize-by-topic"].includes(t))) && (f[e] || !1)
                 }
                 shouldShowAnyIndicators() {
                     return !c

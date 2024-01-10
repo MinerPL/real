@@ -4,8 +4,8 @@
                     return C
                 }
             });
-            var s = n("37983"),
-                a = n("884691"),
+            var a = n("37983"),
+                s = n("884691"),
                 l = n("93332"),
                 i = n("587904"),
                 r = n("913491"),
@@ -13,7 +13,7 @@
                 u = n("909917"),
                 d = n("380986"),
                 c = n("49111");
-            let f = a.memo(function(e) {
+            let f = s.memo(function(e) {
                     let {
                         message: t,
                         channel: n,
@@ -26,12 +26,12 @@
                         author: p,
                         repliedMessage: m,
                         roleIcon: E
-                    } = e, g = (0, d.useContextMenuUser)(t.author.id, n.id), S = (0, d.useClickMessageAuthorUsername)(t, n, f, C), _ = (0, d.useClickMessageAuthorAvatar)(h, C), A = a.useCallback(() => C({
+                    } = e, g = (0, d.useContextMenuUser)(t.author.id, n.id), S = (0, d.useClickMessageAuthorUsername)(t, n, f, C), _ = (0, d.useClickMessageAuthorAvatar)(h, C), A = s.useCallback(() => C({
                         usernameProfile: !1,
                         avatarProfile: !1,
                         referencedUsernameProfile: !1
                     }), [C]);
-                    return (0, s.jsx)(l.default, {
+                    return (0, a.jsx)(l.default, {
                         guildId: n.guild_id,
                         message: t,
                         channel: n,
@@ -50,13 +50,13 @@
                         roleIcon: E
                     })
                 }),
-                h = a.memo(i.default);
+                h = s.memo(i.default);
 
             function C(e) {
                 let {
                     messageProps: t,
                     setPopout: n,
-                    messagePopouts: a,
+                    messagePopouts: s,
                     replyReference: l,
                     author: i,
                     repliedMessage: u,
@@ -69,10 +69,10 @@
                 } = t, {
                     usernameProfile: E,
                     avatarProfile: g
-                } = a;
+                } = s;
                 if ((0, r.default)(c)) return null;
                 let S = c.id === m;
-                return S || C || null != l ? (0, s.jsx)(f, {
+                return S || C || null != l ? (0, a.jsx)(f, {
                     message: c,
                     channel: p,
                     compact: C,
@@ -85,7 +85,7 @@
                     author: i,
                     repliedMessage: u,
                     roleIcon: d
-                }) : (0, s.jsx)(h, {
+                }) : (0, a.jsx)(h, {
                     compact: !0,
                     timestamp: c.timestamp,
                     isInline: !1,

@@ -15,8 +15,8 @@
                 c = n("913796"),
                 f = n("872173"),
                 E = n("374363"),
-                h = n("659500"),
-                _ = n("981024"),
+                _ = n("659500"),
+                h = n("981024"),
                 S = n("519540"),
                 T = n("80649"),
                 p = n("385730"),
@@ -69,20 +69,20 @@
                 }, [n, t, M]), U = a.useCallback(() => {
                     x(), v(r.InboxTab.UNREADS)
                 }, [v, x]);
-                a.useEffect(() => (h.ComponentDispatch.subscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, U), () => void h.ComponentDispatch.unsubscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, U)), [U]);
+                a.useEffect(() => (_.ComponentDispatch.subscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, U), () => void _.ComponentDispatch.unsubscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, U)), [U]);
                 let {
-                    showReminders: F
+                    showReminders: b
                 } = d.default.useExperiment({
                     location: "RecentsPopout"
                 }, {
                     autoTrackExposure: !1
-                }), b = (0, c.useInDesktopNotificationCenterExperiment)(), {
+                }), F = (0, c.useInDesktopNotificationCenterExperiment)(), {
                     enabled: j
                 } = u.default.useExperiment({
                     location: "RecentsPopout"
                 });
                 a.useEffect(() => {
-                    !F && L === r.InboxTab.TODOS && v(r.InboxTab.MENTIONS)
+                    !b && L === r.InboxTab.TODOS && v(r.InboxTab.MENTIONS)
                 });
                 let G = a.useCallback(e => {
                     !e.shiftKey && P()
@@ -97,7 +97,7 @@
                     renderPopout: function() {
                         return (0, l.jsx)(o.Dialog, {
                             "aria-label": m.default.Messages.INBOX,
-                            children: L === r.InboxTab.FOR_YOU && b ? (0, l.jsx)(_.default, {
+                            children: L === r.InboxTab.FOR_YOU && F ? (0, l.jsx)(h.default, {
                                 setTab: v,
                                 badgeState: g,
                                 closePopout: P
@@ -110,7 +110,7 @@
                                 setTab: v,
                                 badgeState: g,
                                 closePopout: P
-                            }) : F && L === r.InboxTab.TODOS ? (0, l.jsx)(S.default, {
+                            }) : b && L === r.InboxTab.TODOS ? (0, l.jsx)(S.default, {
                                 setTab: v,
                                 onJump: G,
                                 closePopout: P

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 TextAlignments: function() {
-                    return a
+                    return s
                 },
                 ArrowAlignments: function() {
                     return l
@@ -10,7 +10,7 @@
                     return i
                 }
             }), n("222007");
-            var s, a, l, i, r, o, u = n("37983"),
+            var a, s, l, i, r, o, u = n("37983"),
                 d = n("884691"),
                 c = n("414456"),
                 f = n.n(c),
@@ -22,7 +22,7 @@
                 g = n("49111"),
                 S = n("782340"),
                 _ = n("816456");
-            (r = a || (a = {})).CENTER = "center", r.LEFT = "left", (o = l || (l = {})).TOP = "top", o.MIDDLE = "middle";
+            (r = s || (s = {})).CENTER = "center", r.LEFT = "left", (o = l || (l = {})).TOP = "top", o.MIDDLE = "middle";
             class A extends d.PureComponent {
                 componentDidMount() {
                     let {
@@ -43,8 +43,8 @@
                         renderMedia: e,
                         textAlign: t,
                         isLongText: n,
-                        title: s,
-                        body: a,
+                        title: a,
+                        body: s,
                         className: l,
                         forceTheme: i,
                         onClickSkipAll: r
@@ -60,13 +60,13 @@
                                 [_.titleCenter]: d,
                                 [_.titleLeft]: o
                             }),
-                            children: s
-                        }), (0, u.jsx)("string" == typeof a ? "p" : "div", {
+                            children: a
+                        }), (0, u.jsx)("string" == typeof s ? "p" : "div", {
                             className: f({
                                 [_.bodyCenter]: d,
                                 [_.bodyLeft]: o
                             }),
-                            children: a
+                            children: s
                         }), (0, u.jsxs)(E.default, {
                             className: _.buttonContainer,
                             justify: o ? E.default.Justify.BETWEEN : E.default.Justify.CENTER,
@@ -97,14 +97,14 @@
                         }, () => null == e ? void 0 : e())
                     }
                 }
-            }(s = class extends d.PureComponent {
+            }(a = class extends d.PureComponent {
                 render() {
                     let {
                         renderMedia: e,
                         textAlign: t,
                         onComplete: n,
-                        onSkipAll: s,
-                        isLongText: a,
+                        onSkipAll: a,
+                        isLongText: s,
                         title: l,
                         body: i,
                         children: r,
@@ -137,8 +137,8 @@
                             closePopout: t,
                             position: n
                         } = e, {
-                            forceTheme: s,
-                            isLongText: a,
+                            forceTheme: a,
+                            isLongText: s,
                             arrowAlignment: l,
                             renderMedia: i
                         } = this.props, r = null != i;
@@ -146,22 +146,22 @@
                             ...this.props,
                             className: f({
                                 [_.bottom]: "bottom" === n,
-                                [_.contentNarrowNoMedia]: !a && !r,
-                                [_.contentNarrowWithMedia]: !a && r,
-                                [_.contentWideNoMedia]: a && !r,
-                                [_.contentWideWithMedia]: a && r,
+                                [_.contentNarrowNoMedia]: !s && !r,
+                                [_.contentNarrowWithMedia]: !s && r,
+                                [_.contentWideNoMedia]: s && !r,
+                                [_.contentWideWithMedia]: s && r,
                                 [_.right]: "right" === n,
                                 [_.top]: "top" === n,
                                 [_.left]: "left" === n,
                                 [_.arrowAlignmentTop]: "top" === l,
                                 [_.arrowAlignmentMiddle]: "middle" === l,
-                                "force-theme": null != s
-                            }, (0, m.getThemeClass)(s)),
+                                "force-theme": null != a
+                            }, (0, m.getThemeClass)(a)),
                             onClickComplete: () => this.onClickComplete(t),
                             onClickSkipAll: () => this.onClickSkipAll(t)
                         })
                     }
                 }
-            }).TextAlignments = a, s.defaultProps = {
+            }).TextAlignments = s, a.defaultProps = {
                 textAlign: "left"
-            }, i = s
+            }, i = a
