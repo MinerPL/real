@@ -41,7 +41,7 @@
                     connectedChannelId: s
                 } = e, j = (0, _.default)(), L = l.useCallback(() => {
                     (0, g.updateActivityPanelMode)(x.ActivityPanelModes.PIP)
-                }, []), O = l.useRef(null), y = (0, r.useStateFromStores)([S.default], () => S.default.getFocusedLayout()), P = y !== x.FocusedActivityLayouts.NO_CHAT, [b, D] = l.useState(null !== (t = c.default.activityPanelHeight) && void 0 !== t ? t : n), U = l.useCallback(e => {
+                }, []), O = l.useRef(null), y = (0, r.useStateFromStores)([S.default], () => S.default.getFocusedLayout()), b = y !== x.FocusedActivityLayouts.NO_CHAT, [P, D] = l.useState(null !== (t = c.default.activityPanelHeight) && void 0 !== t ? t : n), U = l.useCallback(e => {
                     u.default.updatedUnsyncedSettings({
                         activityPanelHeight: e
                     })
@@ -72,10 +72,10 @@
                 return null == j ? null : (0, a.jsxs)("div", {
                     className: i(M.wrapper, R[y], (0, C.getThemeClass)(N.ThemeTypes.DARK)),
                     ref: O,
-                    style: P && null != b ? {
+                    style: b && null != P ? {
                         minHeight: 200,
                         maxHeight: n,
-                        height: b
+                        height: P
                     } : void 0,
                     children: [(0, a.jsxs)("div", {
                         className: M.header,
@@ -123,7 +123,7 @@
                         children: (0, a.jsx)(v.default, {
                             channelId: z
                         })
-                    }) : null, P ? (0, a.jsx)(d.default, {
+                    }) : null, b ? (0, a.jsx)(d.default, {
                         minHeight: 480,
                         maxHeight: n,
                         resizableNode: O,

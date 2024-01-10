@@ -83,7 +83,7 @@
                 I = (0, r.jsxs)("defs", {
                     children: [c, _, E]
                 }),
-                T = e => {
+                f = e => {
                     let {
                         className: t,
                         fill: s,
@@ -112,7 +112,7 @@
                         }), I]
                     })
                 },
-                f = e => {
+                T = e => {
                     let {
                         className: t,
                         fill: s,
@@ -148,13 +148,13 @@
                 } = e, a = (0, i.default)(), n = (0, l.isThemeDark)(a) ? d : u, c = (0, l.isThemeDark)(a) ? "#F2F3F5" : "url(#".concat(o, ")");
                 switch (s) {
                     case 0:
-                        return (0, r.jsx)(f, {
+                        return (0, r.jsx)(T, {
                             className: t,
                             fill: c,
                             gradient: n
                         });
                     case 1:
-                        return (0, r.jsx)(T, {
+                        return (0, r.jsx)(f, {
                             className: t,
                             fill: c,
                             gradient: n

@@ -10,17 +10,17 @@
                 s = n("77078"),
                 u = n("18054"),
                 l = n("843624"),
-                o = n("259141"),
-                r = n("957255"),
-                d = n("207273"),
+                d = n("259141"),
+                o = n("957255"),
+                r = n("207273"),
                 c = n("49111"),
                 f = n("782340");
 
             function _(e, t) {
-                let _ = (0, i.useStateFromStores)([r.default], () => r.default.can(c.Permissions.MANAGE_CHANNELS, t)),
-                    p = (0, i.useStateFromStores)([r.default], () => r.default.can(c.Permissions.SET_VOICE_CHANNEL_STATUS, e)),
-                    E = (0, o.useIsConnectedToVoiceChannel)(e),
-                    S = (0, i.useStateFromStores)([d.default], () => d.default.getChannelStatus(e)),
+                let _ = (0, i.useStateFromStores)([o.default], () => o.default.can(c.Permissions.MANAGE_CHANNELS, t)),
+                    p = (0, i.useStateFromStores)([o.default], () => o.default.can(c.Permissions.SET_VOICE_CHANNEL_STATUS, e)),
+                    E = (0, d.useIsConnectedToVoiceChannel)(e),
+                    S = (0, i.useStateFromStores)([r.default], () => r.default.getChannelStatus(e)),
                     m = null != S && S.length > 0;
                 return e.isGuildVoice() && (_ || p) ? !E && _ && m ? (0, a.jsx)(s.MenuItem, {
                     id: "clear-status",

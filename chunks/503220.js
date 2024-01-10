@@ -78,7 +78,7 @@
                     label: M.default.Messages.COPY_ID_THREAD
                 }), y = (0, m.default)(t);
 
-                function P() {
+                function b() {
                     (0, g.transitionToChannel)(t.id)
                 }
                 return (0, a.jsxs)(s.Menu, {
@@ -90,7 +90,7 @@
                         children: [C, (0, a.jsx)(s.MenuItem, {
                             id: "open",
                             label: M.default.Messages.OPEN_IN_FULL_VIEW,
-                            action: P
+                            action: b
                         })]
                     }), (0, a.jsxs)(s.MenuGroup, {
                         children: [I, T]
@@ -102,7 +102,7 @@
                             label: M.default.Messages.SEARCH,
                             icon: _.default,
                             action: function() {
-                                P(), setTimeout(() => {
+                                b(), setTimeout(() => {
                                     v.ComponentDispatch.dispatch(A.ComponentActions.FOCUS_SEARCH, {
                                         prefillCurrentChannel: !1
                                     })
@@ -113,7 +113,7 @@
                             label: M.default.Messages.PINS,
                             icon: _.default,
                             action: function() {
-                                P(), v.ComponentDispatch.dispatch(A.ComponentActions.TOGGLE_CHANNEL_PINS)
+                                b(), v.ComponentDispatch.dispatch(A.ComponentActions.TOGGLE_CHANNEL_PINS)
                             }
                         })]
                     }), (0, a.jsxs)(s.MenuGroup, {

@@ -26,7 +26,7 @@
                     S = null != h ? i.default.extractTimestamp(h) : null,
                     _ = null;
                 return f.forEach(e => {
-                    var a, A, T, M, I, N, v, L;
+                    var a, A, T, M, N, I, L, v;
                     if (null != p && p.length > 0) {
                         ;
                         let t = i.default.extractTimestamp(e.id);
@@ -45,39 +45,39 @@
                             }
                         }
                     }
-                    let x = (0, l.dateFormat)(e.timestamp, "LL");
-                    x !== t && null == _ && (E.push({
+                    let R = (0, l.dateFormat)(e.timestamp, "LL");
+                    R !== t && null == _ && (E.push({
                         type: u.ChannelStreamTypes.DIVIDER,
-                        content: x,
-                        contentKey: x
-                    }), t = x);
-                    let R = E[E.length - 1],
+                        content: R,
+                        contentKey: R
+                    }), t = R);
+                    let x = E[E.length - 1],
                         y = null,
-                        O = (0, o.isSpam)(e);
-                    g = g || O;
-                    let D = function(e, t, n) {
+                        D = (0, o.isSpam)(e);
+                    g = g || D;
+                    let O = function(e, t, n) {
                         if (s.MessageTypesSets.NON_COLLAPSIBLE.has(t.type));
                         else if (t.blocked) return u.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED;
                         else if ((0, o.isSpamSupported)(e) && n) return u.ChannelStreamTypes.MESSAGE_GROUP_SPAMMER;
                         return null
-                    }(c, e, O && C);
-                    if (null !== D) {
+                    }(c, e, D && C);
+                    if (null !== O) {
                         ;
                         let t, n;
-                        [y, R] = (A = E, T = e, M = D, n = I = R, null == I || I.type !== M ? (t = {
+                        [y, x] = (A = E, T = e, M = O, n = N = x, null == N || N.type !== M ? (t = {
                             type: M,
                             content: [],
                             key: T.id
-                        }, A.push(t)) : n = (t = I).content[t.content.length - 1], [t, n])
+                        }, A.push(t)) : n = (t = N).content[t.content.length - 1], [t, n])
                     }
                     if (h === e.id && null != S) {
-                        if (null != R && R.type === u.ChannelStreamTypes.DIVIDER) R.unreadId = e.id, S = null;
+                        if (null != x && x.type === u.ChannelStreamTypes.DIVIDER) x.unreadId = e.id, S = null;
                         else if (null !== y) {
                             ;
-                            N = y, v = c, (L = e).isFirstMessageInForumPost(v) || N.content.push({
+                            I = y, L = c, (v = e).isFirstMessageInForumPost(L) || I.content.push({
                                 type: u.ChannelStreamTypes.DIVIDER,
-                                unreadId: L.id
-                            }), N.hasUnread = !0, S = null
+                                unreadId: v.id
+                            }), I.hasUnread = !0, S = null
                         } else !e.isFirstMessageInForumPost(c) && E.push({
                             type: u.ChannelStreamTypes.DIVIDER,
                             unreadId: e.id
@@ -86,7 +86,7 @@
                         type: u.ChannelStreamTypes.DIVIDER,
                         unreadId: e.id
                     }), S = null);
-                    let j = (null == R ? void 0 : R.type) === u.ChannelStreamTypes.MESSAGE ? d : R;
+                    let j = (null == x ? void 0 : x.type) === u.ChannelStreamTypes.MESSAGE ? d : x;
                     (0, r.isNewGroupItem)(c, j, e) && (n = e.id);
                     let b = {
                         type: e.type === u.MessageTypes.THREAD_STARTER_MESSAGE ? u.ChannelStreamTypes.THREAD_STARTER_MESSAGE : u.ChannelStreamTypes.MESSAGE,

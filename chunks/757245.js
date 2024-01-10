@@ -39,10 +39,10 @@
                     L = (0, C.useEmbeddedAppsWithPresence)(j),
                     O = L.get(null === (t = j[0]) || void 0 === t ? void 0 : null === (e = t.application) || void 0 === e ? void 0 : e.id),
                     y = (0, h.useIsActivitiesInTextEnabled)(x, T),
-                    P = (0, h.useIsActivitiesInTextActionBarEnabled)(x, T);
-                if (!(y && P) || null == O || R !== S.ActivityPanelModes.ACTION_BAR) return null;
-                let b = null === (n = O.presenceActivity) || void 0 === n ? void 0 : n.details;
-                (null == b || void 0 === b || "" === b) && (b = _.default.Messages.LOADING);
+                    b = (0, h.useIsActivitiesInTextActionBarEnabled)(x, T);
+                if (!(y && b) || null == O || R !== S.ActivityPanelModes.ACTION_BAR) return null;
+                let P = null === (n = O.presenceActivity) || void 0 === n ? void 0 : n.details;
+                (null == P || void 0 === P || "" === P) && (P = _.default.Messages.LOADING);
                 let D = Array.from(O.embeddedActivity.userIds).map(e => c.default.getUser(e)).filter(e => null != e && void 0 !== e);
                 return (0, a.jsxs)(i.Clickable, {
                     className: I.actionBarContainer,
@@ -70,7 +70,7 @@
                             color: "header-secondary",
                             variant: "text-xxs/medium",
                             className: I.textSubtitle,
-                            children: b
+                            children: P
                         })]
                     }), (0, a.jsx)(f.default, {
                         renderIcon: !1,

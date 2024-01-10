@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return v
+                    return L
                 }
             });
             var s = n("37983"),
@@ -26,7 +26,7 @@
                 T = n("782340"),
                 M = n("648198");
 
-            function I(e, t, a, l) {
+            function N(e, t, a, l) {
                 (0, i.openModalLazy)(async () => {
                     let {
                         default: i
@@ -42,19 +42,19 @@
                     modalKey: r.activityInviteKey
                 })
             }
-            let N = /(.*)```(\w+)\n(.*)```(.*)/s;
+            let I = /(.*)```(\w+)\n(.*)```(.*)/s;
 
-            function v(e) {
+            function L(e) {
                 let {
                     channel: t,
                     options: r,
-                    onFileUpload: v,
-                    onClose: L,
-                    onSelect: x,
-                    draftType: R,
+                    onFileUpload: L,
+                    onClose: v,
+                    onSelect: R,
+                    draftType: x,
                     editorTextContent: y,
-                    setValue: O,
-                    openClips: D
+                    setValue: D,
+                    openClips: O
                 } = e;
                 (0, u.useMaybeFetchPremiumLikelihood)(d.default);
                 let {
@@ -73,11 +73,11 @@
                 }
 
                 function P() {
-                    C.default.track(_.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), O("/", (0, g.toRichValue)("/"))
+                    C.default.track(_.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D("/", (0, g.toRichValue)("/"))
                 }
 
                 function U() {
-                    D()
+                    O()
                 }
 
                 function F() {
@@ -98,17 +98,17 @@
                     let e = y,
                         n = "txt",
                         s = "",
-                        a = y.match(N);
+                        a = y.match(I);
                     null != a && (s = a[1], n = a[2], e = a[3], s += a[4]), (0, E.promptToUpload)([(0, m.makeFile)(new Blob([e], {
                         type: "text/plain"
-                    }), "message.".concat(n))], t, R), p.ComponentDispatch.dispatchToLastSubscribed(_.ComponentActions.CLEAR_TEXT), "" !== s && p.ComponentDispatch.dispatchToLastSubscribed(_.ComponentActions.INSERT_TEXT, {
+                    }), "message.".concat(n))], t, x), p.ComponentDispatch.dispatchToLastSubscribed(_.ComponentActions.CLEAR_TEXT), "" !== s && p.ComponentDispatch.dispatchToLastSubscribed(_.ComponentActions.INSERT_TEXT, {
                         plainText: s
                     })
                 }
                 return (0, s.jsx)(i.Menu, {
-                    onSelect: x,
+                    onSelect: R,
                     navId: "channel-attach",
-                    onClose: L,
+                    onClose: v,
                     "aria-label": T.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                     className: M.menu,
                     children: r.map(function(e) {
@@ -141,7 +141,7 @@
                                             }, t)
                                         })
                                     }),
-                                    action: v
+                                    action: L
                                 }, "upload-file");
                             case S.AttachmentTypes.UPLOAD_TEXT_AS_FILE:
                                 if ("" === y) return null;
@@ -172,7 +172,7 @@
                                             type: "Send Join Invite",
                                             application_id: n.application_id,
                                             location: _.AnalyticsSections.CHANNEL_TEXT_AREA
-                                        }), I(n, t, _.ActivityActionTypes.JOIN, j))
+                                        }), N(n, t, _.ActivityActionTypes.JOIN, j))
                                     }
                                 }, "play");
                             case S.AttachmentTypes.INVITE_TO_LISTEN:
@@ -184,7 +184,7 @@
                                         return n = e.activity, void(C.default.track(_.AnalyticEvents.OPEN_MODAL, {
                                             type: "Send Listen Invite",
                                             location: _.AnalyticsSections.CHANNEL_TEXT_AREA
-                                        }), I(n, t, _.ActivityActionTypes.LISTEN, j))
+                                        }), N(n, t, _.ActivityActionTypes.LISTEN, j))
                                     }
                                 }, "listen");
                             case S.AttachmentTypes.INVITE_TO_WATCH:
@@ -196,7 +196,7 @@
                                         return n = e.activity, void(C.default.track(_.AnalyticEvents.OPEN_MODAL, {
                                             type: "Send Watch Invite",
                                             location: _.AnalyticsSections.CHANNEL_TEXT_AREA
-                                        }), I(n, t, _.ActivityActionTypes.WATCH, j))
+                                        }), N(n, t, _.ActivityActionTypes.WATCH, j))
                                     }
                                 }, "watch");
                             case S.AttachmentTypes.CREATE_THREAD:

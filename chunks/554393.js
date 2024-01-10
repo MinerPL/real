@@ -25,15 +25,15 @@
                 A = n("263024"),
                 T = n("42203"),
                 M = n("660279"),
-                I = n("36694"),
-                N = n("83900"),
-                v = n("404008"),
-                L = n("680986"),
-                x = n("612278"),
-                R = n("867965"),
+                N = n("36694"),
+                I = n("83900"),
+                L = n("404008"),
+                v = n("680986"),
+                R = n("612278"),
+                x = n("867965"),
                 y = n("688169"),
-                O = n("49111"),
-                D = n("782340"),
+                D = n("49111"),
+                O = n("782340"),
                 j = n("827152"),
                 b = n("550244");
 
@@ -47,14 +47,14 @@
                     ref: U,
                     width: F
                 } = (0, d.default)(), [H, k] = a.useState(3), [G, w] = a.useState(!n), [B, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(t), [t]), {
-                    firstMessage: Z
-                } = (0, x.useFirstForumPostMessage)(W), z = (0, o.useStateFromStores)([_.default], () => _.default.hasJoined(t)), {
+                    firstMessage: z
+                } = (0, R.useFirstForumPostMessage)(W), Z = (0, o.useStateFromStores)([_.default], () => _.default.hasJoined(t)), {
                     disableReactionUpdates: K,
                     disableReactionCreates: Y,
                     isLurking: q,
                     isGuest: X,
                     isPendingMember: J
-                } = (0, p.default)(W), Q = (0, y.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(P)), ee = (0, L.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = a.useCallback(e => {
+                } = (0, p.default)(W), Q = (0, y.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(P)), ee = (0, v.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = a.useCallback(e => {
                     let t = e[0];
                     if (null != t && n) {
                         let e = t.intersectionRect,
@@ -76,20 +76,20 @@
                 let [es, ea] = a.useState(!0);
                 if (a.useEffect(() => {
                         if (null != F) k(Math.floor((F - 280) / 58)), ea(!1)
-                    }, [F]), null == W || null == Z) return null;
-                let el = Z.reactions.length > 0,
+                    }, [F]), null == W || null == z) return null;
+                let el = z.reactions.length > 0,
                     ei = () => {
-                        z ? A.default.leaveThread(W, "Forum Toolbar") : A.default.joinThread(W, "Forum Toolbar")
+                        Z ? A.default.leaveThread(W, "Forum Toolbar") : A.default.joinThread(W, "Forum Toolbar")
                     },
                     er = () => {
-                        (0, R.trackForumPostLinkCopied)({
+                        (0, x.trackForumPostLinkCopied)({
                             postId: W.id,
                             location: {
-                                section: O.AnalyticsSections.CHANNEL_HEADER
+                                section: D.AnalyticsSections.CHANNEL_HEADER
                             }
-                        }), (0, r.copy)((0, v.getChannelLinkToCopy)(W, $)), V(!0)
+                        }), (0, r.copy)((0, L.getChannelLinkToCopy)(W, $)), V(!0)
                     },
-                    eo = z ? I.default : M.default;
+                    eo = Z ? N.default : M.default;
                 return (0, s.jsxs)(s.Fragment, {
                     children: [(0, s.jsxs)("div", {
                         className: i(j.container, {
@@ -103,7 +103,7 @@
                             children: [!el && !Y && null != ee && (0, s.jsx)("div", {
                                 className: b.reactions,
                                 children: (0, s.jsx)(S.Reaction, {
-                                    message: Z,
+                                    message: z,
                                     readOnly: !1,
                                     useChatFontScaling: !1,
                                     isLurking: q,
@@ -118,7 +118,7 @@
                                     me_burst: !1
                                 })
                             }), (0, s.jsx)(g.default, {
-                                message: Z,
+                                message: z,
                                 channel: W,
                                 disableReactionCreates: !Q || Y,
                                 disableReactionUpdates: K,
@@ -132,17 +132,17 @@
                                 forceHideReactionCreates: !0
                             }), !Y && (0, s.jsx)(m.ButtonAddReaction, {
                                 type: C.ReactionTypes.NORMAL,
-                                message: Z,
+                                message: z,
                                 channel: W,
                                 useChatFontScaling: !1,
                                 className: j.addReactButton,
                                 isForumToolbar: !0,
-                                children: !el && D.default.Messages.FORUM_REACT_TO_POST
+                                children: !el && O.default.Messages.FORUM_REACT_TO_POST
                             })]
                         }), (0, s.jsxs)("div", {
                             className: j.buttons,
                             children: [(0, s.jsx)(u.Tooltip, {
-                                text: D.default.Messages.FORUM_FOLLOW_TOOLTIP,
+                                text: O.default.Messages.FORUM_FOLLOW_TOOLTIP,
                                 children: e => (0, s.jsxs)(u.Button, {
                                     ...e,
                                     look: u.Button.Looks.BLANK,
@@ -150,15 +150,15 @@
                                     onClick: ei,
                                     className: j.button,
                                     innerClassName: i(j.buttonInner, {
-                                        [j.active]: z
+                                        [j.active]: Z
                                     }),
                                     children: [(0, s.jsx)(eo, {
                                         width: 16,
                                         height: 16
-                                    }), z ? D.default.Messages.FORUM_FOLLOWING_POST : D.default.Messages.FOLLOW]
+                                    }), Z ? O.default.Messages.FORUM_FOLLOWING_POST : O.default.Messages.FOLLOW]
                                 })
                             }), (0, s.jsx)(u.Tooltip, {
-                                text: D.default.Messages.COPY_LINK,
+                                text: O.default.Messages.COPY_LINK,
                                 children: e => (0, s.jsxs)(u.Button, {
                                     ...e,
                                     look: u.Button.Looks.BLANK,
@@ -166,13 +166,13 @@
                                     onClick: er,
                                     className: j.button,
                                     innerClassName: j.buttonInner,
-                                    children: [B ? (0, s.jsx)(I.default, {
+                                    children: [B ? (0, s.jsx)(N.default, {
                                         width: 16,
                                         height: 16
-                                    }) : (0, s.jsx)(N.default, {
+                                    }) : (0, s.jsx)(I.default, {
                                         width: 16,
                                         height: 16
-                                    }), B ? D.default.Messages.COPIED : null]
+                                    }), B ? O.default.Messages.COPIED : null]
                                 })
                             })]
                         })]

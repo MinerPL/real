@@ -16,12 +16,12 @@
                 _ = s("155207"),
                 E = s("781896"),
                 I = s("430025"),
-                T = s("137783"),
-                f = s("439937"),
+                f = s("137783"),
+                T = s("439937"),
                 S = s("31225"),
                 R = s("49111"),
                 p = s("782340"),
-                m = s("786832");
+                A = s("786832");
             let N = [{
                     feature: R.SKUFeatureTypes.SINGLE_PLAYER,
                     getText: () => p.default.Messages.APPLICATION_STORE_SINGLE_PLAYER,
@@ -61,7 +61,7 @@
                     feature: R.SKUFeatureTypes.RICH_PRESENCE,
                     getText: () => p.default.Messages.APPLICATION_STORE_RICH_PRESENCE,
                     getTooltip: () => p.default.Messages.APPLICATION_STORE_RICH_PRESENCE_TOOLTIP,
-                    IconComponent: T.default
+                    IconComponent: f.default
                 }, {
                     feature: R.SKUFeatureTypes.DISCORD_GAME_INVITES,
                     getText: () => p.default.Messages.APPLICATION_STORE_DISCORD_GAME_INVITES,
@@ -86,27 +86,27 @@
                     feature: R.SKUFeatureTypes.SECURE_NETWORKING,
                     getText: () => p.default.Messages.APPLICATION_STORE_SECURE_NETWORKING,
                     getTooltip: () => p.default.Messages.APPLICATION_STORE_SECURE_NETWORKING_TOOLTIP,
-                    IconComponent: f.default
+                    IconComponent: T.default
                 }],
-                A = e => {
+                m = e => {
                     let {
                         IconComponent: t,
                         text: s,
                         tooltip: n
                     } = e;
                     return (0, a.jsxs)("div", {
-                        className: m.row,
+                        className: A.row,
                         children: [(0, a.jsx)(r.Tooltip, {
                             text: n,
                             children: e => (0, a.jsx)(t, {
-                                className: m.featureIcon,
+                                className: A.featureIcon,
                                 ...e
                             })
                         }), (0, a.jsx)("span", {
-                            className: m.featureText,
+                            className: A.featureText,
                             children: s
                         }), (0, a.jsx)(u.default, {
-                            className: m.checkmarkIcon
+                            className: A.checkmarkIcon
                         })]
                     })
                 };
@@ -126,14 +126,14 @@
                             getText: n,
                             getTooltip: r
                         } = e;
-                        return (0, a.jsx)(A, {
+                        return (0, a.jsx)(m, {
                             IconComponent: s,
                             text: n(),
                             tooltip: r()
                         }, t)
                     });
                     return 0 === t.length ? null : (0, a.jsxs)("div", {
-                        className: m.features,
+                        className: A.features,
                         children: [(0, a.jsx)(l.default, {
                             children: p.default.Messages.APPLICATION_STORE_SECTION_TITLE_FEATURES
                         }), t]

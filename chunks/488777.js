@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return S
                 }
             });
             var i = n("37983");
@@ -31,7 +31,7 @@
                 }
             };
 
-            function E(e) {
+            function S(e) {
                 let {
                     value: t,
                     action: n,

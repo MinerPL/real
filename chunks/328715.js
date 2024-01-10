@@ -35,8 +35,8 @@
                 L = n("598785"),
                 O = n("2830"),
                 y = n("836087"),
-                P = n("843624"),
-                b = n("99795"),
+                b = n("843624"),
+                P = n("99795"),
                 D = n("49111"),
                 U = n("843455"),
                 w = n("782340"),
@@ -92,7 +92,7 @@
                     o = (0, E.useActiveEvent)(s.id),
                     u = null != o ? (0, C.getNextRecurrenceIdInEvent)(o) : null,
                     d = null != o;
-                if ((null == l ? void 0 : l.type) === b.ParticipantTypes.ACTIVITY) null != n && (t = (0, a.jsxs)(a.Fragment, {
+                if ((null == l ? void 0 : l.type) === P.ParticipantTypes.ACTIVITY) null != n && (t = (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(M.default.Divider, {
                         className: F.divider
                     }), (0, a.jsx)(N.default, {
@@ -108,7 +108,7 @@
                         focusedParticipant: l
                     })]
                 }));
-                else if ((null == l ? void 0 : l.type) === b.ParticipantTypes.STREAM) {
+                else if ((null == l ? void 0 : l.type) === P.ParticipantTypes.STREAM) {
                     let e = l.user,
                         n = l.stream;
                     t = (0, a.jsxs)(a.Fragment, {
@@ -147,7 +147,7 @@
                 } = (0, i.useStateFromStoresObject)([j.default], () => ({
                     focusedParticipant: j.default.getSelectedParticipant(t.id),
                     participantsOpen: j.default.getParticipantsOpen(t.id)
-                }), [t.id]), g = (0, p.default)(t), T = (0, m.default)(t), [v] = (0, f.default)((null == C ? void 0 : C.type) === b.ParticipantTypes.ACTIVITY ? [C.id] : []), N = w.default.Messages.VOICE_CHANNEL;
+                }), [t.id]), g = (0, p.default)(t), T = (0, m.default)(t), [v] = (0, f.default)((null == C ? void 0 : C.type) === P.ParticipantTypes.ACTIVITY ? [C.id] : []), N = w.default.Messages.VOICE_CHANNEL;
                 t.isDM() ? N = w.default.Messages.DM : t.isGroupDM() && (N = w.default.Messages.GROUP_DM);
                 let {
                     enabled: L,
@@ -195,7 +195,7 @@
                             ...n
                         })
                     }, {
-                        modalKey: P.VOICE_CHANNEL_STATUS_MODAL_KEY
+                        modalKey: b.VOICE_CHANNEL_STATUS_MODAL_KEY
                     })
                 }
                 return (0, a.jsx)("div", {

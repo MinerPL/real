@@ -82,9 +82,9 @@
                             startIndex: t
                         }), t += 1, n[n.length - 1].results.push(a), e = null == s ? void 0 : s.id, n)
                     }, [])
-                }, [m, N]), b = l.useRef([]), D = y.reduce((e, t) => e + 1 + t.results.length, 0), U = l.useCallback((e, t) => {
+                }, [m, N]), P = l.useRef([]), D = y.reduce((e, t) => e + 1 + t.results.length, 0), U = l.useCallback((e, t) => {
                     if (!c.default.keyboardModeEnabled) return;
-                    let n = b.current,
+                    let n = P.current,
                         a = null != t ? n[t] : void 0;
                     if (null == a || null == a.hitRef.current) return;
                     let l = a.hitRef.current.getClientRects()[0],
@@ -94,7 +94,7 @@
                         null === (t = document.getElementById(e)) || void 0 === t || t.focus()
                     })
                 }, [p]), w = l.useCallback(e => {
-                    let t = b.current[e];
+                    let t = P.current[e];
                     null == t || t.jumpTo()
                 }, []), F = (0, s.useListNavigator)({
                     navId: "search-results",
@@ -108,12 +108,12 @@
                         results: n,
                         startIndex: l
                     } = e;
-                    return (0, a.jsx)(P, {
+                    return (0, a.jsx)(b, {
                         channel: t,
                         results: n,
                         highlighter: V,
                         startIndex: l,
-                        resultRefs: b,
+                        resultRefs: P,
                         totalResults: v,
                         scrollTo: p,
                         searchId: f,
@@ -160,7 +160,7 @@
                 })
             }
 
-            function P(e) {
+            function b(e) {
                 var t;
                 let {
                     channel: n,
@@ -175,7 +175,7 @@
                     offset: M,
                     jumpToMessage: L,
                     listNavigator: y
-                } = e, P = g.RenderSpoilers.useSetting(), b = l.useCallback(e => {
+                } = e, b = g.RenderSpoilers.useSetting(), P = l.useCallback(e => {
                     if (e === v.default.getChannelId()) return;
                     let t = S.default.getChannel(e);
                     if (null != t) _.default.can(j.Permissions.VIEW_CHANNEL, t) && (0, C.transitionToChannel)(t.id)
@@ -191,13 +191,13 @@
                     let e = H.current;
                     null != e && null != e.offsetWidth && null != e.scrollWidth && W(e.offsetWidth < e.scrollWidth)
                 }, []), (0, a.jsx)(N.ObscuredDisplayContext.Provider, {
-                    value: (0, p.default)(P, V),
+                    value: (0, p.default)(b, V),
                     children: (0, a.jsxs)("ul", {
                         role: "group",
                         className: O.searchResultGroup,
                         "aria-label": null == w ? D : "".concat(D, ", ").concat(w),
                         children: [(0, a.jsx)(i.Clickable, {
-                            onClick: () => b(n.id),
+                            onClick: () => P(n.id),
                             children: (0, a.jsxs)("div", {
                                 className: O.channelNameContainer,
                                 children: [(0, a.jsx)(F, {
@@ -216,7 +216,7 @@
                                 }), null != U && null != w && null != k ? (0, a.jsxs)(i.Clickable, {
                                     className: O.parentChannelNameClickable,
                                     onClick: e => {
-                                        e.stopPropagation(), b(U.id)
+                                        e.stopPropagation(), P(U.id)
                                     },
                                     children: [(0, a.jsx)(k, {
                                         className: O.parentChannelNameIcon,

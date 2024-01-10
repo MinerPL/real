@@ -17,18 +17,18 @@
                 _ = s("218435"),
                 E = s("881155"),
                 I = s("646718"),
-                T = s("49111"),
-                f = s("456217"),
+                f = s("49111"),
+                T = s("456217"),
                 S = function(e) {
                     let {
                         localizedPricingPromo: t,
                         smallGap: s
                     } = e, n = t.countryCode, S = (0, l.useStateFromStores)([u.default], () => u.default.locale);
-                    (0, c.useTrackLocalizedPricingPromoImpression)(T.AnalyticsSections.SETTINGS_PREMIUM_BANNER, n);
+                    (0, c.useTrackLocalizedPricingPromoImpression)(f.AnalyticsSections.SETTINGS_PREMIUM_BANNER, n);
                     let R = (0, l.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription()),
                         {
                             localizedPricingBannerHeader: p,
-                            localizedPricingBannerBody: m
+                            localizedPricingBannerBody: A
                         } = (0, d.getLocalizedPricingBannerStrings)({
                             localizedPricingPromo: t,
                             subscription: R,
@@ -36,34 +36,34 @@
                         }),
                         N = n.toLowerCase() + "Banner";
                     return (0, a.jsxs)("div", {
-                        className: r(f.bannerContainer, {
-                            [f.smallGap]: s,
-                            [f.bigGap]: !s
+                        className: r(T.bannerContainer, {
+                            [T.smallGap]: s,
+                            [T.bigGap]: !s
                         }),
                         children: [(0, a.jsx)("div", {
-                            className: r(f[N], f.bannerImageContainer)
+                            className: r(T[N], T.bannerImageContainer)
                         }), (0, a.jsx)(i.Heading, {
-                            className: f.bannerHeading,
+                            className: T.bannerHeading,
                             variant: "heading-xl/semibold",
                             children: p
                         }), (0, a.jsx)("div", {
-                            className: f.textContainer,
+                            className: T.textContainer,
                             children: (0, a.jsx)(i.Text, {
                                 color: "none",
                                 variant: "text-md/normal",
-                                className: f.bannerBody,
-                                children: m
+                                className: T.bannerBody,
+                                children: A
                             })
                         }), (0, a.jsxs)("div", {
-                            className: f.ctaButtonContainer,
+                            className: T.ctaButtonContainer,
                             children: [(0, a.jsx)(E.default, {
                                 forceInverted: !0,
-                                className: f.ctaButton,
+                                className: T.ctaButton,
                                 subscriptionTier: I.PremiumSubscriptionSKUs.TIER_2
                             }), (0, a.jsx)(_.default, {
                                 forceWhite: !0,
                                 subscriptionTier: I.PremiumSubscriptionSKUs.TIER_2,
-                                className: f.ctaButton
+                                className: T.ctaButton
                             })]
                         })]
                     })

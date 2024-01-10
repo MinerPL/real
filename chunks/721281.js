@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 useVoiceActivityNotificationSettingsExperiment: function() {
-                    return l
+                    return u
                 },
                 hasVoiceChannelActivityNotifsEnabled: function() {
-                    return o
+                    return r
                 }
             });
             var a = n("862205"),
@@ -22,9 +22,15 @@
                         config: {
                             enabled: !0
                         }
+                    }, {
+                        id: 2,
+                        label: "Control for AA test. Voice Activity Notifications are NOT enabled for user.",
+                        config: {
+                            enabled: !1
+                        }
                     }]
                 }),
-                u = (0, a.createExperiment)({
+                l = (0, a.createExperiment)({
                     kind: "guild",
                     id: "2023-11_voice_activity_notification_guild",
                     label: "General Voice Channel Notifications for Guild",
@@ -40,11 +46,11 @@
                     }]
                 });
 
-            function l(e) {
+            function u(e) {
                 var t;
                 let {
                     voiceChannelActivityNotifsEnabled: n
-                } = u.useExperiment({
+                } = l.useExperiment({
                     location: "useVoiceActivityNotificationSettingsExperiment",
                     guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : ""
                 }, {
@@ -61,11 +67,11 @@
                 return (null == e ? void 0 : e.type) === i.ChannelTypes.GUILD_VOICE && n && a
             }
 
-            function o(e) {
+            function r(e) {
                 var t;
                 let {
                     voiceChannelActivityNotifsEnabled: n
-                } = u.getCurrentConfig({
+                } = l.getCurrentConfig({
                     guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : "",
                     location: "hasVoiceChannelActivityNotifsEnabled"
                 });

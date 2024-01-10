@@ -34,8 +34,8 @@
                 L = n("471671"),
                 O = n("983782"),
                 y = n("587974"),
-                P = n("773336"),
-                b = n("439932"),
+                b = n("773336"),
+                P = n("439932"),
                 D = n("50885"),
                 U = n("336921"),
                 w = n("292687"),
@@ -126,7 +126,7 @@
                         guestWindow: S,
                         clientThemesClassName: _,
                         contentClassName: x
-                    } = this.props, N = (0, P.getPlatform)(), M = i(E, {
+                    } = this.props, N = (0, b.getPlatform)(), M = i(E, {
                         "mouse-mode": o,
                         "reduce-motion": p,
                         "full-motion": !p,
@@ -142,7 +142,7 @@
                                     children: (0, a.jsx)("div", {
                                         "data-popout-root": !0,
                                         ref: this.rootRef,
-                                        className: i((0, b.getThemeClass)(e), (0, I.default)(), M, _),
+                                        className: i((0, P.getThemeClass)(e), (0, I.default)(), M, _),
                                         children: (0, a.jsx)(c.FocusRingScope, {
                                             containerRef: this.rootRef,
                                             children: (0, a.jsx)(m.default, {
@@ -176,8 +176,8 @@
                 }
                 constructor(...e) {
                     super(...e), this.rootRef = l.createRef(), this._cleanupWindowActionCreators = void 0, this.warnPopoutClose = e => {
-                        this.props.connectedToEmbeddedActivity && !j.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = k.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, P.isPlatformEmbedded && (0, C.default)(() => {
-                            w.default.unmountWindow(this.props.windowKey), P.isPlatformEmbedded && D.default.close(this.props.windowKey)
+                        this.props.connectedToEmbeddedActivity && !j.default.disableEmbeddedActivityPopOutAlert && (e.returnValue = k.default.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE, b.isPlatformEmbedded && (0, C.default)(() => {
+                            w.default.unmountWindow(this.props.windowKey), b.isPlatformEmbedded && D.default.close(this.props.windowKey)
                         }))
                     }, this.handleBlur = () => {
                         var e, t;

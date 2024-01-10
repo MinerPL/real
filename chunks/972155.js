@@ -39,7 +39,7 @@
                     inCall: L,
                     totalNumberOfParticipants: O,
                     paused: y = !1
-                } = e, P = (0, o.useAppContext)(), b = P === x.AppContext.POPOUT, D = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(R.guild_id), [R.guild_id]), {
+                } = e, b = (0, o.useAppContext)(), P = b === x.AppContext.POPOUT, D = (0, i.useStateFromStores)([C.default], () => C.default.getGuild(R.guild_id), [R.guild_id]), {
                     dismissedActivityEntryPointTileChannel: U
                 } = (0, T.useChannelCallVideoGridStore)(), w = (0, i.useStateFromStores)([p.default], () => p.default.getUserParticipantCount(R.id), [R]), F = l.useCallback(() => {
                     T.useChannelCallVideoGridStore.setState({
@@ -86,7 +86,7 @@
                         onContextMenu: M,
                         inCall: L,
                         width: t,
-                        inPopout: b
+                        inPopout: P
                     }, e.id));
                 (0, h.default)({
                     type: s.ImpressionTypes.VIEW,
@@ -103,26 +103,26 @@
                     channel: R,
                     guild: D,
                     width: e,
-                    inPopout: b,
+                    inPopout: P,
                     handleClose: F,
                     userParticipantCount: w
                 })) : (H !== c.VcTileActivityExperimentType.ONE_OR_TWO_USERS || 2 !== w) && (H !== c.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS || !(w >= 2)) || !G || z || W || K ? B && 1 === w && k && ([c.VcTileActivityExperimentType.ONE_OR_TWO_USERS, c.VcTileActivityExperimentType.ANY_NUMBER_OF_USERS].includes(H) && G && !z ? X.push(e => (0, a.jsx)(_.ActivityEntryPointTile, {
                     channel: R,
                     guild: D,
                     width: e,
-                    inPopout: b,
+                    inPopout: P,
                     handleClose: F,
                     userParticipantCount: w
                 })) : X.push(e => (0, a.jsx)(v.default, {
                     width: e,
                     channel: R,
                     guild: D,
-                    inPopout: b
+                    inPopout: P
                 }))) : X.push(e => (0, a.jsx)(_.ActivityEntryPointTile, {
                     channel: R,
                     guild: D,
                     width: e,
-                    inPopout: b,
+                    inPopout: P,
                     handleClose: F,
                     userParticipantCount: w
                 })));

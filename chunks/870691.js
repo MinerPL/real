@@ -6,9 +6,9 @@
             }), n("222007");
             var i = n("446674"),
                 l = n("913144"),
-                r = n("449008"),
-                s = n("42203"),
-                a = n("341542"),
+                a = n("449008"),
+                r = n("42203"),
+                s = n("341542"),
                 o = n("923959"),
                 u = n("49111");
             let d = {},
@@ -24,7 +24,7 @@
             }
             class E extends i.default.PersistedStore {
                 initialize(e) {
-                    this.waitFor(s.default, a.default), this.removeChangeListener(f), this.addChangeListener(f), d = null != e ? e : {}
+                    this.waitFor(r.default, s.default), this.removeChangeListener(f), this.addChangeListener(f), d = null != e ? e : {}
                 }
                 getState() {
                     return d
@@ -49,9 +49,9 @@
                 USER_GUILD_SETTINGS_FULL_UPDATE: function(e) {
                     let {
                         userGuildSettings: t
-                    } = e, n = new Set(t.map(e => e.guild_id).filter(r.isNotNullish));
+                    } = e, n = new Set(t.map(e => e.guild_id).filter(a.isNotNullish));
                     for (let e in d) {
-                        let t = s.default.getChannel(e);
+                        let t = r.default.getChannel(e);
                         null != t && null != t.guild_id && n.has(t.guild_id) && delete d[t.id]
                     }
                     for (let e of t)

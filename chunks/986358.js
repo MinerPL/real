@@ -36,7 +36,7 @@
                 O = n("782340"),
                 y = n("298028");
 
-            function P(e) {
+            function b(e) {
                 let {
                     user: t,
                     backgroundColor: n,
@@ -90,7 +90,7 @@
                 })
             }
 
-            function b(e) {
+            function P(e) {
                 let {
                     tag: t = "div",
                     disabled: n,
@@ -127,13 +127,13 @@
                     canKickUser: null != C && E.default.canManageUser(L.Permissions.KICK_MEMBERS, l, C),
                     canBanUser: null != C && E.default.canManageUser(L.Permissions.BAN_MEMBERS, l, C),
                     canModerateMembers: null != C && (0, c.canToggleCommunicationDisableOnUser)(C.id, l.id, [S.default, m.default, E.default])
-                }), [l, C]), R = (0, u.isMemberCommunicationDisabled)(s), j = null != p ? [p] : [], P = (0, f.useTrackModerationAction)(h, {
+                }), [l, C]), R = (0, u.isMemberCommunicationDisabled)(s), j = null != p ? [p] : [], b = (0, f.useTrackModerationAction)(h, {
                     targetUserId: l.id,
                     location: p
                 });
                 return (0, a.jsxs)("div", {
                     className: y.bottomRow,
-                    children: [(0, a.jsxs)(b, {
+                    children: [(0, a.jsxs)(P, {
                         "aria-label": O.default.Messages.SEND_DM,
                         style: {
                             backgroundColor: t
@@ -149,7 +149,7 @@
                             color: "none",
                             children: O.default.Messages.SEND_DM
                         })]
-                    }), (0, a.jsxs)(b, {
+                    }), (0, a.jsxs)(P, {
                         disabled: !g,
                         "aria-label": O.default.Messages.KICK,
                         style: {
@@ -177,7 +177,7 @@
                             color: "none",
                             children: O.default.Messages.KICK
                         })]
-                    }), (0, a.jsxs)(b, {
+                    }), (0, a.jsxs)(P, {
                         disabled: !v,
                         "aria-label": O.default.Messages.BAN,
                         style: {
@@ -205,7 +205,7 @@
                             color: "none",
                             children: O.default.Messages.BAN
                         })]
-                    }), (0, a.jsxs)(b, {
+                    }), (0, a.jsxs)(P, {
                         disabled: !M,
                         "aria-label": O.default.Messages.TIMEOUT_USER,
                         style: {
@@ -223,13 +223,13 @@
                             color: "none",
                             children: R ? O.default.Messages.REMOVE_TIME_OUT : O.default.Messages.TIMEOUT_USER
                         })]
-                    }), (0, a.jsxs)(b, {
+                    }), (0, a.jsxs)(P, {
                         "aria-label": O.default.Messages.COPY_ID,
                         style: {
                             backgroundColor: t
                         },
                         onClick: () => {
-                            P(f.ModerationActionType.COPY_ID), (0, A.copy)(l.id)
+                            b(f.ModerationActionType.COPY_ID), (0, A.copy)(l.id)
                         },
                         disabled: !A.SUPPORTS_COPY,
                         children: [(0, a.jsx)(x.default, {
@@ -253,7 +253,7 @@
                 } = e, s = (0, i.default)([S.default], () => S.default.getUser(t), [t]), o = (0, i.default)([p.default], () => p.default.getMember(n, t), [n, t]), u = (0, j.useProfileThemedPanelBackground)(t, n, .8, r.tokens.colors.BACKGROUND_PRIMARY);
                 return null == s || null == o ? null : (0, a.jsxs)("div", {
                     className: y.container,
-                    children: [(0, a.jsx)(P, {
+                    children: [(0, a.jsx)(b, {
                         user: s,
                         guildId: n,
                         onClose: l,

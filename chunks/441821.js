@@ -43,7 +43,7 @@
                     onActivityItemSelected: L,
                     imageBackground: O,
                     activityAction: y,
-                    labelType: P
+                    labelType: b
                 } = (0, S.default)({
                     channel: n,
                     activityItem: a,
@@ -52,7 +52,7 @@
                     onActivityItemSelected: l,
                     embeddedActivitiesManager: T.default,
                     assetNames: A
-                }), [b, D] = i.useState(!1), U = i.useCallback(() => {
+                }), [P, D] = i.useState(!1), U = i.useCallback(() => {
                     D(!0)
                 }, [D]), w = i.useCallback(() => {
                     D(!1)
@@ -62,10 +62,10 @@
                         className: N.badgeContainer,
                         children: (0, s.jsx)(I.default, {
                             name: a.application.name,
-                            labelType: P
+                            labelType: b
                         })
                     })
-                }), [a.application.name, P]), V = i.useMemo(() => (0, g.default)(a.activity) ? null : E.default.canUsePremiumActivities(j) ? (0, s.jsx)("div", {
+                }), [a.application.name, b]), V = i.useMemo(() => (0, g.default)(a.activity) ? null : E.default.canUsePremiumActivities(j) ? (0, s.jsx)("div", {
                     className: N.iconOuterContainer,
                     children: (0, s.jsx)("div", {
                         className: o(N.iconInnerContainer, N.nitroIconContainer),
@@ -132,7 +132,7 @@
                             value: 0
                         },
                         to: {
-                            value: b ? 1 : 0
+                            value: P ? 1 : 0
                         },
                         children: e => {
                             let {

@@ -34,8 +34,8 @@
                 L = n("659500"),
                 O = n("701909"),
                 y = n("49111"),
-                P = n("994428"),
-                b = n("353927"),
+                b = n("994428"),
+                P = n("353927"),
                 D = n("782340"),
                 U = n("367731");
             class w extends l.PureComponent {
@@ -59,7 +59,7 @@
                     let d = o.isManaged(),
                         c = null,
                         f = !1;
-                    return T.default.supports(b.Features.VIDEO) ? i ? (c = D.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, f = !0) : l && u === y.ChannelModes.VIDEO ? (t = this.handleJoinVideoCall, c = d ? D.default.Messages.CONNECT : D.default.Messages.JOIN_VIDEO_CALL) : (t = this.handleStartVideoCall, c = d ? D.default.Messages.CONNECT : D.default.Messages.START_VIDEO_CALL) : (f = !0, t = this.handleBrowserNotSupported, c = D.default.Messages.BROWSER_NOT_SUPPORTED), (0, a.jsx)(R.default.Icon, {
+                    return T.default.supports(P.Features.VIDEO) ? i ? (c = D.default.Messages.CALL_UNAVAILABLE_BLOCKED_USERS, e = r.Tooltip.Colors.RED, f = !0) : l && u === y.ChannelModes.VIDEO ? (t = this.handleJoinVideoCall, c = d ? D.default.Messages.CONNECT : D.default.Messages.JOIN_VIDEO_CALL) : (t = this.handleStartVideoCall, c = d ? D.default.Messages.CONNECT : D.default.Messages.START_VIDEO_CALL) : (f = !0, t = this.handleBrowserNotSupported, c = D.default.Messages.BROWSER_NOT_SUPPORTED), (0, a.jsx)(R.default.Icon, {
                         icon: M.default,
                         onClick: t,
                         disabled: f || s,
@@ -136,7 +136,7 @@
                                         }),
                                         buttonCTA: D.default.Messages.GOT_IT,
                                         onClick: () => {
-                                            t(), s(P.ContentDismissActionType.UNKNOWN)
+                                            t(), s(b.ContentDismissActionType.UNKNOWN)
                                         },
                                         className: U.tooltip
                                     })
@@ -169,7 +169,7 @@
                             canShowActivityGdmTooltip: a
                         } = this.props;
                         if (a && (0, p.markDismissibleContentAsDismissed)(i.DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP, {
-                                dismissAction: P.ContentDismissActionType.AUTO
+                                dismissAction: b.ContentDismissActionType.AUTO
                             }), t);
                         else if (n) return this.handleJoinCall(!1);
                         else return this.handleStartCall(e, !1)

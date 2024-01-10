@@ -72,8 +72,8 @@
                     location: v,
                     className: M,
                     onNavigate: R
-                } = e, j = l.useRef(null), L = (0, o.default)([E.default], () => E.default.getGuildSidebarState(u), [u]), O = l.useRef(0), [y, P] = l.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), {
-                    messageHistoryState: b
+                } = e, j = l.useRef(null), L = (0, o.default)([E.default], () => E.default.getGuildSidebarState(u), [u]), O = l.useRef(0), [y, b] = l.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), {
+                    messageHistoryState: P
                 } = (0, _.useServerActivityForUser)(s, u, y), D = (0, o.default)([g.default], () => g.default.getUser(s), [s]), U = (0, o.default)([C.default], () => C.default.getMember(u, s), [u, s]), w = (0, I.useProfileThemedPanelBackground)(s, u);
                 l.useLayoutEffect(() => {
                     let e = null == L ? void 0 : L.details.scrollOffset;
@@ -101,7 +101,7 @@
                             ...y,
                             offset: 25 * e
                         };
-                        P(t), (0, S.openGuildMemberModViewSidebar)(u, s, L.baseChannelId, {
+                        b(t), (0, S.openGuildMemberModViewSidebar)(u, s, L.baseChannelId, {
                             modViewPanel: T.ModViewPanel.MESSAGE_HISTORY,
                             additionalSearchQuery: t,
                             scrollOffset: O.current
@@ -109,8 +109,8 @@
                     }, [u, s, L, y]),
                     B = null !== (n = null == y ? void 0 : y.offset) && void 0 !== n ? n : 0,
                     H = (0, o.default)([f.default], () => {
-                        if (null == b.result) return [];
-                        let e = b.result.messages,
+                        if (null == P.result) return [];
+                        let e = P.result.messages,
                             t = (0, c.createASTHighlighter)("");
                         return e.map(e => e.map(e => {
                             let n = f.default.getMessage(e.id, e.channel_id),
@@ -124,10 +124,10 @@
                                 allowList: !0
                             })) : a
                         }))
-                    }, [b.result]),
+                    }, [P.result]),
                     G = l.useMemo(() => {
                         var e, t, n, a;
-                        return null == b.result ? {
+                        return null == P.result ? {
                             documentsIndexed: 0,
                             isSearching: !0,
                             isIndexing: !1,
@@ -138,17 +138,17 @@
                             showBlockedResults: !1,
                             showNoResultsAlt: !1
                         } : {
-                            documentsIndexed: null !== (e = b.result.documents_indexed) && void 0 !== e ? e : 0,
+                            documentsIndexed: null !== (e = P.result.documents_indexed) && void 0 !== e ? e : 0,
                             isSearching: !1,
-                            isIndexing: null !== (t = b.result.doing_deep_historical_index) && void 0 !== t && t,
-                            isHistoricalIndexing: null !== (n = b.result.doing_deep_historical_index) && void 0 !== n && n,
+                            isIndexing: null !== (t = P.result.doing_deep_historical_index) && void 0 !== t && t,
+                            isHistoricalIndexing: null !== (n = P.result.doing_deep_historical_index) && void 0 !== n && n,
                             offset: B,
-                            totalResults: null !== (a = b.result.total_results) && void 0 !== a ? a : 0,
+                            totalResults: null !== (a = P.result.total_results) && void 0 !== a ? a : 0,
                             hasError: !1,
                             showBlockedResults: !1,
                             showNoResultsAlt: !1
                         }
-                    }, [b.result, B]);
+                    }, [P.result, B]);
                 return null == D || null == U || null == G ? null : (0, a.jsxs)("div", {
                     className: i(x.container, M),
                     style: {

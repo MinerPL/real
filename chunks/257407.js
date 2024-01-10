@@ -34,8 +34,8 @@
                 L = n("49111"),
                 O = n("99795"),
                 y = n("958706"),
-                P = n("646718"),
-                b = n("397336"),
+                b = n("646718"),
+                P = n("397336"),
                 D = n("782340"),
                 U = n("308036");
             let w = y.EmojiIntention.CHAT,
@@ -79,7 +79,7 @@
                     q = () => {
                         (0, M.openEffectsUpsellModal)({
                             analytics: {
-                                type: P.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED,
+                                type: b.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED,
                                 object: L.AnalyticsObjects.BUTTON_CTA,
                                 section: L.AnalyticsSections.VOICE_CHANNEL_EFFECTS_BAR
                             }
@@ -122,7 +122,7 @@
                                     content: D.default.Messages.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP_BODY,
                                     onClick: () => {
                                         d.default.open(L.UserSettingsSections.ACCESSIBILITY, null, {
-                                            scrollPosition: b.AccessibilityScrollPositions.REDUCED_MOTION
+                                            scrollPosition: P.AccessibilityScrollPositions.REDUCED_MOTION
                                         }), m()
                                     },
                                     markAsDismissed: l,
@@ -155,7 +155,7 @@
                                         },
                                         onShowUpsell: () => (0, M.openEffectsUpsellModal)({
                                             analytics: {
-                                                type: W.current ? P.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : P.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
+                                                type: W.current ? b.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED : b.PremiumUpsellTypes.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED,
                                                 object: L.AnalyticsObjects.VOICE_CHANNEL_EFFECTS_TOGGLE,
                                                 section: W.current ? L.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER : L.AnalyticsSections.VOICE_CHANNEL_EFFECTS_BAR
                                             }

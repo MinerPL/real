@@ -33,12 +33,12 @@
                     if (null == t) return (0, s.jsx)(s.Fragment, {
                         children: a.Children.only(A)
                     });
-                    let I = null;
-                    return null != E ? I = (0, s.jsx)("img", {
+                    let N = null;
+                    return null != E ? N = (0, s.jsx)("img", {
                         alt: "",
                         src: E,
                         className: c.image
-                    }) : null != g && (I = (0, s.jsx)(d.default, {
+                    }) : null != g && (N = (0, s.jsx)(d.default, {
                         importData: g,
                         shouldAnimate: !T,
                         className: c.animation
@@ -46,7 +46,7 @@
                         className: c.wrapper,
                         children: [(0, s.jsxs)("div", {
                             className: c.content,
-                            children: [I, (0, s.jsxs)("div", {
+                            children: [N, (0, s.jsxs)("div", {
                                 className: c.text,
                                 children: [(0, s.jsx)(r.Heading, {
                                     variant: "heading-md/semibold",

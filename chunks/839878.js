@@ -18,15 +18,15 @@
                 p = n("233069"),
                 g = n("950104"),
                 m = n("42203"),
-                E = n("305961"),
-                S = n("27618"),
+                S = n("305961"),
+                E = n("27618"),
                 v = n("18494"),
                 y = n("887657"),
                 C = n("293137"),
-                N = n("945330"),
-                O = n("673220"),
+                I = n("945330"),
+                N = n("673220"),
                 T = n("960086"),
-                I = n("519794"),
+                O = n("519794"),
                 _ = n("393900"),
                 A = n("560995"),
                 x = n("423741"),
@@ -75,7 +75,7 @@
                     return p && !n ? (0, i.jsxs)(A.default.Bar, {
                         className: L.opacityHeader,
                         children: [(0, i.jsx)(x.default, {}), (0, i.jsx)(f.default.Icon, {
-                            icon: N.default,
+                            icon: I.default,
                             onClick: this.handleCloseOpacitySettings,
                             tooltip: R.default.Messages.CLOSE
                         })]
@@ -90,7 +90,7 @@
                                 channelId: a.id,
                                 toolbar: this.renderWidgetButtons(),
                                 transparent: !0,
-                                children: [u || n || c ? null : (0, i.jsx)(O.default, {
+                                children: [u || n || c ? null : (0, i.jsx)(N.default, {
                                     className: s(L.dragIcon, t),
                                     width: 20,
                                     height: 20
@@ -147,7 +147,7 @@
                                 tooltip: R.default.Messages.FORM_LABEL_OVERLAY_CHAT_OPACITY,
                                 onClick: this.handleOpenOpacitySettings
                             }) : null, (0, i.jsx)(f.default.Icon, {
-                                icon: n ? _.default : I.default,
+                                icon: n ? _.default : O.default,
                                 tooltip: l,
                                 selected: n,
                                 onClick: t
@@ -164,7 +164,7 @@
                 } = e, a = (0, o.useStateFromStores)([v.default, m.default], () => {
                     let e = v.default.getVoiceChannelId();
                     return m.default.getChannel(e)
-                }), l = (0, o.useStateFromStores)([E.default], () => E.default.getGuild(t.guild_id)), s = (0, o.useStateFromStores)([g.default], () => g.default.isCallActive(t.id)), r = (0, c.default)(t), d = (0, o.useStateFromStores)([S.default], () => !!t.isDM() && null != t.getRecipientId() && S.default.isBlocked(t.getRecipientId()));
+                }), l = (0, o.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), s = (0, o.useStateFromStores)([g.default], () => g.default.isCallActive(t.id)), r = (0, c.default)(t), d = (0, o.useStateFromStores)([E.default], () => !!t.isDM() && null != t.getRecipientId() && E.default.isBlocked(t.getRecipientId()));
                 return (0, i.jsx)(M, {
                     channel: t,
                     channelName: r,

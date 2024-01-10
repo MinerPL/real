@@ -16,8 +16,8 @@
                 _ = s("773336"),
                 E = s("75576"),
                 I = s("49111"),
-                T = s("782340"),
-                f = s("502604");
+                f = s("782340"),
+                T = s("502604");
             let S = {
                 [I.OperatingSystems.WINDOWS]: _.PlatformTypes.WINDOWS,
                 [I.OperatingSystems.MACOS]: _.PlatformTypes.OSX,
@@ -34,12 +34,12 @@
                     return (0, a.jsx)(i.Button, {
                         size: r ? i.Button.Sizes.MIN : i.Button.Sizes.LARGE,
                         fullWidth: !r,
-                        color: e ? f.tabSelectedColor : f.tabNotSelectedColor,
+                        color: e ? T.tabSelectedColor : T.tabNotSelectedColor,
                         className: l({
-                            [f.tabPageLarge]: r,
-                            [f.tabPageSmall]: !r,
-                            [f.tabSelected]: e,
-                            [f.tabNotSelected]: !e
+                            [T.tabPageLarge]: r,
+                            [T.tabPageSmall]: !r,
+                            [T.tabSelected]: e,
+                            [T.tabNotSelected]: !e
                         }),
                         onClick: n,
                         children: t
@@ -47,37 +47,37 @@
                 }
             }
             let p = e => [{
-                key: T.default.Messages.APPLICATION_STORE_SPECS_OS,
+                key: f.default.Messages.APPLICATION_STORE_SPECS_OS,
                 value: e.operating_system_version
             }, {
-                key: T.default.Messages.APPLICATION_STORE_SPECS_CPU,
+                key: f.default.Messages.APPLICATION_STORE_SPECS_CPU,
                 value: e.cpu
             }, {
-                key: T.default.Messages.APPLICATION_STORE_SPECS_MEMORY,
-                value: null != e.ram ? T.default.Messages.APPLICATION_STORE_SPECS_MEMORY_VALUE.format({
+                key: f.default.Messages.APPLICATION_STORE_SPECS_MEMORY,
+                value: null != e.ram ? f.default.Messages.APPLICATION_STORE_SPECS_MEMORY_VALUE.format({
                     size: (0, d.formatSize)(1e3 * e.ram, {
                         showDecimalForGB: !1
                     })
                 }) : null
             }, {
-                key: T.default.Messages.APPLICATION_STORE_SPECS_VIDEO,
+                key: f.default.Messages.APPLICATION_STORE_SPECS_VIDEO,
                 value: e.gpu
             }, {
-                key: T.default.Messages.APPLICATION_STORE_SPECS_STORAGE,
+                key: f.default.Messages.APPLICATION_STORE_SPECS_STORAGE,
                 value: null != e.disk ? (0, d.formatSize)(1e3 * e.disk, {
                     showDecimalForGB: !1
                 }) : null
             }, {
-                key: T.default.Messages.APPLICATION_STORE_SPECS_SOUND,
+                key: f.default.Messages.APPLICATION_STORE_SPECS_SOUND,
                 value: e.sound_card
             }, {
-                key: T.default.Messages.APPLICATION_STORE_SPECS_NETWORK,
+                key: f.default.Messages.APPLICATION_STORE_SPECS_NETWORK,
                 value: e.network
             }, {
-                key: T.default.Messages.APPLICATION_STORE_SPECS_NOTES,
+                key: f.default.Messages.APPLICATION_STORE_SPECS_NOTES,
                 value: e.notes
             }];
-            class m extends n.PureComponent {
+            class A extends n.PureComponent {
                 static getDerivedStateFromProps(e, t) {
                     let {
                         systemRequirements: s
@@ -96,9 +96,9 @@
                         selectedOperatingSystem: s
                     } = this.state, n = Object.keys(t);
                     return 1 === n.length ? null : (0, a.jsxs)(o.default, {
-                        className: f.tabs,
+                        className: T.tabs,
                         children: [(0, a.jsx)("div", {
-                            className: f.separator
+                            className: T.separator
                         }), n.map(t => (0, a.jsx)(R, {
                             active: t === s,
                             onClick: () => this.handleSelectOperatingSystem(t),
@@ -106,11 +106,11 @@
                             children: function(e) {
                                 switch (e) {
                                     case I.OperatingSystems.WINDOWS:
-                                        return T.default.Messages.WINDOWS;
+                                        return f.default.Messages.WINDOWS;
                                     case I.OperatingSystems.MACOS:
-                                        return T.default.Messages.MACOS;
+                                        return f.default.Messages.MACOS;
                                     case I.OperatingSystems.LINUX:
-                                        return T.default.Messages.LINUX
+                                        return f.default.Messages.LINUX
                                 }
                             }(t)
                         }, t))]
@@ -122,15 +122,15 @@
                         n = s.map((e, t) => {
                             let s = null != e.value ? e.value.trim() : null;
                             return null == s || 0 === s.length ? null : (0, a.jsxs)("div", {
-                                className: f.requirement,
+                                className: T.requirement,
                                 children: [(0, a.jsxs)("span", {
-                                    className: f.requirementKey,
+                                    className: T.requirementKey,
                                     children: [e.key, ":"]
                                 }), s]
                             }, t)
                         }).filter(c.isNotNullish);
                     return (0, a.jsxs)("div", {
-                        className: f.requirements,
+                        className: T.requirements,
                         children: [(0, a.jsx)(u.default, {
                             tag: "h4",
                             children: t
@@ -143,15 +143,15 @@
                         recommended: t
                     } = this.props.systemRequirements[this.state.selectedOperatingSystem];
                     return (0, a.jsxs)("div", {
-                        className: f.requirementsContainer,
-                        children: [this.renderRequirementsSection(e, T.default.Messages.APPLICATION_STORE_SPECS_MINIMUM), this.renderRequirementsSection(t, T.default.Messages.APPLICATION_STORE_SPECS_RECOMMENDED)]
+                        className: T.requirementsContainer,
+                        children: [this.renderRequirementsSection(e, f.default.Messages.APPLICATION_STORE_SPECS_MINIMUM), this.renderRequirementsSection(t, f.default.Messages.APPLICATION_STORE_SPECS_RECOMMENDED)]
                     })
                 }
                 render() {
                     return (0, a.jsxs)("div", {
                         className: this.props.className,
                         children: [(0, a.jsx)(u.default, {
-                            children: T.default.Messages.APPLICATION_STORE_SECTION_TITLE_SYSTEM_REQUIREMENTS
+                            children: f.default.Messages.APPLICATION_STORE_SECTION_TITLE_SYSTEM_REQUIREMENTS
                         }), this.renderTabs(), this.renderBody()]
                     })
                 }
@@ -170,4 +170,4 @@
                     }
                 }
             }
-            var N = m
+            var N = A

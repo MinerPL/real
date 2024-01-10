@@ -16,14 +16,14 @@
                 _ = s("737117"),
                 E = s("550722"),
                 I = s("113705"),
-                T = s("743437"),
-                f = s("404875"),
+                f = s("743437"),
+                T = s("404875"),
                 S = s("118536"),
                 R = s("411389"),
                 p = s("840456"),
-                m = s("720917"),
+                A = s("720917"),
                 N = s("982784"),
-                A = s("19530"),
+                m = s("19530"),
                 g = s("215541"),
                 P = s("663411"),
                 C = s("126304"),
@@ -92,7 +92,7 @@
                                     onTryItOutClick: t
                                 })
                             },
-                            imageSource: f,
+                            imageSource: T,
                             imageClassName: t.perGuildProfilesImage
                         },
                         longerMessages: {
@@ -104,13 +104,13 @@
                         moreGuilds: {
                             title: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                            imageSource: y(s, T, D),
+                            imageSource: y(s, f, D),
                             imageClassName: t.moreGuildsImage
                         },
                         moreGuildsAlt: {
                             title: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                            imageSource: y(s, p, m),
+                            imageSource: y(s, p, A),
                             imageClassName: t.moreGuildsAltImage
                         },
                         remix: {
@@ -123,7 +123,7 @@
                         soundboard: {
                             title: c.default.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
                             description: c.default.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-                            imageSource: y(s, N, A),
+                            imageSource: y(s, N, m),
                             imageClassName: t.soundboardImage
                         },
                         stickers: {

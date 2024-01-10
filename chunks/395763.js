@@ -4,7 +4,7 @@
                     return O
                 },
                 default: function() {
-                    return P
+                    return b
                 }
             }), n("222007");
             var a, l, s = n("37983");
@@ -76,11 +76,11 @@
                 let S = (a = C) > 400 ? 2 : a > 300 ? 1 : 0;
                 let [_] = (l = C) > 400 ? [u.AvatarSizes.SIZE_56, 56] : l > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], T = (0, o.useStateFromStoresArray)([x.default, v.default], () => Array.from(i).map(e => v.default.getId() === e ? null : x.default.getUser(e)).filter(A.isNotNullish)), N = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === p.id)), {
                     analyticsLocations: L
-                } = (0, I.default)(), y = (0, d.useAnalyticsContext)(), P = M.default.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), b = (0, h.useEmbeddedActivityJoinability)({
+                } = (0, I.default)(), y = (0, d.useAnalyticsContext)(), b = M.default.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), P = (0, h.useEmbeddedActivityJoinability)({
                     userId: null === (t = x.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
                     channelId: E.id,
                     application: p
-                }), D = b === h.EmbeddedActivityJoinability.CAN_JOIN, U = null !== (n = E.getGuildId()) && void 0 !== n ? n : void 0;
+                }), D = P === h.EmbeddedActivityJoinability.CAN_JOIN, U = null !== (n = E.getGuildId()) && void 0 !== n ? n : void 0;
                 return (0, s.jsxs)("div", {
                     className: j.splash,
                     children: [(0, s.jsx)(O, {
@@ -95,10 +95,10 @@
                         }),
                         variant: "text-sm/normal",
                         children: T.length > 1 ? R.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
-                            username: P,
+                            username: b,
                             count: T.length - 1
                         }) : R.default.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
-                            username: P
+                            username: b
                         })
                     }), (0, s.jsx)(u.Text, {
                         className: r(j.header, {
@@ -138,7 +138,7 @@
                 })
             }
 
-            function P(e) {
+            function b(e) {
                 let {
                     participant: t,
                     width: n,

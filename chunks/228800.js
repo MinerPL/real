@@ -25,15 +25,15 @@
                 A = n("300322"),
                 T = n("845579"),
                 M = n("982108"),
-                I = n("778588"),
-                N = n("957255"),
-                v = n("101125"),
-                L = n("351825"),
-                x = n("738602"),
-                R = n("430025"),
+                N = n("778588"),
+                I = n("957255"),
+                L = n("101125"),
+                v = n("351825"),
+                R = n("738602"),
+                x = n("430025"),
                 y = n("659500"),
-                O = n("773336"),
-                D = n("412861"),
+                D = n("773336"),
+                O = n("412861"),
                 j = n("79254"),
                 b = n("64096"),
                 P = n("49111"),
@@ -48,27 +48,27 @@
                             draftType: B,
                             editorTextContent: V,
                             setValue: W,
-                            canOnlyUseTextCommands: Z
+                            canOnlyUseTextCommands: z
                         } = e,
-                        z = (0, f.useAppContext)(),
+                        Z = (0, f.useAppContext)(),
                         K = a.useRef(null),
-                        Y = (0, r.useStateFromStores)([v.default], () => v.default.getActivities()),
+                        Y = (0, r.useStateFromStores)([L.default], () => L.default.getActivities()),
                         q = (0, r.useStateFromStores)([m.default], () => m.default.getSettings().clipsEnabled),
                         X = (0, r.useStateFromStores)([m.default], () => m.default.getLastClipsSession()),
                         J = (0, r.useStateFromStoresArray)([m.default], () => m.default.getNewClipIds()),
                         Q = (0, r.useStateFromStores)([M.default], () => null == M.default.getCurrentSidebarChannelId(w.id)),
                         $ = (0, r.useStateFromStores)([g.HotspotStore], () => g.HotspotStore.hasHotspot(g.HotspotLocations.CLIPS_CHANNEL_ATTACH_REMINDER)),
                         ee = (0, u.useModalsStore)(e => (0, u.hasModalOpenSelector)(e, U.CLIPS_GALLERY_MODAL_KEY)),
-                        et = (0, r.useStateFromStores)([I.default], () => I.default.hasLayers()),
+                        et = (0, r.useStateFromStores)([N.default], () => N.default.hasLayers()),
                         en = (0, r.useStateFromStores)([m.default], () => m.default.hasClips()),
                         [es, ea] = a.useState(null),
                         el = (0, p.useEnableClips)() && (q || en),
                         ei = w.isPrivate(),
-                        er = (0, r.useStateFromStores)([N.default], () => ei || N.default.can(P.Permissions.ATTACH_FILES, w) && N.default.can(P.Permissions.SEND_MESSAGES, w)),
+                        er = (0, r.useStateFromStores)([I.default], () => ei || I.default.can(P.Permissions.ATTACH_FILES, w) && I.default.can(P.Permissions.SEND_MESSAGES, w)),
                         eo = (0, c.default)(X);
                     (null == eo ? void 0 : eo.newClipIds.length) !== (null == X ? void 0 : X.newClipIds.length) && (null !== (t = null == X ? void 0 : X.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == es && $ && Q && !ee && !et && ea("recentClips");
                     let eu = (e, t, n) => {
-                        null != t && "ETOOLARGE" === t.code ? (0, D.showUploadFileSizeExceededError)(w, []) : (0, D.promptToUpload)(e, w, B, {
+                        null != t && "ETOOLARGE" === t.code ? (0, O.showUploadFileSizeExceededError)(w, []) : (0, O.promptToUpload)(e, w, B, {
                             requireConfirm: !0,
                             showLargeMessageDialog: n
                         }), y.ComponentDispatch.dispatchToLastSubscribed(P.ComponentActions.TEXTAREA_FOCUS)
@@ -98,8 +98,8 @@
                     });
                     let ec = (0, A.useCanStartPublicThread)(w),
                         ef = (0, A.useCanStartPrivateThread)(w),
-                        eh = !T.UseLegacyChatInput.useSetting() && !(0, O.isAndroidWeb)() && null != window.ResizeObserver,
-                        eC = (0, r.useStateFromStores)([N.default, _.default], () => (0, C.canUseApplicationCommands)(N.default, _.default, Z, w)),
+                        eh = !T.UseLegacyChatInput.useSetting() && !(0, D.isAndroidWeb)() && null != window.ResizeObserver,
+                        eC = (0, r.useStateFromStores)([I.default, _.default], () => (0, C.canUseApplicationCommands)(I.default, _.default, z, w)),
                         ep = (0, S.useCanPostPollsInChannel)(null != w ? w : void 0),
                         em = (0, u.useRedesignIconContext)().enabled,
                         eE = null !== (l = null == J ? void 0 : J.length) && void 0 !== l ? l : 0,
@@ -113,7 +113,7 @@
                             activities: Y,
                             newClipsCount: eE,
                             canPostPolls: ep,
-                            appContext: z
+                            appContext: Z
                         });
                     if (0 === eg.length) return null;
                     let eS = Y.some(e => (0, h.default)(e, P.ActivityFlags.SYNC)),
@@ -121,19 +121,19 @@
                     k = em ? (0, s.jsx)(o.CirclePlusIcon, {
                         className: H.attachButtonIcon,
                         colorClass: H.attachButtonPlus
-                    }) : e_ ? (0, s.jsx)(R.default, {
+                    }) : e_ ? (0, s.jsx)(x.default, {
                         className: H.attachButtonIcon,
                         foreground: H.attachButtonPlay,
                         background: H.attachButtonPlus,
                         width: 24,
                         height: 24
-                    }) : eE > 0 ? (0, s.jsx)(x.default, {
+                    }) : eE > 0 ? (0, s.jsx)(R.default, {
                         className: H.attachButtonIcon,
                         foreground: H.attachButtonClip,
                         background: H.attachButtonPlus,
                         width: 24,
                         height: 24
-                    }) : (0, s.jsx)(L.default, {
+                    }) : (0, s.jsx)(v.default, {
                         className: H.attachButtonIcon,
                         foreground: H.attachButtonPlus,
                         width: 24,

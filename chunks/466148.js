@@ -1,29 +1,29 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return o
                 },
                 getEventSchedule: function() {
                     return d
                 }
             });
-            var a = n("627445"),
-                i = n.n(a),
+            var l = n("627445"),
+                a = n.n(l),
                 s = n("446674"),
-                u = n("398604"),
-                l = n("397680"),
-                o = n("822516");
+                i = n("398604"),
+                r = n("397680"),
+                u = n("822516");
 
-            function r(e, t, n) {
-                var a;
-                let r = null !== (a = (0, s.useStateFromStores)([u.default], () => u.default.getGuildScheduledEvent(e))) && void 0 !== a ? a : n;
-                i(null != r, "Event must be defined"), t = null != t ? t : (0, o.getNextRecurrenceIdInEvent)(r);
-                let d = (0, l.default)(t, e);
-                return c(r, d, t)
+            function o(e, t, n) {
+                var l;
+                let o = null !== (l = (0, s.useStateFromStores)([i.default], () => i.default.getGuildScheduledEvent(e))) && void 0 !== l ? l : n;
+                a(null != o, "Event must be defined"), t = null != t ? t : (0, u.getNextRecurrenceIdInEvent)(o);
+                let d = (0, r.default)(t, e);
+                return c(o, d, t)
             }
 
             function d(e, t) {
-                let n = (0, l.getEventException)(t, e.id);
+                let n = (0, r.getEventException)(t, e.id);
                 return c(e, n, t)
             }
 
@@ -32,13 +32,13 @@
                     startTime: new Date(e.scheduled_start_time),
                     endTime: null != e.scheduled_end_time ? new Date(e.scheduled_end_time) : null
                 };
-                let a = (0, o.getBaseScheduleForRecurrence)(n, e),
+                let l = (0, u.getBaseScheduleForRecurrence)(n, e),
                     {
-                        startDate: i,
+                        startDate: a,
                         endDate: s
-                    } = (0, o.getScheduleForRecurrenceWithException)(a, t);
+                    } = (0, u.getScheduleForRecurrenceWithException)(l, t);
                 return {
-                    startTime: i.toDate(),
+                    startTime: a.toDate(),
                     endTime: null == s ? void 0 : s.toDate()
                 }
             }

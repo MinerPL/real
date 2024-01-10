@@ -17,15 +17,15 @@
                 _ = s("446488"),
                 E = s("182650"),
                 I = s("324878"),
-                T = s("641078"),
-                f = s("871948"),
+                f = s("641078"),
+                T = s("871948"),
                 S = s("401135"),
                 R = s("218435"),
                 p = s("881155"),
-                m = s("782340"),
+                A = s("782340"),
                 N = s("30126");
 
-            function A(e) {
+            function m(e) {
                 let {
                     variant: t = "text-lg/normal"
                 } = e, s = (0, S.useCheapestMonthlyPrice)();
@@ -33,7 +33,7 @@
                     variant: t,
                     color: "always-white",
                     className: N.description,
-                    children: m.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
+                    children: A.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
                         cheapestMonthlyPrice: s
                     })
                 })
@@ -45,7 +45,7 @@
                     subscriptionTier: n
                 } = e, {
                     AnalyticsLocationProvider: S
-                } = (0, o.default)(u.default.PREMIUM_MARKETING_HERO_CTA), g = (0, I.useHasActiveTrial)(), P = (0, E.useIsInPremiumOfferExperience)(), C = (0, T.useIsEligibleForBogoPromotion)(), {
+                } = (0, o.default)(u.default.PREMIUM_MARKETING_HERO_CTA), g = (0, I.useHasActiveTrial)(), P = (0, E.useIsInPremiumOfferExperience)(), C = (0, f.useIsEligibleForBogoPromotion)(), {
                     marketingEnabled: O
                 } = c.default.useExperiment({
                     location: "HeroHeading"
@@ -68,13 +68,13 @@
                             children: [(0, a.jsx)(l.Heading, {
                                 variant: t ? "display-lg" : "display-md",
                                 color: "always-white",
-                                children: m.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
+                                children: A.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
                             }), L ? (0, a.jsx)("div", {
                                 className: N.affinityDescription,
-                                children: (0, a.jsx)(f.default, {
+                                children: (0, a.jsx)(T.default, {
                                     smallerText: !t
                                 })
-                            }) : (0, a.jsx)(A, {}), C ? (0, a.jsx)("div", {
+                            }) : (0, a.jsx)(m, {}), C ? (0, a.jsx)("div", {
                                 className: N.buttonContainer,
                                 children: (0, a.jsx)(R.default, {
                                     className: N.button,
@@ -98,7 +98,7 @@
                                         forceWhite: !0
                                     })
                                 }) : null]
-                            }), L && (0, a.jsx)(A, {
+                            }), L && (0, a.jsx)(m, {
                                 variant: "text-md/normal"
                             })]
                         }), P ? null : (0, a.jsxs)(a.Fragment, {
