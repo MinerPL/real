@@ -29,16 +29,16 @@
                 N = n("697218"),
                 L = n("505684"),
                 v = n("378765"),
-                R = n("70845"),
-                x = n("51714"),
+                x = n("70845"),
+                R = n("51714"),
                 y = n("88243"),
-                O = n("31511"),
-                D = n("120379"),
+                D = n("31511"),
+                O = n("120379"),
                 j = n("221068"),
                 b = n("49111"),
                 P = n("782340"),
-                U = n("278224");
-            let F = a.memo(function(e) {
+                F = n("278224");
+            let U = a.memo(function(e) {
                 var t, n;
                 let {
                     className: l,
@@ -55,9 +55,9 @@
                     editingMessageId: I,
                     fontSize: N,
                     keyboardModeEnabled: L,
-                    filterAfterTimestamp: R,
-                    showingQuarantineBanner: x
-                } = e, [F, H] = a.useState(!1), k = a.useMemo(() => S ? (0, y.generateMessageSpecs)({
+                    filterAfterTimestamp: x,
+                    showingQuarantineBanner: R
+                } = e, [U, H] = a.useState(!1), k = a.useMemo(() => S ? (0, y.generateMessageSpecs)({
                     compact: !0,
                     messageGroups: 30,
                     groupRange: 4,
@@ -71,23 +71,23 @@
                     attachments: 8,
                     fontSize: N,
                     groupSpacing: c
-                }), [S, N, c]), G = (0, D.default)({
+                }), [S, N, c]), G = (0, O.default)({
                     messages: m,
                     channel: C,
                     compact: S,
                     hasUnreads: M,
                     focusId: I,
                     placeholderHeight: k.totalHeight,
-                    canLoadMore: null == R,
+                    canLoadMore: null == x,
                     handleScrollToBottom: a.useCallback(() => H(!0), [H]),
                     handleScrollFromBottom: a.useCallback(() => H(!1), [H])
-                }), w = (0, O.default)({
+                }), B = (0, D.default)({
                     scrollerRef: G.ref,
                     isEditing: null != I,
                     keyboardModeEnabled: L,
                     hasMoreAfter: m.hasMoreAfter
                 });
-                let B = (n = C, (0, o.useStateFromStores)([p.default], () => {
+                let w = (n = C, (0, o.useStateFromStores)([p.default], () => {
                         let e = T.default.can(b.Permissions.READ_MESSAGE_HISTORY, n);
                         return e ? null : p.default.getViewingRolesTimestamp(n.getGuildId())
                     })),
@@ -108,9 +108,9 @@
                         loadMore: G.loadMore,
                         scrollManager: G,
                         specs: k,
-                        filterAfterTimestamp: null != R ? R : B,
-                        showingQuarantineBanner: x,
-                        isAtBottom: F,
+                        filterAfterTimestamp: null != x ? x : w,
+                        showingQuarantineBanner: R,
+                        isAtBottom: U,
                         jumpToPresent: () => {
                             if (m.hasPresent()) {
                                 var e;
@@ -152,20 +152,20 @@
                     {
                         ref: q,
                         ...X
-                    } = (0, r.getContainerPropsFromNavigator)(w),
+                    } = (0, r.getContainerPropsFromNavigator)(B),
                     J = a.useCallback(e => {
                         var t;
                         G.ref.current = e, q.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
                     }, []);
                 return (0, s.jsx)(r.ListNavigatorProvider, {
-                    navigator: w,
+                    navigator: B,
                     children: (0, s.jsxs)("div", {
-                        className: i(U.messagesWrapper, l, "group-spacing-".concat(c)),
+                        className: i(F.messagesWrapper, l, "group-spacing-".concat(c)),
                         children: [null != K ? K : W, (0, s.jsxs)(u.PinToBottomScrollerAuto, {
                             ref: J,
                             customTheme: !0,
-                            className: i(h, U.scroller),
-                            contentClassName: U.scrollerContent,
+                            className: i(h, F.scroller),
+                            contentClassName: F.scrollerContent,
                             onResize: G.handleResize,
                             onScroll: G.handleScroll,
                             onMouseDown: G.handleMouseDown,
@@ -174,21 +174,21 @@
                             tabIndex: -1,
                             role: "group",
                             children: [Z, (0, s.jsxs)("ol", {
-                                className: U.scrollerInner,
+                                className: F.scrollerInner,
                                 "aria-label": P.default.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({
                                     channelName: C.name
                                 }),
                                 ...X,
                                 children: [(0, s.jsx)("span", {
-                                    className: U.navigationDescription,
+                                    className: F.navigationDescription,
                                     id: "messagesNavigationDescription",
                                     "aria-hidden": !0,
                                     children: P.default.Messages.CHANNEL_MESSAGES_A11Y_DESCRIPTION
                                 }), V, (0, s.jsx)("div", {
                                     className: i({
-                                        [U.scrollerSpacer]: !x,
-                                        [U.empty]: 0 === m.length && !m.loadingMore,
-                                        [U.emptyForum]: 1 === m.length && !m.loadingMore && C.isForumPost() && (null === (t = m.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(C))
+                                        [F.scrollerSpacer]: !R,
+                                        [F.empty]: 0 === m.length && !m.loadingMore,
+                                        [F.emptyForum]: 1 === m.length && !m.loadingMore && C.isForumPost() && (null === (t = m.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(C))
                                     })
                                 })]
                             })]
@@ -225,8 +225,8 @@
                 }(t), {
                     messageGroupSpacing: v,
                     fontSize: y,
-                    messageDisplayCompact: O,
-                    renderSpoilers: D,
+                    messageDisplayCompact: D,
+                    renderSpoilers: O,
                     keyboardModeEnabled: j
                 } = function() {
                     let e = E.MessageDisplayCompact.useSetting(),
@@ -256,7 +256,7 @@
                     }
                 }(), {
                     messages: P,
-                    channelStream: U,
+                    channelStream: F,
                     oldestUnreadMessageId: H,
                     editingMessageId: k
                 } = function(e) {
@@ -281,7 +281,7 @@
                             return u && d && null !== (t = m.default.summaries(e.id)) && void 0 !== t ? t : []
                         }, [u, e.id, d]),
                         p = (0, o.useStateFromStores)([m.default], () => u ? m.default.selectedSummary(e.id) : null, [u, e.id]),
-                        E = a.useMemo(() => (0, x.default)({
+                        E = a.useMemo(() => (0, R.default)({
                             channel: e,
                             messages: s,
                             oldestUnreadMessageId: l,
@@ -301,15 +301,15 @@
                     }
                 }(t);
                 return (0, s.jsx)(L.ObscuredDisplayContext.Provider, {
-                    value: (0, R.default)(D, u),
-                    children: (0, s.jsx)(F, {
+                    value: (0, x.default)(O, u),
+                    children: (0, s.jsx)(U, {
                         ...r,
                         messageGroupSpacing: v,
                         showNewMessagesBar: !0,
                         channel: t,
-                        messageDisplayCompact: !i && (l || O),
+                        messageDisplayCompact: !i && (l || D),
                         messages: P,
-                        channelStream: U,
+                        channelStream: F,
                         permissionVersion: d,
                         uploads: (0, o.useStateFromStores)([I.default], () => I.default.getFiles(t.id), [t]),
                         unreadCount: (0, o.useStateFromStores)([M.default], () => M.default.getUnreadCount(t.id), [t]),

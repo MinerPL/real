@@ -8,16 +8,16 @@
                 }
             });
             var l = n("446674"),
-                u = n("305961"),
-                a = n("957255"),
-                i = n("800762"),
-                d = n("404008"),
-                r = n("843455");
+                a = n("305961"),
+                u = n("957255"),
+                r = n("800762"),
+                i = n("404008"),
+                d = n("843455");
 
             function s(e) {
-                return (0, l.useStateFromStores)([a.default], () => null == e || !a.default.can(r.Permissions.CONNECT, e), [e])
+                return (0, l.useStateFromStores)([u.default], () => null == e || !u.default.can(d.Permissions.CONNECT, e), [e])
             }
 
             function o(e) {
-                return (0, l.useStateFromStores)([i.default, u.default], () => (0, d.isChannelFull)(e, i.default, u.default))
+                return (0, l.useStateFromStores)([r.default, a.default], () => (0, i.isChannelFull)(e, r.default, a.default))
             }

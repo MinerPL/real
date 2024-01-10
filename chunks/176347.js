@@ -29,21 +29,21 @@
                 N = n("240249"),
                 L = n("524768"),
                 v = n("389153"),
-                R = n("916565"),
-                x = n("850391"),
+                x = n("916565"),
+                R = n("850391"),
                 y = n("149022"),
-                O = n("159492"),
-                D = n("998415"),
+                D = n("159492"),
+                O = n("998415"),
                 j = n("228800"),
                 b = n("681060"),
                 P = n("939563"),
-                U = n("538282"),
-                F = n("956967"),
+                F = n("538282"),
+                U = n("956967"),
                 H = n("952104"),
                 k = n("509"),
                 G = n("406043"),
-                w = n("68895"),
-                B = n("934288"),
+                B = n("68895"),
+                w = n("934288"),
                 V = n("87635"),
                 W = n("734570"),
                 z = n("884351"),
@@ -84,10 +84,10 @@
                 eL = n("782340"),
                 ev = n("305794");
 
-            function eR(e) {
+            function ex(e) {
                 e.preventDefault()
             }
-            let ex = /^\+(?!\w+):?(?!:)(\w+)?:?$/;
+            let eR = /^\+(?!\w+):?(?!:)(\w+)?:?$/;
 
             function ey(e) {
                 let {
@@ -101,7 +101,7 @@
                     ...n
                 })
             }
-            class eO extends a.PureComponent {
+            class eD extends a.PureComponent {
                 componentDidMount() {
                     el.default.addChangeListener(this.draftDidChange)
                 }
@@ -299,7 +299,7 @@
                         } = this.props;
                         f.default.changeDraft(a, t, el.DraftType.ChannelMessage);
                         let l = "" !== t && n !== this.state.richValue,
-                            i = l && !ex.test(t) && !t.startsWith("/") && (!this.isFirstChange || t !== this.state.textValue);
+                            i = l && !eR.test(t) && !t.startsWith("/") && (!this.isFirstChange || t !== this.state.textValue);
                         this.isFirstChange = !1, i && this.state.textValue.length < t.length && this.handleIncrementCombo(), i ? C.default.startTyping(a) : "" === t && C.default.stopTyping(a), l && s && (0, _.disableKeyboardMode)(), this.setState({
                             textValue: t,
                             richValue: n
@@ -331,7 +331,7 @@
                                 shouldClear: !1,
                                 shouldRefocus: !0
                             });
-                            let e = await (0, R.default)({
+                            let e = await (0, x.default)({
                                 command: a,
                                 optionValues: null != l ? l : {},
                                 context: {
@@ -417,7 +417,7 @@
                         editorTextContent: this.state.textValue,
                         setValue: this.handleSetValue,
                         canOnlyUseTextCommands: e
-                    }), this.renderAppLauncherButton = () => (0, s.jsx)(O.default, {}), this.renderApplicationCommandIcon = (e, t, n) => (0, s.jsx)(D.default, {
+                    }), this.renderAppLauncherButton = () => (0, s.jsx)(D.default, {}), this.renderApplicationCommandIcon = (e, t, n) => (0, s.jsx)(O.default, {
                         className: n,
                         command: e,
                         section: t,
@@ -425,7 +425,7 @@
                     })
                 }
             }
-            class eD extends a.PureComponent {
+            class eO extends a.PureComponent {
                 static getDerivedStateFromProps(e, t) {
                     let {
                         channel: n
@@ -468,13 +468,13 @@
                     } = this.props, {
                         textAreaFocused: T,
                         textAreaHighlighted: M
-                    } = this.state, I = u === x.ChatInputTypes.SIDEBAR;
+                    } = this.state, I = u === R.ChatInputTypes.SIDEBAR;
                     t = I && n.type === eN.ChannelTypes.GUILD_VOICE ? eL.default.Messages.TEXT_IN_VOICE_A11Y_LABEL : I && n.type === eN.ChannelTypes.GUILD_STAGE_VOICE ? eL.default.Messages.TEXT_IN_STAGE_A11Y_LABEL : o.ChannelTypesSets.THREADS.has(n.type) ? eL.default.Messages.THREAD_A11Y_LABEL : eL.default.Messages.CHANNEL_A11Y_LABEL;
                     let N = (0, s.jsx)(en.default, {
                         tutorialId: "writing-messages",
                         position: "left",
                         offsetX: 75,
-                        children: (0, s.jsx)(eO, {
+                        children: (0, s.jsx)(eD, {
                             focused: T,
                             highlighted: M,
                             channel: n,
@@ -543,7 +543,7 @@
                                             showAutomodUserProfileChatBlocker: A
                                         })) && void 0 !== e ? e : (0, s.jsxs)("form", {
                                             ref: this.inputFormRef,
-                                            onSubmit: eR,
+                                            onSubmit: ex,
                                             className: ev.form,
                                             children: [S && (0, s.jsx)(X.default, {
                                                 channelId: n.id
@@ -618,12 +618,12 @@
                         } = this.props;
                         if (t) switch (e.which) {
                             case eN.KeyboardKeys.ARROW_LEFT:
-                                n === x.ChatInputTypes.SIDEBAR && em.ComponentDispatch.dispatch(eN.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+                                n === R.ChatInputTypes.SIDEBAR && em.ComponentDispatch.dispatch(eN.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                                     channelId: ed.default.getChannelId()
                                 });
                                 return;
                             case eN.KeyboardKeys.ARROW_RIGHT:
-                                n === x.ChatInputTypes.NORMAL && em.ComponentDispatch.dispatch(eN.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
+                                n === R.ChatInputTypes.NORMAL && em.ComponentDispatch.dispatch(eN.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
                                     channelId: ea.default.getCurrentSidebarChannelId(s.id)
                                 })
                         }
@@ -631,7 +631,7 @@
                         let {
                             activeView: t
                         } = e;
-                        (0, U.openExpressionPicker)(t, this.props.chatInputType)
+                        (0, F.openExpressionPicker)(t, this.props.chatInputType)
                     }, this.handleChatInteract = () => {
                         var e;
                         null === (e = this.dispatchGroupRef.current) || void 0 === e || e.bumpDispatchPriority()
@@ -643,7 +643,7 @@
                             communicationDisabledUntil: l,
                             showAutomodUserProfileChatBlocker: i
                         } = e;
-                        return t.type === eN.ChannelTypes.DM && n ? (0, s.jsx)(Q.default, {}) : null != l && (0, k.isCommunicationDisabled)(l) && null != a && !eu.default.can(eN.Permissions.ADMINISTRATOR, a) ? (0, s.jsx)(w.CommunicationDisabledBanner, {
+                        return t.type === eN.ChannelTypes.DM && n ? (0, s.jsx)(Q.default, {}) : null != l && (0, k.isCommunicationDisabled)(l) && null != a && !eu.default.can(eN.Permissions.ADMINISTRATOR, a) ? (0, s.jsx)(B.CommunicationDisabledBanner, {
                             guild: a,
                             disabledUntil: l
                         }) : i ? (0, s.jsx)(H.AutomodUserProfileQuarantineChatInputNotice, {
@@ -661,11 +661,11 @@
                 } = e, {
                     placeholder: i,
                     accessibilityLabel: r
-                } = (0, eA.default)(t), o = (0, Q.useShouldBlockDMInputForQuarantinedUser)(ef.default.getCurrentUser(), t), [u] = (0, G.useCurrentUserCommunicationDisabled)(null == n ? void 0 : n.id), f = (0, F.useCurrentUserHasAutomodQuarantinedProfile)(null == n ? void 0 : n.id), h = (0, d.useStateFromStores)([ef.default], () => ef.default.getCurrentUser()), C = (0, d.useStateFromStores)([er.default], () => {
+                } = (0, eA.default)(t), o = (0, Q.useShouldBlockDMInputForQuarantinedUser)(ef.default.getCurrentUser(), t), [u] = (0, G.useCurrentUserCommunicationDisabled)(null == n ? void 0 : n.id), f = (0, U.useCurrentUserHasAutomodQuarantinedProfile)(null == n ? void 0 : n.id), h = (0, d.useStateFromStores)([ef.default], () => ef.default.getCurrentUser()), C = (0, d.useStateFromStores)([er.default], () => {
                     var e, t, s;
                     return null != h && null !== (s = null === (e = er.default.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : "", null == h ? void 0 : h.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== s && s
-                }), p = (0, d.useStateFromStores)([Y.default], () => Y.default.isEnabled()), m = (0, J.default)(t.id), E = (0, B.default)(t.id);
-                return (0, s.jsx)(eD, {
+                }), p = (0, d.useStateFromStores)([Y.default], () => Y.default.isEnabled()), m = (0, J.default)(t.id), E = (0, w.default)(t.id);
+                return (0, s.jsx)(eO, {
                     channel: t,
                     isEditing: null != (0, d.useStateFromStores)([ei.default], () => ei.default.getEditingMessageId(t.id)),
                     hasModalOpen: (0, c.useModalsStore)(c.hasAnyModalOpenSelector),

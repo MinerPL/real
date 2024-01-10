@@ -1,14 +1,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return i
                 }
             });
             var l = n("303800"),
-                u = n("998564"),
-                a = n("420145"),
-                i = n("171644");
+                a = n("998564"),
+                u = n("420145"),
+                r = n("171644");
 
-            function d(e) {
-                return null != e ? e === i.GameConsoleTypes.XBOX ? a.default : u.default : l.default
+            function i(e) {
+                return null != e ? e === r.GameConsoleTypes.XBOX ? u.default : a.default : l.default
             }

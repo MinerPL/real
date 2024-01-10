@@ -29,21 +29,21 @@
                 N = n("660478"),
                 L = n("18494"),
                 v = n("697218"),
-                R = n("410889"),
-                x = n("888400"),
+                x = n("410889"),
+                R = n("888400"),
                 y = n("299039"),
-                O = n("154864"),
-                D = n("383667"),
+                D = n("154864"),
+                O = n("383667"),
                 j = n("459776"),
                 b = n("366757"),
                 P = n("699473"),
-                U = n("556118"),
-                F = n("342009"),
+                F = n("556118"),
+                U = n("342009"),
                 H = n("97810"),
                 k = n("933629"),
                 G = n("88243"),
-                w = n("753089"),
-                B = n("210062"),
+                B = n("753089"),
+                w = n("210062"),
                 V = n("894488"),
                 W = n("49111"),
                 z = n("964974"),
@@ -70,7 +70,7 @@
                         channel_id: n.id,
                         customRenderedContent: {
                             hasSpoilerEmbeds: !1,
-                            content: (0, s.jsx)(R.AttachmentUpload, {
+                            content: (0, s.jsx)(x.AttachmentUpload, {
                                 filename: t.name,
                                 progress: null != t.progress ? t.progress : 0,
                                 size: t.currentSize,
@@ -87,7 +87,7 @@
                 var t;
                 let n, a, l, {
                         channel: u,
-                        messages: R,
+                        messages: x,
                         unreadCount: P,
                         showNewMessagesBar: q,
                         messageDisplayCompact: X,
@@ -99,9 +99,9 @@
                         showingQuarantineBanner: en
                     } = e,
                     es = v.default.getCurrentUser(),
-                    ea = () => $.isInitialized() || R.ready,
+                    ea = () => $.isInitialized() || x.ready,
                     el = (0, b.useShowConvoStarterInDM)(u),
-                    ei = R.length > 0 && (null === (t = R.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(u)),
+                    ei = x.length > 0 && (null === (t = x.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(u)),
                     er = (0, d.useChannelSummariesExperiment)(u),
                     eo = (0, r.useStateFromStores)([_.default], () => _.default.shouldShowTopicsBar()),
                     eu = (0, g.useStrangerDangerWarning)(u.id, z.LOCATION_CONTEXT_WEB);
@@ -114,7 +114,7 @@
                         postId: u.id
                     }) : null,
                     ec = (0, m.default)(u.id);
-                (0, B.default)();
+                (0, w.default)();
                 let ef = null,
                     eh = [],
                     eC = J.map((e, t) => {
@@ -141,7 +141,7 @@
                         }, "forum-post-action-bar-".concat(u.id));
                         if (e.type === W.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED || e.type === W.ChannelStreamTypes.MESSAGE_GROUP_SPAMMER) {
                             let t;
-                            return t = e.type === W.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED ? Z.default.Messages.BLOCKED_MESSAGE_COUNT : Z.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT, (0, s.jsx)(F.default, {
+                            return t = e.type === W.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED ? Z.default.Messages.BLOCKED_MESSAGE_COUNT : Z.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT, (0, s.jsx)(U.default, {
                                 unreadId: V.NEW_MESSAGE_BAR_ID,
                                 messages: e,
                                 channel: u,
@@ -151,17 +151,17 @@
                         }
                         if (null != et && et > 1e3 * e.content.timestamp.unix()) return;
                         let l = I.default.can(W.Permissions.CREATE_INSTANT_INVITE, u);
-                        if ((0, D.default)(e.content, l)) return;
+                        if ((0, O.default)(e.content, l)) return;
                         e.type === W.ChannelStreamTypes.MESSAGE && null == ef && (ef = e);
                         let i = e.groupId === (null == ef ? void 0 : ef.groupId) ? ef.content.id : e.groupId,
-                            r = e.type === W.ChannelStreamTypes.THREAD_STARTER_MESSAGE ? U.ThreadStarterChatMessage : U.default;
+                            r = e.type === W.ChannelStreamTypes.THREAD_STARTER_MESSAGE ? F.ThreadStarterChatMessage : F.default;
                         return (0, s.jsx)(r, {
                             compact: X,
                             channel: u,
                             message: e.content,
                             groupId: i,
                             flashKey: e.flashKey,
-                            id: (0, O.getMessageDOMId)(u.id, e.content.id),
+                            id: (0, D.getMessageDOMId)(u.id, e.content.id),
                             isLastItem: t >= J.length - 1,
                             renderContentOnly: ec
                         }, e.content.id)
@@ -179,8 +179,8 @@
                             user: es,
                             isGroupStart: n
                         }, "upload-".concat(e.id)))
-                    }), R.hasMoreBefore && null == et) {
-                    R.length > 0 && eh.unshift((0, s.jsx)("div", {
+                    }), x.hasMoreBefore && null == et) {
+                    x.length > 0 && eh.unshift((0, s.jsx)("div", {
                         style: {
                             height: V.PLACEHOLDER_BUFFER,
                             flex: "0 0 auto"
@@ -194,19 +194,19 @@
                         ...ee
                     }, "has-more"))
                 }
-                if ((!R.hasMoreBefore || null != et) && eh.unshift((0, s.jsx)(h.default, {
+                if ((!x.hasMoreBefore || null != et) && eh.unshift((0, s.jsx)(h.default, {
                         channel: u,
                         showingBanner: en
-                    }, "empty-message")), R.hasMoreAfter && eh.push((0, s.jsx)(G.default, {
+                    }, "empty-message")), x.hasMoreAfter && eh.push((0, s.jsx)(G.default, {
                         compact: X,
                         ...ee
-                    }, "has-more-after")), !en && el && ea() && eh.push((0, s.jsx)(w.default, {
+                    }, "has-more-after")), !en && el && ea() && eh.push((0, s.jsx)(B.default, {
                         channel: u
                     })), P > 0 && q && ea()) {
                     let e, t;
                     let n = N.default.getOldestUnreadTimestamp(u.id),
                         l = 0 !== n ? n : y.default.extractTimestamp(u.id),
-                        r = (0, x.isSameDay)(i(), i(new Date(l)));
+                        r = (0, R.isSameDay)(i(), i(new Date(l)));
                     if (N.default.isEstimated(u.id) ? (e = r ? Z.default.Messages.NEW_MESSAGES_ESTIMATED : Z.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = Z.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = r ? Z.default.Messages.NEW_MESSAGES : Z.default.Messages.NEW_MESSAGES_WITH_DATE, t = Z.default.Messages.NEW_MESSAGES_SUMMARIES), er && (0, d.channelEligibleForSummaries)(u)) {
                         let n = N.default.ackMessageId(u.id),
                             i = (0, A.getUnreadTopicsCount)(u.id, N.default.getOldestUnreadMessageId(u.id));
@@ -300,8 +300,8 @@
                 if (null == a && (0, d.canSeeChannelSummaries)(u) && eo && (a = (0, s.jsx)(k.TopicsPill, {
                         channel: u,
                         scrollManager: $
-                    })), R.error) l = (0, s.jsx)(k.ErrorLoadingBar, {
-                    loading: R.loadingMore,
+                    })), x.error) l = (0, s.jsx)(k.ErrorLoadingBar, {
+                    loading: x.loadingMore,
                     onClick: () => {
                         var e;
                         return e = u.id, void o.default.fetchMessages({
@@ -311,11 +311,11 @@
                         })
                     }
                 });
-                else if (R.hasMoreAfter && ea()) {
+                else if (x.hasMoreAfter && ea()) {
                     let {
                         jumpReturnTargetId: e
-                    } = R;
-                    l = R.loadingMore && R.jumpedToPresent ? (0, s.jsx)(k.JumpToPresentBar, {}) : null != e ? (0, s.jsx)(k.JumpToPresentBar, {
+                    } = x;
+                    l = x.loadingMore && x.jumpedToPresent ? (0, s.jsx)(k.JumpToPresentBar, {}) : null != e ? (0, s.jsx)(k.JumpToPresentBar, {
                         type: k.JumpBarType.REPLY,
                         onClick: () => {
                             var t, n;

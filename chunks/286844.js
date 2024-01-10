@@ -1,30 +1,30 @@
             "use strict";
-            i.r(t), i.d(t, {
+            s.r(t), s.d(t, {
                 getPushNotificationSelectOptions: function() {
-                    return l
+                    return n
                 },
                 getUnreadSelectOptions: function() {
                     return r
                 }
             });
-            var n = i("49111"),
-                s = i("133335"),
-                a = i("782340");
-            let l = e => [{
+            var i = s("49111"),
+                l = s("133335"),
+                a = s("782340");
+            let n = e => [{
                     label: a.default.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
-                    value: n.UserNotificationSettings.ALL_MESSAGES
+                    value: i.UserNotificationSettings.ALL_MESSAGES
                 }, {
                     label: a.default.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
-                    value: n.UserNotificationSettings.ONLY_MENTIONS
+                    value: i.UserNotificationSettings.ONLY_MENTIONS
                 }, {
                     label: a.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NONE,
-                    value: n.UserNotificationSettings.NO_MESSAGES
+                    value: i.UserNotificationSettings.NO_MESSAGES
                 }],
                 r = e => [{
                     label: a.default.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
-                    value: s.UnreadSetting.ALL_MESSAGES
+                    value: l.UnreadSetting.ALL_MESSAGES
                 }, {
-                    value: s.UnreadSetting.ONLY_MENTIONS,
+                    value: l.UnreadSetting.ONLY_MENTIONS,
                     label: a.default.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
-                    disabled: (null == e ? void 0 : e.notificationSetting) === n.UserNotificationSettings.ALL_MESSAGES
+                    disabled: (null == e ? void 0 : e.notificationSetting) === i.UserNotificationSettings.ALL_MESSAGES
                 }]

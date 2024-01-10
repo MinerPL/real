@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return f
+                    return c
                 }
             });
             var a = n("37983");
@@ -11,46 +11,46 @@
                 l = n("498139"),
                 u = n("629220"),
                 r = n("512395"),
-                d = n("282109"),
-                o = n("49111"),
-                c = n("782340");
+                o = n("282109"),
+                d = n("49111"),
+                f = n("782340");
 
-            function f(e) {
+            function c(e) {
                 let {
                     isFavoritesPerk: t
-                } = (0, l.useFavoritesServerExperiment)("useChannelOptInItems"), n = (0, r.useOptInEnabledForGuild)(e.guild_id), f = (0, i.useStateFromStores)([d.default], () => d.default.isChannelOptedIn(e.guild_id, e.id)), _ = (0, i.useStateFromStores)([d.default], () => null != e.parent_id && d.default.isChannelOptedIn(e.guild_id, e.parent_id)), E = (0, i.useStateFromStores)([d.default], () => d.default.isFavorite(e.guild_id, e.id)), N = () => {
-                    (0, u.setOptInChannel)(e.guild_id, e.id, !f, {
-                        section: o.AnalyticsSections.CONTEXT_MENU
+                } = (0, l.useFavoritesServerExperiment)("useChannelOptInItems"), n = (0, r.useOptInEnabledForGuild)(e.guild_id), c = (0, i.useStateFromStores)([o.default], () => o.default.isChannelOptedIn(e.guild_id, e.id)), E = (0, i.useStateFromStores)([o.default], () => null != e.parent_id && o.default.isChannelOptedIn(e.guild_id, e.parent_id)), _ = (0, i.useStateFromStores)([o.default], () => o.default.isFavorite(e.guild_id, e.id)), N = () => {
+                    (0, u.setOptInChannel)(e.guild_id, e.id, !c, {
+                        section: d.AnalyticsSections.CONTEXT_MENU
                     })
                 }, g = () => {
                     null != e.parent_id && (0, u.setOptInChannel)(e.guild_id, e.parent_id, !1, {
-                        section: o.AnalyticsSections.CONTEXT_MENU
+                        section: d.AnalyticsSections.CONTEXT_MENU
                     })
                 };
                 if (!n || e.isThread()) return null;
                 if (e.isCategory()) return (0, a.jsx)(s.MenuItem, {
                     id: "opt-into-category",
-                    label: f ? c.default.Messages.CHANNEL_OPT_OUT : c.default.Messages.CHANNEL_OPT_IN,
+                    label: c ? f.default.Messages.CHANNEL_OPT_OUT : f.default.Messages.CHANNEL_OPT_IN,
                     action: () => N()
                 });
-                let M = E ? c.default.Messages.REMOVE_FAVORITE : c.default.Messages.ADD_FAVORITE,
-                    S = E ? c.default.Messages.UNPIN_CHANNEL : c.default.Messages.PIN_CHANNEL_TO_TOP;
+                let C = _ ? f.default.Messages.REMOVE_FAVORITE : f.default.Messages.ADD_FAVORITE,
+                    M = _ ? f.default.Messages.UNPIN_CHANNEL : f.default.Messages.PIN_CHANNEL_TO_TOP;
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(s.MenuItem, {
                         id: "opt-in-favorite-channel",
-                        label: t ? S : M,
+                        label: t ? M : C,
                         action: () => {
-                            (0, u.setIsFavorite)(e.guild_id, e.id, !E, {
-                                section: o.AnalyticsSections.CONTEXT_MENU
+                            (0, u.setIsFavorite)(e.guild_id, e.id, !_, {
+                                section: d.AnalyticsSections.CONTEXT_MENU
                             })
                         }
-                    }), _ ? (0, a.jsx)(s.MenuItem, {
+                    }), E ? (0, a.jsx)(s.MenuItem, {
                         id: "opt-out-category",
-                        label: c.default.Messages.CHANNEL_OPT_OUT_PARENT_CATEGORY,
+                        label: f.default.Messages.CHANNEL_OPT_OUT_PARENT_CATEGORY,
                         action: () => g()
                     }) : (0, a.jsx)(s.MenuItem, {
                         id: "opt-into-channel",
-                        label: f ? c.default.Messages.CHANNEL_OPT_OUT : c.default.Messages.CHANNEL_OPT_IN,
+                        label: c ? f.default.Messages.CHANNEL_OPT_OUT : f.default.Messages.CHANNEL_OPT_IN,
                         action: () => N()
                     })]
                 })

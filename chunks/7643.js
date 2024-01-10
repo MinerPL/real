@@ -25,8 +25,8 @@
                     onAcceptSuccess: n,
                     onRejectSuccess: a,
                     onError: E
-                } = e, g = (0, C.default)(), [S, _] = s.useState(!1), [A, T] = s.useState(!1), [M, I] = s.useState(!1), [N, L] = s.useState(!1), [v, R] = s.useState(!1), x = S || A || M, y = s.useCallback(async e => {
-                    if (!x) {
+                } = e, g = (0, C.default)(), [S, _] = s.useState(!1), [A, T] = s.useState(!1), [M, I] = s.useState(!1), [N, L] = s.useState(!1), [v, x] = s.useState(!1), R = S || A || M, y = s.useCallback(async e => {
+                    if (!R) {
                         _(!0);
                         try {
                             await (0, f.acceptMessageRequest)(e), L(!0), null == n || n()
@@ -37,11 +37,11 @@
                             _(!1)
                         }
                     }
-                }, [x, n, E]), O = s.useCallback(async e => {
-                    if (!x) {
+                }, [R, n, E]), D = s.useCallback(async e => {
+                    if (!R) {
                         T(!0);
                         try {
-                            await (0, f.rejectMessageRequest)(e), R(!0), null == a || a()
+                            await (0, f.rejectMessageRequest)(e), x(!0), null == a || a()
                         } catch (t) {
                             let e = new i.APIError(t);
                             null == E || E(e)
@@ -49,21 +49,21 @@
                             T(!1)
                         }
                     }
-                }, [x, a, E]), D = s.useCallback(async e => {
-                    if (x) return;
+                }, [R, a, E]), O = s.useCallback(async e => {
+                    if (R) return;
                     T(!0);
                     let t = l(e, p.BATCH_REJECT_LIMIT);
                     try {
                         for (let e of t) await (0, f.rejectMessageRequestBatch)(e);
-                        R(!0), null == a || a()
+                        x(!0), null == a || a()
                     } catch (t) {
                         let e = new i.APIError(t);
                         null == E || E(e)
                     } finally {
                         T(!1)
                     }
-                }, [x, a, E]), j = s.useCallback(async e => {
-                    if (x) return;
+                }, [R, a, E]), j = s.useCallback(async e => {
+                    if (R) return;
                     if (null != t && null == o.default.getMutualGuilds(t.id)) {
                         I(!0);
                         try {
@@ -99,7 +99,7 @@
                             })
                         }
                     })
-                }, [y, x, t]), b = s.useCallback((e, t, n) => {
+                }, [y, R, t]), b = s.useCallback((e, t, n) => {
                     let s = (s, a) => {
                             a && d.NonSpamRetrainingOptIn.updateSetting(s), s && null != t && (0, r.submitHamReportForFirstDM)(t), y(e.id), c.default.track(m.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
                                 action: p.MessageRequestAnalyticsAction.ACCEPT_HAM_CONFIRMATION_PROMPT,
@@ -122,8 +122,8 @@
                 }, [y]);
                 return {
                     acceptMessageRequest: g ? j : y,
-                    rejectMessageRequest: O,
-                    rejectAll: D,
+                    rejectMessageRequest: D,
+                    rejectAll: O,
                     markAsNotSpam: b,
                     isAcceptLoading: S,
                     isRejectLoading: A,

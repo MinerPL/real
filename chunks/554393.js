@@ -29,11 +29,11 @@
                 N = n("83900"),
                 L = n("404008"),
                 v = n("680986"),
-                R = n("612278"),
-                x = n("867965"),
+                x = n("612278"),
+                R = n("867965"),
                 y = n("688169"),
-                O = n("49111"),
-                D = n("782340"),
+                D = n("49111"),
+                O = n("782340"),
                 j = n("827152"),
                 b = n("550244");
 
@@ -44,11 +44,11 @@
                     isLastItem: l = !1,
                     parentChannelId: P
                 } = e, {
-                    ref: U,
-                    width: F
-                } = (0, d.default)(), [H, k] = a.useState(3), [G, w] = a.useState(!n), [B, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(t), [t]), {
+                    ref: F,
+                    width: U
+                } = (0, d.default)(), [H, k] = a.useState(3), [G, B] = a.useState(!n), [w, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(t), [t]), {
                     firstMessage: z
-                } = (0, R.useFirstForumPostMessage)(W), Z = (0, o.useStateFromStores)([_.default], () => _.default.hasJoined(t)), {
+                } = (0, x.useFirstForumPostMessage)(W), Z = (0, o.useStateFromStores)([_.default], () => _.default.hasJoined(t)), {
                     disableReactionUpdates: K,
                     disableReactionCreates: Y,
                     isLurking: q,
@@ -60,11 +60,11 @@
                         let e = t.intersectionRect,
                             n = t.boundingClientRect,
                             s = (e.bottom - e.top) / (n.bottom - n.top);
-                        w(s < 1)
+                        B(s < 1)
                     }
                 }, [n]);
                 a.useLayoutEffect(() => {
-                    let e = U.current;
+                    let e = F.current;
                     if (null == e || !n) return;
                     let t = new IntersectionObserver(en, {
                         threshold: 1
@@ -75,17 +75,17 @@
                 });
                 let [es, ea] = a.useState(!0);
                 if (a.useEffect(() => {
-                        if (null != F) k(Math.floor((F - 280) / 58)), ea(!1)
-                    }, [F]), null == W || null == z) return null;
+                        if (null != U) k(Math.floor((U - 280) / 58)), ea(!1)
+                    }, [U]), null == W || null == z) return null;
                 let el = z.reactions.length > 0,
                     ei = () => {
                         Z ? A.default.leaveThread(W, "Forum Toolbar") : A.default.joinThread(W, "Forum Toolbar")
                     },
                     er = () => {
-                        (0, x.trackForumPostLinkCopied)({
+                        (0, R.trackForumPostLinkCopied)({
                             postId: W.id,
                             location: {
-                                section: O.AnalyticsSections.CHANNEL_HEADER
+                                section: D.AnalyticsSections.CHANNEL_HEADER
                             }
                         }), (0, r.copy)((0, L.getChannelLinkToCopy)(W, $)), V(!0)
                     },
@@ -95,7 +95,7 @@
                         className: i(j.container, {
                             [j.header]: G
                         }),
-                        ref: U,
+                        ref: F,
                         children: [(0, s.jsxs)("div", {
                             className: i(j.reactButtons, {
                                 [j.loading]: es
@@ -137,12 +137,12 @@
                                 useChatFontScaling: !1,
                                 className: j.addReactButton,
                                 isForumToolbar: !0,
-                                children: !el && D.default.Messages.FORUM_REACT_TO_POST
+                                children: !el && O.default.Messages.FORUM_REACT_TO_POST
                             })]
                         }), (0, s.jsxs)("div", {
                             className: j.buttons,
                             children: [(0, s.jsx)(u.Tooltip, {
-                                text: D.default.Messages.FORUM_FOLLOW_TOOLTIP,
+                                text: O.default.Messages.FORUM_FOLLOW_TOOLTIP,
                                 children: e => (0, s.jsxs)(u.Button, {
                                     ...e,
                                     look: u.Button.Looks.BLANK,
@@ -155,10 +155,10 @@
                                     children: [(0, s.jsx)(eo, {
                                         width: 16,
                                         height: 16
-                                    }), Z ? D.default.Messages.FORUM_FOLLOWING_POST : D.default.Messages.FOLLOW]
+                                    }), Z ? O.default.Messages.FORUM_FOLLOWING_POST : O.default.Messages.FOLLOW]
                                 })
                             }), (0, s.jsx)(u.Tooltip, {
-                                text: D.default.Messages.COPY_LINK,
+                                text: O.default.Messages.COPY_LINK,
                                 children: e => (0, s.jsxs)(u.Button, {
                                     ...e,
                                     look: u.Button.Looks.BLANK,
@@ -166,13 +166,13 @@
                                     onClick: er,
                                     className: j.button,
                                     innerClassName: j.buttonInner,
-                                    children: [B ? (0, s.jsx)(I.default, {
+                                    children: [w ? (0, s.jsx)(I.default, {
                                         width: 16,
                                         height: 16
                                     }) : (0, s.jsx)(N.default, {
                                         width: 16,
                                         height: 16
-                                    }), B ? D.default.Messages.COPIED : null]
+                                    }), w ? O.default.Messages.COPIED : null]
                                 })
                             })]
                         })]

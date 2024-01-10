@@ -8,11 +8,11 @@
                 }
             }), n("222007"), n("781738");
             var l = n("37983"),
-                u = n("884691"),
-                a = n("65597"),
-                i = n("77078"),
-                d = n("18054"),
-                r = n("207273"),
+                a = n("884691"),
+                u = n("65597"),
+                r = n("77078"),
+                i = n("18054"),
+                d = n("207273"),
                 s = n("850391"),
                 o = n("149022"),
                 c = n("681060"),
@@ -20,8 +20,8 @@
                 E = n("145131"),
                 C = n("599110"),
                 S = n("49111"),
-                h = n("782340"),
-                v = n("447365");
+                v = n("782340"),
+                h = n("447365");
             let _ = "VoiceChannelStatusModal";
 
             function N(e) {
@@ -29,70 +29,70 @@
                     channel: t,
                     transitionState: n,
                     onClose: N
-                } = e, T = (0, a.default)([r.default], () => r.default.getChannelStatus(t)), I = (0, a.default)([f.default], () => f.default.getMediaSessionId()), [g, m] = u.useState(null != T ? T : ""), [A, p] = u.useState(!1), [L, O] = u.useState(null);
-                u.useEffect(() => {
+                } = e, T = (0, u.default)([d.default], () => d.default.getChannelStatus(t)), g = (0, u.default)([f.default], () => f.default.getMediaSessionId()), [I, m] = a.useState(null != T ? T : ""), [A, p] = a.useState(!1), [y, L] = a.useState(null);
+                a.useEffect(() => {
                     C.default.track(S.AnalyticEvents.OPEN_MODAL, {
                         type: "Voice Channel Topic Modal",
                         guild_id: t.guild_id
                     })
                 }, [t.guild_id]);
-                let y = async e => {
-                    g === T && N(), null == e || e.preventDefault(), O(null), p(!0);
-                    let n = g.length,
-                        l = g.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length;
-                    await d.default.updateVoiceChannelStatus(t.id, g).then(e => {
+                let O = async e => {
+                    I === T && N(), null == e || e.preventDefault(), L(null), p(!0);
+                    let n = I.length,
+                        l = I.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length;
+                    await i.default.updateVoiceChannelStatus(t.id, I).then(e => {
                         204 === e.status ? (C.default.track(S.AnalyticEvents.VOICE_CHANNEL_TOPIC_SET, {
                             guild_id: t.guild_id,
                             channel_id: t.id,
-                            media_session_id: I,
+                            media_session_id: g,
                             raw_length: n,
                             text_length: l
-                        }), N()) : O(e.body.message)
+                        }), N()) : L(e.body.message)
                     }, e => {
-                        O(e.body.message)
+                        L(e.body.message)
                     }), p(!1)
-                }, [G, V] = u.useState((0, o.toRichValue)(g));
+                }, [F, M] = a.useState((0, o.toRichValue)(I));
                 return (0, l.jsx)("form", {
-                    onSubmit: y,
-                    className: v.form,
-                    children: (0, l.jsxs)(i.ModalRoot, {
+                    onSubmit: O,
+                    className: h.form,
+                    children: (0, l.jsxs)(r.ModalRoot, {
                         transitionState: n,
-                        size: i.ModalSize.SMALL,
-                        children: [(0, l.jsxs)(i.ModalContent, {
-                            children: [(0, l.jsxs)(i.ModalHeader, {
+                        size: r.ModalSize.SMALL,
+                        children: [(0, l.jsxs)(r.ModalContent, {
+                            children: [(0, l.jsxs)(r.ModalHeader, {
                                 direction: E.default.Direction.VERTICAL,
-                                className: v.modalHeader,
+                                className: h.modalHeader,
                                 separator: !1,
-                                children: [(0, l.jsx)(i.ModalCloseButton, {
-                                    className: v.closeButton,
+                                children: [(0, l.jsx)(r.ModalCloseButton, {
+                                    className: h.closeButton,
                                     onClick: N
                                 }), (0, l.jsx)("div", {
-                                    className: v.headerImage
-                                }), (0, l.jsx)(i.FormTitle, {
+                                    className: h.headerImage
+                                }), (0, l.jsx)(r.FormTitle, {
                                     tag: "h1",
-                                    className: v.title,
-                                    children: h.default.Messages.VOICE_CHANNEL_STATUS_MODAL_TITLE
-                                }), (0, l.jsx)(i.Text, {
+                                    className: h.title,
+                                    children: v.default.Messages.VOICE_CHANNEL_STATUS_MODAL_TITLE
+                                }), (0, l.jsx)(r.Text, {
                                     color: "header-secondary",
                                     variant: "text-sm/normal",
-                                    children: h.default.Messages.VOICE_CHANNEL_STATUS_MODAL_SUBTITLE
+                                    children: v.default.Messages.VOICE_CHANNEL_STATUS_MODAL_SUBTITLE
                                 })]
-                            }), (0, l.jsxs)(i.FormSection, {
-                                className: v.inputSection,
-                                title: h.default.Messages.VOICE_CHANNEL_STATUS,
+                            }), (0, l.jsxs)(r.FormSection, {
+                                className: h.inputSection,
+                                title: v.default.Messages.VOICE_CHANNEL_STATUS,
                                 children: [(0, l.jsx)(c.default, {
-                                    innerClassName: v.textArea,
-                                    textValue: g,
-                                    richValue: G,
-                                    placeholder: h.default.Messages.VOICE_CHANNEL_STATUS_MODAL_PREFILL_CHANNEL.format({
+                                    innerClassName: h.textArea,
+                                    textValue: I,
+                                    richValue: F,
+                                    placeholder: v.default.Messages.VOICE_CHANNEL_STATUS_MODAL_PREFILL_CHANNEL.format({
                                         channelName: t.name
                                     }),
                                     focused: !0,
                                     channel: t,
                                     onChange: (e, t, n) => {
-                                        m(t), V(n)
+                                        m(t), M(n)
                                     },
-                                    onSubmit: () => (y(), Promise.resolve({
+                                    onSubmit: () => (O(), Promise.resolve({
                                         shouldClear: !1,
                                         shouldRefocus: !0
                                     })),
@@ -104,24 +104,24 @@
                                     maxCharacterCount: 50,
                                     showRemainingCharsAfterCount: 25,
                                     emojiPickerCloseOnModalOuterClick: !0
-                                }), null != L ? (0, l.jsx)(i.FormErrorBlock, {
-                                    className: v.error,
-                                    children: L
+                                }), null != y ? (0, l.jsx)(r.FormErrorBlock, {
+                                    className: h.error,
+                                    children: y
                                 }) : null]
                             })]
-                        }), (0, l.jsxs)(i.ModalFooter, {
+                        }), (0, l.jsxs)(r.ModalFooter, {
                             justify: E.default.Justify.BETWEEN,
                             direction: E.default.Direction.HORIZONTAL,
-                            children: [(0, l.jsx)(i.Button, {
-                                color: i.Button.Colors.PRIMARY,
+                            children: [(0, l.jsx)(r.Button, {
+                                color: r.Button.Colors.PRIMARY,
                                 onClick: N,
-                                children: h.default.Messages.CANCEL
-                            }), (0, l.jsx)(i.Button, {
-                                onClick: y,
+                                children: v.default.Messages.CANCEL
+                            }), (0, l.jsx)(r.Button, {
+                                onClick: O,
                                 submitting: A,
-                                className: v.button,
-                                disabled: g.length > 50,
-                                children: h.default.Messages.VOICE_CHANNEL_STATUS_MODAL_SET_STATUS
+                                className: h.button,
+                                disabled: I.length > 50,
+                                children: v.default.Messages.VOICE_CHANNEL_STATUS_MODAL_SET_STATUS
                             })]
                         })]
                     })

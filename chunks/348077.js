@@ -1,91 +1,91 @@
             "use strict";
-            i.r(t), i.d(t, {
+            s.r(t), s.d(t, {
                 default: function() {
-                    return f
+                    return S
                 }
             });
-            var n = i("37983"),
-                s = i("884691"),
-                a = i("77078"),
-                l = i("660279"),
-                r = i("149943"),
-                d = i("784905"),
-                o = i("489618"),
-                u = i("205382"),
-                c = i("782340"),
-                S = i("551040");
+            var i = s("37983"),
+                l = s("884691"),
+                a = s("77078"),
+                n = s("660279"),
+                r = s("149943"),
+                d = s("784905"),
+                o = s("489618"),
+                u = s("205382"),
+                c = s("782340"),
+                h = s("551040");
 
-            function h(e) {
-                return (0, n.jsx)("div", {
-                    className: S.sectionHeader,
-                    children: (0, n.jsx)(a.Heading, {
+            function f(e) {
+                return (0, i.jsx)("div", {
+                    className: h.sectionHeader,
+                    children: (0, i.jsx)(a.Heading, {
                         variant: "text-xs/bold",
-                        className: S.sectionHeaderTitle,
+                        className: h.sectionHeaderTitle,
                         color: "text-muted",
                         children: e.title
                     })
                 })
             }
 
-            function g(e) {
-                return (0, n.jsxs)("div", {
-                    children: [null != e.title && (0, n.jsx)(h, {
+            function N(e) {
+                return (0, i.jsxs)("div", {
+                    children: [null != e.title && (0, i.jsx)(f, {
                         title: e.title
-                    }), (0, n.jsx)("div", {
-                        className: S.sectionContent,
+                    }), (0, i.jsx)("div", {
+                        className: h.sectionContent,
                         children: e.children
                     })]
                 })
             }
 
-            function N(e) {
+            function g(e) {
                 let {
                     onClose: t
                 } = e;
-                return (0, n.jsxs)(a.ModalHeader, {
-                    className: S.header,
-                    children: [(0, n.jsxs)("div", {
-                        className: S.headerLeft,
-                        children: [(0, n.jsx)(l.default, {
-                            className: S.headerBell
-                        }), (0, n.jsx)(a.Heading, {
+                return (0, i.jsxs)(a.ModalHeader, {
+                    className: h.header,
+                    children: [(0, i.jsxs)("div", {
+                        className: h.headerLeft,
+                        children: [(0, i.jsx)(n.default, {
+                            className: h.headerBell
+                        }), (0, i.jsx)(a.Heading, {
                             variant: "heading-lg/semibold",
                             children: c.default.Messages.NOTIFICATION_SETTINGS
                         })]
-                    }), (0, n.jsx)(a.ModalCloseButton, {
+                    }), (0, i.jsx)(a.ModalCloseButton, {
                         onClick: t
                     })]
                 })
             }
 
-            function f(e) {
-                let t = s.useRef(null);
-                return (0, n.jsxs)(a.ModalRoot, {
+            function S(e) {
+                let t = l.useRef(null);
+                return (0, i.jsxs)(a.ModalRoot, {
                     size: a.ModalSize.MEDIUM,
                     transitionState: e.transitionState,
                     "aria-label": c.default.Messages.NOTIFICATION_SETTINGS,
-                    children: [(0, n.jsx)(N, {
+                    children: [(0, i.jsx)(g, {
                         onClose: e.onClose
-                    }), (0, n.jsxs)(a.ModalContent, {
-                        className: S.content,
+                    }), (0, i.jsxs)(a.ModalContent, {
+                        className: h.content,
                         scrollerRef: t,
-                        children: [(0, n.jsx)(g, {
-                            children: (0, n.jsx)(o.default, {
+                        children: [(0, i.jsx)(N, {
+                            children: (0, i.jsx)(o.default, {
                                 guildId: e.guildId
                             })
-                        }), (0, n.jsx)(g, {
+                        }), (0, i.jsx)(N, {
                             title: c.default.Messages.NOTIFICATION_SETTINGS_PRESETS,
-                            children: (0, n.jsx)(u.default, {
+                            children: (0, i.jsx)(u.default, {
                                 guildId: e.guildId
                             })
-                        }), (0, n.jsx)(g, {
+                        }), (0, i.jsx)(N, {
                             title: c.default.Messages.NOTIFICATION_SETTINGS_ADVANCED,
-                            children: (0, n.jsx)(r.default, {
+                            children: (0, i.jsx)(r.default, {
                                 guildId: e.guildId
                             })
-                        }), (0, n.jsx)(h, {
+                        }), (0, i.jsx)(f, {
                             title: c.default.Messages.CHANNEL_NOTIFICATION_OVERRIDES
-                        }), (0, n.jsx)(d.default, {
+                        }), (0, i.jsx)(d.default, {
                             guildId: e.guildId,
                             requestScrollToBottom: () => {
                                 null != t && null != t.current && t.current.scrollToBottom({

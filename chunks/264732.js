@@ -28,20 +28,20 @@
                         style: n,
                         channel: A,
                         draftType: T
-                    } = e, [M, I] = a.useState(!0), N = (0, l.useStateFromStores)([c.default], () => c.default.hasLayers()), L = (0, l.useStateFromStores)([f.default], () => null != A && f.default.can(S.Permissions.ATTACH_FILES, A), [A]), v = (0, l.useStateFromStores)([i.default], () => i.default.getActiveCommand(A.id)), R = null != v, x = A.getGuildId(), y = T === o.DraftType.FirstThreadMessage, O = (0, l.useStateFromStores)([C.default], () => {
+                    } = e, [M, I] = a.useState(!0), N = (0, l.useStateFromStores)([c.default], () => c.default.hasLayers()), L = (0, l.useStateFromStores)([f.default], () => null != A && f.default.can(S.Permissions.ATTACH_FILES, A), [A]), v = (0, l.useStateFromStores)([i.default], () => i.default.getActiveCommand(A.id)), x = null != v, R = A.getGuildId(), y = T === o.DraftType.FirstThreadMessage, D = (0, l.useStateFromStores)([C.default], () => {
                         var e;
                         return !0 == !(null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed)
-                    }), D = (0, l.useStateFromStores)([u.default], () => u.default.didAgree(x)), j = D && !O, b = a.useMemo(() => !N && (A.isPrivate() && !A.isManaged() || null != x && (!A.isNSFW() || j) && L && d.default.canChatInGuild(x)), [L, j, A, x, N]), P = y ? S.ChannelTypesSets.GUILD_THREADS_ONLY.has(A.type) ? _.default.Messages.UPLOAD_TO_NEW_POST : _.default.Messages.UPLOAD_TO_NEW_THREAD : M ? _.default.Messages.UPLOAD_TO.format({
+                    }), O = (0, l.useStateFromStores)([u.default], () => u.default.didAgree(R)), j = O && !D, b = a.useMemo(() => !N && (A.isPrivate() && !A.isManaged() || null != R && (!A.isNSFW() || j) && L && d.default.canChatInGuild(R)), [L, j, A, R, N]), P = y ? S.ChannelTypesSets.GUILD_THREADS_ONLY.has(A.type) ? _.default.Messages.UPLOAD_TO_NEW_POST : _.default.Messages.UPLOAD_TO_NEW_THREAD : M ? _.default.Messages.UPLOAD_TO.format({
                         destination: (0, r.computeChannelName)(A, C.default, h.default, !0)
                     }) : _.default.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
-                    return R || !b ? null : (0, s.jsx)(E.default, {
+                    return x || !b ? null : (0, s.jsx)(E.default, {
                         className: t,
                         style: n,
                         title: P,
                         description: y ? _.default.Messages.UPLOAD_AREA_NEW_THREAD_HELP : _.default.Messages.UPLOAD_AREA_HELP,
                         icons: g.DEFAULT_FILE_UPLOAD_ICONS,
                         onDrop: e => {
-                            if (R) return !1;
+                            if (x) return !1;
                             b && null != A && ((0, m.promptToUpload)(e, A, T, {
                                 requireConfirm: M,
                                 showLargeMessageDialog: !1
@@ -49,7 +49,7 @@
                         },
                         onDragClear: () => I(!0),
                         onDragOver: e => {
-                            if (R) return !1;
+                            if (x) return !1;
                             !y && e.shiftKey === M && I(!e.shiftKey)
                         }
                     })

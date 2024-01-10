@@ -1,26 +1,26 @@
             "use strict";
-            i.r(t), i.d(t, {
+            s.r(t), s.d(t, {
                 ChannelNotificationSettings: function() {
                     return T
                 }
-            }), i("222007");
-            var n = i("37983"),
-                s = i("884691"),
-                a = i("77078"),
-                l = i("519705"),
-                r = i("133403"),
-                d = i("679653"),
-                o = i("419830"),
-                u = i("42203"),
-                c = i("245997"),
-                S = i("27618"),
-                h = i("697218"),
-                g = i("145131"),
-                N = i("34676"),
-                f = i("49111"),
-                _ = i("782340"),
-                E = i("296884");
-            class T extends s.PureComponent {
+            }), s("222007");
+            var i = s("37983"),
+                l = s("884691"),
+                a = s("77078"),
+                n = s("519705"),
+                r = s("133403"),
+                d = s("679653"),
+                o = s("419830"),
+                u = s("42203"),
+                c = s("245997"),
+                h = s("27618"),
+                f = s("697218"),
+                N = s("145131"),
+                g = s("34676"),
+                S = s("49111"),
+                E = s("782340"),
+                m = s("296884");
+            class T extends l.PureComponent {
                 highlight() {
                     this.setState({
                         highlight: !0
@@ -31,31 +31,31 @@
                 componentWillUnmount() {
                     null != this._timeout && clearTimeout(this._timeout)
                 }
-                setMessageNotification(e, t, i) {
+                setMessageNotification(e, t, s) {
                     let {
-                        channel: n
-                    } = this.props, s = n.getGuildId();
-                    null != s && l.default.updateChannelOverrideSettings(s, n.id, {
+                        channel: i
+                    } = this.props, l = i.getGuildId();
+                    null != l && n.default.updateChannelOverrideSettings(l, i.id, {
                         message_notifications: e,
                         muted: null != t && t
-                    }, i)
+                    }, s)
                 }
                 handleRadioChange(e) {
-                    this.setMessageNotification(e, void 0, N.NotificationLabel.notifications(e))
+                    this.setMessageNotification(e, void 0, g.NotificationLabel.notifications(e))
                 }
                 renderMessageNotificationsRadioOption(e) {
                     let {
                         messageNotifications: t,
-                        guildMuted: i,
-                        muted: s,
-                        guildMessageNotifications: l,
+                        guildMuted: s,
+                        muted: l,
+                        guildMessageNotifications: n,
                         checkboxColor: r
                     } = this.props, d = t === e;
-                    (null == t || t === f.UserNotificationSettings.NULL) && e === l && (d = !0);
+                    (null == t || t === S.UserNotificationSettings.NULL) && e === n && (d = !0);
                     let o = a.Checkbox.Types.INVERTED;
-                    return (s || t === f.UserNotificationSettings.NULL || null == t) && (o = a.Checkbox.Types.GHOST), (0, n.jsx)(a.Checkbox, {
-                        value: !i && d,
-                        disabled: i,
+                    return (l || t === S.UserNotificationSettings.NULL || null == t) && (o = a.Checkbox.Types.GHOST), (0, i.jsx)(a.Checkbox, {
+                        value: !s && d,
+                        disabled: s,
                         shape: a.Checkbox.Shapes.ROUND,
                         color: r,
                         type: o,
@@ -65,32 +65,32 @@
                 renderName() {
                     let e, t;
                     let {
-                        channel: i
+                        channel: s
                     } = this.props;
-                    null != i.parent_id && (e = u.default.getChannel(i.parent_id));
-                    let s = (0, o.getChannelIconComponent)(i);
-                    if (i.type === f.ChannelTypes.GUILD_CATEGORY && null != i.guild_id && "" !== i.guild_id) {
-                        let e = c.default.getCategories(i.guild_id);
-                        t = _.default.Messages.NUM_CHANNELS.format({
-                            num: null != e[i.id] ? e[i.id].length : 0
+                    null != s.parent_id && (e = u.default.getChannel(s.parent_id));
+                    let l = (0, o.getChannelIconComponent)(s);
+                    if (s.type === S.ChannelTypes.GUILD_CATEGORY && null != s.guild_id && "" !== s.guild_id) {
+                        let e = c.default.getCategories(s.guild_id);
+                        t = E.default.Messages.NUM_CHANNELS.format({
+                            num: null != e[s.id] ? e[s.id].length : 0
                         })
-                    } else t = null != e ? _.default.Messages.IN_CATEGORY.format({
-                        categoryName: (0, d.computeChannelName)(e, h.default, S.default)
-                    }) : _.default.Messages.NO_CATEGORY;
-                    return (0, n.jsxs)(g.default, {
+                    } else t = null != e ? E.default.Messages.IN_CATEGORY.format({
+                        categoryName: (0, d.computeChannelName)(e, f.default, h.default)
+                    }) : E.default.Messages.NO_CATEGORY;
+                    return (0, i.jsxs)(N.default, {
                         grow: 1,
-                        className: E.nameContainer,
-                        children: [null != s ? (0, n.jsx)(s, {
-                            className: E.icon
-                        }) : null, (0, n.jsxs)("div", {
-                            className: E.channelNameContainer,
-                            children: [(0, n.jsx)(a.Text, {
+                        className: m.nameContainer,
+                        children: [null != l ? (0, i.jsx)(l, {
+                            className: m.icon
+                        }) : null, (0, i.jsxs)("div", {
+                            className: m.channelNameContainer,
+                            children: [(0, i.jsx)(a.Text, {
                                 variant: "text-md/semibold",
-                                className: E.channelName,
-                                children: (0, d.computeChannelName)(i, h.default, S.default)
-                            }), (0, n.jsx)(a.Text, {
+                                className: m.channelName,
+                                children: (0, d.computeChannelName)(s, f.default, h.default)
+                            }), (0, i.jsx)(a.Text, {
                                 variant: "text-xs/normal",
-                                className: E.channelNameByline,
+                                className: m.channelNameByline,
                                 children: t
                             })]
                         })]
@@ -101,36 +101,36 @@
                         muted: e,
                         guildMuted: t
                     } = this.props;
-                    return (0, n.jsxs)(g.default, {
+                    return (0, i.jsxs)(N.default, {
                         grow: 0,
                         shrink: 0,
-                        className: E.checkboxGroup,
-                        justify: g.default.Justify.AROUND,
-                        align: g.default.Align.CENTER,
-                        children: [(0, n.jsx)(g.default.Child, {
+                        className: m.checkboxGroup,
+                        justify: N.default.Justify.AROUND,
+                        align: N.default.Align.CENTER,
+                        children: [(0, i.jsx)(N.default.Child, {
                             wrap: !0,
                             grow: 0,
                             shrink: 0,
-                            className: t ? E.checkboxContainerMuted : E.checkboxContainer,
-                            children: this.renderMessageNotificationsRadioOption(f.UserNotificationSettings.ALL_MESSAGES)
-                        }), (0, n.jsx)(g.default.Child, {
+                            className: t ? m.checkboxContainerMuted : m.checkboxContainer,
+                            children: this.renderMessageNotificationsRadioOption(S.UserNotificationSettings.ALL_MESSAGES)
+                        }), (0, i.jsx)(N.default.Child, {
                             wrap: !0,
                             grow: 0,
                             shrink: 0,
-                            className: t ? E.checkboxContainerMuted : E.checkboxContainer,
-                            children: this.renderMessageNotificationsRadioOption(f.UserNotificationSettings.ONLY_MENTIONS)
-                        }), (0, n.jsx)(g.default.Child, {
+                            className: t ? m.checkboxContainerMuted : m.checkboxContainer,
+                            children: this.renderMessageNotificationsRadioOption(S.UserNotificationSettings.ONLY_MENTIONS)
+                        }), (0, i.jsx)(N.default.Child, {
                             wrap: !0,
                             grow: 0,
                             shrink: 0,
-                            className: t ? E.checkboxContainerMuted : E.checkboxContainer,
-                            children: this.renderMessageNotificationsRadioOption(f.UserNotificationSettings.NO_MESSAGES)
-                        }), (0, n.jsx)(g.default.Child, {
+                            className: t ? m.checkboxContainerMuted : m.checkboxContainer,
+                            children: this.renderMessageNotificationsRadioOption(S.UserNotificationSettings.NO_MESSAGES)
+                        }), (0, i.jsx)(N.default.Child, {
                             wrap: !0,
                             grow: 0,
                             shrink: 0,
-                            className: E.checkboxMute,
-                            children: (0, n.jsx)(a.Checkbox, {
+                            className: m.checkboxMute,
+                            children: (0, i.jsx)(a.Checkbox, {
                                 value: e,
                                 shape: a.Checkbox.Shapes.BOX,
                                 type: a.Checkbox.Types.INVERTED,
@@ -143,12 +143,12 @@
                     let {
                         highlight: e
                     } = this.state;
-                    return (0, n.jsxs)(a.Card, {
+                    return (0, i.jsxs)(a.Card, {
                         outline: !0,
                         editable: !0,
-                        className: e ? E.overrideHighlight : E.override,
-                        children: [this.renderName(), this.renderOptions(), (0, n.jsx)(r.default, {
-                            className: E.removeOverride,
+                        className: e ? m.overrideHighlight : m.override,
+                        children: [this.renderName(), this.renderOptions(), (0, i.jsx)(r.default, {
+                            className: m.removeOverride,
                             onClick: this.handleDelete
                         })]
                     })
@@ -162,15 +162,15 @@
                         })
                     }, this.handleMute = (e, t) => {
                         let {
-                            messageNotifications: i
+                            messageNotifications: s
                         } = this.props;
-                        this.setMessageNotification(null != i ? i : f.UserNotificationSettings.NULL, t, N.NotificationLabel.muted(t))
+                        this.setMessageNotification(null != s ? s : S.UserNotificationSettings.NULL, t, g.NotificationLabel.muted(t))
                     }, this.handleDelete = () => {
                         let {
                             onDelete: e,
                             channel: t
                         } = this.props;
-                        this.setMessageNotification(f.UserNotificationSettings.NULL, !1, N.NotificationLabels.OverrideDeleted), null != e && e(t.id)
+                        this.setMessageNotification(S.UserNotificationSettings.NULL, !1, g.NotificationLabels.OverrideDeleted), null != e && e(t.id)
                     }
                 }
             }

@@ -35,21 +35,21 @@
                 N = n("913491"),
                 L = n("574073"),
                 v = n("738352"),
-                R = n("865343"),
-                x = n("380986"),
+                x = n("865343"),
+                R = n("380986"),
                 y = n("85470"),
-                O = n("969706"),
-                D = n("39331"),
+                D = n("969706"),
+                O = n("39331"),
                 j = n("68480"),
                 b = n("115859"),
                 P = n("922177"),
-                U = n("789790"),
-                F = n("227984"),
+                F = n("789790"),
+                U = n("227984"),
                 H = n("82080"),
                 k = n("535993"),
                 G = n("144553"),
-                w = n("862451"),
-                B = n("894488"),
+                B = n("862451"),
+                w = n("894488"),
                 V = n("49111"),
                 W = n("782340"),
                 z = n("877671");
@@ -75,7 +75,7 @@
                 } = (0, u.useListItem)(null !== (t = e.id) && void 0 !== t ? t : ""), h = (0, d.useStateFromStores)([E.default], () => E.default.getMessageByReference(l)), {
                     popouts: C,
                     setPopout: p
-                } = (0, O.default)(a.id, B.DEFAULT_POPOUTS), m = (0, L.default)(a), g = (0, R.getMessageAriaLabelledBy)(a), S = (0, R.getMessageAriaDescribedBy)(a);
+                } = (0, D.default)(a.id, w.DEFAULT_POPOUTS), m = (0, L.default)(a), g = (0, x.getMessageAriaLabelledBy)(a), S = (0, x.getMessageAriaDescribedBy)(a);
                 return a.type === V.MessageTypes.THREAD_STARTER_MESSAGE && null != h && h.state === E.ReferencedMessageState.LOADED ? (0, s.jsx)(Y, {
                     ...e,
                     message: h.message,
@@ -90,14 +90,14 @@
                         [z.systemMessage]: !0,
                         [z.groupStart]: !0
                     }),
-                    childrenHeader: (0, F.default)({
+                    childrenHeader: (0, U.default)({
                         messageProps: e,
                         setPopout: p,
                         messagePopouts: C,
                         replyReference: l,
                         author: m
                     }),
-                    childrenSystemMessage: (0, w.default)(e),
+                    childrenSystemMessage: (0, B.default)(e),
                     childrenMessageContent: null,
                     "aria-labelledby": g,
                     "aria-describedby": S,
@@ -120,25 +120,25 @@
                     compact: v = !1,
                     className: j,
                     groupId: P
-                } = e, U = m.type === V.MessageTypes.REPLY ? m.messageReference : void 0, {
+                } = e, F = m.type === V.MessageTypes.REPLY ? m.messageReference : void 0, {
                     onFocus: k,
                     ...Z
                 } = (0, u.useListItem)(null !== (n = e.id) && void 0 !== n ? n : ""), {
                     isFocused: K,
                     handleFocus: Y,
                     handleBlur: q
-                } = (0, x.useFocusInside)(k), {
+                } = (0, R.useFocusInside)(k), {
                     popouts: X,
                     selected: J,
                     setPopout: Q
-                } = (0, O.default)(m.id, B.DEFAULT_POPOUTS), $ = S.InlineEmbedMedia.useSetting(), ee = S.RenderEmbeds.useSetting(), et = (0, d.useStateFromStores)([E.default], () => E.default.getMessageByReference(U)), en = (0, h.useShowImprovedMarkdownUserExperimentConfig)((null !== (l = m.editedTimestamp) && void 0 !== l ? l : m.timestamp).valueOf()), es = (0, h.useShowImprovedMarkdownGuildExperimentConfig)(null !== (r = null === (t = e.channel) || void 0 === t ? void 0 : t.guild_id) && void 0 !== r ? r : "", (null !== (o = m.editedTimestamp) && void 0 !== o ? o : m.timestamp).valueOf()), {
+                } = (0, D.default)(m.id, w.DEFAULT_POPOUTS), $ = S.InlineEmbedMedia.useSetting(), ee = S.RenderEmbeds.useSetting(), et = (0, d.useStateFromStores)([E.default], () => E.default.getMessageByReference(F)), en = (0, h.useShowImprovedMarkdownUserExperimentConfig)((null !== (l = m.editedTimestamp) && void 0 !== l ? l : m.timestamp).valueOf()), es = (0, h.useShowImprovedMarkdownGuildExperimentConfig)(null !== (r = null === (t = e.channel) || void 0 === t ? void 0 : t.guild_id) && void 0 !== r ? r : "", (null !== (o = m.editedTimestamp) && void 0 !== o ? o : m.timestamp).valueOf()), {
                     handleMouseEnter: ea,
                     handleMouseLeave: el,
                     isHovered: ei
-                } = (0, x.useHoveredMessage)(P, m.author.id, J), er = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), eo = J || er && K, eu = eo || ei, {
+                } = (0, R.useHoveredMessage)(P, m.author.id, J), er = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), eo = J || er && K, eu = eo || ei, {
                     content: ed,
                     hasSpoilerEmbeds: ec
-                } = (0, D.default)(m, {
+                } = (0, O.default)(m, {
                     hideSimpleEmbedContent: $ && ee,
                     isInteracting: eu,
                     formatInline: !1,
@@ -146,7 +146,7 @@
                     allowHeading: en.showListsAndHeaders || es.showListsAndHeaders,
                     allowLinks: en.showMaskedLinks || es.showMaskedLinks,
                     previewLinkTarget: en.showMaskedLinks || es.showMaskedLinks
-                }), ef = (0, y.default)(_, A, er), eh = (0, L.default)(m), eC = (0, R.getMessageAriaLabelledBy)(m, P), ep = (0, R.getMessageAriaDescribedBy)(m), em = (0, H.default)(e, ed, !1), eE = a.useCallback(() => (0, g.transitionToGuild)(I, A, _), [I, A, _]), eg = (0, p.useRoleIcon)({
+                }), ef = (0, y.default)(_, A, er), eh = (0, L.default)(m), eC = (0, x.getMessageAriaLabelledBy)(m, P), ep = (0, x.getMessageAriaDescribedBy)(m), em = (0, H.default)(e, ed, !1), eE = a.useCallback(() => (0, g.transitionToGuild)(I, A, _), [I, A, _]), eg = (0, p.useRoleIcon)({
                     guildId: I,
                     roleId: eh.iconRoleId
                 });
@@ -174,12 +174,12 @@
                         onKeyDown: ef,
                         onFocus: Y,
                         onBlur: q,
-                        childrenRepliedMessage: (0, G.default)(e, Q, X, U, et),
-                        childrenHeader: (0, F.default)({
+                        childrenRepliedMessage: (0, G.default)(e, Q, X, F, et),
+                        childrenHeader: (0, U.default)({
                             messageProps: e,
                             setPopout: Q,
                             messagePopouts: X,
-                            replyReference: U,
+                            replyReference: F,
                             author: eh,
                             repliedMessage: et,
                             roleIcon: eg
@@ -192,7 +192,7 @@
                             renderComponentAccessory: !1,
                             renderSuppressEmbeds: !1
                         }),
-                        childrenSystemMessage: (0, w.default)(e),
+                        childrenSystemMessage: (0, B.default)(e),
                         childrenMessageContent: em,
                         onMouseMove: ea,
                         onMouseLeave: el,
@@ -234,21 +234,21 @@
                         popouts: ei,
                         selected: er,
                         setPopout: eo
-                    } = (0, O.default)(I.id, B.DEFAULT_POPOUTS),
-                    eu = (0, x.useContextMenuMessage)(I, K, eo),
-                    ed = (0, x.useClickMessage)(I, K),
+                    } = (0, D.default)(I.id, w.DEFAULT_POPOUTS),
+                    eu = (0, R.useContextMenuMessage)(I, K, eo),
+                    ed = (0, R.useClickMessage)(I, K),
                     {
                         handleMouseEnter: ec,
                         handleMouseLeave: ef,
                         hasHovered: eh,
                         isHovered: eC
-                    } = (0, x.useHoveredMessage)(Q, I.author.id, er),
+                    } = (0, R.useHoveredMessage)(Q, I.author.id, er),
                     {
                         isFocused: ep,
                         hasFocused: em,
                         handleFocus: eE,
                         handleBlur: eg
-                    } = (0, x.useFocusInside)(et),
+                    } = (0, R.useFocusInside)(et),
                     eS = (0, d.useStateFromStores)([A.default], () => A.default.isEditing(Y, Z), [Y, Z]),
                     e_ = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled),
                     eA = er || eS || e_ && ep,
@@ -259,8 +259,8 @@
                     eL = (0, h.useShowImprovedMarkdownGuildExperimentConfig)(K.guild_id, (null !== (l = I.editedTimestamp) && void 0 !== l ? l : I.timestamp).valueOf()),
                     {
                         content: ev,
-                        hasSpoilerEmbeds: eR
-                    } = (0, D.default)(I, {
+                        hasSpoilerEmbeds: ex
+                    } = (0, O.default)(I, {
                         hideSimpleEmbedContent: es && ea,
                         isInteracting: eT,
                         formatInline: !1,
@@ -269,10 +269,10 @@
                         allowLinks: eN.showMaskedLinks || eL.showMaskedLinks,
                         previewLinkTarget: eN.showMaskedLinks || eL.showMaskedLinks
                     }),
-                    ex = (0, y.default)(Z, Y, e_),
+                    eR = (0, y.default)(Z, Y, e_),
                     ey = (0, L.default)(I),
-                    eO = (0, d.useStateFromStores)([m.default], () => m.default.getPendingReply(Y)),
-                    eD = function(e) {
+                    eD = (0, d.useStateFromStores)([m.default], () => m.default.getPendingReply(Y)),
+                    eO = function(e) {
                         let t = a.useRef(e);
                         return a.useEffect(() => void(t.current = null != e ? e : t.current)), null != e ? e : t.current
                     }(J),
@@ -280,18 +280,18 @@
                         guildId: K.guild_id,
                         roleId: ey.iconRoleId
                     }),
-                    eb = (0, R.getMessageAriaLabelledBy)(I, Q),
-                    eP = (0, R.getMessageAriaDescribedBy)(I),
-                    eU = (0, d.useStateFromStores)([C.default], () => C.default.getMessage(Z), [Z]),
-                    [eF, eH] = a.useState(!1),
+                    eb = (0, x.getMessageAriaLabelledBy)(I, Q),
+                    eP = (0, x.getMessageAriaDescribedBy)(I),
+                    eF = (0, d.useStateFromStores)([C.default], () => C.default.getMessage(Z), [Z]),
+                    [eU, eH] = a.useState(!1),
                     ek = (0, j.default)({
                         message: I,
                         channel: K
                     }),
-                    eG = null != eU;
+                    eG = null != eF;
                 r = I.type === V.MessageTypes.CUSTOM_GIFT ? "" : !eS && eG ? (0, P.default)(e, ev) : (0, H.default)(e, ev, eS);
-                let ew = I.id === Q,
-                    eB = (0, s.jsx)(c.FocusRing, {
+                let eB = I.id === Q,
+                    ew = (0, s.jsx)(c.FocusRing, {
                         offset: {
                             left: 4,
                             right: 4
@@ -309,7 +309,7 @@
                                 onFocus: eE,
                                 onBlur: eg,
                                 onContextMenu: eu,
-                                onKeyDown: ex,
+                                onKeyDown: eR,
                                 onClick: ed,
                                 compact: q,
                                 contentOnly: $,
@@ -319,16 +319,16 @@
                                     [z.mentioned]: I.mentioned && !(0, N.default)(I),
                                     [z.ephemeral]: (0, M.hasFlag)(I.flags, V.MessageFlags.EPHEMERAL),
                                     [z.systemMessage]: (0, N.default)(I),
-                                    [z.groupStart]: !$ && (ew || I.type === V.MessageTypes.REPLY),
+                                    [z.groupStart]: !$ && (eB || I.type === V.MessageTypes.REPLY),
                                     [z.selected]: eA,
-                                    [z.replying]: (null == eO ? void 0 : eO.message.id) === I.id,
+                                    [z.replying]: (null == eD ? void 0 : eD.message.id) === I.id,
                                     [z.interactionSending]: I.isCommandType() && I.state === V.MessageStates.SENDING,
                                     [z.automodMessage]: eG
                                 }),
                                 zalgo: !eS,
                                 childrenRepliedMessage: $ ? void 0 : (0, G.default)(e, eo, ei, ee, el),
                                 childrenExecutedCommand: (0, k.default)(e, eo, ei),
-                                childrenHeader: $ ? void 0 : (0, F.default)({
+                                childrenHeader: $ ? void 0 : (0, U.default)({
                                     messageProps: e,
                                     setPopout: eo,
                                     messagePopouts: ei,
@@ -339,21 +339,21 @@
                                 }),
                                 childrenAccessories: (0, b.default)({
                                     channelMessageProps: e,
-                                    hasSpoilerEmbeds: eR,
+                                    hasSpoilerEmbeds: ex,
                                     handleContextMenu: eu,
                                     isInteracting: eT,
                                     isAutomodBlockedMessage: eG,
-                                    showClydeAiEmbeds: eF
+                                    showClydeAiEmbeds: eU
                                 }),
-                                childrenButtons: eh || em ? (0, U.default)({
+                                childrenButtons: eh || em ? (0, F.default)({
                                     buttonProps: e,
                                     setPopout: eo,
                                     messagePopouts: ei,
-                                    showClydeAiEmbeds: eF,
+                                    showClydeAiEmbeds: eU,
                                     setShowClydeAiEmbeds: eH,
                                     isFocused: eC || ep
                                 }) : void 0,
-                                childrenSystemMessage: (0, w.default)(e),
+                                childrenSystemMessage: (0, B.default)(e),
                                 childrenMessageContent: r,
                                 onMouseMove: ec,
                                 onMouseLeave: ef,
@@ -364,12 +364,12 @@
                             })
                         })
                     });
-                return null != eD ? (0, s.jsx)(v.default, {
-                    flashKey: eD,
+                return null != eO ? (0, s.jsx)(v.default, {
+                    flashKey: eO,
                     className: i({
                         [z.backgroundFlash]: !0,
                         [z.groupStart]: !q && I.id === Q
                     }),
-                    children: eB
-                }, "bg-flash-".concat(g)) : eB
+                    children: ew
+                }, "bg-flash-".concat(g)) : ew
             })

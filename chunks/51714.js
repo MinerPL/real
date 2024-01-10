@@ -45,33 +45,33 @@
                             }
                         }
                     }
-                    let R = (0, l.dateFormat)(e.timestamp, "LL");
-                    R !== t && null == _ && (E.push({
+                    let x = (0, l.dateFormat)(e.timestamp, "LL");
+                    x !== t && null == _ && (E.push({
                         type: u.ChannelStreamTypes.DIVIDER,
-                        content: R,
-                        contentKey: R
-                    }), t = R);
-                    let x = E[E.length - 1],
+                        content: x,
+                        contentKey: x
+                    }), t = x);
+                    let R = E[E.length - 1],
                         y = null,
-                        O = (0, o.isSpam)(e);
-                    g = g || O;
-                    let D = function(e, t, n) {
+                        D = (0, o.isSpam)(e);
+                    g = g || D;
+                    let O = function(e, t, n) {
                         if (s.MessageTypesSets.NON_COLLAPSIBLE.has(t.type));
                         else if (t.blocked) return u.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED;
                         else if ((0, o.isSpamSupported)(e) && n) return u.ChannelStreamTypes.MESSAGE_GROUP_SPAMMER;
                         return null
-                    }(c, e, O && C);
-                    if (null !== D) {
+                    }(c, e, D && C);
+                    if (null !== O) {
                         ;
                         let t, n;
-                        [y, x] = (A = E, T = e, M = D, n = I = x, null == I || I.type !== M ? (t = {
+                        [y, R] = (A = E, T = e, M = O, n = I = R, null == I || I.type !== M ? (t = {
                             type: M,
                             content: [],
                             key: T.id
                         }, A.push(t)) : n = (t = I).content[t.content.length - 1], [t, n])
                     }
                     if (h === e.id && null != S) {
-                        if (null != x && x.type === u.ChannelStreamTypes.DIVIDER) x.unreadId = e.id, S = null;
+                        if (null != R && R.type === u.ChannelStreamTypes.DIVIDER) R.unreadId = e.id, S = null;
                         else if (null !== y) {
                             ;
                             N = y, L = c, (v = e).isFirstMessageInForumPost(L) || N.content.push({
@@ -86,7 +86,7 @@
                         type: u.ChannelStreamTypes.DIVIDER,
                         unreadId: e.id
                     }), S = null);
-                    let j = (null == x ? void 0 : x.type) === u.ChannelStreamTypes.MESSAGE ? d : x;
+                    let j = (null == R ? void 0 : R.type) === u.ChannelStreamTypes.MESSAGE ? d : R;
                     (0, r.isNewGroupItem)(c, j, e) && (n = e.id);
                     let b = {
                         type: e.type === u.MessageTypes.THREAD_STARTER_MESSAGE ? u.ChannelStreamTypes.THREAD_STARTER_MESSAGE : u.ChannelStreamTypes.MESSAGE,
@@ -96,10 +96,10 @@
                     n === e.id && (d = b);
                     let {
                         jumpSequenceId: P,
-                        jumpFlash: U,
-                        jumpTargetId: F
+                        jumpFlash: F,
+                        jumpTargetId: U
                     } = f;
-                    U && e.id === F && null != P && (b.flashKey = P), f.jumpTargetId === e.id && (b.jumpTarget = !0), null != m && e.id === m.startId && m.count > 1 && E.push({
+                    F && e.id === U && null != P && (b.flashKey = P), f.jumpTargetId === e.id && (b.jumpTarget = !0), null != m && e.id === m.startId && m.count > 1 && E.push({
                         type: u.ChannelStreamTypes.DIVIDER,
                         content: m.topic,
                         contentKey: m.startId,

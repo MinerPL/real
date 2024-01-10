@@ -29,21 +29,21 @@
                 N = n("845579"),
                 L = n("271938"),
                 v = n("836417"),
-                R = n("26989"),
-                x = n("305961"),
+                x = n("26989"),
+                R = n("305961"),
                 y = n("88093"),
-                O = n("957255"),
-                D = n("886074"),
+                D = n("957255"),
+                O = n("886074"),
                 j = n("36562"),
                 b = n("662255"),
                 P = n("85175"),
-                U = n("68238"),
-                F = n("83900"),
+                F = n("68238"),
+                U = n("83900"),
                 H = n("993477"),
                 k = n("733160"),
                 G = n("100300"),
-                w = n("433487"),
-                B = n("987772"),
+                B = n("433487"),
+                w = n("987772"),
                 V = n("566998"),
                 W = n("516358"),
                 z = n("550515"),
@@ -143,7 +143,7 @@
                                 children: [(0, s.jsx)(i, {
                                     className: ec.icon,
                                     ...r
-                                }), m && (0, s.jsx)(D.default, {})]
+                                }), m && (0, s.jsx)(O.default, {})]
                             }), p && (0, s.jsx)(X.Separator, {})]
                         })
                     }
@@ -164,7 +164,7 @@
                     canConfigureJoin: A,
                     canReply: T,
                     canStartThread: v,
-                    canViewThread: D,
+                    canViewThread: O,
                     isExpanded: z,
                     showMoreUtilities: X,
                     showEmojiPicker: ei,
@@ -190,16 +190,16 @@
                         isFocused: d
                     } = e, {
                         author: h
-                    } = n, C = (0, u.useStateFromStores)([x.default], () => x.default.getGuild(t.guild_id), [t.guild_id]), p = (0, u.useStateFromStores)([L.default], () => L.default.getId()), m = (0, I.useIsActiveChannelOrUnarchivableThread)(t), _ = (0, I.useIsNonModInLockedThread)(t), A = N.RenderReactions.useSetting(), T = N.DeveloperMode.useSetting(), v = (0, u.useStateFromStores)([y.default], () => null == t.guild_id || y.default.canChatInGuild(t.guild_id), [t]), {
-                        canManageMessages: D,
+                    } = n, C = (0, u.useStateFromStores)([R.default], () => R.default.getGuild(t.guild_id), [t.guild_id]), p = (0, u.useStateFromStores)([L.default], () => L.default.getId()), m = (0, I.useIsActiveChannelOrUnarchivableThread)(t), _ = (0, I.useIsNonModInLockedThread)(t), A = N.RenderReactions.useSetting(), T = N.DeveloperMode.useSetting(), v = (0, u.useStateFromStores)([y.default], () => null == t.guild_id || y.default.canChatInGuild(t.guild_id), [t]), {
+                        canManageMessages: O,
                         canAddNewReactions: j
-                    } = (0, u.useStateFromStoresObject)([O.default], () => ({
-                        canAddNewReactions: v && O.default.can(eo.Permissions.ADD_REACTIONS, t),
-                        canManageMessages: O.default.can(eo.Permissions.MANAGE_MESSAGES, t)
-                    }), [t, v]), b = (0, M.useCanReplyToMessage)(t, n), P = (0, I.useCanStartPublicThread)(t, n), U = (0, I.useCanViewThreadForMessage)(n), F = (0, u.useStateFromStores)([E.default], () => null != t.guild_id && E.default.isLurking(t.guild_id), [t]), H = (0, u.useStateFromStores)([R.default], () => null != t.guild_id && R.default.isCurrentUserGuest(t.guild_id), [t]), k = h.id === p, G = (D || k) && m && n.type in eo.MessageTypesDeletable;
-                    n.type === eo.MessageTypes.AUTO_MODERATION_ACTION && (G = G && D);
-                    let w = (0, ee.canReportMessage)(n),
-                        B = (0, en.default)(n, t, D),
+                    } = (0, u.useStateFromStoresObject)([D.default], () => ({
+                        canAddNewReactions: v && D.default.can(eo.Permissions.ADD_REACTIONS, t),
+                        canManageMessages: D.default.can(eo.Permissions.MANAGE_MESSAGES, t)
+                    }), [t, v]), b = (0, M.useCanReplyToMessage)(t, n), P = (0, I.useCanStartPublicThread)(t, n), F = (0, I.useCanViewThreadForMessage)(n), U = (0, u.useStateFromStores)([E.default], () => null != t.guild_id && E.default.isLurking(t.guild_id), [t]), H = (0, u.useStateFromStores)([x.default], () => null != t.guild_id && x.default.isCurrentUserGuest(t.guild_id), [t]), k = h.id === p, G = (O || k) && m && n.type in eo.MessageTypesDeletable;
+                    n.type === eo.MessageTypes.AUTO_MODERATION_ACTION && (G = G && O);
+                    let B = (0, ee.canReportMessage)(n),
+                        w = (0, en.default)(n, t, O),
                         V = !t.isSystemDM() && (0, et.default)(n, p) && m && !_,
                         {
                             disableReactionCreates: W
@@ -208,13 +208,13 @@
                             canChat: v,
                             renderReactions: A,
                             canAddNewReactions: j,
-                            isLurking: F,
+                            isLurking: U,
                             isGuest: H,
                             isActiveChannelOrUnarchivableThread: m
                         }),
-                        z = t.type === eo.ChannelTypes.GUILD_ANNOUNCEMENT && null != C && C.hasFeature(eo.GuildFeatures.NEWS) && (k || D) && n.type === eo.MessageTypes.DEFAULT,
+                        z = t.type === eo.ChannelTypes.GUILD_ANNOUNCEMENT && null != C && C.hasFeature(eo.GuildFeatures.NEWS) && (k || O) && n.type === eo.MessageTypes.DEFAULT,
                         Z = t.getGuildId(),
-                        K = null != Z && (n.type === eo.MessageTypes.USER_JOIN || n.type === eo.MessageTypes.GUILD_INVITE_REMINDER) && O.default.canWithPartialContext(eo.Permissions.MANAGE_GUILD, {
+                        K = null != Z && (n.type === eo.MessageTypes.USER_JOIN || n.type === eo.MessageTypes.GUILD_INVITE_REMINDER) && D.default.canWithPartialContext(eo.Permissions.MANAGE_GUILD, {
                             guildId: Z
                         }),
                         {
@@ -231,13 +231,13 @@
                     return {
                         channel: t,
                         message: n,
-                        canPin: B,
+                        canPin: w,
                         canEdit: V,
                         canDelete: G,
-                        canReport: w,
+                        canReport: B,
                         canReply: b,
                         canStartThread: P,
-                        canViewThread: U,
+                        canViewThread: F,
                         canCopy: Q.SUPPORTS_COPY,
                         hasDeveloperMode: T,
                         canReact: !W && A,
@@ -263,11 +263,11 @@
                     }), ep({
                         moreUtilities: !X
                     })
-                }, [X, ep, n]), eR = a.useCallback(() => {
+                }, [X, ep, n]), ex = a.useCallback(() => {
                     ep({
                         emojiPicker: !ei
                     })
-                }, [ei, ep]), ex = (0, I.useIsActiveChannelOrUnarchivableThread)(t), ey = n.hasFlag(eo.MessageFlags.CROSSPOSTED);
+                }, [ei, ep]), eR = (0, I.useIsActiveChannelOrUnarchivableThread)(t), ey = n.hasFlag(eo.MessageFlags.CROSSPOSTED);
                 return (0, s.jsxs)(s.Fragment, {
                     children: [z ? (0, s.jsxs)(s.Fragment, {
                         children: [l && e_ ? eC({
@@ -282,7 +282,7 @@
                             channel: t,
                             message: n,
                             label: ed.default.Messages.COPY_LINK,
-                            icon: F.default,
+                            icon: U.default,
                             onClick: ea.copyLink
                         }) : null, A ? eC({
                             key: "configure",
@@ -298,7 +298,7 @@
                             label: ef ? ed.default.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : ed.default.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
                             icon: ef ? j.default : G.default,
                             onClick: ef ? ea.markMessageRemindersAsComplete : ea.markMessageAsReminder
-                        }) : null, ex ? eC({
+                        }) : null, eR ? eC({
                             key: "mark-unread",
                             channel: t,
                             message: n,
@@ -325,7 +325,7 @@
                         channel: t,
                         message: n,
                         label: em ? ed.default.Messages.CLYDE_VIEW_SOURCE_HIDE_TOOLTIP : ed.default.Messages.CLYDE_VIEW_SOURCE_SHOW_TOOLTIP,
-                        icon: U.default,
+                        icon: F.default,
                         onClick: () => {
                             eg(!em), J.default.track(eo.AnalyticEvents.CLYDE_AI_THOUGHTS_VIEWED, {
                                 message_id: n.id
@@ -364,7 +364,7 @@
                     }) : null, _ && !eA ? (0, s.jsx)(el.default, {
                         channel: t,
                         message: n,
-                        togglePopout: eR,
+                        togglePopout: ex,
                         renderEmojiPicker: eE,
                         shouldShow: ei,
                         isFocused: eT
@@ -380,7 +380,7 @@
                         channel: t,
                         message: n,
                         label: ed.default.Messages.EDIT,
-                        icon: B.default,
+                        icon: w.default,
                         onClick: ea.editMessage
                     }) : null, v ? eC({
                         key: "thread",
@@ -389,7 +389,7 @@
                         label: ed.default.Messages.CREATE_THREAD,
                         icon: Z.default,
                         onClick: ea.createThread
-                    }) : null, !v && D ? eC({
+                    }) : null, !v && O ? eC({
                         key: "view-thread",
                         channel: t,
                         message: n,
@@ -442,7 +442,7 @@
                             return eC({
                                 key: "more",
                                 label: ed.default.Messages.MORE,
-                                icon: w.default,
+                                icon: B.default,
                                 channel: t,
                                 message: n,
                                 selected: i,

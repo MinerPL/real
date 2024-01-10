@@ -1,14 +1,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return i
                 }
             });
             var l = n("446674"),
-                u = n("47319"),
-                a = n("449008"),
-                i = n("49111");
+                a = n("47319"),
+                u = n("449008"),
+                r = n("49111");
 
-            function d() {
-                return (0, l.useStateFromStoresArray)([u.default], () => [u.default.getAccount(null, i.PlatformTypes.XBOX), u.default.getAccount(null, i.PlatformTypes.PLAYSTATION), u.default.getAccount(null, i.PlatformTypes.PLAYSTATION_STAGING)].filter(a.isNotNullish))
+            function i() {
+                return (0, l.useStateFromStoresArray)([a.default], () => [a.default.getAccount(null, r.PlatformTypes.XBOX), a.default.getAccount(null, r.PlatformTypes.PLAYSTATION), a.default.getAccount(null, r.PlatformTypes.PLAYSTATION_STAGING)].filter(u.isNotNullish))
             }

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return o
                 }
             });
             var a = n("37983");
@@ -12,7 +12,7 @@
                 u = n("870691"),
                 r = n("782340");
 
-            function d(e) {
+            function o(e) {
                 let t = (0, i.useStateFromStores)([u.default], () => u.default.isCollapsed(e.id), [e.id]);
                 return (0, a.jsx)(s.MenuCheckboxItem, {
                     id: "collapse-category",

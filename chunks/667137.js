@@ -140,21 +140,21 @@
                         config: r.config.stiff,
                         immediate: m
                     }),
-                    R = a.useMemo(() => null != N ? N : {
+                    x = a.useMemo(() => null != N ? N : {
                         value: 0,
                         multiplier: 1
                     }, [N]),
-                    x = a.useRef(R);
+                    R = a.useRef(x);
                 a.useEffect(() => {
-                    (R.multiplier > 1 || R.value > 0) && (x.current = R)
-                }, [R]);
+                    (x.multiplier > 1 || x.value > 0) && (R.current = x)
+                }, [x]);
                 let {
                     multiplier: y,
-                    value: O
+                    value: D
                 } = a.useMemo(() => ({
-                    value: L ? R.value : x.current.value,
-                    multiplier: L ? R.multiplier : x.current.multiplier
-                }), [L, R, x]);
+                    value: L ? x.value : R.current.value,
+                    multiplier: L ? x.multiplier : R.current.multiplier
+                }), [L, x, R]);
                 return (0, s.jsxs)(s.Fragment, {
                     children: [(0, s.jsx)(M, {
                         channelId: t,
@@ -164,7 +164,7 @@
                         className: T.combo,
                         style: v,
                         children: (0, s.jsx)(I, {
-                            value: O,
+                            value: D,
                             multiplier: y
                         })
                     })]
