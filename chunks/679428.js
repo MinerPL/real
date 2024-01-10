@@ -7,8 +7,8 @@
             var i = n("872717"),
                 l = n("689988"),
                 r = n("870691"),
-                a = n("42203"),
-                s = n("49111");
+                s = n("42203"),
+                a = n("49111");
             let o = {},
                 u = 0;
 
@@ -22,11 +22,11 @@
                 !__OVERLAY__ && (clearTimeout(u), u = setTimeout(() => f(), 15e3))
             }
             async function f(e, t) {
-                null == e || e === s.ME ? await i.default.patch({
-                    url: s.Endpoints.USER_GUILD_SETTINGS(s.ME),
+                null == e || e === a.ME ? await i.default.patch({
+                    url: a.Endpoints.USER_GUILD_SETTINGS(a.ME),
                     body: t
                 }) : await h(null != t ? {
-                    [null != e ? e : s.ME]: t
+                    [null != e ? e : a.ME]: t
                 } : {})
             }
             async function h(e) {
@@ -41,7 +41,7 @@
                         return e
                     }();
                 for (let i in l) {
-                    let l = a.default.getChannel(i);
+                    let l = s.default.getChannel(i);
                     null != l && null != l.guild_id && (!(l.guild_id in e) && (e[l.guild_id] = {}), null == e[l.guild_id].channel_overrides && (e[l.guild_id].channel_overrides = {}), e[l.guild_id].channel_overrides[l.id] = {
                         ...e[l.guild_id].channel_overrides[l.id],
                         collapsed: l.id in n
@@ -49,8 +49,8 @@
                 }
                 return t ? (o = {
                     ...n
-                }, delete e[s.FAVORITES], (await i.default.patch({
-                    url: s.Endpoints.USER_GUILD_SETTINGS_BULK,
+                }, delete e[a.FAVORITES], (await i.default.patch({
+                    url: a.Endpoints.USER_GUILD_SETTINGS_BULK,
                     body: {
                         guilds: e
                     }

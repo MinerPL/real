@@ -1,19 +1,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 SafetyWarningTypes: function() {
-                    return r
-                },
-                SafetyWarningFeedbackTypes: function() {
                     return u
                 },
+                SafetyWarningFeedbackTypes: function() {
+                    return l
+                },
                 default: function() {
-                    return v
+                    return N
                 }
             });
-            var a, i, r, u, s = n("446674"),
-                l = n("913144"),
+            var a, i, u, l, s = n("446674"),
+                r = n("913144"),
                 o = n("42203");
-            (a = r || (r = {}))[a.STRANGER_DANGER = 1] = "STRANGER_DANGER", (i = u || (u = {}))[i.UPVOTE = 0] = "UPVOTE", i[i.DOWNVOTE = 1] = "DOWNVOTE";
+            (a = u || (u = {}))[a.STRANGER_DANGER = 1] = "STRANGER_DANGER", (i = l || (l = {}))[i.UPVOTE = 0] = "UPVOTE", i[i.DOWNVOTE = 1] = "DOWNVOTE";
             let d = [],
                 c = {};
 
@@ -42,7 +42,7 @@
                     return null !== (t = c[e]) && void 0 !== t ? t : d
                 }
             }
-            var v = new C(l.default, {
+            var N = new C(r.default, {
                 CHANNEL_CREATE: function(e) {
                     f(e.channel)
                 },
