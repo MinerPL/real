@@ -1,5 +1,5 @@
             "use strict";
-            l.r(t), l.d(t, {
+            a.r(t), a.d(t, {
                 MAX_CONTENT_WIDTH: function() {
                     return s
                 },
@@ -13,15 +13,15 @@
                     return o
                 }
             });
-            var a = l("547630");
+            var l = a("547630");
             let s = 1060,
-                r = e => e * (0, a.default)(),
+                r = e => e * (0, l.default)(),
                 n = e => 3.8 * e,
                 o = function(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 180,
                         {
-                            primary: l,
-                            secondary: a
+                            primary: a,
+                            secondary: l
                         } = e;
-                    return "linear-gradient(".concat(t, "deg, ").concat(l.toHslString(), ", ").concat(a.toHslString(), ")")
+                    return "linear-gradient(".concat(t, "deg, ").concat(a.toHslString(), ", ").concat(l.toHslString(), ")")
                 }

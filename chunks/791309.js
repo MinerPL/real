@@ -1,21 +1,21 @@
             "use strict";
-            l.r(t), l.d(t, {
+            a.r(t), a.d(t, {
                 default: function() {
                     return u
                 }
             });
-            var a = l("37983");
-            l("884691");
-            var s = l("414456"),
-                r = l.n(s),
-                n = l("77078"),
-                o = l("153160"),
-                i = l("846367"),
+            var l = a("37983");
+            a("884691");
+            var s = a("414456"),
+                r = a.n(s),
+                n = a("77078"),
+                o = a("153160"),
+                i = a("846367"),
                 u = e => {
                     var t;
                     let {
                         price: {
-                            amount: l,
+                            amount: a,
                             currency: s
                         },
                         renderPrice: u,
@@ -23,8 +23,8 @@
                         className: d,
                         variant: f = "heading-md/semibold",
                         alwaysWhiteText: C = !0
-                    } = e, E = (0, o.formatPrice)(l, s);
-                    return (0, a.jsxs)(n.Heading, {
+                    } = e, E = (0, o.formatPrice)(a, s);
+                    return (0, l.jsxs)(n.Heading, {
                         variant: f,
                         color: C ? "always-white" : "none",
                         className: r(i.heading, d),

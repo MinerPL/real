@@ -1,20 +1,20 @@
             "use strict";
-            n.r(t), n.d(t, {
+            r.r(t), r.d(t, {
                 default: function() {
                     return u
                 }
             });
-            var r = n("884691");
+            var n = r("884691");
             let i = e => {
                 e.effects.forEach(e => {
                     let {
                         src: t
-                    } = e, n = document.createElement("link");
-                    n.rel = "prefetch", n.href = t, document.body.appendChild(n)
+                    } = e, r = document.createElement("link");
+                    r.rel = "prefetch", r.href = t, document.body.appendChild(r)
                 })
             };
             var u = e => {
-                r.useEffect(() => {
+                n.useEffect(() => {
                     i(e)
                 }, [e])
             }

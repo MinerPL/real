@@ -1,40 +1,40 @@
             "use strict";
-            let r;
-            n.r(t), n.d(t, {
+            let n;
+            r.r(t), r.d(t, {
                 default: function() {
                     return _
                 }
             });
-            var i = n("917351"),
-                u = n("446674"),
-                l = n("913144");
+            var i = r("917351"),
+                u = r("446674"),
+                l = r("913144");
             let o = [],
                 a = !1;
-            let f = o,
-                s = {},
+            let s = o,
+                d = {},
                 c = null,
-                d = e => {
-                    f = (0, i.cloneDeep)(e);
+                f = e => {
+                    s = (0, i.cloneDeep)(e);
                     let t = {};
-                    f.forEach(e => {
+                    s.forEach(e => {
                         t[e.id] = e
-                    }), s = t
+                    }), d = t
                 };
             class E extends u.default.Store {
                 get isFetching() {
                     return a
                 }
                 get fetchError() {
-                    return r
+                    return n
                 }
                 get profileEffects() {
-                    return f
+                    return s
                 }
                 get tryItOutId() {
                     return c
                 }
                 getProfileEffectById(e) {
-                    return null != e ? s[e] : void 0
+                    return null != e ? d[e] : void 0
                 }
             }
             E.displayName = "ProfileEffectStore";
@@ -46,13 +46,13 @@
                     let {
                         profileEffects: t
                     } = e;
-                    a = !1, d(0 === t.length ? o : t)
+                    a = !1, f(0 === t.length ? o : t)
                 },
                 USER_PROFILE_EFFECTS_FETCH_FAILURE: e => {
                     let {
                         error: t
                     } = e;
-                    a = !1, r = t, d(o)
+                    a = !1, n = t, f(o)
                 },
                 PROFILE_EFFECTS_SET_TRY_IT_OUT: e => {
                     let {
@@ -61,6 +61,6 @@
                     c = t
                 },
                 LOGOUT: e => {
-                    a = !1, d(o), c = null
+                    a = !1, f(o), c = null
                 }
             })

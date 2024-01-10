@@ -1,13 +1,13 @@
             "use strict";
-            n.r(t), n.d(t, {
+            r.r(t), r.d(t, {
                 saveClydeProfile: function() {
-                    return s
+                    return d
                 },
                 addClydeGuildMember: function() {
                     return c
                 },
                 generatePersonality: function() {
-                    return d
+                    return f
                 },
                 setPendingPersonality: function() {
                     return _
@@ -28,10 +28,10 @@
                     return I
                 },
                 fetchClydeSettings: function() {
-                    return C
+                    return A
                 },
                 fetchClydeProfile: function() {
-                    return A
+                    return C
                 },
                 createClydeProfile: function() {
                     return m
@@ -40,30 +40,30 @@
                     return L
                 },
                 doneEditingClydeProfile: function() {
-                    return g
+                    return D
                 }
             });
-            var r = n("872717"),
-                i = n("913144"),
-                u = n("327037"),
-                l = n("599110"),
-                o = n("473591"),
-                a = n("680894"),
-                f = n("49111");
-            async function s(e, t) {
-                let n = await E(e, t);
-                return n
+            var n = r("872717"),
+                i = r("913144"),
+                u = r("327037"),
+                l = r("599110"),
+                o = r("473591"),
+                a = r("680894"),
+                s = r("49111");
+            async function d(e, t) {
+                let r = await E(e, t);
+                return r
             }
             async function c(e) {
-                return await r.default.put({
-                    url: f.Endpoints.GUILD_CLYDE_ADD_MEMBER(e),
+                return await n.default.put({
+                    url: s.Endpoints.GUILD_CLYDE_ADD_MEMBER(e),
                     oldFormErrors: !0
                 })
             }
-            async function d(e) {
+            async function f(e) {
                 try {
-                    let t = await r.default.post({
-                        url: f.Endpoints.CLYDE_PROFILES_GENERATE_PERSONALITY,
+                    let t = await n.default.post({
+                        url: s.Endpoints.CLYDE_PROFILES_GENERATE_PERSONALITY,
                         oldFormErrors: !0,
                         body: {
                             personality: e
@@ -79,15 +79,15 @@
                 i.default.dispatch({
                     type: "CLYDE_GUILD_SETTINGS_SAVE_START"
                 });
-                let n = null != t.personality && o.default.getGeneratedPersonality() === o.default.getPendingPersonality();
+                let r = null != t.personality && o.default.getGeneratedPersonality() === o.default.getPendingPersonality();
                 try {
-                    var u, s;
-                    let o = await r.default.patch({
-                        url: f.Endpoints.GUILD_CLYDE_SETTINGS(e),
+                    var u, d;
+                    let o = await n.default.patch({
+                        url: s.Endpoints.GUILD_CLYDE_SETTINGS(e),
                         oldFormErrors: !0,
                         body: {
                             ...t,
-                            personality_preset: n ? "generated" : "custom"
+                            personality_preset: r ? "generated" : "custom"
                         }
                     });
                     if (o.ok) return i.default.dispatch({
@@ -105,16 +105,16 @@
                     }), o.body.settings;
                     return i.default.dispatch({
                         type: "CLYDE_GUILD_SETTINGS_SAVE_FAIL",
-                        errors: null !== (s = null === (u = o.body) || void 0 === u ? void 0 : u.errors) && void 0 !== s ? s : {}
-                    }), l.default.track(f.AnalyticEvents.CLYDE_AI_PROFILE_UPDATE_FAILED, {
+                        errors: null !== (d = null === (u = o.body) || void 0 === u ? void 0 : u.errors) && void 0 !== d ? d : {}
+                    }), l.default.track(s.AnalyticEvents.CLYDE_AI_PROFILE_UPDATE_FAILED, {
                         guild_id: e,
                         clyde_profile_id: t.clyde_profile_id
                     }), null
-                } catch (n) {
+                } catch (r) {
                     return i.default.dispatch({
                         type: "CLYDE_GUILD_SETTINGS_SAVE_FAIL",
-                        errors: n.body
-                    }), l.default.track(f.AnalyticEvents.CLYDE_AI_PROFILE_UPDATE_FAILED, {
+                        errors: r.body
+                    }), l.default.track(s.AnalyticEvents.CLYDE_AI_PROFILE_UPDATE_FAILED, {
                         guild_id: e,
                         clyde_profile_id: t.clyde_profile_id
                     }), null
@@ -163,7 +163,7 @@
                     type: "CLYDE_RESET_PENDING_CHANGES"
                 })
             }
-            async function C(e) {
+            async function A(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 if (t || o.default.shouldFetchSettings(e)) {
                     (0, u.fetchProfile)(a.CLYDE_AI_USER_ID, {
@@ -173,15 +173,15 @@
                         guildId: e
                     });
                     try {
-                        let t = await r.default.get({
-                                url: f.Endpoints.GUILD_CLYDE_SETTINGS(e),
+                        let t = await n.default.get({
+                                url: s.Endpoints.GUILD_CLYDE_SETTINGS(e),
                                 oldFormErrors: !0
                             }),
-                            n = t.body;
+                            r = t.body;
                         i.default.dispatch({
                             type: "CLYDE_GUILD_SETTINGS_FETCH_SUCCESS",
-                            guildId: n.guild_id,
-                            settings: n
+                            guildId: r.guild_id,
+                            settings: r
                         })
                     } catch (t) {
                         i.default.dispatch({
@@ -191,21 +191,21 @@
                     }
                 }
             }
-            async function A(e) {
+            async function C(e) {
                 if (null == o.default.getProfile(e)) {
                     i.default.dispatch({
                         type: "CLYDE_PROFILE_FETCH_START",
                         clydeProfileId: e
                     });
                     try {
-                        let t = await r.default.get({
-                                url: f.Endpoints.CLYDE_PROFILES(e),
+                        let t = await n.default.get({
+                                url: s.Endpoints.CLYDE_PROFILES(e),
                                 oldFormErrors: !0
                             }),
-                            n = t.body;
+                            r = t.body;
                         i.default.dispatch({
                             type: "CLYDE_PROFILE_FETCH_SUCCESS",
-                            profile: n
+                            profile: r
                         })
                     } catch (t) {
                         i.default.dispatch({
@@ -217,8 +217,8 @@
             }
             async function m(e) {
                 try {
-                    let t = await r.default.post({
-                        url: f.Endpoints.CLYDE_PROFILES_CREATE(e),
+                    let t = await n.default.post({
+                        url: s.Endpoints.CLYDE_PROFILES_CREATE(e),
                         oldFormErrors: !0
                     });
                     return t.ok && i.default.dispatch({
@@ -236,7 +236,7 @@
                 })
             }
 
-            function g() {
+            function D() {
                 i.default.dispatch({
                     type: "CLYDE_PROFILE_EDITING_END"
                 })

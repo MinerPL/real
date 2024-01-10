@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return A
+                    return C
                 }
             });
             var a = s("37983"),
@@ -11,79 +11,76 @@
                 r = s("65597"),
                 o = s("77078"),
                 d = s("685665"),
-                u = s("662286"),
-                c = s("493390"),
-                S = s("217513"),
-                E = s("790618"),
-                f = s("181114"),
-                m = s("599110"),
-                T = s("719923"),
-                _ = s("906932"),
-                g = s("570697"),
-                h = s("632892"),
-                I = s("49111"),
-                N = s("646718"),
-                p = s("782340"),
-                C = s("273072");
+                u = s("493390"),
+                c = s("217513"),
+                S = s("790618"),
+                E = s("181114"),
+                f = s("599110"),
+                m = s("719923"),
+                T = s("906932"),
+                _ = s("570697"),
+                g = s("632892"),
+                h = s("49111"),
+                I = s("646718"),
+                N = s("782340"),
+                p = s("273072");
 
-            function A(e) {
+            function C(e) {
                 let {
                     user: t,
                     guild: s,
                     className: l,
-                    forcedDivider: A = !1,
-                    withTutorial: O = !1,
-                    showBorder: x = !1,
-                    isTryItOutFlow: M = !1,
-                    initialSelectedEffectId: R
-                } = e, v = (0, S.default)(t.id, null == s ? void 0 : s.id), L = T.default.canUsePremiumProfileCustomization(t), {
-                    analyticsLocations: D
-                } = (0, d.default)(), P = (0, u.useCanUseProfileEffects)({
-                    location: "ProfileEffectSection"
-                }), {
-                    pendingProfileEffectId: j,
-                    errors: b
-                } = (0, r.useStateFromStoresObject)([E.default], () => ({
-                    pendingProfileEffectId: E.default.getPendingProfileEffectId(),
-                    errors: E.default.getErrors().profileEffect
-                })), U = n.useCallback(() => (0, c.openProfileEffectModal)({
-                    analyticsLocations: D,
-                    initialSelectedEffectId: R
-                }), [D, R]);
-                if (n.useEffect(() => {
-                        L && P && m.default.track(I.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-                            type: N.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
-                            location_stack: D
-                        })
-                    }, [P, L, D]), !P) return null;
-                let y = M || void 0 !== j ? null != j : (null == v ? void 0 : v.profileEffectId) != null,
-                    B = O ? f.default : o.Button;
-                return (0, a.jsx)(g.default, {
-                    forcedDivider: A,
-                    borderType: h.FeatureBorderTypes.PREMIUM,
+                    forcedDivider: C = !1,
+                    withTutorial: A = !1,
+                    showBorder: O = !1,
+                    isTryItOutFlow: x = !1,
+                    initialSelectedEffectId: M
+                } = e, R = (0, c.default)(t.id, null == s ? void 0 : s.id), v = m.default.canUsePremiumProfileCustomization(t), {
+                    analyticsLocations: L
+                } = (0, d.default)(), {
+                    pendingProfileEffectId: D,
+                    errors: P
+                } = (0, r.useStateFromStoresObject)([S.default], () => ({
+                    pendingProfileEffectId: S.default.getPendingProfileEffectId(),
+                    errors: S.default.getErrors().profileEffect
+                })), j = n.useCallback(() => (0, u.openProfileEffectModal)({
+                    analyticsLocations: L,
+                    initialSelectedEffectId: M
+                }), [L, M]);
+                n.useEffect(() => {
+                    v && f.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+                        type: I.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
+                        location_stack: L
+                    })
+                }, [v, L]);
+                let b = x || void 0 !== D ? null != D : (null == R ? void 0 : R.profileEffectId) != null,
+                    U = A ? E.default : o.Button;
+                return (0, a.jsx)(_.default, {
+                    forcedDivider: C,
+                    borderType: g.FeatureBorderTypes.PREMIUM,
                     hasBackground: !0,
-                    title: p.default.Messages.USER_SETTINGS_PROFILE_EFFECT,
-                    showBorder: x,
-                    errors: b,
+                    title: N.default.Messages.USER_SETTINGS_PROFILE_EFFECT,
+                    showBorder: O,
+                    errors: P,
                     className: l,
                     children: (0, a.jsxs)("div", {
-                        className: C.buttonsContainer,
-                        children: [(0, a.jsx)(B, {
+                        className: p.buttonsContainer,
+                        children: [(0, a.jsx)(U, {
                             size: o.Button.Sizes.SMALL,
-                            onClick: U,
+                            onClick: j,
                             className: i({
-                                [C.buttonHighlighted]: O
+                                [p.buttonHighlighted]: A
                             }),
-                            children: p.default.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
-                        }), y && (0, a.jsx)(o.Button, {
-                            className: C.removeButton,
+                            children: N.default.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
+                        }), b && (0, a.jsx)(o.Button, {
+                            className: p.removeButton,
                             color: o.Button.Colors.PRIMARY,
                             look: o.Button.Looks.LINK,
                             size: o.Button.Sizes.SMALL,
                             onClick: function() {
-                                (0, _.setNewPendingProfileEffectId)(null, null == v ? void 0 : v.profileEffectId)
+                                (0, T.setNewPendingProfileEffectId)(null, null == R ? void 0 : R.profileEffectId)
                             },
-                            children: p.default.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
+                            children: N.default.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
                         })]
                     })
                 })

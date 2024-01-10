@@ -1,19 +1,19 @@
             "use strict";
-            n.r(t), n.d(t, {
+            r.r(t), r.d(t, {
                 default: function() {
                     return i
                 }
-            }), n("222007"), n("808653"), n("424973");
-            var r = n("884691"),
+            }), r("222007"), r("808653"), r("424973");
+            var n = r("884691"),
                 i = (e, t) => {
-                    let [n, i] = r.useState(-1), u = r.useRef(-1);
-                    return r.useEffect(() => {
+                    let [r, i] = n.useState(-1), u = n.useRef(-1);
+                    return n.useEffect(() => {
                         let t = e.reduce((e, t) => (!e.includes(t.src) && e.push(t.src), e), []);
                         i(t.length), u.current = t.length
-                    }, [e, u, i]), r.useEffect(() => {
-                        0 === n && t()
-                    }, [n, t]), {
-                        pending: n,
+                    }, [e, u, i]), n.useEffect(() => {
+                        0 === r && t()
+                    }, [r, t]), {
+                        pending: r,
                         pendingRef: u,
                         setPending: i
                     }

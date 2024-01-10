@@ -1,28 +1,28 @@
             "use strict";
-            l.r(t), l.d(t, {
+            a.r(t), a.d(t, {
                 default: function() {
                     return o
                 }
             });
-            var a = l("37983");
-            l("884691");
-            var s = l("469563"),
-                r = l("237020"),
-                n = l("75196"),
+            var l = a("37983");
+            a("884691");
+            var s = a("469563"),
+                r = a("237020"),
+                n = a("75196"),
                 o = (0, s.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
-                        height: l = 24,
+                        height: a = 24,
                         color: s = "currentColor",
                         foreground: r,
                         ...o
                     } = e;
-                    return (0, a.jsx)("svg", {
+                    return (0, l.jsx)("svg", {
                         ...(0, n.default)(o),
                         width: t,
-                        height: l,
+                        height: a,
                         viewBox: "0 0 24 24",
-                        children: (0, a.jsx)("path", {
+                        children: (0, l.jsx)("path", {
                             className: r,
                             fill: s,
                             fillRule: "evenodd",

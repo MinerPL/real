@@ -1,11 +1,11 @@
             "use strict";
-            l.r(t), l.d(t, {
+            a.r(t), a.d(t, {
                 useCollectiblesShopTallerCardsExperiment: function() {
                     return r
                 }
             });
-            var a = l("862205");
-            let s = (0, a.createExperiment)({
+            var l = a("862205");
+            let s = (0, l.createExperiment)({
                     kind: "user",
                     id: "2023-11_collectibles_shop_taller_cards",
                     label: "Collectibles Shop Taller Cards",

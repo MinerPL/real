@@ -23,11 +23,12 @@
                             lineClamp: f,
                             color: E,
                             tabularNumbers: h = !1,
-                            ...p
+                            scaleFontToUserSetting: p = !1,
+                            ..._
                         } = e,
-                        _ = "",
-                        S = {};
-                    if (null != f && (1 === f ? _ = u.lineClamp1 : (_ = u.lineClamp2Plus, S = {
+                        S = "",
+                        m = {};
+                    if (null != f && (1 === f ? S = u.lineClamp1 : (S = u.lineClamp2Plus, m = {
                             lineClamp: f,
                             WebkitLineClamp: f
                         })), void 0 !== E) switch (E) {
@@ -38,22 +39,23 @@
                             t = "white";
                             break;
                         default:
-                            var m;
-                            t = null === (m = l.default.colors[d[E]]) || void 0 === m ? void 0 : m.css
+                            var T;
+                            t = null === (T = l.default.colors[d[E]]) || void 0 === T ? void 0 : T.css
                     }
-                    let T = {
+                    let g = {
                         color: t,
-                        ...S,
-                        ...p.style
+                        ...m,
+                        ..._.style
                     };
                     return (0, i.jsx)(r, {
                         className: s({
                             [u.defaultColor]: void 0 === E,
                             [u.selectable]: a,
-                            [u.tabularNumbers]: h
-                        }, _, c[n], o),
-                        ...p,
-                        style: Object.values(T).filter(Boolean).length > 0 ? T : void 0,
+                            [u.tabularNumbers]: h,
+                            [c.fontScaling]: p
+                        }, S, c[n], o),
+                        ..._,
+                        style: Object.values(g).filter(Boolean).length > 0 ? g : void 0,
                         "data-text-variant": n
                     })
                 }

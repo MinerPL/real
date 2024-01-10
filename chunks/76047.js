@@ -1,11 +1,11 @@
             "use strict";
-            n.r(t), n.d(t, {
+            r.r(t), r.d(t, {
                 ENTRY_DELAY: function() {
-                    return r
+                    return n
                 },
                 RESET: function() {
                     return i
                 }
             });
-            let r = 500,
+            let n = 500,
                 i = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
