@@ -11,7 +11,7 @@
                 r = n("697218");
             let u = {};
 
-            function d(e) {
+            function o(e) {
                 let {
                     threads: t,
                     firstMessages: n
@@ -21,10 +21,10 @@
                     loaded: !0,
                     firstMessage: null
                 };
-                for (let e of n) o(e.channel_id, e)
+                for (let e of n) d(e.channel_id, e)
             }
 
-            function o(e, t) {
+            function d(e, t) {
                 let n = null == t ? null : (0, l.createMessageRecord)(t);
                 u[e] = {
                     loaded: !0,
@@ -40,8 +40,8 @@
                     userId: a,
                     emoji: l,
                     optimistic: s,
-                    burst: d,
-                    reactionType: o
+                    burst: o,
+                    reactionType: d
                 } = e, c = u[n];
                 if (null == c || null == c.firstMessage || i !== c.firstMessage.id) return !1;
                 let _ = r.default.getCurrentUser(),
@@ -53,8 +53,8 @@
                     let {
                         colors: t
                     } = e;
-                    u[n].firstMessage = c.firstMessage.addReaction(l, f, t, d, o)
-                } else u[n].firstMessage = c.firstMessage.removeReaction(l, f, d, o)
+                    u[n].firstMessage = c.firstMessage.addReaction(l, f, t, o, d)
+                } else u[n].firstMessage = c.firstMessage.removeReaction(l, f, o, d)
             }
             class _ extends i.default.Store {
                 initialize() {
@@ -78,7 +78,7 @@
                 },
                 MESSAGE_CREATE: function(e) {
                     if (e.isPushNotification || e.message.id !== e.message.channel_id) return !1;
-                    o(e.message.channel_id, e.message)
+                    d(e.message.channel_id, e.message)
                 },
                 MESSAGE_UPDATE: function(e) {
                     if (e.message.id !== e.message.channel_id) return !1;
@@ -147,10 +147,10 @@
                     let {
                         threads: t
                     } = e;
-                    for (let e in t) o(e, t[e].first_message)
+                    for (let e in t) d(e, t[e].first_message)
                 },
-                LOAD_THREADS_SUCCESS: d,
-                LOAD_ARCHIVED_THREADS_SUCCESS: d,
+                LOAD_THREADS_SUCCESS: o,
+                LOAD_ARCHIVED_THREADS_SUCCESS: o,
                 LOAD_MESSAGES_SUCCESS: function(e) {
                     let {
                         channelId: t,

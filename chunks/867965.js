@@ -4,25 +4,25 @@
                     return g
                 },
                 trackForumSearched: function() {
-                    return A
+                    return m
                 },
                 trackForumSearchCleared: function() {
-                    return m
+                    return A
                 },
                 trackForumTagFilterClicked: function() {
                     return T
                 },
                 trackForumCreateNewPostClick: function() {
-                    return S
-                },
-                trackForumCreateNewPostKeybindUsed: function() {
                     return p
                 },
+                trackForumCreateNewPostKeybindUsed: function() {
+                    return S
+                },
                 maybeTrackForumNewPostDraftCreated: function() {
-                    return M
+                    return v
                 },
                 trackForumNewPostCleared: function() {
-                    return v
+                    return M
                 },
                 trackForumPostCreated: function() {
                     return C
@@ -82,8 +82,8 @@
                 s = n("42203"),
                 r = n("474643"),
                 u = n("599110"),
-                d = n("773336"),
-                o = n("349778"),
+                o = n("773336"),
+                d = n("349778"),
                 c = n("430475"),
                 _ = n("994810"),
                 f = n("688169"),
@@ -110,7 +110,7 @@
                 })
             }
 
-            function A(e) {
+            function m(e) {
                 let {
                     guildId: t,
                     channelId: n,
@@ -126,7 +126,7 @@
                 })
             }
 
-            function m(e) {
+            function A(e) {
                 let {
                     guildId: t,
                     channelId: n
@@ -162,7 +162,7 @@
                 })
             }
 
-            function S(e) {
+            function p(e) {
                 let {
                     guildId: t,
                     channelId: n
@@ -176,7 +176,7 @@
                 })
             }
 
-            function p(e) {
+            function S(e) {
                 let {
                     guildId: t,
                     channelId: n
@@ -190,31 +190,31 @@
                 })
             }
 
-            function M(e) {
+            function v(e) {
                 var t, n, i, l;
                 let {
                     guildId: u,
-                    channelId: d
-                } = e, o = s.default.getChannel(d);
-                if (null == o) return;
-                let c = r.default.getThreadSettings(d),
-                    _ = null === (t = o.template) || void 0 === t ? void 0 : t.trim(),
-                    f = r.default.getDraft(d, r.DraftType.FirstThreadMessage),
+                    channelId: o
+                } = e, d = s.default.getChannel(o);
+                if (null == d) return;
+                let c = r.default.getThreadSettings(o),
+                    _ = null === (t = d.template) || void 0 === t ? void 0 : t.trim(),
+                    f = r.default.getDraft(o, r.DraftType.FirstThreadMessage),
                     g = null == f || 0 === f.length || (null == f ? void 0 : f.trim()) === _,
-                    A = (null == c ? void 0 : c.appliedTags) == null || (null == c ? void 0 : null === (n = c.appliedTags) || void 0 === n ? void 0 : n.size) === 0,
-                    m = (null == c ? void 0 : c.name) == null || (null == c ? void 0 : null === (l = c.name) || void 0 === l ? void 0 : null === (i = l.trim()) || void 0 === i ? void 0 : i.length) === 0;
-                (!g || !A || !m) && a.default.trackWithMetadata(E.AnalyticEvents.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED, {
+                    m = (null == c ? void 0 : c.appliedTags) == null || (null == c ? void 0 : null === (n = c.appliedTags) || void 0 === n ? void 0 : n.size) === 0,
+                    A = (null == c ? void 0 : c.name) == null || (null == c ? void 0 : null === (l = c.name) || void 0 === l ? void 0 : null === (i = l.trim()) || void 0 === i ? void 0 : i.length) === 0;
+                (!g || !m || !A) && a.default.trackWithMetadata(E.AnalyticEvents.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED, {
                     ...(0, h.collectForumAnalyticsMetadata)({
-                        channelId: d
+                        channelId: o
                     }),
                     guild_id: u,
-                    channel_id: d,
-                    applied_tag_ids: (0, h.getForumPostDraftAppliedTagIds)(d),
-                    num_attachments: (0, h.getForumPostDraftNumAttachments)(d)
+                    channel_id: o,
+                    applied_tag_ids: (0, h.getForumPostDraftAppliedTagIds)(o),
+                    num_attachments: (0, h.getForumPostDraftNumAttachments)(o)
                 })
             }
 
-            function v(e) {
+            function M(e) {
                 let {
                     guildId: t,
                     channelId: n
@@ -272,7 +272,7 @@
                     numArchivedThreads: i,
                     hasMoreThreads: l,
                     filterTagIds: r,
-                    sortOrder: d
+                    sortOrder: o
                 } = e;
                 u.default.track(E.AnalyticEvents.FORUM_CHANNEL_MORE_POSTS_LOADED, {
                     ...(0, a.collectGuildAnalyticsMetadata)(t),
@@ -286,7 +286,7 @@
                     num_active_threads: (0, h.getNumActiveThreads)(t, n),
                     has_more_threads: l,
                     filter_tag_ids: r,
-                    sort_order: d
+                    sort_order: o
                 })
             }
 
@@ -331,7 +331,7 @@
                     guildId: t,
                     channelId: n,
                     forumLayout: l
-                } = e, s = (0, o.isForumActivityExperimentEnabled)(t) && l === i.ForumLayout.LIST ? f.INCREASED_ACTIVITY_LIST_FORUM_LAYOUT : l;
+                } = e, s = (0, d.isForumActivityExperimentEnabled)(t) && l === i.ForumLayout.LIST ? f.INCREASED_ACTIVITY_LIST_FORUM_LAYOUT : l;
                 a.default.trackWithMetadata(E.AnalyticEvents.FORUM_CHANNEL_LAYOUT_UPDATED, {
                     ...(0, h.collectForumAnalyticsMetadata)({
                         channelId: n
@@ -416,7 +416,7 @@
                     parent_id: e.parent_id,
                     parent_channel_type: e.parentChannelThreadType,
                     channel_view: "Split View",
-                    platform: (0, d.getPlatform)()
+                    platform: (0, o.getPlatform)()
                 })
             }
 

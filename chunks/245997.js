@@ -8,9 +8,9 @@
                 r = n("913144"),
                 s = n("320954"),
                 o = n("379881"),
-                u = n("271938"),
-                a = n("42203"),
-                l = n("923959"),
+                l = n("271938"),
+                u = n("42203"),
+                a = n("923959"),
                 d = n("305961"),
                 c = n("49111");
             let _ = null,
@@ -23,14 +23,14 @@
                     null: []
                 }
             }
-            let g = h();
+            let p = h();
 
-            function p(e, t) {
+            function g(e, t) {
                 e.index = t
             }
 
             function I(e) {
-                let t = l.default.getChannels(e),
+                let t = a.default.getChannels(e),
                     n = h(),
                     i = e => {
                         var t;
@@ -50,14 +50,14 @@
                         channel: t,
                         index: -1
                     }), n[t.id] = []
-                }), t[0, l.GUILD_SELECTABLE_CHANNELS_KEY].forEach(i), t[0, l.GUILD_VOCAL_CHANNELS_KEY].forEach(i), (0, s.default)(n._categories, n).forEach(p), f[e] = n, n
+                }), t[0, a.GUILD_SELECTABLE_CHANNELS_KEY].forEach(i), t[0, a.GUILD_VOCAL_CHANNELS_KEY].forEach(i), (0, s.default)(n._categories, n).forEach(g), f[e] = n, n
             }
 
             function A() {
                 f = {}, null != _ && I(_)
             }
 
-            function N(e) {
+            function m(e) {
                 let {
                     guild: {
                         id: t
@@ -66,7 +66,7 @@
                 f[t] = void 0, _ === t && I(t)
             }
 
-            function m(e) {
+            function N(e) {
                 let {
                     channel: {
                         guild_id: t
@@ -94,13 +94,13 @@
             }
             class T extends i.default.Store {
                 initialize() {
-                    this.waitFor(l.default, d.default, u.default, a.default, o.default), this.syncWith([o.default], S)
+                    this.waitFor(a.default, d.default, l.default, u.default, o.default), this.syncWith([o.default], S)
                 }
                 getCategories(e) {
                     return null != e ? function(e) {
                         let t = f[e];
                         return null != t ? t : I(e)
-                    }(e) : g
+                    }(e) : p
                 }
             }
             T.displayName = "GuildCategoryStore";
@@ -115,8 +115,8 @@
                 CONNECTION_OPEN: A,
                 OVERLAY_INITIALIZE: A,
                 CACHE_LOADED_LAZY: A,
-                GUILD_CREATE: N,
-                GUILD_UPDATE: N,
+                GUILD_CREATE: m,
+                GUILD_UPDATE: m,
                 GUILD_DELETE: function(e) {
                     let {
                         guild: {
@@ -125,8 +125,8 @@
                     } = e;
                     delete f[t]
                 },
-                CHANNEL_CREATE: m,
-                CHANNEL_DELETE: m,
+                CHANNEL_CREATE: N,
+                CHANNEL_DELETE: N,
                 CHANNEL_UPDATES: function(e) {
                     let {
                         channels: t
@@ -142,7 +142,7 @@
                         guildId: t,
                         user: n
                     } = e;
-                    if (u.default.getId() !== n.id) return !1;
+                    if (l.default.getId() !== n.id) return !1;
                     f[t] = void 0, t === _ && I(t)
                 },
                 CURRENT_USER_UPDATE: function() {
@@ -158,7 +158,7 @@
                     let {
                         channelId: t
                     } = e;
-                    return null == t && null != E ? R(a.default.getChannel(E), null) : R(a.default.getChannel(t), t)
+                    return null == t && null != E ? R(u.default.getChannel(E), null) : R(u.default.getChannel(t), t)
                 },
                 VOICE_STATE_UPDATES: function(e) {
                     let {
@@ -169,7 +169,7 @@
                             channelId: n,
                             sessionId: i
                         } = t;
-                        return u.default.getSessionId() !== i ? e : R(a.default.getChannel(n), n) || e
+                        return l.default.getSessionId() !== i ? e : R(u.default.getChannel(n), n) || e
                     }, !1)
                 }
             })

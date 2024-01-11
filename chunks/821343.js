@@ -2,7 +2,7 @@
             let i;
             n.r(t), n.d(t, {
                 PAGE_SIZE: function() {
-                    return A
+                    return m
                 },
                 default: function() {
                     return L
@@ -13,26 +13,26 @@
                 s = n("335710"),
                 r = n("249654"),
                 u = n("446674"),
-                d = n("913144"),
-                o = n("786742"),
+                o = n("913144"),
+                d = n("786742"),
                 c = n("867965"),
                 _ = n("233069"),
                 f = n("42203"),
                 h = n("660478"),
                 E = n("449008"),
                 g = n("755624");
-            let A = 25,
-                m = !1,
+            let m = 25,
+                A = !1,
                 T = !0,
-                S = !1,
                 p = !1,
-                M = null,
-                v = s.ThreadSortOrder.LATEST_ACTIVITY,
+                S = !1,
+                v = null,
+                M = s.ThreadSortOrder.LATEST_ACTIVITY,
                 C = [],
                 N = 0;
 
             function O() {
-                m = !1, T = !0, S = !1, p = !1, M = null, v = s.ThreadSortOrder.LATEST_ACTIVITY, i = new Set, N = 0, C = []
+                A = !1, T = !0, p = !1, S = !1, v = null, M = s.ThreadSortOrder.LATEST_ACTIVITY, i = new Set, N = 0, C = []
             }
 
             function R(e, t) {
@@ -40,19 +40,19 @@
             }
 
             function I() {
-                if (null == M) return !1;
-                let e = !S,
+                if (null == v) return !1;
+                let e = !p,
                     t = f.default.getChannel(C[C.length - 1]),
-                    n = null == t ? null : R(t, v);
-                C = l(f.default.getAllThreadsForParent(M)).filter(e => e.isArchivedThread()).filter(t => {
+                    n = null == t ? null : R(t, M);
+                C = l(f.default.getAllThreadsForParent(v)).filter(e => e.isArchivedThread()).filter(t => {
                     var a;
                     if (0 !== i.size && (null === (a = t.appliedTags) || void 0 === a ? void 0 : a.some(e => i.has(e))) !== !0) return !1;
                     if (e || null == n) return !0;
                     {
-                        let e = null == t ? null : R(t, v);
+                        let e = null == t ? null : R(t, M);
                         return null != e && r.default.compare(e, n) >= 0
                     }
-                }).sort((e, t) => r.default.compare(R(e, v), R(t, v))).map(e => e.id).reverse().value()
+                }).sort((e, t) => r.default.compare(R(e, M), R(t, M))).map(e => e.id).reverse().value()
             }
 
             function D(e) {
@@ -65,7 +65,7 @@
                     this.waitFor(f.default, g.default, h.default)
                 }
                 get canLoadMore() {
-                    return S && !m && !p
+                    return p && !A && !S
                 }
                 get nextOffset() {
                     return N
@@ -74,14 +74,14 @@
                     return T
                 }
                 isLoading(e, t, n) {
-                    return M === e && v === t && (0, E.areSetsEqual)(i, n) ? m : (O(), !1)
+                    return v === e && M === t && (0, E.areSetsEqual)(i, n) ? A : (O(), !1)
                 }
                 getThreads(e, t, n) {
-                    return M === e && v === t && (0, E.areSetsEqual)(i, n) ? C : b
+                    return v === e && M === t && (0, E.areSetsEqual)(i, n) ? C : b
                 }
             }
             y.displayName = "ArchivedThreadsStore";
-            var L = new y(d.default, {
+            var L = new y(o.default, {
                 CONNECTION_OPEN: O,
                 THREAD_DELETE: function(e) {
                     let {
@@ -93,20 +93,20 @@
                     let {
                         channel: t
                     } = e;
-                    return M === t.parent_id && !!(0, o.isForumPostPinned)(t.id) && void D(t.id)
+                    return v === t.parent_id && !!(0, d.isForumPostPinned)(t.id) && void D(t.id)
                 },
                 CHANNEL_DELETE: function(e) {
-                    if (e.channel.id !== M) return !1;
+                    if (e.channel.id !== v) return !1;
                     O()
                 },
                 LOAD_ARCHIVED_THREADS: function(e) {
-                    (e.channelId !== M || e.sortOrder !== v || !(0, E.areSetsEqual)(e.tagFilter, i)) && O(), M = e.channelId, v = e.sortOrder, i = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter), m = !0, T = !1
+                    (e.channelId !== v || e.sortOrder !== M || !(0, E.areSetsEqual)(e.tagFilter, i)) && O(), v = e.channelId, M = e.sortOrder, i = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter), A = !0, T = !1
                 },
                 LOAD_ARCHIVED_THREADS_SUCCESS: function(e) {
-                    if (e.channelId !== M || e.sortOrder !== v || !(0, E.areSetsEqual)(e.tagFilter, i)) return !1;
+                    if (e.channelId !== v || e.sortOrder !== M || !(0, E.areSetsEqual)(e.tagFilter, i)) return !1;
                     let t = e.threads.filter(e => _.ALL_CHANNEL_TYPES.has(e.type)).map(e => e.id);
                     C = C.concat(t);
-                    let n = f.default.getChannel(M);
+                    let n = f.default.getChannel(v);
                     null != n && n.isForumLikeChannel() && (0, c.trackForumMorePostsLoaded)({
                         guildId: n.guild_id,
                         channelId: n.id,
@@ -114,13 +114,13 @@
                         hasMoreThreads: e.hasMore,
                         filterTagIds: Array.from(e.tagFilter),
                         sortOrder: e.sortOrder
-                    }), I(), S = e.hasMore, N = e.offset + A, m = !1, T = !1
+                    }), I(), p = e.hasMore, N = e.offset + m, A = !1, T = !1
                 },
                 LOAD_ARCHIVED_THREADS_FAIL: function(e) {
-                    if (e.channelId !== M || e.sortOrder !== v || !(0, E.areSetsEqual)(e.tagFilter, i)) return !1;
-                    m = !1, p = !0, T = !1
+                    if (e.channelId !== v || e.sortOrder !== M || !(0, E.areSetsEqual)(e.tagFilter, i)) return !1;
+                    A = !1, S = !0, T = !1
                 },
                 RESORT_THREADS: function(e) {
-                    return (null == M || null == e.channelId || M === e.channelId) && I()
+                    return (null == v || null == e.channelId || v === e.channelId) && I()
                 }
             })

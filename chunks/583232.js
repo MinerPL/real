@@ -1,21 +1,23 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return o
                 }
             });
-            var a = n("845579"),
-                s = n("101125"),
-                i = n("599110"),
-                l = n("49111");
-            async function r(e, t, n) {
-                null == t && (t = s.default.getStatus()), await a.StatusSetting.updateSetting(e);
-                let r = {
+            var a = n("637929"),
+                s = n("845579"),
+                i = n("101125"),
+                l = n("599110"),
+                r = n("49111");
+            async function o(e, t, n) {
+                null == t && (t = i.default.getStatus()), await s.StatusSetting.updateSetting(e);
+                let o = {
                     next_status: e,
-                    prev_status: t
+                    prev_status: t,
+                    ...a.default.getGlobalStats()
                 };
-                null != n && (r = {
-                    ...r,
+                null != n && (o = {
+                    ...o,
                     ...n
-                }), i.default.track(l.AnalyticEvents.USER_STATUS_UPDATED, r)
+                }), l.default.track(r.AnalyticEvents.USER_STATUS_UPDATED, o)
             }

@@ -10,16 +10,16 @@
                 s = n("386451"),
                 r = n("662285"),
                 u = n("271938"),
-                d = n("982108"),
-                o = n("42203"),
+                o = n("982108"),
+                d = n("42203"),
                 c = n("341542"),
                 _ = n("26989"),
                 f = n("305961"),
                 h = n("945956"),
                 E = n("27618"),
                 g = n("18494"),
-                A = n("162771"),
-                m = n("49111");
+                m = n("162771"),
+                A = n("49111");
             let T = new s.default((e, t) => {
                 (null != f.default.getGuild(e) || c.default.isUnavailable(e)) && l.default.dispatch({
                     type: "GUILD_SUBSCRIPTIONS_FLUSH",
@@ -28,10 +28,10 @@
                 })
             });
 
-            function S(e, t) {
+            function p(e, t) {
                 T.forEach(n => {
                     var a;
-                    n !== A.default.getGuildId() && n !== h.default.getGuildId() && n !== (null === (a = o.default.getChannel(g.default.getChannelId())) || void 0 === a ? void 0 : a.getGuildId()) && (null == i || i.guildId !== n) && (T.clearWithoutFlushing(n, e), t && l.default.dispatch({
+                    n !== m.default.getGuildId() && n !== h.default.getGuildId() && n !== (null === (a = d.default.getChannel(g.default.getChannelId())) || void 0 === a ? void 0 : a.getGuildId()) && (null == i || i.guildId !== n) && (T.clearWithoutFlushing(n, e), t && l.default.dispatch({
                         type: "GUILD_SUBSCRIPTIONS_FLUSH",
                         guildId: n,
                         subscriptions: T.get(n)
@@ -39,24 +39,24 @@
                 })
             }
 
-            function p(e, t) {
-                return T.subscribeToGuild(e), null != t && d.default.getSection(t) === m.ChannelSections.MEMBERS && M(e, t, s.DEFAULT_RANGES)
+            function S(e, t) {
+                return T.subscribeToGuild(e), null != t && o.default.getSection(t) === A.ChannelSections.MEMBERS && v(e, t, s.DEFAULT_RANGES)
             }
 
-            function M(e, t, n) {
-                let i = o.default.getChannel(t);
+            function v(e, t, n) {
+                let i = d.default.getChannel(t);
                 if (null == i) return !1;
                 let a = i.getGuildId();
-                return (a !== e && e === m.FAVORITES && T.subscribeToGuild(a), null != i && i.isThread()) ? i.type === m.ChannelTypes.ANNOUNCEMENT_THREAD ? T.subscribeChannel(a, i.parent_id, n) : !!i.isActiveThread() && T.subscribeThreadMemberList(a, t, g.default.getChannelId()) : T.subscribeChannel(a, t, n)
+                return (a !== e && e === A.FAVORITES && T.subscribeToGuild(a), null != i && i.isThread()) ? i.type === A.ChannelTypes.ANNOUNCEMENT_THREAD ? T.subscribeChannel(a, i.parent_id, n) : !!i.isActiveThread() && T.subscribeThreadMemberList(a, t, g.default.getChannelId()) : T.subscribeChannel(a, t, n)
             }
 
-            function v(e) {
+            function M(e) {
                 let {
                     type: t
                 } = e;
-                "CONNECTION_OPEN" === t && S(!0, !1);
-                let n = A.default.getGuildId();
-                null != n && p(n, g.default.getChannelId(n)), T.forEach(e => {
+                "CONNECTION_OPEN" === t && p(!0, !1);
+                let n = m.default.getGuildId();
+                null != n && S(n, g.default.getChannelId(n)), T.forEach(e => {
                     null == f.default.getGuild(e) ? T.clearWithoutFlushing(e, !0) : l.default.dispatch({
                         type: "GUILD_SUBSCRIPTIONS_FLUSH",
                         guildId: e,
@@ -70,11 +70,11 @@
                     guildId: t,
                     channelId: n
                 } = e, i = c.default.isUnavailable(t);
-                return !i && p(t, n)
+                return !i && S(t, n)
             }
 
             function N() {
-                return p(A.default.getGuildId(), g.default.getChannelId())
+                return S(m.default.getGuildId(), g.default.getChannelId())
             }
 
             function O() {
@@ -97,7 +97,7 @@
             }
             class R extends a.default.Store {
                 initialize() {
-                    this.waitFor(o.default, f.default, A.default, g.default, h.default, u.default, d.default), this.syncWith([r.default], O), this.syncWith([d.default], N)
+                    this.waitFor(d.default, f.default, m.default, g.default, h.default, u.default, o.default), this.syncWith([r.default], O), this.syncWith([o.default], N)
                 }
                 getSubscribedThreadIds() {
                     return T.getSubscribedThreadIds()
@@ -112,17 +112,17 @@
             }
             R.displayName = "GuildSubscriptionsStore";
             var I = new R(l.default, {
-                CONNECTION_OPEN: v,
-                CONNECTION_RESUMED: v,
+                CONNECTION_OPEN: M,
+                CONNECTION_RESUMED: M,
                 CONNECTION_CLOSED: function() {
-                    S(!1, !1)
+                    p(!1, !1)
                 },
                 IDLE: function(e) {
                     let {
                         idle: t
                     } = e;
                     if (!t) return !1;
-                    S(!1, !0)
+                    p(!1, !0)
                 },
                 LOGOUT: function() {
                     T.reset()
@@ -133,7 +133,7 @@
                     let {
                         guild: t
                     } = e;
-                    t.id === A.default.getGuildId() && N()
+                    t.id === m.default.getGuildId() && N()
                 },
                 GUILD_DELETE: function(e) {
                     let {
@@ -165,7 +165,7 @@
                         channelId: n,
                         ranges: i
                     } = e;
-                    return M(t, n, i)
+                    return v(t, n, i)
                 },
                 GUILD_SUBSCRIPTIONS: function(e) {
                     let {
@@ -178,7 +178,7 @@
                         guildId: t,
                         channelId: n
                     } = e;
-                    return p(t, n)
+                    return S(t, n)
                 },
                 THREAD_UPDATE: function(e) {
                     let {

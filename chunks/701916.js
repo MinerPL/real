@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 collectThreadMetadata: function() {
-                    return o
+                    return d
                 }
             });
             var i = n("393414"),
@@ -10,10 +10,10 @@
                 s = n("233069"),
                 r = n("957255"),
                 u = n("299039"),
-                d = n("49111");
+                o = n("49111");
 
-            function o(e) {
-                var t, n, o, c, _;
+            function d(e) {
+                var t, n, d, c, _;
                 let f = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 if (null == e || !s.THREAD_CHANNEL_TYPES.has(e.type)) return null;
                 let h = f ? (0, i.getLastRouteChangeSource)() : void 0;
@@ -23,9 +23,9 @@
                     thread_approximate_message_count: l.default.getCount(e.id),
                     thread_archived: (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0,
                     thread_locked: null !== (c = null === (n = e.threadMetadata) || void 0 === n ? void 0 : n.locked) && void 0 !== c && c,
-                    thread_auto_archive_duration_minutes: null !== (_ = null === (o = e.threadMetadata) || void 0 === o ? void 0 : o.autoArchiveDuration) && void 0 !== _ ? _ : 0,
+                    thread_auto_archive_duration_minutes: null !== (_ = null === (d = e.threadMetadata) || void 0 === d ? void 0 : d.autoArchiveDuration) && void 0 !== _ ? _ : 0,
                     thread_approximate_creation_date: u.default.extractTimestamp(e.id),
-                    can_send_message: r.default.can(d.Permissions.SEND_MESSAGES, e),
+                    can_send_message: r.default.can(o.Permissions.SEND_MESSAGES, e),
                     parent_channel_type: e.parentChannelThreadType
                 }
             }

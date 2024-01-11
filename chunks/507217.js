@@ -13,25 +13,25 @@
                     return g
                 },
                 updateApplicationGuildCommandPermissions: function() {
-                    return A
+                    return m
                 },
                 querySearchManager: function() {
-                    return m
+                    return A
                 },
                 performAutocomplete: function() {
                     return T
                 },
                 fetchCommand: function() {
-                    return S
-                },
-                fetchCommands: function() {
                     return p
                 },
+                fetchCommands: function() {
+                    return S
+                },
                 fetchCommandsForApplication: function() {
-                    return M
+                    return v
                 },
                 updateRegistry: function() {
-                    return v
+                    return M
                 }
             }), n("222007");
             var i = n("627445"),
@@ -40,8 +40,8 @@
                 s = n("913144"),
                 r = n("798609"),
                 u = n("271938"),
-                d = n("299039"),
-                o = n("246598"),
+                o = n("299039"),
+                d = n("246598"),
                 c = n("524768"),
                 _ = n("49111");
 
@@ -53,7 +53,7 @@
                     location: l,
                     initialValues: r,
                     triggerSection: u,
-                    queryLength: d
+                    queryLength: o
                 } = e;
                 null != n && a(n.inputType !== c.ApplicationCommandInputType.PLACEHOLDER, "command should not be placeholder"), s.default.dispatch({
                     type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND",
@@ -63,7 +63,7 @@
                     initialValues: r,
                     location: l,
                     triggerSection: u,
-                    queryLength: d
+                    queryLength: o
                 })
             }
 
@@ -93,7 +93,7 @@
                 E(e, n)
             }
 
-            function A(e, t, n, i) {
+            function m(e, t, n, i) {
                 return l.default.put({
                     body: {
                         permissions: i
@@ -101,7 +101,7 @@
                     url: _.Endpoints.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n)
                 })
             }
-            let m = (e, t, n, i, a) => {
+            let A = (e, t, n, i, a) => {
                 s.default.dispatch({
                     type: "APPLICATION_COMMAND_SEARCH_STORE_QUERY",
                     context: e,
@@ -118,14 +118,14 @@
                 let {
                     query: c,
                     name: f
-                } = t.autocomplete, h = d.default.fromTimestamp(Date.now());
+                } = t.autocomplete, h = o.default.fromTimestamp(Date.now());
                 s.default.dispatch({
                     type: "APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST",
                     nonce: h,
                     channelId: t.channel.id,
                     query: c,
                     name: f
-                }), null == o.default.getAutocompleteChoices(t.channel.id, f, c) && l.default.post({
+                }), null == d.default.getAutocompleteChoices(t.channel.id, f, c) && l.default.post({
                     url: _.Endpoints.INTERACTIONS,
                     body: {
                         type: r.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE,
@@ -145,7 +145,7 @@
                 })
             }
 
-            function S(e, t, n) {
+            function p(e, t, n) {
                 s.default.dispatch({
                     type: "APPLICATION_COMMAND_FETCH",
                     channelId: t,
@@ -154,7 +154,7 @@
                 })
             }
 
-            function p(e, t, n) {
+            function S(e, t, n) {
                 s.default.dispatch({
                     type: "APPLICATION_COMMANDS_FETCH",
                     channelId: t,
@@ -163,7 +163,7 @@
                 })
             }
 
-            function M(e) {
+            function v(e) {
                 let {
                     guildId: t,
                     channelId: n,
@@ -177,7 +177,7 @@
                 })
             }
 
-            function v(e, t, n) {
+            function M(e, t, n) {
                 s.default.dispatch({
                     type: "APPLICATION_COMMAND_REGISTRY_UPDATE",
                     applications: t,

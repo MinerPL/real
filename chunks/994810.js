@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return d
                 }
             });
             var i = n("446674"),
@@ -23,7 +23,7 @@
                 };
                 return s[e] = n, n
             }
-            class d extends i.default.Store {
+            class o extends i.default.Store {
                 getSearchQuery(e) {
                     let t = s[e];
                     return null == t ? void 0 : t.query
@@ -42,8 +42,8 @@
                     return (null == t ? void 0 : t.results) != null && t.results.length > 0
                 }
             }
-            d.displayName = "ForumSearchStore";
-            var o = new d(a.default, {
+            o.displayName = "ForumSearchStore";
+            var d = new o(a.default, {
                 CONNECTION_OPEN: function() {
                     s = {}
                 },

@@ -12,11 +12,11 @@
                 s = n("862337"),
                 r = n("696605"),
                 u = n("623053"),
-                d = n("6850"),
-                o = n("49111");
+                o = n("6850"),
+                d = n("49111");
 
             function c(e) {
-                return null != e && "null" !== e && e !== o.ME && "undefined" !== e && e !== o.FAVORITES
+                return null != e && "null" !== e && e !== d.ME && "undefined" !== e && e !== d.FAVORITES
             }
             i = class {
                 _enqueue(e, t) {
@@ -87,7 +87,7 @@
                         members: t
                     })), this._channels = new r.default((e, t) => this._enqueue(e, {
                         channels: t
-                    })), this._threadMemberLists = new d.default((e, t) => this._enqueue(e, {
+                    })), this._threadMemberLists = new o.default((e, t) => this._enqueue(e, {
                         thread_member_lists: t
                     })), this._typing = new Set, this._threads = new Set, this._activities = new Set, this._subscribed = new Set, this._pending = {}, this._flush = new s.DelayedCall(0, () => this.flush()), this._onChange = e
                 }

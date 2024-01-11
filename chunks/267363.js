@@ -16,10 +16,10 @@
                     return h
                 },
                 disableAutomaticAck: function() {
-                    return g
+                    return p
                 },
                 ackGuildFeature: function() {
-                    return p
+                    return g
                 },
                 ackUserFeature: function() {
                     return I
@@ -29,9 +29,9 @@
                 r = n("913144"),
                 s = n("401690"),
                 o = n("233069"),
-                u = n("42203"),
-                a = n("245997"),
-                l = n("697218"),
+                l = n("42203"),
+                u = n("245997"),
+                a = n("697218"),
                 d = n("49111");
 
             function c(e) {
@@ -54,11 +54,11 @@
                 e.isCategory() ? ! function(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                        i = u.default.getChannel(e);
+                        i = l.default.getChannel(e);
                     if (null == i || null == i.guild_id) return;
-                    let r = a.default.getCategories(i.guild_id);
+                    let r = u.default.getCategories(i.guild_id);
                     if (null == r[e]) return;
-                    let l = r[e].filter(e => {
+                    let a = r[e].filter(e => {
                             let {
                                 channel: t
                             } = e;
@@ -69,8 +69,8 @@
                             } = e;
                             return t.id
                         }),
-                        d = [...l];
-                    for (let e of (l.forEach(e => {
+                        d = [...a];
+                    for (let e of (a.forEach(e => {
                             let t = s.default.getActiveJoinedThreadsForParent(i.guild_id, e);
                             for (let e in t) d.push(e)
                         }), d)) c(e, t, n)
@@ -101,7 +101,7 @@
                 })
             }
 
-            function g(e, t) {
+            function p(e, t) {
                 r.default.dispatch({
                     type: "DISABLE_AUTOMATIC_ACK",
                     channelId: e,
@@ -109,7 +109,7 @@
                 })
             }
 
-            function p(e, t, n) {
+            function g(e, t, n) {
                 r.default.dispatch({
                     type: "GUILD_FEATURE_ACK",
                     id: e,
@@ -121,7 +121,7 @@
 
             function I(e, t) {
                 var n;
-                let i = null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
+                let i = null === (n = a.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
                 null != i && r.default.dispatch({
                     type: "USER_NON_CHANNEL_ACK",
                     ackType: e,

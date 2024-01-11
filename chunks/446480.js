@@ -24,8 +24,8 @@
                             let n = a.default.getChannel(e),
                                 r = null !== (t = this.layout) && void 0 !== t ? t : null == n ? void 0 : n.getDefaultLayout(),
                                 u = (0, l.isForumActivityExperimentEnabled)(null == n ? void 0 : n.guild_id),
-                                d = u && r === i.ForumLayout.LIST ? s.INCREASED_ACTIVITY_LIST_FORUM_LAYOUT : r;
-                            return d
+                                o = u && r === i.ForumLayout.LIST ? s.INCREASED_ACTIVITY_LIST_FORUM_LAYOUT : r;
+                            return o
                         }
                     }
                 }

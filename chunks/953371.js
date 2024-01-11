@@ -8,13 +8,13 @@
                     return u
                 },
                 MAX_FORUM_TEMPLATE_LENGTH: function() {
-                    return d
+                    return o
                 },
                 ForumOnboardingCTAs: function() {
                     return i
                 },
                 COMMUNITY_PORTAL_FORUM_PAGE: function() {
-                    return o
+                    return d
                 },
                 ForumTimestampFormats: function() {
                     return a
@@ -22,7 +22,7 @@
             });
             let r = 20,
                 u = 5,
-                d = 256;
+                o = 256;
             (l = i || (i = {})).PERMISSIONS = "Permissions", l.GUIDELINES = "Guidelines", l.TAGS = "Tags", l.DEFAULT_REACTION = "Default Reaction", l.CREATE_POST = "Create Post";
-            let o = "https://discord.com/community/creating-value-with-conversation";
+            let d = "https://discord.com/community/creating-value-with-conversation";
             (s = a || (a = {}))[s.DURATION_AGO = 0] = "DURATION_AGO", s[s.POSTED_DURATION_AGO = 1] = "POSTED_DURATION_AGO"

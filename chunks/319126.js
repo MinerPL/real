@@ -10,8 +10,8 @@
             let s = 3600,
                 r = 24 * s,
                 u = 30 * r,
-                d = 12 * u,
-                o = () => ({
+                o = 12 * u,
+                d = () => ({
                     seconds: l.default.Messages.THREAD_BROWSER_TIMESTAMP_SECONDS,
                     minutes: l.default.Messages.THREAD_BROWSER_TIMESTAMP_MINUTES,
                     hours: l.default.Messages.THREAD_BROWSER_TIMESTAMP_HOURS,
@@ -28,7 +28,7 @@
                 let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                     i = a().diff(a(e), "s"),
                     l = null != t ? t() : void 0,
-                    c = o(),
+                    c = d(),
                     f = (e, t) => {
                         let i = _(e, l, n ? c : void 0);
                         return null == i ? null : "string" == typeof i ? i : i.format({
@@ -51,12 +51,12 @@
                     let e = f("days", Math.floor(i / r));
                     if (null != e) return e
                 }
-                if (i < d) {
+                if (i < o) {
                     let e = f("months", Math.floor(i / u));
                     if (null != e) return e
                 }
-                if (i >= d && (null == l ? void 0 : l.years) != null) {
-                    let e = f("years", Math.floor(i / d));
+                if (i >= o && (null == l ? void 0 : l.years) != null) {
+                    let e = f("years", Math.floor(i / o));
                     if (null != e) return e
                 }
                 return a(e).format("LL")

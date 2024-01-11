@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 getForumPostReadStates: function() {
-                    return o
+                    return d
                 },
                 getForumPostReadStatesById: function() {
                     return c
@@ -22,9 +22,9 @@
                 s = n("660478"),
                 r = n("953371"),
                 u = n("724210"),
-                d = n("782340");
+                o = n("782340");
 
-            function o(e, t) {
+            function d(e, t) {
                 let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [s.default];
                 return {
                     isNew: !e.isArchivedThread() && n.isNewForumThread(e.id, e.parent_id, t),
@@ -36,13 +36,13 @@
                 let [t, n, i] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.default, l.default, s.default], r = t.getChannel(e);
                 if (null == r) return null;
                 let u = n.getGuild(r.guild_id);
-                return null == u ? null : o(r, u, [i])
+                return null == u ? null : d(r, u, [i])
             }
             let _ = () => ({
-                minutes: d.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_MINUTES,
-                hours: d.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_HOURS,
-                days: d.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_DAYS,
-                month: d.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_MORE_THAN_MONTH
+                minutes: o.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_MINUTES,
+                hours: o.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_HOURS,
+                days: o.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_DAYS,
+                month: o.default.Messages.FORM_POST_CREATED_AGO_TIMESTAMP_MORE_THAN_MONTH
             });
 
             function f(e, t) {
