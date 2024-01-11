@@ -23,14 +23,14 @@
                 N = n("162771"),
                 I = n("282109"),
                 m = n("697218"),
-                g = n("49111");
-            let A = "recentMentionFilterSettings",
+                A = n("49111");
+            let g = "recentMentionFilterSettings",
                 C = [],
                 R = {},
                 M = !1,
                 O = !0,
-                L = i.default.get(A, {
-                    guildFilter: g.RecentMentionsFilters.ALL_SERVERS,
+                L = i.default.get(g, {
+                    guildFilter: A.RecentMentionsFilters.ALL_SERVERS,
                     everyoneFilter: !0,
                     roleFilter: !0
                 }),
@@ -51,7 +51,7 @@
                 if ((0, c.default)(e)) return null;
                 null == n && (n = e.channel_id);
                 let l = _.default.getChannel(n);
-                if (null == l || l.type === g.ChannelTypes.DM || L.guildFilter === g.RecentMentionsFilters.THIS_SERVER && l.getGuildId() !== N.default.getGuildId()) return null;
+                if (null == l || l.type === A.ChannelTypes.DM || L.guildFilter === A.RecentMentionsFilters.THIS_SERVER && l.getGuildId() !== N.default.getGuildId()) return null;
                 let a = null === (t = e.author) || void 0 === t ? void 0 : t.id,
                     s = h.default.getId();
                 if (null != a && p.default.isBlocked(a) || a === s) return null;
@@ -71,7 +71,7 @@
                 }) && (x = !1), e) : null
             }
 
-            function b(e) {
+            function F(e) {
                 if (null == R[e]) return !1;
                 delete R[e], C = a.filter(C, t => {
                     let {
@@ -81,20 +81,20 @@
                 })
             }
 
-            function F(e) {
+            function b(e) {
                 let {
                     id: t
                 } = e;
-                return b(t)
+                return F(t)
             }
 
             function j(e) {
                 let t = {
                     ...L
                 };
-                L = a.defaults(a.pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), L), i.default.set(A, L);
+                L = a.defaults(a.pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), L), i.default.set(g, L);
                 let n = (e, n) => t[e] !== L[e] && L[e] === n,
-                    l = n("guildFilter", g.RecentMentionsFilters.THIS_SERVER) || n("everyoneFilter", !1) || n("roleFilter", !1);
+                    l = n("guildFilter", A.RecentMentionsFilters.THIS_SERVER) || n("everyoneFilter", !1) || n("roleFilter", !1);
                 R = {};
                 let s = [];
                 l && C.forEach(e => {
@@ -167,8 +167,8 @@
                     let {
                         guildId: t
                     } = e;
-                    M = !0, null == t && L.guildFilter === g.RecentMentionsFilters.THIS_SERVER && j({
-                        guildFilter: g.RecentMentionsFilters.ALL_SERVERS
+                    M = !0, null == t && L.guildFilter === A.RecentMentionsFilters.THIS_SERVER && j({
+                        guildFilter: A.RecentMentionsFilters.ALL_SERVERS
                     })
                 },
                 LOAD_RECENT_MENTIONS_SUCCESS: function(e) {
@@ -197,7 +197,7 @@
                     n > (C = C.slice(0, t)).length && (O = !0)
                 },
                 CHANNEL_SELECT: function() {
-                    if (L.guildFilter !== g.RecentMentionsFilters.THIS_SERVER) return !1;
+                    if (L.guildFilter !== A.RecentMentionsFilters.THIS_SERVER) return !1;
                     v = !1
                 },
                 CONNECTION_OPEN: G,
@@ -238,13 +238,13 @@
                     let l = C[n];
                     null != l && (C[n] = (0, u.updateMessageRecord)(l, e.message))
                 },
-                MESSAGE_DELETE: F,
-                RECENT_MENTION_DELETE: F,
+                MESSAGE_DELETE: b,
+                RECENT_MENTION_DELETE: b,
                 MESSAGE_DELETE_BULK: function(e) {
                     let {
                         ids: t
                     } = e;
-                    a.forEach(t, b)
+                    a.forEach(t, F)
                 },
                 USER_SETTINGS_PROTO_UPDATE: k,
                 I18N_LOAD_SUCCESS: k,
