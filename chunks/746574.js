@@ -1,69 +1,69 @@
             "use strict";
             n.r(t), n.d(t, {
                 moveItemFromTo: function() {
-                    return o
+                    return i
                 },
                 default: function() {
-                    return i
+                    return s
                 }
             }), n("424973"), n("222007");
-            var r = n("917351"),
-                l = n.n(r),
+            var l = n("917351"),
+                r = n.n(l),
                 a = n("605250");
-            let s = new a.default("DragAndDropUtils");
+            let o = new a.default("DragAndDropUtils");
 
             function u(e) {
                 let {
                     oldOrdering: t,
                     newOrdering: n,
-                    idGetter: r,
-                    existingPositionGetter: l,
+                    idGetter: l,
+                    existingPositionGetter: r,
                     ascending: a = !0
                 } = e, u = n.length;
-                if (t.length !== u) return s.warn("Arrays are not of the same length!", t, n), [];
-                let o = t.map(r).sort().join(":"),
-                    i = n.map(r).sort().join(":");
-                if (o !== i) return s.warn("Object IDs in the old ordering and the new ordering are not the same.", o, i), [];
+                if (t.length !== u) return o.warn("Arrays are not of the same length!", t, n), [];
+                let i = t.map(l).sort().join(":"),
+                    s = n.map(l).sort().join(":");
+                if (i !== s) return o.warn("Object IDs in the old ordering and the new ordering are not the same.", i, s), [];
                 let c = {};
-                for (let e = 0; e < u; e++) c[r(t[e])] = l(t[e]);
-                let d = [];
+                for (let e = 0; e < u; e++) c[l(t[e])] = r(t[e]);
+                let E = [];
                 for (let e = 0; e < u; e++) {
-                    let t = r(n[e]),
-                        s = c[t],
-                        o = a ? e : u - 1 - e;
-                    (s !== o || l(n[e]) !== o) && d.push({
+                    let t = l(n[e]),
+                        o = c[t],
+                        i = a ? e : u - 1 - e;
+                    (o !== i || r(n[e]) !== i) && E.push({
                         id: t,
-                        position: o
+                        position: i
                     })
                 }
-                return !a && d.reverse(), d
+                return !a && E.reverse(), E
             }
 
-            function o(e, t, n) {
-                let r = e[t],
-                    l = [...e];
-                return l.splice(t, 1), l.splice(n, 0, r), l
+            function i(e, t, n) {
+                let l = e[t],
+                    r = [...e];
+                return r.splice(t, 1), r.splice(n, 0, l), r
             }
-            var i = {
-                moveItemFromTo: o,
+            var s = {
+                moveItemFromTo: i,
                 calculatePositionDeltas: u,
                 getPositionUpdates: function(e) {
                     let {
                         objectArray: t,
                         fromPosition: n,
-                        toPosition: r,
+                        toPosition: l,
                         idGetter: a,
-                        existingPositionGetter: s,
-                        ascending: i = !0
+                        existingPositionGetter: o,
+                        ascending: s = !0
                     } = e;
-                    !Array.isArray(t) && (t = l.values(t));
-                    let c = o(t, n, r);
+                    !Array.isArray(t) && (t = r.values(t));
+                    let c = i(t, n, l);
                     return u({
                         oldOrdering: t,
                         newOrdering: c,
                         idGetter: a,
-                        existingPositionGetter: s,
-                        ascending: i
+                        existingPositionGetter: o,
+                        ascending: s
                     })
                 }
             }
