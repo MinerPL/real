@@ -28566,6 +28566,11 @@ html .progress__4ef76 {
     cursor: pointer
 }
 
+.checkmarkCircle__88bcc {
+    color: var(--custom-poll-style-label);
+    filter: var(--shadow-low-filter)
+}
+
 .answersContainer_fd091b {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

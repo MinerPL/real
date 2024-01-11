@@ -31,10 +31,10 @@
                     return m
                 },
                 getDropByQuestId: function() {
-                    return A
+                    return g
                 },
                 getDropsPartnerGameNameByQuestId: function() {
-                    return g
+                    return A
                 },
                 getPlatformLabel: function() {
                     return C
@@ -135,12 +135,12 @@
                 return t
             }
 
-            function A(e) {
+            function g(e) {
                 let t = Object.values(u.DROPS_GAMES).find(t => t.dropsQuestId === e);
                 return t
             }
 
-            function g(e) {
+            function A(e) {
                 let t = Object.keys(u.DROPS_GAMES).find(t => u.DROPS_GAMES[t].dropsQuestId === e);
                 return t
             }

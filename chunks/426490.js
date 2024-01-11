@@ -316,9 +316,9 @@
                 return (0, l.jsx)(T.default, {
                     width: t,
                     height: t,
-                    className: a,
+                    className: o(a, x.checkmarkCircle),
                     color: n,
-                    backgroundColor: (0, m.getColor)(M.Color.WHITE_500)
+                    backgroundColor: "currentColor"
                 })
             }
 
