@@ -53,14 +53,14 @@
                     editingMessage: c.default.getEditingMessage(o),
                     editingTextValue: c.default.getEditingTextValue(o),
                     editingRichValue: c.default.getEditingRichValue(o)
-                }), [o]), x = (0, l.useStateFromStores)([d.default], () => d.default.getId()), R = a.useCallback((e, n, s) => {
+                }), [o]), R = (0, l.useStateFromStores)([d.default], () => d.default.getId()), x = a.useCallback((e, n, s) => {
                     let {
                         content: a
-                    } = s, l = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != N && null != N.author ? N.author.id : null, u = I && (o === x || l);
+                    } = s, l = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != N && null != N.author ? N.author.id : null, u = I && (o === R || l);
                     return u && null != N && (0, E.hasFlag)(N.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, a) : i.default.editMessage(e, n, {
                         content: a
                     }), Promise.resolve()
-                }, [N, I, x, t]), y = a.useCallback(e => (0, a.createElement)(M, {
+                }, [N, I, R, t]), y = a.useCallback(e => (0, a.createElement)(M, {
                     ...e,
                     className: _.channelTextArea,
                     key: u
@@ -74,7 +74,7 @@
                     onCancel: i.default.endEditMessage,
                     onChange: i.default.updateEditMessage,
                     onConfirmDelete: r.default.confirmDelete,
-                    saveMessage: R,
+                    saveMessage: x,
                     validateEdit: A,
                     children: y
                 }) : null

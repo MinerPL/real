@@ -29,8 +29,8 @@
                 N = n("697218"),
                 L = n("505684"),
                 v = n("378765"),
-                x = n("70845"),
-                R = n("51714"),
+                R = n("70845"),
+                x = n("51714"),
                 y = n("88243"),
                 D = n("31511"),
                 O = n("120379"),
@@ -55,8 +55,8 @@
                     editingMessageId: I,
                     fontSize: N,
                     keyboardModeEnabled: L,
-                    filterAfterTimestamp: x,
-                    showingQuarantineBanner: R
+                    filterAfterTimestamp: R,
+                    showingQuarantineBanner: x
                 } = e, [U, H] = a.useState(!1), k = a.useMemo(() => S ? (0, y.generateMessageSpecs)({
                     compact: !0,
                     messageGroups: 30,
@@ -78,7 +78,7 @@
                     hasUnreads: M,
                     focusId: I,
                     placeholderHeight: k.totalHeight,
-                    canLoadMore: null == x,
+                    canLoadMore: null == R,
                     handleScrollToBottom: a.useCallback(() => H(!0), [H]),
                     handleScrollFromBottom: a.useCallback(() => H(!1), [H])
                 }), B = (0, D.default)({
@@ -108,8 +108,8 @@
                         loadMore: G.loadMore,
                         scrollManager: G,
                         specs: k,
-                        filterAfterTimestamp: null != x ? x : w,
-                        showingQuarantineBanner: R,
+                        filterAfterTimestamp: null != R ? R : w,
+                        showingQuarantineBanner: x,
                         isAtBottom: U,
                         jumpToPresent: () => {
                             if (m.hasPresent()) {
@@ -186,7 +186,7 @@
                                     children: P.default.Messages.CHANNEL_MESSAGES_A11Y_DESCRIPTION
                                 }), V, (0, s.jsx)("div", {
                                     className: i({
-                                        [F.scrollerSpacer]: !R,
+                                        [F.scrollerSpacer]: !x,
                                         [F.empty]: 0 === m.length && !m.loadingMore,
                                         [F.emptyForum]: 1 === m.length && !m.loadingMore && C.isForumPost() && (null === (t = m.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(C))
                                     })
@@ -281,7 +281,7 @@
                             return u && d && null !== (t = m.default.summaries(e.id)) && void 0 !== t ? t : []
                         }, [u, e.id, d]),
                         p = (0, o.useStateFromStores)([m.default], () => u ? m.default.selectedSummary(e.id) : null, [u, e.id]),
-                        E = a.useMemo(() => (0, R.default)({
+                        E = a.useMemo(() => (0, x.default)({
                             channel: e,
                             messages: s,
                             oldestUnreadMessageId: l,
@@ -301,7 +301,7 @@
                     }
                 }(t);
                 return (0, s.jsx)(L.ObscuredDisplayContext.Provider, {
-                    value: (0, x.default)(O, u),
+                    value: (0, R.default)(O, u),
                     children: (0, s.jsx)(U, {
                         ...r,
                         messageGroupSpacing: v,

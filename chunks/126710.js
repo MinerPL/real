@@ -7,15 +7,15 @@
             var i = n("37983");
             n("884691");
             var l = n("77078"),
-                r = n("450911"),
-                a = n("42203"),
+                a = n("450911"),
+                r = n("42203"),
                 s = n("782340");
 
             function o(e, t) {
-                let n = a.default.getChannel(e);
+                let n = r.default.getChannel(e);
                 return null == n || n.isMultiUserDM() ? null : (0, i.jsx)(l.MenuItem, {
                     id: "close-dm",
                     label: s.default.Messages.CLOSE_DM,
-                    action: () => r.default.closePrivateChannel(e, t)
+                    action: () => a.default.closePrivateChannel(e, t)
                 })
             }

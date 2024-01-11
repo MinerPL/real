@@ -23,7 +23,7 @@
                 } = i.useContext(s.AccessibilityPreferencesContext), m = (0, d.useIsActiveChannelOrUnarchivableThread)(t), g = (0, l.useStateFromStores)([o.default], () => o.default.can(E.Permissions.MANAGE_MESSAGES, t) && m, [t, m]), I = e.reactions.reduce((e, t) => {
                     var n;
                     return (null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) != null || null != e.find(e => null != e.id && e.id === t.emoji.id || e.name === t.emoji.name) ? e : [...e, t.emoji]
-                }, []), S = (n, a) => {
+                }, []), p = (n, a) => {
                     n.shiftKey ? (0, r.removeEmojiReactions)(t.id, e.id, a) : u.default.show({
                         title: M.default.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_TITLE,
                         body: M.default.Messages.REMOVE_EMOJI_REACTIONS_CONFIRM_BODY,
@@ -43,7 +43,7 @@
                         return (0, a.jsx)(s.MenuItem, {
                             id: "remove-emoji-reactions-".concat(null !== (t = e.name) && void 0 !== t ? t : e.id),
                             label: null == e.id ? e.name : ":".concat(e.name, ":"),
-                            action: t => S(t, e),
+                            action: t => p(t, e),
                             imageUrl: t => {
                                 var a;
                                 let {
