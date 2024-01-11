@@ -58,7 +58,7 @@
                             channel_view: R
                         })
                     }, [j, R]), null == j || null == L) return null;
-                let P = (0, a.jsx)(v.default, {
+                let b = (0, a.jsx)(v.default, {
                     channel: j,
                     baseChannelId: s
                 });
@@ -67,7 +67,7 @@
                         channel: j,
                         draftType: S.DraftType.ChannelMessage
                     }), (0, a.jsx)(T.default, {
-                        toolbar: P,
+                        toolbar: b,
                         "aria-label": A.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
                         children: (0, E.renderTitle)({
                             channel: j,

@@ -16,17 +16,17 @@
                 _ = s("984376"),
                 E = s("267567"),
                 I = s("393414"),
-                f = s("239380"),
-                T = s("813006"),
+                T = s("239380"),
+                f = s("813006"),
                 S = s("305961"),
                 R = s("895530"),
                 p = s("145131"),
-                A = s("476263"),
-                m = s("36694"),
-                N = s("75576"),
+                m = s("476263"),
+                N = s("36694"),
+                A = s("75576"),
                 g = s("49111"),
-                P = s("782340"),
-                C = s("214197");
+                C = s("782340"),
+                P = s("214197");
             class O extends n.PureComponent {
                 renderMemberInfo() {
                     let {
@@ -34,20 +34,20 @@
                         approximatePresenceCount: t
                     } = this.props.guild;
                     return null == e || null == t ? null : (0, a.jsxs)(p.default, {
-                        className: C.memberInfo,
+                        className: P.memberInfo,
                         align: p.default.Align.CENTER,
                         children: [(0, a.jsx)("div", {
-                            className: C.dotOnline
+                            className: P.dotOnline
                         }), (0, a.jsx)("span", {
-                            className: C.memberText,
-                            children: P.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                            className: P.memberText,
+                            children: C.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                                 membersOnline: t
                             })
                         }), (0, a.jsx)("div", {
-                            className: C.dotOffline
+                            className: P.dotOffline
                         }), (0, a.jsx)("span", {
-                            className: C.memberText,
-                            children: P.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                            className: P.memberText,
+                            children: C.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                                 count: e
                             })
                         })]
@@ -64,41 +64,41 @@
                         pageSize: u
                     } = this.props;
                     if (t && s) return null;
-                    let d = new T.default(e),
-                        c = P.default.Messages.LURKER_MODE_VIEW_GUILD,
+                    let d = new f.default(e),
+                        c = C.default.Messages.LURKER_MODE_VIEW_GUILD,
                         _ = this.handleJoinOrView,
                         E = o.Button.Looks.FILLED,
                         I = o.Button.Colors.PRIMARY;
-                    return r ? s ? (E = o.Button.Looks.OUTLINED, I = C.buttonColorInGuild, c = (0, a.jsxs)(p.default, {
+                    return r ? s ? (E = o.Button.Looks.OUTLINED, I = P.buttonColorInGuild, c = (0, a.jsxs)(p.default, {
                         align: p.default.Align.CENTER,
                         children: [(0, a.jsx)("div", {
-                            children: P.default.Messages.JOINED_GUILD
-                        }), (0, a.jsx)(m.default, {
-                            className: C.joinedCheckmark
+                            children: C.default.Messages.JOINED_GUILD
+                        }), (0, a.jsx)(N.default, {
+                            className: P.joinedCheckmark
                         })]
-                    })) : n && t && (c = P.default.Messages.JOIN_GUILD) : (c = P.default.Messages._LOGIN, _ = this.handleLogin), (0, a.jsxs)("div", {
-                        className: l(i, u === N.PageSizes.SMALL ? C.inviteSmall : C.inviteLarge),
+                    })) : n && t && (c = C.default.Messages.JOIN_GUILD) : (c = C.default.Messages._LOGIN, _ = this.handleLogin), (0, a.jsxs)("div", {
+                        className: l(i, u === A.PageSizes.SMALL ? P.inviteSmall : P.inviteLarge),
                         children: [(0, a.jsx)(R.default, {
-                            children: P.default.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD
+                            children: C.default.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD
                         }), (0, a.jsxs)("div", {
-                            className: C.content,
+                            className: P.content,
                             children: [(0, a.jsxs)("div", {
-                                className: C.info,
-                                children: [(0, a.jsx)(A.default, {
+                                className: P.info,
+                                children: [(0, a.jsx)(m.default, {
                                     guild: d,
                                     active: !0,
-                                    size: A.default.Sizes.LARGE,
-                                    className: C.guildIcon
+                                    size: m.default.Sizes.LARGE,
+                                    className: P.guildIcon
                                 }), (0, a.jsxs)("div", {
-                                    className: C.infoText,
+                                    className: P.infoText,
                                     children: [(0, a.jsx)("div", {
-                                        className: C.name,
+                                        className: P.name,
                                         children: e.name
                                     }), this.renderMemberInfo()]
                                 })]
                             }), (0, a.jsx)(o.Button, {
                                 size: o.Button.Sizes.SMALL,
-                                className: C.actionButton,
+                                className: P.actionButton,
                                 fullWidth: !0,
                                 color: I,
                                 look: E,
@@ -115,7 +115,7 @@
                             skuId: t,
                             isInGuild: s,
                             isLurking: a
-                        } = this.props, n = () => (0, f.transitionToGuild)(e.id);
+                        } = this.props, n = () => (0, T.transitionToGuild)(e.id);
                         if (a)(0, c.joinPublishedStoreListingSkuGuild)(t).then(n);
                         else if (s) n();
                         else try {

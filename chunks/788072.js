@@ -15,8 +15,8 @@
                 c = n("954732"),
                 f = n("362189"),
                 E = n("211248"),
-                h = n("64318"),
-                _ = n("833150"),
+                _ = n("64318"),
+                h = n("833150"),
                 S = n("782340"),
                 T = n("643000");
 
@@ -25,7 +25,7 @@
                     setTab: t,
                     badgeState: n,
                     closePopout: s
-                } = e, p = (0, r.useStateFromStores)([c.default], () => c.default.getInvites()), [I, m] = a.useState(!1), [g, A] = a.useMemo(() => i.partition(p, e => {
+                } = e, p = (0, r.useStateFromStores)([c.default], () => c.default.getInvites()), [I, m] = a.useState(!1), [A, g] = a.useMemo(() => i.partition(p, e => {
                     let t = (Date.now() - new Date(e.created_at).getTime()) / 1e3;
                     return t < e.ttl
                 }), [p]);
@@ -37,7 +37,7 @@
                 }, []);
                 return (0, l.jsxs)("div", {
                     className: T.container,
-                    children: [(0, l.jsx)(h.default, {
+                    children: [(0, l.jsx)(_.default, {
                         tab: o.InboxTab.GAME_INVITES,
                         setTab: t,
                         badgeState: n,
@@ -56,20 +56,20 @@
                     }), (0, l.jsx)(d.AdvancedScrollerThin, {
                         children: (0, l.jsxs)("div", {
                             className: T.invitesContainer,
-                            children: [g.length > 0 && (0, l.jsxs)(l.Fragment, {
+                            children: [A.length > 0 && (0, l.jsxs)(l.Fragment, {
                                 children: [(0, l.jsx)(N, {
                                     title: S.default.Messages.GAME_INVITES_RECENT_HEADER
                                 }), (0, l.jsx)(l.Fragment, {
-                                    children: g.map(e => (0, l.jsx)(_.default, {
+                                    children: A.map(e => (0, l.jsx)(h.default, {
                                         invite: e,
                                         expired: !1
                                     }, e.invite_id))
                                 })]
-                            }), A.length > 0 && (0, l.jsxs)(l.Fragment, {
+                            }), g.length > 0 && (0, l.jsxs)(l.Fragment, {
                                 children: [(0, l.jsx)(N, {
                                     title: S.default.Messages.GAME_INVITES_EXPIRED_HEADER
                                 }), (0, l.jsx)(l.Fragment, {
-                                    children: A.map(e => (0, l.jsx)(_.default, {
+                                    children: g.map(e => (0, l.jsx)(h.default, {
                                         invite: e,
                                         expired: !0
                                     }, e.invite_id))

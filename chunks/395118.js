@@ -1,19 +1,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 AnalyticsFeedTypes: function() {
-                    return i
+                    return s
                 },
                 ForceFlushType: function() {
-                    return s
+                    return i
                 },
                 AnalyticsFeedItemSeenManager: function() {
                     return c
                 }
             }), n("424973"), n("222007");
-            var i, s, l, r, a = n("627445"),
+            var s, i, r, l, a = n("627445"),
                 u = n.n(a),
                 o = n("913144");
-            (l = i || (i = {})).GUILD_HOME = "guild_home", l.FORUM_CHANNEL = "forum_channel", (r = s || (s = {}))[r.IMMEDIATE = 0] = "IMMEDIATE", r[r.IMMEDIATE_WITH_COOLDOWN = 1] = "IMMEDIATE_WITH_COOLDOWN", r[r.IMMEDIATE_WITH_DELAY = 2] = "IMMEDIATE_WITH_DELAY";
+            (r = s || (s = {})).GUILD_HOME = "guild_home", r.FORUM_CHANNEL = "forum_channel", (l = i || (i = {}))[l.IMMEDIATE = 0] = "IMMEDIATE", l[l.IMMEDIATE_WITH_COOLDOWN = 1] = "IMMEDIATE_WITH_COOLDOWN", l[l.IMMEDIATE_WITH_DELAY = 2] = "IMMEDIATE_WITH_DELAY";
             class d {
                 maybeMarkSeen(e) {
                     let t = this.seenIntervals[this.seenIntervals.length - 1];
@@ -32,19 +32,19 @@
                 computeSeenTimeDestructive(e) {
                     let t = 0,
                         n = [];
-                    for (let i of this.seenIntervals) {
-                        if (null != i.endTimeMillis) {
-                            t += i.endTimeMillis - i.startTimeMillis;
+                    for (let s of this.seenIntervals) {
+                        if (null != s.endTimeMillis) {
+                            t += s.endTimeMillis - s.startTimeMillis;
                             continue
                         }
                         if (e) {
                             let e = Date.now();
-                            t += e - i.startTimeMillis, n.push({
+                            t += e - s.startTimeMillis, n.push({
                                 startTimeMillis: e
                             });
                             continue
                         }
-                        n.push(i)
+                        n.push(s)
                     }
                     return u(n.length < 2, "there should only be a single left over data"), this.seenIntervals = n, Math.round(t)
                 }
@@ -84,26 +84,26 @@
                     }, this.handleFeedItemSeen = e => {
                         var t;
                         let n = e.id,
-                            i = e.timestampMillis,
-                            s = e.feedItemId;
+                            s = e.timestampMillis,
+                            i = e.feedItemId;
                         if (n !== this._id) return;
                         if (this._paused) {
-                            this._pausedFeedItemIds.add(s);
+                            this._pausedFeedItemIds.add(i);
                             return
                         }
-                        let l = this.getTrackedFeedItem(s),
-                            r = l.maybeMarkSeen(i);
-                        null === (t = this.onFeedItemSeen) || void 0 === t || t.call(this, s, r)
+                        let r = this.getTrackedFeedItem(i),
+                            l = r.maybeMarkSeen(s);
+                        null === (t = this.onFeedItemSeen) || void 0 === t || t.call(this, i, l)
                     }, this.handleFeedItemUnseen = e => {
                         var t;
                         let n = e.id,
-                            i = e.timestampMillis,
-                            s = e.feedItemId;
+                            s = e.timestampMillis,
+                            i = e.feedItemId;
                         if (n !== this._id) return;
-                        this._paused && this._pausedFeedItemIds.delete(s);
-                        let l = this.getTrackedFeedItem(s),
-                            r = l.maybeMarkUnseen(i);
-                        null === (t = this.onFeedItemUnseen) || void 0 === t || t.call(this, s, r), this.maybeFlushSeenItems()
+                        this._paused && this._pausedFeedItemIds.delete(i);
+                        let r = this.getTrackedFeedItem(i),
+                            l = r.maybeMarkUnseen(s);
+                        null === (t = this.onFeedItemUnseen) || void 0 === t || t.call(this, i, l), this.maybeFlushSeenItems()
                     }, this.getTrackedFeedItem = e => (null == this.trackedFeedItems[e] && (this.trackedFeedItems[e] = new d), this.trackedFeedItems[e]), this.getVisibleFeedItemIds = () => {
                         let e = Object.keys(this.trackedFeedItems);
                         return new Set(e.filter(e => {

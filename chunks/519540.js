@@ -15,16 +15,16 @@
                 c = n("446674"),
                 f = n("151426"),
                 E = n("77078"),
-                h = n("272030"),
-                _ = n("819689"),
+                _ = n("272030"),
+                h = n("819689"),
                 S = n("843962"),
                 T = n("679653"),
                 p = n("931318"),
                 N = n("520899"),
                 I = n("988864"),
                 m = n("960808"),
-                g = n("45835"),
-                A = n("699473"),
+                A = n("45835"),
+                g = n("699473"),
                 C = n("393414"),
                 R = n("845579"),
                 M = n("42203"),
@@ -100,7 +100,7 @@
                     {
                         message: f,
                         channel: I
-                    } = (0, g.getSavedMessageAndChannel)(s),
+                    } = (0, A.getSavedMessageAndChannel)(s),
                     m = M.default.getChannel(I.id),
                     y = (0, T.default)(m, !0),
                     P = null != y ? y : I.name,
@@ -155,7 +155,7 @@
                             children: [(0, l.jsx)(E.TooltipContainer, {
                                 text: F.default.Messages.MESSAGE_REMINDERS_SNOOZE,
                                 children: (0, l.jsx)(E.Clickable, {
-                                    onClick: e => (0, h.openContextMenuLazy)(e, async () => {
+                                    onClick: e => (0, _.openContextMenuLazy)(e, async () => {
                                         let {
                                             default: e
                                         } = await n.el("763582").then(n.bind(n, "763582"));
@@ -179,7 +179,7 @@
                         className: i(G.messageContainer, j.unloadedMessage, {
                             [j.disabledMessage]: r
                         }),
-                        children: [(0, l.jsx)(A.default, {
+                        children: [(0, l.jsx)(g.default, {
                             message: f,
                             channel: I,
                             className: G.message,
@@ -191,7 +191,7 @@
                             className: j.actions,
                             children: [null == u ? (0, l.jsx)(E.Button, {
                                 onClick: () => {
-                                    _.default.fetchMessages({
+                                    h.default.fetchMessages({
                                         channelId: s.channelId,
                                         limit: 1,
                                         jump: {

@@ -16,21 +16,21 @@
                 _ = s("737117"),
                 E = s("550722"),
                 I = s("113705"),
-                f = s("743437"),
-                T = s("404875"),
+                T = s("743437"),
+                f = s("404875"),
                 S = s("118536"),
                 R = s("411389"),
                 p = s("840456"),
-                A = s("720917"),
-                m = s("982784"),
-                N = s("19530"),
+                m = s("720917"),
+                N = s("982784"),
+                A = s("19530"),
                 g = s("215541"),
-                P = s("663411"),
-                C = s("126304"),
+                C = s("663411"),
+                P = s("126304"),
                 O = s("674065"),
                 M = s("771116"),
-                h = s("309920"),
-                L = s("578770"),
+                L = s("309920"),
+                h = s("578770"),
                 x = s("761708"),
                 v = s("224456"),
                 U = s("656564"),
@@ -62,13 +62,13 @@
                             title: c.default.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_VARIANT_2_FEATURE_CLIENT_THEMES_DESCRIPTION,
                             className: t.clientThemesCard,
-                            imageSource: h,
+                            imageSource: L,
                             imageClassName: t.clientThemesImage
                         },
                         customAppIcons: {
                             title: c.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION,
-                            imageSource: L,
+                            imageSource: h,
                             imageClassName: t.customAppIconImage
                         },
                         emoji: {
@@ -92,7 +92,7 @@
                                     onTryItOutClick: t
                                 })
                             },
-                            imageSource: T,
+                            imageSource: f,
                             imageClassName: t.perGuildProfilesImage
                         },
                         longerMessages: {
@@ -104,13 +104,13 @@
                         moreGuilds: {
                             title: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                            imageSource: y(s, f, D),
+                            imageSource: y(s, T, D),
                             imageClassName: t.moreGuildsImage
                         },
                         moreGuildsAlt: {
                             title: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-                            imageSource: y(s, p, A),
+                            imageSource: y(s, p, m),
                             imageClassName: t.moreGuildsAltImage
                         },
                         remix: {
@@ -123,7 +123,7 @@
                         soundboard: {
                             title: c.default.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
                             description: c.default.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-                            imageSource: y(s, m, N),
+                            imageSource: y(s, N, A),
                             imageClassName: t.soundboardImage
                         },
                         stickers: {
@@ -153,7 +153,7 @@
                         superReactions: {
                             title: c.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_TITLE,
                             description: c.default.Messages.PREMIUM_MARKETING_SUPER_REACTIONS_PERK_DESCRIPTION,
-                            imageSource: y(s, P, C),
+                            imageSource: y(s, C, P),
                             imageClassName: t.superReactionsImage
                         },
                         upload: {

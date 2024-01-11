@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return A
+                    return g
                 }
             }), n("222007"), n("424973");
             var l = n("917351"),
@@ -15,8 +15,8 @@
                 c = n("299285"),
                 f = n("568307"),
                 E = n("697218"),
-                h = n("437712"),
-                _ = n("552712"),
+                _ = n("437712"),
+                h = n("552712"),
                 S = n("49111");
             let T = "DetectedOffPlatformPremiumPerksStore",
                 p = {},
@@ -36,29 +36,29 @@
                         !c.default.isFetchingApplication(n) && !c.default.didFetchingApplicationFail(n) && d.default.fetchApplication(n);
                         continue
                     }
-                    let a = _.default.get(t);
+                    let a = h.default.get(t);
                     if (null == a) {
-                        !_.default.isFetching(t) && !_.default.didFetchingSkuFail(t) && u.fetchSKU(l.id, t);
+                        !h.default.isFetching(t) && !h.default.didFetchingSkuFail(t) && u.fetchSKU(l.id, t);
                         continue
                     }
-                    h.default.applicationIdsFetching.has(l.id) || h.default.isEntitledToSku(E.default.getCurrentUser(), t, l.id, l.id) || !a.available ? null != p[t] && (delete p[t], e = !0) : (p[t] = {
+                    _.default.applicationIdsFetching.has(l.id) || _.default.isEntitledToSku(E.default.getCurrentUser(), t, l.id, l.id) || !a.available ? null != p[t] && (delete p[t], e = !0) : (p[t] = {
                         skuId: t,
                         applicationId: n
                     }, e = !0)
                 }
                 return e
             }
-            class g extends s.default.Store {
+            class A extends s.default.Store {
                 initialize() {
                     var e;
-                    this.waitFor(f.default, _.default, h.default), I = null !== (e = i.default.get(T)) && void 0 !== e ? e : I
+                    this.waitFor(f.default, h.default, _.default), I = null !== (e = i.default.get(T)) && void 0 !== e ? e : I
                 }
                 getDetectedOffPlatformPremiumPerks() {
                     return a.values(p)
                 }
             }
-            g.displayName = "DetectedOffPlatformPremiumPerksStore";
-            var A = new g(r.default, {
+            A.displayName = "DetectedOffPlatformPremiumPerksStore";
+            var g = new A(r.default, {
                 LOGOUT: function() {
                     p = {}, N = {}
                 },
@@ -86,7 +86,7 @@
                                     applicationId: l
                                 }
                                 of S.OFF_PLATFORM_PREMIUM_PERKS) {
-                                if (!(l !== t || I.includes(n))) null == N[n] && (!h.default.applicationIdsFetched.has(l) && !h.default.applicationIdsFetching.has(l) && null == h.default.getForSku(n) && o.fetchUserEntitlementsForApplication(l), N[n] = {
+                                if (!(l !== t || I.includes(n))) null == N[n] && (!_.default.applicationIdsFetched.has(l) && !_.default.applicationIdsFetching.has(l) && null == _.default.getForSku(n) && o.fetchUserEntitlementsForApplication(l), N[n] = {
                                     skuId: n,
                                     applicationId: l
                                 }, e = !0)

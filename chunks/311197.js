@@ -15,8 +15,8 @@
                 c = n("826267"),
                 f = n("664336"),
                 E = n("333491"),
-                h = n("263362"),
-                _ = n("470965"),
+                _ = n("263362"),
+                h = n("470965"),
                 S = n("133335"),
                 T = n("782340"),
                 p = n("759956");
@@ -26,26 +26,26 @@
                     onOpen: t,
                     onClose: n,
                     className: N
-                } = e, I = (0, o.useInDesktopNotificationCenterExperiment)(), m = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()), g = a.useRef(null), A = (0, s.useStateFromStores)([u.default], () => !!I && (null == m ? void 0 : m.id) != null && u.default.getMentionCount(m.id, S.ReadStateTypes.NOTIFICATION_CENTER) > 0), {
+                } = e, I = (0, o.useInDesktopNotificationCenterExperiment)(), m = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()), A = a.useRef(null), g = (0, s.useStateFromStores)([u.default], () => !!I && (null == m ? void 0 : m.id) != null && u.default.getMentionCount(m.id, S.ReadStateTypes.NOTIFICATION_CENTER) > 0), {
                     enabled: C
                 } = r.default.useExperiment({
                     location: "RecentsButton"
                 }, {
                     autoTrackExposure: !1
                 }), R = (0, s.useStateFromStores)([i.default], () => C && i.default.getUnseenInviteCount() > 0);
-                return (0, l.jsx)(h.RecentsPopout, {
+                return (0, l.jsx)(_.RecentsPopout, {
                     onOpen: t,
                     onClose: n,
                     badgeState: {
-                        badgeForYou: A
+                        badgeForYou: g
                     },
                     popoutPosition: "bottom",
                     popoutAlign: "right",
                     children: (e, t, n) => (0, l.jsxs)("div", {
-                        ref: g,
+                        ref: A,
                         className: p.recentsIcon,
-                        children: [C && (0, l.jsx)(_.default, {
-                            inboxIconRef: g,
+                        children: [C && (0, l.jsx)(h.default, {
+                            inboxIconRef: A,
                             recentsPopoutShown: t
                         }), (0, l.jsx)(f.Icon, {
                             ...n,
@@ -55,7 +55,7 @@
                             "aria-label": T.default.Messages.INBOX,
                             tooltip: t ? null : T.default.Messages.INBOX,
                             selected: t,
-                            showBadge: A || R,
+                            showBadge: g || R,
                             children: (0, l.jsx)(E.default, {
                                 className: p.todoBadge
                             })

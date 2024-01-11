@@ -21,21 +21,21 @@
                     channel: t,
                     closePopout: n,
                     onSelect: E,
-                    navId: h,
-                    label: _,
+                    navId: _,
+                    label: h,
                     location: S,
                     includeGuildMute: T
-                } = e, p = (0, r.useChannelNotificationRadioItems)(t), N = (0, o.useChannelNotificationSettingsItemInner)(t), I = (0, a.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id)), m = (0, u.default)(I), g = (0, d.useShouldUseNewNotificationSystem)("ChannelNotificationSettingsPopoutMenu") && c.CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING.has(t.type);
+                } = e, p = (0, r.useChannelNotificationRadioItems)(t), N = (0, o.useChannelNotificationSettingsItemInner)(t), I = (0, a.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id)), m = (0, u.default)(I), A = (0, d.useShouldUseNewNotificationSystem)("ChannelNotificationSettingsPopoutMenu") && c.CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING.has(t.type);
                 return (0, l.jsxs)(s.Menu, {
-                    navId: h,
+                    navId: _,
                     onClose: n,
-                    "aria-label": _,
+                    "aria-label": h,
                     onSelect: E,
                     children: [(0, l.jsx)(s.MenuGroup, {
                         children: (0, i.default)(t, S)
                     }), T ? (0, l.jsx)(s.MenuGroup, {
                         children: m
-                    }) : null, g ? N : (0, l.jsx)(s.MenuGroup, {
+                    }) : null, A ? N : (0, l.jsx)(s.MenuGroup, {
                         children: p
                     })]
                 })

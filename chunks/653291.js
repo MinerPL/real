@@ -15,16 +15,16 @@
                 c = n("866227"),
                 f = n.n(c),
                 E = n("868233"),
-                h = n("446674"),
-                _ = n("77078"),
+                _ = n("446674"),
+                h = n("77078"),
                 S = n("378438"),
                 T = n("425773"),
                 p = n("76385"),
                 N = n("955513"),
                 I = n("679653"),
                 m = n("419830"),
-                g = n("42203"),
-                A = n("26989"),
+                A = n("42203"),
+                g = n("26989"),
                 C = n("27618"),
                 R = n("712611"),
                 M = n("18494"),
@@ -56,9 +56,9 @@
                         children: o
                     });
                     let u = v.default.getUser(r.id),
-                        d = g.default.getChannel(e),
+                        d = A.default.getChannel(e),
                         c = (null == d ? void 0 : d.isPrivate()) ? C.default.getNickname(r.id) : null,
-                        f = null !== (s = null !== (a = A.default.getNick(e, r.id)) && void 0 !== a ? a : c) && void 0 !== s ? s : F.default.getName(r),
+                        f = null !== (s = null !== (a = g.default.getNick(e, r.id)) && void 0 !== a ? a : c) && void 0 !== s ? s : F.default.getName(r),
                         E = null !== (i = null == u ? void 0 : u.getAvatarURL(e, 20)) && void 0 !== i ? i : r.getAvatarURL(null == d ? void 0 : d.guild_id, 20);
                     return [(0, l.jsx)("img", {
                         alt: "",
@@ -82,7 +82,7 @@
                     if (null == a) return (0, l.jsx)("strong", {
                         children: s
                     });
-                    let i = g.default.getChannel(a.parent_id),
+                    let i = A.default.getChannel(a.parent_id),
                         r = (0, m.getChannelIconComponent)(a);
                     return (0, l.jsxs)("div", {
                         className: k.resultChannel,
@@ -107,7 +107,7 @@
                         tabIndex: c,
                         "aria-selected": f,
                         onSelect: E,
-                        onFocus: h,
+                        onFocus: _,
                         showFilter: S,
                         renderResult: T
                     } = e;
@@ -120,11 +120,11 @@
                     }
                     return n = null != T ? T(s, o, r) : (0, l.jsx)("strong", {
                         children: r.text
-                    }), (0, l.jsxs)(_.Clickable, {
+                    }), (0, l.jsxs)(h.Clickable, {
                         tag: "li",
                         className: i(k.option, u),
                         onClick: E,
-                        onFocus: h,
+                        onFocus: _,
                         id: a,
                         role: d,
                         tabIndex: c,
@@ -170,7 +170,7 @@
                             let {
                                 searchId: t
                             } = e;
-                            return (0, l.jsx)(_.Tooltip, {
+                            return (0, l.jsx)(h.Tooltip, {
                                 text: G.default.Messages.SEARCH_CLEAR_HISTORY,
                                 position: "left",
                                 children: e => {
@@ -178,7 +178,7 @@
                                         onMouseEnter: n,
                                         onMouseLeave: a
                                     } = e;
-                                    return (0, l.jsx)(_.Clickable, {
+                                    return (0, l.jsx)(h.Clickable, {
                                         onClick: () => (0, S.clearHistory)(t),
                                         onMouseEnter: n,
                                         onMouseLeave: a,
@@ -203,7 +203,7 @@
                             } = e, f = "", E = a.useMemo(() => (function(e) {
                                 let t = b.tokenizeQuery(e).map((e, t, n) => b.filterHasAnswer(e, n[t + 1]) ? e : new p.Token(e.getFullMatch(), p.NON_TOKEN_TYPE));
                                 return t
-                            })(s.text), [s.text]), h = E.map(e => {
+                            })(s.text), [s.text]), _ = E.map(e => {
                                 let t = e.getFullMatch();
                                 if ("" === t.trim()) return null;
                                 let n = j.IS_SEARCH_FILTER_TOKEN.test(e.type),
@@ -217,7 +217,7 @@
                                     children: t
                                 }, e.type + t)
                             });
-                            return (0, l.jsxs)(_.Clickable, {
+                            return (0, l.jsxs)(h.Clickable, {
                                 className: i(k.option, k.history),
                                 onClick: t,
                                 onFocus: n,
@@ -225,7 +225,7 @@
                                 "aria-label": G.default.Messages.SEARCH_FROM_SUGGESTIONS.format({
                                     suggestion: f
                                 }),
-                                children: [h, (0, l.jsx)(y.default, {
+                                children: [_, (0, l.jsx)(y.default, {
                                     className: k.plusIcon
                                 })]
                             })
@@ -233,13 +233,13 @@
                     },
                     [j.SearchAutocompleteGroups.SEARCH_OPTIONS]: {
                         titleText: () => G.default.Messages.SEARCH_GROUP_HEADER_SEARCH_OPTIONS,
-                        groupTip: () => (0, l.jsx)(_.Tooltip, {
+                        groupTip: () => (0, l.jsx)(h.Tooltip, {
                             text: G.default.Messages.LEARN_MORE,
                             position: "left",
                             children: e => (0, l.jsx)("div", {
                                 className: k.searchLearnMore,
                                 ...e,
-                                children: (0, l.jsx)(_.Anchor, {
+                                children: (0, l.jsx)(h.Anchor, {
                                     href: U.default.getArticleURL(j.HelpdeskArticles.USING_SEARCH),
                                     title: G.default.Messages.LEARN_MORE,
                                     children: (0, l.jsx)(D.default, {})
@@ -256,7 +256,7 @@
                                 searchId: o,
                                 ...u
                             } = e, d = b.getSearchOptionAnswer(null !== (t = n.token) && void 0 !== t ? t : "");
-                            return (0, l.jsxs)(_.Clickable, {
+                            return (0, l.jsxs)(h.Clickable, {
                                 className: i(k.option, k.searchOption),
                                 onClick: a,
                                 onFocus: s,
@@ -408,7 +408,7 @@
                             children: [(0, l.jsxs)("span", {
                                 className: k.hint,
                                 children: [G.default.Messages.SEARCH_DATE_PICKER_HINT, "\xa0"]
-                            }), (0, l.jsx)(_.Clickable, {
+                            }), (0, l.jsx)(h.Clickable, {
                                 tag: "span",
                                 className: k.hintValue,
                                 onClick: this.handleHintClick,
@@ -442,21 +442,21 @@
                                 children: f.titleText()
                             }));
                             let E = null !== (o = f.groupTip) && void 0 !== o ? o : null,
-                                h = null != E ? (0, l.jsx)(E, {
+                                _ = null != E ? (0, l.jsx)(E, {
                                     searchId: n
                                 }) : null,
-                                _ = null !== (u = f.component) && void 0 !== u ? u : Y,
+                                h = null !== (u = f.component) && void 0 !== u ? u : Y,
                                 S = s.type === j.SearchPopoutModes.FILTER_ALL;
                             return (0, l.jsxs)("ul", {
                                 role: "group",
                                 "aria-labelledby": c,
                                 className: k.resultsGroup,
-                                children: [d, h, a.results.map(s => {
+                                children: [d, _, a.results.map(s => {
                                     var r, o;
                                     if (null == s || null == a) return null;
                                     i += 1;
                                     let u = e === i;
-                                    return (0, l.jsx)(_, {
+                                    return (0, l.jsx)(h, {
                                         searchId: n,
                                         group: null !== (r = s.group) && void 0 !== r ? r : a.group,
                                         result: s,
@@ -472,7 +472,7 @@
                 }
             }
             var W = a.forwardRef((e, t) => {
-                let [n, a, s] = (0, h.useStateFromStoresArray)([O.default, M.default, R.default], () => {
+                let [n, a, s] = (0, _.useStateFromStoresArray)([O.default, M.default, R.default], () => {
                     let e = O.default.getGuildId(),
                         t = M.default.getChannelId(),
                         n = null != e ? e : t;

@@ -15,8 +15,8 @@
                 c = n("56947"),
                 f = n("386045"),
                 E = n("389535"),
-                h = n("80028"),
-                _ = n("782340");
+                _ = n("80028"),
+                h = n("782340");
 
             function S(e) {
                 let {
@@ -33,13 +33,13 @@
                     hasClips: N,
                     hasNewClips: I,
                     lastClipsSession: m,
-                    remindersEnabled: g
+                    remindersEnabled: A
                 } = (0, s.useStateFromStoresObject)([f.default], () => ({
                     hasClips: f.default.hasClips(),
                     hasNewClips: f.default.getNewClipIds().length > 0,
                     lastClipsSession: f.default.getLastClipsSession(),
                     remindersEnabled: f.default.getSettings().remindersEnabled
-                })), A = null != m && m.newClipIds.length > 0, [C, R] = a.useState(null), M = (0, s.useStateFromStores)([r.default], () => r.default.hasLayers());
+                })), g = null != m && m.newClipIds.length > 0, [C, R] = a.useState(null), M = (0, s.useStateFromStores)([r.default], () => r.default.hasLayers());
 
                 function O() {
                     (0, i.openModalLazy)(async () => {
@@ -50,11 +50,11 @@
                             ...t
                         })
                     }, {
-                        modalKey: h.CLIPS_GALLERY_MODAL_KEY
+                        modalKey: _.CLIPS_GALLERY_MODAL_KEY
                     })
                 }
                 return T && ((0, d.isWindows)() || p) && N ? (0, l.jsxs)(l.Fragment, {
-                    children: [null != C && t && g && A && !(0, i.hasAnyModalOpen)() && !M && (0, l.jsx)(E.default, {
+                    children: [null != C && t && A && g && !(0, i.hasAnyModalOpen)() && !M && (0, l.jsx)(E.default, {
                         clipIconRef: C,
                         lastClipsSession: m,
                         onOpenClipsGallery: O
@@ -64,7 +64,7 @@
                             className: S,
                             icon: o.default,
                             showBadge: I,
-                            tooltip: _.default.Messages.CLIPS_GALLERY_TOOLTIP,
+                            tooltip: h.default.Messages.CLIPS_GALLERY_TOOLTIP,
                             onClick: O
                         })
                     })]

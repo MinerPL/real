@@ -15,8 +15,8 @@
                 c = n("545158"),
                 f = n("954732"),
                 E = n("362189"),
-                h = n("697218"),
-                _ = n("211248"),
+                _ = n("697218"),
+                h = n("211248"),
                 S = n("228220"),
                 T = n("888400"),
                 p = n("782340"),
@@ -26,9 +26,9 @@
                 let {
                     invite: t,
                     expired: n
-                } = e, s = (0, u.useStateFromStores)([h.default], () => {
+                } = e, s = (0, u.useStateFromStores)([_.default], () => {
                     var e, n;
-                    return null !== (n = null === (e = h.default.getUser(t.inviter_id)) || void 0 === e ? void 0 : e.username) && void 0 !== n ? n : ""
+                    return null !== (n = null === (e = _.default.getUser(t.inviter_id)) || void 0 === e ? void 0 : e.username) && void 0 !== n ? n : ""
                 }), c = (0, T.dateFormat)(i(t.created_at), "LT"), f = a.useRef(null), S = (0, d.default)(f);
                 return a.useEffect(() => {
                     !n && (0, E.updateInviteStatus)(t)
@@ -51,7 +51,7 @@
                         }), S && !n && (0, l.jsx)(m, {
                             invite: t
                         }), (0, l.jsx)(o.Popout, {
-                            renderPopout: e => (0, l.jsx)(g, {
+                            renderPopout: e => (0, l.jsx)(A, {
                                 ...e,
                                 invite: t
                             }),
@@ -62,10 +62,10 @@
                                 let {
                                     onClick: t
                                 } = e;
-                                return (0, l.jsx)(_.default, {
+                                return (0, l.jsx)(h.default, {
                                     className: N.secondaryButton,
                                     tooltip: p.default.Messages.MORE,
-                                    color: _.CircleIconButtonColors.TERTIARY,
+                                    color: h.CircleIconButtonColors.TERTIARY,
                                     icon: (0, l.jsx)(r.MoreHorizontalIcon, {
                                         width: 16,
                                         height: 16
@@ -99,7 +99,7 @@
                         await (0, E.launchInviteGame)(t)
                     } catch {}
                     r(!1)
-                }, [t]), h = a.useCallback(async () => {
+                }, [t]), _ = a.useCallback(async () => {
                     r(!0);
                     try {
                         await (0, E.acceptInvite)(t)
@@ -118,7 +118,7 @@
                         className: N.primaryButton,
                         disabled: i,
                         size: o.ButtonSizes.SMALL,
-                        onClick: h,
+                        onClick: _,
                         children: p.default.Messages.GAME_INVITES_JOIN_GAME
                     })
                 }
@@ -139,7 +139,7 @@
                 })
             }
 
-            function g(e) {
+            function A(e) {
                 let {
                     invite: t,
                     closePopout: n

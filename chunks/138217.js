@@ -15,22 +15,22 @@
                 c = n("913491"),
                 f = n("915639"),
                 E = n("719926"),
-                h = n("271938"),
-                _ = n("42203"),
+                _ = n("271938"),
+                h = n("42203"),
                 S = n("377253"),
                 T = n("660478"),
                 p = n("27618"),
                 N = n("162771"),
                 I = n("282109"),
                 m = n("697218"),
-                g = n("49111");
-            let A = "recentMentionFilterSettings",
+                A = n("49111");
+            let g = "recentMentionFilterSettings",
                 C = [],
                 R = {},
                 M = !1,
                 O = !0,
-                L = i.default.get(A, {
-                    guildFilter: g.RecentMentionsFilters.ALL_SERVERS,
+                L = i.default.get(g, {
+                    guildFilter: A.RecentMentionsFilters.ALL_SERVERS,
                     everyoneFilter: !0,
                     roleFilter: !0
                 }),
@@ -50,10 +50,10 @@
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
                 if ((0, c.default)(e)) return null;
                 null == n && (n = e.channel_id);
-                let l = _.default.getChannel(n);
-                if (null == l || l.type === g.ChannelTypes.DM || L.guildFilter === g.RecentMentionsFilters.THIS_SERVER && l.getGuildId() !== N.default.getGuildId()) return null;
+                let l = h.default.getChannel(n);
+                if (null == l || l.type === A.ChannelTypes.DM || L.guildFilter === A.RecentMentionsFilters.THIS_SERVER && l.getGuildId() !== N.default.getGuildId()) return null;
                 let a = null === (t = e.author) || void 0 === t ? void 0 : t.id,
-                    s = h.default.getId();
+                    s = _.default.getId();
                 if (null != a && p.default.isBlocked(a) || a === s) return null;
                 e = P(e);
                 let i = !L.everyoneFilter,
@@ -92,9 +92,9 @@
                 let t = {
                     ...L
                 };
-                L = a.defaults(a.pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), L), i.default.set(A, L);
+                L = a.defaults(a.pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), L), i.default.set(g, L);
                 let n = (e, n) => t[e] !== L[e] && L[e] === n,
-                    l = n("guildFilter", g.RecentMentionsFilters.THIS_SERVER) || n("everyoneFilter", !1) || n("roleFilter", !1);
+                    l = n("guildFilter", A.RecentMentionsFilters.THIS_SERVER) || n("everyoneFilter", !1) || n("roleFilter", !1);
                 R = {};
                 let s = [];
                 l && C.forEach(e => {
@@ -125,7 +125,7 @@
             }
             class H extends s.default.Store {
                 initialize() {
-                    this.waitFor(m.default, _.default, S.default, T.default)
+                    this.waitFor(m.default, h.default, S.default, T.default)
                 }
                 isOpen() {
                     return y
@@ -167,8 +167,8 @@
                     let {
                         guildId: t
                     } = e;
-                    M = !0, null == t && L.guildFilter === g.RecentMentionsFilters.THIS_SERVER && j({
-                        guildFilter: g.RecentMentionsFilters.ALL_SERVERS
+                    M = !0, null == t && L.guildFilter === A.RecentMentionsFilters.THIS_SERVER && j({
+                        guildFilter: A.RecentMentionsFilters.ALL_SERVERS
                     })
                 },
                 LOAD_RECENT_MENTIONS_SUCCESS: function(e) {
@@ -197,7 +197,7 @@
                     n > (C = C.slice(0, t)).length && (O = !0)
                 },
                 CHANNEL_SELECT: function() {
-                    if (L.guildFilter !== g.RecentMentionsFilters.THIS_SERVER) return !1;
+                    if (L.guildFilter !== A.RecentMentionsFilters.THIS_SERVER) return !1;
                     v = !1
                 },
                 CONNECTION_OPEN: G,
@@ -206,7 +206,7 @@
                         guild: t
                     } = e;
                     C = a.filter(C, e => {
-                        let n = _.default.getChannel(e.channel_id);
+                        let n = h.default.getChannel(e.channel_id);
                         return null != n && n.getGuildId() !== t.id || (delete R[e.id], !1)
                     })
                 },

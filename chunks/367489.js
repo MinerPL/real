@@ -36,9 +36,9 @@
                     disabled: A
                 } = e, M = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), [R, j] = l.useState(!1), L = (0, c.default)(), O = (0, o.isThemeDark)(L) || t ? C : E, {
                     width: y = 0,
-                    ref: P
+                    ref: b
                 } = (0, d.default)(), {
-                    width: b = 0,
+                    width: P = 0,
                     ref: D
                 } = (0, d.default)();
                 return (0, a.jsxs)(u.TooltipContainer, {
@@ -72,13 +72,13 @@
                             [m.labelUnchecked]: !t && !g
                         }),
                         style: x ? {
-                            width: t ? y : y + b
+                            width: t ? y : y + P
                         } : void 0,
                         children: [t ? (0, a.jsx)(p.Shine, {
                             className: m.shine,
                             shinePaused: M
                         }) : null, (0, a.jsx)("img", {
-                            ref: P,
+                            ref: b,
                             src: O,
                             alt: S
                         }), (0, a.jsx)("span", {

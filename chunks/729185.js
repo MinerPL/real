@@ -37,8 +37,8 @@
                 L = n("772442"),
                 O = n("211019"),
                 y = n("810640"),
-                P = n("170643"),
-                b = n("144565"),
+                b = n("170643"),
+                P = n("144565"),
                 D = n("49111"),
                 U = n("99795"),
                 w = n("353927"),
@@ -53,9 +53,9 @@
                     focused: l,
                     idle: s,
                     width: i
-                } = e, o = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(t.user.id, t.stream.guildId)), u = (0, b.isVideoCompact)(i);
+                } = e, o = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(t.user.id, t.stream.guildId)), u = (0, P.isVideoCompact)(i);
                 return (0, a.jsxs)(a.Fragment, {
-                    children: [n ? null : (0, a.jsx)(P.default, {
+                    children: [n ? null : (0, a.jsx)(b.default, {
                         participant: t
                     }), l || null == o || o.state === D.ApplicationStreamStates.ENDED || o.state === D.ApplicationStreamStates.FAILED ? null : (0, a.jsx)(E.default, {
                         size: A.default.Sizes.SMALL,
@@ -75,13 +75,13 @@
                     paused: f,
                     fit: E,
                     inPopout: A,
-                    width: P,
-                    focused: b
+                    width: b,
+                    focused: P
                 } = e, B = T.default.getVideoComponent(), H = (0, r.useStateFromStores)([_.default], () => _.default.getId()), G = (0, h.default)(), {
                     stream: W,
                     user: Y,
                     streamId: z
-                } = t, K = (0, r.useStateFromStores)([I.default], () => I.default.getChannel(W.channelId)), Z = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(Y.id, W.guildId), [Y.id, W.guildId]), X = (0, r.useStateFromStores)([S.default], () => S.default.getAllActiveStreams().length > 0), J = (0, r.useStateFromStores)([v.default], () => v.default.isFocused()), q = (null == Z ? void 0 : Z.ownerId) === H, Q = q && !J && !A, $ = null != Z ? (0, p.default)(Z, Y, Y.id === H, Q) : null, ee = P < 195;
+                } = t, K = (0, r.useStateFromStores)([I.default], () => I.default.getChannel(W.channelId)), Z = (0, r.useStateFromStores)([S.default], () => S.default.getActiveStreamForUser(Y.id, W.guildId), [Y.id, W.guildId]), X = (0, r.useStateFromStores)([S.default], () => S.default.getAllActiveStreams().length > 0), J = (0, r.useStateFromStores)([v.default], () => v.default.isFocused()), q = (null == Z ? void 0 : Z.ownerId) === H, Q = q && !J && !A, $ = null != Z ? (0, p.default)(Z, Y, Y.id === H, Q) : null, ee = b < 195;
                 if (l.useEffect(() => {
                         !X && (null == K ? void 0 : K.isGuildStageVoice()) && !q && ((0, d.watchStream)(W), u.default.updateStageStreamSize(W.channelId, !1))
                     }, []), l.useEffect(() => {
@@ -95,21 +95,21 @@
                 if ((null == Z ? void 0 : Z.state) === D.ApplicationStreamStates.ENDED) return (0, a.jsx)(j.default, {
                     selected: n,
                     stream: Z,
-                    width: P
+                    width: b
                 });
                 if ((null == Z ? void 0 : Z.state) === D.ApplicationStreamStates.FAILED) return (0, a.jsx)(L.default, {
                     selected: n,
                     stream: Z,
-                    width: P
+                    width: b
                 });
                 else if (t.type === U.ParticipantTypes.HIDDEN_STREAM) return (0, a.jsx)(O.default, {
                     selected: n,
                     participant: t,
-                    width: P
+                    width: b
                 });
                 else if (null != Z && !n && null != B && T.default.supports(w.Features.VIDEO)) return (0, a.jsxs)(a.Fragment, {
                     children: [null != K ? (0, a.jsx)(C.default, {
-                        focused: b,
+                        focused: P,
                         channelId: K.id,
                         guildId: K.guild_id,
                         streamerId: Y.id,
@@ -126,7 +126,7 @@
                         videoSpinnerContext: q ? c.VideoSpinnerContext.SELF_STREAM : c.VideoSpinnerContext.REMOTE_STREAM,
                         userId: Y.id
                     }, z), null != $ ? (0, a.jsx)(g.default, {
-                        size: (0, R.getSizeForWidth)(P),
+                        size: (0, R.getSizeForWidth)(b),
                         ...$
                     }) : null]
                 });
@@ -146,7 +146,7 @@
                             children: (0, a.jsx)(o.Text, {
                                 variant: ee ? "text-sm/semibold" : "text-md/semibold",
                                 color: "none",
-                                children: P < 175 ? F.default.Messages.WATCH : F.default.Messages.WATCH_STREAM
+                                children: b < 175 ? F.default.Messages.WATCH : F.default.Messages.WATCH_STREAM
                             })
                         }), X ? (0, a.jsx)(M.CallTileCTA, {
                             className: k.addCTA,

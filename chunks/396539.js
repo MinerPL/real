@@ -19,13 +19,13 @@
                         navigatedAway: n,
                         isDesktop: f,
                         withMentions: E = !1,
-                        initialPageSize: h
-                    } = e, _ = (0, a.useStateFromStores)([d.default], () => d.default.shouldReload()), S = l.useRef(!1), [T, p] = l.useState(!1), {
+                        initialPageSize: _
+                    } = e, h = (0, a.useStateFromStores)([d.default], () => d.default.shouldReload()), S = l.useRef(!1), [T, p] = l.useState(!1), {
                         initialized: N,
                         loading: I,
                         items: m,
-                        hasMore: g,
-                        cursor: A,
+                        hasMore: A,
+                        cursor: g,
                         errored: C
                     } = (0, a.useStateFromStoresObject)([u.default], () => ({
                         initialized: u.default.initialized,
@@ -48,17 +48,17 @@
                     l.useEffect(() => () => {
                         f ? !O() && (C || m.length > 100) && (0, o.resetNotificationCenter)() : n && m.length > 100 && (0, o.resetNotificationCenter)()
                     }, [n, m, f, O, C]), l.useEffect(() => {
-                        let e = _ && t;
+                        let e = h && t;
                         (!N || e) && (0, o.fetchNotificationCenterItems)({
-                            limit: null != h ? h : E ? 8 : 20,
+                            limit: null != _ ? _ : E ? 8 : 20,
                             with_mentions: E,
                             roles_filter: R,
                             everyone_filter: M
                         })
-                    }, [N, _, t, E, R, M, h]);
+                    }, [N, h, t, E, R, M, _]);
                     let L = l.useCallback(async e => {
-                        !S.current && N && g && null != A && (e || !C) && (S.current = !0, p(!0), await (0, o.fetchNotificationCenterItems)({
-                            after: A,
+                        !S.current && N && A && null != g && (e || !C) && (S.current = !0, p(!0), await (0, o.fetchNotificationCenterItems)({
+                            after: g,
                             with_mentions: E,
                             roles_filter: R,
                             everyone_filter: M,
@@ -66,12 +66,12 @@
                         }, () => {
                             S.current = !1
                         }), p(!1))
-                    }, [N, g, A, C, E, R, M]);
+                    }, [N, A, g, C, E, R, M]);
                     return {
                         initialized: N,
                         loading: I,
                         items: m,
-                        hasMore: g,
+                        hasMore: A,
                         loadMore: L,
                         loadingMore: T,
                         setReadNotifItemToAcked: e => {

@@ -16,8 +16,8 @@
                 c = n("954732"),
                 f = n("22082"),
                 E = n("979268"),
-                h = n("520899"),
-                _ = n("913796"),
+                _ = n("520899"),
+                h = n("913796"),
                 S = n("826267"),
                 T = n("956089"),
                 p = n("124031"),
@@ -25,32 +25,32 @@
                 I = n("804220");
 
             function m(e) {
-                let t = (0, _.useInDesktopNotificationCenterExperiment)();
-                return t ? (0, l.jsx)(g, {
+                let t = (0, h.useInDesktopNotificationCenterExperiment)();
+                return t ? (0, l.jsx)(A, {
                     ...e
-                }) : (0, l.jsx)(A, {
+                }) : (0, l.jsx)(g, {
                     ...e
                 })
             }
 
-            function g(e) {
+            function A(e) {
                 let {
                     tab: t,
                     setTab: n,
                     children: a,
-                    badgeState: _,
+                    badgeState: h,
                     closePopout: m
                 } = e, {
-                    showReminders: g
+                    showReminders: A
                 } = E.default.useExperiment({
                     location: "RecentsHeader"
                 }, {
                     autoTrackExposure: !1
                 }), {
-                    enabled: A
+                    enabled: g
                 } = f.default.useExperiment({
                     location: "RecentsHeader"
-                }), C = (0, i.default)([c.default], () => c.default.getUnseenInviteCount()), R = (0, i.default)([h.default], () => h.default.getMessageReminders()), M = R.length;
+                }), C = (0, i.default)([c.default], () => c.default.getUnseenInviteCount()), R = (0, i.default)([_.default], () => _.default.getMessageReminders()), M = R.length;
                 return (0, l.jsxs)(u.Header, {
                     className: s(I.header, I.expanded),
                     children: [(0, l.jsxs)("div", {
@@ -76,7 +76,7 @@
                                 className: s(I.tab, I.expanded, {
                                     [I.active]: t === r.InboxTab.FOR_YOU
                                 }),
-                                children: [N.default.Messages.FOR_YOU, (null == _ ? void 0 : _.badgeForYou) ? (0, l.jsx)(T.CircleBadge, {
+                                children: [N.default.Messages.FOR_YOU, (null == h ? void 0 : h.badgeForYou) ? (0, l.jsx)(T.CircleBadge, {
                                     color: d.default.STATUS_DANGER,
                                     className: s(I.iconBadge)
                                 }) : null]
@@ -93,7 +93,7 @@
                                     [I.active]: t === r.InboxTab.MENTIONS
                                 }),
                                 children: N.default.Messages.MENTIONS
-                            }), A ? (0, l.jsxs)(o.TabBar.Item, {
+                            }), g ? (0, l.jsxs)(o.TabBar.Item, {
                                 "aria-label": "game_invites",
                                 id: r.InboxTab.GAME_INVITES,
                                 className: s(I.tab, I.expanded, {
@@ -103,7 +103,7 @@
                                     color: d.default.STATUS_DANGER,
                                     className: s(I.iconBadge)
                                 }) : null]
-                            }) : null, g ? (0, l.jsxs)(o.TabBar.Item, {
+                            }) : null, A ? (0, l.jsxs)(o.TabBar.Item, {
                                 "aria-label": "todos",
                                 id: r.InboxTab.TODOS,
                                 className: s(I.tab, I.expanded, {
@@ -122,7 +122,7 @@
                 })
             }
 
-            function A(e) {
+            function g(e) {
                 let {
                     tab: t,
                     setTab: n,
@@ -133,7 +133,7 @@
                     location: "489e3f_2"
                 }, {
                     autoTrackExposure: !1
-                }), d = (0, _.useInDesktopNotificationCenterExperiment)(), {
+                }), d = (0, h.useInDesktopNotificationCenterExperiment)(), {
                     enabled: c
                 } = f.default.useExperiment({
                     location: "RecentsHeader"

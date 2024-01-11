@@ -18,10 +18,10 @@
                 p = n("568307"),
                 g = n("697218"),
                 m = n("703370"),
-                S = n("901165"),
-                E = n("158998"),
+                E = n("901165"),
+                S = n("158998"),
                 v = n("522019"),
-                y = l.default.connectStores([p.default, m.default, d.default, g.default, S.default, f.default, u.default, h.default, c.default, s.default], () => {
+                y = l.default.connectStores([p.default, m.default, d.default, g.default, E.default, f.default, u.default, h.default, c.default, s.default], () => {
                     var e, t;
                     let n;
                     let i = f.default.getLobbiesWithVoice().find(e => null != u.default.getApplication(e.application_id)),
@@ -35,13 +35,13 @@
                                 voiceState: e,
                                 user: t,
                                 nick: t.username,
-                                comparator: E.default.getName(t)
+                                comparator: S.default.getName(t)
                             })
                         })
                     }
                     let y = (0, o.default)(p.default, m.default),
                         C = d.default.getCurrentUserActiveStream(),
-                        I = d.default.getStreamerActiveStreamMetadata();
+                        N = d.default.getStreamerActiveStreamMetadata();
                     return {
                         title: v,
                         context: n,
@@ -52,13 +52,13 @@
                             return t
                         }),
                         lobbyId: null != i ? i.id : void 0,
-                        displayUserMode: S.default.getDisplayUserMode(),
-                        displayNameMode: S.default.getDisplayNameMode(),
-                        avatarSizeMode: S.default.getAvatarSizeMode(),
+                        displayUserMode: E.default.getDisplayUserMode(),
+                        displayNameMode: E.default.getDisplayNameMode(),
+                        avatarSizeMode: E.default.getAvatarSizeMode(),
                         application: null != y ? s.default.getApplication(null !== (t = null === (e = c.default.getGameByGameData(y)) || void 0 === e ? void 0 : e.id) && void 0 !== t ? t : "") : null,
                         streamApplication: (0, r.default)(y),
                         stream: C,
-                        streamMetadata: I,
+                        streamMetadata: N,
                         hasStream: !1
                     }
                 })(v.VoiceWidget)

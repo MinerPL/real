@@ -108,14 +108,14 @@
                     recentlyUsedEmojis: S,
                     analyticsOverride: I
                 } = e, L = (0, g.useUID)(), [O, y] = l.useState(!1), {
-                    viewAndUseEnabled: P
+                    viewAndUseEnabled: b
                 } = (0, E.useInventoryGuildPacksUserExperiment)({
                     autoTrackExposure: !1
-                }), b = (0, f.useFrequentlyUsedEmojis)(t.guild_id), D = (0, r.uniqBy)([...b, ...M], "name").filter(e => !_.default.isEmojiFilteredOrLocked({
+                }), P = (0, f.useFrequentlyUsedEmojis)(t.guild_id), D = (0, r.uniqBy)([...P, ...M], "name").filter(e => !_.default.isEmojiFilteredOrLocked({
                     emoji: e,
                     channel: t,
                     intention: A,
-                    canViewAndUsePackEmoji: P
+                    canViewAndUsePackEmoji: b
                 })).slice(0, T.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT);
                 null != S && S.length > 0 && D.splice(D.length - 1, 1, S[0]);
                 let U = e => {
@@ -176,7 +176,7 @@
                                         emoji: e,
                                         channel: t,
                                         intention: v.EmojiIntention.CHAT,
-                                        canViewAndUsePackEmoji: P
+                                        canViewAndUsePackEmoji: b
                                     });
                                     return (0, a.jsx)("div", {
                                         className: N.slot,

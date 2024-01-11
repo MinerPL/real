@@ -1,14 +1,14 @@
             "use strict";
 
-            function s(e, t) {
+            function n(e, t) {
                 return !t && (t = e.slice(0)), Object.freeze(Object.defineProperties(e, {
                     raw: {
                         value: Object.freeze(t)
                     }
                 }))
             }
-            n.r(t), n.d(t, {
+            r.r(t), r.d(t, {
                 _: function() {
-                    return s
+                    return n
                 }
             })

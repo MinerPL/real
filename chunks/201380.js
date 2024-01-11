@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 MoreVoiceUser: function() {
-                    return b
+                    return P
                 },
                 AudienceVoiceUser: function() {
                     return D
@@ -40,14 +40,14 @@
                 L = n("171644"),
                 O = n("706530"),
                 y = n("782340"),
-                P = n("375674");
+                b = n("375674");
 
-            function b(e) {
+            function P(e) {
                 let {
                     numUsers: t
                 } = e;
                 return (0, a.jsx)("div", {
-                    className: P.moreContainer,
+                    className: b.moreContainer,
                     children: (0, a.jsxs)(o.Text, {
                         color: "text-muted",
                         variant: "text-sm/medium",
@@ -64,13 +64,13 @@
                     count: t
                 });
                 return (0, a.jsxs)("div", {
-                    className: i(P.audienceContainer, {
-                        [P.audienceContainerCollapsed]: n
+                    className: i(b.audienceContainer, {
+                        [b.audienceContainerCollapsed]: n
                     }),
                     children: [(0, a.jsx)("div", {
-                        className: P.audienceIconContainer,
+                        className: b.audienceIconContainer,
                         children: (0, a.jsx)(M.default, {
-                            className: P.audienceIcon
+                            className: b.audienceIcon
                         })
                     }), (0, a.jsx)(o.Text, {
                         color: "text-muted",
@@ -97,7 +97,7 @@
                         user: s,
                         channel: i
                     } = this.props, r = (0, a.jsx)("div", {
-                        className: P.draggable,
+                        className: b.draggable,
                         "data-dnd-name": i.name,
                         onMouseEnter: l ? void 0 : this.handleMouseEnter,
                         onMouseLeave: l ? void 0 : this.handleHidePreview,
@@ -248,7 +248,7 @@
                             isSelf: j
                         } = this.props, {
                             userPopoutOpen: O
-                        } = this.state, b = L.GAME_CONSOLE_SESSIONS.has(null != n ? n : ""), D = {
+                        } = this.state, P = L.GAME_CONSOLE_SESSIONS.has(null != n ? n : ""), D = {
                             user: f,
                             speaking: c,
                             mute: r,
@@ -269,11 +269,11 @@
                             voicePlatform: l,
                             embeddedApplication: x,
                             avatarContainerClass: i({
-                                [P.userAvatar]: !0
+                                [b.userAvatar]: !0
                             }),
-                            disabled: t && !b,
+                            disabled: t && !P,
                             selected: O,
-                            onClick: b ? void 0 : this.handleClickUser,
+                            onClick: P ? void 0 : this.handleClickUser,
                             onDoubleClick: this.handleWatchStream,
                             onContextMenu: this.handleUserContextMenu,
                             guildId: N.guild_id,

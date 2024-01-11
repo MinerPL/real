@@ -18,16 +18,16 @@
                 c = n("151426"),
                 f = n("77078"),
                 E = n("913144"),
-                h = n("206230"),
-                _ = n("510889"),
+                _ = n("206230"),
+                h = n("510889"),
                 S = n("826267"),
                 T = n("599110"),
                 p = n("659500"),
                 N = n("150938"),
                 I = n("805614"),
                 m = n("64318"),
-                g = n("474282"),
-                A = n("970268"),
+                A = n("474282"),
+                g = n("970268"),
                 C = n("49111"),
                 R = n("782340"),
                 M = n("930391");
@@ -40,7 +40,7 @@
                     setSeenTutorial: r,
                     closePopout: O,
                     badgeState: v
-                } = e, D = a.useRef(null), [y, x] = (0, A.default)(D), {
+                } = e, D = a.useRef(null), [y, x] = (0, g.default)(D), {
                     loadState: P,
                     channels: U
                 } = y, {
@@ -88,8 +88,8 @@
                 }, []), a.useEffect(() => (E.default.subscribe("CONNECTION_OPEN", O), () => {
                     E.default.unsubscribe("CONNECTION_OPEN", O)
                 }), [O]);
-                let j = (0, d.useStateFromStores)([h.default], () => h.default.messageGroupSpacing),
-                    G = (0, _.default)("unreads", D);
+                let j = (0, d.useStateFromStores)([_.default], () => _.default.messageGroupSpacing),
+                    G = (0, h.default)("unreads", D);
                 if (0 === U.length) {
                     var k;
                     return (0, l.jsxs)("div", {
@@ -132,11 +132,11 @@
                                         D.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
                                     },
                                     ...a,
-                                    onScroll: P === A.LoadState.Done ? void 0 : b,
+                                    onScroll: P === g.LoadState.Done ? void 0 : b,
                                     className: M.scroller,
                                     children: [s ? (0, l.jsx)(L, {
                                         setSeenTutorial: r
-                                    }) : null, (0, g.default)(U, x, n), P === A.LoadState.Done ? null : (0, l.jsx)(f.Spinner, {
+                                    }) : null, (0, A.default)(U, x, n), P === g.LoadState.Done ? null : (0, l.jsx)(f.Spinner, {
                                         className: M.spinner
                                     })]
                                 })

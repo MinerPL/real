@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 renderKeybindHint: function() {
-                    return E
+                    return S
                 },
                 renderSubtleHint: function() {
                     return v
@@ -30,10 +30,10 @@
                     onMouseEnter: g,
                     onMouseOver: g
                 }),
-                S = () => (0, l.jsx)("div", {
+                E = () => (0, l.jsx)("div", {
                     className: h.divider
                 }),
-                E = (e, t, n) => (0, l.jsx)("div", {
+                S = (e, t, n) => (0, l.jsx)("div", {
                     className: h.keybindMessage,
                     children: n.format({
                         keybind: t,
@@ -99,11 +99,11 @@
                     if ("function" == typeof e) {
                         let i = e(n, t);
                         return null != i ? (0, l.jsxs)(s.Fragment, {
-                            children: [(0, l.jsx)(S, {}), i]
+                            children: [(0, l.jsx)(E, {}), i]
                         }, "hint-custom") : null
                     }
                     return (0, l.jsxs)(s.Fragment, {
-                        children: [(0, l.jsx)(S, {}), (0, l.jsx)("div", {
+                        children: [(0, l.jsx)(E, {}), (0, l.jsx)("div", {
                             className: "string" == typeof e ? h.hintText : void 0,
                             children: e
                         }, "hint-text")]
@@ -128,7 +128,7 @@
                     if (null != e) {
                         let t = e(u, r);
                         return null != t ? (0, l.jsxs)(s.Fragment, {
-                            children: [(0, l.jsx)(S, {}), t]
+                            children: [(0, l.jsx)(E, {}), t]
                         }, "footer-custom-content") : null
                     }
                     if (null != i || null != a) {
@@ -141,7 +141,7 @@
                                 e = o = d.Button.Colors.WHITE, u = d.Button.Looks.OUTLINED
                         }
                         return (0, l.jsxs)(s.Fragment, {
-                            children: [(0, l.jsx)(S, {}), (0, l.jsxs)("div", {
+                            children: [(0, l.jsx)(E, {}), (0, l.jsxs)("div", {
                                 className: h.buttonContainer,
                                 children: [null != i ? (0, l.jsx)(d.Button, {
                                     fullWidth: !0,

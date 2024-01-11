@@ -40,7 +40,7 @@
                     channel: i,
                     sessionId: o,
                     nick: S
-                } = e, x = s.id, j = (0, r.useStateFromStores)([E.default], () => E.default.getId() === x, [x]), [L, O, y] = (0, r.useStateFromStoresArray)([g.default], () => j ? [!g.default.isSupported() || g.default.isSelfMute() || g.default.isSelfMutedTemporarily(), g.default.isSelfDeaf(), !1] : [!g.default.isSupported() || g.default.isLocalMute(x), !1, g.default.isLocalVideoDisabled(x)], [j, x]), P = (0, r.useStateFromStores)([T.default], () => T.default.isPrioritySpeaker(x)), b = (0, u.default)({
+                } = e, x = s.id, j = (0, r.useStateFromStores)([E.default], () => E.default.getId() === x, [x]), [L, O, y] = (0, r.useStateFromStoresArray)([g.default], () => j ? [!g.default.isSupported() || g.default.isSelfMute() || g.default.isSelfMutedTemporarily(), g.default.isSelfDeaf(), !1] : [!g.default.isSupported() || g.default.isLocalMute(x), !1, g.default.isLocalVideoDisabled(x)], [j, x]), b = (0, r.useStateFromStores)([T.default], () => T.default.isPrioritySpeaker(x)), P = (0, u.default)({
                     userId: x,
                     checkSoundSharing: !0
                 }), D = (0, r.useStateFromStores)([C.default], () => C.default.isGuestOrLurker(i.guild_id, x)), U = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
@@ -56,7 +56,7 @@
                 }), W = (0, r.useStateFromStores)([_.default, h.default], () => G ? j ? h.default.getHangStatusActivity() : _.default.findActivity(s.id, e => e.type === M.ActivityTypes.HANG_STATUS) : null);
                 return (0, a.jsx)(p.default, {
                     shakeLocation: R.ShakeLocation.VOICE_USER,
-                    isShaking: b,
+                    isShaking: P,
                     children: (0, a.jsx)(A.default, {
                         ...e,
                         nick: null != S ? S : B,
@@ -67,8 +67,8 @@
                         localVideoDisabled: y,
                         mute: n || L,
                         deaf: l || O,
-                        speaking: b,
-                        priority: P,
+                        speaking: P,
+                        priority: b,
                         embeddedApplication: w[0],
                         isStreaming: null != F && F.channelId === i.id,
                         isWatching: null != k && k.state !== M.ApplicationStreamStates.ENDED,

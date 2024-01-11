@@ -34,8 +34,8 @@
                 L = n("58351"),
                 O = n("430312"),
                 y = n("789321"),
-                P = n("627601"),
-                b = n("10532"),
+                b = n("627601"),
+                P = n("10532"),
                 D = n("915712"),
                 U = n("369869"),
                 w = n("802279"),
@@ -130,7 +130,7 @@
                         eL = !en.bot && null != eI && eI > 0,
                         eO = (0, H.useShouldShowUserPopoutCollectiblesUpsell)({
                             popoutUser: en,
-                            source: P.UserPopoutUpsellSource.PROFILE_PANEL
+                            source: b.UserPopoutUpsellSource.PROFILE_PANEL
                         }),
                         ey = (0, f.default)();
                     l.useEffect(() => {
@@ -150,12 +150,12 @@
                             status: eC
                         })
                     }, [el, eE, ef, ep, eC, eu]);
-                    let eP = null == ev ? void 0 : ev.map(e => (0, a.jsx)(z.default, {
+                    let eb = null == ev ? void 0 : ev.map(e => (0, a.jsx)(z.default, {
                             connection: e,
                             user: en,
                             theme: ey
                         }, e.guild.id)),
-                        eb = null == eT ? void 0 : eT.map(e => (0, a.jsx)(Y.default, {
+                        eP = null == eT ? void 0 : eT.map(e => (0, a.jsx)(Y.default, {
                             connection: e
                         }, e.key)),
                         eD = es.map(e => (0, a.jsx)(G.default, {
@@ -163,8 +163,8 @@
                             integration: e
                         }, e.application.id)),
                         eU = l.useCallback(() => {
-                            !en.bot && !eN && null == eb && (0, c.fetchMutualFriends)(en.id)
-                        }, [eN, eb, en.id, en.bot]),
+                            !en.bot && !eN && null == eP && (0, c.fetchMutualFriends)(en.id)
+                        }, [eN, eP, en.id, en.bot]),
                         ew = l.useCallback(() => $(!0), []),
                         eF = l.useCallback(() => $(!1), []);
                     return eu ? (0, a.jsx)("aside", {
@@ -177,7 +177,7 @@
                             useDefaultClientTheme: !0,
                             children: [eO.shouldShow && (0, a.jsx)(y.default, {
                                 user: en,
-                                upsellSource: P.UserPopoutUpsellSource.PROFILE_PANEL,
+                                upsellSource: b.UserPopoutUpsellSource.PROFILE_PANEL,
                                 displayProfile: el,
                                 isInSidebar: !0,
                                 ...eO
@@ -196,7 +196,7 @@
                                     }), (0, a.jsx)(w.default, {
                                         customStatusActivity: ep,
                                         animate: Q
-                                    }), (0, a.jsx)(b.default, {}), (0, a.jsx)(U.default, {
+                                    }), (0, a.jsx)(P.default, {}), (0, a.jsx)(U.default, {
                                         bio: null == el ? void 0 : el.bio,
                                         hidePersonalInformation: e_,
                                         animateOnHover: !0,
@@ -204,7 +204,7 @@
                                     }), !en.isSystemUser() && (0, a.jsxs)(a.Fragment, {
                                         children: [(0, a.jsx)(F.default, {
                                             userId: r
-                                        }), (0, a.jsx)(b.default, {})]
+                                        }), (0, a.jsx)(P.default, {})]
                                     }), (0, a.jsx)(k.default, {
                                         user: en,
                                         setNote: !1,
@@ -230,7 +230,7 @@
                                             count: null == ev ? void 0 : ev.length
                                         }),
                                         isLoadingHeader: ex,
-                                        children: eP
+                                        children: eb
                                     }) : null, eL ? (0, a.jsx)(W.default, {
                                         className: i(q.mutualFriendsList, {
                                             [q.mutualFriendsDivider]: ej
@@ -244,7 +244,7 @@
                                         onFocus: eU,
                                         onHover: eU,
                                         itemType: W.ListType.MutualFriendsList,
-                                        children: eb
+                                        children: eP
                                     }) : null]
                                 }), (0, a.jsx)(O.default.Inner, {
                                     className: i(q.profilePanelConnections, q.appListThemedContainer),

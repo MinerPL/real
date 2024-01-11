@@ -1,25 +1,25 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return s
                 },
                 getChannelVideoLimit: function() {
-                    return o
+                    return r
                 }
             });
             var a = n("446674"),
-                r = n("305961"),
+                l = n("305961"),
                 i = n("316133"),
-                l = n("49111");
+                u = n("49111");
 
-            function u(e) {
-                return (0, a.useStateFromStoresObject)([i.default, r.default], () => {
+            function s(e) {
+                return (0, a.useStateFromStoresObject)([i.default, l.default], () => {
                     let t = i.default.countVoiceStatesForChannel(e.id),
-                        n = r.default.getGuild(e.getGuildId());
+                        n = l.default.getGuild(e.getGuildId());
                     return null == n ? {
                         reachedLimit: !1,
                         limit: -1
-                    } : e.type === l.ChannelTypes.GUILD_STAGE_VOICE ? {
+                    } : e.type === u.ChannelTypes.GUILD_STAGE_VOICE ? {
                         reachedLimit: t > n.maxStageVideoChannelUsers,
                         limit: n.maxStageVideoChannelUsers
                     } : {
@@ -29,13 +29,13 @@
                 }, [e])
             }
 
-            function o(e) {
+            function r(e) {
                 let t = i.default.countVoiceStatesForChannel(e.id),
-                    n = r.default.getGuild(e.getGuildId());
+                    n = l.default.getGuild(e.getGuildId());
                 return null == n ? {
                     reachedLimit: !1,
                     limit: -1
-                } : e.type === l.ChannelTypes.GUILD_STAGE_VOICE ? {
+                } : e.type === u.ChannelTypes.GUILD_STAGE_VOICE ? {
                     reachedLimit: t > n.maxStageVideoChannelUsers,
                     limit: n.maxStageVideoChannelUsers
                 } : {

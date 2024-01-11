@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return A
                 }
             }), n("222007");
             var l = n("37983"),
@@ -15,8 +15,8 @@
                 c = n("396539"),
                 f = n("673699"),
                 E = n("845579"),
-                h = n("211248"),
-                _ = n("11539"),
+                _ = n("211248"),
+                h = n("11539"),
                 S = n("599110"),
                 T = n("64318"),
                 p = n("49111"),
@@ -27,24 +27,24 @@
                 let {
                     onClick: t
                 } = e;
-                return (0, l.jsx)(h.default, {
+                return (0, l.jsx)(_.default, {
                     tooltip: N.default.Messages.MARK_ALL_AS_READ,
-                    color: h.CircleIconButtonColors.SECONDARY,
-                    icon: (0, l.jsx)(_.default, {}),
+                    color: _.CircleIconButtonColors.SECONDARY,
+                    icon: (0, l.jsx)(h.default, {}),
                     onClick: t
                 })
             }
 
-            function g(e) {
+            function A(e) {
                 let {
                     setTab: t,
                     badgeState: n,
-                    closePopout: h
+                    closePopout: _
                 } = e, {
-                    initialized: _,
+                    initialized: h,
                     items: N,
-                    loading: g,
-                    loadMore: A
+                    loading: A,
+                    loadMore: g
                 } = (0, c.useDesktopNotificationCenterItemsLoader)(), C = (0, i.useStateFromStores)([o.default], () => o.default.localItems), R = a.useMemo(() => [...[...N, ...C].sort((e, t) => -1 * s.default.compare(e.id, t.id))], [N, C]), M = N.length > 0 ? N[0] : null, O = E.NotificationCenterAckedBeforeId.useSetting(), L = a.useMemo(() => {
                     let e = null != M && 0 >= s.default.compare(M.id, O);
                     if (e) return !1;
@@ -60,7 +60,7 @@
                         tab: r.InboxTab.FOR_YOU,
                         setTab: t,
                         badgeState: n,
-                        closePopout: h,
+                        closePopout: _,
                         children: L ? (0, l.jsx)(m, {
                             onClick: () => {
                                 null != M && (E.NotificationCenterAckedBeforeId.updateSetting(M.id), S.default.track(p.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
@@ -69,10 +69,10 @@
                             }
                         }) : null
                     }), (0, l.jsx)(f.default, {
-                        initialized: _,
+                        initialized: h,
                         items: R,
-                        loading: g,
-                        loadMore: A
+                        loading: A,
+                        loadMore: g
                     })]
                 })
             }

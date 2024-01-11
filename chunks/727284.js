@@ -1,17 +1,17 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return s
                 }
             });
             var a = n("37983");
             n("884691");
-            var r = n("77078"),
+            var l = n("77078"),
                 i = n("845579"),
-                l = n("49111");
+                u = n("49111");
 
-            function u(e, t) {
-                i.AlwaysPreviewVideo.getSetting() ? (0, r.openModalLazy)(async () => {
+            function s(e, t) {
+                i.AlwaysPreviewVideo.getSetting() ? (0, l.openModalLazy)(async () => {
                     let {
                         default: t
                     } = await n.el("381736").then(n.bind(n, "381736"));
@@ -22,6 +22,6 @@
                     })
                 }, {
                     modalKey: "camera-preview",
-                    contextKey: t === l.AppContext.POPOUT ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT
+                    contextKey: t === u.AppContext.POPOUT ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT
                 }) : null == e || e()
             }

@@ -18,15 +18,15 @@
                 p = n("539405"),
                 g = n("352674"),
                 m = n("125667"),
-                S = n("767993"),
-                E = n("738073"),
+                E = n("767993"),
+                S = n("738073"),
                 v = n("685888"),
                 y = n("533466"),
                 C = n("710216"),
-                I = n("348652"),
-                N = n("306588"),
+                N = n("348652"),
+                O = n("306588"),
                 T = n("850391"),
-                O = n("149022"),
+                I = n("149022"),
                 _ = n("228800"),
                 A = n("681060"),
                 x = n("884351"),
@@ -36,9 +36,9 @@
                 D = n("42203"),
                 j = n("474643"),
                 w = n("247013"),
-                P = n("305961"),
-                k = n("377253"),
-                b = n("18494"),
+                k = n("305961"),
+                b = n("377253"),
+                P = n("18494"),
                 V = n("162771"),
                 U = n("697218"),
                 B = n("227602"),
@@ -89,7 +89,7 @@
                             let {
                                 closePopout: t
                             } = e;
-                            return r(null != s, "ConnectedChannelTextArea.render - renderPopout: contentWarningProps cannot be null"), (0, i.jsx)(S.default, {
+                            return r(null != s, "ConnectedChannelTextArea.render - renderPopout: contentWarningProps cannot be null"), (0, i.jsx)(E.default, {
                                 onClose: t,
                                 ...s
                             })
@@ -114,10 +114,10 @@
                             focused: a
                         })
                     });
-                    return e.isPrivate() ? (0, i.jsx)(I.default, {
+                    return e.isPrivate() ? (0, i.jsx)(N.default, {
                         channel: e,
                         children: d
-                    }, e.id) : (0, i.jsx)(N.default, {
+                    }, e.id) : (0, i.jsx)(O.default, {
                         channel: e,
                         children: d
                     }, e.id)
@@ -130,13 +130,13 @@
                                 textValue: n
                             } = t.state,
                             i = j.default.getDraft(e.channel.id, j.DraftType.ChannelMessage);
-                        n !== i && "" === i && t.setState((0, O.createState)(i))
+                        n !== i && "" === i && t.setState((0, I.createState)(i))
                     }, this.handleTextareaKeyDown = e => {
                         if (e.which === q.KeyboardKeys.ARROW_UP && !e.shiftKey && !e.altKey && !e.ctrlKey && !e.metaKey && 0 === this.state.textValue.length) {
                             e.preventDefault();
                             let {
                                 channel: t
-                            } = this.props, n = k.default.getLastEditableMessage(t.id);
+                            } = this.props, n = b.default.getLastEditableMessage(t.id);
                             null != n && h.default.startEditMessage(t.id, n.id, n.content)
                         }
                     }, this.handleTextareaChange = (e, t, n) => {
@@ -180,7 +180,7 @@
                                 shouldRefocus: !1
                             };
                             let o = h.default.getSendMessageOptionsForReply(i);
-                            return (h.default.sendMessage(n.id, x.default.parse(n, t), !0, o), this.setState((0, O.createEmptyState)()), (0, L.deletePendingReply)(n.id), a) ? (p.default.deactivateAllRegions(), {
+                            return (h.default.sendMessage(n.id, x.default.parse(n, t), !0, o), this.setState((0, I.createEmptyState)()), (0, L.deletePendingReply)(n.id), a) ? (p.default.deactivateAllRegions(), {
                                 shouldClear: !1,
                                 shouldRefocus: !1
                             }) : {
@@ -201,12 +201,12 @@
                         channel: this.props.channel,
                         draftType: j.DraftType.ChannelMessage,
                         editorTextContent: this.state.textValue,
-                        setValue: e => this.handleTextareaChange(null, e, (0, O.toRichValue)(e)),
+                        setValue: e => this.handleTextareaChange(null, e, (0, I.toRichValue)(e)),
                         canOnlyUseTextCommands: e
                     }), j.default.addChangeListener(this.draftDidChange);
                     let n = j.default.getDraft(e.channel.id, j.DraftType.ChannelMessage);
                     this.state = {
-                        ...(0, O.createState)(n),
+                        ...(0, I.createState)(n),
                         focused: !1,
                         contentWarningProps: null
                     }, Y.ComponentDispatch.subscribe(q.ComponentActions.TEXTAREA_FOCUS, this.focusInput), Y.ComponentDispatch.subscribe(q.ComponentActions.TEXTAREA_BLUR, this.blurInput)
@@ -254,9 +254,9 @@
                     } = this.props;
                     if (null == t) return null;
                     let g = r || f,
-                        S = !l && null != t && t.isNSFW(),
+                        E = !l && null != t && t.isNSFW(),
                         v = !g || d;
-                    return e = S && null != o ? (0, i.jsx)(E.default, {
+                    return e = E && null != o ? (0, i.jsx)(S.default, {
                         guild: o
                     }) : (0, i.jsx)(R.default, {
                         channel: t,
@@ -283,7 +283,7 @@
                                     }),
                                     children: e
                                 })
-                            }), S ? null : (0, i.jsx)("div", {
+                            }), E ? null : (0, i.jsx)("div", {
                                 children: v ? (0, i.jsx)(W.default.Background, {
                                     opacityOverride: r || f ? null : et,
                                     children: (0, i.jsxs)("div", {
@@ -432,13 +432,13 @@
                 let {
                     contained: t = !1,
                     ...n
-                } = e, a = (0, d.useStateFromStores)([V.default], () => V.default.getGuildId()), l = (0, d.useStateFromStores)([b.default], () => b.default.getChannelId(a)), s = (0, d.useStateFromStores)([D.default], () => D.default.getChannel(l)), o = (0, d.useStateFromStores)([B.default], () => B.default.getOverlayChatKeybind()), r = null != o ? (0, K.toString)(o.shortcut, !0) : "]", [u, c, f] = (0, d.useStateFromStoresArray)([F.default], () => [F.default.getTextWidgetOpacity(), F.default.getActiveRegions(), !t && F.default.isPreviewingInGame()]), h = (0, d.useStateFromStores)([P.default], () => P.default.getGuild(a)), p = (0, d.useStateFromStores)([w.default], () => null != a && w.default.didAgree(a)), g = null != s && s.isPrivate() ? s.getRecipientId() : null, m = (0, d.useStateFromStores)([M.default], () => null != l ? M.default.getPendingReply(l) : void 0), S = (0, d.useStateFromStores)([U.default], () => null != g ? U.default.getUser(g) : null), {
-                    placeholder: E
+                } = e, a = (0, d.useStateFromStores)([V.default], () => V.default.getGuildId()), l = (0, d.useStateFromStores)([P.default], () => P.default.getChannelId(a)), s = (0, d.useStateFromStores)([D.default], () => D.default.getChannel(l)), o = (0, d.useStateFromStores)([B.default], () => B.default.getOverlayChatKeybind()), r = null != o ? (0, K.toString)(o.shortcut, !0) : "]", [u, c, f] = (0, d.useStateFromStoresArray)([F.default], () => [F.default.getTextWidgetOpacity(), F.default.getActiveRegions(), !t && F.default.isPreviewingInGame()]), h = (0, d.useStateFromStores)([k.default], () => k.default.getGuild(a)), p = (0, d.useStateFromStores)([w.default], () => null != a && w.default.didAgree(a)), g = null != s && s.isPrivate() ? s.getRecipientId() : null, m = (0, d.useStateFromStores)([M.default], () => null != l ? M.default.getPendingReply(l) : void 0), E = (0, d.useStateFromStores)([U.default], () => null != g ? U.default.getUser(g) : null), {
+                    placeholder: S
                 } = (0, v.default)(s);
                 return null != s && null != h && q.ChannelTypesSets.GUILD_THREADS_ONLY.has(s.type) ? (0, i.jsx)(y.default, {}) : (0, i.jsx)(ei, {
                     guild: h,
                     channel: s,
-                    user: S,
+                    user: E,
                     opacity: u,
                     nsfwAgree: p,
                     chatKeybind: r,
@@ -446,7 +446,7 @@
                     isPreviewingInGame: f,
                     pendingReply: m,
                     contained: t,
-                    placeholder: E,
+                    placeholder: S,
                     widget: q.OverlayWidgets.TEXT,
                     ...n
                 })

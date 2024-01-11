@@ -1,57 +1,57 @@
             "use strict";
-            t.r(n), t.d(n, {
+            n.r(t), n.d(t, {
                 default: function() {
                     return f
                 }
             });
-            var a = t("37983");
-            t("884691");
-            var u = t("446674"),
-                l = t("77078"),
-                s = t("242757"),
-                r = t("923959"),
-                i = t("957255"),
-                d = t("76539"),
-                c = t("49111"),
-                o = t("782340");
+            var a = n("37983");
+            n("884691");
+            var l = n("446674"),
+                i = n("77078"),
+                u = n("242757"),
+                s = n("923959"),
+                r = n("957255"),
+                d = n("76539"),
+                o = n("49111"),
+                c = n("782340");
 
             function f(e) {
                 let {
-                    source: n,
-                    guild: t,
+                    source: t,
+                    guild: n,
                     channel: a,
-                    stageInstance: l
-                } = e, d = (0, u.useStateFromStores)([r.default], () => r.default.getDefaultChannel(t.id, !0, c.Permissions.CREATE_INSTANT_INVITE)), o = (0, u.useStateFromStores)([i.default], () => (0, s.canViewInviteModal)(i.default, t, a, l)), f = E(n, t, o && null != a ? a : d), I = _(n);
-                return null == a && n === c.InstantInviteSources.GUILD_CONTEXT_MENU ? null : o || null != d ? f : I
+                    stageInstance: i
+                } = e, d = (0, l.useStateFromStores)([s.default], () => s.default.getDefaultChannel(n.id, !0, o.Permissions.CREATE_INSTANT_INVITE)), c = (0, l.useStateFromStores)([r.default], () => (0, u.canViewInviteModal)(r.default, n, a, i)), f = _(t, n, c && null != a ? a : d), p = E(t);
+                return null == a && t === o.InstantInviteSources.GUILD_CONTEXT_MENU ? null : c || null != d ? f : p
             }
-            let E = (e, n, u) => (0, a.jsx)(l.MenuItem, {
+            let _ = (e, t, l) => (0, a.jsx)(i.MenuItem, {
                     id: "invite-people",
-                    label: o.default.Messages.INVITE_PEOPLE,
+                    label: c.default.Messages.INVITE_PEOPLE,
                     color: "brand",
-                    icon: e === c.InstantInviteSources.GUILD_HEADER ? d.default : void 0,
-                    action: () => (0, l.openModalLazy)(async () => {
+                    icon: e === o.InstantInviteSources.GUILD_HEADER ? d.default : void 0,
+                    action: () => (0, i.openModalLazy)(async () => {
                         let {
-                            default: l
-                        } = await t.el("310688").then(t.bind(t, "310688"));
-                        return t => (0, a.jsx)(l, {
-                            ...t,
-                            guild: n,
-                            channel: u,
+                            default: i
+                        } = await n.el("310688").then(n.bind(n, "310688"));
+                        return n => (0, a.jsx)(i, {
+                            ...n,
+                            guild: t,
+                            channel: l,
                             source: e
                         })
                     })
                 }),
-                _ = e => (0, a.jsx)(l.MenuItem, {
+                E = e => (0, a.jsx)(i.MenuItem, {
                     id: "invite-people",
-                    label: o.default.Messages.INVITE_PEOPLE,
+                    label: c.default.Messages.INVITE_PEOPLE,
                     color: "brand",
-                    icon: e === c.InstantInviteSources.GUILD_HEADER ? d.default : void 0,
-                    action: () => (0, l.openModalLazy)(async () => {
+                    icon: e === o.InstantInviteSources.GUILD_HEADER ? d.default : void 0,
+                    action: () => (0, i.openModalLazy)(async () => {
                         let {
                             default: e
-                        } = await t.el("973132").then(t.bind(t, "973132"));
-                        return n => (0, a.jsx)(e, {
-                            ...n
+                        } = await n.el("973132").then(n.bind(n, "973132"));
+                        return t => (0, a.jsx)(e, {
+                            ...t
                         })
                     })
                 })

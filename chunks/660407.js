@@ -15,16 +15,16 @@
                 c = n("267363"),
                 f = n("716241"),
                 E = n("739034"),
-                h = n("393414"),
-                _ = n("42203"),
+                _ = n("393414"),
+                h = n("42203"),
                 S = n("10802"),
                 T = n("211248"),
                 p = n("461380"),
                 N = n("36694"),
                 I = n("11539"),
                 m = n("815978"),
-                g = n("814744"),
-                A = n("879165"),
+                A = n("814744"),
+                g = n("879165"),
                 C = n("609023"),
                 R = n("49111"),
                 M = n("782340"),
@@ -78,7 +78,7 @@
                     onJump: n,
                     deleteChannel: s,
                     toggle: i
-                } = e, r = (0, o.useStateFromStores)([_.default], () => _.default.getChannel(t.channelId)), E = (0, o.useStateFromStores)([S.default], () => null == t.guildId || S.default.isSubscribedToThreads(t.guildId));
+                } = e, r = (0, o.useStateFromStores)([h.default], () => h.default.getChannel(t.channelId)), E = (0, o.useStateFromStores)([S.default], () => null == t.guildId || S.default.isSubscribedToThreads(t.guildId));
                 if (a.useEffect(() => {
                         null != r && t.isFullyLoaded && !t.hasError && !t.collapsed && "messages" === t.type && 0 === t.messages.length && d.default.wait(() => {
                             (0, c.ack)(t.channelId, !0), s(t.channelId)
@@ -95,12 +95,12 @@
                         guild_id: t.guildId
                     });
                     let a = null != l ? l : t.oldestUnreadMessageId;
-                    (0, h.transitionTo)(R.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : a)), n(e)
+                    (0, _.transitionTo)(R.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : a)), n(e)
                 };
                 return (0, l.jsx)("div", {
                     className: O.channel,
                     children: (0, l.jsx)(u.HeadingLevel, {
-                        component: (0, l.jsxs)(g.default, {
+                        component: (0, l.jsxs)(A.default, {
                             channel: r,
                             gotoChannel: T,
                             mentionCount: t.mentionCount,
@@ -118,7 +118,7 @@
                             channel: t,
                             channelRecord: r,
                             gotoChannel: T
-                        }) : "forum" === t.type ? (0, l.jsx)(A.default, {
+                        }) : "forum" === t.type ? (0, l.jsx)(g.default, {
                             channel: t,
                             channelRecord: r,
                             deleteChannel: s

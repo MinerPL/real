@@ -32,8 +32,8 @@
                 L = n("876534"),
                 O = n("843455"),
                 y = n("782340"),
-                P = n("455518");
-            let b = i.memo(function(e) {
+                b = n("455518");
+            let P = i.memo(function(e) {
                     let {
                         toggleRequestToSpeakSidebar: t,
                         chatOpen: n
@@ -44,8 +44,8 @@
                     });
                     return (0, s.jsxs)(x.default, {
                         toolbar: a,
-                        className: o(P.headerContainer, {
-                            [P.chatOpen]: n
+                        className: o(b.headerContainer, {
+                            [b.chatOpen]: n
                         }),
                         children: [(0, s.jsx)(x.default.Icon, {
                             icon: v.default,
@@ -85,7 +85,7 @@
                         (0, N.setUserSuppress)(t, a.user.id, !1)
                     }
 
-                    function b() {
+                    function P() {
                         (0, N.setUserSuppress)(t, a.user.id, !0)
                     }
                     let D = e => {
@@ -103,7 +103,7 @@
                         })
                     };
                     return (0, s.jsxs)("div", {
-                        className: P.participantRowContainer,
+                        className: b.participantRowContainer,
                         children: [(0, s.jsx)(f.Popout, {
                             preload: () => (0, E.default)(a.user.id, a.user.getAvatarURL(t.guild_id, 80), {
                                 guildId: t.guild_id,
@@ -120,21 +120,21 @@
                             children: e => {
                                 var t;
                                 return (0, s.jsxs)(f.Clickable, {
-                                    className: P.participantMemberContainer,
+                                    className: b.participantMemberContainer,
                                     onContextMenu: D,
                                     ...e,
                                     children: [(0, s.jsx)(p.default, {
                                         size: f.AvatarSizes.SIZE_40,
-                                        className: P.participantAvatar,
+                                        className: b.participantAvatar,
                                         user: a.user,
                                         isMobile: v,
                                         status: x
                                     }), (0, s.jsxs)("div", {
-                                        className: P.participantTextContainer,
+                                        className: b.participantTextContainer,
                                         children: [(0, s.jsx)(f.NameWithRole, {
                                             name: a.userNick,
                                             color: null !== (t = null == A ? void 0 : A.colorString) && void 0 !== t ? t : void 0,
-                                            className: P.participantName
+                                            className: b.participantName
                                         }), (0, s.jsx)(f.Text, {
                                             variant: "text-xs/normal",
                                             color: "header-secondary",
@@ -147,7 +147,7 @@
                             text: L ? y.default.Messages.REQUEST_TO_SPEAK_INVITATION_SEND : y.default.Messages.REQUEST_TO_SPEAK_ACCEPT,
                             children: e => (0, s.jsx)(f.Button, {
                                 ...e,
-                                innerClassName: P.buttonContainer,
+                                innerClassName: b.buttonContainer,
                                 look: f.Button.Looks.BLANK,
                                 size: f.Button.Sizes.NONE,
                                 onClick: O,
@@ -161,10 +161,10 @@
                             text: y.default.Messages.REQUEST_TO_SPEAK_DECLINE,
                             children: e => (0, s.jsx)(f.Button, {
                                 ...e,
-                                innerClassName: o(P.buttonContainer, P.buttonMargin),
+                                innerClassName: o(b.buttonContainer, b.buttonMargin),
                                 look: f.Button.Looks.BLANK,
                                 size: f.Button.Sizes.NONE,
-                                onClick: b,
+                                onClick: P,
                                 children: (0, s.jsx)(I.default, {
                                     width: 16,
                                     height: 16
@@ -178,7 +178,7 @@
                         channel: t
                     } = e, [n, a] = (0, j.useRequestToSpeakPermission)(t.id);
                     return (0, s.jsx)(f.FormSwitch, {
-                        className: P.toggle,
+                        className: b.toggle,
                         onChange: a,
                         value: n,
                         children: y.default.Messages.MODERATOR_ALLOW_EVERYONE_RAISE_HAND
@@ -186,14 +186,14 @@
                 }),
                 w = i.memo(function() {
                     return (0, s.jsxs)("div", {
-                        className: P.emptyStateContainer,
+                        className: b.emptyStateContainer,
                         children: [(0, s.jsx)(L.default, {}), (0, s.jsx)(f.Text, {
-                            className: P.emptyStateTitle,
+                            className: b.emptyStateTitle,
                             variant: "text-lg/semibold",
                             color: "header-primary",
                             children: y.default.Messages.REQUEST_TO_SPEAK_EMPTY_LIST_TITLE
                         }), (0, s.jsx)(f.Text, {
-                            className: P.emptyStateBody,
+                            className: b.emptyStateBody,
                             variant: "text-sm/normal",
                             color: "header-secondary",
                             children: y.default.Messages.REQUEST_TO_SPEAK_EMPTY_LIST_BODY
@@ -208,14 +208,14 @@
                     chatOpen: a
                 } = e, l = (0, A.useSortedRequestToSpeakParticipants)(t.id), i = (0, c.useStateFromStores)([S.default], () => S.default.can(O.Permissions.MANAGE_CHANNELS, t) || S.default.can(O.Permissions.MANAGE_ROLES, t)), r = [i ? 1 : 0, Math.max(1, l.length)];
                 return (0, s.jsxs)("div", {
-                    className: o(P.container, {
-                        [P.chatOpen]: a
+                    className: o(b.container, {
+                        [b.chatOpen]: a
                     }),
-                    children: [(0, s.jsx)(b, {
+                    children: [(0, s.jsx)(P, {
                         toggleRequestToSpeakSidebar: n,
                         chatOpen: a
                     }), (0, s.jsx)(f.List, {
-                        className: P.contentContainer,
+                        className: b.contentContainer,
                         sections: r,
                         sectionHeight: function(e) {
                             if (1 === e) return 40;
@@ -258,7 +258,7 @@
                                 section: t
                             } = e;
                             if (1 === t) return (0, s.jsx)(f.Text, {
-                                className: P.listTitle,
+                                className: b.listTitle,
                                 variant: "text-xs/bold",
                                 color: "header-secondary",
                                 children: l.length > 0 ? y.default.Messages.REQUEST_TO_SPEAK_LIST_TITLE.format({

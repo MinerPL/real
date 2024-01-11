@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 RecentsPopout: function() {
-                    return g
+                    return A
                 }
             }), n("222007");
             var l = n("37983"),
@@ -15,8 +15,8 @@
                 c = n("913796"),
                 f = n("872173"),
                 E = n("374363"),
-                h = n("659500"),
-                _ = n("981024"),
+                _ = n("659500"),
+                h = n("981024"),
                 S = n("519540"),
                 T = n("80649"),
                 p = n("385730"),
@@ -24,12 +24,12 @@
                 I = n("49111"),
                 m = n("782340");
 
-            function g(e) {
+            function A(e) {
                 let {
                     onOpen: t,
                     onClose: n,
-                    children: g,
-                    badgeState: A,
+                    children: A,
+                    badgeState: g,
                     popoutPosition: C,
                     popoutAlign: R
                 } = e, [M, O] = a.useState(!1), [L, v] = function() {
@@ -69,7 +69,7 @@
                 }, [n, t, M]), U = a.useCallback(() => {
                     P(), v(r.InboxTab.UNREADS)
                 }, [v, P]);
-                a.useEffect(() => (h.ComponentDispatch.subscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, U), () => void h.ComponentDispatch.unsubscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, U)), [U]);
+                a.useEffect(() => (_.ComponentDispatch.subscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, U), () => void _.ComponentDispatch.unsubscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, U)), [U]);
                 let {
                     showReminders: b
                 } = d.default.useExperiment({
@@ -97,18 +97,18 @@
                     renderPopout: function() {
                         return (0, l.jsx)(o.Dialog, {
                             "aria-label": m.default.Messages.INBOX,
-                            children: L === r.InboxTab.FOR_YOU && F ? (0, l.jsx)(_.default, {
+                            children: L === r.InboxTab.FOR_YOU && F ? (0, l.jsx)(h.default, {
                                 setTab: v,
-                                badgeState: A,
+                                badgeState: g,
                                 closePopout: x
                             }) : L === r.InboxTab.MENTIONS ? (0, l.jsx)(T.default, {
                                 setTab: v,
                                 onJump: G,
-                                badgeState: A,
+                                badgeState: g,
                                 closePopout: x
                             }) : j && L === r.InboxTab.GAME_INVITES ? (0, l.jsx)(N.default, {
                                 setTab: v,
-                                badgeState: A,
+                                badgeState: g,
                                 closePopout: x
                             }) : b && L === r.InboxTab.TODOS ? (0, l.jsx)(S.default, {
                                 setTab: v,
@@ -118,7 +118,7 @@
                                 fallback: (0, l.jsx)(p.UnreadsCrashed, {
                                     setTab: v,
                                     closePopout: x,
-                                    badgeState: A
+                                    badgeState: g
                                 }),
                                 children: (0, l.jsx)(p.default, {
                                     setTab: v,
@@ -126,7 +126,7 @@
                                     showTutorial: D,
                                     setSeenTutorial: y,
                                     closePopout: x,
-                                    badgeState: A
+                                    badgeState: g
                                 })
                             })
                         })
@@ -136,7 +136,7 @@
                         let {
                             isShown: n
                         } = t;
-                        return g(P, n, e)
+                        return A(P, n, e)
                     }
                 })
             }

@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return f
+                    return T
                 }
             });
             var a = s("37983");
@@ -17,7 +17,7 @@
                 _ = s("782340"),
                 E = s("4047"),
                 I = s("230724"),
-                f = e => {
+                T = e => {
                     let {
                         className: t
                     } = e, {

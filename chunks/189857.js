@@ -72,16 +72,16 @@
                 return A.default.getDesktopType() === w.DesktopNotificationTypes.NEVER || R.default.getStatus() === w.StatusTypes.DND || !1
             }
 
-            function Q(e) {
+            function X(e) {
                 let t = y.default.getVoiceStateForChannel(e);
                 return null != t
             }
-            class X extends a.default.Store {
+            class Q extends a.default.Store {
                 initialize() {
                     this.waitFor(O.default, N.default, A.default, T.default, S.default, v.default, L.default, y.default, p.default)
                 }
             }
-            X.displayName = "NotificationStore", new X(i.default, __OVERLAY__ ? {} : {
+            Q.displayName = "NotificationStore", new Q(i.default, __OVERLAY__ ? {} : {
                 NOTIFICATIONS_SET_PERMISSION_STATE: function(e) {
                     let {
                         enabled: t
@@ -241,7 +241,7 @@
                     let {
                         instance: t
                     } = e;
-                    if (z() || !t.send_start_notification || Q(t.channel_id)) return !1;
+                    if (z() || !t.send_start_notification || X(t.channel_id)) return !1;
                     let n = O.default.getCurrentUser(),
                         a = T.default.getGuild(t.guild_id),
                         s = N.default.getChannel(t.channel_id),
@@ -270,7 +270,7 @@
                     t.notification_type === F.GuildScheduledEventNotificationTypes.EVENT_START && (t.entity_type === F.GuildScheduledEventEntityTypes.STAGE_INSTANCE || t.entity_type === F.GuildScheduledEventEntityTypes.VOICE ? ! function(e) {
                         if (z()) return !1;
                         let t = e.channel_id;
-                        if (null == t || Q(t)) return !1;
+                        if (null == t || X(t)) return !1;
                         let n = O.default.getCurrentUser(),
                             a = T.default.getGuild(e.guild_id),
                             s = N.default.getChannel(e.channel_id),

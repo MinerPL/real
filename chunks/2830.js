@@ -34,8 +34,8 @@
                 L = n("980423"),
                 O = n("191145"),
                 y = n("598785"),
-                P = n("226735"),
-                b = n("340513"),
+                b = n("226735"),
+                P = n("340513"),
                 D = n("99795"),
                 U = n("49111"),
                 w = n("782340"),
@@ -116,7 +116,7 @@
                 }, "live-indicator"))), M && G.push((0, a.jsx)(d.Popout, {
                     position: "bottom",
                     renderPopout: () => (0, a.jsx)(_.default, {
-                        children: (0, a.jsx)(b.default, {
+                        children: (0, a.jsx)(P.default, {
                             channel: n
                         })
                     }),
@@ -154,7 +154,7 @@
                             closePopout: t
                         } = e;
                         return (0, a.jsx)(_.default, {
-                            children: (0, a.jsx)(P.default, {
+                            children: (0, a.jsx)(b.default, {
                                 channelId: C,
                                 onClose: t,
                                 appContext: s,

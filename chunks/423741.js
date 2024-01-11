@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return S
                 }
             }), n("222007");
             var i = n("37983"),
@@ -18,7 +18,7 @@
                 p = n("482096");
             let g = Object.values(c.OpacityBounds).map(e => 100 * e),
                 m = (0, d.uid)();
-            class S extends a.PureComponent {
+            class E extends a.PureComponent {
                 handleUpdateBackgroundOpacity(e) {
                     o.default.setTextWidgetOpacity((0, u.default)(e / 100)), o.default.track(f.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, {
                         text_opacity_slider: e
@@ -59,6 +59,6 @@
                     super(...e), this.initialValue = 100 * this.props.opacity
                 }
             }
-            var E = l.default.connectStores([r.default], () => ({
+            var S = l.default.connectStores([r.default], () => ({
                 opacity: r.default.getTextWidgetOpacity()
-            }))(S)
+            }))(E)

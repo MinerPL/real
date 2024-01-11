@@ -15,16 +15,16 @@
                 c = n("845579"),
                 f = n("766274"),
                 E = n("697218"),
-                h = n("599110"),
-                _ = n("253981"),
+                _ = n("599110"),
+                h = n("253981"),
                 S = n("352273"),
                 T = n("360191"),
                 p = n("342176"),
                 N = n("183030"),
                 I = n("899779"),
                 m = n("778597"),
-                g = n("960082"),
-                A = n("49111"),
+                A = n("960082"),
+                g = n("49111"),
                 C = n("782340"),
                 R = n("183419"),
                 M = n("786948"),
@@ -109,21 +109,21 @@
                             return
                         }
                         if (null != r.deeplink) {
-                            let e = _.default.safeParseWithQuery(r.deeplink);
+                            let e = h.default.safeParseWithQuery(r.deeplink);
                             if (null == e) return;
                             let t = e.hostname,
                                 n = e.path;
                             if (null == t || null == n) return;
-                            if (_.default.isDiscordHostname(t)) {
+                            if (h.default.isDiscordHostname(t)) {
                                 let e = n.match("^/users/(\\d+)");
                                 null != e && 2 === e.length ? (0, d.openUserProfileModal)({
                                     userId: e[1],
                                     analyticsLocation: {
-                                        section: A.AnalyticsSections.NOTIFICATION_CENTER
+                                        section: g.AnalyticsSections.NOTIFICATION_CENTER
                                     }
                                 }) : await (0, o.default)(n)
                             }
-                            h.default.track(A.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
+                            _.default.track(g.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
                                 action_type: T.NotificationCenterActionTypes.CLICKED,
                                 notification_center_id: r.id,
                                 item_type: r.type,
@@ -166,7 +166,7 @@
                                     children: (0, p.getRelativeTimestamp)(s.default.extractTimestamp(r.id))
                                 }), C]
                             })]
-                        }), M ? null : (0, l.jsx)(g.MoreButton, {
+                        }), M ? null : (0, l.jsx)(A.MoreButton, {
                             item: r
                         })]
                     })

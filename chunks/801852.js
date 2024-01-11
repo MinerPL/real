@@ -34,8 +34,8 @@
                 L = n("766914"),
                 O = n("478272"),
                 y = n("954016"),
-                P = n("49111"),
-                b = n("782340"),
+                b = n("49111"),
+                P = n("782340"),
                 D = n("362486"),
                 U = n("678070"),
                 w = n("789335"),
@@ -84,7 +84,7 @@
                         guild_id: et
                     } = n;
                     l.useEffect(() => {
-                        I.default.track(P.AnalyticEvents.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
+                        I.default.track(b.AnalyticEvents.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
                             channel_id: ee,
                             guild_id: et
                         })
@@ -100,7 +100,7 @@
                             analyticsLocations: es,
                             AnalyticsLocationProvider: ei
                         } = (0, m.default)([...ea, p.default.ACTIVITIES_MINI_SHELF_BANNER]),
-                        er = en === P.AppContext.POPOUT,
+                        er = en === b.AppContext.POPOUT,
                         eo = (0, c.useAnalyticsContext)(),
                         eu = function(e) {
                             let t = (0, R.default)({
@@ -127,14 +127,14 @@
                             }), W(), Y()
                         }, [eo, ea, n, Y, W, er]),
                         ec = l.useCallback(e => {
-                            G(), I.default.track(P.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
+                            G(), I.default.track(b.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
                                 channel_id: n.id,
                                 guild_id: n.getGuildId()
                             })
                         }, [G, n]),
                         ef = K ? (0, a.jsxs)(a.Fragment, {
                             children: [(0, a.jsx)("img", {
-                                alt: b.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_GAME_NIGHT_POSTER_ALT,
+                                alt: P.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_GAME_NIGHT_POSTER_ALT,
                                 src: k,
                                 className: D.poster
                             }), (0, a.jsx)("div", {
@@ -147,23 +147,23 @@
                                 children: [(0, a.jsx)(d.Text, {
                                     className: D.freeLeftTitle,
                                     variant: "display-md",
-                                    children: b.default.Messages.EMBEDDED_ACTIVITIES_FREE_FOR_EVERYONE_BANNER_TEXT
+                                    children: P.default.Messages.EMBEDDED_ACTIVITIES_FREE_FOR_EVERYONE_BANNER_TEXT
                                 }), (0, a.jsx)(d.Anchor, {
                                     href: "https://discord.com/blog/server-activities-games-voice-watch-together",
                                     className: i((0, d.getButtonStyle)({
                                         color: d.Button.Colors.BRAND
                                     }), D.freeButtonLink),
-                                    children: b.default.Messages.LEARN_MORE
+                                    children: P.default.Messages.LEARN_MORE
                                 })]
                             }), (0, a.jsx)("img", {
                                 className: D.freeRight,
                                 src: B,
-                                alt: b.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
+                                alt: P.default.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT
                             })]
                         }) : Z ? (0, a.jsxs)(r.Link, {
-                            to: P.Routes.ACTIVITIES,
+                            to: b.Routes.ACTIVITIES,
                             children: [(0, a.jsx)("img", {
-                                alt: b.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
+                                alt: P.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
                                 src: "light" === Q ? U : w,
                                 className: D.poster
                             }), (0, a.jsx)("div", {
@@ -174,10 +174,10 @@
                                 [D.clickableBannerReducedMotion]: $
                             }),
                             onClick: () => {
-                                Y(), o(), (0, E.transitionTo)(P.Routes.ACTIVITY_DETAILS(y.KRUNKER_STRIKE_APPLICATION_ID), void 0, void 0, es)
+                                Y(), o(), (0, E.transitionTo)(b.Routes.ACTIVITY_DETAILS(y.KRUNKER_STRIKE_APPLICATION_ID), void 0, void 0, es)
                             },
                             children: [(0, a.jsx)("img", {
-                                alt: b.default.Messages.EMBEDDED_ACTIVITIES_KRUNKER_STRIKE_POSTER_ALT,
+                                alt: P.default.Messages.EMBEDDED_ACTIVITIES_KRUNKER_STRIKE_POSTER_ALT,
                                 src: V,
                                 className: D.poster
                             }), (0, a.jsx)("div", {
@@ -188,10 +188,10 @@
                                 [D.clickableBannerReducedMotion]: $
                             }),
                             onClick: () => {
-                                Y(), o(), (0, E.transitionTo)(P.Routes.ACTIVITY_DETAILS(y.COLONIST_APPLICATION_ID), void 0, void 0, es)
+                                Y(), o(), (0, E.transitionTo)(b.Routes.ACTIVITY_DETAILS(y.COLONIST_APPLICATION_ID), void 0, void 0, es)
                             },
                             children: [(0, a.jsx)("img", {
-                                alt: b.default.Messages.EMBEDDED_ACTIVITIES_COLONIST_POSTER_ALT,
+                                alt: P.default.Messages.EMBEDDED_ACTIVITIES_COLONIST_POSTER_ALT,
                                 src: F,
                                 className: D.poster
                             }), (0, a.jsx)("div", {
@@ -209,7 +209,7 @@
                                     children: (0, a.jsx)(d.HiddenVisually, {
                                         children: (0, a.jsx)(d.H, {
                                             id: H,
-                                            children: b.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
+                                            children: P.default.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
                                         })
                                     })
                                 }), (0, a.jsxs)("div", {
@@ -225,14 +225,14 @@
                                                 color: "var(--interactive-active)"
                                             }), (0, a.jsx)(d.Text, {
                                                 variant: "eyebrow",
-                                                children: b.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
+                                                children: P.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_ACTIVITIES_TITLE
                                             })]
                                         }), (0, a.jsxs)(d.Clickable, {
                                             className: D.titleRight,
                                             onClick: ed,
                                             children: [(0, a.jsx)(d.Text, {
                                                 variant: "eyebrow",
-                                                children: b.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
+                                                children: P.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
                                             }), (0, a.jsx)(S.default, {
                                                 width: 12,
                                                 height: 12,

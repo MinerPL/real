@@ -15,16 +15,16 @@
                 c = n("77078"),
                 f = n("378438"),
                 E = n("137223"),
-                h = n("76385"),
-                _ = n("955513"),
+                _ = n("76385"),
+                h = n("955513"),
                 S = n("180748"),
                 T = n("206230"),
                 p = n("716241"),
                 N = n("42203"),
                 I = n("923959"),
                 m = n("744983"),
-                g = n("18494"),
-                A = n("476765"),
+                A = n("18494"),
+                g = n("476765"),
                 C = n("659500"),
                 R = n("202752"),
                 M = n("751520"),
@@ -34,7 +34,7 @@
                 D = n("782340"),
                 y = n("84691");
             n("525840");
-            let x = (0, A.uid)(),
+            let x = (0, g.uid)(),
                 P = u(f.search, 500);
             class U extends a.PureComponent {
                 componentDidMount() {
@@ -56,8 +56,8 @@
                     C.ComponentDispatch.unsubscribe(v.ComponentActions.PERFORM_SEARCH, this.search), C.ComponentDispatch.unsubscribe(v.ComponentActions.SET_SEARCH_QUERY, this.handleSetSearchQuery), C.ComponentDispatch.unsubscribe(v.ComponentActions.FOCUS_SEARCH, this.handleFocusSearch)
                 }
                 tokenize(e) {
-                    let t = M.tokenizeQuery(R.getFirstTextBlock(e)).filter(e => e.type !== h.default.NON_TOKEN_TYPE);
-                    return R.applyTokensAsEntities(t, e, _.default)
+                    let t = M.tokenizeQuery(R.getFirstTextBlock(e)).filter(e => e.type !== _.default.NON_TOKEN_TYPE);
+                    return R.applyTokensAsEntities(t, e, h.default)
                 }
                 clearSearch() {
                     let {
@@ -214,7 +214,7 @@
                             this.focusEditor();
                             return
                         }
-                        let n = g.default.getChannelId(),
+                        let n = A.default.getChannelId(),
                             l = N.default.getChannel(n);
                         if ((null == l ? void 0 : l.isThread()) && (l = N.default.getChannel(null == l ? void 0 : l.parent_id)), null == l || l.isPrivate()) {
                             this.focusEditor();
@@ -224,7 +224,7 @@
                             s = a[l.id],
                             i = null != s ? s.name : l.name;
                         this.handleSetSearchQuery({
-                            query: _.default[v.SearchTokenTypes.FILTER_IN].key + "#".concat(i, " "),
+                            query: h.default[v.SearchTokenTypes.FILTER_IN].key + "#".concat(i, " "),
                             replace: !0
                         })
                     }, this.focusEditor = () => {
@@ -359,7 +359,7 @@
                 let t = m.default.getCurrentSearchId(),
                     n = m.default.getSearchType(),
                     l = null != t && m.default.isSearching(t),
-                    a = null != t && null !== (e = m.default.getEditorState(t)) && void 0 !== e ? e : R.createEmptyEditorState(O.generateDecorators(_.default)),
+                    a = null != t && null !== (e = m.default.getEditorState(t)) && void 0 !== e ? e : R.createEmptyEditorState(O.generateDecorators(h.default)),
                     s = T.default.keyboardModeEnabled;
                 return {
                     searchId: t,
