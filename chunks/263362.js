@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 RecentsPopout: function() {
-                    return A
+                    return g
                 }
             }), n("222007");
             var l = n("37983"),
@@ -24,12 +24,12 @@
                 I = n("49111"),
                 m = n("782340");
 
-            function A(e) {
+            function g(e) {
                 let {
                     onOpen: t,
                     onClose: n,
-                    children: A,
-                    badgeState: g,
+                    children: g,
+                    badgeState: A,
                     popoutPosition: C,
                     popoutAlign: R
                 } = e, [M, O] = a.useState(!1), [L, v] = function() {
@@ -71,18 +71,18 @@
                 }, [v, P]);
                 a.useEffect(() => (h.ComponentDispatch.subscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, U), () => void h.ComponentDispatch.unsubscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, U)), [U]);
                 let {
-                    showReminders: F
+                    showReminders: b
                 } = d.default.useExperiment({
                     location: "RecentsPopout"
                 }, {
                     autoTrackExposure: !1
-                }), b = (0, c.useInDesktopNotificationCenterExperiment)(), {
+                }), F = (0, c.useInDesktopNotificationCenterExperiment)(), {
                     enabled: j
                 } = u.default.useExperiment({
                     location: "RecentsPopout"
                 });
                 a.useEffect(() => {
-                    !F && L === r.InboxTab.TODOS && v(r.InboxTab.MENTIONS)
+                    !b && L === r.InboxTab.TODOS && v(r.InboxTab.MENTIONS)
                 });
                 let G = a.useCallback(e => {
                     !e.shiftKey && x()
@@ -97,20 +97,20 @@
                     renderPopout: function() {
                         return (0, l.jsx)(o.Dialog, {
                             "aria-label": m.default.Messages.INBOX,
-                            children: L === r.InboxTab.FOR_YOU && b ? (0, l.jsx)(_.default, {
+                            children: L === r.InboxTab.FOR_YOU && F ? (0, l.jsx)(_.default, {
                                 setTab: v,
-                                badgeState: g,
+                                badgeState: A,
                                 closePopout: x
                             }) : L === r.InboxTab.MENTIONS ? (0, l.jsx)(T.default, {
                                 setTab: v,
                                 onJump: G,
-                                badgeState: g,
+                                badgeState: A,
                                 closePopout: x
                             }) : j && L === r.InboxTab.GAME_INVITES ? (0, l.jsx)(N.default, {
                                 setTab: v,
-                                badgeState: g,
+                                badgeState: A,
                                 closePopout: x
-                            }) : F && L === r.InboxTab.TODOS ? (0, l.jsx)(S.default, {
+                            }) : b && L === r.InboxTab.TODOS ? (0, l.jsx)(S.default, {
                                 setTab: v,
                                 onJump: G,
                                 closePopout: x
@@ -118,7 +118,7 @@
                                 fallback: (0, l.jsx)(p.UnreadsCrashed, {
                                     setTab: v,
                                     closePopout: x,
-                                    badgeState: g
+                                    badgeState: A
                                 }),
                                 children: (0, l.jsx)(p.default, {
                                     setTab: v,
@@ -126,7 +126,7 @@
                                     showTutorial: D,
                                     setSeenTutorial: y,
                                     closePopout: x,
-                                    badgeState: g
+                                    badgeState: A
                                 })
                             })
                         })
@@ -136,7 +136,7 @@
                         let {
                             isShown: n
                         } = t;
-                        return A(P, n, e)
+                        return g(P, n, e)
                     }
                 })
             }
