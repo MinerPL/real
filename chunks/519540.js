@@ -15,8 +15,8 @@
                 c = n("446674"),
                 f = n("151426"),
                 E = n("77078"),
-                _ = n("272030"),
-                h = n("819689"),
+                h = n("272030"),
+                _ = n("819689"),
                 S = n("843962"),
                 T = n("679653"),
                 p = n("931318"),
@@ -155,7 +155,7 @@
                             children: [(0, l.jsx)(E.TooltipContainer, {
                                 text: F.default.Messages.MESSAGE_REMINDERS_SNOOZE,
                                 children: (0, l.jsx)(E.Clickable, {
-                                    onClick: e => (0, _.openContextMenuLazy)(e, async () => {
+                                    onClick: e => (0, h.openContextMenuLazy)(e, async () => {
                                         let {
                                             default: e
                                         } = await n.el("763582").then(n.bind(n, "763582"));
@@ -191,7 +191,7 @@
                             className: j.actions,
                             children: [null == u ? (0, l.jsx)(E.Button, {
                                 onClick: () => {
-                                    h.default.fetchMessages({
+                                    _.default.fetchMessages({
                                         channelId: s.channelId,
                                         limit: 1,
                                         jump: {

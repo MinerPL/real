@@ -4,7 +4,7 @@
                     return n
                 },
                 default: function() {
-                    return j
+                    return b
                 }
             });
             var a, n, r = s("65597"),
@@ -26,8 +26,8 @@
                 N = s("782340"),
                 A = s("571685"),
                 g = s("994679"),
-                C = s("620826"),
-                P = s("333078"),
+                P = s("620826"),
+                C = s("333078"),
                 O = s("156591"),
                 M = s("913204"),
                 L = s("174433"),
@@ -37,13 +37,13 @@
                 U = s("165870"),
                 D = s("443646");
             (a = n || (n = {})).AVATAR_DECORATIONS = "avatarDecorations", a.CLIENT_THEMES = "clientThemes", a.CLIPS = "clips", a.EARLY_ACCESS = "earlyAccess", a.ENTRANCE_SOUNDS = "entranceSounds", a.PROFILE_EFFECTS = "profileEffects", a.PROFILES = "profiles", a.REMIXING = "remixing", a.SERVER_BOOSTS = "serverBoosts", a.SPECIAL_MEMBER_PRICING = "specialMemberPricing", a.SPECIAL_SHOP_PERKS = "specialShopPerks", a.UNLIMITED_SUPER_REACTIONS = "unlimitedSuperReactions", a.UPCOMING_DROP_UNTIMED = "upcomingDropUntimed";
-            var j = () => {
+            var b = () => {
                 let {
                     analyticsLocations: e
                 } = (0, o.default)(u.default.PREMIUM_MARKETING_PERK_CARD), t = (0, r.default)([I.default], () => I.default.getPremiumTypeSubscription()), s = null != t ? f.default.getPremiumPlanItem(t) : null, a = null != s ? f.default.getSkuIdForPlan(s.planId) : null, n = a === R.PremiumSubscriptionSKUs.TIER_2, {
-                    flipped: j
-                } = (0, S.useWhatsNewAvatarDecoRollout)(), {
                     flipped: b
+                } = (0, S.useWhatsNewAvatarDecoRollout)(), {
+                    flipped: j
                 } = (0, S.useWhatsNewProfileFXRollout)(), G = (0, d.default)(E.default), y = (0, _.default)({
                     scrollPosition: m.ProfileCustomizationScrollPositions.TRY_IT_OUT,
                     analyticsLocations: e
@@ -61,8 +61,8 @@
                         descriptionCta: N.default.Messages.VISIT_THE_SHOP_CTA,
                         onCtaClick: B,
                         pillText: N.default.Messages.EARLY_ACCESS,
-                        perkImage: P,
-                        canReveal: j,
+                        perkImage: C,
+                        canReveal: b,
                         dismissibleContentType: l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
                     } : {
                         name: "avatarDecorations",
@@ -70,8 +70,8 @@
                         subtitle: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_NON_SUB,
                         description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_NON_SUB,
                         pillText: N.default.Messages.EARLY_ACCESS,
-                        perkImage: P,
-                        canReveal: j,
+                        perkImage: C,
+                        canReveal: b,
                         dismissibleContentType: l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
                     },
                     clientThemes: {
@@ -155,7 +155,7 @@
                         onCtaClick: B,
                         pillText: N.default.Messages.EARLY_ACCESS,
                         perkImage: x,
-                        canReveal: b,
+                        canReveal: j,
                         dismissibleContentType: l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
                     } : {
                         name: "profileEffects",
@@ -164,7 +164,7 @@
                         description: N.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_NON_SUB,
                         pillText: N.default.Messages.EARLY_ACCESS,
                         perkImage: x,
-                        canReveal: b,
+                        canReveal: j,
                         dismissibleContentType: l.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP
                     },
                     profiles: {
@@ -203,7 +203,7 @@
                                 analyticsLocations: e
                             })
                         },
-                        perkImage: C
+                        perkImage: P
                     },
                     specialMemberPricing: n ? {
                         name: "specialMemberPricing",

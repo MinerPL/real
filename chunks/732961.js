@@ -39,8 +39,8 @@
                         selectedParticipant: L,
                         showParticipants: O = !0,
                         className: y,
-                        paused: b,
-                        width: P,
+                        paused: P,
+                        width: b,
                         height: D,
                         layout: U,
                         idle: w
@@ -61,8 +61,8 @@
                 (K || q) && ($ += 72), K && !q && ($ += 48), q && ($ += .5 * v + 8);
                 let ee = D - 2 * $,
                     et = ee * X,
-                    en = Math.floor(Math.min(P, et) / X),
-                    ea = D > P / X + 72 + v + 8,
+                    en = Math.floor(Math.min(b, et) / X),
+                    ea = D > b / X + 72 + v + 8,
                     el = !q && !K;
                 t = el ? 40 + Math.max(0, 72 - (D - en) / 2) : q ? -16 : -8, l.useEffect(() => {
                     let e = setTimeout(() => {
@@ -127,11 +127,11 @@
                     ed = l.useCallback(e => {
                         H(e), W(!1)
                     }, []),
-                    ec = q || b ? [] : (0, E.getPipParticipants)(N, L, V),
+                    ec = q || P ? [] : (0, E.getPipParticipants)(N, L, V),
                     {
                         visibleParticipants: ef,
                         participantTileWidth: eh
-                    } = (0, C.useVisibleParticipants)(P, A);
+                    } = (0, C.useVisibleParticipants)(b, A);
                 return (0, a.jsxs)("div", {
                     className: i(I.root, _.flexCenter, y),
                     children: [(0, a.jsxs)("div", {
@@ -161,12 +161,12 @@
                                             style: e,
                                             children: (0, a.jsx)(p.default, {
                                                 focused: !0,
-                                                noBorder: et >= P || ee >= D,
+                                                noBorder: et >= b || ee >= D,
                                                 channel: j,
                                                 className: _.focusedVideo,
                                                 videoComponent: k,
-                                                paused: b,
-                                                width: P,
+                                                paused: P,
+                                                width: b,
                                                 participant: t,
                                                 onClick: n,
                                                 onDoubleClick: x,
@@ -207,13 +207,13 @@
                                 participantTileWidth: eh,
                                 selectedParticipantId: L.id,
                                 inCall: R,
-                                paused: b || Y || !O,
+                                paused: P || Y || !O,
                                 popoutWindow: M
                             })
                         })]
                     }), ec.length > 0 ? (0, a.jsx)(m.default, {
                         onContextMenuParticipant: s,
-                        width: P,
+                        width: b,
                         height: D,
                         channel: j,
                         participants: ec

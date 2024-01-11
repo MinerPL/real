@@ -20,8 +20,8 @@
                 c = n("917351"),
                 f = n.n(c),
                 E = n("913144"),
-                _ = n("819689"),
-                h = n("267363"),
+                h = n("819689"),
+                _ = n("267363"),
                 S = n("206230"),
                 T = n("379881"),
                 p = n("542827"),
@@ -91,8 +91,8 @@
                     })
                 }
                 loadChannelMessages(e) {
-                    _.default.clearChannel(e.channelId);
-                    let t = _.default.fetchMessages({
+                    h.default.clearChannel(e.channelId);
+                    let t = h.default.fetchMessages({
                         channelId: e.channelId,
                         limit: G.MAX_MESSAGES_PER_CHANNEL,
                         jump: {
@@ -163,7 +163,7 @@
                             channelId: t,
                             newestUnreadMessageId: n
                         } = e;
-                        if (E.default.wait(() => h.ack(t, !0, void 0, n, {
+                        if (E.default.wait(() => _.ack(t, !0, void 0, n, {
                                 section: G.AnalyticsSections.INBOX
                             })), 1 === this.state.channels.length) {
                             this.deleteChannel(t);
@@ -185,7 +185,7 @@
                             channels: this.state.channels.filter(t => t.channelId !== e)
                         }), this.maybeLoadMore()
                     }, this.markAllRead = () => {
-                        h.bulkAck(this.state.channels.map(e => ({
+                        _.bulkAck(this.state.channels.map(e => ({
                             channelId: e.channelId,
                             messageId: e.newestUnreadMessageId
                         }))), this.setState({

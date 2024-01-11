@@ -38,8 +38,8 @@
                 L = n("266392"),
                 O = n("458685"),
                 y = n("338677"),
-                b = n("76393"),
-                P = n("261552"),
+                P = n("76393"),
+                b = n("261552"),
                 D = n("374014"),
                 U = n("479788"),
                 w = n("375202"),
@@ -371,7 +371,7 @@
                     canGoLive: g
                 } = (0, f.useStateFromStoresObject)([ee.default], () => ({
                     canGoLive: (0, U.default)(ee.default)
-                })), _ = (0, P.default)(), v = (0, f.useStateFromStores)([b.default], () => null != b.default.getAwaitingRemoteSessionInfo()), x = null != _, N = (0, f.useStateFromStores)([en.default], () => {
+                })), _ = (0, b.default)(), v = (0, f.useStateFromStores)([P.default], () => null != P.default.getAwaitingRemoteSessionInfo()), x = null != _, N = (0, f.useStateFromStores)([en.default], () => {
                     var e;
                     return (null !== (e = null == _ ? void 0 : _.channelId) && void 0 !== e ? e : en.default.getVoiceChannelId()) === t.id
                 }), A = (0, j.default)(t, !0), M = (0, f.useStateFromStores)([S.default], () => {

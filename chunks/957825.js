@@ -21,15 +21,15 @@
                     channel: t,
                     closePopout: n,
                     onSelect: E,
-                    navId: _,
-                    label: h,
+                    navId: h,
+                    label: _,
                     location: S,
                     includeGuildMute: T
                 } = e, p = (0, r.useChannelNotificationRadioItems)(t), N = (0, o.useChannelNotificationSettingsItemInner)(t), I = (0, a.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id)), m = (0, u.default)(I), A = (0, d.useShouldUseNewNotificationSystem)("ChannelNotificationSettingsPopoutMenu") && c.CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING.has(t.type);
                 return (0, l.jsxs)(s.Menu, {
-                    navId: _,
+                    navId: h,
                     onClose: n,
-                    "aria-label": h,
+                    "aria-label": _,
                     onSelect: E,
                     children: [(0, l.jsx)(s.MenuGroup, {
                         children: (0, i.default)(t, S)

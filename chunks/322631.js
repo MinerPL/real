@@ -1,17 +1,17 @@
             "use strict";
-            r.r(t), r.d(t, {
+            n.r(t), n.d(t, {
                 TWITCH_APPLICATION_ID_PREFIX: function() {
                     return a
                 },
                 default: function() {
-                    return n
+                    return r
                 }
             });
-            var n, i = r("376556"),
-                s = r("653047"),
-                l = r("782340");
+            var r, i = n("376556"),
+                s = n("653047"),
+                l = n("782340");
             let a = "twitch:";
-            n = class extends s.default {
+            r = class extends s.default {
                 getIconURL() {
                     return i.default.get("twitch").icon.lightPNG
                 }

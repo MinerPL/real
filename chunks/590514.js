@@ -24,8 +24,8 @@
                 c = n("77078"),
                 f = n("404118"),
                 E = n("819689"),
-                _ = n("510889"),
-                h = n("699473"),
+                h = n("510889"),
+                _ = n("699473"),
                 S = n("393414"),
                 T = n("161778"),
                 p = n("42203"),
@@ -154,13 +154,13 @@
                     loading: r,
                     loadMore: f,
                     renderHeader: E,
-                    renderEmptyState: h,
+                    renderEmptyState: _,
                     renderItem: S,
                     getProTip: p,
                     scrollerClassName: N,
                     className: I,
                     listName: C
-                } = e, y = a.useRef(null), x = (0, _.default)(C, y), P = (0, d.useStateFromStores)([m.default], () => m.default.hasNotice()), U = (0, d.useStateFromStores)([A.default], () => A.default.windowSize());
+                } = e, y = a.useRef(null), x = (0, h.default)(C, y), P = (0, d.useStateFromStores)([m.default], () => m.default.hasNotice()), U = (0, d.useStateFromStores)([A.default], () => A.default.windowSize());
                 a.useEffect(() => {
                     R.default.track(O.AnalyticEvents.OPEN_POPOUT, {
                         type: t
@@ -194,7 +194,7 @@
                     className: i(v.emptyPlaceholder, v.loadingPlaceholder),
                     children: (0, l.jsx)(c.Spinner, {})
                 }, "spinner")] : 0 === n.length ? F.push((0, l.jsx)(a.Fragment, {
-                    children: h(T.default.theme)
+                    children: _(T.default.theme)
                 }, "empty-state")) : (j = !1, F = [], o.each(n, e => {
                     F.push(...S(e))
                 }));
@@ -213,7 +213,7 @@
                     })
                 }) : (0, l.jsx)("div", {
                     className: v.scrollingFooterWrap,
-                    children: h(T.default.theme)
+                    children: _(T.default.theme)
                 }));
                 let k = null == p ? void 0 : p(),
                     w = j && null != k ? (0, l.jsx)("div", {
@@ -274,7 +274,7 @@
                     loading: o,
                     loadMore: u,
                     onJump: c,
-                    canCloseAllMessages: _ = !1,
+                    canCloseAllMessages: h = !1,
                     renderHeader: T,
                     renderEmptyState: I,
                     renderMessage: m,
@@ -335,7 +335,7 @@
                         let a = [];
                         return null == n ? [] : (a.push((0, l.jsxs)("div", {
                             className: v.messageGroupWrapper,
-                            children: [(0, l.jsx)(h.default, {
+                            children: [(0, l.jsx)(_.default, {
                                 className: v.messageGroupCozy,
                                 message: t,
                                 channel: n
@@ -343,7 +343,7 @@
                                 channel: s,
                                 message: t,
                                 jumping: D,
-                                canCloseAllMessages: _,
+                                canCloseAllMessages: h,
                                 jumpTo: y,
                                 onCloseMessage: R
                             })]

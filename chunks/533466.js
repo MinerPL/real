@@ -34,8 +34,8 @@
                 L = n("850391"),
                 O = n("992207"),
                 y = n("269936"),
-                b = n("69927"),
-                P = n("40635"),
+                P = n("69927"),
+                b = n("40635"),
                 D = n("10641"),
                 U = n("499520"),
                 w = n("327432"),
@@ -88,8 +88,8 @@
                 eL = n("824563"),
                 eO = n("744983"),
                 ey = n("18494"),
-                eb = n("162771"),
-                eP = n("697218"),
+                eP = n("162771"),
+                eb = n("697218"),
                 eD = n("800762"),
                 eU = n("980423"),
                 ew = n("439932"),
@@ -154,7 +154,7 @@
                 }
                 openDMContextMenu(e, t) {
                     o(null != t, "Missing channel in Channel.openDMContextMenu");
-                    let l = eP.default.getUser(t.getRecipientId());
+                    let l = eb.default.getUser(t.getRecipientId());
                     o(null != l, "Missing user in Channel.openDMContextMenu"), (0, E.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
@@ -222,7 +222,7 @@
                         guild: n
                     });
                     if (e.isGuildVocal()) return null;
-                    if (e.isDirectory()) return o(null != n, "directory channels must exist within a guild"), (0, a.jsx)(P.default, {
+                    if (e.isDirectory()) return o(null != n, "directory channels must exist within a guild"), (0, a.jsx)(b.default, {
                         channel: e,
                         guild: n
                     });
@@ -411,7 +411,7 @@
                         m = !e.isForumLikeChannel() && !u,
                         E = null == t ? void 0 : t.name;
                     return (0, a.jsxs)(a.Fragment, {
-                        children: [(0, a.jsx)(b.AppPageTitle, {
+                        children: [(0, a.jsx)(P.AppPageTitle, {
                             location: E,
                             subsection: null != n ? n : void 0
                         }), (0, a.jsxs)("div", {
@@ -718,13 +718,13 @@
                     return N.default.getSelfEmbeddedActivityForChannel(null !== (e = null == u ? void 0 : u.id) && void 0 !== e ? e : "")
                 }), A = (0, f.useStateFromStores)([N.default], () => N.default.getActivityPanelMode()), j = null != I && !(0, M.default)(null == u ? void 0 : u.id) && A === ez.ActivityPanelModes.PANEL, L = (0, f.useStateFromStores)([eD.default], () => null != u && u.isVocalThread() && !d.isEmpty(eD.default.getVoiceStatesForChannel(u.id)), [u]), O = (null == u ? void 0 : u.isGuildVocal()) || j || _ || L, {
                     welcomeModalChannelId: y
-                } = (0, c.useLocation)(), b = (0, f.useStateFromStores)([es.default], () => null != u && es.default.isLurking(u.guild_id), [u]), P = (0, f.useStateFromStores)([eT.default], () => eT.default.hasSeen(null == u ? void 0 : u.guild_id, b), [u, b]), U = (0, f.useStateFromStores)([R.default, N.default], () => null != N.default.getConnectedActivityChannelId() && N.default.getActivityPanelMode() === ez.ActivityPanelModes.PANEL ? N.default.getFocusedLayout() === ez.FocusedActivityLayouts.NO_CHAT ? eY.ChannelLayouts.NO_CHAT : eY.ChannelLayouts.NORMAL : null != r ? R.default.getLayout(r) : eY.ChannelLayouts.NORMAL, [r]), w = (0, f.useStateFromStores)([R.default], () => null != u ? R.default.getSelectedParticipant(u.id) : null), F = (0, f.useStateFromStores)([eP.default], () => eP.default.getCurrentUser()), k = (0, ea.default)(g), V = (0, ev.default)(y, null == g ? void 0 : g.id), {
+                } = (0, c.useLocation)(), P = (0, f.useStateFromStores)([es.default], () => null != u && es.default.isLurking(u.guild_id), [u]), b = (0, f.useStateFromStores)([eT.default], () => eT.default.hasSeen(null == u ? void 0 : u.guild_id, P), [u, P]), U = (0, f.useStateFromStores)([R.default, N.default], () => null != N.default.getConnectedActivityChannelId() && N.default.getActivityPanelMode() === ez.ActivityPanelModes.PANEL ? N.default.getFocusedLayout() === ez.FocusedActivityLayouts.NO_CHAT ? eY.ChannelLayouts.NO_CHAT : eY.ChannelLayouts.NORMAL : null != r ? R.default.getLayout(r) : eY.ChannelLayouts.NORMAL, [r]), w = (0, f.useStateFromStores)([R.default], () => null != u ? R.default.getSelectedParticipant(u.id) : null), F = (0, f.useStateFromStores)([eb.default], () => eb.default.getCurrentUser()), k = (0, ea.default)(g), V = (0, ev.default)(y, null == g ? void 0 : g.id), {
                     section: B,
                     channelSidebarState: G
                 } = (0, f.useStateFromStoresObject)([ex.default], () => ({
                     section: ex.default.getSection(r, null == u ? void 0 : u.isDM()),
                     channelSidebarState: ex.default.getSidebarState(r)
-                }), [r, u]), W = null == g ? void 0 : g.id, Y = (0, f.useStateFromStores)([ex.default], () => ex.default.getGuildSidebarState(W), [W]), z = (0, f.useStateFromStores)([eb.default], () => eb.default.getGuildId()), K = z === eY.FAVORITES, Z = (0, eF.default)(u), X = (0, eF.default)(u, !0), J = null != u && o === u.id, q = null != u && u.isGuildStageVoice();
+                }), [r, u]), W = null == g ? void 0 : g.id, Y = (0, f.useStateFromStores)([ex.default], () => ex.default.getGuildSidebarState(W), [W]), z = (0, f.useStateFromStores)([eP.default], () => eP.default.getGuildId()), K = z === eY.FAVORITES, Z = (0, eF.default)(u), X = (0, eF.default)(u, !0), J = null != u && o === u.id, q = null != u && u.isGuildStageVoice();
                 l.useEffect(() => {
                     var e, t, n;
                     let a = (0, ei.getHistory)();
@@ -765,7 +765,7 @@
                     voiceChannel: m,
                     layout: U,
                     needSubscriptionToAccess: S,
-                    isLurking: b,
+                    isLurking: P,
                     hasModalOpen: er,
                     section: B,
                     channelSidebarState: G,
@@ -777,7 +777,7 @@
                     isMobile: (0, f.useStateFromStores)([eL.default], () => (null == u ? void 0 : u.type) === eY.ChannelTypes.DM && eL.default.isMobileOnline(u.getRecipientId()), [u]),
                     isUnavailable: (0, f.useStateFromStores)([eM.default], () => (null == u ? void 0 : u.guild_id) != null && eM.default.isUnavailable(u.guild_id), [u]),
                     showRealNameModal: k,
-                    showWelcomeModal: !P && V,
+                    showWelcomeModal: !b && V,
                     showFollowButton: (null == u ? void 0 : u.type) === eY.ChannelTypes.GUILD_ANNOUNCEMENT && (null == g ? void 0 : g.hasFeature(eY.GuildFeatures.NEWS)) || !1,
                     ...(0, f.useStateFromStoresObject)([eD.default], () => ({
                         hasVideo: null != u && eD.default.hasVideo(u.id)

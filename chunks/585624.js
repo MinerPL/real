@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return b
+                    return j
                 }
             }), s("222007");
             var a = s("37983");
@@ -26,8 +26,8 @@
                 N = s("837861"),
                 A = s("664803"),
                 g = s("854299"),
-                C = s("700684"),
-                P = s("479997"),
+                P = s("700684"),
+                C = s("479997"),
                 O = s("667466"),
                 M = s("884306"),
                 L = s("908173"),
@@ -36,7 +36,7 @@
                 v = s("816571"),
                 U = s("114244"),
                 D = s("991119");
-            let j = new Map([
+            let b = new Map([
                 ["BG", l],
                 ["CZ", o],
                 ["HU", S],
@@ -46,11 +46,11 @@
                 ["EE", c],
                 ["IS", p],
                 ["IE", R],
-                ["LV", C],
+                ["LV", P],
                 ["LI", N],
                 ["LT", A],
                 ["LU", g],
-                ["MT", P],
+                ["MT", C],
                 ["SK", D],
                 ["SI", U],
                 ["GR", T],
@@ -69,13 +69,13 @@
                 ["HR", f]
             ]);
 
-            function b(e) {
+            function j(e) {
                 let {
                     className: t,
                     countryCode: s
                 } = e;
-                if (null == s || !j.has(s)) return null;
-                let n = j.get(s);
+                if (null == s || !b.has(s)) return null;
+                let n = b.get(s);
                 return (0, a.jsx)("img", {
                     className: t,
                     "aria-hidden": !0,

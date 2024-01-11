@@ -25,8 +25,8 @@
                 N = s("49111"),
                 A = s("994428"),
                 g = s("782340"),
-                C = s("651187");
-            let P = e => {
+                P = s("651187");
+            let C = e => {
                     let {
                         name: t,
                         canReveal: s = !0,
@@ -37,100 +37,100 @@
                         isEasterEggTriggered: v,
                         onHover: U,
                         onUnhover: D
-                    } = (0, S.default)(5), j = (0, i.debounce)(() => {
+                    } = (0, S.default)(5), b = (0, i.debounce)(() => {
                         _.default.track(N.AnalyticEvents.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                             card_type: (0, i.snakeCase)(t)
                         })
                     }, 800);
                     e = {
-                        onMouseEnter: j,
+                        onMouseEnter: b,
                         ...e
                     };
-                    let b = L !== r || null == r || p;
+                    let j = L !== r || null == r || p;
                     return (n.useEffect(() => {
                         I && T && (m(!0), _.default.track(N.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
                             card_type: t
                         }), null != r && h(A.ContentDismissActionType.TAKE_ACTION))
                     }, [I, T, r, t, h]), s) ? t === R.PerksDiscoverabilityCardTypes.UPCOMING_DROP_UNTIMED ? (0, a.jsx)("div", {
-                        className: l(C.flipCardContainer, {
-                            [C.forceShadow]: E
+                        className: l(P.flipCardContainer, {
+                            [P.forceShadow]: E
                         }),
                         onMouseEnter: U,
                         onFocus: U,
                         onMouseLeave: D,
                         onBlur: D,
                         children: (0, a.jsxs)("div", {
-                            className: l(C.flipCard, {
-                                [C.partialFlipCard]: !v,
-                                [C.ultraFlipCard]: v,
-                                [C.rotateCard]: v && 3 === x,
-                                [C.reducedMotion]: I
+                            className: l(P.flipCard, {
+                                [P.partialFlipCard]: !v,
+                                [P.ultraFlipCard]: v,
+                                [P.rotateCard]: v && 3 === x,
+                                [P.reducedMotion]: I
                             }),
                             children: [(0, a.jsx)("div", {
-                                className: C.flipCardFront,
+                                className: P.flipCardFront,
                                 children: (0, a.jsx)(O, {
                                     ...e,
-                                    className: C.topCover
+                                    className: P.topCover
                                 })
                             }), (0, a.jsx)("div", {
-                                className: C.flipCardBack,
+                                className: P.flipCardBack,
                                 children: (0, a.jsx)(O, {
                                     ...e,
-                                    className: C.topCover
+                                    className: P.topCover
                                 })
                             })]
                         })
-                    }) : b ? (0, a.jsx)("div", {
-                        className: l(C.noFlipCardContainer, {
-                            [C.forceShadow]: E,
-                            [C.reducedMotion]: I
+                    }) : j ? (0, a.jsx)("div", {
+                        className: l(P.noFlipCardContainer, {
+                            [P.forceShadow]: E,
+                            [P.reducedMotion]: I
                         }),
                         children: (0, a.jsx)(O, {
                             ...e
                         })
                     }) : (0, a.jsx)("div", {
-                        className: l(C.flipCardContainer, {
-                            [C.forceShadow]: E
+                        className: l(P.flipCardContainer, {
+                            [P.forceShadow]: E
                         }),
                         children: (0, a.jsxs)(o.Clickable, {
                             onClick: () => f(!0),
-                            className: l(C.flipCard, C.clickable, {
-                                [C.flipped]: T,
-                                [C.partialFlipCard]: !p && !T,
-                                [C.reducedMotion]: I
+                            className: l(P.flipCard, P.clickable, {
+                                [P.flipped]: T,
+                                [P.partialFlipCard]: !p && !T,
+                                [P.reducedMotion]: I
                             }),
                             onTransitionEnd: e => {
-                                T && "transform" === e.propertyName && e.target.classList.contains(C.flipCard) && (m(!0), _.default.track(N.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
+                                T && "transform" === e.propertyName && e.target.classList.contains(P.flipCard) && (m(!0), _.default.track(N.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
                                     card_type: t
                                 }), null != r && h(A.ContentDismissActionType.TAKE_ACTION))
                             },
                             children: [(0, a.jsx)("div", {
-                                className: C.flipCardHidden,
+                                className: P.flipCardHidden,
                                 "aria-hidden": !0,
                                 children: (0, a.jsx)(O, {
                                     ...e
                                 })
                             }), (0, a.jsx)("div", {
-                                className: C.flipCardFront,
+                                className: P.flipCardFront,
                                 children: (0, a.jsx)(O, {
                                     ...M.upcomingDropUntimed,
                                     pillText: ""
                                 })
                             }), (0, a.jsx)("div", {
-                                className: C.flipCardBack,
+                                className: P.flipCardBack,
                                 children: (0, a.jsx)(O, {
                                     ...e,
                                     description: ""
                                 })
                             }), (0, a.jsx)("div", {
-                                className: C.flipCardButtonContainer,
+                                className: P.flipCardButtonContainer,
                                 children: (0, a.jsx)(o.Button, {
                                     onClick: () => f(!0),
                                     children: g.default.Messages.REVEAL
                                 })
                             })]
                         })
-                    }) : (0, a.jsx)(P, {
+                    }) : (0, a.jsx)(C, {
                         ...M.upcomingDropUntimed,
                         forceShadow: E
                     })
@@ -150,7 +150,7 @@
                         onCtaClick: R,
                         onMouseEnter: N,
                         className: A
-                    } = e, P = (0, f.usePremiumTrialOffer)(), O = null == P ? void 0 : P.subscription_trial, M = (0, T.usePremiumDiscountOffer)(), L = (0, E.formatTrialCtaIntervalDuration)({
+                    } = e, C = (0, f.usePremiumTrialOffer)(), O = null == C ? void 0 : C.subscription_trial, M = (0, T.usePremiumDiscountOffer)(), L = (0, E.formatTrialCtaIntervalDuration)({
                         intervalType: null == O ? void 0 : O.interval,
                         intervalCount: null == O ? void 0 : O.interval_count
                     }), h = (0, I.useResponseOnUserState)({
@@ -163,8 +163,8 @@
                         })
                     });
                     return (0, a.jsxs)(o.Clickable, {
-                        className: l(C.card, A, {
-                            [C.clickable]: null != S
+                        className: l(P.card, A, {
+                            [P.clickable]: null != S
                         }),
                         onMouseEnter: N,
                         style: {
@@ -173,31 +173,31 @@
                         onClick: S,
                         children: [null != _ ? (0, a.jsx)(o.Text, {
                             variant: "text-xs/semibold",
-                            className: C.pill,
+                            className: P.pill,
                             children: _
                         }) : null, (0, a.jsx)("div", {
-                            className: l(C.cover, C.below)
+                            className: l(P.cover, P.below)
                         }), (0, a.jsx)(o.Heading, {
                             variant: "heading-xl/extrabold",
-                            className: l(C.cardHeading, s),
+                            className: l(P.cardHeading, s),
                             children: t
                         }), 0 !== n.length ? (0, a.jsx)(o.Text, {
                             variant: "text-sm/normal",
-                            className: C.cardSubtitle,
+                            className: P.cardSubtitle,
                             children: n
                         }) : null, null != d ? (0, a.jsx)("img", {
                             src: d,
                             alt: "",
-                            className: C.cardImage
+                            className: P.cardImage
                         }) : null, 0 !== r.length ? (0, a.jsxs)("div", {
-                            className: C.cardDescription,
+                            className: P.cardDescription,
                             children: [(0, a.jsx)(o.Heading, {
                                 variant: "heading-xl/extrabold",
-                                className: l(C.cardHeading, s),
+                                className: l(P.cardHeading, s),
                                 children: t
                             }), 0 !== n.length ? (0, a.jsxs)(o.Text, {
                                 variant: "text-sm/normal",
-                                className: C.cardDescriptionText,
+                                className: P.cardDescriptionText,
                                 children: [n, (0, a.jsx)("br", {}), " ", (0, a.jsx)("br", {}), r]
                             }) : null, u ? (0, a.jsx)(p.default, {
                                 subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,
@@ -209,8 +209,8 @@
                                 children: i
                             }) : null]
                         }) : null, (0, a.jsx)("div", {
-                            className: l(C.cover, C.above)
+                            className: l(P.cover, P.above)
                         })]
                     })
                 };
-            var M = P
+            var M = C

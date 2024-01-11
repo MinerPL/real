@@ -4,7 +4,7 @@
                     return L
                 },
                 default: function() {
-                    return b
+                    return P
                 }
             });
             var a = n("37983"),
@@ -99,8 +99,8 @@
                         id: x,
                         blocked: O
                     } = t, y = (0, r.useStateFromStoresArray)([S.default], () => S.default.getAllActiveStreams(), []), {
-                        selectedParticipant: b,
-                        largeStream: P
+                        selectedParticipant: P,
+                        largeStream: b
                     } = (0, r.useStateFromStoresObject)([h.default], () => ({
                         selectedParticipant: null != s ? h.default.getSelectedParticipant(s.id) : null,
                         largeStream: null != s && h.default.getStageStreamSize(s.id)
@@ -113,8 +113,8 @@
                                     forceMultiple: t.shiftKey
                                 })
                             }
-                        }(null == b ? void 0 : b.id) === e.id ? P ? (u.default.selectParticipant(s.id, null), u.default.updateStageStreamSize(s.id, !1)) : u.default.updateStageStreamSize(s.id, !0) : (u.default.updateStageStreamSize(s.id, !1), u.default.selectParticipant(s.id, e.id))
-                    }, [y, s, b, P]);
+                        }(null == P ? void 0 : P.id) === e.id ? b ? (u.default.selectParticipant(s.id, null), u.default.updateStageStreamSize(s.id, !1)) : u.default.updateStageStreamSize(s.id, !0) : (u.default.updateStageStreamSize(s.id, !1), u.default.selectParticipant(s.id, e.id))
+                    }, [y, s, P, b]);
                     return (0, a.jsx)(N.default, {
                         participant: n,
                         aspectRatio: L,
@@ -132,7 +132,7 @@
                         children: d && n.type === R.ParticipantTypes.USER && (0, a.jsx)(A.default, {})
                     }, x)
                 };
-            var b = l.memo(function(e) {
+            var P = l.memo(function(e) {
                 var t;
                 let {
                     participant: l,

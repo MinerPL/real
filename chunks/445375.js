@@ -34,8 +34,8 @@
                 L = n("476765"),
                 O = n("945330"),
                 y = n("745183"),
-                b = n("959097"),
-                P = n("664336"),
+                P = n("959097"),
+                b = n("664336"),
                 D = n("378765"),
                 U = n("718422"),
                 w = n("412861"),
@@ -66,17 +66,17 @@
                             children: [(0, a.jsx)(f.default, {
                                 channel: s,
                                 draftType: A.DraftType.FirstThreadMessage
-                            }), (0, a.jsxs)(P.default, {
-                                toolbar: (0, a.jsx)(P.default.Icon, {
+                            }), (0, a.jsxs)(b.default, {
+                                toolbar: (0, a.jsx)(b.default.Icon, {
                                     icon: O.default,
                                     tooltip: W.default.Messages.CLOSE,
                                     onClick: () => (0, B.closeAndClearThreadSidebar)(t)
                                 }),
-                                children: [(0, a.jsx)(P.default.Icon, {
-                                    icon: b.default,
+                                children: [(0, a.jsx)(b.default.Icon, {
+                                    icon: P.default,
                                     disabled: !0,
                                     "aria-label": W.default.Messages.THREAD
-                                }), (0, a.jsx)(P.default.Title, {
+                                }), (0, a.jsx)(b.default.Title, {
                                     children: W.default.Messages.NEW_THREAD
                                 })]
                             }), (0, a.jsx)(X, {
@@ -206,7 +206,7 @@
                     privateThreadMode: I,
                     textAreaState: g,
                     location: s
-                }), R = (0, k.getIsPrivate)(p, I) ? y.default : b.default;
+                }), R = (0, k.getIsPrivate)(p, I) ? y.default : P.default;
                 return (0, a.jsx)("div", {
                     className: Y.chat,
                     onMouseDown: f,

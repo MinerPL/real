@@ -41,8 +41,8 @@
                     selected: L,
                     fit: O,
                     onVideoResize: y,
-                    blocked: b,
-                    noVideoRender: P = !1,
+                    blocked: P,
+                    noVideoRender: b = !1,
                     pulseSpeakingIndicator: D = !1
                 } = e, U = C.default.getVideoComponent(), w = (0, r.useStateFromStores)([m.default], () => m.default.getId()), {
                     user: F,
@@ -59,7 +59,7 @@
                 }), Q = (0, r.useStateFromStores)([c.default], () => c.default.getSelectedParticipant(n.id));
                 return (l.useEffect(() => {
                     n.isGuildStageVoice() && !H && (null == Q ? void 0 : Q.id) === F.id && u.default.selectParticipant(n.id, null)
-                }, [H]), s && !Y && !P && H && !L && null != U && C.default.supports(x.Features.VIDEO)) ? (0, a.jsx)(_.default, {
+                }, [H]), s && !Y && !b && H && !L && null != U && C.default.supports(x.Features.VIDEO)) ? (0, a.jsx)(_.default, {
                     onResize: y,
                     wrapperClassName: A.videoWrapper,
                     className: A.content,
@@ -72,7 +72,7 @@
                     userId: F.id
                 }, k) : (0, a.jsx)("div", {
                     className: i(A.content, {
-                        [A.blockedAvatar]: b
+                        [A.blockedAvatar]: P
                     }),
                     children: (0, a.jsx)(S.default, {
                         "aria-label": K,

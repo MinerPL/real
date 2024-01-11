@@ -28,8 +28,8 @@
                 N = s("489749"),
                 A = s("75576"),
                 g = s("49111"),
-                C = s("782340"),
-                P = s("128403");
+                P = s("782340"),
+                C = s("128403");
             let O = (0, f.makeLazy)({
                 createPromise: () => s.el("972119").then(s.bind(s, "972119")),
                 webpackId: "972119"
@@ -51,9 +51,9 @@
                 renderCustomErrorMessage() {
                     return (0, a.jsxs)("div", {
                         children: [(0, a.jsx)("p", {
-                            children: C.default.Messages.ERRORS_STORE_CRASH
+                            children: P.default.Messages.ERRORS_STORE_CRASH
                         }), (0, a.jsx)("p", {
-                            children: C.default.Messages.ERRORS_ACTION_TO_TAKE
+                            children: P.default.Messages.ERRORS_ACTION_TO_TAKE
                         })]
                     })
                 }
@@ -62,10 +62,10 @@
                         isAuthenticated: e,
                         location: t
                     } = this.props, s = e ? (0, a.jsx)("div", {
-                        className: P.applicationStore,
+                        className: C.applicationStore,
                         children: this.renderContent()
                     }) : (0, a.jsx)(O, {
-                        className: P.applicationStore,
+                        className: C.applicationStore,
                         location: t,
                         render: this.renderContent
                     });

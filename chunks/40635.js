@@ -59,8 +59,8 @@
                     let O = l.useMemo(() => null != M ? (0, S.generateDirectoryRows)(Object.values(M), A) : null, [M, A]),
                         {
                             mostRecentQuery: y,
-                            searchFetching: b,
-                            searchResults: P
+                            searchFetching: P,
+                            searchResults: b
                         } = (0, s.useStateFromStoresObject)([p.default], () => {
                             let {
                                 mostRecentQuery: e,
@@ -122,8 +122,8 @@
                         handleSearchKeyPress: B,
                         handleClearSearch: H,
                         handleCreateOrAddGuild: V,
-                        searchResults: P,
-                        searchFetching: b
+                        searchResults: b,
+                        searchFetching: P
                     }) : null == O && null == A ? (0, a.jsx)("div", {
                         className: v.pageContainer,
                         children: (0, a.jsx)(i.Spinner, {

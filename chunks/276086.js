@@ -70,17 +70,17 @@
                             A.current = e
                         }, M))
                     }, [M, O, R]),
-                    b = l.useCallback(e => () => {
+                    P = l.useCallback(e => () => {
                         null != R && (e !== C.ChannelLayouts.FULL_SCREEN ? (A.current = e, O(e, C.ChannelLayouts.FULL_SCREEN), (0, E.requestFullScreen)(R)) : y(e))
                     }, [O, y, R]);
                 return (l.useEffect(() => {
                     let e = () => {
-                        null != R && !(0, E.isFullScreen)(R, M) && v === C.ChannelLayouts.FULL_SCREEN && b(v)()
+                        null != R && !(0, E.isFullScreen)(R, M) && v === C.ChannelLayouts.FULL_SCREEN && P(v)()
                     };
                     return M.addEventListener(E.FULLSCREEN_CHANGE_EVENT, e), () => {
                         M.removeEventListener(E.FULLSCREEN_CHANGE_EVENT, e)
                     }
-                }, [M, v, b, R]), l.useEffect(() => (h.default.track(C.AnalyticEvents.VIDEO_LAYOUT_TOGGLED, {
+                }, [M, v, P, R]), l.useEffect(() => (h.default.track(C.AnalyticEvents.VIDEO_LAYOUT_TOGGLED, {
                     video_layout: I ? "popout" : v,
                     ...(0, o.collectVoiceAnalyticsMetadata)(t.id)
                 }), () => {
@@ -94,6 +94,6 @@
                     node: R,
                     guestWindow: d,
                     className: g.rightTrayIcon,
-                    onClick: b(v)
+                    onClick: P(v)
                 }) : null
             }

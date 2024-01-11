@@ -119,16 +119,16 @@
                     event: g.ComponentActions.FOCUS_CHAT_BUTTON,
                     handler: v ? null : O
                 });
-                let [y, b] = l.useState(!1), P = l.useCallback(() => {
-                    f && b(!0)
+                let [y, P] = l.useState(!1), b = l.useCallback(() => {
+                    f && P(!0)
                 }, [f]);
                 (0, p.useComponentAction)({
                     event: g.ComponentActions.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-                    handler: P
+                    handler: b
                 }), l.useEffect(() => {
                     let e;
                     return y && (e = setTimeout(() => {
-                        b(!1)
+                        P(!1)
                     }, 3e3)), () => {
                         clearTimeout(e)
                     }

@@ -1,59 +1,59 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return A
+                    return M
                 }
             });
             var a = n("37983");
             n("884691");
             var l = n("77078"),
-                i = n("272030"),
-                u = n("158534"),
-                s = n("812204"),
-                r = n("861370"),
-                d = n("47495"),
+                u = n("272030"),
+                i = n("158534"),
+                d = n("812204"),
+                s = n("861370"),
+                r = n("47495"),
                 o = n("715243"),
                 c = n("261675"),
                 f = n("963150"),
                 _ = n("308798"),
                 E = n("47006"),
-                p = n("878526"),
-                C = n("531674"),
+                C = n("878526"),
+                p = n("531674"),
                 h = n("619436"),
                 N = n("625399"),
-                T = n("731390"),
-                m = n("339876"),
-                I = n("49111"),
+                I = n("731390"),
+                T = n("339876"),
+                O = n("49111"),
                 g = n("782340"),
-                A = (0, u.default)(function(e) {
+                M = (0, i.default)(function(e) {
                     let {
                         channel: t,
                         guild: n,
-                        includeTopic: u = !1,
-                        onSelect: s
-                    } = e, A = (0, m.default)(t), O = (0, C.default)(t), S = (0, h.default)(t), v = (0, c.default)(t), M = (0, E.default)(t), L = (0, p.default)(t, n), y = (0, o.default)(t, n), x = (0, f.default)(t, n, I.ChannelTypes.GUILD_TEXT), P = (0, f.default)(t, n, I.ChannelTypes.GUILD_VOICE), U = (0, _.default)(t), G = (0, r.default)({
+                        includeTopic: i = !1,
+                        onSelect: d
+                    } = e, M = (0, T.default)(t), m = (0, p.default)(t), A = (0, h.default)(t), L = (0, c.default)(t), S = (0, E.default)(t), x = (0, C.default)(t, n), v = (0, o.default)(t, n), U = (0, f.default)(t, n, O.ChannelTypes.GUILD_TEXT), y = (0, f.default)(t, n, O.ChannelTypes.GUILD_VOICE), P = (0, _.default)(t), b = (0, s.default)({
                         id: t.id,
                         label: g.default.Messages.COPY_ID_CHANNEL
-                    }), j = (0, T.default)(t, "title_context_menu"), b = (0, d.useShouldUseNewNotificationSystem)("ChannelTitleContextMenu"), R = (0, N.default)(t);
+                    }), G = (0, I.default)(t, "title_context_menu"), j = (0, r.useShouldUseNewNotificationSystem)("ChannelTitleContextMenu"), V = (0, N.default)(t);
                     return (0, a.jsxs)(l.Menu, {
                         navId: "channel-context",
-                        onClose: i.closeContextMenu,
+                        onClose: u.closeContextMenu,
                         "aria-label": g.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-                        onSelect: s,
+                        onSelect: d,
                         children: [(0, a.jsx)(l.MenuGroup, {
-                            children: A
+                            children: M
                         }), (0, a.jsx)(l.MenuGroup, {
-                            children: O
+                            children: m
                         }), (0, a.jsxs)(l.MenuGroup, {
-                            children: [u ? v : b ? R : S, M]
+                            children: [i ? L : j ? V : A, S]
                         }), (0, a.jsxs)(l.MenuGroup, {
-                            children: [L, y, x, P]
-                        }), (0, a.jsx)(l.MenuGroup, {
-                            children: j
-                        }), (0, a.jsx)(l.MenuGroup, {
-                            children: U
+                            children: [x, v, U, y]
                         }), (0, a.jsx)(l.MenuGroup, {
                             children: G
+                        }), (0, a.jsx)(l.MenuGroup, {
+                            children: P
+                        }), (0, a.jsx)(l.MenuGroup, {
+                            children: b
                         })]
                     })
-                }, [s.default.CONTEXT_MENU, s.default.CHANNEL_TITLE_MENU])
+                }, [d.default.CONTEXT_MENU, d.default.CHANNEL_TITLE_MENU])

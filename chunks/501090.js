@@ -104,13 +104,13 @@
 
             function y(e) {
                 if (e.key !== E.NEW_GROUP_DM_POPOUT_ID) return !1;
-                b()
+                P()
             }
 
-            function b() {
+            function P() {
                 null != a && (a.destroy(), a = null), x()
             }
-            class P extends i.default.Store {
+            class b extends i.default.Store {
                 initialize() {
                     this.waitFor(m.default, f.default, p.default), this.syncWith([m.default, f.default], A), this.syncWith([p.default], M)
                 }
@@ -136,8 +136,8 @@
                     }
                 }
             }
-            P.displayName = "PrivateChannelRecipientsInviteStore";
-            let D = new P(r.default, {
+            b.displayName = "PrivateChannelRecipientsInviteStore";
+            let D = new b(r.default, {
                 CONNECTION_OPEN: function() {
                     x()
                 },
@@ -157,7 +157,7 @@
                 },
                 MODAL_POP: y,
                 HIDE_ACTION_SHEET: y,
-                PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: b,
+                PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE: P,
                 PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY: function(e) {
                     v = e.channelId, N(e.query)
                 },

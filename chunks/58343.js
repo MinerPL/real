@@ -34,8 +34,8 @@
                 L = n("957255"),
                 O = n("18494"),
                 y = n("773336"),
-                b = n("439932"),
-                P = n("50885"),
+                P = n("439932"),
+                b = n("50885"),
                 D = n("716214"),
                 U = n("567469"),
                 w = n("998716"),
@@ -73,7 +73,7 @@
                     popoutWindow: i,
                     popoutWindowAlwaysOnTop: r,
                     selectedParticipant: u
-                } = e, d = t.getGuildId(), c = (0, o.useStateFromStores)([O.default], () => O.default.getMostRecentSelectedTextChannelId(d), [d]), f = M.default.getId(), h = (0, o.useStateFromStores)([p.default], () => p.default.isFullscreenInContext(n)), E = !h && (!y.isPlatformEmbedded || y.isPlatformEmbedded && P.default.supportsFeature(Z.NativeFeatures.POPOUT_WINDOWS)), C = null != u && u.type !== X.ParticipantTypes.ACTIVITY && u.user.id !== f, g = l.useMemo(() => {
+                } = e, d = t.getGuildId(), c = (0, o.useStateFromStores)([O.default], () => O.default.getMostRecentSelectedTextChannelId(d), [d]), f = M.default.getId(), h = (0, o.useStateFromStores)([p.default], () => p.default.isFullscreenInContext(n)), E = !h && (!y.isPlatformEmbedded || y.isPlatformEmbedded && b.default.supportsFeature(Z.NativeFeatures.POPOUT_WINDOWS)), C = null != u && u.type !== X.ParticipantTypes.ACTIVITY && u.user.id !== f, g = l.useMemo(() => {
                     var e;
                     return null !== (e = null == i ? void 0 : i.window) && void 0 !== e ? e : window
                 }, [i]), S = (0, z.default)({
@@ -82,7 +82,7 @@
                     popoutOpen: s,
                     popoutWindow: i,
                     currentWindow: g
-                }), _ = n === Z.AppContext.POPOUT && y.isPlatformEmbedded && P.default.supportsFeature(Z.NativeFeatures.POPOUT_WINDOWS);
+                }), _ = n === Z.AppContext.POPOUT && y.isPlatformEmbedded && b.default.supportsFeature(Z.NativeFeatures.POPOUT_WINDOWS);
                 return (0, a.jsxs)(a.Fragment, {
                     children: [C ? (0, a.jsx)(A.default, {
                         context: (0, m.default)(u.type),
@@ -137,7 +137,7 @@
                 (0, k.useUpdateIsOnStartStageScreenEffect)(n);
                 let j = (0, o.useStateFromStores)([R.default], () => R.default.getToastsEnabled(n.id)),
                     y = (0, K.default)(n),
-                    b = y ? null != I ? "84px" : "124px" : null != I ? "0px" : "48px";
+                    P = y ? null != I ? "84px" : "124px" : null != I ? "0px" : "48px";
                 return t = M ? (0, a.jsx)(Y.default, {
                     channel: n,
                     onContinueClick: () => {
@@ -159,8 +159,8 @@
                     hasConnectPermission: S
                 }), (0, a.jsx)(v.default, {
                     style: {
-                        height: "calc(100% - ".concat(b, ")"),
-                        paddingTop: b
+                        height: "calc(100% - ".concat(P, ")"),
+                        paddingTop: P
                     },
                     disableGradients: 0 === N && v.DisableGradient.TOP,
                     renderBottomLeft: () => (0, a.jsx)(ea, {
@@ -235,7 +235,7 @@
                         className: q.container,
                         ref: N,
                         children: [(0, a.jsx)("div", {
-                            className: i(q.callContainer, (0, b.getThemeClass)(Z.ThemeTypes.DARK), {
+                            className: i(q.callContainer, (0, P.getThemeClass)(Z.ThemeTypes.DARK), {
                                 [q.sidebarVisible]: s,
                                 [q.sidebarOrChatVisible]: s || T
                             }),

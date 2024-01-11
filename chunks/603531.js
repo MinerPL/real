@@ -15,8 +15,8 @@
                 c = n("256572"),
                 f = n("845579"),
                 E = n("42203"),
-                _ = n("27618"),
-                h = n("945330"),
+                h = n("27618"),
+                _ = n("945330"),
                 S = n("780571"),
                 T = n("304198"),
                 p = n("568734"),
@@ -38,7 +38,7 @@
                 U = n("877671"),
                 b = a.memo(function e(t) {
                     var n, a, s;
-                    let h;
+                    let _;
                     let {
                         channel: T,
                         message: P,
@@ -60,7 +60,7 @@
                         allowHeading: X.showListsAndHeaders || Z.showListsAndHeaders,
                         allowLinks: X.showMaskedLinks || Z.showMaskedLinks,
                         previewLinkTarget: X.showMaskedLinks || Z.showMaskedLinks
-                    }), en = (0, m.default)(P), el = (0, r.useStateFromStores)([E.default], () => P.hasFlag(y.MessageFlags.HAS_THREAD) && E.default.getChannel(P.id)), ea = P.type === y.MessageTypes.THREAD_STARTER_MESSAGE && Y.state === c.ReferencedMessageState.LOADED && null != K, es = !ea && void 0 === h, ei = (0, R.default)({
+                    }), en = (0, m.default)(P), el = (0, r.useStateFromStores)([E.default], () => P.hasFlag(y.MessageFlags.HAS_THREAD) && E.default.getChannel(P.id)), ea = P.type === y.MessageTypes.THREAD_STARTER_MESSAGE && Y.state === c.ReferencedMessageState.LOADED && null != K, es = !ea && void 0 === _, ei = (0, R.default)({
                         message: P,
                         channel: T,
                         enabled: es
@@ -70,11 +70,11 @@
                         message: Y.message,
                         channel: K,
                         hasThread: !1
-                    }) : (_.default.isBlocked(P.author.id) ? h = x.default.Messages.BLOCKED_MESSAGE_COUNT : (0, N.isSpam)(P) && H && (h = x.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== h) ? (0, l.jsx)(F, {
+                    }) : (h.default.isBlocked(P.author.id) ? _ = x.default.Messages.BLOCKED_MESSAGE_COUNT : (0, N.isSpam)(P) && H && (_ = x.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== _) ? (0, l.jsx)(F, {
                         className: j,
                         compact: b,
                         count: 1,
-                        collapsedReason: h
+                        collapsedReason: _
                     }) : (0, l.jsx)(S.default, {
                         compact: b,
                         className: i(j, {
@@ -136,7 +136,7 @@
                     childrenMessageContent: (0, l.jsx)(T.default, {
                         compact: a,
                         className: P.blockedSystemMessage,
-                        iconNode: (0, l.jsx)(h.default, {
+                        iconNode: (0, l.jsx)(_.default, {
                             className: P.blockedIcon
                         }),
                         children: (0, l.jsx)("div", {

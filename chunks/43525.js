@@ -1,85 +1,80 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return p
+                    return C
                 }
             });
             var l = a("37983");
             a("884691");
             var s = a("414456"),
                 r = a.n(s),
-                n = a("65597"),
-                o = a("77078"),
-                i = a("697218"),
-                u = a("719923"),
-                c = a("782340"),
-                d = a("98881"),
-                f = a("247329"),
-                C = a("333838"),
-                E = a("399637"),
-                m = a("976076"),
-                p = function(e) {
+                n = a("77078"),
+                o = a("782340"),
+                i = a("98881"),
+                u = a("247329"),
+                c = a("333838"),
+                d = a("399637"),
+                f = a("976076"),
+                C = function(e) {
                     let {
                         isFullScreen: t
-                    } = e, a = (0, n.default)([i.default], () => i.default.getCurrentUser()), s = u.default.canUseCollectibles(a);
+                    } = e;
                     return (0, l.jsxs)("div", {
-                        className: r(d.heroBanner, {
-                            [d.heroBannerNonPremium]: !s
-                        }),
+                        className: i.heroBanner,
                         children: [(0, l.jsxs)("div", {
-                            className: r(d.heroDescription, {
-                                [d.heroDescriptionWithSidebar]: !t
+                            className: r(i.heroDescription, {
+                                [i.heroDescriptionWithSidebar]: !t
                             }),
-                            children: [(0, l.jsx)(o.Heading, {
-                                className: d.bannerTitle,
+                            children: [(0, l.jsx)(n.Heading, {
+                                className: i.bannerTitle,
                                 color: "always-white",
                                 variant: "display-lg",
-                                children: c.default.Messages.COLLECTIBLES_SHOP_HERO_BANNER_TITLE
-                            }), (0, l.jsx)(o.Text, {
-                                className: d.heroSubtitle,
+                                children: o.default.Messages.COLLECTIBLES_SHOP_HERO_BANNER_TITLE
+                            }), (0, l.jsx)(n.Text, {
+                                className: i.heroSubtitle,
                                 color: "always-white",
                                 variant: "text-lg/normal",
-                                children: c.default.Messages.COLLECTIBLES_SFA_HERO_BANNER_SUBTITLE
+                                children: o.default.Messages.COLLECTIBLES_SFA_HERO_BANNER_SUBTITLE
                             })]
                         }), (0, l.jsx)("div", {
-                            className: d.bannerBackgroundWrapper,
+                            className: i.bannerBackgroundWrapper,
                             children: (0, l.jsx)("img", {
-                                className: d.bannerBackground,
+                                className: i.bannerBackground,
                                 alt: "",
-                                src: f
+                                src: u
                             })
                         }), (0, l.jsx)("img", {
-                            className: d.bannerForeground,
+                            className: i.bannerForeground,
                             alt: "",
-                            src: C
+                            src: c
                         }), (0, l.jsx)("img", {
-                            className: d.bannerHand,
+                            className: i.bannerHand,
                             alt: "",
-                            src: E
+                            src: d
                         }), (0, l.jsx)("img", {
-                            className: r(d.largeSparkle, d.largeTopSparkle),
+                            className: r(i.largeSparkle, i.largeTopSparkle),
                             alt: "",
-                            src: m
+                            src: f
                         }), (0, l.jsx)("img", {
-                            className: r(d.smallSparkle, d.smallTopSparkle),
+                            className: r(i.smallSparkle, i.smallTopSparkle),
                             alt: "",
-                            src: m
+                            src: f
                         }), (0, l.jsx)("img", {
-                            className: r(d.largeSparkle, d.largeLeftSparkle),
+                            className: r(i.largeSparkle, i.largeLeftSparkle),
                             alt: "",
-                            src: m
+                            src: f
                         }), (0, l.jsx)("img", {
-                            className: r(d.smallSparkle, d.smallLeftSparkle),
+                            className: r(i.smallSparkle, i.smallLeftSparkle),
                             alt: "",
-                            src: m
+                            src: f
                         }), (0, l.jsx)("img", {
-                            className: r(d.largeSparkle, d.largeRightSparkle),
+                            className: r(i.largeSparkle, i.largeRightSparkle),
                             alt: "",
-                            src: m
+                            src: f
                         }), (0, l.jsx)("img", {
-                            className: r(d.smallSparkle, d.smallRightSparkle),
+                            className: r(i.smallSparkle, i.smallRightSparkle),
                             alt: "",
-                            src: m
+                            src: f
                         })]
                     })
                 }

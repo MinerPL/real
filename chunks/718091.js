@@ -34,8 +34,8 @@
                 L = n("393414"),
                 O = n("233069"),
                 y = n("42203"),
-                b = n("330154"),
-                P = n("501090"),
+                P = n("330154"),
+                b = n("501090"),
                 D = n("945956"),
                 U = n("660478"),
                 w = n("27618"),
@@ -641,12 +641,12 @@
                 }
             }
             eo.contextType = x.default;
-            let eu = h.default.connectStores([P.default, b.default, F.default], e => {
+            let eu = h.default.connectStores([b.default, P.default, F.default], e => {
                 let t, {
                     channel: n
                 } = e;
-                return null != n && null != (t = b.default.getInvite(n.id)) && t.isExpired() && (t = null), {
-                    ...P.default.getState(),
+                return null != n && null != (t = P.default.getInvite(n.id)) && t.isExpired() && (t = null), {
+                    ...b.default.getState(),
                     invite: t,
                     hideDiscriminator: F.default.hidePersonalInformation,
                     hideInstantInvites: F.default.hideInstantInvites

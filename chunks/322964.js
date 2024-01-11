@@ -15,8 +15,8 @@
                 c = n("845579"),
                 f = n("766274"),
                 E = n("697218"),
-                _ = n("599110"),
-                h = n("253981"),
+                h = n("599110"),
+                _ = n("253981"),
                 S = n("352273"),
                 T = n("360191"),
                 p = n("342176"),
@@ -109,12 +109,12 @@
                             return
                         }
                         if (null != r.deeplink) {
-                            let e = h.default.safeParseWithQuery(r.deeplink);
+                            let e = _.default.safeParseWithQuery(r.deeplink);
                             if (null == e) return;
                             let t = e.hostname,
                                 n = e.path;
                             if (null == t || null == n) return;
-                            if (h.default.isDiscordHostname(t)) {
+                            if (_.default.isDiscordHostname(t)) {
                                 let e = n.match("^/users/(\\d+)");
                                 null != e && 2 === e.length ? (0, d.openUserProfileModal)({
                                     userId: e[1],
@@ -123,7 +123,7 @@
                                     }
                                 }) : await (0, o.default)(n)
                             }
-                            _.default.track(g.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
+                            h.default.track(g.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
                                 action_type: T.NotificationCenterActionTypes.CLICKED,
                                 notification_center_id: r.id,
                                 item_type: r.type,

@@ -20,8 +20,8 @@
                 p = a("841098"),
                 g = a("812204"),
                 h = a("685665"),
-                b = a("481120"),
-                T = a("10641"),
+                T = a("481120"),
+                b = a("10641"),
                 x = a("539938"),
                 L = a("210721"),
                 S = a("78345"),
@@ -78,13 +78,13 @@
                     isGiftEasterEggEnabled: E,
                     setIsGiftEasterEggEnabled: m,
                     showEasterEggToggle: p
-                } = e, g = s.useRef(10 + 70 * Math.random()), h = (0, M.usePurchasedProductsSort)(r.products), b = (0, o.groupBy)(h, "type"), T = (0, c.default)([j.default], () => j.default.initialProductSkuId), {
+                } = e, g = s.useRef(10 + 70 * Math.random()), h = (0, M.usePurchasedProductsSort)(r.products), T = (0, o.groupBy)(h, "type"), b = (0, c.default)([j.default], () => j.default.initialProductSkuId), {
                     tallerCardsEnabled: x
                 } = (0, B.useCollectiblesShopTallerCardsExperiment)({
                     location: "CollectiblesShop"
                 }), v = x ? Y.default : U.default, _ = s.useCallback(e => t => {
-                    e.skuId === T && (f.current = t.current)
-                }, [T, f]), N = (e, t) => 0 === e.length ? null : (0, l.jsxs)("div", {
+                    e.skuId === b && (f.current = t.current)
+                }, [b, f]), N = (e, t) => 0 === e.length ? null : (0, l.jsxs)("div", {
                     children: [(0, l.jsx)(C.Text, {
                         className: n(ee.itemTypeTitle, {
                             [ee.itemTypeTitleForTallerCard]: x
@@ -120,7 +120,7 @@
                     }), (0, l.jsx)(H.default, {
                         category: r,
                         className: x ? ee.tallerShopCardBanner : void 0
-                    }), N(null !== (t = b[u.CollectiblesItemType.AVATAR_DECORATION]) && void 0 !== t ? t : [], Q.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER), N(null !== (a = b[u.CollectiblesItemType.PROFILE_EFFECT]) && void 0 !== a ? a : [], Q.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE)]
+                    }), N(null !== (t = T[u.CollectiblesItemType.AVATAR_DECORATION]) && void 0 !== t ? t : [], Q.default.Messages.PREMIUM_FEATURE_AVATAR_DECORATIONS_HEADER), N(null !== (a = T[u.CollectiblesItemType.PROFILE_EFFECT]) && void 0 !== a ? a : [], Q.default.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_TITLE)]
                 })
             }
             var el = function(e) {
@@ -153,7 +153,7 @@
                     sessionId: eo,
                     scrollerRef: ei,
                     scrollHandler: eu
-                } = (0, b.usePageScrollPosition)(Z.AnalyticEvents.COLLECTIBLES_SHOP_SCROLLED, a);
+                } = (0, T.usePageScrollPosition)(Z.AnalyticEvents.COLLECTIBLES_SHOP_SCROLLED, a);
                 s.useEffect(() => {
                     k.default.track(Z.AnalyticEvents.COLLECTIBLES_SHOP_VIEWED, {
                         location_stack: i,
@@ -164,7 +164,7 @@
                         location_stack: i
                     })
                 }, [M, i, a, eo]), s.useEffect(() => {
-                    !(0, T.isDismissibleContentDismissed)(d.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK) && (0, T.markDismissibleContentAsDismissed)(d.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK, {
+                    !(0, b.isDismissibleContentDismissed)(d.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK) && (0, b.markDismissibleContentAsDismissed)(d.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK, {
                         dismissAction: q.ContentDismissActionType.AUTO_DISMISS,
                         forceTrack: !0
                     })

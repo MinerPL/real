@@ -44,10 +44,10 @@
                 y = {
                     opacity: 1
                 },
-                b = {
+                P = {
                     borderRadius: "".concat(R, "px ").concat(R, "px ").concat(R, "px ").concat(R, "px")
                 },
-                P = {
+                b = {
                     borderRadius: "0px ".concat(R, "px ").concat(R, "px 0px")
                 },
                 D = {
@@ -70,7 +70,7 @@
                         {
                             analyticsLocations: y
                         } = (0, p.default)(),
-                        b = null != (0, v.default)(r);
+                        P = null != (0, v.default)(r);
                     try {
                         t = (0, T.isPremiumFPS)(O)
                     } catch (e) {
@@ -81,14 +81,14 @@
                     } catch (e) {
                         s = !1
                     }
-                    let P = t || s,
+                    let b = t || s,
                         {
                             location: D
                         } = (0, h.useAnalyticsContext)(),
                         U = (0, u.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
                         w = o && !I.default.isPremium(U, N.PremiumTypes.TIER_1) && !I.default.canStreamQuality(I.default.StreamQuality.MID, U),
                         F = l.useCallback(() => {
-                            w && P && (0, f.openModalLazy)(async () => {
+                            w && b && (0, f.openModalLazy)(async () => {
                                 let {
                                     default: e
                                 } = await n.el("754534").then(n.bind(n, "754534"));
@@ -97,26 +97,26 @@
                                     analyticsSource: D
                                 })
                             })
-                        }, [w, P, D]);
+                        }, [w, b, D]);
                     if (l.useEffect(() => {
-                            !R && P && (_.default.track(x.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+                            !R && b && (_.default.track(x.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                                 type: N.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
                                 has_premium_stream_fps: t,
                                 has_premium_stream_resolution: s,
                                 location_stack: y
                             }), j(!0))
-                        }, [t, s, P, R, j, y]), null == O) return null;
+                        }, [t, s, b, R, j, y]), null == O) return null;
                     let k = (0, a.jsx)(f.Tooltip, {
-                        text: b ? A.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : P ? A.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : A.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
+                        text: P ? A.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : b ? A.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : A.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
                         position: "bottom",
                         color: f.Tooltip.Colors.GREY,
                         children: e => (0, a.jsxs)(f.Clickable, {
                             ...e,
                             onClick: F,
-                            className: i(M.qualityIndicator, m, S.LiveIndicatorShapes[c], b ? M.qualityIndicatorLowQuality : M.qualityIndicatorFullQuality, {
-                                [M.clickable]: w && P
+                            className: i(M.qualityIndicator, m, S.LiveIndicatorShapes[c], P ? M.qualityIndicatorLowQuality : M.qualityIndicatorFullQuality, {
+                                [M.clickable]: w && b
                             }),
-                            children: [P ? (0, a.jsx)(C.default, {
+                            children: [b ? (0, a.jsx)(C.default, {
                                 className: M.premiumStreamIcon
                             }) : null, (0, a.jsx)("span", {
                                 className: M.qualityResolution,
@@ -157,7 +157,7 @@
                         config: D
                     }),
                     _ = (0, r.useSpring)({
-                        to: E ? P : b,
+                        to: E ? b : P,
                         config: D
                     });
                 return (e => {

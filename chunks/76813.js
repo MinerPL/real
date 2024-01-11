@@ -15,8 +15,8 @@
                 c = n("56947"),
                 f = n("386045"),
                 E = n("389535"),
-                _ = n("80028"),
-                h = n("782340");
+                h = n("80028"),
+                _ = n("782340");
 
             function S(e) {
                 let {
@@ -50,7 +50,7 @@
                             ...t
                         })
                     }, {
-                        modalKey: _.CLIPS_GALLERY_MODAL_KEY
+                        modalKey: h.CLIPS_GALLERY_MODAL_KEY
                     })
                 }
                 return T && ((0, d.isWindows)() || p) && N ? (0, l.jsxs)(l.Fragment, {
@@ -64,7 +64,7 @@
                             className: S,
                             icon: o.default,
                             showBadge: I,
-                            tooltip: h.default.Messages.CLIPS_GALLERY_TOOLTIP,
+                            tooltip: _.default.Messages.CLIPS_GALLERY_TOOLTIP,
                             onClick: O
                         })
                     })]

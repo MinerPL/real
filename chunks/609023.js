@@ -15,8 +15,8 @@
                 c = n("383667"),
                 f = n("459776"),
                 E = n("654017"),
-                _ = n("603531"),
-                h = n("845579"),
+                h = n("603531"),
+                _ = n("845579"),
                 S = n("271938"),
                 T = n("957255"),
                 p = n("697218"),
@@ -56,7 +56,7 @@
                         children: [(0, l.jsx)(m.default, {
                             className: R.jumpButton,
                             onJump: e => c(e, s.id)
-                        }), (0, l.jsx)(_.default, {
+                        }), (0, l.jsx)(h.default, {
                             id: s.id,
                             message: s,
                             channel: n,
@@ -78,12 +78,12 @@
                     channelRecord: s,
                     gotoChannel: r
                 } = e, {
-                    enabled: _
+                    enabled: h
                 } = d.default.useExperiment({
                     location: "20e3b0_1"
                 }, {
                     autoTrackExposure: !1
-                }), m = h.MessageDisplayCompact.useSetting(), M = (0, o.useStateFromStores)([T.default], () => T.default.can(g.Permissions.CREATE_INSTANT_INVITE, s)), L = (0, E.isSpamSupported)(s), v = !1, D = 0 === a.messages.length || a.messages[0].timestamp.isSame(i(), "day"), y = null !== (n = null === (t = p.default.getUser(S.default.getId())) || void 0 === t ? void 0 : t.hasFlag(g.UserFlags.SPAMMER)) && void 0 !== n && n, x = [];
+                }), m = _.MessageDisplayCompact.useSetting(), M = (0, o.useStateFromStores)([T.default], () => T.default.can(g.Permissions.CREATE_INSTANT_INVITE, s)), L = (0, E.isSpamSupported)(s), v = !1, D = 0 === a.messages.length || a.messages[0].timestamp.isSame(i(), "day"), y = null !== (n = null === (t = p.default.getUser(S.default.getId())) || void 0 === t ? void 0 : t.hasFlag(g.UserFlags.SPAMMER)) && void 0 !== n && n, x = [];
                 if (!a.collapsed) {
                     let e = null,
                         t = null,
@@ -103,7 +103,7 @@
                                 message: n,
                                 compact: m,
                                 isGroupStart: a,
-                                treatSpam: !y && _ && (0, E.isSpam)(n) && L,
+                                treatSpam: !y && h && (0, E.isSpam)(n) && L,
                                 gotoChannel: r
                             }, n.id))
                         }

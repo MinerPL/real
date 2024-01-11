@@ -18,8 +18,8 @@
                 c = n("49671"),
                 f = n("376556"),
                 E = n("299285"),
-                _ = n("7331"),
-                h = n("889293"),
+                h = n("7331"),
+                _ = n("889293"),
                 S = n("10641"),
                 T = n("180273"),
                 p = n("579565"),
@@ -72,8 +72,8 @@
                 ec = n("340412"),
                 ef = n("437712"),
                 eE = n("167726"),
-                e_ = n("773336"),
-                eh = n("719923"),
+                eh = n("773336"),
+                e_ = n("719923"),
                 eS = n("189459"),
                 eT = n("316661"),
                 ep = n("352326"),
@@ -285,7 +285,7 @@
                         predicate: () => (0, x.shouldShowOutboundPromotionNotice)()
                     },
                     [eN.NoticeTypes.CORRUPT_INSTALLATION]: {
-                        predicate: () => e_.isPlatformEmbedded && (!i.default.supported() || ep.default.isCorruptInstallation())
+                        predicate: () => eh.isPlatformEmbedded && (!i.default.supported() || ep.default.isCorruptInstallation())
                     },
                     [eN.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER]: {
                         predicate: e => {
@@ -300,7 +300,7 @@
                             let {
                                 currentUser: t
                             } = e;
-                            return eh.default.canRedeemPremiumPerks(t) && K.default.getDetectedOffPlatformPremiumPerks().length > 0
+                            return e_.default.canRedeemPremiumPerks(t) && K.default.getDetectedOffPlatformPremiumPerks().length > 0
                         },
                         metadata: () => {
                             let e = K.default.getDetectedOffPlatformPremiumPerks();
@@ -318,7 +318,7 @@
                         predicate: () => el.default.enabled
                     },
                     [eN.NoticeTypes.DOWNLOAD_NAG]: {
-                        predicate: () => !e_.isPlatformEmbedded && !eP(eN.NoticeTypes.DOWNLOAD_NAG)
+                        predicate: () => !eh.isPlatformEmbedded && !eP(eN.NoticeTypes.DOWNLOAD_NAG)
                     },
                     [eN.NoticeTypes.SCHEDULED_MAINTENANCE]: {
                         predicate: () => null != en.default.getScheduledMaintenance(),
@@ -410,14 +410,14 @@
                             let {
                                 premiumSubscription: t,
                                 currentUser: n
-                            } = e, l = null != t ? a(t.currentPeriodEnd).diff(a().startOf("day"), "days") : 0, s = (null == t ? void 0 : t.canceledAt) != null && (null == t ? void 0 : t.status) === eN.SubscriptionStatusTypes.CANCELED && 1 >= a().diff(a(t.canceledAt), "days"), i = null != t && a(t.currentPeriodEnd).isBefore(a()), r = null != t && t.status === eN.SubscriptionStatusTypes.CANCELED && !i && l <= 7 && l >= 0 && (0, eh.isPremiumExactly)(n, eA.PremiumTypes.TIER_2) && !s && !n.hasFreePremium() && !t.isPurchasedExternally;
+                            } = e, l = null != t ? a(t.currentPeriodEnd).diff(a().startOf("day"), "days") : 0, s = (null == t ? void 0 : t.canceledAt) != null && (null == t ? void 0 : t.status) === eN.SubscriptionStatusTypes.CANCELED && 1 >= a().diff(a(t.canceledAt), "days"), i = null != t && a(t.currentPeriodEnd).isBefore(a()), r = null != t && t.status === eN.SubscriptionStatusTypes.CANCELED && !i && l <= 7 && l >= 0 && (0, e_.isPremiumExactly)(n, eA.PremiumTypes.TIER_2) && !s && !n.hasFreePremium() && !t.isPurchasedExternally;
                             return !eP(eN.NoticeTypes.PREMIUM_UNCANCEL) && r
                         },
                         metadata: e => {
                             var t;
                             let {
                                 premiumSubscription: n
-                            } = e, l = null != n ? a(n.currentPeriodEnd).diff(a().startOf("day"), "days") : 0, s = null != n ? null === (t = (0, eh.getPremiumPlanItem)(n)) || void 0 === t ? void 0 : t.planId : null, i = null != s ? eh.default.getPremiumType(s) : null;
+                            } = e, l = null != n ? a(n.currentPeriodEnd).diff(a().startOf("day"), "days") : 0, s = null != n ? null === (t = (0, e_.getPremiumPlanItem)(n)) || void 0 === t ? void 0 : t.planId : null, i = null != s ? e_.default.getPremiumType(s) : null;
                             return {
                                 daysLeft: l,
                                 premiumType: i,
@@ -430,7 +430,7 @@
                             let {
                                 premiumSubscription: t,
                                 currentUser: n
-                            } = e, l = null != t ? a(t.currentPeriodEnd).diff(a().startOf("day"), "days") : 0, s = null != t ? a(t.currentPeriodEnd).diff(a(t.currentPeriodStart).startOf("day"), "days") : 0, i = null != t && a(t.currentPeriodEnd).isBefore(a()), r = ef.default.applicationIdsFetched.has(eA.PREMIUM_SUBSCRIPTION_APPLICATION), o = ef.default.getForApplication(eA.PREMIUM_SUBSCRIPTION_APPLICATION), u = null != t ? (0, eh.getPremiumPlanItem)(t) : null, d = null != u ? eh.default.getSkuIdForPlan(u.planId) : null, c = null != o && null != u && Array.from(o).filter(e => {
+                            } = e, l = null != t ? a(t.currentPeriodEnd).diff(a().startOf("day"), "days") : 0, s = null != t ? a(t.currentPeriodEnd).diff(a(t.currentPeriodStart).startOf("day"), "days") : 0, i = null != t && a(t.currentPeriodEnd).isBefore(a()), r = ef.default.applicationIdsFetched.has(eA.PREMIUM_SUBSCRIPTION_APPLICATION), o = ef.default.getForApplication(eA.PREMIUM_SUBSCRIPTION_APPLICATION), u = null != t ? (0, e_.getPremiumPlanItem)(t) : null, d = null != u ? e_.default.getSkuIdForPlan(u.planId) : null, c = null != o && null != u && Array.from(o).filter(e => {
                                 let {
                                     skuId: t,
                                     consumed: n
@@ -443,7 +443,7 @@
                             var t;
                             let {
                                 premiumSubscription: n
-                            } = e, l = null != n ? a(n.currentPeriodEnd).diff(a().startOf("day"), "days") : 0, s = null != n ? null === (t = (0, eh.getPremiumPlanItem)(n)) || void 0 === t ? void 0 : t.planId : null, i = null != s ? eh.default.getPremiumType(s) : null;
+                            } = e, l = null != n ? a(n.currentPeriodEnd).diff(a().startOf("day"), "days") : 0, s = null != n ? null === (t = (0, e_.getPremiumPlanItem)(n)) || void 0 === t ? void 0 : t.planId : null, i = null != s ? e_.default.getPremiumType(s) : null;
                             return {
                                 daysLeft: l,
                                 premiumType: i,
@@ -536,7 +536,7 @@
                         metadata: e => {
                             let {
                                 premiumSubscription: t
-                            } = e, n = (null == t ? void 0 : t.status) === eN.SubscriptionStatusTypes.PAST_DUE ? a().diff(a(t.currentPeriodStart), "days") : 0, l = a(null == t ? void 0 : t.currentPeriodStart).add((0, eh.getBillingGracePeriodDays)(t), "days").toDate();
+                            } = e, n = (null == t ? void 0 : t.status) === eN.SubscriptionStatusTypes.PAST_DUE ? a().diff(a(t.currentPeriodStart), "days") : 0, l = a(null == t ? void 0 : t.currentPeriodStart).add((0, e_.getBillingGracePeriodDays)(t), "days").toDate();
                             return {
                                 daysPastDue: n,
                                 dismissUntil: l
@@ -586,7 +586,7 @@
                         }
                     },
                     [eN.NoticeTypes.ACTIVATE_SERVER_SUBSCRIPTION]: {
-                        predicate: () => !eP(eN.NoticeTypes.ACTIVATE_SERVER_SUBSCRIPTION) && 0 !== h.default.getEligibleGuildsForNagActivate().length && (0, _.isCreatorMonetizationNagActivateEnabled)()
+                        predicate: () => !eP(eN.NoticeTypes.ACTIVATE_SERVER_SUBSCRIPTION) && 0 !== _.default.getEligibleGuildsForNagActivate().length && (0, h.isCreatorMonetizationNagActivateEnabled)()
                     },
                     [eN.NoticeTypes.GUILD_ONBOARDING_UPSELL_NAGBAR]: {
                         predicate: e => {
@@ -651,7 +651,7 @@
             }
             class ek extends s.default.Store {
                 initialize() {
-                    this.syncWith([ea.default, Z.default, K.default, et.default, P.default, ec.default, B.default, Y.default, k.default, g.default], ej), this.waitFor(ei.default, en.default, z.default, Q.default, J.default, W.default, el.default, N.default, et.default, es.default, j.default, $.default, Z.default, eS.default, eT.default, eE.default, q.default, ed.default, ep.default, K.default, eu.default, X.default, P.default, ef.default, ec.default, Y.default, L.default, T.default, h.default, b.default)
+                    this.syncWith([ea.default, Z.default, K.default, et.default, P.default, ec.default, B.default, Y.default, k.default, g.default], ej), this.waitFor(ei.default, en.default, z.default, Q.default, J.default, W.default, el.default, N.default, et.default, es.default, j.default, $.default, Z.default, eS.default, eT.default, eE.default, q.default, ed.default, ep.default, K.default, eu.default, X.default, P.default, ef.default, ec.default, Y.default, L.default, T.default, _.default, b.default)
                 }
                 hasNotice() {
                     return null != eD && null != eD.type

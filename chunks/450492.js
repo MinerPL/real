@@ -69,15 +69,15 @@
                     onSuccess: p,
                     tooltipDelay: g,
                     isGiftEasterEggEnabled: h,
-                    disableCustomColor: b = !1
+                    disableCustomColor: T = !1
                 } = e, {
-                    analyticsLocations: T
+                    analyticsLocations: b
                 } = (0, o.default)(), x = s.useRef(null), L = (0, n.default)(x), {
                     buttonColors: S
-                } = (0, d.default)(t.categorySkuId), I = null == S || b ? void 0 : {
+                } = (0, d.default)(t.categorySkuId), I = null == S || T ? void 0 : {
                     background: S.secondary.toHslString(),
                     color: S.text.toHslString()
-                }, v = b || (null == S ? void 0 : S.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
+                }, v = T || (null == S ? void 0 : S.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
                 return (0, l.jsx)(r.Tooltip, {
                     text: C.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
                     delay: g,
@@ -86,7 +86,7 @@
                         buttonRef: x,
                         style: I,
                         className: E.giftButton,
-                        color: b ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
+                        color: T ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
                         look: r.Button.Looks.FILLED,
                         size: r.ButtonSizes.ICON,
                         innerClassName: E.giftButtonInner,
@@ -95,7 +95,7 @@
                             e.stopPropagation(), (0, u.default)({
                                 skuId: t.skuId,
                                 isGift: !0,
-                                analyticsLocations: T,
+                                analyticsLocations: b,
                                 returnRef: a,
                                 onClose: null != p ? e => {
                                     e && p()

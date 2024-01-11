@@ -40,8 +40,8 @@
                         width: L,
                         height: O,
                         idle: y,
-                        mode: b,
-                        popoutWindow: P,
+                        mode: P,
+                        popoutWindow: b,
                         awaitingRemoteSessionInfo: D
                     } = e;
                     l.useEffect(() => {
@@ -56,7 +56,7 @@
                         participants: t,
                         hasConnectPermission: N
                     });
-                    if (b === C.ChannelModes.VOICE) return (0, a.jsx)(o.default, {
+                    if (P === C.ChannelModes.VOICE) return (0, a.jsx)(o.default, {
                         guildId: x.guild_id,
                         width: L,
                         className: S.voiceCallWrapper,
@@ -90,7 +90,7 @@
                         selectedParticipant: s,
                         filteredParticipants: U,
                         participants: t,
-                        popoutWindow: P,
+                        popoutWindow: b,
                         className: A,
                         idle: y,
                         height: O,

@@ -4,8 +4,8 @@
                     return i
                 }
             });
-            var a = n("862205");
-            let l = (0, a.createExperiment)({
+            var r = n("862205");
+            let a = (0, r.createExperiment)({
                 kind: "user",
                 id: "2023-08-30_open-in-popout",
                 label: "Open Channel in Popout",
@@ -22,7 +22,7 @@
             });
 
             function i(e) {
-                return l.useExperiment({
+                return a.useExperiment({
                     location: e
                 }, {
                     autoTrackExposure: !1

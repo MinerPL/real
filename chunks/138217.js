@@ -15,8 +15,8 @@
                 c = n("913491"),
                 f = n("915639"),
                 E = n("719926"),
-                _ = n("271938"),
-                h = n("42203"),
+                h = n("271938"),
+                _ = n("42203"),
                 S = n("377253"),
                 T = n("660478"),
                 p = n("27618"),
@@ -50,10 +50,10 @@
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
                 if ((0, c.default)(e)) return null;
                 null == n && (n = e.channel_id);
-                let l = h.default.getChannel(n);
+                let l = _.default.getChannel(n);
                 if (null == l || l.type === A.ChannelTypes.DM || L.guildFilter === A.RecentMentionsFilters.THIS_SERVER && l.getGuildId() !== N.default.getGuildId()) return null;
                 let a = null === (t = e.author) || void 0 === t ? void 0 : t.id,
-                    s = _.default.getId();
+                    s = h.default.getId();
                 if (null != a && p.default.isBlocked(a) || a === s) return null;
                 e = P(e);
                 let i = !L.everyoneFilter,
@@ -125,7 +125,7 @@
             }
             class H extends s.default.Store {
                 initialize() {
-                    this.waitFor(m.default, h.default, S.default, T.default)
+                    this.waitFor(m.default, _.default, S.default, T.default)
                 }
                 isOpen() {
                     return y
@@ -206,7 +206,7 @@
                         guild: t
                     } = e;
                     C = a.filter(C, e => {
-                        let n = h.default.getChannel(e.channel_id);
+                        let n = _.default.getChannel(e.channel_id);
                         return null != n && n.getGuildId() !== t.id || (delete R[e.id], !1)
                     })
                 },

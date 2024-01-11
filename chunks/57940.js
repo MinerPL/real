@@ -7,7 +7,7 @@
                     return f
                 },
                 default: function() {
-                    return T
+                    return b
                 }
             }), a("222007");
             var l = a("656280"),
@@ -68,7 +68,7 @@
                         l: r
                     })
                 },
-                b = {
+                T = {
                     [r.CollectiblesCategorySkuId.FANTASY]: {
                         backgroundColors: p("#146144", "#021A0E"),
                         buttonColors: g("#028737", "#00694A"),
@@ -122,10 +122,10 @@
                         confettiColors: ["#00C49A", "#F8B531", "#F24E7E", "#64CC6F", "#BB5CF0"]
                     }
                 };
-            var T = e => {
+            var b = e => {
                 let t = (0, n.default)([i.default], () => i.default.saturation);
                 if (null == e) return {};
-                let a = b[e];
+                let a = T[e];
                 return (null == a ? void 0 : a.backgroundColors) == null || 1 === t ? null != a ? a : {} : {
                     ...a,
                     backgroundColors: {
