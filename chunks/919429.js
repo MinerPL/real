@@ -70,21 +70,22 @@
                         forceTopLevelThread: S,
                         embeddedApps: _,
                         unreadMode: N,
-                        withGuildIcon: T
-                    } = this.props, A = null != _ && _.length > 0, L = (0, C.getChannelSubtitle)(I), v = (0, l.jsx)("li", {
+                        withGuildIcon: T,
+                        enableActivities: A
+                    } = this.props, L = A && null != _ && _.length > 0, v = (0, C.getChannelSubtitle)(I), R = (0, l.jsx)("li", {
                         className: s(this.getClassName(), {
                             [y.disabled]: this.isDisabled(),
                             [y.selected]: n
                         }),
                         "data-dnd-name": e.name,
-                        onMouseEnter: u || A ? this.handleMouseEnter : void 0,
-                        onMouseLeave: u || A ? this.handleMouseLeave : void 0,
+                        onMouseEnter: u || L ? this.handleMouseEnter : void 0,
+                        onMouseLeave: u || L ? this.handleMouseLeave : void 0,
                         children: (0, l.jsx)(r.Popout, {
                             position: "right",
                             renderPopout: this.renderPopout,
                             spacing: 0,
                             onRequestClose: this.handleClosePopout,
-                            shouldShow: u && this.state.shouldShowThreadsPopout || A && this.state.shouldShowActivities,
+                            shouldShow: u && this.state.shouldShowThreadsPopout || L && this.state.shouldShowActivities,
                             children: () => (0, l.jsxs)(x.default, {
                                 className: y.iconVisibility,
                                 channel: e,
@@ -94,8 +95,8 @@
                                 unread: i,
                                 mentionCount: d,
                                 hasActiveThreads: o,
-                                subtitle: null == L ? void 0 : L.subtitle,
-                                subtitleColor: null == L ? void 0 : L.color,
+                                subtitle: null == v ? void 0 : v.subtitle,
+                                subtitleColor: null == v ? void 0 : v.color,
                                 onMouseDown: this.handleMouseDown,
                                 onContextMenu: this.handleContextMenu,
                                 connectDragPreview: m ? p : null,
@@ -113,7 +114,7 @@
                             })
                         })
                     });
-                    return m ? c(f(v)) : v
+                    return m ? c(f(R)) : R
                 }
                 constructor(...e) {
                     super(...e), this.state = {
@@ -266,6 +267,7 @@
                     channelInfo: j,
                     embeddedApps: G,
                     unreadMode: C,
-                    hasChannelInfo: null != j
+                    hasChannelInfo: null != j,
+                    enableActivities: D
                 })
             }
