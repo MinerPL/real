@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return A
+                    return g
                 }
             }), n("222007"), n("424973");
             var l = n("917351"),
@@ -48,7 +48,7 @@
                 }
                 return e
             }
-            class g extends s.default.Store {
+            class A extends s.default.Store {
                 initialize() {
                     var e;
                     this.waitFor(f.default, _.default, h.default), I = null !== (e = i.default.get(T)) && void 0 !== e ? e : I
@@ -57,8 +57,8 @@
                     return a.values(p)
                 }
             }
-            g.displayName = "DetectedOffPlatformPremiumPerksStore";
-            var A = new g(r.default, {
+            A.displayName = "DetectedOffPlatformPremiumPerksStore";
+            var g = new A(r.default, {
                 LOGOUT: function() {
                     p = {}, N = {}
                 },

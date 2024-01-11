@@ -39,10 +39,10 @@
                         (0, c.sendHeartbeat)(t, n, l.pid)
                     }))
                 },
-                g = e => {
+                A = e => {
                     I.retries = 0, I.completed = e.completed, I.initialProgressFetched = !0, I.progress = e.progress, I.lastCheckedAt = a.now(), p = I.completed ? E.TooltipActions.QUEST_COMPLETION : E.TooltipActions.TRACK_PROGRESS
                 },
-                A = (e, t, n) => {
+                g = (e, t, n) => {
                     (!I.completed || e.dropsQuestId !== I.dropsQuestId) && (I.game = t, I.dropsQuestId = e.dropsQuestId, I.gameTitle = e.title, I.completed = !1, I.interrupted = !1, I.streamKey = n, I.retries = 0, I.lastCheckedAt = a.now(), N.start(5e3, () => m(!0)))
                 };
             class C extends s.default.Store {
@@ -115,12 +115,12 @@
                         enrolledUser: e.enrolledUser
                     }
                 },
-                DROPS_FETCH_PROGRESS_SUCCESS: g,
+                DROPS_FETCH_PROGRESS_SUCCESS: A,
                 DROPS_FETCH_PROGRESS_FAILURE: e => {
                     !I.initialProgressFetched && (I.initialProgressFetched = !0, p = E.TooltipActions.STREAM_CTA)
                 },
                 DROPS_HEARTBEAT_SUCCESS: e => {
-                    g(e), S[e.dropsQuestId] = !0, m()
+                    A(e), S[e.dropsQuestId] = !0, m()
                 },
                 DROPS_HEARTBEAT_FAILURE: e => {
                     let {
@@ -176,9 +176,9 @@
                     });
                     if (null == S || !S.dropsEnabled) return;
                     let p = S.autoEnrollment;
-                    null != T[_.dropsQuestId] && T[_.dropsQuestId].isEnrolled || p ? A(_, h, i) : r.default.wait(async () => {
+                    null != T[_.dropsQuestId] && T[_.dropsQuestId].isEnrolled || p ? g(_, h, i) : r.default.wait(async () => {
                         var e;
-                        await (0, c.fetchEnrolledUser)(_.dropsQuestId), (null === (e = T[_.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && A(_, h, i)
+                        await (0, c.fetchEnrolledUser)(_.dropsQuestId), (null === (e = T[_.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && g(_, h, i)
                     })
                 },
                 LOGOUT: function() {
