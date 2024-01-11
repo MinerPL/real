@@ -17,23 +17,23 @@
                 _ = s("446488"),
                 E = s("182650"),
                 I = s("324878"),
-                T = s("641078"),
-                f = s("871948"),
+                f = s("641078"),
+                T = s("871948"),
                 S = s("401135"),
                 R = s("218435"),
                 p = s("881155"),
-                m = s("782340"),
-                N = s("30126");
+                A = s("782340"),
+                m = s("30126");
 
-            function A(e) {
+            function N(e) {
                 let {
                     variant: t = "text-lg/normal"
                 } = e, s = (0, S.useCheapestMonthlyPrice)();
                 return (0, a.jsx)(l.Text, {
                     variant: t,
                     color: "always-white",
-                    className: N.description,
-                    children: m.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
+                    className: m.description,
+                    children: A.default.Messages.PREMIUM_MARKETING_HERO_HEADER_DESCRIPTION.format({
                         cheapestMonthlyPrice: s
                     })
                 })
@@ -45,7 +45,7 @@
                     subscriptionTier: n
                 } = e, {
                     AnalyticsLocationProvider: S
-                } = (0, o.default)(u.default.PREMIUM_MARKETING_HERO_CTA), g = (0, I.useHasActiveTrial)(), C = (0, E.useIsInPremiumOfferExperience)(), P = (0, T.useIsEligibleForBogoPromotion)(), {
+                } = (0, o.default)(u.default.PREMIUM_MARKETING_HERO_CTA), g = (0, I.useHasActiveTrial)(), P = (0, E.useIsInPremiumOfferExperience)(), C = (0, f.useIsEligibleForBogoPromotion)(), {
                     marketingEnabled: O
                 } = c.default.useExperiment({
                     location: "HeroHeading"
@@ -55,61 +55,61 @@
                 M.length > 0 && c.default.trackExposure({
                     location: "HeroHeading"
                 });
-                let L = O && M.length > 0;
+                let h = O && M.length > 0;
                 return (0, a.jsx)(S, {
                     children: (0, a.jsxs)("div", {
-                        className: r(N.container, s, {
-                            [N.settingsContainer]: !t,
-                            [N.affinityHeight]: !t && L
+                        className: r(m.container, s, {
+                            [m.settingsContainer]: !t,
+                            [m.affinityHeight]: !t && h
                         }),
                         "data-testid": "v2-marketing-page-hero-header",
                         children: [(0, a.jsxs)("div", {
-                            className: t ? N.fullscreenTextContainer : N.settingsTextContainer,
+                            className: t ? m.fullscreenTextContainer : m.settingsTextContainer,
                             children: [(0, a.jsx)(l.Heading, {
                                 variant: t ? "display-lg" : "display-md",
                                 color: "always-white",
-                                children: m.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
-                            }), L ? (0, a.jsx)("div", {
-                                className: N.affinityDescription,
-                                children: (0, a.jsx)(f.default, {
+                                children: A.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
+                            }), h ? (0, a.jsx)("div", {
+                                className: m.affinityDescription,
+                                children: (0, a.jsx)(T.default, {
                                     smallerText: !t
                                 })
-                            }) : (0, a.jsx)(A, {}), P ? (0, a.jsx)("div", {
-                                className: N.buttonContainer,
+                            }) : (0, a.jsx)(N, {}), C ? (0, a.jsx)("div", {
+                                className: m.buttonContainer,
                                 children: (0, a.jsx)(R.default, {
-                                    className: N.button,
+                                    className: m.button,
                                     forceWhite: !0
                                 })
                             }) : (0, a.jsxs)(a.Fragment, {
-                                children: [C ? null : (0, a.jsxs)("div", {
-                                    className: N.buttonContainer,
+                                children: [P ? null : (0, a.jsxs)("div", {
+                                    className: m.buttonContainer,
                                     children: [(0, a.jsx)(p.default, {
                                         forceInverted: !0,
-                                        className: N.button,
+                                        className: m.button,
                                         subscriptionTier: n
                                     }), (0, a.jsx)(R.default, {
-                                        className: N.button,
+                                        className: m.button,
                                         forceWhite: !0
                                     })]
                                 }), g ? (0, a.jsx)("div", {
-                                    className: N.buttonContainer,
+                                    className: m.buttonContainer,
                                     children: (0, a.jsx)(R.default, {
-                                        className: N.button,
+                                        className: m.button,
                                         forceWhite: !0
                                     })
                                 }) : null]
-                            }), L && (0, a.jsx)(A, {
+                            }), h && (0, a.jsx)(N, {
                                 variant: "text-md/normal"
                             })]
-                        }), C ? null : (0, a.jsxs)(a.Fragment, {
+                        }), P ? null : (0, a.jsxs)(a.Fragment, {
                             children: [(0, a.jsx)(d.StretchedSparkleStar, {
-                                className: t ? N.fullscreenSparkleStar1 : N.settingsSparkleStar1
+                                className: t ? m.fullscreenSparkleStar1 : m.settingsSparkleStar1
                             }), (0, a.jsx)(d.StretchedSparkleStar, {
-                                className: t ? N.fullscreenSparkleStar2 : N.settingsSparkleStar2
+                                className: t ? m.fullscreenSparkleStar2 : m.settingsSparkleStar2
                             }), (0, a.jsx)(d.StretchedSparkleStar, {
-                                className: t ? N.fullscreenSparkleStar3 : N.settingsSparkleStar3
+                                className: t ? m.fullscreenSparkleStar3 : m.settingsSparkleStar3
                             }), (0, a.jsx)(d.StretchedSparkleStar, {
-                                className: t ? N.fullscreenSparkleStar4 : N.settingsSparkleStar4
+                                className: t ? m.fullscreenSparkleStar4 : m.settingsSparkleStar4
                             })]
                         })]
                     })

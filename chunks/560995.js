@@ -24,7 +24,7 @@
                     opacity: p
                 }),
                 m = a.createContext(void 0),
-                E = e => {
+                S = e => {
                     let {
                         children: t,
                         className: n,
@@ -46,7 +46,7 @@
                         }
                     })
                 };
-            class S extends a.PureComponent {
+            class E extends a.PureComponent {
                 render() {
                     let {
                         disableScroll: e,
@@ -71,7 +71,7 @@
                     })
                 }
             }
-            S.defaultProps = {
+            E.defaultProps = {
                 disableScroll: !1
             };
             let v = e => {
@@ -122,7 +122,7 @@
                     opacityOverride: n
                 } = e;
                 if (null == t) return null;
-                let l = [E, S, y];
+                let l = [S, E, y];
                 return (0, i.jsx)(g.Consumer, {
                     children: e => {
                         let {
@@ -143,7 +143,7 @@
                         }
                     }
                 })
-            }, v.Body = S, v.Content = y, v.Icon = e => {
+            }, v.Body = E, v.Content = y, v.Icon = e => {
                 let {
                     icon: t,
                     label: n,
@@ -186,5 +186,5 @@
                         })
                     }
                 })
-            }, v.Bar = E;
+            }, v.Bar = S;
             var C = v

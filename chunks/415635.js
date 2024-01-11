@@ -22,8 +22,8 @@
                     title: g,
                     body: m
                 } = (0, s.makeTextChatNotification)(e, t, n), {
-                    trackView: E,
-                    trackClick: S
+                    trackView: S,
+                    trackClick: E
                 } = (0, o.makeAnalyticsTrackers)(r.OverlayNotificationType.ActivityInvite, {
                     notif_type: r.OverlayNotificationType.ActivityInvite,
                     notif_user_id: n.id,
@@ -42,7 +42,7 @@
                     body: m,
                     hint: e => (0, l.renderKeybindHint)(e, (0, o.getOverlayKeybind)(), d.default.Messages.OVERLAY_UNLOCK_TO_JOIN),
                     onNotificationShow: () => {
-                        E()
+                        S()
                     },
                     confirmText: d.default.Messages.JOIN,
                     onConfirmClick: (l, s) => {
@@ -52,10 +52,10 @@
                             applicationId: u.id,
                             channelId: e.id,
                             messageId: t.id
-                        }), a.default.updateNotificationStatus(s), S("join")
+                        }), a.default.updateNotificationStatus(s), E("join")
                     },
                     onDismissClick: () => {
-                        S("dismiss")
+                        E("dismiss")
                     }
                 }
             }

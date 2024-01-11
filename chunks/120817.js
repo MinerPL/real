@@ -53,8 +53,8 @@
                 W = n("873774"),
                 Z = n("677777"),
                 z = n("579095"),
-                X = n("333896"),
-                Q = n("446380"),
+                Q = n("333896"),
+                X = n("446380"),
                 q = n("919429"),
                 J = n("944843"),
                 $ = n("283848"),
@@ -598,7 +598,7 @@
                                 }, A);
                             case ea.ChannelTypes.GUILD_STAGE_VOICE:
                                 var L, v;
-                                return (0, l.jsx)(X.default, {
+                                return (0, l.jsx)(Q.default, {
                                     channel: T,
                                     guild: s,
                                     position: S.position,
@@ -626,7 +626,7 @@
                                     withGuildIcon: p
                                 }, A);
                             case ea.ChannelTypes.GUILD_STORE:
-                                return (0, l.jsx)(Q.default, {
+                                return (0, l.jsx)(X.default, {
                                     channel: T,
                                     guild: s,
                                     position: S.position,

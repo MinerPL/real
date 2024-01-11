@@ -18,23 +18,23 @@
                 p = n("121338"),
                 g = n("155084"),
                 m = n("393414"),
-                E = n("415518"),
-                S = n("720691"),
+                S = n("415518"),
+                E = n("720691"),
                 v = n("560995"),
                 y = n("286235"),
                 C = n("439932"),
-                N = n("819068"),
-                O = n("483355"),
+                I = n("819068"),
+                N = n("483355"),
                 T = n("6791"),
-                I = n("49111"),
+                O = n("49111"),
                 _ = n("782340"),
                 A = n("353306");
 
             function x() {
-                let e = (0, N.getPID)(),
-                    t = (0, N.getRPCAuthToken)();
+                let e = (0, I.getPID)(),
+                    t = (0, I.getRPCAuthToken)();
                 (0, p.send)({
-                    type: I.OverlayEventTypes.DISPATCH,
+                    type: O.OverlayEventTypes.DISPATCH,
                     pid: e,
                     token: t,
                     payloads: [{
@@ -46,7 +46,7 @@
             }
             class R extends a.PureComponent {
                 componentDidMount() {
-                    this.notificationTimer = setTimeout(this.hideNotification, 1e4), h.default.track(I.AnalyticEvents.NOTIFICATION_VIEWED, {
+                    this.notificationTimer = setTimeout(this.hideNotification, 1e4), h.default.track(O.AnalyticEvents.NOTIFICATION_VIEWED, {
                         notif_type: T.OverlayNotificationType.OverlayCrashed
                     })
                 }
@@ -65,15 +65,15 @@
                     } = this.state, {
                         notificationTimer: a
                     } = this;
-                    return null == a ? null : (0, i.jsx)(O.default, {
+                    return null == a ? null : (0, i.jsx)(N.default, {
                         observe: !1,
                         children: (0, i.jsxs)(f.Clickable, {
-                            className: s((0, C.getThemeClass)(I.ThemeTypes.DARK), A.container),
+                            className: s((0, C.getThemeClass)(O.ThemeTypes.DARK), A.container),
                             onClick: e => e.stopPropagation(),
-                            children: [(0, i.jsx)(E.default, {
+                            children: [(0, i.jsx)(S.default, {
                                 expand: !0,
-                                colorScheme: E.ColorSchemes.DANGER,
-                                icon: (0, i.jsx)(S.default, {
+                                colorScheme: S.ColorSchemes.DANGER,
+                                icon: (0, i.jsx)(E.default, {
                                     width: 40,
                                     height: 40,
                                     className: A.notificationIcon
@@ -113,7 +113,7 @@
                     }, this.handleReload = e => {
                         this.setState({
                             busy: !0
-                        }), x(), h.default.track(I.AnalyticEvents.NOTIFICATION_CLICKED, {
+                        }), x(), h.default.track(O.AnalyticEvents.NOTIFICATION_CLICKED, {
                             notif_type: T.OverlayNotificationType.OverlayCrashed,
                             action_type: "reload"
                         }, !0), e.stopPropagation(), setTimeout(() => location.reload(!0), 200)
@@ -143,11 +143,11 @@
                         error: e,
                         info: t
                     });
-                    let i = (0, N.getPID)(),
-                        a = (0, N.getRPCAuthToken)();
+                    let i = (0, I.getPID)(),
+                        a = (0, I.getRPCAuthToken)();
                     (0, p.send)({
-                        type: I.OverlayEventTypes.DISPATCH,
-                        pid: (0, N.getPID)(),
+                        type: O.OverlayEventTypes.DISPATCH,
+                        pid: (0, I.getPID)(),
                         token: a,
                         payloads: [{
                             type: "OVERLAY_CRASHED",
@@ -161,7 +161,7 @@
                     let l = y.default.captureCrash(e, {
                         extra: t
                     });
-                    h.default.track(I.AnalyticEvents.APP_CRASHED, {
+                    h.default.track(O.AnalyticEvents.APP_CRASHED, {
                         path: n.pathname,
                         extra: t,
                         error_message: e.message,
