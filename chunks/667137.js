@@ -140,21 +140,21 @@
                         config: r.config.stiff,
                         immediate: m
                     }),
-                    x = a.useMemo(() => null != N ? N : {
+                    R = a.useMemo(() => null != N ? N : {
                         value: 0,
                         multiplier: 1
                     }, [N]),
-                    R = a.useRef(x);
+                    x = a.useRef(R);
                 a.useEffect(() => {
-                    (x.multiplier > 1 || x.value > 0) && (R.current = x)
-                }, [x]);
+                    (R.multiplier > 1 || R.value > 0) && (x.current = R)
+                }, [R]);
                 let {
                     multiplier: y,
                     value: D
                 } = a.useMemo(() => ({
-                    value: L ? x.value : R.current.value,
-                    multiplier: L ? x.multiplier : R.current.multiplier
-                }), [L, x, R]);
+                    value: L ? R.value : x.current.value,
+                    multiplier: L ? R.multiplier : x.current.multiplier
+                }), [L, R, x]);
                 return (0, s.jsxs)(s.Fragment, {
                     children: [(0, s.jsx)(M, {
                         channelId: t,
