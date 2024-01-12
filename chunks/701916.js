@@ -5,8 +5,8 @@
                 }
             });
             var i = n("393414"),
-                l = n("800843"),
-                a = n("610730"),
+                a = n("800843"),
+                l = n("610730"),
                 s = n("233069"),
                 r = n("957255"),
                 u = n("299039"),
@@ -19,8 +19,8 @@
                 let h = f ? (0, i.getLastRouteChangeSource)() : void 0;
                 return {
                     location: h,
-                    thread_approximate_member_count: l.default.getMemberCount(e.id),
-                    thread_approximate_message_count: a.default.getCount(e.id),
+                    thread_approximate_member_count: a.default.getMemberCount(e.id),
+                    thread_approximate_message_count: l.default.getCount(e.id),
                     thread_archived: (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0,
                     thread_locked: null !== (c = null === (n = e.threadMetadata) || void 0 === n ? void 0 : n.locked) && void 0 !== c && c,
                     thread_auto_archive_duration_minutes: null !== (_ = null === (o = e.threadMetadata) || void 0 === o ? void 0 : o.autoArchiveDuration) && void 0 !== _ ? _ : 0,

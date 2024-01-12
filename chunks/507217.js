@@ -35,8 +35,8 @@
                 }
             }), n("222007");
             var i = n("627445"),
-                l = n.n(i),
-                a = n("872717"),
+                a = n.n(i),
+                l = n("872717"),
                 s = n("913144"),
                 r = n("798609"),
                 u = n("271938"),
@@ -50,18 +50,18 @@
                     channelId: t,
                     command: n,
                     section: i,
-                    location: a,
+                    location: l,
                     initialValues: r,
                     triggerSection: u,
                     queryLength: d
                 } = e;
-                null != n && l(n.inputType !== c.ApplicationCommandInputType.PLACEHOLDER, "command should not be placeholder"), s.default.dispatch({
+                null != n && a(n.inputType !== c.ApplicationCommandInputType.PLACEHOLDER, "command should not be placeholder"), s.default.dispatch({
                     type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND",
                     channelId: t,
                     command: n,
                     section: i,
                     initialValues: r,
-                    location: a,
+                    location: l,
                     triggerSection: u,
                     queryLength: d
                 })
@@ -94,27 +94,27 @@
             }
 
             function m(e, t, n, i) {
-                return a.default.put({
+                return l.default.put({
                     body: {
                         permissions: i
                     },
                     url: _.Endpoints.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n)
                 })
             }
-            let A = (e, t, n, i, l) => {
+            let A = (e, t, n, i, a) => {
                 s.default.dispatch({
                     type: "APPLICATION_COMMAND_SEARCH_STORE_QUERY",
                     context: e,
                     query: t,
                     limit: n,
                     commandType: i,
-                    applicationId: l
+                    applicationId: a
                 })
             };
 
             function T(e, t, n) {
                 var i;
-                l(null != t.autocomplete, "Missing autocomplete context");
+                a(null != t.autocomplete, "Missing autocomplete context");
                 let {
                     query: c,
                     name: f
@@ -125,7 +125,7 @@
                     channelId: t.channel.id,
                     query: c,
                     name: f
-                }), null == o.default.getAutocompleteChoices(t.channel.id, f, c) && a.default.post({
+                }), null == o.default.getAutocompleteChoices(t.channel.id, f, c) && l.default.post({
                     url: _.Endpoints.INTERACTIONS,
                     body: {
                         type: r.InteractionTypes.APPLICATION_COMMAND_AUTOCOMPLETE,

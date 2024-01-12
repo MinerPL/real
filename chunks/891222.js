@@ -5,13 +5,13 @@
                 }
             });
             var l = n("37983"),
-                a = n("884691"),
-                s = n("414456"),
-                i = n.n(s),
+                s = n("884691"),
+                a = n("414456"),
+                i = n.n(a),
                 u = n("907002"),
-                d = n("65597"),
-                o = n("804160"),
-                r = n("178406"),
+                r = n("65597"),
+                d = n("804160"),
+                o = n("178406"),
                 c = n("553275"),
                 f = n("691307"),
                 h = n("314143"),
@@ -21,7 +21,7 @@
             function g(e) {
                 let {
                     guild: t
-                } = e, n = (0, o.useIsMakingRequest)(t.id), a = (0, u.useSpring)({
+                } = e, n = (0, d.useIsMakingRequest)(t.id), s = (0, u.useSpring)({
                     height: n ? 3 : 0,
                     config: u.config.stiff
                 });
@@ -29,7 +29,7 @@
                     className: S.loaderContainer,
                     children: (0, l.jsx)(u.animated.div, {
                         className: S.loaderBar,
-                        style: a
+                        style: s
                     })
                 })
             }
@@ -38,29 +38,29 @@
                 let {
                     guild: t,
                     className: n,
-                    onPageChange: s,
+                    onPageChange: a,
                     onMemberSelect: u
-                } = e, x = (0, d.default)([r.default], () => r.default.getEstimatedMemberSearchCountByGuildId(t.id), [t.id]), E = (0, o.useIsMakingRequest)(t.id), T = (0, o.useIsStillIndexing)(t.id), C = a.useCallback(e => {
+                } = e, x = (0, r.default)([o.default], () => o.default.getEstimatedMemberSearchCountByGuildId(t.id), [t.id]), E = (0, d.useIsMakingRequest)(t.id), T = (0, d.useIsStillIndexing)(t.id), C = s.useCallback(e => {
                     null != e && (null == u || u(e))
-                }, [u]), I = (0, c.getSearchState)(T, E, x), p = a.useRef(null), A = a.useCallback(() => {
+                }, [u]), p = (0, c.getSearchState)(T, E, x), I = s.useRef(null), M = s.useCallback(() => {
                     var e;
-                    null === (e = p.current) || void 0 === e || e.resetSearchText()
+                    null === (e = I.current) || void 0 === e || e.resetSearchText()
                 }, []);
                 return (0, l.jsxs)("div", {
                     className: i(S.mainTableContainer, n),
                     children: [(0, l.jsx)(m.default, {
                         guild: t,
-                        ref: p
+                        ref: I
                     }), (0, l.jsx)(g, {
                         guild: t
                     }), (0, l.jsx)(f.default, {
                         guild: t,
                         onSelectRow: C,
-                        searchState: I,
-                        onResetForNewMembers: A
-                    }), I !== c.SearchState.SUCCESS_STILL_INDEXING && (0, l.jsx)(h.default, {
+                        searchState: p,
+                        onResetForNewMembers: M
+                    }), p !== c.SearchState.SUCCESS_STILL_INDEXING && (0, l.jsx)(h.default, {
                         guildId: t.id,
-                        onPageChange: s
+                        onPageChange: a
                     })]
                 })
             }

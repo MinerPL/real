@@ -1,23 +1,23 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return r
                 }
             });
             var i = n("37983");
 
-            function l(e) {
+            function r(e) {
                 let {
                     size: t,
                     horizontal: n = !1
-                } = e, l = n ? t : 1, r = n ? 1 : t;
+                } = e, r = n ? t : 1, l = n ? 1 : t;
                 return (0, i.jsx)("span", {
                     style: {
                         display: "block",
-                        width: l,
-                        minWidth: l,
-                        height: r,
-                        minHeight: r
+                        width: r,
+                        minWidth: r,
+                        height: l,
+                        minHeight: l
                     }
                 })
             }

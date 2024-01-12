@@ -5,8 +5,8 @@
                 }
             });
             var i = n("37983"),
-                l = n("884691"),
-                u = n("446674"),
+                u = n("884691"),
+                l = n("446674"),
                 o = n("77078"),
                 r = n("272030"),
                 a = n("838446"),
@@ -40,21 +40,21 @@
                         moderationAlertId: v,
                         analyticsLocation: P,
                         analyticsLocations: y,
-                        onCloseContextMenu: G
+                        onCloseContextMenu: M
                     } = e, {
-                        analyticsLocations: L
-                    } = (0, E.default)(c.default.CONTEXT_MENU), M = (0, d.useAnalyticsContext)(), b = null !== (t = null == y ? void 0 : y[0]) && void 0 !== t ? t : L[0], w = (0, T.useTrackModerationAction)(a, {
+                        analyticsLocations: G
+                    } = (0, E.default)(c.default.CONTEXT_MENU), L = (0, d.useAnalyticsContext)(), b = null !== (t = null == y ? void 0 : y[0]) && void 0 !== t ? t : G[0], w = (0, T.useTrackModerationAction)(a, {
                         location: b,
                         targetUserId: n.id
-                    }), F = (0, u.useStateFromStores)([I.default], () => {
+                    }), F = (0, l.useStateFromStores)([I.default], () => {
                         var e;
                         return null !== (e = I.default.getUserVoiceChannelId(a, n.id)) && void 0 !== e ? e : void 0
-                    }, [a, n.id]), k = l.useCallback(() => {
+                    }, [a, n.id]), k = u.useCallback(() => {
                         w(T.ModerationActionType.COPY_ID)
-                    }, [w]), B = (0, u.useStateFromStores)([S.default], () => S.default.isMember(a, n.id), [a, n.id]), x = (0, D.default)(n.id, a), V = (0, p.default)(n.id, R), Y = (0, _.default)({
+                    }, [w]), B = (0, l.useStateFromStores)([S.default], () => S.default.isMember(a, n.id), [a, n.id]), x = (0, D.default)(n.id, a), V = (0, p.default)(n.id, R), Y = (0, _.default)({
                         guildId: a,
                         userId: n.id,
-                        analyticsLocation: null != P ? P : M.location,
+                        analyticsLocation: null != P ? P : L.location,
                         analyticsLocations: [b],
                         context: R
                     }), H = (0, A.default)(n, b), j = (0, N.default)(n, a, null != s ? s : F, b), K = (0, U.default)(s, v), W = (0, C.default)(n, a), Z = (0, m.default)(n.id, a, !1, b), q = (0, f.default)({
@@ -65,7 +65,7 @@
                     return (0, i.jsxs)(o.Menu, {
                         navId: "user-context",
                         onClose: () => {
-                            (0, r.closeContextMenu)(), null == G || G()
+                            (0, r.closeContextMenu)(), null == M || M()
                         },
                         "aria-label": O.default.Messages.USER_ACTIONS_MENU_LABEL,
                         onSelect: h,

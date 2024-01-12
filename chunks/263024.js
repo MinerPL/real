@@ -5,8 +5,8 @@
                 }
             }), n("702976");
             var i = n("843117"),
-                l = n("872717"),
-                a = n("913144"),
+                a = n("872717"),
+                l = n("913144"),
                 s = n("404118"),
                 r = n("295426"),
                 u = n("716241"),
@@ -25,20 +25,20 @@
                 S = n("782340");
 
             function M(e, t) {
-                return l.default.patch({
+                return a.default.patch({
                     url: T.Endpoints.CHANNEL(e.id),
                     body: t
-                }).then(t => (a.default.dispatch({
+                }).then(t => (l.default.dispatch({
                     type: "THREAD_UPDATE",
                     channel: (0, o.createChannelRecordFromServer)(t.body)
-                }), e.isForumPost() && null != e.parent_id && a.default.dispatch({
+                }), e.isForumPost() && null != e.parent_id && l.default.dispatch({
                     type: "RESORT_THREADS",
                     channelId: e.parent_id
                 }), t))
             }
 
             function v(e, t) {
-                a.default.dispatch({
+                l.default.dispatch({
                     type: "THREAD_MEMBER_LOCAL_UPDATE",
                     id: e.id,
                     guildId: e.getGuildId(),
@@ -76,11 +76,11 @@
                     try {
                         return await M(e, n)
                     } catch (e) {
-                        var l, a;
-                        throw (null === (l = e.body) || void 0 === l ? void 0 : l.code) === T.AbortCodes.TOO_MANY_THREADS ? s.default.show({
+                        var a, l;
+                        throw (null === (a = e.body) || void 0 === a ? void 0 : a.code) === T.AbortCodes.TOO_MANY_THREADS ? s.default.show({
                             title: i ? S.default.Messages.CANNOT_UNARCHIVE_FORUM_POST : S.default.Messages.CANNOT_UNARCHIVE_THREAD,
                             body: i ? S.default.Messages.TOO_MANY_FORUM_POSTS_MESSAGE : S.default.Messages.TOO_MANY_THREADS_MESSAGE
-                        }) : (null === (a = e.body) || void 0 === a ? void 0 : a.code) === T.AbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS ? s.default.show({
+                        }) : (null === (l = e.body) || void 0 === l ? void 0 : l.code) === T.AbortCodes.TOO_MANY_ANNOUNCEMENT_THREADS ? s.default.show({
                             title: S.default.Messages.CANNOT_UNARCHIVE_THREAD,
                             body: S.default.Messages.TOO_MANY_ANNOUNCEMENT_THREADS_MESSAGE
                         }) : 429 === e.status ? s.default.show({
@@ -104,7 +104,7 @@
                 async joinThread(e, t) {
                     e.isForumPost() && v(e, !0);
                     try {
-                        return await l.default.post({
+                        return await a.default.post({
                             url: T.Endpoints.THREAD_MEMBER(e.id),
                             query: {
                                 location: t
@@ -127,7 +127,7 @@
                 },
                 async addMember(e, t, n) {
                     try {
-                        return await l.default.post({
+                        return await a.default.post({
                             url: T.Endpoints.THREAD_MEMBER(e.id, t),
                             query: {
                                 location: n
@@ -147,19 +147,19 @@
                         })
                     }
                 },
-                leaveThread: (e, t) => (e.isForumPost() && v(e, !1), l.default.delete({
+                leaveThread: (e, t) => (e.isForumPost() && v(e, !1), a.default.delete({
                     url: T.Endpoints.THREAD_MEMBER(e.id),
                     query: {
                         location: t
                     }
                 })),
-                removeMember: (e, t, n) => l.default.delete({
+                removeMember: (e, t, n) => a.default.delete({
                     url: T.Endpoints.THREAD_MEMBER(e.id, t),
                     query: {
                         location: n
                     }
                 }),
-                setAutoArchiveDuration: (e, t) => l.default.patch({
+                setAutoArchiveDuration: (e, t) => a.default.patch({
                     url: T.Endpoints.CHANNEL(e.id),
                     body: {
                         auto_archive_duration: t
@@ -175,7 +175,7 @@
                 },
                 async updateFlags(e, t) {
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                    a.default.dispatch({
+                    l.default.dispatch({
                         type: "THREAD_UPDATE",
                         channel: e.merge({
                             flags: t
@@ -186,12 +186,12 @@
                     };
                     n && (i.archived = !1);
                     try {
-                        await l.default.patch({
+                        await a.default.patch({
                             url: T.Endpoints.CHANNEL(e.id),
                             body: i
                         })
                     } catch {
-                        a.default.dispatch({
+                        l.default.dispatch({
                             type: "THREAD_UPDATE",
                             channel: e
                         })
@@ -204,39 +204,39 @@
                         i = t.merge({
                             flags: t.flags | p.ChannelFlags.PINNED
                         });
-                    a.default.dispatch({
+                    l.default.dispatch({
                         type: "THREAD_UPDATE",
                         channel: n
-                    }), a.default.dispatch({
+                    }), l.default.dispatch({
                         type: "THREAD_UPDATE",
                         channel: i
                     }), await this.unarchiveThreadIfNecessary(e.id), await this.unarchiveThreadIfNecessary(t.id);
                     try {
-                        await l.default.patch({
+                        await a.default.patch({
                             url: T.Endpoints.CHANNEL(e.id),
                             body: {
                                 flags: e.flags & ~p.ChannelFlags.PINNED
                             }
                         })
                     } catch {
-                        a.default.dispatch({
+                        l.default.dispatch({
                             type: "THREAD_UPDATE",
                             channel: e
-                        }), a.default.dispatch({
+                        }), l.default.dispatch({
                             type: "THREAD_UPDATE",
                             channel: t
                         });
                         return
                     }
                     try {
-                        await l.default.patch({
+                        await a.default.patch({
                             url: T.Endpoints.CHANNEL(t.id),
                             body: {
                                 flags: t.flags | p.ChannelFlags.PINNED
                             }
                         })
                     } catch {
-                        a.default.dispatch({
+                        l.default.dispatch({
                             type: "THREAD_UPDATE",
                             channel: t
                         })
@@ -258,18 +258,18 @@
                     })
                 },
                 async setNotificationSettings(e, t) {
-                    return (0, m.trackThreadNotificationSettingsUpdated)(e, t), !g.default.hasJoined(e.id) && await this.joinThread(e, "Change Notification Settings"), l.default.patch({
+                    return (0, m.trackThreadNotificationSettingsUpdated)(e, t), !g.default.hasJoined(e.id) && await this.joinThread(e, "Change Notification Settings"), a.default.patch({
                         url: T.Endpoints.THREAD_MEMBER_SETTINGS(e.id),
                         body: t
                     })
                 },
                 loadArchivedThreads(e, t, n, s, r) {
-                    !E.default.isLoading(t, n, s) && (a.default.dispatch({
+                    !E.default.isLoading(t, n, s) && (l.default.dispatch({
                         type: "LOAD_ARCHIVED_THREADS",
                         channelId: t,
                         sortOrder: n,
                         tagFilter: s
-                    }), l.default.get({
+                    }), a.default.get({
                         url: T.Endpoints.THREAD_SEARCH(t),
                         query: {
                             archived: !0,
@@ -284,29 +284,29 @@
                     }).then(i => {
                         let {
                             body: {
-                                threads: l,
+                                threads: a,
                                 members: u,
                                 has_more: d,
                                 first_messages: o,
                                 most_recent_messages: c
                             }
                         } = i;
-                        a.default.dispatch({
+                        l.default.dispatch({
                             type: "LOAD_ARCHIVED_THREADS_SUCCESS",
                             guildId: e,
                             channelId: t,
                             offset: r,
                             sortOrder: n,
                             tagFilter: s,
-                            threads: l,
+                            threads: a,
                             firstMessages: o,
                             mostRecentMessages: c,
                             members: (null != u ? u : []).map(e => (0, A.default)(e)),
-                            owners: l.map(e => e.owner).filter(h.isNotNullish),
+                            owners: a.map(e => e.owner).filter(h.isNotNullish),
                             hasMore: d
                         })
                     }, () => {
-                        a.default.dispatch({
+                        l.default.dispatch({
                             type: "LOAD_ARCHIVED_THREADS_FAIL",
                             channelId: t,
                             sortOrder: n,
@@ -323,7 +323,7 @@
                                 first_messages: o,
                                 most_recent_messages: c
                             }
-                        } = await l.default.get({
+                        } = await a.default.get({
                             url: T.Endpoints.THREAD_SEARCH(t),
                             query: {
                                 name: n,
@@ -331,7 +331,7 @@
                                 tag_setting: i.ThreadSearchTagSetting.MATCH_SOME
                             }
                         });
-                    return a.default.dispatch({
+                    return l.default.dispatch({
                         type: "LOAD_THREADS_SUCCESS",
                         threads: u,
                         members: d,

@@ -27,8 +27,8 @@
                 g = n("701909"),
                 m = n("339023"),
                 A = n("602658"),
-                L = n("49111"),
-                U = n("782340"),
+                U = n("49111"),
+                L = n("782340"),
                 R = n("80014"),
                 P = n("494101"),
                 y = function(e) {
@@ -36,10 +36,10 @@
                         guildId: t,
                         transitionState: r,
                         onClose: y
-                    } = e, D = (0, s.useStateFromStores)([h.default], () => h.default.getGuild(t), [t]), O = (0, s.useStateFromStores)([I.default], () => I.default.getId()), b = (0, s.useStateFromStores)([S.default], () => S.default.getMember(t, O)), [w, M] = l.useState([]), G = (0, f.default)(), x = (0, T.useUID)();
+                    } = e, D = (0, s.useStateFromStores)([h.default], () => h.default.getGuild(t), [t]), O = (0, s.useStateFromStores)([I.default], () => I.default.getId()), b = (0, s.useStateFromStores)([S.default], () => S.default.getMember(t, O)), [M, w] = l.useState([]), G = (0, f.default)(), x = (0, T.useUID)();
                     if (l.useEffect(() => {
-                            0 !== w.length && v.default.track(L.AnalyticEvents.PASSPORT_ENTRY_VIEWED, {
-                                role_ids: w.map(e => {
+                            0 !== M.length && v.default.track(U.AnalyticEvents.PASSPORT_ENTRY_VIEWED, {
+                                role_ids: M.map(e => {
                                     let {
                                         role_id: t
                                     } = e;
@@ -47,8 +47,8 @@
                                 }),
                                 ...(0, _.collectGuildAnalyticsMetadata)(t)
                             })
-                        }, [t, w]), l.useEffect(() => {
-                            d.default.getGuildRoleConnectionsConfigurations(t).then(e => M(e))
+                        }, [t, M]), l.useEffect(() => {
+                            d.default.getGuildRoleConnectionsConfigurations(t).then(e => w(e))
                         }, [t]), null == D || null == b) return null;
                     let F = Object.values(D.roles).filter(e => {
                         var t;
@@ -66,7 +66,7 @@
                             }), (0, i.jsx)(a.Heading, {
                                 variant: "text-md/medium",
                                 color: "header-primary",
-                                children: U.default.Messages.CONNECTIONS_ROLES_CHANNEL_NAME
+                                children: L.default.Messages.CONNECTIONS_ROLES_CHANNEL_NAME
                             }), (0, i.jsx)(a.ModalCloseButton, {
                                 className: R.modalCloseButton,
                                 onClick: y
@@ -76,15 +76,15 @@
                             children: [(0, i.jsx)(a.Heading, {
                                 variant: "heading-md/semibold",
                                 color: "header-primary",
-                                children: U.default.Messages.CONNECTIONS_ROLES_CHANNEL_CALL_TO_ACTION_LEARN_MORE.format({
-                                    helpdeskArticleUrl: g.default.getArticleURL(L.HelpdeskArticles.CONNECTION_DETAILS)
+                                children: L.default.Messages.CONNECTIONS_ROLES_CHANNEL_CALL_TO_ACTION_LEARN_MORE.format({
+                                    helpdeskArticleUrl: g.default.getArticleURL(U.HelpdeskArticles.CONNECTION_DETAILS)
                                 })
                             }), (0, i.jsx)("div", {
                                 className: R.verifiedRoles,
                                 children: F.map(e => {
                                     let r = b.roles.includes(e.id),
                                         s = function(e) {
-                                            let n = w.find(t => {
+                                            let n = M.find(t => {
                                                 let {
                                                     role_id: n
                                                 } = t;

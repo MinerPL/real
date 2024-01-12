@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 categoryCollapse: function() {
-                    return l
+                    return r
                 },
                 categoryExpand: function() {
-                    return r
+                    return l
                 },
                 categoryCollapseAll: function() {
                     return a
@@ -15,14 +15,14 @@
             });
             var i = n("913144");
 
-            function l(e) {
+            function r(e) {
                 i.default.dispatch({
                     type: "CATEGORY_COLLAPSE",
                     id: e
                 })
             }
 
-            function r(e) {
+            function l(e) {
                 i.default.dispatch({
                     type: "CATEGORY_EXPAND",
                     id: e

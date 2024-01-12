@@ -18,8 +18,8 @@
                 _ = n("57242"),
                 p = n("380676"),
                 h = n("170213"),
-                I = n("49111"),
-                S = n("782340"),
+                S = n("49111"),
+                I = n("782340"),
                 T = n("383496");
             let C = e => {
                     let {
@@ -30,13 +30,13 @@
                         className: T.classificationHeader,
                         children: (0, i.jsx)(s.Heading, {
                             variant: "heading-xl/normal",
-                            children: l && null != n ? S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD.format({
+                            children: l && null != n ? I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD.format({
                                 guildName: n,
                                 classification_type: t,
                                 classificationHook: (e, t) => (0, i.jsx)("strong", {
                                     children: e
                                 }, t)
-                            }) : S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_V2.format({
+                            }) : I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_V2.format({
                                 classification_type: t,
                                 classificationHook: (e, t) => (0, i.jsx)("strong", {
                                     children: e
@@ -54,7 +54,7 @@
                         children: [(0, i.jsx)(s.Text, {
                             variant: "eyebrow",
                             color: "text-muted",
-                            children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_HEADER
+                            children: I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_HEADER
                         }), (0, i.jsx)("ul", {
                             className: T.classificationActionsTakenList,
                             children: t.map(e => (0, i.jsx)(m, {
@@ -99,7 +99,7 @@
                             className: T.classificationPolicyDescriptionContainer,
                             children: (0, i.jsx)(s.Text, {
                                 variant: "text-md/normal",
-                                children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_HEADER.format({
+                                children: I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_HEADER.format({
                                     classificationDescription: t
                                 })
                             })
@@ -116,12 +116,12 @@
                 A = () => (0, i.jsx)(s.Text, {
                     variant: "text-md/normal",
                     color: "text-muted",
-                    children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_APPEAL_STATUS
+                    children: I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_APPEAL_STATUS
                 }),
                 N = e => (0, i.jsx)(s.Text, {
                     variant: "text-md/normal",
                     color: "text-muted",
-                    children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_APPEAL_V2.format({
+                    children: I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_APPEAL_V2.format({
                         letUsKnowHook: (t, n) => (0, i.jsx)(s.Anchor, {
                             href: e.isAppealEligible ? void 0 : e.appealLink,
                             onClick: e.letUsKnowClick,
@@ -150,11 +150,11 @@
                         children: [(0, i.jsx)(s.Text, {
                             variant: "eyebrow",
                             color: "text-muted",
-                            children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_HEADER
+                            children: I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_HEADER
                         }), (0, i.jsx)(s.Text, {
                             className: T.guidelinesExplanation,
                             variant: "text-sm/normal",
-                            children: S.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_DESCRIPTION.format({
+                            children: I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_DESCRIPTION.format({
                                 tosLink: t,
                                 communityGuidelinesLink: n
                             })
@@ -173,10 +173,10 @@
                 } = e, {
                     classification: s,
                     classificationRequestState: c,
-                    isAppealEligible: S
+                    isAppealEligible: I
                 } = (0, E.useSafetyHubClassification)(r), m = (0, f.useSafetyHubAccountStanding)(), v = null != s && null != s.flagged_content && s.flagged_content.length > 0;
                 return (l.useEffect(() => {
-                    u.default.track(I.AnalyticEvents.SAFETY_HUB_ACTION, {
+                    u.default.track(S.AnalyticEvents.SAFETY_HUB_ACTION, {
                         action: h.SafetyHubAnalyticsActions.ViewViolationDetail,
                         account_standing: m.state,
                         classification_ids: [Number(r)],
@@ -200,15 +200,15 @@
                         appealComponent: (0, i.jsx)(L, {
                             hasBeenAppealed: null != s.appeal_status,
                             onLetUsKnowClick: () => {
-                                u.default.track(I.AnalyticEvents.SAFETY_HUB_ACTION, {
+                                u.default.track(S.AnalyticEvents.SAFETY_HUB_ACTION, {
                                     action: h.SafetyHubAnalyticsActions.ClickLetUsKnow,
                                     account_standing: m.state,
                                     classification_ids: [Number(r)],
                                     source: o,
                                     is_violative_content_shown: v
-                                }), S && _.default.open(r)
+                                }), I && _.default.open(r)
                             },
-                            isAppealEligible: S
+                            isAppealEligible: I
                         })
                     })]
                 })

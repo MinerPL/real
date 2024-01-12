@@ -17,6 +17,6 @@
                         size: 480
                     });
                 if (null == s) return;
-                let a = new Image;
-                a.src = s
+                let u = new Image;
+                u.src = s
             }

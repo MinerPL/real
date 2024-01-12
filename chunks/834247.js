@@ -31,14 +31,14 @@
                 O = n("502533"),
                 M = n("314838"),
                 D = n("383161"),
-                v = n("421602"),
-                U = n("459870"),
+                U = n("421602"),
+                v = n("459870"),
                 R = n("692986"),
                 L = n("806179"),
                 P = n("97508"),
                 y = n("816106"),
-                F = n("623879"),
-                b = n("49111"),
+                b = n("623879"),
+                F = n("49111"),
                 H = n("782340"),
                 x = (0, s.default)((0, r.default)(function(e) {
                     let {
@@ -53,7 +53,7 @@
                         context: k,
                         onSelect: Y,
                         onHeightUpdate: j
-                    } = e, V = (0, L.default)(t.id, n, r.id), W = (0, D.default)(t, n, k), K = (0, v.default)(t.id, k), z = (0, F.default)(t.id), Z = (0, G.default)(t, k), X = (0, A.default)({
+                    } = e, V = (0, L.default)(t.id, n, r.id), W = (0, D.default)(t, n, k), K = (0, U.default)(t.id, k), z = (0, b.default)(t.id), Z = (0, G.default)(t, k), X = (0, A.default)({
                         user: t,
                         guildId: n,
                         context: k
@@ -61,12 +61,12 @@
                         guildId: n,
                         userId: t.id,
                         analyticsLocation: {
-                            page: b.AnalyticsPages.GUILD_CHANNEL,
-                            section: b.AnalyticsSections.CHAT_USERNAME,
-                            object: b.AnalyticsObjects.CONTEXT_MENU_ITEM
+                            page: F.AnalyticsPages.GUILD_CHANNEL,
+                            section: F.AnalyticsSections.CHAT_USERNAME,
+                            object: F.AnalyticsObjects.CONTEXT_MENU_ITEM
                         },
                         context: k
-                    }), ee = (0, M.default)(t, n), et = (0, o.default)(null, t), en = (0, p.default)(t), ei = (0, g.default)(t), ea = (0, m.default)(t, n, r.id), el = (0, P.default)(t.id, n), er = (0, U.default)(t, n), es = (0, T.default)({
+                    }), ee = (0, M.default)(t, n), et = (0, o.default)(null, t), en = (0, p.default)(t), ei = (0, g.default)(t), ea = (0, m.default)(t, n, r.id), el = (0, P.default)(t.id, n), er = (0, v.default)(t, n), es = (0, T.default)({
                         id: t.id,
                         label: H.default.Messages.COPY_ID_USER
                     }), eu = (0, O.default)(t.id, r.id), eo = (0, E.default)(t.id), ed = (0, c.default)(r.id), ec = (0, S.default)(t), eE = (0, N.default)(t, n, r.id), e_ = (0, C.default)({
@@ -111,5 +111,5 @@
                         })]
                     })
                 }, {
-                    object: b.AnalyticsObjects.CONTEXT_MENU
+                    object: F.AnalyticsObjects.CONTEXT_MENU
                 }), [d.default.CONTEXT_MENU, d.default.GUILD_CHANNEL_USER_MENU])

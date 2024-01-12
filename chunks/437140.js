@@ -24,8 +24,8 @@
                             bitrate: E,
                             userLimit: _,
                             parentId: g,
-                            skuId: v,
-                            branchId: C
+                            skuId: C,
+                            branchId: v
                         } = e;
                         l.default.dispatch({
                             type: "CREATE_CHANNEL_MODAL_SUBMIT"
@@ -36,8 +36,8 @@
                             permission_overwrites: p
                         };
                         if (null != E && E !== d.BITRATE_DEFAULT && (I.bitrate = E), null != _ && _ > 0 && (I.user_limit = _), null != g && (I.parent_id = g), n === d.ChannelTypes.GUILD_STORE) {
-                            if (null == v) throw Error("Unexpected missing SKU");
-                            I.sku_id = v, I.branch_id = C
+                            if (null == C) throw Error("Unexpected missing SKU");
+                            I.sku_id = C, I.branch_id = v
                         }
                         return s.default.post({
                             url: d.Endpoints.GUILD_CHANNELS(t),

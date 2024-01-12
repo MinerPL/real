@@ -9,12 +9,12 @@
             });
             var i = n("37983");
             n("884691");
-            var l = n("77078"),
-                r = n("782340");
+            var r = n("77078"),
+                l = n("782340");
 
             function a(e) {
-                return null == e || null == e.end_time ? null : r.default.Messages.MUTED_UNTIL_TIME.format({
-                    endTime: new Date(e.end_time).toLocaleString(r.default.getLocale(), {
+                return null == e || null == e.end_time ? null : l.default.Messages.MUTED_UNTIL_TIME.format({
+                    endTime: new Date(e.end_time).toLocaleString(l.default.getLocale(), {
                         month: "numeric",
                         day: "numeric",
                         hour: "numeric",
@@ -27,11 +27,11 @@
                 let {
                     muteConfig: t,
                     className: n
-                } = e, r = a(t);
-                return null != r ? (0, i.jsx)(l.Text, {
+                } = e, l = a(t);
+                return null != l ? (0, i.jsx)(r.Text, {
                     variant: "text-xs/normal",
                     color: "text-muted",
                     className: n,
-                    children: r
+                    children: l
                 }) : null
             }

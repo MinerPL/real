@@ -19,8 +19,8 @@
                 _ = n("697218"),
                 p = n("170113"),
                 h = n("780571"),
-                I = n("377502"),
-                S = n("103603"),
+                S = n("377502"),
+                I = n("103603"),
                 T = n("736393"),
                 C = n("170213"),
                 g = n("49111"),
@@ -59,7 +59,7 @@
                             let r = C.DEFAULT_MEDIA_MAX_WIDTH,
                                 o = C.DEFAULT_MEDIA_MAX_HEIGHT;
                             if (null != t.width && null != t.height) {
-                                let e = (0, S.getRatio)({
+                                let e = (0, I.getRatio)({
                                     width: t.width,
                                     height: t.height,
                                     maxWidth: C.DEFAULT_MEDIA_MAX_WIDTH,
@@ -100,7 +100,7 @@
                         o = 1 === n.length;
                     return (0, i.jsx)("div", {
                         className: A.classificationEvidenceMessageAttachment,
-                        children: (0, i.jsx)(I.default, {
+                        children: (0, i.jsx)(S.default, {
                             attachments: n.map(e => ({
                                 attachment: e,
                                 spoiler: !0,

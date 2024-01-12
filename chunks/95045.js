@@ -8,42 +8,42 @@
                 }
             }), n("222007"), n("781738"), n("355025");
             var i = n("367376"),
-                l = n("240873"),
-                r = n("49111");
-            let a = new Set([r.MessageEmbedTypes.IMAGE, r.MessageEmbedTypes.GIFV]),
+                r = n("240873"),
+                l = n("49111");
+            let a = new Set([l.MessageEmbedTypes.IMAGE, l.MessageEmbedTypes.GIFV]),
                 s = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
 
             function o(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                     n = t.formatInline ? i.default.parseInlineReply : i.default.parse;
                 return function(e, t, n) {
-                    var i, r;
+                    var i, l;
                     let {
                         toAST: o = !1,
                         hideSimpleEmbedContent: u = !0,
                         formatInline: f = !1,
                         postProcessor: h
                     } = n, E = !1;
-                    let _ = e(t.content, !0, (i = t, r = n, {
-                        allowLinks: null != i.webhookId || !!r.allowLinks,
+                    let _ = e(t.content, !0, (i = t, l = n, {
+                        allowLinks: null != i.webhookId || !!l.allowLinks,
                         allowEmojiLinks: null != i.webhookId,
                         channelId: i.channel_id,
                         messageId: i.id,
                         mentionChannels: i.mentionChannels,
-                        isInteracting: !!r.isInteracting,
-                        formatInline: !!r.formatInline,
-                        noStyleAndInteraction: !!r.noStyleAndInteraction,
-                        allowHeading: !!r.allowHeading,
-                        allowList: !!r.allowList,
-                        previewLinkTarget: !!r.previewLinkTarget,
-                        disableAnimatedEmoji: !!r.disableAnimatedEmoji,
+                        isInteracting: !!l.isInteracting,
+                        formatInline: !!l.formatInline,
+                        noStyleAndInteraction: !!l.noStyleAndInteraction,
+                        allowHeading: !!l.allowHeading,
+                        allowList: !!l.allowList,
+                        previewLinkTarget: !!l.previewLinkTarget,
+                        disableAnimatedEmoji: !!l.disableAnimatedEmoji,
                         disableAutoBlockNewlines: !0,
                         muted: !1
                     }), (e, n) => (!Array.isArray(e) && (e = [e]), u && (e = function(e, t) {
                         if (1 !== e.length || 1 !== t.length) return e;
                         let n = e[0],
                             i = t[0];
-                        return ("link" === n.type || "attachmentLink" === n.type) && a.has(i.type) && (0, l.isEmbedInline)(i) ? [] : e
+                        return ("link" === n.type || "attachmentLink" === n.type) && a.has(i.type) && (0, r.isEmbedInline)(i) ? [] : e
                     }(e, t.embeds)), !f && (e = function(e, t) {
                         return t ? d(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = d(e[0].content)), e)
                     }(e, n)), E = function(e, t) {
@@ -61,8 +61,8 @@
             }
 
             function u(e, t, n) {
-                var l;
-                return l = i.default.parseAutoModerationSystemMessage, l(e, !0, {
+                var r;
+                return r = i.default.parseAutoModerationSystemMessage, r(e, !0, {
                     allowLinks: !1,
                     allowEmojiLinks: !1,
                     mentionChannels: [],

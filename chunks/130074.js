@@ -6,8 +6,8 @@
             });
             var i = n("37983");
             n("884691");
-            var l = n("77078"),
-                r = n("272030"),
+            var r = n("77078"),
+                l = n("272030"),
                 a = n("838446"),
                 s = n("158534"),
                 o = n("798609"),
@@ -33,11 +33,11 @@
                 M = n("406703"),
                 y = n("126710"),
                 O = n("502533"),
-                G = n("314838"),
-                U = n("151200"),
+                U = n("314838"),
+                G = n("151200"),
                 P = n("692986"),
-                x = n("806179"),
-                D = n("816106"),
+                D = n("806179"),
+                x = n("816106"),
                 b = n("623879"),
                 F = n("49111"),
                 w = n("782340"),
@@ -54,10 +54,10 @@
                         context: H,
                         onSelect: B,
                         onHeightUpdate: k
-                    } = e, Y = (0, x.default)(t.id, null), Z = (0, M.default)(t, H), K = (0, A.default)({
+                    } = e, Y = (0, D.default)(t.id, null), Z = (0, M.default)(t, H), K = (0, A.default)({
                         user: t,
                         context: H
-                    }), W = (0, m.default)(t), z = (0, b.default)(t.id), X = (0, y.default)(n.id, a), Q = (0, G.default)(t), q = (0, u.default)(null, t), J = (0, D.default)(t.id), $ = (0, U.default)(t.id, n.id), ee = (0, g.default)(t), et = (0, P.default)(t.id), en = (0, O.default)(t.id, n.id), ei = (0, R.default)(t), el = (0, _.default)(n), er = (0, p.default)({
+                    }), W = (0, m.default)(t), z = (0, b.default)(t.id), X = (0, y.default)(n.id, a), Q = (0, U.default)(t), q = (0, u.default)(null, t), J = (0, x.default)(t.id), $ = (0, G.default)(t.id, n.id), ee = (0, g.default)(t), et = (0, P.default)(t.id), en = (0, O.default)(t.id, n.id), ei = (0, R.default)(t), er = (0, _.default)(n), el = (0, p.default)({
                         id: t.id,
                         label: w.default.Messages.COPY_ID_USER
                     }), ea = (0, p.default)({
@@ -70,41 +70,41 @@
                         guildId: void 0,
                         onHeightUpdate: k
                     }), eh = (0, I.useAddToFavoritesItem)(n), eE = (0, I.useRemoveFromFavoritesItem)(n), e_ = (0, C.default)(n), ep = (0, T.default)(n), eI = (0, S.useMessageRequestItem)(n), eC = (0, v.useSafetyWarningsItem)(n), eT = n.isManaged(), eS = t.isNonUserBot();
-                    return (0, i.jsxs)(l.Menu, {
+                    return (0, i.jsxs)(r.Menu, {
                         navId: "user-context",
-                        onClose: r.closeContextMenu,
+                        onClose: l.closeContextMenu,
                         "aria-label": w.default.Messages.USER_ACTIONS_MENU_LABEL,
                         onSelect: B,
-                        children: [(0, i.jsx)(l.MenuGroup, {
+                        children: [(0, i.jsx)(r.MenuGroup, {
                             children: !eS && es
-                        }), (0, i.jsx)(l.MenuGroup, {
+                        }), (0, i.jsx)(r.MenuGroup, {
                             children: eI
-                        }), (0, i.jsx)(l.MenuGroup, {
+                        }), (0, i.jsx)(r.MenuGroup, {
                             children: eC
-                        }), (0, i.jsxs)(l.MenuGroup, {
+                        }), (0, i.jsxs)(r.MenuGroup, {
                             children: [eh, e_, ep]
-                        }), (0, i.jsx)(l.MenuGroup, {
+                        }), (0, i.jsx)(r.MenuGroup, {
                             children: !eS && ed
-                        }), (0, i.jsxs)(l.MenuGroup, {
+                        }), (0, i.jsxs)(r.MenuGroup, {
                             children: [!eS && (0, i.jsxs)(i.Fragment, {
                                 children: [j && Y, Z, !eT && $, j && K, j && W, z]
                             }), X]
                         }), !eS && (0, i.jsxs)(i.Fragment, {
-                            children: [(0, i.jsx)(l.MenuGroup, {
+                            children: [(0, i.jsx)(r.MenuGroup, {
                                 children: d && J
-                            }), (0, i.jsx)(l.MenuGroup, {
+                            }), (0, i.jsx)(r.MenuGroup, {
                                 children: j && q
-                            }), (0, i.jsxs)(l.MenuGroup, {
+                            }), (0, i.jsxs)(r.MenuGroup, {
                                 children: [d && et, d && en, ef, j && Q, ee, j && ei, d && ec]
-                            }), (0, i.jsx)(l.MenuGroup, {
-                                children: s && el
-                            }), F && (0, i.jsxs)(l.MenuGroup, {
+                            }), (0, i.jsx)(r.MenuGroup, {
+                                children: s && er
+                            }), F && (0, i.jsxs)(r.MenuGroup, {
                                 children: [eu, eo]
                             })]
-                        }), (0, i.jsx)(l.MenuGroup, {
+                        }), (0, i.jsx)(r.MenuGroup, {
                             children: eE
-                        }), (0, i.jsxs)(l.MenuGroup, {
-                            children: [er, !V && ea]
+                        }), (0, i.jsxs)(r.MenuGroup, {
+                            children: [el, !V && ea]
                         })]
                     })
                 }, {

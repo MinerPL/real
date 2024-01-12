@@ -14,8 +14,8 @@
                 }
             }), n("781738");
             var i = n("867805"),
-                l = n("407063"),
-                r = n("315102"),
+                r = n("407063"),
+                l = n("315102"),
                 a = n("773336"),
                 s = n("49111");
             let o = "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/role-icons"),
@@ -29,7 +29,7 @@
                         unicodeEmoji: null != n ? n : void 0
                     }
                 },
-                f = (e, t) => e.replace(/size=[0-9]+/g, "size=".concat((0, l.getBestMediaProxySize)(t * (0, l.getDevicePixelRatio)()))),
+                f = (e, t) => e.replace(/size=[0-9]+/g, "size=".concat((0, r.getBestMediaProxySize)(t * (0, r.getDevicePixelRatio)()))),
                 h = (e, t) => {
                     let {
                         id: n,
@@ -37,10 +37,10 @@
                     } = e;
                     if (null == i) return;
                     if (i.startsWith("data:")) return i;
-                    let a = r.SUPPORTS_WEBP ? "webp" : "png",
+                    let a = l.SUPPORTS_WEBP ? "webp" : "png",
                         c = "",
                         f = "quality=lossless";
-                    return (null != t && (c = "size=" + (0, l.getBestMediaProxySize)(t * (0, l.getDevicePixelRatio)()), f = d ? "" : "&" + f), null != window.GLOBAL_ENV.CDN_HOST) ? "".concat(o, "/").concat(n, "/").concat(i, ".").concat(a, "?").concat(c).concat(f) : "".concat(u).concat(s.Endpoints.ROLE_ICON(n, i), "?").concat(c)
+                    return (null != t && (c = "size=" + (0, r.getBestMediaProxySize)(t * (0, r.getDevicePixelRatio)()), f = d ? "" : "&" + f), null != window.GLOBAL_ENV.CDN_HOST) ? "".concat(o, "/").concat(n, "/").concat(i, ".").concat(a, "?").concat(c).concat(f) : "".concat(u).concat(s.Endpoints.ROLE_ICON(n, i), "?").concat(c)
                 },
                 E = e => e.startsWith(o) || e.startsWith("".concat(u, "/roles")) && e.includes("/icons/"),
                 _ = (e, t) => {

@@ -20,8 +20,8 @@
                 _ = null,
                 p = !1,
                 h = null,
-                I = !1,
-                S = null;
+                S = !1,
+                I = null;
             class T extends r.default.Store {
                 isFetching() {
                     return d
@@ -54,10 +54,10 @@
                     return h
                 }
                 getIsSubmitting() {
-                    return I
+                    return S
                 }
                 getSubmitError() {
-                    return S
+                    return I
                 }
             }
             T.displayName = "SafetyHubStore";
@@ -113,17 +113,17 @@
                 },
                 SAFETY_HUB_REQUEST_REVIEW_START: function(e) {
                     let {} = e;
-                    I = !0, S = null
+                    S = !0, I = null
                 },
                 SAFETY_HUB_REQUEST_REVIEW_SUCCESS: function(e) {
                     let {} = e;
-                    I = !1, S = null
+                    S = !1, I = null
                 },
                 SAFETY_HUB_REQUEST_REVIEW_FAILURE: function(e) {
                     let {
                         error: t
                     } = e;
-                    I = !1, S = t
+                    S = !1, I = t
                 },
                 LOGOUT: function() {
                     d = !1, s = {}, c = {

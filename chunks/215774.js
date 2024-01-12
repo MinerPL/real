@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 GuildPickerDropdown: function() {
-                    return a
+                    return u
                 }
             });
             var r = n("37983");
@@ -10,12 +10,12 @@
                 l = n("782340"),
                 s = n("336859");
 
-            function a(e) {
+            function u(e) {
                 let {
                     selectedGuildId: t,
                     onGuildChange: n,
-                    eligibleApplicationSubscriptionGuilds: a
-                } = e, u = a.map(e => ({
+                    eligibleApplicationSubscriptionGuilds: u
+                } = e, a = u.map(e => ({
                     value: e.id,
                     label: e.name
                 }));
@@ -24,7 +24,7 @@
                     maxVisibleItems: 5,
                     value: t,
                     placeholder: l.default.Messages.APPLICATION_SUBSCRIPTION_GUILD_PICKER_PLACEHOLDER,
-                    options: u,
+                    options: a,
                     onChange: e => {
                         n(e)
                     }

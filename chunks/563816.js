@@ -47,7 +47,7 @@
                             limit: f.CONTEXT_MENU_COMMANDS_QUERY_LIMIT
                         }),
                         {
-                            sections: v
+                            sections: U
                         } = a.useMemo(() => {
                             let e = {};
                             return M.forEach(t => {
@@ -56,13 +56,13 @@
                                 sections: e
                             }
                         }, [M]),
-                        U = a.useRef(D.current);
+                        v = a.useRef(D.current);
                     a.useEffect(() => {
-                        D.current !== U.current && (U.current = D.current, null == A || A())
+                        D.current !== v.current && (v.current = D.current, null == A || A())
                     }, [D, A]);
                     let R = a.useCallback(e => {
                         r(null != p, "menu item should not show if channel is null");
-                        let t = v[e.applicationId],
+                        let t = U[e.applicationId],
                             n = null != t ? (0, c.getIconComponent)(t) : void 0;
                         return (0, i.jsx)(u.MenuItem, {
                             id: e.id,
@@ -87,7 +87,7 @@
                                 })
                             }
                         }, e.id)
-                    }, [p, C, l, v]);
+                    }, [p, C, l, U]);
                     return D.current ? t = (0, i.jsx)(u.MenuItem, {
                         id: "menu-commands-placeholder",
                         render: () => (0, i.jsx)(E.default, {}),

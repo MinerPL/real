@@ -8,8 +8,8 @@
                 i = n("884691"),
                 l = n("627445"),
                 s = n.n(l),
-                a = n("252438"),
-                u = n("834897"),
+                u = n("252438"),
+                a = n("834897"),
                 o = n("206230"),
                 c = n("90592"),
                 d = n("333955"),
@@ -39,7 +39,7 @@
                         readySlideId: O
                     } = (0, _.usePaymentContext)();
                 s(null != A, "Expected plan to selected"), s(null != v, "Expected selectedSkuId"), s(null != R, "Step should be set");
-                let M = (0, u.default)(p.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY),
+                let M = (0, a.default)(p.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY),
                     {
                         createMultipleConfettiAt: U
                     } = i.useContext(I.ConfettiCannonContext),
@@ -51,7 +51,7 @@
                     B = i.useMemo(() => {
                         let e = 0,
                             t = 0;
-                        for (let n of h.sku_benefits.benefits) n.ref_type === a.SKUBenefitTypes.APPLICATION_PREMIUM_COMMAND ? e += 1 : n.ref_type === a.SKUBenefitTypes.INTANGIBLE && (t += 1);
+                        for (let n of h.sku_benefits.benefits) n.ref_type === u.SKUBenefitTypes.APPLICATION_PREMIUM_COMMAND ? e += 1 : n.ref_type === u.SKUBenefitTypes.INTANGIBLE && (t += 1);
                         let n = [];
                         return 0 !== e && n.push(m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_EXCLUSIVE_CHANNELS_SUBTITLE.format({
                             commandCount: e

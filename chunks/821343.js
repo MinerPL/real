@@ -5,11 +5,11 @@
                     return m
                 },
                 default: function() {
-                    return y
+                    return L
                 }
             }), n("222007");
-            var l = n("917351"),
-                a = n.n(l),
+            var a = n("917351"),
+                l = n.n(a),
                 s = n("335710"),
                 r = n("249654"),
                 u = n("446674"),
@@ -44,9 +44,9 @@
                 let e = !p,
                     t = f.default.getChannel(N[N.length - 1]),
                     n = null == t ? null : R(t, v);
-                N = a(f.default.getAllThreadsForParent(M)).filter(e => e.isArchivedThread()).filter(t => {
-                    var l;
-                    if (0 !== i.size && (null === (l = t.appliedTags) || void 0 === l ? void 0 : l.some(e => i.has(e))) !== !0) return !1;
+                N = l(f.default.getAllThreadsForParent(M)).filter(e => e.isArchivedThread()).filter(t => {
+                    var a;
+                    if (0 !== i.size && (null === (a = t.appliedTags) || void 0 === a ? void 0 : a.some(e => i.has(e))) !== !0) return !1;
                     if (e || null == n) return !0;
                     {
                         let e = null == t ? null : R(t, v);
@@ -55,12 +55,12 @@
                 }).sort((e, t) => r.default.compare(R(e, v), R(t, v))).map(e => e.id).reverse().value()
             }
 
-            function D(e) {
+            function b(e) {
                 if (!(N.indexOf(e) >= 0)) return !1;
                 N = N.filter(t => t !== e)
             }
-            let b = [];
-            class L extends u.default.Store {
+            let D = [];
+            class y extends u.default.Store {
                 initialize() {
                     this.waitFor(f.default, g.default, h.default)
                 }
@@ -77,23 +77,23 @@
                     return M === e && v === t && (0, E.areSetsEqual)(i, n) ? A : (O(), !1)
                 }
                 getThreads(e, t, n) {
-                    return M === e && v === t && (0, E.areSetsEqual)(i, n) ? N : b
+                    return M === e && v === t && (0, E.areSetsEqual)(i, n) ? N : D
                 }
             }
-            L.displayName = "ArchivedThreadsStore";
-            var y = new L(d.default, {
+            y.displayName = "ArchivedThreadsStore";
+            var L = new y(d.default, {
                 CONNECTION_OPEN: O,
                 THREAD_DELETE: function(e) {
                     let {
                         channel: t
                     } = e;
-                    return D(t.id)
+                    return b(t.id)
                 },
                 THREAD_UPDATE: function(e) {
                     let {
                         channel: t
                     } = e;
-                    return M === t.parent_id && !!(0, o.isForumPostPinned)(t.id) && void D(t.id)
+                    return M === t.parent_id && !!(0, o.isForumPostPinned)(t.id) && void b(t.id)
                 },
                 CHANNEL_DELETE: function(e) {
                     if (e.channel.id !== M) return !1;

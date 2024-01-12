@@ -21,8 +21,8 @@
                 T = n("599110"),
                 S = n("306160"),
                 N = n("322224"),
-                v = n("152475"),
-                C = n("397680"),
+                C = n("152475"),
+                v = n("397680"),
                 G = n("613767"),
                 L = n("822516"),
                 h = n("669195"),
@@ -46,9 +46,9 @@
                     guild_id: x
                 } = P, {
                     canManageGuildEvent: w
-                } = (0, d.useManageResourcePermissions)(null != R ? R : t), H = w(P), b = (0, v.default)(P), B = (0, G.useIsChannelPublic)(null == R ? void 0 : R.id, P.id), {
-                    withinStartWindow: Y
-                } = (0, L.getEventTimeData)(y), F = (0, r.useStateFromStores)([_.default], () => (null == R ? !void 0 : !R.isGuildVocal()) || _.default.can(p.Permissions.CONNECT, R), [R]), j = (0, s.useShowMemberVerificationGate)(x), k = (0, C.default)(m, O);
+                } = (0, d.useManageResourcePermissions)(null != R ? R : t), b = w(P), H = (0, C.default)(P), B = (0, G.useIsChannelPublic)(null == R ? void 0 : R.id, P.id), {
+                    withinStartWindow: F
+                } = (0, L.getEventTimeData)(y), Y = (0, r.useStateFromStores)([_.default], () => (null == R ? !void 0 : !R.isGuildVocal()) || _.default.can(p.Permissions.CONNECT, R), [R]), j = (0, s.useShowMemberVerificationGate)(x), k = (0, v.default)(m, O);
 
                 function Z(e) {
                     e.stopPropagation(), (0, D.default)(O, m, x)
@@ -66,8 +66,8 @@
                     (0, u.closeAllModals)(), (0, c.transitionToGuild)(x, null == t ? void 0 : t.id)
                 }
                 return {
-                    onDeleteClick: H ? function(e) {
-                        e.stopPropagation(), H && !A && (0, u.openModal)(e => (0, i.jsx)(u.ConfirmModal, {
+                    onDeleteClick: b ? function(e) {
+                        e.stopPropagation(), b && !A && (0, u.openModal)(e => (0, i.jsx)(u.ConfirmModal, {
                             ...e,
                             header: M.default.Messages.GUILD_EVENT_DELETE_CONFIRM_HEADER,
                             confirmText: M.default.Messages.DELETE,
@@ -93,14 +93,14 @@
                             })
                         })
                     },
-                    onJoinClick: F || j ? function(e) {
+                    onJoinClick: Y || j ? function(e) {
                         if (e.stopPropagation(), j) {
                             null == U || U(), (0, a.openMemberVerificationModal)(x);
                             return
                         }(null == R ? void 0 : R.isGuildStageVoice()) ? ((0, E.connectAndOpen)(R), null == U || U()) : (null == R ? void 0 : R.isGuildVoice()) && (N.default.joinVoiceEvent(R.guild_id, R.id), null == U || U())
                     } : void 0,
                     onRsvpClick: Z,
-                    onStartClick: H && Y && !(null == k ? void 0 : k.is_canceled) ? function(e) {
+                    onStartClick: b && F && !(null == k ? void 0 : k.is_canceled) ? function(e) {
                         e.stopPropagation(), (0, u.openModalLazy)(async () => {
                             let {
                                 default: e
@@ -114,7 +114,7 @@
                     } : void 0,
                     onInviteClick: function(e) {
                         if (e.stopPropagation(), null != t) {
-                            if (!b || !B) {
+                            if (!H || !B) {
                                 let e = (0, h.SHARE_EVENT_DETAILS_LINK)({
                                     guildId: x,
                                     guildEventId: O
@@ -138,8 +138,8 @@
                             })
                         }
                     },
-                    onEndClick: H && V === g.GuildScheduledEventEntityTypes.EXTERNAL && A ? function(e) {
-                        if (e.stopPropagation(), !H) return;
+                    onEndClick: b && V === g.GuildScheduledEventEntityTypes.EXTERNAL && A ? function(e) {
+                        if (e.stopPropagation(), !b) return;
                         let t = () => {
                             N.default.endEvent(O, x), (0, u.closeAllModals)()
                         };

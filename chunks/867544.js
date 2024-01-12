@@ -6,16 +6,16 @@
             });
             var i = n("37983");
             n("884691");
-            var l = n("669491"),
-                r = n("469563"),
+            var r = n("669491"),
+                l = n("469563"),
                 a = n("163725"),
                 s = n("75196"),
-                o = (0, r.replaceIcon)(function(e) {
+                o = (0, l.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
                         height: n = 24,
-                        color: r = "currentColor",
-                        foregroundColor: a = l.default.unsafe_rawColors.RED_400.css,
+                        color: l = "currentColor",
+                        foregroundColor: a = r.default.unsafe_rawColors.RED_400.css,
                         foreground: o,
                         background: u,
                         ...d
@@ -34,7 +34,7 @@
                             height: "2",
                             transform: "rotate(-45 2 21.2154)"
                         }), (0, i.jsx)("path", {
-                            fill: r,
+                            fill: l,
                             className: u,
                             fillRule: "evenodd",
                             clipRule: "evenodd",

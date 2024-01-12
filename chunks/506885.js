@@ -8,8 +8,8 @@
                 i = n("327037"),
                 l = n("462274"),
                 s = n("535013"),
-                a = n("42203"),
-                u = n("26989"),
+                u = n("42203"),
+                a = n("26989"),
                 o = n("713135"),
                 c = n("386714");
             async function d(e, t) {
@@ -25,8 +25,8 @@
                 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
                 if ("" === e) return;
                 null != t && (0, l.maybeFetchColors)(t), null != p && !_ && (_ = !0), null != p && (I = null !== (d = null === (n = (0, s.getVisibleConnectionsRole)({
-                    guildMember: u.default.getMember(p, e),
-                    channel: a.default.getChannel(m)
+                    guildMember: a.default.getMember(p, e),
+                    channel: u.default.getChannel(m)
                 })) || void 0 === n ? void 0 : n.id) && void 0 !== d ? d : void 0);
                 let C = o.default.getUserProfile(e),
                     h = o.default.getMutualGuilds(e),

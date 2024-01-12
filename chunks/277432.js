@@ -29,8 +29,8 @@
                 A = n("310457"),
                 L = n("805828"),
                 R = n("49111"),
-                O = n("958706"),
-                U = n("782340"),
+                U = n("958706"),
+                O = n("782340"),
                 P = n("306978"),
                 M = e => {
                     var t, n;
@@ -92,7 +92,7 @@
                                     variant: "heading-md/semibold",
                                     className: P.headerText,
                                     id: b,
-                                    children: U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_SELECT_A_CHANNEL
+                                    children: O.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_SELECT_A_CHANNEL
                                 }), (0, i.jsxs)(s.FormSection, {
                                     className: P.formGroup,
                                     children: [(0, i.jsx)(s.SearchableSelect, {
@@ -115,19 +115,19 @@
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         className: P.formDescription,
-                                        children: U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ONLY_VIEWABLE_CHANNELS
+                                        children: O.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_ONLY_VIEWABLE_CHANNELS
                                     })]
                                 }), (0, i.jsx)(s.FormDivider, {}), (0, i.jsx)(s.Heading, {
                                     variant: "heading-md/semibold",
                                     className: P.headerText,
-                                    children: U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_SET_DESCRIPTION
+                                    children: O.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_SET_DESCRIPTION
                                 }), (0, i.jsx)(s.FormSection, {
                                     className: P.formGroup,
                                     children: (0, i.jsx)(s.TextInput, {
                                         maxLength: 42,
                                         value: F,
                                         inputClassName: P.input,
-                                        placeholder: U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_CHANNEL_DESCRIPTION_PLACEHOLDER,
+                                        placeholder: O.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_CHANNEL_DESCRIPTION_PLACEHOLDER,
                                         onChange: Q
                                     })
                                 }), (0, i.jsx)(s.FormDivider, {}), (0, i.jsx)(s.FormSection, {
@@ -138,11 +138,11 @@
                                             className: P.emojiTitleContainer,
                                             children: [(0, i.jsx)(s.Heading, {
                                                 variant: "heading-md/semibold",
-                                                children: U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PICK_EMOJI
+                                                children: O.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PICK_EMOJI
                                             }), (0, i.jsx)(s.Text, {
                                                 variant: "text-xs/normal",
                                                 color: "text-muted",
-                                                children: U.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PICK_EMOJI_UPSELL
+                                                children: O.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PICK_EMOJI_UPSELL
                                             })]
                                         }), (0, i.jsx)(E.default, {
                                             hasSetEmoji: null != H,
@@ -158,7 +158,7 @@
                                                         onSelectEmoji: (e, n) => {
                                                             ee(e), n && (t(), null == e && $())
                                                         },
-                                                        pickerIntention: O.EmojiIntention.COMMUNITY_CONTENT,
+                                                        pickerIntention: U.EmojiIntention.COMMUNITY_CONTENT,
                                                         onNavigateAway: $,
                                                         channel: n
                                                     })
@@ -174,7 +174,7 @@
                                                         color: s.TooltipColors.BRAND,
                                                         tooltipClassName: P.tooltip,
                                                         position: "left",
-                                                        text: J ? U.default.Messages.WELCOME_CHANNEL_EMOJI_PICKER_TOOLTIP : null,
+                                                        text: J ? O.default.Messages.WELCOME_CHANNEL_EMOJI_PICKER_TOOLTIP : null,
                                                         forceOpen: J,
                                                         children: (0, i.jsx)(C.default, {
                                                             ...e,
@@ -209,7 +209,7 @@
                                         size: s.Button.Sizes.SMALL,
                                         look: s.Button.Looks.LINK,
                                         color: s.Button.Colors.PRIMARY,
-                                        children: U.default.Messages.CANCEL
+                                        children: O.default.Messages.CANCEL
                                     }), (0, i.jsx)(s.Button, {
                                         onClick: () => {
                                             null != G && F.length > 0 && D({
@@ -220,7 +220,7 @@
                                             }), $()
                                         },
                                         disabled: null == G || 0 === F.length,
-                                        children: U.default.Messages.SAVE
+                                        children: O.default.Messages.SAVE
                                     })]
                                 }), null != w && (0, i.jsx)(s.Button, {
                                     onClick: () => {
@@ -229,7 +229,7 @@
                                     size: s.Button.Sizes.MIN,
                                     look: s.Button.Looks.LINK,
                                     color: s.Button.Colors.RED,
-                                    children: U.default.Messages.REMOVE
+                                    children: O.default.Messages.REMOVE
                                 })]
                             }), B && (0, i.jsx)(A.default, {
                                 onConfirm: () => {

@@ -8,8 +8,8 @@
                 }
             });
             var i = n("37983"),
-                l = n("884691"),
-                r = n("516555"),
+                r = n("884691"),
+                l = n("516555"),
                 a = n("65597"),
                 s = n("206230"),
                 o = n("49111");
@@ -23,7 +23,7 @@
                     addClickListener: () => o.NOOP,
                     removeClickListener: o.NOOP
                 },
-                d = l.createContext(u);
+                d = r.createContext(u);
 
             function c(e) {
                 let {
@@ -33,7 +33,7 @@
                     baseConfig: c,
                     addClickListener: f,
                     removeClickListener: h
-                } = e, E = (0, r.useConfettiCannon)(n, o), _ = (0, a.default)([s.default], () => s.default.useReducedMotion), p = l.useMemo(() => _ ? u : {
+                } = e, E = (0, l.useConfettiCannon)(n, o), _ = (0, a.default)([s.default], () => s.default.useReducedMotion), p = r.useMemo(() => _ ? u : {
                     confettiCanvas: n,
                     cannon: E,
                     createConfetti: (e, t) => E.createConfetti({
@@ -61,7 +61,7 @@
                     },
                     createMultipleConfettiAt: function(e, t, n) {
                         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 20,
-                            l = arguments.length > 4 ? arguments[4] : void 0;
+                            r = arguments.length > 4 ? arguments[4] : void 0;
                         return E.createMultipleConfetti({
                             ...c,
                             position: {
@@ -72,7 +72,7 @@
                                 }
                             },
                             ...n
-                        }, i, l)
+                        }, i, r)
                     },
                     addClickListener: f,
                     removeClickListener: h

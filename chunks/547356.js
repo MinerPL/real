@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 BenefitsConfirmationLite: function() {
-                    return u
+                    return a
                 },
                 PurchaseConfirmationLite: function() {
                     return o
@@ -12,29 +12,29 @@
             var i = n("77078"),
                 l = n("724038"),
                 s = n("782340"),
-                a = n("22019");
-            let u = e => {
+                u = n("22019");
+            let a = e => {
                 let {
                     onConfirm: t,
                     onCancel: n,
-                    title: u,
+                    title: a,
                     subtitle: o,
                     confirmCta: c,
                     showOpenDiscord: d = !0
                 } = e;
                 return (0, r.jsxs)("div", {
-                    className: a.confirmationContainer,
+                    className: u.confirmationContainer,
                     children: [(0, r.jsx)(i.Heading, {
-                        className: a.confirmationHeader,
+                        className: u.confirmationHeader,
                         variant: "heading-lg/extrabold",
-                        children: u
+                        children: a
                     }), null != o ? (0, r.jsx)(i.Text, {
-                        className: a.confirmationSubtitle,
+                        className: u.confirmationSubtitle,
                         variant: "text-sm/normal",
                         color: "header-secondary",
                         children: o
                     }) : null, (0, r.jsxs)("div", {
-                        className: a.buttonContainer,
+                        className: u.buttonContainer,
                         children: [d && (0, r.jsx)(i.Button, {
                             fullWidth: !0,
                             onClick: () => (0, l.default)("application_sub_mweb_success_modal"),
@@ -59,31 +59,31 @@
                 let {
                     onConfirm: t,
                     listing: n,
-                    subscription: u
+                    subscription: a
                 } = e;
                 return (0, r.jsxs)("div", {
-                    className: a.confirmationContainer,
+                    className: u.confirmationContainer,
                     children: [(0, r.jsx)(i.Heading, {
-                        className: a.confirmationHeader,
+                        className: u.confirmationHeader,
                         variant: "heading-lg/extrabold",
                         children: s.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_TITLE.format({
                             tier: n.name
                         })
                     }), (0, r.jsx)(i.Text, {
-                        className: a.confirmationSubtitle,
+                        className: u.confirmationSubtitle,
                         variant: "text-sm/normal",
                         color: "header-secondary",
                         children: s.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({
-                            timestamp: null == u ? void 0 : u.currentPeriodEnd
+                            timestamp: null == a ? void 0 : a.currentPeriodEnd
                         })
                     }), (0, r.jsxs)("div", {
-                        className: a.buttonContainer,
+                        className: u.buttonContainer,
                         children: [(0, r.jsx)(i.Button, {
-                            className: a.openDiscordButton,
+                            className: u.openDiscordButton,
                             onClick: () => (0, l.default)("application_sub_mweb_success_modal"),
                             children: s.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_OPEN_DISCORD_BUTTON
                         }), (0, r.jsx)(i.Button, {
-                            className: a.doneButton,
+                            className: u.doneButton,
                             look: i.Button.Looks.BLANK,
                             onClick: t,
                             children: s.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON

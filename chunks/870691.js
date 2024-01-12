@@ -5,8 +5,8 @@
                 }
             }), n("222007");
             var i = n("446674"),
-                l = n("913144"),
-                r = n("449008"),
+                r = n("913144"),
+                l = n("449008"),
                 a = n("42203"),
                 s = n("341542"),
                 o = n("923959"),
@@ -40,7 +40,7 @@
                 }
             }
             E.displayName = "CategoryCollapseStore", E.persistKey = "collapsedCategories";
-            var _ = new E(l.default, {
+            var _ = new E(r.default, {
                 CONNECTION_OPEN: function(e) {
                     for (let t of (!e.userGuildSettings.partial && (d = {}), e.userGuildSettings.entries))
                         if (null != t.channel_overrides)
@@ -49,7 +49,7 @@
                 USER_GUILD_SETTINGS_FULL_UPDATE: function(e) {
                     let {
                         userGuildSettings: t
-                    } = e, n = new Set(t.map(e => e.guild_id).filter(r.isNotNullish));
+                    } = e, n = new Set(t.map(e => e.guild_id).filter(l.isNotNullish));
                     for (let e in d) {
                         let t = a.default.getChannel(e);
                         null != t && null != t.guild_id && n.has(t.guild_id) && delete d[t.id]

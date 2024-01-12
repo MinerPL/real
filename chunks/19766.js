@@ -13,8 +13,8 @@
                     return H
                 }
             }), n("808653"), n("424973"), n("222007");
-            var i, l, a = n("917351"),
-                s = n.n(a),
+            var i, a, l = n("917351"),
+                s = n.n(l),
                 r = n("210696"),
                 u = n.n(r),
                 d = n("316693"),
@@ -53,18 +53,18 @@
                             }, count: n, index: i
                         };
                     default:
-                        let l = A.default.getGuild(e),
-                            a = null != l ? l.getRole(t) : null;
+                        let a = A.default.getGuild(e),
+                            l = null != a ? a.getRole(t) : null;
                         return {
-                            type: "GROUP", key: t, id: t, title: null != a ? a.name : "", count: n, index: i
+                            type: "GROUP", key: t, id: t, title: null != l ? l.name : "", count: n, index: i
                         }
                 }
             }
 
             function R(e, t, n) {
                 let i = n === h.default.getId(),
-                    l = T.default.isMobileOnline(n),
-                    a = i ? p.default.getStatus() : T.default.getStatus(n, e),
+                    a = T.default.isMobileOnline(n),
+                    l = i ? p.default.getStatus() : T.default.getStatus(n, e),
                     s = i ? p.default.getActivities() : T.default.getActivities(n, e),
                     r = f.default.getStreamForUser(n, e),
                     u = S.default.getUser(n);
@@ -72,11 +72,11 @@
                     type: "MEMBER",
                     ...m.default.getMember(e, n),
                     user: u,
-                    status: a,
+                    status: l,
                     activities: s,
                     applicationStream: r,
                     isOwner: t === n,
-                    isMobileOnline: l
+                    isMobileOnline: a
                 }
             }
 
@@ -87,13 +87,13 @@
                         let {
                             id: n,
                             allow: i,
-                            deny: l
+                            deny: a
                         } = t;
-                        return d.default.has(i, M.Permissions.VIEW_CHANNEL) ? e.push("allow:".concat(n)) : d.default.has(l, M.Permissions.VIEW_CHANNEL) && e.push("deny:".concat(n)), e
+                        return d.default.has(i, M.Permissions.VIEW_CHANNEL) ? e.push("allow:".concat(n)) : d.default.has(a, M.Permissions.VIEW_CHANNEL) && e.push("deny:".concat(n)), e
                     }, []).sort().join(",")).toString()
                 }(t) : t.memberListId
-            }(l = i || (i = {})).GROUP = "GROUP", l.MEMBER = "MEMBER";
-            class D {
+            }(a = i || (i = {})).GROUP = "GROUP", a.MEMBER = "MEMBER";
+            class b {
                 updateOwnerId() {
                     let e = A.default.getGuild(this.guildId);
                     if (null == e) return !1;
@@ -105,8 +105,8 @@
                     this.groups = e.map(e => {
                         var n;
                         let i = t,
-                            l = Math.max(0, null !== (n = e.count) && void 0 !== n ? n : 0);
-                        return t += l + 1, O(this.guildId, e.id, l, i)
+                            a = Math.max(0, null !== (n = e.count) && void 0 !== n ? n : 0);
+                        return t += a + 1, O(this.guildId, e.id, a, i)
                     }), this.rows.length = t
                 }
                 sync(e, t) {
@@ -139,8 +139,8 @@
                     let {
                         group: n,
                         member: i
-                    } = t, l = this.rows[e];
-                    if (null != l && "MEMBER" === l.type && delete this.members[l.user.id], null != n) this.rows[e] = O(this.guildId, n.id, n.count);
+                    } = t, a = this.rows[e];
+                    if (null != a && "MEMBER" === a.type && delete this.members[a.user.id], null != n) this.rows[e] = O(this.guildId, n.id, n.count);
                     else if (null != i) {
                         let t = R(this.guildId, this.ownerId, i.user.id);
                         if (null == t) return;
@@ -165,12 +165,12 @@
                     this.rows = [], this.groups = [], this.members = {}, this.version = 0, this.guildId = e, this.listId = t, this.updateOwnerId()
                 }
             }
-            let b = new class e {
+            let D = new class e {
                 get(e, t) {
                     let n = this._guildLists[e];
                     null == n && (n = this._guildLists[e] = {});
                     let i = n[t];
-                    return null == i && ((i = new D(e, t)).setGroups([{
+                    return null == i && ((i = new b(e, t)).setGroups([{
                         id: M.StatusTypes.UNKNOWN,
                         count: 0
                     }]), n[t] = i), i
@@ -195,29 +195,29 @@
                 }
             };
 
-            function L() {
-                b.reset()
+            function y() {
+                D.reset()
             }
-            let y = [];
+            let L = [];
 
             function P() {
                 let e = f.default.getAllApplicationStreams(),
-                    t = y.concat(e);
-                y = e, t.forEach(e => {
-                    b.forEach(null, t => t.rebuildMember(e.ownerId))
+                    t = L.concat(e);
+                L = e, t.forEach(e => {
+                    D.forEach(null, t => t.rebuildMember(e.ownerId))
                 })
             }
 
             function F() {
                 let e = h.default.getId();
-                b.forEach(null, t => t.rebuildMember(e))
+                D.forEach(null, t => t.rebuildMember(e))
             }
             class U extends o.default.Store {
                 initialize() {
                     this.waitFor(S.default, A.default, E.default, m.default, T.default, p.default, h.default, g.default, f.default), this.syncWith([p.default], F), this.syncWith([f.default], P)
                 }
                 getProps(e, t) {
-                    let n = b.get(e, I(t));
+                    let n = D.get(e, I(t));
                     return {
                         listId: "".concat(n.guildId, ":").concat(n.listId),
                         groups: n.groups,
@@ -226,16 +226,16 @@
                     }
                 }
                 getRows(e, t) {
-                    let n = b.get(e, I(t));
+                    let n = D.get(e, I(t));
                     return n.rows
                 }
             }
             U.displayName = "ChannelMemberStore";
             var H = new U(c.default, {
-                CONNECTION_OPEN: L,
-                OVERLAY_INITIALIZE: L,
+                CONNECTION_OPEN: y,
+                OVERLAY_INITIALIZE: y,
                 GUILD_MEMBER_LIST_UPDATE: function(e) {
-                    let t = b.get(e.guildId, e.id);
+                    let t = D.get(e.guildId, e.id);
                     e.ops.forEach(e => {
                         switch (e.op) {
                             case "SYNC":
@@ -259,7 +259,7 @@
                     let {
                         guild: t
                     } = e;
-                    b.forEach(t.id, e => {
+                    D.forEach(t.id, e => {
                         e.updateOwnerId() && e.rebuildMembers()
                     })
                 },
@@ -267,20 +267,20 @@
                     let {
                         guild: t
                     } = e;
-                    b.delete(t.id)
+                    D.delete(t.id)
                 },
                 GUILD_ROLE_UPDATE: function(e) {
                     let {
                         guildId: t
                     } = e;
-                    b.forEach(t, e => e.rebuildMembers())
+                    D.forEach(t, e => e.rebuildMembers())
                 },
                 GUILD_MEMBER_UPDATE: function(e) {
                     let {
                         guildId: t,
                         user: n
                     } = e;
-                    b.forEach(t, e => e.rebuildMember(n.id))
+                    D.forEach(t, e => e.rebuildMember(n.id))
                 },
                 CHANNEL_UPDATES: function() {
                     return !0
