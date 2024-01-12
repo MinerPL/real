@@ -1,29 +1,29 @@
             "use strict";
             n.r(t), n.d(t, {
                 ChangePhoneReason: function() {
-                    return r
+                    return a
                 },
                 default: function() {
-                    return _
+                    return E
                 }
             });
-            var i, r, o = n("759843"),
-                l = n("872717"),
-                s = n("913144"),
-                a = n("271938"),
-                u = n("840707"),
+            var l, a, r = n("759843"),
+                u = n("872717"),
+                i = n("913144"),
+                s = n("271938"),
+                o = n("840707"),
                 d = n("482931"),
-                c = n("49111");
-            (i = r || (r = {})).USER_ACTION_REQUIRED = "user_action_required", i.USER_SETTINGS_UPDATE = "user_settings_update", i.GUILD_PHONE_REQUIRED = "guild_phone_required", i.MFA_PHONE_UPDATE = "mfa_phone_update", i.CONTACT_SYNC = "contact_sync";
-            var _ = {
+                _ = n("49111");
+            (l = a || (a = {})).USER_ACTION_REQUIRED = "user_action_required", l.USER_SETTINGS_UPDATE = "user_settings_update", l.GUILD_PHONE_REQUIRED = "guild_phone_required", l.MFA_PHONE_UPDATE = "mfa_phone_update", l.CONTACT_SYNC = "contact_sync";
+            var E = {
                 setCountryCode(e) {
-                    s.default.dispatch({
+                    i.default.dispatch({
                         type: "PHONE_SET_COUNTRY_CODE",
                         countryCode: e
                     })
                 },
-                removePhone: (e, t) => l.default.delete({
-                    url: c.Endpoints.PHONE,
+                removePhone: (e, t) => u.default.delete({
+                    url: _.Endpoints.PHONE,
                     body: {
                         password: e,
                         change_phone_reason: t
@@ -32,24 +32,24 @@
                 }),
                 resendCode(e) {
                     let t = {},
-                        n = a.default.getFingerprint();
-                    return null != n && "" !== n && (t["X-Fingerprint"] = n), l.default.post({
-                        url: c.Endpoints.RESEND_PHONE,
+                        n = s.default.getFingerprint();
+                    return null != n && "" !== n && (t["X-Fingerprint"] = n), u.default.post({
+                        url: _.Endpoints.RESEND_PHONE,
                         headers: t,
                         body: {
                             phone: e
                         }
                     })
                 },
-                beginAddPhone: (e, t) => l.default.post({
-                    url: c.Endpoints.PHONE,
+                beginAddPhone: (e, t) => u.default.post({
+                    url: _.Endpoints.PHONE,
                     body: {
                         phone: e,
                         change_phone_reason: t
                     }
                 }),
-                addPhone: (e, t, n) => l.default.post({
-                    url: c.Endpoints.PHONE,
+                addPhone: (e, t, n) => u.default.post({
+                    url: _.Endpoints.PHONE,
                     body: {
                         phone_token: e,
                         password: t,
@@ -57,21 +57,21 @@
                     },
                     oldFormErrors: !0
                 }),
-                addPhoneWithoutPassword: e => l.default.post({
-                    url: c.Endpoints.PHONE_VERIFY_NO_PASSWORD,
+                addPhoneWithoutPassword: e => u.default.post({
+                    url: _.Endpoints.PHONE_VERIFY_NO_PASSWORD,
                     body: {
                         code: e
                     }
                 }),
-                beginReverifyPhone: (e, t) => l.default.post({
-                    url: c.Endpoints.PHONE_REVERIFY,
+                beginReverifyPhone: (e, t) => u.default.post({
+                    url: _.Endpoints.PHONE_REVERIFY,
                     body: {
                         phone: e,
                         change_phone_reason: t
                     }
                 }),
-                reverifyPhone: (e, t, n) => l.default.post({
-                    url: c.Endpoints.PHONE_REVERIFY,
+                reverifyPhone: (e, t, n) => u.default.post({
+                    url: _.Endpoints.PHONE_REVERIFY,
                     body: {
                         phone_token: e,
                         password: t,
@@ -79,8 +79,8 @@
                     },
                     oldFormErrors: !0
                 }),
-                validatePhoneForSupport: e => l.default.post({
-                    url: c.Endpoints.VERIFY_PHONE_FOR_TICKET,
+                validatePhoneForSupport: e => u.default.post({
+                    url: _.Endpoints.VERIFY_PHONE_FOR_TICKET,
                     body: {
                         token: e
                     },
@@ -88,25 +88,25 @@
                 }),
                 async verifyPhone(e, t) {
                     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-                        i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-                        r = {},
-                        l = a.default.getFingerprint();
-                    null != l && "" !== l && (r["X-Fingerprint"] = l), i && (r.authorization = "");
-                    let _ = await u.default.post({
-                        url: c.Endpoints.VERIFY_PHONE,
-                        headers: r,
+                        l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+                        a = {},
+                        u = s.default.getFingerprint();
+                    null != u && "" !== u && (a["X-Fingerprint"] = u), l && (a.authorization = "");
+                    let E = await o.default.post({
+                        url: _.Endpoints.VERIFY_PHONE,
+                        headers: a,
                         body: {
                             phone: e,
                             code: t
                         },
                         oldFormErrors: !0,
                         trackedActionData: {
-                            event: o.NetworkActionNames.USER_VERIFY_PHONE
+                            event: r.NetworkActionNames.USER_VERIFY_PHONE
                         }
                     });
-                    return n && s.default.dispatch({
+                    return n && i.default.dispatch({
                         type: "MODAL_POP",
                         key: d.PHONE_VERIFICATION_MODAL_KEY
-                    }), _.body
+                    }), E.body
                 }
             }

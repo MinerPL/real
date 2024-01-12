@@ -1,11 +1,11 @@
-            var i = Date.now;
+            var r = Date.now;
             t.exports = function(t) {
                 var e = 0,
-                    r = 0;
+                    s = 0;
                 return function() {
-                    var n = i(),
-                        o = 16 - (n - r);
-                    if (r = n, o > 0) {
+                    var i = r(),
+                        n = 16 - (i - s);
+                    if (s = i, n > 0) {
                         if (++e >= 800) return arguments[0]
                     } else e = 0;
                     return t.apply(void 0, arguments)

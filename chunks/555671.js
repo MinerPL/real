@@ -1,46 +1,46 @@
             "use strict";
-            r("781738"), r("424973");
-            var i = r("463483"),
-                n = r("599235");
-            e.inherits = n;
+            s("781738"), s("424973");
+            var r = s("463483"),
+                i = s("599235");
+            e.inherits = i;
             e.toArray = function(t, e) {
                 if (Array.isArray(t)) return t.slice();
                 if (!t) return [];
-                var r = [];
+                var s = [];
                 if ("string" == typeof t) {
                     if (e) {
                         if ("hex" === e)
-                            for ((t = t.replace(/[^a-z0-9]+/ig, "")).length % 2 != 0 && (t = "0" + t), n = 0; n < t.length; n += 2) r.push(parseInt(t[n] + t[n + 1], 16))
+                            for ((t = t.replace(/[^a-z0-9]+/ig, "")).length % 2 != 0 && (t = "0" + t), i = 0; i < t.length; i += 2) s.push(parseInt(t[i] + t[i + 1], 16))
                     } else {
-                        for (var i = 0, n = 0; n < t.length; n++) {
-                            var o, a, s = t.charCodeAt(n);
-                            if (s < 128) r[i++] = s;
-                            else if (s < 2048) r[i++] = s >> 6 | 192, r[i++] = 63 & s | 128;
+                        for (var r = 0, i = 0; i < t.length; i++) {
+                            var n, c, o = t.charCodeAt(i);
+                            if (o < 128) s[r++] = o;
+                            else if (o < 2048) s[r++] = o >> 6 | 192, s[r++] = 63 & o | 128;
                             else {
                                 ;
-                                if (o = t, a = n, (64512 & o.charCodeAt(a)) != 55296 || a < 0 || a + 1 >= o.length ? 1 : (64512 & o.charCodeAt(a + 1)) != 56320) r[i++] = s >> 12 | 224, r[i++] = s >> 6 & 63 | 128, r[i++] = 63 & s | 128;
-                                else s = 65536 + ((1023 & s) << 10) + (1023 & t.charCodeAt(++n)), r[i++] = s >> 18 | 240, r[i++] = s >> 12 & 63 | 128, r[i++] = s >> 6 & 63 | 128, r[i++] = 63 & s | 128
+                                if (n = t, c = i, (64512 & n.charCodeAt(c)) != 55296 || c < 0 || c + 1 >= n.length ? 1 : (64512 & n.charCodeAt(c + 1)) != 56320) s[r++] = o >> 12 | 224, s[r++] = o >> 6 & 63 | 128, s[r++] = 63 & o | 128;
+                                else o = 65536 + ((1023 & o) << 10) + (1023 & t.charCodeAt(++i)), s[r++] = o >> 18 | 240, s[r++] = o >> 12 & 63 | 128, s[r++] = o >> 6 & 63 | 128, s[r++] = 63 & o | 128
                             }
                         }
                     }
                 } else
-                    for (n = 0; n < t.length; n++) r[n] = 0 | t[n];
-                return r
+                    for (i = 0; i < t.length; i++) s[i] = 0 | t[i];
+                return s
             };
 
-            function o(t) {
+            function n(t) {
                 return (t >>> 24 | t >>> 8 & 65280 | t << 8 & 16711680 | (255 & t) << 24) >>> 0
             }
             e.toHex = function(t) {
-                for (var e = "", r = 0; r < t.length; r++) e += a(t[r].toString(16));
+                for (var e = "", s = 0; s < t.length; s++) e += c(t[s].toString(16));
                 return e
-            }, e.htonl = o;
+            }, e.htonl = n;
 
-            function a(t) {
+            function c(t) {
                 return 1 === t.length ? "0" + t : t
             }
 
-            function s(t) {
+            function o(t) {
                 if (7 === t.length) return "0" + t;
                 if (6 === t.length) return "00" + t;
                 if (5 === t.length) return "000" + t;
@@ -51,24 +51,24 @@
                 else return t
             }
             e.toHex32 = function(t, e) {
-                for (var r = "", i = 0; i < t.length; i++) {
-                    var n = t[i];
-                    "little" === e && (n = o(n)), r += s(n.toString(16))
+                for (var s = "", r = 0; r < t.length; r++) {
+                    var i = t[r];
+                    "little" === e && (i = n(i)), s += o(i.toString(16))
                 }
-                return r
-            }, e.zero2 = a, e.zero8 = s;
-            e.join32 = function(t, e, r, n) {
-                var o, a = r - e;
-                i(a % 4 == 0);
-                for (var s = Array(a / 4), f = 0, h = e; f < s.length; f++, h += 4) o = "big" === n ? t[h] << 24 | t[h + 1] << 16 | t[h + 2] << 8 | t[h + 3] : t[h + 3] << 24 | t[h + 2] << 16 | t[h + 1] << 8 | t[h], s[f] = o >>> 0;
                 return s
+            }, e.zero2 = c, e.zero8 = o;
+            e.join32 = function(t, e, s, i) {
+                var n, c = s - e;
+                r(c % 4 == 0);
+                for (var o = Array(c / 4), f = 0, u = e; f < o.length; f++, u += 4) n = "big" === i ? t[u] << 24 | t[u + 1] << 16 | t[u + 2] << 8 | t[u + 3] : t[u + 3] << 24 | t[u + 2] << 16 | t[u + 1] << 8 | t[u], o[f] = n >>> 0;
+                return o
             };
             e.split32 = function(t, e) {
-                for (var r = Array(4 * t.length), i = 0, n = 0; i < t.length; i++, n += 4) {
-                    var o = t[i];
-                    "big" === e ? (r[n] = o >>> 24, r[n + 1] = o >>> 16 & 255, r[n + 2] = o >>> 8 & 255, r[n + 3] = 255 & o) : (r[n + 3] = o >>> 24, r[n + 2] = o >>> 16 & 255, r[n + 1] = o >>> 8 & 255, r[n] = 255 & o)
+                for (var s = Array(4 * t.length), r = 0, i = 0; r < t.length; r++, i += 4) {
+                    var n = t[r];
+                    "big" === e ? (s[i] = n >>> 24, s[i + 1] = n >>> 16 & 255, s[i + 2] = n >>> 8 & 255, s[i + 3] = 255 & n) : (s[i + 3] = n >>> 24, s[i + 2] = n >>> 16 & 255, s[i + 1] = n >>> 8 & 255, s[i] = 255 & n)
                 }
-                return r
+                return s
             };
             e.rotr32 = function(t, e) {
                 return t >>> e | t << 32 - e
@@ -79,49 +79,49 @@
             e.sum32 = function(t, e) {
                 return t + e >>> 0
             };
-            e.sum32_3 = function(t, e, r) {
-                return t + e + r >>> 0
+            e.sum32_3 = function(t, e, s) {
+                return t + e + s >>> 0
             };
-            e.sum32_4 = function(t, e, r, i) {
-                return t + e + r + i >>> 0
+            e.sum32_4 = function(t, e, s, r) {
+                return t + e + s + r >>> 0
             };
-            e.sum32_5 = function(t, e, r, i, n) {
-                return t + e + r + i + n >>> 0
+            e.sum32_5 = function(t, e, s, r, i) {
+                return t + e + s + r + i >>> 0
             };
-            e.sum64 = function(t, e, r, i) {
-                var n = t[e],
-                    o = i + t[e + 1] >>> 0;
-                t[e] = (o < i ? 1 : 0) + r + n >>> 0, t[e + 1] = o
+            e.sum64 = function(t, e, s, r) {
+                var i = t[e],
+                    n = r + t[e + 1] >>> 0;
+                t[e] = (n < r ? 1 : 0) + s + i >>> 0, t[e + 1] = n
             };
-            e.sum64_hi = function(t, e, r, i) {
-                return (e + i >>> 0 < e ? 1 : 0) + t + r >>> 0
+            e.sum64_hi = function(t, e, s, r) {
+                return (e + r >>> 0 < e ? 1 : 0) + t + s >>> 0
             };
-            e.sum64_lo = function(t, e, r, i) {
-                return e + i >>> 0
+            e.sum64_lo = function(t, e, s, r) {
+                return e + r >>> 0
             };
-            e.sum64_4_hi = function(t, e, r, i, n, o, a, s) {
-                var f, h = e;
-                return f = 0 + ((h = h + i >>> 0) < e ? 1 : 0), f += (h = h + o >>> 0) < o ? 1 : 0, t + r + n + a + (f += (h = h + s >>> 0) < s ? 1 : 0) >>> 0
+            e.sum64_4_hi = function(t, e, s, r, i, n, c, o) {
+                var f, u = e;
+                return f = 0 + ((u = u + r >>> 0) < e ? 1 : 0), f += (u = u + n >>> 0) < n ? 1 : 0, t + s + i + c + (f += (u = u + o >>> 0) < o ? 1 : 0) >>> 0
             };
-            e.sum64_4_lo = function(t, e, r, i, n, o, a, s) {
-                return e + i + o + s >>> 0
+            e.sum64_4_lo = function(t, e, s, r, i, n, c, o) {
+                return e + r + n + o >>> 0
             };
-            e.sum64_5_hi = function(t, e, r, i, n, o, a, s, f, h) {
-                var c, u = e;
-                return c = 0 + ((u = u + i >>> 0) < e ? 1 : 0), c += (u = u + o >>> 0) < o ? 1 : 0, c += (u = u + s >>> 0) < s ? 1 : 0, t + r + n + a + f + (c += (u = u + h >>> 0) < h ? 1 : 0) >>> 0
+            e.sum64_5_hi = function(t, e, s, r, i, n, c, o, f, u) {
+                var a, d = e;
+                return a = 0 + ((d = d + r >>> 0) < e ? 1 : 0), a += (d = d + n >>> 0) < n ? 1 : 0, a += (d = d + o >>> 0) < o ? 1 : 0, t + s + i + c + f + (a += (d = d + u >>> 0) < u ? 1 : 0) >>> 0
             };
-            e.sum64_5_lo = function(t, e, r, i, n, o, a, s, f, h) {
-                return e + i + o + s + h >>> 0
+            e.sum64_5_lo = function(t, e, s, r, i, n, c, o, f, u) {
+                return e + r + n + o + u >>> 0
             };
-            e.rotr64_hi = function(t, e, r) {
-                return (e << 32 - r | t >>> r) >>> 0
+            e.rotr64_hi = function(t, e, s) {
+                return (e << 32 - s | t >>> s) >>> 0
             };
-            e.rotr64_lo = function(t, e, r) {
-                return (t << 32 - r | e >>> r) >>> 0
+            e.rotr64_lo = function(t, e, s) {
+                return (t << 32 - s | e >>> s) >>> 0
             };
-            e.shr64_hi = function(t, e, r) {
-                return t >>> r
+            e.shr64_hi = function(t, e, s) {
+                return t >>> s
             };
-            e.shr64_lo = function(t, e, r) {
-                return (t << 32 - r | e >>> r) >>> 0
+            e.shr64_lo = function(t, e, s) {
+                return (t << 32 - s | e >>> s) >>> 0
             }

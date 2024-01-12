@@ -16,7 +16,7 @@
                     return S
                 },
                 useLastMessageTimestamp: function() {
-                    return v
+                    return M
                 }
             }), n("702976");
             var i = n("866227"),
@@ -72,10 +72,10 @@
                     p = (0, _.muteConfigToTimestamp)(h.default.getMuteConfig(e.id)),
                     {
                         can_send_message: S,
-                        ...v
+                        ...M
                     } = a,
-                    M = {
-                        ...v,
+                    v = {
+                        ...M,
                         channel_id: e.id,
                         guild_id: l,
                         parent_id: s,
@@ -90,10 +90,10 @@
                         old_thread_muted_until: p,
                         new_thread_muted_until: null != t.mute_config ? (0, _.muteConfigToTimestamp)(t.mute_config) : p
                     };
-                d.default.track(m.AnalyticEvents.THREAD_NOTIFICATION_SETTINGS_UPDATED, M)
+                d.default.track(m.AnalyticEvents.THREAD_NOTIFICATION_SETTINGS_UPDATED, v)
             }
             n("782340");
-            let v = e => {
+            let M = e => {
                 var t, n;
                 let i = (0, l.useStateFromStores)([u.default], () => u.default.lastMessageId(e.id)),
                     s = null != i ? f.default.extractTimestamp(i) : null,

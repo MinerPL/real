@@ -1,42 +1,42 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return f
+                    return _
                 }
             });
-            var i = n("37983");
+            var s = n("37983");
             n("884691");
-            var r = n("551042"),
-                s = n("599110"),
-                l = n("50926"),
+            var i = n("551042"),
+                r = n("599110"),
+                a = n("50926"),
                 o = n("347977"),
-                u = n("394294"),
-                a = n("49111");
-            let c = () => {
-                    s.default.track(a.AnalyticEvents.MODAL_DISMISSED, {
-                        type: u.MEMBER_VERIFICATION_TYPE
+                d = n("394294"),
+                u = n("49111");
+            let l = () => {
+                    r.default.track(u.AnalyticEvents.MODAL_DISMISSED, {
+                        type: d.MEMBER_VERIFICATION_TYPE
                     })
                 },
-                d = e => {
-                    s.default.track(a.AnalyticEvents.OPEN_MODAL, {
-                        type: u.MEMBER_VERIFICATION_TYPE,
+                f = e => {
+                    r.default.track(u.AnalyticEvents.OPEN_MODAL, {
+                        type: d.MEMBER_VERIFICATION_TYPE,
                         guild_id: e
                     })
                 };
-            var f = {
+            var _ = {
                 openMemberVerificationModal(e, t) {
-                    d(e);
-                    let s = async t => {
-                        await l.default.submitVerificationForm(e, t)
+                    f(e);
+                    let r = async t => {
+                        await a.default.submitVerificationForm(e, t)
                     };
-                    (0, r.openModalLazy)(async () => {
+                    (0, i.openModalLazy)(async () => {
                         let {
                             default: t
                         } = await n.el("93184").then(n.bind(n, "93184"));
-                        return n => (0, i.jsx)(t, {
+                        return n => (0, s.jsx)(t, {
                             ...n,
                             guildId: e,
-                            onComplete: s,
+                            onComplete: r,
                             onClose: function() {
                                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                                 if (!e) {
@@ -44,21 +44,21 @@
                                         (0, o.setShowWarning)(!0);
                                         return
                                     }
-                                    c()
+                                    l()
                                 }
                                 n.onClose()
                             }
                         })
                     }, {
-                        modalKey: u.IN_APP_MEMBER_VERIFICATION_MODAL_KEY,
+                        modalKey: d.IN_APP_MEMBER_VERIFICATION_MODAL_KEY,
                         onCloseRequest: () => {
-                            c(), o.useMemberVerificationFormNoticeStore.getState().hasUnsubmittedChanges ? (0, o.setShowWarning)(!0) : (0, r.closeModal)(u.IN_APP_MEMBER_VERIFICATION_MODAL_KEY)
+                            l(), o.useMemberVerificationFormNoticeStore.getState().hasUnsubmittedChanges ? (0, o.setShowWarning)(!0) : (0, i.closeModal)(d.IN_APP_MEMBER_VERIFICATION_MODAL_KEY)
                         },
                         onCloseCallback: t
                     })
                 },
                 closeMemberVerificationModal() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                    !e && c(), (0, r.closeModal)(u.IN_APP_MEMBER_VERIFICATION_MODAL_KEY)
+                    !e && l(), (0, i.closeModal)(d.IN_APP_MEMBER_VERIFICATION_MODAL_KEY)
                 }
             }

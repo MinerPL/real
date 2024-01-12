@@ -1,52 +1,52 @@
             "use strict";
             n.r(t), n.d(t, {
                 getDesktopSourceMetadata: function() {
-                    return o
+                    return u
                 },
                 trackWithOverlayMetadata: function() {
-                    return d
+                    return l
                 }
             });
-            var i = n("42887"),
-                a = n("568307"),
-                l = n("703370"),
-                s = n("599110"),
-                r = n("716241"),
-                u = n("49111");
+            var s = n("42887"),
+                i = n("568307"),
+                r = n("703370"),
+                a = n("599110"),
+                o = n("716241"),
+                d = n("49111");
 
-            function o() {
-                let e, t, n, l, s;
-                let r = i.default.getGoLiveSource();
-                if (null != r && (e = r.quality.resolution, t = r.quality.frameRate, null != r.desktopSource)) {
-                    var u, o;
-                    n = r.desktopSource.soundshareSession;
-                    let e = null != r.desktopSource.sourcePid ? a.default.getGameForPID(r.desktopSource.sourcePid) : null;
-                    l = null !== (u = null == e ? void 0 : e.name) && void 0 !== u ? u : null, s = null !== (o = null == e ? void 0 : e.id) && void 0 !== o ? o : null
+            function u() {
+                let e, t, n, r, a;
+                let o = s.default.getGoLiveSource();
+                if (null != o && (e = o.quality.resolution, t = o.quality.frameRate, null != o.desktopSource)) {
+                    var d, u;
+                    n = o.desktopSource.soundshareSession;
+                    let e = null != o.desktopSource.sourcePid ? i.default.getGameForPID(o.desktopSource.sourcePid) : null;
+                    r = null !== (d = null == e ? void 0 : e.name) && void 0 !== d ? d : null, a = null !== (u = null == e ? void 0 : e.id) && void 0 !== u ? u : null
                 }
                 return {
                     video_input_resolution: e,
                     video_input_frame_rate: t,
                     soundshare_session: n,
-                    share_game_name: l,
-                    share_game_id: s
+                    share_game_name: r,
+                    share_game_id: a
                 }
             }
 
-            function d(e, t) {
+            function l(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    i = l.default.getGame();
+                    s = r.default.getGame();
                 switch (t = {
                         ...t,
-                        overlay_game_name: null != i ? i.name : "Unknown Game",
-                        overlay_app_id: null != i ? i.id : null
+                        overlay_game_name: null != s ? s.name : "Unknown Game",
+                        overlay_app_id: null != s ? s.id : null
                     }, e) {
-                    case u.AnalyticEvents.VOICE_CHANNEL_SELECTED:
-                    case u.AnalyticEvents.SETTINGS_PANE_VIEWED:
-                    case u.AnalyticEvents.GUILD_VIEWED:
-                    case u.AnalyticEvents.CHANNEL_OPENED:
-                        return (0, r.trackWithMetadata)(e, t, n);
+                    case d.AnalyticEvents.VOICE_CHANNEL_SELECTED:
+                    case d.AnalyticEvents.SETTINGS_PANE_VIEWED:
+                    case d.AnalyticEvents.GUILD_VIEWED:
+                    case d.AnalyticEvents.CHANNEL_OPENED:
+                        return (0, o.trackWithMetadata)(e, t, n);
                     default:
-                        return s.default.track(e, t, {
+                        return a.default.track(e, t, {
                             flush: n
                         })
                 }

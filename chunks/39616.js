@@ -1,22 +1,22 @@
             "use strict";
-            n.r(s), n.d(s, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return r
                 }
             });
-            var i = n("484026");
-            let r = new i.default(function(e) {
+            var s = n("484026");
+            let i = new s.default(function(e) {
                 {
-                    let s = n("952110").emojiTermsImporter[e];
-                    return void 0 !== s ? s().then(e => e.default) : Promise.resolve({})
+                    let t = n("952110").emojiTermsImporter[e];
+                    return void 0 !== t ? t().then(e => e.default) : Promise.resolve({})
                 }
             });
-            var o = {
+            var r = {
                 setEmojiLocale: function(e) {
-                    r.setParams(e)
+                    i.setParams(e)
                 },
                 getTermsForEmoji: function(e) {
-                    let s = r.get();
-                    return void 0 !== s ? s[e] : []
+                    let t = i.get();
+                    return void 0 !== t ? t[e] : []
                 }
             }

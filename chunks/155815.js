@@ -1,23 +1,23 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return o
                 }
             });
-            var i = n("446674"),
-                a = n("913144");
-            let l = !1;
-            class s extends i.default.Store {
+            var s = n("446674"),
+                i = n("913144");
+            let r = !1;
+            class a extends s.default.Store {
                 isProtocolRegistered() {
-                    return l
+                    return r
                 }
             }
-            s.displayName = "SpotifyProtocolStore";
-            var r = new s(a.default, {
+            a.displayName = "SpotifyProtocolStore";
+            var o = new a(i.default, {
                 SPOTIFY_SET_PROTOCOL_REGISTERED: function(e) {
                     let {
                         isRegistered: t
                     } = e;
-                    l = t
+                    r = t
                 }
             })

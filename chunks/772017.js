@@ -9,8 +9,8 @@
                 l = n("913144"),
                 a = n("693051"),
                 i = n("153498"),
-                d = n("76493"),
-                r = n("91731"),
+                r = n("76493"),
+                d = n("91731"),
                 u = n("49111"),
                 c = {
                     push(e, t) {
@@ -19,7 +19,7 @@
                             a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : u.AppContext.APP;
                         return (0, i.pushModal)({
                             key: n,
-                            modal: (0, r.default)(e, {}, t, n),
+                            modal: (0, d.default)(e, {}, t, n),
                             ...s
                         }), l.default.dispatch({
                             type: "MODAL_PUSH",
@@ -38,7 +38,7 @@
                                 default: t
                             } = e;
                             return t
-                        }) : e()).then(e => this.push(e, t, n, s)) : new Promise(o => d.default.enqueue(() => o(this.pushLazy(e, t, n, s))))
+                        }) : e()).then(e => this.push(e, t, n, s)) : new Promise(o => r.default.enqueue(() => o(this.pushLazy(e, t, n, s))))
                     },
                     updateAnimation(e, t) {
                         l.default.dispatch({

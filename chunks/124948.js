@@ -1,19 +1,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return f
                 }
             });
-            var i = n("917351"),
-                a = n.n(i),
+            var r = n("917351"),
+                i = n.n(r),
                 l = n("446674"),
-                s = n("913144"),
-                r = n("49978"),
-                u = n("560208"),
-                o = n("42203"),
-                d = n("26989");
-            let c = new r.default(d.default.isMember, (e, t) => {
-                s.default.dispatch({
+                u = n("913144"),
+                a = n("49978"),
+                o = n("560208"),
+                d = n("42203"),
+                s = n("26989");
+            let E = new a.default(s.default.isMember, (e, t) => {
+                u.default.dispatch({
                     type: "GUILD_MEMBERS_REQUEST",
                     guildIds: [e],
                     userIds: t
@@ -21,72 +21,72 @@
             });
 
             function _() {
-                c.reset()
+                E.reset()
             }
 
-            function E(e, t) {
-                return c.request(e, t), !1
+            function c(e, t) {
+                return E.request(e, t), !1
             }
 
-            function f(e, t) {
+            function I(e, t) {
                 return t.forEach(t => {
                     let {
                         author: n,
-                        mentions: i
+                        mentions: r
                     } = t;
-                    null != n && E(e, n.id), null == i || i.forEach(t => E(e, t.id))
+                    null != n && c(e, n.id), null == r || r.forEach(t => c(e, t.id))
                 }), !1
             }
 
-            function h(e) {
+            function S(e) {
                 let {
                     channelId: t,
                     messages: n
-                } = e, i = o.default.getChannel(t);
-                return null != i && null != i.guild_id && f(i.guild_id, n)
+                } = e, r = d.default.getChannel(t);
+                return null != r && null != r.guild_id && I(r.guild_id, n)
             }
-            class p extends l.default.Store {
+            class T extends l.default.Store {
                 initialize() {
-                    this.waitFor(o.default, d.default)
+                    this.waitFor(d.default, s.default)
                 }
                 requestMember(e, t) {
-                    E(e, t)
+                    c(e, t)
                 }
             }
-            p.displayName = "GuildMemberRequesterStore";
-            var T = new p(s.default, {
+            T.displayName = "GuildMemberRequesterStore";
+            var f = new T(u.default, {
                 CONNECTION_CLOSED: _,
                 CONNECTION_OPEN: _,
                 CONNECTION_RESUMED: function() {
-                    return c.requestUnacknowledged(), !1
+                    return E.requestUnacknowledged(), !1
                 },
                 GUILD_MEMBERS_CHUNK: function(e) {
                     let {
                         guildId: t,
                         members: n,
-                        notFound: i
+                        notFound: r
                     } = e;
                     return n.forEach(e => {
-                        c.acknowledge(t, e.user.id)
-                    }), null != i && i.forEach(e => c.acknowledge(t, e)), !1
+                        E.acknowledge(t, e.user.id)
+                    }), null != r && r.forEach(e => E.acknowledge(t, e)), !1
                 },
                 SEARCH_FINISH: function(e) {
                     let {
                         guildId: t,
                         messages: n
                     } = e;
-                    return null != t && f(t, a.flatten(n))
+                    return null != t && I(t, i.flatten(n))
                 },
-                LOCAL_MESSAGES_LOADED: h,
-                LOAD_MESSAGES_SUCCESS: h,
-                LOAD_MESSAGES_AROUND_SUCCESS: h,
-                LOAD_PINNED_MESSAGES_SUCCESS: h,
-                LOAD_RECENT_MENTIONS_SUCCESS: h,
+                LOCAL_MESSAGES_LOADED: S,
+                LOAD_MESSAGES_SUCCESS: S,
+                LOAD_MESSAGES_AROUND_SUCCESS: S,
+                LOAD_PINNED_MESSAGES_SUCCESS: S,
+                LOAD_RECENT_MENTIONS_SUCCESS: S,
                 GUILD_FEED_FETCH_SUCCESS: function(e) {
                     let {
                         guildId: t,
                         data: n
-                    } = e, i = (0, u.getMessagesFromGuildFeedFetch)(n);
-                    return f(t, i)
+                    } = e, r = (0, o.getMessagesFromGuildFeedFetch)(n);
+                    return I(t, r)
                 }
             })

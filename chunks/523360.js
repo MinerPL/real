@@ -1,51 +1,51 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return p
                 }
             });
             var r = n("37983"),
-                i = n("884691"),
+                u = n("884691"),
                 a = n("446674"),
-                s = n("77078"),
+                l = n("77078"),
                 o = n("133457"),
-                u = n("784736"),
-                l = n("145131"),
-                c = n("9074"),
+                i = n("784736"),
+                c = n("145131"),
+                s = n("9074"),
                 d = n("782340"),
-                _ = n("639420");
+                f = n("639420");
 
-            function E(e) {
+            function p(e) {
                 var t;
                 let {
                     eulaId: n,
-                    transitionState: E,
-                    onClose: f
-                } = e, I = (0, a.useStateFromStores)([u.default], () => u.default.getEULA(n));
-                i.useEffect(() => {
+                    transitionState: p,
+                    onClose: h
+                } = e, g = (0, a.useStateFromStores)([i.default], () => i.default.getEULA(n));
+                u.useEffect(() => {
                     (0, o.fetchEULA)(n)
                 }, [n]);
-                let p = null !== (t = null == I ? void 0 : I.name) && void 0 !== t ? t : d.default.Messages.LOADING,
-                    A = null != I ? (0, r.jsx)(c.default, {
-                        children: I.content,
-                        className: _.markdown
-                    }) : (0, r.jsx)(s.Spinner, {
-                        className: _.spinner
+                let m = null !== (t = null == g ? void 0 : g.name) && void 0 !== t ? t : d.default.Messages.LOADING,
+                    v = null != g ? (0, r.jsx)(s.default, {
+                        children: g.content,
+                        className: f.markdown
+                    }) : (0, r.jsx)(l.Spinner, {
+                        className: f.spinner
                     });
-                return (0, r.jsxs)(s.ModalRoot, {
-                    transitionState: E,
-                    size: s.ModalSize.SMALL,
-                    "aria-label": p,
-                    children: [(0, r.jsxs)(s.ModalHeader, {
-                        justify: l.default.Justify.BETWEEN,
-                        children: [(0, r.jsx)(s.Heading, {
+                return (0, r.jsxs)(l.ModalRoot, {
+                    transitionState: p,
+                    size: l.ModalSize.SMALL,
+                    "aria-label": m,
+                    children: [(0, r.jsxs)(l.ModalHeader, {
+                        justify: c.default.Justify.BETWEEN,
+                        children: [(0, r.jsx)(l.Heading, {
                             variant: "heading-lg/semibold",
-                            children: p
-                        }), (0, r.jsx)(s.ModalCloseButton, {
-                            onClick: f
+                            children: m
+                        }), (0, r.jsx)(l.ModalCloseButton, {
+                            onClick: h
                         })]
-                    }), (0, r.jsx)(s.ModalContent, {
-                        children: A
+                    }), (0, r.jsx)(l.ModalContent, {
+                        children: v
                     })]
                 })
             }

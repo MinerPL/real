@@ -1,47 +1,47 @@
             "use strict";
             n.r(t), n.d(t, {
                 Opcode: function() {
-                    return i
+                    return s
                 },
                 default: function() {
-                    return a
+                    return i
                 }
             }), n("702976");
-            var i, a, l, s = n("44170"),
-                r = n("590401");
-            (l = i || (i = {}))[l.DISPATCH = 0] = "DISPATCH", l[l.HEARTBEAT = 1] = "HEARTBEAT", l[l.IDENTIFY = 2] = "IDENTIFY", l[l.PRESENCE_UPDATE = 3] = "PRESENCE_UPDATE", l[l.VOICE_STATE_UPDATE = 4] = "VOICE_STATE_UPDATE", l[l.VOICE_SERVER_PING = 5] = "VOICE_SERVER_PING", l[l.RESUME = 6] = "RESUME", l[l.RECONNECT = 7] = "RECONNECT", l[l.REQUEST_GUILD_MEMBERS = 8] = "REQUEST_GUILD_MEMBERS", l[l.INVALID_SESSION = 9] = "INVALID_SESSION", l[l.HELLO = 10] = "HELLO", l[l.HEARTBEAT_ACK = 11] = "HEARTBEAT_ACK", l[l.CALL_CONNECT = 13] = "CALL_CONNECT", l[l.GUILD_SUBSCRIPTIONS = 14] = "GUILD_SUBSCRIPTIONS", l[l.LOBBY_CONNECT = 15] = "LOBBY_CONNECT", l[l.LOBBY_DISCONNECT = 16] = "LOBBY_DISCONNECT", l[l.LOBBY_VOICE_STATES_UPDATE = 17] = "LOBBY_VOICE_STATES_UPDATE", l[l.STREAM_CREATE = 18] = "STREAM_CREATE", l[l.STREAM_DELETE = 19] = "STREAM_DELETE", l[l.STREAM_WATCH = 20] = "STREAM_WATCH", l[l.STREAM_PING = 21] = "STREAM_PING", l[l.STREAM_SET_PAUSED = 22] = "STREAM_SET_PAUSED", l[l.REQUEST_GUILD_APPLICATION_COMMANDS = 24] = "REQUEST_GUILD_APPLICATION_COMMANDS", l[l.EMBEDDED_ACTIVITY_LAUNCH = 25] = "EMBEDDED_ACTIVITY_LAUNCH", l[l.EMBEDDED_ACTIVITY_CLOSE = 26] = "EMBEDDED_ACTIVITY_CLOSE", l[l.EMBEDDED_ACTIVITY_UPDATE = 27] = "EMBEDDED_ACTIVITY_UPDATE", l[l.REQUEST_FORUM_UNREADS = 28] = "REQUEST_FORUM_UNREADS", l[l.REMOTE_COMMAND = 29] = "REMOTE_COMMAND", l[l.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH = 30] = "GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH", l[l.REQUEST_SOUNDBOARD_SOUNDS = 31] = "REQUEST_SOUNDBOARD_SOUNDS", l[l.SPEED_TEST_CREATE = 32] = "SPEED_TEST_CREATE", l[l.SPEED_TEST_DELETE = 33] = "SPEED_TEST_DELETE", l[l.REQUEST_LAST_MESSAGES = 34] = "REQUEST_LAST_MESSAGES", l[l.SEARCH_RECENT_MEMBERS = 35] = "SEARCH_RECENT_MEMBERS", l[l.REQUEST_CHANNEL_STATUSES = 36] = "REQUEST_CHANNEL_STATUSES", a = class extends s.EventEmitter {
-                presenceUpdate(e, t, n, i, a) {
+            var s, i, r, a = n("44170"),
+                o = n("590401");
+            (r = s || (s = {}))[r.DISPATCH = 0] = "DISPATCH", r[r.HEARTBEAT = 1] = "HEARTBEAT", r[r.IDENTIFY = 2] = "IDENTIFY", r[r.PRESENCE_UPDATE = 3] = "PRESENCE_UPDATE", r[r.VOICE_STATE_UPDATE = 4] = "VOICE_STATE_UPDATE", r[r.VOICE_SERVER_PING = 5] = "VOICE_SERVER_PING", r[r.RESUME = 6] = "RESUME", r[r.RECONNECT = 7] = "RECONNECT", r[r.REQUEST_GUILD_MEMBERS = 8] = "REQUEST_GUILD_MEMBERS", r[r.INVALID_SESSION = 9] = "INVALID_SESSION", r[r.HELLO = 10] = "HELLO", r[r.HEARTBEAT_ACK = 11] = "HEARTBEAT_ACK", r[r.CALL_CONNECT = 13] = "CALL_CONNECT", r[r.GUILD_SUBSCRIPTIONS = 14] = "GUILD_SUBSCRIPTIONS", r[r.LOBBY_CONNECT = 15] = "LOBBY_CONNECT", r[r.LOBBY_DISCONNECT = 16] = "LOBBY_DISCONNECT", r[r.LOBBY_VOICE_STATES_UPDATE = 17] = "LOBBY_VOICE_STATES_UPDATE", r[r.STREAM_CREATE = 18] = "STREAM_CREATE", r[r.STREAM_DELETE = 19] = "STREAM_DELETE", r[r.STREAM_WATCH = 20] = "STREAM_WATCH", r[r.STREAM_PING = 21] = "STREAM_PING", r[r.STREAM_SET_PAUSED = 22] = "STREAM_SET_PAUSED", r[r.REQUEST_GUILD_APPLICATION_COMMANDS = 24] = "REQUEST_GUILD_APPLICATION_COMMANDS", r[r.EMBEDDED_ACTIVITY_LAUNCH = 25] = "EMBEDDED_ACTIVITY_LAUNCH", r[r.EMBEDDED_ACTIVITY_CLOSE = 26] = "EMBEDDED_ACTIVITY_CLOSE", r[r.EMBEDDED_ACTIVITY_UPDATE = 27] = "EMBEDDED_ACTIVITY_UPDATE", r[r.REQUEST_FORUM_UNREADS = 28] = "REQUEST_FORUM_UNREADS", r[r.REMOTE_COMMAND = 29] = "REMOTE_COMMAND", r[r.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH = 30] = "GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH", r[r.REQUEST_SOUNDBOARD_SOUNDS = 31] = "REQUEST_SOUNDBOARD_SOUNDS", r[r.SPEED_TEST_CREATE = 32] = "SPEED_TEST_CREATE", r[r.SPEED_TEST_DELETE = 33] = "SPEED_TEST_DELETE", r[r.REQUEST_LAST_MESSAGES = 34] = "REQUEST_LAST_MESSAGES", r[r.SEARCH_RECENT_MEMBERS = 35] = "SEARCH_RECENT_MEMBERS", r[r.REQUEST_CHANNEL_STATUSES = 36] = "REQUEST_CHANNEL_STATUSES", i = class extends a.EventEmitter {
+                presenceUpdate(e, t, n, s, i) {
                     this.send(3, {
                         status: e,
                         since: t,
                         activities: n,
-                        afk: i,
-                        broadcast: a
+                        afk: s,
+                        broadcast: i
                     })
                 }
                 voiceStateUpdate(e) {
                     let {
                         guildId: t = null,
                         channelId: n = null,
-                        selfMute: i = !1,
-                        selfDeaf: a = !1,
-                        selfVideo: l = !1,
-                        preferredRegion: s = null,
-                        videoStreamParameters: u = null,
-                        flags: o = 0
-                    } = e, d = {
+                        selfMute: s = !1,
+                        selfDeaf: i = !1,
+                        selfVideo: r = !1,
+                        preferredRegion: a = null,
+                        videoStreamParameters: d = null,
+                        flags: u = 0
+                    } = e, l = {
                         guild_id: t,
                         channel_id: n,
-                        self_mute: i,
-                        self_deaf: a,
-                        self_video: l,
-                        flags: o
+                        self_mute: s,
+                        self_deaf: i,
+                        self_video: r,
+                        flags: u
                     };
-                    null != n && r.default.shouldIncludePreferredRegion() && (d.preferred_region = s), null != u && (d.tracks = null == u ? void 0 : u.map(e => ({
+                    null != n && o.default.shouldIncludePreferredRegion() && (l.preferred_region = a), null != d && (l.tracks = null == d ? void 0 : d.map(e => ({
                         type: e.type,
                         rid: e.rid,
                         quality: e.quality
-                    }))), this.send(4, d)
+                    }))), this.send(4, l)
                 }
                 voiceServerPing() {
                     this.send(5, null)
@@ -56,27 +56,27 @@
                 requestGuildMembers(e, t) {
                     let {
                         query: n,
-                        limit: i,
-                        userIds: a,
-                        presences: l
+                        limit: s,
+                        userIds: i,
+                        presences: r
                     } = t;
                     this.send(8, {
                         guild_id: e,
                         query: n,
-                        limit: i,
-                        user_ids: a,
-                        presences: l
+                        limit: s,
+                        user_ids: i,
+                        presences: r
                     })
                 }
                 searchRecentMembers(e, t) {
                     let {
                         query: n,
-                        continuationToken: i
+                        continuationToken: s
                     } = t;
                     this.send(35, {
                         guild_id: e,
                         query: null != n ? n : "",
-                        continuation_token: null != i ? i : null
+                        continuation_token: null != s ? s : null
                     })
                 }
                 updateGuildSubscriptions(e, t) {
@@ -109,12 +109,12 @@
                     })))
                 }
                 streamCreate(e, t, n) {
-                    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+                    let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
                     this.send(18, {
                         type: e,
                         guild_id: t,
                         channel_id: n,
-                        preferred_region: i
+                        preferred_region: s
                     })
                 }
                 streamWatch(e) {
@@ -168,13 +168,13 @@
                         channel_ids: t
                     })
                 }
-                getDeletedEntityIdsNotMatchingHash(e, t, n, i, a) {
+                getDeletedEntityIdsNotMatchingHash(e, t, n, s, i) {
                     this.send(30, {
                         guild_id: e,
                         channel_ids_hash: t,
                         role_ids_hash: n,
-                        emoji_ids_hash: i,
-                        sticker_ids_hash: a
+                        emoji_ids_hash: s,
+                        sticker_ids_hash: i
                     })
                 }
                 requestChannelStatuses(e) {

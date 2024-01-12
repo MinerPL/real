@@ -1,19 +1,19 @@
             "use strict";
-            var r, s, o, a, l, i, u, d, c, _;
+            var r, i, l, o, u, a, s, c, d, f;
             n.r(t), n.d(t, {
                 FlowType: function() {
                     return r
                 },
                 AgeGateSteps: function() {
-                    return s
+                    return i
                 },
                 ClaimAccountSteps: function() {
-                    return o
+                    return l
                 },
                 CreateGuildSteps: function() {
-                    return a
+                    return o
                 },
                 RegistrationSteps: function() {
-                    return l
+                    return u
                 }
-            }), (i = r || (r = {})).UNKNOWN = "unknown", i.ANY = "any", i.INVITE = "invite", i.ORGANIC = "organic_registration", i.ORGANIC_MARKETING = "organic_marketing", i.ORGANIC_GUILD_TEMPLATES = "organic_guild_template", i.CREATE_GUILD = "create_guild", (u = s || (s = {})).AGE_GATE = "age_gate", u.AGE_GATE_UNDERAGE = "age_gate_underage", (d = o || (o = {})).CLAIM_ACCOUNT = "claim_account", d.CLAIM_ACCOUNT_SUCCESS = "claim_account_success", (c = a || (a = {})).GUILD_TEMPLATES = "guild_templates", c.GUILD_CREATE = "guild_create", c.CREATION_INTENT = "creation_intent", c.CHANNEL_PROMPT = "channel_prompt", c.JOIN_GUILD = "join_guild", c.SUCCESS = "create_success", (_ = l || (l = {})).NUF_STARTED = "nuf_started", _.AGE_GATE = "age_gate", _.NUF_COMPLETE = "nuf_complete", _.HUB_CONNECTION = "hub_connection"
+            }), (a = r || (r = {})).UNKNOWN = "unknown", a.ANY = "any", a.INVITE = "invite", a.ORGANIC = "organic_registration", a.ORGANIC_MARKETING = "organic_marketing", a.ORGANIC_GUILD_TEMPLATES = "organic_guild_template", a.CREATE_GUILD = "create_guild", (s = i || (i = {})).AGE_GATE = "age_gate", s.AGE_GATE_UNDERAGE = "age_gate_underage", (c = l || (l = {})).CLAIM_ACCOUNT = "claim_account", c.CLAIM_ACCOUNT_SUCCESS = "claim_account_success", (d = o || (o = {})).GUILD_TEMPLATES = "guild_templates", d.GUILD_CREATE = "guild_create", d.CREATION_INTENT = "creation_intent", d.CHANNEL_PROMPT = "channel_prompt", d.JOIN_GUILD = "join_guild", d.SUCCESS = "create_success", (f = u || (u = {})).NUF_STARTED = "nuf_started", f.AGE_GATE = "age_gate", f.NUF_COMPLETE = "nuf_complete", f.HUB_CONNECTION = "hub_connection"

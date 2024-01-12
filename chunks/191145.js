@@ -4,175 +4,175 @@
                     return en
                 }
             }), n("424973"), n("808653"), n("222007");
-            var i = n("627445"),
-                a = n.n(i),
-                l = n("917351"),
-                s = n.n(l),
-                r = n("446674"),
-                u = n("913144"),
-                o = n("191225"),
-                d = n("605250"),
-                c = n("76393"),
+            var s = n("627445"),
+                i = n.n(s),
+                r = n("917351"),
+                a = n.n(r),
+                o = n("446674"),
+                d = n("913144"),
+                u = n("191225"),
+                l = n("605250"),
+                f = n("76393"),
                 _ = n("374014"),
-                E = n("373469"),
-                f = n("271938"),
-                h = n("950104"),
-                p = n("42203"),
-                T = n("18494"),
-                C = n("280168"),
-                m = n("697218"),
-                S = n("555035"),
-                I = n("800762"),
-                g = n("949719"),
-                A = n("99795"),
-                N = n("49111");
-            let O = new d.default("ChannelRTCStore"),
-                R = Object.freeze([]),
-                y = [],
-                v = {},
-                M = {},
-                D = {},
-                L = {},
-                U = {},
-                P = {},
+                c = n("373469"),
+                g = n("271938"),
+                m = n("950104"),
+                h = n("42203"),
+                v = n("18494"),
+                E = n("280168"),
+                p = n("697218"),
+                y = n("555035"),
+                T = n("800762"),
+                C = n("949719"),
+                S = n("99795"),
+                I = n("49111");
+            let A = new l.default("ChannelRTCStore"),
+                D = Object.freeze([]),
+                N = [],
+                O = {},
                 b = {},
-                G = {},
+                P = {},
+                V = {},
+                R = {},
                 k = {},
-                F = {};
+                M = {},
+                w = {},
+                L = {},
+                U = {};
 
-            function w(e) {
-                let t = v[e];
-                return null == t && (t = new g.default(e), v[e] = t), t
+            function G(e) {
+                let t = O[e];
+                return null == t && (t = new C.default(e), O[e] = t), t
             }
 
-            function V(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y;
+            function F(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N;
                 return t.reduce((t, n) => {
-                    let i = w(n);
-                    return e(i) ? (function(e) {
-                        let t = w(e);
+                    let s = G(n);
+                    return e(s) ? (function(e) {
+                        let t = G(e);
                         if (0 === t.size()) return;
-                        let n = ee(e) || j(t) ? N.ChannelModes.VIDEO : N.ChannelModes.VOICE;
-                        n === N.ChannelModes.VOICE ? (delete L[e], delete U[e]) : L[e] = n
+                        let n = ee(e) || K(t) ? I.ChannelModes.VIDEO : I.ChannelModes.VOICE;
+                        n === I.ChannelModes.VOICE ? (delete V[e], delete R[e]) : V[e] = n
                     }(n), function(e) {
-                        let t = f.default.getId(),
-                            n = w(e);
-                        if (0 === n.size() || T.default.getVoiceChannelId() !== e) {
-                            K(e, null);
+                        let t = g.default.getId(),
+                            n = G(e);
+                        if (0 === n.size() || v.default.getVoiceChannelId() !== e) {
+                            j(e, null);
                             return
                         }
-                        let i = A.ParticipantSelectionTypes.NONE,
-                            l = n.toArray(g.ChannelRTCParticipantsIndexes.STREAM).find(e => e.type === A.ParticipantTypes.STREAM && E.default.getActiveStreamForStreamKey(e.id));
-                        if (null != l) a(l.type === A.ParticipantTypes.STREAM, "Impossible condition"), i = l.id;
-                        else if (1 === n.size()) i = t;
-                        else if (1 === n.size(g.ChannelRTCParticipantsIndexes.VIDEO)) {
-                            let [e] = n.toArray(g.ChannelRTCParticipantsIndexes.VIDEO);
-                            i = e.id
+                        let s = S.ParticipantSelectionTypes.NONE,
+                            r = n.toArray(C.ChannelRTCParticipantsIndexes.STREAM).find(e => e.type === S.ParticipantTypes.STREAM && c.default.getActiveStreamForStreamKey(e.id));
+                        if (null != r) i(r.type === S.ParticipantTypes.STREAM, "Impossible condition"), s = r.id;
+                        else if (1 === n.size()) s = t;
+                        else if (1 === n.size(C.ChannelRTCParticipantsIndexes.VIDEO)) {
+                            let [e] = n.toArray(C.ChannelRTCParticipantsIndexes.VIDEO);
+                            s = e.id
                         } else {
-                            var s;
-                            let e = n.toArray().find(e => e.type === A.ParticipantTypes.USER && e.id !== t && !e.ringing);
-                            i = null !== (s = null == e ? void 0 : e.id) && void 0 !== s ? s : t
+                            var a;
+                            let e = n.toArray().find(e => e.type === S.ParticipantTypes.USER && e.id !== t && !e.ringing);
+                            s = null !== (a = null == e ? void 0 : e.id) && void 0 !== a ? a : t
                         }
-                        let [r] = x(e);
-                        if (r !== A.ParticipantSelectionTypes.AUTO && r !== A.ParticipantSelectionTypes.NONE) {
-                            let e = n.getParticipant(r);
-                            (null == e || e.type === A.ParticipantTypes.STREAM && null == E.default.getActiveStreamForStreamKey(e.id)) && (r = A.ParticipantSelectionTypes.NONE)
+                        let [o] = B(e);
+                        if (o !== S.ParticipantSelectionTypes.AUTO && o !== S.ParticipantSelectionTypes.NONE) {
+                            let e = n.getParticipant(o);
+                            (null == e || e.type === S.ParticipantTypes.STREAM && null == c.default.getActiveStreamForStreamKey(e.id)) && (o = S.ParticipantSelectionTypes.NONE)
                         }
-                        K(e, [r, i])
+                        j(e, [o, s])
                     }(n), !0) : t
                 }, !1)
             }
 
-            function H(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : y;
-                return V(t => t.updateParticipant(e), t)
-            }
-
             function x(e) {
-                var t;
-                let n = p.default.getChannel(e),
-                    i = (null == n ? void 0 : n.isDM()) ? A.ParticipantSelectionTypes.AUTO : A.ParticipantSelectionTypes.NONE;
-                return null !== (t = M[e]) && void 0 !== t ? t : [i, A.ParticipantSelectionTypes.NONE]
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N;
+                return F(t => t.updateParticipant(e), t)
             }
 
             function B(e) {
-                let t = M[e];
+                var t;
+                let n = h.default.getChannel(e),
+                    s = (null == n ? void 0 : n.isDM()) ? S.ParticipantSelectionTypes.AUTO : S.ParticipantSelectionTypes.NONE;
+                return null !== (t = b[e]) && void 0 !== t ? t : [s, S.ParticipantSelectionTypes.NONE]
+            }
+
+            function H(e) {
+                let t = b[e];
                 if (null == t) return !1;
-                let [n] = M[e];
-                return n !== A.ParticipantSelectionTypes.NONE
+                let [n] = b[e];
+                return n !== S.ParticipantSelectionTypes.NONE
             }
 
             function Y(e) {
-                null == D[e] && (D[e] = {
+                null == P[e] && (P[e] = {
                     gridDurationMs: 0,
                     focusDurationMs: 0,
                     toggleCount: 0,
                     lastUpdate: 0
                 });
-                let t = D[e],
+                let t = P[e],
                     n = performance.now(),
-                    i = B(e);
+                    s = H(e);
                 if (t.lastUpdate > 0) {
                     let e = n - t.lastUpdate;
-                    t[i ? "focusDurationMs" : "gridDurationMs"] += e
+                    t[s ? "focusDurationMs" : "gridDurationMs"] += e
                 }
                 t.lastUpdate = n
             }
 
-            function K(e, t) {
+            function j(e, t) {
                 Y(e);
-                let n = B(e);
-                null == t ? delete M[e] : M[e] = t;
-                let i = B(e);
-                n !== i && D[e].toggleCount++
+                let n = H(e);
+                null == t ? delete b[e] : b[e] = t;
+                let s = H(e);
+                n !== s && P[e].toggleCount++
             }
 
-            function j(e) {
-                return e.size(g.ChannelRTCParticipantsIndexes.STREAM) > 0 || e.size(g.ChannelRTCParticipantsIndexes.VIDEO) > 0 || e.hasEmbeddedActivity()
+            function K(e) {
+                return e.size(C.ChannelRTCParticipantsIndexes.STREAM) > 0 || e.size(C.ChannelRTCParticipantsIndexes.VIDEO) > 0 || e.hasEmbeddedActivity()
             }
 
             function W(e) {
-                delete v[e], delete M[e], delete L[e], delete U[e]
+                delete O[e], delete b[e], delete V[e], delete R[e]
             }
 
             function z() {
-                return V(e => e.rebuild(), function() {
+                return F(e => e.rebuild(), function() {
                     let e = [],
-                        t = T.default.getChannelId();
+                        t = v.default.getChannelId();
                     null != t && e.push(t);
-                    let n = T.default.getVoiceChannelId();
+                    let n = v.default.getVoiceChannelId();
                     null != n && !e.includes(n) && e.push(n);
-                    let i = c.default.getRemoteSessionId(),
-                        a = I.default.getVoiceStateForSession(f.default.getId(), i);
-                    (null == a ? void 0 : a.channelId) != null && e.push(null == a ? void 0 : a.channelId), s.difference(y, e).forEach(W);
-                    let l = s.difference(e, y);
-                    return y = e, l
+                    let s = f.default.getRemoteSessionId(),
+                        i = T.default.getVoiceStateForSession(g.default.getId(), s);
+                    (null == i ? void 0 : i.channelId) != null && e.push(null == i ? void 0 : i.channelId), a.difference(N, e).forEach(W);
+                    let r = a.difference(e, N);
+                    return N = e, r
                 }())
             }
 
             function q() {
-                return V(e => e.updateEmbeddedActivities())
-            }
-
-            function Q(e) {
-                let {
-                    userId: t
-                } = e;
-                return V(e => e.updateParticipantSpeaking(t))
+                return F(e => e.updateEmbeddedActivities())
             }
 
             function X(e) {
                 let {
+                    userId: t
+                } = e;
+                return F(e => e.updateParticipantSpeaking(t))
+            }
+
+            function Q(e) {
+                let {
                     user: t
                 } = e;
-                return H(t.id)
+                return x(t.id)
             }
 
             function Z(e) {
                 let {
                     channelId: t
                 } = e;
-                return V(e => e.rebuild(), [t])
+                return F(e => e.rebuild(), [t])
             }
 
             function J(e) {
@@ -181,7 +181,7 @@
                         id: t
                     }
                 } = e;
-                return delete G[t], delete k[t], W(t)
+                return delete w[t], delete L[t], W(t)
             }
 
             function $(e) {
@@ -189,70 +189,70 @@
                     streamKey: t
                 } = e, {
                     channelId: n,
-                    ownerId: i
+                    ownerId: s
                 } = (0, _.decodeStreamKey)(t);
-                return H(i, [n])
+                return x(s, [n])
             }
 
             function ee(e) {
                 var t;
-                return !!(null === (t = p.default.getChannel(e)) || void 0 === t ? void 0 : t.isGuildVocal())
+                return !!(null === (t = h.default.getChannel(e)) || void 0 === t ? void 0 : t.isGuildVocal())
             }
-            class et extends r.default.Store {
+            class et extends o.default.Store {
                 initialize() {
-                    this.waitFor(E.default, f.default, h.default, p.default, o.default, T.default, C.default, m.default, S.default, I.default), this.syncWith([o.default], q), this.syncWith([c.default], z)
+                    this.waitFor(c.default, g.default, m.default, h.default, u.default, v.default, E.default, p.default, y.default, T.default), this.syncWith([u.default], q), this.syncWith([f.default], z)
                 }
                 getParticipantsVersion(e) {
-                    return w(e).version
+                    return G(e).version
                 }
                 getParticipants(e) {
                     var t;
-                    return null !== (t = w(e).toArray()) && void 0 !== t ? t : R
+                    return null !== (t = G(e).toArray()) && void 0 !== t ? t : D
                 }
                 getSpeakingParticipants(e) {
                     var t;
-                    return null !== (t = w(e).toArray(g.ChannelRTCParticipantsIndexes.SPEAKING)) && void 0 !== t ? t : R
+                    return null !== (t = G(e).toArray(C.ChannelRTCParticipantsIndexes.SPEAKING)) && void 0 !== t ? t : D
                 }
                 getFilteredParticipants(e) {
-                    return b[e] ? w(e).toArray(g.ChannelRTCParticipantsIndexes.FILTERED) : w(e).toArray()
+                    return M[e] ? G(e).toArray(C.ChannelRTCParticipantsIndexes.FILTERED) : G(e).toArray()
                 }
                 getVideoParticipants(e) {
                     var t;
-                    return null !== (t = w(e).toArray(g.ChannelRTCParticipantsIndexes.VIDEO)) && void 0 !== t ? t : R
+                    return null !== (t = G(e).toArray(C.ChannelRTCParticipantsIndexes.VIDEO)) && void 0 !== t ? t : D
                 }
                 getStreamParticipants(e) {
                     var t;
-                    return null !== (t = w(e).toArray(g.ChannelRTCParticipantsIndexes.STREAM)) && void 0 !== t ? t : R
+                    return null !== (t = G(e).toArray(C.ChannelRTCParticipantsIndexes.STREAM)) && void 0 !== t ? t : D
                 }
                 getActivityParticipants(e) {
                     var t;
-                    return null !== (t = w(e).toArray(g.ChannelRTCParticipantsIndexes.ACTIVITY)) && void 0 !== t ? t : R
+                    return null !== (t = G(e).toArray(C.ChannelRTCParticipantsIndexes.ACTIVITY)) && void 0 !== t ? t : D
                 }
                 getParticipant(e, t) {
-                    return w(e).getParticipant(t)
+                    return G(e).getParticipant(t)
                 }
                 getUserParticipantCount(e) {
-                    let t = w(e);
-                    return t.size() - t.size(g.ChannelRTCParticipantsIndexes.STREAM) - t.size(g.ChannelRTCParticipantsIndexes.ACTIVITY)
+                    let t = G(e);
+                    return t.size() - t.size(C.ChannelRTCParticipantsIndexes.STREAM) - t.size(C.ChannelRTCParticipantsIndexes.ACTIVITY)
                 }
                 getParticipantsOpen(e) {
                     var t;
-                    return null === (t = P[e]) || void 0 === t || t
+                    return null === (t = k[e]) || void 0 === t || t
                 }
                 getVoiceParticipantsHidden(e) {
                     var t;
-                    return null !== (t = b[e]) && void 0 !== t && t
+                    return null !== (t = M[e]) && void 0 !== t && t
                 }
                 getSelectedParticipantId(e) {
-                    let [t, n] = x(e);
-                    return t === A.ParticipantSelectionTypes.NONE ? null : t !== A.ParticipantSelectionTypes.AUTO ? t : n === A.ParticipantSelectionTypes.NONE || n === A.ParticipantSelectionTypes.AUTO ? null : n
+                    let [t, n] = B(e);
+                    return t === S.ParticipantSelectionTypes.NONE ? null : t !== S.ParticipantSelectionTypes.AUTO ? t : n === S.ParticipantSelectionTypes.NONE || n === S.ParticipantSelectionTypes.AUTO ? null : n
                 }
                 getSelectedParticipant(e) {
                     let t = this.getSelectedParticipantId(e);
-                    return null == t ? null : w(e).getParticipant(t)
+                    return null == t ? null : G(e).getParticipant(t)
                 }
                 getSelectedParticipantStats(e) {
-                    let t = D[e];
+                    let t = P[e];
                     return null == t ? {} : {
                         view_mode_grid_duration_ms: Math.floor(t.gridDurationMs),
                         view_mode_focus_duration_ms: Math.floor(t.focusDurationMs),
@@ -261,33 +261,33 @@
                 }
                 getMode(e) {
                     var t;
-                    return null !== (t = L[e]) && void 0 !== t ? t : ee(e) ? N.ChannelModes.VIDEO : N.ChannelModes.VOICE
+                    return null !== (t = V[e]) && void 0 !== t ? t : ee(e) ? I.ChannelModes.VIDEO : I.ChannelModes.VOICE
                 }
                 getLayout(e) {
                     var t, n;
-                    let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : N.AppContext.APP;
-                    if (__OVERLAY__) return N.ChannelLayouts.NORMAL;
-                    let a = p.default.getChannel(e),
-                        l = ee(e) || (null == a ? void 0 : a.isBroadcastChannel());
-                    return null !== (n = null === (t = U[e]) || void 0 === t ? void 0 : t[i]) && void 0 !== n ? n : l ? N.ChannelLayouts.NO_CHAT : N.ChannelLayouts.NORMAL
+                    let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I.AppContext.APP;
+                    if (__OVERLAY__) return I.ChannelLayouts.NORMAL;
+                    let i = h.default.getChannel(e),
+                        r = ee(e) || (null == i ? void 0 : i.isBroadcastChannel());
+                    return null !== (n = null === (t = R[e]) || void 0 === t ? void 0 : t[s]) && void 0 !== n ? n : r ? I.ChannelLayouts.NO_CHAT : I.ChannelLayouts.NORMAL
                 }
                 getChatOpen(e) {
                     var t;
-                    return null !== (t = G[e]) && void 0 !== t && t
+                    return null !== (t = w[e]) && void 0 !== t && t
                 }
                 isFullscreenInContext() {
-                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : N.AppContext.APP;
-                    return Object.values(U).some(t => t[e] === N.ChannelLayouts.FULL_SCREEN)
+                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : I.AppContext.APP;
+                    return Object.values(R).some(t => t[e] === I.ChannelLayouts.FULL_SCREEN)
                 }
                 getStageStreamSize(e) {
-                    return k[e]
+                    return L[e]
                 }
                 getStageVideoLimitBoostUpsellDismissed(e) {
-                    return F[e]
+                    return U[e]
                 }
             }
             et.displayName = "ChannelRTCStore";
-            var en = new et(u.default, {
+            var en = new et(d.default, {
                 CONNECTION_OPEN: z,
                 CONNECTION_OPEN_SUPPLEMENTAL: z,
                 THREAD_LIST_SYNC: z,
@@ -297,14 +297,14 @@
                         channelId: t,
                         currentVoiceChannelId: n
                     } = e;
-                    return null != t ? delete D[t] : null != n && (delete G[n], delete k[n], Y(n)), z()
+                    return null != t ? delete P[t] : null != n && (delete w[n], delete L[n], Y(n)), z()
                 },
                 CHANNEL_SELECT: function(e) {
                     let {
                         channelId: t,
                         messageId: n
-                    } = e, i = z(), a = p.default.getChannel(t);
-                    return null == t || null == n || (null == a ? void 0 : a.type) !== N.ChannelTypes.GUILD_VOICE && (null == a ? void 0 : a.type) !== N.ChannelTypes.GUILD_STAGE_VOICE || G[t] ? i : (G[t] = !0, !0)
+                    } = e, s = z(), i = h.default.getChannel(t);
+                    return null == t || null == n || (null == i ? void 0 : i.type) !== I.ChannelTypes.GUILD_VOICE && (null == i ? void 0 : i.type) !== I.ChannelTypes.GUILD_STAGE_VOICE || w[t] ? s : (w[t] = !0, !0)
                 },
                 CHANNEL_RTC_ACTIVE_CHANNELS: z,
                 VOICE_STATE_UPDATES: function(e) {
@@ -314,26 +314,26 @@
                     } = e;
                     return t.reduce((e, t) => {
                         let {
-                            userId: i,
-                            channelId: a
+                            userId: s,
+                            channelId: i
                         } = t;
-                        return n && null != a && !y.includes(a) ? e : H(i) || e
+                        return n && null != i && !N.includes(i) ? e : x(s) || e
                     }, !1)
                 },
                 CHANNEL_CREATE: function(e) {
                     let {
                         channel: t
                     } = e;
-                    if (t.type === N.ChannelTypes.GROUP_DM) {
+                    if (t.type === I.ChannelTypes.GROUP_DM) {
                         let e = t.originChannelId;
                         if (null != e) {
-                            var n, i;
-                            return U[t.id] = {
-                                [N.AppContext.APP]: null !== (i = null === (n = U[e]) || void 0 === n ? void 0 : n[N.AppContext.APP]) && void 0 !== i ? i : N.ChannelLayouts.NORMAL
+                            var n, s;
+                            return R[t.id] = {
+                                [I.AppContext.APP]: null !== (s = null === (n = R[e]) || void 0 === n ? void 0 : n[I.AppContext.APP]) && void 0 !== s ? s : I.ChannelLayouts.NORMAL
                             }, !0
                         }
-                        t.isBroadcastChannel() && (U[t.id] = {
-                            [N.AppContext.APP]: N.ChannelLayouts.NO_CHAT
+                        t.isBroadcastChannel() && (R[t.id] = {
+                            [I.AppContext.APP]: I.ChannelLayouts.NO_CHAT
                         })
                     }
                     return !1
@@ -352,31 +352,31 @@
                     let {
                         channelId: t,
                         id: n
-                    } = e, i = w(t), a = null == n;
-                    a && i.toArray(g.ChannelRTCParticipantsIndexes.STREAM).forEach(e => {
-                        (0, A.isStreamParticipant)(e) && i.updateParticipant(e.user.id)
+                    } = e, s = G(t), i = null == n;
+                    i && s.toArray(C.ChannelRTCParticipantsIndexes.STREAM).forEach(e => {
+                        (0, S.isStreamParticipant)(e) && s.updateParticipant(e.user.id)
                     });
-                    let [, l] = x(t);
-                    if (K(t, [null != n ? n : A.ParticipantSelectionTypes.NONE, l]), (0, _.isStreamKey)(n)) {
+                    let [, r] = B(t);
+                    if (j(t, [null != n ? n : S.ParticipantSelectionTypes.NONE, r]), (0, _.isStreamKey)(n)) {
                         try {
                             let {
                                 ownerId: e
                             } = (0, _.decodeStreamKey)(n);
-                            e === f.default.getId() && H(e, [t])
+                            e === g.default.getId() && x(e, [t])
                         } catch (e) {
-                            O.warn("INVALID STREAM KEY FORMAT ".concat(n), e)
-                        }!j(i) && (P[t] = !1)
+                            A.warn("INVALID STREAM KEY FORMAT ".concat(n), e)
+                        }!K(s) && (k[t] = !1)
                     }
                 },
                 CHANNEL_RTC_UPDATE_LAYOUT: function(e) {
                     let {
                         channelId: t,
                         layout: n,
-                        appContext: i
+                        appContext: s
                     } = e;
-                    U[t] = {
-                        ...U[t],
-                        [i]: n
+                    R[t] = {
+                        ...R[t],
+                        [s]: n
                     }
                 },
                 CHANNEL_RTC_UPDATE_PARTICIPANTS_OPEN: function(e) {
@@ -384,75 +384,75 @@
                         channelId: t,
                         participantsOpen: n
                     } = e;
-                    P[t] = n
+                    k[t] = n
                 },
                 CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN: function(e) {
                     let {
                         channelId: t,
                         voiceParticipantsHidden: n
                     } = e;
-                    b[t] = n
+                    M[t] = n
                 },
                 CHANNEL_RTC_UPDATE_STAGE_STREAM_SIZE: function(e) {
                     let {
                         channelId: t,
                         large: n
                     } = e;
-                    k[t] = n
+                    L[t] = n
                 },
                 CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED: function(e) {
                     let {
                         channelId: t,
                         dismissed: n
                     } = e;
-                    F[t] = n
+                    U[t] = n
                 },
                 STREAM_UPDATE_SELF_HIDDEN: function(e) {
                     let {
                         channelId: t,
                         selfStreamHidden: n
-                    } = e, i = f.default.getId();
+                    } = e, s = g.default.getId();
                     if (n) {
-                        let [e] = x(t), n = (0, _.isStreamKey)(e);
-                        n && e.includes(i) && K(t, null)
+                        let [e] = B(t), n = (0, _.isStreamKey)(e);
+                        n && e.includes(s) && j(t, null)
                     }
-                    H(i, [t])
+                    x(s, [t])
                 },
                 CHANNEL_RTC_UPDATE_CHAT_OPEN: function(e) {
                     let {
                         channelId: t,
                         chatOpen: n
                     } = e;
-                    G[t] = n
+                    w[t] = n
                 },
                 RTC_CONNECTION_VIDEO: function(e) {
                     let {
                         channelId: t,
                         userId: n
                     } = e;
-                    return H(n, [t])
+                    return x(n, [t])
                 },
                 RTC_CONNECTION_PLATFORM: function(e) {
                     let {
                         channelId: t,
                         userId: n
                     } = e;
-                    return H(n, [t])
+                    return x(n, [t])
                 },
                 AUDIO_SET_LOCAL_VIDEO_DISABLED: function(e) {
                     let {
                         userId: t
                     } = e;
-                    return H(t)
+                    return x(t)
                 },
                 MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED: function(e) {
                     let {
                         channelId: t,
                         senderUserId: n,
-                        maxResolution: i,
-                        maxFrameRate: a
+                        maxResolution: s,
+                        maxFrameRate: i
                     } = e;
-                    return V(e => e.updateParticipantQuality(n, i, a), [t])
+                    return F(e => e.updateParticipantQuality(n, s, i), [t])
                 },
                 STREAM_CLOSE: $,
                 STREAM_DELETE: $,
@@ -461,23 +461,23 @@
                         streamKey: t
                     } = e, {
                         channelId: n,
-                        ownerId: i
+                        ownerId: s
                     } = (0, _.decodeStreamKey)(t);
-                    return H(i, [n])
+                    return x(s, [n])
                 },
-                SPEAKING: Q,
-                GUILD_SOUNDBOARD_SOUND_PLAY_START: Q,
-                GUILD_SOUNDBOARD_SOUND_PLAY_END: Q,
-                USER_UPDATE: X,
-                GUILD_MEMBER_UPDATE: X,
+                SPEAKING: X,
+                GUILD_SOUNDBOARD_SOUND_PLAY_START: X,
+                GUILD_SOUNDBOARD_SOUND_PLAY_END: X,
+                USER_UPDATE: Q,
+                GUILD_MEMBER_UPDATE: Q,
                 GUILD_DELETE: function(e) {
                     let {
                         guild: t
                     } = e, n = [];
-                    if (s.forEach(y, e => {
-                            let i = p.default.getChannel(e);
-                            (null == i || i.getGuildId() === t.id) && n.push(e)
+                    if (a.forEach(N, e => {
+                            let s = h.default.getChannel(e);
+                            (null == s || s.getGuildId() === t.id) && n.push(e)
                         }), 0 === n.length) return !1;
-                    s.forEach(n, e => W(e))
+                    a.forEach(n, e => W(e))
                 }
             })

@@ -1,7 +1,7 @@
             "use strict";
-            var i = r("112774").assign,
-                n = r("989856"),
-                o = r("837079"),
-                a = r("371106"),
-                s = {};
-            i(s, n, o, a), t.exports = s
+            var r = s("112774").assign,
+                i = s("989856"),
+                n = s("837079"),
+                c = s("371106"),
+                o = {};
+            r(o, i, n, c), t.exports = o

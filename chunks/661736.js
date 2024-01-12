@@ -1,18 +1,18 @@
             "use strict";
 
-            function i(e, t, n) {
-                let i;
-                let a = [],
-                    l = function() {
-                        for (var s = arguments.length, r = Array(s), u = 0; u < s; u++) r[u] = arguments[u];
-                        let o = Date.now();
-                        for (null != i && (clearTimeout(i), i = null); a.length > 0 && a[0] <= o;) a.shift();
-                        a.length < e ? (a.push(o + t), n(...r)) : i = setTimeout(() => l(...r), a[0] - o)
+            function s(e, t, n) {
+                let s;
+                let i = [],
+                    r = function() {
+                        for (var a = arguments.length, o = Array(a), d = 0; d < a; d++) o[d] = arguments[d];
+                        let u = Date.now();
+                        for (null != s && (clearTimeout(s), s = null); i.length > 0 && i[0] <= u;) i.shift();
+                        i.length < e ? (i.push(u + t), n(...o)) : s = setTimeout(() => r(...o), i[0] - u)
                     };
-                return l
+                return r
             }
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return s
                 }
             }), n("424973"), n("222007")

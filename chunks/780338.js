@@ -1,22 +1,22 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return d
                 }
             });
-            var i = n("42203"),
-                a = n("945956"),
-                l = n("235660"),
-                s = n("599110"),
-                r = n("49111");
+            var s = n("42203"),
+                i = n("945956"),
+                r = n("235660"),
+                a = n("599110"),
+                o = n("49111");
 
-            function u(e, t, n) {
-                var u, o;
-                s.default.track(r.AnalyticEvents.VOICE_CALL_TRANSFER, {
-                    source_platform: null != n ? null === (u = l.default.getSessionById(n)) || void 0 === u ? void 0 : u.clientInfo.os : "discord_client",
-                    guild_id: null === (o = i.default.getChannel(e)) || void 0 === o ? void 0 : o.guild_id,
+            function d(e, t, n) {
+                var d, u;
+                a.default.track(o.AnalyticEvents.VOICE_CALL_TRANSFER, {
+                    source_platform: null != n ? null === (d = r.default.getSessionById(n)) || void 0 === d ? void 0 : d.clientInfo.os : "discord_client",
+                    guild_id: null === (u = s.default.getChannel(e)) || void 0 === u ? void 0 : u.guild_id,
                     channel_id: e,
-                    rtc_connection_id: a.default.getRTCConnectionId(),
+                    rtc_connection_id: i.default.getRTCConnectionId(),
                     target_platform: t
                 })
             }

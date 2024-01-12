@@ -1,11 +1,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 MIDJOURNEY_GUILD_ID: function() {
-                    return i
+                    return s
                 },
                 MIDJOURNEY_BOT_ID: function() {
-                    return a
+                    return i
                 }
             });
-            let i = "662267976984297473",
-                a = "936929561302675456"
+            let s = "662267976984297473",
+                i = "936929561302675456"

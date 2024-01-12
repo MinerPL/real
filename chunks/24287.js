@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 MFAModal: function() {
-                    return v
+                    return y
                 },
                 MFASlides: function() {
                     return g
@@ -15,8 +15,8 @@
                 l = n("376507"),
                 a = n("872717"),
                 i = n("77078"),
-                d = n("145131"),
-                r = n("772280"),
+                r = n("145131"),
+                d = n("772280"),
                 u = n("773336"),
                 c = n("286235"),
                 E = n("50885"),
@@ -25,13 +25,13 @@
                 f = n("782340"),
                 h = n("992279");
 
-            function A(e) {
+            function S(e) {
                 let {
                     subtitle: t,
                     onClose: n
                 } = e;
                 return (0, s.jsxs)(i.ModalHeader, {
-                    direction: d.default.Direction.VERTICAL,
+                    direction: r.default.Direction.VERTICAL,
                     className: h.header,
                     separator: !1,
                     children: [(0, s.jsx)(i.Heading, {
@@ -49,7 +49,7 @@
                 })
             }
 
-            function S(e) {
+            function A(e) {
                 let {
                     children: t
                 } = e;
@@ -80,7 +80,7 @@
                 } = e, a = t.methods.length > 1;
                 return a || o ? (0, s.jsxs)(i.ModalFooter, {
                     className: h.footer,
-                    direction: o && !a ? d.default.Direction.HORIZONTAL_REVERSE : d.default.Direction.HORIZONTAL,
+                    direction: o && !a ? r.default.Direction.HORIZONTAL_REVERSE : r.default.Direction.HORIZONTAL,
                     children: [a && (0, s.jsx)(i.Button, {
                         look: i.Button.Looks.LINK,
                         onClick: () => n("select"),
@@ -101,10 +101,10 @@
                     onClose: o
                 } = e;
                 return (0, s.jsxs)(s.Fragment, {
-                    children: [(0, s.jsx)(A, {
+                    children: [(0, s.jsx)(S, {
                         subtitle: f.default.Messages.MFA_V2_SELECT_HEADER,
                         onClose: o
-                    }), (0, s.jsx)(S, {
+                    }), (0, s.jsx)(A, {
                         children: t.methods.map(e => (0, s.jsxs)(i.Clickable, {
                             className: h.listItemContainer,
                             onClick: () => {
@@ -114,7 +114,7 @@
                                 className: h.listItemText,
                                 variant: "text-md/semibold",
                                 children: _.SELECT_NAMES[e.type]
-                            }), (0, s.jsx)(r.default, {
+                            }), (0, s.jsx)(d.default, {
                                 width: 20,
                                 height: 20,
                                 className: h.listItemArrow
@@ -129,8 +129,8 @@
                     request: t,
                     finish: n,
                     setSlide: a,
-                    onClose: d
-                } = e, [r, _] = o.useState(!1), [h, N] = o.useState(null), {
+                    onClose: r
+                } = e, [d, _] = o.useState(!1), [h, N] = o.useState(null), {
                     challenge: C
                 } = t.methods.find(e => "webauthn" === e.type), m = async () => {
                     _(!0), N(null);
@@ -148,11 +148,11 @@
                     }
                 };
                 return (0, s.jsxs)(s.Fragment, {
-                    children: [(0, s.jsx)(A, {
-                        onClose: d
-                    }), (0, s.jsxs)(S, {
+                    children: [(0, s.jsx)(S, {
+                        onClose: r
+                    }), (0, s.jsxs)(A, {
                         children: [(0, s.jsx)(i.Button, {
-                            submitting: r,
+                            submitting: d,
                             onClick: m,
                             children: f.default.Messages.MFA_V2_WEBAUTHN_CTA
                         }), (0, s.jsx)(O, {
@@ -171,16 +171,16 @@
                     finish: n,
                     setSlide: l,
                     onClose: a,
-                    isSlideReady: d
-                } = e, [r, u] = o.useState(!1), [c, E] = o.useState(null), [_, p] = o.useState(""), h = o.useRef(null), N = f.default.Messages.TWO_FA_ENTER_BACKUP_LABEL, C = f.default.Messages.TWO_FA_BACKUP_CODE, m = o.useCallback(e => {
+                    isSlideReady: r
+                } = e, [d, u] = o.useState(!1), [c, E] = o.useState(null), [_, p] = o.useState(""), h = o.useRef(null), N = f.default.Messages.TWO_FA_ENTER_BACKUP_LABEL, C = f.default.Messages.TWO_FA_BACKUP_CODE, m = o.useCallback(e => {
                     p(e), E(null)
                 }, [p, E]);
                 return o.useEffect(() => {
-                    if (d) {
+                    if (r) {
                         var e;
                         null === (e = h.current) || void 0 === e || e.focus()
                     }
-                }, [d]), (0, s.jsxs)("form", {
+                }, [r]), (0, s.jsxs)("form", {
                     onSubmit: e => {
                         e.preventDefault(), u(!0), n({
                             mfaType: "backup",
@@ -192,9 +192,9 @@
                             u(!1)
                         })
                     },
-                    children: [(0, s.jsx)(A, {
+                    children: [(0, s.jsx)(S, {
                         onClose: a
-                    }), (0, s.jsx)(S, {
+                    }), (0, s.jsx)(A, {
                         children: (0, s.jsxs)(i.FormItem, {
                             title: N,
                             children: [(0, s.jsx)(i.TextInput, {
@@ -205,7 +205,7 @@
                                 minLength: 8,
                                 value: _,
                                 spellCheck: "false",
-                                disabled: r
+                                disabled: d
                             }), (0, s.jsx)(O, {
                                 error: c
                             })]
@@ -215,7 +215,7 @@
                         setSlide: l,
                         showConfirm: !0,
                         disabled: _.length < 8,
-                        submitting: r
+                        submitting: d
                     })]
                 })
             }
@@ -226,14 +226,14 @@
                     finish: n,
                     setSlide: l,
                     onClose: a,
-                    isSlideReady: d
-                } = e, [r, u] = o.useState(!1), [c, E] = o.useState(null), [_, p] = o.useState(""), h = o.useRef(null);
+                    isSlideReady: r
+                } = e, [d, u] = o.useState(!1), [c, E] = o.useState(null), [_, p] = o.useState(""), h = o.useRef(null);
                 return o.useEffect(() => {
-                    if (d) {
+                    if (r) {
                         var e;
                         null === (e = h.current) || void 0 === e || e.focus()
                     }
-                }, [d]), (0, s.jsxs)("form", {
+                }, [r]), (0, s.jsxs)("form", {
                     onSubmit: e => {
                         e.preventDefault(), u(!0), n({
                             mfaType: "totp",
@@ -245,9 +245,9 @@
                             u(!1)
                         })
                     },
-                    children: [(0, s.jsx)(A, {
+                    children: [(0, s.jsx)(S, {
                         onClose: a
-                    }), (0, s.jsx)(S, {
+                    }), (0, s.jsx)(A, {
                         children: (0, s.jsxs)(i.FormItem, {
                             title: f.default.Messages.TWO_FA_ENTER_TOKEN_NO_BACKUP_LABEL,
                             children: [(0, s.jsx)(i.TextInput, {
@@ -259,7 +259,7 @@
                                 value: _,
                                 autoComplete: "one-time-code",
                                 spellCheck: "false",
-                                disabled: r
+                                disabled: d
                             }), (0, s.jsx)(O, {
                                 error: c
                             })]
@@ -269,7 +269,7 @@
                         setSlide: l,
                         showConfirm: !0,
                         disabled: 0 === _.length,
-                        submitting: r
+                        submitting: d
                     })]
                 })
             }
@@ -279,9 +279,9 @@
                     request: t,
                     finish: n,
                     setSlide: l,
-                    onClose: d,
-                    isSlideReady: r
-                } = e, [u, c] = o.useState(!1), [E, _] = o.useState(null), [N, C] = o.useState(!1), [m, T] = o.useState(null), [R, y] = o.useState(""), v = o.useRef(null);
+                    onClose: r,
+                    isSlideReady: d
+                } = e, [u, c] = o.useState(!1), [E, _] = o.useState(null), [N, C] = o.useState(!1), [m, T] = o.useState(null), [R, v] = o.useState(""), y = o.useRef(null);
                 o.useEffect(() => {
                     c(!0), a.default.post({
                         url: p.Endpoints.LOGIN_SMS_SEND,
@@ -298,11 +298,11 @@
                         c(!1)
                     })
                 }, [t.ticket]), o.useEffect(() => {
-                    if (r) {
+                    if (d) {
                         var e;
-                        null === (e = v.current) || void 0 === e || e.focus()
+                        null === (e = y.current) || void 0 === e || e.focus()
                     }
-                }, [r]);
+                }, [d]);
                 let g = null == E ? f.default.Messages.TWO_FA_ENTER_SMS_TOKEN_SENDING : f.default.Messages.TWO_FA_ENTER_SMS_TOKEN_SENT.format({
                     phoneNumber: E
                 });
@@ -318,18 +318,18 @@
                             C(!1)
                         })
                     },
-                    children: [(0, s.jsx)(A, {
+                    children: [(0, s.jsx)(S, {
                         subtitle: g,
-                        onClose: d
-                    }), (0, s.jsx)(S, {
+                        onClose: r
+                    }), (0, s.jsx)(A, {
                         children: (0, s.jsxs)(i.FormItem, {
                             title: f.default.Messages.TWO_FA_ENTER_TOKEN_NO_BACKUP_LABEL,
                             children: [(0, s.jsxs)("div", {
                                 className: h.smsInputContainer,
                                 children: [(0, s.jsx)(i.TextInput, {
                                     className: h.smsInput,
-                                    inputRef: v,
-                                    onChange: y,
+                                    inputRef: y,
+                                    onChange: v,
                                     placeholder: f.default.Messages.TWO_FA_AUTH_CODE_NO_BACKUP,
                                     maxLength: 10,
                                     value: R,
@@ -369,20 +369,20 @@
                 })
             }
 
-            function y(e) {
+            function v(e) {
                 let {
                     request: t,
                     finish: n,
                     setSlide: l,
                     onClose: a,
-                    isSlideReady: d
-                } = e, [r, u] = o.useState(!1), [c, E] = o.useState(null), [_, p] = o.useState(""), h = o.useRef(null);
+                    isSlideReady: r
+                } = e, [d, u] = o.useState(!1), [c, E] = o.useState(null), [_, p] = o.useState(""), h = o.useRef(null);
                 return o.useEffect(() => {
-                    if (d) {
+                    if (r) {
                         var e;
                         null === (e = h.current) || void 0 === e || e.focus()
                     }
-                }, [d]), (0, s.jsxs)("form", {
+                }, [r]), (0, s.jsxs)("form", {
                     onSubmit: e => {
                         e.preventDefault(), u(!0), n({
                             mfaType: "password",
@@ -394,9 +394,9 @@
                             u(!1)
                         })
                     },
-                    children: [(0, s.jsx)(A, {
+                    children: [(0, s.jsx)(S, {
                         onClose: a
-                    }), (0, s.jsx)(S, {
+                    }), (0, s.jsx)(A, {
                         children: (0, s.jsxs)(i.FormItem, {
                             title: f.default.Messages.FORM_LABEL_PASSWORD,
                             children: [(0, s.jsx)(i.TextInput, {
@@ -406,7 +406,7 @@
                                 type: "password",
                                 autoComplete: "password",
                                 spellCheck: "false",
-                                disabled: r
+                                disabled: d
                             }), (0, s.jsx)(O, {
                                 error: c
                             })]
@@ -416,12 +416,12 @@
                         setSlide: l,
                         showConfirm: !0,
                         disabled: 0 === _.length,
-                        submitting: r
+                        submitting: d
                     })]
                 })
             }
 
-            function v(e) {
+            function y(e) {
                 let {
                     transitionState: t,
                     request: n,
@@ -446,8 +446,8 @@
                 let {
                     request: l,
                     mfaFinish: a,
-                    onEarlyClose: d,
-                    onClose: r,
+                    onEarlyClose: r,
+                    onClose: d,
                     width: u = 440
                 } = e, [c, E] = o.useState(null !== (n = null === (t = l.methods[0]) || void 0 === t ? void 0 : t.type) && void 0 !== n ? n : "select"), [_, p] = o.useState(c), f = async e => {
                     let {
@@ -458,12 +458,12 @@
                         mfaType: t,
                         data: n,
                         ticket: l.ticket
-                    }), null != r && r()
+                    }), null != d && d()
                 }, h = {
                     request: l,
                     finish: f,
                     setSlide: E,
-                    onClose: d
+                    onClose: r
                 };
                 return (0, s.jsxs)(i.Slides, {
                     activeSlide: c,
@@ -499,7 +499,7 @@
                         })
                     }), (0, s.jsx)(i.Slide, {
                         id: "password",
-                        children: (0, s.jsx)(y, {
+                        children: (0, s.jsx)(v, {
                             ...h,
                             isSlideReady: "password" === _
                         })
@@ -508,7 +508,7 @@
             }
 
             function M(e, t, n) {
-                (0, i.openModal)(n => (0, s.jsx)(v, {
+                (0, i.openModal)(n => (0, s.jsx)(y, {
                     finish: t,
                     request: e,
                     ...n

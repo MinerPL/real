@@ -36,8 +36,8 @@
                 R = a("208695"),
                 b = a("232882"),
                 G = a("49111"),
-                y = a("724210"),
-                O = a("648564"),
+                O = a("724210"),
+                y = a("648564"),
                 H = a("782340"),
                 k = a("137722");
             let U = new Set(["Electron", "Chrome"]),
@@ -54,8 +54,8 @@
                 } = e, a = (0, u.useStateFromStores)([x.default], () => {
                     var e;
                     return null !== (e = x.default.getCount(t.id)) && void 0 !== e ? e : 0
-                }), n = a >= O.MAX_THREAD_MESSAGE_COUNT ? H.default.Messages.GUILD_FEED_MESSAGE_ITEM_MAX_REPLIES.format({
-                    maxReplies: O.MAX_THREAD_MESSAGE_COUNT
+                }), n = a >= y.MAX_THREAD_MESSAGE_COUNT ? H.default.Messages.GUILD_FEED_MESSAGE_ITEM_MAX_REPLIES.format({
+                    maxReplies: y.MAX_THREAD_MESSAGE_COUNT
                 }) : H.default.Messages.GUILD_FEED_MESSAGE_ITEM_NUM_REPLIES.format({
                     numReplies: a
                 }), s = (0, u.useStateFromStores)([_.default], () => _.default.getMemberIdsPreview(t.id)), i = (0, h.useFacepileUsers)(t, null != s ? s : []);
@@ -74,38 +74,38 @@
                     showFeedback: x,
                     setOnDismissedFeedback: b
                 } = e, {
-                    thread: O
-                } = _, P = (0, u.useStateFromStores)([S.default], () => S.default.getChannel(O.id), [O.id]), {
+                    thread: y
+                } = _, P = (0, u.useStateFromStores)([S.default], () => S.default.getChannel(y.id), [y.id]), {
                     message: V,
                     isFeaturedPost: W
                 } = (0, u.useStateFromStoresObject)([N.default], () => {
-                    let e = N.default.getCachedMessage(s, O.id, _.message.id),
+                    let e = N.default.getCachedMessage(s, y.id, _.message.id),
                         t = N.default.getIsItemFeatured({
                             guildId: s,
-                            entity: O,
+                            entity: y,
                             entityType: r.GuildFeedItemTypes.FORUM_POST
                         });
                     return {
                         message: e,
                         isFeaturedPost: t
                     }
-                }, [s, _.message.id, O]), K = (0, f.default)(O), z = (0, u.useStateFromStores)([C.default], () => null != V && C.default.isBlocked(null == V ? void 0 : V.author.id)), Y = (0, d.useListItem)(null !== (a = null == V ? void 0 : V.id) && void 0 !== a ? a : _.message.id), Z = (0, T.default)(_), X = (0, m.getChannelIconTooltipText)(O), J = (0, u.useStateFromStores)([S.default], () => S.default.getChannel(O.parent_id)), q = (0, f.default)(J), Q = (0, m.getChannelIconComponent)(J), [$, ee] = n.useState(!1), et = (0, u.useStateFromStores)([v.default], () => v.default.getSidebarState(y.StaticChannelRoute.GUILD_HOME)), ea = (0, p.getSidebarMessageId)(et, P), el = null != ea && _.message.id === ea, en = _.highlighted ? H.default.Messages.GUILD_FEED_SPECIAL_HIGHLIGHT : W ? H.default.Messages.GUILD_FEED_FEATURED_BY_MODERATORS : null, {
+                }, [s, _.message.id, y]), K = (0, f.default)(y), z = (0, u.useStateFromStores)([C.default], () => null != V && C.default.isBlocked(null == V ? void 0 : V.author.id)), Y = (0, d.useListItem)(null !== (a = null == V ? void 0 : V.id) && void 0 !== a ? a : _.message.id), Z = (0, T.default)(_), X = (0, m.getChannelIconTooltipText)(y), J = (0, u.useStateFromStores)([S.default], () => S.default.getChannel(y.parent_id)), q = (0, f.default)(J), Q = (0, m.getChannelIconComponent)(J), [$, ee] = n.useState(!1), et = (0, u.useStateFromStores)([v.default], () => v.default.getSidebarState(O.StaticChannelRoute.GUILD_HOME)), ea = (0, p.getSidebarMessageId)(et, P), el = null != ea && _.message.id === ea, en = _.highlighted ? H.default.Messages.GUILD_FEED_SPECIAL_HIGHLIGHT : W ? H.default.Messages.GUILD_FEED_FEATURED_BY_MODERATORS : null, {
                     handleItemClick: es,
                     handleChannelClick: ei,
                     handleCardClick: ed,
                     handleMessageClick: er
                 } = (0, A.default)({
                     guildId: s,
-                    channelId: O.id,
+                    channelId: y.id,
                     feedItemId: Z,
-                    onChannelClick: () => (0, g.default)(G.Routes.CHANNEL(s, O.parent_id)),
+                    onChannelClick: () => (0, g.default)(G.Routes.CHANNEL(s, y.parent_id)),
                     onContentClick: () => I.default.openThreadAsSidebar({
                         guildId: s,
-                        baseChannelId: y.StaticChannelRoute.GUILD_HOME,
-                        channelId: O.id
+                        baseChannelId: O.StaticChannelRoute.GUILD_HOME,
+                        channelId: y.id
                     })
-                }), [eu, eo] = (0, h.useSomeAppliedTags)(O), ec = eu[0], ef = (0, h.useAppliedTags)(O).slice(1), em = null != i.name && !U.has(i.name);
-                if (null == O || null == P || null == V || null == _ || z) return null;
+                }), [eu, eo] = (0, h.useSomeAppliedTags)(y), ec = eu[0], ef = (0, h.useAppliedTags)(y).slice(1), em = null != i.name && !U.has(i.name);
+                if (null == y || null == P || null == V || null == _ || z) return null;
                 let eh = e => {
                     e.stopPropagation(), (0, c.openContextMenuLazy)(e, async () => {
                         let e = await w();
@@ -182,7 +182,7 @@
                                 children: [(0, l.jsx)(o.Heading, {
                                     className: k.title,
                                     variant: "heading-lg/semibold",
-                                    children: O.name
+                                    children: y.name
                                 }), null != ec ? (0, l.jsxs)("div", {
                                     className: k.tags,
                                     children: [(0, l.jsx)(E.default, {
@@ -197,15 +197,15 @@
                             }),
                             children: [(0, l.jsx)(R.default, {
                                 className: k.messageItemBody,
-                                guildId: O.guild_id,
+                                guildId: y.guild_id,
                                 animateAvatar: $,
-                                channel: O,
+                                channel: y,
                                 message: V,
                                 feedItemId: _.id,
                                 onMessageClick: er,
                                 disableTruncation: em
                             }), (0, l.jsx)(B, {
-                                channel: O
+                                channel: y
                             })]
                         })
                     }), x && (0, l.jsx)(M.default, {

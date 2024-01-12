@@ -1,2 +1,2 @@
-            var i, n = r("390493");
-            i = r.g.process && r.g.process.browser ? "utf-8" : r.g.process && r.g.process.version ? parseInt(n.version.split(".")[0].slice(1), 10) >= 6 ? "utf-8" : "binary" : "utf-8", t.exports = i
+            var r, i = s("390493");
+            r = s.g.process && s.g.process.browser ? "utf-8" : s.g.process && s.g.process.version ? parseInt(i.version.split(".")[0].slice(1), 10) >= 6 ? "utf-8" : "binary" : "utf-8", t.exports = r

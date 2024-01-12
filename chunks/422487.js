@@ -1,9 +1,9 @@
             "use strict";
-            var r, a;
-            n.r(e), n.d(e, {
+            var r, i;
+            n.r(t), n.d(t, {
                 StripeErrorTypes: function() {
-                    return _
+                    return l
                 }
             });
-            let _ = ["api_connection_error", "api_error", "authentication_error", "card_error", "idempotency_error", "invalid_request_error", "rate_limit_error", "validation_error"];
-            (a = r || (r = {})).CREATE = "create", a.CANCEL = "cancel", a.RESUBSCRIBE = "resubscribe", a.CHARGE = "charge"
+            let l = ["api_connection_error", "api_error", "authentication_error", "card_error", "idempotency_error", "invalid_request_error", "rate_limit_error", "validation_error"];
+            (i = r || (r = {})).CREATE = "create", i.CANCEL = "cancel", i.RESUBSCRIBE = "resubscribe", i.CHARGE = "charge"

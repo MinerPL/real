@@ -1,10 +1,10 @@
-            var i = r("126580");
-            t.exports = function(t, e, r) {
-                for (var n = -1, o = t.criteria, a = e.criteria, s = o.length, f = r.length; ++n < s;) {
-                    var h = i(o[n], a[n]);
-                    if (h) {
-                        if (n >= f) return h;
-                        return h * ("desc" == r[n] ? -1 : 1)
+            var r = s("126580");
+            t.exports = function(t, e, s) {
+                for (var i = -1, n = t.criteria, c = e.criteria, o = n.length, f = s.length; ++i < o;) {
+                    var u = r(n[i], c[i]);
+                    if (u) {
+                        if (i >= f) return u;
+                        return u * ("desc" == s[i] ? -1 : 1)
                     }
                 }
                 return t.index - e.index

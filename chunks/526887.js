@@ -7,40 +7,40 @@
                     return d
                 }
             });
-            var r = n("37983"),
-                i = n("884691"),
+            var i = n("37983"),
+                r = n("884691"),
                 l = n("516555"),
-                u = n("65597"),
-                o = n("206230"),
-                a = n("49111");
-            let s = {
+                o = n("65597"),
+                s = n("206230"),
+                u = n("49111");
+            let a = {
                     confettiCanvas: null,
                     cannon: null,
                     createConfetti: () => void 0,
                     createConfettiAt: () => void 0,
                     createMultipleConfetti: () => [],
                     createMultipleConfettiAt: () => [],
-                    addClickListener: () => a.NOOP,
-                    removeClickListener: a.NOOP
+                    addClickListener: () => u.NOOP,
+                    removeClickListener: u.NOOP
                 },
-                c = i.createContext(s);
+                c = r.createContext(a);
 
             function d(e) {
                 let {
                     children: t,
                     confettiCanvas: n,
-                    spriteCanvas: a,
+                    spriteCanvas: u,
                     baseConfig: d,
                     addClickListener: f,
                     removeClickListener: E
-                } = e, _ = (0, l.useConfettiCannon)(n, a), I = (0, u.default)([o.default], () => o.default.useReducedMotion), T = i.useMemo(() => I ? s : {
+                } = e, p = (0, l.useConfettiCannon)(n, u), _ = (0, o.default)([s.default], () => s.default.useReducedMotion), h = r.useMemo(() => _ ? a : {
                     confettiCanvas: n,
-                    cannon: _,
-                    createConfetti: (e, t) => _.createConfetti({
+                    cannon: p,
+                    createConfetti: (e, t) => p.createConfetti({
                         ...d,
                         ...e
                     }, t),
-                    createConfettiAt: (e, t, n, r) => _.createConfetti({
+                    createConfettiAt: (e, t, n, i) => p.createConfetti({
                         ...d,
                         position: {
                             type: "static",
@@ -50,19 +50,19 @@
                             }
                         },
                         ...n
-                    }, r),
+                    }, i),
                     createMultipleConfetti: function(e) {
                         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 20,
                             n = arguments.length > 2 ? arguments[2] : void 0;
-                        return _.createMultipleConfetti({
+                        return p.createMultipleConfetti({
                             ...d,
                             ...e
                         }, t, n)
                     },
                     createMultipleConfettiAt: function(e, t, n) {
-                        let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 20,
-                            i = arguments.length > 4 ? arguments[4] : void 0;
-                        return _.createMultipleConfetti({
+                        let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 20,
+                            r = arguments.length > 4 ? arguments[4] : void 0;
+                        return p.createMultipleConfetti({
                             ...d,
                             position: {
                                 type: "static",
@@ -72,13 +72,13 @@
                                 }
                             },
                             ...n
-                        }, r, i)
+                        }, i, r)
                     },
                     addClickListener: f,
                     removeClickListener: E
-                }, [f, d, _, n, I, E]);
-                return (0, r.jsx)(c.Provider, {
-                    value: T,
+                }, [f, d, p, n, _, E]);
+                return (0, i.jsx)(c.Provider, {
+                    value: h,
                     children: t
                 })
             }

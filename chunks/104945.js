@@ -7,9 +7,9 @@
             var r = n("37983"),
                 i = n("884691"),
                 l = n("414456"),
-                u = n.n(l),
+                a = n.n(l),
                 o = n("77078"),
-                a = n("371642"),
+                u = n("371642"),
                 s = n("775980");
 
             function c(e) {
@@ -22,7 +22,7 @@
                     onFileSelect: f
                 } = e, E = i.useRef(null);
                 return (0, r.jsxs)("div", {
-                    className: u(n, s.fileUpload),
+                    className: a(n, s.fileUpload),
                     children: [(0, r.jsx)("input", {
                         className: s.fileUploadInput,
                         tabIndex: -1,
@@ -33,7 +33,7 @@
                     }), (0, r.jsxs)(o.Button, {
                         size: o.Button.Sizes.MIN,
                         className: s.fileUploadButton,
-                        children: [c, (0, r.jsx)(a.default, {
+                        children: [c, (0, r.jsx)(u.default, {
                             ref: E,
                             tabIndex: -1,
                             onChange: e => {

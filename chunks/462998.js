@@ -40,22 +40,23 @@
                 let {
                     channelId: t,
                     baseChannelId: G,
-                    channelViewSource: y = "Split View",
-                    isResourceChannelView: O
+                    channelViewSource: O = "Split View",
+                    isResourceChannelView: y
                 } = e, H = (0, s.useStateFromStores)([v.default], () => v.default.getChannel(t)), k = (0, s.useStateFromStores)([N.default], () => N.default.getGuild(null == H ? void 0 : H.getGuildId())), U = (0, s.useStateFromStores)([A.default], () => A.default.getCurrentUser()), w = (0, s.useStateFromStores)([C.default], () => C.default.didAgree(null == H ? void 0 : H.guild_id)), B = (null == U ? void 0 : U.nsfwAllowed) === !0, P = (0, D.default)(H), V = (0, s.useStateFromStores)([I.default], () => (null == k ? void 0 : k.id) != null && I.default.isLurking(k.id), [k]), W = (0, s.useStateFromStores)([T.default], () => T.default.can(L.Permissions.SEND_MESSAGES, H)), K = (0, m.useHasPendingMemberAction)(null == k ? void 0 : k.id, null == H ? void 0 : H.id), z = (0, h.default)(t), Y = (0, s.useStateFromStores)([f.default], () => {
                     var e;
                     return null === (e = f.default.getResourceForChannel(null == k ? void 0 : k.id, t)) || void 0 === e ? void 0 : e.title
                 }), Z = n.useRef(!1);
                 if (n.useEffect(() => {
                         null != H && !Z.current && (Z.current = !0, (0, u.trackWithMetadata)(L.AnalyticEvents.CHANNEL_OPENED, {
+                            ...(0, u.getChannelOpenedMetadata)(H.id),
                             channel_id: H.id,
                             guild_id: H.guild_id,
                             parent_id: H.parent_id,
-                            channel_view: y,
+                            channel_view: O,
                             can_send_message: W,
                             has_pending_member_action: K
                         }))
-                    }, [H, y, W, K]), null == H || null == k) return null;
+                    }, [H, O, W, K]), null == H || null == k) return null;
                 let X = [];
                 return (!V && X.push((0, l.jsx)(E.default, {
                     channel: H
@@ -89,7 +90,7 @@
                             },
                             handleClick: () => {
                                 let e = p.default.getMessages(H.id);
-                                if (O) {
+                                if (y) {
                                     (0, _.transitionTo)(L.Routes.CHANNEL(H.guild_id, H.id)), (0, c.selectHomeResourceChannel)(H.guild_id, null);
                                     return
                                 }(0, _.transitionToGuild)(H.guild_id, H.id, e.jumpTargetId)

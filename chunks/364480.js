@@ -1,10 +1,10 @@
             "use strict";
 
-            function i(e) {
+            function r(e) {
                 return e.replace(/[\s-~]+/g, "-").replace(/^-+/, "").replace(/[\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g, "").toLowerCase()
             }
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return r
                 }
             }), n("781738")

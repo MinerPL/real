@@ -4,7 +4,7 @@
                     return i
                 },
                 openMFAModal: function() {
-                    return r
+                    return d
                 }
             }), n("70102"), n("581081");
             var s = n("872717"),
@@ -23,7 +23,7 @@
                 }
                 return t
             }
-            async function d(e) {
+            async function r(e) {
                 let {
                     ticket: t,
                     mfaType: n,
@@ -41,22 +41,22 @@
                     });
                     return e.body
                 } catch (e) {
-                    var d;
-                    if ((null === (d = e.body) || void 0 === d ? void 0 : d.code) === l.AbortCodes.MFA_INVALID_CODE) throw Error(i(n));
+                    var r;
+                    if ((null === (r = e.body) || void 0 === r ? void 0 : r.code) === l.AbortCodes.MFA_INVALID_CODE) throw Error(i(n));
                     throw e
                 }
             }
 
-            function r(e, t, s) {
+            function d(e, t, s) {
                 let a = async e => {
-                    let n = await d(e),
+                    let n = await r(e),
                         s = {
                             "X-Discord-MFA-Authorization": n.token
                         };
                     return new Promise((n, o) => {
                         t(s, (t, s, a) => {
-                            var d, r;
-                            return (null === (d = t.body) || void 0 === d ? void 0 : d.code) === l.AbortCodes.MFA_INVALID_CODE || (null === (r = t.body) || void 0 === r ? void 0 : r.code) === l.AbortCodes.MFA_REQUIRED ? (o(Error(i(e.mfaType))), !0) : (n(), !1)
+                            var r, d;
+                            return (null === (r = t.body) || void 0 === r ? void 0 : r.code) === l.AbortCodes.MFA_INVALID_CODE || (null === (d = t.body) || void 0 === d ? void 0 : d.code) === l.AbortCodes.MFA_REQUIRED ? (o(Error(i(e.mfaType))), !0) : (n(), !1)
                         })
                     })
                 };

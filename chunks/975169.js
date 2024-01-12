@@ -1,4 +1,4 @@
             "use strict";
-            r("70102"), t.exports = function() {
+            s("70102"), t.exports = function() {
                 if ("function" != typeof Promise) throw TypeError("`Promise.allSettled` requires a global `Promise` be available.")
             }

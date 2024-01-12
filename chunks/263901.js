@@ -1,20 +1,20 @@
             "use strict";
             n.r(t), n.d(t, {
                 addPostConnectionCallback: function() {
-                    return r
+                    return o
                 }
             }), n("860677"), n("424973");
-            var i = n("913144"),
-                a = n("619443");
-            let l = [];
+            var s = n("913144"),
+                i = n("619443");
+            let r = [];
 
-            function s(e) {
+            function a(e) {
                 setImmediate(() => e())
             }
 
-            function r(e) {
-                a.default.isConnectedOrOverlay() ? s(e) : l.push(e)
+            function o(e) {
+                i.default.isConnectedOrOverlay() ? a(e) : r.push(e)
             }
-            i.default.subscribe("CONNECTION_OPEN", () => {
-                l.forEach(e => s(e)), l = []
+            s.default.subscribe("CONNECTION_OPEN", () => {
+                r.forEach(e => a(e)), r = []
             })

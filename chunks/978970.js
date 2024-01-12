@@ -1,78 +1,78 @@
             "use strict";
-            e.r(E), e.d(E, {
+            n.r(t), n.d(t, {
                 OrderedPermissions: function() {
-                    return r
+                    return a
                 },
                 containsDisallowedPermission: function() {
-                    return t
+                    return o
                 },
                 getPermissionName: function() {
-                    return _
+                    return u
                 }
-            }), e("70102");
-            var i = e("316693"),
-                S = e("49111"),
-                n = e("782340");
-            let r = [S.Permissions.ADMINISTRATOR, S.Permissions.MANAGE_GUILD, S.Permissions.MANAGE_ROLES, S.Permissions.MANAGE_CHANNELS, S.Permissions.KICK_MEMBERS, S.Permissions.BAN_MEMBERS, S.Permissions.CREATE_INSTANT_INVITE, S.Permissions.MANAGE_NICKNAMES, S.Permissions.CHANGE_NICKNAME, S.Permissions.MANAGE_GUILD_EXPRESSIONS, S.Permissions.CREATE_GUILD_EXPRESSIONS, S.Permissions.MANAGE_WEBHOOKS, S.Permissions.VIEW_AUDIT_LOG, S.Permissions.VIEW_CHANNEL, S.Permissions.MANAGE_EVENTS, S.Permissions.CREATE_EVENTS, S.Permissions.MODERATE_MEMBERS, S.Permissions.VIEW_GUILD_ANALYTICS, S.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS, S.Permissions.SEND_MESSAGES, S.Permissions.SEND_MESSAGES_IN_THREADS, S.Permissions.CREATE_PUBLIC_THREADS, S.Permissions.CREATE_PRIVATE_THREADS, S.Permissions.SEND_TTS_MESSAGES, S.Permissions.MANAGE_MESSAGES, S.Permissions.MANAGE_THREADS, S.Permissions.EMBED_LINKS, S.Permissions.ATTACH_FILES, S.Permissions.READ_MESSAGE_HISTORY, S.Permissions.MENTION_EVERYONE, S.Permissions.ADD_REACTIONS, S.Permissions.USE_EXTERNAL_EMOJIS, S.Permissions.USE_EXTERNAL_STICKERS, S.Permissions.USE_APPLICATION_COMMANDS, S.Permissions.SEND_VOICE_MESSAGES, S.Permissions.USE_CLYDE_AI, S.Permissions.CONNECT, S.Permissions.SPEAK, S.Permissions.MUTE_MEMBERS, S.Permissions.DEAFEN_MEMBERS, S.Permissions.MOVE_MEMBERS, S.Permissions.USE_VAD, S.Permissions.PRIORITY_SPEAKER, S.Permissions.REQUEST_TO_SPEAK, S.Permissions.STREAM, S.Permissions.USE_EMBEDDED_ACTIVITIES, S.Permissions.USE_SOUNDBOARD, S.Permissions.USE_EXTERNAL_SOUNDS, S.Permissions.SET_VOICE_CHANNEL_STATUS];
+            }), n("70102");
+            var s = n("316693"),
+                i = n("49111"),
+                r = n("782340");
+            let a = [i.Permissions.ADMINISTRATOR, i.Permissions.MANAGE_GUILD, i.Permissions.MANAGE_ROLES, i.Permissions.MANAGE_CHANNELS, i.Permissions.KICK_MEMBERS, i.Permissions.BAN_MEMBERS, i.Permissions.CREATE_INSTANT_INVITE, i.Permissions.MANAGE_NICKNAMES, i.Permissions.CHANGE_NICKNAME, i.Permissions.MANAGE_GUILD_EXPRESSIONS, i.Permissions.CREATE_GUILD_EXPRESSIONS, i.Permissions.MANAGE_WEBHOOKS, i.Permissions.VIEW_AUDIT_LOG, i.Permissions.VIEW_CHANNEL, i.Permissions.MANAGE_EVENTS, i.Permissions.CREATE_EVENTS, i.Permissions.MODERATE_MEMBERS, i.Permissions.VIEW_GUILD_ANALYTICS, i.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS, i.Permissions.SEND_MESSAGES, i.Permissions.SEND_MESSAGES_IN_THREADS, i.Permissions.CREATE_PUBLIC_THREADS, i.Permissions.CREATE_PRIVATE_THREADS, i.Permissions.SEND_TTS_MESSAGES, i.Permissions.MANAGE_MESSAGES, i.Permissions.MANAGE_THREADS, i.Permissions.EMBED_LINKS, i.Permissions.ATTACH_FILES, i.Permissions.READ_MESSAGE_HISTORY, i.Permissions.MENTION_EVERYONE, i.Permissions.ADD_REACTIONS, i.Permissions.USE_EXTERNAL_EMOJIS, i.Permissions.USE_EXTERNAL_STICKERS, i.Permissions.USE_APPLICATION_COMMANDS, i.Permissions.SEND_VOICE_MESSAGES, i.Permissions.USE_CLYDE_AI, i.Permissions.CONNECT, i.Permissions.SPEAK, i.Permissions.MUTE_MEMBERS, i.Permissions.DEAFEN_MEMBERS, i.Permissions.MOVE_MEMBERS, i.Permissions.USE_VAD, i.Permissions.PRIORITY_SPEAKER, i.Permissions.REQUEST_TO_SPEAK, i.Permissions.STREAM, i.Permissions.USE_EMBEDDED_ACTIVITIES, i.Permissions.USE_SOUNDBOARD, i.Permissions.USE_EXTERNAL_SOUNDS, i.Permissions.SET_VOICE_CHANNEL_STATUS];
 
-            function t(s) {
-                return Object.values(S.Permissions).some(E => i.default.has(s, E) && !r.includes(E))
+            function o(e) {
+                return Object.values(i.Permissions).some(t => s.default.has(e, t) && !a.includes(t))
             }
-            let A = {
-                [S.Permissions.ADMINISTRATOR.toString()]: () => n.default.Messages.ADMINISTRATOR,
-                [S.Permissions.MANAGE_GUILD.toString()]: () => n.default.Messages.MANAGE_SERVER,
-                [S.Permissions.MANAGE_ROLES.toString()]: () => n.default.Messages.MANAGE_ROLES,
-                [S.Permissions.MANAGE_CHANNELS.toString()]: () => n.default.Messages.MANAGE_CHANNELS,
-                [S.Permissions.KICK_MEMBERS.toString()]: () => n.default.Messages.KICK_MEMBERS,
-                [S.Permissions.BAN_MEMBERS.toString()]: () => n.default.Messages.BAN_MEMBERS,
-                [S.Permissions.CREATE_INSTANT_INVITE.toString()]: () => n.default.Messages.CREATE_INSTANT_INVITE,
-                [S.Permissions.MANAGE_NICKNAMES.toString()]: () => n.default.Messages.MANAGE_NICKNAMES,
-                [S.Permissions.CHANGE_NICKNAME.toString()]: () => n.default.Messages.CHANGE_NICKNAME,
-                [S.Permissions.MANAGE_GUILD_EXPRESSIONS.toString()]: () => n.default.Messages.MANAGE_EXPRESSIONS,
-                [S.Permissions.CREATE_GUILD_EXPRESSIONS.toString()]: () => n.default.Messages.CREATE_EXPRESSIONS,
-                [S.Permissions.MANAGE_WEBHOOKS.toString()]: () => n.default.Messages.MANAGE_WEBHOOKS,
-                [S.Permissions.VIEW_AUDIT_LOG.toString()]: () => n.default.Messages.VIEW_AUDIT_LOG,
-                [S.Permissions.VIEW_CHANNEL.toString()]: () => n.default.Messages.READ_MESSAGES,
-                [S.Permissions.SEND_MESSAGES.toString()]: () => n.default.Messages.SEND_MESSAGES,
-                [S.Permissions.SEND_TTS_MESSAGES.toString()]: () => n.default.Messages.SEND_TTS_MESSAGES,
-                [S.Permissions.MANAGE_MESSAGES.toString()]: () => n.default.Messages.MANAGE_MESSAGES,
-                [S.Permissions.EMBED_LINKS.toString()]: () => n.default.Messages.EMBED_LINKS,
-                [S.Permissions.ATTACH_FILES.toString()]: () => n.default.Messages.ATTACH_FILES,
-                [S.Permissions.READ_MESSAGE_HISTORY.toString()]: () => n.default.Messages.READ_MESSAGE_HISTORY,
-                [S.Permissions.MENTION_EVERYONE.toString()]: () => n.default.Messages.MENTION_EVERYONE,
-                [S.Permissions.ADD_REACTIONS.toString()]: () => n.default.Messages.ADD_REACTIONS,
-                [S.Permissions.USE_EXTERNAL_EMOJIS.toString()]: () => n.default.Messages.USE_EXTERNAL_EMOJIS,
-                [S.Permissions.USE_EXTERNAL_STICKERS.toString()]: () => n.default.Messages.USE_EXTERNAL_STICKERS,
-                [S.Permissions.USE_APPLICATION_COMMANDS.toString()]: () => n.default.Messages.USE_APPLICATION_COMMANDS,
-                [S.Permissions.SEND_VOICE_MESSAGES.toString()]: () => n.default.Messages.SEND_VOICE_MESSAGE,
-                [S.Permissions.CONNECT.toString()]: () => n.default.Messages.CONNECT,
-                [S.Permissions.SPEAK.toString()]: () => n.default.Messages.SPEAK,
-                [S.Permissions.MUTE_MEMBERS.toString()]: () => n.default.Messages.MUTE_MEMBERS,
-                [S.Permissions.DEAFEN_MEMBERS.toString()]: () => n.default.Messages.DEAFEN_MEMBERS,
-                [S.Permissions.MOVE_MEMBERS.toString()]: () => n.default.Messages.MOVE_MEMBERS,
-                [S.Permissions.USE_VAD.toString()]: () => n.default.Messages.USE_VAD,
-                [S.Permissions.PRIORITY_SPEAKER.toString()]: () => n.default.Messages.PRIORITY_SPEAKER,
-                [S.Permissions.CREATE_PUBLIC_THREADS.toString()]: () => n.default.Messages.CREATE_PUBLIC_THREADS,
-                [S.Permissions.CREATE_PRIVATE_THREADS.toString()]: () => n.default.Messages.CREATE_PRIVATE_THREADS,
-                [S.Permissions.SEND_MESSAGES_IN_THREADS.toString()]: () => n.default.Messages.SEND_MESSAGES_IN_THREADS,
-                [S.Permissions.MANAGE_THREADS.toString()]: () => n.default.Messages.MANAGE_THREADS,
-                [S.Permissions.MANAGE_EVENTS.toString()]: () => n.default.Messages.MANAGE_EVENTS,
-                [S.Permissions.CREATE_EVENTS.toString()]: () => n.default.Messages.CREATE_EVENTS,
-                [S.Permissions.MODERATE_MEMBERS.toString()]: () => n.default.Messages.MODERATE_MEMBERS_PERMISSION_INTERNAL,
-                [S.Permissions.REQUEST_TO_SPEAK.toString()]: () => n.default.Messages.REQUEST_TO_SPEAK,
-                [S.Permissions.VIEW_GUILD_ANALYTICS.toString()]: () => n.default.Messages.VIEW_GUILD_ANALYTICS,
-                [S.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS.toString()]: () => n.default.Messages.VIEW_CREATOR_MONETIZATION_ANALYTICS,
-                [S.Permissions.STREAM.toString()]: () => n.default.Messages.VIDEO,
-                [S.Permissions.USE_EMBEDDED_ACTIVITIES.toString()]: () => n.default.Messages.USE_EMBEDDED_ACTIVITIES,
-                [S.Permissions.USE_SOUNDBOARD.toString()]: () => n.default.Messages.USE_SOUNDBOARD,
-                [S.Permissions.USE_EXTERNAL_SOUNDS.toString()]: () => n.default.Messages.USE_EXTERNAL_SOUNDS,
-                [S.Permissions.USE_CLYDE_AI.toString()]: () => n.default.Messages.ROLE_PERMISSIONS_USE_CLYDE_AI,
-                [S.Permissions.SET_VOICE_CHANNEL_STATUS.toString()]: () => n.default.Messages.VOICE_CHANNEL_STATUS_PERMISSION_TITLE
+            let d = {
+                [i.Permissions.ADMINISTRATOR.toString()]: () => r.default.Messages.ADMINISTRATOR,
+                [i.Permissions.MANAGE_GUILD.toString()]: () => r.default.Messages.MANAGE_SERVER,
+                [i.Permissions.MANAGE_ROLES.toString()]: () => r.default.Messages.MANAGE_ROLES,
+                [i.Permissions.MANAGE_CHANNELS.toString()]: () => r.default.Messages.MANAGE_CHANNELS,
+                [i.Permissions.KICK_MEMBERS.toString()]: () => r.default.Messages.KICK_MEMBERS,
+                [i.Permissions.BAN_MEMBERS.toString()]: () => r.default.Messages.BAN_MEMBERS,
+                [i.Permissions.CREATE_INSTANT_INVITE.toString()]: () => r.default.Messages.CREATE_INSTANT_INVITE,
+                [i.Permissions.MANAGE_NICKNAMES.toString()]: () => r.default.Messages.MANAGE_NICKNAMES,
+                [i.Permissions.CHANGE_NICKNAME.toString()]: () => r.default.Messages.CHANGE_NICKNAME,
+                [i.Permissions.MANAGE_GUILD_EXPRESSIONS.toString()]: () => r.default.Messages.MANAGE_EXPRESSIONS,
+                [i.Permissions.CREATE_GUILD_EXPRESSIONS.toString()]: () => r.default.Messages.CREATE_EXPRESSIONS,
+                [i.Permissions.MANAGE_WEBHOOKS.toString()]: () => r.default.Messages.MANAGE_WEBHOOKS,
+                [i.Permissions.VIEW_AUDIT_LOG.toString()]: () => r.default.Messages.VIEW_AUDIT_LOG,
+                [i.Permissions.VIEW_CHANNEL.toString()]: () => r.default.Messages.READ_MESSAGES,
+                [i.Permissions.SEND_MESSAGES.toString()]: () => r.default.Messages.SEND_MESSAGES,
+                [i.Permissions.SEND_TTS_MESSAGES.toString()]: () => r.default.Messages.SEND_TTS_MESSAGES,
+                [i.Permissions.MANAGE_MESSAGES.toString()]: () => r.default.Messages.MANAGE_MESSAGES,
+                [i.Permissions.EMBED_LINKS.toString()]: () => r.default.Messages.EMBED_LINKS,
+                [i.Permissions.ATTACH_FILES.toString()]: () => r.default.Messages.ATTACH_FILES,
+                [i.Permissions.READ_MESSAGE_HISTORY.toString()]: () => r.default.Messages.READ_MESSAGE_HISTORY,
+                [i.Permissions.MENTION_EVERYONE.toString()]: () => r.default.Messages.MENTION_EVERYONE,
+                [i.Permissions.ADD_REACTIONS.toString()]: () => r.default.Messages.ADD_REACTIONS,
+                [i.Permissions.USE_EXTERNAL_EMOJIS.toString()]: () => r.default.Messages.USE_EXTERNAL_EMOJIS,
+                [i.Permissions.USE_EXTERNAL_STICKERS.toString()]: () => r.default.Messages.USE_EXTERNAL_STICKERS,
+                [i.Permissions.USE_APPLICATION_COMMANDS.toString()]: () => r.default.Messages.USE_APPLICATION_COMMANDS,
+                [i.Permissions.SEND_VOICE_MESSAGES.toString()]: () => r.default.Messages.SEND_VOICE_MESSAGE,
+                [i.Permissions.CONNECT.toString()]: () => r.default.Messages.CONNECT,
+                [i.Permissions.SPEAK.toString()]: () => r.default.Messages.SPEAK,
+                [i.Permissions.MUTE_MEMBERS.toString()]: () => r.default.Messages.MUTE_MEMBERS,
+                [i.Permissions.DEAFEN_MEMBERS.toString()]: () => r.default.Messages.DEAFEN_MEMBERS,
+                [i.Permissions.MOVE_MEMBERS.toString()]: () => r.default.Messages.MOVE_MEMBERS,
+                [i.Permissions.USE_VAD.toString()]: () => r.default.Messages.USE_VAD,
+                [i.Permissions.PRIORITY_SPEAKER.toString()]: () => r.default.Messages.PRIORITY_SPEAKER,
+                [i.Permissions.CREATE_PUBLIC_THREADS.toString()]: () => r.default.Messages.CREATE_PUBLIC_THREADS,
+                [i.Permissions.CREATE_PRIVATE_THREADS.toString()]: () => r.default.Messages.CREATE_PRIVATE_THREADS,
+                [i.Permissions.SEND_MESSAGES_IN_THREADS.toString()]: () => r.default.Messages.SEND_MESSAGES_IN_THREADS,
+                [i.Permissions.MANAGE_THREADS.toString()]: () => r.default.Messages.MANAGE_THREADS,
+                [i.Permissions.MANAGE_EVENTS.toString()]: () => r.default.Messages.MANAGE_EVENTS,
+                [i.Permissions.CREATE_EVENTS.toString()]: () => r.default.Messages.CREATE_EVENTS,
+                [i.Permissions.MODERATE_MEMBERS.toString()]: () => r.default.Messages.MODERATE_MEMBERS_PERMISSION_INTERNAL,
+                [i.Permissions.REQUEST_TO_SPEAK.toString()]: () => r.default.Messages.REQUEST_TO_SPEAK,
+                [i.Permissions.VIEW_GUILD_ANALYTICS.toString()]: () => r.default.Messages.VIEW_GUILD_ANALYTICS,
+                [i.Permissions.VIEW_CREATOR_MONETIZATION_ANALYTICS.toString()]: () => r.default.Messages.VIEW_CREATOR_MONETIZATION_ANALYTICS,
+                [i.Permissions.STREAM.toString()]: () => r.default.Messages.VIDEO,
+                [i.Permissions.USE_EMBEDDED_ACTIVITIES.toString()]: () => r.default.Messages.USE_EMBEDDED_ACTIVITIES,
+                [i.Permissions.USE_SOUNDBOARD.toString()]: () => r.default.Messages.USE_SOUNDBOARD,
+                [i.Permissions.USE_EXTERNAL_SOUNDS.toString()]: () => r.default.Messages.USE_EXTERNAL_SOUNDS,
+                [i.Permissions.USE_CLYDE_AI.toString()]: () => r.default.Messages.ROLE_PERMISSIONS_USE_CLYDE_AI,
+                [i.Permissions.SET_VOICE_CHANNEL_STATUS.toString()]: () => r.default.Messages.VOICE_CHANNEL_STATUS_PERMISSION_TITLE
             };
 
-            function _(s) {
-                let E = s.toString(),
-                    e = A[E];
-                if (null == e) throw Error("Unknown permission. Did you provide a _single_ bit flag? Perm: ".concat(s));
-                return e()
+            function u(e) {
+                let t = e.toString(),
+                    n = d[t];
+                if (null == n) throw Error("Unknown permission. Did you provide a _single_ bit flag? Perm: ".concat(e));
+                return n()
             }

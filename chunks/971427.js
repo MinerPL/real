@@ -6,14 +6,14 @@
                 }
             }), n("424973");
             var i = n("446674"),
-                o = n("913144");
-            let l = {
+                l = n("913144");
+            let o = {
                 hasAcceptedStoreTerms: !1,
                 hasAcceptedEulaIds: []
             };
             class s extends i.default.PersistedStore {
                 initialize(e) {
-                    r = null != e ? e : l
+                    r = null != e ? e : o
                 }
                 getState() {
                     return r
@@ -29,7 +29,7 @@
                 ...e,
                 hasAcceptedEulaIds: []
             } : e];
-            var a = new s(o.default, {
+            var a = new s(l.default, {
                 APPLICATION_STORE_ACCEPT_STORE_TERMS: function() {
                     r.hasAcceptedStoreTerms = !0
                 },

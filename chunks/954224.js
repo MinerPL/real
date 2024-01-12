@@ -1,10 +1,10 @@
             "use strict";
 
-            function i() {
+            function s() {
                 return null
             }
-            n.r(s), n.d(s, {
+            n.r(t), n.d(t, {
                 getSystemVersion: function() {
-                    return i
+                    return s
                 }
             })

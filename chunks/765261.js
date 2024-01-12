@@ -1,27 +1,27 @@
             "use strict";
-            r("70102"), r("424973");
-            var i = r("839309"),
-                n = r("599235"),
-                o = r("275201"),
-                a = r("550511");
+            s("70102"), s("424973");
+            var r = s("839309"),
+                i = s("599235"),
+                n = s("275201"),
+                c = s("550511");
 
-            function s(t) {
-                o.call(this, "mont", t), this.a = new i(t.a, 16).toRed(this.red), this.b = new i(t.b, 16).toRed(this.red), this.i4 = new i(4).toRed(this.red).redInvm(), this.two = new i(2).toRed(this.red), this.a24 = this.i4.redMul(this.a.redAdd(this.two))
+            function o(t) {
+                n.call(this, "mont", t), this.a = new r(t.a, 16).toRed(this.red), this.b = new r(t.b, 16).toRed(this.red), this.i4 = new r(4).toRed(this.red).redInvm(), this.two = new r(2).toRed(this.red), this.a24 = this.i4.redMul(this.a.redAdd(this.two))
             }
 
-            function f(t, e, r) {
-                o.BasePoint.call(this, t, "projective"), null === e && null === r ? (this.x = this.curve.one, this.z = this.curve.zero) : (this.x = new i(e, 16), this.z = new i(r, 16), !this.x.red && (this.x = this.x.toRed(this.curve.red)), !this.z.red && (this.z = this.z.toRed(this.curve.red)))
+            function f(t, e, s) {
+                n.BasePoint.call(this, t, "projective"), null === e && null === s ? (this.x = this.curve.one, this.z = this.curve.zero) : (this.x = new r(e, 16), this.z = new r(s, 16), !this.x.red && (this.x = this.x.toRed(this.curve.red)), !this.z.red && (this.z = this.z.toRed(this.curve.red)))
             }
-            n(s, o), t.exports = s, s.prototype.validate = function(t) {
+            i(o, n), t.exports = o, o.prototype.validate = function(t) {
                 var e = t.normalize().x,
-                    r = e.redSqr(),
-                    i = r.redMul(e).redAdd(r.redMul(this.a)).redAdd(e);
-                return 0 === i.redSqrt().redSqr().cmp(i)
-            }, n(f, o.BasePoint), s.prototype.decodePoint = function(t, e) {
-                return this.point(a.toArray(t, e), 1)
-            }, s.prototype.point = function(t, e) {
+                    s = e.redSqr(),
+                    r = s.redMul(e).redAdd(s.redMul(this.a)).redAdd(e);
+                return 0 === r.redSqrt().redSqr().cmp(r)
+            }, i(f, n.BasePoint), o.prototype.decodePoint = function(t, e) {
+                return this.point(c.toArray(t, e), 1)
+            }, o.prototype.point = function(t, e) {
                 return new f(this, t, e)
-            }, s.prototype.pointFromJSON = function(t) {
+            }, o.prototype.pointFromJSON = function(t) {
                 return f.fromJSON(this, t)
             }, f.prototype.precompute = function() {}, f.prototype._encode = function() {
                 return this.getX().toArray("be", this.curve.p.byteLength())
@@ -34,25 +34,25 @@
             }, f.prototype.dbl = function() {
                 var t = this.x.redAdd(this.z).redSqr(),
                     e = this.x.redSub(this.z).redSqr(),
-                    r = t.redSub(e),
-                    i = t.redMul(e),
-                    n = r.redMul(e.redAdd(this.curve.a24.redMul(r)));
-                return this.curve.point(i, n)
+                    s = t.redSub(e),
+                    r = t.redMul(e),
+                    i = s.redMul(e.redAdd(this.curve.a24.redMul(s)));
+                return this.curve.point(r, i)
             }, f.prototype.add = function() {
                 throw Error("Not supported on Montgomery curve")
             }, f.prototype.diffAdd = function(t, e) {
-                var r = this.x.redAdd(this.z),
-                    i = this.x.redSub(this.z),
-                    n = t.x.redAdd(t.z),
-                    o = t.x.redSub(t.z).redMul(r),
-                    a = n.redMul(i),
-                    s = e.z.redMul(o.redAdd(a).redSqr()),
-                    f = e.x.redMul(o.redISub(a).redSqr());
-                return this.curve.point(s, f)
+                var s = this.x.redAdd(this.z),
+                    r = this.x.redSub(this.z),
+                    i = t.x.redAdd(t.z),
+                    n = t.x.redSub(t.z).redMul(s),
+                    c = i.redMul(r),
+                    o = e.z.redMul(n.redAdd(c).redSqr()),
+                    f = e.x.redMul(n.redISub(c).redSqr());
+                return this.curve.point(o, f)
             }, f.prototype.mul = function(t) {
-                for (var e = t.clone(), r = this, i = this.curve.point(null, null), n = []; 0 !== e.cmpn(0); e.iushrn(1)) n.push(e.andln(1));
-                for (var o = n.length - 1; o >= 0; o--) 0 === n[o] ? (r = r.diffAdd(i, this), i = i.dbl()) : (i = r.diffAdd(i, this), r = r.dbl());
-                return i
+                for (var e = t.clone(), s = this, r = this.curve.point(null, null), i = []; 0 !== e.cmpn(0); e.iushrn(1)) i.push(e.andln(1));
+                for (var n = i.length - 1; n >= 0; n--) 0 === i[n] ? (s = s.diffAdd(r, this), r = r.dbl()) : (r = s.diffAdd(r, this), s = s.dbl());
+                return r
             }, f.prototype.mulAdd = function() {
                 throw Error("Not supported on Montgomery curve")
             }, f.prototype.jumlAdd = function() {

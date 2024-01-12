@@ -58,13 +58,13 @@
                                 altAxis: 0
                             }, C),
                             F = t.modifiersData.offset ? t.modifiersData.offset[t.placement] : null,
-                            I = {
+                            N = {
                                 x: 0,
                                 y: 0
                             };
                         if (E) {
                             if (void 0 === h || h) {
-                                var N, A = "y" === x ? r.top : r.left,
+                                var I, A = "y" === x ? r.top : r.left,
                                     R = "y" === x ? r.bottom : r.right,
                                     z = "y" === x ? "height" : "width",
                                     W = E[x],
@@ -86,9 +86,9 @@
                                     et = Y ? -P[z] / 2 + K + Z + X + H.mainAxis : J + Z + X + H.mainAxis,
                                     en = t.elements.arrow && (0, l.default)(t.elements.arrow),
                                     er = en ? "y" === x ? en.clientTop || 0 : en.clientLeft || 0 : 0,
-                                    ea = null != (N = null == F ? void 0 : F[x]) ? N : 0,
+                                    ea = null != (I = null == F ? void 0 : F[x]) ? I : 0,
                                     eo = (0, s.within)(w ? (0, p.min)(B, W + ee - ea - er) : B, W, w ? (0, p.max)(U, W + et - ea) : U);
-                                E[x] = eo, I[x] = eo - W
+                                E[x] = eo, N[x] = eo - W
                             }
                             if (void 0 !== _ && _) {
                                 var ei, es = "x" === x ? r.top : r.left,
@@ -102,9 +102,9 @@
                                     eh = ep ? ed : el - P[ec] - j[ec] - em + H.altAxis,
                                     e_ = ep ? el + P[ec] + j[ec] - em - H.altAxis : ef,
                                     ey = w && ep ? (0, s.withinMaxClamp)(eh, el, e_) : (0, s.within)(w ? eh : ed, el, w ? e_ : ef);
-                                E[O] = ey, I[O] = ey - el
+                                E[O] = ey, N[O] = ey - el
                             }
-                            t.modifiersData[m] = I
+                            t.modifiersData[m] = N
                         }
                     },
                     requiresIfExists: ["offset"]

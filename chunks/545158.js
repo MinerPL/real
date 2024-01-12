@@ -1,19 +1,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return i
                 }
             });
-            var i = n("773336");
-            async function r(e, t) {
+            var r = n("773336");
+            async function i(e, t) {
                 let {
-                    default: r
-                } = await n.el("572544").then(n.bind(n, "572544")), s = r(e, {
+                    default: i
+                } = await n.el("572544").then(n.bind(n, "572544")), l = i(e, {
                     skipExtensionCheck: t,
                     analyticsLocations: []
                 });
-                if (null != s) s(null);
-                else if (i.isPlatformEmbedded) window.open(e);
+                if (null != l) l(null);
+                else if (r.isPlatformEmbedded) window.open(e);
                 else {
                     let t = document.createElement("a");
                     t.href = e, t.target = "_blank", t.rel = "noreferrer noopener", t.click()

@@ -4,29 +4,29 @@
                     return _
                 }
             }), n("424973"), n("222007");
-            var i = n("714617"),
-                a = n.n(i),
-                l = n("446674"),
-                s = n("913144"),
-                r = n("77173");
-            let u = [r.default],
-                o = [];
+            var s = n("714617"),
+                i = n.n(s),
+                r = n("446674"),
+                a = n("913144"),
+                o = n("77173");
+            let d = [o.default],
+                u = [];
 
-            function d() {
+            function l() {
                 let e = [];
-                for (let t of u) {
+                for (let t of d) {
                     let n = t.getActivity();
                     null != n && e.push(n)
                 }
-                return !a(e, o) && (o = e, !0)
+                return !i(e, u) && (u = e, !0)
             }
-            class c extends l.default.Store {
+            class f extends r.default.Store {
                 initialize() {
-                    this.syncWith(u, d)
+                    this.syncWith(d, l)
                 }
                 getActivities() {
-                    return o
+                    return u
                 }
             }
-            c.displayName = "FirstPartyRichPresenceStore";
-            var _ = new c(s.default)
+            f.displayName = "FirstPartyRichPresenceStore";
+            var _ = new f(a.default)

@@ -4,76 +4,76 @@
                     return _
                 },
                 useShouldRestrictUpdatingCreatorMonetizationSettings: function() {
-                    return E
+                    return c
                 },
                 useIsMonetizationReapplicationDisabled: function() {
-                    return f
+                    return g
                 }
             });
-            var i = n("884691"),
-                a = n("446674"),
-                l = n("763898"),
-                s = n("371358"),
-                r = n("648825"),
-                u = n("305961"),
-                o = n("736271"),
-                d = n("49111");
-            let c = e => {
-                    let t = (0, l.default)();
-                    i.useEffect(() => {
-                        if (null != e && !!e.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) r.default.getMonetizationRestrictionsFetchState(e.id) === r.FetchState.NOT_FETCHED && s.fetchMonetizationRestrictions(e.id, {
+            var s = n("884691"),
+                i = n("446674"),
+                r = n("763898"),
+                a = n("371358"),
+                o = n("648825"),
+                d = n("305961"),
+                u = n("736271"),
+                l = n("49111");
+            let f = e => {
+                    let t = (0, r.default)();
+                    s.useEffect(() => {
+                        if (null != e && !!e.hasFeature(l.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) o.default.getMonetizationRestrictionsFetchState(e.id) === o.FetchState.NOT_FETCHED && a.fetchMonetizationRestrictions(e.id, {
                             signal: t
                         })
                     }, [e, t]);
                     let n = null == e ? void 0 : e.id,
-                        u = (0, a.useStateFromStoresArray)([r.default], () => {
+                        d = (0, i.useStateFromStoresArray)([o.default], () => {
                             var e;
-                            return null !== (e = r.default.getMonetizationRestrictions(null != n ? n : "")) && void 0 !== e ? e : []
+                            return null !== (e = o.default.getMonetizationRestrictions(null != n ? n : "")) && void 0 !== e ? e : []
                         }),
-                        o = (0, a.useStateFromStores)([r.default], () => r.default.getMonetizationRestrictionsFetchState(null != n ? n : "") === r.FetchState.FETCHING);
+                        u = (0, i.useStateFromStores)([o.default], () => o.default.getMonetizationRestrictionsFetchState(null != n ? n : "") === o.FetchState.FETCHING);
                     return {
-                        restrictions: u,
-                        restrictionsLoading: o
+                        restrictions: d,
+                        restrictionsLoading: u
                     }
                 },
                 _ = e => {
                     var t;
-                    let n = (0, a.useStateFromStores)([u.default], () => u.default.getGuild(e), [e]),
+                    let n = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(e), [e]),
                         {
-                            restrictions: i,
-                            restrictionsLoading: l
-                        } = c(n),
-                        s = (null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE)) || (null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)),
-                        r = !s || (l ? null === (t = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, o.isRestrictedFromShowingGuildPurchaseEntryPoints)(i));
+                            restrictions: s,
+                            restrictionsLoading: r
+                        } = f(n),
+                        a = (null == n ? void 0 : n.hasFeature(l.GuildFeatures.CREATOR_MONETIZABLE)) || (null == n ? void 0 : n.hasFeature(l.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)),
+                        o = !a || (r ? null === (t = null == n ? void 0 : n.hasFeature(l.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, u.isRestrictedFromShowingGuildPurchaseEntryPoints)(s));
                     return {
-                        shouldHideGuildPurchaseEntryPoints: r,
-                        restrictionsLoading: l
+                        shouldHideGuildPurchaseEntryPoints: o,
+                        restrictionsLoading: r
                     }
                 },
-                E = e => {
+                c = e => {
                     var t;
-                    let n = (0, a.useStateFromStores)([u.default], () => u.default.getGuild(e), [e]),
+                    let n = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(e), [e]),
                         {
-                            restrictions: i,
-                            restrictionsLoading: l
-                        } = c(n),
-                        s = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_DISABLED),
-                        r = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING),
-                        _ = s || r || (l ? null === (t = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, o.isRestrictedFromUpdatingCreatorMonetizationSettings)(i));
+                            restrictions: s,
+                            restrictionsLoading: r
+                        } = f(n),
+                        a = null == n ? void 0 : n.hasFeature(l.GuildFeatures.CREATOR_MONETIZABLE_DISABLED),
+                        o = null == n ? void 0 : n.hasFeature(l.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING),
+                        _ = a || o || (r ? null === (t = null == n ? void 0 : n.hasFeature(l.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, u.isRestrictedFromUpdatingCreatorMonetizationSettings)(s));
                     return {
                         shouldRestrictUpdatingCreatorMonetizationSettings: _,
-                        restrictionsLoading: l
+                        restrictionsLoading: r
                     }
                 },
-                f = e => {
-                    let t = (0, a.useStateFromStores)([u.default], () => u.default.getGuild(e), [e]),
+                g = e => {
+                    let t = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(e), [e]),
                         {
                             restrictions: n,
-                            restrictionsLoading: i
-                        } = c(t),
-                        l = (0, o.isRestrictedFromMonetizationReapplication)(n);
+                            restrictionsLoading: s
+                        } = f(t),
+                        r = (0, u.isRestrictedFromMonetizationReapplication)(n);
                     return {
-                        isMonetizationReapplicationDisabled: l,
-                        restrictionsLoading: i
+                        isMonetizationReapplicationDisabled: r,
+                        restrictionsLoading: s
                     }
                 }

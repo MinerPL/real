@@ -5,15 +5,15 @@
                 }
             });
             var r = n("446674"),
-                i = n("913144");
+                u = n("913144");
             let a = {};
-            class s extends r.default.Store {
+            class l extends r.default.Store {
                 getEULA(e) {
                     return a[e]
                 }
             }
-            s.displayName = "EULAStore";
-            var o = new s(i.default, {
+            l.displayName = "EULAStore";
+            var o = new l(u.default, {
                 EULA_FETCH_SUCCESS: function(e) {
                     let {
                         eula: t

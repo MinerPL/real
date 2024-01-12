@@ -4,113 +4,113 @@
                     return c
                 },
                 ackChannel: function() {
-                    return _
-                },
-                bulkAck: function() {
-                    return f
-                },
-                localAck: function() {
                     return E
                 },
+                bulkAck: function() {
+                    return C
+                },
+                localAck: function() {
+                    return f
+                },
                 enableAutomaticAck: function() {
-                    return h
+                    return _
                 },
                 disableAutomaticAck: function() {
-                    return p
+                    return A
                 },
                 ackGuildFeature: function() {
-                    return g
+                    return T
                 },
                 ackUserFeature: function() {
-                    return I
+                    return S
                 }
             }), n("222007"), n("424973");
-            var i = n("249654"),
-                r = n("913144"),
-                s = n("401690"),
-                o = n("233069"),
-                l = n("42203"),
-                u = n("245997"),
-                a = n("697218"),
-                d = n("49111");
+            var l = n("249654"),
+                i = n("913144"),
+                a = n("401690"),
+                u = n("233069"),
+                r = n("42203"),
+                d = n("245997"),
+                o = n("697218"),
+                s = n("49111");
 
             function c(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    i = arguments.length > 3 ? arguments[3] : void 0,
-                    s = arguments.length > 4 ? arguments[4] : void 0;
-                r.default.dispatch({
+                    l = arguments.length > 3 ? arguments[3] : void 0,
+                    a = arguments.length > 4 ? arguments[4] : void 0;
+                i.default.dispatch({
                     type: "CHANNEL_ACK",
                     channelId: e,
-                    messageId: i,
+                    messageId: l,
                     immediate: t,
                     force: n,
-                    context: d.CURRENT_APP_CONTEXT,
-                    location: s
+                    context: s.CURRENT_APP_CONTEXT,
+                    location: a
                 })
             }
 
-            function _(e) {
+            function E(e) {
                 e.isCategory() ? ! function(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                        i = l.default.getChannel(e);
-                    if (null == i || null == i.guild_id) return;
-                    let r = u.default.getCategories(i.guild_id);
-                    if (null == r[e]) return;
-                    let a = r[e].filter(e => {
+                        l = r.default.getChannel(e);
+                    if (null == l || null == l.guild_id) return;
+                    let i = d.default.getCategories(l.guild_id);
+                    if (null == i[e]) return;
+                    let o = i[e].filter(e => {
                             let {
                                 channel: t
                             } = e;
-                            return (0, o.isGuildReadableType)(t.type)
+                            return (0, u.isGuildReadableType)(t.type)
                         }).map(e => {
                             let {
                                 channel: t
                             } = e;
                             return t.id
                         }),
-                        d = [...a];
-                    for (let e of (a.forEach(e => {
-                            let t = s.default.getActiveJoinedThreadsForParent(i.guild_id, e);
-                            for (let e in t) d.push(e)
-                        }), d)) c(e, t, n)
-                }(e.id, !0, !0) : e.isForumLikeChannel() ? c(e.id, !0, !0, i.default.fromTimestamp(Date.now())) : c(e.id, !0, !0)
+                        s = [...o];
+                    for (let e of (o.forEach(e => {
+                            let t = a.default.getActiveJoinedThreadsForParent(l.guild_id, e);
+                            for (let e in t) s.push(e)
+                        }), s)) c(e, t, n)
+                }(e.id, !0, !0) : e.isForumLikeChannel() ? c(e.id, !0, !0, l.default.fromTimestamp(Date.now())) : c(e.id, !0, !0)
             }
 
-            function f(e, t) {
-                r.default.dispatch({
+            function C(e, t) {
+                i.default.dispatch({
                     type: "BULK_ACK",
                     channels: e,
-                    context: d.CURRENT_APP_CONTEXT,
+                    context: s.CURRENT_APP_CONTEXT,
                     onFinished: t
                 })
             }
 
-            function E(e) {
-                r.default.dispatch({
+            function f(e) {
+                i.default.dispatch({
                     type: "CHANNEL_LOCAL_ACK",
                     channelId: e
                 })
             }
 
-            function h(e, t) {
-                r.default.dispatch({
+            function _(e, t) {
+                i.default.dispatch({
                     type: "ENABLE_AUTOMATIC_ACK",
                     channelId: e,
                     windowId: t
                 })
             }
 
-            function p(e, t) {
-                r.default.dispatch({
+            function A(e, t) {
+                i.default.dispatch({
                     type: "DISABLE_AUTOMATIC_ACK",
                     channelId: e,
                     windowId: t
                 })
             }
 
-            function g(e, t, n) {
-                r.default.dispatch({
+            function T(e, t, n) {
+                i.default.dispatch({
                     type: "GUILD_FEATURE_ACK",
                     id: e,
                     ackType: t,
@@ -119,10 +119,10 @@
                 })
             }
 
-            function I(e, t) {
+            function S(e, t) {
                 var n;
-                let i = null === (n = a.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
-                null != i && r.default.dispatch({
+                let l = null === (n = o.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
+                null != l && i.default.dispatch({
                     type: "USER_NON_CHANNEL_ACK",
                     ackType: e,
                     ackedId: t,

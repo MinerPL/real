@@ -4,41 +4,41 @@
                     return l
                 },
                 isAutomaticApprovalFormField: function() {
-                    return s
+                    return a
                 },
                 isManualApprovalFormField: function() {
-                    return a
+                    return o
                 }
             });
-            var i = n("449008"),
-                r = n("567054"),
-                o = n("394294");
+            var r = n("449008"),
+                i = n("567054"),
+                s = n("394294");
             let l = e => {
                 let {
                     required: t,
                     response: n,
-                    field_type: o
+                    field_type: s
                 } = e;
                 if (!t) return !0;
                 if (null == n) return !1;
-                switch (o) {
-                    case r.VerificationFormFieldTypes.TERMS:
-                    case r.VerificationFormFieldTypes.VERIFICATION:
+                switch (s) {
+                    case i.VerificationFormFieldTypes.TERMS:
+                    case i.VerificationFormFieldTypes.VERIFICATION:
                         return !!n;
-                    case r.VerificationFormFieldTypes.TEXT_INPUT:
-                    case r.VerificationFormFieldTypes.PARAGRAPH:
+                    case i.VerificationFormFieldTypes.TEXT_INPUT:
+                    case i.VerificationFormFieldTypes.PARAGRAPH:
                         return "string" == typeof n && "" !== n.trim();
-                    case r.VerificationFormFieldTypes.MULTIPLE_CHOICE:
+                    case i.VerificationFormFieldTypes.MULTIPLE_CHOICE:
                         return "number" == typeof n;
                     default:
-                        return (0, i.assertNever)(o)
+                        return (0, r.assertNever)(s)
                 }
             };
 
-            function s(e) {
-                return o.AUTOMATIC_APPROVAL_FORM_FIELDS.has(null == e ? void 0 : e.field_type)
+            function a(e) {
+                return s.AUTOMATIC_APPROVAL_FORM_FIELDS.has(null == e ? void 0 : e.field_type)
             }
 
-            function a(e) {
-                return o.MANUAL_APPROVAL_FORM_FIELDS.has(null == e ? void 0 : e.field_type)
+            function o(e) {
+                return s.MANUAL_APPROVAL_FORM_FIELDS.has(null == e ? void 0 : e.field_type)
             }

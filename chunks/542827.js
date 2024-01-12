@@ -1,49 +1,49 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return C
+                    return A
                 }
             }), n("881410"), n("222007"), n("424973");
-            var u = n("917351"),
-                l = n.n(u),
-                d = n("267363"),
+            var i = n("917351"),
+                o = n.n(i),
+                l = n("267363"),
                 a = n("863636"),
-                i = n("401690"),
-                r = n("923959"),
-                o = n("660478"),
+                d = n("401690"),
+                u = n("923959"),
+                s = n("660478"),
                 E = n("599110"),
-                s = n("49111"),
-                f = n("133335");
+                r = n("49111"),
+                _ = n("133335");
 
-            function C(e, t, n) {
-                let u = l.flatMap(e, e => {
-                    let t = r.default.getSelectableChannelIds(e),
-                        n = r.default.getVocalChannelIds(e),
-                        u = [...t, ...n],
-                        l = i.default.getActiveJoinedThreadsForGuild(e);
+            function A(e, t, n) {
+                let i = o.flatMap(e, e => {
+                    let t = u.default.getSelectableChannelIds(e),
+                        n = u.default.getVocalChannelIds(e),
+                        i = [...t, ...n],
+                        o = d.default.getActiveJoinedThreadsForGuild(e);
                     for (let e of t) {
-                        var d;
-                        let t = null !== (d = l[e]) && void 0 !== d ? d : {};
-                        for (let e in t) u.push(e)
+                        var l;
+                        let t = null !== (l = o[e]) && void 0 !== l ? l : {};
+                        for (let e in t) i.push(e)
                     }
-                    return u
+                    return i
                 }).map(e => ({
                     channelId: e,
-                    readStateType: f.ReadStateTypes.CHANNEL,
-                    messageId: o.default.lastMessageId(e)
+                    readStateType: _.ReadStateTypes.CHANNEL,
+                    messageId: s.default.lastMessageId(e)
                 }));
                 return e.forEach(e => {
-                    u.push({
+                    i.push({
                         channelId: e,
-                        readStateType: f.ReadStateTypes.GUILD_EVENT,
-                        messageId: o.default.lastMessageId(e, f.ReadStateTypes.GUILD_EVENT)
-                    }), u.push({
+                        readStateType: _.ReadStateTypes.GUILD_EVENT,
+                        messageId: s.default.lastMessageId(e, _.ReadStateTypes.GUILD_EVENT)
+                    }), i.push({
                         channelId: e,
-                        readStateType: f.ReadStateTypes.GUILD_ONBOARDING_QUESTION,
+                        readStateType: _.ReadStateTypes.GUILD_ONBOARDING_QUESTION,
                         messageId: a.default.ackIdForGuild(e)
                     })
-                }), E.default.track(s.AnalyticEvents.MARK_AS_READ, {
+                }), E.default.track(r.AnalyticEvents.MARK_AS_READ, {
                     source: t,
                     type: "guild"
-                }), (0, d.bulkAck)(u, n)
+                }), (0, l.bulkAck)(i, n)
             }

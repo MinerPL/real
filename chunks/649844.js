@@ -1,100 +1,100 @@
             "use strict";
-            l.r(t), l.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return p
                 }
             });
-            var n = l("37983");
-            l("884691");
-            var s = l("748820"),
-                a = l("77078"),
-                i = l("112679"),
-                u = l("55689"),
-                r = l("676379"),
-                o = l("697218"),
-                c = l("599110"),
-                d = l("659500"),
-                f = l("719923"),
-                T = l("49111"),
-                _ = l("646718");
+            var r = n("37983");
+            n("884691");
+            var i = n("748820"),
+                l = n("77078"),
+                o = n("112679"),
+                s = n("55689"),
+                a = n("676379"),
+                u = n("697218"),
+                c = n("599110"),
+                d = n("659500"),
+                f = n("719923"),
+                E = n("49111"),
+                _ = n("646718");
 
-            function E(e) {
+            function p(e) {
                 let {
                     initialPlanId: t,
-                    followupSKUInfo: E,
-                    onClose: p,
-                    onComplete: S,
-                    onSubscriptionConfirmation: m,
-                    analyticsLocations: I,
-                    analyticsObject: P,
-                    analyticsLocation: C,
-                    analyticsSourceLocation: M,
-                    isGift: R = !1,
-                    giftMessage: N,
-                    subscriptionTier: L,
-                    trialId: A,
-                    postSuccessGuild: U,
-                    openInvoiceId: h,
-                    applicationId: O,
-                    referralTrialOfferId: y,
-                    giftRecipient: b,
-                    returnRef: v,
-                    subscription: x
-                } = null != e ? e : {}, g = !1, B = (0, s.v4)(), j = o.default.getCurrentUser(), D = (0, f.isPremiumExactly)(j, _.PremiumTypes.TIER_2);
-                (0, a.openModalLazy)(async () => {
+                    followupSKUInfo: p,
+                    onClose: C,
+                    onComplete: I,
+                    onSubscriptionConfirmation: A,
+                    analyticsLocations: T,
+                    analyticsObject: R,
+                    analyticsLocation: h,
+                    analyticsSourceLocation: S,
+                    isGift: N = !1,
+                    giftMessage: m,
+                    subscriptionTier: g,
+                    trialId: P,
+                    postSuccessGuild: O,
+                    openInvoiceId: v,
+                    applicationId: L,
+                    referralTrialOfferId: U,
+                    giftRecipient: M,
+                    returnRef: y,
+                    subscription: D
+                } = null != e ? e : {}, w = !1, x = (0, i.v4)(), G = u.default.getCurrentUser(), b = (0, f.isPremiumExactly)(G, _.PremiumTypes.TIER_2);
+                (0, l.openModalLazy)(async () => {
                     let {
                         default: e
-                    } = await l.el("646139").then(l.bind(l, "646139"));
-                    return l => {
+                    } = await n.el("646139").then(n.bind(n, "646139"));
+                    return n => {
                         let {
-                            onClose: s,
-                            ...a
-                        } = l;
-                        return (0, n.jsx)(e, {
-                            ...a,
-                            loadId: B,
-                            subscriptionTier: L,
-                            skuId: L,
-                            isGift: R,
-                            giftMessage: N,
-                            giftRecipient: b,
+                            onClose: i,
+                            ...l
+                        } = n;
+                        return (0, r.jsx)(e, {
+                            ...l,
+                            loadId: x,
+                            subscriptionTier: g,
+                            skuId: g,
+                            isGift: N,
+                            giftMessage: m,
+                            giftRecipient: M,
                             initialPlanId: t,
-                            followupSKUInfo: E,
+                            followupSKUInfo: p,
                             onClose: (e, t) => {
-                                s(), null == p || p(e), e && (null == m || m(), !R && null != t && t === _.PremiumSubscriptionSKUs.TIER_2 && !D && d.ComponentDispatch.dispatch(T.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
+                                i(), null == C || C(e), e && (null == A || A(), !N && null != t && t === _.PremiumSubscriptionSKUs.TIER_2 && !b && d.ComponentDispatch.dispatch(E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
                             },
                             onComplete: () => {
-                                g = !0, null == S || S(), !R && (0, r.setCanPlayWowMoment)(!0)
+                                w = !0, null == I || I(), !N && (0, a.setCanPlayWowMoment)(!0)
                             },
-                            onSubscriptionConfirmation: m,
-                            analyticsLocations: I,
-                            analyticsObject: P,
-                            analyticsLocation: C,
-                            analyticsSourceLocation: M,
-                            trialId: A,
-                            postSuccessGuild: U,
+                            onSubscriptionConfirmation: A,
+                            analyticsLocations: T,
+                            analyticsObject: R,
+                            analyticsLocation: h,
+                            analyticsSourceLocation: S,
+                            trialId: P,
+                            postSuccessGuild: O,
                             planGroup: _.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
-                            openInvoiceId: h,
-                            applicationId: O,
-                            referralTrialOfferId: y,
-                            returnRef: v,
-                            subscription: x
+                            openInvoiceId: v,
+                            applicationId: L,
+                            referralTrialOfferId: U,
+                            returnRef: y,
+                            subscription: D
                         })
                     }
                 }, {
                     modalKey: "payment-modal",
                     onCloseCallback: () => {
-                        !g && c.default.track(T.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-                            load_id: B,
-                            payment_type: T.PurchaseTypeToAnalyticsPaymentType[T.PurchaseTypes.SUBSCRIPTION],
-                            location: null != C ? C : P,
-                            source: M,
-                            subscription_type: T.SubscriptionTypes.PREMIUM,
-                            is_gift: R,
-                            eligible_for_trial: null != A,
-                            application_id: O,
-                            location_stack: I
-                        }), (0, i.clearError)(), (0, u.clearPurchaseTokenAuthState)(), null == p || p(g), g && (null == m || m())
+                        !w && c.default.track(E.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+                            load_id: x,
+                            payment_type: E.PurchaseTypeToAnalyticsPaymentType[E.PurchaseTypes.SUBSCRIPTION],
+                            location: null != h ? h : R,
+                            source: S,
+                            subscription_type: E.SubscriptionTypes.PREMIUM,
+                            is_gift: N,
+                            eligible_for_trial: null != P,
+                            application_id: L,
+                            location_stack: T
+                        }), (0, o.clearError)(), (0, s.clearPurchaseTokenAuthState)(), null == C || C(w), w && (null == A || A())
                     }
                 })
             }

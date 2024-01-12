@@ -1,26 +1,26 @@
             "use strict";
             n.r(t), n.d(t, {
                 initialState: function() {
-                    return r
+                    return o
                 },
                 persist: function() {
-                    return u
+                    return d
                 },
                 clear: function() {
-                    return o
+                    return u
                 }
             });
-            var i = n("95410"),
-                a = n("548578");
-            let l = "ClientStateStore",
-                s = (0, a.getDefaultState)();
-            s.version === a.CACHE_VERSION && null != s.cacheCreationDate && s.cacheCreationDate + a.MAX_CACHE_AGE_MS > Date.now() || (s = (0, a.getDefaultState)());
-            let r = s;
+            var s = n("95410"),
+                i = n("548578");
+            let r = "ClientStateStore",
+                a = (0, i.getDefaultState)();
+            a.version === i.CACHE_VERSION && null != a.cacheCreationDate && a.cacheCreationDate + i.MAX_CACHE_AGE_MS > Date.now() || (a = (0, i.getDefaultState)());
+            let o = a;
 
-            function u(e, t) {
-                i.default.set(l, t)
+            function d(e, t) {
+                s.default.set(r, t)
             }
 
-            function o() {
-                i.default.remove(l)
+            function u() {
+                s.default.remove(r)
             }

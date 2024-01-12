@@ -1,25 +1,25 @@
             "use strict";
-            var i = r("599235"),
-                n = r("790986"),
-                o = r("441270"),
-                a = r("912065").Buffer,
-                s = r("785060"),
-                f = r("291954"),
-                h = r("622107"),
-                c = a.alloc(128);
+            var r = s("599235"),
+                i = s("790986"),
+                n = s("441270"),
+                c = s("912065").Buffer,
+                o = s("785060"),
+                f = s("291954"),
+                u = s("622107"),
+                a = c.alloc(128);
 
-            function u(t, e) {
-                o.call(this, "digest"), "string" == typeof e && (e = a.from(e));
-                var r = "sha512" === t || "sha384" === t ? 128 : 64;
-                this._alg = t, this._key = e, e.length > r ? e = ("rmd160" === t ? new f : h(t)).update(e).digest() : e.length < r && (e = a.concat([e, c], r));
-                for (var i = this._ipad = a.allocUnsafe(r), n = this._opad = a.allocUnsafe(r), s = 0; s < r; s++) i[s] = 54 ^ e[s], n[s] = 92 ^ e[s];
-                this._hash = "rmd160" === t ? new f : h(t), this._hash.update(i)
+            function d(t, e) {
+                n.call(this, "digest"), "string" == typeof e && (e = c.from(e));
+                var s = "sha512" === t || "sha384" === t ? 128 : 64;
+                this._alg = t, this._key = e, e.length > s ? e = ("rmd160" === t ? new f : u(t)).update(e).digest() : e.length < s && (e = c.concat([e, a], s));
+                for (var r = this._ipad = c.allocUnsafe(s), i = this._opad = c.allocUnsafe(s), o = 0; o < s; o++) r[o] = 54 ^ e[o], i[o] = 92 ^ e[o];
+                this._hash = "rmd160" === t ? new f : u(t), this._hash.update(r)
             }
-            i(u, o), u.prototype._update = function(t) {
+            r(d, n), d.prototype._update = function(t) {
                 this._hash.update(t)
-            }, u.prototype._final = function() {
+            }, d.prototype._final = function() {
                 var t = this._hash.digest();
-                return ("rmd160" === this._alg ? new f : h(this._alg)).update(this._opad).update(t).digest()
+                return ("rmd160" === this._alg ? new f : u(this._alg)).update(this._opad).update(t).digest()
             }, t.exports = function(t, e) {
-                return "rmd160" === (t = t.toLowerCase()) || "ripemd160" === t ? new u("rmd160", e) : "md5" === t ? new n(s, e) : new u(t, e)
+                return "rmd160" === (t = t.toLowerCase()) || "ripemd160" === t ? new d("rmd160", e) : "md5" === t ? new i(o, e) : new d(t, e)
             }

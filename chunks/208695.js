@@ -39,8 +39,8 @@
                 R = a("2804"),
                 b = a("603371"),
                 G = a("515631"),
-                y = a("49111"),
-                O = a("724210"),
+                O = a("49111"),
+                y = a("724210"),
                 H = a("894488"),
                 k = a("782340"),
                 U = a("923254"),
@@ -71,7 +71,7 @@
                         channel: a,
                         repliedMessage: i,
                         author: v,
-                        showTimestampOnHover: t.type !== y.MessageTypes.REPLY,
+                        showTimestampOnHover: t.type !== O.MessageTypes.REPLY,
                         renderPopout: E.default,
                         showAvatarPopout: c,
                         showUsernamePopout: u,
@@ -108,7 +108,7 @@
                         allowHeading: Y || Z.showListsAndHeaders || X.showListsAndHeaders,
                         allowLinks: Z.showMaskedLinks || X.showMaskedLinks,
                         previewLinkTarget: Z.showMaskedLinks || X.showMaskedLinks
-                    }), Q = E.type === y.MessageTypes.REPLY ? E.messageReference : void 0, $ = (0, d.useStateFromStores)([N.default], () => N.default.getMessageByReference(Q)), ee = (0, d.useStateFromStores)([A.default], () => E.hasFlag(y.MessageFlags.HAS_THREAD) && A.default.getChannel(E.id)), et = (0, h.getMessageAriaLabelledBy)(E, k, {
+                    }), Q = E.type === O.MessageTypes.REPLY ? E.messageReference : void 0, $ = (0, d.useStateFromStores)([N.default], () => N.default.getMessageByReference(Q)), ee = (0, d.useStateFromStores)([A.default], () => E.hasFlag(O.MessageFlags.HAS_THREAD) && A.default.getChannel(E.id)), et = (0, h.getMessageAriaLabelledBy)(E, k, {
                         hasTimestamp: E.id === k
                     }), ea = (0, h.getMessageAriaDescribedBy)(E), el = null != Q ? (0, l.jsx)(r.Clickable, {
                         onClick: e => {
@@ -124,7 +124,7 @@
                             }), p.default.openChannelAsSidebar({
                                 guildId: m.guild_id,
                                 channelId: m.id,
-                                baseChannelId: O.StaticChannelRoute.GUILD_HOME,
+                                baseChannelId: y.StaticChannelRoute.GUILD_HOME,
                                 details: {
                                     type: T.SidebarOpenDetailsType.HOME,
                                     initialMessageId: $.message.id
@@ -164,8 +164,8 @@
                             }), H]
                         }),
                         childrenSystemMessage: (0, v.default)(e),
-                        hasThread: null != ee && E.hasFlag(y.MessageFlags.HAS_THREAD),
-                        hasReply: E.type === y.MessageTypes.REPLY,
+                        hasThread: null != ee && E.hasFlag(O.MessageFlags.HAS_THREAD),
+                        hasReply: E.type === O.MessageTypes.REPLY,
                         isSystemMessage: en,
                         "aria-labelledby": et,
                         "aria-describedby": ea,

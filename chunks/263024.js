@@ -24,7 +24,7 @@
                 p = n("724210"),
                 S = n("782340");
 
-            function v(e, t) {
+            function M(e, t) {
                 return a.default.patch({
                     url: T.Endpoints.CHANNEL(e.id),
                     body: t
@@ -37,7 +37,7 @@
                 }), t))
             }
 
-            function M(e, t) {
+            function v(e, t) {
                 l.default.dispatch({
                     type: "THREAD_MEMBER_LOCAL_UPDATE",
                     id: e.id,
@@ -51,18 +51,18 @@
                     let n = {
                         archived: !0
                     };
-                    return t && (n.locked = !0), v(e, n)
+                    return t && (n.locked = !0), M(e, n)
                 },
                 async lockThread(e) {
                     let t = e.isArchivedThread();
-                    return t && await this.unarchiveThread(e, !1), v(e, {
+                    return t && await this.unarchiveThread(e, !1), M(e, {
                         locked: !0,
                         archived: t
                     })
                 },
                 async unlockThread(e) {
                     let t = e.isArchivedThread();
-                    return t && await this.unarchiveThread(e, !0), v(e, {
+                    return t && await this.unarchiveThread(e, !0), M(e, {
                         locked: !1,
                         archived: t
                     })
@@ -74,7 +74,7 @@
                         i = e.isForumPost();
                     t && (n.locked = !1);
                     try {
-                        return await v(e, n)
+                        return await M(e, n)
                     } catch (e) {
                         var a, l;
                         throw (null === (a = e.body) || void 0 === a ? void 0 : a.code) === T.AbortCodes.TOO_MANY_THREADS ? s.default.show({
@@ -98,11 +98,11 @@
                         i = f.default.can(T.Permissions.MANAGE_THREADS, n);
                     null != n && n.isArchivedThread() && (i || (null === (t = n.threadMetadata) || void 0 === t ? void 0 : t.locked) !== !0) && await this.unarchiveThread(n, !1)
                 },
-                setInvitable: (e, t) => v(e, {
+                setInvitable: (e, t) => M(e, {
                     invitable: t
                 }),
                 async joinThread(e, t) {
-                    e.isForumPost() && M(e, !0);
+                    e.isForumPost() && v(e, !0);
                     try {
                         return await a.default.post({
                             url: T.Endpoints.THREAD_MEMBER(e.id),
@@ -122,7 +122,7 @@
                             title: S.default.Messages.ERROR,
                             body: S.default.Messages.ERROR_OCCURRED_TRY_AGAIN
                         });
-                        e.isForumPost() && M(e, !1)
+                        e.isForumPost() && v(e, !1)
                     }
                 },
                 async addMember(e, t, n) {
@@ -147,7 +147,7 @@
                         })
                     }
                 },
-                leaveThread: (e, t) => (e.isForumPost() && M(e, !1), a.default.delete({
+                leaveThread: (e, t) => (e.isForumPost() && v(e, !1), a.default.delete({
                     url: T.Endpoints.THREAD_MEMBER(e.id),
                     query: {
                         location: t

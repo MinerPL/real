@@ -40,17 +40,17 @@
             }
 
             function S(e, t) {
-                return T.subscribeToGuild(e), null != t && o.default.getSection(t) === A.ChannelSections.MEMBERS && v(e, t, s.DEFAULT_RANGES)
+                return T.subscribeToGuild(e), null != t && o.default.getSection(t) === A.ChannelSections.MEMBERS && M(e, t, s.DEFAULT_RANGES)
             }
 
-            function v(e, t, n) {
+            function M(e, t, n) {
                 let i = d.default.getChannel(t);
                 if (null == i) return !1;
                 let a = i.getGuildId();
                 return (a !== e && e === A.FAVORITES && T.subscribeToGuild(a), null != i && i.isThread()) ? i.type === A.ChannelTypes.ANNOUNCEMENT_THREAD ? T.subscribeChannel(a, i.parent_id, n) : !!i.isActiveThread() && T.subscribeThreadMemberList(a, t, g.default.getChannelId()) : T.subscribeChannel(a, t, n)
             }
 
-            function M(e) {
+            function v(e) {
                 let {
                     type: t
                 } = e;
@@ -112,8 +112,8 @@
             }
             R.displayName = "GuildSubscriptionsStore";
             var I = new R(l.default, {
-                CONNECTION_OPEN: M,
-                CONNECTION_RESUMED: M,
+                CONNECTION_OPEN: v,
+                CONNECTION_RESUMED: v,
                 CONNECTION_CLOSED: function() {
                     p(!1, !1)
                 },
@@ -165,7 +165,7 @@
                         channelId: n,
                         ranges: i
                     } = e;
-                    return v(t, n, i)
+                    return M(t, n, i)
                 },
                 GUILD_SUBSCRIPTIONS: function(e) {
                     let {

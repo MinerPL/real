@@ -4,16 +4,16 @@
                     return a
                 },
                 fetchUserEntitlements: function() {
-                    return s
+                    return o
                 },
                 fetchGiftableEntitlements: function() {
-                    return l
+                    return u
                 }
             });
-            var r = n("872717"),
+            var l = n("872717"),
                 i = n("913144"),
-                o = n("271560"),
-                u = n("49111");
+                r = n("271560"),
+                s = n("49111");
 
             function a(e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -22,8 +22,8 @@
                         type: "ENTITLEMENT_FETCH_APPLICATION_START",
                         applicationId: e
                     })
-                }), r.default.get({
-                    url: u.Endpoints.ENTITLEMENTS_FOR_APPLICATION(e),
+                }), l.default.get({
+                    url: s.Endpoints.ENTITLEMENTS_FOR_APPLICATION(e),
                     oldFormErrors: !0,
                     query: {
                         exclude_consumed: t
@@ -39,22 +39,22 @@
                     })
                 })
             }
-            async function s(e) {
+            async function o(e) {
                 let {
                     withSku: t = !1,
                     withApplication: n = !1,
-                    entitlementType: o
+                    entitlementType: r
                 } = e;
                 i.default.dispatch({
                     type: "ENTITLEMENTS_FETCH_FOR_USER_START"
                 });
                 try {
-                    let e = await r.default.get({
-                        url: u.Endpoints.ENTITLEMENTS_FOR_USER,
+                    let e = await l.default.get({
+                        url: s.Endpoints.ENTITLEMENTS_FOR_USER,
                         query: {
                             with_sku: t,
                             with_application: n,
-                            entitlement_type: o
+                            entitlement_type: r
                         }
                     });
                     i.default.dispatch({
@@ -67,13 +67,13 @@
                     })
                 }
             }
-            async function l() {
+            async function u() {
                 i.default.dispatch({
                     type: "ENTITLEMENTS_GIFTABLE_FETCH"
                 });
                 try {
-                    let e = await (0, o.httpGetWithCountryCodeQuery)({
-                        url: u.Endpoints.ENTITLEMENTS_GIFTABLE
+                    let e = await (0, r.httpGetWithCountryCodeQuery)({
+                        url: s.Endpoints.ENTITLEMENTS_GIFTABLE
                     });
                     i.default.dispatch({
                         type: "ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS",

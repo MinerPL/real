@@ -1,28 +1,28 @@
-            var i = r("446825").Buffer,
-                n = r("839383"),
-                o = r("664813");
+            var r = s("446825").Buffer,
+                i = s("839383"),
+                n = s("664813");
 
-            function a(t) {
-                var e, r = t.modulus.byteLength();
-                do e = new n(o(r)); while (e.cmp(t.modulus) >= 0 || !e.umod(t.prime1) || !e.umod(t.prime2));
+            function c(t) {
+                var e, s = t.modulus.byteLength();
+                do e = new i(n(s)); while (e.cmp(t.modulus) >= 0 || !e.umod(t.prime1) || !e.umod(t.prime2));
                 return e
             }
 
-            function s(t, e) {
-                var r, o, s = {
-                        blinder: (o = a(r = e)).toRed(n.mont(r.modulus)).redPow(new n(r.publicExponent)).fromRed(),
-                        unblinder: o.invm(r.modulus)
+            function o(t, e) {
+                var s, n, o = {
+                        blinder: (n = c(s = e)).toRed(i.mont(s.modulus)).redPow(new i(s.publicExponent)).fromRed(),
+                        unblinder: n.invm(s.modulus)
                     },
                     f = e.modulus.byteLength(),
-                    h = new n(t).mul(s.blinder).umod(e.modulus),
-                    c = h.toRed(n.mont(e.prime1)),
-                    u = h.toRed(n.mont(e.prime2)),
-                    d = e.coefficient,
-                    l = e.prime1,
-                    p = e.prime2,
-                    b = c.redPow(e.exponent1).fromRed(),
-                    m = u.redPow(e.exponent2).fromRed(),
-                    g = b.isub(m).imul(d).umod(l).imul(p);
-                return m.iadd(g).imul(s.unblinder).umod(e.modulus).toArrayLike(i, "be", f)
+                    u = new i(t).mul(o.blinder).umod(e.modulus),
+                    a = u.toRed(i.mont(e.prime1)),
+                    d = u.toRed(i.mont(e.prime2)),
+                    p = e.coefficient,
+                    b = e.prime1,
+                    h = e.prime2,
+                    l = a.redPow(e.exponent1).fromRed(),
+                    g = d.redPow(e.exponent2).fromRed(),
+                    v = l.isub(g).imul(p).umod(b).imul(h);
+                return g.iadd(v).imul(o.unblinder).umod(e.modulus).toArrayLike(r, "be", f)
             }
-            s.getr = a, t.exports = s
+            o.getr = c, t.exports = o

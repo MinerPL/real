@@ -1,19 +1,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 showModal: function() {
-                    return l
+                    return r
                 }
             });
-            var i = n("37983");
+            var s = n("37983");
             n("884691");
-            var a = n("77078");
+            var i = n("77078");
 
-            function l(e, t) {
-                (0, a.openModalLazy)(async () => {
+            function r(e, t) {
+                (0, i.openModalLazy)(async () => {
                     let {
-                        default: a
+                        default: i
                     } = await n.el("59833").then(n.bind(n, "59833"));
-                    return n => (0, i.jsx)(a, {
+                    return n => (0, s.jsx)(i, {
                         analyticsLocation: e,
                         platformType: t,
                         ...n

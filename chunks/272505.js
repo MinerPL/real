@@ -1,14 +1,14 @@
             "use strict";
-            var i, a, l, s;
+            var s, i, r, a;
             n.r(t), n.d(t, {
                 ActivityPanelModes: function() {
-                    return i
+                    return s
                 },
                 FocusedActivityLayouts: function() {
-                    return a
+                    return i
                 },
                 LANDSCAPE_ACTIVITY_ASPECT_RATIO: function() {
-                    return r
+                    return o
                 }
-            }), (l = i || (i = {})).ACTION_BAR = "action_bar", l.PANEL = "panel", l.PIP = "pip", (s = a || (a = {}))[s.NO_CHAT = 0] = "NO_CHAT", s[s.RESIZABLE = 1] = "RESIZABLE";
-            let r = 16 / 9
+            }), (r = s || (s = {})).ACTION_BAR = "action_bar", r.PANEL = "panel", r.PIP = "pip", (a = i || (i = {}))[a.NO_CHAT = 0] = "NO_CHAT", a[a.RESIZABLE = 1] = "RESIZABLE";
+            let o = 16 / 9

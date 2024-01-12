@@ -50,10 +50,10 @@
                 if (w) {
                     var H = (0, a.default)(h),
                         F = "clientHeight",
-                        I = "clientWidth";
-                    H === (0, o.default)(h) && (H = (0, i.default)(h), "static" !== (0, s.default)(H).position && "absolute" === b && (F = "scrollHeight", I = "scrollWidth")), (y === r.top || (y === r.left || y === r.right) && g === r.end) && (j = r.bottom, Y -= (L && H === C && C.visualViewport ? C.visualViewport.height : H[F]) - _.height, Y *= M ? 1 : -1), (y === r.left || (y === r.top || y === r.bottom) && g === r.end) && (P = r.right, T -= (L && H === C && C.visualViewport ? C.visualViewport.width : H[I]) - _.width, T *= M ? 1 : -1)
+                        N = "clientWidth";
+                    H === (0, o.default)(h) && (H = (0, i.default)(h), "static" !== (0, s.default)(H).position && "absolute" === b && (F = "scrollHeight", N = "scrollWidth")), (y === r.top || (y === r.left || y === r.right) && g === r.end) && (j = r.bottom, Y -= (L && H === C && C.visualViewport ? C.visualViewport.height : H[F]) - _.height, Y *= M ? 1 : -1), (y === r.left || (y === r.top || y === r.bottom) && g === r.end) && (P = r.right, T -= (L && H === C && C.visualViewport ? C.visualViewport.width : H[N]) - _.width, T *= M ? 1 : -1)
                 }
-                var N = Object.assign({
+                var I = Object.assign({
                     position: b
                 }, w && d);
                 var A = !0 === k ? (t = {
@@ -66,7 +66,7 @@
                     x: T,
                     y: Y
                 };
-                return (T = A.x, Y = A.y, M) ? Object.assign({}, N, ((m = {})[j] = E ? "0" : "", m[P] = O ? "0" : "", m.transform = 1 >= (C.devicePixelRatio || 1) ? "translate(" + T + "px, " + Y + "px)" : "translate3d(" + T + "px, " + Y + "px, 0)", m)) : Object.assign({}, N, ((p = {})[j] = E ? Y + "px" : "", p[P] = O ? T + "px" : "", p.transform = "", p))
+                return (T = A.x, Y = A.y, M) ? Object.assign({}, I, ((m = {})[j] = E ? "0" : "", m[P] = O ? "0" : "", m.transform = 1 >= (C.devicePixelRatio || 1) ? "translate(" + T + "px, " + Y + "px)" : "translate3d(" + T + "px, " + Y + "px, 0)", m)) : Object.assign({}, I, ((p = {})[j] = E ? Y + "px" : "", p[P] = O ? T + "px" : "", p.transform = "", p))
             }
             var p = {
                 name: "computeStyles",

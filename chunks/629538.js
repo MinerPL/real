@@ -1,69 +1,69 @@
             "use strict";
-            n.r(s), n.d(s, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return t
+                    return a
                 }
             }), n("222007"), n("781738"), n("424973"), n("686130");
-            var i = n("605250"),
-                r = n("802493");
-            let o = new i.default("GuildEmojis");
-            var t = new class e {
+            var s = n("605250"),
+                i = n("802493");
+            let r = new s.default("GuildEmojis");
+            var a = new class e {
                 getSync(e) {
-                    let s = performance.now(),
-                        n = r.default.emojis(e).getMapEntriesSyncUnsafe(),
-                        i = performance.now();
-                    return o.log("synchronously loaded in ".concat(i - s, "ms (guilds: ").concat(n.length, ")")), n
+                    let t = performance.now(),
+                        n = i.default.emojis(e).getMapEntriesSyncUnsafe(),
+                        s = performance.now();
+                    return r.log("synchronously loaded in ".concat(s - t, "ms (guilds: ").concat(n.length, ")")), n
                 }
-                handleConnectionOpen(e, s) {
-                    for (let n of e.guilds) this.handleOneGuildCreate(n, s)
+                handleConnectionOpen(e, t) {
+                    for (let n of e.guilds) this.handleOneGuildCreate(n, t)
                 }
-                handleGuildCreate(e, s) {
-                    this.handleOneGuildCreate(e.guild, s)
+                handleGuildCreate(e, t) {
+                    this.handleOneGuildCreate(e.guild, t)
                 }
-                handleGuildUpdate(e, s) {
-                    this.replace(e.guild.id, e.guild.emojis, s)
+                handleGuildUpdate(e, t) {
+                    this.replace(e.guild.id, e.guild.emojis, t)
                 }
-                handleGuildDelete(e, s) {
-                    this.delete(e.guild.id, s)
+                handleGuildDelete(e, t) {
+                    this.delete(e.guild.id, t)
                 }
-                handleGuildEmojisUpdate(e, s) {
-                    this.replace(e.guildId, e.emojis, s)
+                handleGuildEmojisUpdate(e, t) {
+                    this.replace(e.guildId, e.emojis, t)
                 }
-                handleBackgroundSync(e, s) {
+                handleBackgroundSync(e, t) {
                     e.promisesForBackgroundSyncToWaitOn.push(Promise.all(e.emojis.map(e => {
                         if ("unavailable" === e.dataMode) return Promise.resolve();
-                        "full" === e.dataMode ? (o.verbose("Replacing ".concat(e.entities.length, " emojis for ").concat(e.guildId)), this.replace(e.guildId, e.entities, s)) : (e.updatedEntities.length > 0 || e.deletedEntityIds.length > 0) && (o.verbose("Updating ".concat(e.updatedEntities.length, " and deleting ").concat(e.deletedEntityIds.length, " emojis for ").concat(e.guildId)), this.update(e.guildId, e.updatedEntities, e.deletedEntityIds, s))
+                        "full" === e.dataMode ? (r.verbose("Replacing ".concat(e.entities.length, " emojis for ").concat(e.guildId)), this.replace(e.guildId, e.entities, t)) : (e.updatedEntities.length > 0 || e.deletedEntityIds.length > 0) && (r.verbose("Updating ".concat(e.updatedEntities.length, " and deleting ").concat(e.deletedEntityIds.length, " emojis for ").concat(e.guildId)), this.update(e.guildId, e.updatedEntities, e.deletedEntityIds, t))
                     })))
                 }
-                handleOneGuildCreate(e, s) {
-                    null != e.emojiUpdates ? this.update(e.id, e.emojiUpdates.writes, e.emojiUpdates.deletes, s) : null != e.emojis && this.replace(e.id, e.emojis, s)
+                handleOneGuildCreate(e, t) {
+                    null != e.emojiUpdates ? this.update(e.id, e.emojiUpdates.writes, e.emojiUpdates.deletes, t) : null != e.emojis && this.replace(e.id, e.emojis, t)
                 }
                 handleClearGuildCache(e) {
                     this.clear(e)
                 }
                 handleReset() {}
-                replace(e, s, n) {
-                    r.default.emojisTransaction(n).replaceAll(e, s)
+                replace(e, t, n) {
+                    i.default.emojisTransaction(n).replaceAll(e, t)
                 }
-                delete(e, s) {
-                    r.default.emojisTransaction(s).delete(e)
+                delete(e, t) {
+                    i.default.emojisTransaction(t).delete(e)
                 }
                 clear(e) {
-                    r.default.emojisTransaction(e).delete()
+                    i.default.emojisTransaction(e).delete()
                 }
-                update(e, s, n, i) {
-                    let o = r.default.emojisTransaction(i);
-                    for (let i of (o.putAll(e, s), n)) o.delete(e, i)
+                update(e, t, n, s) {
+                    let r = i.default.emojisTransaction(s);
+                    for (let s of (r.putAll(e, t), n)) r.delete(e, s)
                 }
                 constructor() {
                     this.actions = {
-                        BACKGROUND_SYNC: (e, s) => this.handleBackgroundSync(e, s),
-                        CLEAR_GUILD_CACHE: (e, s) => this.handleClearGuildCache(s),
-                        CONNECTION_OPEN: (e, s) => this.handleConnectionOpen(e, s),
-                        GUILD_CREATE: (e, s) => this.handleGuildCreate(e, s),
-                        GUILD_DELETE: (e, s) => this.handleGuildDelete(e, s),
-                        GUILD_EMOJIS_UPDATE: (e, s) => this.handleGuildEmojisUpdate(e, s),
-                        GUILD_UPDATE: (e, s) => this.handleGuildUpdate(e, s)
+                        BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
+                        CLEAR_GUILD_CACHE: (e, t) => this.handleClearGuildCache(t),
+                        CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
+                        GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
+                        GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),
+                        GUILD_EMOJIS_UPDATE: (e, t) => this.handleGuildEmojisUpdate(e, t),
+                        GUILD_UPDATE: (e, t) => this.handleGuildUpdate(e, t)
                     }
                 }
             }

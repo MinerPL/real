@@ -43,9 +43,9 @@
                             mobilePush: r.default.isMobilePushEnabled(e.id),
                             messageNotifications: r.default.getMessageNotifications(e.id),
                             notifyHighlights: r.default.getNotifyHighlights(e.id)
-                        }), [e.id]), _ = g === d.HighlightSettings.DISABLED, N = (0, u.default)(e.id);
+                        }), [e.id]), _ = g === d.HighlightSettings.DISABLED, M = (0, u.default)(e.id);
 
-                        function M(t, n) {
+                        function N(t, n) {
                             l.default.updateGuildNotificationSettings(e.id, t, n)
                         }
                         return (0, s.jsxs)(s.Fragment, {
@@ -59,7 +59,7 @@
                                         group: "guild-notifications",
                                         id: "".concat(t),
                                         label: n,
-                                        action: () => M({
+                                        action: () => N({
                                             message_notifications: t
                                         }, o.NotificationLabel.notifications(t)),
                                         checked: t === E
@@ -69,14 +69,14 @@
                                 children: [(0, s.jsx)(a.MenuCheckboxItem, {
                                     id: "suppress-everyone",
                                     label: c.default.Messages.FORM_LABEL_SUPPRESS_EVERYONE.format(),
-                                    action: () => M({
+                                    action: () => N({
                                         suppress_everyone: !t
                                     }, o.NotificationLabel.suppressEveryone(!t)),
                                     checked: t
                                 }), (0, s.jsx)(a.MenuCheckboxItem, {
                                     id: "suppress-roles",
                                     label: c.default.Messages.FORM_LABEL_SUPPRESS_ROLES,
-                                    action: () => M({
+                                    action: () => N({
                                         suppress_roles: !n
                                     }, o.NotificationLabel.suppressRoles(!n)),
                                     checked: n
@@ -84,17 +84,17 @@
                                     id: "suppress-highlights",
                                     label: c.default.Messages.FORM_LABEL_SUPPRESS_HIGHLIGHTS,
                                     action: () => {
-                                        M({
+                                        N({
                                             notify_highlights: _ ? d.HighlightSettings.ENABLED : d.HighlightSettings.DISABLED
                                         }, o.NotificationLabel.highlights(_))
                                     },
                                     checked: _
-                                }), N]
+                                }), M]
                             }), (0, s.jsx)(a.MenuGroup, {
                                 children: (0, s.jsx)(a.MenuCheckboxItem, {
                                     id: "mobile-push",
                                     label: c.default.Messages.FORM_LABEL_MOBILE_PUSH_NOTIFICATIONS,
-                                    action: () => M({
+                                    action: () => N({
                                         mobile_push: !S
                                     }, o.NotificationLabel.mobilePush(!S)),
                                     checked: S

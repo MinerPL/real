@@ -1,110 +1,110 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return C
                 }
             });
-            var i = n("446674"),
-                a = n("913144"),
-                l = n("987317"),
-                s = n("49671"),
-                r = n("845579"),
-                u = n("773336"),
-                o = n("271938"),
-                d = n("49111"),
-                c = n("353927");
+            var s = n("446674"),
+                i = n("913144"),
+                r = n("987317"),
+                a = n("49671"),
+                o = n("845579"),
+                d = n("773336"),
+                u = n("271938"),
+                l = n("49111"),
+                f = n("353927");
             let _ = Date.now(),
-                E = !1,
-                f = !1,
+                c = !1,
+                g = !1,
+                m = !1,
                 h = !1,
-                p = !1,
-                T = !1;
+                v = !1;
 
-            function C() {
-                return h || p || (0, u.isAndroid)() && T
+            function E() {
+                return m || h || (0, d.isAndroid)() && v
             }
 
-            function m() {
-                Date.now() - _ > d.IDLE_DURATION || C() ? E || a.default.dispatch({
+            function p() {
+                Date.now() - _ > l.IDLE_DURATION || E() ? c || i.default.dispatch({
                     type: "IDLE",
                     idle: !0,
                     idleSince: _
-                }) : E && a.default.dispatch({
+                }) : c && i.default.dispatch({
                     type: "IDLE",
                     idle: !1
-                }), Date.now() - _ > Math.min(1e3 * r.AfkTimeout.getSetting(), d.IDLE_DURATION) || C() ? f || a.default.dispatch({
+                }), Date.now() - _ > Math.min(1e3 * o.AfkTimeout.getSetting(), l.IDLE_DURATION) || E() ? g || i.default.dispatch({
                     type: "AFK",
                     afk: !0
-                }) : f && a.default.dispatch({
+                }) : g && i.default.dispatch({
                     type: "AFK",
                     afk: !1
                 })
-            }!__OVERLAY__ && (u.isPlatformEmbedded && (null === s.default || void 0 === s.default ? void 0 : s.default.remotePowerMonitor) != null ? (! function e() {
+            }!__OVERLAY__ && (d.isPlatformEmbedded && (null === a.default || void 0 === a.default ? void 0 : a.default.remotePowerMonitor) != null ? (! function e() {
                 var t;
                 let n = t => {
-                    _ = Math.max(Date.now() - t, _), m(), setTimeout(e, 1e4)
+                    _ = Math.max(Date.now() - t, _), p(), setTimeout(e, 1e4)
                 };
-                if ((null === s.default || void 0 === s.default ? void 0 : null === (t = s.default.remotePowerMonitor) || void 0 === t ? void 0 : t.getSystemIdleTimeMs) != null) {
-                    let e = s.default.remotePowerMonitor.getSystemIdleTimeMs();
+                if ((null === a.default || void 0 === a.default ? void 0 : null === (t = a.default.remotePowerMonitor) || void 0 === t ? void 0 : t.getSystemIdleTimeMs) != null) {
+                    let e = a.default.remotePowerMonitor.getSystemIdleTimeMs();
                     e instanceof Promise ? e.then(n) : n(e)
                 }
-            }(), s.default.remotePowerMonitor.on("resume", () => {
-                h = !1, S({})
-            }), s.default.remotePowerMonitor.on("suspend", () => {
-                h = !0, S({}), l.default.disconnect()
-            }), s.default.remotePowerMonitor.on("lock-screen", () => {
-                p = !0, S({})
-            }), s.default.remotePowerMonitor.on("unlock-screen", () => {
-                p = !1, S({})
-            })) : setInterval(m, .25 * d.IDLE_DURATION));
+            }(), a.default.remotePowerMonitor.on("resume", () => {
+                m = !1, y({})
+            }), a.default.remotePowerMonitor.on("suspend", () => {
+                m = !0, y({}), r.default.disconnect()
+            }), a.default.remotePowerMonitor.on("lock-screen", () => {
+                h = !0, y({})
+            }), a.default.remotePowerMonitor.on("unlock-screen", () => {
+                h = !1, y({})
+            })) : setInterval(p, .25 * l.IDLE_DURATION));
 
-            function S(e) {
+            function y(e) {
                 let {
                     timestamp: t,
                     type: n
-                } = e, i = "OVERLAY_SET_NOT_IDLE" === n && null != t;
-                return (!i || !(t <= _)) && (_ = i ? t : Date.now(), __OVERLAY__ ? a.default.dispatch({
+                } = e, s = "OVERLAY_SET_NOT_IDLE" === n && null != t;
+                return (!s || !(t <= _)) && (_ = s ? t : Date.now(), __OVERLAY__ ? i.default.dispatch({
                     type: "OVERLAY_SET_NOT_IDLE",
                     timestamp: _
-                }) : m(), !1)
+                }) : p(), !1)
             }
-            class I extends i.default.Store {
+            class T extends s.default.Store {
                 isIdle() {
-                    return E
+                    return c
                 }
                 isAFK() {
-                    return f
+                    return g
                 }
                 getIdleSince() {
-                    return E ? _ : null
+                    return c ? _ : null
                 }
             }
-            I.displayName = "IdleStore";
-            var g = new I(a.default, {
+            T.displayName = "IdleStore";
+            var C = new T(i.default, {
                 IDLE: function(e) {
-                    E = e.idle
+                    c = e.idle
                 },
                 AFK: function(e) {
-                    f = e.afk
+                    g = e.afk
                 },
                 SPEAKING: function(e) {
                     let {
                         userId: t,
                         speakingFlags: n
                     } = e;
-                    return n !== c.SpeakingFlags.NONE && t === o.default.getId() && S({}), !1
+                    return n !== f.SpeakingFlags.NONE && t === u.default.getId() && y({}), !1
                 },
                 APP_STATE_UPDATE: function(e) {
                     let {
                         state: t
                     } = e;
-                    return T = t === d.AppStates.BACKGROUND, _ = Date.now(), m(), !1
+                    return v = t === l.AppStates.BACKGROUND, _ = Date.now(), p(), !1
                 },
-                OVERLAY_SET_NOT_IDLE: S,
-                CHANNEL_SELECT: S,
-                VOICE_CHANNEL_SELECT: S,
-                WINDOW_FOCUS: S,
-                OVERLAY_INITIALIZE: S,
-                OVERLAY_SET_INPUT_LOCKED: S,
-                USER_SETTINGS_PROTO_UPDATE: S
+                OVERLAY_SET_NOT_IDLE: y,
+                CHANNEL_SELECT: y,
+                VOICE_CHANNEL_SELECT: y,
+                WINDOW_FOCUS: y,
+                OVERLAY_INITIALIZE: y,
+                OVERLAY_SET_INPUT_LOCKED: y,
+                USER_SETTINGS_PROTO_UPDATE: y
             })

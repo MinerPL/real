@@ -1,13 +1,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 isNotAutomodEmbed: function() {
-                    return a
+                    return i
                 }
             });
-            var i = n("246111");
-            let a = e => {
+            var s = n("246111");
+            let i = e => {
                 let {
                     type: t
                 } = e;
-                return t !== i.MessageEmbedTypes.AUTO_MODERATION_MESSAGE && t !== i.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION
+                return t !== s.MessageEmbedTypes.AUTO_MODERATION_MESSAGE && t !== s.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION
             }

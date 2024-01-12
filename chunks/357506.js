@@ -31,8 +31,8 @@
                 A = n("479788"),
                 x = n("375202"),
                 R = n("831773"),
-                L = n("359477"),
-                M = n("373469"),
+                M = n("359477"),
+                L = n("373469"),
                 D = n("271938"),
                 j = n("42203"),
                 w = n("305961"),
@@ -136,7 +136,7 @@
                     S.default.deactivateAllRegions()
                 }
                 componentDidMount() {
-                    S.default.startSession(), R.default.initialize(), N.default.initialize(), L.default.initialize()
+                    S.default.startSession(), R.default.initialize(), N.default.initialize(), M.default.initialize()
                 }
                 componentDidUpdate(e) {
                     let {
@@ -224,7 +224,7 @@
                     window.addEventListener("keydown", this.onKeyDownGlobal, !0), window.addEventListener("keyup", this.onKeyUpGlobal, !0)
                 }
                 componentWillUnmount() {
-                    window.removeEventListener("resize", this.handleWindowResize), window.removeEventListener("keydown", this.onKeyDownGlobal, !0), window.removeEventListener("keyup", this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener("contextmenu", er, !1), R.default.terminate(), N.default.terminate(), L.default.terminate()
+                    window.removeEventListener("resize", this.handleWindowResize), window.removeEventListener("keydown", this.onKeyDownGlobal, !0), window.removeEventListener("keyup", this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener("contextmenu", er, !1), R.default.terminate(), N.default.terminate(), M.default.terminate()
                 }
                 renderInvalidSizeMessage() {
                     return (0, a.jsx)(W.default, {
@@ -324,7 +324,7 @@
                     location: "overlay"
                 }, {
                     autoTrackExposure: !1
-                }), m = (0, _.default)() && null != c, E = (0, p.useStateFromStores)([M.default], () => null != M.default.getCurrentUserActiveStream()), {
+                }), m = (0, _.default)() && null != c, E = (0, p.useStateFromStores)([L.default], () => null != L.default.getCurrentUserActiveStream()), {
                     AnalyticsLocationProvider: S
                 } = (0, T.default)(O.default.OVERLAY), {
                     showKeybindIndicators: v,

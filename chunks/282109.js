@@ -388,11 +388,12 @@
                     let t = this.getGuildFlags(e);
                     return f.hasFlag(t, T.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES) ? m.UnreadSetting.ALL_MESSAGES : f.hasFlag(t, T.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS) ? m.UnreadSetting.ONLY_MENTIONS : m.UnreadSetting.UNSET
                 }
+                resolveGuildUnreadSetting(e) {
+                    let t = this.getGuildFlags(e.id);
+                    return !W() || f.hasFlag(t, T.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES) ? m.UnreadSetting.ALL_MESSAGES : f.hasFlag(t, T.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS) ? m.UnreadSetting.ONLY_MENTIONS : e.defaultMessageNotifications === _.UserNotificationSettings.ALL_MESSAGES ? m.UnreadSetting.ALL_MESSAGES : m.UnreadSetting.ONLY_MENTIONS
+                }
                 getGuildUnreadMode(e) {
-                    if (this.isMuted(e.id)) return m.UnreadMode.NONE;
-                    if (!W()) return m.UnreadMode.IMPORTANT;
-                    let t = this.getGuildUnreadSetting(e.id);
-                    return t === m.UnreadSetting.ALL_MESSAGES ? m.UnreadMode.IMPORTANT : t === m.UnreadSetting.ONLY_MENTIONS ? m.UnreadMode.LESS_IMPORTANT : e.defaultMessageNotifications === _.UserNotificationSettings.ALL_MESSAGES ? m.UnreadMode.IMPORTANT : m.UnreadMode.LESS_IMPORTANT
+                    return this.isMuted(e.id) ? m.UnreadMode.NONE : this.resolveGuildUnreadSetting(e) === m.UnreadSetting.ALL_MESSAGES ? m.UnreadMode.IMPORTANT : m.UnreadMode.LESS_IMPORTANT
                 }
                 getChannelRecordUnreadSetting(e) {
                     return this.getChannelUnreadSetting(e.guild_id, e.id)

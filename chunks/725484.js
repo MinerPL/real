@@ -1,18 +1,18 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return i
                 }
             }), n("222007");
-            var i, a, l = n("37983"),
-                s = n("884691"),
-                r = n("414456"),
-                u = n.n(r),
-                o = n("458960"),
-                d = n("77078"),
-                c = n("49111"),
+            var s, i, r = n("37983"),
+                a = n("884691"),
+                o = n("414456"),
+                d = n.n(o),
+                u = n("458960"),
+                l = n("77078"),
+                f = n("49111"),
                 _ = n("603127");
-            (i = class extends s.Component {
+            (s = class extends a.Component {
                 componentDidMount() {
                     this.props.show && this.animate(1)
                 }
@@ -38,21 +38,21 @@
                     }
                 }
                 render() {
-                    return (0, l.jsx)(o.default.a, {
-                        href: c.Routes.INDEX,
+                    return (0, r.jsx)(u.default.a, {
+                        href: f.Routes.INDEX,
                         target: "_blank",
                         rel: "noopener",
-                        className: u(_.logo, this.props.className),
+                        className: d(_.logo, this.props.className),
                         style: this.getAnimatedStyle()
                     })
                 }
                 constructor(...e) {
-                    super(...e), this.anim = new o.default.Value(0), this.animate = e => {
-                        o.default.spring(this.anim, {
+                    super(...e), this.anim = new u.default.Value(0), this.animate = e => {
+                        u.default.spring(this.anim, {
                             toValue: e,
                             friction: 10,
                             tension: 100
                         }).start()
                     }
                 }
-            }).contextType = d.AccessibilityPreferencesContext, a = i
+            }).contextType = l.AccessibilityPreferencesContext, i = s

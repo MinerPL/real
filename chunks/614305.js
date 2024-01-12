@@ -1,10 +1,10 @@
             "use strict";
 
-            function i() {
+            function s() {
                 return !1
             }
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return s
                 }
             })

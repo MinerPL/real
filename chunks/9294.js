@@ -1,61 +1,61 @@
             "use strict";
             n.r(t), n.d(t, {
                 generateInviteKeyFromUrlParams: function() {
-                    return l
-                },
-                generateInviteKeyFromExtraData: function() {
-                    return o
-                },
-                parseExtraDataFromInviteKey: function() {
                     return u
                 },
-                parseInviteCodeFromInviteKey: function() {
+                generateInviteKeyFromExtraData: function() {
                     return a
+                },
+                parseExtraDataFromInviteKey: function() {
+                    return o
+                },
+                parseInviteCodeFromInviteKey: function() {
+                    return d
                 }
             }), n("222007");
-            var i = n("522632"),
-                r = n("833858");
-            let s = "event";
+            var r = n("522632"),
+                i = n("833858");
+            let l = "event";
 
-            function l(e, t) {
+            function u(e, t) {
                 if (null == t) return e;
                 let n = function(e) {
                     let t = "?" === e.charAt(0) ? e.substring(1) : e;
                     try {
-                        let e = i.parse(t);
-                        return (0, r.getFirstQueryStringValue)(e[s])
+                        let e = r.parse(t);
+                        return (0, i.getFirstQueryStringValue)(e[l])
                     } catch (e) {
                         return
                     }
                 }(t);
-                return o({
+                return a({
                     baseCode: e,
                     guildScheduledEventId: n
                 })
             }
 
-            function o(e) {
+            function a(e) {
                 let {
                     baseCode: t,
                     guildScheduledEventId: n
                 } = e;
-                return null == n ? t : "".concat(t, "?").concat(s, "=").concat(n)
+                return null == n ? t : "".concat(t, "?").concat(l, "=").concat(n)
             }
 
-            function u(e) {
+            function o(e) {
                 let [t, n] = e.split("?");
                 if (null == n) return {
                     baseCode: t
                 };
-                let l = i.parse(n),
-                    o = (0, r.getFirstQueryStringValue)(l[s]);
+                let u = r.parse(n),
+                    a = (0, i.getFirstQueryStringValue)(u[l]);
                 return {
                     baseCode: t,
-                    guildScheduledEventId: o
+                    guildScheduledEventId: a
                 }
             }
 
-            function a(e) {
+            function d(e) {
                 let [t] = e.split("?");
                 return t
             }

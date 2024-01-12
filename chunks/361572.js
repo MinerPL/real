@@ -1,42 +1,42 @@
             "use strict";
             n.r(t), n.d(t, {
                 CHANNEL_OR_MESSAGES_URL_RE: function() {
-                    return h
+                    return S
                 },
                 MEDIA_POST_URL_RE: function() {
-                    return p
-                },
-                tryParseChannelPath: function() {
                     return T
                 },
+                tryParseChannelPath: function() {
+                    return f
+                },
                 tryParseEventDetailsPath: function() {
-                    return C
+                    return p
                 },
                 canViewChannel: function() {
-                    return m
+                    return N
                 },
                 isAccessibleChannelPath: function() {
-                    return S
+                    return C
                 }
             });
-            var i = n("42203"),
-                a = n("305961"),
+            var r = n("42203"),
+                i = n("305961"),
                 l = n("957255"),
-                s = n("655518"),
-                r = n("49111"),
-                u = n("724210");
-            let o = Array.from(u.StaticChannelRoutes).map(e => s.default.escape(e)).join("|"),
-                d = new RegExp("^/channels/(\\d+|".concat(r.ME, ")(?:/)?(\\d+|").concat(o, ")?")),
-                c = new RegExp("^/channels/(\\d+|".concat(r.ME, ")(?:/)(\\d+|").concat(o, ")(?:/)(\\d+)")),
+                u = n("655518"),
+                a = n("49111"),
+                o = n("724210");
+            let d = Array.from(o.StaticChannelRoutes).map(e => u.default.escape(e)).join("|"),
+                s = new RegExp("^/channels/(\\d+|".concat(a.ME, ")(?:/)?(\\d+|").concat(d, ")?")),
+                E = new RegExp("^/channels/(\\d+|".concat(a.ME, ")(?:/)(\\d+|").concat(d, ")(?:/)(\\d+)")),
                 _ = RegExp("^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)"),
-                E = RegExp("^/guild-stages/(\\d+)(?:/)?(\\d+)?"),
-                f = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
-                h = new RegExp("^https://(?:canary\\.|ptb\\.)?discord.com/channels/(\\d+|".concat(r.ME, ")(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?")),
-                p = RegExp("^https://(?:canary\\.|ptb\\.)?discord.com/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)");
+                c = RegExp("^/guild-stages/(\\d+)(?:/)?(\\d+)?"),
+                I = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
+                S = new RegExp("^https://(?:canary\\.|ptb\\.)?discord.com/channels/(\\d+|".concat(a.ME, ")(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?")),
+                T = RegExp("^https://(?:canary\\.|ptb\\.)?discord.com/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)");
 
-            function T(e) {
+            function f(e) {
                 if (null == e) return null;
-                let t = e.match(c);
+                let t = e.match(E);
                 if (null != t && t.length > 3) return {
                     guildId: t[1],
                     channelId: t[2],
@@ -49,23 +49,23 @@
                     threadId: n[3],
                     messageId: n[4]
                 };
-                let i = e.match(d);
-                if (null != i && i.length > 1) {
-                    var a;
+                let r = e.match(s);
+                if (null != r && r.length > 1) {
+                    var i;
                     return {
-                        guildId: i[1],
-                        channelId: null !== (a = i[2]) && void 0 !== a ? a : void 0
+                        guildId: r[1],
+                        channelId: null !== (i = r[2]) && void 0 !== i ? i : void 0
                     }
                 }
-                let l = e.match(E);
+                let l = e.match(c);
                 return null != l && l.length > 1 ? {
                     guildId: l[1]
                 } : null
             }
 
-            function C(e) {
+            function p(e) {
                 if (null == e) return null;
-                let t = e.match(f);
+                let t = e.match(I);
                 return null != t && t.length > 1 ? {
                     guildId: t[1],
                     guildEventId: t[2],
@@ -73,17 +73,17 @@
                 } : null
             }
 
-            function m(e) {
-                return !!e.isPrivate() || l.default.can(r.Permissions.VIEW_CHANNEL, e)
+            function N(e) {
+                return !!e.isPrivate() || l.default.can(a.Permissions.VIEW_CHANNEL, e)
             }
 
-            function S(e) {
+            function C(e) {
                 let {
                     guildId: t,
                     channelId: n
                 } = e;
-                if (null == a.default.getGuild(t) && t !== r.ME) return !1;
+                if (null == i.default.getGuild(t) && t !== a.ME) return !1;
                 if (null == n) return !0;
-                let l = i.default.getChannel(n);
-                return null != l && m(l)
+                let l = r.default.getChannel(n);
+                return null != l && N(l)
             }

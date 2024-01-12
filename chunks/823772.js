@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return N
+                    return M
                 }
             }), n("222007"), n("702976");
             var s = n("37983"),
@@ -19,7 +19,7 @@
                 g = n("397336"),
                 _ = n("782340");
 
-            function N(e) {
+            function M(e) {
                 return (0, s.jsxs)(l.MenuItem, {
                     id: "notification",
                     label: _.default.Messages.NOTIFICATIONS,
@@ -35,14 +35,14 @@
                         })
                     },
                     children: [function(e) {
-                        let [t, n] = i.useState(!1), [N, M] = i.useState(!1), h = (0, a.useStateFromStores)([c.default], () => c.default.getGuildUnreadSetting(e)), I = (0, a.useStateFromStores)([c.default], () => c.default.getMessageNotifications(e)), p = N ? d.Presets.CUSTOM : (0, d.presetFromSettings)(h, I), A = t => {
-                            M(!1);
+                        let [t, n] = i.useState(!1), [M, N] = i.useState(!1), h = (0, a.useStateFromStores)([c.default], () => c.default.getGuildUnreadSetting(e)), I = (0, a.useStateFromStores)([c.default], () => c.default.getMessageNotifications(e)), p = M ? d.Presets.CUSTOM : (0, d.presetFromSettings)(h, I), A = t => {
+                            N(!1);
                             let n = {
                                 message_notifications: t
                             };
                             t === S.UserNotificationSettings.ALL_MESSAGES && h !== E.UnreadSetting.ALL_MESSAGES && (n.flags = (0, r.withGuildUnreadFlags)(c.default.getGuildFlags(e), g.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES)), u.default.updateGuildNotificationSettings(e, n, f.NotificationLabel.notifications(t))
                         }, T = t => {
-                            M(!1);
+                            N(!1);
                             let n = c.default.getGuildFlags(e);
                             u.default.updateGuildNotificationSettings(e, {
                                 flags: (0, r.withGuildUnreadFlags)(n, t === E.UnreadSetting.ALL_MESSAGES ? g.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES : g.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
@@ -55,24 +55,24 @@
                                     group: "notification-preset",
                                     checked: p === d.Presets.ALL_MESSAGES,
                                     label: _.default.Messages.NOTIFICATION_PRESET_1,
-                                    action: () => ((0, o.updateGuildPreset)(e, d.Presets.ALL_MESSAGES), M(!1))
+                                    action: () => ((0, o.updateGuildPreset)(e, d.Presets.ALL_MESSAGES), N(!1))
                                 }), (0, s.jsx)(l.MenuRadioItem, {
                                     id: "essentials",
                                     group: "notification-preset",
                                     checked: p === d.Presets.MENTIONS,
                                     label: _.default.Messages.NOTIFICATION_PRESET_2,
-                                    action: () => ((0, o.updateGuildPreset)(e, d.Presets.MENTIONS), M(!1))
+                                    action: () => ((0, o.updateGuildPreset)(e, d.Presets.MENTIONS), N(!1))
                                 }), (0, s.jsx)(l.MenuRadioItem, {
                                     id: "nothing",
                                     group: "notification-preset",
                                     checked: p === d.Presets.NOTHING,
                                     label: _.default.Messages.NOTIFICATION_PRESET_3,
-                                    action: () => ((0, o.updateGuildPreset)(e, d.Presets.NOTHING), M(!1))
+                                    action: () => ((0, o.updateGuildPreset)(e, d.Presets.NOTHING), N(!1))
                                 }), (0, s.jsx)(l.MenuRadioItem, {
                                     id: "custom",
                                     group: "notification-preset",
                                     checked: p === d.Presets.CUSTOM,
-                                    action: () => (n(!0), M(!0)),
+                                    action: () => (n(!0), N(!0)),
                                     label: _.default.Messages.NOTIFICATION_PRESET_CUSTOM
                                 })]
                             }), (p === d.Presets.CUSTOM || t) && (0, s.jsxs)(l.MenuGroup, {

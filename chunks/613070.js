@@ -4,75 +4,75 @@
                     return _
                 }
             }), n("222007");
-            var i = n("37983");
+            var s = n("37983");
             n("884691");
-            var a = n("775560"),
-                l = n("605451"),
-                s = n("577776"),
-                r = n("36694"),
-                u = n("945330"),
-                o = n("29479"),
-                d = n("782340"),
-                c = n("814288");
+            var i = n("775560"),
+                r = n("605451"),
+                a = n("577776"),
+                o = n("36694"),
+                d = n("945330"),
+                u = n("29479"),
+                l = n("782340"),
+                f = n("814288");
 
             function _(e) {
                 var t;
                 let {
                     application: n,
                     accountScopes: _,
-                    errors: E,
-                    isTrustedName: f = !1
-                } = e, h = (0, a.useLazyValue)(() => o.FAKE_SCOPES[Math.floor(Math.random() * o.FAKE_SCOPES.length)]);
+                    errors: c,
+                    isTrustedName: g = !1
+                } = e, m = (0, i.useLazyValue)(() => u.FAKE_SCOPES[Math.floor(Math.random() * u.FAKE_SCOPES.length)]);
                 if (0 === _.length) return null;
-                let p = _.map(e => {
+                let h = _.map(e => {
                         var t;
-                        let n = (0, o.getScopeName)(e, _),
-                            [a] = null !== (t = null == E ? void 0 : E[e]) && void 0 !== t ? t : [];
-                        return (0, i.jsxs)("div", {
-                            className: c.scope,
-                            children: [(0, i.jsx)("div", {
-                                className: c.scopeCheck,
-                                children: (0, i.jsx)(r.default, {
-                                    className: c.icon
+                        let n = (0, u.getScopeName)(e, _),
+                            [i] = null !== (t = null == c ? void 0 : c[e]) && void 0 !== t ? t : [];
+                        return (0, s.jsxs)("div", {
+                            className: f.scope,
+                            children: [(0, s.jsx)("div", {
+                                className: f.scopeCheck,
+                                children: (0, s.jsx)(o.default, {
+                                    className: f.icon
                                 })
-                            }), (0, i.jsxs)("div", {
-                                className: c.scopeInner,
-                                children: [(0, i.jsx)(s.Text, {
+                            }), (0, s.jsxs)("div", {
+                                className: f.scopeInner,
+                                children: [(0, s.jsx)(a.Text, {
                                     variant: "text-md/medium",
                                     children: n
-                                }), null != a ? (0, i.jsx)(s.Text, {
+                                }), null != i ? (0, s.jsx)(a.Text, {
                                     variant: "text-xs/normal",
                                     color: "text-danger",
-                                    children: a
+                                    children: i
                                 }) : null]
                             })]
                         }, e)
                     }),
-                    T = (0, i.jsxs)("div", {
-                        className: c.scope,
-                        children: [(0, i.jsx)("div", {
-                            className: c.scopeTimes,
-                            children: (0, i.jsx)(u.default, {
-                                className: c.icon
+                    v = (0, s.jsxs)("div", {
+                        className: f.scope,
+                        children: [(0, s.jsx)("div", {
+                            className: f.scopeTimes,
+                            children: (0, s.jsx)(d.default, {
+                                className: f.icon
                             })
-                        }), (0, i.jsx)("div", {
-                            className: c.scopeInner,
-                            children: (0, i.jsx)(s.Text, {
+                        }), (0, s.jsx)("div", {
+                            className: f.scopeInner,
+                            children: (0, s.jsx)(a.Text, {
                                 variant: "text-md/normal",
-                                className: c.scopeName,
-                                children: h()
+                                className: f.scopeName,
+                                children: m()
                             })
                         })]
                     }),
-                    C = f ? d.default.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : d.default.Messages.OAUTH2_SCOPES_LABEL;
-                return (0, i.jsxs)("div", {
-                    className: c.scopes,
-                    children: [(0, i.jsx)(l.Heading, {
+                    E = g ? l.default.Messages.OAUTH2_SCOPES_LABEL_TRUSTED_NAME : l.default.Messages.OAUTH2_SCOPES_LABEL;
+                return (0, s.jsxs)("div", {
+                    className: f.scopes,
+                    children: [(0, s.jsx)(r.Heading, {
                         variant: "heading-deprecated-12/semibold",
-                        className: c.sectionLabel,
-                        children: C.format({
+                        className: f.sectionLabel,
+                        children: E.format({
                             application: null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : ""
                         })
-                    }), p, T]
+                    }), h, v]
                 })
             }

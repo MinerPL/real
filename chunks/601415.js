@@ -128,7 +128,7 @@
                     }
                 }
             }
-            let L = r.throttle(() => {
+            let M = r.throttle(() => {
                 g.default.increment({
                     name: c.MetricEvents.APP_CRASHED,
                     tags: ["reason:".concat(d.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(u.ErrorLevels.FATAL)]
@@ -136,7 +136,7 @@
             }, 100, {
                 trailing: !1
             });
-            class M extends a.PureComponent {
+            class L extends a.PureComponent {
                 componentDidCatch(e, t) {
                     let n = (0, m.getHistory)().location;
                     this.setState({
@@ -167,7 +167,7 @@
                         error_message: e.message,
                         error_stack: e.stack,
                         sentry_issue_id: l
-                    }), L()
+                    }), M()
                 }
                 render() {
                     let {
@@ -192,4 +192,4 @@
                     }
                 }
             }
-            var D = M
+            var D = L

@@ -1,19 +1,19 @@
-            r("854508");
-            var i = r("687185"),
-                n = r("912065").Buffer,
-                o = r("135042");
+            s("854508");
+            var r = s("687185"),
+                i = s("912065").Buffer,
+                n = s("135042");
             e.encrypt = function(t, e) {
-                var r = Math.ceil(e.length / 16),
-                    a = t._cache.length;
-                t._cache = n.concat([t._cache, n.allocUnsafe(16 * r)]);
-                for (var s = 0; s < r; s++) {
+                var s = Math.ceil(e.length / 16),
+                    c = t._cache.length;
+                t._cache = i.concat([t._cache, i.allocUnsafe(16 * s)]);
+                for (var o = 0; o < s; o++) {
                     var f = function(t) {
                             var e = t._cipher.encryptBlockRaw(t._prev);
-                            return o(t._prev), e
+                            return n(t._prev), e
                         }(t),
-                        h = a + 16 * s;
-                    t._cache.writeUInt32BE(f[0], h + 0), t._cache.writeUInt32BE(f[1], h + 4), t._cache.writeUInt32BE(f[2], h + 8), t._cache.writeUInt32BE(f[3], h + 12)
+                        u = c + 16 * o;
+                    t._cache.writeUInt32BE(f[0], u + 0), t._cache.writeUInt32BE(f[1], u + 4), t._cache.writeUInt32BE(f[2], u + 8), t._cache.writeUInt32BE(f[3], u + 12)
                 }
-                var c = t._cache.slice(0, e.length);
-                return t._cache = t._cache.slice(e.length), i(e, c)
+                var a = t._cache.slice(0, e.length);
+                return t._cache = t._cache.slice(e.length), r(e, a)
             }

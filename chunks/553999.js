@@ -1,78 +1,78 @@
-            r("70102"), r("424973");
-            var i = r("912065").Buffer,
-                n = r("145755"),
-                o = r("422077"),
-                a = r("814548").ec,
-                s = r("839383"),
-                f = r("596659"),
-                h = r("49873");
+            s("70102"), s("424973");
+            var r = s("912065").Buffer,
+                i = s("145755"),
+                n = s("422077"),
+                c = s("814548").ec,
+                o = s("839383"),
+                f = s("596659"),
+                u = s("49873");
 
-            function c(t, e, r, o) {
-                if ((t = i.from(t.toArray())).length < e.byteLength()) {
-                    var a = i.alloc(e.byteLength() - t.length);
-                    t = i.concat([a, t])
+            function a(t, e, s, n) {
+                if ((t = r.from(t.toArray())).length < e.byteLength()) {
+                    var c = r.alloc(e.byteLength() - t.length);
+                    t = r.concat([c, t])
                 }
-                var s = r.length,
+                var o = s.length,
                     f = function(t, e) {
-                        t = (t = u(t, e)).mod(e);
-                        var r = i.from(t.toArray());
-                        if (r.length < e.byteLength()) {
-                            var n = i.alloc(e.byteLength() - r.length);
-                            r = i.concat([n, r])
+                        t = (t = d(t, e)).mod(e);
+                        var s = r.from(t.toArray());
+                        if (s.length < e.byteLength()) {
+                            var i = r.alloc(e.byteLength() - s.length);
+                            s = r.concat([i, s])
                         }
-                        return r
-                    }(r, e),
-                    h = i.alloc(s);
-                h.fill(1);
-                var c = i.alloc(s);
-                return c = n(o, c).update(h).update(i.from([0])).update(t).update(f).digest(), h = n(o, c).update(h).digest(), c = n(o, c).update(h).update(i.from([1])).update(t).update(f).digest(), h = n(o, c).update(h).digest(), {
-                    k: c,
-                    v: h
+                        return s
+                    }(s, e),
+                    u = r.alloc(o);
+                u.fill(1);
+                var a = r.alloc(o);
+                return a = i(n, a).update(u).update(r.from([0])).update(t).update(f).digest(), u = i(n, a).update(u).digest(), a = i(n, a).update(u).update(r.from([1])).update(t).update(f).digest(), u = i(n, a).update(u).digest(), {
+                    k: a,
+                    v: u
                 }
             }
 
-            function u(t, e) {
-                var r = new s(t),
-                    i = (t.length << 3) - e.bitLength();
-                return i > 0 && r.ishrn(i), r
+            function d(t, e) {
+                var s = new o(t),
+                    r = (t.length << 3) - e.bitLength();
+                return r > 0 && s.ishrn(r), s
             }
 
-            function d(t, e, r) {
-                var o, a;
+            function p(t, e, s) {
+                var n, c;
                 do {
-                    for (o = i.alloc(0); 8 * o.length < t.bitLength();) e.v = n(r, e.k).update(e.v).digest(), o = i.concat([o, e.v]);
-                    a = u(o, t), e.k = n(r, e.k).update(e.v).update(i.from([0])).digest(), e.v = n(r, e.k).update(e.v).digest()
-                } while (-1 !== a.cmp(t));
-                return a
+                    for (n = r.alloc(0); 8 * n.length < t.bitLength();) e.v = i(s, e.k).update(e.v).digest(), n = r.concat([n, e.v]);
+                    c = d(n, t), e.k = i(s, e.k).update(e.v).update(r.from([0])).digest(), e.v = i(s, e.k).update(e.v).digest()
+                } while (-1 !== c.cmp(t));
+                return c
             }
-            t.exports = function(t, e, r, n, l) {
-                var p = f(e);
-                if (p.curve) {
-                    if ("ecdsa" !== n && "ecdsa/rsa" !== n) throw Error("wrong private key type");
+            t.exports = function(t, e, s, i, b) {
+                var h = f(e);
+                if (h.curve) {
+                    if ("ecdsa" !== i && "ecdsa/rsa" !== i) throw Error("wrong private key type");
                     return function(t, e) {
-                        var r = h[e.curve.join(".")];
-                        if (!r) throw Error("unknown curve " + e.curve.join("."));
-                        var n = new a(r).keyFromPrivate(e.privateKey).sign(t);
-                        return i.from(n.toDER())
-                    }(t, p)
+                        var s = u[e.curve.join(".")];
+                        if (!s) throw Error("unknown curve " + e.curve.join("."));
+                        var i = new c(s).keyFromPrivate(e.privateKey).sign(t);
+                        return r.from(i.toDER())
+                    }(t, h)
                 }
-                if ("dsa" === p.type) {
-                    if ("dsa" !== n) throw Error("wrong private key type");
-                    return function(t, e, r) {
-                        for (var n, o = e.params.priv_key, a = e.params.p, f = e.params.q, h = e.params.g, l = new s(0), p = u(t, f).mod(f), b = !1, m = c(o, f, t, r); !1 === b;) l = function(t, e, r, i) {
-                            return t.toRed(s.mont(r)).redPow(e).fromRed().mod(i)
-                        }(h, n = d(f, m, r), a, f), 0 === (b = n.invm(f).imul(p.add(o.mul(l))).mod(f)).cmpn(0) && (b = !1, l = new s(0));
+                if ("dsa" === h.type) {
+                    if ("dsa" !== i) throw Error("wrong private key type");
+                    return function(t, e, s) {
+                        for (var i, n = e.params.priv_key, c = e.params.p, f = e.params.q, u = e.params.g, b = new o(0), h = d(t, f).mod(f), l = !1, g = a(n, f, t, s); !1 === l;) b = function(t, e, s, r) {
+                            return t.toRed(o.mont(s)).redPow(e).fromRed().mod(r)
+                        }(u, i = p(f, g, s), c, f), 0 === (l = i.invm(f).imul(h.add(n.mul(b))).mod(f)).cmpn(0) && (l = !1, b = new o(0));
                         return function(t, e) {
                             t = t.toArray(), e = e.toArray(), 128 & t[0] && (t = [0].concat(t)), 128 & e[0] && (e = [0].concat(e));
-                            var r = [48, t.length + e.length + 4, 2, t.length];
-                            return r = r.concat(t, [2, e.length], e), i.from(r)
-                        }(l, b)
-                    }(t, p, r)
+                            var s = [48, t.length + e.length + 4, 2, t.length];
+                            return s = s.concat(t, [2, e.length], e), r.from(s)
+                        }(b, l)
+                    }(t, h, s)
                 }
-                if ("rsa" !== n && "ecdsa/rsa" !== n) throw Error("wrong private key type");
-                t = i.concat([l, t]);
-                for (var b = p.modulus.byteLength(), m = [0, 1]; t.length + m.length + 1 < b;) m.push(255);
-                m.push(0);
-                for (var g = -1; ++g < t.length;) m.push(t[g]);
-                return o(m, p)
-            }, t.exports.getKey = c, t.exports.makeKey = d
+                if ("rsa" !== i && "ecdsa/rsa" !== i) throw Error("wrong private key type");
+                t = r.concat([b, t]);
+                for (var l = h.modulus.byteLength(), g = [0, 1]; t.length + g.length + 1 < l;) g.push(255);
+                g.push(0);
+                for (var v = -1; ++v < t.length;) g.push(t[v]);
+                return n(g, h)
+            }, t.exports.getKey = a, t.exports.makeKey = p

@@ -1,99 +1,99 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return S
                 }
             }), n("222007");
             var i = n("37983"),
-                r = n("884691"),
-                l = n("414456"),
-                s = n.n(l),
+                l = n("884691"),
+                s = n("414456"),
+                r = n.n(s),
                 a = n("77078"),
                 o = n("132755"),
                 u = n("78404"),
                 d = n("812809"),
                 c = n("129722"),
                 f = n("278175"),
-                E = n("859971"),
-                _ = n("846325"),
-                h = n("193326");
-            let m = {
+                m = n("859971"),
+                h = n("846325"),
+                g = n("193326");
+            let E = {
                 startPositionMs: 0,
                 endPositionMs: 2e4,
                 playheadPositionMs: 0
             };
-            var g = r.memo(function(e) {
+            var S = l.memo(function(e) {
                 var t;
                 let {
                     className: n,
-                    volume: l,
-                    disabled: g = !1,
+                    volume: s,
+                    disabled: S = !1,
                     onChange: p
                 } = e, {
-                    audio: I
-                } = (0, c.useAudioTrimmerStore)(), [S, A] = r.useState(!1), [N, v] = r.useState(m), {
-                    playheadPositionMs: R,
-                    endPositionMs: C,
-                    startPositionMs: T
-                } = N, O = null != I, L = C - T, D = L > 1e3 * _.MAX_SOUND_LENGTH_SECONDS;
-                r.useEffect(() => {
-                    null != I && v({
+                    audio: v
+                } = (0, c.useAudioTrimmerStore)(), [_, N] = l.useState(!1), [C, A] = l.useState(E), {
+                    playheadPositionMs: b,
+                    endPositionMs: I,
+                    startPositionMs: O
+                } = C, w = null != v, x = I - O, L = x > 1e3 * h.MAX_SOUND_LENGTH_SECONDS;
+                l.useEffect(() => {
+                    null != v && A({
                         playheadPositionMs: 0,
-                        endPositionMs: 1e3 * I.duration,
+                        endPositionMs: 1e3 * v.duration,
                         startPositionMs: 0
                     })
-                }, [I]);
-                let M = r.useCallback(e => {
-                        null != I && (I.pause(), null != e && (I.currentTime = e), A(!1))
-                    }, [I]),
-                    b = r.useCallback(() => {
-                        if (null != I) {
-                            if (S) {
-                                M();
+                }, [v]);
+                let D = l.useCallback(e => {
+                        null != v && (v.pause(), null != e && (v.currentTime = e), N(!1))
+                    }, [v]),
+                    U = l.useCallback(() => {
+                        if (null != v) {
+                            if (_) {
+                                D();
                                 return
                             }
-                            R >= C ? I.currentTime = (0, E.toSeconds)(T) : I.currentTime = (0, E.toSeconds)(R), I.volume = (0, d.default)(l), I.play(), A(!0)
+                            b >= I ? v.currentTime = (0, m.toSeconds)(O) : v.currentTime = (0, m.toSeconds)(b), v.volume = (0, d.default)(s), v.play(), N(!0)
                         }
-                    }, [I, C, M, R, S, T, l]),
-                    U = r.useCallback(e => {
-                        v(e), null == p || p({
+                    }, [v, I, D, b, _, O, s]),
+                    T = l.useCallback(e => {
+                        A(e), null == p || p({
                             startMs: e.startPositionMs,
                             endMs: e.endPositionMs
                         })
                     }, [p]),
-                    y = r.useCallback(e => {
-                        null != I && (I.currentTime = e)
-                    }, [I]);
+                    M = l.useCallback(e => {
+                        null != v && (v.currentTime = e)
+                    }, [v]);
                 return (0, i.jsxs)("div", {
-                    className: s(h.container, {
-                        [h.initialized]: O,
-                        [h.disabled]: !O || g
+                    className: r(g.container, {
+                        [g.initialized]: w,
+                        [g.disabled]: !w || S
                     }, n),
                     children: [(0, i.jsxs)("div", {
-                        className: h.playButtonContainer,
+                        className: g.playButtonContainer,
                         children: [(0, i.jsx)(a.Clickable, {
-                            className: h.playButton,
-                            onClick: O ? b : void 0,
-                            children: S ? (0, i.jsx)(u.default, {
-                                className: h.playButtonIcon
+                            className: g.playButton,
+                            onClick: w ? U : void 0,
+                            children: _ ? (0, i.jsx)(u.default, {
+                                className: g.playButtonIcon
                             }) : (0, i.jsx)(o.default, {
-                                className: h.playButtonIcon
+                                className: g.playButtonIcon
                             })
                         }), (0, i.jsx)("div", {
-                            className: h.durationContainer,
+                            className: g.durationContainer,
                             children: (0, i.jsx)(a.Text, {
-                                className: h.duration,
+                                className: g.duration,
                                 variant: "text-xs/normal",
-                                color: D ? "text-warning" : "text-positive",
-                                children: (t = L, "".concat((0, E.toSeconds)(t).toFixed(2), "s"))
+                                color: L ? "text-warning" : "text-positive",
+                                children: (t = x, "".concat((0, m.toSeconds)(t).toFixed(2), "s"))
                             })
                         })]
                     }), (0, i.jsx)(f.default, {
-                        playing: S,
-                        onPlaybackChange: y,
-                        onPausePlayback: M,
-                        onChangePosition: U,
-                        disabled: g
+                        playing: _,
+                        onPlaybackChange: M,
+                        onPausePlayback: D,
+                        onChangePosition: T,
+                        disabled: S
                     })]
                 })
             })

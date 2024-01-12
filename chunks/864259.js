@@ -1,2 +1,2 @@
-            var DataView = r("367753")(r("690516"), "DataView");
+            var DataView = n("367753")(n("690516"), "DataView");
             t.exports = DataView

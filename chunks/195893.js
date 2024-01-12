@@ -1,34 +1,34 @@
             "use strict";
-            var i = r("37549"),
-                n = r("293471"),
-                o = i("%SyntaxError%"),
-                a = i("%TypeError%"),
-                s = r("737891"),
-                f = r("701222"),
-                h = r("604050"),
-                c = r("905687"),
-                u = r("300344"),
-                d = r("552302"),
-                l = r("6943"),
-                p = r("865435"),
-                b = r("537256");
-            t.exports = function(t, e, r) {
-                if ("Object" !== p(t)) throw new a("Assertion failed: O must be an Object");
-                if (!u(e)) throw new a("Assertion failed: P must be a Property Key");
-                if (!s({
-                        Type: p,
-                        IsDataDescriptor: h,
+            var r = s("37549"),
+                i = s("293471"),
+                n = r("%SyntaxError%"),
+                c = r("%TypeError%"),
+                o = s("737891"),
+                f = s("701222"),
+                u = s("604050"),
+                a = s("905687"),
+                d = s("300344"),
+                p = s("552302"),
+                b = s("6943"),
+                h = s("865435"),
+                l = s("537256");
+            t.exports = function(t, e, s) {
+                if ("Object" !== h(t)) throw new c("Assertion failed: O must be an Object");
+                if (!d(e)) throw new c("Assertion failed: P must be a Property Key");
+                if (!o({
+                        Type: h,
+                        IsDataDescriptor: u,
                         IsAccessorDescriptor: f
-                    }, r)) throw new a("Assertion failed: Desc must be a Property Descriptor");
-                if (!n) {
-                    if (f(r)) throw new o("This environment does not support accessor property descriptors.");
-                    var i = !(e in t) && r["[[Writable]]"] && r["[[Enumerable]]"] && r["[[Configurable]]"] && "[[Value]]" in r,
-                        m = e in t && (!("[[Configurable]]" in r) || r["[[Configurable]]"]) && (!("[[Enumerable]]" in r) || r["[[Enumerable]]"]) && (!("[[Writable]]" in r) || r["[[Writable]]"]) && "[[Value]]" in r;
-                    if (i || m) return t[e] = r["[[Value]]"], l(t[e], r["[[Value]]"]);
-                    throw new o("This environment does not support defining non-writable, non-enumerable, or non-configurable properties")
+                    }, s)) throw new c("Assertion failed: Desc must be a Property Descriptor");
+                if (!i) {
+                    if (f(s)) throw new n("This environment does not support accessor property descriptors.");
+                    var r = !(e in t) && s["[[Writable]]"] && s["[[Enumerable]]"] && s["[[Configurable]]"] && "[[Value]]" in s,
+                        g = e in t && (!("[[Configurable]]" in s) || s["[[Configurable]]"]) && (!("[[Enumerable]]" in s) || s["[[Enumerable]]"]) && (!("[[Writable]]" in s) || s["[[Writable]]"]) && "[[Value]]" in s;
+                    if (r || g) return t[e] = s["[[Value]]"], b(t[e], s["[[Value]]"]);
+                    throw new n("This environment does not support defining non-writable, non-enumerable, or non-configurable properties")
                 }
-                var g = n(t, e),
-                    y = g && d(g),
-                    v = c(t);
-                return b(t, e, v, r, y)
+                var v = i(t, e),
+                    x = v && p(v),
+                    m = a(t);
+                return l(t, e, m, s, x)
             }

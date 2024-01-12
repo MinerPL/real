@@ -1,72 +1,72 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return c
+                    return f
                 }
             }), n("222007"), n("808653");
-            var i = n("446674"),
-                a = n("913144"),
-                l = n("353927");
-            let s = null,
-                r = null,
-                u = {};
+            var s = n("446674"),
+                i = n("913144"),
+                r = n("353927");
+            let a = null,
+                o = null,
+                d = {};
 
-            function o(e, t) {
+            function u(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-                    i = u[e];
-                if (null == i) return;
-                let a = i[null != t ? t : "null"];
-                if (null != a) {
-                    for (let e of Object.values(l.MediaEngineContextTypes))(n === e || null == n) && delete a[e];
-                    u[e][null != t ? t : "null"] = a
+                    s = d[e];
+                if (null == s) return;
+                let i = s[null != t ? t : "null"];
+                if (null != i) {
+                    for (let e of Object.values(r.MediaEngineContextTypes))(n === e || null == n) && delete i[e];
+                    d[e][null != t ? t : "null"] = i
                 }
             }
-            class d extends i.default.Store {
+            class l extends s.default.Store {
                 getStreamId(e, t) {
-                    var n, i, a;
-                    let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.MediaEngineContextTypes.DEFAULT;
-                    return null === (a = u[e]) || void 0 === a ? void 0 : null === (i = a[null != t ? t : "null"]) || void 0 === i ? void 0 : null === (n = i[s]) || void 0 === n ? void 0 : n.streamId
+                    var n, s, i;
+                    let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.MediaEngineContextTypes.DEFAULT;
+                    return null === (i = d[e]) || void 0 === i ? void 0 : null === (s = i[null != t ? t : "null"]) || void 0 === s ? void 0 : null === (n = s[a]) || void 0 === n ? void 0 : n.streamId
                 }
                 getUserStreamData(e, t) {
-                    var n, i;
-                    let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.MediaEngineContextTypes.DEFAULT;
-                    return null === (i = u[e]) || void 0 === i ? void 0 : null === (n = i[null != t ? t : "null"]) || void 0 === n ? void 0 : n[a]
+                    var n, s;
+                    let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.MediaEngineContextTypes.DEFAULT;
+                    return null === (s = d[e]) || void 0 === s ? void 0 : null === (n = s[null != t ? t : "null"]) || void 0 === n ? void 0 : n[i]
                 }
             }
-            d.displayName = "VideoStreamStore";
-            var c = new d(a.default, {
+            l.displayName = "VideoStreamStore";
+            var f = new l(i.default, {
                 CONNECTION_OPEN: function(e) {
                     let {
                         user: t,
                         sessionId: n
                     } = e;
-                    s = t.id, r = n
+                    a = t.id, o = n
                 },
                 OVERLAY_INITIALIZE: function(e) {
                     let {
                         user: t,
                         sessionId: n
                     } = e;
-                    s = t.id, r = n
+                    a = t.id, o = n
                 },
                 RTC_CONNECTION_VIDEO: function(e) {
                     let {
                         userId: t,
                         guildId: n,
-                        streamId: i,
-                        context: a
+                        streamId: s,
+                        context: i
                     } = e;
-                    null != i ? ! function(e, t, n, i) {
-                        var a;
-                        !(e in u) && (u[e] = {});
-                        let l = null !== (a = u[e][null != t ? t : "null"]) && void 0 !== a ? a : {};
-                        u[e][null != t ? t : "null"] = {
-                            ...l,
-                            [i]: {
+                    null != s ? ! function(e, t, n, s) {
+                        var i;
+                        !(e in d) && (d[e] = {});
+                        let r = null !== (i = d[e][null != t ? t : "null"]) && void 0 !== i ? i : {};
+                        d[e][null != t ? t : "null"] = {
+                            ...r,
+                            [s]: {
                                 streamId: n
                             }
                         }
-                    }(t, n, i, a) : o(t, n, a)
+                    }(t, n, s, i) : u(t, n, i)
                 },
                 VOICE_STATE_UPDATES: function(e) {
                     let {
@@ -75,17 +75,17 @@
                     return t.reduce((e, t) => {
                         var n;
                         let {
-                            userId: i,
-                            sessionId: a,
-                            channelId: l,
-                            guildId: d
+                            userId: s,
+                            sessionId: i,
+                            channelId: r,
+                            guildId: l
                         } = t;
-                        if (null == l && i === s) {
-                            if (a !== r) return e;
-                            u = {}
+                        if (null == r && s === a) {
+                            if (i !== o) return e;
+                            d = {}
                         } else {
-                            if (null != l || (null === (n = u[i]) || void 0 === n ? void 0 : n[null != d ? d : "null"]) == null) return e;
-                            o(i, d)
+                            if (null != r || (null === (n = d[s]) || void 0 === n ? void 0 : n[null != l ? l : "null"]) == null) return e;
+                            u(s, l)
                         }
                         return !0
                     }, !1)

@@ -18,8 +18,8 @@
                 process(e) {
                     !this._processing && (this._processing = !0, requestIdleCallback(t => {
                         var n, i;
-                        let u = t.timeRemaining();
-                        if (u <= this._minimumTimeRemaining) {
+                        let s = t.timeRemaining();
+                        if (s <= this._minimumTimeRemaining) {
                             this._processEnd();
                             return
                         }

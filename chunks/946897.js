@@ -1,14 +1,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return u
                 }
             });
-            var i = n("132710"),
-                a = n.n(i),
-                l = n("862205");
-            let s = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/,
-                r = (0, l.createExperiment)({
+            var s = n("132710"),
+                i = n.n(s),
+                r = n("862205");
+            let a = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/,
+                o = (0, r.createExperiment)({
                     kind: "user",
                     id: "2023-11_attachment_link_markup",
                     label: "Attachment Link Config User Experiment",
@@ -29,15 +29,15 @@
                         }
                     }]
                 }),
-                u = {
-                    order: a.defaultRules.url.order - .5,
+                d = {
+                    order: i.defaultRules.url.order - .5,
                     requiredFirstCharacters: ["h"],
                     match(e) {
-                        let t = s.exec(e);
+                        let t = a.exec(e);
                         if (null !== t) {
                             let {
                                 enabled: e
-                            } = r.getCurrentConfig({
+                            } = o.getCurrentConfig({
                                 location: "markup"
                             });
                             if (!e) return null
@@ -45,20 +45,20 @@
                         return t
                     },
                     parse(e, t, n) {
-                        var i;
-                        let a = e[0],
-                            l = e[1];
+                        var s;
+                        let i = e[0],
+                            r = e[1];
                         return {
                             type: "attachmentLink",
                             content: [{
                                 type: "text",
-                                content: i = l
+                                content: s = r
                             }],
-                            attachmentUrl: a,
-                            attachmentName: i
+                            attachmentUrl: i,
+                            attachmentName: s
                         }
                     }
                 };
-            var o = {
-                attachmentLink: u
+            var u = {
+                attachmentLink: d
             }

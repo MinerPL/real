@@ -1,25 +1,25 @@
-            r("70102");
-            var i = r("446825"),
-                n = i.Buffer;
+            s("70102");
+            var r = s("446825"),
+                i = r.Buffer;
 
-            function o(t, e) {
-                for (var r in t) e[r] = t[r]
+            function n(t, e) {
+                for (var s in t) e[s] = t[s]
             }
 
-            function a(t, e, r) {
-                return n(t, e, r)
+            function c(t, e, s) {
+                return i(t, e, s)
             }
-            n.from && n.alloc && n.allocUnsafe && n.allocUnsafeSlow ? t.exports = i : (o(i, e), e.Buffer = a), a.prototype = Object.create(n.prototype), o(n, a), a.from = function(t, e, r) {
+            i.from && i.alloc && i.allocUnsafe && i.allocUnsafeSlow ? t.exports = r : (n(r, e), e.Buffer = c), c.prototype = Object.create(i.prototype), n(i, c), c.from = function(t, e, s) {
                 if ("number" == typeof t) throw TypeError("Argument must not be a number");
-                return n(t, e, r)
-            }, a.alloc = function(t, e, r) {
+                return i(t, e, s)
+            }, c.alloc = function(t, e, s) {
                 if ("number" != typeof t) throw TypeError("Argument must be a number");
-                var i = n(t);
-                return void 0 !== e ? "string" == typeof r ? i.fill(e, r) : i.fill(e) : i.fill(0), i
-            }, a.allocUnsafe = function(t) {
+                var r = i(t);
+                return void 0 !== e ? "string" == typeof s ? r.fill(e, s) : r.fill(e) : r.fill(0), r
+            }, c.allocUnsafe = function(t) {
                 if ("number" != typeof t) throw TypeError("Argument must be a number");
-                return n(t)
-            }, a.allocUnsafeSlow = function(t) {
+                return i(t)
+            }, c.allocUnsafeSlow = function(t) {
                 if ("number" != typeof t) throw TypeError("Argument must be a number");
-                return i.SlowBuffer(t)
+                return r.SlowBuffer(t)
             }

@@ -10,30 +10,30 @@
                     return f
                 }
             });
-            var i = n("37983");
+            var r = n("37983");
             n("884691");
-            var r = n("414456"),
-                o = n.n(r),
+            var i = n("414456"),
+                s = n.n(i),
                 l = n("77078"),
-                s = n("272460"),
-                a = n("394294"),
+                a = n("272460"),
+                o = n("394294"),
                 u = n("847121");
 
             function c(e) {
                 let {
                     value: t,
                     placeholder: n,
-                    onChange: r,
-                    disabled: s,
+                    onChange: i,
+                    disabled: a,
                     className: c
                 } = e;
-                return (0, i.jsx)(l.TextArea, {
-                    className: o(u.paragraphFieldBody, c),
-                    maxLength: a.MAX_PARAGRAPH_RESPONSE_LENGTH,
+                return (0, r.jsx)(l.TextArea, {
+                    className: s(u.paragraphFieldBody, c),
+                    maxLength: o.MAX_PARAGRAPH_RESPONSE_LENGTH,
                     value: null != t ? t : "",
                     placeholder: null != n ? n : "",
-                    onChange: r,
-                    disabled: s,
+                    onChange: i,
+                    disabled: a,
                     autosize: !0
                 })
             }
@@ -42,9 +42,9 @@
                 let {
                     formField: t
                 } = e;
-                return (0, i.jsx)(s.QuestionRenderer, {
+                return (0, r.jsx)(a.QuestionRenderer, {
                     title: t.label,
-                    children: (0, i.jsx)(c, {
+                    children: (0, r.jsx)(c, {
                         className: u.fieldBackground,
                         value: t.response,
                         disabled: !0
@@ -57,9 +57,9 @@
                     formField: t,
                     onChange: n
                 } = e;
-                return (0, i.jsx)(s.QuestionRenderer, {
+                return (0, r.jsx)(a.QuestionRenderer, {
                     title: t.label,
-                    children: (0, i.jsx)(c, {
+                    children: (0, r.jsx)(c, {
                         className: u.fieldBackground,
                         value: t.response,
                         onChange: n

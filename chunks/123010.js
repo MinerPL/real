@@ -1,32 +1,32 @@
             "use strict";
             n.r(t), n.d(t, {
                 getUploadPayload: function() {
-                    return u
+                    return d
                 },
                 default: function() {
-                    return o
+                    return u
                 }
             });
-            var i = n("627445"),
-                a = n.n(i),
-                l = n("917351"),
-                s = n.n(l),
-                r = n("66175");
+            var s = n("627445"),
+                i = n.n(s),
+                r = n("917351"),
+                a = n.n(r),
+                o = n("66175");
 
-            function u(e) {
+            function d(e) {
                 var t, n;
-                let i = e.item.file;
-                return a(null != i, "file data must not be empty"), {
-                    filename: i.name,
-                    file_size: i.size,
-                    id: s.uniqueId(),
+                let s = e.item.file;
+                return i(null != s, "file data must not be empty"), {
+                    filename: s.name,
+                    file_size: s.size,
+                    id: a.uniqueId(),
                     is_clip: null != e.clip,
                     title: null === (t = e.clip) || void 0 === t ? void 0 : t.name,
                     application_id: null === (n = e.clip) || void 0 === n ? void 0 : n.applicationId,
-                    clip_created_at: null != e.clip ? (0, r.getClipCreatedAt)(e.clip.id) : void 0,
-                    clip_participant_ids: null != e.clip ? (0, r.getClipParticipantIds)(e.clip.users) : void 0
+                    clip_created_at: null != e.clip ? (0, o.getClipCreatedAt)(e.clip.id) : void 0,
+                    clip_participant_ids: null != e.clip ? (0, o.getClipParticipantIds)(e.clip.users) : void 0
                 }
             }
-            var o = {
-                getUploadPayload: u
+            var u = {
+                getUploadPayload: d
             }

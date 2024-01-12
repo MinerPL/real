@@ -1,22 +1,22 @@
             "use strict";
             n.r(t), n.d(t, {
                 TOGGLE_INBOX_UNREADS_TAB: function() {
-                    return u
+                    return d
                 },
                 MARK_TOP_INBOX_CHANNEL_READ: function() {
-                    return d
+                    return u
                 }
             });
             var i = n("917351"),
                 o = n.n(i),
                 l = n("659500"),
                 a = n("49111");
-            let u = {
+            let d = {
                     binds: ["mod+i"],
                     comboKeysBindGlobal: !0,
                     action: () => (l.ComponentDispatch.dispatch(a.ComponentActions.TOGGLE_INBOX_UNREADS_TAB), !1)
                 },
-                d = {
+                u = {
                     binds: ["mod+shift+e"],
                     comboKeysBindGlobal: !0,
                     action: o.debounce(() => {

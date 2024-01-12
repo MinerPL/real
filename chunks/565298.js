@@ -1,22 +1,22 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return o
                 },
                 getGuildIdForGenericRedirect: function() {
-                    return u
+                    return d
                 }
             });
-            var i = n("446674"),
-                a = n("162771"),
-                l = n("379881"),
-                s = n("49111");
+            var s = n("446674"),
+                i = n("162771"),
+                r = n("379881"),
+                a = n("49111");
 
-            function r(e) {
-                let t = (0, i.useStateFromStores)([a.default], () => a.default.getGuildId());
+            function o(e) {
+                let t = (0, s.useStateFromStores)([i.default], () => i.default.getGuildId());
                 return null != t ? t : e.getGuildId()
             }
 
-            function u(e) {
-                return a.default.getGuildId() !== s.FAVORITES ? e.getGuildId() : l.default.isFavorite(e.id) || e.isThread() && l.default.isFavorite(e.parent_id) ? s.FAVORITES : e.getGuildId()
+            function d(e) {
+                return i.default.getGuildId() !== a.FAVORITES ? e.getGuildId() : r.default.isFavorite(e.id) || e.isThread() && r.default.isFavorite(e.parent_id) ? a.FAVORITES : e.getGuildId()
             }

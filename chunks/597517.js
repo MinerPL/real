@@ -1,40 +1,40 @@
             "use strict";
             n.r(t), n.d(t, {
                 hideHotspot: function() {
-                    return u
+                    return s
                 },
                 setHotspotOverride: function() {
-                    return o
+                    return i
                 },
                 clearHotspotOverride: function() {
-                    return a
+                    return u
                 }
             });
-            var r = n("913144"),
-                i = n("599110"),
-                l = n("49111");
+            var l = n("913144"),
+                a = n("599110"),
+                r = n("49111");
 
-            function u(e) {
-                i.default.track(l.AnalyticEvents.HOTSPOT_HIDDEN, {
+            function s(e) {
+                a.default.track(r.AnalyticEvents.HOTSPOT_HIDDEN, {
                     hotspot_location: e
-                }), r.default.wait(() => {
-                    r.default.dispatch({
+                }), l.default.wait(() => {
+                    l.default.dispatch({
                         type: "HOTSPOT_HIDE",
                         location: e
                     })
                 })
             }
 
-            function o(e, t) {
-                r.default.dispatch({
+            function i(e, t) {
+                l.default.dispatch({
                     type: "HOTSPOT_OVERRIDE_SET",
                     location: e,
                     enabled: t
                 })
             }
 
-            function a(e) {
-                r.default.dispatch({
+            function u(e) {
+                l.default.dispatch({
                     type: "HOTSPOT_OVERRIDE_CLEAR",
                     location: e
                 })

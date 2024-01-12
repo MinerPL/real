@@ -1,14 +1,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 useIsMemberVerificationManualApproval: function() {
-                    return l
+                    return r
                 },
                 isMemberVerificationManualApproval: function() {
-                    return s
+                    return a
                 }
             });
-            var i = n("862205");
-            let a = (0, i.createExperiment)({
+            var s = n("862205");
+            let i = (0, s.createExperiment)({
                 kind: "guild",
                 id: "2021-11_member_verification_manual_approval",
                 label: "Member Verification Manual Approval",
@@ -24,12 +24,12 @@
                 }]
             });
 
-            function l(e) {
-                a.trackExposure({
+            function r(e) {
+                i.trackExposure({
                     guildId: e,
                     location: "bda51f_1"
                 });
-                let t = a.useExperiment({
+                let t = i.useExperiment({
                     guildId: e,
                     location: "bda51f_2"
                 }, {
@@ -38,8 +38,8 @@
                 return t.manualApprovalEnabled
             }
 
-            function s(e) {
-                let t = a.getCurrentConfig({
+            function a(e) {
+                let t = i.getCurrentConfig({
                     guildId: e,
                     location: "bda51f_3"
                 }, {

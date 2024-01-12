@@ -1,16 +1,16 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return r
                 }
             });
-            var i = n("347219"),
-                a = n("273215"),
-                l = class e {
+            var s = n("347219"),
+                i = n("273215"),
+                r = class e {
                     initialize() {
                         this.img = new Image, this.img.onload = () => {
                             this.loaded = !0
-                        }, this.img.src = a, this.bind()
+                        }, this.img.src = i, this.bind()
                     }
                     bind() {
                         window.addEventListener("mousemove", this.handleMouseMove, !1)
@@ -22,7 +22,7 @@
                         this.img = null, this.loaded = !1, this.isFilled = !1, this.alpha = 0, this.unbind()
                     }
                     update(e) {
-                        this.loaded && (!this.isFilled && this.alpha < 1 ? this.alpha = Math.min(1, this.alpha + e) : this.isFilled && this.alpha > 0 && (this.alpha = Math.max(0, this.alpha - 3 * e)), this.velX += (0, i.applySpringForce)(this.targetX, this.x, this.velX, this.spring) * e, this.velY += (0, i.applySpringForce)(this.targetY, this.y, this.velY, this.spring) * e, this.x += this.velX * e, this.y += this.velY * e)
+                        this.loaded && (!this.isFilled && this.alpha < 1 ? this.alpha = Math.min(1, this.alpha + e) : this.isFilled && this.alpha > 0 && (this.alpha = Math.max(0, this.alpha - 3 * e)), this.velX += (0, s.applySpringForce)(this.targetX, this.x, this.velX, this.spring) * e, this.velY += (0, s.applySpringForce)(this.targetY, this.y, this.velY, this.spring) * e, this.x += this.velX * e, this.y += this.velY * e)
                     }
                     render(e) {
                         let {

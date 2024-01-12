@@ -1,15 +1,15 @@
             "use strict";
             n.r(t), n.d(t, {
                 ClassificationEvidence: function() {
-                    return R
+                    return U
                 }
             });
             var i = n("37983");
             n("884691");
-            var r = n("917351"),
-                l = n("249654"),
-                a = n("446674"),
-                o = n("77078"),
+            var l = n("917351"),
+                r = n("249654"),
+                o = n("446674"),
+                a = n("77078"),
                 s = n("692038"),
                 u = n("815297"),
                 c = n("933629"),
@@ -18,8 +18,8 @@
                 E = n("227439"),
                 _ = n("697218"),
                 p = n("170113"),
-                I = n("780571"),
-                h = n("377502"),
+                h = n("780571"),
+                I = n("377502"),
                 S = n("103603"),
                 T = n("736393"),
                 C = n("170213"),
@@ -43,7 +43,7 @@
                             type: g.MessageTypes.DEFAULT,
                             channelId: ""
                         }),
-                        timestamp: new Date(l.default.extractTimestamp(e.id)).toISOString(),
+                        timestamp: new Date(r.default.extractTimestamp(e.id)).toISOString(),
                         attachments: t,
                         state: g.MessageStates.SENT
                     })
@@ -55,9 +55,9 @@
                         attachments: n
                     } = t;
                     if (0 === n.length) return null;
-                    let l = (e, t, n) => {
-                            let l = C.DEFAULT_MEDIA_MAX_WIDTH,
-                                a = C.DEFAULT_MEDIA_MAX_HEIGHT;
+                    let r = (e, t, n) => {
+                            let r = C.DEFAULT_MEDIA_MAX_WIDTH,
+                                o = C.DEFAULT_MEDIA_MAX_HEIGHT;
                             if (null != t.width && null != t.height) {
                                 let e = (0, S.getRatio)({
                                     width: t.width,
@@ -65,19 +65,19 @@
                                     maxWidth: C.DEFAULT_MEDIA_MAX_WIDTH,
                                     maxHeight: C.DEFAULT_MEDIA_MAX_HEIGHT
                                 });
-                                l = (0, r.clamp)(Math.round(t.width * e), 0, C.DEFAULT_MEDIA_MAX_WIDTH), a = (0, r.clamp)(Math.round(t.height * e), 0, C.DEFAULT_MEDIA_MAX_HEIGHT)
+                                r = (0, l.clamp)(Math.round(t.width * e), 0, C.DEFAULT_MEDIA_MAX_WIDTH), o = (0, l.clamp)(Math.round(t.height * e), 0, C.DEFAULT_MEDIA_MAX_HEIGHT)
                             }
                             return (0, i.jsx)("div", {
                                 style: {
-                                    width: n ? l : "100%",
-                                    height: n ? a : "100%"
+                                    width: n ? r : "100%",
+                                    height: n ? o : "100%"
                                 },
                                 children: (0, i.jsx)(p.default, {
                                     className: e.className,
                                     forceExternal: !1,
                                     src: t.url,
-                                    width: n ? l : "100%",
-                                    height: n ? a : "100%",
+                                    width: n ? r : "100%",
+                                    height: n ? o : "100%",
                                     responsive: !0,
                                     volume: e.volume,
                                     autoPlay: !1,
@@ -97,10 +97,10 @@
                                 })
                             })
                         },
-                        a = 1 === n.length;
+                        o = 1 === n.length;
                     return (0, i.jsx)("div", {
                         className: A.classificationEvidenceMessageAttachment,
-                        children: (0, i.jsx)(h.default, {
+                        children: (0, i.jsx)(I.default, {
                             attachments: n.map(e => ({
                                 attachment: e,
                                 spoiler: !0,
@@ -109,9 +109,9 @@
                                 autoPlayGif: !1,
                                 inlineMedia: !0,
                                 canRemoveAttachment: !1,
-                                isSingleMosaicItem: a,
-                                onRemoveAttachment: r.noop,
-                                renderVideoComponent: t => l(t, e, a),
+                                isSingleMosaicItem: o,
+                                onRemoveAttachment: l.noop,
+                                renderVideoComponent: t => r(t, e, o),
                                 renderImageComponent: e => (0, c.renderImageComponent)({
                                     hiddenSpoilers: !0,
                                     shouldHideMediaOptions: !0,
@@ -125,11 +125,11 @@
                         })
                     })
                 },
-                R = e => {
+                U = e => {
                     var t;
                     let {
                         flaggedContent: n
-                    } = e, r = (0, a.useStateFromStores)([_.default], () => _.default.getCurrentUser()), l = n[0], s = N(l), u = (0, d.default)(s, {
+                    } = e, l = (0, o.useStateFromStores)([_.default], () => _.default.getCurrentUser()), r = n[0], s = N(r), u = (0, d.default)(s, {
                         hideSimpleEmbedContent: !1,
                         allowList: !1,
                         allowHeading: !1,
@@ -138,19 +138,19 @@
                     });
                     return "" === s.content && 0 === s.attachments.length ? null : (0, i.jsxs)("div", {
                         className: A.classificationEvidenceContainer,
-                        children: [(0, i.jsx)(o.Text, {
+                        children: [(0, i.jsx)(a.Text, {
                             variant: "eyebrow",
                             color: "text-muted",
                             children: v.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
                         }), (0, i.jsx)("div", {
                             className: A.classificationEvidenceCard,
-                            children: (0, i.jsx)(I.default, {
+                            children: (0, i.jsx)(h.default, {
                                 compact: !1,
                                 childrenHeader: (0, E.default)({
                                     author: {
-                                        ...r,
+                                        ...l,
                                         colorString: "",
-                                        nick: null !== (t = null == r ? void 0 : r.username) && void 0 !== t ? t : ""
+                                        nick: null !== (t = null == l ? void 0 : l.username) && void 0 !== t ? t : ""
                                     },
                                     message: s,
                                     channel: void 0,

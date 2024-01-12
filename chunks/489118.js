@@ -1,34 +1,34 @@
             "use strict";
-            n.r(t), n.d(t, {
+            l.r(t), l.d(t, {
                 default: function() {
                     return A
                 }
-            }), n("222007");
-            var l = n("37983"),
-                r = n("884691"),
-                u = n("77078"),
-                o = n("476765"),
-                a = n("462392"),
-                i = n("903639"),
-                s = n("782340"),
-                c = n("387018");
+            }), l("222007");
+            var n = l("37983"),
+                o = l("884691"),
+                a = l("77078"),
+                r = l("476765"),
+                s = l("462392"),
+                i = l("903639"),
+                u = l("782340"),
+                c = l("387018");
             let d = e => {
                 var t;
                 let {
-                    duration: n,
-                    onSelectDuration: r
-                } = e, o = (0, i.getDisableCommunicationDurationOptions)(), a = o.find(e => e.value === n);
-                return (0, l.jsx)(u.FormItem, {
+                    duration: l,
+                    onSelectDuration: o
+                } = e, r = (0, i.getDisableCommunicationDurationOptions)(), s = r.find(e => e.value === l);
+                return (0, n.jsx)(a.FormItem, {
                     className: c.durationSelector,
                     required: !0,
-                    children: (0, l.jsx)(u.SearchableSelect, {
-                        value: null !== (t = null == a ? void 0 : a.value) && void 0 !== t ? t : i.DisableCommunicationDuration.DURATION_60_SEC,
-                        options: o,
+                    children: (0, n.jsx)(a.SearchableSelect, {
+                        value: null !== (t = null == s ? void 0 : s.value) && void 0 !== t ? t : i.DisableCommunicationDuration.DURATION_60_SEC,
+                        options: r,
                         onChange: e => {
-                            let t = o.find(t => t.value === e);
-                            null != t && r(t.value)
+                            let t = r.find(t => t.value === e);
+                            null != t && o(t.value)
                         },
-                        placeholder: s.default.Messages.GUILD_AUTOMOD_DISABLE_GUILD_COMMUNICATION_PLACEHOLDER
+                        placeholder: u.default.Messages.GUILD_AUTOMOD_DISABLE_GUILD_COMMUNICATION_PLACEHOLDER
                     })
                 })
             };
@@ -36,53 +36,53 @@
             function A(e) {
                 let {
                     action: t,
-                    triggerType: n,
+                    triggerType: l,
                     isEdit: A,
-                    onUpdateDuration: f,
-                    onClose: C,
-                    transitionState: L
-                } = e, _ = (0, o.useUID)(), [I, N] = r.useState(() => null != t.metadata.durationSeconds && t.metadata.durationSeconds > 0 ? t.metadata.durationSeconds : i.DisableCommunicationDuration.DURATION_60_SEC), T = (0, a.getActionInfo)(t.type, t, n);
+                    onUpdateDuration: C,
+                    onClose: L,
+                    transitionState: _
+                } = e, f = (0, r.useUID)(), [I, N] = o.useState(() => null != t.metadata.durationSeconds && t.metadata.durationSeconds > 0 ? t.metadata.durationSeconds : i.DisableCommunicationDuration.DURATION_60_SEC), T = (0, s.getActionInfo)(t.type, t, l);
                 if (null == T) return null;
                 let {
                     headerText: O
                 } = T;
-                return (0, l.jsxs)(u.ModalRoot, {
-                    transitionState: L,
-                    "aria-labelledby": _,
-                    size: u.ModalSize.SMALL,
-                    children: [(0, l.jsxs)(u.ModalContent, {
+                return (0, n.jsxs)(a.ModalRoot, {
+                    transitionState: _,
+                    "aria-labelledby": f,
+                    size: a.ModalSize.SMALL,
+                    children: [(0, n.jsxs)(a.ModalContent, {
                         className: c.actionContentContainer,
-                        children: [(0, l.jsx)(u.Heading, {
-                            id: _,
+                        children: [(0, n.jsx)(a.Heading, {
+                            id: f,
                             color: "header-primary",
                             variant: "heading-lg/semibold",
                             className: c.header,
                             children: O
-                        }), (0, l.jsx)(u.Text, {
+                        }), (0, n.jsx)(a.Text, {
                             color: "header-secondary",
                             variant: "text-sm/normal",
-                            children: s.default.Messages.GUILD_AUTOMOD_DISABLE_GUILD_COMMUNICATION_MODAL_DESCRIPTION
-                        }), (0, l.jsx)(d, {
+                            children: u.default.Messages.GUILD_AUTOMOD_DISABLE_GUILD_COMMUNICATION_MODAL_DESCRIPTION
+                        }), (0, n.jsx)(d, {
                             duration: I,
                             onSelectDuration: e => {
                                 N(e)
                             }
                         })]
-                    }), (0, l.jsxs)(u.ModalFooter, {
-                        children: [(0, l.jsx)(u.Button, {
+                    }), (0, n.jsxs)(a.ModalFooter, {
+                        children: [(0, n.jsx)(a.Button, {
                             onClick: () => {
-                                f(I)
+                                C(I)
                             },
-                            color: u.Button.Colors.BRAND,
-                            size: u.Button.Sizes.SMALL,
-                            children: A ? s.default.Messages.EDIT : s.default.Messages.SAVE
-                        }), (0, l.jsx)(u.Button, {
+                            color: a.Button.Colors.BRAND,
+                            size: a.Button.Sizes.SMALL,
+                            children: A ? u.default.Messages.EDIT : u.default.Messages.SAVE
+                        }), (0, n.jsx)(a.Button, {
                             onClick: () => {
-                                C()
+                                L()
                             },
-                            color: u.Button.Colors.TRANSPARENT,
-                            look: u.Button.Looks.LINK,
-                            children: s.default.Messages.CANCEL
+                            color: a.Button.Colors.TRANSPARENT,
+                            look: a.Button.Looks.LINK,
+                            children: u.default.Messages.CANCEL
                         })]
                     })]
                 })

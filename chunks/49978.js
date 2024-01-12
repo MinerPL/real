@@ -1,13 +1,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return r
                 }
             }), n("424973"), n("222007"), n("808653");
-            var i, a = n("917351"),
-                l = n.n(a),
-                s = n("862337");
-            class r {
+            var r, i = n("917351"),
+                l = n.n(i),
+                u = n("862337");
+            class a {
                 acknowledge(e) {
                     this._unacknowledgedRequests.delete(e), this._pendingRequests.delete(e)
                 }
@@ -31,7 +31,7 @@
                     this._pendingRequests = new Set, this._sentRequests = new Set, this._unacknowledgedRequests = new Set, this._guildId = e, this._guildMemberExists = n => t(e, n)
                 }
             }
-            i = class {
+            r = class {
                 reset() {
                     this._guildStates = {}, this._flush.cancel()
                 }
@@ -50,9 +50,9 @@
                 }
                 _getGuildState(e) {
                     let t = this._guildStates[e];
-                    return null == t && (t = this._guildStates[e] = new r(e, this._guildMemberExists)), t
+                    return null == t && (t = this._guildStates[e] = new a(e, this._guildMemberExists)), t
                 }
                 constructor(e, t) {
-                    this._guildStates = {}, this._flush = new s.DelayedCall(0, () => this.flushRequests()), this._guildMemberExists = e, this._onChange = t
+                    this._guildStates = {}, this._flush = new u.DelayedCall(0, () => this.flushRequests()), this._guildMemberExists = e, this._onChange = t
                 }
             }

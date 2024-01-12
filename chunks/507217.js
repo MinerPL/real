@@ -28,10 +28,10 @@
                     return S
                 },
                 fetchCommandsForApplication: function() {
-                    return v
+                    return M
                 },
                 updateRegistry: function() {
-                    return M
+                    return v
                 }
             }), n("222007");
             var i = n("627445"),
@@ -163,7 +163,7 @@
                 })
             }
 
-            function v(e) {
+            function M(e) {
                 let {
                     guildId: t,
                     channelId: n,
@@ -177,7 +177,7 @@
                 })
             }
 
-            function M(e, t, n) {
+            function v(e, t, n) {
                 s.default.dispatch({
                     type: "APPLICATION_COMMAND_REGISTRY_UPDATE",
                     applications: t,

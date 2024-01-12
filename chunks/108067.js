@@ -1,7 +1,7 @@
             "use strict";
-            var i;
+            var s;
             n.r(t), n.d(t, {
                 ClydeAIConstants: function() {
-                    return i
+                    return s
                 }
-            }), (i || (i = {})).THOUGHT_EMBED_TITLE = "Clyde Thoughts"
+            }), (s || (s = {})).THOUGHT_EMBED_TITLE = "Clyde Thoughts"

@@ -1,14 +1,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 SEARCH_EMOJIS: function() {
-                    return u
+                    return d
                 }
             });
             var i = n("913144"),
                 o = n("659500"),
                 l = n("49111"),
                 a = n("958706");
-            let u = {
+            let d = {
                 binds: ["mod+e"],
                 comboKeysBindGlobal: !0,
                 action: () => (i.default.dispatch({

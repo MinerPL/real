@@ -1,6 +1,6 @@
-            var e = r("905577");
+            var e = n("905577");
             t.exports = function(t) {
-                return function(n) {
-                    return e(n, t)
+                return function(r) {
+                    return e(r, t)
                 }
             }

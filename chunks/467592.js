@@ -1,32 +1,32 @@
             "use strict";
-            n.r(t), n.d(t, {
+            n.r(e), n.d(e, {
                 default: function() {
-                    return d
+                    return c
                 }
             });
             var r = n("37983");
             n("884691");
             var i = n("77078"),
-                a = n("272030"),
-                s = n("773336"),
-                l = n("447651"),
-                o = n("26051"),
-                u = n("782340");
+                u = n("272030"),
+                o = n("773336"),
+                a = n("447651"),
+                l = n("26051"),
+                s = n("782340");
 
-            function d(e) {
+            function c(t) {
                 let {
-                    src: t,
+                    src: e,
                     onSelect: n
-                } = e, d = (0, l.default)(t), c = (0, o.default)(t, null);
-                return s.isPlatformEmbedded ? (0, r.jsxs)(i.Menu, {
+                } = t, c = (0, a.default)(e), d = (0, l.default)(e, null);
+                return o.isPlatformEmbedded ? (0, r.jsxs)(i.Menu, {
                     navId: "image-context",
-                    onClose: a.closeContextMenu,
-                    "aria-label": u.default.Messages.IMAGE_ACTIONS_MENU_LABEL,
+                    onClose: u.closeContextMenu,
+                    "aria-label": s.default.Messages.IMAGE_ACTIONS_MENU_LABEL,
                     onSelect: n,
                     children: [(0, r.jsx)(i.MenuGroup, {
-                        children: d
-                    }), (0, r.jsx)(i.MenuGroup, {
                         children: c
+                    }), (0, r.jsx)(i.MenuGroup, {
+                        children: d
                     })]
                 }) : null
             }

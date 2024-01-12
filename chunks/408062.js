@@ -1,31 +1,31 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return h
+                    return m
                 }
             }), n("222007"), n("808653"), n("700225"), n("424973"), n("843762"), n("781738");
-            var i = n("917351"),
-                a = n.n(i),
-                l = n("389806"),
-                s = n("115718"),
-                r = n("280468"),
-                u = n("692038"),
-                o = n("299039"),
-                d = n("35013"),
-                c = n("49111");
+            var s = n("917351"),
+                i = n.n(s),
+                r = n("389806"),
+                a = n("115718"),
+                o = n("280468"),
+                d = n("692038"),
+                u = n("299039"),
+                l = n("35013"),
+                f = n("49111");
 
             function _(e, t) {
                 let n = e.get(t.id);
                 return null == n || function(e, t) {
-                    var n, i;
-                    let a = null != e.editedTimestamp ? +e.editedTimestamp.toDate() : 0,
-                        l = null != t.edited_timestamp ? +new Date(t.edited_timestamp) : 0;
-                    return !!(l > a) || !!(e.embeds.length < (null !== (i = null === (n = t.embeds) || void 0 === n ? void 0 : n.length) && void 0 !== i ? i : 0)) || e.content !== t.content
-                }(n, t) || e.cached ? (0, u.createMessageRecord)(t) : n
+                    var n, s;
+                    let i = null != e.editedTimestamp ? +e.editedTimestamp.toDate() : 0,
+                        r = null != t.edited_timestamp ? +new Date(t.edited_timestamp) : 0;
+                    return !!(r > i) || !!(e.embeds.length < (null !== (s = null === (n = t.embeds) || void 0 === n ? void 0 : n.length) && void 0 !== s ? s : 0)) || e.content !== t.content
+                }(n, t) || e.cached ? (0, d.createMessageRecord)(t) : n
             }
-            class E {
+            class c {
                 clone() {
-                    let e = new E(this._isCacheBefore);
+                    let e = new c(this._isCacheBefore);
                     return e._map = {
                         ...this._map
                     }, e._messages = [...this._messages], e._wasAtEdge = this._wasAtEdge, e
@@ -43,7 +43,7 @@
                     this._map = {}, this._messages = [], this._wasAtEdge = !1
                 }
                 remove(e) {
-                    this._messages = a.filter(this._messages, t => {
+                    this._messages = i.filter(this._messages, t => {
                         let {
                             id: n
                         } = t;
@@ -51,7 +51,7 @@
                     }), delete this._map[e]
                 }
                 removeMany(e) {
-                    a.each(e, e => {
+                    i.each(e, e => {
                         delete this._map[e]
                     }), this._messages = this._messages.filter(t => -1 === e.indexOf(t.id))
                 }
@@ -62,8 +62,8 @@
                 update(e, t) {
                     let n = this._map[e];
                     if (null == n) return;
-                    let i = t(n);
-                    this._map[n.id] = i, this._messages[this._messages.indexOf(n)] = i
+                    let s = t(n);
+                    this._map[n.id] = s, this._messages[this._messages.indexOf(n)] = s
                 }
                 has(e) {
                     return null != this._map[e]
@@ -78,12 +78,12 @@
                     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                     0 === this.length && (this._wasAtEdge = t);
                     let n = this._messages.length + e.length;
-                    if (n > c.MAX_MESSAGE_CACHE_SIZE) {
-                        if (this._wasAtEdge = !1, e.length > c.MAX_MESSAGE_CACHE_SIZE) {
-                            this._isCacheBefore ? this._messages = e.slice(e.length - c.MAX_MESSAGE_CACHE_SIZE) : this._messages = e.slice(0, c.MAX_MESSAGE_CACHE_SIZE), this._map = {}, this._messages.forEach(e => this._map[e.id] = e);
+                    if (n > f.MAX_MESSAGE_CACHE_SIZE) {
+                        if (this._wasAtEdge = !1, e.length > f.MAX_MESSAGE_CACHE_SIZE) {
+                            this._isCacheBefore ? this._messages = e.slice(e.length - f.MAX_MESSAGE_CACHE_SIZE) : this._messages = e.slice(0, f.MAX_MESSAGE_CACHE_SIZE), this._map = {}, this._messages.forEach(e => this._map[e.id] = e);
                             return
                         }
-                        let t = c.MAX_MESSAGE_CACHE_SIZE - e.length;
+                        let t = f.MAX_MESSAGE_CACHE_SIZE - e.length;
                         this._isCacheBefore ? this._messages = this._messages.slice(Math.max(this._messages.length - t, 0)) : this._messages = this._messages.slice(0, t)
                     }
                     this._messages = this._isCacheBefore ? [...this._messages, ...e] : [...e, ...this._messages], this._map = {}, this._messages.forEach(e => this._map[e.id] = e)
@@ -96,8 +96,8 @@
                     let t;
                     if (this._isCacheBefore) {
                         let n = Math.max(this.length - e, 0),
-                            i = this.length;
-                        t = this._messages.slice(n, i), this._messages.splice(n)
+                            s = this.length;
+                        t = this._messages.slice(n, s), this._messages.splice(n)
                     } else {
                         let n = Math.min(e, this.length);
                         t = this._messages.slice(0, n), this._messages.splice(0, e)
@@ -108,34 +108,34 @@
                     this._messages = [], this._map = {}, this._wasAtEdge = !1, this._isCacheBefore = e
                 }
             }
-            class f {
+            class g {
                 static forEach(e) {
-                    a.forEach(f._channelMessages, e)
+                    i.forEach(g._channelMessages, e)
                 }
                 static get(e) {
-                    return f._channelMessages[e]
+                    return g._channelMessages[e]
                 }
                 static hasPresent(e) {
-                    let t = f.get(e);
+                    let t = g.get(e);
                     return null != t && t.hasPresent()
                 }
                 static getOrCreate(e) {
-                    let t = f._channelMessages[e];
-                    return null == t && (t = new f(e), f._channelMessages[e] = t), t
+                    let t = g._channelMessages[e];
+                    return null == t && (t = new g(e), g._channelMessages[e] = t), t
                 }
                 static clear(e) {
-                    delete f._channelMessages[e]
+                    delete g._channelMessages[e]
                 }
                 static clearCache(e) {
-                    let t = f._channelMessages[e];
+                    let t = g._channelMessages[e];
                     null != t && (t._before.clear(), t._after.clear(), this.commit(t))
                 }
                 static commit(e) {
-                    f._channelMessages[e.channelId] = e
+                    g._channelMessages[e.channelId] = e
                 }
                 mutate(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                        n = new f(this.channelId);
+                        n = new g(this.channelId);
                     return n._array = t ? [...this._array] : this._array, n._map = t ? {
                         ...this._map
                     } : this._map, n._after = t ? this._after.clone() : this._after, n._before = t ? this._before.clone() : this._before, e instanceof Function ? (n.ready = this.ready, n.jumpType = this.jumpType, n.jumpTargetId = this.jumpTargetId, n.jumpTargetOffset = this.jumpTargetOffset, n.jumpSequenceId = this.jumpSequenceId, n.jumped = this.jumped, n.jumpedToPresent = this.jumpedToPresent, n.jumpFlash = this.jumpFlash, n.jumpReturnTargetId = this.jumpReturnTargetId, n.focusTargetId = this.focusTargetId, n.hasMoreBefore = this.hasMoreBefore, n.hasMoreAfter = this.hasMoreAfter, n.loadingMore = this.loadingMore, n.revealedMessageId = this.revealedMessageId, n.cached = this.cached, n.hasFetched = this.hasFetched, n.error = this.error, e(n)) : "object" == typeof e && (n.ready = void 0 !== e.ready ? !0 === e.ready : this.ready, n.jumpType = void 0 !== e.jumpType ? e.jumpType : this.jumpType, n.jumpTargetId = void 0 !== e.jumpTargetId ? e.jumpTargetId : this.jumpTargetId, n.jumpTargetOffset = void 0 !== e.jumpTargetOffset ? e.jumpTargetOffset : this.jumpTargetOffset, n.jumpSequenceId = void 0 !== e.jumpSequenceId ? e.jumpSequenceId : this.jumpSequenceId, n.jumped = void 0 !== e.jumped ? !0 === e.jumped : this.jumped, n.jumpedToPresent = void 0 !== e.jumpedToPresent ? !0 === e.jumpedToPresent : this.jumpedToPresent, n.jumpFlash = void 0 !== e.jumpFlash ? !0 === e.jumpFlash : this.jumpFlash, n.jumpReturnTargetId = void 0 !== e.jumpReturnTargetId ? e.jumpReturnTargetId : this.jumpReturnTargetId, n.focusTargetId = void 0 !== e.focusTargetId ? e.focusTargetId : this.focusTargetId, n.hasMoreBefore = void 0 !== e.hasMoreBefore ? !0 === e.hasMoreBefore : this.hasMoreBefore, n.hasMoreAfter = void 0 !== e.hasMoreAfter ? !0 === e.hasMoreAfter : this.hasMoreAfter, n.loadingMore = void 0 !== e.loadingMore ? e.loadingMore : this.loadingMore, n.revealedMessageId = void 0 !== e.revealedMessageId ? e.revealedMessageId : this.revealedMessageId, n.cached = void 0 !== e.cached ? e.cached : this.cached, n.hasFetched = void 0 !== e.hasFetched ? e.hasFetched : this.hasFetched, n.error = void 0 !== e.error ? e.error : this.error), n
@@ -150,7 +150,7 @@
                     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
                     if (n) {
                         let n = this._array;
-                        for (let i = n.length - 1; i >= 0 && !1 !== e.call(t, n[i], i); i--);
+                        for (let s = n.length - 1; s >= 0 && !1 !== e.call(t, n[s], s); s--);
                     } else this._array.forEach(e, t)
                 }
                 reduce(e, t) {
@@ -167,11 +167,11 @@
                 }
                 findOldest(e) {
                     var t, n;
-                    return null !== (n = null !== (t = a.find(this._before._messages, e)) && void 0 !== t ? t : a.find(this._array, e)) && void 0 !== n ? n : a.find(this._after._messages, e)
+                    return null !== (n = null !== (t = i.find(this._before._messages, e)) && void 0 !== t ? t : i.find(this._array, e)) && void 0 !== n ? n : i.find(this._after._messages, e)
                 }
                 findNewest(e) {
                     var t, n;
-                    return null !== (n = null !== (t = a.findLast(this._after._messages, e)) && void 0 !== t ? t : a.findLast(this._array, e)) && void 0 !== n ? n : a.findLast(this._before._messages, e)
+                    return null !== (n = null !== (t = i.findLast(this._after._messages, e)) && void 0 !== t ? t : i.findLast(this._array, e)) && void 0 !== n ? n : i.findLast(this._before._messages, e)
                 }
                 map(e, t) {
                     return this._array.map(e, t)
@@ -185,8 +185,8 @@
                 get(e) {
                     var t;
                     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                        i = this._map[e];
-                    return null == i && n ? null !== (t = this._before.get(e)) && void 0 !== t ? t : this._after.get(e) : i
+                        s = this._map[e];
+                    return null == s && n ? null !== (t = this._before.get(e)) && void 0 !== t ? t : this._after.get(e) : s
                 }
                 getByIndex(e) {
                     return this._array[e]
@@ -198,22 +198,22 @@
                     return -1 === n || n === this.length - 1 ? null : this._array[n + 1]
                 }
                 getManyAfter(e, t, n) {
-                    let i = this.get(e);
-                    if (null == i) return null;
-                    let a = this._array.indexOf(i);
-                    if (-1 === a) return null;
-                    let l = [];
-                    for (let e = a + 1; e < this.length && (-1 === t || l.length < t); e++)(null == n || n(this._array[e])) && l.push(this._array[e]);
-                    return l
+                    let s = this.get(e);
+                    if (null == s) return null;
+                    let i = this._array.indexOf(s);
+                    if (-1 === i) return null;
+                    let r = [];
+                    for (let e = i + 1; e < this.length && (-1 === t || r.length < t); e++)(null == n || n(this._array[e])) && r.push(this._array[e]);
+                    return r
                 }
                 getManyBefore(e, t, n) {
-                    let i = this.get(e);
-                    if (null == i) return null;
-                    let a = this._array.indexOf(i);
-                    if (-1 === a) return null;
-                    let l = [];
-                    for (let e = a - 1; e >= 0 && (-1 === t || l.length < t); e--)(null == n || n(this._array[e])) && l.unshift(this._array[e]);
-                    return l
+                    let s = this.get(e);
+                    if (null == s) return null;
+                    let i = this._array.indexOf(s);
+                    if (-1 === i) return null;
+                    let r = [];
+                    for (let e = i - 1; e >= 0 && (-1 === t || r.length < t); e--)(null == n || n(this._array[e])) && r.unshift(this._array[e]);
+                    return r
                 }
                 has(e) {
                     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -221,7 +221,7 @@
                 }
                 indexOf(e) {
                     let t = -1;
-                    return this._array.find((n, i) => n.id === e && (t = i, !0)), t
+                    return this._array.find((n, s) => n.id === e && (t = s, !0)), t
                 }
                 hasPresent() {
                     return this._after.length > 0 && this._after.wasAtEdge || !this.hasMoreAfter
@@ -243,16 +243,16 @@
                 update(e, t) {
                     let n = this._map[e];
                     if (null == n) return this._before.has(e) ? this.mutate(n => n._before.update(e, t), !0) : this._after.has(e) ? this.mutate(n => n._after.update(e, t), !0) : this;
-                    let i = t(n);
+                    let s = t(n);
                     return this.mutate(e => {
-                        e._map[n.id] = i, e._array[e._array.indexOf(n)] = i
+                        e._map[n.id] = s, e._array[e._array.indexOf(n)] = s
                     }, !0)
                 }
                 replace(e, t) {
                     let n = this._map[e];
                     if (null == n) return this._before.has(e) ? this.mutate(n => n._before.replace(e, t), !0) : this._after.has(e) ? this.mutate(n => n._after.replace(e, t), !0) : this;
-                    return this.mutate(i => {
-                        delete i._map[e], i._map[t.id] = t, i._array[i._array.indexOf(n)] = t
+                    return this.mutate(s => {
+                        delete s._map[e], s._map[t.id] = t, s._array[s._array.indexOf(n)] = t
                     }, !0)
                 }
                 remove(e) {
@@ -262,7 +262,7 @@
                 }
                 removeMany(e) {
                     return e.some(e => this.has(e)) ? this.mutate(t => {
-                        a.each(e, e => {
+                        i.each(e, e => {
                             delete t._map[e]
                         }), t._array = t._array.filter(t => -1 === e.indexOf(t.id)), t._before.removeMany(e), t._after.removeMany(e)
                     }, !0) : this
@@ -270,8 +270,8 @@
                 merge(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                    return this.mutate(i => {
-                        i._merge(e, t, n)
+                    return this.mutate(s => {
+                        s._merge(e, t, n)
                     }, !0)
                 }
                 _merge(e) {
@@ -290,10 +290,10 @@
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
                         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-                    return this.mutate(i => {
-                        i._before.clear(), i._after.clear();
-                        let a = new Set(n);
-                        e.forEach(e => a.add(e.id)), t.forEach(e => a.add(e.id)), i._array = i._array.filter(e => !a.has(e.id)).concat(e.map(e => (0, u.createMessageRecord)(e)), t.map(e => (0, u.createMessageRecord)(e))).sort((e, t) => o.default.compare(e.id, t.id))
+                    return this.mutate(s => {
+                        s._before.clear(), s._after.clear();
+                        let i = new Set(n);
+                        e.forEach(e => i.add(e.id)), t.forEach(e => i.add(e.id)), s._array = s._array.filter(e => !i.has(e.id)).concat(e.map(e => (0, d.createMessageRecord)(e)), t.map(e => (0, d.createMessageRecord)(e))).sort((e, t) => u.default.compare(e.id, t.id))
                     })
                 }
                 _clearMessages() {
@@ -323,18 +323,18 @@
                     return this.mutate(t => {
                         let n = t._after.extractAll();
                         t.hasMoreAfter = !1;
-                        let i = Math.max(n.length - e, 0),
-                            a = n.slice(i);
-                        n.splice(i), t._before.cache(t._array), t._before.cache(n), t._clearMessages(), t._merge(a), t.hasMoreBefore = t._before.length > 0, t.jumped = !0, t.jumpTargetId = null, t.jumpTargetOffset = 0, t.jumpedToPresent = !0, t.jumpFlash = !1, t.jumpReturnTargetId = null, t.jumpSequenceId = t.jumpSequenceId + 1, t.ready = !0, t.loadingMore = !1
+                        let s = Math.max(n.length - e, 0),
+                            i = n.slice(s);
+                        n.splice(s), t._before.cache(t._array), t._before.cache(n), t._clearMessages(), t._merge(i), t.hasMoreBefore = t._before.length > 0, t.jumped = !0, t.jumpTargetId = null, t.jumpTargetOffset = 0, t.jumpedToPresent = !0, t.jumpFlash = !1, t.jumpReturnTargetId = null, t.jumpSequenceId = t.jumpSequenceId + 1, t.ready = !0, t.loadingMore = !1
                     }, !0)
                 }
                 jumpToMessage(e) {
                     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                         n = arguments.length > 2 ? arguments[2] : void 0,
-                        i = arguments.length > 3 ? arguments[3] : void 0,
-                        a = arguments.length > 4 ? arguments[4] : void 0;
-                    return this.mutate(l => {
-                        l.jumped = !0, l.jumpedToPresent = !1, l.jumpType = null != a ? a : s.JumpTypes.ANIMATED, l.jumpTargetId = e, l.jumpTargetOffset = null != e && null != n ? n : 0, l.jumpSequenceId = l.jumpSequenceId + 1, l.jumpFlash = t, l.jumpReturnTargetId = i, l.ready = !0, l.loadingMore = !1
+                        s = arguments.length > 3 ? arguments[3] : void 0,
+                        i = arguments.length > 4 ? arguments[4] : void 0;
+                    return this.mutate(r => {
+                        r.jumped = !0, r.jumpedToPresent = !1, r.jumpType = null != i ? i : a.JumpTypes.ANIMATED, r.jumpTargetId = e, r.jumpTargetOffset = null != e && null != n ? n : 0, r.jumpSequenceId = r.jumpSequenceId + 1, r.jumpFlash = t, r.jumpReturnTargetId = s, r.ready = !0, r.loadingMore = !1
                     }, !1)
                 }
                 focusOnMessage(e) {
@@ -344,32 +344,32 @@
                 }
                 loadFromCache(e, t) {
                     return this.mutate(n => {
-                        let i = e ? n._before : n._after;
-                        n._merge(i.extract(t), e);
-                        let a = i.length > 0 || !i.wasAtEdge;
-                        e ? n.hasMoreBefore = a : n.hasMoreAfter = a, n.ready = !0, n.loadingMore = !1
+                        let s = e ? n._before : n._after;
+                        n._merge(s.extract(t), e);
+                        let i = s.length > 0 || !s.wasAtEdge;
+                        e ? n.hasMoreBefore = i : n.hasMoreAfter = i, n.ready = !0, n.loadingMore = !1
                     }, !0)
                 }
                 truncate(e, t) {
-                    return this.length <= c.MAX_LOADED_MESSAGES ? this : e ? this.truncateBottom(c.TRUNCATED_MESSAGE_VIEW_SIZE) : t ? this.truncateTop(c.TRUNCATED_MESSAGE_VIEW_SIZE) : this
+                    return this.length <= f.MAX_LOADED_MESSAGES ? this : e ? this.truncateBottom(f.TRUNCATED_MESSAGE_VIEW_SIZE) : t ? this.truncateTop(f.TRUNCATED_MESSAGE_VIEW_SIZE) : this
                 }
                 receiveMessage(e) {
                     var t, n;
-                    let i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                        a = null == e.nonce ? null : this.get(e.nonce, !0);
-                    if (null != a && ((null === (t = e.author) || void 0 === t ? void 0 : t.id) === (null === (n = a.author) || void 0 === n ? void 0 : n.id) || null != e.interaction && e.interaction.user.id === a.author.id) && null != e.nonce && a.id === e.nonce) {
-                        let t = (0, u.createMessageRecord)(e);
-                        return null != a.interactionData && (t.interactionData = a.interactionData), this.replace(e.nonce, t)
+                    let s = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+                        i = null == e.nonce ? null : this.get(e.nonce, !0);
+                    if (null != i && ((null === (t = e.author) || void 0 === t ? void 0 : t.id) === (null === (n = i.author) || void 0 === n ? void 0 : n.id) || null != e.interaction && e.interaction.user.id === i.author.id) && null != e.nonce && i.id === e.nonce) {
+                        let t = (0, d.createMessageRecord)(e);
+                        return null != i.interactionData && (t.interactionData = i.interactionData), this.replace(e.nonce, t)
                     }
                     if (this.hasMoreAfter) this._after.wasAtEdge && (this._after.wasAtEdge = !1);
                     else {
-                        let t = l.default.getCurrentConfig({
+                        let t = r.default.getCurrentConfig({
                                 location: "2ecb25_1"
                             }, {
                                 autoTrackExposure: !1
-                            }).enabled ? (0, u.createMessageRecord)(e) : _(this, e),
+                            }).enabled ? (0, d.createMessageRecord)(e) : _(this, e),
                             n = this.merge([t]);
-                        return i ? n.truncateTop(c.TRUNCATED_MESSAGE_VIEW_SIZE, !1) : this.length > c.MAX_LOADED_MESSAGES ? n.truncateBottom(c.TRUNCATED_MESSAGE_VIEW_SIZE, !1) : n
+                        return s ? n.truncateTop(f.TRUNCATED_MESSAGE_VIEW_SIZE, !1) : this.length > f.MAX_LOADED_MESSAGES ? n.truncateBottom(f.TRUNCATED_MESSAGE_VIEW_SIZE, !1) : n
                     }
                     return this
                 }
@@ -381,62 +381,62 @@
                     }).merge([_(this, e)])
                 }
                 loadStart(e) {
-                    var t, n, i, a;
+                    var t, n, s, i;
                     return this.mutate({
                         loadingMore: !0,
                         jumped: null != e,
                         jumpedToPresent: null !== (t = null == e ? void 0 : e.present) && void 0 !== t && t,
                         jumpTargetId: null !== (n = null == e ? void 0 : e.messageId) && void 0 !== n ? n : null,
-                        jumpTargetOffset: null !== (i = null == e ? void 0 : e.offset) && void 0 !== i ? i : 0,
-                        jumpReturnTargetId: null !== (a = null == e ? void 0 : e.returnMessageId) && void 0 !== a ? a : null,
+                        jumpTargetOffset: null !== (s = null == e ? void 0 : e.offset) && void 0 !== s ? s : 0,
+                        jumpReturnTargetId: null !== (i = null == e ? void 0 : e.returnMessageId) && void 0 !== i ? i : null,
                         ready: null == e && this.ready
                     })
                 }
                 loadComplete(e) {
-                    var t, n, i, r, o, d, c, E, f, h, p;
-                    let T = [...e.newMessages],
-                        C = null !== (t = e.isBefore) && void 0 !== t && t,
-                        m = null !== (n = e.isAfter) && void 0 !== n && n,
-                        S = null !== (i = e.jump) && void 0 !== i ? i : null,
-                        I = null !== (r = e.hasMoreBefore) && void 0 !== r && r,
-                        g = null !== (o = e.hasMoreAfter) && void 0 !== o && o,
-                        A = null !== (d = e.cached) && void 0 !== d && d,
-                        N = a(T).reverse().map(l.default.getCurrentConfig({
+                    var t, n, s, o, u, l, f, c, g, m, h;
+                    let v = [...e.newMessages],
+                        E = null !== (t = e.isBefore) && void 0 !== t && t,
+                        p = null !== (n = e.isAfter) && void 0 !== n && n,
+                        y = null !== (s = e.jump) && void 0 !== s ? s : null,
+                        T = null !== (o = e.hasMoreBefore) && void 0 !== o && o,
+                        C = null !== (u = e.hasMoreAfter) && void 0 !== u && u,
+                        S = null !== (l = e.cached) && void 0 !== l && l,
+                        I = i(v).reverse().map(r.default.getCurrentConfig({
                             location: "2ecb25_2"
                         }, {
                             autoTrackExposure: !1
-                        }).enabled ? e => (0, u.createMessageRecord)(e) : e => _(this, e)).value(),
-                        O = null;
-                    return O = (O = (C || m) && null == S && this.ready ? this.merge(N, C, !0) : this.reset(N)).mutate({
+                        }).enabled ? e => (0, d.createMessageRecord)(e) : e => _(this, e)).value(),
+                        A = null;
+                    return A = (A = (E || p) && null == y && this.ready ? this.merge(I, E, !0) : this.reset(I)).mutate({
                         ready: !0,
                         loadingMore: !1,
-                        jumpType: null !== (c = null == S ? void 0 : S.jumpType) && void 0 !== c ? c : s.JumpTypes.ANIMATED,
-                        jumpFlash: null !== (E = null == S ? void 0 : S.flash) && void 0 !== E && E,
-                        jumped: null != S,
-                        jumpedToPresent: null !== (f = null == S ? void 0 : S.present) && void 0 !== f && f,
-                        jumpTargetId: null !== (h = null == S ? void 0 : S.messageId) && void 0 !== h ? h : null,
-                        jumpTargetOffset: null != S && null != S.messageId && null != S.offset ? S.offset : 0,
-                        jumpSequenceId: null != S ? O.jumpSequenceId + 1 : O.jumpSequenceId,
-                        jumpReturnTargetId: null !== (p = null == S ? void 0 : S.returnMessageId) && void 0 !== p ? p : null,
-                        hasMoreBefore: null == S && m ? O.hasMoreBefore : I,
-                        hasMoreAfter: null == S && C ? O.hasMoreAfter : g,
-                        cached: A,
+                        jumpType: null !== (f = null == y ? void 0 : y.jumpType) && void 0 !== f ? f : a.JumpTypes.ANIMATED,
+                        jumpFlash: null !== (c = null == y ? void 0 : y.flash) && void 0 !== c && c,
+                        jumped: null != y,
+                        jumpedToPresent: null !== (g = null == y ? void 0 : y.present) && void 0 !== g && g,
+                        jumpTargetId: null !== (m = null == y ? void 0 : y.messageId) && void 0 !== m ? m : null,
+                        jumpTargetOffset: null != y && null != y.messageId && null != y.offset ? y.offset : 0,
+                        jumpSequenceId: null != y ? A.jumpSequenceId + 1 : A.jumpSequenceId,
+                        jumpReturnTargetId: null !== (h = null == y ? void 0 : y.returnMessageId) && void 0 !== h ? h : null,
+                        hasMoreBefore: null == y && p ? A.hasMoreBefore : T,
+                        hasMoreAfter: null == y && E ? A.hasMoreAfter : C,
+                        cached: S,
                         hasFetched: e.hasFetched,
                         error: !1
                     })
                 }
                 addCachedMessages(e, t) {
-                    (0, r.requireSortedDescending)(e);
+                    (0, o.requireSortedDescending)(e);
                     let n = e.map(e => _(this, e)).reverse();
-                    return this._array.filter(e => !n.some(t => t.id === e.id)).forEach(e => d.insert(n, e, (e, t) => o.default.compare(e.id, t.id))), this.reset(n).mutate({
+                    return this._array.filter(e => !n.some(t => t.id === e.id)).forEach(e => l.insert(n, e, (e, t) => u.default.compare(e.id, t.id))), this.reset(n).mutate({
                         ready: !0,
                         cached: t,
                         error: !1
                     })
                 }
                 constructor(e) {
-                    this._array = [], this._map = {}, this.channelId = e, this.ready = !1, this.jumpTargetId = null, this.jumpTargetOffset = 0, this.jumpSequenceId = 1, this.jumped = !1, this.jumpedToPresent = !1, this.jumpType = s.JumpTypes.ANIMATED, this.jumpFlash = !0, this.jumpReturnTargetId = null, this.hasMoreBefore = !0, this.hasMoreAfter = !1, this.loadingMore = !1, this.revealedMessageId = null, this._clearMessages(), this._before = new E(!0), this._after = new E(!1), this.cached = !1, this.hasFetched = !1, this.error = !1
+                    this._array = [], this._map = {}, this.channelId = e, this.ready = !1, this.jumpTargetId = null, this.jumpTargetOffset = 0, this.jumpSequenceId = 1, this.jumped = !1, this.jumpedToPresent = !1, this.jumpType = a.JumpTypes.ANIMATED, this.jumpFlash = !0, this.jumpReturnTargetId = null, this.hasMoreBefore = !0, this.hasMoreAfter = !1, this.loadingMore = !1, this.revealedMessageId = null, this._clearMessages(), this._before = new c(!0), this._after = new c(!1), this.cached = !1, this.hasFetched = !1, this.error = !1
                 }
             }
-            f._channelMessages = {};
-            var h = f
+            g._channelMessages = {};
+            var m = g

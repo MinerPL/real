@@ -9,8 +9,8 @@
             let l = !1,
                 a = !1,
                 i = {},
-                d = null;
-            class r extends s.default.Store {
+                r = null;
+            class d extends s.default.Store {
                 hasConsented(e) {
                     return null != i[e] && i[e].consented
                 }
@@ -21,11 +21,11 @@
                     return a
                 }
                 getAuthenticationConsentRequired() {
-                    return d
+                    return r
                 }
             }
-            r.displayName = "ConsentStore";
-            var u = new r(o.default, {
+            d.displayName = "ConsentStore";
+            var u = new d(o.default, {
                 CONNECTION_OPEN: function(e) {
                     let {
                         consents: t
@@ -44,9 +44,9 @@
                     }, l = !0
                 },
                 SET_CONSENT_REQUIRED: function(e) {
-                    d = e.consentRequired
+                    r = e.consentRequired
                 },
                 LOGOUT: function() {
-                    d = null
+                    r = null
                 }
             })

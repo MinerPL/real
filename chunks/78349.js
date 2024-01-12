@@ -4,23 +4,23 @@
                 if (!t) return null;
                 t.shift();
                 var n = null,
-                    i = [];
-                t[2] && (n = (l = t[2].split("-")).shift(), i = l);
-                var r = [];
-                t[5] && (r = t[5].split("-")).shift();
-                var s = [];
+                    r = [];
+                t[2] && (n = (o = t[2].split("-")).shift(), r = o);
+                var i = [];
+                t[5] && (i = t[5].split("-")).shift();
+                var l = [];
                 if (t[6]) {
-                    (l = t[6].split("-")).shift();
-                    for (var l, o, u = []; l.length;) {
-                        var a = l.shift();
-                        1 === a.length ? o ? (s.push({
-                            singleton: o,
-                            extension: u
-                        }), o = a, u = []) : o = a : u.push(a)
+                    (o = t[6].split("-")).shift();
+                    for (var o, s, a = []; o.length;) {
+                        var u = o.shift();
+                        1 === u.length ? s ? (l.push({
+                            singleton: s,
+                            extension: a
+                        }), s = u, a = []) : s = u : a.push(u)
                     }
-                    s.push({
-                        singleton: o,
-                        extension: u
+                    l.push({
+                        singleton: s,
+                        extension: a
                     })
                 }
                 var c = [];
@@ -30,12 +30,12 @@
                     langtag: {
                         language: {
                             language: n,
-                            extlang: i
+                            extlang: r
                         },
                         script: t[3] || null,
                         region: t[4] || null,
-                        variant: r,
-                        extension: s,
+                        variant: i,
+                        extension: l,
                         privateuse: c
                     },
                     privateuse: d,

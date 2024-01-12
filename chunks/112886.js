@@ -1,7 +1,7 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return y
+                    return O
                 }
             }), a("222007");
             var l = a("37983"),
@@ -145,7 +145,7 @@
                 })
             }
 
-            function y(e) {
+            function O(e) {
                 let {
                     guild: t,
                     isNewMember: a

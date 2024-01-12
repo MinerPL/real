@@ -1,23 +1,23 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return s
                 }
             }), n("702976");
-            var i, a = n("201876"),
-                l = n("56947"),
-                s = n("386045"),
-                r = n("584687"),
-                u = n("103979"),
-                o = n("845579"),
-                d = n("373469"),
-                c = n("42203"),
+            var s, i = n("201876"),
+                r = n("56947"),
+                a = n("386045"),
+                o = n("584687"),
+                d = n("103979"),
+                u = n("845579"),
+                l = n("373469"),
+                f = n("42203"),
                 _ = n("42887"),
-                E = n("590401"),
-                f = n("568307"),
-                h = n("568734"),
-                p = n("49111");
-            i = class extends a.default {
+                c = n("590401"),
+                g = n("568307"),
+                m = n("568734"),
+                h = n("49111");
+            s = class extends i.default {
                 get guildId() {
                     return this.getState().guildId
                 }
@@ -26,25 +26,25 @@
                 }
                 computeVoiceFlags() {
                     var e, t, n;
-                    let i = 0,
-                        a = o.ClipsAllowVoiceRecording.getSetting();
-                    i = (0, h.setFlag)(i, p.VoiceFlags.ALLOW_VOICE_RECORDING, a);
-                    let c = s.default.getSettings().clipsEnabled && (0, l.areClipsEnabled)() && ((null === (e = d.default.getCurrentUserActiveStream()) || void 0 === e ? void 0 : e.state) === p.ApplicationStreamStates.ACTIVE || (null === (t = d.default.getCurrentUserActiveStream()) || void 0 === t ? void 0 : t.state) === p.ApplicationStreamStates.PAUSED),
+                    let s = 0,
+                        i = u.ClipsAllowVoiceRecording.getSetting();
+                    s = (0, m.setFlag)(s, h.VoiceFlags.ALLOW_VOICE_RECORDING, i);
+                    let f = a.default.getSettings().clipsEnabled && (0, r.areClipsEnabled)() && ((null === (e = l.default.getCurrentUserActiveStream()) || void 0 === e ? void 0 : e.state) === h.ApplicationStreamStates.ACTIVE || (null === (t = l.default.getCurrentUserActiveStream()) || void 0 === t ? void 0 : t.state) === h.ApplicationStreamStates.PAUSED),
                         {
                             enableDecoupledGameClipping: _
-                        } = r.default.getCurrentConfig({
+                        } = o.default.getCurrentConfig({
                             location: "computeVoiceFlags"
                         }),
                         {
-                            enableViewerClipping: E
-                        } = u.default.getCurrentConfig({
+                            enableViewerClipping: c
+                        } = d.default.getCurrentConfig({
                             location: "computeVoiceFlags"
                         }, {
                             autoTrackExposure: !1
                         });
-                    E && (i = (0, h.setFlag)(i, p.VoiceFlags.ALLOW_ANY_VIEWER_CLIPS, s.default.getSettings().viewerClipsEnabled));
-                    let T = s.default.getSettings().decoupledClipsEnabled && (null === (n = f.default.getVisibleGame()) || void 0 === n ? void 0 : n.windowHandle) != null && _;
-                    return i = (0, h.setFlag)(i, p.VoiceFlags.CLIPS_ENABLED, c || T)
+                    c && (s = (0, m.setFlag)(s, h.VoiceFlags.ALLOW_ANY_VIEWER_CLIPS, a.default.getSettings().viewerClipsEnabled));
+                    let v = a.default.getSettings().decoupledClipsEnabled && (null === (n = g.default.getVisibleGame()) || void 0 === n ? void 0 : n.windowHandle) != null && _;
+                    return s = (0, m.setFlag)(s, h.VoiceFlags.CLIPS_ENABLED, f || v)
                 }
                 getInitialState() {
                     return {
@@ -69,7 +69,7 @@
                         selfMute: _.default.isSelfMute(),
                         selfDeaf: _.default.isSelfDeaf(),
                         selfVideo: _.default.isVideoEnabled(),
-                        preferredRegion: E.default.getPreferredRegion(),
+                        preferredRegion: c.default.getPreferredRegion(),
                         videoStreamParameters: _.default.getVideoStreamParameters(),
                         flags: this.computeVoiceFlags()
                     }
@@ -81,31 +81,31 @@
                     var t;
                     let {
                         guildId: n,
-                        channelId: i,
-                        selfMute: a,
-                        selfDeaf: l,
-                        selfVideo: s,
-                        preferredRegion: r,
-                        videoStreamParameters: u,
-                        flags: o = 0
+                        channelId: s,
+                        selfMute: i,
+                        selfDeaf: r,
+                        selfVideo: a,
+                        preferredRegion: o,
+                        videoStreamParameters: d,
+                        flags: u = 0
                     } = e;
-                    s && (null === (t = c.default.getChannel(i)) || void 0 === t ? void 0 : t.type) === p.ChannelTypes.GUILD_STAGE_VOICE ? this.socket.voiceStateUpdate({
+                    a && (null === (t = f.default.getChannel(s)) || void 0 === t ? void 0 : t.type) === h.ChannelTypes.GUILD_STAGE_VOICE ? this.socket.voiceStateUpdate({
                         guildId: n,
-                        channelId: i,
-                        selfMute: a,
-                        selfDeaf: l,
-                        selfVideo: s,
-                        preferredRegion: r,
-                        videoStreamParameters: u,
-                        flags: o
+                        channelId: s,
+                        selfMute: i,
+                        selfDeaf: r,
+                        selfVideo: a,
+                        preferredRegion: o,
+                        videoStreamParameters: d,
+                        flags: u
                     }) : this.socket.voiceStateUpdate({
                         guildId: n,
-                        channelId: i,
-                        selfMute: a,
-                        selfDeaf: l,
-                        selfVideo: s,
-                        preferredRegion: r,
-                        flags: o
+                        channelId: s,
+                        selfMute: i,
+                        selfDeaf: r,
+                        selfVideo: a,
+                        preferredRegion: o,
+                        flags: u
                     })
                 }
                 constructor(e) {

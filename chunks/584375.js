@@ -1,97 +1,97 @@
             "use strict";
             n.r(t), n.d(t, {
                 buildPlatformedThemedEmojiColorPalette: function() {
-                    return r
+                    return o
                 },
                 buildEmojiColorPalette: function() {
-                    return u
+                    return d
                 }
             });
-            var i = n("172182"),
-                a = n("284679"),
-                l = n("61069");
-            let s = e => {
+            var s = n("172182"),
+                i = n("284679"),
+                r = n("61069");
+            let a = e => {
                     var t, n;
                     let {
-                        colors: l,
-                        saturationFactor: s = 1
+                        colors: r,
+                        saturationFactor: a = 1
                     } = e;
-                    if (null == l || l.length < 1) return null;
-                    let r = (0, a.findColorByHsv)(l),
-                        u = i.default.parseString("#ffffff");
-                    if (null == u) return null;
-                    let o = i.default.parseString("#36393e");
-                    if (null == o) return null;
-                    let d = i.default.parseString(r);
+                    if (null == r || r.length < 1) return null;
+                    let o = (0, i.findColorByHsv)(r),
+                        d = s.default.parseString("#ffffff");
                     if (null == d) return null;
-                    let c = (0, a.rawRgbToHsl)(d.red, d.blue, d.green),
-                        _ = null !== (t = (0, a.getAccessibleColor)({
-                            colors: [(0, a.getColorLightnessAdjusted)(d, .6, !0), u],
+                    let u = s.default.parseString("#36393e");
+                    if (null == u) return null;
+                    let l = s.default.parseString(o);
+                    if (null == l) return null;
+                    let f = (0, i.rawRgbToHsl)(l.red, l.blue, l.green),
+                        _ = null !== (t = (0, i.getAccessibleColor)({
+                            colors: [(0, i.getColorLightnessAdjusted)(l, .6, !0), d],
                             ratio: 3,
-                            saturationFactor: s
-                        })) && void 0 !== t ? t : d,
-                        E = null !== (n = (0, a.getAccessibleColor)({
-                            colors: [(0, a.getColorLightnessAdjusted)(d, .6, !1), o],
+                            saturationFactor: a
+                        })) && void 0 !== t ? t : l,
+                        c = null !== (n = (0, i.getAccessibleColor)({
+                            colors: [(0, i.getColorLightnessAdjusted)(l, .6, !1), u],
                             ratio: 5,
-                            saturationFactor: s
-                        })) && void 0 !== n ? n : d,
-                        f = (0, a.getAccessibleColor)({
-                            colors: [d, u],
+                            saturationFactor: a
+                        })) && void 0 !== n ? n : l,
+                        g = (0, i.getAccessibleColor)({
+                            colors: [l, d],
                             ratio: 7,
-                            saturationFactor: s
+                            saturationFactor: a
                         }),
-                        h = (0, a.getAccessibleColor)({
-                            colors: [d, o],
+                        m = (0, i.getAccessibleColor)({
+                            colors: [l, u],
                             ratio: 7,
-                            saturationFactor: s
+                            saturationFactor: a
                         });
                     return {
                         LIGHT: {
-                            accentColor: null == f ? void 0 : f.toHexString(),
-                            backgroundColor: (0, a.getSaturatedColorHex)({
+                            accentColor: null == g ? void 0 : g.toHexString(),
+                            backgroundColor: (0, i.getSaturatedColorHex)({
                                 colorRGB: _,
-                                saturationFactor: s
+                                saturationFactor: a
                             }),
-                            highlightColor: null == d ? void 0 : d.toHexString(),
-                            opacity: (null == c ? void 0 : c.saturation) < .1 ? .35 : .1
+                            highlightColor: null == l ? void 0 : l.toHexString(),
+                            opacity: (null == f ? void 0 : f.saturation) < .1 ? .35 : .1
                         },
                         DARK: {
-                            accentColor: null == h ? void 0 : h.toHexString(),
-                            backgroundColor: (0, a.getSaturatedColorHex)({
-                                colorRGB: E,
-                                saturationFactor: s
+                            accentColor: null == m ? void 0 : m.toHexString(),
+                            backgroundColor: (0, i.getSaturatedColorHex)({
+                                colorRGB: c,
+                                saturationFactor: a
                             }),
-                            highlightColor: null == d ? void 0 : d.toHexString(),
-                            opacity: (null == c ? void 0 : c.saturation) < .1 ? .5 : .2
+                            highlightColor: null == l ? void 0 : l.toHexString(),
+                            opacity: (null == f ? void 0 : f.saturation) < .1 ? .5 : .2
                         }
                     }
                 },
-                r = e => {
+                o = e => {
                     let {
                         colors: t,
                         saturationFactor: n = 1,
-                        shouldProcessMobileColors: i = !1
-                    } = e, a = s({
+                        shouldProcessMobileColors: s = !1
+                    } = e, i = a({
                         colors: t,
                         saturationFactor: n
                     });
-                    return l.default.applyPlatformToThemedEmojiColorPalette({
-                        palette: a,
-                        shouldProcessMobileColors: i
+                    return r.default.applyPlatformToThemedEmojiColorPalette({
+                        palette: i,
+                        shouldProcessMobileColors: s
                     })
                 },
-                u = (e, t, n) => {
-                    var i;
+                d = (e, t, n) => {
+                    var s;
                     if (null == e || e.length < 1) return null;
-                    let a = r({
+                    let i = o({
                             colors: e,
                             saturationFactor: t
                         }),
-                        l = n ? null == a ? void 0 : a.DARK : null == a ? void 0 : a.LIGHT;
+                        r = n ? null == i ? void 0 : i.DARK : null == i ? void 0 : i.LIGHT;
                     return {
-                        backgroundColor: null == l ? void 0 : l.backgroundColor,
-                        accentColor: null == l ? void 0 : l.accentColor,
-                        highlightColor: null == l ? void 0 : l.highlightColor,
-                        opacity: null !== (i = null == l ? void 0 : l.opacity) && void 0 !== i ? i : .15
+                        backgroundColor: null == r ? void 0 : r.backgroundColor,
+                        accentColor: null == r ? void 0 : r.accentColor,
+                        highlightColor: null == r ? void 0 : r.highlightColor,
+                        opacity: null !== (s = null == r ? void 0 : r.opacity) && void 0 !== s ? s : .15
                     }
                 }

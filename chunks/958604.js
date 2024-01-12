@@ -1,72 +1,72 @@
-            var i = r("446825").Buffer,
-                n = r("839309"),
-                o = new(r("925197")),
-                a = new n(24),
-                s = new n(11),
-                f = new n(10),
-                h = new n(3),
-                c = new n(7),
-                u = r("240163"),
-                d = r("664813");
+            var r = s("446825").Buffer,
+                i = s("839309"),
+                n = new(s("925197")),
+                c = new i(24),
+                o = new i(11),
+                f = new i(10),
+                u = new i(3),
+                a = new i(7),
+                d = s("240163"),
+                p = s("664813");
 
-            function l(t, e) {
-                return e = e || "utf8", !i.isBuffer(t) && (t = new i(t, e)), this._pub = new n(t), this
+            function b(t, e) {
+                return e = e || "utf8", !r.isBuffer(t) && (t = new r(t, e)), this._pub = new i(t), this
             }
 
-            function p(t, e) {
-                return e = e || "utf8", !i.isBuffer(t) && (t = new i(t, e)), this._priv = new n(t), this
+            function h(t, e) {
+                return e = e || "utf8", !r.isBuffer(t) && (t = new r(t, e)), this._priv = new i(t), this
             }
-            t.exports = m;
-            var b = {};
+            t.exports = g;
+            var l = {};
 
-            function m(t, e, r) {
-                this.setGenerator(e), this.__prime = new n(t), this._prime = n.mont(this.__prime), this._primeLen = t.length, this._pub = void 0, this._priv = void 0, this._primeCode = void 0, r ? (this.setPublicKey = l, this.setPrivateKey = p) : this._primeCode = 8
+            function g(t, e, s) {
+                this.setGenerator(e), this.__prime = new i(t), this._prime = i.mont(this.__prime), this._primeLen = t.length, this._pub = void 0, this._priv = void 0, this._primeCode = void 0, s ? (this.setPublicKey = b, this.setPrivateKey = h) : this._primeCode = 8
             }
 
-            function g(t, e) {
-                var r = new i(t.toArray());
-                return e ? r.toString(e) : r
+            function v(t, e) {
+                var s = new r(t.toArray());
+                return e ? s.toString(e) : s
             }
-            Object.defineProperty(m.prototype, "verifyError", {
+            Object.defineProperty(g.prototype, "verifyError", {
                 enumerable: !0,
                 get: function() {
                     return "number" != typeof this._primeCode && (this._primeCode = function(t, e) {
-                        var r, i = e.toString("hex"),
-                            n = [i, t.toString(16)].join("_");
-                        if (n in b) return b[n];
-                        var d = 0;
-                        if (t.isEven() || !u.simpleSieve || !u.fermatTest(t) || !o.test(t)) return d += 1, "02" === i || "05" === i ? d += 8 : d += 4, b[n] = d, d;
-                        switch (!o.test(t.shrn(1)) && (d += 2), i) {
+                        var s, r = e.toString("hex"),
+                            i = [r, t.toString(16)].join("_");
+                        if (i in l) return l[i];
+                        var p = 0;
+                        if (t.isEven() || !d.simpleSieve || !d.fermatTest(t) || !n.test(t)) return p += 1, "02" === r || "05" === r ? p += 8 : p += 4, l[i] = p, p;
+                        switch (!n.test(t.shrn(1)) && (p += 2), r) {
                             case "02":
-                                t.mod(a).cmp(s) && (d += 8);
+                                t.mod(c).cmp(o) && (p += 8);
                                 break;
                             case "05":
-                                (r = t.mod(f)).cmp(h) && r.cmp(c) && (d += 8);
+                                (s = t.mod(f)).cmp(u) && s.cmp(a) && (p += 8);
                                 break;
                             default:
-                                d += 4
+                                p += 4
                         }
-                        return b[n] = d, d
+                        return l[i] = p, p
                     }(this.__prime, this.__gen)), this._primeCode
                 }
-            }), m.prototype.generateKeys = function() {
-                return !this._priv && (this._priv = new n(d(this._primeLen))), this._pub = this._gen.toRed(this._prime).redPow(this._priv).fromRed(), this.getPublicKey()
-            }, m.prototype.computeSecret = function(t) {
-                var e = new i((t = (t = new n(t)).toRed(this._prime)).redPow(this._priv).fromRed().toArray()),
-                    r = this.getPrime();
-                if (e.length < r.length) {
-                    var o = new i(r.length - e.length);
-                    o.fill(0), e = i.concat([o, e])
+            }), g.prototype.generateKeys = function() {
+                return !this._priv && (this._priv = new i(p(this._primeLen))), this._pub = this._gen.toRed(this._prime).redPow(this._priv).fromRed(), this.getPublicKey()
+            }, g.prototype.computeSecret = function(t) {
+                var e = new r((t = (t = new i(t)).toRed(this._prime)).redPow(this._priv).fromRed().toArray()),
+                    s = this.getPrime();
+                if (e.length < s.length) {
+                    var n = new r(s.length - e.length);
+                    n.fill(0), e = r.concat([n, e])
                 }
                 return e
-            }, m.prototype.getPublicKey = function(t) {
-                return g(this._pub, t)
-            }, m.prototype.getPrivateKey = function(t) {
-                return g(this._priv, t)
-            }, m.prototype.getPrime = function(t) {
-                return g(this.__prime, t)
-            }, m.prototype.getGenerator = function(t) {
-                return g(this._gen, t)
-            }, m.prototype.setGenerator = function(t, e) {
-                return e = e || "utf8", !i.isBuffer(t) && (t = new i(t, e)), this.__gen = t, this._gen = new n(t), this
+            }, g.prototype.getPublicKey = function(t) {
+                return v(this._pub, t)
+            }, g.prototype.getPrivateKey = function(t) {
+                return v(this._priv, t)
+            }, g.prototype.getPrime = function(t) {
+                return v(this.__prime, t)
+            }, g.prototype.getGenerator = function(t) {
+                return v(this._gen, t)
+            }, g.prototype.setGenerator = function(t, e) {
+                return e = e || "utf8", !r.isBuffer(t) && (t = new r(t, e)), this.__gen = t, this._gen = new i(t), this
             }

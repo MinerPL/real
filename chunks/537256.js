@@ -1,56 +1,56 @@
             "use strict";
-            var i = r("37549")("%TypeError%"),
-                n = r("504187"),
-                o = r("14328"),
-                a = r("737891"),
-                s = r("971043"),
-                f = r("701222"),
-                h = r("604050"),
-                c = r("769142"),
-                u = r("300344"),
-                d = r("6943"),
-                l = r("865435");
-            t.exports = function(t, e, r, p, b) {
-                var m, g, y = l(t);
-                if ("Undefined" !== y && "Object" !== y) throw new i("Assertion failed: O must be undefined or an Object");
-                if (!u(e)) throw new i("Assertion failed: P must be a Property Key");
-                if ("Boolean" !== l(r)) throw new i("Assertion failed: extensible must be a Boolean");
-                if (!a({
-                        Type: l,
-                        IsDataDescriptor: h,
+            var r = s("37549")("%TypeError%"),
+                i = s("504187"),
+                n = s("14328"),
+                c = s("737891"),
+                o = s("971043"),
+                f = s("701222"),
+                u = s("604050"),
+                a = s("769142"),
+                d = s("300344"),
+                p = s("6943"),
+                b = s("865435");
+            t.exports = function(t, e, s, h, l) {
+                var g, v, x = b(t);
+                if ("Undefined" !== x && "Object" !== x) throw new r("Assertion failed: O must be undefined or an Object");
+                if (!d(e)) throw new r("Assertion failed: P must be a Property Key");
+                if ("Boolean" !== b(s)) throw new r("Assertion failed: extensible must be a Boolean");
+                if (!c({
+                        Type: b,
+                        IsDataDescriptor: u,
                         IsAccessorDescriptor: f
-                    }, p)) throw new i("Assertion failed: Desc must be a Property Descriptor");
-                if ("Undefined" !== l(b) && !a({
-                        Type: l,
-                        IsDataDescriptor: h,
+                    }, h)) throw new r("Assertion failed: Desc must be a Property Descriptor");
+                if ("Undefined" !== b(l) && !c({
+                        Type: b,
+                        IsDataDescriptor: u,
                         IsAccessorDescriptor: f
-                    }, b)) throw new i("Assertion failed: current must be a Property Descriptor, or undefined");
-                if ("Undefined" === l(b)) return !!r && ("Undefined" === y || (f(p) ? n(h, d, s, t, e, p) : n(h, d, s, t, e, {
-                    "[[Configurable]]": !!p["[[Configurable]]"],
-                    "[[Enumerable]]": !!p["[[Enumerable]]"],
-                    "[[Value]]": p["[[Value]]"],
-                    "[[Writable]]": !!p["[[Writable]]"]
+                    }, l)) throw new r("Assertion failed: current must be a Property Descriptor, or undefined");
+                if ("Undefined" === b(l)) return !!s && ("Undefined" === x || (f(h) ? i(u, p, o, t, e, h) : i(u, p, o, t, e, {
+                    "[[Configurable]]": !!h["[[Configurable]]"],
+                    "[[Enumerable]]": !!h["[[Enumerable]]"],
+                    "[[Value]]": h["[[Value]]"],
+                    "[[Writable]]": !!h["[[Writable]]"]
                 })));
-                if (!o({
+                if (!n({
                         IsAccessorDescriptor: f,
-                        IsDataDescriptor: h
-                    }, b)) throw new i("`current`, when present, must be a fully populated and valid Property Descriptor");
-                if (!b["[[Configurable]]"]) {
-                    if ("[[Configurable]]" in p && p["[[Configurable]]"] || "[[Enumerable]]" in p && !d(p["[[Enumerable]]"], b["[[Enumerable]]"]) || !c(p) && !d(f(p), f(b))) return !1;
-                    if (f(b)) {
-                        if ("[[Get]]" in p && !d(p["[[Get]]"], b["[[Get]]"]) || "[[Set]]" in p && !d(p["[[Set]]"], b["[[Set]]"])) return !1
-                    } else if (!b["[[Writable]]"] && ("[[Writable]]" in p && p["[[Writable]]"] || "[[Value]]" in p && !d(p["[[Value]]"], b["[[Value]]"]))) return !1
+                        IsDataDescriptor: u
+                    }, l)) throw new r("`current`, when present, must be a fully populated and valid Property Descriptor");
+                if (!l["[[Configurable]]"]) {
+                    if ("[[Configurable]]" in h && h["[[Configurable]]"] || "[[Enumerable]]" in h && !p(h["[[Enumerable]]"], l["[[Enumerable]]"]) || !a(h) && !p(f(h), f(l))) return !1;
+                    if (f(l)) {
+                        if ("[[Get]]" in h && !p(h["[[Get]]"], l["[[Get]]"]) || "[[Set]]" in h && !p(h["[[Set]]"], l["[[Set]]"])) return !1
+                    } else if (!l["[[Writable]]"] && ("[[Writable]]" in h && h["[[Writable]]"] || "[[Value]]" in h && !p(h["[[Value]]"], l["[[Value]]"]))) return !1
                 }
-                if ("Undefined" !== y) return h(b) && f(p) ? (m = ("[[Configurable]]" in p ? p : b)["[[Configurable]]"], n(h, d, s, t, e, {
-                    "[[Configurable]]": !!m,
-                    "[[Enumerable]]": !!(g = ("[[Enumerable]]" in p ? p : b)["[[Enumerable]]"]),
-                    "[[Get]]": ("[[Get]]" in p ? p : b)["[[Get]]"],
-                    "[[Set]]": ("[[Set]]" in p ? p : b)["[[Set]]"]
-                })) : f(b) && h(p) ? (m = ("[[Configurable]]" in p ? p : b)["[[Configurable]]"], n(h, d, s, t, e, {
-                    "[[Configurable]]": !!m,
-                    "[[Enumerable]]": !!(g = ("[[Enumerable]]" in p ? p : b)["[[Enumerable]]"]),
-                    "[[Value]]": ("[[Value]]" in p ? p : b)["[[Value]]"],
-                    "[[Writable]]": !!("[[Writable]]" in p ? p : b)["[[Writable]]"]
-                })) : n(h, d, s, t, e, p);
+                if ("Undefined" !== x) return u(l) && f(h) ? (g = ("[[Configurable]]" in h ? h : l)["[[Configurable]]"], i(u, p, o, t, e, {
+                    "[[Configurable]]": !!g,
+                    "[[Enumerable]]": !!(v = ("[[Enumerable]]" in h ? h : l)["[[Enumerable]]"]),
+                    "[[Get]]": ("[[Get]]" in h ? h : l)["[[Get]]"],
+                    "[[Set]]": ("[[Set]]" in h ? h : l)["[[Set]]"]
+                })) : f(l) && u(h) ? (g = ("[[Configurable]]" in h ? h : l)["[[Configurable]]"], i(u, p, o, t, e, {
+                    "[[Configurable]]": !!g,
+                    "[[Enumerable]]": !!(v = ("[[Enumerable]]" in h ? h : l)["[[Enumerable]]"]),
+                    "[[Value]]": ("[[Value]]" in h ? h : l)["[[Value]]"],
+                    "[[Writable]]": !!("[[Writable]]" in h ? h : l)["[[Writable]]"]
+                })) : i(u, p, o, t, e, h);
                 return !0
             }

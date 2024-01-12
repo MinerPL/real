@@ -1,38 +1,38 @@
             "use strict";
-            var i = r("463483"),
-                n = r("599235"),
-                o = {};
+            var r = s("463483"),
+                i = s("599235"),
+                n = {};
 
-            function a(t) {
-                i.equal(t.length, 8, "Invalid IV length"), this.iv = Array(8);
+            function c(t) {
+                r.equal(t.length, 8, "Invalid IV length"), this.iv = Array(8);
                 for (var e = 0; e < this.iv.length; e++) this.iv[e] = t[e]
             }
             e.instantiate = function(t) {
                 function e(e) {
                     t.call(this, e), this._cbcInit()
                 }
-                n(e, t);
-                for (var r = Object.keys(o), i = 0; i < r.length; i++) {
-                    var a = r[i];
-                    e.prototype[a] = o[a]
+                i(e, t);
+                for (var s = Object.keys(n), r = 0; r < s.length; r++) {
+                    var c = s[r];
+                    e.prototype[c] = n[c]
                 }
                 return e.create = function(t) {
                     return new e(t)
                 }, e
-            }, o._cbcInit = function() {
-                var t = new a(this.options.iv);
+            }, n._cbcInit = function() {
+                var t = new c(this.options.iv);
                 this._cbcState = t
-            }, o._update = function(t, e, r, i) {
-                var n = this._cbcState,
-                    o = this.constructor.super_.prototype,
-                    a = n.iv;
+            }, n._update = function(t, e, s, r) {
+                var i = this._cbcState,
+                    n = this.constructor.super_.prototype,
+                    c = i.iv;
                 if ("encrypt" === this.type) {
-                    for (var s = 0; s < this.blockSize; s++) a[s] ^= t[e + s];
-                    o._update.call(this, a, 0, r, i);
-                    for (var s = 0; s < this.blockSize; s++) a[s] = r[i + s]
+                    for (var o = 0; o < this.blockSize; o++) c[o] ^= t[e + o];
+                    n._update.call(this, c, 0, s, r);
+                    for (var o = 0; o < this.blockSize; o++) c[o] = s[r + o]
                 } else {
-                    o._update.call(this, t, e, r, i);
-                    for (var s = 0; s < this.blockSize; s++) r[i + s] ^= a[s];
-                    for (var s = 0; s < this.blockSize; s++) a[s] = t[e + s]
+                    n._update.call(this, t, e, s, r);
+                    for (var o = 0; o < this.blockSize; o++) s[r + o] ^= c[o];
+                    for (var o = 0; o < this.blockSize; o++) c[o] = t[e + o]
                 }
             }

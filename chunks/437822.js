@@ -5,13 +5,13 @@
                     return o
                 },
                 default: function() {
-                    return v
+                    return y
                 }
             }), n("70102"), n("860677"), n("506083");
             var o, l, a = n("759843"),
                 i = n("171718"),
-                d = n("872717"),
-                r = n("95410"),
+                r = n("872717"),
+                d = n("95410"),
                 u = n("913144"),
                 c = n("448993"),
                 E = n("307439"),
@@ -19,8 +19,8 @@
                 p = n("21121"),
                 f = n("776502"),
                 h = n("393414"),
-                A = n("271938"),
-                S = n("350522"),
+                S = n("271938"),
+                A = n("350522"),
                 O = n("840707"),
                 I = n("772017"),
                 N = n("49111"),
@@ -39,13 +39,13 @@
                 })
             }
 
-            function y() {
+            function v() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : N.Routes.DEFAULT_LOGGED_OUT;
                 R();
                 let t = (0, p.getRootNavigationRefIfInExperiment)();
                 null != e && (null != t ? (I.default.popAll(), t.navigate("auth")) : (0, h.transitionTo)(e))
             }(l = o || (o = {})).MFA = "MFA", l.SUCCESS = "SUCCESS";
-            var v = {
+            var y = {
                 startSession(e) {
                     u.default.wait(() => {
                         u.default.dispatch({
@@ -69,8 +69,8 @@
                         loginCode: o,
                         undelete: l,
                         source: i,
-                        giftCodeSKUId: d,
-                        invite: r,
+                        giftCodeSKUId: r,
+                        invite: d,
                         isMultiAccount: E
                     } = e;
                     u.default.dispatch({
@@ -85,14 +85,14 @@
                             undelete: l,
                             login_code: o,
                             login_source: i,
-                            gift_code_sku_id: d
+                            gift_code_sku_id: r
                         },
                         retries: 2,
                         oldFormErrors: !0,
                         trackedActionData: {
                             event: a.NetworkActionNames.USER_LOGIN,
                             properties: {
-                                invite_code: null == r ? void 0 : r.code,
+                                invite_code: null == d ? void 0 : d.code,
                                 is_multi_account: E
                             }
                         },
@@ -111,20 +111,20 @@
                                 token: l,
                                 backup: a,
                                 user_id: i,
-                                required_actions: d,
-                                totp: r
+                                required_actions: r,
+                                totp: d
                             }
                         } = e;
                         u.default.dispatch({
                             type: "LOGIN_ATTEMPTED",
                             user_id: i,
-                            required_actions: d
+                            required_actions: r
                         }), t ? u.default.dispatch({
                             type: "LOGIN_MFA_STEP",
                             ticket: o,
                             sms: n,
                             webauthn: s,
-                            totp: r,
+                            totp: d,
                             backup: a
                         }) : E ? this.switchAccountToken(l) : u.default.dispatch({
                             type: "LOGIN_SUCCESS",
@@ -160,9 +160,9 @@
                         source: o,
                         giftCodeSKUId: l,
                         isMultiAccount: i,
-                        mfaType: d
+                        mfaType: r
                     } = e;
-                    return t = "webauthn" === d ? N.Endpoints.LOGIN_WEBAUTHN : "sms" === d ? N.Endpoints.LOGIN_SMS : N.Endpoints.LOGIN_MFA, O.default.post({
+                    return t = "webauthn" === r ? N.Endpoints.LOGIN_WEBAUTHN : "sms" === r ? N.Endpoints.LOGIN_SMS : N.Endpoints.LOGIN_MFA, O.default.post({
                         url: t,
                         body: {
                             code: n,
@@ -182,7 +182,7 @@
                         })
                     }).catch(e => {
                         var t;
-                        if ((null === (t = e.body) || void 0 === t ? void 0 : t.code) === N.AbortCodes.MFA_INVALID_CODE) throw Error((0, f.mapError)(d));
+                        if ((null === (t = e.body) || void 0 === t ? void 0 : t.code) === N.AbortCodes.MFA_INVALID_CODE) throw Error((0, f.mapError)(r));
                         throw e
                     })
                 },
@@ -221,9 +221,9 @@
                         url: N.Endpoints.LOGOUT,
                         body: {
                             provider: (0, C.getDevicePushProvider)(),
-                            token: r.default.get(N.DEVICE_TOKEN),
+                            token: d.default.get(N.DEVICE_TOKEN),
                             voip_provider: C.DEVICE_PUSH_VOIP_PROVIDER,
-                            voip_token: r.default.get(N.DEVICE_VOIP_TOKEN)
+                            voip_token: d.default.get(N.DEVICE_VOIP_TOKEN)
                         },
                         oldFormErrors: !0,
                         trackedActionData: {
@@ -235,12 +235,12 @@
                             }
                         }
                     }).finally(() => {
-                        (null == n || n === A.default.getId()) && y(t)
+                        (null == n || n === S.default.getId()) && v(t)
                     })
                 },
                 switchAccountToken(e) {
                     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                        n = A.default.getToken();
+                        n = S.default.getToken();
                     m.log("Switching accounts", {
                         wasLoggedIn: null != n,
                         tokenHasChanged: e !== n
@@ -248,7 +248,7 @@
                         isSwitchingAccount: !0
                     });
                     let s = this.loginToken(e, !0).then(() => {
-                        let t = A.default.getToken();
+                        let t = S.default.getToken();
                         m.log("Switched accounts finished", {
                             isCorrectToken: e === t
                         })
@@ -257,10 +257,10 @@
                 },
                 verifySSOToken() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : N.Routes.DEFAULT_LOGGED_OUT;
-                    return d.default.get({
+                    return r.default.get({
                         url: N.Endpoints.ME,
                         oldFormErrors: !0
-                    }).catch(() => y(e))
+                    }).catch(() => v(e))
                 },
                 verify(e) {
                     null != e ? O.default.post({
@@ -353,10 +353,10 @@
                             password: t,
                             source: n
                         },
-                        o = r.default.get(N.DEVICE_TOKEN),
+                        o = d.default.get(N.DEVICE_TOKEN),
                         l = (0, C.getDevicePushProvider)();
                     null != l && null != o && (s.push_provider = l, s.push_token = o);
-                    let i = r.default.get(N.DEVICE_VOIP_TOKEN);
+                    let i = d.default.get(N.DEVICE_VOIP_TOKEN);
                     null != C.DEVICE_PUSH_VOIP_PROVIDER && null != i && (s.push_voip_provider = C.DEVICE_PUSH_VOIP_PROVIDER, s.push_voip_token = i);
                     try {
                         let {
@@ -367,7 +367,7 @@
                                 ticket: o,
                                 token: l,
                                 backup: i,
-                                totp: d
+                                totp: r
                             }
                         } = await O.default.post({
                             url: N.Endpoints.RESET_PASSWORD,
@@ -384,7 +384,7 @@
                             ticket: o,
                             token: l,
                             backup: i,
-                            totp: d
+                            totp: r
                         }
                     } catch (e) {
                         throw u.default.dispatch({
@@ -405,7 +405,7 @@
                     u.default.dispatch({
                         type: "LOGIN_MFA"
                     });
-                    let d = await O.default.post({
+                    let r = await O.default.post({
                         url: N.Endpoints.RESET_PASSWORD,
                         body: {
                             code: n,
@@ -423,7 +423,7 @@
                             }
                         }
                     });
-                    return d.body.token
+                    return r.body.token
                 },
                 async forgotPassword(e) {
                     this.setLoginCredentials(e), u.default.dispatch({
@@ -470,13 +470,13 @@
                         type: "SET_CONSENT_REQUIRED",
                         consentRequired: !0
                     })
-                }, 5e3), T = d.default.get({
+                }, 5e3), T = r.default.get({
                     url: N.Endpoints.AUTH_LOCATION_METADATA,
                     retries: 2,
                     oldFormErrors: !0
                 }).then(e => {
                     var t, n, o, l, a;
-                    if (clearTimeout(s), null == S.default.getAuthenticationConsentRequired()) {
+                    if (clearTimeout(s), null == A.default.getAuthenticationConsentRequired()) {
                         let t = null === (l = null == e ? void 0 : null === (o = e.body) || void 0 === o ? void 0 : o.consent_required) || void 0 === l || l;
                         u.default.dispatch({
                             type: "SET_CONSENT_REQUIRED",

@@ -122,7 +122,7 @@
                 })
             }
 
-            function y(e) {
+            function O(e) {
                 let {
                     selectedRating: t,
                     setSelectedRating: a,
@@ -160,7 +160,7 @@
                 })
             }
 
-            function O(e) {
+            function y(e) {
                 var t;
                 let {
                     selectedRating: a,
@@ -231,11 +231,11 @@
                     isAnimating: S,
                     useReducedMotion: C
                 } = (0, c.useGuildFeedFeedback)(e);
-                return x ? (a = !1, t = (0, l.jsx)(H, {})) : null == n || h || S ? (a = !1, t = (0, l.jsx)(y, {
+                return x ? (a = !1, t = (0, l.jsx)(H, {})) : null == n || h || S ? (a = !1, t = (0, l.jsx)(O, {
                     disableAnimation: h || C,
                     selectedRating: n,
                     setSelectedRating: s
-                })) : (a = !0, t = (0, l.jsx)(O, {
+                })) : (a = !0, t = (0, l.jsx)(y, {
                     selectedRating: n,
                     selectedReasons: d,
                     onSelectedReasons: r,

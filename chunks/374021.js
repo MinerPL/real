@@ -1,60 +1,60 @@
             "use strict";
             n.r(t), n.d(t, {
                 openGuildEventDetails: function() {
-                    return u
+                    return d
                 },
                 transitionToEventDetailsFromInvite: function() {
-                    return o
+                    return u
                 },
                 openEndEventModal: function() {
-                    return d
+                    return l
                 }
             });
-            var i = n("37983");
+            var s = n("37983");
             n("884691");
-            var a = n("551042"),
-                l = n("851387"),
-                s = n("49111"),
-                r = n("625611");
+            var i = n("551042"),
+                r = n("851387"),
+                a = n("49111"),
+                o = n("625611");
 
-            function u(e) {
+            function d(e) {
                 let {
                     eventId: t,
-                    parentGuildId: l,
-                    recurrenceId: s
+                    parentGuildId: r,
+                    recurrenceId: a
                 } = e;
-                (0, a.openModalLazy)(async () => {
+                (0, i.openModalLazy)(async () => {
                     let {
                         default: e
                     } = await n.el("833843").then(n.bind(n, "833843"));
-                    return n => (0, i.jsx)(e, {
+                    return n => (0, s.jsx)(e, {
                         guildScheduledEventId: t,
-                        parentGuildId: l,
-                        initialRecurrenceId: s,
+                        parentGuildId: r,
+                        initialRecurrenceId: a,
                         ...n
                     })
                 })
             }
-            async function o(e, t) {
+            async function u(e, t) {
                 let {
                     guild_id: n
                 } = e;
-                await l.default.transitionToGuildSync(n, t), u({
+                await r.default.transitionToGuildSync(n, t), d({
                     eventId: e.id,
                     event: e
                 })
             }
 
-            function d(e, t) {
-                (0, a.openModalLazy)(async () => {
+            function l(e, t) {
+                (0, i.openModalLazy)(async () => {
                     let {
                         default: t
                     } = await n.el("203811").then(n.bind(n, "203811"));
-                    return n => (0, i.jsx)(t, {
+                    return n => (0, s.jsx)(t, {
                         ...n,
                         channel: e
                     })
                 }, {
-                    contextKey: t === s.AppContext.POPOUT ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT
+                    contextKey: t === a.AppContext.POPOUT ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT
                 })
             }

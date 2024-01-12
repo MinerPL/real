@@ -1,7 +1,7 @@
             "use strict";
-            var i, a;
+            var s, i;
             n.r(t), n.d(t, {
                 ConsoleHandoffType: function() {
-                    return i
+                    return s
                 }
-            }), n("222007"), (a = i || (i = {})).TRANSFER_EXISTING_CALL = "TRANSFER_EXISTING_CALL", a.CREATE_NEW_CALL = "CREATE_NEW_CALL"
+            }), n("222007"), (i = s || (s = {})).TRANSFER_EXISTING_CALL = "TRANSFER_EXISTING_CALL", i.CREATE_NEW_CALL = "CREATE_NEW_CALL"

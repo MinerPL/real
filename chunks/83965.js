@@ -1,62 +1,62 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return d
                 }
             }), n("222007");
-            var r = n("37983"),
-                u = n("884691"),
-                s = n("77078"),
-                a = n("476765"),
-                o = n("143460"),
-                c = n("782340"),
-                i = n("280930");
+            var s = n("37983"),
+                a = n("884691"),
+                o = n("77078"),
+                r = n("476765"),
+                l = n("143460"),
+                i = n("782340"),
+                u = n("280930");
 
-            function l(e) {
+            function d(e) {
                 let {
                     initialCustomMessage: t,
                     onSubmit: n,
-                    onClose: l,
-                    transitionState: d
-                } = e, f = (0, a.useUID)(), [_, M] = u.useState(t);
-                return (0, r.jsxs)(s.ModalRoot, {
-                    transitionState: d,
-                    "aria-labelledby": f,
-                    size: s.ModalSize.SMALL,
-                    children: [(0, r.jsxs)(s.ModalContent, {
-                        className: i.actionContentContainer,
-                        children: [(0, r.jsx)(s.Heading, {
-                            id: f,
+                    onClose: d,
+                    transitionState: c
+                } = e, _ = (0, r.useUID)(), [M, A] = a.useState(t);
+                return (0, s.jsxs)(o.ModalRoot, {
+                    transitionState: c,
+                    "aria-labelledby": _,
+                    size: o.ModalSize.SMALL,
+                    children: [(0, s.jsxs)(o.ModalContent, {
+                        className: u.actionContentContainer,
+                        children: [(0, s.jsx)(o.Heading, {
+                            id: _,
                             color: "header-primary",
                             variant: "heading-md/semibold",
-                            className: i.header,
-                            children: c.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_MODAL_TITLE
-                        }), (0, r.jsx)(s.Text, {
+                            className: u.header,
+                            children: i.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_MODAL_TITLE
+                        }), (0, s.jsx)(o.Text, {
                             color: "header-secondary",
                             variant: "text-sm/normal",
-                            children: c.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_MODAL_DESCRIPTION
-                        }), (0, r.jsx)(s.TextArea, {
-                            className: i.customMessageTextArea,
-                            placeholder: c.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_MODAL_CUSTOM_MESSAGE_PLACEHOLDER,
-                            value: _,
-                            onChange: M,
-                            maxLength: o.MAX_BLOCK_ACTION_CUSTOM_MESSAGE_LENGTH
+                            children: i.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_MODAL_DESCRIPTION
+                        }), (0, s.jsx)(o.TextArea, {
+                            className: u.customMessageTextArea,
+                            placeholder: i.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_MODAL_CUSTOM_MESSAGE_PLACEHOLDER,
+                            value: M,
+                            onChange: A,
+                            maxLength: l.MAX_BLOCK_ACTION_CUSTOM_MESSAGE_LENGTH
                         })]
-                    }), (0, r.jsxs)(s.ModalFooter, {
-                        children: [(0, r.jsx)(s.Button, {
+                    }), (0, s.jsxs)(o.ModalFooter, {
+                        children: [(0, s.jsx)(o.Button, {
                             onClick: () => {
-                                n(_)
+                                n(M)
                             },
-                            color: s.Button.Colors.BRAND,
-                            size: s.Button.Sizes.SMALL,
-                            children: c.default.Messages.EDIT
-                        }), (0, r.jsx)(s.Button, {
+                            color: o.Button.Colors.BRAND,
+                            size: o.Button.Sizes.SMALL,
+                            children: i.default.Messages.EDIT
+                        }), (0, s.jsx)(o.Button, {
                             onClick: () => {
-                                l()
+                                d()
                             },
-                            color: s.Button.Colors.TRANSPARENT,
-                            look: s.Button.Looks.LINK,
-                            children: c.default.Messages.CANCEL
+                            color: o.Button.Colors.TRANSPARENT,
+                            look: o.Button.Looks.LINK,
+                            children: i.default.Messages.CANCEL
                         })]
                     })]
                 })

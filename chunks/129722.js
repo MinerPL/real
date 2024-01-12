@@ -5,9 +5,9 @@
                 }
             });
             var i = n("308503"),
-                r = n("16470"),
-                l = n("859971");
-            let s = (0, i.default)(e => ({
+                l = n("16470"),
+                s = n("859971");
+            let r = (0, i.default)(e => ({
                 audio: null,
                 file: null,
                 loading: !1,
@@ -17,7 +17,7 @@
                             audio: null,
                             loading: null != t
                         }), null == t) return;
-                    let n = await (0, l.loadAudioFromFile)(t);
+                    let n = await (0, s.loadAudioFromFile)(t);
                     null != n && e({
                         audio: n,
                         loading: !1
@@ -32,12 +32,12 @@
             }));
 
             function a() {
-                return s(e => ({
+                return r(e => ({
                     audio: e.audio,
                     file: e.file,
                     loading: e.loading,
                     loadAudioFromFile: e.loadAudioFromFile,
                     maxVolume: e.maxVolume,
                     setMaxVolume: e.setMaxVolume
-                }), r.default)
+                }), l.default)
             }

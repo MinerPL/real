@@ -1,7 +1,7 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return y
+                    return O
                 }
             }), a("222007");
             var l = a("37983"),
@@ -55,12 +55,12 @@
                     })
                 });
 
-            function y(e) {
+            function O(e) {
                 var t, a;
                 let {
                     guild: s,
                     width: m
-                } = e, g = (0, d.default)([E.default], () => E.default.getSection(M.StaticChannelRoute.GUILD_HOME)), [F, y] = n.useState(!1), [O, H] = n.useState(j.DEFAULT_CHAT_SIDEBAR_WIDTH), k = g === j.ChannelSections.SIDEBAR_CHAT, U = (0, r.useFocusJumpSection)(), w = (0, d.default)([x.default], () => x.default.getSettings(s.id)), B = null == w ? void 0 : w.welcomeMessage, P = (0, S.default)(s.id), V = !P && (null !== (a = null == w ? void 0 : null === (t = w.resourceChannels) || void 0 === t ? void 0 : t.length) && void 0 !== a ? a : 0) === 0, W = (0, o.default)(D.COLLAPSED_SIZE_MEDIA_QUERY), K = m - j.CHANNEL_SIDEBAR_WIDTH - O, z = k && K < b || W || V;
+                } = e, g = (0, d.default)([E.default], () => E.default.getSection(M.StaticChannelRoute.GUILD_HOME)), [F, O] = n.useState(!1), [y, H] = n.useState(j.DEFAULT_CHAT_SIDEBAR_WIDTH), k = g === j.ChannelSections.SIDEBAR_CHAT, U = (0, r.useFocusJumpSection)(), w = (0, d.default)([x.default], () => x.default.getSettings(s.id)), B = null == w ? void 0 : w.welcomeMessage, P = (0, S.default)(s.id), V = !P && (null !== (a = null == w ? void 0 : null === (t = w.resourceChannels) || void 0 === t ? void 0 : t.length) && void 0 !== a ? a : 0) === 0, W = (0, o.default)(D.COLLAPSED_SIZE_MEDIA_QUERY), K = m - j.CHANNEL_SIDEBAR_WIDTH - y, z = k && K < b || W || V;
                 return (n.useEffect(() => {
                     if (w === x.NO_SETTINGS)(0, _.fetchGuildHomeSettings)(s.id);
                     else if (null != w) {
@@ -119,7 +119,7 @@
                     }), k ? (0, l.jsx)(C.default, {
                         pageWidth: m,
                         onSidebarResize: (e, t) => {
-                            y(t), H(e)
+                            O(t), H(e)
                         }
                     }) : null]
                 })

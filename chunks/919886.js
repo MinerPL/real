@@ -1,21 +1,21 @@
             "use strict";
-            r("70102"), e.randomBytes = e.rng = e.pseudoRandomBytes = e.prng = r("664813"), e.createHash = e.Hash = r("488274"), e.createHmac = e.Hmac = r("145755");
-            var i = ["sha1", "sha224", "sha256", "sha384", "sha512", "md5", "rmd160"].concat(Object.keys(r("617169")));
+            s("70102"), e.randomBytes = e.rng = e.pseudoRandomBytes = e.prng = s("664813"), e.createHash = e.Hash = s("488274"), e.createHmac = e.Hmac = s("145755");
+            var r = ["sha1", "sha224", "sha256", "sha384", "sha512", "md5", "rmd160"].concat(Object.keys(s("617169")));
             e.getHashes = function() {
-                return i
+                return r
             };
-            var n = r("560422");
-            e.pbkdf2 = n.pbkdf2, e.pbkdf2Sync = n.pbkdf2Sync;
-            var o = r("148300");
-            e.Cipher = o.Cipher, e.createCipher = o.createCipher, e.Cipheriv = o.Cipheriv, e.createCipheriv = o.createCipheriv, e.Decipher = o.Decipher, e.createDecipher = o.createDecipher, e.Decipheriv = o.Decipheriv, e.createDecipheriv = o.createDecipheriv, e.getCiphers = o.getCiphers, e.listCiphers = o.listCiphers;
-            var a = r("624815");
-            e.DiffieHellmanGroup = a.DiffieHellmanGroup, e.createDiffieHellmanGroup = a.createDiffieHellmanGroup, e.getDiffieHellman = a.getDiffieHellman, e.createDiffieHellman = a.createDiffieHellman, e.DiffieHellman = a.DiffieHellman;
-            var s = r("318882");
-            e.createSign = s.createSign, e.Sign = s.Sign, e.createVerify = s.createVerify, e.Verify = s.Verify, e.createECDH = r("162172");
-            var f = r("588534");
+            var i = s("560422");
+            e.pbkdf2 = i.pbkdf2, e.pbkdf2Sync = i.pbkdf2Sync;
+            var n = s("148300");
+            e.Cipher = n.Cipher, e.createCipher = n.createCipher, e.Cipheriv = n.Cipheriv, e.createCipheriv = n.createCipheriv, e.Decipher = n.Decipher, e.createDecipher = n.createDecipher, e.Decipheriv = n.Decipheriv, e.createDecipheriv = n.createDecipheriv, e.getCiphers = n.getCiphers, e.listCiphers = n.listCiphers;
+            var c = s("624815");
+            e.DiffieHellmanGroup = c.DiffieHellmanGroup, e.createDiffieHellmanGroup = c.createDiffieHellmanGroup, e.getDiffieHellman = c.getDiffieHellman, e.createDiffieHellman = c.createDiffieHellman, e.DiffieHellman = c.DiffieHellman;
+            var o = s("318882");
+            e.createSign = o.createSign, e.Sign = o.Sign, e.createVerify = o.createVerify, e.Verify = o.Verify, e.createECDH = s("162172");
+            var f = s("588534");
             e.publicEncrypt = f.publicEncrypt, e.privateEncrypt = f.privateEncrypt, e.publicDecrypt = f.publicDecrypt, e.privateDecrypt = f.privateDecrypt;
-            var h = r("307334");
-            e.randomFill = h.randomFill, e.randomFillSync = h.randomFillSync, e.createCredentials = function() {
+            var u = s("307334");
+            e.randomFill = u.randomFill, e.randomFillSync = u.randomFillSync, e.createCredentials = function() {
                 throw Error("sorry, createCredentials is not implemented yet\nwe accept pull requests\nhttps://github.com/crypto-browserify/crypto-browserify")
             }, e.constants = {
                 DH_CHECK_P_NOT_SAFE_PRIME: 2,

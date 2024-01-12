@@ -1,60 +1,60 @@
             "use strict";
-            n.r(s), n.d(s, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return f
                 }
             }), n("222007"), n("781738");
-            var i = n("895547"),
-                r = n("315102"),
-                o = n("284679"),
-                t = n("103603"),
-                a = n("261742");
-            let f = new Set(["™", "™️", "\xa9", "\xa9️", "\xae", "\xae️"]);
+            var s = n("895547"),
+                i = n("315102"),
+                r = n("284679"),
+                a = n("103603"),
+                o = n("261742");
+            let d = new Set(["™", "™️", "\xa9", "\xa9️", "\xae", "\xae️"]);
 
-            function _(e) {
-                if (f.has(e)) return "";
+            function u(e) {
+                if (d.has(e)) return "";
                 try {
-                    let s = 0 > e.indexOf("‍") ? e.replace("️", "") : e;
-                    return n("331246")("@discordapp/twemoji/dist/svg/".concat(i.default.convert.toCodePoint(s), ".svg").replace("@discordapp/twemoji/dist/svg/", "./"))
-                } catch (s) {
-                    return console.warn(s, "no emoji for", e), ""
+                    let t = 0 > e.indexOf("‍") ? e.replace("️", "") : e;
+                    return n("331246")("@discordapp/twemoji/dist/svg/".concat(s.default.convert.toCodePoint(t), ".svg").replace("@discordapp/twemoji/dist/svg/", "./"))
+                } catch (t) {
+                    return console.warn(t, "no emoji for", e), ""
                 }
             }
-            async function d(e) {
-                let s;
+            async function l(e) {
+                let t;
                 let {
                     id: n,
-                    name: i
+                    name: s
                 } = e;
-                s = null != n ? r.default.getEmojiURL({
+                t = null != n ? i.default.getEmojiURL({
                     id: n,
                     size: 32,
                     animated: !1
-                }) : _(i);
-                let a = await (0, t.getPaletteForAvatar)(s);
-                return null == a ? void 0 : a.map(e => {
-                    let [s, n, i] = e;
-                    return (0, o.rgbToHex)(s, n, i)
+                }) : u(s);
+                let o = await (0, a.getPaletteForAvatar)(t);
+                return null == o ? void 0 : o.map(e => {
+                    let [t, n, s] = e;
+                    return (0, r.rgbToHex)(t, n, s)
                 })
             }
-            var u = {
-                getURL: a.default.makeMemoizer(_),
+            var f = {
+                getURL: o.default.makeMemoizer(u),
                 filterUnsupportedEmojis: function(e) {
                     return e
                 },
                 applyPlatformToThemedEmojiColorPalette: function(e) {
                     let {
-                        palette: s,
+                        palette: t,
                         shouldProcessMobileColors: n = !1
                     } = e;
-                    return s
+                    return t
                 },
-                getEmojiColors: d,
+                getEmojiColors: l,
                 triggerFullscreenAnimation: function(e) {
                     let {
-                        channelId: s,
+                        channelId: t,
                         messageId: n,
-                        emoji: i
+                        emoji: s
                     } = e
                 }
             }

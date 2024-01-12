@@ -1,2 +1,2 @@
             "use strict";
-            e.der = r("246305"), e.pem = r("33023")
+            e.der = s("246305"), e.pem = s("33023")

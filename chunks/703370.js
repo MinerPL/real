@@ -1,28 +1,28 @@
             "use strict";
-            let i;
+            let s;
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return u
                 }
             });
-            var a = n("446674"),
-                l = n("913144"),
-                s = n("546463"),
-                r = n("568307");
-            class u extends a.default.Store {
+            var i = n("446674"),
+                r = n("913144"),
+                a = n("546463"),
+                o = n("568307");
+            class d extends i.default.Store {
                 getGameForPID(e) {
                     var t;
                     if (__OVERLAY__ || null == e) return null;
-                    let n = null === (t = r.default.getGameForPID(e)) || void 0 === t ? void 0 : t.name;
-                    return s.default.getGameByName(n)
+                    let n = null === (t = o.default.getGameForPID(e)) || void 0 === t ? void 0 : t.name;
+                    return a.default.getGameByName(n)
                 }
                 getGame() {
-                    return __OVERLAY__ ? i : null
+                    return __OVERLAY__ ? s : null
                 }
             }
-            u.displayName = "OverlayRunningGameStore";
-            var o = new u(l.default, {
+            d.displayName = "OverlayRunningGameStore";
+            var u = new d(r.default, {
                 OVERLAY_INITIALIZE: function(e) {
-                    i = e.currentGame
+                    s = e.currentGame
                 }
             })

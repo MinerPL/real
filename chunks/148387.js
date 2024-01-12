@@ -10,10 +10,10 @@
             var l, i, r = n("450911"),
                 s = n("819689"),
                 a = n("605250"),
-                o = n("42203"),
-                u = n("231987");
+                u = n("42203"),
+                o = n("231987");
             (l = i || (i = {}))[l.GROUP_DM = 0] = "GROUP_DM", l[l.USER = 1] = "USER", l[l.CHANNEL = 2] = "CHANNEL";
-            class d extends u.default {
+            class d extends o.default {
                 _sendInvite(e, t, n, l, i) {
                     s.default.sendInvite(e.id, t, n, l).then(() => i(null, !0), () => i(null, !1))
                 }
@@ -29,7 +29,7 @@
                             break;
                         case 1:
                             r.default.ensurePrivateChannel(e.user.id).then(i => {
-                                let r = o.default.getChannel(i);
+                                let r = u.default.getChannel(i);
                                 null != r && this._sendInvite(r, e.inviteKey, n, l, t)
                             }, () => t(null, !1))
                     }

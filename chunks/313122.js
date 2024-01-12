@@ -1,9 +1,9 @@
             "use strict";
-            t.exports = function(t, e, r, i) {
-                for (var n = 65535 & t | 0, o = t >>> 16 & 65535 | 0, a = 0; 0 !== r;) {
-                    a = r > 2e3 ? 2e3 : r, r -= a;
-                    do o = o + (n = n + e[i++] | 0) | 0; while (--a);
-                    n %= 65521, o %= 65521
+            t.exports = function(t, e, s, r) {
+                for (var i = 65535 & t | 0, n = t >>> 16 & 65535 | 0, c = 0; 0 !== s;) {
+                    c = s > 2e3 ? 2e3 : s, s -= c;
+                    do n = n + (i = i + e[r++] | 0) | 0; while (--c);
+                    i %= 65521, n %= 65521
                 }
-                return n | o << 16 | 0
+                return i | n << 16 | 0
             }

@@ -1,13 +1,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return a
                 }
             });
-            var i = n("376556"),
-                a = n("49111"),
-                l = n("450484");
+            var s = n("376556"),
+                i = n("49111"),
+                r = n("450484");
 
-            function s(e) {
-                return null != e && e.type === a.ActivityTypes.LISTENING && e.name === i.default.get(a.PlatformTypes.SPOTIFY).name && null != e.party && null != e.party.id && (0, l.isSpotifyParty)(e.party.id)
+            function a(e) {
+                return null != e && e.type === i.ActivityTypes.LISTENING && e.name === s.default.get(i.PlatformTypes.SPOTIFY).name && null != e.party && null != e.party.id && (0, r.isSpotifyParty)(e.party.id)
             }

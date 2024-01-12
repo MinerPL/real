@@ -1,8 +1,8 @@
             "use strict";
-            var i = r("37549"),
-                n = i("%String%"),
-                o = i("%TypeError%");
+            var r = s("37549"),
+                i = r("%String%"),
+                n = r("%TypeError%");
             t.exports = function(t) {
-                if ("symbol" == typeof t) throw new o("Cannot convert a Symbol value to a string");
-                return n(t)
+                if ("symbol" == typeof t) throw new n("Cannot convert a Symbol value to a string");
+                return i(t)
             }

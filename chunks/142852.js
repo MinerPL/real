@@ -1,40 +1,40 @@
             "use strict";
             n.r(t), n.d(t, {
                 UploadTargets: function() {
-                    return a
+                    return i
                 },
                 getUploadTarget: function() {
-                    return c
+                    return f
                 }
             });
-            var i, a, l = n("572679"),
-                s = n("42203"),
-                r = n("254490"),
-                u = n("980134"),
-                o = n("49111");
-            class d {
+            var s, i, r = n("572679"),
+                a = n("42203"),
+                o = n("254490"),
+                d = n("980134"),
+                u = n("49111");
+            class l {
                 getCreateAttachmentURL(e) {
-                    return o.Endpoints.MESSAGE_CREATE_ATTACHMENT_UPLOAD(e)
+                    return u.Endpoints.MESSAGE_CREATE_ATTACHMENT_UPLOAD(e)
                 }
                 getDeleteUploadURL(e) {
-                    return o.Endpoints.MESSAGE_DELETE_UPLOAD(e)
+                    return u.Endpoints.MESSAGE_DELETE_UPLOAD(e)
                 }
                 getMaxFileSize(e) {
-                    let t = s.default.getBasicChannel(e);
-                    return r.maxFileSize(null == t ? void 0 : t.guild_id)
+                    let t = a.default.getBasicChannel(e);
+                    return o.maxFileSize(null == t ? void 0 : t.guild_id)
                 }
                 getMaxAttachmentsCount() {
-                    return o.MAX_UPLOAD_COUNT
+                    return u.MAX_UPLOAD_COUNT
                 }
                 getMaxTotalAttachmentSize() {
-                    return u.MAX_TOTAL_ATTACHMENT_SIZE
+                    return d.MAX_TOTAL_ATTACHMENT_SIZE
                 }
                 get shouldReactNativeCompressUploads() {
                     return !0
                 }
             }
 
-            function c(e) {
-                if (1 === e) return new l.default;
-                return new d
-            }(i = a || (a = {}))[i.MESSAGE_ATTACHMENT = 0] = "MESSAGE_ATTACHMENT", i[i.GUILD_PRODUCT_ATTACHMENT = 1] = "GUILD_PRODUCT_ATTACHMENT"
+            function f(e) {
+                if (1 === e) return new r.default;
+                return new l
+            }(s = i || (i = {}))[s.MESSAGE_ATTACHMENT = 0] = "MESSAGE_ATTACHMENT", s[s.GUILD_PRODUCT_ATTACHMENT = 1] = "GUILD_PRODUCT_ATTACHMENT"

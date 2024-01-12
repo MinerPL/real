@@ -1,19 +1,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 MAX_CACHE_AGE_MS: function() {
-                    return i
+                    return s
                 },
                 CACHE_VERSION: function() {
-                    return a
+                    return i
                 },
                 getDefaultState: function() {
-                    return l
+                    return r
                 }
             });
-            let i = 2592e6,
-                a = "stable-50";
+            let s = 2592e6,
+                i = "stable-50";
 
-            function l() {
+            function r() {
                 return {
                     nonce: "",
                     useGuildVersions: !1,
@@ -21,7 +21,7 @@
                     readStateVersion: 0,
                     userGuildSettingsVersion: -1,
                     userSettingsVersion: -1,
-                    version: a,
+                    version: i,
                     cacheCreationDate: null,
                     privateChannelsVersion: "0",
                     apiCodeVersion: 0,

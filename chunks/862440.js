@@ -1,11 +1,11 @@
             "use strict";
-            var i = r("256311"),
-                n = r("14055"),
-                o = r("903280"),
-                a = r("979332");
+            var r = s("256311"),
+                i = s("14055"),
+                n = s("903280"),
+                c = s("979332");
             t.exports = function(t) {
-                var e = n(t);
-                if (!a(e) || 0 === e) return 0;
-                var r = i(o(e), 4294967296);
-                return 0 === r ? 0 : r
+                var e = i(t);
+                if (!c(e) || 0 === e) return 0;
+                var s = r(n(e), 4294967296);
+                return 0 === s ? 0 : s
             }

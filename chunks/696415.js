@@ -1,23 +1,23 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return r
                 }
             });
-            var i = n("862205"),
-                a = n("970254"),
-                l = (0, i.createExperiment)({
+            var s = n("862205"),
+                i = n("970254"),
+                r = (0, s.createExperiment)({
                     kind: "guild",
                     id: "2023-09_user_apps_guild",
                     label: "Allow user app commands",
                     defaultConfig: {
-                        userAppsTreatment: a.UserAppsTreatment.DEFAULT
+                        userAppsTreatment: i.UserAppsTreatment.DEFAULT
                     },
                     treatments: [{
                         id: 1,
                         label: "Allow user app commands",
                         config: {
-                            userAppsTreatment: a.UserAppsTreatment.ALLOWED
+                            userAppsTreatment: i.UserAppsTreatment.ALLOWED
                         }
                     }]
                 })

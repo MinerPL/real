@@ -1,15 +1,15 @@
             "use strict";
             n.r(t), n.d(t, {
                 UserAppsTreatment: function() {
-                    return a
+                    return i
                 },
                 default: function() {
-                    return s
+                    return a
                 }
             });
-            var i, a, l = n("862205");
-            (i = a || (a = {})).ALLOWED = "allowed", i.DEFAULT = "default";
-            var s = (0, l.createExperiment)({
+            var s, i, r = n("862205");
+            (s = i || (i = {})).ALLOWED = "allowed", s.DEFAULT = "default";
+            var a = (0, r.createExperiment)({
                 kind: "user",
                 id: "2023-08_user_apps",
                 label: "Allow user app commands",

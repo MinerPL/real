@@ -1,32 +1,32 @@
             "use strict";
-            var i = r("555671"),
-                n = r("256385"),
-                o = r("408109"),
-                a = i.rotl32,
-                s = i.sum32,
-                f = i.sum32_5,
-                h = o.ft_1,
-                c = n.BlockHash,
-                u = [1518500249, 1859775393, 2400959708, 3395469782];
+            var r = s("555671"),
+                i = s("256385"),
+                n = s("408109"),
+                c = r.rotl32,
+                o = r.sum32,
+                f = r.sum32_5,
+                u = n.ft_1,
+                a = i.BlockHash,
+                d = [1518500249, 1859775393, 2400959708, 3395469782];
 
-            function d() {
-                if (!(this instanceof d)) return new d;
-                c.call(this), this.h = [1732584193, 4023233417, 2562383102, 271733878, 3285377520], this.W = Array(80)
+            function p() {
+                if (!(this instanceof p)) return new p;
+                a.call(this), this.h = [1732584193, 4023233417, 2562383102, 271733878, 3285377520], this.W = Array(80)
             }
-            i.inherits(d, c), t.exports = d, d.blockSize = 512, d.outSize = 160, d.hmacStrength = 80, d.padLength = 64, d.prototype._update = function(t, e) {
-                for (var r = this.W, i = 0; i < 16; i++) r[i] = t[e + i];
-                for (; i < r.length; i++) r[i] = a(r[i - 3] ^ r[i - 8] ^ r[i - 14] ^ r[i - 16], 1);
-                var n = this.h[0],
-                    o = this.h[1],
-                    c = this.h[2],
-                    d = this.h[3],
-                    l = this.h[4];
-                for (i = 0; i < r.length; i++) {
-                    var p = ~~(i / 20),
-                        b = f(a(n, 5), h(p, o, c, d), l, r[i], u[p]);
-                    l = d, d = c, c = a(o, 30), o = n, n = b
+            r.inherits(p, a), t.exports = p, p.blockSize = 512, p.outSize = 160, p.hmacStrength = 80, p.padLength = 64, p.prototype._update = function(t, e) {
+                for (var s = this.W, r = 0; r < 16; r++) s[r] = t[e + r];
+                for (; r < s.length; r++) s[r] = c(s[r - 3] ^ s[r - 8] ^ s[r - 14] ^ s[r - 16], 1);
+                var i = this.h[0],
+                    n = this.h[1],
+                    a = this.h[2],
+                    p = this.h[3],
+                    b = this.h[4];
+                for (r = 0; r < s.length; r++) {
+                    var h = ~~(r / 20),
+                        l = f(c(i, 5), u(h, n, a, p), b, s[r], d[h]);
+                    b = p, p = a, a = c(n, 30), n = i, i = l
                 }
-                this.h[0] = s(this.h[0], n), this.h[1] = s(this.h[1], o), this.h[2] = s(this.h[2], c), this.h[3] = s(this.h[3], d), this.h[4] = s(this.h[4], l)
-            }, d.prototype._digest = function(t) {
-                return "hex" === t ? i.toHex32(this.h, "big") : i.split32(this.h, "big")
+                this.h[0] = o(this.h[0], i), this.h[1] = o(this.h[1], n), this.h[2] = o(this.h[2], a), this.h[3] = o(this.h[3], p), this.h[4] = o(this.h[4], b)
+            }, p.prototype._digest = function(t) {
+                return "hex" === t ? r.toHex32(this.h, "big") : r.split32(this.h, "big")
             }

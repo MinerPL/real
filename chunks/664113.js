@@ -5,23 +5,23 @@
                 }
             });
             var i = n("37983"),
-                r = n("884691"),
-                l = n("77078"),
-                s = n("460029"),
+                l = n("884691"),
+                s = n("77078"),
+                r = n("460029"),
                 a = n("129722"),
                 o = n("723961"),
                 u = n("782340"),
                 d = n("341479"),
-                c = r.memo(function(e) {
+                c = l.memo(function(e) {
                     let {
                         sound: t,
                         volume: n,
-                        disabled: r = !1,
+                        disabled: l = !1,
                         onChange: c
                     } = e, {
                         file: f
                     } = (0, a.useAudioTrimmerStore)();
-                    return (0, i.jsx)(l.FormSection, {
+                    return (0, i.jsx)(s.FormSection, {
                         className: d.section,
                         title: u.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_PREVIEW,
                         children: (0, i.jsxs)("div", {
@@ -29,11 +29,11 @@
                             children: [null != t && (0, i.jsx)(o.default, {
                                 sound: t,
                                 volume: n,
-                                disabled: r
-                            }), null == t && null != f && (0, i.jsx)(s.default, {
+                                disabled: l
+                            }), null == t && null != f && (0, i.jsx)(r.default, {
                                 className: d.audioTrimmer,
                                 volume: n,
-                                disabled: r,
+                                disabled: l,
                                 onChange: c
                             })]
                         })

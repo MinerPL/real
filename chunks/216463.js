@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 InstantInviteGuestPage: function() {
-                    return I
+                    return m
                 }
             }), n("808653");
             var l = n("37983"),
@@ -9,18 +9,18 @@
                 r = n("414456"),
                 s = n.n(r),
                 a = n("77078"),
-                o = n("155996"),
-                u = n("41594"),
+                u = n("155996"),
+                o = n("41594"),
                 d = n("652453"),
                 c = n("782340"),
                 f = n("435808"),
-                E = n("926622");
-            let _ = e => {
+                h = n("926622");
+            let g = e => {
                     let {
                         guild: t,
                         inviteChannel: n,
                         setInviteChannel: r
-                    } = e, s = (0, o.default)(t.id), d = i.useMemo(() => s.reduce((e, t) => ({
+                    } = e, s = (0, u.default)(t.id), d = i.useMemo(() => s.reduce((e, t) => ({
                         ...e,
                         [t.id]: t
                     }), {}), [s]), f = i.useMemo(() => Object.values(d).map(e => ({
@@ -38,14 +38,14 @@
                             if (null == e) return null;
                             let n = e.value,
                                 i = d[n];
-                            return null == i ? null : (0, l.jsx)(u.ChannelItemIcon, {
+                            return null == i ? null : (0, l.jsx)(o.ChannelItemIcon, {
                                 channel: i,
                                 guild: t
                             })
                         }
                     })
                 },
-                I = e => {
+                m = e => {
                     let {
                         handleDone: t,
                         headerId: n,
@@ -62,7 +62,7 @@
                                 children: (0, l.jsx)(a.FormTitle, {
                                     id: n,
                                     tag: "h2",
-                                    className: s(E.marginReset, f.headerCloseButtonSpacing, f.headerText),
+                                    className: s(h.marginReset, f.headerCloseButtonSpacing, f.headerText),
                                     children: c.default.Messages.INVITE_A_GUEST_VOICE_ONLY
                                 })
                             })]
@@ -79,7 +79,7 @@
                                     tag: "h5",
                                     className: f.guestSelectChannelHeader,
                                     children: c.default.Messages.INVITE_A_GUEST_STEP_1
-                                }), (0, l.jsx)(_, {
+                                }), (0, l.jsx)(g, {
                                     ...e
                                 }), (0, l.jsx)(a.FormTitle, {
                                     tag: "h5",

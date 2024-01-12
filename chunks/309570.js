@@ -1,11 +1,11 @@
             "use strict";
-            n.r(e), n.d(e, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return i
                 }
             });
-            var l = n("49111");
+            var s = n("49111");
 
-            function u(t) {
-                return null != t && t.type !== l.ActivityTypes.CUSTOM_STATUS && (null != t.details || null != t.assets && (null != t.assets.large_image || null != t.assets.small_text) || null != t.party || null != t.secrets || null != t.state)
+            function i(e) {
+                return null != e && e.type !== s.ActivityTypes.CUSTOM_STATUS && (null != e.details || null != e.assets && (null != e.assets.large_image || null != e.assets.small_text) || null != e.party || null != e.secrets || null != e.state)
             }

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return o
                 }
             });
             var l = n("37983"),
@@ -9,17 +9,17 @@
                 r = n("414456"),
                 s = n.n(r),
                 a = n("77078"),
-                o = n("374665");
+                u = n("374665");
 
-            function u(e) {
+            function o(e) {
                 let {
                     children: t,
                     "aria-label": n,
                     className: r,
-                    position: u
+                    position: o
                 } = e, d = i.useRef(null), c = null != n ? n : "string" == typeof t && t;
                 return (0, l.jsx)(a.Tooltip, {
-                    position: null != u ? u : "top",
+                    position: null != o ? o : "top",
                     delay: 500,
                     text: t,
                     "aria-label": c,
@@ -29,7 +29,7 @@
                             onMouseLeave: a
                         } = n;
                         return (0, l.jsx)("div", {
-                            className: s(r, o.overflow),
+                            className: s(r, u.overflow),
                             ref: d,
                             "aria-hidden": e["aria-hidden"],
                             onMouseEnter: () => {

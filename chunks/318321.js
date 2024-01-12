@@ -7,10 +7,10 @@
                     return S
                 },
                 getForumPostDraftNumAttachments: function() {
-                    return v
+                    return M
                 },
                 getForumPostDraftAppliedTagIds: function() {
-                    return M
+                    return v
                 },
                 getNumActiveThreads: function() {
                     return C
@@ -55,11 +55,11 @@
                 }
             }
 
-            function v(e) {
+            function M(e) {
                 return _.default.getUploads(e, d.DraftType.FirstThreadMessage).length
             }
 
-            function M(e) {
+            function v(e) {
                 var t, n;
                 let i = o.default.getChannel(e);
                 if (null == i) return [];

@@ -1,21 +1,21 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return o
                 }
             }), n("222007");
-            var i = n("605250"),
-                a = n("305961"),
-                l = n("802493");
-            let s = new i.default("GuildVersions");
-            var r = new class e {
+            var s = n("605250"),
+                i = n("305961"),
+                r = n("802493");
+            let a = new s.default("GuildVersions");
+            var o = new class e {
                 getCommittedVersions() {
                     try {
                         var e, t;
-                        let n = null === (t = l.default.versions()) || void 0 === t ? void 0 : null === (e = t.getManySyncUnsafe()) || void 0 === e ? void 0 : e.map(e => [e.id, e.version]);
+                        let n = null === (t = r.default.versions()) || void 0 === t ? void 0 : null === (e = t.getManySyncUnsafe()) || void 0 === e ? void 0 : e.map(e => [e.id, e.version]);
                         return new Map(null != n ? n : [])
                     } catch (e) {
-                        return s.warn("couldn't load guild versions", e), new Map
+                        return a.warn("couldn't load guild versions", e), new Map
                     }
                 }
                 pause(e) {
@@ -29,7 +29,7 @@
                     this.deleteWith(e), this.commit(t)
                 }
                 handleBackgroundSync(e, t) {
-                    for (let n of e.guilds) "unavailable" !== n.data_mode && this.updateWith(n.id, [n]), null == a.default.getGuild(n.id) && this.remove(n.id, t);
+                    for (let n of e.guilds) "unavailable" !== n.data_mode && this.updateWith(n.id, [n]), null == i.default.getGuild(n.id) && this.remove(n.id, t);
                     this.commit(t)
                 }
                 handleConnectionOpen(e, t) {
@@ -38,14 +38,14 @@
                 }
                 handleGuildCreate(e, t) {
                     var n;
-                    let i = e.guild,
-                        a = e.guild.id;
-                    this.updateWith(a, [i]), this.updateWith(a, i.emojis), this.updateWith(a, i.stickers), this.updateWith(a, i.channels), this.updateWith(a, null === (n = i.channelUpdates) || void 0 === n ? void 0 : n.writes), this.updateWith(a, Array.isArray(i.roles) ? i.roles : Object.values(i.roles)), this.commit(t)
+                    let s = e.guild,
+                        i = e.guild.id;
+                    this.updateWith(i, [s]), this.updateWith(i, s.emojis), this.updateWith(i, s.stickers), this.updateWith(i, s.channels), this.updateWith(i, null === (n = s.channelUpdates) || void 0 === n ? void 0 : n.writes), this.updateWith(i, Array.isArray(s.roles) ? s.roles : Object.values(s.roles)), this.commit(t)
                 }
                 handleGuildUpdate(e, t) {
                     let n = e.guild,
-                        i = e.guild.id;
-                    this.updateWith(i, [n]), this.updateWith(i, n.emojis), this.updateWith(i, n.stickers), this.updateWith(i, Array.isArray(n.roles) ? n.roles : Object.values(n.roles)), this.commit(t)
+                        s = e.guild.id;
+                    this.updateWith(s, [n]), this.updateWith(s, n.emojis), this.updateWith(s, n.stickers), this.updateWith(s, Array.isArray(n.roles) ? n.roles : Object.values(n.roles)), this.commit(t)
                 }
                 handleGuildDelete(e, t) {
                     this.deleteWith(e.guild.id), this.commit(t)
@@ -75,7 +75,7 @@
                     null != e.channel.guild_id && this.updateWith(e.channel.guild_id, [e.channel]), this.commit(t)
                 }
                 handleClearGuildCache(e) {
-                    this.reset(), l.default.versionsTransaction(e).delete()
+                    this.reset(), r.default.versionsTransaction(e).delete()
                 }
                 handleReset() {
                     this.reset()
@@ -88,23 +88,23 @@
                 }
                 updateWith(e, t) {
                     if (null != t) {
-                        var n, i;
-                        let a = Math.max(null !== (n = this.committed.get(e)) && void 0 !== n ? n : 0, null !== (i = this.pending.get(e)) && void 0 !== i ? i : 0),
-                            l = this.computeLatestVersion(a, t);
-                        l > a && this.pending.set(e, l)
+                        var n, s;
+                        let i = Math.max(null !== (n = this.committed.get(e)) && void 0 !== n ? n : 0, null !== (s = this.pending.get(e)) && void 0 !== s ? s : 0),
+                            r = this.computeLatestVersion(i, t);
+                        r > i && this.pending.set(e, r)
                     }
                 }
                 computeLatestVersion(e, t) {
                     let n = e;
                     for (let e of t) {
-                        var i;
-                        n = Math.max(n, null !== (i = e.version) && void 0 !== i ? i : 0)
+                        var s;
+                        n = Math.max(n, null !== (s = e.version) && void 0 !== s ? s : 0)
                     }
                     return n
                 }
                 commit(e) {
                     if (this.pending.size > 0 && 0 === this.pauseTokens.size) {
-                        let t = l.default.versionsTransaction(e);
+                        let t = r.default.versionsTransaction(e);
                         for (let [e, n] of this.pending) null != n ? (t.put({
                             id: e,
                             version: n

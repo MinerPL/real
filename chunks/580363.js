@@ -1,91 +1,91 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return T
                 }
             }), n("702976"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
-            var i = n("37983");
+            var s = n("37983");
             n("884691");
-            var a = n("414456"),
-                l = n.n(a),
-                s = n("577776"),
-                r = n("841811"),
-                u = n("338835"),
-                o = n("83900"),
-                d = n("45029"),
-                c = n("71216"),
+            var i = n("414456"),
+                r = n.n(i),
+                a = n("577776"),
+                o = n("841811"),
+                d = n("338835"),
+                u = n("83900"),
+                l = n("45029"),
+                f = n("71216"),
                 _ = n("148337"),
-                E = n("568734"),
-                f = n("299039"),
-                h = n("955145"),
-                p = n("29479"),
-                T = n("49111"),
-                C = n("843455"),
-                m = n("782340"),
-                S = n("413973");
+                c = n("568734"),
+                g = n("299039"),
+                m = n("955145"),
+                h = n("29479"),
+                v = n("49111"),
+                E = n("843455"),
+                p = n("782340"),
+                y = n("413973");
 
-            function I(e) {
+            function T(e) {
                 var t;
                 let n, {
-                        application: a,
-                        scopes: l,
-                        redirectUri: s,
-                        approximateGuildCount: I,
-                        isEmbeddedFlow: A,
-                        embeddedActivityConfig: N
+                        application: i,
+                        scopes: r,
+                        redirectUri: a,
+                        approximateGuildCount: T,
+                        isEmbeddedFlow: S,
+                        embeddedActivityConfig: I
                     } = e,
-                    O = new Date(f.default.extractTimestamp(a.id)),
-                    R = (0, p.getSecurityMessage)(l),
-                    y = (0, E.hasFlag)(null !== (t = a.flags) && void 0 !== t ? t : 0, T.ApplicationFlags.EMBEDDED);
-                if (null != s && !y && !A) {
-                    let e = new URL(s);
+                    A = new Date(g.default.extractTimestamp(i.id)),
+                    D = (0, h.getSecurityMessage)(r),
+                    N = (0, c.hasFlag)(null !== (t = i.flags) && void 0 !== t ? t : 0, v.ApplicationFlags.EMBEDDED);
+                if (null != a && !N && !S) {
+                    let e = new URL(a);
                     n = null != e.host && e.host.length > 0 ? e.origin : e.href
                 }
-                return (0, i.jsxs)("div", {
-                    className: S.applicationDetails,
-                    children: [null != n ? (0, i.jsx)(g, {
-                        className: S.redirectWarning,
-                        icon: o.default,
-                        text: m.default.Messages.OAUTH2_DETAILS_REDIRECT.format({
+                return (0, s.jsxs)("div", {
+                    className: y.applicationDetails,
+                    children: [null != n ? (0, s.jsx)(C, {
+                        className: y.redirectWarning,
+                        icon: u.default,
+                        text: p.default.Messages.OAUTH2_DETAILS_REDIRECT.format({
                             origin: n
                         })
-                    }) : null, (0, i.jsx)(g, {
-                        icon: d.default,
-                        text: (0, h.getApplicationDetailsText)(a)
-                    }), (0, i.jsx)(g, {
-                        icon: r.default,
-                        text: m.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
-                            date: O
+                    }) : null, (0, s.jsx)(C, {
+                        icon: l.default,
+                        text: (0, m.getApplicationDetailsText)(i)
+                    }), (0, s.jsx)(C, {
+                        icon: o.default,
+                        text: p.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
+                            date: A
                         })
-                    }), l.includes(C.OAuth2Scopes.BOT) && null != I ? (0, i.jsx)(g, {
-                        icon: c.default,
-                        text: m.default.Messages.OAUTH2_DETAILS_GUILDS.format({
-                            guildCount: I
+                    }), r.includes(E.OAuth2Scopes.BOT) && null != T ? (0, s.jsx)(C, {
+                        icon: f.default,
+                        text: p.default.Messages.OAUTH2_DETAILS_GUILDS.format({
+                            guildCount: T
                         })
-                    }) : null, (0, i.jsx)(g, {
+                    }) : null, (0, s.jsx)(C, {
                         icon: _.default,
-                        text: R
-                    }), (null == N ? void 0 : N.has_csp_exception) ? (0, i.jsx)(g, {
-                        icon: u.default,
-                        text: m.default.Messages.OAUTH2_SCOPES_IP_LOCATION_SCOPE
+                        text: D
+                    }), (null == I ? void 0 : I.has_csp_exception) ? (0, s.jsx)(C, {
+                        icon: d.default,
+                        text: p.default.Messages.OAUTH2_SCOPES_IP_LOCATION_SCOPE
                     }) : null]
                 })
             }
 
-            function g(e) {
+            function C(e) {
                 let {
                     icon: t,
                     text: n,
-                    className: a
+                    className: i
                 } = e;
-                return (0, i.jsxs)("div", {
-                    className: l(S.entry, a),
-                    children: [(0, i.jsx)(t, {
-                        className: S.entryIcon
-                    }), (0, i.jsx)(s.Text, {
+                return (0, s.jsxs)("div", {
+                    className: r(y.entry, i),
+                    children: [(0, s.jsx)(t, {
+                        className: y.entryIcon
+                    }), (0, s.jsx)(a.Text, {
                         variant: "text-xs/medium",
                         color: "text-muted",
-                        className: S.entryInner,
+                        className: y.entryInner,
                         children: n
                     })]
                 })

@@ -1,26 +1,26 @@
             "use strict";
-            var i = r("37549")("%TypeError%"),
-                n = r("737891"),
-                o = r("504187"),
-                a = r("971043"),
-                s = r("701222"),
-                f = r("604050"),
-                h = r("300344"),
-                c = r("6943"),
-                u = r("552302"),
-                d = r("865435");
-            t.exports = function(t, e, r) {
-                if ("Object" !== d(t)) throw new i("Assertion failed: Type(O) is not Object");
-                if (!h(e)) throw new i("Assertion failed: IsPropertyKey(P) is not true");
-                var l = n({
-                    Type: d,
+            var r = s("37549")("%TypeError%"),
+                i = s("737891"),
+                n = s("504187"),
+                c = s("971043"),
+                o = s("701222"),
+                f = s("604050"),
+                u = s("300344"),
+                a = s("6943"),
+                d = s("552302"),
+                p = s("865435");
+            t.exports = function(t, e, s) {
+                if ("Object" !== p(t)) throw new r("Assertion failed: Type(O) is not Object");
+                if (!u(e)) throw new r("Assertion failed: IsPropertyKey(P) is not true");
+                var b = i({
+                    Type: p,
                     IsDataDescriptor: f,
-                    IsAccessorDescriptor: s
-                }, r) ? r : u(r);
-                if (!n({
-                        Type: d,
+                    IsAccessorDescriptor: o
+                }, s) ? s : d(s);
+                if (!i({
+                        Type: p,
                         IsDataDescriptor: f,
-                        IsAccessorDescriptor: s
-                    }, l)) throw new i("Assertion failed: Desc is not a valid Property Descriptor");
-                return o(f, c, a, t, e, l)
+                        IsAccessorDescriptor: o
+                    }, b)) throw new r("Assertion failed: Desc is not a valid Property Descriptor");
+                return n(f, a, c, t, e, b)
             }

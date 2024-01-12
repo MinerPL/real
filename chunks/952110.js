@@ -1,10 +1,10 @@
             "use strict";
-            n.r(s), n.d(s, {
+            n.r(t), n.d(t, {
                 emojiTermsImporter: function() {
-                    return i
+                    return s
                 }
             });
-            let i = {
+            let s = {
                 bg: () => n.el("326778").then(n.t.bind(n, "326778", 19)),
                 cs: () => n.el("838264").then(n.t.bind(n, "838264", 19)),
                 da: () => n.el("573975").then(n.t.bind(n, "573975", 19)),

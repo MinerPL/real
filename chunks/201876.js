@@ -1,12 +1,12 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return s
                 }
             }), n("222007");
-            var i, a = n("714617"),
-                l = n.n(a);
-            i = class {
+            var s, i = n("714617"),
+                r = n.n(i);
+            s = class {
                 shouldCommit() {
                     return !0
                 }
@@ -29,9 +29,9 @@
                             ...this.state,
                             ...e
                         });
-                    if (t) this.dirty = !l(n, this.getInitialState());
+                    if (t) this.dirty = !r(n, this.getInitialState());
                     else
-                        for (let e of Object.keys(n)) this.dirty = this.dirty || !l(this.state[e], n[e]);
+                        for (let e of Object.keys(n)) this.dirty = this.dirty || !r(this.state[e], n[e]);
                     return this.state = n, !!(this.dirty && this.shouldCommit()) && (this.dirty = !1, this.didCommit(this.state), !0)
                 }
                 forceUpdate() {

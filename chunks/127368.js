@@ -1,8 +1,8 @@
-            r("70102");
-            var i = r("912065").Buffer;
-            t.exports = function(t, e, r) {
-                if (i.isBuffer(t)) return t;
-                if ("string" == typeof t) return i.from(t, e);
-                if (ArrayBuffer.isView(t)) return i.from(t.buffer);
-                else throw TypeError(r + " must be a string, a Buffer, a typed array or a DataView")
+            s("70102");
+            var r = s("912065").Buffer;
+            t.exports = function(t, e, s) {
+                if (r.isBuffer(t)) return t;
+                if ("string" == typeof t) return r.from(t, e);
+                if (ArrayBuffer.isView(t)) return r.from(t.buffer);
+                else throw TypeError(s + " must be a string, a Buffer, a typed array or a DataView")
             }

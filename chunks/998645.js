@@ -1,12 +1,12 @@
             "use strict";
-            var i = r("812095"),
-                n = r("37549"),
-                o = r("179056"),
-                a = i("RegExp.prototype.exec"),
-                s = n("%TypeError%");
+            var r = s("812095"),
+                i = s("37549"),
+                n = s("179056"),
+                c = r("RegExp.prototype.exec"),
+                o = i("%TypeError%");
             t.exports = function(t) {
-                if (!o(t)) throw new s("`regex` must be a RegExp");
+                if (!n(t)) throw new o("`regex` must be a RegExp");
                 return function(e) {
-                    return null !== a(t, e)
+                    return null !== c(t, e)
                 }
             }

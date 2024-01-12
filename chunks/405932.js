@@ -7,20 +7,20 @@
             var r = n("37983");
             n("884691");
             var i = n("225389"),
-                o = n("77078"),
-                l = n("135898"),
+                l = n("77078"),
+                o = n("135898"),
                 s = function(e) {
                     let {
                         message: t
                     } = e;
                     return (0, r.jsxs)("div", {
-                        className: l.container,
+                        className: o.container,
                         children: [(0, r.jsx)(i.CircleInformationIcon, {
-                            className: l.icon,
+                            className: o.icon,
                             width: 20,
                             height: 20,
-                            color: o.tokens.colors.TEXT_WARNING
-                        }), (0, r.jsx)(o.Text, {
+                            color: l.tokens.colors.TEXT_WARNING
+                        }), (0, r.jsx)(l.Text, {
                             variant: "text-sm/normal",
                             color: "header-muted",
                             children: t

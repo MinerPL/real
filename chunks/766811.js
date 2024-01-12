@@ -1,36 +1,36 @@
             "use strict";
-            r("70102");
-            var i = Object.getOwnPropertySymbols,
-                n = Object.prototype.hasOwnProperty,
-                o = Object.prototype.propertyIsEnumerable;
+            s("70102");
+            var r = Object.getOwnPropertySymbols,
+                i = Object.prototype.hasOwnProperty,
+                n = Object.prototype.propertyIsEnumerable;
             t.exports = ! function() {
                 try {
                     if (!Object.assign) return !1;
                     var t = new String("abc");
                     if (t[5] = "de", "5" === Object.getOwnPropertyNames(t)[0]) return !1;
-                    for (var e = {}, r = 0; r < 10; r++) e["_" + String.fromCharCode(r)] = r;
-                    var i = Object.getOwnPropertyNames(e).map(function(t) {
+                    for (var e = {}, s = 0; s < 10; s++) e["_" + String.fromCharCode(s)] = s;
+                    var r = Object.getOwnPropertyNames(e).map(function(t) {
                         return e[t]
                     });
-                    if ("0123456789" !== i.join("")) return !1;
-                    var n = {};
+                    if ("0123456789" !== r.join("")) return !1;
+                    var i = {};
                     if ("abcdefghijklmnopqrst".split("").forEach(function(t) {
-                            n[t] = t
-                        }), "abcdefghijklmnopqrst" !== Object.keys(Object.assign({}, n)).join("")) return !1;
+                            i[t] = t
+                        }), "abcdefghijklmnopqrst" !== Object.keys(Object.assign({}, i)).join("")) return !1;
                     return !0
                 } catch (t) {
                     return !1
                 }
             }() ? function(t, e) {
-                for (var r, a, s = function(t) {
+                for (var s, c, o = function(t) {
                         if (null == t) throw TypeError("Object.assign cannot be called with null or undefined");
                         return Object(t)
                     }(t), f = 1; f < arguments.length; f++) {
-                    for (var h in r = Object(arguments[f]), r) n.call(r, h) && (s[h] = r[h]);
-                    if (i) {
-                        a = i(r);
-                        for (var c = 0; c < a.length; c++) o.call(r, a[c]) && (s[a[c]] = r[a[c]])
+                    for (var u in s = Object(arguments[f]), s) i.call(s, u) && (o[u] = s[u]);
+                    if (r) {
+                        c = r(s);
+                        for (var a = 0; a < c.length; a++) n.call(s, c[a]) && (o[c[a]] = s[c[a]])
                     }
                 }
-                return s
+                return o
             } : Object.assign

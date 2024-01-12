@@ -1,34 +1,34 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return a
                 }
             }), n("424973");
-            var r = n("37983");
+            var l = n("37983");
             n("884691");
-            var l = n("77078"),
-                s = n("272030"),
-                a = n("861370"),
-                o = n("893455"),
-                i = n("49111"),
-                u = n("782340");
+            var r = n("77078"),
+                o = n("272030"),
+                u = n("861370"),
+                i = n("893455"),
+                c = n("49111"),
+                s = n("782340");
 
-            function d(e) {
+            function a(e) {
                 let {
                     role: t,
                     guild: n,
-                    onSelect: d
-                } = e, c = [], h = (0, o.default)(n, t, i.GuildSettingsSections.INTEGRATIONS);
-                null != h && c.push(h);
-                let f = (0, a.default)({
+                    onSelect: a
+                } = e, d = [], f = (0, i.default)(n, t, c.GuildSettingsSections.INTEGRATIONS);
+                null != f && d.push(f);
+                let h = (0, u.default)({
                     id: t.id,
-                    label: u.default.Messages.COPY_ID_ROLE
+                    label: s.default.Messages.COPY_ID_ROLE
                 });
-                return (null != f && c.push(f), 0 === c.length) ? null : (0, r.jsx)(l.Menu, {
+                return (null != h && d.push(h), 0 === d.length) ? null : (0, l.jsx)(r.Menu, {
                     navId: "guild-integrations-permission-role-context",
-                    "aria-label": u.default.Messages.GUILD_ROLE_ACTIONS_MENU_LABEL,
-                    onClose: s.closeContextMenu,
-                    onSelect: d,
-                    children: c
+                    "aria-label": s.default.Messages.GUILD_ROLE_ACTIONS_MENU_LABEL,
+                    onClose: o.closeContextMenu,
+                    onSelect: a,
+                    children: d
                 })
             }

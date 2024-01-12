@@ -4,65 +4,65 @@
                     return _
                 }
             }), n("808653");
-            var i = n("446674"),
-                a = n("913144"),
-                l = n("692038"),
-                s = n("457971"),
-                r = n("447435");
-            let u = {};
+            var s = n("446674"),
+                i = n("913144"),
+                r = n("692038"),
+                a = n("457971"),
+                o = n("447435");
+            let d = {};
 
-            function o(e) {
+            function u(e) {
                 return "".concat(e.channel_id, ":").concat(e.id)
             }
 
-            function d() {
-                u = {}
+            function l() {
+                d = {}
             }
-            class c extends i.default.Store {
+            class f extends s.default.Store {
                 getMessage(e, t) {
-                    return u[o({
+                    return d[u({
                         id: e,
                         channel_id: t
                     })]
                 }
             }
-            c.displayName = "SearchMessageStore";
-            var _ = new c(a.default, {
+            f.displayName = "SearchMessageStore";
+            var _ = new f(i.default, {
                 SEARCH_FINISH: function(e) {
-                    return !!(0, s.isEligibleForExplicitMediaRedaction)() && null != e.messages && (u = e.messages.reduce((e, t) => (t.forEach(t => {
-                        e[o(t)] = (0, l.createMessageRecord)(t)
+                    return !!(0, a.isEligibleForExplicitMediaRedaction)() && null != e.messages && (d = e.messages.reduce((e, t) => (t.forEach(t => {
+                        e[u(t)] = (0, r.createMessageRecord)(t)
                     }), e), {}), !0)
                 },
                 MESSAGE_UPDATE: function(e) {
                     let {
                         message: t
                     } = e;
-                    if (!(0, s.isEligibleForExplicitMediaRedaction)() || null == t.id || null == t.channel_id) return !1;
-                    let n = o(t),
-                        i = u[n];
-                    return null != i && (u[n] = (0, l.updateMessageRecord)(i, {
+                    if (!(0, a.isEligibleForExplicitMediaRedaction)() || null == t.id || null == t.channel_id) return !1;
+                    let n = u(t),
+                        s = d[n];
+                    return null != s && (d[n] = (0, r.updateMessageRecord)(s, {
                         attachments: t.attachments,
                         embeds: t.embeds
                     }), !0)
                 },
                 LOGOUT: function() {
                     (function() {
-                        u = {}
+                        d = {}
                     })()
                 },
                 CONNECTION_OPEN: function() {
                     (function() {
-                        u = {}
+                        d = {}
                     })()
                 },
                 MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function(e) {
                     let {
                         messageId: t,
                         channelId: n
-                    } = e, i = o({
+                    } = e, s = u({
                         id: t,
                         channel_id: n
-                    }), a = u[i];
-                    null != a && (u[i] = (0, r.handleExplicitMediaScanTimeoutForMessage)(a))
+                    }), i = d[s];
+                    null != i && (d[s] = (0, o.handleExplicitMediaScanTimeoutForMessage)(i))
                 }
             })

@@ -1,108 +1,108 @@
             "use strict";
-            a.r(t), a.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return f
+                    return C
                 }
-            }), a("222007");
-            var n = a("37983"),
-                s = a("884691"),
-                l = a("759843"),
-                r = a("77078"),
-                o = a("599417"),
-                i = a("428958"),
-                u = a("782340"),
-                d = a("277012"),
-                c = a("92693");
+            }), n("222007");
+            var a = n("37983"),
+                l = n("884691"),
+                s = n("759843"),
+                r = n("77078"),
+                o = n("599417"),
+                i = n("428958"),
+                u = n("782340"),
+                d = n("277012"),
+                c = n("92693");
 
-            function f(e) {
+            function C(e) {
                 let {
                     transitionState: t,
-                    onFormSubmit: a,
-                    onResend: f,
-                    onSuccess: C,
+                    onFormSubmit: n,
+                    onResend: C,
+                    onSuccess: f,
                     onClose: T,
-                    headerText: E,
+                    headerText: h,
                     confirmButtonText: _,
-                    confirmButtonColor: g,
-                    impressionName: I
-                } = e, [h, p] = s.useState(!1), [M, R] = s.useState(""), [m, S] = s.useState(!1), [A, N] = s.useState(null), v = s.useRef(null);
+                    confirmButtonColor: p,
+                    impressionName: E
+                } = e, [g, m] = l.useState(!1), [I, M] = l.useState(""), [N, A] = l.useState(!1), [S, v] = l.useState(null), x = l.useRef(null);
                 (0, i.default)({
-                    type: l.ImpressionTypes.MODAL,
-                    name: I
+                    type: s.ImpressionTypes.MODAL,
+                    name: E
                 });
-                let x = async e => {
-                    e.preventDefault(), N(null), p(!0);
+                let R = async e => {
+                    e.preventDefault(), v(null), m(!0);
                     try {
-                        let e = await a(M);
-                        null != C && C(e), T()
+                        let e = await n(I);
+                        null != f && f(e), T()
                     } catch (t) {
                         let e = new o.default(t);
-                        N(e.getAnyErrorMessage())
+                        v(e.getAnyErrorMessage())
                     } finally {
-                        p(!1)
+                        m(!1)
                     }
                 }, y = async () => {
-                    if (!m) {
-                        S(!0);
+                    if (!N) {
+                        A(!0);
                         try {
-                            await f(), (0, r.showToast)((0, r.createToast)(u.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT, r.ToastType.SUCCESS))
-                        } catch (a) {
-                            let e = new o.default(a),
+                            await C(), (0, r.showToast)((0, r.createToast)(u.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT, r.ToastType.SUCCESS))
+                        } catch (n) {
+                            let e = new o.default(n),
                                 t = e.getAnyErrorMessage();
                             null != t && (0, r.showToast)((0, r.createToast)(t, r.ToastType.FAILURE))
                         } finally {
-                            S(!1)
+                            A(!1)
                         }
                     }
                 };
-                return (0, n.jsx)(r.ModalRoot, {
+                return (0, a.jsx)(r.ModalRoot, {
                     transitionState: t,
-                    children: (0, n.jsxs)("form", {
-                        onSubmit: x,
-                        children: [(0, n.jsx)("img", {
+                    children: (0, a.jsxs)("form", {
+                        onSubmit: R,
+                        children: [(0, a.jsx)("img", {
                             alt: "",
                             className: d.headerImage,
                             src: c
-                        }), (0, n.jsxs)(r.ModalHeader, {
+                        }), (0, a.jsxs)(r.ModalHeader, {
                             separator: !1,
                             className: d.header,
-                            children: [(0, n.jsx)(r.Heading, {
+                            children: [(0, a.jsx)(r.Heading, {
                                 variant: "heading-lg/semibold",
                                 className: d.title,
-                                children: E
-                            }), (0, n.jsx)(r.Text, {
+                                children: h
+                            }), (0, a.jsx)(r.Text, {
                                 color: "header-secondary",
                                 variant: "text-md/normal",
                                 className: d.subtitle,
                                 children: u.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_SUBTITLE
-                            }), (0, n.jsx)(r.ModalCloseButton, {
+                            }), (0, a.jsx)(r.ModalCloseButton, {
                                 onClick: T,
                                 className: d.modalCloseButton
                             })]
-                        }), (0, n.jsxs)(r.ModalContent, {
-                            children: [(0, n.jsx)(r.FormItem, {
+                        }), (0, a.jsxs)(r.ModalContent, {
+                            children: [(0, a.jsx)(r.FormItem, {
                                 title: u.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_PROMPT,
-                                error: A,
-                                children: (0, n.jsx)(r.TextInput, {
-                                    value: M,
-                                    onChange: R,
-                                    inputRef: v
+                                error: S,
+                                children: (0, a.jsx)(r.TextInput, {
+                                    value: I,
+                                    onChange: M,
+                                    inputRef: x
                                 })
-                            }), (0, n.jsx)(r.Text, {
+                            }), (0, a.jsx)(r.Text, {
                                 className: d.help,
                                 variant: "text-sm/normal",
                                 children: u.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_RESEND.format({
                                     onResend: y
                                 })
                             })]
-                        }), (0, n.jsxs)(r.ModalFooter, {
-                            children: [(0, n.jsx)(r.Button, {
+                        }), (0, a.jsxs)(r.ModalFooter, {
+                            children: [(0, a.jsx)(r.Button, {
                                 type: "submit",
-                                color: null != g ? g : r.Button.Colors.BRAND,
+                                color: null != p ? p : r.Button.Colors.BRAND,
                                 size: r.Button.Sizes.MEDIUM,
-                                submitting: h,
+                                submitting: g,
                                 children: _
-                            }), (0, n.jsx)(r.Button, {
+                            }), (0, a.jsx)(r.Button, {
                                 look: r.Button.Looks.LINK,
                                 color: r.Button.Colors.PRIMARY,
                                 onClick: T,

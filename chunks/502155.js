@@ -14,8 +14,8 @@
                 o = a("476765"),
                 u = a("324105"),
                 m = a("49111"),
-                f = a("782340"),
-                h = a("140631"),
+                h = a("782340"),
+                f = a("140631"),
                 x = e => {
                     let {
                         transitionState: s,
@@ -31,25 +31,25 @@
                     return (0, l.jsxs)(i.ModalRoot, {
                         transitionState: s,
                         "aria-labelledby": v,
-                        className: h.root,
+                        className: f.root,
                         children: [(0, l.jsx)(i.ModalHeader, {
-                            className: h.modalHeader,
+                            className: f.modalHeader,
                             separator: !1,
                             children: (0, l.jsx)(i.ModalCloseButton, {
                                 onClick: a,
-                                className: h.modalCloseButton
+                                className: f.modalCloseButton
                             })
                         }), (0, l.jsx)(i.Heading, {
                             variant: "heading-xl/semibold",
                             id: v,
-                            className: h.header,
-                            children: f.default.Messages.SERVER_DISCOVERY_SETUP_CONFIRMATION_PAGE_HEADER
+                            className: f.header,
+                            children: h.default.Messages.SERVER_DISCOVERY_SETUP_CONFIRMATION_PAGE_HEADER
                         }), (0, l.jsxs)(i.ModalContent, {
-                            className: h.modalContent,
+                            className: f.modalContent,
                             children: [(0, l.jsx)(i.Text, {
                                 variant: "text-md/normal",
-                                className: h.subheader,
-                                children: f.default.Messages.SERVER_DISCOVERY_SETUP_CONFIRMATION_PAGE_SUBHEADING.format({
+                                className: f.subheader,
+                                children: h.default.Messages.SERVER_DISCOVERY_SETUP_CONFIRMATION_PAGE_SUBHEADING.format({
                                     onServerSettingsClick: () => {
                                         a(), r.default.setSection(m.GuildSettingsSections.DISCOVERY), d.default.trackWithMetadata(m.AnalyticEvents.SETTINGS_PANE_VIEWED, {
                                             settings_type: "guild",
@@ -59,7 +59,7 @@
                                     }
                                 })
                             }), (0, l.jsx)(u.default, {
-                                className: h.previewCard,
+                                className: f.previewCard,
                                 guild: x,
                                 presenceCount: N,
                                 memberCount: S
@@ -67,7 +67,7 @@
                         }), (0, l.jsx)(i.ModalFooter, {
                             children: (0, l.jsx)(i.Button, {
                                 onClick: a,
-                                children: f.default.Messages.GOT_IT
+                                children: h.default.Messages.GOT_IT
                             })
                         })]
                     })

@@ -8,8 +8,8 @@
                 o = n("677315"),
                 l = n("290886"),
                 a = n("288518"),
-                u = n("486503"),
-                d = n("393027"),
+                d = n("486503"),
+                u = n("393027"),
                 s = n("845579"),
                 E = n("686470"),
                 r = n("791823"),
@@ -19,7 +19,7 @@
                 C = n("49111"),
                 T = n("724210");
             let S = () => {
-                let e = a.default.getMessageRequestsCount() > 0 || u.default.getSpamChannelsCount() > 0;
+                let e = a.default.getMessageRequestsCount() > 0 || d.default.getSpamChannelsCount() > 0;
                 return [C.Routes.FRIENDS, E.default.hasLibraryApplication() && !s.DisableGamesTab.getSetting() ? C.Routes.APPLICATION_LIBRARY : null, C.Routes.APPLICATION_STORE, e ? C.Routes.MESSAGE_REQUESTS : null, C.Routes.COLLECTIBLES_SHOP, s.FamilyCenterEnabled.getSetting() ? C.Routes.FAMILY_CENTER : null].filter(A.isNotNullish)
             };
 
@@ -29,16 +29,16 @@
 
             function f() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-                    t = d.default.getState().guildId;
+                    t = u.default.getState().guildId;
                 null == t ? ! function(e) {
                     var t;
                     let {
                         channelId: n,
                         path: i,
                         basePath: o
-                    } = d.default.getState(), l = _.default.getPrivateChannelIds(), a = __OVERLAY__ ? l : [...S(), ...l];
-                    let u = null == n ? (t = null != i ? i : o, S().findIndex(e => t.startsWith(e))) : null != n ? a.indexOf(n) : 0,
-                        s = u + e;
+                    } = u.default.getState(), l = _.default.getPrivateChannelIds(), a = __OVERLAY__ ? l : [...S(), ...l];
+                    let d = null == n ? (t = null != i ? i : o, S().findIndex(e => t.startsWith(e))) : null != n ? a.indexOf(n) : 0,
+                        s = d + e;
                     s >= a.length ? s = 0 : s < 0 && (s = a.length - 1);
                     let E = a[s];
                     S().includes(E) ? ! function(e) {
@@ -47,10 +47,10 @@
                     }(E) : I(C.ME, E)
                 }(e) : ! function(e, t) {
                     var n, a;
-                    let u = d.default.getState().channelId,
+                    let d = u.default.getState().channelId,
                         s = (0, i.default)(t).map(e => e.id);
                     ((0, o.canSeeGuildHome)(t) || (0, l.canSeeOnboardingHome)(t)) && s.unshift(T.StaticChannelRoute.GUILD_HOME);
-                    let E = null != u ? s.indexOf(u) : -1;
+                    let E = null != d ? s.indexOf(d) : -1;
                     let r = (n = E + e, a = s.length, n < 0 ? a - 1 : n >= a ? 0 : n);
                     I(t, s[r])
                 }(e, t)

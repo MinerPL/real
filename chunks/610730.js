@@ -45,10 +45,10 @@
 
             function S(e) {
                 var t;
-                null === (t = e.threads) || void 0 === t || t.forEach(v)
+                null === (t = e.threads) || void 0 === t || t.forEach(M)
             }
 
-            function v(e) {
+            function M(e) {
                 T(e, t => {
                     var n;
                     null != e.messageCount && (t.count = e.messageCount);
@@ -57,10 +57,10 @@
                 })
             }
 
-            function M(e) {
+            function v(e) {
                 if (null != e && !(e.id in m)) {
                     let t = _.default.getChannel(e.id);
-                    if (null != t) return v(t), !0
+                    if (null != t) return M(t), !0
                 }
                 return !1
             }
@@ -69,14 +69,14 @@
                 let {
                     channel: t
                 } = e;
-                v(t)
+                M(t)
             }
 
             function N(e) {
                 let {
                     threads: t
                 } = e;
-                t.forEach(M)
+                t.forEach(v)
             }
             class O extends l.default.Store {
                 initialize() {
@@ -140,7 +140,7 @@
                         threads: t,
                         mostRecentMessages: n
                     } = e;
-                    t.forEach(v), null == n || n.forEach(e => {
+                    t.forEach(M), null == n || n.forEach(e => {
                         let t = _.default.getChannel(e.channel_id);
                         null != t && e.type !== E.MessageTypes.THREAD_STARTER_MESSAGE && T(t, t => {
                             t.mostRecentRawMessage = e, t.mostRecentMessage = null
@@ -155,8 +155,8 @@
                         threads: n
                     } = e;
                     for (let e of t)
-                        for (let t of e) M(t.thread);
-                    n.forEach(M)
+                        for (let t of e) v(t.thread);
+                    n.forEach(v)
                 },
                 THREAD_DELETE: function(e) {
                     let {
@@ -230,7 +230,7 @@
                 },
                 LOAD_MESSAGES_SUCCESS: function(e) {
                     let t = !1;
-                    for (let n of e.messages) t = M(n.thread) || t;
+                    for (let n of e.messages) t = v(n.thread) || t;
                     if (e.isAfter || e.isBefore || e.hasMoreAfter) return t;
                     let n = _.default.getChannel(e.channelId);
                     if (null == n || !o.THREAD_CHANNEL_TYPES.has(n.type)) return t;
@@ -247,7 +247,7 @@
                     let {
                         data: t
                     } = e, n = !1;
-                    for (let e of (0, r.getThreadsFromGuildFeedFetch)(t)) n = M(e) || n;
+                    for (let e of (0, r.getThreadsFromGuildFeedFetch)(t)) n = v(e) || n;
                     return n
                 }
             })

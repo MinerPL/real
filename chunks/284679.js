@@ -1,283 +1,283 @@
             "use strict";
-            n.r(s), n.d(s, {
+            n.r(t), n.d(t, {
                 hexWithOpacity: function() {
-                    return t
-                },
-                hexToRgb: function() {
                     return a
                 },
+                hexToRgb: function() {
+                    return o
+                },
                 hexOpacityToRgba: function() {
-                    return f
-                },
-                rgbToHex: function() {
-                    return _
-                },
-                getComplimentaryPaletteForColor: function() {
                     return d
                 },
+                rgbToHex: function() {
+                    return u
+                },
+                getComplimentaryPaletteForColor: function() {
+                    return l
+                },
                 rawRgbToHsl: function() {
-                    return m
+                    return c
                 },
                 getColorLightnessAdjusted: function() {
-                    return c
+                    return m
                 },
                 getAccessibleColor: function() {
                     return h
                 },
                 findColorByHsv: function() {
-                    return l
+                    return v
                 },
                 getSaturatedColorHex: function() {
-                    return V
+                    return p
                 },
                 interpolateColor: function() {
-                    return k
+                    return y
                 }
             }), n("424973");
-            var i = n("509043");
+            var s = n("509043");
             n("605250");
-            var r = n("172182"),
-                o = n("782340");
+            var i = n("172182"),
+                r = n("782340");
 
-            function t(e, s) {
+            function a(e, t) {
                 let n;
-                let i = e;
+                let s = e;
                 if (9 === e.length) {
-                    i = e.slice(0, 7);
-                    let r = parseInt(e.slice(7, 9), 16) / 255;
-                    n = Math.round(r * s * 255)
-                } else n = Math.round(255 * s);
-                let r = n.toString(16).toUpperCase().padStart(2, "0");
-                return "".concat(i).concat(r).padEnd(9, "0")
+                    s = e.slice(0, 7);
+                    let i = parseInt(e.slice(7, 9), 16) / 255;
+                    n = Math.round(i * t * 255)
+                } else n = Math.round(255 * t);
+                let i = n.toString(16).toUpperCase().padStart(2, "0");
+                return "".concat(s).concat(i).padEnd(9, "0")
             }
 
-            function a(e) {
+            function o(e) {
                 "#" === e[0] && (e = e.slice(1));
-                let s = parseInt(e, 16);
+                let t = parseInt(e, 16);
                 return {
-                    r: s >> 16 & 255,
-                    g: s >> 8 & 255,
-                    b: 255 & s
+                    r: t >> 16 & 255,
+                    g: t >> 8 & 255,
+                    b: 255 & t
                 }
             }
 
-            function f(e, s) {
+            function d(e, t) {
                 let {
                     r: n,
-                    g: i,
-                    b: r
-                } = a(e);
-                return "rgba(".concat(n, ", ").concat(i, ", ").concat(r, ", ").concat(s, ")")
+                    g: s,
+                    b: i
+                } = o(e);
+                return "rgba(".concat(n, ", ").concat(s, ", ").concat(i, ", ").concat(t, ")")
             }
 
-            function _(e, s, n) {
-                return "#" + (16777216 + (e << 16) + (s << 8) + n).toString(16).slice(1)
+            function u(e, t, n) {
+                return "#" + (16777216 + (e << 16) + (t << 8) + n).toString(16).slice(1)
             }
 
-            function d(e) {
-                let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3,
+            function l(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3,
                     n = [],
                     {
-                        h: i,
-                        s: r,
-                        l: o
-                    } = function(e, s, n) {
-                        e /= 255, s /= 255, n /= 255;
-                        let i = Math.min(e, s, n),
-                            r = Math.max(e, s, n),
-                            o = r - i,
-                            t = 0,
+                        h: s,
+                        s: i,
+                        l: r
+                    } = function(e, t, n) {
+                        e /= 255, t /= 255, n /= 255;
+                        let s = Math.min(e, t, n),
+                            i = Math.max(e, t, n),
+                            r = i - s,
                             a = 0,
-                            f = 0;
-                        return (t = Math.round(60 * (t = 0 === o ? 0 : r === e ? (s - n) / o % 6 : r === s ? (n - e) / o + 2 : (e - s) / o + 4))) < 0 && (t += 360), f = (r + i) / 2, a = +(100 * (a = 0 === o ? 0 : o / (1 - Math.abs(2 * f - 1)))).toFixed(1), {
-                            h: t,
-                            s: a,
-                            l: f = +(100 * f).toFixed(1)
+                            o = 0,
+                            d = 0;
+                        return (a = Math.round(60 * (a = 0 === r ? 0 : i === e ? (t - n) / r % 6 : i === t ? (n - e) / r + 2 : (e - t) / r + 4))) < 0 && (a += 360), d = (i + s) / 2, o = +(100 * (o = 0 === r ? 0 : r / (1 - Math.abs(2 * d - 1)))).toFixed(1), {
+                            h: a,
+                            s: o,
+                            l: d = +(100 * d).toFixed(1)
                         }
                     }(e[0], e[1], e[2]),
-                    t = i,
-                    f = r,
-                    _ = o;
-                f < 30 && (f += 30), _ > 80 && (_ -= 40), _ < 20 && (_ += 15);
-                let d = 360 / (s + 1);
-                for (; n.length < s;) {
-                    (t -= d) < 0 && (t += 360);
+                    a = s,
+                    d = i,
+                    u = r;
+                d < 30 && (d += 30), u > 80 && (u -= 40), u < 20 && (u += 15);
+                let l = 360 / (t + 1);
+                for (; n.length < t;) {
+                    (a -= l) < 0 && (a += 360);
                     let {
                         r: e,
-                        g: s,
-                        b: i
-                    } = a(function(e, s, n) {
+                        g: t,
+                        b: s
+                    } = o(function(e, t, n) {
                         n /= 100;
-                        let i = s * Math.min(n, 1 - n) / 100,
-                            r = s => {
-                                let r = (s + e / 30) % 12,
-                                    o = n - i * Math.max(Math.min(r - 3, 9 - r, 1), -1);
-                                return Math.round(255 * o).toString(16).padStart(2, "0")
+                        let s = t * Math.min(n, 1 - n) / 100,
+                            i = t => {
+                                let i = (t + e / 30) % 12,
+                                    r = n - s * Math.max(Math.min(i - 3, 9 - i, 1), -1);
+                                return Math.round(255 * r).toString(16).padStart(2, "0")
                             };
-                        return "#".concat(r(0)).concat(r(8)).concat(r(4))
-                    }(t, f, _));
-                    n.push([e, s, i])
+                        return "#".concat(i(0)).concat(i(8)).concat(i(4))
+                    }(a, d, u));
+                    n.push([e, t, s])
                 }
                 return n
             }
 
-            function u(e) {
+            function f(e) {
                 let {
-                    red: s,
+                    red: t,
                     green: n,
-                    blue: i
-                } = e, r = [s, n, i].map(e => (e /= 255) <= .03928 ? e / 12.92 : Math.pow((e + .055) / 1.055, 2.4));
-                return .2126 * r[0] + .7152 * r[1] + .0722 * r[2]
+                    blue: s
+                } = e, i = [t, n, s].map(e => (e /= 255) <= .03928 ? e / 12.92 : Math.pow((e + .055) / 1.055, 2.4));
+                return .2126 * i[0] + .7152 * i[1] + .0722 * i[2]
             }
 
-            function g(e) {
-                let s = e[0],
+            function _(e) {
+                let t = e[0],
                     n = e[1],
-                    i = u(s),
-                    r = u(n);
-                return (Math.max(i, r) + .05) / (Math.min(i, r) + .05)
+                    s = f(t),
+                    i = f(n);
+                return (Math.max(s, i) + .05) / (Math.min(s, i) + .05)
             }
 
-            function m(e, s, n) {
-                let i, r;
-                e /= 255, s /= 255, n /= 255;
-                let o = Math.max(e, s, n),
-                    t = Math.min(e, s, n),
-                    a = (o + t) / 2;
-                if (o === t) i = r = 0;
+            function c(e, t, n) {
+                let s, i;
+                e /= 255, t /= 255, n /= 255;
+                let r = Math.max(e, t, n),
+                    a = Math.min(e, t, n),
+                    o = (r + a) / 2;
+                if (r === a) s = i = 0;
                 else {
-                    let f = o - t;
-                    switch (r = a > .5 ? f / (2 - o - t) : f / (o + t), o) {
+                    let d = r - a;
+                    switch (i = o > .5 ? d / (2 - r - a) : d / (r + a), r) {
                         case e:
-                            i = (s - n) / f + (s < n ? 6 : 0);
+                            s = (t - n) / d + (t < n ? 6 : 0);
                             break;
-                        case s:
-                            i = (n - e) / f + 2;
+                        case t:
+                            s = (n - e) / d + 2;
                             break;
                         case n:
-                            i = (e - s) / f + 4
+                            s = (e - t) / d + 4
                     }
-                    null == i ? i = 0 : i /= 6
+                    null == s ? s = 0 : s /= 6
                 }
                 return {
-                    hue: 360 * i,
-                    saturation: r,
-                    lightness: a,
+                    hue: 360 * s,
+                    saturation: i,
+                    lightness: o,
                     alpha: 1
                 }
             }
 
-            function v(e, s, n) {
-                let i, o, t;
-                if (e /= 360, 0 === s) i = o = t = n;
+            function g(e, t, n) {
+                let s, r, a;
+                if (e /= 360, 0 === t) s = r = a = n;
                 else {
-                    let r = function(e, s, n) {
-                            return (n < 0 && (n += 1), n > 1 && (n -= 1), n < 1 / 6) ? e + (s - e) * 6 * n : n < .5 ? s : n < 2 / 3 ? e + (s - e) * (2 / 3 - n) * 6 : e
+                    let i = function(e, t, n) {
+                            return (n < 0 && (n += 1), n > 1 && (n -= 1), n < 1 / 6) ? e + (t - e) * 6 * n : n < .5 ? t : n < 2 / 3 ? e + (t - e) * (2 / 3 - n) * 6 : e
                         },
-                        a = n < .5 ? n * (1 + s) : n + s - n * s,
-                        f = 2 * n - a;
-                    i = r(f, a, e + 1 / 3), o = r(f, a, e), t = r(f, a, e - 1 / 3)
+                        o = n < .5 ? n * (1 + t) : n + t - n * t,
+                        d = 2 * n - o;
+                    s = i(d, o, e + 1 / 3), r = i(d, o, e), a = i(d, o, e - 1 / 3)
                 }
-                return new r.default(Math.round(255 * i), Math.round(255 * o), Math.round(255 * t), 1)
+                return new i.default(Math.round(255 * s), Math.round(255 * r), Math.round(255 * a), 1)
             }
 
-            function c(e, s) {
+            function m(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    i = m(e.red, e.green, e.blue);
-                return n ? i.lightness = i.lightness + s > 1 ? .9 : i.lightness + s : i.lightness = i.lightness - s < 0 ? .1 : i.lightness - s, v(i.hue, i.saturation, i.lightness)
+                    s = c(e.red, e.green, e.blue);
+                return n ? s.lightness = s.lightness + t > 1 ? .9 : s.lightness + t : s.lightness = s.lightness - t < 0 ? .1 : s.lightness - t, g(s.hue, s.saturation, s.lightness)
             }
 
             function h(e) {
                 let {
-                    colors: s,
+                    colors: t,
                     ratio: n = 5,
-                    saturationFactor: r = 1
+                    saturationFactor: i = 1
                 } = e;
-                if (s.length < 2) return;
-                let o = s[0],
-                    t = s[1];
-                if (null == t || null == o) return;
-                let a = (0, i.hex2int)(t.toHexString()),
-                    f = (0, i.getDarkness)(a) > .5,
-                    _ = g([o, t]),
-                    d = m(o.red, o.green, o.blue);
-                for (d.saturation *= r; _ < n && null != d;) {
+                if (t.length < 2) return;
+                let r = t[0],
+                    a = t[1];
+                if (null == a || null == r) return;
+                let o = (0, s.hex2int)(a.toHexString()),
+                    d = (0, s.getDarkness)(o) > .5,
+                    u = _([r, a]),
+                    l = c(r.red, r.green, r.blue);
+                for (l.saturation *= i; u < n && null != l;) {
                     ;
-                    if (f) {
-                        if (d.lightness < .95) d.lightness += .05;
+                    if (d) {
+                        if (l.lightness < .95) l.lightness += .05;
                         else break
-                    } else if (d.lightness > .05) d.lightness -= .05;
+                    } else if (l.lightness > .05) l.lightness -= .05;
                     else break;
-                    _ = g([v(d.hue, d.saturation, d.lightness), s[1]])
+                    u = _([g(l.hue, l.saturation, l.lightness), t[1]])
                 }
-                return v(d.hue, d.saturation, d.lightness)
+                return g(l.hue, l.saturation, l.lightness)
             }
 
-            function l(e) {
-                let s = e.slice(0, 3).map(e => {
-                    var s;
+            function v(e) {
+                let t = e.slice(0, 3).map(e => {
+                    var t;
                     return {
                         hex: e,
-                        hsv: null !== (s = function(e) {
-                            let s, n, i, r, o;
-                            var t, a, f, _ = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(e);
-                            if (null == _) return null;
-                            var d = parseInt(_[1], 16),
-                                u = parseInt(_[2], 16),
-                                g = parseInt(_[3], 16);
-                            let m = d / 255,
-                                v = u / 255,
-                                c = g / 255,
-                                h = Math.max(m, v, c),
-                                l = h - Math.min(m, v, c),
-                                y = e => Math.round(100 * e) / 100;
-                            if (0 === l) r = o = 0;
+                        hsv: null !== (t = function(e) {
+                            let t, n, s, i, r;
+                            var a, o, d, u = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(e);
+                            if (null == u) return null;
+                            var l = parseInt(u[1], 16),
+                                f = parseInt(u[2], 16),
+                                _ = parseInt(u[3], 16);
+                            let c = l / 255,
+                                g = f / 255,
+                                m = _ / 255,
+                                h = Math.max(c, g, m),
+                                v = h - Math.min(c, g, m),
+                                E = e => Math.round(100 * e) / 100;
+                            if (0 === v) i = r = 0;
                             else {
                                 ;
-                                o = l / h, t = m, s = (h - t) / 6 / l + .5, a = v, n = (h - a) / 6 / l + .5, f = c, i = (h - f) / 6 / l + .5, (r = m === h ? i - n : v === h ? 1 / 3 + s - i : c === h ? 2 / 3 + n - s : 0) < 0 ? r += 1 : r > 1 && (r -= 1)
+                                r = v / h, a = c, t = (h - a) / 6 / v + .5, o = g, n = (h - o) / 6 / v + .5, d = m, s = (h - d) / 6 / v + .5, (i = c === h ? s - n : g === h ? 1 / 3 + t - s : m === h ? 2 / 3 + n - t : 0) < 0 ? i += 1 : i > 1 && (i -= 1)
                             }
                             return {
-                                h: Math.round(360 * r),
-                                s: y(100 * o),
-                                v: y(100 * h)
+                                h: Math.round(360 * i),
+                                s: E(100 * r),
+                                v: E(100 * h)
                             }
-                        }(e)) && void 0 !== s ? s : {
+                        }(e)) && void 0 !== t ? t : {
                             h: 0,
                             s: 0,
                             v: 0
                         }
                     }
-                }).sort(y);
-                return s[0].hex
+                }).sort(E);
+                return t[0].hex
             }
 
-            function y(e, s) {
+            function E(e, t) {
                 let n = e.hsv,
-                    i = s.hsv;
-                return i.s + i.v - (n.s + n.v)
+                    s = t.hsv;
+                return s.s + s.v - (n.s + n.v)
             }
 
-            function V(e) {
-                var s;
+            function p(e) {
+                var t;
                 let {
                     colorRGB: n,
-                    saturationFactor: i = 1
+                    saturationFactor: s = 1
                 } = e;
                 if (null == n) return n;
-                let r = m(n.red, n.green, n.blue);
-                if (null == r) return null == n ? void 0 : n.toHexString();
-                return null === (s = v(r.hue, r.saturation * i, r.lightness)) || void 0 === s ? void 0 : s.toHexString()
+                let i = c(n.red, n.green, n.blue);
+                if (null == i) return null == n ? void 0 : n.toHexString();
+                return null === (t = g(i.hue, i.saturation * s, i.lightness)) || void 0 === t ? void 0 : t.toHexString()
             }
 
-            function k(e, s, n) {
-                let i = parseInt(e.substring(1, 3), 16),
-                    r = parseInt(e.substring(3, 5), 16),
-                    o = parseInt(e.substring(5, 7), 16),
-                    t = parseInt(s.substring(1, 3), 16),
-                    a = parseInt(s.substring(3, 5), 16),
-                    f = parseInt(s.substring(5, 7), 16),
-                    _ = Math.round(i + (t - i) * n).toString(16).padStart(2, "0"),
-                    d = Math.round(r + (a - r) * n).toString(16).padStart(2, "0"),
-                    u = Math.round(o + (f - o) * n).toString(16).padStart(2, "0");
-                return "#".concat(_).concat(d).concat(u)
+            function y(e, t, n) {
+                let s = parseInt(e.substring(1, 3), 16),
+                    i = parseInt(e.substring(3, 5), 16),
+                    r = parseInt(e.substring(5, 7), 16),
+                    a = parseInt(t.substring(1, 3), 16),
+                    o = parseInt(t.substring(3, 5), 16),
+                    d = parseInt(t.substring(5, 7), 16),
+                    u = Math.round(s + (a - s) * n).toString(16).padStart(2, "0"),
+                    l = Math.round(i + (o - i) * n).toString(16).padStart(2, "0"),
+                    f = Math.round(r + (d - r) * n).toString(16).padStart(2, "0");
+                return "#".concat(u).concat(l).concat(f)
             }

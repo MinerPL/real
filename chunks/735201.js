@@ -4,9 +4,9 @@
                     return p
                 }
             }), n("222007");
-            var r = n("446674"),
+            var l = n("446674"),
                 i = n("913144");
-            let l = {},
+            let r = {},
                 s = null,
                 a = [],
                 o = !1,
@@ -16,12 +16,12 @@
             function d() {
                 o = !0
             }
-            class f extends r.default.Store {
+            class f extends l.default.Store {
                 getAppliedGuildBoostsForGuild(e) {
-                    return null != l[e] ? l[e].subscriptions : null
+                    return null != r[e] ? r[e].subscriptions : null
                 }
                 getLastFetchedAtForGuild(e) {
-                    return null != l[e] ? l[e].lastFetchedAt : null
+                    return null != r[e] ? r[e].lastFetchedAt : null
                 }
                 getCurrentUserAppliedBoosts() {
                     return a
@@ -49,7 +49,7 @@
                         guildId: t,
                         appliedBoosts: n
                     } = e;
-                    l[t] = {
+                    r[t] = {
                         subscriptions: n,
                         lastFetchedAt: Date.now()
                     }

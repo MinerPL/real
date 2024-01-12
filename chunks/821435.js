@@ -36,8 +36,8 @@
                 R = a("154925"),
                 b = a("49111"),
                 G = a("515631"),
-                y = a("745049"),
-                O = a("782340"),
+                O = a("745049"),
+                y = a("782340"),
                 H = a("53176");
 
             function k(e) {
@@ -61,9 +61,9 @@
                 }, []);
                 let I = r,
                     _ = "header-secondary";
-                return d ? (I = O.default.Messages.STAGE_CHANNEL_LIVE_NOW, _ = "text-positive") : c ? (I = O.default.Messages.STARTING_SOON, _ = "text-brand") : f ? (I = h > 0 ? O.default.Messages.STARTING_IN_MINUTES.format({
+                return d ? (I = y.default.Messages.STAGE_CHANNEL_LIVE_NOW, _ = "text-positive") : c ? (I = y.default.Messages.STARTING_SOON, _ = "text-brand") : f ? (I = h > 0 ? y.default.Messages.STARTING_IN_MINUTES.format({
                     minutes: h
-                }) : O.default.Messages.STARTING_SOON, _ = "text-brand") : null != o && "" !== o && (I = O.default.Messages.START_DATE_TO_END_DATE.format({
+                }) : y.default.Messages.STARTING_SOON, _ = "text-brand") : null != o && "" !== o && (I = y.default.Messages.START_DATE_TO_END_DATE.format({
                     start: r,
                     end: o
                 })), (0, l.jsxs)("div", {
@@ -94,7 +94,7 @@
                     onEventClick: i
                 } = e, d = (0, r.useStateFromStores)([p.default], () => p.default.can(b.Permissions.CONNECT, a)), o = n.useCallback(() => {
                     null != a && null != a.getGuildId() && d && ((0, v.connectAndOpen)(a), (0, x.transitionToGuild)(a.getGuildId(), a.id))
-                }, [a, d]), c = (0, I.default)(t), f = t.entity_type === y.GuildScheduledEventEntityTypes.STAGE_INSTANCE ? O.default.Messages.STAGE_CHANNEL_JOIN_BUTTON : O.default.Messages.JOIN;
+                }, [a, d]), c = (0, I.default)(t), f = t.entity_type === O.GuildScheduledEventEntityTypes.STAGE_INSTANCE ? y.default.Messages.STAGE_CHANNEL_JOIN_BUTTON : y.default.Messages.JOIN;
                 if (null == t.image || s) return null != a && d ? (0, l.jsx)("div", {
                     className: H.eventJoinContainer,
                     children: (0, l.jsx)(u.Button, {
@@ -207,7 +207,7 @@
                         width: R.ACTIVE_NOW_ICON_SIZE,
                         height: R.ACTIVE_NOW_ICON_SIZE
                     }),
-                    iconTooltipText: O.default.Messages.GUILD_HOME_EVENTS_TOOLTIP_TEXT,
+                    iconTooltipText: y.default.Messages.GUILD_HOME_EVENTS_TOOLTIP_TEXT,
                     header: t.name,
                     textNode: (0, l.jsx)(w, {
                         event: t,

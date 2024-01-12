@@ -1,172 +1,199 @@
             "use strict";
-            n.r(e), n.d(e, {
+            n.r(t), n.d(t, {
                 collectGuildAnalyticsMetadata: function() {
-                    return C
+                    return P
                 },
                 collectChannelAnalyticsMetadataFromId: function() {
-                    return O
+                    return V
                 },
                 collectChannelAnalyticsMetadata: function() {
-                    return L
+                    return R
                 },
                 collectVoiceAnalyticsMetadata: function() {
-                    return M
+                    return k
                 },
                 trackWithMetadata: function() {
-                    return U
+                    return M
+                },
+                getChannelOpenedMetadata: function() {
+                    return w
                 },
                 getVoiceStateMetadata: function() {
-                    return D
+                    return L
                 },
                 getCustomStatusMetadata: function() {
-                    return G
+                    return U
                 },
                 default: function() {
-                    return P
+                    return G
                 }
             });
-            var l = n("917351"),
-                u = n.n(l),
-                i = n("316693"),
-                a = n("233069"),
-                s = n("271938"),
-                r = n("42203"),
-                c = n("923959"),
-                d = n("525065"),
-                o = n("26989"),
-                f = n("305961"),
-                _ = n("42887"),
-                S = n("957255"),
-                g = n("824563"),
-                E = n("945956"),
-                v = n("18494"),
-                p = n("162771"),
-                T = n("800762"),
-                A = n("599110"),
-                I = n("991170"),
-                h = n("761932"),
-                y = n("49111"),
-                m = n("724210");
+            var s = n("917351"),
+                i = n.n(s),
+                r = n("316693"),
+                a = n("507313"),
+                o = n("233069"),
+                d = n("271938"),
+                u = n("42203"),
+                l = n("923959"),
+                f = n("525065"),
+                _ = n("26989"),
+                c = n("305961"),
+                g = n("42887"),
+                m = n("957255"),
+                h = n("824563"),
+                v = n("945956"),
+                E = n("660478"),
+                p = n("18494"),
+                y = n("162771"),
+                T = n("282109"),
+                C = n("800762"),
+                S = n("599110"),
+                I = n("718517"),
+                A = n("991170"),
+                D = n("761932"),
+                N = n("49111"),
+                O = n("724210");
 
-            function N(t) {
-                let e = 0;
-                for (let n in t) e += 1;
-                return e
+            function b(e) {
+                let t = 0;
+                for (let n in e) t += 1;
+                return t
             }
 
-            function C(t) {
-                var e;
-                if (null == t) return null;
-                let n = f.default.getGuild(t);
+            function P(e) {
+                var t;
+                if (null == e) return null;
+                let n = c.default.getGuild(e);
                 if (null == n) return null;
-                let l = s.default.getId(),
-                    u = o.default.getMember(t, l),
-                    i = c.default.getChannels(t),
-                    a = i[c.GUILD_SELECTABLE_CHANNELS_KEY].length,
-                    r = i[c.GUILD_VOCAL_CHANNELS_KEY].length,
-                    _ = T.default.getVoiceStates(t);
+                let s = d.default.getId(),
+                    i = _.default.getMember(e, s),
+                    r = l.default.getChannels(e),
+                    a = r[l.GUILD_SELECTABLE_CHANNELS_KEY].length,
+                    o = r[l.GUILD_VOCAL_CHANNELS_KEY].length,
+                    u = C.default.getVoiceStates(e);
                 return {
                     guild_id: n.id,
-                    guild_size_total: d.default.getMemberCount(t),
-                    guild_num_channels: a + r,
+                    guild_size_total: f.default.getMemberCount(e),
+                    guild_num_channels: a + o,
                     guild_num_text_channels: a,
-                    guild_num_voice_channels: r,
-                    guild_num_roles: N(n.roles),
-                    guild_member_num_roles: null != u ? u.roles.length : 0,
-                    guild_member_perms: String(null !== (e = S.default.getGuildPermissions(n)) && void 0 !== e ? e : I.default.NONE),
-                    guild_is_vip: n.hasFeature(y.GuildFeatures.VIP_REGIONS),
-                    is_member: null != u,
-                    num_voice_channels_active: N(_)
+                    guild_num_voice_channels: o,
+                    guild_num_roles: b(n.roles),
+                    guild_member_num_roles: null != i ? i.roles.length : 0,
+                    guild_member_perms: String(null !== (t = m.default.getGuildPermissions(n)) && void 0 !== t ? t : A.default.NONE),
+                    guild_is_vip: n.hasFeature(N.GuildFeatures.VIP_REGIONS),
+                    is_member: null != i,
+                    num_voice_channels_active: b(u)
                 }
             }
 
-            function O(t) {
-                if (null == t) return null;
-                let e = r.default.getChannel(t);
-                return null == e ? null : L(e)
+            function V(e) {
+                if (null == e) return null;
+                let t = u.default.getChannel(e);
+                return null == t ? null : R(t)
             }
 
-            function L(t) {
-                var e;
-                if (null == t) return null;
+            function R(e) {
+                var t;
+                if (null == e) return null;
                 let n = !1,
-                    l = t.getGuildId();
-                if (null != l) {
-                    let e = t => {
-                        if (null == t) return !1;
-                        let e = t.permissionOverwrites[l];
-                        return null != e && i.default.has(e.deny, y.Permissions.VIEW_CHANNEL)
+                    s = e.getGuildId();
+                if (null != s) {
+                    let t = e => {
+                        if (null == e) return !1;
+                        let t = e.permissionOverwrites[s];
+                        return null != t && r.default.has(t.deny, N.Permissions.VIEW_CHANNEL)
                     };
-                    n = a.THREAD_CHANNEL_TYPES.has(t.type) && null != t.parent_id ? e(r.default.getChannel(t.parent_id)) : e(t)
+                    n = o.THREAD_CHANNEL_TYPES.has(e.type) && null != e.parent_id ? t(u.default.getChannel(e.parent_id)) : t(e)
                 }
                 return {
-                    channel_id: t.id,
-                    channel_type: t.type,
-                    channel_size_total: t.isPrivate() ? t.recipients.length : 0,
-                    channel_member_perms: String(null != l && null !== (e = S.default.getChannelPermissions(t)) && void 0 !== e ? e : I.default.NONE),
+                    channel_id: e.id,
+                    channel_type: e.type,
+                    channel_size_total: e.isPrivate() ? e.recipients.length : 0,
+                    channel_member_perms: String(null != s && null !== (t = m.default.getChannelPermissions(e)) && void 0 !== t ? t : A.default.NONE),
                     channel_hidden: n
                 }
             }
 
-            function M(t) {
-                if (null == t) return null;
-                let e = r.default.getChannel(t);
+            function k(e) {
                 if (null == e) return null;
-                let n = _.default.isVideoEnabled(),
-                    l = E.default.getMediaSessionId();
+                let t = u.default.getChannel(e);
+                if (null == t) return null;
+                let n = g.default.isVideoEnabled(),
+                    s = v.default.getMediaSessionId();
                 return {
-                    channel_id: e.id,
-                    channel_type: e.type,
-                    guild_id: e.getGuildId(),
-                    media_session_id: l,
-                    ...D(e.getGuildId(), e.id, n),
-                    ...(0, h.getVoiceAnalyticsMetadataAdditional)()
+                    channel_id: t.id,
+                    channel_type: t.type,
+                    guild_id: t.getGuildId(),
+                    media_session_id: s,
+                    ...L(t.getGuildId(), t.id, n),
+                    ...(0, D.getVoiceAnalyticsMetadataAdditional)()
                 }
             }
 
-            function U(t) {
-                var e, n, l, u, i;
+            function M(e) {
+                var t, n, s, i, r;
                 let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                    s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                if (A.default.isThrottled(t)) return;
-                let c = !("location" in a) || a.location !== y.AnalyticsLocations.GUILD_CREATE_INVITE_SUGGESTION,
-                    d = "guild_id" in a ? a.guild_id : c ? p.default.getGuildId() : null,
-                    o = "channel_id" in a ? a.channel_id : c ? v.default.getChannelId(d) : null,
-                    f = r.default.getChannel(o);
-                let _ = (e = f, n = d, null == e ? null != n ? n : null : e.isPrivate() ? null : null !== (u = null !== (l = e.getGuildId()) && void 0 !== l ? l : n) && void 0 !== u ? u : null);
-                let S = {
+                    o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                if (S.default.isThrottled(e)) return;
+                let d = !("location" in a) || a.location !== N.AnalyticsLocations.GUILD_CREATE_INVITE_SUGGESTION,
+                    l = "guild_id" in a ? a.guild_id : d ? y.default.getGuildId() : null,
+                    f = "channel_id" in a ? a.channel_id : d ? p.default.getChannelId(l) : null,
+                    _ = u.default.getChannel(f);
+                let c = (t = _, n = l, null == t ? null != n ? n : null : t.isPrivate() ? null : null !== (i = null !== (s = t.getGuildId()) && void 0 !== s ? s : n) && void 0 !== i ? i : null);
+                let g = {
                     ...a,
-                    ...C(_),
-                    ...null != d && null != o && (0, m.isStaticChannelRoute)(o) ? (i = 0, {
-                        channel_static_route: o,
+                    ...P(c),
+                    ...null != l && null != f && (0, O.isStaticChannelRoute)(f) ? (r = 0, {
+                        channel_static_route: f,
                         channel_hidden: !1
-                    }) : L(f)
+                    }) : R(_)
                 };
-                A.default.track(t, S, {
-                    flush: s
+                S.default.track(e, g, {
+                    flush: o
                 })
             }
 
-            function D(t, e, n) {
-                let l = {
+            function w(e) {
+                let t = u.default.getChannel(e);
+                if (null == t || null == t.guild_id) return {};
+                let n = c.default.getGuild(t.guild_id);
+                if (null == n) return {};
+                let s = E.default.getSnapshot(e, 10 * I.default.Millis.SECOND);
+                return {
+                    channel_was_unread: s.unread,
+                    channel_mention_count: s.mentionCount,
+                    channel_is_muted: T.default.isChannelMuted(t.guild_id, t.id),
+                    channel_resolved_unread_setting: T.default.resolveUnreadSetting(t),
+                    channel_preset: (0, a.presetFromSettings)(T.default.resolveUnreadSetting(t), T.default.resolvedMessageNotifications(t)),
+                    guild_was_unread: s.guildUnread,
+                    guild_mention_count: s.guildMentionCount,
+                    guild_is_muted: T.default.isMuted(t.guild_id),
+                    guild_resolved_unread_setting: T.default.resolveGuildUnreadSetting(n),
+                    guild_preset: (0, a.presetFromSettings)(T.default.resolveGuildUnreadSetting(n), T.default.getMessageNotifications(t.guild_id))
+                }
+            }
+
+            function L(e, t, n) {
+                let s = {
                     voice_state_count: 0,
                     video_stream_count: 0,
                     video_enabled: n
                 };
-                return u(T.default.getVoiceStates(t)).filter(t => t.channelId === e).filter(t => t.userId !== s.default.getId()).forEach(t => {
-                    l.voice_state_count++, (t.selfVideo || t.selfStream) && l.video_stream_count++
-                }), l
+                return i(C.default.getVoiceStates(e)).filter(e => e.channelId === t).filter(e => e.userId !== d.default.getId()).forEach(e => {
+                    s.voice_state_count++, (e.selfVideo || e.selfStream) && s.video_stream_count++
+                }), s
             }
 
-            function G(t, e) {
+            function U(e, t) {
                 let n = {
                     custom_status_count: 0
                 };
-                return u(T.default.getVoiceStates(t)).forEach(t => {
-                    t.channelId === e && null != g.default.findActivity(t.userId, t => t.type === y.ActivityTypes.CUSTOM_STATUS) && n.custom_status_count++
+                return i(C.default.getVoiceStates(e)).forEach(e => {
+                    e.channelId === t && null != h.default.findActivity(e.userId, e => e.type === N.ActivityTypes.CUSTOM_STATUS) && n.custom_status_count++
                 }), n
             }
-            var P = {
-                trackWithMetadata: U,
-                getVoiceStateMetadata: D
+            var G = {
+                trackWithMetadata: M,
+                getVoiceStateMetadata: L
             }

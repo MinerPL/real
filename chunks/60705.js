@@ -1,11 +1,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 GuildProductsExperiment: function() {
-                    return a
+                    return i
                 }
             });
-            var i = n("862205");
-            let a = (0, i.createExperiment)({
+            var s = n("862205");
+            let i = (0, s.createExperiment)({
                 kind: "guild",
                 id: "2023-04_server_products",
                 label: "Server Products",

@@ -60,6 +60,7 @@
                         hasPendingMemberAction: l
                     } = this.props;
                     t && null != e && ((0, u.trackWithMetadata)(W.AnalyticEvents.CHANNEL_OPENED, {
+                        ...(0, u.getChannelOpenedMetadata)(e),
                         channel_is_nsfw: n,
                         parent_id: a,
                         can_send_message: i,
@@ -123,6 +124,7 @@
                             n = p.default.getStageInstanceByChannel(s),
                             a = S.default.getActiveEventByChannel(s);
                         (0, u.trackWithMetadata)(W.AnalyticEvents.CHANNEL_OPENED, {
+                            ...(0, u.getChannelOpenedMetadata)(s),
                             channel_id: s,
                             channel_is_nsfw: z,
                             parent_id: x,
@@ -235,7 +237,8 @@
                             parent_id: x,
                             can_send_message: J,
                             has_pending_member_action: ee,
-                            ...i
+                            ...i,
+                            ...(0, u.getChannelOpenedMetadata)(v)
                         }), X && (0, u.trackWithMetadata)(W.AnalyticEvents.TEXT_IN_VOICE_OPENED, {
                             channel_is_nsfw: z
                         })

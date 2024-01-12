@@ -1,32 +1,32 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return s
                 }
             });
-            var i, a = n("398183"),
-                l = n("862337"),
-                s = n("268491"),
-                r = n("49111");
+            var s, i = n("398183"),
+                r = n("862337"),
+                a = n("268491"),
+                o = n("49111");
 
-            function u(e) {
+            function d(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
                 return null != e ? Math.round(e) : t
             }
-            i = class {
+            s = class {
                 start() {
                     let {
                         resolution: e,
                         fps: t
-                    } = s.default.getState();
-                    this._targetResolution = e, this._targetFPS = t, this._statInterval.start(1e3, this._sampleStats), this._lastLayoutChanged = (0, a.now)()
+                    } = a.default.getState();
+                    this._targetResolution = e, this._targetFPS = t, this._statInterval.start(1e3, this._sampleStats), this._lastLayoutChanged = (0, i.now)()
                 }
                 stop() {
-                    this._statInterval.stop(), this._streamEnd = (0, a.now)(), this._incrementLayout(this._lastLayout, (this._streamEnd - this._lastLayoutChanged) / 1e3)
+                    this._statInterval.stop(), this._streamEnd = (0, i.now)(), this._incrementLayout(this._lastLayout, (this._streamEnd - this._lastLayoutChanged) / 1e3)
                 }
                 layoutChange(e) {
                     if (e === this._lastLayout || null != this._streamEnd) return;
-                    let t = (0, a.now)();
+                    let t = (0, i.now)();
                     this._incrementLayout(this._lastLayout, (t - this._lastLayoutChanged) / 1e3), this._layoutChanges++, this._lastLayout = e, this._lastLayoutChanged = t
                 }
                 getLayout() {
@@ -35,13 +35,13 @@
                 getStats() {
                     let e = {
                         num_layout_changes: this._layoutChanges,
-                        duration_layout_fullscreen: u(this._layoutBuckets[r.StreamLayouts.FULL_SCREEN]),
-                        duration_layout_theatre: u(this._layoutBuckets[r.StreamLayouts.THEATRE]),
-                        duration_layout_pip: u(this._layoutBuckets[r.StreamLayouts.PIP]),
-                        duration_layout_popout: u(this._layoutBuckets[r.StreamLayouts.POPOUT]),
-                        duration_layout_portrait: u(this._layoutBuckets[r.StreamLayouts.PORTRAIT]),
-                        duration_layout_landscape: u(this._layoutBuckets[r.StreamLayouts.LANDSCAPE]),
-                        duration_layout_minimized: u(this._layoutBuckets[r.StreamLayouts.MINIMIZED])
+                        duration_layout_fullscreen: d(this._layoutBuckets[o.StreamLayouts.FULL_SCREEN]),
+                        duration_layout_theatre: d(this._layoutBuckets[o.StreamLayouts.THEATRE]),
+                        duration_layout_pip: d(this._layoutBuckets[o.StreamLayouts.PIP]),
+                        duration_layout_popout: d(this._layoutBuckets[o.StreamLayouts.POPOUT]),
+                        duration_layout_portrait: d(this._layoutBuckets[o.StreamLayouts.PORTRAIT]),
+                        duration_layout_landscape: d(this._layoutBuckets[o.StreamLayouts.LANDSCAPE]),
+                        duration_layout_minimized: d(this._layoutBuckets[o.StreamLayouts.MINIMIZED])
                     };
                     return this._isSender ? {
                         ...e,
@@ -57,8 +57,8 @@
                         let {
                             resolution: e,
                             fps: t
-                        } = s.default.getState();
+                        } = a.default.getState();
                         this._streamSettingsChanged = e !== this._targetResolution || t !== this._targetFPS
-                    }, this._isSender = t, this._statInterval = new l.Interval, this._lastLayout = e, this._layoutBuckets = {}
+                    }, this._isSender = t, this._statInterval = new r.Interval, this._lastLayout = e, this._layoutBuckets = {}
                 }
             }

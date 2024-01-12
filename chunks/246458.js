@@ -31,8 +31,8 @@
                 A = n("560995"),
                 x = n("637842"),
                 R = n("758547"),
-                L = n("49111"),
-                M = n("695838"),
+                M = n("49111"),
+                L = n("695838"),
                 D = n("782340"),
                 j = n("718394");
             let w = 54;
@@ -119,7 +119,7 @@
                         renderBanner: l,
                         bannerVisible: s,
                         communityInfoVisible: r
-                    } = this.state, d = n.id === M.FAVORITES_RAW_GUILD_ID ? u.FavoritesChannelList : u.GuildChannelList;
+                    } = this.state, d = n.id === L.FAVORITES_RAW_GUILD_ID ? u.FavoritesChannelList : u.GuildChannelList;
                     return (0, i.jsxs)(R.default, {
                         header: (0, i.jsx)(c.default, {
                             guild: n,
@@ -193,12 +193,12 @@
                         channelId: t
                     } = e;
                     return t
-                }), R = (0, s.useStateFromStores)([O.default], () => O.default.getVoiceChannelId()), M = (0, s.useStateFromStores)([N.default], () => N.default.getGuildVersion(n)), D = (0, s.useStateFromStores)([g.default], () => g.default.version), j = (0, s.useStateFromStores)([y.default], () => y.default.getGuildChangeSentinel(n)), {
+                }), R = (0, s.useStateFromStores)([O.default], () => O.default.getVoiceChannelId()), L = (0, s.useStateFromStores)([N.default], () => N.default.getGuildVersion(n)), D = (0, s.useStateFromStores)([g.default], () => g.default.version), j = (0, s.useStateFromStores)([y.default], () => y.default.getGuildChangeSentinel(n)), {
                     enableHangStatus: w
                 } = f.HangStatusExperiment.useExperiment({
                     guildId: n,
                     location: "GuildSidebar"
-                }), b = (0, r.useEmbeddedAppsByChannel)(null == a ? void 0 : a.id), P = (0, d.useActiveEventsByChannel)(null == a ? void 0 : a.id), V = null !== (t = null == a ? void 0 : a.hasFeature(L.GuildFeatures.COMMUNITY)) && void 0 !== t && t;
+                }), b = (0, r.useEmbeddedAppsByChannel)(null == a ? void 0 : a.id), P = (0, d.useActiveEventsByChannel)(null == a ? void 0 : a.id), V = null !== (t = null == a ? void 0 : a.hasFeature(M.GuildFeatures.COMMUNITY)) && void 0 !== t && t;
                 return (0, i.jsx)(k, {
                     guildId: n,
                     guild: a,
@@ -212,7 +212,7 @@
                     collapsedChannels: _,
                     collapseMuted: c,
                     guildReadStateSentinel: j,
-                    permissionVersion: M,
+                    permissionVersion: L,
                     categoryCollapseVersion: D,
                     embeddedAppsByChannel: b,
                     activeEventsByChannel: P,

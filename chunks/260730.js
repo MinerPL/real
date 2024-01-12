@@ -85,8 +85,8 @@
                 let {
                     guild: b,
                     renderMode: G,
-                    scrollerRef: y,
-                    seenManagerRef: O
+                    scrollerRef: O,
+                    seenManagerRef: y
                 } = e, H = (0, C.default)(), [k, U, w, B] = (0, s.useStateFromStoresArray)([u.default], () => [M.GuildFeedSectionTypes.READ, M.GuildFeedSectionTypes.UNREAD, M.GuildFeedSectionTypes.HIGHLIGHTED, M.GuildFeedSectionTypes.ALL].map(e => u.default.getFeedItemSection(b.id, e))), P = (0, s.useStateFromStores)([u.default], () => u.default.getLoadId(b.id)), V = (0, s.useStateFromStores)([S.default], () => S.default.getHomeSessionId(b.id)), {
                     loading: W,
                     error: K,
@@ -120,10 +120,10 @@
                             windowId: e,
                             isPaused: !h.default.isFocused(e)
                         });
-                    return t.initialize(), O.current = t, () => {
+                    return t.initialize(), y.current = t, () => {
                         t.terminate()
                     }
-                }, [O, b.id, P, V]);
+                }, [y, b.id, P, V]);
                 let q = function(e) {
                         let [t, a] = n.useState(null);
                         return n.useEffect(() => {
@@ -137,24 +137,24 @@
                                 n.disconnect()
                             }
                         }, [e]), t
-                    }(y),
+                    }(O),
                     Q = n.useMemo(() => G !== M.GuildFeedRenderMode.NEW ? [] : [...B].sort((e, t) => -I.default.compare((0, o.default)(e).id, (0, o.default)(t).id)), [B, G]),
                     $ = n.useCallback(async () => {
                         var e;
-                        await (null === (e = O.current) || void 0 === e ? void 0 : e.maybeFlushSeenItems(g.ForceFlushType.IMMEDIATE)), z({
+                        await (null === (e = y.current) || void 0 === e ? void 0 : e.maybeFlushSeenItems(g.ForceFlushType.IMMEDIATE)), z({
                             force: !0,
                             flushSeenItems: () => {
                                 var e;
-                                return null === (e = O.current) || void 0 === e ? void 0 : e.maybeFlushSeenItems(g.ForceFlushType.IMMEDIATE)
+                                return null === (e = y.current) || void 0 === e ? void 0 : e.maybeFlushSeenItems(g.ForceFlushType.IMMEDIATE)
                             }
                         })
-                    }, [O, z]);
+                    }, [y, z]);
                 n.useEffect(() => {
                     if (W === u.LoadingStatus.LOADING_FRESH_FEED) {
                         var e, t;
-                        X ? null === (e = y.current) || void 0 === e || e.scrollTo({
+                        X ? null === (e = O.current) || void 0 === e || e.scrollTo({
                             to: J
-                        }) : null === (t = y.current) || void 0 === t || t.scrollToTop()
+                        }) : null === (t = O.current) || void 0 === t || t.scrollToTop()
                     }
                 }, [W, X, J]);
                 let ee = 0 === B.length,
@@ -180,13 +180,13 @@
                         guildId: b.id,
                         itemId: e.id,
                         scrollerHeight: q,
-                        scrollerRef: y,
+                        scrollerRef: O,
                         showFeedback: 0 === t && et,
                         setOnDismissedFeedback: ea
                     }, e.id)), (0, l.jsx)(R, {
                         guildId: b.id,
                         hasMoreItems: null != Z && Z,
-                        scrollerRef: y,
+                        scrollerRef: O,
                         error: K,
                         fetchPage: Y,
                         onReloadClick: $
@@ -200,13 +200,13 @@
                         guildId: b.id,
                         itemId: e.id,
                         scrollerHeight: q,
-                        scrollerRef: y,
+                        scrollerRef: O,
                         showFeedback: 0 === t && et,
                         setOnDismissedFeedback: ea
                     }, e.id)), (0, l.jsx)(R, {
                         guildId: b.id,
                         hasMoreItems: null != Z && Z,
-                        scrollerRef: y,
+                        scrollerRef: O,
                         error: K,
                         fetchPage: Y,
                         onReloadClick: $
@@ -223,27 +223,27 @@
                         guildId: b.id,
                         itemId: e.id,
                         scrollerHeight: q,
-                        scrollerRef: y,
+                        scrollerRef: O,
                         showFeedback: e.id === el && et,
                         setOnDismissedFeedback: ea
                     }, e.id)), U.map(e => (0, l.jsx)(f.default, {
                         guildId: b.id,
                         itemId: e.id,
                         scrollerHeight: q,
-                        scrollerRef: y,
+                        scrollerRef: O,
                         showFeedback: e.id === el && et,
                         setOnDismissedFeedback: ea
                     }, e.id)), k.length > 0 ? (0, l.jsx)(A.default, {}) : null, k.map(e => (0, l.jsx)(f.default, {
                         guildId: b.id,
                         itemId: e.id,
                         scrollerHeight: q,
-                        scrollerRef: y,
+                        scrollerRef: O,
                         showFeedback: e.id === el && et,
                         setOnDismissedFeedback: ea
                     }, e.id)), (0, l.jsx)(R, {
                         guildId: b.id,
                         hasMoreItems: null != Z && Z,
-                        scrollerRef: y,
+                        scrollerRef: O,
                         error: K,
                         fetchPage: Y,
                         onReloadClick: $

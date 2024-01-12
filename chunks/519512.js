@@ -1,9 +1,9 @@
             "use strict";
-            var i = r("366400"),
-                n = r("888757");
+            var r = s("366400"),
+                i = s("888757");
             t.exports = function() {
-                var t = n();
-                return i(String.prototype, {
+                var t = i();
+                return r(String.prototype, {
                     trim: t
                 }, {
                     trim: function() {

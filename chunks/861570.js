@@ -52,6 +52,7 @@
                         let e = (0, f.collectThreadMetadata)(g.default.getChannel(j.id), !0);
                         (0, c.trackWithMetadata)(N.AnalyticEvents.CHANNEL_OPENED, {
                             ...e,
+                            ...(0, c.getChannelOpenedMetadata)(j.id),
                             channel_id: j.id,
                             guild_id: j.guild_id,
                             parent_id: j.parent_id,

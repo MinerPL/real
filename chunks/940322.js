@@ -1,14 +1,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return i
                 }
             });
 
-            function i(e, t) {
+            function s(e, t) {
                 return Math.max(Math.min((e - t) / 30, 1), -1)
             }
-            var a = class e {
+            var i = class e {
                 initialize() {
                     window.addEventListener("mousemove", this.handleMouseMove)
                 }
@@ -16,7 +16,7 @@
                     window.removeEventListener("mousemove", this.handleMouseMove)
                 }
                 update() {
-                    this.x !== this.px && this.y !== this.py && (this.forceX += i(this.x, this.px), this.forceY += i(this.y, this.py), this.px = this.x, this.py = this.y), 0 !== this.forceX && (this.forceX = this.forceX * this.resistance), 0 !== this.forceY && (this.forceY = this.forceY * this.resistance)
+                    this.x !== this.px && this.y !== this.py && (this.forceX += s(this.x, this.px), this.forceY += s(this.y, this.py), this.px = this.x, this.py = this.y), 0 !== this.forceX && (this.forceX = this.forceX * this.resistance), 0 !== this.forceY && (this.forceY = this.forceY * this.resistance)
                 }
                 render() {}
                 constructor() {

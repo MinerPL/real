@@ -1,11 +1,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return l
                 }
             });
-            var r, i = n("37983"),
-                l = n("884691"),
+            var l, i = n("37983"),
+                r = n("884691"),
                 s = n("414456"),
                 a = n.n(s),
                 o = n("931138"),
@@ -14,7 +14,7 @@
                 d = n("811151"),
                 f = n("427459"),
                 p = n("804308");
-            class E extends l.PureComponent {
+            class h extends r.PureComponent {
                 render() {
                     let {
                         tier: e
@@ -31,24 +31,24 @@
                     })
                 }
             }
-            let _ = e => {
+            let E = e => {
                 let {
                     subscriptionChange: t,
                     guild: n
                 } = e;
                 if (0 === t) return null;
-                let r = Math.max(n.premiumSubscriberCount + t, 0),
-                    l = (0, f.getGuildTierFromAppliedBoostCount)(r, n.id),
-                    s = l - (0, f.getGuildTierFromAppliedBoostCount)(n.premiumSubscriberCount, n.id);
+                let l = Math.max(n.premiumSubscriberCount + t, 0),
+                    r = (0, f.getGuildTierFromAppliedBoostCount)(l, n.id),
+                    s = r - (0, f.getGuildTierFromAppliedBoostCount)(n.premiumSubscriberCount, n.id);
                 return 0 === s ? null : (0, i.jsxs)(i.Fragment, {
                     children: [(0, i.jsx)(d.default, {
                         className: s > 0 ? p.levelUpIcon : p.levelDownIcon
-                    }), (0, i.jsx)(E, {
-                        tier: l
+                    }), (0, i.jsx)(h, {
+                        tier: r
                     })]
                 })
             };
-            r = class extends l.PureComponent {
+            l = class extends r.PureComponent {
                 render() {
                     let {
                         guild: e,
@@ -67,9 +67,9 @@
                                 children: e.name
                             }), (0, i.jsxs)("div", {
                                 className: p.tierInfo,
-                                children: [(0, i.jsx)(E, {
+                                children: [(0, i.jsx)(h, {
                                     tier: e.premiumTier
-                                }), (0, i.jsx)(_, {
+                                }), (0, i.jsx)(E, {
                                     guild: e,
                                     subscriptionChange: null != n ? n : 0
                                 })]

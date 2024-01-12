@@ -6,9 +6,9 @@
             }), n("222007"), n("70102");
             var i = n("884691"),
                 r = n("748820"),
-                s = n("157590");
-            let l = (0, r.v4)(),
-                o = new Map,
+                l = n("157590");
+            let o = (0, r.v4)(),
+                s = new Map,
                 u = new Map;
             class a extends i.Component {
                 componentDidMount() {
@@ -48,9 +48,9 @@
                         rootMargin: n,
                         threshold: i
                     } = e;
-                    t ? o.has(t) ? this.elementId = o.get(t) || "" : o.set(t, (0, r.v4)()) : this.elementId = l;
+                    t ? s.has(t) ? this.elementId = s.get(t) || "" : s.set(t, (0, r.v4)()) : this.elementId = o;
                     let a = this.getVisibilityObserverId();
-                    !u.has(a) && u.set(a, new s.default({
+                    !u.has(a) && u.set(a, new l.default({
                         root: t,
                         rootMargin: n,
                         threshold: i

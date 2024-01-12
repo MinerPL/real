@@ -1,16 +1,16 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return a
                 }
             });
-            var i = n("298386"),
-                a = n("42203"),
-                l = n("427953");
+            var s = n("298386"),
+                i = n("42203"),
+                r = n("427953");
 
-            function s(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.default,
+            function a(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.default,
                     n = t.getChannel(e),
-                    s = (0, l.isActivitiesInTextEnabled)(n, "isVoiceActivityChannel");
-                return null != n && (n.type === i.ChannelTypes.GUILD_VOICE || n.isPrivate() && !s)
+                    a = (0, r.isActivitiesInTextEnabled)(n, "isVoiceActivityChannel");
+                return null != n && (n.type === s.ChannelTypes.GUILD_VOICE || n.isPrivate() && !a)
             }

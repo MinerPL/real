@@ -1,11 +1,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 CustomGiftSoundboardEmojiExperiment: function() {
-                    return a
+                    return i
                 }
             });
-            var i = n("862205");
-            let a = (0, i.createExperiment)({
+            var s = n("862205");
+            let i = (0, s.createExperiment)({
                 kind: "user",
                 id: "2023-10_custom_gift_soundboard_emoji",
                 label: "Custom Gift - Soundboard and Emoji Experiment",

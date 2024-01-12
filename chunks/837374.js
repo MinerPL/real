@@ -1,47 +1,47 @@
             "use strict";
-            var i, a;
+            var s, i;
 
-            function l(e) {
+            function r(e) {
                 let {
                     sessionId: t,
                     userId: n,
-                    applicationId: i,
-                    channelId: a,
-                    streamKey: l
+                    applicationId: s,
+                    channelId: i,
+                    streamKey: r
                 } = e;
                 return {
                     session_id: t,
                     user_id: n,
-                    application_id: i,
-                    channel_id: a,
-                    stream_key: l
+                    application_id: s,
+                    channel_id: i,
+                    stream_key: r
                 }
             }
 
-            function s(e, t, n) {
+            function a(e, t, n) {
                 let {
-                    session_id: i,
-                    application_id: a,
-                    channel_id: l,
-                    stream_key: s
+                    session_id: s,
+                    application_id: i,
+                    channel_id: r,
+                    stream_key: a
                 } = e;
                 return {
-                    sessionId: i,
+                    sessionId: s,
                     userId: t,
-                    applicationId: a,
-                    channelId: l,
-                    streamKey: s,
+                    applicationId: i,
+                    channelId: r,
+                    streamKey: a,
                     source: n
                 }
             }
             n.r(t), n.d(t, {
                 BroadcastSourceType: function() {
-                    return i
+                    return s
                 },
                 broadcastToServer: function() {
-                    return l
+                    return r
                 },
                 broadcastFromServer: function() {
-                    return s
+                    return a
                 }
-            }), (a = i || (i = {}))[a.GLOBAL = 0] = "GLOBAL", a[a.GUILD = 1] = "GUILD"
+            }), (i = s || (s = {}))[i.GLOBAL = 0] = "GLOBAL", i[i.GUILD = 1] = "GUILD"

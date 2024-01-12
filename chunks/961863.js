@@ -1,32 +1,32 @@
-            var i = r("441270"),
-                n = r("944026"),
-                o = r("599235"),
-                a = r("912065").Buffer,
-                s = {
-                    "des-ede3-cbc": n.CBC.instantiate(n.EDE),
-                    "des-ede3": n.EDE,
-                    "des-ede-cbc": n.CBC.instantiate(n.EDE),
-                    "des-ede": n.EDE,
-                    "des-cbc": n.CBC.instantiate(n.DES),
-                    "des-ecb": n.DES
+            var r = s("441270"),
+                i = s("944026"),
+                n = s("599235"),
+                c = s("912065").Buffer,
+                o = {
+                    "des-ede3-cbc": i.CBC.instantiate(i.EDE),
+                    "des-ede3": i.EDE,
+                    "des-ede-cbc": i.CBC.instantiate(i.EDE),
+                    "des-ede": i.EDE,
+                    "des-cbc": i.CBC.instantiate(i.DES),
+                    "des-ecb": i.DES
                 };
 
             function f(t) {
-                i.call(this);
-                var e, r = t.mode.toLowerCase(),
-                    n = s[r];
+                r.call(this);
+                var e, s = t.mode.toLowerCase(),
+                    i = o[s];
                 e = t.decrypt ? "decrypt" : "encrypt";
-                var o = t.key;
-                !a.isBuffer(o) && (o = a.from(o)), ("des-ede" === r || "des-ede-cbc" === r) && (o = a.concat([o, o.slice(0, 8)]));
+                var n = t.key;
+                !c.isBuffer(n) && (n = c.from(n)), ("des-ede" === s || "des-ede-cbc" === s) && (n = c.concat([n, n.slice(0, 8)]));
                 var f = t.iv;
-                !a.isBuffer(f) && (f = a.from(f)), this._des = n.create({
-                    key: o,
+                !c.isBuffer(f) && (f = c.from(f)), this._des = i.create({
+                    key: n,
                     iv: f,
                     type: e
                 })
             }
-            s.des = s["des-cbc"], s.des3 = s["des-ede3-cbc"], t.exports = f, o(f, i), f.prototype._update = function(t) {
-                return a.from(this._des.update(t))
+            o.des = o["des-cbc"], o.des3 = o["des-ede3-cbc"], t.exports = f, n(f, r), f.prototype._update = function(t) {
+                return c.from(this._des.update(t))
             }, f.prototype._final = function() {
-                return a.from(this._des.final())
+                return c.from(this._des.final())
             }

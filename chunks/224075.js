@@ -1,21 +1,21 @@
-            var i = r("626785"),
-                n = r("698273"),
-                o = r("583048"),
-                a = r("854060"),
-                s = r("492692"),
-                f = r("558304"),
-                h = r("540893");
-            t.exports = function(t, e, r) {
-                var c = -1;
-                return e = i(e.length ? e : [h], s(n)), a(o(t, function(t, r, n) {
+            var r = s("626785"),
+                i = s("698273"),
+                n = s("583048"),
+                c = s("854060"),
+                o = s("492692"),
+                f = s("558304"),
+                u = s("540893");
+            t.exports = function(t, e, s) {
+                var a = -1;
+                return e = r(e.length ? e : [u], o(i)), c(n(t, function(t, s, i) {
                     return {
-                        criteria: i(e, function(e) {
+                        criteria: r(e, function(e) {
                             return e(t)
                         }),
-                        index: ++c,
+                        index: ++a,
                         value: t
                     }
                 }), function(t, e) {
-                    return f(t, e, r)
+                    return f(t, e, s)
                 })
             }

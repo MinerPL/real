@@ -1,2 +1,2 @@
             "use strict";
-            t.exports = r("527644")
+            t.exports = s("527644")

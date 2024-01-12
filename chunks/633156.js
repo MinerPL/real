@@ -6,8 +6,8 @@
             }), n("222007");
             var r = n("37983"),
                 s = n("884691"),
-                o = n("414456"),
-                a = n.n(o),
+                a = n("414456"),
+                o = n.n(a),
                 l = n("77078"),
                 i = n("437822"),
                 u = n("152584"),
@@ -25,7 +25,7 @@
                 let {
                     email: t,
                     setEmail: n,
-                    claimRequired: o,
+                    claimRequired: a,
                     onSuccess: _,
                     onClose: E
                 } = e, [p, S] = s.useState(), [T, C] = s.useState(""), [h, m] = s.useState(""), [L, g] = s.useState(!1);
@@ -43,7 +43,7 @@
                     }
                 };
                 return (0, r.jsxs)("div", {
-                    className: a(N.modalLight, (0, f.getThemeClass)(A.ThemeTypes.LIGHT)),
+                    className: o(N.modalLight, (0, f.getThemeClass)(A.ThemeTypes.LIGHT)),
                     children: [(0, r.jsxs)(l.ModalHeader, {
                         className: N.formHeader,
                         direction: c.default.Direction.VERTICAL,
@@ -58,7 +58,7 @@
                             className: N.formBody,
                             variant: "text-md/normal",
                             color: "header-secondary",
-                            children: o ? R.default.Messages.CLAIM_ACCOUNT_REQUIRED_BODY : R.default.Messages.CLAIM_ACCOUNT_BODY_2
+                            children: a ? R.default.Messages.CLAIM_ACCOUNT_REQUIRED_BODY : R.default.Messages.CLAIM_ACCOUNT_BODY_2
                         }), (0, r.jsx)(l.ModalCloseButton, {
                             className: N.closeButton,
                             onClick: E
@@ -92,7 +92,7 @@
                                 submitting: L,
                                 disabled: 0 === t.length || 0 === T.length,
                                 children: R.default.Messages.CLAIM_ACCOUNT
-                            }), o && (0, r.jsx)(l.Button, {
+                            }), a && (0, r.jsx)(l.Button, {
                                 className: N.logoutButton,
                                 color: l.Button.Colors.PRIMARY,
                                 look: l.Button.Looks.LINK,
@@ -111,7 +111,7 @@
                 let {
                     email: t,
                     claimRequired: n,
-                    onClose: o
+                    onClose: a
                 } = e, i = n ? R.default.Messages.CLAIM_ACCOUNT_REQUIRED_EMAIL_TO : R.default.Messages.CLAIM_ACCOUNT_EMAIL_TO;
 
                 function u() {
@@ -125,12 +125,12 @@
                     })
                 }
                 return s.useEffect(() => d.default.flowStep(I.FlowType.ANY, I.ClaimAccountSteps.CLAIM_ACCOUNT_SUCCESS), []), (0, r.jsxs)("div", {
-                    className: a(N.modalLight, (0, f.getThemeClass)(A.ThemeTypes.LIGHT)),
+                    className: o(N.modalLight, (0, f.getThemeClass)(A.ThemeTypes.LIGHT)),
                     children: [(0, r.jsxs)(l.ModalContent, {
                         className: N.successContent,
                         children: [!n && (0, r.jsx)(l.ModalCloseButton, {
                             className: N.closeButton,
-                            onClick: o
+                            onClick: a
                         }), (0, r.jsx)("div", {
                             className: N.successImage
                         }), (0, r.jsx)(l.Text, {
@@ -148,7 +148,7 @@
                         direction: c.default.Direction.VERTICAL,
                         children: (0, r.jsx)(l.Button, {
                             size: l.Button.Sizes.LARGE,
-                            onClick: o,
+                            onClick: a,
                             children: R.default.Messages.OKAY
                         })
                     }) : (0, r.jsx)(l.ModalFooter, {
@@ -167,21 +167,21 @@
                 let {
                     onClose: t,
                     transitionState: n,
-                    claimRequired: o = !1
-                } = e, [a, i] = s.useState(""), [u, d] = s.useState(!1);
+                    claimRequired: a = !1
+                } = e, [o, i] = s.useState(""), [u, d] = s.useState(!1);
                 return u ? (0, r.jsx)(l.ModalRoot, {
                     transitionState: n,
                     children: (0, r.jsx)(S, {
-                        email: a,
-                        claimRequired: o,
+                        email: o,
+                        claimRequired: a,
                         onClose: t
                     })
                 }) : (0, r.jsx)(l.ModalRoot, {
                     transitionState: n,
                     children: (0, r.jsx)(p, {
-                        email: a,
+                        email: o,
                         setEmail: i,
-                        claimRequired: o,
+                        claimRequired: a,
                         onSuccess: () => d(!0),
                         onClose: t
                     })

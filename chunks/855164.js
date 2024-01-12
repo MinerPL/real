@@ -1,47 +1,47 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return C
+                    return E
                 }
             });
-            var i = n("37983");
+            var s = n("37983");
             n("884691");
-            var a = n("151426"),
-                l = n("551042"),
-                s = n("135230"),
-                r = n("926994"),
-                u = n("10641"),
-                o = n("42887"),
-                d = n("599110"),
-                c = n("129978"),
+            var i = n("151426"),
+                r = n("551042"),
+                a = n("135230"),
+                o = n("926994"),
+                d = n("10641"),
+                u = n("42887"),
+                l = n("599110"),
+                f = n("129978"),
                 _ = n("171644"),
-                E = n("49111"),
-                f = n("782340"),
-                h = n("274520");
-            let p = "game_console_alert_modal",
-                T = "game_console_ptt_alert_modal";
-            var C = {
+                c = n("49111"),
+                g = n("782340"),
+                m = n("274520");
+            let h = "game_console_alert_modal",
+                v = "game_console_ptt_alert_modal";
+            var E = {
                 maybeShowPTTAlert(e) {
-                    if (o.default.getMode() !== E.InputModes.PUSH_TO_TALK || (0, u.isDismissibleContentDismissed)(a.DismissibleContent.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
+                    if (u.default.getMode() !== c.InputModes.PUSH_TO_TALK || (0, d.isDismissibleContentDismissed)(i.DismissibleContent.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
                     let t = {
-                            [E.PlatformTypes.XBOX]: f.default.Messages.PTT_NOT_SUPPORTED_XBOX,
-                            [E.PlatformTypes.PLAYSTATION]: f.default.Messages.PTT_NOT_SUPPORTED_PLAYSTATION,
-                            [E.PlatformTypes.PLAYSTATION_STAGING]: f.default.Messages.PTT_NOT_SUPPORTED_PLAYSTATION
+                            [c.PlatformTypes.XBOX]: g.default.Messages.PTT_NOT_SUPPORTED_XBOX,
+                            [c.PlatformTypes.PLAYSTATION]: g.default.Messages.PTT_NOT_SUPPORTED_PLAYSTATION,
+                            [c.PlatformTypes.PLAYSTATION_STAGING]: g.default.Messages.PTT_NOT_SUPPORTED_PLAYSTATION
                         },
                         n = t[e];
                     return null == n ? Promise.resolve() : new Promise(e => {
                         let t = () => {
-                                (0, u.markDismissibleContentAsDismissed)(a.DismissibleContent.CONSOLE_PTT_DISABLE_ALERT), e()
+                                (0, d.markDismissibleContentAsDismissed)(i.DismissibleContent.CONSOLE_PTT_DISABLE_ALERT), e()
                             },
-                            r = e => (0, i.jsx)(s.default, {
+                            o = e => (0, s.jsx)(a.default, {
                                 ...e,
                                 title: n,
-                                body: f.default.Messages.PTT_NOT_SUPPORTED_ALERT_BODY,
+                                body: g.default.Messages.PTT_NOT_SUPPORTED_ALERT_BODY,
                                 onConfirm: t,
-                                titleClassName: h.title
+                                titleClassName: m.title
                             });
-                        (0, l.hasModalOpen)(T) ? (0, l.updateModal)(T, r) : (0, l.openModal)(r, {
-                            modalKey: T
+                        (0, r.hasModalOpen)(v) ? (0, r.updateModal)(v, o) : (0, r.openModal)(o, {
+                            modalKey: v
                         })
                     })
                 },
@@ -49,29 +49,29 @@
                     let {
                         title: t,
                         body: n,
-                        errorCodeMessage: a,
-                        reconnectPlatformType: u
-                    } = e, o = (0, i.jsx)(c.SelfDismissibleAlertBody, {
+                        errorCodeMessage: i,
+                        reconnectPlatformType: d
+                    } = e, u = (0, s.jsx)(f.SelfDismissibleAlertBody, {
                         body: n,
-                        errorCodeMessage: a,
-                        dismissCallback: () => (0, l.closeModal)(p)
+                        errorCodeMessage: i,
+                        dismissCallback: () => (0, r.closeModal)(h)
                     });
 
-                    function f() {
-                        null != u && ((0, r.default)(u), d.default.track(E.AnalyticEvents.ACCOUNT_LINK_STEP, {
+                    function g() {
+                        null != d && ((0, o.default)(d), l.default.track(c.AnalyticEvents.ACCOUNT_LINK_STEP, {
                             previous_step: _.GAME_CONSOLE_ALERT_MODAL_LOCATION,
                             current_step: "desktop oauth",
-                            platform_type: u
+                            platform_type: d
                         }))
                     }
-                    let h = e => (0, i.jsx)(s.default, {
+                    let m = e => (0, s.jsx)(a.default, {
                         ...e,
                         title: t,
-                        body: o,
-                        onConfirm: f
+                        body: u,
+                        onConfirm: g
                     });
-                    (0, l.hasModalOpen)(p) ? (0, l.updateModal)(p, h) : (0, l.openModal)(h, {
-                        modalKey: p
+                    (0, r.hasModalOpen)(h) ? (0, r.updateModal)(h, m) : (0, r.openModal)(m, {
+                        modalKey: h
                     })
                 }
             }

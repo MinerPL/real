@@ -1,27 +1,27 @@
             "use strict";
-            var i, a, l, s;
+            var s, i, r, a;
             n.r(t), n.d(t, {
                 MAX_STAGE_TOPIC_LENGTH: function() {
-                    return r
-                },
-                STAGE_APPLICATION_ID: function() {
-                    return u
-                },
-                STAGE_INVITE_STATE_KEY: function() {
                     return o
                 },
-                STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY: function() {
+                STAGE_APPLICATION_ID: function() {
                     return d
                 },
+                STAGE_INVITE_STATE_KEY: function() {
+                    return u
+                },
+                STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY: function() {
+                    return l
+                },
                 RequestToSpeakPermissionStates: function() {
-                    return i
+                    return s
                 },
                 StartStageSteps: function() {
-                    return a
+                    return i
                 }
             }), n("701909"), n("49111"), n("782340");
-            let r = 240,
-                u = "834488117758001152",
-                o = "stage-invite",
-                d = "stage-channel-audience-notice-shown";
-            (l = i || (i = {}))[l.EVERYONE = 1] = "EVERYONE", l[l.NO_ONE = 2] = "NO_ONE", l[l.ROLES = 3] = "ROLES", (s = a || (a = {}))[s.GUILD_SELECTION = 0] = "GUILD_SELECTION", s[s.STAGE_CHANNEL_SETTINGS = 1] = "STAGE_CHANNEL_SETTINGS", s[s.PUBLIC_STAGE_PREVIEW = 2] = "PUBLIC_STAGE_PREVIEW"
+            let o = 240,
+                d = "834488117758001152",
+                u = "stage-invite",
+                l = "stage-channel-audience-notice-shown";
+            (r = s || (s = {}))[r.EVERYONE = 1] = "EVERYONE", r[r.NO_ONE = 2] = "NO_ONE", r[r.ROLES = 3] = "ROLES", (a = i || (i = {}))[a.GUILD_SELECTION = 0] = "GUILD_SELECTION", a[a.STAGE_CHANNEL_SETTINGS = 1] = "STAGE_CHANNEL_SETTINGS", a[a.PUBLIC_STAGE_PREVIEW = 2] = "PUBLIC_STAGE_PREVIEW"

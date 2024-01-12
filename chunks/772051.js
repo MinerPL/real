@@ -1,15 +1,15 @@
             "use strict";
             n.r(t), n.d(t, {
                 ClydeExperimentState: function() {
-                    return a
+                    return i
                 },
                 default: function() {
-                    return r
+                    return o
                 }
             });
-            var i, a, l = n("862205");
-            (i = a || (a = {}))[i.None = 0] = "None", i[i.DefaultOn = 1] = "DefaultOn", i[i.DefaultOff = 2] = "DefaultOff", i[i.ComingSoon = 3] = "ComingSoon", i[i.ClydeProfiles = 4] = "ClydeProfiles";
-            let s = (0, l.createExperiment)({
+            var s, i, r = n("862205");
+            (s = i || (i = {}))[s.None = 0] = "None", s[s.DefaultOn = 1] = "DefaultOn", s[s.DefaultOff = 2] = "DefaultOff", s[s.ComingSoon = 3] = "ComingSoon", s[s.ClydeProfiles = 4] = "ClydeProfiles";
+            let a = (0, r.createExperiment)({
                 kind: "guild",
                 id: "2023-03_clyde_ai",
                 label: "ClydeAI",
@@ -42,4 +42,4 @@
                     }
                 }]
             });
-            var r = s
+            var o = a

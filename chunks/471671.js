@@ -1,18 +1,18 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return f
                 }
             }), n("222007");
-            var r = n("627445"),
-                i = n.n(r),
-                a = n("446674"),
+            var i = n("627445"),
+                l = n.n(i),
+                r = n("446674"),
                 o = n("913144"),
-                s = n("816454");
-            let l = new Map;
+                a = n("816454");
+            let u = new Map;
 
-            function u(e) {
-                let t = l.get(e);
+            function s(e) {
+                let t = u.get(e);
                 return null == t ? (console.warn("Window state not initialized", e), {
                     isElementFullscreen: !1,
                     focused: !1,
@@ -22,62 +22,62 @@
                     }
                 }) : t
             }
-            class d extends a.default.Store {
+            class c extends r.default.Store {
                 isFocused() {
-                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, s.getMainWindowId)();
-                    return u(e).focused
+                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, a.getMainWindowId)();
+                    return s(e).focused
                 }
                 getFocusedWindowId() {
                     let e = null;
-                    return l.forEach((t, n) => {
+                    return u.forEach((t, n) => {
                         t.focused && (e = n)
                     }), e
                 }
                 isElementFullScreen() {
-                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, s.getMainWindowId)();
-                    return u(e).isElementFullscreen
+                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, a.getMainWindowId)();
+                    return s(e).isElementFullscreen
                 }
                 windowSize() {
-                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, s.getMainWindowId)();
-                    return u(e).windowSize
+                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, a.getMainWindowId)();
+                    return s(e).windowSize
                 }
             }
-            d.displayName = "WindowStore";
-            let c = new d(o.default, {
+            c.displayName = "WindowStore";
+            let d = new c(o.default, {
                 WINDOW_INIT: function(e) {
-                    i(!l.has(e.windowId), "Window initialized multiple times");
+                    l(!u.has(e.windowId), "Window initialized multiple times");
                     let {
                         width: t,
                         height: n,
-                        isElementFullscreen: r,
-                        focused: a
+                        isElementFullscreen: i,
+                        focused: r
                     } = e;
-                    return l.set(e.windowId, {
+                    return u.set(e.windowId, {
                         windowSize: {
                             width: t,
                             height: n
                         },
-                        isElementFullscreen: r,
-                        focused: a
+                        isElementFullscreen: i,
+                        focused: r
                     }), !0
                 },
                 WINDOW_FULLSCREEN_CHANGE: function(e) {
-                    let t = u(e.windowId);
-                    return t.isElementFullscreen !== e.isElementFullscreen && (l.set(e.windowId, {
+                    let t = s(e.windowId);
+                    return t.isElementFullscreen !== e.isElementFullscreen && (u.set(e.windowId, {
                         ...t,
                         isElementFullscreen: e.isElementFullscreen
                     }), !0)
                 },
                 WINDOW_FOCUS: function(e) {
-                    let t = u(e.windowId);
-                    return t.focused !== e.focused && (l.set(e.windowId, {
+                    let t = s(e.windowId);
+                    return t.focused !== e.focused && (u.set(e.windowId, {
                         ...t,
                         focused: e.focused
                     }), !0)
                 },
                 WINDOW_RESIZED: function(e) {
-                    let t = u(e.windowId);
-                    return (t.windowSize.width !== e.width || t.windowSize.height !== e.height) && (l.set(e.windowId, {
+                    let t = s(e.windowId);
+                    return (t.windowSize.width !== e.width || t.windowSize.height !== e.height) && (u.set(e.windowId, {
                         ...t,
                         windowSize: {
                             width: e.width,
@@ -86,7 +86,7 @@
                     }), !0)
                 },
                 WINDOW_UNLOAD: function(e) {
-                    return l.delete(e.windowId), !0
+                    return u.delete(e.windowId), !0
                 }
             });
             n.el("599110").then(n.bind(n, "599110")).then(e => {
@@ -94,7 +94,7 @@
                     addExtraAnalyticsDecorator: t
                 } = e;
                 t(e => {
-                    e.client_app_state = c.isFocused() ? "focused" : "unfocused"
+                    e.client_app_state = d.isFocused() ? "focused" : "unfocused"
                 })
             });
-            var _ = c
+            var f = d

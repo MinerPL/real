@@ -1,41 +1,41 @@
             "use strict";
             n.r(t), n.d(t, {
                 useStageHasMedia: function() {
-                    return u
+                    return d
                 },
                 getStageHasMedia: function() {
-                    return o
+                    return u
                 },
                 isStageVideoEnabled: function() {
-                    return d
+                    return l
                 }
             });
-            var i = n("446674"),
-                a = n("305961"),
-                l = n("800762"),
-                s = n("488464"),
-                r = n("998716");
+            var s = n("446674"),
+                i = n("305961"),
+                r = n("800762"),
+                a = n("488464"),
+                o = n("998716");
 
-            function u(e) {
+            function d(e) {
                 let t = function(e) {
-                        return (0, i.useStateFromStores)([s.default], () => {
-                            let t = s.default.getMutableParticipants(e, r.StageChannelParticipantNamedIndex.SPEAKER);
-                            return null != t.find(e => e.type === r.StageChannelParticipantTypes.STREAM)
+                        return (0, s.useStateFromStores)([a.default], () => {
+                            let t = a.default.getMutableParticipants(e, o.StageChannelParticipantNamedIndex.SPEAKER);
+                            return null != t.find(e => e.type === o.StageChannelParticipantTypes.STREAM)
                         }, [e])
                     }(e),
-                    n = (0, i.useStateFromStores)([l.default], () => l.default.hasVideo(e), [e]);
+                    n = (0, s.useStateFromStores)([r.default], () => r.default.hasVideo(e), [e]);
                 return n || t
             }
 
-            function o(e) {
+            function u(e) {
                 return function(e) {
-                    let t = s.default.getMutableParticipants(e, r.StageChannelParticipantNamedIndex.SPEAKER);
-                    return null != t.find(e => e.type === r.StageChannelParticipantTypes.STREAM)
-                }(e) || l.default.hasVideo(e)
+                    let t = a.default.getMutableParticipants(e, o.StageChannelParticipantNamedIndex.SPEAKER);
+                    return null != t.find(e => e.type === o.StageChannelParticipantTypes.STREAM)
+                }(e) || r.default.hasVideo(e)
             }
 
-            function d(e) {
+            function l(e) {
                 var t;
-                let n = a.default.getGuild(e);
+                let n = i.default.getGuild(e);
                 return null != n && (null !== (t = null == n ? void 0 : n.maxStageVideoChannelUsers) && void 0 !== t ? t : 0) > 0
             }

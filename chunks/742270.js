@@ -1,24 +1,24 @@
             "use strict";
 
-            function i(e) {
+            function s(e) {
                 return "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.INVITE_HOST, "/").concat(e)
             }
 
-            function a(e) {
+            function i(e) {
                 return "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST, "/").concat(e)
             }
 
-            function l() {
+            function r() {
                 return "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, "/channels/@me")
             }
             n.r(t), n.d(t, {
                 getInviteDynamicLinkTemplate: function() {
-                    return i
+                    return s
                 },
                 getGuildTemplateDynamicLinkTemplate: function() {
-                    return a
+                    return i
                 },
                 getDefaultDynamicLinkTemplate: function() {
-                    return l
+                    return r
                 }
             })

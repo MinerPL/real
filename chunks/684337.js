@@ -1,11 +1,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 isCurrentUserTeen: function() {
-                    return a
+                    return i
                 }
             });
-            var i = n("697218");
-            let a = () => {
+            var s = n("697218");
+            let i = () => {
                 var e;
-                return (null === (e = i.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1
+                return (null === (e = s.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed) === !1
             }

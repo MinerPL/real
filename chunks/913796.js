@@ -1,15 +1,15 @@
             "use strict";
             n.r(t), n.d(t, {
                 useInDesktopNotificationCenterExperiment: function() {
-                    return s
+                    return a
                 },
                 inDesktopNotificationCenterExperiment: function() {
-                    return r
+                    return o
                 }
             });
-            var i = n("884691"),
-                a = n("862205");
-            let l = (0, a.createExperiment)({
+            var s = n("884691"),
+                i = n("862205");
+            let r = (0, i.createExperiment)({
                     kind: "user",
                     id: "2022-11_desktop_notification_center",
                     label: "Desktop notification center",
@@ -24,24 +24,24 @@
                         }
                     }]
                 }),
-                s = () => {
+                a = () => {
                     let {
                         enabled: e
-                    } = l.useExperiment({
+                    } = r.useExperiment({
                         location: "b8976e_1"
                     }, {
                         autoTrackExposure: !1
                     });
-                    return i.useEffect(() => {
-                        l.trackExposure({
+                    return s.useEffect(() => {
+                        r.trackExposure({
                             location: "b8976e_2"
                         })
                     }, []), e
                 },
-                r = () => {
+                o = () => {
                     let {
                         enabled: e
-                    } = l.getCurrentConfig({
+                    } = r.getCurrentConfig({
                         location: "b8976e_3"
                     }, {
                         autoTrackExposure: !1

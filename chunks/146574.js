@@ -1,18 +1,18 @@
             "use strict";
-            n.r(t), n.d(t, {
+            e.r(n), e.d(n, {
                 getNativeContextMenuChannelAnalytics: function() {
-                    return a
+                    return u
                 }
             });
-            var r = n("18494"),
-                i = n("724210");
+            var r = e("18494"),
+                i = e("724210");
 
-            function a() {
-                var e;
-                let t = null !== (e = r.default.getCurrentlySelectedChannelId()) && void 0 !== e ? e : void 0;
-                return null != t && (0, i.isStaticChannelRoute)(t) ? {
-                    channel_static_route: t
+            function u() {
+                var t;
+                let n = null !== (t = r.default.getCurrentlySelectedChannelId()) && void 0 !== t ? t : void 0;
+                return null != n && (0, i.isStaticChannelRoute)(n) ? {
+                    channel_static_route: n
                 } : {
-                    channel_id: t
+                    channel_id: n
                 }
             }

@@ -1,22 +1,22 @@
             "use strict";
-            var i = r("537778"),
-                n = r("37549")("%TypeError%"),
-                o = r("865435"),
-                a = r("979271"),
-                s = r("903389");
+            var r = s("537778"),
+                i = s("37549")("%TypeError%"),
+                n = s("865435"),
+                c = s("979271"),
+                o = s("903389");
             t.exports = function(t) {
-                if ("Object" !== o(t)) throw new n("ToPropertyDescriptor requires an object");
+                if ("Object" !== n(t)) throw new i("ToPropertyDescriptor requires an object");
                 var e = {};
-                if (i(t, "enumerable") && (e["[[Enumerable]]"] = a(t.enumerable)), i(t, "configurable") && (e["[[Configurable]]"] = a(t.configurable)), i(t, "value") && (e["[[Value]]"] = t.value), i(t, "writable") && (e["[[Writable]]"] = a(t.writable)), i(t, "get")) {
-                    var r = t.get;
-                    if (void 0 !== r && !s(r)) throw new n("getter must be a function");
-                    e["[[Get]]"] = r
+                if (r(t, "enumerable") && (e["[[Enumerable]]"] = c(t.enumerable)), r(t, "configurable") && (e["[[Configurable]]"] = c(t.configurable)), r(t, "value") && (e["[[Value]]"] = t.value), r(t, "writable") && (e["[[Writable]]"] = c(t.writable)), r(t, "get")) {
+                    var s = t.get;
+                    if (void 0 !== s && !o(s)) throw new i("getter must be a function");
+                    e["[[Get]]"] = s
                 }
-                if (i(t, "set")) {
+                if (r(t, "set")) {
                     var f = t.set;
-                    if (void 0 !== f && !s(f)) throw new n("setter must be a function");
+                    if (void 0 !== f && !o(f)) throw new i("setter must be a function");
                     e["[[Set]]"] = f
                 }
-                if ((i(e, "[[Get]]") || i(e, "[[Set]]")) && (i(e, "[[Value]]") || i(e, "[[Writable]]"))) throw new n("Invalid property descriptor. Cannot both specify accessors and a value or writable attribute");
+                if ((r(e, "[[Get]]") || r(e, "[[Set]]")) && (r(e, "[[Value]]") || r(e, "[[Writable]]"))) throw new i("Invalid property descriptor. Cannot both specify accessors and a value or writable attribute");
                 return e
             }

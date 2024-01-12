@@ -1,15 +1,15 @@
             "use strict";
             n.r(t), n.d(t, {
                 isEligibleForMidjourneyOnboarding: function() {
-                    return a
+                    return i
                 }
             });
-            var i = n("924593");
+            var s = n("924593");
 
-            function a(e) {
+            function i(e) {
                 let {
                     enabled: t
-                } = i.MidjourneyOnboardingExperiment.getCurrentConfig({
+                } = s.MidjourneyOnboardingExperiment.getCurrentConfig({
                     location: e
                 });
                 return t

@@ -5,24 +5,24 @@
                 }
             });
             var i = n("816494"),
-                r = n.n(i),
-                l = n("446674"),
-                a = n("913144"),
-                o = n("908539");
+                l = n.n(i),
+                r = n("446674"),
+                o = n("913144"),
+                a = n("908539");
             let s = {},
                 u = {},
                 c = {
-                    state: o.AccountStandingState.ALL_GOOD
+                    state: a.AccountStandingState.ALL_GOOD
                 },
                 d = !1,
                 f = !1,
                 E = null,
                 _ = null,
                 p = !1,
-                I = null,
-                h = !1,
+                h = null,
+                I = !1,
                 S = null;
-            class T extends l.default.Store {
+            class T extends r.default.Store {
                 isFetching() {
                     return d
                 }
@@ -51,17 +51,17 @@
                     return p
                 }
                 getAppealSignal() {
-                    return I
+                    return h
                 }
                 getIsSubmitting() {
-                    return h
+                    return I
                 }
                 getSubmitError() {
                     return S
                 }
             }
             T.displayName = "SafetyHubStore";
-            var C = new T(a.default, {
+            var C = new T(o.default, {
                 SAFETY_HUB_FETCH_START: function(e) {
                     d = !0
                 },
@@ -70,7 +70,7 @@
                         classifications: t,
                         accountStanding: n
                     } = e;
-                    s = r(t, "id"), c = n, d = !1, f = !0, E = null
+                    s = l(t, "id"), c = n, d = !1, f = !0, E = null
                 },
                 SAFETY_HUB_FETCH_FAILURE: function(e) {
                     let {
@@ -79,7 +79,7 @@
                     d = !1, f = !1, E = t
                 },
                 SAFETY_HUB_FETCH_CLASSIFICATION_START: function(e) {
-                    u[e.classificationId] = o.ClassificationRequestState.PENDING, d = !0
+                    u[e.classificationId] = a.ClassificationRequestState.PENDING, d = !0
                 },
                 SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: function(e) {
                     let {
@@ -87,14 +87,14 @@
                         accountStanding: n,
                         isDsaEligible: i
                     } = e;
-                    s[t.id] = t, u[t.id] = o.ClassificationRequestState.SUCCESS, c = n, d = !1, E = null, p = i
+                    s[t.id] = t, u[t.id] = a.ClassificationRequestState.SUCCESS, c = n, d = !1, E = null, p = i
                 },
                 SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function(e) {
                     let {
                         error: t,
                         classificationId: n
                     } = e;
-                    d = !1, E = t, u[n] = o.ClassificationRequestState.FAILED
+                    d = !1, E = t, u[n] = a.ClassificationRequestState.FAILED
                 },
                 SAFETY_HUB_APPEAL_OPEN: function(e) {
                     let {
@@ -103,31 +103,31 @@
                     _ = t
                 },
                 SAFETY_HUB_APPEAL_CLOSE: function() {
-                    _ = null, I = null
+                    _ = null, h = null
                 },
                 SAFETY_HUB_APPEAL_SIGNAL_SELECT: function(e) {
                     let {
                         signal: t
                     } = e;
-                    I = t
+                    h = t
                 },
                 SAFETY_HUB_REQUEST_REVIEW_START: function(e) {
                     let {} = e;
-                    h = !0, S = null
+                    I = !0, S = null
                 },
                 SAFETY_HUB_REQUEST_REVIEW_SUCCESS: function(e) {
                     let {} = e;
-                    h = !1, S = null
+                    I = !1, S = null
                 },
                 SAFETY_HUB_REQUEST_REVIEW_FAILURE: function(e) {
                     let {
                         error: t
                     } = e;
-                    h = !1, S = t
+                    I = !1, S = t
                 },
                 LOGOUT: function() {
                     d = !1, s = {}, c = {
-                        state: o.AccountStandingState.ALL_GOOD
-                    }, _ = null, I = null
+                        state: a.AccountStandingState.ALL_GOOD
+                    }, _ = null, h = null
                 }
             })

@@ -1,82 +1,82 @@
             "use strict";
-            n.r(t), n.d(t, {
+            n.r(e), n.d(e, {
                 default: function() {
-                    return T
+                    return I
                 }
             }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660");
             var r = n("37983");
             n("884691");
             var i = n("77078"),
-                a = n("404118"),
-                s = n("689226"),
-                l = n("467475"),
-                o = n("599110"),
-                u = n("773336"),
-                d = n("286235"),
-                c = n("50885"),
-                _ = n("146574"),
-                E = n("49111"),
-                f = n("782340");
-            let I = "https://media.discordapp.net",
-                A = /^.*\.discordapp\.net$/,
-                h = "https://cdn.discordapp.com",
-                S = "".concat(I, "/stickers"),
-                p = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp"]),
-                R = new Set(["jpg", "jpeg", "png"]),
-                N = e => {
-                    var t;
-                    return null === (t = new URL(e).pathname.split(".").pop()) || void 0 === t ? void 0 : t.toLowerCase()
+                u = n("404118"),
+                o = n("689226"),
+                a = n("467475"),
+                l = n("599110"),
+                s = n("773336"),
+                c = n("286235"),
+                d = n("50885"),
+                f = n("146574"),
+                h = n("49111"),
+                p = n("782340");
+            let v = "https://media.discordapp.net",
+                g = /^.*\.discordapp\.net$/,
+                m = "https://cdn.discordapp.com",
+                w = "".concat(v, "/stickers"),
+                E = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp"]),
+                _ = new Set(["jpg", "jpeg", "png"]),
+                M = t => {
+                    var e;
+                    return null === (e = new URL(t).pathname.split(".").pop()) || void 0 === e ? void 0 : e.toLowerCase()
                 };
 
-            function g(e, t) {
-                a.default.show({
-                    title: f.default.Messages.ERROR,
-                    body: e
-                }), d.default.captureException(t)
+            function b(t, e) {
+                u.default.show({
+                    title: p.default.Messages.ERROR,
+                    body: t
+                }), c.default.captureException(e)
             }
 
-            function T(e, t, n) {
-                let a = (0, l.default)(null == t ? void 0 : t.getChannelId());
-                if (a || (null == n ? void 0 : n.shouldHideMediaOptions) === !0 || !u.isPlatformEmbedded || null == e || ! function(e) {
-                        let t = new URL(e),
-                            n = N(e);
-                        return (A.test(t.hostname) || t.origin === h) && !e.startsWith(S) && !(0, s.isRoleIconAssetUrl)(e) && null != n && p.has(n)
-                    }(e)) return null;
-                let d = function(e) {
-                        let t = new URL(e);
-                        return t.origin === h ? e : t.origin === I ? h + t.pathname : (t.searchParams.delete("width"), t.searchParams.delete("height"), t.searchParams.set("quality", "lossless"), t.toString())
-                    }(e),
-                    T = async () => {
+            function I(t, e, n) {
+                let u = (0, a.default)(null == e ? void 0 : e.getChannelId());
+                if (u || (null == n ? void 0 : n.shouldHideMediaOptions) === !0 || !s.isPlatformEmbedded || null == t || ! function(t) {
+                        let e = new URL(t),
+                            n = M(t);
+                        return (g.test(e.hostname) || e.origin === m) && !t.startsWith(w) && !(0, o.isRoleIconAssetUrl)(t) && null != n && E.has(n)
+                    }(t)) return null;
+                let c = function(t) {
+                        let e = new URL(t);
+                        return e.origin === m ? t : e.origin === v ? m + e.pathname : (e.searchParams.delete("width"), e.searchParams.delete("height"), e.searchParams.set("quality", "lossless"), e.toString())
+                    }(t),
+                    I = async () => {
                         try {
-                            await c.default.saveImage(d), o.default.track(E.AnalyticEvents.CONTEXT_MENU_IMAGE_SAVED, {
-                                ...(0, _.getNativeContextMenuChannelAnalytics)()
+                            await d.default.saveImage(c), l.default.track(h.AnalyticEvents.CONTEXT_MENU_IMAGE_SAVED, {
+                                ...(0, f.getNativeContextMenuChannelAnalytics)()
                             })
-                        } catch (e) {
-                            o.default.track(E.AnalyticEvents.CONTEXT_MENU_IMAGE_SAVE_FAILED, {
-                                ...(0, _.getNativeContextMenuChannelAnalytics)()
-                            }), g(f.default.Messages.ERROR_SAVING_IMAGE, e)
+                        } catch (t) {
+                            l.default.track(h.AnalyticEvents.CONTEXT_MENU_IMAGE_SAVE_FAILED, {
+                                ...(0, f.getNativeContextMenuChannelAnalytics)()
+                            }), b(p.default.Messages.ERROR_SAVING_IMAGE, t)
                         }
-                    }, O = async () => {
+                    }, C = async () => {
                         try {
-                            await c.default.copyImage(d), o.default.track(E.AnalyticEvents.CONTEXT_MENU_IMAGE_COPIED, {
-                                ...(0, _.getNativeContextMenuChannelAnalytics)()
+                            await d.default.copyImage(c), l.default.track(h.AnalyticEvents.CONTEXT_MENU_IMAGE_COPIED, {
+                                ...(0, f.getNativeContextMenuChannelAnalytics)()
                             })
-                        } catch (e) {
-                            g(f.default.Messages.ERROR_COPYING_IMAGE, e), o.default.track(E.AnalyticEvents.CONTEXT_MENU_IMAGE_COPY_FAILED, {
-                                ...(0, _.getNativeContextMenuChannelAnalytics)()
+                        } catch (t) {
+                            b(p.default.Messages.ERROR_COPYING_IMAGE, t), l.default.track(h.AnalyticEvents.CONTEXT_MENU_IMAGE_COPY_FAILED, {
+                                ...(0, f.getNativeContextMenuChannelAnalytics)()
                             })
                         }
                     };
-                return [c.default.canCopyImage() && function(e) {
-                    let t = N(e);
-                    return null != t && R.has(t)
-                }(e) ? (0, r.jsx)(i.MenuItem, {
+                return [d.default.canCopyImage() && function(t) {
+                    let e = M(t);
+                    return null != e && _.has(e)
+                }(t) ? (0, r.jsx)(i.MenuItem, {
                     id: "copy-image",
-                    label: f.default.Messages.COPY_IMAGE_MENU_ITEM,
-                    action: O
+                    label: p.default.Messages.COPY_IMAGE_MENU_ITEM,
+                    action: C
                 }, "copy-image") : null, (0, r.jsx)(i.MenuItem, {
                     id: "save-image",
-                    label: f.default.Messages.SAVE_IMAGE_MENU_ITEM,
-                    action: T
+                    label: p.default.Messages.SAVE_IMAGE_MENU_ITEM,
+                    action: I
                 }, "save-image")]
             }

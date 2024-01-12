@@ -1,11 +1,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return r
                 }
             });
-            var i = n("862205");
-            let a = (0, i.createExperiment)({
+            var s = n("862205");
+            let i = (0, s.createExperiment)({
                 kind: "user",
                 id: "2023-03_store_latest_message_data",
                 label: "Store latest message data",
@@ -20,4 +20,4 @@
                     }
                 }]
             });
-            var l = a
+            var r = i

@@ -1,38 +1,38 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return r
                 }
             });
-            var i = n("913144"),
-                a = n("492397"),
-                l = {
+            var s = n("913144"),
+                i = n("492397"),
+                r = {
                     openNativeAppModal(e, t) {
-                        !a.CONFERENCE_MODE_ENABLED && (i.default.dispatch({
+                        !i.CONFERENCE_MODE_ENABLED && (s.default.dispatch({
                             type: "NATIVE_APP_MODAL_OPENING",
                             code: e
                         }), n.el("43982").then(n.bind(n, "43982")).then(n => {
                             let {
-                                default: i
+                                default: s
                             } = n;
-                            i.request(t, {
+                            s.request(t, {
                                 code: e
                             }).then(e => {
                                 let {
                                     code: t
                                 } = e;
                                 return this.nativeModalOpened(t)
-                            }).catch(() => this.nativeModalOpenFailed(e)).then(() => i.disconnect())
+                            }).catch(() => this.nativeModalOpenFailed(e)).then(() => s.disconnect())
                         }))
                     },
                     nativeModalOpened(e) {
-                        i.default.dispatch({
+                        s.default.dispatch({
                             type: "NATIVE_APP_MODAL_OPENED",
                             code: e
                         })
                     },
                     nativeModalOpenFailed(e) {
-                        i.default.dispatch({
+                        s.default.dispatch({
                             type: "NATIVE_APP_MODAL_OPEN_FAILED",
                             code: e
                         })

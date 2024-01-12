@@ -1,11 +1,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return i
                 }
             });
-            var i = n("637612");
+            var s = n("637612");
 
-            function a(e) {
-                return !i.MessageTypesSets.USER_MESSAGE.has(e.type)
+            function i(e) {
+                return !s.MessageTypesSets.USER_MESSAGE.has(e.type)
             }

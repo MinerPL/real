@@ -1,13 +1,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return d
                 }
             }), n("70102");
-            var i = n("197881"),
-                a = n("338580");
-            let l = (0, a.getErlpackEncoding)();
-            class s {
+            var s = n("197881"),
+                i = n("338580");
+            let r = (0, i.getErlpackEncoding)();
+            class a {
                 pack(e) {
                     return JSON.stringify(e)
                 }
@@ -22,6 +22,6 @@
                     return !0
                 }
             }
-            let r = void 0 !== l ? l : s;
-            i.ProcessArgs.isDiscordGatewayPlaintextSet() && (r = s);
-            var u = r
+            let o = void 0 !== r ? r : a;
+            s.ProcessArgs.isDiscordGatewayPlaintextSet() && (o = a);
+            var d = o

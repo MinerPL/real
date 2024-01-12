@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return r
                 }
             });
 
-            function i(e, t) {
+            function r(e, t) {
                 return "".concat(e.toLowerCase().padEnd(32, "!")).concat(t.id)
             }

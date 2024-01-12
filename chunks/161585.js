@@ -1,34 +1,34 @@
             "use strict";
-            var i, a, l, s, r, u, o, d, c, _, E, f, h, p;
+            var s, i, r, a, o, d, u, l, f, _, c, g, m, h;
             n.r(t), n.d(t, {
                 StickerFormat: function() {
-                    return i
-                },
-                MetaStickerType: function() {
-                    return a
-                },
-                StickerExtensions: function() {
-                    return l
-                },
-                isAnimatedSticker: function() {
-                    return T
-                },
-                isCustomSticker: function() {
-                    return C
-                },
-                StickerGridItemTypes: function() {
                     return s
                 },
-                StickerCategoryTypes: function() {
+                MetaStickerType: function() {
+                    return i
+                },
+                StickerExtensions: function() {
                     return r
                 },
+                isAnimatedSticker: function() {
+                    return v
+                },
+                isCustomSticker: function() {
+                    return E
+                },
+                StickerGridItemTypes: function() {
+                    return a
+                },
+                StickerCategoryTypes: function() {
+                    return o
+                },
                 StickerMetadataTypes: function() {
-                    return u
+                    return d
                 },
                 StickerSelectLocation: function() {
-                    return o
+                    return u
                 }
-            }), (d = i || (i = {}))[d.PNG = 1] = "PNG", d[d.APNG = 2] = "APNG", d[d.LOTTIE = 3] = "LOTTIE", d[d.GIF = 4] = "GIF", (c = a || (a = {}))[c.STANDARD = 1] = "STANDARD", c[c.GUILD = 2] = "GUILD", (_ = l || (l = {})).PNG = "png", _.APNG = "png", _.LOTTIE = "json", _.WEBP = "webp", _.GIF = "gif";
-            let T = e => 1 !== e,
-                C = e => 1 !== e;
-            (E = s || (s = {}))[E.STICKER = 0] = "STICKER", E[E.CREATE_STICKER = 1] = "CREATE_STICKER", (f = r || (r = {})).PACK = "PACK", f.FAVORITE = "FAVORITE", f.RECENT = "RECENT", f.SEARCH_RESULTS = "SEARCH_RESULTS", f.SEARCH_SUGGESTIONS = "SEARCH_SUGGESTIONS", f.GUILD = "GUILD", f.EMPTY_GUILD_UPSELL = "EMPTY_GUILD_UPSELL", f.CREATE_STICKER = "CREATE_STICKER", (h = u || (u = {}))[h.STICKER_NAME = 0] = "STICKER_NAME", h[h.TAG = 1] = "TAG", h[h.CORRELATED_EMOJI = 2] = "CORRELATED_EMOJI", h[h.GUILD_NAME = 3] = "GUILD_NAME", h[h.PACK_NAME = 4] = "PACK_NAME", (p = o || (o = {}))[p.STICKER_PICKER = 0] = "STICKER_PICKER", p[p.EXPRESSION_SUGGESTIONS = 1] = "EXPRESSION_SUGGESTIONS", p[p.AUTOCOMPLETE = 2] = "AUTOCOMPLETE"
+            }), (l = s || (s = {}))[l.PNG = 1] = "PNG", l[l.APNG = 2] = "APNG", l[l.LOTTIE = 3] = "LOTTIE", l[l.GIF = 4] = "GIF", (f = i || (i = {}))[f.STANDARD = 1] = "STANDARD", f[f.GUILD = 2] = "GUILD", (_ = r || (r = {})).PNG = "png", _.APNG = "png", _.LOTTIE = "json", _.WEBP = "webp", _.GIF = "gif";
+            let v = e => 1 !== e,
+                E = e => 1 !== e;
+            (c = a || (a = {}))[c.STICKER = 0] = "STICKER", c[c.CREATE_STICKER = 1] = "CREATE_STICKER", (g = o || (o = {})).PACK = "PACK", g.FAVORITE = "FAVORITE", g.RECENT = "RECENT", g.SEARCH_RESULTS = "SEARCH_RESULTS", g.SEARCH_SUGGESTIONS = "SEARCH_SUGGESTIONS", g.GUILD = "GUILD", g.EMPTY_GUILD_UPSELL = "EMPTY_GUILD_UPSELL", g.CREATE_STICKER = "CREATE_STICKER", (m = d || (d = {}))[m.STICKER_NAME = 0] = "STICKER_NAME", m[m.TAG = 1] = "TAG", m[m.CORRELATED_EMOJI = 2] = "CORRELATED_EMOJI", m[m.GUILD_NAME = 3] = "GUILD_NAME", m[m.PACK_NAME = 4] = "PACK_NAME", (h = u || (u = {}))[h.STICKER_PICKER = 0] = "STICKER_PICKER", h[h.EXPRESSION_SUGGESTIONS = 1] = "EXPRESSION_SUGGESTIONS", h[h.AUTOCOMPLETE = 2] = "AUTOCOMPLETE"

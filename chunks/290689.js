@@ -1,17 +1,17 @@
             "use strict";
             n.r(t), n.d(t, {
                 textMarkupPatternWithExclusions: function() {
-                    return l
+                    return r
                 },
                 default: function() {
-                    return r
+                    return o
                 }
             });
-            var i = n("132710"),
-                a = n.n(i);
-            let l = e => new RegExp("^[\\s\\S]+?(?=".concat(e, "|[^0-9A-Za-z\\s\\u00ff-\\uffff]|\\n\\n| {2,}\\n|\\w+:\\S|[0-9]+\\.|$)")),
-                s = {
-                    ...a.defaultRules.text,
-                    match: (0, i.anyScopeRegex)(/^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|[0-9]+\.|$)/)
+            var s = n("132710"),
+                i = n.n(s);
+            let r = e => new RegExp("^[\\s\\S]+?(?=".concat(e, "|[^0-9A-Za-z\\s\\u00ff-\\uffff]|\\n\\n| {2,}\\n|\\w+:\\S|[0-9]+\\.|$)")),
+                a = {
+                    ...i.defaultRules.text,
+                    match: (0, s.anyScopeRegex)(/^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|[0-9]+\.|$)/)
                 };
-            var r = s
+            var o = a

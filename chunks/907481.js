@@ -1,10 +1,10 @@
             "use strict";
-            r("808653");
-            var i, n = r("129752").codes,
-                o = n.ERR_MISSING_ARGS,
-                a = n.ERR_STREAM_DESTROYED;
+            s("808653");
+            var r, i = s("129752").codes,
+                n = i.ERR_MISSING_ARGS,
+                c = i.ERR_STREAM_DESTROYED;
 
-            function s(t) {
+            function o(t) {
                 if (t) throw t
             }
 
@@ -12,38 +12,38 @@
                 t()
             }
 
-            function h(t, e) {
+            function u(t, e) {
                 return t.pipe(e)
             }
             t.exports = function() {
-                for (var t, e, n = arguments.length, c = Array(n), u = 0; u < n; u++) c[u] = arguments[u];
-                var d = (t = c).length && "function" == typeof t[t.length - 1] ? t.pop() : s;
-                if (Array.isArray(c[0]) && (c = c[0]), c.length < 2) throw new o("streams");
-                var l = c.map(function(t, n) {
-                    var o, s, h, u, p, b, m, g, y = n < c.length - 1;
-                    return o = t, s = y, h = n > 0, p = u = function(t) {
-                            !e && (e = t), t && l.forEach(f), !y && (l.forEach(f), d(e))
-                        }, b = !1, u = function() {
-                            !b && (b = !0, p.apply(void 0, arguments))
-                        }, m = !1, o.on("close", function() {
-                            m = !0
-                        }), void 0 === i && (i = r("362796")), i(o, {
-                            readable: s,
-                            writable: h
+                for (var t, e, i = arguments.length, a = Array(i), d = 0; d < i; d++) a[d] = arguments[d];
+                var p = (t = a).length && "function" == typeof t[t.length - 1] ? t.pop() : o;
+                if (Array.isArray(a[0]) && (a = a[0]), a.length < 2) throw new n("streams");
+                var b = a.map(function(t, i) {
+                    var n, o, u, d, h, l, g, v, x = i < a.length - 1;
+                    return n = t, o = x, u = i > 0, h = d = function(t) {
+                            !e && (e = t), t && b.forEach(f), !x && (b.forEach(f), p(e))
+                        }, l = !1, d = function() {
+                            !l && (l = !0, h.apply(void 0, arguments))
+                        }, g = !1, n.on("close", function() {
+                            g = !0
+                        }), void 0 === r && (r = s("362796")), r(n, {
+                            readable: o,
+                            writable: u
                         }, function(t) {
-                            if (t) return u(t);
-                            m = !0, u()
-                        }), g = !1,
+                            if (t) return d(t);
+                            g = !0, d()
+                        }), v = !1,
                         function(t) {
-                            if (!m) {
-                                if (!g) {
+                            if (!g) {
+                                if (!v) {
                                     var e;
-                                    if (g = !0, (e = o).setHeader && "function" == typeof e.abort) return o.abort();
-                                    if ("function" == typeof o.destroy) return o.destroy();
-                                    u(t || new a("pipe"))
+                                    if (v = !0, (e = n).setHeader && "function" == typeof e.abort) return n.abort();
+                                    if ("function" == typeof n.destroy) return n.destroy();
+                                    d(t || new c("pipe"))
                                 }
                             }
                         }
                 });
-                return c.reduce(h)
+                return a.reduce(u)
             }

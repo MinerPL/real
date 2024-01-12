@@ -1,152 +1,152 @@
             "use strict";
-            n.r(e), n.d(e, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return g
                 }
             });
-            var r = n("872717"),
-                l = n("95410"),
-                i = n("913144"),
-                o = n("211895"),
-                s = n("26092"),
-                u = n("599110"),
-                a = n("315102"),
-                d = n("730622"),
-                c = n("49111"),
-                h = n("191349"),
-                f = n("782340"),
-                _ = {
+            var s = n("872717"),
+                i = n("95410"),
+                r = n("913144"),
+                a = n("211895"),
+                o = n("26092"),
+                d = n("599110"),
+                u = n("315102"),
+                l = n("730622"),
+                f = n("49111"),
+                _ = n("191349"),
+                c = n("782340"),
+                g = {
                     open() {
-                        let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-                            e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+                            t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
                                 openWithoutBackstack: !1
                             };
-                        (0, o.default)(t, e, n)
+                        (0, a.default)(e, t, n)
                     },
-                    init: function(t) {
-                        let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                    init: function(e) {
+                        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                             n = arguments.length > 2 ? arguments[2] : void 0;
-                        i.default.dispatch({
+                        r.default.dispatch({
                             type: "USER_SETTINGS_MODAL_INIT",
-                            section: t,
-                            subsection: e,
+                            section: e,
+                            subsection: t,
                             ...n
                         })
                     },
                     close() {
-                        let t = s.default.onClose;
-                        i.default.dispatch({
+                        let e = o.default.onClose;
+                        r.default.dispatch({
                             type: "USER_SETTINGS_MODAL_CLOSE"
-                        }), null != t && t()
+                        }), null != e && e()
                     },
-                    setSection(t) {
-                        let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                    setSection(e) {
+                        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-                        i.default.dispatch({
+                        r.default.dispatch({
                             type: "USER_SETTINGS_MODAL_SET_SECTION",
-                            section: t,
-                            subsection: e,
+                            section: e,
+                            subsection: t,
                             ...n
                         })
                     },
-                    clearSubsection(t) {
-                        i.default.dispatch({
+                    clearSubsection(e) {
+                        r.default.dispatch({
                             type: "USER_SETTINGS_MODAL_CLEAR_SUBSECTION",
-                            forSection: t
+                            forSection: e
                         })
                     },
-                    clearScrollPosition(t) {
-                        i.default.dispatch({
+                    clearScrollPosition(e) {
+                        r.default.dispatch({
                             type: "USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION",
-                            forSection: t
+                            forSection: e
                         })
                     },
-                    updateAccount(t) {
-                        i.default.dispatch({
+                    updateAccount(e) {
+                        r.default.dispatch({
                             type: "USER_SETTINGS_MODAL_UPDATE_ACCOUNT",
-                            settings: t
+                            settings: e
                         })
                     },
                     submitComplete() {
-                        i.default.dispatch({
+                        r.default.dispatch({
                             type: "USER_SETTINGS_MODAL_SUBMIT_COMPLETE"
                         })
                     },
                     reset() {
-                        i.default.dispatch({
+                        r.default.dispatch({
                             type: "USER_SETTINGS_MODAL_RESET"
                         })
                     },
-                    saveAccountChanges(t, e) {
-                        i.default.dispatch({
+                    saveAccountChanges(e, t) {
+                        r.default.dispatch({
                             type: "USER_SETTINGS_MODAL_SUBMIT"
                         });
                         let {
                             username: n,
-                            email: o,
-                            emailToken: s,
-                            password: _,
-                            avatar: p,
-                            newPassword: E,
-                            discriminator: I
-                        } = t, {
-                            close: S
-                        } = e;
-                        return (0, d.default)(t => {
-                            let e = {
+                            email: a,
+                            emailToken: o,
+                            password: g,
+                            avatar: m,
+                            newPassword: h,
+                            discriminator: v
+                        } = e, {
+                            close: E
+                        } = t;
+                        return (0, l.default)(e => {
+                            let t = {
                                     username: n,
-                                    email: o,
-                                    email_token: s,
-                                    password: _,
-                                    avatar: p,
-                                    new_password: E,
-                                    ...t,
-                                    discriminator: null != I && "" !== I ? I : void 0
+                                    email: a,
+                                    email_token: o,
+                                    password: g,
+                                    avatar: m,
+                                    new_password: h,
+                                    ...e,
+                                    discriminator: null != v && "" !== v ? v : void 0
                                 },
-                                i = l.default.get(c.DEVICE_TOKEN),
-                                u = (0, h.getDevicePushProvider)();
-                            null != u && null != i && (e.push_provider = u, e.push_token = i);
-                            let a = l.default.get(c.DEVICE_VOIP_TOKEN);
-                            return null != h.DEVICE_PUSH_VOIP_PROVIDER && null != a && (e.push_voip_provider = h.DEVICE_PUSH_VOIP_PROVIDER, e.push_voip_token = a), r.default.patch({
-                                url: c.Endpoints.ME,
+                                r = i.default.get(f.DEVICE_TOKEN),
+                                d = (0, _.getDevicePushProvider)();
+                            null != d && null != r && (t.push_provider = d, t.push_token = r);
+                            let u = i.default.get(f.DEVICE_VOIP_TOKEN);
+                            return null != _.DEVICE_PUSH_VOIP_PROVIDER && null != u && (t.push_voip_provider = _.DEVICE_PUSH_VOIP_PROVIDER, t.push_voip_token = u), s.default.patch({
+                                url: f.Endpoints.ME,
                                 oldFormErrors: !0,
-                                body: e
+                                body: t
                             })
                         }, {
                             checkEnabled: !1,
                             modalProps: {
-                                title: f.default.Messages.TWO_FA_CHANGE_ACCOUNT
+                                title: c.default.Messages.TWO_FA_CHANGE_ACCOUNT
                             },
                             hooks: {
-                                onEarlyClose: () => i.default.dispatch({
+                                onEarlyClose: () => r.default.dispatch({
                                     type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE",
                                     errors: {}
                                 })
                             }
-                        }).then(t => {
-                            let e = t.body,
-                                n = e.token;
-                            return u.default.track(c.AnalyticEvents.USER_AVATAR_UPDATED, {
-                                animated: (0, a.isAnimatedIconHash)(e.avatar)
-                            }), delete e.token, i.default.dispatch({
+                        }).then(e => {
+                            let t = e.body,
+                                n = t.token;
+                            return d.default.track(f.AnalyticEvents.USER_AVATAR_UPDATED, {
+                                animated: (0, u.isAnimatedIconHash)(t.avatar)
+                            }), delete t.token, r.default.dispatch({
                                 type: "UPDATE_TOKEN",
                                 token: n,
-                                userId: e.id
-                            }), i.default.dispatch({
+                                userId: t.id
+                            }), r.default.dispatch({
                                 type: "CURRENT_USER_UPDATE",
-                                user: e
-                            }), null != E && i.default.dispatch({
+                                user: t
+                            }), null != h && r.default.dispatch({
                                 type: "USER_PASSWORD_UPDATE",
-                                user: e,
-                                newPassword: E
-                            }), null != _ && null != E && i.default.dispatch({
+                                user: t,
+                                newPassword: h
+                            }), null != g && null != h && r.default.dispatch({
                                 type: "PASSWORD_UPDATED",
-                                userId: e.id
-                            }), S ? this.close() : this.submitComplete(), t
-                        }, t => (i.default.dispatch({
+                                userId: t.id
+                            }), E ? this.close() : this.submitComplete(), e
+                        }, e => (r.default.dispatch({
                             type: "USER_SETTINGS_MODAL_SUBMIT_FAILURE",
-                            errors: t.body
-                        }), t))
+                            errors: e.body
+                        }), e))
                     }
                 }

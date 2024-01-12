@@ -1,8 +1,8 @@
-            e = n.nmd(e);
-            var i = n("690516"),
-                r = n("221386"),
-                s = "object" == typeof t && t && !t.nodeType && t,
-                l = s && "object" == typeof e && e && !e.nodeType && e,
-                o = l && l.exports === s ? i.Buffer : void 0,
-                u = o ? o.isBuffer : void 0;
-            e.exports = u || r
+            t = n.nmd(t);
+            var e = n("690516"),
+                o = n("221386"),
+                i = "object" == typeof r && r && !r.nodeType && r,
+                u = i && "object" == typeof t && t && !t.nodeType && t,
+                a = u && u.exports === i ? e.Buffer : void 0,
+                c = a ? a.isBuffer : void 0;
+            t.exports = c || o

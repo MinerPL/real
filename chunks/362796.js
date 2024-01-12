@@ -1,43 +1,43 @@
             "use strict";
-            var i = r("129752").codes.ERR_STREAM_PREMATURE_CLOSE;
+            var r = s("129752").codes.ERR_STREAM_PREMATURE_CLOSE;
 
-            function n() {}
-            t.exports = function t(e, r, o) {
-                if ("function" == typeof r) return t(e, null, r);
-                !r && (r = {}), a = o || n, s = !1, o = function() {
-                    if (!s) {
-                        s = !0;
-                        for (var t = arguments.length, e = Array(t), r = 0; r < t; r++) e[r] = arguments[r];
-                        a.apply(this, e)
+            function i() {}
+            t.exports = function t(e, s, n) {
+                if ("function" == typeof s) return t(e, null, s);
+                !s && (s = {}), c = n || i, o = !1, n = function() {
+                    if (!o) {
+                        o = !0;
+                        for (var t = arguments.length, e = Array(t), s = 0; s < t; s++) e[s] = arguments[s];
+                        c.apply(this, e)
                     }
                 };
-                var a, s, f, h = r.readable || !1 !== r.readable && e.readable,
-                    c = r.writable || !1 !== r.writable && e.writable,
-                    u = function() {
-                        !e.writable && l()
+                var c, o, f, u = s.readable || !1 !== s.readable && e.readable,
+                    a = s.writable || !1 !== s.writable && e.writable,
+                    d = function() {
+                        !e.writable && b()
                     },
-                    d = e._writableState && e._writableState.finished,
-                    l = function() {
-                        c = !1, d = !0, !h && o.call(e)
-                    },
-                    p = e._readableState && e._readableState.endEmitted,
+                    p = e._writableState && e._writableState.finished,
                     b = function() {
-                        h = !1, p = !0, !c && o.call(e)
+                        a = !1, p = !0, !u && n.call(e)
                     },
-                    m = function(t) {
-                        o.call(e, t)
+                    h = e._readableState && e._readableState.endEmitted,
+                    l = function() {
+                        u = !1, h = !0, !a && n.call(e)
                     },
-                    g = function() {
+                    g = function(t) {
+                        n.call(e, t)
+                    },
+                    v = function() {
                         var t;
-                        return h && !p ? ((!e._readableState || !e._readableState.ended) && (t = new i), o.call(e, t)) : c && !d ? ((!e._writableState || !e._writableState.ended) && (t = new i), o.call(e, t)) : void 0
+                        return u && !h ? ((!e._readableState || !e._readableState.ended) && (t = new r), n.call(e, t)) : a && !p ? ((!e._writableState || !e._writableState.ended) && (t = new r), n.call(e, t)) : void 0
                     },
-                    y = function() {
-                        e.req.on("finish", l)
+                    x = function() {
+                        e.req.on("finish", b)
                     };
-                if ((f = e).setHeader && "function" == typeof f.abort) e.on("complete", l), e.on("abort", g), e.req ? y() : e.on("request", y);
-                else c && !e._writableState && (e.on("end", u), e.on("close", u));
-                return e.on("end", b), e.on("finish", l), !1 !== r.error && e.on("error", m), e.on("close", g),
+                if ((f = e).setHeader && "function" == typeof f.abort) e.on("complete", b), e.on("abort", v), e.req ? x() : e.on("request", x);
+                else a && !e._writableState && (e.on("end", d), e.on("close", d));
+                return e.on("end", l), e.on("finish", b), !1 !== s.error && e.on("error", g), e.on("close", v),
                     function() {
-                        e.removeListener("complete", l), e.removeListener("abort", g), e.removeListener("request", y), e.req && e.req.removeListener("finish", l), e.removeListener("end", u), e.removeListener("close", u), e.removeListener("finish", l), e.removeListener("end", b), e.removeListener("error", m), e.removeListener("close", g)
+                        e.removeListener("complete", b), e.removeListener("abort", v), e.removeListener("request", x), e.req && e.req.removeListener("finish", b), e.removeListener("end", d), e.removeListener("close", d), e.removeListener("finish", b), e.removeListener("end", l), e.removeListener("error", g), e.removeListener("close", v)
                     }
             }

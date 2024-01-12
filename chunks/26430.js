@@ -1,46 +1,46 @@
             "use strict";
-            n.r(s), n.d(s, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return u
                 }
             });
-            var i = n("446674"),
-                r = n("913144");
-            let o = {
+            var s = n("446674"),
+                i = n("913144");
+            let r = {
                     topEmojisByGuildId: {}
                 },
-                t = o,
-                a = {};
-            class f extends i.default.PersistedStore {
+                a = r,
+                o = {};
+            class d extends s.default.PersistedStore {
                 initialize(e) {
-                    t = null != e ? e : o
+                    a = null != e ? e : r
                 }
                 getState() {
-                    return t
+                    return a
                 }
                 getTopEmojiIdsByGuildId(e) {
-                    return t.topEmojisByGuildId[e]
+                    return a.topEmojisByGuildId[e]
                 }
                 getIsFetching(e) {
-                    return a[e]
+                    return o[e]
                 }
             }
-            f.displayName = "TopEmojiStore", f.persistKey = "TopEmojiStore";
-            var _ = new f(r.default, {
+            d.displayName = "TopEmojiStore", d.persistKey = "TopEmojiStore";
+            var u = new d(i.default, {
                 LOGOUT: function() {
-                    t = o, a = {}
+                    a = r, o = {}
                 },
                 TOP_EMOJIS_FETCH: function(e) {
                     let {
-                        guildId: s
+                        guildId: t
                     } = e;
-                    a[s] = !0
+                    o[t] = !0
                 },
                 TOP_EMOJIS_FETCH_SUCCESS: function(e) {
                     let {
-                        guildId: s,
+                        guildId: t,
                         topEmojisMetadata: n
                     } = e;
-                    t.topEmojisByGuildId[s] = n.map(e => e.emojiId), a[s] = !1
+                    a.topEmojisByGuildId[t] = n.map(e => e.emojiId), o[t] = !1
                 }
             })

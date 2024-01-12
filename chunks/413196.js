@@ -1,23 +1,23 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return s
                 }
             });
-            var i, a = n("201876"),
-                l = n("260320"),
-                s = n("42887");
-            i = class extends a.default {
+            var s, i = n("201876"),
+                r = n("260320"),
+                a = n("42887");
+            s = class extends i.default {
                 getInitialState() {
                     return this.getNextState()
                 }
                 getNextState() {
-                    let e = l.default.getLobbiesWithVoice();
+                    let e = r.default.getLobbiesWithVoice();
                     return e.length > 0 && (this._hadLobbyVoiceStates = !0), {
                         lobbies: e.map(e => ({
                             lobbyId: e.id,
-                            selfMute: s.default.isSelfMute(e.application_id),
-                            selfDeaf: s.default.isSelfDeaf(e.application_id)
+                            selfMute: a.default.isSelfMute(e.application_id),
+                            selfDeaf: a.default.isSelfDeaf(e.application_id)
                         }))
                     }
                 }

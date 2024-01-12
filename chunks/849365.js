@@ -1,32 +1,32 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return d
                 }
             });
-            var i = n("605250"),
-                a = n("802493"),
-                l = n("723939");
-            let s = "version",
-                r = new i.default("KvCacheVersion");
-            var u = new class e {
+            var s = n("605250"),
+                i = n("802493"),
+                r = n("723939");
+            let a = "version",
+                o = new s.default("KvCacheVersion");
+            var d = new class e {
                 async okAsync(e) {
-                    let t = await a.default.cache(e).get(s);
+                    let t = await i.default.cache(e).get(a);
                     return null == t ? null : 3 === t
                 }
                 okSync(e) {
                     try {
-                        let t = a.default.cache(e).getSyncUnsafe(s);
+                        let t = i.default.cache(e).getSyncUnsafe(a);
                         return null == t ? null : 3 === t
                     } catch (e) {
-                        return r.log("couldn't read version from database: ".concat(e.message)), !1
+                        return o.log("couldn't read version from database: ".concat(e.message)), !1
                     }
                 }
                 handleClearGuildCache(e) {
-                    a.default.cacheTransaction(e).delete(s), a.default.cacheTransaction(e).delete("CacheStore.Nonce"), l.default.replaceDisableAllDatabases("CLEAR_GUILD_CACHE (via KvCacheVersion)")
+                    i.default.cacheTransaction(e).delete(a), i.default.cacheTransaction(e).delete("CacheStore.Nonce"), r.default.replaceDisableAllDatabases("CLEAR_GUILD_CACHE (via KvCacheVersion)")
                 }
                 handleWrite(e) {
-                    a.default.cacheTransaction(e).put("hello", "\uD83D\uDC4B"), a.default.cacheTransaction(e).put(s, 3)
+                    i.default.cacheTransaction(e).put("hello", "\uD83D\uDC4B"), i.default.cacheTransaction(e).put(a, 3)
                 }
                 handleReset() {}
                 constructor() {

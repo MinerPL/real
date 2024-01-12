@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return u
                 }
             });
             var l = n("65597"),
@@ -10,13 +10,13 @@
                 s = n("659404"),
                 a = n("49111");
 
-            function o(e) {
+            function u(e) {
                 let {
                     guildId: t
                 } = e, n = s.CommunityEndlessInvitesExperiment.useExperiment({
                     guildId: null != t ? t : "",
                     location: "6798be_2"
-                }), o = (0, l.default)([i.default], () => i.default.getGuild(t));
+                }), u = (0, l.default)([i.default], () => i.default.getGuild(t));
                 return null != t && function(e) {
                     var t;
                     let {
@@ -30,7 +30,7 @@
                     });
                     if ((null == n ? void 0 : n.hasFeature(a.GuildFeatures.HUB)) === !0 || (null == n ? void 0 : n.hasFeature(a.GuildFeatures.COMMUNITY)) === !0 && i) return r.default.INVITE_OPTIONS_FOREVER.value
                 }({
-                    guild: o,
+                    guild: u,
                     experimentConfig: n
                 })
             }

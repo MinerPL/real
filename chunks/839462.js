@@ -1,61 +1,61 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return l
                 }
             }), n("222007");
-            var i = n("132710"),
-                a = n.n(i),
-                l = n("385976"),
-                s = n("867805"),
-                r = n("402671"),
-                u = n("290689");
-            let o = {
+            var s = n("132710"),
+                i = n.n(s),
+                r = n("385976"),
+                a = n("867805"),
+                o = n("402671"),
+                d = n("290689");
+            let u = {
                 s: {
                     requiredFirstCharacters: ["~"],
-                    match: a.inlineRegex(/^~~([\s\S]+?)~~(?!_)/)
+                    match: i.inlineRegex(/^~~([\s\S]+?)~~(?!_)/)
                 },
                 highlight: {
-                    order: u.default.order,
+                    order: d.default.order,
                     match: () => null
                 },
                 emoji: {
-                    order: u.default.order,
+                    order: d.default.order,
                     requiredFirstCharacters: [":"],
                     match(e) {
-                        let t = s.default.EMOJI_NAME_AND_DIVERSITY_RE.exec(e);
-                        return null != t && "" !== s.default.convertNameToSurrogate(t[1]) ? t : null
+                        let t = a.default.EMOJI_NAME_AND_DIVERSITY_RE.exec(e);
+                        return null != t && "" !== a.default.convertNameToSurrogate(t[1]) ? t : null
                     },
                     parse(e) {
-                        let [t, n] = e, i = s.default.convertNameToSurrogate(n);
-                        return null == i || "" === i ? {
+                        let [t, n] = e, s = a.default.convertNameToSurrogate(n);
+                        return null == s || "" === s ? {
                             type: "text",
                             content: t
                         } : {
                             name: ":".concat(n, ":"),
-                            surrogate: i,
-                            src: r.default.getURL(i)
+                            surrogate: s,
+                            src: o.default.getURL(s)
                         }
                     }
                 },
                 customEmoji: {
-                    order: a.defaultRules.codeBlock.order,
+                    order: i.defaultRules.codeBlock.order,
                     requiredFirstCharacters: ["<"],
                     match: e => /^<(a)?:(\w+):(\d+)>/.exec(e),
                     parse(e, t, n) {
-                        let [i, a, s, r] = e, {
-                            guildId: u
-                        } = n, o = l.default.getDisambiguatedEmojiContext(u).getById(r), d = null == o || o.require_colons;
-                        return null != o && (s = o.name), {
-                            emojiId: r,
-                            name: d ? ":".concat(s, ":") : s,
-                            animated: "a" === a
+                        let [s, i, a, o] = e, {
+                            guildId: d
+                        } = n, u = r.default.getDisambiguatedEmojiContext(d).getById(o), l = null == u || u.require_colons;
+                        return null != u && (a = u.name), {
+                            emojiId: o,
+                            name: l ? ":".concat(a, ":") : a,
+                            animated: "a" === i
                         }
                     }
                 },
                 text: {
                     parse(e) {
-                        let t = s.default.findInlineEmojisFromSurrogates(e[0]),
+                        let t = a.default.findInlineEmojisFromSurrogates(e[0]),
                             n = 0;
                         return t.map(e => {
                             if ("text" === e.type) {
@@ -77,7 +77,7 @@
                                     type: "emoji",
                                     name: e.emojiName,
                                     surrogate: e.surrogate,
-                                    src: r.default.getURL(e.surrogate),
+                                    src: o.default.getURL(e.surrogate),
                                     originalMatch: t
                                 }
                             }
@@ -85,8 +85,8 @@
                     }
                 },
                 looseEm: {
-                    ...a.defaultRules.em,
-                    match: a.inlineRegex(RegExp("^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?) {1,2}\\*(?!\\*)")),
+                    ...i.defaultRules.em,
+                    match: i.inlineRegex(RegExp("^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?) {1,2}\\*(?!\\*)")),
                     parse: (e, t, n) => ({
                         type: "em",
                         content: t(e[1], n),
@@ -94,4 +94,4 @@
                     })
                 }
             };
-            var d = o
+            var l = u

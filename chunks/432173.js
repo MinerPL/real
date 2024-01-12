@@ -1,54 +1,54 @@
             "use strict";
             n.r(t), n.d(t, {
                 getReactionEmojiName: function() {
-                    return r
-                },
-                getAccessibleEmojiDisplayName: function() {
-                    return u
-                },
-                toReactionEmoji: function() {
                     return o
                 },
-                emojiEquals: function() {
+                getAccessibleEmojiDisplayName: function() {
                     return d
                 },
+                toReactionEmoji: function() {
+                    return u
+                },
+                emojiEquals: function() {
+                    return l
+                },
                 getBurstAnalyticsSection: function() {
-                    return c
+                    return f
                 },
                 shouldApplyReaction: function() {
                     return _
                 }
             }), n("781738");
-            var i = n("867805"),
-                a = n("271938"),
-                l = n("49111"),
-                s = n("782340");
-
-            function r(e) {
-                return null == e.id ? i.default.convertSurrogateToName(e.name) : ":".concat(e.name, ":")
-            }
-
-            function u(e, t, n, i) {
-                var a, l, u;
-                let o;
-                o = i ? e ? s.default.Messages.SUPER_REACT_REMOVE_WITH_COUNT_A11Y_LABEL : s.default.Messages.SUPER_REACT_WITH_COUNT_A11Y_LABEL : e ? s.default.Messages.REACT_REMOVE_WITH_COUNT_A11Y_LABEL : s.default.Messages.REACT_WITH_COUNT_A11Y_LABEL;
-                let d = o.format({
-                    reactions: t,
-                    emojiName: null !== (u = null === (l = r(n)) || void 0 === l ? void 0 : null === (a = l.replace(/[:_]/g, " ")) || void 0 === a ? void 0 : a.trim()) && void 0 !== u ? u : ""
-                });
-                return d
-            }
+            var s = n("867805"),
+                i = n("271938"),
+                r = n("49111"),
+                a = n("782340");
 
             function o(e) {
-                var t, n, i;
+                return null == e.id ? s.default.convertSurrogateToName(e.name) : ":".concat(e.name, ":")
+            }
+
+            function d(e, t, n, s) {
+                var i, r, d;
+                let u;
+                u = s ? e ? a.default.Messages.SUPER_REACT_REMOVE_WITH_COUNT_A11Y_LABEL : a.default.Messages.SUPER_REACT_WITH_COUNT_A11Y_LABEL : e ? a.default.Messages.REACT_REMOVE_WITH_COUNT_A11Y_LABEL : a.default.Messages.REACT_WITH_COUNT_A11Y_LABEL;
+                let l = u.format({
+                    reactions: t,
+                    emojiName: null !== (d = null === (r = o(n)) || void 0 === r ? void 0 : null === (i = r.replace(/[:_]/g, " ")) || void 0 === i ? void 0 : i.trim()) && void 0 !== d ? d : ""
+                });
+                return l
+            }
+
+            function u(e) {
+                var t, n, s;
                 return {
                     id: null !== (t = e.id) && void 0 !== t ? t : null,
-                    name: null !== (i = null !== (n = null != e.id ? e.name : e.optionallyDiverseSequence) && void 0 !== n ? n : e.name) && void 0 !== i ? i : "",
+                    name: null !== (s = null !== (n = null != e.id ? e.name : e.optionallyDiverseSequence) && void 0 !== n ? n : e.name) && void 0 !== s ? s : "",
                     animated: !!e.animated
                 }
             }
 
-            function d(e, t) {
+            function l(e, t) {
                 if (null != t.id) {
                     let n = null != e.id ? "".concat(e.id) : e.id;
                     return "".concat(t.id) === n
@@ -56,17 +56,17 @@
                 return null == e.id && t.name === e.name
             }
 
-            function c(e) {
-                if (e.isThread()) return l.AnalyticsSections.THREAD_TEXT_AREA;
-                if (e.isForumPost()) return l.AnalyticsSections.FORUM_CHANNEL_TEXT_AREA;
-                if (e.isGuildVocal()) return l.AnalyticsSections.TEXT_IN_VOICE;
-                return l.AnalyticsSections.CHANNEL_TEXT_AREA
+            function f(e) {
+                if (e.isThread()) return r.AnalyticsSections.THREAD_TEXT_AREA;
+                if (e.isForumPost()) return r.AnalyticsSections.FORUM_CHANNEL_TEXT_AREA;
+                if (e.isGuildVocal()) return r.AnalyticsSections.TEXT_IN_VOICE;
+                return r.AnalyticsSections.CHANNEL_TEXT_AREA
             }
 
             function _(e) {
                 let {
                     userId: t,
                     optimistic: n
-                } = e, i = a.default.getId() === t;
-                return (!n || !!i) && !0
+                } = e, s = i.default.getId() === t;
+                return (!n || !!s) && !0
             }

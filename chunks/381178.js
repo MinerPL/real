@@ -1,6 +1,6 @@
-            var i = n("659382"),
-                r = n("492692"),
-                s = n("276440"),
-                l = s && s.isTypedArray,
-                o = l ? r(l) : i;
-            e.exports = o
+            var e = n("659382"),
+                o = n("492692"),
+                i = n("276440"),
+                u = i && i.isTypedArray,
+                a = u ? o(u) : e;
+            t.exports = a

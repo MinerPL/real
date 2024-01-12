@@ -1,3 +1,3 @@
-            r("70102"), t.exports = function() {
+            s("70102"), t.exports = function() {
                 throw Error("Readable.from is not available in the browser")
             }

@@ -1,7 +1,7 @@
             "use strict";
-            r("462568"), r("222007");
-            var i = r("975169"),
-                n = r("463067");
+            s("462568"), s("222007");
+            var r = s("975169"),
+                i = s("463067");
             t.exports = function() {
-                return i(), "function" == typeof Promise.allSettled ? Promise.allSettled : n
+                return r(), "function" == typeof Promise.allSettled ? Promise.allSettled : i
             }

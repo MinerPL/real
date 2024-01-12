@@ -1,22 +1,22 @@
             "use strict";
-            n.r(e), n.d(e, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return l
                 }
             });
             var r = n("666038");
-            class a extends r.default {
-                static createFromServer(t, e) {
-                    return new a({
-                        id: t.id,
-                        subscriptionId: t.subscription_id,
-                        premiumGuildSubscription: null != t.premium_guild_subscription ? {
-                            id: t.premium_guild_subscription.id,
-                            guildId: t.premium_guild_subscription.guild_id
+            class i extends r.default {
+                static createFromServer(e, t) {
+                    return new i({
+                        id: e.id,
+                        subscriptionId: e.subscription_id,
+                        premiumGuildSubscription: null != e.premium_guild_subscription ? {
+                            id: e.premium_guild_subscription.id,
+                            guildId: e.premium_guild_subscription.guild_id
                         } : null,
-                        canceled: t.canceled,
-                        cooldownEndsAt: t.cooldown_ends_at,
-                        subscription: e
+                        canceled: e.canceled,
+                        cooldownEndsAt: e.cooldown_ends_at,
+                        subscription: t
                     })
                 }
                 isOnCooldown() {
@@ -25,8 +25,8 @@
                 isAvailable() {
                     return null == this.premiumGuildSubscription && !this.isOnCooldown()
                 }
-                constructor(t) {
-                    super(), this.id = t.id, this.subscriptionId = t.subscriptionId, this.premiumGuildSubscription = t.premiumGuildSubscription, this.canceled = t.canceled, this.cooldownEndsAt = t.cooldownEndsAt, this.subscription = t.subscription
+                constructor(e) {
+                    super(), this.id = e.id, this.subscriptionId = e.subscriptionId, this.premiumGuildSubscription = e.premiumGuildSubscription, this.canceled = e.canceled, this.cooldownEndsAt = e.cooldownEndsAt, this.subscription = e.subscription
                 }
             }
-            var _ = a
+            var l = i

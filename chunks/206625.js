@@ -1,14 +1,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return r
                 }
             });
-            var r = n("884691");
+            var i = n("884691");
 
-            function i(e, t) {
-                let n = r.useRef(e);
-                return r.useEffect(() => {
+            function r(e, t) {
+                let n = i.useRef(e);
+                return i.useEffect(() => {
                     function e(e) {
                         null != n.current && !n.current.contains(e.target) && t()
                     }

@@ -1,26 +1,26 @@
             "use strict";
             n.r(t), n.d(t, {
                 getStreamerActivity: function() {
-                    return l
+                    return r
                 },
                 getStreamerApplication: function() {
-                    return s
+                    return a
                 }
             });
-            var i = n("49111");
+            var s = n("49111");
 
-            function a(e) {
-                return e.type === i.ActivityTypes.PLAYING
+            function i(e) {
+                return e.type === s.ActivityTypes.PLAYING
             }
 
-            function l(e, t) {
+            function r(e, t) {
                 var n;
-                return null != e ? (n = e.ownerId, t.findActivity(n, a)) : null
+                return null != e ? (n = e.ownerId, t.findActivity(n, i)) : null
             }
 
-            function s(e, t) {
+            function a(e, t) {
                 if (null == e) return null;
-                let n = l(e, t);
+                let n = r(e, t);
                 return null == n ? null : {
                     id: n.application_id,
                     name: n.name

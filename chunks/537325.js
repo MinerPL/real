@@ -4,46 +4,46 @@
                     return _
                 }
             });
-            var i = n("37983");
+            var s = n("37983");
             n("884691");
-            var a = n("551042"),
-                l = n("565298"),
-                s = n("393414"),
-                r = n("239380"),
-                u = n("42203"),
-                o = n("361572"),
-                d = n("232054"),
-                c = n("49111");
+            var i = n("551042"),
+                r = n("565298"),
+                a = n("393414"),
+                o = n("239380"),
+                d = n("42203"),
+                u = n("361572"),
+                l = n("232054"),
+                f = n("49111");
             async function _(e, t, _) {
-                let E = (0, o.tryParseChannelPath)(e);
-                if (null != E && !await (0, d.default)(E)) {
-                    (0, a.openModalLazy)(async () => {
+                let c = (0, u.tryParseChannelPath)(e);
+                if (null != c && !await (0, l.default)(c)) {
+                    (0, i.openModalLazy)(async () => {
                         let {
                             default: e
                         } = await n.el("657233").then(n.bind(n, "657233"));
-                        return t => (0, i.jsx)(e, {
+                        return t => (0, s.jsx)(e, {
                             ...t
                         })
                     });
                     return
                 }
-                if (null == E) {
-                    (0, s.transitionTo)(e);
+                if (null == c) {
+                    (0, a.transitionTo)(e);
                     return
                 }
-                let f = function(e) {
+                let g = function(e) {
                     if (null == e.channelId) return e;
-                    let t = u.default.getChannel(e.channelId);
+                    let t = d.default.getChannel(e.channelId);
                     if (null == t) return e;
-                    let n = (0, l.getGuildIdForGenericRedirect)(t);
+                    let n = (0, r.getGuildIdForGenericRedirect)(t);
                     return {
                         ...e,
-                        guildId: null != n ? n : c.ME
+                        guildId: null != n ? n : f.ME
                     }
-                }(E);
-                if (null == f.channelId) {
-                    (0, r.transitionToGuild)(f.guildId);
+                }(c);
+                if (null == g.channelId) {
+                    (0, o.transitionToGuild)(g.guildId);
                     return
                 }
-                null != f.threadId ? (0, s.transitionTo)(c.Routes.CHANNEL_THREAD_VIEW(f.guildId, f.channelId, f.threadId, f.messageId), t, _) : (0, s.transitionTo)(c.Routes.CHANNEL(f.guildId, f.channelId, f.messageId), t, _)
+                null != g.threadId ? (0, a.transitionTo)(f.Routes.CHANNEL_THREAD_VIEW(g.guildId, g.channelId, g.threadId, g.messageId), t, _) : (0, a.transitionTo)(f.Routes.CHANNEL(g.guildId, g.channelId, g.messageId), t, _)
             }

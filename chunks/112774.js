@@ -1,14 +1,14 @@
             "use strict";
-            r("311790"), r("477657"), r("811875"), r("90301"), r("652153"), r("28797"), r("817884"), r("597349"), r("667536"), r("690341"), r("659510"), r("527135"), r("70102");
-            var i = "undefined" != typeof Uint8Array && "undefined" != typeof Uint16Array && "undefined" != typeof Int32Array;
+            s("311790"), s("477657"), s("811875"), s("90301"), s("652153"), s("28797"), s("817884"), s("597349"), s("667536"), s("690341"), s("659510"), s("527135"), s("70102");
+            var r = "undefined" != typeof Uint8Array && "undefined" != typeof Uint16Array && "undefined" != typeof Int32Array;
             e.assign = function(t) {
                 for (var e = Array.prototype.slice.call(arguments, 1); e.length;) {
-                    var r, i, n = e.shift();
-                    if (!!n) {
-                        if ("object" != typeof n) throw TypeError(n + "must be non-object");
-                        for (var o in n) {
+                    var s, r, i = e.shift();
+                    if (!!i) {
+                        if ("object" != typeof i) throw TypeError(i + "must be non-object");
+                        for (var n in i) {
                             ;
-                            if (r = n, i = o, Object.prototype.hasOwnProperty.call(r, i)) t[o] = n[o]
+                            if (s = i, r = n, Object.prototype.hasOwnProperty.call(s, r)) t[n] = i[n]
                         }
                     }
                 }
@@ -16,29 +16,29 @@
             }, e.shrinkBuf = function(t, e) {
                 return t.length === e ? t : t.subarray ? t.subarray(0, e) : (t.length = e, t)
             };
-            var n = {
-                    arraySet: function(t, e, r, i, n) {
+            var i = {
+                    arraySet: function(t, e, s, r, i) {
                         if (e.subarray && t.subarray) {
-                            t.set(e.subarray(r, r + i), n);
+                            t.set(e.subarray(s, s + r), i);
                             return
                         }
-                        for (var o = 0; o < i; o++) t[n + o] = e[r + o]
+                        for (var n = 0; n < r; n++) t[i + n] = e[s + n]
                     },
                     flattenChunks: function(t) {
-                        var e, r, i, n, o, a;
-                        for (e = 0, i = 0, r = t.length; e < r; e++) i += t[e].length;
-                        for (e = 0, a = new Uint8Array(i), n = 0, r = t.length; e < r; e++) o = t[e], a.set(o, n), n += o.length;
-                        return a
+                        var e, s, r, i, n, c;
+                        for (e = 0, r = 0, s = t.length; e < s; e++) r += t[e].length;
+                        for (e = 0, c = new Uint8Array(r), i = 0, s = t.length; e < s; e++) n = t[e], c.set(n, i), i += n.length;
+                        return c
                     }
                 },
-                o = {
-                    arraySet: function(t, e, r, i, n) {
-                        for (var o = 0; o < i; o++) t[n + o] = e[r + o]
+                n = {
+                    arraySet: function(t, e, s, r, i) {
+                        for (var n = 0; n < r; n++) t[i + n] = e[s + n]
                     },
                     flattenChunks: function(t) {
                         return [].concat.apply([], t)
                     }
                 };
             e.setTyped = function(t) {
-                t ? (e.Buf8 = Uint8Array, e.Buf16 = Uint16Array, e.Buf32 = Int32Array, e.assign(e, n)) : (e.Buf8 = Array, e.Buf16 = Array, e.Buf32 = Array, e.assign(e, o))
-            }, e.setTyped(i)
+                t ? (e.Buf8 = Uint8Array, e.Buf16 = Uint16Array, e.Buf32 = Int32Array, e.assign(e, i)) : (e.Buf8 = Array, e.Buf16 = Array, e.Buf32 = Array, e.assign(e, n))
+            }, e.setTyped(r)

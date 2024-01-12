@@ -1,15 +1,15 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return o
                 }
             });
-            var i = n("132710"),
-                a = n.n(i);
-            let l = /\n$/,
-                s = {
-                    ...a.defaultRules.heading,
+            var s = n("132710"),
+                i = n.n(s);
+            let r = /\n$/,
+                a = {
+                    ...i.defaultRules.heading,
                     requiredFirstCharacters: [" ", "#"],
-                    match: (e, t, n) => t.allowHeading ? null == n || "" === n || null != n.match(l) ? (0, i.anyScopeRegex)(/^ *(#{1,3})(?:\s+)((?![#]+)[^\n]+?)#*\s*(?:\n|$)/)(e, t, n) : null : null
+                    match: (e, t, n) => t.allowHeading ? null == n || "" === n || null != n.match(r) ? (0, s.anyScopeRegex)(/^ *(#{1,3})(?:\s+)((?![#]+)[^\n]+?)#*\s*(?:\n|$)/)(e, t, n) : null : null
                 };
-            var r = s
+            var o = a

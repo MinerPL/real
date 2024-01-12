@@ -1,19 +1,15 @@
             "use strict";
 
-            function i(e) {
+            function r(e) {
                 let {} = e;
                 return !1
             }
 
-            function r(e, t) {
+            function i(e, t) {
                 return !1
             }
 
-            function s(e) {
-                return !1
-            }
-
-            function l() {
+            function l(e) {
                 return !1
             }
 
@@ -21,12 +17,16 @@
                 return !1
             }
 
-            function u(e) {
+            function s() {
+                return !1
+            }
+
+            function a(e) {
                 let {} = e;
                 return !1
             }
 
-            function a(e, t) {
+            function u(e, t) {
                 return !1
             }
 
@@ -45,25 +45,25 @@
             }
             n.r(t), n.d(t, {
                 navigateToChannel: function() {
-                    return i
-                },
-                navigateToMemberVerification: function() {
                     return r
                 },
-                navigateToRootTab: function() {
-                    return s
+                navigateToMemberVerification: function() {
+                    return i
                 },
-                resetToAuthRoute: function() {
+                navigateToRootTab: function() {
                     return l
                 },
-                resetToPanelsUI: function() {
+                resetToAuthRoute: function() {
                     return o
                 },
+                resetToPanelsUI: function() {
+                    return s
+                },
                 pushModal: function() {
-                    return u
+                    return a
                 },
                 popModal: function() {
-                    return a
+                    return u
                 },
                 popAllModals: function() {
                     return c

@@ -1,11 +1,11 @@
             "use strict";
-            var i = r("37549"),
-                n = i("%Math.abs%"),
-                o = i("%Math.floor%"),
-                a = r("303571"),
-                s = r("979332");
+            var r = s("37549"),
+                i = r("%Math.abs%"),
+                n = r("%Math.floor%"),
+                c = s("303571"),
+                o = s("979332");
             t.exports = function(t) {
-                if ("number" != typeof t || a(t) || !s(t)) return !1;
-                var e = n(t);
-                return o(e) === e
+                if ("number" != typeof t || c(t) || !o(t)) return !1;
+                var e = i(t);
+                return n(e) === e
             }

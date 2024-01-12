@@ -1,19 +1,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return d
                 }
             }), n("222007");
-            var i = n("884691"),
-                a = n("446674"),
-                l = n("327037"),
-                s = n("84339"),
-                r = n("271938");
+            var s = n("884691"),
+                i = n("446674"),
+                r = n("327037"),
+                a = n("84339"),
+                o = n("271938");
 
-            function u() {
-                let [e, t] = (0, a.useStateFromStoresArray)([r.default], () => [r.default.isAuthenticated(), null != r.default.getAnalyticsToken()]), n = (0, s.default)(e);
-                i.useEffect(() => {
-                    !n && e && !t && l.fetchCurrentUser({
+            function d() {
+                let [e, t] = (0, i.useStateFromStoresArray)([o.default], () => [o.default.isAuthenticated(), null != o.default.getAnalyticsToken()]), n = (0, a.default)(e);
+                s.useEffect(() => {
+                    !n && e && !t && r.fetchCurrentUser({
                         withAnalyticsToken: !0
                     })
                 }, [n, e, t])

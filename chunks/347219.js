@@ -1,17 +1,17 @@
             "use strict";
 
-            function i(e, t) {
+            function s(e, t) {
                 return Math.floor(Math.random() * (t - e + 1) + e)
             }
 
-            function a(e, t, n, i) {
-                return i.tension * (e - t) - i.friction * n
+            function i(e, t, n, s) {
+                return s.tension * (e - t) - s.friction * n
             }
             n.r(t), n.d(t, {
                 randomNumber: function() {
-                    return i
+                    return s
                 },
                 applySpringForce: function() {
-                    return a
+                    return i
                 }
             })

@@ -1,8 +1,8 @@
             t.exports = function(t) {
-                for (var e, r = t.length; r--;)
-                    if (255 === (e = t.readUInt8(r))) t.writeUInt8(0, r);
+                for (var e, s = t.length; s--;)
+                    if (255 === (e = t.readUInt8(s))) t.writeUInt8(0, s);
                     else {
-                        e++, t.writeUInt8(e, r);
+                        e++, t.writeUInt8(e, s);
                         break
                     }
             }

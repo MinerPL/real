@@ -1,13 +1,13 @@
-            var i = {
-                    ECB: r("410720"),
-                    CBC: r("696347"),
-                    CFB: r("350066"),
-                    CFB8: r("418480"),
-                    CFB1: r("292065"),
-                    OFB: r("8954"),
-                    CTR: r("186043"),
-                    GCM: r("186043")
+            var r = {
+                    ECB: s("410720"),
+                    CBC: s("696347"),
+                    CFB: s("350066"),
+                    CFB8: s("418480"),
+                    CFB1: s("292065"),
+                    OFB: s("8954"),
+                    CTR: s("186043"),
+                    GCM: s("186043")
                 },
-                n = r("541412");
-            for (var o in n) n[o].module = i[n[o].mode];
-            t.exports = n
+                i = s("541412");
+            for (var n in i) i[n].module = r[i[n].mode];
+            t.exports = i

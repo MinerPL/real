@@ -1,13 +1,13 @@
-            e = n.nmd(e);
-            var i = n("447414"),
-                r = "object" == typeof t && t && !t.nodeType && t,
-                s = r && "object" == typeof e && e && !e.nodeType && e,
-                l = s && s.exports === r && i.process,
-                o = function() {
+            t = n.nmd(t);
+            var e = n("447414"),
+                o = "object" == typeof r && r && !r.nodeType && r,
+                i = o && "object" == typeof t && t && !t.nodeType && t,
+                u = i && i.exports === o && e.process,
+                a = function() {
                     try {
-                        var e = s && s.require && s.require("util").types;
-                        if (e) return e;
-                        return l && l.binding && l.binding("util")
-                    } catch (e) {}
+                        var t = i && i.require && i.require("util").types;
+                        if (t) return t;
+                        return u && u.binding && u.binding("util")
+                    } catch (t) {}
                 }();
-            e.exports = o
+            t.exports = a

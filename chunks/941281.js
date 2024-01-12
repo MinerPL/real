@@ -1,159 +1,159 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return A
+                    return S
                 },
                 OAuth2Success: function() {
-                    return N
+                    return I
                 },
                 OAuth2AuthorizedSuccess: function() {
-                    return O
+                    return A
                 },
                 OAuth2Error: function() {
-                    return R
+                    return D
                 },
                 OAuth2AuthorizedPage: function() {
-                    return y
+                    return N
                 },
                 OAuth2ErrorPage: function() {
-                    return v
+                    return O
                 }
             });
-            var i = n("37983"),
-                a = n("884691"),
-                l = n("414456"),
-                s = n.n(l),
-                r = n("730290"),
-                u = n("90915"),
-                o = n("746379"),
-                d = n.n(o),
-                c = n("516256"),
+            var s = n("37983"),
+                i = n("884691"),
+                r = n("414456"),
+                a = n.n(r),
+                o = n("730290"),
+                d = n("90915"),
+                u = n("746379"),
+                l = n.n(u),
+                f = n("516256"),
                 _ = n("242670"),
-                E = n("577776"),
-                f = n("77078"),
-                h = n("69927"),
-                p = n("393414"),
-                T = n("239380"),
-                C = n("599110"),
-                m = n("267570"),
-                S = n("49111"),
-                I = n("782340"),
-                g = n("223003");
+                c = n("577776"),
+                g = n("77078"),
+                m = n("69927"),
+                h = n("393414"),
+                v = n("239380"),
+                E = n("599110"),
+                p = n("267570"),
+                y = n("49111"),
+                T = n("782340"),
+                C = n("223003");
 
-            function A(e) {
+            function S(e) {
                 let {
                     message: t,
                     footer: n,
-                    headerClassName: a,
-                    showsCloseWindowText: l,
-                    spinner: r,
-                    onClose: u
+                    headerClassName: i,
+                    showsCloseWindowText: r,
+                    spinner: o,
+                    onClose: d
                 } = e;
-                return (0, h.usePageTitle)({
-                    location: I.default.Messages.OAUTH2_TITLE
-                }), (0, i.jsxs)(i.Fragment, {
-                    children: [null != u ? (0, i.jsx)(c.ModalCloseButton, {
-                        onClick: u,
-                        className: g.closeButton
-                    }) : null, (0, i.jsxs)("div", {
-                        className: g.wrapper,
-                        children: [r ? (0, i.jsx)(_.Spinner, {}) : null, (0, i.jsx)("div", {
-                            className: s(g.header, a)
-                        }), (0, i.jsx)(E.Text, {
+                return (0, m.usePageTitle)({
+                    location: T.default.Messages.OAUTH2_TITLE
+                }), (0, s.jsxs)(s.Fragment, {
+                    children: [null != d ? (0, s.jsx)(f.ModalCloseButton, {
+                        onClick: d,
+                        className: C.closeButton
+                    }) : null, (0, s.jsxs)("div", {
+                        className: C.wrapper,
+                        children: [o ? (0, s.jsx)(_.Spinner, {}) : null, (0, s.jsx)("div", {
+                            className: a(C.header, i)
+                        }), (0, s.jsx)(c.Text, {
                             variant: "text-md/normal",
-                            className: g.text,
+                            className: C.text,
                             children: t
-                        }), null != n ? n : null, l ? (0, i.jsx)(E.Text, {
+                        }), null != n ? n : null, r ? (0, s.jsx)(c.Text, {
                             variant: "text-xs/normal",
                             color: "text-muted",
-                            className: g.cta,
-                            children: I.default.Messages.OAUTH2_MESSAGE_CTA
+                            className: C.cta,
+                            children: T.default.Messages.OAUTH2_MESSAGE_CTA
                         }) : null]
                     })]
                 })
             }
 
-            function N(e) {
-                return (0, i.jsx)(A, {
+            function I(e) {
+                return (0, s.jsx)(S, {
                     ...e,
-                    headerClassName: g.headerSuccess
+                    headerClassName: C.headerSuccess
                 })
             }
 
-            function O(e) {
+            function A(e) {
                 let {
                     guild: t,
                     application: n,
-                    ...l
+                    ...r
                 } = e, {
-                    onClose: s
-                } = l, r = I.default.Messages.AUTHORIZED_SUCCESS, u = a.useCallback(() => {
-                    (null == t ? void 0 : t.id) != null && ((0, T.transitionToGuild)(null == t ? void 0 : t.id), null == s || s(), C.default.track(S.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
+                    onClose: a
+                } = r, o = T.default.Messages.AUTHORIZED_SUCCESS, d = i.useCallback(() => {
+                    (null == t ? void 0 : t.id) != null && ((0, v.transitionToGuild)(null == t ? void 0 : t.id), null == a || a(), E.default.track(y.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
                         application_id: null == n ? void 0 : n.id,
                         guild_id: null == t ? void 0 : t.id
                     }))
-                }, [s, null == n ? void 0 : n.id, null == t ? void 0 : t.id]), o = a.useCallback(() => {
-                    null == s || s(), C.default.track(S.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, {
+                }, [a, null == n ? void 0 : n.id, null == t ? void 0 : t.id]), u = i.useCallback(() => {
+                    null == a || a(), E.default.track(y.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, {
                         application_id: null == n ? void 0 : n.id
                     })
-                }, [s, null == n ? void 0 : n.id]), d = a.useMemo(() => {
-                    if (null != n) return null != t ? I.default.Messages.AUTHORIZED_APP_TO_SERVER.format({
+                }, [a, null == n ? void 0 : n.id]), l = i.useMemo(() => {
+                    if (null != n) return null != t ? T.default.Messages.AUTHORIZED_APP_TO_SERVER.format({
                         installedApplicationName: null == n ? void 0 : n.name,
                         guildName: null == t ? void 0 : t.name
-                    }) : I.default.Messages.AUTHORIZED_APP.format({
+                    }) : T.default.Messages.AUTHORIZED_APP.format({
                         installedApplicationName: null == n ? void 0 : n.name
                     });
-                    return I.default.Messages.AUTHORIZED_GENERIC
-                }, [n, t]), c = (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(E.Text, {
+                    return T.default.Messages.AUTHORIZED_GENERIC
+                }, [n, t]), f = (0, s.jsxs)(s.Fragment, {
+                    children: [(0, s.jsx)(c.Text, {
                         variant: "text-sm/normal",
-                        className: g.authorizedSuccessSubtext,
-                        children: d
-                    }), (null != t || null != s) && (0, i.jsxs)("div", {
-                        className: g.buttonsContainer,
-                        children: [null != t && (0, i.jsx)(f.Button, {
+                        className: C.authorizedSuccessSubtext,
+                        children: l
+                    }), (null != t || null != a) && (0, s.jsxs)("div", {
+                        className: C.buttonsContainer,
+                        children: [null != t && (0, s.jsx)(g.Button, {
                             fullWidth: !0,
-                            color: f.Button.Colors.BRAND,
-                            onClick: u,
-                            className: g.button,
-                            children: (null == t ? void 0 : t.name.length) > 30 ? I.default.Messages.OAUTH2_GO_TO_SERVER_DEFAULT_CTA : I.default.Messages.OAUTH2_GO_TO_SERVER_NAME_CTA.format({
+                            color: g.Button.Colors.BRAND,
+                            onClick: d,
+                            className: C.button,
+                            children: (null == t ? void 0 : t.name.length) > 30 ? T.default.Messages.OAUTH2_GO_TO_SERVER_DEFAULT_CTA : T.default.Messages.OAUTH2_GO_TO_SERVER_NAME_CTA.format({
                                 guildName: null == t ? void 0 : t.name
                             })
-                        }), null != s && (0, i.jsx)(f.Button, {
+                        }), null != a && (0, s.jsx)(g.Button, {
                             fullWidth: !0,
-                            color: f.Button.Colors.PRIMARY,
-                            onClick: o,
-                            className: g.button,
-                            children: I.default.Messages.CLOSE
+                            color: g.Button.Colors.PRIMARY,
+                            onClick: u,
+                            className: C.button,
+                            children: T.default.Messages.CLOSE
                         })]
                     })]
                 });
-                return a.useEffect(() => {
-                    C.default.track(S.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, {
+                return i.useEffect(() => {
+                    E.default.track(y.AnalyticEvents.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, {
                         application_id: null == n ? void 0 : n.id
                     })
-                }, [null == n ? void 0 : n.id]), (0, i.jsx)("div", {
-                    className: g.authorizedSuccessWrapper,
-                    children: (0, i.jsx)(N, {
-                        message: r,
-                        footer: c,
-                        ...l
+                }, [null == n ? void 0 : n.id]), (0, s.jsx)("div", {
+                    className: C.authorizedSuccessWrapper,
+                    children: (0, s.jsx)(I, {
+                        message: o,
+                        footer: f,
+                        ...r
                     })
                 })
             }
 
-            function R(e) {
-                return (0, i.jsx)(A, {
+            function D(e) {
+                return (0, s.jsx)(S, {
                     ...e,
-                    headerClassName: g.headerFailure
+                    headerClassName: C.headerFailure
                 })
             }
 
-            function y() {
+            function N() {
                 var e, t;
-                let n = (0, u.useLocation)();
-                return (0, i.jsx)(m.OAuth2Page, {
-                    children: (0, i.jsx)(O, {
+                let n = (0, d.useLocation)();
+                return (0, s.jsx)(p.OAuth2Page, {
+                    children: (0, s.jsx)(A, {
                         guild: null === (e = n.state) || void 0 === e ? void 0 : e.guild,
                         application: null === (t = n.state) || void 0 === t ? void 0 : t.application,
                         showsCloseWindowText: !0
@@ -161,21 +161,21 @@
                 })
             }
 
-            function v(e) {
+            function O(e) {
                 var t, n;
                 let {
-                    location: l
+                    location: r
                 } = e;
-                a.useEffect(() => {
-                    if (null == l) return;
-                    let e = null != document.referrer && "" !== document.referrer ? d.parse(document.referrer) : null;
-                    (null == e || e.host !== window.location.host || e.pathname !== S.Routes.OAUTH2_AUTHORIZE) && (0, p.transitionTo)(S.Routes.INDEX)
-                }, [l]);
-                let s = null != l ? (0, r.parse)(l.search) : {},
-                    u = null !== (n = null !== (t = s.error_description) && void 0 !== t ? t : s.error) && void 0 !== n ? n : I.default.Messages.OAUTH2_UNKNOWN_ERROR;
-                return (0, i.jsx)(m.OAuth2Page, {
-                    children: (0, i.jsx)(R, {
-                        message: u,
+                i.useEffect(() => {
+                    if (null == r) return;
+                    let e = null != document.referrer && "" !== document.referrer ? l.parse(document.referrer) : null;
+                    (null == e || e.host !== window.location.host || e.pathname !== y.Routes.OAUTH2_AUTHORIZE) && (0, h.transitionTo)(y.Routes.INDEX)
+                }, [r]);
+                let a = null != r ? (0, o.parse)(r.search) : {},
+                    d = null !== (n = null !== (t = a.error_description) && void 0 !== t ? t : a.error) && void 0 !== n ? n : T.default.Messages.OAUTH2_UNKNOWN_ERROR;
+                return (0, s.jsx)(p.OAuth2Page, {
+                    children: (0, s.jsx)(D, {
+                        message: d,
                         showsCloseWindowText: !0
                     })
                 })

@@ -1,22 +1,22 @@
-            r("70102"), t.exports = function(t, e) {
-                if (i("noDeprecation")) return t;
-                var r = !1;
+            s("70102"), t.exports = function(t, e) {
+                if (r("noDeprecation")) return t;
+                var s = !1;
                 return function() {
-                    if (!r) {
-                        if (i("throwDeprecation")) throw Error(e);
-                        i("traceDeprecation") ? console.trace(e) : console.warn(e);
-                        r = !0
+                    if (!s) {
+                        if (r("throwDeprecation")) throw Error(e);
+                        r("traceDeprecation") ? console.trace(e) : console.warn(e);
+                        s = !0
                     }
                     return t.apply(this, arguments)
                 }
             };
 
-            function i(t) {
+            function r(t) {
                 try {
-                    if (!r.g.localStorage) return !1
+                    if (!s.g.localStorage) return !1
                 } catch (t) {
                     return !1
                 }
-                var e = r.g.localStorage[t];
+                var e = s.g.localStorage[t];
                 return null != e && "true" === String(e).toLowerCase()
             }

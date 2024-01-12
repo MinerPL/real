@@ -1,72 +1,72 @@
             "use strict";
-            n.r(t), n.d(t, {
+            n.r(e), n.d(e, {
                 default: function() {
                     return c
                 }
             });
-            var i = n("37983"),
-                r = n("884691"),
-                u = n("118810"),
+            var r = n("37983"),
+                u = n("884691"),
+                i = n("118810"),
                 o = n("446674"),
-                s = n("206230"),
-                l = n("719347");
-            let a = e => {
+                a = n("206230"),
+                s = n("719347");
+            let l = t => {
                 let {
-                    externalRef: t,
+                    externalRef: e,
                     autoPlay: n,
-                    playOnHover: a,
+                    playOnHover: l,
                     responsive: c,
-                    mediaLayoutType: d,
-                    ...E
-                } = e, f = (0, o.useStateFromStores)([s.default], () => s.default.useReducedMotion), _ = r.useRef(null);
+                    mediaLayoutType: f,
+                    ...d
+                } = t, h = (0, o.useStateFromStores)([a.default], () => a.default.useReducedMotion), _ = u.useRef(null);
 
-                function h() {
-                    var e;
-                    a && (null == _ || null === (e = _.current) || void 0 === e || e.play())
+                function E() {
+                    var t;
+                    l && (null == _ || null === (t = _.current) || void 0 === t || t.play())
                 }
 
-                function I() {
-                    var e;
-                    a && (null == _ || null === (e = _.current) || void 0 === e || e.pause())
+                function p() {
+                    var t;
+                    l && (null == _ || null === (t = _.current) || void 0 === t || t.pause())
                 }
-                return r.useLayoutEffect(() => () => {
+                return u.useLayoutEffect(() => () => {
                     let {
-                        current: e
+                        current: t
                     } = _;
-                    null != e && function(e) {
-                        e.removeAttribute("src"), Array.from(e.children).forEach(e => {
-                            (0, u.isElement)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")), (0, u.isElement)(e, HTMLImageElement) && e.removeAttribute("src")
+                    null != t && function(t) {
+                        t.removeAttribute("src"), Array.from(t.children).forEach(t => {
+                            (0, i.isElement)(t, HTMLSourceElement) && (t.removeAttribute("src"), t.removeAttribute("type")), (0, i.isElement)(t, HTMLImageElement) && t.removeAttribute("src")
                         });
                         try {
-                            e.load()
-                        } catch (e) {}
-                    }(e)
-                }, []), r.useLayoutEffect(() => ("function" == typeof t ? (t(null), t(_.current)) : null != t && (t.current = _.current), () => {
-                    "function" == typeof t ? t(null) : null != t && (t.current = null)
-                }), [t, _]), (0, i.jsx)("video", {
+                            t.load()
+                        } catch (t) {}
+                    }(t)
+                }, []), u.useLayoutEffect(() => ("function" == typeof e ? (e(null), e(_.current)) : null != e && (e.current = _.current), () => {
+                    "function" == typeof e ? e(null) : null != e && (e.current = null)
+                }), [e, _]), (0, r.jsx)("video", {
                     ref: _,
-                    autoPlay: !f && !a && n,
-                    onMouseEnter: h,
-                    onMouseLeave: I,
-                    onFocus: h,
-                    onBlur: I,
-                    style: d === l.MediaLayoutType.MOSAIC ? {
+                    autoPlay: !h && !l && n,
+                    onMouseEnter: E,
+                    onMouseLeave: p,
+                    onFocus: E,
+                    onBlur: p,
+                    style: f === s.MediaLayoutType.MOSAIC ? {
                         width: "100%",
                         height: "100%",
                         maxHeight: "inherit",
                         objectFit: "cover"
                     } : c ? function() {
                         return {
-                            maxWidth: E.width,
-                            maxHeight: E.height,
+                            maxWidth: d.width,
+                            maxHeight: d.height,
                             width: "100%",
                             height: "100%"
                         }
                     }() : {},
-                    ...E
+                    ...d
                 })
             };
-            var c = r.forwardRef((e, t) => (0, i.jsx)(a, {
-                ...e,
-                externalRef: t
+            var c = u.forwardRef((t, e) => (0, r.jsx)(l, {
+                ...t,
+                externalRef: e
             }))

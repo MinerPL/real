@@ -4,52 +4,52 @@
                     return l.InviteTypes
                 },
                 isGuildScheduledEventInviteEmbed: function() {
-                    return s
-                },
-                isRoleSubscriptionInvite: function() {
-                    return r
-                },
-                isStageInviteEmbed: function() {
                     return u
                 },
-                isStreamInvite: function() {
+                isRoleSubscriptionInvite: function() {
+                    return a
+                },
+                isStageInviteEmbed: function() {
                     return o
                 },
-                isEmbeddedApplicationInvite: function() {
+                isStreamInvite: function() {
                     return d
                 },
+                isEmbeddedApplicationInvite: function() {
+                    return s
+                },
                 getInviteType: function() {
-                    return c
+                    return E
                 }
             });
-            var i = n("398604"),
-                a = n("233069"),
+            var r = n("398604"),
+                i = n("233069"),
                 l = n("91366");
 
-            function s(e) {
+            function u(e) {
                 let t = e.guild_scheduled_event;
-                return null != t && (0, i.isEventUpcoming)(t)
+                return null != t && (0, r.isEventUpcoming)(t)
             }
 
-            function r(e) {
+            function a(e) {
                 return e.target_type === l.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE
             }
 
-            function u(e) {
+            function o(e) {
                 return null != e.channel && null != e.stage_instance
             }
 
-            function o(e) {
+            function d(e) {
                 return e.target_type === l.InviteTargetTypes.STREAM && null != e.target_user
             }
 
-            function d(e) {
+            function s(e) {
                 return e.target_type === l.InviteTargetTypes.EMBEDDED_APPLICATION
             }
 
-            function c(e) {
+            function E(e) {
                 var t, n;
                 if ("number" == typeof e.type) return e.type;
-                if ((t = e).type === l.InviteTypes.GROUP_DM || null != t.channel && (0, a.isMultiUserDM)(t.channel.type)) return l.InviteTypes.GROUP_DM;
+                if ((t = e).type === l.InviteTypes.GROUP_DM || null != t.channel && (0, i.isMultiUserDM)(t.channel.type)) return l.InviteTypes.GROUP_DM;
                 return (n = e).type === l.InviteTypes.FRIEND || null == n.guild && null != n.inviter ? l.InviteTypes.FRIEND : l.InviteTypes.GUILD
             }

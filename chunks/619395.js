@@ -1,64 +1,64 @@
             "use strict";
             n.r(t), n.d(t, {
                 removeModeratorOverwrite: function() {
-                    return E
+                    return c
                 },
                 isEmptyOverwrite: function() {
-                    return f
+                    return g
                 },
                 useCanUpdateStageChannelModerators: function() {
-                    return h
+                    return m
                 },
                 useCanModerateRequestToSpeak: function() {
-                    return p
+                    return h
                 },
                 canLurkerListen: function() {
-                    return T
+                    return v
                 }
             });
-            var i = n("316693"),
-                a = n("446674"),
-                l = n("267567");
+            var s = n("316693"),
+                i = n("446674"),
+                r = n("267567");
             n("271938");
-            var s = n("42203"),
-                r = n("305961"),
-                u = n("957255"),
-                o = n("991170"),
-                d = n("923510"),
-                c = n("834052"),
+            var a = n("42203"),
+                o = n("305961"),
+                d = n("957255"),
+                u = n("991170"),
+                l = n("923510"),
+                f = n("834052"),
                 _ = n("49111");
 
-            function E(e, t, n) {
-                var a, l;
-                let s = null == n ? void 0 : n.permissionOverwrites[e];
+            function c(e, t, n) {
+                var i, r;
+                let a = null == n ? void 0 : n.permissionOverwrites[e];
                 return {
                     id: e,
                     type: t,
-                    deny: null !== (a = null == s ? void 0 : s.deny) && void 0 !== a ? a : o.default.NONE,
-                    allow: i.default.remove(null !== (l = null == s ? void 0 : s.allow) && void 0 !== l ? l : o.default.NONE, d.MODERATE_STAGE_CHANNEL_PERMISSIONS)
+                    deny: null !== (i = null == a ? void 0 : a.deny) && void 0 !== i ? i : u.default.NONE,
+                    allow: s.default.remove(null !== (r = null == a ? void 0 : a.allow) && void 0 !== r ? r : u.default.NONE, l.MODERATE_STAGE_CHANNEL_PERMISSIONS)
                 }
             }
 
-            function f(e) {
+            function g(e) {
                 let {
                     allow: t,
                     deny: n
                 } = e;
-                return i.default.equals(t, o.default.NONE) && i.default.equals(n, o.default.NONE)
+                return s.default.equals(t, u.default.NONE) && s.default.equals(n, u.default.NONE)
             }
 
-            function h(e) {
-                return (0, a.useStateFromStores)([u.default, r.default, s.default], () => {
-                    let t = s.default.getChannel(e),
-                        n = r.default.getGuild(null == t ? void 0 : t.getGuildId());
-                    return !!(u.default.can(_.Permissions.ADMINISTRATOR, n) || u.default.can(_.Permissions.MANAGE_ROLES, t, void 0, void 0, !0) || u.default.can(d.UPDATE_STAGE_CHANNEL_MODERATOR_PERMISSIONS, t)) || !1
+            function m(e) {
+                return (0, i.useStateFromStores)([d.default, o.default, a.default], () => {
+                    let t = a.default.getChannel(e),
+                        n = o.default.getGuild(null == t ? void 0 : t.getGuildId());
+                    return !!(d.default.can(_.Permissions.ADMINISTRATOR, n) || d.default.can(_.Permissions.MANAGE_ROLES, t, void 0, void 0, !0) || d.default.can(l.UPDATE_STAGE_CHANNEL_MODERATOR_PERMISSIONS, t)) || !1
                 }, [e])
             }
 
-            function p(e) {
-                return (0, a.useStateFromStores)([s.default, u.default], () => null != e && u.default.can(_.Permissions.MUTE_MEMBERS, s.default.getChannel(e)), [e])
+            function h(e) {
+                return (0, i.useStateFromStores)([a.default, d.default], () => null != e && d.default.can(_.Permissions.MUTE_MEMBERS, a.default.getChannel(e)), [e])
             }
 
-            function T(e) {
-                return !!(null != e && e.isGuildStageVoice() && l.default.isLurking(e.guild_id) && c.default.isPublic(e.id)) && u.default.can(d.JOIN_VOCAL_CHANNEL_PERMISSIONS, e)
+            function v(e) {
+                return !!(null != e && e.isGuildStageVoice() && r.default.isLurking(e.guild_id) && f.default.isPublic(e.id)) && d.default.can(l.JOIN_VOCAL_CHANNEL_PERMISSIONS, e)
             }

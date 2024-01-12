@@ -1,43 +1,43 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return a
                 }
             });
-            var i = n("446674"),
-                r = n("913144");
-            let s = {
+            var r = n("446674"),
+                i = n("913144");
+            let l = {
                     premiumLikelihood: void 0,
                     isFetching: !1,
                     fetched: !1
                 },
-                l = s;
-            class o extends i.default.Store {
+                o = l;
+            class s extends r.default.Store {
                 initialize() {
-                    l = s
+                    o = l
                 }
                 getState() {
-                    return l
+                    return o
                 }
                 shouldFetchPremiumLikelihood() {
-                    return !l.isFetching && !l.fetched
+                    return !o.isFetching && !o.fetched
                 }
             }
-            o.displayName = "UserPremiumLikelihoodStore";
-            var u = new o(r.default, {
+            s.displayName = "UserPremiumLikelihoodStore";
+            var a = new s(i.default, {
                 BILLING_USER_PREMIUM_LIKELIHOOD_FETCH: function() {
-                    l.isFetching = !0
+                    o.isFetching = !0
                 },
                 BILLING_USER_PREMIUM_LIKELIHOOD_FETCH_SUCCESS: function(e) {
                     let {
                         premiumLikelihood: t
                     } = e;
-                    l.premiumLikelihood = t, l.fetched = !0, l.isFetching = !1
+                    o.premiumLikelihood = t, o.fetched = !0, o.isFetching = !1
                 },
                 BILLING_USER_PREMIUM_LIKELIHOOD_FETCH_ERROR: function() {
-                    l.isFetching = !1
+                    o.isFetching = !1
                 },
                 LOGOUT: function() {
-                    l.premiumLikelihood = void 0
+                    o.premiumLikelihood = void 0
                 }
             })

@@ -1,97 +1,97 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return h
+                    return m
                 }
             }), n("222007");
-            var r = n("37983"),
+            var l = n("37983"),
                 i = n("884691"),
                 s = n("446674"),
                 o = n("77078"),
-                l = n("913139"),
+                r = n("913139"),
                 a = n("278108"),
-                u = n("485328"),
-                d = n("227602"),
-                c = n("555158"),
-                E = n("13798"),
-                f = n("846325"),
-                _ = n("49111"),
-                p = n("782340"),
-                I = n("304593");
+                d = n("485328"),
+                c = n("227602"),
+                u = n("555158"),
+                f = n("13798"),
+                h = n("846325"),
+                g = n("49111"),
+                E = n("782340"),
+                p = n("304593");
 
-            function h(e) {
+            function m(e) {
                 var t;
                 let {
                     transitionState: n,
-                    onClose: h
-                } = e, A = (0, s.useStateFromStores)([d.default], () => d.default.getKeybindForAction(_.GlobalKeybindActions.SOUNDBOARD_HOLD)), [R, g] = i.useState(null !== (t = null == A ? void 0 : A.shortcut) && void 0 !== t ? t : []);
-                return i.useEffect(() => (u.default.disable(), () => {
-                    u.default.enable()
-                }), []), (0, r.jsxs)(o.ModalRoot, {
+                    onClose: m
+                } = e, N = (0, s.useStateFromStores)([c.default], () => c.default.getKeybindForAction(g.GlobalKeybindActions.SOUNDBOARD_HOLD)), [R, b] = i.useState(null !== (t = null == N ? void 0 : N.shortcut) && void 0 !== t ? t : []);
+                return i.useEffect(() => (d.default.disable(), () => {
+                    d.default.enable()
+                }), []), (0, l.jsxs)(o.ModalRoot, {
                     transitionState: n,
-                    children: [(0, r.jsxs)(o.ModalHeader, {
+                    children: [(0, l.jsxs)(o.ModalHeader, {
                         separator: !1,
-                        children: [(0, r.jsx)(o.Heading, {
-                            className: I.header,
+                        children: [(0, l.jsx)(o.Heading, {
+                            className: p.header,
                             variant: "heading-xl/semibold",
-                            children: p.default.Messages.SOUNDBOARD_KEYBIND_MODAL_HEADER
-                        }), (0, r.jsx)(o.ModalCloseButton, {
-                            className: I.closeButton,
-                            onClick: h
+                            children: E.default.Messages.SOUNDBOARD_KEYBIND_MODAL_HEADER
+                        }), (0, l.jsx)(o.ModalCloseButton, {
+                            className: p.closeButton,
+                            onClick: m
                         })]
-                    }), (0, r.jsxs)(o.ModalContent, {
-                        className: I.content,
-                        children: [(0, r.jsx)(c.default, {
-                            className: I.warning,
-                            messageType: c.HelpMessageTypes.WARNING,
-                            children: p.default.Messages.SOUNDBOARD_KEYBIND_MODAL_KEYBINDS_DISABLED_MESSAGE
-                        }), (0, r.jsx)(o.Heading, {
-                            className: I.formHeader,
+                    }), (0, l.jsxs)(o.ModalContent, {
+                        className: p.content,
+                        children: [(0, l.jsx)(u.default, {
+                            className: p.warning,
+                            messageType: u.HelpMessageTypes.WARNING,
+                            children: E.default.Messages.SOUNDBOARD_KEYBIND_MODAL_KEYBINDS_DISABLED_MESSAGE
+                        }), (0, l.jsx)(o.Heading, {
+                            className: p.formHeader,
                             variant: "eyebrow",
                             color: "header-secondary",
-                            children: p.default.Messages.USER_SETTINGS_KEYBINDS_ACTION
-                        }), (0, r.jsx)(o.Text, {
-                            className: I.action,
+                            children: E.default.Messages.USER_SETTINGS_KEYBINDS_ACTION
+                        }), (0, l.jsx)(o.Text, {
+                            className: p.action,
                             variant: "text-md/normal",
-                            children: p.default.Messages.KEYBIND_SOUNDBOARD_HOLD
-                        }), (0, r.jsx)(o.Text, {
-                            className: I.actionDescription,
+                            children: E.default.Messages.KEYBIND_SOUNDBOARD_HOLD
+                        }), (0, l.jsx)(o.Text, {
+                            className: p.actionDescription,
                             variant: "text-sm/normal",
-                            children: p.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD
-                        }), (0, r.jsx)(o.Heading, {
-                            className: I.formHeader,
+                            children: E.default.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD
+                        }), (0, l.jsx)(o.Heading, {
+                            className: p.formHeader,
                             variant: "eyebrow",
                             color: "header-secondary",
-                            children: p.default.Messages.USER_SETTINGS_KEYBINDS_KEYBIND
-                        }), (0, r.jsx)(a.default, {
+                            children: E.default.Messages.USER_SETTINGS_KEYBINDS_KEYBIND
+                        }), (0, l.jsx)(a.default, {
                             defaultValue: R,
-                            onChange: g
-                        }), (0, r.jsx)(o.Anchor, {
-                            className: I.resetButton,
-                            onClick: () => g((0, E.toCombo)(f.DEFAULT_KEYBIND)),
-                            children: p.default.Messages.SOUNDBOARD_KEYBIND_MODAL_RESET_KEYBIND
+                            onChange: b
+                        }), (0, l.jsx)(o.Anchor, {
+                            className: p.resetButton,
+                            onClick: () => b((0, f.toCombo)(h.DEFAULT_KEYBIND)),
+                            children: E.default.Messages.SOUNDBOARD_KEYBIND_MODAL_RESET_KEYBIND
                         })]
-                    }), (0, r.jsxs)(o.ModalFooter, {
-                        children: [(0, r.jsx)(o.Button, {
+                    }), (0, l.jsxs)(o.ModalFooter, {
+                        children: [(0, l.jsx)(o.Button, {
                             onClick: function() {
-                                if (0 === R.length) return null != A && l.default.deleteKeybind(A.id), h();
-                                null == A ? l.default.addKeybind({
-                                    action: _.GlobalKeybindActions.SOUNDBOARD_HOLD,
+                                if (0 === R.length) return null != N && r.default.deleteKeybind(N.id), m();
+                                null == N ? r.default.addKeybind({
+                                    action: g.GlobalKeybindActions.SOUNDBOARD_HOLD,
                                     shortcut: R,
                                     enabled: !0,
                                     params: {}
-                                }) : l.default.setKeybind({
-                                    ...A,
+                                }) : r.default.setKeybind({
+                                    ...N,
                                     shortcut: R
                                 });
-                                h()
+                                m()
                             },
-                            children: p.default.Messages.SAVE
-                        }), (0, r.jsx)(o.Button, {
-                            onClick: h,
+                            children: E.default.Messages.SAVE
+                        }), (0, l.jsx)(o.Button, {
+                            onClick: m,
                             look: o.Button.Looks.LINK,
                             color: o.Button.Colors.PRIMARY,
-                            children: p.default.Messages.CANCEL
+                            children: E.default.Messages.CANCEL
                         })]
                     })]
                 })

@@ -1,15 +1,15 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return r
                 }
             });
-            var i = n("866227"),
-                a = n.n(i);
+            var s = n("866227"),
+                i = n.n(s);
 
-            function l(e) {
+            function r(e) {
                 return {
                     ...e,
-                    expiry: a(e.expiry)
+                    expiry: i(e.expiry)
                 }
             }

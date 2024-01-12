@@ -1,26 +1,26 @@
             "use strict";
-            var i = r("839309"),
-                n = r("550511"),
-                o = n.assert,
-                a = n.cachedProperty,
-                s = n.parseBytes;
+            var r = s("839309"),
+                i = s("550511"),
+                n = i.assert,
+                c = i.cachedProperty,
+                o = i.parseBytes;
 
             function f(t, e) {
-                this.eddsa = t, "object" != typeof e && (e = s(e)), Array.isArray(e) && (e = {
+                this.eddsa = t, "object" != typeof e && (e = o(e)), Array.isArray(e) && (e = {
                     R: e.slice(0, t.encodingLength),
                     S: e.slice(t.encodingLength)
-                }), o(e.R && e.S, "Signature without R or S"), t.isPoint(e.R) && (this._R = e.R), e.S instanceof i && (this._S = e.S), this._Rencoded = Array.isArray(e.R) ? e.R : e.Rencoded, this._Sencoded = Array.isArray(e.S) ? e.S : e.Sencoded
+                }), n(e.R && e.S, "Signature without R or S"), t.isPoint(e.R) && (this._R = e.R), e.S instanceof r && (this._S = e.S), this._Rencoded = Array.isArray(e.R) ? e.R : e.Rencoded, this._Sencoded = Array.isArray(e.S) ? e.S : e.Sencoded
             }
-            a(f, "S", function() {
+            c(f, "S", function() {
                 return this.eddsa.decodeInt(this.Sencoded())
-            }), a(f, "R", function() {
+            }), c(f, "R", function() {
                 return this.eddsa.decodePoint(this.Rencoded())
-            }), a(f, "Rencoded", function() {
+            }), c(f, "Rencoded", function() {
                 return this.eddsa.encodePoint(this.R())
-            }), a(f, "Sencoded", function() {
+            }), c(f, "Sencoded", function() {
                 return this.eddsa.encodeInt(this.S())
             }), f.prototype.toBytes = function() {
                 return this.Rencoded().concat(this.Sencoded())
             }, f.prototype.toHex = function() {
-                return n.encode(this.toBytes(), "hex").toUpperCase()
+                return i.encode(this.toBytes(), "hex").toUpperCase()
             }, t.exports = f

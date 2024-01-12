@@ -1,25 +1,25 @@
             "use strict";
-            var i = r("105195"),
-                n = "function" == typeof Symbol && "symbol" == typeof Symbol("foo"),
-                o = Object.prototype.toString,
-                a = Array.prototype.concat,
-                s = r("67064"),
-                f = r("407611")(),
-                h = function(t, e, r, i) {
+            var r = s("105195"),
+                i = "function" == typeof Symbol && "symbol" == typeof Symbol("foo"),
+                n = Object.prototype.toString,
+                c = Array.prototype.concat,
+                o = s("67064"),
+                f = s("407611")(),
+                u = function(t, e, s, r) {
                     if (e in t) {
-                        if (!0 === i) {
-                            if (t[e] === r) return
+                        if (!0 === r) {
+                            if (t[e] === s) return
                         } else {
-                            var n;
-                            if (!("function" == typeof(n = i) && "[object Function]" === o.call(n)) || !i()) return
+                            var i;
+                            if (!("function" == typeof(i = r) && "[object Function]" === n.call(i)) || !r()) return
                         }
                     }
-                    f ? s(t, e, r, !0) : s(t, e, r)
+                    f ? o(t, e, s, !0) : o(t, e, s)
                 },
-                c = function(t, e) {
-                    var r = arguments.length > 2 ? arguments[2] : {},
-                        o = i(e);
-                    n && (o = a.call(o, Object.getOwnPropertySymbols(e)));
-                    for (var s = 0; s < o.length; s += 1) h(t, o[s], e[o[s]], r[o[s]])
+                a = function(t, e) {
+                    var s = arguments.length > 2 ? arguments[2] : {},
+                        n = r(e);
+                    i && (n = c.call(n, Object.getOwnPropertySymbols(e)));
+                    for (var o = 0; o < n.length; o += 1) u(t, n[o], e[n[o]], s[n[o]])
                 };
-            c.supportsDescriptors = !!f, t.exports = c
+            a.supportsDescriptors = !!f, t.exports = a

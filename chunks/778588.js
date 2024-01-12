@@ -1,38 +1,38 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return u
+                    return d
                 }
             }), n("222007");
-            var i = n("446674"),
-                a = n("913144");
-            let l = [];
+            var s = n("446674"),
+                i = n("913144");
+            let r = [];
 
-            function s() {
-                l = []
+            function a() {
+                r = []
             }
-            class r extends i.default.Store {
+            class o extends s.default.Store {
                 hasLayers() {
-                    return l.length > 0
+                    return r.length > 0
                 }
                 getLayers() {
-                    return l
+                    return r
                 }
             }
-            r.displayName = "LayerStore";
-            var u = new r(a.default, {
+            o.displayName = "LayerStore";
+            var d = new o(i.default, {
                 LAYER_PUSH: function(e) {
                     let {
                         component: t
                     } = e;
-                    if (l.indexOf(t) >= 0) return !1;
-                    l = [...l, t]
+                    if (r.indexOf(t) >= 0) return !1;
+                    r = [...r, t]
                 },
                 LAYER_POP: function() {
-                    if (0 === l.length) return !1;
-                    l = l.slice(0, -1)
+                    if (0 === r.length) return !1;
+                    r = r.slice(0, -1)
                 },
-                LAYER_POP_ALL: s,
-                LOGOUT: s,
-                NOTIFICATION_CLICK: s
+                LAYER_POP_ALL: a,
+                LOGOUT: a,
+                NOTIFICATION_CLICK: a
             })

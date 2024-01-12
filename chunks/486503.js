@@ -1,96 +1,96 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return h
                 }
             }), n("222007");
-            var i = n("42203"),
-                a = n("455079");
-            let l = new Set,
-                s = new Set,
-                r = !1;
+            var s = n("42203"),
+                i = n("455079");
+            let r = new Set,
+                a = new Set,
+                o = !1;
 
-            function u(e) {
+            function d(e) {
                 return e.isSpam
             }
 
-            function o(e) {
+            function u(e) {
                 let t = !1;
-                if (e.isSpam && !l.has(e.id)) l.add(e.id), t = !0;
-                if (!e.isSpam && l.has(e.id)) l.delete(e.id), t = !0;
-                if (!e.isSpam && s.has(e.id)) s.delete(e.id), t = !0;
+                if (e.isSpam && !r.has(e.id)) r.add(e.id), t = !0;
+                if (!e.isSpam && r.has(e.id)) r.delete(e.id), t = !0;
+                if (!e.isSpam && a.has(e.id)) a.delete(e.id), t = !0;
                 return t
             }
 
-            function d() {
-                l.clear(), s.clear(), Object.values(i.default.getMutablePrivateChannels()).forEach(e => {
-                    o(e)
-                }), r = !0
+            function l() {
+                r.clear(), a.clear(), Object.values(s.default.getMutablePrivateChannels()).forEach(e => {
+                    u(e)
+                }), o = !0
             }
 
-            function c(e) {
+            function f(e) {
                 let {
                     channelId: t
                 } = e;
-                s.add(t)
+                a.add(t)
             }
 
             function _(e) {
                 let {
                     channel: t
                 } = e;
-                return o(t)
+                return u(t)
             }
 
-            function E(e) {
+            function c(e) {
                 let {
                     channels: t
                 } = e;
-                for (let e of t) o(e)
+                for (let e of t) u(e)
             }
 
-            function f(e) {
+            function g(e) {
                 let {
                     channel: t
                 } = e, n = !1;
-                return l.has(t.id) && (l.delete(t.id), n = !0), n
+                return r.has(t.id) && (r.delete(t.id), n = !0), n
             }
-            class h extends a.default {
+            class m extends i.default {
                 takeSnapshot() {
                     return {
-                        version: h.LATEST_SNAPSHOT_VERSION,
-                        data: Array.from(l)
+                        version: m.LATEST_SNAPSHOT_VERSION,
+                        data: Array.from(r)
                     }
                 }
                 getSpamChannelIds() {
-                    return l
+                    return r
                 }
                 getSpamChannelsCount() {
-                    return l.size
+                    return r.size
                 }
                 isSpam(e) {
-                    return l.has(e)
+                    return r.has(e)
                 }
                 isAcceptedOptimistic(e) {
-                    return s.has(e)
+                    return a.has(e)
                 }
                 isReady() {
-                    return r
+                    return o
                 }
                 constructor() {
                     super(), this.loadCache = () => {
-                        let e = this.readSnapshot(h.LATEST_SNAPSHOT_VERSION);
-                        null != e && (l = new Set(e))
+                        let e = this.readSnapshot(m.LATEST_SNAPSHOT_VERSION);
+                        null != e && (r = new Set(e))
                     }, this.registerActionHandlers({
-                        CONNECTION_OPEN: d,
-                        CONNECTION_OPEN_SUPPLEMENTAL: d,
+                        CONNECTION_OPEN: l,
+                        CONNECTION_OPEN_SUPPLEMENTAL: l,
                         CACHE_LOADED_LAZY: this.loadCache,
                         CHANNEL_CREATE: _,
-                        CHANNEL_UPDATES: E,
-                        CHANNEL_DELETE: f,
-                        MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: c
-                    }), this.waitFor(i.default)
+                        CHANNEL_UPDATES: c,
+                        CHANNEL_DELETE: g,
+                        MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: f
+                    }), this.waitFor(s.default)
                 }
             }
-            h.displayName = "SpamMessageRequestStore", h.LATEST_SNAPSHOT_VERSION = 1;
-            var p = new h
+            m.displayName = "SpamMessageRequestStore", m.LATEST_SNAPSHOT_VERSION = 1;
+            var h = new m

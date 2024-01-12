@@ -1,99 +1,99 @@
             "use strict";
-            r("781738"), r("808653"), r("424973");
-            var i = r("272074"),
-                n = r("766811"),
-                o = r("526504");
+            s("781738"), s("808653"), s("424973");
+            var r = s("272074"),
+                i = s("766811"),
+                n = s("526504");
 
-            function a(t, e) {
-                return e.encode ? e.strict ? i(t) : encodeURIComponent(t) : t
+            function c(t, e) {
+                return e.encode ? e.strict ? r(t) : encodeURIComponent(t) : t
             }
             e.extract = function(t) {
                 return t.split("?")[1] || ""
             }, e.parse = function(t, e) {
-                var r = function(t) {
+                var s = function(t) {
                         var e;
                         switch (t.arrayFormat) {
                             case "index":
-                                return function(t, r, i) {
+                                return function(t, s, r) {
                                     if (e = /\[(\d*)\]$/.exec(t), t = t.replace(/\[\d*\]$/, ""), !e) {
-                                        i[t] = r;
+                                        r[t] = s;
                                         return
                                     }
-                                    void 0 === i[t] && (i[t] = {}), i[t][e[1]] = r
+                                    void 0 === r[t] && (r[t] = {}), r[t][e[1]] = s
                                 };
                             case "bracket":
-                                return function(t, r, i) {
+                                return function(t, s, r) {
                                     if (e = /(\[\])$/.exec(t), t = t.replace(/\[\]$/, ""), e) {
-                                        if (void 0 === i[t]) {
-                                            i[t] = [r];
+                                        if (void 0 === r[t]) {
+                                            r[t] = [s];
                                             return
                                         }
                                     } else {
-                                        i[t] = r;
+                                        r[t] = s;
                                         return
                                     }
-                                    i[t] = [].concat(i[t], r)
+                                    r[t] = [].concat(r[t], s)
                                 };
                             default:
-                                return function(t, e, r) {
-                                    if (void 0 === r[t]) {
-                                        r[t] = e;
+                                return function(t, e, s) {
+                                    if (void 0 === s[t]) {
+                                        s[t] = e;
                                         return
                                     }
-                                    r[t] = [].concat(r[t], e)
+                                    s[t] = [].concat(s[t], e)
                                 }
                         }
-                    }(e = n({
+                    }(e = i({
                         arrayFormat: "none"
                     }, e)),
-                    i = Object.create(null);
+                    r = Object.create(null);
                 return "string" == typeof t && (t = t.trim().replace(/^(\?|#|&)/, "")) ? (t.split("&").forEach(function(t) {
                     var e = t.replace(/\+/g, " ").split("="),
-                        n = e.shift(),
-                        a = e.length > 0 ? e.join("=") : void 0;
-                    a = void 0 === a ? null : o(a), r(o(n), a, i)
-                }), Object.keys(i).sort().reduce(function(t, e) {
-                    var r = i[e];
-                    return r && "object" == typeof r && !Array.isArray(r) ? t[e] = function t(e) {
+                        i = e.shift(),
+                        c = e.length > 0 ? e.join("=") : void 0;
+                    c = void 0 === c ? null : n(c), s(n(i), c, r)
+                }), Object.keys(r).sort().reduce(function(t, e) {
+                    var s = r[e];
+                    return s && "object" == typeof s && !Array.isArray(s) ? t[e] = function t(e) {
                         return Array.isArray(e) ? e.sort() : "object" == typeof e ? t(Object.keys(e)).sort(function(t, e) {
                             return Number(t) - Number(e)
                         }).map(function(t) {
                             return e[t]
                         }) : e
-                    }(r) : t[e] = r, t
-                }, Object.create(null))) : i
+                    }(s) : t[e] = s, t
+                }, Object.create(null))) : r
             }, e.stringify = function(t, e) {
-                var r = function(t) {
+                var s = function(t) {
                     switch (t.arrayFormat) {
                         case "index":
-                            return function(e, r, i) {
-                                return null === r ? [a(e, t), "[", i, "]"].join("") : [a(e, t), "[", a(i, t), "]=", a(r, t)].join("")
+                            return function(e, s, r) {
+                                return null === s ? [c(e, t), "[", r, "]"].join("") : [c(e, t), "[", c(r, t), "]=", c(s, t)].join("")
                             };
                         case "bracket":
-                            return function(e, r) {
-                                return null === r ? a(e, t) : [a(e, t), "[]=", a(r, t)].join("")
+                            return function(e, s) {
+                                return null === s ? c(e, t) : [c(e, t), "[]=", c(s, t)].join("")
                             };
                         default:
-                            return function(e, r) {
-                                return null === r ? a(e, t) : [a(e, t), "=", a(r, t)].join("")
+                            return function(e, s) {
+                                return null === s ? c(e, t) : [c(e, t), "=", c(s, t)].join("")
                             }
                     }
-                }(e = n({
+                }(e = i({
                     encode: !0,
                     strict: !0,
                     arrayFormat: "none"
                 }, e));
-                return t ? Object.keys(t).sort().map(function(i) {
-                    var n = t[i];
-                    if (void 0 === n) return "";
-                    if (null === n) return a(i, e);
-                    if (Array.isArray(n)) {
-                        var o = [];
-                        return n.slice().forEach(function(t) {
-                            void 0 !== t && o.push(r(i, t, o.length))
-                        }), o.join("&")
+                return t ? Object.keys(t).sort().map(function(r) {
+                    var i = t[r];
+                    if (void 0 === i) return "";
+                    if (null === i) return c(r, e);
+                    if (Array.isArray(i)) {
+                        var n = [];
+                        return i.slice().forEach(function(t) {
+                            void 0 !== t && n.push(s(r, t, n.length))
+                        }), n.join("&")
                     }
-                    return a(i, e) + "=" + a(n, e)
+                    return c(r, e) + "=" + c(i, e)
                 }).filter(function(t) {
                     return t.length > 0
                 }).join("&") : ""

@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 EmptyStateImage: function() {
-                    return g
+                    return S
                 },
                 EmptyStateText: function() {
-                    return p
+                    return T
                 },
                 default: function() {
                     return i
@@ -21,10 +21,10 @@
                 E = n("430098"),
                 _ = n("926622");
             let {
-                Provider: I,
+                Provider: p,
                 Consumer: h
             } = s.createContext(f.ThemeTypes.DARK);
-            class g extends s.PureComponent {
+            class S extends s.PureComponent {
                 render() {
                     let {
                         lightSrc: e,
@@ -51,7 +51,7 @@
                     })
                 }
             }
-            let p = e => {
+            let T = e => {
                 let {
                     children: t,
                     className: n,
@@ -80,7 +80,7 @@
                         className: n,
                         style: l
                     } = this.props;
-                    return (0, r.jsx)(I, {
+                    return (0, r.jsx)(p, {
                         value: t,
                         children: (0, r.jsx)(c.default, {
                             direction: c.default.Direction.VERTICAL,
@@ -92,4 +92,4 @@
                         })
                     })
                 }
-            }).Text = p, l.Image = g, i = l
+            }).Text = T, l.Image = S, i = l

@@ -1,16 +1,16 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return s
                 }
             });
-            var i, a = n("666038"),
-                l = n("766274");
-            i = class e extends a.default {
+            var s, i = n("666038"),
+                r = n("766274");
+            s = class e extends i.default {
                 static createFromServer(t) {
                     return new e({
                         ...t,
-                        user: new l.default(t.user)
+                        user: new r.default(t.user)
                     })
                 }
                 constructor(e) {

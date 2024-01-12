@@ -33,7 +33,7 @@
                         onContextMenu: E,
                         style: g,
                         title: _,
-                        uppercase: N
+                        uppercase: M
                     } = e;
                     return (0, s.jsx)(l.H, {
                         role: null != S ? "button" : void 0,
@@ -45,7 +45,7 @@
                             [r]: !0,
                             [u.selectable]: d,
                             [u.muted]: n,
-                            [u.uppercase]: N
+                            [u.uppercase]: M
                         }),
                         title: _,
                         style: null != f ? {

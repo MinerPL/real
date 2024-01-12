@@ -1,5 +1,5 @@
-            var i = r("839309"),
-                n = r("912065").Buffer;
+            var r = s("839309"),
+                i = s("912065").Buffer;
             t.exports = function(t, e) {
-                return n.from(t.toRed(i.mont(e.modulus)).redPow(new i(e.publicExponent)).fromRed().toArray())
+                return i.from(t.toRed(r.mont(e.modulus)).redPow(new r(e.publicExponent)).fromRed().toArray())
             }

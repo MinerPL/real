@@ -1,167 +1,167 @@
             "use strict";
-            n.r(e), n.d(e, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return U
+                    return b
                 }
             });
-            var r = n("917351"),
-                l = n.n(r),
-                i = n("446674"),
-                o = n("913144"),
-                s = n("697218"),
-                u = n("49111");
-            let a = u.FormStates.CLOSED,
-                d = null,
-                c = null,
-                h = {},
-                f = {},
+            var s = n("917351"),
+                i = n.n(s),
+                r = n("446674"),
+                a = n("913144"),
+                o = n("697218"),
+                d = n("49111");
+            let u = d.FormStates.CLOSED,
+                l = null,
+                f = null,
                 _ = {},
-                p = null,
-                E = null,
-                I = !1,
-                S = !1,
-                T = null,
-                g = null,
+                c = {},
+                g = {},
                 m = null,
-                N = [],
-                v = null,
-                L = null;
+                h = null,
+                v = !1,
+                E = !1,
+                p = null,
+                y = null,
+                T = null,
+                C = [],
+                S = null,
+                I = null;
 
-            function A(t) {
-                var e, n, r, l, i, o;
-                let d = s.default.getCurrentUser();
-                if (null == d) return C();
-                c = null !== (e = t.section) && void 0 !== e ? e : c, v = null !== (n = t.section) && void 0 !== n ? n : c, null != t.subsection && null != c && (h[c] = t.subsection), null != t.scrollPosition && null != c && (f[c] = t.scrollPosition), S = !!t.openWithoutBackstack, a = u.FormStates.OPEN, _ = {}, E = {
-                    ...p = {
-                        [u.UserSettingsSections.ACCOUNT]: {
-                            userId: d.id,
-                            username: d.username,
-                            discriminator: d.discriminator,
-                            email: d.email,
-                            avatar: d.avatar,
+            function A(e) {
+                var t, n, s, i, r, a;
+                let l = o.default.getCurrentUser();
+                if (null == l) return D();
+                f = null !== (t = e.section) && void 0 !== t ? t : f, S = null !== (n = e.section) && void 0 !== n ? n : f, null != e.subsection && null != f && (_[f] = e.subsection), null != e.scrollPosition && null != f && (c[f] = e.scrollPosition), E = !!e.openWithoutBackstack, u = d.FormStates.OPEN, g = {}, h = {
+                    ...m = {
+                        [d.UserSettingsSections.ACCOUNT]: {
+                            userId: l.id,
+                            username: l.username,
+                            discriminator: l.discriminator,
+                            email: l.email,
+                            avatar: l.avatar,
                             password: "",
                             newPassword: null,
-                            claimed: d.isClaimed()
+                            claimed: l.isClaimed()
                         }
                     }
-                }, g = null !== (r = t.onClose) && void 0 !== r ? r : null, m = null !== (l = t.analyticsLocation) && void 0 !== l ? l : null, N = null !== (i = t.analyticsLocations) && void 0 !== i ? i : [], L = null !== (o = t.impressionSource) && void 0 !== o ? o : null
+                }, y = null !== (s = e.onClose) && void 0 !== s ? s : null, T = null !== (i = e.analyticsLocation) && void 0 !== i ? i : null, C = null !== (r = e.analyticsLocations) && void 0 !== r ? r : [], I = null !== (a = e.impressionSource) && void 0 !== a ? a : null
             }
 
-            function C() {
-                a = u.FormStates.CLOSED, I = !1, p = null, v = null, E = null, d = null, c = null, h = {}, f = {}, g = null, m = null, N = [], L = null
+            function D() {
+                u = d.FormStates.CLOSED, v = !1, m = null, S = null, h = null, l = null, f = null, _ = {}, c = {}, y = null, T = null, C = [], I = null
             }
 
-            function M() {
-                a = u.FormStates.OPEN, _ = {}
+            function N() {
+                u = d.FormStates.OPEN, g = {}
             }
-            class O extends i.default.Store {
+            class O extends r.default.Store {
                 initialize() {
-                    this.waitFor(s.default)
+                    this.waitFor(o.default)
                 }
                 hasChanges() {
-                    return null != E && null != p && (!!this.isOpen() || T === u.DrawerTabTypes.USER_SETTINGS) && !l.isEqual(E, p)
+                    return null != h && null != m && (!!this.isOpen() || p === d.DrawerTabTypes.USER_SETTINGS) && !i.isEqual(h, m)
                 }
                 isOpen() {
-                    return I
+                    return v
                 }
                 getPreviousSection() {
-                    return d
+                    return l
                 }
                 getSection() {
-                    return c
+                    return f
                 }
                 getSubsection() {
-                    return null != c ? h[c] : null
+                    return null != f ? _[f] : null
                 }
                 getScrollPosition() {
-                    return null != c ? f[c] : null
+                    return null != f ? c[f] : null
                 }
                 shouldOpenWithoutBackstack() {
-                    return S
+                    return E
                 }
                 getProps() {
                     return {
-                        submitting: a === u.FormStates.SUBMITTING,
-                        section: c,
-                        subsection: null != c ? h[c] : null,
-                        scrollPosition: null != c ? f[c] : null,
-                        settings: E,
-                        errors: _,
+                        submitting: u === d.FormStates.SUBMITTING,
+                        section: f,
+                        subsection: null != f ? _[f] : null,
+                        scrollPosition: null != f ? c[f] : null,
+                        settings: h,
+                        errors: g,
                         hasChanges: this.hasChanges(),
-                        openWithoutBackstack: S,
-                        analyticsLocation: m,
-                        analyticsLocations: N,
-                        initialSection: v,
-                        impressionSource: L
+                        openWithoutBackstack: E,
+                        analyticsLocation: T,
+                        analyticsLocations: C,
+                        initialSection: S,
+                        impressionSource: I
                     }
                 }
                 get onClose() {
-                    return g
+                    return y
                 }
             }
             O.displayName = "UserSettingsModalStore";
-            var U = new O(o.default, {
-                USER_SETTINGS_MODAL_OPEN: function(t) {
-                    I = !0, A(t)
+            var b = new O(a.default, {
+                USER_SETTINGS_MODAL_OPEN: function(e) {
+                    v = !0, A(e)
                 },
                 USER_SETTINGS_MODAL_INIT: A,
-                USER_SETTINGS_MODAL_CLOSE: C,
-                LOGOUT: C,
+                USER_SETTINGS_MODAL_CLOSE: D,
+                LOGOUT: D,
                 USER_SETTINGS_MODAL_SUBMIT: function() {
-                    a = u.FormStates.SUBMITTING
+                    u = d.FormStates.SUBMITTING
                 },
-                USER_SETTINGS_MODAL_SUBMIT_FAILURE: function(t) {
-                    var e;
-                    if (a !== u.FormStates.SUBMITTING) return !1;
-                    a = u.FormStates.OPEN, c = u.UserSettingsSections.ACCOUNT, _ = null !== (e = t.errors) && void 0 !== e ? e : {}
+                USER_SETTINGS_MODAL_SUBMIT_FAILURE: function(e) {
+                    var t;
+                    if (u !== d.FormStates.SUBMITTING) return !1;
+                    u = d.FormStates.OPEN, f = d.UserSettingsSections.ACCOUNT, g = null !== (t = e.errors) && void 0 !== t ? t : {}
                 },
-                USER_SETTINGS_MODAL_SET_SECTION: function(t) {
-                    var e;
-                    d = c, c = t.section, m = null, N = null !== (e = t.analyticsLocations) && void 0 !== e ? e : [], null != t.subsection && (h[c] = t.subsection)
+                USER_SETTINGS_MODAL_SET_SECTION: function(e) {
+                    var t;
+                    l = f, f = e.section, T = null, C = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (_[f] = e.subsection)
                 },
-                USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function(t) {
+                USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function(e) {
                     let {
-                        forSection: e
-                    } = t;
-                    null != e ? delete h[e] : null != c && delete h[c]
+                        forSection: t
+                    } = e;
+                    null != t ? delete _[t] : null != f && delete _[f]
                 },
-                USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: function(t) {
+                USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: function(e) {
                     let {
-                        forSection: e
-                    } = t;
-                    null != e ? delete f[e] : null != c && delete f[c]
+                        forSection: t
+                    } = e;
+                    null != t ? delete c[t] : null != f && delete c[f]
                 },
-                USER_SETTINGS_MODAL_UPDATE_ACCOUNT: function(t) {
+                USER_SETTINGS_MODAL_UPDATE_ACCOUNT: function(e) {
                     let {
-                        settings: e
-                    } = t;
-                    null == E && (E = {});
-                    let n = E[u.UserSettingsSections.ACCOUNT];
-                    E[u.UserSettingsSections.ACCOUNT] = {
+                        settings: t
+                    } = e;
+                    null == h && (h = {});
+                    let n = h[d.UserSettingsSections.ACCOUNT];
+                    h[d.UserSettingsSections.ACCOUNT] = {
                         ...n,
-                        ...e
+                        ...t
                     }
                 },
-                USER_SETTINGS_MODAL_SUBMIT_COMPLETE: M,
+                USER_SETTINGS_MODAL_SUBMIT_COMPLETE: N,
                 USER_SETTINGS_MODAL_RESET: function() {
-                    let t = s.default.getCurrentUser();
-                    M(), null != t && (E = {
-                        ...p = {
-                            [u.UserSettingsSections.ACCOUNT]: {
-                                userId: t.id,
-                                username: t.username,
-                                discriminator: t.discriminator,
-                                email: t.email,
-                                avatar: t.avatar,
+                    let e = o.default.getCurrentUser();
+                    N(), null != e && (h = {
+                        ...m = {
+                            [d.UserSettingsSections.ACCOUNT]: {
+                                userId: e.id,
+                                username: e.username,
+                                discriminator: e.discriminator,
+                                email: e.email,
+                                avatar: e.avatar,
                                 password: "",
                                 newPassword: null,
-                                claimed: t.isClaimed()
+                                claimed: e.isClaimed()
                             }
                         }
                     })
                 },
-                DRAWER_SELECT_TAB: function(t) {
-                    return T = t.tab, null == c && T === u.DrawerTabTypes.USER_SETTINGS && A({
+                DRAWER_SELECT_TAB: function(e) {
+                    return p = e.tab, null == f && p === d.DrawerTabTypes.USER_SETTINGS && A({
                         type: "USER_SETTINGS_MODAL_INIT",
                         section: null,
                         subsection: null,

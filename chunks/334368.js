@@ -1,18 +1,18 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return i
                 }
             });
-            var i = n("798609");
+            var s = n("798609");
 
-            function a(e) {
+            function i(e) {
                 switch (e) {
                     case "android":
-                        return i.EmbeddedActivitySupportedPlatforms.ANDROID;
+                        return s.EmbeddedActivitySupportedPlatforms.ANDROID;
                     case "ios":
-                        return i.EmbeddedActivitySupportedPlatforms.IOS;
+                        return s.EmbeddedActivitySupportedPlatforms.IOS;
                     default:
-                        return i.EmbeddedActivitySupportedPlatforms.WEB
+                        return s.EmbeddedActivitySupportedPlatforms.WEB
                 }
             }

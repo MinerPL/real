@@ -1,7 +1,7 @@
-            var e = r("27556"),
+            var e = n("27556"),
                 o = 1 / 0;
             t.exports = function(t) {
                 if ("string" == typeof t || e(t)) return t;
-                var n = t + "";
-                return "0" == n && 1 / t == -o ? "-0" : n
+                var r = t + "";
+                return "0" == r && 1 / t == -o ? "-0" : r
             }

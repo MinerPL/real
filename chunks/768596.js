@@ -33,13 +33,13 @@
                     guildId: a,
                     welcomeMessage: s,
                     className: T
-                } = e, A = (0, c.default)(), j = (0, r.default)([_.default], () => _.default.getGuild(a)), M = (0, r.default)([f.default], () => f.default.syncProfileThemeWithUserTheme), D = (0, r.default)([f.default], () => f.default.useReducedMotion), F = (0, r.default)([x.default], () => x.default.getUser(null == s ? void 0 : s.authorIds[0])), L = (0, r.default)([x.default], () => x.default.getCurrentUser()), R = (0, E.default)(null == F ? void 0 : F.id, a), [b] = (0, g.default)(F, R), G = M ? A : null !== (t = (0, m.getProfileTheme)(b)) && void 0 !== t ? t : A, y = (0, u.useToken)(u.tokens.colors.BACKGROUND_SECONDARY, G).hex(), O = n.useMemo(() => {
+                } = e, A = (0, c.default)(), j = (0, r.default)([_.default], () => _.default.getGuild(a)), M = (0, r.default)([f.default], () => f.default.syncProfileThemeWithUserTheme), D = (0, r.default)([f.default], () => f.default.useReducedMotion), F = (0, r.default)([x.default], () => x.default.getUser(null == s ? void 0 : s.authorIds[0])), L = (0, r.default)([x.default], () => x.default.getCurrentUser()), R = (0, E.default)(null == F ? void 0 : F.id, a), [b] = (0, g.default)(F, R), G = M ? A : null !== (t = (0, m.getProfileTheme)(b)) && void 0 !== t ? t : A, O = (0, u.useToken)(u.tokens.colors.BACKGROUND_SECONDARY, G).hex(), y = n.useMemo(() => {
                     var e;
                     return null !== (e = null == s ? void 0 : s.authorIds) && void 0 !== e ? e : []
                 }, [s]);
                 n.useEffect(() => {
-                    o.default.requestMembersById(a, O)
-                }, [a, O]), n.useEffect(() => {
+                    o.default.requestMembersById(a, y)
+                }, [a, y]), n.useEffect(() => {
                     null != F && (0, h.default)(F.id, F.getAvatarURL(a, 48), {
                         guildId: a
                     })
@@ -71,7 +71,7 @@
                         }), (0, l.jsx)("div", {
                             className: p.avatarBorder,
                             style: {
-                                backgroundColor: null != b ? (0, d.int2rgba)(b, 1) : y
+                                backgroundColor: null != b ? (0, d.int2rgba)(b, 1) : O
                             }
                         }), (0, l.jsxs)("div", {
                             className: p.welcomeMessageContent,

@@ -19,10 +19,10 @@
                     return S
                 },
                 maybeTrackForumNewPostDraftCreated: function() {
-                    return v
+                    return M
                 },
                 trackForumNewPostCleared: function() {
-                    return M
+                    return v
                 },
                 trackForumPostCreated: function() {
                     return C
@@ -190,7 +190,7 @@
                 })
             }
 
-            function v(e) {
+            function M(e) {
                 var t, n, i, l;
                 let {
                     guildId: u,
@@ -214,7 +214,7 @@
                 })
             }
 
-            function M(e) {
+            function v(e) {
                 let {
                     guildId: t,
                     channelId: n
@@ -411,6 +411,7 @@
                     ...(0, a.collectGuildAnalyticsMetadata)(e.guild_id),
                     ...(0, a.collectChannelAnalyticsMetadata)(e),
                     ...(0, l.collectThreadMetadata)(e, !0),
+                    ...(0, a.getChannelOpenedMetadata)(e.id),
                     channel_id: e.id,
                     guild_id: e.guild_id,
                     parent_id: e.parent_id,

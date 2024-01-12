@@ -31,8 +31,8 @@
                 A = n("97347"),
                 x = n("560995"),
                 R = n("962541"),
-                L = n("762489"),
-                M = n("49111"),
+                M = n("762489"),
+                L = n("49111"),
                 D = n("782340"),
                 j = n("79415"),
                 w = n("833076");
@@ -57,7 +57,7 @@
                     f.default.selectVoiceChannel(null)
                 }
                 renderLobby() {
-                    return (0, i.jsx)(L.default, {
+                    return (0, i.jsx)(M.default, {
                         className: w.channel,
                         children: D.default.Messages.LOBBY
                     })
@@ -65,13 +65,13 @@
                 renderChannelLink(e) {
                     let {
                         guild: t
-                    } = this.props, n = (0, g.computeChannelName)(e, v.default, S.default), a = null != t ? "".concat(n, " / ").concat(t.name) : n, l = null != t ? t.id : M.ME;
+                    } = this.props, n = (0, g.computeChannelName)(e, v.default, S.default), a = null != t ? "".concat(n, " / ").concat(t.name) : n, l = null != t ? t.id : L.ME;
                     return (0, i.jsx)(o.Link, {
-                        to: M.Routes.CHANNEL(l),
+                        to: L.Routes.CHANNEL(l),
                         onClick: t => {
                             t.stopPropagation(), c.default.channelListScrollTo(l, e.id)
                         },
-                        children: (0, i.jsx)(L.default, {
+                        children: (0, i.jsx)(M.default, {
                             className: w.channel,
                             children: a
                         })

@@ -1,27 +1,27 @@
             "use strict";
-            var i, n, o, a, s = r("812095"),
-                f = r("149384")();
+            var r, i, n, c, o = s("812095"),
+                f = s("149384")();
             if (f) {
-                i = s("Object.prototype.hasOwnProperty"), n = s("RegExp.prototype.exec"), o = {};
-                var h = function() {
-                    throw o
+                r = o("Object.prototype.hasOwnProperty"), i = o("RegExp.prototype.exec"), n = {};
+                var u = function() {
+                    throw n
                 };
-                a = {
-                    toString: h,
-                    valueOf: h
-                }, "symbol" == typeof Symbol.toPrimitive && (a[Symbol.toPrimitive] = h)
+                c = {
+                    toString: u,
+                    valueOf: u
+                }, "symbol" == typeof Symbol.toPrimitive && (c[Symbol.toPrimitive] = u)
             }
-            var c = s("Object.prototype.toString"),
-                u = Object.getOwnPropertyDescriptor;
+            var a = o("Object.prototype.toString"),
+                d = Object.getOwnPropertyDescriptor;
             t.exports = f ? function(t) {
                 if (!t || "object" != typeof t) return !1;
-                var e = u(t, "lastIndex");
-                if (!(e && i(e, "value"))) return !1;
+                var e = d(t, "lastIndex");
+                if (!(e && r(e, "value"))) return !1;
                 try {
-                    n(t, a)
+                    i(t, c)
                 } catch (t) {
-                    return t === o
+                    return t === n
                 }
             } : function(t) {
-                return !!t && ("object" == typeof t || "function" == typeof t) && "[object RegExp]" === c(t)
+                return !!t && ("object" == typeof t || "function" == typeof t) && "[object RegExp]" === a(t)
             }

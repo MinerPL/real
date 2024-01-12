@@ -1,14 +1,14 @@
-            var i = r("446825").Buffer,
-                n = r("240163"),
-                o = r("83737"),
-                a = r("958604"),
-                s = {
+            var r = s("446825").Buffer,
+                i = s("240163"),
+                n = s("83737"),
+                c = s("958604"),
+                o = {
                     binary: !0,
                     hex: !0,
                     base64: !0
                 };
             e.DiffieHellmanGroup = e.createDiffieHellmanGroup = e.getDiffieHellman = function(t) {
-                return new a(new i(o[t].prime, "hex"), new i(o[t].gen, "hex"))
-            }, e.createDiffieHellman = e.DiffieHellman = function t(e, r, o, f) {
-                return i.isBuffer(r) || void 0 === s[r] ? t(e, "binary", r, o) : (r = r || "binary", f = f || "binary", o = o || new i([2]), !i.isBuffer(o) && (o = new i(o, f)), "number" == typeof e) ? new a(n(e, o), o, !0) : (!i.isBuffer(e) && (e = new i(e, r)), new a(e, o, !0))
+                return new c(new r(n[t].prime, "hex"), new r(n[t].gen, "hex"))
+            }, e.createDiffieHellman = e.DiffieHellman = function t(e, s, n, f) {
+                return r.isBuffer(s) || void 0 === o[s] ? t(e, "binary", s, n) : (s = s || "binary", f = f || "binary", n = n || new r([2]), !r.isBuffer(n) && (n = new r(n, f)), "number" == typeof e) ? new c(i(e, n), n, !0) : (!r.isBuffer(e) && (e = new r(e, s)), new c(e, n, !0))
             }

@@ -1,54 +1,54 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return b
+                    return M
                 }
             }), n("424973"), n("702976"), n("70102");
-            var i = n("917351"),
-                a = n.n(i);
+            var s = n("917351"),
+                i = n.n(s);
             n("576863");
-            var l = n("446674"),
-                s = n("913144"),
-                r = n("851387"),
-                u = n("775433"),
-                o = n("327037"),
-                d = n("605250"),
-                c = n("871336"),
+            var r = n("446674"),
+                a = n("913144"),
+                o = n("851387"),
+                d = n("775433"),
+                u = n("327037"),
+                l = n("605250"),
+                f = n("871336"),
                 _ = n("25932"),
-                E = n("410912"),
-                f = n("116949"),
-                h = n("233069"),
-                p = n("522308"),
-                T = n("766274"),
-                C = n("42203"),
-                m = n("26989"),
-                S = n("778588"),
-                I = n("260320"),
-                g = n("697218"),
-                A = n("800762"),
-                N = n("10514"),
-                O = n("521012"),
-                R = n("224400"),
-                y = n("390946"),
-                v = n("509065"),
-                M = n("518916");
-            let D = new d.default("ConnectionStore"),
-                L = new v.default(M.socket, (e, t) => {
+                c = n("410912"),
+                g = n("116949"),
+                m = n("233069"),
+                h = n("522308"),
+                v = n("766274"),
+                E = n("42203"),
+                p = n("26989"),
+                y = n("778588"),
+                T = n("260320"),
+                C = n("697218"),
+                S = n("800762"),
+                I = n("10514"),
+                A = n("521012"),
+                D = n("224400"),
+                N = n("390946"),
+                O = n("509065"),
+                b = n("518916");
+            let P = new l.default("ConnectionStore"),
+                V = new O.default(b.socket, (e, t) => {
                     var n;
                     e = null != e ? e : {
                         type: "CHANNEL_UPDATES",
                         channels: []
                     };
-                    let i = (0, h.createChannelRecordFromServer)(t),
-                        a = C.default.getChannel(t.id),
-                        l = null == a ? void 0 : a.merge({
-                            ...i,
-                            recipients: a.recipients,
-                            bitrate: null !== (n = i.bitrate) && void 0 !== n ? n : a.bitrate
+                    let s = (0, m.createChannelRecordFromServer)(t),
+                        i = E.default.getChannel(t.id),
+                        r = null == i ? void 0 : i.merge({
+                            ...s,
+                            recipients: i.recipients,
+                            bitrate: null !== (n = s.bitrate) && void 0 !== n ? n : i.bitrate
                         });
-                    return e.channels.push(null != l ? l : i), e
+                    return e.channels.push(null != r ? r : s), e
                 }, e => "CHANNEL_UPDATE" !== e),
-                U = new v.default(M.socket, (e, t) => ((e = null == e ? {
+                R = new O.default(b.socket, (e, t) => ((e = null == e ? {
                     type: "SOUNDBOARD_SOUNDS_RECEIVED",
                     updates: []
                 } : e).updates.push({
@@ -64,22 +64,22 @@
                         guildId: t.guild_id
                     }))
                 }), e), e => "SOUNDBOARD_SOUNDS" !== e),
-                P = new v.default(M.socket, (e, t) => ((e = null == e ? {
+                k = new O.default(b.socket, (e, t) => ((e = null == e ? {
                     type: "PRESENCE_UPDATES",
                     updates: []
                 } : e).updates.push(t), e), e => "PRESENCE_UPDATE" !== e);
 
-            function b(e, t) {
-                var i, s, d, m;
-                switch (v.default.flush(e, t), e) {
+            function M(e, t) {
+                var s, a, l, p;
+                switch (O.default.flush(e, t), e) {
                     case "INITIAL_GUILD":
-                        E.default.initialGuild.measure(() => {
-                            l.default.Emitter.batched(() => {
-                                let e = y.hydrateInitialGuild(t, M.socket.identifyStartTime);
-                                null != g.default.getCurrentUser() && (G({
+                        c.default.initialGuild.measure(() => {
+                            r.default.Emitter.batched(() => {
+                                let e = N.hydrateInitialGuild(t, b.socket.identifyStartTime);
+                                null != C.default.getCurrentUser() && (w({
                                     type: "GUILD_CREATE",
                                     guild: e
-                                }), G({
+                                }), w({
                                     type: "VOICE_STATE_UPDATES",
                                     voiceStates: e.voice_states.map(t => {
                                         var n;
@@ -98,43 +98,43 @@
                                             requestToSpeakTimestamp: null !== (n = t.request_to_speak_timestamp) && void 0 !== n ? n : null
                                         }
                                     })
-                                }), D.log("Dispatched INITIAL_GUILD ".concat(t.id)))
+                                }), P.log("Dispatched INITIAL_GUILD ".concat(t.id)))
                             })
                         });
                         break;
                     case "READY_SUPPLEMENTAL":
-                        E.default.readySupplemental.measure(() => {
-                            l.default.Emitter.batched(() => {
+                        c.default.readySupplemental.measure(() => {
+                            r.default.Emitter.batched(() => {
                                 var e, n;
-                                t = E.default.hydrateReadySupplemental.measure(() => y.hydrateReadySupplementalPayload(t, M.socket.identifyStartTime));
-                                let i = e => e.map(e => ({
+                                t = c.default.hydrateReadySupplemental.measure(() => N.hydrateReadySupplementalPayload(t, b.socket.identifyStartTime));
+                                let s = e => e.map(e => ({
                                         user: e.user,
                                         status: e.status,
                                         clientStatus: e.client_status,
                                         activities: e.activities,
                                         broadcast: e.broadcast
                                     })),
-                                    a = t.guilds.filter(e => !0 !== e.unavailable);
-                                a.forEach(e => {
-                                    e.presences = i(e.presences || [])
+                                    i = t.guilds.filter(e => !0 !== e.unavailable);
+                                i.forEach(e => {
+                                    e.presences = s(e.presences || [])
                                 });
-                                let l = t.presences ? i(t.presences) : [],
-                                    s = (null !== (e = t.lazy_private_channels) && void 0 !== e ? e : []).map(e => (0, h.createChannelRecordFromServer)(e)),
-                                    r = null !== (n = t.game_invites) && void 0 !== n ? n : [];
-                                E.default.dispatchReadySupplemental.measure(() => {
-                                    G({
+                                let r = t.presences ? s(t.presences) : [],
+                                    a = (null !== (e = t.lazy_private_channels) && void 0 !== e ? e : []).map(e => (0, m.createChannelRecordFromServer)(e)),
+                                    o = null !== (n = t.game_invites) && void 0 !== n ? n : [];
+                                c.default.dispatchReadySupplemental.measure(() => {
+                                    w({
                                         type: "CONNECTION_OPEN_SUPPLEMENTAL",
-                                        guilds: a,
-                                        presences: l,
-                                        lazyPrivateChannels: s,
-                                        gameInvites: r
+                                        guilds: i,
+                                        presences: r,
+                                        lazyPrivateChannels: a,
+                                        gameInvites: o
                                     })
                                 });
-                                let u = [];
-                                a.forEach(e => {
+                                let d = [];
+                                i.forEach(e => {
                                     e.voice_states.forEach(t => {
                                         var n;
-                                        u.push({
+                                        d.push({
                                             userId: t.user_id,
                                             guildId: e.id,
                                             sessionId: t.session_id,
@@ -149,43 +149,43 @@
                                             requestToSpeakTimestamp: null !== (n = t.request_to_speak_timestamp) && void 0 !== n ? n : null
                                         })
                                     })
-                                }), G({
+                                }), w({
                                     type: "VOICE_STATE_UPDATES",
-                                    voiceStates: u,
+                                    voiceStates: d,
                                     initial: !0
-                                }), M.localVoiceState.update(), M.localLobbyVoiceStates.update({}, !0)
+                                }), b.localVoiceState.update(), b.localLobbyVoiceStates.update({}, !0)
                             })
-                        }), setTimeout(() => G({
+                        }), setTimeout(() => w({
                             type: "POST_CONNECTION_OPEN"
                         }), 2e3);
                         break;
                     case "READY":
                         if (t.user.bot) {
-                            G({
+                            w({
                                 type: "LOGOUT"
                             });
                             return
                         }
-                        E.default.ready.measure(() => {
-                            l.default.Emitter.batched(() => {
-                                t = E.default.hydrateReady.measure(() => y.hydrateReadyPayloadPrioritized(t, M.socket.identifyStartTime));
-                                let e = t.private_channels.map(e => (0, h.createChannelRecordFromServer)(e)),
+                        c.default.ready.measure(() => {
+                            r.default.Emitter.batched(() => {
+                                t = c.default.hydrateReady.measure(() => N.hydrateReadyPayloadPrioritized(t, b.socket.identifyStartTime));
+                                let e = t.private_channels.map(e => (0, m.createChannelRecordFromServer)(e)),
                                     n = t.guilds.filter(e => e.unavailable || null != e.geo_restricted && !1 === e.geo_restricted).map(e => e.id),
-                                    i = t.guilds.filter(e => !0 !== e.unavailable),
-                                    a = t.guilds.filter(e => !0 === e.geo_restricted);
-                                i.forEach(e => {
+                                    s = t.guilds.filter(e => !0 !== e.unavailable),
+                                    i = t.guilds.filter(e => !0 === e.geo_restricted);
+                                s.forEach(e => {
                                     e.presences = []
                                 });
-                                let l = null == t.user_settings_proto ? void 0 : (0, f.b64ToPreloadedUserSettingsProto)(t.user_settings_proto);
-                                E.default.dispatchReady.measure(() => {
-                                    var s;
-                                    G({
+                                let r = null == t.user_settings_proto ? void 0 : (0, g.b64ToPreloadedUserSettingsProto)(t.user_settings_proto);
+                                c.default.dispatchReady.measure(() => {
+                                    var a;
+                                    w({
                                         type: "CONNECTION_OPEN",
                                         sessionId: t.session_id,
                                         authSessionIdHash: t.auth_session_id_hash,
                                         user: t.user,
                                         users: t.users,
-                                        guilds: i,
+                                        guilds: s,
                                         initialPrivateChannels: e,
                                         unavailableGuilds: n,
                                         readState: t.read_state,
@@ -200,47 +200,47 @@
                                         guildExperiments: t.guild_experiments,
                                         requiredAction: t.required_action,
                                         consents: t.consents,
-                                        sessions: w(t.sessions || []),
+                                        sessions: G(t.sessions || []),
                                         pendingPayments: t.pending_payments,
-                                        countryCode: null !== (s = t.country_code) && void 0 !== s ? s : void 0,
+                                        countryCode: null !== (a = t.country_code) && void 0 !== a ? a : void 0,
                                         guildJoinRequests: t.guild_join_requests || [],
-                                        userSettingsProto: l,
+                                        userSettingsProto: r,
                                         apiCodeVersion: t.api_code_version,
                                         auth: t.auth,
                                         notificationSettings: {
                                             flags: t.notification_settings.flags
                                         },
-                                        geoRestrictedGuilds: a
+                                        geoRestrictedGuilds: i
                                     })
-                                }), null != t.auth_token && G({
+                                }), null != t.auth_token && w({
                                     type: "UPDATE_TOKEN",
                                     token: t.auth_token,
                                     userId: t.user.id
-                                }), M.localPresenceState.update(), M.localVoiceState.update(), M.localLobbyVoiceStates.update(), V()
+                                }), b.localPresenceState.update(), b.localVoiceState.update(), b.localLobbyVoiceStates.update(), F()
                             })
                         });
                         break;
                     case "RESUMED":
-                        M.localPresenceState.forceUpdate(), M.localVoiceState.forceUpdate(), M.localLobbyVoiceStates.forceUpdate(), V(), G({
+                        b.localPresenceState.forceUpdate(), b.localVoiceState.forceUpdate(), b.localLobbyVoiceStates.forceUpdate(), F(), w({
                             type: "CONNECTION_RESUMED"
                         });
                         break;
                     case "TYPING_START":
-                        null != t.member && k(t.guild_id, t.member.user, t.member), G({
+                        null != t.member && L(t.guild_id, t.member.user, t.member), w({
                             type: "TYPING_START",
                             channelId: t.channel_id,
                             userId: t.user_id
                         });
                         break;
                     case "ACTIVITY_START":
-                        G({
+                        w({
                             type: "ACTIVITY_START",
                             userId: t.user_id,
                             activity: t.activity
                         });
                         break;
                     case "ACTIVITY_USER_ACTION":
-                        G({
+                        w({
                             type: "ACTIVITY_USER_ACTION",
                             actionType: t.action_type,
                             user: t.user,
@@ -250,7 +250,7 @@
                         });
                         break;
                     case "MESSAGE_CREATE":
-                        F(t), null != t.author && G({
+                        U(t), null != t.author && w({
                             type: "MESSAGE_CREATE",
                             guildId: t.guild_id,
                             channelId: t.channel_id,
@@ -260,14 +260,14 @@
                         });
                         break;
                     case "MESSAGE_UPDATE":
-                        F(t), G({
+                        U(t), w({
                             type: "MESSAGE_UPDATE",
                             guildId: t.guild_id,
                             message: t
                         });
                         break;
                     case "MESSAGE_DELETE":
-                        G({
+                        w({
                             type: "MESSAGE_DELETE",
                             guildId: t.guild_id,
                             id: t.id,
@@ -275,7 +275,7 @@
                         });
                         break;
                     case "MESSAGE_DELETE_BULK":
-                        G({
+                        w({
                             type: "MESSAGE_DELETE_BULK",
                             guildId: t.guild_id,
                             ids: t.ids,
@@ -283,7 +283,7 @@
                         });
                         break;
                     case "MESSAGE_ACK":
-                        G({
+                        w({
                             type: "MESSAGE_ACK",
                             channelId: t.channel_id,
                             messageId: t.message_id,
@@ -293,7 +293,7 @@
                         });
                         break;
                     case "GUILD_FEATURE_ACK":
-                        G({
+                        w({
                             type: "GUILD_FEATURE_ACK",
                             id: t.resource_id,
                             ackType: t.ack_type,
@@ -301,14 +301,14 @@
                         });
                         break;
                     case "USER_NON_CHANNEL_ACK":
-                        G({
+                        w({
                             type: "USER_NON_CHANNEL_ACK",
                             ackType: t.ack_type,
                             ackedId: t.entity_id
                         });
                         break;
                     case "CHANNEL_PINS_ACK":
-                        G({
+                        w({
                             type: "CHANNEL_PINS_ACK",
                             channelId: t.channel_id,
                             timestamp: t.timestamp,
@@ -316,7 +316,7 @@
                         });
                         break;
                     case "CHANNEL_PINS_UPDATE":
-                        G({
+                        w({
                             type: "CHANNEL_PINS_UPDATE",
                             channelId: t.channel_id,
                             lastPinTimestamp: t.last_pin_timestamp
@@ -324,13 +324,13 @@
                         break;
                     case "CHANNEL_CREATE":
                     case "CHANNEL_DELETE":
-                        G({
+                        w({
                             type: e,
-                            channel: (0, h.createChannelRecordFromServer)(t)
+                            channel: (0, m.createChannelRecordFromServer)(t)
                         });
                         break;
                     case "VOICE_CHANNEL_STATUS_UPDATE":
-                        G({
+                        w({
                             type: e,
                             id: t.id,
                             guildId: t.guild_id,
@@ -338,44 +338,44 @@
                         });
                         break;
                     case "CHANNEL_STATUSES":
-                        G({
+                        w({
                             type: e,
                             guildId: t.guild_id,
                             channels: t.channels
                         });
                         break;
                     case "CHANNEL_UPDATE":
-                        L.add(t);
+                        V.add(t);
                         break;
                     case "THREAD_CREATE":
                     case "THREAD_UPDATE":
                     case "THREAD_DELETE": {
                         let {
                             newly_created: n,
-                            ...i
+                            ...s
                         } = t;
-                        G({
+                        w({
                             type: e,
                             isNewlyCreated: n,
-                            channel: (0, h.createChannelRecordFromServer)(i)
+                            channel: (0, m.createChannelRecordFromServer)(s)
                         });
                         break
                     }
                     case "THREAD_LIST_SYNC":
-                        G({
+                        w({
                             type: "THREAD_LIST_SYNC",
                             guildId: t.guild_id,
                             threads: t.threads.map(e => {
-                                let t = C.default.getChannel(e.parent_id);
-                                return null != t && (e.nsfw = t.nsfw, e.parentChannelThreadType = t.type), (0, h.createChannelRecordFromServer)(e)
+                                let t = E.default.getChannel(e.parent_id);
+                                return null != t && (e.nsfw = t.nsfw, e.parentChannelThreadType = t.type), (0, m.createChannelRecordFromServer)(e)
                             }),
                             mostRecentMessages: t.most_recent_messages,
-                            members: t.members ? a.map(t.members, _.default) : void 0,
+                            members: t.members ? i.map(t.members, _.default) : void 0,
                             channelIds: t.channel_ids
                         });
                         break;
                     case "THREAD_MEMBER_UPDATE":
-                        G({
+                        w({
                             type: "THREAD_MEMBER_UPDATE",
                             id: t.id,
                             guildId: t.guild_id,
@@ -387,12 +387,12 @@
                         });
                         break;
                     case "THREAD_MEMBERS_UPDATE":
-                        G({
+                        w({
                             type: "THREAD_MEMBERS_UPDATE",
                             id: t.id,
                             guildId: t.guild_id,
                             memberCount: t.member_count,
-                            addedMembers: null === (i = t.added_members) || void 0 === i ? void 0 : i.map(e => ({
+                            addedMembers: null === (s = t.added_members) || void 0 === s ? void 0 : s.map(e => ({
                                 id: e.id,
                                 guildId: t.guild_id,
                                 userId: e.user_id,
@@ -405,7 +405,7 @@
                         break;
                     case "FORUM_UNREADS":
                         if (t.permission_denied) break;
-                        G({
+                        w({
                             type: "FORUM_UNREADS",
                             channelId: t.channel_id,
                             threads: t.threads.map(e => ({
@@ -416,27 +416,27 @@
                         });
                         break;
                     case "SOUNDBOARD_SOUNDS":
-                        U.add(t);
+                        R.add(t);
                         break;
                     case "CHANNEL_RECIPIENT_ADD":
                     case "CHANNEL_RECIPIENT_REMOVE":
-                        let I = C.default.getBasicChannel(t.channel_id);
-                        G({
+                        let T = E.default.getBasicChannel(t.channel_id);
+                        w({
                             type: e,
                             channelId: t.channel_id,
                             user: t.user,
                             nick: t.nick,
-                            isMember: null != I
+                            isMember: null != T
                         });
                         break;
                     case "GUILD_CREATE":
-                        if (t.unavailable) G({
+                        if (t.unavailable) w({
                             type: "GUILD_UNAVAILABLE",
                             guildId: t.id
                         });
                         else {
-                            let e = y.hydratePreviouslyUnavailableGuild(t);
-                            r.default.createGuild(e), G({
+                            let e = N.hydratePreviouslyUnavailableGuild(t);
+                            o.default.createGuild(e), w({
                                 type: "VOICE_STATE_UPDATES",
                                 voiceStates: e.voice_states.map(t => {
                                     var n;
@@ -459,31 +459,31 @@
                         }
                         break;
                     case "GUILD_UPDATE":
-                        G({
+                        w({
                             type: "GUILD_UPDATE",
                             guild: t
-                        }), t.unavailable && G({
+                        }), t.unavailable && w({
                             type: "GUILD_UNAVAILABLE",
                             guildId: t.id
                         });
                         break;
                     case "GUILD_DELETE":
-                        G({
+                        w({
                             type: "GUILD_DELETE",
                             guild: t
-                        }), t.geo_restricted ? G({
+                        }), t.geo_restricted ? w({
                             type: "GUILD_GEO_RESTRICTED",
                             guildId: t.id,
                             icon: t.icon,
                             name: t.name
-                        }) : t.unavailable && G({
+                        }) : t.unavailable && w({
                             type: "GUILD_UNAVAILABLE",
                             guildId: t.id
                         });
                         break;
                     case "GUILD_MEMBERS_CHUNK":
-                        l.default.Emitter.batched(() => {
-                            G({
+                        r.default.Emitter.batched(() => {
+                            w({
                                 type: "GUILD_MEMBERS_CHUNK",
                                 guildId: t.guild_id,
                                 members: t.members,
@@ -491,25 +491,25 @@
                             }), null != t.presences && t.presences.forEach(e => {
                                 let {
                                     user: n,
-                                    status: i,
-                                    client_status: a,
-                                    activities: l,
-                                    broadcast: s
+                                    status: s,
+                                    client_status: i,
+                                    activities: r,
+                                    broadcast: a
                                 } = e;
-                                return H({
+                                return x({
                                     guildId: t.guild_id,
                                     user: n,
-                                    status: i,
-                                    activities: l,
-                                    clientStatus: a,
-                                    broadcast: s
+                                    status: s,
+                                    activities: r,
+                                    clientStatus: i,
+                                    broadcast: a
                                 })
-                            }), v.default.flush()
+                            }), O.default.flush()
                         });
                         break;
                     case "THREAD_MEMBER_LIST_UPDATE":
-                        l.default.Emitter.batched(() => {
-                            G({
+                        r.default.Emitter.batched(() => {
+                            w({
                                 type: "THREAD_MEMBER_LIST_UPDATE",
                                 guildId: t.guild_id,
                                 threadId: t.thread_id,
@@ -517,20 +517,20 @@
                             }), null != t.presences && t.presences.forEach(e => {
                                 let {
                                     user: n,
-                                    status: i,
-                                    client_status: a,
-                                    activities: l,
-                                    broadcast: s
+                                    status: s,
+                                    client_status: i,
+                                    activities: r,
+                                    broadcast: a
                                 } = e;
-                                return H({
+                                return x({
                                     guildId: t.guild_id,
                                     user: n,
-                                    status: i,
-                                    activities: l,
-                                    clientStatus: a,
-                                    broadcast: s
+                                    status: s,
+                                    activities: r,
+                                    clientStatus: i,
+                                    broadcast: a
                                 })
-                            }), v.default.flush()
+                            }), O.default.flush()
                         });
                         break;
                     case "GUILD_BAN_ADD":
@@ -538,7 +538,7 @@
                     case "GUILD_MEMBER_ADD":
                     case "GUILD_MEMBER_UPDATE":
                     case "GUILD_MEMBER_REMOVE":
-                        G({
+                        w({
                             type: e,
                             guildId: t.guild_id,
                             user: t.user,
@@ -555,14 +555,14 @@
                         break;
                     case "GUILD_ROLE_CREATE":
                     case "GUILD_ROLE_UPDATE":
-                        G({
+                        w({
                             type: e,
                             guildId: t.guild_id,
                             role: t.role
                         });
                         break;
                     case "GUILD_ROLE_DELETE":
-                        G({
+                        w({
                             type: "GUILD_ROLE_DELETE",
                             guildId: t.guild_id,
                             roleId: t.role_id,
@@ -570,87 +570,87 @@
                         });
                         break;
                     case "GUILD_EMOJIS_UPDATE":
-                        G({
+                        w({
                             type: "GUILD_EMOJIS_UPDATE",
                             guildId: t.guild_id,
                             emojis: t.emojis
                         });
                         break;
                     case "GUILD_STICKERS_UPDATE":
-                        G({
+                        w({
                             type: "GUILD_STICKERS_UPDATE",
                             guildId: t.guild_id,
                             stickers: t.stickers
                         });
                         break;
                     case "GUILD_INTEGRATIONS_UPDATE":
-                        G({
+                        w({
                             type: "GUILD_INTEGRATIONS_UPDATE",
                             guildId: t.guild_id
                         });
                         break;
                     case "INTEGRATION_CREATE":
-                        G({
+                        w({
                             type: "INTEGRATION_CREATE",
                             application: t.application,
                             guildId: t.guild_id
                         });
                         break;
                     case "INTEGRATION_DELETE":
-                        G({
+                        w({
                             type: "INTEGRATION_DELETE",
                             applicationId: t.application_id,
                             guildId: t.guild_id
                         });
                         break;
                     case "USER_UPDATE":
-                        G({
+                        w({
                             type: "CURRENT_USER_UPDATE",
                             user: t
                         });
                         break;
                     case "USER_SETTINGS_PROTO_UPDATE":
-                        let P = (0, f.b64ToProtoWithType)(t.settings.type, t.settings.proto);
-                        if (null == P) break;
-                        if ("string" == typeof P) throw console.error("Invalid proto: |".concat(P, "| |").concat(t.settings.proto, "|")), console.error({
-                            parsed: P,
+                        let k = (0, g.b64ToProtoWithType)(t.settings.type, t.settings.proto);
+                        if (null == k) break;
+                        if ("string" == typeof k) throw console.error("Invalid proto: |".concat(k, "| |").concat(t.settings.proto, "|")), console.error({
+                            parsed: k,
                             wire: t.settings.proto,
                             type: t.settings.type
                         }), Error("UserSettingsProto must not be a string");
-                        G({
+                        w({
                             type: "USER_SETTINGS_PROTO_UPDATE",
                             settings: {
-                                proto: P,
+                                proto: k,
                                 type: t.settings.type
                             },
                             partial: t.partial
                         });
                         break;
                     case "USER_GUILD_SETTINGS_UPDATE":
-                        G({
+                        w({
                             type: "USER_GUILD_SETTINGS_FULL_UPDATE",
                             userGuildSettings: [t]
                         });
                         break;
                     case "USER_CONNECTIONS_UPDATE":
-                        G({
+                        w({
                             type: "USER_CONNECTIONS_UPDATE"
                         });
                         break;
                     case "USER_REQUIRED_ACTION_UPDATE":
-                        G({
+                        w({
                             type: "USER_REQUIRED_ACTION_UPDATE",
                             requiredAction: t.required_action
                         });
                         break;
                     case "USER_NOTE_UPDATE":
-                        G({
+                        w({
                             type: "USER_NOTE_UPDATE",
                             ...t
                         });
                         break;
                     case "RELATIONSHIP_ADD":
-                        G({
+                        w({
                             type: "RELATIONSHIP_ADD",
                             relationship: {
                                 id: t.id,
@@ -663,19 +663,19 @@
                         });
                         break;
                     case "RELATIONSHIP_REMOVE":
-                        G({
+                        w({
                             type: "RELATIONSHIP_REMOVE",
                             relationship: t
                         });
                         break;
                     case "RELATIONSHIP_UPDATE":
-                        G({
+                        w({
                             type: "RELATIONSHIP_UPDATE",
                             relationship: t
                         });
                         break;
                     case "PRESENCE_UPDATE":
-                        H({
+                        x({
                             guildId: t.guild_id,
                             user: t.user,
                             status: t.status,
@@ -685,19 +685,19 @@
                         });
                         break;
                     case "PRESENCES_REPLACE":
-                        G({
+                        w({
                             type: "PRESENCES_REPLACE",
                             presences: t
                         });
                         break;
                     case "SESSIONS_REPLACE":
-                        G({
+                        w({
                             type: "SESSIONS_REPLACE",
-                            sessions: w(t)
+                            sessions: G(t)
                         });
                         break;
                     case "VOICE_STATE_UPDATE":
-                        null != t.member && k(t.guild_id, t.member.user, t.member), G({
+                        null != t.member && L(t.guild_id, t.member.user, t.member), w({
                             type: "VOICE_STATE_UPDATES",
                             voiceStates: [{
                                 userId: t.user_id,
@@ -711,13 +711,13 @@
                                 selfVideo: t.self_video || !1,
                                 suppress: t.suppress,
                                 selfStream: t.self_stream || !1,
-                                requestToSpeakTimestamp: null !== (s = t.request_to_speak_timestamp) && void 0 !== s ? s : null,
-                                oldChannelId: A.default.getUserVoiceChannelId(t.guild_id, t.user_id)
+                                requestToSpeakTimestamp: null !== (a = t.request_to_speak_timestamp) && void 0 !== a ? a : null,
+                                oldChannelId: S.default.getUserVoiceChannelId(t.guild_id, t.user_id)
                             }]
                         });
                         break;
                     case "LOBBY_VOICE_STATE_UPDATE":
-                        G({
+                        w({
                             type: "LOBBY_VOICE_STATE_UPDATE",
                             userId: t.user_id,
                             lobbyId: t.lobby_id,
@@ -730,7 +730,7 @@
                         });
                         break;
                     case "VOICE_SERVER_UPDATE":
-                        G({
+                        w({
                             type: "VOICE_SERVER_UPDATE",
                             guildId: t.guild_id,
                             channelId: t.channel_id,
@@ -739,7 +739,7 @@
                         });
                         break;
                     case "LOBBY_VOICE_SERVER_UPDATE":
-                        G({
+                        w({
                             type: "LOBBY_VOICE_SERVER_UPDATE",
                             lobbyId: t.lobby_id,
                             endpoint: t.endpoint,
@@ -747,7 +747,7 @@
                         });
                         break;
                     case "CALL_CREATE":
-                        G({
+                        w({
                             type: "CALL_CREATE",
                             channelId: t.channel_id,
                             messageId: t.message_id,
@@ -755,10 +755,10 @@
                             region: t.region,
                             ringing: t.ringing
                         });
-                        let b = t.voice_states;
-                        null != b && G({
+                        let M = t.voice_states;
+                        null != M && w({
                             type: "VOICE_STATE_UPDATES",
-                            voiceStates: b.map(e => {
+                            voiceStates: M.map(e => {
                                 var t;
                                 return {
                                     userId: e.user_id,
@@ -778,7 +778,7 @@
                         });
                         break;
                     case "CALL_UPDATE":
-                        G({
+                        w({
                             type: "CALL_UPDATE",
                             channelId: t.channel_id,
                             messageId: t.message_id,
@@ -787,38 +787,38 @@
                         });
                         break;
                     case "CALL_DELETE":
-                        G({
+                        w({
                             type: "CALL_DELETE",
                             channelId: t.channel_id,
                             unavailable: t.unavailable
                         });
                         break;
                     case "OAUTH2_TOKEN_REVOKE":
-                        G({
+                        w({
                             type: "OAUTH2_TOKEN_REVOKE",
                             accessToken: t.access_token
                         });
                         break;
                     case "RECENT_MENTION_DELETE":
-                        G({
+                        w({
                             type: "RECENT_MENTION_DELETE",
                             id: t.message_id
                         });
                         break;
                     case "FRIEND_SUGGESTION_CREATE":
-                        G({
+                        w({
                             type: "FRIEND_SUGGESTION_CREATE",
                             suggestion: t
                         });
                         break;
                     case "FRIEND_SUGGESTION_DELETE":
-                        G({
+                        w({
                             type: "FRIEND_SUGGESTION_DELETE",
                             suggestedUserId: t.suggested_user_id
                         });
                         break;
                     case "WEBHOOKS_UPDATE":
-                        G({
+                        w({
                             type: "WEBHOOKS_UPDATE",
                             guildId: t.guild_id,
                             channelId: t.channel_id
@@ -826,7 +826,7 @@
                         break;
                     case "MESSAGE_REACTION_ADD":
                     case "MESSAGE_REACTION_REMOVE":
-                        G({
+                        w({
                             type: e,
                             channelId: t.channel_id,
                             messageId: t.message_id,
@@ -839,14 +839,14 @@
                         });
                         break;
                     case "MESSAGE_REACTION_REMOVE_ALL":
-                        G({
+                        w({
                             type: "MESSAGE_REACTION_REMOVE_ALL",
                             channelId: t.channel_id,
                             messageId: t.message_id
                         });
                         break;
                     case "MESSAGE_REACTION_REMOVE_EMOJI":
-                        G({
+                        w({
                             type: "MESSAGE_REACTION_REMOVE_EMOJI",
                             channelId: t.channel_id,
                             messageId: t.message_id,
@@ -854,7 +854,7 @@
                         });
                         break;
                     case "MESSAGE_REACTION_ADD_MANY":
-                        G({
+                        w({
                             type: "MESSAGE_REACTION_ADD_MANY",
                             channelId: t.channel_id,
                             messageId: t.message_id,
@@ -862,7 +862,7 @@
                         });
                         break;
                     case "PAYMENT_UPDATE":
-                        G({
+                        w({
                             type: "PAYMENT_UPDATE",
                             payment: t
                         });
@@ -870,31 +870,31 @@
                     case "ENTITLEMENT_CREATE":
                     case "ENTITLEMENT_UPDATE":
                     case "ENTITLEMENT_DELETE":
-                        G({
+                        w({
                             type: e,
                             entitlement: t
                         });
                         break;
                     case "USER_PAYMENT_SOURCES_UPDATE":
-                        S.default.hasLayers() && (n("850068").fetchPaymentSources(), u.fetchSubscriptionPlansBySKUs(N.default.getFetchedSKUIDs()));
+                        y.default.hasLayers() && (n("850068").fetchPaymentSources(), d.fetchSubscriptionPlansBySKUs(I.default.getFetchedSKUIDs()));
                         break;
                     case "USER_SUBSCRIPTIONS_UPDATE":
-                        o.fetchCurrentUser(), S.default.hasLayers() && n("850068").fetchSubscriptions();
+                        u.fetchCurrentUser(), y.default.hasLayers() && n("850068").fetchSubscriptions();
                         break;
                     case "USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE":
-                        G({
+                        w({
                             type: "GUILD_BOOST_SLOT_CREATE",
-                            guildBoostSlot: p.default.createFromServer(t, O.default.getSubscriptionById(t.subscription_id))
+                            guildBoostSlot: h.default.createFromServer(t, A.default.getSubscriptionById(t.subscription_id))
                         });
                         break;
                     case "USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE":
-                        G({
+                        w({
                             type: "GUILD_BOOST_SLOT_UPDATE",
-                            guildBoostSlot: p.default.createFromServer(t, O.default.getSubscriptionById(t.subscription_id))
+                            guildBoostSlot: h.default.createFromServer(t, A.default.getSubscriptionById(t.subscription_id))
                         });
                         break;
                     case "BILLING_POPUP_BRIDGE_CALLBACK":
-                        G({
+                        w({
                             type: "BILLING_POPUP_BRIDGE_CALLBACK",
                             paymentSourceType: t.payment_source_type,
                             state: t.state,
@@ -903,15 +903,15 @@
                         });
                         break;
                     case "USER_PAYMENT_BROWSER_CHECKOUT_DONE":
-                        G({
+                        w({
                             type: "USER_PAYMENT_BROWSER_CHECKOUT_DONE",
                             loadId: t.load_id
                         });
                         break;
                     case "USER_PAYMENT_CLIENT_ADD":
-                        (0, R.getPurchaseTokenHash)().then(e => {
+                        (0, D.getPurchaseTokenHash)().then(e => {
                             let n = t.purchase_token_hash;
-                            n === e && G({
+                            n === e && w({
                                 type: "USER_PAYMENT_CLIENT_ADD",
                                 purchaseTokenHash: n,
                                 expiresAt: t.expires_at
@@ -919,40 +919,40 @@
                         });
                         break;
                     case "GUILD_MEMBER_LIST_UPDATE":
-                        l.default.Emitter.batched(() => {
+                        r.default.Emitter.batched(() => {
                             let e = e => {
                                 if (null == e.member) return;
                                 let {
                                     member: n
                                 } = e;
-                                if (k(t.guild_id, n.user, n), null == n.presence) return;
+                                if (L(t.guild_id, n.user, n), null == n.presence) return;
                                 let {
-                                    presence: i
+                                    presence: s
                                 } = n;
-                                H({
+                                x({
                                     guildId: t.guild_id,
-                                    user: i.user,
-                                    status: i.status,
-                                    activities: i.activities,
-                                    clientStatus: i.client_status,
-                                    broadcast: i.broadcast
+                                    user: s.user,
+                                    status: s.status,
+                                    activities: s.activities,
+                                    clientStatus: s.client_status,
+                                    broadcast: s.broadcast
                                 })
                             };
                             t.ops.forEach(t => {
                                 let {
                                     op: n,
-                                    items: i,
-                                    item: a
+                                    items: s,
+                                    item: i
                                 } = t;
                                 switch (n) {
                                     case "SYNC":
-                                        i.forEach(e);
+                                        s.forEach(e);
                                         break;
                                     case "UPDATE":
                                     case "INSERT":
-                                        e(a)
+                                        e(i)
                                 }
-                            }), v.default.flush(), G({
+                            }), O.default.flush(), w({
                                 type: "GUILD_MEMBER_LIST_UPDATE",
                                 guildId: t.guild_id,
                                 id: t.id,
@@ -964,11 +964,11 @@
                         });
                         break;
                     case "LOBBY_CREATE":
-                        G({
+                        w({
                             type: "LOBBY_CREATE",
                             lobby: t
                         }), t.voice_states.forEach(e => {
-                            G({
+                            w({
                                 type: "LOBBY_VOICE_STATE_UPDATE",
                                 lobbyId: t.id,
                                 userId: e.user_id,
@@ -982,13 +982,13 @@
                         });
                         break;
                     case "LOBBY_UPDATE":
-                        G({
+                        w({
                             type: "LOBBY_UPDATE",
                             lobby: t
                         });
                         break;
                     case "LOBBY_DELETE":
-                        G({
+                        w({
                             type: "LOBBY_DELETE",
                             lobbyId: t.id,
                             reason: t.reason
@@ -997,14 +997,14 @@
                     case "LOBBY_MEMBER_CONNECT":
                     case "LOBBY_MEMBER_UPDATE":
                     case "LOBBY_MEMBER_DISCONNECT":
-                        G({
+                        w({
                             type: e,
                             lobbyId: t.lobby_id,
                             member: t.member
                         });
                         break;
                     case "LOBBY_MESSAGE":
-                        G({
+                        w({
                             type: "LOBBY_MESSAGE",
                             lobbyId: t.lobby_id,
                             senderId: t.sender_id,
@@ -1012,32 +1012,32 @@
                         });
                         break;
                     case "GIFT_CODE_UPDATE":
-                        G({
+                        w({
                             type: "GIFT_CODE_UPDATE",
                             uses: t.uses,
                             code: t.code
                         });
                         break;
                     case "GIFT_CODE_CREATE":
-                        G({
+                        w({
                             type: "GIFT_CODE_CREATE",
                             giftCode: t
                         });
                         break;
                     case "USER_ACHIEVEMENT_UPDATE":
-                        G({
+                        w({
                             type: "USER_ACHIEVEMENT_UPDATE",
                             userAchievement: t
                         });
                         break;
                     case "LIBRARY_APPLICATION_UPDATE":
-                        G({
+                        w({
                             type: "LIBRARY_APPLICATION_UPDATE",
                             libraryApplication: t
                         });
                         break;
                     case "STREAM_CREATE":
-                        G({
+                        w({
                             type: "STREAM_CREATE",
                             streamKey: t.stream_key,
                             region: t.region,
@@ -1047,7 +1047,7 @@
                         });
                         break;
                     case "STREAM_SERVER_UPDATE":
-                        G({
+                        w({
                             type: "STREAM_SERVER_UPDATE",
                             streamKey: t.stream_key,
                             endpoint: t.endpoint,
@@ -1055,7 +1055,7 @@
                         });
                         break;
                     case "STREAM_UPDATE":
-                        G({
+                        w({
                             type: "STREAM_UPDATE",
                             streamKey: t.stream_key,
                             region: t.region,
@@ -1064,7 +1064,7 @@
                         });
                         break;
                     case "STREAM_DELETE":
-                        G({
+                        w({
                             type: "STREAM_DELETE",
                             streamKey: t.stream_key,
                             unavailable: t.unavailable,
@@ -1072,7 +1072,7 @@
                         });
                         break;
                     case "GENERIC_PUSH_NOTIFICATION_SENT":
-                        G({
+                        w({
                             type: "GENERIC_PUSH_NOTIFICATION_SENT",
                             title: t.title,
                             body: t.body,
@@ -1083,45 +1083,45 @@
                         });
                         break;
                     case "NOTIFICATION_CENTER_ITEM_CREATE":
-                        G({
+                        w({
                             type: "NOTIFICATION_CENTER_ITEM_CREATE",
                             item: t
                         });
                         break;
                     case "NOTIFICATION_CENTER_ITEM_DELETE":
-                        G({
+                        w({
                             type: "NOTIFICATION_CENTER_ITEM_DELETE",
                             id: t.id
                         });
                         break;
                     case "NOTIFICATION_CENTER_ITEMS_ACK":
-                        G({
+                        w({
                             type: "NOTIFICATION_CENTER_ITEMS_ACK",
                             ids: [t.id],
                             optimistic: !1
                         });
                         break;
                     case "NOTIFICATION_CENTER_ITEM_COMPLETED":
-                        G({
+                        w({
                             type: "NOTIFICATION_CENTER_ITEM_COMPLETED",
                             item_enum: t.item_enum
                         });
                         break;
                     case "APPLICATION_COMMAND_PERMISSIONS_UPDATE":
-                        G({
+                        w({
                             type: e,
                             guildId: t.guild_id
                         });
                         break;
                     case "GUILD_APPLICATION_COMMAND_INDEX_UPDATE":
-                        G({
+                        w({
                             type: "GUILD_APPLICATION_COMMAND_INDEX_UPDATE",
                             guildId: t.guild_id,
                             version: t.version
                         });
                         break;
                     case "GUILD_JOIN_REQUEST_CREATE":
-                        G({
+                        w({
                             type: "GUILD_JOIN_REQUEST_CREATE",
                             request: t.request,
                             status: t.status,
@@ -1129,7 +1129,7 @@
                         });
                         break;
                     case "GUILD_JOIN_REQUEST_UPDATE":
-                        G({
+                        w({
                             type: "GUILD_JOIN_REQUEST_UPDATE",
                             request: t.request,
                             status: t.status,
@@ -1137,7 +1137,7 @@
                         });
                         break;
                     case "GUILD_JOIN_REQUEST_DELETE":
-                        G({
+                        w({
                             type: "GUILD_JOIN_REQUEST_DELETE",
                             id: t.id,
                             userId: t.user_id,
@@ -1145,34 +1145,34 @@
                         });
                         break;
                     case "INTERACTION_CREATE":
-                        G({
+                        w({
                             type: "INTERACTION_CREATE",
                             interactionId: t.id,
                             nonce: t.nonce
                         });
                         break;
                     case "INTERACTION_SUCCESS":
-                        G({
+                        w({
                             type: "INTERACTION_SUCCESS",
                             interactionId: t.id,
                             nonce: t.nonce
                         });
                         break;
                     case "INTERACTION_FAILURE":
-                        G({
+                        w({
                             type: "INTERACTION_FAILURE",
                             nonce: t.nonce
                         });
                         break;
                     case "APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE":
-                        G({
+                        w({
                             type: "APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE",
                             choices: t.choices,
                             nonce: t.nonce
                         });
                         break;
                     case "INTERACTION_MODAL_CREATE":
-                        G({
+                        w({
                             type: "INTERACTION_MODAL_CREATE",
                             id: t.id,
                             channelId: t.channel_id,
@@ -1184,7 +1184,7 @@
                         });
                         break;
                     case "INTERACTION_IFRAME_MODAL_CREATE":
-                        G({
+                        w({
                             type: "INTERACTION_IFRAME_MODAL_CREATE",
                             id: t.id,
                             channelId: t.channel_id,
@@ -1197,67 +1197,67 @@
                         });
                         break;
                     case "STAGE_INSTANCE_CREATE":
-                        G({
+                        w({
                             type: "STAGE_INSTANCE_CREATE",
                             instance: t
                         });
                         break;
                     case "STAGE_INSTANCE_UPDATE":
-                        G({
+                        w({
                             type: "STAGE_INSTANCE_UPDATE",
                             instance: t
                         });
                         break;
                     case "STAGE_INSTANCE_DELETE":
-                        G({
+                        w({
                             type: "STAGE_INSTANCE_DELETE",
                             instance: t
                         });
                         break;
                     case "GUILD_SCHEDULED_EVENT_CREATE":
-                        G({
+                        w({
                             type: "GUILD_SCHEDULED_EVENT_CREATE",
                             guildScheduledEvent: t
                         });
                         break;
                     case "GUILD_SCHEDULED_EVENT_UPDATE":
-                        G({
+                        w({
                             type: "GUILD_SCHEDULED_EVENT_UPDATE",
                             guildScheduledEvent: t
                         });
                         break;
                     case "GUILD_SCHEDULED_EVENT_DELETE":
-                        G({
+                        w({
                             type: "GUILD_SCHEDULED_EVENT_DELETE",
                             guildScheduledEvent: t
                         });
                         break;
                     case "GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE":
-                        G({
+                        w({
                             type: "GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE",
                             eventException: t
                         });
                         break;
                     case "GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE":
-                        G({
+                        w({
                             type: "GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE",
                             eventException: t
                         });
                         break;
                     case "GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE":
-                        G({
+                        w({
                             type: "GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE",
                             eventException: t
                         });
                         break;
                     case "GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE":
-                        G({
+                        w({
                             type: "GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE",
                             eventId: t.event_id
                         });
                         break;
                     case "GUILD_SCHEDULED_EVENT_USER_ADD":
-                        G({
+                        w({
                             type: "GUILD_SCHEDULED_EVENT_USER_ADD",
                             userId: t.user_id,
                             guildId: t.guild_id,
@@ -1267,7 +1267,7 @@
                         });
                         break;
                     case "GUILD_SCHEDULED_EVENT_USER_REMOVE":
-                        G({
+                        w({
                             type: "GUILD_SCHEDULED_EVENT_USER_REMOVE",
                             userId: t.user_id,
                             guildId: t.guild_id,
@@ -1277,28 +1277,28 @@
                         });
                         break;
                     case "GUILD_DIRECTORY_ENTRY_CREATE":
-                        G({
+                        w({
                             type: "GUILD_DIRECTORY_ENTRY_CREATE",
                             channelId: t.directory_channel_id,
                             entry: t
                         });
                         break;
                     case "GUILD_DIRECTORY_ENTRY_UPDATE":
-                        G({
+                        w({
                             type: "GUILD_DIRECTORY_ENTRY_UPDATE",
                             channelId: t.directory_channel_id,
                             entry: t
                         });
                         break;
                     case "GUILD_DIRECTORY_ENTRY_DELETE":
-                        G({
+                        w({
                             type: "GUILD_DIRECTORY_ENTRY_DELETE",
                             channelId: t.directory_channel_id,
                             guildId: t.entity_id
                         });
                         break;
                     case "AUTO_MODERATION_MENTION_RAID_DETECTION":
-                        G({
+                        w({
                             type: "AUTO_MODERATION_MENTION_RAID_DETECTION",
                             guildId: t.guild_id,
                             decisionId: t.decision_id,
@@ -1306,7 +1306,7 @@
                         });
                         break;
                     case "VOICE_CHANNEL_EFFECT_SEND":
-                        G({
+                        w({
                             type: "VOICE_CHANNEL_EFFECT_SEND",
                             emoji: t.emoji,
                             channelId: t.channel_id,
@@ -1322,13 +1322,13 @@
                         });
                         break;
                     case "GUILD_SOUNDBOARD_SOUND_CREATE":
-                        G({
+                        w({
                             type: "GUILD_SOUNDBOARD_SOUND_CREATE",
                             sound: {
                                 guildId: t.guild_id,
                                 name: t.name,
                                 soundId: t.sound_id,
-                                user: new T.default(t.user),
+                                user: new v.default(t.user),
                                 userId: t.user_id,
                                 volume: t.volume,
                                 emojiId: t.emoji_id,
@@ -1338,13 +1338,13 @@
                         });
                         break;
                     case "GUILD_SOUNDBOARD_SOUND_UPDATE":
-                        G({
+                        w({
                             type: "GUILD_SOUNDBOARD_SOUND_UPDATE",
                             sound: {
                                 guildId: t.guild_id,
                                 name: t.name,
                                 soundId: t.sound_id,
-                                user: new T.default(t.user),
+                                user: new v.default(t.user),
                                 userId: t.user_id,
                                 volume: t.volume,
                                 emojiId: t.emoji_id,
@@ -1354,14 +1354,14 @@
                         });
                         break;
                     case "GUILD_SOUNDBOARD_SOUND_DELETE":
-                        G({
+                        w({
                             type: "GUILD_SOUNDBOARD_SOUND_DELETE",
                             guildId: t.guild_id,
                             soundId: t.sound_id
                         });
                         break;
                     case "GUILD_SOUNDBOARD_SOUNDS_UPDATE":
-                        G({
+                        w({
                             type: "GUILD_SOUNDBOARD_SOUNDS_UPDATE",
                             guildId: t.guild_id,
                             soundboardSounds: t.soundboard_sounds.map(e => ({
@@ -1377,7 +1377,7 @@
                         });
                         break;
                     case "EMBEDDED_ACTIVITY_UPDATE":
-                        G({
+                        w({
                             type: "EMBEDDED_ACTIVITY_INBOUND_UPDATE",
                             guildId: t.guild_id,
                             channelId: t.channel_id,
@@ -1387,7 +1387,7 @@
                         });
                         break;
                     case "EMBEDDED_ACTIVITY_UPDATE_V2":
-                        G({
+                        w({
                             type: "EMBEDDED_ACTIVITY_INBOUND_UPDATE_V2",
                             activitySessionId: t.activity_session_id,
                             applicationId: t.application_id,
@@ -1398,13 +1398,13 @@
                         });
                         break;
                     case "AUTH_SESSION_CHANGE":
-                        G({
+                        w({
                             type: "AUTH_SESSION_CHANGE",
                             authSessionIdHash: t.auth_session_id_hash
                         });
                         break;
                     case "USER_CONNECTIONS_LINK_CALLBACK":
-                        G({
+                        w({
                             type: "USER_CONNECTIONS_LINK_CALLBACK",
                             provider: t.provider,
                             callbackCode: t.callback_code,
@@ -1412,13 +1412,13 @@
                         });
                         break;
                     case "DELETED_ENTITY_IDS":
-                        G({
+                        w({
                             type: "DELETED_ENTITY_IDS",
                             ...t
                         });
                         break;
                     case "CONSOLE_COMMAND_UPDATE":
-                        G({
+                        w({
                             type: "CONSOLE_COMMAND_UPDATE",
                             id: t.id,
                             result: t.result,
@@ -1426,16 +1426,16 @@
                         });
                         break;
                     case "PASSIVE_UPDATE_V1":
-                        G({
+                        w({
                             type: "PASSIVE_UPDATE_V1",
                             guildId: t.guild_id,
                             members: t.members,
-                            channels: null === (d = t.channels) || void 0 === d ? void 0 : d.map(e => ({
+                            channels: null === (l = t.channels) || void 0 === l ? void 0 : l.map(e => ({
                                 id: e.id,
                                 lastMessageId: e.last_message_id,
                                 lastPinTimestamp: e.last_pin_timestamp
                             })),
-                            voiceStates: null === (m = t.voice_states) || void 0 === m ? void 0 : m.map(e => {
+                            voiceStates: null === (p = t.voice_states) || void 0 === p ? void 0 : p.map(e => {
                                 var t;
                                 return {
                                     channelId: e.channel_id,
@@ -1454,40 +1454,40 @@
                         });
                         break;
                     case "PRIVATE_CHANNEL_INTEGRATION_CREATE":
-                        G({
+                        w({
                             type: "PRIVATE_CHANNEL_INTEGRATION_CREATE",
                             integration: t
                         });
                         break;
                     case "PRIVATE_CHANNEL_INTEGRATION_UPDATE":
-                        G({
+                        w({
                             type: "PRIVATE_CHANNEL_INTEGRATION_UPDATE",
                             integration: t
                         });
                         break;
                     case "PRIVATE_CHANNEL_INTEGRATION_DELETE":
-                        G({
+                        w({
                             type: "PRIVATE_CHANNEL_INTEGRATION_DELETE",
                             channelId: t.channel_id,
                             applicationId: t.application_id
                         });
                         break;
                     case "CREATOR_MONETIZATION_RESTRICTIONS_UPDATE":
-                        G({
+                        w({
                             type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS",
                             guildId: t.guild_id,
                             restrictions: t.restrictions
                         });
                         break;
                     case "BILLING_REFERRAL_TRIAL_OFFER_UPDATE":
-                        G({
+                        w({
                             type: "BILLING_REFERRAL_TRIAL_OFFER_UPDATE",
                             userTrialOfferId: t.user_trial_offer_id,
                             recipientId: t.recipient_id
                         });
                         break;
                     case "SPEED_TEST_CREATE":
-                        G({
+                        w({
                             type: "SPEED_TEST_CREATE",
                             streamKey: t.stream_key,
                             region: t.region,
@@ -1497,7 +1497,7 @@
                         });
                         break;
                     case "SPEED_TEST_SERVER_UPDATE":
-                        G({
+                        w({
                             type: "SPEED_TEST_SERVER_UPDATE",
                             streamKey: t.stream_key,
                             endpoint: t.endpoint,
@@ -1505,7 +1505,7 @@
                         });
                         break;
                     case "SPEED_TEST_UPDATE":
-                        G({
+                        w({
                             type: "SPEED_TEST_UPDATE",
                             streamKey: t.stream_key,
                             region: t.region,
@@ -1514,7 +1514,7 @@
                         });
                         break;
                     case "SPEED_TEST_DELETE":
-                        G({
+                        w({
                             type: "SPEED_TEST_DELETE",
                             streamKey: t.stream_key,
                             unavailable: t.unavailable,
@@ -1522,44 +1522,44 @@
                         });
                         break;
                     case "LAST_MESSAGES":
-                        G({
+                        w({
                             type: "MESSAGE_PREVIEWS_LOADED",
                             guildId: t.guild_id,
                             messages: t.messages
                         });
                         break;
                     case "AUTHENTICATOR_UPDATE":
-                        G({
+                        w({
                             type: "AUTHENTICATOR_UPDATE",
                             credential: t
                         });
                         break;
                     case "AUTHENTICATOR_CREATE":
-                        G({
+                        w({
                             type: "AUTHENTICATOR_CREATE",
                             credential: t
                         });
                         break;
                     case "AUTHENTICATOR_DELETE":
-                        G({
+                        w({
                             type: "AUTHENTICATOR_DELETE",
                             credential: t
                         });
                         break;
                     case "INVENTORY_PACK_UPDATE":
-                        G({
+                        w({
                             type: "INVENTORY_PACK_UPDATE",
-                            pack: c.default.fromServer(t)
+                            pack: f.default.fromServer(t)
                         });
                         break;
                     case "INVENTORY_PACK_DELETE":
-                        G({
+                        w({
                             type: "INVENTORY_PACK_DELETE",
-                            pack: c.default.fromServer(t)
+                            pack: f.default.fromServer(t)
                         });
                         break;
                     case "NOTIFICATION_SETTINGS_UPDATE":
-                        G({
+                        w({
                             type: "NOTIFICATION_SETTINGS_UPDATE",
                             settings: {
                                 flags: t.flags
@@ -1567,93 +1567,93 @@
                         });
                         break;
                     case "GAME_INVITE_CREATE":
-                        G({
+                        w({
                             type: "GAME_INVITE_CREATE",
                             gameInvite: t
                         });
                         break;
                     case "GAME_INVITE_DELETE":
-                        G({
+                        w({
                             type: "GAME_INVITE_DELETE",
                             inviteId: t.invite_id
                         });
                         break;
                     case "GAME_INVITE_DELETE_MANY":
-                        G({
+                        w({
                             type: "GAME_INVITE_DELETE_MANY",
                             inviteIds: t.invite_ids
                         });
                         break;
                     case "PREMIUM_MARKETING_PREVIEW":
-                        G({
+                        w({
                             type: "PREMIUM_MARKETING_PREVIEW",
                             properties: t.properties
                         });
                         break;
                     case "USER_APPLICATION_UPDATE":
-                        G({
+                        w({
                             type: "USER_APPLICATION_UPDATE",
                             applicationId: t.application_id
                         });
                         break;
                     case "USER_APPLICATION_REMOVE":
-                        G({
+                        w({
                             type: "USER_APPLICATION_REMOVE",
                             applicationId: t.application_id
                         })
                 }
             }
 
-            function G(e) {
-                s.default.dispatch(e).catch(t => M.socket.resetSocketOnError(t, e.type))
+            function w(e) {
+                a.default.dispatch(e).catch(t => b.socket.resetSocketOnError(t, e.type))
             }
 
-            function k(e, t, n) {
+            function L(e, t, n) {
                 let {
-                    roles: i,
-                    nick: l,
-                    avatar: s,
-                    flags: r,
-                    premium_since: u,
-                    pending: o,
-                    joined_at: d,
-                    communication_disabled_until: c,
+                    roles: s,
+                    nick: r,
+                    avatar: a,
+                    flags: o,
+                    premium_since: d,
+                    pending: u,
+                    joined_at: l,
+                    communication_disabled_until: f,
                     unusual_dm_activity_until: _
-                } = n, E = m.default.getMember(e, t.id);
-                (!(null != E && E.nick === l && E.avatar === s && a.isEqual(E.roles, i)) || E.premiumSince !== u || E.isPending !== o || E.joinedAt !== d || E.communicationDisabledUntil !== c || E.flags !== r || E.unusualDMActivityUntil !== _) && G({
+                } = n, c = p.default.getMember(e, t.id);
+                (!(null != c && c.nick === r && c.avatar === a && i.isEqual(c.roles, s)) || c.premiumSince !== d || c.isPending !== u || c.joinedAt !== l || c.communicationDisabledUntil !== f || c.flags !== o || c.unusualDMActivityUntil !== _) && w({
                     type: "GUILD_MEMBER_ADD",
                     guildId: e,
                     user: t,
-                    roles: i,
-                    nick: l,
-                    avatar: s,
-                    premiumSince: u,
-                    isPending: o,
-                    joinedAt: d,
-                    communicationDisabledUntil: c,
+                    roles: s,
+                    nick: r,
+                    avatar: a,
+                    premiumSince: d,
+                    isPending: u,
+                    joinedAt: l,
+                    communicationDisabledUntil: f,
                     unusualDMActivityUntil: _,
-                    flags: r
+                    flags: o
                 })
             }
 
-            function F(e) {
+            function U(e) {
                 let {
                     member: t,
                     mentions: n,
-                    author: i,
-                    guild_id: a
+                    author: s,
+                    guild_id: i
                 } = e;
-                null != t && k(a, i, t), null != n && n.forEach(e => {
+                null != t && L(i, s, t), null != n && n.forEach(e => {
                     if (null != e.member) {
                         let {
                             member: t
                         } = e;
-                        delete e.member, k(a, e, t)
+                        delete e.member, L(i, e, t)
                     }
                 })
             }
 
-            function w(e) {
+            function G(e) {
                 return e.map(e => ({
                     sessionId: e.session_id,
                     lastModified: e.last_modified,
@@ -1665,27 +1665,27 @@
                 }))
             }
 
-            function V() {
-                M.socket.isSessionEstablished() && I.default.getPendingLobbies().forEach(e => {
-                    M.socket.lobbyConnect(e.id, e.secret)
+            function F() {
+                b.socket.isSessionEstablished() && T.default.getPendingLobbies().forEach(e => {
+                    b.socket.lobbyConnect(e.id, e.secret)
                 })
             }
 
-            function H(e) {
+            function x(e) {
                 let {
                     guildId: t,
                     user: n,
-                    status: i,
-                    activities: a,
-                    clientStatus: l,
-                    broadcast: s
+                    status: s,
+                    activities: i,
+                    clientStatus: r,
+                    broadcast: a
                 } = e;
-                P.add({
+                k.add({
                     guildId: t,
                     user: n,
-                    status: i,
-                    clientStatus: l,
-                    activities: a,
-                    broadcast: s
+                    status: s,
+                    clientStatus: r,
+                    activities: i,
+                    broadcast: a
                 })
             }

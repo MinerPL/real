@@ -1,132 +1,132 @@
             "use strict";
-            var i, n = r("390493");
+            var r, i = s("390493");
 
-            function o(t, e, r) {
+            function n(t, e, s) {
                 return (e = function(t) {
                     var e = function(t, e) {
                         if ("object" != typeof t || null === t) return t;
-                        var r = t[Symbol.toPrimitive];
-                        if (void 0 !== r) {
-                            var i = r.call(t, e || "default");
-                            if ("object" != typeof i) return i;
+                        var s = t[Symbol.toPrimitive];
+                        if (void 0 !== s) {
+                            var r = s.call(t, e || "default");
+                            if ("object" != typeof r) return r;
                             throw TypeError("@@toPrimitive must return a primitive value.")
                         }
                         return ("string" === e ? String : Number)(t)
                     }(t, "string");
                     return "symbol" == typeof e ? e : String(e)
                 }(e)) in t ? Object.defineProperty(t, e, {
-                    value: r,
+                    value: s,
                     enumerable: !0,
                     configurable: !0,
                     writable: !0
-                }) : t[e] = r, t
+                }) : t[e] = s, t
             }
-            r("70102");
-            var a = r("362796"),
-                s = Symbol("lastResolve"),
+            s("70102");
+            var c = s("362796"),
+                o = Symbol("lastResolve"),
                 f = Symbol("lastReject"),
-                h = Symbol("error"),
-                c = Symbol("ended"),
-                u = Symbol("lastPromise"),
-                d = Symbol("handlePromise"),
-                l = Symbol("stream");
+                u = Symbol("error"),
+                a = Symbol("ended"),
+                d = Symbol("lastPromise"),
+                p = Symbol("handlePromise"),
+                b = Symbol("stream");
 
-            function p(t, e) {
+            function h(t, e) {
                 return {
                     value: t,
                     done: e
                 }
             }
 
-            function b(t) {
-                var e = t[s];
+            function l(t) {
+                var e = t[o];
                 if (null !== e) {
-                    var r = t[l].read();
-                    null !== r && (t[u] = null, t[s] = null, t[f] = null, e(p(r, !1)))
+                    var s = t[b].read();
+                    null !== s && (t[d] = null, t[o] = null, t[f] = null, e(h(s, !1)))
                 }
             }
 
-            function m(t) {
-                n.nextTick(b, t)
+            function g(t) {
+                i.nextTick(l, t)
             }
-            var g = Object.getPrototypeOf(function() {}),
-                y = Object.setPrototypeOf((o(i = {
+            var v = Object.getPrototypeOf(function() {}),
+                x = Object.setPrototypeOf((n(r = {
                     get stream() {
-                        return this[l]
+                        return this[b]
                     },
                     next: function() {
-                        var t, e, r, i = this,
-                            o = this[h];
-                        if (null !== o) return Promise.reject(o);
-                        if (this[c]) return Promise.resolve(p(void 0, !0));
-                        if (this[l].destroyed) return new Promise(function(t, e) {
-                            n.nextTick(function() {
-                                i[h] ? e(i[h]) : t(p(void 0, !0))
+                        var t, e, s, r = this,
+                            n = this[u];
+                        if (null !== n) return Promise.reject(n);
+                        if (this[a]) return Promise.resolve(h(void 0, !0));
+                        if (this[b].destroyed) return new Promise(function(t, e) {
+                            i.nextTick(function() {
+                                r[u] ? e(r[u]) : t(h(void 0, !0))
                             })
                         });
-                        var a = this[u];
-                        if (a) {
+                        var c = this[d];
+                        if (c) {
                             ;
-                            r = new Promise((t = a, e = this, function(r, i) {
+                            s = new Promise((t = c, e = this, function(s, r) {
                                 t.then(function() {
-                                    if (e[c]) {
-                                        r(p(void 0, !0));
+                                    if (e[a]) {
+                                        s(h(void 0, !0));
                                         return
                                     }
-                                    e[d](r, i)
-                                }, i)
+                                    e[p](s, r)
+                                }, r)
                             }))
                         } else {
-                            var s = this[l].read();
-                            if (null !== s) return Promise.resolve(p(s, !1));
-                            r = new Promise(this[d])
+                            var o = this[b].read();
+                            if (null !== o) return Promise.resolve(h(o, !1));
+                            s = new Promise(this[p])
                         }
-                        return this[u] = r, r
+                        return this[d] = s, s
                     }
                 }, Symbol.asyncIterator, function() {
                     return this
-                }), o(i, "return", function() {
+                }), n(r, "return", function() {
                     var t = this;
-                    return new Promise(function(e, r) {
-                        t[l].destroy(null, function(t) {
+                    return new Promise(function(e, s) {
+                        t[b].destroy(null, function(t) {
                             if (t) {
-                                r(t);
+                                s(t);
                                 return
                             }
-                            e(p(void 0, !0))
+                            e(h(void 0, !0))
                         })
                     })
-                }), i), g);
+                }), r), v);
             t.exports = function(t) {
-                var e, r = Object.create(y, (o(e = {}, l, {
+                var e, s = Object.create(x, (n(e = {}, b, {
                     value: t,
                     writable: !0
-                }), o(e, s, {
+                }), n(e, o, {
                     value: null,
                     writable: !0
-                }), o(e, f, {
+                }), n(e, f, {
                     value: null,
                     writable: !0
-                }), o(e, h, {
+                }), n(e, u, {
                     value: null,
                     writable: !0
-                }), o(e, c, {
+                }), n(e, a, {
                     value: t._readableState.endEmitted,
                     writable: !0
-                }), o(e, d, {
+                }), n(e, p, {
                     value: function(t, e) {
-                        var i = r[l].read();
-                        i ? (r[u] = null, r[s] = null, r[f] = null, t(p(i, !1))) : (r[s] = t, r[f] = e)
+                        var r = s[b].read();
+                        r ? (s[d] = null, s[o] = null, s[f] = null, t(h(r, !1))) : (s[o] = t, s[f] = e)
                     },
                     writable: !0
                 }), e));
-                return r[u] = null, a(t, function(t) {
+                return s[d] = null, c(t, function(t) {
                     if (t && "ERR_STREAM_PREMATURE_CLOSE" !== t.code) {
-                        var e = r[f];
-                        null !== e && (r[u] = null, r[s] = null, r[f] = null, e(t)), r[h] = t;
+                        var e = s[f];
+                        null !== e && (s[d] = null, s[o] = null, s[f] = null, e(t)), s[u] = t;
                         return
                     }
-                    var i = r[s];
-                    null !== i && (r[u] = null, r[s] = null, r[f] = null, i(p(void 0, !0))), r[c] = !0
-                }), t.on("readable", m.bind(null, r)), r
+                    var r = s[o];
+                    null !== r && (s[d] = null, s[o] = null, s[f] = null, r(h(void 0, !0))), s[a] = !0
+                }), t.on("readable", g.bind(null, s)), s
             }

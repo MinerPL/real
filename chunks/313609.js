@@ -1,27 +1,27 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return l
                 }
             }), n("70102");
-            var i = n("37983"),
-                a = n("884691"),
-                l = n("414456"),
-                s = n.n(l),
-                r = n("508330");
-            let u = e => new Promise((t, n) => {
+            var s = n("37983"),
+                i = n("884691"),
+                r = n("414456"),
+                a = n.n(r),
+                o = n("508330");
+            let d = e => new Promise((t, n) => {
                 null == e && n(Error("No image src passed"));
-                let i = new Image;
-                i.src = e, i.onload = () => t(i), i.onerror = e => n(e)
+                let s = new Image;
+                s.src = e, s.onload = () => t(s), s.onerror = e => n(e)
             });
-            class o extends a.PureComponent {
+            class u extends i.PureComponent {
                 componentDidUpdate(e) {
                     e.src !== this.props.src && this.setState({
                         loaded: !1
                     }, () => this.initialize())
                 }
                 initialize() {
-                    u(this.props.src).then(() => {
+                    d(this.props.src).then(() => {
                         !this.unmounting && this.setState({
                             loaded: !0
                         })
@@ -35,30 +35,30 @@
                         className: e,
                         src: t,
                         alt: n,
-                        width: a,
-                        height: l,
-                        onLoad: u,
-                        style: o,
-                        imageClassName: d
+                        width: i,
+                        height: r,
+                        onLoad: d,
+                        style: u,
+                        imageClassName: l
                     } = this.props, {
-                        loaded: c
+                        loaded: f
                     } = this.state;
-                    return (0, i.jsx)("div", {
+                    return (0, s.jsx)("div", {
                         className: e,
                         style: {
-                            ...o,
-                            width: a,
-                            height: l
+                            ...u,
+                            width: i,
+                            height: r
                         },
-                        children: (0, i.jsx)("img", {
-                            className: s(r.image, d, {
-                                [r.loaded]: c
+                        children: (0, s.jsx)("img", {
+                            className: a(o.image, l, {
+                                [o.loaded]: f
                             }),
-                            width: a,
-                            height: l,
+                            width: i,
+                            height: r,
                             src: t,
                             alt: n,
-                            onLoad: u
+                            onLoad: d
                         })
                     })
                 }
@@ -68,9 +68,9 @@
                     }, this.initialize()
                 }
             }
-            o.defaultProps = {
+            u.defaultProps = {
                 width: 0,
                 height: 0,
                 alt: ""
             };
-            var d = o
+            var l = u

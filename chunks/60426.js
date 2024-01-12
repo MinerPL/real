@@ -1,9 +1,9 @@
             "use strict";
-            var i = r("366400"),
-                n = r("16662");
+            var r = s("366400"),
+                i = s("16662");
             t.exports = function() {
-                var t = n();
-                return i(Array.prototype, {
+                var t = i();
+                return r(Array.prototype, {
                     map: t
                 }, {
                     map: function() {

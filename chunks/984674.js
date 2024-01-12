@@ -1,21 +1,21 @@
             "use strict";
-            t.r(n), t.d(n, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return r
                 }
             });
-            var l = t("660478"),
-                i = t("299039");
+            var s = n("660478"),
+                i = n("299039");
 
-            function d(e) {
+            function r(e) {
                 if (null == e.threadMetadata) return 0;
-                let n = 6e4 * e.threadMetadata.autoArchiveDuration;
+                let t = 6e4 * e.threadMetadata.autoArchiveDuration;
                 return function(e) {
-                    var n;
+                    var t;
                     if (null == e.threadMetadata) return 0;
-                    let t = null !== (n = l.default.lastMessageId(e.id)) && void 0 !== n ? n : e.id,
-                        d = i.default.extractTimestamp(t),
-                        u = null != e.threadMetadata.archiveTimestamp ? new Date(e.threadMetadata.archiveTimestamp).getTime() : 0;
-                    return Math.max(d, u)
-                }(e) + n
+                    let n = null !== (t = s.default.lastMessageId(e.id)) && void 0 !== t ? t : e.id,
+                        r = i.default.extractTimestamp(n),
+                        a = null != e.threadMetadata.archiveTimestamp ? new Date(e.threadMetadata.archiveTimestamp).getTime() : 0;
+                    return Math.max(r, a)
+                }(e) + t
             }

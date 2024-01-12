@@ -1,9 +1,9 @@
             "use strict";
             e._reverse = function(t) {
                 let e = {};
-                return Object.keys(t).forEach(function(r) {
-                    (0 | r) == r && (r |= 0);
-                    let i = t[r];
-                    e[i] = r
+                return Object.keys(t).forEach(function(s) {
+                    (0 | s) == s && (s |= 0);
+                    let r = t[s];
+                    e[r] = s
                 }), e
-            }, e.der = r("335036")
+            }, e.der = s("335036")

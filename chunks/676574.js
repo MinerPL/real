@@ -1,16 +1,16 @@
             "use strict";
             n.r(t), n.d(t, {
                 DevSettingsCategory: function() {
-                    return i
+                    return s
                 },
                 default: function() {
-                    return d
+                    return l
                 }
             }), n("222007");
-            var i, a, l = n("446674"),
-                s = n("913144");
-            (a = i || (i = {}))[a.MESSAGING = 0] = "MESSAGING", a[a.OVERLAYS = 1] = "OVERLAYS";
-            let r = {
+            var s, i, r = n("446674"),
+                a = n("913144");
+            (i = s || (s = {}))[i.MESSAGING = 0] = "MESSAGING", i[i.OVERLAYS = 1] = "OVERLAYS";
+            let o = {
                     visual_effect_view_overrides: {
                         label: "Blur view overrides for designers to test with",
                         category: 1
@@ -32,43 +32,43 @@
                         category: 0
                     }
                 },
-                u = {};
-            class o extends l.default.DeviceSettingsStore {
+                d = {};
+            class u extends r.default.DeviceSettingsStore {
                 getUserAgnosticState() {
                     return {
-                        toggleStates: u
+                        toggleStates: d
                     }
                 }
                 initialize(e) {
-                    for (var t in r) {
-                        var n, i;
-                        let a = null !== (i = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== i && i;
-                        u[t] = a
+                    for (var t in o) {
+                        var n, s;
+                        let i = null !== (s = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== s && s;
+                        d[t] = i
                     }
                 }
                 get(e) {
                     var t;
-                    return null !== (t = u[e]) && void 0 !== t && t
+                    return null !== (t = d[e]) && void 0 !== t && t
                 }
                 set(e, t) {
-                    return u[e] = t, t
+                    return d[e] = t, t
                 }
                 all() {
-                    return u
+                    return d
                 }
                 allByCategory(e) {
-                    return Object.entries(r).filter(t => {
-                        let [n, i] = t;
-                        return i.category === e
+                    return Object.entries(o).filter(t => {
+                        let [n, s] = t;
+                        return s.category === e
                     }).map(e => {
                         let [t, n] = e;
-                        return [t, u[t], n]
+                        return [t, d[t], n]
                     })
                 }
             }
-            o.displayName = "DevToolsDevSettingsStore", o.persistKey = "DevToolsDevSettingsStore";
-            var d = new o(s.default, {
+            u.displayName = "DevToolsDevSettingsStore", u.persistKey = "DevToolsDevSettingsStore";
+            var l = new u(a.default, {
                 DEV_TOOLS_DEV_SETTING_SET: function(e) {
-                    u[e.toggle] = e.value
+                    d[e.toggle] = e.value
                 }
             })

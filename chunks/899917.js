@@ -1,79 +1,79 @@
             "use strict";
-            r.r(t), r.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return f
                 }
             });
-            var n = r("37983");
-            r("884691");
-            var s = r("446674"),
-                i = r("77078"),
-                a = r("387225"),
-                o = r("697218"),
-                u = r("145131"),
-                l = r("782340"),
-                d = r("557573");
+            var r = n("37983");
+            n("884691");
+            var o = n("446674"),
+                i = n("77078"),
+                a = n("387225"),
+                u = n("697218"),
+                s = n("145131"),
+                l = n("782340"),
+                c = n("557573");
 
-            function E(e) {
+            function d(e) {
                 let {
                     onClose: t
-                } = e, u = (0, s.useStateFromStores)([o.default], () => o.default.getCurrentUser());
+                } = e, s = (0, o.useStateFromStores)([u.default], () => u.default.getCurrentUser());
 
-                function d() {
+                function c() {
                     null == t || t()
                 }
 
-                function E() {
-                    d(), (0, i.openModalLazy)(async () => {
+                function d() {
+                    c(), (0, i.openModalLazy)(async () => {
                         let {
                             default: e
-                        } = await r.el("867693").then(r.bind(r, "867693"));
-                        return t => (0, n.jsx)(e, {
+                        } = await n.el("867693").then(n.bind(n, "867693"));
+                        return t => (0, r.jsx)(e, {
                             ...t
                         })
                     })
                 }
-                return (null == u ? void 0 : u.email) == null ? (0, n.jsx)(i.Button, {
-                    onClick: E,
+                return (null == s ? void 0 : s.email) == null ? (0, r.jsx)(i.Button, {
+                    onClick: d,
                     color: i.Button.Colors.BRAND,
                     look: i.Button.Looks.FILLED,
                     children: l.default.Messages.ADD_EMAIL_SHORT
-                }) : (0, n.jsxs)(n.Fragment, {
-                    children: [(0, n.jsx)(i.Button, {
-                        onClick: E,
+                }) : (0, r.jsxs)(r.Fragment, {
+                    children: [(0, r.jsx)(i.Button, {
+                        onClick: d,
                         color: i.Button.Colors.PRIMARY,
                         look: i.Button.Looks.LINK,
                         children: l.default.Messages.CHANGE_EMAIL_SHORT
-                    }), (0, n.jsx)(a.default, {
+                    }), (0, r.jsx)(a.default, {
                         color: i.Button.Colors.BRAND,
-                        onClick: d
+                        onClick: c
                     })]
                 })
             }
-            var _ = function(e) {
+            var f = function(e) {
                 let {
                     onClose: t,
-                    transitionState: r
+                    transitionState: n
                 } = e;
-                return (0, n.jsxs)(i.ModalRoot, {
-                    transitionState: r,
-                    children: [(0, n.jsx)(i.ModalHeader, {
-                        children: (0, n.jsx)(i.FormTitle, {
+                return (0, r.jsxs)(i.ModalRoot, {
+                    transitionState: n,
+                    children: [(0, r.jsx)(i.ModalHeader, {
+                        children: (0, r.jsx)(i.FormTitle, {
                             tag: i.FormTitleTags.H4,
                             children: l.default.Messages.PREMIUM_NOT_VERIFIED
                         })
-                    }), (0, n.jsxs)(i.ModalContent, {
-                        children: [(0, n.jsx)("div", {
-                            className: d.imageUnverified
-                        }), (0, n.jsx)(i.Text, {
+                    }), (0, r.jsxs)(i.ModalContent, {
+                        children: [(0, r.jsx)("div", {
+                            className: c.imageUnverified
+                        }), (0, r.jsx)(i.Text, {
                             variant: "text-md/normal",
-                            className: d.message,
+                            className: c.message,
                             children: l.default.Messages.PREMIUM_NOT_VERIFIED_BODY
                         })]
-                    }), (0, n.jsx)(i.ModalFooter, {
-                        children: (0, n.jsx)(u.default, {
-                            justify: u.default.Justify.END,
-                            children: (0, n.jsx)(E, {
+                    }), (0, r.jsx)(i.ModalFooter, {
+                        children: (0, r.jsx)(s.default, {
+                            justify: s.default.Justify.END,
+                            children: (0, r.jsx)(d, {
                                 onClose: t
                             })
                         })

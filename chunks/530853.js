@@ -36,14 +36,14 @@
                 R = a("724210"),
                 b = a("782340"),
                 G = a("520627");
-            let y = async () => {
+            let O = async () => {
                 let {
                     default: e
                 } = await a.el("814781").then(a.bind(a, "814781"));
                 return e
             };
 
-            function O(e) {
+            function y(e) {
                 let {
                     item: t,
                     referenceMessageBundles: a,
@@ -138,7 +138,7 @@
                 if (null == Y || null == V || null == W || $) return null;
                 let eo = e => {
                     e.stopPropagation(), (0, o.openContextMenuLazy)(e, async () => {
-                        let e = await y();
+                        let e = await O();
                         return t => (0, l.jsx)(e, {
                             ...t,
                             item: H,
@@ -204,7 +204,7 @@
                                 animateAvatar: q,
                                 onMessageClick: er
                             })
-                        }), (0, l.jsx)(O, {
+                        }), (0, l.jsx)(y, {
                             item: H,
                             channel: Y,
                             guildId: T,

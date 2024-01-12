@@ -1,29 +1,29 @@
             "use strict";
             n.r(t), n.d(t, {
                 SelfDismissibleAlertBody: function() {
-                    return u
+                    return d
                 }
             });
-            var i = n("37983"),
-                a = n("884691"),
-                l = n("446674"),
-                s = n("76393"),
-                r = n("347279");
+            var s = n("37983"),
+                i = n("884691"),
+                r = n("446674"),
+                a = n("76393"),
+                o = n("347279");
 
-            function u(e) {
+            function d(e) {
                 let {
                     body: t,
                     dismissCallback: n,
-                    errorCodeMessage: u
-                } = e, o = (0, l.useStateFromStores)([s.default], () => s.default.getRemoteSessionId());
-                return (a.useEffect(() => {
-                    null != o && n()
-                }, [o, n]), null == u) ? (0, i.jsx)(i.Fragment, {
+                    errorCodeMessage: d
+                } = e, u = (0, r.useStateFromStores)([a.default], () => a.default.getRemoteSessionId());
+                return (i.useEffect(() => {
+                    null != u && n()
+                }, [u, n]), null == d) ? (0, s.jsx)(s.Fragment, {
                     children: t
-                }) : (0, i.jsxs)(i.Fragment, {
-                    children: [t, (0, i.jsx)("div", {
-                        className: r.errorCodeMessage,
-                        children: u
+                }) : (0, s.jsxs)(s.Fragment, {
+                    children: [t, (0, s.jsx)("div", {
+                        className: o.errorCodeMessage,
+                        children: d
                     })]
                 })
             }

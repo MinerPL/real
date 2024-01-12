@@ -1,4 +1,4 @@
-            var i = r("708893");
+            var r = s("708893");
             t.exports = function(t) {
-                return new i().update(t).digest()
+                return new r().update(t).digest()
             }

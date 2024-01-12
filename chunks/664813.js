@@ -1,19 +1,19 @@
             "use strict";
-            var i = r("390493");
-            r("70102");
-            var n = r("912065").Buffer,
-                o = r.g.crypto || r.g.msCrypto;
-            o && o.getRandomValues ? t.exports = function(t, e) {
+            var r = s("390493");
+            s("70102");
+            var i = s("912065").Buffer,
+                n = s.g.crypto || s.g.msCrypto;
+            n && n.getRandomValues ? t.exports = function(t, e) {
                 if (t > 4294967295) throw RangeError("requested too many random bytes");
-                var r = n.allocUnsafe(t);
+                var s = i.allocUnsafe(t);
                 if (t > 0) {
                     if (t > 65536)
-                        for (var a = 0; a < t; a += 65536) o.getRandomValues(r.slice(a, a + 65536));
-                    else o.getRandomValues(r)
+                        for (var c = 0; c < t; c += 65536) n.getRandomValues(s.slice(c, c + 65536));
+                    else n.getRandomValues(s)
                 }
-                return "function" == typeof e ? i.nextTick(function() {
-                    e(null, r)
-                }) : r
+                return "function" == typeof e ? r.nextTick(function() {
+                    e(null, s)
+                }) : s
             } : t.exports = function() {
                 throw Error("Secure random number generation is not supported by this browser.\nUse Chrome, Firefox or Internet Explorer 11")
             }

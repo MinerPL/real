@@ -1,119 +1,119 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return T
                 }
             }), n("222007");
-            var i = n("988415"),
-                a = n("42203"),
-                l = n("455079");
-            let s = new Set,
-                r = new Set,
-                u = !1,
-                o = null;
+            var s = n("988415"),
+                i = n("42203"),
+                r = n("455079");
+            let a = new Set,
+                o = new Set,
+                d = !1,
+                u = null;
 
-            function d(e) {
+            function l(e) {
                 return e.isMessageRequest && !e.isSpam
             }
 
-            function c(e) {
+            function f(e) {
                 let t = !1;
-                return d(e) && !s.has(e.id) && (s.add(e.id), t = !0), !d(e) && s.has(e.id) && (s.delete(e.id), t = !0), !d(e) && r.has(e.id) && (r.delete(e.id), t = !0), t
+                return l(e) && !a.has(e.id) && (a.add(e.id), t = !0), !l(e) && a.has(e.id) && (a.delete(e.id), t = !0), !l(e) && o.has(e.id) && (o.delete(e.id), t = !0), t
             }
 
             function _(e) {
                 var t;
-                null != e && (o = null !== (t = (0, i.getCountryCodeByAlpha2)(e)) && void 0 !== t ? t : (0, i.getDefaultCountryCode)())
+                null != e && (u = null !== (t = (0, s.getCountryCodeByAlpha2)(e)) && void 0 !== t ? t : (0, s.getDefaultCountryCode)())
             }
 
-            function E(e) {
-                "CONNECTION_OPEN" === e.type && _(e.countryCode), s.clear(), r.clear(), Object.values(a.default.getMutablePrivateChannels()).forEach(e => {
-                    c(e)
-                }), u = !0
+            function c(e) {
+                "CONNECTION_OPEN" === e.type && _(e.countryCode), a.clear(), o.clear(), Object.values(i.default.getMutablePrivateChannels()).forEach(e => {
+                    f(e)
+                }), d = !0
             }
 
-            function f(e) {
+            function g(e) {
                 let {
                     channelId: t
                 } = e;
-                r.add(t)
+                o.add(t)
+            }
+
+            function m(e) {
+                let {
+                    channel: t
+                } = e;
+                return f(t)
             }
 
             function h(e) {
                 let {
-                    channel: t
-                } = e;
-                return c(t)
-            }
-
-            function p(e) {
-                let {
                     channels: t
                 } = e;
-                for (let e of t) c(e)
+                for (let e of t) f(e)
             }
 
-            function T(e) {
+            function v(e) {
                 let {
                     channel: t
                 } = e;
-                return !!s.has(t.id) && (s.delete(t.id), !0)
+                return !!a.has(t.id) && (a.delete(t.id), !0)
             }
 
-            function C(e) {
+            function E(e) {
                 let {
                     messageRequestChannelIds: t
                 } = e;
-                t.forEach(e => s.add(e))
+                t.forEach(e => a.add(e))
             }
 
-            function m(e) {
+            function p(e) {
                 let {
                     countryCode: t
                 } = e;
                 _(t)
             }
-            class S extends l.default {
+            class y extends r.default {
                 takeSnapshot() {
                     return {
-                        version: S.LATEST_SNAPSHOT_VERSION,
-                        data: Array.from(s)
+                        version: y.LATEST_SNAPSHOT_VERSION,
+                        data: Array.from(a)
                     }
                 }
                 getMessageRequestChannelIds() {
-                    return s
+                    return a
                 }
                 getMessageRequestsCount() {
-                    return s.size
+                    return a.size
                 }
                 isMessageRequest(e) {
-                    return s.has(e)
+                    return a.has(e)
                 }
                 isAcceptedOptimistic(e) {
-                    return r.has(e)
+                    return o.has(e)
                 }
                 getUserCountryCode() {
-                    return o
+                    return u
                 }
                 isReady() {
-                    return u
+                    return d
                 }
                 constructor() {
                     super(), this.loadCache = () => {
-                        let e = this.readSnapshot(S.LATEST_SNAPSHOT_VERSION);
-                        null != e && (s = new Set(e))
+                        let e = this.readSnapshot(y.LATEST_SNAPSHOT_VERSION);
+                        null != e && (a = new Set(e))
                     }, this.registerActionHandlers({
-                        CONNECTION_OPEN: E,
-                        CONNECTION_OPEN_SUPPLEMENTAL: E,
+                        CONNECTION_OPEN: c,
+                        CONNECTION_OPEN_SUPPLEMENTAL: c,
                         CACHE_LOADED_LAZY: this.loadCache,
-                        OVERLAY_INITIALIZE: C,
-                        CHANNEL_CREATE: h,
-                        CHANNEL_UPDATES: p,
-                        CHANNEL_DELETE: T,
-                        SET_LOCATION_METADATA: m,
-                        MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: f
-                    }), this.waitFor(a.default)
+                        OVERLAY_INITIALIZE: E,
+                        CHANNEL_CREATE: m,
+                        CHANNEL_UPDATES: h,
+                        CHANNEL_DELETE: v,
+                        SET_LOCATION_METADATA: p,
+                        MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: g
+                    }), this.waitFor(i.default)
                 }
             }
-            S.displayName = "MessageRequestStore", S.LATEST_SNAPSHOT_VERSION = 1;
-            var I = new S
+            y.displayName = "MessageRequestStore", y.LATEST_SNAPSHOT_VERSION = 1;
+            var T = new y

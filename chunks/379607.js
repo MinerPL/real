@@ -91,7 +91,7 @@
                         })]
                     })]
                 })
-            }, y = e => {
+            }, O = e => {
                 let {
                     channel: t
                 } = e, a = (0, I.default)(t), n = (0, _.getChannelIconComponent)(t), s = (0, _.getChannelIconTooltipText)(t);
@@ -112,7 +112,7 @@
                         children: a
                     })]
                 })
-            }, O = n.memo(function(e) {
+            }, y = n.memo(function(e) {
                 let {
                     guildId: t,
                     featuredItem: a
@@ -132,7 +132,7 @@
                     className: F.featuredItemsGroupWrapper,
                     children: [(0, l.jsx)(G, {
                         featuredItem: a.featuredItem
-                    }), (0, l.jsx)(y, {
+                    }), (0, l.jsx)(O, {
                         channel: s
                     }), (0, l.jsx)(N.default, {
                         className: F.featuredItemsGroupCozy,
@@ -160,7 +160,7 @@
                     className: F.featuredItemsGroupWrapper,
                     children: [(0, l.jsx)(G, {
                         featuredItem: a.featuredItem
-                    }), (0, l.jsx)(y, {
+                    }), (0, l.jsx)(O, {
                         channel: s
                     }), (0, l.jsx)(m.Heading, {
                         className: F.forumPostHeading,
@@ -212,7 +212,7 @@
                         renderEmptyState: k,
                         renderHeader: U,
                         renderItem: function(e) {
-                            return null == e ? [] : e.type === u.GuildFeedItemTypes.MESSAGE ? [(0, l.jsx)(O, {
+                            return null == e ? [] : e.type === u.GuildFeedItemTypes.MESSAGE ? [(0, l.jsx)(y, {
                                 guildId: t,
                                 featuredItem: e
                             }, e.id)] : e.type === u.GuildFeedItemTypes.FORUM_POST ? [(0, l.jsx)(H, {

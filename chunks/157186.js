@@ -1,35 +1,35 @@
             "use strict";
             n.r(t), n.d(t, {
                 shouldShowMembershipVerificationGate: function() {
-                    return u
+                    return d
                 },
                 useShowMemberVerificationGate: function() {
-                    return o
+                    return u
                 }
             }), n("222007");
-            var i = n("446674"),
-                a = n("26989"),
-                l = n("305961"),
-                s = n("88093"),
-                r = n("697218");
+            var s = n("446674"),
+                i = n("26989"),
+                r = n("305961"),
+                a = n("88093"),
+                o = n("697218");
 
-            function u(e) {
-                let [t, n, i, u] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.default, s.default, r.default, a.default];
+            function d(e) {
+                let [t, n, s, d] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.default, a.default, o.default, i.default];
                 if (null == e) return !1;
-                let o = t.getGuild(e),
+                let u = t.getGuild(e),
                     {
-                        notClaimed: d
+                        notClaimed: l
                     } = n.getCheck(e),
-                    c = i.getCurrentUser(),
+                    f = s.getCurrentUser(),
                     _ = !1;
-                if (null != c) {
-                    var E, f;
-                    _ = null !== (f = null === (E = u.getMember(e, c.id)) || void 0 === E ? void 0 : E.isPending) && void 0 !== f && f
+                if (null != f) {
+                    var c, g;
+                    _ = null !== (g = null === (c = d.getMember(e, f.id)) || void 0 === c ? void 0 : c.isPending) && void 0 !== g && g
                 }
-                let h = _ || d;
-                return h && !!(null == o ? void 0 : o.hasVerificationGate())
+                let m = _ || l;
+                return m && !!(null == u ? void 0 : u.hasVerificationGate())
             }
 
-            function o(e) {
-                return (0, i.useStateFromStores)([l.default, s.default, r.default, a.default], () => null != e && u(e, [l.default, s.default, r.default, a.default]), [e])
+            function u(e) {
+                return (0, s.useStateFromStores)([r.default, a.default, o.default, i.default], () => null != e && d(e, [r.default, a.default, o.default, i.default]), [e])
             }

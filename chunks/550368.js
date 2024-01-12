@@ -1,114 +1,114 @@
             "use strict";
             n.r(t), n.d(t, {
                 getAssetFromImageURL: function() {
-                    return I
+                    return T
                 },
                 getAssetImage: function() {
-                    return g
+                    return C
                 },
                 getAssets: function() {
-                    return A
+                    return S
                 },
                 fetchAssetIds: function() {
-                    return y
+                    return N
                 },
                 getAssetIds: function() {
-                    return v
+                    return O
                 }
             }), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
-            var i = n("627445"),
-                a = n.n(i),
-                l = n("917351"),
-                s = n.n(l),
-                r = n("872717"),
-                u = n("913144"),
-                o = n("605250"),
-                d = n("407063"),
-                c = n("49111");
+            var s = n("627445"),
+                i = n.n(s),
+                r = n("917351"),
+                a = n.n(r),
+                o = n("872717"),
+                d = n("913144"),
+                u = n("605250"),
+                l = n("407063"),
+                f = n("49111");
             let _ = "https://i.scdn.co/image/",
-                E = (e, t, n) => "https://static-cdn.jtvnw.net/previews-ttv/live_user_".concat(e, "-").concat(t, "x").concat(n, ".jpg"),
-                f = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
-                h = e => "https://i.ytimg.com/vi/".concat(e, "/hqdefault_live.jpg"),
-                p = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
-                T = {
-                    [c.PlatformTypes.SPOTIFY]: {
+                c = (e, t, n) => "https://static-cdn.jtvnw.net/previews-ttv/live_user_".concat(e, "-").concat(t, "x").concat(n, ".jpg"),
+                g = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
+                m = e => "https://i.ytimg.com/vi/".concat(e, "/hqdefault_live.jpg"),
+                h = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
+                v = {
+                    [f.PlatformTypes.SPOTIFY]: {
                         deserialize: e => "".concat(_).concat(encodeURIComponent(e)),
                         serialize: e => e.split(_)[1]
                     },
-                    [c.PlatformTypes.TWITCH]: {
-                        deserialize: (e, t) => E(encodeURIComponent(e), t[0], t[1]),
+                    [f.PlatformTypes.TWITCH]: {
+                        deserialize: (e, t) => c(encodeURIComponent(e), t[0], t[1]),
                         serialize: e => {
-                            let t = e.match(f);
+                            let t = e.match(g);
                             return null != t ? t[1] : null
                         }
                     },
-                    [c.PlatformTypes.YOUTUBE]: {
-                        deserialize: e => h(encodeURIComponent(e)),
+                    [f.PlatformTypes.YOUTUBE]: {
+                        deserialize: e => m(encodeURIComponent(e)),
                         serialize: e => {
-                            let t = e.match(p);
+                            let t = e.match(h);
                             return null != t ? t[1] : null
                         }
                     },
                     mp: {
-                        deserialize: e => (a(null != window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT, "MEDIA_PROXY_ENDPOINT not configured"), new URL(e, location.protocol + window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT).toString()),
+                        deserialize: e => (i(null != window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT, "MEDIA_PROXY_ENDPOINT not configured"), new URL(e, location.protocol + window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT).toString()),
                         serialize: e => e
                     }
                 },
-                C = {},
-                m = {};
-            async function S(e) {
+                E = {},
+                p = {};
+            async function y(e) {
                 let {
                     body: t
-                } = await r.default.get({
-                    url: c.Endpoints.APPLICATION_ASSETS(e),
+                } = await o.default.get({
+                    url: f.Endpoints.APPLICATION_ASSETS(e),
                     oldFormErrors: !0
                 });
-                return C[e] = {
-                    assets: s.keyBy(t, "name"),
+                return E[e] = {
+                    assets: a.keyBy(t, "name"),
                     lastUpdated: Date.now()
                 }
             }
 
-            function I(e, t) {
-                let n = T[e].serialize(t);
+            function T(e, t) {
+                let n = v[e].serialize(t);
                 return n ? "".concat(e, ":").concat(n.toString()) : null
             }
 
-            function g(e, t, n) {
+            function C(e, t, n) {
                 if (null != t && t.includes(":")) {
-                    let [e, i] = t.split(":");
-                    if (e === c.PlatformTypes.TWITCH) {
+                    let [e, s] = t.split(":");
+                    if (e === f.PlatformTypes.TWITCH) {
                         if (null == n || "number" == typeof n) {
-                            new(0, o.default)("ApplicationAssetUtils").warn("getAssetImage: size must === [number, number] for Twitch");
+                            new(0, u.default)("ApplicationAssetUtils").warn("getAssetImage: size must === [number, number] for Twitch");
                             return
                         }
-                        return T[c.PlatformTypes.TWITCH].deserialize(i, n)
+                        return v[f.PlatformTypes.TWITCH].deserialize(s, n)
                     }
-                    return Object.prototype.hasOwnProperty.call(T, e) ? T[e].deserialize(i) : void 0
+                    return Object.prototype.hasOwnProperty.call(v, e) ? v[e].deserialize(s) : void 0
                 }
                 if (null == e || null == t) return;
-                let i = "number" == typeof n ? "?size=".concat((0, d.getBestMediaProxySize)(n)) : "";
-                return null != window.GLOBAL_ENV.CDN_HOST ? "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/app-assets/").concat(e, "/").concat(t, ".png").concat(i) : "".concat(r.default.getAPIBaseURL(), "/applications/").concat(e, "/app-assets/").concat(t, ".png").concat(i)
+                let s = "number" == typeof n ? "?size=".concat((0, l.getBestMediaProxySize)(n)) : "";
+                return null != window.GLOBAL_ENV.CDN_HOST ? "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.CDN_HOST, "/app-assets/").concat(e, "/").concat(t, ".png").concat(s) : "".concat(o.default.getAPIBaseURL(), "/applications/").concat(e, "/app-assets/").concat(t, ".png").concat(s)
             }
-            async function A(e) {
+            async function S(e) {
                 let {
                     assets: t
                 } = await
 
                 function(e) {
                     var t;
-                    let n = C[e];
-                    return null == n || (t = n.lastUpdated, Date.now() - t > 36e5) ? S(e) : Promise.resolve(n)
+                    let n = E[e];
+                    return null == n || (t = n.lastUpdated, Date.now() - t > 36e5) ? y(e) : Promise.resolve(n)
                 }(e);
                 return t
             }
-            async function N(e, t) {
-                let n = t.filter(e => null != e && !Object.prototype.hasOwnProperty.call(m, e) && null == m[e]);
+            async function I(e, t) {
+                let n = t.filter(e => null != e && !Object.prototype.hasOwnProperty.call(p, e) && null == p[e]);
                 if (0 === n.length) return;
                 let {
-                    body: i
-                } = await r.default.post({
-                    url: c.Endpoints.APPLICATION_EXTERNAL_ASSETS(e),
+                    body: s
+                } = await o.default.post({
+                    url: f.Endpoints.APPLICATION_EXTERNAL_ASSETS(e),
                     body: {
                         urls: n
                     },
@@ -118,66 +118,66 @@
                         url: e,
                         external_asset_path: t
                     }
-                    of i) m[e] = t
+                    of s) p[e] = t
             }
 
-            function O(e, t) {
+            function A(e, t) {
                 let n = 0,
-                    i = e.filter(e => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")));
-                if (i.length > 0)
-                    for (let i = 0; i < e.length; i++) {
-                        let a = e[i];
-                        if (null == a) continue;
-                        let l = Object.prototype.hasOwnProperty.call(m, a) ? m[a] : void 0;
-                        null != l && (t[i] = I("mp", l), n++)
+                    s = e.filter(e => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")));
+                if (s.length > 0)
+                    for (let s = 0; s < e.length; s++) {
+                        let i = e[s];
+                        if (null == i) continue;
+                        let r = Object.prototype.hasOwnProperty.call(p, i) ? p[i] : void 0;
+                        null != r && (t[s] = T("mp", r), n++)
                     }
                 return n === e.length
             }
 
-            function R(e, t, n, i) {
-                let a = !1;
-                for (let l = 0; l < e.length; l++) {
-                    let s = e[l];
-                    if (null == s || null != t[l]) continue;
-                    let r = Object.prototype.hasOwnProperty.call(n, s) && n[s];
-                    if (!r) {
-                        if (null == i || i <= 0) {
-                            t[l] = null;
+            function D(e, t, n, s) {
+                let i = !1;
+                for (let r = 0; r < e.length; r++) {
+                    let a = e[r];
+                    if (null == a || null != t[r]) continue;
+                    let o = Object.prototype.hasOwnProperty.call(n, a) && n[a];
+                    if (!o) {
+                        if (null == s || s <= 0) {
+                            t[r] = null;
                             continue
                         }
-                        a = !0
+                        i = !0
                     }
-                    t[l] = r.id
+                    t[r] = o.id
                 }
-                return a
+                return i
             }
-            async function y(e, t) {
+            async function N(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-                u.default.dispatch({
+                d.default.dispatch({
                     type: "APPLICATION_ASSETS_FETCH",
                     applicationId: e
                 });
-                let i = [],
-                    a = t.filter(e => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")));
-                a.length > 0 && await N(e, a);
-                let l = O(t, i);
-                if (l) return u.default.dispatch({
+                let s = [],
+                    i = t.filter(e => (null == e ? void 0 : e.startsWith("http:")) || (null == e ? void 0 : e.startsWith("https:")));
+                i.length > 0 && await I(e, i);
+                let r = A(t, s);
+                if (r) return d.default.dispatch({
                     type: "APPLICATION_ASSETS_FETCH_SUCCESS",
                     applicationId: e
-                }), i;
-                let s = await A(e),
-                    r = R(t, i, s, n);
-                return r ? S(e).then(() => y(e, t, n - 1)) : (u.default.dispatch({
+                }), s;
+                let a = await S(e),
+                    o = D(t, s, a, n);
+                return o ? y(e).then(() => N(e, t, n - 1)) : (d.default.dispatch({
                     type: "APPLICATION_ASSETS_FETCH_SUCCESS",
                     applicationId: e
-                }), i)
+                }), s)
             }
 
-            function v(e, t) {
+            function O(e, t) {
                 var n;
-                let i = [],
-                    a = O(t, i);
-                if (a) return i;
-                let l = null === (n = C[e]) || void 0 === n ? void 0 : n.assets;
-                return null == l ? i : (R(t, i, l), i)
+                let s = [],
+                    i = A(t, s);
+                if (i) return s;
+                let r = null === (n = E[e]) || void 0 === n ? void 0 : n.assets;
+                return null == r ? s : (D(t, s, r), s)
             }

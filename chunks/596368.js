@@ -1,21 +1,21 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return u
                 }
             });
-            var i = n("37983");
+            var r = n("37983");
             n("884691");
-            var r = n("497880");
+            var i = n("497880");
 
-            function l(e, t) {
+            function u(e, t) {
                 let {
                     message: n,
-                    asPartialPreview: l
+                    asPartialPreview: u
                 } = e;
-                return (0, i.jsx)(r.default, {
+                return (0, r.jsx)(i.default, {
                     message: n,
-                    asPartialPreview: l,
+                    asPartialPreview: u,
                     content: t
                 })
             }

@@ -572,7 +572,7 @@
                 var x = j(n, "useGrouping", "boolean", void 0, !0);
                 a["[[useGrouping]]"] = x;
                 var O = d[p].patterns[m];
-                return a["[[positivePattern]]"] = O.positivePattern, a["[[negativePattern]]"] = O.negativePattern, a["[[boundFormat]]"] = void 0, a["[[initializedNumberFormat]]"] = !0, s && (e.format = I.call(e)), o.exp.test(o.input), e
+                return a["[[positivePattern]]"] = O.positivePattern, a["[[negativePattern]]"] = O.negativePattern, a["[[boundFormat]]"] = void 0, a["[[initializedNumberFormat]]"] = !0, s && (e.format = N.call(e)), o.exp.test(o.input), e
             }
             l(Intl, "NumberFormat", {
                 configurable: !0,
@@ -582,19 +582,19 @@
                 writable: !1
             });
 
-            function I() {
+            function N() {
                 var e = this != null && "object" == typeof this && et(this);
                 if (!e || !e["[[initializedNumberFormat]]"]) throw TypeError("`this` value for format() is not an initialized Intl.NumberFormat object.");
                 if (void 0 === e["[[boundFormat]]"]) {
                     var t = y.call(function(e) {
-                        return N(this, Number(e))
+                        return I(this, Number(e))
                     }, this);
                     e["[[boundFormat]]"] = t
                 }
                 return e["[[boundFormat]]"]
             }
 
-            function N(e, t) {
+            function I(e, t) {
                 var n, r = X(),
                     a = et(e),
                     o = a["[[dataLocale]]"],
@@ -672,7 +672,7 @@
                 value: y.call(G, g.NumberFormat)
             }), l(Intl.NumberFormat.prototype, "format", {
                 configurable: !0,
-                get: I
+                get: N
             });
             var A = {
                 arab: ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"],
@@ -866,8 +866,8 @@
                     if (u.call(n, "[[" + p + "]]")) {
                         var m, h, _ = n["[[" + p + "]]"],
                             y = s["[[" + p + "]]"];
-                        if ("year" === p && y <= 0 ? y = 1 - y : "month" === p ? y++ : "hour" === p && !0 === n["[[hour12]]"] && (y %= 12, m = y !== s["[[" + p + "]]"], 0 === y && !0 === n["[[hourNo0]]"] && (y = 12)), "numeric" === _) h = N(o, y);
-                        else if ("2-digit" === _)(h = N(i, y)).length > 2 && (h = h.slice(-2));
+                        if ("year" === p && y <= 0 ? y = 1 - y : "month" === p ? y++ : "hour" === p && !0 === n["[[hour12]]"] && (y %= 12, m = y !== s["[[" + p + "]]"], 0 === y && !0 === n["[[hourNo0]]"] && (y = 12)), "numeric" === _) h = I(o, y);
+                        else if ("2-digit" === _)(h = I(i, y)).length > 2 && (h = h.slice(-2));
                         else if (_ in b) switch (p) {
                             case "month":
                                 h = q(d, f, "months", _, s["[[" + p + "]]"]);
@@ -923,7 +923,7 @@
             };
             J.Number.toLocaleString = function() {
                 if ("[object Number]" !== Object.prototype.toString.call(this)) throw TypeError("`this` value must be a number for Number.prototype.toLocaleString()");
-                return N(new H(arguments[0], arguments[1]), this)
+                return I(new H(arguments[0], arguments[1]), this)
             }, J.Date.toLocaleString = function() {
                 if ("[object Date]" !== Object.prototype.toString.call(this)) throw TypeError("`this` value must be a Date instance for Date.prototype.toLocaleString()");
                 var e = +this;

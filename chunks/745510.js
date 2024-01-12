@@ -1,15 +1,15 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return o
                 }
             });
-            var i = n("884691"),
-                r = n("48174");
-            let s = [];
+            var r = n("884691"),
+                a = n("48174");
+            let i = [];
 
-            function l(e, t) {
-                let n = (0, i.useRef)(),
-                    l = (0, i.useRef)(s);
-                return l.current === s ? (n.current = e(), l.current = t) : !(0, r.default)(t, l.current) && (n.current = e(), l.current = t), n.current
+            function o(e, t) {
+                let n = (0, r.useRef)(),
+                    o = (0, r.useRef)(i);
+                return o.current === i ? (n.current = e(), o.current = t) : !(0, a.default)(t, o.current) && (n.current = e(), o.current = t), n.current
             }

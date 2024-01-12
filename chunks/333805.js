@@ -4,16 +4,16 @@
                     return i
                 }
             });
-            var i, r = n("872717"),
-                s = n("49111"),
-                l = n("782340");
-            i = class extends r.default.V6OrEarlierAPIError {
+            var i, l = n("872717"),
+                r = n("49111"),
+                o = n("782340");
+            i = class extends l.default.V6OrEarlierAPIError {
                 constructor(e, t) {
-                    super(e, t, null != t ? l.default.Messages.FORM_ERROR_GENERIC_WITH_DETAILS.format({
-                        statusPageURL: s.Links.STATUS,
+                    super(e, t, null != t ? o.default.Messages.FORM_ERROR_GENERIC_WITH_DETAILS.format({
+                        statusPageURL: r.Links.STATUS,
                         details: "".concat(t)
-                    }) : l.default.Messages.FORM_ERROR_GENERIC.format({
-                        statusPageURL: s.Links.STATUS
+                    }) : o.default.Messages.FORM_ERROR_GENERIC.format({
+                        statusPageURL: r.Links.STATUS
                     }))
                 }
             }

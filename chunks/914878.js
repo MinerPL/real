@@ -36,12 +36,12 @@
                 R = a("382756"),
                 b = a("897142"),
                 G = a("352791");
-            let y = {
+            let O = {
                 overflowX: void 0,
                 overflowY: void 0
             };
 
-            function O() {
+            function y() {
                 let e = (0, m.default)();
                 return (0, l.jsxs)("div", {
                     className: R.emptyStateContainer,
@@ -87,7 +87,7 @@
                                 orientation: "horizontal",
                                 paddingFix: !1,
                                 onScroll: n,
-                                style: t ? void 0 : y,
+                                style: t ? void 0 : O,
                                 ref: e => {
                                     var t;
                                     a.current = e, d.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null, n()
@@ -104,7 +104,7 @@
                 let {
                     guildId: t,
                     isUsingCollapsedLayout: a
-                } = e, s = (0, o.useStateFromStores)([C.default], () => C.default.getActiveChannelsFetchStatus(t)), r = (0, p.useActiveTextChannels)(t), u = (0, _.useGuildActiveEvent)(t), m = (0, o.useStateFromStores)([x.default], () => x.default.getVoiceStates(t)), h = (0, p.useActiveVoiceChannels)(t, u), T = r.length + h.length + (null != u ? 1 : 0), b = T > 0, G = n.useRef(null), y = (0, _.default)(t), k = y.filter(e => !(0, I.isGuildScheduledEventActive)(e)), [U, w] = n.useState(0 === k.length), [B, P] = n.useState(!0), [V, W] = n.useState(!1), {
+                } = e, s = (0, o.useStateFromStores)([C.default], () => C.default.getActiveChannelsFetchStatus(t)), r = (0, p.useActiveTextChannels)(t), u = (0, _.useGuildActiveEvent)(t), m = (0, o.useStateFromStores)([x.default], () => x.default.getVoiceStates(t)), h = (0, p.useActiveVoiceChannels)(t, u), T = r.length + h.length + (null != u ? 1 : 0), b = T > 0, G = n.useRef(null), O = (0, _.default)(t), k = O.filter(e => !(0, I.isGuildScheduledEventActive)(e)), [U, w] = n.useState(0 === k.length), [B, P] = n.useState(!0), [V, W] = n.useState(!1), {
                     ref: K,
                     width: z
                 } = (0, f.default)(), Y = n.useCallback(() => {
@@ -215,7 +215,7 @@
                             handleScroll: Y,
                             activeChannels: $,
                             totalActiveChannels: T
-                        }) : (0, l.jsx)(O, {}), a && b && !B && (0, l.jsx)(c.Clickable, {
+                        }) : (0, l.jsx)(y, {}), a && b && !B && (0, l.jsx)(c.Clickable, {
                             className: i(R.scrollIcon, R.left),
                             onClick: Z,
                             "aria-hidden": !0,

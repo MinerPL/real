@@ -1,7 +1,7 @@
             "use strict";
-            var i, a;
+            var s, i;
             n.r(t), n.d(t, {
                 ApplicationIntegrationType: function() {
-                    return i
+                    return s
                 }
-            }), (a = i || (i = {}))[a.GUILD_INSTALL = 0] = "GUILD_INSTALL", a[a.USER_INSTALL = 1] = "USER_INSTALL"
+            }), (i = s || (s = {}))[i.GUILD_INSTALL = 0] = "GUILD_INSTALL", i[i.USER_INSTALL = 1] = "USER_INSTALL"

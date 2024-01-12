@@ -1,32 +1,32 @@
             "use strict";
             n.r(t), n.d(t, {
                 pushLayer: function() {
-                    return r
+                    return i
                 },
                 popLayer: function() {
-                    return s
+                    return r
                 },
                 popAllLayers: function() {
-                    return l
+                    return a
                 }
             });
-            var i = n("913144");
+            var s = n("913144");
 
-            function r(e) {
-                i.default.dispatch({
+            function i(e) {
+                s.default.dispatch({
                     type: "LAYER_PUSH",
                     component: e
                 })
             }
 
-            function s() {
-                i.default.dispatch({
+            function r() {
+                s.default.dispatch({
                     type: "LAYER_POP"
                 })
             }
 
-            function l() {
-                i.default.dispatch({
+            function a() {
+                s.default.dispatch({
                     type: "LAYER_POP_ALL"
                 })
             }

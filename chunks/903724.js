@@ -4,46 +4,46 @@
                     return _
                 },
                 useRoleSubscriptionsVisibleInGuild: function() {
-                    return E
+                    return c
                 },
                 useShowRoleSubscriptionsInChannelList: function() {
-                    return f
+                    return g
                 }
             }), n("222007");
-            var i = n("446674"),
-                a = n("551254"),
-                l = n("250666"),
-                s = n("465869"),
-                r = n("38654"),
-                u = n("305961"),
-                o = n("638779"),
-                d = n("49111");
+            var s = n("446674"),
+                i = n("551254"),
+                r = n("250666"),
+                a = n("465869"),
+                o = n("38654"),
+                d = n("305961"),
+                u = n("638779"),
+                l = n("49111");
 
-            function c(e) {
-                let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [u.default, r.default], i = t.getGuild(e);
-                if (null == i) return !1;
-                let a = (0, l.isCreatorMonetizationEnabledGuild)(i),
-                    s = i.hasFeature(d.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
-                if (a && s) return !0;
-                let o = n.isViewingSubscriptionRoles(e);
-                return !!o || !1
+            function f(e) {
+                let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [d.default, o.default], s = t.getGuild(e);
+                if (null == s) return !1;
+                let i = (0, r.isCreatorMonetizationEnabledGuild)(s),
+                    a = s.hasFeature(l.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
+                if (i && a) return !0;
+                let u = n.isViewingSubscriptionRoles(e);
+                return !!u || !1
             }
 
             function _(e) {
-                return !!c(e) || (0, o.computeHasRoleSubscriptionsInGuild)(e)
+                return !!f(e) || (0, u.computeHasRoleSubscriptionsInGuild)(e)
             }
 
-            function E(e) {
-                let t = (0, o.default)(e),
-                    n = (0, i.useStateFromStores)([u.default, r.default], () => c(e, [u.default, r.default]), [e]),
+            function c(e) {
+                let t = (0, u.default)(e),
+                    n = (0, s.useStateFromStores)([d.default, o.default], () => f(e, [d.default, o.default]), [e]),
                     {
-                        shouldHideGuildPurchaseEntryPoints: a
-                    } = (0, s.useShouldHideGuildPurchaseEntryPoints)(e);
-                return !a && (n || t)
+                        shouldHideGuildPurchaseEntryPoints: i
+                    } = (0, a.useShouldHideGuildPurchaseEntryPoints)(e);
+                return !i && (n || t)
             }
 
-            function f(e) {
-                let t = E(e),
-                    n = (0, a.useIsEligibleForSubscriptionsInGuildShop)(e, "useShowRoleSubscriptionsInChannelList");
+            function g(e) {
+                let t = c(e),
+                    n = (0, i.useIsEligibleForSubscriptionsInGuildShop)(e, "useShowRoleSubscriptionsInChannelList");
                 return t && !n
             }

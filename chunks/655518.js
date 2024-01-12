@@ -1,9 +1,9 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return i
                 }
             }), n("781738");
-            var r = {
+            var i = {
                 escape: e => e.replace(/[-[\]/{}()*+?.\\^$|]/g, "\\$&")
             }

@@ -1,11 +1,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return i
                 }
             });
-            var i = n("144491");
+            var s = n("144491");
 
-            function a(e) {
-                (0, i.transitionToChannel)(e.channelId)
+            function i(e) {
+                (0, s.transitionToChannel)(e.channelId)
             }

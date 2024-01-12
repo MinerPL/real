@@ -1,19 +1,19 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return p
                 }
             }), n("222007");
-            var i = n("917351"),
-                a = n.n(i),
-                l = n("446674"),
-                s = n("913144"),
-                r = n("233069"),
-                u = n("42203");
-            let o = {},
-                d = new Set;
+            var s = n("917351"),
+                i = n.n(s),
+                r = n("446674"),
+                a = n("913144"),
+                o = n("233069"),
+                d = n("42203");
+            let u = {},
+                l = new Set;
 
-            function c(e) {
+            function f(e) {
                 return {
                     id: e.id,
                     parentId: e.parent_id
@@ -21,98 +21,98 @@
             }
 
             function _(e) {
-                e in o && delete o[e]
+                e in u && delete u[e]
             }
 
-            function E(e) {
-                null != e.threads && e.threads.length > 0 && (o[e.id] = {}, e.threads.filter(e => r.ALL_CHANNEL_TYPES.has(e.type)).forEach(t => f(e.id, t))), e.hasThreadsSubscription && d.add(e.id)
+            function c(e) {
+                null != e.threads && e.threads.length > 0 && (u[e.id] = {}, e.threads.filter(e => o.ALL_CHANNEL_TYPES.has(e.type)).forEach(t => g(e.id, t))), e.hasThreadsSubscription && l.add(e.id)
             }
 
-            function f(e, t) {
-                let n = o[e],
-                    i = t.parent_id;
-                !(i in n) && (n[i] = {}), o[e][i][t.id] = c(t)
+            function g(e, t) {
+                let n = u[e],
+                    s = t.parent_id;
+                !(s in n) && (n[s] = {}), u[e][s][t.id] = f(t)
             }
 
-            function h(e) {
+            function m(e) {
                 var t, n;
                 let {
-                    channel: i
+                    channel: s
                 } = e;
-                if (!r.ALL_CHANNEL_TYPES.has(i.type)) return !1;
-                if ((null === (t = i.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0) return p(i);
+                if (!o.ALL_CHANNEL_TYPES.has(s.type)) return !1;
+                if ((null === (t = s.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0) return h(s);
                 {
-                    let e = null !== (n = o[i.guild_id]) && void 0 !== n ? n : {};
-                    o[i.guild_id] = {
+                    let e = null !== (n = u[s.guild_id]) && void 0 !== n ? n : {};
+                    u[s.guild_id] = {
                         ...e,
-                        [i.parent_id]: {
-                            ...e[i.parent_id],
-                            [i.id]: c(i)
+                        [s.parent_id]: {
+                            ...e[s.parent_id],
+                            [s.id]: f(s)
                         }
                     }
                 }
             }
 
-            function p(e) {
+            function h(e) {
                 let {
                     guild_id: t,
                     parent_id: n,
-                    id: i
+                    id: s
                 } = e;
-                if (null == t || null == n || !(t in o) || !(n in o[t]) || !(i in o[t][n])) return !1;
-                o[t] = {
-                    ...o[t],
+                if (null == t || null == n || !(t in u) || !(n in u[t]) || !(s in u[t][n])) return !1;
+                u[t] = {
+                    ...u[t],
                     [n]: {
-                        ...o[t][n]
+                        ...u[t][n]
                     }
-                }, delete o[t][n][i], a.isEmpty(o[t][n]) && delete o[t][n]
+                }, delete u[t][n][s], i.isEmpty(u[t][n]) && delete u[t][n]
             }
-            let T = {};
-            class C extends l.default.Store {
+            let v = {};
+            class E extends r.default.Store {
                 initialize() {
-                    this.waitFor(u.default)
+                    this.waitFor(d.default)
                 }
                 isActive(e, t, n) {
                     return null != e && null != this.getThreadsForParent(e, t)[n]
                 }
                 getThreadsForGuild(e) {
                     var t;
-                    return null !== (t = o[e]) && void 0 !== t ? t : T
+                    return null !== (t = u[e]) && void 0 !== t ? t : v
                 }
                 getThreadsForParent(e, t) {
                     var n;
-                    return null !== (n = this.getThreadsForGuild(e)[t]) && void 0 !== n ? n : T
+                    return null !== (n = this.getThreadsForGuild(e)[t]) && void 0 !== n ? n : v
                 }
                 hasThreadsForChannel(e, t) {
-                    return !a.isEmpty(this.getThreadsForParent(e, t))
+                    return !i.isEmpty(this.getThreadsForParent(e, t))
                 }
                 forEachGuild(e) {
-                    for (let t in o) e(t, o[t])
+                    for (let t in u) e(t, u[t])
                 }
                 hasLoaded(e) {
-                    return d.has(e)
+                    return l.has(e)
                 }
             }
-            C.displayName = "ActiveThreadsStore";
-            var m = new C(s.default, {
+            E.displayName = "ActiveThreadsStore";
+            var p = new E(a.default, {
                 CONNECTION_OPEN: function(e) {
-                    o = {}, d.clear(), e.guilds.forEach(e => {
-                        E(e)
+                    u = {}, l.clear(), e.guilds.forEach(e => {
+                        c(e)
                     })
                 },
                 OVERLAY_INITIALIZE: function(e) {
                     let {
                         channels: t
                     } = e;
-                    o = {}, a(t).filter(e => r.THREAD_CHANNEL_TYPES.has(e.type)).groupBy("guild_id").forEach((e, t) => {
-                        o[t] = {}, e.forEach(e => f(t, e))
+                    u = {}, i(t).filter(e => o.THREAD_CHANNEL_TYPES.has(e.type)).groupBy("guild_id").forEach((e, t) => {
+                        u[t] = {}, e.forEach(e => g(t, e))
                     })
                 },
                 GUILD_CREATE: function(e) {
                     let {
                         guild: t
                     } = e;
-                    _(t.id), E(t)
+                    _(t.id), c(t)
                 },
                 GUILD_DELETE: function(e) {
                     let {
@@ -120,34 +120,34 @@
                     } = e;
                     _(t.id)
                 },
-                THREAD_CREATE: h,
-                THREAD_UPDATE: h,
+                THREAD_CREATE: m,
+                THREAD_UPDATE: m,
                 THREAD_LIST_SYNC: function(e) {
                     let {
                         guildId: t,
                         threads: n,
-                        channelIds: i
+                        channelIds: s
                     } = e;
-                    for (let e in null == i && d.add(t), o[t] = {
-                            ...o[t]
-                        }, o[t]) o[t][e] = {
-                        ...o[t][e]
+                    for (let e in null == s && l.add(t), u[t] = {
+                            ...u[t]
+                        }, u[t]) u[t][e] = {
+                        ...u[t][e]
                     };
-                    n.forEach(e => f(t, e))
+                    n.forEach(e => g(t, e))
                 },
                 THREAD_DELETE: function(e) {
                     let {
                         channel: t
                     } = e;
-                    return p(t)
+                    return h(t)
                 },
                 CHANNEL_DELETE: function(e) {
                     let {
                         channel: t
                     } = e;
-                    if (null == t.guild_id || !(t.guild_id in o)) return !1;
-                    o[t.guild_id] = {
-                        ...o[t.guild_id]
-                    }, delete o[t.guild_id][t.id]
+                    if (null == t.guild_id || !(t.guild_id in u)) return !1;
+                    u[t.guild_id] = {
+                        ...u[t.guild_id]
+                    }, delete u[t.guild_id][t.id]
                 }
             })

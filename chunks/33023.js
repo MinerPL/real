@@ -1,15 +1,15 @@
             "use strict";
-            r("424973");
-            let i = r("599235"),
-                n = r("246305");
+            s("424973");
+            let r = s("599235"),
+                i = s("246305");
 
-            function o(t) {
-                n.call(this, t), this.enc = "pem"
+            function n(t) {
+                i.call(this, t), this.enc = "pem"
             }
-            i(o, n), t.exports = o, o.prototype.encode = function(t, e) {
-                let r = n.prototype.encode.call(this, t),
-                    i = r.toString("base64"),
-                    o = ["-----BEGIN " + e.label + "-----"];
-                for (let t = 0; t < i.length; t += 64) o.push(i.slice(t, t + 64));
-                return o.push("-----END " + e.label + "-----"), o.join("\n")
+            r(n, i), t.exports = n, n.prototype.encode = function(t, e) {
+                let s = i.prototype.encode.call(this, t),
+                    r = s.toString("base64"),
+                    n = ["-----BEGIN " + e.label + "-----"];
+                for (let t = 0; t < r.length; t += 64) n.push(r.slice(t, t + 64));
+                return n.push("-----END " + e.label + "-----"), n.join("\n")
             }

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 InstantInviteSettingsPage: function() {
-                    return E
+                    return h
                 }
             });
             var l = n("37983");
@@ -10,26 +10,26 @@
                 r = n.n(i),
                 s = n("77078"),
                 a = n("841098"),
-                o = n("825691"),
-                u = n("339485"),
+                u = n("825691"),
+                o = n("339485"),
                 d = n("782340"),
                 c = n("435808"),
                 f = n("926622");
-            let E = e => {
+            let h = e => {
                 let {
                     handleDone: t,
                     headerId: n,
                     modalState: i,
-                    shouldHideTemporaryInviteToggle: E,
-                    onGenerateNewLink: _,
-                    onToggleTemporary: I,
-                    onSelectMaxAge: h,
-                    onSelectMaxUses: g,
-                    guild: p
-                } = e, m = (0, a.default)(), {
-                    maxAge: N,
-                    maxUses: S,
-                    temporary: T
+                    shouldHideTemporaryInviteToggle: h,
+                    onGenerateNewLink: g,
+                    onToggleTemporary: m,
+                    onSelectMaxAge: p,
+                    onSelectMaxUses: I,
+                    guild: v
+                } = e, E = (0, a.default)(), {
+                    maxAge: _,
+                    maxUses: T,
+                    temporary: N
                 } = i;
                 return (0, l.jsxs)(l.Fragment, {
                     children: [(0, l.jsxs)(s.ModalHeader, {
@@ -45,24 +45,24 @@
                                 children: d.default.Messages.INVITE_SETTINGS_TITLE
                             })
                         })]
-                    }), (0, l.jsx)(o.default, {
-                        guildId: p.id,
-                        shouldHideTemporaryInviteToggle: E,
-                        maxAge: N,
-                        maxUses: S,
-                        temporary: T,
-                        onToggleTemporary: I,
-                        onSelectMaxAge: h,
-                        onSelectMaxUses: g,
-                        onGenerateNewLink: _
+                    }), (0, l.jsx)(u.default, {
+                        guildId: v.id,
+                        shouldHideTemporaryInviteToggle: h,
+                        maxAge: _,
+                        maxUses: T,
+                        temporary: N,
+                        onToggleTemporary: m,
+                        onSelectMaxAge: p,
+                        onSelectMaxUses: I,
+                        onGenerateNewLink: g
                     }), (0, l.jsx)(s.ModalFooter, {
                         className: c.settingsFooter,
-                        children: (0, l.jsx)(u.default, {
-                            guildId: null == p ? void 0 : p.id,
-                            maxAge: N,
-                            theme: m,
+                        children: (0, l.jsx)(o.default, {
+                            guildId: null == v ? void 0 : v.id,
+                            maxAge: _,
+                            theme: E,
                             onConfirm: () => {
-                                _(), t()
+                                g(), t()
                             },
                             onDismiss: t
                         })

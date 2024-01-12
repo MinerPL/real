@@ -8,8 +8,8 @@
                 o = n.n(i),
                 l = n("379881"),
                 a = n("15131"),
-                u = n("393027"),
-                d = n("42203"),
+                d = n("393027"),
+                u = n("42203"),
                 s = n("957255"),
                 E = n("18494"),
                 r = n("677099"),
@@ -20,13 +20,13 @@
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
                         t = r.default.getFlattenedGuildIds(),
                         n = function(e) {
-                            let t = u.default.getState().guildId;
+                            let t = d.default.getState().guildId;
                             if (null == t) return -2;
                             if (t === c.FAVORITES) return -1;
                             let n = e.indexOf(t);
                             return -1 === n ? -2 : n
                         }(t);
-                    if (-1 === (n += e) && !(0, a.isFavoritesGuildVisible)(l.default, d.default, s.default) && (n += e), -3 === n && (n = t.length - 1), n >= t.length || -2 === n) {
+                    if (-1 === (n += e) && !(0, a.isFavoritesGuildVisible)(l.default, u.default, s.default) && (n += e), -3 === n && (n = t.length - 1), n >= t.length || -2 === n) {
                         (0, A.transitionToPage)(_.default.getHomeLink());
                         return
                     }

@@ -1,15 +1,15 @@
-            r("854508");
-            var i = r("912065").Buffer;
-            e.encrypt = function(t, e, r) {
-                for (var n = e.length, o = i.allocUnsafe(n), a = -1; ++a < n;) o[a] = function(t, e, r) {
-                    for (var n, o, a, s = -1, f = 0; ++s < 8;) n = t._cipher.encryptBlock(t._prev), o = e & 1 << 7 - s ? 128 : 0, f += (128 & (a = n[0] ^ o)) >> s % 8, t._prev = function(t, e) {
-                        var r = t.length,
-                            n = -1,
-                            o = i.allocUnsafe(t.length);
-                        for (t = i.concat([t, i.from([e])]); ++n < r;) o[n] = t[n] << 1 | t[n + 1] >> 7;
-                        return o
-                    }(t._prev, r ? o : a);
+            s("854508");
+            var r = s("912065").Buffer;
+            e.encrypt = function(t, e, s) {
+                for (var i = e.length, n = r.allocUnsafe(i), c = -1; ++c < i;) n[c] = function(t, e, s) {
+                    for (var i, n, c, o = -1, f = 0; ++o < 8;) i = t._cipher.encryptBlock(t._prev), n = e & 1 << 7 - o ? 128 : 0, f += (128 & (c = i[0] ^ n)) >> o % 8, t._prev = function(t, e) {
+                        var s = t.length,
+                            i = -1,
+                            n = r.allocUnsafe(t.length);
+                        for (t = r.concat([t, r.from([e])]); ++i < s;) n[i] = t[i] << 1 | t[i + 1] >> 7;
+                        return n
+                    }(t._prev, s ? n : c);
                     return f
-                }(t, e[a], r);
-                return o
+                }(t, e[c], s);
+                return n
             }

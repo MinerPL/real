@@ -4,7 +4,7 @@
                     return o
                 },
                 useGuildEligibleForStageChannels: function() {
-                    return s
+                    return u
                 }
             }), n("222007");
             var i = n("446674"),
@@ -17,6 +17,6 @@
                 return !!(null === (t = n.getGuild(e)) || void 0 === t ? void 0 : t.hasFeature(l.GuildFeatures.COMMUNITY))
             }
 
-            function s(e) {
+            function u(e) {
                 return (0, i.useStateFromStores)([r.default], () => o(e, [r.default]), [e])
             }

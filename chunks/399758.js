@@ -1,30 +1,30 @@
             "use strict";
-            n.r(t), n.d(t, {
+            e.r(n), e.d(n, {
                 default: function() {
-                    return u
+                    return c
                 }
             });
-            var r = n("37983");
-            n("884691");
-            var i = n("77078"),
-                a = n("272030"),
-                o = n("773336"),
-                s = n("26051"),
-                l = n("782340");
+            var r = e("37983");
+            e("884691");
+            var i = e("77078"),
+                u = e("272030"),
+                o = e("773336"),
+                l = e("26051"),
+                a = e("782340");
 
-            function u(e) {
+            function c(t) {
                 let {
-                    href: t,
-                    textContent: n,
-                    onSelect: u
-                } = e, d = (0, s.default)(t, n);
-                return o.isPlatformEmbedded && null != d ? (0, r.jsx)(i.Menu, {
+                    href: n,
+                    textContent: e,
+                    onSelect: c
+                } = t, s = (0, l.default)(n, e);
+                return o.isPlatformEmbedded && null != s ? (0, r.jsx)(i.Menu, {
                     navId: "image-context",
-                    onClose: a.closeContextMenu,
-                    "aria-label": l.default.Messages.IMAGE_ACTIONS_MENU_LABEL,
-                    onSelect: u,
+                    onClose: u.closeContextMenu,
+                    "aria-label": a.default.Messages.IMAGE_ACTIONS_MENU_LABEL,
+                    onSelect: c,
                     children: (0, r.jsx)(i.MenuGroup, {
-                        children: d
+                        children: s
                     })
                 }) : null
             }

@@ -1,269 +1,269 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return N
+                    return I
                 }
             }), n("222007"), n("70102");
-            var l = n("37983"),
-                i = n("884691"),
+            var i = n("37983"),
+                l = n("884691"),
                 r = n("917351"),
-                s = n("77078"),
+                o = n("77078"),
                 a = n("812204"),
-                o = n("685665"),
-                u = n("652914"),
-                d = n("95689"),
-                c = n("599110"),
-                E = n("8731"),
-                _ = n("817295"),
-                f = n("75015"),
-                A = n("49111"),
-                I = n("917219"),
-                R = n("782340"),
-                h = n("879777"),
-                N = e => {
+                u = n("685665"),
+                s = n("652914"),
+                c = n("95689"),
+                d = n("599110"),
+                f = n("8731"),
+                E = n("817295"),
+                A = n("75015"),
+                h = n("49111"),
+                _ = n("917219"),
+                p = n("782340"),
+                T = n("879777"),
+                I = e => {
                     let {
                         file: t,
                         imgURI: n,
-                        transitionState: N,
-                        allowSkip: T = !1,
-                        onCrop: p,
-                        onClose: g,
-                        uploadType: C = f.UploadTypes.AVATAR,
-                        showUpsellHeader: m = !1,
-                        analyticsPage: S
-                    } = e, [L, D] = i.useState({
+                        transitionState: I,
+                        allowSkip: g = !1,
+                        onCrop: m,
+                        onClose: R,
+                        uploadType: C = A.UploadTypes.AVATAR,
+                        showUpsellHeader: N = !1,
+                        analyticsPage: w
+                    } = e, [M, v] = l.useState({
                         width: 0,
                         height: 0
-                    }), [O, M] = i.useState({
+                    }), [S, O] = l.useState({
                         top: 0,
                         bottom: 0,
                         left: 0,
                         right: 0
-                    }), [U, w] = i.useState(!1), [v, P] = i.useState(1), [y, b] = i.useState({
+                    }), [D, L] = l.useState(!1), [U, y] = l.useState(1), [b, P] = l.useState({
                         x: 0,
                         y: 0
-                    }), [x, G] = i.useState(null), [B, H] = i.useState(!1), {
+                    }), [H, x] = l.useState(null), [G, B] = l.useState(!1), {
                         AnalyticsLocationProvider: V
-                    } = (0, o.default)(a.default.IMAGE_CROPPING_MODAL), F = i.useRef({
+                    } = (0, u.default)(a.default.IMAGE_CROPPING_MODAL), k = l.useRef({
                         x: 0,
                         y: 0
-                    }), j = i.useRef(null), k = i.useRef(null), W = "image/gif" === t.type;
-                    i.useEffect(() => {
-                        (0, _.default)()
-                    }, []), i.useEffect(() => {
-                        W && m && c.default.track(A.AnalyticEvents.OPEN_MODAL, {
-                            type: A.AnalyticsSections.CROP_GIF_MODAL,
+                    }), j = l.useRef(null), F = l.useRef(null), W = "image/gif" === t.type;
+                    l.useEffect(() => {
+                        (0, E.default)()
+                    }, []), l.useEffect(() => {
+                        W && N && d.default.track(h.AnalyticEvents.OPEN_MODAL, {
+                            type: h.AnalyticsSections.CROP_GIF_MODAL,
                             location: {
-                                page: S
+                                page: w
                             }
                         })
-                    }, [m, S, W]);
-                    let Y = () => {
+                    }, [N, w, W]);
+                    let Z = () => {
                             switch (C) {
-                                case f.UploadTypes.BANNER:
+                                case A.UploadTypes.BANNER:
                                     return {
-                                        height: f.USER_BANNER_MAX_HEIGHT, width: f.USER_BANNER_MAX_WIDTH
+                                        height: A.USER_BANNER_MAX_HEIGHT, width: A.USER_BANNER_MAX_WIDTH
                                     };
-                                case f.UploadTypes.VIDEO_BACKGROUND:
-                                    return I.BACKGROUND_REPLACEMENT_SIZE;
-                                case f.UploadTypes.AVATAR:
-                                case f.UploadTypes.AVATAR_DECORATION:
+                                case A.UploadTypes.VIDEO_BACKGROUND:
+                                    return _.BACKGROUND_REPLACEMENT_SIZE;
+                                case A.UploadTypes.AVATAR:
+                                case A.UploadTypes.AVATAR_DECORATION:
                                     return {
-                                        height: A.AVATAR_MAX_SIZE, width: A.AVATAR_MAX_SIZE
+                                        height: h.AVATAR_MAX_SIZE, width: h.AVATAR_MAX_SIZE
                                     };
-                                case f.UploadTypes.GUILD_BANNER:
+                                case A.UploadTypes.GUILD_BANNER:
                                     return {
-                                        height: f.GUILD_BANNER_MAX_HEIGHT, width: f.GUILD_BANNER_MAX_WIDTH
+                                        height: A.GUILD_BANNER_MAX_HEIGHT, width: A.GUILD_BANNER_MAX_WIDTH
                                     };
-                                case f.UploadTypes.SCHEDULED_EVENT_IMAGE:
+                                case A.UploadTypes.SCHEDULED_EVENT_IMAGE:
                                     return {
-                                        height: f.SCHEDULED_EVENT_IMAGE_MAX_HEIGHT, width: f.SCHEDULED_EVENT_IMAGE_MAX_WIDTH
+                                        height: A.SCHEDULED_EVENT_IMAGE_MAX_HEIGHT, width: A.SCHEDULED_EVENT_IMAGE_MAX_WIDTH
                                     };
-                                case f.UploadTypes.HOME_HEADER:
+                                case A.UploadTypes.HOME_HEADER:
                                     return {
-                                        height: f.HOME_HEADER_MAX_HEIGHT, width: f.HOME_HEADER_MAX_WIDTH
+                                        height: A.HOME_HEADER_MAX_HEIGHT, width: A.HOME_HEADER_MAX_WIDTH
                                     }
                             }
                         },
-                        Z = i.useCallback((e, t, n) => {
-                            F.current = (0, E.getBoundedCoordinates)(e, t, n), null != j.current && (j.current.style.transform = "translate3d(".concat(F.current.x, "px, ").concat(F.current.y, "px, 0)"))
+                        z = l.useCallback((e, t, n) => {
+                            k.current = (0, f.getBoundedCoordinates)(e, t, n), null != j.current && (j.current.style.transform = "translate3d(".concat(k.current.x, "px, ").concat(k.current.y, "px, 0)"))
                         }, [j]),
-                        z = i.useCallback(() => {
-                            if (null == j.current || v > 1) return;
+                        X = l.useCallback(() => {
+                            if (null == j.current || U > 1) return;
                             let {
                                 width: e,
                                 height: t
                             } = j.current.getBoundingClientRect(), {
                                 width: n,
-                                height: l
-                            } = (0, E.adjustImageDimensionsForAspectRatio)(C, e, t), i = (0, E.calculateOverlaySize)(C, n, l, t);
-                            G({
+                                height: i
+                            } = (0, f.adjustImageDimensionsForAspectRatio)(C, e, t), l = (0, f.calculateOverlaySize)(C, n, i, t);
+                            x({
                                 width: n,
-                                height: l
-                            }), D(i), M((0, E.calculateDragBoundaries)(n, l, i))
-                        }, [C, v]),
-                        K = i.useCallback(e => {
+                                height: i
+                            }), v(l), O((0, f.calculateDragBoundaries)(n, i, l))
+                        }, [C, U]),
+                        Y = l.useCallback(e => {
                             let {
                                 x: t,
                                 y: n
-                            } = F.current;
-                            if (!U || e.clientX === t && e.clientY === n) return;
-                            let l = e.clientX - y.x,
-                                i = e.clientY - y.y;
-                            Z(l, i, O)
-                        }, [O, U, y, Z]),
-                        X = () => {
-                            w(!1)
+                            } = k.current;
+                            if (!D || e.clientX === t && e.clientY === n) return;
+                            let i = e.clientX - b.x,
+                                l = e.clientY - b.y;
+                            z(i, l, S)
+                        }, [S, D, b, z]),
+                        K = () => {
+                            L(!1)
                         },
-                        Q = () => {
-                            let e = Y();
+                        q = () => {
+                            let e = Z();
                             return e.width !== e.height
                         },
-                        J = async () => {
+                        $ = async () => {
                             let e;
                             if (null == j.current) return;
-                            H(!0);
+                            B(!0);
                             let n = j.current,
-                                l = Y();
+                                i = Z();
                             if (W) try {
                                 let {
-                                    result: i,
+                                    result: l,
                                     cancelFn: r
-                                } = await (0, E.cropGIF)(t, n, L, F.current, l);
-                                k.current = r, e = await i, k.current = null
+                                } = await (0, f.cropGIF)(t, n, M, k.current, i);
+                                F.current = r, e = await l, F.current = null
                             } catch (e) {
-                                var i;
-                                throw null === (i = k.current) || void 0 === i || i.call(k), k.current = null, Error("Error cropping GIF")
-                            } else e = (0, E.cropStaticImage)(n, L, F.current, l);
-                            await p(e, t), H(!1), g()
+                                var l;
+                                throw null === (l = F.current) || void 0 === l || l.call(F), F.current = null, Error("Error cropping GIF")
+                            } else e = (0, f.cropStaticImage)(n, M, k.current, i);
+                            await m(e, t), B(!1), R()
                         };
-                    return i.useEffect(() => (window.addEventListener("mouseup", X), window.addEventListener("resize", z), () => {
-                        window.removeEventListener("mouseup", X), window.removeEventListener("resize", z)
-                    }), [z]), i.useEffect(() => () => {
-                        null != k.current && k.current()
-                    }, []), i.useEffect(() => {
-                        if (U) return window.addEventListener("mousemove", K), () => window.removeEventListener("mousemove", K)
-                    }, [K, U]), (0, l.jsx)(V, {
-                        children: (0, l.jsxs)(s.ModalRoot, {
-                            onAnimationEnd: z,
-                            transitionState: N,
-                            size: s.ModalSize.MEDIUM,
-                            children: [m && (0, l.jsx)(u.default, {
+                    return l.useEffect(() => (window.addEventListener("mouseup", K), window.addEventListener("resize", X), () => {
+                        window.removeEventListener("mouseup", K), window.removeEventListener("resize", X)
+                    }), [X]), l.useEffect(() => () => {
+                        null != F.current && F.current()
+                    }, []), l.useEffect(() => {
+                        if (D) return window.addEventListener("mousemove", Y), () => window.removeEventListener("mousemove", Y)
+                    }, [Y, D]), (0, i.jsx)(V, {
+                        children: (0, i.jsxs)(o.ModalRoot, {
+                            onAnimationEnd: X,
+                            transitionState: I,
+                            size: o.ModalSize.MEDIUM,
+                            children: [N && (0, i.jsx)(s.default, {
                                 type: C,
-                                analyticsPage: S,
-                                analyticsSection: A.AnalyticsSections.CROP_GIF_MODAL,
+                                analyticsPage: w,
+                                analyticsSection: h.AnalyticsSections.CROP_GIF_MODAL,
                                 isGIF: W,
                                 banner: n
-                            }), (0, l.jsx)(s.ModalHeader, {
+                            }), (0, i.jsx)(o.ModalHeader, {
                                 separator: !1,
-                                children: (0, l.jsx)(s.FormTitle, {
-                                    className: h.titleCase,
-                                    tag: s.FormTitleTags.H1,
-                                    children: R.default.Messages.AVATAR_UPLOAD_EDIT_MEDIA
+                                children: (0, i.jsx)(o.FormTitle, {
+                                    className: T.titleCase,
+                                    tag: o.FormTitleTags.H1,
+                                    children: p.default.Messages.AVATAR_UPLOAD_EDIT_MEDIA
                                 })
-                            }), (0, l.jsxs)(s.ModalContent, {
-                                className: h.modalContent,
-                                children: [(0, l.jsxs)("div", {
-                                    className: h.editingContainer,
-                                    children: [(0, l.jsx)("img", {
+                            }), (0, i.jsxs)(o.ModalContent, {
+                                className: T.modalContent,
+                                children: [(0, i.jsxs)("div", {
+                                    className: T.editingContainer,
+                                    children: [(0, i.jsx)("img", {
                                         style: {
-                                            opacity: null == x ? 0 : 1,
-                                            transform: "translate3d(".concat(F.current.x, "px, ").concat(F.current.y, "px, 0px)"),
+                                            opacity: null == H ? 0 : 1,
+                                            transform: "translate3d(".concat(k.current.x, "px, ").concat(k.current.y, "px, 0px)"),
                                             ...(() => {
-                                                if (null == x) return {};
-                                                let e = x.width / x.height,
-                                                    t = Q() && e > f.BANNER_ASPECT_RATIO ? L.height / x.height : 1;
+                                                if (null == H) return {};
+                                                let e = H.width / H.height,
+                                                    t = q() && e > A.BANNER_ASPECT_RATIO ? M.height / H.height : 1;
                                                 return {
-                                                    width: x.width * v * t,
-                                                    minWidth: x.width * v * t,
-                                                    height: x.height * v * t
+                                                    width: H.width * U * t,
+                                                    minWidth: H.width * U * t,
+                                                    height: H.height * U * t
                                                 }
                                             })()
                                         },
-                                        className: B ? h.imageDisabled : h.imageEnabled,
+                                        className: G ? T.imageDisabled : T.imageEnabled,
                                         src: n,
                                         alt: "avatar",
                                         ref: j,
                                         onMouseDown: e => {
-                                            let t = e.clientX - F.current.x,
-                                                n = e.clientY - F.current.y;
-                                            b({
+                                            let t = e.clientX - k.current.x,
+                                                n = e.clientY - k.current.y;
+                                            P({
                                                 x: t,
                                                 y: n
-                                            }), w(!0)
+                                            }), L(!0)
                                         },
                                         draggable: !1
-                                    }), (0, l.jsx)("div", {
-                                        className: C === f.UploadTypes.AVATAR ? h.overlayAvatar : h.overlayBanner,
+                                    }), (0, i.jsx)("div", {
+                                        className: C === A.UploadTypes.AVATAR ? T.overlayAvatar : T.overlayBanner,
                                         style: {
-                                            opacity: null == x ? 0 : 1,
-                                            width: L.width,
-                                            height: L.height
+                                            opacity: null == H ? 0 : 1,
+                                            width: M.width,
+                                            height: M.height
                                         }
                                     })]
-                                }), (0, l.jsxs)("div", {
-                                    className: h.sliderContainer,
-                                    children: [(0, l.jsx)(d.default, {
-                                        className: h.icon,
+                                }), (0, i.jsxs)("div", {
+                                    className: T.sliderContainer,
+                                    children: [(0, i.jsx)(c.default, {
+                                        className: T.icon,
                                         width: 24,
                                         height: 24
-                                    }), (0, l.jsx)(s.Slider, {
+                                    }), (0, i.jsx)(o.Slider, {
                                         initialValue: 1,
                                         minValue: 1,
                                         maxValue: 2,
                                         keyboardStep: .025,
                                         asValueChanges: e => {
-                                            if (null == x) return;
+                                            if (null == H) return;
                                             let {
                                                 width: t,
                                                 height: n
-                                            } = x, l = (0, E.calculateDragBoundaries)(t * e, n * e, L), {
-                                                x: i,
-                                                y: s
-                                            } = F.current;
-                                            (!(0, r.inRange)(i, l.right, l.left) || !(0, r.inRange)(s, l.top, l.bottom)) && Z(i, s, l), P(e), M(l)
+                                            } = H, i = (0, f.calculateDragBoundaries)(t * e, n * e, M), {
+                                                x: l,
+                                                y: o
+                                            } = k.current;
+                                            (!(0, r.inRange)(l, i.right, i.left) || !(0, r.inRange)(o, i.top, i.bottom)) && z(l, o, i), y(e), O(i)
                                         },
-                                        disabled: B,
+                                        disabled: G,
                                         equidistant: !0,
                                         hideBubble: !0,
-                                        "aria-label": R.default.Messages.FORM_LABEL_AVATAR_SIZE
-                                    }), (0, l.jsx)(d.default, {
-                                        className: h.icon,
+                                        "aria-label": p.default.Messages.FORM_LABEL_AVATAR_SIZE
+                                    }), (0, i.jsx)(c.default, {
+                                        className: T.icon,
                                         width: 48,
                                         height: 48
                                     })]
                                 })]
-                            }), (0, l.jsxs)(s.ModalFooter, {
-                                className: h.modalFooter,
-                                children: [T ? (0, l.jsx)(s.Button, {
-                                    className: h.cancelButton,
-                                    look: s.Button.Looks.LINK,
-                                    color: s.Button.Colors.PRIMARY,
-                                    size: s.ButtonSizes.SMALL,
+                            }), (0, i.jsxs)(o.ModalFooter, {
+                                className: T.modalFooter,
+                                children: [g ? (0, i.jsx)(o.Button, {
+                                    className: T.cancelButton,
+                                    look: o.Button.Looks.LINK,
+                                    color: o.Button.Colors.PRIMARY,
+                                    size: o.ButtonSizes.SMALL,
                                     onClick: () => {
-                                        T && (p(n, t), g())
+                                        g && (m(n, t), R())
                                     },
-                                    children: R.default.Messages.AVATAR_UPLOAD_SKIP
-                                }) : null, (0, l.jsxs)("div", {
-                                    className: h.buttonsRight,
-                                    children: [(0, l.jsx)(s.Button, {
-                                        className: h.cancelButton,
-                                        look: s.Button.Looks.LINK,
-                                        color: s.Button.Colors.PRIMARY,
-                                        size: s.ButtonSizes.SMALL,
+                                    children: p.default.Messages.AVATAR_UPLOAD_SKIP
+                                }) : null, (0, i.jsxs)("div", {
+                                    className: T.buttonsRight,
+                                    children: [(0, i.jsx)(o.Button, {
+                                        className: T.cancelButton,
+                                        look: o.Button.Looks.LINK,
+                                        color: o.Button.Colors.PRIMARY,
+                                        size: o.ButtonSizes.SMALL,
                                         onClick: () => {
-                                            if (null != k.current) {
-                                                k.current(), k.current = null, H(!1);
+                                            if (null != F.current) {
+                                                F.current(), F.current = null, B(!1);
                                                 return
                                             }
-                                            g()
+                                            R()
                                         },
-                                        children: R.default.Messages.AVATAR_UPLOAD_CANCEL
-                                    }), (0, l.jsx)(s.Button, {
-                                        submitting: B,
-                                        size: s.ButtonSizes.SMALL,
-                                        onClick: J,
-                                        children: R.default.Messages.AVATAR_UPLOAD_APPLY
+                                        children: p.default.Messages.AVATAR_UPLOAD_CANCEL
+                                    }), (0, i.jsx)(o.Button, {
+                                        submitting: G,
+                                        size: o.ButtonSizes.SMALL,
+                                        onClick: $,
+                                        children: p.default.Messages.AVATAR_UPLOAD_APPLY
                                     })]
                                 })]
                             })]

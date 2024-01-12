@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return v
+                    return A
                 }
             }), n("222007");
             var i = n("37983"),
@@ -11,90 +11,90 @@
                 s = n("446674"),
                 a = n("77078"),
                 u = n("913144"),
-                d = n("430713"),
-                c = n("984557"),
-                _ = n("367376"),
+                c = n("430713"),
+                d = n("984557"),
+                f = n("367376"),
                 E = n("878720"),
-                f = n("601745"),
-                I = n("650893"),
-                S = n("697218"),
-                h = n("145131"),
-                N = n("583227"),
-                p = n("49111"),
+                _ = n("601745"),
+                h = n("650893"),
+                p = n("697218"),
+                S = n("145131"),
+                I = n("583227"),
+                C = n("49111"),
                 T = n("482931"),
-                C = n("782340"),
-                A = n("659248");
-            let R = e => {
+                N = n("782340"),
+                v = n("659248");
+            let g = e => {
                 let {
                     label: t,
                     text: n,
                     children: r,
                     ...o
                 } = e;
-                return (0, i.jsxs)(h.default, {
-                    direction: h.default.Direction.VERTICAL,
+                return (0, i.jsxs)(S.default, {
+                    direction: S.default.Direction.VERTICAL,
                     ...o,
                     children: [(0, i.jsx)(a.FormTitle, {
                         tag: "h2",
                         children: t
                     }), null != n ? (0, i.jsx)(a.Text, {
                         variant: "text-md/normal",
-                        className: A.sectionBody,
+                        className: v.sectionBody,
                         children: n
-                    }) : null, (0, i.jsx)(h.default.Child, {
+                    }) : null, (0, i.jsx)(S.default.Child, {
                         wrap: !0,
                         children: r
                     })]
                 })
             };
-            class g extends r.PureComponent {
+            class m extends r.PureComponent {
                 renderSMSSection() {
                     let {
                         currentUser: e
-                    } = this.props, t = null != this.props.currentUser.phone, n = e.hasFlag(p.UserFlags.MFA_SMS), r = e.hasFlag(p.UserFlags.PARTNER) || e.hasFlag(p.UserFlags.STAFF);
-                    return t ? (0, i.jsxs)(R, {
-                        label: C.default.Messages.MFA_SMS_ENABLE,
-                        text: C.default.Messages.MFA_SMS_AUTH_SALES_PITCH,
+                    } = this.props, t = null != this.props.currentUser.phone, n = e.hasFlag(C.UserFlags.MFA_SMS), r = e.hasFlag(C.UserFlags.PARTNER) || e.hasFlag(C.UserFlags.STAFF);
+                    return t ? (0, i.jsxs)(g, {
+                        label: N.default.Messages.MFA_SMS_ENABLE,
+                        text: N.default.Messages.MFA_SMS_AUTH_SALES_PITCH,
                         children: [(0, i.jsxs)(a.Text, {
                             variant: "text-md/normal",
-                            className: A.sectionBody,
+                            className: v.sectionBody,
                             children: [(0, i.jsx)("strong", {
-                                className: A.phoneNumber,
-                                children: C.default.Messages.MFA_SMS_AUTH_CURRENT_PHONE.format({
+                                className: v.phoneNumber,
+                                children: N.default.Messages.MFA_SMS_AUTH_CURRENT_PHONE.format({
                                     phoneNumber: e.phone
                                 })
                             }), (0, i.jsx)(a.Button, {
                                 look: a.Button.Looks.LINK,
                                 color: a.Button.Colors.LINK,
                                 size: a.Button.Sizes.MIN,
-                                className: A.linkButton,
+                                className: v.linkButton,
                                 onClick: this.handleChangePhoneNumber,
-                                children: C.default.Messages.CHANGE_PHONE_NUMBER
+                                children: N.default.Messages.CHANGE_PHONE_NUMBER
                             })]
                         }), (0, i.jsx)(a.Button, {
                             onClick: this.handleEnableSMS,
                             disabled: n || r,
                             color: a.Button.Colors.GREEN,
                             size: a.Button.Sizes.SMALL,
-                            children: r ? C.default.Messages.MFA_SMS_DISABLED_PARTNER : n ? C.default.Messages.MFA_SMS_ALREADY_ENABLED : C.default.Messages.MFA_SMS_ENABLE
+                            children: r ? N.default.Messages.MFA_SMS_DISABLED_PARTNER : n ? N.default.Messages.MFA_SMS_ALREADY_ENABLED : N.default.Messages.MFA_SMS_ENABLE
                         })]
-                    }) : (0, i.jsx)(R, {
-                        label: C.default.Messages.MFA_SMS_ENABLE,
-                        text: C.default.Messages.MFA_SMS_AUTH_SALES_PITCH,
+                    }) : (0, i.jsx)(g, {
+                        label: N.default.Messages.MFA_SMS_ENABLE,
+                        text: N.default.Messages.MFA_SMS_AUTH_SALES_PITCH,
                         children: (0, i.jsx)(a.Button, {
                             onClick: this.handleEnableSMS,
                             color: a.Button.Colors.GREEN,
                             size: a.Button.Sizes.SMALL,
                             disabled: r,
-                            children: r ? C.default.Messages.MFA_SMS_DISABLED_PARTNER : C.default.Messages.MFA_SMS_ADD_PHONE
+                            children: r ? N.default.Messages.MFA_SMS_DISABLED_PARTNER : N.default.Messages.MFA_SMS_ADD_PHONE
                         })
                     })
                 }
                 renderBackupCodesSection() {
-                    return (0, i.jsx)(R, {
-                        label: C.default.Messages.TWO_FA_DOWNLOAD_CODES,
-                        text: C.default.Messages.TWO_FA_BACKUP_CODES_WARNING.format(),
-                        children: (0, i.jsx)(c.default, {
+                    return (0, i.jsx)(g, {
+                        label: N.default.Messages.TWO_FA_DOWNLOAD_CODES,
+                        text: N.default.Messages.TWO_FA_BACKUP_CODES_WARNING.format(),
+                        children: (0, i.jsx)(d.default, {
                             fileContents: this.getDownloadFileContents,
                             contentType: "text/plain",
                             fileName: "discord_backup_codes.txt",
@@ -104,7 +104,7 @@
                             children: (0, i.jsx)(a.Button, {
                                 color: a.Button.Colors.GREEN,
                                 size: a.Button.Sizes.SMALL,
-                                children: C.default.Messages.TWO_FA_DOWNLOAD_CODES
+                                children: N.default.Messages.TWO_FA_DOWNLOAD_CODES
                             })
                         })
                     })
@@ -112,19 +112,19 @@
                 renderHeader(e) {
                     return (0, i.jsxs)(a.ModalHeader, {
                         separator: !1,
-                        children: [(0, i.jsxs)(h.default.Child, {
+                        children: [(0, i.jsxs)(S.default.Child, {
                             grow: 1,
                             shrink: 1,
                             children: [(0, i.jsx)(a.Heading, {
                                 variant: "heading-lg/semibold",
-                                className: A.header,
-                                children: _.default.parse(C.default.Messages.TWO_FA_SUCCESS_HEADER)
+                                className: v.header,
+                                children: f.default.parse(N.default.Messages.TWO_FA_SUCCESS_HEADER)
                             }), (0, i.jsx)(a.Text, {
                                 variant: "text-xs/normal",
-                                className: A.subHeader,
+                                className: v.subHeader,
                                 children: e
                             })]
-                        }), (0, i.jsx)(h.default.Child, {
+                        }), (0, i.jsx)(S.default.Child, {
                             grow: 0,
                             children: (0, i.jsx)(a.ModalCloseButton, {
                                 onClick: this.handleCloseModal
@@ -138,9 +138,9 @@
                     } = this.props;
                     return (0, i.jsx)(a.DeclarativeConfirmModal, {
                         dismissable: !0,
-                        header: C.default.Messages.TWO_FA_CONFIRM_TITLE,
-                        confirmText: C.default.Messages.TWO_FA_CONFIRM_CONFIRM,
-                        cancelText: C.default.Messages.CANCEL,
+                        header: N.default.Messages.TWO_FA_CONFIRM_TITLE,
+                        confirmText: N.default.Messages.TWO_FA_CONFIRM_CONFIRM,
+                        cancelText: N.default.Messages.CANCEL,
                         onCancel: () => this.setState({
                             showConfirmModal: !1
                         }),
@@ -170,13 +170,13 @@
                     } = this.state;
                     return (0, i.jsxs)(a.ModalRoot, {
                         transitionState: e,
-                        className: A.modal,
-                        children: [this.renderHeader(C.default.Messages.MFA_SMS_ENABLE_SHOULD_DO.format()), (0, i.jsxs)(a.ModalContent, {
-                            className: A.modalInner,
+                        className: v.modal,
+                        children: [this.renderHeader(N.default.Messages.MFA_SMS_ENABLE_SHOULD_DO.format()), (0, i.jsxs)(a.ModalContent, {
+                            className: v.modalInner,
                             children: [this.renderSMSSection(), (0, i.jsx)(a.FormDivider, {
-                                className: A.divider
+                                className: v.divider
                             }), this.renderBackupCodesSection()]
-                        }), t && this.renderConfirmModal(C.default.Messages.TWO_FA_CONFIRM_BODY)]
+                        }), t && this.renderConfirmModal(N.default.Messages.TWO_FA_CONFIRM_BODY)]
                     })
                 }
                 renderWebAuthn() {
@@ -187,16 +187,16 @@
                     } = this.state;
                     return (0, i.jsxs)(a.ModalRoot, {
                         transitionState: e,
-                        className: A.modal,
-                        children: [this.renderHeader(C.default.Messages.TWO_FA_WEBAUTHN_SHOULD_DO.format()), (0, i.jsx)(a.ModalContent, {
-                            className: A.modalInner,
+                        className: v.modal,
+                        children: [this.renderHeader(N.default.Messages.TWO_FA_WEBAUTHN_SHOULD_DO.format()), (0, i.jsx)(a.ModalContent, {
+                            className: v.modalInner,
                             children: this.renderBackupCodesSection()
-                        }), t && this.renderConfirmModal(C.default.Messages.TWO_FA_CONFIRM_WEBAUTHN_BODY)]
+                        }), t && this.renderConfirmModal(N.default.Messages.TWO_FA_CONFIRM_WEBAUTHN_BODY)]
                     })
                 }
                 openPhoneVerificationModal() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    (0, a.openModal)(t => (0, i.jsx)(f.default, {
+                    (0, a.openModal)(t => (0, i.jsx)(_.default, {
                         reason: E.ChangePhoneReason.MFA_PHONE_UPDATE,
                         ...t,
                         ...e
@@ -221,9 +221,9 @@
                                     consumed: t,
                                     code: n
                                 } = e;
-                                return "* ".concat(n.substr(0, 4), "-").concat(n.substr(4), " ").concat(t ? "(".concat(C.default.Messages.TWO_FA_BACKUP_CODE_USED, ")") : "")
+                                return "* ".concat(n.substr(0, 4), "-").concat(n.substr(4), " ").concat(t ? "(".concat(N.default.Messages.TWO_FA_BACKUP_CODE_USED, ")") : "")
                             }).join("\r\n"),
-                            t = C.default.Messages.TWO_FA_DISCORD_BACKUP_CODES.format({
+                            t = N.default.Messages.TWO_FA_DISCORD_BACKUP_CODES.format({
                                 email: this.props.currentUser.email
                             });
                         return "".concat(t, "\r\n\r\n").concat(e)
@@ -233,10 +233,10 @@
                         let {
                             currentUser: e
                         } = this.props, t = () => {
-                            (0, a.openModal)(e => (0, i.jsx)(N.default, {
+                            (0, a.openModal)(e => (0, i.jsx)(I.default, {
                                 ...e,
-                                handleSubmit: e => d.default.enableSMS(e),
-                                title: C.default.Messages.MFA_SMS_ENABLE
+                                handleSubmit: e => c.default.enableSMS(e),
+                                title: N.default.Messages.MFA_SMS_ENABLE
                             }))
                         };
                         null == e.phone ? this.openPhoneVerificationModal({
@@ -245,11 +245,11 @@
                     }
                 }
             }
-            var v = s.default.connectStores([S.default, I.default], () => {
-                let e = S.default.getCurrentUser();
+            var A = s.default.connectStores([p.default, h.default], () => {
+                let e = p.default.getCurrentUser();
                 return l(null != e, "MFAEnableSuccess: currentUser cannot be undefined"), {
                     currentUser: e,
-                    backupCodes: I.default.getBackupCodes(),
-                    hasSeenBackupPrompt: I.default.hasSeenBackupPrompt
+                    backupCodes: h.default.getBackupCodes(),
+                    hasSeenBackupPrompt: h.default.hasSeenBackupPrompt
                 }
-            })(g)
+            })(m)

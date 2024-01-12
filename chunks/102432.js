@@ -11,9 +11,9 @@
                 }
             }), n("70102"), n("424973"), n("370692"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("311790");
             var i = n("627445"),
-                r = n.n(i),
-                l = n("305122"),
-                s = n("108391");
+                l = n.n(i),
+                s = n("305122"),
+                r = n("108391");
             let a = new AudioContext({
                 sampleRate: Math.min(new AudioContext().sampleRate, 48e3)
             });
@@ -29,10 +29,10 @@
                     t.readAsDataURL(e)
                 }, new Promise((e, n) => {
                     let i = new FileReader,
-                        r = () => {
-                            i.removeEventListener("load", r), i.removeEventListener("error", n), e(i.result)
+                        l = () => {
+                            i.removeEventListener("load", l), i.removeEventListener("error", n), e(i.result)
                         };
-                    i.addEventListener("load", r), i.addEventListener("error", n), t(i)
+                    i.addEventListener("load", l), i.addEventListener("error", n), t(i)
                 }));
                 if ("string" != typeof n) throw Error("Unexpected file type");
                 return n
@@ -42,16 +42,16 @@
                     readPromise: t,
                     guildId: n,
                     name: i,
-                    volume: r,
-                    emojiId: s,
+                    volume: l,
+                    emojiId: r,
                     emojiName: a
                 } = e;
-                return (0, l.uploadSound)({
+                return (0, s.uploadSound)({
                     guildId: n,
                     name: i,
                     sound: await t,
-                    volume: r,
-                    emojiId: s,
+                    volume: l,
+                    emojiId: r,
                     emojiName: a
                 })
             }
@@ -71,12 +71,12 @@
                                 n = e[1],
                                 i = [];
                             for (let e = 0; e < t.length; e++) i.push(t[e]), i.push(n[e]);
-                            let r = new Float32Array(i.length);
-                            return r.set(i), r
+                            let l = new Float32Array(i.length);
+                            return l.set(i), l
                         }
                         throw Error("Only handles up to 2 channels")
                     }(n),
-                    l = new AudioData({
+                    s = new AudioData({
                         format: "f32",
                         sampleRate: e.sampleRate,
                         numberOfFrames: e.length,
@@ -86,11 +86,11 @@
                     }),
                     a = new AudioEncoder({
                         output: function(n) {
-                            r(null != n.duration, "Chunk duration must not be null");
+                            l(null != n.duration, "Chunk duration must not be null");
                             let i = n.duration / 1e6 * e.sampleRate,
-                                l = new Uint8Array(n.byteLength);
-                            n.copyTo(l), t.push({
-                                buffer: l,
+                                s = new Uint8Array(n.byteLength);
+                            n.copyTo(s), t.push({
+                                buffer: s,
                                 numSamples: i
                             })
                         },
@@ -102,8 +102,8 @@
                     codec: "opus",
                     sampleRate: e.sampleRate,
                     numberOfChannels: e.numberOfChannels
-                }), a.encode(l), await a.flush();
-                let o = (0, s.default)(t, {
+                }), a.encode(s), await a.flush();
+                let o = (0, r.default)(t, {
                     channelCount: e.numberOfChannels,
                     inputSampleRate: e.sampleRate,
                     outputGain: 0,
@@ -120,24 +120,24 @@
                             startMs: n,
                             endMs: i
                         } = t, {
-                            sampleRate: r,
-                            numberOfChannels: l,
-                            duration: s
-                        } = e, o = 1e3 * s, u = Math.min(i, o);
+                            sampleRate: l,
+                            numberOfChannels: s,
+                            duration: r
+                        } = e, o = 1e3 * r, u = Math.min(i, o);
                         if (0 === n && u === o) return e;
                         let d = Math.floor(n / o * e.length),
                             c = Math.floor(u / o * e.length),
-                            f = a.createBuffer(l, c - d, r);
-                        for (let t = 0; t < l; t++) {
+                            f = a.createBuffer(s, c - d, l);
+                        for (let t = 0; t < s; t++) {
                             let n = f.getChannelData(t),
                                 i = e.getChannelData(t),
-                                r = 0;
-                            for (let e = d; e <= c; e++) n[r] = i[e], r++
+                                l = 0;
+                            for (let e = d; e <= c; e++) n[l] = i[e], l++
                         }
                         return f
                     }(n, t),
-                    r = await c(i);
-                return new File([r], "sound.ogg", {
+                    l = await c(i);
+                return new File([l], "sound.ogg", {
                     type: "audio/ogg"
                 })
             }

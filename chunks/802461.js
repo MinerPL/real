@@ -1,70 +1,70 @@
             "use strict";
-            n.r(s), n.d(s, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return l
                 }
             }), n("222007");
-            var i = n("446674"),
-                r = n("913144");
-            let o = {
+            var s = n("446674"),
+                i = n("913144");
+            let r = {
                     captionsById: new Map
                 },
-                t = o,
-                a = !1,
-                f = null;
-            class _ extends i.default.PersistedStore {
+                a = r,
+                o = !1,
+                d = null;
+            class u extends s.default.PersistedStore {
                 initialize(e) {
-                    t = null != e ? {
+                    a = null != e ? {
                         captionsById: new Map(e.captionsById)
-                    } : o
+                    } : r
                 }
                 getState() {
-                    return t
+                    return a
                 }
                 getCaptionsForEmojiById(e) {
-                    var s;
+                    var t;
                     let {
                         emojiId: n
                     } = e;
-                    return null !== (s = t.captionsById.get(n)) && void 0 !== s ? s : []
+                    return null !== (t = a.captionsById.get(n)) && void 0 !== t ? t : []
                 }
                 getIsFetching() {
-                    return a
+                    return o
                 }
                 getEmojiCaptionsTTL() {
-                    return f
+                    return d
                 }
                 hasPersistedState() {
-                    return t.captionsById.size > 0
+                    return a.captionsById.size > 0
                 }
                 clear() {
-                    t = o, a = !1, f = null
+                    a = r, o = !1, d = null
                 }
             }
-            _.displayName = "EmojiCaptionsStore", _.persistKey = "EmojiCaptionsStore";
-            var d = new _(r.default, {
+            u.displayName = "EmojiCaptionsStore", u.persistKey = "EmojiCaptionsStore";
+            var l = new u(i.default, {
                 LOGOUT: function() {
-                    t = o, a = !1, f = null
+                    a = r, o = !1, d = null
                 },
                 EMOJI_CAPTIONS_FETCH: function(e) {
                     let {} = e;
-                    !a && (a = !0)
+                    !o && (o = !0)
                 },
                 EMOJI_CAPTIONS_FETCH_SUCCESS: function(e) {
                     let {
-                        emojiCaptions: s
+                        emojiCaptions: t
                     } = e;
-                    t.captionsById = new Map(Object.entries(s)), a = !1, f = Date.now() + 216e5
+                    a.captionsById = new Map(Object.entries(t)), o = !1, d = Date.now() + 216e5
                 },
                 EMOJI_CAPTIONS_FETCH_ERROR: function(e) {
                     let {
-                        is4XXError: s
+                        is4XXError: t
                     } = e;
-                    a = !1;
-                    f = Date.now() + 6e4 * (s ? 10 : 1)
+                    o = !1;
+                    d = Date.now() + 6e4 * (t ? 10 : 1)
                 },
                 POST_CONNECTION_OPEN: function(e) {
                     let {} = e;
-                    a = !1
+                    o = !1
                 }
             })

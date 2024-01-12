@@ -1,39 +1,39 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return l
                 }
             });
-            var i = n("35092"),
-                a = n("913144"),
-                l = n("474643");
-            let s = {},
-                r = {};
-            class u extends i.default.Store {
+            var s = n("35092"),
+                i = n("913144"),
+                r = n("474643");
+            let a = {},
+                o = {};
+            class d extends s.default.Store {
                 getStickerPreview(e, t) {
-                    let n = t === l.DraftType.FirstThreadMessage ? r : s;
+                    let n = t === r.DraftType.FirstThreadMessage ? o : a;
                     return n[e]
                 }
             }
-            u.displayName = "StickerMessagePreviewStore";
-            let o = new u(a.default, {
+            d.displayName = "StickerMessagePreviewStore";
+            let u = new d(i.default, {
                 ADD_STICKER_PREVIEW: function(e) {
                     let {
                         channelId: t,
                         sticker: n,
-                        draftType: i
-                    } = e, a = i === l.DraftType.FirstThreadMessage ? r : s;
-                    a[t] = [n]
+                        draftType: s
+                    } = e, i = s === r.DraftType.FirstThreadMessage ? o : a;
+                    i[t] = [n]
                 },
                 CLEAR_STICKER_PREVIEW: function(e) {
                     let {
                         channelId: t,
                         draftType: n
-                    } = e, i = n === l.DraftType.FirstThreadMessage ? r : s;
-                    null != i[t] && delete i[t]
+                    } = e, s = n === r.DraftType.FirstThreadMessage ? o : a;
+                    null != s[t] && delete s[t]
                 },
                 LOGOUT: function() {
-                    s = {}, r = {}
+                    a = {}, o = {}
                 }
             });
-            var d = o
+            var l = u

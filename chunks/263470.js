@@ -1,14 +1,14 @@
-            var e = r("186489"),
-                o = r("235723"),
-                i = r("236748"),
-                u = r("285445"),
-                a = r("956285");
+            var e = n("186489"),
+                o = n("235723"),
+                i = n("236748"),
+                u = n("285445"),
+                a = n("956285");
 
             function c(t) {
-                var n = -1,
-                    r = null == t ? 0 : t.length;
-                for (this.clear(); ++n < r;) {
-                    var e = t[n];
+                var r = -1,
+                    n = null == t ? 0 : t.length;
+                for (this.clear(); ++r < n;) {
+                    var e = t[r];
                     this.set(e[0], e[1])
                 }
             }

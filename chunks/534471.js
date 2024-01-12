@@ -1,39 +1,39 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return c
+                    return f
                 },
                 setIsOnStartStageScreen: function() {
                     return _
                 },
                 useUpdateIsOnStartStageScreenEffect: function() {
-                    return E
+                    return c
                 }
             });
-            var i = n("884691"),
-                a = n("308503"),
-                l = n("446674"),
-                s = n("957255"),
-                r = n("18494"),
-                u = n("923510"),
-                o = n("58763");
-            let d = (0, a.default)(e => ({
+            var s = n("884691"),
+                i = n("308503"),
+                r = n("446674"),
+                a = n("957255"),
+                o = n("18494"),
+                d = n("923510"),
+                u = n("58763");
+            let l = (0, i.default)(e => ({
                 isOnStartStageScreen: !0
             }));
-            var c = d;
+            var f = l;
 
             function _(e) {
-                d.setState({
+                l.setState({
                     isOnStartStageScreen: e
                 })
             }
 
-            function E(e) {
-                let t = (0, l.useStateFromStores)([r.default], () => r.default.getVoiceChannelId() === e.id),
-                    n = (0, l.useStateFromStores)([s.default], () => s.default.can(u.MODERATE_STAGE_CHANNEL_PERMISSIONS, e), [e]),
-                    a = (0, o.default)(e.id),
-                    d = n && !a;
-                i.useEffect(() => {
-                    t ? !d && _(!1) : _(d)
-                }, [t, d])
+            function c(e) {
+                let t = (0, r.useStateFromStores)([o.default], () => o.default.getVoiceChannelId() === e.id),
+                    n = (0, r.useStateFromStores)([a.default], () => a.default.can(d.MODERATE_STAGE_CHANNEL_PERMISSIONS, e), [e]),
+                    i = (0, u.default)(e.id),
+                    l = n && !i;
+                s.useEffect(() => {
+                    t ? !l && _(!1) : _(l)
+                }, [t, l])
             }

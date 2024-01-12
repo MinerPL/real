@@ -1,3 +1,3 @@
-            r("222007");
-            var WeakMap = r("367753")(r("690516"), "WeakMap");
+            n("222007");
+            var WeakMap = n("367753")(n("690516"), "WeakMap");
             t.exports = WeakMap

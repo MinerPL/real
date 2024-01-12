@@ -1,18 +1,18 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return s
                 }
             });
-            var i, a = n("201876"),
-                l = n("661736"),
-                s = n("101125");
-            i = class extends a.default {
+            var s, i = n("201876"),
+                r = n("661736"),
+                a = n("101125");
+            s = class extends i.default {
                 getInitialState() {
-                    return s.default.getLocalPresence()
+                    return a.default.getLocalPresence()
                 }
                 getNextState() {
-                    return s.default.getLocalPresence()
+                    return a.default.getLocalPresence()
                 }
                 shouldCommit() {
                     return this.socket.isSessionEstablished()
@@ -21,11 +21,11 @@
                     let {
                         status: t,
                         since: n,
-                        activities: i,
-                        afk: a,
-                        broadcast: l
+                        activities: s,
+                        afk: i,
+                        broadcast: r
                     } = e;
-                    this.socket.presenceUpdate(t, n, i, a, l)
+                    this.socket.presenceUpdate(t, n, s, i, r)
                 }
                 handleConnectionOpen() {
                     let e = !this.switchingAccounts;
@@ -35,6 +35,6 @@
                     this.switchingAccounts = !0, this.reset(), this.emitPresenceUpdate(this.getState())
                 }
                 constructor(e) {
-                    super(), this.socket = e, this.switchingAccounts = !1, this.didCommit = (0, l.default)(5, 2e4, this.emitPresenceUpdate.bind(this))
+                    super(), this.socket = e, this.switchingAccounts = !1, this.didCommit = (0, r.default)(5, 2e4, this.emitPresenceUpdate.bind(this))
                 }
             }

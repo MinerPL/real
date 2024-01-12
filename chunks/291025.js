@@ -1,6 +1,6 @@
             "use strict";
-            var i = r("37549")("%Array%"),
-                n = !i.isArray && r("812095")("Object.prototype.toString");
-            t.exports = i.isArray || function(t) {
-                return "[object Array]" === n(t)
+            var r = s("37549")("%Array%"),
+                i = !r.isArray && s("812095")("Object.prototype.toString");
+            t.exports = r.isArray || function(t) {
+                return "[object Array]" === i(t)
             }

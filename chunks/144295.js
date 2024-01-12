@@ -36,8 +36,8 @@
                 R = a("760190"),
                 b = a("305961"),
                 G = a("957255"),
-                y = a("744983"),
-                O = a("223383"),
+                O = a("744983"),
+                y = a("223383"),
                 H = a("550515"),
                 k = a("664336"),
                 U = a("395118"),
@@ -107,7 +107,7 @@
                         innerClassname: es.headerBarInner,
                         toolbar: s,
                         children: [(0, l.jsx)(T.default.Icon, {
-                            icon: O.default,
+                            icon: y.default,
                             "aria-hidden": !0
                         }), (0, l.jsxs)(T.default.Title, {
                             children: [(0, l.jsx)(u.HiddenVisually, {
@@ -222,10 +222,10 @@
                         guild: t,
                         width: a,
                         height: s
-                    } = e, o = t.id, c = (0, r.useStateFromStores)([L.default], () => L.default.getSection(ea.StaticChannelRoute.GUILD_HOME)), E = (0, r.useStateFromStores)([y.default], () => y.default.getCurrentSearchId()), [g, I] = n.useState(!1), [x, v] = n.useState(et.DEFAULT_CHAT_SIDEBAR_WIDTH), C = c === et.ChannelSections.SEARCH, N = c === et.ChannelSections.SIDEBAR_CHAT, p = C || N, T = n.useRef(null), A = (0, h.default)("top-messages", T), {
+                    } = e, o = t.id, c = (0, r.useStateFromStores)([L.default], () => L.default.getSection(ea.StaticChannelRoute.GUILD_HOME)), E = (0, r.useStateFromStores)([O.default], () => O.default.getCurrentSearchId()), [g, I] = n.useState(!1), [x, v] = n.useState(et.DEFAULT_CHAT_SIDEBAR_WIDTH), C = c === et.ChannelSections.SEARCH, N = c === et.ChannelSections.SIDEBAR_CHAT, p = C || N, T = n.useRef(null), A = (0, h.default)("top-messages", T), {
                         ref: D
                     } = (0, f.default)(), [F, R] = n.useState(el.GuildFeedRenderMode.SEGMENTED_READ), b = (0, m.default)(el.COLLAPSED_SIZE_MEDIA_QUERY), G = n.useRef(!1), {
-                        hasNewHeader: O
+                        hasNewHeader: y
                     } = V.GuildHomeHeaderRedesignExperiment.useExperiment({
                         guildId: o,
                         location: "69386d_5"
@@ -242,7 +242,7 @@
                     }, [o]), (0, Z.default)(o), n.useLayoutEffect(() => {
                         var e, t;
                         let a = W.default.getSavedScrollPosition(o);
-                        return O && (0 === a || null == a) ? null === (e = T.current) || void 0 === e || e.scrollTo({
+                        return y && (0 === a || null == a) ? null === (e = T.current) || void 0 === e || e.scrollTo({
                             to: H
                         }) : null != a && (null === (t = T.current) || void 0 === t || t.scrollTo({
                             to: a
@@ -251,7 +251,7 @@
                             let t = null === (e = T.current) || void 0 === e ? void 0 : e.getScrollerState();
                             null != t && (0, B.saveGuildHomeScrollPosition)(o, t.scrollTop)
                         }
-                    }, [o, O, H]);
+                    }, [o, y, H]);
                     let k = a - et.CHANNEL_SIDEBAR_WIDTH - x,
                         U = !(p && k < er) || b,
                         z = n.useRef(null),
@@ -312,7 +312,7 @@
                                                 },
                                                 ...n,
                                                 ...X,
-                                                children: [O && (0, l.jsx)($.default, {
+                                                children: [y && (0, l.jsx)($.default, {
                                                     guild: t
                                                 }), b ? Q : null, (0, l.jsxs)("div", {
                                                     className: es.homeContent,

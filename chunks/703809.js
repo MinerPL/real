@@ -193,7 +193,7 @@
                         }), a.createElement(e, o)
                     })
                 },
-                I = function(e, t, n) {
+                N = function(e, t, n) {
                     switch (e) {
                         case y.TITLE:
                             return {
@@ -237,7 +237,7 @@
                             }
                     }
                 },
-                N = function(e) {
+                I = function(e) {
                     var t = e.baseTag,
                         n = e.bodyAttributes,
                         r = e.encode,
@@ -262,7 +262,7 @@
                                     return [].concat(F(y.META, M.priority), F(y.LINK, w.priority), F(y.SCRIPT, k.priority))
                                 },
                                 toString: function() {
-                                    return I(y.META, M.priority, _) + " " + I(y.LINK, w.priority, _) + " " + I(y.SCRIPT, k.priority, _)
+                                    return N(y.META, M.priority, _) + " " + N(y.LINK, w.priority, _) + " " + N(y.SCRIPT, k.priority, _)
                                 }
                             },
                             metaTags: M.default,
@@ -273,15 +273,15 @@
                     }
                     return {
                         priority: f,
-                        base: I(y.BASE, t, r),
-                        bodyAttributes: I("bodyAttributes", n, r),
-                        htmlAttributes: I("htmlAttributes", a, r),
-                        link: I(y.LINK, l, r),
-                        meta: I(y.META, c, r),
-                        noscript: I(y.NOSCRIPT, o, r),
-                        script: I(y.SCRIPT, d, r),
-                        style: I(y.STYLE, i, r),
-                        title: I(y.TITLE, {
+                        base: N(y.BASE, t, r),
+                        bodyAttributes: N("bodyAttributes", n, r),
+                        htmlAttributes: N("htmlAttributes", a, r),
+                        link: N(y.LINK, l, r),
+                        meta: N(y.META, c, r),
+                        noscript: N(y.NOSCRIPT, o, r),
+                        script: N(y.SCRIPT, d, r),
+                        style: N(y.STYLE, i, r),
+                        title: N(y.TITLE, {
                             title: void 0 === s ? "" : s,
                             titleAttributes: u
                         }, r)
@@ -306,7 +306,7 @@
                                 (n.canUseDOM ? A : n.instances).splice(t, 1)
                             }
                         }
-                    }, this.context = e, this.canUseDOM = t, t || (e.helmet = N({
+                    }, this.context = e, this.canUseDOM = t, t || (e.helmet = I({
                         baseTag: [],
                         bodyAttributes: {},
                         encodeSpecialCharacters: !0,
@@ -462,7 +462,7 @@
                             V(o, function() {
                                 J = null
                             })
-                        }) : (V(o), J = null)) : N && (a = N(o)), r(a)
+                        }) : (V(o), J = null)) : I && (a = I(o)), r(a)
                     }, n.init = function() {
                         this.rendered || (this.rendered = !0, this.props.context.helmetInstances.add(this), this.emitChange())
                     }, n.render = function() {

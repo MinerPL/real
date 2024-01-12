@@ -1,76 +1,76 @@
-            var i = r("912065").Buffer;
+            var r = s("912065").Buffer;
 
-            function n(t) {
-                !i.isBuffer(t) && (t = i.from(t));
-                for (var e = t.length / 4 | 0, r = Array(e), n = 0; n < e; n++) r[n] = t.readUInt32BE(4 * n);
-                return r
+            function i(t) {
+                !r.isBuffer(t) && (t = r.from(t));
+                for (var e = t.length / 4 | 0, s = Array(e), i = 0; i < e; i++) s[i] = t.readUInt32BE(4 * i);
+                return s
             }
 
-            function o(t) {
+            function n(t) {
                 for (; 0 < t.length; t++) t[0] = 0
             }
 
-            function a(t, e, r, i, n) {
-                for (var o, a, s, f, h = r[0], c = r[1], u = r[2], d = r[3], l = t[0] ^ e[0], p = t[1] ^ e[1], b = t[2] ^ e[2], m = t[3] ^ e[3], g = 4, y = 1; y < n; y++) o = h[l >>> 24] ^ c[p >>> 16 & 255] ^ u[b >>> 8 & 255] ^ d[255 & m] ^ e[g++], a = h[p >>> 24] ^ c[b >>> 16 & 255] ^ u[m >>> 8 & 255] ^ d[255 & l] ^ e[g++], s = h[b >>> 24] ^ c[m >>> 16 & 255] ^ u[l >>> 8 & 255] ^ d[255 & p] ^ e[g++], f = h[m >>> 24] ^ c[l >>> 16 & 255] ^ u[p >>> 8 & 255] ^ d[255 & b] ^ e[g++], l = o, p = a, b = s, m = f;
-                return o = (i[l >>> 24] << 24 | i[p >>> 16 & 255] << 16 | i[b >>> 8 & 255] << 8 | i[255 & m]) ^ e[g++], a = (i[p >>> 24] << 24 | i[b >>> 16 & 255] << 16 | i[m >>> 8 & 255] << 8 | i[255 & l]) ^ e[g++], s = (i[b >>> 24] << 24 | i[m >>> 16 & 255] << 16 | i[l >>> 8 & 255] << 8 | i[255 & p]) ^ e[g++], f = (i[m >>> 24] << 24 | i[l >>> 16 & 255] << 16 | i[p >>> 8 & 255] << 8 | i[255 & b]) ^ e[g++], [o >>>= 0, a >>>= 0, s >>>= 0, f >>>= 0]
+            function c(t, e, s, r, i) {
+                for (var n, c, o, f, u = s[0], a = s[1], d = s[2], p = s[3], b = t[0] ^ e[0], h = t[1] ^ e[1], l = t[2] ^ e[2], g = t[3] ^ e[3], v = 4, x = 1; x < i; x++) n = u[b >>> 24] ^ a[h >>> 16 & 255] ^ d[l >>> 8 & 255] ^ p[255 & g] ^ e[v++], c = u[h >>> 24] ^ a[l >>> 16 & 255] ^ d[g >>> 8 & 255] ^ p[255 & b] ^ e[v++], o = u[l >>> 24] ^ a[g >>> 16 & 255] ^ d[b >>> 8 & 255] ^ p[255 & h] ^ e[v++], f = u[g >>> 24] ^ a[b >>> 16 & 255] ^ d[h >>> 8 & 255] ^ p[255 & l] ^ e[v++], b = n, h = c, l = o, g = f;
+                return n = (r[b >>> 24] << 24 | r[h >>> 16 & 255] << 16 | r[l >>> 8 & 255] << 8 | r[255 & g]) ^ e[v++], c = (r[h >>> 24] << 24 | r[l >>> 16 & 255] << 16 | r[g >>> 8 & 255] << 8 | r[255 & b]) ^ e[v++], o = (r[l >>> 24] << 24 | r[g >>> 16 & 255] << 16 | r[b >>> 8 & 255] << 8 | r[255 & h]) ^ e[v++], f = (r[g >>> 24] << 24 | r[b >>> 16 & 255] << 16 | r[h >>> 8 & 255] << 8 | r[255 & l]) ^ e[v++], [n >>>= 0, c >>>= 0, o >>>= 0, f >>>= 0]
             }
-            var s = [0, 1, 2, 4, 8, 16, 32, 64, 128, 27, 54],
+            var o = [0, 1, 2, 4, 8, 16, 32, 64, 128, 27, 54],
                 f = function() {
                     for (var t = Array(256), e = 0; e < 256; e++) e < 128 ? t[e] = e << 1 : t[e] = e << 1 ^ 283;
-                    for (var r = [], i = [], n = [
+                    for (var s = [], r = [], i = [
                             [],
                             [],
                             [],
                             []
-                        ], o = [
+                        ], n = [
                             [],
                             [],
                             [],
                             []
-                        ], a = 0, s = 0, f = 0; f < 256; ++f) {
-                        var h = s ^ s << 1 ^ s << 2 ^ s << 3 ^ s << 4;
-                        h = h >>> 8 ^ 255 & h ^ 99, r[a] = h, i[h] = a;
-                        var c = t[a],
-                            u = t[c],
-                            d = t[u],
-                            l = 257 * t[h] ^ 16843008 * h;
-                        n[0][a] = l << 24 | l >>> 8, n[1][a] = l << 16 | l >>> 16, n[2][a] = l << 8 | l >>> 24, n[3][a] = l, l = 16843009 * d ^ 65537 * u ^ 257 * c ^ 16843008 * a, o[0][h] = l << 24 | l >>> 8, o[1][h] = l << 16 | l >>> 16, o[2][h] = l << 8 | l >>> 24, o[3][h] = l, 0 === a ? a = s = 1 : (a = c ^ t[t[t[d ^ c]]], s ^= t[t[s]])
+                        ], c = 0, o = 0, f = 0; f < 256; ++f) {
+                        var u = o ^ o << 1 ^ o << 2 ^ o << 3 ^ o << 4;
+                        u = u >>> 8 ^ 255 & u ^ 99, s[c] = u, r[u] = c;
+                        var a = t[c],
+                            d = t[a],
+                            p = t[d],
+                            b = 257 * t[u] ^ 16843008 * u;
+                        i[0][c] = b << 24 | b >>> 8, i[1][c] = b << 16 | b >>> 16, i[2][c] = b << 8 | b >>> 24, i[3][c] = b, b = 16843009 * p ^ 65537 * d ^ 257 * a ^ 16843008 * c, n[0][u] = b << 24 | b >>> 8, n[1][u] = b << 16 | b >>> 16, n[2][u] = b << 8 | b >>> 24, n[3][u] = b, 0 === c ? c = o = 1 : (c = a ^ t[t[t[p ^ a]]], o ^= t[t[o]])
                     }
                     return {
-                        SBOX: r,
-                        INV_SBOX: i,
-                        SUB_MIX: n,
-                        INV_SUB_MIX: o
+                        SBOX: s,
+                        INV_SBOX: r,
+                        SUB_MIX: i,
+                        INV_SUB_MIX: n
                     }
                 }();
 
-            function h(t) {
-                this._key = n(t), this._reset()
+            function u(t) {
+                this._key = i(t), this._reset()
             }
-            h.blockSize = 16, h.keySize = 32, h.prototype.blockSize = h.blockSize, h.prototype.keySize = h.keySize, h.prototype._reset = function() {
-                for (var t = this._key, e = t.length, r = e + 6, i = (r + 1) * 4, n = [], o = 0; o < e; o++) n[o] = t[o];
-                for (o = e; o < i; o++) {
-                    var a = n[o - 1];
-                    o % e == 0 ? (a = a << 8 | a >>> 24, a = (f.SBOX[a >>> 24] << 24 | f.SBOX[a >>> 16 & 255] << 16 | f.SBOX[a >>> 8 & 255] << 8 | f.SBOX[255 & a]) ^ s[o / e | 0] << 24) : e > 6 && o % e == 4 && (a = f.SBOX[a >>> 24] << 24 | f.SBOX[a >>> 16 & 255] << 16 | f.SBOX[a >>> 8 & 255] << 8 | f.SBOX[255 & a]), n[o] = n[o - e] ^ a
+            u.blockSize = 16, u.keySize = 32, u.prototype.blockSize = u.blockSize, u.prototype.keySize = u.keySize, u.prototype._reset = function() {
+                for (var t = this._key, e = t.length, s = e + 6, r = (s + 1) * 4, i = [], n = 0; n < e; n++) i[n] = t[n];
+                for (n = e; n < r; n++) {
+                    var c = i[n - 1];
+                    n % e == 0 ? (c = c << 8 | c >>> 24, c = (f.SBOX[c >>> 24] << 24 | f.SBOX[c >>> 16 & 255] << 16 | f.SBOX[c >>> 8 & 255] << 8 | f.SBOX[255 & c]) ^ o[n / e | 0] << 24) : e > 6 && n % e == 4 && (c = f.SBOX[c >>> 24] << 24 | f.SBOX[c >>> 16 & 255] << 16 | f.SBOX[c >>> 8 & 255] << 8 | f.SBOX[255 & c]), i[n] = i[n - e] ^ c
                 }
-                for (var h = [], c = 0; c < i; c++) {
-                    var u = i - c,
-                        d = n[u - (c % 4 ? 0 : 4)];
-                    c < 4 || u <= 4 ? h[c] = d : h[c] = f.INV_SUB_MIX[0][f.SBOX[d >>> 24]] ^ f.INV_SUB_MIX[1][f.SBOX[d >>> 16 & 255]] ^ f.INV_SUB_MIX[2][f.SBOX[d >>> 8 & 255]] ^ f.INV_SUB_MIX[3][f.SBOX[255 & d]]
+                for (var u = [], a = 0; a < r; a++) {
+                    var d = r - a,
+                        p = i[d - (a % 4 ? 0 : 4)];
+                    a < 4 || d <= 4 ? u[a] = p : u[a] = f.INV_SUB_MIX[0][f.SBOX[p >>> 24]] ^ f.INV_SUB_MIX[1][f.SBOX[p >>> 16 & 255]] ^ f.INV_SUB_MIX[2][f.SBOX[p >>> 8 & 255]] ^ f.INV_SUB_MIX[3][f.SBOX[255 & p]]
                 }
-                this._nRounds = r, this._keySchedule = n, this._invKeySchedule = h
-            }, h.prototype.encryptBlockRaw = function(t) {
-                return a(t = n(t), this._keySchedule, f.SUB_MIX, f.SBOX, this._nRounds)
-            }, h.prototype.encryptBlock = function(t) {
+                this._nRounds = s, this._keySchedule = i, this._invKeySchedule = u
+            }, u.prototype.encryptBlockRaw = function(t) {
+                return c(t = i(t), this._keySchedule, f.SUB_MIX, f.SBOX, this._nRounds)
+            }, u.prototype.encryptBlock = function(t) {
                 var e = this.encryptBlockRaw(t),
-                    r = i.allocUnsafe(16);
-                return r.writeUInt32BE(e[0], 0), r.writeUInt32BE(e[1], 4), r.writeUInt32BE(e[2], 8), r.writeUInt32BE(e[3], 12), r
-            }, h.prototype.decryptBlock = function(t) {
-                var e = (t = n(t))[1];
+                    s = r.allocUnsafe(16);
+                return s.writeUInt32BE(e[0], 0), s.writeUInt32BE(e[1], 4), s.writeUInt32BE(e[2], 8), s.writeUInt32BE(e[3], 12), s
+            }, u.prototype.decryptBlock = function(t) {
+                var e = (t = i(t))[1];
                 t[1] = t[3], t[3] = e;
-                var r = a(t, this._invKeySchedule, f.INV_SUB_MIX, f.INV_SBOX, this._nRounds),
-                    o = i.allocUnsafe(16);
-                return o.writeUInt32BE(r[0], 0), o.writeUInt32BE(r[3], 4), o.writeUInt32BE(r[2], 8), o.writeUInt32BE(r[1], 12), o
-            }, h.prototype.scrub = function() {
-                o(this._keySchedule), o(this._invKeySchedule), o(this._key)
-            }, t.exports.AES = h
+                var s = c(t, this._invKeySchedule, f.INV_SUB_MIX, f.INV_SBOX, this._nRounds),
+                    n = r.allocUnsafe(16);
+                return n.writeUInt32BE(s[0], 0), n.writeUInt32BE(s[3], 4), n.writeUInt32BE(s[2], 8), n.writeUInt32BE(s[1], 12), n
+            }, u.prototype.scrub = function() {
+                n(this._keySchedule), n(this._invKeySchedule), n(this._key)
+            }, t.exports.AES = u

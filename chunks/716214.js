@@ -1,72 +1,72 @@
             "use strict";
             n.r(t), n.d(t, {
                 connectOrLurkStage: function() {
-                    return T
+                    return v
                 },
                 connectToStage: function() {
-                    return C
+                    return E
                 },
                 connectAndOpen: function() {
-                    return m
+                    return p
                 },
                 navigateToStage: function() {
-                    return S
+                    return y
                 }
             });
-            var i = n("851387"),
-                a = n("987317"),
-                l = n("990766"),
-                s = n("792367"),
-                r = n("248967"),
-                u = n("373469"),
-                o = n("42203"),
-                d = n("305961"),
-                c = n("957255"),
+            var s = n("851387"),
+                i = n("987317"),
+                r = n("990766"),
+                a = n("792367"),
+                o = n("248967"),
+                d = n("373469"),
+                u = n("42203"),
+                l = n("305961"),
+                f = n("957255"),
                 _ = n("18494"),
-                E = n("751661"),
-                f = n("27822"),
-                h = n("923510"),
-                p = n("30577");
+                c = n("751661"),
+                g = n("27822"),
+                m = n("923510"),
+                h = n("30577");
 
-            function T(e, t) {
+            function v(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                return new Promise(async a => {
-                    let l = o.default.getChannel(t);
-                    if (null != l) return C(l, n), a(l);
-                    await (0, r.stopLurkingAll)([e]), await i.default.joinGuild(e, {
+                return new Promise(async i => {
+                    let r = u.default.getChannel(t);
+                    if (null != r) return E(r, n), i(r);
+                    await (0, o.stopLurkingAll)([e]), await s.default.joinGuild(e, {
                         lurker: !0
-                    }), d.default.addConditionalChangeListener(() => {
-                        let e = o.default.getChannel(t);
-                        return null == e || (C(e), p.default.initialize(), a(e), !1)
+                    }), l.default.addConditionalChangeListener(() => {
+                        let e = u.default.getChannel(t);
+                        return null == e || (E(e), h.default.initialize(), i(e), !1)
                     })
                 })
             }
 
-            function C(e) {
+            function E(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     n = _.default.getVoiceChannelId();
                 if (!t && ! function(e, t) {
-                        let n = c.default.can(h.JOIN_VOCAL_CHANNEL_PERMISSIONS, e);
-                        return !!n && (!E.shouldShowBlockedUsers(e.id) || t === e.id || (E.openStageBlockedUsersSheet(e, () => m(e, !0)), !1))
+                        let n = f.default.can(m.JOIN_VOCAL_CHANNEL_PERMISSIONS, e);
+                        return !!n && (!c.shouldShowBlockedUsers(e.id) || t === e.id || (c.openStageBlockedUsersSheet(e, () => p(e, !0)), !1))
                     }(e, n)) return !1;
-                if (f.default.initialize(), a.default.selectVoiceChannel(e.id), (n = _.default.getVoiceChannelId()) !== e.id) return !1;
-                let i = u.default.getAllApplicationStreamsForChannel(e.id);
-                return i.length > 0 && (0, l.watchStream)(i[0], {
+                if (g.default.initialize(), i.default.selectVoiceChannel(e.id), (n = _.default.getVoiceChannelId()) !== e.id) return !1;
+                let s = d.default.getAllApplicationStreamsForChannel(e.id);
+                return s.length > 0 && (0, r.watchStream)(s[0], {
                     noFocus: !1
                 }), !0
             }
 
-            function m(e) {
+            function p(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-                    a = _.default.getVoiceChannelId();
-                if (!i && a !== e.id && (0, s.shouldShowVoiceChannelChangeConfirmation)(e) && E.showChannelChangeConfirmationAlert(e, () => m(e, t, n, !0))) return;
-                let l = C(e, t);
-                l && S(e, a, n)
+                    s = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+                    i = _.default.getVoiceChannelId();
+                if (!s && i !== e.id && (0, a.shouldShowVoiceChannelChangeConfirmation)(e) && c.showChannelChangeConfirmationAlert(e, () => p(e, t, n, !0))) return;
+                let r = E(e, t);
+                r && y(e, i, n)
             }
 
-            function S(e, t) {
+            function y(e, t) {
                 let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-                E.navigateToStage(e, t, n)
+                c.navigateToStage(e, t, n)
             }

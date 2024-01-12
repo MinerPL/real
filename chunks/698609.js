@@ -11,29 +11,29 @@
                 }
             });
             var i = n("884691"),
-                r = n("446674"),
-                l = n("299039"),
-                a = n("781324"),
-                o = n("647149"),
+                l = n("446674"),
+                r = n("299039"),
+                o = n("781324"),
+                a = n("647149"),
                 s = n("646356");
 
             function u() {
-                let e = (0, r.useStateFromStoresArray)([s.default], () => s.default.getClassifications());
-                return e.sort((e, t) => l.default.extractTimestamp(t.id) - l.default.extractTimestamp(e.id))
+                let e = (0, l.useStateFromStoresArray)([s.default], () => s.default.getClassifications());
+                return e.sort((e, t) => r.default.extractTimestamp(t.id) - r.default.extractTimestamp(e.id))
             }
 
             function c(e) {
-                let t = (0, r.useStateFromStores)([s.default], () => s.default.getClassification(e)),
-                    n = (0, r.useStateFromStores)([s.default], () => s.default.getClassificationRequestState(e)),
-                    l = (0, r.useStateFromStores)([s.default], () => s.default.getIsDsaEligible()),
-                    u = (0, o.useIsInappAppealIngestionEnabled)();
+                let t = (0, l.useStateFromStores)([s.default], () => s.default.getClassification(e)),
+                    n = (0, l.useStateFromStores)([s.default], () => s.default.getClassificationRequestState(e)),
+                    r = (0, l.useStateFromStores)([s.default], () => s.default.getIsDsaEligible()),
+                    u = (0, a.useIsInappAppealIngestionEnabled)();
                 return i.useEffect(() => {
-                    void 0 === t && null == n && a.getSafetyHubDataForClassification(e)
+                    void 0 === t && null == n && o.getSafetyHubDataForClassification(e)
                 }, [e, t, n]), {
                     classification: t,
                     classificationRequestState: n,
-                    isDsaEligible: l,
-                    isAppealEligible: u && l && null != t && null == t.appeal_status
+                    isDsaEligible: r,
+                    isAppealEligible: u && r && null != t && null == t.appeal_status
                 }
             }
 

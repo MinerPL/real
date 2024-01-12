@@ -1,53 +1,53 @@
             "use strict";
             n.r(t), n.d(t, {
                 getAbbreviatedFormatter: function() {
-                    return d
+                    return l
                 },
                 getFullFormatter: function() {
-                    return c
+                    return f
                 },
                 default: function() {
                     return _
                 }
             });
-            var i = n("866227"),
-                a = n.n(i),
-                l = n("782340");
-            let s = 3600,
-                r = 24 * s,
-                u = 30 * r,
-                o = 12 * u,
-                d = () => ({
-                    minutes: l.default.Messages.DURATION_MINUTES_SHORT,
-                    hours: l.default.Messages.DURATION_HOURS_SHORT,
-                    days: l.default.Messages.DURATION_DAYS_SHORT,
-                    months: l.default.Messages.DURATION_MONTHS_SHORT,
-                    years: l.default.Messages.DURATION_YEARS_SHORT
+            var s = n("866227"),
+                i = n.n(s),
+                r = n("782340");
+            let a = 3600,
+                o = 24 * a,
+                d = 30 * o,
+                u = 12 * d,
+                l = () => ({
+                    minutes: r.default.Messages.DURATION_MINUTES_SHORT,
+                    hours: r.default.Messages.DURATION_HOURS_SHORT,
+                    days: r.default.Messages.DURATION_DAYS_SHORT,
+                    months: r.default.Messages.DURATION_MONTHS_SHORT,
+                    years: r.default.Messages.DURATION_YEARS_SHORT
                 }),
-                c = () => ({
-                    minutes: l.default.Messages.DURATION_MINUTES_AGO,
-                    hours: l.default.Messages.DURATION_HOURS_AGO,
-                    days: l.default.Messages.DURATION_DAYS_AGO,
-                    months: l.default.Messages.DURATION_MONTHS_AGO,
-                    years: l.default.Messages.DURATION_YEARS_AGO
+                f = () => ({
+                    minutes: r.default.Messages.DURATION_MINUTES_AGO,
+                    hours: r.default.Messages.DURATION_HOURS_AGO,
+                    days: r.default.Messages.DURATION_DAYS_AGO,
+                    months: r.default.Messages.DURATION_MONTHS_AGO,
+                    years: r.default.Messages.DURATION_YEARS_AGO
                 });
 
             function _(e) {
                 let {
                     since: t,
                     getFormatter: n
-                } = e, i = a().diff(a(t), "s"), l = n(), d = a(t).format("LL");
-                return d = i < 60 ? l.minutes.format({
+                } = e, s = i().diff(i(t), "s"), r = n(), l = i(t).format("LL");
+                return l = s < 60 ? r.minutes.format({
                     minutes: 1
-                }) : i < s ? l.minutes.format({
-                    minutes: Math.floor(i / 60)
-                }) : i < r ? l.hours.format({
-                    hours: Math.floor(i / s)
-                }) : i < u ? l.days.format({
-                    days: Math.floor(i / r)
-                }) : i < o ? l.months.format({
-                    months: Math.floor(i / u)
-                }) : l.years.format({
-                    years: Math.floor(i / o)
+                }) : s < a ? r.minutes.format({
+                    minutes: Math.floor(s / 60)
+                }) : s < o ? r.hours.format({
+                    hours: Math.floor(s / a)
+                }) : s < d ? r.days.format({
+                    days: Math.floor(s / o)
+                }) : s < u ? r.months.format({
+                    months: Math.floor(s / d)
+                }) : r.years.format({
+                    years: Math.floor(s / u)
                 })
             }

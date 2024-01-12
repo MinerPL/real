@@ -10,8 +10,8 @@
                 r = n.n(i),
                 s = n("77078"),
                 a = n("886074"),
-                o = n("45029"),
-                u = n("782340"),
+                u = n("45029"),
+                o = n("782340"),
                 d = n("41604");
 
             function c(e) {
@@ -31,7 +31,7 @@
                             children: t
                         }), n ? (0, l.jsxs)("div", {
                             className: d.pill,
-                            children: [(0, l.jsx)(o.default, {
+                            children: [(0, l.jsx)(u.default, {
                                 height: 14,
                                 width: 14,
                                 className: d.icon
@@ -39,7 +39,7 @@
                                 variant: "text-xs/medium",
                                 color: "header-primary",
                                 className: d.pillText,
-                                children: u.default.Messages.COMMUNITIES
+                                children: o.default.Messages.COMMUNITIES
                             })]
                         }) : null]
                     })

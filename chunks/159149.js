@@ -7,9 +7,9 @@
                     return E
                 }
             });
-            var r, i, o = n("37983");
+            var r, i, l = n("37983");
             n("884691");
-            var l = n("77078"),
+            var o = n("77078"),
                 s = n("145131"),
                 a = n("181114"),
                 u = n("376641"),
@@ -26,49 +26,49 @@
                     primaryText: E,
                     primaryTooltip: _,
                     primaryDisabled: p,
-                    primarySubmitting: I,
-                    onPrimary: C,
+                    primarySubmitting: C,
+                    onPrimary: I,
                     secondaryText: A,
-                    onSecondary: h
+                    onSecondary: T
                 } = e;
-                return (0, o.jsxs)(l.ModalFooter, {
+                return (0, l.jsxs)(o.ModalFooter, {
                     justify: s.default.Justify.BETWEEN,
                     align: s.default.Align.CENTER,
                     children: [(() => {
                         if (null == i || null == E) return null;
-                        let e = 2 === i ? a.default : l.Button,
+                        let e = 2 === i ? a.default : o.Button,
                             t = {
                                 innerClassName: d.button,
                                 type: f,
                                 disabled: p,
-                                submitting: I,
-                                color: 0 === i ? l.Button.Colors.BRAND : l.Button.Colors.GREEN,
-                                onClick: C
+                                submitting: C,
+                                color: 0 === i ? o.Button.Colors.BRAND : o.Button.Colors.GREEN,
+                                onClick: I
                             };
-                        return null != _ ? (0, o.jsx)(l.Tooltip, {
+                        return null != _ ? (0, l.jsx)(o.Tooltip, {
                             text: _,
-                            children: n => (0, o.jsxs)(e, {
+                            children: n => (0, l.jsxs)(e, {
                                 ...n,
                                 ...t,
-                                children: [null == r ? null : (0, o.jsx)(r, {
+                                children: [null == r ? null : (0, l.jsx)(r, {
                                     className: d.primaryIcon
                                 }), E]
                             })
-                        }) : (0, o.jsxs)(e, {
+                        }) : (0, l.jsxs)(e, {
                             ...t,
-                            children: [null == r ? null : (0, o.jsx)(r, {
+                            children: [null == r ? null : (0, l.jsx)(r, {
                                 className: d.primaryIcon
                             }), E]
                         })
-                    })(), null == A ? null : (0, o.jsx)(l.Button, {
-                        color: l.Button.Colors.PRIMARY,
-                        look: l.Button.Looks.LINK,
-                        onClick: h,
+                    })(), null == A ? null : (0, l.jsx)(o.Button, {
+                        color: o.Button.Colors.PRIMARY,
+                        look: o.Button.Looks.LINK,
+                        onClick: T,
                         children: A
-                    }), (0, o.jsx)(u.default, {}), null == t ? null : (0, o.jsx)(l.Button, {
+                    }), (0, l.jsx)(u.default, {}), null == t ? null : (0, l.jsx)(o.Button, {
                         className: d.back,
-                        color: l.Button.Colors.PRIMARY,
-                        look: l.Button.Looks.LINK,
+                        color: o.Button.Colors.PRIMARY,
+                        look: o.Button.Looks.LINK,
                         onClick: t,
                         children: null != n ? n : c.default.Messages.BACK
                     })]

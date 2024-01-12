@@ -1,45 +1,45 @@
             "use strict";
-            var r, i;
+            var s, i;
             n.r(t), n.d(t, {
                 MAX_LENGTH_SOUND_NAME: function() {
-                    return a
+                    return r
                 },
                 MAX_SOUND_LENGTH_SECONDS: function() {
-                    return o
+                    return a
                 },
                 DEFAULT_SOUND_GUILD_ID: function() {
-                    return s
+                    return o
                 },
                 SoundboardWheelSize: function() {
-                    return l
+                    return d
                 },
                 DEFAULT_KEYBIND: function() {
                     return u
                 },
                 EMPTY_SOUND_LIST: function() {
-                    return d
+                    return l
                 },
                 CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID: function() {
-                    return c
+                    return f
                 },
                 NUM_RECENTLY_HEARD_SOUNDS: function() {
                     return _
                 },
                 NUM_FREQUENTLY_USED_SOUNDS: function() {
-                    return E
+                    return c
                 }
             }), n("222007");
-            let a = 32,
-                o = 5,
-                s = "DEFAULT";
-            (i = r || (r = {}))[i.SUCCESS = 0] = "SUCCESS", i[i.INTERRUPTED = 1] = "INTERRUPTED";
-            let l = {
+            let r = 32,
+                a = 5,
+                o = "DEFAULT";
+            (i = s || (s = {}))[i.SUCCESS = 0] = "SUCCESS", i[i.INTERRUPTED = 1] = "INTERRUPTED";
+            let d = {
                     width: 424,
                     height: 424,
                     padding: 100
                 },
                 u = "ctrl+`",
-                d = [],
-                c = "0",
+                l = [],
+                f = "0",
                 _ = 6,
-                E = 6
+                c = 6

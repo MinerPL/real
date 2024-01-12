@@ -27,8 +27,8 @@
                 A = n("824563"),
                 x = n("18494"),
                 R = n("101125"),
-                L = n("102985"),
-                M = n("697218"),
+                M = n("102985"),
+                L = n("697218"),
                 D = n("189857"),
                 j = n("901165"),
                 w = n("189771"),
@@ -114,7 +114,7 @@
             }
             class Z extends u.default.Store {
                 initialize() {
-                    this.waitFor(I.default, M.default)
+                    this.waitFor(I.default, L.default)
                 }
                 getNotifications() {
                     return F
@@ -166,7 +166,7 @@
                     let {
                         channelId: a,
                         message: l
-                    } = e, s = I.default.getChannel(a), o = M.default.getUser(null === (t = l.author) || void 0 === t ? void 0 : t.id);
+                    } = e, s = I.default.getChannel(a), o = L.default.getUser(null === (t = l.author) || void 0 === t ? void 0 : t.id);
                     if (null == s || null == o) return !1;
                     if ((null === (n = l.activity) || void 0 === n ? void 0 : n.type) === P.ActivityActionTypes.JOIN || (null === (i = l.activity) || void 0 === i ? void 0 : i.type) === P.ActivityActionTypes.JOIN_REQUEST) {
                         if (!(0, w.shouldNotify)(l, a, !0, !0)) return !1;
@@ -194,7 +194,7 @@
                         }(s, l, o);
                         if (!1 !== e) return e
                     }
-                    if ((!j.default.isInstanceUILocked() || j.default.isPinned(P.OverlayWidgets.TEXT)) && a === x.default.getChannelId() || j.default.getTextChatNotificationMode() === P.OverlayNotificationTextChatTypes.DISABLED || L.default.disableNotifications || !(0, w.shouldNotify)(l, a)) return !1;
+                    if ((!j.default.isInstanceUILocked() || j.default.isPinned(P.OverlayWidgets.TEXT)) && a === x.default.getChannelId() || j.default.getTextChatNotificationMode() === P.OverlayNotificationTextChatTypes.DISABLED || M.default.disableNotifications || !(0, w.shouldNotify)(l, a)) return !1;
                     let d = !_.default.isSoundDisabled(D.MESSAGE_SOUND);
                     z((0, S.default)(s, l, o, d), {
                         type: 1,

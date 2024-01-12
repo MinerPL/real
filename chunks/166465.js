@@ -1,135 +1,135 @@
             "use strict";
-            n.r(s), n.d(s, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return v
                 }
             }), n("222007");
-            var i = n("917351"),
-                r = n.n(i),
-                o = n("866227"),
-                t = n.n(o),
-                a = n("446674"),
-                f = n("913144"),
-                _ = n("305961");
-            let d = {
+            var s = n("917351"),
+                i = n.n(s),
+                r = n("866227"),
+                a = n.n(r),
+                o = n("446674"),
+                d = n("913144"),
+                u = n("305961");
+            let l = {
                     packsById: new Map
                 },
-                u = d,
-                g = !1,
-                m = null,
-                v = !1;
+                f = l,
+                _ = !1,
+                c = null,
+                g = !1;
 
-            function c(e) {
-                let s = null != u.packsById.get(e.id);
-                if (s) u.packsById.set(e.id, e);
+            function m(e) {
+                let t = null != f.packsById.get(e.id);
+                if (t) f.packsById.set(e.id, e);
                 else {
-                    let s = [...u.packsById];
-                    u.packsById = new Map, u.packsById.set(e.id, e), s.forEach(e => {
-                        let [s, n] = e;
-                        return u.packsById.set(s, n)
+                    let t = [...f.packsById];
+                    f.packsById = new Map, f.packsById.set(e.id, e), t.forEach(e => {
+                        let [t, n] = e;
+                        return f.packsById.set(t, n)
                     })
                 }
             }
-            class h extends a.default.PersistedStore {
+            class h extends o.default.PersistedStore {
                 initialize(e) {
-                    this.waitFor(_.default), u = (null == e ? void 0 : e.packsById) instanceof Map ? e : d
+                    this.waitFor(u.default), f = (null == e ? void 0 : e.packsById) instanceof Map ? e : l
                 }
                 getState() {
-                    return u
+                    return f
                 }
                 getPacksForUser() {
-                    return [...u.packsById.values()].filter(e => !(null === this || void 0 === this ? void 0 : this._isADuplicateGuildPack(e.id)))
+                    return [...f.packsById.values()].filter(e => !(null === this || void 0 === this ? void 0 : this._isADuplicateGuildPack(e.id)))
                 }
                 countPacksCollected() {
-                    return u.packsById.size
+                    return f.packsById.size
                 }
                 getPackByPackId(e) {
                     let {
-                        packId: s,
+                        packId: t,
                         allowDuplicateGuildPack: n
                     } = e;
-                    return !0 !== n && (null === this || void 0 === this ? void 0 : this._isADuplicateGuildPack(s)) ? null : u.packsById.get(s)
+                    return !0 !== n && (null === this || void 0 === this ? void 0 : this._isADuplicateGuildPack(t)) ? null : f.packsById.get(t)
                 }
                 getPacksById() {
-                    return u.packsById
+                    return f.packsById
                 }
                 getIsFetching() {
-                    return g
+                    return _
                 }
                 getSortedPackIds() {
                     var e;
-                    return null !== (e = [...u.packsById.keys()].filter(e => !(null === this || void 0 === this ? void 0 : this._isADuplicateGuildPack(e)))) && void 0 !== e ? e : []
+                    return null !== (e = [...f.packsById.keys()].filter(e => !(null === this || void 0 === this ? void 0 : this._isADuplicateGuildPack(e)))) && void 0 !== e ? e : []
                 }
                 getPackEmojisTTL() {
-                    return m
+                    return c
                 }
                 getHasPackAddedNotification() {
-                    return v
+                    return g
                 }
                 hasPersistedState() {
-                    return !r.isEmpty(u.packsById)
+                    return !i.isEmpty(f.packsById)
                 }
                 _isADuplicateGuildPack(e) {
-                    var s;
-                    return (null === (s = _.default.getGuild(e)) || void 0 === s ? void 0 : s.joinedAt) != null
+                    var t;
+                    return (null === (t = u.default.getGuild(e)) || void 0 === t ? void 0 : t.joinedAt) != null
                 }
                 clear() {
-                    u = d, g = !1, m = null
+                    f = l, _ = !1, c = null
                 }
             }
             h.displayName = "InventoryStore", h.persistKey = "InventoryStore";
-            var l = new h(f.default, {
+            var v = new h(d.default, {
                 LOGOUT: function() {
-                    u = d, g = !1, m = null
+                    f = l, _ = !1, c = null
                 },
                 INVENTORY_FETCH: function(e) {
                     let {} = e;
-                    !g && (g = !0)
+                    !_ && (_ = !0)
                 },
                 INVENTORY_FETCH_SUCCESS: function(e) {
                     let {
-                        packs: s
+                        packs: t
                     } = e;
-                    s.forEach(e => {
-                        u.packsById.set(e.id, e)
-                    }), g = !1, m = t(t()).add(30, "minutes").valueOf()
+                    t.forEach(e => {
+                        f.packsById.set(e.id, e)
+                    }), _ = !1, c = a(a()).add(30, "minutes").valueOf()
                 },
                 INVENTORY_FETCH_ERROR: function(e) {
                     let {
-                        is4XXError: s
+                        is4XXError: t
                     } = e;
-                    g = !1, m = t(t()).add(s ? 10 : 1, "minutes").valueOf()
+                    _ = !1, c = a(a()).add(t ? 10 : 1, "minutes").valueOf()
                 },
                 INVENTORY_COLLECT_PACK_SUCCESS: function(e) {
                     let {
-                        pack: s
+                        pack: t
                     } = e;
-                    c(s), v = !0
+                    m(t), g = !0
                 },
                 INVENTORY_REMOVE_PACK_SUCCESS: function(e) {
                     let {
-                        packId: s
+                        packId: t
                     } = e;
-                    u.packsById.delete(s)
+                    f.packsById.delete(t)
                 },
                 INVENTORY_PACK_UPDATE: function(e) {
                     let {
-                        pack: s
+                        pack: t
                     } = e;
-                    c(s)
+                    m(t)
                 },
                 INVENTORY_PACK_DELETE: function(e) {
                     let {
-                        pack: s
+                        pack: t
                     } = e;
-                    u.packsById.delete(s.id)
+                    f.packsById.delete(t.id)
                 },
                 INVENTORY_DISMISS_PACK_ADDED_NOTIFICATION: function(e) {
                     let {} = e;
-                    v = !1
+                    g = !1
                 },
                 POST_CONNECTION_OPEN: function(e) {
                     let {} = e;
-                    g = !1, m = null
+                    _ = !1, c = null
                 }
             })

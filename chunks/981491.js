@@ -1,50 +1,50 @@
-            r("70102"), r("424973");
-            var i = r("912065").Buffer,
-                n = r("839383"),
-                o = r("814548").ec,
-                a = r("596659"),
-                s = r("49873");
+            s("70102"), s("424973");
+            var r = s("912065").Buffer,
+                i = s("839383"),
+                n = s("814548").ec,
+                c = s("596659"),
+                o = s("49873");
 
             function f(t, e) {
                 if (0 >= t.cmpn(0) || t.cmp(e) >= e) throw Error("invalid sig")
             }
-            t.exports = function(t, e, r, h, c) {
-                var u = a(r);
-                if ("ec" === u.type) {
-                    if ("ecdsa" !== h && "ecdsa/rsa" !== h) throw Error("wrong public key type");
-                    return function(t, e, r) {
-                        var i = s[r.data.algorithm.curve.join(".")];
-                        if (!i) throw Error("unknown curve " + r.data.algorithm.curve.join("."));
-                        var n = new o(i),
-                            a = r.data.subjectPrivateKey.data;
-                        return n.verify(e, t, a)
-                    }(t, e, u)
+            t.exports = function(t, e, s, u, a) {
+                var d = c(s);
+                if ("ec" === d.type) {
+                    if ("ecdsa" !== u && "ecdsa/rsa" !== u) throw Error("wrong public key type");
+                    return function(t, e, s) {
+                        var r = o[s.data.algorithm.curve.join(".")];
+                        if (!r) throw Error("unknown curve " + s.data.algorithm.curve.join("."));
+                        var i = new n(r),
+                            c = s.data.subjectPrivateKey.data;
+                        return i.verify(e, t, c)
+                    }(t, e, d)
                 }
-                if ("dsa" === u.type) {
-                    if ("dsa" !== h) throw Error("wrong public key type");
-                    return function(t, e, r) {
-                        var i = r.data.p,
-                            o = r.data.q,
-                            s = r.data.g,
-                            h = r.data.pub_key,
-                            c = a.signature.decode(t, "der"),
-                            u = c.s,
-                            d = c.r;
-                        f(u, o), f(d, o);
-                        var l = n.mont(i),
-                            p = u.invm(o);
-                        return 0 === s.toRed(l).redPow(new n(e).mul(p).mod(o)).fromRed().mul(h.toRed(l).redPow(d.mul(p).mod(o)).fromRed()).mod(i).mod(o).cmp(d)
-                    }(t, e, u)
+                if ("dsa" === d.type) {
+                    if ("dsa" !== u) throw Error("wrong public key type");
+                    return function(t, e, s) {
+                        var r = s.data.p,
+                            n = s.data.q,
+                            o = s.data.g,
+                            u = s.data.pub_key,
+                            a = c.signature.decode(t, "der"),
+                            d = a.s,
+                            p = a.r;
+                        f(d, n), f(p, n);
+                        var b = i.mont(r),
+                            h = d.invm(n);
+                        return 0 === o.toRed(b).redPow(new i(e).mul(h).mod(n)).fromRed().mul(u.toRed(b).redPow(p.mul(h).mod(n)).fromRed()).mod(r).mod(n).cmp(p)
+                    }(t, e, d)
                 }
-                if ("rsa" !== h && "ecdsa/rsa" !== h) throw Error("wrong public key type");
-                e = i.concat([c, e]);
-                for (var d = u.modulus.byteLength(), l = [1], p = 0; e.length + l.length + 2 < d;) l.push(255), p++;
-                l.push(0);
-                for (var b = -1; ++b < e.length;) l.push(e[b]);
-                l = i.from(l);
-                var m = n.mont(u.modulus);
-                t = (t = new n(t).toRed(m)).redPow(new n(u.publicExponent)), t = i.from(t.fromRed().toArray());
-                var g = p < 8 ? 1 : 0;
-                for (d = Math.min(t.length, l.length), t.length !== l.length && (g = 1), b = -1; ++b < d;) g |= t[b] ^ l[b];
-                return 0 === g
+                if ("rsa" !== u && "ecdsa/rsa" !== u) throw Error("wrong public key type");
+                e = r.concat([a, e]);
+                for (var p = d.modulus.byteLength(), b = [1], h = 0; e.length + b.length + 2 < p;) b.push(255), h++;
+                b.push(0);
+                for (var l = -1; ++l < e.length;) b.push(e[l]);
+                b = r.from(b);
+                var g = i.mont(d.modulus);
+                t = (t = new i(t).toRed(g)).redPow(new i(d.publicExponent)), t = r.from(t.fromRed().toArray());
+                var v = h < 8 ? 1 : 0;
+                for (p = Math.min(t.length, b.length), t.length !== b.length && (v = 1), l = -1; ++l < p;) v |= t[l] ^ b[l];
+                return 0 === v
             }

@@ -1,13 +1,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return s
+                    return i
                 }
             });
-            var i = n("884691");
-            let r = {};
+            var r = n("884691");
+            let a = {};
 
-            function s(e) {
-                let t = (0, i.useRef)(r);
-                return t.current === r && (t.current = e()), t.current
+            function i(e) {
+                let t = (0, r.useRef)(a);
+                return t.current === a && (t.current = e()), t.current
             }

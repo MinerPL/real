@@ -1,36 +1,36 @@
-            t.exports = n;
-            var i = r("44170").EventEmitter;
+            t.exports = i;
+            var r = s("44170").EventEmitter;
 
-            function n() {
-                i.call(this)
+            function i() {
+                r.call(this)
             }
-            r("599235")(n, i), n.Readable = r("245387"), n.Writable = r("769419"), n.Duplex = r("388765"), n.Transform = r("372614"), n.PassThrough = r("19734"), n.finished = r("362796"), n.pipeline = r("907481"), n.Stream = n, n.prototype.pipe = function(t, e) {
-                var r = this;
+            s("599235")(i, r), i.Readable = s("245387"), i.Writable = s("769419"), i.Duplex = s("388765"), i.Transform = s("372614"), i.PassThrough = s("19734"), i.finished = s("362796"), i.pipeline = s("907481"), i.Stream = i, i.prototype.pipe = function(t, e) {
+                var s = this;
 
-                function n(e) {
-                    t.writable && !1 === t.write(e) && r.pause && r.pause()
+                function i(e) {
+                    t.writable && !1 === t.write(e) && s.pause && s.pause()
                 }
+
+                function n() {
+                    s.readable && s.resume && s.resume()
+                }
+                s.on("data", i), t.on("drain", n), !t._isStdio && (!e || !1 !== e.end) && (s.on("end", o), s.on("close", f));
+                var c = !1;
 
                 function o() {
-                    r.readable && r.resume && r.resume()
-                }
-                r.on("data", n), t.on("drain", o), !t._isStdio && (!e || !1 !== e.end) && (r.on("end", s), r.on("close", f));
-                var a = !1;
-
-                function s() {
-                    !a && (a = !0, t.end())
+                    !c && (c = !0, t.end())
                 }
 
                 function f() {
-                    !a && (a = !0, "function" == typeof t.destroy && t.destroy())
+                    !c && (c = !0, "function" == typeof t.destroy && t.destroy())
                 }
 
-                function h(t) {
-                    if (c(), 0 === i.listenerCount(this, "error")) throw t
+                function u(t) {
+                    if (a(), 0 === r.listenerCount(this, "error")) throw t
                 }
 
-                function c() {
-                    r.removeListener("data", n), t.removeListener("drain", o), r.removeListener("end", s), r.removeListener("close", f), r.removeListener("error", h), t.removeListener("error", h), r.removeListener("end", c), r.removeListener("close", c), t.removeListener("close", c)
+                function a() {
+                    s.removeListener("data", i), t.removeListener("drain", n), s.removeListener("end", o), s.removeListener("close", f), s.removeListener("error", u), t.removeListener("error", u), s.removeListener("end", a), s.removeListener("close", a), t.removeListener("close", a)
                 }
-                return r.on("error", h), t.on("error", h), r.on("end", c), r.on("close", c), t.on("close", c), t.emit("pipe", r), t
+                return s.on("error", u), t.on("error", u), s.on("end", a), s.on("close", a), t.on("close", a), t.emit("pipe", s), t
             }

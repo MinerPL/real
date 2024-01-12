@@ -1,63 +1,63 @@
             "use strict";
             n.r(t), n.d(t, {
                 TIMESTAMP_FORMATS: function() {
-                    return s
+                    return a
                 },
                 DEFAULT_TIMESTAMP_FORMAT: function() {
-                    return r
-                },
-                TIMESTAMP_REGEX: function() {
                     return o
                 },
+                TIMESTAMP_REGEX: function() {
+                    return u
+                },
                 parseTimestamp: function() {
-                    return d
+                    return l
                 },
                 unparseTimestamp: function() {
-                    return c
+                    return f
                 }
             });
-            var i = n("866227"),
-                a = n.n(i),
-                l = n("888400");
-            let s = {
-                    t: e => (0, l.dateFormat)(e, "LT"),
-                    T: e => (0, l.dateFormat)(e, "LTS"),
-                    d: e => (0, l.dateFormat)(e, "L"),
-                    D: e => (0, l.dateFormat)(e, "LL"),
-                    f: e => (0, l.dateFormat)(e, "LLL"),
-                    F: e => (0, l.dateFormat)(e, "LLLL"),
+            var s = n("866227"),
+                i = n.n(s),
+                r = n("888400");
+            let a = {
+                    t: e => (0, r.dateFormat)(e, "LT"),
+                    T: e => (0, r.dateFormat)(e, "LTS"),
+                    d: e => (0, r.dateFormat)(e, "L"),
+                    D: e => (0, r.dateFormat)(e, "LL"),
+                    f: e => (0, r.dateFormat)(e, "LLL"),
+                    F: e => (0, r.dateFormat)(e, "LLLL"),
                     R: e => {
-                        let t = a.relativeTimeThreshold("s");
-                        a.relativeTimeThreshold("s", 60);
-                        let n = a.relativeTimeThreshold("ss");
-                        a.relativeTimeThreshold("ss", -1);
-                        let i = a.relativeTimeThreshold("m");
-                        a.relativeTimeThreshold("m", 60);
-                        let l = null;
+                        let t = i.relativeTimeThreshold("s");
+                        i.relativeTimeThreshold("s", 60);
+                        let n = i.relativeTimeThreshold("ss");
+                        i.relativeTimeThreshold("ss", -1);
+                        let s = i.relativeTimeThreshold("m");
+                        i.relativeTimeThreshold("m", 60);
+                        let r = null;
                         try {
-                            l = a(e.toDate()).fromNow()
+                            r = i(e.toDate()).fromNow()
                         } catch (e) {}
-                        return a.relativeTimeThreshold("s", t), a.relativeTimeThreshold("ss", n), a.relativeTimeThreshold("m", i), null != l ? l : a(e.toDate()).fromNow()
+                        return i.relativeTimeThreshold("s", t), i.relativeTimeThreshold("ss", n), i.relativeTimeThreshold("m", s), null != r ? r : i(e.toDate()).fromNow()
                     }
                 },
-                r = "f";
-            Object.setPrototypeOf(s, null);
-            let u = Object.keys(s).join("|"),
-                o = new RegExp("^<t:(-?\\d{1,17})(?::(".concat(u, "))?>"));
+                o = "f";
+            Object.setPrototypeOf(a, null);
+            let d = Object.keys(a).join("|"),
+                u = new RegExp("^<t:(-?\\d{1,17})(?::(".concat(d, "))?>"));
 
-            function d(e, t) {
-                let n = a(1e3 * Number(e));
+            function l(e, t) {
+                let n = i(1e3 * Number(e));
                 if (!n.isValid()) return null;
-                let i = null != t ? s[t] : void 0;
-                return null == i && (i = s[r]), {
+                let s = null != t ? a[t] : void 0;
+                return null == s && (s = a[o]), {
                     timestamp: e,
                     format: t,
                     parsed: n,
-                    full: s.F(n),
-                    formatted: i(n)
+                    full: a.F(n),
+                    formatted: s(n)
                 }
             }
 
-            function c(e, t) {
+            function f(e, t) {
                 return null != t ? "<t:".concat(e, ":").concat(t, ">") : "<t:".concat(e, ">")
             }

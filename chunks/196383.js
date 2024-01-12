@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return i
+                    return s
                 }
             });
-            var i = n("939398").getDesktopSourceMetadata
+            var s = n("939398").getDesktopSourceMetadata

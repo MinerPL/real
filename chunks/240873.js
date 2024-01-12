@@ -1,43 +1,43 @@
             "use strict";
             n.r(t), n.d(t, {
                 sanitizeEmbed: function() {
-                    return m
+                    return p
                 },
                 mergeEmbedsOnURL: function() {
-                    return S
+                    return y
                 },
                 isEmbedInline: function() {
-                    return I
+                    return T
                 },
                 hasClydeAiThoughtsEmbed: function() {
-                    return g
+                    return C
                 },
                 isClydeAiThoughtsEmbed: function() {
-                    return A
+                    return S
                 },
                 isServerShopArticleEmbed: function() {
-                    return N
+                    return I
                 },
                 getMaxEmbedMediaSize: function() {
-                    return O
+                    return A
                 }
             }), n("222007"), n("702976"), n("424973");
-            var i = n("917351"),
-                a = n.n(i),
-                l = n("866227"),
-                s = n.n(l),
-                r = n("509043"),
-                u = n("299039"),
-                o = n("49111"),
-                d = n("108067");
-            let c = /sketchfab/i,
+            var s = n("917351"),
+                i = n.n(s),
+                r = n("866227"),
+                a = n.n(r),
+                o = n("509043"),
+                d = n("299039"),
+                u = n("49111"),
+                l = n("108067");
+            let f = /sketchfab/i,
                 _ = /^https:\/\/sketchfab\.com/i,
-                E = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
-                f = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
-                h = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-                p = new Set([o.MessageEmbedTypes.AUTO_MODERATION_MESSAGE, o.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION, o.MessageEmbedTypes.RICH, o.MessageEmbedTypes.SAFETY_POLICY_NOTICE, o.MessageEmbedTypes.SAFETY_SYSTEM_NOTIFICATION, o.MessageEmbedTypes.VOICE_CHANNEL]);
+                c = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
+                g = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
+                m = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
+                h = new Set([u.MessageEmbedTypes.AUTO_MODERATION_MESSAGE, u.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION, u.MessageEmbedTypes.RICH, u.MessageEmbedTypes.SAFETY_POLICY_NOTICE, u.MessageEmbedTypes.SAFETY_SYSTEM_NOTIFICATION, u.MessageEmbedTypes.VOICE_CHANNEL]);
 
-            function T(e) {
+            function v(e) {
                 let {
                     width: t,
                     height: n
@@ -45,24 +45,24 @@
                 return t > 0 && n > 0
             }
 
-            function C(e) {
+            function E(e) {
                 let {
                     url: t,
                     proxy_url: n,
-                    width: i,
-                    height: a
+                    width: s,
+                    height: i
                 } = e;
                 return {
                     url: t,
                     proxyURL: n,
-                    width: i,
-                    height: a
+                    width: s,
+                    height: i
                 }
             }
 
-            function m(e, t, n) {
-                let i = {
-                    id: a.uniqueId("embed_"),
+            function p(e, t, n) {
+                let s = {
+                    id: i.uniqueId("embed_"),
                     url: n.url,
                     type: n.type,
                     rawTitle: n.title,
@@ -71,54 +71,54 @@
                     flags: n.flags,
                     contentScanVersion: n.content_scan_version
                 };
-                if (null != n.footer && (i.footer = {
+                if (null != n.footer && (s.footer = {
                         text: n.footer.text,
                         iconURL: n.footer.icon_url,
                         iconProxyURL: n.footer.proxy_icon_url
-                    }), null != n.author && null != n.author.name && (i.author = {
+                    }), null != n.author && null != n.author.name && (s.author = {
                         name: n.author.name,
                         url: n.author.url,
                         iconURL: n.author.icon_url,
                         iconProxyURL: n.author.proxy_icon_url
-                    }), null != n.provider && null != n.provider.name && (i.provider = {
+                    }), null != n.provider && null != n.provider.name && (s.provider = {
                         name: n.provider.name,
                         url: n.provider.url
-                    }), null != n.timestamp && (i.timestamp = s(new Date(n.timestamp))), null != n.color && (i.color = (0, r.int2hsl)(n.color, !0)), null != n.thumbnail && T(n.thumbnail)) switch (i.type) {
-                    case o.MessageEmbedTypes.ARTICLE:
-                    case o.MessageEmbedTypes.IMAGE:
-                        i.image = C(n.thumbnail);
+                    }), null != n.timestamp && (s.timestamp = a(new Date(n.timestamp))), null != n.color && (s.color = (0, o.int2hsl)(n.color, !0)), null != n.thumbnail && v(n.thumbnail)) switch (s.type) {
+                    case u.MessageEmbedTypes.ARTICLE:
+                    case u.MessageEmbedTypes.IMAGE:
+                        s.image = E(n.thumbnail);
                         break;
                     default:
-                        i.thumbnail = C(n.thumbnail)
+                        s.thumbnail = E(n.thumbnail)
                 }
-                if (null != n.image && T(n.image) && (i.image = C(n.image)), null != n.video && (null == i.thumbnail && null != n.video.proxy_url && T(n.video) && (i.thumbnail = {
+                if (null != n.image && v(n.image) && (s.image = E(n.image)), null != n.video && (null == s.thumbnail && null != n.video.proxy_url && v(n.video) && (s.thumbnail = {
                         width: n.video.width,
                         height: n.video.height,
                         url: "".concat(n.video.proxy_url, "?format=jpeg")
-                    }), null != i.thumbnail && T(n.video) && function(e, t, n) {
-                        if (null != t && c.test(t.name) || _.test(n.url)) return !1;
-                        let i = null != n.proxy_url || /^https:/i.test(n.url);
-                        return 1492472454139 > u.default.extractTimestamp(e) && (i = i && null != t && E.test(t.name)), i
-                    }(t, n.provider, n.video) && (i.video = C(n.video))), p.has(i.type)) {
-                    var l;
-                    let e = null !== (l = n.fields) && void 0 !== l ? l : [];
-                    i.fields = e.map(e => {
+                    }), null != s.thumbnail && v(n.video) && function(e, t, n) {
+                        if (null != t && f.test(t.name) || _.test(n.url)) return !1;
+                        let s = null != n.proxy_url || /^https:/i.test(n.url);
+                        return 1492472454139 > d.default.extractTimestamp(e) && (s = s && null != t && c.test(t.name)), s
+                    }(t, n.provider, n.video) && (s.video = E(n.video))), h.has(s.type)) {
+                    var r;
+                    let e = null !== (r = n.fields) && void 0 !== r ? r : [];
+                    s.fields = e.map(e => {
                         let {
                             name: t,
                             value: n,
-                            inline: i
+                            inline: s
                         } = e;
                         return {
                             rawName: t,
                             rawValue: n,
-                            inline: i
+                            inline: s
                         }
                     })
-                } else i.fields = [];
-                return i
+                } else s.fields = [];
+                return s
             }
 
-            function S(e) {
+            function y(e) {
                 let t = new Map,
                     n = [];
                 return e.forEach(e => {
@@ -126,48 +126,48 @@
                         n.push(e);
                         return
                     }
-                    let i = t.get(e.url);
-                    if (null == i) {
+                    let s = t.get(e.url);
+                    if (null == s) {
                         n.push(e), t.set(e.url, e);
                         return
                     }
-                    null != e.image && (null == i.images && (i.images = [], null != i.image && i.images.push(i.image)), i.images.push(e.image))
+                    null != e.image && (null == s.images && (s.images = [], null != s.image && s.images.push(s.image)), s.images.push(e.image))
                 }), n
             }
 
-            function I(e) {
+            function T(e) {
                 let {
                     image: t,
                     video: n,
-                    type: i,
-                    author: a,
-                    rawTitle: l
+                    type: s,
+                    author: i,
+                    rawTitle: r
                 } = e;
-                return (null != t || null != n) && (i === o.MessageEmbedTypes.GIFV || i !== o.MessageEmbedTypes.RICH && null == a && null == l)
+                return (null != t || null != n) && (s === u.MessageEmbedTypes.GIFV || s !== u.MessageEmbedTypes.RICH && null == i && null == r)
             }
 
-            function g(e) {
+            function C(e) {
                 if (!e.author.isClyde() || 0 === e.embeds.length) return !1;
                 for (let t of e.embeds)
-                    if (A(t)) return !0;
+                    if (S(t)) return !0;
                 return !1
             }
 
-            function A(e) {
+            function S(e) {
                 let t = null != e.fields && 3 === e.fields.length && "Thought" === e.fields[0].rawName && "Tool" === e.fields[1].rawName && "Result" === e.fields[2].rawName;
-                return e.type === o.MessageEmbedTypes.RICH && (e.rawTitle === d.ClydeAIConstants.THOUGHT_EMBED_TITLE || t)
+                return e.type === u.MessageEmbedTypes.RICH && (e.rawTitle === l.ClydeAIConstants.THOUGHT_EMBED_TITLE || t)
             }
 
-            function N(e) {
-                return e.type === o.MessageEmbedTypes.ARTICLE && null != e.url && (h.test(e.url) || f.test(e.url))
+            function I(e) {
+                return e.type === u.MessageEmbedTypes.ARTICLE && null != e.url && (m.test(e.url) || g.test(e.url))
             }
 
-            function O(e, t, n) {
-                var i;
+            function A(e, t, n) {
+                var s;
                 return null != t && null != n ? {
                     maxMediaWidth: t,
                     maxMediaHeight: n
-                } : (null === (i = e.provider) || void 0 === i ? void 0 : i.name) === "TikTok" ? {
+                } : (null === (s = e.provider) || void 0 === s ? void 0 : s.name) === "TikTok" ? {
                     maxMediaWidth: 400,
                     maxMediaHeight: 450
                 } : {

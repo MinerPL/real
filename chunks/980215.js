@@ -1,98 +1,98 @@
             "use strict";
             n.r(t), n.d(t, {
                 useClydeProfilesEnabled: function() {
-                    return d
+                    return l
                 },
                 useClydeEnabled: function() {
-                    return c
-                },
-                getClydeEnabled: function() {
-                    return E
-                },
-                getClydeExperimentEnabled: function() {
                     return f
                 },
+                getClydeEnabled: function() {
+                    return c
+                },
+                getClydeExperimentEnabled: function() {
+                    return g
+                },
                 canUseCustomClydeProfiles: function() {
-                    return h
+                    return m
                 }
             }), n("884691"), n("446674");
-            var i = n("305961"),
-                a = n("957255"),
-                l = n("772051"),
-                s = n("254927"),
-                r = n("49111"),
-                u = n("724210");
+            var s = n("305961"),
+                i = n("957255"),
+                r = n("772051"),
+                a = n("254927"),
+                o = n("49111"),
+                d = n("724210");
 
-            function o(e) {
+            function u(e) {
                 var t;
                 let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "1e9ccc_1",
-                    a = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "",
-                    s = l.default.useExperiment({
-                        guildId: a,
-                        location: i
+                    s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "1e9ccc_1",
+                    i = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "",
+                    a = r.default.useExperiment({
+                        guildId: i,
+                        location: s
                     }, {
                         autoTrackExposure: n
                     }).experimentState;
-                return s
+                return a
             }
 
-            function d(e) {
+            function l(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     n = arguments.length > 2 ? arguments[2] : void 0,
-                    i = o(e, t, n);
-                return i === l.ClydeExperimentState.ClydeProfiles
+                    s = u(e, t, n);
+                return s === r.ClydeExperimentState.ClydeProfiles
             }
 
-            function c(e, t) {
+            function f(e, t) {
                 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    i = o(e, n);
-                return _(i, e, t)
+                    s = u(e, n);
+                return _(s, e, t)
             }
 
             function _(e, t, n) {
                 if (null == t) {
                     if (null != n && n.isPrivate()) {
-                        if (n.hasFlag(u.ChannelFlags.CLYDE_AI)) return !0;
-                        let e = (0, s.isClydeEnabledinGdms)();
+                        if (n.hasFlag(d.ChannelFlags.CLYDE_AI)) return !0;
+                        let e = (0, a.isClydeEnabledinGdms)();
                         if (!e) return !1;
-                        let t = i.default.getGuildIds().some(e => f(i.default.getGuild(e)));
+                        let t = s.default.getGuildIds().some(e => g(s.default.getGuild(e)));
                         return t
                     }
                     return !1
                 }
-                return null != e && e !== l.ClydeExperimentState.None && a.default.can(r.Permissions.USE_CLYDE_AI, n)
+                return null != e && e !== r.ClydeExperimentState.None && i.default.can(o.Permissions.USE_CLYDE_AI, n)
             }
 
-            function E(e, t) {
+            function c(e, t) {
                 var n;
-                let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    a = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : "",
-                    s = l.default.getCurrentConfig({
-                        guildId: a,
+                let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                    i = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : "",
+                    a = r.default.getCurrentConfig({
+                        guildId: i,
                         location: "1e9ccc_2"
                     }, {
-                        autoTrackExposure: i
+                        autoTrackExposure: s
                     }).experimentState;
-                return _(s, e, t)
+                return _(a, e, t)
             }
 
-            function f(e) {
+            function g(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    n = p(e, t);
-                return n !== l.ClydeExperimentState.None
+                    n = h(e, t);
+                return n !== r.ClydeExperimentState.None
+            }
+
+            function m(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                return h(e, t) === r.ClydeExperimentState.ClydeProfiles
             }
 
             function h(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                return p(e, t) === l.ClydeExperimentState.ClydeProfiles
-            }
-
-            function p(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 if (null == e) return !1;
                 let n = e.id;
-                return l.default.getCurrentConfig({
+                return r.default.getCurrentConfig({
                     guildId: n,
                     location: "1e9ccc_4"
                 }, {

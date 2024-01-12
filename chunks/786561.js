@@ -1,24 +1,24 @@
-            r("70102");
-            var i = r("912065").Buffer,
-                n = r("708893");
-            t.exports = function(t, e, r, o) {
-                if (!i.isBuffer(t) && (t = i.from(t, "binary")), e && (!i.isBuffer(e) && (e = i.from(e, "binary")), 8 !== e.length)) throw RangeError("salt should be Buffer with 8 byte length");
-                for (var a = r / 8, s = i.alloc(a), f = i.alloc(o || 0), h = i.alloc(0); a > 0 || o > 0;) {
-                    var c = new n;
-                    c.update(h), c.update(t), e && c.update(e), h = c.digest();
-                    var u = 0;
-                    if (a > 0) {
-                        var d = s.length - a;
-                        u = Math.min(a, h.length), h.copy(s, d, 0, u), a -= u
+            s("70102");
+            var r = s("912065").Buffer,
+                i = s("708893");
+            t.exports = function(t, e, s, n) {
+                if (!r.isBuffer(t) && (t = r.from(t, "binary")), e && (!r.isBuffer(e) && (e = r.from(e, "binary")), 8 !== e.length)) throw RangeError("salt should be Buffer with 8 byte length");
+                for (var c = s / 8, o = r.alloc(c), f = r.alloc(n || 0), u = r.alloc(0); c > 0 || n > 0;) {
+                    var a = new i;
+                    a.update(u), a.update(t), e && a.update(e), u = a.digest();
+                    var d = 0;
+                    if (c > 0) {
+                        var p = o.length - c;
+                        d = Math.min(c, u.length), u.copy(o, p, 0, d), c -= d
                     }
-                    if (u < h.length && o > 0) {
-                        var l = f.length - o,
-                            p = Math.min(o, h.length - u);
-                        h.copy(f, l, u, u + p), o -= p
+                    if (d < u.length && n > 0) {
+                        var b = f.length - n,
+                            h = Math.min(n, u.length - d);
+                        u.copy(f, b, d, d + h), n -= h
                     }
                 }
-                return h.fill(0), {
-                    key: s,
+                return u.fill(0), {
+                    key: o,
                     iv: f
                 }
             }

@@ -1,25 +1,25 @@
             "use strict";
             n.r(t), n.d(t, {
                 CircleQuestionIcon: function() {
-                    return l
+                    return o
                 }
             });
             var r = n("37983");
             n("884691");
             var i = n("669491"),
-                o = n("75196");
-            let l = e => {
+                l = n("75196");
+            let o = e => {
                 let {
                     width: t = 24,
                     height: n = 24,
-                    secondaryColor: l = "transparent",
+                    secondaryColor: o = "transparent",
                     secondaryColorClass: s = "",
                     color: a = i.default.colors.INTERACTIVE_NORMAL,
                     colorClass: u = "",
                     ...c
                 } = e;
                 return (0, r.jsxs)("svg", {
-                    ...(0, o.default)(c),
+                    ...(0, l.default)(c),
                     xmlns: "http://www.w3.org/2000/svg",
                     width: t,
                     height: n,
@@ -29,7 +29,7 @@
                         cx: "12",
                         cy: "12",
                         r: "10",
-                        fill: "string" == typeof l ? l : l.css,
+                        fill: "string" == typeof o ? o : o.css,
                         className: s
                     }), (0, r.jsx)("path", {
                         fill: "string" == typeof a ? a : a.css,

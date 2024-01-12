@@ -1,9 +1,9 @@
-            r("854508");
-            var i = r("912065").Buffer;
-            e.encrypt = function(t, e, r) {
-                for (var n = e.length, o = i.allocUnsafe(n), a = -1; ++a < n;) o[a] = function(t, e, r) {
-                    var n = t._cipher.encryptBlock(t._prev)[0] ^ e;
-                    return t._prev = i.concat([t._prev.slice(1), i.from([r ? e : n])]), n
-                }(t, e[a], r);
-                return o
+            s("854508");
+            var r = s("912065").Buffer;
+            e.encrypt = function(t, e, s) {
+                for (var i = e.length, n = r.allocUnsafe(i), c = -1; ++c < i;) n[c] = function(t, e, s) {
+                    var i = t._cipher.encryptBlock(t._prev)[0] ^ e;
+                    return t._prev = r.concat([t._prev.slice(1), r.from([s ? e : i])]), i
+                }(t, e[c], s);
+                return n
             }

@@ -4,10 +4,10 @@
                     return G
                 },
                 ReferenceMessages: function() {
-                    return y
+                    return O
                 },
                 default: function() {
-                    return O
+                    return y
                 }
             }), a("222007");
             var l = a("37983"),
@@ -71,7 +71,7 @@
                 })
             }
 
-            function y(e) {
+            function O(e) {
                 let {
                     referenceMessages: t,
                     guildId: a
@@ -91,14 +91,14 @@
                     text: d
                 })
             }
-            var O = n.forwardRef(function(e, t) {
+            var y = n.forwardRef(function(e, t) {
                 var a, _;
                 let {
                     guildId: G,
-                    messageItem: O,
+                    messageItem: y,
                     showFeedback: H,
                     setOnDismissedFeedback: k
-                } = e, U = O.message.channel_id, w = O.message.id, {
+                } = e, U = y.message.channel_id, w = y.message.id, {
                     message: B,
                     isFeaturedMessage: P
                 } = (0, d.useStateFromStoresObject)([x.default], () => {
@@ -114,7 +114,7 @@
                     }
                 }, [G, U, w]), V = (0, d.useStateFromStores)([g.default], () => g.default.getChannel(U)), W = (0, c.getChannelIconComponent)(V, void 0, {
                     textFocused: !0
-                }), K = (0, c.getChannelIconTooltipText)(V), z = null !== (a = null == O ? void 0 : O.referenceMessages) && void 0 !== a ? a : [], Y = (0, o.default)(V), [Z, X] = n.useState(!1), J = (0, d.useStateFromStores)([I.default], () => null != B && I.default.isBlocked(null == B ? void 0 : B.author.id)), q = (0, s.useListItem)(null !== (_ = null == B ? void 0 : B.id) && void 0 !== _ ? _ : w), Q = (0, S.default)(O), $ = (0, d.useStateFromStores)([E.default], () => E.default.getSidebarState(F.StaticChannelRoute.GUILD_HOME)), ee = (0, v.getSidebarMessageId)($, V), et = null != ee && O.message.id === ee, ea = O.highlighted ? L.default.Messages.GUILD_FEED_SPECIAL_HIGHLIGHT : P ? L.default.Messages.GUILD_FEED_FEATURED_BY_MODERATORS : null, {
+                }), K = (0, c.getChannelIconTooltipText)(V), z = null !== (a = null == y ? void 0 : y.referenceMessages) && void 0 !== a ? a : [], Y = (0, o.default)(V), [Z, X] = n.useState(!1), J = (0, d.useStateFromStores)([I.default], () => null != B && I.default.isBlocked(null == B ? void 0 : B.author.id)), q = (0, s.useListItem)(null !== (_ = null == B ? void 0 : B.id) && void 0 !== _ ? _ : w), Q = (0, S.default)(y), $ = (0, d.useStateFromStores)([E.default], () => E.default.getSidebarState(F.StaticChannelRoute.GUILD_HOME)), ee = (0, v.getSidebarMessageId)($, V), et = null != ee && y.message.id === ee, ea = y.highlighted ? L.default.Messages.GUILD_FEED_SPECIAL_HIGHLIGHT : P ? L.default.Messages.GUILD_FEED_FEATURED_BY_MODERATORS : null, {
                     handleItemClick: el,
                     handleChannelClick: en,
                     handleCardClick: es,
@@ -137,13 +137,13 @@
                         })
                     }
                 });
-                if (null == V || null == B || null == O || J) return null;
+                if (null == V || null == B || null == y || J) return null;
                 let ed = e => {
                     e.stopPropagation(), (0, u.openContextMenuLazy)(e, async () => {
                         let e = await b();
                         return t => (0, l.jsx)(e, {
                             ...t,
-                            messageItem: O,
+                            messageItem: y,
                             channel: V,
                             message: B
                         })
@@ -201,7 +201,7 @@
                             }), (0, l.jsx)("div", {
                                 className: R.messageHeaderMenuRight,
                                 children: (0, l.jsx)(j.default, {
-                                    feedItem: O,
+                                    feedItem: y,
                                     guildId: G,
                                     onContextMenu: ed
                                 })
@@ -213,15 +213,15 @@
                             animateAvatar: Z,
                             channel: V,
                             message: B,
-                            feedItemId: O.id,
+                            feedItemId: y.id,
                             onMessageClick: ei
-                        }), (0, l.jsx)(y, {
+                        }), (0, l.jsx)(O, {
                             referenceMessages: z,
                             guildId: G
                         })]
                     }), H && (0, l.jsx)(p.default, {
                         guildId: G,
-                        guildFeedItem: O,
+                        guildFeedItem: y,
                         setOnDismissFeedback: k
                     })]
                 })

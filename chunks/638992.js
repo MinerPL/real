@@ -1,110 +1,110 @@
             "use strict";
             n.r(t), n.d(t, {
                 GuildSelector: function() {
-                    return E
+                    return c
                 },
                 WebhookGuildChannelSelector: function() {
-                    return f
+                    return g
                 }
             }), n("222007");
-            var i = n("37983"),
-                a = n("884691"),
-                l = n("316693"),
-                s = n("605451"),
-                r = n("774811"),
-                u = n("577776"),
-                o = n("8222"),
-                d = n("49111"),
-                c = n("782340"),
+            var s = n("37983"),
+                i = n("884691"),
+                r = n("316693"),
+                a = n("605451"),
+                o = n("774811"),
+                d = n("577776"),
+                u = n("8222"),
+                l = n("49111"),
+                f = n("782340"),
                 _ = n("246097");
 
-            function E(e) {
+            function c(e) {
                 let {
                     error: t,
                     selectedGuildId: n,
-                    onGuildChange: a,
-                    guilds: o,
-                    disabled: E = !1
-                } = e, f = o.filter(e => l.default.has(e.permissions, d.Permissions.MANAGE_GUILD)).map(e => ({
+                    onGuildChange: i,
+                    guilds: u,
+                    disabled: c = !1
+                } = e, g = u.filter(e => r.default.has(e.permissions, l.Permissions.MANAGE_GUILD)).map(e => ({
                     value: e.id,
                     label: e.name
                 }));
-                return (0, i.jsxs)("div", {
+                return (0, s.jsxs)("div", {
                     className: _.selectorGroup,
-                    children: [(0, i.jsx)(s.Heading, {
+                    children: [(0, s.jsx)(a.Heading, {
                         variant: "heading-deprecated-12/semibold",
                         className: _.sectionLabel,
-                        children: c.default.Messages.OAUTH2_ADD_TO_GUILD
-                    }), null != t && "" !== t ? (0, i.jsx)(u.Text, {
+                        children: f.default.Messages.OAUTH2_ADD_TO_GUILD
+                    }), null != t && "" !== t ? (0, s.jsx)(d.Text, {
                         variant: "text-xs/normal",
                         color: "text-danger",
                         children: t
-                    }) : null, (0, i.jsx)(r.SearchableSelect, {
+                    }) : null, (0, s.jsx)(o.SearchableSelect, {
                         wrapperClassName: _.wrapper,
                         className: _.select,
                         maxVisibleItems: 5,
                         value: n,
-                        placeholder: c.default.Messages.OAUTH2_ADD_TO_GUILD_PLACEHOLDER,
-                        options: f,
+                        placeholder: f.default.Messages.OAUTH2_ADD_TO_GUILD_PLACEHOLDER,
+                        options: g,
                         onChange: e => {
-                            a(e)
+                            i(e)
                         },
-                        isDisabled: E
-                    }), (0, i.jsx)(u.Text, {
+                        isDisabled: c
+                    }), (0, s.jsx)(d.Text, {
                         variant: "text-xs/medium",
                         color: "header-secondary",
                         className: _.label,
-                        children: c.default.Messages.OAUTH2_ADD_TO_GUILD_DESCRIPTION.format()
+                        children: f.default.Messages.OAUTH2_ADD_TO_GUILD_DESCRIPTION.format()
                     })]
                 })
             }
 
-            function f(e) {
+            function g(e) {
                 let {
                     selectedGuildId: t,
                     selectedChannelId: n,
-                    onChannelChange: l,
-                    error: d
-                } = e, [E, f] = a.useState(null);
-                a.useEffect(() => {
+                    onChannelChange: r,
+                    error: l
+                } = e, [c, g] = i.useState(null);
+                i.useEffect(() => {
                     (async function e() {
                         if (null != t) {
-                            let e = await (0, o.fetchChannels)(t);
-                            f(e)
+                            let e = await (0, u.fetchChannels)(t);
+                            g(e)
                         }
                     })()
-                }, [t]), a.useEffect(() => {
-                    null != E && null != n && null == E.find(e => e.id === n) && l(null)
-                }, [E, l, n]);
-                let h = (null != E ? E : []).map(e => ({
+                }, [t]), i.useEffect(() => {
+                    null != c && null != n && null == c.find(e => e.id === n) && r(null)
+                }, [c, r, n]);
+                let m = (null != c ? c : []).map(e => ({
                     value: e.id,
                     label: e.name
                 }));
-                return null == t ? null : (0, i.jsxs)("div", {
+                return null == t ? null : (0, s.jsxs)("div", {
                     className: _.selectorGroup,
-                    children: [(0, i.jsx)(s.Heading, {
+                    children: [(0, s.jsx)(a.Heading, {
                         variant: "heading-deprecated-12/semibold",
                         className: _.sectionLabel,
-                        children: c.default.Messages.OAUTH2_ADD_WEBHOOK_INCOMING
-                    }), null != d && "" !== d ? (0, i.jsx)(u.Text, {
+                        children: f.default.Messages.OAUTH2_ADD_WEBHOOK_INCOMING
+                    }), null != l && "" !== l ? (0, s.jsx)(d.Text, {
                         variant: "text-xs/normal",
                         color: "text-danger",
-                        children: d
-                    }) : null, (0, i.jsx)(r.SearchableSelect, {
+                        children: l
+                    }) : null, (0, s.jsx)(o.SearchableSelect, {
                         wrapperClassName: _.wrapper,
                         className: _.select,
                         maxVisibleItems: 5,
                         onChange: e => {
-                            l(e)
+                            r(e)
                         },
-                        placeholder: c.default.Messages.SCOPE_WEBHOOK_INCOMING_CHANNEL_PLACEHOLDER,
+                        placeholder: f.default.Messages.SCOPE_WEBHOOK_INCOMING_CHANNEL_PLACEHOLDER,
                         value: n,
-                        options: h
-                    }), (0, i.jsx)(u.Text, {
+                        options: m
+                    }), (0, s.jsx)(d.Text, {
                         variant: "text-xs/normal",
                         color: "header-secondary",
                         className: _.label,
-                        children: c.default.Messages.SCOPE_WEBHOOK_INCOMING_DESCRIPTION
+                        children: f.default.Messages.SCOPE_WEBHOOK_INCOMING_DESCRIPTION
                     })]
                 })
             }

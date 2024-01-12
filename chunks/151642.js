@@ -1,28 +1,28 @@
             "use strict";
             n.r(t), n.d(t, {
                 useStageBlockedUsersCount: function() {
-                    return s
+                    return a
                 },
                 getStageBlockedUsersCount: function() {
-                    return r
+                    return o
                 },
                 useStageBlockedUsers: function() {
-                    return u
+                    return d
                 }
             });
-            var i = n("446674"),
-                a = n("488464"),
-                l = n("998716");
+            var s = n("446674"),
+                i = n("488464"),
+                r = n("998716");
 
-            function s(e) {
-                return (0, i.useStateFromStores)([a.default], () => null != e ? a.default.getParticipantCount(e, l.StageChannelParticipantNamedIndex.BLOCKED) : 0, [e])
+            function a(e) {
+                return (0, s.useStateFromStores)([i.default], () => null != e ? i.default.getParticipantCount(e, r.StageChannelParticipantNamedIndex.BLOCKED) : 0, [e])
             }
 
-            function r(e) {
+            function o(e) {
                 var t;
-                return null !== (t = a.default.getParticipantCount(e, l.StageChannelParticipantNamedIndex.BLOCKED)) && void 0 !== t ? t : 0
+                return null !== (t = i.default.getParticipantCount(e, r.StageChannelParticipantNamedIndex.BLOCKED)) && void 0 !== t ? t : 0
             }
 
-            function u(e) {
-                return (0, i.useStateFromStores)([a.default], () => a.default.getMutableParticipants(e, l.StageChannelParticipantNamedIndex.BLOCKED), [e])
+            function d(e) {
+                return (0, s.useStateFromStores)([i.default], () => i.default.getMutableParticipants(e, r.StageChannelParticipantNamedIndex.BLOCKED), [e])
             }

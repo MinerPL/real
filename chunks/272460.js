@@ -10,23 +10,23 @@
                     return d
                 }
             });
-            var i = n("37983");
+            var r = n("37983");
             n("884691");
-            var r = n("669491"),
-                o = n("77078"),
+            var i = n("669491"),
+                s = n("77078"),
                 l = n("578706"),
-                s = n("381546"),
-                a = n("880050");
+                a = n("381546"),
+                o = n("880050");
 
             function u(e) {
                 let {
                     title: t,
                     children: n
                 } = e;
-                return (0, i.jsxs)("div", {
-                    className: a.questionContainer,
-                    children: [(0, i.jsx)(o.Text, {
-                        className: a.questionTitle,
+                return (0, r.jsxs)("div", {
+                    className: o.questionContainer,
+                    children: [(0, r.jsx)(s.Text, {
+                        className: o.questionTitle,
                         variant: "text-md/semibold",
                         color: "header-primary",
                         children: t
@@ -40,26 +40,26 @@
                     text: n,
                     meetsRequirement: u
                 } = e;
-                return (0, i.jsxs)("div", {
-                    className: a.requirementContainer,
-                    children: [(0, i.jsx)(t, {
-                        className: a.requirementIcon,
+                return (0, r.jsxs)("div", {
+                    className: o.requirementContainer,
+                    children: [(0, r.jsx)(t, {
+                        className: o.requirementIcon,
                         height: 20,
                         width: 20
-                    }), (0, i.jsx)(o.Text, {
-                        className: a.requirementText,
+                    }), (0, r.jsx)(s.Text, {
+                        className: o.requirementText,
                         variant: "text-md/normal",
                         children: n
-                    }), u ? (0, i.jsx)(l.default, {
+                    }), u ? (0, r.jsx)(l.default, {
                         width: 24,
                         height: 24,
-                        className: a.requirementSuccess,
-                        backgroundColor: r.default.unsafe_rawColors.WHITE_500.css
-                    }) : (0, i.jsx)(s.default, {
+                        className: o.requirementSuccess,
+                        backgroundColor: i.default.unsafe_rawColors.WHITE_500.css
+                    }) : (0, r.jsx)(a.default, {
                         width: 24,
                         height: 24,
-                        className: a.requirementFailure,
-                        backgroundColor: r.default.unsafe_rawColors.WHITE_500.css
+                        className: o.requirementFailure,
+                        backgroundColor: i.default.unsafe_rawColors.WHITE_500.css
                     })]
                 })
             }
@@ -68,32 +68,32 @@
                 let {
                     icon: t,
                     text: n,
-                    footnote: s,
+                    footnote: a,
                     meetsRequirement: u,
                     children: c
                 } = e;
-                return (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsxs)("div", {
-                        className: a.requirementContainer,
-                        children: [(0, i.jsx)(t, {
-                            className: a.requirementIcon,
+                return (0, r.jsxs)(r.Fragment, {
+                    children: [(0, r.jsxs)("div", {
+                        className: o.requirementContainer,
+                        children: [(0, r.jsx)(t, {
+                            className: o.requirementIcon,
                             height: 20,
                             width: 20
-                        }), (0, i.jsx)(o.Text, {
-                            className: a.requirementText,
+                        }), (0, r.jsx)(s.Text, {
+                            className: o.requirementText,
                             variant: "text-md/normal",
                             children: n
-                        }), u ? (0, i.jsx)(l.default, {
+                        }), u ? (0, r.jsx)(l.default, {
                             width: 24,
                             height: 24,
-                            className: a.requirementSuccess,
-                            backgroundColor: r.default.unsafe_rawColors.WHITE_500.css
+                            className: o.requirementSuccess,
+                            backgroundColor: i.default.unsafe_rawColors.WHITE_500.css
                         }) : c]
-                    }), null != s && (0, i.jsx)(o.Text, {
+                    }), null != a && (0, r.jsx)(s.Text, {
                         color: "header-secondary",
-                        className: a.footnote,
+                        className: o.footnote,
                         variant: "text-xs/normal",
-                        children: s
+                        children: a
                     })]
                 })
             }
