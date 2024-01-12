@@ -17,18 +17,18 @@
                 o = n("615387"),
                 l = n("393027"),
                 a = n("233069"),
-                d = n("42203"),
-                u = n("660478"),
+                u = n("42203"),
+                d = n("660478"),
                 s = n("282109"),
                 E = n("49111"),
                 r = n("133335");
             let _ = (e, t) => {
-                    let n = d.default.getChannel(t);
-                    return null != n && ((0, a.isPrivate)(n.type) ? !!u.default.getMentionCount(t) : (!s.default.isChannelMuted(e, t) || u.default.getMentionCount(t) > 0) && (0, o.getHasImportantUnread)(n))
+                    let n = u.default.getChannel(t);
+                    return null != n && ((0, a.isPrivate)(n.type) ? !!d.default.getMentionCount(t) : (!s.default.isChannelMuted(e, t) || d.default.getMentionCount(t) > 0) && (0, o.getHasImportantUnread)(n))
                 },
                 A = (e, t) => {
-                    if (t === r.ReadStateTypes.GUILD_EVENT) return !s.default.isMuteScheduledEventsEnabled(e) && u.default.hasUnread(e, t);
-                    return u.default.hasUnread(e, t)
+                    if (t === r.ReadStateTypes.GUILD_EVENT) return !s.default.isMuteScheduledEventsEnabled(e) && d.default.hasUnread(e, t);
+                    return d.default.hasUnread(e, t)
                 },
                 c = {
                     binds: ["alt+shift+down"],
@@ -56,7 +56,7 @@
                         }), !1
                     }
                 },
-                T = (e, t) => u.default.getMentionCount(t) > 0,
+                T = (e, t) => d.default.getMentionCount(t) > 0,
                 S = {
                     binds: ["mod+shift+alt+down"],
                     comboKeysBindGlobal: !0,

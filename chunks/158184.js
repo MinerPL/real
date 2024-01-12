@@ -5,9 +5,9 @@
                 }
             });
             var n = s("37983"),
-                l = s("884691"),
-                r = s("627445"),
-                i = s.n(r),
+                r = s("884691"),
+                l = s("627445"),
+                i = s.n(l),
                 a = s("65597"),
                 u = s("206230"),
                 o = s("853987"),
@@ -24,20 +24,20 @@
                 let {
                     handleClose: t,
                     confettiCanvas: s,
-                    analyticsLocations: l
+                    analyticsLocations: r
                 } = e, {
-                    skusById: r,
+                    skusById: l,
                     selectedSkuId: u,
                     application: d
                 } = (0, E.usePaymentContext)(), f = (0, a.default)([o.default], () => o.default.getProduct(u));
                 i(null != u, "Expected selectedSkuId"), i(null != d, "Expected application");
-                let S = r[u];
+                let S = l[u];
                 return (i(null != S, "Expected sku"), null == f) ? null : (0, n.jsxs)(p.PaymentPortalBody, {
                     children: [(0, n.jsx)(_.default, {}), (0, n.jsx)(c.CollectiblesCollectedModalInner, {
                         product: f,
                         onClose: t,
                         confettiCanvas: s,
-                        analyticsLocations: l
+                        analyticsLocations: r
                     })]
                 })
             }
@@ -46,12 +46,12 @@
                 let {
                     isGift: t,
                     giftCode: s,
-                    selectedGiftStyle: r,
+                    selectedGiftStyle: l,
                     hasSentMessage: i,
                     giftRecipient: c,
                     giftMessageError: p,
                     isSendingMessage: _
-                } = (0, S.useGiftContext)(), h = (0, a.default)([u.default], () => u.default.useReducedMotion), C = l.useRef(null), {
+                } = (0, S.useGiftContext)(), h = (0, a.default)([u.default], () => u.default.useReducedMotion), C = r.useRef(null), {
                     selectedSkuId: m
                 } = (0, E.usePaymentContext)(), A = (0, a.default)([o.default], () => o.default.getProduct(m)), {
                     confettiColors: N,
@@ -62,7 +62,7 @@
                     children: [(0, n.jsx)(I.default, {
                         giftCode: s,
                         onClose: e.handleClose,
-                        selectedGiftStyle: r,
+                        selectedGiftStyle: l,
                         hasSentMessage: i,
                         giftRecipient: c,
                         giftMessageError: p,

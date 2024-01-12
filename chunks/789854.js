@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return M
+                    return R
                 }
             });
             var a = s("37983"),
@@ -16,8 +16,8 @@
                 S = s("145131"),
                 E = s("599110"),
                 f = s("773336"),
-                m = s("50885"),
-                T = s("161778"),
+                T = s("50885"),
+                m = s("161778"),
                 _ = s("225849"),
                 g = s("397336"),
                 h = s("49111"),
@@ -40,7 +40,7 @@
                 } = (0, r.useStateFromStoresObject)([c.default], () => ({
                     experimentalEncoders: c.default.getExperimentalEncoders()
                 }));
-                return "stable" !== m.default.releaseChannel && c.default.isExperimentalEncodersSupported() ? (0, a.jsx)(d.FormSwitch, {
+                return "stable" !== T.default.releaseChannel && c.default.isExperimentalEncodersSupported() ? (0, a.jsx)(d.FormSwitch, {
                     className: i(p.marginTop8, p.marginBottom20),
                     value: e,
                     onChange: e => u.default.setExperimentalEncoders(e),
@@ -49,8 +49,8 @@
                 }) : null
             }
 
-            function M() {
-                let e = (0, r.useStateFromStores)([T.default], () => T.default.theme),
+            function R() {
+                let e = (0, r.useStateFromStores)([m.default], () => m.default.theme),
                     {
                         openH264: t,
                         hardwareH264: s,
@@ -62,8 +62,8 @@
                         supportsOpenH264: c.default.supports(I.Features.OPEN_H264),
                         av1Enabled: c.default.getAv1Enabled()
                     })),
-                    m = n.useRef(null);
-                return (0, _.default)(m, g.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, a.jsxs)(a.Fragment, {
+                    T = n.useRef(null);
+                return (0, _.default)(T, g.UserSettingsScrollPositions.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION), (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(d.FormSection, {
                         className: p.marginBottom20,
                         title: N.default.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,
@@ -94,7 +94,7 @@
                             style: {
                                 scrollMarginTop: "48px"
                             },
-                            ref: m
+                            ref: T
                         }), (0, a.jsx)(d.FormSwitch, {
                             className: i(p.marginTop8, p.marginBottom20),
                             value: s,

@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return R
+                    return M
                 }
             });
             var a = s("37983"),
@@ -16,8 +16,8 @@
                 S = s("875212"),
                 E = s("812204"),
                 f = s("685665"),
-                m = s("104385"),
-                T = s("884351"),
+                T = s("104385"),
+                m = s("884351"),
                 _ = s("184900"),
                 g = s("11899"),
                 h = s("635415"),
@@ -28,9 +28,9 @@
                 A = s("719923"),
                 O = s("845579"),
                 x = s("415167"),
-                M = s("907148");
+                R = s("907148");
 
-            function R() {
+            function M() {
                 let e = (0, r.useStateFromStores)([C.default], () => {
                     let e = C.default.getCurrentUser();
                     return i(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e
@@ -42,10 +42,10 @@
                     {
                         pendingAvatar: s,
                         pendingBanner: l,
-                        pendingBio: R,
+                        pendingBio: M,
                         pendingPronouns: v,
-                        pendingGlobalName: L,
-                        pendingAccentColor: D,
+                        pendingGlobalName: D,
+                        pendingAccentColor: L,
                         pendingAvatarDecoration: P,
                         pendingThemeColors: j,
                         pendingProfileEffectId: b
@@ -58,22 +58,22 @@
                         }
                     }),
                     U = O.UseLegacyChatInput.useSetting(),
-                    y = U && null != R ? T.default.parse(void 0, R).content : R,
-                    B = A.default.canUsePremiumProfileCustomization(e),
+                    B = U && null != M ? m.default.parse(void 0, M).content : M,
+                    y = A.default.canUsePremiumProfileCustomization(e),
                     {
                         AnalyticsLocationProvider: F
                     } = (0, f.default)(E.default.PROFILE),
                     G = {
                         user: e,
-                        canUsePremiumCustomization: B,
+                        canUsePremiumCustomization: y,
                         onUpsellClick: x.default,
                         onAvatarChange: u.setPendingAvatar,
                         onBannerChange: I.setPendingBanner,
                         pendingBanner: l,
-                        pendingBio: y,
+                        pendingBio: B,
                         pendingPronouns: v,
                         pendingAvatar: s,
-                        pendingGlobalName: L,
+                        pendingGlobalName: D,
                         pendingAvatarDecoration: P,
                         pendingProfileEffectId: b
                     };
@@ -87,13 +87,13 @@
                     autoTrackExposure: !1
                 }), t) ? (0, a.jsx)(c.default, {}) : (0, a.jsx)(F, {
                     children: (0, a.jsxs)(a.Fragment, {
-                        children: [(0, a.jsx)(m.default, {}), (0, a.jsx)(g.default, {
+                        children: [(0, a.jsx)(T.default, {}), (0, a.jsx)(g.default, {
                             profilePreview: (0, a.jsx)(_.default, {
                                 ...G,
                                 pendingThemeColors: j,
-                                pendingAccentColor: D
+                                pendingAccentColor: L
                             }),
-                            children: (0, a.jsx)(M.default, {})
+                            children: (0, a.jsx)(R.default, {})
                         }), !A.default.canUsePremiumProfileCustomization(e) && (0, a.jsx)(h.default, {
                             user: e
                         })]

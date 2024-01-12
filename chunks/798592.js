@@ -5,29 +5,29 @@
                 }
             });
             var i = n("884691"),
-                r = n("65597"),
-                l = n("526887"),
-                o = n("880731");
+                l = n("65597"),
+                a = n("526887"),
+                r = n("880731");
 
             function s() {
                 let {
                     createMultipleConfettiAt: e
-                } = i.useContext(l.ConfettiCannonContext), t = (0, r.default)([o.default], () => o.default.getState()), n = i.useCallback(e => ({
+                } = i.useContext(a.ConfettiCannonContext), t = (0, l.default)([r.default], () => r.default.getState()), n = i.useCallback(e => ({
                     size: {
                         type: "static-random",
                         minValue: e.confettiSize - 7,
                         maxValue: e.confettiSize + 7
                     }
                 }), []), s = i.useMemo(() => ({
-                    fire: (i, r, l) => {
-                        var o, s;
-                        let u = (null == l ? void 0 : l.settings) != null ? {
+                    fire: (i, l, a) => {
+                        var r, s;
+                        let o = (null == a ? void 0 : a.settings) != null ? {
                                 ...t,
-                                ...l.settings
+                                ...a.settings
                             } : t,
-                            a = n(u);
-                        e(i, r, a, (null !== (o = null == l ? void 0 : l.count) && void 0 !== o ? o : u.confettiCount) * (null !== (s = null == l ? void 0 : l.countMultiplier) && void 0 !== s ? s : 1), {
-                            sprite: null == l ? void 0 : l.sprite
+                            u = n(o);
+                        e(i, l, u, (null !== (r = null == a ? void 0 : a.count) && void 0 !== r ? r : o.confettiCount) * (null !== (s = null == a ? void 0 : a.countMultiplier) && void 0 !== s ? s : 1), {
+                            sprite: null == a ? void 0 : a.sprite
                         })
                     }
                 }), [e, n, t]);

@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return D
+                    return L
                 }
             }), s("222007");
             var a = s("37983"),
@@ -16,8 +16,8 @@
                 S = s("583227"),
                 E = s("878720"),
                 f = s("601745"),
-                m = s("685223"),
-                T = s("271938"),
+                T = s("685223"),
+                m = s("271938"),
                 _ = s("650893"),
                 g = s("697218"),
                 h = s("145131"),
@@ -28,8 +28,8 @@
                 A = s("49111"),
                 O = s("482931"),
                 x = s("782340"),
-                M = s("374204"),
-                R = s("926622");
+                R = s("374204"),
+                M = s("926622");
 
             function v(e) {
                 let {
@@ -44,25 +44,25 @@
                     }
                 }, [l]);
                 return (0, a.jsx)("li", {
-                    className: R.marginBottom20,
+                    className: M.marginBottom20,
                     children: (0, a.jsx)(o.Clickable, {
                         innerRef: i,
-                        className: M.backupCode,
+                        className: R.backupCode,
                         onKeyDown: r,
                         children: (0, a.jsx)(o.Checkbox, {
                             displayOnly: !0,
                             readOnly: !0,
-                            className: M.codeCheckbox,
+                            className: R.codeCheckbox,
                             value: s,
                             children: (0, a.jsx)("span", {
-                                className: M.code,
+                                className: R.code,
                                 children: l
                             })
                         })
                     })
                 })
             }
-            class L extends n.PureComponent {
+            class D extends n.PureComponent {
                 maskPhoneNumber(e) {
                     return null == e ? "" : "".concat("*".repeat(e.length - 4)).concat(e.slice(-4))
                 }
@@ -78,18 +78,18 @@
                         let e = s ? n.phone : this.maskPhoneNumber(n.phone);
                         t = (0, a.jsxs)(o.FormText, {
                             type: o.FormText.Types.DESCRIPTION,
-                            className: R.marginBottom8,
+                            className: M.marginBottom8,
                             children: [x.default.Messages.MFA_SMS_AUTH_CURRENT_PHONE.format({
                                 phoneNumber: e
                             }), (0, a.jsx)(o.Anchor, {
                                 onClick: this.togglePhoneNumberVisibility,
-                                className: M.phoneRevealer,
+                                className: R.phoneRevealer,
                                 children: s ? x.default.Messages.MFA_SMS_PHONE_NUMBER_HIDE : x.default.Messages.MFA_SMS_PHONE_NUMBER_REVEAL
                             })]
                         })
                     }
                     if (r) e = (0, a.jsx)(h.default, {
-                        className: i ? "" : R.marginTop8,
+                        className: i ? "" : M.marginTop8,
                         children: (0, a.jsx)(o.Button, {
                             color: o.Button.Colors.RED,
                             look: o.Button.Looks.OUTLINED,
@@ -102,7 +102,7 @@
                     else {
                         let t = (0, p.getSMSBackupDisabledMessage)(n);
                         e = (0, a.jsxs)(h.default, {
-                            className: i ? "" : R.marginTop8,
+                            className: i ? "" : M.marginTop8,
                             children: [(0, a.jsx)(o.Button, {
                                 onClick: this.handleEnableSMS,
                                 size: o.Button.Sizes.SMALL,
@@ -119,7 +119,7 @@
                         })
                     }
                     return (0, a.jsxs)(o.FormSection, {
-                        className: R.marginTop40,
+                        className: M.marginTop40,
                         title: x.default.Messages.MFA_SMS_AUTH,
                         children: [(0, a.jsx)(o.FormText, {
                             type: o.FormText.Types.DESCRIPTION,
@@ -171,17 +171,17 @@
                             title: x.default.Messages.TWO_FA_BACKUP_CODES_LABEL,
                             children: [(0, a.jsx)(o.FormText, {
                                 type: o.FormText.Types.DESCRIPTION,
-                                className: R.marginBottom20,
+                                className: M.marginBottom20,
                                 children: x.default.Messages.TWO_FA_BACKUP_CODES_BODY.format()
                             }), (0, a.jsxs)(h.default, {
                                 children: [(0, a.jsx)(h.default.Child, {
                                     children: (0, a.jsx)("ul", {
-                                        className: M.checkboxGroup,
+                                        className: R.checkboxGroup,
                                         children: n(t.slice(0, t.length / 2))
                                     })
                                 }), (0, a.jsx)(h.default.Child, {
                                     children: (0, a.jsx)("ul", {
-                                        className: M.checkboxGroup,
+                                        className: R.checkboxGroup,
                                         children: n(t.slice(t.length / 2))
                                     })
                                 })]
@@ -193,7 +193,7 @@
                                     children: x.default.Messages.TWO_FA_GENERATE_CODES
                                 })
                             }), (0, a.jsx)(o.FormDivider, {
-                                className: R.marginTop20
+                                className: M.marginTop20
                             })]
                         })
                     }
@@ -202,11 +202,11 @@
                             children: x.default.Messages.TWO_FA
                         }), (0, a.jsx)(o.FormText, {
                             type: o.FormText.Types.DESCRIPTION,
-                            className: R.marginBottom20,
+                            className: M.marginBottom20,
                             children: x.default.Messages.TWO_FA_DESCRIPTION
                         }), (0, a.jsxs)(h.default, {
                             justify: h.default.Justify.START,
-                            className: R.marginBottom20,
+                            className: M.marginBottom20,
                             children: [(0, a.jsx)(h.default.Child, {
                                 wrap: !0,
                                 grow: 0,
@@ -219,7 +219,7 @@
                                     children: x.default.Messages.TWO_FA_ENABLE
                                 })
                             })]
-                        }), e, this.renderMFASMS(), (0, a.jsx)(m.default, {})]
+                        }), e, this.renderMFASMS(), (0, a.jsx)(T.default, {})]
                     })
                 }
                 renderDisabled() {
@@ -227,7 +227,7 @@
                         title: x.default.Messages.TWO_FA,
                         children: [(0, a.jsx)(o.FormText, {
                             type: o.FormText.Types.DESCRIPTION,
-                            className: R.marginBottom20,
+                            className: M.marginBottom20,
                             children: x.default.Messages.TWO_FA_SALES_PITCH
                         }), (0, a.jsx)(o.FormItem, {
                             children: (0, a.jsx)(o.Button, {
@@ -235,7 +235,7 @@
                                 size: o.ButtonSizes.SMALL,
                                 children: x.default.Messages.TWO_FA_ENABLE
                             })
-                        }), (0, a.jsx)(m.default, {})]
+                        }), (0, a.jsx)(T.default, {})]
                     })
                 }
                 render() {
@@ -340,15 +340,15 @@
                 }
             }
 
-            function D(e) {
+            function L(e) {
                 let t = (0, r.useStateFromStores)([g.default], () => g.default.getCurrentUser());
                 i(null != t, "TwoFactorAuth: currentUser cannot be undefined");
-                let s = (0, r.useStateFromStoresObject)([_.default, T.default], () => ({
+                let s = (0, r.useStateFromStoresObject)([_.default, m.default], () => ({
                         togglingSMS: _.default.togglingSMS,
-                        hasTOTPEnabled: T.default.hasTOTPEnabled()
+                        hasTOTPEnabled: m.default.hasTOTPEnabled()
                     })),
                     n = (0, p.use2FARemoveDisableReason)();
-                return (0, a.jsx)(L, {
+                return (0, a.jsx)(D, {
                     currentUser: t,
                     ...s,
                     ...e,

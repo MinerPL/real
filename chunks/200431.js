@@ -8,8 +8,8 @@
                 o = n("255397"),
                 l = n("289867"),
                 a = n("191145"),
-                d = n("217513"),
-                u = n("893980"),
+                u = n("217513"),
+                d = n("893980"),
                 s = n("982108"),
                 E = n("42203"),
                 r = n("18494"),
@@ -25,9 +25,9 @@
                     if (null != t && null != n && n.type === i.ChannelTypes.GUILD_VOICE) return o.default.updateChatOpen(t, !a.default.getChatOpen(t)), !1;
                     if (null != t && null != n && n.type === i.ChannelTypes.DM) {
                         let e = s.default.getSection(t, null == n ? void 0 : n.isDM()),
-                            i = (0, d.getDisplayProfile)(n.getRecipientId()),
+                            i = (0, u.getDisplayProfile)(n.getRecipientId()),
                             o = e === A.ChannelSections.PROFILE;
-                        return (0, u.trackProfilePanelToggled)(i, !o), l.default.toggleProfilePanelSection(), !1
+                        return (0, d.trackProfilePanelToggled)(i, !o), l.default.toggleProfilePanelSection(), !1
                     }
                     return l.default.toggleMembersSection(), !1
                 }

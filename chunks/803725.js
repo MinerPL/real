@@ -19,10 +19,10 @@
                     return x
                 },
                 updateClipsLength: function() {
-                    return w
+                    return U
                 },
                 updateViewerClipsEnabled: function() {
-                    return P
+                    return w
                 },
                 saveClip: function() {
                     return G
@@ -64,9 +64,9 @@
                 h = n("773336"),
                 S = n("709681"),
                 v = n("386045"),
-                C = n("13136"),
-                A = n("881095"),
-                I = n("997942"),
+                I = n("13136"),
+                C = n("881095"),
+                A = n("997942"),
                 T = n("310238"),
                 b = n("99366"),
                 y = n("80028"),
@@ -155,7 +155,7 @@
                 })
             }
 
-            function w(e) {
+            function U(e) {
                 a.default.dispatch({
                     type: "CLIPS_SETTINGS_UPDATE",
                     settings: {
@@ -164,7 +164,7 @@
                 })
             }
 
-            function P(e) {
+            function w(e) {
                 a.default.dispatch({
                     type: "CLIPS_SETTINGS_UPDATE",
                     settings: {
@@ -173,7 +173,7 @@
                 })
             }
 
-            function U(e, t) {
+            function P(e, t) {
                 var n, i, a, l, u, d, r, o, f, p;
                 let m = new Map;
                 for (let e in t.framesEncodedByEncoder) {
@@ -214,8 +214,8 @@
             async function k(e) {
                 let t = v.default.getSettings(),
                     n = t.storageLocation,
-                    i = (0, A.default)(e),
-                    s = "".concat((0, C.default)(i.applicationName.substring(0, 20)), "_").concat(i.id, ".mp4"),
+                    i = (0, C.default)(e),
+                    s = "".concat((0, I.default)(i.applicationName.substring(0, 20)), "_").concat(i.id, ".mp4"),
                     d = l.default.fileManager.join(n, s),
                     r = m.default.getMediaEngine(),
                     o = JSON.stringify(i),
@@ -256,7 +256,7 @@
                         duration: e,
                         thumbnail: t,
                         clipStats: n
-                    } = await (null != c ? r.saveClipForUser(c, d, o) : r.saveClip(d, o)), a = U(_, n);
+                    } = await (null != c ? r.saveClipForUser(c, d, o) : r.saveClip(d, o)), a = P(_, n);
                     a.clip_save_time_ms = n.clipSaveTimeMs, a.clip_size_bytes = n.clipSizeBytes, null != n.viewerDecodeFps && (a.decode_fps_during_clip = n.viewerDecodeFps, a.encode_fps_during_clip = n.viewerEncodeFps, a.target_fps = null), E.default.track(N.AnalyticEvents.CLIP_SAVED, a);
                     let s = await (null != l.default.clips.getClipProtocolURLFromPath ? (0, b.createThumbnailFromVideo)(l.default.clips.getClipProtocolURLFromPath(d), 0) : (0, b.createThumbnail)(t));
                     return i.thumbnail = s, i.length = e, y.ClipsLogger.info("Clip save succeeded with ".concat(e, "ms and thumbnail ").concat(null !== (h = null == s ? void 0 : s.length) && void 0 !== h ? h : 0, " bytes thumbnail.")), await r.updateClipMetadata(d, JSON.stringify(i)), {
@@ -268,7 +268,7 @@
                             type: "CLIPS_SAVE_CLIP_PLACEHOLDER_ERROR",
                             clipId: i.id
                         }), !("errorMessage" in n)) throw E.default.track(N.AnalyticEvents.CLIP_SAVE_FAILURE, _), n;
-                    let t = U(_, n);
+                    let t = P(_, n);
                     throw t.error_at = n.errorAt, t.error_message = n.errorMessage, E.default.track(N.AnalyticEvents.CLIP_SAVE_FAILURE, t), n.errorMessage
                 }
             }
@@ -319,7 +319,7 @@
                         ...n,
                         ...t
                     },
-                    l = await (0, I.validateClipMetadata)(i);
+                    l = await (0, A.validateClipMetadata)(i);
                 null != l && (await m.default.getMediaEngine().updateClipMetadata(i.filepath, JSON.stringify(i)), E.default.track(N.AnalyticEvents.CLIP_EDITED, {
                     clip_id: i.id
                 }), a.default.dispatch({
@@ -345,7 +345,7 @@
                 let n = await l.default.clips.loadClipsDirectory(e),
                     i = [];
                 for (let e of n) {
-                    let t = await (0, I.validateClipMetadata)({
+                    let t = await (0, A.validateClipMetadata)({
                         ...e.metadata,
                         filepath: e.filepath
                     });

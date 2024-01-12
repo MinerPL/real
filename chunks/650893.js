@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return m
+                    return T
                 }
             });
             var a = s("917351"),
@@ -39,7 +39,7 @@
                 }
             }
             f.displayName = "MFAStore";
-            var m = new f(r.default, {
+            var T = new f(r.default, {
                 MFA_ENABLE_SUCCESS: function(e) {
                     let {
                         token: t,

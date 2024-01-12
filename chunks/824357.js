@@ -16,8 +16,8 @@
                 S = s("56947"),
                 E = s("386045"),
                 f = s("803725"),
-                m = s("311207"),
-                T = s("653485"),
+                T = s("311207"),
+                m = s("653485"),
                 _ = s("462491"),
                 g = s("782340"),
                 h = s("577199"),
@@ -47,11 +47,11 @@
                         tag: r.FormTitleTags.H1,
                         title: (0, a.jsxs)("div", {
                             className: h.headerContainer,
-                            children: [g.default.Messages.CLIPS, (0, a.jsx)(m.default, {})]
+                            children: [g.default.Messages.CLIPS, (0, a.jsx)(T.default, {})]
                         }),
                         children: p && (0, a.jsxs)("form", {
                             onSubmit: e => e.preventDefault(),
-                            children: [(0, a.jsx)(T.default, {}), (0, a.jsx)(_.default, {})]
+                            children: [(0, a.jsx)(m.default, {}), (0, a.jsx)(_.default, {})]
                         })
                     }), p && (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)(r.FormSection, {
                         className: N.marginTop20,

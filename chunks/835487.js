@@ -1,37 +1,37 @@
             "use strict";
-            n.r(e), n.d(e, {
+            n.r(t), n.d(t, {
                 default: function() {
                     return d
                 }
             });
-            var r = n("37983");
+            var u = n("37983");
             n("884691");
-            var i = n("446674"),
-                a = n("77078"),
-                u = n("252931"),
-                s = n("13162"),
-                o = n("166465"),
-                c = n("246511"),
-                l = n("782340");
+            var a = n("446674"),
+                r = n("77078"),
+                c = n("252931"),
+                l = n("13162"),
+                s = n("166465"),
+                i = n("246511"),
+                o = n("782340");
 
-            function d(t) {
+            function d(e) {
                 let {
-                    type: e,
+                    type: t,
                     packId: n
-                } = t, d = (0, i.useStateFromStores)([o.default], () => null !== n && null != o.default.getPackByPackId({
+                } = e, d = (0, a.useStateFromStores)([s.default], () => null !== n && null != s.default.getPackByPackId({
                     packId: n
                 })), {
-                    viewAndUseEnabled: E
-                } = (0, u.useInventoryGuildPacksUserExperiment)({
+                    viewAndUseEnabled: p
+                } = (0, c.useInventoryGuildPacksUserExperiment)({
                     autoTrackExposure: !1
                 });
-                return E && d && (e === c.PickerContextMenuDataTypes.EMOJI || e === c.PickerContextMenuDataTypes.PACK_ICON) && null !== n ? (0, r.jsx)(a.MenuItem, {
+                return p && d && (t === i.PickerContextMenuDataTypes.EMOJI || t === i.PickerContextMenuDataTypes.PACK_ICON) && null !== n ? (0, u.jsx)(r.MenuItem, {
                     id: "uncollect",
                     action: function() {
-                        null != n && (0, s.uncollectPack)({
+                        null != n && (0, l.uncollectPack)({
                             packId: n
                         })
                     },
-                    label: l.default.Messages.INVENTORY_REMOVE_PACK
+                    label: o.default.Messages.INVENTORY_REMOVE_PACK
                 }) : null
             }

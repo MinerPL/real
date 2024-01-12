@@ -1,129 +1,129 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 SelectionCircle: function() {
-                    return I
+                    return E
                 },
                 DefaultThemeSelection: function() {
-                    return N
+                    return v
                 },
                 GradientThemeSelection: function() {
-                    return R
+                    return N
                 }
-            }), s("794252");
-            var a = s("37983");
-            s("884691");
-            var n = s("414456"),
-                r = s.n(n),
-                i = s("506838"),
-                l = s("446674"),
-                u = s("669491"),
-                d = s("2662"),
-                c = s("819855"),
-                o = s("77078"),
-                E = s("161778"),
-                T = s("578706"),
-                _ = s("253539"),
-                S = s("92130"),
-                m = s("49111"),
-                f = s("782340"),
-                h = s("823470");
+            }), n("794252");
+            var a = n("37983");
+            n("884691");
+            var i = n("414456"),
+                s = n.n(i),
+                l = n("506838"),
+                r = n("446674"),
+                o = n("669491"),
+                u = n("2662"),
+                d = n("819855"),
+                c = n("77078"),
+                f = n("161778"),
+                m = n("578706"),
+                h = n("253539"),
+                g = n("92130"),
+                _ = n("49111"),
+                S = n("782340"),
+                p = n("823470");
 
-            function I() {
+            function E() {
                 return (0, a.jsx)("div", {
-                    className: h.selectionCircle,
-                    children: (0, a.jsx)(T.default, {
-                        className: h.checkmarkCircle,
-                        foreground: h.checkmark,
-                        backgroundColor: u.default.unsafe_rawColors.WHITE_500.css
+                    className: p.selectionCircle,
+                    children: (0, a.jsx)(m.default, {
+                        className: p.checkmarkCircle,
+                        foreground: p.checkmark,
+                        backgroundColor: o.default.unsafe_rawColors.WHITE_500.css
                     })
                 })
             }
 
-            function p(e) {
+            function T(e) {
                 let {
                     name: t,
-                    className: s,
-                    style: n,
-                    onSelect: i,
-                    isSelected: l = !1,
-                    tabIndex: u,
-                    children: d
-                } = e, c = (0, o.useRadioItem)({
+                    className: n,
+                    style: i,
+                    onSelect: l,
+                    isSelected: r = !1,
+                    tabIndex: o,
+                    children: u
+                } = e, d = (0, c.useRadioItem)({
                     label: t,
-                    isSelected: l
+                    isSelected: r
                 });
-                return (0, a.jsx)(o.Tooltip, {
+                return (0, a.jsx)(c.Tooltip, {
                     text: t,
                     children: e => (0, a.jsxs)("div", {
-                        className: h.themeSelectionContainer,
-                        children: [(0, a.jsx)(o.Clickable, {
+                        className: p.themeSelectionContainer,
+                        children: [(0, a.jsx)(c.Clickable, {
                             ...e,
-                            ...c,
-                            tabIndex: null != u ? u : c.tabIndex,
-                            className: r(h.themeSelection, {
-                                [h.selected]: l
-                            }, s),
-                            style: n,
-                            onClick: l ? m.NOOP : i,
-                            children: d
-                        }), l && (0, a.jsx)(I, {})]
+                            ...d,
+                            tabIndex: null != o ? o : d.tabIndex,
+                            className: s(p.themeSelection, {
+                                [p.selected]: r
+                            }, n),
+                            style: i,
+                            onClick: r ? _.NOOP : l,
+                            children: u
+                        }), r && (0, a.jsx)(E, {})]
+                    })
+                })
+            }
+
+            function v(e) {
+                let {
+                    theme: t,
+                    isSelected: n,
+                    onSelect: i
+                } = e, m = (0, r.useStateFromStores)([f.default], () => f.default.systemPrefersColorScheme), h = e => (0, d.isThemeLight)(e) ? o.default.unsafe_rawColors.PRIMARY_600.css : o.default.unsafe_rawColors.WHITE_500.css, E = (0, l.match)({
+                    theme: t,
+                    systemPrefersColorScheme: m
+                }).with({
+                    theme: "system",
+                    systemPrefersColorScheme: _.ThemeTypes.LIGHT
+                }, () => p.lightIcon).with({
+                    theme: _.ThemeTypes.LIGHT
+                }, () => p.lightIcon).otherwise(() => p.darkIcon), v = (0, l.match)(t).with(_.ThemeTypes.LIGHT, () => S.default.Messages.THEME_LIGHT).with(_.ThemeTypes.DARK, () => S.default.Messages.THEME_DARK).with("system", () => S.default.Messages.THEME_SYSTEM).exhaustive(), N = (0, c.useRedesignIconContext)().enabled;
+                return (0, a.jsx)(T, {
+                    onSelect: i,
+                    isSelected: n,
+                    name: v,
+                    className: s(p.defaultThemeSelection, E),
+                    children: "system" === t && (0, a.jsx)("div", {
+                        className: p.iconWrapper,
+                        children: N ? (0, a.jsx)(u.RefreshIcon, {
+                            color: h(m)
+                        }) : (0, a.jsx)(g.default, {
+                            fill: h(m)
+                        })
                     })
                 })
             }
 
             function N(e) {
                 let {
-                    theme: t,
-                    isSelected: s,
-                    onSelect: n
-                } = e, T = (0, l.useStateFromStores)([E.default], () => E.default.systemPrefersColorScheme), _ = e => (0, c.isThemeLight)(e) ? u.default.unsafe_rawColors.PRIMARY_600.css : u.default.unsafe_rawColors.WHITE_500.css, I = (0, i.match)({
-                    theme: t,
-                    systemPrefersColorScheme: T
-                }).with({
-                    theme: "system",
-                    systemPrefersColorScheme: m.ThemeTypes.LIGHT
-                }, () => h.lightIcon).with({
-                    theme: m.ThemeTypes.LIGHT
-                }, () => h.lightIcon).otherwise(() => h.darkIcon), N = (0, i.match)(t).with(m.ThemeTypes.LIGHT, () => f.default.Messages.THEME_LIGHT).with(m.ThemeTypes.DARK, () => f.default.Messages.THEME_DARK).with("system", () => f.default.Messages.THEME_SYSTEM).exhaustive(), R = (0, o.useRedesignIconContext)().enabled;
-                return (0, a.jsx)(p, {
-                    onSelect: n,
-                    isSelected: s,
-                    name: N,
-                    className: r(h.defaultThemeSelection, I),
-                    children: "system" === t && (0, a.jsx)("div", {
-                        className: h.iconWrapper,
-                        children: R ? (0, a.jsx)(d.RefreshIcon, {
-                            color: _(T)
-                        }) : (0, a.jsx)(S.default, {
-                            fill: _(T)
-                        })
-                    })
-                })
-            }
-
-            function R(e) {
-                let {
                     preset: t,
-                    isSelected: s,
-                    disabled: n,
-                    tabIndex: i,
-                    onSelect: l
+                    isSelected: n,
+                    disabled: i,
+                    tabIndex: l,
+                    onSelect: r
                 } = e, {
-                    colors: u,
-                    angle: d,
-                    theme: o
-                } = t, E = (0, _.getLinearGradientForBackgroundGradient)({
-                    colors: u,
-                    angle: d
+                    colors: o,
+                    angle: u,
+                    theme: c
+                } = t, f = (0, h.getLinearGradientForBackgroundGradient)({
+                    colors: o,
+                    angle: u
                 });
-                return (0, a.jsx)(p, {
-                    onSelect: n ? void 0 : l,
-                    isSelected: s,
+                return (0, a.jsx)(T, {
+                    onSelect: i ? void 0 : r,
+                    isSelected: n,
                     name: t.getName(),
-                    className: r([n ? h.disabled : null, (0, c.isThemeDark)(o) ? h.darkOverlay : h.lightOverlay]),
+                    className: s([i ? p.disabled : null, (0, d.isThemeDark)(c) ? p.darkOverlay : p.lightOverlay]),
                     style: {
-                        background: "var(--bg-overlay), ".concat(E)
+                        background: "var(--bg-overlay), ".concat(f)
                     },
-                    tabIndex: i
+                    tabIndex: l
                 })
             }

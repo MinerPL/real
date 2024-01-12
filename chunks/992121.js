@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return T
+                    return m
                 }
             }), s("222007");
             var a = s("37983"),
@@ -17,7 +17,7 @@
                 E = s("782340"),
                 f = s("926622");
 
-            function m() {
+            function T() {
                 return (0, a.jsx)(o.FormNotice, {
                     type: o.CardTypes.PRIMARY,
                     title: E.default.Messages.VIDEO_UNSUPPORTED_BROWSER_TITLE,
@@ -31,7 +31,7 @@
                 })
             }
 
-            function T() {
+            function m() {
                 let e = (0, r.useStateFromStores)([d.default], () => d.default.supports(S.Features.VIDEO)),
                     [t, s] = n.useState(!1);
                 return (0, a.jsxs)("div", {
@@ -44,7 +44,7 @@
                         children: e ? (0, a.jsx)(c.default, {
                             previewEnabled: t,
                             onEnablePreview: () => s(!0)
-                        }) : (0, a.jsx)(m, {})
+                        }) : (0, a.jsx)(T, {})
                     }), (0, a.jsx)(o.FormDivider, {
                         className: i(f.marginBottom40, f.marginTop40)
                     })]

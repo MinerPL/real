@@ -28,12 +28,12 @@
                 a.useEffect(() => {
                     t ? (null == o || o(f), f.createSearchContext()) : (f.clean(), u(""))
                 }, [t, f, o]);
-                let m = a.useCallback(e => {
+                let T = a.useCallback(e => {
                     u(e), f.search(e)
                 }, [f]);
                 return {
                     queryResults: c,
                     query: d,
-                    updateQuery: m
+                    updateQuery: T
                 }
             }

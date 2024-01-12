@@ -14,8 +14,8 @@
                 S = s("167726"),
                 E = s("145131"),
                 f = s("476765"),
-                m = s("782340"),
-                T = s("866223"),
+                T = s("782340"),
+                m = s("866223"),
                 _ = s("926622");
             let g = /^\d+$|^$/;
             (n = a || (a = {})).LOCALHOST = "localhost", n.PROXY = "proxy";
@@ -32,8 +32,8 @@
                     authorizedApplicationId: S.default.testModeApplicationId,
                     authorizationError: S.default.error,
                     authorizing: S.default.isFetchingAuthorization
-                })), [I, N] = i.useState(null != a ? a : ""), [p, C] = i.useState("8080"), [A, O] = i.useState("localhost"), x = (0, f.useUID)(), M = g.test(I);
-                async function R() {
+                })), [I, N] = i.useState(null != a ? a : ""), [p, C] = i.useState("8080"), [A, O] = i.useState("localhost"), x = (0, f.useUID)(), R = g.test(I);
+                async function M() {
                     u.resetError();
                     let e = function(e, t, s) {
                             if (null == e) return null;
@@ -49,9 +49,9 @@
                 }
                 i.useEffect(() => () => d.default.wait(() => u.resetError()), []);
                 let v = null != a && a === I,
-                    L = v ? function() {
+                    D = v ? function() {
                         u.reset(), N(""), O(null)
-                    } : R;
+                    } : M;
                 return (0, l.jsxs)(o.ModalRoot, {
                     "aria-labelledby": x,
                     transitionState: s,
@@ -62,52 +62,52 @@
                             id: x,
                             tag: "h1",
                             className: _.marginReset,
-                            children: m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_HEADER
+                            children: T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_HEADER
                         }), (0, l.jsx)(o.ModalCloseButton, {
                             onClick: t
                         })]
                     }), (0, l.jsxs)(o.ModalContent, {
-                        className: T.modalContent,
+                        className: m.modalContent,
                         children: [(0, l.jsx)(o.FormText, {
                             className: _.marginBottom20,
                             type: o.FormText.Types.DESCRIPTION,
-                            children: m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_BODY
+                            children: T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_BODY
                         }), null == n ? null : (0, l.jsx)(o.FormErrorBlock, {
                             className: _.marginBottom20,
                             children: n
                         }), (0, l.jsx)("form", {
                             onSubmit: e => {
-                                e.preventDefault(), L()
+                                e.preventDefault(), D()
                             },
                             children: (0, l.jsxs)(E.default, {
                                 direction: E.default.Direction.VERTICAL,
                                 align: E.default.Align.START,
                                 children: [(0, l.jsx)(o.FormItem, {
-                                    className: T.inputWrapper,
-                                    title: m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
+                                    className: m.inputWrapper,
+                                    title: T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
                                     required: !0,
                                     children: (0, l.jsx)(o.TextInput, {
                                         value: I,
                                         maxLength: 19,
-                                        error: M ? null : m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
+                                        error: R ? null : T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
                                         onChange: function(e) {
                                             N(e)
                                         },
                                         disabled: h
                                     })
                                 }), (0, l.jsx)(o.FormItem, {
-                                    className: T.inputWrapper,
-                                    title: m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
+                                    className: m.inputWrapper,
+                                    title: T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
                                     children: (0, l.jsx)(o.SingleSelect, {
-                                        isDisabled: !M || "" === I,
+                                        isDisabled: !R || "" === I,
                                         value: A,
                                         options: [{
                                             value: "localhost",
-                                            label: m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_LOCALHOST_OPTION,
+                                            label: T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_LOCALHOST_OPTION,
                                             key: "localhost"
                                         }, {
                                             value: "proxy",
-                                            label: m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PROXY_OPTION,
+                                            label: T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PROXY_OPTION,
                                             key: "proxy"
                                         }],
                                         onChange: function(e) {
@@ -116,8 +116,8 @@
                                         placeholder: "URL Origin Type"
                                     })
                                 }), "localhost" !== A ? null : (0, l.jsx)(o.FormItem, {
-                                    className: T.inputWrapper,
-                                    title: m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PORT_NUMBER_LABEL,
+                                    className: m.inputWrapper,
+                                    title: T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PORT_NUMBER_LABEL,
                                     required: !0,
                                     children: (0, l.jsx)(o.TextInput, {
                                         value: p,
@@ -128,9 +128,9 @@
                                 }), (0, l.jsx)(o.Button, {
                                     submitting: h,
                                     type: "submit",
-                                    disabled: !M || 0 === I.length || "localhost" === A && 0 === p.length,
+                                    disabled: !R || 0 === I.length || "localhost" === A && 0 === p.length,
                                     color: v ? o.Button.Colors.RED : o.Button.Colors.GREEN,
-                                    children: v ? m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : m.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
+                                    children: v ? T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
                                 })]
                             })
                         })]

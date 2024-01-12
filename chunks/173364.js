@@ -17,8 +17,8 @@
                 S = s("145131"),
                 E = s("161778"),
                 f = s("597870"),
-                m = s("353927"),
-                T = s("782340"),
+                T = s("353927"),
+                m = s("782340"),
                 _ = s("947148"),
                 g = s("926622");
 
@@ -31,8 +31,8 @@
                         inputDeviceId: N,
                         outputDeviceId: p
                     } = (0, i.useStateFromStoresObject)([c.default], () => ({
-                        canSetInputDevice: c.default.supports(m.Features.AUDIO_INPUT_DEVICE),
-                        canSetOutputDevice: c.default.supports(m.Features.AUDIO_OUTPUT_DEVICE),
+                        canSetInputDevice: c.default.supports(T.Features.AUDIO_INPUT_DEVICE),
+                        canSetOutputDevice: c.default.supports(T.Features.AUDIO_OUTPUT_DEVICE),
                         inputDeviceId: c.default.getInputDeviceId(),
                         outputDeviceId: c.default.getOutputDeviceId()
                     })),
@@ -41,20 +41,20 @@
                 !h && (e = (0, a.jsx)(o.FormText, {
                     type: o.FormText.Types.DESCRIPTION,
                     className: g.marginTop8,
-                    children: T.default.Messages.BROWSER_INPUT_DEVICE_WARNING.format({
+                    children: m.default.Messages.BROWSER_INPUT_DEVICE_WARNING.format({
                         onDownloadClick: () => (0, f.openDownloadAppsModal)("Help Text Input Devices")
                     })
                 })), !I && (t = (0, a.jsx)(o.FormText, {
                     type: o.FormText.Types.DESCRIPTION,
                     className: g.marginTop8,
-                    children: T.default.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
+                    children: m.default.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
                         onDownloadClick: () => (0, f.openDownloadAppsModal)("Help Text Output Devices")
                     })
                 }));
                 let O = l(C).values().first(),
                     x = null != O ? O.disabled : null != e,
-                    M = l(A).values().first(),
-                    R = null != M ? M.disabled : null != t;
+                    R = l(A).values().first(),
+                    M = null != R ? R.disabled : null != t;
 
                 function v(e) {
                     let t, {
@@ -78,7 +78,7 @@
                     }, i)
                 }
 
-                function L(e) {
+                function D(e) {
                     return v(e[0])
                 }
                 return (0, a.jsxs)(S.default, {
@@ -88,7 +88,7 @@
                         children: [(0, a.jsx)(o.FormTitle, {
                             tag: o.FormTitleTags.H5,
                             className: g.marginBottom8,
-                            children: T.default.Messages.FORM_LABEL_INPUT_DEVICE
+                            children: m.default.Messages.FORM_LABEL_INPUT_DEVICE
                         }), (0, a.jsx)(o.SingleSelect, {
                             value: N,
                             onChange: e => d.default.setInputDevice(e, "Settings"),
@@ -103,7 +103,7 @@
                                 }
                             }),
                             isDisabled: x,
-                            renderOptionValue: L,
+                            renderOptionValue: D,
                             renderOptionLabel: v
                         }), e]
                     }), (0, a.jsxs)(S.default.Child, {
@@ -111,7 +111,7 @@
                         children: [(0, a.jsx)(o.FormTitle, {
                             tag: o.FormTitleTags.H5,
                             className: g.marginBottom8,
-                            children: T.default.Messages.FORM_LABEL_OUTPUT_DEVICE
+                            children: m.default.Messages.FORM_LABEL_OUTPUT_DEVICE
                         }), (0, a.jsx)(o.SingleSelect, {
                             value: p,
                             onChange: e => d.default.setOutputDevice(e, "Settings"),
@@ -125,8 +125,8 @@
                                     label: s
                                 }
                             }),
-                            isDisabled: R,
-                            renderOptionValue: L,
+                            isDisabled: M,
+                            renderOptionValue: D,
                             renderOptionLabel: v
                         }), t]
                     })]

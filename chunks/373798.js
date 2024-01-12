@@ -21,8 +21,8 @@
                     s = (0, d.useIsPrepaidPaymentPastDue)(),
                     E = (0, a.useStateFromStores)([c.default], () => c.default.getProps().impressionSource),
                     f = (0, o.usePendingRequestCount)(),
-                    m = (0, i.useEnableClips)(),
-                    [T] = (0, r.useGetDismissibleContent)(m ? [n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
+                    T = (0, i.useEnableClips)(),
+                    [m] = (0, r.useGetDismissibleContent)(T ? [n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
                     _ = "useGenerateUserSettingsSections";
                 return (0, l.useTriggerDebuggingAA)({
                     location: _ + " auto on",
@@ -35,6 +35,6 @@
                     showPrepaidPaymentPastDueWarning: s,
                     impressionSource: E,
                     numOfPendingFamilyRequests: f,
-                    isClipsBetaTagShowing: T === n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG
+                    isClipsBetaTagShowing: m === n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG
                 })
             }

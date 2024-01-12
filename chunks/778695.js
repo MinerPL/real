@@ -1,10 +1,10 @@
             "use strict";
             s.r(t), s.d(t, {
                 DropsCopyCodeModalContent: function() {
-                    return m
+                    return T
                 },
                 DropsModalClaimErrorBody: function() {
-                    return T
+                    return m
                 },
                 default: function() {
                     return _
@@ -23,7 +23,7 @@
                 E = s("782340"),
                 f = s("519874");
 
-            function m(e) {
+            function T(e) {
                 let {
                     onClose: t,
                     code: s,
@@ -71,7 +71,7 @@
                 })
             }
 
-            function T(e) {
+            function m(e) {
                 let {
                     onClose: t,
                     errorCode: s
@@ -111,23 +111,23 @@
                 let {
                     onClose: t,
                     code: o,
-                    drop: T,
+                    drop: m,
                     platform: _,
                     transitionState: g
                 } = e, h = (0, d.useUID)(), [I, N] = n.useState();
                 n.useEffect(() => {
                     null == o && r.default.wait(async () => {
-                        await (0, u.fetchCodePlatformAvailability)(T.dropsQuestId)
+                        await (0, u.fetchCodePlatformAvailability)(m.dropsQuestId)
                     })
-                }, [T.dropsQuestId, o]);
+                }, [m.dropsQuestId, o]);
                 let p = (0, l.useStateFromStores)([c.default], () => c.default.platformAvailability);
                 return (0, a.jsx)(i.ModalRoot, {
                     transitionState: g,
                     "aria-labelledby": h,
                     children: (0, a.jsx)(a.Fragment, {
                         children: (() => {
-                            if (null != o) return (0, a.jsx)(m, {
-                                bodyText: T.messages.claimTip(),
+                            if (null != o) return (0, a.jsx)(T, {
+                                bodyText: m.messages.claimTip(),
                                 onClose: t,
                                 copyInputTitle: E.default.Messages.DROPS_REDEMPTION_CODE_PLATFORM_TITLE.format({
                                     platform: _
@@ -158,7 +158,7 @@
                                             children: n ? E.default.Messages.DROPS_MODAL_CHOOSE_SINGLE_PLATFORM.format({
                                                 platform: (0, S.getPlatformLabel)(p[0])
                                             }) : E.default.Messages.DROPS_MODAL_CHOOSE_PLATFORM.format({
-                                                title: T.title
+                                                title: m.title
                                             })
                                         }), (0, a.jsx)(i.FormDivider, {
                                             className: f.formDivider
@@ -193,7 +193,7 @@
                                                         ...s,
                                                         platform: void 0 === I ? p[0] : I,
                                                         code: o,
-                                                        dropsQuestId: T.dropsQuestId,
+                                                        dropsQuestId: m.dropsQuestId,
                                                         closeParentModal: t,
                                                         singlePlatformClaim: n
                                                     })

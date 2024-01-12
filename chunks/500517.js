@@ -16,8 +16,8 @@
                 S = s("913144"),
                 E = s("619340"),
                 f = s("642950"),
-                m = s("264044"),
-                T = s("135230"),
+                T = s("264044"),
+                m = s("135230"),
                 _ = s("841098"),
                 g = s("376556"),
                 h = s("572943"),
@@ -28,22 +28,22 @@
                 A = s("47319"),
                 O = s("305961"),
                 x = s("677099"),
-                M = s("102985"),
-                R = s("941886"),
+                R = s("102985"),
+                M = s("941886"),
                 v = s("931138"),
-                L = s("476263"),
-                D = s("945330"),
+                D = s("476263"),
+                L = s("945330"),
                 P = s("772280"),
                 j = s("486952"),
                 b = s("956089"),
                 U = s("599110"),
-                y = s("701909"),
-                B = s("915639"),
+                B = s("701909"),
+                y = s("915639"),
                 F = s("333562"),
                 G = s("216503"),
                 k = s("187451"),
-                w = s("470781"),
-                H = s("49111"),
+                H = s("470781"),
+                w = s("49111"),
                 V = s("214509"),
                 Y = s("994428"),
                 W = s("782340"),
@@ -77,8 +77,8 @@
                     className: K.integrationWrapper,
                     children: [(0, a.jsxs)("div", {
                         className: K.integration,
-                        children: [(0, a.jsx)(L.default, {
-                            size: L.default.Sizes.SMALL,
+                        children: [(0, a.jsx)(D.default, {
+                            size: D.default.Sizes.SMALL,
                             guild: l.guild,
                             className: K.guildIcon
                         }), (0, a.jsxs)("div", {
@@ -110,23 +110,23 @@
                 let i, r, o, {
                         onDisconnect: S,
                         account: f,
-                        theme: m,
+                        theme: T,
                         locale: _
                     } = e,
                     [C, A] = n.useState(f.friendSync),
                     [O, x] = n.useState(f.visibility),
-                    [M, R] = n.useState(f.metadataVisibility),
-                    [L, P] = n.useState(f.showActivity),
-                    [U, B] = n.useState(null),
+                    [R, M] = n.useState(f.metadataVisibility),
+                    [D, P] = n.useState(f.showActivity),
+                    [U, y] = n.useState(null),
                     [Y, z] = n.useState(null),
                     [q, Z] = n.useState(!1),
                     [X, J] = n.useState([]),
                     $ = (0, h.useLegacyPlatformType)(f.type),
                     ee = g.default.get($);
                 n.useEffect(() => {
-                    A(f.friendSync), x(f.visibility), R(f.metadataVisibility), P(f.showActivity)
+                    A(f.friendSync), x(f.visibility), M(f.metadataVisibility), P(f.showActivity)
                 }, [f]), n.useEffect(() => {
-                    !1 !== f.verified && (null != U && (x(U), E.default.setVisibility(f.type, f.id, U), B(null)), null != Y && (R(Y), E.default.setMetadataVisibility(f.type, f.id, Y), z(null)))
+                    !1 !== f.verified && (null != U && (x(U), E.default.setVisibility(f.type, f.id, U), y(null)), null != Y && (M(Y), E.default.setMetadataVisibility(f.type, f.id, Y), z(null)))
                 }, [f]);
 
                 function et() {
@@ -143,7 +143,7 @@
                                 platformName: e.name
                             })
                         })]
-                    })), (0, c.openModal)(s => (0, a.jsx)(T.default, {
+                    })), (0, c.openModal)(s => (0, a.jsx)(m.default, {
                         title: W.default.Messages.DISCONNECT_ACCOUNT_TITLE.format({
                             name: e.name
                         }),
@@ -160,7 +160,7 @@
                         verified: t
                     } = f, s = e ? 1 : 0;
                     if (e && !t) {
-                        B(s), (0, p.default)(f.type, "User Settings");
+                        y(s), (0, p.default)(f.type, "User Settings");
                         return
                     }
                     x(s), E.default.setVisibility(f.type, f.id, s)
@@ -174,7 +174,7 @@
                         z(s), (0, p.default)(f.type, "User Settings");
                         return
                     }
-                    R(s), E.default.setMetadataVisibility(f.type, f.id, s)
+                    M(s), E.default.setMetadataVisibility(f.type, f.id, s)
                 }
 
                 function el(e) {
@@ -193,7 +193,7 @@
                             l = null !== (t = e.metadata) && void 0 !== t ? t : {},
                             i = "1" === l[V.MetadataFields.TWITTER_VERIFIED],
                             r = null;
-                        return s.type === H.PlatformTypes.TWITTER && i && (r = (0, a.jsx)(c.Tooltip, {
+                        return s.type === w.PlatformTypes.TWITTER && i && (r = (0, a.jsx)(c.Tooltip, {
                             text: W.default.Messages.CONNECTION_VERIFIED_ON_TWITTER,
                             children: e => (0, a.jsx)(v.default, {
                                 ...e,
@@ -208,7 +208,7 @@
                             children: [(0, a.jsx)("img", {
                                 alt: n.name,
                                 className: K.connectionIcon,
-                                src: (0, u.isThemeDark)(m) ? n.icon.darkSVG : n.icon.lightSVG
+                                src: (0, u.isThemeDark)(T) ? n.icon.darkSVG : n.icon.lightSVG
                             }), (0, a.jsxs)("div", {
                                 children: [(0, a.jsx)(c.Text, {
                                     color: "header-primary",
@@ -235,16 +235,16 @@
                                         right: -4
                                     }
                                 },
-                                children: (0, a.jsx)(D.default, {
+                                children: (0, a.jsx)(L.default, {
                                     width: 16,
                                     height: 16
                                 })
                             })]
                         })
-                    }(f), (t = f).twoWayLink ? null : t.type === H.PlatformTypes.XBOX ? (0, a.jsx)("div", {
+                    }(f), (t = f).twoWayLink ? null : t.type === w.PlatformTypes.XBOX ? (0, a.jsx)("div", {
                         className: K.upsellWrapper,
-                        children: (0, a.jsx)(w.XboxTwoWayLinkUpsell, {})
-                    }) : t.type === H.PlatformTypes.PLAYSTATION ? (0, a.jsx)("div", {
+                        children: (0, a.jsx)(H.XboxTwoWayLinkUpsell, {})
+                    }) : t.type === w.PlatformTypes.PLAYSTATION ? (0, a.jsx)("div", {
                         className: K.upsellWrapper,
                         children: (0, a.jsx)(k.PlayStationTwoWayLinkUpsell, {})
                     }) : null, function(e) {
@@ -253,22 +253,22 @@
                             n = null,
                             l = (0, I.getCreatedAtDate)(s[V.MetadataFields.CREATED_AT], _);
                         switch (e.type) {
-                            case H.PlatformTypes.REDDIT:
+                            case w.PlatformTypes.REDDIT:
                                 n = (0, N.generateRedditMetadataItems)(s, K.metadataItem);
                                 break;
-                            case H.PlatformTypes.STEAM:
+                            case w.PlatformTypes.STEAM:
                                 n = (0, N.generateSteamMetadataItems)(s, K.metadataItem);
                                 break;
-                            case H.PlatformTypes.TWITTER:
+                            case w.PlatformTypes.TWITTER:
                                 n = (0, N.generateTwitterMetadataItems)(s, K.metadataItem);
                                 break;
-                            case H.PlatformTypes.EBAY:
+                            case w.PlatformTypes.EBAY:
                                 n = (0, N.generateEbayMetadataItems)(s, K.metadataItem);
                                 break;
-                            case H.PlatformTypes.PAYPAL:
+                            case w.PlatformTypes.PAYPAL:
                                 n = (0, N.generatePaypalMetadataItems)(s, K.metadataItem);
                                 break;
-                            case H.PlatformTypes.TIKTOK:
+                            case w.PlatformTypes.TIKTOK:
                                 n = (0, N.generateTikTokMetadataItems)(s, K.metadataItem)
                         }
                         null !== l && (null == n && (n = []), null == n || n.push((0, a.jsx)(c.Text, {
@@ -290,7 +290,7 @@
                                 variant: "text-xs/normal",
                                 className: K.connectionMetadataUpsellDescription,
                                 children: W.default.Messages.CONNECTED_ACCOUNT_ADD_DETAILS_DESCRIPTION.format({
-                                    helpdeskUrl: y.default.getArticleURL(H.HelpdeskArticles.CONNECTION_DETAILS)
+                                    helpdeskUrl: B.default.getArticleURL(w.HelpdeskArticles.CONNECTION_DETAILS)
                                 })
                             }, "label")], r = W.default.Messages.CONNECTED_ACCOUNT_ADD_DETAILS
                         }
@@ -312,7 +312,7 @@
                             className: K.metadataContainer,
                             children: n
                         })
-                    }(f), (s = ee, H.FRIEND_SYNC_PLATFORM_TYPES.has(f.type) && (i = (0, a.jsx)(c.FormSwitch, {
+                    }(f), (s = ee, w.FRIEND_SYNC_PLATFORM_TYPES.has(f.type) && (i = (0, a.jsx)(c.FormSwitch, {
                         className: K.connectionOptionSwitch,
                         hideBorder: !0,
                         value: C,
@@ -321,10 +321,10 @@
                             variant: "text-sm/semibold",
                             children: W.default.Messages.SYNC_FRIENDS
                         })
-                    })), H.ACTIVITY_PLATFORM_TYPES.has(f.type) && (r = (0, a.jsx)(c.FormSwitch, {
+                    })), w.ACTIVITY_PLATFORM_TYPES.has(f.type) && (r = (0, a.jsx)(c.FormSwitch, {
                         className: K.connectionOptionSwitch,
                         hideBorder: !0,
-                        value: L,
+                        value: D,
                         onChange: ei,
                         children: (0, a.jsx)(c.Text, {
                             variant: "text-sm/semibold",
@@ -335,7 +335,7 @@
                     })), (null === (l = g.default.get(f.type)) || void 0 === l ? void 0 : l.hasMetadata) === !0 && (o = (0, a.jsx)(c.FormSwitch, {
                         className: K.connectionOptionSwitch,
                         hideBorder: !0,
-                        value: 1 === M,
+                        value: 1 === R,
                         onChange: en,
                         disabled: 1 !== O || null == f.metadata,
                         children: (0, a.jsx)(c.Text, {
@@ -402,7 +402,7 @@
                         variant: "text-xs/normal",
                         color: "header-secondary",
                         children: W.default.Messages.CONNECTIONS_USER_SETTINGS_CONNECT_ACCOUNTS_DESCRIPTION.format({
-                            privacyPolicyUrl: H.MarketingURLs.PRIVACY
+                            privacyPolicyUrl: w.MarketingURLs.PRIVACY
                         })
                     }), (0, a.jsx)(X, {})]
                 })
@@ -411,7 +411,7 @@
             function X() {
                 function e(e) {
                     let t = g.default.get(e);
-                    (0, p.default)(t.type), U.default.track(H.AnalyticEvents.ACCOUNT_LINK_STEP, {
+                    (0, p.default)(t.type), U.default.track(w.AnalyticEvents.ACCOUNT_LINK_STEP, {
                         previous_step: "desktop connections",
                         current_step: "desktop oauth",
                         platform_type: t.type
@@ -429,7 +429,7 @@
                     l = n ? 24 : 18;
                 return (0, a.jsxs)("div", {
                     className: K.connectionsContainer,
-                    children: [s.slice(0, 10).map(e => (0, a.jsx)(m.default, {
+                    children: [s.slice(0, 10).map(e => (0, a.jsx)(T.default, {
                         type: e.type,
                         className: K.accountButton,
                         innerClassName: K.accountButtonInner
@@ -473,15 +473,15 @@
                 return t = n ? (0, a.jsx)(c.Spinner, {
                     className: z.marginTop20,
                     type: c.Spinner.Type.SPINNING_CIRCLE
-                }) : 0 === l.length ? (0, a.jsxs)(R.default, {
+                }) : 0 === l.length ? (0, a.jsxs)(M.default, {
                     className: z.marginTop40,
                     theme: i,
-                    children: [(0, a.jsx)(R.EmptyStateImage, {
+                    children: [(0, a.jsx)(M.EmptyStateImage, {
                         darkSrc: s("137718"),
                         lightSrc: s("631399"),
                         width: 230,
                         height: 220
-                    }), (0, a.jsx)(R.EmptyStateText, {
+                    }), (0, a.jsx)(M.EmptyStateText, {
                         note: W.default.Messages.CONNECTED_ACCOUNTS_NONE,
                         children: W.default.Messages.CONNECTED_ACCOUNTS_NONE_TITLE
                     })]
@@ -502,12 +502,12 @@
                 })
             }
             var $ = () => {
-                let e = (0, r.useStateFromStores)([M.default], () => M.default.hidePersonalInformation),
+                let e = (0, r.useStateFromStores)([R.default], () => R.default.hidePersonalInformation),
                     t = (0, r.useStateFromStores)([A.default], () => A.default.isFetching()),
                     s = (0, r.useStateFromStores)([A.default], () => A.default.getAccounts()),
                     l = (0, _.default)();
                 (0, r.useStateFromStores)([x.default], () => x.default.getFlattenedGuildIds());
-                let i = (0, r.useStateFromStores)([B.default], () => B.default.locale);
+                let i = (0, r.useStateFromStores)([y.default], () => y.default.locale);
                 return (n.useEffect(() => {
                     E.default.fetch()
                 }, []), e) ? (0, a.jsx)(f.default, {}) : (0, a.jsxs)(c.FormSection, {

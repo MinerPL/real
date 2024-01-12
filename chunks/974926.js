@@ -16,8 +16,8 @@
                 S = s("54239"),
                 E = s("775433"),
                 f = s("308592"),
-                m = s("245187"),
-                T = s("866561"),
+                T = s("245187"),
+                m = s("866561"),
                 _ = s("656142"),
                 g = s("93731"),
                 h = s("556738"),
@@ -28,28 +28,28 @@
                 A = s("357957"),
                 O = s("521012"),
                 x = s("476263"),
-                M = s("628398"),
-                R = s("163466"),
+                R = s("628398"),
+                M = s("163466"),
                 v = s("46829"),
-                L = s("118503"),
-                D = s("273293"),
+                D = s("118503"),
+                L = s("273293"),
                 P = s("272339"),
                 j = s("682344"),
                 b = s("290581"),
                 U = s("893596"),
-                y = s("959097"),
-                B = s("698015"),
+                B = s("959097"),
+                y = s("698015"),
                 F = s("599110"),
                 G = s("449008"),
                 k = s("701909"),
-                w = s("889285"),
-                H = s("334811"),
+                H = s("889285"),
+                w = s("334811"),
                 V = s("49111"),
                 Y = s("782340"),
                 W = s("368862");
             let K = () => [{
                     description: Y.default.Messages.PREMIUM_GUILD_USER_FEATURE_MEMBER_BADGE,
-                    icon: L.default,
+                    icon: D.default,
                     iconClass: W.memberBadgeIcon
                 }, {
                     description: Y.default.Messages.PREMIUM_GUILD_USER_FEATURE_PROFILE_BADGE,
@@ -75,7 +75,7 @@
                     iconClass: W.audioQualityIcon
                 }, {
                     description: Y.default.Messages.PREMIUM_GUILD_GUILD_FEATURE_UPLOAD_SIZE,
-                    icon: (0, B.default),
+                    icon: (0, y.default),
                     iconClass: W.uploadSizeIcon
                 }, {
                     description: Y.default.Messages.PREMIUM_GUILD_GUILD_FEATURE_CUSTOMIZATION,
@@ -83,7 +83,7 @@
                     iconClass: W.customizationIcon
                 }, {
                     description: Y.default.Messages.PREMIUM_GUILD_GUILD_FEATURE_THREADS,
-                    icon: (0, y.default),
+                    icon: (0, B.default),
                     iconClass: W.threadIcon
                 }].filter(G.isNotNullish);
 
@@ -100,7 +100,7 @@
                         }), (0, S.popLayer)()
                     },
                     className: W.cardWrapper,
-                    children: (0, a.jsxs)(R.default, {
+                    children: (0, a.jsxs)(M.default, {
                         className: W.card,
                         children: [(0, a.jsx)(x.default, {
                             guild: s,
@@ -114,7 +114,7 @@
                                 children: s.name
                             }), (0, a.jsxs)("div", {
                                 className: W.subscriptionInfo,
-                                children: [(0, a.jsx)(L.default, {
+                                children: [(0, a.jsx)(D.default, {
                                     className: W.guildBoostingIcon
                                 }), (0, a.jsx)(o.Text, {
                                     className: W.subscriberCount,
@@ -124,7 +124,7 @@
                                     })
                                 })]
                             })]
-                        }), (0, a.jsx)(M.default, {
+                        }), (0, a.jsx)(R.default, {
                             guildId: s.id,
                             subscriberCount: s.premiumSubscriberCount
                         })]
@@ -141,7 +141,7 @@
                         className: W.divider
                     }), (0, a.jsxs)("div", {
                         className: W.marketingLogo,
-                        children: [(0, a.jsx)(D.default, {
+                        children: [(0, a.jsx)(L.default, {
                             className: W.marketingLogoIcon
                         }), (0, a.jsx)("div", {
                             className: W.marketingLogoImage
@@ -204,7 +204,7 @@
                                 }, e))
                             })]
                         })]
-                    }), (0, a.jsx)(T.default, {
+                    }), (0, a.jsx)(m.default, {
                         onOpenPremiumClick: () => void F.default.track(V.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                             location: {
                                 page: V.AnalyticsPages.USER_SETTINGS,
@@ -228,14 +228,14 @@
                 } = (0, r.useStateFromStoresObject)([O.default], () => ({
                     hasFetchedSubscriptions: O.default.hasFetchedSubscriptions(),
                     premiumSubscription: O.default.getPremiumTypeSubscription()
-                })), s = (0, f.useSubscriptionPlansLoaded)(), l = (0, r.useStateFromStores)([A.default], () => A.default.hasFetchedPaymentSources), S = (0, r.useStateFromStores)([C.default], () => C.default.boostSlots), T = !e || !s || !l, {
+                })), s = (0, f.useSubscriptionPlansLoaded)(), l = (0, r.useStateFromStores)([A.default], () => A.default.hasFetchedPaymentSources), S = (0, r.useStateFromStores)([C.default], () => C.default.boostSlots), m = !e || !s || !l, {
                     enabled: _
-                } = H.default.useExperiment({
+                } = w.default.useExperiment({
                     location: "8b5d23_1"
                 }, {
-                    autoTrackExposure: !T
+                    autoTrackExposure: !m
                 });
-                return T ? (0, a.jsx)("div", {
+                return m ? (0, a.jsx)("div", {
                     className: i(W.container, W.loading),
                     children: (0, a.jsx)(o.Spinner, {})
                 }) : (0, a.jsxs)("div", {
@@ -244,14 +244,14 @@
                         className: W.background
                     }), (0, a.jsx)("div", {
                         className: W.content,
-                        children: _ ? (0, a.jsx)(w.default, {
+                        children: _ ? (0, a.jsx)(H.default, {
                             premiumSubscription: t
                         }) : (0, a.jsx)(o.HeadingLevel, {
                             component: Object.keys(S).length > 0 ? (0, a.jsxs)(a.Fragment, {
                                 children: [(0, a.jsx)(o.FormTitle, {
                                     tag: "h1",
                                     children: Y.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TITLE
-                                }), (0, a.jsx)(m.BlockedPaymentsWarning, {}), (0, a.jsx)(g.default, {})]
+                                }), (0, a.jsx)(T.BlockedPaymentsWarning, {}), (0, a.jsx)(g.default, {})]
                             }) : null,
                             children: (0, a.jsx)(q, {})
                         })

@@ -16,8 +16,8 @@
                 S = s("174727"),
                 E = s("685665"),
                 f = s("239380"),
-                m = s("305961"),
-                T = s("625634"),
+                T = s("305961"),
+                m = s("625634"),
                 _ = s("521012"),
                 g = s("476263"),
                 h = s("628398"),
@@ -28,11 +28,11 @@
                 A = s("315102"),
                 O = s("427459"),
                 x = s("701909"),
-                M = s("719923"),
-                R = s("299039"),
+                R = s("719923"),
+                M = s("299039"),
                 v = s("308086"),
-                L = s("954296"),
-                D = s("49111"),
+                D = s("954296"),
+                L = s("49111"),
                 P = s("782340"),
                 j = s("733798");
 
@@ -62,15 +62,15 @@
                     analyticsLocations: r
                 } = (0, E.default)(), o = t.premiumSubscriberCount, d = s.sort((e, t) => Number(null != e.premiumGuildSubscription ? e.premiumGuildSubscription.id : 0) - Number(null != t.premiumGuildSubscription ? t.premiumGuildSubscription.id : 0))[0];
                 if (null == d) return null;
-                let S = null != d.premiumGuildSubscription ? R.default.extractTimestamp(d.premiumGuildSubscription.id) : 0,
-                    m = (0, O.getAppliedGuildBoostMonths)(S),
-                    T = null != t.banner ? A.default.getGuildBannerURL(t) : null;
+                let S = null != d.premiumGuildSubscription ? M.default.extractTimestamp(d.premiumGuildSubscription.id) : 0,
+                    T = (0, O.getAppliedGuildBoostMonths)(S),
+                    m = null != t.banner ? A.default.getGuildBannerURL(t) : null;
                 return (0, a.jsxs)("div", {
                     className: j.guildHeader,
                     children: [(0, a.jsx)("div", {
                         className: j.guildHeaderBackground,
                         style: {
-                            backgroundImage: null != T ? "url(".concat(T, ")") : void 0
+                            backgroundImage: null != m ? "url(".concat(m, ")") : void 0
                         }
                     }), (0, a.jsx)(g.default, {
                         guild: t,
@@ -85,7 +85,7 @@
                             variant: "text-xs/normal",
                             className: j.guildSubscriptionDuration,
                             children: P.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_DURATION.format({
-                                months: m,
+                                months: T,
                                 date: new Date(S)
                             })
                         }), (0, a.jsxs)(u.Text, {
@@ -102,9 +102,9 @@
                                     if (0 === l.length) return;
                                     let e = {
                                         ...i.location,
-                                        section: D.AnalyticsSections.SETTINGS_PREMIUM
+                                        section: L.AnalyticsSections.SETTINGS_PREMIUM
                                     };
-                                    (0, L.addAppliedGuildBoosts)({
+                                    (0, D.addAppliedGuildBoosts)({
                                         analyticsLocations: r,
                                         analyticsLocation: e,
                                         guild: t
@@ -130,12 +130,12 @@
                 })
             }
 
-            function y(e) {
+            function B(e) {
                 let {
                     guildBoostSlot: t,
                     premiumSubscription: s,
                     hasCancelableGuildBoostSlot: n
-                } = e, l = null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null, r = null != l && l > new Date, o = null != t.premiumGuildSubscription ? new Date(R.default.extractTimestamp(t.premiumGuildSubscription.id)) : null, d = (0, O.isGuildBoostSlotCanceled)(t), c = d ? p.default : I.default;
+                } = e, l = null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null, r = null != l && l > new Date, o = null != t.premiumGuildSubscription ? new Date(M.default.extractTimestamp(t.premiumGuildSubscription.id)) : null, d = (0, O.isGuildBoostSlotCanceled)(t), c = d ? p.default : I.default;
                 return (0, a.jsxs)("div", {
                     className: j.guildSubscriptionSlot,
                     children: [(0, a.jsx)(c, {
@@ -183,14 +183,14 @@
                 })
             }
 
-            function B(e) {
+            function y(e) {
                 let {
                     guildId: t,
                     guildBoostSlots: s,
                     premiumSubscription: n,
                     availableGuildBoostSlots: l,
                     hasCancelableGuildBoostSlot: i
-                } = e, r = (0, d.useStateFromStores)([m.default], () => "0" !== t ? m.default.getGuild(t) : null);
+                } = e, r = (0, d.useStateFromStores)([T.default], () => "0" !== t ? T.default.getGuild(t) : null);
                 return null == r && "0" !== t ? null : (0, a.jsxs)("div", {
                     className: j.guild,
                     children: [null != r ? (0, a.jsx)(U, {
@@ -199,7 +199,7 @@
                         availableGuildBoostSlots: l
                     }) : null, (0, a.jsx)("div", {
                         className: j.guildSubscriptionSlots,
-                        children: s.map(e => (0, a.jsx)(y, {
+                        children: s.map(e => (0, a.jsx)(B, {
                             guildBoostSlot: e,
                             premiumSubscription: n,
                             hasCancelableGuildBoostSlot: i
@@ -210,7 +210,7 @@
 
             function F() {
                 let e = (0, d.useStateFromStores)([_.default], () => _.default.getPremiumTypeSubscription()),
-                    t = (0, d.useStateFromStores)([T.default], () => T.default.boostSlots),
+                    t = (0, d.useStateFromStores)([m.default], () => m.default.boostSlots),
                     s = o(t).filter(e => e.isAvailable()).value(),
                     n = o(t).groupBy(e => {
                         let {
@@ -227,16 +227,16 @@
                         } = e;
                         return !t
                     }).value().length,
-                    c = M.default.getNumIncludedPremiumGuildSubscriptionSlots(e.planId),
+                    c = R.default.getNumIncludedPremiumGuildSubscriptionSlots(e.planId),
                     S = r > c;
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)(u.Text, {
                         variant: "text-sm/normal",
                         className: j.blurb,
                         children: P.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_SUBTITLE.format({
-                            helpdeskArticle: x.default.getArticleURL(D.HelpdeskArticles.GUILD_SUBSCRIPTIONS)
+                            helpdeskArticle: x.default.getArticleURL(L.HelpdeskArticles.GUILD_SUBSCRIPTIONS)
                         })
-                    }), null != l ? (0, a.jsx)(B, {
+                    }), null != l ? (0, a.jsx)(y, {
                         guildId: "0",
                         guildBoostSlots: l,
                         premiumSubscription: e,
@@ -247,7 +247,7 @@
                             variant: "heading-deprecated-12/semibold",
                             className: j.subSectionHeader,
                             children: P.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ACTIVE_TITLE
-                        }), i.map(t => (0, a.jsx)(B, {
+                        }), i.map(t => (0, a.jsx)(y, {
                             guildId: t,
                             guildBoostSlots: n[t],
                             premiumSubscription: e,

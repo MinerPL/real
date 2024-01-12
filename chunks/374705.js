@@ -47,7 +47,7 @@
                     guild: t,
                     source: C.InstantInviteSources.GUILD_CONTEXT_MENU,
                     channel: x
-                }), D = (0, v.default)(d), H = (0, O.default)(t), P = (0, L.default)(t), F = (0, U.default)(t), w = (0, I.default)({
+                }), D = (0, v.default)(d), H = (0, O.default)(t), F = (0, L.default)(t), P = (0, U.default)(t), w = (0, I.default)({
                     guildId: t.id,
                     userId: _.default.getId(),
                     analyticsLocation: {
@@ -108,9 +108,9 @@
                     }), (0, s.jsx)(u.MenuGroup, {
                         children: y
                     }), (0, s.jsxs)(u.MenuGroup, {
-                        children: [H, W || __OVERLAY__ ? null : P, W && !__OVERLAY__ ? z : null, D, Z]
+                        children: [H, W || __OVERLAY__ ? null : F, W && !__OVERLAY__ ? z : null, D, Z]
                     }), (0, s.jsxs)(u.MenuGroup, {
-                        children: [o ? null : F, __OVERLAY__ ? null : (0, s.jsx)(u.MenuItem, {
+                        children: [o ? null : P, __OVERLAY__ ? null : (0, s.jsx)(u.MenuItem, {
                             id: "privacy",
                             label: G.default.Messages.PRIVACY_SETTINGS,
                             action: () => (0, u.openModalLazy)(async () => {

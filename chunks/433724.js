@@ -1,71 +1,71 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return h
                 }
-            }), s("222007");
-            var a = s("37983");
-            s("884691");
-            var n = s("446674"),
-                r = s("77078"),
-                i = s("913144"),
-                l = s("891653"),
-                u = s("476765"),
-                d = s("805199"),
-                c = s("44771"),
-                o = s("605475"),
-                E = s("782340"),
-                T = s("143598");
+            }), n("222007");
+            var a = n("37983");
+            n("884691");
+            var i = n("446674"),
+                s = n("77078"),
+                l = n("913144"),
+                r = n("891653"),
+                o = n("476765"),
+                u = n("805199"),
+                d = n("44771"),
+                c = n("605475"),
+                f = n("782340"),
+                m = n("143598");
 
-            function _(e) {
+            function h(e) {
                 let {
                     className: t,
-                    disabled: s,
-                    renderCTAButtons: _
-                } = e, [S, m] = (0, n.useStateFromStoresArray)([d.default], () => [d.default.getCurrentDesktopIcon(), d.default.isEditorOpen]), f = (0, u.useUID)(), h = (0, r.useRadioGroup)({
+                    disabled: n,
+                    renderCTAButtons: h
+                } = e, [g, _] = (0, i.useStateFromStoresArray)([u.default], () => [u.default.getCurrentDesktopIcon(), u.default.isEditorOpen]), S = (0, o.useUID)(), p = (0, s.useRadioGroup)({
                     orientation: "horizontal",
-                    labelledBy: f
-                }), I = e => {
-                    i.default.dispatch({
+                    labelledBy: S
+                }), E = e => {
+                    l.default.dispatch({
                         type: "APP_ICON_UPDATED",
                         id: e
                     })
                 };
                 return (0, a.jsx)("div", {
-                    ...h,
-                    className: T.container,
+                    ...p,
+                    className: m.container,
                     children: (0, a.jsxs)("div", {
                         className: t,
                         children: [(0, a.jsxs)("div", {
-                            className: T.header,
+                            className: m.header,
                             children: [(0, a.jsxs)("div", {
-                                className: T.headings,
-                                children: [m ? null : (0, a.jsxs)("div", {
-                                    className: T.title,
-                                    children: [(0, a.jsx)(r.Heading, {
+                                className: m.headings,
+                                children: [_ ? null : (0, a.jsxs)("div", {
+                                    className: m.title,
+                                    children: [(0, a.jsx)(s.Heading, {
                                         variant: "text-md/medium",
-                                        children: E.default.Messages.APP_ICON_SETTINGS_TITLE
-                                    }), (0, a.jsx)(l.default, {
-                                        className: T.premiumIcon
+                                        children: f.default.Messages.APP_ICON_SETTINGS_TITLE
+                                    }), (0, a.jsx)(r.default, {
+                                        className: m.premiumIcon
                                     })]
-                                }), (0, a.jsx)(r.Heading, {
+                                }), (0, a.jsx)(s.Heading, {
                                     variant: "text-sm/normal",
-                                    children: E.default.Messages.APP_ICON_SETTINGS_DESCRIPTION
+                                    children: f.default.Messages.APP_ICON_SETTINGS_DESCRIPTION
                                 })]
-                            }), null == _ ? void 0 : _()]
+                            }), null == h ? void 0 : h()]
                         }), (0, a.jsx)("div", {
-                            className: T.presets,
-                            children: o.ICONS.filter(e => {
+                            className: m.presets,
+                            children: c.ICONS.filter(e => {
                                 let {
                                     isHidden: t
                                 } = e;
                                 return !0 !== t
-                            }).map((e, t) => (0, a.jsx)(c.default, {
+                            }).map((e, t) => (0, a.jsx)(d.default, {
                                 icon: e,
-                                isSelected: S === e.id,
-                                onSelect: e => I(e),
-                                disabled: s,
-                                tabIndex: 0 !== t || s ? void 0 : 0
+                                isSelected: g === e.id,
+                                onSelect: e => E(e),
+                                disabled: n,
+                                tabIndex: 0 !== t || n ? void 0 : 0
                             }, e.id))
                         })]
                     })

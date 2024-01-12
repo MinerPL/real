@@ -1,87 +1,87 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return f
                 }
-            }), s("222007");
-            var a = s("446674"),
-                n = s("913144");
-            let r = !1,
-                i = new Map,
-                l = 0,
-                u = new Set;
+            }), n("222007");
+            var a = n("446674"),
+                i = n("913144");
+            let s = !1,
+                l = new Map,
+                r = 0,
+                o = new Set;
 
-            function d(e, t) {
-                i = new Map(i);
-                let s = i.get(e);
-                null != s && i.set(e, {
-                    ...s,
+            function u(e, t) {
+                l = new Map(l);
+                let n = l.get(e);
+                null != n && l.set(e, {
+                    ...n,
                     ...t
                 })
             }
 
-            function c(e) {
-                let t = new Set(u);
-                t.delete(e), u = t
+            function d(e) {
+                let t = new Set(o);
+                t.delete(e), o = t
             }
-            class o extends a.default.Store {
+            class c extends a.default.Store {
                 get quests() {
-                    return i
-                }
-                get isFetchingCurrentQuests() {
-                    return r
-                }
-                get lastFetchedCurrentQuests() {
                     return l
                 }
+                get isFetchingCurrentQuests() {
+                    return s
+                }
+                get lastFetchedCurrentQuests() {
+                    return r
+                }
                 isEnrolling(e) {
-                    return u.has(e)
+                    return o.has(e)
                 }
             }
-            o.displayName = "QuestsStore";
-            var E = new o(n.default, {
+            c.displayName = "QuestsStore";
+            var f = new c(i.default, {
                 LOGOUT: function() {
-                    r = !1, i = new Map, l = 0, u = new Set
+                    s = !1, l = new Map, r = 0, o = new Set
                 },
                 QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function() {
-                    l = Date.now(), r = !0
+                    r = Date.now(), s = !0
                 },
                 QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: function(e) {
                     let {
                         quests: t
                     } = e;
-                    for (let e of (r = !1, i = new Map, t)) i.set(e.id, e)
+                    for (let e of (s = !1, l = new Map, t)) l.set(e.id, e)
                 },
                 QUESTS_FETCH_CURRENT_QUESTS_FAILURE: function() {
-                    l = 0, r = !1
+                    r = 0, s = !1
                 },
                 QUESTS_SEND_HEARTBEAT_SUCCESS: function(e) {
                     let {
                         questId: t,
-                        userStatus: s
+                        userStatus: n
                     } = e;
-                    d(t, {
-                        userStatus: s
+                    u(t, {
+                        userStatus: n
                     })
                 },
                 QUESTS_ENROLL_BEGIN: function(e) {
                     let {
                         questId: t
-                    } = e, s = new Set(u);
-                    s.add(t), u = s
+                    } = e, n = new Set(o);
+                    n.add(t), o = n
                 },
                 QUESTS_ENROLL_SUCCESS: function(e) {
                     let {
                         enrolledQuestUserStatus: t
                     } = e;
-                    d(t.questId, {
+                    u(t.questId, {
                         userStatus: t
-                    }), c(t.questId)
+                    }), d(t.questId)
                 },
                 QUESTS_ENROLL_FAILURE: function(e) {
                     let {
                         questId: t
                     } = e;
-                    c(t)
+                    d(t)
                 }
             })

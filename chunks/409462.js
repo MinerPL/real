@@ -16,8 +16,8 @@
                 S = s("304580"),
                 E = s("206230"),
                 f = s("489740"),
-                m = s("355025"),
-                T = s("773336"),
+                T = s("355025"),
+                m = s("773336"),
                 _ = s("161778"),
                 g = s("49111"),
                 h = s("782340"),
@@ -70,17 +70,17 @@
                     ["extrabold", 800]
                 ]);
                 n.useEffect(() => {
-                    !T.isPlatformEmbedded && window.addEventListener("resize", () => {
+                    !m.isPlatformEmbedded && window.addEventListener("resize", () => {
                         t(Math.round(window.outerWidth / window.innerWidth * 100))
                     })
                 }, []);
-                let x = T.isPlatformEmbedded ? s : e,
-                    M = (0, r.useStateFromStores)([f.default], () => {
+                let x = m.isPlatformEmbedded ? s : e,
+                    R = (0, r.useStateFromStores)([f.default], () => {
                         var e, t;
-                        return (0, m.probablyHasBuildOverride)() ? null === (t = f.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
+                        return (0, T.probablyHasBuildOverride)() ? null === (t = f.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
                     }),
-                    [R, v] = p("playground-overrideText", null),
-                    [L, D] = p("playground-defaultText", N[0].value),
+                    [M, v] = p("playground-overrideText", null),
+                    [D, L] = p("playground-defaultText", N[0].value),
                     P = n.useCallback(e => {
                         let t = N.find(t => {
                             let {
@@ -88,8 +88,8 @@
                             } = t;
                             return s === e
                         });
-                        "" === e || null == e ? (D(N[0].value), v(null)) : null != t ? D(t.value) : (D("custom"), v(e))
-                    }, [v, D]);
+                        "" === e || null == e ? (L(N[0].value), v(null)) : null != t ? L(t.value) : (L("custom"), v(e))
+                    }, [v, L]);
                 return (0, a.jsx)("div", {
                     className: I.fullscreen,
                     style: "" !== o ? {
@@ -107,7 +107,7 @@
                                         display: "inline-block"
                                     },
                                     children: ["Zoom: ", x, "%"]
-                                }), null != M ? (0, a.jsxs)(d.Text, {
+                                }), null != R ? (0, a.jsxs)(d.Text, {
                                     tag: "div",
                                     variant: "heading-lg/bold",
                                     style: {
@@ -115,21 +115,21 @@
                                         marginLeft: "1em"
                                     },
                                     color: "header-secondary",
-                                    children: ["(", M.id, ")"]
+                                    children: ["(", R.id, ")"]
                                 }) : null]
                             }), (0, a.jsx)(d.FormItem, {
                                 children: (0, a.jsx)(d.SingleSelect, {
                                     className: I.select,
                                     options: N,
                                     onChange: e => P(e),
-                                    value: L
+                                    value: D
                                 })
                             }), (0, a.jsx)(d.FormItem, {
                                 children: (0, a.jsx)("div", {
                                     className: I.input,
                                     children: (0, a.jsx)(d.TextInput, {
                                         placeholder: "Enter custom input...",
-                                        value: null != R ? R : "",
+                                        value: null != M ? M : "",
                                         onChange: P
                                     })
                                 })
@@ -186,7 +186,7 @@
                                     }) : null]
                                 }, e), A.map(t => {
                                     var s;
-                                    let n = null !== (s = "custom" === L ? R : L) && void 0 !== s ? s : "";
+                                    let n = null !== (s = "custom" === D ? M : D) && void 0 !== s ? s : "";
                                     return (0, a.jsx)("div", {
                                         children: (0, a.jsxs)("div", {
                                             title: "".concat(e, "px at ").concat(t),

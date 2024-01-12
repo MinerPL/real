@@ -16,8 +16,8 @@
                 S = s("49111"),
                 E = s("782340"),
                 f = s("515847");
-            let m = (0, u.uid)(),
-                T = (0, d.createChannelRecord)({
+            let T = (0, u.uid)(),
+                m = (0, d.createChannelRecord)({
                     id: "1",
                     type: S.ChannelTypes.DM
                 }),
@@ -40,20 +40,20 @@
                     }
                 }, [u, h]), (0, a.jsxs)(c.default, {
                     title: t,
-                    titleId: m,
+                    titleId: T,
                     description: E.default.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
                     errors: s,
                     disabled: I,
                     children: [(0, a.jsx)(o.default, {
                         "aria-describedby": _,
-                        "aria-labelledby": m,
+                        "aria-labelledby": T,
                         innerClassName: f.bioTextArea,
                         maxCharacterCount: S.BIO_MAX_LENGTH,
                         onChange: function(e, t, s) {
                             t !== N && (p(t), A(s), d(t))
                         },
                         placeholder: g,
-                        channel: T,
+                        channel: m,
                         textValue: N,
                         richValue: C,
                         type: i.ChatInputTypes.PROFILE_BIO_INPUT,

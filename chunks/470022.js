@@ -16,8 +16,8 @@
                 S = s("376402"),
                 E = s("506885"),
                 f = s("621200"),
-                m = s("305961"),
-                T = s("162771"),
+                T = s("305961"),
+                m = s("162771"),
                 _ = s("677099"),
                 g = s("790618"),
                 h = s("697218"),
@@ -34,24 +34,24 @@
                 });
                 let e = (0, l.useStateFromStores)([_.default], () => _.default.getFlattenedGuildIds()),
                     t = (0, l.useStateFromStores)([c.default], () => c.default.getGuild()),
-                    s = (0, l.useStateFromStores)([T.default], () => T.default.getGuildId()),
-                    x = (0, l.useStateFromStores)([m.default], () => m.default.getGuild(null != s ? s : e[0])),
-                    M = (0, l.useStateFromStores)([c.default, g.default], () => c.default.showNotice() || g.default.showNotice()),
-                    R = null != t ? t : x,
+                    s = (0, l.useStateFromStores)([m.default], () => m.default.getGuildId()),
+                    x = (0, l.useStateFromStores)([T.default], () => T.default.getGuild(null != s ? s : e[0])),
+                    R = (0, l.useStateFromStores)([c.default, g.default], () => c.default.showNotice() || g.default.showNotice()),
+                    M = null != t ? t : x,
                     v = (0, l.useStateFromStores)([h.default], () => h.default.getCurrentUser()),
                     {
-                        subsection: L,
-                        setSubsection: D
+                        subsection: D,
+                        setSubsection: L
                     } = (0, N.default)(),
                     {
                         AnalyticsLocationProvider: P,
                         analyticsLocations: j
                     } = (0, o.default)();
                 return n.useEffect(() => {
-                    null != v && (0, E.default)(v.id, v.getAvatarURL(null == R ? void 0 : R.id, 80), {
-                        guildId: null == R ? void 0 : R.id
+                    null != v && (0, E.default)(v.id, v.getAvatarURL(null == M ? void 0 : M.id, 80), {
+                        guildId: null == M ? void 0 : M.id
                     })
-                }, [null == R ? void 0 : R.id, v]), (0, a.jsx)(P, {
+                }, [null == M ? void 0 : M.id, v]), (0, a.jsx)(P, {
                     children: (0, a.jsxs)(i.HeadingLevel, {
                         component: (0, a.jsx)(i.Heading, {
                             variant: "heading-lg/semibold",
@@ -61,17 +61,17 @@
                             className: O.tabBar,
                             type: "top",
                             look: "brand",
-                            selectedItem: L,
+                            selectedItem: D,
                             onItemSelect: function(e) {
-                                if (L !== e) {
-                                    if (M) {
+                                if (D !== e) {
+                                    if (R) {
                                         I.ComponentDispatch.dispatch(p.ComponentActions.SHAKE_APP, {
                                             duration: 300,
                                             intensity: r.SHAKE_INTENSITY_DEFAULT
                                         }), I.ComponentDispatch.dispatch(p.ComponentActions.EMPHASIZE_NOTICE);
                                         return
                                     }
-                                    e === C.ProfileCustomizationSubsection.GUILD && null == t && null != R && (0, u.initGuildIdentitySettings)(R, j), D(e)
+                                    e === C.ProfileCustomizationSubsection.GUILD && null == t && null != M && (0, u.initGuildIdentitySettings)(M, j), L(e)
                                 }
                             },
                             children: [(0, a.jsx)(i.TabBar.Item, {
@@ -83,8 +83,8 @@
                                 id: C.ProfileCustomizationSubsection.GUILD,
                                 children: A.default.Messages.EDIT_PROFILE_CATEGORY_GUILD_IDENTITY
                             }, C.ProfileCustomizationSubsection.GUILD)]
-                        }), L === C.ProfileCustomizationSubsection.GUILD ? (0, a.jsx)(S.default, {
-                            selectedGuild: R
+                        }), D === C.ProfileCustomizationSubsection.GUILD ? (0, a.jsx)(S.default, {
+                            selectedGuild: M
                         }) : (0, a.jsx)(f.default, {})]
                     })
                 })

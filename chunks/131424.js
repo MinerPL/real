@@ -17,8 +17,8 @@
                 S = s("118503"),
                 E = s("277703"),
                 f = s("16988"),
-                m = s("427459"),
-                T = s("49111"),
+                T = s("427459"),
+                m = s("49111"),
                 _ = s("782340"),
                 g = s("396375");
 
@@ -84,7 +84,7 @@
                             }), (0, a.jsx)(r.Text, {
                                 variant: "text-sm/bold",
                                 color: "text-muted",
-                                children: (0, m.getTierName)(N.premiumTier, {
+                                children: (0, T.getTierName)(N.premiumTier, {
                                     useLevels: !1
                                 })
                             })]
@@ -92,10 +92,10 @@
                     }), n ? (0, a.jsx)(d.default, {
                         guild: N,
                         analyticsLocation: {
-                            page: T.AnalyticsPages.GUILD_BOOSTING_USER_SETTINGS,
-                            section: T.AnalyticsSections.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
-                            object: T.AnalyticsObjects.BUTTON_CTA,
-                            objectType: T.AnalyticsObjectTypes.BUY
+                            page: m.AnalyticsPages.GUILD_BOOSTING_USER_SETTINGS,
+                            section: m.AnalyticsSections.GUILD_BOOSTING_RECOMMENDED_SERVER_BOOST_THIS_SERVER_CTA,
+                            object: m.AnalyticsObjects.BUTTON_CTA,
+                            objectType: m.AnalyticsObjectTypes.BUY
                         },
                         pauseAnimation: !0,
                         size: r.Button.Sizes.MEDIUM,
@@ -107,7 +107,7 @@
                             (0, o.openGuildBoostingMarketingModal)({
                                 guildId: N.id,
                                 location: {
-                                    section: T.AnalyticsSections.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA
+                                    section: m.AnalyticsSections.GUILD_BOOSTING_RECOMMENDED_SERVER_GO_TO_SERVER_CTA
                                 }
                             })
                         },

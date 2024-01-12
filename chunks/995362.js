@@ -17,8 +17,8 @@
                 S = s("809071"),
                 E = s("646718"),
                 f = s("49111"),
-                m = s("782340"),
-                T = s("700135");
+                T = s("782340"),
+                m = s("700135");
 
             function _(e) {
                 let {
@@ -33,7 +33,7 @@
                     analyticsLocation: r.default.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
                 });
                 if (null == _) return null;
-                let g = s ? T.finePrintWithOverheadSeparator : T.finePrint,
+                let g = s ? m.finePrintWithOverheadSeparator : m.finePrint,
                     h = _.invoiceItems.find(e => {
                         let {
                             subscriptionPlanId: t
@@ -46,17 +46,17 @@
                 l(null != N, "Missing plan");
                 let p = (0, c.formatPrice)(_.total, _.currency),
                     C = "";
-                return N.interval === E.SubscriptionIntervalTypes.YEAR ? C = m.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
+                return N.interval === E.SubscriptionIntervalTypes.YEAR ? C = T.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
                     price: p,
                     termsUrl: f.MarketingURLs.TERMS,
                     paidURL: f.MarketingURLs.PAID_TERMS,
                     privacyUrl: f.MarketingURLs.PRIVACY
-                }) : N.interval === E.SubscriptionIntervalTypes.MONTH && (C = 1 === N.intervalCount ? m.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
+                }) : N.interval === E.SubscriptionIntervalTypes.MONTH && (C = 1 === N.intervalCount ? T.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
                     price: p,
                     termsUrl: f.MarketingURLs.TERMS,
                     paidURL: f.MarketingURLs.PAID_TERMS,
                     privacyUrl: f.MarketingURLs.PRIVACY
-                }) : m.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MULTI_MONTH.format({
+                }) : T.default.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MULTI_MONTH.format({
                     price: p,
                     termsUrl: f.MarketingURLs.TERMS,
                     paidURL: f.MarketingURLs.PAID_TERMS,

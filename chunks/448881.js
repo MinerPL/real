@@ -1,87 +1,87 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 fetchCurrentQuests: function() {
-                    return d
+                    return u
                 },
                 sendHeartbeat: function() {
-                    return c
+                    return d
                 },
                 enrollInQuest: function() {
-                    return o
+                    return c
                 }
             });
-            var a = s("872717"),
-                n = s("913144"),
-                r = s("599417"),
-                i = s("2973"),
-                l = s("227231"),
-                u = s("49111");
-            async function d() {
-                n.default.dispatch({
+            var a = n("872717"),
+                i = n("913144"),
+                s = n("599417"),
+                l = n("2973"),
+                r = n("227231"),
+                o = n("49111");
+            async function u() {
+                i.default.dispatch({
                     type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN"
                 });
                 try {
                     let e = await a.default.get({
-                        url: u.Endpoints.QUESTS_CURRENT_QUESTS
+                        url: o.Endpoints.QUESTS_CURRENT_QUESTS
                     });
-                    n.default.dispatch({
+                    i.default.dispatch({
                         type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
-                        quests: e.body.map(l.questWithUserStatusFromServer)
+                        quests: e.body.map(r.questWithUserStatusFromServer)
                     })
                 } catch (e) {
-                    n.default.dispatch({
+                    i.default.dispatch({
                         type: "QUESTS_FETCH_CURRENT_QUESTS_FAILURE",
-                        error: new r.default(e)
+                        error: new s.default(e)
+                    })
+                }
+            }
+            async function d(e) {
+                let {
+                    questId: t,
+                    streamKey: n,
+                    applicationId: l
+                } = e;
+                try {
+                    let e = await a.default.post({
+                        url: o.Endpoints.QUESTS_HEARTBEAT(t),
+                        body: {
+                            stream_key: n,
+                            application_id: l
+                        }
+                    });
+                    i.default.dispatch({
+                        type: "QUESTS_SEND_HEARTBEAT_SUCCESS",
+                        userStatus: (0, r.questUserStatusFromServer)(e.body),
+                        applicationId: l,
+                        questId: t,
+                        streamKey: n
+                    })
+                } catch (e) {
+                    i.default.dispatch({
+                        type: "QUESTS_SEND_HEARTBEAT_FAILURE",
+                        error: new s.default(e),
+                        questId: t,
+                        streamKey: n
                     })
                 }
             }
             async function c(e) {
-                let {
-                    questId: t,
-                    streamKey: s,
-                    applicationId: i
-                } = e;
-                try {
-                    let e = await a.default.post({
-                        url: u.Endpoints.QUESTS_HEARTBEAT(t),
-                        body: {
-                            stream_key: s,
-                            application_id: i
-                        }
-                    });
-                    n.default.dispatch({
-                        type: "QUESTS_SEND_HEARTBEAT_SUCCESS",
-                        userStatus: (0, l.questUserStatusFromServer)(e.body),
-                        applicationId: i,
-                        questId: t,
-                        streamKey: s
-                    })
-                } catch (e) {
-                    n.default.dispatch({
-                        type: "QUESTS_SEND_HEARTBEAT_FAILURE",
-                        error: new r.default(e),
-                        questId: t,
-                        streamKey: s
-                    })
-                }
-            }
-            async function o(e) {
-                let t = i.default.isEnrolling(e);
+                let t = l.default.isEnrolling(e);
                 if (!t) {
-                    n.default.dispatch({
+                    i.default.dispatch({
                         type: "QUESTS_ENROLL_BEGIN",
                         questId: e
                     });
                     try {
                         let t = await a.default.post({
-                            url: u.Endpoints.QUESTS_ENROLL(e)
+                            url: o.Endpoints.QUESTS_ENROLL(e)
                         });
-                        n.default.dispatch({
+                        i.default.dispatch({
                             type: "QUESTS_ENROLL_SUCCESS",
-                            enrolledQuestUserStatus: (0, l.questUserStatusFromServer)(t.body)
+                            enrolledQuestUserStatus: (0, r.questUserStatusFromServer)(t.body)
                         })
                     } catch (t) {
-                        n.default.dispatch({
+                        i.default.dispatch({
                             type: "QUESTS_ENROLL_FAILURE",
                             questId: e
                         })

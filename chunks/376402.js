@@ -16,8 +16,8 @@
                 S = s("812204"),
                 E = s("716241"),
                 f = s("685665"),
-                m = s("360871"),
-                T = s("184900"),
+                T = s("360871"),
+                m = s("184900"),
                 _ = s("11899"),
                 g = s("713135"),
                 h = s("102985"),
@@ -28,12 +28,12 @@
                 A = s("929423"),
                 O = s("424562"),
                 x = s("872306"),
-                M = s("527274"),
-                R = s("185153"),
+                R = s("527274"),
+                M = s("185153"),
                 v = s("49111"),
-                L = s("782340");
+                D = s("782340");
 
-            function D() {
+            function L() {
                 N.default.track(v.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
                     location_page: v.AnalyticsPages.GUILD_MEMBER_PROFILE_SETTINGS,
                     location_object: v.AnalyticsObjects.BADGE
@@ -67,8 +67,8 @@
                     pendingAvatar: j,
                     pendingNickname: b,
                     pendingBanner: U,
-                    pendingBio: y,
-                    pendingPronouns: B,
+                    pendingBio: B,
+                    pendingPronouns: y,
                     pendingThemeColors: F,
                     source: G
                 } = (0, r.useStateFromStoresObject)([O.default], () => {
@@ -99,7 +99,7 @@
                     }, [G]), N) return (0, a.jsx)(c.default, {});
                 if (!u) return (0, a.jsx)(o.Spinner, {});
                 let k = C.default.canUsePremiumProfileCustomization(l),
-                    w = {
+                    H = {
                         user: l,
                         guild: t,
                         canUsePremiumCustomization: k,
@@ -108,34 +108,34 @@
                         onUpsellClick: P,
                         pendingAvatar: j,
                         pendingBanner: U,
-                        pendingBio: y,
-                        pendingPronouns: B,
+                        pendingBio: B,
+                        pendingPronouns: y,
                         pendingNickname: b,
-                        activityName: L.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE,
-                        activityCharacter: m.FakeActivityCharacter.PHIBI,
-                        openPremiumSettings: D
+                        activityName: D.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE,
+                        activityCharacter: T.FakeActivityCharacter.PHIBI,
+                        openPremiumSettings: L
                     };
                 return (0, a.jsxs)(s, {
                     children: [(0, a.jsx)(o.Text, {
                         variant: "text-sm/normal",
-                        children: L.default.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({
+                        children: D.default.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({
                             helpCenterLink: p.default.getArticleURL(v.HelpdeskArticles.GUILD_PROFILES)
                         })
                     }), null != t ? (0, a.jsxs)(a.Fragment, {
-                        children: [(0, a.jsx)(R.default, {
+                        children: [(0, a.jsx)(M.default, {
                             guildId: t.id,
                             onChange: e => {
                                 null != e && (0, A.setCurrentGuild)(e)
                             }
                         }), (0, a.jsx)(_.default, {
-                            previewTitle: L.default.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({
+                            previewTitle: D.default.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({
                                 guildName: null == t ? void 0 : t.name
                             }),
-                            profilePreview: (0, a.jsx)(T.default, {
-                                ...w,
+                            profilePreview: (0, a.jsx)(m.default, {
+                                ...H,
                                 pendingThemeColors: F
                             }),
-                            children: (0, a.jsx)(M.default, {})
+                            children: (0, a.jsx)(R.default, {})
                         })]
                     }) : (0, a.jsx)(x.default, {})]
                 })

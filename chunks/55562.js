@@ -20,8 +20,8 @@
                 o = n("722525"),
                 l = n("393414"),
                 a = n("239380"),
-                d = n("18494"),
-                u = n("162771"),
+                u = n("18494"),
+                d = n("162771"),
                 s = n("773336"),
                 E = n("49111");
             let r = {
@@ -39,11 +39,11 @@
                     comboKeysBindGlobal: !0,
                     action() {
                         let e;
-                        let t = u.default.getGuildId();
+                        let t = d.default.getGuildId();
                         if (null != t) e = E.ME;
                         else {
-                            let t = u.default.getLastSelectedGuildId();
-                            null != t && (e = t, (0, o.transitionToChannel)(t, d.default.getChannelId(t)))
+                            let t = d.default.getLastSelectedGuildId();
+                            null != t && (e = t, (0, o.transitionToChannel)(t, u.default.getChannelId(t)))
                         }
                         return null != e && (0, a.transitionToGuild)(e), !1
                     }

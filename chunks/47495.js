@@ -59,7 +59,7 @@
 
             function N(e) {
                 let t = (0, i.useStateFromStores)([s.default], () => s.default.useNewNotifications);
-                return o.default.useExperiment({
+                return o.NotificationsExperiment.useExperiment({
                     location: e
                 }, {
                     autoTrackExposure: !1

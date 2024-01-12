@@ -17,8 +17,8 @@
                 S = s("534291"),
                 E = s("545158"),
                 f = s("788434"),
-                m = s("311207"),
-                T = s("824357"),
+                T = s("311207"),
+                m = s("824357"),
                 _ = s("20606"),
                 g = s("192845"),
                 h = s("929423"),
@@ -29,22 +29,22 @@
                 A = s("763417"),
                 O = s("470022"),
                 x = s("610109"),
-                M = s("368694"),
-                R = s("42887"),
+                R = s("368694"),
+                M = s("42887"),
                 v = s("790618"),
-                L = s("860957"),
-                D = s("893011"),
+                D = s("860957"),
+                L = s("893011"),
                 P = s("423487"),
                 j = s("956089"),
                 b = s("599110"),
                 U = s("128259"),
-                y = s("773336"),
-                B = s("546605"),
+                B = s("773336"),
+                y = s("546605"),
                 F = s("733051"),
                 G = s("474775"),
                 k = s("413622"),
-                w = s("479290"),
-                H = s("825958"),
+                H = s("479290"),
+                w = s("825958"),
                 V = s("20604"),
                 Y = s("836833"),
                 W = s("625393"),
@@ -71,8 +71,8 @@
                 eS = s("905818"),
                 eE = s("819638"),
                 ef = s("114582"),
-                em = s("995350"),
-                eT = s("409462"),
+                eT = s("995350"),
+                em = s("409462"),
                 e_ = s("799458"),
                 eg = s("227473"),
                 eh = s("21811"),
@@ -87,8 +87,8 @@
                     showPrepaidPaymentPastDueWarning: eA,
                     impressionSource: eO,
                     numOfPendingFamilyRequests: ex,
-                    isClipsBetaTagShowing: eM = !1
-                } = e, eR = [{
+                    isClipsBetaTagShowing: eR = !1
+                } = e, eM = [{
                     section: S.SectionTypes.HEADER,
                     label: eN.default.Messages.USER_SETTINGS
                 }, {
@@ -139,7 +139,7 @@
                     ariaLabel: eN.default.Messages.AUTH_SESSIONS,
                     element: eE.default,
                     newIndicatorDismissibleContentTypes: [l.DismissibleContent.AUTH_SESSIONS_NEW],
-                    predicate: () => B.default.getCurrentConfig({
+                    predicate: () => y.default.getCurrentConfig({
                         location: "9f7d84_1"
                     }, {
                         autoTrackExposure: !1
@@ -158,8 +158,8 @@
                     section: eI.UserSettingsSections.CLIPS,
                     label: eN.default.Messages.CLIPS,
                     ariaLabel: eN.default.Messages.CLIPS,
-                    icon: eM ? (0, a.jsx)(m.default, {}) : void 0,
-                    element: T.default
+                    icon: eR ? (0, a.jsx)(T.default, {}) : void 0,
+                    element: m.default
                 }, {
                     section: eI.UserSettingsSections.FRIEND_REQUESTS,
                     label: eN.default.Messages.FRIEND_REQUESTS,
@@ -173,7 +173,7 @@
                     section: eI.UserSettingsSections.PREMIUM,
                     ariaLabel: eN.default.Messages.PREMIUM,
                     label: eN.default.Messages.PREMIUM,
-                    element: H.default,
+                    element: w.default,
                     className: ep.premiumTab
                 }, {
                     section: eI.UserSettingsSections.GUILD_BOOSTING,
@@ -221,7 +221,7 @@
                     section: eI.UserSettingsSections.VOICE,
                     label: eN.default.Messages.VOICE_AND_VIDEO,
                     element: eh.default,
-                    predicate: () => R.default.isSupported()
+                    predicate: () => M.default.isSupported()
                 }, {
                     section: eI.UserSettingsSections.POGGERMODE,
                     label: eN.default.Messages.POGGERMODE,
@@ -236,7 +236,7 @@
                 }, {
                     section: eI.UserSettingsSections.TEXT,
                     label: eN.default.Messages.TEXT_AND_IMAGES,
-                    element: em.default
+                    element: eT.default
                 }, {
                     section: eI.UserSettingsSections.NOTIFICATIONS,
                     label: eN.default.Messages.NOTIFICATIONS,
@@ -253,12 +253,12 @@
                     section: eI.UserSettingsSections.WINDOWS,
                     label: eN.default.Messages.USER_SETTINGS_WINDOWS_SETTINGS,
                     element: e_.default,
-                    predicate: () => y.isPlatformEmbedded && (0, y.isWindows)()
+                    predicate: () => B.isPlatformEmbedded && (0, B.isWindows)()
                 }, {
                     section: eI.UserSettingsSections.LINUX,
                     label: eN.default.Messages.USER_SETTINGS_LINUX_SETTINGS,
                     element: eC,
-                    predicate: () => y.isPlatformEmbedded && (0, y.isLinux)()
+                    predicate: () => B.isPlatformEmbedded && (0, B.isLinux)()
                 }, {
                     section: eI.UserSettingsSections.STREAMER_MODE,
                     label: eN.default.Messages.STREAMER_MODE,
@@ -287,12 +287,12 @@
                     section: eI.UserSettingsSections.REGISTERED_GAMES,
                     label: eN.default.Messages.REGISTERED_GAMES,
                     element: en.default,
-                    predicate: () => y.isPlatformEmbedded
+                    predicate: () => B.isPlatformEmbedded
                 }, {
                     section: eI.UserSettingsSections.OVERLAY,
                     label: eN.default.Messages.OVERLAY,
                     element: eu.default,
-                    predicate: () => L.default.isSupported() || !1
+                    predicate: () => D.default.isSupported() || !1
                 }, {
                     section: S.SectionTypes.DIVIDER
                 }, {
@@ -321,37 +321,37 @@
                     section: eI.UserSettingsSections.EXPERIMENTS,
                     label: "Experiments",
                     element: eg.default,
-                    predicate: () => M.default.isDeveloper
+                    predicate: () => R.default.isDeveloper
                 }, {
                     section: eI.UserSettingsSections.DEVELOPER_OPTIONS,
                     label: "Developer Options",
                     element: et.default,
-                    predicate: () => M.default.isDeveloper
+                    predicate: () => R.default.isDeveloper
                 }, {
                     section: eI.UserSettingsSections.HOTSPOT_OPTIONS,
                     label: "Hotspot Options",
                     element: k.default,
-                    predicate: () => M.default.isDeveloper
+                    predicate: () => R.default.isDeveloper
                 }, {
                     section: eI.UserSettingsSections.DISMISSIBLE_CONTENT_OPTIONS,
                     label: "Dismissible Contents",
                     element: g.default,
-                    predicate: () => M.default.isDeveloper
+                    predicate: () => R.default.isDeveloper
                 }, {
                     section: eI.UserSettingsSections.PAYMENT_FLOW_MODAL_TEST_PAGE,
                     label: "Payment Flow Modals",
-                    element: w.default,
-                    predicate: () => M.default.isDeveloper
+                    element: H.default,
+                    predicate: () => R.default.isDeveloper
                 }, {
                     section: eI.UserSettingsSections.TEXT_PLAYGROUND,
                     label: "Text Playground",
-                    element: eT.default,
-                    predicate: () => (0, K.shouldShowTextPlayground)() || M.default.isDeveloper
+                    element: em.default,
+                    predicate: () => (0, K.shouldShowTextPlayground)() || R.default.isDeveloper
                 }, {
                     section: eI.UserSettingsSections.TEXT_COMPONENT,
                     label: "Text Components",
                     element: W.default,
-                    predicate: () => (0, K.shouldShowTextPlayground)() || M.default.isDeveloper
+                    predicate: () => (0, K.shouldShowTextPlayground)() || R.default.isDeveloper
                 }, {
                     section: S.SectionTypes.DIVIDER
                 }, {
@@ -372,7 +372,7 @@
                     },
                     label: eN.default.Messages.LOGOUT,
                     ariaLabel: eN.default.Messages.LOGOUT,
-                    icon: (0, a.jsx)(D.default, {
+                    icon: (0, a.jsx)(L.default, {
                         width: 16,
                         height: 16
                     })
@@ -385,5 +385,5 @@
                     section: S.SectionTypes.CUSTOM,
                     element: G.default
                 }];
-                return eR
+                return eM
             }

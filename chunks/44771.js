@@ -1,77 +1,77 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return E
                 }
-            }), s("222007");
-            var a = s("37983"),
-                n = s("884691"),
-                r = s("414456"),
-                i = s.n(r),
-                l = s("917351"),
-                u = s.n(l),
-                d = s("77078"),
-                c = s("164546"),
-                o = s("513196"),
-                E = s("42723"),
-                T = s("605475"),
-                _ = s("49111"),
-                S = s("782340"),
-                m = s("279732");
-            let f = () => [S.default.Messages.APP_ICON_PIRATE, S.default.Messages.APP_ICON_PIRATE_1, S.default.Messages.APP_ICON_PIRATE_2, S.default.Messages.APP_ICON_PIRATE_3, S.default.Messages.APP_ICON_PIRATE_4],
-                h = () => {
+            }), n("222007");
+            var a = n("37983"),
+                i = n("884691"),
+                s = n("414456"),
+                l = n.n(s),
+                r = n("917351"),
+                o = n.n(r),
+                u = n("77078"),
+                d = n("164546"),
+                c = n("513196"),
+                f = n("42723"),
+                m = n("605475"),
+                h = n("49111"),
+                g = n("782340"),
+                _ = n("279732");
+            let S = () => [g.default.Messages.APP_ICON_PIRATE, g.default.Messages.APP_ICON_PIRATE_1, g.default.Messages.APP_ICON_PIRATE_2, g.default.Messages.APP_ICON_PIRATE_3, g.default.Messages.APP_ICON_PIRATE_4],
+                p = () => {
                     var e;
-                    return null !== (e = u.sample(f())) && void 0 !== e ? e : S.default.Messages.APP_ICON_PIRATE
+                    return null !== (e = o.sample(S())) && void 0 !== e ? e : g.default.Messages.APP_ICON_PIRATE
                 };
 
             function Selection(e) {
                 let {
                     id: t,
-                    className: s,
-                    onSelect: r,
-                    isSelected: l = !1,
-                    tabIndex: u,
-                    children: E
-                } = e, [S, f] = n.useState(T.ICONS_BY_ID[t].name), I = t === o.PremiumAppIconIds.PIRATE, p = (0, d.useRadioItem)({
-                    label: S,
-                    isSelected: l
+                    className: n,
+                    onSelect: s,
+                    isSelected: r = !1,
+                    tabIndex: o,
+                    children: f
+                } = e, [g, S] = i.useState(m.ICONS_BY_ID[t].name), E = t === c.PremiumAppIconIds.PIRATE, T = (0, u.useRadioItem)({
+                    label: g,
+                    isSelected: r
                 });
-                return (0, a.jsx)(d.Tooltip, {
-                    text: S,
-                    onTooltipShow: () => I && f(h()),
+                return (0, a.jsx)(u.Tooltip, {
+                    text: g,
+                    onTooltipShow: () => E && S(p()),
                     children: e => (0, a.jsxs)("div", {
-                        className: m.appIconSelectionContainer,
-                        children: [(0, a.jsx)(d.Clickable, {
+                        className: _.appIconSelectionContainer,
+                        children: [(0, a.jsx)(u.Clickable, {
                             ...e,
-                            ...p,
-                            tabIndex: null != u ? u : p.tabIndex,
-                            className: i(m.appIconSelection, {
-                                [m.selected]: l
-                            }, s),
-                            onClick: l ? _.NOOP : () => null == r ? void 0 : r(t),
-                            children: E
-                        }), l && (0, a.jsx)(c.SelectionCircle, {})]
+                            ...T,
+                            tabIndex: null != o ? o : T.tabIndex,
+                            className: l(_.appIconSelection, {
+                                [_.selected]: r
+                            }, n),
+                            onClick: r ? h.NOOP : () => null == s ? void 0 : s(t),
+                            children: f
+                        }), r && (0, a.jsx)(d.SelectionCircle, {})]
                     })
                 })
             }
 
-            function I(e) {
+            function E(e) {
                 let {
                     icon: t,
-                    isSelected: s,
-                    disabled: n,
-                    tabIndex: r,
-                    onSelect: i
+                    isSelected: n,
+                    disabled: i,
+                    tabIndex: s,
+                    onSelect: l
                 } = e;
                 return (0, a.jsx)(Selection, {
-                    onSelect: n ? void 0 : i,
-                    isSelected: s,
+                    onSelect: i ? void 0 : l,
+                    isSelected: n,
                     id: t.id,
-                    className: n ? m.disabled : void 0,
-                    tabIndex: r,
-                    children: (0, a.jsx)(E.default, {
+                    className: i ? _.disabled : void 0,
+                    tabIndex: s,
+                    children: (0, a.jsx)(f.default, {
                         id: t.id,
-                        width: T.CUSTOM_BASE_SIZE
+                        width: m.CUSTOM_BASE_SIZE
                     })
                 })
             }

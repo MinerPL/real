@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return M
+                    return R
                 }
             }), s("222007");
             var a = s("37983"),
@@ -16,8 +16,8 @@
                 S = s("642950"),
                 E = s("158645"),
                 f = s("917454"),
-                m = s("10641"),
-                T = s("102985"),
+                T = s("10641"),
+                m = s("102985"),
                 _ = s("697218"),
                 g = s("104359"),
                 h = s("945330"),
@@ -29,14 +29,14 @@
                 O = s("782340"),
                 x = s("738318");
 
-            function M() {
+            function R() {
                 let e;
                 let {
                     currentSession: t,
                     otherSessions: s
-                } = (0, f.useAuthSessions)(), l = (0, r.useStateFromStores)([T.default], () => T.default.hidePersonalInformation), i = (0, r.useStateFromStores)([_.default], () => _.default.getCurrentUser()), [c, g] = n.useState(!1);
+                } = (0, f.useAuthSessions)(), l = (0, r.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), i = (0, r.useStateFromStores)([_.default], () => _.default.getCurrentUser()), [c, g] = n.useState(!1);
                 n.useEffect(() => {
-                    (0, m.markDismissibleContentAsDismissed)(d.DismissibleContent.AUTH_SESSIONS_NEW, {
+                    (0, T.markDismissibleContentAsDismissed)(d.DismissibleContent.AUTH_SESSIONS_NEW, {
                         dismissAction: A.ContentDismissActionType.AUTO
                     }), (0, E.fetchAuthSessions)();
                     let e = setTimeout(() => g(!0), 500);
@@ -60,7 +60,7 @@
                             tag: u.FormTitleTags.H5,
                             title: O.default.Messages.AUTH_SESSIONS_CURRENT,
                             titleClassName: x.groupTitle,
-                            children: null != t ? (0, a.jsx)(R, {
+                            children: null != t ? (0, a.jsx)(M, {
                                 session: t,
                                 current: !0
                             }) : null
@@ -69,7 +69,7 @@
                             title: O.default.Messages.AUTH_SESSIONS_OTHERS,
                             titleClassName: x.groupTitle,
                             className: x.otherSessions,
-                            children: [s.map(e => (0, a.jsx)(R, {
+                            children: [s.map(e => (0, a.jsx)(M, {
                                 session: e,
                                 useChecks: I.size > 0,
                                 checked: I.has(e.id_hash),
@@ -137,15 +137,15 @@
                 }))
             }
 
-            function R(e) {
+            function M(e) {
                 var t, s, n, l, r;
                 let {
                     session: o,
                     current: d,
                     setChecked: c,
                     checked: S,
-                    useChecks: m
-                } = e, T = null !== (r = null === (t = o.client_info) || void 0 === t ? void 0 : t.location) && void 0 !== r ? r : null === (s = o.client_info) || void 0 === s ? void 0 : s.ip, _ = null === (n = o.client_info) || void 0 === n ? void 0 : n.platform, {
+                    useChecks: T
+                } = e, m = null !== (r = null === (t = o.client_info) || void 0 === t ? void 0 : t.location) && void 0 !== r ? r : null === (s = o.client_info) || void 0 === s ? void 0 : s.ip, _ = null === (n = o.client_info) || void 0 === n ? void 0 : n.platform, {
                     text: g,
                     icon: C
                 } = function(e) {
@@ -166,31 +166,19 @@
                                 text: e, icon: N.default
                             }
                     }
-                }(null === (l = o.client_info) || void 0 === l ? void 0 : l.os), A = d ? null : (0, f.formatDate)(o.approx_last_used_time), M = [g, _].filter(p.isNotNullish), R = [T, A].filter(p.isNotNullish), v = (0, u.useRedesignIconContext)().enabled, L = v ? 24 : 32;
+                }(null === (l = o.client_info) || void 0 === l ? void 0 : l.os), A = d ? null : (0, f.formatDate)(o.approx_last_used_time), R = [g, _].filter(p.isNotNullish), M = [m, A].filter(p.isNotNullish), v = (0, u.useRedesignIconContext)().enabled, D = v ? 24 : 32;
                 return (0, a.jsxs)("div", {
                     className: i(x.session, d ? x.currentSession : null),
                     children: [(0, a.jsx)("div", {
                         className: x.sessionIcon,
                         children: (0, a.jsx)(C, {
-                            width: L,
-                            height: L
+                            width: D,
+                            height: D
                         })
                     }), (0, a.jsxs)("div", {
                         className: x.sessionInfo,
                         children: [(0, a.jsxs)(u.Text, {
                             variant: "eyebrow",
-                            className: x.sessionInfoRow,
-                            children: [(0, a.jsx)("span", {
-                                children: M[0]
-                            }), M.length > 1 && (0, a.jsxs)(a.Fragment, {
-                                children: [(0, a.jsx)("span", {
-                                    children: "\xb7"
-                                }), (0, a.jsx)("span", {
-                                    children: M[1]
-                                })]
-                            })]
-                        }), (0, a.jsxs)(u.Text, {
-                            variant: "text-sm/medium",
                             className: x.sessionInfoRow,
                             children: [(0, a.jsx)("span", {
                                 children: R[0]
@@ -201,8 +189,20 @@
                                     children: R[1]
                                 })]
                             })]
+                        }), (0, a.jsxs)(u.Text, {
+                            variant: "text-sm/medium",
+                            className: x.sessionInfoRow,
+                            children: [(0, a.jsx)("span", {
+                                children: M[0]
+                            }), M.length > 1 && (0, a.jsxs)(a.Fragment, {
+                                children: [(0, a.jsx)("span", {
+                                    children: "\xb7"
+                                }), (0, a.jsx)("span", {
+                                    children: M[1]
+                                })]
+                            })]
                         })]
-                    }), d ? null : m ? (0, a.jsx)("div", {
+                    }), d ? null : T ? (0, a.jsx)("div", {
                         className: x.sessionCheckbox,
                         children: (0, a.jsx)(u.Checkbox, {
                             onChange: (e, t) => {

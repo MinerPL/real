@@ -1,24 +1,24 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 openChangelog: function() {
-                    return i
+                    return l
                 }
             });
-            var a = s("37983");
-            s("884691");
-            var n = s("77078"),
-                r = s("234222");
+            var a = n("37983");
+            n("884691");
+            var i = n("77078"),
+                s = n("234222");
 
-            function i() {
+            function l() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                !(!e && (0, n.hasAnyModalOpen)()) && (0, n.openModalLazy)(async () => {
+                !(!e && (0, i.hasAnyModalOpen)()) && (0, i.openModalLazy)(async () => {
                     let {
                         default: e
-                    } = await s.el("170935").then(s.bind(s, "170935"));
+                    } = await n.el("170935").then(n.bind(n, "170935"));
                     return t => (0, a.jsx)(e, {
                         ...t
                     })
                 }, {
-                    modalKey: r.CHANGELOG_MODAL_KEY
+                    modalKey: s.CHANGELOG_MODAL_KEY
                 })
             }

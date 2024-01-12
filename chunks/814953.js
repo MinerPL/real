@@ -16,8 +16,8 @@
                 S = s("77078"),
                 E = s("913144"),
                 f = s("776156"),
-                m = s("527015"),
-                T = s("518888"),
+                T = s("527015"),
+                m = s("518888"),
                 _ = s("133403"),
                 g = s("913801"),
                 h = s("485328"),
@@ -28,22 +28,22 @@
                 A = s("269936"),
                 O = s("370492"),
                 x = s("584369"),
-                M = s("619443"),
-                R = s("32128"),
+                R = s("619443"),
+                M = s("32128"),
                 v = s("368694"),
-                L = s("313915"),
-                D = s("381684"),
+                D = s("313915"),
+                L = s("381684"),
                 P = s("697218"),
                 j = s("860957"),
                 b = s("941886"),
                 U = s("145131"),
-                y = s("258078"),
-                B = s("50885"),
+                B = s("258078"),
+                y = s("50885"),
                 F = s("161778"),
                 G = s("484894"),
                 k = s("49111"),
-                w = s("180855"),
-                H = s("6791"),
+                H = s("180855"),
+                w = s("6791"),
                 V = s("716731"),
                 Y = s("405879"),
                 W = s("926622"),
@@ -440,7 +440,7 @@
                         allowLoggedOut: o,
                         experiments: d,
                         experimentsError: u
-                    } = this.state, c = w.BUILD_OVERRIDE_EXPIRATION_OPTIONS.find(t => t.value === e), E = l.map(e => ({
+                    } = this.state, c = H.BUILD_OVERRIDE_EXPIRATION_OPTIONS.find(t => t.value === e), E = l.map(e => ({
                         label: e,
                         value: e
                     }));
@@ -451,7 +451,7 @@
                             className: W.marginBottom20,
                             children: (0, a.jsx)(S.SingleSelect, {
                                 value: null != c ? c.value : null,
-                                options: w.BUILD_OVERRIDE_EXPIRATION_OPTIONS,
+                                options: H.BUILD_OVERRIDE_EXPIRATION_OPTIONS,
                                 onChange: this.handleExpirationChange
                             })
                         }), this.isMobile() ? null : (0, a.jsx)(S.FormItem, {
@@ -459,7 +459,7 @@
                             className: W.marginBottom20,
                             children: (0, a.jsx)(S.SingleSelect, {
                                 value: t,
-                                options: w.BUILD_OVERRIDE_RELEASE_CHANNEL_OPTIONS,
+                                options: H.BUILD_OVERRIDE_RELEASE_CHANNEL_OPTIONS,
                                 onChange: this.handleReleaseChannelChange
                             })
                         }), this.isMobile() ? (0, a.jsxs)(a.Fragment, {
@@ -591,7 +591,7 @@
                                     children: "Generate Link"
                                 })]
                             })
-                        }), (0, a.jsx)(y.default, {
+                        }), (0, a.jsx)(B.default, {
                             color: e,
                             className: "".concat(W.marginBottom8, " ").concat(W.marginTop8),
                             children: t
@@ -635,7 +635,7 @@
                         allowedVersionEntryError: null,
                         publicLink: " ",
                         statusText: null,
-                        statusTextColor: y.default.Colors.STATUS_RED,
+                        statusTextColor: B.default.Colors.STATUS_RED,
                         allowLoggedOut: !1
                     }, this.setUserEntryError = e => {
                         this.setState({
@@ -644,7 +644,7 @@
                     }, this.setStatusMessage = (e, t) => {
                         this.setState({
                             statusText: e,
-                            statusTextColor: null != t ? t : y.default.Colors.STATUS_RED
+                            statusTextColor: null != t ? t : B.default.Colors.STATUS_RED
                         })
                     }, this.handleUserIDEntry = e => {
                         if (!/^[\d\s,]*$/.test(e)) return this.setUserEntryError("User IDs are numbers!");
@@ -743,9 +743,9 @@
                         this.setStatusMessage(null);
                         let e = this.generatePayload(),
                             t = await (0, I.getPublicBuildOverrideLink)(e);
-                        !1 !== t.error ? this.setStatusMessage(JSON.stringify(t.error), y.default.Colors.STATUS_RED) : (this.setState({
+                        !1 !== t.error ? this.setStatusMessage(JSON.stringify(t.error), B.default.Colors.STATUS_RED) : (this.setState({
                             publicLink: t.url.toString()
-                        }), 0 === e.meta.user_ids.length && this.setStatusMessage("Warning! No users added to the whitelist! This link could be used by anyone to override their build.", y.default.Colors.STATUS_YELLOW))
+                        }), 0 === e.meta.user_ids.length && this.setStatusMessage("Warning! No users added to the whitelist! This link could be used by anyone to override their build.", B.default.Colors.STATUS_YELLOW))
                     }
                 }
             }
@@ -770,7 +770,7 @@
                             children: "Open Overlay"
                         }), (0, a.jsx)(S.Button, {
                             onClick: () => {
-                                M.default.getSocket().close(), M.default.getSocket().connect()
+                                R.default.getSocket().close(), R.default.getSocket().connect()
                             },
                             children: "Reset Socket"
                         }), p.ENABLE_CACHE_STORE && (0, a.jsx)(S.Button, {
@@ -807,7 +807,7 @@
                                     value: 4,
                                     label: "Out of Memory"
                                 }],
-                                onChange: e => null != e && B.default.crash(e)
+                                onChange: e => null != e && y.default.crash(e)
                             }), (0, a.jsx)(S.SingleSelect, {
                                 value: void 0,
                                 options: [{
@@ -825,7 +825,7 @@
                                 }],
                                 onChange: e => {
                                     var t;
-                                    return null != e ? (t = e, void B.default.triggerJSException(t)) : void 0
+                                    return null != e ? (t = e, void y.default.triggerJSException(t)) : void 0
                                 }
                             }), (0, a.jsx)(S.Button, {
                                 onClick: () => t(!0),
@@ -838,17 +838,17 @@
                     })]
                 })
             }
-            let et = u.default.connectStores([L.default, x.default], () => ({
-                isTracingRequests: L.default.isTracingRequests,
-                isForcedCanary: L.default.isForcedCanary,
-                isLoggingGatewayEvents: L.default.isLoggingGatewayEvents,
-                isLoggingOverlayEvents: L.default.isLoggingOverlayEvents,
-                isLoggingAnalyticsEvents: L.default.isLoggingAnalyticsEvents,
-                isAxeEnabled: L.default.isAxeEnabled,
-                isSourceMapsEnabled: L.default.sourceMapsEnabled,
-                isAnalyticsDebuggerEnabled: L.default.isAnalyticsDebuggerEnabled,
-                isIdleStatusIndicatorEnabled: L.default.isIdleStatusIndicatorEnabled,
-                appDirectoryIncludesInactiveCollections: L.default.appDirectoryIncludesInactiveCollections,
+            let et = u.default.connectStores([D.default, x.default], () => ({
+                isTracingRequests: D.default.isTracingRequests,
+                isForcedCanary: D.default.isForcedCanary,
+                isLoggingGatewayEvents: D.default.isLoggingGatewayEvents,
+                isLoggingOverlayEvents: D.default.isLoggingOverlayEvents,
+                isLoggingAnalyticsEvents: D.default.isLoggingAnalyticsEvents,
+                isAxeEnabled: D.default.isAxeEnabled,
+                isSourceMapsEnabled: D.default.sourceMapsEnabled,
+                isAnalyticsDebuggerEnabled: D.default.isAnalyticsDebuggerEnabled,
+                isIdleStatusIndicatorEnabled: D.default.isIdleStatusIndicatorEnabled,
+                appDirectoryIncludesInactiveCollections: D.default.appDirectoryIncludesInactiveCollections,
                 isDevToolsEnabled: x.default.devToolsEnabled
             }))(e => {
                 let {
@@ -863,7 +863,7 @@
                     isIdleStatusIndicatorEnabled: c,
                     appDirectoryIncludesInactiveCollections: E,
                     isDevToolsEnabled: f
-                } = e, T = (0, u.useStateFromStores)([P.default], () => P.default.getCurrentUser());
+                } = e, m = (0, u.useStateFromStores)([P.default], () => P.default.getCurrentUser());
                 return (0, a.jsxs)(S.FormSection, {
                     title: "Developer Flags",
                     tag: S.FormTitleTags.H1,
@@ -888,63 +888,63 @@
                     }), (0, a.jsx)(S.FormSwitch, {
                         value: t,
                         note: "Force trace all client requests with APM",
-                        onChange: e => (0, m.setDeveloperOptionSettings)({
+                        onChange: e => (0, T.setDeveloperOptionSettings)({
                             trace: e
                         }),
                         children: "Enable Tracing Requests"
                     }), (0, a.jsx)(S.FormSwitch, {
                         value: s,
                         note: "Force all API requests to canary instances",
-                        onChange: e => (0, m.setDeveloperOptionSettings)({
+                        onChange: e => (0, T.setDeveloperOptionSettings)({
                             canary: e
                         }),
                         children: "Enable Forced Canary"
                     }), (0, a.jsx)(S.FormSwitch, {
                         value: n,
                         note: "Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see!",
-                        onChange: e => (0, m.setDeveloperOptionSettings)({
+                        onChange: e => (0, T.setDeveloperOptionSettings)({
                             logGatewayEvents: e
                         }),
                         children: "Enable Logging of Gateway Events to Console"
                     }), (0, a.jsx)(S.FormSwitch, {
                         value: l,
                         note: "Logs all overlay related RPC events. Super noisy if an overlay is connected",
-                        onChange: e => (0, m.setDeveloperOptionSettings)({
+                        onChange: e => (0, T.setDeveloperOptionSettings)({
                             logOverlayEvents: e
                         }),
                         children: "Enable Logging of Overlay RPC Events & Commands"
                     }), (0, a.jsx)(S.FormSwitch, {
                         value: i,
                         note: "Logs all analytics events to the developer console",
-                        onChange: e => (0, m.setDeveloperOptionSettings)({
+                        onChange: e => (0, T.setDeveloperOptionSettings)({
                             logAnalyticsEvents: e
                         }),
                         children: "Enable Logging of Analytics Events"
                     }), (0, a.jsx)(S.FormSwitch, {
                         value: o,
                         note: "Only enable on devices you trust.",
-                        onChange: e => (0, m.setDeveloperOptionSettings)({
+                        onChange: e => (0, T.setDeveloperOptionSettings)({
                             sourceMapsEnabled: e
                         }),
                         children: "Enable source maps to be loaded on this client"
                     }), (0, a.jsx)(S.FormSwitch, {
                         value: d,
                         note: "Displays a floating debugger with viewed impressions",
-                        onChange: e => (0, m.setDeveloperOptionSettings)({
+                        onChange: e => (0, T.setDeveloperOptionSettings)({
                             analyticsDebuggerEnabled: e
                         }),
                         children: "Enable standard analytics debugger view"
-                    }), (null == T ? void 0 : T.isStaff()) ? (0, a.jsx)(S.FormSwitch, {
+                    }), (null == m ? void 0 : m.isStaff()) ? (0, a.jsx)(S.FormSwitch, {
                         value: c,
                         note: "Displays a floating idle status indicator",
-                        onChange: e => (0, m.setDeveloperOptionSettings)({
+                        onChange: e => (0, T.setDeveloperOptionSettings)({
                             idleStatusIndicatorEnabled: e
                         }),
                         children: "Enable idle status indicator"
-                    }) : null, null, (null == T ? void 0 : T.isStaff()) ? (0, a.jsx)(S.FormSwitch, {
+                    }) : null, null, (null == m ? void 0 : m.isStaff()) ? (0, a.jsx)(S.FormSwitch, {
                         value: E,
                         note: "In App Directory, include inactive collections on the homepage. Use this to preview changes to collections before publishing them.",
-                        onChange: e => (0, m.setDeveloperOptionSettings)({
+                        onChange: e => (0, T.setDeveloperOptionSettings)({
                             appDirectoryIncludesInactiveCollections: e
                         }),
                         children: "Preview Unpublished Collections on App Directory Homepage"
@@ -960,7 +960,7 @@
             });
 
             function es() {
-                let e = (0, u.useStateFromStores)([D.default], () => D.default.getSurveyOverride()),
+                let e = (0, u.useStateFromStores)([L.default], () => L.default.getSurveyOverride()),
                     [t, s] = n.useState(null != e ? e : "");
                 return (0, a.jsxs)(S.FormSection, {
                     tag: S.FormTitleTags.H1,
@@ -971,7 +971,7 @@
                     }), (0, a.jsxs)("form", {
                         className: V.surveyOverride,
                         onSubmit: e => {
-                            e.preventDefault(), t.length > 0 ? T.overrideSurvey(t) : T.overrideSurvey(null)
+                            e.preventDefault(), t.length > 0 ? m.overrideSurvey(t) : m.overrideSurvey(null)
                         },
                         children: [(0, a.jsx)(S.TextInput, {
                             className: V.surveyOverrideInput,
@@ -986,7 +986,7 @@
             }
 
             function ea() {
-                let e = R.OverlayStoredSettings.methodOverride,
+                let e = M.OverlayStoredSettings.methodOverride,
                     [t, s] = n.useState(e);
                 return (0, a.jsxs)(S.FormSection, {
                     tag: S.FormTitleTags.H1,
@@ -1000,14 +1000,14 @@
                             value: void 0,
                             label: "No override"
                         }, {
-                            value: H.OverlayMethod.OutOfProcess,
+                            value: w.OverlayMethod.OutOfProcess,
                             label: "Out of process"
                         }, {
-                            value: H.OverlayMethod.Hook,
+                            value: w.OverlayMethod.Hook,
                             label: "In-process hook"
                         }],
                         onChange: e => {
-                            R.OverlayStoredSettings.update({
+                            M.OverlayStoredSettings.update({
                                 methodOverride: e
                             }), s(e)
                         }

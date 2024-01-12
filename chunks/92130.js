@@ -1,18 +1,18 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return n
+                    return i
                 }
             });
-            var a = s("37983");
-            s("884691");
-            var n = e => {
+            var a = n("37983");
+            n("884691");
+            var i = e => {
                 let {
                     fill: t,
-                    className: s
+                    className: n
                 } = e;
                 return (0, a.jsxs)("svg", {
-                    className: s,
+                    className: n,
                     version: "1.1",
                     xmlns: "http://www.w3.org/2000/svg",
                     xmlnsXlink: "http://www.w3.org/1999/xlink",

@@ -16,8 +16,8 @@
                 S = s("659632"),
                 E = s("49111"),
                 f = s("782340"),
-                m = s("882553");
-            class T extends n.Component {
+                T = s("882553");
+            class m extends n.Component {
                 get analyticsLocation() {
                     let {
                         analyticsContext: {
@@ -52,7 +52,7 @@
                                     onChange: this.handleChange,
                                     placeholder: "WUMP-AAAAA-BBBBB-CCCCC",
                                     error: !l && n ? f.default.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_INVALID : null,
-                                    className: m.codeRedemptionInput
+                                    className: T.codeRedemptionInput
                                 }), (0, a.jsx)(i.Button, {
                                     type: "submit",
                                     submitting: s,
@@ -60,7 +60,7 @@
                                 })]
                             })
                         }), l ? (0, a.jsx)(i.Text, {
-                            className: m.errorMessage,
+                            className: T.errorMessage,
                             variant: "text-sm/normal",
                             children: f.default.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_PROMOTION.format({
                                 promoLink: () => {
@@ -129,7 +129,7 @@
             function _() {
                 let e = n.useContext(c.AnalyticsContext),
                     t = (0, l.useStateFromStores)([d.default], () => d.default.enabled);
-                return (0, a.jsx)(T, {
+                return (0, a.jsx)(m, {
                     analyticsContext: e,
                     obscureInput: t
                 })

@@ -1,52 +1,52 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 OneTimePaymentPredicateStep: function() {
-                    return S
+                    return h
                 }
-            }), s("222007");
-            var n = s("37983"),
-                l = s("884691"),
-                r = s("627445"),
-                i = s.n(r),
-                a = s("245187"),
-                u = s("635357"),
-                o = s("642906"),
-                d = s("85336"),
-                c = s("628738"),
-                f = s("49111");
+            }), n("222007");
+            var r = n("37983"),
+                u = n("884691"),
+                s = n("627445"),
+                l = n.n(s),
+                i = n("245187"),
+                o = n("635357"),
+                a = n("642906"),
+                c = n("85336"),
+                d = n("628738"),
+                f = n("49111");
 
-            function S(e) {
+            function h(e) {
                 let {
                     handleStepChange: t,
-                    handleClose: s
+                    handleClose: n
                 } = e, {
-                    blockedPayments: r,
-                    hasFetchedSkus: S,
-                    paymentSources: E,
-                    hasFetchedPaymentSources: I,
-                    application: p,
-                    skusById: _,
-                    selectedSkuId: T
-                } = (0, o.usePaymentContext)(), {
-                    isGift: h
-                } = (0, u.useGiftContext)(), [C, m] = l.useState(!0);
-                return (l.useEffect(() => {
-                    let e = null != p;
-                    S && I && e && m(!1)
-                }, [S, I, p]), l.useEffect(() => {
-                    if (C || r) return;
-                    i(null != T, "Expected selectedSkuId");
-                    let e = _[T];
-                    if (h && (null == e ? void 0 : e.productLine) === f.SKUProductLines.COLLECTIBLES) {
-                        t(d.Step.GIFT_CUSTOMIZATION);
+                    blockedPayments: s,
+                    hasFetchedSkus: h,
+                    paymentSources: p,
+                    hasFetchedPaymentSources: v,
+                    application: S,
+                    skusById: E,
+                    selectedSkuId: m
+                } = (0, a.usePaymentContext)(), {
+                    isGift: x
+                } = (0, o.useGiftContext)(), [I, C] = u.useState(!0);
+                return (u.useEffect(() => {
+                    let e = null != S;
+                    h && v && e && C(!1)
+                }, [h, v, S]), u.useEffect(() => {
+                    if (I || s) return;
+                    l(null != m, "Expected selectedSkuId");
+                    let e = E[m];
+                    if (x && (null == e ? void 0 : e.productLine) === f.SKUProductLines.COLLECTIBLES) {
+                        t(c.Step.GIFT_CUSTOMIZATION);
                         return
                     }
-                    if (0 === Object.keys(E).length) {
-                        t(d.Step.ADD_PAYMENT_STEPS);
+                    if (0 === Object.keys(p).length) {
+                        t(c.Step.ADD_PAYMENT_STEPS);
                         return
                     }
-                    t(d.Step.REVIEW)
-                }, [C, r, t, E, h, _, T]), C) ? (0, n.jsx)(c.default, {}) : r ? (0, n.jsx)(a.BlockedPaymentsContentModal, {
-                    onClose: s
+                    t(c.Step.REVIEW)
+                }, [I, s, t, p, x, E, m]), I) ? (0, r.jsx)(d.default, {}) : s ? (0, r.jsx)(i.BlockedPaymentsContentModal, {
+                    onClose: n
                 }) : null
             }

@@ -22,9 +22,9 @@
                 h = n("305961"),
                 S = n("660478"),
                 v = n("18494"),
-                C = n("162771"),
-                A = n("519841"),
-                I = n("787336"),
+                I = n("162771"),
+                C = n("519841"),
+                A = n("787336"),
                 T = n("49111"),
                 b = n("724210"),
                 y = n("782340");
@@ -55,9 +55,9 @@
                     return
                 }
                 let g = f.default.getOrCreate(n);
-                A.AttachmentLinkRefreshExperiment.getCurrentConfig({
+                C.AttachmentLinkRefreshExperiment.getCurrentConfig({
                     location: "fetch_messages"
-                }).enabled && g.some(I.messageHasExpiredAttachmentUrl) && (N.log("Found expired attachment link, clearing messages"), f.default.clear(n), g = f.default.getOrCreate(n)), null != g.jumpTargetId && null == a && (g = g.mutate({
+                }).enabled && g.some(A.messageHasExpiredAttachmentUrl) && (N.log("Found expired attachment link, clearing messages"), f.default.clear(n), g = f.default.getOrCreate(n)), null != g.jumpTargetId && null == a && (g = g.mutate({
                     jumpTargetId: null,
                     jumped: !1,
                     jumpType: o.JumpTypes.ANIMATED
@@ -137,7 +137,7 @@
                             guildId: n.getGuildId(),
                             channelId: n.id,
                             messageId: null == e ? void 0 : null === (t = e.params) || void 0 === t ? void 0 : t.message
-                        }), w(n.getGuildId(), n.id)
+                        }), U(n.getGuildId(), n.id)
                     }
                 }
             }
@@ -156,7 +156,7 @@
                         isPreload: e,
                         skipLocalFetch: t,
                         logFailures: n
-                    }) : n && N.log("Skipping fetch because the selected channel is not a text channel"), w(a.getGuildId(), a.id)) : n && N.log("Skipping fetch because channel is null")
+                    }) : n && N.log("Skipping fetch because the selected channel is not a text channel"), U(a.getGuildId(), a.id)) : n && N.log("Skipping fetch because channel is null")
                 } else n && N.log("Skipping fetch because there is no selected channel")
             }
 
@@ -172,7 +172,7 @@
                     channelId: n,
                     messageId: i,
                     jumpType: a
-                }), w(t, n)
+                }), U(t, n)
             }
 
             function x(e) {
@@ -186,7 +186,7 @@
                 })
             }
 
-            function w(e, t) {
+            function U(e, t) {
                 let n = g.default.getCurrentSidebarChannelId(t);
                 if (null == n) return;
                 let i = g.default.getCurrentSidebarMessageId(t);
@@ -197,15 +197,15 @@
                 })
             }
 
-            function P() {
+            function w() {
                 let e = v.default.getChannelId(),
-                    t = C.default.getGuildId();
+                    t = I.default.getGuildId();
                 if (null == t || null == e) return;
                 let n = g.default.getSidebarState(e);
-                (null == n ? void 0 : n.type) !== m.SidebarType.VIEW_CHANNEL && w(t, e)
+                (null == n ? void 0 : n.type) !== m.SidebarType.VIEW_CHANNEL && U(t, e)
             }
 
-            function U(e) {
+            function P(e) {
                 let {
                     guildId: t,
                     channelId: n,
@@ -214,7 +214,7 @@
                 i === T.CURRENT_APP_CONTEXT && (D({
                     guildId: t,
                     channelId: n
-                }), w(t, n))
+                }), U(t, n))
             }
 
             function k(e) {
@@ -307,7 +307,7 @@
                     u.default.unsubscribe("CONNECTION_OPEN", M)
                 }
                 constructor(...e) {
-                    super(...e), this.fetchMessages = D, this.loadSelectedChannelIfNecessary = O, this.stores = new Map().set(g.default, P), this.actions = {
+                    super(...e), this.fetchMessages = D, this.loadSelectedChannelIfNecessary = O, this.stores = new Map().set(g.default, w), this.actions = {
                         APP_STATE_UPDATE: j,
                         OVERLAY_INITIALIZE: M,
                         CHANNEL_SELECT: R,
@@ -315,7 +315,7 @@
                         THREAD_CREATE: k,
                         THREAD_LIST_SYNC: () => O(),
                         CHANNEL_CREATE: k,
-                        CHANNEL_PRELOAD: U,
+                        CHANNEL_PRELOAD: P,
                         THREAD_CREATE_LOCAL: G,
                         GUILD_CREATE: () => O(),
                         MESSAGE_END_EDIT: F,

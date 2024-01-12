@@ -4,103 +4,103 @@
                     return L
                 }
             });
-            var a = n("37983");
+            var r = n("37983");
             n("884691");
-            var r = n("77078"),
-                i = n("272030"),
-                l = n("838446"),
-                u = n("158534"),
-                o = n("846883"),
+            var i = n("77078"),
+                a = n("272030"),
+                o = n("838446"),
+                l = n("158534"),
+                u = n("846883"),
                 s = n("812204"),
                 d = n("861370"),
                 c = n("20209"),
-                p = n("972701"),
-                f = n("390008"),
-                h = n("41205"),
+                f = n("972701"),
+                h = n("390008"),
+                p = n("41205"),
                 E = n("936947"),
-                _ = n("47495"),
-                m = n("715243"),
+                m = n("47495"),
+                _ = n("715243"),
                 g = n("458574"),
-                I = n("963150"),
+                x = n("963150"),
                 v = n("308798"),
                 C = n("47006"),
-                S = n("878526"),
-                y = n("44141"),
+                O = n("878526"),
+                I = n("44141"),
                 N = n("531674"),
-                x = n("619436"),
-                b = n("625399"),
-                O = n("731390"),
-                T = n("339876"),
+                b = n("619436"),
+                y = n("625399"),
+                P = n("731390"),
+                S = n("339876"),
                 A = n("49111"),
-                R = n("782340");
+                M = n("782340");
 
-            function M(e) {
+            function R(e) {
                 let {
                     channel: t,
                     onSelect: n
-                } = e, l = (0, y.default)(t), u = (0, g.default)(t), s = (0, p.useAddToFavoritesItem)(t), c = (0, p.useRemoveFromFavoritesItem)(t), m = (0, f.default)(t), I = (0, h.default)(t), v = (0, E.default)(t), S = (0, N.default)(t), O = (0, x.default)(t), T = (0, C.default)(t), A = (0, d.default)({
+                } = e, o = (0, I.default)(t), l = (0, g.default)(t), s = (0, f.useAddToFavoritesItem)(t), c = (0, f.useRemoveFromFavoritesItem)(t), _ = (0, h.default)(t), x = (0, p.default)(t), v = (0, E.default)(t), O = (0, N.default)(t), P = (0, b.default)(t), S = (0, C.default)(t), A = (0, d.default)({
                     id: t.id,
-                    label: R.default.Messages.COPY_ID_CHANNEL
-                }), M = (0, o.default)(t), P = (0, b.default)(t), L = (0, _.useShouldUseNewNotificationSystem)("ChannelContextFavoritesMenu");
-                return (0, a.jsxs)(r.Menu, {
+                    label: M.default.Messages.COPY_ID_CHANNEL
+                }), R = (0, u.default)(t), T = (0, y.default)(t), L = (0, m.useShouldUseNewNotificationSystem)("ChannelContextFavoritesMenu");
+                return (0, r.jsxs)(i.Menu, {
                     navId: "channel-context",
-                    onClose: i.closeContextMenu,
-                    "aria-label": R.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+                    onClose: a.closeContextMenu,
+                    "aria-label": M.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
                     onSelect: n,
-                    children: [(0, a.jsx)(r.MenuGroup, {
-                        children: l
-                    }), (0, a.jsxs)(r.MenuGroup, {
-                        children: [I, v, m, s]
-                    }), (0, a.jsxs)(r.MenuGroup, {
-                        children: [S, L ? P : O]
-                    }), (0, a.jsx)(r.MenuGroup, {
-                        children: T
-                    }), (0, a.jsx)(r.MenuGroup, {
-                        children: M
-                    }), (0, a.jsx)(r.MenuGroup, {
+                    children: [(0, r.jsx)(i.MenuGroup, {
+                        children: o
+                    }), (0, r.jsxs)(i.MenuGroup, {
+                        children: [x, v, _, s]
+                    }), (0, r.jsxs)(i.MenuGroup, {
+                        children: [O, L ? T : P]
+                    }), (0, r.jsx)(i.MenuGroup, {
+                        children: S
+                    }), (0, r.jsx)(i.MenuGroup, {
+                        children: R
+                    }), (0, r.jsx)(i.MenuGroup, {
                         children: c
-                    }), (0, a.jsx)(r.MenuGroup, {
-                        children: u
-                    }), (0, a.jsx)(r.MenuGroup, {
+                    }), (0, r.jsx)(i.MenuGroup, {
+                        children: l
+                    }), (0, r.jsx)(i.MenuGroup, {
                         children: A
                     })]
                 })
             }
 
-            function P(e) {
+            function T(e) {
                 let {
                     channel: t,
                     guild: n,
-                    onSelect: l
-                } = e, u = (0, y.default)(t), o = (0, g.default)(t), s = (0, p.useAddToFavoritesItem)(t), c = (0, p.useRemoveFromFavoritesItem)(t), f = (0, T.default)(t), h = (0, N.default)(t), E = (0, C.default)(t), A = (0, S.default)(t, n), M = (0, m.default)(t, n), P = (0, I.default)(t, n), L = (0, v.default)(t), D = (0, d.default)({
+                    onSelect: o
+                } = e, l = (0, I.default)(t), u = (0, g.default)(t), s = (0, f.useAddToFavoritesItem)(t), c = (0, f.useRemoveFromFavoritesItem)(t), h = (0, S.default)(t), p = (0, N.default)(t), E = (0, C.default)(t), A = (0, O.default)(t, n), R = (0, _.default)(t, n), T = (0, x.default)(t, n), L = (0, v.default)(t), U = (0, d.default)({
                     id: t.id,
-                    label: R.default.Messages.COPY_ID_CHANNEL
-                }), U = (0, O.default)(t, "list_text_channel_context_menu"), G = (0, x.default)(t), F = (0, b.default)(t), V = (0, _.useShouldUseNewNotificationSystem)("ChannelContextMenuNormal");
-                return (0, a.jsxs)(r.Menu, {
+                    label: M.default.Messages.COPY_ID_CHANNEL
+                }), F = (0, P.default)(t, "list_text_channel_context_menu"), w = (0, b.default)(t), D = (0, y.default)(t), j = (0, m.useShouldUseNewNotificationSystem)("ChannelContextMenuNormal");
+                return (0, r.jsxs)(i.Menu, {
                     navId: "channel-context",
-                    onClose: i.closeContextMenu,
-                    "aria-label": R.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-                    onSelect: l,
-                    children: [(0, a.jsx)(r.MenuGroup, {
-                        children: u
-                    }, "mark-as-read"), (0, a.jsxs)(r.MenuGroup, {
-                        children: [A, f, o, s, U]
-                    }, "channel-actions"), (0, a.jsxs)(r.MenuGroup, {
-                        children: [h, V ? F : G]
-                    }, "notifications"), (0, a.jsxs)(r.MenuGroup, {
-                        children: [E, M, P, L]
-                    }, "admin-actions"), (0, a.jsx)(r.MenuGroup, {
+                    onClose: a.closeContextMenu,
+                    "aria-label": M.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+                    onSelect: o,
+                    children: [(0, r.jsx)(i.MenuGroup, {
+                        children: l
+                    }, "mark-as-read"), (0, r.jsxs)(i.MenuGroup, {
+                        children: [A, h, u, s, F]
+                    }, "channel-actions"), (0, r.jsxs)(i.MenuGroup, {
+                        children: [p, j ? D : w]
+                    }, "notifications"), (0, r.jsxs)(i.MenuGroup, {
+                        children: [E, R, T, L]
+                    }, "admin-actions"), (0, r.jsx)(i.MenuGroup, {
                         children: c
-                    }), (0, a.jsx)(r.MenuGroup, {
-                        children: D
+                    }), (0, r.jsx)(i.MenuGroup, {
+                        children: U
                     }, "developer-actions")]
                 })
             }
-            var L = (0, u.default)((0, l.default)(function(e) {
+            var L = (0, l.default)((0, o.default)(function(e) {
                 let t = (0, c.default)();
-                return t ? (0, a.jsx)(M, {
+                return t ? (0, r.jsx)(R, {
                     ...e
-                }) : (0, a.jsx)(P, {
+                }) : (0, r.jsx)(T, {
                     ...e
                 })
             }, {

@@ -6,8 +6,8 @@
             });
             var n = s("37983");
             s("884691");
-            var l = s("77078"),
-                r = s("446674"),
+            var r = s("77078"),
+                l = s("446674"),
                 i = s("87657"),
                 a = s("635357"),
                 u = s("27618"),
@@ -19,7 +19,7 @@
                     let {
                         selectedSkuId: t,
                         className: s
-                    } = e, S = (0, r.useStateFromStoresArray)([u.default], () => u.default.getFriendIDs()), E = (0, r.useStateFromStoresArray)([o.default], () => o.default.filter(e => S.includes(e.id) && !e.bot), [S]), {
+                    } = e, S = (0, l.useStateFromStoresArray)([u.default], () => u.default.getFriendIDs()), E = (0, l.useStateFromStoresArray)([o.default], () => o.default.filter(e => S.includes(e.id) && !e.bot), [S]), {
                         giftRecipient: I,
                         setGiftRecipient: p,
                         giftRecipientError: _,
@@ -34,13 +34,13 @@
                     };
                     return (0, n.jsxs)("div", {
                         className: s,
-                        children: [(0, n.jsx)(l.FormTitle, {
+                        children: [(0, n.jsx)(r.FormTitle, {
                             children: f.default.Messages.FORM_LABEL_SEND_TO
-                        }), (0, n.jsx)(l.SearchableSelect, {
+                        }), (0, n.jsx)(r.SearchableSelect, {
                             placeholder: f.default.Messages.COLLECTIBLES_GIFT_RECIPIENT_PLACEHOLDER,
                             renderOptionPrefix: e => (null == e ? void 0 : e.value) == null ? null : (0, n.jsx)(i.default, {
                                 user: e.value,
-                                size: l.AvatarSizes.SIZE_20
+                                size: r.AvatarSizes.SIZE_20
                             }),
                             value: I,
                             onChange: C,

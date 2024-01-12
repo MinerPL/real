@@ -1,16 +1,16 @@
             "use strict";
-            r.r(t), r.d(t, {
+            n.r(t), n.d(t, {
                 useFrecencySettings: function() {
-                    return o
+                    return i
                 }
             });
-            var n = r("884691"),
-                i = r("446674"),
-                a = r("872173"),
-                l = r("374363");
+            var r = n("884691"),
+                u = n("446674"),
+                s = n("872173"),
+                l = n("374363");
 
-            function o() {
-                return n.useEffect(() => {
-                    a.FrecencyUserSettingsActionCreators.loadIfNecessary()
-                }, []), (0, i.useStateFromStores)([l.default], () => l.default.frecencyWithoutFetchingLatest)
+            function i() {
+                return r.useEffect(() => {
+                    s.FrecencyUserSettingsActionCreators.loadIfNecessary()
+                }, []), (0, u.useStateFromStores)([l.default], () => l.default.frecencyWithoutFetchingLatest)
             }

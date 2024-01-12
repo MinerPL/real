@@ -6,8 +6,8 @@
             }), s("222007");
             var n = s("37983");
             s("884691");
-            var l = s("414456"),
-                r = s.n(l),
+            var r = s("414456"),
+                l = s.n(r),
                 i = s("77078"),
                 a = s("446674"),
                 u = s("265586"),
@@ -28,14 +28,14 @@
                     let {
                         avatarDecoration: t
                     } = e, s = (0, a.useStateFromStores)([I.default], () => I.default.getCurrentUser()), {
-                        avatarDecorationSrc: l
+                        avatarDecorationSrc: r
                     } = (0, d.default)({
                         user: s,
                         avatarDecorationOverride: t,
                         size: (0, o.getDecorationSizeForAvatarSize)(i.AvatarSizes.SIZE_40)
                     });
                     return (0, n.jsx)("img", {
-                        src: l,
+                        src: r,
                         alt: t.label,
                         className: C.avatarDecoration
                     })
@@ -44,16 +44,16 @@
                     var t;
                     let {
                         profileEffect: s
-                    } = e, l = (0, a.useStateFromStores)([S.default], () => S.default.getProfileEffectById(s.id)), {
-                        accessibilityLabel: r,
+                    } = e, r = (0, a.useStateFromStores)([S.default], () => S.default.getProfileEffectById(s.id)), {
+                        accessibilityLabel: l,
                         thumbnailPreviewSrc: i,
                         title: u
-                    } = null !== (t = null == l ? void 0 : l.config) && void 0 !== t ? t : {};
+                    } = null !== (t = null == r ? void 0 : r.config) && void 0 !== t ? t : {};
                     return (0, n.jsxs)("div", {
                         className: C.profileEffectContainer,
                         children: [(0, n.jsx)("img", {
                             src: m,
-                            alt: r,
+                            alt: l,
                             className: C.profileEffectBackground
                         }), (0, n.jsx)("img", {
                             className: C.profileEffect,
@@ -66,7 +66,7 @@
                 let {
                     selectedSkuId: t,
                     selectedSkuPricePreview: s,
-                    className: l
+                    className: r
                 } = e, {
                     product: o
                 } = (0, _.useFetchCollectiblesProduct)(t), {
@@ -76,7 +76,7 @@
                 if (null == o || null == s) return null;
                 let [g] = o.items, O = null != d && d.id !== (null == m ? void 0 : m.id);
                 return (0, n.jsxs)("div", {
-                    className: l,
+                    className: r,
                     children: [(0, n.jsxs)("div", {
                         className: C.previewTitleContainer,
                         children: [(0, n.jsx)(i.FormTitle, {
@@ -108,7 +108,7 @@
                             })
                         }, d.id)]
                     }), (0, n.jsxs)("div", {
-                        className: r(C.previewContainer, {
+                        className: l(C.previewContainer, {
                             [C.previewContainerError]: null != S
                         }),
                         children: [g.type === u.CollectiblesItemType.AVATAR_DECORATION && (0, n.jsx)(A, {

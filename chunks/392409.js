@@ -16,8 +16,8 @@
                 S = s("145131"),
                 E = s("387225"),
                 f = s("782340"),
-                m = s("160918");
-            class T extends n.Component {
+                T = s("160918");
+            class m extends n.Component {
                 renderNotice() {
                     let {
                         isClaimed: e,
@@ -86,11 +86,11 @@
                         isVerified: s
                     } = this.props;
                     return t && s ? null : (0, a.jsx)(u.Card, {
-                        className: i(m.wrapper, e),
+                        className: i(T.wrapper, e),
                         children: (0, a.jsxs)(S.default, {
                             align: S.default.Align.CENTER,
                             children: [(0, a.jsx)(S.default.Child, {
-                                className: m.image,
+                                className: T.image,
                                 grow: 0,
                                 shrink: 0
                             }), (0, a.jsxs)(S.default.Child, {
@@ -99,7 +99,7 @@
                                     children: this.renderNotice()
                                 }), (0, a.jsxs)(S.default, {
                                     justify: S.default.Justify.CENTER,
-                                    className: m.content,
+                                    className: T.content,
                                     children: [this.renderPrimaryAction(), this.renderSecondaryAction()]
                                 })]
                             })]
@@ -114,4 +114,4 @@
                     isVerified: e.verified,
                     hasEmail: null != e.email
                 }
-            })(T)
+            })(m)

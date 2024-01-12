@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return m
+                    return T
                 }
             });
             var a = s("37983");
@@ -18,13 +18,13 @@
                 E = s("782340"),
                 f = s("926622");
 
-            function m() {
+            function T() {
                 let e = c.ExpressionSuggestionsEnabled.useSetting(),
                     t = c.IncludeStickersInAutocomplete.useSetting(),
                     s = c.UseRichChatInput.useSetting(),
                     n = c.RenderSpoilers.useSetting(),
-                    m = c.UseThreadSidebar.useSetting(),
-                    T = c.ViewImageDescriptions.useSetting(),
+                    T = c.UseThreadSidebar.useSetting(),
+                    m = c.ViewImageDescriptions.useSetting(),
                     _ = c.ConvertEmoticons.useSetting(),
                     g = c.InlineAttachmentMedia.useSetting(),
                     h = c.InlineEmbedMedia.useSetting(),
@@ -54,7 +54,7 @@
                         children: E.default.Messages.INLINE_ATTACHMENT_MEDIA
                     }), (0, a.jsx)(i.FormSwitch, {
                         className: l(f.marginTop8, f.marginBottom20),
-                        value: T,
+                        value: m,
                         note: E.default.Messages.IMAGE_DESCRIPTION_HELP,
                         onChange: c.ViewImageDescriptions.updateSetting,
                         children: E.default.Messages.USER_SETTINGS_WITH_IMAGE_DESCRIPTIONS
@@ -139,7 +139,7 @@
                             children: E.default.Messages.THREADS
                         }), (0, a.jsx)(i.FormSwitch, {
                             className: f.marginTop8,
-                            value: m,
+                            value: T,
                             onChange: c.UseThreadSidebar.updateSetting,
                             children: E.default.Messages.USE_THREADS_SIDEBAR_DESCRIPTION
                         })]

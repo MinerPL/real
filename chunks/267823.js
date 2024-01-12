@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return T
+                    return m
                 }
             });
             var a = s("37983");
@@ -17,9 +17,9 @@
                 S = s("49111"),
                 E = s("782340"),
                 f = s("933661");
-            let m = (0, d.uid)();
+            let T = (0, d.uid)();
 
-            function T() {
+            function m() {
                 let e = (0, o.getAmplitudinalSoundboardVolume)();
                 return (0, a.jsxs)("div", {
                     className: l(f.soundboardRow),
@@ -39,7 +39,7 @@
                     }), (0, a.jsxs)("div", {
                         className: l(f.soundboardColumn, f.rightColumn),
                         children: [(0, a.jsx)(i.FormTitle, {
-                            id: m,
+                            id: T,
                             tag: i.FormTitleTags.H5,
                             className: f.soundboardSubtitle,
                             children: E.default.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME
@@ -50,7 +50,7 @@
                             asValueChanges: function(t) {
                                 e = (0, c.perceptualToAmplitude)(t), (0, r.updateUserSoundboardVolume)(e)
                             },
-                            "aria-labelledby": m
+                            "aria-labelledby": T
                         })]
                     })]
                 })

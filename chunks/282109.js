@@ -182,7 +182,7 @@
             }
 
             function W() {
-                return v && u.default.getCurrentConfig({
+                return v && u.NotificationsExperiment.getCurrentConfig({
                     location: "UserGuildSettingsStore"
                 }, {
                     autoTrackExposure: !1

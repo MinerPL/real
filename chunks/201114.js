@@ -17,8 +17,8 @@
                 S = s("145131"),
                 E = s("476765"),
                 f = s("773336"),
-                m = s("597870"),
-                T = s("49111"),
+                T = s("597870"),
+                m = s("49111"),
                 _ = s("782340"),
                 g = s("871940"),
                 h = s("926622");
@@ -29,7 +29,7 @@
                 let {
                     value: t
                 } = e;
-                t === T.InputModes.PUSH_TO_TALK && I && (0, r.openModalLazy)(async () => {
+                t === m.InputModes.PUSH_TO_TALK && I && (0, r.openModalLazy)(async () => {
                     let {
                         default: e
                     } = await s.el("135230").then(s.bind(s, "135230"));
@@ -37,7 +37,7 @@
                         title: _.default.Messages.PTT_LIMITED_TITLE,
                         confirmText: _.default.Messages.DOWNLOAD,
                         cancelText: _.default.Messages.OKAY,
-                        onConfirm: () => (0, m.openDownloadAppsModal)("PTT Limited Modal"),
+                        onConfirm: () => (0, T.openDownloadAppsModal)("PTT Limited Modal"),
                         body: _.default.Messages.PTT_LIMITED_BODY,
                         ...t
                     })
@@ -56,17 +56,17 @@
                         shortcut: n,
                         delay: E
                     } = (0, i.useStateFromStoresObject)([c.default], () => c.default.getModeOptions());
-                return t = f.isPlatformEmbedded || s !== T.InputModes.PUSH_TO_TALK ? (0, a.jsx)(r.FormText, {
+                return t = f.isPlatformEmbedded || s !== m.InputModes.PUSH_TO_TALK ? (0, a.jsx)(r.FormText, {
                     type: r.FormText.Types.DESCRIPTION,
                     className: l(g.pttToolsMessage, h.marginBottom8),
                     children: _.default.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({
-                        onClick: () => d.default.setSection(T.UserSettingsSections.KEYBINDS)
+                        onClick: () => d.default.setSection(m.UserSettingsSections.KEYBINDS)
                     })
                 }) : (0, a.jsx)(r.FormText, {
                     type: r.FormText.Types.DESCRIPTION,
                     className: l(g.pttToolsMessage, g.pttToolsWarning, h.marginBottom8),
                     children: _.default.Messages.PTT_LIMITED_WARNING.format({
-                        onDownloadClick: () => (0, m.openDownloadAppsModal)("Help Text PTT")
+                        onDownloadClick: () => (0, T.openDownloadAppsModal)("Help Text PTT")
                     })
                 }), (0, a.jsxs)("div", {
                     className: g.pttTools,
@@ -96,7 +96,7 @@
                                         delay: e
                                     }),
                                     onValueRender: C,
-                                    maxValue: T.MAX_PTT_RELEASE_DELAY,
+                                    maxValue: m.MAX_PTT_RELEASE_DELAY,
                                     "aria-labelledby": N
                                 })]
                             })
@@ -108,10 +108,10 @@
             function O() {
                 let e = (0, i.useStateFromStores)([c.default], () => c.default.getMode()),
                     t = [{
-                        value: T.InputModes.VOICE_ACTIVITY,
+                        value: m.InputModes.VOICE_ACTIVITY,
                         name: _.default.Messages.INPUT_MODE_VAD
                     }, {
-                        value: T.InputModes.PUSH_TO_TALK,
+                        value: m.InputModes.PUSH_TO_TALK,
                         name: I ? _.default.Messages.INPUT_MODE_PTT_LIMITED : _.default.Messages.INPUT_MODE_PTT
                     }];
                 return (0, a.jsxs)(a.Fragment, {
@@ -123,7 +123,7 @@
                             options: t,
                             value: e
                         })
-                    }), e === T.InputModes.PUSH_TO_TALK && (0, a.jsx)(A, {
+                    }), e === m.InputModes.PUSH_TO_TALK && (0, a.jsx)(A, {
                         inputMode: e
                     })]
                 })

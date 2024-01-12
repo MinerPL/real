@@ -16,8 +16,8 @@
                 S = s("629109"),
                 E = s("42887"),
                 f = s("476765"),
-                m = s("353927"),
-                T = s("782340"),
+                T = s("353927"),
+                m = s("782340"),
                 _ = s("675235"),
                 g = s("173791"),
                 h = s("926622");
@@ -33,15 +33,15 @@
                     isEnabled: O
                 } = (0, r.useStateFromStoresObject)([E.default], () => ({
                     inputMode: E.default.getMode(),
-                    automaticVADSupported: E.default.supports(m.Features.AUTOMATIC_VAD),
+                    automaticVADSupported: E.default.supports(T.Features.AUTOMATIC_VAD),
                     isEnabled: E.default.isEnabled()
                 }));
 
                 function x(e, s) {
-                    t(e), l((s & m.SpeakingFlags.VOICE) === m.SpeakingFlags.VOICE)
+                    t(e), l((s & T.SpeakingFlags.VOICE) === T.SpeakingFlags.VOICE)
                 }
 
-                function M(e, t) {
+                function R(e, t) {
                     S.default.setMode(C, {
                         threshold: e,
                         autoThreshold: t
@@ -55,12 +55,12 @@
                         E.default.getMediaEngine().removeListener(o.MediaEngineEvent.VoiceActivity, x), e.stop()
                     }
                 }, []);
-                let R = (0, a.jsx)("section", {
+                let M = (0, a.jsx)("section", {
                     className: i(_.inputSensitivityToggle, _.manual),
                     children: (0, a.jsx)(c.Slider, {
                         initialValue: N + 100,
                         onValueRender: e => "".concat((-((100 - e) * 1)).toFixed(0), "dB"),
-                        onValueChange: e => M(-((100 - e) * 1), p),
+                        onValueChange: e => R(-((100 - e) * 1), p),
                         barStyles: {
                             background: u.default.unsafe_rawColors.GREEN_360.css
                         },
@@ -81,7 +81,7 @@
                         })
                     })
                 });
-                return p && (R = (0, a.jsxs)("section", {
+                return p && (M = (0, a.jsxs)("section", {
                     className: _.inputSensitivityToggle,
                     children: [(0, a.jsx)("div", {
                         className: _.inputSensitivitySlider,
@@ -93,7 +93,7 @@
                     }), (0, a.jsx)(c.FormText, {
                         type: c.FormText.Types.DESCRIPTION,
                         className: h.marginBottom8,
-                        children: T.default.Messages.FORM_HELP_AUTOMATIC_VAD
+                        children: m.default.Messages.FORM_HELP_AUTOMATIC_VAD
                     })]
                 })), (0, a.jsxs)(c.FormItem, {
                     className: _.sensitivity,
@@ -101,7 +101,7 @@
                         id: I,
                         tag: c.FormTitleTags.H5,
                         className: h.marginBottom8,
-                        children: T.default.Messages.FORM_LABEL_INPUT_SENSITIVTY
+                        children: m.default.Messages.FORM_LABEL_INPUT_SENSITIVTY
                     }), (0, a.jsxs)("div", {
                         children: [A && (0, a.jsx)(f.UID, {
                             children: e => (0, a.jsxs)("div", {
@@ -111,19 +111,19 @@
                                     className: h.marginReset,
                                     children: (0, a.jsx)("label", {
                                         htmlFor: e,
-                                        children: T.default.Messages.FORM_LABEL_AUTOMATIC_VAD
+                                        children: m.default.Messages.FORM_LABEL_AUTOMATIC_VAD
                                     })
                                 }), (0, a.jsx)(c.Switch, {
                                     id: e,
                                     checked: p,
-                                    onChange: e => M(N, e)
+                                    onChange: e => R(N, e)
                                 })]
                             })
-                        }), R]
+                        }), M]
                     }), !O && (0, a.jsx)(c.FormText, {
                         type: c.FormText.Types.DESCRIPTION,
                         className: i(_.inputDisabledWarning, h.marginBottom8),
-                        children: T.default.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({
+                        children: m.default.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({
                             onEnableClick: S.default.enable
                         })
                     })]

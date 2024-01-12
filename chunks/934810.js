@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return R
+                    return M
                 }
             }), s("222007");
             var a = s("37983"),
@@ -16,8 +16,8 @@
                 S = s("235004"),
                 E = s("78581"),
                 f = s("675961"),
-                m = s("561847"),
-                T = s("555158"),
+                T = s("561847"),
+                m = s("555158"),
                 _ = s("216422"),
                 g = s("368121"),
                 h = s("701909"),
@@ -29,7 +29,7 @@
                 O = s("60351"),
                 x = s("926622");
 
-            function M(e) {
+            function R(e) {
                 return (0, l.useStateFromStores)([S.default], () => {
                     if (null == e) return null;
                     let {
@@ -40,18 +40,18 @@
                 })
             }
 
-            function R() {
+            function M() {
                 let {
                     analyticsLocations: e
-                } = (0, o.default)(), [t, s] = n.useState(C.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, f.useCustomJoinSound)(t), g = M(r), I = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), R = (null == r ? void 0 : r.type) === f.CustomSoundType.GLOBAL, L = I && null != r && null == g;
+                } = (0, o.default)(), [t, s] = n.useState(C.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, f.useCustomJoinSound)(t), g = R(r), I = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), M = (null == r ? void 0 : r.type) === f.CustomSoundType.GLOBAL, D = I && null != r && null == g;
                 n.useEffect(() => {
-                    L && (0, E.trackCustomCallSoundExternallyDeleted)({
+                    D && (0, E.trackCustomCallSoundExternallyDeleted)({
                         location: e
                     })
-                }, [L, e]), n.useEffect(() => {
+                }, [D, e]), n.useEffect(() => {
                     (0, c.maybeFetchSoundboardSounds)()
                 }, []);
-                let D = n.useCallback((e, t) => {
+                let L = n.useCallback((e, t) => {
                     var s;
                     let {
                         inDropdown: n
@@ -86,7 +86,7 @@
                             value: C.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID
                         },
                         onChange: e => s(null == e ? C.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID : e.id),
-                        renderOptionSuffix: D,
+                        renderOptionSuffix: L,
                         hideDivider: !0
                     }), (0, a.jsxs)(u.default, {
                         className: x.marginTop20,
@@ -96,15 +96,15 @@
                             })
                         }),
                         forcedDivider: !0,
-                        children: [(0, a.jsx)(m.default, {
+                        children: [(0, a.jsx)(T.default, {
                             sound: g,
-                            isGlobal: R,
+                            isGlobal: M,
                             onSelect: s => {
                                 null == s ? (0, E.removeCustomJoinSound)(t, e) : (0, E.updateCustomJoinSound)(t, s, e)
                             }
-                        }), L && (0, a.jsx)(T.default, {
+                        }), D && (0, a.jsx)(m.default, {
                             className: O.notice,
-                            messageType: T.HelpMessageTypes.WARNING,
+                            messageType: m.HelpMessageTypes.WARNING,
                             children: A.default.Messages.CALL_SOUNDS_SETTINGS_SOUND_REMOVED
                         })]
                     })]
@@ -117,7 +117,7 @@
                 } = e, s = (0, l.useStateFromStores)([I.default], () => {
                     var e, s, a;
                     return null === (a = I.default.settings.guilds) || void 0 === a ? void 0 : null === (s = a.guilds) || void 0 === s ? void 0 : null === (e = s[t]) || void 0 === e ? void 0 : e.joinSound
-                }), n = M(s);
+                }), n = R(s);
                 if (null == s || null == n) return null;
                 let {
                     emojiId: o,

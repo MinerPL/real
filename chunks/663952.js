@@ -16,8 +16,8 @@
                 S = s("913144"),
                 E = s("54239"),
                 f = s("376152"),
-                m = s("579565"),
-                T = s("778695"),
+                T = s("579565"),
+                m = s("778695"),
                 _ = s("298878"),
                 g = s("697218"),
                 h = s("888400"),
@@ -43,11 +43,11 @@
                 }, []);
                 let {
                     title: u,
-                    endDate: T,
+                    endDate: m,
                     dropsQuestId: _,
                     assets: g,
                     articleUrl: h
-                } = t, I = (0, m.getDropByQuestId)(_);
+                } = t, I = (0, T.getDropByQuestId)(_);
                 if (null == I) return null;
                 let C = () => {
                     (0, f.enrollDropsUser)(_).then(() => {
@@ -80,7 +80,7 @@
                                         color: "text-normal",
                                         className: p.availableUntil,
                                         children: N.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
-                                            endDate: o(T, "YYYY-MM-DD HH:mm").format("MMMM Do, YYYY")
+                                            endDate: o(m, "YYYY-MM-DD HH:mm").format("MMMM Do, YYYY")
                                         })
                                     })]
                                 })]
@@ -131,7 +131,7 @@
                     platform: l
                 } = e, [r, d] = n.useState(!1), u = void 0 !== s, S = (0, h.dateFormat)(o(t.endDate), "LL"), E = N.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
                     endDate: S
-                }), f = u ? N.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : N.default.Messages.PROMOTION_CARD_ACTION_CLAIM, m = n.useCallback(() => d(!1), []);
+                }), f = u ? N.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : N.default.Messages.PROMOTION_CARD_ACTION_CLAIM, T = n.useCallback(() => d(!1), []);
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsx)("div", {
                         className: i(p.skuCard, p.promotionCard),
@@ -165,14 +165,14 @@
                             })]
                         })
                     }), r && (0, a.jsx)(c.Modal, {
-                        renderModal: e => (0, a.jsx)(T.default, {
+                        renderModal: e => (0, a.jsx)(m.default, {
                             ...e,
-                            onClose: m,
+                            onClose: T,
                             code: s,
                             drop: t,
                             platform: l
                         }),
-                        onCloseRequest: m
+                        onCloseRequest: T
                     })]
                 })
             }
@@ -184,14 +184,14 @@
                 } = e, l = [], i = [], r = (0, u.default)([g.default], () => g.default.getCurrentUser()), d = !1;
                 if (null == n) return null;
                 for (let e of Object.keys(n)) {
-                    let t = (0, m.getDropByQuestId)(e);
+                    let t = (0, T.getDropByQuestId)(e);
                     if (null == t) continue;
                     let s = n[e],
-                        a = (0, m.getDropsPartnerGameNameByQuestId)(e);
+                        a = (0, T.getDropsPartnerGameNameByQuestId)(e);
                     if (null == a) continue;
-                    let u = (0, m.getEligibilityByRunningGameDetection)(a),
+                    let u = (0, T.getEligibilityByRunningGameDetection)(a),
                         c = s.eligible && u,
-                        S = (0, m.getDropsExperiment)(a);
+                        S = (0, T.getDropsExperiment)(a);
                     if (null == S) continue;
                     c && S.trackExposure({
                         location: "ENTITLEMENT_GIFTS"
@@ -208,9 +208,9 @@
                         }).dropsEnabled;
                     if (!f) continue;
                     d = !0;
-                    let T = o(t.endDate, C),
+                    let m = o(t.endDate, C),
                         _ = o();
-                    if (c && null == s.completed_at || null != s.enrolled_at && null == s.completed_at && s.eligible) _ < T && l.push({
+                    if (c && null == s.completed_at || null != s.enrolled_at && null == s.completed_at && s.eligible) _ < m && l.push({
                         dropsQuestId: e,
                         dropsStatus: s,
                         showUnenroll: E,
@@ -248,7 +248,7 @@
                     children: [S, (0, a.jsx)(c.FormDivider, {
                         className: p.divider
                     }), l.map(e => {
-                        let t = (0, m.getDropByQuestId)(e.dropsQuestId),
+                        let t = (0, T.getDropByQuestId)(e.dropsQuestId),
                             s = null != e.dropsStatus.enrolled_at,
                             n = null != e.dropsStatus.completed_at;
                         return null != t ? (0, a.jsxs)(a.Fragment, {
@@ -266,7 +266,7 @@
                         }) : null
                     }), i.map(e => {
                         var t, s;
-                        let n = (0, m.getDropByQuestId)(e.dropsQuestId);
+                        let n = (0, T.getDropByQuestId)(e.dropsQuestId);
                         return null != n ? (0, a.jsxs)(a.Fragment, {
                             children: [(0, a.jsx)(O, {
                                 drop: n,

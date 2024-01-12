@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return R
+                    return M
                 }
             }), s("424973");
             var a, n, l = s("37983");
@@ -15,8 +15,8 @@
                 S = s("533222"),
                 E = s("42887"),
                 f = s("145131"),
-                m = s("476765"),
-                T = s("599110"),
+                T = s("476765"),
+                m = s("599110"),
                 _ = s("701909"),
                 g = s("161778"),
                 h = s("49111"),
@@ -24,7 +24,7 @@
                 N = s("926622");
             let p = s("247431"),
                 C = s("529115"),
-                A = (0, m.uid)();
+                A = (0, T.uid)();
             (n = a || (a = {}))[n.NONE = 0] = "NONE", n[n.STANDARD = 1] = "STANDARD", n[n.KRISP = 2] = "KRISP";
             let O = {
                 page: h.AnalyticsPages.USER_SETTINGS,
@@ -33,7 +33,7 @@
 
             function x(e) {
                 let t = e.currentTarget;
-                T.default.track(h.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
+                m.default.track(h.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
                     text: t.text,
                     href: t.href,
                     location: {
@@ -43,7 +43,7 @@
                 })
             }
 
-            function M() {
+            function R() {
                 let e = (0, o.useStateFromStores)([g.default], () => g.default.theme),
                     {
                         noiseCancellation: t,
@@ -102,7 +102,7 @@
                 })
             }
 
-            function R() {
+            function M() {
                 let {
                     inputMode: e,
                     inputDeviceId: t,
@@ -122,14 +122,14 @@
                     advancedVoiceActivitySupported: E.default.isAdvancedVoiceActivitySupported(),
                     automaticGainControlSupported: E.default.isAutomaticGainControlSupported()
                 })), {
-                    hasEchoCancellation: m,
-                    hasNoiseSuppression: T,
+                    hasEchoCancellation: T,
+                    hasNoiseSuppression: m,
                     hasAutomaticGainControl: _
                 } = (0, o.useStateFromStoresObject)([S.default], () => ({
                     hasEchoCancellation: S.default.hasEchoCancellation(t),
                     hasNoiseSuppression: S.default.hasNoiseSuppression(t),
                     hasAutomaticGainControl: S.default.hasAutomaticGainControl(t)
-                }), [t]), g = m || T || _, p = e === h.InputModes.VOICE_ACTIVITY && n;
+                }), [t]), g = T || m || _, p = e === h.InputModes.VOICE_ACTIVITY && n;
                 return (0, l.jsxs)(u.FormSection, {
                     className: N.marginBottom20,
                     title: I.default.Messages.FORM_LABEL_VOICE_PROCESSING,
@@ -144,9 +144,9 @@
                             page: h.AnalyticsPages.USER_SETTINGS,
                             section: h.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
                         }),
-                        disabled: m,
+                        disabled: T,
                         children: I.default.Messages.ECHO_CANCELLATION
-                    }), (0, l.jsx)(M, {}), d && (0, l.jsx)(u.FormSwitch, {
+                    }), (0, l.jsx)(R, {}), d && (0, l.jsx)(u.FormSwitch, {
                         value: i,
                         onChange: t => c.default.setMode(e, {
                             vadUseKrisp: t

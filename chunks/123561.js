@@ -1,15 +1,15 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return W
+                    return X
                 }
             }), n("222007");
             var i = n("917351"),
                 o = n.n(i),
                 l = n("446674"),
                 a = n("913144"),
-                d = n("191225"),
-                u = n("848415"),
+                u = n("191225"),
+                d = n("848415"),
                 s = n("203288"),
                 E = n("398604"),
                 r = n("401690"),
@@ -21,20 +21,20 @@
                 S = n("816092"),
                 I = n("546463"),
                 f = n("957255"),
-                N = n("660478"),
-                O = n("18494"),
+                O = n("660478"),
+                N = n("18494"),
                 L = n("282109"),
                 D = n("449008"),
                 R = n("319839"),
                 p = n("397336");
             let h = null,
-                g = null,
-                G = new R.default;
+                G = null,
+                b = new R.default;
 
-            function b() {
-                let e = O.default.getChannelId(),
-                    t = O.default.getVoiceChannelId();
-                return h = e, g = t, G.clear()
+            function g() {
+                let e = N.default.getChannelId(),
+                    t = N.default.getVoiceChannelId();
+                return h = e, G = t, b.clear()
             }
 
             function M(e) {
@@ -43,7 +43,7 @@
                         id: t
                     }
                 } = e;
-                return G.clearGuildId(t)
+                return b.clearGuildId(t)
             }
 
             function P(e) {
@@ -52,87 +52,87 @@
                         guild_id: t
                     }
                 } = e;
-                return G.clearGuildId(t)
+                return b.clearGuildId(t)
             }
 
             function U(e) {
                 let {
                     guildId: t
                 } = e;
-                return G.clearGuildId(t)
+                return b.clearGuildId(t)
             }
 
             function m(e) {
                 let {
                     channelId: t
                 } = e;
-                return G.nonPositionalChannelIdUpdate(t)
+                return b.nonPositionalChannelIdUpdate(t)
             }
 
-            function y() {
-                return null != h && G.nonPositionalChannelIdUpdate(h)
+            function K() {
+                return null != h && b.nonPositionalChannelIdUpdate(h)
             }
 
-            function K(e) {
+            function y(e) {
                 let {
                     channel: t
                 } = e;
-                return G.nonPositionalChannelIdUpdate(t.id)
+                return b.nonPositionalChannelIdUpdate(t.id)
             }
 
             function H(e) {
                 let {
                     id: t
                 } = e;
-                return G.nonPositionalChannelIdUpdate(t)
+                return b.nonPositionalChannelIdUpdate(t)
             }
 
             function B() {
-                let e = O.default.getChannelId(),
-                    t = O.default.getVoiceChannelId(),
-                    n = h !== e || g !== t;
-                return !!n && (o([h, g, e, t]).uniq().forEach(e => {
-                    null != e && G.nonPositionalChannelIdUpdate(e) && (n = !0)
-                }), h = e, g = t, !0)
+                let e = N.default.getChannelId(),
+                    t = N.default.getVoiceChannelId(),
+                    n = h !== e || G !== t;
+                return !!n && (o([h, G, e, t]).uniq().forEach(e => {
+                    null != e && b.nonPositionalChannelIdUpdate(e) && (n = !0)
+                }), h = e, G = t, !0)
             }
 
             function V(e) {
                 let {
                     id: t
                 } = e, n = T.default.getChannel(t);
-                return null == n ? G.clearGuildId(t) : G.clearGuildId(n.guild_id)
+                return null == n ? b.clearGuildId(t) : b.clearGuildId(n.guild_id)
             }
 
-            function v(e) {
+            function F(e) {
                 let {
                     guildId: t
                 } = e;
-                return G.clearGuildId(t)
+                return b.clearGuildId(t)
             }
 
-            function F() {
-                return G.updateSubtitles()
+            function v() {
+                return b.updateSubtitles()
             }
 
             function Y(e) {
                 let {
                     guildScheduledEvent: t
                 } = e;
-                return G.updateSubtitles(t.guild_id)
+                return b.updateSubtitles(t.guild_id)
             }
             class w extends l.default.Store {
                 initialize() {
-                    this.waitFor(r.default, c.default, C.default, T.default, S.default, d.default, I.default, s.default, E.default, _.default, f.default, N.default, O.default, L.default, A.default, u.default)
+                    this.waitFor(r.default, c.default, C.default, T.default, S.default, u.default, I.default, s.default, E.default, _.default, f.default, O.default, N.default, L.default, A.default, d.default)
                 }
                 getGuild(e, t) {
-                    let n = G.getGuild(e, t);
+                    let n = b.getGuild(e, t);
                     return {
                         guildChannelsVersion: n.version,
                         guildChannels: n
                     }
                 }
                 getGuildWithoutChangingCommunityRows(e) {
-                    let t = G.getGuildWithoutCommunityRows(e);
+                    let t = b.getGuildWithoutCommunityRows(e);
                     return {
                         guildChannelsVersion: t.version,
                         guildChannels: t
@@ -140,19 +140,19 @@
                 }
                 recentsChannelCount(e) {
                     if (null == e) return 0;
-                    let t = G.getGuildWithoutCommunityRows(e),
+                    let t = b.getGuildWithoutCommunityRows(e),
                         n = t.getCategoryFromSection(t.recentsSectionNumber);
                     return n.getShownChannelIds().length
                 }
             }
             w.displayName = "ChannelListStore";
-            var W = new w(a.default, {
-                APPLICATION_FETCH_FAIL: F,
-                APPLICATION_FETCH_SUCCESS: F,
-                APPLICATION_FETCH: F,
-                APPLICATIONS_FETCH_FAIL: F,
-                APPLICATIONS_FETCH_SUCCESS: F,
-                APPLICATIONS_FETCH: F,
+            var X = new w(a.default, {
+                APPLICATION_FETCH_FAIL: v,
+                APPLICATION_FETCH_SUCCESS: v,
+                APPLICATION_FETCH: v,
+                APPLICATIONS_FETCH_FAIL: v,
+                APPLICATIONS_FETCH_SUCCESS: v,
+                APPLICATIONS_FETCH: v,
                 ASSISTANT_COMPLETE_ACTION: function(e) {
                     let {
                         kind: t,
@@ -160,13 +160,13 @@
                     } = e;
                     if ("openTextChannel" === t || "joinVoiceChannel" === t) {
                         let e = T.default.getChannel(n);
-                        return null != e && G.clearGuildId(e.guild_id)
+                        return null != e && b.clearGuildId(e.guild_id)
                     }
-                    return ("splashScreen" === t || "joinVoiceChannelMultitask" === t) && G.clear()
+                    return ("splashScreen" === t || "joinVoiceChannelMultitask" === t) && b.clear()
                 },
-                ASSISTANT_DISMISS: b,
-                ASSISTANT_REBUILD_ACTION_STACK: b,
-                BACKGROUND_SYNC: b,
+                ASSISTANT_DISMISS: g,
+                ASSISTANT_REBUILD_ACTION_STACK: g,
+                BACKGROUND_SYNC: g,
                 BULK_ACK: function(e) {
                     let {
                         channels: t
@@ -175,11 +175,11 @@
                         var t;
                         return null === (t = T.default.getChannel(e.channelId)) || void 0 === t ? void 0 : t.guild_id
                     }).filter(D.isNotNullish).uniq().forEach(e => {
-                        G.clearGuildId(e) && (n = !0)
+                        b.clearGuildId(e) && (n = !0)
                     }), n
                 },
                 BULK_CLEAR_RECENTS: U,
-                CACHE_LOADED_LAZY: b,
+                CACHE_LOADED_LAZY: g,
                 CATEGORY_COLLAPSE_ALL: U,
                 CATEGORY_COLLAPSE: V,
                 CATEGORY_EXPAND_ALL: U,
@@ -190,7 +190,7 @@
                     let {
                         channelId: n
                     } = e;
-                    return G.clearGuildId(null === (t = T.default.getChannel(n)) || void 0 === t ? void 0 : t.guild_id)
+                    return b.clearGuildId(null === (t = T.default.getChannel(n)) || void 0 === t ? void 0 : t.guild_id)
                 },
                 CHANNEL_CREATE: P,
                 CHANNEL_DELETE: P,
@@ -198,61 +198,61 @@
                 CHANNEL_RTC_UPDATE_CHAT_OPEN: m,
                 CHANNEL_SELECT: B,
                 CHANNEL_STATUSES: function(e) {
-                    return G.clearGuildId(e.guildId)
+                    return b.clearGuildId(e.guildId)
                 },
                 CHANNEL_UPDATES: function(e) {
                     let {
                         channels: t
                     } = e, n = !1;
                     return o(t).map(e => e.guild_id).uniq().forEach(e => {
-                        G.clearGuildId(e) && (n = !0)
+                        b.clearGuildId(e) && (n = !0)
                     }), n
                 },
-                CONNECTION_OPEN_SUPPLEMENTAL: F,
-                CONNECTION_OPEN: b,
-                CURRENT_USER_UPDATE: b,
-                DECAY_READ_STATES: b,
-                DEV_TOOLS_DESIGN_TOGGLE_SET: b,
+                CONNECTION_OPEN_SUPPLEMENTAL: v,
+                CONNECTION_OPEN: g,
+                CURRENT_USER_UPDATE: g,
+                DECAY_READ_STATES: g,
+                DEV_TOOLS_DESIGN_TOGGLE_SET: g,
                 DISABLE_AUTOMATIC_ACK: m,
                 DISMISS_FAVORITE_SUGGESTION: function(e) {
                     let {
                         channelId: t
                     } = e;
-                    return G.nonPositionalChannelIdUpdate(t)
+                    return b.nonPositionalChannelIdUpdate(t)
                 },
-                DRAWER_CLOSE: y,
-                DRAWER_OPEN: y,
+                DRAWER_CLOSE: K,
+                DRAWER_OPEN: K,
                 EMBEDDED_ACTIVITY_INBOUND_UPDATE: function(e) {
                     let {
                         guildId: t,
                         channelId: n
                     } = e;
-                    return G.updateSubtitles(t, n)
+                    return b.updateSubtitles(t, n)
                 },
                 EMBEDDED_ACTIVITY_LAUNCH_START: function(e) {
-                    F()
+                    v()
                 },
-                EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: F,
+                EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: v,
                 ENABLE_AUTOMATIC_ACK: m,
                 FETCH_GUILD_EVENTS_FOR_GUILD: function(e) {
                     let {
                         guildId: t
                     } = e;
-                    return G.updateSubtitles(t)
+                    return b.updateSubtitles(t)
                 },
-                GAMES_DATABASE_FETCH_FAIL: F,
-                GAMES_DATABASE_FETCH: F,
-                GAMES_DATABASE_UPDATE: F,
-                GUILD_APPLICATIONS_FETCH_SUCCESS: F,
+                GAMES_DATABASE_FETCH_FAIL: v,
+                GAMES_DATABASE_FETCH: v,
+                GAMES_DATABASE_UPDATE: v,
+                GUILD_APPLICATIONS_FETCH_SUCCESS: v,
                 GUILD_CREATE: M,
                 GUILD_DELETE: M,
-                GUILD_FEED_FETCH_SUCCESS: F,
+                GUILD_FEED_FETCH_SUCCESS: v,
                 GUILD_MEMBER_UPDATE: function(e) {
                     let {
                         guildId: t,
                         user: n
                     } = e;
-                    return c.default.getId() === n.id && G.clearGuildId(t)
+                    return c.default.getId() === n.id && b.clearGuildId(t)
                 },
                 GUILD_ROLE_CREATE: U,
                 GUILD_ROLE_DELETE: U,
@@ -272,35 +272,35 @@
                     let {
                         channelId: t
                     } = e;
-                    return G.nonPositionalChannelIdUpdate(t)
+                    return b.nonPositionalChannelIdUpdate(t)
                 },
                 MESSAGE_DELETE_BULK: m,
                 MESSAGE_DELETE: m,
-                NOTIFICATION_SETTINGS_UPDATE: b,
-                OVERLAY_INITIALIZE: b,
+                NOTIFICATION_SETTINGS_UPDATE: g,
+                OVERLAY_INITIALIZE: g,
                 PASSIVE_UPDATE_V1: function(e) {
-                    return null != e.channels && (G.clearGuildId(e.guildId), !0)
+                    return null != e.channels && (b.clearGuildId(e.guildId), !0)
                 },
-                RECOMPUTE_READ_STATES: b,
+                RECOMPUTE_READ_STATES: g,
                 RESORT_THREADS: m,
-                SET_RECENTLY_ACTIVE_COLLAPSED: b,
-                THREAD_CREATE: K,
+                SET_RECENTLY_ACTIVE_COLLAPSED: g,
+                THREAD_CREATE: y,
                 THREAD_DELETE: function(e) {
                     let {
                         channel: t
                     } = e;
-                    return G.nonPositionalChannelUpdate(t)
+                    return b.nonPositionalChannelUpdate(t)
                 },
                 THREAD_LIST_SYNC: U,
                 THREAD_MEMBER_UPDATE: H,
                 THREAD_MEMBERS_UPDATE: H,
-                THREAD_UPDATE: K,
+                THREAD_UPDATE: y,
                 UPDATE_CHANNEL_DIMENSIONS: m,
                 UPDATE_CHANNEL_LIST_SUBTITLES: function(e) {
                     let {
                         guildId: t
                     } = e;
-                    G.updateSubtitles(t)
+                    b.updateSubtitles(t)
                 },
                 USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: U,
                 USER_GUILD_SETTINGS_CHANNEL_UPDATE: U,
@@ -312,7 +312,7 @@
                         let {
                             guild_id: t
                         } = e;
-                        return G.clearGuildId(t)
+                        return b.clearGuildId(t)
                     })
                 },
                 USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: U,
@@ -327,14 +327,14 @@
                         o = !1;
                     return null != i && Object.keys(i).forEach(e => {
                         let t = i[e].guildRecentsDismissedAt;
-                        null != t && (o = G.updateRecentsCategory(e) || o)
+                        null != t && (o = b.updateRecentsCategory(e) || o)
                     }), o
                 },
-                VOICE_CATEGORY_COLLAPSE: v,
-                VOICE_CATEGORY_EXPAND: v,
+                VOICE_CATEGORY_COLLAPSE: F,
+                VOICE_CATEGORY_EXPAND: F,
                 VOICE_CHANNEL_SELECT: B,
                 VOICE_CHANNEL_STATUS_UPDATE: function(e) {
-                    return G.nonPositionalChannelIdUpdate(e.id)
+                    return b.nonPositionalChannelIdUpdate(e.id)
                 },
                 VOICE_STATE_UPDATES: function(e) {
                     let {
@@ -344,9 +344,9 @@
                             channelId: e,
                             oldChannelId: o
                         }
-                        of t) null != o && !i.has(o) && (G.nonPositionalChannelIdUpdate(o) && (n = !0), i.add(o)), null != e && !i.has(e) && (G.nonPositionalChannelIdUpdate(e) && (n = !0), i.add(e));
+                        of t) null != o && !i.has(o) && (b.nonPositionalChannelIdUpdate(o) && (n = !0), i.add(o)), null != e && !i.has(e) && (b.nonPositionalChannelIdUpdate(e) && (n = !0), i.add(e));
                     return n
                 },
-                WINDOW_FOCUS: y,
+                WINDOW_FOCUS: K,
                 TRY_ACK: m
             })

@@ -26,19 +26,19 @@
                     {
                         name: E,
                         description: f,
-                        hideDescriptionUntilUnlock: m,
-                        onAction: T
+                        hideDescriptionUntilUnlock: T,
+                        onAction: m
                     } = n,
-                    _ = m && !i,
+                    _ = T && !i,
                     g = i ? "header-primary" : "text-muted",
                     h = i ? "header-secondary" : "text-muted",
                     I = r(s),
-                    N = null != T && i,
+                    N = null != m && i,
                     p = N ? o.Clickable : "div";
                 return (0, a.jsxs)(p, {
                     className: l(S.container, N && S.actionable),
                     onClick: () => {
-                        N && T()
+                        N && m()
                     },
                     children: [(0, a.jsx)("div", {
                         className: S.iconContainer,

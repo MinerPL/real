@@ -5,8 +5,8 @@
                 }
             });
             var i, o, l, a = n("446674"),
-                d = n("913144"),
-                u = n("42203"),
+                u = n("913144"),
+                d = n("42203"),
                 s = n("476108"),
                 E = n("305961"),
                 r = n("18494"),
@@ -23,14 +23,14 @@
             }
             class T extends a.default.Store {
                 initialize() {
-                    this.waitFor(s.default, _.default, r.default, E.default, u.default)
+                    this.waitFor(s.default, _.default, r.default, E.default, d.default)
                 }
                 getHomeLink() {
                     return null != c ? c : s.default.fallbackRoute
                 }
             }
             T.displayName = "AppViewStore";
-            var S = new T(d.default, {
+            var S = new T(u.default, {
                 OVERLAY_INITIALIZE: function() {
                     let e = _.default.getPrivateChannelIds(),
                         t = r.default.getChannelId(A.ME);

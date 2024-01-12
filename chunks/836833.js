@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return T
+                    return m
                 }
             }), s("222007"), s("424973");
             var a = s("37983"),
@@ -16,7 +16,7 @@
                 S = s("414074"),
                 E = s("84908"),
                 f = s("926622");
-            class m extends n.Component {
+            class T extends n.Component {
                 renderTestCase(e, t, s, n, l) {
                     let r = null == t ? void 0 : t.summary;
                     return (0, a.jsxs)(o.FormText, {
@@ -112,7 +112,7 @@
                         d = this.props.testResults,
                         c = this.props.pings,
                         S = t ? u.default.stopSpeedTest : u.default.startSpeedTest,
-                        m = l >= E.SpeedTestLifecycles.AWAITING_ENDPOINT;
+                        T = l >= E.SpeedTestLifecycles.AWAITING_ENDPOINT;
                     return !1 === e ? (0, a.jsx)(o.FormSection, {
                         tag: o.FormTitleTags.H1,
                         title: "Speed Test",
@@ -131,7 +131,7 @@
                                     children: t ? "Stop Speed Test" : "Start Speed Test"
                                 })
                             })
-                        }), this.renderAwaitingEndpoint(m, l), this.renderConnect(m, l, n), this.renderPing(m, l, c), this.renderTestCases(m, s, i, d, r), this.renderUpload(m, l), this.renderComplete(m, l)]
+                        }), this.renderAwaitingEndpoint(T, l), this.renderConnect(T, l, n), this.renderPing(T, l, c), this.renderTestCases(T, s, i, d, r), this.renderUpload(T, l), this.renderComplete(T, l)]
                     })
                 }
                 constructor(...e) {
@@ -141,7 +141,7 @@
                 }
             }
 
-            function T() {
+            function m() {
                 let e = (0, r.useStateFromStoresObject)([c.default], () => ({
                         available: c.default.getAvailable(),
                         active: c.default.getActive(),
@@ -161,7 +161,7 @@
                     }, [t]);
                 return n.useEffect(() => (d.default.subscribe("RTC_SPEED_TEST_STATE_UPDATE", l), () => {
                     d.default.unsubscribe("RTC_SPEED_TEST_STATE_UPDATE", l)
-                }), [l]), (0, a.jsx)(m, {
+                }), [l]), (0, a.jsx)(T, {
                     ...e
                 })
             }

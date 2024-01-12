@@ -16,8 +16,8 @@
                 S = s("719923"),
                 E = s("560437"),
                 f = s("397723"),
-                m = s("717266"),
-                T = s("49111"),
+                T = s("717266"),
+                m = s("49111"),
                 _ = s("782340"),
                 g = s("152089");
 
@@ -34,7 +34,7 @@
                     className: g.unappliedGuildBoostSlot,
                     children: [(0, a.jsxs)("div", {
                         className: g.unappliedGuildBoostSlotContentPrimary,
-                        children: [(0, a.jsx)(m.default, {
+                        children: [(0, a.jsx)(T.default, {
                             className: g.unappliedGuildBoostSlotIcon,
                             hasCooldown: t.isOnCooldown(),
                             isCanceled: S,
@@ -100,7 +100,7 @@
             var p = function(e) {
                 let {
                     guildBoostSlots: t
-                } = e, f = (0, l.useStateFromStores)([u.default], () => u.default.getPremiumTypeSubscription()), m = (0, l.useStateFromStores)([r.default], () => r.default.useReducedMotion), p = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()), {
+                } = e, f = (0, l.useStateFromStores)([u.default], () => u.default.getPremiumTypeSubscription()), T = (0, l.useStateFromStores)([r.default], () => r.default.useReducedMotion), p = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()), {
                     appliedGuildBoostSlots: C,
                     unappliedGuildBoostSlots: A,
                     numActiveGuildBoostSlots: O
@@ -115,14 +115,14 @@
                         unappliedGuildBoostSlots: s,
                         numActiveGuildBoostSlots: a
                     }
-                }, [t]), x = null != f ? S.default.getNumIncludedPremiumGuildSubscriptionSlots(f.planId) : 0, M = Math.max(0, x - C.length), R = O > x, v = x === t.length, L = v && M === x ? x : 1, D = n.useMemo(() => {
+                }, [t]), x = null != f ? S.default.getNumIncludedPremiumGuildSubscriptionSlots(f.planId) : 0, R = Math.max(0, x - C.length), M = O > x, v = x === t.length, D = v && R === x ? x : 1, L = n.useMemo(() => {
                     let e = [];
-                    for (let t = 0; t < L; t++) e.push((0, a.jsx)(E.default, {
+                    for (let t = 0; t < D; t++) e.push((0, a.jsx)(E.default, {
                         className: g.headerBoostGem,
-                        useReducedMotion: m
+                        useReducedMotion: T
                     }, t));
                     return e
-                }, [L, m]), P = n.useMemo(() => A.find(e => e.isAvailable()), [A]);
+                }, [D, T]), P = n.useMemo(() => A.find(e => e.isAvailable()), [A]);
                 if (0 === A.length) return null;
                 let j = A.length;
                 return (0, a.jsxs)("div", {
@@ -140,7 +140,7 @@
                             className: g.headerContentPrimary,
                             children: [(0, a.jsx)("div", {
                                 className: g.headerBoostGems,
-                                children: D
+                                children: L
                             }), (0, a.jsxs)("div", {
                                 className: g.headerCopy,
                                 children: [(0, a.jsx)(i.Heading, {
@@ -187,7 +187,7 @@
                                             return s => (0, a.jsx)(t, {
                                                 ...s,
                                                 guildBoostSlots: [e],
-                                                locationSection: T.AnalyticsSections.SETTINGS_PREMIUM
+                                                locationSection: m.AnalyticsSections.SETTINGS_PREMIUM
                                             })
                                         })
                                     } : void 0,
@@ -199,11 +199,11 @@
                         className: g.unappliedBoostSlots,
                         children: A.map(e => (0, a.jsx)(h, {
                             guildBoostSlot: e,
-                            isCancellable: R,
+                            isCancellable: M,
                             onCancel: I,
                             onUncancel: N,
                             premiumSubscription: f,
-                            useReducedMotion: m
+                            useReducedMotion: T
                         }, e.id))
                     })]
                 })

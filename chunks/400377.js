@@ -17,10 +17,10 @@
                 S = s("268479");
             let E = (e, t, s) => s ? c.default.Messages.QUESTS_SHOW_CODE : e || t ? c.default.Messages.QUESTS_CLAIM_REWARD : c.default.Messages.QUESTS_ACCEPT,
                 f = (e, t) => e ? c.default.Messages.QUESTS_COMPLETE_TOOLTIP : t ? c.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : c.default.Messages.QUESTS_ACCEPT_TOOLTIP,
-                m = (e, t, s, a) => e || t || s ? () => {} : () => {
+                T = (e, t, s, a) => e || t || s ? () => {} : () => {
                     (0, o.enrollInQuest)(a)
                 },
-                T = e => {
+                m = e => {
                     let {
                         streamProgress: t,
                         streamDurationRequirement: s,
@@ -58,7 +58,7 @@
                 var t, s, n, l, o;
                 let {
                     quest: _
-                } = e, g = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, h = (null === (s = _.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null, I = (null === (n = _.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null, N = h && !I, p = h ? r.ButtonColors.BRAND_NEW : r.ButtonColors.GREEN, C = E(g, h, I), A = f(g, h), O = m(g, h, I, _.id), x = h && !g, M = (0, i.useStateFromStores)([d.default], () => d.default.isEnrolling(_.id));
+                } = e, g = (null === (t = _.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, h = (null === (s = _.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null, I = (null === (n = _.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null, N = h && !I, p = h ? r.ButtonColors.BRAND_NEW : r.ButtonColors.GREEN, C = E(g, h, I), A = f(g, h), O = T(g, h, I, _.id), x = h && !g, R = (0, i.useStateFromStores)([d.default], () => d.default.isEnrolling(_.id));
                 return (0, a.jsxs)("div", {
                     className: S.outerContainer,
                     children: [(0, a.jsx)("div", {
@@ -93,12 +93,12 @@
                                 children: (0, a.jsx)(r.Button, {
                                     color: p,
                                     disabled: x,
-                                    submitting: M,
+                                    submitting: R,
                                     onClick: O,
                                     children: C
                                 })
                             })]
-                        }), N && (0, a.jsx)(T, {
+                        }), N && (0, a.jsx)(m, {
                             streamProgress: null === (l = _.userStatus) || void 0 === l ? void 0 : l.streamProgressSeconds,
                             streamDurationRequirement: _.config.streamDurationRequirementMinutes,
                             isQuestComplete: (null === (o = _.userStatus) || void 0 === o ? void 0 : o.completedAt) != null

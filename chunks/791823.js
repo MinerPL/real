@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return d
+                    return u
                 }
             }), n("70102");
             var i = n("446674"),
@@ -22,7 +22,7 @@
                 }
             }
             a.displayName = "ApplicationStoreLocationStore";
-            var d = new a(o.default, {
+            var u = new a(o.default, {
                 APPLICATION_STORE_LOCATION_CHANGE: function(e) {
                     let {
                         location: t

@@ -1,20 +1,17 @@
             "use strict";
-            var a, n, l, i, r, o;
-            s.r(t), s.d(t, {
+            var a, i, s, l;
+            n.r(t), n.d(t, {
                 Mode: function() {
                     return a
                 },
-                Confidence: function() {
-                    return n
-                },
                 PainLevel: function() {
-                    return l
+                    return i
                 },
                 defaultThresholds: function() {
-                    return d
+                    return r
                 }
-            }), (i = a || (a = {}))[i.DontCare = 0] = "DontCare", i[i.CareALittle = 1] = "CareALittle", i[i.CareALot = 2] = "CareALot", (r = n || (n = {}))[r.High = 0] = "High", r[r.Low = 1] = "Low", (o = l || (l = {}))[o.Low = 0] = "Low", o[o.Medium = 1] = "Medium", o[o.High = 2] = "High";
-            let d = {
+            }), (s = a || (a = {}))[s.KeepAsIs = 0] = "KeepAsIs", s[s.UseGreyDot = 1] = "UseGreyDot", (l = i || (i = {}))[l.Low = 0] = "Low", l[l.Medium = 1] = "Medium", l[l.High = 2] = "High";
+            let r = {
                 careALot: {
                     monthOpenPerc: .01,
                     yearOpenPerc: .01,

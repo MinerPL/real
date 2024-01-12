@@ -1,11 +1,11 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return s
                 }
             });
-            var a = s("862205");
-            let n = (0, a.createExperiment)({
+            var a = n("862205");
+            let i = (0, a.createExperiment)({
                 id: "2023-12_quests",
                 kind: "user",
                 label: "Quests",
@@ -26,4 +26,4 @@
                     }
                 }]
             });
-            var r = n
+            var s = i

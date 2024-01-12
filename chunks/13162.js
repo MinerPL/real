@@ -13,10 +13,10 @@
                     return d
                 },
                 getPackMetadata: function() {
-                    return E
+                    return f
                 },
                 dismissPackAddedNotification: function() {
-                    return f
+                    return E
                 }
             });
             var r = n("872717"),
@@ -101,7 +101,7 @@
                     return
                 }
             }
-            async function E(t) {
+            async function f(t) {
                 let {
                     packId: e
                 } = t;
@@ -115,7 +115,7 @@
                 }
             }
 
-            function f() {
+            function E() {
                 i.default.dispatch({
                     type: "INVENTORY_DISMISS_PACK_ADDED_NOTIFICATION"
                 })

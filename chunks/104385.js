@@ -16,8 +16,8 @@
                 S = s("697218"),
                 E = s("599110"),
                 f = s("719923"),
-                m = s("21526"),
-                T = s("411691"),
+                T = s("21526"),
+                m = s("411691"),
                 _ = s("49111"),
                 g = s("646718"),
                 h = s("782340"),
@@ -102,12 +102,12 @@
                     let {
                         variation: t
                     } = e;
-                    return (0, r.match)(t).with(T.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => (0, a.jsx)(C, {})).with(T.CollectiblesShopMarketingVariants.MONSTER_DROP, () => (0, a.jsx)(p, {})).otherwise(() => (0, a.jsx)(N, {}))
+                    return (0, r.match)(t).with(m.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => (0, a.jsx)(C, {})).with(m.CollectiblesShopMarketingVariants.MONSTER_DROP, () => (0, a.jsx)(p, {})).otherwise(() => (0, a.jsx)(N, {}))
                 };
             var O = () => {
                 let {
                     analyticsLocations: e
-                } = (0, c.default)(u.default.COLLECTIBLES_PROFILE_SETTINGS_UPSELL), t = n.useRef(null), s = (0, T.default)("CollectiblesUpsellBanner"), l = (0, o.default)([S.default], () => S.default.getCurrentUser()), N = !f.default.canUseCollectibles(l);
+                } = (0, c.default)(u.default.COLLECTIBLES_PROFILE_SETTINGS_UPSELL), t = n.useRef(null), s = (0, m.default)("CollectiblesUpsellBanner"), l = (0, o.default)([S.default], () => S.default.getCurrentUser()), N = !f.default.canUseCollectibles(l);
                 return n.useEffect(() => {
                     E.default.track(_.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                         type: g.PremiumUpsellTypes.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
@@ -115,19 +115,19 @@
                     })
                 }, [e]), (0, a.jsxs)("div", {
                     ref: t,
-                    className: i(I.container, (0, r.match)(s).with(T.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => I.shopForAllWinterBackground).with(T.CollectiblesShopMarketingVariants.MONSTER_DROP, () => I.shopForAllBackgroundImage).otherwise(() => N ? I.shopForAllBackgroundImage : void 0)),
+                    className: i(I.container, (0, r.match)(s).with(m.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => I.shopForAllWinterBackground).with(m.CollectiblesShopMarketingVariants.MONSTER_DROP, () => I.shopForAllBackgroundImage).otherwise(() => N ? I.shopForAllBackgroundImage : void 0)),
                     children: [(0, a.jsx)(A, {
                         variation: s
                     }), (0, a.jsx)(d.Button, {
                         onClick: () => {
-                            (0, m.openCollectiblesShop)({
+                            (0, T.openCollectiblesShop)({
                                 analyticsLocations: e,
                                 analyticsSource: u.default.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
                             })
                         },
                         className: I.ctaButton,
                         look: d.Button.Looks.INVERTED,
-                        children: (0, r.match)(s).with(T.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => h.default.Messages.CHECK_IT_OUT).otherwise(() => h.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP)
+                        children: (0, r.match)(s).with(m.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => h.default.Messages.CHECK_IT_OUT).otherwise(() => h.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP)
                     })]
                 })
             }

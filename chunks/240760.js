@@ -19,12 +19,12 @@
                     [c.HypeSquadHouses.HOUSE_2]: E.membershipDialogHouse2,
                     [c.HypeSquadHouses.HOUSE_3]: E.membershipDialogHouse3
                 },
-                m = {
+                T = {
                     [c.HypeSquadHouses.HOUSE_1]: E.houseLogoHouse1,
                     [c.HypeSquadHouses.HOUSE_2]: E.houseLogoHouse2,
                     [c.HypeSquadHouses.HOUSE_3]: E.houseLogoHouse3
                 },
-                T = {
+                m = {
                     [c.HypeSquadHouses.HOUSE_1]: s("385622"),
                     [c.HypeSquadHouses.HOUSE_2]: s("178266"),
                     [c.HypeSquadHouses.HOUSE_3]: s("140090")
@@ -76,8 +76,8 @@
                                         shrink: 0,
                                         wrap: !0,
                                         children: (0, n.jsx)("img", {
-                                            className: r(E.houseLogo, m[e]),
-                                            src: T[e],
+                                            className: r(E.houseLogo, T[e]),
+                                            src: m[e],
                                             alt: t
                                         })
                                     })]

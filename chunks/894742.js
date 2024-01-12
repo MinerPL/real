@@ -5,8 +5,8 @@
                 }
             }), s("222007");
             var n = s("37983"),
-                l = s("884691"),
-                r = s("516555"),
+                r = s("884691"),
+                l = s("516555"),
                 i = s("812204"),
                 a = s("685665"),
                 u = s("635357"),
@@ -38,11 +38,11 @@
                 } = e, {
                     analyticsLocations: v,
                     AnalyticsLocationProvider: L
-                } = (0, a.default)([...R, i.default.COLLECTIBLES_PAYMENT_MODAL]), M = l.useRef(new r.Environment), [F, j] = l.useState(null), y = [f.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, p.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, E.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...f.SHARED_STEP_CONFIGS, f.REVIEW_STEP_CONFIG, {
+                } = (0, a.default)([...R, i.default.COLLECTIBLES_PAYMENT_MODAL]), F = r.useRef(new l.Environment), [M, j] = r.useState(null), y = [f.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, p.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, E.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...f.SHARED_STEP_CONFIGS, f.REVIEW_STEP_CONFIG, {
                     key: d.Step.CONFIRM,
                     renderStep: e => (0, n.jsx)(I.CollectiblesPaymentModalConfirmStep, {
                         ...e,
-                        confettiCanvas: F,
+                        confettiCanvas: M,
                         analyticsLocations: v
                     }),
                     options: {
@@ -51,10 +51,10 @@
                     }
                 }];
                 return (0, n.jsxs)(L, {
-                    children: [(0, n.jsx)(r.ConfettiCanvas, {
+                    children: [(0, n.jsx)(l.ConfettiCanvas, {
                         ref: j,
                         className: C.confettiCanvas,
-                        environment: M.current
+                        environment: F.current
                     }), (0, n.jsx)(o.PaymentContextProvider, {
                         stepConfigs: y,
                         applicationId: T.COLLECTIBLES_APPLICATION_ID,

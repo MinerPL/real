@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 ZOOM_IN: function() {
-                    return d
+                    return u
                 },
                 ZOOM_OUT: function() {
-                    return u
+                    return d
                 },
                 ZOOM_RESET: function() {
                     return s
@@ -20,12 +20,12 @@
             function a(e) {
                 return l.Accessibility.ZOOM_SCALES[Math.max(0, Math.min(l.Accessibility.ZOOM_SCALES.indexOf(o.default.zoom) + e, l.Accessibility.ZOOM_SCALES.length - 1))]
             }
-            let d = {
+            let u = {
                     binds: ["mod+plus"],
                     comboKeysBindGlobal: !0,
                     action: () => ((0, i.setZoom)(a(1)), !1)
                 },
-                u = {
+                d = {
                     binds: ["mod+minus"],
                     comboKeysBindGlobal: !0,
                     action: () => ((0, i.setZoom)(a(-1)), !1)
@@ -36,7 +36,7 @@
                     action: () => ((0, i.setZoom)(l.Accessibility.ZOOM_DEFAULT), !1)
                 };
             var E = {
-                ZOOM_IN: d,
-                ZOOM_OUT: u,
+                ZOOM_IN: u,
+                ZOOM_OUT: d,
                 ZOOM_RESET: s
             }

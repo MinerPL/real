@@ -16,8 +16,8 @@
                 S = s("374363"),
                 E = s("145131"),
                 f = s("810567"),
-                m = s("258078"),
-                T = s("674268"),
+                T = s("258078"),
+                m = s("674268"),
                 _ = s("585653"),
                 g = s("989691"),
                 h = s("862853"),
@@ -29,7 +29,7 @@
                     contents: t,
                     content: s,
                     onChange: n
-                } = e, l = (0, T.hasBit)(t, o.DismissibleContent[s]);
+                } = e, l = (0, m.hasBit)(t, o.DismissibleContent[s]);
                 return (0, a.jsx)(a.Fragment, {
                     children: (0, a.jsx)(u.FormSwitch, {
                         value: l,
@@ -37,7 +37,7 @@
                             n(s), l ? (0, c.removeDismissedContent)(o.DismissibleContent[s]) : (0, c.addDismissedContent)(o.DismissibleContent[s])
                         },
                         children: (0, a.jsx)(u.FormText, {
-                            size: m.default.Sizes.SIZE_16,
+                            size: T.default.Sizes.SIZE_16,
                             className: N.marginTop4,
                             children: "".concat(s.toLowerCase(), " (").concat(o.DismissibleContent[s], ")")
                         })
@@ -70,7 +70,7 @@
                         dailyCapReached: g.default.hasUserHitDCCap(),
                         dailyCapOverridden: g.default.dailyCapOverridden
                     })),
-                    [m, T] = n.useState(""),
+                    [T, m] = n.useState(""),
                     p = null !== (e = (0, r.useStateFromStores)([S.default], () => {
                         var e;
                         return null === (e = S.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
@@ -92,9 +92,9 @@
                             return a.unshift(e), a
                         })
                     },
-                    M = t.map(e => o.DismissibleContent[e]),
-                    R = A.filter(e => e.toLowerCase().includes(m.toLowerCase())).filter(e => !M.includes(e)),
-                    v = Object.keys(o.DismissibleContent).filter(e => !M.includes(e)).filter(e => !A.includes(e)).filter(e => e.toLowerCase().includes(m.toLowerCase())).sort((e, t) => e.localeCompare(t));
+                    R = t.map(e => o.DismissibleContent[e]),
+                    M = A.filter(e => e.toLowerCase().includes(T.toLowerCase())).filter(e => !R.includes(e)),
+                    v = Object.keys(o.DismissibleContent).filter(e => !R.includes(e)).filter(e => !A.includes(e)).filter(e => e.toLowerCase().includes(T.toLowerCase())).sort((e, t) => e.localeCompare(t));
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsxs)(u.FormSection, {
                         title: "Dismissible Content Fatigue",
@@ -124,9 +124,9 @@
                         children: [(0, a.jsx)(f.default, {
                             className: N.marginBottom20,
                             size: f.default.Sizes.LARGE,
-                            query: m,
-                            onChange: T,
-                            onClear: () => T("")
+                            query: T,
+                            onChange: m,
+                            onClear: () => m("")
                         }), (0, a.jsxs)(u.FormItem, {
                             className: I.buttonsContainer,
                             children: [(0, a.jsx)(u.Button, {
@@ -144,18 +144,18 @@
                                     children: "Recently Shown"
                                 })
                             }), (0, a.jsx)(C, {
-                                items: M,
+                                items: R,
                                 dismissedContents: p,
                                 handleChange: x
                             })]
-                        }) : null, R.length > 0 ? (0, a.jsxs)(a.Fragment, {
+                        }) : null, M.length > 0 ? (0, a.jsxs)(a.Fragment, {
                             children: [(0, a.jsx)("div", {
                                 className: N.marginBottom20,
                                 children: (0, a.jsx)(u.FormTitle, {
                                     children: "Recent Overrides"
                                 })
                             }), (0, a.jsx)(C, {
-                                items: R,
+                                items: M,
                                 dismissedContents: p,
                                 handleChange: x
                             })]

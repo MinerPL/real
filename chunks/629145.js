@@ -16,8 +16,8 @@
                 S = s("79112"),
                 E = s("145079"),
                 f = s("583227"),
-                m = s("426902"),
-                T = s("861370"),
+                T = s("426902"),
+                m = s("861370"),
                 _ = s("956967"),
                 g = s("878720"),
                 h = s("553257"),
@@ -28,27 +28,27 @@
                 A = s("106435"),
                 O = s("790618"),
                 x = s("697218"),
-                M = s("433487"),
-                R = s("423487"),
+                R = s("433487"),
+                M = s("423487"),
                 v = s("306160"),
-                L = s("158998"),
-                D = s("50885"),
+                D = s("158998"),
+                L = s("50885"),
                 P = s("845579"),
                 j = s("760947"),
                 b = s("49111"),
                 U = s("482931"),
-                y = s("935583"),
-                B = s("590456"),
+                B = s("935583"),
+                y = s("590456"),
                 F = s("782340"),
                 G = s("594129");
-            let k = D.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
+            let k = L.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
 
-            function w(e) {
+            function H(e) {
                 var t, l;
                 let {
                     className: r,
                     user: o
-                } = e, d = n.useRef(null), S = (0, h.usePomeloEligibility)(), E = (0, I.useIsEligibleForPomelo)(), f = (0, _.useGuildAutomodProfileQuarantineErrors)(), m = null !== (l = null == f ? void 0 : null === (t = f.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, T = null != d.current && d.current.scrollWidth > d.current.clientWidth, g = !o.isClaimed(), N = S && !o.isPomelo() && !o.hasVerifiedEmailOrPhone() || g, p = N ? F.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
+                } = e, d = n.useRef(null), S = (0, h.usePomeloEligibility)(), E = (0, I.useIsEligibleForPomelo)(), f = (0, _.useGuildAutomodProfileQuarantineErrors)(), T = null !== (l = null == f ? void 0 : null === (t = f.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, m = null != d.current && d.current.scrollWidth > d.current.clientWidth, g = !o.isClaimed(), N = S && !o.isPomelo() && !o.hasVerifiedEmailOrPhone() || g, p = N ? F.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
                 return (0, a.jsxs)("div", {
                     className: i(G.field, r),
                     children: [(0, a.jsx)("div", {
@@ -78,17 +78,17 @@
                         className: G.pomeloWarning,
                         children: (0, a.jsx)(c.Tooltip, {
                             text: F.default.Messages.ACTION_NEEDED,
-                            children: e => (0, a.jsx)(R.default, {
+                            children: e => (0, a.jsx)(M.default, {
                                 ...e,
                                 color: u.default.colors.STATUS_WARNING.css
                             })
                         })
-                    }), null != m && (0, a.jsx)("div", {
+                    }), null != T && (0, a.jsx)("div", {
                         className: G.pomeloWarning,
                         children: (0, a.jsx)(c.Tooltip, {
-                            text: m,
+                            text: T,
                             "aria-label": !1,
-                            children: e => (0, a.jsx)(R.default, {
+                            children: e => (0, a.jsx)(M.default, {
                                 ...e,
                                 color: u.default.colors.STATUS_WARNING.css
                             })
@@ -108,7 +108,7 @@
                                         default: e
                                     } = await s.el("892845").then(s.bind(s, "892845"));
                                     return t => (0, a.jsx)(e, {
-                                        source: y.PomeloEntrypoints.USER_SETTINGS_EDIT,
+                                        source: B.PomeloEntrypoints.USER_SETTINGS_EDIT,
                                         ...t
                                     })
                                 } {
@@ -120,18 +120,18 @@
                                     })
                                 }
                             }),
-                            children: T ? F.default.Messages.DISAPPROVAL : F.default.Messages.EDIT
+                            children: m ? F.default.Messages.DISAPPROVAL : F.default.Messages.EDIT
                         })
                     })]
                 })
             }
 
-            function H(e) {
+            function w(e) {
                 var t, s;
                 let {
                     user: n,
                     className: l
-                } = e, r = (0, _.useGuildAutomodProfileQuarantineErrors)(), o = null !== (s = null == r ? void 0 : null === (t = r.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, d = L.default.getGlobalName(n);
+                } = e, r = (0, _.useGuildAutomodProfileQuarantineErrors)(), o = null !== (s = null == r ? void 0 : null === (t = r.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, d = D.default.getGlobalName(n);
                 return (0, a.jsxs)("div", {
                     className: i(G.field, l),
                     children: [(0, a.jsx)("div", {
@@ -154,7 +154,7 @@
                         children: (0, a.jsx)(c.Tooltip, {
                             text: o,
                             "aria-label": !1,
-                            children: e => (0, a.jsx)(R.default, {
+                            children: e => (0, a.jsx)(M.default, {
                                 ...e,
                                 color: u.default.colors.STATUS_WARNING.css
                             })
@@ -238,7 +238,7 @@
                     buttonAriaLabel: F.default.Messages.CLAIM_ACCOUNT_SHORT,
                     buttonColor: c.Button.Colors.BRAND,
                     valueMessage: F.default.Messages.USER_SETTINGS_ADD_EMAIL_CLAIM,
-                    handleClick: () => m.default.openClaimAccountModal()
+                    handleClick: () => T.default.openClaimAccountModal()
                 };
                 return (0, a.jsxs)("div", {
                     className: i(G.field, n),
@@ -345,7 +345,7 @@
             function K(e) {
                 let {
                     user: t
-                } = e, s = (0, T.default)({
+                } = e, s = (0, m.default)({
                     id: t.id,
                     label: F.default.Messages.COPY_ID_USER
                 }), n = P.DeveloperMode.useSetting();
@@ -366,7 +366,7 @@
                         ...e,
                         className: G.overflowMenuButton,
                         "aria-label": F.default.Messages.ACTIONS,
-                        children: (0, a.jsx)(M.default, {
+                        children: (0, a.jsx)(R.default, {
                             className: G.overflowMenuIcon,
                             height: 24,
                             width: 24
@@ -403,7 +403,7 @@
                         user: t,
                         allowEdit: !1,
                         guildId: void 0,
-                        profileType: B.UserProfileTypes.SETTINGS
+                        profileType: y.UserProfileTypes.SETTINGS
                     }), (0, a.jsxs)("div", {
                         className: G.userInfo,
                         children: [(0, a.jsx)(k, {
@@ -442,10 +442,10 @@
                             children: i
                         }) : null, (0, a.jsxs)("div", {
                             className: G.fieldList,
-                            children: [(0, a.jsx)(H, {
+                            children: [(0, a.jsx)(w, {
                                 className: G.fieldSpacerBottom,
                                 user: t
-                            }), (0, a.jsx)(w, {
+                            }), (0, a.jsx)(H, {
                                 user: t
                             }), (0, a.jsx)(Y, {
                                 className: G.fieldSpacer,

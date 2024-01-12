@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 UserSettingsAppearanceClientThemes: function() {
-                    return R
+                    return M
                 },
                 ClientThemesSidebarButton: function() {
                     return v
@@ -19,8 +19,8 @@
                 S = s("714657"),
                 E = s("648114"),
                 f = s("10641"),
-                m = s("154889"),
-                T = s("917247"),
+                T = s("154889"),
+                m = s("917247"),
                 _ = s("956597"),
                 g = s("635956"),
                 h = s("632892"),
@@ -31,17 +31,17 @@
                 A = s("782340"),
                 O = s("415341"),
                 x = s("926622");
-            let M = () => {
+            let R = () => {
                     (0, f.markDismissibleContentAsDismissed)(i.DismissibleContent.CLIENT_THEMES_SPARKLE_PREVIEW, {
                         dismissAction: p.ContentDismissActionType.PRIMARY,
                         forceTrack: !0
                     }), (0, c.openEditor)(), (0, o.popLayer)()
                 },
-                R = () => {
+                M = () => {
                     var e, t;
                     let {
                         analyticsLocations: s
-                    } = (0, u.default)(d.default.USER_SETTINGS), i = (0, l.useStateFromStores)([S.default], () => S.default.isPreview), o = (null === (t = (0, T.usePremiumTrialOffer)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === C.PremiumSubscriptionSKUs.TIER_2, c = (0, m.usePremiumDiscountOffer)(), f = (0, m.discountOfferHasTier)(c, C.PremiumSubscriptionSKUs.TIER_2);
+                    } = (0, u.default)(d.default.USER_SETTINGS), i = (0, l.useStateFromStores)([S.default], () => S.default.isPreview), o = (null === (t = (0, m.usePremiumTrialOffer)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === C.PremiumSubscriptionSKUs.TIER_2, c = (0, T.usePremiumDiscountOffer)(), f = (0, T.discountOfferHasTier)(c, C.PremiumSubscriptionSKUs.TIER_2);
                     return n.useEffect(() => {
                         i && I.default.track(N.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                             type: C.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
@@ -62,7 +62,7 @@
                                         className: O.tryItOutButtons,
                                         children: [(0, a.jsx)(r.Button, {
                                             color: r.Button.Colors.PRIMARY,
-                                            onClick: () => M(),
+                                            onClick: () => R(),
                                             children: A.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
                                         }), (0, a.jsx)(g.default, {
                                             subscriptionTier: C.PremiumSubscriptionSKUs.TIER_2,
@@ -76,7 +76,7 @@
                                     children: [(0, a.jsx)(r.Button, {
                                         className: O.previewThemeButtonWide,
                                         color: r.Button.Colors.PRIMARY,
-                                        onClick: () => M(),
+                                        onClick: () => R(),
                                         children: A.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
                                     }), (0, a.jsx)("div", {
                                         className: O.premiumTier2Divider
@@ -95,7 +95,7 @@
                     let e = (0, l.useStateFromStores)([S.default], () => S.default.isPreview);
                     return e ? null : (0, a.jsx)(r.Button, {
                         size: r.ButtonSizes.SMALL,
-                        onClick: () => M(),
+                        onClick: () => R(),
                         children: A.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEMES_TITLE
                     })
                 }

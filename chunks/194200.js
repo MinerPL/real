@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return M
+                    return R
                 }
             });
             var a = s("37983");
@@ -17,8 +17,8 @@
                 S = s("278108"),
                 E = s("6193"),
                 f = s("999819"),
-                m = s("227602"),
-                T = s("860957"),
+                T = s("227602"),
+                m = s("860957"),
                 _ = s("901165"),
                 g = s("314892"),
                 h = s("599110");
@@ -33,17 +33,17 @@
                 var t;
                 let s = _.default.getNotificationPositionMode(),
                     a = s !== N.OverlayNotificationPositions.DISABLED,
-                    n = m.default.getOverlayKeybind(),
-                    l = m.default.getOverlayChatKeybind();
+                    n = T.default.getOverlayKeybind(),
+                    l = T.default.getOverlayChatKeybind();
                 return {
-                    enabled: T.default.enabled,
+                    enabled: m.default.enabled,
                     notifications_enabled: a,
                     notifications_position: a ? s : null,
                     text_notifications_mode: _.default.getTextChatNotificationMode(),
                     hotkey: null != n ? (0, I.toString)(n.shortcut) : null,
                     text_activation_hotkey: null != l ? (0, I.toString)(l.shortcut) : null,
                     text_opacity_slider: _.default.getTextWidgetOpacity(),
-                    old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : T.default.enabled
+                    old_enabled: null !== (t = null == e ? void 0 : e.enabled) && void 0 !== t ? t : m.default.enabled
                 }
             }
 
@@ -59,15 +59,15 @@
                 })
             }
 
-            function M() {
-                let e = (0, o.useStateFromStores)([T.default], () => T.default.enabled),
+            function R() {
+                let e = (0, o.useStateFromStores)([m.default], () => m.default.enabled),
                     {
                         avatarSizeMode: t,
                         displayNameMode: s,
                         displayUserMode: n,
                         notificationPositionMode: i,
                         textChatNotificationMode: I,
-                        shouldShowKeybindIndicators: M
+                        shouldShowKeybindIndicators: R
                     } = (0, o.useStateFromStoresObject)([_.default], () => ({
                         avatarSizeMode: _.default.getAvatarSizeMode(),
                         displayNameMode: _.default.getDisplayNameMode(),
@@ -76,13 +76,13 @@
                         textChatNotificationMode: _.default.getTextChatNotificationMode(),
                         shouldShowKeybindIndicators: _.default.showKeybindIndicators
                     })),
-                    R = (0, o.useStateFromStores)([m.default], () => m.default.getOverlayKeybind()),
+                    M = (0, o.useStateFromStores)([T.default], () => T.default.getOverlayKeybind()),
                     {
                         showKeybindIndicators: v
                     } = f.default.useExperiment({
                         location: "overlay_user_settings"
                     }),
-                    L = (0, E.isHookModuleTooOld)();
+                    D = (0, E.isHookModuleTooOld)();
                 return ! function() {
                     let e = O(A);
                     !r.isEqual(e, A) && (h.default.track(N.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, e), A = e)
@@ -98,8 +98,8 @@
                                 children: (0, a.jsx)(d.FormSwitch, {
                                     className: C.enableSwitch,
                                     value: e,
-                                    disabled: L,
-                                    note: L ? p.default.Messages.OVERLAY_DISABLED_OLD_CLIENT : null,
+                                    disabled: D,
+                                    note: D ? p.default.Messages.OVERLAY_DISABLED_OLD_CLIENT : null,
                                     hideBorder: !0,
                                     onChange: function(e) {
                                         c.default.setEnabled(e), h.default.track(N.AnalyticEvents.OVERLAY_TOGGLED, {
@@ -114,10 +114,10 @@
                                 className: C.enableOverlayItem,
                                 children: (0, a.jsx)(S.default, {
                                     disabled: !e,
-                                    defaultValue: null != R ? R.shortcut : [],
+                                    defaultValue: null != M ? M.shortcut : [],
                                     onChange: function(e) {
-                                        l(null != R, "Keybind should never be undefined"), u.default.setKeybind({
-                                            ...R,
+                                        l(null != M, "Keybind should never be undefined"), u.default.setKeybind({
+                                            ...M,
                                             shortcut: e
                                         })
                                     }
@@ -182,7 +182,7 @@
                             })
                         }), v && (0, a.jsx)(x, {
                             children: (0, a.jsx)(d.FormSwitch, {
-                                value: M,
+                                value: R,
                                 onChange: e => c.default.setShowKeybindIndicators(e),
                                 hideBorder: !0,
                                 children: p.default.Messages.FORM_LABEL_OVERLAY_SHOW_MUTE_DEAFEN_KEYBINDS

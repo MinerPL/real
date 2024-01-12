@@ -6,8 +6,8 @@
             });
             var n = s("37983");
             s("884691");
-            var l = s("627445"),
-                r = s.n(l),
+            var r = s("627445"),
+                l = s.n(r),
                 i = s("77078"),
                 a = s("642906"),
                 u = s("367767"),
@@ -20,12 +20,12 @@
                     handleClose: t
                 } = e, {
                     skusById: s,
-                    selectedSkuId: l,
+                    selectedSkuId: r,
                     application: f
                 } = (0, a.usePaymentContext)();
-                r(null != l, "Expected selectedSkuId"), r(null != f, "Expected application");
-                let S = s[l];
-                r(null != S, "Expected sku");
+                l(null != r, "Expected selectedSkuId"), l(null != f, "Expected application");
+                let S = s[r];
+                l(null != S, "Expected sku");
                 let E = d.default.Messages.APPLICATION_ADDON_PURCHASE_CONFIRMATION_BLURB.format({
                     applicationName: f.name,
                     itemName: S.name

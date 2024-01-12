@@ -1,203 +1,188 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return _
+                    return p
                 }
-            }), s("424973"), s("222007"), s("702976"), s("808653");
-            var a = s("917351"),
-                n = s.n(a),
-                l = s("233069"),
-                i = s("870691"),
-                r = s("42203"),
-                o = s("350522"),
-                d = s("319781"),
-                u = s("957255"),
-                c = s("282109"),
-                S = s("718517"),
-                E = s("568734"),
-                f = s("380353"),
-                m = s("49111"),
-                T = s("397336");
+            }), n("424973"), n("222007"), n("702976"), n("808653");
+            var a = n("917351"),
+                i = n.n(a),
+                s = n("233069"),
+                l = n("870691"),
+                r = n("42203"),
+                o = n("350522"),
+                u = n("319781"),
+                d = n("957255"),
+                c = n("282109"),
+                f = n("718517"),
+                m = n("568734"),
+                h = n("449008"),
+                g = n("380353"),
+                _ = n("49111"),
+                S = n("397336");
 
-            function _(e, t, s, a, E) {
-                var T;
-                let _ = [],
-                    N = null !== (T = s.filter(t => t.guild_id === e.id)[0]) && void 0 !== T ? T : {},
-                    p = Object.values(r.default.getMutableGuildChannelsForGuild(e.id)).filter(e => u.default.can(m.Permissions.VIEW_CHANNEL, e));
-                return _.push(... function(e, t, s) {
-                    let a = c.default.isMuted(t.id) && !c.default.isTemporarilyMuted(t.id);
-                    if (a) {
-                        if (e !== f.Mode.DontCare) {
-                            let e = [{
-                                    label: "Unmuting the guild and marking it as read",
-                                    apply: e => {
-                                        e.muted = !1, e.mute_config = null
-                                    },
-                                    needsMarkedAsRead: !0
-                                }],
-                                a = s.filter(e => c.default.getChannelMessageNotifications(t.id, e.id) === m.UserNotificationSettings.ALL_MESSAGES);
-                            return a.length > 0 && e.push({
-                                label: "Setting ".concat(a.length, " to mentions-only since they were all-messages and we are unmuting the guild"),
-                                debug: a.map(e => "\n    - #".concat(e.name)).join(""),
-                                apply: (e, t) => {
-                                    for (let s of a) h(e, t, s.id, e => {
-                                        e.message_notifications = m.UserNotificationSettings.ONLY_MENTIONS
-                                    })
-                                }
-                            }), e
+            function p(e, t, n, a, m) {
+                if (t !== g.Mode.UseGreyDot) return [{
+                    label: "Setting the guild to a white dot unread",
+                    apply: (e, t) => {
+                        E(e, t, !0)
+                    }
+                }];
+                let S = [],
+                    p = Object.values(r.default.getMutableGuildChannelsForGuild(e.id)).filter(e => d.default.can(_.Permissions.VIEW_CHANNEL, e));
+                return S.push(... function(e, t) {
+                    let n = c.default.isMuted(e.id) && !c.default.isTemporarilyMuted(e.id);
+                    if (!n) return [];
+                    let a = [{
+                            label: "Unmuting the guild and marking it as read",
+                            apply: e => {
+                                e.muted = !1, e.mute_config = null
+                            },
+                            needsMarkedAsRead: !0
+                        }],
+                        i = t.filter(t => c.default.getChannelMessageNotifications(e.id, t.id) === _.UserNotificationSettings.ALL_MESSAGES);
+                    return i.length > 0 && a.push({
+                        label: "Setting ".concat(i.length, " to mentions-only since they were all-messages and we are unmuting the guild"),
+                        debug: i.map(e => "\n    - #".concat(e.name)).join(""),
+                        apply: (e, t) => {
+                            for (let n of i) T(e, t, n.id, e => {
+                                e.message_notifications = _.UserNotificationSettings.ONLY_MENTIONS
+                            })
                         }
-                    } else if (e === f.Mode.DontCare) return [{
-                        label: "Muting the guild since you do not care about it.",
-                        apply: () => {}
-                    }];
-                    return []
-                }(t, e, p)), _.push(function(e, t) {
-                    let s = c.default.getMessageNotifications(t.id);
-                    if (e === f.Mode.CareALittle && s === m.UserNotificationSettings.ALL_MESSAGES) return {
+                    }), a
+                }(e, p)), S.push(function(e) {
+                    let t = c.default.getMessageNotifications(e.id);
+                    if (t === _.UserNotificationSettings.ALL_MESSAGES) return {
                         label: "Setting the guild to only mentions since it is in care-a-little but was previously all-messages",
                         apply: e => {
-                            e.message_notifications = m.UserNotificationSettings.ONLY_MENTIONS
+                            e.message_notifications = _.UserNotificationSettings.ONLY_MENTIONS
                         }
                     }
-                }(t, e)), _.push(function(e) {
-                    return e === f.Mode.CareALot ? {
-                        label: "Setting the guild to a white dot unread",
-                        apply: (e, t) => {
-                            g(e, t, !0)
-                        }
-                    } : {
+                }(e)), S.push(function() {
+                    return {
                         label: "Setting the guild to a grey dot unread",
                         apply: (e, t) => {
-                            g(e, t, !1)
+                            E(e, t, !1)
                         }
                     }
-                }(t)), _.push(... function(e, t) {
-                    let s = [];
-                    if (e === f.Mode.DontCare || e === f.Mode.CareALittle) {
-                        let [e, a] = n(t).filter(e => e.type === m.ChannelTypes.GUILD_ANNOUNCEMENT).partition(e => c.default.isChannelMuted(e.guild_id, e.id) || null != e.parent_id && c.default.isChannelMuted(e.guild_id, e.parent_id)).value();
-                        e.length > 0 && s.push({
-                            label: "Not touching ".concat(e.length, " announcement channels since they are muted"),
-                            debug: e.map(e => "\n    - #".concat(e.name)).join("")
-                        }), a.length > 0 && s.push({
-                            label: "Setting ".concat(a.length, " announcement channels to white-dot"),
-                            debug: a.map(e => "\n    - #".concat(e.name)).join(""),
-                            apply: (e, t) => {
-                                for (let s of a) I(e, t, s.id, !0)
-                            }
-                        })
-                    }
-                    return s
-                }(t, p)), _.push(... function(e) {
+                }()), S.push(... function(e) {
                     let t = [],
-                        s = [],
-                        a = [],
-                        n = [];
-                    for (let t of e)
-                        if (c.default.isChannelMuted(t.guild_id, t.id)) {
-                            if (t.isCategory()) {
-                                let e = i.default.isCollapsed(t.id);
-                                e ? s.push(t) : a.push(t)
-                            } else n.push(t)
-                        } return s.length > 0 && t.push({
-                        label: "Keeping ".concat(s.length, " categories muted since they are also collapsed"),
-                        debug: s.map(e => "\n    - #".concat(e.name)).join("")
+                        [n, a] = i(e).filter(e => e.type === _.ChannelTypes.GUILD_ANNOUNCEMENT).partition(e => c.default.isChannelMuted(e.guild_id, e.id) || null != e.parent_id && c.default.isChannelMuted(e.guild_id, e.parent_id)).value();
+                    return n.length > 0 && t.push({
+                        label: "Not touching ".concat(n.length, " announcement channels since they are muted"),
+                        debug: n.map(e => "\n    - #".concat(e.name)).join("")
                     }), a.length > 0 && t.push({
-                        label: "Unmuting ".concat(a.length, " categories and setting to grey-dot"),
+                        label: "Setting ".concat(a.length, " announcement channels to white-dot"),
                         debug: a.map(e => "\n    - #".concat(e.name)).join(""),
                         apply: (e, t) => {
-                            for (let s of a) I(e, t, s.id, !1)
+                            for (let n of a) v(e, t, n.id, !0)
                         }
-                    }), n.length > 0 && t.push({
-                        label: "Not unmuting ".concat(n.length, " individual channels becuse idk why")
                     }), t
-                }(p)), _.push(... function(e) {
+                }(p)), S.push(... function(e) {
                     let t = [],
-                        s = [],
+                        n = [];
+                    for (let t of e)
+                        if (c.default.isChannelMuted(t.guild_id, t.id) && t.isCategory()) {
+                            let e = l.default.isCollapsed(t.id);
+                            !e && n.push(t)
+                        } return n.length > 0 && t.push({
+                        label: "Unmuting ".concat(n.length, " categories and setting to grey-dot"),
+                        debug: n.map(e => "\n    - #".concat(e.name)).join(""),
+                        apply: (e, t) => {
+                            for (let a of n) v(e, t, a.id, !1), T(e, t, a.id, e => {
+                                e.muted = !1, e.mute_config = null
+                            })
+                        }
+                    }), t
+                }(p)), S.push(... function(e) {
+                    let t = [],
+                        n = [],
                         a = [];
                     return e.forEach(e => {
                         if (c.default.isChannelMuted(e.guild_id, e.id)) return;
                         let t = c.default.getChannelMessageNotifications(e.guild_id, e.id);
-                        t === m.UserNotificationSettings.ALL_MESSAGES ? s.push(e) : t === m.UserNotificationSettings.ONLY_MENTIONS && a.push(e)
-                    }), s.length > 0 && t.push({
-                        label: "Setting ".concat(s.length, " channels to white-dot since they were explicitly All Messages"),
-                        debug: s.map(e => "\n    - #".concat(e.name)).join(""),
+                        t === _.UserNotificationSettings.ALL_MESSAGES ? n.push(e) : t === _.UserNotificationSettings.ONLY_MENTIONS && a.push(e)
+                    }), n.length > 0 && t.push({
+                        label: "Setting ".concat(n.length, " channels to white-dot since they were explicitly All Messages"),
+                        debug: n.map(e => "\n    - #".concat(e.name)).join(""),
                         apply: (e, t) => {
-                            for (let a of s) I(e, t, a.id, !0)
+                            for (let a of n) v(e, t, a.id, !0)
                         }
                     }), a.length > 0 && t.push({
                         label: "Setting ".concat(a.length, " channels to grey-dot since they were explicitly Mentions Only"),
                         debug: a.map(e => "\n    - #".concat(e.name)).join(""),
                         apply: (e, t) => {
-                            for (let s of a) I(e, t, s.id, !1)
+                            for (let n of a) v(e, t, n.id, !1)
                         }
                     }), t
-                }(p)), o.default.hasConsented(m.Consents.PERSONALIZATION) ? _.push(... function(e, t, s, a, l) {
-                    if (e === f.Mode.CareALot) return [];
-                    let i = new Set(t.map(e => e.id)),
-                        r = a.filter(e => i.has(e.channel_id)),
-                        o = n.keyBy(r, "channel_id"),
-                        d = Math.max(s.messages === f.PainLevel.High ? l.frecency.yearMinOpensLargeServer : l.frecency.yearMinOpensSmallServer, r.reduce((e, t) => {
-                            var s;
-                            return e + Number(null !== (s = t.num_year_opens) && void 0 !== s ? s : 0)
-                        }, 0) * l.frecency.totalOpensPercent),
-                        u = Math.max(l.frecency.monthMinOpens, r.reduce((e, t) => {
-                            var s;
-                            return e + Number(null !== (s = t.num_three_month_opens) && void 0 !== s ? s : 0)
-                        }, 0) * l.frecency.totalOpensPercent),
-                        c = [],
-                        S = [];
+                }(p)), o.default.hasConsented(_.Consents.PERSONALIZATION) ? S.push(... function(e, t, n, a, s) {
+                    let l = c.default.isMuted(e.id) && !c.default.isTemporarilyMuted(e.id);
+                    if (l) return [];
+                    let r = new Set(t.map(e => e.id)),
+                        o = a.filter(e => r.has(e.channel_id)),
+                        u = i.keyBy(o, "channel_id"),
+                        d = Math.max(n.messages === g.PainLevel.High ? s.frecency.yearMinOpensLargeServer : s.frecency.yearMinOpensSmallServer, o.reduce((e, t) => {
+                            var n;
+                            return e + Number(null !== (n = t.num_year_opens) && void 0 !== n ? n : 0)
+                        }, 0) * s.frecency.totalOpensPercent),
+                        f = Math.max(s.frecency.monthMinOpens, o.reduce((e, t) => {
+                            var n;
+                            return e + Number(null !== (n = t.num_three_month_opens) && void 0 !== n ? n : 0)
+                        }, 0) * s.frecency.totalOpensPercent),
+                        m = [],
+                        h = [];
                     t.forEach(e => {
-                        var t, s, a, n;
-                        let l = null !== (t = o[e.id]) && void 0 !== t ? t : {};
-                        Number(null !== (s = l.num_year_opens) && void 0 !== s ? s : 0) > d || Number(null !== (a = l.num_month_opens) && void 0 !== a ? a : 0) > u ? c.push(e) : Number(null !== (n = l.num_three_month_opens) && void 0 !== n ? n : 0) > 2 && S.push(e)
+                        var t, n, a, i;
+                        let s = null !== (t = u[e.id]) && void 0 !== t ? t : {};
+                        Number(null !== (n = s.num_year_opens) && void 0 !== n ? n : 0) > d || Number(null !== (a = s.num_month_opens) && void 0 !== a ? a : 0) > f ? m.push(e) : Number(null !== (i = s.num_three_month_opens) && void 0 !== i ? i : 0) > 2 && h.push(e)
                     });
-                    let E = [];
-                    return c.length > 0 && E.push({
-                        label: "Setting ".concat(c.length, " channels to white-dot since they are recent and frequently viewed"),
-                        debug: c.map(e => "\n    - #".concat(e.name, " (").concat(JSON.stringify(o[e.id]), ")")).join(""),
+                    let _ = [];
+                    return m.length > 0 && _.push({
+                        label: "Setting ".concat(m.length, " channels to white-dot since they are recent and frequently viewed"),
+                        debug: m.map(e => "\n    - #".concat(e.name, " (").concat(JSON.stringify(u[e.id]), ")")).join(""),
                         apply: (e, t) => {
-                            for (let s of c) I(e, t, s.id, !0)
+                            for (let n of m) v(e, t, n.id, !0)
                         }
-                    }), S.length > 0 && E.push({
-                        label: "NOT setting ".concat(S.length, " channels to white-dot because they were only viewed a little."),
-                        debug: S.map(e => "\n    - #".concat(e.name, " (").concat(JSON.stringify(o[e.id]), ")")).join("")
-                    }), E
-                }(t, p, N, a, E)) : _.push(... function(e, t) {
-                    if (e === f.Mode.CareALot) return [];
-                    let s = [],
-                        a = new Set(t.map(e => e.id)),
-                        n = Date.now() - S.default.Millis.DAYS_30,
-                        i = d.default.getFrequentlyWithoutFetchingLatest().filter(e => e instanceof l.ChannelRecordBase && a.has(e.id)),
-                        r = i.filter(e => {
-                            var t, s;
-                            let a = null !== (s = null === (t = d.default.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === t ? void 0 : t.recentUses) && void 0 !== s ? s : [];
-                            return 0 !== a.length && a[a.length - 1] >= n
+                    }), h.length > 0 && _.push({
+                        label: "NOT setting ".concat(h.length, " channels to white-dot because they were only viewed a little."),
+                        debug: h.map(e => "\n    - #".concat(e.name, " (").concat(JSON.stringify(u[e.id]), ")")).join("")
+                    }), _
+                }(e, p, n, a, m)) : S.push(... function(e, t) {
+                    let n = c.default.isMuted(e.id) && !c.default.isTemporarilyMuted(e.id);
+                    if (n) return [];
+                    let a = [],
+                        i = new Set(t.map(e => e.id)),
+                        l = Date.now() - f.default.Millis.DAYS_30,
+                        r = u.default.getFrequentlyWithoutFetchingLatest().filter(e => e instanceof s.ChannelRecordBase && i.has(e.id)),
+                        o = r.filter(e => {
+                            var t, n;
+                            let a = null !== (n = null === (t = u.default.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === t ? void 0 : t.recentUses) && void 0 !== n ? n : [];
+                            return 0 !== a.length && a[a.length - 1] >= l
                         });
-                    return r.length > 0 && s.push({
-                        label: "Setting ".concat(r.length, " channels to white-dot since they are recent and frequently viewed"),
-                        debug: r.map(e => "\n    - #".concat(e.name)).join(""),
+                    return o.length > 0 && a.push({
+                        label: "Setting ".concat(o.length, " channels to white-dot since they are recent and frequently viewed"),
+                        debug: o.map(e => "\n    - #".concat(e.name)).join(""),
                         apply: (e, t) => {
-                            for (let s of r) I(e, t, s.id, !0)
+                            for (let n of o) v(e, t, n.id, !0)
                         }
-                    }), s
-                }(t, p)), _
+                    }), a
+                }(e, p)), S.filter(h.isNotNullish)
             }
 
-            function g(e, t, s) {
-                var a, n;
-                e.flags = (0, E.setFlag)(null !== (n = null !== (a = e.flags) && void 0 !== a ? a : t.flags) && void 0 !== n ? n : 0, T.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES, s), e.flags = (0, E.setFlag)(e.flags, T.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS, !s)
+            function E(e, t, n) {
+                var a, i;
+                e.flags = (0, m.setFlag)(null !== (i = null !== (a = e.flags) && void 0 !== a ? a : t.flags) && void 0 !== i ? i : 0, S.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES, n), e.flags = (0, m.setFlag)(e.flags, S.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS, !n)
             }
 
-            function h(e, t, s, a) {
-                var l, i, r, o;
-                let d = null !== (r = null === (l = e.channel_overrides) || void 0 === l ? void 0 : l[s]) && void 0 !== r ? r : {},
-                    u = null !== (o = null === (i = t.channel_overrides) || void 0 === i ? void 0 : i[s]) && void 0 !== o ? o : {};
-                a(d, u), !n.isEmpty(d) && (null == e.channel_overrides && (e.channel_overrides = {}), e.channel_overrides[s] = d)
+            function T(e, t, n, a) {
+                var s, l, r, o;
+                let u = null !== (r = null === (s = e.channel_overrides) || void 0 === s ? void 0 : s[n]) && void 0 !== r ? r : {},
+                    d = null !== (o = null === (l = t.channel_overrides) || void 0 === l ? void 0 : l[n]) && void 0 !== o ? o : {};
+                a(u, d), !i.isEmpty(u) && (null == e.channel_overrides && (e.channel_overrides = {}), e.channel_overrides[n] = u)
             }
 
-            function I(e, t, s, a) {
-                h(e, t, s, (e, t) => {
-                    var s, n;
-                    e.flags = (0, E.setFlag)(null !== (n = null !== (s = e.flags) && void 0 !== s ? s : t.flags) && void 0 !== n ? n : 0, T.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES, a), e.flags = (0, E.setFlag)(e.flags, T.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS, !a)
+            function v(e, t, n, a) {
+                T(e, t, n, (e, t) => {
+                    var n, i;
+                    e.flags = (0, m.setFlag)(null !== (i = null !== (n = e.flags) && void 0 !== n ? n : t.flags) && void 0 !== i ? i : 0, S.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES, a), e.flags = (0, m.setFlag)(e.flags, S.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS, !a)
                 })
             }

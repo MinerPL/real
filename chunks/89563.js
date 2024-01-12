@@ -17,9 +17,9 @@
                 S = s("49111"),
                 E = s("782340"),
                 f = s("852003"),
-                m = s("926622");
+                T = s("926622");
 
-            function T() {
+            function m() {
                 let e = c.ShowCurrentGame.useSetting(),
                     t = c.DefaultGuildsActivityRestricted.useSetting(),
                     s = u.isPlatformEmbedded ? E.default.Messages.SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED : E.default.Messages.SHOW_CURRENT_ACTIVITY_DESC,
@@ -43,10 +43,10 @@
                         }(e)
                     };
                 return (0, a.jsxs)(n.FormSection, {
-                    className: m.marginBottom40,
+                    className: T.marginBottom40,
                     children: [(0, a.jsx)(n.FormTitle, {
                         tag: n.FormTitleTags.H5,
-                        className: m.marginBottom8,
+                        className: T.marginBottom8,
                         children: E.default.Messages.ACTIVITY_STATUS
                     }), (0, a.jsx)(n.FormSwitch, {
                         value: e,
@@ -68,10 +68,10 @@
                 let e = c.AllowActivityPartyPrivacyFriends.useSetting(),
                     t = c.AllowActivityPartyPrivacyVoiceChannel.useSetting();
                 return (0, a.jsxs)(n.FormSection, {
-                    className: m.marginBottom40,
+                    className: T.marginBottom40,
                     children: [(0, a.jsx)(n.FormTitle, {
                         tag: n.FormTitleTags.H5,
-                        className: m.marginBottom8,
+                        className: T.marginBottom8,
                         children: E.default.Messages.ACTIVITY_PARTY_PRIVACY
                     }), (0, a.jsx)(n.FormSwitch, {
                         value: e,
@@ -89,16 +89,16 @@
 
             function g() {
                 return (0, a.jsxs)(n.FormSection, {
-                    className: m.marginBottom40,
+                    className: T.marginBottom40,
                     children: [(0, a.jsxs)(n.FormTitle, {
                         tag: n.FormTitleTags.H5,
-                        className: m.marginBottom8,
+                        className: T.marginBottom8,
                         children: [E.default.Messages.BROADCASTING_SETTINGS, (0, a.jsx)(i.default, {
                             className: f.betaTag
                         })]
                     }), (0, a.jsx)(n.FormText, {
                         type: n.FormText.Types.DESCRIPTION,
-                        className: m.marginBottom20,
+                        className: T.marginBottom20,
                         children: E.default.Messages.BROADCASTING_SETTINGS_DESCRIPTION
                     }), (0, a.jsx)(n.FormItem, {
                         children: (0, a.jsx)(n.Button, {
@@ -112,7 +112,7 @@
 
             function h() {
                 return (0, a.jsx)(n.FormSection, {
-                    className: m.marginBottom40,
+                    className: T.marginBottom40,
                     children: (0, a.jsx)(n.FormNotice, {
                         type: n.FormNotice.Types.PRIMARY,
                         body: E.default.Messages.USER_SETTINGS_PRIVACY_TERMS.format({
@@ -134,6 +134,6 @@
                 return (0, a.jsxs)(n.FormSection, {
                     tag: n.FormTitleTags.H1,
                     title: E.default.Messages.ACTIVITY_PRIVACY,
-                    children: [(0, a.jsx)(T, {}), (0, a.jsx)(_, {}), e && (0, a.jsx)(g, {}), (0, a.jsx)(h, {})]
+                    children: [(0, a.jsx)(m, {}), (0, a.jsx)(_, {}), e && (0, a.jsx)(g, {}), (0, a.jsx)(h, {})]
                 })
             }

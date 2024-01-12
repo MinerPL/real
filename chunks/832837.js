@@ -16,8 +16,8 @@
                 S = s("77078"),
                 E = s("913144"),
                 f = s("316718"),
-                m = s("79112"),
-                T = s("841098"),
+                T = s("79112"),
+                m = s("841098"),
                 _ = s("376152"),
                 g = s("243632"),
                 h = s("180273"),
@@ -28,11 +28,11 @@
                 A = s("437712"),
                 O = s("888400"),
                 x = s("659632"),
-                M = s("845579"),
-                R = s("943927"),
+                R = s("845579"),
+                M = s("943927"),
                 v = s("663952"),
-                L = s("49111"),
-                D = s("646718"),
+                D = s("49111"),
+                L = s("646718"),
                 P = s("782340"),
                 j = s("76836");
 
@@ -45,10 +45,10 @@
                     [o, d] = n.useState(!1),
                     [c, E] = n.useState(!1),
                     f = () => d(e => !e),
-                    m = (0, T.default)(),
-                    _ = (0, N.getPromotionImageURL)(s.id, m),
+                    T = (0, m.default)(),
+                    _ = (0, N.getPromotionImageURL)(s.id, T),
                     g = null != l,
-                    h = g ? (0, O.dateFormat)(u(s.endDate).add(D.OUTBOUND_PROMOTION_REDEMPTION_EXPIRATION_WINDOW), "LL") : (0, O.dateFormat)(u(s.endDate), "LL");
+                    h = g ? (0, O.dateFormat)(u(s.endDate).add(L.OUTBOUND_PROMOTION_REDEMPTION_EXPIRATION_WINDOW), "LL") : (0, O.dateFormat)(u(s.endDate), "LL");
                 g && o ? t = P.default.Messages.OUTBOUND_PROMOTION_CARD_CLAIMED_EXPANDED_BODY.format({
                     endDate: h,
                     onClickDetails: f
@@ -66,7 +66,7 @@
                     A = n.useCallback(() => E(!1), []),
                     {
                         outboundTitle: x,
-                        outboundTermsAndConditions: M
+                        outboundTermsAndConditions: R
                     } = s;
                 return (0, a.jsxs)(a.Fragment, {
                     children: [(0, a.jsxs)("div", {
@@ -104,7 +104,7 @@
                             className: j.promotionLegalese,
                             variant: "text-xs/normal",
                             color: "header-secondary",
-                            children: I.default.parse(M, !1, {
+                            children: I.default.parse(R, !1, {
                                 allowLinks: !0
                             })
                         })]
@@ -142,32 +142,32 @@
                         await (0, _.fetchDropsUserStatus)()
                     })
                 }, [u]);
-                let T = M.DropsOptedOut.useSetting(),
+                let m = R.DropsOptedOut.useSetting(),
                     I = null != d || !u,
                     {
                         promotionsLoaded: N,
                         activeOutboundPromotions: C,
                         claimedEndedOutboundPromotions: O,
                         claimedOutboundPromotionCodeMap: U,
-                        addClaimedOutboundPromotionCode: y
+                        addClaimedOutboundPromotionCode: B
                     } = (0, p.useOutboundPromotions)();
 
-                function B() {
-                    m.default.open(L.UserSettingsSections.PREMIUM)
+                function y() {
+                    T.default.open(D.UserSettingsSections.PREMIUM)
                 }
                 return i && N && I ? (0, a.jsxs)(a.Fragment, {
                     children: [u ? (0, a.jsx)(v.default, {
-                        dropsOptedOut: T,
+                        dropsOptedOut: m,
                         dropsStatuses: d
                     }) : null, function() {
                         var e;
-                        let t = s.find(e => e.giftCodeBatchId === D.BLACK_FRIDAY_2020_GIFT_CODE_BATCH_ID && !e.consumed),
-                            n = null !== (e = s.filter(e => e.giftCodeBatchId === D.STICKERS_GIFT_CODE_BATCH_ID && !e.consumed)) && void 0 !== e ? e : [],
+                        let t = s.find(e => e.giftCodeBatchId === L.BLACK_FRIDAY_2020_GIFT_CODE_BATCH_ID && !e.consumed),
+                            n = null !== (e = s.filter(e => e.giftCodeBatchId === L.STICKERS_GIFT_CODE_BATCH_ID && !e.consumed)) && void 0 !== e ? e : [],
                             [l, i] = o.partition(n, e => {
                                 let {
                                     subscriptionPlanId: t
                                 } = e;
-                                return t === D.SubscriptionPlans.PREMIUM_YEAR_TIER_2
+                                return t === L.SubscriptionPlans.PREMIUM_YEAR_TIER_2
                             }),
                             r = C.length + O.length > 0;
                         return (0, a.jsx)(S.FormSection, {
@@ -186,30 +186,30 @@
                                     return (0, a.jsx)(b, {
                                         outboundPromotion: s,
                                         code: t,
-                                        addClaimedOutboundPromotionCode: y
+                                        addClaimedOutboundPromotionCode: B
                                     }, s.id)
                                 }), C.map(e => (0, a.jsx)(b, {
                                     outboundPromotion: e,
                                     code: U[e.id],
-                                    addClaimedOutboundPromotionCode: y
-                                }, e.id)), null != t ? (0, a.jsx)(R.default, {
+                                    addClaimedOutboundPromotionCode: B
+                                }, e.id)), null != t ? (0, a.jsx)(M.default, {
                                     className: j.skuCard,
                                     skuId: t.skuId,
                                     subscriptionPlanId: t.subscriptionPlanId,
                                     entitlements: [t],
-                                    giftCodeBatchId: D.BLACK_FRIDAY_2020_GIFT_CODE_BATCH_ID
-                                }, (0, x.makeComboId)(t.skuId, t.subscriptionPlanId)) : null, l.length > 0 ? (0, a.jsx)(R.default, {
+                                    giftCodeBatchId: L.BLACK_FRIDAY_2020_GIFT_CODE_BATCH_ID
+                                }, (0, x.makeComboId)(t.skuId, t.subscriptionPlanId)) : null, l.length > 0 ? (0, a.jsx)(M.default, {
                                     className: j.skuCard,
                                     skuId: l[0].skuId,
                                     subscriptionPlanId: l[0].subscriptionPlanId,
                                     entitlements: l,
-                                    giftCodeBatchId: D.STICKERS_GIFT_CODE_BATCH_ID
-                                }, (0, x.makeComboId)(l[0].skuId, l[0].subscriptionPlanId)) : null, i.length > 0 ? (0, a.jsx)(R.default, {
+                                    giftCodeBatchId: L.STICKERS_GIFT_CODE_BATCH_ID
+                                }, (0, x.makeComboId)(l[0].skuId, l[0].subscriptionPlanId)) : null, i.length > 0 ? (0, a.jsx)(M.default, {
                                     className: j.skuCard,
                                     skuId: i[0].skuId,
                                     subscriptionPlanId: i[0].subscriptionPlanId,
                                     entitlements: i,
-                                    giftCodeBatchId: D.STICKERS_GIFT_CODE_BATCH_ID
+                                    giftCodeBatchId: L.STICKERS_GIFT_CODE_BATCH_ID
                                 }, (0, x.makeComboId)(i[0].skuId, i[0].subscriptionPlanId)) : null]
                             })
                         })
@@ -231,7 +231,7 @@
                                 }), (0, a.jsx)("p", {
                                     className: j.emptyStateSubtext,
                                     children: P.default.Messages.GIFT_INVENTORY_NO_GIFTS_SUBTEXT.format({
-                                        onClick: B
+                                        onClick: y
                                     })
                                 })]
                             }) : o.keys(l).map(e => {
@@ -240,7 +240,7 @@
                                     subscriptionPlanId: s,
                                     giftStyle: n
                                 } = (0, x.parseComboId)(e);
-                                return (0, a.jsx)(R.default, {
+                                return (0, a.jsx)(M.default, {
                                     className: j.skuCard,
                                     skuId: t,
                                     subscriptionPlanId: s,

@@ -16,8 +16,8 @@
                 S = s("427459"),
                 E = s("719923"),
                 f = s("299039"),
-                m = s("397723"),
-                T = s("717266"),
+                T = s("397723"),
+                m = s("717266"),
                 _ = s("131424"),
                 g = s("49111"),
                 h = s("646718"),
@@ -104,13 +104,13 @@
                     className: N.boostContainer,
                     children: [(0, a.jsxs)("div", {
                         className: N.boostInnerContainer,
-                        children: [(0, a.jsx)(T.default, {
+                        children: [(0, a.jsx)(m.default, {
                             isCanceled: C,
                             hasCooldown: h,
                             useReducedMotion: _
                         }), (0, a.jsx)("div", {
                             className: N.boostDescriptionContainer,
-                            children: null != g && h && !C ? (0, a.jsx)(m.default, {
+                            children: null != g && h && !C ? (0, a.jsx)(T.default, {
                                 className: N.boostDescriptionInnerContainer,
                                 cooldown: g.getTime()
                             }) : (0, a.jsx)(p, {

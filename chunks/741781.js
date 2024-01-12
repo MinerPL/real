@@ -16,8 +16,8 @@
                 S = s("790618"),
                 E = s("181114"),
                 f = s("599110"),
-                m = s("719923"),
-                T = s("906932"),
+                T = s("719923"),
+                m = s("906932"),
                 _ = s("570697"),
                 g = s("632892"),
                 h = s("49111"),
@@ -34,26 +34,26 @@
                     withTutorial: A = !1,
                     showBorder: O = !1,
                     isTryItOutFlow: x = !1,
-                    initialSelectedEffectId: M
-                } = e, R = (0, c.default)(t.id, null == s ? void 0 : s.id), v = m.default.canUsePremiumProfileCustomization(t), {
-                    analyticsLocations: L
+                    initialSelectedEffectId: R
+                } = e, M = (0, c.default)(t.id, null == s ? void 0 : s.id), v = T.default.canUsePremiumProfileCustomization(t), {
+                    analyticsLocations: D
                 } = (0, d.default)(), {
-                    pendingProfileEffectId: D,
+                    pendingProfileEffectId: L,
                     errors: P
                 } = (0, r.useStateFromStoresObject)([S.default], () => ({
                     pendingProfileEffectId: S.default.getPendingProfileEffectId(),
                     errors: S.default.getErrors().profileEffect
                 })), j = n.useCallback(() => (0, u.openProfileEffectModal)({
-                    analyticsLocations: L,
-                    initialSelectedEffectId: M
-                }), [L, M]);
+                    analyticsLocations: D,
+                    initialSelectedEffectId: R
+                }), [D, R]);
                 n.useEffect(() => {
                     v && f.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                         type: I.PremiumUpsellTypes.PROFILE_EFFECTS_INLINE_SETTINGS,
-                        location_stack: L
+                        location_stack: D
                     })
-                }, [v, L]);
-                let b = x || void 0 !== D ? null != D : (null == R ? void 0 : R.profileEffectId) != null,
+                }, [v, D]);
+                let b = x || void 0 !== L ? null != L : (null == M ? void 0 : M.profileEffectId) != null,
                     U = A ? E.default : o.Button;
                 return (0, a.jsx)(_.default, {
                     forcedDivider: C,
@@ -78,7 +78,7 @@
                             look: o.Button.Looks.LINK,
                             size: o.Button.Sizes.SMALL,
                             onClick: function() {
-                                (0, T.setNewPendingProfileEffectId)(null, null == R ? void 0 : R.profileEffectId)
+                                (0, m.setNewPendingProfileEffectId)(null, null == M ? void 0 : M.profileEffectId)
                             },
                             children: N.default.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
                         })]

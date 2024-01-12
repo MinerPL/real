@@ -16,12 +16,12 @@
                 S = s("162771"),
                 E = s("145131"),
                 f = s("409082"),
-                m = s("375822"),
-                T = s("782340"),
+                T = s("375822"),
+                m = s("782340"),
                 _ = s("279309");
 
             function g() {}
-            let h = [m.AutocompleterResultTypes.VOICE_CHANNEL];
+            let h = [T.AutocompleterResultTypes.VOICE_CHANNEL];
 
             function I(e) {
                 e.setOptions({
@@ -59,7 +59,7 @@
                         variant: "text-md/medium",
                         color: "text-muted",
                         className: _.noVoiceChannelSelected,
-                        children: T.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_NO_RESULTS_FOUND
+                        children: m.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_NO_RESULTS_FOUND
                     })
                 })
             }
@@ -84,13 +84,13 @@
                     }))
                 }, []);
                 return (0, a.jsx)(i.FormSection, {
-                    title: T.default.Messages.USER_SETTINGS_KEYBIND_SWITCH_SERVER_SETTINGS_SECTION,
+                    title: m.default.Messages.USER_SETTINGS_KEYBIND_SWITCH_SERVER_SETTINGS_SECTION,
                     className: _.channelIdSection,
                     children: (0, a.jsxs)(E.default, {
                         align: E.default.Align.STRETCH,
                         children: [(0, a.jsx)("div", {
                             className: _.selectedVoiceChannel,
-                            children: (0, a.jsx)(M, {
+                            children: (0, a.jsx)(R, {
                                 channelId: d
                             })
                         }), (0, a.jsx)(E.default.Child, {
@@ -98,7 +98,7 @@
                             shrink: 0,
                             children: (0, a.jsx)(i.Button, {
                                 onClick: c,
-                                children: T.default.Messages.USER_SETTINGS_KEYBINDS_SELECT_VOICE_CHANNEL
+                                children: m.default.Messages.USER_SETTINGS_KEYBINDS_SELECT_VOICE_CHANNEL
                             })
                         })]
                     })
@@ -128,14 +128,14 @@
                         disableMouseFocus: s
                     }
                 }(), {
-                    query: M,
-                    updateQuery: R,
+                    query: R,
+                    updateQuery: M,
                     queryResults: v
                 } = (0, o.default)({
                     visible: !0,
                     autocompleterResultTypes: h,
                     autocompleterBeforeCreateSearchContext: I
-                }), L = function(e) {
+                }), D = function(e) {
                     let t = "" !== e,
                         s = (0, l.useStateFromStoresArray)([u.default, d.default, S.default], () => {
                             let e = S.default.getGuildId();
@@ -148,8 +148,8 @@
                             return s
                         }, [t]);
                     return t ? null : s
-                }(M), {
-                    focusedIndex: D,
+                }(R), {
+                    focusedIndex: L,
                     setFocusedIndex: P
                 } = function(e) {
                     let [t, s] = n.useState(0), a = n.useRef(e);
@@ -157,24 +157,24 @@
                         focusedIndex: t,
                         setFocusedIndex: s
                     }
-                }(M);
+                }(R);
                 n.useEffect(() => {
                     let {
                         current: e
                     } = g;
-                    !(null == e || e.isItemVisible(0, D, !0)) && e.scrollToIndex({
+                    !(null == e || e.isItemVisible(0, L, !0)) && e.scrollToIndex({
                         section: 0,
-                        row: D
+                        row: L
                     })
-                }, [D]);
-                let j = null != L ? L.length : v.length,
+                }, [L]);
+                let j = null != D ? D.length : v.length,
                     b = (() => {
-                        if (null != L) {
+                        if (null != D) {
                             var e;
-                            return null === (e = L[D]) || void 0 === e ? void 0 : e.id
+                            return null === (e = D[L]) || void 0 === e ? void 0 : e.id
                         }
-                        let t = v[D];
-                        if ((null == t ? void 0 : t.type) === m.AutocompleterResultTypes.VOICE_CHANNEL) return t.record.id
+                        let t = v[L];
+                        if ((null == t ? void 0 : t.type) === T.AutocompleterResultTypes.VOICE_CHANNEL) return t.record.id
                     })();
                 return (0, a.jsx)("div", {
                     className: _.voiceModalContainer,
@@ -186,8 +186,8 @@
                         children: [(0, a.jsx)("div", {
                             className: _.inputWrapper,
                             children: (0, a.jsx)(i.TextInput, {
-                                value: M,
-                                onChange: R,
+                                value: R,
+                                onChange: M,
                                 onKeyDown: function(e) {
                                     x();
                                     let t = e.key.toLowerCase();
@@ -197,21 +197,21 @@
                                             break;
                                         case "enter": {
                                             let e = (() => {
-                                                if (null != L) return L[D];
-                                                let e = v[D];
-                                                if ((null == e ? void 0 : e.type) === m.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
+                                                if (null != D) return D[L];
+                                                let e = v[L];
+                                                if ((null == e ? void 0 : e.type) === T.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
                                             })();
                                             null == e ? r(void 0) : r(e.id), s();
                                             break
                                         }
                                         case "arrowup":
-                                            0 === D ? P(j - 1) : P(D - 1);
+                                            0 === L ? P(j - 1) : P(L - 1);
                                             break;
                                         case "arrowdown":
-                                            D >= j - 1 ? P(0) : P(D + 1)
+                                            L >= j - 1 ? P(0) : P(L + 1)
                                     }
                                 },
-                                placeholder: T.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
+                                placeholder: m.default.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
                                 role: "combobox",
                                 "aria-controls": E,
                                 "aria-expanded": j > 0,
@@ -219,19 +219,19 @@
                                 "aria-autocomplete": "list",
                                 spellCheck: !1
                             })
-                        }), 0 === j && "" !== M && (0, a.jsx)(A, {}), (j > 0 || "" === M) && (0, a.jsx)(i.ListThin, {
+                        }), 0 === j && "" !== R && (0, a.jsx)(A, {}), (j > 0 || "" === R) && (0, a.jsx)(i.ListThin, {
                             innerId: E,
                             innerRole: "listbox",
-                            "aria-label": T.default.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
+                            "aria-label": m.default.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
                             ref: g,
                             sections: [j],
                             renderRow: function(e) {
                                 let {
                                     row: t
                                 } = e, n = (() => {
-                                    if (null != L) return L[t];
+                                    if (null != D) return D[t];
                                     let e = v[t];
-                                    if ((null == e ? void 0 : e.type) === m.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
+                                    if ((null == e ? void 0 : e.type) === T.AutocompleterResultTypes.VOICE_CHANNEL) return e.record
                                 })();
                                 if (null == n) return null;
                                 let l = null != n.parent_id ? d.default.getChannel(n.parent_id) : void 0,
@@ -240,7 +240,7 @@
                                     id: n.id,
                                     channel: n,
                                     category: l,
-                                    focused: D === t,
+                                    focused: L === t,
                                     onMouseEnter: () => N.current && P(t),
                                     onClick: () => {
                                         r(n.id), s()
@@ -264,7 +264,7 @@
                 })
             }
 
-            function M(e) {
+            function R(e) {
                 let {
                     channelId: t
                 } = e, {
@@ -287,7 +287,7 @@
                     variant: "text-md/medium",
                     color: "text-muted",
                     className: _.noVoiceChannelSelected,
-                    children: T.default.Messages.USER_SETTINGS_KEYBINDS_NO_VOICE_CHANNEL_SELECTED
+                    children: m.default.Messages.USER_SETTINGS_KEYBINDS_NO_VOICE_CHANNEL_SELECTED
                 }) : (0, a.jsx)(f.Channel, {
                     channel: s,
                     id: s.id,

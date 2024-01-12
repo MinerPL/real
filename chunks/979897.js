@@ -42,9 +42,9 @@
                                 type: e.type
                             }) : e
                         },
-                        m = function(t, d, m) {
-                            !m && (t = f(t));
-                            var T, _, g = this,
+                        T = function(t, d, T) {
+                            !T && (t = f(t));
+                            var m, _, g = this,
                                 h = t.type,
                                 I = !1,
                                 N = function() {
@@ -58,7 +58,7 @@
                                             _.location.href = "data:attachment/file" + e.slice(e.search(/[,;]/)), g.readyState = g.DONE, N()
                                         }, a.readAsDataURL(t), g.readyState = g.INIT;
                                         return
-                                    }(I || !T) && (T = s().createObjectURL(t)), _ ? _.location.href = T : void 0 === e.open(T, "_blank") && i && (e.location.href = T), g.readyState = g.DONE, N(), S(T)
+                                    }(I || !m) && (m = s().createObjectURL(t)), _ ? _.location.href = m : void 0 === e.open(m, "_blank") && i && (e.location.href = m), g.readyState = g.DONE, N(), S(m)
                                 },
                                 C = function(e) {
                                     return function() {
@@ -70,8 +70,8 @@
                                     exclusive: !1
                                 };
                             if (g.readyState = g.INIT, !d && (d = "download"), n) {
-                                T = s().createObjectURL(t), setTimeout(function() {
-                                    a.href = T, a.download = d, l(a), N(), S(T), g.readyState = g.DONE
+                                m = s().createObjectURL(t), setTimeout(function() {
+                                    a.href = m, a.download = d, l(a), N(), S(m), g.readyState = g.DONE
                                 });
                                 return
                             }
@@ -107,13 +107,13 @@
                                 }), p)
                             }), p)
                         },
-                        T = m.prototype;
+                        m = T.prototype;
                     return "undefined" != typeof navigator && navigator.msSaveOrOpenBlob ? function(e, t, s) {
                         return !s && (e = f(e)), navigator.msSaveOrOpenBlob(e, t || "download")
-                    } : (T.abort = function() {
+                    } : (m.abort = function() {
                         this.readyState = this.DONE, E(this, "abort")
-                    }, T.readyState = T.INIT = 0, T.WRITING = 1, T.DONE = 2, T.error = T.onwritestart = T.onprogress = T.onwrite = T.onabort = T.onerror = T.onwriteend = null, function(e, t, s) {
-                        return new m(e, t, s)
+                    }, m.readyState = m.INIT = 0, m.WRITING = 1, m.DONE = 2, m.error = m.onwritestart = m.onprogress = m.onwrite = m.onabort = m.onerror = m.onwriteend = null, function(e, t, s) {
+                        return new T(e, t, s)
                     })
                 }
             }("undefined" != typeof self && self || "undefined" != typeof window && window || this.content);

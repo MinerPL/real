@@ -21,13 +21,13 @@
                     savedUserColor: c,
                     pendingColor: S,
                     setPendingAccentColor: E
-                } = e, f = s.getAvatarURL(null, 80), m = (0, i.useToken)(l.default.unsafe_rawColors.PRIMARY_530).hex(), T = (0, r.useAvatarColors)(f, m, !1), _ = (0, n.hex2int)(T[0]);
+                } = e, f = s.getAvatarURL(null, 80), T = (0, i.useToken)(l.default.unsafe_rawColors.PRIMARY_530).hex(), m = (0, r.useAvatarColors)(f, T, !1), _ = (0, n.hex2int)(m[0]);
                 return (0, a.jsx)(d.default, {
                     title: u.default.Messages.USER_SETTINGS_BANNER_COLOR_TITLE,
                     children: (0, a.jsx)(o.default, {
                         onChange: e => E(e),
                         color: null !== (t = null != S ? S : c) && void 0 !== t ? t : _,
-                        suggestedColors: T,
+                        suggestedColors: m,
                         showEyeDropper: !0
                     })
                 })

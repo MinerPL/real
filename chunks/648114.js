@@ -1,278 +1,278 @@
             "use strict";
-            s.r(t), s.d(t, {
+            n.r(t), n.d(t, {
                 ThemeSelectionGroupType: function() {
                     return a
                 },
                 trackClientThemeUpdated: function() {
-                    return Q
+                    return H
                 },
                 default: function() {
-                    return K
+                    return q
                 }
-            }), s("794252"), s("222007");
-            var a, n, r = s("37983"),
-                i = s("884691"),
-                l = s("414456"),
-                u = s.n(l),
-                d = s("506838"),
-                c = s("446674"),
-                o = s("151426"),
-                E = s("819855"),
-                T = s("77078"),
-                _ = s("452804"),
-                S = s("206230"),
-                m = s("812204"),
-                f = s("685665"),
-                h = s("626301"),
-                I = s("917247"),
-                p = s("956597"),
-                N = s("891653"),
-                R = s("505093"),
-                C = s("161778"),
-                g = s("168973"),
-                v = s("491605"),
-                x = s("476765"),
-                A = s("599110"),
-                P = s("32531"),
-                U = s("714657"),
-                y = s("164546"),
-                O = s("941719"),
-                D = s("49111"),
-                w = s("646718"),
-                M = s("116319"),
-                G = s("397336"),
-                L = s("843455"),
-                j = s("782340"),
-                H = s("809404");
-            (n = a || (a = {})).EDITOR = "EDITOR", n.SETTINGS = "SETTINGS";
-            let k = Object.freeze({
-                    EDITOR: G.UserSettingsDelay.SLOW_USER_ACTION,
-                    SETTINGS: G.UserSettingsDelay.INFREQUENT_USER_ACTION
+            }), n("794252"), n("222007");
+            var a, i, s = n("37983"),
+                l = n("884691"),
+                r = n("414456"),
+                o = n.n(r),
+                u = n("506838"),
+                d = n("446674"),
+                c = n("151426"),
+                f = n("819855"),
+                m = n("77078"),
+                h = n("452804"),
+                g = n("206230"),
+                _ = n("812204"),
+                S = n("685665"),
+                p = n("626301"),
+                E = n("917247"),
+                T = n("956597"),
+                v = n("891653"),
+                N = n("505093"),
+                y = n("161778"),
+                I = n("168973"),
+                C = n("491605"),
+                A = n("476765"),
+                O = n("599110"),
+                R = n("32531"),
+                M = n("714657"),
+                b = n("164546"),
+                w = n("941719"),
+                P = n("49111"),
+                U = n("646718"),
+                x = n("116319"),
+                D = n("397336"),
+                L = n("843455"),
+                G = n("782340"),
+                k = n("809404");
+            (i = a || (a = {})).EDITOR = "EDITOR", i.SETTINGS = "SETTINGS";
+            let j = Object.freeze({
+                    EDITOR: D.UserSettingsDelay.SLOW_USER_ACTION,
+                    SETTINGS: D.UserSettingsDelay.INFREQUENT_USER_ACTION
                 }),
-                b = i.createContext({}),
-                Q = e => {
+                F = l.createContext({}),
+                H = e => {
                     let {
                         isPersisted: t,
-                        themeName: s,
+                        themeName: n,
                         analyticsLocations: a
                     } = e;
-                    A.default.track(D.AnalyticEvents.CLIENT_THEME_UPDATED, {
-                        feature_name: w.AnalyticsPremiumFeatureNames.CLIENT_THEME,
-                        theme_name: s,
+                    O.default.track(P.AnalyticEvents.CLIENT_THEME_UPDATED, {
+                        feature_name: U.AnalyticsPremiumFeatureNames.CLIENT_THEME,
+                        theme_name: n,
                         is_persisted: t,
                         location_stack: a
                     })
                 },
-                F = e => {
+                B = e => {
                     let {
                         type: t,
-                        isPreview: s,
+                        isPreview: n,
                         isCoachmark: a
-                    } = e, n = (0, d.match)({
+                    } = e, i = (0, u.match)({
                         type: t,
-                        isPreview: s,
+                        isPreview: n,
                         isCoachmark: a
                     }).with({
                         type: "EDITOR",
                         isCoachmark: !0,
                         isPreview: !0
-                    }, () => j.default.Messages.CLIENT_THEMES_EDITOR_PREVIEW_A_THEME_HEADER).with({
+                    }, () => G.default.Messages.CLIENT_THEMES_EDITOR_PREVIEW_A_THEME_HEADER).with({
                         type: "EDITOR",
                         isCoachmark: !0
-                    }, () => j.default.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER).otherwise(() => j.default.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE);
-                    return (0, r.jsxs)("div", {
-                        className: H.title,
-                        children: [(0, r.jsx)(T.Heading, {
-                            "aria-label": n,
+                    }, () => G.default.Messages.CLIENT_THEMES_EDITOR_PICK_A_THEME_HEADER).otherwise(() => G.default.Messages.USER_SETTINGS_APPEARANCE_GRADIENT_THEME_TITLE);
+                    return (0, s.jsxs)("div", {
+                        className: k.title,
+                        children: [(0, s.jsx)(m.Heading, {
+                            "aria-label": i,
                             variant: "text-md/medium",
-                            children: n
-                        }), (0, r.jsx)(N.default, {
-                            className: H.premiumIcon
+                            children: i
+                        }), (0, s.jsx)(v.default, {
+                            className: k.premiumIcon
                         })]
                     })
                 },
-                B = e => {
-                    var t, s;
+                Q = e => {
+                    var t, n;
                     let {
                         type: a,
-                        isPreview: n,
-                        isCoachmark: i
-                    } = e, l = (null === (s = (0, I.usePremiumTrialOffer)()) || void 0 === s ? void 0 : null === (t = s.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === w.PremiumSubscriptionSKUs.TIER_2;
-                    if (l && n) return null;
-                    let u = (0, d.match)({
+                        isPreview: i,
+                        isCoachmark: l
+                    } = e, r = (null === (n = (0, E.usePremiumTrialOffer)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === U.PremiumSubscriptionSKUs.TIER_2;
+                    if (r && i) return null;
+                    let o = (0, u.match)({
                         type: a,
-                        isPreview: n,
-                        isCoachmark: i
+                        isPreview: i,
+                        isCoachmark: l
                     }).with({
                         type: "EDITOR",
                         isPreview: !0
-                    }, () => j.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
-                        onPremiumClick: h.navigateToPremiumMarketingPage
+                    }, () => G.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
+                        onPremiumClick: p.navigateToPremiumMarketingPage
                     })).with({
                         type: "EDITOR",
                         isCoachmark: !0
-                    }, () => j.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_COACHMARK).with({
+                    }, () => G.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_COACHMARK).with({
                         type: "EDITOR",
                         isPreview: !1
-                    }, () => j.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION).with({
+                    }, () => G.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION).with({
                         isPreview: !0
-                    }, () => j.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({
-                        onPremiumClick: h.navigateToPremiumMarketingPage
-                    })).otherwise(() => j.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
-                    return (0, r.jsx)(T.Heading, {
+                    }, () => G.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_WITH_LINK.format({
+                        onPremiumClick: p.navigateToPremiumMarketingPage
+                    })).otherwise(() => G.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_SETTINGS);
+                    return (0, s.jsx)(m.Heading, {
                         variant: "text-sm/normal",
-                        children: u
+                        children: o
                     })
                 },
-                q = e => {
+                W = e => {
                     let {
                         type: t,
-                        children: s
-                    } = e, a = (0, x.useUID)(), n = (0, T.useRadioGroup)({
+                        children: n
+                    } = e, a = (0, A.useUID)(), i = (0, m.useRadioGroup)({
                         orientation: "horizontal",
                         labelledBy: a
-                    }), l = i.useMemo(() => ({
+                    }), r = l.useMemo(() => ({
                         type: t,
-                        delay: k[t]
+                        delay: j[t]
                     }), [t]);
-                    return (0, r.jsx)(b.Provider, {
-                        value: l,
-                        children: (0, r.jsx)("div", {
-                            ...n,
-                            className: H.container,
-                            children: s
+                    return (0, s.jsx)(F.Provider, {
+                        value: r,
+                        children: (0, s.jsx)("div", {
+                            ...i,
+                            className: k.container,
+                            children: n
                         })
                     })
                 };
-            q.Basic = e => {
+            W.Basic = e => {
                 let {
                     className: t
                 } = e, {
-                    delay: s
-                } = i.useContext(b), {
+                    delay: n
+                } = l.useContext(F), {
                     analyticsLocations: a
-                } = (0, f.default)(m.default.CLIENT_THEMES_THEME_SELECTOR), [n, l, d] = (0, c.useStateFromStoresArray)([C.default, g.default, U.default], () => [C.default.theme, null == U.default.gradientPreset, g.default.useSystemTheme === M.SystemThemeState.ON]), o = e => {
-                    (0, P.resetBackgroundGradientPreset)(), Q({
+                } = (0, S.default)(_.default.CLIENT_THEMES_THEME_SELECTOR), [i, r, u] = (0, d.useStateFromStoresArray)([y.default, I.default, M.default], () => [y.default.theme, null == M.default.gradientPreset, I.default.useSystemTheme === x.SystemThemeState.ON]), c = e => {
+                    (0, R.resetBackgroundGradientPreset)(), H({
                         isPersisted: !0,
                         analyticsLocations: a,
                         themeName: "default ".concat(e)
-                    }), (0, _.saveClientTheme)({
+                    }), (0, h.saveClientTheme)({
                         theme: e
-                    }, s)
+                    }, n)
                 };
-                return (0, r.jsxs)("section", {
-                    className: u(H.presets, t),
-                    children: [(0, r.jsx)(y.DefaultThemeSelection, {
+                return (0, s.jsxs)("section", {
+                    className: o(k.presets, t),
+                    children: [(0, s.jsx)(b.DefaultThemeSelection, {
                         theme: L.ThemeTypes.LIGHT,
-                        isSelected: l && !d && (0, E.isThemeLight)(n),
-                        onSelect: () => o(L.ThemeTypes.LIGHT)
-                    }), (0, r.jsx)(y.DefaultThemeSelection, {
+                        isSelected: r && !u && (0, f.isThemeLight)(i),
+                        onSelect: () => c(L.ThemeTypes.LIGHT)
+                    }), (0, s.jsx)(b.DefaultThemeSelection, {
                         theme: L.ThemeTypes.DARK,
-                        isSelected: l && !d && (0, E.isThemeDark)(n),
-                        onSelect: () => o(L.ThemeTypes.DARK)
-                    }), (0, r.jsx)(y.DefaultThemeSelection, {
+                        isSelected: r && !u && (0, f.isThemeDark)(i),
+                        onSelect: () => c(L.ThemeTypes.DARK)
+                    }), (0, s.jsx)(b.DefaultThemeSelection, {
                         theme: "system",
-                        isSelected: l && d,
-                        onSelect: () => o("system")
+                        isSelected: r && u,
+                        onSelect: () => c("system")
                     })]
                 })
-            }, q.Gradient = e => {
+            }, W.Gradient = e => {
                 var t, a;
                 let {
-                    className: n,
-                    renderCTAButtons: l,
-                    disabled: u = !1
+                    className: i,
+                    renderCTAButtons: r,
+                    disabled: o = !1
                 } = e, {
-                    type: d,
-                    delay: E
-                } = i.useContext(b), {
-                    analyticsLocations: T
-                } = (0, f.default)(m.default.CLIENT_THEMES_THEME_SELECTOR), [N, C, g] = (0, c.useStateFromStoresArray)([U.default], () => {
+                    type: u,
+                    delay: f
+                } = l.useContext(F), {
+                    analyticsLocations: m
+                } = (0, S.default)(_.default.CLIENT_THEMES_THEME_SELECTOR), [v, y, I] = (0, d.useStateFromStoresArray)([M.default], () => {
                     var e;
-                    return [U.default.isPreview, U.default.isCoachmark, null === (e = U.default.gradientPreset) || void 0 === e ? void 0 : e.id]
-                }), [x, A] = i.useState(!1), [D, G] = i.useState(-1), L = (0, c.useStateFromStores)([S.default], () => S.default.useReducedMotion), k = (null === (a = (0, I.usePremiumTrialOffer)()) || void 0 === a ? void 0 : null === (t = a.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === w.PremiumSubscriptionSKUs.TIER_2;
-                i.useEffect(() => {
-                    (D === O.BACKGROUND_GRADIENT_PRESETS.length - 2 && "EDITOR" === d || g === o.BackgroundGradientPresetId.EASTER_EGG) && A(!0)
-                }, [D, d, g]);
-                let q = (e, t) => {
-                    if ((0, P.updateBackgroundGradientPreset)(e.id), Q({
-                            isPersisted: !N,
-                            analyticsLocations: T,
-                            themeName: o.BackgroundGradientPresetId[e.id]
-                        }), N) {
-                        (0, R.setUseSystemTheme)(M.SystemThemeState.OFF);
+                    return [M.default.isPreview, M.default.isCoachmark, null === (e = M.default.gradientPreset) || void 0 === e ? void 0 : e.id]
+                }), [A, O] = l.useState(!1), [P, D] = l.useState(-1), L = (0, d.useStateFromStores)([g.default], () => g.default.useReducedMotion), j = (null === (a = (0, E.usePremiumTrialOffer)()) || void 0 === a ? void 0 : null === (t = a.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === U.PremiumSubscriptionSKUs.TIER_2;
+                l.useEffect(() => {
+                    (P === w.BACKGROUND_GRADIENT_PRESETS.length - 2 && "EDITOR" === u || I === c.BackgroundGradientPresetId.EASTER_EGG) && O(!0)
+                }, [P, u, I]);
+                let W = (e, t) => {
+                    if ((0, R.updateBackgroundGradientPreset)(e.id), H({
+                            isPersisted: !v,
+                            analyticsLocations: m,
+                            themeName: c.BackgroundGradientPresetId[e.id]
+                        }), v) {
+                        (0, N.setUseSystemTheme)(x.SystemThemeState.OFF);
                         return
                     }
-                    if ((0, _.saveClientTheme)({
+                    if ((0, h.saveClientTheme)({
                             backgroundGradientPresetId: e.id,
                             theme: e.theme
-                        }, E), null != t) {
-                        if (x && A(!1), t <= D || 0 === t) {
-                            G(0);
+                        }, f), null != t) {
+                        if (A && O(!1), t <= P || 0 === t) {
+                            D(0);
                             return
                         }
-                        G(e => e + 1)
+                        D(e => e + 1)
                     }
                 };
-                return (0, r.jsxs)("section", {
-                    className: n,
-                    children: ["EDITOR" === d && N && k ? (0, r.jsx)(p.default, {
-                        type: w.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
-                        subscriptionTier: w.PremiumSubscriptionSKUs.TIER_2,
-                        children: j.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
-                            onPremiumClick: h.navigateToPremiumMarketingPage
+                return (0, s.jsxs)("section", {
+                    className: i,
+                    children: ["EDITOR" === u && v && j ? (0, s.jsx)(T.default, {
+                        type: U.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+                        subscriptionTier: U.PremiumSubscriptionSKUs.TIER_2,
+                        children: G.default.Messages.CLIENT_THEMES_EDITOR_GRADIENT_DESCRIPTION_PREVIEW_WITH_LINK.format({
+                            onPremiumClick: p.navigateToPremiumMarketingPage
                         })
-                    }) : (0, r.jsxs)("div", {
-                        className: H.header,
-                        children: [(0, r.jsxs)("div", {
-                            className: H.headings,
-                            children: [(0, r.jsx)(F, {
-                                type: d,
-                                isPreview: N,
-                                isCoachmark: C
-                            }), (0, r.jsx)(B, {
-                                type: d,
-                                isPreview: N,
-                                isCoachmark: C
+                    }) : (0, s.jsxs)("div", {
+                        className: k.header,
+                        children: [(0, s.jsxs)("div", {
+                            className: k.headings,
+                            children: [(0, s.jsx)(B, {
+                                type: u,
+                                isPreview: v,
+                                isCoachmark: y
+                            }), (0, s.jsx)(Q, {
+                                type: u,
+                                isPreview: v,
+                                isCoachmark: y
                             })]
-                        }), null == l ? void 0 : l()]
-                    }), (0, r.jsxs)("div", {
-                        className: H.presets,
-                        children: [O.BACKGROUND_GRADIENT_PRESETS.filter(e => {
+                        }), null == r ? void 0 : r()]
+                    }), (0, s.jsxs)("div", {
+                        className: k.presets,
+                        children: [w.BACKGROUND_GRADIENT_PRESETS.filter(e => {
                             let {
                                 id: t
                             } = e;
-                            return t !== o.BackgroundGradientPresetId.EASTER_EGG
-                        }).map((e, t) => (0, r.jsx)(y.GradientThemeSelection, {
+                            return t !== c.BackgroundGradientPresetId.EASTER_EGG
+                        }).map((e, t) => (0, s.jsx)(b.GradientThemeSelection, {
                             preset: e,
-                            isSelected: g === e.id,
-                            onSelect: () => q(e, t),
-                            disabled: u,
-                            tabIndex: 0 !== t || u ? void 0 : 0
+                            isSelected: I === e.id,
+                            onSelect: () => W(e, t),
+                            disabled: o,
+                            tabIndex: 0 !== t || o ? void 0 : 0
                         }, e.id)), (() => {
-                            if (!x) return null;
-                            let e = O.BACKGROUND_GRADIENT_PRESETS_MAP[o.BackgroundGradientPresetId.EASTER_EGG];
+                            if (!A) return null;
+                            let e = w.BACKGROUND_GRADIENT_PRESETS_MAP[c.BackgroundGradientPresetId.EASTER_EGG];
                             if (null == e) return null;
                             async function t() {
                                 let {
                                     default: e
-                                } = await s.el("922510").then(s.t.bind(s, "922510", 19));
+                                } = await n.el("922510").then(n.t.bind(n, "922510", 19));
                                 return e
                             }
-                            return (0, r.jsxs)("div", {
-                                className: H.easterEggSelection,
-                                children: [(0, r.jsx)(y.GradientThemeSelection, {
+                            return (0, s.jsxs)("div", {
+                                className: k.easterEggSelection,
+                                children: [(0, s.jsx)(b.GradientThemeSelection, {
                                     preset: e,
-                                    isSelected: g === o.BackgroundGradientPresetId.EASTER_EGG,
-                                    onSelect: () => q(e)
-                                }), (0, r.jsx)(v.default, {
+                                    isSelected: I === c.BackgroundGradientPresetId.EASTER_EGG,
+                                    onSelect: () => W(e)
+                                }), (0, s.jsx)(C.default, {
                                     importData: t,
                                     shouldAnimate: !L,
-                                    className: H.sparkles
+                                    className: k.sparkles
                                 })]
                             })
                         })()]
                     })]
                 })
             };
-            var K = q
+            var q = W

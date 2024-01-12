@@ -16,9 +16,9 @@
                 S = s("853994"),
                 E = s("782340"),
                 f = s("716553"),
-                m = s("926622");
+                T = s("926622");
 
-            function T(e) {
+            function m(e) {
                 let {
                     label: t,
                     onChange: s,
@@ -52,7 +52,7 @@
                     children: [(0, a.jsx)("div", {
                         ref: t
                     }), (0, a.jsxs)(o.FormSection, {
-                        className: i(m.marginTop40),
+                        className: i(T.marginTop40),
                         tag: o.FormTitleTags.H1,
                         title: E.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS,
                         children: [S.EmailCategoriesList.map(e => {
@@ -61,7 +61,7 @@
                                 label: n,
                                 subLabel: l
                             } = e;
-                            return (0, a.jsx)(T, {
+                            return (0, a.jsx)(m, {
                                 label: n(),
                                 subLabel: l(),
                                 enabled: s[t],
@@ -81,7 +81,7 @@
                             type: o.FormTextTypes.DESCRIPTION,
                             children: E.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING_DESCRIPTION
                         }), (0, a.jsx)(o.FormDivider, {
-                            className: i(m.marginTop40, m.marginBottom40)
+                            className: i(T.marginTop40, T.marginBottom40)
                         })]
                     })]
                 }) : null

@@ -16,8 +16,8 @@
                 S = s("661919"),
                 E = s("697218"),
                 f = s("145131"),
-                m = s("922932"),
-                T = s("50885"),
+                T = s("922932"),
+                m = s("50885"),
                 _ = s("49111"),
                 g = s("353927"),
                 h = s("782340"),
@@ -57,11 +57,11 @@
                 })), O = (0, l.useStateFromStores)([S.default], () => S.default.shouldRecordNextConnection()), x = (0, l.useStateFromStores)([E.default], () => {
                     var e, t;
                     return null !== (t = null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t
-                }), M = ("canary" === T.default.releaseChannel || "development" === T.default.releaseChannel) && x && A;
-                async function R() {
+                }), R = ("canary" === m.default.releaseChannel || "development" === m.default.releaseChannel) && x && A;
+                async function M() {
                     t(!0);
                     try {
-                        await c.default.getMediaEngine().writeAudioDebugState(), await m.default.submitLiveCrashReport({
+                        await c.default.getMediaEngine().writeAudioDebugState(), await T.default.submitLiveCrashReport({
                             message: {
                                 message: "User Live Dump"
                             }
@@ -104,7 +104,7 @@
                         onChange: e => r.default.setAecDump(e),
                         note: h.default.Messages.FORM_HELP_AEC_DUMP,
                         children: h.default.Messages.FORM_CHECKBOX_AEC_DUMP
-                    }), M && (0, a.jsxs)(a.Fragment, {
+                    }), R && (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)(i.FormSwitch, {
                             hideBorder: !0,
                             value: O,
@@ -139,7 +139,7 @@
                                 children: (0, a.jsx)(i.Button, {
                                     disabled: e,
                                     size: i.Button.Sizes.SMALL,
-                                    onClick: R,
+                                    onClick: M,
                                     children: h.default.Messages.UPLOAD
                                 })
                             }), (0, a.jsx)(f.default.Child, {

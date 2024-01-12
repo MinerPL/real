@@ -62,15 +62,15 @@
                     S = 0,
                     E = null,
                     f = null,
-                    m = null,
                     T = null,
+                    m = null,
                     _ = null;
                 for (let e = 0; e < i.byteLength / r; e++) {
                     let t = i.getUint32(4 * (4 * e + 0)),
                         a = i.getUint32(4 * (4 * e + 1)),
                         n = i.getUint32(4 * (4 * e + 2)),
                         l = i.getUint32(4 * (4 * e + 3));
-                    u++, c += a, S += a + s, null == f && (f = l), m = l, null == E && (E = n), null == T && (T = t);
+                    u++, c += a, S += a + s, null == f && (f = l), T = l, null == E && (E = n), null == m && (m = t);
                     let r = l - (n - E);
                     null == _ && (_ = r), r < _ && (_ = r)
                 }
@@ -82,7 +82,7 @@
                         a = (s - (t - E) - _) / 1e3;
                     g.addSample(a), null == h && (h = a), a > h && (h = a)
                 }
-                let I = null != f && null != m ? (m - f) / 1e3 : 0,
+                let I = null != f && null != T ? (T - f) / 1e3 : 0,
                     N = 1 - u / d,
                     p = 8 * c / I,
                     C = 8 * S / I,

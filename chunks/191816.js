@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return m
+                    return T
                 }
             }), s("222007");
             var a = s("884691"),
@@ -17,11 +17,11 @@
                 E = s("49111"),
                 f = s("782340");
 
-            function m(e) {
+            function T(e) {
                 let t = (0, S.getApplicationSubscriptionPlanId)(e),
                     s = (0, i.useStateFromStores)([c.default], () => c.default.getSubscriptionListingForPlan(t), [t]),
                     n = (0, i.useStateFromStores)([c.default], () => null != s ? c.default.getSubscriptionGroupListingForSubscriptionListing(s.id) : null, [s]),
-                    m = (0, i.useStateFromStores)([d.default], () => {
+                    T = (0, i.useStateFromStores)([d.default], () => {
                         let t = d.default.getForSubscription(e.id);
                         if (null != t) {
                             let [e] = Array.from(t);
@@ -29,14 +29,14 @@
                         }
                         return null
                     }, [e]),
-                    T = (0, i.useStateFromStores)([r.default], () => {
-                        if (null == m) return;
-                        let e = r.default.getApplication(m.applicationId);
+                    m = (0, i.useStateFromStores)([r.default], () => {
+                        if (null == T) return;
+                        let e = r.default.getApplication(T.applicationId);
                         if (null != e) return e
-                    }, [m]),
+                    }, [T]),
                     _ = (0, i.useStateFromStores)([o.default], () => {
-                        if (null != m) return o.default.getGuild(m.guildId)
-                    }, [m]),
+                        if (null != T) return o.default.getGuild(T.guildId)
+                    }, [T]),
                     [g, h] = a.useState(!1),
                     I = null == s ? void 0 : function(e) {
                         let {
@@ -57,7 +57,7 @@
                         subscription: e
                     });
                 return {
-                    application: T,
+                    application: m,
                     guild: _,
                     expanded: g,
                     handleToggleExpanded: () => h(e => !e),

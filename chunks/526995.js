@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return m
+                    return T
                 }
             }), s("222007");
             var a = s("37983"),
@@ -28,7 +28,7 @@
                     })]
                 })
             };
-            var m = () => {
+            var T = () => {
                 let [e, t] = n.useState(!1), s = (0, l.useStateFromStoresArray)([o.default], () => [...o.default.quests.values()]), {
                     isFetchingCurrentQuests: u,
                     lastFetchedCurrentQuests: c

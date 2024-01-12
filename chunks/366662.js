@@ -23,7 +23,7 @@
                     soundshareEnabled: s,
                     supportsVideoHook: E,
                     supportsExperimentalSoundshare: f,
-                    supportsEnableSoundshare: m
+                    supportsEnableSoundshare: T
                 } = (0, n.useStateFromStoresObject)([r.default], () => ({
                     videoHook: r.default.getVideoHook(),
                     experimentalSoundshare: r.default.getExperimentalSoundshare(),
@@ -32,7 +32,7 @@
                     supportsExperimentalSoundshare: r.default.supportsExperimentalSoundshare(),
                     supportsEnableSoundshare: r.default.supportsEnableSoundshare()
                 }));
-                return E || f || m ? (0, a.jsxs)(l.FormSection, {
+                return E || f || T ? (0, a.jsxs)(l.FormSection, {
                     className: S.marginBottom20,
                     title: c.default.Messages.FORM_LABEL_SCREENSHARE,
                     children: [E && (0, a.jsx)(l.FormSwitch, {
@@ -44,7 +44,7 @@
                         value: t,
                         onChange: e => i.default.setExperimentalSoundshare(e),
                         children: c.default.Messages.USER_SETTINGS_VOICE_EXPERIMENTAL_SOUNDSHARE_LABEL
-                    }), m && (0, a.jsxs)(l.FormItem, {
+                    }), T && (0, a.jsxs)(l.FormItem, {
                         children: [(0, a.jsx)(l.FormText, {
                             className: S.marginBottom20,
                             children: (function(e) {

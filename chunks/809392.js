@@ -1,14 +1,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 UPLOAD_FILE: function() {
-                    return d
+                    return u
                 }
             });
             var i = n("42203"),
                 o = n("18494"),
                 l = n("659500"),
                 a = n("49111");
-            let d = {
+            let u = {
                 binds: ["mod+shift+u"],
                 comboKeysBindGlobal: !0,
                 action() {

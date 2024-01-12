@@ -16,8 +16,8 @@
                 S = s("135230"),
                 E = s("550766"),
                 f = s("191225"),
-                m = s("29479"),
-                T = s("250404"),
+                T = s("29479"),
+                m = s("250404"),
                 _ = s("102985"),
                 g = s("941886"),
                 h = s("145131"),
@@ -28,20 +28,20 @@
                 A = s("216503"),
                 O = s("49111"),
                 x = s("782340"),
-                M = s("799068"),
-                R = s("926622");
+                R = s("799068"),
+                M = s("926622");
             let v = r.default.connectStores([p.default], () => ({
                 theme: p.default.theme
             }))(g.default);
 
-            function L(e) {
+            function D(e) {
                 let {
                     application: t
                 } = e;
                 return (0, a.jsxs)("div", {
-                    className: M.twoWayWarning,
+                    className: R.twoWayWarning,
                     children: [(0, a.jsx)(I.default, {
-                        className: M.twoWayWarningIcon
+                        className: R.twoWayWarningIcon
                     }), (0, a.jsx)(o.Text, {
                         color: "text-normal",
                         variant: "text-sm/medium",
@@ -52,7 +52,7 @@
                     })]
                 })
             }
-            let D = e => {
+            let L = e => {
                 let {
                     scopes: t,
                     application: s,
@@ -61,7 +61,7 @@
                     let e = x.default.Messages.DELETE_APP_CONFIRM_MSG;
                     return (0, C.default)(s.id) && (e = (0, a.jsxs)(a.Fragment, {
                         children: [e, (0, a.jsx)(A.default, {
-                            className: M.infoBox,
+                            className: R.infoBox,
                             children: x.default.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT_DISCONNECT_WARNING.format({
                                 applicationName: s.name
                             })
@@ -76,7 +76,7 @@
                     }))
                 }, r = (0, C.useShouldWarnAuthorizedAppTwoWay)(s.id);
                 return (0, a.jsx)(o.Card, {
-                    className: i(M.authedApp, R.marginBottom8),
+                    className: i(R.authedApp, M.marginBottom8),
                     outline: !0,
                     children: (0, a.jsxs)(o.HeadingLevel, {
                         component: (() => {
@@ -85,7 +85,7 @@
                                     icon: s.icon
                                 }),
                                 t = null != e ? (0, a.jsx)(h.default.Child, {
-                                    className: M.appAvatar,
+                                    className: R.appAvatar,
                                     grow: 0,
                                     children: (0, a.jsx)("img", {
                                         src: e,
@@ -93,9 +93,9 @@
                                     })
                                 }) : null;
                             return (0, a.jsxs)(h.default, {
-                                className: i(M.header, R.marginBottom20),
+                                className: i(R.header, M.marginBottom20),
                                 children: [(0, a.jsxs)(h.default, {
-                                    className: M.headerInfo,
+                                    className: R.headerInfo,
                                     children: [t, (0, a.jsx)(h.default.Child, {
                                         children: (0, a.jsx)(o.Heading, {
                                             variant: "text-sm/semibold",
@@ -106,7 +106,7 @@
                                     wrap: !0,
                                     grow: 0,
                                     children: (0, a.jsx)(o.Button, {
-                                        className: M.deleteApp,
+                                        className: R.deleteApp,
                                         color: o.ButtonColors.RED,
                                         look: o.ButtonLooks.OUTLINED,
                                         size: o.ButtonSizes.SMALL,
@@ -126,22 +126,22 @@
                             })
                         })(), (() => {
                             let e = t.map(e => (0, a.jsxs)("li", {
-                                className: i(M.permission, R.marginTop8),
+                                className: i(R.permission, M.marginTop8),
                                 children: [(0, a.jsx)("i", {
-                                    className: M.permissionCheckmark
+                                    className: R.permissionCheckmark
                                 }), (0, a.jsx)(o.FormText, {
-                                    children: (0, m.getScopeName)(e, t)
+                                    children: (0, T.getScopeName)(e, t)
                                 })]
                             }, e));
                             if (e.length > 0) return (0, a.jsx)(o.FormItem, {
                                 faded: !0,
                                 title: x.default.Messages.PERMISSIONS,
-                                className: R.marginTop20,
+                                className: M.marginTop20,
                                 children: (0, a.jsx)("ul", {
                                     children: e
                                 })
                             })
-                        })(), r && (0, a.jsx)(L, {
+                        })(), r && (0, a.jsx)(D, {
                             application: s
                         })]
                     })
@@ -149,7 +149,7 @@
             };
             var P = () => {
                 let e = (0, r.useStateFromStores)([_.default], () => _.default.hidePersonalInformation),
-                    t = (0, r.useStateFromStores)([T.default], () => T.default.getApps()),
+                    t = (0, r.useStateFromStores)([m.default], () => m.default.getApps()),
                     l = (0, r.useStateFromStores)([f.default], () => f.default.getSelfEmbeddedActivities());
                 n.useEffect(() => {
                     d.default.fetch()
@@ -167,7 +167,7 @@
                         })
                     },
                     u = () => (0, a.jsxs)(v, {
-                        className: M.marginTop20,
+                        className: R.marginTop20,
                         children: [(0, a.jsx)(g.EmptyStateImage, {
                             darkSrc: s("541956"),
                             lightSrc: s("301037"),
@@ -183,15 +183,15 @@
                     title: x.default.Messages.AUTHORIZED_APPS,
                     children: (0, a.jsx)(o.HeadingLevel, {
                         component: (0, a.jsx)(o.FormNotice, {
-                            className: R.marginBottom40,
+                            className: M.marginBottom40,
                             type: o.CardTypes.PRIMARY,
                             title: x.default.Messages.APPLICATIONS_AND_CONNECTIONS,
                             body: x.default.Messages.APPLICATIONS_AND_CONNECTIONS_BODY
                         }),
                         children: null == t ? (0, a.jsx)(o.Spinner, {
-                            className: R.marginTop20,
+                            className: M.marginTop20,
                             type: o.Spinner.Type.SPINNING_CIRCLE
-                        }) : 0 === t.length ? u() : t.sort((e, t) => e.application.name.localeCompare(t.application.name)).map(e => (0, a.jsx)(D, {
+                        }) : 0 === t.length ? u() : t.sort((e, t) => e.application.name.localeCompare(t.application.name)).map(e => (0, a.jsx)(L, {
                             onDelete: () => i(e),
                             ...e
                         }, e.id))

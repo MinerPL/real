@@ -16,8 +16,8 @@
                 S = s("739477"),
                 E = s("42887"),
                 f = s("697218"),
-                m = s("49111"),
-                T = s("782340"),
+                T = s("49111"),
+                m = s("782340"),
                 _ = s("967790");
             let g = {
                 width: 387,
@@ -36,7 +36,7 @@
                     onSelectBackgroundOption: e => {
                         p.current = !0, C.current = e, N(e), (0, c.applyBackgroundOptionLive)(e, {
                             location: A.location
-                        }).catch(m.NOOP)
+                        }).catch(T.NOOP)
                     },
                     renderCamera: e => t ? (0, a.jsx)("div", {
                         className: _.cameraWrapper,
@@ -54,12 +54,12 @@
                         children: [(0, a.jsx)("div", {
                             className: _.previewImage
                         }), (0, a.jsx)(i.Tooltip, {
-                            text: O ? null : T.default.Messages.CAMERA_UNAVAILABLE,
+                            text: O ? null : m.default.Messages.CAMERA_UNAVAILABLE,
                             children: e => (0, a.jsx)(i.Button, {
                                 ...e,
                                 onClick: s,
                                 disabled: !O,
-                                children: T.default.Messages.TEST_VIDEO
+                                children: m.default.Messages.TEST_VIDEO
                             })
                         })]
                     })
