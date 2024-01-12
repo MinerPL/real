@@ -58,14 +58,14 @@
                         i && D(!0)
                     }, [i]);
                     let P = n.useRef(null),
-                        M = (0, d.default)(null != s ? s : P),
+                        y = (0, d.default)(null != s ? s : P),
                         {
-                            avatarDecorationSrc: y
+                            avatarDecorationSrc: M
                         } = (0, T.default)({
                             user: t,
                             avatarDecorationOverride: r,
                             size: 80,
-                            animateOnHover: !M
+                            animateOnHover: !y
                         });
                     return (0, a.jsxs)(R, {
                         className: g ? O.decorationGridItemChurned : void 0,
@@ -74,7 +74,7 @@
                         ...c,
                         children: [(0, a.jsx)("img", {
                             className: O.presetDecorationImg,
-                            src: y,
+                            src: M,
                             alt: r.label
                         }), (() => {
                             let e = u === m.Section.PURCHASE || u === m.Section.PREMIUM_PURCHASE && v;

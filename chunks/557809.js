@@ -38,8 +38,8 @@
                 N = n("539938"),
                 L = n("540853"),
                 v = n("49111"),
-                x = n("782340"),
-                R = n("305794");
+                R = n("782340"),
+                x = n("305794");
 
             function y(e) {
                 let {
@@ -62,11 +62,11 @@
                     switch (e) {
                         case v.ChannelTypes.DM:
                             return {
-                                prefix: x.default.Messages.DIRECT_MESSAGE, level: 1
+                                prefix: R.default.Messages.DIRECT_MESSAGE, level: 1
                             };
                         case v.ChannelTypes.GROUP_DM:
                             return {
-                                prefix: x.default.Messages.GROUP_DM, level: 1
+                                prefix: R.default.Messages.GROUP_DM, level: 1
                             };
                         case v.ChannelTypes.GUILD_DIRECTORY:
                             return {
@@ -85,7 +85,7 @@
                         case v.ChannelTypes.PUBLIC_THREAD:
                         case v.ChannelTypes.PRIVATE_THREAD:
                             return {
-                                prefix: x.default.Messages.THREAD, level: 2
+                                prefix: R.default.Messages.THREAD, level: 2
                             };
                         default:
                             return {
@@ -111,11 +111,11 @@
                         if (t.isManaged()) return y;
                         return (0, s.jsxs)(a.Fragment, {
                             children: [(0, s.jsx)(o.HiddenVisually, {
-                                children: x.default.Messages.GROUP_DM
+                                children: R.default.Messages.GROUP_DM
                             }), (0, s.jsx)("div", {
                                 children: (0, s.jsx)(o.Avatar, {
                                     "aria-hidden": !0,
-                                    className: R.avatar,
+                                    className: x.avatar,
                                     size: o.AvatarSizes.SIZE_24,
                                     src: (0, c.getChannelIconURL)(t, 80, !1)
                                 })
@@ -128,7 +128,7 @@
                     case v.ChannelTypes.GUILD_FORUM:
                     case v.ChannelTypes.GUILD_MEDIA:
                         return (0, s.jsxs)(a.Fragment, {
-                            children: [_ && D, j(A, t.type === v.ChannelTypes.GUILD_ANNOUNCEMENT ? x.default.Messages.NEWS_CHANNEL : x.default.Messages.TEXT_CHANNEL), !_ && D, (0, s.jsx)(N.default.Title, {
+                            children: [_ && D, j(A, t.type === v.ChannelTypes.GUILD_ANNOUNCEMENT ? R.default.Messages.NEWS_CHANNEL : R.default.Messages.TEXT_CHANNEL), !_ && D, (0, s.jsx)(N.default.Title, {
                                 level: I,
                                 onContextMenu: C,
                                 onClick: d,
@@ -137,7 +137,7 @@
                         });
                     case v.ChannelTypes.GUILD_VOICE:
                         return (0, s.jsxs)(a.Fragment, {
-                            children: [_ && D, j(A, x.default.Messages.VOICE_CHANNEL), !_ && D, (0, s.jsx)(N.default.Title, {
+                            children: [_ && D, j(A, R.default.Messages.VOICE_CHANNEL), !_ && D, (0, s.jsx)(N.default.Title, {
                                 level: I,
                                 onContextMenu: C,
                                 onClick: d,
@@ -146,7 +146,7 @@
                         });
                     case v.ChannelTypes.GUILD_STAGE_VOICE:
                         return (0, s.jsxs)(a.Fragment, {
-                            children: [_ && D, j(A, x.default.Messages.STAGE_CHANNEL), !_ && D, (0, s.jsx)(N.default.Title, {
+                            children: [_ && D, j(A, R.default.Messages.STAGE_CHANNEL), !_ && D, (0, s.jsx)(N.default.Title, {
                                 level: I,
                                 onContextMenu: C,
                                 onClick: d,
@@ -160,35 +160,35 @@
                         if (!u && null != l) {
                             let e = (0, h.default)(l, r);
                             O = (0, s.jsxs)(a.Fragment, {
-                                children: [j(e, x.default.Messages.TEXT_CHANNEL), (0, s.jsx)(N.default.Title, {
+                                children: [j(e, R.default.Messages.TEXT_CHANNEL), (0, s.jsx)(N.default.Title, {
                                     level: I,
                                     onContextMenu: m,
                                     onClick: p,
-                                    className: i(R.parentChannelName, R.cursorPointer),
+                                    className: i(x.parentChannelName, x.cursorPointer),
                                     children: (0, f.computeChannelName)(l, S.default, E.default)
                                 }), (0, s.jsx)(N.default.Caret, {})]
                             })
                         }
                         let b = (null == l ? void 0 : l.type) != null && v.ChannelTypesSets.GUILD_THREADS_ONLY.has(l.type);
                         return (0, s.jsxs)(a.Fragment, {
-                            children: [O, j(b ? null : A, x.default.Messages.THREAD), (0, s.jsx)(N.default.Title, {
+                            children: [O, j(b ? null : A, R.default.Messages.THREAD), (0, s.jsx)(N.default.Title, {
                                 level: I,
                                 onContextMenu: C,
                                 onClick: d,
                                 className: i({
-                                    [R.cursorPointer]: u,
-                                    [R.forumPostTitle]: b
+                                    [x.cursorPointer]: u,
+                                    [x.forumPostTitle]: b
                                 }),
                                 children: y
                             })]
                         });
                     case v.ChannelTypes.GUILD_DIRECTORY:
-                        let F = (null == r ? void 0 : r.hasFeature(v.GuildFeatures.HUB)) ? x.default.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({
+                        let F = (null == r ? void 0 : r.hasFeature(v.GuildFeatures.HUB)) ? R.default.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({
                             guildName: n
                         }) : n;
                         return (0, s.jsxs)(a.Fragment, {
                             children: [null !== A ? (0, s.jsx)(N.default.Icon, {
-                                iconClassName: R.icon,
+                                iconClassName: x.icon,
                                 icon: A,
                                 "aria-hidden": !0
                             }) : null, (0, s.jsxs)(N.default.Title, {
@@ -246,7 +246,7 @@
             function j(e, t) {
                 return (0, s.jsxs)(s.Fragment, {
                     children: [null !== e && (0, s.jsx)(N.default.Icon, {
-                        iconClassName: R.icon,
+                        iconClassName: x.icon,
                         icon: e,
                         "aria-hidden": !0
                     }), (0, s.jsx)(o.HiddenVisually, {
@@ -262,19 +262,19 @@
                     caretPosition: a = "left"
                 } = e, l = (0, r.useStateFromStores)([g.default], () => g.default.getGuildId());
                 return l !== v.FAVORITES || null == t ? null : (0, s.jsxs)("div", {
-                    className: R.guildBreadcrumbContainer,
+                    className: x.guildBreadcrumbContainer,
                     children: ["left" === a && (0, s.jsx)(N.default.Caret, {
                         direction: "left"
                     }), (0, s.jsx)(A.default, {
                         guild: t,
                         size: A.default.Sizes.SMALLER,
-                        className: R.guildBreadcrumbIcon,
+                        className: x.guildBreadcrumbIcon,
                         active: !0
                     }), (0, s.jsx)(N.default.Title, {
                         onClick: () => {
                             (0, p.transitionToGuild)(t.id, n.id)
                         },
-                        className: i(R.parentChannelName, R.cursorPointer),
+                        className: i(x.parentChannelName, x.cursorPointer),
                         children: t.name
                     }), "right" === a && (0, s.jsx)(N.default.Caret, {
                         direction: "right"
@@ -296,12 +296,12 @@
                     color: r
                 } = (0, C.useChannelEmojiAndColor)(t);
                 return n ? (0, s.jsx)("div", {
-                    className: i(R.channelEmoji, a ? R.channelEmojiLeftOfIcon : R.channelEmojiRightOfIcon),
+                    className: i(x.channelEmoji, a ? x.channelEmojiLeftOfIcon : x.channelEmojiRightOfIcon),
                     style: {
                         backgroundColor: r
                     },
                     children: (0, s.jsx)(u.default, {
-                        className: R.twemoji,
+                        className: x.twemoji,
                         emojiName: l.name,
                         emojiId: l.id,
                         src: l.url

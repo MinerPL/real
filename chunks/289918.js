@@ -64,7 +64,7 @@
                     [j.UserProfileTypes.CANCEL_MODAL]: W.AnalyticsPages.USER_POPOUT
                 };
 
-            function K(e) {
+            function q(e) {
                 let {
                     type: t,
                     shown: l,
@@ -133,7 +133,7 @@
                 })
             }
 
-            function q(e) {
+            function K(e) {
                 let {
                     darkenOnHover: t,
                     profileType: r,
@@ -225,7 +225,7 @@
                             backgroundImage: ec && ee ? "url(".concat(ed, ")") : void 0,
                             backgroundColor: 2 !== X ? c.default.unsafe_rawColors.PRIMARY_800.css : ea
                         },
-                        children: [$ ? null != J || i.isClyde() ? null != J && i.isClyde() && (0, _.canEditClydeAIProfile)(J) ? (0, o.jsx)(q, {
+                        children: [$ ? null != J || i.isClyde() ? null != J && i.isClyde() && (0, _.canEditClydeAIProfile)(J) ? (0, o.jsx)(K, {
                             profileType: A,
                             profileLabel: V.default.Messages.CLYDE_SETTINGS,
                             icon: "gear",
@@ -245,14 +245,14 @@
                                     guild: J
                                 })
                             },
-                            children: e => (0, o.jsx)(q, {
+                            children: e => (0, o.jsx)(K, {
                                 darkenOnHover: D && N,
                                 profileLabel: V.default.Messages.EDIT_PROFILE,
                                 icon: "pencil",
                                 ...e,
                                 profileType: A
                             })
-                        }) : (0, o.jsx)(q, {
+                        }) : (0, o.jsx)(K, {
                             darkenOnHover: D && N,
                             profileType: A,
                             profileLabel: V.default.Messages.EDIT_PROFILE,
@@ -262,7 +262,7 @@
                             }
                         }) : (() => {
                             let e = M && ec && A !== j.UserProfileTypes.SETTINGS;
-                            return e ? (0, o.jsx)(K, {
+                            return e ? (0, o.jsx)(q, {
                                 type: A,
                                 shown: void 0 === N ? et : N,
                                 onClick: p

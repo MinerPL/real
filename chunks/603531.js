@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return F
+                    return b
                 }
             }), n("702976");
             var l = n("37983"),
@@ -23,8 +23,8 @@
                 N = n("654017"),
                 I = n("913491"),
                 m = n("574073"),
-                A = n("359132"),
-                g = n("723931"),
+                g = n("359132"),
+                A = n("723931"),
                 C = n("39331"),
                 R = n("68480"),
                 M = n("596368"),
@@ -36,13 +36,13 @@
                 x = n("782340"),
                 P = n("555821"),
                 U = n("877671"),
-                F = a.memo(function e(t) {
+                b = a.memo(function e(t) {
                     var n, a, s;
                     let _;
                     let {
                         channel: T,
                         message: P,
-                        compact: F = !1,
+                        compact: b = !1,
                         className: j,
                         onContextMenu: G,
                         onClick: k,
@@ -51,7 +51,7 @@
                         treatSpam: H
                     } = t, V = y.MessageTypesWithLazyLoadedReferences.has(P.type) ? P.messageReference : void 0, Y = (0, r.useStateFromStores)([c.default], () => c.default.getMessageByReference(V)), K = (0, r.useStateFromStores)([E.default], () => P.type === y.MessageTypes.THREAD_STARTER_MESSAGE && Y.state === c.ReferencedMessageState.LOADED ? E.default.getChannel(Y.message.channel_id) : null), Q = f.InlineAttachmentMedia.useSetting(), z = f.InlineEmbedMedia.useSetting(), W = f.RenderEmbeds.useSetting() && !P.author.isClyde(), q = f.GifAutoPlay.useSetting(), X = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (n = P.editedTimestamp) && void 0 !== n ? n : P.timestamp).valueOf()), Z = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (a = null == T ? void 0 : T.guild_id) && void 0 !== a ? a : "", (null !== (s = P.editedTimestamp) && void 0 !== s ? s : P.timestamp).valueOf()), J = (0, d.default)(null == T ? void 0 : T.id), {
                         disableReactionCreates: $
-                    } = (0, A.default)(T), {
+                    } = (0, g.default)(T), {
                         content: ee,
                         hasSpoilerEmbeds: et
                     } = (0, C.default)(P, {
@@ -70,29 +70,29 @@
                         message: Y.message,
                         channel: K,
                         hasThread: !1
-                    }) : (h.default.isBlocked(P.author.id) ? _ = x.default.Messages.BLOCKED_MESSAGE_COUNT : (0, N.isSpam)(P) && H && (_ = x.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== _) ? (0, l.jsx)(b, {
+                    }) : (h.default.isBlocked(P.author.id) ? _ = x.default.Messages.BLOCKED_MESSAGE_COUNT : (0, N.isSpam)(P) && H && (_ = x.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== _) ? (0, l.jsx)(F, {
                         className: j,
-                        compact: F,
+                        compact: b,
                         count: 1,
                         collapsedReason: _
                     }) : (0, l.jsx)(S.default, {
-                        compact: F,
+                        compact: b,
                         className: i(j, {
                             [U.ephemeral]: (0, p.hasFlag)(P.flags, y.MessageFlags.EPHEMERAL),
                             [U.disableInteraction]: w,
                             [U.groupStart]: t.isGroupStart
                         }),
-                        childrenRepliedMessage: (0, D.default)(P, T, V, Y, F),
+                        childrenRepliedMessage: (0, D.default)(P, T, V, Y, b),
                         childrenHeader: (0, O.default)({
                             ...t,
                             author: en,
                             guildId: T.guild_id
                         }),
-                        childrenAccessories: (0, l.jsx)(g.MessageAccessories, {
+                        childrenAccessories: (0, l.jsx)(A.MessageAccessories, {
                             channel: T,
                             message: P,
                             hasSpoilerEmbeds: et,
-                            compact: F,
+                            compact: b,
                             canSuppressEmbeds: !1,
                             canDeleteAttachments: !1,
                             disableReactionReads: !1,
@@ -110,7 +110,7 @@
                             showClydeAiEmbeds: !1,
                             shouldRedactExplicitContent: er
                         }),
-                        childrenExecutedCommand: (0, v.default)(P, T, F),
+                        childrenExecutedCommand: (0, v.default)(P, T, b),
                         childrenMessageContent: (0, M.default)(t, ee),
                         childrenSystemMessage: (0, L.default)(t),
                         onContextMenu: G,
@@ -122,7 +122,7 @@
                     })
                 });
 
-            function b(e) {
+            function F(e) {
                 let {
                     className: t,
                     count: n,

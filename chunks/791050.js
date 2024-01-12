@@ -53,7 +53,7 @@
                 }), {
                     product: N,
                     purchase: D
-                } = (0, E.default)(null == L ? void 0 : L.skuId), P = p.default.canUseCollectibles(t), M = n.useRef(null), y = (0, f.default)(s), H = (0, h.isEqualAvatarDecoration)(L, void 0 === A ? null == t ? void 0 : t.avatarDecoration : A), x = () => {
+                } = (0, E.default)(null == L ? void 0 : L.skuId), P = p.default.canUseCollectibles(t), y = n.useRef(null), M = (0, f.default)(s), H = (0, h.isEqualAvatarDecoration)(L, void 0 === A ? null == t ? void 0 : t.avatarDecoration : A), x = () => {
                     S(L), u()
                 }, w = n.useCallback(() => {
                     u(), (0, c.openCollectiblesShop)({
@@ -79,9 +79,9 @@
                         children: [(0, a.jsx)(T.default, {
                             user: t,
                             pendingAvatarDecoration: L,
-                            selectedAvatarDecorationRef: M,
+                            selectedAvatarDecorationRef: y,
                             onSelect: e => {
-                                g(e), null != e && y(e)
+                                g(e), null != e && M(e)
                             },
                             onOpenShop: w
                         }), (0, a.jsx)(m.default, {

@@ -18,14 +18,14 @@
                 v = n("124948"),
                 S = n("305961"),
                 g = n("660478"),
-                h = n("476765"),
-                m = n("943232"),
-                N = n("945330"),
+                N = n("476765"),
+                h = n("943232"),
+                m = n("945330"),
                 C = n("599110"),
-                _ = n("449008"),
-                T = n("933326"),
+                T = n("449008"),
+                I = n("933326"),
                 p = n("334683"),
-                I = n("534222"),
+                _ = n("534222"),
                 x = n("473031"),
                 G = n("266763"),
                 R = n("842672"),
@@ -40,9 +40,9 @@
                     transitionState: t,
                     onClose: i,
                     guildId: A
-                } = e, V = (0, h.useUID)(), j = (0, s.useStateFromStores)([S.default], () => S.default.getGuild(A)), P = (0, p.default)(null == j ? void 0 : j.id), O = (0, I.default)(A), F = u.useRef(g.default.ackMessageId(A, U.ReadStateTypes.GUILD_EVENT)), b = (0, R.default)();
+                } = e, V = (0, N.useUID)(), j = (0, s.useStateFromStores)([S.default], () => S.default.getGuild(A)), P = (0, p.default)(null == j ? void 0 : j.id), O = (0, _.default)(A), b = u.useRef(g.default.ackMessageId(A, U.ReadStateTypes.GUILD_EVENT)), F = (0, R.default)();
                 return u.useEffect(() => {
-                    O.forEach(e => T.default.getGuildEventUserCounts(A, e.id, [])), T.default.getGuildEventsForCurrentUser(A)
+                    O.forEach(e => I.default.getGuildEventUserCounts(A, e.id, [])), I.default.getGuildEventsForCurrentUser(A)
                 }, [O, A]), u.useEffect(() => {
                     let e = S.default.getGuild(A);
                     if (!(null == e ? void 0 : e.hasFeature(L.GuildFeatures.HUB))) return;
@@ -62,7 +62,7 @@
                         guild_events_count: O.length
                     })
                 }, []), u.useEffect(() => {
-                    a(O).map(e => e.creator_id).filter(_.isNotNullish).uniq().forEach(e => {
+                    a(O).map(e => e.creator_id).filter(T.isNotNullish).uniq().forEach(e => {
                         v.default.requestMember(A, e)
                     })
                 }, [A, O]), u.useEffect(() => {
@@ -73,7 +73,7 @@
                     "aria-labelledby": V,
                     children: [(0, l.jsxs)(d.ModalHeader, {
                         className: M.header,
-                        children: [(0, l.jsx)(m.default, {
+                        children: [(0, l.jsx)(h.default, {
                             className: M.icon
                         }), (0, l.jsx)(d.Heading, {
                             id: V,
@@ -96,7 +96,7 @@
                                             ...t,
                                             guildId: A
                                         })
-                                    }, b)
+                                    }, F)
                                 },
                                 innerClassName: M.button,
                                 children: y.default.Messages.SCHEDULE_EVENT
@@ -105,7 +105,7 @@
                             onClick: i,
                             className: M.iconButton,
                             "aria-label": y.default.Messages.CLOSE,
-                            children: (0, l.jsx)(N.default, {
+                            children: (0, l.jsx)(m.default, {
                                 className: M.icon
                             })
                         })]
@@ -115,7 +115,7 @@
                             guildEvent: e,
                             guildId: A,
                             onActionTaken: i,
-                            isNew: null != F.current && r.default.compare(e.id, F.current) > 0
+                            isNew: null != b.current && r.default.compare(e.id, b.current) > 0
                         }, e.id)) : (0, l.jsx)(G.default, {
                             guildId: A,
                             onClose: i
