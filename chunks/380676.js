@@ -18,8 +18,8 @@
                 E = n("227439"),
                 _ = n("697218"),
                 p = n("170113"),
-                h = n("780571"),
-                I = n("377502"),
+                I = n("780571"),
+                h = n("377502"),
                 S = n("103603"),
                 T = n("736393"),
                 C = n("170213"),
@@ -100,7 +100,7 @@
                         a = 1 === n.length;
                     return (0, i.jsx)("div", {
                         className: A.classificationEvidenceMessageAttachment,
-                        children: (0, i.jsx)(I.default, {
+                        children: (0, i.jsx)(h.default, {
                             attachments: n.map(e => ({
                                 attachment: e,
                                 spoiler: !0,
@@ -144,7 +144,7 @@
                             children: v.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
                         }), (0, i.jsx)("div", {
                             className: A.classificationEvidenceCard,
-                            children: (0, i.jsx)(h.default, {
+                            children: (0, i.jsx)(I.default, {
                                 compact: !1,
                                 childrenHeader: (0, E.default)({
                                     author: {

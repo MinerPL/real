@@ -19,8 +19,8 @@
                 E = null,
                 _ = null,
                 p = !1,
-                h = null,
-                I = !1,
+                I = null,
+                h = !1,
                 S = null;
             class T extends l.default.Store {
                 isFetching() {
@@ -51,10 +51,10 @@
                     return p
                 }
                 getAppealSignal() {
-                    return h
+                    return I
                 }
                 getIsSubmitting() {
-                    return I
+                    return h
                 }
                 getSubmitError() {
                     return S
@@ -103,31 +103,31 @@
                     _ = t
                 },
                 SAFETY_HUB_APPEAL_CLOSE: function() {
-                    _ = null, h = null
+                    _ = null, I = null
                 },
                 SAFETY_HUB_APPEAL_SIGNAL_SELECT: function(e) {
                     let {
                         signal: t
                     } = e;
-                    h = t
+                    I = t
                 },
                 SAFETY_HUB_REQUEST_REVIEW_START: function(e) {
                     let {} = e;
-                    I = !0, S = null
+                    h = !0, S = null
                 },
                 SAFETY_HUB_REQUEST_REVIEW_SUCCESS: function(e) {
                     let {} = e;
-                    I = !1, S = null
+                    h = !1, S = null
                 },
                 SAFETY_HUB_REQUEST_REVIEW_FAILURE: function(e) {
                     let {
                         error: t
                     } = e;
-                    I = !1, S = t
+                    h = !1, S = t
                 },
                 LOGOUT: function() {
                     d = !1, s = {}, c = {
                         state: o.AccountStandingState.ALL_GOOD
-                    }, _ = null, h = null
+                    }, _ = null, I = null
                 }
             })

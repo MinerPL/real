@@ -1,23 +1,22 @@
             "use strict";
             n.r(t), n.d(t, {
                 getSafetyHubData: function() {
-                    return u
+                    return s
                 },
                 getSafetyHubDataForClassification: function() {
-                    return c
+                    return u
                 }
             });
             var i = n("872717"),
                 r = n("913144"),
                 l = n("651693"),
-                a = n("234998"),
-                o = n("736393"),
-                s = n("49111");
-            async function u() {
+                a = n("736393"),
+                o = n("49111");
+            async function s() {
                 r.default.dispatch({
                     type: "SAFETY_HUB_FETCH_START"
                 }), await i.default.get({
-                    url: s.Endpoints.SAFETY_HUB
+                    url: o.Endpoints.SAFETY_HUB
                 }).then(e => {
                     let {
                         body: t
@@ -25,7 +24,7 @@
                         classifications: n,
                         guild_classifications: i,
                         account_standing: l
-                    } = t, a = n.map(e => (d(e), e));
+                    } = t, a = n.map(e => (c(e), e));
                     r.default.dispatch({
                         type: "SAFETY_HUB_FETCH_SUCCESS",
                         classifications: a.concat(null != i ? i : []),
@@ -39,12 +38,12 @@
                     })
                 })
             }
-            async function c(e) {
+            async function u(e) {
                 r.default.dispatch({
                     type: "SAFETY_HUB_FETCH_CLASSIFICATION_START",
                     classificationId: e
                 }), await i.default.get({
-                    url: s.Endpoints.SAFETY_HUB
+                    url: o.Endpoints.SAFETY_HUB
                 }).then(t => {
                     let {
                         body: n
@@ -53,7 +52,7 @@
                         account_standing: l,
                         is_dsa_eligible: a
                     } = n, o = i.find(t => t.id === e);
-                    null != o ? (d(o), r.default.dispatch({
+                    null != o ? (c(o), r.default.dispatch({
                         type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
                         classification: o,
                         accountStanding: l,
@@ -73,7 +72,7 @@
                 })
             }
 
-            function d(e) {
+            function c(e) {
                 if (null != e.flagged_content && e.flagged_content.length > 0) {
                     let t = e.flagged_content[0];
                     t.attachments = t.attachments.filter(e => {
@@ -81,6 +80,6 @@
                             filename: t
                         } = e;
                         return (0, l.isImageFile)(t)
-                    }), t.attachments.forEach(e => (0, a.setMessageAttachmentDimensions)(e)), e.flagged_content = (0, o.isFlaggedContentEmpty)(t) ? [] : [t]
+                    }), e.flagged_content = (0, a.isFlaggedContentEmpty)(t) ? [] : [t]
                 }
             }

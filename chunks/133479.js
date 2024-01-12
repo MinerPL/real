@@ -16,8 +16,8 @@
                 _ = a("697218"),
                 S = a("908539"),
                 f = a("132206"),
-                E = a("260883"),
-                T = a("170213"),
+                T = a("260883"),
+                E = a("170213"),
                 A = a("782340"),
                 I = a("122698");
 
@@ -32,7 +32,7 @@
                         [S.AccountStandingState.AT_RISK]: null,
                         [S.AccountStandingState.SUSPENDED]: null
                     }),
-                    m = i.useCallback(() => {
+                    C = i.useCallback(() => {
                         let t = Math.max(...Object.values(N.current).map(t => {
                             var e;
                             return null !== (e = null == t ? void 0 : t.getBoundingClientRect().height) && void 0 !== e ? e : 36
@@ -40,16 +40,16 @@
                         g(Math.max(t, 36))
                     }, []);
                 i.useEffect(() => {
-                    m();
-                    let t = (0, s.debounce)(m, 100);
+                    C();
+                    let t = (0, s.debounce)(C, 100);
                     window.addEventListener("resize", t)
-                }, [m]);
-                let C = {
+                }, [C]);
+                let m = {
                         [S.AccountStandingState.ALL_GOOD]: {
                             title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE,
                             description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION.format({
-                                termsOfService: T.SafetyHubLinks.TOS_LINK,
-                                communityGuidelines: T.SafetyHubLinks.COMMUNITY_GUIDELINES
+                                termsOfService: E.SafetyHubLinks.TOS_LINK,
+                                communityGuidelines: E.SafetyHubLinks.COMMUNITY_GUIDELINES
                             }),
                             status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_SHORT,
                             Icon: u.CircleCheckIcon,
@@ -79,8 +79,8 @@
                         [S.AccountStandingState.SUSPENDED]: {
                             title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_TITLE,
                             description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_DESCRIPTION.format({
-                                termsOfService: T.SafetyHubLinks.TOS_LINK,
-                                communityGuidelines: T.SafetyHubLinks.COMMUNITY_GUIDELINES
+                                termsOfService: E.SafetyHubLinks.TOS_LINK,
+                                communityGuidelines: E.SafetyHubLinks.COMMUNITY_GUIDELINES
                             }),
                             status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_SHORT,
                             Icon: o.CircleXIcon,
@@ -88,18 +88,18 @@
                         }
                     },
                     {
-                        title: h,
-                        description: x,
-                        color: H,
-                        Icon: p
-                    } = C[t.state],
-                    D = Object.keys(C).length;
+                        title: x,
+                        description: h,
+                        color: p,
+                        Icon: O
+                    } = m[t.state],
+                    H = Object.keys(m).length;
                 return (0, n.jsxs)(d.Card, {
                     className: I.container,
                     outline: !1,
                     children: [(0, n.jsx)("div", {
                         className: I.profile,
-                        children: (0, n.jsx)(E.default, {
+                        children: (0, n.jsx)(T.default, {
                             user: e,
                             size: d.AvatarSizes.SIZE_80
                         })
@@ -110,10 +110,10 @@
                             children: [(0, n.jsx)(d.Heading, {
                                 color: "header-primary",
                                 variant: "heading-lg/normal",
-                                children: h.format({
+                                children: x.format({
                                     hook: t => (0, n.jsx)(d.Text, {
                                         style: {
-                                            color: H.css
+                                            color: p.css
                                         },
                                         variant: "heading-lg/bold",
                                         tag: "span",
@@ -123,7 +123,7 @@
                             }), (0, n.jsx)(d.Text, {
                                 color: "text-normal",
                                 variant: "text-sm/normal",
-                                children: x
+                                children: h
                             })]
                         }), (0, n.jsxs)("div", {
                             className: I.health,
@@ -132,19 +132,19 @@
                             },
                             children: [(0, n.jsx)("div", {
                                 className: I.line
-                            }), Object.entries(C).map((e, a) => {
+                            }), Object.entries(m).map((e, a) => {
                                 let [i, s] = e, l = parseInt(i) === t.state;
                                 return (0, n.jsxs)("div", {
                                     className: I.statusOption,
                                     ref: t => N.current[parseInt(i)] = t,
-                                    children: [l ? (0, n.jsx)(p, {
+                                    children: [l ? (0, n.jsx)(O, {
                                         className: I.marker,
                                         color: s.color
                                     }) : (0, n.jsx)("div", {
                                         className: I.marker,
                                         style: {
                                             marginLeft: 0 === a ? -6 : 0,
-                                            marginRight: a === D - 1 ? -6 : 0
+                                            marginRight: a === H - 1 ? -6 : 0
                                         },
                                         children: (0, n.jsx)("div", {
                                             className: I.empty

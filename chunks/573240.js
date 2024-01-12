@@ -17,8 +17,8 @@
                 E = n("698609"),
                 _ = n("380676"),
                 p = n("170213"),
-                h = n("49111"),
-                I = n("782340"),
+                I = n("49111"),
+                h = n("782340"),
                 S = n("383496");
             let T = e => {
                     let {
@@ -29,13 +29,13 @@
                         className: S.classificationHeader,
                         children: (0, i.jsx)(s.Heading, {
                             variant: "heading-xl/normal",
-                            children: r && null != n ? I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD.format({
+                            children: r && null != n ? h.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_GUILD.format({
                                 guildName: n,
                                 classification_type: t,
                                 classificationHook: (e, t) => (0, i.jsx)("strong", {
                                     children: e
                                 }, t)
-                            }) : I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_V2.format({
+                            }) : h.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_HEADER_V2.format({
                                 classification_type: t,
                                 classificationHook: (e, t) => (0, i.jsx)("strong", {
                                     children: e
@@ -53,7 +53,7 @@
                         children: [(0, i.jsx)(s.Text, {
                             variant: "eyebrow",
                             color: "text-muted",
-                            children: I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_HEADER
+                            children: h.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTIONS_TAKEN_HEADER
                         }), (0, i.jsx)("ul", {
                             className: S.classificationActionsTakenList,
                             children: t.map(e => (0, i.jsx)(g, {
@@ -98,7 +98,7 @@
                             className: S.classificationPolicyDescriptionContainer,
                             children: (0, i.jsx)(s.Text, {
                                 variant: "text-md/normal",
-                                children: I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_HEADER.format({
+                                children: h.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_POLICY_CARD_HEADER.format({
                                     classificationDescription: t
                                 })
                             })
@@ -115,12 +115,12 @@
                 v = () => (0, i.jsx)(s.Text, {
                     variant: "text-md/normal",
                     color: "text-muted",
-                    children: I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_APPEAL_STATUS
+                    children: h.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_APPEAL_STATUS
                 }),
                 A = e => (0, i.jsx)(s.Text, {
                     variant: "text-md/normal",
                     color: "text-muted",
-                    children: I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_APPEAL_V2.format({
+                    children: h.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_APPEAL_V2.format({
                         letUsKnowHook: (t, n) => (0, i.jsx)(s.Anchor, {
                             href: e.appealLink,
                             onClick: e.letUsKnowClick,
@@ -148,11 +148,11 @@
                         children: [(0, i.jsx)(s.Text, {
                             variant: "eyebrow",
                             color: "text-muted",
-                            children: I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_HEADER
+                            children: h.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_HEADER
                         }), (0, i.jsx)(s.Text, {
                             className: S.guidelinesExplanation,
                             variant: "text-sm/normal",
-                            children: I.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_DESCRIPTION.format({
+                            children: h.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_ACTION_EXPLAINED_DESCRIPTION.format({
                                 tosLink: t,
                                 communityGuidelinesLink: n
                             })
@@ -171,11 +171,11 @@
                 } = e, {
                     classification: s,
                     classificationRequestState: c
-                } = (0, E.useSafetyHubClassification)(l), I = (0, f.useSafetyHubAccountStanding)(), g = null != s && null != s.flagged_content && s.flagged_content.length > 0;
+                } = (0, E.useSafetyHubClassification)(l), h = (0, f.useSafetyHubAccountStanding)(), g = null != s && null != s.flagged_content && s.flagged_content.length > 0;
                 return (r.useEffect(() => {
-                    u.default.track(h.AnalyticEvents.SAFETY_HUB_ACTION, {
+                    u.default.track(I.AnalyticEvents.SAFETY_HUB_ACTION, {
                         action: p.SafetyHubAnalyticsActions.ViewViolationDetail,
-                        account_standing: I.state,
+                        account_standing: h.state,
                         classification_ids: [Number(l)],
                         source: a,
                         is_violative_content_shown: g
@@ -197,9 +197,9 @@
                         appealComponent: (0, i.jsx)(N, {
                             hasBeenAppealed: null != s.appeal_status,
                             onLetUsKnowClick: () => {
-                                u.default.track(h.AnalyticEvents.SAFETY_HUB_ACTION, {
+                                u.default.track(I.AnalyticEvents.SAFETY_HUB_ACTION, {
                                     action: p.SafetyHubAnalyticsActions.ClickLetUsKnow,
-                                    account_standing: I.state,
+                                    account_standing: h.state,
                                     classification_ids: [Number(l)],
                                     source: a,
                                     is_violative_content_shown: g

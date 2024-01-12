@@ -4,13 +4,13 @@
                     return s
                 }
             });
-            var r = n("759843"),
-                i = n("428958");
+            var i = n("759843"),
+                r = n("428958");
 
             function s(e, t) {
-                (0, i.default)({
-                    type: r.ImpressionTypes.VIEW,
-                    name: r.ImpressionNames.LOCALIZED_PRICING_UPSELL_VIEWED,
+                (0, r.default)({
+                    type: i.ImpressionTypes.VIEW,
+                    name: i.ImpressionNames.LOCALIZED_PRICING_UPSELL_VIEWED,
                     properties: {
                         country_code: t,
                         action_location: e
