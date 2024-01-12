@@ -1,56 +1,56 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return r
                 }
             });
-            var a = n("37983");
+            var i = n("37983");
             n("884691");
-            var l = n("446674"),
-                u = n("77078"),
-                s = n("957255"),
-                d = n("49111"),
-                i = n("695838"),
-                r = n("782340");
+            var s = n("446674"),
+                a = n("77078"),
+                l = n("957255"),
+                u = n("49111"),
+                d = n("695838"),
+                o = n("782340");
 
-            function o(e) {
-                let t = (0, l.useStateFromStores)([s.default], () => s.default.can(d.Permissions.MANAGE_CHANNELS, e));
-                return __OVERLAY__ ? null : e.id === i.FAVORITES_RAW_GUILD_ID ? (0, a.jsx)(a.Fragment, {
-                    children: (0, a.jsx)(u.MenuItem, {
+            function r(e) {
+                let t = (0, s.useStateFromStores)([l.default], () => l.default.can(u.Permissions.MANAGE_CHANNELS, e));
+                return __OVERLAY__ ? null : e.id === d.FAVORITES_RAW_GUILD_ID ? (0, i.jsx)(i.Fragment, {
+                    children: (0, i.jsx)(a.MenuItem, {
                         id: "create-category",
-                        label: r.default.Messages.CREATE_CATEGORY,
-                        action: () => (0, u.openModalLazy)(async () => {
+                        label: o.default.Messages.CREATE_CATEGORY,
+                        action: () => (0, a.openModalLazy)(async () => {
                             let {
                                 default: e
                             } = await n.el("515680").then(n.bind(n, "515680"));
-                            return t => (0, a.jsx)(e, {
+                            return t => (0, i.jsx)(e, {
                                 ...t
                             })
                         })
                     })
-                }) : t ? [(0, a.jsx)(u.MenuItem, {
+                }) : t ? [(0, i.jsx)(a.MenuItem, {
                     id: "create-channel",
-                    label: r.default.Messages.CREATE_CHANNEL,
-                    action: () => (0, u.openModalLazy)(async () => {
+                    label: o.default.Messages.CREATE_CHANNEL,
+                    action: () => (0, a.openModalLazy)(async () => {
                         let {
                             default: t
                         } = await n.el("581354").then(n.bind(n, "581354"));
-                        return n => (0, a.jsx)(t, {
+                        return n => (0, i.jsx)(t, {
                             ...n,
-                            channelType: d.ChannelTypes.GUILD_TEXT,
+                            channelType: u.ChannelTypes.GUILD_TEXT,
                             guildId: e.id
                         })
                     })
-                }, "create-channel"), (0, a.jsx)(u.MenuItem, {
+                }, "create-channel"), (0, i.jsx)(a.MenuItem, {
                     id: "create-category",
-                    label: r.default.Messages.CREATE_CATEGORY,
-                    action: () => (0, u.openModalLazy)(async () => {
+                    label: o.default.Messages.CREATE_CATEGORY,
+                    action: () => (0, a.openModalLazy)(async () => {
                         let {
                             default: t
                         } = await n.el("581354").then(n.bind(n, "581354"));
-                        return n => (0, a.jsx)(t, {
+                        return n => (0, i.jsx)(t, {
                             ...n,
-                            channelType: d.ChannelTypes.GUILD_CATEGORY,
+                            channelType: u.ChannelTypes.GUILD_CATEGORY,
                             guildId: e.id
                         })
                     })

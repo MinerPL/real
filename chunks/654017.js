@@ -1,27 +1,27 @@
             "use strict";
             n.r(t), n.d(t, {
                 isSpamSupported: function() {
-                    return r
+                    return a
                 },
                 isSpammer: function() {
-                    return u
+                    return s
                 },
                 isSpam: function() {
-                    return o
+                    return u
                 }
             });
             var l = n("697218"),
-                a = n("49111");
+                r = n("49111");
 
-            function r(e) {
-                return void 0 !== e && e.type !== a.ChannelTypes.DM
+            function a(e) {
+                return void 0 !== e && e.type !== r.ChannelTypes.DM
+            }
+
+            function s(e) {
+                var t, n;
+                return null !== (n = null === (t = l.default.getUser(e)) || void 0 === t ? void 0 : t.hasFlag(r.UserFlags.SPAMMER)) && void 0 !== n && n
             }
 
             function u(e) {
-                var t, n;
-                return null !== (n = null === (t = l.default.getUser(e)) || void 0 === t ? void 0 : t.hasFlag(a.UserFlags.SPAMMER)) && void 0 !== n && n
-            }
-
-            function o(e) {
-                return u(e.author.id)
+                return s(e.author.id)
             }
