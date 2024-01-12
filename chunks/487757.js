@@ -1,7 +1,7 @@
             "use strict";
             a.r(t), a.d(t, {
                 default: function() {
-                    return S
+                    return M
                 }
             }), a("222007");
             var l = a("37983"),
@@ -14,8 +14,8 @@
                 c = a("33112"),
                 d = a("418009"),
                 E = a("428958"),
-                f = a("773284"),
-                _ = a("476765"),
+                _ = a("773284"),
+                f = a("476765"),
                 A = a("151185"),
                 m = a("562228"),
                 L = a("104182"),
@@ -24,15 +24,15 @@
                 p = a("418298"),
                 x = a("612805"),
                 O = a("53013"),
-                R = a("233365"),
-                N = a("264317"),
-                P = a("186859"),
+                P = a("233365"),
+                R = a("264317"),
+                N = a("186859"),
                 h = a("660516"),
                 I = a("782340"),
                 g = a("877055");
-            let v = (0, _.uid)();
+            let v = (0, f.uid)();
 
-            function M(e) {
+            function S(e) {
                 let {
                     selectedDuration: t,
                     onSelect: a
@@ -69,7 +69,7 @@
                 })
             }
 
-            function S(e) {
+            function M(e) {
                 let {
                     channel: t,
                     transitionState: a,
@@ -81,7 +81,7 @@
                 });
                 let {
                     answers: i,
-                    question: _,
+                    question: f,
                     setQuestion: T,
                     selectedLayoutType: j,
                     setSelectedLayoutType: D,
@@ -101,18 +101,18 @@
                     submitting: z
                 } = (0, L.default)(t, s), {
                     trackPollCreationCancelled: X
-                } = (0, C.useTrackPollCreationEvents)(_, i, y, j), Z = n.useRef([]), {
+                } = (0, C.useTrackPollCreationEvents)(f, i, y, j), Z = n.useRef([]), {
                     togglePollExpressionPicker: J,
                     lastActiveParentIndex: Q
-                } = (0, N.default)(j), q = n.useCallback(() => {
+                } = (0, R.default)(j), q = n.useCallback(() => {
                     o(null != Q, "Must have an active input");
                     let e = Z.current[Q];
                     return o(null != e, "Expected a mounted answer input component"), e.getBoundingClientRect()
                 }, [Q]), $ = j === d.PollLayoutTypes.DEFAULT, ee = n.useCallback(() => {
                     X(), s()
                 }, [s, X]), et = n.useCallback(() => {
-                    let e = _.length > 0 || i.some(e => (0, m.isAnswerFilled)(e, j));
-                    e ? (0, R.default)({
+                    let e = f.length > 0 || i.some(e => (0, m.isAnswerFilled)(e, j));
+                    e ? (0, P.default)({
                         title: I.default.Messages.CREATE_POLL_MODAL_WARNING_MODAL_TITLE,
                         body: I.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY,
                         cta: I.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_CTA_EXIT,
@@ -121,14 +121,14 @@
                             ee()
                         }
                     }) : ee()
-                }, [ee, i, _, j]);
+                }, [ee, i, f, j]);
                 n.useEffect(() => {
-                    (0, u.updateModal)(P.POLL_CREATION_MODAL_KEY, e => (0, l.jsx)(S, {
+                    (0, u.updateModal)(N.POLL_CREATION_MODAL_KEY, e => (0, l.jsx)(M, {
                         ...e,
                         channel: t
                     }), et)
                 }, [et, t]);
-                let ea = (0, f.default)({
+                let ea = (0, _.default)({
                     disabled: !U,
                     onSubmit: Y
                 });
@@ -157,10 +157,10 @@
                         }), (0, l.jsx)(u.TextInput, {
                             "aria-label": I.default.Messages.CREATE_POLL_QUESTION_INPUT_LABEL,
                             placeholder: I.default.Messages.CREATE_POLL_QUESTION_PLACEHOLDER,
-                            value: _,
+                            value: f,
                             inputClassName: g.questionInput,
                             onChange: T,
-                            maxLength: P.MAX_POLL_QUESTION_LENGTH,
+                            maxLength: N.MAX_POLL_QUESTION_LENGTH,
                             autoFocus: !0
                         }), (0, l.jsx)(x.default, {
                             selectedLayoutType: j,
@@ -190,7 +190,7 @@
                                     children: I.default.Messages.CREATE_POLL_ADD_ANSWER_BUTTON
                                 })]
                             })]
-                        }), (0, l.jsx)(M, {
+                        }), (0, l.jsx)(S, {
                             selectedDuration: k,
                             onSelect: w
                         })]
@@ -222,7 +222,7 @@
                     }), (0, l.jsx)(O.default, {
                         channel: t,
                         layout: j,
-                        parentModalKey: P.POLL_CREATION_MODAL_KEY,
+                        parentModalKey: N.POLL_CREATION_MODAL_KEY,
                         onEmojiSelect: F,
                         onGifSelect: W,
                         positionTargetRef: q,

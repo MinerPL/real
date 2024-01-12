@@ -1,40 +1,40 @@
             "use strict";
-            l.r(t), l.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return r
                 }
-            }), l("222007");
-            var n = l("884691"),
-                a = l("446674"),
-                s = l("817963"),
-                r = l("923959"),
-                i = l("305961"),
-                u = l("957255"),
-                d = l("49111"),
-                o = (e, t) => {
-                    let l = (0, a.useStateFromStores)([i.default], () => i.default.getGuild(e), [e]),
+            }), n("222007");
+            var i = n("884691"),
+                s = n("446674"),
+                a = n("817963"),
+                l = n("923959"),
+                u = n("305961"),
+                d = n("957255"),
+                o = n("49111"),
+                r = (e, t) => {
+                    let n = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(e), [e]),
                         {
-                            canCreateGuildEvent: o
-                        } = (0, s.useManageResourcePermissions)(l),
-                        c = (0, a.useStateFromStores)([r.default], () => r.default.getChannels(e)[r.GUILD_VOCAL_CHANNELS_KEY], [e]),
-                        E = n.useMemo(() => null != t ? c.filter(e => {
+                            canCreateGuildEvent: r
+                        } = (0, a.useManageResourcePermissions)(n),
+                        c = (0, s.useStateFromStores)([l.default], () => l.default.getChannels(e)[l.GUILD_VOCAL_CHANNELS_KEY], [e]),
+                        f = i.useMemo(() => null != t ? c.filter(e => {
                             let {
-                                channel: l
+                                channel: n
                             } = e;
-                            return l.type === t
+                            return n.type === t
                         }) : c, [c, t]),
-                        f = (0, a.useStateFromStores)([u.default], () => {
-                            if (u.default.can(d.Permissions.ADMINISTRATOR, l) || o) return !0;
+                        S = (0, s.useStateFromStores)([d.default], () => {
+                            if (d.default.can(o.Permissions.ADMINISTRATOR, n) || r) return !0;
                             for (let {
                                     channel: e
                                 }
-                                of E) {
+                                of f) {
                                 let {
                                     canCreateGuildEvent: t
-                                } = (0, s.getManageResourcePermissions)(e);
+                                } = (0, a.getManageResourcePermissions)(e);
                                 if (t) return !0
                             }
                             return !1
-                        }, [E, l, o]);
-                    return f
+                        }, [f, n, r]);
+                    return S
                 }

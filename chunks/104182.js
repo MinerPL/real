@@ -18,12 +18,12 @@
                 let a = e.id,
                     E = l.useRef();
                 null == E.current && (E.current = [(0, c.generateEmptyPollAnswer)(), (0, c.generateEmptyPollAnswer)()]);
-                let [_, A] = l.useState(E.current), [m, L] = l.useState(""), [T, C] = l.useState(n.PollLayoutTypes.DEFAULT), [p, x] = l.useState(!1), [O, R] = l.useState(d.PollDurations.ONE_DAY), N = _.filter(e => (0, c.isAnswerFilled)(e, T)), P = _.filter(e => (0, c.isIncompleteAnswer)(e, T)), h = m.length > 0 && N.length >= d.MIN_NUMBER_OF_ANSWERS_PER_POLL && 0 === P.length, [I, {
+                let [f, A] = l.useState(E.current), [m, L] = l.useState(""), [T, C] = l.useState(n.PollLayoutTypes.DEFAULT), [p, x] = l.useState(!1), [O, P] = l.useState(d.PollDurations.ONE_DAY), R = f.filter(e => (0, c.isAnswerFilled)(e, T)), N = f.filter(e => (0, c.isIncompleteAnswer)(e, T)), h = m.length > 0 && R.length >= d.MIN_NUMBER_OF_ANSWERS_PER_POLL && 0 === N.length, [I, {
                     error: g,
                     loading: v
-                }] = (0, s.default)(u.default.createPoll), M = _.length < d.MAX_NUMBER_OF_ANSWERS_PER_POLL, S = l.useCallback(() => {
-                    M && A(e => [...e, (0, c.generateEmptyPollAnswer)()])
-                }, [M]), j = l.useCallback((e, t) => {
+                }] = (0, s.default)(u.default.createPoll), S = f.length < d.MAX_NUMBER_OF_ANSWERS_PER_POLL, M = l.useCallback(() => {
+                    S && A(e => [...e, (0, c.generateEmptyPollAnswer)()])
+                }, [S]), j = l.useCallback((e, t) => {
                     A(a => {
                         let l = [...a];
                         return l[t] = {
@@ -41,19 +41,19 @@
                     })
                 }, []), y = l.useCallback((e, t, a) => {
                     var l;
-                    let n = _[t],
+                    let n = f[t],
                         s = null === (l = n.image) || void 0 === l ? void 0 : l.gifAttachmentState;
                     null != s && s.gifUrl !== a && o.removePollUploadAttachment(e, n.localCreationAnswerId, (0, r.getFileNameFromGifUrl)(n.localCreationAnswerId, s.gifUrl))
-                }, [_]), b = l.useCallback(async (e, t, a) => {
-                    let l = _[t].localCreationAnswerId;
-                    y(e, t), D(f(a, i.PollGifUploadAttachmentStatus.PREPARING), t);
+                }, [f]), b = l.useCallback(async (e, t, a) => {
+                    let l = f[t].localCreationAnswerId;
+                    y(e, t), D(_(a, i.PollGifUploadAttachmentStatus.PREPARING), t);
                     let n = await o.handlePollGifAttachmentAdd(e, l, a);
                     if (null == n) {
-                        D(f(a, i.PollGifUploadAttachmentStatus.ERROR), t);
+                        D(_(a, i.PollGifUploadAttachmentStatus.ERROR), t);
                         return
                     }
-                    D(f(a, i.PollGifUploadAttachmentStatus.READY_TO_UPLOAD), t)
-                }, [_, D, y]), k = l.useCallback((e, t) => {
+                    D(_(a, i.PollGifUploadAttachmentStatus.READY_TO_UPLOAD), t)
+                }, [f, D, y]), k = l.useCallback((e, t) => {
                     y(a, t), D({
                         emoji: e,
                         stickerId: void 0,
@@ -72,15 +72,15 @@
                     await I({
                         channel: e,
                         question: m,
-                        answers: N,
+                        answers: R,
                         allowMultiSelect: p,
                         duration: O,
                         layout: T,
                         onClose: t
                     })
-                }, [m, N, p, O, I, e, T, t]);
+                }, [m, R, p, O, I, e, T, t]);
                 return {
-                    answers: _,
+                    answers: f,
                     question: m,
                     setQuestion: L,
                     selectedLayoutType: T,
@@ -88,10 +88,10 @@
                     allowMultiSelect: p,
                     setAllowMultiSelect: x,
                     duration: O,
-                    setDuration: R,
+                    setDuration: P,
                     canPost: h,
-                    canAddMoreAnswers: M,
-                    handleAddAnswer: S,
+                    canAddMoreAnswers: S,
+                    handleAddAnswer: M,
                     handleAnswerTextChange: j,
                     handleGifSelect: b,
                     handleEmojiSelect: k,
@@ -102,7 +102,7 @@
                 }
             }
 
-            function f(e, t) {
+            function _(e, t) {
                 return {
                     gifAttachmentState: {
                         status: t,

@@ -6,19 +6,22 @@
                 filterOutUUID: function() {
                     return c
                 },
-                useCanPostPollsInChannel: function() {
+                hasNonVoteReactions: function() {
                     return E
                 },
-                isAnswerFilled: function() {
+                useCanPostPollsInChannel: function() {
                     return f
                 },
-                isIncompleteAnswer: function() {
+                isAnswerFilled: function() {
                     return _
                 },
-                createPollServerDataFromCreateRequest: function() {
+                isIncompleteAnswer: function() {
                     return g
+                },
+                createPollServerDataFromCreateRequest: function() {
+                    return h
                 }
-            }), n("781738");
+            }), n("781738"), n("222007");
             var a = n("748820"),
                 l = n("446674"),
                 s = n("418009"),
@@ -42,6 +45,12 @@
             }
 
             function E(e) {
+                for (let t of e.reactions)
+                    if (null == t.me_vote) return !0;
+                return !1
+            }
+
+            function f(e) {
                 let {
                     enabled: t
                 } = d.PollsExperiment.useExperiment({
@@ -54,15 +63,15 @@
                 return !!u.ChannelTypesSets.POLLS.has(e.type) && (e.isPrivate() ? n.every(e => (null == e ? void 0 : e.isStaff()) === !0) : t && i.default.can(u.Permissions.SEND_MESSAGES, e))
             }
 
-            function f(e, t) {
+            function _(e, t) {
                 return t === s.PollLayoutTypes.IMAGE_ONLY_ANSWERS ? null != e.image : null != e.text && e.text.length > 0
             }
 
-            function _(e, t) {
+            function g(e, t) {
                 return t === s.PollLayoutTypes.DEFAULT && null != e.image && (null == e.text || 0 === e.text.length)
             }
 
-            function g(e) {
+            function h(e) {
                 var t, n;
                 if (null == e) return;
                 let a = null == e ? void 0 : null === (t = e.answers) || void 0 === t ? void 0 : t.map((e, t) => {

@@ -20,19 +20,19 @@
                     parentModalKey: s,
                     lastActiveInputIndex: d,
                     onEmojiSelect: E,
-                    onGifSelect: f,
-                    positionTargetRef: _
+                    onGifSelect: _,
+                    positionTargetRef: f
                 } = e, {
                     showPollExpressionPicker: A,
                     closePollExpressionPicker: m,
                     chatInputType: L
                 } = (0, u.default)(a), T = n.useCallback(e => {
-                    r(null != d, "Expected to have an active input"), (null == e ? void 0 : e.gifSrc) != null && f(t.id, d, (0, o.makeTenorProxyURL)(e.gifSrc)), m()
-                }, [m, d, f, t.id]), C = n.useCallback(e => {
+                    r(null != d, "Expected to have an active input"), (null == e ? void 0 : e.gifSrc) != null && _(t.id, d, (0, o.makeTenorProxyURL)(e.gifSrc)), m()
+                }, [m, d, _, t.id]), C = n.useCallback(e => {
                     r(null != d, "Expected to have an active input"), r(null != e, "Expected to have an emoji"), E(e, d), m()
                 }, [d, E, m]), p = n.useCallback(() => {}, []);
                 return A ? (0, l.jsx)(i.default, {
-                    positionTargetRef: _,
+                    positionTargetRef: f,
                     type: L,
                     hideGifFavorites: !0,
                     includeCreateEmojiButton: !1,

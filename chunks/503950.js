@@ -1,28 +1,28 @@
             "use strict";
-            u.r(t), u.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return l
+                    return r
                 }
             });
-            var n = u("37983");
-            u("884691");
-            var a = u("446674"),
-                s = u("77078"),
-                d = u("519705"),
-                r = u("282109"),
-                c = u("34676"),
-                i = u("782340");
+            var i = n("37983");
+            n("884691");
+            var s = n("446674"),
+                a = n("77078"),
+                l = n("519705"),
+                u = n("282109"),
+                d = n("34676"),
+                o = n("782340");
 
-            function l(e) {
-                let t = (0, a.useStateFromStores)([r.default], () => r.default.isMuteScheduledEventsEnabled(e), [e]);
-                return (0, n.jsx)(s.MenuCheckboxItem, {
+            function r(e) {
+                let t = (0, s.useStateFromStores)([u.default], () => u.default.isMuteScheduledEventsEnabled(e), [e]);
+                return (0, i.jsx)(a.MenuCheckboxItem, {
                     id: "mute-events",
-                    label: i.default.Messages.FORM_LABEL_MUTE_SCHEDULED_EVENTS,
+                    label: o.default.Messages.FORM_LABEL_MUTE_SCHEDULED_EVENTS,
                     action: () => {
-                        var u;
-                        return u = {
+                        var n;
+                        return n = {
                             mute_scheduled_events: !t
-                        }, void d.default.updateGuildNotificationSettings(e, u, c.NotificationLabel.mutedEvents(u.mute_scheduled_events))
+                        }, void l.default.updateGuildNotificationSettings(e, n, d.NotificationLabel.mutedEvents(n.mute_scheduled_events))
                     },
                     checked: t
                 })

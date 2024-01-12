@@ -1,11 +1,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 useIsSuspendedUserPageEnabled: function() {
-                    return o
+                    return E
                 }
             });
             var i = n("862205");
-            let E = (0, i.createExperiment)({
+            let o = (0, i.createExperiment)({
                 kind: "user",
                 id: "2023-12_suspended_user_access_to_account_standing",
                 label: "Suspended User Account Standing Page",
@@ -21,8 +21,8 @@
                 }]
             });
 
-            function o(e) {
-                return !!E.useExperiment({
+            function E(e) {
+                return !!o.useExperiment({
                     location: e
                 }, {
                     autoTrackExposure: !0
