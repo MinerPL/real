@@ -1,50 +1,50 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return g
                 }
             });
-            var s = n("37983");
+            var i = n("37983");
             n("884691");
-            var i = n("446674"),
+            var s = n("446674"),
                 a = n("77078"),
                 l = n("412707"),
                 u = n("646186"),
-                r = n("592407"),
+                d = n("592407"),
                 o = n("148475"),
-                d = n("725621"),
+                r = n("725621"),
                 c = n("923959"),
                 f = n("49111"),
                 S = n("782340");
 
-            function E(e) {
+            function g(e) {
                 function t(t) {
-                    r.default.open(e.id, t)
+                    d.default.open(e.id, t)
                 }
-                let n = (0, i.useStateFromStoresArray)([c.default], () => c.default.getChannels(e.id).SELECTABLE, [e]),
-                    E = (0, o.default)(e);
-                return __OVERLAY__ || !E ? null : (0, s.jsx)(a.MenuItem, {
+                let n = (0, s.useStateFromStoresArray)([c.default], () => c.default.getChannels(e.id).SELECTABLE, [e]),
+                    g = (0, o.default)(e);
+                return __OVERLAY__ || !g ? null : (0, i.jsx)(a.MenuItem, {
                     id: "guild-settings",
                     label: S.default.Messages.SERVER_SETTINGS,
                     action: () => t(),
-                    children: (0, d.getGuildSettingsSections)(e, n).map(n => {
+                    children: (0, r.getGuildSettingsSections)(e, n).map(n => {
                         let {
-                            section: i,
-                            label: r
+                            section: s,
+                            label: d
                         } = n;
-                        if (null == r) return null;
-                        switch (i) {
+                        if (null == d) return null;
+                        switch (s) {
                             case f.GuildSettingsSections.DELETE:
                                 return null;
                             case f.GuildSettingsSections.COMMUNITY:
-                                return (0, s.jsx)(a.MenuItem, {
-                                    id: i,
-                                    action: () => t(i),
+                                return (0, i.jsx)(a.MenuItem, {
+                                    id: s,
+                                    action: () => t(s),
                                     label: S.default.Messages.GUILD_SETTINGS_COMMUNITY
-                                }, i);
+                                }, s);
                             case f.GuildSettingsSections.APP_DIRECTORY:
-                                return (0, s.jsx)(a.MenuItem, {
-                                    id: i,
+                                return (0, i.jsx)(a.MenuItem, {
+                                    id: s,
                                     action: () => {
                                         (0, u.goToAppDirectory)({
                                             guildId: e.id,
@@ -53,14 +53,14 @@
                                             }
                                         })
                                     },
-                                    label: r
-                                }, i);
+                                    label: d
+                                }, s);
                             default:
-                                return (0, s.jsx)(a.MenuItem, {
-                                    id: i,
-                                    action: () => t(i),
-                                    label: r
-                                }, i)
+                                return (0, i.jsx)(a.MenuItem, {
+                                    id: s,
+                                    action: () => t(s),
+                                    label: d
+                                }, s)
                         }
                     })
                 })
