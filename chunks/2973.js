@@ -9,9 +9,9 @@
             let s = !1,
                 l = new Map,
                 r = 0,
-                o = new Set;
+                u = new Set;
 
-            function u(e, t) {
+            function o(e, t) {
                 l = new Map(l);
                 let n = l.get(e);
                 null != n && l.set(e, {
@@ -21,8 +21,8 @@
             }
 
             function d(e) {
-                let t = new Set(o);
-                t.delete(e), o = t
+                let t = new Set(u);
+                t.delete(e), u = t
             }
             class c extends a.default.Store {
                 get quests() {
@@ -35,13 +35,13 @@
                     return r
                 }
                 isEnrolling(e) {
-                    return o.has(e)
+                    return u.has(e)
                 }
             }
             c.displayName = "QuestsStore";
             var f = new c(i.default, {
                 LOGOUT: function() {
-                    s = !1, l = new Map, r = 0, o = new Set
+                    s = !1, l = new Map, r = 0, u = new Set
                 },
                 QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function() {
                     r = Date.now(), s = !0
@@ -60,21 +60,21 @@
                         questId: t,
                         userStatus: n
                     } = e;
-                    u(t, {
+                    o(t, {
                         userStatus: n
                     })
                 },
                 QUESTS_ENROLL_BEGIN: function(e) {
                     let {
                         questId: t
-                    } = e, n = new Set(o);
-                    n.add(t), o = n
+                    } = e, n = new Set(u);
+                    n.add(t), u = n
                 },
                 QUESTS_ENROLL_SUCCESS: function(e) {
                     let {
                         enrolledQuestUserStatus: t
                     } = e;
-                    u(t.questId, {
+                    o(t.questId, {
                         userStatus: t
                     }), d(t.questId)
                 },

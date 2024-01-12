@@ -29,8 +29,8 @@
                 N = n("317134"),
                 L = n("991170"),
                 v = n("158998"),
-                R = n("938244"),
-                x = n("172554"),
+                x = n("938244"),
+                R = n("172554"),
                 y = n("730859"),
                 D = n("49111"),
                 O = n("782340"),
@@ -72,16 +72,16 @@
                     h.default.open(t.id)
                 }
                 let B = a.useCallback(() => l(!1), []);
-                return (0, s.jsxs)(x.default, {
+                return (0, s.jsxs)(R.default, {
                     channelId: t.id,
-                    children: [(0, s.jsx)(x.EmptyMessageIcon, {
+                    children: [(0, s.jsx)(R.EmptyMessageIcon, {
                         locked: !0,
                         channelType: t.type
-                    }), (0, s.jsx)(x.EmptyMessageHeader, {
+                    }), (0, s.jsx)(R.EmptyMessageHeader, {
                         children: O.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
                             channelName: r
                         })
-                    }), (0, s.jsx)(x.EmptyMessageBody, {
+                    }), (0, s.jsx)(R.EmptyMessageBody, {
                         children: O.default.Messages.BEGINNING_ROLE_REQUIRED_CHANNEL_DESCRIPTION.format({
                             channelName: r,
                             topicHook: () => g.default.parseTopic(t.topic, !0, {
@@ -90,14 +90,14 @@
                         })
                     }), k ? (0, s.jsxs)("div", {
                         className: j.channelSettingButtons,
-                        children: [(0, s.jsx)(R.default, {
+                        children: [(0, s.jsx)(x.default, {
                             label: O.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
                             onClick: () => l(!0),
                             icon: (0, s.jsx)(M.default, {
                                 width: 16,
                                 height: 16
                             })
-                        }), (0, s.jsx)(R.default, {
+                        }), (0, s.jsx)(x.default, {
                             label: O.default.Messages.EDIT_CHANNEL,
                             onClick: G,
                             icon: (0, s.jsx)(T.default, {

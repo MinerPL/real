@@ -7,47 +7,47 @@
                     return o
                 }
             });
-            var r = n("37983");
+            var i = n("37983");
             n("884691");
-            var i = n("414456"),
-                l = n.n(i),
-                s = n("79798"),
+            var s = n("414456"),
+                l = n.n(s),
+                r = n("79798"),
                 a = n("988268"),
                 u = n("888770"),
                 o = e => {
                     let {
                         name: t,
                         discriminator: n,
-                        invertBotTagColor: i,
+                        invertBotTagColor: s,
                         nameColor: a,
                         className: o,
-                        botType: c,
-                        usernameClass: d,
-                        discriminatorClass: f,
-                        botClass: I,
-                        botVerified: _ = !1,
-                        style: E,
-                        useRemSizes: S = !1,
-                        usernameIcon: T
+                        botType: d,
+                        usernameClass: c,
+                        discriminatorClass: h,
+                        botClass: f,
+                        botVerified: m = !1,
+                        style: p,
+                        useRemSizes: I = !1,
+                        usernameIcon: E
                     } = e;
-                    return (0, r.jsxs)("div", {
+                    return (0, i.jsxs)("div", {
                         className: l(o, u.nameTag),
-                        style: E,
-                        children: [(0, r.jsxs)("span", {
-                            className: l(u.username, d),
+                        style: p,
+                        children: [(0, i.jsxs)("span", {
+                            className: l(u.username, c),
                             style: null != a ? {
                                 color: a
                             } : void 0,
-                            children: [T, t]
-                        }), null != n ? (0, r.jsxs)("span", {
-                            className: null != f ? f : void 0,
+                            children: [E, t]
+                        }), null != n ? (0, i.jsxs)("span", {
+                            className: null != h ? h : void 0,
                             children: ["#", n]
-                        }) : null, null != c ? (0, r.jsx)(s.default, {
-                            type: c,
-                            invertColor: i,
-                            className: l(I, u.bot),
-                            verified: _,
-                            useRemSizes: S
+                        }) : null, null != d ? (0, i.jsx)(r.default, {
+                            type: d,
+                            invertColor: s,
+                            className: l(f, u.bot),
+                            verified: m,
+                            useRemSizes: I
                         }) : null]
                     })
                 }

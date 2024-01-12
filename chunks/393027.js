@@ -1,16 +1,16 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return r
+                    return o
                 }
             });
             var a = n("803182"),
-                s = n("308503"),
-                l = n("49111");
+                r = n("308503"),
+                i = n("49111");
 
-            function i(e) {
+            function l(e) {
                 let t = (0, a.matchPath)(null != e ? e : "", {
-                    path: l.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")
+                    path: i.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")
                 });
                 if (null != t) {
                     let {
@@ -18,12 +18,12 @@
                         channelId: n
                     } = t.params;
                     return {
-                        guildId: e === l.ME ? null : e,
+                        guildId: e === i.ME ? null : e,
                         channelId: null != n ? n : null
                     }
                 }
                 let n = (0, a.matchPath)(null != e ? e : "", {
-                    path: l.Routes.GUILD_BOOSTING_MARKETING(":guildId")
+                    path: i.Routes.GUILD_BOOSTING_MARKETING(":guildId")
                 });
                 return null != n ? {
                     guildId: n.params.guildId,
@@ -33,7 +33,7 @@
                     channelId: null
                 }
             }
-            var r = (0, s.default)(e => ({
+            var o = (0, r.default)(e => ({
                 path: null,
                 basePath: "/",
                 guildId: null,
@@ -42,7 +42,7 @@
                     let {
                         guildId: n,
                         channelId: a
-                    } = i(t);
+                    } = l(t);
                     e({
                         path: t,
                         guildId: n,
@@ -53,7 +53,7 @@
                     let {
                         guildId: n,
                         channelId: a
-                    } = i(t);
+                    } = l(t);
                     e({
                         path: null,
                         guildId: n,

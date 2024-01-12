@@ -1,29 +1,29 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return a
+                    return s
                 }
             });
             var i = n("37983");
             n("884691");
             var l = n("469563"),
-                s = n("390300"),
-                r = n("75196"),
-                a = (0, l.replaceIcon)(function(e) {
+                r = n("390300"),
+                a = n("75196"),
+                s = (0, l.replaceIcon)(function(e) {
                     let {
                         width: t = 24,
                         height: n = 24,
                         color: l = "currentColor",
-                        foreground: s,
-                        ...a
+                        foreground: r,
+                        ...s
                     } = e;
                     return (0, i.jsx)("svg", {
-                        ...(0, r.default)(a),
+                        ...(0, a.default)(s),
                         width: t,
                         height: n,
                         viewBox: "0 0 24 24",
                         children: (0, i.jsx)("path", {
-                            className: s,
+                            className: r,
                             fill: l,
                             fillRule: "evenodd",
                             clipRule: "evenodd",
@@ -31,6 +31,6 @@
                             "aria-hidden": !0
                         })
                     })
-                }, s.VoiceNormalIcon, void 0, {
+                }, r.VoiceNormalIcon, void 0, {
                     size: 24
                 })

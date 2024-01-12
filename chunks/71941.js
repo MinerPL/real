@@ -4,7 +4,7 @@
                     return l
                 },
                 default: function() {
-                    return o
+                    return h
                 }
             });
             var t, l, i = a("37983");
@@ -13,16 +13,16 @@
                 d = a.n(n),
                 c = a("77078"),
                 r = a("782340"),
-                h = a("805986");
+                o = a("805986");
 
-            function o(e) {
+            function h(e) {
                 let {
                     selectedTab: s,
                     onClick: a,
                     submitted: t
                 } = e;
                 return (0, i.jsxs)("div", {
-                    className: h.tabs,
+                    className: o.tabs,
                     children: [(0, i.jsx)(x, {
                         tab: 0,
                         selectedTab: s,
@@ -54,11 +54,11 @@
                     onClick: n
                 } = e;
                 return l ? (0, i.jsxs)("div", {
-                    className: d(h.tab, {
-                        [h.current]: a === s
+                    className: d(o.tab, {
+                        [o.current]: a === s
                     }),
                     children: [(0, i.jsx)("div", {
-                        className: h.progressBar
+                        className: o.progressBar
                     }), (0, i.jsx)(c.Text, {
                         variant: "text-xs/medium",
                         color: a === s ? "text-brand" : "text-muted",
@@ -66,11 +66,11 @@
                     })]
                 }) : (0, i.jsxs)(c.Clickable, {
                     onClick: () => n(s),
-                    className: d(h.tab, {
-                        [h.current]: a === s
+                    className: d(o.tab, {
+                        [o.current]: a === s
                     }),
                     children: [(0, i.jsx)("div", {
-                        className: h.progressBar
+                        className: o.progressBar
                     }), (0, i.jsx)(c.Text, {
                         variant: "text-xs/medium",
                         color: a === s ? "text-brand" : "text-muted",

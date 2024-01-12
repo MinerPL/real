@@ -4,11 +4,11 @@
                     return f
                 }
             });
-            var s = n("37983"),
-                i = n("884691"),
-                a = n("414456"),
-                l = n.n(a),
-                r = n("546671"),
+            var i = n("37983"),
+                r = n("884691"),
+                s = n("414456"),
+                l = n.n(s),
+                a = n("546671"),
                 u = n("341417");
             let o = {
                     UP: "up",
@@ -22,13 +22,13 @@
                     [o.DOWN]: u.down,
                     [o.LEFT]: u.left
                 };
-            class d extends i.PureComponent {
+            class d extends r.PureComponent {
                 render() {
                     let {
                         direction: e,
                         className: t
                     } = this.props;
-                    return (0, s.jsx)(r.default, {
+                    return (0, i.jsx)(a.default, {
                         className: l(u.arrow, t, {
                             [c[e]]: !0
                         })

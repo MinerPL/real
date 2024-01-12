@@ -9,19 +9,19 @@
                 s = n("414456"),
                 l = n.n(s),
                 r = n("917351"),
-                o = n.n(r),
-                u = n("77078"),
+                u = n.n(r),
+                o = n("77078"),
                 d = n("164546"),
                 c = n("513196"),
                 f = n("42723"),
                 m = n("605475"),
-                h = n("49111"),
-                g = n("782340"),
-                _ = n("279732");
-            let S = () => [g.default.Messages.APP_ICON_PIRATE, g.default.Messages.APP_ICON_PIRATE_1, g.default.Messages.APP_ICON_PIRATE_2, g.default.Messages.APP_ICON_PIRATE_3, g.default.Messages.APP_ICON_PIRATE_4],
+                _ = n("49111"),
+                h = n("782340"),
+                g = n("279732");
+            let S = () => [h.default.Messages.APP_ICON_PIRATE, h.default.Messages.APP_ICON_PIRATE_1, h.default.Messages.APP_ICON_PIRATE_2, h.default.Messages.APP_ICON_PIRATE_3, h.default.Messages.APP_ICON_PIRATE_4],
                 p = () => {
                     var e;
-                    return null !== (e = o.sample(S())) && void 0 !== e ? e : g.default.Messages.APP_ICON_PIRATE
+                    return null !== (e = u.sample(S())) && void 0 !== e ? e : h.default.Messages.APP_ICON_PIRATE
                 };
 
             function Selection(e) {
@@ -30,25 +30,25 @@
                     className: n,
                     onSelect: s,
                     isSelected: r = !1,
-                    tabIndex: o,
+                    tabIndex: u,
                     children: f
-                } = e, [g, S] = i.useState(m.ICONS_BY_ID[t].name), E = t === c.PremiumAppIconIds.PIRATE, T = (0, u.useRadioItem)({
-                    label: g,
+                } = e, [h, S] = i.useState(m.ICONS_BY_ID[t].name), E = t === c.PremiumAppIconIds.PIRATE, T = (0, o.useRadioItem)({
+                    label: h,
                     isSelected: r
                 });
-                return (0, a.jsx)(u.Tooltip, {
-                    text: g,
+                return (0, a.jsx)(o.Tooltip, {
+                    text: h,
                     onTooltipShow: () => E && S(p()),
                     children: e => (0, a.jsxs)("div", {
-                        className: _.appIconSelectionContainer,
-                        children: [(0, a.jsx)(u.Clickable, {
+                        className: g.appIconSelectionContainer,
+                        children: [(0, a.jsx)(o.Clickable, {
                             ...e,
                             ...T,
-                            tabIndex: null != o ? o : T.tabIndex,
-                            className: l(_.appIconSelection, {
-                                [_.selected]: r
+                            tabIndex: null != u ? u : T.tabIndex,
+                            className: l(g.appIconSelection, {
+                                [g.selected]: r
                             }, n),
-                            onClick: r ? h.NOOP : () => null == s ? void 0 : s(t),
+                            onClick: r ? _.NOOP : () => null == s ? void 0 : s(t),
                             children: f
                         }), r && (0, a.jsx)(d.SelectionCircle, {})]
                     })
@@ -67,7 +67,7 @@
                     onSelect: i ? void 0 : l,
                     isSelected: n,
                     id: t.id,
-                    className: i ? _.disabled : void 0,
+                    className: i ? g.disabled : void 0,
                     tabIndex: s,
                     children: (0, a.jsx)(f.default, {
                         id: t.id,

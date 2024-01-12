@@ -4,10 +4,10 @@
                     return r
                 },
                 takeSnapshot: function() {
-                    return o
+                    return u
                 },
                 restoreSnapshot: function() {
-                    return u
+                    return o
                 },
                 backupSettings: function() {
                     return c
@@ -20,7 +20,7 @@
             async function r() {
                 return (await s.default.get(l.Endpoints.NOTIFICATION_SNAPSHOTS)).body
             }
-            async function o(e) {
+            async function u(e) {
                 return (await s.default.post({
                     url: l.Endpoints.NOTIFICATION_SNAPSHOTS,
                     body: {
@@ -28,7 +28,7 @@
                     }
                 })).body
             }
-            async function u(e) {
+            async function o(e) {
                 return (await s.default.post(l.Endpoints.RESTORE_NOTIFICATION_SNAPSHOT(e))).body
             }
             async function d(e) {
@@ -44,5 +44,5 @@
                         await d(t[0].id)
                     }
                 }
-                return o("Backup from ".concat(new Date().toLocaleDateString()))
+                return u("Backup from ".concat(new Date().toLocaleDateString()))
             }

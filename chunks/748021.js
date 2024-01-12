@@ -1,27 +1,28 @@
             "use strict";
             n.r(t), n.d(t, {
                 openMigrationModal: function() {
-                    return c
+                    return f
                 },
                 default: function() {
-                    return f
+                    return m
                 }
             }), n("222007");
             var a = n("37983");
             n("884691");
-            var i = n("77078"),
-                s = n("872717"),
-                l = n("689988"),
-                r = n("282109"),
+            var i = n("95410"),
+                s = n("77078"),
+                l = n("872717"),
+                r = n("689988"),
+                u = n("282109"),
                 o = n("640497"),
-                u = n("699668");
-            class d extends l.default {
+                d = n("699668");
+            class c extends r.default {
                 async handlePostConnectionOpen() {
-                    if (!o.NotificationsExperiment.getCurrentConfig({
+                    if (i.default.get("turnedOffNewNotifications") || !o.NotificationsExperiment.getCurrentConfig({
                             location: "NotificationMigrationManager"
                         }, {
                             autoTrackExposure: !1
-                        }).enabled || r.default.useNewNotifications) return;
+                        }).enabled || u.default.useNewNotifications) return;
                     let {
                         logExposure: e,
                         autoOpen: t
@@ -33,22 +34,22 @@
                     if (!e) return;
                     let {
                         body: {
-                            guild_noise: l,
-                            usage: d
+                            guild_noise: r,
+                            usage: c
                         }
-                    } = await s.default.get("/users/@me/notification-migration-data2"), c = (0, u.transformUsageData)(d), {
-                        default: f
+                    } = await l.default.get("/users/@me/notification-migration-data2"), f = (0, d.transformUsageData)(c), {
+                        default: m
                     } = await n.el("923660").then(n.bind(n, "923660"));
-                    if (!(0, i.hasAnyModalOpen)()) o.UnreadsEntryPointExperiment.trackExposure({
+                    if (!(0, s.hasAnyModalOpen)()) o.UnreadsEntryPointExperiment.trackExposure({
                         location: "NotificationMigrationManager"
-                    }), t && ((0, u.hasGoodCandidateServers)(l, c) ? (0, i.openModal)(e => (0, a.jsx)(f, {
+                    }), t && ((0, d.hasGoodCandidateServers)(r, f) ? (0, s.openModal)(e => (0, a.jsx)(m, {
                         ...e,
                         dismissable: !1,
-                        guildPain: l,
-                        myUsage: c
+                        guildPain: r,
+                        myUsage: f
                     }), {
                         onCloseRequest: () => {}
-                    }) : (0, u.autoMigrateToNewSystem)())
+                    }) : (0, d.autoMigrateToNewSystem)())
                 }
                 constructor(...e) {
                     super(...e), this.actions = {
@@ -56,14 +57,14 @@
                     }
                 }
             }
-            async function c(e) {
+            async function f(e) {
                 let {
                     body: {
                         guild_noise: t,
-                        usage: l
+                        usage: i
                     }
-                } = await s.default.get("/users/@me/notification-migration-data2"), r = (0, u.transformUsageData)(l);
-                (0, i.openModalLazy)(async () => {
+                } = await l.default.get("/users/@me/notification-migration-data2"), r = (0, d.transformUsageData)(i);
+                (0, s.openModalLazy)(async () => {
                     let {
                         default: i
                     } = await n.el("923660").then(n.bind(n, "923660"));
@@ -75,4 +76,4 @@
                     })
                 })
             }
-            var f = new d
+            var m = new c

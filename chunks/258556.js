@@ -198,18 +198,25 @@
                                 className: ee.title,
                                 children: Q.default.Messages.COLLECTIBLES_SHOP
                             })]
+                        }), t && (0, l.jsx)("div", {
+                            className: ee.closeWrapper,
+                            children: (0, l.jsx)(m.default, {
+                                className: ee.close,
+                                closeAction: L ? y.closeCollectiblesShop : I,
+                                keybind: "ESC"
+                            })
                         }), (0, l.jsx)(C.AdvancedScroller, {
                             className: n(ee.shopScroll, {
                                 [ee.shopScrollBackgroundPrimary]: el
                             }),
                             ref: ei,
                             onScroll: eu,
-                            children: (0, l.jsxs)("div", {
+                            children: (0, l.jsx)("div", {
                                 className: n(ee.pageWrapper, {
                                     [ee.pageWrapperFullscreen]: t,
                                     [ee.pageWrapperBackgroundPrimary]: el
                                 }),
-                                children: [(0, l.jsxs)("main", {
+                                children: (0, l.jsxs)("main", {
                                     className: ee.page,
                                     children: [t ? (0, l.jsx)(N.default, {
                                         title: Q.default.Messages.COLLECTIBLES_SHOP
@@ -233,13 +240,7 @@
                                             showEasterEggToggle: t === Math.floor(Y.current * z.length)
                                         }, e.skuId))
                                     })]
-                                }), t && (0, l.jsx)("div", {
-                                    children: (0, l.jsx)(m.default, {
-                                        className: ee.close,
-                                        closeAction: L ? y.closeCollectiblesShop : I,
-                                        keybind: "ESC"
-                                    })
-                                })]
+                                })
                             })
                         })]
                     }), er && (0, l.jsx)(X.default, {})]

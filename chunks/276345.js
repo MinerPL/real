@@ -12,17 +12,17 @@
                 d = a("446674"),
                 c = a("305961"),
                 r = a("677099"),
-                h = a("660279"),
-                o = a("70025"),
+                o = a("660279"),
+                h = a("70025"),
                 x = a("461380"),
-                m = a("593195"),
-                u = a("578706"),
+                u = a("593195"),
+                m = a("578706"),
                 N = a("945330"),
                 I = a("474571"),
                 T = a("76539"),
                 v = a("975743"),
-                j = a("904276"),
-                f = a("875436"),
+                f = a("904276"),
+                j = a("875436"),
                 _ = a("782340"),
                 g = a("650287"),
                 O = a("492489");
@@ -38,7 +38,7 @@
                     className: g.content,
                     children: [(0, t.jsxs)("div", {
                         className: i(g.header, O.header),
-                        children: [(0, t.jsx)(u.default, {
+                        children: [(0, t.jsx)(m.default, {
                             width: 40,
                             height: 40
                         }), (0, t.jsx)(n.Heading, {
@@ -94,7 +94,7 @@
                                                 variant: "text-sm/normal",
                                                 color: "always-white",
                                                 children: _.default.Messages.NOTIFICATION_SETTINGS
-                                            }), (0, t.jsx)(h.default, {
+                                            }), (0, t.jsx)(o.default, {
                                                 className: O.icon,
                                                 width: 18,
                                                 height: 18
@@ -127,7 +127,7 @@
                                                 variant: "text-sm/normal",
                                                 color: "interactive-normal",
                                                 children: _.default.Messages.CREATE_EVENTS
-                                            }), (0, t.jsx)(o.default, {
+                                            }), (0, t.jsx)(h.default, {
                                                 className: O.icon,
                                                 width: 18,
                                                 height: 18
@@ -152,7 +152,7 @@
                                     className: i(O.previewInner, O.channelPreviewInner),
                                     children: [(0, t.jsxs)("div", {
                                         className: i(O.channel, O.active),
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -163,7 +163,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -174,7 +174,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -185,7 +185,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -196,7 +196,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -207,7 +207,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -253,7 +253,7 @@
                                             color: "interactive-normal",
                                             lineClamp: 1,
                                             children: _.default.Messages.NOTIFICATION_PRESET_1
-                                        }), (0, t.jsx)(j.default, {
+                                        }), (0, t.jsx)(f.default, {
                                             className: O.icon,
                                             width: 12,
                                             height: 12
@@ -265,7 +265,7 @@
                                             color: "interactive-active",
                                             lineClamp: 1,
                                             children: _.default.Messages.NOTIFICATION_PRESET_2
-                                        }), (0, t.jsx)(f.default, {
+                                        }), (0, t.jsx)(j.default, {
                                             className: O.icon,
                                             width: 12,
                                             height: 12
@@ -277,7 +277,7 @@
                                             color: "interactive-normal",
                                             lineClamp: 1,
                                             children: _.default.Messages.NOTIFICATION_PRESET_3
-                                        }), (0, t.jsx)(j.default, {
+                                        }), (0, t.jsx)(f.default, {
                                             className: O.icon,
                                             width: 12,
                                             height: 12
@@ -289,7 +289,7 @@
                                             color: "interactive-normal",
                                             lineClamp: 1,
                                             children: _.default.Messages.NOTIFICATION_PRESET_CUSTOM
-                                        }), (0, t.jsx)(j.default, {
+                                        }), (0, t.jsx)(f.default, {
                                             className: O.icon,
                                             width: 12,
                                             height: 12
@@ -313,7 +313,7 @@
                                     className: i(O.previewInner, O.channelPreviewInner),
                                     children: [(0, t.jsxs)("div", {
                                         className: i(O.channel, O.active),
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -324,7 +324,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -335,7 +335,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -346,7 +346,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -357,7 +357,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -368,7 +368,7 @@
                                         })]
                                     }), (0, t.jsxs)("div", {
                                         className: O.channel,
-                                        children: [(0, t.jsx)(m.default, {
+                                        children: [(0, t.jsx)(u.default, {
                                             className: O.channelIcon,
                                             width: 16,
                                             height: 16
@@ -414,7 +414,7 @@
                                             color: "interactive-normal",
                                             lineClamp: 1,
                                             children: _.default.Messages.NOTIFICATION_PRESET_1
-                                        }), (0, t.jsx)(j.default, {
+                                        }), (0, t.jsx)(f.default, {
                                             className: O.icon,
                                             width: 12,
                                             height: 12
@@ -426,7 +426,7 @@
                                             color: "interactive-normal",
                                             lineClamp: 1,
                                             children: _.default.Messages.NOTIFICATION_PRESET_2
-                                        }), (0, t.jsx)(j.default, {
+                                        }), (0, t.jsx)(f.default, {
                                             className: O.icon,
                                             width: 12,
                                             height: 12
@@ -438,7 +438,7 @@
                                             color: "interactive-normal",
                                             lineClamp: 1,
                                             children: _.default.Messages.NOTIFICATION_PRESET_3
-                                        }), (0, t.jsx)(j.default, {
+                                        }), (0, t.jsx)(f.default, {
                                             className: O.icon,
                                             width: 12,
                                             height: 12
@@ -450,7 +450,7 @@
                                             color: "interactive-active",
                                             lineClamp: 1,
                                             children: _.default.Messages.NOTIFICATION_PRESET_CUSTOM
-                                        }), (0, t.jsx)(f.default, {
+                                        }), (0, t.jsx)(j.default, {
                                             className: O.icon,
                                             width: 12,
                                             height: 12

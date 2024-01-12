@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 fetchCurrentQuests: function() {
-                    return u
+                    return o
                 },
                 sendHeartbeat: function() {
                     return d
@@ -15,14 +15,14 @@
                 s = n("599417"),
                 l = n("2973"),
                 r = n("227231"),
-                o = n("49111");
-            async function u() {
+                u = n("49111");
+            async function o() {
                 i.default.dispatch({
                     type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN"
                 });
                 try {
                     let e = await a.default.get({
-                        url: o.Endpoints.QUESTS_CURRENT_QUESTS
+                        url: u.Endpoints.QUESTS_CURRENT_QUESTS
                     });
                     i.default.dispatch({
                         type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
@@ -43,7 +43,7 @@
                 } = e;
                 try {
                     let e = await a.default.post({
-                        url: o.Endpoints.QUESTS_HEARTBEAT(t),
+                        url: u.Endpoints.QUESTS_HEARTBEAT(t),
                         body: {
                             stream_key: n,
                             application_id: l
@@ -74,7 +74,7 @@
                     });
                     try {
                         let t = await a.default.post({
-                            url: o.Endpoints.QUESTS_ENROLL(e)
+                            url: u.Endpoints.QUESTS_ENROLL(e)
                         });
                         i.default.dispatch({
                             type: "QUESTS_ENROLL_SUCCESS",

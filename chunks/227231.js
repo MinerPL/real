@@ -10,10 +10,10 @@
                     return r
                 },
                 questWithUserStatusFromServer: function() {
-                    return o
+                    return u
                 },
                 getRewardAssetUrl: function() {
-                    return u
+                    return o
                 },
                 getHeroAssetUrl: function() {
                     return d
@@ -55,7 +55,7 @@
                 }
             }
 
-            function o(e) {
+            function u(e) {
                 var t, n;
                 return {
                     id: e.id,
@@ -74,7 +74,7 @@
                     userStatus: null == e.user_status ? null : r(e.user_status)
                 }
             }
-            let u = e => "".concat(i).concat(e).concat("/reward.png"),
+            let o = e => "".concat(i).concat(e).concat("/reward.png"),
                 d = e => "".concat(i).concat(e).concat("/hero.png"),
                 c = e => "".concat(i).concat(e).concat("/game_tile.png"),
                 f = (e, t) => "".concat(i).concat(e, "/").concat(t).concat("/game_logotype.png")
