@@ -510,7 +510,8 @@
                         oldFormErrors: !0
                     })).then(n => {
                         if (null != n && (ec === a && i === x.default.getId() && (ec = n.body.token), f.default.dispatch({
-                                type: "MESSAGE_ACKED"
+                                type: "MESSAGE_ACKED",
+                                channelId: this.channelId
                             }), t)) {
                             let t = Y.default.getChannel(this.channelId);
                             (0, p.trackWithMetadata)(en.AnalyticEvents.ACK_MESSAGES, {

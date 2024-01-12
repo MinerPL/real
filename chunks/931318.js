@@ -7,24 +7,24 @@
                     return g
                 },
                 toggleMessageReminders: function() {
-                    return p
-                },
-                completeMessageReminders: function() {
                     return E
                 },
-                cleanupMessageReminders: function() {
+                completeMessageReminders: function() {
                     return S
                 },
+                cleanupMessageReminders: function() {
+                    return p
+                },
                 fetchAndUpdateSavedMessages: function() {
-                    return v
+                    return M
                 }
             });
             var a = n("872717"),
                 s = n("913144"),
-                i = n("679653"),
-                r = n("42203"),
-                l = n("305961"),
-                u = n("27618"),
+                r = n("679653"),
+                i = n("42203"),
+                u = n("305961"),
+                l = n("27618"),
                 d = n("697218"),
                 c = n("599110"),
                 o = n("520899"),
@@ -42,16 +42,16 @@
                     savedAt: new Date,
                     dueAt: t,
                     ... function(e) {
-                        let t = r.default.getChannel(e.channel_id);
+                        let t = i.default.getChannel(e.channel_id);
                         if (null == t) return null;
-                        let n = l.default.getGuild(t.guild_id),
+                        let n = u.default.getGuild(t.guild_id),
                             a = "",
-                            s = (0, i.computeChannelName)(t, d.default, u.default, !0);
+                            s = (0, r.computeChannelName)(t, d.default, l.default, !0);
                         if (t.isPrivate()) a = s;
                         else if (t.isThread()) {
-                            let e = r.default.getChannel(t.parent_id);
+                            let e = i.default.getChannel(t.parent_id);
                             if (null == e) return null;
-                            let n = (0, i.computeChannelName)(e, d.default, u.default, !0);
+                            let n = (0, r.computeChannelName)(e, d.default, l.default, !0);
                             a = "".concat(n, " > ").concat(s)
                         } else a = s;
                         let c = "".concat(e.content.length > 0 ? e.content : "".concat(e.attachments.length, " attachments"));
@@ -81,7 +81,7 @@
                 }], [a])
             }
 
-            function p(e, t) {
+            function E(e, t) {
                 c.default.track(f.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
                     skipped: t,
                     reason: "updating within the list",
@@ -93,7 +93,7 @@
                 })
             }
 
-            function E(e) {
+            function S(e) {
                 c.default.track(f.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
                     skipped: !1,
                     reason: "complete and clear immediately",
@@ -103,7 +103,7 @@
                 I([], t.filter(t => t.messageId === e))
             }
 
-            function S() {
+            function p() {
                 c.default.track(f.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
                     skipped: !1,
                     reason: "clearing",
@@ -136,7 +136,7 @@
                 })
             }
 
-            function v() {
+            function M() {
                 return o.default.recentlyFetched() ? Promise.resolve() : a.default.get({
                     url: f.Endpoints.SAVED_MESSAGES
                 }).then(e => {

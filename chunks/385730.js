@@ -44,8 +44,8 @@
                     loadState: P,
                     channels: U
                 } = y, {
-                    maybeLoadMore: F,
-                    markAllRead: b
+                    maybeLoadMore: b,
+                    markAllRead: F
                 } = x;
                 (function(e, t, n) {
                     a.useLayoutEffect(() => {
@@ -116,7 +116,7 @@
                         closePopout: O,
                         children: (0, l.jsx)(N.default, {
                             type: "top-header",
-                            onClick: b
+                            onClick: F
                         })
                     }), (0, l.jsx)(u.ListNavigatorProvider, {
                         navigator: G,
@@ -132,7 +132,7 @@
                                         D.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
                                     },
                                     ...a,
-                                    onScroll: P === g.LoadState.Done ? void 0 : F,
+                                    onScroll: P === g.LoadState.Done ? void 0 : b,
                                     className: M.scroller,
                                     children: [s ? (0, l.jsx)(L, {
                                         setSeenTutorial: r
