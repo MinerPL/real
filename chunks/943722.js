@@ -26,8 +26,8 @@
                 C = n("957255"),
                 N = n("824563"),
                 g = n("800762"),
-                p = n("137783"),
-                v = n("49111"),
+                v = n("137783"),
+                p = n("49111"),
                 I = n("205341");
 
             function M(e) {
@@ -87,44 +87,45 @@
                 })
             };
             var O = e => {
+                var t;
                 let {
-                    activities: t,
-                    applicationStream: n,
-                    className: l,
-                    textClassName: s,
-                    emojiClassName: i,
-                    animate: u = !0,
-                    hideTooltip: o = !1,
-                    hideEmoji: f = !1,
-                    user: _
-                } = e, O = null != t ? t.find(e => e.type === v.ActivityTypes.CUSTOM_STATUS) : null, U = (0, r.useStateFromStores)([S.default], () => S.default.getId() === (null == _ ? void 0 : _.id)), R = (0, r.useStateFromStores)([E.default], () => U ? E.default.getHangStatusActivity() : null != t ? t.find(e => e.type === v.ActivityTypes.HANG_STATUS) : null), x = (0, r.useStateFromStores)([g.default, m.default], () => {
+                    activities: n,
+                    applicationStream: l,
+                    className: s,
+                    textClassName: i,
+                    emojiClassName: u,
+                    animate: o = !0,
+                    hideTooltip: f = !1,
+                    hideEmoji: _ = !1,
+                    user: O
+                } = e, U = null != n ? n.find(e => e.type === p.ActivityTypes.CUSTOM_STATUS) : null, x = (0, r.useStateFromStores)([S.default], () => S.default.getId() === (null == O ? void 0 : O.id)), R = (0, r.useStateFromStores)([E.default], () => x ? E.default.getHangStatusActivity() : null != n ? n.find(e => e.type === p.ActivityTypes.HANG_STATUS) : null), y = (0, r.useStateFromStores)([g.default, m.default], () => {
                     var e;
-                    return null != R && null != _ ? m.default.getChannel(null === (e = g.default.getVoiceStateForUser(_.id)) || void 0 === e ? void 0 : e.channelId) : null
+                    return null != R && null != O ? m.default.getChannel(null === (e = g.default.getVoiceStateForUser(O.id)) || void 0 === e ? void 0 : e.channelId) : null
                 }), {
-                    enableHangStatus: y
+                    enableHangStatus: j
                 } = T.HangStatusExperiment.useExperiment({
-                    guildId: null == x ? void 0 : x.guild_id,
+                    guildId: null == y ? void 0 : y.guild_id,
                     location: "ActivityStatus"
-                }), j = null, P = y && null != R && C.default.can(v.Permissions.CONNECT, x);
-                P ? j = (0, a.jsx)(A.default, {
-                    className: i,
+                }), P = null, H = j && null != R && C.default.can(p.Permissions.CONNECT, y);
+                H ? P = (0, a.jsx)(A.default, {
+                    className: u,
                     hangStatusActivity: R
-                }) : null != O && null != O.emoji && !f && (j = (0, a.jsx)(M, {
-                    emoji: O.emoji,
-                    animate: u,
-                    hideTooltip: o,
-                    className: i
+                }) : null != U && null != U.emoji && !_ && (P = (0, a.jsx)(M, {
+                    emoji: U.emoji,
+                    animate: o,
+                    hideTooltip: f,
+                    className: u
                 }));
-                let H = (0, r.useStateFromStores)([N.default], () => null != _ ? N.default.getStatus(_.id) : null),
-                    L = null !== H && [v.StatusTypes.OFFLINE, v.StatusTypes.INVISIBLE].includes(H),
-                    G = (0, d.default)(t, n, void 0, P),
-                    D = null != G && G.length > 0;
-                return L || null == j && !D ? null : (0, a.jsxs)("div", {
-                    className: l,
-                    children: [j, (0, a.jsx)(h, {
-                        text: G,
-                        className: s
-                    }), null != t && t.some(c.default) ? (0, a.jsx)(p.default, {
+                let L = (0, r.useStateFromStores)([N.default], () => null != O ? N.default.getStatus(O.id) : null),
+                    G = null !== L && [p.StatusTypes.OFFLINE, p.StatusTypes.INVISIBLE].includes(L),
+                    D = null === (t = (0, d.default)(n, l, void 0, H)) || void 0 === t ? void 0 : t.activityText,
+                    b = null != D && D.length > 0;
+                return G || null == P && !b ? null : (0, a.jsxs)("div", {
+                    className: s,
+                    children: [P, (0, a.jsx)(h, {
+                        text: D,
+                        className: i
+                    }), null != n && n.some(c.default) ? (0, a.jsx)(v.default, {
                         width: 16,
                         height: 16,
                         className: I.icon

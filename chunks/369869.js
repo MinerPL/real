@@ -43,8 +43,8 @@
                     hidePersonalInformation: d,
                     isUsingGuildBio: N,
                     lastSection: g = !1,
-                    animateOnHover: p = !1,
-                    isHovering: v = !1,
+                    animateOnHover: v = !1,
+                    isHovering: p = !1,
                     lineClamp: I
                 } = e, {
                     location: M
@@ -89,8 +89,8 @@
                         })]
                     }), (0, a.jsx)(T.default, {
                         userBio: l,
-                        animateOnHover: p,
-                        isHovering: v,
+                        animateOnHover: v,
+                        isHovering: p,
                         lineClamp: I
                     })]
                 })

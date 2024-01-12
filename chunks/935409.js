@@ -29,15 +29,15 @@
                 C = n("719923"),
                 N = n("50885"),
                 g = n("713135"),
-                p = n("106435"),
-                v = n("289918"),
+                v = n("106435"),
+                p = n("289918"),
                 I = n("878569"),
                 M = n("590006"),
                 h = n("430312"),
                 O = n("401642"),
                 U = n("590456"),
-                R = n("49111"),
-                x = n("646718"),
+                x = n("49111"),
+                R = n("646718"),
                 y = n("782340"),
                 j = n("524466");
             let P = c.AvatarSizes.SIZE_80,
@@ -84,14 +84,14 @@
                     disableUserProfileLink: _,
                     profileType: N,
                     animateOnHover: g,
-                    hasProfileEffect: v
+                    hasProfileEffect: p
                 } = e, {
                     profileTheme: M
-                } = l.useContext(h.UserProfileContext), L = l.useContext(m.AnalyticsContext), D = t.isNonUserBot() && !t.isClyde(), b = C.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, x.PremiumTypes.TIER_2), B = l.useMemo(() => (0, T.shouldDisableUserPresenceInChannel)(t, E), [t, E]), F = _ || t.isClyde(), {
+                } = l.useContext(h.UserProfileContext), L = l.useContext(m.AnalyticsContext), D = t.isNonUserBot() && !t.isClyde(), b = C.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, R.PremiumTypes.TIER_2), B = l.useMemo(() => (0, T.shouldDisableUserPresenceInChannel)(t, E), [t, E]), F = _ || t.isClyde(), {
                     avatarDecorationSrc: k,
                     avatarSrc: w,
                     eventHandlers: V
-                } = (0, p.default)({
+                } = (0, v.default)({
                     user: t,
                     guildId: f,
                     size: P,
@@ -104,7 +104,7 @@
                         avatarDecoration: k,
                         size: P,
                         "aria-label": t.username,
-                        status: B ? R.StatusTypes.UNKNOWN : o,
+                        status: B ? x.StatusTypes.UNKNOWN : o,
                         statusBackdropColor: null != M && b && !B ? (0, c.getStatusBackdropColor)(M) : void 0,
                         isMobile: d,
                         statusTooltip: !0
@@ -118,7 +118,7 @@
                     return e({
                         isPremium: b && !D,
                         hasBanner: u,
-                        hasProfileEffect: v
+                        hasProfileEffect: p
                     })
                 }).with(U.UserProfileTypes.POMELO_POPOUT, () => j.avatarPositionPomelo).with(U.UserProfileTypes.PANEL, () => j.avatarPositionPanel).exhaustive();
                 return (0, a.jsx)(a.Fragment, {
@@ -140,7 +140,7 @@
                             let e = null != k,
                                 t = e ? H : (0, c.getAvatarSize)(P);
                             return (0, a.jsx)(S.default, {
-                                mask: null == o || o === R.StatusTypes.UNKNOWN || B ? S.default.Masks.AVATAR_DEFAULT : (0, r.match)([e, d]).with([!0, !0], () => S.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => S.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => S.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => S.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
+                                mask: null == o || o === x.StatusTypes.UNKNOWN || B ? S.default.Masks.AVATAR_DEFAULT : (0, r.match)([e, d]).with([!0, !0], () => S.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80).with([!0, !1], () => S.default.Masks.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80).with([!1, !0], () => S.default.Masks.AVATAR_STATUS_MOBILE_80).with([!1, !1], () => S.default.Masks.AVATAR_STATUS_ROUND_80).exhaustive(),
                                 className: e ? j.avatarDecorationHint : j.avatarHint,
                                 style: e ? {
                                     borderRadius: .4 * t
@@ -173,7 +173,7 @@
                     upsell: T
                 } = e;
                 return (0, a.jsxs)(a.Fragment, {
-                    children: [T, (0, a.jsx)(v.default, {
+                    children: [T, (0, a.jsx)(p.default, {
                         user: t,
                         displayProfile: n,
                         onClose: i,
@@ -189,7 +189,7 @@
                     }), (0, a.jsx)(D, {
                         user: t,
                         displayProfile: n,
-                        status: u ? R.StatusTypes.STREAMING : o,
+                        status: u ? x.StatusTypes.STREAMING : o,
                         isMobile: r,
                         guildId: l,
                         channelId: s,

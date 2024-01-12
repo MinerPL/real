@@ -63,7 +63,20 @@
                     a = arguments.length > 3 ? arguments[3] : void 0;
                 if (Array.isArray(e)) {
                     let l = e;
-                    return null != t && (l = [...l, null]), l.map(e => c(e, t, n, a)).find(e => null != e)
+                    null != t && (l = [...l, null]);
+                    let s = null;
+                    for (let e of l) {
+                        let l = c(e, t, n, a);
+                        if (null != l) return {
+                            activity: e,
+                            activityText: l
+                        };
+                        (null == e ? void 0 : e.type) === r.ActivityTypes.CUSTOM_STATUS && null != e.emoji && (s = e)
+                    }
+                    return (null == s ? void 0 : s.emoji) != null ? {
+                        activity: s,
+                        activityText: null
+                    } : null
                 }
                 return c(e, t, n, a)
             }

@@ -27,7 +27,7 @@
                     children: m,
                     disableCopy: C,
                     showCopyIcon: N
-                } = e, [g, p] = i.useState(0), [v, I] = i.useState(!1), [M, h] = i.useState(!1);
+                } = e, [g, v] = i.useState(0), [p, I] = i.useState(!1), [M, h] = i.useState(!1);
                 if (i.useEffect(() => (a = new o.Timeout, l = new o.Timeout, function() {
                         a.stop(), l.stop()
                     }), []), !T.SUPPORTS_COPY || C) return (0, s.jsx)(s.Fragment, {
@@ -35,28 +35,28 @@
                 });
                 let O = [A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_1, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_2, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_3, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_4, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_5, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_6, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_7, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_8, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_9, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_10, A.default.Messages.ACCOUNT_USERNAME_COPY_SUCCESS_11],
                     U = Math.min(Math.max(g - 1, 0), O.length - 1),
-                    R = null !== (t = O[U]) && void 0 !== t ? t : O[0],
-                    x = g >= O.length - 1,
-                    y = x ? c.TooltipColors.RED : c.TooltipColors.GREEN,
-                    j = v ? y : c.TooltipColors.PRIMARY,
+                    x = null !== (t = O[U]) && void 0 !== t ? t : O[0],
+                    R = g >= O.length - 1,
+                    y = R ? c.TooltipColors.RED : c.TooltipColors.GREEN,
+                    j = p ? y : c.TooltipColors.PRIMARY,
                     P = () => {
                         a.stop(), h(!1)
                     },
                     H = e => {
                         (0, T.copy)(r), f.default.track(E.AnalyticEvents.TEXT_COPIED, {
                             type: S
-                        }), "function" == typeof e && e(), !M && p(g + 1), h(!0), I(!0), a.start(1e3, () => h(!1)), l.start(2e3, () => p(0))
+                        }), "function" == typeof e && e(), !M && v(g + 1), h(!0), I(!0), a.start(1e3, () => h(!1)), l.start(2e3, () => v(0))
                     };
                 return (0, s.jsx)(c.Tooltip, {
                     delay: 500,
                     color: j,
                     forceOpen: M,
-                    text: v ? (0, s.jsx)(c.Shaker, {
-                        isShaking: x,
-                        children: R
+                    text: p ? (0, s.jsx)(c.Shaker, {
+                        isShaking: R,
+                        children: x
                     }) : A.default.Messages.ACCOUNT_CLICK_TO_COPY,
                     onAnimationRest: (e, t) => {
-                        !M && v && t.phase === E.SpringTransitionPhases.LEAVE && I(!1)
+                        !M && p && t.phase === E.SpringTransitionPhases.LEAVE && I(!1)
                     },
                     "aria-label": A.default.Messages.ACCOUNT_CLICK_TO_COPY,
                     children: e => {
@@ -69,7 +69,7 @@
                             ...l,
                             className: _.clickTarget,
                             onMouseEnter: () => {
-                                v ? P() : "function" == typeof a && a()
+                                p ? P() : "function" == typeof a && a()
                             },
                             onClick: () => {
                                 H(t)

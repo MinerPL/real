@@ -446,45 +446,45 @@
                     }), t]
                 })
             }, es.ApplicationStreamingSection = e => {
-                var t;
+                var t, n;
                 let {
-                    activity: n,
-                    user: a,
-                    applicationStream: s,
-                    onPreviewClick: l,
-                    guildId: r
-                } = e, o = (0, u.useStateFromStores)([D.default], () => D.default.getChannel(s.channelId)), [d, E] = (0, L.useCanWatchStream)(o), f = (0, i.jsx)(x.default, {
+                    activity: a,
+                    user: s,
+                    applicationStream: l,
+                    onPreviewClick: r,
+                    guildId: o
+                } = e, d = (0, u.useStateFromStores)([D.default], () => D.default.getChannel(l.channelId)), [E, f] = (0, L.useCanWatchStream)(d), _ = (0, i.jsx)(x.default, {
                     className: q.applicationStreamingPreviewWrapper,
                     aspectRatio: 16 / 9,
                     children: (0, i.jsxs)(c.Clickable, {
-                        onClick: d ? l : void 0,
+                        onClick: E ? r : void 0,
                         className: q.applicationStreamingPreviewSize,
                         children: [(0, i.jsx)(v.default, {
-                            stream: s,
+                            stream: l,
                             className: q.applicationStreamingPreviewSize
                         }), (0, i.jsx)("div", {
                             className: q.applicationStreamingHoverWrapper,
                             children: (0, i.jsx)("div", {
                                 className: q.applicationStreamingHoverText,
-                                children: (0, L.getStreamCTAString)(E)
+                                children: (0, L.getStreamCTAString)(f)
                             })
                         })]
                     })
-                }), _ = null !== (t = (0, A.default)(n, s)) && void 0 !== t ? t : z.default.Messages.SHARING_SCREEN;
+                }), h = null !== (n = null === (t = (0, A.default)(a, l)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
                 return (0, i.jsxs)(ee, {
                     children: [(0, i.jsxs)("div", {
                         className: q.applicationStreamingSection,
                         children: [(0, i.jsx)(c.Avatar, {
                             size: c.AvatarSizes.SIZE_32,
-                            src: a.getAvatarURL(r, 32),
-                            "aria-label": a.username,
+                            src: s.getAvatarURL(o, 32),
+                            "aria-label": s.username,
                             className: q.applicationStreamingAvatar
                         }), (0, i.jsxs)("div", {
-                            children: [X(Y.default.getName(a)), J(_)]
+                            children: [X(Y.default.getName(s)), J(h)]
                         }), (0, i.jsx)(B.default, {
                             size: B.default.Sizes.SMALL
                         })]
-                    }), f]
+                    }), _]
                 })
             }, es.EmbeddedActivitySection = e => {
                 let {
