@@ -1,12 +1,12 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return v
                 },
                 useSearchCategories: function() {
-                    return v
+                    return y
                 }
-            }), n("222007"), n("424973"), n("834022");
+            }), n("222007"), n("424973");
             var l = n("884691"),
                 i = n("249654"),
                 r = n("446674"),
@@ -32,7 +32,39 @@
                 return t ? n.sort((e, t) => i.default.compare(e.sound.soundId, t.sound.soundId)) : n
             }
 
-            function C(e, t) {
+            function C(e) {
+                let {
+                    sections: t,
+                    guildIds: n,
+                    allSounds: l,
+                    potentialSoundIdsForSection: i,
+                    sectionType: r,
+                    sortById: o
+                } = e, s = {}, a = [...n, S.DEFAULT_SOUND_GUILD_ID];
+                for (let e of a) {
+                    var u;
+                    let t = null !== (u = l.get(e)) && void 0 !== u ? u : [];
+                    for (let e of t) {
+                        let t = i.find(t => t === e.soundId);
+                        null != t && (s[e.soundId] = e)
+                    }
+                }
+                let d = [];
+                for (let e of i) {
+                    let t = s[e];
+                    null != t && d.push(t)
+                }
+                let c = g(d, o);
+                c.length > 0 && t.push({
+                    key: r,
+                    categoryInfo: {
+                        type: r
+                    },
+                    items: c
+                })
+            }
+
+            function T(e, t) {
                 var n;
                 let l = null !== (n = t.get(S.DEFAULT_SOUND_GUILD_ID)) && void 0 !== n ? n : S.EMPTY_SOUND_LIST;
                 e.push({
@@ -44,81 +76,60 @@
                 })
             }
 
-            function T(e) {
+            function v(e) {
                 let {
                     filterOutEmptyCurrentGuild: t = !1
-                } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], i = (0, r.useStateFromStores)([d.default], () => d.default.getCurrentUser()), [T, v, y] = (0, r.useStateFromStoresArray)([m.default], () => [m.default.getSounds(), m.default.getFavorites(), m.default.isFetching()]), x = (0, r.useStateFromStoresArray)([p.default], () => p.default.recentlyHeardSoundIds), {
-                    canSeeRecentlyHeard: I,
-                    canSeeFrequentlyPlayed: N
+                } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2], i = (0, r.useStateFromStores)([d.default], () => d.default.getCurrentUser()), [S, v, y] = (0, r.useStateFromStoresArray)([m.default], () => [m.default.getSounds(), m.default.getFavorites(), m.default.isFetching()]), x = (0, E.useSortedGuildIdsForSoundboard)(e, !1), I = (0, r.useStateFromStoresArray)([a.default], () => {
+                    let e = [];
+                    return x.forEach(t => {
+                        let n = a.default.getGuild(t);
+                        null != n && e.push(n)
+                    }), e
+                }), N = c.default.canUseSoundboardEverywhere(i), _ = (0, r.useStateFromStores)([a.default], () => a.default.getGuild(null == e ? void 0 : e.guild_id)), A = (0, r.useStateFromStores)([u.default], () => {
+                    let {
+                        canCreateExpressions: e
+                    } = (0, o.getManageResourcePermissions)(_);
+                    return e
+                }, [_]), {
+                    canSeeRecentlyHeard: R,
+                    canSeeFrequentlyPlayed: O
                 } = (0, f.useRecentlyHeardExperiment)({
                     location: "soundboard-useSoundGrid",
                     autoTrackExposure: !0
-                }), _ = function() {
+                }), M = function() {
                     l.useEffect(() => {
                         s.FrecencyUserSettingsActionCreators.loadIfNecessary()
                     }, []);
                     let e = (0, r.useStateFromStores)([p.default], () => p.default.frecentlyPlayedSounds);
                     return e
-                }(), A = (0, E.useSortedGuildIdsForSoundboard)(e, !1), R = (0, r.useStateFromStoresArray)([a.default], () => {
-                    let e = [];
-                    return A.forEach(t => {
-                        let n = a.default.getGuild(t);
-                        null != n && e.push(n)
-                    }), e
-                }), O = c.default.canUseSoundboardEverywhere(i), M = (0, r.useStateFromStores)([a.default], () => a.default.getGuild(null == e ? void 0 : e.guild_id)), k = (0, r.useStateFromStores)([u.default], () => {
-                    let {
-                        canCreateExpressions: e
-                    } = (0, o.getManageResourcePermissions)(M);
-                    return e
-                }, [M]);
+                }(), k = (0, r.useStateFromStoresArray)([p.default], () => p.default.recentlyHeardSoundIds);
                 return l.useMemo(() => {
                     let e = [];
-                    if (n) return C(e, T), {
+                    return n ? (T(e, S), {
                         categories: e,
                         isFetching: y
-                    };
-                    if (! function(e, t, n, l) {
-                            let i = [],
-                                r = [...t, S.DEFAULT_SOUND_GUILD_ID];
-                            for (let e of r) {
-                                var o;
-                                let t = null !== (o = n.get(e)) && void 0 !== o ? o : [];
-                                for (let e of t) l.has(e.soundId) && i.push(e)
-                            }
-                            let s = g(i);
-                            s.length > 0 && e.push({
-                                key: h.SoundboardSoundGridSectionType.FAVORITES,
-                                categoryInfo: {
-                                    type: h.SoundboardSoundGridSectionType.FAVORITES
-                                },
-                                items: s
-                            })
-                        }(e, A, T, v), I && ! function(e, t, n) {
-                            let l = Array.from(t.values()).flat(),
-                                i = [];
-                            for (let e of n) {
-                                let t = l.find(t => t.soundId.toString() === e);
-                                null != t && i.push(t)
-                            }
-                            let r = g(i, !1);
-                            r.length > 0 && e.push({
-                                key: h.SoundboardSoundGridSectionType.RECENTLY_HEARD,
-                                categoryInfo: {
-                                    type: h.SoundboardSoundGridSectionType.RECENTLY_HEARD
-                                },
-                                items: r
-                            })
-                        }(e, T, x), N) {
-                        var l, i;
-                        l = e, (i = _).length > 0 && l.push({
-                            key: h.SoundboardSoundGridSectionType.FREQUENTLY_USED,
-                            categoryInfo: {
-                                type: h.SoundboardSoundGridSectionType.FREQUENTLY_USED
-                            },
-                            items: g(i, !1)
-                        })
-                    }
-                    return ! function(e, t, n, l, i) {
+                    }) : (C({
+                        sections: e,
+                        guildIds: x,
+                        allSounds: S,
+                        potentialSoundIdsForSection: Array.from(v),
+                        sectionType: h.SoundboardSoundGridSectionType.FAVORITES,
+                        sortById: !0
+                    }), R && C({
+                        sections: e,
+                        guildIds: x,
+                        allSounds: S,
+                        potentialSoundIdsForSection: k,
+                        sectionType: h.SoundboardSoundGridSectionType.RECENTLY_HEARD,
+                        sortById: !1
+                    }), O && C({
+                        sections: e,
+                        guildIds: x,
+                        allSounds: S,
+                        potentialSoundIdsForSection: M.map(e => e.soundId),
+                        sectionType: h.SoundboardSoundGridSectionType.FREQUENTLY_USED,
+                        sortById: !1
+                    }), ! function(e, t, n, l, i) {
                         var r;
                         if (null == t) return;
                         let o = null !== (r = l.get(t.id)) && void 0 !== r ? r : [],
@@ -137,7 +148,7 @@
                             key: t.id,
                             items: s
                         })
-                    }(e, M, k, T, t), !O && C(e, T), ! function(e, t, n, l) {
+                    }(e, _, A, S, t), !N && T(e, S), ! function(e, t, n, l) {
                         for (let r of t) {
                             var i;
                             if (r.id === n) continue;
@@ -152,14 +163,14 @@
                                 items: o
                             })
                         }
-                    }(e, R, null == M ? void 0 : M.id, T), O && C(e, T), {
+                    }(e, I, null == _ ? void 0 : _.id, S), N && T(e, S), {
                         categories: e,
                         isFetching: y
-                    }
-                }, [A, T, v, x, _, N, I, M, k, t, O, R, n, y])
+                    })
+                }, [x, S, v, k, M, O, R, _, A, t, N, I, n, y])
             }
 
-            function v(e, t, n) {
+            function y(e, t, n) {
                 return l.useMemo(() => n.length > 0 ? [{
                     key: h.SoundboardSoundGridSectionType.SEARCH,
                     categoryInfo: {

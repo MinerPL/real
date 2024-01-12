@@ -1,47 +1,47 @@
             "use strict";
             n.r(t), n.d(t, {
                 getMuteTimes: function() {
-                    return M
+                    return I
                 },
                 default: function() {
-                    return h
+                    return T
                 }
             }), n("222007");
             var i = n("37983");
             n("884691");
-            var s = n("866227"),
-                a = n.n(s),
-                l = n("446674"),
-                u = n("77078"),
-                d = n("820542"),
-                o = n("519705"),
-                r = n("319165"),
+            var l = n("866227"),
+                a = n.n(l),
+                r = n("446674"),
+                s = n("77078"),
+                o = n("820542"),
+                u = n("519705"),
+                d = n("319165"),
                 c = n("282109"),
                 f = n("34676"),
-                S = n("679653"),
-                g = n("49111"),
-                E = n("468200"),
-                _ = n("782340");
-            let M = () => [{
-                    value: E.MuteUntilSeconds.MINUTES_15,
-                    label: _.default.Messages.MUTE_DURATION_15_MINUTES
+                h = n("679653"),
+                E = n("49111"),
+                _ = n("468200"),
+                p = n("782340");
+            let I = () => [{
+                    value: _.MuteUntilSeconds.MINUTES_15,
+                    label: p.default.Messages.MUTE_DURATION_15_MINUTES
                 }, {
-                    value: E.MuteUntilSeconds.HOURS_1,
-                    label: _.default.Messages.MUTE_DURATION_1_HOUR
+                    value: _.MuteUntilSeconds.HOURS_1,
+                    label: p.default.Messages.MUTE_DURATION_1_HOUR
                 }, {
-                    value: E.MuteUntilSeconds.HOURS_3,
-                    label: _.default.Messages.MUTE_DURATION_3_HOURS
+                    value: _.MuteUntilSeconds.HOURS_3,
+                    label: p.default.Messages.MUTE_DURATION_3_HOURS
                 }, {
-                    value: E.MuteUntilSeconds.HOURS_8,
-                    label: _.default.Messages.MUTE_DURATION_8_HOURS
+                    value: _.MuteUntilSeconds.HOURS_8,
+                    label: p.default.Messages.MUTE_DURATION_8_HOURS
                 }, {
-                    value: E.MuteUntilSeconds.HOURS_24,
-                    label: _.default.Messages.MUTE_DURATION_24_HOURS
+                    value: _.MuteUntilSeconds.HOURS_24,
+                    label: p.default.Messages.MUTE_DURATION_24_HOURS
                 }, {
-                    value: E.MuteUntilSeconds.ALWAYS,
-                    label: _.default.Messages.MUTE_DURATION_ALWAYS
+                    value: _.MuteUntilSeconds.ALWAYS,
+                    label: p.default.Messages.MUTE_DURATION_ALWAYS
                 }],
-                N = e => {
+                C = e => {
                     let t = e > 0 ? a().add(e, "second").toISOString() : null;
                     return {
                         muted: !0,
@@ -52,56 +52,56 @@
                     }
                 };
 
-            function h(e, t) {
-                let [n, s] = (0, l.useStateFromStoresArray)([c.default], () => [c.default.isChannelMuted(e.guild_id, e.id), c.default.getChannelMuteConfig(e.guild_id, e.id)]), a = (0, r.useMutedUntilText)(s), E = (0, S.default)(e, !0);
+            function T(e, t) {
+                let [n, l] = (0, r.useStateFromStoresArray)([c.default], () => [c.default.isChannelMuted(e.guild_id, e.id), c.default.getChannelMuteConfig(e.guild_id, e.id)]), a = (0, d.useMutedUntilText)(l), _ = (0, h.default)(e, !0);
 
-                function h(t) {
-                    t && e.type === g.ChannelTypes.GUILD_CATEGORY && (0, d.categoryCollapse)(e.id), o.default.updateChannelOverrideSettings(e.guild_id, e.id, {
+                function T(t) {
+                    t && e.type === E.ChannelTypes.GUILD_CATEGORY && (0, o.categoryCollapse)(e.id), u.default.updateChannelOverrideSettings(e.guild_id, e.id, {
                         muted: t
                     }, f.NotificationLabel.muted(t))
                 }
-                let I = _.default.Messages.MUTE_CHANNEL_GENERIC,
-                    A = _.default.Messages.UNMUTE_CHANNEL_GENERIC;
+                let S = p.default.Messages.MUTE_CHANNEL_GENERIC,
+                    N = p.default.Messages.UNMUTE_CHANNEL_GENERIC;
                 switch (e.type) {
-                    case g.ChannelTypes.GUILD_CATEGORY:
-                        I = _.default.Messages.MUTE_CATEGORY, A = _.default.Messages.UNMUTE_CATEGORY;
+                    case E.ChannelTypes.GUILD_CATEGORY:
+                        S = p.default.Messages.MUTE_CATEGORY, N = p.default.Messages.UNMUTE_CATEGORY;
                         break;
-                    case g.ChannelTypes.GROUP_DM:
-                        I = _.default.Messages.MUTE_CONVERSATION, A = _.default.Messages.UNMUTE_CONVERSATION;
+                    case E.ChannelTypes.GROUP_DM:
+                        S = p.default.Messages.MUTE_CONVERSATION, N = p.default.Messages.UNMUTE_CONVERSATION;
                         break;
-                    case g.ChannelTypes.DM:
-                        I = _.default.Messages.MUTE_CHANNEL.format({
-                            name: E
-                        }), A = _.default.Messages.UNMUTE_CHANNEL.format({
-                            name: E
+                    case E.ChannelTypes.DM:
+                        S = p.default.Messages.MUTE_CHANNEL.format({
+                            name: _
+                        }), N = p.default.Messages.UNMUTE_CHANNEL.format({
+                            name: _
                         });
                         break;
                     default:
-                        I = _.default.Messages.MUTE_CHANNEL_GENERIC, A = _.default.Messages.UNMUTE_CHANNEL_GENERIC
+                        S = p.default.Messages.MUTE_CHANNEL_GENERIC, N = p.default.Messages.UNMUTE_CHANNEL_GENERIC
                 }
-                return n ? (0, i.jsx)(u.MenuItem, {
+                return n ? (0, i.jsx)(s.MenuItem, {
                     id: "unmute-channel",
-                    label: A,
+                    label: N,
                     subtext: a,
-                    action: () => h(!1)
-                }) : (0, i.jsx)(u.MenuItem, {
+                    action: () => T(!1)
+                }) : (0, i.jsx)(s.MenuItem, {
                     id: "mute-channel",
-                    label: I,
-                    action: () => h(!0),
-                    children: M().map(n => {
+                    label: S,
+                    action: () => T(!0),
+                    children: I().map(n => {
                         let {
-                            value: s,
+                            value: l,
                             label: a
                         } = n;
-                        return (0, i.jsx)(u.MenuItem, {
-                            id: "".concat(s),
+                        return (0, i.jsx)(s.MenuItem, {
+                            id: "".concat(l),
                             label: a,
                             action: () => (function(n) {
-                                e.type === g.ChannelTypes.GUILD_CATEGORY && (0, d.categoryCollapse)(e.id);
-                                let i = N(n);
-                                o.default.updateChannelOverrideSettings(e.guild_id, e.id, i, f.NotificationLabels.Muted, t)
-                            })(s)
-                        }, s)
+                                e.type === E.ChannelTypes.GUILD_CATEGORY && (0, o.categoryCollapse)(e.id);
+                                let i = C(n);
+                                u.default.updateChannelOverrideSettings(e.guild_id, e.id, i, f.NotificationLabels.Muted, t)
+                            })(l)
+                        }, l)
                     })
                 })
             }

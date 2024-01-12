@@ -144,21 +144,22 @@
                     isInteractive: H,
                     reactions: F,
                     selectedAnswerIds: V,
-                    tapShouldOpenVotersModal: Y
-                } = y, W = F.reduce((e, t) => {
+                    submitting: Y,
+                    tapShouldOpenVotersModal: W
+                } = y, K = F.reduce((e, t) => {
                     var n, a;
                     return e + (null !== (a = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== a ? a : 0)
-                }, 0), K = Math.max(...L.map(e => {
+                }, 0), z = Math.max(...L.map(e => {
                     var t, n;
                     let a = C(F, "".concat(e.answer_id));
                     return null !== (n = null == a ? void 0 : null === (t = a.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0
-                })), z = L.map(e => {
+                })), J = L.map(e => {
                     var t, n, r;
                     let o = "".concat(e.answer_id),
                         u = C(F, o),
                         f = null !== (n = null == u ? void 0 : null === (t = u.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
                         m = V.has(o),
-                        E = w ? f >= K && 0 !== f : void 0,
+                        E = w ? f >= z && 0 !== f : void 0,
                         _ = B && null !== (r = null == u ? void 0 : u.me_vote) && void 0 !== r && r,
                         h = S({
                             didSelfVote: _,
@@ -205,12 +206,13 @@
                         isVictor: E,
                         didSelfVote: _,
                         style: h,
-                        votesPercentage: Math.round(100 * (0 === W ? 0 : f / W)),
+                        shouldAnimateTransition: Y,
+                        votesPercentage: Math.round(100 * (0 === K ? 0 : f / K)),
                         votes: (0, a.match)(R).with(s.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(String(f), ")")).otherwise(() => T.default.Messages.POLL_VOTES_COUNT.format({
                             count: String(f)
                         }))
                     }
-                }), J = (0, a.match)({
+                }), Z = (0, a.match)({
                     isExpired: w,
                     canSubmitVote: U,
                     hasVoted: B,
@@ -240,7 +242,7 @@
                     presentation: "button",
                     enabled: U,
                     type: "submit"
-                })), Z = (0, a.match)({
+                })), X = (0, a.match)({
                     isInteractive: H,
                     isEditingVote: k
                 }).with({
@@ -260,16 +262,16 @@
                     label: null != b ? b : T.default.Messages.POLL_EXPIRED,
                     presentation: "text",
                     enabled: !1
-                })), X = "normal";
-                w ? X = "victor" : B && (X = "voted");
-                let q = M.allow_multiselect;
+                })), q = "normal";
+                w ? q = "victor" : B && (q = "voted");
+                let Q = M.allow_multiselect;
                 return {
                     question: M.question,
-                    answers: z,
+                    answers: J,
                     answersInteraction: (0, a.match)({
-                        tapShouldOpenVotersModal: Y,
+                        tapShouldOpenVotersModal: W,
                         canTapAnswers: P,
-                        canSelectMultipleAnswers: q
+                        canSelectMultipleAnswers: Q
                     }).with({
                         tapShouldOpenVotersModal: !0
                     }, () => E.PollChatAnswerInteractionType.LIST).with({
@@ -280,7 +282,7 @@
                         canSelectMultipleAnswers: !0
                     }, () => E.PollChatAnswerInteractionType.CHECKBOXES).exhaustive(),
                     answerTapAccessibilityLabel: (0, a.match)({
-                        tapShouldOpenVotersModal: Y,
+                        tapShouldOpenVotersModal: W,
                         platform: (0, f.getNativePlatform)()
                     }).with({
                         tapShouldOpenVotersModal: !0,
@@ -297,18 +299,18 @@
                         theme: g,
                         layoutType: R
                     }),
-                    containerStyle: X,
-                    primaryAction: J,
-                    submitVoteLabel: null !== (p = null == J ? void 0 : J.label) && void 0 !== p ? p : "",
+                    containerStyle: q,
+                    primaryAction: Z,
+                    submitVoteLabel: null !== (p = null == Z ? void 0 : Z.label) && void 0 !== p ? p : "",
                     canSubmitVote: U,
                     canTapAnswers: P,
-                    canSelectMultipleAnswers: q,
+                    canSelectMultipleAnswers: Q,
                     hasSelectedAnswer: G,
                     canShowVoteCounts: j,
                     hasVoted: B,
                     expirationLabel: null != b ? b : T.default.Messages.POLL_EXPIRED,
                     isExpired: w,
                     myAvatarUrl: O,
-                    secondaryAction: Z
+                    secondaryAction: X
                 }
             }

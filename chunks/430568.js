@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return T
+                    return _
                 }
             }), n("222007"), n("70102"), n("843762"), n("424973");
             var l = n("37983"),
@@ -16,11 +16,11 @@
                 f = n("845579"),
                 p = n("901165"),
                 E = n("62843"),
-                I = n("315102"),
-                h = n("402671"),
-                m = n("866190"),
-                A = n("115279");
-            class C extends a.PureComponent {
+                h = n("315102"),
+                I = n("402671"),
+                C = n("866190"),
+                m = n("115279");
+            class A extends a.PureComponent {
                 componentWillUnmount() {
                     var e;
                     null === (e = this.cancelLoadImage) || void 0 === e || e.call(this)
@@ -42,14 +42,14 @@
                         } = this.state;
                     if (null != t) return t;
                     if (null != n) {
-                        let e = A.EMOJI_SIZE_MAP[o];
-                        return I.default.getEmojiURL({
+                        let e = m.EMOJI_SIZE_MAP[o];
+                        return h.default.getEmojiURL({
                             id: n,
                             animated: i && !0 === a && (!0 === s || u || !0 === r),
                             size: e
                         })
                     }
-                    if (null != l) return h.default.getURL(l)
+                    if (null != l) return I.default.getURL(l)
                 }
                 render() {
                     var e;
@@ -65,18 +65,18 @@
                         emojiId: f,
                         autoplay: p,
                         isInteracting: E,
-                        ...I
-                    } = this.props, h = this.getSrc();
-                    return null == h || "" === h ? (0, l.jsx)("span", {
+                        ...h
+                    } = this.props, I = this.getSrc();
+                    return null == I || "" === I ? (0, l.jsx)("span", {
                         className: i("emoji", "emoji-text"),
                         children: n
                     }) : (s && (t = {
                         onMouseEnter: this.onMouseEnter,
                         onMouseLeave: this.onMouseLeave
                     }), (0, a.createElement)("img", {
-                        ...I,
+                        ...h,
                         key: this.key,
-                        src: h,
+                        src: I,
                         alt: null !== (e = null != u ? u : n) && void 0 !== e ? e : void 0,
                         draggable: !1,
                         ...t,
@@ -119,10 +119,10 @@
                     }
                 }
             }
-            C.defaultProps = {
+            A.defaultProps = {
                 isInteracting: !1
             };
-            let _ = function(e) {
+            let T = function(e) {
                 if (null == window.IntersectionObserver) return function(t) {
                     return (0, l.jsx)(e, {
                         ...t,
@@ -196,16 +196,16 @@
                         })
                     }
                 }
-            }(C);
+            }(A);
 
-            function T(e) {
+            function _(e) {
                 let t = f.AnimateEmoji.useSetting(),
                     n = {
                         autoplay: null == e.autoplay ? t : e.autoplay,
                         allowAnimatedEmoji: t
                     },
-                    a = __OVERLAY__ ? (0, d.useStateFromStores)([p.default], () => p.default.isInstanceFocused()) : (0, m.useIsWindowFocused)();
-                return (0, l.jsx)(_, {
+                    a = __OVERLAY__ ? (0, d.useStateFromStores)([p.default], () => p.default.isInstanceFocused()) : (0, C.useIsWindowFocused)();
+                return (0, l.jsx)(T, {
                     ...e,
                     ...n,
                     isFocused: a
