@@ -4,13 +4,13 @@
                     return a
                 }
             });
-            var r = n("37983");
+            var i = n("37983");
             n("884691");
-            var i = n("469563"),
+            var r = n("469563"),
                 s = n("7037"),
                 l = n("246053"),
-                a = (0, i.replaceIcon)(function(e) {
-                    return (0, r.jsx)(l.default, {
+                a = (0, r.replaceIcon)(function(e) {
+                    return (0, i.jsx)(l.default, {
                         ...e,
                         direction: l.default.Directions.UP
                     })

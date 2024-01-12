@@ -1,25 +1,25 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return o
+                    return d
                 }
             });
-            var s = n("37983");
+            var i = n("37983");
             n("884691");
-            var i = n("446674"),
+            var s = n("446674"),
                 a = n("77078"),
                 l = n("952451"),
                 u = n("542827"),
-                r = n("782340");
+                o = n("782340");
 
-            function o(e, t) {
+            function d(e, t) {
                 let n = e.id,
-                    o = (0, i.useStateFromStores)([l.default], () => l.default.getGuildHasUnreadIgnoreMuted(n), [n]);
-                return (0, s.jsx)(a.MenuItem, {
+                    d = (0, s.useStateFromStores)([l.default], () => l.default.getGuildHasUnreadIgnoreMuted(n), [n]);
+                return (0, i.jsx)(a.MenuItem, {
                     id: "mark-guild-read",
-                    label: r.default.Messages.MARK_AS_READ,
+                    label: o.default.Messages.MARK_AS_READ,
                     icon: void 0,
                     action: () => (0, u.default)([n], t.section),
-                    disabled: !o
+                    disabled: !d
                 })
             }

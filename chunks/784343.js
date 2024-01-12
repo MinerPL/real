@@ -451,7 +451,7 @@
                 }
                 setDesktopEncodingOptions(e, t, n) {
                     if (this.destroyed) return;
-                    let i = 0 === t || t > 720 || n > 30 ? S.DESKTOP_BITRATE_ENHANCED : S.DESKTOP_BITRATE,
+                    let i = 0 === t && n >= 10 || t > 720 || n > 30 ? S.DESKTOP_BITRATE_ENHANCED : S.DESKTOP_BITRATE,
                         r = {
                             width: e,
                             height: t,
