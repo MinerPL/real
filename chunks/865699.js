@@ -29,7 +29,7 @@
                         tag: "span",
                         children: e
                     })
-                }), [p]), h = a.useCallback(e => (0, l.jsx)(s.Anchor, {
+                }), [p]), I = a.useCallback(e => (0, l.jsx)(s.Anchor, {
                     href: o.MarketingURLs.INVITES_HELP,
                     target: "_blank",
                     children: (0, l.jsx)(s.Text, {
@@ -38,14 +38,14 @@
                         tag: "span",
                         children: e
                     })
-                }), []), I = n.code !== o.AbortCodes.TOO_MANY_INVITES ? n.getAnyErrorMessage() : r.default.can(o.Permissions.MANAGE_GUILD, t) ? u.default.Messages.TOO_MANY_INVITES_ERROR.format({
+                }), []), h = n.code !== o.AbortCodes.TOO_MANY_INVITES ? n.getAnyErrorMessage() : r.default.can(o.Permissions.MANAGE_GUILD, t) ? u.default.Messages.TOO_MANY_INVITES_ERROR.format({
                     inviteListHook: E,
-                    inviteHelpHook: h
+                    inviteHelpHook: I
                 }) : u.default.Messages.TOO_MANY_INVITES_ERROR_MEMBER;
                 return (0, l.jsx)(s.Text, {
                     className: d.errorMessage,
                     variant: "text-xs/normal",
                     color: "text-danger",
-                    children: I
+                    children: h
                 })
             }

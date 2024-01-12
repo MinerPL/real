@@ -7,16 +7,16 @@
                     return i
                 }
             }), n("222007");
-            var i, a = n("917351"),
-                l = n.n(a),
+            var i, l = n("917351"),
+                a = n.n(l),
                 s = n("862337"),
                 r = n("696605"),
                 u = n("623053"),
-                o = n("6850"),
-                d = n("49111");
+                d = n("6850"),
+                o = n("49111");
 
             function c(e) {
-                return null != e && "null" !== e && e !== d.ME && "undefined" !== e && e !== d.FAVORITES
+                return null != e && "null" !== e && e !== o.ME && "undefined" !== e && e !== o.FAVORITES
             }
             i = class {
                 _enqueue(e, t) {
@@ -51,7 +51,7 @@
                     (t || !this._threads.has(e)) && this._subscribed.delete(e), delete this._pending[e], this._members.clear(e), this._channels.clear(e), this._threadMemberLists.clear(e), this._typing.delete(e), t && this._threads.delete(e), this._activities.delete(e)
                 }
                 flush() {
-                    l.forEach(this._pending, (e, t) => {
+                    a.forEach(this._pending, (e, t) => {
                         this._subscribed.add(t), this._onChange(t, e)
                     }), this._pending = {}
                 }
@@ -87,7 +87,7 @@
                         members: t
                     })), this._channels = new r.default((e, t) => this._enqueue(e, {
                         channels: t
-                    })), this._threadMemberLists = new o.default((e, t) => this._enqueue(e, {
+                    })), this._threadMemberLists = new d.default((e, t) => this._enqueue(e, {
                         thread_member_lists: t
                     })), this._typing = new Set, this._threads = new Set, this._activities = new Set, this._subscribed = new Set, this._pending = {}, this._flush = new s.DelayedCall(0, () => this.flush()), this._onChange = e
                 }

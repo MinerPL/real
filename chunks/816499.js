@@ -10,13 +10,13 @@
                     return T
                 },
                 generatePaypalMetadataItems: function() {
-                    return h
-                },
-                generateEbayMetadataItems: function() {
                     return _
                 },
-                generateTikTokMetadataItems: function() {
+                generateEbayMetadataItems: function() {
                     return S
+                },
+                generateTikTokMetadataItems: function() {
+                    return h
                 },
                 generateRoleConnectionMetadataItems: function() {
                     return I
@@ -42,7 +42,7 @@
                     s = Number(null !== (t = e[c.MetadataFields.REDDIT_TOTAL_KARMA]) && void 0 !== t ? t : -1),
                     i = "1" === e[c.MetadataFields.REDDIT_GOLD],
                     r = "1" === e[c.MetadataFields.REDDIT_MOD];
-                return s > -1 && a.push((0, n.jsx)(g, {
+                return s > -1 && a.push((0, n.jsx)(A, {
                     className: l,
                     count: s,
                     label: f.default.Messages.CONNECTIONS_PROFILE_REDDIT_KARMA
@@ -61,11 +61,11 @@
                     s = [],
                     i = Number(null !== (t = e[c.MetadataFields.TWITTER_STATUSES_COUNT]) && void 0 !== t ? t : -1),
                     r = Number(null !== (l = e[c.MetadataFields.TWITTER_FOLLOWERS_COUNT]) && void 0 !== l ? l : -1);
-                return i > -1 && s.push((0, n.jsx)(g, {
+                return i > -1 && s.push((0, n.jsx)(A, {
                     className: a,
                     count: i,
                     label: f.default.Messages.CONNECTIONS_PROFILE_TWITTER_STATUSES
-                }, c.MetadataFields.TWITTER_STATUSES_COUNT)), r > -1 && s.push((0, n.jsx)(g, {
+                }, c.MetadataFields.TWITTER_STATUSES_COUNT)), r > -1 && s.push((0, n.jsx)(A, {
                     className: a,
                     count: r,
                     label: f.default.Messages.CONNECTIONS_PROFILE_TWITTER_FOLLOWERS
@@ -79,7 +79,7 @@
                     o = Number(null !== (t = e[c.MetadataFields.STEAM_GAME_COUNT]) && void 0 !== t ? t : -1),
                     u = Number(null !== (a = e[c.MetadataFields.STEAM_ITEM_COUNT_DOTA2]) && void 0 !== a ? a : -1),
                     d = Number(null !== (s = e[c.MetadataFields.STEAM_ITEM_COUNT_TF2]) && void 0 !== s ? s : -1);
-                return o > -1 && r.push((0, n.jsx)(g, {
+                return o > -1 && r.push((0, n.jsx)(A, {
                     className: i,
                     count: o,
                     label: f.default.Messages.CONNECTIONS_PROFILE_STEAM_GAMES
@@ -100,7 +100,7 @@
                 }, c.MetadataFields.STEAM_ITEM_COUNT_TF2)), r
             }
 
-            function h(e) {
+            function _(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
                     l = [],
                     a = "1" === e[c.MetadataFields.PAYPAL_VERIFIED];
@@ -110,13 +110,13 @@
                 }, c.MetadataFields.PAYPAL_VERIFIED)), l
             }
 
-            function _(e) {
+            function S(e) {
                 var t;
                 let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
                     a = [],
                     s = Number(null !== (t = e[c.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE]) && void 0 !== t ? t : -1),
                     i = "1" === e[c.MetadataFields.EBAY_TOP_RATED_SELLER];
-                return s > 0 && a.push((0, n.jsx)(g, {
+                return s > 0 && a.push((0, n.jsx)(A, {
                     className: l,
                     count: s,
                     label: f.default.Messages.CONNECTIONS_PROFILE_EBAY_POSITIVE_FEEDBACK_PERCENTAGE,
@@ -127,7 +127,7 @@
                 }, c.MetadataFields.EBAY_TOP_RATED_SELLER)), a
             }
 
-            function S(e) {
+            function h(e) {
                 var t, l, a;
                 let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
                     i = [],
@@ -135,15 +135,15 @@
                     o = Number(null !== (t = e[c.MetadataFields.TIKTOK_FOLLOWER_COUNT]) && void 0 !== t ? t : -1),
                     u = Number(null !== (l = e[c.MetadataFields.TIKTOK_FOLLOWING_COUNT]) && void 0 !== l ? l : -1),
                     d = Number(null !== (a = e[c.MetadataFields.TIKTOK_LIKES_COUNT]) && void 0 !== a ? a : -1);
-                return o > -1 && i.push((0, n.jsx)(g, {
+                return o > -1 && i.push((0, n.jsx)(A, {
                     className: s,
                     count: o,
                     label: f.default.Messages.CONNECTIONS_PROFILE_TIKTOK_FOLLOWERS
-                }, c.MetadataFields.TIKTOK_FOLLOWER_COUNT)), u > -1 && i.push((0, n.jsx)(g, {
+                }, c.MetadataFields.TIKTOK_FOLLOWER_COUNT)), u > -1 && i.push((0, n.jsx)(A, {
                     className: s,
                     count: u,
                     label: f.default.Messages.CONNECTIONS_PROFILE_TIKTOK_FOLLOWING
-                }, c.MetadataFields.TIKTOK_FOLLOWING_COUNT)), d > -1 && i.push((0, n.jsx)(g, {
+                }, c.MetadataFields.TIKTOK_FOLLOWING_COUNT)), d > -1 && i.push((0, n.jsx)(A, {
                     className: s,
                     count: d,
                     label: f.default.Messages.CONNECTIONS_PROFILE_TIKTOK_LIKES
@@ -180,7 +180,7 @@
                             break;
                             case c.MetadataItemTypes.DATETIME_GREATER_THAN_EQUAL:
                             case c.MetadataItemTypes.DATETIME_LESS_THAN_EQUAL:
-                                a.push((0, n.jsx)(A, {
+                                a.push((0, n.jsx)(g, {
                                     className: t,
                                     date: r,
                                     locale: l,
@@ -191,7 +191,7 @@
                             case c.MetadataItemTypes.INTEGER_NOT_EQUAL:
                             case c.MetadataItemTypes.INTEGER_GREATER_THAN_EQUAL:
                             case c.MetadataItemTypes.INTEGER_LESS_THAN_EQUAL:
-                                a.push((0, n.jsx)(g, {
+                                a.push((0, n.jsx)(A, {
                                     className: t,
                                     count: Number(r),
                                     label: i.name
@@ -202,7 +202,7 @@
                 return a
             }
 
-            function g(e) {
+            function A(e) {
                 let t, {
                         count: l,
                         label: a,
@@ -223,7 +223,7 @@
                 })
             }
 
-            function A(e) {
+            function g(e) {
                 let {
                     date: t,
                     locale: l,

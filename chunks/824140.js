@@ -24,19 +24,19 @@
                 p = l("535013"),
                 E = l("816499"),
                 T = l("526190"),
-                h = l("766274"),
-                _ = l("246053"),
-                S = l("867544"),
+                _ = l("766274"),
+                S = l("246053"),
+                h = l("867544"),
                 I = l("128259"),
-                g = l("49111"),
-                A = l("214509"),
+                A = l("49111"),
+                g = l("214509"),
                 v = l("782340"),
                 C = l("825507");
 
             function N(e) {
                 var t, l;
                 let a, s, d, {
-                    connectedAccount: h,
+                    connectedAccount: _,
                     theme: N,
                     locale: y,
                     userId: O,
@@ -45,57 +45,57 @@
                     showInvisibleIcon: R
                 } = e;
                 null == x && (x = !0);
-                let L = null !== (l = h.metadata) && void 0 !== l ? l : {},
-                    P = x ? (0, p.getCreatedAtDate)(L[A.MetadataFields.CREATED_AT], y) : null,
+                let L = null !== (l = _.metadata) && void 0 !== l ? l : {},
+                    P = x ? (0, p.getCreatedAtDate)(L[g.MetadataFields.CREATED_AT], y) : null,
                     b = (0, u.useToken)(r.default.unsafe_rawColors.TWITTER).hex(),
                     D = v.default.Messages.CONNECTION_VERIFIED;
-                if (x) switch (h.type) {
-                    case g.PlatformTypes.REDDIT:
+                if (x) switch (_.type) {
+                    case A.PlatformTypes.REDDIT:
                         a = (0, E.generateRedditMetadataItems)(L);
                         break;
-                    case g.PlatformTypes.STEAM:
+                    case A.PlatformTypes.STEAM:
                         a = (0, E.generateSteamMetadataItems)(L);
                         break;
-                    case g.PlatformTypes.TWITTER: {
+                    case A.PlatformTypes.TWITTER: {
                         a = (0, E.generateTwitterMetadataItems)(L);
-                        let e = "1" === L[A.MetadataFields.TWITTER_VERIFIED];
+                        let e = "1" === L[g.MetadataFields.TWITTER_VERIFIED];
                         e && (s = b, D = v.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
                         break
                     }
-                    case g.PlatformTypes.PAYPAL:
+                    case A.PlatformTypes.PAYPAL:
                         a = (0, E.generatePaypalMetadataItems)(L);
                         break;
-                    case g.PlatformTypes.EBAY:
+                    case A.PlatformTypes.EBAY:
                         a = (0, E.generateEbayMetadataItems)(L);
                         break;
-                    case g.PlatformTypes.TIKTOK:
+                    case A.PlatformTypes.TIKTOK:
                         a = (0, E.generateTikTokMetadataItems)(L)
                 }
-                let U = c.default.get((0, m.useLegacyPlatformType)(h.type)),
-                    j = null == U ? void 0 : null === (t = U.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(U, h);
-                null != R && R ? d = (0, n.jsx)(S.default, {
+                let j = c.default.get((0, m.useLegacyPlatformType)(_.type)),
+                    U = null == j ? void 0 : null === (t = j.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(j, _);
+                null != R && R ? d = (0, n.jsx)(h.default, {
                     className: i(C.connectedAccountOpenIconContainer, C.connectedAccountHideIcon),
                     foregroundColor: "currentColor"
-                }) : null != j && (d = (0, n.jsx)(u.Anchor, {
-                    href: j,
+                }) : null != U && (d = (0, n.jsx)(u.Anchor, {
+                    href: U,
                     onClick: e => {
                         var t, l;
-                        t = h.type, l = O, (0, f.trackWithMetadata)(g.AnalyticEvents.CONNECTED_ACCOUNT_VIEWED, {
+                        t = _.type, l = O, (0, f.trackWithMetadata)(A.AnalyticEvents.CONNECTED_ACCOUNT_VIEWED, {
                             platform_type: t,
                             other_user_id: l
                         }), (0, I.handleClick)({
-                            href: j,
-                            trusted: (null == U ? void 0 : U.type) !== g.PlatformTypes.DOMAIN
+                            href: U,
+                            trusted: (null == j ? void 0 : j.type) !== A.PlatformTypes.DOMAIN
                         }, e)
                     },
-                    children: (0, n.jsx)(_.default, {
+                    children: (0, n.jsx)(S.default, {
                         className: C.connectedAccountOpenIcon,
-                        direction: _.default.Directions.RIGHT
+                        direction: S.default.Directions.RIGHT
                     })
                 }));
                 let F = (0, u.useToken)(r.default.colors.INTERACTIVE_MUTED).hex(),
                     w = (0, u.useToken)(r.default.colors.INTERACTIVE_ACTIVE).hex(),
-                    G = h.verified ? (0, n.jsx)(T.default, {
+                    G = _.verified ? (0, n.jsx)(T.default, {
                         className: C.connectedAccountVerifiedIcon,
                         color: null != s ? s : F,
                         forcedIconColor: w,
@@ -107,14 +107,14 @@
                     children: [(0, n.jsxs)("div", {
                         className: C.connectedAccount,
                         children: [(0, n.jsx)(u.Tooltip, {
-                            text: null == U ? void 0 : U.name,
+                            text: null == j ? void 0 : j.name,
                             children: e => (0, n.jsx)("img", {
                                 ...e,
                                 alt: v.default.Messages.IMG_ALT_LOGO.format({
-                                    name: null == U ? void 0 : U.name
+                                    name: null == j ? void 0 : j.name
                                 }),
                                 className: C.connectedAccountIcon,
-                                src: (0, o.isThemeDark)(N) ? null == U ? void 0 : U.icon.darkSVG : null == U ? void 0 : U.icon.lightSVG
+                                src: (0, o.isThemeDark)(N) ? null == j ? void 0 : j.icon.darkSVG : null == j ? void 0 : j.icon.lightSVG
                             })
                         }), (0, n.jsxs)("div", {
                             className: C.connectedAccountNameContainer,
@@ -124,13 +124,13 @@
                                     className: C.connectedAccountNameTextContainer,
                                     children: [(0, n.jsx)(u.Tooltip, {
                                         overflowOnly: !0,
-                                        text: h.name,
+                                        text: _.name,
                                         children: e => (0, n.jsx)(u.Text, {
                                             ...e,
                                             variant: "text-md/semibold",
                                             color: "interactive-active",
                                             className: C.connectedAccountNameText,
-                                            children: h.name
+                                            children: _.name
                                         })
                                     }), G]
                                 }), d]
@@ -191,7 +191,7 @@
                                     applicationHook: () => (0, n.jsxs)("div", {
                                         className: C.connectedAccountPoweredByText,
                                         children: [null != t.application.bot ? (0, n.jsx)(d.default, {
-                                            user: new h.default(t.application.bot),
+                                            user: new _.default(t.application.bot),
                                             size: u.AvatarSizes.SIZE_16
                                         }) : null, (0, n.jsx)(u.Text, {
                                             variant: "text-xs/normal",

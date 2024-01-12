@@ -30,18 +30,18 @@
                     onClick: p,
                     onSecondaryClick: E,
                     onComponentMount: T,
-                    asset: h,
-                    markAsDismissed: _,
-                    caretPosition: S = "caretTopCenter",
+                    asset: _,
+                    markAsDismissed: S,
+                    caretPosition: h = "caretTopCenter",
                     buttonLayout: I = 0
                 } = e;
                 o.useEffect(() => {
                     null == T || T()
                 }, []);
-                let g = null != u;
+                let A = null != u;
                 return (0, r.jsxs)("div", {
-                    className: d(t, m.upsellTooltipWrapper, m[S]),
-                    children: [h, null == l ? null : (0, r.jsx)(c.Heading, {
+                    className: d(t, m.upsellTooltipWrapper, m[h]),
+                    children: [_, null == l ? null : (0, r.jsx)(c.Heading, {
                         className: d(n, m.upsellTooltipHeader),
                         variant: "heading-md/semibold",
                         children: l
@@ -50,25 +50,25 @@
                         className: d(s, m.content),
                         variant: "text-sm/normal",
                         children: a
-                    }), null != i || g ? (0, r.jsxs)("div", {
+                    }), null != i || A ? (0, r.jsxs)("div", {
                         className: d(m.upsellButtonsContainer, {
                             [m.upsellButtonsAdjacent]: 0 === I,
                             [m.upsellButtonsStacked]: 1 === I
                         }),
-                        children: [g ? (0, r.jsx)(c.Button, {
+                        children: [A ? (0, r.jsx)(c.Button, {
                             color: c.Button.Colors.BRAND,
                             onClick: () => {
-                                null == E || E(), null == _ || _(f.ContentDismissActionType.SECONDARY)
+                                null == E || E(), null == S || S(f.ContentDismissActionType.SECONDARY)
                             },
                             children: u
                         }) : null, null == i ? null : (0, r.jsx)(c.Button, {
                             className: d({
-                                [m.fullWidth]: !g
+                                [m.fullWidth]: !A
                             }),
                             color: c.Button.Colors.BRAND,
                             look: c.Button.Looks.INVERTED,
                             onClick: e => {
-                                p(e), null == _ || _(f.ContentDismissActionType.PRIMARY)
+                                p(e), null == S || S(f.ContentDismissActionType.PRIMARY)
                             },
                             children: i
                         })]

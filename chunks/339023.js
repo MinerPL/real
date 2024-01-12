@@ -24,12 +24,12 @@
                         className: p,
                         iconClassName: E
                     } = e,
-                    [T, h] = (0, r.useStateFromStoresArray)([d.default], () => [d.default.desaturateUserColors, d.default.saturation]),
-                    _ = (0, u.useToken)(o.default.unsafe_rawColors.PRIMARY_300).hex(),
-                    S = (0, i.hex2int)(null != l ? l : _),
-                    I = (0, i.int2hsl)(S, !1, T ? h : null);
-                t = null != m ? m : .3 > (0, i.getDarkness)(S) ? o.default.unsafe_rawColors.PRIMARY_630.css : o.default.unsafe_rawColors.WHITE_500.css;
-                let g = a / 8;
+                    [T, _] = (0, r.useStateFromStoresArray)([d.default], () => [d.default.desaturateUserColors, d.default.saturation]),
+                    S = (0, u.useToken)(o.default.unsafe_rawColors.PRIMARY_300).hex(),
+                    h = (0, i.hex2int)(null != l ? l : S),
+                    I = (0, i.int2hsl)(h, !1, T ? _ : null);
+                t = null != m ? m : .3 > (0, i.getDarkness)(h) ? o.default.unsafe_rawColors.PRIMARY_630.css : o.default.unsafe_rawColors.WHITE_500.css;
+                let A = a / 8;
                 return (0, n.jsx)("div", {
                     style: {
                         background: I,
@@ -42,10 +42,10 @@
                     children: (0, n.jsx)(c.default, {
                         color: t,
                         className: s(f.linkIcon, E),
-                        width: a - 2 * g,
-                        height: a - 2 * g,
+                        width: a - 2 * A,
+                        height: a - 2 * A,
                         style: {
-                            margin: g
+                            margin: A
                         }
                     })
                 })

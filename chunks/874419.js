@@ -18,10 +18,10 @@
                 p = l("994428"),
                 E = l("397336"),
                 T = l("782340"),
-                h = l("393036");
-            let _ = i.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP,
-                S = e => {
-                    (0, u.markDismissibleContentAsDismissed)(_, {
+                _ = l("393036");
+            let S = i.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP,
+                h = e => {
+                    (0, u.markDismissibleContentAsDismissed)(S, {
                         dismissAction: e,
                         forceTrack: !0
                     })
@@ -33,12 +33,12 @@
                 } = e, {
                     analyticsLocations: i
                 } = (0, o.default)(), u = (0, s.useStateFromStores)([f.default], () => f.default.getIsAccessibilityTooltipViewed());
-                return a.useEffect(() => u ? () => S(p.ContentDismissActionType.AUTO) : () => (0, c.handleProfileAccessibilityTooltipViewed)(), [u]), (0, n.jsx)(d.default, {
-                    markAsDismissed: S,
+                return a.useEffect(() => u ? () => h(p.ContentDismissActionType.AUTO) : () => (0, c.handleProfileAccessibilityTooltipViewed)(), [u]), (0, n.jsx)(d.default, {
+                    markAsDismissed: h,
                     header: T.default.Messages.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP_TITLE,
-                    headerClassName: h.header,
+                    headerClassName: _.header,
                     content: (0, n.jsx)("div", {
-                        className: h.content,
+                        className: _.content,
                         children: T.default.Messages.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP_DESCRIPTION
                     }),
                     buttonCTA: T.default.Messages.TAKE_ME_THERE,

@@ -8,10 +8,10 @@
             n("884691");
             var i = n("414456"),
                 r = n.n(i),
-                s = n("77078"),
-                a = n("886074"),
-                u = n("45029"),
-                o = n("782340"),
+                a = n("77078"),
+                s = n("886074"),
+                o = n("45029"),
+                u = n("782340"),
                 d = n("41604");
 
             function c(e) {
@@ -23,23 +23,23 @@
                 return (0, l.jsx)(l.Fragment, {
                     children: (0, l.jsxs)("div", {
                         className: r(d.container),
-                        children: [i ? (0, l.jsx)(a.default, {
+                        children: [i ? (0, l.jsx)(s.default, {
                             className: d.sparkles
-                        }) : null, (0, l.jsx)(s.Text, {
+                        }) : null, (0, l.jsx)(a.Text, {
                             variant: "text-md/medium",
                             color: "text-normal",
                             children: t
                         }), n ? (0, l.jsxs)("div", {
                             className: d.pill,
-                            children: [(0, l.jsx)(u.default, {
+                            children: [(0, l.jsx)(o.default, {
                                 height: 14,
                                 width: 14,
                                 className: d.icon
-                            }), (0, l.jsx)(s.Text, {
+                            }), (0, l.jsx)(a.Text, {
                                 variant: "text-xs/medium",
                                 color: "header-primary",
                                 className: d.pillText,
-                                children: o.default.Messages.COMMUNITIES
+                                children: u.default.Messages.COMMUNITIES
                             })]
                         }) : null]
                     })

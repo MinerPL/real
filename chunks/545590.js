@@ -1,7 +1,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return _
+                    return S
                 }
             });
             var n = l("37983");
@@ -19,41 +19,41 @@
                 p = l("777003"),
                 E = l("49111"),
                 T = l("782340"),
-                h = l("431375");
+                _ = l("431375");
 
-            function _(e) {
+            function S(e) {
                 let {
                     user: t,
                     guildId: l
-                } = e, _ = (0, a.useStateFromStores)([c.default], () => {
+                } = e, S = (0, a.useStateFromStores)([c.default], () => {
                     var e;
                     return null === (e = c.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
-                }), S = null != _ && (0, d.canInstallApplication)(_.id, _.customInstallUrl, _.installParams), {
+                }), h = null != S && (0, d.canInstallApplication)(S.id, S.customInstallUrl, S.installParams), {
                     botUpgradeable: I,
-                    subscriptionGroupListing: g
+                    subscriptionGroupListing: A
                 } = (0, f.default)({
                     user: t,
                     guildId: l
-                }), A = null != g ? (0, s.getPayableSubscriptionListing)(g) : null, {
+                }), g = null != A ? (0, s.getPayableSubscriptionListing)(A) : null, {
                     openModal: v
                 } = (0, r.default)({
-                    listing: A,
+                    listing: g,
                     guildId: l,
-                    groupListingId: null == g ? void 0 : g.id,
+                    groupListingId: null == A ? void 0 : A.id,
                     showBenefitsFirst: !0,
                     analyticsLocation: E.AnalyticsLocations.BOT_PROFILE_POPOUT
                 });
-                return S || I ? (0, n.jsx)(p.default, {
+                return h || I ? (0, n.jsx)(p.default, {
                     children: (0, n.jsxs)("div", {
-                        className: h.buttonsContainer,
+                        className: _.buttonsContainer,
                         children: [(0, n.jsx)(m.default, {
-                            application: _,
-                            className: h.button
+                            application: S,
+                            className: _.button
                         }), I && (0, n.jsx)(i.default, {
                             onClick: v,
-                            className: h.button,
+                            className: _.button,
                             children: (0, n.jsxs)("div", {
-                                className: h.botUpgradeButtonContent,
+                                className: _.botUpgradeButtonContent,
                                 children: [(0, n.jsx)(u.default, {
                                     width: 16,
                                     height: 16

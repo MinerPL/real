@@ -23,22 +23,22 @@
                     applicationId: t,
                     commandIds: l,
                     channel: T,
-                    guildId: h,
-                    onClick: _
+                    guildId: _,
+                    onClick: S
                 } = e;
                 (0, u.usePrivateChannelIntegrationState)({
                     channelId: T.id
                 });
                 let {
-                    commands: S
-                } = r.useCommandsForApplication(T, t, l), I = a.useMemo(() => null == S ? void 0 : S.filter(e => !0 !== e.nsfw), [S]), g = a.useCallback(e => {
-                    null == _ || _(), d.default.track(f.AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, {
+                    commands: h
+                } = r.useCommandsForApplication(T, t, l), I = a.useMemo(() => null == h ? void 0 : h.filter(e => !0 !== e.nsfw), [h]), A = a.useCallback(e => {
+                    null == S || S(), d.default.track(f.AnalyticEvents.POPULAR_APPLICATION_COMMAND_CLICKED, {
                         application_id: t,
                         command_id: e,
-                        guild_id: h,
+                        guild_id: _,
                         ...(0, i.collectChannelAnalyticsMetadataFromId)(T.id)
                     })
-                }, [t, T.id, h, _]);
+                }, [t, T.id, _, S]);
                 return null == I || 0 === I.length ? null : (0, n.jsxs)(c.default, {
                     children: [(0, n.jsx)(s.Heading, {
                         variant: "eyebrow",
@@ -51,8 +51,8 @@
                                 commandId: e.id,
                                 commandName: e.displayName,
                                 commandDescription: e.displayDescription,
-                                onClick: g,
-                                guildId: h,
+                                onClick: A,
+                                guildId: _,
                                 channelId: T.id
                             })
                         }, e.id))

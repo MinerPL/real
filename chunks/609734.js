@@ -1,7 +1,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return A
+                    return g
                 }
             });
             var n = l("37983");
@@ -19,24 +19,24 @@
                 p = l("758710"),
                 E = l("351825"),
                 T = l("306160"),
-                h = l("253981"),
-                _ = l("613676"),
-                S = l("49111"),
+                _ = l("253981"),
+                S = l("613676"),
+                h = l("49111"),
                 I = l("782340"),
-                g = l("834680");
+                A = l("834680");
 
-            function A(e) {
+            function g(e) {
                 var t;
                 let {
                     application: l,
                     className: a
-                } = e, A = c.default.getChannel(f.default.getChannelId()), {
+                } = e, g = c.default.getChannel(f.default.getChannelId()), {
                     appsInGDMEnabled: v,
                     availableApplications: C
                 } = (0, d.usePrivateChannelIntegrationState)({
-                    channelId: null !== (t = null == A ? void 0 : A.id) && void 0 !== t ? t : ""
+                    channelId: null !== (t = null == g ? void 0 : g.id) && void 0 !== t ? t : ""
                 });
-                if (null == l || !(0, _.canInstallApplication)(l.id, l.customInstallUrl, l.installParams)) return null;
+                if (null == l || !(0, S.canInstallApplication)(l.id, l.customInstallUrl, l.installParams)) return null;
                 let N = v && null != C.find(e => e.id === (null == l ? void 0 : l.id));
                 return (0, n.jsx)(i.Button, {
                     color: i.Button.Colors.PRIMARY,
@@ -67,18 +67,18 @@
                     onClick: () => {
                         N ? (0, u.openOAuth2Modal)({
                             clientId: l.id,
-                            scopes: [S.OAuth2Scopes.APPLICATIONS_COMMANDS],
-                            channelId: A.id,
+                            scopes: [h.OAuth2Scopes.APPLICATIONS_COMMANDS],
+                            channelId: g.id,
                             disableGuildSelect: !0
-                        }) : (0, _.installApplication)({
+                        }) : (0, S.installApplication)({
                             applicationId: l.id,
                             customInstallUrl: l.customInstallUrl,
                             installParams: l.installParams
                         })
                     },
-                    className: s(g.applicationInstallButton, a),
+                    className: s(A.applicationInstallButton, a),
                     children: (0, n.jsxs)("div", {
-                        className: g.applicationInstallButtonContent,
+                        className: A.applicationInstallButtonContent,
                         children: [(0, n.jsx)(E.default, {
                             width: 16,
                             height: 16
@@ -86,10 +86,10 @@
                             size: 4,
                             horizontal: !0
                         }), (0, n.jsx)("span", {
-                            className: g.applicationInstallButtonText,
+                            className: A.applicationInstallButtonText,
                             children: N ? I.default.Messages.ADD : I.default.Messages.APPLICATION_ADD_BUTTON
-                        }), null == l.customInstallUrl || h.default.isDiscordUrl(l.customInstallUrl) ? null : (0, n.jsx)(p.default, {
-                            className: g.launchIcon,
+                        }), null == l.customInstallUrl || _.default.isDiscordUrl(l.customInstallUrl) ? null : (0, n.jsx)(p.default, {
+                            className: A.launchIcon,
                             width: 16,
                             height: 16
                         })]

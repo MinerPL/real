@@ -30,21 +30,21 @@
                     location: T + "auto off",
                     autoTrackExposure: !1
                 });
-                let h = (0, c.default)(T),
+                let _ = (0, c.default)(T),
                     {
-                        upsellSource: _
+                        upsellSource: S
                     } = (0, E.useUserPopoutCollectiblesUpsellStore)(),
-                    S = (0, i.default)([m.default], () => m.default.getCurrentUser());
-                s(null != S, "currentUser should not be null");
+                    h = (0, i.default)([m.default], () => m.default.getCurrentUser());
+                s(null != h, "currentUser should not be null");
                 let I = (0, d.useBlockedPaymentsConfig)(),
-                    g = (0, p.default)(S.id, a),
-                    A = (0, p.default)(t.id, a);
+                    A = (0, p.default)(h.id, a),
+                    g = (0, p.default)(t.id, a);
                 n.useEffect(() => {
-                    null == g && (0, o.fetchProfile)(S.id)
-                }, [g, S]);
-                let v = h !== c.CollectiblesShopMarketingVariants.DEFAULT && (null == S ? void 0 : S.id) !== t.id && !I && !(null != _ && _ !== l),
-                    C = v && (null == S ? void 0 : S.avatarDecoration) == null && (null == t ? void 0 : t.avatarDecoration) != null,
-                    N = v && null != g && null == g.profileEffectId && (null == A ? void 0 : A.profileEffectId) != null,
+                    null == A && (0, o.fetchProfile)(h.id)
+                }, [A, h]);
+                let v = _ !== c.CollectiblesShopMarketingVariants.DEFAULT && (null == h ? void 0 : h.id) !== t.id && !I && !(null != S && S !== l),
+                    C = v && (null == h ? void 0 : h.avatarDecoration) == null && (null == t ? void 0 : t.avatarDecoration) != null,
+                    N = v && null != A && null == A.profileEffectId && (null == g ? void 0 : g.profileEffectId) != null,
                     [y, O] = (0, f.useSelectedDismissibleContent)(C || N ? [r.DismissibleContent.SHOP_FOR_ALL_USER_POPOUT_UPSELL] : [], void 0, !0);
                 return {
                     shouldShow: y === r.DismissibleContent.SHOP_FOR_ALL_USER_POPOUT_UPSELL,

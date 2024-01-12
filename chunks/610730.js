@@ -5,13 +5,13 @@
                 }
             }), n("222007");
             var i = n("917351"),
-                a = n.n(i),
-                l = n("446674"),
+                l = n.n(i),
+                a = n("446674"),
                 s = n("913144"),
                 r = n("560208"),
                 u = n("692038"),
-                o = n("233069"),
-                d = n("719926"),
+                d = n("233069"),
+                o = n("719926"),
                 c = n("766274"),
                 _ = n("42203"),
                 f = n("377253"),
@@ -22,7 +22,7 @@
                 A = {};
 
             function T(e, t) {
-                o.ALL_CHANNEL_TYPES.has(e.type) && p(function(e) {
+                d.ALL_CHANNEL_TYPES.has(e.type) && p(function(e) {
                     if (!(e.id in m)) {
                         var t;
                         m[e.id] = {
@@ -65,20 +65,20 @@
                 return !1
             }
 
-            function C(e) {
+            function N(e) {
                 let {
                     channel: t
                 } = e;
                 M(t)
             }
 
-            function N(e) {
+            function C(e) {
                 let {
                     threads: t
                 } = e;
                 t.forEach(v)
             }
-            class O extends l.default.Store {
+            class O extends a.default.Store {
                 initialize() {
                     this.waitFor(_.default, f.default)
                 }
@@ -111,7 +111,7 @@
                             ...t
                         }) {
                         let n = t[e].mostRecentMessage;
-                        null != n && (t[e].mostRecentMessage = new d.default({
+                        null != n && (t[e].mostRecentMessage = new o.default({
                             ...n,
                             author: new c.default(n.author)
                         }))
@@ -128,13 +128,13 @@
                     let {
                         guild: n
                     } = e;
-                    t = n.id, m = a.omitBy(m, e => {
+                    t = n.id, m = l.omitBy(m, e => {
                         let n = e.guildId === t;
                         return n && delete A[e.parentId], n
                     })
                 },
-                THREAD_CREATE: C,
-                THREAD_UPDATE: C,
+                THREAD_CREATE: N,
+                THREAD_UPDATE: N,
                 THREAD_LIST_SYNC: function(e) {
                     let {
                         threads: t,
@@ -147,8 +147,8 @@
                         })
                     })
                 },
-                LOAD_THREADS_SUCCESS: N,
-                LOAD_ARCHIVED_THREADS_SUCCESS: N,
+                LOAD_THREADS_SUCCESS: C,
+                LOAD_ARCHIVED_THREADS_SUCCESS: C,
                 SEARCH_FINISH: function(e) {
                     let {
                         messages: t,
@@ -169,21 +169,21 @@
                     let {
                         channel: n
                     } = e;
-                    t = n.id, m = a.omitBy(m, e => e.parentId === t), delete A[t]
+                    t = n.id, m = l.omitBy(m, e => e.parentId === t), delete A[t]
                 },
                 MESSAGE_CREATE: function(e) {
                     let {
                         message: t,
                         optimistic: n,
                         isPushNotification: i,
-                        sendMessageOptions: a
+                        sendMessageOptions: l
                     } = e;
-                    if (n || i || null != a) return !1;
-                    let l = _.default.getChannel(t.channel_id);
-                    if (null == l || !o.THREAD_CHANNEL_TYPES.has(l.type) || ! function(e, t) {
+                    if (n || i || null != l) return !1;
+                    let a = _.default.getChannel(t.channel_id);
+                    if (null == a || !d.THREAD_CHANNEL_TYPES.has(a.type) || ! function(e, t) {
                             return !(t.type === E.MessageTypes.THREAD_STARTER_MESSAGE || e.isForumPost() && t.id === e.id) && !0
-                        }(l, t)) return !1;
-                    T(l, e => {
+                        }(a, t)) return !1;
+                    T(a, e => {
                         e.count = Math.min(e.count + 1, h.MAX_THREAD_MESSAGE_COUNT), e.mostRecentRawMessage = t, e.mostRecentMessage = null
                     })
                 },
@@ -191,8 +191,8 @@
                     var t;
                     let {
                         message: n
-                    } = e, i = m[n.channel_id], a = null !== (t = null == i ? void 0 : i.mostRecentRawMessage) && void 0 !== t ? t : null == i ? void 0 : i.mostRecentMessage;
-                    if (null == i || null == a || a.id !== n.id) return !1;
+                    } = e, i = m[n.channel_id], l = null !== (t = null == i ? void 0 : i.mostRecentRawMessage) && void 0 !== t ? t : null == i ? void 0 : i.mostRecentMessage;
+                    if (null == i || null == l || l.id !== n.id) return !1;
                     p(i, e => {
                         null != e.mostRecentMessage && (e.mostRecentMessage = (0, u.updateMessageRecord)(e.mostRecentMessage, n)), null != e.mostRecentRawMessage && (e.mostRecentRawMessage = (0, u.updateServerMessage)(e.mostRecentRawMessage, n))
                     })
@@ -203,12 +203,12 @@
                         channelId: n
                     } = e, i = m[n];
                     if (null == i) return !1;
-                    let a = n !== t,
-                        l = !g.has(t);
+                    let l = n !== t,
+                        a = !g.has(t);
                     p(i, e => {
                         var n;
                         let i = null !== (n = e.mostRecentRawMessage) && void 0 !== n ? n : e.mostRecentMessage;
-                        null != i && i.id === t && (e.mostRecentMessage = null, e.mostRecentRawMessage = null), e.count = a && l ? Math.max(e.count - 1, 0) : e.count, g.add(t)
+                        null != i && i.id === t && (e.mostRecentMessage = null, e.mostRecentRawMessage = null), e.count = l && a ? Math.max(e.count - 1, 0) : e.count, g.add(t)
                     })
                 },
                 MESSAGE_DELETE_BULK: function(e) {
@@ -217,15 +217,15 @@
                         channelId: n
                     } = e, i = m[n];
                     if (null == i) return !1;
-                    let a = t.filter(e => {
+                    let l = t.filter(e => {
                         let t = n !== e,
                             i = !g.has(e);
                         return t && i
                     }).length;
-                    a > 0 && p(i, e => {
+                    l > 0 && p(i, e => {
                         var n;
                         let i = null !== (n = e.mostRecentRawMessage) && void 0 !== n ? n : e.mostRecentMessage;
-                        null != i && t.includes(i.id) && (e.mostRecentMessage = null, e.mostRecentRawMessage = null), e.count -= a, t.forEach(e => g.add(e))
+                        null != i && t.includes(i.id) && (e.mostRecentMessage = null, e.mostRecentRawMessage = null), e.count -= l, t.forEach(e => g.add(e))
                     })
                 },
                 LOAD_MESSAGES_SUCCESS: function(e) {
@@ -233,7 +233,7 @@
                     for (let n of e.messages) t = v(n.thread) || t;
                     if (e.isAfter || e.isBefore || e.hasMoreAfter) return t;
                     let n = _.default.getChannel(e.channelId);
-                    if (null == n || !o.THREAD_CHANNEL_TYPES.has(n.type)) return t;
+                    if (null == n || !d.THREAD_CHANNEL_TYPES.has(n.type)) return t;
                     T(n, t => {
                         if (0 === e.messages.length) t.mostRecentRawMessage = null, t.mostRecentMessage = null, t.count = 0;
                         else {

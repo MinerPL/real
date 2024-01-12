@@ -315,7 +315,7 @@
                     disableAutoFocus: !0,
                     showCharacterCount: !0
                 },
-                h = {
+                _ = {
                     analyticsName: "custom_gift_type",
                     drafts: {
                         type: i.DraftType.ChannelMessage
@@ -331,7 +331,7 @@
                     disableAutoFocus: !0,
                     showCharacterCount: !0
                 },
-                _ = {
+                S = {
                     analyticsName: "rules_input",
                     drafts: {
                         type: i.DraftType.ChannelMessage
@@ -345,7 +345,7 @@
                     },
                     showCharacterCount: !0
                 },
-                S = {
+                h = {
                     analyticsName: "forum_channel_guidelines",
                     drafts: {
                         type: i.DraftType.ChannelMessage
@@ -373,9 +373,9 @@
                     VOICE_CHANNEL_STATUS: f,
                     THREAD_CREATION: m,
                     PROFILE_BIO_INPUT: T,
-                    CUSTOM_GIFT: h,
-                    RULES_INPUT: _,
+                    CUSTOM_GIFT: _,
+                    RULES_INPUT: S,
                     CREATE_FORUM_POST: p,
                     CREATE_POLL: E,
-                    FORUM_CHANNEL_GUIDELINES: S
+                    FORUM_CHANNEL_GUIDELINES: h
                 }

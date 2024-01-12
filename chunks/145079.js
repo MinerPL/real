@@ -1,94 +1,94 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return h
+                    return S
                 }
             });
-            var l = n("37983");
+            var r = n("37983");
             n("884691");
-            var a = n("414456"),
-                s = n.n(a),
-                i = n("446674"),
-                r = n("77078"),
+            var i = n("414456"),
+                l = n.n(i),
+                s = n("446674"),
+                a = n("77078"),
                 u = n("102985"),
                 o = n("79798"),
-                d = n("754474"),
-                c = n("158998"),
-                E = n("782340"),
-                f = n("892802");
+                c = n("754474"),
+                d = n("158998"),
+                f = n("782340"),
+                I = n("892802");
 
             function _(e) {
-                if (e.isSystemUser()) return d.BotTypes.SYSTEM_DM;
-                if (e.isClyde()) return d.BotTypes.AI;
-                if (e.bot) return d.BotTypes.BOT;
+                if (e.isSystemUser()) return c.BotTypes.SYSTEM_DM;
+                if (e.isClyde()) return c.BotTypes.AI;
+                if (e.bot) return c.BotTypes.BOT;
                 return null
             }
-            let I = e => {
+            let E = e => {
                 let {
                     primary: t,
                     secondary: n,
-                    botType: a,
-                    botVerified: i,
+                    botType: i,
+                    botVerified: s,
                     discriminatorClass: u,
-                    className: d,
-                    usernameClass: c,
+                    className: c,
+                    usernameClass: d,
                     color: _,
-                    botClass: I,
-                    showStreamerModeTooltip: h
+                    botClass: E,
+                    showStreamerModeTooltip: S
                 } = e;
-                return (0, l.jsxs)("div", {
-                    className: s(f.info, d),
-                    children: [(0, l.jsx)(r.Tooltip, {
-                        text: E.default.Messages.STREAMER_MODE_ENABLED,
-                        shouldShow: h,
-                        children: e => (0, l.jsx)("span", {
+                return (0, r.jsxs)("div", {
+                    className: l(I.info, c),
+                    children: [(0, r.jsx)(a.Tooltip, {
+                        text: f.default.Messages.STREAMER_MODE_ENABLED,
+                        shouldShow: S,
+                        children: e => (0, r.jsx)("span", {
                             ...e,
-                            className: s(f.username, c),
+                            className: l(I.username, d),
                             style: null != _ ? {
                                 color: _
                             } : void 0,
                             children: t
                         })
-                    }), null != n ? (0, l.jsx)("span", {
-                        className: s(f.infoSpacing, u),
+                    }), null != n ? (0, r.jsx)("span", {
+                        className: l(I.infoSpacing, u),
                         children: n
-                    }) : void 0, null != a && (0, l.jsx)(o.default, {
-                        type: a,
-                        className: s(f.infoSpacing, I),
-                        verified: i
+                    }) : void 0, null != i && (0, r.jsx)(o.default, {
+                        type: i,
+                        className: l(I.infoSpacing, E),
+                        verified: s
                     })]
                 })
             };
-            var h = e => {
+            var S = e => {
                 let {
                     hideDiscriminator: t = !1,
                     user: n,
-                    nick: a,
-                    forceUsername: s,
-                    showAccountIdentifier: r,
+                    nick: i,
+                    forceUsername: l,
+                    showAccountIdentifier: a,
                     overrideDiscriminator: o,
-                    forcePomelo: E,
-                    ...f
-                } = e, h = (0, i.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), T = h || t || n.isNonUserBot(), N = n.toString(), v = c.default.getName(n), m = s ? N : null != a ? a : v, S = n.isPomelo() || E;
-                if (S || m !== N) {
-                    let e = m === N && S && s ? c.default.getUserTag(n, {
-                            forcePomelo: E
+                    forcePomelo: f,
+                    ...I
+                } = e, S = (0, s.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), T = S || t || n.isNonUserBot(), N = n.toString(), p = d.default.getName(n), m = l ? N : null != i ? i : p, C = n.isPomelo() || f;
+                if (C || m !== N) {
+                    let e = m === N && C && l ? d.default.getUserTag(n, {
+                            forcePomelo: f
                         }) : m,
-                        t = r && e !== "@".concat(N) ? c.default.getUserTag(n) : void 0;
-                    return (0, l.jsx)(I, {
+                        t = a && e !== "@".concat(N) ? d.default.getUserTag(n) : void 0;
+                    return (0, r.jsx)(E, {
                         primary: e,
                         secondary: t,
                         botVerified: n.isVerifiedBot(),
                         botType: _(n),
-                        showStreamerModeTooltip: h && e !== v,
-                        ...f
+                        showStreamerModeTooltip: S && e !== p,
+                        ...I
                     })
                 }
-                return (0, l.jsx)(d.default, {
+                return (0, r.jsx)(c.default, {
                     name: m,
                     botType: _(n),
                     botVerified: n.isVerifiedBot(),
                     discriminator: T || m !== N ? null : null != o ? o : n.discriminator,
-                    ...f
+                    ...I
                 })
             }

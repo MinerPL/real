@@ -18,21 +18,21 @@
                 p = l("425190"),
                 E = l("701909"),
                 T = l("49111"),
-                h = l("782340"),
-                _ = l("474963"),
-                S = l("632215");
+                _ = l("782340"),
+                S = l("474963"),
+                h = l("632215");
 
             function I(e) {
                 let {
                     className: t,
                     lineClamp: l = 6,
                     isExpanded: s = !1
-                } = e, [I, g] = a.useState(s), A = a.useMemo(() => (0, d.parseBioReact)(h.default.Messages.MORE_INFO_CLYDE_LEGAL), []);
+                } = e, [I, A] = a.useState(s), g = a.useMemo(() => (0, d.parseBioReact)(_.default.Messages.MORE_INFO_CLYDE_LEGAL), []);
                 return (0, n.jsxs)(n.Fragment, {
                     children: [(0, n.jsx)(o.Collapsible, {
                         isExpanded: I,
                         collapsibleContent: (0, n.jsx)("div", {
-                            className: i(t, S.markup),
+                            className: i(t, h.markup),
                             children: (0, n.jsx)(o.Text, {
                                 variant: "text-sm/normal",
                                 lineClamp: l,
@@ -41,42 +41,42 @@
                                         disableAnimations: !0,
                                         disableInteractions: !1
                                     },
-                                    children: A
+                                    children: g
                                 })
                             })
                         }),
-                        className: _.collapseable,
+                        className: S.collapseable,
                         children: e => {
                             let {
                                 onClick: t
                             } = e;
                             return (0, n.jsx)(o.Clickable, {
                                 onClick: e => {
-                                    g(!I), t(e)
+                                    A(!I), t(e)
                                 },
                                 children: (0, n.jsxs)("div", {
-                                    className: _.header,
+                                    className: S.header,
                                     children: [(0, n.jsx)(o.Heading, {
                                         variant: "eyebrow",
-                                        className: _.userInfoSectionHeader,
-                                        children: h.default.Messages.MORE_INFO
+                                        className: S.userInfoSectionHeader,
+                                        children: _.default.Messages.MORE_INFO
                                     }), I ? (0, n.jsx)(p.default, {
-                                        className: _.arrow
+                                        className: S.arrow
                                     }) : (0, n.jsx)(m.default, {
-                                        className: _.arrow
+                                        className: S.arrow
                                     })]
                                 })
                             })
                         }
                     }), (0, n.jsxs)(o.Text, {
-                        className: _.helpCenterCta,
+                        className: S.helpCenterCta,
                         variant: "text-sm/medium",
                         children: [(0, n.jsx)(r.LinkIcon, {
                             color: "var(--text-link)",
-                            className: _.linkIcon
+                            className: S.linkIcon
                         }), (0, n.jsx)(c.default, {
                             onClick: () => (0, u.default)(E.default.getArticleURL(T.HelpdeskArticles.CLYDE_AI), !0),
-                            children: h.default.Messages.MORE_INFO_HELP_CENTER
+                            children: _.default.Messages.MORE_INFO_HELP_CENTER
                         })]
                     })]
                 })

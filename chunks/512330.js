@@ -7,7 +7,7 @@
                     return I
                 },
                 default: function() {
-                    return g
+                    return A
                 }
             }), l("70102"), l("700225"), l("222007");
             var n, a, s, i, r, o, u = l("37983"),
@@ -52,11 +52,11 @@
                     unit: "YEARS",
                     max: 1 / 0
                 }],
-                h = e => (t, l) => null == l ? "" : e().format({
+                _ = e => (t, l) => null == l ? "" : e().format({
                     time: t,
                     ...l
                 }),
-                _ = {
+                S = {
                     ACTIVITY_FEED: {
                         START: {
                             SECONDS: () => p.default.Messages.GAME_FEED_USER_PLAYING_JUST_STARTED,
@@ -94,10 +94,10 @@
                     },
                     ACTIVITY_FEED_NEW: {
                         START: {
-                            SECONDS: h(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
-                            MINUTES: h(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
-                            HOURS: h(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
-                            DAYS: h(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
+                            SECONDS: _(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_JUST_STARTED),
+                            MINUTES: _(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_MINUTES),
+                            HOURS: _(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_HOURS),
+                            DAYS: _(() => p.default.Messages.ACTIVITY_FEED_USER_PLAYING_FOR_DAYS)
                         },
                         END: {
                             SECONDS: e => p.default.Messages.DURATION_SECONDS_AGO.format({
@@ -183,7 +183,7 @@
                     }
                 };
 
-            function S(e, t) {
+            function h(e, t) {
                 let l = T.findIndex(t => {
                         let {
                             max: l,
@@ -208,7 +208,7 @@
             }
 
             function I(e, t) {
-                let l = null != e ? S(e, e => t.includes(e)) : "NONE",
+                let l = null != e ? h(e, e => t.includes(e)) : "NONE",
                     n = null != l ? E[l] : null;
                 return {
                     unit: l,
@@ -216,7 +216,7 @@
                 }
             }
 
-            function g(e) {
+            function A(e) {
                 var t;
                 return (t = class extends d.PureComponent {
                     componentDidMount() {
@@ -245,8 +245,8 @@
                         return null != e ? a = n - e : null != t && (a = n - t), Math.abs(a) / 1e3 / 60
                     }
                     getTimeUnit(e, t, l) {
-                        let n = S(e, e => (function(e, t, l) {
-                            let n = _[l];
+                        let n = h(e, e => (function(e, t, l) {
+                            let n = S[l];
                             if (null != n) {
                                 let l = n[t];
                                 if (null != l) return null != l[e]
@@ -281,7 +281,7 @@
                         } = this.state, i = this.getType();
                         if (null == i) return null;
                         let r = this.getTimeUnit(s, t, i),
-                            o = _[t][i];
+                            o = S[t][i];
                         if (null == o) return null;
                         let d = o[r],
                             c = Math.floor(this.transformTime(r, s));

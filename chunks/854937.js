@@ -26,9 +26,9 @@
                     ...E
                 } = e, {
                     tooltip: T,
-                    loading: h,
-                    disabled: _,
-                    onClick: S
+                    loading: _,
+                    disabled: S,
+                    onClick: h
                 } = (0, u.useSpotifySyncAction)(t, l, f, o.default.getNickname(c, a, l));
                 return (0, n.jsx)(i.Tooltip, {
                     text: T,
@@ -41,11 +41,11 @@
                             ...E,
                             size: s(m, d.iconButtonSize),
                             className: s(p, d.iconButton),
-                            onClick: S,
+                            onClick: h,
                             onMouseEnter: l,
                             onMouseLeave: a,
-                            disabled: _,
-                            submitting: h,
+                            disabled: S,
+                            submitting: _,
                             "aria-label": null != T ? T : t.name,
                             children: (0, n.jsx)(r.default, {
                                 className: d.listenAlongIcon

@@ -24,16 +24,16 @@
                         iconClassName: E,
                         tooltipText: T
                     } = e,
-                    [h, _] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.desaturateUserColors, o.default.saturation]),
-                    S = (0, r.useToken)(i.default.unsafe_rawColors.PRIMARY_300).hex(),
-                    I = (0, a.hex2int)(null != l ? l : S),
-                    g = (0, a.int2hsl)(I, !1, h ? _ : null);
+                    [_, S] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.desaturateUserColors, o.default.saturation]),
+                    h = (0, r.useToken)(i.default.unsafe_rawColors.PRIMARY_300).hex(),
+                    I = (0, a.hex2int)(null != l ? l : h),
+                    A = (0, a.int2hsl)(I, !1, _ ? S : null);
                 return t = null != m ? m : .3 > (0, a.getDarkness)(I) ? i.default.unsafe_rawColors.PRIMARY_630.css : i.default.unsafe_rawColors.WHITE_500.css, (0, n.jsx)(r.Tooltip, {
                     text: null != T ? T : c.default.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
                     children: e => (0, n.jsx)(u.default, {
                         ...e,
                         className: p,
-                        color: g,
+                        color: A,
                         size: f,
                         children: (0, n.jsx)(d.default, {
                             color: t,

@@ -24,35 +24,35 @@
                     type: l,
                     content: E,
                     stickers: T,
-                    uploads: h,
-                    channel: _,
-                    restrictMentions: S = !0,
+                    uploads: _,
+                    channel: S,
+                    restrictMentions: h = !0,
                     respectCooldown: I = !0
-                } = e, g = f.default.canUseIncreasedMessageLength(u.default.getCurrentUser());
+                } = e, A = f.default.canUseIncreasedMessageLength(u.default.getCurrentUser());
                 return new Promise(e => (function(e) {
                     var t, l, u;
                     let {
                         openWarningPopout: f,
                         type: E,
                         content: T,
-                        stickers: h,
-                        uploads: _,
-                        channel: S,
+                        stickers: _,
+                        uploads: S,
+                        channel: h,
                         restrictMentions: I,
-                        respectCooldown: g,
-                        userCanUsePremiumMessageLength: A,
+                        respectCooldown: A,
+                        userCanUsePremiumMessageLength: g,
                         resolve: v
                     } = e;
-                    if (0 === T.length && !(null === (t = E.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == h || 0 === h.length) && (null == _ || 0 === _.length)) {
+                    if (0 === T.length && !(null === (t = E.submit) || void 0 === t ? void 0 : t.allowEmptyMessage) && (null == _ || 0 === _.length) && (null == S || 0 === S.length)) {
                         v({
                             valid: !1,
                             failureReason: m.MessageRestrictionTypes.EMPTY_MESSAGE
                         });
                         return
                     }
-                    let C = A ? m.MAX_MESSAGE_LENGTH_PREMIUM : m.MAX_MESSAGE_LENGTH;
+                    let C = g ? m.MAX_MESSAGE_LENGTH_PREMIUM : m.MAX_MESSAGE_LENGTH;
                     if (T.length > C) {
-                        if (A || null == S) {
+                        if (g || null == h) {
                             ;
                             l = T.length, u = C, (0, a.openModal)(e => (0, n.jsx)(i.default, {
                                 title: p.default.Messages.MESSAGE_TOO_LONG_HEADER,
@@ -68,7 +68,7 @@
                             })
                         } else s.default.dispatch({
                             type: "MESSAGE_LENGTH_UPSELL",
-                            channel: S,
+                            channel: h,
                             content: T
                         });
                         v({
@@ -77,8 +77,8 @@
                         });
                         return
                     }
-                    if (null != S) {
-                        if (null != S.getGuildId() && g && o.default.getSlowmodeCooldownGuess(S.id) > 0) {
+                    if (null != h) {
+                        if (null != h.getGuildId() && A && o.default.getSlowmodeCooldownGuess(h.id) > 0) {
                             v({
                                 valid: !1,
                                 failureReason: m.MessageRestrictionTypes.SLOWMODE_COOLDOWN
@@ -92,11 +92,11 @@
                                     animation: l
                                 }
                                 of c.RESTRICTIONS) {
-                                let n = e(T, S, I);
+                                let n = e(T, h, I);
                                 if (!1 !== n) {
                                     f({
                                         analyticsType: t,
-                                        channel: S,
+                                        channel: h,
                                         onCancel: () => v({
                                             valid: !1,
                                             failureReason: m.MessageRestrictionTypes.SHOUTING_CANCELLED
@@ -133,11 +133,11 @@
                     type: l,
                     content: E,
                     stickers: T,
-                    uploads: h,
-                    channel: _,
-                    restrictMentions: S,
+                    uploads: _,
+                    channel: S,
+                    restrictMentions: h,
                     respectCooldown: I,
-                    userCanUsePremiumMessageLength: g,
+                    userCanUsePremiumMessageLength: A,
                     resolve: e
                 }))
             }

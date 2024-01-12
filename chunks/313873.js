@@ -19,12 +19,12 @@
                 p = l("841098"),
                 E = l("376556"),
                 T = l("609030"),
-                h = l("309570"),
-                _ = l("985677"),
-                S = l("429928"),
+                _ = l("309570"),
+                S = l("985677"),
+                h = l("429928"),
                 I = l("36539"),
-                g = l("502651"),
-                A = l("419830"),
+                A = l("502651"),
+                g = l("419830"),
                 v = l("925749"),
                 C = l("342845"),
                 N = l("239380"),
@@ -37,8 +37,8 @@
                 P = l("953109"),
                 b = l("98292"),
                 D = l("280174"),
-                U = l("963422"),
-                j = l("587974"),
+                j = l("963422"),
+                U = l("587974"),
                 F = l("49111"),
                 w = l("954016"),
                 G = l("782340"),
@@ -70,7 +70,7 @@
                         activity: l
                     } = e,
                     n = (0, p.default)();
-                if ((0, S.default)(l) && (t = F.PlatformTypes.SPOTIFY), null != l.platform && [F.ActivityGamePlatforms.PS4, F.ActivityGamePlatforms.PS5].includes(l.platform) && (t = F.PlatformTypes.PLAYSTATION), null == t) return null;
+                if ((0, h.default)(l) && (t = F.PlatformTypes.SPOTIFY), null != l.platform && [F.ActivityGamePlatforms.PS4, F.ActivityGamePlatforms.PS5].includes(l.platform) && (t = F.PlatformTypes.PLAYSTATION), null == t) return null;
                 let a = E.default.get(t);
                 return (0, s.jsx)("img", {
                     alt: "",
@@ -93,10 +93,10 @@
                     return (0, x.getClass)(k, e, this.props.type, t)
                 }
                 isStreamerOnTypeProfile() {
-                    return (0, g.default)(this.activity) && ("Profile" === this.props.type || "ProfileV2" === this.props.type)
+                    return (0, A.default)(this.activity) && ("Profile" === this.props.type || "ProfileV2" === this.props.type)
                 }
                 isStreamerOnTypeActivityFeed() {
-                    return (0, g.default)(this.activity) && "ActivityFeed" === this.props.type
+                    return (0, A.default)(this.activity) && "ActivityFeed" === this.props.type
                 }
                 renderHeader(e) {
                     let t;
@@ -145,7 +145,7 @@
                             server: n.name
                         })
                     }(null == u ? void 0 : u.type) === F.ActivityTypes.HANG_STATUS && (t = G.default.Messages.STATUS_LEAD_IN_JUST);
-                    let m = (0, A.getChannelIconComponent)(a, n);
+                    let m = (0, g.getChannelIconComponent)(a, n);
                     return null != a && (t = a.name), (0, s.jsxs)("div", {
                         className: k.headerContainer,
                         children: [null != a && null !== m ? (0, s.jsx)(m, {
@@ -187,8 +187,8 @@
                         application_id: c
                     } = e;
                     if (null == d || null == d.large_image && null == d.small_image) return null;
-                    (0, g.default)(e) && (a = B[u]);
-                    let m = (0, S.default)(e),
+                    (0, A.default)(e) && (a = B[u]);
+                    let m = (0, h.default)(e),
                         p = null != d.large_image ? (0, s.jsx)("img", {
                             alt: null !== (t = d.large_text) && void 0 !== t ? t : "",
                             src: Y(c, d.large_image, null != a ? a : [w.ImageSizes.LARGE, w.ImageSizes.LARGE]),
@@ -205,8 +205,8 @@
                     else if ((0, y.isStageActivity)(e)) {
                         let t = (0, y.unpackStageChannelParty)(e);
                         if (null == t) return null;
-                        p = (0, s.jsx)(j.default, {
-                            mask: j.default.Masks.SQUIRCLE,
+                        p = (0, s.jsx)(U.default, {
+                            mask: U.default.Masks.SQUIRCLE,
                             width: w.ImageSizes.SMALL,
                             height: w.ImageSizes.SMALL,
                             children: (0, s.jsx)("img", {
@@ -278,7 +278,7 @@
                         application: n,
                         activityGuild: a
                     } = this.props;
-                    return null != e.assets || (0, h.default)(e) || e.type !== F.ActivityTypes.PLAYING || "ActivityFeed" === l || t.bot ? null : null == n && null != a ? (0, s.jsx)("div", {
+                    return null != e.assets || (0, _.default)(e) || e.type !== F.ActivityTypes.PLAYING || "ActivityFeed" === l || t.bot ? null : null == n && null != a ? (0, s.jsx)("div", {
                         className: o(k.gameIcon, k.screenshareIcon)
                     }) : (0, s.jsx)(P.default, {
                         className: k.gameIcon,
@@ -297,13 +297,13 @@
                         type: i
                     } = e;
                     if (i === F.ActivityTypes.CUSTOM_STATUS) return null;
-                    let r = (0, _.default)(e),
+                    let r = (0, S.default)(e),
                         o = e.name,
                         u = o;
                     return (i === F.ActivityTypes.HANG_STATUS ? u = (0, v.getHangStatusText)(e) : r && null != l ? u = (0, s.jsx)("span", {
                         className: k.activityName,
                         children: u
-                    }) : !r && (o = a, u = a, (0, S.default)(e) && null != e.sync_id && null != a ? u = (0, s.jsx)(f.Anchor, {
+                    }) : !r && (o = a, u = a, (0, h.default)(e) && null != e.sync_id && null != a ? u = (0, s.jsx)(f.Anchor, {
                         className: k.bodyLink,
                         onClick: this.handleOpenSpotifyTrack,
                         children: a
@@ -328,10 +328,10 @@
                     }) : null, t = null != a ? () => {
                         (0, N.transitionToGuild)(a.id)
                     } : void 0;
-                    else if (!(0, _.default)(e)) {
-                        if (r = i = n, (0, S.default)(e) && null != n) i = G.default.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
+                    else if (!(0, S.default)(e)) {
+                        if (r = i = n, (0, h.default)(e) && null != n) i = G.default.Messages.USER_ACTIVITY_LISTENING_ARTISTS.format({
                             artists: r,
-                            artistsHook: (t, l) => (0, s.jsx)(U.default, {
+                            artistsHook: (t, l) => (0, s.jsx)(j.default, {
                                 artists: n,
                                 linkClassName: k.bodyLink,
                                 canOpen: null != e.sync_id,
@@ -343,7 +343,7 @@
                             i = null === (o = e.assets) || void 0 === o ? void 0 : o.small_text
                         }
                     }
-                    return null == i || 0 === i.length ? null : ((0, g.default)(e) && (i = G.default.Messages.STREAMER_PLAYING.format({
+                    return null == i || 0 === i.length ? null : ((0, A.default)(e) && (i = G.default.Messages.STREAMER_PLAYING.format({
                         game: i
                     })), null != t) ? (0, s.jsx)(f.Clickable, {
                         onClick: t,
@@ -352,7 +352,7 @@
                         children: i
                     }) : (0, s.jsx)("div", {
                         title: null != r ? r : void 0,
-                        className: (0, g.default)(e) || (0, S.default)(e) ? k.detailsWrap : k.details,
+                        className: (0, A.default)(e) || (0, h.default)(e) ? k.detailsWrap : k.details,
                         children: i
                     })
                 }
@@ -360,11 +360,11 @@
                     let {
                         activityGuild: t
                     } = this.props;
-                    if (!(0, _.default)(e) || (0, S.default)(e)) return null;
+                    if (!(0, S.default)(e) || (0, h.default)(e)) return null;
                     let {
                         timestamps: l
                     } = e;
-                    return null == l ? null : (0, h.default)(e) ? (0, s.jsx)(V, {
+                    return null == l ? null : (0, _.default)(e) ? (0, s.jsx)(V, {
                         timestamps: l
                     }) : (0, s.jsx)(D.default, {
                         start: l.start,
@@ -374,7 +374,7 @@
                     })
                 }
                 renderTimeBar(e) {
-                    if (!(0, S.default)(e)) return null;
+                    if (!(0, h.default)(e)) return null;
                     let {
                         timestamps: t
                     } = e;
@@ -398,7 +398,7 @@
                         party: r,
                         assets: o
                     } = e, u = i, d = u;
-                    return (!(0, _.default)(e) && (d = u = null == o ? void 0 : o.large_text, (0, S.default)(e) && null != u && (u = G.default.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
+                    return (!(0, S.default)(e) && (d = u = null == o ? void 0 : o.large_text, (0, h.default)(e) && null != u && (u = G.default.Messages.USER_ACTIVITY_LISTENING_ALBUM.format({
                         album: d,
                         albumHook: (t, l) => null != e.sync_id && null != d ? (0, s.jsx)(f.Anchor, {
                             className: k.bodyLink,
@@ -443,18 +443,18 @@
                         p = this.renderDetails(i),
                         E = this.renderState(i, a),
                         T = this.renderTimePlayed(i),
-                        h = null != l ? l() : null,
-                        _ = this.renderTimeBar(i),
-                        S = ![e, m, p, E, T, _, h].some(e => null != e);
+                        _ = null != l ? l() : null,
+                        S = this.renderTimeBar(i),
+                        h = ![e, m, p, E, T, S, _].some(e => null != e);
                     return (0, s.jsxs)("div", {
                         className: o(this.getTypeClass("activity"), n),
-                        children: [this.renderHeader(S), (0, s.jsxs)("div", {
+                        children: [this.renderHeader(h), (0, s.jsxs)("div", {
                             className: f ? k.bodyAlignCenter : k.bodyNormal,
                             children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, s.jsxs)(L.default.Child, {
                                 className: o((0, x.getClass)(k, "content", f ? "GameImage" : null != e ? "Images" : "NoImages", t)),
-                                children: [m, p, E, T, r || c ? null : _, d ? h : null]
-                            }), u ? h : null]
-                        }), r ? _ : null, r || c ? h : null, (0, s.jsx)(H, {
+                                children: [m, p, E, T, r || c ? null : S, d ? _ : null]
+                            }), u ? _ : null]
+                        }), r ? S : null, r || c ? _ : null, (0, s.jsx)(H, {
                             activity: i
                         })]
                     })

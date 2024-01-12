@@ -1,10 +1,10 @@
             "use strict";
             l.r(t), l.d(t, {
                 useSpotifyPlayAction: function() {
-                    return _
+                    return S
                 },
                 useSpotifySyncAction: function() {
-                    return S
+                    return h
                 },
                 useSpotifyJoinAction: function() {
                     return I
@@ -46,12 +46,12 @@
                 }
             }
 
-            function h(e, t) {
+            function _(e, t) {
                 return (0, a.useStateFromStoresObject)([u.default, r.default], () => (0, f.default)(u.default, r.default, t, e), [e, t])
             }
 
-            function _(e, t, l) {
-                let a = h(e, t),
+            function S(e, t, l) {
+                let a = _(e, t),
                     {
                         notPlayable: s,
                         isCurrentUser: i,
@@ -75,9 +75,9 @@
                 }
             }
 
-            function S(e, t, l, a) {
+            function h(e, t, l, a) {
                 let s = null != a ? a : o.default.getName(t),
-                    i = h(e, t),
+                    i = _(e, t),
                     {
                         syncingWithUser: r,
                         syncingWithParty: u,
@@ -85,12 +85,12 @@
                     } = i,
                     {
                         loading: p,
-                        startLoading: _,
-                        clearLoading: S
+                        startLoading: S,
+                        clearLoading: h
                     } = T(i),
                     I = n.useCallback(() => {
-                        _(), (0, m.default)(i, E.SpotifyActionTypes.USER_ACTIVITY_SYNC, l).catch(S)
-                    }, [i, l, _, S]);
+                        S(), (0, m.default)(i, E.SpotifyActionTypes.USER_ACTIVITY_SYNC, l).catch(h)
+                    }, [i, l, S, h]);
                 return {
                     label: (0, d.default)(i, E.SpotifyActionTypes.USER_ACTIVITY_SYNC),
                     tooltip: (0, c.default)(i, E.SpotifyActionTypes.USER_ACTIVITY_SYNC, s),
@@ -102,7 +102,7 @@
             }
 
             function I(e, t, l) {
-                let a = h(e, t),
+                let a = _(e, t),
                     {
                         notPlayable: s,
                         syncingWithUser: i,
@@ -114,7 +114,7 @@
                         startLoading: f,
                         clearLoading: p
                     } = T(a),
-                    _ = n.useCallback(() => {
+                    S = n.useCallback(() => {
                         f(), (0, m.default)(a, E.SpotifyActionTypes.EMBED_SYNC, l).catch(p)
                     }, [a, l, f, p]);
                 return {
@@ -122,7 +122,7 @@
                     tooltip: (0, c.default)(a, E.SpotifyActionTypes.EMBED_SYNC),
                     disabled: !u && (o || i || r || s),
                     loading: u,
-                    onClick: _,
+                    onClick: S,
                     spotifyData: a
                 }
             }

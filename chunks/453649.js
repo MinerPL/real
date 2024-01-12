@@ -1,7 +1,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 useGetVoiceChannelInfoForVoiceActivitySection: function() {
-                    return S
+                    return h
                 },
                 default: function() {
                     return I
@@ -22,10 +22,10 @@
                 p = l("777003"),
                 E = l("49111"),
                 T = l("782340"),
-                h = l("814076"),
-                _ = l("293773");
+                _ = l("814076"),
+                S = l("293773");
 
-            function S(e, t) {
+            function h(e, t) {
                 let l = (0, a.useStateFromStores)([c.default], () => {
                         var l;
                         return null !== (l = c.default.getVoiceState(t, e)) && void 0 !== l ? l : c.default.getVoiceStateForUser(e)
@@ -50,24 +50,24 @@
                 return (0, n.jsxs)(p.default, {
                     children: [(0, n.jsx)(s.Heading, {
                         variant: "eyebrow",
-                        className: h.title,
+                        className: _.title,
                         children: T.default.Messages.PROFILE_IN_VOICE_CALL
                     }), (0, n.jsxs)("div", {
-                        className: _.voiceDisplayContainer,
+                        className: S.voiceDisplayContainer,
                         children: [(0, n.jsxs)("div", {
-                            className: _.iconContainer,
+                            className: S.iconContainer,
                             children: [(0, n.jsx)(f.default, {
                                 size: f.default.Sizes.SMALL,
                                 active: !0,
                                 guild: t
                             }), (0, n.jsx)("div", {
-                                className: _.speakerIconContainer,
+                                className: S.speakerIconContainer,
                                 children: (0, n.jsx)(m.default, {
-                                    className: _.speakerIcon
+                                    className: S.speakerIcon
                                 })
                             })]
                         }), (0, n.jsxs)("div", {
-                            className: _.voiceChannelInfo,
+                            className: S.voiceChannelInfo,
                             children: [(0, n.jsx)(s.Text, {
                                 variant: "text-sm/semibold",
                                 children: l.name

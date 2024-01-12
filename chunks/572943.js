@@ -7,7 +7,7 @@
                     return T
                 },
                 useLegacyPlatformType: function() {
-                    return h
+                    return _
                 }
             }), l("222007");
             var n = l("884691"),
@@ -56,7 +56,7 @@
                 }, e => l.has(e.type), e => e.hasMetadata, e => !c.ACTIVITY_PLATFORM_TYPES.has(e.type), e => e.name])
             }
 
-            function h(e) {
+            function _(e) {
                 let [t, l] = n.useState(!1);
 
                 function a(e) {

@@ -18,12 +18,12 @@
                 p = l("42203"),
                 E = l("86878"),
                 T = l("525065"),
-                h = l("305961"),
-                _ = l("686470"),
-                S = l("957255"),
+                _ = l("305961"),
+                S = l("686470"),
+                h = l("957255"),
                 I = l("27618"),
-                g = l("18494"),
-                A = l("697218"),
+                A = l("18494"),
+                g = l("697218"),
                 v = l("800762"),
                 C = l("953998"),
                 N = l("535974"),
@@ -36,8 +36,8 @@
                 P = l("871388"),
                 b = l("407908"),
                 D = l("141962"),
-                U = l("295999"),
-                j = l("954016"),
+                j = l("295999"),
+                U = l("954016"),
                 F = l("49111"),
                 w = l("782340");
 
@@ -58,8 +58,8 @@
                     channelId: H,
                     userId: V.id,
                     activity: t
-                }), J = (0, s.useStateFromStores)([A.default], () => A.default.getCurrentUser()), Q = (0, s.useStateFromStores)([_.default, m.default, N.default, E.default], () => W || (null == t ? void 0 : t.application_id) != null && (0, O.isLaunchable)({
-                    LibraryApplicationStore: _.default,
+                }), J = (0, s.useStateFromStores)([g.default], () => g.default.getCurrentUser()), Q = (0, s.useStateFromStores)([S.default, m.default, N.default, E.default], () => W || (null == t ? void 0 : t.application_id) != null && (0, O.isLaunchable)({
+                    LibraryApplicationStore: S.default,
                     LaunchableGameStore: m.default,
                     DispatchApplicationStore: N.default,
                     ConnectedAppsStore: E.default,
@@ -70,7 +70,7 @@
                         channelId: n
                     } = e;
                     return l === (null == t ? void 0 : t.application_id) && n === X
-                })), $ = (0, s.useStateFromStores)([C.default], () => null != t && null != t.application_id && C.default.getState(t.application_id, F.ActivityActionTypes.JOIN) === F.ActivityActionStates.LOADING), [ee] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), et = (0, s.useStateFromStores)([p.default, h.default, T.default, I.default, g.default, v.default, S.default], () => (0, R.default)({
+                })), $ = (0, s.useStateFromStores)([C.default], () => null != t && null != t.application_id && C.default.getState(t.application_id, F.ActivityActionTypes.JOIN) === F.ActivityActionStates.LOADING), [ee] = (0, f.default)((null == t ? void 0 : t.application_id) != null ? [null == t ? void 0 : t.application_id] : []), et = (0, s.useStateFromStores)([p.default, _.default, T.default, I.default, A.default, v.default, h.default], () => (0, R.default)({
                     user: V,
                     activity: t,
                     application: ee,
@@ -78,12 +78,12 @@
                     currentUser: J,
                     isEmbedded: W,
                     ChannelStore: p.default,
-                    GuildStore: h.default,
+                    GuildStore: _.default,
                     GuildMemberCountStore: T.default,
                     RelationshipStore: I.default,
-                    SelectedChannelStore: g.default,
+                    SelectedChannelStore: A.default,
                     VoiceStateStore: v.default,
-                    PermissionStore: S.default
+                    PermissionStore: h.default
                 })), el = (0, d.useAnalyticsContext)(), en = !y.isPlatformEmbedded, ea = (0, P.default)(t, F.ActivityFlags.JOIN) || W;
                 if (null == t || !ea || null == t.application_id) return null;
                 let es = !G && (en || Q) && !K && !q && (!W || et),
@@ -97,9 +97,9 @@
                         userId: e.id,
                         sessionId: t.session_id,
                         applicationId: t.application_id,
-                        channelId: g.default.getVoiceChannelId(),
+                        channelId: A.default.getVoiceChannelId(),
                         messageId: null,
-                        intent: j.ActivityIntent.PLAY,
+                        intent: U.ActivityIntent.PLAY,
                         embedded: (0, P.default)(t, F.ActivityFlags.EMBEDDED)
                     }), (0, b.default)({
                         type: F.AnalyticsGameOpenTypes.JOIN,
@@ -140,7 +140,7 @@
                             onMouseEnter: t,
                             onMouseLeave: l
                         } = e;
-                        return (0, n.jsx)(U.default, {
+                        return (0, n.jsx)(j.default, {
                             onClick: eo,
                             onMouseEnter: t,
                             onMouseLeave: l,

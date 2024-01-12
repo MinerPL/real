@@ -18,12 +18,12 @@
                 p = l("502651"),
                 E = l("812204"),
                 T = l("685665"),
-                h = l("299285"),
-                _ = l("442939"),
-                S = l("373469"),
+                _ = l("299285"),
+                S = l("442939"),
+                h = l("373469"),
                 I = l("26989"),
-                g = l("305961"),
-                A = l("824563"),
+                A = l("305961"),
+                g = l("824563"),
                 v = l("27618"),
                 C = l("697218"),
                 N = l("599110"),
@@ -36,8 +36,8 @@
                 P = l("789321"),
                 b = l("627601"),
                 D = l("935409"),
-                U = l("849674"),
-                j = l("590456"),
+                j = l("849674"),
+                U = l("590456"),
                 F = l("49111"),
                 w = l("450484"),
                 G = l("304118");
@@ -61,29 +61,29 @@
                     return null === (e = y.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
                 }), {
                     AnalyticsLocationProvider: Z
-                } = (0, T.default)(E.default.PROFILE_POPOUT), X = (0, r.useStateFromStores)([g.default], () => null != l ? g.default.getGuild(l) : null), J = (0, r.useStateFromStores)([I.default], () => null != l ? I.default.getMember(l, t.id) : null), Q = t.isNonUserBot(), {
+                } = (0, T.default)(E.default.PROFILE_POPOUT), X = (0, r.useStateFromStores)([A.default], () => null != l ? A.default.getGuild(l) : null), J = (0, r.useStateFromStores)([I.default], () => null != l ? I.default.getMember(l, t.id) : null), Q = t.isNonUserBot(), {
                     activity: q,
                     customStatusActivity: $,
                     status: ee,
                     isMobile: et,
                     isApplicationStreaming: el
-                } = (0, r.useStateFromStoresObject)([S.default, A.default], () => {
-                    let e = null != S.default.getAnyStreamForUser(t.id);
+                } = (0, r.useStateFromStoresObject)([h.default, g.default], () => {
+                    let e = null != h.default.getAnyStreamForUser(t.id);
                     return {
-                        activity: A.default.findActivity(t.id, t => {
+                        activity: g.default.findActivity(t.id, t => {
                             let {
                                 type: l
                             } = t;
                             return e ? l === F.ActivityTypes.PLAYING : l !== F.ActivityTypes.CUSTOM_STATUS
                         }),
-                        customStatusActivity: A.default.findActivity(t.id, e => {
+                        customStatusActivity: g.default.findActivity(t.id, e => {
                             let {
                                 type: t
                             } = e;
                             return t === F.ActivityTypes.CUSTOM_STATUS
                         }),
-                        status: Q ? null : A.default.getStatus(t.id),
-                        isMobile: A.default.isMobileOnline(t.id),
+                        status: Q ? null : g.default.getStatus(t.id),
+                        isMobile: g.default.isMobileOnline(t.id),
                         isApplicationStreaming: e
                     }
                 }), [en, ea] = a.useState(!1), es = a.useMemo(() => null != l ? {
@@ -91,21 +91,21 @@
                 } : {}, [l, t.id]);
                 (0, f.useSubscribeGuildMembers)(es);
                 let ei = (0, O.default)(t.id, l),
-                    er = (0, U.useShouldShowUserPopoutCollectiblesUpsell)({
+                    er = (0, j.useShouldShowUserPopoutCollectiblesUpsell)({
                         popoutUser: t,
                         source: b.UserPopoutUpsellSource.USER_POPOUT,
                         guildId: l
                     }),
                     [eo, eu] = a.useState(!1);
                 (0, c.default)(() => eu(!0), er.shouldShow ? 250 : null);
-                let ed = (0, _.useGetOrFetchApplication)(null == q ? void 0 : q.application_id);
+                let ed = (0, S.useGetOrFetchApplication)(null == q ? void 0 : q.application_id);
                 return a.useEffect(() => {
                     null == B || B(null == H ? void 0 : H.current)
                 }, [H, B]), a.useEffect(() => {
                     if (!en)((null == q ? void 0 : q.application_id) == null || null != ed) && (null == l || (null == J ? void 0 : J.fullProfileLoadedTimestamp) != null) && (function() {
                         var e;
                         let n, a, i;
-                        null != q && (n = q.party, a = q.assets, i = null != q.application_id ? h.default.getApplication(q.application_id) : null);
+                        null != q && (n = q.party, a = q.assets, i = null != q.application_id ? _.default.getApplication(q.application_id) : null);
                         let r = ee;
                         ee === F.StatusTypes.ONLINE && (r = et ? F.AnalyticsUserStatusTypes.ONLINE_MOBILE : F.AnalyticsUserStatusTypes.ONLINE_DESKTOP);
                         let o = null != J ? {
@@ -159,7 +159,7 @@
                             children: (0, n.jsxs)(R.default, {
                                 user: t,
                                 guildId: l,
-                                profileType: j.UserProfileTypes.POPOUT,
+                                profileType: U.UserProfileTypes.POPOUT,
                                 className: er.shouldShow ? G.hasCollectiblesUpsell : void 0,
                                 showOutOfBoundaryComponents: eo,
                                 children: [(0, n.jsx)(D.default, {
