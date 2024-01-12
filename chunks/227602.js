@@ -42,8 +42,8 @@
                 },
                 g = {},
                 P = {},
-                b = 0,
-                G = !0,
+                G = 0,
+                b = !0,
                 m = {},
                 U = !1,
                 M = [y.GlobalKeybindActions.PUSH_TO_TALK, y.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK, y.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET];
@@ -54,7 +54,7 @@
                 } = A.default.getCurrentConfig({
                     location: "KeybindsStore"
                 }), t = s.find(P, e => R.action === e.action && e.enabled && e.shortcut.length > 0);
-                null == t && !__OVERLAY__ && !U && G && e && (K(R), U = !0)
+                null == t && !__OVERLAY__ && !U && b && e && (K(R), U = !0)
             }
 
             function w() {
@@ -82,7 +82,7 @@
             }
 
             function K(e) {
-                if (!G || __OVERLAY__) return;
+                if (!b || __OVERLAY__) return;
                 let {
                     shortcut: t,
                     action: n,
@@ -116,7 +116,7 @@
 
             function k(e) {
                 let t = {
-                    id: b.toString(),
+                    id: G.toString(),
                     enabled: !0,
                     action: y.GlobalKeybindActions.UNASSIGNED,
                     shortcut: [],
@@ -127,7 +127,7 @@
                 return P = {
                     ...P,
                     [t.id]: t
-                }, b += 1, t
+                }, G += 1, t
             }
 
             function W(e) {
@@ -322,22 +322,22 @@
                     let {
                         enable: t
                     } = e;
-                    G = t, t ? (O.default.enable(), s.forEach(P, K), Y()) : (O.default.disable(), s.forEach(P, e => V(e.id)), w())
+                    b = t, t ? (O.default.enable(), s.forEach(P, K), Y()) : (O.default.disable(), s.forEach(P, e => V(e.id)), w())
                 },
                 KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS: function(e) {
                     let {
                         keybinds: t
                     } = e;
-                    m = t, g = {}, b = 0;
+                    m = t, g = {}, G = 0;
                     let n = Object.values(P).filter(e => M.includes(e.action) && e.managed);
                     n.length !== M.length && X(), s.forEach(P, e => {
-                        b = Math.max(parseInt(e.id, 10), b) + 1;
+                        G = Math.max(parseInt(e.id, 10), G) + 1;
                         try {
                             K(e)
                         } catch (t) {
                             v.error("Failed to register keybind", e, t)
                         }
-                    }), G = !0, null == a && (a = A.default.subscribe({
+                    }), b = !0, null == a && (a = A.default.subscribe({
                         location: "KeybindsStore"
                     }, H))
                 }
