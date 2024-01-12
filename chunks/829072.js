@@ -28,8 +28,8 @@
                 O = n("282109"),
                 L = n("449008"),
                 D = n("319839"),
-                p = n("695838"),
-                R = n("843455");
+                R = n("695838"),
+                p = n("843455");
             let h = [d.default, u.default, E.default, r.default, _.default, c.default, C.default, S.default, I.default, f.default, N.default, O.default];
 
             function g() {
@@ -42,7 +42,7 @@
 
             function G() {
                 let e = u.default.getFavoriteChannels(),
-                    t = O.default.isGuildCollapsed(p.FAVORITES_RAW_GUILD_ID),
+                    t = O.default.isGuildCollapsed(R.FAVORITES_RAW_GUILD_ID),
                     n = N.default.getChannelId(),
                     i = C.default.getChannel(n),
                     o = N.default.getVoiceChannelId(),
@@ -66,7 +66,7 @@
                     } = a;
                     return l(n).map(n => {
                         var s;
-                        if (!n.isPrivate() && !I.default.can(R.Permissions.VIEW_CHANNEL, n)) return null;
+                        if (!n.isPrivate() && !I.default.can(p.Permissions.VIEW_CHANNEL, n)) return null;
                         let E = null != i && (i.id === n.id || o === n.id),
                             _ = null != i && i.isThread() && i.parent_id === n.id,
                             c = null !== (s = E || _ || !d ? r.default.getActiveJoinedRelevantThreadsForParent(n.guild_id, n.id) : r.default.getActiveJoinedUnreadThreadsForParent(n.guild_id, n.id)) && void 0 !== s ? s : {},
@@ -112,7 +112,7 @@
                         let {
                             id: n,
                             order: i
-                        } = e, o = u.default.getCategoryRecord(n), l = null !== (t = E[n]) && void 0 !== t ? t : [], a = O.default.isChannelMuted(p.FAVORITES_RAW_GUILD_ID, n), d = c.default.isCollapsed(n), s = null;
+                        } = e, o = u.default.getCategoryRecord(n), l = null !== (t = E[n]) && void 0 !== t ? t : [], a = O.default.isChannelMuted(R.FAVORITES_RAW_GUILD_ID, n), d = c.default.isCollapsed(n), s = null;
                         return {
                             isMuted: a,
                             isCollapsed: d,
@@ -134,7 +134,7 @@
                         getRow: () => null
                     },
                     b = {
-                        id: p.FAVORITES_RAW_GUILD_ID,
+                        id: R.FAVORITES_RAW_GUILD_ID,
                         hideMutedChannels: t,
                         favoritesSectionNumber: 1,
                         recentsSectionNumber: 2,

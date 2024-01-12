@@ -32,8 +32,8 @@
                 O = {},
                 b = {},
                 P = {},
-                V = {},
                 R = {},
+                V = {},
                 k = {},
                 M = {},
                 w = {},
@@ -53,7 +53,7 @@
                         let t = G(e);
                         if (0 === t.size()) return;
                         let n = ee(e) || K(t) ? I.ChannelModes.VIDEO : I.ChannelModes.VOICE;
-                        n === I.ChannelModes.VOICE ? (delete V[e], delete R[e]) : V[e] = n
+                        n === I.ChannelModes.VOICE ? (delete R[e], delete V[e]) : R[e] = n
                     }(n), function(e) {
                         let t = g.default.getId(),
                             n = G(e);
@@ -132,7 +132,7 @@
             }
 
             function W(e) {
-                delete O[e], delete b[e], delete V[e], delete R[e]
+                delete O[e], delete b[e], delete R[e], delete V[e]
             }
 
             function z() {
@@ -261,7 +261,7 @@
                 }
                 getMode(e) {
                     var t;
-                    return null !== (t = V[e]) && void 0 !== t ? t : ee(e) ? I.ChannelModes.VIDEO : I.ChannelModes.VOICE
+                    return null !== (t = R[e]) && void 0 !== t ? t : ee(e) ? I.ChannelModes.VIDEO : I.ChannelModes.VOICE
                 }
                 getLayout(e) {
                     var t, n;
@@ -269,7 +269,7 @@
                     if (__OVERLAY__) return I.ChannelLayouts.NORMAL;
                     let i = h.default.getChannel(e),
                         r = ee(e) || (null == i ? void 0 : i.isBroadcastChannel());
-                    return null !== (n = null === (t = R[e]) || void 0 === t ? void 0 : t[s]) && void 0 !== n ? n : r ? I.ChannelLayouts.NO_CHAT : I.ChannelLayouts.NORMAL
+                    return null !== (n = null === (t = V[e]) || void 0 === t ? void 0 : t[s]) && void 0 !== n ? n : r ? I.ChannelLayouts.NO_CHAT : I.ChannelLayouts.NORMAL
                 }
                 getChatOpen(e) {
                     var t;
@@ -277,7 +277,7 @@
                 }
                 isFullscreenInContext() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : I.AppContext.APP;
-                    return Object.values(R).some(t => t[e] === I.ChannelLayouts.FULL_SCREEN)
+                    return Object.values(V).some(t => t[e] === I.ChannelLayouts.FULL_SCREEN)
                 }
                 getStageStreamSize(e) {
                     return L[e]
@@ -328,11 +328,11 @@
                         let e = t.originChannelId;
                         if (null != e) {
                             var n, s;
-                            return R[t.id] = {
-                                [I.AppContext.APP]: null !== (s = null === (n = R[e]) || void 0 === n ? void 0 : n[I.AppContext.APP]) && void 0 !== s ? s : I.ChannelLayouts.NORMAL
+                            return V[t.id] = {
+                                [I.AppContext.APP]: null !== (s = null === (n = V[e]) || void 0 === n ? void 0 : n[I.AppContext.APP]) && void 0 !== s ? s : I.ChannelLayouts.NORMAL
                             }, !0
                         }
-                        t.isBroadcastChannel() && (R[t.id] = {
+                        t.isBroadcastChannel() && (V[t.id] = {
                             [I.AppContext.APP]: I.ChannelLayouts.NO_CHAT
                         })
                     }
@@ -374,8 +374,8 @@
                         layout: n,
                         appContext: s
                     } = e;
-                    R[t] = {
-                        ...R[t],
+                    V[t] = {
+                        ...V[t],
                         [s]: n
                     }
                 },

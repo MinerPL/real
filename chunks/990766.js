@@ -10,10 +10,10 @@
                     return P
                 },
                 toggleSelfStreamHidden: function() {
-                    return V
+                    return R
                 },
                 watchStreamAndTransitionToStream: function() {
-                    return R
+                    return V
                 },
                 stopStream: function() {
                     return k
@@ -117,7 +117,7 @@
                 }), !a && (null == t || !t.noFocus) && S.default.selectParticipant(e.channelId, r)
             }
 
-            function V(e, t) {
+            function R(e, t) {
                 o.default.dispatch({
                     type: "STREAM_UPDATE_SELF_HIDDEN",
                     channelId: e,
@@ -125,7 +125,7 @@
                 })
             }
 
-            function R(e, t) {
+            function V(e, t) {
                 let {
                     guildId: n,
                     channelId: s
@@ -249,7 +249,7 @@
                     i = h.default.getVoiceChannelId();
                 null != i && i !== e && I.default.disconnect(), C.default.addRecipient(e, n, void 0, () => {
                     T.default.call(e, !1, !1, null, () => {
-                        R(s)
+                        V(s)
                     })
                 })
             }

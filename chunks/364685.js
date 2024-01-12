@@ -102,7 +102,7 @@
                         let t = s.findIndex(t => t.id === e.id); - 1 !== t ? s[t] = e : s.push(e), T = s
                     }(t || n) && e.stickers.forEach(e => O(e))
                 },
-                V = () => {
+                R = () => {
                     I.forEach((e, t) => {
                         let n = c.default.getGuild(t);
                         null != n && e.forEach(e => b(e, n))
@@ -111,7 +111,7 @@
                     })
                 };
 
-            function R(e) {
+            function V(e) {
                 null != e.stickers && (e.stickers.forEach(t => O(t, !0, e)), A(e.id, e.stickers))
             }
             class k extends i.default.Store {
@@ -122,7 +122,7 @@
                     return 0 !== v
                 }
                 get stickerMetadata() {
-                    return N(), null == y && (y = new Map, V()), y
+                    return N(), null == y && (y = new Map, R()), y
                 }
                 get hasLoadedStickerPacks() {
                     return null != C && C + D > Date.now()
@@ -164,13 +164,13 @@
                     let {
                         guilds: t
                     } = e;
-                    y = null, p = new Map, I = new Map, t.forEach(R), v = t.every(e => null != e.stickers) ? 1 : 0
+                    y = null, p = new Map, I = new Map, t.forEach(V), v = t.every(e => null != e.stickers) ? 1 : 0
                 },
                 GUILD_CREATE: function(e) {
                     let {
                         guild: t
                     } = e;
-                    !l.default.isLurking(t.id) && (R(t), 1 === v && null == t.stickers && null != t.stickerUpdates && (v = 0))
+                    !l.default.isLurking(t.id) && (V(t), 1 === v && null == t.stickers && null != t.stickerUpdates && (v = 0))
                 },
                 GUILD_DELETE: function(e) {
                     var t;

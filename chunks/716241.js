@@ -4,10 +4,10 @@
                     return P
                 },
                 collectChannelAnalyticsMetadataFromId: function() {
-                    return V
+                    return R
                 },
                 collectChannelAnalyticsMetadata: function() {
-                    return R
+                    return V
                 },
                 collectVoiceAnalyticsMetadata: function() {
                     return k
@@ -87,13 +87,13 @@
                 }
             }
 
-            function V(e) {
+            function R(e) {
                 if (null == e) return null;
                 let t = u.default.getChannel(e);
-                return null == t ? null : R(t)
+                return null == t ? null : V(t)
             }
 
-            function R(e) {
+            function V(e) {
                 var t;
                 if (null == e) return null;
                 let n = !1,
@@ -147,7 +147,7 @@
                     ...null != l && null != f && (0, O.isStaticChannelRoute)(f) ? (r = 0, {
                         channel_static_route: f,
                         channel_hidden: !1
-                    }) : R(_)
+                    }) : V(_)
                 };
                 S.default.track(e, g, {
                     flush: o

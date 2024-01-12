@@ -28,7 +28,7 @@
                     return P
                 },
                 getCommandAttachmentDraftType: function() {
-                    return R
+                    return V
                 },
                 getCommandTriggerSection: function() {
                     return k
@@ -268,14 +268,14 @@
                 if (n.ownerId === s.userId || t.can(T.Permissions.ADMINISTRATOR, n)) return !0;
                 let o = n.id;
                 if (null != r) {
-                    let e = V(s, o, r);
+                    let e = R(s, o, r);
                     if ("boolean" == typeof e) return e
                 }
-                let d = V(s, o, i);
+                let d = R(s, o, i);
                 return ("boolean" != typeof d || !!d) && (null == a || !u.default.equals(a, b) && t.can(a, n))
             }
 
-            function V(e, t, n) {
+            function R(e, t, n) {
                 let s = n[(0, _.toPermissionKey)(e.userId, h.ApplicationCommandPermissionType.USER)];
                 if (null != s) return s.permission;
                 let i = !1;
@@ -288,7 +288,7 @@
                 return null != r ? r.permission : null
             }
 
-            function R(e) {
+            function V(e) {
                 switch (e) {
                     case h.CommandOrigin.CHAT:
                         return g.DraftType.SlashCommand;

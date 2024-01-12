@@ -1,16 +1,16 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return c
+                    return d
                 }
             }), n("222007"), n("70102");
             var i = n("884691"),
-                r = n("748820"),
-                l = n("157590");
-            let o = (0, r.v4)(),
+                l = n("748820"),
+                r = n("157590");
+            let a = (0, l.v4)(),
                 s = new Map,
-                u = new Map;
-            class a extends i.Component {
+                o = new Map;
+            class u extends i.Component {
                 componentDidMount() {
                     if (this.props.active) {
                         let e = this.getVisibilityObserver();
@@ -34,7 +34,7 @@
                 }
                 getVisibilityObserver() {
                     let e = this.getVisibilityObserverId(),
-                        t = u.get(e);
+                        t = o.get(e);
                     if (!t) throw Error("Visibility sensor with id ".concat(e, " not found."));
                     return t
                 }
@@ -48,20 +48,20 @@
                         rootMargin: n,
                         threshold: i
                     } = e;
-                    t ? s.has(t) ? this.elementId = s.get(t) || "" : s.set(t, (0, r.v4)()) : this.elementId = o;
-                    let a = this.getVisibilityObserverId();
-                    !u.has(a) && u.set(a, new l.default({
+                    t ? s.has(t) ? this.elementId = s.get(t) || "" : s.set(t, (0, l.v4)()) : this.elementId = a;
+                    let u = this.getVisibilityObserverId();
+                    !o.has(u) && o.set(u, new r.default({
                         root: t,
                         rootMargin: n,
                         threshold: i
                     }))
                 }
             }
-            a.defaultProps = {
+            u.defaultProps = {
                 active: !0,
                 children: i.createElement("span"),
                 root: null,
                 rootMargin: "0px 0px 0px 0px",
                 threshold: [0, Number.MIN_VALUE]
             };
-            var c = a
+            var d = u

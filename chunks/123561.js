@@ -25,11 +25,11 @@
                 O = n("18494"),
                 L = n("282109"),
                 D = n("449008"),
-                p = n("319839"),
-                R = n("397336");
+                R = n("319839"),
+                p = n("397336");
             let h = null,
                 g = null,
-                G = new p.default;
+                G = new R.default;
 
             function b() {
                 let e = O.default.getChannelId(),
@@ -322,7 +322,7 @@
                     let {
                         settings: n
                     } = e;
-                    if (n.type !== R.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
+                    if (n.type !== p.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
                     let i = null === (t = n.proto.guilds) || void 0 === t ? void 0 : t.guilds,
                         o = !1;
                     return null != i && Object.keys(i).forEach(e => {
@@ -347,5 +347,6 @@
                         of t) null != o && !i.has(o) && (G.nonPositionalChannelIdUpdate(o) && (n = !0), i.add(o)), null != e && !i.has(e) && (G.nonPositionalChannelIdUpdate(e) && (n = !0), i.add(e));
                     return n
                 },
-                WINDOW_FOCUS: y
+                WINDOW_FOCUS: y,
+                TRY_ACK: m
             })

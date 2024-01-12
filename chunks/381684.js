@@ -81,7 +81,7 @@
                 }
             }
 
-            function g() {
+            function A() {
                 if (null != p && (I(p) || (p = null, 0))) return !1;
                 ! function() {
                     T = null != T ? T : {};
@@ -97,9 +97,9 @@
                     p = null
                 }()
             }
-            class A extends i.default.PersistedStore {
+            class g extends i.default.PersistedStore {
                 initialize(e) {
-                    S = null != e ? e : _, this.syncWith([f.default], g)
+                    S = null != e ? e : _, this.syncWith([f.default], A)
                 }
                 getState() {
                     return S
@@ -111,13 +111,13 @@
                     return S.surveyOverride
                 }
             }
-            A.displayName = "SurveyStore", A.persistKey = "SurveyStore", A.migrations = [e => {
+            g.displayName = "SurveyStore", g.persistKey = "SurveyStore", g.migrations = [e => {
                 let t = {
                     ...e
                 };
                 return delete t.validSurveys, delete t.currentSurvey, delete t.iosIsPushNotificationClicked, delete t.iosIsInviteShown, delete t.iosFirstRunDate, t
             }];
-            var C = new A(r.default, {
+            var C = new g(r.default, {
                 CONNECTION_OPEN: function() {
                     var e;
                     if (!(null != S.lastFetched && Date.now() - (null !== (e = S.lastFetched) && void 0 !== e ? e : 0) < 864e5) || null != S.surveyOverride)(0, o.surveyFetch)(S.surveyOverride)

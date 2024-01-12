@@ -44,9 +44,9 @@
                 O = !1,
                 b = !1,
                 P = new Set,
-                V = !1;
+                R = !1;
 
-            function R(e) {
+            function V(e) {
                 let t = S[e];
                 return null == t && (t = S[e] = {
                     ...T
@@ -137,13 +137,13 @@
                 initialize(e) {
                     if (this.waitFor(l.default), this.syncWith([l.default], () => {
                             let e = l.default.getId();
-                            k = null != e ? R(e) : {
+                            k = null != e ? V(e) : {
                                 ...T
                             }
                         }), __OVERLAY__ && (m.isPlatformEmbedded && h.default.requireModule("discord_overlay2"), A.delete((0, v.getPID)())), null != e) {
                         S = e;
                         let t = l.default.getId();
-                        null != t && (null == (k = R(t)).textChatNotifications && (k.textChatNotifications = T.textChatNotifications), null == k.textWidgetOpacity && (k.textWidgetOpacity = T.textWidgetOpacity))
+                        null != t && (null == (k = V(t)).textChatNotifications && (k.textChatNotifications = T.textChatNotifications), null == k.textWidgetOpacity && (k.textWidgetOpacity = T.textWidgetOpacity))
                     }
                 }
                 getState() {
@@ -220,7 +220,7 @@
                     return k.textWidgetOpacity
                 }
                 isPreviewingInGame() {
-                    return V
+                    return R
                 }
             }
             F.displayName = "OverlayStore", F.persistKey = "OverlayStoreV2", F.migrations = [() => {
@@ -385,7 +385,7 @@
                         locked: t,
                         pid: n
                     } = e;
-                    t ? A.delete(n) : A.add(n), U(), L(), V = !1
+                    t ? A.delete(n) : A.add(n), U(), L(), R = !1
                 },
                 OVERLAY_ACTIVATE_REGION: function(e) {
                     let {
@@ -396,12 +396,12 @@
                 },
                 OVERLAY_DEACTIVATE_ALL_REGIONS: U,
                 OVERLAY_SET_PREVIEW_IN_GAME_MODE: function(e) {
-                    V = e.isPreviewingInGame
+                    R = e.isPreviewingInGame
                 },
                 WINDOW_RESIZED: function() {
                     if (__OVERLAY__) {
                         let e = E.default.windowSize();
-                        !(0, v.validResolution)(e) && (V = !1)
+                        !(0, v.validResolution)(e) && (R = !1)
                     }
                 }
             })

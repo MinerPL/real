@@ -43,10 +43,10 @@
                         return t > 0 ? n.slice(i).concat(n.slice(0, i), e) : (n.splice(i, 0, e), n.slice(i + 1).concat(n.slice(0, i + 1)))
                     }(N, e),
                     D = e > 0 ? 0 : L.length - 1,
-                    p = S(N, f),
-                    R = p.indexOf(O) + e;
+                    R = S(N, f),
+                    p = R.indexOf(O) + e;
                 for (; null != N && "" !== N;) {
-                    if (d = p[R], T(N))
+                    if (d = R[p], T(N))
                         for (; null != d && "" !== d;) {
                             if ("string" == typeof d) {
                                 if (_(N, d)) return (0, c.transitionToChannel)(N, d, !1, f)
@@ -59,10 +59,10 @@
                                     guildId: N
                                 })
                             });
-                            R += e, d = p[R]
+                            p += e, d = R[p]
                         }
                     if (D += e, null == (N = L[D]) || "" === N) break;
-                    p = S(N, f), R = e < 0 ? p.length - 1 : 0
+                    R = S(N, f), p = e < 0 ? R.length - 1 : 0
                 }
                 A.ComponentDispatch.dispatch(C.ComponentActions.SHAKE_APP, {
                     duration: 200,

@@ -1,47 +1,47 @@
             "use strict";
             n.r(t), n.d(t, {
                 ConfettiCannonContext: function() {
-                    return c
+                    return d
                 },
                 ConfettiCannonContextProvider: function() {
-                    return d
+                    return c
                 }
             });
             var i = n("37983"),
-                r = n("884691"),
-                l = n("516555"),
-                o = n("65597"),
+                l = n("884691"),
+                r = n("516555"),
+                a = n("65597"),
                 s = n("206230"),
-                u = n("49111");
-            let a = {
+                o = n("49111");
+            let u = {
                     confettiCanvas: null,
                     cannon: null,
                     createConfetti: () => void 0,
                     createConfettiAt: () => void 0,
                     createMultipleConfetti: () => [],
                     createMultipleConfettiAt: () => [],
-                    addClickListener: () => u.NOOP,
-                    removeClickListener: u.NOOP
+                    addClickListener: () => o.NOOP,
+                    removeClickListener: o.NOOP
                 },
-                c = r.createContext(a);
+                d = l.createContext(u);
 
-            function d(e) {
+            function c(e) {
                 let {
                     children: t,
                     confettiCanvas: n,
-                    spriteCanvas: u,
-                    baseConfig: d,
+                    spriteCanvas: o,
+                    baseConfig: c,
                     addClickListener: f,
-                    removeClickListener: E
-                } = e, p = (0, l.useConfettiCannon)(n, u), _ = (0, o.default)([s.default], () => s.default.useReducedMotion), h = r.useMemo(() => _ ? a : {
+                    removeClickListener: h
+                } = e, E = (0, r.useConfettiCannon)(n, o), _ = (0, a.default)([s.default], () => s.default.useReducedMotion), p = l.useMemo(() => _ ? u : {
                     confettiCanvas: n,
-                    cannon: p,
-                    createConfetti: (e, t) => p.createConfetti({
-                        ...d,
+                    cannon: E,
+                    createConfetti: (e, t) => E.createConfetti({
+                        ...c,
                         ...e
                     }, t),
-                    createConfettiAt: (e, t, n, i) => p.createConfetti({
-                        ...d,
+                    createConfettiAt: (e, t, n, i) => E.createConfetti({
+                        ...c,
                         position: {
                             type: "static",
                             value: {
@@ -54,16 +54,16 @@
                     createMultipleConfetti: function(e) {
                         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 20,
                             n = arguments.length > 2 ? arguments[2] : void 0;
-                        return p.createMultipleConfetti({
-                            ...d,
+                        return E.createMultipleConfetti({
+                            ...c,
                             ...e
                         }, t, n)
                     },
                     createMultipleConfettiAt: function(e, t, n) {
                         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 20,
-                            r = arguments.length > 4 ? arguments[4] : void 0;
-                        return p.createMultipleConfetti({
-                            ...d,
+                            l = arguments.length > 4 ? arguments[4] : void 0;
+                        return E.createMultipleConfetti({
+                            ...c,
                             position: {
                                 type: "static",
                                 value: {
@@ -72,13 +72,13 @@
                                 }
                             },
                             ...n
-                        }, i, r)
+                        }, i, l)
                     },
                     addClickListener: f,
-                    removeClickListener: E
-                }, [f, d, p, n, _, E]);
-                return (0, i.jsx)(c.Provider, {
-                    value: h,
+                    removeClickListener: h
+                }, [f, c, E, n, _, h]);
+                return (0, i.jsx)(d.Provider, {
+                    value: p,
                     children: t
                 })
             }

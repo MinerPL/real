@@ -23,8 +23,8 @@
                 N = n("520899"),
                 I = n("988864"),
                 m = n("960808"),
-                g = n("45835"),
-                A = n("699473"),
+                A = n("45835"),
+                g = n("699473"),
                 C = n("393414"),
                 R = n("845579"),
                 M = n("42203"),
@@ -36,8 +36,8 @@
                 x = n("672571"),
                 P = n("805614"),
                 U = n("64318"),
-                b = n("49111"),
-                F = n("782340"),
+                F = n("49111"),
+                b = n("782340"),
                 j = n("533370"),
                 G = n("228146");
             let k = {
@@ -66,15 +66,15 @@
                         className: j.headerText,
                         children: [(0, l.jsx)(E.Heading, {
                             variant: "heading-lg/bold",
-                            children: i ? F.default.Messages.MESSAGE_REMINDERS_HEADER_ALL : F.default.Messages.MESSAGE_REMINDERS_HEADER_OVERDUE
+                            children: i ? b.default.Messages.MESSAGE_REMINDERS_HEADER_ALL : b.default.Messages.MESSAGE_REMINDERS_HEADER_OVERDUE
                         }), (0, l.jsx)(E.Anchor, {
                             onClick: () => r(!i),
                             children: (0, l.jsx)(E.Text, {
                                 variant: "text-sm/normal",
                                 color: "text-link",
-                                children: i ? F.default.Messages.MESSAGE_REMINDERS_HEADER_SHOW_OVERDUE.format({
+                                children: i ? b.default.Messages.MESSAGE_REMINDERS_HEADER_SHOW_OVERDUE.format({
                                     count: o.length
-                                }) : F.default.Messages.MESSAGE_REMINDERS_HEADER_SHOW_ALL.format({
+                                }) : b.default.Messages.MESSAGE_REMINDERS_HEADER_SHOW_ALL.format({
                                     count: s.length
                                 })
                             })
@@ -100,16 +100,16 @@
                     {
                         message: f,
                         channel: I
-                    } = (0, g.getSavedMessageAndChannel)(s),
+                    } = (0, A.getSavedMessageAndChannel)(s),
                     m = M.default.getChannel(I.id),
                     y = (0, T.default)(m, !0),
                     P = null != y ? y : I.name,
                     U = (0, c.useStateFromStores)([O.default], () => O.default.getGuild(null == I ? void 0 : I.guild_id)),
                     w = null != I ? (0, S.getChannelIconURL)(I) : null,
                     B = null;
-                return null != s.dueAt && (s.dueAt > new Date ? (t = "text-muted", B = F.default.Messages.MESSAGE_REMINDERS_DUE_IN.format({
+                return null != s.dueAt && (s.dueAt > new Date ? (t = "text-muted", B = b.default.Messages.MESSAGE_REMINDERS_DUE_IN.format({
                     duration: d.duration(s.dueAt.getTime() - Date.now(), "millisecond").humanize()
-                })) : (t = "text-danger", B = F.default.Messages.MESSAGE_REMINDERS_OVERDUE.format({
+                })) : (t = "text-danger", B = b.default.Messages.MESSAGE_REMINDERS_OVERDUE.format({
                     duration: d.duration(Date.now() - s.dueAt.getTime(), "millisecond").humanize()
                 }))), (0, l.jsxs)("div", {
                     className: G.container,
@@ -153,7 +153,7 @@
                         }), (0, l.jsxs)("div", {
                             className: j.reminderActions,
                             children: [(0, l.jsx)(E.TooltipContainer, {
-                                text: F.default.Messages.MESSAGE_REMINDERS_SNOOZE,
+                                text: b.default.Messages.MESSAGE_REMINDERS_SNOOZE,
                                 children: (0, l.jsx)(E.Clickable, {
                                     onClick: e => (0, h.openContextMenuLazy)(e, async () => {
                                         let {
@@ -179,7 +179,7 @@
                         className: i(G.messageContainer, j.unloadedMessage, {
                             [j.disabledMessage]: r
                         }),
-                        children: [(0, l.jsx)(A.default, {
+                        children: [(0, l.jsx)(g.default, {
                             message: f,
                             channel: I,
                             className: G.message,
@@ -210,14 +210,14 @@
                                 })
                             }) : null, (0, l.jsx)(E.Button, {
                                 onClick: () => {
-                                    (0, C.transitionTo)(b.Routes.CHANNEL(null == I ? void 0 : I.getGuildId(), s.channelId, s.messageId))
+                                    (0, C.transitionTo)(F.Routes.CHANNEL(null == I ? void 0 : I.getGuildId(), s.channelId, s.messageId))
                                 },
                                 size: E.Button.Sizes.MIN,
                                 color: E.Button.Colors.TRANSPARENT,
                                 className: j.loadButton,
                                 children: (0, l.jsx)(E.Text, {
                                     variant: "text-xs/normal",
-                                    children: F.default.Messages.JUMP
+                                    children: b.default.Messages.JUMP
                                 })
                             })]
                         })]
@@ -229,7 +229,7 @@
                 let e = (0, c.useStateFromStores)([N.default], () => N.default.getMessageReminders().length > 0);
                 return e ? null : (0, l.jsx)(P.default, {
                     Icon: y.default,
-                    header: F.default.Messages.MESSAGE_REMINDERS_EMPTY,
-                    tip: F.default.Messages.MESSAGE_REMINDERS_EMPTY_TIP
+                    header: b.default.Messages.MESSAGE_REMINDERS_EMPTY,
+                    tip: b.default.Messages.MESSAGE_REMINDERS_EMPTY_TIP
                 })
             }

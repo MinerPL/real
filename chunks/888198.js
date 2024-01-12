@@ -32,9 +32,9 @@
             let O = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
                 b = /^$|\n *$/,
                 P = /^ *>>> ?/,
-                V = /^ *> ?/gm;
+                R = /^ *> ?/gm;
 
-            function R(e) {
+            function V(e) {
                 let t = (0, E.punycodeLink)(e[1]);
                 if (null == t) return {
                     type: "text",
@@ -83,7 +83,7 @@
                         parse(e, t, n) {
                             let s = e[0],
                                 i = !!P.exec(s),
-                                r = s.replace(i ? P : V, ""),
+                                r = s.replace(i ? P : R, ""),
                                 a = n.inQuote || !1,
                                 o = n.inline || !1;
                             n.inQuote = !0, !i && (n.inline = !0);
@@ -100,7 +100,7 @@
                     link: E.default,
                     autolink: {
                         ...a.defaultRules.autolink,
-                        parse: R
+                        parse: V
                     },
                     url: {
                         ...a.defaultRules.url,
@@ -123,7 +123,7 @@
                             }
                             return n
                         },
-                        parse: R
+                        parse: V
                     },
                     strong: a.defaultRules.strong,
                     em: a.defaultRules.em,

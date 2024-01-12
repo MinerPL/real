@@ -41,8 +41,8 @@
                 O = new Map,
                 b = new Map,
                 P = new Map;
-            let V = h.ActivityPanelModes.ACTION_BAR,
-                R = h.FocusedActivityLayouts.NO_CHAT;
+            let R = h.ActivityPanelModes.ACTION_BAR,
+                V = h.FocusedActivityLayouts.NO_CHAT;
 
             function k(e) {
                 return null != e ? e : "0"
@@ -209,10 +209,10 @@
                     return s
                 }
                 getActivityPanelMode() {
-                    return V
+                    return R
                 }
                 getFocusedLayout() {
-                    return R
+                    return V
                 }
                 getCurrentEmbeddedActivity() {
                     var e;
@@ -320,7 +320,7 @@
                         url: a,
                         userIds: new Set([v.id]),
                         connectedSince: Date.now()
-                    }), V = s !== l.default.getChannelId() || (0, m.default)(i) ? h.ActivityPanelModes.PIP : h.ActivityPanelModes.PANEL, P.set(U(i, r), Date.now())
+                    }), R = s !== l.default.getChannelId() || (0, m.default)(i) ? h.ActivityPanelModes.PIP : h.ActivityPanelModes.PANEL, P.set(U(i, r), Date.now())
                 },
                 EMBEDDED_ACTIVITY_CLOSE: function(e) {
                     let {
@@ -452,19 +452,19 @@
                     let {
                         activityPanelMode: t
                     } = e;
-                    V = t
+                    R = t
                 },
                 EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT: function(e) {
                     let {
                         focusedActivityLayout: t
                     } = e;
-                    R = t
+                    V = t
                 },
                 CHANNEL_SELECT: function(e) {
                     let {
                         channelId: t
                     } = e;
-                    s !== t && V === h.ActivityPanelModes.PANEL && (V = h.ActivityPanelModes.PIP)
+                    s !== t && R === h.ActivityPanelModes.PANEL && (R = h.ActivityPanelModes.PIP)
                 }
             });
             var x = F

@@ -25,24 +25,24 @@
                 O = n("18494"),
                 L = n("162771"),
                 D = n("144747"),
-                p = n("471671"),
-                R = n("659500"),
+                R = n("471671"),
+                p = n("659500"),
                 h = n("49111");
             let g = {
                 binds: ["esc", "shift+pagedown"],
                 comboKeysBindGlobal: !0,
                 action(e) {
-                    if (p.default.isElementFullScreen()) return !1;
-                    if (R.ComponentDispatch.hasSubscribers(h.ComponentActions.CALL_DECLINE)) return R.ComponentDispatch.dispatch(h.ComponentActions.CALL_DECLINE), !1;
+                    if (R.default.isElementFullScreen()) return !1;
+                    if (p.ComponentDispatch.hasSubscribers(h.ComponentActions.CALL_DECLINE)) return p.ComponentDispatch.dispatch(h.ComponentActions.CALL_DECLINE), !1;
                     if (D.default.close()) return !1;
-                    if (R.ComponentDispatch.hasSubscribers(h.ComponentActions.MEDIA_MODAL_CLOSE)) return R.ComponentDispatch.dispatch(h.ComponentActions.MEDIA_MODAL_CLOSE), !1;
+                    if (p.ComponentDispatch.hasSubscribers(h.ComponentActions.MEDIA_MODAL_CLOSE)) return p.ComponentDispatch.dispatch(h.ComponentActions.MEDIA_MODAL_CLOSE), !1;
                     if ((0, i.isElement)(e.target)) {
                         let t = (0, d.getWindowDispatchForElement)(e.target);
                         if (null == t ? void 0 : t.hasSubscribers(h.ComponentActions.POPOUT_CLOSE)) return t.dispatch(h.ComponentActions.POPOUT_CLOSE), !1
                     }
-                    if (R.ComponentDispatch.hasSubscribers(h.ComponentActions.CLOSE_GIF_PICKER)) return R.ComponentDispatch.dispatch(h.ComponentActions.CLOSE_GIF_PICKER), !1;
-                    if (R.ComponentDispatch.hasSubscribers(h.ComponentActions.MODAL_CLOSE)) return R.ComponentDispatch.dispatch(h.ComponentActions.MODAL_CLOSE), !1;
-                    if (R.ComponentDispatch.hasSubscribers(h.ComponentActions.SEARCH_RESULTS_CLOSE)) return R.ComponentDispatch.dispatch(h.ComponentActions.SEARCH_RESULTS_CLOSE), !1;
+                    if (p.ComponentDispatch.hasSubscribers(h.ComponentActions.CLOSE_GIF_PICKER)) return p.ComponentDispatch.dispatch(h.ComponentActions.CLOSE_GIF_PICKER), !1;
+                    if (p.ComponentDispatch.hasSubscribers(h.ComponentActions.MODAL_CLOSE)) return p.ComponentDispatch.dispatch(h.ComponentActions.MODAL_CLOSE), !1;
+                    if (p.ComponentDispatch.hasSubscribers(h.ComponentActions.SEARCH_RESULTS_CLOSE)) return p.ComponentDispatch.dispatch(h.ComponentActions.SEARCH_RESULTS_CLOSE), !1;
                     let t = L.default.getGuildId(),
                         n = O.default.getChannelId(t),
                         l = T.default.getChannel(n),
@@ -53,7 +53,7 @@
                     if (null != n && (null == s ? void 0 : s.type) === _.SidebarType.CREATE_THREAD) return r.default.closeChannelSidebar(n), !1;
                     let A = b(n),
                         c = b(E);
-                    return null == n || A || c || null == s ? null != n && !A && u.default.getChatOpen(n) ? (o.default.updateChatOpen(n, !1), !1) : (R.ComponentDispatch.dispatch(h.ComponentActions.SCROLLTO_PRESENT), !1) : (r.default.closeChannelSidebar(n), !1)
+                    return null == n || A || c || null == s ? null != n && !A && u.default.getChatOpen(n) ? (o.default.updateChatOpen(n, !1), !1) : (p.ComponentDispatch.dispatch(h.ComponentActions.SCROLLTO_PRESENT), !1) : (r.default.closeChannelSidebar(n), !1)
                 }
             };
 

@@ -33,7 +33,7 @@
                 O = n("509065"),
                 b = n("518916");
             let P = new l.default("ConnectionStore"),
-                V = new O.default(b.socket, (e, t) => {
+                R = new O.default(b.socket, (e, t) => {
                     var n;
                     e = null != e ? e : {
                         type: "CHANNEL_UPDATES",
@@ -48,7 +48,7 @@
                         });
                     return e.channels.push(null != r ? r : s), e
                 }, e => "CHANNEL_UPDATE" !== e),
-                R = new O.default(b.socket, (e, t) => ((e = null == e ? {
+                V = new O.default(b.socket, (e, t) => ((e = null == e ? {
                     type: "SOUNDBOARD_SOUNDS_RECEIVED",
                     updates: []
                 } : e).updates.push({
@@ -345,7 +345,7 @@
                         });
                         break;
                     case "CHANNEL_UPDATE":
-                        V.add(t);
+                        R.add(t);
                         break;
                     case "THREAD_CREATE":
                     case "THREAD_UPDATE":
@@ -416,7 +416,7 @@
                         });
                         break;
                     case "SOUNDBOARD_SOUNDS":
-                        R.add(t);
+                        V.add(t);
                         break;
                     case "CHANNEL_RECIPIENT_ADD":
                     case "CHANNEL_RECIPIENT_REMOVE":

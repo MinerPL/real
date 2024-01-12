@@ -30,11 +30,11 @@
                 b = m.initialState.lastSelectedGuildId,
                 P = !1;
 
-            function V(e) {
+            function R(e) {
                 null != e && 1 === g.default.compare(e, T) && (T = e)
             }
 
-            function R() {
+            function V() {
                 T = "0", C = 0, S = -1, I = -1, N = "0", m.clear(), D = 0, O.clear()
             }
             class k extends a.default.Store {
@@ -61,7 +61,7 @@
                     }), o.default.remove("GuildIdsRequiringDeletedIdsSync")
                 }
                 clear() {
-                    R()
+                    V()
                 }
                 getClientState() {
                     let e = y && (0, h.isCacheEnabled)() ? Object.fromEntries(u.default.getCommittedVersions()) : {};
@@ -98,7 +98,7 @@
                         userSettingsProto: l,
                         apiCodeVersion: f
                     } = e;
-                    for (let e of (C = d.version, S = u.version, I = null !== (n = null == l ? void 0 : null === (t = l.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : -1, D = f, P = !0, y = !0, o)) e.unableToSyncDeletes && O.add(e.id), e.unableToSyncDeletes && O.add(e.id), null === (s = e.channels) || void 0 === s || s.forEach(e => V(e.lastMessageId)), null === (r = e.channelUpdates) || void 0 === r || null === (i = r.writes) || void 0 === i || i.forEach(e => V(e.lastMessageId)), null === (a = e.channelTimestampUpdates) || void 0 === a || a.forEach(e => V(e.last_message_id))
+                    for (let e of (C = d.version, S = u.version, I = null !== (n = null == l ? void 0 : null === (t = l.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : -1, D = f, P = !0, y = !0, o)) e.unableToSyncDeletes && O.add(e.id), e.unableToSyncDeletes && O.add(e.id), null === (s = e.channels) || void 0 === s || s.forEach(e => R(e.lastMessageId)), null === (r = e.channelUpdates) || void 0 === r || null === (i = r.writes) || void 0 === i || i.forEach(e => R(e.lastMessageId)), null === (a = e.channelTimestampUpdates) || void 0 === a || a.forEach(e => R(e.last_message_id))
                 },
                 CONNECTION_OPEN_SUPPLEMENTAL: function() {
                     let e = _.default.getMutablePrivateChannels();
@@ -121,19 +121,19 @@
                         isPushNotification: i,
                         optimistic: r
                     } = e;
-                    !i && !r && (V(n), (null === (t = _.default.getChannel(s)) || void 0 === t ? void 0 : t.isPrivate()) && 1 === g.default.compare(n, N) && (N = n))
+                    !i && !r && (R(n), (null === (t = _.default.getChannel(s)) || void 0 === t ? void 0 : t.isPrivate()) && 1 === g.default.compare(n, N) && (N = n))
                 },
                 GUILD_CREATE: function(e) {
                     var t, n, s, i;
                     let {
                         guild: r
                     } = e;
-                    !r.unavailable && (r.unableToSyncDeletes && O.add(r.id), null === (t = r.channels) || void 0 === t || t.forEach(e => V(e.lastMessageId)), null === (s = r.channelUpdates) || void 0 === s || null === (n = s.writes) || void 0 === n || n.forEach(e => V(e.lastMessageId)), null === (i = r.channelTimestampUpdates) || void 0 === i || i.forEach(e => V(e.last_message_id)), r.unableToSyncDeletes && O.add(r.id))
+                    !r.unavailable && (r.unableToSyncDeletes && O.add(r.id), null === (t = r.channels) || void 0 === t || t.forEach(e => R(e.lastMessageId)), null === (s = r.channelUpdates) || void 0 === s || null === (n = s.writes) || void 0 === n || n.forEach(e => R(e.lastMessageId)), null === (i = r.channelTimestampUpdates) || void 0 === i || i.forEach(e => R(e.last_message_id)), r.unableToSyncDeletes && O.add(r.id))
                 },
-                CLEAR_GUILD_CACHE: R,
-                CLEAR_CACHES: R,
-                LOGOUT: R,
-                LOGIN: R,
+                CLEAR_GUILD_CACHE: V,
+                CLEAR_CACHES: V,
+                LOGOUT: V,
+                LOGIN: V,
                 MESSAGE_ACK: function(e) {
                     let {
                         version: t,
