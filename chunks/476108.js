@@ -6,28 +6,28 @@
             });
             var s = n("446674"),
                 i = n("95410"),
-                l = n("913144"),
-                r = n("49111");
-            let a = {
+                a = n("913144"),
+                l = n("49111");
+            let r = {
                     lastViewedPath: null,
                     lastViewedNonVoicePath: null
                 },
-                u = a,
+                u = r,
                 o = "LAST_VIEWED_PATH";
             class c extends s.default.PersistedStore {
                 initialize() {
-                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a;
-                    u = null != e ? e : a
+                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r;
+                    u = null != e ? e : r
                 }
                 get defaultRoute() {
-                    return r.Routes.ME
+                    return l.Routes.ME
                 }
                 get lastNonVoiceRoute() {
                     var e;
-                    return null !== (e = u.lastViewedNonVoicePath) && void 0 !== e ? e : r.Routes.ME
+                    return null !== (e = u.lastViewedNonVoicePath) && void 0 !== e ? e : l.Routes.ME
                 }
                 get fallbackRoute() {
-                    return r.Routes.ME
+                    return l.Routes.ME
                 }
                 getState() {
                     return u
@@ -39,7 +39,7 @@
                     lastViewedPath: e
                 }
             }];
-            var d = new c(l.default, {
+            var d = new c(a.default, {
                 SAVE_LAST_ROUTE: function(e) {
                     let {
                         path: t
