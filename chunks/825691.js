@@ -55,7 +55,7 @@
                     onToggleTemporary: N,
                     onSelectMaxAge: C,
                     onSelectMaxUses: S
-                } = e, x = (0, o.default)(n, 0 === c), w = (0, o.default)(n, !0), A = (0, f.default)(n), M = A.find(e => e.value === c), R = I.find(e => e.value === E), [y, L] = i.useState(!1), b = (0, o.useIsNewCommunity)(n, y);
+                } = e, x = (0, o.default)(n, 0 === c), w = (0, o.default)(n, !0), A = (0, f.default)(n), M = A.find(e => e.value === c), y = I.find(e => e.value === E), [R, L] = i.useState(!1), b = (0, o.useIsNewCommunity)(n, R);
                 return (0, l.jsx)("div", {
                     className: g.settingsContent,
                     children: (0, l.jsxs)("form", {
@@ -88,7 +88,7 @@
                                 title: h.default.Messages.MAX_NUMBER_OF_USES,
                                 className: a(p.marginTop20, p.marginBottom4),
                                 children: (0, l.jsx)(s.SingleSelect, {
-                                    value: null == R ? void 0 : R.value,
+                                    value: null == y ? void 0 : y.value,
                                     options: I,
                                     onChange: S
                                 })

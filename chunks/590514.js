@@ -32,8 +32,8 @@
                 N = n("377253"),
                 I = n("957255"),
                 m = n("600133"),
-                A = n("471671"),
-                g = n("822332"),
+                g = n("471671"),
+                A = n("822332"),
                 C = n("945330"),
                 R = n("599110"),
                 M = n("659500"),
@@ -160,7 +160,7 @@
                     scrollerClassName: N,
                     className: I,
                     listName: C
-                } = e, y = a.useRef(null), x = (0, h.default)(C, y), P = (0, d.useStateFromStores)([m.default], () => m.default.hasNotice()), U = (0, d.useStateFromStores)([A.default], () => A.default.windowSize());
+                } = e, y = a.useRef(null), x = (0, h.default)(C, y), P = (0, d.useStateFromStores)([m.default], () => m.default.hasNotice()), U = (0, d.useStateFromStores)([g.default], () => g.default.windowSize());
                 a.useEffect(() => {
                     R.default.track(O.AnalyticEvents.OPEN_POPOUT, {
                         type: t
@@ -218,7 +218,7 @@
                 let k = null == p ? void 0 : p(),
                     w = j && null != k ? (0, l.jsx)("div", {
                         className: v.footer,
-                        children: (0, l.jsx)(g.default, {
+                        children: (0, l.jsx)(A.default, {
                             style: {
                                 width: "100%",
                                 paddingTop: 10
@@ -278,8 +278,8 @@
                     renderHeader: T,
                     renderEmptyState: I,
                     renderMessage: m,
-                    getProTip: A,
-                    scrollerClassName: g,
+                    getProTip: g,
+                    scrollerClassName: A,
                     className: C,
                     onCloseMessage: R,
                     listName: M
@@ -316,7 +316,7 @@
                 })), [i, s]);
                 return (0, l.jsx)(b, {
                     className: C,
-                    scrollerClassName: g,
+                    scrollerClassName: A,
                     items: x,
                     loading: o,
                     analyticsName: t,
@@ -324,7 +324,7 @@
                     renderHeader: T,
                     hasMore: r,
                     loadMore: u,
-                    getProTip: A,
+                    getProTip: g,
                     renderItem: function(e) {
                         let {
                             message: t,

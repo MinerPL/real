@@ -51,7 +51,7 @@
                         }), S && !n && (0, l.jsx)(m, {
                             invite: t
                         }), (0, l.jsx)(o.Popout, {
-                            renderPopout: e => (0, l.jsx)(A, {
+                            renderPopout: e => (0, l.jsx)(g, {
                                 ...e,
                                 invite: t
                             }),
@@ -139,7 +139,7 @@
                 })
             }
 
-            function A(e) {
+            function g(e) {
                 let {
                     invite: t,
                     closePopout: n
