@@ -82,7 +82,7 @@
                         })]
                     })
                 },
-                x = e => {
+                R = e => {
                     var t;
                     let {
                         relationshipType: n,
@@ -183,7 +183,7 @@
                             return null
                     }
                 },
-                R = e => {
+                x = e => {
                     let {
                         channelId: t,
                         otherUserId: n
@@ -242,7 +242,7 @@
                         })
                     }), (0, s.jsxs)("div", {
                         className: L.mobileButtons,
-                        children: [(0, s.jsx)(R, {
+                        children: [(0, s.jsx)(x, {
                             channelId: n.id,
                             otherUserId: t
                         }), (0, s.jsx)(f.default, {
@@ -258,7 +258,7 @@
                         })
                     }), (0, s.jsxs)("div", {
                         className: L.mobileButtons,
-                        children: [(0, s.jsx)(x, {
+                        children: [(0, s.jsx)(R, {
                             relationshipType: d,
                             userId: t,
                             showingBanner: a
@@ -274,7 +274,7 @@
                         userId: t
                     }), (0, s.jsx)("div", {
                         className: L.divider
-                    }), (0, s.jsx)(x, {
+                    }), (0, s.jsx)(R, {
                         relationshipType: d,
                         userId: t,
                         showingBanner: a

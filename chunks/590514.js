@@ -7,10 +7,10 @@
                     return x
                 },
                 ItemsPopout: function() {
-                    return F
+                    return b
                 },
                 default: function() {
-                    return b
+                    return F
                 }
             }), n("222007"), n("424973");
             var l = n("37983"),
@@ -146,7 +146,7 @@
                 }
             })(P);
 
-            function F(e) {
+            function b(e) {
                 let {
                     analyticsName: t,
                     items: n,
@@ -183,20 +183,20 @@
                         M.ComponentDispatch.unsubscribe(O.ComponentActions.SCROLL_PAGE_DOWN, t), M.ComponentDispatch.unsubscribe(O.ComponentActions.SCROLL_PAGE_UP, e)
                     }
                 }, []);
-                let F = a.useCallback(() => {
+                let b = a.useCallback(() => {
                         var e;
                         let t = null === (e = y.current) || void 0 === e ? void 0 : e.getScrollerState();
                         null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && s && !r && (null == f || f())
                     }, [s, f, r]),
-                    b = [],
+                    F = [],
                     j = !0;
-                null == n ? b = [(0, l.jsx)("div", {
+                null == n ? F = [(0, l.jsx)("div", {
                     className: i(v.emptyPlaceholder, v.loadingPlaceholder),
                     children: (0, l.jsx)(c.Spinner, {})
-                }, "spinner")] : 0 === n.length ? b.push((0, l.jsx)(a.Fragment, {
+                }, "spinner")] : 0 === n.length ? F.push((0, l.jsx)(a.Fragment, {
                     children: _(T.default.theme)
-                }, "empty-state")) : (j = !1, b = [], o.each(n, e => {
-                    b.push(...S(e))
+                }, "empty-state")) : (j = !1, F = [], o.each(n, e => {
+                    F.push(...S(e))
                 }));
                 let G = null;
                 null != n && n.length > 0 && null != f && (G = r ? (0, l.jsx)("div", {
@@ -241,7 +241,7 @@
                         component: E(),
                         children: [(0, l.jsxs)(c.AdvancedScroller, {
                             className: i(v.messagesPopout, N),
-                            onScroll: H ? F : void 0,
+                            onScroll: H ? b : void 0,
                             ref: y,
                             children: [(0, l.jsx)(u.ListNavigatorProvider, {
                                 navigator: x,
@@ -254,7 +254,7 @@
                                         return (0, l.jsx)("div", {
                                             ref: t,
                                             ...n,
-                                            children: b
+                                            children: F
                                         })
                                     }
                                 })
@@ -264,7 +264,7 @@
                 })
             }
 
-            function b(e) {
+            function F(e) {
                 let {
                     analyticsName: t,
                     onFetch: n,
@@ -314,7 +314,7 @@
                     message: e,
                     channel: s
                 })), [i, s]);
-                return (0, l.jsx)(F, {
+                return (0, l.jsx)(b, {
                     className: C,
                     scrollerClassName: g,
                     items: x,

@@ -71,18 +71,18 @@
                 }, [v, P]);
                 a.useEffect(() => (h.ComponentDispatch.subscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, U), () => void h.ComponentDispatch.unsubscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, U)), [U]);
                 let {
-                    showReminders: F
+                    showReminders: b
                 } = d.default.useExperiment({
                     location: "RecentsPopout"
                 }, {
                     autoTrackExposure: !1
-                }), b = (0, c.useInDesktopNotificationCenterExperiment)(), {
+                }), F = (0, c.useInDesktopNotificationCenterExperiment)(), {
                     enabled: j
                 } = u.default.useExperiment({
                     location: "RecentsPopout"
                 });
                 a.useEffect(() => {
-                    !F && L === r.InboxTab.TODOS && v(r.InboxTab.MENTIONS)
+                    !b && L === r.InboxTab.TODOS && v(r.InboxTab.MENTIONS)
                 });
                 let G = a.useCallback(e => {
                     !e.shiftKey && x()
@@ -97,7 +97,7 @@
                     renderPopout: function() {
                         return (0, l.jsx)(o.Dialog, {
                             "aria-label": m.default.Messages.INBOX,
-                            children: L === r.InboxTab.FOR_YOU && b ? (0, l.jsx)(_.default, {
+                            children: L === r.InboxTab.FOR_YOU && F ? (0, l.jsx)(_.default, {
                                 setTab: v,
                                 badgeState: g,
                                 closePopout: x
@@ -110,7 +110,7 @@
                                 setTab: v,
                                 badgeState: g,
                                 closePopout: x
-                            }) : F && L === r.InboxTab.TODOS ? (0, l.jsx)(S.default, {
+                            }) : b && L === r.InboxTab.TODOS ? (0, l.jsx)(S.default, {
                                 setTab: v,
                                 onJump: G,
                                 closePopout: x

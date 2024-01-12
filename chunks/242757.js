@@ -4,10 +4,10 @@
                     return a
                 }
             });
-            var s = n("49111");
+            var l = n("49111");
 
             function a(e, t, n, a) {
-                let l = null != n ? n : t,
-                    i = null != l && e.can(s.Permissions.CREATE_INSTANT_INVITE, l);
+                let s = null != n ? n : t,
+                    i = null != s && e.can(l.Permissions.CREATE_INSTANT_INVITE, s);
                 return i || null != t && null != t.vanityURLCode || (null == a ? void 0 : a.invite_code) != null
             }

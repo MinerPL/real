@@ -4,8 +4,8 @@
                     return i.default
                 },
                 VisibilitySensor: function() {
-                    return r.default
+                    return l.default
                 }
             }), n("6268");
             var i = n("157590"),
-                r = n("235855")
+                l = n("235855")

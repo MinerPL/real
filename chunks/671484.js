@@ -1,21 +1,21 @@
             "use strict";
-            s.r(t), s.d(t, {
+            l.r(t), l.d(t, {
                 default: function() {
-                    return n
+                    return i
                 }
-            }), s("702976");
-            var n, r = s("866227"),
-                a = s.n(r),
-                l = s("666038"),
-                i = s("568734"),
-                o = s("797647"),
-                u = s("646718");
-            let d = Object.freeze({
+            }), l("702976");
+            var i, s = l("866227"),
+                n = l.n(s),
+                a = l("666038"),
+                r = l("568734"),
+                u = l("797647"),
+                d = l("646718");
+            let o = Object.freeze({
                 PAYMENT_SOURCE_REQUIRED: 1,
                 EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2,
                 NOT_SELF_REDEEMABLE: 4
             });
-            n = class e extends l.default {
+            i = class e extends a.default {
                 static createFromServer(t) {
                     return new e({
                         userId: null != t.user ? t.user.id : null,
@@ -25,10 +25,10 @@
                         uses: t.uses,
                         maxUses: t.max_uses,
                         storeListingId: null != t.store_listing ? t.store_listing.id : null,
-                        expiresAt: null != t.expires_at ? a(t.expires_at) : null,
+                        expiresAt: null != t.expires_at ? n(t.expires_at) : null,
                         redeemed: t.redeemed,
                         subscriptionPlanId: null != t.subscription_plan ? t.subscription_plan.id : t.subscription_plan_id,
-                        subscriptionPlan: null != t.subscription_plan ? o.default.createFromServer(t.subscription_plan) : null,
+                        subscriptionPlan: null != t.subscription_plan ? u.default.createFromServer(t.subscription_plan) : null,
                         revoked: !1,
                         entitlementBranches: null != t.entitlement_branches ? t.entitlement_branches : null,
                         flags: null != t.flags ? t.flags : 0,
@@ -51,7 +51,7 @@
                 }
                 isExpired() {
                     let e = this.expiresAt;
-                    return null != e && a().isAfter(e)
+                    return null != e && n().isAfter(e)
                 }
                 get hasMultipleCopies() {
                     return this.maxUses > 1
@@ -66,13 +66,13 @@
                     return null != this.subscriptionPlanId
                 }
                 get premiumSubscriptionType() {
-                    return this.isSubscription && u.PremiumSubscriptionSKUToPremiumType[this.skuId] || null
+                    return this.isSubscription && d.PremiumSubscriptionSKUToPremiumType[this.skuId] || null
                 }
                 get isSelfRedeemable() {
-                    return !(0, i.hasFlag)(this.flags, d.NOT_SELF_REDEEMABLE)
+                    return !(0, r.hasFlag)(this.flags, o.NOT_SELF_REDEEMABLE)
                 }
                 get isExistingPremiumSubscriptionDisallowed() {
-                    return (0, i.hasFlag)(this.flags, d.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED)
+                    return (0, r.hasFlag)(this.flags, o.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED)
                 }
                 get analyticsData() {
                     return {

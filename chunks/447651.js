@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return v
+                    return h
                 }
             }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660");
             var a = n("37983");
@@ -20,33 +20,33 @@
             let m = "https://media.discordapp.net",
                 g = /^.*\.discordapp\.net$/,
                 I = "https://cdn.discordapp.com",
-                S = "".concat(m, "/stickers"),
-                p = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp"]),
-                _ = new Set(["jpg", "jpeg", "png"]),
-                A = e => {
+                p = "".concat(m, "/stickers"),
+                S = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp"]),
+                A = new Set(["jpg", "jpeg", "png"]),
+                v = e => {
                     var t;
                     return null === (t = new URL(e).pathname.split(".").pop()) || void 0 === t ? void 0 : t.toLowerCase()
                 };
 
-            function h(e, t) {
+            function _(e, t) {
                 l.default.show({
                     title: M.default.Messages.ERROR,
                     body: e
                 }), o.default.captureException(t)
             }
 
-            function v(e, t, n) {
+            function h(e, t, n) {
                 let l = (0, u.default)(null == t ? void 0 : t.getChannelId());
                 if (l || (null == n ? void 0 : n.shouldHideMediaOptions) === !0 || !d.isPlatformEmbedded || null == e || ! function(e) {
                         let t = new URL(e),
-                            n = A(e);
-                        return (g.test(t.hostname) || t.origin === I) && !e.startsWith(S) && !(0, s.isRoleIconAssetUrl)(e) && null != n && p.has(n)
+                            n = v(e);
+                        return (g.test(t.hostname) || t.origin === I) && !e.startsWith(p) && !(0, s.isRoleIconAssetUrl)(e) && null != n && S.has(n)
                     }(e)) return null;
                 let o = function(e) {
                         let t = new URL(e);
                         return t.origin === I ? e : t.origin === m ? I + t.pathname : (t.searchParams.delete("width"), t.searchParams.delete("height"), t.searchParams.set("quality", "lossless"), t.toString())
                     }(e),
-                    v = async () => {
+                    h = async () => {
                         try {
                             await c.default.saveImage(o), r.default.track(E.AnalyticEvents.CONTEXT_MENU_IMAGE_SAVED, {
                                 ...(0, f.getNativeContextMenuChannelAnalytics)()
@@ -54,7 +54,7 @@
                         } catch (e) {
                             r.default.track(E.AnalyticEvents.CONTEXT_MENU_IMAGE_SAVE_FAILED, {
                                 ...(0, f.getNativeContextMenuChannelAnalytics)()
-                            }), h(M.default.Messages.ERROR_SAVING_IMAGE, e)
+                            }), _(M.default.Messages.ERROR_SAVING_IMAGE, e)
                         }
                     }, T = async () => {
                         try {
@@ -62,14 +62,14 @@
                                 ...(0, f.getNativeContextMenuChannelAnalytics)()
                             })
                         } catch (e) {
-                            h(M.default.Messages.ERROR_COPYING_IMAGE, e), r.default.track(E.AnalyticEvents.CONTEXT_MENU_IMAGE_COPY_FAILED, {
+                            _(M.default.Messages.ERROR_COPYING_IMAGE, e), r.default.track(E.AnalyticEvents.CONTEXT_MENU_IMAGE_COPY_FAILED, {
                                 ...(0, f.getNativeContextMenuChannelAnalytics)()
                             })
                         }
                     };
                 return [c.default.canCopyImage() && function(e) {
-                    let t = A(e);
-                    return null != t && _.has(t)
+                    let t = v(e);
+                    return null != t && A.has(t)
                 }(e) ? (0, a.jsx)(i.MenuItem, {
                     id: "copy-image",
                     label: M.default.Messages.COPY_IMAGE_MENU_ITEM,
@@ -77,6 +77,6 @@
                 }, "copy-image") : null, (0, a.jsx)(i.MenuItem, {
                     id: "save-image",
                     label: M.default.Messages.SAVE_IMAGE_MENU_ITEM,
-                    action: v
+                    action: h
                 }, "save-image")]
             }
