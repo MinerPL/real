@@ -6,9 +6,9 @@
             });
             var s = n("37983"),
                 i = n("884691"),
-                l = n("414456"),
-                r = n.n(l),
-                a = n("546671"),
+                a = n("414456"),
+                l = n.n(a),
+                r = n("546671"),
                 u = n("341417");
             let o = {
                     UP: "up",
@@ -28,8 +28,8 @@
                         direction: e,
                         className: t
                     } = this.props;
-                    return (0, s.jsx)(a.default, {
-                        className: r(u.arrow, t, {
+                    return (0, s.jsx)(r.default, {
+                        className: l(u.arrow, t, {
                             [c[e]]: !0
                         })
                     })

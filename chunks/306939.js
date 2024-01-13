@@ -1,38 +1,38 @@
             "use strict";
-            l.r(t), l.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
                     return E
                 }
             });
-            var n = l("37983");
-            l("884691");
-            var a = l("446674"),
-                s = l("77078"),
-                r = l("139321"),
-                i = l("597517"),
-                u = l("782340"),
-                d = l("8341"),
-                o = l("533662");
-            let c = () => (0, n.jsxs)(n.Fragment, {
-                children: [(0, n.jsx)(s.Text, {
+            var l = n("37983");
+            n("884691");
+            var a = n("446674"),
+                s = n("77078"),
+                i = n("139321"),
+                r = n("597517"),
+                u = n("782340"),
+                o = n("8341"),
+                d = n("533662");
+            let c = () => (0, l.jsxs)(l.Fragment, {
+                children: [(0, l.jsx)(s.Text, {
                     color: "header-primary",
                     variant: "text-xs/normal",
-                    className: d.inlineText,
+                    className: o.inlineText,
                     children: u.default.Messages.GUILD_EVENT_STAGE_UPSELL_HINT_1
-                }), (0, n.jsx)(s.Text, {
+                }), (0, l.jsx)(s.Text, {
                     color: "header-primary",
                     variant: "text-xs/normal",
-                    className: d.inlineText,
+                    className: o.inlineText,
                     children: u.default.Messages.GUILD_EVENT_STAGE_UPSELL_HINT_2
-                }), (0, n.jsx)(s.Text, {
+                }), (0, l.jsx)(s.Text, {
                     color: "header-primary",
                     variant: "text-xs/normal",
-                    className: d.inlineText,
+                    className: o.inlineText,
                     children: u.default.Messages.GUILD_EVENT_STAGE_UPSELL_HINT_3
-                }), (0, n.jsx)(s.Text, {
+                }), (0, l.jsx)(s.Text, {
                     color: "header-primary",
                     variant: "text-xs/normal",
-                    className: d.inlineText,
+                    className: o.inlineText,
                     children: u.default.Messages.GUILD_EVENT_STAGE_UPSELL_HINT_4
                 })]
             });
@@ -40,46 +40,46 @@
             function E(e) {
                 let {
                     onClick: t
-                } = e, l = (0, a.useStateFromStores)([r.HotspotStore], () => !r.HotspotStore.hasHotspot(r.HotspotLocations.STAGE_CHANNEL_UPSELL));
-                return l ? null : (0, n.jsxs)("div", {
-                    className: d.container,
-                    children: [(0, n.jsxs)("div", {
-                        className: d.content,
-                        children: [(0, n.jsxs)("div", {
-                            className: d.textContainer,
-                            children: [(0, n.jsx)(s.Heading, {
+                } = e, n = (0, a.useStateFromStores)([i.HotspotStore], () => !i.HotspotStore.hasHotspot(i.HotspotLocations.STAGE_CHANNEL_UPSELL));
+                return n ? null : (0, l.jsxs)("div", {
+                    className: o.container,
+                    children: [(0, l.jsxs)("div", {
+                        className: o.content,
+                        children: [(0, l.jsxs)("div", {
+                            className: o.textContainer,
+                            children: [(0, l.jsx)(s.Heading, {
                                 variant: "heading-md/semibold",
                                 children: u.default.Messages.GUILD_EVENT_STAGE_UPSELL_TITLE
-                            }), (0, n.jsx)(s.Text, {
+                            }), (0, l.jsx)(s.Text, {
                                 color: "header-secondary",
                                 variant: "text-xs/normal",
-                                className: d.descriptionText,
+                                className: o.descriptionText,
                                 children: u.default.Messages.GUILD_EVENT_STAGE_TOOLTIP_BODY
-                            }), (0, n.jsx)(s.Text, {
+                            }), (0, l.jsx)(s.Text, {
                                 color: "header-secondary",
                                 variant: "text-xs/normal",
                                 children: u.default.Messages.GUILD_EVENT_STAGE_UPSELL.format({
                                     suggestionsHook: c
                                 })
                             })]
-                        }), (0, n.jsx)("div", {
-                            className: d.image,
-                            children: (0, n.jsx)("img", {
-                                src: o,
+                        }), (0, l.jsx)("div", {
+                            className: o.image,
+                            children: (0, l.jsx)("img", {
+                                src: d,
                                 alt: u.default.Messages.GUILD_EVENT_STAGE_UPSELL_ALT_IMAGE
                             })
                         })]
-                    }), (0, n.jsxs)("div", {
-                        className: d.footer,
-                        children: [(0, n.jsx)(s.Button, {
+                    }), (0, l.jsxs)("div", {
+                        className: o.footer,
+                        children: [(0, l.jsx)(s.Button, {
                             onClick: t,
                             color: s.Button.Colors.PRIMARY,
                             size: s.Button.Sizes.SMALL,
-                            className: d.button,
+                            className: o.button,
                             children: u.default.Messages.CREATE_STAGE_CHANNEL
-                        }), (0, n.jsx)(s.Button, {
+                        }), (0, l.jsx)(s.Button, {
                             onClick: () => {
-                                i.hideHotspot(r.HotspotLocations.STAGE_CHANNEL_UPSELL)
+                                r.hideHotspot(i.HotspotLocations.STAGE_CHANNEL_UPSELL)
                             },
                             color: s.Button.Colors.TRANSPARENT,
                             size: s.Button.Sizes.SMALL,
