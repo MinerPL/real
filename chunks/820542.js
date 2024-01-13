@@ -1,43 +1,43 @@
             "use strict";
             n.r(t), n.d(t, {
                 categoryCollapse: function() {
-                    return a
+                    return r
                 },
                 categoryExpand: function() {
-                    return s
+                    return l
                 },
                 categoryCollapseAll: function() {
-                    return i
+                    return a
                 },
                 categoryExpandAll: function() {
-                    return r
+                    return s
                 }
             });
-            var l = n("913144");
+            var i = n("913144");
 
-            function a(e) {
-                l.default.dispatch({
+            function r(e) {
+                i.default.dispatch({
                     type: "CATEGORY_COLLAPSE",
                     id: e
                 })
             }
 
-            function s(e) {
-                l.default.dispatch({
+            function l(e) {
+                i.default.dispatch({
                     type: "CATEGORY_EXPAND",
                     id: e
                 })
             }
 
-            function i(e) {
-                l.default.dispatch({
+            function a(e) {
+                i.default.dispatch({
                     type: "CATEGORY_COLLAPSE_ALL",
                     guildId: e
                 })
             }
 
-            function r(e) {
-                l.default.dispatch({
+            function s(e) {
+                i.default.dispatch({
                     type: "CATEGORY_EXPAND_ALL",
                     guildId: e
                 })

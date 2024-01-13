@@ -1,13 +1,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 configureJoin: function() {
-                    return v
+                    return A
                 },
                 copyId: function() {
-                    return _
+                    return h
                 },
                 copyLink: function() {
-                    return h
+                    return v
                 },
                 deleteMessage: function() {
                     return T
@@ -22,10 +22,10 @@
                     return O
                 },
                 publishMessage: function() {
-                    return x
+                    return y
                 },
                 retrySendMessage: function() {
-                    return y
+                    return x
                 },
                 replyToMessage: function() {
                     return N
@@ -34,10 +34,10 @@
                     return b
                 },
                 goToThread: function() {
-                    return j
+                    return D
                 },
                 markMessageAsReminder: function() {
-                    return D
+                    return j
                 },
                 markMessageRemindersAsComplete: function() {
                     return G
@@ -59,28 +59,28 @@
                 m = n("306160"),
                 g = n("659500"),
                 I = n("613387"),
-                p = n("456936"),
-                S = n("409058"),
-                A = n("49111");
+                S = n("456936"),
+                p = n("409058"),
+                _ = n("49111");
 
-            function v(e) {
+            function A(e) {
                 let t = e.getGuildId();
-                null != t && u.default.open(t, A.GuildSettingsSections.OVERVIEW)
+                null != t && u.default.open(t, _.GuildSettingsSections.OVERVIEW)
             }
 
-            function _(e, t, n) {
+            function h(e, t, n) {
                 (0, m.copy)(n.shiftKey ? "".concat(t.channel_id, "-").concat(t.id) : t.id)
             }
 
-            function h(e, t) {
-                E.default.track(A.AnalyticEvents.MESSAGE_LINK_COPIED, {
+            function v(e, t) {
+                E.default.track(_.AnalyticEvents.MESSAGE_LINK_COPIED, {
                     message_id: t.id,
                     channel: t.channel_id
                 }), (0, m.copy)((0, M.getChannelPermalink)(e.guild_id, e.id, t.id))
             }
 
             function T(e, t, n) {
-                t.state === A.MessageStates.SEND_FAILED || n.shiftKey ? i.default.deleteMessage(e.id, t.id, t.state === A.MessageStates.SEND_FAILED) : l.default.confirmDelete(e, t)
+                t.state === _.MessageStates.SEND_FAILED || n.shiftKey ? i.default.deleteMessage(e.id, t.id, t.state === _.MessageStates.SEND_FAILED) : l.default.confirmDelete(e, t)
             }
 
             function C(e, t) {
@@ -88,7 +88,7 @@
             }
 
             function R(e, t) {
-                (0, p.default)(e.id, t.id)
+                (0, S.default)(e.id, t.id)
             }
 
             function O(e, t, n) {
@@ -99,12 +99,12 @@
                 n.shiftKey ? a.default.unpinMessage(e, t.id) : l.default.confirmUnpin(e, t)
             }
 
-            function x(e, t) {
+            function y(e, t) {
                 (0, s.default)(e.id, t.id)
             }
 
-            function y(e, t) {
-                (0, S.default)(e, t, void 0, I.default.getOptions(t.id))
+            function x(e, t) {
+                (0, p.default)(e, t, void 0, I.default.getOptions(t.id))
             }
 
             function N(e, t, n) {
@@ -115,19 +115,19 @@
                     message: t,
                     shouldMention: !n.shiftKey && !i,
                     showMentionToggle: !a && !i
-                }), g.ComponentDispatch.dispatchToLastSubscribed(A.ComponentActions.TEXTAREA_FOCUS)
+                }), g.ComponentDispatch.dispatchToLastSubscribed(_.ComponentActions.TEXTAREA_FOCUS)
             }
 
             function b(e, t) {
                 (0, o.openThreadSidebarForCreating)(e, t, "Message")
             }
 
-            function j(e, t) {
+            function D(e, t) {
                 let n = f.default.getChannel(t.id);
                 null != n && (0, o.openThreadSidebarForViewing)(n)
             }
 
-            function D(e, t) {
+            function j(e, t) {
                 (0, r.addMessageReminders)(t)
             }
 

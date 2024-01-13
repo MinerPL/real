@@ -37,7 +37,7 @@
                     N = (0, r.useStateFromStores)([p.default], () => p.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
                     L = null !== (t = E.default.useName(N)) && void 0 !== t ? t : _.default.Messages.WAVE_DEFAULT_RECIPIENT,
                     v = (0, r.useStateFromStores)([c.default], () => c.default.getStickerById(T)),
-                    R = a.useCallback(async () => {
+                    x = a.useCallback(async () => {
                         if (null == l || "" === l) try {
                             await u.default.sendGreetMessage(n.id, T), m.default.track(S.AnalyticEvents.DM_EMPTY_ACTION, {
                                 channel_id: n.id,
@@ -49,7 +49,7 @@
                             !e.ok && 429 === e.status && M(_.default.Messages.RATE_LIMITED)
                         }
                     }, [n.id, n.type, l]),
-                    x = _.default.Messages.WAVE_TO.format({
+                    R = _.default.Messages.WAVE_TO.format({
                         username: L
                     }),
                     y = null != l && "" !== l ? (0, s.jsx)(o.Text, {
@@ -63,14 +63,14 @@
                     children: [(0, s.jsxs)(o.Clickable, {
                         className: null != l && "" !== l ? A.compactButtonDisabled : A.compactButton,
                         "aria-label": _.default.Messages.SEND_WAVE,
-                        onClick: R,
+                        onClick: x,
                         children: [(0, s.jsx)(f.default, {
                             sticker: v,
                             size: 24
                         }), (0, s.jsx)(o.Text, {
                             className: A.text,
                             variant: "text-md/medium",
-                            children: x
+                            children: R
                         })]
                     }), y]
                 }) : (0, s.jsxs)("div", {
@@ -80,9 +80,9 @@
                         size: 160
                     }), (0, s.jsx)(o.Button, {
                         className: A.button,
-                        onClick: R,
+                        onClick: x,
                         disabled: !!l,
-                        children: x
+                        children: R
                     }), y]
                 })
             }
