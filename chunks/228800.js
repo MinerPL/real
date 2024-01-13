@@ -29,8 +29,8 @@
                 N = n("957255"),
                 L = n("101125"),
                 v = n("351825"),
-                x = n("738602"),
-                R = n("430025"),
+                R = n("738602"),
+                x = n("430025"),
                 y = n("659500"),
                 D = n("773336"),
                 O = n("412861"),
@@ -128,13 +128,13 @@
                     k = eE ? (0, s.jsx)(o.CirclePlusIcon, {
                         className: H.attachButtonIcon,
                         colorClass: H.attachButtonPlus
-                    }) : eA ? (0, s.jsx)(R.default, {
+                    }) : eA ? (0, s.jsx)(x.default, {
                         className: H.attachButtonIcon,
                         foreground: H.attachButtonPlay,
                         background: H.attachButtonPlus,
                         width: 24,
                         height: 24
-                    }) : eg > 0 ? (0, s.jsx)(x.default, {
+                    }) : eg > 0 ? (0, s.jsx)(R.default, {
                         className: H.attachButtonIcon,
                         foreground: H.attachButtonClip,
                         background: H.attachButtonPlus,

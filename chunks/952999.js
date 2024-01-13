@@ -32,8 +32,8 @@
                 N = n("773336"),
                 L = n("299039"),
                 v = n("172554"),
-                x = n("49111"),
-                R = n("188631"),
+                R = n("49111"),
+                x = n("188631"),
                 y = n("782340"),
                 D = n("508328");
 
@@ -77,7 +77,7 @@
             function j(e) {
                 let {
                     channel: t
-                } = e, l = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != l && L.default.extractTimestamp(l.id) < Date.now() - x.WELCOME_OLD_GUILD_AGE_THRESHOLD, A = (0, u.useStateFromStores)([g.default], () => (null == l ? void 0 : l.ownerId) === g.default.getId(), [l]), {
+                } = e, l = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != l && L.default.extractTimestamp(l.id) < Date.now() - R.WELCOME_OLD_GUILD_AGE_THRESHOLD, A = (0, u.useStateFromStores)([g.default], () => (null == l ? void 0 : l.ownerId) === g.default.getId(), [l]), {
                     canInvite: T,
                     canManageGuild: j,
                     canMessage: b
@@ -96,9 +96,9 @@
                     handleAddApplication: V
                 } = function(e) {
                     let t = a.useCallback(() => {
-                            h.default.trackWithMetadata(x.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
-                                setup_type: R.AnalyticsSetupTypes.CHANNEL_WELCOME,
-                                action: R.AnalyticsActions.INVITE
+                            h.default.trackWithMetadata(R.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
+                                setup_type: x.AnalyticsSetupTypes.CHANNEL_WELCOME,
+                                action: x.AnalyticsActions.INVITE
                             }), null != e && (0, c.openModalLazy)(async () => {
                                 let {
                                     default: t
@@ -106,48 +106,48 @@
                                 return n => (0, s.jsx)(t, {
                                     ...n,
                                     guild: e,
-                                    source: x.InstantInviteSources.CHANNEL_WELCOME,
+                                    source: R.InstantInviteSources.CHANNEL_WELCOME,
                                     analyticsLocation: {
-                                        section: x.AnalyticsSections.CHANNEL_WELCOME_CTA
+                                        section: R.AnalyticsSections.CHANNEL_WELCOME_CTA
                                     }
                                 })
                             })
                         }, [e]),
                         l = a.useCallback(() => {
-                            h.default.trackWithMetadata(x.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
-                                setup_type: R.AnalyticsSetupTypes.CHANNEL_WELCOME,
-                                action: R.AnalyticsActions.SEND_MESSAGE
-                            }), M.ComponentDispatch.dispatch(x.ComponentActions.TEXTAREA_FOCUS, {
+                            h.default.trackWithMetadata(R.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
+                                setup_type: x.AnalyticsSetupTypes.CHANNEL_WELCOME,
+                                action: x.AnalyticsActions.SEND_MESSAGE
+                            }), M.ComponentDispatch.dispatch(R.ComponentActions.TEXTAREA_FOCUS, {
                                 highlight: !0,
                                 channelId: ""
                             })
                         }, []),
                         i = a.useCallback(() => {
-                            h.default.trackWithMetadata(x.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
-                                setup_type: R.AnalyticsSetupTypes.CHANNEL_WELCOME,
-                                action: R.AnalyticsActions.PERSONALIZE_SERVER
-                            }), null != e && m.default.open(e.id, x.GuildSettingsSections.OVERVIEW, {
-                                section: x.AnalyticsSections.CHANNEL_WELCOME_CTA
+                            h.default.trackWithMetadata(R.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
+                                setup_type: x.AnalyticsSetupTypes.CHANNEL_WELCOME,
+                                action: x.AnalyticsActions.PERSONALIZE_SERVER
+                            }), null != e && m.default.open(e.id, R.GuildSettingsSections.OVERVIEW, {
+                                section: R.AnalyticsSections.CHANNEL_WELCOME_CTA
                             })
                         }, [e]),
                         r = a.useCallback(() => {
-                            h.default.trackWithMetadata(x.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
-                                setup_type: R.AnalyticsSetupTypes.CHANNEL_WELCOME,
-                                action: R.AnalyticsActions.DOWNLOAD
+                            h.default.trackWithMetadata(R.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
+                                setup_type: x.AnalyticsSetupTypes.CHANNEL_WELCOME,
+                                action: x.AnalyticsActions.DOWNLOAD
                             }), (0, c.openModalLazy)(async () => {
                                 let {
                                     default: e
                                 } = await n.el("649486").then(n.bind(n, "649486"));
                                 return t => (0, s.jsx)(e, {
-                                    source: x.AnalyticsSections.CHANNEL_WELCOME_CTA,
+                                    source: R.AnalyticsSections.CHANNEL_WELCOME_CTA,
                                     ...t
                                 })
                             })
                         }, []),
                         o = a.useCallback(() => {
-                            null != e && (h.default.trackWithMetadata(x.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
-                                setup_type: R.AnalyticsSetupTypes.CHANNEL_WELCOME,
-                                action: R.AnalyticsActions.ADD_APP
+                            null != e && (h.default.trackWithMetadata(R.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
+                                setup_type: x.AnalyticsSetupTypes.CHANNEL_WELCOME,
+                                action: x.AnalyticsActions.ADD_APP
                             }), (0, c.openModalLazy)(async () => {
                                 let {
                                     default: t
@@ -274,7 +274,7 @@
                 }, "addapp")));
                 let X = A ? y.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : y.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
                 f && (X = y.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
-                let J = "".concat(I.default.getArticleURL(x.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
+                let J = "".concat(I.default.getArticleURL(R.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
                 return (0, s.jsx)(v.default, {
                     channelId: t.id,
                     children: (0, s.jsx)("div", {

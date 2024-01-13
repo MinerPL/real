@@ -29,8 +29,8 @@
                 N = n("660478"),
                 L = n("18494"),
                 v = n("697218"),
-                x = n("410889"),
-                R = n("888400"),
+                R = n("410889"),
+                x = n("888400"),
                 y = n("299039"),
                 D = n("154864"),
                 O = n("383667"),
@@ -70,7 +70,7 @@
                         channel_id: n.id,
                         customRenderedContent: {
                             hasSpoilerEmbeds: !1,
-                            content: (0, s.jsx)(x.AttachmentUpload, {
+                            content: (0, s.jsx)(R.AttachmentUpload, {
                                 filename: t.name,
                                 progress: null != t.progress ? t.progress : 0,
                                 size: t.currentSize,
@@ -87,7 +87,7 @@
                 var t;
                 let n, a, l, {
                         channel: u,
-                        messages: x,
+                        messages: R,
                         unreadCount: P,
                         showNewMessagesBar: q,
                         messageDisplayCompact: X,
@@ -99,9 +99,9 @@
                         showingQuarantineBanner: en
                     } = e,
                     es = v.default.getCurrentUser(),
-                    ea = () => $.isInitialized() || x.ready,
+                    ea = () => $.isInitialized() || R.ready,
                     el = (0, b.useShowConvoStarterInDM)(u),
-                    ei = x.length > 0 && (null === (t = x.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(u)),
+                    ei = R.length > 0 && (null === (t = R.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(u)),
                     er = (0, d.useChannelSummariesExperiment)(u),
                     eo = (0, r.useStateFromStores)([_.default], () => _.default.shouldShowTopicsBar()),
                     eu = (0, g.useStrangerDangerWarning)(u.id, z.LOCATION_CONTEXT_WEB);
@@ -179,8 +179,8 @@
                             user: es,
                             isGroupStart: n
                         }, "upload-".concat(e.id)))
-                    }), x.hasMoreBefore && null == et) {
-                    x.length > 0 && eh.unshift((0, s.jsx)("div", {
+                    }), R.hasMoreBefore && null == et) {
+                    R.length > 0 && eh.unshift((0, s.jsx)("div", {
                         style: {
                             height: V.PLACEHOLDER_BUFFER,
                             flex: "0 0 auto"
@@ -194,10 +194,10 @@
                         ...ee
                     }, "has-more"))
                 }
-                if ((!x.hasMoreBefore || null != et) && eh.unshift((0, s.jsx)(h.default, {
+                if ((!R.hasMoreBefore || null != et) && eh.unshift((0, s.jsx)(h.default, {
                         channel: u,
                         showingBanner: en
-                    }, "empty-message")), x.hasMoreAfter && eh.push((0, s.jsx)(G.default, {
+                    }, "empty-message")), R.hasMoreAfter && eh.push((0, s.jsx)(G.default, {
                         compact: X,
                         ...ee
                     }, "has-more-after")), !en && el && ea() && eh.push((0, s.jsx)(B.default, {
@@ -206,7 +206,7 @@
                     let e, t;
                     let n = N.default.getOldestUnreadTimestamp(u.id),
                         l = 0 !== n ? n : y.default.extractTimestamp(u.id),
-                        r = (0, R.isSameDay)(i(), i(new Date(l)));
+                        r = (0, x.isSameDay)(i(), i(new Date(l)));
                     if (N.default.isEstimated(u.id) ? (e = r ? Z.default.Messages.NEW_MESSAGES_ESTIMATED : Z.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = Z.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = r ? Z.default.Messages.NEW_MESSAGES : Z.default.Messages.NEW_MESSAGES_WITH_DATE, t = Z.default.Messages.NEW_MESSAGES_SUMMARIES), er && (0, d.channelEligibleForSummaries)(u)) {
                         let n = N.default.ackMessageId(u.id),
                             i = (0, A.getUnreadTopicsCount)(u.id, N.default.getOldestUnreadMessageId(u.id));
@@ -300,8 +300,8 @@
                 if (null == a && (0, d.canSeeChannelSummaries)(u) && eo && (a = (0, s.jsx)(k.TopicsPill, {
                         channel: u,
                         scrollManager: $
-                    })), x.error) l = (0, s.jsx)(k.ErrorLoadingBar, {
-                    loading: x.loadingMore,
+                    })), R.error) l = (0, s.jsx)(k.ErrorLoadingBar, {
+                    loading: R.loadingMore,
                     onClick: () => {
                         var e;
                         return e = u.id, void o.default.fetchMessages({
@@ -311,11 +311,11 @@
                         })
                     }
                 });
-                else if (x.hasMoreAfter && ea()) {
+                else if (R.hasMoreAfter && ea()) {
                     let {
                         jumpReturnTargetId: e
-                    } = x;
-                    l = x.loadingMore && x.jumpedToPresent ? (0, s.jsx)(k.JumpToPresentBar, {}) : null != e ? (0, s.jsx)(k.JumpToPresentBar, {
+                    } = R;
+                    l = R.loadingMore && R.jumpedToPresent ? (0, s.jsx)(k.JumpToPresentBar, {}) : null != e ? (0, s.jsx)(k.JumpToPresentBar, {
                         type: k.JumpBarType.REPLY,
                         onClick: () => {
                             var t, n;

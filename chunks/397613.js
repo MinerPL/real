@@ -4,13 +4,13 @@
                     return l
                 }
             }), n("70102"), n("222007");
-            var i = n("884691");
-            let r = (0, i.createContext)(null),
-                s = {
+            var a = n("884691");
+            let r = (0, a.createContext)(null),
+                i = {
                     didCatch: !1,
                     error: null
                 };
-            class l extends i.Component {
+            class l extends a.Component {
                 static getDerivedStateFromError(e) {
                     return {
                         didCatch: !0,
@@ -22,34 +22,34 @@
                         error: e
                     } = this.state;
                     if (null !== e) {
-                        for (var t, n, i = arguments.length, r = Array(i), l = 0; l < i; l++) r[l] = arguments[l];
+                        for (var t, n, a = arguments.length, r = Array(a), l = 0; l < a; l++) r[l] = arguments[l];
                         null === (t = (n = this.props).onReset) || void 0 === t || t.call(n, {
                             args: r,
                             reason: "imperative-api"
-                        }), this.setState(s)
+                        }), this.setState(i)
                     }
                 }
                 componentDidCatch(e, t) {
-                    var n, i;
-                    null === (n = (i = this.props).onError) || void 0 === n || n.call(i, e, t)
+                    var n, a;
+                    null === (n = (a = this.props).onError) || void 0 === n || n.call(a, e, t)
                 }
                 componentDidUpdate(e, t) {
                     let {
                         didCatch: n
                     } = this.state, {
-                        resetKeys: i
+                        resetKeys: a
                     } = this.props;
                     if (n && null !== t.error && function() {
                             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                                 t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
                             return e.length !== t.length || e.some((e, n) => !Object.is(e, t[n]))
-                        }(e.resetKeys, i)) {
+                        }(e.resetKeys, a)) {
                         var r, l;
                         null === (r = (l = this.props).onReset) || void 0 === r || r.call(l, {
-                            next: i,
+                            next: a,
                             prev: e.resetKeys,
                             reason: "keys"
-                        }), this.setState(s)
+                        }), this.setState(i)
                     }
                 }
                 render() {
@@ -57,30 +57,30 @@
                         children: e,
                         fallbackRender: t,
                         FallbackComponent: n,
-                        fallback: s
+                        fallback: i
                     } = this.props, {
                         didCatch: l,
-                        error: a
+                        error: o
                     } = this.state, u = e;
                     if (l) {
                         let e = {
-                            error: a,
+                            error: o,
                             resetErrorBoundary: this.resetErrorBoundary
                         };
-                        if ((0, i.isValidElement)(s)) u = s;
+                        if ((0, a.isValidElement)(i)) u = i;
                         else if ("function" == typeof t) u = t(e);
-                        else if (n) u = (0, i.createElement)(n, e);
-                        else throw a
+                        else if (n) u = (0, a.createElement)(n, e);
+                        else throw o
                     }
-                    return (0, i.createElement)(r.Provider, {
+                    return (0, a.createElement)(r.Provider, {
                         value: {
                             didCatch: l,
-                            error: a,
+                            error: o,
                             resetErrorBoundary: this.resetErrorBoundary
                         }
                     }, u)
                 }
                 constructor(e) {
-                    super(e), this.resetErrorBoundary = this.resetErrorBoundary.bind(this), this.state = s
+                    super(e), this.resetErrorBoundary = this.resetErrorBoundary.bind(this), this.state = i
                 }
             }

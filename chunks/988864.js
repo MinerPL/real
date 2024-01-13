@@ -7,10 +7,10 @@
                     return r
                 },
                 savedMessageHasMetadata: function() {
-                    return l
+                    return u
                 },
                 MESSAGE_REMINDER_DURATION_ITEMS: function() {
-                    return u
+                    return l
                 }
             });
             var a = n("718517"),
@@ -47,10 +47,10 @@
                 }
             }
 
-            function l(e) {
+            function u(e) {
                 return null != e.authorSummary && e.authorSummary.length > 0 && null != e.channelSummary && e.channelSummary.length > 0 && null != e.messageSummary && e.messageSummary.length > 0 && null != e.authorId && e.authorId.length > 0
             }
-            let u = [{
+            let l = [{
                 duration: a.default.Millis.HOUR,
                 getLabel: () => s.default.Messages.MESSAGE_REMINDERS_IN_ONE_HOUR
             }, {

@@ -82,7 +82,7 @@
                     children: p,
                     content: m,
                     onUpdate: E
-                } = e, _ = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), L = a.useRef(!1), v = (0, u.useStateFromStores)([h.default], () => h.default.getMessage(d.id), [d.id]), x = a.useCallback(() => {
+                } = e, _ = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), L = a.useRef(!1), v = (0, u.useStateFromStores)([h.default], () => h.default.getMessage(d.id), [d.id]), R = a.useCallback(() => {
                     (null == v ? void 0 : v.isBlockedEdit) ? (0, f.removeAutomodMessageNotice)(d.id) : c.default.deleteMessage(d.channel_id, d.id, !0)
                 }, [d, v]);
                 return a.useLayoutEffect(() => {
@@ -109,7 +109,7 @@
                         notice: null !== (n = null == v ? void 0 : v.errorMessage) && void 0 !== n ? n : A.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
                         message: d,
                         compact: r,
-                        onDismiss: x
+                        onDismiss: R
                     })]
                 })
             }, g.memoizeMessageProps)
