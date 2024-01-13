@@ -7,9 +7,9 @@
             var s = n("37983");
             n("884691");
             var i = n("414456"),
-                a = n.n(i),
-                l = n("77078"),
-                r = n("978970"),
+                l = n.n(i),
+                r = n("77078"),
+                a = n("978970"),
                 u = n("36694"),
                 o = n("945330"),
                 c = n("705179");
@@ -23,9 +23,9 @@
                     className: f
                 } = e;
                 return (0, s.jsxs)("div", {
-                    className: a(c.list, f),
+                    className: l(c.list, f),
                     children: [null != t && t.length > 0 ? (0, s.jsxs)(s.Fragment, {
-                        children: [null != i ? (0, s.jsx)(l.FormTitle, {
+                        children: [null != i ? (0, s.jsx)(r.FormTitle, {
                             className: c.permissionHeader,
                             children: i
                         }) : null, (0, s.jsx)("div", {
@@ -36,14 +36,14 @@
                                     width: 16,
                                     height: 16,
                                     className: c.check
-                                }), (0, s.jsx)(l.Text, {
+                                }), (0, s.jsx)(r.Text, {
                                     variant: "text-sm/normal",
-                                    children: (0, r.getPermissionName)(e)
+                                    children: (0, a.getPermissionName)(e)
                                 })]
                             }, e.toString()))
                         })]
                     }) : null, null != n && n.length > 0 ? (0, s.jsxs)(s.Fragment, {
-                        children: [null != d ? (0, s.jsx)(l.FormTitle, {
+                        children: [null != d ? (0, s.jsx)(r.FormTitle, {
                             className: c.permissionHeader,
                             children: d
                         }) : null, (0, s.jsx)("div", {
@@ -54,9 +54,9 @@
                                     width: 16,
                                     height: 16,
                                     className: c.cross
-                                }), (0, s.jsx)(l.Text, {
+                                }), (0, s.jsx)(r.Text, {
                                     variant: "text-sm/normal",
-                                    children: (0, r.getPermissionName)(e)
+                                    children: (0, a.getPermissionName)(e)
                                 })]
                             }, e.toString()))
                         })]

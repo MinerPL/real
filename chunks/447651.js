@@ -1,82 +1,82 @@
             "use strict";
-            n.r(t), n.d(t, {
+            n.r(e), n.d(e, {
                 default: function() {
-                    return h
+                    return I
                 }
             }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660");
-            var a = n("37983");
+            var r = n("37983");
             n("884691");
             var i = n("77078"),
-                l = n("404118"),
-                s = n("689226"),
-                u = n("467475"),
-                r = n("599110"),
-                d = n("773336"),
-                o = n("286235"),
-                c = n("50885"),
+                u = n("404118"),
+                o = n("689226"),
+                a = n("467475"),
+                l = n("599110"),
+                s = n("773336"),
+                c = n("286235"),
+                d = n("50885"),
                 f = n("146574"),
-                E = n("49111"),
-                M = n("782340");
-            let m = "https://media.discordapp.net",
+                h = n("49111"),
+                p = n("782340");
+            let v = "https://media.discordapp.net",
                 g = /^.*\.discordapp\.net$/,
-                I = "https://cdn.discordapp.com",
-                p = "".concat(m, "/stickers"),
-                S = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp"]),
-                A = new Set(["jpg", "jpeg", "png"]),
-                v = e => {
-                    var t;
-                    return null === (t = new URL(e).pathname.split(".").pop()) || void 0 === t ? void 0 : t.toLowerCase()
+                m = "https://cdn.discordapp.com",
+                w = "".concat(v, "/stickers"),
+                E = new Set(["jpg", "jpeg", "png", "webp", "gif", "tiff", "bmp"]),
+                _ = new Set(["jpg", "jpeg", "png"]),
+                M = t => {
+                    var e;
+                    return null === (e = new URL(t).pathname.split(".").pop()) || void 0 === e ? void 0 : e.toLowerCase()
                 };
 
-            function _(e, t) {
-                l.default.show({
-                    title: M.default.Messages.ERROR,
-                    body: e
-                }), o.default.captureException(t)
+            function b(t, e) {
+                u.default.show({
+                    title: p.default.Messages.ERROR,
+                    body: t
+                }), c.default.captureException(e)
             }
 
-            function h(e, t, n) {
-                let l = (0, u.default)(null == t ? void 0 : t.getChannelId());
-                if (l || (null == n ? void 0 : n.shouldHideMediaOptions) === !0 || !d.isPlatformEmbedded || null == e || ! function(e) {
-                        let t = new URL(e),
-                            n = v(e);
-                        return (g.test(t.hostname) || t.origin === I) && !e.startsWith(p) && !(0, s.isRoleIconAssetUrl)(e) && null != n && S.has(n)
-                    }(e)) return null;
-                let o = function(e) {
-                        let t = new URL(e);
-                        return t.origin === I ? e : t.origin === m ? I + t.pathname : (t.searchParams.delete("width"), t.searchParams.delete("height"), t.searchParams.set("quality", "lossless"), t.toString())
-                    }(e),
-                    h = async () => {
+            function I(t, e, n) {
+                let u = (0, a.default)(null == e ? void 0 : e.getChannelId());
+                if (u || (null == n ? void 0 : n.shouldHideMediaOptions) === !0 || !s.isPlatformEmbedded || null == t || ! function(t) {
+                        let e = new URL(t),
+                            n = M(t);
+                        return (g.test(e.hostname) || e.origin === m) && !t.startsWith(w) && !(0, o.isRoleIconAssetUrl)(t) && null != n && E.has(n)
+                    }(t)) return null;
+                let c = function(t) {
+                        let e = new URL(t);
+                        return e.origin === m ? t : e.origin === v ? m + e.pathname : (e.searchParams.delete("width"), e.searchParams.delete("height"), e.searchParams.set("quality", "lossless"), e.toString())
+                    }(t),
+                    I = async () => {
                         try {
-                            await c.default.saveImage(o), r.default.track(E.AnalyticEvents.CONTEXT_MENU_IMAGE_SAVED, {
+                            await d.default.saveImage(c), l.default.track(h.AnalyticEvents.CONTEXT_MENU_IMAGE_SAVED, {
                                 ...(0, f.getNativeContextMenuChannelAnalytics)()
                             })
-                        } catch (e) {
-                            r.default.track(E.AnalyticEvents.CONTEXT_MENU_IMAGE_SAVE_FAILED, {
+                        } catch (t) {
+                            l.default.track(h.AnalyticEvents.CONTEXT_MENU_IMAGE_SAVE_FAILED, {
                                 ...(0, f.getNativeContextMenuChannelAnalytics)()
-                            }), _(M.default.Messages.ERROR_SAVING_IMAGE, e)
+                            }), b(p.default.Messages.ERROR_SAVING_IMAGE, t)
                         }
-                    }, T = async () => {
+                    }, C = async () => {
                         try {
-                            await c.default.copyImage(o), r.default.track(E.AnalyticEvents.CONTEXT_MENU_IMAGE_COPIED, {
+                            await d.default.copyImage(c), l.default.track(h.AnalyticEvents.CONTEXT_MENU_IMAGE_COPIED, {
                                 ...(0, f.getNativeContextMenuChannelAnalytics)()
                             })
-                        } catch (e) {
-                            _(M.default.Messages.ERROR_COPYING_IMAGE, e), r.default.track(E.AnalyticEvents.CONTEXT_MENU_IMAGE_COPY_FAILED, {
+                        } catch (t) {
+                            b(p.default.Messages.ERROR_COPYING_IMAGE, t), l.default.track(h.AnalyticEvents.CONTEXT_MENU_IMAGE_COPY_FAILED, {
                                 ...(0, f.getNativeContextMenuChannelAnalytics)()
                             })
                         }
                     };
-                return [c.default.canCopyImage() && function(e) {
-                    let t = v(e);
-                    return null != t && A.has(t)
-                }(e) ? (0, a.jsx)(i.MenuItem, {
+                return [d.default.canCopyImage() && function(t) {
+                    let e = M(t);
+                    return null != e && _.has(e)
+                }(t) ? (0, r.jsx)(i.MenuItem, {
                     id: "copy-image",
-                    label: M.default.Messages.COPY_IMAGE_MENU_ITEM,
-                    action: T
-                }, "copy-image") : null, (0, a.jsx)(i.MenuItem, {
+                    label: p.default.Messages.COPY_IMAGE_MENU_ITEM,
+                    action: C
+                }, "copy-image") : null, (0, r.jsx)(i.MenuItem, {
                     id: "save-image",
-                    label: M.default.Messages.SAVE_IMAGE_MENU_ITEM,
-                    action: h
+                    label: p.default.Messages.SAVE_IMAGE_MENU_ITEM,
+                    action: I
                 }, "save-image")]
             }

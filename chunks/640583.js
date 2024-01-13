@@ -22,7 +22,7 @@
                     return s
                 },
                 createWidgets: function() {
-                    return c
+                    return _
                 }
             });
             var a = n("913144"),
@@ -76,10 +76,10 @@
             }
 
             function s(e) {
-                c([e])
+                _([e])
             }
 
-            function c(e) {
+            function _(e) {
                 a.default.dispatch({
                     type: "LAYOUT_CREATE_WIDGETS",
                     widgetConfigs: e
