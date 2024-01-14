@@ -1,10 +1,10 @@
-            "use strict";
+"use strict";
 
-            function r(e) {
-                return "x" === e ? "y" : "x"
-            }
-            n.r(t), n.d(t, {
-                default: function() {
-                    return r
-                }
-            })
+function r(e) {
+  return "x" === e ? "y" : "x"
+}
+n.r(t), n.d(t, {
+  default: function() {
+    return r
+  }
+})

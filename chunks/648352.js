@@ -1,2 +1,2 @@
-            "use strict";
-            t.exports = s("527644")
+"use strict";
+t.exports = s("527644")

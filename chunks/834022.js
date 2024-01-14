@@ -1,2 +1,2 @@
-            "use strict";
-            n("505713")("flat")
+"use strict";
+n("505713")("flat")

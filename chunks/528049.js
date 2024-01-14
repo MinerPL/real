@@ -1,9 +1,9 @@
-            "use strict";
-            e.exports = function() {
-                var e = 1;
-                return {
-                    generate: function() {
-                        return e++
-                    }
-                }
-            }
+"use strict";
+e.exports = function() {
+  var e = 1;
+  return {
+    generate: function() {
+      return e++
+    }
+  }
+}

@@ -1,21 +1,21 @@
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return l
-                }
-            });
-            var l = (0, n("862205").createExperiment)({
-                kind: "guild",
-                id: "2021-11_hub_events",
-                label: "Hub Events",
-                defaultConfig: {
-                    showHubEventsList: !1
-                },
-                treatments: [{
-                    id: 1,
-                    label: "Show Hub Events List",
-                    config: {
-                        showHubEventsList: !0
-                    }
-                }]
-            })
+"use strict";
+n.r(t), n.d(t, {
+  default: function() {
+    return l
+  }
+});
+var l = (0, n("862205").createExperiment)({
+  kind: "guild",
+  id: "2021-11_hub_events",
+  label: "Hub Events",
+  defaultConfig: {
+    showHubEventsList: !1
+  },
+  treatments: [{
+    id: 1,
+    label: "Show Hub Events List",
+    config: {
+      showHubEventsList: !0
+    }
+  }]
+})

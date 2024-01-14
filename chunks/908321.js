@@ -1,23 +1,23 @@
-            "use strict";
-            t("605644")(r, "__esModule", {
-                value: !0
-            }), r.default = void 0;
-            r.default = {
-                abstract: !0,
-                accessibleNameRequired: !1,
-                baseConcepts: [],
-                childrenPresentational: !1,
-                nameFrom: ["author"],
-                prohibitedProps: [],
-                props: {
-                    "aria-modal": null
-                },
-                relatedConcepts: [],
-                requireContextRole: [],
-                requiredContextRole: [],
-                requiredOwnedElements: [],
-                requiredProps: {},
-                superClass: [
-                    ["roletype"]
-                ]
-            }
+"use strict";
+t("605644")(r, "__esModule", {
+  value: !0
+}), r.default = void 0;
+r.default = {
+  abstract: !0,
+  accessibleNameRequired: !1,
+  baseConcepts: [],
+  childrenPresentational: !1,
+  nameFrom: ["author"],
+  prohibitedProps: [],
+  props: {
+    "aria-modal": null
+  },
+  relatedConcepts: [],
+  requireContextRole: [],
+  requiredContextRole: [],
+  requiredOwnedElements: [],
+  requiredProps: {},
+  superClass: [
+    ["roletype"]
+  ]
+}

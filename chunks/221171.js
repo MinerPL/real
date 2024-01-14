@@ -1,10 +1,10 @@
-            "use strict";
+"use strict";
 
-            function r(t) {
-                return !!(t && t.then && "function" == typeof t.then)
-            }
-            n.r(e), n.d(e, {
-                isThenable: function() {
-                    return r
-                }
-            }), n("70102")
+function r(t) {
+  return !!(t && t.then && "function" == typeof t.then)
+}
+n.r(e), n.d(e, {
+  isThenable: function() {
+    return r
+  }
+}), n("70102")

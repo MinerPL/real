@@ -1,3 +1,3 @@
-            t.exports = function() {
-                this.__data__ = [], this.size = 0
-            }
+t.exports = function() {
+  this.__data__ = [], this.size = 0
+}

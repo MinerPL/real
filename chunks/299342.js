@@ -1,37 +1,37 @@
-            "use strict";
-            n.r(t), n.d(t, {
-                default: function() {
-                    return u
-                }
-            });
-            var l = n("37983");
-            n("884691");
-            var a = n("77078"),
-                s = n("194250"),
-                i = n("782340"),
-                r = n("11644");
+"use strict";
+l.r(t), l.d(t, {
+  default: function() {
+    return u
+  }
+});
+var n = l("37983");
+l("884691");
+var a = l("77078"),
+  s = l("194250"),
+  r = l("782340"),
+  i = l("11644");
 
-            function u(e) {
-                let {
-                    isSlideReady: t,
-                    ...n
-                } = e;
-                return (0, l.jsxs)("div", {
-                    className: r.slideContainer,
-                    children: [(0, l.jsxs)("div", {
-                        className: r.header,
-                        children: [(0, l.jsx)(a.Heading, {
-                            variant: "heading-xl/semibold",
-                            children: i.default.Messages.GUILD_EVENT_CREATE_HEADER
-                        }), (0, l.jsx)(a.Text, {
-                            color: "header-secondary",
-                            className: r.text,
-                            variant: "text-sm/normal",
-                            children: i.default.Messages.GUILD_EVENT_CREATE_BODY
-                        })]
-                    }), (0, l.jsx)(s.default, {
-                        ...n,
-                        canSetFocus: t
-                    })]
-                })
-            }
+function u(e) {
+  let {
+    isSlideReady: t,
+    ...l
+  } = e;
+  return (0, n.jsxs)("div", {
+    className: i.slideContainer,
+    children: [(0, n.jsxs)("div", {
+      className: i.header,
+      children: [(0, n.jsx)(a.Heading, {
+        variant: "heading-xl/semibold",
+        children: r.default.Messages.GUILD_EVENT_CREATE_HEADER
+      }), (0, n.jsx)(a.Text, {
+        color: "header-secondary",
+        className: i.text,
+        variant: "text-sm/normal",
+        children: r.default.Messages.GUILD_EVENT_CREATE_BODY
+      })]
+    }), (0, n.jsx)(s.default, {
+      ...l,
+      canSetFocus: t
+    })]
+  })
+}

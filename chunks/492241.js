@@ -1,6 +1,6 @@
-            "use strict";
-            n("854508"), e.exports = function() {
-                this.instances.forEach(function(e) {
-                    e.reset()
-                })
-            }
+"use strict";
+n("854508"), e.exports = function() {
+  this.instances.forEach(function(e) {
+    e.reset()
+  })
+}

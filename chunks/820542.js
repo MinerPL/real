@@ -1,44 +1,44 @@
-            "use strict";
-            n.r(t), n.d(t, {
-                categoryCollapse: function() {
-                    return l
-                },
-                categoryExpand: function() {
-                    return a
-                },
-                categoryCollapseAll: function() {
-                    return r
-                },
-                categoryExpandAll: function() {
-                    return s
-                }
-            });
-            var i = n("913144");
+"use strict";
+n.r(t), n.d(t, {
+  categoryCollapse: function() {
+    return a
+  },
+  categoryExpand: function() {
+    return s
+  },
+  categoryCollapseAll: function() {
+    return i
+  },
+  categoryExpandAll: function() {
+    return r
+  }
+});
+var l = n("913144");
 
-            function l(e) {
-                i.default.dispatch({
-                    type: "CATEGORY_COLLAPSE",
-                    id: e
-                })
-            }
+function a(e) {
+  l.default.dispatch({
+    type: "CATEGORY_COLLAPSE",
+    id: e
+  })
+}
 
-            function a(e) {
-                i.default.dispatch({
-                    type: "CATEGORY_EXPAND",
-                    id: e
-                })
-            }
+function s(e) {
+  l.default.dispatch({
+    type: "CATEGORY_EXPAND",
+    id: e
+  })
+}
 
-            function r(e) {
-                i.default.dispatch({
-                    type: "CATEGORY_COLLAPSE_ALL",
-                    guildId: e
-                })
-            }
+function i(e) {
+  l.default.dispatch({
+    type: "CATEGORY_COLLAPSE_ALL",
+    guildId: e
+  })
+}
 
-            function s(e) {
-                i.default.dispatch({
-                    type: "CATEGORY_EXPAND_ALL",
-                    guildId: e
-                })
-            }
+function r(e) {
+  l.default.dispatch({
+    type: "CATEGORY_EXPAND_ALL",
+    guildId: e
+  })
+}

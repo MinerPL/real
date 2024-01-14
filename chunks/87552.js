@@ -1,4 +1,4 @@
-            "use strict";
-            e.exports = function(e) {
-                return "+" === e ? ["+"] : e.split("+")
-            }
+"use strict";
+e.exports = function(e) {
+  return "+" === e ? ["+"] : e.split("+")
+}

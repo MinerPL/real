@@ -1,2 +1,2 @@
-            "use strict";
-            t.exports = n("229302")
+"use strict";
+t.exports = n("229302")

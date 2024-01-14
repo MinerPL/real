@@ -1,188 +1,188 @@
-            "use strict";
-            a.r(t), a.d(t, {
-                RatingsSelector: function() {
-                    return m
-                },
-                default: function() {
-                    return B
-                }
-            }), a("222007");
-            var l = a("37983"),
-                s = a("884691"),
-                n = a("414456"),
-                r = a.n(n),
-                u = a("917351"),
-                i = a.n(u),
-                o = a("77078"),
-                c = a("84339"),
-                d = a("229850"),
-                E = a("145131"),
-                f = a("476765"),
-                C = a("561744"),
-                O = a("701909"),
-                N = a("713640"),
-                D = a("200521"),
-                _ = a("782340"),
-                A = a("279537");
-            let R = [{
-                className: A.emojiSad,
-                rating: D.FeedbackRating.BAD,
-                classNameSelected: A.selected
-            }, {
-                className: A.emojiNeutral,
-                rating: D.FeedbackRating.NEUTRAL,
-                classNameSelected: A.selected
-            }, {
-                className: A.emojiHappy,
-                rating: D.FeedbackRating.GOOD,
-                classNameSelected: A.selected
-            }];
+"use strict";
+a.r(t), a.d(t, {
+  RatingsSelector: function() {
+    return N
+  },
+  default: function() {
+    return g
+  }
+}), a("222007");
+var l = a("37983"),
+  n = a("884691"),
+  s = a("414456"),
+  i = a.n(s),
+  c = a("917351"),
+  o = a.n(c),
+  u = a("77078"),
+  d = a("84339"),
+  r = a("229850"),
+  f = a("145131"),
+  T = a("476765"),
+  I = a("561744"),
+  _ = a("701909"),
+  A = a("713640"),
+  E = a("200521"),
+  R = a("782340"),
+  m = a("279537");
+let C = [{
+  className: m.emojiSad,
+  rating: E.FeedbackRating.BAD,
+  classNameSelected: m.selected
+}, {
+  className: m.emojiNeutral,
+  rating: E.FeedbackRating.NEUTRAL,
+  classNameSelected: m.selected
+}, {
+  className: m.emojiHappy,
+  rating: E.FeedbackRating.GOOD,
+  classNameSelected: m.selected
+}];
 
-            function m(e) {
-                let {
-                    className: t,
-                    selectedRating: a,
-                    ratingConfigs: s,
-                    onChangeRating: n
-                } = e;
-                return (0, l.jsx)(E.default, {
-                    justify: E.default.Justify.BETWEEN,
-                    align: E.default.Align.CENTER,
-                    className: r(A.ratingsSelector, t),
-                    children: (null != s ? s : R).map(e => {
-                        let {
-                            rating: t,
-                            className: s,
-                            classNameSelected: u
-                        } = e;
-                        return (0, l.jsx)(o.Clickable, {
-                            onClick: () => n(t),
-                            "aria-label": t,
-                            children: (0, l.jsx)("div", {
-                                className: r(s, a === t ? u : null)
-                            })
-                        }, t)
-                    })
-                })
-            }
+function N(e) {
+  let {
+    className: t,
+    selectedRating: a,
+    ratingConfigs: n,
+    onChangeRating: s
+  } = e;
+  return (0, l.jsx)(f.default, {
+    justify: f.default.Justify.BETWEEN,
+    align: f.default.Align.CENTER,
+    className: i(m.ratingsSelector, t),
+    children: (null != n ? n : C).map(e => {
+      let {
+        rating: t,
+        className: n,
+        classNameSelected: c
+      } = e;
+      return (0, l.jsx)(u.Clickable, {
+        onClick: () => s(t),
+        "aria-label": t,
+        children: (0, l.jsx)("div", {
+          className: i(n, a === t ? c : null)
+        })
+      }, t)
+    })
+  })
+}
 
-            function I() {
-                return (0, l.jsx)(o.Text, {
-                    className: A.helpdeskLink,
-                    variant: "text-xs/normal",
-                    color: "text-muted",
-                    children: _.default.Messages.FEEDBACK_NEED_MORE_HELP.format({
-                        helpdeskURL: O.default.getSubmitRequestURL()
-                    })
-                })
-            }
+function O() {
+  return (0, l.jsx)(u.Text, {
+    className: m.helpdeskLink,
+    variant: "text-xs/normal",
+    color: "text-muted",
+    children: R.default.Messages.FEEDBACK_NEED_MORE_HELP.format({
+      helpdeskURL: _.default.getSubmitRequestURL()
+    })
+  })
+}
 
-            function B(e) {
-                let {
-                    header: t,
-                    body: a,
-                    problemTitle: n,
-                    problems: u,
-                    transitionState: O,
-                    ratingConfigs: R,
-                    feedbackProblems: B = [],
-                    otherKey: T,
-                    ratingsSelectorClassName: x,
-                    hideDontShowCheckbox: g,
-                    startRating: h = null,
-                    onSubmit: b,
-                    onClose: K
-                } = e, p = (0, c.default)(u), [L, U] = s.useState(!1), [j, G] = s.useState(h), [k, F] = s.useState(null), [v, M] = s.useState(i.shuffle(u)), [S, H] = s.useState(""), y = (0, f.useUID)(), P = (0, C.default)(j), V = (0, C.default)(L), Y = (0, C.default)(k), z = (0, C.default)(b), w = (0, C.default)(S), q = null != k && B.includes(k);
-                return s.useEffect(() => {
-                    !i.isEqual(p, u) && M((0, N.shuffleProblems)(u, T))
-                }, [u, p, T]), s.useEffect(() => () => {
-                    z.current({
-                        rating: P.current,
-                        problem: Y.current,
-                        dontShowAgain: V.current,
-                        feedback: w.current
-                    })
-                }, []), (0, l.jsxs)(o.ModalRoot, {
-                    transitionState: O,
-                    className: A.modalRoot,
-                    "aria-labelledby": y,
-                    children: [(0, l.jsxs)(o.ModalHeader, {
-                        separator: !1,
-                        className: A.headerContainer,
-                        children: [(0, l.jsx)(o.Heading, {
-                            id: y,
-                            variant: "heading-xl/extrabold",
-                            color: "none",
-                            children: t
-                        }), (0, l.jsx)(o.Text, {
-                            variant: "text-md/normal",
-                            color: "none",
-                            className: A.ratingBody,
-                            children: a
-                        }), q ? null : (0, l.jsx)(m, {
-                            className: r(A.emojis, x),
-                            selectedRating: j,
-                            onChangeRating: function(e) {
-                                G(e), e === D.FeedbackRating.GOOD && K()
-                            },
-                            ratingConfigs: R
-                        })]
-                    }), (0, l.jsxs)(o.ModalContent, {
-                        className: A.content,
-                        children: [null == j || j === D.FeedbackRating.GOOD || q ? null : (0, l.jsx)(o.FormItem, {
-                            title: n,
-                            className: A.problemInfo,
-                            children: (0, l.jsx)(d.default, {
-                                options: v,
-                                onClick: function(e) {
-                                    let {
-                                        value: t
-                                    } = e;
-                                    F(t), !B.includes(t) && K()
-                                },
-                                hideCaret: e => {
-                                    let {
-                                        value: t
-                                    } = e;
-                                    return !B.includes(t)
-                                }
-                            })
-                        }), q ? (0, l.jsxs)(o.FormItem, {
-                            title: _.default.Messages.FEEDBACK_DESCRIBE_ISSUE,
-                            className: A.problemInfo,
-                            children: [(0, l.jsx)(o.TextArea, {
-                                value: S,
-                                maxLength: D.FEEDBACK_FREEFORM_LENGTH,
-                                onChange: H
-                            }), (0, l.jsx)(I, {})]
-                        }) : null]
-                    }), (q || !g) && (0, l.jsx)(o.ModalFooter, {
-                        className: A.footer,
-                        direction: E.default.Direction.HORIZONTAL,
-                        children: q ? (0, l.jsxs)(l.Fragment, {
-                            children: [(0, l.jsx)(o.Button, {
-                                size: o.Button.Sizes.SMALL,
-                                look: o.Button.Looks.LINK,
-                                color: o.Button.Colors.PRIMARY,
-                                onClick: () => {
-                                    F(null), H("")
-                                },
-                                children: _.default.Messages.BACK
-                            }), (0, l.jsx)(o.Button, {
-                                size: o.Button.Sizes.SMALL,
-                                onClick: K,
-                                children: _.default.Messages.SUBMIT
-                            })]
-                        }) : (0, l.jsx)(o.Checkbox, {
-                            type: o.Checkbox.Types.INVERTED,
-                            size: 18,
-                            value: L,
-                            onChange: () => U(!L),
-                            children: (0, l.jsx)(o.Text, {
-                                variant: "text-sm/normal",
-                                children: _.default.Messages.DONT_SHOW_AGAIN
-                            })
-                        })
-                    })]
-                })
-            }
+function g(e) {
+  let {
+    header: t,
+    body: a,
+    problemTitle: s,
+    problems: c,
+    transitionState: _,
+    ratingConfigs: C,
+    feedbackProblems: g = [],
+    otherKey: p,
+    ratingsSelectorClassName: b,
+    hideDontShowCheckbox: x,
+    startRating: h = null,
+    onSubmit: v,
+    onClose: k
+  } = e, F = (0, d.default)(c), [D, M] = n.useState(!1), [j, S] = n.useState(h), [L, y] = n.useState(null), [Y, V] = n.useState(o.shuffle(c)), [P, B] = n.useState(""), G = (0, T.useUID)(), H = (0, I.default)(j), U = (0, I.default)(D), K = (0, I.default)(L), z = (0, I.default)(v), w = (0, I.default)(P), W = null != L && g.includes(L);
+  return n.useEffect(() => {
+    !o.isEqual(F, c) && V((0, A.shuffleProblems)(c, p))
+  }, [c, F, p]), n.useEffect(() => () => {
+    z.current({
+      rating: H.current,
+      problem: K.current,
+      dontShowAgain: U.current,
+      feedback: w.current
+    })
+  }, []), (0, l.jsxs)(u.ModalRoot, {
+    transitionState: _,
+    className: m.modalRoot,
+    "aria-labelledby": G,
+    children: [(0, l.jsxs)(u.ModalHeader, {
+      separator: !1,
+      className: m.headerContainer,
+      children: [(0, l.jsx)(u.Heading, {
+        id: G,
+        variant: "heading-xl/extrabold",
+        color: "none",
+        children: t
+      }), (0, l.jsx)(u.Text, {
+        variant: "text-md/normal",
+        color: "none",
+        className: m.ratingBody,
+        children: a
+      }), W ? null : (0, l.jsx)(N, {
+        className: i(m.emojis, b),
+        selectedRating: j,
+        onChangeRating: function(e) {
+          S(e), e === E.FeedbackRating.GOOD && k()
+        },
+        ratingConfigs: C
+      })]
+    }), (0, l.jsxs)(u.ModalContent, {
+      className: m.content,
+      children: [null == j || j === E.FeedbackRating.GOOD || W ? null : (0, l.jsx)(u.FormItem, {
+        title: s,
+        className: m.problemInfo,
+        children: (0, l.jsx)(r.default, {
+          options: Y,
+          onClick: function(e) {
+            let {
+              value: t
+            } = e;
+            y(t), !g.includes(t) && k()
+          },
+          hideCaret: e => {
+            let {
+              value: t
+            } = e;
+            return !g.includes(t)
+          }
+        })
+      }), W ? (0, l.jsxs)(u.FormItem, {
+        title: R.default.Messages.FEEDBACK_DESCRIBE_ISSUE,
+        className: m.problemInfo,
+        children: [(0, l.jsx)(u.TextArea, {
+          value: P,
+          maxLength: E.FEEDBACK_FREEFORM_LENGTH,
+          onChange: B
+        }), (0, l.jsx)(O, {})]
+      }) : null]
+    }), (W || !x) && (0, l.jsx)(u.ModalFooter, {
+      className: m.footer,
+      direction: f.default.Direction.HORIZONTAL,
+      children: W ? (0, l.jsxs)(l.Fragment, {
+        children: [(0, l.jsx)(u.Button, {
+          size: u.Button.Sizes.SMALL,
+          look: u.Button.Looks.LINK,
+          color: u.Button.Colors.PRIMARY,
+          onClick: () => {
+            y(null), B("")
+          },
+          children: R.default.Messages.BACK
+        }), (0, l.jsx)(u.Button, {
+          size: u.Button.Sizes.SMALL,
+          onClick: k,
+          children: R.default.Messages.SUBMIT
+        })]
+      }) : (0, l.jsx)(u.Checkbox, {
+        type: u.Checkbox.Types.INVERTED,
+        size: 18,
+        value: D,
+        onChange: () => M(!D),
+        children: (0, l.jsx)(u.Text, {
+          variant: "text-sm/normal",
+          children: R.default.Messages.DONT_SHOW_AGAIN
+        })
+      })
+    })]
+  })
+}

@@ -1,2 +1,2 @@
-            "use strict";
-            n("96737")
+"use strict";
+n("96737")

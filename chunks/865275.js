@@ -1,2 +1,2 @@
-            "use strict";
-            t.exports = function() {}
+"use strict";
+t.exports = function() {}

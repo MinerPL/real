@@ -1,3 +1,3 @@
-            "use strict";
-            var n = r("434978");
-            t.exports = n("document", "documentElement")
+"use strict";
+var n = r("434978");
+t.exports = n("document", "documentElement")

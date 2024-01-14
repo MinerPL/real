@@ -1,131 +1,131 @@
-            "use strict";
-            s.r(t), s.d(t, {
-                default: function() {
-                    return x
-                }
-            }), s("222007");
-            var l = s("37983"),
-                a = s("884691"),
-                n = s("917351"),
-                u = s.n(n),
-                r = s("77078"),
-                o = s("84339"),
-                i = s("385042"),
-                d = s("229850"),
-                c = s("145131"),
-                E = s("476765"),
-                f = s("561744"),
-                D = s("258078"),
-                _ = s("701909"),
-                m = s("713640"),
-                T = s("200521"),
-                L = s("782340"),
-                C = s("279537");
+"use strict";
+s.r(t), s.d(t, {
+  default: function() {
+    return x
+  }
+}), s("222007");
+var l = s("37983"),
+  n = s("884691"),
+  a = s("917351"),
+  o = s.n(a),
+  u = s("77078"),
+  r = s("84339"),
+  i = s("385042"),
+  d = s("229850"),
+  c = s("145131"),
+  f = s("476765"),
+  E = s("561744"),
+  _ = s("258078"),
+  m = s("701909"),
+  h = s("713640"),
+  O = s("200521"),
+  C = s("782340"),
+  M = s("279537");
 
-            function h() {
-                return (0, l.jsx)(r.Text, {
-                    className: C.helpdeskLink,
-                    variant: "text-xs/normal",
-                    color: "text-muted",
-                    children: L.default.Messages.FEEDBACK_NEED_MORE_HELP.format({
-                        helpdeskURL: _.default.getSubmitRequestURL()
-                    })
-                })
-            }
+function N() {
+  return (0, l.jsx)(u.Text, {
+    className: M.helpdeskLink,
+    variant: "text-xs/normal",
+    color: "text-muted",
+    children: C.default.Messages.FEEDBACK_NEED_MORE_HELP.format({
+      helpdeskURL: m.default.getSubmitRequestURL()
+    })
+  })
+}
 
-            function x(e) {
-                let {
-                    header: t,
-                    body: s,
-                    problems: n,
-                    transitionState: _,
-                    feedbackProblems: x = [],
-                    otherKey: I,
-                    hasCloseButton: p,
-                    onSubmit: v,
-                    onClose: b,
-                    canDismissForever: A = !0,
-                    showHelpdeskLink: g = !0
-                } = e, M = (0, o.default)(n), [R, B] = a.useState(!1), [N, O] = a.useState(null), [S, j] = a.useState(u.shuffle(n)), [G, k] = a.useState(""), F = (0, E.useUID)(), U = (0, f.default)(R), K = (0, f.default)(N), y = (0, f.default)(v), H = (0, f.default)(G), P = null != N && x.includes(N);
-                return a.useEffect(() => {
-                    !u.isEqual(M, n) && j((0, m.shuffleProblems)(n, I))
-                }, [n, M, I]), a.useEffect(() => () => {
-                    y.current({
-                        problem: K.current,
-                        dontShowAgain: U.current,
-                        feedback: H.current
-                    })
-                }, []), (0, l.jsxs)(r.ModalRoot, {
-                    transitionState: _,
-                    className: C.modalRoot,
-                    "aria-labelledby": F,
-                    children: [(0, l.jsx)(i.default, {}), (0, l.jsxs)(r.ModalHeader, {
-                        separator: !1,
-                        className: C.headerContainer,
-                        children: [(0, l.jsx)(D.default, {
-                            id: F,
-                            className: C.header,
-                            color: D.default.Colors.CUSTOM,
-                            size: D.default.Sizes.SIZE_24,
-                            children: t
-                        }), (0, l.jsx)(r.Text, {
-                            variant: "text-md/normal",
-                            color: "none",
-                            className: C.ratingBody,
-                            children: s
-                        }), p ? (0, l.jsx)(r.ModalCloseButton, {
-                            className: C.modalCloseButton,
-                            onClick: b
-                        }) : null]
-                    }), (0, l.jsxs)(r.ModalContent, {
-                        className: C.content,
-                        children: [P ? null : (0, l.jsx)(r.FormItem, {
-                            className: C.problemInfo,
-                            children: (0, l.jsx)(d.default, {
-                                options: S,
-                                onClick: function(e) {
-                                    let {
-                                        value: t
-                                    } = e;
-                                    O(t), !x.includes(t) && b()
-                                }
-                            })
-                        }), P ? (0, l.jsxs)(r.FormItem, {
-                            title: L.default.Messages.FEEDBACK_DESCRIBE_ISSUE,
-                            className: C.problemInfo,
-                            children: [(0, l.jsx)(r.TextArea, {
-                                value: G,
-                                maxLength: T.FEEDBACK_FREEFORM_LENGTH,
-                                onChange: k
-                            }), g ? (0, l.jsx)(h, {}) : null]
-                        }) : null]
-                    }), A || P ? (0, l.jsx)(r.ModalFooter, {
-                        className: C.footer,
-                        direction: c.default.Direction.HORIZONTAL,
-                        children: P ? (0, l.jsxs)(l.Fragment, {
-                            children: [(0, l.jsx)(r.Button, {
-                                size: r.Button.Sizes.SMALL,
-                                look: r.Button.Looks.LINK,
-                                color: r.Button.Colors.PRIMARY,
-                                onClick: () => {
-                                    O(null), k("")
-                                },
-                                children: L.default.Messages.BACK
-                            }), (0, l.jsx)(r.Button, {
-                                size: r.Button.Sizes.SMALL,
-                                onClick: b,
-                                children: L.default.Messages.SUBMIT
-                            })]
-                        }) : A ? (0, l.jsx)(r.Checkbox, {
-                            size: 18,
-                            type: r.Checkbox.Types.INVERTED,
-                            value: R,
-                            onChange: () => B(!R),
-                            children: (0, l.jsx)(r.Text, {
-                                variant: "text-sm/normal",
-                                children: L.default.Messages.DONT_SHOW_AGAIN
-                            })
-                        }) : null
-                    }) : null]
-                })
-            }
+function x(e) {
+  let {
+    header: t,
+    body: s,
+    problems: a,
+    transitionState: m,
+    feedbackProblems: x = [],
+    otherKey: R,
+    hasCloseButton: v,
+    onSubmit: I,
+    onClose: L,
+    canDismissForever: H = !0,
+    showHelpdeskLink: T = !0
+  } = e, g = (0, r.default)(a), [b, p] = n.useState(!1), [S, A] = n.useState(null), [B, k] = n.useState(o.shuffle(a)), [D, j] = n.useState(""), G = (0, f.useUID)(), F = (0, E.default)(b), U = (0, E.default)(S), V = (0, E.default)(I), K = (0, E.default)(D), P = null != S && x.includes(S);
+  return n.useEffect(() => {
+    !o.isEqual(g, a) && k((0, h.shuffleProblems)(a, R))
+  }, [a, g, R]), n.useEffect(() => () => {
+    V.current({
+      problem: U.current,
+      dontShowAgain: F.current,
+      feedback: K.current
+    })
+  }, []), (0, l.jsxs)(u.ModalRoot, {
+    transitionState: m,
+    className: M.modalRoot,
+    "aria-labelledby": G,
+    children: [(0, l.jsx)(i.default, {}), (0, l.jsxs)(u.ModalHeader, {
+      separator: !1,
+      className: M.headerContainer,
+      children: [(0, l.jsx)(_.default, {
+        id: G,
+        className: M.header,
+        color: _.default.Colors.CUSTOM,
+        size: _.default.Sizes.SIZE_24,
+        children: t
+      }), (0, l.jsx)(u.Text, {
+        variant: "text-md/normal",
+        color: "none",
+        className: M.ratingBody,
+        children: s
+      }), v ? (0, l.jsx)(u.ModalCloseButton, {
+        className: M.modalCloseButton,
+        onClick: L
+      }) : null]
+    }), (0, l.jsxs)(u.ModalContent, {
+      className: M.content,
+      children: [P ? null : (0, l.jsx)(u.FormItem, {
+        className: M.problemInfo,
+        children: (0, l.jsx)(d.default, {
+          options: B,
+          onClick: function(e) {
+            let {
+              value: t
+            } = e;
+            A(t), !x.includes(t) && L()
+          }
+        })
+      }), P ? (0, l.jsxs)(u.FormItem, {
+        title: C.default.Messages.FEEDBACK_DESCRIBE_ISSUE,
+        className: M.problemInfo,
+        children: [(0, l.jsx)(u.TextArea, {
+          value: D,
+          maxLength: O.FEEDBACK_FREEFORM_LENGTH,
+          onChange: j
+        }), T ? (0, l.jsx)(N, {}) : null]
+      }) : null]
+    }), H || P ? (0, l.jsx)(u.ModalFooter, {
+      className: M.footer,
+      direction: c.default.Direction.HORIZONTAL,
+      children: P ? (0, l.jsxs)(l.Fragment, {
+        children: [(0, l.jsx)(u.Button, {
+          size: u.Button.Sizes.SMALL,
+          look: u.Button.Looks.LINK,
+          color: u.Button.Colors.PRIMARY,
+          onClick: () => {
+            A(null), j("")
+          },
+          children: C.default.Messages.BACK
+        }), (0, l.jsx)(u.Button, {
+          size: u.Button.Sizes.SMALL,
+          onClick: L,
+          children: C.default.Messages.SUBMIT
+        })]
+      }) : H ? (0, l.jsx)(u.Checkbox, {
+        size: 18,
+        type: u.Checkbox.Types.INVERTED,
+        value: b,
+        onChange: () => p(!b),
+        children: (0, l.jsx)(u.Text, {
+          variant: "text-sm/normal",
+          children: C.default.Messages.DONT_SHOW_AGAIN
+        })
+      }) : null
+    }) : null]
+  })
+}

@@ -1,3 +1,3 @@
-            t.exports = function() {
-                return []
-            }
+t.exports = function() {
+  return []
+}

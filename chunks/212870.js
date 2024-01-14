@@ -1,3 +1,3 @@
-            "use strict";
-            var r = n("882470");
-            e.exports = /MSIE|Trident/.test(r)
+"use strict";
+var r = n("882470");
+e.exports = /MSIE|Trident/.test(r)

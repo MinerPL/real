@@ -1,10 +1,10 @@
-            "use strict";
+"use strict";
 
-            function s(e, t) {
-                return new WebSocket(e, t)
-            }
-            n.r(t), n.d(t, {
-                default: function() {
-                    return s
-                }
-            })
+function s(e, t) {
+  return new WebSocket(e, t)
+}
+n.r(t), n.d(t, {
+  default: function() {
+    return s
+  }
+})

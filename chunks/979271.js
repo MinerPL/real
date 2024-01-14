@@ -1,4 +1,4 @@
-            "use strict";
-            t.exports = function(t) {
-                return !!t
-            }
+"use strict";
+t.exports = function(t) {
+  return !!t
+}

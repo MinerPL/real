@@ -1,2 +1,2 @@
-            "use strict";
-            t.exports = s.p + "c9e2039efbe8a7a51191.svg"
+"use strict";
+t.exports = s.p + "c9e2039efbe8a7a51191.svg"

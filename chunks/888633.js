@@ -1,4 +1,4 @@
-            var e = n("285162");
-            t.exports = function(t) {
-                return t == t && !e(t)
-            }
+var e = n("285162");
+t.exports = function(t) {
+  return t == t && !e(t)
+}

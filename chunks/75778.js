@@ -1,2 +1,2 @@
-            "use strict";
-            n("820193")
+"use strict";
+n("820193")
