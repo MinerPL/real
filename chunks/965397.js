@@ -1,21 +1,21 @@
 "use strict";
-n.r(t), n.d(t, {
+A.r(t), A.d(t, {
   default: function() {
-    return f
+    return c
   }
-}), n("222007");
-var i = n("37983"),
-  r = n("884691"),
-  l = n("414456"),
-  o = n.n(l),
-  s = n("458960"),
-  a = n("77078"),
-  u = n("866893");
-let c = {
+}), A("222007");
+var a = A("37983"),
+  l = A("884691"),
+  n = A("414456"),
+  r = A.n(n),
+  s = A("458960"),
+  o = A("77078"),
+  i = A("866893");
+let u = {
   friction: 7,
   tension: 60
 };
-class d extends r.Component {
+class d extends l.Component {
   componentWillAppear(e) {
     this.animateTo(1).start(e)
   }
@@ -30,7 +30,7 @@ class d extends r.Component {
   }
   animateTo(e) {
     return s.default.spring(this.animation, {
-      ...c,
+      ...u,
       toValue: e
     })
   }
@@ -53,8 +53,8 @@ class d extends r.Component {
       className: e,
       children: t
     } = this.props;
-    return (0, i.jsx)(s.default.div, {
-      className: o(e, u.slider),
+    return (0, a.jsx)(s.default.div, {
+      className: r(e, i.slider),
       style: this.getAnimatedStyle(),
       children: t
     })
@@ -63,5 +63,5 @@ class d extends r.Component {
     super(...e), this.animation = new s.default.Value(0)
   }
 }
-d.contextType = a.AccessibilityPreferencesContext;
-var f = d
+d.contextType = o.AccessibilityPreferencesContext;
+var c = d

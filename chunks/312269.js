@@ -1,2 +1,2 @@
-            "use strict";
-            e.exports = s.p + "261982b9ab12d98c2df2.png"
+"use strict";
+e.exports = s.p + "261982b9ab12d98c2df2.png"

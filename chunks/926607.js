@@ -1,6 +1,6 @@
 "use strict";
 
-function r(e, t) {
+function s(e, t) {
   return !t && (t = e.slice(0)), Object.freeze(Object.defineProperties(e, {
     raw: {
       value: Object.freeze(t)
@@ -9,6 +9,6 @@ function r(e, t) {
 }
 n.r(t), n.d(t, {
   _: function() {
-    return r
+    return s
   }
 })

@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   }
 });
-var l = n("446674"),
-  a = n("305961"),
-  s = n("49111");
+var i = n("446674"),
+  r = n("305961"),
+  u = n("49111");
 
-function i(e) {
-  return (0, l.useStateFromStores)([a.default], () => {
+function l(e) {
+  return (0, i.useStateFromStores)([r.default], () => {
     var t;
     if (null == e) return !1;
-    let n = a.default.getGuild(e);
-    return null !== (t = null == n ? void 0 : n.hasFeature(s.GuildFeatures.HUB)) && void 0 !== t && t
+    let n = r.default.getGuild(e);
+    return null !== (t = null == n ? void 0 : n.hasFeature(u.GuildFeatures.HUB)) && void 0 !== t && t
   }, [e])
 }
