@@ -1,30 +1,30 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return a
   }
 });
 var s = n("37983");
 n("884691");
 var i = n("469563"),
-  a = n("392646"),
-  l = n("75196"),
-  r = (0, i.replaceIcon)(function(e) {
+  l = n("392646"),
+  r = n("75196"),
+  a = (0, i.replaceIcon)(function(e) {
     let {
       width: t = 24,
       height: n = 24,
       color: i = "currentColor",
-      foreground: a,
-      ...r
+      foreground: l,
+      ...a
     } = e;
     return (0, s.jsx)("svg", {
-      ...(0, l.default)(r),
+      ...(0, r.default)(a),
       width: t,
       height: n,
       viewBox: "0 0 24 24",
       children: (0, s.jsxs)("g", {
         fill: "none",
-        className: a,
+        className: l,
         children: [(0, s.jsx)("path", {
           fillRule: "evenodd",
           clipRule: "evenodd",
@@ -36,6 +36,6 @@ var i = n("469563"),
         })]
       })
     })
-  }, a.UserCircleStatusIcon, void 0, {
+  }, l.UserCircleStatusIcon, void 0, {
     size: 24
   })

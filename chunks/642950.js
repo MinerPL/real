@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return _
   }
 }), n("222007");
 var r = n("37983"),
@@ -38,4 +38,4 @@ class p extends i.Component {
 p.defaultProps = {
   disableButton: !1
 };
-var h = p
+var _ = p

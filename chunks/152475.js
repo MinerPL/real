@@ -4,49 +4,49 @@ n.r(t), n.d(t, {
     return _
   },
   isGuildEventInvitable: function() {
-    return p
+    return I
   },
   default: function() {
-    return m
+    return h
   }
 }), n("222007");
-var i = n("446674"),
-  u = n("242757"),
-  l = n("834052"),
-  r = n("42203"),
-  o = n("923959"),
-  c = n("305961"),
-  a = n("957255"),
-  s = n("991170"),
-  d = n("398604"),
-  f = n("745049"),
-  E = n("49111");
+var l = n("446674"),
+  a = n("242757"),
+  s = n("834052"),
+  i = n("42203"),
+  r = n("923959"),
+  u = n("305961"),
+  o = n("957255"),
+  d = n("991170"),
+  c = n("398604"),
+  E = n("745049"),
+  f = n("49111");
 
 function _(e) {
   var t;
-  let [n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.default];
+  let [n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [i.default];
   let {
-    entityType: i,
-    channelId: u
+    entityType: l,
+    channelId: a
   } = "entity_type" in (t = e) ? {
     entityType: t.entity_type,
     channelId: t.channel_id
-  } : t, l = i === f.GuildScheduledEventEntityTypes.EXTERNAL;
-  if (l) return !0;
-  let o = n.getChannel(u);
-  return null != o && s.default.canEveryoneRole(E.Permissions.VIEW_CHANNEL, o)
+  } : t, s = l === E.GuildScheduledEventEntityTypes.EXTERNAL;
+  if (s) return !0;
+  let r = n.getChannel(a);
+  return null != r && d.default.canEveryoneRole(f.Permissions.VIEW_CHANNEL, r)
 }
 
-function p(e) {
-  let [t, n, i, s] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.default, r.default, c.default, l.default];
-  if ((0, d.isGuildEventEnded)(e)) return !1;
+function I(e) {
+  let [t, n, l, d] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.default, i.default, u.default, s.default];
+  if ((0, c.isGuildEventEnded)(e)) return !1;
   let {
-    guild_id: E,
-    channel_id: p
-  } = e, m = e.entity_type === f.GuildScheduledEventEntityTypes.EXTERNAL, v = m ? t.getDefaultChannel(e.guild_id) : n.getChannel(p), I = i.getGuild(E), h = s.getStageInstanceByChannel(p);
-  return !!(0, u.canViewInviteModal)(a.default, I, v, h) && null != v && _(e, [n])
+    guild_id: f,
+    channel_id: I
+  } = e, h = e.entity_type === E.GuildScheduledEventEntityTypes.EXTERNAL, T = h ? t.getDefaultChannel(e.guild_id) : n.getChannel(I), N = l.getGuild(f), v = d.getStageInstanceByChannel(I);
+  return !!(0, a.canViewInviteModal)(o.default, N, T, v) && null != T && _(e, [n])
 }
 
-function m(e) {
-  return (0, i.useStateFromStores)([o.default, r.default, c.default, l.default], () => p(e, [o.default, r.default, c.default, l.default]), [e])
+function h(e) {
+  return (0, l.useStateFromStores)([r.default, i.default, u.default, s.default], () => I(e, [r.default, i.default, u.default, s.default]), [e])
 }

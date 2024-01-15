@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   handleDoubleClick: function() {
-    return g
+    return A
   },
   default: function() {
     return O
@@ -27,8 +27,8 @@ var a = n("414456"),
   N = n("879035"),
   I = n("49111"),
   m = n("724210"),
-  A = n("122693");
-async function g() {
+  g = n("122693");
+async function A() {
   if ((0, _.isMac)() && _.isPlatformEmbedded) {
     var e, t, n;
     let l = null !== (n = await (null === (e = (t = window.DiscordNative.remoteApp).getDefaultDoubleClickAction) || void 0 === e ? void 0 : e.call(t))) && void 0 !== n ? n : "Maximize";
@@ -61,14 +61,14 @@ function C(e) {
       let e = null != a && !M;
       return i.isMobile ? S : (0, l.jsxs)(l.Fragment, {
         children: [_, e ? (0, l.jsx)(f.default, {
-          className: A.search
+          className: g.search
         }, null != s ? s : a) : null, O && (0, l.jsx)(h.default.Divider, {}), (0, l.jsx)(N.default, {}), (0, l.jsx)(d.default, {
           canShowReminder: !0
         }), (0, l.jsx)(c.default, {}), v ? (0, l.jsx)(p.default, {}) : (0, l.jsx)(T.default, {})]
       })
     }(),
     transparent: u,
-    onDoubleClick: g,
+    onDoubleClick: A,
     "aria-label": I,
     "aria-labelledby": m,
     role: R,
@@ -87,7 +87,7 @@ function R(e) {
   } = e;
   return (0, l.jsx)(h.default, {
     className: n,
-    onDoubleClick: g,
+    onDoubleClick: A,
     "aria-label": a,
     "aria-labelledby": s,
     role: i,
@@ -102,7 +102,7 @@ function M(e) {
   } = e, {
     AnalyticsLocationProvider: a
   } = (0, u.default)(o.default.HEADER_BAR), i = s(n.className, {
-    [A.forumOrHome]: null != n.channelType && I.ChannelTypesSets.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === m.StaticChannelRoute.GUILD_HOME
+    [g.forumOrHome]: null != n.channelType && I.ChannelTypesSets.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === m.StaticChannelRoute.GUILD_HOME
   });
   return (0, l.jsx)(a, {
     children: t ? (0, l.jsx)(C, {

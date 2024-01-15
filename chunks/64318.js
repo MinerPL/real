@@ -26,14 +26,14 @@ var a = n("414456"),
 
 function m(e) {
   let t = (0, _.useInDesktopNotificationCenterExperiment)();
-  return t ? (0, l.jsx)(A, {
+  return t ? (0, l.jsx)(g, {
     ...e
-  }) : (0, l.jsx)(g, {
+  }) : (0, l.jsx)(A, {
     ...e
   })
 }
 
-function A(e) {
+function g(e) {
   let {
     tab: t,
     setTab: n,
@@ -41,13 +41,13 @@ function A(e) {
     badgeState: _,
     closePopout: m
   } = e, {
-    showReminders: A
+    showReminders: g
   } = E.default.useExperiment({
     location: "RecentsHeader"
   }, {
     autoTrackExposure: !1
   }), {
-    enabled: g
+    enabled: A
   } = f.default.useExperiment({
     location: "RecentsHeader"
   }), C = (0, i.default)([c.default], () => c.default.getUnseenInviteCount()), R = (0, i.default)([h.default], () => h.default.getMessageReminders()), M = R.length;
@@ -93,7 +93,7 @@ function A(e) {
             [I.active]: t === r.InboxTab.MENTIONS
           }),
           children: N.default.Messages.MENTIONS
-        }), g ? (0, l.jsxs)(o.TabBar.Item, {
+        }), A ? (0, l.jsxs)(o.TabBar.Item, {
           "aria-label": "game_invites",
           id: r.InboxTab.GAME_INVITES,
           className: s(I.tab, I.expanded, {
@@ -103,7 +103,7 @@ function A(e) {
             color: d.default.STATUS_DANGER,
             className: s(I.iconBadge)
           }) : null]
-        }) : null, A ? (0, l.jsxs)(o.TabBar.Item, {
+        }) : null, g ? (0, l.jsxs)(o.TabBar.Item, {
           "aria-label": "todos",
           id: r.InboxTab.TODOS,
           className: s(I.tab, I.expanded, {
@@ -122,7 +122,7 @@ function A(e) {
   })
 }
 
-function g(e) {
+function A(e) {
   let {
     tab: t,
     setTab: n,
