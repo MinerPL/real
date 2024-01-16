@@ -61,84 +61,90 @@ function x(e) {
   }(), b = (0, E.default)({
     applicationId: l.id,
     size: 1024
-  }), G = (0, m.default)(), B = (0, o.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(O).find(e => e.instanceId === x.id)), k = (0, o.useStateFromStoresArray)([C.default], () => {
-    var e;
-    return Array.from(null !== (e = null == B ? void 0 : B.userIds) && void 0 !== e ? e : []).map(e => C.default.getUser(e)).filter(A.isNotNullish)
-  }), w = (0, o.useStateFromStores)([g.default], () => {
-    var e;
-    let t = null == B ? void 0 : B.userIds.values().next().value;
-    return null == t ? null : null === (e = g.default.findActivity(t.user_id, e => e.application_id === l.id)) || void 0 === e ? void 0 : e.details
-  }), H = s.useMemo(() => {
-    let e = new I.default(l);
-    return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = N.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
-  }, [l]), F = function(e, t, n) {
-    let a = (0, o.useStateFromStores)([d.default], () => {
-        var n;
-        return (null === (n = d.default.getSelfEmbeddedActivityForChannel(t)) || void 0 === n ? void 0 : n.applicationId) === e.id
-      }),
-      s = (0, f.useEmbeddedActivityJoinability)({
-        userId: T.default.getId(),
-        channelId: t,
-        application: e
-      });
-    if (null == n) return {
-      status: M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED
-    };
-    if (a) return {
-      tooltip: M.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY
-    };
-    switch (s) {
-      case f.EmbeddedActivityJoinability.CAN_JOIN:
-        return null;
-      case f.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
-        return {
-          tooltip: M.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS
-        };
-      case f.EmbeddedActivityJoinability.ACTIVITY_AGE_GATED:
-        return {
-          tooltip: M.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE
-        };
-      case f.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
-        return {
-          tooltip: M.default.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS
-        };
-      case f.EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS:
-        return {
-          tooltip: M.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS
-        };
-      case f.EmbeddedActivityJoinability.CHANNEL_FULL:
-        return {
-          tooltip: M.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL
-        };
-      case f.EmbeddedActivityJoinability.NO_CHANNEL_CONNECT_PERMISSION:
-        return {
-          tooltip: M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_VOICE_PERMISSION
-        };
-      case f.EmbeddedActivityJoinability.NO_CHANNEL:
-      case f.EmbeddedActivityJoinability.NO_GUILD:
-      case f.EmbeddedActivityJoinability.NO_USER:
-      case f.EmbeddedActivityJoinability.IS_AFK_CHANNEL:
-        return {
-          tooltip: M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL
-        }
-    }
-  }(H, O, B), V = async () => {
-    if (null != B) {
-      P(!0);
-      try {
-        await (0, c.default)({
-          applicationId: B.applicationId,
-          currentEmbeddedApplication: G,
-          activityChannelId: O,
-          locationObject: D.location,
-          embeddedActivitiesManager: h.default,
-          analyticsLocations: y
-        })
-      } finally {
-        P(!1)
+  }), G = (0, m.default)(), B = (0, o.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(O).find(e => e.instanceId === x.id)), k = (0, o.useStateFromStores)([T.default], () => T.default.getId()), w = null == B, H = null != B && B.userIds.has(k), F = w ? M.default.Messages.EMBEDDED_ACTIVITIES_ENDED : M.default.Messages.EMBEDDED_ACTIVITIES_JOIN;
+  H && (F = M.default.Messages.EMBEDDED_ACTIVITIES_JOINED);
+  let V = (0, o.useStateFromStoresArray)([C.default], () => {
+      var e;
+      return Array.from(null !== (e = null == B ? void 0 : B.userIds) && void 0 !== e ? e : []).map(e => C.default.getUser(e)).filter(A.isNotNullish)
+    }),
+    Y = (0, o.useStateFromStores)([g.default], () => {
+      var e;
+      let t = null == B ? void 0 : B.userIds.values().next().value;
+      return null == t ? null : null === (e = g.default.findActivity(t.user_id, e => e.application_id === l.id)) || void 0 === e ? void 0 : e.details
+    }),
+    W = s.useMemo(() => {
+      let e = new I.default(l);
+      return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = N.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
+    }, [l]),
+    K = function(e, t, n) {
+      let a = (0, o.useStateFromStores)([d.default], () => {
+          var n;
+          return (null === (n = d.default.getSelfEmbeddedActivityForChannel(t)) || void 0 === n ? void 0 : n.applicationId) === e.id
+        }),
+        s = (0, f.useEmbeddedActivityJoinability)({
+          userId: T.default.getId(),
+          channelId: t,
+          application: e
+        });
+      if (null == n) return {
+        status: M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED
+      };
+      if (a) return {
+        tooltip: M.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY
+      };
+      switch (s) {
+        case f.EmbeddedActivityJoinability.CAN_JOIN:
+          return null;
+        case f.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
+          return {
+            tooltip: M.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS
+          };
+        case f.EmbeddedActivityJoinability.ACTIVITY_AGE_GATED:
+          return {
+            tooltip: M.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE
+          };
+        case f.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
+          return {
+            tooltip: M.default.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS
+          };
+        case f.EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS:
+          return {
+            tooltip: M.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS
+          };
+        case f.EmbeddedActivityJoinability.CHANNEL_FULL:
+          return {
+            tooltip: M.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL
+          };
+        case f.EmbeddedActivityJoinability.NO_CHANNEL_CONNECT_PERMISSION:
+          return {
+            tooltip: M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_VOICE_PERMISSION
+          };
+        case f.EmbeddedActivityJoinability.NO_CHANNEL:
+        case f.EmbeddedActivityJoinability.NO_GUILD:
+        case f.EmbeddedActivityJoinability.NO_USER:
+        case f.EmbeddedActivityJoinability.IS_AFK_CHANNEL:
+          return {
+            tooltip: M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL
+          }
       }
-    }
-  };
+    }(W, O, B),
+    z = async () => {
+      if (null != B) {
+        P(!0);
+        try {
+          await (0, c.default)({
+            applicationId: B.applicationId,
+            currentEmbeddedApplication: G,
+            activityChannelId: O,
+            locationObject: D.location,
+            embeddedActivitiesManager: h.default,
+            analyticsLocations: y
+          })
+        } finally {
+          P(!1)
+        }
+      }
+    };
   return (0, a.jsx)("div", {
     className: i(v.outerContainer, {
       [v.rowLayout]: !U,
@@ -165,12 +171,12 @@ function x(e) {
           }), (0, a.jsx)(r.Text, {
             variant: "text-md/medium",
             lineClamp: U ? 3 : 1,
-            children: null !== (n = null !== (t = null == F ? void 0 : F.status) && void 0 !== t ? t : w) && void 0 !== n ? n : M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
+            children: null !== (n = null !== (t = null == K ? void 0 : K.status) && void 0 !== t ? t : Y) && void 0 !== n ? n : M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
           })]
         }), (0, a.jsxs)("div", {
           className: v.cta,
           children: [(0, a.jsx)(r.Tooltip, {
-            text: null == F ? void 0 : F.tooltip,
+            text: null == K ? void 0 : K.tooltip,
             children: e => {
               let {
                 onClick: t,
@@ -179,19 +185,19 @@ function x(e) {
               return (0, a.jsx)(r.Button, {
                 ...n,
                 onClick: () => {
-                  V(), null == t || t()
+                  z(), null == t || t()
                 },
-                color: r.ButtonColors.GREEN,
+                color: w ? r.ButtonColors.PRIMARY : r.ButtonColors.GREEN,
                 submitting: R,
-                disabled: null != F,
-                children: M.default.Messages.EMBEDDED_ACTIVITIES_JOIN
+                disabled: H || w,
+                children: F
               })
             }
           }), (0, a.jsx)("div", {
             className: v.avatars,
             children: (0, a.jsx)(S.default, {
               guildId: L,
-              users: k,
+              users: V,
               max: 4
             })
           })]

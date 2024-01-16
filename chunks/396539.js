@@ -24,8 +24,8 @@ let f = e => {
       initialized: N,
       loading: I,
       items: m,
-      hasMore: g,
-      cursor: A,
+      hasMore: A,
+      cursor: g,
       errored: C
     } = (0, a.useStateFromStoresObject)([u.default], () => ({
       initialized: u.default.initialized,
@@ -57,8 +57,8 @@ let f = e => {
       })
     }, [N, _, t, E, R, M, h]);
     let L = l.useCallback(async e => {
-      !S.current && N && g && null != A && (e || !C) && (S.current = !0, p(!0), await (0, o.fetchNotificationCenterItems)({
-        after: A,
+      !S.current && N && A && null != g && (e || !C) && (S.current = !0, p(!0), await (0, o.fetchNotificationCenterItems)({
+        after: g,
         with_mentions: E,
         roles_filter: R,
         everyone_filter: M,
@@ -66,12 +66,12 @@ let f = e => {
       }, () => {
         S.current = !1
       }), p(!1))
-    }, [N, g, A, C, E, R, M]);
+    }, [N, A, g, C, E, R, M]);
     return {
       initialized: N,
       loading: I,
       items: m,
-      hasMore: g,
+      hasMore: A,
       loadMore: L,
       loadingMore: T,
       setReadNotifItemToAcked: e => {

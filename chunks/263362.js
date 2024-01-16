@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   RecentsPopout: function() {
-    return g
+    return A
   }
 }), n("222007");
 var l = n("37983"),
@@ -24,12 +24,12 @@ var l = n("37983"),
   I = n("49111"),
   m = n("782340");
 
-function g(e) {
+function A(e) {
   let {
     onOpen: t,
     onClose: n,
-    children: g,
-    badgeState: A,
+    children: A,
+    badgeState: g,
     popoutPosition: C,
     popoutAlign: R
   } = e, [M, O] = a.useState(!1), [L, v] = function() {
@@ -99,16 +99,16 @@ function g(e) {
         "aria-label": m.default.Messages.INBOX,
         children: L === r.InboxTab.FOR_YOU && F ? (0, l.jsx)(_.default, {
           setTab: v,
-          badgeState: A,
+          badgeState: g,
           closePopout: x
         }) : L === r.InboxTab.MENTIONS ? (0, l.jsx)(T.default, {
           setTab: v,
           onJump: G,
-          badgeState: A,
+          badgeState: g,
           closePopout: x
         }) : j && L === r.InboxTab.GAME_INVITES ? (0, l.jsx)(N.default, {
           setTab: v,
-          badgeState: A,
+          badgeState: g,
           closePopout: x
         }) : b && L === r.InboxTab.TODOS ? (0, l.jsx)(S.default, {
           setTab: v,
@@ -118,7 +118,7 @@ function g(e) {
           fallback: (0, l.jsx)(p.UnreadsCrashed, {
             setTab: v,
             closePopout: x,
-            badgeState: A
+            badgeState: g
           }),
           children: (0, l.jsx)(p.default, {
             setTab: v,
@@ -126,7 +126,7 @@ function g(e) {
             showTutorial: D,
             setSeenTutorial: y,
             closePopout: x,
-            badgeState: A
+            badgeState: g
           })
         })
       })
@@ -136,7 +136,7 @@ function g(e) {
       let {
         isShown: n
       } = t;
-      return g(P, n, e)
+      return A(P, n, e)
     }
   })
 }
