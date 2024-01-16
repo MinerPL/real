@@ -399,17 +399,15 @@ function q() {
 }
 
 function X(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.keys(V).length,
-    n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.keys(V).length;
   return s(V).keys().filter(e => g.IS_SEARCH_FILTER_TOKEN.test(e)).filter(e => null != V[e].key).map(e => ({
     token: e,
     text: V[e].key
   })).filter(t => {
     let {
-      token: l,
-      text: a
+      text: n
     } = t;
-    return n ? u(e.toLowerCase(), a) : V[l].plainText === e.toLowerCase()
+    return u(e.toLowerCase(), n)
   }).take(t).value()
 }
 var z = V

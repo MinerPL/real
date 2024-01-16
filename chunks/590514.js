@@ -32,8 +32,8 @@ var l = n("37983"),
   N = n("377253"),
   I = n("957255"),
   m = n("600133"),
-  g = n("471671"),
-  A = n("822332"),
+  A = n("471671"),
+  g = n("822332"),
   C = n("945330"),
   R = n("599110"),
   M = n("659500"),
@@ -160,7 +160,7 @@ function b(e) {
     scrollerClassName: N,
     className: I,
     listName: C
-  } = e, y = a.useRef(null), x = (0, h.default)(C, y), P = (0, d.useStateFromStores)([m.default], () => m.default.hasNotice()), U = (0, d.useStateFromStores)([g.default], () => g.default.windowSize());
+  } = e, y = a.useRef(null), x = (0, h.default)(C, y), P = (0, d.useStateFromStores)([m.default], () => m.default.hasNotice()), U = (0, d.useStateFromStores)([A.default], () => A.default.windowSize());
   a.useEffect(() => {
     R.default.track(O.AnalyticEvents.OPEN_POPOUT, {
       type: t
@@ -218,7 +218,7 @@ function b(e) {
   let k = null == p ? void 0 : p(),
     w = j && null != k ? (0, l.jsx)("div", {
       className: v.footer,
-      children: (0, l.jsx)(A.default, {
+      children: (0, l.jsx)(g.default, {
         style: {
           width: "100%",
           paddingTop: 10
@@ -278,8 +278,8 @@ function F(e) {
     renderHeader: T,
     renderEmptyState: I,
     renderMessage: m,
-    getProTip: g,
-    scrollerClassName: A,
+    getProTip: A,
+    scrollerClassName: g,
     className: C,
     onCloseMessage: R,
     listName: M
@@ -316,7 +316,7 @@ function F(e) {
   })), [i, s]);
   return (0, l.jsx)(b, {
     className: C,
-    scrollerClassName: A,
+    scrollerClassName: g,
     items: x,
     loading: o,
     analyticsName: t,
@@ -324,7 +324,7 @@ function F(e) {
     renderHeader: T,
     hasMore: r,
     loadMore: u,
-    getProTip: g,
+    getProTip: A,
     renderItem: function(e) {
       let {
         message: t,

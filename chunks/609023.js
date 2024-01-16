@@ -23,8 +23,8 @@ var l = n("37983"),
   N = n("898260"),
   I = n("888400"),
   m = n("530686"),
-  g = n("970268"),
-  A = n("49111"),
+  A = n("970268"),
+  g = n("49111"),
   C = n("782340"),
   R = n("145568");
 let M = {
@@ -83,11 +83,11 @@ function L(e) {
     location: "20e3b0_1"
   }, {
     autoTrackExposure: !1
-  }), m = _.MessageDisplayCompact.useSetting(), M = (0, o.useStateFromStores)([T.default], () => T.default.can(A.Permissions.CREATE_INSTANT_INVITE, s)), L = (0, E.isSpamSupported)(s), v = !1, D = 0 === a.messages.length || a.messages[0].timestamp.isSame(i(), "day"), y = null !== (n = null === (t = p.default.getUser(S.default.getId())) || void 0 === t ? void 0 : t.hasFlag(A.UserFlags.SPAMMER)) && void 0 !== n && n, x = [];
+  }), m = _.MessageDisplayCompact.useSetting(), M = (0, o.useStateFromStores)([T.default], () => T.default.can(g.Permissions.CREATE_INSTANT_INVITE, s)), L = (0, E.isSpamSupported)(s), v = !1, D = 0 === a.messages.length || a.messages[0].timestamp.isSame(i(), "day"), y = null !== (n = null === (t = p.default.getUser(S.default.getId())) || void 0 === t ? void 0 : t.hasFlag(g.UserFlags.SPAMMER)) && void 0 !== n && n, x = [];
   if (!a.collapsed) {
     let e = null,
       t = null,
-      n = a.messages.slice(0, g.MAX_SHOWN_MESSAGES);
+      n = a.messages.slice(0, A.MAX_SHOWN_MESSAGES);
     n.forEach(n => {
       if (!(0, c.default)(n, M)) {
         if (!D && (null == e || !e.isSame(n.timestamp, "day"))) {
@@ -107,7 +107,7 @@ function L(e) {
           gotoChannel: r
         }, n.id))
       }
-    }), a.messages.length >= g.MAX_SHOWN_MESSAGES && x.push((0, l.jsxs)(u.Button, {
+    }), a.messages.length >= A.MAX_SHOWN_MESSAGES && x.push((0, l.jsxs)(u.Button, {
       color: u.Button.Colors.LINK,
       look: u.Button.Looks.LINK,
       onClick: e => r(e, n[n.length - 1].id),

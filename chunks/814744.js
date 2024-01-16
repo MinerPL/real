@@ -24,8 +24,8 @@ var a = n("414456"),
   N = n("476263"),
   I = n("476765"),
   m = n("782340"),
-  g = n("636431");
-let A = {
+  A = n("636431");
+let g = {
   top: 8,
   bottom: 8,
   left: -4,
@@ -42,9 +42,9 @@ function C(e) {
     toggleCollapsed: u
   } = e, d = (0, i.useListItem)("recents-header-".concat(t.id, "-").concat((0, I.useUID)()));
   return (0, l.jsx)(o.FocusRing, {
-    offset: A,
+    offset: g,
     children: (0, l.jsxs)("div", {
-      className: g.channelHeader,
+      className: A.channelHeader,
       ...d,
       tabIndex: 0,
       "data-recents-channel": t.id,
@@ -86,7 +86,7 @@ function M(e) {
     onClick: n,
     tabIndex: -1,
     children: (0, l.jsx)("img", {
-      className: g.dmIcon,
+      className: A.dmIcon,
       src: s,
       alt: "",
       "aria-hidden": !0
@@ -101,7 +101,7 @@ function O(e) {
   } = e, a = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(t.guild_id));
   return null == a ? null : (0, l.jsx)(N.default, {
     "aria-hidden": !0,
-    className: g.guildIcon,
+    className: A.guildIcon,
     guild: a,
     size: N.default.Sizes.MEDIUM,
     active: !0,
@@ -120,34 +120,34 @@ function L(e) {
   }) : t.isPrivate() ? (0, l.jsx)(v, {
     channel: t
   }) : (0, l.jsx)(o.Clickable, {
-    className: s(g.subtext, g.guildName),
+    className: s(A.subtext, A.guildName),
     onClick: n,
     children: S
   });
   return (0, l.jsxs)("div", {
-    className: g.channelNameSection,
+    className: A.channelNameSection,
     children: [(0, l.jsx)(o.Heading, {
       variant: "heading-md/semibold",
-      className: g.channelNameHeader,
+      className: A.channelNameHeader,
       children: (0, l.jsxs)(o.Clickable, {
-        className: g.channelName,
+        className: A.channelName,
         onClick: n,
         children: [t.isThread() || t.isGroupDM() || null == d ? null : (0, l.jsx)(d, {
-          className: t.isForumLikeChannel() ? g.forumIcon : void 0,
+          className: t.isForumLikeChannel() ? A.forumIcon : void 0,
           width: 18,
           height: 18
         }), (0, l.jsx)("span", {
-          className: g.channelNameSpan,
+          className: A.channelNameSpan,
           children: E
         }), null != a && a > 0 ? (0, l.jsx)(p.default, {
           value: a,
-          className: g.badge
+          className: A.badge
         }) : null]
       })
     }), (0, l.jsx)(o.Text, {
       color: "header-secondary",
       variant: "text-xs/normal",
-      className: g.subtextContainer,
+      className: A.subtextContainer,
       children: T
     })]
   })
@@ -169,8 +169,8 @@ function v(e) {
     }
   });
   return null == a ? null : (0, l.jsx)(u.default, {
-    className: g.activityStatus,
-    emojiClassName: g.activityEmoji,
+    className: A.activityStatus,
+    emojiClassName: A.activityEmoji,
     activities: a,
     applicationStream: s,
     hideTooltip: !0,
