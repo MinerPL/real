@@ -143,7 +143,7 @@ let x = t => {
         }), (0, n.jsx)(u.Heading, {
           variant: "heading-lg/normal",
           children: _ && null != i.guild_metadata ? C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_DESCRIPTION_GUILD.format({
-            guildName: null == i ? void 0 : null === (e = i.guild_metadata) || void 0 === e ? void 0 : e.guild_name,
+            guildName: null == i ? void 0 : null === (e = i.guild_metadata) || void 0 === e ? void 0 : e.name,
             description: r,
             descriptionHook: t => (0, n.jsx)(u.Text, {
               tag: "span",

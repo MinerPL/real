@@ -187,7 +187,7 @@ var y = e => {
     className: T.classificationContainer,
     children: [(0, i.jsx)(C, {
       classificationTypeText: s.description,
-      guildName: null == s ? void 0 : null === (t = s.guild_metadata) || void 0 === t ? void 0 : t.guild_name
+      guildName: null == s ? void 0 : null === (t = s.guild_metadata) || void 0 === t ? void 0 : t.name
     }), v && null == s.guild_metadata && (0, i.jsx)(p.ClassificationEvidence, {
       flaggedContent: null !== (n = s.flagged_content) && void 0 !== n ? n : []
     }), (0, i.jsx)(g, {
