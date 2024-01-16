@@ -23,8 +23,8 @@ var l = n("37983"),
   N = n("183030"),
   I = n("899779"),
   m = n("778597"),
-  A = n("960082"),
-  g = n("49111"),
+  g = n("960082"),
+  A = n("49111"),
   C = n("782340"),
   R = n("183419"),
   M = n("786948"),
@@ -119,11 +119,11 @@ let y = a.memo(function(e) {
           null != e && 2 === e.length ? (0, d.openUserProfileModal)({
             userId: e[1],
             analyticsLocation: {
-              section: g.AnalyticsSections.NOTIFICATION_CENTER
+              section: A.AnalyticsSections.NOTIFICATION_CENTER
             }
           }) : await (0, o.default)(n)
         }
-        h.default.track(g.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
+        h.default.track(A.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
           action_type: T.NotificationCenterActionTypes.CLICKED,
           notification_center_id: r.id,
           item_type: r.type,
@@ -166,7 +166,7 @@ let y = a.memo(function(e) {
             children: (0, p.getRelativeTimestamp)(s.default.extractTimestamp(r.id))
           }), C]
         })]
-      }), M ? null : (0, l.jsx)(A.MoreButton, {
+      }), M ? null : (0, l.jsx)(g.MoreButton, {
         item: r
       })]
     })

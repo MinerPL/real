@@ -26,8 +26,8 @@ var l = n("37983"),
   N = n("150938"),
   I = n("805614"),
   m = n("64318"),
-  A = n("474282"),
-  g = n("970268"),
+  g = n("474282"),
+  A = n("970268"),
   C = n("49111"),
   R = n("782340"),
   M = n("930391");
@@ -40,7 +40,7 @@ function O(e) {
     setSeenTutorial: r,
     closePopout: O,
     badgeState: v
-  } = e, D = a.useRef(null), [y, x] = (0, g.default)(D), {
+  } = e, D = a.useRef(null), [y, x] = (0, A.default)(D), {
     loadState: P,
     channels: U
   } = y, {
@@ -132,11 +132,11 @@ function O(e) {
               D.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
             ...a,
-            onScroll: P === g.LoadState.Done ? void 0 : b,
+            onScroll: P === A.LoadState.Done ? void 0 : b,
             className: M.scroller,
             children: [s ? (0, l.jsx)(L, {
               setSeenTutorial: r
-            }) : null, (0, A.default)(U, x, n), P === g.LoadState.Done ? null : (0, l.jsx)(f.Spinner, {
+            }) : null, (0, g.default)(U, x, n), P === A.LoadState.Done ? null : (0, l.jsx)(f.Spinner, {
               className: M.spinner
             })]
           })

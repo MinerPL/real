@@ -21,7 +21,7 @@ var a = n("37983"),
 function g(e, t) {
   let {
     reducedMotion: n
-  } = i.useContext(s.AccessibilityPreferencesContext), g = (0, o.useIsActiveChannelOrUnarchivableThread)(t), I = (0, l.useStateFromStores)([c.default], () => c.default.can(M.Permissions.MANAGE_MESSAGES, t) && g, [t, g]), p = e.reactions.reduce((e, t) => {
+  } = i.useContext(s.AccessibilityPreferencesContext), g = (0, o.useIsActiveChannelOrUnarchivableThread)(t), p = (0, l.useStateFromStores)([c.default], () => c.default.can(M.Permissions.MANAGE_MESSAGES, t) && g, [t, g]), I = e.reactions.reduce((e, t) => {
     var n;
     return (null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) != null || null != e.find(e => null != e.id && e.id === t.emoji.id || e.name === t.emoji.name) ? e : [...e, t.emoji]
   }, []), S = (n, a) => {
@@ -35,11 +35,11 @@ function g(e, t) {
       }
     })
   };
-  return !I || null == e.reactions || 0 === e.reactions.length || e.isPoll() && !(0, r.hasNonVoteReactions)(e) ? null : (0, a.jsx)(s.MenuItem, {
+  return !p || null == e.reactions || 0 === e.reactions.length || e.isPoll() && !(0, r.hasNonVoteReactions)(e) ? null : (0, a.jsx)(s.MenuItem, {
     id: "remove-emoji-reactions",
     label: m.default.Messages.REMOVE_EMOJI_REACTIONS,
     color: "danger",
-    children: p.map(e => {
+    children: I.map(e => {
       var t, i;
       return (0, a.jsx)(s.MenuItem, {
         id: "remove-emoji-reactions-".concat(null !== (t = e.name) && void 0 !== t ? t : e.id),
