@@ -33,7 +33,7 @@ function A(e) {
     userId: t,
     guildId: n,
     onNavigate: l
-  } = e, s = (0, I.useProfileThemedPanelBackground)(t, n, .7, d.tokens.colors.BACKGROUND_PRIMARY);
+  } = e, s = (0, I.useProfileThemedPanelBackground)(t, n, .8, d.tokens.colors.BACKGROUND_SECONDARY);
   return (0, a.jsxs)("div", {
     className: i(x.header),
     style: {

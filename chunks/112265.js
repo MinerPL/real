@@ -10,8 +10,8 @@ var l = n("37983"),
   i = n.n(a),
   u = n("446674"),
   r = n("77078"),
-  d = n("812204"),
-  o = n("685665"),
+  o = n("812204"),
+  d = n("685665"),
   c = n("69927"),
   f = n("994906"),
   h = n("459824"),
@@ -25,13 +25,13 @@ var l = n("37983"),
   p = n("305961"),
   I = n("18494"),
   M = n("98292"),
-  b = n("155207"),
-  A = n("466818"),
-  N = n("485810"),
+  A = n("155207"),
+  N = n("466818"),
+  b = n("485810"),
   j = n("914985"),
-  _ = n("714247"),
-  v = n("565556"),
-  R = n("891222"),
+  v = n("714247"),
+  R = n("565556"),
+  _ = n("891222"),
   B = n("49111"),
   k = n("724210"),
   G = n("782340"),
@@ -82,7 +82,7 @@ function y(e) {
       })
     }) : (0, l.jsx)("div", {}),
     children: [(0, l.jsx)(S.default.Icon, {
-      icon: b.default,
+      icon: A.default,
       "aria-hidden": !0
     }), (0, l.jsx)(S.default.Title, {
       children: i
@@ -95,8 +95,8 @@ function P(e) {
     guildId: t
   } = e, n = (0, u.useStateFromStores)([p.default], () => p.default.getGuild(t)), {
     AnalyticsLocationProvider: a
-  } = (0, o.default)(d.default.MEMBER_SAFETY_PAGE), c = (0, A.useCanAccessMemberSafetyPage)(t), m = (0, h.useCanAccessGuildMemberModView)(t), S = (0, u.useStateFromStores)([I.default], () => I.default.getLastSelectedChannelId(t)), M = (0, u.useStateFromStores)([T.default], () => T.default.getChannel(S)), b = s.useRef(null);
-  (0, N.useSubscribeToGuildMemberUpdates)(t), s.useEffect(() => {
+  } = (0, d.default)(o.default.MEMBER_SAFETY_PAGE), c = (0, N.useCanAccessMemberSafetyPage)(t), m = (0, h.useCanAccessGuildMemberModView)(t), S = (0, u.useStateFromStores)([I.default], () => I.default.getLastSelectedChannelId(t)), M = (0, u.useStateFromStores)([T.default], () => T.default.getChannel(S)), A = s.useRef(null);
+  (0, b.useSubscribeToGuildMemberUpdates)(t), s.useEffect(() => {
     if (!c && null != n) {
       var e;
       let t = null === (e = C.default.getDefaultChannel(n.id)) || void 0 === e ? void 0 : e.id;
@@ -123,20 +123,21 @@ function P(e) {
         previousChannel: M
       }), (0, l.jsx)(r.AdvancedScroller, {
         className: i(L.scroller),
-        ref: b,
+        ref: A,
+        orientation: "vertical",
         children: (0, l.jsxs)("div", {
           className: i(F.content, L.container),
           children: [(0, l.jsx)(j.default, {
             guild: n
-          }), (0, l.jsx)(R.default, {
+          }), (0, l.jsx)(_.default, {
             guild: n,
             onMemberSelect: P
           })]
         })
-      }), (0, l.jsx)(v.default, {
+      }), (0, l.jsx)(R.default, {
         guildId: n.id
       })]
-    }), m && (0, l.jsx)(_.default, {
+    }), m && (0, l.jsx)(v.default, {
       guildId: n.id
     })]
   }) : null

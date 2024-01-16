@@ -46,13 +46,13 @@ function I(e) {
             children: S.default.Messages.MEMBER_VERIFICATION_ACCOUNT_VERIFIED
           }),
           description: l ? (0, a.jsx)(o.CheckmarkBoldIcon, {
-            className: s(_.verifiedIcon),
             width: g.USER_MOD_ICON_SIZE_PX,
-            height: g.USER_MOD_ICON_SIZE_PX
+            height: g.USER_MOD_ICON_SIZE_PX,
+            color: f.tokens.colors.INFO_POSITIVE_FOREGROUND
           }) : (0, a.jsx)(u.CloseLargeBoldIcon, {
-            className: s(_.unverifiedIcon),
             width: g.USER_MOD_ICON_SIZE_PX,
-            height: g.USER_MOD_ICON_SIZE_PX
+            height: g.USER_MOD_ICON_SIZE_PX,
+            color: f.tokens.colors.INFO_DANGER_FOREGROUND
           })
         }), I !== h.UserRulesAgreementLevel.NO_GATE && (0, a.jsx)(g.UserModInfoItem, {
           icon: (0, a.jsx)(r.BookCheckIcon, {

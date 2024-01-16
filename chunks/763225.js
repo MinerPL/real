@@ -23,7 +23,7 @@ function o(e, t) {
         });
       return o
     }(e, t);
-  return (0, l.useToken)(null != o ? o : l.tokens.colors.BACKGROUND_SECONDARY, u).hex({
+  return (0, l.useToken)(null != o ? o : l.tokens.colors.BACKGROUND_NESTED_FLOATING, u).hex({
     opacity: n
   })
 }

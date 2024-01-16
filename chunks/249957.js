@@ -23,7 +23,7 @@ function E(e) {
   let {
     userId: t,
     guildId: n
-  } = e, l = (0, d.useProfileThemedPanelBackground)(t, n, .7, r.tokens.colors.BACKGROUND_PRIMARY);
+  } = e, l = (0, d.useProfileThemedPanelBackground)(t, n, .8, r.tokens.colors.BACKGROUND_SECONDARY);
   return (0, a.jsxs)("div", {
     className: s(m.header),
     style: {

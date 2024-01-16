@@ -35,30 +35,36 @@ function g(e) {
     userId: g,
     guildId: S,
     onClose: _,
-    className: I
-  } = e, T = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(S), [S]), v = null !== (t = null == T ? void 0 : T.details.modViewPanel) && void 0 !== t ? t : m.ModViewPanel.INFO, x = (0, o.default)(g);
-  let N = null == (n = v) ? null : n === m.ModViewPanel.INFO ? "backwards" : "forwards",
-    A = (0, c.default)(N),
+    analyticsLocation: I,
+    className: T
+  } = e, v = (0, i.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(S), [S]), x = null !== (t = null == v ? void 0 : v.details.modViewPanel) && void 0 !== t ? t : m.ModViewPanel.INFO, N = (0, o.default)(g);
+  let A = null == (n = x) ? null : n === m.ModViewPanel.INFO ? "backwards" : "forwards",
+    M = (0, c.default)(A),
     {
-      reducedMotion: M
+      reducedMotion: R
     } = l.useContext(r.AccessibilityPreferencesContext),
-    R = l.useCallback(e => {
-      null != T && (0, f.openGuildMemberModViewSidebar)(S, g, T.baseChannelId, {
+    j = l.useCallback(e => {
+      null != v && (0, f.openGuildMemberModViewSidebar)(S, g, v.baseChannelId, {
         modViewPanel: e
       })
-    }, [T, S, g]),
-    j = l.useMemo(() => ({
+    }, [v, S, g]),
+    L = l.useMemo(() => ({
       [E.KeybindActions.CLOSE_MODAL]: {
         binds: ["esc"],
         comboKeysBindGlobal: !0,
         action() {
-          v === m.ModViewPanel.INFO && _(), R(m.ModViewPanel.INFO)
+          switch (x) {
+            case m.ModViewPanel.INFO:
+              return _();
+            case m.ModViewPanel.MESSAGE_HISTORY:
+              return j(m.ModViewPanel.INFO)
+          }
         }
       }
-    }), [_, v, R]);
-  l.useEffect(() => (u.default.enable(), u.default.enableTemp(j), () => u.default.disableTemp()), [j]);
-  let L = (0, s.useTransition)(v, {
-    immediate: x !== g,
+    }), [_, x, j]);
+  l.useEffect(() => (u.default.enable(), u.default.enableTemp(L), () => u.default.disableTemp()), [L]);
+  let O = (0, s.useTransition)(x, {
+    immediate: N !== g,
     value: 0,
     from: {
       value: 1
@@ -74,9 +80,10 @@ function g(e) {
     style: {
       position: "relative",
       height: "100%",
-      flex: 1
+      flex: 1,
+      overflow: "hidden"
     },
-    children: L((e, t, n) => {
+    children: O((e, t, n) => {
       var l, i, r;
       let {
         key: o
@@ -89,11 +96,11 @@ function g(e) {
           backfaceVisibility: "hidden",
           width: "100%",
           height: "100%",
-          ...M.enabled ? {
+          ...R.enabled ? {
             opacity: null === (l = e.value) || void 0 === l ? void 0 : l.to(e => 1 - Math.abs(e))
           } : {
-            left: null === (i = e.value) || void 0 === i ? void 0 : i.to(C("left", A)),
-            right: null === (r = e.value) || void 0 === r ? void 0 : r.to(C("right", A))
+            left: null === (i = e.value) || void 0 === i ? void 0 : i.to(C("left", M)),
+            right: null === (r = e.value) || void 0 === r ? void 0 : r.to(C("right", M))
           }
         },
         children: function(e) {
@@ -102,15 +109,15 @@ function g(e) {
               return (0, a.jsx)(h.default, {
                 userId: g,
                 guildId: S,
-                onNavigate: R,
-                className: I
+                onNavigate: j,
+                className: T
               });
             case m.ModViewPanel.MESSAGE_HISTORY:
               return (0, a.jsx)(p.default, {
                 userId: g,
                 guildId: S,
-                onNavigate: () => R(m.ModViewPanel.INFO),
-                className: I
+                onNavigate: () => j(m.ModViewPanel.INFO),
+                className: T
               });
             default:
               return null

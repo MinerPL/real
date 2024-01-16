@@ -30,23 +30,24 @@ function d(e, t) {
 }
 
 function f() {
-  for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-  let [s, o] = r.useState(t), l = r.useContext(u), f = r.useMemo(() => d(l, s), [s, l]), E = r.useMemo(() => d(l, s.slice(0, s.length - 1)), [s, l]);
+  for (var e, t = arguments.length, n = Array(t), s = 0; s < t; s++) n[s] = arguments[s];
+  let [o, l] = r.useState(n), f = r.useContext(u), E = r.useMemo(() => d(f, o), [o, f]), h = r.useMemo(() => d(f, o.slice(0, o.length - 1)), [o, f]);
   r.useEffect(() => {
-    !a(t, s) && o(t)
-  }, [t]);
-  let h = r.useCallback(e => {
+    !a(n, o) && l(n)
+  }, [n]);
+  let p = r.useCallback(e => {
     let {
       children: t
     } = e;
     return (0, i.jsx)(c, {
-      currentContext: f,
+      currentContext: E,
       children: t
     })
-  }, [f]);
+  }, [E]);
   return {
-    AnalyticsLocationProvider: h,
-    analyticsLocations: f,
-    sourceAnalyticsLocations: E
+    AnalyticsLocationProvider: p,
+    analyticsLocations: E,
+    sourceAnalyticsLocations: h,
+    newestAnalyticsLocation: null !== (e = E[E.length - 1]) && void 0 !== e ? e : null
   }
 }
