@@ -13,8 +13,8 @@ n.r(t), n.d(t, {
 var i = n("884691"),
   l = n("446674"),
   r = n("299039"),
-  o = n("781324"),
-  a = n("647149"),
+  a = n("781324"),
+  o = n("647149"),
   s = n("646356");
 
 function u() {
@@ -26,9 +26,9 @@ function c(e) {
   let t = (0, l.useStateFromStores)([s.default], () => s.default.getClassification(e)),
     n = (0, l.useStateFromStores)([s.default], () => s.default.getClassificationRequestState(e)),
     r = (0, l.useStateFromStores)([s.default], () => s.default.getIsDsaEligible()),
-    u = (0, a.useIsInappAppealIngestionEnabled)();
+    u = (0, o.useIsInappAppealIngestionEnabled)();
   return i.useEffect(() => {
-    void 0 === t && null == n && o.getSafetyHubDataForClassification(e)
+    void 0 === t && null == n && a.getSafetyHubDataForClassification(e)
   }, [e, t, n]), {
     classification: t,
     classificationRequestState: n,

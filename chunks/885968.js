@@ -36,8 +36,8 @@ function x(e) {
     activityInstance: x,
     channelId: O,
     guildId: L
-  } = e, [R, y] = s.useState(!1), {
-    analyticsLocations: P
+  } = e, [R, P] = s.useState(!1), {
+    analyticsLocations: y
   } = (0, p.default)(), D = (0, u.useAnalyticsContext)(), {
     containerRef: j,
     isStacked: U
@@ -124,7 +124,7 @@ function x(e) {
     }
   }(H, O, B), V = async () => {
     if (null != B) {
-      y(!0);
+      P(!0);
       try {
         await (0, c.default)({
           applicationId: B.applicationId,
@@ -132,10 +132,10 @@ function x(e) {
           activityChannelId: O,
           locationObject: D.location,
           embeddedActivitiesManager: h.default,
-          analyticsLocations: P
+          analyticsLocations: y
         })
       } finally {
-        y(!1)
+        P(!1)
       }
     }
   };

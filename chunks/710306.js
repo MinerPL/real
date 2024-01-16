@@ -32,8 +32,8 @@ var a = n("37983"),
   O = n("880013"),
   L = n("943519"),
   R = n("181108"),
-  y = n("599110"),
-  P = n("659632"),
+  P = n("599110"),
+  y = n("659632"),
   D = n("719923"),
   j = n("380186"),
   U = n("158998"),
@@ -305,7 +305,7 @@ class V extends s.Component {
         type: s,
         giftInfo: l
       } = this.props;
-      e.preventDefault(), e.stopPropagation(), y.default.track(G.AnalyticEvents.OPEN_MODAL, {
+      e.preventDefault(), e.stopPropagation(), P.default.track(G.AnalyticEvents.OPEN_MODAL, {
         type: "gift_accept",
         location: {
           ...this.analyticsLocation,
@@ -377,7 +377,7 @@ var W = u.default.connectStores([S.default, v.default, N.default, A.default, M.d
     subscriptionPlan: null != s && null != s.subscriptionPlanId ? (0, j.getOrFetchSubscriptionPlan)(s.subscriptionPlanId) : null,
     isSelfGift: null != s ? C.default.getId() === s.userId : C.default.getId() === n.id,
     resolved: S.default.getIsResolved(t),
-    libraryApplication: null != l && (null == s ? void 0 : s.entitlementBranches) != null ? P.firstLibraryApplicationForGiftCode(s.entitlementBranches, l, A.default) : null,
+    libraryApplication: null != l && (null == s ? void 0 : s.entitlementBranches) != null ? y.firstLibraryApplicationForGiftCode(s.entitlementBranches, l, A.default) : null,
     useReducedMotion: r
   }
 })(Y)

@@ -38,8 +38,8 @@ let h = s.memo(function(e) {
       O = (0, m.isMeReaction)(I, T, v),
       L = (0, d.useEmojiColorPalette)(x && null != C ? C : []),
       R = s ? _ : E,
-      y = x ? g : p,
-      P = (0, c.getMinCounterWidth)(y, m.REACTION_MIN_WIDTH_DIGITS),
+      P = x ? g : p,
+      y = (0, c.getMinCounterWidth)(P, m.REACTION_MIN_WIDTH_DIGITS),
       D = {};
     if (x && null != L) {
       var j;
@@ -51,7 +51,7 @@ let h = s.memo(function(e) {
       O && (D.borderColor = a), D.background = l, t = e, n = e
     }
     let U = {
-      minWidth: P,
+      minWidth: y,
       color: t,
       borderColor: n
     };
@@ -72,7 +72,7 @@ let h = s.memo(function(e) {
       }), (0, a.jsx)("div", {
         className: R.reactionCount,
         style: U,
-        children: y
+        children: P
       })]
     })
   }),

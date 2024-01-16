@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   markAnalyticsFeedItemSeen: function() {
-    return s
+    return i
   },
   markAnalyticsFeedItemUnseen: function() {
-    return l
+    return r
   },
   flushAnalyticsFeedItems: function() {
-    return r
+    return l
   }
 });
-var i = n("913144");
+var s = n("913144");
 
-function s(e, t, n) {
-  i.default.dispatch({
+function i(e, t, n) {
+  s.default.dispatch({
     type: "ANALYTICS_FEED_ITEM_SEEN",
     id: e,
     feedItemId: t,
@@ -21,8 +21,8 @@ function s(e, t, n) {
   })
 }
 
-function l(e, t, n) {
-  i.default.dispatch({
+function r(e, t, n) {
+  s.default.dispatch({
     type: "ANALYTICS_FEED_ITEM_UNSEEN",
     id: e,
     feedItemId: t,
@@ -30,8 +30,8 @@ function l(e, t, n) {
   })
 }
 
-function r(e, t) {
-  i.default.dispatch({
+function l(e, t) {
+  s.default.dispatch({
     type: "ANALYTICS_FEED_FLUSH",
     id: e,
     force: t

@@ -34,27 +34,27 @@ function N(e) {
   } = e, [v, x, O] = (0, i.useStateFromStoresArray)([I.default], () => [I.default.getApplication(N), I.default.isInvalidApplication(N), I.default.getApplicationFetchState(N)], [N]), L = (0, i.default)([u.default], () => u.default.locale), R = (0, i.default)([c.default], () => {
     var e;
     return null !== (e = c.default.getGuildId()) && void 0 !== e ? e : void 0
-  }), y = (0, i.default)([f.default], () => f.default.getCurrentUser()), [P, D] = s.useState(!1), j = s.useCallback(e => {
+  }), P = (0, i.default)([f.default], () => f.default.getCurrentUser()), [y, D] = s.useState(!1), j = s.useCallback(e => {
     e && D(!0)
   }, []), U = (0, o.useIsVisible)(j);
   s.useEffect(() => {
     (0, p.getEmbedApplication)(N)
   }, [N]), s.useEffect(() => {
-    P && O === I.FetchState.FETCHED && _.default.track(C.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
+    y && O === I.FetchState.FETCHED && _.default.track(C.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
       application_id: N,
       device_platform: l.isMobile ? "mobile_web" : "desktop_web",
       sender_user_id: M.author.id,
       guild_id: R,
       channel_id: M.channel_id
     })
-  }, [P, N, null == y ? void 0 : y.id, M.channel_id, R, M.author.id, O]), s.useEffect(() => {
-    P && x && _.default.track(C.AnalyticEvents.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
+  }, [y, N, null == P ? void 0 : P.id, M.channel_id, R, M.author.id, O]), s.useEffect(() => {
+    y && x && _.default.track(C.AnalyticEvents.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
       device_platform: l.isMobile ? "mobile_web" : "desktop_web",
       sender_user_id: M.author.id,
       guild_id: R,
       channel_id: M.channel_id
     })
-  }, [P, R, x, M.author.id, M.channel_id]);
+  }, [y, R, x, M.author.id, M.channel_id]);
   let b = e => {
     _.default.track(C.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
       application_id: N,

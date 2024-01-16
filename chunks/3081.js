@@ -101,12 +101,12 @@ function L(e) {
   }, [l])), {
     isTruncated: L,
     ExpandableTextContainer: R
-  } = (0, C.useExpandableTextContainer)(), y = (null !== (n = null == f ? void 0 : null === (t = f.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [P, D] = s.useState(1), j = (0, u.default)("(max-width: ".concat(v.twoColumnWidth, ")")), {
+  } = (0, C.useExpandableTextContainer)(), P = (null !== (n = null == f ? void 0 : null === (t = f.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [y, D] = s.useState(1), j = (0, u.default)("(max-width: ".concat(v.twoColumnWidth, ")")), {
     selectedTab: U,
     isPhantomPreview: b
-  } = (0, S.useGuildShopDisplayContext)(), G = U === A.GuildShopTab.GUILD_PRODUCTS_PREVIEW ? M.default.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : M.default.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, B = y ? (0, a.jsxs)(a.Fragment, {
+  } = (0, S.useGuildShopDisplayContext)(), G = U === A.GuildShopTab.GUILD_PRODUCTS_PREVIEW ? M.default.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : M.default.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, B = P ? (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(R, {
-      lineClamp: j || 2 === P ? 2 : 3,
+      lineClamp: j || 2 === y ? 2 : 3,
       children: (0, a.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-normal",

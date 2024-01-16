@@ -49,9 +49,9 @@ function x(e) {
       code: ""
     },
     {
-      analyticsLocations: y
+      analyticsLocations: P
     } = (0, o.default)(),
-    P = (0, l.useStateFromStores)([_.default], () => (null == O ? void 0 : O.guild) != null ? _.default.getGuild(O.guild.id) : null, [O]),
+    y = (0, l.useStateFromStores)([_.default], () => (null == O ? void 0 : O.guild) != null ? _.default.getGuild(O.guild.id) : null, [O]),
     D = (0, l.useStateFromStores)([E.default], () => E.default.getId()),
     j = (0, l.useStateFromStores)([u.default], () => {
       var e;
@@ -69,7 +69,7 @@ function x(e) {
           page: v.AnalyticsPages.INVITE_EMBED,
           section: v.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
         },
-        analyticsLocations: y
+        analyticsLocations: P
       }) : i.default.acceptInviteAndTransitionToInviteChannel({
         inviteKey: t,
         context: x("Invite Button Embed")
@@ -79,7 +79,7 @@ function x(e) {
       onTransitionToInviteChannel: U,
       onAcceptInstantInvite: b,
       currentUserId: D,
-      guild: P,
+      guild: y,
       invite: R,
       author: n
     });
@@ -124,7 +124,7 @@ function x(e) {
               onTransitionToInviteChannel: U,
               onAcceptInstantInvite: b,
               currentUserId: D,
-              guild: P,
+              guild: y,
               invite: R
             });
             break
@@ -134,7 +134,7 @@ function x(e) {
               guildScheduledEvent: j,
               guild: R.guild,
               channel: R.channel,
-              isMember: null != P,
+              isMember: null != y,
               onAcceptInstantInvite: b,
               onTransitionToInviteChannel: U
             });
@@ -144,7 +144,7 @@ function x(e) {
             G = (0, a.jsx)(N.default, {
               stageInstance: R.stage_instance,
               guild: R.guild,
-              isMember: null != P,
+              isMember: null != y,
               onTransitionToInviteChannel: U,
               onAcceptInstantInvite: b
             });

@@ -8,8 +8,8 @@ var i = n("37983");
 n("884691");
 var l = n("917351"),
   r = n("249654"),
-  o = n("446674"),
-  a = n("77078"),
+  a = n("446674"),
+  o = n("77078"),
   s = n("692038"),
   u = n("815297"),
   c = n("933629"),
@@ -18,9 +18,9 @@ var l = n("917351"),
   E = n("227439"),
   _ = n("697218"),
   p = n("170113"),
-  h = n("780571"),
-  S = n("377502"),
-  I = n("103603"),
+  I = n("780571"),
+  h = n("377502"),
+  S = n("103603"),
   T = n("736393"),
   C = n("170213"),
   g = n("49111"),
@@ -57,27 +57,27 @@ let N = e => {
     if (0 === n.length) return null;
     let r = (e, t, n) => {
         let r = C.DEFAULT_MEDIA_MAX_WIDTH,
-          o = C.DEFAULT_MEDIA_MAX_HEIGHT;
+          a = C.DEFAULT_MEDIA_MAX_HEIGHT;
         if (null != t.width && null != t.height) {
-          let e = (0, I.getRatio)({
+          let e = (0, S.getRatio)({
             width: t.width,
             height: t.height,
             maxWidth: C.DEFAULT_MEDIA_MAX_WIDTH,
             maxHeight: C.DEFAULT_MEDIA_MAX_HEIGHT
           });
-          r = (0, l.clamp)(Math.round(t.width * e), 0, C.DEFAULT_MEDIA_MAX_WIDTH), o = (0, l.clamp)(Math.round(t.height * e), 0, C.DEFAULT_MEDIA_MAX_HEIGHT)
+          r = (0, l.clamp)(Math.round(t.width * e), 0, C.DEFAULT_MEDIA_MAX_WIDTH), a = (0, l.clamp)(Math.round(t.height * e), 0, C.DEFAULT_MEDIA_MAX_HEIGHT)
         }
         return (0, i.jsx)("div", {
           style: {
             width: n ? r : "100%",
-            height: n ? o : "100%"
+            height: n ? a : "100%"
           },
           children: (0, i.jsx)(p.default, {
             className: e.className,
             forceExternal: !1,
             src: t.url,
             width: n ? r : "100%",
-            height: n ? o : "100%",
+            height: n ? a : "100%",
             responsive: !0,
             volume: e.volume,
             autoPlay: !1,
@@ -97,10 +97,10 @@ let N = e => {
           })
         })
       },
-      o = 1 === n.length;
+      a = 1 === n.length;
     return (0, i.jsx)("div", {
       className: A.classificationEvidenceMessageAttachment,
-      children: (0, i.jsx)(S.default, {
+      children: (0, i.jsx)(h.default, {
         attachments: n.map(e => ({
           attachment: e,
           spoiler: !0,
@@ -109,9 +109,9 @@ let N = e => {
           autoPlayGif: !1,
           inlineMedia: !0,
           canRemoveAttachment: !1,
-          isSingleMosaicItem: o,
+          isSingleMosaicItem: a,
           onRemoveAttachment: l.noop,
-          renderVideoComponent: t => r(t, e, o),
+          renderVideoComponent: t => r(t, e, a),
           renderImageComponent: e => (0, c.renderImageComponent)({
             hiddenSpoilers: !0,
             shouldHideMediaOptions: !0,
@@ -129,7 +129,7 @@ let N = e => {
     var t;
     let {
       flaggedContent: n
-    } = e, l = (0, o.useStateFromStores)([_.default], () => _.default.getCurrentUser()), r = n[0], s = N(r), u = (0, d.default)(s, {
+    } = e, l = (0, a.useStateFromStores)([_.default], () => _.default.getCurrentUser()), r = n[0], s = N(r), u = (0, d.default)(s, {
       hideSimpleEmbedContent: !1,
       allowList: !1,
       allowHeading: !1,
@@ -138,13 +138,13 @@ let N = e => {
     });
     return "" === s.content && 0 === s.attachments.length ? null : (0, i.jsxs)("div", {
       className: A.classificationEvidenceContainer,
-      children: [(0, i.jsx)(a.Text, {
+      children: [(0, i.jsx)(o.Text, {
         variant: "eyebrow",
         color: "text-muted",
         children: v.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
       }), (0, i.jsx)("div", {
         className: A.classificationEvidenceCard,
-        children: (0, i.jsx)(h.default, {
+        children: (0, i.jsx)(I.default, {
           compact: !1,
           childrenHeader: (0, E.default)({
             author: {

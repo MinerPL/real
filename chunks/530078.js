@@ -35,9 +35,9 @@ function I(e) {
     {
       channel: L,
       approximate_member_count: R,
-      approximate_presence_count: y
+      approximate_presence_count: P
     } = M,
-    P = M.state === _.InviteStates.ACCEPTING,
+    y = M.state === _.InviteStates.ACCEPTING,
     D = null != L ? (0, r.createChannelRecordFromInvite)(L) : null,
     j = null != N,
     U = null != D,
@@ -91,9 +91,9 @@ function I(e) {
         isBannerVisible: !1
       })
     })]
-  })) : null != R && R >= 5 || null != y && y > 0 ? T = (0, a.jsx)(o.default.Data, {
+  })) : null != R && R >= 5 || null != P && P > 0 ? T = (0, a.jsx)(o.default.Data, {
     members: R,
-    membersOnline: y
+    membersOnline: P
   }) : U && (T = (0, a.jsx)(o.default.Channel, {
     channel: D,
     guild: N
@@ -115,7 +115,7 @@ function I(e) {
         })]
       }), (0, a.jsx)(o.default.Button, {
         onClick: w,
-        submitting: P,
+        submitting: y,
         color: o.default.Button.Colors.GREEN,
         children: b ? G ? h.default.Messages.STAGE_CHANNEL_JOIN : h.default.Messages.INVITE_VOICE_CHANNEL_JOIN : j ? h.default.Messages.JOINED_GUILD : h.default.Messages.JOIN_GUILD
       })]

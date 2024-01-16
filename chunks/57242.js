@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return a
   }
 });
 var i = n("37983");
 n("884691");
 var l = n("77078"),
   r = n("913144"),
-  o = {
+  a = {
     open(e) {
       r.default.dispatch({
         type: "SAFETY_HUB_APPEAL_OPEN",

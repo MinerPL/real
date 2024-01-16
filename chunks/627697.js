@@ -33,8 +33,8 @@ var s = n("90915"),
   O = n("969380"),
   L = n("141962"),
   R = n("478272"),
-  y = n("954016"),
-  P = n("49111"),
+  P = n("954016"),
+  y = n("49111"),
   D = n("782340"),
   j = n("586449");
 let U = (0, C.cssValueToNumber)(i.default.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
@@ -50,7 +50,7 @@ function b(e) {
   } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), w = (0, u.useAnalyticsContext)(), H = G.channel_id, F = (0, l.useStateFromStores)([_.default], () => _.default.getChannel(H), [H]), V = null == F ? void 0 : F.guild_id, Y = null != F && (F.isGuildVoice() || F.isPrivate()), W = (0, l.useStateFromStores)([A.default], () => A.default.getSelfEmbeddedActivityForChannel(H)), K = (null == W ? void 0 : W.applicationId) === b, [z, J] = (0, f.default)([b, null !== (n = null == W ? void 0 : W.applicationId) && void 0 !== n ? n : ""]), Z = (0, x.default)(null !== (i = null == z ? void 0 : z.maxParticipants) && void 0 !== i ? i : 0), [X] = (0, l.useStateFromStoresArray)([A.default], () => Y ? A.default.getEmbeddedActivitiesForChannel(H).filter(e => e.applicationId === b) : [], [b, H, Y]), q = Array.from(null !== (C = null == X ? void 0 : X.userIds) && void 0 !== C ? C : []), Q = (0, l.useStateFromStoresArray)([h.default], () => q.map(e => h.default.getUser(e)).filter(g.isNotNullish), [q]), $ = (0, O.default)({
     applicationId: b,
     size: U
-  }), ee = m.default.getWindowOpen(P.PopoutWindowKeys.CHANNEL_CALL_POPOUT), et = Q.length > 0 ? D.default.Messages.JOIN : D.default.Messages.START, en = async () => {
+  }), ee = m.default.getWindowOpen(y.PopoutWindowKeys.CHANNEL_CALL_POPOUT), et = Q.length > 0 ? D.default.Messages.JOIN : D.default.Messages.START, en = async () => {
     if (Y) {
       let {
         activityConfigs: e,
@@ -93,11 +93,11 @@ function b(e) {
       locationObject: w.location,
       openInPopout: ee,
       initialSelectedApplicationId: b,
-      initialSlide: y.ActivityShelfSlides.SELECT_CHANNEL,
+      initialSlide: P.ActivityShelfSlides.SELECT_CHANNEL,
       analyticsLocations: B
     })
   };
-  return null != z && (0, T.hasFlag)(z.flags, P.ApplicationFlags.EMBEDDED) ? (0, a.jsx)(k, {
+  return null != z && (0, T.hasFlag)(z.flags, y.ApplicationFlags.EMBEDDED) ? (0, a.jsx)(k, {
     children: (0, a.jsxs)("div", {
       className: j.container,
       children: [(0, a.jsx)("div", {
@@ -121,7 +121,7 @@ function b(e) {
           className: j.learnMore,
           variant: "heading-sm/medium",
           children: (0, a.jsx)(s.Link, {
-            to: P.Routes.ACTIVITY_DETAILS(b),
+            to: y.Routes.ACTIVITY_DETAILS(b),
             children: D.default.Messages.LEARN_MORE
           })
         }), (0, a.jsxs)("div", {

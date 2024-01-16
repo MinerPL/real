@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return I
   }
 }), n("222007");
 var i = n("37983"),
   l = n("884691"),
   r = n("414456"),
-  o = n.n(r),
-  a = n("77078"),
+  a = n.n(r),
+  o = n("77078"),
   s = n("145079"),
   u = n("86621"),
   c = n("506885"),
@@ -25,13 +25,13 @@ class p extends l.Component {
       analyticsContext: n,
       disablePopout: l,
       guildId: r
-    } = this.props, o = {
+    } = this.props, a = {
       location: {
         ...n.location,
         object: E.AnalyticsObjects.LIST_ITEM
       }
     };
-    return (0, i.jsx)(a.Popout, {
+    return (0, i.jsx)(o.Popout, {
       preload: () => (0, c.default)(t.id, t.getAvatarURL(r, 80), {
         guildId: r
       }),
@@ -39,7 +39,7 @@ class p extends l.Component {
         ...e,
         guildId: r,
         userId: t.id,
-        analyticsParams: o
+        analyticsParams: a
       }),
       position: "left",
       onRequestClose: this.handleUserPopoutClose,
@@ -77,21 +77,21 @@ class p extends l.Component {
       } = this.props;
       return (0, i.jsxs)(f.default, {
         align: f.default.Align.CENTER,
-        className: o(_.memberListItem, t, {
+        className: a(_.memberListItem, t, {
           [_.popoutDisabled]: n
         }),
         onContextMenu: l,
         onMouseDown: e.onMouseDown,
         onKeyDown: e.onKeyDown,
         onClick: this.handleClickUser,
-        children: [(0, i.jsx)(a.Avatar, {
+        children: [(0, i.jsx)(o.Avatar, {
           src: r.getAvatarURL(E, 24),
           className: _.avatar,
           "aria-label": r.username,
-          size: a.AvatarSizes.SIZE_24,
+          size: o.AvatarSizes.SIZE_24,
           status: u
-        }), (0, i.jsx)(a.Text, {
-          className: o(_.memberListItemTag, c),
+        }), (0, i.jsx)(o.Text, {
+          className: a(_.memberListItemTag, c),
           variant: "text-sm/normal",
           children: (0, i.jsx)(s.default, {
             user: r,
@@ -107,4 +107,4 @@ class p extends l.Component {
 p.defaultProps = {
   disablePopout: !1
 };
-var h = (0, u.default)(p)
+var I = (0, u.default)(p)

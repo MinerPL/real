@@ -21,6 +21,9 @@ n.r(t), n.d(t, {
   SafetyHubAnalyticsActionSource: function() {
     return f
   },
+  AppealIngestionSignal: function() {
+    return m
+  },
   DEFAULT_MEDIA_MAX_WIDTH: function() {
     return T
   },
@@ -51,7 +54,7 @@ I.ICON_TYPE = "icon_type", I.HEADER = "header", I.BODY = "body", I.CTAS = "ctas"
   REQUEST_SENT: _.AnalyticsSections.APPEAL_INGESTION_REQUEST_SENT,
   THANKS: _.AnalyticsSections.APPEAL_INGESTION_THANKS,
   SPAM: _.AnalyticsSections.APPEAL_INGESTION_SPAM
-}), (r = m || (m = {})).DIDNT_VIOLATE = "TODO i18n a", r.STRICT_OR_UNFAIR = "TODO i18n b", r.PENALTY = "TODO i18n c", r.SOMETHING_ELSE = "TODO i18n d";
+}), (r = m || (m = {}))[r.DIDNT_VIOLATE_POLICY = 0] = "DIDNT_VIOLATE_POLICY", r[r.TOO_STRICT_UNFAIR = 1] = "TOO_STRICT_UNFAIR", r[r.DONT_AGREE_PENALTY = 2] = "DONT_AGREE_PENALTY", r[r.SOMETHING_ELSE = 3] = "SOMETHING_ELSE";
 let T = 372,
   g = 279;
 (o = E || (E = {})).SPEED_BUMP = "speed-bump", o.COLLECT_SIGNAL = "collect-signal", o.CONFIRM_SUBMISSION = "confirm-submission", o.REQUEST_SENT = "request-sent", o.THANKS = "thanks";

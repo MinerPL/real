@@ -49,8 +49,8 @@ var M = s.memo(function(e) {
       interactionData: R
     } = e,
     {
-      onCopy: y,
-      copyRef: P
+      onCopy: P,
+      copyRef: y
     } = (0, d.default)(O, null == R ? void 0 : null === (t = R.application_command) || void 0 === t ? void 0 : t.id),
     D = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(O.guild_id), [O.guild_id]);
   if (s.useEffect(() => {
@@ -168,11 +168,11 @@ var M = s.memo(function(e) {
     onCopy: e => {
       var t, n, a;
       let s = null !== (a = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== a ? a : "";
-      s.startsWith("/") && s.endsWith("\n") && y(e, R)
+      s.startsWith("/") && s.endsWith("\n") && P(e, R)
     },
     children: [(0, a.jsx)("div", {
       className: C.tooltip,
-      ref: P,
+      ref: y,
       children: x
     }), (0, a.jsx)("div", {
       className: C.tooltipPointer

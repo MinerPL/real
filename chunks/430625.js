@@ -32,8 +32,8 @@ var a = n("37983"),
   O = n("159885"),
   L = n("793079"),
   R = n("49111"),
-  y = n("91366"),
-  P = n("782340"),
+  P = n("91366"),
+  y = n("782340"),
   D = n("420515");
 let j = (0, O.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
   U = (0, O.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
@@ -53,7 +53,7 @@ function G(e) {
     }), (0, a.jsx)(c.Text, {
       variant: "text-xs/normal",
       className: D.count,
-      children: P.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+      children: y.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
         membersOnline: n
       })
     })]
@@ -64,7 +64,7 @@ function G(e) {
     }), (0, a.jsx)(c.Text, {
       variant: "text-xs/normal",
       className: D.count,
-      children: P.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+      children: y.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
         count: t
       })
     })]
@@ -98,7 +98,7 @@ function B(e) {
       }) : null, (0, a.jsx)(v.default, {
         children: (0, a.jsx)(c.Text, {
           variant: "text-xs/normal",
-          children: P.default.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
+          children: y.default.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
             channelName: t.name,
             serverName: n.name
           })
@@ -114,7 +114,7 @@ function B(e) {
     children: (0, a.jsx)(v.default, {
       children: (0, a.jsx)(c.Text, {
         variant: "text-xs/normal",
-        children: P.default.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
+        children: y.default.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
           guildName: n.name
         })
       })
@@ -134,7 +134,7 @@ function k(e) {
       target_type: k,
       target_application: w
     } = d;
-  o(k === y.InviteTargetTypes.EMBEDDED_APPLICATION && null != w, "invalid application invite");
+  o(k === P.InviteTargetTypes.EMBEDDED_APPLICATION && null != w, "invalid application invite");
   let H = s.useRef(null),
     [F, V] = s.useState(!1),
     [Y, W] = s.useState(!1);
@@ -190,7 +190,7 @@ function k(e) {
         analyticsLocations: Q
       })
     };
-  return (ea && J && (l = P.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !q && (l = P.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = J ? P.default.Messages.INVITE_EMBED_JOINED : Z || !ea ? P.default.Messages.JOIN : P.default.Messages.START, null == d.code || "" === d.code) ? null : (0, a.jsxs)("div", {
+  return (ea && J && (l = y.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !q && (l = y.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = J ? y.default.Messages.INVITE_EMBED_JOINED : Z || !ea ? y.default.Messages.JOIN : y.default.Messages.START, null == d.code || "" === d.code) ? null : (0, a.jsxs)("div", {
     className: D.container,
     ref: H,
     children: [(0, a.jsx)("div", {
@@ -218,7 +218,7 @@ function k(e) {
       children: [(0, a.jsxs)("div", {
         className: D.info,
         children: [(0, a.jsx)(c.FormTitle, {
-          children: ea ? P.default.Messages.EMBEDDED_ACTIVITIES_EMBED_TITLE_INVITED_TO_JOIN : P.default.Messages.INVITE_BUTTON_TITLE_INVITED
+          children: ea ? y.default.Messages.EMBEDDED_ACTIVITIES_EMBED_TITLE_INVITED_TO_JOIN : y.default.Messages.INVITE_BUTTON_TITLE_INVITED
         }), (0, a.jsx)(c.Heading, {
           className: D.heading,
           variant: "heading-xl/semibold",
@@ -240,10 +240,10 @@ function k(e) {
           }),
           children: [(0, a.jsx)(c.Text, {
             variant: "text-xs/medium",
-            children: P.default.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED
+            children: y.default.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED
           }), (0, a.jsx)(c.Text, {
             variant: "text-xs/medium",
-            children: P.default.Messages.EMBEDDED_ACTIVITIES_EMBED_START
+            children: y.default.Messages.EMBEDDED_ACTIVITIES_EMBED_START
           })]
         }) : null, ea ? null : (0, a.jsx)(G, {
           members: v,

@@ -50,7 +50,7 @@ function v(e) {
   }, {
     disableTrack: null == l
   });
-  let y = L.length > 0 ? new Date(Math.min(...L.map(e => Date.parse(e.published_at)))) : void 0;
+  let P = L.length > 0 ? new Date(Math.min(...L.map(e => Date.parse(e.published_at)))) : void 0;
   return v || !O ? (0, a.jsx)("div", {
     className: i(M.guildShopEmbed, M.spinnerContainer),
     children: (0, a.jsx)(d.Spinner, {})
@@ -105,12 +105,12 @@ function v(e) {
               listingCount: L.length
             })
           })
-        }), null != y && (0, a.jsx)("li", {
+        }), null != P && (0, a.jsx)("li", {
           children: (0, a.jsx)(d.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
             children: N.default.Messages.GUILD_SHOP_EMBED_SHOP_AGE.format({
-              createdYear: y.getFullYear()
+              createdYear: P.getFullYear()
             })
           })
         })]

@@ -32,8 +32,8 @@ var a = n("37983"),
   O = n("561359"),
   L = n("228220"),
   R = n("759885"),
-  y = n("843194"),
-  P = n("93332"),
+  P = n("843194"),
+  y = n("93332"),
   D = n("304198"),
   j = n("387111"),
   U = n("158998"),
@@ -247,7 +247,7 @@ function J(e) {
         className: i(F.content, {
           [F.compact]: n
         }),
-        children: [(0, a.jsx)(P.BaseMessageHeader, {
+        children: [(0, a.jsx)(y.BaseMessageHeader, {
           message: l,
           messageClassname: F.spanCorrection,
           className: i(F.usernameContainer, F.spanCorrection, {
@@ -278,7 +278,7 @@ function J(e) {
           className: i(F.messageContent, {
             [F.compact]: n
           }),
-          children: (0, a.jsx)(y.default, {
+          children: (0, a.jsx)(P.default, {
             ...L,
             message: l,
             channel: X,

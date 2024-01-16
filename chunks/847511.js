@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return P
   }
 }), n("70102"), n("222007"), n("881410");
 var a = n("627445"),
@@ -179,7 +179,7 @@ async function R(e) {
       s(!1, "Unknown poll action type: ".concat(a))
   }
 }
-var y = {
+var P = {
   handlePollAnswerTapped: function(e) {
     var t, n, a, s, l;
     let {

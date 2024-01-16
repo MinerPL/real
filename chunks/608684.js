@@ -1,139 +1,139 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(a), t.d(a, {
   ImageUploaderIcon: function() {
-    return I
+    return h
   },
   default: function() {
-    return T
+    return g
   }
-}), n("222007");
-var l = n("37983"),
-  a = n("884691"),
-  s = n("414456"),
-  i = n.n(s),
-  r = n("627445"),
-  u = n.n(r),
-  o = n("77078"),
-  d = n("159885"),
-  c = n("694187"),
-  E = n("49111"),
-  f = n("782340"),
-  _ = n("911686");
+}), t("222007");
+var l = t("37983"),
+  i = t("884691"),
+  n = t("414456"),
+  r = t.n(n),
+  s = t("627445"),
+  o = t.n(s),
+  u = t("77078"),
+  d = t("159885"),
+  c = t("694187"),
+  f = t("49111"),
+  m = t("782340"),
+  v = t("911686");
 
-function I(e) {
+function h(e) {
   let {
-    className: t,
-    icon: n = null
+    className: a,
+    icon: t = null
   } = e;
   return (0, l.jsx)("div", {
-    className: i(_.imageUploaderIcon, t),
-    children: n
+    className: r(v.imageUploaderIcon, a),
+    children: t
   })
 }
-class h extends a.PureComponent {
+class p extends i.PureComponent {
   handleExternalFileChange(e) {
-    u(null != this.inputRef.current, "ImageInputRef asked to handleExternalFileChange when not mounted"), this.inputRef.current.handleFileChange(e)
+    o(null != this.inputRef.current, "ImageInputRef asked to handleExternalFileChange when not mounted"), this.inputRef.current.handleFileChange(e)
   }
   render() {
     var e;
-    let t, n, a, s;
+    let a, t, i, n;
     let {
-      image: r,
-      hint: u,
-      name: h,
-      makeURL: T,
-      disabled: N,
-      onChange: v,
-      showIcon: m,
-      showIconDisabled: S,
-      className: g,
-      imageClassName: C,
-      iconClassName: p,
-      iconWrapperClassName: x,
-      icon: R,
-      hideSize: A,
-      imageStyle: O,
-      showRemoveButton: L,
-      maxFileSizeBytes: M,
-      onFileSizeError: D,
-      onOpenImageSelectModal: y,
-      "aria-label": U
+      image: s,
+      hint: o,
+      name: p,
+      makeURL: g,
+      disabled: I,
+      onChange: x,
+      showIcon: S,
+      showIconDisabled: A,
+      className: U,
+      imageClassName: N,
+      iconClassName: E,
+      iconWrapperClassName: T,
+      icon: j,
+      hideSize: y,
+      imageStyle: C,
+      showRemoveButton: P,
+      maxFileSizeBytes: b,
+      onFileSizeError: M,
+      onOpenImageSelectModal: R,
+      "aria-label": _
     } = this.props;
-    if (null != (t = null != r && /^data:/.test(r) ? r : T(r)) ? n = 'url("'.concat(t, '")') : null != h && (a = (0, l.jsx)("div", {
-        className: _.imageUploaderAcronym,
-        children: (0, d.getAcronym)(h)
-      })), N) return (0, l.jsx)("div", {
-      className: i(_.imageUploader, _.disabled, g),
+    if (null != (a = null != s && /^data:/.test(s) ? s : g(s)) ? t = 'url("'.concat(a, '")') : null != p && (i = (0, l.jsx)("div", {
+        className: v.imageUploaderAcronym,
+        children: (0, d.getAcronym)(p)
+      })), I) return (0, l.jsx)("div", {
+      className: r(v.imageUploader, v.disabled, U),
       children: (0, l.jsxs)("div", {
-        className: i(_.imageUploaderInner, C),
+        className: r(v.imageUploaderInner, N),
         style: {
-          ...O,
-          backgroundImage: n
+          ...C,
+          backgroundImage: t
         },
-        children: [a, S && (0, l.jsx)("div", {
-          className: i(_.imageUploaderIcon, _.imageUploaderIconDisabled, p),
-          children: R
+        children: [i, A && (0, l.jsx)("div", {
+          className: r(v.imageUploaderIcon, v.imageUploaderIconDisabled, E),
+          children: j
         })]
       })
     });
-    null != r ? s = (0, l.jsx)(o.Anchor, {
-      className: _.removeButton,
+    null != s ? n = (0, l.jsx)(u.Anchor, {
+      className: v.removeButton,
       onClick: this.handleRemove,
-      children: f.default.Messages.REMOVE
-    }) : !A && (s = (0, l.jsx)("small", {
-      className: _.sizeInfo,
-      children: f.default.Messages.MINIMUM_SIZE.format({
-        size: E.AVATAR_SIZE
+      children: m.default.Messages.REMOVE
+    }) : !y && (n = (0, l.jsx)("small", {
+      className: v.sizeInfo,
+      children: m.default.Messages.MINIMUM_SIZE.format({
+        size: f.AVATAR_SIZE
       })
     }));
-    let V = null !== (e = null != U ? U : u) && void 0 !== e ? e : f.default.Messages.CHANGE_AVATAR;
+    let k = null !== (e = null != _ ? _ : o) && void 0 !== e ? e : m.default.Messages.CHANGE_AVATAR;
     return (0, l.jsxs)("div", {
-      className: i(_.imageUploader, g),
-      children: [(0, l.jsx)(o.FocusRing, {
+      className: r(v.imageUploader, U),
+      children: [(0, l.jsx)(u.FocusRing, {
         within: !0,
         children: (0, l.jsxs)("div", {
-          className: m ? i(_.imageUploaderIconWrapper, x) : void 0,
+          className: S ? r(v.imageUploaderIconWrapper, T) : void 0,
           children: [(0, l.jsxs)("div", {
-            className: i(_.imageUploaderInner, C),
+            className: r(v.imageUploaderInner, N),
             style: {
-              ...O,
-              backgroundImage: n
+              ...C,
+              backgroundImage: t
             },
             children: [(0, l.jsx)("span", {
               "aria-hidden": !0,
-              children: a
-            }), null != y ? (0, l.jsx)(o.Clickable, {
-              className: _.imageUploaderFileInput,
-              "aria-label": V,
-              onClick: y
+              children: i
+            }), null != R ? (0, l.jsx)(u.Clickable, {
+              className: v.imageUploaderFileInput,
+              "aria-label": k,
+              onClick: R
             }) : (0, l.jsx)(c.default, {
               ref: this.inputRef,
-              onChange: v,
-              className: _.imageUploaderFileInput,
-              "aria-label": V,
+              onChange: x,
+              className: v.imageUploaderFileInput,
+              "aria-label": k,
               tabIndex: 0,
-              maxFileSizeBytes: M,
-              onFileSizeError: D
+              maxFileSizeBytes: b,
+              onFileSizeError: M
             })]
-          }), null != u && (0, l.jsx)("div", {
-            className: _.imageUploaderHint,
+          }), null != o && (0, l.jsx)("div", {
+            className: v.imageUploaderHint,
             "aria-hidden": "true",
-            children: u
-          }), m && (0, l.jsx)(I, {
-            className: p,
-            icon: R
+            children: o
+          }), S && (0, l.jsx)(h, {
+            className: E,
+            icon: j
           })]
         })
-      }), L ? s : null]
+      }), P ? n : null]
     })
   }
   constructor(...e) {
-    super(...e), this.inputRef = a.createRef(), this.handleRemove = () => {
+    super(...e), this.inputRef = i.createRef(), this.handleRemove = () => {
       this.props.onChange(null)
     }
   }
 }
-h.defaultProps = {
+p.defaultProps = {
   name: "",
   makeURL: e => e,
   disabled: !1,
@@ -143,4 +143,4 @@ h.defaultProps = {
   maxFileSizeBytes: 1 / 0,
   icon: null
 };
-var T = h
+var g = p

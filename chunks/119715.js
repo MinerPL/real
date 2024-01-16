@@ -32,8 +32,8 @@ var a = n("37983"),
   O = n("79798"),
   L = n("45029"),
   R = n("561359"),
-  y = n("423487"),
-  P = n("93332"),
+  P = n("423487"),
+  y = n("93332"),
   D = n("304198"),
   j = n("250375"),
   U = n("988268"),
@@ -79,7 +79,7 @@ function w(e) {
   return (0, a.jsx)(V, {
     compact: t,
     header: (0, a.jsxs)(s.Fragment, {
-      children: [(0, a.jsx)(y.default, {
+      children: [(0, a.jsx)(P.default, {
         width: 16,
         height: 16,
         color: f.default.colors.HEADER_SECONDARY.css
@@ -191,11 +191,11 @@ function F(e) {
     resolvedReason: N
   } = (0, g.extractAutomodNotificationFields)(l), v = (0, c.useStateFromStores)([M.default], () => M.default.getChannel(l.channel_id), [l.channel_id]), x = null !== (t = null == v ? void 0 : v.guild_id) && void 0 !== t ? t : null, {
     incidentData: O,
-    shouldShowIncidentActions: P
+    shouldShowIncidentActions: y
   } = (0, p.useGuildIncidentsState)(x), D = (0, S.useContextMenuRaidAlert)(l.author.id, l.channel_id), j = s.useCallback(() => {
     let e = null == v ? void 0 : v.guild_id;
     null != e && (0, C.openRaidResolveModal)(l.id, e)
-  }, [l.id, v]), U = A === h.AutomodRaidAlertTypes.DM_RAID, k = U ? y.default : m.ChatAlertIcon;
+  }, [l.id, v]), U = A === h.AutomodRaidAlertTypes.DM_RAID, k = U ? P.default : m.ChatAlertIcon;
   return (0, a.jsx)(V, {
     compact: i,
     header: (0, a.jsxs)(s.Fragment, {
@@ -242,7 +242,7 @@ function F(e) {
       className: G.dotSeparatedRow,
       children: [(0, a.jsx)(_.Button, {
         onClick: e => {
-          if (null != x && P) {
+          if (null != x && y) {
             let e = {
               source: I.GuildIncidentActionSources.MESSAGE,
               messageId: l.id,
@@ -266,7 +266,7 @@ function F(e) {
         className: G.buttonStyle,
         children: (0, a.jsx)("div", {
           className: G.footerAction,
-          children: P ? (0, a.jsxs)(a.Fragment, {
+          children: y ? (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsx)(L.default, {
               width: 16,
               height: 16,
@@ -373,7 +373,7 @@ function Y(e) {
         className: i(G.content, {
           [G.compact]: n
         }),
-        children: [(0, a.jsx)(P.BaseMessageHeader, {
+        children: [(0, a.jsx)(y.BaseMessageHeader, {
           message: s,
           messageClassname: G.spanCorrection,
           className: i(G.usernameContainer, G.spanCorrection, {

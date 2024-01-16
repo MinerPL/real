@@ -92,7 +92,7 @@ function p(e) {
     cardHeight: x,
     thumbnailHeight: O = 187,
     descriptionTextVariant: L = "text-sm/normal"
-  } = e, R = (0, u.uid)(), y = (0, a.jsxs)(a.Fragment, {
+  } = e, R = (0, u.uid)(), P = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(_, {
       hidePurchaseToUnlockBadge: !0,
       children: (0, a.jsx)("img", {
@@ -155,7 +155,7 @@ function p(e) {
   return null == C ? (0, a.jsx)("article", {
     className: l(E.productCard, A ? E.opaqueBackground : E.solidBackground),
     "aria-labelledby": R,
-    children: y
+    children: P
   }) : (0, a.jsx)("div", {
     style: {
       width: v,
@@ -168,7 +168,7 @@ function p(e) {
       }),
       className: l(E.productCard, A ? E.opaqueBackground : E.solidBackground, E.cardClickableContainer),
       onClick: C,
-      children: y
+      children: P
     })
   })
 }

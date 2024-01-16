@@ -185,17 +185,17 @@ function L(e) {
       }
     })
   }, [t]);
-  let y = (0, T.useUID)();
+  let P = (0, T.useUID)();
   return (0, l.jsx)(E.ModalRoot, {
     className: N.downloadApps,
     transitionState: a,
-    "aria-labelledby": y,
+    "aria-labelledby": P,
     children: (0, l.jsx)("div", {
       className: N.inner,
       children: (0, l.jsxs)(E.HeadingLevel, {
         component: (0, l.jsx)(E.HiddenVisually, {
           children: (0, l.jsx)(E.H, {
-            id: y,
+            id: P,
             children: A.default.Messages.DOWNLOAD_APP
           })
         }),

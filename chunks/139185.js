@@ -32,8 +32,8 @@ var a = n("37983"),
   O = n("24373"),
   L = n("41170"),
   R = n("730723"),
-  y = n("49111"),
-  P = n("646718"),
+  P = n("49111"),
+  y = n("646718"),
   D = n("782340"),
   j = n("347826"),
   U = n("154403");
@@ -51,9 +51,9 @@ let b = (e, t) => t ? D.default.Messages.STICKER_POPOUT_PACK_INFO_PREMIUM.format
   };
 
 function B(e) {
-  N.default.track(y.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
-    location_page: null != e.guild_id ? y.AnalyticsPages.GUILD_CHANNEL : y.AnalyticsPages.DM_CHANNEL,
-    location_section: y.AnalyticsSections.STICKER_POPOUT
+  N.default.track(P.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+    location_page: null != e.guild_id ? P.AnalyticsPages.GUILD_CHANNEL : P.AnalyticsPages.DM_CHANNEL,
+    location_section: P.AnalyticsSections.STICKER_POPOUT
   }), (0, _.navigateToPremiumMarketingPage)()
 }
 
@@ -99,8 +99,8 @@ let w = e => {
     return ((0, h.useMaybeFetchPremiumLikelihood)(p.default), s.useEffect(() => {
       i()
     }, [c]), s.useEffect(() => {
-      N.default.track(y.AnalyticEvents.OPEN_POPOUT, {
-        type: y.AnalyticsSections.STICKER_POPOUT,
+      N.default.track(P.AnalyticEvents.OPEN_POPOUT, {
+        type: P.AnalyticsSections.STICKER_POPOUT,
         guild_id: l.getGuildId(),
         sticker_pack_id: n.pack_id,
         ...(0, d.collectChannelAnalyticsMetadata)(l)
@@ -154,8 +154,8 @@ let w = e => {
       [w, H] = s.useState(!1),
       [F, V] = s.useState(null),
       Y = s.useMemo(() => ({
-        page: null != l.guild_id ? y.AnalyticsPages.GUILD_CHANNEL : y.AnalyticsPages.DM_CHANNEL,
-        section: y.AnalyticsSections.STICKER_POPOUT
+        page: null != l.guild_id ? P.AnalyticsPages.GUILD_CHANNEL : P.AnalyticsPages.DM_CHANNEL,
+        section: P.AnalyticsSections.STICKER_POPOUT
       }), [l.guild_id]),
       {
         current: W
@@ -165,7 +165,7 @@ let w = e => {
       });
     s.useEffect(() => {
       let e = async () => {
-        let e = null == b || b.hasFeature(y.GuildFeatures.DISCOVERABLE);
+        let e = null == b || b.hasFeature(P.GuildFeatures.DISCOVERABLE);
         if (e) {
           let e = await (0, f.default)(n.id);
           S(e)
@@ -187,7 +187,7 @@ let w = e => {
     return (s.useEffect(() => {
       h()
     }, [v, p]), s.useEffect(() => {
-      N.default.track(y.AnalyticEvents.OPEN_POPOUT, {
+      N.default.track(P.AnalyticEvents.OPEN_POPOUT, {
         type: Z,
         ...W
       })
@@ -209,7 +209,7 @@ let w = e => {
             sticker: n
           }), J && (0, a.jsx)(I.default, {
             className: U.ctaButton,
-            subscriptionTier: P.PremiumSubscriptionSKUs.TIER_2,
+            subscriptionTier: y.PremiumSubscriptionSKUs.TIER_2,
             size: o.Button.Sizes.SMALL,
             fullWidth: !0,
             buttonText: D.default.Messages.EMOJI_POPOUT_PREMIUM_CTA,

@@ -80,7 +80,7 @@ function R(e) {
   })
 }
 
-function y(e) {
+function P(e) {
   let {
     className: t,
     onClick: n,
@@ -100,7 +100,7 @@ function y(e) {
   })
 }
 
-function P(e) {
+function y(e) {
   let t, {
     className: n,
     children: a,
@@ -212,7 +212,7 @@ function j(e) {
         })]
       });
     case 1:
-      return (0, l.jsx)(P, {
+      return (0, l.jsx)(y, {
         className: o(t, E),
         onClick: h,
         isSelected: _,
@@ -221,7 +221,7 @@ function j(e) {
         children: s
       });
     case 2:
-      return (0, l.jsx)(y, {
+      return (0, l.jsx)(P, {
         className: o(t, E),
         onClick: h,
         isSelected: _,

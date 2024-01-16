@@ -32,8 +32,8 @@ var a = n("37983"),
   O = n("181114"),
   L = n("216422"),
   R = n("599110"),
-  y = n("568734"),
-  P = n("719923"),
+  P = n("568734"),
+  y = n("719923"),
   D = n("882941"),
   j = n("49111"),
   U = n("782340"),
@@ -155,7 +155,7 @@ class G extends s.Component {
     if (null != i) return (0, D.canUserInstall)(e) && !n ? this.renderButton(U.default.Messages.GAME_ACTION_BUTTON_INSTALL) : this.renderButton(U.default.Messages.GAME_ACTION_BUTTON_ADD_TO_LIBRARY);
     let r = e.getPrice();
     if (e.premium && !l && (a || s)) return (0, D.canUserInstall)(e) && !n ? this.renderButton(U.default.Messages.GAME_ACTION_BUTTON_INSTALL, t) : this.renderButton(U.default.Messages.GAME_ACTION_BUTTON_ADD_TO_LIBRARY, t);
-    if (null != r && 0 === r.amount && (!e.premium || (0, y.hasFlag)(e.flags, j.SKUFlags.PREMIUM_AND_DISTRIBUTION))) return (0, D.canUserInstall)(e) && !n ? this.renderButton(U.default.Messages.GAME_ACTION_BUTTON_INSTALL) : this.renderButton(U.default.Messages.GAME_ACTION_BUTTON_ADD_TO_LIBRARY)
+    if (null != r && 0 === r.amount && (!e.premium || (0, P.hasFlag)(e.flags, j.SKUFlags.PREMIUM_AND_DISTRIBUTION))) return (0, D.canUserInstall)(e) && !n ? this.renderButton(U.default.Messages.GAME_ACTION_BUTTON_INSTALL) : this.renderButton(U.default.Messages.GAME_ACTION_BUTTON_ADD_TO_LIBRARY)
   }
   render() {
     let {
@@ -288,7 +288,7 @@ var B = s.forwardRef((e, t) => {
       l = null != a ? M.default.get(a) : null,
       r = null != n ? n : s,
       o = null != a ? A.default.isEntitledToSku(t, a, s, r) : null,
-      u = P.default.canInstallPremiumApplications(t);
+      u = y.default.canInstallPremiumApplications(t);
     return [e, t, l, o, u, a]
   }), T = (0, o.useStateFromStores)([x.default], () => x.default.isFocused()), g = (0, o.useStateFromStores)([N.default], () => N.default.isPurchasingSKU), O = (0, o.useStateFromStores)([C.default], () => C.default.locale), L = (0, h.useAnalyticsContext)();
   if (null != n && null == l) throw Error("Unexpected entitlementBranchId without a channelId");

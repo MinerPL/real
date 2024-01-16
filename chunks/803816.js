@@ -32,8 +32,8 @@ var a = n("37983"),
   O = n("953998"),
   L = n("535974"),
   R = n("763237"),
-  y = n("315102"),
-  P = n("773336"),
+  P = n("315102"),
+  y = n("773336"),
   D = n("602043"),
   j = n("901582"),
   U = n("49111"),
@@ -54,7 +54,7 @@ class B extends s.PureComponent {
       let t = (0, c.default)(e, n.id);
       if (null != t) return t
     }
-    return null == n || n instanceof g.default ? null : y.default.getApplicationIconURL({
+    return null == n || n instanceof g.default ? null : P.default.getApplicationIconURL({
       id: n.id,
       icon: null != t ? t.coverImage : n.coverImage,
       size: b.ACTIVITY_INVITE_COVER_IMAGE_SIZE
@@ -74,7 +74,7 @@ class B extends s.PureComponent {
       isLaunchable: e,
       application: t
     } = this.props;
-    return null != t && null != t.primarySkuId && !e && P.isPlatformEmbedded
+    return null != t && null != t.primarySkuId && !e && y.isPlatformEmbedded
   }
   render() {
     return (0, a.jsx)(j.default, {
@@ -210,7 +210,7 @@ class B extends s.PureComponent {
         isGameLaunchable: h,
         isLoading: o || this.state.sending,
         activityActionType: d,
-        isInBrowser: !P.isPlatformEmbedded,
+        isInBrowser: !y.isPlatformEmbedded,
         isSyncable: _,
         isSender: u,
         channelId: f,

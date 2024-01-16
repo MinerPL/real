@@ -51,8 +51,8 @@ let L = {
 };
 (i = s || (s = {})).TOP_LEFT = "TOP_LEFT", i.TOP_RIGHT = "TOP_RIGHT", i.BOTTOM_LEFT = "BOTTOM_LEFT", i.BOTTOM_RIGHT = "BOTTOM_RIGHT";
 let R = ["TOP_LEFT", "TOP_RIGHT"],
-  y = (0, m.cssValueToNumber)(E.default.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
-  P = {
+  P = (0, m.cssValueToNumber)(E.default.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
+  y = {
     leafPosition: {
       x: 85,
       y: 125
@@ -62,8 +62,8 @@ let R = ["TOP_LEFT", "TOP_RIGHT"],
   D = Object.freeze({
     TOP_LEFT: {
       confettiPosition: {
-        x: y - 11,
-        y: y - 125
+        x: P - 11,
+        y: P - 125
       },
       confettiVelocityDirection: {
         x: 1,
@@ -78,7 +78,7 @@ let R = ["TOP_LEFT", "TOP_RIGHT"],
     TOP_RIGHT: {
       confettiPosition: {
         x: 11,
-        y: y - 125
+        y: P - 125
       },
       confettiVelocityDirection: {
         x: -1,
@@ -91,9 +91,9 @@ let R = ["TOP_LEFT", "TOP_RIGHT"],
       leafRotationDirection: -1
     },
     BOTTOM_LEFT: {
-      ...P,
+      ...y,
       confettiPosition: {
-        x: y - 11,
+        x: P - 11,
         y: 125
       },
       confettiVelocityDirection: {
@@ -102,7 +102,7 @@ let R = ["TOP_LEFT", "TOP_RIGHT"],
       }
     },
     BOTTOM_RIGHT: {
-      ...P,
+      ...y,
       confettiPosition: {
         x: 11,
         y: 125
@@ -305,24 +305,24 @@ function H(e) {
       reducedMotion: L
     } = o.useContext(_.AccessibilityPreferencesContext),
     R = (0, I.getMessageAuthor)(n),
-    y = R.nick,
-    P = l(R);
+    P = R.nick,
+    y = l(R);
   t = null == u || null == s ? d > 1 ? x.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK.format({
-    username: y,
-    usernameHook: P,
+    username: P,
+    usernameHook: y,
     numSubscriptions: d
   }) : x.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_HOOK.format({
-    username: y,
-    usernameHook: P
+    username: P,
+    usernameHook: y
   }) : d > 1 ? x.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_ACHIEVED_TIER_HOOK.format({
-    username: y,
-    usernameHook: P,
+    username: P,
+    usernameHook: y,
     numSubscriptions: d,
     guildName: s.name,
     newTierName: (0, M.getTierName)(u)
   }) : x.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_ACHIEVED_TIER_HOOK.format({
-    username: y,
-    usernameHook: P,
+    username: P,
+    usernameHook: y,
     guildName: s.name,
     newTierName: (0, M.getTierName)(u)
   });

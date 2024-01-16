@@ -1,7 +1,7 @@
 "use strict";
 a.r(e), a.d(e, {
   ConnectedSafetyHubViolationsContainer: function() {
-    return F
+    return v
   }
 }), a("222007");
 var n = a("37983"),
@@ -66,7 +66,7 @@ let x = t => {
       })]
     })
   },
-  h = () => (0, n.jsxs)("div", {
+  p = () => (0, n.jsxs)("div", {
     className: m.emptyState,
     children: [(0, n.jsxs)("div", {
       className: m.iconContainer,
@@ -88,7 +88,7 @@ let x = t => {
       children: C.default.Messages.SAFETY_HUB_VIOLATIONS_CONTAINER_EMPTY_STATE_SUBTEXT_ACTIVE
     })]
   }),
-  p = () => (0, n.jsx)("div", {
+  h = () => (0, n.jsx)("div", {
     className: m.emptyState,
     children: (0, n.jsx)(u.Text, {
       variant: "text-xs/normal",
@@ -170,7 +170,7 @@ let x = t => {
       })
     }, s)
   },
-  v = t => {
+  D = t => {
     let {
       status: e,
       classifications: a
@@ -214,18 +214,18 @@ let x = t => {
               nextPageSize: S
             })
           })]
-        }), 0 === d.length && "active" === e && (0, n.jsx)(h, {}), 0 === d.length && "expired" === e && (0, n.jsx)(p, {})]
+        }), 0 === d.length && "active" === e && (0, n.jsx)(p, {}), 0 === d.length && "expired" === e && (0, n.jsx)(h, {})]
       })]
     })
   },
-  F = () => {
+  v = () => {
     let t = (0, I.useActiveSafetyHubClassifications)(),
       e = (0, I.useExpiredSafetyHubClassifications)();
     return 0 === t.length && 0 === e.length ? null : (0, n.jsxs)("div", {
-      children: [(0, n.jsx)(v, {
+      children: [(0, n.jsx)(D, {
         status: "active",
         classifications: t
-      }), (0, n.jsx)(v, {
+      }), (0, n.jsx)(D, {
         status: "expired",
         classifications: e
       })]

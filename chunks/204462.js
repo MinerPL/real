@@ -19,11 +19,11 @@ var i = n("414456"),
   M = n("957255"),
   m = n("315102"),
   g = n("402671"),
-  p = n("49111"),
-  I = n("958706"),
+  I = n("49111"),
+  p = n("958706"),
   S = n("782340"),
-  v = n("791507");
-let A = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
+  A = n("791507");
+let v = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
 
 function _(e) {
   var t;
@@ -48,16 +48,16 @@ function _(e) {
       "aria-label": S.default.Messages.ADD_REACTION_NAMED.format({
         emojiName: n.name
       }),
-      className: l(v.button, {
-        [v.focused]: i
+      className: l(A.button, {
+        [A.focused]: i
       }),
       ...e,
       children: null == r || "" === r.trim() ? (0, a.jsx)("span", {
-        className: l("emoji", "emoji-text", v.icon),
+        className: l("emoji", "emoji-text", A.icon),
         ...e,
         children: d
       }) : (0, a.jsx)("img", {
-        className: v.icon,
+        className: A.icon,
         src: r,
         alt: ""
       })
@@ -74,22 +74,22 @@ function h(e, t) {
     }),
     l = n.filter(e => {
       var n;
-      return !(e.useSpriteSheet && A.indexOf(null !== (n = e.uniqueName) && void 0 !== n ? n : "") >= 0) && !g.default.isEmojiPremiumLocked({
+      return !(e.useSpriteSheet && v.indexOf(null !== (n = e.uniqueName) && void 0 !== n ? n : "") >= 0) && !g.default.isEmojiPremiumLocked({
         emoji: e,
         channel: t,
-        intention: I.EmojiIntention.REACTION,
+        intention: p.EmojiIntention.REACTION,
         canViewAndUsePackEmoji: i
       })
     });
   l.length > 4 && (l.length = 4);
   let m = E.RenderReactions.useSetting(),
     S = (0, f.useIsActiveChannelOrUnarchivableThread)(t),
-    h = (0, s.useStateFromStores)([M.default], () => m && S && (t.isPrivate() || M.default.can(p.Permissions.ADD_REACTIONS, t)), [t, S, m]),
+    h = (0, s.useStateFromStores)([M.default], () => m && S && (t.isPrivate() || M.default.can(I.Permissions.ADD_REACTIONS, t)), [t, S, m]),
     T = n => {
       (0, o.addReaction)(t.id, e.id, (0, c.toReactionEmoji)(n), void 0)
     };
   return h && l.length > 0 ? (0, a.jsx)(u.MenuGroup, {
-    className: v.wrapper,
+    className: A.wrapper,
     children: l.map((e, t) => {
       var n;
       return (0, a.jsx)(u.MenuItem, {

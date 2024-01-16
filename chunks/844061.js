@@ -32,8 +32,8 @@ var a = n("37983"),
   O = n("120252"),
   L = n("967241"),
   R = n("936436"),
-  y = n("271938"),
-  P = n("950104"),
+  P = n("271938"),
+  y = n("950104"),
   D = n("42203"),
   j = n("305961"),
   U = n("957255"),
@@ -182,7 +182,7 @@ let eM = Object.freeze({
     } = e, {
       id: r,
       author: o
-    } = t, d = y.default.getId(), c = t.getChannelId(), f = (0, l.useStateFromStores)([P.default], () => P.default.isCallActive(c, r), [c, r]), m = (0, l.useStateFromStores)([k.default], () => k.default.getVoiceState(eT.ME, d)), E = !f && null != t.call && !t.call.participants.includes(d), _ = f && (null == m || m.channelId !== c), h = s.useCallback(() => u.default.selectVoiceChannel(c), [c]), p = (0, eI.useUsernameHook)(o, c, i.guild_id);
+    } = t, d = P.default.getId(), c = t.getChannelId(), f = (0, l.useStateFromStores)([y.default], () => y.default.isCallActive(c, r), [c, r]), m = (0, l.useStateFromStores)([k.default], () => k.default.getVoiceState(eT.ME, d)), E = !f && null != t.call && !t.call.participants.includes(d), _ = f && (null == m || m.channelId !== c), h = s.useCallback(() => u.default.selectVoiceChannel(c), [c]), p = (0, eI.useUsernameHook)(o, c, i.guild_id);
     return (0, a.jsx)(V.default, {
       compact: n,
       message: t,

@@ -38,8 +38,8 @@ var a = n("37983"),
   O = n("477558"),
   L = n("812224"),
   R = n("249393"),
-  y = n("383247"),
-  P = n("267567"),
+  P = n("383247"),
+  y = n("267567"),
   D = n("367376"),
   j = n("467475"),
   U = n("801177"),
@@ -109,8 +109,8 @@ function eL() {
   })
 }
 let eR = new Set([eN.MessageEmbedTypes.AUTO_MODERATION_MESSAGE, eN.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION, eN.MessageEmbedTypes.APPLICATION_NEWS, eN.MessageEmbedTypes.POST_PREVIEW, eN.MessageEmbedTypes.SAFETY_POLICY_NOTICE, eN.MessageEmbedTypes.SAFETY_SYSTEM_NOTIFICATION, eN.MessageEmbedTypes.VOICE_CHANNEL]),
-  ey = new Set(["discord-developers", "discord-testers", "discord-townhall", "discordgameslab"]),
-  eP = (e, t, n) => () => {
+  eP = new Set(["discord-developers", "discord-testers", "discord-townhall", "discordgameslab"]),
+  ey = (e, t, n) => () => {
     let s = null != t ? t : n;
     if (null == s) return null;
     let {
@@ -148,7 +148,7 @@ class ej extends s.Component {
     let {
       channel: t
     } = this.props;
-    return !(t.isDM() && !t.isSystemDM() && !t.isGroupDM() && ey.has(e))
+    return !(t.isDM() && !t.isSystemDM() && !t.isGroupDM() && eP.has(e))
   }
   shouldComponentUpdate(e, t) {
     var n, a;
@@ -365,7 +365,7 @@ class ej extends s.Component {
     }) : null
   }
   renderComponentAccessories(e) {
-    return null == e.components || 0 === e.components.length || !1 === this.props.renderComponentAccessory ? null : (0, a.jsx)(y.default, {
+    return null == e.components || 0 === e.components.length || !1 === this.props.renderComponentAccessory ? null : (0, a.jsx)(P.default, {
       message: e
     })
   }
@@ -592,7 +592,7 @@ class ej extends s.Component {
         shouldRedactExplicitContent: u
       } = this.props, d = (0, ec.getObscureReasonForEmbed)(e, s, n, o, u);
       return e.type === eN.MessageEmbedTypes.GIFT ? null : (0, a.jsx)(ee.GIFAccessoryContext.Provider, {
-        value: eP(e.url, e.image, e.video),
+        value: ey(e.url, e.image, e.video),
         children: (0, a.jsx)(Q.default, {
           className: ex.embedWrapper,
           embed: e,
@@ -639,7 +639,7 @@ function eU(e) {
     channel: l,
     message: i,
     renderSuppressEmbeds: r
-  } = e, u = (0, o.useStateFromStores)([z.default], () => z.default.getId()), d = K.InlineAttachmentMedia.useSetting(), c = K.InlineEmbedMedia.useSetting(), f = K.RenderEmbeds.useSetting(), m = f && !(0, em.default)(e.message), E = K.RenderReactions.useSetting(), _ = K.GifAutoPlay.useSetting(), h = (0, o.useStateFromStores)([Z.default], () => null == l.guild_id || Z.default.canChatInGuild(l.guild_id), [l]), p = (0, o.useStateFromStores)([P.default], () => null != l.guild_id && P.default.isLurking(l.guild_id), [l]), T = (0, o.useStateFromStores)([J.default], () => J.default.isCurrentUserGuest(l.guild_id), [l]), g = (0, o.useStateFromStores)([J.default, q.default], () => {
+  } = e, u = (0, o.useStateFromStores)([z.default], () => z.default.getId()), d = K.InlineAttachmentMedia.useSetting(), c = K.InlineEmbedMedia.useSetting(), f = K.RenderEmbeds.useSetting(), m = f && !(0, em.default)(e.message), E = K.RenderReactions.useSetting(), _ = K.GifAutoPlay.useSetting(), h = (0, o.useStateFromStores)([Z.default], () => null == l.guild_id || Z.default.canChatInGuild(l.guild_id), [l]), p = (0, o.useStateFromStores)([y.default], () => null != l.guild_id && y.default.isLurking(l.guild_id), [l]), T = (0, o.useStateFromStores)([J.default], () => J.default.isCurrentUserGuest(l.guild_id), [l]), g = (0, o.useStateFromStores)([J.default, q.default], () => {
     var e, t;
     let n = q.default.getCurrentUser();
     return null !== (t = null != l.guild_id && null != n ? null === (e = J.default.getMember(l.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
@@ -649,7 +649,7 @@ function eU(e) {
   } = (0, o.useStateFromStoresObject)([X.default], () => ({
     canAddNewReactions: h && X.default.can(eN.Permissions.ADD_REACTIONS, l),
     canManageMessages: X.default.can(eN.Permissions.MANAGE_MESSAGES, l)
-  }), [h, l]), [, A] = (0, v.useCurrentUserCommunicationDisabled)(l.guild_id), M = (0, Y.useIsActiveChannelOrUnarchivableThread)(l), x = (u === i.author.id || S) && i.author.id !== eN.LOCAL_BOT_ID && !1 !== r && !(0, er.hasFlag)(i.flags, eN.MessageFlags.EPHEMERAL) && M, O = u === i.author.id && M, L = i.author.id === u, R = i.isFirstMessageInForumPost(l), y = (0, eE.default)({
+  }), [h, l]), [, A] = (0, v.useCurrentUserCommunicationDisabled)(l.guild_id), M = (0, Y.useIsActiveChannelOrUnarchivableThread)(l), x = (u === i.author.id || S) && i.author.id !== eN.LOCAL_BOT_ID && !1 !== r && !(0, er.hasFlag)(i.flags, eN.MessageFlags.EPHEMERAL) && M, O = u === i.author.id && M, L = i.author.id === u, R = i.isFirstMessageInForumPost(l), P = (0, eE.default)({
     channel: l,
     canChat: h,
     renderReactions: E,
@@ -662,8 +662,8 @@ function eU(e) {
   return (0, a.jsx)(ej, {
     canSuppressEmbeds: x,
     canDeleteAttachments: O,
-    ...y,
-    disableReactionReads: !!R || y.disableReactionReads,
+    ...P,
+    disableReactionReads: !!R || P.disableReactionReads,
     ...e,
     isLurking: p && h,
     isGuest: T && h,

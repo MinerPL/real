@@ -32,8 +32,8 @@ var a = n("37983"),
   O = n("315102"),
   L = n("794818"),
   R = n("866190"),
-  y = n("781083"),
-  P = n("159938"),
+  P = n("781083"),
+  y = n("159938"),
   D = n("49111"),
   j = n("894488"),
   U = n("782340"),
@@ -46,7 +46,7 @@ function B(e) {
     embedUrl: r,
     message: B,
     channel: k
-  } = e, w = (0, P.useMediaPostEmbedData)(r, B), {
+  } = e, w = (0, y.useMediaPostEmbedData)(r, B), {
     setPopout: H
   } = (0, g.default)(B.id, j.DEFAULT_POPOUTS), F = (0, T.useContextMenuMessage)(B, k, H, !0), V = A.GifAutoPlay.useSetting(), Y = (0, R.useIsWindowFocused)(), [W, K] = s.useState(!1), [z, J] = s.useState((null == w ? void 0 : w.coverImage) == null), Z = (0, c.default)([m.default], () => m.default.useReducedMotion), X = (0, c.default)([N.default, M.default], () => {
     var e;
@@ -122,7 +122,7 @@ function B(e) {
           className: b.thumbnailOverlay,
           children: (0, a.jsxs)("div", {
             className: b.thumbnailOverlayCta,
-            children: [(0, a.jsx)(y.default, {
+            children: [(0, a.jsx)(P.default, {
               color: d.default.WHITE
             }), (0, a.jsx)(f.Text, {
               variant: "text-sm/semibold",

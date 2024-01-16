@@ -30,19 +30,19 @@ var s = n("414456"),
 function N(e) {
   var t, n, s, N, M, v, x, O, L, R;
   let {
-    message: y,
-    channel: P
-  } = e, D = null === (s = y.embeds[0]) || void 0 === s ? void 0 : null === (n = s.fields) || void 0 === n ? void 0 : null === (t = n.find(e => {
+    message: P,
+    channel: y
+  } = e, D = null === (s = P.embeds[0]) || void 0 === s ? void 0 : null === (n = s.fields) || void 0 === n ? void 0 : null === (t = n.find(e => {
     let {
       rawName: t
     } = e;
     return "guild_id" === t
-  })) || void 0 === t ? void 0 : t.rawValue, j = null === (v = y.embeds[0]) || void 0 === v ? void 0 : null === (M = v.fields) || void 0 === M ? void 0 : null === (N = M.find(e => {
+  })) || void 0 === t ? void 0 : t.rawValue, j = null === (v = P.embeds[0]) || void 0 === v ? void 0 : null === (M = v.fields) || void 0 === M ? void 0 : null === (N = M.find(e => {
     let {
       rawName: t
     } = e;
     return "channel_id" === t
-  })) || void 0 === N ? void 0 : N.rawValue, U = (0, i.useStateFromStores)([_.default], () => _.default.getGuild(D)), b = (0, i.useStateFromStores)([E.default], () => E.default.getChannel(j)), G = (0, i.useStateFromStores)([h.default], () => h.default.getCurrentUser()), B = (0, i.useStateFromStores)([], () => y.author.id === (null == G ? void 0 : G.id)), k = null === (x = P.recipients) || void 0 === x ? void 0 : x.find(e => e !== y.author.id), w = (0, i.useStateFromStores)([h.default], () => null != k ? h.default.getUser(k) : null), H = (0, c.default)(y), F = (0, g.useName)(P.getGuildId(), P.id, w), V = (0, i.useStateFromStoresArray)([p.default], () => null != b ? p.default.getVoiceStatesForChannel(b) : [], [b]), Y = V.some(e => e.user.id === (null == G ? void 0 : G.id)), W = null === (R = y.embeds[0]) || void 0 === R ? void 0 : null === (L = R.fields) || void 0 === L ? void 0 : null === (O = L.find(e => {
+  })) || void 0 === N ? void 0 : N.rawValue, U = (0, i.useStateFromStores)([_.default], () => _.default.getGuild(D)), b = (0, i.useStateFromStores)([E.default], () => E.default.getChannel(j)), G = (0, i.useStateFromStores)([h.default], () => h.default.getCurrentUser()), B = (0, i.useStateFromStores)([], () => P.author.id === (null == G ? void 0 : G.id)), k = null === (x = y.recipients) || void 0 === x ? void 0 : x.find(e => e !== P.author.id), w = (0, i.useStateFromStores)([h.default], () => null != k ? h.default.getUser(k) : null), H = (0, c.default)(P), F = (0, g.useName)(y.getGuildId(), y.id, w), V = (0, i.useStateFromStoresArray)([p.default], () => null != b ? p.default.getVoiceStatesForChannel(b) : [], [b]), Y = V.some(e => e.user.id === (null == G ? void 0 : G.id)), W = null === (R = P.embeds[0]) || void 0 === R ? void 0 : null === (L = R.fields) || void 0 === L ? void 0 : null === (O = L.find(e => {
     let {
       rawName: t
     } = e;
@@ -112,7 +112,7 @@ function N(e) {
       }), (0, a.jsx)(r.Button, {
         color: r.Button.Colors.PRIMARY,
         onClick: () => {
-          o.default.sendMessage(P.id, d.default.parse(P, "\uD83D\uDC4B"))
+          o.default.sendMessage(y.id, d.default.parse(y, "\uD83D\uDC4B"))
         },
         className: A.button,
         children: q

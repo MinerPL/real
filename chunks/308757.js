@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return R
   },
   openSKUPaymentModal: function() {
-    return P
+    return y
   }
 }), n("70102");
 var a = n("37983");
@@ -137,19 +137,19 @@ async function R(e) {
       }
     })
   });
-  else return P(t, n, o, {
+  else return y(t, n, o, {
     isIAP: !0,
     context: d
   })
 }
-let y = {
+let P = {
   isIAP: !1,
   context: x.AppContext.APP,
   promotionId: null,
   isGift: !1
 };
 
-function P(e, t, s) {
+function y(e, t, s) {
   let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
     u = Promise.resolve();
   !A.default.hasFetchedPaymentSources && (u = o.fetchPaymentSources());
@@ -159,7 +159,7 @@ function P(e, t, s) {
     promotionId: f,
     isGift: m
   } = {
-    ...y,
+    ...P,
     ...l
   }, E = L();
   return u.then(() => new Promise((l, o) => {

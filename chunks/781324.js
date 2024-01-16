@@ -10,13 +10,13 @@ n.r(t), n.d(t, {
 var i = n("872717"),
   l = n("913144"),
   r = n("651693"),
-  o = n("736393"),
-  a = n("49111");
+  a = n("736393"),
+  o = n("49111");
 async function s() {
   l.default.dispatch({
     type: "SAFETY_HUB_FETCH_START"
   }), await i.default.get({
-    url: a.Endpoints.SAFETY_HUB
+    url: o.Endpoints.SAFETY_HUB
   }).then(e => {
     let {
       body: t
@@ -24,10 +24,10 @@ async function s() {
       classifications: n,
       guild_classifications: i,
       account_standing: r
-    } = t, o = n.map(e => (c(e), e));
+    } = t, a = n.map(e => (c(e), e));
     l.default.dispatch({
       type: "SAFETY_HUB_FETCH_SUCCESS",
-      classifications: o.concat(null != i ? i : []),
+      classifications: a.concat(null != i ? i : []),
       accountStanding: r
     })
   }).catch(e => {
@@ -43,20 +43,20 @@ async function u(e) {
     type: "SAFETY_HUB_FETCH_CLASSIFICATION_START",
     classificationId: e
   }), await i.default.get({
-    url: a.Endpoints.SAFETY_HUB
+    url: o.Endpoints.SAFETY_HUB
   }).then(t => {
     let {
       body: n
     } = t, {
       classifications: i,
       account_standing: r,
-      is_dsa_eligible: o
-    } = n, a = i.find(t => t.id === e);
-    null != a ? (c(a), l.default.dispatch({
+      is_dsa_eligible: a
+    } = n, o = i.find(t => t.id === e);
+    null != o ? (c(o), l.default.dispatch({
       type: "SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS",
-      classification: a,
+      classification: o,
       accountStanding: r,
-      isDsaEligible: o
+      isDsaEligible: a
     })) : l.default.dispatch({
       type: "SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE",
       error: "Classification not found.",
@@ -80,6 +80,6 @@ function c(e) {
         filename: t
       } = e;
       return (0, r.isImageFile)(t)
-    }), e.flagged_content = (0, o.isFlaggedContentEmpty)(t) ? [] : [t]
+    }), e.flagged_content = (0, a.isFlaggedContentEmpty)(t) ? [] : [t]
   }
 }

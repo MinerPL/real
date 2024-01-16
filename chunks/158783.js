@@ -41,15 +41,15 @@ function p(e) {
   } = p;
   l(O === E.InviteTargetTypes.STREAM && null != L, "invalid streaming invite");
   let R = I === L.id,
-    y = p.state === m.InviteStates.ACCEPTING,
-    P = null != T;
+    P = p.state === m.InviteStates.ACCEPTING,
+    y = null != T;
   if (null == T) {
     if (null == p.guild) return (0, a.jsx)(f.default, {});
     T = new o.default(p.guild)
   }
   let D = null != p.channel ? (0, r.createChannelRecordFromInvite)(p.channel) : null,
     j = v ? g : C;
-  P && !x ? s = R ? _.default.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : _.default.Messages.INVITE_BUTTON_STREAM_ENDED.format({
+  y && !x ? s = R ? _.default.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : _.default.Messages.INVITE_BUTTON_STREAM_ENDED.format({
     name: L.username
   }) : (t = _.default.Messages.WATCH, n = c.default.Button.Colors.GREEN, v && (t = _.default.Messages.INVITE_BUTTON_STREAM_WATCHING, n = c.default.Button.Colors.PRIMARY), s = R ? _.default.Messages.INVITE_BUTTON_STREAMER : _.default.Messages.INVITE_BUTTON_STREAMING.format({
     name: L.username
@@ -67,16 +67,16 @@ function p(e) {
         className: h.headerLine,
         children: [(0, a.jsx)(c.default.Icon, {
           guild: T,
-          onClick: P && x ? j : void 0
+          onClick: y && x ? j : void 0
         }), (0, a.jsx)(c.default.Info, {
           title: s,
-          onClick: P && x ? j : void 0,
+          onClick: y && x ? j : void 0,
           children: U
         })]
       }), x ? (0, a.jsx)(c.default.Button, {
-        disabled: P && !x,
+        disabled: y && !x,
         onClick: j,
-        submitting: y,
+        submitting: P,
         isDisabled: v && x,
         color: n,
         children: t

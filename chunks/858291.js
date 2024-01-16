@@ -35,7 +35,7 @@ function I(e) {
     thumbnailHeight: M,
     descriptionTextVariant: v = "text-sm/normal",
     showOpaqueBackground: x = !1
-  } = e, O = (0, s.default)([o.default], () => o.default.getGuild(I), [I]), L = null == O ? void 0 : O.roles[null !== (t = null == n ? void 0 : n.role_id) && void 0 !== t ? t : ""], R = (0, l.useListingThumbnailUrl)(n, 600), y = (0, E.useProductType)(n), P = (0, d.useCanManageGuildProduct)(O), {
+  } = e, O = (0, s.default)([o.default], () => o.default.getGuild(I), [I]), L = null == O ? void 0 : O.roles[null !== (t = null == n ? void 0 : n.role_id) && void 0 !== t ? t : ""], R = (0, l.useListingThumbnailUrl)(n, 600), P = (0, E.useProductType)(n), y = (0, d.useCanManageGuildProduct)(O), {
     shouldHideGuildPurchaseEntryPoints: D
   } = (0, r.useShouldHideGuildPurchaseEntryPoints)(I), j = (0, E.usePrice)(n);
   if (null == O || D) return null;
@@ -47,13 +47,13 @@ function I(e) {
     b = (0, a.jsx)(_.GuildProductListingPopout, {
       product: n,
       guildId: I,
-      showEditProduct: P,
+      showEditProduct: y,
       showUnpublishProduct: !1,
       showCopyLink: !0,
       showTestDownload: !1,
       showDeleteProduct: !1,
       showReportProduct: !0,
-      onEditProduct: P ? () => {
+      onEditProduct: y ? () => {
         f.openModal(O.id, n.id)
       } : () => {},
       onUnpublishProduct: () => {},
@@ -79,7 +79,7 @@ function I(e) {
       guildProductListingId: n.id,
       sourceAnalyticsLocations: T
     }),
-    productType: y,
+    productType: P,
     shouldShowFullDescriptionButton: g,
     onShowFullDescription: U,
     onTapCard: U,

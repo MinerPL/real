@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return R
   },
   useClickReferencedMessageAuthorAvatar: function() {
-    return y
+    return P
   },
   useClickInteractionUserAvatar: function() {
-    return P
+    return y
   },
   useContextMenuMessage: function() {
     return D
@@ -121,12 +121,12 @@ function R(e, t) {
   return L(n)
 }
 
-function y(e, t) {
+function P(e, t) {
   let n = N("referencedAvatarProfile", e, t);
   return L(n)
 }
 
-function P(e, t) {
+function y(e, t) {
   let n = N("interactionAvatarProfile", e, t);
   return L(n)
 }

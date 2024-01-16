@@ -89,8 +89,8 @@ function g() {
     },
     {
       title: x,
-      description: h,
-      color: p,
+      description: p,
+      color: h,
       Icon: O
     } = m[t.state],
     H = Object.keys(m).length;
@@ -113,7 +113,7 @@ function g() {
           children: x.format({
             hook: t => (0, n.jsx)(d.Text, {
               style: {
-                color: p.css
+                color: h.css
               },
               variant: "heading-lg/bold",
               tag: "span",
@@ -123,7 +123,7 @@ function g() {
         }), (0, n.jsx)(d.Text, {
           color: "text-normal",
           variant: "text-sm/normal",
-          children: h
+          children: p
         })]
       }), (0, n.jsxs)("div", {
         className: I.health,

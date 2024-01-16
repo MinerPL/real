@@ -127,12 +127,12 @@ function M(e, t, n) {
     O = (0, _.getAvatarUrl)(v, x),
     L = M.answers,
     R = M.layout_type,
-    y = N(e, n, {
+    P = N(e, n, {
       formattedExpirationLabel: A
     });
-  if (null == y) return;
+  if (null == P) return;
   let {
-    canTapAnswers: P,
+    canTapAnswers: y,
     canEditVote: D,
     canShowVoteCounts: j,
     canSubmitVote: U,
@@ -146,7 +146,7 @@ function M(e, t, n) {
     selectedAnswerIds: V,
     submitting: Y,
     tapShouldOpenVotersModal: W
-  } = y, K = F.reduce((e, t) => {
+  } = P, K = F.reduce((e, t) => {
     var n, a;
     return e + (null !== (a = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== a ? a : 0)
   }, 0), z = Math.max(...L.map(e => {
@@ -270,7 +270,7 @@ function M(e, t, n) {
     answers: J,
     answersInteraction: (0, a.match)({
       tapShouldOpenVotersModal: W,
-      canTapAnswers: P,
+      canTapAnswers: y,
       canSelectMultipleAnswers: Q
     }).with({
       tapShouldOpenVotersModal: !0
@@ -303,7 +303,7 @@ function M(e, t, n) {
     primaryAction: Z,
     submitVoteLabel: null !== (p = null == Z ? void 0 : Z.label) && void 0 !== p ? p : "",
     canSubmitVote: U,
-    canTapAnswers: P,
+    canTapAnswers: y,
     canSelectMultipleAnswers: Q,
     hasSelectedAnswer: G,
     canShowVoteCounts: j,
