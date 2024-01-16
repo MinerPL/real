@@ -23,8 +23,8 @@ var l = n("37983"),
   N = n("520899"),
   I = n("988864"),
   m = n("960808"),
-  g = n("45835"),
-  A = n("699473"),
+  A = n("45835"),
+  g = n("699473"),
   C = n("393414"),
   R = n("845579"),
   M = n("42203"),
@@ -100,7 +100,7 @@ function B(e) {
     {
       message: f,
       channel: I
-    } = (0, g.getSavedMessageAndChannel)(s),
+    } = (0, A.getSavedMessageAndChannel)(s),
     m = M.default.getChannel(I.id),
     y = (0, T.default)(m, !0),
     P = null != y ? y : I.name,
@@ -179,7 +179,7 @@ function B(e) {
       className: i(G.messageContainer, j.unloadedMessage, {
         [j.disabledMessage]: r
       }),
-      children: [(0, l.jsx)(A.default, {
+      children: [(0, l.jsx)(g.default, {
         message: f,
         channel: I,
         className: G.message,

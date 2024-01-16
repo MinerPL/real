@@ -25,7 +25,7 @@ function p(e) {
     setTab: t,
     badgeState: n,
     closePopout: s
-  } = e, p = (0, r.useStateFromStores)([c.default], () => c.default.getInvites()), [I, m] = a.useState(!1), [g, A] = a.useMemo(() => i.partition(p, e => {
+  } = e, p = (0, r.useStateFromStores)([c.default], () => c.default.getInvites()), [I, m] = a.useState(!1), [A, g] = a.useMemo(() => i.partition(p, e => {
     let t = (Date.now() - new Date(e.created_at).getTime()) / 1e3;
     return t < e.ttl
   }), [p]);
@@ -56,20 +56,20 @@ function p(e) {
     }), (0, l.jsx)(d.AdvancedScrollerThin, {
       children: (0, l.jsxs)("div", {
         className: T.invitesContainer,
-        children: [g.length > 0 && (0, l.jsxs)(l.Fragment, {
+        children: [A.length > 0 && (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)(N, {
             title: S.default.Messages.GAME_INVITES_RECENT_HEADER
           }), (0, l.jsx)(l.Fragment, {
-            children: g.map(e => (0, l.jsx)(_.default, {
+            children: A.map(e => (0, l.jsx)(_.default, {
               invite: e,
               expired: !1
             }, e.invite_id))
           })]
-        }), A.length > 0 && (0, l.jsxs)(l.Fragment, {
+        }), g.length > 0 && (0, l.jsxs)(l.Fragment, {
           children: [(0, l.jsx)(N, {
             title: S.default.Messages.GAME_INVITES_EXPIRED_HEADER
           }), (0, l.jsx)(l.Fragment, {
-            children: A.map(e => (0, l.jsx)(_.default, {
+            children: g.map(e => (0, l.jsx)(_.default, {
               invite: e,
               expired: !0
             }, e.invite_id))

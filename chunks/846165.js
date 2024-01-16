@@ -1,6 +1,6 @@
-var a = n("323033");
-e.exports = function(e) {
-  var t = a(e),
-    n = t % 1;
-  return t == t ? n ? t - n : t : 0
+var n = r("323033");
+t.exports = function(t) {
+  var e = n(t),
+    r = e % 1;
+  return e == e ? r ? e - r : e : 0
 }
