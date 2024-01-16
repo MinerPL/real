@@ -1,9 +1,9 @@
-var i = n("424498");
-e.exports = function(e, t, n) {
-  "__proto__" == t && i ? i(e, t, {
+var n = r("424498");
+t.exports = function(t, e, r) {
+  "__proto__" == e && n ? n(t, e, {
     configurable: !0,
     enumerable: !0,
-    value: n,
+    value: r,
     writable: !0
-  }) : e[t] = n
+  }) : t[e] = r
 }

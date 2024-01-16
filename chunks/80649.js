@@ -106,7 +106,7 @@ function y(e) {
       },
       canCloseAllMessages: !0,
       renderHeader: U,
-      renderEmptyState: F,
+      renderEmptyState: b,
       renderMessage: P,
       "aria-label": O.default.Messages.RECENT_MENTIONS,
       listName: "recents"
@@ -174,7 +174,7 @@ function U(e) {
   })
 }
 
-function F(e) {
+function b(e) {
   return (0, l.jsx)(C.default, {
     Icon: p.default,
     header: O.default.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,

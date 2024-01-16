@@ -5,16 +5,16 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var i = n("872717"),
-  r = n("689988"),
-  l = n("870691"),
-  a = n("42203"),
+  l = n("689988"),
+  a = n("870691"),
+  r = n("42203"),
   s = n("49111");
 let o = {},
   u = 0;
 
 function d() {
   o = {
-    ...l.default.getCollapsedCategories()
+    ...a.default.getCollapsedCategories()
   }
 }
 
@@ -32,19 +32,19 @@ async function f(e, t) {
 async function h(e) {
   clearTimeout(u);
   let t = 0 !== Object.keys(e).length,
-    n = l.default.getCollapsedCategories(),
-    r = function() {
+    n = a.default.getCollapsedCategories(),
+    l = function() {
       let e = {},
-        t = l.default.getCollapsedCategories();
+        t = a.default.getCollapsedCategories();
       for (let n in t) t[n] !== o[n] && (e[n] = !0);
       for (let n in o) t[n] !== o[n] && (e[n] = !0);
       return e
     }();
-  for (let i in r) {
-    let r = a.default.getChannel(i);
-    null != r && null != r.guild_id && (!(r.guild_id in e) && (e[r.guild_id] = {}), null == e[r.guild_id].channel_overrides && (e[r.guild_id].channel_overrides = {}), e[r.guild_id].channel_overrides[r.id] = {
-      ...e[r.guild_id].channel_overrides[r.id],
-      collapsed: r.id in n
+  for (let i in l) {
+    let l = r.default.getChannel(i);
+    null != l && null != l.guild_id && (!(l.guild_id in e) && (e[l.guild_id] = {}), null == e[l.guild_id].channel_overrides && (e[l.guild_id].channel_overrides = {}), e[l.guild_id].channel_overrides[l.id] = {
+      ...e[l.guild_id].channel_overrides[l.id],
+      collapsed: l.id in n
     }, t = !0)
   }
   return t ? (o = {
@@ -59,10 +59,10 @@ async function h(e) {
 
 function E() {
   o = {
-    ...l.default.getCollapsedCategories()
+    ...a.default.getCollapsedCategories()
   }
 }
-class _ extends r.default {
+class _ extends l.default {
   constructor(...e) {
     super(...e), this.actions = {
       CATEGORY_COLLAPSE: c,

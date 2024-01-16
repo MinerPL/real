@@ -71,7 +71,7 @@ function U(e) {
   }) && (x = !1), e) : null
 }
 
-function F(e) {
+function b(e) {
   if (null == R[e]) return !1;
   delete R[e], C = a.filter(C, t => {
     let {
@@ -81,11 +81,11 @@ function F(e) {
   })
 }
 
-function b(e) {
+function F(e) {
   let {
     id: t
   } = e;
-  return F(t)
+  return b(t)
 }
 
 function j(e) {
@@ -238,13 +238,13 @@ var V = new H(o.default, {
     let l = C[n];
     null != l && (C[n] = (0, u.updateMessageRecord)(l, e.message))
   },
-  MESSAGE_DELETE: b,
-  RECENT_MENTION_DELETE: b,
+  MESSAGE_DELETE: F,
+  RECENT_MENTION_DELETE: F,
   MESSAGE_DELETE_BULK: function(e) {
     let {
       ids: t
     } = e;
-    a.forEach(t, F)
+    a.forEach(t, b)
   },
   USER_SETTINGS_PROTO_UPDATE: k,
   I18N_LOAD_SUCCESS: k,

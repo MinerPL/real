@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   savedMessageToServer: function() {
-    return i
-  },
-  savedMessageToClient: function() {
     return r
   },
+  savedMessageToClient: function() {
+    return i
+  },
   savedMessageHasMetadata: function() {
-    return l
+    return u
   },
   MESSAGE_REMINDER_DURATION_ITEMS: function() {
-    return u
+    return l
   }
 });
 var a = n("718517"),
   s = n("782340");
 
-function i(e) {
+function r(e) {
   var t;
   return {
     channel_id: e.channelId,
@@ -32,7 +32,7 @@ function i(e) {
   }
 }
 
-function r(e) {
+function i(e) {
   return {
     channelId: e.channel_id,
     messageId: e.message_id,
@@ -47,10 +47,10 @@ function r(e) {
   }
 }
 
-function l(e) {
+function u(e) {
   return null != e.authorSummary && e.authorSummary.length > 0 && null != e.channelSummary && e.channelSummary.length > 0 && null != e.messageSummary && e.messageSummary.length > 0 && null != e.authorId && e.authorId.length > 0
 }
-let u = [{
+let l = [{
   duration: a.default.Millis.HOUR,
   getLabel: () => s.default.Messages.MESSAGE_REMINDERS_IN_ONE_HOUR
 }, {

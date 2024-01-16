@@ -29,11 +29,11 @@ var s = n("37983"),
   N = n("957255"),
   L = n("101125"),
   v = n("351825"),
-  x = n("738602"),
-  R = n("430025"),
+  R = n("738602"),
+  x = n("430025"),
   y = n("659500"),
-  O = n("773336"),
-  D = n("412861"),
+  D = n("773336"),
+  O = n("412861"),
   j = n("79254"),
   P = n("64096"),
   b = n("49111"),
@@ -75,7 +75,7 @@ var s = n("37983"),
       eu = (0, c.default)(X);
     (null == eu ? void 0 : eu.newClipIds.length) !== (null == X ? void 0 : X.newClipIds.length) && (null !== (t = null == X ? void 0 : X.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ea && ee && Q && !et && !$ && !en && el("recentClips");
     let ed = (e, t, n) => {
-      null != t && "ETOOLARGE" === t.code ? (0, D.showUploadFileSizeExceededError)(w, []) : (0, D.promptToUpload)(e, w, B, {
+      null != t && "ETOOLARGE" === t.code ? (0, O.showUploadFileSizeExceededError)(w, []) : (0, O.promptToUpload)(e, w, B, {
         requireConfirm: !0,
         showLargeMessageDialog: n
       }), y.ComponentDispatch.dispatchToLastSubscribed(b.ComponentActions.TEXTAREA_FOCUS)
@@ -105,7 +105,7 @@ var s = n("37983"),
     });
     let ef = (0, A.useCanStartPublicThread)(w),
       eh = (0, A.useCanStartPrivateThread)(w),
-      eC = !T.UseLegacyChatInput.useSetting() && !(0, O.isAndroidWeb)() && null != window.ResizeObserver,
+      eC = !T.UseLegacyChatInput.useSetting() && !(0, D.isAndroidWeb)() && null != window.ResizeObserver,
       ep = (0, r.useStateFromStores)([N.default, _.default], () => (0, C.canUseApplicationCommands)(N.default, _.default, Z, w)),
       em = (0, S.useCanPostPollsInChannel)(null != w ? w : void 0),
       eE = (0, u.useRedesignIconContext)().enabled,
@@ -128,13 +128,13 @@ var s = n("37983"),
     k = eE ? (0, s.jsx)(o.CirclePlusIcon, {
       className: H.attachButtonIcon,
       colorClass: H.attachButtonPlus
-    }) : eA ? (0, s.jsx)(R.default, {
+    }) : eA ? (0, s.jsx)(x.default, {
       className: H.attachButtonIcon,
       foreground: H.attachButtonPlay,
       background: H.attachButtonPlus,
       width: 24,
       height: 24
-    }) : eg > 0 ? (0, s.jsx)(x.default, {
+    }) : eg > 0 ? (0, s.jsx)(R.default, {
       className: H.attachButtonIcon,
       foreground: H.attachButtonClip,
       background: H.attachButtonPlus,
