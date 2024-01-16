@@ -390,7 +390,7 @@ function o(E, S) {
 }
 
 function R(E, S, s) {
-  let i = [e.Permissions.SEND_MESSAGES, e.Permissions.EMBED_LINKS, e.Permissions.ATTACH_FILES, e.Permissions.ADD_REACTIONS, e.Permissions.USE_EXTERNAL_EMOJIS, e.Permissions.USE_EXTERNAL_STICKERS, e.Permissions.MENTION_EVERYONE, e.Permissions.MANAGE_MESSAGES, e.Permissions.READ_MESSAGE_HISTORY, e.Permissions.SEND_TTS_MESSAGES, e.Permissions.USE_APPLICATION_COMMANDS];
+  let i = [e.Permissions.SEND_MESSAGES, e.Permissions.EMBED_LINKS, e.Permissions.ATTACH_FILES, e.Permissions.ADD_REACTIONS, e.Permissions.USE_EXTERNAL_EMOJIS, e.Permissions.USE_EXTERNAL_STICKERS, e.Permissions.MENTION_EVERYONE, e.Permissions.MANAGE_MESSAGES, e.Permissions.READ_MESSAGE_HISTORY, e.Permissions.SEND_TTS_MESSAGES, e.Permissions.USE_APPLICATION_COMMANDS, e.Permissions.SEND_VOICE_MESSAGES];
   return {
     title: S,
     description: s.sectionDescription,

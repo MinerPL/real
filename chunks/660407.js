@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return L
   }
 }), n("222007");
 var l = n("37983"),
@@ -17,19 +17,18 @@ var l = n("37983"),
   E = n("739034"),
   h = n("393414"),
   _ = n("42203"),
-  S = n("10802"),
-  T = n("211248"),
-  p = n("461380"),
-  N = n("36694"),
-  I = n("11539"),
-  m = n("815978"),
-  A = n("814744"),
-  g = n("879165"),
-  C = n("609023"),
-  R = n("49111"),
-  M = n("782340"),
-  O = n("951244");
-let L = a.memo(function(e) {
+  S = n("211248"),
+  T = n("461380"),
+  p = n("36694"),
+  N = n("11539"),
+  I = n("815978"),
+  m = n("814744"),
+  A = n("879165"),
+  g = n("609023"),
+  C = n("49111"),
+  R = n("782340"),
+  M = n("951244");
+let O = a.memo(function(e) {
   let {
     channel: t,
     deleteChannel: n
@@ -66,59 +65,54 @@ let L = a.memo(function(e) {
   return (0, l.jsx)(r.animated.div, {
     ref: s,
     style: E,
-    children: (0, l.jsx)(D, {
+    children: (0, l.jsx)(v, {
       ...e
     })
   })
 });
-var v = L;
-let D = a.memo(function(e) {
+var L = O;
+let v = a.memo(function(e) {
   let {
     channel: t,
     onJump: n,
     deleteChannel: s,
     toggle: i
-  } = e, r = (0, o.useStateFromStores)([_.default], () => _.default.getChannel(t.channelId)), E = (0, o.useStateFromStores)([S.default], () => null == t.guildId || S.default.isSubscribedToThreads(t.guildId));
+  } = e, r = (0, o.useStateFromStores)([_.default], () => _.default.getChannel(t.channelId));
   if (a.useEffect(() => {
       null != r && t.isFullyLoaded && !t.hasError && !t.collapsed && "messages" === t.type && 0 === t.messages.length && d.default.wait(() => {
         (0, c.ack)(t.channelId, !0), s(t.channelId)
       })
-    }), a.useEffect(() => {
-      t.hasLoadedAnything && null != t.guildId && !E && d.default.dispatch({
-        type: "GUILD_SUBSCRIPTIONS",
-        guildId: t.guildId
-      })
-    }, [t.hasLoadedAnything, t.guildId, E]), null == r || !t.hasLoadedAnything) return null;
-  let T = (e, l) => {
-    (0, f.trackWithMetadata)(R.AnalyticEvents.INBOX_CHANNEL_CLICKED, {
+    }), null == r || !t.hasLoadedAnything) return null;
+  let E = (e, l) => {
+    (0, f.trackWithMetadata)(C.AnalyticEvents.INBOX_CHANNEL_CLICKED, {
       channel_id: t.channelId,
       guild_id: t.guildId
     });
     let a = null != l ? l : t.oldestUnreadMessageId;
-    (0, h.transitionTo)(R.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : a)), n(e)
+    (0, h.transitionTo)(C.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : a)), n(e)
   };
   return (0, l.jsx)("div", {
-    className: O.channel,
+    className: M.channel,
     children: (0, l.jsx)(u.HeadingLevel, {
-      component: (0, l.jsxs)(A.default, {
+      component: (0, l.jsxs)(m.default, {
         channel: r,
-        gotoChannel: T,
+        gotoChannel: E,
         mentionCount: t.mentionCount,
         toggleCollapsed: i,
         channelState: t,
-        children: [(0, l.jsx)(m.default, {
+        children: [(0, l.jsx)(I.default, {
           channel: r
-        }), (0, l.jsx)(y, {
+        }), (0, l.jsx)(D, {
           ...e
-        }), "nsfw" === t.type ? null : (0, l.jsx)(x, {
+        }), "nsfw" === t.type ? null : (0, l.jsx)(y, {
           ...e
         })]
       }),
-      children: t.collapsed ? null : "messages" === t.type ? (0, l.jsx)(C.default, {
+      children: t.collapsed ? null : "messages" === t.type ? (0, l.jsx)(g.default, {
         channel: t,
         channelRecord: r,
-        gotoChannel: T
-      }) : "forum" === t.type ? (0, l.jsx)(g.default, {
+        gotoChannel: E
+      }) : "forum" === t.type ? (0, l.jsx)(A.default, {
         channel: t,
         channelRecord: r,
         deleteChannel: s
@@ -127,26 +121,26 @@ let D = a.memo(function(e) {
   })
 });
 
-function y(e) {
+function D(e) {
   let {
     channel: t,
     markChannelRead: n,
     markGuildRead: a,
     getNumUnreadChannels: s
   } = e, i = (0, E.default)(), r = i && null != t.guildId;
-  return (0, l.jsx)(T.default, {
-    className: O.markReadButton,
-    tooltip: r ? M.default.Messages.MARK_GUILD_AS_READ : M.default.Messages.MARK_AS_READ,
-    color: T.CircleIconButtonColors.TERTIARY,
-    icon: r ? (0, l.jsx)(I.default, {
+  return (0, l.jsx)(S.default, {
+    className: M.markReadButton,
+    tooltip: r ? R.default.Messages.MARK_GUILD_AS_READ : R.default.Messages.MARK_AS_READ,
+    color: S.CircleIconButtonColors.TERTIARY,
+    icon: r ? (0, l.jsx)(N.default, {
       width: 16,
       height: 16
-    }) : (0, l.jsx)(N.default, {
+    }) : (0, l.jsx)(p.default, {
       width: 16,
       height: 16
     }),
     onClick: function() {
-      r && null != t.guildId ? a(t.guildId) : n(t), (0, f.trackWithMetadata)(R.AnalyticEvents.INBOX_CHANNEL_ACKED, {
+      r && null != t.guildId ? a(t.guildId) : n(t), (0, f.trackWithMetadata)(C.AnalyticEvents.INBOX_CHANNEL_ACKED, {
         channel_id: t.channelId,
         guild_id: t.guildId,
         marked_all_channels_as_read: !1,
@@ -156,7 +150,7 @@ function y(e) {
   })
 }
 
-function x(e) {
+function y(e) {
   let {
     channel: t,
     toggle: n,
@@ -164,7 +158,7 @@ function x(e) {
   } = e;
 
   function s() {
-    n(t), (0, f.trackWithMetadata)(R.AnalyticEvents.INBOX_CHANNEL_COLLAPSED, {
+    n(t), (0, f.trackWithMetadata)(C.AnalyticEvents.INBOX_CHANNEL_COLLAPSED, {
       channel_id: t.channelId,
       guild_id: t.guildId,
       num_unread_channels_remaining: a(),
@@ -172,14 +166,14 @@ function x(e) {
     })
   }
   return (0, l.jsx)(u.Tooltip, {
-    text: M.default.Messages.COLLAPSE,
+    text: R.default.Messages.COLLAPSE,
     children: e => (0, l.jsx)(u.Clickable, {
       ...e,
-      className: i(O.collapseButton, {
-        [O.collapsed]: t.collapsed
+      className: i(M.collapseButton, {
+        [M.collapsed]: t.collapsed
       }),
       onClick: s,
-      children: (0, l.jsx)(p.default, {
+      children: (0, l.jsx)(T.default, {
         width: 16,
         height: 16
       })

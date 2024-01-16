@@ -286,8 +286,12 @@ function V() {
           for (let l in i) Y(e, t, n, l)
         })
       }), f.sortBy(t, e => e.sortOrder)
-    }(e);
-  return {
+    }(e),
+    n = f.uniq(t.map(e => e.guildId)).filter(F.isNotNullish);
+  return E.default.dispatch({
+    type: "INBOX_OPEN",
+    guildIds: n
+  }), {
     collapsedChannels: e,
     loadState: "loaded",
     channels: t,
