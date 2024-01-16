@@ -1,47 +1,47 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return h
+    return T
   }
 });
-var l = n("37983");
-n("884691");
-var a = n("414456"),
-  s = n.n(a),
-  i = n("819855"),
-  r = n("841098"),
-  u = n("449918"),
-  o = n("832132"),
-  d = n("818643"),
-  c = n("608684"),
-  E = n("49111"),
-  f = n("575282");
+var n = l("37983");
+l("884691");
+var a = l("414456"),
+  s = l.n(a),
+  r = l("819855"),
+  i = l("841098"),
+  u = l("449918"),
+  d = l("832132"),
+  o = l("818643"),
+  c = l("608684"),
+  E = l("49111"),
+  f = l("575282");
 let _ = E.Color.PRIMARY_400,
   I = E.Color.PRIMARY_500;
 
-function h(e) {
+function T(e) {
   let {
     enabled: t,
-    imageClassName: n,
+    imageClassName: l,
     iconWrapperClassName: a,
     ...E
-  } = e, h = (0, r.default)(), T = (0, i.isThemeDark)(h) ? _ : I, N = {
+  } = e, T = (0, i.default)(), N = (0, r.isThemeDark)(T) ? _ : I, h = {
     height: 18,
     width: 18,
-    color: (0, u.getColor)(T)
+    color: (0, u.getColor)(N)
   };
-  return (0, l.jsx)(c.default, {
+  return (0, n.jsx)(c.default, {
     className: s({
       [f.avatarUploader]: t,
       [f.avatarUploaderDisabled]: !t
     }),
-    imageClassName: s(n, f.avatarUploaderInnerSquare, {
+    imageClassName: s(l, f.avatarUploaderInnerSquare, {
       [f.avatarUploaderInnerSquareDisabled]: !t
     }),
-    icon: null != E.image && "" !== E.image ? (0, l.jsx)(o.default, {
-      ...N
-    }) : (0, l.jsx)(d.default, {
-      ...N
+    icon: null != E.image && "" !== E.image ? (0, n.jsx)(d.default, {
+      ...h
+    }) : (0, n.jsx)(o.default, {
+      ...h
     }),
     iconClassName: s(f.avatarUploadIcon, f.hideDefaultIcon),
     iconWrapperClassName: a,

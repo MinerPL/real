@@ -23,8 +23,8 @@ var l = n("37983"),
   N = n("36694"),
   I = n("11539"),
   m = n("815978"),
-  A = n("814744"),
-  g = n("879165"),
+  g = n("814744"),
+  A = n("879165"),
   C = n("609023"),
   R = n("49111"),
   M = n("782340"),
@@ -100,7 +100,7 @@ let D = a.memo(function(e) {
   return (0, l.jsx)("div", {
     className: O.channel,
     children: (0, l.jsx)(u.HeadingLevel, {
-      component: (0, l.jsxs)(A.default, {
+      component: (0, l.jsxs)(g.default, {
         channel: r,
         gotoChannel: T,
         mentionCount: t.mentionCount,
@@ -118,7 +118,7 @@ let D = a.memo(function(e) {
         channel: t,
         channelRecord: r,
         gotoChannel: T
-      }) : "forum" === t.type ? (0, l.jsx)(g.default, {
+      }) : "forum" === t.type ? (0, l.jsx)(A.default, {
         channel: t,
         channelRecord: r,
         deleteChannel: s

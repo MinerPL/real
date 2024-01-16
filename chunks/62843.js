@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   MessagesInteractionContext: function() {
-    return s
+    return a
   }
 });
-var i = n("884691");
-let s = i.createContext({
+var l = n("884691");
+let a = l.createContext({
   disableInteractions: !1,
   disableAnimations: !1
 })
