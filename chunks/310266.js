@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   GuildProductsSettingsOverview: function() {
-    return O
+    return h
   }
 }), s("222007"), s("794252");
 var a, n, l = s("37983"),
@@ -12,79 +12,80 @@ var a, n, l = s("37983"),
   u = s("741515"),
   c = s("218567"),
   E = s("97031"),
-  _ = s("258984"),
-  T = s("305961"),
-  I = s("697218"),
-  S = s("701909"),
-  N = s("442379"),
-  g = s("533161"),
-  f = s("166364"),
-  A = s("691659"),
-  L = s("49111"),
-  m = s("782340"),
-  C = s("80920");
+  _ = s("283962"),
+  T = s("258984"),
+  I = s("305961"),
+  S = s("697218"),
+  N = s("701909"),
+  g = s("442379"),
+  f = s("533161"),
+  A = s("166364"),
+  L = s("691659"),
+  m = s("49111"),
+  C = s("782340"),
+  O = s("80920");
 
-function O(e) {
+function h(e) {
   let {
     guildId: t,
     hasValidApplication: s
   } = e, {
     listingsLoaded: a
-  } = (0, N.useFetchGuildProductListingsForGuild)(t), n = (0, o.default)([T.default], () => T.default.getGuild(t)), O = (0, o.default)([I.default], () => I.default.getCurrentUser()), h = null == n ? void 0 : n.isOwner(O), {
-    loading: R
-  } = (0, u.useMonetizationSettings)(t), [D, M] = i.useState(s ? "manage_listings" : "payment");
-  if (!a || R) return (0, l.jsx)(d.Spinner, {});
+  } = (0, g.useFetchGuildProductListingsForGuild)(t), n = (0, o.default)([I.default], () => I.default.getGuild(t)), h = (0, o.default)([S.default], () => S.default.getCurrentUser()), R = (null == n ? void 0 : n.isOwner(h)) === !0, {
+    loading: D
+  } = (0, u.useMonetizationSettings)(t), [M, G] = i.useState(s ? "manage_listings" : "payment");
+  if ((0, _.useNewOwnerOnboardingRequired)(n), !a || D) return (0, l.jsx)(d.Spinner, {});
   if (null == n) return null;
-  let G = (0, l.jsxs)(l.Fragment, {
+  let x = (0, l.jsxs)(l.Fragment, {
       children: [(0, l.jsx)(d.FormTitle, {
         tag: d.FormTitleTags.H1,
-        children: m.default.Messages.GUILD_PRODUCTS_TITLE
+        children: C.default.Messages.GUILD_PRODUCTS_TITLE
       }), (0, l.jsx)(d.FormText, {
         type: d.FormText.Types.DESCRIPTION,
-        children: m.default.Messages.GUILD_PRODUCTS_SETTINGS_DESCRIPTION.format({
-          monetizationPolicyLink: S.default.getArticleURL(L.HelpdeskArticles.CREATOR_POLICY),
-          serverProductsSupportLink: S.default.getCreatorSupportArticleURL(L.HelpdeskArticles.SERVER_PRODUCTS)
+        children: C.default.Messages.GUILD_PRODUCTS_SETTINGS_DESCRIPTION.format({
+          monetizationPolicyLink: N.default.getArticleURL(m.HelpdeskArticles.CREATOR_POLICY),
+          serverProductsSupportLink: N.default.getCreatorSupportArticleURL(m.HelpdeskArticles.SERVER_PRODUCTS)
         })
       })]
     }),
-    x = (0, l.jsxs)(d.TabBar, {
+    p = (0, l.jsxs)(d.TabBar, {
       type: "top",
       look: "brand",
-      className: C.tabBar,
-      "aria-label": m.default.Messages.GUILD_PRODUCTS_TITLE,
-      selectedItem: D,
-      onItemSelect: M,
+      className: O.tabBar,
+      "aria-label": C.default.Messages.GUILD_PRODUCTS_TITLE,
+      selectedItem: M,
+      onItemSelect: G,
       children: [(0, l.jsx)(E.default, {
         id: "basic_info",
-        disabledTooltip: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
+        disabledTooltip: C.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
         disabled: !s,
-        children: m.default.Messages.GUILD_PRODUCTS_BASIC_INFO_SECTION
+        children: C.default.Messages.GUILD_PRODUCTS_BASIC_INFO_SECTION
       }), (0, l.jsx)(E.default, {
         id: "manage_listings",
-        disabledTooltip: m.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
+        disabledTooltip: C.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
         disabled: !s,
-        children: m.default.Messages.GUILD_PRODUCTS_LISTINGS_SECTION
-      }), h ? (0, l.jsx)(d.TabBar.Item, {
+        children: C.default.Messages.GUILD_PRODUCTS_LISTINGS_SECTION
+      }), R ? (0, l.jsx)(d.TabBar.Item, {
         id: "payment",
-        className: C.tabBarItem,
-        children: m.default.Messages.GUILD_PRODUCTS_PAYMENT_SECTION
+        className: O.tabBarItem,
+        children: C.default.Messages.GUILD_PRODUCTS_PAYMENT_SECTION
       }) : null]
     }),
-    p = (0, r.match)(D).with("basic_info", () => (0, l.jsx)(g.default, {
+    U = (0, r.match)(M).with("basic_info", () => (0, l.jsx)(f.default, {
       guildId: t
-    })).with("manage_listings", () => (0, l.jsx)(f.default, {
+    })).with("manage_listings", () => (0, l.jsx)(A.default, {
       guildId: t
-    })).with("payment", () => (0, l.jsx)(A.default, {
+    })).with("payment", () => (0, l.jsx)(L.default, {
       guildId: t
     })).exhaustive(),
-    U = a ? (0, l.jsx)(d.TabBar.Panel, {
-      id: D,
-      children: p
+    v = a ? (0, l.jsx)(d.TabBar.Panel, {
+      id: M,
+      children: U
     }) : (0, l.jsx)(d.Spinner, {});
   return (0, l.jsxs)(c.CreatorMonetizationSettingsDisabledContextProvider, {
     guildId: t,
-    children: [G, (0, l.jsx)(_.default, {
+    children: [x, (0, l.jsx)(T.default, {
       guild: n
-    }), x, U]
+    }), p, v]
   })
 }(n = a || (a = {})).MANAGE_LISTINGS = "manage_listings", n.PAYMENT = "payment", n.BASIC_INFO = "basic_info"

@@ -4,11 +4,12 @@ s.r(t), s.d(t, {
     return b
   }
 });
-var a = s("37983"),
-  n = s("884691"),
-  l = s("446674"),
-  i = s("77078"),
-  r = s("97031"),
+var a = s("37983");
+s("884691");
+var n = s("446674"),
+  l = s("77078"),
+  i = s("97031"),
+  r = s("283962"),
   o = s("592407"),
   d = s("900938"),
   u = s("479756"),
@@ -103,40 +104,24 @@ function y(e) {
 
 function b(e) {
   let t, {
-      guild: r,
-      application: o
+      guild: s,
+      application: l
     } = e,
-    u = (0, l.useStateFromStores)([d.default], () => d.default.getProps().subsection),
-    c = null != o && r.hasFeature(x.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED);
-  t = c ? function(e) {
+    i = (0, n.useStateFromStores)([d.default], () => d.default.getProps().subsection),
+    o = null != l && s.hasFeature(x.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED);
+  return (0, r.useNewOwnerOnboardingRequired)(s), t = o ? function(e) {
     if (e === x.GuildSettingsSubsections.ROLE_SUBSCRIPTION_EMOJI) return M.TabBarSection.EMOJIS;
     return M.TabBarSection.TIERS
-  }(u) : M.TabBarSection.PAYMENT;
-  let E = r.hasFeature(x.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING),
-    _ = r.hasFeature(x.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED),
-    I = (0, l.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
-    S = r.isOwner(I);
-  return n.useEffect(() => {
-    E && S && (0, i.openModalLazy)(async () => {
-      let {
-        default: e
-      } = await s.el("677879").then(s.bind(s, "677879"));
-      return t => (0, a.jsx)(e, {
-        ...t,
-        guildId: r.id,
-        requireTeamSetup: _
-      })
-    })
-  }, [E, _, r.id, S]), (0, a.jsx)(N.GroupListingsFetchContextProvider, {
-    guildId: r.id,
+  }(i) : M.TabBarSection.PAYMENT, (0, a.jsx)(N.GroupListingsFetchContextProvider, {
+    guildId: s.id,
     refetchOnMount: !0,
     children: (0, a.jsx)(f.RoleSubscriptionSettingsDisabledContextProvider, {
-      guildId: r.id,
+      guildId: s.id,
       children: (0, a.jsx)(M.TabBarContextProvider, {
         initialTab: t,
         children: (0, a.jsx)(B, {
-          guild: r,
-          application: o
+          guild: s,
+          application: l
         })
       })
     })
@@ -146,15 +131,15 @@ function b(e) {
 function B(e) {
   let t, {
       guild: s,
-      application: n
+      application: r
     } = e,
-    d = null != n && s.hasFeature(x.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED),
+    d = null != r && s.hasFeature(x.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED),
     {
       currentTab: _,
       setCurrentTab: I
     } = (0, M.useTabBarState)(),
     g = (0, N.useGroupListingsFetchContext)(),
-    f = (0, l.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
+    f = (0, n.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
     C = (0, L.default)(s.id),
     R = s.isOwner(f),
     U = () => {
@@ -168,7 +153,7 @@ function B(e) {
         roles: t
       }), (0, A.announceCreateTemplateChannels)(s.id), (0, E.transitionTo)(x.Routes.CHANNEL(s.id, p.StaticChannelRoute.ROLE_SUBSCRIPTIONS))
     };
-  if (!g) return (0, a.jsx)(i.Spinner, {});
+  if (!g) return (0, a.jsx)(l.Spinner, {});
   switch (_) {
     case M.TabBarSection.BASIC_INFO:
       t = (0, a.jsx)(h.default, {
@@ -197,63 +182,63 @@ function B(e) {
     className: j.container,
     children: [(0, a.jsxs)("div", {
       className: j.mainContent,
-      children: [(0, a.jsx)(i.FormTitle, {
+      children: [(0, a.jsx)(l.FormTitle, {
         tag: "h1",
         children: v.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
-      }), (0, a.jsx)(i.FormText, {
-        type: i.FormText.Types.DESCRIPTION,
+      }), (0, a.jsx)(l.FormText, {
+        type: l.FormText.Types.DESCRIPTION,
         children: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_DESCRIPTION
       }), (0, a.jsx)(m.default, {
         guild: s
       }), d && (0, a.jsx)(y, {
-        application: n
+        application: r
       }), (0, a.jsxs)("div", {
         className: j.tabBarContainer,
-        children: [(0, a.jsxs)(i.TabBar, {
+        children: [(0, a.jsxs)(l.TabBar, {
           className: j.tabBar,
           "aria-label": v.default.Messages.OPTIONS,
           selectedItem: _,
           type: "top",
           look: "brand",
           onItemSelect: I,
-          children: [(0, a.jsx)(r.default, {
+          children: [(0, a.jsx)(i.default, {
             id: M.TabBarSection.BASIC_INFO,
             disabledTooltip: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
             disabled: !d,
             children: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO
-          }), (0, a.jsx)(r.default, {
+          }), (0, a.jsx)(i.default, {
             id: M.TabBarSection.TIERS,
             disabledTooltip: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
             disabled: !d,
             children: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_TIERS
-          }), (0, a.jsx)(r.default, {
+          }), (0, a.jsx)(i.default, {
             id: M.TabBarSection.EMOJIS,
             disabledTooltip: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_BASIC_INFO_NEEDS_APPLICATION,
             disabled: !d,
             children: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_EMOJI
-          }), R ? (0, a.jsx)(i.TabBar.Item, {
+          }), R ? (0, a.jsx)(l.TabBar.Item, {
             className: j.tabBarItem,
             id: M.TabBarSection.PAYMENT,
             children: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PAYMENT
           }) : null]
         }), d && (0, a.jsx)("div", {
           className: j.previewButton,
-          children: (0, a.jsx)(i.Tooltip, {
+          children: (0, a.jsx)(l.Tooltip, {
             text: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PREVIEW_DISABLED,
             children: e => {
               let {
                 onMouseEnter: t,
                 onMouseLeave: s
               } = e;
-              return (0, a.jsx)(i.Button, {
+              return (0, a.jsx)(l.Button, {
                 disabled: C,
                 onMouseEnter: C ? t : void 0,
                 onMouseLeave: C ? s : void 0,
                 onClick: U,
-                color: i.Button.Colors.PRIMARY,
-                size: i.Button.Sizes.SMALL,
+                color: l.Button.Colors.PRIMARY,
+                size: l.Button.Sizes.SMALL,
                 grow: !C,
-                look: i.Button.Looks.OUTLINED,
+                look: l.Button.Looks.OUTLINED,
                 className: j.previewButton,
                 children: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SECTION_PREVIEW
               })
@@ -262,7 +247,7 @@ function B(e) {
         })]
       }), t]
     }), (0, a.jsx)(P, {
-      application: n,
+      application: r,
       guild: s
     })]
   })
