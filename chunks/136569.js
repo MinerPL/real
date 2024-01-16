@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   useFavoritesTooltipStore: function() {
-    return l
+    return r
   }
 });
 var i = n("308503");
-let l = (0, i.default)(e => ({
+let r = (0, i.default)(e => ({
   favoriteAdded: !1,
   notifyFavoriteAdded: () => e({
     favoriteAdded: !0

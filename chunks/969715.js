@@ -10,13 +10,13 @@ n.r(t), n.d(t, {
     return I
   },
   FeatureForumPostConfirmationModal: function() {
-    return v
+    return E
   }
 }), n("222007");
-var s = n("37983"),
-  i = n("884691"),
-  r = n("866227"),
-  l = n.n(r),
+var i = n("37983"),
+  s = n("884691"),
+  l = n("866227"),
+  r = n.n(l),
   a = n("611221"),
   u = n("77078"),
   o = n("599417"),
@@ -29,10 +29,10 @@ function m(e) {
   let {
     featureableItem: t,
     header: n,
-    body: r,
-    ...l
-  } = e, [a, d] = i.useState(null), [f, m] = i.useState(!1);
-  return (0, s.jsxs)(u.ConfirmModal, {
+    body: l,
+    ...r
+  } = e, [a, d] = s.useState(null), [f, m] = s.useState(!1);
+  return (0, i.jsxs)(u.ConfirmModal, {
     header: n,
     confirmText: h.default.Messages.GUILD_FEED_UNFEATURE_BUTTON_TEXT,
     confirmButtonColor: u.Button.Colors.RED,
@@ -45,11 +45,11 @@ function m(e) {
         throw d(new o.default(e)), m(!1), e
       }
     },
-    ...l,
-    children: [(0, s.jsx)(u.Text, {
+    ...r,
+    children: [(0, i.jsx)(u.Text, {
       variant: "text-md/normal",
-      children: r
-    }), null != a && (0, s.jsx)(u.Text, {
+      children: l
+    }), null != a && (0, i.jsx)(u.Text, {
       color: "text-danger",
       variant: "text-xs/normal",
       children: a.message
@@ -61,29 +61,29 @@ function p(e) {
   let {
     featureableItem: t,
     expiresSeconds: n,
-    header: r,
+    header: l,
     children: a,
     options: d,
     ...m
-  } = e, [p, I] = i.useState(null), [v, E] = i.useState(!1);
-  return (0, s.jsxs)(u.ConfirmModal, {
-    header: r,
+  } = e, [p, I] = s.useState(null), [E, v] = s.useState(!1);
+  return (0, i.jsxs)(u.ConfirmModal, {
+    header: l,
     confirmText: h.default.Messages.GUILD_FEED_FEATURE_BUTTON_TEXT,
     cancelText: h.default.Messages.CANCEL,
     confirmButtonColor: u.Button.Colors.BRAND,
-    loading: v,
+    loading: E,
     onConfirm: async () => {
       try {
-        let e = l().add(n, "second").toDate();
-        E(!0), await (0, c.featureGuildFeedItem)(t, e, d)
+        let e = r().add(n, "second").toDate();
+        v(!0), await (0, c.featureGuildFeedItem)(t, e, d)
       } catch (e) {
         throw I(new o.default(e)), e
       } finally {
-        E(!1)
+        v(!1)
       }
     },
     ...m,
-    children: [null != p && (0, s.jsx)(u.Text, {
+    children: [null != p && (0, i.jsx)(u.Text, {
       className: f.featureModalError,
       color: "text-danger",
       variant: "text-xs/normal",
@@ -96,13 +96,13 @@ function I(e) {
   let {
     message: t,
     guildId: n,
-    channel: i,
-    expiresSeconds: r,
-    timePeriod: l,
+    channel: s,
+    expiresSeconds: l,
+    timePeriod: r,
     options: o,
     ...c
   } = e;
-  return (0, s.jsxs)(p, {
+  return (0, i.jsxs)(p, {
     ...c,
     featureableItem: {
       guildId: n,
@@ -110,18 +110,18 @@ function I(e) {
       entityType: a.GuildFeedItemTypes.MESSAGE
     },
     header: h.default.Messages.GUILD_FEED_FEATURED_MESSAGE_MODAL_HEADER,
-    expiresSeconds: r,
+    expiresSeconds: l,
     options: o,
-    children: [(0, s.jsx)(u.Text, {
+    children: [(0, i.jsx)(u.Text, {
       className: f.featureModalText,
       variant: "text-md/normal",
       children: h.default.Messages.GUILD_FEED_FEATURE_MESSAGE_MODAL_BODY.format({
-        timePeriod: l
+        timePeriod: r
       })
-    }), (0, s.jsx)("div", {
+    }), (0, i.jsx)("div", {
       className: f.featureModalMessage,
-      children: (0, s.jsx)(d.default, {
-        channel: i,
+      children: (0, i.jsx)(d.default, {
+        channel: s,
         message: t,
         disableInteraction: !0
       })
@@ -129,16 +129,16 @@ function I(e) {
   })
 }
 
-function v(e) {
+function E(e) {
   let {
     thread: t,
     guildId: n,
-    expiresSeconds: i,
-    timePeriod: r,
-    options: l,
+    expiresSeconds: s,
+    timePeriod: l,
+    options: r,
     ...o
   } = e;
-  return (0, s.jsx)(p, {
+  return (0, i.jsx)(p, {
     ...o,
     featureableItem: {
       guildId: n,
@@ -146,14 +146,14 @@ function v(e) {
       entityType: a.GuildFeedItemTypes.FORUM_POST
     },
     header: h.default.Messages.GUILD_FEED_FEATURED_FORUM_POST_MODAL_HEADER,
-    expiresSeconds: i,
-    options: l,
-    children: (0, s.jsx)(u.Text, {
+    expiresSeconds: s,
+    options: r,
+    children: (0, i.jsx)(u.Text, {
       className: f.featureModalText,
       variant: "text-md/normal",
       children: h.default.Messages.GUILD_FEED_FEATURE_FORUM_POST_MODAL_BODY.format({
         threadName: t.name,
-        timePeriod: r
+        timePeriod: l
       })
     })
   })

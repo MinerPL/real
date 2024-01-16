@@ -6,15 +6,15 @@ n.r(t), n.d(t, {
 });
 var i = n("37983");
 n("884691");
-var l = n("469563"),
-  r = n("738707"),
+var r = n("469563"),
+  l = n("738707"),
   o = n("75196"),
-  s = (0, l.replaceIcon)(function(e) {
+  s = (0, r.replaceIcon)(function(e) {
     let {
       width: t = 24,
       height: n = 24,
-      color: l = "currentColor",
-      foreground: r,
+      color: r = "currentColor",
+      foreground: l,
       ...s
     } = e;
     return (0, i.jsx)("svg", {
@@ -28,12 +28,12 @@ var l = n("469563"),
         children: [(0, i.jsx)("path", {
           d: "M24 0v24H0V0z"
         }), (0, i.jsx)("path", {
-          className: r,
-          fill: l,
+          className: l,
+          fill: r,
           d: "M12 16c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm0-6c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm0-6c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2z"
         })]
       })
     })
-  }, r.MoreVerticalIcon, void 0, {
+  }, l.MoreVerticalIcon, void 0, {
     size: 24
   })

@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return x
   },
   ItemsPopout: function() {
-    return b
+    return F
   },
   default: function() {
-    return F
+    return b
   }
 }), n("222007"), n("424973");
 var l = n("37983"),
@@ -146,7 +146,7 @@ let U = d.default.connectStores([I.default], e => {
   }
 })(P);
 
-function b(e) {
+function F(e) {
   let {
     analyticsName: t,
     items: n,
@@ -183,20 +183,20 @@ function b(e) {
       M.ComponentDispatch.unsubscribe(O.ComponentActions.SCROLL_PAGE_DOWN, t), M.ComponentDispatch.unsubscribe(O.ComponentActions.SCROLL_PAGE_UP, e)
     }
   }, []);
-  let b = a.useCallback(() => {
+  let F = a.useCallback(() => {
       var e;
       let t = null === (e = y.current) || void 0 === e ? void 0 : e.getScrollerState();
       null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && s && !r && (null == f || f())
     }, [s, f, r]),
-    F = [],
+    b = [],
     j = !0;
-  null == n ? F = [(0, l.jsx)("div", {
+  null == n ? b = [(0, l.jsx)("div", {
     className: i(v.emptyPlaceholder, v.loadingPlaceholder),
     children: (0, l.jsx)(c.Spinner, {})
-  }, "spinner")] : 0 === n.length ? F.push((0, l.jsx)(a.Fragment, {
+  }, "spinner")] : 0 === n.length ? b.push((0, l.jsx)(a.Fragment, {
     children: _(T.default.theme)
-  }, "empty-state")) : (j = !1, F = [], o.each(n, e => {
-    F.push(...S(e))
+  }, "empty-state")) : (j = !1, b = [], o.each(n, e => {
+    b.push(...S(e))
   }));
   let G = null;
   null != n && n.length > 0 && null != f && (G = r ? (0, l.jsx)("div", {
@@ -241,7 +241,7 @@ function b(e) {
       component: E(),
       children: [(0, l.jsxs)(c.AdvancedScroller, {
         className: i(v.messagesPopout, N),
-        onScroll: H ? b : void 0,
+        onScroll: H ? F : void 0,
         ref: y,
         children: [(0, l.jsx)(u.ListNavigatorProvider, {
           navigator: x,
@@ -254,7 +254,7 @@ function b(e) {
               return (0, l.jsx)("div", {
                 ref: t,
                 ...n,
-                children: F
+                children: b
               })
             }
           })
@@ -264,7 +264,7 @@ function b(e) {
   })
 }
 
-function F(e) {
+function b(e) {
   let {
     analyticsName: t,
     onFetch: n,
@@ -314,7 +314,7 @@ function F(e) {
     message: e,
     channel: s
   })), [i, s]);
-  return (0, l.jsx)(b, {
+  return (0, l.jsx)(F, {
     className: C,
     scrollerClassName: g,
     items: x,

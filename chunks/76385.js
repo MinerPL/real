@@ -1,84 +1,84 @@
 "use strict";
 n.r(t), n.d(t, {
   NON_TOKEN_TYPE: function() {
-    return r
+    return a
   },
   Token: function() {
-    return o
+    return s
   },
   default: function() {
     return i
   }
 }), n("222007"), n("702976"), n("424973");
 let l = /.+/g,
-  r = "NON_TOKEN";
+  a = "NON_TOKEN";
 
-function a(e, t, n) {
+function r(e, t, n) {
   if (null == t) return null;
   for (let l = 0; l < t.length; l++) {
-    let r;
-    let a = t[l],
-      u = s(e.match(a.regex), n);
-    if (null != u) {
+    let a;
+    let r = t[l],
+      o = u(e.match(r.regex), n);
+    if (null != o) {
       let {
         cache: e
-      } = a;
-      if (null != e && null != (r = e.get(u[0])) && ((r = new o(r)).start = u.index), null == r) {
-        if (r = new o(u, a.type), null != a.validator && !a.validator(r)) continue;
-        null != e && !(null == e ? void 0 : e.has(u[0])) && e.set(u[0], r)
+      } = r;
+      if (null != e && null != (a = e.get(o[0])) && ((a = new s(a)).start = o.index), null == a) {
+        if (a = new s(o, r.type), null != r.validator && !r.validator(a)) continue;
+        null != e && !(null == e ? void 0 : e.has(o[0])) && e.set(o[0], a)
       }
-      return r
+      return a
     }
   }
   return null
 }
 
-function s(e, t) {
+function u(e, t) {
   if (null == e) return null;
   let n = [...e];
   return n.index = t, n
 }
-class u {
+class o {
   reset(e) {
-    this._rules = [], this._followers = {}, this._nonTokenType = null != e ? e : r
+    this._rules = [], this._followers = {}, this._nonTokenType = null != e ? e : a
   }
   addRule(e) {
     let t;
     let {
       type: n,
       follows: l,
-      validator: r
+      validator: a
     } = e, {
-      regex: a
+      regex: r
     } = e;
-    if ("^" !== a.source.charAt(0) && (a = new RegExp("^".concat(a.source), a.flags)), null != r && (t = new Map), null == l) {
+    if ("^" !== r.source.charAt(0) && (r = new RegExp("^".concat(r.source), r.flags)), null != a && (t = new Map), null == l) {
       this._rules.push({
-        regex: a,
+        regex: r,
         type: n,
-        validator: r,
+        validator: a,
         cache: t
       });
       return
     }
     l.forEach(e => {
       null == this._followers[e] && (this._followers[e] = []), this._followers[e].push({
-        regex: a,
+        regex: r,
         type: n,
-        validator: r,
+        validator: a,
         cache: t
       })
     })
   }
   tokenize(e) {
     let t, n = e,
-      r = "",
-      a = 0,
-      u = [];
+      a = "",
+      r = 0,
+      o = [];
     for (; n.length > 0;) {
-      let e = this._getMatch(n, t, a + r.length);
-      null != e ? (null != r && "" !== r && u.push(new o(s(r.match(l), a), this._nonTokenType)), t = e, u.push(e), a += t.length + r.length, n = n.substring(t.length), r = "") : (r += n[0], n = n.substring(1))
+      let e = this._getMatch(n, t, r + a.length);
+      null != e ? (null != a && "" !== a && o.push(new s(u(a.match(l), r), this._nonTokenType)), t = e, o.push(e), r += t.length + a.length, n = n.substring(t.length), a = "") : (a += n[0], n = n.substring(1))
     }
-    return null != r && "" !== r && u.push(new o(s(r.match(l), a), this._nonTokenType)), u
+    return null != a && "" !== a && o.push(new s(u(a.match(l), r), this._nonTokenType)), o
   }
   clearCache() {
     for (let e in this._rules.forEach(e => {
@@ -94,14 +94,14 @@ class u {
   }
   _getMatch(e, t, n) {
     let l;
-    let r = null != t ? t.type : null;
-    return (null == t ? void 0 : t.end) === n && (l = a(e, this._followers[String(r)], n)), null == l && (l = a(e, this._rules, n)), l
+    let a = null != t ? t.type : null;
+    return (null == t ? void 0 : t.end) === n && (l = r(e, this._followers[String(a)], n)), null == l && (l = r(e, this._rules, n)), l
   }
   constructor(e = [], t) {
-    this._rules = [], this._followers = {}, this._nonTokenType = r, this.reset(t), e.forEach(e => this.addRule(e))
+    this._rules = [], this._followers = {}, this._nonTokenType = a, this.reset(t), e.forEach(e => this.addRule(e))
   }
 }
-class o {
+class s {
   get end() {
     return this.start + this.length
   }
@@ -125,12 +125,12 @@ class o {
     if (null != this._data) return this._data.get(e)
   }
   constructor(e, t) {
-    if (e instanceof o) this.match = [...e.match], this.start = e.start, this.type = e.type, null != e._data && (this._data = e._data);
+    if (e instanceof s) this.match = [...e.match], this.start = e.start, this.type = e.type, null != e._data && (this._data = e._data);
     else if (null != e) {
       var n;
       this.match = [...e], this.start = "string" == typeof e ? 0 : null !== (n = e.index) && void 0 !== n ? n : 0, this.type = t
     } else this.match = [], this.start = 0, this.type = t
   }
 }
-u.NON_TOKEN_TYPE = r, u.Token = o;
-var i = u
+o.NON_TOKEN_TYPE = a, o.Token = s;
+var i = o

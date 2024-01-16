@@ -7,62 +7,62 @@ n.r(t), n.d(t, {
     return u
   }
 }), n("222007"), n("781738"), n("355025");
-var a = n("367376"),
-  i = n("240873"),
-  s = n("49111");
-let r = new Set([s.MessageEmbedTypes.IMAGE, s.MessageEmbedTypes.GIFV]),
-  l = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
+var i = n("367376"),
+  r = n("240873"),
+  l = n("49111");
+let a = new Set([l.MessageEmbedTypes.IMAGE, l.MessageEmbedTypes.GIFV]),
+  s = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
 
 function o(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-    n = t.formatInline ? a.default.parseInlineReply : a.default.parse;
+    n = t.formatInline ? i.default.parseInlineReply : i.default.parse;
   return function(e, t, n) {
-    var a, s;
+    var i, l;
     let {
       toAST: o = !1,
       hideSimpleEmbedContent: u = !0,
-      formatInline: m = !1,
-      postProcessor: f
-    } = n, g = !1;
-    let p = e(t.content, !0, (a = t, s = n, {
-      allowLinks: null != a.webhookId || !!s.allowLinks,
-      allowEmojiLinks: null != a.webhookId,
-      channelId: a.channel_id,
-      messageId: a.id,
-      mentionChannels: a.mentionChannels,
-      isInteracting: !!s.isInteracting,
-      formatInline: !!s.formatInline,
-      noStyleAndInteraction: !!s.noStyleAndInteraction,
-      allowHeading: !!s.allowHeading,
-      allowList: !!s.allowList,
-      previewLinkTarget: !!s.previewLinkTarget,
-      disableAnimatedEmoji: !!s.disableAnimatedEmoji,
+      formatInline: f = !1,
+      postProcessor: h
+    } = n, E = !1;
+    let _ = e(t.content, !0, (i = t, l = n, {
+      allowLinks: null != i.webhookId || !!l.allowLinks,
+      allowEmojiLinks: null != i.webhookId,
+      channelId: i.channel_id,
+      messageId: i.id,
+      mentionChannels: i.mentionChannels,
+      isInteracting: !!l.isInteracting,
+      formatInline: !!l.formatInline,
+      noStyleAndInteraction: !!l.noStyleAndInteraction,
+      allowHeading: !!l.allowHeading,
+      allowList: !!l.allowList,
+      previewLinkTarget: !!l.previewLinkTarget,
+      disableAnimatedEmoji: !!l.disableAnimatedEmoji,
       disableAutoBlockNewlines: !0,
       muted: !1
     }), (e, n) => (!Array.isArray(e) && (e = [e]), u && (e = function(e, t) {
       if (1 !== e.length || 1 !== t.length) return e;
       let n = e[0],
-        a = t[0];
-      return ("link" === n.type || "attachmentLink" === n.type) && r.has(a.type) && (0, i.isEmbedInline)(a) ? [] : e
-    }(e, t.embeds)), !m && (e = function(e, t) {
-      return t ? c(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = c(e[0].content)), e)
-    }(e, n)), g = function(e, t) {
-      return t ? d(e) : "paragraph" === e[0].type && e[0].content instanceof Array && d(e[0].content)
-    }(e, n), m && (e = function e(t) {
+        i = t[0];
+      return ("link" === n.type || "attachmentLink" === n.type) && a.has(i.type) && (0, r.isEmbedInline)(i) ? [] : e
+    }(e, t.embeds)), !f && (e = function(e, t) {
+      return t ? d(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = d(e[0].content)), e)
+    }(e, n)), E = function(e, t) {
+      return t ? c(e) : "paragraph" === e[0].type && e[0].content instanceof Array && c(e[0].content)
+    }(e, n), f && (e = function e(t) {
       return t.forEach(t => {
-        l.has(t.type) && null != t.content && (Array.isArray(t.content) ? e(t.content) : t.content = t.content.replace(/\n/g, " "))
+        s.has(t.type) && null != t.content && (Array.isArray(t.content) ? e(t.content) : t.content = t.content.replace(/\n/g, " "))
       }), t
-    }(e)), null != f && (e = f(e, n)), e));
+    }(e)), null != h && (e = h(e, n)), e));
     return {
-      hasSpoilerEmbeds: g,
-      content: p
+      hasSpoilerEmbeds: E,
+      content: _
     }
   }(n, e, t)
 }
 
 function u(e, t, n) {
-  var i;
-  return i = a.default.parseAutoModerationSystemMessage, i(e, !0, {
+  var r;
+  return r = i.default.parseAutoModerationSystemMessage, r(e, !0, {
     allowLinks: !1,
     allowEmojiLinks: !1,
     mentionChannels: [],
@@ -79,7 +79,7 @@ function u(e, t, n) {
   }, e => (!Array.isArray(e) && (e = [e]), e))
 }
 
-function c(e) {
+function d(e) {
   let t = e.some(e => "emoji" !== e.type && "customEmoji" !== e.type && "soundboard" !== e.type && ("string" != typeof e.content || "" !== e.content.trim()) && !0);
   if (t) return e;
   let n = 0;
@@ -90,6 +90,6 @@ function c(e) {
   }), e)
 }
 
-function d(e) {
+function c(e) {
   return e.some(e => "spoiler" === e.type && Array.isArray(e.content) && e.content.some(e => "link" === e.type || "attachmentLink" === e.type))
 }

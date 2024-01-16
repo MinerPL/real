@@ -1,50 +1,50 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return E
   }
 });
-var i = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("446674"),
+var i = n("446674"),
   a = n("77078"),
   l = n("412707"),
   u = n("646186"),
-  d = n("592407"),
+  r = n("592407"),
   o = n("148475"),
-  r = n("725621"),
+  d = n("725621"),
   c = n("923959"),
   f = n("49111"),
   S = n("782340");
 
-function g(e) {
+function E(e) {
   function t(t) {
-    d.default.open(e.id, t)
+    r.default.open(e.id, t)
   }
-  let n = (0, s.useStateFromStoresArray)([c.default], () => c.default.getChannels(e.id).SELECTABLE, [e]),
-    g = (0, o.default)(e);
-  return __OVERLAY__ || !g ? null : (0, i.jsx)(a.MenuItem, {
+  let n = (0, i.useStateFromStoresArray)([c.default], () => c.default.getChannels(e.id).SELECTABLE, [e]),
+    E = (0, o.default)(e);
+  return __OVERLAY__ || !E ? null : (0, s.jsx)(a.MenuItem, {
     id: "guild-settings",
     label: S.default.Messages.SERVER_SETTINGS,
     action: () => t(),
-    children: (0, r.getGuildSettingsSections)(e, n).map(n => {
+    children: (0, d.getGuildSettingsSections)(e, n).map(n => {
       let {
-        section: s,
-        label: d
+        section: i,
+        label: r
       } = n;
-      if (null == d) return null;
-      switch (s) {
+      if (null == r) return null;
+      switch (i) {
         case f.GuildSettingsSections.DELETE:
           return null;
         case f.GuildSettingsSections.COMMUNITY:
-          return (0, i.jsx)(a.MenuItem, {
-            id: s,
-            action: () => t(s),
+          return (0, s.jsx)(a.MenuItem, {
+            id: i,
+            action: () => t(i),
             label: S.default.Messages.GUILD_SETTINGS_COMMUNITY
-          }, s);
+          }, i);
         case f.GuildSettingsSections.APP_DIRECTORY:
-          return (0, i.jsx)(a.MenuItem, {
-            id: s,
+          return (0, s.jsx)(a.MenuItem, {
+            id: i,
             action: () => {
               (0, u.goToAppDirectory)({
                 guildId: e.id,
@@ -53,14 +53,14 @@ function g(e) {
                 }
               })
             },
-            label: d
-          }, s);
+            label: r
+          }, i);
         default:
-          return (0, i.jsx)(a.MenuItem, {
-            id: s,
-            action: () => t(s),
-            label: d
-          }, s)
+          return (0, s.jsx)(a.MenuItem, {
+            id: i,
+            action: () => t(i),
+            label: r
+          }, i)
       }
     })
   })

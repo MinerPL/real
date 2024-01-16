@@ -1,37 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   SafetyWarningTypes: function() {
-    return a
+    return l
   },
   SafetyWarningFeedbackTypes: function() {
-    return r
+    return s
   },
   default: function() {
     return _
   }
 });
-var i, l, a, r, s = n("446674"),
-  o = n("913144"),
-  u = n("42203");
-(i = a || (a = {}))[i.STRANGER_DANGER = 1] = "STRANGER_DANGER", (l = r || (r = {}))[l.UPVOTE = 0] = "UPVOTE", l[l.DOWNVOTE = 1] = "DOWNVOTE";
-let d = [],
+var u, a, l, s, i = n("446674"),
+  d = n("913144"),
+  r = n("42203");
+(u = l || (l = {}))[u.STRANGER_DANGER = 1] = "STRANGER_DANGER", (a = s || (s = {}))[a.UPVOTE = 0] = "UPVOTE", a[a.DOWNVOTE = 1] = "DOWNVOTE";
+let o = [],
   c = {};
 
-function f(e) {
+function E(e) {
   let {
     safetyWarnings: t
   } = e;
   null != t && (c[e.id] = t), null == t && null != c[e.id] && delete c[e.id]
 }
 
-function h() {
-  c = {}, Object.values(u.default.getMutablePrivateChannels()).forEach(e => {
-    f(e)
+function N() {
+  c = {}, Object.values(r.default.getMutablePrivateChannels()).forEach(e => {
+    E(e)
   })
 }
-class E extends s.default.Store {
+class f extends i.default.Store {
   initialize() {
-    this.waitFor(u.default)
+    this.waitFor(r.default)
   }
   getChannelSafetyWarning(e, t) {
     var n;
@@ -39,32 +39,32 @@ class E extends s.default.Store {
   }
   getChannelSafetyWarnings(e) {
     var t;
-    return null !== (t = c[e]) && void 0 !== t ? t : d
+    return null !== (t = c[e]) && void 0 !== t ? t : o
   }
 }
-var _ = new E(o.default, {
+var _ = new f(d.default, {
   CHANNEL_CREATE: function(e) {
-    f(e.channel)
+    E(e.channel)
   },
   CHANNEL_DELETE: function(e) {
     null != c[e.channel.id] && delete c[e.channel.id]
   },
   CHANNEL_UPDATES: function(e) {
     e.channels.forEach(e => {
-      f(e)
+      E(e)
     })
   },
-  CONNECTION_OPEN: h,
-  CONNECTION_OPEN_SUPPLEMENTAL: h,
+  CONNECTION_OPEN: N,
+  CONNECTION_OPEN_SUPPLEMENTAL: N,
   CHANNEL_SAFETY_WARNING_FEEDBACK: function(e) {
     let {
       channelId: t,
       warningId: n,
-      feedbackType: i
-    } = e, l = c[t];
-    null != l && (c[t] = l.map(e => e.id === n ? {
+      feedbackType: u
+    } = e, a = c[t];
+    null != a && (c[t] = a.map(e => e.id === n ? {
       ...e,
-      feedback_type: i
+      feedback_type: u
     } : e))
   },
   CLEAR_CHANNEL_SAFETY_WARNINGS: function(e) {
@@ -80,12 +80,12 @@ var _ = new E(o.default, {
     let {
       channelId: t,
       warningIds: n
-    } = e, i = c[t];
-    if (null == i) return;
-    let l = Date.now().toString();
-    c[t] = i.map(e => n.includes(e.id) ? {
+    } = e, u = c[t];
+    if (null == u) return;
+    let a = Date.now().toString();
+    c[t] = u.map(e => n.includes(e.id) ? {
       ...e,
-      dismiss_timestamp: l
+      dismiss_timestamp: a
     } : e)
   }
 })

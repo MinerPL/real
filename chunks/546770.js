@@ -1,27 +1,27 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   updateGuildPreset: function() {
-    return r
+    return u
   }
-}), n("65597");
-var i = n("519705"),
-  s = n("282109"),
-  a = n("34676"),
-  l = n("277796"),
-  u = n("507313"),
-  d = n("49111"),
-  o = n("397336");
+}), s("65597");
+var i = s("519705"),
+  l = s("282109"),
+  a = s("34676"),
+  n = s("277796"),
+  r = s("507313"),
+  d = s("49111"),
+  o = s("397336");
 
-function r(e, t) {
-  let n = s.default.getGuildFlags(e);
-  t === u.Presets.ALL_MESSAGES ? i.default.updateGuildNotificationSettings(e, {
+function u(e, t) {
+  let s = l.default.getGuildFlags(e);
+  t === r.Presets.ALL_MESSAGES ? i.default.updateGuildNotificationSettings(e, {
     message_notifications: d.UserNotificationSettings.ALL_MESSAGES,
-    flags: (0, l.withGuildUnreadFlags)(n, o.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES)
-  }, a.NotificationLabels.PresetAll) : t === u.Presets.MENTIONS ? i.default.updateGuildNotificationSettings(e, {
+    flags: (0, n.withGuildUnreadFlags)(s, o.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES)
+  }, a.NotificationLabels.PresetAll) : t === r.Presets.MENTIONS ? i.default.updateGuildNotificationSettings(e, {
     message_notifications: d.UserNotificationSettings.ONLY_MENTIONS,
-    flags: (0, l.withGuildUnreadFlags)(n, o.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
-  }, a.NotificationLabels.PresetMentions) : t === u.Presets.NOTHING && i.default.updateGuildNotificationSettings(e, {
+    flags: (0, n.withGuildUnreadFlags)(s, o.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
+  }, a.NotificationLabels.PresetMentions) : t === r.Presets.NOTHING && i.default.updateGuildNotificationSettings(e, {
     message_notifications: d.UserNotificationSettings.NO_MESSAGES,
-    flags: (0, l.withGuildUnreadFlags)(n, o.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
+    flags: (0, n.withGuildUnreadFlags)(s, o.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
   }, a.NotificationLabels.PresetNothing)
 }

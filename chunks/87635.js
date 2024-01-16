@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return x
   }
 }), n("222007");
 var s = n("37983"),
@@ -74,20 +74,20 @@ function v(e) {
   } = e, {
     channelAction: m,
     completed: A
-  } = (0, _.useMemberActionsForChannel)(f, h), T = (0, _.useNextMemberAction)(f, null == m ? void 0 : m.channelId), v = (0, o.default)([d.default], () => d.default.useReducedMotion), R = (null == m ? void 0 : m.actionType) === S.NewMemberActionTypes.VIEW, x = (0, u.useToken)(u.tokens.colors.WHITE), [y, D] = a.useState(!1), [O] = a.useState(new r.default.Value(0)), [j] = a.useState(new r.default.Value(0));
+  } = (0, _.useMemberActionsForChannel)(f, h), T = (0, _.useNextMemberAction)(f, null == m ? void 0 : m.channelId), v = (0, o.default)([d.default], () => d.default.useReducedMotion), x = (null == m ? void 0 : m.actionType) === S.NewMemberActionTypes.VIEW, R = (0, u.useToken)(u.tokens.colors.WHITE), [y, O] = a.useState(!1), [D] = a.useState(new r.default.Value(0)), [j] = a.useState(new r.default.Value(0));
   a.useEffect(() => {
-    A ? r.default.timing(O, {
+    A ? r.default.timing(D, {
       toValue: 0,
       duration: v ? 1 : 350,
       easing: r.default.Easing.quad,
-      delay: R ? 0 : 500
-    }).start(() => D(!0)) : r.default.timing(O, {
+      delay: x ? 0 : 500
+    }).start(() => O(!0)) : r.default.timing(D, {
       toValue: 1,
       duration: v ? 1 : 350,
       easing: r.default.Easing.quad,
       delay: 400
     }).start()
-  }, [A, O, R, v]), a.useEffect(() => {
+  }, [A, D, x, v]), a.useEffect(() => {
     A && y && r.default.timing(j, {
       toValue: 1,
       duration: v ? 0 : 350,
@@ -98,7 +98,7 @@ function v(e) {
   let P = a.useCallback(() => {
     null != T && (0, g.selectNewMemberActionChannel)(f, T.channelId)
   }, [f, T]);
-  return null == m || R && !y ? null : (0, s.jsx)("div", {
+  return null == m || x && !y ? null : (0, s.jsx)("div", {
     className: i(I.container, C),
     children: y && null != T ? (0, s.jsx)(r.default.div, {
       style: {
@@ -130,7 +130,7 @@ function v(e) {
           children: (0, s.jsx)(p.default, {
             width: 16,
             height: 16,
-            color: x.hex(),
+            color: R.hex(),
             className: I.nextIcon
           })
         })]
@@ -138,7 +138,7 @@ function v(e) {
     }) : (0, s.jsxs)(r.default.div, {
       className: I.banner,
       style: {
-        marginBottom: O.interpolate({
+        marginBottom: D.interpolate({
           inputRange: [0, 1],
           outputRange: [-60, 0]
         })
@@ -160,7 +160,7 @@ function v(e) {
         })]
       }), A ? (0, s.jsx)(E.default, {
         className: I.completed,
-        backgroundColor: x.hex(),
+        backgroundColor: R.hex(),
         width: 20,
         height: 20
       }) : null]
@@ -168,7 +168,7 @@ function v(e) {
   })
 }
 
-function R(e) {
+function x(e) {
   let {
     guildId: t,
     channel: n,

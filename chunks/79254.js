@@ -50,11 +50,11 @@ function L(e) {
     options: r,
     onFileUpload: L,
     onClose: v,
-    onSelect: R,
-    draftType: x,
+    onSelect: x,
+    draftType: R,
     editorTextContent: y,
-    setValue: D,
-    openClips: O
+    setValue: O,
+    openClips: D
   } = e;
   (0, u.useMaybeFetchPremiumLikelihood)(d.default);
   let {
@@ -73,11 +73,11 @@ function L(e) {
   }
 
   function b() {
-    C.default.track(_.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D("/", (0, g.toRichValue)("/"))
+    C.default.track(_.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), O("/", (0, g.toRichValue)("/"))
   }
 
   function U() {
-    O()
+    D()
   }
 
   function F() {
@@ -101,12 +101,12 @@ function L(e) {
       a = y.match(N);
     null != a && (s = a[1], n = a[2], e = a[3], s += a[4]), (0, E.promptToUpload)([(0, m.makeFile)(new Blob([e], {
       type: "text/plain"
-    }), "message.".concat(n))], t, x), p.ComponentDispatch.dispatchToLastSubscribed(_.ComponentActions.CLEAR_TEXT), "" !== s && p.ComponentDispatch.dispatchToLastSubscribed(_.ComponentActions.INSERT_TEXT, {
+    }), "message.".concat(n))], t, R), p.ComponentDispatch.dispatchToLastSubscribed(_.ComponentActions.CLEAR_TEXT), "" !== s && p.ComponentDispatch.dispatchToLastSubscribed(_.ComponentActions.INSERT_TEXT, {
       plainText: s
     })
   }
   return (0, s.jsx)(i.Menu, {
-    onSelect: R,
+    onSelect: x,
     navId: "channel-attach",
     onClose: v,
     "aria-label": T.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
