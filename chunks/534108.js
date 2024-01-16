@@ -182,7 +182,7 @@ function W(e) {
     defaultSoundsOnly: b = !1
   } = e, {
     analyticsLocations: P
-  } = (0, f.default)(), [W, Y] = i.useState(!1), q = (0, s.useStateFromStores)([g.default], () => g.default.getCurrentUser()), z = (0, s.useStateFromStores)([C.default], () => {
+  } = (0, f.default)(), [W, Y] = i.useState(null), q = (0, s.useStateFromStores)([g.default], () => g.default.getCurrentUser()), z = (0, s.useStateFromStores)([C.default], () => {
     var e;
     return C.default.getVoiceState(t, null !== (e = null == q ? void 0 : q.id) && void 0 !== e ? e : "")
   }), Q = (null == z ? void 0 : z.selfDeaf) || (null == z ? void 0 : z.mute) || (null == z ? void 0 : z.suppress), X = (0, h.useExpressionPickerStore)(e => e.searchQuery), Z = (0, T.useUID)(), {
@@ -196,7 +196,7 @@ function W(e) {
       (0, O.playSound)(e, null !== (n = null == r ? void 0 : r.id) && void 0 !== n ? n : "", t)
     } else {
       if ((0, O.canUseSoundboardSound)(q, e, r)) return;
-      v && Y(!0)
+      v && Y(e)
     }
   }, [p, q, r, v]), ea = i.useCallback(e => {
     switch (e.item.type) {
@@ -261,9 +261,11 @@ function W(e) {
     return null
   }, [a]);
   return (0, l.jsxs)(l.Fragment, {
-    children: [W && (0, l.jsx)(j.default, {
-      onClose: () => Y(!1),
-      closePopout: a
+    children: [null != W && (0, l.jsx)(j.default, {
+      onClose: () => Y(null),
+      closePopout: a,
+      sound: W,
+      channel: r
     }), (0, l.jsx)(E.default, {
       categories: et,
       collapsedCategories: el,

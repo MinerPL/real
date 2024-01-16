@@ -3,8 +3,11 @@ n.r(t), n.d(t, {
   SecondaryActionButton: function() {
     return M
   },
-  default: function() {
+  PreviewButton: function() {
     return k
+  },
+  default: function() {
+    return b
   }
 });
 var l = n("37983"),
@@ -40,10 +43,12 @@ function M(e) {
     disabled: t = !1,
     onClick: n,
     text: i,
-    children: r
+    children: r,
+    tooltipPosition: s = "top"
   } = e;
   return (0, l.jsx)(c.Tooltip, {
     text: i,
+    position: s,
     children: e => (0, l.jsx)(c.Clickable, {
       ...e,
       "aria-label": i,
@@ -55,8 +60,31 @@ function M(e) {
     })
   })
 }
-var k = i.forwardRef(function(e, t) {
-  var n, r, k;
+
+function k(e) {
+  let {
+    sound: t,
+    previewSound: n,
+    disabled: i = !1,
+    tooltipPosition: r = "top"
+  } = e;
+  return (0, l.jsx)(M, {
+    tooltipPosition: r,
+    disabled: i,
+    onClick: function(e) {
+      e.stopPropagation(), e.currentTarget.blur(), n()
+    },
+    text: R.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
+      emojiName: t.emojiName,
+      soundName: t.name
+    }),
+    children: (0, l.jsx)(T.default, {
+      className: O.secondaryIcon
+    })
+  })
+}
+var b = i.forwardRef(function(e, t) {
+  var n, r, T;
   let {
     sound: b,
     channel: P,
@@ -83,17 +111,17 @@ var k = i.forwardRef(function(e, t) {
   } = (0, N.default)(b, null !== (n = null == P ? void 0 : P.id) && void 0 !== n ? n : null), {
     createMultipleConfettiAt: ee
   } = i.useContext(m.ConfettiCannonContext), et = i.useRef(null);
-  let en = (r = b.soundId, k = et.current, i.useMemo(() => {
-      if (null == k || "1" !== r) return {
+  let en = (r = b.soundId, T = et.current, i.useMemo(() => {
+      if (null == T || "1" !== r) return {
         x: 0,
         y: 0
       };
-      let e = k.getBoundingClientRect();
+      let e = T.getBoundingClientRect();
       return {
         x: e.left + e.width / 2,
         y: e.top + e.height / 2
       }
-    }, [k, r])),
+    }, [T, r])),
     el = (0, a.useStateFromStores)([p.default], () => p.default.useReducedMotion),
     ei = i.useRef(.01),
     er = i.useRef(new u.Interval),
@@ -102,34 +130,17 @@ var k = i.forwardRef(function(e, t) {
     ea = "sound-".concat(b.soundId),
     eu = (0, s.useListItem)(ea),
     ed = null != q || null != z,
-    ec = !(0, I.canUseSoundboardSound)(Q, b, P);
+    ec = !(0, I.canUseSoundboardSound)(Q, b, P),
+    ef = j || w && !ec;
 
-  function ef(e) {
+  function ep(e) {
     e.stopPropagation(), e.currentTarget.blur(), es ? (0, v.removeFavoriteSound)(W) : (0, v.addFavoriteSound)(W)
   }
 
-  function ep(e) {
-    e.stopPropagation(), e.currentTarget.blur(), J()
-  }
-  let em = j || w && !ec,
-    eh = () => (0, l.jsxs)("div", {
-      className: O.buttonOverlay,
-      children: [(0, l.jsx)("div", {
-        className: o({
-          [O.buttonOverlayBackground]: !B
-        })
-      }), (0, l.jsxs)("div", {
-        className: O.buttonOverlayActions,
-        children: [eS(), !B && (0, l.jsx)(g.default, {
-          className: O.playIcon
-        }), eE()]
-      })]
-    });
-
-  function eE() {
-    return em ? (0, l.jsx)(M, {
+  function em() {
+    return (0, l.jsx)(M, {
       disabled: !D && !j,
-      onClick: ef,
+      onClick: ep,
       text: R.default.Messages.SOUNDBOARD_SOUND_FAVORITE_SOUND.format({
         emojiName: b.emojiName,
         soundName: b.name
@@ -140,22 +151,26 @@ var k = i.forwardRef(function(e, t) {
       }) : (0, l.jsx)(E.default, {
         className: O.secondaryIcon
       })
-    }) : null
+    })
   }
-
-  function eS() {
-    return em ? (0, l.jsx)(M, {
-      disabled: !D && !j,
-      onClick: ep,
-      text: R.default.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
-        emojiName: b.emojiName,
-        soundName: b.name
-      }),
-      children: (0, l.jsx)(T.default, {
-        className: O.secondaryIcon
-      })
-    }) : null
-  }
+  let eh = k({
+      sound: b,
+      previewSound: J,
+      disabled: ec
+    }),
+    eE = () => (0, l.jsxs)("div", {
+      className: O.buttonOverlay,
+      children: [(0, l.jsx)("div", {
+        className: o({
+          [O.buttonOverlayBackground]: !B
+        })
+      }), (0, l.jsxs)("div", {
+        className: O.buttonOverlayActions,
+        children: [ef && eh, !B && !ec && (0, l.jsx)(g.default, {
+          className: O.playIcon
+        }), ef && em()]
+      })]
+    });
   return i.useEffect(() => {
     let e = er.current;
     return eo && e.start(1e3, () => {
@@ -220,7 +235,7 @@ var k = i.forwardRef(function(e, t) {
                 className: O.buttonOverlayBackground
               }), (0, l.jsxs)("div", {
                 className: O.buttonOverlayActions,
-                children: [eS(), (0, l.jsxs)("div", {
+                children: [eh, (0, l.jsxs)("div", {
                   className: O.addButton,
                   children: [(0, l.jsx)(C.default, {
                     className: O.plusSign
@@ -229,12 +244,12 @@ var k = i.forwardRef(function(e, t) {
                     color: "header-primary",
                     children: R.default.Messages.GIFT_SELECT_SOUNDBOARD_ADD
                   })]
-                }), eE()]
+                }), ef && em()]
               })]
             });
           case x.SoundButtonOverlay.PLAY:
           default:
-            return eh()
+            return eE()
         }
       }()]
     }), !b.available && (0, l.jsx)(c.Tooltip, {
