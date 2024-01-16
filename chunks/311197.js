@@ -26,7 +26,7 @@ function N(e) {
     onOpen: t,
     onClose: n,
     className: N
-  } = e, I = (0, o.useInDesktopNotificationCenterExperiment)(), m = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()), A = a.useRef(null), g = (0, s.useStateFromStores)([u.default], () => !!I && (null == m ? void 0 : m.id) != null && u.default.getMentionCount(m.id, S.ReadStateTypes.NOTIFICATION_CENTER) > 0), {
+  } = e, I = (0, o.useInDesktopNotificationCenterExperiment)(), m = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()), g = a.useRef(null), A = (0, s.useStateFromStores)([u.default], () => !!I && (null == m ? void 0 : m.id) != null && u.default.getMentionCount(m.id, S.ReadStateTypes.NOTIFICATION_CENTER) > 0), {
     enabled: C
   } = r.default.useExperiment({
     location: "RecentsButton"
@@ -37,15 +37,15 @@ function N(e) {
     onOpen: t,
     onClose: n,
     badgeState: {
-      badgeForYou: g
+      badgeForYou: A
     },
     popoutPosition: "bottom",
     popoutAlign: "right",
     children: (e, t, n) => (0, l.jsxs)("div", {
-      ref: A,
+      ref: g,
       className: p.recentsIcon,
       children: [C && (0, l.jsx)(_.default, {
-        inboxIconRef: A,
+        inboxIconRef: g,
         recentsPopoutShown: t
       }), (0, l.jsx)(f.Icon, {
         ...n,
@@ -55,7 +55,7 @@ function N(e) {
         "aria-label": T.default.Messages.INBOX,
         tooltip: t ? null : T.default.Messages.INBOX,
         selected: t,
-        showBadge: g || R,
+        showBadge: A || R,
         children: (0, l.jsx)(E.default, {
           className: p.todoBadge
         })
