@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return O
   },
   HeaderGuildBreadcrumb: function() {
-    return b
+    return P
   },
   ChannelEmoji: function() {
-    return P
+    return b
   }
 });
 var s = n("37983"),
@@ -96,7 +96,7 @@ function y(e) {
     children: [null != T ? (0, s.jsxs)(o.HiddenVisually, {
       children: [T, ":"]
     }) : null, " ", n]
-  }), D = (0, s.jsx)(P, {
+  }), D = (0, s.jsx)(b, {
     channel: t
   });
   switch (t.type) {
@@ -169,21 +169,21 @@ function y(e) {
           }), (0, s.jsx)(N.default.Caret, {})]
         })
       }
-      let b = (null == l ? void 0 : l.type) != null && v.ChannelTypesSets.GUILD_THREADS_ONLY.has(l.type);
+      let P = (null == l ? void 0 : l.type) != null && v.ChannelTypesSets.GUILD_THREADS_ONLY.has(l.type);
       return (0, s.jsxs)(a.Fragment, {
-        children: [O, j(b ? null : A, R.default.Messages.THREAD), (0, s.jsx)(N.default.Title, {
+        children: [O, j(P ? null : A, R.default.Messages.THREAD), (0, s.jsx)(N.default.Title, {
           level: I,
           onContextMenu: C,
           onClick: d,
           className: i({
             [x.cursorPointer]: u,
-            [x.forumPostTitle]: b
+            [x.forumPostTitle]: P
           }),
           children: y
         })]
       });
     case v.ChannelTypes.GUILD_DIRECTORY:
-      let F = (null == r ? void 0 : r.hasFeature(v.GuildFeatures.HUB)) ? R.default.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({
+      let U = (null == r ? void 0 : r.hasFeature(v.GuildFeatures.HUB)) ? R.default.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({
         guildName: n
       }) : n;
       return (0, s.jsxs)(a.Fragment, {
@@ -197,7 +197,7 @@ function y(e) {
           onClick: d,
           children: [null != T ? (0, s.jsxs)(o.HiddenVisually, {
             children: [T, ":"]
-          }) : null, " ", F]
+          }) : null, " ", U]
         })]
       });
     default:
@@ -255,7 +255,7 @@ function j(e, t) {
   })
 }
 
-function b(e) {
+function P(e) {
   let {
     guild: t,
     channel: n,
@@ -281,7 +281,7 @@ function b(e) {
     })]
   })
 }
-let P = a.memo(function(e) {
+let b = a.memo(function(e) {
   let {
     channel: t
   } = e, {

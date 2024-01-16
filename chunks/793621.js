@@ -16,21 +16,21 @@ var l = i("37983"),
   u = i("77078"),
   f = i("851387"),
   x = i("308289"),
-  g = i("841098"),
-  m = i("376556"),
+  m = i("841098"),
+  g = i("376556"),
   j = i("716241"),
   w = i("401642"),
   p = i("766274"),
   v = i("26989"),
-  C = i("79798"),
-  N = i("36694"),
+  N = i("79798"),
+  C = i("36694"),
   y = i("599110"),
   T = i("535013"),
-  I = i("562368"),
-  E = i("216049"),
+  E = i("562368"),
+  I = i("216049"),
   _ = i("339023"),
-  M = i("526190"),
-  O = i("685058"),
+  O = i("526190"),
+  M = i("685058"),
   S = i("214509"),
   A = i("49111"),
   R = i("590456"),
@@ -68,7 +68,7 @@ function L(t) {
   });
   return null == e ? null : (0, l.jsxs)("div", {
     className: b.popoutCheck,
-    children: [(0, l.jsx)(N.default, {
+    children: [(0, l.jsx)(C.default, {
       className: b.popoutCheckIcon
     }), (0, l.jsx)(u.Text, {
       variant: "text-xs/medium",
@@ -81,7 +81,7 @@ function L(t) {
 function B(t) {
   let {
     eligibilityStates: e
-  } = t, i = (0, g.default)(), r = (0, u.useToken)(c.default.unsafe_rawColors.GREEN_330).hex(), n = o.groupBy(e, t => "".concat(t.connection_type).concat(null != t.application_id ? ":".concat(t.application_id) : ""));
+  } = t, i = (0, m.default)(), r = (0, u.useToken)(c.default.unsafe_rawColors.GREEN_330).hex(), n = o.groupBy(e, t => "".concat(t.connection_type).concat(null != t.application_id ? ":".concat(t.application_id) : ""));
   return (0, l.jsx)(l.Fragment, {
     children: Object.keys(n).map(t => {
       var e, s;
@@ -89,23 +89,23 @@ function B(t) {
       let d = n[t],
         c = d.filter(t => null != t.operator),
         f = d.find(t => null != t.application),
-        g = m.default.get(t),
+        m = g.default.get(t),
         j = null == f ? void 0 : f.application,
         w = (null == j ? void 0 : j.bot) != null ? new p.default(j.bot) : null,
         v = T.officialApplicationIds.includes(null !== (e = null == j ? void 0 : j.id) && void 0 !== e ? e : "");
-      return v ? o = (0, l.jsx)(M.default, {
+      return v ? o = (0, l.jsx)(O.default, {
         className: b.botTag,
         color: r,
         size: 16
-      }) : null != w && (o = (0, l.jsx)(C.default, {
+      }) : null != w && (o = (0, l.jsx)(N.default, {
         className: b.botTag,
         verified: w.isVerifiedBot()
       })), (0, l.jsxs)("div", {
         className: b.popoutChecksGroup,
         children: [(0, l.jsxs)("div", {
           className: b.popoutCheckGroupName,
-          children: [null != g ? (0, l.jsx)("img", {
-            src: (0, h.isThemeDark)(i) ? g.icon.darkSVG : g.icon.lightSVG,
+          children: [null != m ? (0, l.jsx)("img", {
+            src: (0, h.isThemeDark)(i) ? m.icon.darkSVG : m.icon.lightSVG,
             alt: "",
             className: b.popoutCheckGroupPlatformIcon
           }) : null, null != w ? (0, l.jsx)(x.default, {
@@ -115,7 +115,7 @@ function B(t) {
           }) : null, (0, l.jsx)(u.Text, {
             variant: "text-sm/medium",
             color: "interactive-active",
-            children: null !== (s = null == g ? void 0 : g.name) && void 0 !== s ? s : null == j ? void 0 : j.name
+            children: null !== (s = null == m ? void 0 : m.name) && void 0 !== s ? s : null == j ? void 0 : j.name
           }), o]
         }), c.map(t => {
           let {
@@ -196,7 +196,7 @@ function U(t) {
     userId: e,
     guild: i,
     channel: n
-  } = t, s = (0, E.default)(i, e, n.id, !0), o = (0, d.useStateFromStores)([I.default], () => I.default.getGuildRoleConnectionEligibility(null == s ? void 0 : s.id)), [c, h] = r.useState(null == o);
+  } = t, s = (0, I.default)(i, e, n.id, !0), o = (0, d.useStateFromStores)([E.default], () => E.default.getGuildRoleConnectionEligibility(null == s ? void 0 : s.id)), [c, h] = r.useState(null == o);
   if (null == s) return null;
   async function x() {
     a(null != s, "visibleConnectionsRole is null"), c && null == o && (await f.default.fetchGuildRoleConnectionsEligibility(i.id, s.id), h(!1))
@@ -215,7 +215,7 @@ function U(t) {
           channelId: n.id,
           guildId: i.id,
           onGetRolesClicked: () => {
-            (0, O.openGuildRoleConnectionsModal)(i.id)
+            (0, M.openGuildRoleConnectionsModal)(i.id)
           },
           onOpenProfile: () => {
             (0, w.openUserProfileModal)({

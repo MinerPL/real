@@ -41,8 +41,8 @@ let E = {
   O = new Map,
   b = new Map,
   P = new Map;
-let R = h.ActivityPanelModes.ACTION_BAR,
-  V = h.FocusedActivityLayouts.NO_CHAT;
+let V = h.ActivityPanelModes.ACTION_BAR,
+  R = h.FocusedActivityLayouts.NO_CHAT;
 
 function k(e) {
   return null != e ? e : "0"
@@ -209,10 +209,10 @@ class G extends i.default.PersistedStore {
     return s
   }
   getActivityPanelMode() {
-    return R
+    return V
   }
   getFocusedLayout() {
-    return V
+    return R
   }
   getCurrentEmbeddedActivity() {
     var e;
@@ -320,7 +320,7 @@ let F = new G(r.default, {
       url: a,
       userIds: new Set([v.id]),
       connectedSince: Date.now()
-    }), R = s !== l.default.getChannelId() || (0, m.default)(i) ? h.ActivityPanelModes.PIP : h.ActivityPanelModes.PANEL, P.set(U(i, r), Date.now())
+    }), V = s !== l.default.getChannelId() || (0, m.default)(i) ? h.ActivityPanelModes.PIP : h.ActivityPanelModes.PANEL, P.set(U(i, r), Date.now())
   },
   EMBEDDED_ACTIVITY_CLOSE: function(e) {
     let {
@@ -452,19 +452,19 @@ let F = new G(r.default, {
     let {
       activityPanelMode: t
     } = e;
-    R = t
+    V = t
   },
   EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT: function(e) {
     let {
       focusedActivityLayout: t
     } = e;
-    V = t
+    R = t
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    s !== t && R === h.ActivityPanelModes.PANEL && (R = h.ActivityPanelModes.PIP)
+    s !== t && V === h.ActivityPanelModes.PANEL && (V = h.ActivityPanelModes.PIP)
   }
 });
 var x = F

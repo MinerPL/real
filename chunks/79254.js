@@ -68,19 +68,19 @@ function L(e) {
     })
   }, [t.guild_id, t.id]);
 
-  function b() {
+  function P() {
     (0, c.openThreadSidebarForCreating)(t, void 0, "Plus Button")
   }
 
-  function P() {
+  function b() {
     C.default.track(_.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D("/", (0, g.toRichValue)("/"))
   }
 
-  function F() {
+  function U() {
     O()
   }
 
-  function U() {
+  function F() {
     (0, i.openModalLazy)(async () => {
       let {
         default: e
@@ -154,13 +154,13 @@ function L(e) {
           return (0, s.jsx)(i.MenuItem, {
             id: "clips",
             label: a,
-            action: F
+            action: U
           }, "clips");
         case S.AttachmentTypes.POLL:
           return (0, s.jsx)(i.MenuItem, {
             id: "poll",
             label: a,
-            action: U
+            action: F
           }, "poll");
         case S.AttachmentTypes.INVITE_TO_PLAY_GAME:
           return (0, s.jsx)(i.MenuItem, {
@@ -203,13 +203,13 @@ function L(e) {
           return (0, s.jsx)(i.MenuItem, {
             id: "THREAD",
             label: a,
-            action: b
+            action: P
           }, "THREAD");
         case S.AttachmentTypes.SLASH_COMMAND:
           return (0, s.jsx)(i.MenuItem, {
             id: "SLASH_COMMAND",
             label: a,
-            action: P
+            action: b
           }, "SLASH_COMMAND");
         default:
           return null

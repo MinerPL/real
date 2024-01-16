@@ -32,8 +32,8 @@ var s, i, r, a = n("627445"),
   O = n("340115"),
   b = n("289362"),
   P = n("571420"),
-  R = n("797785"),
-  V = n("49111");
+  V = n("797785"),
+  R = n("49111");
 let k = new h.default("GatewaySocket"),
   M = new D.default;
 
@@ -140,7 +140,7 @@ i = class extends O.default {
           }), u = d.state.open, l = d.state.identify, f = d.state.messages, _ = d.state.clientState
         }
       }
-      null == t && ((t = (0, R.default)(n)).binaryType = "arraybuffer"), s(t), u && i(l, _), null != f && f.forEach(r), t.onopen = () => i(l, _), t.onmessage = r, t.onclose = o, t.onerror = a
+      null == t && ((t = (0, V.default)(n)).binaryType = "arraybuffer"), s(t), u && i(l, _), null != f && f.forEach(r), t.onopen = () => i(l, _), t.onmessage = r, t.onclose = o, t.onerror = a
     }({
       gatewayURL: o.toString(),
       newCallback: e => {
@@ -291,7 +291,7 @@ i = class extends O.default {
   }
   _tryDetectInvalidIOSToken(e, t, n) {
     (0, C.isIOS)() && null != this.token && 1001 === e && "Stream end encountered" === t && (this.iosGoingAwayEventCount += 1, 3 === this.iosGoingAwayEventCount && c.default.get({
-      url: V.Endpoints.ME,
+      url: R.Endpoints.ME,
       headers: {
         authorization: this.token
       }
@@ -299,14 +299,14 @@ i = class extends O.default {
       let {
         status: t
       } = e;
-      y.default.track(V.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
+      y.default.track(R.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
         api_status_code: t
       })
     }, e => {
       let {
         status: t
       } = e;
-      401 === t && (this.connectionState = "CLOSED", k.warn("[WS CLOSED] because of manual authentication failure, marking as closed."), this._reset(n, 4004, "invalid token manually detected")), y.default.track(V.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
+      401 === t && (this.connectionState = "CLOSED", k.warn("[WS CLOSED] because of manual authentication failure, marking as closed."), this._reset(n, 4004, "invalid token manually detected")), y.default.track(R.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
         api_status_code: t
       })
     }))

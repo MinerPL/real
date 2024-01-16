@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return b
   },
   getSocialRecommendationReasons: function() {
-    return R
+    return V
   },
   getNonSocialRecommendationReasons: function() {
     return k
@@ -171,7 +171,7 @@ function b(e, t, n) {
 }
 let P = [];
 
-function R(e, t, n, s, r) {
+function V(e, t, n, s, r) {
   let a = t.get(e);
   if (null == a) return P;
   let o = a.applicationId,
@@ -223,12 +223,12 @@ function R(e, t, n, s, r) {
   }
   return d
 }
-let V = [];
+let R = [];
 
 function k(e, t, n) {
   let s = t.get(e),
     i = n.getForSKU(e);
-  if (null == s || null == i) return V;
+  if (null == s || null == i) return R;
   let r = [];
   (0, v.hasFlag)(s.flags, y.SKUFlags.HAS_FREE_PREMIUM_CONTENT) && r.push({
     type: y.StoreRecommendationTypes.HAS_FREE_PREMIUM_CONTENT

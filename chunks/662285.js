@@ -28,8 +28,8 @@ var a, o, d = n("917351"),
   O = n("613691"),
   b = n("450484"),
   P = n("49111");
-let R = h.default.get(P.PlatformTypes.SPOTIFY),
-  V = "hm://pusher/v1/connections/";
+let V = h.default.get(P.PlatformTypes.SPOTIFY),
+  R = "hm://pusher/v1/connections/";
 (o = a || (a = {})).PLAYER_STATE_CHANGED = "PLAYER_STATE_CHANGED", o.DEVICE_STATE_CHANGED = "DEVICE_STATE_CHANGED";
 let k = {
     MESSAGE: "message",
@@ -119,7 +119,7 @@ class Q {
     } = JSON.parse(t);
     switch (n) {
       case k.MESSAGE:
-        if ("string" == typeof s && s.startsWith(V)) this.connectionId = decodeURIComponent(s.split(V)[1]), (0, O.subscribePlayerStateNotifications)(this.accountId, this.accessToken, this.connectionId);
+        if ("string" == typeof s && s.startsWith(R)) this.connectionId = decodeURIComponent(s.split(R)[1]), (0, O.subscribePlayerStateNotifications)(this.accountId, this.accessToken, this.connectionId);
         else if (Array.isArray(i)) {
           for (let {
               events: e
@@ -427,7 +427,7 @@ class eo extends f.default.Store {
     null != a.image && null != m && (g.large_image = m), "single" !== a.type && (g.large_text = a.name), null != _ && (t = _.uri), n = null != i && null != i.partyId ? i.partyId : "".concat(b.SPOTIFY_PARTY_PREFIX).concat(p.default.getId());
     let h = o.length > 128 ? o.substring(0, 125) + "..." : o,
       v = {
-        name: R.name,
+        name: V.name,
         assets: g,
         details: h,
         state: e,
@@ -599,7 +599,7 @@ let ed = new eo(g.default, {
       let {
         sourceId: e,
         sound: n
-      } = null == t ? void 0 : t.desktopSettings, s = null != e && S.default.getObservedAppNameForWindow(e) === R.name;
+      } = null == t ? void 0 : t.desktopSettings, s = null != e && S.default.getObservedAppNameForWindow(e) === V.name;
       s && n ? (K = new c.Interval).start(3e4, es) : K = null
     }
   }

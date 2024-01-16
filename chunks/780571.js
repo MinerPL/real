@@ -22,8 +22,8 @@ var r = i("414456"),
       childrenHeader: u,
       childrenSystemMessage: f,
       childrenButtons: x,
-      childrenMessageContent: g,
-      childrenAccessories: m,
+      childrenMessageContent: m,
+      childrenAccessories: g,
       messageRef: j,
       focusProps: w = {
         offset: {
@@ -33,8 +33,8 @@ var r = i("414456"),
       },
       hasThread: p,
       isSystemMessage: v,
-      hasReply: C,
-      ...N
+      hasReply: N,
+      ...C
     } = t, y = (0, l.jsx)(a.FocusRing, {
       ...w,
       children: (0, l.jsxs)("div", {
@@ -46,15 +46,15 @@ var r = i("414456"),
           [s.zalgo]: o,
           [s.hasThread]: p,
           [s.isSystemMessage]: v,
-          [s.hasReply]: C
+          [s.hasReply]: N
         }),
         ref: j,
-        ...N,
+        ...C,
         role: "article",
         children: [c, h, (0, l.jsxs)("div", {
           className: s.contents,
-          children: [f, u, null == f && g]
-        }), m, null != x ? (0, l.jsx)("div", {
+          children: [f, u, null == f && m]
+        }), g, null != x ? (0, l.jsx)("div", {
           className: s.buttonContainer,
           children: x
         }) : null]

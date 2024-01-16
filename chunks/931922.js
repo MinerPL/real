@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return b
+    return P
   }
 }), n("222007");
 var s = n("37983"),
@@ -36,11 +36,11 @@ var s = n("37983"),
   O = n("782340"),
   j = n("935107");
 
-function b(e) {
+function P(e) {
   let {
     channel: t
-  } = e, [n, l] = a.useState(!1), r = (0, p.default)(t, !0), b = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), P = (0, c.useStateFromStores)([A.default], () => A.default.getUser(null == b ? void 0 : b.ownerId)), F = a.useMemo(() => null != b ? o(b.roles).sortBy(e => -e.position).filter(e => e.id !== b.id).value() : [], [b]), U = a.useMemo(() => o(F).filter(e => {
-    if (null == b) return !1;
+  } = e, [n, l] = a.useState(!1), r = (0, p.default)(t, !0), P = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), b = (0, c.useStateFromStores)([A.default], () => A.default.getUser(null == P ? void 0 : P.ownerId)), U = a.useMemo(() => null != P ? o(P.roles).sortBy(e => -e.position).filter(e => e.id !== P.id).value() : [], [P]), F = a.useMemo(() => o(U).filter(e => {
+    if (null == P) return !1;
     let n = L.default.computePermissionsForRoles({
       forceRoles: {
         [e.id]: e
@@ -48,9 +48,9 @@ function b(e) {
       context: t
     });
     return u.default.has(n, D.Permissions.ADMINISTRATOR) || u.default.has(n, D.Permissions.VIEW_CHANNEL)
-  }).value(), [t, b, F]), H = (0, c.useStateFromStoresArray)([A.default], () => {
+  }).value(), [t, P, U]), H = (0, c.useStateFromStoresArray)([A.default], () => {
     let e = {};
-    for (let n of (null != P && (e[P.id] = P), Object.values(t.permissionOverwrites))) {
+    for (let n of (null != b && (e[b.id] = b), Object.values(t.permissionOverwrites))) {
       if (n.type !== C.PermissionOverwriteType.MEMBER || null != e[n.id]) continue;
       let t = A.default.getUser(n.id);
       null != t && (e[t.id] = t)
@@ -66,12 +66,12 @@ function b(e) {
         l = u.default.has(a.allow, D.Permissions.VIEW_CHANNEL);
       return s || l
     }).value()
-  }, [t, P]), k = _.default.can(D.Permissions.MANAGE_CHANNELS, t) || _.default.can(D.Permissions.MANAGE_ROLES, t);
+  }, [t, b]), k = _.default.can(D.Permissions.MANAGE_CHANNELS, t) || _.default.can(D.Permissions.MANAGE_ROLES, t);
 
   function G() {
     h.default.open(t.id)
   }
-  let B = a.useCallback(() => l(!1), []);
+  let w = a.useCallback(() => l(!1), []);
   return (0, s.jsxs)(x.default, {
     channelId: t.id,
     children: [(0, s.jsx)(x.EmptyMessageIcon, {
@@ -108,7 +108,7 @@ function b(e) {
     }) : null, (0, s.jsxs)("div", {
       className: j.members,
       children: [function() {
-        if (1 !== H.length || U.length > 0) return (0, s.jsx)(y.default, {
+        if (1 !== H.length || F.length > 0) return (0, s.jsx)(y.default, {
           guildId: t.guild_id,
           className: j.avatars,
           maxUsers: 5,
@@ -134,13 +134,13 @@ function b(e) {
             children: O.default.Messages.ROLE_REQUIRED_SINGLE_USER_MESSAGE
           })]
         })
-      }(), U.map((e, n) => {
+      }(), F.map((e, n) => {
         var a, l;
         let r = null !== (l = e.colorString) && void 0 !== l ? l : (0, d.int2hex)(D.DEFAULT_ROLE_COLOR),
           o = (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) !== void 0;
         return k ? (0, s.jsx)(I.default, {
           className: i(j.role, {
-            [j.last]: n === U.length - 1
+            [j.last]: n === F.length - 1
           }),
           roleName: e.name,
           roleColor: r,
@@ -151,7 +151,7 @@ function b(e) {
           }
         }, e.id) : (0, s.jsx)(N.default, {
           className: i(j.role, {
-            [j.last]: n === U.length - 1
+            [j.last]: n === F.length - 1
           }),
           roleName: e.name,
           roleColor: r,
@@ -161,7 +161,7 @@ function b(e) {
     }), n ? (0, s.jsx)(f.Modal, {
       renderModal: e => (0, s.jsx)(m.default, {
         ...e,
-        onClose: () => (B(), e.onClose()),
+        onClose: () => (w(), e.onClose()),
         channelId: t.id
       }),
       onCloseRequest: () => l(!1)

@@ -1,17 +1,17 @@
 "use strict";
-t.r(a), t.d(a, {
+a.r(t), a.d(t, {
   default: function() {
     return l
   }
 });
-var n = t("599110"),
-  s = t("49111");
+var n = a("599110"),
+  s = a("49111");
 
 function l(e) {
   let {
-    rating: a = null
+    rating: t = null
   } = e;
   n.default.track(s.AnalyticEvents.SAFETY_USER_SENTIMENT_FEEDBACK_SUBMITTED, {
-    rating: a
+    rating: t
   })
 }

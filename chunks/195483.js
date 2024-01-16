@@ -20,15 +20,15 @@ var a, i, s = n("37983"),
   p = n("238956"),
   E = n("506885"),
   A = n("79798"),
-  S = n("315102"),
-  h = n("741566");
+  h = n("315102"),
+  S = n("741566");
 
 function I(e) {
   let {
     compact: t
   } = e;
   return (0, s.jsx)(A.default, {
-    className: t ? h.botTagCompact : h.botTagCozy,
+    className: t ? S.botTagCompact : S.botTagCozy,
     type: A.default.Types.REMIX,
     useRemSizes: !0
   })
@@ -45,8 +45,8 @@ function T(e) {
       className: y,
       onClick: M,
       onContextMenu: v,
-      onPopoutRequestClose: _,
-      renderPopout: x,
+      onPopoutRequestClose: x,
+      renderPopout: _,
       renderRemixTag: N = !1,
       decorations: L
     } = e,
@@ -57,21 +57,21 @@ function T(e) {
       colorRoleName: k
     } = n,
     j = null != a.messageReference && null != a.webhookId,
-    D = (0, c.useStateFromStores)([m.default], () => m.default.roleStyle),
-    w = (0, p.useCanSeeRemixBadge)(),
+    w = (0, c.useStateFromStores)([m.default], () => m.default.roleStyle),
+    D = (0, p.useCanSeeRemixBadge)(),
     P = {
-      className: h.username,
-      style: "username" === D && null != C ? {
+      className: S.username,
+      style: "username" === w && null != C ? {
         color: C
       } : void 0,
       onClick: M,
       onContextMenu: v,
       children: (A ? "@" : "") + R
     };
-  t = null != x && null != T ? (0, s.jsx)(d.Popout, {
+  t = null != _ && null != T ? (0, s.jsx)(d.Popout, {
     preload: j ? void 0 : function() {
       let e = null != i ? i : a.author;
-      return (0, E.default)(e.id, null != n.guildMemberAvatar && null != b ? (0, S.getGuildMemberAvatarURLSimple)({
+      return (0, E.default)(e.id, null != n.guildMemberAvatar && null != b ? (0, h.getGuildMemberAvatarURLSimple)({
         guildId: b,
         userId: e.id,
         avatar: n.guildMemberAvatar,
@@ -81,10 +81,10 @@ function T(e) {
         channelId: a.channel_id
       })
     },
-    renderPopout: x,
+    renderPopout: _,
     shouldShow: T,
     position: u.isMobile ? "window_center" : "right",
-    onRequestClose: _,
+    onRequestClose: x,
     children: e => {
       let {
         onClick: t,
@@ -94,7 +94,7 @@ function T(e) {
         tag: "span",
         ...n,
         ...P,
-        className: o(P.className, h.clickable, y)
+        className: o(P.className, S.clickable, y)
       })
     }
   }) : (0, s.jsx)(d.Clickable, {
@@ -106,12 +106,12 @@ function T(e) {
   return (0, s.jsxs)(s.Fragment, {
     children: [null != F && l ? (0, s.jsxs)(s.Fragment, {
       children: [" ", F, " "]
-    }) : null, "dot" === D ? (0, s.jsx)(d.RoleDot, {
+    }) : null, "dot" === w ? (0, s.jsx)(d.RoleDot, {
       color: C,
       name: k,
-      className: h.roleDot
+      className: S.roleDot
     }) : null, t, null != B ? (0, s.jsx)(s.Fragment, {
       children: B
-    }) : null, null == F || l ? null : F, null != a && (0, g.default)(a) && w && N ? (0, s.jsx)(I, {}) : null]
+    }) : null, null == F || l ? null : F, null != a && (0, g.default)(a) && D && N ? (0, s.jsx)(I, {}) : null]
   })
 }(a = i || (i = {}))[a.SYSTEM_TAG = 0] = "SYSTEM_TAG", a[a.BADGES = 1] = "BADGES"

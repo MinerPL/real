@@ -227,7 +227,7 @@ let P = {
       return null == i ? O(null, s, null, T(n.channelId)) : b(i, null, T(n.channelId))
     }
   },
-  R = {
+  V = {
     order: i.defaultRules.url.order - .5,
     requiredFirstCharacters: ["h"],
     match(e) {
@@ -244,7 +244,7 @@ let P = {
       return null == o ? O(i, r, a, T(n.channelId), s) : b(o, a, T(n.channelId), s)
     }
   },
-  V = {
+  R = {
     order: i.defaultRules.url.order - .5,
     requiredFirstCharacters: ["h"],
     match: e => d.MEDIA_POST_URL_RE.exec(e),
@@ -263,6 +263,6 @@ let P = {
   };
 var k = {
   channelMention: P,
-  channelOrMessageUrl: R,
-  mediaPostLink: V
+  channelOrMessageUrl: V,
+  mediaPostLink: R
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return V
   }
 }), n("222007"), n("424973");
 var s = n("714617"),
@@ -206,7 +206,7 @@ class P extends o.default.Store {
   }
 }
 P.displayName = "PresenceStore";
-var R = new P(d.default, {
+var V = new P(d.default, {
   CONNECTION_OPEN: function() {
     return !0
   },

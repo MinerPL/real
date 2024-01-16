@@ -44,9 +44,9 @@ let T = Object.freeze({
   O = !1,
   b = !1,
   P = new Set,
-  R = !1;
+  V = !1;
 
-function V(e) {
+function R(e) {
   let t = S[e];
   return null == t && (t = S[e] = {
     ...T
@@ -137,13 +137,13 @@ class F extends s.default.PersistedStore {
   initialize(e) {
     if (this.waitFor(l.default), this.syncWith([l.default], () => {
         let e = l.default.getId();
-        k = null != e ? V(e) : {
+        k = null != e ? R(e) : {
           ...T
         }
       }), __OVERLAY__ && (m.isPlatformEmbedded && h.default.requireModule("discord_overlay2"), A.delete((0, v.getPID)())), null != e) {
       S = e;
       let t = l.default.getId();
-      null != t && (null == (k = V(t)).textChatNotifications && (k.textChatNotifications = T.textChatNotifications), null == k.textWidgetOpacity && (k.textWidgetOpacity = T.textWidgetOpacity))
+      null != t && (null == (k = R(t)).textChatNotifications && (k.textChatNotifications = T.textChatNotifications), null == k.textWidgetOpacity && (k.textWidgetOpacity = T.textWidgetOpacity))
     }
   }
   getState() {
@@ -220,7 +220,7 @@ class F extends s.default.PersistedStore {
     return k.textWidgetOpacity
   }
   isPreviewingInGame() {
-    return R
+    return V
   }
 }
 F.displayName = "OverlayStore", F.persistKey = "OverlayStoreV2", F.migrations = [() => {
@@ -385,7 +385,7 @@ var x = new F(r.default, {
       locked: t,
       pid: n
     } = e;
-    t ? A.delete(n) : A.add(n), U(), L(), R = !1
+    t ? A.delete(n) : A.add(n), U(), L(), V = !1
   },
   OVERLAY_ACTIVATE_REGION: function(e) {
     let {
@@ -396,12 +396,12 @@ var x = new F(r.default, {
   },
   OVERLAY_DEACTIVATE_ALL_REGIONS: U,
   OVERLAY_SET_PREVIEW_IN_GAME_MODE: function(e) {
-    R = e.isPreviewingInGame
+    V = e.isPreviewingInGame
   },
   WINDOW_RESIZED: function() {
     if (__OVERLAY__) {
       let e = E.default.windowSize();
-      !(0, v.validResolution)(e) && (R = !1)
+      !(0, v.validResolution)(e) && (V = !1)
     }
   }
 })

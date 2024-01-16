@@ -62,14 +62,14 @@ function m(e, t, n) {
     p = e.codedLinks.length > 0,
     E = e.hasFlag(s.MessageFlags.HAS_THREAD),
     A = m || f || g || p || E || e.type === s.MessageTypes.THREAD_CREATED,
-    S = m && e.content === e.embeds[0].url && e.embeds[0].type === s.MessageEmbedTypes.GIFV,
-    h = e.type !== s.MessageTypes.DEFAULT || !S && "" !== e.content,
+    h = m && e.content === e.embeds[0].url && e.embeds[0].type === s.MessageEmbedTypes.GIFV,
+    S = e.type !== s.MessageTypes.DEFAULT || !h && "" !== e.content,
     I = (0, i.default)(e),
     T = !I && (null == n ? void 0 : n.hasTimestamp) !== !1,
     y = o(e, t),
     M = l(e),
     v = I ? "" : "".concat(c ? M : y, " ").concat(a.MESSAGE_NICKNAME_PAUSE_LABEL_SEGMENT_ID);
-  if (h) {
+  if (S) {
     let t = r(e);
     v += " ".concat(t)
   }

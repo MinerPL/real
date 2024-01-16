@@ -35,10 +35,10 @@ var s = n("37983"),
   D = n("31511"),
   O = n("120379"),
   j = n("221068"),
-  b = n("49111"),
-  P = n("782340"),
-  F = n("278224");
-let U = a.memo(function(e) {
+  P = n("49111"),
+  b = n("782340"),
+  U = n("278224");
+let F = a.memo(function(e) {
   var t, n;
   let {
     className: l,
@@ -57,7 +57,7 @@ let U = a.memo(function(e) {
     keyboardModeEnabled: L,
     filterAfterTimestamp: R,
     showingQuarantineBanner: x
-  } = e, [U, H] = a.useState(!1), k = a.useMemo(() => S ? (0, y.generateMessageSpecs)({
+  } = e, [F, H] = a.useState(!1), k = a.useMemo(() => S ? (0, y.generateMessageSpecs)({
     compact: !0,
     messageGroups: 30,
     groupRange: 4,
@@ -81,21 +81,21 @@ let U = a.memo(function(e) {
     canLoadMore: null == R,
     handleScrollToBottom: a.useCallback(() => H(!0), [H]),
     handleScrollFromBottom: a.useCallback(() => H(!1), [H])
-  }), B = (0, D.default)({
+  }), w = (0, D.default)({
     scrollerRef: G.ref,
     isEditing: null != I,
     keyboardModeEnabled: L,
     hasMoreAfter: m.hasMoreAfter
   });
-  let w = (n = C, (0, o.useStateFromStores)([p.default], () => {
-      let e = T.default.can(b.Permissions.READ_MESSAGE_HISTORY, n);
+  let B = (n = C, (0, o.useStateFromStores)([p.default], () => {
+      let e = T.default.can(P.Permissions.READ_MESSAGE_HISTORY, n);
       return e ? null : p.default.getViewingRolesTimestamp(n.getGuildId())
     })),
     {
       channelStreamMarkup: V,
       newMessagesBar: W,
-      jumpToPresentBar: z,
-      forumPostActionBar: Z,
+      jumpToPresentBar: Z,
+      forumPostActionBar: z,
       strangerDangerWarningBanner: K
     } = (0, j.default)({
       channel: C,
@@ -108,16 +108,16 @@ let U = a.memo(function(e) {
       loadMore: G.loadMore,
       scrollManager: G,
       specs: k,
-      filterAfterTimestamp: null != R ? R : w,
+      filterAfterTimestamp: null != R ? R : B,
       showingQuarantineBanner: x,
-      isAtBottom: U,
+      isAtBottom: F,
       jumpToPresent: () => {
         if (m.hasPresent()) {
           var e;
           null === (e = G.ref.current) || void 0 === e || e.scrollToBottom({
             animate: !f.default.useReducedMotion
           })
-        } else d.default.jumpToPresent(C.id, b.MAX_MESSAGES_PER_CHANNEL)
+        } else d.default.jumpToPresent(C.id, P.MAX_MESSAGES_PER_CHANNEL)
       }
     });
   ! function(e) {
@@ -138,13 +138,13 @@ let U = a.memo(function(e) {
         })
       }, [e]);
     (0, v.useComponentAction)({
-      event: b.ComponentActions.SCROLLTO_PRESENT,
+      event: P.ComponentActions.SCROLLTO_PRESENT,
       handler: t
     }), (0, v.useComponentAction)({
-      event: b.ComponentActions.SCROLL_PAGE_UP,
+      event: P.ComponentActions.SCROLL_PAGE_UP,
       handler: n
     }), (0, v.useComponentAction)({
-      event: b.ComponentActions.SCROLL_PAGE_DOWN,
+      event: P.ComponentActions.SCROLL_PAGE_DOWN,
       handler: s
     })
   }(G.ref);
@@ -152,20 +152,20 @@ let U = a.memo(function(e) {
     {
       ref: q,
       ...X
-    } = (0, r.getContainerPropsFromNavigator)(B),
+    } = (0, r.getContainerPropsFromNavigator)(w),
     J = a.useCallback(e => {
       var t;
       G.ref.current = e, q.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
     }, []);
   return (0, s.jsx)(r.ListNavigatorProvider, {
-    navigator: B,
+    navigator: w,
     children: (0, s.jsxs)("div", {
-      className: i(F.messagesWrapper, l, "group-spacing-".concat(c)),
+      className: i(U.messagesWrapper, l, "group-spacing-".concat(c)),
       children: [null != K ? K : W, (0, s.jsxs)(u.PinToBottomScrollerAuto, {
         ref: J,
         customTheme: !0,
-        className: i(h, F.scroller),
-        contentClassName: F.scrollerContent,
+        className: i(h, U.scroller),
+        contentClassName: U.scrollerContent,
         onResize: G.handleResize,
         onScroll: G.handleScroll,
         onMouseDown: G.handleMouseDown,
@@ -173,26 +173,26 @@ let U = a.memo(function(e) {
         ...Y,
         tabIndex: -1,
         role: "group",
-        children: [Z, (0, s.jsxs)("ol", {
-          className: F.scrollerInner,
-          "aria-label": P.default.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({
+        children: [z, (0, s.jsxs)("ol", {
+          className: U.scrollerInner,
+          "aria-label": b.default.Messages.CHANNEL_MESSAGES_A11Y_LABEL.format({
             channelName: C.name
           }),
           ...X,
           children: [(0, s.jsx)("span", {
-            className: F.navigationDescription,
+            className: U.navigationDescription,
             id: "messagesNavigationDescription",
             "aria-hidden": !0,
-            children: P.default.Messages.CHANNEL_MESSAGES_A11Y_DESCRIPTION
+            children: b.default.Messages.CHANNEL_MESSAGES_A11Y_DESCRIPTION
           }), V, (0, s.jsx)("div", {
             className: i({
-              [F.scrollerSpacer]: !x,
-              [F.empty]: 0 === m.length && !m.loadingMore,
-              [F.emptyForum]: 1 === m.length && !m.loadingMore && C.isForumPost() && (null === (t = m.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(C))
+              [U.scrollerSpacer]: !x,
+              [U.empty]: 0 === m.length && !m.loadingMore,
+              [U.emptyForum]: 1 === m.length && !m.loadingMore && C.isForumPost() && (null === (t = m.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(C))
             })
           })]
         })]
-      }), z]
+      }), Z]
     })
   })
 }, (e, t) => null != e.isHidden && null != t.isHidden && e.isHidden && t.isHidden);
@@ -214,7 +214,7 @@ var H = a.memo(function(e) {
         canManageMessages: s,
         permissionVersion: a
       } = (0, o.useStateFromStoresObject)([T.default], () => ({
-        canManageMessages: T.default.can(b.Permissions.MANAGE_MESSAGES, e),
+        canManageMessages: T.default.can(P.Permissions.MANAGE_MESSAGES, e),
         permissionVersion: null != t ? T.default.getGuildVersion(t) : null
       }), [e, t]);
     return {
@@ -255,8 +255,8 @@ var H = a.memo(function(e) {
       keyboardModeEnabled: a
     }
   }(), {
-    messages: P,
-    channelStream: F,
+    messages: b,
+    channelStream: U,
     oldestUnreadMessageId: H,
     editingMessageId: k
   } = function(e) {
@@ -273,7 +273,7 @@ var H = a.memo(function(e) {
       }, {
         autoTrackExposure: !1
       }),
-      r = null !== (n = null === (t = N.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(b.UserFlags.SPAMMER)) && void 0 !== n && n,
+      r = null !== (n = null === (t = N.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(P.UserFlags.SPAMMER)) && void 0 !== n && n,
       u = (0, c.useChannelSummariesExperiment)(e),
       d = (0, h.default)("use_topic_dividers_in_chat"),
       f = (0, o.useStateFromStoresArray)([m.default], () => {
@@ -302,14 +302,14 @@ var H = a.memo(function(e) {
   }(t);
   return (0, s.jsx)(L.ObscuredDisplayContext.Provider, {
     value: (0, R.default)(O, u),
-    children: (0, s.jsx)(U, {
+    children: (0, s.jsx)(F, {
       ...r,
       messageGroupSpacing: v,
       showNewMessagesBar: !0,
       channel: t,
       messageDisplayCompact: !i && (l || D),
-      messages: P,
-      channelStream: F,
+      messages: b,
+      channelStream: U,
       permissionVersion: d,
       uploads: (0, o.useStateFromStores)([I.default], () => I.default.getFiles(t.id), [t]),
       unreadCount: (0, o.useStateFromStores)([M.default], () => M.default.getUnreadCount(t.id), [t]),

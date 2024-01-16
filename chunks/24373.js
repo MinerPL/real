@@ -25,10 +25,10 @@ n.r(t), n.d(t, {
     return P
   },
   shouldAnimateSticker: function() {
-    return R
+    return V
   },
   shouldAttachSticker: function() {
-    return V
+    return R
   },
   isGuildSticker: function() {
     return k
@@ -123,7 +123,7 @@ let {
   name: e.name,
   stickers: e.stickers,
   previewSticker: C(e)
-}), R = (e, t) => e === f.StickerAnimationSettings.ANIMATE_ON_INTERACTION ? t : e !== f.StickerAnimationSettings.NEVER_ANIMATE, V = (e, t, n, i) => {
+}), V = (e, t) => e === f.StickerAnimationSettings.ANIMATE_ON_INTERACTION ? t : e !== f.StickerAnimationSettings.NEVER_ANIMATE, R = (e, t, n, i) => {
   let r = a.default.getUploadCount(n, i);
   if (r > 0) return !0;
   let o = u.default.getStickerPreview(n, i),

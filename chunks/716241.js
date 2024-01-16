@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return P
   },
   collectChannelAnalyticsMetadataFromId: function() {
-    return R
+    return V
   },
   collectChannelAnalyticsMetadata: function() {
-    return V
+    return R
   },
   collectVoiceAnalyticsMetadata: function() {
     return k
@@ -87,13 +87,13 @@ function P(e) {
   }
 }
 
-function R(e) {
+function V(e) {
   if (null == e) return null;
   let t = u.default.getChannel(e);
-  return null == t ? null : V(t)
+  return null == t ? null : R(t)
 }
 
-function V(e) {
+function R(e) {
   var t;
   if (null == e) return null;
   let n = !1,
@@ -147,7 +147,7 @@ function M(e) {
     ...null != l && null != f && (0, O.isStaticChannelRoute)(f) ? (r = 0, {
       channel_static_route: f,
       channel_hidden: !1
-    }) : V(_)
+    }) : R(_)
   };
   S.default.track(e, g, {
     flush: o

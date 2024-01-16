@@ -80,19 +80,19 @@ function j(e) {
   } = e, l = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != l && L.default.extractTimestamp(l.id) < Date.now() - R.WELCOME_OLD_GUILD_AGE_THRESHOLD, A = (0, u.useStateFromStores)([g.default], () => (null == l ? void 0 : l.ownerId) === g.default.getId(), [l]), {
     canInvite: T,
     canManageGuild: j,
-    canMessage: b
-  } = (0, p.usePermissions)(t, l), P = (0, u.useStateFromStores)([_.default], () => {
+    canMessage: P
+  } = (0, p.usePermissions)(t, l), b = (0, u.useStateFromStores)([_.default], () => {
     var e, t;
     return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0
   }), {
-    guildPopulated: F,
-    guildMessaged: U,
+    guildPopulated: U,
+    guildMessaged: F,
     guildPersonalized: H
   } = (0, p.useCompletedStates)(l), {
     handleInvite: k,
     handleMessage: G,
-    handlePersonalize: B,
-    handleDownload: w,
+    handlePersonalize: w,
+    handleDownload: B,
     handleAddApplication: V
   } = function(e) {
     let t = a.useCallback(() => {
@@ -169,9 +169,9 @@ function j(e) {
       handleDownload: r,
       handleAddApplication: o
     }
-  }(l), W = !(P || F || U || H), {
-    titleAnimatedStyle: z,
-    opacities: Z
+  }(l), W = !(b || U || F || H), {
+    titleAnimatedStyle: Z,
+    opacities: z
   } = function(e) {
     let t = (0, r.useLazyValue)(() => new o.default.Value(0)),
       n = (0, r.useLazyValue)(() => new o.default.Value(0)),
@@ -219,51 +219,51 @@ function j(e) {
   !f && (T && q.push((0, s.jsx)(o.default.div, {
     className: D.cardWrapper,
     style: W ? {
-      opacity: Z[q.length]
+      opacity: z[q.length]
     } : {},
     children: (0, s.jsx)(O, {
       iconUrl: n("243826"),
       header: y.default.Messages.WELCOME_CTA_INVITE_TITLE,
-      completed: F,
+      completed: U,
       onClick: k
     })
   }, "invite")), j && q.push((0, s.jsx)(o.default.div, {
     className: D.cardWrapper,
     style: W ? {
-      opacity: Z[q.length]
+      opacity: z[q.length]
     } : {},
     children: (0, s.jsx)(O, {
       iconUrl: n("215036"),
       header: y.default.Messages.WELCOME_CTA_PERSONALIZE_TITLE,
       completed: H,
-      onClick: B
+      onClick: w
     })
-  }, "customize")), b && q.push((0, s.jsx)(o.default.div, {
+  }, "customize")), P && q.push((0, s.jsx)(o.default.div, {
     className: D.cardWrapper,
     style: W ? {
-      opacity: Z[q.length]
+      opacity: z[q.length]
     } : {},
     children: (0, s.jsx)(O, {
       iconUrl: n("505873"),
       header: y.default.Messages.WELCOME_CTA_MESSAGE_TITLE,
-      completed: U,
+      completed: F,
       onClick: G
     })
   }, "message")), (0, N.isWeb)() && q.push((0, s.jsx)(o.default.div, {
     className: D.cardWrapper,
     style: W ? {
-      opacity: Z[q.length]
+      opacity: z[q.length]
     } : {},
     children: (0, s.jsx)(O, {
       iconUrl: n("238032"),
       header: y.default.Messages.WELCOME_CTA_DOWNLOAD_TITLE,
-      completed: P,
-      onClick: w
+      completed: b,
+      onClick: B
     })
   }, "download")), q.push((0, s.jsx)(o.default.div, {
     className: D.cardWrapper,
     style: W ? {
-      opacity: Z[q.length]
+      opacity: z[q.length]
     } : {},
     children: (0, s.jsx)(O, {
       iconUrl: n("356451"),
@@ -282,7 +282,7 @@ function j(e) {
       children: (0, s.jsxs)("div", {
         className: D.inner,
         children: [(0, s.jsxs)(o.default.div, {
-          style: z,
+          style: Z,
           children: [(0, s.jsx)(c.Heading, {
             className: D.titleName,
             variant: "heading-xxl/semibold",

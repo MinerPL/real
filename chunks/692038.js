@@ -43,7 +43,7 @@ function y(e) {
   let {
     reactions: N,
     interactionData: O
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, b = null !== (o = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== o ? o : [], P = null !== (g = e.mention_roles) && void 0 !== g ? g : [], R = null !== (v = e.mention_channels) && void 0 !== v ? v : [], V = e.message_reference, k = i(new Date(e.timestamp)), M = e.type === E.MessageTypes.THREAD_CREATED ? [] : (0, r.default)(e.content);
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, b = null !== (o = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== o ? o : [], P = null !== (g = e.mention_roles) && void 0 !== g ? g : [], V = null !== (v = e.mention_channels) && void 0 !== v ? v : [], R = e.message_reference, k = i(new Date(e.timestamp)), M = e.type === E.MessageTypes.THREAD_CREATED ? [] : (0, r.default)(e.content);
   let w = null == (T = e).author ? p : null != T.webhook_id ? new l.default(T.author) : null !== (C = c.default.getUser(T.author.id)) && void 0 !== C ? C : new l.default(T.author),
     L = null == e ? void 0 : e.gift_info,
     U = null != e.interaction ? d.default.createFromServer(e.interaction) : null,
@@ -60,8 +60,8 @@ function y(e) {
     mentionEveryone: e.mention_everyone,
     mentions: b,
     mentionRoles: P,
-    mentionChannels: R,
-    messageReference: V,
+    mentionChannels: V,
+    messageReference: R,
     mentioned: (0, h.isMentioned)({
       userId: f.default.getId(),
       channelId: e.channel_id,

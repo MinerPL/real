@@ -20,28 +20,24 @@ function u(e) {
       emojiBurstPicker: u,
       moreUtilities: d
     },
-    showClydeAiEmbeds: c,
-    setShowClydeAiEmbeds: f,
-    isFocused: h,
+    isFocused: c,
     buttonProps: {
-      message: C,
-      channel: p,
-      groupId: m,
-      compact: E = !1
+      message: f,
+      channel: h,
+      groupId: C,
+      compact: p = !1
     }
-  } = e, g = C.state === r.MessageStates.SENDING, S = C.id === m, _ = (0, a.hasFlag)(C.flags, r.MessageFlags.EPHEMERAL), A = C.state === r.MessageStates.SEND_FAILED;
-  return g || _ && !A ? null : (0, s.jsx)(i.default, {
+  } = e, m = f.state === r.MessageStates.SENDING, E = f.id === C, g = (0, a.hasFlag)(f.flags, r.MessageFlags.EPHEMERAL), S = f.state === r.MessageStates.SEND_FAILED;
+  return m || g && !S ? null : (0, s.jsx)(i.default, {
     className: o.buttons,
     innerClassName: o.buttonsInner,
-    isHeader: !E && S && !(0, l.default)(C),
-    channel: p,
-    message: C,
+    isHeader: !p && E && !(0, l.default)(f),
+    channel: h,
+    message: f,
     setPopout: t,
     showEmojiPicker: n,
     showEmojiBurstPicker: u,
     showMoreUtilities: d,
-    showClydeAiEmbeds: c,
-    setShowClydeAiEmbeds: f,
-    isFocused: h
+    isFocused: c
   })
 }

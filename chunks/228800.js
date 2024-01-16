@@ -35,28 +35,28 @@ var s = n("37983"),
   D = n("773336"),
   O = n("412861"),
   j = n("79254"),
-  b = n("64096"),
-  P = n("49111"),
-  F = n("80028"),
-  U = n("782340"),
+  P = n("64096"),
+  b = n("49111"),
+  U = n("80028"),
+  F = n("782340"),
   H = n("381769"),
   k = a.memo(function(e) {
     var t, l;
     let k, {
         className: G,
-        channel: B,
-        draftType: w,
+        channel: w,
+        draftType: B,
         editorTextContent: V,
         setValue: W,
-        canOnlyUseTextCommands: z
+        canOnlyUseTextCommands: Z
       } = e,
-      Z = (0, f.useAppContext)(),
+      z = (0, f.useAppContext)(),
       K = a.useRef(null),
       Y = (0, r.useStateFromStores)([L.default], () => L.default.getActivities()),
       q = (0, r.useStateFromStores)([m.default], () => m.default.getSettings().clipsEnabled),
       X = (0, r.useStateFromStores)([m.default], () => m.default.getLastClipsSession()),
       J = (0, r.useStateFromStoresArray)([m.default], () => m.default.getNewClipIds()),
-      Q = (0, r.useStateFromStores)([M.default], () => null == M.default.getCurrentSidebarChannelId(B.id)),
+      Q = (0, r.useStateFromStores)([M.default], () => null == M.default.getCurrentSidebarChannelId(w.id)),
       {
         showClipsHeaderEntrypoint: $
       } = p.ClipsExperiment.useExperiment({
@@ -65,20 +65,20 @@ var s = n("37983"),
         autoTrackExposure: !1
       }),
       ee = (0, r.useStateFromStores)([g.HotspotStore], () => g.HotspotStore.hasHotspot(g.HotspotLocations.CLIPS_CHANNEL_ATTACH_REMINDER)),
-      et = (0, u.useModalsStore)(e => (0, u.hasModalOpenSelector)(e, F.CLIPS_GALLERY_MODAL_KEY)),
+      et = (0, u.useModalsStore)(e => (0, u.hasModalOpenSelector)(e, U.CLIPS_GALLERY_MODAL_KEY)),
       en = (0, r.useStateFromStores)([I.default], () => I.default.hasLayers()),
       es = (0, r.useStateFromStores)([m.default], () => m.default.hasClips()),
       [ea, el] = a.useState(null),
       ei = (0, p.useEnableClips)() && (q || es),
-      er = B.isPrivate(),
-      eo = (0, r.useStateFromStores)([N.default], () => er || N.default.can(P.Permissions.ATTACH_FILES, B) && N.default.can(P.Permissions.SEND_MESSAGES, B)),
+      er = w.isPrivate(),
+      eo = (0, r.useStateFromStores)([N.default], () => er || N.default.can(b.Permissions.ATTACH_FILES, w) && N.default.can(b.Permissions.SEND_MESSAGES, w)),
       eu = (0, c.default)(X);
     (null == eu ? void 0 : eu.newClipIds.length) !== (null == X ? void 0 : X.newClipIds.length) && (null !== (t = null == X ? void 0 : X.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ea && ee && Q && !et && !$ && !en && el("recentClips");
     let ed = (e, t, n) => {
-      null != t && "ETOOLARGE" === t.code ? (0, O.showUploadFileSizeExceededError)(B, []) : (0, O.promptToUpload)(e, B, w, {
+      null != t && "ETOOLARGE" === t.code ? (0, O.showUploadFileSizeExceededError)(w, []) : (0, O.promptToUpload)(e, w, B, {
         requireConfirm: !0,
         showLargeMessageDialog: n
-      }), y.ComponentDispatch.dispatchToLastSubscribed(P.ComponentActions.TEXTAREA_FOCUS)
+      }), y.ComponentDispatch.dispatchToLastSubscribed(b.ComponentActions.TEXTAREA_FOCUS)
     };
 
     function ec() {
@@ -88,10 +88,10 @@ var s = n("37983"),
         } = await n.el("167573").then(n.bind(n, "167573"));
         return t => (0, s.jsx)(e, {
           ...t,
-          channelId: B.id
+          channelId: w.id
         })
       }, {
-        modalKey: F.CLIPS_GALLERY_MODAL_KEY
+        modalKey: U.CLIPS_GALLERY_MODAL_KEY
       }), el(null)
     }
     a.useEffect(() => {
@@ -99,32 +99,32 @@ var s = n("37983"),
         var e;
         return null === (e = K.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
       };
-      return y.ComponentDispatch.subscribe(P.ComponentActions.UPLOAD_FILE, e), () => {
-        y.ComponentDispatch.unsubscribe(P.ComponentActions.UPLOAD_FILE, e)
+      return y.ComponentDispatch.subscribe(b.ComponentActions.UPLOAD_FILE, e), () => {
+        y.ComponentDispatch.unsubscribe(b.ComponentActions.UPLOAD_FILE, e)
       }
     });
-    let ef = (0, A.useCanStartPublicThread)(B),
-      eh = (0, A.useCanStartPrivateThread)(B),
+    let ef = (0, A.useCanStartPublicThread)(w),
+      eh = (0, A.useCanStartPrivateThread)(w),
       eC = !T.UseLegacyChatInput.useSetting() && !(0, D.isAndroidWeb)() && null != window.ResizeObserver,
-      ep = (0, r.useStateFromStores)([N.default, _.default], () => (0, C.canUseApplicationCommands)(N.default, _.default, z, B)),
-      em = (0, S.useCanPostPollsInChannel)(null != B ? B : void 0),
+      ep = (0, r.useStateFromStores)([N.default, _.default], () => (0, C.canUseApplicationCommands)(N.default, _.default, Z, w)),
+      em = (0, S.useCanPostPollsInChannel)(null != w ? w : void 0),
       eE = (0, u.useRedesignIconContext)().enabled,
       eg = null !== (l = null == J ? void 0 : J.length) && void 0 !== l ? l : 0,
-      eS = (0, b.default)({
+      eS = (0, P.default)({
         canAttachFiles: eo,
         canStartThreads: ef || eh,
         useSlate: eC,
         hasClips: ei,
         canUseApplicationCommands: ep,
-        channel: B,
+        channel: w,
         activities: Y,
         newClipsCount: eg,
         canPostPolls: em,
-        appContext: Z
+        appContext: z
       });
     if (0 === eS.length) return null;
-    let e_ = Y.some(e => (0, h.default)(e, P.ActivityFlags.SYNC)),
-      eA = Y.some(e => (0, h.default)(e, P.ActivityFlags.JOIN) && !(0, h.default)(e, P.ActivityFlags.EMBEDDED)) || e_;
+    let e_ = Y.some(e => (0, h.default)(e, b.ActivityFlags.SYNC)),
+      eA = Y.some(e => (0, h.default)(e, b.ActivityFlags.JOIN) && !(0, h.default)(e, b.ActivityFlags.EMBEDDED)) || e_;
     k = eE ? (0, s.jsx)(o.CirclePlusIcon, {
       className: H.attachButtonIcon,
       colorClass: H.attachButtonPlus
@@ -169,12 +169,12 @@ var s = n("37983"),
               ...e,
               onClose: () => el(null),
               options: eS,
-              channel: B,
+              channel: w,
               onFileUpload: () => {
                 var e;
                 return null === (e = K.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
               },
-              draftType: w,
+              draftType: B,
               editorTextContent: V,
               setValue: W,
               openClips: ec
@@ -188,7 +188,7 @@ var s = n("37983"),
         size: u.Button.Sizes.NONE,
         className: i(H.attachButton, G),
         innerClassName: H.attachButtonInner,
-        "aria-label": U.default.Messages.CHAT_ATTACH_UPLOAD_OR_INVITE,
+        "aria-label": F.default.Messages.CHAT_ATTACH_UPLOAD_OR_INVITE,
         onDoubleClick: eo ? () => {
           var e;
           return null === (e = K.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
@@ -205,7 +205,7 @@ var s = n("37983"),
           onChange: e => {
             ed(e.currentTarget.files, e.currentTarget.err), e.currentTarget.value = ""
           },
-          multiple: B.rateLimitPerUser <= 0,
+          multiple: w.rateLimitPerUser <= 0,
           tabIndex: -1,
           "aria-hidden": !0
         })

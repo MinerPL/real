@@ -15486,6 +15486,11 @@ html.decorate-links .lowSaturationUnderline__95e71 {
 
 @use postcss-pxtorem;
 
+.theme-dark.custom-theme-background .embedFull__8dc21 {
+    --__spoiler-background-color--hidden: var(--primary-760);
+    --__spoiler-background-color--hidden--hover: hsl(var(--primary-760-hsl) / 0.8)
+}
+
 .embed_d3cbe3 {
     position: relative;
     display: grid;
@@ -21809,6 +21814,43 @@ h6.title__7a3bb {
     border-color: var(--primary-800)
 }
 
+.root_b4f834 {
+    border-radius: 8px;
+    background: var(--background-secondary);
+    overflow: hidden
+}
+
+.option_f70eea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--interactive-active);
+    padding: 16px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--background-modifier-accent)
+}
+
+.option_f70eea:hover {
+    background: var(--background-modifier-hover);
+    border-bottom-color: transparent
+}
+
+.option_f70eea:last-child {
+    border-bottom: none
+}
+
+.text_f09abc {
+    padding-right: 5px
+}
+
+.caret__10c2e {
+    color: var(--interactive-normal);
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-left: 8px
+}
+
 .copyInput_c1c679 {
     overflow: hidden;
     box-sizing: border-box;
@@ -22855,43 +22897,6 @@ h6.title__7a3bb {
 
 .learnMore__609f4 {
     margin-left: 3px
-}
-
-.root_b4f834 {
-    border-radius: 8px;
-    background: var(--background-secondary);
-    overflow: hidden
-}
-
-.option_f70eea {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--interactive-active);
-    padding: 16px;
-    cursor: pointer;
-    border-bottom: 1px solid var(--background-modifier-accent)
-}
-
-.option_f70eea:hover {
-    background: var(--background-modifier-hover);
-    border-bottom-color: transparent
-}
-
-.option_f70eea:last-child {
-    border-bottom: none
-}
-
-.text_f09abc {
-    padding-right: 5px
-}
-
-.caret__10c2e {
-    color: var(--interactive-normal);
-    width: 24px;
-    height: 24px;
-    flex-shrink: 0;
-    margin-left: 8px
 }
 
 .operations__07224 {

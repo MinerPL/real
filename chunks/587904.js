@@ -24,11 +24,11 @@ var i = n("414456"),
       isInline: g = !0,
       id: p,
       isEdited: E = !1
-    } = e, A = (0, o.accessibilityLabelCalendarFormat)(d), S = i ? (0, o.dateFormat)(d, "LT") : (0, o.calendarFormat)(d), h = i ? (0, l.default)(S) : null, I = E ? u.default.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({
+    } = e, A = (0, o.accessibilityLabelCalendarFormat)(d), h = i ? (0, o.dateFormat)(d, "LT") : (0, o.calendarFormat)(d), S = i ? (0, l.default)(h) : null, I = E ? u.default.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({
       timeFormatted: A
     }) : A;
     return (0, a.jsx)("span", {
-      className: s(n, h, {
+      className: s(n, S, {
         [c.timestamp]: !0,
         [c.timestampVisibleOnHover]: m,
         [c.timestampInline]: g,
@@ -48,7 +48,7 @@ var i = n("414456"),
               className: c.separator,
               "aria-hidden": !0,
               children: i ? "[" : " — "
-            }), S, i && (0, a.jsxs)("i", {
+            }), h, i && (0, a.jsxs)("i", {
               className: c.separator,
               "aria-hidden": !0,
               children: ["]", " "]
