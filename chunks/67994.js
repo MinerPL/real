@@ -8,7 +8,7 @@ var l = n("37983"),
   i = n("884691"),
   a = n("446674"),
   s = n("77078"),
-  r = n("404118"),
+  r = n("819689"),
   u = n("81594"),
   o = n("681736"),
   d = n("694187"),
@@ -16,8 +16,8 @@ var l = n("37983"),
   f = n("474643"),
   m = n("305961"),
   g = n("377253"),
-  _ = n("476765"),
-  h = n("254490"),
+  h = n("476765"),
+  _ = n("254490"),
   p = n("412861"),
   E = n("834021"),
   x = n("867965"),
@@ -33,14 +33,14 @@ function O(e) {
   let {
     threadId: n,
     attachments: O,
-    sendMessage: I,
-    transitionState: R,
-    onClose: b
-  } = e, L = (0, _.useUID)(), y = (0, a.useStateFromStores)([c.default], () => c.default.getChannel(n), [n]), U = (0, a.useStateFromStores)([m.default], () => m.default.getGuild(null == y ? void 0 : y.getGuildId()), [y]), N = (0, a.useStateFromStores)([c.default], () => c.default.getChannel(null == y ? void 0 : y.parent_id), [y]), F = null === (t = O[0]) || void 0 === t ? void 0 : t.item, [P, D] = i.useState(null);
+    sendMessage: R,
+    transitionState: b,
+    onClose: I
+  } = e, y = (0, h.useUID)(), L = (0, a.useStateFromStores)([c.default], () => c.default.getChannel(n), [n]), F = (0, a.useStateFromStores)([m.default], () => m.default.getGuild(null == L ? void 0 : L.getGuildId()), [L]), N = (0, a.useStateFromStores)([c.default], () => c.default.getChannel(null == L ? void 0 : L.parent_id), [L]), U = null === (t = O[0]) || void 0 === t ? void 0 : t.item, [P, D] = i.useState(null);
   i.useEffect(() => {
-    null != F && (0, d.processImage)(F.file, (e, t) => D(e), T.NOOP)
-  }, [F]);
-  let j = null != F && null != P ? {
+    null != U && (0, d.processImage)(U.file, (e, t) => D(e), T.NOOP)
+  }, [U]);
+  let j = null != U && null != P ? {
       src: P,
       width: M.MAX_THUMBNAIL_WIDTH,
       height: M.MAX_THUMBNAIL_HEIGHT,
@@ -51,10 +51,10 @@ function O(e) {
     G = i.useCallback(() => {
       (0, x.trackForumAddMediaToOriginalPostClicked)({
         added: !1
-      }), I(), b()
-    }, [I, b]),
+      }), R(), I()
+    }, [R, I]),
     k = i.useCallback(() => {
-      null != y && null != U && ((0, x.trackForumAddMediaToOriginalPostClicked)({
+      null != L && null != F && ((0, x.trackForumAddMediaToOriginalPostClicked)({
         added: !0
       }), ! function(e) {
         let {
@@ -67,15 +67,10 @@ function O(e) {
         s.on("start", () => {
           l(!0)
         }), s.on("progress", e => {
-          let r = (0, h.maxFileSize)(i.id);
+          let r = (0, _.maxFileSize)(i.id);
           e.currentSize > r && (s.cancel(), l(!1), a(), (0, p.showUploadFileSizeExceededError)(t, (0, E.getWebUploadFiles)(n)))
-        }), s.on("error", (e, t) => {
-          l(!1), t === S.AbortCodes.EXPLICIT_CONTENT && (a(), r.default.show({
-            title: v.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
-            body: v.default.Messages.BOT_GUILD_EXPLICIT_CONTENT.format({
-              name: i.toString()
-            })
-          }))
+        }), s.on("error", (e, n) => {
+          l(!1), n === S.AbortCodes.EXPLICIT_CONTENT && (a(), r.default.sendClydeError(t.id, n), u.default.clearAll(t.id, f.DraftType.ChannelMessage))
         }), s.on("complete", () => {
           l(!1), a(), u.default.clearAll(t.id, f.DraftType.ChannelMessage)
         });
@@ -87,24 +82,24 @@ function O(e) {
           addFilesTo: "attachments"
         })
       }({
-        thread: y,
+        thread: L,
         attachments: O,
         setIsUploading: w,
-        guild: U,
-        onClose: b
+        guild: F,
+        onClose: I
       }))
-    }, [y, O, w, U, b]);
+    }, [L, O, w, F, I]);
   return null == N ? null : (0, l.jsxs)(s.ModalRoot, {
-    transitionState: R,
+    transitionState: b,
     size: s.ModalSize.SMALL,
     className: C.modalRoot,
-    "aria-labelledby": L,
+    "aria-labelledby": y,
     children: [(0, l.jsxs)(s.ModalContent, {
       className: C.modal,
       children: [(0, l.jsx)(s.Heading, {
         variant: "heading-md/semibold",
         className: C.header,
-        id: L,
+        id: y,
         children: v.default.Messages.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_TITLE
       }), (0, l.jsx)(s.Text, {
         variant: "text-md/normal",
@@ -127,7 +122,7 @@ function O(e) {
         look: s.Button.Looks.BLANK,
         className: C.cancelButton,
         disabled: z,
-        onClick: b,
+        onClick: I,
         children: v.default.Messages.CANCEL
       }), (0, l.jsx)(s.Button, {
         color: s.Button.Colors.PRIMARY,

@@ -68,7 +68,7 @@ function g(e) {
     }, {
       autoTrackExposure: !1
     }),
-    B = null != (0, E.useGuildUpcomingEventsNotice)(n);
+    B = (0, E.useGuildUpcomingEventsNotice)(n);
   if (i.useEffect(() => {
       u.default.getGuildEventsForCurrentUser(n)
     }, [n]), i.useEffect(() => {

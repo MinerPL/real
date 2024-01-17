@@ -1,0 +1,25 @@
+"use strict";
+e.exports = {
+  acronym: "acronym__26580",
+  activityInfoImage: "activityInfoImage__95dc7",
+  activityInfoInnerContainer: "activityInfoInnerContainer__1a63b",
+  activityInfoOuterContainer: "activityInfoOuterContainer__2abdd",
+  activityInfoText: "activityInfoText__93fe5",
+  copyButton: "copyButton__23cb7",
+  copySendBar: "copySendBar__5beb2",
+  ellipsis: "ellipsis_da6010",
+  footer: "footer__915f3",
+  footerDivider: "footerDivider_d0a0e0",
+  header: "header_e2c14f",
+  modalContent: "modalContent_d183fa",
+  modalRoot: "modalRoot_fca654",
+  rowAvatar: "rowAvatar__54ae4",
+  rowContainer: "rowContainer_c0fb28",
+  rowDivider: "rowDivider_b0ea0c",
+  rowLeft: "rowLeft__2de03",
+  rowName: "rowName_af5a98",
+  rowNameContainer: "rowNameContainer__33b26",
+  rowRight: "rowRight__577ae",
+  rowSubName: "rowSubName__31803",
+  searchBar: "searchBar__5b2a9"
+}
