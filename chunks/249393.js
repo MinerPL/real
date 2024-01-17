@@ -52,7 +52,7 @@ function N(e) {
   }) : S.default.Messages.WAVED_AT_YOU.format({
     username: H.nick
   }), Z = null != U && null != b, X = null;
-  X = Z ? B ? S.default.Messages.YOU_ARE_IN_CHANNEL.format({
+  X = Z ? B || Y ? S.default.Messages.YOU_ARE_IN_CHANNEL.format({
     channelHook: (e, t) => (0, a.jsx)(T.default, {
       channel: null != b ? b : void 0
     }, t)
