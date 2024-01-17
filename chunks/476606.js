@@ -8,14 +8,14 @@ var l = n("884691"),
   i = n("446674"),
   r = n("721698"),
   o = n("349503"),
-  s = n("482626"),
-  a = n("49111");
+  s = n("718517"),
+  a = n("482626");
 
 function u(e) {
   let {
     section: t,
     commandsByActiveSection: n
-  } = e, [u, d] = l.useState(s.CommandListSortOrder.ALPHABETICAL), {
+  } = e, [u, d] = l.useState(a.CommandListSortOrder.ALPHABETICAL), {
     discoverableApplication: c,
     fetching: f
   } = (0, i.useStateFromStoresObject)([o.default], () => {
@@ -67,17 +67,17 @@ function u(e) {
   l.useEffect(() => {
     let e = t.id;
     r.getApplication(e, {
-      dontRefetchMs: a.TimeAsMS.DAY
+      dontRefetchMs: s.default.Millis.DAY
     })
   }, [t.id]), l.useEffect(() => {
-    null != h && d(s.CommandListSortOrder.POPULAR)
+    null != h && d(a.CommandListSortOrder.POPULAR)
   }, [h]);
   let S = p;
   switch (u) {
-    case s.CommandListSortOrder.POPULAR:
+    case a.CommandListSortOrder.POPULAR:
       S = m;
       break;
-    case s.CommandListSortOrder.ALPHABETICAL:
+    case a.CommandListSortOrder.ALPHABETICAL:
       S = p
   }
   return {
