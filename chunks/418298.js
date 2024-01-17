@@ -81,26 +81,26 @@ function N(e) {
     answerNumber: d + 1
   }) : x.default.Messages.CREATE_POLL_ADD_IMAGE_ARIA.format({
     answerNumber: d + 1
-  }), [C, f, d, N]);
-  return m ? (0, l.jsx)(o.Spinner, {
+  }), [C, f, d, N]), g = m ? (0, l.jsx)(o.Spinner, {
     className: h ? O.spinnerWrapperDefault : O.spinnerWrapperImageOnly
-  }) : (0, l.jsx)(o.Clickable, {
+  }) : (0, l.jsx)(R, {
+    hasUpload: C,
+    gifUrl: P,
+    gifFilename: N,
+    imageClassName: r(O.media, h ? O.gifDefault : O.gifJumbo),
+    emoji: f,
+    emojiClassName: r(O.media, h ? O.emojiDefault : O.emojiJumbo),
+    fallback: (0, l.jsx)(_.default, {
+      className: h ? O.expressionPickerIconDefault : O.expressionPickerIconImageOnly
+    })
+  });
+  return (0, l.jsx)(o.Clickable, {
     onClick: c,
     "aria-controls": E,
     "aria-label": I,
     className: r(p.CHAT_INPUT_BUTTON_CLASSNAME, i === u.PollLayoutTypes.IMAGE_ONLY_ANSWERS ? O.expressionPickerButtonImageOnly : O.expressionPickerButtonDefault),
     "data-menu-item": "true",
-    children: (0, l.jsx)(R, {
-      hasUpload: C,
-      gifUrl: P,
-      gifFilename: N,
-      imageClassName: r(O.media, h ? O.gifDefault : O.gifJumbo),
-      emoji: f,
-      emojiClassName: r(O.media, h ? O.emojiDefault : O.emojiJumbo),
-      fallback: (0, l.jsx)(_.default, {
-        className: h ? O.expressionPickerIconDefault : O.expressionPickerIconImageOnly
-      })
-    })
+    children: g
   })
 }
 var h = n.forwardRef(function(e, t) {
