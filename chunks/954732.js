@@ -37,13 +37,16 @@ class f extends l.default.Store {
   getInvites() {
     return r
   }
+  getInviteStatuses() {
+    return o
+  }
   isInviteGameInstalled(e) {
-    var t, n;
-    return null !== (n = null === (t = o[e.invite_id]) || void 0 === t ? void 0 : t.installed) && void 0 !== n && n
+    var t;
+    return null === (t = o[e.invite_id]) || void 0 === t ? void 0 : t.installed
   }
   isInviteJoinable(e) {
-    var t, n;
-    return null !== (n = null === (t = o[e.invite_id]) || void 0 === t ? void 0 : t.joinable) && void 0 !== n && n
+    var t;
+    return null === (t = o[e.invite_id]) || void 0 === t ? void 0 : t.joinable
   }
   getLastUnseenInvite() {
     return u
@@ -64,7 +67,7 @@ var E = new f(a.default, {
     let {
       gameInvite: t
     } = e, n = c(t);
-    null != n && (r = [...r, n], u = t, d += 1)
+    null != n && (r = [n, ...r], u = t, d += 1)
   },
   GAME_INVITE_DELETE: function(e) {
     let {
@@ -79,7 +82,9 @@ var E = new f(a.default, {
     r = r.filter(e => !t.includes(e.invite_id))
   },
   GAME_INVITE_UPDATE_STATUS: function(e) {
-    o[e.inviteId] = {
+    (o = {
+      ...o
+    })[e.inviteId] = {
       installed: e.installed,
       joinable: e.joinable
     }
