@@ -1,7 +1,7 @@
 "use strict";
 a.r(s), a.d(s, {
   default: function() {
-    return j
+    return f
   }
 }), a("222007");
 var t = a("37983"),
@@ -11,137 +11,133 @@ var t = a("37983"),
   d = a("538137"),
   c = a("36694"),
   r = a("599110"),
-  o = a("439932"),
-  h = a("699668"),
-  x = a("203657"),
-  u = a("397516"),
-  m = a("71941"),
-  N = a("276345"),
-  I = a("380353"),
-  T = a("49111"),
-  v = a("782340"),
-  f = a("650287");
+  o = a("699668"),
+  h = a("203657"),
+  x = a("397516"),
+  u = a("71941"),
+  m = a("276345"),
+  N = a("380353"),
+  I = a("49111"),
+  T = a("782340"),
+  v = a("650287");
 
-function j(e) {
+function f(e) {
   let {
     onClose: s,
     transitionState: a,
-    dismissable: x,
-    guildPain: j,
-    myUsage: g
-  } = e, [O, M] = l.useState(m.Tab.Intro), {
-    submitted: C,
-    submitting: R,
-    saveSettings: A
-  } = (0, h.useSaveSettings)(s), {
-    guildPlans: p,
-    overrideGuild: E,
-    getDebug: w
-  } = (0, h.useGuildMigrationSteps)(j, g);
+    dismissable: h,
+    guildPain: f,
+    myUsage: _
+  } = e, [g, O] = l.useState(u.Tab.Intro), {
+    submitted: M,
+    submitting: C,
+    saveSettings: R
+  } = (0, o.useSaveSettings)(s), {
+    guildPlans: A,
+    overrideGuild: p,
+    getDebug: E
+  } = (0, o.useGuildMigrationSteps)(f, _);
   return l.useEffect(() => {
-    r.default.track(T.AnalyticEvents.OPEN_MODAL, {
+    r.default.track(I.AnalyticEvents.OPEN_MODAL, {
       type: "notification_migration_modal"
     })
-  }, []), (0, t.jsx)("div", {
-    className: (0, o.getThemeClass)(T.ThemeTypes.DARK),
-    children: (0, t.jsxs)(i.ModalRoot, {
-      className: f.modal,
-      transitionState: a,
-      "aria-label": v.default.Messages.NOTIFICATIONS,
-      size: i.ModalSize.DYNAMIC,
-      children: [(0, t.jsx)(m.default, {
-        selectedTab: O,
-        onClick: M,
-        submitted: C
-      }), O === m.Tab.Intro ? (0, t.jsx)(u.default, {}) : O === m.Tab.Customize ? (0, t.jsx)(_, {
-        guildPlans: p,
-        overrideGuild: E,
-        getDebug: w
-      }) : (0, t.jsx)(N.default, {
-        count: Object.values(p).filter(e => {
-          var s;
-          return (null !== (s = e.overrideMode) && void 0 !== s ? s : e.mode) === I.Mode.UseGreyDot
-        }).length
-      }), (0, t.jsxs)(i.ModalFooter, {
-        className: f.buttons,
-        children: [(0, t.jsxs)("div", {
-          className: f.left,
-          children: [x && O === m.Tab.Intro ? (0, t.jsx)(i.Clickable, {
-            className: f.dismiss,
-            onClick: s,
-            children: (0, t.jsx)(i.Text, {
-              variant: "text-sm/semibold",
-              color: "interactive-normal",
-              children: v.default.Messages.DISMISS
-            })
-          }) : null, x && O === m.Tab.Customize ? (0, t.jsx)(i.Clickable, {
-            className: f.dismiss,
-            onClick: s,
-            children: (0, t.jsx)(i.Text, {
-              variant: "text-sm/semibold",
-              color: "interactive-normal",
-              children: v.default.Messages.CANCEL
-            })
-          }) : null]
-        }), (0, t.jsxs)("div", {
-          className: f.right,
-          children: [O === m.Tab.Customize ? (0, t.jsx)(i.Text, {
-            className: f.warning,
-            variant: "text-xs/medium",
-            color: "text-muted",
-            children: v.default.Messages.NOTIF_MIGRATION_BACKUP
-          }) : null, O !== m.Tab.Customize || C ? null : (0, t.jsxs)(i.Button, {
-            onClick: () => M(m.Tab.Intro),
-            color: i.Button.Colors.TRANSPARENT,
-            children: [(0, t.jsx)(n.default, {
-              width: 16,
-              height: 16
-            }), " ", v.default.Messages.BACK]
-          }), O === m.Tab.Intro ? (0, t.jsxs)(i.Button, {
-            onClick: () => M(m.Tab.Customize),
-            children: [v.default.Messages.TRY_IT_OUT, " ", (0, t.jsx)(d.default, {
-              width: 16,
-              height: 16
-            })]
-          }) : O === m.Tab.Customize ? (0, t.jsxs)(i.Button, {
-            onClick: () => {
-              M(m.Tab.Tips), A(p)
-            },
-            children: [v.default.Messages.APPLY, " ", (0, t.jsx)(c.default, {
-              width: 16,
-              height: 16
-            })]
-          }) : (0, t.jsx)(i.Button, {
-            submitting: R,
-            onClick: s,
-            children: v.default.Messages.CLOSE
+  }, []), (0, t.jsxs)(i.ModalRoot, {
+    className: v.modal,
+    transitionState: a,
+    "aria-label": T.default.Messages.NOTIFICATIONS,
+    size: i.ModalSize.DYNAMIC,
+    children: [(0, t.jsx)(u.default, {
+      selectedTab: g,
+      onClick: O,
+      submitted: M
+    }), g === u.Tab.Intro ? (0, t.jsx)(x.default, {}) : g === u.Tab.Customize ? (0, t.jsx)(j, {
+      guildPlans: A,
+      overrideGuild: p,
+      getDebug: E
+    }) : (0, t.jsx)(m.default, {
+      count: Object.values(A).filter(e => {
+        var s;
+        return (null !== (s = e.overrideMode) && void 0 !== s ? s : e.mode) === N.Mode.UseGreyDot
+      }).length
+    }), (0, t.jsxs)(i.ModalFooter, {
+      className: v.buttons,
+      children: [(0, t.jsxs)("div", {
+        className: v.left,
+        children: [h && g === u.Tab.Intro ? (0, t.jsx)(i.Clickable, {
+          className: v.dismiss,
+          onClick: s,
+          children: (0, t.jsx)(i.Text, {
+            variant: "text-sm/semibold",
+            color: "interactive-normal",
+            children: T.default.Messages.DISMISS
+          })
+        }) : null, h && g === u.Tab.Customize ? (0, t.jsx)(i.Clickable, {
+          className: v.dismiss,
+          onClick: s,
+          children: (0, t.jsx)(i.Text, {
+            variant: "text-sm/semibold",
+            color: "interactive-normal",
+            children: T.default.Messages.CANCEL
+          })
+        }) : null]
+      }), (0, t.jsxs)("div", {
+        className: v.right,
+        children: [g === u.Tab.Customize ? (0, t.jsx)(i.Text, {
+          className: v.warning,
+          variant: "text-xs/medium",
+          color: "text-muted",
+          children: T.default.Messages.NOTIF_MIGRATION_BACKUP
+        }) : null, g !== u.Tab.Customize || M ? null : (0, t.jsxs)(i.Button, {
+          onClick: () => O(u.Tab.Intro),
+          color: i.Button.Colors.TRANSPARENT,
+          children: [(0, t.jsx)(n.default, {
+            width: 16,
+            height: 16
+          }), " ", T.default.Messages.BACK]
+        }), g === u.Tab.Intro ? (0, t.jsxs)(i.Button, {
+          onClick: () => O(u.Tab.Customize),
+          children: [T.default.Messages.TRY_IT_OUT, " ", (0, t.jsx)(d.default, {
+            width: 16,
+            height: 16
           })]
+        }) : g === u.Tab.Customize ? (0, t.jsxs)(i.Button, {
+          onClick: () => {
+            O(u.Tab.Tips), R(A)
+          },
+          children: [T.default.Messages.APPLY, " ", (0, t.jsx)(c.default, {
+            width: 16,
+            height: 16
+          })]
+        }) : (0, t.jsx)(i.Button, {
+          submitting: C,
+          onClick: s,
+          children: T.default.Messages.CLOSE
         })]
       })]
-    })
+    })]
   })
 }
 
-function _(e) {
+function j(e) {
   let {
     guildPlans: s,
     overrideGuild: a
   } = e;
   return (0, t.jsxs)("div", {
-    className: f.content,
+    className: v.content,
     children: [(0, t.jsxs)("div", {
-      className: f.header,
+      className: v.header,
       children: [(0, t.jsx)(i.Heading, {
         variant: "heading-xl/bold",
         color: "header-primary",
-        children: v.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_TITLE
+        children: T.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_TITLE
       }), (0, t.jsx)(i.Text, {
-        className: f.subtitle,
+        className: v.subtitle,
         variant: "text-md/medium",
         color: "header-secondary",
-        children: v.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_TITLE
+        children: T.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_TITLE
       })]
-    }), (0, t.jsx)(x.default, {
+    }), (0, t.jsx)(h.default, {
       guildPlans: s,
       overrideGuild: a
     })]

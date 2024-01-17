@@ -288,6 +288,7 @@ async function Q() {
 
 function q(e) {
   var t, n, a;
+  if (null == e) return [];
   let i = r.keyBy(null !== (t = e.voice_joins) && void 0 !== t ? t : [], "channel_id"),
     s = r.keyBy(null !== (n = e.message_sends) && void 0 !== n ? n : [], "channel_id");
   return (null !== (a = e.channel_opens) && void 0 !== a ? a : []).map(e => {
