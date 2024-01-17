@@ -10,8 +10,8 @@ var s = a("37983"),
   r = a.n(l),
   i = a("627445"),
   o = a.n(i),
-  u = a("16470"),
-  d = a("974667"),
+  d = a("16470"),
+  u = a("974667"),
   c = a("942367"),
   m = a("446674"),
   h = a("77078"),
@@ -64,8 +64,8 @@ var s = a("37983"),
   er = a("337113"),
   ei = a("589455"),
   eo = a("953371"),
-  eu = a("49111"),
-  ed = a("724210"),
+  ed = a("49111"),
+  eu = a("724210"),
   ec = a("782340"),
   em = a("842875");
 let eh = C.ChatInputTypes.CREATE_FORUM_POST;
@@ -78,7 +78,7 @@ function ef(e) {
     canCreatePost: i,
     inputRef: o
   } = e, {
-    textAreaState: d,
+    textAreaState: u,
     formOpen: c,
     previewing: f
   } = (0, en.useForumPostComposerStore)(e => {
@@ -92,9 +92,9 @@ function ef(e) {
       formOpen: a,
       previewing: s
     }
-  }, u.default), [g, x] = n.useState(null), C = n.useContext(Y.ComponentDispatchGroupContext), T = n.useCallback(() => {
+  }, d.default), [g, x] = n.useState(null), C = n.useContext(Y.ComponentDispatchGroupContext), T = n.useCallback(() => {
     C.bumpDispatchPriority()
-  }, [C]), _ = (0, m.useStateFromStores)([P.default], () => P.default.can(eu.Permissions.ATTACH_FILES, t)), S = (0, m.useStateFromStoresArray)([D.default], () => D.default.getUploads(t.id, L.DraftType.FirstThreadMessage)), p = c && _ && i, A = (null == t ? void 0 : t.isMediaChannel()) === !0, v = function(e, t) {
+  }, [C]), _ = (0, m.useStateFromStores)([P.default], () => P.default.can(ed.Permissions.ATTACH_FILES, t)), S = (0, m.useStateFromStoresArray)([D.default], () => D.default.getUploads(t.id, L.DraftType.FirstThreadMessage)), p = c && _ && i, A = (null == t ? void 0 : t.isMediaChannel()) === !0, v = function(e, t) {
     let a = (0, en.useForumPostComposerStoreApi)(),
       s = (0, $.useChannelTemplate)(e),
       l = n.useCallback(() => {
@@ -123,7 +123,7 @@ function ef(e) {
       return {
         formOpen: t
       }
-    }, u.default), a = (0, en.useForumPostComposerStoreApi)(), s = (0, F.useCreateForumPost)({
+    }, d.default), a = (0, en.useForumPostComposerStoreApi)(), s = (0, F.useCreateForumPost)({
       parentChannel: e
     });
     n.useEffect(() => {
@@ -153,22 +153,22 @@ function ef(e) {
           n.splice(e, 1), n.unshift(t)
         }
       }
-      let u = 0 === l.length,
-        d = (null == t || 0 === t.length) && (null == s || 0 === s.length) && 0 === n.length;
+      let d = 0 === l.length,
+        u = (null == t || 0 === t.length) && (null == s || 0 === s.length) && 0 === n.length;
       return {
         content: t,
         stickers: s,
         uploads: n,
-        hasNameError: u,
-        hasMessageError: d
+        hasNameError: d,
+        hasMessageError: u
       }
     }, [e, a]);
     return n.useCallback(async (t, n, r) => {
       let {
         setNameError: i,
         setMessageError: o,
-        setSubmitting: u,
-        resetFormState: d,
+        setSubmitting: d,
+        resetFormState: u,
         formOpen: c,
         setFormOpen: m,
         setPreviewing: h,
@@ -194,7 +194,7 @@ function ef(e) {
         shouldRefocus: !0
       };
       try {
-        u(!0);
+        d(!0);
         let {
           valid: t
         } = await (0, X.applyChatRestrictions)({
@@ -209,22 +209,22 @@ function ef(e) {
           shouldRefocus: !0
         };
         let a = await s(C, T, _);
-        return (0, O.openThreadSidebarForViewing)(a), Q.default.resort(e.id), (0, j.clearStickerPreview)(e.id, eh.drafts.type), d(), m(!1), h(!1), J.default.markAsSeen(e.id), g(!1), {
+        return (0, O.openThreadSidebarForViewing)(a), Q.default.resort(e.id), (0, j.clearStickerPreview)(e.id, eh.drafts.type), u(), m(!1), h(!1), J.default.markAsSeen(e.id), g(!1), {
           shouldClear: !0,
           shouldRefocus: !1
         }
       } catch (t) {
         var E, N;
-        return (null === (E = t.body) || void 0 === E ? void 0 : E.code) === eu.AbortCodes.AUTOMOD_TITLE_BLOCKED ? i((0, q.makeAutomodViolationError)(t.body, e)) : (null === (N = t.body) || void 0 === N ? void 0 : N.code) === eu.AbortCodes.AUTOMOD_MESSAGE_BLOCKED && o((0, q.makeAutomodViolationError)(t.body, e)), {
+        return (null === (E = t.body) || void 0 === E ? void 0 : E.code) === ed.AbortCodes.AUTOMOD_TITLE_BLOCKED ? i((0, q.makeAutomodViolationError)(t.body, e)) : (null === (N = t.body) || void 0 === N ? void 0 : N.code) === ed.AbortCodes.AUTOMOD_MESSAGE_BLOCKED && o((0, q.makeAutomodViolationError)(t.body, e)), {
           shouldClear: !1,
           shouldRefocus: !0
         }
       } finally {
-        u(!1)
+        d(!1)
       }
     }, [s, l, e, a])
   }(t);
-  return n.useLayoutEffect(l, [c, d, S, l]), (0, s.jsx)(s.Fragment, {
+  return n.useLayoutEffect(l, [c, u, S, l]), (0, s.jsx)(s.Fragment, {
     children: (0, s.jsx)("div", {
       "aria-label": i ? ec.default.Messages.NEW_FORUM_POST : ec.default.Messages.SEARCH,
       className: r(em.container, {
@@ -286,7 +286,7 @@ let eg = n.memo(function(e) {
       formOpen: r,
       name: i,
       textAreaState: o,
-      hasClickedForm: d,
+      hasClickedForm: u,
       submitting: c
     } = (0, en.useForumPostComposerStore)(e => {
       let {
@@ -307,13 +307,13 @@ let eg = n.memo(function(e) {
         hasClickedForm: r,
         submitting: i
       }
-    }, u.default), m = (0, en.useForumPostComposerStoreApi)(), x = (0, $.useChannelTemplate)(t), C = n.useCallback(() => {
+    }, d.default), m = (0, en.useForumPostComposerStoreApi)(), x = (0, $.useChannelTemplate)(t), C = n.useCallback(() => {
       var e;
       m.getState().resetFormState(), f.default.clearDraft(t.id, L.DraftType.ThreadSettings), f.default.clearDraft(t.id, L.DraftType.FirstThreadMessage), g.default.clearAll(t.id, L.DraftType.FirstThreadMessage), m.getState().setFormOpen(!1), m.getState().setBodyFocused(!1), m.getState().setTitleFocused(!1), m.getState().setHasClickedForm(!1), m.getState().setPreviewing(!1), null === (e = l.current) || void 0 === e || e.blur(), (0, et.trackForumNewPostCleared)({
         guildId: t.guild_id,
         channelId: t.id
       })
-    }, [m, t.id, t.guild_id, l]), T = n.useMemo(() => a && !r ? (0, s.jsx)(ev, {}) : a || r || 0 !== o.textValue.trim().length && o.textValue.trim() !== x ? !r && (i.trim().length > 0 || o.textValue.trim().length > 0 && o.textValue.trim() !== x || D.default.getUploads(t.id, L.DraftType.FirstThreadMessage).length > 0) && d ? (0, s.jsx)(z.default, {
+    }, [m, t.id, t.guild_id, l]), T = n.useMemo(() => a && !r ? (0, s.jsx)(ev, {}) : a || r || 0 !== o.textValue.trim().length && o.textValue.trim() !== x ? !r && (i.trim().length > 0 || o.textValue.trim().length > 0 && o.textValue.trim() !== x || D.default.getUploads(t.id, L.DraftType.FirstThreadMessage).length > 0) && u ? (0, s.jsx)(z.default, {
       className: em.pencilIcon,
       width: 24,
       height: 24
@@ -336,7 +336,7 @@ let eg = n.memo(function(e) {
       className: em.searchIcon,
       width: 24,
       height: 24
-    }), [a, r, d, i, o.textValue, C, t.id, x, c]);
+    }), [a, r, u, i, o.textValue, C, t.id, x, c]);
     return (0, s.jsx)("div", {
       className: em.prefixElement,
       children: T
@@ -350,7 +350,7 @@ let eg = n.memo(function(e) {
       editorRef: r
     } = e, {
       formOpen: i,
-      nameError: d,
+      nameError: u,
       name: c,
       textAreaState: f,
       previewing: g
@@ -373,10 +373,10 @@ let eg = n.memo(function(e) {
         hasClickedForm: r,
         submitting: i
       }
-    }, u.default), x = (0, en.useForumPostComposerStoreApi)(), C = null != t.topic && 0 !== t.topic.length, T = J.default.hasSeen(t.id), _ = (0, $.useChannelTemplate)(t), S = (0, m.useStateFromStores)([w.default], () => w.default.getCurrentUser());
+    }, d.default), x = (0, en.useForumPostComposerStoreApi)(), C = null != t.topic && 0 !== t.topic.length, T = J.default.hasSeen(t.id), _ = (0, $.useChannelTemplate)(t), S = (0, m.useStateFromStores)([w.default], () => w.default.getCurrentUser());
     o(null != S, "current user cannot be null");
     (0, Y.useComponentAction)({
-      event: eu.ComponentActions.FOCUS_COMPOSER_TITLE,
+      event: ed.ComponentActions.FOCUS_COMPOSER_TITLE,
       handler: () => {
         var e;
         let t = a.current instanceof h.TextAreaAutosize ? null === (e = a.current) || void 0 === e ? void 0 : e._textArea : a.current;
@@ -387,7 +387,7 @@ let eg = n.memo(function(e) {
         let a = e.clipboardData.files[0];
         null != a && a.type.startsWith("image/") && (e.preventDefault(), (0, Z.promptToUpload)([a], t, L.DraftType.FirstThreadMessage), x.getState().setFormOpenFromUserAction())
       }, [t, x]),
-      E = (0, q.renderError)(d, {
+      E = (0, q.renderError)(u, {
         content: c
       });
     return (0, s.jsxs)("div", {
@@ -405,7 +405,7 @@ let eg = n.memo(function(e) {
         rows: 1,
         showCharacterCount: !1,
         showRemainingCharacterCount: !1,
-        maxLength: eu.MAX_CHANNEL_NAME_LENGTH,
+        maxLength: ed.MAX_CHANNEL_NAME_LENGTH,
         onChange: e => {
           let a = (0, R.default)(e, !1);
           x.getState().setName(a);
@@ -501,13 +501,13 @@ let eT = n.memo(function(e) {
       allowHeading: !0,
       allowLinks: l.showMaskedLinks || i.showMaskedLinks,
       previewLinkTarget: l.showMaskedLinks || i.showMaskedLinks
-    }), u = (0, v.default)({
+    }), d = (0, v.default)({
       message: n,
       channel: t
     }, o, !1);
     return (0, s.jsx)("div", {
       className: r(em.channelTextAreaInner, em.previewTextArea),
-      children: u
+      children: d
     })
   }),
   e_ = n.memo(function(e) {
@@ -516,7 +516,7 @@ let eT = n.memo(function(e) {
       submit: a,
       disabled: l = !1,
       editorRef: i,
-      setEditorRef: d
+      setEditorRef: u
     } = e, c = (0, m.useStateFromStores)([w.default], () => w.default.getCurrentUser());
     o(null != c, "current user cannot be null");
     let {
@@ -540,7 +540,7 @@ let eT = n.memo(function(e) {
         bodyFocused: n,
         formOpen: l
       }
-    }, u.default), S = (0, en.useForumPostComposerStoreApi)();
+    }, d.default), S = (0, en.useForumPostComposerStoreApi)();
     n.useEffect(() => () => (0, et.maybeTrackForumNewPostDraftCreated)({
       guildId: t.guild_id,
       channelId: t.id
@@ -569,10 +569,10 @@ let eT = n.memo(function(e) {
         return a(t, n, s)
       }, [a]);
     (0, Y.useComponentAction)({
-      event: eu.ComponentActions.TEXTAREA_FOCUS,
+      event: ed.ComponentActions.TEXTAREA_FOCUS,
       handler: E
     }), (0, Y.useComponentAction)({
-      event: eu.ComponentActions.TEXTAREA_BLUR,
+      event: ed.ComponentActions.TEXTAREA_BLUR,
       handler: N
     });
     let v = (0, q.renderError)(f, {
@@ -589,7 +589,7 @@ let eT = n.memo(function(e) {
           onClick: E,
           children: (0, s.jsx)(_.default, {
             type: eh,
-            setEditorRef: d,
+            setEditorRef: u,
             channel: t,
             placeholder: ec.default.Messages.FORUM_POST_MESSAGE_PLACEHOLDER,
             textValue: x.textValue,
@@ -690,8 +690,8 @@ let eE = n.memo(function(e) {
       name: s
     }
   }), {
-    rateLimitPerUser: u
-  } = t, d = u > 0, c = (0, m.useStateFromStores)([y.default], () => y.default.getSlowmodeCooldownGuess(t.id, y.SlowmodeType.CreateThread)), f = (0, m.useStateFromStores)([P.default], () => P.default.can(eu.Permissions.MANAGE_THREADS, t) || P.default.can(eu.Permissions.MANAGE_CHANNELS, t)), g = t.hasFlag(ed.ChannelFlags.REQUIRE_TAG) && 0 === i.size && o.length > 0 && r.textValue.length > 0, x = (0, en.useForumPostComposerStoreApi)(), C = n.useCallback(() => {
+    rateLimitPerUser: d
+  } = t, u = d > 0, c = (0, m.useStateFromStores)([y.default], () => y.default.getSlowmodeCooldownGuess(t.id, y.SlowmodeType.CreateThread)), f = (0, m.useStateFromStores)([P.default], () => P.default.can(ed.Permissions.MANAGE_THREADS, t) || P.default.can(ed.Permissions.MANAGE_CHANNELS, t)), g = t.hasFlag(eu.ChannelFlags.REQUIRE_TAG) && 0 === i.size && o.length > 0 && r.textValue.length > 0, x = (0, en.useForumPostComposerStoreApi)(), C = n.useCallback(() => {
     x.getState().setBodyFocused(!1)
   }, [x]), _ = n.useMemo(() => "" !== o.trim() && "" !== r.textValue.trim(), [o, r.textValue]);
   return n.useEffect(() => {
@@ -716,8 +716,8 @@ let eE = n.memo(function(e) {
             type: eh,
             textValue: r.textValue,
             className: em.characterCount
-          }), d && (0, s.jsx)(er.default, {
-            rateLimitPerUser: u,
+          }), u && (0, s.jsx)(er.default, {
+            rateLimitPerUser: d,
             slowmodeCooldownGuess: c,
             isBypassSlowmode: f,
             leadingIcon: !0
@@ -728,7 +728,7 @@ let eE = n.memo(function(e) {
           parentChannel: t,
           disableIfInvalid: !0,
           canCreatePost: a,
-          disabled: d && !f && c > 0
+          disabled: u && !f && c > 0
         })]
       }), (0, s.jsx)(T.default, {
         type: eh,
@@ -749,8 +749,8 @@ function eN(e) {
     submitting: r,
     textAreaState: i,
     name: o,
-    appliedTags: u,
-    formOpen: d
+    appliedTags: d,
+    formOpen: u
   } = (0, en.useForumPostComposerStore)(e => {
     let {
       submitting: t,
@@ -766,7 +766,7 @@ function eN(e) {
       appliedTags: n,
       formOpen: l
     }
-  }), c = t.hasFlag(ed.ChannelFlags.REQUIRE_TAG) && 0 === u.size && o.length > 0 && i.textValue.length > 0, f = (0, m.useStateFromStoresArray)([D.default], () => D.default.getUploads(t.id, L.DraftType.FirstThreadMessage)), g = i.textValue.trim().length > 0 || f.length > 0, x = !c && g && o.trim().length > 0;
+  }), c = t.hasFlag(eu.ChannelFlags.REQUIRE_TAG) && 0 === d.size && o.length > 0 && i.textValue.length > 0, f = (0, m.useStateFromStoresArray)([D.default], () => D.default.getUploads(t.id, L.DraftType.FirstThreadMessage)), g = i.textValue.trim().length > 0 || f.length > 0, x = !c && g && o.trim().length > 0;
   if (__OVERLAY__) return null;
   let C = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -785,7 +785,7 @@ function eN(e) {
       }), (0, s.jsx)(h.Text, {
         variant: "text-md/semibold",
         color: "none",
-        children: d ? ec.default.Messages.SUBMIT_POST : ec.default.Messages.NEW_FORUM_POST_NEW
+        children: u ? ec.default.Messages.SUBMIT_POST : ec.default.Messages.NEW_FORUM_POST_NEW
       })]
     })
   };
@@ -817,7 +817,7 @@ function eA(e) {
       toggleAppliedTag: a,
       setPopoutOpen: s
     }
-  }, u.default), o = a.size >= eo.MAX_FORUM_POST_TAGS, m = (0, d.default)({
+  }, d.default), o = a.size >= eo.MAX_FORUM_POST_TAGS, m = (0, u.default)({
     id: "".concat(t.id, "-post-form-tags-navigator"),
     isEnabled: !0,
     wrap: !0,
@@ -860,9 +860,9 @@ function eA(e) {
       }), (0, s.jsx)("div", {
         className: em.tagList,
         ref: x,
-        children: (0, s.jsx)(d.ListNavigatorProvider, {
+        children: (0, s.jsx)(u.ListNavigatorProvider, {
           navigator: m,
-          children: (0, s.jsx)(d.ListNavigatorContainer, {
+          children: (0, s.jsx)(u.ListNavigatorContainer, {
             children: e => {
               let {
                 ref: t,

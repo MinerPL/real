@@ -27,8 +27,8 @@ var a = l("37983"),
   L = l("413989"),
   g = l("49111"),
   N = l("782340"),
-  p = l("368715"),
-  S = l("236807");
+  S = l("368715"),
+  p = l("236807");
 
 function v(e) {
   let {
@@ -39,21 +39,21 @@ function v(e) {
     ...o
   } = e;
   return (0, a.jsx)("th", {
-    className: i(p.tableHeaderCellContainer, s),
+    className: i(S.tableHeaderCellContainer, s),
     children: (0, a.jsxs)(u.Clickable, {
       ...o,
       onClick: l,
-      className: i(p.tableHeaderCell, {
-        [p.tableHeaderCellWithFilter]: null != l
+      className: i(S.tableHeaderCell, {
+        [S.tableHeaderCellWithFilter]: null != l
       }),
       children: [(0, a.jsx)(u.Text, {
         variant: "eyebrow",
         color: n ? "text-brand" : "header-secondary",
         children: t
       }), null != l && (0, a.jsx)("div", {
-        className: p.filterIconButton,
+        className: S.filterIconButton,
         children: (0, a.jsx)(E.default, {
-          className: p.filterIcon,
+          className: S.filterIcon,
           color: n ? u.tokens.colors.CONTROL_BRAND_FOREGROUND.css : u.tokens.colors.TEXT_MUTED.css,
           width: 16,
           height: 16
@@ -82,16 +82,16 @@ function I(e) {
   }, [G, K, b, j, Y]);
   return (0, a.jsx)("thead", {
     children: (0, a.jsxs)("tr", {
-      className: p.tableHeaderRow,
+      className: S.tableHeaderRow,
       children: [y && (0, a.jsx)("th", {
-        className: i(p.tableHeaderCellContainer, S.xsmallCol),
+        className: i(S.tableHeaderCellContainer, p.xsmallCol),
         children: (0, a.jsx)(u.Tooltip, {
           shouldShow: !G,
           text: N.default.Messages.MEMBER_SAFETY_CANNOT_SELECT_ALL,
           children: e => (0, a.jsx)(u.Clickable, {
             ...e,
             onClick: z,
-            className: p.tableHeaderCell,
+            className: S.tableHeaderCell,
             children: (0, a.jsx)(u.Checkbox, {
               type: u.Checkbox.Types.INVERTED,
               value: K,
@@ -120,7 +120,7 @@ function I(e) {
               label: N.default.Messages.MEMBER_SAFETY_TABLE_HEADER_JOINED_AT,
               onFilter: t,
               selected: V,
-              className: S.smallCol,
+              className: p.smallCol,
               ...l
             })
           }
@@ -142,7 +142,7 @@ function I(e) {
               label: N.default.Messages.MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE,
               onFilter: t,
               selected: B,
-              className: S.smallCol,
+              className: p.smallCol,
               ...l
             })
           }
@@ -150,14 +150,14 @@ function I(e) {
       }) : (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(v, {
           label: N.default.Messages.MEMBER_SAFETY_TABLE_HEADER_JOINED_AT,
-          className: S.smallCol
+          className: p.smallCol
         }), (0, a.jsx)(v, {
           label: N.default.Messages.MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE,
-          className: S.smallCol
+          className: p.smallCol
         })]
       }), E && (0, a.jsx)(v, {
         label: N.default.Messages.MEMBER_SAFETY_TABLE_HEADER_JOIN_METHOD,
-        className: S.smallCol
+        className: p.smallCol
       }), (0, a.jsx)(u.Popout, {
         animation: u.Popout.Animation.FADE,
         position: "bottom",
@@ -181,7 +181,7 @@ function I(e) {
             label: N.default.Messages.MEMBER_SAFETY_TABLE_HEADER_ROLES,
             onFilter: t,
             selected: O,
-            className: i(S.mediumCol),
+            className: i(p.mediumCol),
             ...l
           })
         }
@@ -214,7 +214,7 @@ function I(e) {
               w(), null === (a = t.onClick) || void 0 === a || a.call(t, l), null === (n = e.onClick) || void 0 === n || n.call(e)
             },
             selected: D,
-            className: i(S.smallCol),
+            className: i(p.smallCol),
             onMouseEnter: () => {
               var l, a;
               w(), null === (l = e.onMouseEnter) || void 0 === l || l.call(e), null === (a = t.onMouseEnter) || void 0 === a || a.call(t)
@@ -230,7 +230,7 @@ function I(e) {
         })
       }), (0, a.jsx)(v, {
         label: N.default.Messages.MEMBER_SAFETY_TABLE_HEADER_ACTIONS,
-        className: S.smallCol
+        className: p.smallCol
       })]
     })
   })

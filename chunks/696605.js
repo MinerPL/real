@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var i, a = n("917351"),
-  l = n.n(a),
+var i, l = n("917351"),
+  a = n.n(l),
   s = n("693566"),
   r = n.n(s);
 let u = 100,
@@ -43,7 +43,7 @@ i = class {
   }
   subscribe(e, t, n) {
     let i = this._get(e);
-    return !l.isEqual(i.get(t), n) && (i.set(t, n), this._subscriptions[e] = i, this._onChange(e, o(i)), !0)
+    return !a.isEqual(i.get(t), n) && (i.set(t, n), this._subscriptions[e] = i, this._onChange(e, o(i)), !0)
   }
   constructor(e) {
     this._subscriptions = {}, this._onChange = e

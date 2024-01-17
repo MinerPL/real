@@ -31,7 +31,7 @@ let M = new u.default(e => {
   })
 });
 
-function v(e, t) {
+function N(e, t) {
   let n = {};
   M.forEach(l => {
     var a;
@@ -42,7 +42,7 @@ function v(e, t) {
   })
 }
 
-function N(e, t) {
+function v(e, t) {
   return M.subscribeToGuild(e), null != t && _.default.getSection(t) === S.ChannelSections.MEMBERS && C(e, t, u.DEFAULT_RANGES)
 }
 
@@ -58,9 +58,9 @@ function O(e) {
   let {
     type: t
   } = e;
-  "CONNECTION_OPEN" === t && v(!0, !1);
+  "CONNECTION_OPEN" === t && N(!0, !1);
   let n = p.default.getGuildId();
-  null != n && N(n, T.default.getChannelId(n));
+  null != n && v(n, T.default.getChannelId(n));
   let i = {};
   M.forEach(e => {
     null == g.default.getGuild(e) ? M.clearWithoutFlushing(e, !0) : i[e] = M.get(e)
@@ -75,11 +75,11 @@ function R(e) {
     guildId: t,
     channelId: n
   } = e, i = h.default.isUnavailable(t);
-  return !i && N(t, n)
+  return !i && v(t, n)
 }
 
 function I() {
-  return N(p.default.getGuildId(), T.default.getChannelId())
+  return v(p.default.getGuildId(), T.default.getChannelId())
 }
 
 function b() {
@@ -126,14 +126,14 @@ var y = new D(r.default, {
   CONNECTION_OPEN: O,
   CONNECTION_RESUMED: O,
   CONNECTION_CLOSED: function() {
-    v(!1, !1)
+    N(!1, !1)
   },
   IDLE: function(e) {
     let {
       idle: t
     } = e;
     if (!t) return !1;
-    v(!1, !0)
+    N(!1, !0)
   },
   LOGOUT: function() {
     M.reset()
@@ -201,7 +201,7 @@ var y = new D(r.default, {
       guildId: t,
       channelId: n
     } = e;
-    return N(t, n)
+    return v(t, n)
   },
   INBOX_OPEN: function(e) {
     let {

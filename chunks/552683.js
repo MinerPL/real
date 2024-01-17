@@ -10,8 +10,8 @@ var s = a("37983"),
   r = a("77078"),
   i = a("446674"),
   o = a("206230"),
-  u = a("339792"),
-  d = a("680986"),
+  d = a("339792"),
+  u = a("680986"),
   c = a("867965"),
   m = a("90625"),
   h = a("49111"),
@@ -27,9 +27,9 @@ function C(e) {
     channel: t,
     closePopout: a,
     setPopoutRef: C
-  } = e, T = (0, d.useVisibleForumTags)(t), {
+  } = e, T = (0, u.useVisibleForumTags)(t), {
     tagFilter: _
-  } = (0, u.useForumChannelStore)(t.id), S = (0, u.useForumChannelStoreApi)(), p = (0, i.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), E = n.useCallback(e => {
+  } = (0, d.useForumChannelStore)(t.id), S = (0, d.useForumChannelStoreApi)(), p = (0, i.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), E = n.useCallback(e => {
     (0, c.trackForumTagFilterClicked)({
       guildId: t.guild_id,
       channelId: t.id,

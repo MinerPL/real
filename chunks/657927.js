@@ -11,8 +11,8 @@ var n = a("414456"),
   r = a("77078"),
   i = a("945330"),
   o = a("153769"),
-  u = a("266926"),
-  d = a("867965"),
+  d = a("266926"),
+  u = a("867965"),
   c = a("152637"),
   m = a("953371"),
   h = a("994428"),
@@ -28,7 +28,7 @@ function _(e) {
   } = e;
   return (0, s.jsxs)(r.Clickable, {
     onClick: () => {
-      open(m.COMMUNITY_PORTAL_FORUM_PAGE), (0, d.trackForumHelperCardClicked)({
+      open(m.COMMUNITY_PORTAL_FORUM_PAGE), (0, u.trackForumHelperCardClicked)({
         readGuideCta: !0
       })
     },
@@ -45,7 +45,7 @@ function _(e) {
           children: f.default.Messages.DISCORD_NAME
         }), (0, s.jsxs)("div", {
           className: x.notice,
-          children: [(0, s.jsx)(u.default, {
+          children: [(0, s.jsx)(d.default, {
             className: x.infoIcon
           }), (0, s.jsx)(r.Text, {
             variant: "text-sm/normal",
@@ -55,7 +55,7 @@ function _(e) {
         })]
       }), (0, s.jsx)(r.Clickable, {
         onClick: e => {
-          e.stopPropagation(), t(h.ContentDismissActionType.DISMISS), (0, d.trackForumHelperCardClicked)({
+          e.stopPropagation(), t(h.ContentDismissActionType.DISMISS), (0, u.trackForumHelperCardClicked)({
             readGuideCta: !1
           })
         },

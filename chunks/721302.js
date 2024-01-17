@@ -35,16 +35,16 @@ let _ = n.forwardRef(function(e, t) {
         guild: s
       })
     })
-  }, [s, C]), A = (0, u.default)([M.default], () => M.default.getSearchStateByGuildId(s.id), [s.id], r), L = (0, E.useTrackMemberSearchUsed)(s.id), [g, N] = n.useState(A.query), p = n.useCallback(e => {
+  }, [s, C]), A = (0, u.default)([M.default], () => M.default.getSearchStateByGuildId(s.id), [s.id], r), L = (0, E.useTrackMemberSearchUsed)(s.id), [g, N] = n.useState(A.query), S = n.useCallback(e => {
     let t = e.trim();
     t.length > 0 && L(), (0, h.updateSearchState)(s.id, {
       query: t
     })
-  }, [s.id, L]), S = n.useCallback(d(p, 300), [p]), v = n.useCallback(e => {
-    N(e), S(e)
-  }, [S]), R = n.useCallback(() => {
-    N(""), p("")
-  }, [p]);
+  }, [s.id, L]), p = n.useCallback(d(S, 300), [S]), v = n.useCallback(e => {
+    N(e), p(e)
+  }, [p]), R = n.useCallback(() => {
+    N(""), S("")
+  }, [S]);
   return n.useImperativeHandle(t, () => ({
     resetSearchText() {
       N("")

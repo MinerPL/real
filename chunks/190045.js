@@ -1,26 +1,26 @@
 "use strict";
-r.r(t), r.d(t, {
+l.r(r), l.d(r, {
   default: function() {
-    return s
+    return a
   }
 });
-var l = r("37983");
-r("884691");
-var i = r("77078"),
-  o = r("599110"),
-  n = r("49111");
+var t = l("37983");
+l("884691");
+var o = l("77078"),
+  i = l("599110"),
+  n = l("49111");
 
-function s(e) {
-  o.default.track(n.AnalyticEvents.OPEN_MODAL, {
+function a(e) {
+  i.default.track(n.AnalyticEvents.OPEN_MODAL, {
     type: "Edit Clyde Profile",
     location_page: "Profile Popout",
     guild_id: e
-  }), (0, i.openModalLazy)(async () => {
+  }), (0, o.openModalLazy)(async () => {
     let {
-      default: t
-    } = await r.el("485261").then(r.bind(r, "485261"));
-    return r => (0, l.jsx)(t, {
-      ...r,
+      default: r
+    } = await l.el("485261").then(l.bind(l, "485261"));
+    return l => (0, t.jsx)(r, {
+      ...l,
       guildId: e
     })
   })

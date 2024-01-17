@@ -31,12 +31,12 @@ let D = {},
   O = {},
   b = {},
   P = I.StreamLayouts.THEATRE,
-  V = {},
-  R = [];
+  R = {},
+  V = [];
 
 function k() {
-  d.forEach(V, (e, t) => {
-    e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete V[t]
+  d.forEach(R, (e, t) => {
+    e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete R[t]
   })
 }
 
@@ -65,10 +65,10 @@ class L extends u.default.Store {
     return (0, m.default)(y.default) ? i : null
   }
   getAllActiveStreamKeys() {
-    return Object.keys(V)
+    return Object.keys(R)
   }
   getRTCConnection(e) {
-    return V[e]
+    return R[e]
   }
   getStatsHistory(e, t, n) {
     if (!(0, m.default)(y.default) || null == t) return null;
@@ -76,7 +76,7 @@ class L extends u.default.Store {
       let n = v.default.getActiveStreamForUser(t, e);
       if (null == n || 0 === v.default.getViewerIds(n).length) return null
     }
-    return R.map(e => n ? function(e) {
+    return V.map(e => n ? function(e) {
       var t, n, s, i, r;
       let a = e.find(e => "video" === e.type);
       return null != a && "video" === a.type ? {
@@ -104,37 +104,37 @@ class L extends u.default.Store {
   getQuality() {
     if (!(0, m.default)(y.default)) return I.RTCConnectionQuality.UNKNOWN;
     let e = this.getActiveStreamKey(),
-      t = null != e ? V[e] : null;
+      t = null != e ? R[e] : null;
     return null != t ? t.quality : I.RTCConnectionQuality.UNKNOWN
   }
   getMediaSessionId(e) {
     if (null == e) return null;
-    let t = V[e];
+    let t = R[e];
     if (null != t) return null != t ? t.getMediaSessionId() : null
   }
   getRtcConnectionId(e) {
     if (null == e) return null;
-    let t = V[e];
+    let t = R[e];
     if (null != t) return null != t ? t.getRTCConnectionId() : null
   }
   getVideoStats(e) {
     if (null == e) return null;
-    let t = V[e];
+    let t = R[e];
     return null != t ? t.getVideoStats() : null
   }
   getHostname(e) {
     if (null == e) return "";
-    let t = V[e];
+    let t = R[e];
     return null != t ? null != t.hostname ? t.hostname : "" : ""
   }
   getRegion(e) {
     if (null == e) return null;
-    let t = V[e];
+    let t = R[e];
     return null != t ? t.getRegion() : null
   }
   getMaxViewers(e) {
     if (null == e) return null;
-    let t = V[e];
+    let t = R[e];
     return null != t ? t.getMaxViewers() : null
   }
   getStreamSourceId(e) {
@@ -153,7 +153,7 @@ var U = new L(f.default, !y.default.isSupported() || __OVERLAY__ ? {} : {
   RTC_CONNECTION_PING: w,
   RTC_CONNECTION_LOSS_RATE: w,
   RTC_CONNECTION_UPDATE_ID: function(e) {
-    return d.some(V, t => t === e.connection)
+    return d.some(R, t => t === e.connection)
   },
   STREAM_START: function(e) {
     let {
@@ -169,7 +169,7 @@ var U = new L(f.default, !y.default.isSupported() || __OVERLAY__ ? {} : {
       channelId: s,
       ownerId: E.default.getId()
     });
-    if (D[o] = i, d.forEach(V, e => {
+    if (D[o] = i, d.forEach(R, e => {
         let {
           analyticsContext: t
         } = e;
@@ -188,7 +188,7 @@ var U = new L(f.default, !y.default.isSupported() || __OVERLAY__ ? {} : {
       appContext: t,
       streamKey: n
     } = e;
-    D[n] = t, d.forEach(V, e => {
+    D[n] = t, d.forEach(R, e => {
       let {
         analyticsContext: n
       } = e;
@@ -203,7 +203,7 @@ var U = new L(f.default, !y.default.isSupported() || __OVERLAY__ ? {} : {
       viewerIds: o
     } = e;
     i = t;
-    let d = V[t];
+    let d = R[t];
     if (null == d && null != n) {
       var u, f, m;
       null == O[t] && (N[t] = null);
@@ -237,12 +237,12 @@ var U = new L(f.default, !y.default.isSupported() || __OVERLAY__ ? {} : {
         analyticsContext: m,
         isStreamer: null != N[u],
         parentMediaSessionId: C.default.getMediaSessionId()
-      }), V[t] = d
+      }), R[t] = d
     }
-    R = [], y.default.getMediaEngine().on(l.MediaEngineEvent.ConnectionStats, M)
+    V = [], y.default.getMediaEngine().on(l.MediaEngineEvent.ConnectionStats, M)
   },
   STREAM_SERVER_UPDATE: function(e) {
-    let t = V[e.streamKey];
+    let t = R[e.streamKey];
     if (null == t) return !1;
     t.connect(e.endpoint, e.token)
   },
@@ -251,28 +251,28 @@ var U = new L(f.default, !y.default.isSupported() || __OVERLAY__ ? {} : {
       streamKey: t,
       viewerIds: n,
       paused: s
-    } = e, i = V[t];
+    } = e, i = R[t];
     if (null == i) return !1;
     null != n && i.analyticsContext.trackViewerCount(n.length), i.streamUpdate(s)
   },
   STREAM_DELETE: function(e) {
     let {
       streamKey: t
-    } = e, n = V[t];
+    } = e, n = R[t];
     if (null == n) return !1;
-    t === i && (i = null, y.default.getMediaEngine().off(l.MediaEngineEvent.ConnectionStats, M)), n.destroy("stream-end"), delete V[t]
+    t === i && (i = null, y.default.getMediaEngine().off(l.MediaEngineEvent.ConnectionStats, M)), n.destroy("stream-end"), delete R[t]
   },
   STREAM_STATS_UPDATE: function(e) {
     let {
       stats: t
     } = e;
     if (null == t) return !1;
-    R.push(t), R.length > 30 && R.shift()
+    V.push(t), V.length > 30 && V.shift()
   },
   STREAM_LAYOUT_UPDATE: function(e) {
     let {
       layout: t
     } = e;
-    P = t, Object.values(V).forEach(e => e.layoutChange(t))
+    P = t, Object.values(R).forEach(e => e.layoutChange(t))
   }
 })

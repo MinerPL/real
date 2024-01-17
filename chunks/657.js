@@ -186,9 +186,9 @@ var G = e => {
         F = R - h,
         H = s("89734"),
         V = U - v.length,
-        k = b ? Math.min(5 - (v.length + 0) % 5, V) : 0,
-        w = [];
-      for (let e = 0; e < k; e++) w.push((0, a.jsx)(D, {}, "placeholder-".concat(e)));
+        w = b ? Math.min(5 - (v.length + 0) % 5, V) : 0,
+        k = [];
+      for (let e = 0; e < w; e++) k.push((0, a.jsx)(D, {}, "placeholder-".concat(e)));
       let Y = y === E + 1 && y > G,
         K = b || Y || E > G;
       return Y ? n = (0, a.jsx)(c.default, {
@@ -221,7 +221,7 @@ var G = e => {
             isDisabled: P,
             sticker: e,
             canManageSticker: N(e)
-          }, e.id)), w]
+          }, e.id)), k]
         }), !P && !b && 0 === v.length && (0, a.jsx)("div", {
           className: i(C.emptyTierWrapper, C.unusedTierWrapper),
           children: (0, a.jsx)(o.Text, {

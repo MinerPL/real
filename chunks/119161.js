@@ -1,10 +1,10 @@
 "use strict";
 a.r(t), a.d(t, {
   makeEmptyTitleError: function() {
-    return u
+    return d
   },
   makeEmptyMessageError: function() {
-    return d
+    return u
   },
   makeAutomodViolationError: function() {
     return c
@@ -27,11 +27,11 @@ function o(e) {
   return i(0, e)
 }
 
-function u() {
+function d() {
   return i(0, r.default.Messages.FORUM_POST_EMPTY_TITLE_ERROR)
 }
 
-function d() {
+function u() {
   return i(0, r.default.Messages.FORUM_POST_EMPTY_MESSAGE_ERROR)
 }
 

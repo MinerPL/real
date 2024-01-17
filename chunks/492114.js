@@ -2,7 +2,7 @@
 let C, n, l, t, F, i;
 E.r(e), E.d(e, {
   default: function() {
-    return G
+    return R
   }
 }), E("808653"), E("702976"), E("222007");
 var u = E("917351"),
@@ -56,7 +56,7 @@ let y = a.debounce(() => {
   let B = t.toJS(),
     e = l.toJS(),
     E = L.every(E => B[E] === e[E]);
-  E && t !== l && (t = l, R.emitChange())
+  E && t !== l && (t = l, G.emitChange())
 }, 500);
 
 function j(B) {
@@ -120,7 +120,7 @@ class M extends D.default.Store {
   }
 }
 M.displayName = "ChannelSettingsStore";
-let R = new M(s.default, {
+let G = new M(s.default, {
   CHANNEL_SETTINGS_INIT: g,
   CHANNEL_SETTINGS_OPEN: function(B) {
     I = !0, g(B)
@@ -230,4 +230,4 @@ let R = new M(s.default, {
     }
   }
 });
-var G = R
+var R = G

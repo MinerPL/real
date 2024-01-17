@@ -24,36 +24,36 @@ function E(t) {
     ..._
   } = t;
 
-  function T() {
+  function S() {
     null == E || E(), e(), (0, u.navigateToPremiumMarketingPage)()
   }
   let {
-    isLoading: p,
-    suggestedPremiumType: S
+    isLoading: T,
+    suggestedPremiumType: p
   } = (0, i.default)({
     autoTrackExposure: !0,
     experiment: a.default,
     location: "video_backgrounds_upsell"
-  }), A = S === l.PremiumTypes.TIER_0 ? l.PremiumSubscriptionSKUs.TIER_0 : l.PremiumSubscriptionSKUs.TIER_2, C = A === l.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.VIDEO_BACKGROUND_UPSELL_BODY_TIER_0.format({
-    onLearnMore: T
+  }), I = p === l.PremiumTypes.TIER_0 ? l.PremiumSubscriptionSKUs.TIER_0 : l.PremiumSubscriptionSKUs.TIER_2, A = I === l.PremiumSubscriptionSKUs.TIER_0 ? c.default.Messages.VIDEO_BACKGROUND_UPSELL_BODY_TIER_0.format({
+    onLearnMore: S
   }) : c.default.Messages.VIDEO_BACKGROUND_UPSELL_BODY.format({
-    onLearnMore: T
+    onLearnMore: S
   });
   return (0, r.jsx)(o.default, {
     artURL: f,
     artContainerClassName: d.videoBackgroundArt,
     type: l.PremiumUpsellTypes.VIDEO_BACKGROUNDS_MODAL,
     title: c.default.Messages.VIDEO_BACKGROUND_UPSELL_TITLE,
-    body: C,
-    glowUp: C,
+    body: A,
+    glowUp: A,
     analyticsSource: n,
     analyticsLocation: {
       page: s.AnalyticsPages.PREMIUM_UPSELL_MODAL_VIDEO_BACKGROUNDS,
       object: s.AnalyticsObjects.BUTTON_CTA
     },
     onClose: e,
-    subscriptionTier: A,
-    isLoading: p,
+    subscriptionTier: I,
+    isLoading: T,
     ..._
   })
 }

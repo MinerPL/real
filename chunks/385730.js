@@ -22,8 +22,8 @@ var l = n("37983"),
   _ = n("510889"),
   S = n("826267"),
   T = n("599110"),
-  p = n("659500"),
-  N = n("150938"),
+  N = n("659500"),
+  p = n("150938"),
   I = n("805614"),
   m = n("64318"),
   A = n("474282"),
@@ -77,8 +77,8 @@ function O(e) {
         let n = e.channels.find(e => !e.collapsed);
         null != n && t.markChannelRead(n)
       };
-      return p.ComponentDispatch.subscribe(C.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n), () => {
-        p.ComponentDispatch.unsubscribe(C.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n)
+      return N.ComponentDispatch.subscribe(C.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n), () => {
+        N.ComponentDispatch.unsubscribe(C.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n)
       }
     }, [t, e.channels])
   }(y, x), a.useEffect(() => {
@@ -114,7 +114,7 @@ function O(e) {
       setTab: t,
       badgeState: v,
       closePopout: O,
-      children: (0, l.jsx)(N.default, {
+      children: (0, l.jsx)(p.default, {
         type: "top-header",
         onClick: F
       })

@@ -19,8 +19,8 @@ var l = n("917351"),
   _ = n("552712"),
   S = n("49111");
 let T = "DetectedOffPlatformPremiumPerksStore",
-  p = {},
   N = {},
+  p = {},
   I = [];
 
 function m() {
@@ -29,7 +29,7 @@ function m() {
       skuId: t,
       applicationId: n
     }
-    of a.values(N)) {
+    of a.values(p)) {
     if (I.includes(t)) continue;
     let l = c.default.getApplication(n);
     if (null == l) {
@@ -41,7 +41,7 @@ function m() {
       !_.default.isFetching(t) && !_.default.didFetchingSkuFail(t) && u.fetchSKU(l.id, t);
       continue
     }
-    h.default.applicationIdsFetching.has(l.id) || h.default.isEntitledToSku(E.default.getCurrentUser(), t, l.id, l.id) || !a.available ? null != p[t] && (delete p[t], e = !0) : (p[t] = {
+    h.default.applicationIdsFetching.has(l.id) || h.default.isEntitledToSku(E.default.getCurrentUser(), t, l.id, l.id) || !a.available ? null != N[t] && (delete N[t], e = !0) : (N[t] = {
       skuId: t,
       applicationId: n
     }, e = !0)
@@ -54,13 +54,13 @@ class A extends s.default.Store {
     this.waitFor(f.default, _.default, h.default), I = null !== (e = i.default.get(T)) && void 0 !== e ? e : I
   }
   getDetectedOffPlatformPremiumPerks() {
-    return a.values(p)
+    return a.values(N)
   }
 }
 A.displayName = "DetectedOffPlatformPremiumPerksStore";
 var g = new A(r.default, {
   LOGOUT: function() {
-    p = {}, N = {}
+    N = {}, p = {}
   },
   SKU_FETCH_SUCCESS: m,
   ENTITLEMENT_FETCH_APPLICATION_SUCCESS: m,
@@ -70,7 +70,7 @@ var g = new A(r.default, {
     let {
       skuId: t
     } = e;
-    if (delete p[t], I.includes(t)) return !1;
+    if (delete N[t], I.includes(t)) return !1;
     I.push(t), i.default.set(T, I)
   },
   RUNNING_GAMES_CHANGE: function() {
@@ -86,7 +86,7 @@ var g = new A(r.default, {
             applicationId: l
           }
           of S.OFF_PLATFORM_PREMIUM_PERKS) {
-          if (!(l !== t || I.includes(n))) null == N[n] && (!h.default.applicationIdsFetched.has(l) && !h.default.applicationIdsFetching.has(l) && null == h.default.getForSku(n) && o.fetchUserEntitlementsForApplication(l), N[n] = {
+          if (!(l !== t || I.includes(n))) null == p[n] && (!h.default.applicationIdsFetched.has(l) && !h.default.applicationIdsFetching.has(l) && null == h.default.getForSku(n) && o.fetchUserEntitlementsForApplication(l), p[n] = {
             skuId: n,
             applicationId: l
           }, e = !0)

@@ -22,10 +22,10 @@ n.r(t), n.d(t, {
     return P
   },
   getObscuredMediaForMessage: function() {
-    return V
+    return R
   },
   isPendingScan: function() {
-    return R
+    return V
   },
   TrackMediaRedactionActionType: function() {
     return i
@@ -128,7 +128,7 @@ function P(e, t) {
   }
 }
 
-function V(e) {
+function R(e) {
   let t = O(e);
   return t ? {
     obscuredAttachments: e.attachments.filter(e => P({
@@ -145,7 +145,7 @@ function V(e) {
   }
 }
 
-function R(e) {
+function V(e) {
   return !f.default.get("explicit_media_redaction_ignore_pending_scan") && null == e
 }
 

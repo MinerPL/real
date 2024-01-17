@@ -10,21 +10,21 @@ var n = a("37983"),
   i = a.n(s),
   r = a("627445"),
   o = a.n(r),
-  d = a("917351"),
-  u = a.n(d),
+  u = a("917351"),
+  d = a.n(u),
   c = a("446674"),
   m = a("411723"),
   h = a("42203"),
   g = a("328620"),
   f = a("568734"),
-  _ = a("994402"),
-  A = a("719347"),
+  A = a("994402"),
+  _ = a("719347"),
   x = a("49111"),
   p = a("655793");
-let I = Math.round((A.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
-  M = Math.round((A.MEDIA_MOSAIC_MAX_WIDTH - 4) / 2),
-  E = Math.round((A.MEDIA_MOSAIC_MAX_HEIGHT - 4) / 2),
-  v = Math.round(2 * (A.MEDIA_MOSAIC_MAX_WIDTH - 4) / 3),
+let I = Math.round((_.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
+  M = Math.round((_.MEDIA_MOSAIC_MAX_WIDTH - 4) / 2),
+  E = Math.round((_.MEDIA_MOSAIC_MAX_HEIGHT - 4) / 2),
+  v = Math.round(2 * (_.MEDIA_MOSAIC_MAX_WIDTH - 4) / 3),
   C = v / 2,
   N = e => {
     let {
@@ -182,16 +182,16 @@ let I = Math.round((A.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
     let {
       props: t,
       attachmentKind: a,
-      maxWidth: l = A.MEDIA_MOSAIC_MAX_WIDTH,
-      maxHeight: s = A.MEDIA_MOSAIC_MAX_HEIGHT,
+      maxWidth: l = _.MEDIA_MOSAIC_MAX_WIDTH,
+      maxHeight: s = _.MEDIA_MOSAIC_MAX_HEIGHT,
       useFullWidth: i = !0,
       isSingleItem: r = !1,
       footer: o
-    } = e, d = {
+    } = e, u = {
       ...t,
       ..."IMAGE" === a && b(t.className),
       ..."VIDEO" === a && L(t.className),
-      mediaLayoutType: A.MediaLayoutType.MOSAIC,
+      mediaLayoutType: _.MediaLayoutType.MOSAIC,
       maxWidth: l,
       maxHeight: s,
       useFullWidth: i,
@@ -199,8 +199,8 @@ let I = Math.round((A.MEDIA_MOSAIC_MAX_WIDTH - 8) / 3),
     };
     return (0, n.jsx)(g.GIFAccessoryContext.Provider, {
       value: t.gifFavoriteButton,
-      children: (0, n.jsx)(_.default, {
-        ...d,
+      children: (0, n.jsx)(A.default, {
+        ...u,
         footer: o
       })
     })
@@ -211,13 +211,13 @@ var w = e => {
   } = e, a = t[0].message.channel_id, s = (0, c.useStateFromStores)([h.default], () => {
     var e;
     return null === (e = h.default.getBasicChannel(a)) || void 0 === e ? void 0 : e.guild_id
-  }), i = l.useMemo(() => new Map(t.map(e => [e.attachment.id, (0, _.getAttachmentKind)(e.attachment, e.inlineMedia)])), [t]), r = l.useCallback(e => {
+  }), i = l.useMemo(() => new Map(t.map(e => [e.attachment.id, (0, A.getAttachmentKind)(e.attachment, e.inlineMedia)])), [t]), r = l.useCallback(e => {
     var t;
     return null !== (t = i.get(e)) && void 0 !== t ? t : "INVALID"
-  }, [i]), [o, d] = l.useMemo(() => u.partition(t, e => {
+  }, [i]), [o, u] = l.useMemo(() => d.partition(t, e => {
     var t;
     return (0, f.hasFlag)(null !== (t = e.attachment.flags) && void 0 !== t ? t : 0, x.MessageAttachmentFlags.IS_CLIP)
-  }), [t]), [g, A] = l.useMemo(() => u.partition(d, e => (0, _.isMediaAttachment)(r(e.attachment.id))), [d, r]);
+  }), [t]), [g, _] = l.useMemo(() => d.partition(u, e => (0, A.isMediaAttachment)(r(e.attachment.id))), [u, r]);
   return (0, n.jsxs)(n.Fragment, {
     children: [g.length > 0 && (0, n.jsx)("div", {
       className: p.mediaAttachmentsContainer,
@@ -225,9 +225,9 @@ var w = e => {
         mediaAttachments: g,
         getAttachmentKind: r
       })
-    }), A.length > 0 && (0, n.jsx)("div", {
+    }), _.length > 0 && (0, n.jsx)("div", {
       className: p.nonMediaAttachmentsContainer,
-      children: A.map(e => (0, n.jsx)("div", {
+      children: _.map(e => (0, n.jsx)("div", {
         className: p.nonMediaAttachmentItem,
         children: (0, n.jsx)(D, {
           props: e,

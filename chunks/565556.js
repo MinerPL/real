@@ -32,7 +32,7 @@ function g(e) {
     guildId: g
   } = e, {
     analyticsLocations: N
-  } = (0, c.default)(), p = null !== (t = null == N ? void 0 : N[0]) && void 0 !== t ? t : null, S = (0, x.useCanAccessBulkBanningFeature)(g, p), {
+  } = (0, c.default)(), S = null !== (t = null == N ? void 0 : N[0]) && void 0 !== t ? t : null, p = (0, x.useCanAccessBulkBanningFeature)(g, S), {
     selectedUserIds: v,
     clearSelection: R
   } = (0, H.default)(g), I = v.size > 0, j = async (e, t, l, a) => {
@@ -44,7 +44,7 @@ function g(e) {
         target_user_ids: [...v],
         mod_user_id: f.default.getId(),
         successful_user_ids: n.body.banned_users,
-        location: p
+        location: S
       })
     } catch (e) {
       (0, d.showToast)((0, d.createToast)(A.default.Messages.BAN_MULTIPLE_FAILED_TOAST, d.ToastType.FAILURE))
@@ -81,7 +81,7 @@ function g(e) {
       children: A.default.Messages.MEMBER_SAFETY_ACTION_NOTICE_BAN_ACTION
     })]
   });
-  return S ? (0, a.jsx)(i.default, {
+  return p ? (0, a.jsx)(i.default, {
     component: "div",
     className: L.saveNoticeContainer,
     children: I && (0, a.jsx)(m.default, {
@@ -92,7 +92,7 @@ function g(e) {
             action_type: T.ModerationActionType.BAN,
             target_user_ids: [...v],
             mod_user_id: f.default.getId(),
-            location: p
+            location: S
           }), (0, d.openModalLazy)(async () => {
             let {
               default: e
@@ -100,7 +100,7 @@ function g(e) {
             return t => (0, a.jsx)(e, {
               ...t,
               guildId: g,
-              canBulkBan: S,
+              canBulkBan: p,
               userIds: v,
               onBanMultiple: j
             })

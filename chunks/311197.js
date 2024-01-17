@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return p
   }
 });
 var l = n("37983"),
@@ -19,13 +19,13 @@ var l = n("37983"),
   _ = n("470965"),
   S = n("133335"),
   T = n("782340"),
-  p = n("759956");
+  N = n("759956");
 
-function N(e) {
+function p(e) {
   let {
     onOpen: t,
     onClose: n,
-    className: N
+    className: p
   } = e, I = (0, o.useInDesktopNotificationCenterExperiment)(), m = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()), A = a.useRef(null), g = (0, s.useStateFromStores)([u.default], () => !!I && (null == m ? void 0 : m.id) != null && u.default.getMentionCount(m.id, S.ReadStateTypes.NOTIFICATION_CENTER) > 0), {
     enabled: C
   } = r.default.useExperiment({
@@ -43,13 +43,13 @@ function N(e) {
     popoutAlign: "right",
     children: (e, t, n) => (0, l.jsxs)("div", {
       ref: A,
-      className: p.recentsIcon,
+      className: N.recentsIcon,
       children: [C && (0, l.jsx)(_.default, {
         inboxIconRef: A,
         recentsPopoutShown: t
       }), (0, l.jsx)(f.Icon, {
         ...n,
-        className: N,
+        className: p,
         onClick: e,
         icon: c.default,
         "aria-label": T.default.Messages.INBOX,
@@ -57,7 +57,7 @@ function N(e) {
         selected: t,
         showBadge: g || R,
         children: (0, l.jsx)(E.default, {
-          className: p.todoBadge
+          className: N.todoBadge
         })
       })]
     })

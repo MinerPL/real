@@ -10,8 +10,8 @@ var s = a("37983"),
   r = a.n(l),
   i = a("474820"),
   o = a.n(i),
-  u = a("16470"),
-  d = a("974667"),
+  d = a("16470"),
+  u = a("974667"),
   c = a("942367"),
   m = a("482402"),
   h = a("446674"),
@@ -64,8 +64,8 @@ var s = a("37983"),
   er = a("363622"),
   ei = a("193695"),
   eo = a("552683"),
-  eu = a("589455"),
-  ed = a("485055"),
+  ed = a("589455"),
+  eu = a("485055"),
   ec = a("219840"),
   em = a("49111"),
   eh = a("648564"),
@@ -174,7 +174,7 @@ function eM(e) {
       formOpen: n,
       cardHeightVersion: l
     }
-  }, u.default), {
+  }, d.default), {
     activeThreadIds: f,
     archivedThreadIds: C,
     searchResults: _,
@@ -199,9 +199,9 @@ function eM(e) {
       threadIds: r,
       canLoadMore: i,
       loadMore: o,
-      loading: u
+      loading: d
     } = (0, I.useArchivedThreads)(e, t, a), {
-      searchResults: d,
+      searchResults: u,
       isSearchLoading: c
     } = (0, W.useForumSearchState)({
       channelId: e.id
@@ -209,11 +209,11 @@ function eM(e) {
     return (0, W.useLoadForumUnreadCounts)(e, t, a), {
       activeThreadIds: n,
       archivedThreadIds: r,
-      searchResults: d,
+      searchResults: u,
       canLoadMore: i,
       loadMore: o,
-      loading: l || u || c,
-      archivedThreadsLoading: u,
+      loading: l || d || c,
+      archivedThreadsLoading: d,
       activeThreadsLoading: l,
       isSearchLoading: c,
       layoutType: s
@@ -280,7 +280,7 @@ function eM(e) {
     {
       containerRef: eo,
       containerWidth: ex
-    } = (0, eu.default)();
+    } = (0, ed.default)();
   n.useEffect(() => () => {
     null != t.id && G.default.clearForumSearch(t.id)
   }, [t.id]);
@@ -374,8 +374,8 @@ function eM(e) {
         hasActiveThreads: l,
         threadIdsBySection: i,
         listViewCardHeights: o,
-        editorHeight: u,
-        editorAdditionRowHeight: d,
+        editorHeight: d,
+        editorAdditionRowHeight: u,
         renderSectionOrItem: c,
         goToThread: m,
         observePostVisibilityAnalytics: h,
@@ -416,12 +416,12 @@ function eM(e) {
           })
         }, "".concat(e.section, "-").concat(t))
       }), [a, c, i, m, h]), _ = n.useCallback((e, t) => {
-        if (0 === e) return u + d;
+        if (0 === e) return d + u;
         let s = i[e][t],
           n = o[s],
           l = (a ? ei.DEFAULT_INCREASED_ACTIVITY_FORUM_POST_HEIGHT : 96) + 8;
         return null == n ? l : n + 8
-      }, [i, o, u, d, a]), S = n.useCallback(e => 2 === e && l ? 40 : 0, [l]);
+      }, [i, o, d, u, a]), S = n.useCallback(e => 2 === e && l ? 40 : 0, [l]);
       return {
         updateListScrollerRef: x,
         renderListSection: C,
@@ -458,8 +458,8 @@ function eM(e) {
         goToThread: l,
         renderSectionOrItem: i,
         hasActiveThreads: o,
-        isShowingSearchResult: u,
-        canSearchForumPosts: d,
+        isShowingSearchResult: d,
+        canSearchForumPosts: u,
         canViewArchivedPosts: c,
         observePostVisibilityAnalytics: m,
         focusedThreadId: h,
@@ -504,17 +504,17 @@ function eM(e) {
         section: e,
         coords: t,
         key: a,
-        isShowingSearchResult: u,
+        isShowingSearchResult: d,
         hasActiveThreads: o
-      })), [i, o, u]), p = n.useCallback(e => 0 === e ? {} : {
+      })), [i, o, d]), p = n.useCallback(e => 0 === e ? {} : {
         role: "grid",
         "aria-labelledby": "#".concat(eT(e))
       }, []), E = n.useCallback((e, t, n, i, o) => {
         if (0 === e) return null;
-        let u = a[e][t];
-        return null != u ? (0, s.jsx)(ea.default, {
+        let d = a[e][t];
+        return null != d ? (0, s.jsx)(ea.default, {
           id: "".concat(i),
-          threadId: u,
+          threadId: d,
           className: r(eg.card, eg.mainCard),
           goToThread: l,
           observePostVisibilityAnalytics: m,
@@ -528,7 +528,7 @@ function eM(e) {
           "data-item-role": "item",
           className: r(eg.loadingCard, eg["loadingCard-".concat(t % 3)])
         }, i)
-      }, [a, l, m]), N = n.useCallback(e => 0 === e ? f - 8 - 24 : 2 === e ? o || !c ? 40 : 0 : 1 === e && u && !d ? 40 : 0, [f, u, d, o, c]);
+      }, [a, l, m]), N = n.useCallback(e => 0 === e ? f - 8 - 24 : 2 === e ? o || !c ? 40 : 0 : 1 === e && d && !u ? 40 : 0, [f, d, u, o, c]);
       return {
         updateMasonryListScrollerRef: x,
         masonryListContainerRef: g,
@@ -577,11 +577,11 @@ function eM(e) {
           let s = l.findIndex(t => t.find(t => t === e)),
             n = t.current.getCoordsMap(),
             o = "__section__".concat(s),
-            u = n[o],
-            d = n[eE(s, e)];
-          null != u && null != d && t.current.scrollIntoViewRect({
-            start: u.top + d.top - 100,
-            end: u.top + d.top + d.height + 50
+            d = n[o],
+            u = n[eE(s, e)];
+          null != d && null != u && t.current.scrollIntoViewRect({
+            start: d.top + u.top - 100,
+            end: d.top + u.top + u.height + 50
           })
         }, 500);
         return () => clearTimeout(e)
@@ -610,7 +610,7 @@ function eM(e) {
       l < r && p()
     }, [en, et, t.guild_id, t.id, ex, p]),
     e0 = (0, h.useStateFromStores)([T.default], () => T.default.keyboardModeEnabled),
-    e1 = (0, ed.default)({
+    e1 = (0, eu.default)({
       id: "forum-grid-view",
       isEnabled: et && e0,
       setFocus: eJ
@@ -650,7 +650,7 @@ function eM(e) {
           children: (0, s.jsx)(M.default, {
             channel: t
           })
-        }) : null, et ? (0, s.jsx)(ed.GridNavigatorProvider, {
+        }) : null, et ? (0, s.jsx)(eu.GridNavigatorProvider, {
           navigator: e1,
           children: (0, s.jsx)(g.MasonryList, {
             ref: e => {
@@ -673,9 +673,9 @@ function eM(e) {
             ...e2,
             ...e
           }, y)
-        }) : (0, s.jsx)(d.ListNavigatorProvider, {
+        }) : (0, s.jsx)(u.ListNavigatorProvider, {
           navigator: e6,
-          children: (0, s.jsx)(d.ListNavigatorContainer, {
+          children: (0, s.jsx)(u.ListNavigatorContainer, {
             children: t => {
               let {
                 ref: a,
@@ -800,10 +800,10 @@ function eR(e) {
       onboardingExpanded: r,
       setEditorAdditionRowHeight: i
     }
-  }, u.default), {
+  }, d.default), {
     tagFilter: K,
     layoutType: Y
-  } = (0, z.useForumChannelStore)(i.id), Z = (0, ee.useForumPostComposerStoreApi)(), q = (0, z.useForumChannelStoreApi)(), $ = (0, h.useStateFromStores)([L.default], () => L.default.canChatInGuild(i.guild_id)), ea = (0, W.useCanManageChannel)(i), es = (0, j.useCanStartThread)(i), [en, er] = n.useState(es), [, ei] = (0, p.useCurrentUserCommunicationDisabled)(null !== (l = i.getGuildId()) && void 0 !== l ? l : void 0), eu = $ && (es || en && ei), ed = i.isMediaChannel();
+  } = (0, z.useForumChannelStore)(i.id), Z = (0, ee.useForumPostComposerStoreApi)(), q = (0, z.useForumChannelStoreApi)(), $ = (0, h.useStateFromStores)([L.default], () => L.default.canChatInGuild(i.guild_id)), ea = (0, W.useCanManageChannel)(i), es = (0, j.useCanStartThread)(i), [en, er] = n.useState(es), [, ei] = (0, p.useCurrentUserCommunicationDisabled)(null !== (l = i.getGuildId()) && void 0 !== l ? l : void 0), ed = $ && (es || en && ei), eu = i.isMediaChannel();
   n.useEffect(() => {
     es && er(!0)
   }, [es]);
@@ -819,7 +819,7 @@ function eR(e) {
       null != ec.current && Z.getState().setEditorHeight(ec.current.offsetHeight)
     })
   }, [ec, Z]);
-  n.useLayoutEffect(ex, [ex, x, eu, B]), (0, H.useComponentAction)({
+  n.useLayoutEffect(ex, [ex, x, ed, B]), (0, H.useComponentAction)({
     event: em.ComponentActions.REMEASURE_TARGET,
     handler: ex
   });
@@ -875,7 +875,7 @@ function eR(e) {
         }
       }), q.getState().toggleTagFilter(i.id, e)
     },
-    eF = (0, d.default)({
+    eF = (0, u.default)({
       id: "".concat(i.id, "-tags-navigator"),
       isEnabled: !0,
       wrap: !0,
@@ -887,7 +887,7 @@ function eR(e) {
       role: eb,
       onFocus: eL,
       ...eP
-    } = (0, d.useListItem)("forum-channel-header"),
+    } = (0, u.useListItem)("forum-channel-header"),
     ey = n.useRef(null),
     eD = function() {
       let e = n.useRef(!1),
@@ -928,7 +928,7 @@ function eR(e) {
           parentChannel: i,
           onChange: ex,
           isSearchLoading: _,
-          canCreatePost: eu,
+          canCreatePost: ed,
           inputRef: ey
         })
       }), (ev || eI) && (0, s.jsxs)("div", {
@@ -959,7 +959,7 @@ function eR(e) {
           })]
         }), (0, s.jsx)("div", {
           className: eg.tagsSpacer
-        }), eI ? eu ? (0, s.jsxs)("div", {
+        }), eI ? ed ? (0, s.jsxs)("div", {
           className: eg.startPostHelp,
           children: [(0, s.jsx)(g.KeyCombo, {
             shortcut: "SHIFT",
@@ -1002,9 +1002,9 @@ function eR(e) {
           }), (0, s.jsx)("div", {
             className: eg.tagList,
             ref: eS,
-            children: (0, s.jsx)(d.ListNavigatorProvider, {
+            children: (0, s.jsx)(u.ListNavigatorProvider, {
               navigator: eF,
-              children: (0, s.jsx)(d.ListNavigatorContainer, {
+              children: (0, s.jsx)(u.ListNavigatorContainer, {
                 children: e => {
                   let {
                     ref: t,
@@ -1088,7 +1088,7 @@ function eR(e) {
             })]
           })]
         }) : null]
-      }), M, ea && !ed && (0, s.jsx)(S.default, {
+      }), M, ea && !eu && (0, s.jsx)(S.default, {
         contentTypes: [f.DismissibleContent.FORUM_CHANNEL_HELPER_CARD],
         children: e => {
           let {

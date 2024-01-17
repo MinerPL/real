@@ -1,90 +1,90 @@
 "use strict";
-r.r(t), r.d(t, {
+l.r(r), l.d(r, {
   UserProfileContext: function() {
-    return E
+    return P
   },
   default: function() {
-    return P
+    return T
   }
-}), r("794252");
-var l = r("37983"),
-  i = r("884691"),
-  o = r("414456"),
-  n = r.n(o),
-  s = r("506838"),
-  a = r("217513"),
-  u = r("906889"),
-  d = r("590456"),
-  c = r("200932"),
-  f = r("677055");
-let E = i.createContext({
+}), l("794252");
+var t = l("37983"),
+  o = l("884691"),
+  i = l("414456"),
+  n = l.n(i),
+  a = l("506838"),
+  s = l("217513"),
+  u = l("906889"),
+  f = l("590456"),
+  d = l("200932"),
+  c = l("677055");
+let P = o.createContext({
   profileType: null,
   profileTheme: null
 });
 
-function p(e) {
-  var t, r;
+function E(e) {
+  var r, l;
   let {
-    user: o,
-    guildId: p,
-    profileType: P,
-    className: T,
-    pendingThemeColors: _,
-    pendingProfileEffectId: O,
-    useDefaultClientTheme: C,
-    children: S,
-    forceShowPremium: L = !1,
-    showOutOfBoundaryComponents: I = !1
-  } = e, h = i.useRef(null), y = (0, a.default)(o.id, p), {
-    profileTheme: U
-  } = (0, u.default)(o, y, {
-    themeElementRef: h,
-    pendingThemeColors: _,
-    isPreview: L,
-    useDefaultClientTheme: C
-  }), m = (null == y ? void 0 : y.canEditThemes) || L, A = i.useMemo(() => ({
-    profileType: P,
-    profileTheme: U
-  }), [P, U]);
-  return (0, l.jsx)("div", {
-    ref: h,
-    className: n((t = P, (0, s.match)(t).with(d.UserProfileTypes.POPOUT, d.UserProfileTypes.SETTINGS, d.UserProfileTypes.CANCEL_MODAL, () => f.userPopoutOuter).with(d.UserProfileTypes.MODAL, () => f.userProfileModalOuter).with(d.UserProfileTypes.PANEL, () => f.userPanelOuter).with(d.UserProfileTypes.CARD, () => f.userCardOuter).exhaustive()), m ? f.userProfileOuterThemed : f.userProfileOuterUnthemed, c.profileColors, I ? f.showOutOfBoundaryComponents : void 0, "theme-".concat(U), T),
-    children: (0, l.jsx)("div", {
-      className: n((r = P, (0, s.match)(r).with(d.UserProfileTypes.POPOUT, d.UserProfileTypes.SETTINGS, d.UserProfileTypes.CANCEL_MODAL, () => f.userPopoutInner).with(d.UserProfileTypes.MODAL, () => f.userProfileModalInner).with(d.UserProfileTypes.PANEL, () => f.userPanelInner).with(d.UserProfileTypes.CARD, () => f.userCardInner).exhaustive()), function() {
+    user: i,
+    guildId: E,
+    profileType: T,
+    className: p,
+    pendingThemeColors: O,
+    pendingProfileEffectId: U,
+    useDefaultClientTheme: _,
+    children: h,
+    forceShowPremium: y = !1,
+    showOutOfBoundaryComponents: m = !1
+  } = e, v = o.useRef(null), S = (0, s.default)(i.id, E), {
+    profileTheme: I
+  } = (0, u.default)(i, S, {
+    themeElementRef: v,
+    pendingThemeColors: O,
+    isPreview: y,
+    useDefaultClientTheme: _
+  }), N = (null == S ? void 0 : S.canEditThemes) || y, A = o.useMemo(() => ({
+    profileType: T,
+    profileTheme: I
+  }), [T, I]);
+  return (0, t.jsx)("div", {
+    ref: v,
+    className: n((r = T, (0, a.match)(r).with(f.UserProfileTypes.POPOUT, f.UserProfileTypes.SETTINGS, f.UserProfileTypes.CANCEL_MODAL, () => c.userPopoutOuter).with(f.UserProfileTypes.MODAL, () => c.userProfileModalOuter).with(f.UserProfileTypes.PANEL, () => c.userPanelOuter).with(f.UserProfileTypes.CARD, () => c.userCardOuter).exhaustive()), N ? c.userProfileOuterThemed : c.userProfileOuterUnthemed, d.profileColors, m ? c.showOutOfBoundaryComponents : void 0, "theme-".concat(I), p),
+    children: (0, t.jsx)("div", {
+      className: n((l = T, (0, a.match)(l).with(f.UserProfileTypes.POPOUT, f.UserProfileTypes.SETTINGS, f.UserProfileTypes.CANCEL_MODAL, () => c.userPopoutInner).with(f.UserProfileTypes.MODAL, () => c.userProfileModalInner).with(f.UserProfileTypes.PANEL, () => c.userPanelInner).with(f.UserProfileTypes.CARD, () => c.userCardInner).exhaustive()), function() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          t = arguments.length > 1 ? arguments[1] : void 0,
-          r = arguments.length > 2 ? arguments[2] : void 0;
-        return (0, s.match)({
-          profileType: r,
+          r = arguments.length > 1 ? arguments[1] : void 0,
+          l = arguments.length > 2 ? arguments[2] : void 0;
+        return (0, a.match)({
+          profileType: l,
           canUsePremiumProfileCustomization: e,
-          hasBanner: t
+          hasBanner: r
         }).with({
-          profileType: d.UserProfileTypes.PANEL
-        }, () => f.userPanelInnerThemed).with({
+          profileType: f.UserProfileTypes.PANEL
+        }, () => c.userPanelInnerThemed).with({
           canUsePremiumProfileCustomization: !0,
           hasBanner: !0
-        }, () => f.userProfileInnerThemedWithBanner).with({
+        }, () => c.userProfileInnerThemedWithBanner).with({
           canUsePremiumProfileCustomization: !0
-        }, () => f.userProfileInnerThemedPremiumWithoutBanner).otherwise(() => f.userProfileInnerThemedNonPremium)
-      }((null == y ? void 0 : y.canUsePremiumProfileCustomization) || L, null !== O && ((null == y ? void 0 : y.banner) != null || void 0 !== O), P)),
-      children: (0, l.jsx)(E.Provider, {
+        }, () => c.userProfileInnerThemedPremiumWithoutBanner).otherwise(() => c.userProfileInnerThemedNonPremium)
+      }((null == S ? void 0 : S.canUsePremiumProfileCustomization) || y, null !== U && ((null == S ? void 0 : S.banner) != null || void 0 !== U), T)),
+      children: (0, t.jsx)(P.Provider, {
         value: A,
-        children: S
+        children: h
       })
     })
   })
 }
-p.Inner = function(e) {
-  var t;
+E.Inner = function(e) {
+  var r;
   let {
-    className: r,
-    children: o
+    className: l,
+    children: i
   } = e, {
-    profileType: a
-  } = i.useContext(E);
-  return (0, l.jsx)("div", {
-    className: n((t = a, (0, s.match)(t).with(d.UserProfileTypes.POPOUT, d.UserProfileTypes.SETTINGS, () => f.userPopoutOverlayBackground).with(d.UserProfileTypes.MODAL, () => f.userProfileModalOverlayBackground).with(d.UserProfileTypes.PANEL, () => f.userPanelOverlayBackground).otherwise(() => f.overlayBackground)), r),
-    children: o
+    profileType: s
+  } = o.useContext(P);
+  return (0, t.jsx)("div", {
+    className: n((r = s, (0, a.match)(r).with(f.UserProfileTypes.POPOUT, f.UserProfileTypes.SETTINGS, () => c.userPopoutOverlayBackground).with(f.UserProfileTypes.MODAL, () => c.userProfileModalOverlayBackground).with(f.UserProfileTypes.PANEL, () => c.userPanelOverlayBackground).otherwise(() => c.overlayBackground)), l),
+    children: i
   })
 };
-var P = p
+var T = E

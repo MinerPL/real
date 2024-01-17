@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("37983"),
   l = n("884691"),
   s = n("414456"),
-  r = n.n(s),
-  a = n("917351"),
+  a = n.n(s),
+  r = n("917351"),
   o = n("819855"),
   u = n("77078"),
   d = n("841098"),
@@ -35,7 +35,7 @@ var i = n("37983"),
         duration: t,
         ...null != E ? E : {}
       }
-    }, [n, E]), N = (0, f.useAudioBufferData)(t), C = (0, f.useAudioWaveformData)(N, v.current, _), A = (0, d.default)(), b = (0, c.useColorValue)((0, o.isThemeDark)(A) ? h.Color.PRIMARY_300 : h.Color.PRIMARY_700), I = null == N || null == C, O = 0 === S.width || 0 === S.height, w = (O || I) && null != t, x = l.useCallback(() => {
+    }, [n, E]), N = (0, f.useAudioBufferData)(t), C = (0, f.useAudioWaveformData)(N, v.current, _), A = (0, d.default)(), b = (0, c.useColorValue)((0, o.isThemeDark)(A) ? h.Color.PRIMARY_300 : h.Color.PRIMARY_700), I = null == N || null == C, O = 0 === S.width || 0 === S.height, D = (O || I) && null != t, w = l.useCallback(() => {
       null != v.current && p({
         width: v.current.offsetWidth,
         height: v.current.offsetHeight
@@ -43,12 +43,12 @@ var i = n("37983"),
     }, []);
     return l.useEffect(() => {
       if (null != v.current) {
-        let e = new ResizeObserver((0, a.debounce)(x, 50));
+        let e = new ResizeObserver((0, r.debounce)(w, 50));
         return e.observe(v.current), () => {
           e.disconnect()
         }
       }
-    }, [x]), l.useEffect(() => {
+    }, [w]), l.useEffect(() => {
       if (null == v.current) return;
       let e = v.current,
         t = e.getContext("2d");
@@ -63,19 +63,19 @@ var i = n("37983"),
         t.clearRect(0, 0, n, i), t.fillStyle = b.hex;
         for (let n = 0; n < C.length; n++) {
           let s = C[n] * i,
-            r = n * e + l,
-            a = i / 2 - s / 2;
-          t.fillRect(r, a, e - l, s)
+            a = n * e + l,
+            r = i / 2 - s / 2;
+          t.fillRect(a, r, e - l, s)
         }
       }
     }, [b, S, A, C]), (0, i.jsxs)("div", {
-      className: r(g.container, s),
+      className: a(g.container, s),
       children: [(0, i.jsx)("canvas", {
         className: g.waveformCanvas,
         ref: v,
         width: 4 * S.width,
         height: 4 * S.height
-      }), w && (0, i.jsx)("div", {
+      }), D && (0, i.jsx)("div", {
         className: g.loading,
         children: (0, i.jsx)(u.Spinner, {
           type: u.SpinnerTypes.SPINNING_CIRCLE

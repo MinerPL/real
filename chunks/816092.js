@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var i = n("446674"),
@@ -30,7 +30,7 @@ class h extends i.default.PersistedStore {
   }
 }
 h.displayName = "CollapsedVoiceChannelStore", h.persistKey = "collapsedChannels";
-var o = new h(s.default, {
+var u = new h(s.default, {
   CONNECTION_OPEN: d,
   OVERLAY_INITIALIZE: d,
   CHANNEL_COLLAPSE: function(e) {

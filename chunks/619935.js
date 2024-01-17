@@ -4,12 +4,12 @@ n.r(t), n.d(t, {
     return l
   },
   default: function() {
-    return s
+    return o
   }
 });
-var i = n("862205"),
+var u = n("862205"),
   r = n("15733");
-let u = (0, i.createExperiment)({
+let i = (0, u.createExperiment)({
     kind: "user",
     id: "2022-03_block_russian_purchases",
     label: "Block purchases based on country",
@@ -24,7 +24,7 @@ let u = (0, i.createExperiment)({
       }
     }]
   }),
-  a = (0, i.createExperiment)({
+  a = (0, u.createExperiment)({
     kind: "user",
     id: "2022-03_block_russian_purchases_desktop",
     label: "Block purchases based on country (desktop specific flags)",
@@ -43,7 +43,7 @@ let u = (0, i.createExperiment)({
 function l() {
   let {
     paymentsBlocked: e
-  } = u.useExperiment({
+  } = i.useExperiment({
     location: "c519a9_1"
   }, {
     autoTrackExposure: !1
@@ -58,4 +58,4 @@ function l() {
   } = (0, r.default)();
   return e || t && "RU" === n
 }
-var s = u
+var o = i

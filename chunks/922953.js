@@ -21,15 +21,15 @@ var l = n("37983"),
 function S() {
   let e = (0, s.useStateFromStores)([u.default], () => u.default.devToolsEnabled),
     [t, S] = a.useState(!1),
-    [T, p] = a.useState(0),
-    N = e => {
-      clearTimeout(T), p(setTimeout(() => {
+    [T, N] = a.useState(0),
+    p = e => {
+      clearTimeout(T), N(setTimeout(() => {
         S(e)
       }, 100))
     };
   return (0, l.jsx)("div", {
-    onMouseEnter: () => N(!0),
-    onMouseLeave: () => N(!1),
+    onMouseEnter: () => p(!0),
+    onMouseLeave: () => p(!1),
     children: (0, l.jsx)(i.Popout, {
       shouldShow: t,
       animation: i.Popout.Animation.NONE,

@@ -19,8 +19,8 @@ var l = n("37983"),
   _ = n("819689"),
   S = n("843962"),
   T = n("679653"),
-  p = n("931318"),
-  N = n("520899"),
+  N = n("931318"),
+  p = n("520899"),
   I = n("988864"),
   m = n("960808"),
   A = n("45835"),
@@ -51,9 +51,9 @@ function w(e) {
   let {
     setTab: t,
     closePopout: n
-  } = e, s = (0, c.useStateFromStores)([N.default], () => N.default.getMessageReminders());
+  } = e, s = (0, c.useStateFromStores)([p.default], () => p.default.getMessageReminders());
   a.useEffect(() => () => {
-    (0, p.cleanupMessageReminders)()
+    (0, N.cleanupMessageReminders)()
   }, []);
   let [i, r] = a.useState(!1), o = a.useMemo(() => s.filter(e => null == e.dueAt || e.dueAt < new Date), [s]), u = i ? s : o, d = u.filter(e => !(0, I.savedMessageHasMetadata)(e));
   return (0, m.useMessageRemindersLoader)(d), (0, l.jsxs)("div", {
@@ -93,7 +93,7 @@ function B(e) {
   let t, {
       messageId: a
     } = e,
-    s = (0, c.useStateFromStores)([N.default], () => N.default.getMessageReminders().find(e => e.messageId === a));
+    s = (0, c.useStateFromStores)([p.default], () => p.default.getMessageReminders().find(e => e.messageId === a));
   o(null != s, "should not be rendering a to-do message without a to-do message");
   let r = s.complete,
     u = (0, c.useStateFromStores)([L.default], () => L.default.getMessage(s.channelId, s.messageId)),
@@ -171,7 +171,7 @@ function B(e) {
           type: E.Checkbox.Types.INVERTED,
           value: r,
           onChange: (e, t) => {
-            (0, p.toggleMessageReminders)(s.messageId, t)
+            (0, N.toggleMessageReminders)(s.messageId, t)
           }
         })]
       })]
@@ -226,7 +226,7 @@ function B(e) {
 }
 
 function H() {
-  let e = (0, c.useStateFromStores)([N.default], () => N.default.getMessageReminders().length > 0);
+  let e = (0, c.useStateFromStores)([p.default], () => p.default.getMessageReminders().length > 0);
   return e ? null : (0, l.jsx)(P.default, {
     Icon: y.default,
     header: F.default.Messages.MESSAGE_REMINDERS_EMPTY,

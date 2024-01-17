@@ -11,16 +11,16 @@ var n = a("65597"),
   r = a("850391"),
   i = a("271972"),
   o = a("761354"),
-  u = a("1999"),
-  d = a("585722"),
+  d = a("1999"),
+  u = a("585722"),
   c = a("782340"),
   m = a("909067");
 
 function h(e) {
   let {
     parentChannel: t
-  } = e, a = (0, n.useStateFromStoresArray)([d.default], () => {
-    let e = d.default.getUploads(t.id, r.ChatInputTypes.CREATE_FORUM_POST.drafts.type);
+  } = e, a = (0, n.useStateFromStoresArray)([u.default], () => {
+    let e = u.default.getUploads(t.id, r.ChatInputTypes.CREATE_FORUM_POST.drafts.type);
     return null == e ? void 0 : e.filter(e => !0 !== e.isThumbnail)
   });
   return (0, s.jsxs)("div", {
@@ -48,7 +48,7 @@ function h(e) {
             keyboardModeEnabled: !0,
             hideFileName: !0,
             size: i.AttachmentListItemSizes.SMALL
-          }, e.id)), (0, s.jsx)(u.ComposerUploadButton, {
+          }, e.id)), (0, s.jsx)(d.ComposerUploadButton, {
             channelId: t.id
           })]
         })

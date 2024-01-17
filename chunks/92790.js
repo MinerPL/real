@@ -19,8 +19,8 @@ var l = n("37983"),
   _ = n("955513"),
   S = n("180748"),
   T = n("206230"),
-  p = n("716241"),
-  N = n("42203"),
+  N = n("716241"),
+  p = n("42203"),
   I = n("923959"),
   m = n("744983"),
   A = n("18494"),
@@ -215,8 +215,8 @@ class U extends a.PureComponent {
         return
       }
       let n = A.default.getChannelId(),
-        l = N.default.getChannel(n);
-      if ((null == l ? void 0 : l.isThread()) && (l = N.default.getChannel(null == l ? void 0 : l.parent_id)), null == l || l.isPrivate()) {
+        l = p.default.getChannel(n);
+      if ((null == l ? void 0 : l.isThread()) && (l = p.default.getChannel(null == l ? void 0 : l.parent_id)), null == l || l.isPrivate()) {
         this.focusEditor();
         return
       }
@@ -241,7 +241,7 @@ class U extends a.PureComponent {
       let {
         searchType: e
       } = this.props;
-      p.default.trackWithMetadata(v.AnalyticEvents.SEARCH_OPENED, {
+      N.default.trackWithMetadata(v.AnalyticEvents.SEARCH_OPENED, {
         search_type: e
       }), this.setState({
         focused: !0

@@ -10,8 +10,8 @@ var s = a("37983"),
   r = a.n(l),
   i = a("907002"),
   o = a("446674"),
-  u = a("819855"),
-  d = a("77078"),
+  d = a("819855"),
+  u = a("77078"),
   c = a("841098"),
   m = a("206230"),
   h = a("526812"),
@@ -41,7 +41,7 @@ function y(e) {
   let {
     handleHide: t
   } = e;
-  return (0, s.jsx)(d.Clickable, {
+  return (0, s.jsx)(u.Clickable, {
     onClick: t,
     className: O.closeButton,
     "aria-label": R.default.Messages.DISMISS,
@@ -59,27 +59,27 @@ function D(e) {
     messageCount: l,
     reaction: i,
     reactionCount: o,
-    classname: u
+    classname: d
   } = e;
   return (0, s.jsxs)("div", {
-    className: r(O.videoPreview, u),
+    className: r(O.videoPreview, d),
     children: [(0, s.jsx)("div", {
       className: O.authorRow,
       children: (0, s.jsxs)("div", {
         className: O.rowGroup,
-        children: [(0, s.jsx)(d.Text, {
+        children: [(0, s.jsx)(u.Text, {
           tag: "span",
           className: O.author,
           variant: "text-sm/semibold",
           children: t
-        }), (0, s.jsx)(d.Text, {
+        }), (0, s.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "header-secondary",
           className: O.postCreationTimestamp,
           children: R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_PREVIEW_TIMESTAMP
         })]
       })
-    }), (0, s.jsx)(d.Heading, {
+    }), (0, s.jsx)(u.Heading, {
       variant: "heading-md/extrabold",
       className: O.title,
       color: "header-primary",
@@ -107,7 +107,7 @@ function D(e) {
               width: 16,
               height: 16
             })
-          }), (0, s.jsx)(d.Text, {
+          }), (0, s.jsx)(u.Text, {
             variant: "text-xs/normal",
             color: "interactive-normal",
             children: l
@@ -118,7 +118,7 @@ function D(e) {
             role: "img",
             "aria-label": "",
             children: i
-          }), (0, s.jsx)(d.Text, {
+          }), (0, s.jsx)(u.Text, {
             variant: "text-xs/normal",
             color: "interactive-normal",
             children: o
@@ -132,7 +132,7 @@ var w = e => {
   var t, a;
   let {
     channel: l
-  } = e, p = (0, c.default)(), E = (0, u.isThemeDark)(p), A = (0, o.useStateFromStores)([T.default], () => T.default.getGuild(l.guild_id)), w = (0, o.useStateFromStores)([m.default], () => m.default.useReducedMotion), U = (0, o.useStateFromStores)([h.default], () => h.default.hasHidden(l.id)), k = (0, x.useSubscriptionListingsForChannel)({
+  } = e, p = (0, c.default)(), E = (0, d.isThemeDark)(p), A = (0, o.useStateFromStores)([T.default], () => T.default.getGuild(l.guild_id)), w = (0, o.useStateFromStores)([m.default], () => m.default.useReducedMotion), U = (0, o.useStateFromStores)([h.default], () => h.default.hasHidden(l.id)), k = (0, x.useSubscriptionListingsForChannel)({
     guildId: l.guild_id,
     channelId: l.id
   }), {
@@ -161,7 +161,7 @@ var w = e => {
       className: O.container,
       children: [(0, s.jsxs)("div", {
         className: r(O.wrapper, O.headerRow),
-        children: [(0, s.jsxs)(d.Text, {
+        children: [(0, s.jsxs)(u.Text, {
           variant: "text-xs/normal",
           className: O.visibilityInfo,
           children: [(0, s.jsx)(N.default, {
@@ -208,22 +208,22 @@ var w = e => {
             })
           }), (0, s.jsxs)("article", {
             className: O.contentTextContainer,
-            children: [(0, s.jsx)(d.Heading, {
+            children: [(0, s.jsx)(u.Heading, {
               variant: "heading-lg/semibold",
               color: "header-primary",
               children: Z
             }), (0, s.jsx)(S.default, {
               size: 8
-            }), (0, s.jsx)(d.Text, {
+            }), (0, s.jsx)(u.Text, {
               variant: "text-md/normal",
               color: "text-muted",
               children: q
             }), (0, s.jsx)(S.default, {
               size: 16
-            }), (0, s.jsxs)(d.Clickable, {
+            }), (0, s.jsxs)(u.Clickable, {
               onClick: () => open(v.default.getCreatorSupportArticleURL(j.HelpdeskArticles.MEDIA_CHANNEL)),
               className: O.helpCenterLink,
-              children: [(0, s.jsx)(d.Text, {
+              children: [(0, s.jsx)(u.Text, {
                 variant: "text-sm/medium",
                 color: "text-link",
                 className: O.helpCenterLinkText,
@@ -237,7 +237,7 @@ var w = e => {
               size: 16
             }), (0, s.jsx)("div", {
               className: O.mediaChannelTagsContainer,
-              children: V.map(e => (0, s.jsx)(d.Text, {
+              children: V.map(e => (0, s.jsx)(u.Text, {
                 variant: "text-sm/medium",
                 color: "text-normal",
                 className: O.mediaChannelTag,
@@ -263,7 +263,7 @@ var w = e => {
             })
           }), (0, s.jsxs)("article", {
             className: O.contentTextContainer,
-            children: [(0, s.jsxs)(d.Text, {
+            children: [(0, s.jsxs)(u.Text, {
               variant: "text-xxs/bold",
               className: O.serverSubPill,
               children: [R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_SERVER_SUB_PILL, " ", (0, s.jsx)("span", {
@@ -273,13 +273,13 @@ var w = e => {
               })]
             }), (0, s.jsx)(S.default, {
               size: 10
-            }), (0, s.jsx)(d.Heading, {
+            }), (0, s.jsx)(u.Heading, {
               variant: "heading-lg/semibold",
               color: "header-primary",
               children: R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_SHARE_TITLE
             }), (0, s.jsx)(S.default, {
               size: 8
-            }), (0, s.jsx)(d.Text, {
+            }), (0, s.jsx)(u.Text, {
               variant: "text-md/normal",
               color: "text-muted",
               children: R.default.Messages.MEDIA_POST_ADMIN_EDUCATION_SHARE_SUBTITLE
@@ -287,7 +287,7 @@ var w = e => {
               size: 16
             }), (0, s.jsx)("div", {
               className: O.mediaChannelTagsContainer,
-              children: z.map(e => (0, s.jsx)(d.Text, {
+              children: z.map(e => (0, s.jsx)(u.Text, {
                 variant: "text-sm/medium",
                 color: "text-normal",
                 className: O.mediaChannelTag,
@@ -296,11 +296,11 @@ var w = e => {
             }), (0, s.jsx)(S.default, {
               size: 16
             }), 0 === k.length && (0, s.jsx)(_.default, {
-              size: d.Button.Sizes.MEDIUM,
+              size: u.Button.Sizes.MEDIUM,
               pauseAnimation: w,
               onClick: W,
               className: O.addChannelButton,
-              color: d.Button.Colors.CUSTOM,
+              color: u.Button.Colors.CUSTOM,
               children: Y
             })]
           })]

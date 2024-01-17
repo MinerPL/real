@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("70102");
 var i, l, s = n("37983"),
-  r = n("884691"),
-  a = n("414456"),
-  o = n.n(a),
+  a = n("884691"),
+  r = n("414456"),
+  o = n.n(r),
   u = n("627445"),
   d = n.n(u),
   c = n("77078"),
@@ -33,18 +33,18 @@ let I = [{
 function O(e) {
   var t, n, i, l;
   let {
-    guildId: a,
+    guildId: r,
     sourceFile: u,
     existingSound: O,
-    onClose: w,
-    transitionState: x,
-    showGuildPicker: L = !1
-  } = e, [D, U] = r.useState(null !== (n = null !== (t = null == u ? void 0 : u.name) && void 0 !== t ? t : null == O ? void 0 : O.name) && void 0 !== n ? n : ""), [T, M] = r.useState(null !== (i = null == O ? void 0 : O.volume) && void 0 !== i ? i : 1), [R, y] = r.useState(null == O ? void 0 : O.emojiId), [P, k] = r.useState(null == O ? void 0 : O.emojiName), {
+    onClose: D,
+    transitionState: w,
+    showGuildPicker: x = !1
+  } = e, [L, U] = a.useState(null !== (n = null !== (t = null == u ? void 0 : u.name) && void 0 !== t ? t : null == O ? void 0 : O.name) && void 0 !== n ? n : ""), [T, M] = a.useState(null !== (i = null == O ? void 0 : O.volume) && void 0 !== i ? i : 1), [R, y] = a.useState(null == O ? void 0 : O.emojiId), [P, k] = a.useState(null == O ? void 0 : O.emojiName), {
     file: F,
     loadAudioFromFile: j,
     maxVolume: V,
     setMaxVolume: B
-  } = (0, p.useAudioTrimmerStore)(), [G, H] = r.useState(!1), [W, K] = r.useState(null), [Z, z] = r.useState(null), [Y, q] = r.useState("ready"), [X, J] = r.useState(a);
+  } = (0, p.useAudioTrimmerStore)(), [G, H] = a.useState(!1), [W, K] = a.useState(null), [Z, z] = a.useState(null), [Y, q] = a.useState("ready"), [X, J] = a.useState(r);
   async function Q(e) {
     try {
       await j(null != e ? e : null), q("ready"), K(null)
@@ -65,7 +65,7 @@ function O(e) {
       K(new f.default(t))
     } else K(new f.default(e))
   }
-  r.useEffect(() => {
+  a.useEffect(() => {
     (null == u ? void 0 : u.file) != null && e(u.file);
     async function e(e) {
       try {
@@ -88,12 +88,12 @@ function O(e) {
     }(Y),
     et = "uploading" === Y || "encoding" === Y,
     en = null != O,
-    ei = D.length >= 2 && (en || null != F) && null != X && function(e) {
+    ei = L.length >= 2 && (en || null != F) && null != X && function(e) {
       if (null == e) return !0;
       let t = (e.endMs - e.startMs) / 1e3;
       return t > 0 && t <= N.MAX_SOUND_LENGTH_SECONDS
     }(Z),
-    el = r.useCallback(async (e, t) => {
+    el = a.useCallback(async (e, t) => {
       q("encoding");
       try {
         let n = await (0, v.trimAndEncodeAudio)(e, t);
@@ -102,7 +102,7 @@ function O(e) {
         throw q("encoding-failed"), e
       }
     }, []),
-    es = r.useCallback(async () => {
+    es = a.useCallback(async () => {
       if (null == F) return;
       d(null != X, "Cannot submit soundboard sound with no guildId");
       let e = F;
@@ -117,7 +117,7 @@ function O(e) {
         await (0, v.uploadFileReadPromise)({
           readPromise: t,
           guildId: X,
-          name: D,
+          name: L,
           volume: T,
           emojiId: R,
           emojiName: P
@@ -125,33 +125,33 @@ function O(e) {
       } catch (e) {
         throw new f.default(e)
       }
-    }, [F, X, D, el, Z, T, R, P]),
-    er = r.useCallback(async () => {
+    }, [F, X, L, el, Z, T, R, P]),
+    ea = a.useCallback(async () => {
       d(null != X, "Cannot submit soundboard sound with no guildId"), H(!0), K(null);
       try {
         en ? await (0, E.updateSound)({
           guildId: X,
           soundId: O.soundId,
-          name: D,
+          name: L,
           volume: T,
           emojiId: R,
           emojiName: P
-        }) : await es(), w()
+        }) : await es(), D()
       } catch (e) {
         $(e)
       } finally {
         q("ready"), H(!1), M(1), B(1)
       }
-    }, [en, w, X, O, D, T, R, P, es, B]);
-  r.useEffect(() => {
+    }, [en, D, X, O, L, T, R, P, es, B]);
+  a.useEffect(() => {
     j(null), g.default.track(C.AnalyticEvents.OPEN_MODAL, {
       type: "Soundboard Upload Sound",
       guild_id: X
     })
-  }, []), r.useEffect(() => {
+  }, []), a.useEffect(() => {
     M(Math.min(T, V))
   }, [T, M, V]);
-  let ea = (0, s.jsx)(m.default, {
+  let er = (0, s.jsx)(m.default, {
     guildId: X,
     emojiId: R,
     emojiName: P,
@@ -161,9 +161,9 @@ function O(e) {
     isRequiredField: !1
   });
   return (0, s.jsxs)(c.ModalRoot, {
-    transitionState: x,
+    transitionState: w,
     children: [(0, s.jsx)(c.ModalCloseButton, {
-      onClick: w,
+      onClick: D,
       className: b.modalClose
     }), (0, s.jsx)(c.ModalHeader, {
       className: b.headerContainer,
@@ -178,7 +178,7 @@ function O(e) {
       children: [null != W && !W.hasFieldErrors() && (0, s.jsx)(c.FormErrorBlock, {
         className: b.section,
         children: W.message
-      }), L ? (0, s.jsx)(c.FormItem, {
+      }), x ? (0, s.jsx)(c.FormItem, {
         required: !0,
         className: b.section,
         title: A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT,
@@ -212,11 +212,11 @@ function O(e) {
           title: A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SOUND_NAME,
           children: (0, s.jsx)(c.TextInput, {
             placeholder: A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SOUND_NAME,
-            value: D,
+            value: L,
             onChange: U,
             maxLength: N.MAX_LENGTH_SOUND_NAME
           })
-        }), ea]
+        }), er]
       }), (0, s.jsx)(c.FormItem, {
         error: null == W ? void 0 : W.getFirstFieldErrorMessage("volume"),
         className: b.section,
@@ -233,11 +233,11 @@ function O(e) {
         disabled: !ei,
         submitting: G,
         size: c.Button.Sizes.SMALL,
-        onClick: er,
+        onClick: ea,
         children: en ? A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SAVE : A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_UPLOAD
       }), (0, s.jsx)(c.Button, {
         disabled: G,
-        onClick: w,
+        onClick: D,
         size: c.Button.Sizes.SMALL,
         look: c.Button.Looks.LINK,
         color: c.Button.Colors.PRIMARY,

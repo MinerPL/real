@@ -32,8 +32,8 @@ var l = n("37983"),
   D = n("745049"),
   L = n("49111"),
   U = n("133335"),
-  y = n("782340"),
-  M = n("639480");
+  M = n("782340"),
+  y = n("639480");
 
 function A(e) {
   let {
@@ -72,18 +72,18 @@ function A(e) {
     transitionState: t,
     "aria-labelledby": V,
     children: [(0, l.jsxs)(d.ModalHeader, {
-      className: M.header,
+      className: y.header,
       children: [(0, l.jsx)(h.default, {
-        className: M.icon
+        className: y.icon
       }), (0, l.jsx)(d.Heading, {
         id: V,
         variant: "heading-md/semibold",
-        children: O.length > 0 ? y.default.Messages.GUILD_EVENTS_PLURAL.format({
+        children: O.length > 0 ? M.default.Messages.GUILD_EVENTS_PLURAL.format({
           number: O.length
-        }) : y.default.Messages.GUILD_EVENTS
+        }) : M.default.Messages.GUILD_EVENTS
       }), P && (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)("div", {
-          className: M.divider,
+          className: y.divider,
           children: "|"
         }), (0, l.jsx)(d.Button, {
           size: d.Button.Sizes.MIN,
@@ -98,19 +98,19 @@ function A(e) {
               })
             }, F)
           },
-          innerClassName: M.button,
-          children: y.default.Messages.SCHEDULE_EVENT
+          innerClassName: y.button,
+          children: M.default.Messages.SCHEDULE_EVENT
         })]
       }), (0, l.jsx)(d.Clickable, {
         onClick: i,
-        className: M.iconButton,
-        "aria-label": y.default.Messages.CLOSE,
+        className: y.iconButton,
+        "aria-label": M.default.Messages.CLOSE,
         children: (0, l.jsx)(m.default, {
-          className: M.icon
+          className: y.icon
         })
       })]
     }), (0, l.jsx)(d.ModalContent, {
-      className: M.content,
+      className: y.content,
       children: O.length > 0 ? O.map(e => (0, l.jsx)(x.default, {
         guildEvent: e,
         guildId: A,

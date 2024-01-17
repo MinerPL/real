@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var l = n("37983");
 n("884691");
-var i = n("414456"),
-  r = n.n(i),
+var r = n("414456"),
+  i = n.n(r),
   s = n("77078"),
   a = n("216422"),
   o = n("782340"),
@@ -23,7 +23,7 @@ function c(e) {
     children: e => (0, l.jsx)(s.Clickable, {
       ...e,
       children: (0, l.jsx)(a.default, {
-        className: r(u.nitroWheel, n)
+        className: i(u.nitroWheel, n)
       })
     })
   })

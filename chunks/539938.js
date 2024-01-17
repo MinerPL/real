@@ -23,8 +23,8 @@ var a = n("414456"),
   _ = n("773336"),
   S = n("50885"),
   T = n("836056"),
-  p = n("922953"),
-  N = n("879035"),
+  N = n("922953"),
+  p = n("879035"),
   I = n("49111"),
   m = n("724210"),
   A = n("122693");
@@ -62,9 +62,9 @@ function C(e) {
       return i.isMobile ? S : (0, l.jsxs)(l.Fragment, {
         children: [_, e ? (0, l.jsx)(f.default, {
           className: A.search
-        }, null != s ? s : a) : null, O && (0, l.jsx)(h.default.Divider, {}), (0, l.jsx)(N.default, {}), (0, l.jsx)(d.default, {
+        }, null != s ? s : a) : null, O && (0, l.jsx)(h.default.Divider, {}), (0, l.jsx)(p.default, {}), (0, l.jsx)(d.default, {
           canShowReminder: !0
-        }), (0, l.jsx)(c.default, {}), v ? (0, l.jsx)(p.default, {}) : (0, l.jsx)(T.default, {})]
+        }), (0, l.jsx)(c.default, {}), v ? (0, l.jsx)(N.default, {}) : (0, l.jsx)(T.default, {})]
       })
     }(),
     transparent: u,

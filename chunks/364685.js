@@ -15,9 +15,9 @@ var s = n("102053"),
   f = n("813006"),
   _ = n("778689"),
   c = n("305961"),
-  g = n("161585"),
-  m = n("24373"),
-  h = n("49111");
+  g = n("718517"),
+  m = n("161585"),
+  h = n("24373");
 let v = 2,
   E = new Map,
   p = new Map,
@@ -29,7 +29,7 @@ let v = 2,
   A = (e, t) => {
     I = new Map(I.set(e, t))
   },
-  D = 1e3 * h.Durations.HOUR,
+  D = g.default.Millis.HOUR,
   N = () => {
     if (0 !== v) return;
     let e = a.default.database();
@@ -55,30 +55,30 @@ let v = 2,
     let {
       tags: n
     } = e, s = {
-      type: g.StickerMetadataTypes.STICKER_NAME,
+      type: m.StickerMetadataTypes.STICKER_NAME,
       value: e.name.trim().toLocaleLowerCase()
     };
-    if ((0, m.isStandardSticker)(e)) {
+    if ((0, h.isStandardSticker)(e)) {
       let t = T.find(t => t.id === e.pack_id),
         i = [s, ...(null != n ? n : "").split(",").map(e => ({
-          type: g.StickerMetadataTypes.TAG,
+          type: m.StickerMetadataTypes.TAG,
           value: e.trim().toLocaleLowerCase()
         }))];
       null != t && i.push({
-        type: g.StickerMetadataTypes.PACK_NAME,
+        type: m.StickerMetadataTypes.PACK_NAME,
         value: t.name
       }), y.set(e.id, i)
-    } else if ((0, m.isGuildSticker)(e) && null != n) {
+    } else if ((0, h.isGuildSticker)(e) && null != n) {
       let i = u.default.getByName(n),
         r = {
-          type: g.StickerMetadataTypes.TAG,
+          type: m.StickerMetadataTypes.TAG,
           value: n.trim().toLocaleLowerCase()
         },
         a = [s, r];
       if (null != t) {
         let e = (t instanceof(0, f.default) ? t.name : t.properties.name).trim().toLocaleLowerCase();
         null != e && "" !== e && a.push({
-          type: g.StickerMetadataTypes.GUILD_NAME,
+          type: m.StickerMetadataTypes.GUILD_NAME,
           value: e
         })
       }
@@ -87,10 +87,10 @@ let v = 2,
         return
       }
       a.push({
-        type: g.StickerMetadataTypes.CORRELATED_EMOJI,
+        type: m.StickerMetadataTypes.CORRELATED_EMOJI,
         value: i.surrogates
       }), i.forEachDiversity(e => a.push({
-        type: g.StickerMetadataTypes.CORRELATED_EMOJI,
+        type: m.StickerMetadataTypes.CORRELATED_EMOJI,
         value: e.surrogates
       })), y.set(e.id, a)
     }
@@ -102,7 +102,7 @@ let v = 2,
       let t = s.findIndex(t => t.id === e.id); - 1 !== t ? s[t] = e : s.push(e), T = s
     }(t || n) && e.stickers.forEach(e => O(e))
   },
-  V = () => {
+  R = () => {
     I.forEach((e, t) => {
       let n = c.default.getGuild(t);
       null != n && e.forEach(e => b(e, n))
@@ -111,7 +111,7 @@ let v = 2,
     })
   };
 
-function R(e) {
+function V(e) {
   null != e.stickers && (e.stickers.forEach(t => O(t, !0, e)), A(e.id, e.stickers))
 }
 class k extends i.default.Store {
@@ -122,7 +122,7 @@ class k extends i.default.Store {
     return 0 !== v
   }
   get stickerMetadata() {
-    return N(), null == y && (y = new Map, V()), y
+    return N(), null == y && (y = new Map, R()), y
   }
   get hasLoadedStickerPacks() {
     return null != C && C + D > Date.now()
@@ -164,13 +164,13 @@ var M = new k(r.default, {
     let {
       guilds: t
     } = e;
-    y = null, p = new Map, I = new Map, t.forEach(R), v = t.every(e => null != e.stickers) ? 1 : 0
+    y = null, p = new Map, I = new Map, t.forEach(V), v = t.every(e => null != e.stickers) ? 1 : 0
   },
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e;
-    !l.default.isLurking(t.id) && (R(t), 1 === v && null == t.stickers && null != t.stickerUpdates && (v = 0))
+    !l.default.isLurking(t.id) && (V(t), 1 === v && null == t.stickers && null != t.stickerUpdates && (v = 0))
   },
   GUILD_DELETE: function(e) {
     var t;
@@ -229,7 +229,7 @@ var M = new k(r.default, {
     } = e, i = e => {
       let t;
       let n = p.get(e.id);
-      return null != n && (0, m.isGuildSticker)(n) && (t = null != n.user ? n.user : void 0), {
+      return null != n && (0, h.isGuildSticker)(n) && (t = null != n.user ? n.user : void 0), {
         ...e,
         user: t
       }

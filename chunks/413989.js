@@ -59,16 +59,16 @@ function g(e) {
         })]
       })
     }, n.id)
-  }, p = (e, t) => g.reduce((l, a) => {
+  }, S = (e, t) => g.reduce((l, a) => {
     let {
       record: n
     } = a, s = e.has(n.id);
     return d(t.toLowerCase(), n.name.toLowerCase()) ? l.push(N(a, s)) : s && l.push(N(a, s)), l
-  }, []), S = n.useCallback(e => {
+  }, []), p = n.useCallback(e => {
     (0, T.updateSearchState)(t, {
       selectedRoleIds: e
     }), s(e)
-  }, [t, s]), v = n.useCallback(r(S, 300), [S]), R = n.useCallback(e => {
+  }, [t, s]), v = n.useCallback(r(p, 300), [p]), R = n.useCallback(e => {
     let t;
     u(t = C.has(e) ? new Set([...C].filter(t => t !== e)) : new Set([...C, e])), v(t)
   }, [C, v]);
@@ -83,6 +83,6 @@ function g(e) {
     multiSelect: !0,
     showScrollbar: !0,
     autoFocus: !0,
-    children: e => p(C, e)
+    children: e => S(C, e)
   })
 }

@@ -89,8 +89,8 @@ function T(e) {
       unit: "M"
     },
     label: f.default.Messages.MEMBER_SAFETY_DATE_OPTION_LABEL_3_MONTHS
-  }], [N, p] = i.useState(!1), S = i.useCallback(() => {
-    p(!0), _()
+  }], [N, S] = i.useState(!1), p = i.useCallback(() => {
+    S(!0), _()
   }, [_]), v = i.useCallback(e => {
     A(e)
   }, [A]), R = i.useCallback(e => {
@@ -105,7 +105,7 @@ function T(e) {
       children: N ? (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(r.MenuItem, {
           id: "back",
-          action: () => p(!1),
+          action: () => S(!1),
           render: e => (0, s.jsxs)("span", {
             ...e,
             className: m.nagivateBackContainer,
@@ -170,7 +170,7 @@ function T(e) {
           id: "guild-member-".concat(T, "-custom-option}"),
           label: f.default.Messages.MEMBER_SAFETY_DATE_OPTION_LABEL_CUSTOM,
           subtext: E ? "".concat(t, " - ").concat(l) : void 0,
-          action: S,
+          action: p,
           checked: 7 === o
         }, "option-".concat(7))]
       })

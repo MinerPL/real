@@ -19,8 +19,8 @@ var l = n("866227"),
 let _ = null,
   S = null,
   T = {},
-  p = {},
-  N = h.TooltipActions.LOADING_INITIAL_PROGRESS,
+  N = {},
+  p = h.TooltipActions.LOADING_INITIAL_PROGRESS,
   I = new i.Timeout,
   m = {
     completed: !1,
@@ -41,7 +41,7 @@ let _ = null,
     }))
   },
   g = e => {
-    m.retries = 0, m.completed = e.completed, m.initialProgressFetched = !0, m.progress = e.progress, m.lastCheckedAt = a.now(), N = m.completed ? h.TooltipActions.QUEST_COMPLETION : h.TooltipActions.TRACK_PROGRESS
+    m.retries = 0, m.completed = e.completed, m.initialProgressFetched = !0, m.progress = e.progress, m.lastCheckedAt = a.now(), p = m.completed ? h.TooltipActions.QUEST_COMPLETION : h.TooltipActions.TRACK_PROGRESS
   },
   C = (e, t, n) => {
     (!m.completed || e.dropsQuestId !== m.dropsQuestId) && (m.game = t, m.dropsQuestId = e.dropsQuestId, m.gameTitle = e.title, m.completed = !1, m.interrupted = !1, m.streamKey = n, m.retries = 0, m.lastCheckedAt = a.now(), I.start(5e3, () => A(!0)))
@@ -51,7 +51,7 @@ class R extends s.default.Store {
     this.waitFor(d.default)
   }
   getActivityPanelTooltipAction() {
-    return N
+    return p
   }
   getIsPartnerGameQuestComplete(e) {
     var t;
@@ -71,10 +71,10 @@ class R extends s.default.Store {
     return S
   }
   get activityPanelTooltipAction() {
-    return N
+    return p
   }
   get enrolledDropsByQuestId() {
-    return p
+    return N
   }
   get hasInitialProgressFetched() {
     return m.initialProgressFetched
@@ -111,14 +111,14 @@ var M = new R(r.default, {
     S = {}
   },
   DROPS_ENROLLED_USER_FETCH_SUCCESS: e => {
-    p[e.dropsQuestId] = {
+    N[e.dropsQuestId] = {
       isEnrolled: e.isEnrolled,
       enrolledUser: e.enrolledUser
     }
   },
   DROPS_FETCH_PROGRESS_SUCCESS: g,
   DROPS_FETCH_PROGRESS_FAILURE: e => {
-    !m.initialProgressFetched && (m.initialProgressFetched = !0, N = h.TooltipActions.STREAM_CTA)
+    !m.initialProgressFetched && (m.initialProgressFetched = !0, p = h.TooltipActions.STREAM_CTA)
   },
   DROPS_HEARTBEAT_SUCCESS: e => {
     g(e), T[e.dropsQuestId] = !0, A()
@@ -132,14 +132,14 @@ var M = new R(r.default, {
       m.retries = m.retries + 1, A();
       return
     }
-    N = h.TooltipActions.STREAM_CTA, 403 === n ? T[t] = !1 : m.interrupted = !0
+    p = h.TooltipActions.STREAM_CTA, 403 === n ? T[t] = !1 : m.interrupted = !0
   },
   DROPS_UNENROLL_USER: e => {
     S = null, T = {
       ...T
-    }, delete T[e.dropsQuestId], p = {
-      ...p
-    }, delete p[e.dropsQuestId], m.dropsQuestId === e.dropsQuestId && (m = {
+    }, delete T[e.dropsQuestId], N = {
+      ...N
+    }, delete N[e.dropsQuestId], m.dropsQuestId === e.dropsQuestId && (m = {
       completed: !1,
       initialProgressFetched: !1,
       interrupted: !1,
@@ -147,7 +147,7 @@ var M = new R(r.default, {
     })
   },
   STREAM_CLOSE: () => {
-    m.completed && (N = h.TooltipActions.QUEST_COMPLETION), m.interrupted = !1, m.retries = 0, I.stop()
+    m.completed && (p = h.TooltipActions.QUEST_COMPLETION), m.interrupted = !1, m.retries = 0, I.stop()
   },
   STREAM_START: function(e) {
     var t;
@@ -177,12 +177,12 @@ var M = new R(r.default, {
     });
     if (null == S || !S.dropsEnabled) return;
     let T = S.autoEnrollment;
-    null != p[_.dropsQuestId] && p[_.dropsQuestId].isEnrolled || T ? C(_, c, i) : r.default.wait(async () => {
+    null != N[_.dropsQuestId] && N[_.dropsQuestId].isEnrolled || T ? C(_, c, i) : r.default.wait(async () => {
       var e;
-      await (0, f.fetchEnrolledUser)(_.dropsQuestId), (null === (e = p[_.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && C(_, c, i)
+      await (0, f.fetchEnrolledUser)(_.dropsQuestId), (null === (e = N[_.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && C(_, c, i)
     })
   },
   LOGOUT: function() {
-    T = {}, p = {}, S = {}, I.stop()
+    T = {}, N = {}, S = {}, I.stop()
   }
 })

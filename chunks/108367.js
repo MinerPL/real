@@ -27,8 +27,8 @@ var l, a, s, i, r = n("669491"),
   _ = n("522420"),
   S = n("371031"),
   T = n("674517"),
-  p = n("989306"),
-  N = n("695449"),
+  N = n("989306"),
+  p = n("695449"),
   I = n("816428"),
   m = n("710672");
 (l = s || (s = {})).CHECKED = "CHECKED", l.FRIENDS = "FRIENDS", l.SHARE_SCREEN = "SHARE_SCREEN", l.NEW_MESSAGE = "NEW_MESSAGE";
@@ -36,7 +36,7 @@ let A = {
   CHECKED: f,
   FRIENDS: h,
   SHARE_SCREEN: I,
-  NEW_MESSAGE: p
+  NEW_MESSAGE: N
 };
 (a = i || (i = {})).MISSED_MESSAGES = "MISSED_MESSAGES", a.FRIEND_REQUEST_REMINDER = "FRIEND_REQUEST_REMINDER", a.SCHEDULED_GUILD_EVENT = "SCHEDULED_GUILD_EVENT", a.TOP_MESSAGES = "TOP_MESSAGES", a.NOTIFICATION_CENTER = "NOTIFICATION_CENTER", a.UPDATE_PROFILE = "UPDATE_PROFILE", a.FIND_FRIENDS = "FIND_FRIENDS", a.ADD_FRIEND = "ADD_FRIEND", a.FIRST_MESSAGE = "FIRST_MESSAGE";
 let g = {
@@ -48,7 +48,7 @@ let g = {
     UPDATE_PROFILE: m,
     FIND_FRIENDS: d,
     ADD_FRIEND: d,
-    FIRST_MESSAGE: N
+    FIRST_MESSAGE: p
   },
   C = e => {
     switch (e.item_enum) {

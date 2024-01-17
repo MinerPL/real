@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return M
   },
   getForumPostDraftAppliedTagIds: function() {
-    return v
+    return N
   },
   getNumActiveThreads: function() {
-    return N
+    return v
   },
   collectForumAnalyticsMetadata: function() {
     return O
@@ -23,8 +23,8 @@ n.r(t), n.d(t, {
   }
 }), n("70102"), n("222007"), n("808653");
 var i = n("335710"),
-  a = n("249654"),
-  l = n("689275"),
+  l = n("249654"),
+  a = n("689275"),
   s = n("755624"),
   r = n("800843"),
   u = n("610730"),
@@ -59,20 +59,20 @@ function M(e) {
   return _.default.getUploads(e, o.DraftType.FirstThreadMessage).length
 }
 
-function v(e) {
+function N(e) {
   var t, n;
   let i = d.default.getChannel(e);
   if (null == i) return [];
-  let a = d.default.getChannel(i.parent_id),
-    l = null == a ? void 0 : a.availableTags;
-  if (null == a || null == l) return [];
+  let l = d.default.getChannel(i.parent_id),
+    a = null == l ? void 0 : l.availableTags;
+  if (null == l || null == a) return [];
   let s = null !== (n = null === (t = o.default.getThreadSettings(e)) || void 0 === t ? void 0 : t.appliedTags) && void 0 !== n ? n : new Set,
-    r = new Set(l.map(e => e.id));
+    r = new Set(a.map(e => e.id));
   return Array.from(s).filter(e => r.has(e))
 }
 
-function N(e, t) {
-  return Object.keys(l.default.getThreadsForParent(e, t)).length
+function v(e, t) {
+  return Object.keys(a.default.getThreadsForParent(e, t)).length
 }
 
 function C(e) {
@@ -84,16 +84,16 @@ function C(e) {
 }
 
 function O(e) {
-  var t, n, i, a;
+  var t, n, i, l;
   let {
-    channelId: l,
+    channelId: a,
     sessionId: s
-  } = e, r = d.default.getChannel(l);
+  } = e, r = d.default.getChannel(a);
   return null != r && r.isForumLikeChannel() ? {
     forum_channel_has_guidelines: null != r.topic && r.topic.trim().length > 0,
     forum_channel_default_emoji_reaction_id: null === (t = r.defaultReactionEmoji) || void 0 === t ? void 0 : t.emojiId,
     forum_channel_default_emoji_reaction_name: null === (n = r.defaultReactionEmoji) || void 0 === n ? void 0 : n.emojiName,
-    forum_channel_available_tag_ids: null !== (a = null === (i = r.availableTags) || void 0 === i ? void 0 : i.map(e => e.id)) && void 0 !== a ? a : [],
+    forum_channel_available_tag_ids: null !== (l = null === (i = r.availableTags) || void 0 === i ? void 0 : i.map(e => e.id)) && void 0 !== l ? l : [],
     forum_channel_tag_required: r.hasFlag(A.ChannelFlags.REQUIRE_TAG),
     forum_channel_can_create_post: c.default.can(m.Permissions.SEND_MESSAGES, r),
     forum_channel_filter_tag_ids: h.default.getFilterTagIdsAnalytics(),
@@ -106,7 +106,7 @@ function O(e) {
 }
 
 function R(e) {
-  var t, n, i, l, o, c, _;
+  var t, n, i, a, o, c, _;
   let {
     channelId: f,
     sessionId: h
@@ -123,7 +123,7 @@ function R(e) {
     thread_archived: (null === (t = g.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0,
     thread_locked: null !== (c = null === (n = g.threadMetadata) || void 0 === n ? void 0 : n.locked) && void 0 !== c && c,
     thread_auto_archive_duration_minutes: null !== (_ = null === (i = g.threadMetadata) || void 0 === i ? void 0 : i.autoArchiveDuration) && void 0 !== _ ? _ : 0,
-    thread_approximate_creation_date: a.default.extractTimestamp(f),
+    thread_approximate_creation_date: l.default.extractTimestamp(f),
     forum_post_id: g.id,
     forum_post_first_message_id: g.id,
     forum_post_num_reactions: function(e) {
@@ -138,14 +138,14 @@ function R(e) {
       var t, n;
       let i = d.default.getChannel(e);
       if (null == i) return [];
-      let a = d.default.getChannel(i.parent_id),
-        l = null == a ? void 0 : a.availableTags;
-      if (null == a || null == l) return [];
-      let s = new Set(l.map(e => e.id));
+      let l = d.default.getChannel(i.parent_id),
+        a = null == l ? void 0 : l.availableTags;
+      if (null == l || null == a) return [];
+      let s = new Set(a.map(e => e.id));
       return null !== (n = null === (t = i.appliedTags) || void 0 === t ? void 0 : t.filter(e => s.has(e))) && void 0 !== n ? n : []
     }(g.id),
     forum_post_is_pinned: g.hasFlag(A.ChannelFlags.PINNED),
-    forum_post_is_new: null === (l = E.default.getReadStateSnapshotAnalytics(g.id)) || void 0 === l ? void 0 : l.isNew,
+    forum_post_is_new: null === (a = E.default.getReadStateSnapshotAnalytics(g.id)) || void 0 === a ? void 0 : a.isNew,
     forum_post_is_unread: null === (o = E.default.getReadStateSnapshotAnalytics(g.id)) || void 0 === o ? void 0 : o.hasUnreads,
     forum_post_is_following: s.default.hasJoined(g.id),
     forum_post_attachment_mimetypes: function(e) {

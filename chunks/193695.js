@@ -13,8 +13,8 @@ var s = a("37983"),
   r = a.n(l),
   i = a("627445"),
   o = a.n(i),
-  u = a("866227"),
-  d = a.n(u),
+  d = a("866227"),
+  u = a.n(d),
   c = a("974667"),
   m = a("335710"),
   h = a("249654"),
@@ -67,8 +67,8 @@ var s = a("37983"),
   er = a("994810"),
   ei = a("867965"),
   eo = a("43836"),
-  eu = a("512630"),
-  ed = a("152637"),
+  ed = a("512630"),
+  eu = a("152637"),
   ec = a("578198"),
   em = a("968462"),
   eh = a("136460"),
@@ -115,8 +115,8 @@ var eR = n.memo(function(e) {
     threadId: a,
     goToThread: l,
     observePostVisibilityAnalytics: i
-  } = e, u = n.useRef(null), {
-    channel: d,
+  } = e, d = n.useRef(null), {
+    channel: u,
     isOpen: m,
     messageCount: h,
     unreadCount: g,
@@ -137,35 +137,35 @@ var eR = n.memo(function(e) {
       {
         content: r,
         firstMedia: i,
-        firstMediaIsEmbed: u
+        firstMediaIsEmbed: d
       } = (0, es.useForumPostFirstMessageMarkup)({
         firstMessage: l
       }),
       {
-        messageCount: d,
+        messageCount: u,
         unreadCount: c
       } = (0, es.useMessageCount)(a);
     return {
       channel: a,
       isOpen: s,
-      messageCount: d,
+      messageCount: u,
       unreadCount: c,
       firstMessage: l,
       firstMessageLoaded: n,
       firstMedia: i,
-      firstMediaIsEmbed: u,
+      firstMediaIsEmbed: d,
       content: r
     }
   }({
     threadId: a
-  }), E = (0, f.useStateFromStores)([H.default], () => H.default.getChannel(d.parent_id)), {
+  }), E = (0, f.useStateFromStores)([H.default], () => H.default.getChannel(u.parent_id)), {
     ref: N,
     height: M
   } = (0, T.default)(), A = (0, ec.useForumPostComposerStore)(e => e.setCardHeight), [v, I] = n.useState(162);
   n.useEffect(() => {
     null != M && (A(a, M + eA), I(M))
   }, [N, M, A, a, I, _]), n.useEffect(() => {
-    null == i || i(u.current, a)
+    null == i || i(d.current, a)
   }, [i, a, _]);
   let j = n.useRef(null),
     {
@@ -174,7 +174,7 @@ var eR = n.memo(function(e) {
     } = (0, ex.default)({
       facepileRef: j,
       goToThread: l,
-      channel: d
+      channel: u
     }),
     {
       role: F,
@@ -186,7 +186,7 @@ var eR = n.memo(function(e) {
       handleBlur: y
     } = (0, eg.default)(b);
   return (0, s.jsxs)("div", {
-    ref: u,
+    ref: d,
     "data-item-id": a,
     onClick: R,
     onContextMenu: O,
@@ -196,11 +196,11 @@ var eR = n.memo(function(e) {
     children: [(0, s.jsx)(x.Clickable, {
       onClick: R,
       focusProps: {
-        ringTarget: u
+        ringTarget: d
       },
       onContextMenu: O,
       "aria-label": ep.default.Messages.FORUM_POST_ARIA_LABEL.format({
-        title: d.name,
+        title: u.name,
         count: h
       }),
       className: eE.focusTarget,
@@ -214,7 +214,7 @@ var eR = n.memo(function(e) {
         className: eE.contentContainer,
         children: _ ? (0, s.jsx)(eO, {
           parentChannel: E,
-          channel: d,
+          channel: u,
           firstMessage: C,
           messageCount: h,
           unreadCount: g,
@@ -222,7 +222,7 @@ var eR = n.memo(function(e) {
           onClick: R
         }) : (0, s.jsx)(em.ForumPostContentPlaceholder, {})
       }), _ ? (null == C ? void 0 : C.blocked) || null == S ? null : (0, s.jsx)(eH, {
-        channel: d,
+        channel: u,
         firstMedia: S,
         firstMessage: C,
         isEmbed: p,
@@ -242,28 +242,28 @@ function eO(e) {
     facepileRef: i,
     onClick: o
   } = e, {
-    isNew: u
+    isNew: d
   } = (0, es.useForumPostReadStates)(a), {
-    forumPostContainsTags: d
+    forumPostContainsTags: u
   } = (0, ef.useTagsRowHooks)({
     channel: a,
-    isNew: u
+    isNew: d
   });
   return (0, s.jsxs)("div", {
     className: eE.content,
     children: [(0, s.jsxs)("div", {
       className: eE.titleAndMessage,
-      children: [d && (0, s.jsx)(ef.IncreasedActivityTagsRow, {
+      children: [u && (0, s.jsx)(ef.IncreasedActivityTagsRow, {
         channel: a,
         className: eE.tagsRow,
         tagsClassName: eE.tags
-      }), d && (0, s.jsx)("hr", {
+      }), u && (0, s.jsx)("hr", {
         className: eE.separator
       }), (0, s.jsx)(ek, {
         channel: a,
         firstMessage: n,
-        isNew: u,
-        containsTags: d
+        isNew: d,
+        containsTags: u
       }), (0, s.jsx)(x.HeadingLevel, {
         children: (0, s.jsx)(eP, {
           channel: a,
@@ -316,15 +316,15 @@ function eb(e) {
     unreadCount: l,
     facepileRef: i
   } = e, o = (0, es.useTypingUserIds)(a), {
-    mostRecentMessage: u
-  } = (0, en.useMostRecentForumMessage)(t, a), d = (0, f.useStateFromStores)([B.default], () => B.default.can(eC.Permissions.SEND_MESSAGES_IN_THREADS, a)), {
+    mostRecentMessage: d
+  } = (0, en.useMostRecentForumMessage)(t, a), u = (0, f.useStateFromStores)([B.default], () => B.default.can(eC.Permissions.SEND_MESSAGES_IN_THREADS, a)), {
     hasUnreads: c
-  } = (0, es.useForumPostReadStates)(a), m = (0, f.useStateFromStores)([et.default], () => et.default.getFirstNoReplyThreadId()), h = (0, w.useIsNonModInLockedThread)(a), g = (0, I.useNullableMessageAuthor)(u);
+  } = (0, es.useForumPostReadStates)(a), m = (0, f.useStateFromStores)([et.default], () => et.default.getFirstNoReplyThreadId()), h = (0, w.useIsNonModInLockedThread)(a), g = (0, I.useNullableMessageAuthor)(d);
   if (n > 0) {
     var C, T;
     return (0, s.jsxs)(x.Clickable, {
       onClick: e => {
-        null != u && null != a.parent_id && (e.stopPropagation(), (0, ei.trackForumPostClicked)({
+        null != d && null != a.parent_id && (e.stopPropagation(), (0, ei.trackForumPostClicked)({
           guildId: a.guild_id,
           channelId: a.parent_id,
           postId: a.id,
@@ -332,19 +332,19 @@ function eb(e) {
             page: eC.AnalyticsPages.GUILD_CHANNEL,
             section: eC.AnalyticsSections.FORUM_CHANNEL_POST
           }
-        }), e.shiftKey ? (0, P.transitionToThreadMessage)(a, u.id, e_.OpenThreadAnalyticsLocations.BROWSER) : y.default.openThreadAsSidebar({
+        }), e.shiftKey ? (0, P.transitionToThreadMessage)(a, d.id, e_.OpenThreadAnalyticsLocations.BROWSER) : y.default.openThreadAsSidebar({
           guildId: a.guild_id,
           channelId: a.id,
           baseChannelId: a.parent_id,
           flash: !0,
           details: {
             type: D.SidebarOpenDetailsType.THREAD,
-            initialMessageId: u.id
+            initialMessageId: d.id
           }
         }))
       },
       children: [(0, s.jsxs)(x.HiddenVisually, {
-        children: ["Latest message:", null != g ? null !== (C = g.nick) && void 0 !== C ? C : ep.default.Messages.UNKNOWN_USER : null, " ", null == (T = null == u ? void 0 : u.content) ? "" : T.length > 120 ? "".concat(T.substring(0, 120), "...") : T]
+        children: ["Latest message:", null != g ? null !== (C = g.nick) && void 0 !== C ? C : ep.default.Messages.UNKNOWN_USER : null, " ", null == (T = null == d ? void 0 : d.content) ? "" : T.length > 120 ? "".concat(T.substring(0, 120), "...") : T]
       }), (0, s.jsxs)(x.FocusBlock, {
         className: eE.replies,
         children: [(0, s.jsx)(ew, {
@@ -357,7 +357,7 @@ function eb(e) {
           facepileRef: i
         }) : (0, s.jsx)(ey, {
           channel: a,
-          mostRecentMessage: u,
+          mostRecentMessage: d,
           hasUnreads: c
         })]
       })]
@@ -371,7 +371,7 @@ function eb(e) {
       className: r(eE.mostRecentMessageContent, eE.nonUserMessage, eE.lockedMessage),
       children: ep.default.Messages.THREAD_HEADER_NOTICE_ACTIVE_LOCKED
     })
-  }) : d && 0 === n ? (0, s.jsx)(x.FocusBlock, {
+  }) : u && 0 === n ? (0, s.jsx)(x.FocusBlock, {
     "aria-hidden": !0,
     className: eE.replies,
     children: o.length > 0 ? (0, s.jsx)(eL, {
@@ -392,7 +392,7 @@ function eL(e) {
   } = e;
   return (0, s.jsxs)("div", {
     className: eE.typing,
-    children: [(0, s.jsx)(ed.Facepile, {
+    children: [(0, s.jsx)(eu.Facepile, {
       channel: t,
       userIds: a,
       facepileRef: n
@@ -444,7 +444,7 @@ let ey = n.memo(function(e) {
     channel: a,
     mostRecentMessage: l,
     hasUnreads: i
-  } = e, o = (0, I.useNullableMessageAuthor)(l), u = (0, f.useStateFromStores)([V.default], () => null != l && V.default.isBlocked(l.author.id)), d = (0, f.useStateFromStores)([B.default], () => B.default.can(eC.Permissions.MANAGE_MESSAGES, a)), c = U.RenderSpoilers.useSetting(), m = (0, eo.useIsRecentMessageDeleted)(a), {
+  } = e, o = (0, I.useNullableMessageAuthor)(l), d = (0, f.useStateFromStores)([V.default], () => null != l && V.default.isBlocked(l.author.id)), u = (0, f.useStateFromStores)([B.default], () => B.default.can(eC.Permissions.MANAGE_MESSAGES, a)), c = U.RenderSpoilers.useSetting(), m = (0, eo.useIsRecentMessageDeleted)(a), {
     content: h
   } = n.useMemo(() => (null == l ? void 0 : l.content) != null && "" !== l.content ? (0, v.default)(l, {
     formatInline: !0,
@@ -452,7 +452,7 @@ let ey = n.memo(function(e) {
   }) : {
     content: null
   }, [l]), g = null != l && (0, A.default)(l), C = null;
-  if (u) C = (0, s.jsx)(x.Text, {
+  if (d) C = (0, s.jsx)(x.Text, {
     className: eE.nonUserMessage,
     variant: "text-sm/medium",
     color: "text-muted",
@@ -468,7 +468,7 @@ let ey = n.memo(function(e) {
     } : g ? {
       contentPlaceholder: null,
       renderedContent: ee.default.stringify(l, a)
-    } : (0, Q.renderSingleLineMessage)(l, h, u, r(eE.mostRecentMessageContent, eM.inlineFormat, eM.smallFontSize), {
+    } : (0, Q.renderSingleLineMessage)(l, h, d, r(eE.mostRecentMessageContent, eM.inlineFormat, eM.smallFontSize), {
       iconClass: eE.messageContentIcon,
       iconSize: eS.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
     });
@@ -494,7 +494,7 @@ let ey = n.memo(function(e) {
       children: [null != T ? T : "", null != l ? ":" : ""]
     }), a.id);
   return (0, s.jsx)(X.ObscuredDisplayContext.Provider, {
-    value: (0, M.default)(c, d),
+    value: (0, M.default)(c, u),
     children: (0, s.jsxs)("div", {
       className: eE.mostRecentMessage,
       children: [null == T || g ? null : (0, s.jsx)("div", {
@@ -517,10 +517,10 @@ function eD(e) {
     firstMessage: a
   } = e, l = (0, f.useStateFromStores)([H.default], () => H.default.getChannel(t.parent_id)), i = (0, es.useDefaultReactionEmoji)(l), {
     disableReactionUpdates: o,
-    disableReactionCreates: u,
-    isLurking: d,
+    disableReactionCreates: d,
+    isLurking: u,
     isPendingMember: c
-  } = (0, j.default)(t), m = (0, F.findReactionIndex)(a.reactions, i) >= 0, h = !m && !u, {
+  } = (0, j.default)(t), m = (0, F.findReactionIndex)(a.reactions, i) >= 0, h = !m && !d, {
     ref: g,
     width: x
   } = (0, T.default)(), [C, _] = n.useState(10), [S, p] = n.useState(!0);
@@ -536,7 +536,7 @@ function eD(e) {
       message: a,
       readOnly: !1,
       useChatFontScaling: !0,
-      isLurking: d,
+      isLurking: u,
       isPendingMember: c,
       emoji: i,
       type: N.ReactionTypes.NORMAL,
@@ -548,7 +548,7 @@ function eD(e) {
     }) : null, (0, s.jsx)(F.default, {
       message: a,
       channel: t,
-      disableReactionCreates: u,
+      disableReactionCreates: d,
       disableReactionUpdates: o,
       useChatFontScaling: !0,
       className: eE.messageReactions,
@@ -558,7 +558,7 @@ function eD(e) {
       maxReactions: C
     }), (0, s.jsx)("div", {
       className: eE.addReactionContainer,
-      children: !u && (0, s.jsx)(R.ButtonAddReaction, {
+      children: !d && (0, s.jsx)(R.ButtonAddReaction, {
         type: N.ReactionTypes.NORMAL,
         message: a,
         channel: t,
@@ -607,12 +607,12 @@ function eU(e) {
     channel: a
   } = e, {
     sortOrder: n
-  } = (0, ea.useForumChannelStore)(a.parent_id), l = (0, es.useLastActiveTimestamp)(a, n), r = (0, f.useStateFromStores)([G.default], () => G.default.lastMessageId(a.id)), i = null != r ? h.default.extractTimestamp(r) : null, o = null === (t = a.threadMetadata) || void 0 === t ? void 0 : t.createTimestamp, u = null == l ? null : n === m.ThreadSortOrder.CREATION_DATE ? ep.default.Messages.FORUM_POST_CREATED_AT_TOOLTIP.format({
+  } = (0, ea.useForumChannelStore)(a.parent_id), l = (0, es.useLastActiveTimestamp)(a, n), r = (0, f.useStateFromStores)([G.default], () => G.default.lastMessageId(a.id)), i = null != r ? h.default.extractTimestamp(r) : null, o = null === (t = a.threadMetadata) || void 0 === t ? void 0 : t.createTimestamp, d = null == l ? null : n === m.ThreadSortOrder.CREATION_DATE ? ep.default.Messages.FORUM_POST_CREATED_AT_TOOLTIP.format({
     timestamp: l
   }) : l, c = n === m.ThreadSortOrder.CREATION_DATE && null != o ? ep.default.Messages.FORUM_POST_CREATED_AT_TOOLTIP.format({
-    timestamp: (0, $.dateFormat)(d(o), "LLLL")
-  }) : null != i ? (0, $.dateFormat)(d(i), "LLLL") : null;
-  return null == c || null == u ? null : (0, s.jsx)(x.Tooltip, {
+    timestamp: (0, $.dateFormat)(u(o), "LLLL")
+  }) : null != i ? (0, $.dateFormat)(u(i), "LLLL") : null;
+  return null == c || null == d ? null : (0, s.jsx)(x.Tooltip, {
     text: c,
     tooltipClassName: eE.timestampTooltip,
     "aria-label": ep.default.Messages.FORUM_POST_CREATED_AT_TOOLTIP_LABEL,
@@ -620,7 +620,7 @@ function eU(e) {
       variant: "text-xs/medium",
       color: "header-secondary",
       ...e,
-      children: u
+      children: d
     })
   })
 }
@@ -665,7 +665,7 @@ function eH(e) {
     firstMessage: n,
     isEmbed: l,
     contentHeight: i
-  } = e, o = (0, f.useStateFromStores)([z.default], () => z.default.isFocused()), u = (0, p.isAnimatedImageUrl)(a.src), d = U.GifAutoPlay.useSetting(), {
+  } = e, o = (0, f.useStateFromStores)([z.default], () => z.default.isFocused()), d = (0, p.isAnimatedImageUrl)(a.src), u = U.GifAutoPlay.useSetting(), {
     src: c,
     width: m,
     height: h,
@@ -704,12 +704,12 @@ function eH(e) {
         minHeight: i,
         maxHeight: i,
         alt: null != g && C ? _ : g,
-        autoPlay: d,
-        animated: u && !C && o,
+        autoPlay: u,
+        animated: d && !C && o,
         imageContainerClassName: r({
           [eE.obscured]: C
         })
-      }), C && (0, s.jsx)(eu.default, {
+      }), C && (0, s.jsx)(ed.default, {
         iconClassname: eE.obscuredTag,
         obscureReason: T
       })]

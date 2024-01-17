@@ -26,8 +26,8 @@ var n = s("37983"),
   f = s("680986"),
   m = s("90625"),
   g = s("724210"),
-  p = s("782340"),
-  S = s("260177"),
+  S = s("782340"),
+  p = s("260177"),
   v = s("552175"),
   x = s("772870");
 let C = 16;
@@ -57,7 +57,7 @@ function N(e) {
     shownTags: c,
     remainingTags: f,
     moreTagsCount: g,
-    isPinned: S,
+    isPinned: p,
     shouldRenderTagsRow: N
   } = T({
     channel: t,
@@ -67,10 +67,10 @@ function N(e) {
   } = (0, h.useForumChannelStore)(t.id);
   return N ? (0, n.jsxs)("div", {
     className: i(x.increasedActivityTags, r),
-    children: [S && (0, n.jsx)("div", {
+    children: [p && (0, n.jsx)("div", {
       className: v.pinIcon,
       children: (0, n.jsx)(o.Tooltip, {
-        text: p.default.Messages.PINNED_POST,
+        text: S.default.Messages.PINNED_POST,
         children: e => (0, n.jsx)(d.default, {
           ...e,
           width: C,
@@ -120,13 +120,13 @@ function E(e) {
   return N ? (0, n.jsxs)("div", {
     className: i(x.tags, l),
     children: [s ? (0, n.jsx)(c.TextBadge, {
-      className: i(S.newBadge, S.inTagsRow),
+      className: i(p.newBadge, p.inTagsRow),
       color: r.default.unsafe_rawColors.BRAND_260.css,
-      text: p.default.Messages.NEW
+      text: S.default.Messages.NEW
     }) : null, v && (0, n.jsx)("div", {
       className: x.pinIcon,
       children: (0, n.jsx)(o.Tooltip, {
-        text: p.default.Messages.PINNED_POST,
+        text: S.default.Messages.PINNED_POST,
         children: e => (0, n.jsx)(d.default, {
           ...e,
           width: C,

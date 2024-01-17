@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("37983");
 n("884691");
-var u = n("446674"),
-  l = n("77078"),
+var l = n("446674"),
+  u = n("77078"),
   o = n("228944"),
   r = n("201131"),
   a = n("702873"),
@@ -18,16 +18,16 @@ var u = n("446674"),
   f = n("782340");
 
 function _(e, t) {
-  let n = (0, u.useStateFromStores)([c.default], () => null != e && c.default.canWithPartialContext(E.Permissions.MANAGE_MESSAGES, {
+  let n = (0, l.useStateFromStores)([c.default], () => null != e && c.default.canWithPartialContext(E.Permissions.MANAGE_MESSAGES, {
       channelId: e
     }), [e]),
-    _ = (0, u.useStateFromStores)([s.default], () => s.default.getChannel(e), [e]),
-    T = (0, u.useStateFromStores)([d.default], () => null != e && null != t ? d.default.getMessage(e, t) : null),
+    _ = (0, l.useStateFromStores)([s.default], () => s.default.getChannel(e), [e]),
+    T = (0, l.useStateFromStores)([d.default], () => null != e && null != t ? d.default.getMessage(e, t) : null),
     S = (0, r.useAutomodAlertActions)(null != T ? T : null);
   if (null == _ || null == T) return null;
   let I = null != S && S.actions.hasOwnProperty(o.AutomodAlertActionType.SET_COMPLETED) ? o.AutomodAlertActionType.UNSET_COMPLETED : o.AutomodAlertActionType.SET_COMPLETED,
     N = I === o.AutomodAlertActionType.SET_COMPLETED ? f.default.Messages.GUILD_AUTOMOD_ALERT_SET_COMPLETED : f.default.Messages.GUILD_AUTOMOD_ALERT_UNSET_COMPLETED;
-  return n && null != t ? (0, i.jsx)(l.MenuItem, {
+  return n && null != t ? (0, i.jsx)(u.MenuItem, {
     id: "mark-automod-alert-completed",
     label: N,
     action: () => {

@@ -22,9 +22,9 @@ let _ = {
   },
   S = _,
   T = {},
-  p = null;
+  N = null;
 (a = l || (l = {})).IS_OWNER = "is_owner", a.IS_ADMIN = "is_admin", a.IS_COMMUNITY = "is_community", a.GUILD_SIZE = "guild_size", a.IS_HUB = "is_hub", a.IS_VIEWING = "is_viewing", a.GUILD_PERMISSIONS = "guild_permissions", a.GUILD_SIZE_ALL = "guild_size_all";
-let N = new Set(Object.values(l));
+let p = new Set(Object.values(l));
 
 function I(e) {
   let {
@@ -34,7 +34,7 @@ function I(e) {
   } = e;
   if (0 === t.length) return !0;
   for (let e of t)
-    if (!N.has(e)) return !1;
+    if (!p.has(e)) return !1;
   let a = t.includes("guild_size_all"),
     i = !0,
     r = Object.values(d.default.getGuilds());
@@ -65,8 +65,8 @@ function I(e) {
     if (t.includes("is_owner") && !d || t.includes("is_admin") && !_) continue;
     null == (T = null != T ? T : {})[e.key] && (T[e.key] = e);
     let S = f.default.getGuildId(),
-      p = null != S && S === o.id;
-    if ((!t.includes("is_viewing") || p) && !a) return !0
+      N = null != S && S === o.id;
+    if ((!t.includes("is_viewing") || N) && !a) return !0
   }
   return !!a && !!i || !1
 }
@@ -77,12 +77,12 @@ function m(e) {
   } = e;
   if (S.lastFetched = Date.now(), null != t && null == S.hiddenSurveys[t.key]) {
     if (!I(t)) return;
-    p = t
+    N = t
   }
 }
 
 function A() {
-  if (null != p && (I(p) || (p = null, 0))) return !1;
+  if (null != N && (I(N) || (N = null, 0))) return !1;
   ! function() {
     T = null != T ? T : {};
     let e = Object.values(T)[0];
@@ -93,8 +93,8 @@ function A() {
       });
       return
     }
-    if (null == p) return;
-    p = null
+    if (null == N) return;
+    N = null
   }()
 }
 class g extends i.default.PersistedStore {
@@ -105,7 +105,7 @@ class g extends i.default.PersistedStore {
     return S
   }
   getCurrentSurvey() {
-    return p
+    return N
   }
   getSurveyOverride() {
     return S.surveyOverride
@@ -127,7 +127,7 @@ var C = new g(r.default, {
     let {
       key: t
     } = e;
-    S.hiddenSurveys[t] = !0, p = null, T = null != T ? T : {}, delete T[t]
+    S.hiddenSurveys[t] = !0, N = null, T = null != T ? T : {}, delete T[t]
   },
   SURVEY_OVERRIDE: function(e) {
     let {

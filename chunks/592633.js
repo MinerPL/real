@@ -10,8 +10,8 @@ var s = a("37983"),
   r = a.n(l),
   i = a("335710"),
   o = a("446674"),
-  u = a("669491"),
-  d = a("77078"),
+  d = a("669491"),
+  u = a("77078"),
   c = a("125667"),
   m = a("955735"),
   h = a("963119"),
@@ -52,8 +52,8 @@ var s = a("37983"),
       overrideMedia: l,
       className: r,
       coords: i,
-      gridCoords: u,
-      gridSectionBoundaries: d,
+      gridCoords: d,
+      gridSectionBoundaries: u,
       observePostVisibilityAnalytics: c
     } = e, m = (0, o.useStateFromStores)([S.default], () => S.default.getChannel(a));
     return null == m ? null : (0, s.jsx)(z, {
@@ -63,9 +63,9 @@ var s = a("37983"),
       overrideMedia: l,
       className: r,
       coords: i,
-      gridCoords: u,
+      gridCoords: d,
       observePostVisibilityAnalytics: c,
-      gridSectionBoundaries: d
+      gridSectionBoundaries: u
     })
   });
 
@@ -116,7 +116,7 @@ function z(e) {
     ei = (null == v ? void 0 : v.blocked) || null == (null != c ? c : P),
     {
       onFocus: eo,
-      ...eu
+      ...ed
     } = (0, w.useForumGridItem)({
       id: t,
       row: f.row,
@@ -124,7 +124,7 @@ function z(e) {
       section: f.section,
       boundaries: g
     }),
-    ed = a.isMediaPost();
+    eu = a.isMediaPost();
   return (0, s.jsxs)("li", {
     ref: M,
     onClick: Z,
@@ -136,7 +136,7 @@ function z(e) {
     style: {
       ...h
     },
-    children: [(0, s.jsx)(d.Clickable, {
+    children: [(0, s.jsx)(u.Clickable, {
       onClick: Z,
       focusProps: {
         ringTarget: M
@@ -147,7 +147,7 @@ function z(e) {
         count: V
       }),
       className: G.focusTarget,
-      ...eu
+      ...ed
     }), (0, s.jsxs)("div", {
       className: G.header,
       children: [(0, s.jsxs)("div", {
@@ -157,7 +157,7 @@ function z(e) {
           children: [(0, s.jsx)(y.default, {
             channel: a,
             message: v
-          }), (0, s.jsx)(d.Text, {
+          }), (0, s.jsx)(u.Text, {
             variant: "text-xs/normal",
             color: "header-secondary",
             className: G.postCreationTimestamp,
@@ -165,11 +165,11 @@ function z(e) {
           })]
         }), z ? (0, s.jsx)(I.TextBadge, {
           className: r(G.newBadge),
-          color: u.default.unsafe_rawColors.BRAND_260.css,
+          color: d.default.unsafe_rawColors.BRAND_260.css,
           text: B.default.Messages.NEW
         }) : null]
-      }), (0, s.jsx)(d.HeadingLevel, {
-        children: (0, s.jsx)(d.Heading, {
+      }), (0, s.jsx)(u.HeadingLevel, {
+        children: (0, s.jsx)(u.Heading, {
           variant: "heading-md/extrabold",
           className: G.title,
           color: K ? "header-primary" : "text-muted",
@@ -181,7 +181,7 @@ function z(e) {
       })]
     }), (0, s.jsx)("div", {
       className: G.postBody,
-      children: (0, s.jsx)(d.FocusBlock, {
+      children: (0, s.jsx)(u.FocusBlock, {
         children: ei ? (0, s.jsx)(q, {
           channel: a,
           firstMessage: v,
@@ -193,9 +193,9 @@ function z(e) {
             mediaAttachments: ea,
             globalSpoilerRenderSetting: et,
             containerWidth: es,
-            containerHeight: ed ? es * (9 / 16) : en,
+            containerHeight: eu ? es * (9 / 16) : en,
             canAutoPlay: $,
-            shouldMaintainAspectRatio: ed
+            shouldMaintainAspectRatio: eu
           }), (0, s.jsx)("div", {
             className: G.tagsRow,
             children: (0, s.jsx)(D.default, {
@@ -207,7 +207,7 @@ function z(e) {
       })
     }), (0, s.jsx)("div", {
       className: G.footer,
-      children: (0, s.jsx)(d.FocusBlock, {
+      children: (0, s.jsx)(u.FocusBlock, {
         children: (0, s.jsx)(W, {
           channel: a,
           firstMessage: v,
@@ -247,7 +247,7 @@ function W(e) {
             facepileRef: a
           }), (0, s.jsx)("div", {
             className: G.dots,
-            children: (0, s.jsx)(d.Dots, {
+            children: (0, s.jsx)(u.Dots, {
               themed: !0,
               dotRadius: 2
             })
@@ -283,9 +283,9 @@ let K = e => e.preventDefault(),
       containerWidth: l,
       containerHeight: i,
       canAutoPlay: o,
-      shouldMaintainAspectRatio: u = !1
+      shouldMaintainAspectRatio: d = !1
     } = e, {
-      containsVideo: d,
+      containsVideo: u,
       containsGif: c
     } = n.useMemo(() => (0, O.messageContainsGifOrVideo)(t), [t]), x = n.useMemo(() => t.slice(P.MOSAIC_MIN_INDEX, P.MOSAIC_MAX_INDEX), [t]), C = (0, P.useImageContainerStyles)({
       numAttachments: x.length,
@@ -304,12 +304,12 @@ let K = e => e.preventDefault(),
         height: e.height,
         alt: null != e.alt && l ? h : e.alt,
         onClick: K,
-        shouldRenderAccessory: !c && !d
+        shouldRenderAccessory: !c && !u
       }, S = (0, f.isAnimatedImageUrl)(e.src) ? "".concat(e.src, "?format=png") : e.src, p = o && !l ? e.src : S;
       return (0, s.jsxs)("div", {
         className: G.bodyMediaFrame,
         style: C[t],
-        children: [u ? (0, s.jsx)(m.default, {
+        children: [d ? (0, s.jsx)(m.default, {
           ...x,
           src: p,
           backgroundSrc: S,
@@ -341,7 +341,7 @@ let K = e => e.preventDefault(),
           })
         })]
       }, e.src)
-    }), [o, c, d, a, C, T, x, u, _]);
+    }), [o, c, u, a, C, T, x, d, _]);
     return (0, s.jsxs)("div", {
       className: G.bodyMedia,
       style: {
@@ -350,9 +350,9 @@ let K = e => e.preventDefault(),
       },
       children: [(0, s.jsx)(s.Fragment, {
         children: S
-      }), (c || d) && (0, s.jsxs)("div", {
+      }), (c || u) && (0, s.jsxs)("div", {
         className: G.mediaIconsRow,
-        children: [d && (0, s.jsx)(A.default, {
+        children: [u && (0, s.jsx)(A.default, {
           width: "22px",
           height: "22px",
           className: G.mediaIcon
@@ -381,7 +381,7 @@ function Z(e) {
     className: n,
     children: [(0, s.jsx)(a, {
       className: l
-    }), (0, s.jsxs)(d.Text, {
+    }), (0, s.jsxs)(u.Text, {
       variant: "text-xs/medium",
       className: r,
       children: ["+", t]
@@ -396,7 +396,7 @@ function q(e) {
     isFirstMessageLoaded: l,
     containerWidth: i,
     hasUnreads: o
-  } = e, [u, c] = (0, L.getFrameDimensions)(i - 2 * L.IMAGE_PADDING), {
+  } = e, [d, c] = (0, L.getFrameDimensions)(i - 2 * L.IMAGE_PADDING), {
     content: m
   } = (0, j.useForumPostFirstMessageMarkup)({
     firstMessage: a,
@@ -408,16 +408,16 @@ function q(e) {
     channel: t,
     isNew: !1
   }), f = n.useMemo(() => ({
-    width: u,
+    width: d,
     height: c
-  }), [u, c]), g = o ? G.textContentUnread : G.textContentRead;
+  }), [d, c]), g = o ? G.textContentUnread : G.textContentRead;
   return (0, s.jsx)(s.Fragment, {
     children: (0, s.jsxs)("div", {
       className: G.contentPreview,
       style: f,
       children: [(0, s.jsxs)("div", {
         className: G.content,
-        children: [l && null == a && (0, s.jsx)(d.Text, {
+        children: [l && null == a && (0, s.jsx)(u.Text, {
           variant: "text-sm/normal",
           color: o ? "header-secondary" : "text-muted",
           children: B.default.Messages.REPLY_QUOTE_MESSAGE_DELETED

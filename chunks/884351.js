@@ -15,8 +15,8 @@ var n = l("917351"),
   d = l("888198"),
   f = l("290689"),
   p = l("804888"),
-  h = l("401690"),
-  E = l("845579"),
+  E = l("401690"),
+  h = l("845579"),
   g = l("42203"),
   m = l("923959"),
   A = l("26989"),
@@ -163,7 +163,7 @@ let G = d.default.RULES,
     },
     emoticon: {
       match(e, t, l) {
-        if (!E.ConvertEmoticons.getSetting() || 0 !== l.length && !/\s$/.test(l)) return null;
+        if (!h.ConvertEmoticons.getSetting() || 0 !== l.length && !/\s$/.test(l)) return null;
         let n = s.default.EMOJI_SHORTCUT_RE.exec(e);
         return null == n || n[0].length !== e.length && " " !== e[n[0].length] && "\n" !== e[n[0].length] ? null : n
       },
@@ -407,12 +407,12 @@ function Y(e) {
       id: e.channel.id,
       text: e.channel.name
     }))).value() : [],
-    f = h.default.computeAllActiveJoinedThreads(l).map(e => ({
+    f = E.default.computeAllActiveJoinedThreads(l).map(e => ({
       id: e.id,
       text: e.name
     })),
     p = o.default.getDisambiguatedEmojiContext(l),
-    E = p.getEscapedCustomEmoticonNames(),
+    h = p.getEscapedCustomEmoticonNames(),
     g = p.getCustomEmoji(),
     C = p.getCustomEmoticonRegex(),
     S = N.default.getCurrentUser(),
@@ -430,7 +430,7 @@ function Y(e) {
       customEmoticonsRegex: C,
       canViewAndUsePackEmoji: T,
       customEmoji: g,
-      textExclusions: E,
+      textExclusions: h,
       disableErrorGuards: !0
     };
   return I

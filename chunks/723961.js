@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("37983"),
   l = n("884691"),
   s = n("77078"),
-  r = n("132755"),
-  a = n("78404"),
+  a = n("132755"),
+  r = n("78404"),
   o = n("520497"),
   u = n("812809"),
   d = n("129722"),
@@ -38,9 +38,9 @@ var i = n("37983"),
         },
         className: h.playButton,
         "aria-label": E ? m.default.Messages.STOP : m.default.Messages.PLAY,
-        children: E ? (0, i.jsx)(a.default, {
+        children: E ? (0, i.jsx)(r.default, {
           className: h.playIcon
-        }) : (0, i.jsx)(r.default, {
+        }) : (0, i.jsx)(a.default, {
           className: h.playIcon
         })
       }), (0, i.jsx)("div", {

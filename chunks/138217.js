@@ -19,8 +19,8 @@ var l = n("917351"),
   _ = n("42203"),
   S = n("377253"),
   T = n("660478"),
-  p = n("27618"),
-  N = n("162771"),
+  N = n("27618"),
+  p = n("162771"),
   I = n("282109"),
   m = n("697218"),
   A = n("49111");
@@ -51,10 +51,10 @@ function U(e) {
   if ((0, c.default)(e)) return null;
   null == n && (n = e.channel_id);
   let l = _.default.getChannel(n);
-  if (null == l || l.type === A.ChannelTypes.DM || L.guildFilter === A.RecentMentionsFilters.THIS_SERVER && l.getGuildId() !== N.default.getGuildId()) return null;
+  if (null == l || l.type === A.ChannelTypes.DM || L.guildFilter === A.RecentMentionsFilters.THIS_SERVER && l.getGuildId() !== p.default.getGuildId()) return null;
   let a = null === (t = e.author) || void 0 === t ? void 0 : t.id,
     s = h.default.getId();
-  if (null != a && p.default.isBlocked(a) || a === s) return null;
+  if (null != a && N.default.isBlocked(a) || a === s) return null;
   e = P(e);
   let i = !L.everyoneFilter,
     r = !L.roleFilter;
@@ -114,7 +114,7 @@ function k() {
 }
 
 function w() {
-  C = C.filter(e => !p.default.isBlocked(e.author.id))
+  C = C.filter(e => !N.default.isBlocked(e.author.id))
 }
 
 function B(e) {

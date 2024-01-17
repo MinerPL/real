@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var l = n("37983");
 n("884691");
-var i = n("414456"),
-  r = n.n(i),
+var r = n("414456"),
+  i = n.n(r),
   s = n("77078"),
   a = n("181114"),
   o = n("771325"),
@@ -24,38 +24,38 @@ function E(e) {
   let {
     showRemoveAvatarButton: t,
     errors: n,
-    onAvatarChange: i,
+    onAvatarChange: r,
     sectionTitle: E,
-    changeAvatarButtonText: C,
-    guildId: p,
+    changeAvatarButtonText: p,
+    guildId: C,
     className: _,
-    disabled: v = !1,
-    isTryItOutFlow: m = !1,
-    forcedDivider: R,
-    withHighlight: I = !1
-  } = e, g = I ? a.default : s.Button;
+    disabled: m = !1,
+    isTryItOutFlow: v = !1,
+    forcedDivider: I,
+    withHighlight: g = !1
+  } = e, S = g ? a.default : s.Button;
   return (0, l.jsx)(u.default, {
     className: _,
     title: E,
     errors: n,
-    disabled: v,
-    forcedDivider: R,
+    disabled: m,
+    forcedDivider: I,
     children: (0, l.jsxs)("div", {
       className: f.buttonsContainer,
-      children: [(0, l.jsx)(g, {
-        className: r({
-          [f.buttonHighlighted]: I
+      children: [(0, l.jsx)(S, {
+        className: i({
+          [f.buttonHighlighted]: g
         }),
         size: s.Button.Sizes.SMALL,
-        onClick: () => (0, o.handleOpenSelectImageModal)(c.UploadTypes.AVATAR, p, m, m ? h : void 0),
-        children: null != C ? C : d.default.Messages.USER_SETTINGS_CHANGE_AVATAR
+        onClick: () => (0, o.handleOpenSelectImageModal)(c.UploadTypes.AVATAR, C, v, v ? h : void 0),
+        children: null != p ? p : d.default.Messages.USER_SETTINGS_CHANGE_AVATAR
       }), t && (0, l.jsx)(s.Button, {
         className: f.removeButton,
         color: s.Button.Colors.PRIMARY,
         look: s.Button.Looks.LINK,
         size: s.Button.Sizes.SMALL,
-        onClick: () => i(null),
-        children: null != p ? d.default.Messages.USER_SETTINGS_RESET_AVATAR : d.default.Messages.USER_SETTINGS_REMOVE_AVATAR
+        onClick: () => r(null),
+        children: null != C ? d.default.Messages.USER_SETTINGS_RESET_AVATAR : d.default.Messages.USER_SETTINGS_REMOVE_AVATAR
       })]
     })
   })

@@ -1,44 +1,44 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return c
   }
-}), n("881410");
-var r = n("37983");
-n("884691");
-var u = n("414456"),
-  i = n.n(u),
-  l = n("454589"),
-  a = n("642906"),
-  o = n("85336"),
-  s = n("109872");
+}), a("881410");
+var n = a("37983");
+a("884691");
+var r = a("414456"),
+  s = a.n(r),
+  l = a("454589"),
+  o = a("642906"),
+  i = a("85336"),
+  u = a("109872");
 
 function c(e) {
   let {
     className: t,
-    isEligibleForTrial: n = !1
+    isEligibleForTrial: a = !1
   } = e, {
-    step: u,
+    step: r,
     breadcrumbs: c,
     startedPaymentFlowWithPaymentSourcesRef: d
-  } = (0, a.usePaymentContext)();
+  } = (0, o.usePaymentContext)();
   if (null == c || 0 === c.length) return null;
-  let _ = c.flatMap(e => {
+  let p = c.flatMap(e => {
     let t = e.useBreadcrumbLabel();
     return null != t ? {
       id: e.id,
       label: t
     } : []
   });
-  return 0 === _.length ? null : (_ = _.filter(e => {
-    let t = e.id !== o.Step.ADD_PAYMENT_STEPS,
-      r = e.id === o.Step.ADD_PAYMENT_STEPS && !d.current;
-    return !n || n && (t || r)
-  }), (0, r.jsx)("div", {
-    className: i("breadcrumb", s.wrapper, t),
-    children: (0, r.jsx)(l.default, {
-      activeId: u,
-      breadcrumbs: _
+  return 0 === p.length ? null : (p = p.filter(e => {
+    let t = e.id !== i.Step.ADD_PAYMENT_STEPS,
+      n = e.id === i.Step.ADD_PAYMENT_STEPS && !d.current;
+    return !a || a && (t || n)
+  }), (0, n.jsx)("div", {
+    className: s("breadcrumb", u.wrapper, t),
+    children: (0, n.jsx)(l.default, {
+      activeId: r,
+      breadcrumbs: p
     })
   }))
 }

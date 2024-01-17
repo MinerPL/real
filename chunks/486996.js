@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return E
   }
 });
-var a = n("446674"),
-  l = n("913144"),
+var l = n("446674"),
+  a = n("913144"),
   r = n("267567"),
   i = n("875978"),
   o = n("166257"),
@@ -15,9 +15,9 @@ var a = n("446674"),
 let d = {};
 class f {
   static ensure(e, t, n) {
-    var a, l;
-    let r = "".concat(e, ":").concat(t.name, ":").concat(null !== (a = t.id) && void 0 !== a ? a : "", ":").concat(n);
-    return d[r] = null !== (l = d[r]) && void 0 !== l ? l : new f
+    var l, a;
+    let r = "".concat(e, ":").concat(t.name, ":").concat(null !== (l = t.id) && void 0 !== l ? l : "", ":").concat(n);
+    return d[r] = null !== (a = d[r]) && void 0 !== a ? a : new f
   }
   constructor() {
     this.fetched = !1, this.users = {}
@@ -28,19 +28,19 @@ function R(e) {
   let {
     type: t,
     messageId: n,
-    userId: a,
-    emoji: l,
+    userId: l,
+    emoji: a,
     burst: r,
     reactionType: o
-  } = e, s = null != o ? o : r ? i.ReactionTypes.BURST : i.ReactionTypes.NORMAL, u = f.ensure(n, l, s);
+  } = e, s = null != o ? o : r ? i.ReactionTypes.BURST : i.ReactionTypes.NORMAL, u = f.ensure(n, a, s);
   if ("MESSAGE_REACTION_ADD" === t) {
-    let e = c.default.getUser(a);
-    null != e && (u.users[a] = e)
-  } else delete u.users[a]
+    let e = c.default.getUser(l);
+    null != e && (u.users[l] = e)
+  } else delete u.users[l]
 }
-class m extends a.default.Store {
-  getReactions(e, t, n, a, l) {
-    let i = f.ensure(t, n, l);
+class m extends l.default.Store {
+  getReactions(e, t, n, l, a) {
+    let i = f.ensure(t, n, a);
     if (!i.fetched) {
       let s = u.default.getChannel(e),
         c = null != s ? s.getGuildId() : null;
@@ -49,15 +49,15 @@ class m extends a.default.Store {
         channelId: e,
         messageId: t,
         emoji: n,
-        limit: a,
-        type: l
+        limit: l,
+        type: a
       }), i.fetched = !0
     }
     return i.users
   }
 }
 m.displayName = "MessageReactionsStore";
-var E = new m(l.default, {
+var E = new m(a.default, {
   CONNECTION_OPEN: function() {
     d = {}
   },
@@ -67,9 +67,9 @@ var E = new m(l.default, {
     let {
       messageId: t,
       users: n,
-      emoji: a,
-      reactionType: l
-    } = e, r = f.ensure(t, a, l);
+      emoji: l,
+      reactionType: a
+    } = e, r = f.ensure(t, l, a);
     n.forEach(e => r.users[e.id] = new s.default(e))
   }
 })

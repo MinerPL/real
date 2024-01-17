@@ -11,8 +11,8 @@ var l = a("866227"),
   i = a("446674"),
   r = a("77078"),
   o = a("442939"),
-  d = a("730859"),
-  u = a("697218"),
+  u = a("730859"),
+  d = a("697218"),
   c = a("953109"),
   m = a("449008"),
   h = a("782340"),
@@ -24,26 +24,26 @@ var l = a("866227"),
     } = e, {
       application: l,
       clip_participants: f,
-      title: _
-    } = t, A = (0, o.useGetOrFetchApplication)(null == l ? void 0 : l.id), x = (0, i.useStateFromStoresArray)([u.default], () => {
+      title: A
+    } = t, _ = (0, o.useGetOrFetchApplication)(null == l ? void 0 : l.id), x = (0, i.useStateFromStoresArray)([d.default], () => {
       var e;
       return null !== (e = null == f ? void 0 : f.map(e => {
         let {
           id: t
         } = e;
-        return u.default.getUser(t)
+        return d.default.getUser(t)
       }).filter(m.isNotNullish)) && void 0 !== e ? e : []
-    }), p = null == A ? void 0 : A.name, I = s(t.clip_created_at).fromNow();
+    }), p = null == _ ? void 0 : _.name, I = s(t.clip_created_at).fromNow();
     return null == t.clip_created_at ? null : (0, n.jsxs)("div", {
       className: g.container,
       children: [(0, n.jsx)(c.default, {
-        game: A
+        game: _
       }), (0, n.jsxs)("div", {
         className: g.textSection,
-        children: [null != _ && "" !== _ ? (0, n.jsx)(r.Text, {
+        children: [null != A && "" !== A ? (0, n.jsx)(r.Text, {
           variant: "text-md/semibold",
           color: "interactive-active",
-          children: _
+          children: A
         }) : (0, n.jsx)(r.Text, {
           variant: "text-md/semibold",
           color: "text-muted",
@@ -58,7 +58,7 @@ var l = a("866227"),
           color: "text-muted",
           className: g.subtitle
         })]
-      }), null != f && f.length > 0 && (0, n.jsx)(d.default, {
+      }), null != f && f.length > 0 && (0, n.jsx)(u.default, {
         maxUsers: 4,
         users: x,
         className: g.facePile,

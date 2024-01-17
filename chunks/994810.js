@@ -5,12 +5,12 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("446674"),
-  a = n("913144"),
-  l = n("42203");
+  l = n("913144"),
+  a = n("42203");
 let s = {};
 
 function r(e) {
-  let t = l.default.getChannel(e);
+  let t = a.default.getChannel(e);
   return !!(null != t && t.isForumLikeChannel()) || !1
 }
 
@@ -43,7 +43,7 @@ class d extends i.default.Store {
   }
 }
 d.displayName = "ForumSearchStore";
-var o = new d(a.default, {
+var o = new d(l.default, {
   CONNECTION_OPEN: function() {
     s = {}
   },
@@ -53,11 +53,11 @@ var o = new d(a.default, {
       channel: n
     } = e, i = n.parent_id;
     if (null == i) return !1;
-    let a = s[i];
-    if (null == a) return !1;
+    let l = s[i];
+    if (null == l) return !1;
     s[i] = {
-      ...a,
-      results: null === (t = a.results) || void 0 === t ? void 0 : t.filter(e => n.id !== e)
+      ...l,
+      results: null === (t = l.results) || void 0 === t ? void 0 : t.filter(e => n.id !== e)
     }
   },
   CHANNEL_DELETE: function(e) {

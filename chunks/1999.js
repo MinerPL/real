@@ -13,8 +13,8 @@ var s = a("37983"),
   r = a.n(l),
   i = a("907002"),
   o = a("446674"),
-  u = a("77078"),
-  d = a("371642"),
+  d = a("77078"),
+  u = a("371642"),
   c = a("206230"),
   m = a("850391"),
   h = a("271972"),
@@ -52,7 +52,7 @@ function j(e) {
     onClose: l,
     onMouseEnter: i
   } = e, c = n.useRef(null), m = (0, o.useStateFromStores)([g.default], () => g.default.getChannel(t), [t]);
-  return r(null != m, "Forum Channel is null"), (0, s.jsxs)(u.Clickable, {
+  return r(null != m, "Forum Channel is null"), (0, s.jsxs)(d.Clickable, {
     className: N.uploadInput,
     onMouseEnter: i,
     onClick: () => {
@@ -68,7 +68,7 @@ function j(e) {
         })
       }
     },
-    children: [(0, s.jsx)(d.default, {
+    children: [(0, s.jsx)(u.default, {
       className: N.fileInput,
       ref: c,
       onChange: e => {
@@ -92,9 +92,9 @@ function R(e) {
     channelId: t,
     closePopout: a
   } = e, [l, r] = n.useState(!1), {
-    reducedMotion: d
-  } = n.useContext(u.AccessibilityPreferencesContext), g = (0, i.useSpring)({
-    from: d.enabled ? A : M,
+    reducedMotion: u
+  } = n.useContext(d.AccessibilityPreferencesContext), g = (0, i.useSpring)({
+    from: u.enabled ? A : M,
     to: v,
     config: I
   }), x = (0, o.useStateFromStores)([c.default], () => c.default.keyboardModeEnabled), T = (0, o.useStateFromStores)([C.default], () => C.default.getUploads(t, m.ChatInputTypes.CREATE_FORUM_POST.drafts.type));
@@ -104,7 +104,7 @@ function R(e) {
       !l && a()
     },
     style: g,
-    children: (0, s.jsxs)(u.ScrollerThin, {
+    children: (0, s.jsxs)(d.ScrollerThin, {
       orientation: "horizontal",
       className: N.popout,
       paddingFix: !1,
@@ -135,26 +135,26 @@ function R(e) {
 function O(e) {
   let {
     channelId: t
-  } = e, [a, l] = n.useState(!1), r = (0, o.useStateFromStores)([C.default], () => C.default.getUploads(t, m.ChatInputTypes.CREATE_FORUM_POST.drafts.type)), i = r.length, u = i > 0;
+  } = e, [a, l] = n.useState(!1), r = (0, o.useStateFromStores)([C.default], () => C.default.getUploads(t, m.ChatInputTypes.CREATE_FORUM_POST.drafts.type)), i = r.length, d = i > 0;
   n.useEffect(() => {
-    a && !u && l(!1)
-  }, [a, u]);
-  let d = () => {
-    u && l(!0)
+    a && !d && l(!1)
+  }, [a, d]);
+  let u = () => {
+    d && l(!0)
   };
   return (0, s.jsxs)("div", {
     className: N.container,
-    children: [u ? (0, s.jsxs)(s.Fragment, {
+    children: [d ? (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(f.UploadIcon, {
         upload: r[0],
         size: h.AttachmentListItemSizes.SMALL,
-        onMouseEnter: d
+        onMouseEnter: u
       }), !a && (0, s.jsx)("div", {
         className: N.badge,
         children: i
       })]
     }) : (0, s.jsx)(j, {
-      onMouseEnter: d,
+      onMouseEnter: u,
       channelId: t
     }), a && (0, s.jsx)(R, {
       channelId: t,

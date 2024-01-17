@@ -16,8 +16,8 @@ var s = a("37983"),
   r = a("942367"),
   i = a("74139");
 let o = "data-grid-item-id",
-  u = "data-grid-section",
-  d = "data-grid-prev-section-boundary",
+  d = "data-grid-section",
+  u = "data-grid-prev-section-boundary",
   c = new Set([r.Keys.UP, r.Keys.DOWN, r.Keys.LEFT, r.Keys.RIGHT]);
 
 function m(e) {
@@ -25,7 +25,7 @@ function m(e) {
     section: t,
     column: a,
     row: s
-  } = e, n = "[".concat(u, '="').concat(t, '"]'), l = "[".concat("aria-colindex", '="').concat(a, '"]'), r = "[".concat("aria-rowindex", '="').concat(s, '"]');
+  } = e, n = "[".concat(d, '="').concat(t, '"]'), l = "[".concat("aria-colindex", '="').concat(a, '"]'), r = "[".concat("aria-rowindex", '="').concat(s, '"]');
   return "".concat(n).concat(l).concat(r)
 }
 
@@ -34,7 +34,7 @@ function h(e) {
     id: t,
     isEnabled: a,
     setFocus: s
-  } = e, u = n.useRef(null), h = n.useRef(!1), f = n.useRef(null), g = n.useRef(a);
+  } = e, d = n.useRef(null), h = n.useRef(!1), f = n.useRef(null), g = n.useRef(a);
   n.useLayoutEffect(() => {
     g.current = a
   }, [a]);
@@ -52,7 +52,7 @@ function h(e) {
       }
     }, []),
     _ = n.useCallback(e => {
-      u.current = e;
+      d.current = e;
       let a = (0, i.createSelector)(e, o),
         s = (0, i.getItemId)(e);
       C(a, s), (0, l.notifyFocusSubscribers)(t, s, !0)
@@ -75,7 +75,7 @@ function h(e) {
 
     function s(e) {
       !e.currentTarget.contains(e.relatedTarget) && (p(!1), requestAnimationFrame(() => {
-        let e = u.current;
+        let e = d.current;
         if (null !== e) {
           let a = (0, i.createSelector)(e, o);
           null == x(a) && T((0, i.createSelector)(t, "data-grid-id"))
@@ -96,7 +96,7 @@ function h(e) {
   let N = n.useCallback(e => {
       var t, a;
       if (!g.current) return;
-      let s = u.current,
+      let s = d.current,
         n = f.current;
       if (null == s) return;
       let l = (0, i.createSelector)(s, o),
@@ -149,7 +149,7 @@ function h(e) {
         case r.Keys.UP: {
           let e;
           if (0 === T) {
-            let t = parseInt(h.getAttribute(d));
+            let t = parseInt(h.getAttribute(u));
             null == (e = x(m({
               section: C - 1,
               row: t,
@@ -173,7 +173,7 @@ function h(e) {
         case r.Keys.SPACE:
         case r.Keys.ENTER: {
           if (e.repeat) return;
-          let t = u.current;
+          let t = d.current;
           if (null != t) {
             let s = (0, i.createSelector)(t, o),
               n = x(s),
@@ -186,7 +186,7 @@ function h(e) {
     }, [x, _]),
     M = n.useCallback(e => {
       let a = null != e ? (0, i.createListItemId)(t, e) : null;
-      u.current = a
+      d.current = a
     }, [t]);
   return n.useMemo(() => ({
     id: t,
@@ -223,8 +223,8 @@ function C(e) {
     h(e === t ? 0 : -1)
   }), [t, x]), {
     [o]: (0, i.createListItemId)(x, t),
-    [u]: a,
-    [d]: c[a],
+    [d]: a,
+    [u]: c[a],
     role: "gridcell",
     "aria-rowindex": s,
     "aria-colindex": r,
@@ -244,18 +244,18 @@ function T(e) {
       onKeyDown: i,
       ref: o
     }
-  } = a, u = n.useMemo(() => ({
+  } = a, d = n.useMemo(() => ({
     id: l,
     setFocus: r
-  }), [l, r]), d = n.useMemo(() => ({
+  }), [l, r]), u = n.useMemo(() => ({
     onKeyDown: i,
     ref: o,
     id: l
   }), [i, o, l]);
   return (0, s.jsx)(x.Provider, {
-    value: d,
+    value: u,
     children: (0, s.jsx)(g.Provider, {
-      value: u,
+      value: d,
       children: t
     })
   })

@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   useMembersSearchRecordStore: function() {
-    return I
+    return M
   },
   getChunkIndex: function() {
     return D
@@ -48,31 +48,31 @@ function m(e) {
     previousPagination: null
   }
 }(l = n || (n = {}))[l.FAILED = 0] = "FAILED", l[l.UNFETCHED = 1] = "UNFETCHED", l[l.PENDING = 2] = "PENDING", l[l.SUCCEEDED = 3] = "SUCCEEDED", l[l.STILL_INDEXING = 4] = "STILL_INDEXING";
-let I = (0, s.default)(e => ({}));
+let M = (0, s.default)(e => ({}));
 
-function M(e, t) {
-  let r = I.getState()[e];
+function I(e, t) {
+  let r = M.getState()[e];
   return null == r && (r = m(1)), r = {
     ...r,
     ...t
-  }, I.setState(t => ({
+  }, M.setState(t => ({
     ...t,
     [e]: r
   })), r
 }
 
 function v(e) {
-  return I.getState()[e]
+  return M.getState()[e]
 }
 
 function p(e) {
   let t = v(e);
-  return null == t && M(e, t = m(1)), t
+  return null == t && I(e, t = m(1)), t
 }
 
 function U(e) {
   let t = v(e);
-  null != t && M(e, {
+  null != t && I(e, {
     requestState: 3,
     abortController: null,
     lastUpdated: Date.now()
@@ -82,7 +82,7 @@ function U(e) {
 function N(e) {
   var t;
   let r = b(e);
-  t = r, I.setState(e => {
+  t = r, M.setState(e => {
     let r = {
       ...e
     };
@@ -238,13 +238,13 @@ async function A(e) {
       let r = p(e);
       return o(r.query, t)
     }(i, m) && (0, d.isEqual)(c, s.cursor)) return;
-  let I = function(e, t, r, n) {
+  let M = function(e, t, r, n) {
     let u = v(e);
     if ((null == u ? void 0 : u.requestState) === 2) {
       var l;
       null === (l = u.abortController) || void 0 === l || l.abort()
     }
-    return M(e, {
+    return I(e, {
       requestState: 2,
       abortController: new AbortController,
       lastUpdated: Date.now(),
@@ -256,17 +256,17 @@ async function A(e) {
   try {
     ;
     if (y.info("Making member search request", {
-        query: I.query,
+        query: M.query,
         guildId: e
-      }), null == I.query) throw Error("Query is null");
-    await (0, R.searchGuildMembers)(e, I.query, {
-      signal: null !== (u = null === (n = I.abortController) || void 0 === n ? void 0 : n.signal) && void 0 !== u ? u : void 0
+      }), null == M.query) throw Error("Query is null");
+    await (0, R.searchGuildMembers)(e, M.query, {
+      signal: null !== (u = null === (n = M.abortController) || void 0 === n ? void 0 : n.signal) && void 0 !== u ? u : void 0
     })
   } catch (e) {
     if (-1 === e.code) return;
     ! function(e) {
       let t = v(e);
-      null != t && M(e, {
+      null != t && I(e, {
         requestState: 0,
         abortController: null,
         lastUpdated: Date.now()
@@ -278,7 +278,7 @@ async function A(e) {
 }
 
 function G(e) {
-  return I(t => {
+  return M(t => {
     var r;
     let n = b(e);
     return (null === (r = t[n]) || void 0 === r ? void 0 : r.requestState) === 2
@@ -286,7 +286,7 @@ function G(e) {
 }
 
 function P(e) {
-  return I(t => {
+  return M(t => {
     var r;
     let n = b(e);
     return (null === (r = t[n]) || void 0 === r ? void 0 : r.requestState) === 4
@@ -327,7 +327,7 @@ class q extends E.default {
     let {
       guildId: t
     } = e, r = b(t);
-    M(r, {
+    I(r, {
       requestState: 4,
       abortController: null,
       lastUpdated: Date.now()

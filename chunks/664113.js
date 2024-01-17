@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("37983"),
   l = n("884691"),
   s = n("77078"),
-  r = n("460029"),
-  a = n("129722"),
+  a = n("460029"),
+  r = n("129722"),
   o = n("723961"),
   u = n("782340"),
   d = n("341479"),
@@ -20,7 +20,7 @@ var i = n("37983"),
       onChange: c
     } = e, {
       file: f
-    } = (0, a.useAudioTrimmerStore)();
+    } = (0, r.useAudioTrimmerStore)();
     return (0, i.jsx)(s.FormSection, {
       className: d.section,
       title: u.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_PREVIEW,
@@ -30,7 +30,7 @@ var i = n("37983"),
           sound: t,
           volume: n,
           disabled: l
-        }), null == t && null != f && (0, i.jsx)(r.default, {
+        }), null == t && null != f && (0, i.jsx)(a.default, {
           className: d.audioTrimmer,
           volume: n,
           disabled: l,

@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
 var i = n("884691"),
   l = n("748820"),
   s = n("129722"),
-  r = n("89050");
-let a = new Worker(new URL(n.p + n.u("21401"), n.b)),
+  a = n("89050");
+let r = new Worker(new URL(n.p + n.u("21401"), n.b)),
   o = new AudioContext;
 async function u(e) {
   let t = await e.arrayBuffer(),
@@ -23,34 +23,34 @@ function d(e) {
   let [t, n] = i.useState(null), [l, s] = i.useState(null);
   return i.useEffect(() => {
     if (null == e) return;
-    let t = (0, r.getAudioFileId)(e);
+    let t = (0, a.getAudioFileId)(e);
     t !== l && (s(t), n(null), u(e).then(n))
   }, [l, e]), t
 }
 let c = {
-  ...r.defaultWaveformConfig
+  ...a.defaultWaveformConfig
 };
 
 function f(e, t, n) {
   let [o, u] = i.useState(null), [d, f] = i.useState(null), [m, h] = i.useState(1), {
     setMaxVolume: g
   } = (0, s.useAudioTrimmerStore)(), E = i.useCallback((e, t) => {
-    var i, s, r, o, u;
-    f(null), (i = e, s = t.offsetWidth, r = n, o = c, u = h, new Promise(e => {
+    var i, s, a, o, u;
+    f(null), (i = e, s = t.offsetWidth, a = n, o = c, u = h, new Promise(e => {
       let t = (0, l.v4)(),
         n = i => {
           let {
             data: {
               waveform: l,
               id: s,
-              normalizedVolumeMultipler: r
+              normalizedVolumeMultipler: a
             }
           } = i;
-          t === s && (e(l), u(r)), null == a || a.removeEventListener("message", n)
+          t === s && (e(l), u(a)), null == r || r.removeEventListener("message", n)
         };
-      null == a || a.addEventListener("message", n), null == a || a.postMessage({
+      null == r || r.addEventListener("message", n), null == r || r.postMessage({
         id: t,
-        options: r,
+        options: a,
         config: o,
         width: s,
         rawBufferData: i
@@ -59,7 +59,7 @@ function f(e, t, n) {
   }, [n]);
   return i.useEffect(() => {
     if (null == e || null == t) return;
-    let i = (0, r.getWaveformId)(e, n);
+    let i = (0, a.getWaveformId)(e, n);
     o !== i && (u(i), E(e, t))
   }, [e, E, t, n, o]), i.useEffect(() => {
     g(m)

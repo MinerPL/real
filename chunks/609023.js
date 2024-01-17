@@ -19,8 +19,8 @@ var l = n("37983"),
   _ = n("845579"),
   S = n("271938"),
   T = n("957255"),
-  p = n("697218"),
-  N = n("898260"),
+  N = n("697218"),
+  p = n("898260"),
   I = n("888400"),
   m = n("530686"),
   A = n("970268"),
@@ -83,7 +83,7 @@ function L(e) {
     location: "20e3b0_1"
   }, {
     autoTrackExposure: !1
-  }), m = _.MessageDisplayCompact.useSetting(), M = (0, o.useStateFromStores)([T.default], () => T.default.can(g.Permissions.CREATE_INSTANT_INVITE, s)), L = (0, E.isSpamSupported)(s), v = !1, D = 0 === a.messages.length || a.messages[0].timestamp.isSame(i(), "day"), y = null !== (n = null === (t = p.default.getUser(S.default.getId())) || void 0 === t ? void 0 : t.hasFlag(g.UserFlags.SPAMMER)) && void 0 !== n && n, x = [];
+  }), m = _.MessageDisplayCompact.useSetting(), M = (0, o.useStateFromStores)([T.default], () => T.default.can(g.Permissions.CREATE_INSTANT_INVITE, s)), L = (0, E.isSpamSupported)(s), v = !1, D = 0 === a.messages.length || a.messages[0].timestamp.isSame(i(), "day"), y = null !== (n = null === (t = N.default.getUser(S.default.getId())) || void 0 === t ? void 0 : t.hasFlag(g.UserFlags.SPAMMER)) && void 0 !== n && n, x = [];
   if (!a.collapsed) {
     let e = null,
       t = null,
@@ -92,7 +92,7 @@ function L(e) {
       if (!(0, c.default)(n, M)) {
         if (!D && (null == e || !e.isSame(n.timestamp, "day"))) {
           let t = (0, I.dateFormat)(n.timestamp, "LL");
-          x.push((0, l.jsx)(N.default, {
+          x.push((0, l.jsx)(p.default, {
             className: R.divider,
             children: t
           }, t)), e = n.timestamp

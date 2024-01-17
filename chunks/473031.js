@@ -39,18 +39,18 @@ function x(e) {
     isNew: L
   } = e, {
     id: U,
-    guild_id: y,
-    channel_id: M,
+    guild_id: M,
+    channel_id: y,
     creator_id: A,
     name: V,
     description: j,
     entity_type: P,
     image: O,
     recurrence_rule: b
-  } = n, F = (0, C.getNextRecurrenceIdInEvent)(n), k = (0, u.useStateFromStores)([v.default], () => v.default.isInterestedInEventRecurrence(U, F), [U, F]), H = (0, u.useStateFromStores)([a.default], () => a.default.isLurking(y), [y]), w = (0, u.useStateFromStores)([s.default], () => s.default.getStageInstanceByChannel(M), [M]), B = (0, u.useStateFromStores)([d.default], () => d.default.getChannel(M), [M]), z = (0, u.useStateFromStores)([f.default], () => f.default.getUser(A), [A]), {
+  } = n, F = (0, C.getNextRecurrenceIdInEvent)(n), k = (0, u.useStateFromStores)([v.default], () => v.default.isInterestedInEventRecurrence(U, F), [U, F]), H = (0, u.useStateFromStores)([a.default], () => a.default.isLurking(M), [M]), w = (0, u.useStateFromStores)([s.default], () => s.default.getStageInstanceByChannel(y), [y]), B = (0, u.useStateFromStores)([d.default], () => d.default.getChannel(y), [y]), z = (0, u.useStateFromStores)([f.default], () => f.default.getUser(A), [A]), {
     speakers: W
   } = (0, g.default)({
-    id: M,
+    id: y,
     data: {
       guild: null,
       instance: w,
@@ -58,13 +58,13 @@ function x(e) {
       participantCount: 0
     },
     context: {
-      guildId: y,
+      guildId: M,
       instance: w
     }
-  }), Y = (0, u.useStateFromStores)([c.default], () => c.default.getChannelId()), K = (0, v.isGuildScheduledEventActive)(n), q = Y === M && null != Y && K, Z = W.filter(e => e.type === r.StageChannelParticipantTypes.VOICE), J = Z.length, X = (0, u.useStateFromStores)([o.default], () => o.default.can(_.Permissions.CONNECT, B), [B]), Q = (0, S.default)(n), {
+  }), Y = (0, u.useStateFromStores)([c.default], () => c.default.getChannelId()), K = (0, v.isGuildScheduledEventActive)(n), q = Y === y && null != Y && K, Z = W.filter(e => e.type === r.StageChannelParticipantTypes.VOICE), J = Z.length, X = (0, u.useStateFromStores)([o.default], () => o.default.can(_.Permissions.CONNECT, B), [B]), Q = (0, S.default)(n), {
     isMember: $,
     guild: ee
-  } = (0, N.default)(y, U), et = (0, p.default)({
+  } = (0, N.default)(M, U), et = (0, p.default)({
     guild: ee,
     channel: B,
     guildScheduledEvent: n,

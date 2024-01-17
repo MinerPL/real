@@ -40,7 +40,7 @@ function D(e) {
     groupListingId: x,
     onBeforeDispatchNewListing: p,
     onAfterDispatchNewListing: U
-  } = e, [v, j] = n.useState(r), P = (0, d.useStateFromStores)([g.default], () => g.default.getSubscriptionListing(v)), y = null == P, [b, B] = n.useState(y), F = null == P ? void 0 : P.subscription_plans[0], H = null !== (t = null == P ? void 0 : P.published) && void 0 !== t && t, V = null !== (s = null == P ? void 0 : P.archived) && void 0 !== s && s, k = (0, f.useRoleSubscriptionSettingsDisabled)(), [w] = L.useName(v), [Y] = L.usePriceTier(v), [K] = L.useDescription(v), [W] = L.useImage(v, 1024), z = "" !== w ? w : h.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INITIAL_TIER_NAME, X = "" !== w && null != W && "" !== K && null != Y && !k, Z = L.useHasChanges(v), {
+  } = e, [v, j] = n.useState(r), P = (0, d.useStateFromStores)([g.default], () => g.default.getSubscriptionListing(v)), y = null == P, [b, B] = n.useState(y), F = null == P ? void 0 : P.subscription_plans[0], H = null !== (t = null == P ? void 0 : P.published) && void 0 !== t && t, V = null !== (s = null == P ? void 0 : P.archived) && void 0 !== s && s, w = (0, f.useRoleSubscriptionSettingsDisabled)(), [k] = L.useName(v), [Y] = L.usePriceTier(v), [K] = L.useDescription(v), [W] = L.useImage(v, 1024), z = "" !== k ? k : h.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INITIAL_TIER_NAME, X = "" !== k && null != W && "" !== K && null != Y && !w, Z = L.useHasChanges(v), {
     loading: J,
     error: Q,
     handleCreateOrUpdateFromEditState: q

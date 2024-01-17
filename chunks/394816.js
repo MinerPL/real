@@ -26,8 +26,8 @@ function I(e) {
     onClose: I,
     transitionState: E
   } = e, {
-    components: p,
-    applicationIconURL: C,
+    components: C,
+    applicationIconURL: p,
     applicationName: _,
     submissionState: h,
     error: M,
@@ -43,7 +43,7 @@ function I(e) {
       children: [(0, l.jsxs)(u.ModalHeader, {
         separator: !1,
         children: [(0, l.jsx)(u.Avatar, {
-          src: C,
+          src: p,
           size: u.AvatarSizes.SIZE_24,
           "aria-label": _,
           className: f.applicationIcon
@@ -72,7 +72,7 @@ function I(e) {
               customId: t
             },
             validators: R,
-            children: (0, c.renderComponents)(p)
+            children: (0, c.renderComponents)(C)
           })
         })]
       }), (0, l.jsxs)(u.ModalFooter, {

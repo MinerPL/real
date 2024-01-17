@@ -28,8 +28,8 @@ var l = n("37983"),
   _ = n("699473"),
   S = n("393414"),
   T = n("161778"),
-  p = n("42203"),
-  N = n("377253"),
+  N = n("42203"),
+  p = n("377253"),
   I = n("957255"),
   m = n("600133"),
   A = n("471671"),
@@ -156,8 +156,8 @@ function b(e) {
     renderHeader: E,
     renderEmptyState: _,
     renderItem: S,
-    getProTip: p,
-    scrollerClassName: N,
+    getProTip: N,
+    scrollerClassName: p,
     className: I,
     listName: C
   } = e, y = a.useRef(null), x = (0, h.default)(C, y), P = (0, d.useStateFromStores)([m.default], () => m.default.hasNotice()), U = (0, d.useStateFromStores)([A.default], () => A.default.windowSize());
@@ -215,7 +215,7 @@ function b(e) {
     className: v.scrollingFooterWrap,
     children: _(T.default.theme)
   }));
-  let k = null == p ? void 0 : p(),
+  let k = null == N ? void 0 : N(),
     w = j && null != k ? (0, l.jsx)("div", {
       className: v.footer,
       children: (0, l.jsx)(g.default, {
@@ -240,7 +240,7 @@ function b(e) {
     children: (0, l.jsxs)(c.HeadingLevel, {
       component: E(),
       children: [(0, l.jsxs)(c.AdvancedScroller, {
-        className: i(v.messagesPopout, N),
+        className: i(v.messagesPopout, p),
         onScroll: H ? b : void 0,
         ref: y,
         children: [(0, l.jsx)(u.ListNavigatorProvider, {
@@ -283,8 +283,8 @@ function F(e) {
     className: C,
     onCloseMessage: R,
     listName: M
-  } = e, D = (0, d.useStateFromStores)([N.default], () => {
-    let e = null != s ? N.default.getMessages(s.id) : null;
+  } = e, D = (0, d.useStateFromStores)([p.default], () => {
+    let e = null != s ? p.default.getMessages(s.id) : null;
     return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId)
   });
 
@@ -303,7 +303,7 @@ function F(e) {
       confirmText: L.default.Messages.OKAY
     });
     else if (!D) {
-      let e = p.default.getChannel(i);
+      let e = N.default.getChannel(i);
       null != e && (E.default.trackJump(i, l, t), (0, S.transitionTo)(O.Routes.CHANNEL(e.getGuildId(), i, l))), null == c || c(n)
     }
   }

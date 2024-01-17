@@ -81,9 +81,9 @@ var S = {
     }), m = g(o), S = g(a), I = g(null != _ ? _ : ""), A = m.whitespaceSanitized, D = S.fullySanitized, N = I.fullySanitized, O = D.trim(), b = A.trim();
     if (0 === b.length || 0 === O.length) return c();
     let P = d.unescapeUrl(o),
-      V = C(P),
-      R = (0, u.default)(a).length > 0 || (0, u.default)(_).length > 0;
-    if (null == V || R) return c();
+      R = C(P),
+      V = (0, u.default)(a).length > 0 || (0, u.default)(_).length > 0;
+    if (null == R || V) return c();
     let k = {
         ...s,
         allowEscape: !1,
@@ -141,7 +141,7 @@ var S = {
       }
     } = n("888198"), j = d.parserFor(i.pick(Y, M)), K = j(S.whitespaceSanitized, k), W = I.whitespaceSanitized, {
       target: z
-    } = V;
+    } = R;
     return {
       content: K,
       target: z,

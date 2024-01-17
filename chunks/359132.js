@@ -29,7 +29,7 @@ function h(e) {
     isGuest: !1,
     isPendingMember: !1
   };
-  let p = (0, d.default)({
+  let S = (0, d.default)({
     channel: e,
     canChat: t,
     renderReactions: !0,
@@ -40,7 +40,7 @@ function h(e) {
     isActiveChannelOrUnarchivableThread: g
   });
   return {
-    ...p,
+    ...S,
     isLurking: s,
     isGuest: h,
     isPendingMember: !1

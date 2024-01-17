@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 });
 var l = n("37983");
 n("884691");
-var i = n("627445"),
-  r = n.n(i),
+var r = n("627445"),
+  i = n.n(r),
   s = n("446674"),
   a = n("184900"),
   o = n("11899"),
@@ -17,38 +17,38 @@ var i = n("627445"),
   f = n("121370"),
   h = n("26989"),
   E = n("305961"),
-  C = n("697218"),
-  p = n("335189"),
+  p = n("697218"),
+  C = n("335189"),
   _ = n("473591"),
-  v = n("680894"),
-  m = n("782340"),
-  R = n("618641");
+  m = n("680894"),
+  v = n("782340"),
+  I = n("618641");
 
-function I(e) {
+function g(e) {
   let {
     guildId: t,
     clydeUser: n
   } = e, {
-    pendingNick: i,
-    pendingThemeColors: r
-  } = (0, s.useStateFromStoresObject)([_.default], () => _.default.getPendingUpdates()), a = (0, s.useStateFromStores)([h.default], () => h.default.getMember(t, v.CLYDE_AI_USER_ID));
+    pendingNick: r,
+    pendingThemeColors: i
+  } = (0, s.useStateFromStoresObject)([_.default], () => _.default.getPendingUpdates()), a = (0, s.useStateFromStores)([h.default], () => h.default.getMember(t, m.CLYDE_AI_USER_ID));
   return (0, l.jsxs)("div", {
-    className: R.editProfileSections,
+    className: I.editProfileSections,
     children: [(0, l.jsx)(c.default, {
-      placeholder: m.default.Messages.CLYDE_NAME,
+      placeholder: v.default.Messages.CLYDE_NAME,
       errors: [],
       currentGlobalName: null == a ? void 0 : a.nick,
-      pendingGlobalName: i,
-      onGlobalNameChange: p.setPendingNick
+      pendingGlobalName: r,
+      onGlobalNameChange: C.setPendingNick
     }), (0, l.jsx)(u.default, {
       guildId: t,
-      onAvatarChange: p.setPendingAvatar,
+      onAvatarChange: C.setPendingAvatar,
       showRemoveAvatarButton: !0,
-      sectionTitle: m.default.Messages.CLYDE_SETTINGS_AVATAR_HEADER,
+      sectionTitle: v.default.Messages.CLYDE_SETTINGS_AVATAR_HEADER,
       isClyde: !0
     }), (0, l.jsx)(d.default, {
       guildId: t,
-      onBannerChange: p.setPendingBanner,
+      onBannerChange: C.setPendingBanner,
       showRemoveBannerButton: !0,
       showPremiumIcon: !1
     }), (0, l.jsx)(f.default, {
@@ -56,41 +56,41 @@ function I(e) {
       guildId: t,
       showPremiumIcon: !1,
       preventDisabled: !0,
-      pendingColors: null != r ? r : void 0,
-      onThemeColorsChange: p.setPendingThemeColors
+      pendingColors: null != i ? i : void 0,
+      onThemeColorsChange: C.setPendingThemeColors
     })]
   })
 }
 
-function g(e) {
+function S(e) {
   let {
     guildId: t
   } = e, {
     pendingNick: n,
-    pendingAvatar: i,
+    pendingAvatar: r,
     pendingBanner: u,
     pendingThemeColors: c
-  } = (0, s.useStateFromStoresObject)([_.default], () => _.default.getPendingUpdates()), d = (0, s.useStateFromStores)([C.default], () => C.default.getUser(v.CLYDE_AI_USER_ID));
-  r(null != d, "Clyde User must exist");
+  } = (0, s.useStateFromStoresObject)([_.default], () => _.default.getPendingUpdates()), d = (0, s.useStateFromStores)([p.default], () => p.default.getUser(m.CLYDE_AI_USER_ID));
+  i(null != d, "Clyde User must exist");
   let f = (0, s.useStateFromStores)([E.default], () => E.default.getGuild(t));
   return (0, l.jsx)(o.default, {
-    className: R.profileCustomizationTab,
+    className: I.profileCustomizationTab,
     previewTitle: "Clyde",
     profilePreview: (0, l.jsx)(a.default, {
       user: d,
       guild: f,
       canUsePremiumCustomization: !0,
-      onAvatarChange: p.setPendingAvatar,
-      onBannerChange: p.setPendingBanner,
+      onAvatarChange: C.setPendingAvatar,
+      onBannerChange: C.setPendingBanner,
       pendingNickname: null != n ? n : void 0,
-      pendingAvatar: i,
+      pendingAvatar: r,
       pendingBanner: u,
       pendingThemeColors: null != c ? c : void 0,
       pendingBio: void 0,
       pendingPronouns: void 0,
       hideFakeActivity: !0
     }),
-    children: (0, l.jsx)(I, {
+    children: (0, l.jsx)(g, {
       guildId: t,
       clydeUser: d
     })

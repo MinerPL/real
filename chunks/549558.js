@@ -10,8 +10,8 @@ var s = a("37983"),
   r = a.n(l),
   i = a("627445"),
   o = a.n(i),
-  u = a("65597"),
-  d = a("77078"),
+  d = a("65597"),
+  u = a("77078"),
   c = a("81594"),
   m = a("206230"),
   h = a("850391"),
@@ -78,7 +78,7 @@ let b = e => {
     return {
       textAreaState: t
     }
-  }), C = (0, u.default)([m.default], () => m.default.keyboardModeEnabled), T = (0, v.default)(l, null === (t = i.textValue) || void 0 === t ? void 0 : t.trim()), M = n.useMemo(() => T.find(e => e.isThumbnail), [T]), b = null != T && T.length > 0, L = n.useMemo(() => {
+  }), C = (0, d.default)([m.default], () => m.default.keyboardModeEnabled), T = (0, v.default)(l, null === (t = i.textValue) || void 0 === t ? void 0 : t.trim()), M = n.useMemo(() => T.find(e => e.isThumbnail), [T]), b = null != T && T.length > 0, L = n.useMemo(() => {
     let e = (null == T ? void 0 : T.length) > 1 ? 1.15 : 1;
     return {
       width: 153 * e,
@@ -90,7 +90,7 @@ let b = e => {
       isThumbnail: !0
     }), e.currentTarget.value = null
   }, [l, M]), y = e => {
-    e.stopPropagation(), (null == M ? void 0 : M.upload) != null && (0, d.openModalLazy)(async () => {
+    e.stopPropagation(), (null == M ? void 0 : M.upload) != null && (0, u.openModalLazy)(async () => {
       let e = M.upload;
       o(null != e, "upload should not be null");
       let {
@@ -117,7 +117,7 @@ let b = e => {
       })
     })
   }, D = (0, s.jsx)(_.default, {
-    color: d.ButtonColors.CUSTOM,
+    color: u.ButtonColors.CUSTOM,
     className: r(j.uploadFileInputContainer),
     innerClassName: j.uploadThumbnailContainer,
     onChange: P,
@@ -135,7 +135,7 @@ let b = e => {
         className: r(j.changeThumbnailLabelContainer, {
           [j.changeThumbnailLabelOverflow]: (null == T ? void 0 : T.length) > 2
         }),
-        children: [(0, s.jsx)(d.Text, {
+        children: [(0, s.jsx)(u.Text, {
           variant: "text-xs/medium",
           color: "header-secondary",
           children: I.default.Messages.MEDIA_CHANNEL_CHANGE_THUMBNAIL_LABEL
@@ -148,7 +148,7 @@ let b = e => {
     }) : (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(p.default, {
         className: j.uploadIcon
-      }), (0, s.jsx)(d.Text, {
+      }), (0, s.jsx)(u.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
         children: I.default.Messages.MEDIA_CHANNEL_UPLOAD_THUMBNAIL_LABEL

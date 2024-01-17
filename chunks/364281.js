@@ -11,28 +11,28 @@ var i = n("446674"),
   r = n("282109");
 let d = {},
   h = {},
-  o = {};
+  u = {};
 
-function u() {
+function o() {
   let e = a.default.getChannelId();
   if (null == e) return;
   let t = l.default.getChannel(e);
   if (null == t || null == t.guild_id) return;
   let n = t.guild_id;
-  if (null == o[e] && (o[e] = 0), t.isThread() || r.default.isOptInEnabled(n) && !r.default.isChannelOrParentOptedIn(n, t.id)) {
-    delete o[e], null != d[n] && d[n].delete(e);
+  if (null == u[e] && (u[e] = 0), t.isThread() || r.default.isOptInEnabled(n) && !r.default.isChannelOrParentOptedIn(n, t.id)) {
+    delete u[e], null != d[n] && d[n].delete(e);
     return
   }
-  if (o[e]++, null == d[n] && (d[n] = new Set), r.default.isFavorite(n, e)) {
+  if (u[e]++, null == d[n] && (d[n] = new Set), r.default.isFavorite(n, e)) {
     d[n].delete(e);
     return
   }
-  if ((null == h[n] || !h[n].has(e)) && o[e] > 50) return d[n].add(e), !0
+  if ((null == h[n] || !h[n].has(e)) && u[e] > 50) return d[n].add(e), !0
 }
 class c extends i.default.PersistedStore {
   initialize(e) {
     var t, n;
-    if (this.syncWith([a.default], u), null == e) return;
+    if (this.syncWith([a.default], o), null == e) return;
     let {
       suggestedChannels: i,
       dismissedSuggestions: s,
@@ -42,7 +42,7 @@ class c extends i.default.PersistedStore {
       for (let e in i) t = new Set(i[e]), d[e] = void 0 !== t ? t : new Set;
     if (null != s)
       for (let e in s) n = new Set(s[e]), h[e] = void 0 !== n ? n : new Set;
-    o = null != l ? l : {}
+    u = null != l ? l : {}
   }
   getSuggestedChannelId(e) {
     return null

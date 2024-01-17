@@ -19,8 +19,8 @@ var l = n("37983"),
   _ = n("945330"),
   S = n("780571"),
   T = n("304198"),
-  p = n("568734"),
-  N = n("654017"),
+  N = n("568734"),
+  p = n("654017"),
   I = n("913491"),
   m = n("574073"),
   A = n("359132"),
@@ -70,7 +70,7 @@ var l = n("37983"),
       message: Y.message,
       channel: K,
       hasThread: !1
-    }) : (h.default.isBlocked(P.author.id) ? _ = x.default.Messages.BLOCKED_MESSAGE_COUNT : (0, N.isSpam)(P) && H && (_ = x.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== _) ? (0, l.jsx)(F, {
+    }) : (h.default.isBlocked(P.author.id) ? _ = x.default.Messages.BLOCKED_MESSAGE_COUNT : (0, p.isSpam)(P) && H && (_ = x.default.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== _) ? (0, l.jsx)(F, {
       className: j,
       compact: b,
       count: 1,
@@ -78,7 +78,7 @@ var l = n("37983"),
     }) : (0, l.jsx)(S.default, {
       compact: b,
       className: i(j, {
-        [U.ephemeral]: (0, p.hasFlag)(P.flags, y.MessageFlags.EPHEMERAL),
+        [U.ephemeral]: (0, N.hasFlag)(P.flags, y.MessageFlags.EPHEMERAL),
         [U.disableInteraction]: w,
         [U.groupStart]: t.isGroupStart
       }),

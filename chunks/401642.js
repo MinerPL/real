@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
   }
 });
 var l = n("913144"),
-  i = n("327037"),
-  r = n("697218"),
+  r = n("327037"),
+  i = n("697218"),
   s = n("506885"),
   a = n("49111");
 
@@ -22,8 +22,8 @@ function o(e) {
     friendToken: c,
     autoFocusNote: d,
     analyticsLocation: f
-  } = e, h = r.default.getUser(t), E = o !== a.ME ? o : void 0;
-  if (null == h) return (0, i.fetchProfile)(t, {
+  } = e, h = i.default.getUser(t), E = o !== a.ME ? o : void 0;
+  if (null == h) return (0, r.fetchProfile)(t, {
     friendToken: c,
     guildId: E
   }).then(() => {

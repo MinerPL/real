@@ -12,8 +12,8 @@ var s = a("884691"),
 
 function o(e, t, a) {
   let o = s.useRef(new Map),
-    [, u] = s.useState(null),
-    [d, c] = s.useState(null),
+    [, d] = s.useState(null),
+    [u, c] = s.useState(null),
     m = s.useMemo(() => n.debounce((e, a) => {
       if (null == a || e || 0 === t) return;
       let s = a.match(l.default.URL_REGEX);
@@ -43,18 +43,18 @@ function o(e, t, a) {
             let n = e.get(s);
             null == n ? e.set(s, [a]) : n.push(a)
           }), e
-        }(new Map(a), n, null == t ? void 0 : t.embeds), u({})
+        }(new Map(a), n, null == t ? void 0 : t.embeds), d({})
       } catch (e) {}
-    })(o, d)
-  }, [d]);
+    })(o, u)
+  }, [u]);
   let h = o.current,
     f = s.useMemo(() => {
       let e = [];
-      return null == d || d.forEach(t => {
+      return null == u || u.forEach(t => {
         let a = h.get(t);
         null != a && e.push(...a)
       }), e.length > 0 ? e : null
-    }, [d, h]);
+    }, [u, h]);
   return {
     embeds: e ? null : f
   }

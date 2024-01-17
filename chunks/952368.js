@@ -141,12 +141,12 @@ let g = /\.gif($|\?|#)/i,
       placeholderVersion: R,
       showThumbhashPlaceholder: L
     } = this.props, {
-      readyState: b,
-      hasMouseOver: O,
+      readyState: O,
+      hasMouseOver: b,
       hasFocus: D
     } = this.state, P = null != l, w = this.getRatio(), U = (0, r.clamp)(Math.round(E * w), null != C ? C : 0, null != x ? x : 1 / 0), k = (0, r.clamp)(Math.round(v * w), null != I ? I : 0, null != _ ? _ : 1 / 0), V = {
       alt: t,
-      readyState: b,
+      readyState: O,
       onContextMenu: null != i ? i : void 0,
       zoomable: P,
       className: d,
@@ -183,14 +183,14 @@ let g = /\.gif($|\?|#)/i,
       onBlur: this.onBlur
     };
     if (1 === V.width && 1 === V.height) return null;
-    switch ((P || null != N) && (V.onClick = this.onClick), a && (V.original = null != u && "" !== u ? u : V.src), b) {
+    switch ((P || null != N) && (V.onClick = this.onClick), a && (V.original = null != u && "" !== u ? u : V.src), O) {
       case p.ImageReadyStates.LOADING:
         null != n && (V.src = n);
         break;
       case p.ImageReadyStates.READY:
         if (e.isAnimated(this.props)) {
           V.onMouseLeave = this.onMouseLeave;
-          let t = (o || O || D) && (null == g || g) && e.visibilityObserver.isVisible(this);
+          let t = (o || b || D) && (null == g || g) && e.visibilityObserver.isVisible(this);
           t ? (V.src = this.getSrc(w), V.renderAccessory = M) : (V.src = this.getSrc(w, !h || !o), V.renderAccessory = this.renderAccessory), null != m && (V.children = e => {
             let {
               src: n,

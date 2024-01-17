@@ -59,7 +59,7 @@ function h(e) {
   }), H = (0, r.useStateFromStoresObject)([f.default], () => {
     var e;
     return null !== (e = f.default.errors[A]) && void 0 !== e ? e : O
-  }), [V, k] = n.useState(!1), [w, Y] = n.useState(!1), K = null !== (t = H.options) && void 0 !== t ? t : H.optionErrors.filter(S.isNotNullish)[0], W = H.config, z = v && l.options.length >= L.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD, X = (0, c.getMinimumSetOfDefaultChannelIds)(s.id, Array.from(j), [l]).length - j.size, Z = n.useRef(null);
+  }), [V, w] = n.useState(!1), [k, Y] = n.useState(!1), K = null !== (t = H.options) && void 0 !== t ? t : H.optionErrors.filter(S.isNotNullish)[0], W = H.config, z = v && l.options.length >= L.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD, X = (0, c.getMinimumSetOfDefaultChannelIds)(s.id, Array.from(j), [l]).length - j.size, Z = n.useRef(null);
   return (n.useLayoutEffect(() => {
     setTimeout(() => {
       if (0 === A && !u) {
@@ -76,7 +76,7 @@ function h(e) {
       className: i(C.container, {
         [C.dropIndicatorBefore]: null != b && A < b,
         [C.dropIndicatorAfter]: null != b && A > b,
-        [C.containerFocused]: w
+        [C.containerFocused]: k
       }),
       ref: e => y(B(e)),
       children: [(0, a.jsx)("div", {
@@ -99,7 +99,7 @@ function h(e) {
         children: l.title
       }), (0, a.jsx)(o.Clickable, {
         className: C.collapseButton,
-        onClick: () => k(!1),
+        onClick: () => w(!1),
         children: (0, a.jsx)(_.default, {
           direction: _.default.Directions.DOWN,
           height: 16,
@@ -126,7 +126,7 @@ function h(e) {
       className: i(C.container, {
         [C.dropIndicatorBefore]: null != b && A < b,
         [C.dropIndicatorAfter]: null != b && A > b,
-        [C.containerFocused]: w
+        [C.containerFocused]: k
       }),
       ref: e => y(B(e)),
       children: [(0, a.jsx)("div", {
@@ -210,7 +210,7 @@ function h(e) {
           }) : null]
         }), (0, a.jsx)(o.Clickable, {
           className: C.collapseButton,
-          onClick: () => k(!0),
+          onClick: () => w(!0),
           children: (0, a.jsx)(_.default, {
             direction: _.default.Directions.UP,
             height: 16,

@@ -25,7 +25,7 @@ var r = n("37983"),
       url: F,
       format: S,
       className: p
-    } = e, [G, h] = l.useState(!1), T = (0, c.useIsFavoriteGIF)(F), R = T ? _.default.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : _.default.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES, g = T ? d.default : o.default;
+    } = e, [G, h] = l.useState(!1), R = (0, c.useIsFavoriteGIF)(F), T = R ? _.default.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : _.default.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES, g = R ? d.default : o.default;
     l.useEffect(() => {
       if (!G) return;
       let e = setTimeout(() => {
@@ -34,7 +34,7 @@ var r = n("37983"),
       return () => clearTimeout(e)
     }, [G]);
     let m = e => {
-      e.preventDefault(), e.stopPropagation(), h(!0), T ? (0, s.removeFavoriteGIF)(F) : ((0, s.addFavoriteGIF)({
+      e.preventDefault(), e.stopPropagation(), h(!0), R ? (0, s.removeFavoriteGIF)(F) : ((0, s.addFavoriteGIF)({
         url: F,
         src: a,
         width: t,
@@ -43,11 +43,11 @@ var r = n("37983"),
       }), I.ComponentDispatch.dispatch(f.ComponentActions.FAVORITE_GIF))
     };
     return (0, r.jsx)(u.Tooltip, {
-      text: R,
+      text: T,
       children: e => (0, r.jsx)(u.Clickable, {
         ...e,
         className: i(p, E.size, E.gifFavoriteButton, {
-          [E.selected]: T,
+          [E.selected]: R,
           [E.showPulse]: G
         }),
         onMouseDown: e => e.preventDefault(),

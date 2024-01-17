@@ -41,7 +41,7 @@ function H(e) {
         onConfirm: A
       })
     })
-  }, [A, _]), g = new Intl.NumberFormat(h.default.getLocale()).format(o), N = (0, m.useCanAccessInviteCodeFeature)(t.id), p = (0, m.useCanAccessBulkBanningFeature)(t.id, u.default.MEMBER_SAFETY_PAGE), S = n.useMemo(() => 1 + (N ? 1 : 0) + (p ? 1 : 0), [N, p]);
+  }, [A, _]), g = new Intl.NumberFormat(h.default.getLocale()).format(o), N = (0, m.useCanAccessInviteCodeFeature)(t.id), S = (0, m.useCanAccessBulkBanningFeature)(t.id, u.default.MEMBER_SAFETY_PAGE), p = n.useMemo(() => 1 + (N ? 1 : 0) + (S ? 1 : 0), [N, S]);
   return 0 === o ? null : (0, a.jsxs)("tr", {
     className: i(x.newMembersNotice),
     onClick: L,
@@ -56,7 +56,7 @@ function H(e) {
         })
       })
     }), (0, a.jsx)("td", {
-      colSpan: S
+      colSpan: p
     }), (0, a.jsx)("td", {
       colSpan: 2,
       children: (0, a.jsx)("div", {

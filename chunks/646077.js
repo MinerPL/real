@@ -1,61 +1,61 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return m
+    return w
   }
-}), r("222007");
-var n = r("37983"),
-  i = r("884691"),
-  a = r("414456"),
-  l = r.n(a),
-  o = r("77078"),
-  s = r("812204"),
-  c = r("685665"),
-  u = r("873622"),
-  d = r("476765"),
-  f = r("599110"),
-  h = r("652914"),
-  v = r("254398"),
-  p = r("49111"),
-  g = r("782340"),
-  w = r("369522");
+}), n("222007");
+var r = n("37983"),
+  i = n("884691"),
+  a = n("414456"),
+  l = n.n(a),
+  s = n("77078"),
+  o = n("812204"),
+  c = n("685665"),
+  u = n("873622"),
+  d = n("476765"),
+  f = n("599110"),
+  h = n("652914"),
+  v = n("254398"),
+  p = n("49111"),
+  m = n("782340"),
+  g = n("369522");
 
-function m(e) {
+function w(e) {
   let {
     transitionState: t,
     onClose: a,
-    onComplete: m,
+    onComplete: w,
     uploadType: y,
     showUpsellHeader: S,
     analyticsPage: x
-  } = e, [A, b] = i.useState(!1), E = (0, o.useModalContext)(), I = (0, d.useUID)(), {
-    AnalyticsLocationProvider: j
-  } = (0, c.default)(s.default.GIF_PICKER);
-  async function L(e) {
+  } = e, [A, E] = i.useState(!1), b = (0, s.useModalContext)(), L = (0, d.useUID)(), {
+    AnalyticsLocationProvider: R
+  } = (0, c.default)(o.default.GIF_PICKER);
+  async function I(e) {
     let {
       gifSrc: t
     } = e;
     if (null == t || A) return;
-    b(!0);
+    E(!0);
     let i = (0, v.makeTenorProxyURL)(t),
       l = await fetch(i),
-      s = await l.blob();
-    a(), (0, o.openModalLazy)(async () => {
+      o = await l.blob();
+    a(), (0, s.openModalLazy)(async () => {
       let {
         default: e
-      } = await r.el("57015").then(r.bind(r, "57015"));
-      return t => (0, n.jsx)(e, {
+      } = await n.el("57015").then(n.bind(n, "57015"));
+      return t => (0, r.jsx)(e, {
         imgURI: i,
-        file: new File([s], "tenor.gif", {
+        file: new File([o], "tenor.gif", {
           type: "image/gif"
         }),
-        onCrop: m,
+        onCrop: w,
         uploadType: y,
         showUpsellHeader: S,
         ...t
       })
     }, {
-      contextKey: E
+      contextKey: b
     })
   }
   return i.useEffect(() => {
@@ -65,37 +65,37 @@ function m(e) {
         page: x
       }
     })
-  }, [x]), (0, n.jsx)(j, {
-    children: (0, n.jsxs)(o.ModalRoot, {
-      className: w.gifPickerCroppingModal,
-      "aria-labelledby": I,
+  }, [x]), (0, r.jsx)(R, {
+    children: (0, r.jsxs)(s.ModalRoot, {
+      className: g.gifPickerCroppingModal,
+      "aria-labelledby": L,
       transitionState: t,
-      size: o.ModalSize.SMALL,
-      children: [S ? (0, n.jsx)(h.default, {
+      size: s.ModalSize.SMALL,
+      children: [S ? (0, r.jsx)(h.default, {
         type: y,
         analyticsPage: x,
         analyticsSection: p.AnalyticsSections.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
         isGIF: !0
-      }) : null, (0, n.jsxs)(o.ModalHeader, {
-        className: w.modalHeader,
+      }) : null, (0, r.jsxs)(s.ModalHeader, {
+        className: g.modalHeader,
         separator: !1,
-        children: [(0, n.jsx)(o.FormTitle, {
-          className: w.titleCase,
-          tag: o.FormTitleTags.H1,
-          children: g.default.Messages.SELECT_IMAGE_MODAL_CHOOSE_GIF
-        }), (0, n.jsx)(o.ModalCloseButton, {
+        children: [(0, r.jsx)(s.FormTitle, {
+          className: g.titleCase,
+          tag: s.FormTitleTags.H1,
+          children: m.default.Messages.SELECT_IMAGE_MODAL_CHOOSE_GIF
+        }), (0, r.jsx)(s.ModalCloseButton, {
           onClick: a,
-          className: w.modalCloseButton
+          className: g.modalCloseButton
         })]
-      }), (0, n.jsxs)("div", {
-        children: [(0, n.jsx)(u.default, {
-          className: l(w.gifPicker, {
-            [w.loadingOverlay]: A
+      }), (0, r.jsxs)("div", {
+        children: [(0, r.jsx)(u.default, {
+          className: l(g.gifPicker, {
+            [g.loadingOverlay]: A
           }),
-          onSelectGIF: L,
+          onSelectGIF: I,
           hideFavorites: !0
-        }), A && (0, n.jsx)(o.Spinner, {
-          className: w.spinner
+        }), A && (0, r.jsx)(s.Spinner, {
+          className: g.spinner
         })]
       })]
     })

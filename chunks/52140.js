@@ -33,8 +33,8 @@ var l = n("37983"),
   y = n("781423"),
   R = n("47677"),
   L = n("49111"),
-  b = n("724210"),
-  O = n("782340"),
+  O = n("724210"),
+  b = n("782340"),
   D = n("862839");
 n("706250");
 var P = n("632215");
@@ -159,10 +159,10 @@ let U = {
           let n = h.default.getGuild(e);
           if (null == e || null == n || !n.hasFeature(L.GuildFeatures.COMMUNITY)) return;
           let l = {
-              home: b.StaticChannelRoute.GUILD_HOME,
-              browse: b.StaticChannelRoute.CHANNEL_BROWSER,
-              customize: b.StaticChannelRoute.CUSTOMIZE_COMMUNITY,
-              guide: b.StaticChannelRoute.GUILD_HOME
+              home: O.StaticChannelRoute.GUILD_HOME,
+              browse: O.StaticChannelRoute.CHANNEL_BROWSER,
+              customize: O.StaticChannelRoute.CUSTOMIZE_COMMUNITY,
+              guide: O.StaticChannelRoute.GUILD_HOME
             },
             a = l[t],
             s = h.default.getGuild(e);
@@ -177,15 +177,15 @@ let U = {
       if (!(0, M.isStaticRouteIconType)(e.channelId)) return null;
       let s = "".concat(e.channelId);
       switch (e.channelId) {
-        case b.StaticChannelId.GUILD_HOME:
-        case b.StaticChannelId.SERVER_GUIDE:
-          s = O.default.Messages.SERVER_GUIDE;
+        case O.StaticChannelId.GUILD_HOME:
+        case O.StaticChannelId.SERVER_GUIDE:
+          s = b.default.Messages.SERVER_GUIDE;
           break;
-        case b.StaticChannelId.CHANNEL_BROWSER:
-          s = O.default.Messages.GUILD_SIDEBAR_CHANNEL_BROWSER;
+        case O.StaticChannelId.CHANNEL_BROWSER:
+          s = b.default.Messages.GUILD_SIDEBAR_CHANNEL_BROWSER;
           break;
-        case b.StaticChannelId.CUSTOMIZE_COMMUNITY:
-          s = O.default.Messages.CHANNELS_AND_ROLES
+        case O.StaticChannelId.CUSTOMIZE_COMMUNITY:
+          s = b.default.Messages.CHANNELS_AND_ROLES
       }
       return (0, l.jsx)(o.Tooltip, {
         text: s,

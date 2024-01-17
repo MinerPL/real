@@ -17,8 +17,8 @@ function o(e) {
     className: a,
     innerClassName: n,
     onChange: o,
-    "aria-label": u,
-    "aria-describedby": d,
+    "aria-label": d,
+    "aria-describedby": u,
     filters: c,
     multiple: m = !1,
     disabled: h = !1,
@@ -43,8 +43,8 @@ function o(e) {
         onChange: o,
         filters: c,
         multiple: m,
-        "aria-label": u,
-        "aria-describedby": d,
+        "aria-label": d,
+        "aria-describedby": u,
         disabled: h
       })]
     })

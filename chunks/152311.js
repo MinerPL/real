@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return i
   }
 });
 var l = n("871388"),
-  i = n("49111");
+  r = n("49111");
 
-function r(e) {
-  return (0, l.default)(e, i.ActivityFlags.EMBEDDED)
+function i(e) {
+  return (0, l.default)(e, r.ActivityFlags.EMBEDDED)
 }

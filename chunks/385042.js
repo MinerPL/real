@@ -1,18 +1,18 @@
 "use strict";
-t.r(s), t.d(s, {
+n.r(t), n.d(t, {
   default: function() {
-    return o
+    return s
   }
 });
-var a = t("884691"),
-  l = t("69927"),
-  n = t("773336"),
-  u = t("782340");
+var l = n("884691"),
+  i = n("69927"),
+  r = n("773336"),
+  a = n("782340");
 
-function o() {
-  return a.useEffect(() => {
-    !n.isPlatformEmbedded && (0, l.flashPageTitle)({
-      messages: [u.default.Messages.GO_LIVE_HEY, u.default.Messages.GO_LIVE_LOOK, u.default.Messages.GO_LIVE_LISTEN],
+function s() {
+  return l.useEffect(() => {
+    !r.isPlatformEmbedded && (0, i.flashPageTitle)({
+      messages: [a.default.Messages.GO_LIVE_HEY, a.default.Messages.GO_LIVE_LOOK, a.default.Messages.GO_LIVE_LISTEN],
       interval: 600,
       count: 20,
       onlyWhenBlurred: !0

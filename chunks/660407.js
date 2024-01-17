@@ -19,8 +19,8 @@ var l = n("37983"),
   _ = n("42203"),
   S = n("211248"),
   T = n("461380"),
-  p = n("36694"),
-  N = n("11539"),
+  N = n("36694"),
+  p = n("11539"),
   I = n("815978"),
   m = n("814744"),
   A = n("879165"),
@@ -132,10 +132,10 @@ function D(e) {
     className: M.markReadButton,
     tooltip: r ? R.default.Messages.MARK_GUILD_AS_READ : R.default.Messages.MARK_AS_READ,
     color: S.CircleIconButtonColors.TERTIARY,
-    icon: r ? (0, l.jsx)(N.default, {
+    icon: r ? (0, l.jsx)(p.default, {
       width: 16,
       height: 16
-    }) : (0, l.jsx)(p.default, {
+    }) : (0, l.jsx)(N.default, {
       width: 16,
       height: 16
     }),

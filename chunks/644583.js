@@ -27,12 +27,12 @@ var a, n, s, i, o, d, C = l("37983"),
   L = l("305961"),
   g = l("27618"),
   N = l("697218"),
-  p = l("476765"),
-  S = l("483093"),
+  S = l("476765"),
+  p = l("483093"),
   v = l("782340"),
   R = l("159260");
-let I = (0, p.uid)(),
-  j = (0, p.uid)(),
+let I = (0, S.uid)(),
+  j = (0, S.uid)(),
   b = "text-sm/medium";
 
 function D(e) {
@@ -98,7 +98,7 @@ let F = r.memo(function(e) {
       color: f,
       background: !1,
       tooltip: !1
-    }), null != o ? (0, C.jsx)(S.default, {
+    }), null != o ? (0, C.jsx)(p.default, {
       className: R.roleTagIcon,
       ...o,
       enableTooltip: !1
@@ -166,7 +166,7 @@ function Z(e) {
     }), t.forEach(e => {
       e in l && (a[e] = V(l[e]))
     }), a
-  })(n, s, f), [n, s, f]), x = r.useMemo(() => Object.keys(T), [T]), [H, _] = r.useState(""), [g, N] = r.useState(!1), [p, S] = r.useState(!1), [b, F] = r.useState(!1), U = r.useRef(null), {
+  })(n, s, f), [n, s, f]), x = r.useMemo(() => Object.keys(T), [T]), [H, _] = r.useState(""), [g, N] = r.useState(!1), [S, p] = r.useState(!1), [b, F] = r.useState(!1), U = r.useRef(null), {
     sections: Z,
     sectionCounts: k
   } = r.useMemo(() => {
@@ -194,18 +194,18 @@ function Z(e) {
       }).map(e => e.row.record.id);
     i(new Set(l), new Set(a))
   }, [i]), P = () => {
-    N(!1), S(!1)
+    N(!1), p(!1)
   };
   r.useEffect(() => {
     let e = setTimeout(() => {
-      F(g || p)
+      F(g || S)
     }, 32);
     return () => {
       clearTimeout(e)
     }
-  }, [g, p]);
+  }, [g, S]);
   let Y = (e, t, l) => {
-      l.stopPropagation(), l.preventDefault(), 2 === t ? N(e) : (1 === t || N(e), S(e))
+      l.stopPropagation(), l.preventDefault(), 2 === t ? N(e) : (1 === t || N(e), p(e))
     },
     G = r.useCallback(e => {
       let t = {

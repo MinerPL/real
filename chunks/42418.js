@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return u
+    return d
   }
 }), a("881410"), a("222007"), a("424973"), a("511434"), a("313619"), a("654714"), a("287168"), a("956660");
 var s = a("884691"),
@@ -11,17 +11,17 @@ var s = a("884691"),
   i = a("856220"),
   o = a("891475");
 
-function u(e, t) {
-  var a, u;
+function d(e, t) {
+  var a, d;
   let {
-    mediaAttachments: d,
+    mediaAttachments: u,
     hasThumbnail: c
   } = function(e) {
     let [t, a] = s.useState(null), o = (0, n.useStateFromStoresArray)([r.default], () => {
       let t = r.default.getUploads(e.id, l.ChatInputTypes.CREATE_FORUM_POST.drafts.type),
         a = t.find(e => e.isThumbnail);
       return null != a ? [a] : t.filter(e => e.isVideo || e.isImage)
-    }), u = s.useMemo(() => o.some(e => e.isThumbnail), [o]);
+    }), d = s.useMemo(() => o.some(e => e.isThumbnail), [o]);
     return s.useEffect(() => {
       let e = [],
         t = o.slice(0, i.MAX_THUMBNAIL_COUNT).flatMap(t => {
@@ -44,9 +44,9 @@ function u(e, t) {
       }
     }, [o]), {
       mediaAttachments: t,
-      hasThumbnail: u
+      hasThumbnail: d
     }
-  }(e), m = Math.max(i.MAX_THUMBNAIL_COUNT - (null !== (a = null == d ? void 0 : d.length) && void 0 !== a ? a : 0), 0), {
+  }(e), m = Math.max(i.MAX_THUMBNAIL_COUNT - (null !== (a = null == u ? void 0 : u.length) && void 0 !== a ? a : 0), 0), {
     embeds: h
   } = (0, o.useExtractEmbedPreview)(c, m, t), f = s.useMemo(() => null == h ? void 0 : h.flatMap(e => {
     let t = (0, i.getEmbedPreviewImageUrl)(e);
@@ -56,6 +56,6 @@ function u(e, t) {
       spoiler: !1,
       alt: e.title
     }
-  }), [h]), g = [...null != d ? d : []];
-  return !c && m > 0 && g.push(...null !== (u = null == f ? void 0 : f.slice(0, m)) && void 0 !== u ? u : []), g
+  }), [h]), g = [...null != u ? u : []];
+  return !c && m > 0 && g.push(...null !== (d = null == f ? void 0 : f.slice(0, m)) && void 0 !== d ? d : []), g
 }

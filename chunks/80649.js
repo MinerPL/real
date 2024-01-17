@@ -19,8 +19,8 @@ var l = n("37983"),
   _ = n("247013"),
   S = n("18494"),
   T = n("211248"),
-  p = n("116320"),
-  N = n("945330"),
+  N = n("116320"),
+  p = n("945330"),
   I = n("138217"),
   m = n("530686"),
   A = n("998530"),
@@ -53,8 +53,8 @@ function y(e) {
     closePopout: E
   } = e, _ = (0, s.useStateFromStores)([h.default, S.default], () => h.default.getChannel(S.default.getChannelId())), {
     messages: T,
-    hasMore: p,
-    loading: N,
+    hasMore: N,
+    loading: p,
     guildFilter: m,
     roleFilter: g,
     everyoneFilter: C
@@ -97,8 +97,8 @@ function y(e) {
       },
       channel: _,
       messages: T,
-      loading: N,
-      hasMore: p,
+      loading: p,
+      hasMore: N,
       analyticsName: "Recent Mentions",
       loadMore: function() {
         let e = null != T && T.length > 0 ? T[T.length - 1].id : null;
@@ -149,7 +149,7 @@ function U(e) {
         className: L.closeButton,
         tooltip: O.default.Messages.CLOSE,
         color: T.CircleIconButtonColors.TERTIARY,
-        icon: (0, l.jsx)(N.default, {
+        icon: (0, l.jsx)(p.default, {
           width: 16,
           height: 16
         }),
@@ -176,7 +176,7 @@ function U(e) {
 
 function b(e) {
   return (0, l.jsx)(C.default, {
-    Icon: p.default,
+    Icon: N.default,
     header: O.default.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,
     tip: O.default.Messages.RECENT_MENTIONS_EMPTY_STATE_TIP
   })

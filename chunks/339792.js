@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return g
   },
   useForumChannelStoreApi: function() {
-    return p
+    return S
   }
 }), s("222007");
 var n = s("627445"),
@@ -80,4 +80,4 @@ let m = (0, l.default)((e, t) => new f(e, t)),
       s = (0, o.useStateFromStores)([u.default], () => u.default.getChannel(e));
     return null == s ? h : t.getChannelState(e)
   },
-  p = () => m
+  S = () => m

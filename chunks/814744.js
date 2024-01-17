@@ -20,8 +20,8 @@ var a = n("414456"),
   _ = n("305961"),
   S = n("824563"),
   T = n("697218"),
-  p = n("220677"),
-  N = n("476263"),
+  N = n("220677"),
+  p = n("476263"),
   I = n("476765"),
   m = n("782340"),
   A = n("636431");
@@ -99,11 +99,11 @@ function O(e) {
     channel: t,
     gotoChannel: n
   } = e, a = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(t.guild_id));
-  return null == a ? null : (0, l.jsx)(N.default, {
+  return null == a ? null : (0, l.jsx)(p.default, {
     "aria-hidden": !0,
     className: A.guildIcon,
     guild: a,
-    size: N.default.Sizes.MEDIUM,
+    size: p.default.Sizes.MEDIUM,
     active: !0,
     onClick: n,
     tabIndex: -1
@@ -139,7 +139,7 @@ function L(e) {
         }), (0, l.jsx)("span", {
           className: A.channelNameSpan,
           children: E
-        }), null != a && a > 0 ? (0, l.jsx)(p.default, {
+        }), null != a && a > 0 ? (0, l.jsx)(N.default, {
           value: a,
           className: A.badge
         }) : null]

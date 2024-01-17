@@ -10,8 +10,8 @@ var l = n("37983"),
   i = n("812204"),
   u = n("685665"),
   r = n("744568"),
-  d = n("208021"),
-  o = n("982108"),
+  o = n("208021"),
+  d = n("982108"),
   c = n("305961"),
   f = n("49111"),
   h = n("973033");
@@ -21,8 +21,8 @@ function m(e) {
     guildId: t
   } = e, n = (0, a.useStateFromStores)([c.default], () => c.default.getGuild(t)), {
     AnalyticsLocationProvider: m
-  } = (0, u.default)(i.default.MEMBER_SAFETY_PAGE), S = (0, a.useStateFromStores)([o.default], () => o.default.getGuildSidebarState(t), [t]), g = s.useCallback(() => {
-    d.default.closeGuildSidebar(t)
+  } = (0, u.default)(i.default.MEMBER_SAFETY_PAGE), S = (0, a.useStateFromStores)([d.default], () => d.default.getGuildSidebarState(t), [t]), g = s.useCallback(() => {
+    o.default.closeGuildSidebar(t)
   }, [t]);
   return null != n && null != S && null != S ? (0, l.jsx)(m, {
     children: (0, l.jsx)("div", {

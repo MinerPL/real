@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return v
   }
 }), n("222007");
 var l = n("37983"),
-  i = n("884691"),
-  r = n("414456"),
-  s = n.n(r),
+  r = n("884691"),
+  i = n("414456"),
+  s = n.n(i),
   a = n("748820"),
   o = n("509043"),
   u = n("669491"),
@@ -16,34 +16,34 @@ var l = n("37983"),
   f = n("449918"),
   h = n("973262"),
   E = n("832132"),
-  C = n("771325"),
-  p = n("49111"),
+  p = n("771325"),
+  C = n("49111"),
   _ = n("782340"),
-  v = n("727125");
+  m = n("727125");
 
-function m(e) {
+function v(e) {
   let {
     onChange: t,
     onClose: n,
-    color: r,
-    suggestedColors: m,
-    disabled: R,
-    label: I,
-    colorPickerMiddle: g,
-    colorPickerFooter: S,
+    color: i,
+    suggestedColors: v,
+    disabled: I,
+    label: g,
+    colorPickerMiddle: S,
+    colorPickerFooter: R,
     showEyeDropper: N
-  } = e, L = i.useRef(null), T = (0, c.useToken)(u.default.colors.BACKGROUND_PRIMARY).hex(), x = u.default.colors.BACKGROUND_ACCENT.css, A = (0, C.isColorDark)(r), M = (0, o.int2hex)(r), P = M === T ? x : M, b = (0, f.getColor)(A ? p.Color.WHITE_500 : p.Color.PRIMARY_530), j = (0, d.default)(g), y = (0, d.default)(S), [O, w] = i.useState((0, a.v4)());
-  return i.useEffect(() => {
-    (j !== g || y !== S) && w((0, a.v4)())
-  }, [S, g, y, j]), (0, l.jsx)(c.Popout, {
+  } = e, L = r.useRef(null), T = (0, c.useToken)(u.default.colors.BACKGROUND_PRIMARY).hex(), x = u.default.colors.BACKGROUND_ACCENT.css, A = (0, p.isColorDark)(i), M = (0, o.int2hex)(i), y = M === T ? x : M, P = (0, f.getColor)(A ? C.Color.WHITE_500 : C.Color.PRIMARY_530), b = (0, d.default)(S), j = (0, d.default)(R), [O, F] = r.useState((0, a.v4)());
+  return r.useEffect(() => {
+    (b !== S || j !== R) && F((0, a.v4)())
+  }, [R, S, j, b]), (0, l.jsx)(c.Popout, {
     positionKey: O,
     renderPopout: e => (0, l.jsx)(h.CustomColorPicker, {
       ...e,
-      value: r,
+      value: i,
       onChange: t,
-      suggestedColors: m,
-      middle: g,
-      footer: S,
+      suggestedColors: v,
+      middle: S,
+      footer: R,
       showEyeDropper: N
     }),
     onRequestClose: n,
@@ -54,29 +54,29 @@ function m(e) {
       } = e;
       return (0, l.jsxs)("div", {
         ref: L,
-        className: s(v.colorSwatch, {
-          [v.disabled]: R
+        className: s(m.colorSwatch, {
+          [m.disabled]: I
         }),
         children: [(0, l.jsx)(c.Clickable, {
           ...n,
-          tabIndex: R ? -1 : 0,
-          onClick: R ? p.NOOP : t,
+          tabIndex: I ? -1 : 0,
+          onClick: I ? C.NOOP : t,
           style: {
             backgroundColor: M,
-            borderColor: P
+            borderColor: y
           },
-          className: v.swatch,
+          className: m.swatch,
           "aria-label": _.default.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
           focusProps: {
             ringTarget: L
           },
           children: (0, l.jsx)(E.default, {
-            className: v.editPencilIcon,
+            className: m.editPencilIcon,
             width: 14,
             height: 14,
-            color: b
+            color: P
           })
-        }), I]
+        }), g]
       })
     }
   })

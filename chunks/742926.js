@@ -6,12 +6,12 @@ n.r(t), n.d(t, {
 }), n("222007");
 var s = n("37983"),
   r = n("884691"),
-  l = n("669491"),
-  i = n("292915"),
-  a = n("77078"),
+  a = n("669491"),
+  l = n("292915"),
+  i = n("77078"),
   u = n("389480"),
-  o = n("191191"),
-  c = n("782340"),
+  c = n("191191"),
+  o = n("782340"),
   d = n("895576");
 let f = [54, 8, 8, 8];
 
@@ -28,19 +28,19 @@ function m(e) {
     className: d.customGiftHeader,
     children: [(0, s.jsxs)("div", {
       className: d.customGiftHeaderText,
-      children: [(0, s.jsx)(a.Text, {
+      children: [(0, s.jsx)(i.Text, {
         variant: "text-md/bold",
-        children: c.default.Messages.GIFT_SELECT_SOUND
-      }), (0, s.jsx)(a.Text, {
+        children: o.default.Messages.GIFT_SELECT_SOUND
+      }), (0, s.jsx)(i.Text, {
         variant: "text-sm/normal",
-        children: c.default.Messages.GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION
+        children: o.default.Messages.GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION
       })]
     }), (0, s.jsx)("div", {
       className: d.searchAndSound,
       children: e
     })]
   });
-  return (0, s.jsx)(a.Popout, {
+  return (0, s.jsx)(i.Popout, {
     shouldShow: m,
     position: "bottom",
     align: "left",
@@ -49,8 +49,8 @@ function m(e) {
       let {
         closePopout: t
       } = e;
-      return (0, s.jsx)(a.Dialog, {
-        children: (0, s.jsx)(o.default, {
+      return (0, s.jsx)(i.Dialog, {
+        children: (0, s.jsx)(c.default, {
           suppressPlaySound: !0,
           shouldShowUpsell: !1,
           guildId: null,
@@ -65,26 +65,26 @@ function m(e) {
         })
       })
     },
-    children: () => (0, s.jsx)(a.Clickable, {
+    children: () => (0, s.jsx)(i.Clickable, {
       className: d.sound,
       onClick: () => _(!0),
       children: null == n ? (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)(i.SoundboardIcon, {
-          color: l.default.colors.WHITE,
+        children: [(0, s.jsx)(l.SoundboardIcon, {
+          color: a.default.colors.WHITE,
           className: d.soundIcon,
           width: 14,
           height: 14
-        }), (0, s.jsx)(a.Text, {
+        }), (0, s.jsx)(i.Text, {
           className: d.text,
           variant: "text-sm/semibold",
-          children: c.default.Messages.GIFT_SELECT_SOUND
+          children: o.default.Messages.GIFT_SELECT_SOUND
         })]
       }) : (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)(a.Text, {
+        children: [(0, s.jsx)(i.Text, {
           className: d.textSelected,
           variant: "text-sm/semibold",
           children: n.emojiName
-        }), (0, s.jsx)(a.Text, {
+        }), (0, s.jsx)(i.Text, {
           className: d.text,
           variant: "text-sm/semibold",
           children: n.name

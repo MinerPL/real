@@ -6,15 +6,15 @@ n.r(t), n.d(t, {
 });
 var r = n("37983");
 n("884691");
-var u = n("414456"),
-  i = n.n(u),
+var i = n("414456"),
+  u = n.n(i),
   l = n("288264");
 
 function a(e) {
   let {
     icon: t,
     iconClassName: n,
-    description: u,
+    description: i,
     color: a
   } = e;
   return (0, r.jsxs)("div", {
@@ -23,11 +23,11 @@ function a(e) {
       className: l.perkIconContainer,
       children: (0, r.jsx)(t, {
         color: a,
-        className: i(l.perkIcon, n)
+        className: u(l.perkIcon, n)
       })
     }), (0, r.jsx)("div", {
       className: l.perkDescription,
-      children: u
+      children: i
     })]
   })
 }

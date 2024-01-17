@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   ClydeEditProfileModalContent: function() {
-    return v
+    return m
   },
   default: function() {
-    return m
+    return v
   }
 }), n("222007");
 var l = n("37983"),
-  i = n("884691"),
-  r = n("446674"),
+  r = n("884691"),
+  i = n("446674"),
   s = n("77078"),
   a = n("305961"),
   o = n("145131"),
@@ -19,34 +19,34 @@ var l = n("37983"),
   f = n("980215"),
   h = n("879253"),
   E = n("709594"),
-  C = n("49111"),
-  p = n("782340"),
+  p = n("49111"),
+  C = n("782340"),
   _ = n("947399");
 
-function v(e) {
+function m(e) {
   let {
     onClose: t,
     guildId: n
   } = e, {
-    settings: v,
-    isFetchingSettings: m,
-    isSavingSettings: R,
-    hasPendingChanges: I,
-    errors: g
-  } = (0, r.useStateFromStoresObject)([d.default], () => ({
+    settings: m,
+    isFetchingSettings: v,
+    isSavingSettings: I,
+    hasPendingChanges: g,
+    errors: S
+  } = (0, i.useStateFromStoresObject)([d.default], () => ({
     settings: d.default.getSettings(n),
     isFetchingSettings: d.default.isFetchingSettings(n),
     isSavingSettings: d.default.isSavingSettings(),
     hasPendingChanges: d.default.hasPendingChanges(),
     errors: d.default.getErrors()
-  })), S = (0, r.useStateFromStores)([a.default], () => a.default.getGuild(n)), N = (0, f.useClydeProfilesEnabled)(S), [L, T] = i.useState(!1);
-  i.useEffect(() => ((0, c.startEditingClydeProfile)(), () => {
+  })), R = (0, i.useStateFromStores)([a.default], () => a.default.getGuild(n)), N = (0, f.useClydeProfilesEnabled)(R), [L, T] = r.useState(!1);
+  r.useEffect(() => ((0, c.startEditingClydeProfile)(), () => {
     (0, c.doneEditingClydeProfile)(), (0, c.resetPendingChanges)()
-  }), []), i.useEffect(() => {
+  }), []), r.useEffect(() => {
     (0, c.fetchClydeSettings)(n, !0)
-  }, [n]), i.useEffect(() => {
-    (I || null != g) && T(!1)
-  }, [I, g]);
+  }, [n]), r.useEffect(() => {
+    (g || null != S) && T(!1)
+  }, [g, S]);
   let x = async () => {
     if (null == n || !d.default.hasPendingChanges()) return;
     let e = d.default.getPendingUpdates();
@@ -62,22 +62,22 @@ function v(e) {
         className: _.heading,
         children: (0, l.jsx)(s.Heading, {
           variant: "heading-xl/semibold",
-          children: p.default.Messages.CLYDE_CUSTOMIZE
+          children: C.default.Messages.CLYDE_CUSTOMIZE
         })
       }), (0, l.jsx)(s.ModalCloseButton, {
         onClick: t
       })]
     }), (0, l.jsx)(s.ScrollerAuto, {
       className: _.content,
-      children: m || null == v ? (0, l.jsx)(s.Spinner, {
+      children: v || null == m ? (0, l.jsx)(s.Spinner, {
         type: s.Spinner.Type.SPINNING_CIRCLE
       }) : (0, l.jsxs)(l.Fragment, {
         children: [N && (0, l.jsx)(E.default, {
           guildId: n
-        }), null != v && (0, l.jsx)("div", {
+        }), null != m && (0, l.jsx)("div", {
           className: _.section,
           children: (0, l.jsx)(h.ClydeEditProfileModalPersonalitySection, {
-            settings: v
+            settings: m
           })
         })]
       })
@@ -88,50 +88,50 @@ function v(e) {
         className: _.resetButtonContainer,
         children: (0, l.jsx)(s.Button, {
           onClick: () => {
-            (0, c.resetPendingChanges)(), u.default.track(C.AnalyticEvents.CLYDE_AI_PROFILE_MODAL_RESET_BUTTON_CLICKED, {
+            (0, c.resetPendingChanges)(), u.default.track(p.AnalyticEvents.CLYDE_AI_PROFILE_MODAL_RESET_BUTTON_CLICKED, {
               guild_id: n
             })
           },
           color: s.ButtonColors.PRIMARY,
           size: s.ButtonSizes.SMALL,
-          disabled: !I,
-          children: p.default.Messages.RESET
+          disabled: !g,
+          children: C.default.Messages.RESET
         })
-      }), I && null == g && (0, l.jsx)("div", {
+      }), g && null == S && (0, l.jsx)("div", {
         className: _.pendingChangesMessage,
-        children: p.default.Messages.SETTINGS_NOTICE_MESSAGE
+        children: C.default.Messages.SETTINGS_NOTICE_MESSAGE
       }), L && (0, l.jsx)("div", {
         className: _.successfullSaveMessage,
-        children: p.default.Messages.CLYDE_SETTINGS_SAVE_SUCCESS
-      }), null != g && (0, l.jsx)("div", {
+        children: C.default.Messages.CLYDE_SETTINGS_SAVE_SUCCESS
+      }), null != S && (0, l.jsx)("div", {
         className: _.errorMessage,
-        children: p.default.Messages.CLYDE_SETTINGS_SAVE_FAILED
+        children: C.default.Messages.CLYDE_SETTINGS_SAVE_FAILED
       }), (0, l.jsx)("div", {
         children: (0, l.jsx)(s.Button, {
           onClick: x,
           color: s.ButtonColors.GREEN,
           size: s.ButtonSizes.SMALL,
-          submitting: R,
-          disabled: !I,
-          children: p.default.Messages.SAVE_CHANGES
+          submitting: I,
+          disabled: !g,
+          children: C.default.Messages.SAVE_CHANGES
         })
       })]
     })]
   })
 }
 
-function m(e) {
+function v(e) {
   let {
     transitionState: t,
     onClose: n,
-    guildId: i
+    guildId: r
   } = e;
   return (0, l.jsx)(s.ModalRoot, {
     transitionState: t,
     size: s.ModalSize.LARGE,
-    children: (0, l.jsx)(v, {
+    children: (0, l.jsx)(m, {
       onClose: n,
-      guildId: i
+      guildId: r
     })
   })
 }

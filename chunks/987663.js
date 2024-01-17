@@ -10,10 +10,10 @@ s.r(t), s.d(t, {
     return V
   },
   UserChangeStrings: function() {
-    return k
+    return w
   },
   RoleChangeStrings: function() {
-    return w
+    return k
   },
   OnboardingPromptChangeStrings: function() {
     return Y
@@ -203,7 +203,7 @@ let b = new _.default("AuditLogUtils"),
     [p.AuditLogChangeKeys.AVAILABLE_TAG_EDIT]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_UPDATE,
     [p.AuditLogChangeKeys.AVAILABLE_TAG_DELETE]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_CHANNEL_AVAILABLE_TAGS_DELETE
   }),
-  k = () => ({
+  w = () => ({
     [p.AuditLogChangeKeys.NICK]: eL(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CHANGE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_NICK_DELETE),
     [p.AuditLogChangeKeys.DEAF]: {
       true: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_MEMBER_DEAF_ON,
@@ -224,7 +224,7 @@ let b = new _.default("AuditLogUtils"),
     [p.AuditLogChangeKeys.AUTO_MODERATION_TRIGGERED_RULE_NAME]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_AUTO_MODERATION_TRIGGERED_RULE_NAME_CHANGE,
     ...F()
   }),
-  w = () => ({
+  k = () => ({
     [p.AuditLogChangeKeys.NAME]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_NAME_CHANGE),
     [p.AuditLogChangeKeys.DESCRIPTION]: ef(y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CREATE, y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_DESCRIPTION_CHANGE),
     [p.AuditLogChangeKeys.PERMISSIONS_GRANTED]: y.default.Messages.GUILD_SETTINGS_AUDIT_LOG_ROLE_PERMISSIONS_GRANTED,

@@ -11,8 +11,8 @@ var i = n("249654"),
   r = n("582713"),
   d = n("374363"),
   h = n("271938"),
-  o = n("42203"),
-  u = n("923959"),
+  u = n("42203"),
+  o = n("923959"),
   c = n("26989"),
   C = n("305961"),
   g = n("660478"),
@@ -27,15 +27,15 @@ function y(e, t) {
   let n = S[e];
   if (null != n && null != t && n.has(t)) {
     var s;
-    f.default.isOptInEnabled(e) && !(null === (s = o.default.getChannel(t)) || void 0 === s ? void 0 : s.isThread()) && null == g.default.ackMessageId(t) && l.default.wait(() => (0, a.ack)(t, !0, !0, i.default.atPreviousMillisecond(t)))
+    f.default.isOptInEnabled(e) && !(null === (s = u.default.getChannel(t)) || void 0 === s ? void 0 : s.isThread()) && null == g.default.ackMessageId(t) && l.default.wait(() => (0, a.ack)(t, !0, !0, i.default.atPreviousMillisecond(t)))
   }
 }
 
-function _(e) {
+function m(e) {
   var t;
   if (null != S[e]) return;
-  let n = u.default.getChannels(e),
-    s = n[0, u.GUILD_SELECTABLE_CHANNELS_KEY].map(e => e.channel.id),
+  let n = o.default.getChannels(e),
+    s = n[0, o.GUILD_SELECTABLE_CHANNELS_KEY].map(e => e.channel.id),
     l = null === (t = c.default.getMember(e, h.default.getId())) || void 0 === t ? void 0 : t.joinedAt;
   if (null == l) return;
   S[e] = new Set;
@@ -46,7 +46,7 @@ function _(e) {
   })), v[e] = Date.now())
 }
 
-function m() {
+function _() {
   Object.keys(S).forEach(e => {
     let t = S[e];
     S[e] = new Set([...t].filter(t => !f.default.isChannelOrParentOptedIn(e, t)))
@@ -54,17 +54,17 @@ function m() {
 }
 class w extends s.default.Store {
   initialize() {
-    this.waitFor(u.default, h.default, c.default, f.default, g.default, d.default), this.syncWith([f.default], m)
+    this.waitFor(o.default, h.default, c.default, f.default, g.default, d.default), this.syncWith([f.default], _)
   }
   getNewChannelIds(e) {
     var t;
-    return null != e && null == S[e] && _(e), null != e && null !== (t = S[e]) && void 0 !== t ? t : E
+    return null != e && null == S[e] && m(e), null != e && null !== (t = S[e]) && void 0 !== t ? t : E
   }
   shouldIndicateNewChannel(e, t) {
     var n;
     if (null == e) return !1;
     let i = C.default.getGuild(e);
-    return !!(null != i && i.hasFeature(I.GuildFeatures.COMMUNITY)) && (null != e && null == S[e] && _(e), (null === (n = S[e]) || void 0 === n ? void 0 : n.has(t)) && null == g.default.getTrackedAckMessageId(t))
+    return !!(null != i && i.hasFeature(I.GuildFeatures.COMMUNITY)) && (null != e && null == S[e] && m(e), (null === (n = S[e]) || void 0 === n ? void 0 : n.has(t)) && null == g.default.getTrackedAckMessageId(t))
   }
 }
 w.displayName = "NewChannelsStore";
@@ -85,7 +85,7 @@ var N = new w(l.default, {
     } = e;
     if (null == t) return !1;
     let i = S[t];
-    return null == i || v[t] < Date.now() - p.default.Millis.HOUR ? (_(t), !0) : (null != n && y(t, n), !1)
+    return null == i || v[t] < Date.now() - p.default.Millis.HOUR ? (m(t), !0) : (null != n && y(t, n), !1)
   },
   SIDEBAR_VIEW_CHANNEL: function(e) {
     let {

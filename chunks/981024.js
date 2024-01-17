@@ -19,8 +19,8 @@ var l = n("37983"),
   _ = n("11539"),
   S = n("599110"),
   T = n("64318"),
-  p = n("49111"),
-  N = n("782340"),
+  N = n("49111"),
+  p = n("782340"),
   I = n("358468");
 
 function m(e) {
@@ -28,7 +28,7 @@ function m(e) {
     onClick: t
   } = e;
   return (0, l.jsx)(h.default, {
-    tooltip: N.default.Messages.MARK_ALL_AS_READ,
+    tooltip: p.default.Messages.MARK_ALL_AS_READ,
     color: h.CircleIconButtonColors.SECONDARY,
     icon: (0, l.jsx)(_.default, {}),
     onClick: t
@@ -42,10 +42,10 @@ function A(e) {
     closePopout: h
   } = e, {
     initialized: _,
-    items: N,
+    items: p,
     loading: A,
     loadMore: g
-  } = (0, c.useDesktopNotificationCenterItemsLoader)(), C = (0, i.useStateFromStores)([o.default], () => o.default.localItems), R = a.useMemo(() => [...[...N, ...C].sort((e, t) => -1 * s.default.compare(e.id, t.id))], [N, C]), M = N.length > 0 ? N[0] : null, O = E.NotificationCenterAckedBeforeId.useSetting(), L = a.useMemo(() => {
+  } = (0, c.useDesktopNotificationCenterItemsLoader)(), C = (0, i.useStateFromStores)([o.default], () => o.default.localItems), R = a.useMemo(() => [...[...p, ...C].sort((e, t) => -1 * s.default.compare(e.id, t.id))], [p, C]), M = p.length > 0 ? p[0] : null, O = E.NotificationCenterAckedBeforeId.useSetting(), L = a.useMemo(() => {
     let e = null != M && 0 >= s.default.compare(M.id, O);
     if (e) return !1;
     for (let e of R) {
@@ -63,7 +63,7 @@ function A(e) {
       closePopout: h,
       children: L ? (0, l.jsx)(m, {
         onClick: () => {
-          null != M && (E.NotificationCenterAckedBeforeId.updateSetting(M.id), S.default.track(p.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
+          null != M && (E.NotificationCenterAckedBeforeId.updateSetting(M.id), S.default.track(N.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
             action_type: u.NotificationCenterActionTypes.MARK_ALL_READ
           }))
         }

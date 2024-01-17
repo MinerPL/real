@@ -17,8 +17,8 @@ var l = n("37983"),
   E = n("305961"),
   h = n("476765"),
   _ = n("794352"),
-  v = n("883310"),
-  C = n("93550"),
+  C = n("883310"),
+  v = n("93550"),
   g = n("617347"),
   S = n("745049"),
   T = n("782340"),
@@ -39,7 +39,7 @@ function N(e) {
   } = (0, o.useManageResourcePermissions)(null != R ? R : O), x = L(a), G = (0, r.useStateFromStores)([u.default], () => u.default.isLurking(m), [m]), M = a.entity_type === S.GuildScheduledEventEntityTypes.STAGE_INSTANCE, [U, w] = i.useState(M), [k, {
     loading: D,
     error: P
-  }] = (0, v.default)();
+  }] = (0, C.default)();
   if (!x) return null;
   let b = y === S.GuildScheduledEventPrivacyLevel.PUBLIC ? T.default.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PUBLIC_LABEL : T.default.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PRIVATE_LABEL,
     j = () => {
@@ -62,7 +62,7 @@ function N(e) {
           channel: R,
           name: a.name,
           description: null !== (t = a.description) && void 0 !== t ? t : void 0,
-          imageSource: (0, C.default)(a),
+          imageSource: (0, v.default)(a),
           isActive: !1,
           isUserLurking: G,
           speakers: [],

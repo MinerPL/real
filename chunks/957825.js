@@ -25,7 +25,7 @@ function E(e) {
     label: _,
     location: S,
     includeGuildMute: T
-  } = e, p = (0, r.useChannelNotificationRadioItems)(t), N = (0, o.useChannelNotificationSettingsItemInner)(t), I = (0, a.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id)), m = (0, u.default)(I), A = (0, d.useShouldUseNewNotificationSystem)("ChannelNotificationSettingsPopoutMenu") && c.CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING.has(t.type);
+  } = e, N = (0, r.useChannelNotificationRadioItems)(t), p = (0, o.useChannelNotificationSettingsItemInner)(t), I = (0, a.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id)), m = (0, u.default)(I), A = (0, d.useShouldUseNewNotificationSystem)("ChannelNotificationSettingsPopoutMenu") && c.CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING.has(t.type);
   return (0, l.jsxs)(s.Menu, {
     navId: h,
     onClose: n,
@@ -35,8 +35,8 @@ function E(e) {
       children: (0, i.default)(t, S)
     }), T ? (0, l.jsx)(s.MenuGroup, {
       children: m
-    }) : null, A ? N : (0, l.jsx)(s.MenuGroup, {
-      children: p
+    }) : null, A ? p : (0, l.jsx)(s.MenuGroup, {
+      children: N
     })]
   })
 }

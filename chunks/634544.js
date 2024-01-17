@@ -4,54 +4,54 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var a = n("37983");
+var r = n("37983");
 n("884691");
-var i = n("414456"),
-  r = n.n(i),
-  l = n("77078"),
-  u = n("118503"),
+var a = n("414456"),
+  i = n.n(a),
+  u = n("77078"),
+  l = n("118503"),
   o = n("427459"),
   s = n("782340"),
   c = n("884737"),
   d = e => {
-    let t, n, i, {
+    let t, n, a, {
         guildFeature: d,
         guild: f,
         className: E,
-        hideTooltip: _ = !1,
-        tooltipPosition: p = "left",
+        hideTooltip: p = !1,
+        tooltipPosition: _ = "left",
         onClick: T
       } = e,
-      h = f.hasFeature(d),
-      C = (0, o.minimumRequiredTierForGuildFeature)(d);
-    return (h ? (null != C && (i = s.default.Messages.PREMIUM_GUILD_INCLUDED), t = (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(u.default, {
+      S = f.hasFeature(d),
+      h = (0, o.minimumRequiredTierForGuildFeature)(d);
+    return (S ? (null != h && (a = s.default.Messages.PREMIUM_GUILD_INCLUDED), t = (0, r.jsxs)(r.Fragment, {
+      children: [(0, r.jsx)(l.default, {
         className: c.unlockedIcon
-      }), (0, a.jsx)(l.Heading, {
+      }), (0, r.jsx)(u.Heading, {
         variant: "eyebrow",
         className: c.description,
         children: s.default.Messages.PREMIUM_GUILD_TIER_UNLOCKED
       })]
-    })) : (null != C && (i = s.default.Messages.CLICK_TO_LEARN_MORE), t = (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(u.default, {
+    })) : (null != h && (a = s.default.Messages.CLICK_TO_LEARN_MORE), t = (0, r.jsxs)(r.Fragment, {
+      children: [(0, r.jsx)(l.default, {
         className: c.icon
-      }), (0, a.jsx)(l.Heading, {
+      }), (0, r.jsx)(u.Heading, {
         variant: "eyebrow",
         className: c.description,
-        children: null != C && (0, o.getShortenedTierName)(C)
+        children: null != h && (0, o.getShortenedTierName)(h)
       })]
-    })), n = _ || null == i ? (0, a.jsx)("div", {
-      className: r(c.availabilityIndicator, E),
+    })), n = p || null == a ? (0, r.jsx)("div", {
+      className: i(c.availabilityIndicator, E),
       children: t
-    }) : (0, a.jsx)(l.Tooltip, {
-      position: p,
-      text: i,
-      children: e => (0, a.jsx)("div", {
+    }) : (0, r.jsx)(u.Tooltip, {
+      position: _,
+      text: a,
+      children: e => (0, r.jsx)("div", {
         ...e,
-        className: r(c.availabilityIndicator, E),
+        className: i(c.availabilityIndicator, E),
         children: t
       })
-    }), null == T || h) ? n : (0, a.jsx)(l.Clickable, {
+    }), null == T || S) ? n : (0, r.jsx)(u.Clickable, {
       onClick: T,
       className: c.clickable,
       children: n

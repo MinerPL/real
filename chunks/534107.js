@@ -78,7 +78,7 @@ function N(e) {
     var e;
     let t;
     return Math.floor(((t = (e = c) <= g ? 40 : e >= 45 ? 294 : (Math.min(e, 45) - g) / (45 - g) * 254 + 40) + 4) / E) * E - 4
-  }, [c]), L = a.useRef(), b = function(e, t) {
+  }, [c]), L = a.useRef(), O = function(e, t) {
     let n = a.useMemo(() => (function(e) {
         let t;
         if (null == e) return;
@@ -107,7 +107,7 @@ function N(e) {
         }(null != n ? n : [], l)) && void 0 !== e ? e : C
       }, [n, l]);
     return s
-  }(n, y), O = a.useRef(v), D = a.useRef(N), P = a.useRef(null), w = window.devicePixelRatio, {
+  }(n, y), b = a.useRef(v), D = a.useRef(N), P = a.useRef(null), w = window.devicePixelRatio, {
     lastBackgroundFillColor: U,
     backgroundFillColor: k,
     lastActiveFillColor: V,
@@ -140,27 +140,27 @@ function N(e) {
       showAll: !v,
       currentTime: s,
       duration: c,
-      numSegments: b.length
+      numSegments: O.length
     });
-    L.current = b.map((t, n) => new f.default(n < e ? t : 0))
-  }, [b]), a.useEffect(() => {
+    L.current = O.map((t, n) => new f.default(n < e ? t : 0))
+  }, [O]), a.useEffect(() => {
     let e = L.current;
     if (null == e) return;
     let t = I({
       showAll: !v,
       currentTime: s,
       duration: c,
-      numSegments: b.length
+      numSegments: O.length
     });
     for (let n = 0; n < e.length; n++) {
       let l = e[n];
       if (n < t) {
-        l.animateTo(b[n]);
+        l.animateTo(O[n]);
         continue
       }
       l.reset()
     }
-  }, [b, s, c, v]), a.useEffect(() => {
+  }, [O, s, c, v]), a.useEffect(() => {
     let e = null;
     return e = requestAnimationFrame(function t(n) {
       let l = j.current,
@@ -168,16 +168,16 @@ function N(e) {
         s = L.current;
       if (null == l || null == a || null == s) return;
       let i = !1;
-      (O.current !== v || D.current !== N) && (O.current = v, D.current = N, P.current = n), null != P.current && n > P.current + 200 && (P.current = null);
+      (b.current !== v || D.current !== N) && (b.current = v, D.current = N, P.current = n), null != P.current && n > P.current + 200 && (P.current = null);
       let r = l.height / w;
       a.clearRect(0, 0, l.width, l.height), a.beginPath();
       let [o, u] = S(U, k, n, P.current);
       i = i || u, a.fillStyle = o;
-      for (let e = 0; e < b.length; e++) x({
+      for (let e = 0; e < O.length; e++) x({
         context: a,
         devicePixelRatio: w,
         canvasHeight: r,
-        segmentValue: b[e],
+        segmentValue: O[e],
         segmentIndex: e,
         constrainMin: !0
       });
@@ -188,7 +188,7 @@ function N(e) {
       i = i || f;
       for (let e = 0; e < s.length; e++) {
         let t = s[e],
-          n = Math.max(t.getCurrentValue(), b[e] - .1);
+          n = Math.max(t.getCurrentValue(), O[e] - .1);
         a.beginPath(), a.fillStyle = t.isReset ? d : m, x({
           context: a,
           devicePixelRatio: w,
@@ -202,7 +202,7 @@ function N(e) {
     }), () => {
       null != e && cancelAnimationFrame(e)
     }
-  }, [j, w, b, y, s, c, v, N, U, k, V, F, B, H]);
+  }, [j, w, O, y, s, c, v, N, U, k, V, F, B, H]);
   let [, G] = (0, d.default)({
     ref: j,
     onDrag: M,

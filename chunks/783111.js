@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return i
+    return n
   }
 });
-var r = n("666038");
-class u extends r.default {
+var l = a("666038");
+class i extends l.default {
   static createFromServer(e) {
-    return new u({
+    return new i({
       id: e.id,
       guildId: e.guild_id,
       userId: null != e.user ? e.user.id : e.user_id,
@@ -20,4 +20,4 @@ class u extends r.default {
     super(), this.id = e.id, this.guildId = e.guildId, this.userId = e.userId, this.user = e.user, this.ended = e.ended, this.endsAt = null != e.endsAt ? e.endsAt : null
   }
 }
-var i = u
+var n = i

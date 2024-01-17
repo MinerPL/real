@@ -24,13 +24,13 @@ function S(e) {
     className: S
   } = e, {
     showClipsHeaderEntrypoint: T,
-    ignorePlatformRestriction: p
+    ignorePlatformRestriction: N
   } = c.ClipsExperiment.useExperiment({
     location: "ClipsButton"
   }, {
     autoTrackExposure: !1
   }), {
-    hasClips: N,
+    hasClips: p,
     hasNewClips: I,
     lastClipsSession: m,
     remindersEnabled: A
@@ -53,7 +53,7 @@ function S(e) {
       modalKey: h.CLIPS_GALLERY_MODAL_KEY
     })
   }
-  return T && ((0, d.isWindows)() || p) && N ? (0, l.jsxs)(l.Fragment, {
+  return T && ((0, d.isWindows)() || N) && p ? (0, l.jsxs)(l.Fragment, {
     children: [null != C && t && A && g && !(0, i.hasAnyModalOpen)() && !M && (0, l.jsx)(E.default, {
       clipIconRef: C,
       lastClipsSession: m,

@@ -15,10 +15,10 @@ function h() {
   r.clear()
 }
 
-function o(e) {
+function u(e) {
   r.delete(e.guild.id)
 }
-class u extends s.default.Store {
+class o extends s.default.Store {
   getChannelStatus(e) {
     var t;
     if (null != e && null != e.guild_id) {
@@ -26,10 +26,10 @@ class u extends s.default.Store {
     }
   }
 }
-u.displayName = "ChannelStatusStore";
-var c = new u(l.default, {
-  GUILD_CREATE: o,
-  GUILD_DELETE: o,
+o.displayName = "ChannelStatusStore";
+var c = new o(l.default, {
+  GUILD_CREATE: u,
+  GUILD_DELETE: u,
   CONNECTION_RESUMED: h,
   CONNECTION_OPEN: h,
   VOICE_CHANNEL_STATUS_UPDATE: function(e) {

@@ -19,8 +19,8 @@ var i = n("37983"),
   E = n("956597"),
   T = n("635956"),
   I = n("646718"),
-  p = n("49111"),
-  P = n("782340"),
+  P = n("49111"),
+  p = n("782340"),
   S = n("857513"),
   R = n("393828");
 
@@ -32,17 +32,17 @@ function C(e) {
     guildBoostProps: M,
     analyticsSource: g,
     analyticsLocation: L,
-    body: U,
-    context: h,
-    glowUp: N,
-    modalClassName: v,
+    body: v,
+    context: U,
+    glowUp: h,
+    modalClassName: N,
     artContainerClassName: x,
     bodyClassName: A,
     transitionState: b,
     onClose: D,
     onSubscribeClick: F,
-    onSecondaryClick: j,
-    secondaryCTA: y,
+    onSecondaryClick: y,
+    secondaryCTA: j,
     subscribeButtonText: w,
     showNewBadge: B = !1,
     enableArtBoxShadow: G = !0,
@@ -55,13 +55,13 @@ function C(e) {
     analyticsLocations: J
   } = (0, u.default)(o.default.PREMIUM_UPSELL_MODAL);
   r.useEffect(() => {
-    !k && (z ? c.default.track(p.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
+    !k && (z ? c.default.track(P.AnalyticEvents.PREMIUM_GUILD_UPSELL_VIEWED, {
       type: "".concat(O, " - Tier ").concat(M.boostedGuildTier),
       guild_id: M.guild.id,
       channel_id: M.channelId,
       location: L,
       location_stack: J
-    }) : c.default.track(p.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    }) : c.default.track(P.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: O,
       source: g,
       location_stack: J,
@@ -75,7 +75,7 @@ function C(e) {
     alt: "",
     src: Y.artURL
   }) : Y.artElement, (0, i.jsxs)(a.ModalRoot, {
-    className: s(S.root, v),
+    className: s(S.root, N),
     "aria-label": C,
     transitionState: b,
     children: [(0, i.jsxs)("div", {
@@ -94,11 +94,11 @@ function C(e) {
             type: O,
             subscriptionTier: null !== (l = null == W ? void 0 : null === (n = W.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== l ? l : I.PremiumSubscriptionSKUs.TIER_2,
             headingText: C,
-            context: h,
+            context: U,
             analyticsLocationObject: L,
             discountOffer: Z,
             trialOffer: W,
-            children: N
+            children: h
           })
         }) : (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(a.Heading, {
@@ -108,7 +108,7 @@ function C(e) {
           }), (0, i.jsx)(a.Text, {
             variant: "text-md/normal",
             className: s(A),
-            children: U
+            children: v
           })]
         })
       })
@@ -116,13 +116,13 @@ function C(e) {
       className: S.footer,
       children: [(0, i.jsxs)("div", {
         className: S.primaryActions,
-        children: [null != y ? (0, i.jsx)(a.Button, {
+        children: [null != j ? (0, i.jsx)(a.Button, {
           className: S.secondaryAction,
-          onClick: j,
+          onClick: y,
           size: a.Button.Sizes.SMALL,
           color: a.Button.Colors.PRIMARY,
           look: a.Button.Looks.LINK,
-          children: y
+          children: j
         }) : null, (() => {
           let e, t;
           if (z) return (0, i.jsx)(d.default, {
@@ -137,7 +137,7 @@ function C(e) {
                 intervalType: null == W ? void 0 : null === (n = W.subscription_trial) || void 0 === n ? void 0 : n.interval,
                 intervalCount: null == W ? void 0 : null === (r = W.subscription_trial) || void 0 === r ? void 0 : r.interval_count
               }), t = null == W ? void 0 : W.trial_id
-            } else null != Z && (e = P.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+            } else null != Z && (e = p.default.Messages.PREMIUM_DISCOUNT_CTA.format({
               percent: Z.discount.amount
             }))
           }
@@ -158,7 +158,7 @@ function C(e) {
         size: a.Button.Sizes.SMALL,
         color: a.Button.Colors.PRIMARY,
         look: a.Button.Looks.LINK,
-        children: null != V ? V : P.default.Messages.BACK
+        children: null != V ? V : p.default.Messages.BACK
       })]
     })]
   })

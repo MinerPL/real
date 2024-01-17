@@ -10,8 +10,8 @@ var s = a("37983"),
   r = a.n(l),
   i = a("907002"),
   o = a("446674"),
-  u = a("77078"),
-  d = a("18054"),
+  d = a("77078"),
+  u = a("18054"),
   c = a("206230"),
   m = a("367376"),
   h = a("213523"),
@@ -64,15 +64,15 @@ var s = a("37983"),
         className: p.container,
         children: [(0, s.jsxs)("div", {
           className: p.headerContainer,
-          children: [(0, s.jsxs)(u.Heading, {
+          children: [(0, s.jsxs)(d.Heading, {
             variant: "heading-lg/semibold",
             className: p.guidelinesHeader,
             children: [(0, s.jsx)(h.default, {
               width: 20,
               height: 20
-            }), S.default.Messages.FORUM_POST_GUIDELINES_TITLE, A && (0, s.jsx)(u.Clickable, {
+            }), S.default.Messages.FORUM_POST_GUIDELINES_TITLE, A && (0, s.jsx)(d.Clickable, {
               onClick: () => {
-                d.default.open(t.id, void 0, _.ChannelSettingsSubsections.TOPIC)
+                u.default.open(t.id, void 0, _.ChannelSettingsSubsections.TOPIC)
               },
               tag: "span",
               className: p.clickable,
@@ -81,7 +81,7 @@ var s = a("37983"),
                 height: 16
               })
             })]
-          }), (0, s.jsx)(u.Clickable, {
+          }), (0, s.jsx)(d.Clickable, {
             "aria-label": S.default.Messages.CLOSE,
             className: p.clickable,
             onClick: () => {
@@ -94,7 +94,7 @@ var s = a("37983"),
           })]
         }), (0, s.jsxs)("div", {
           className: p.descriptionContainer,
-          children: [(0, s.jsx)(u.Text, {
+          children: [(0, s.jsx)(d.Text, {
             selectable: !0,
             variant: "text-sm/normal",
             color: "header-secondary",
@@ -116,10 +116,10 @@ var s = a("37983"),
               className: p.gradient
             }), (0, s.jsx)("div", {
               className: p.linkContainer,
-              children: (0, s.jsx)(u.Clickable, {
+              children: (0, s.jsx)(d.Clickable, {
                 className: p.showMoreLink,
                 onClick: () => {
-                  (0, u.openModalLazy)(async () => {
+                  (0, d.openModalLazy)(async () => {
                     let {
                       default: e
                     } = await a.el("553415").then(a.bind(a, "553415"));
@@ -129,7 +129,7 @@ var s = a("37983"),
                     })
                   })
                 },
-                children: (0, s.jsxs)(u.Text, {
+                children: (0, s.jsxs)(d.Text, {
                   variant: "text-sm/semibold",
                   color: "text-brand",
                   className: p.showMoreText,

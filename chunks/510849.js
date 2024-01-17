@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return R
   }
 }), n("781738"), n("222007");
 var r = n("446674"),
@@ -65,7 +65,7 @@ class h extends r.default.Store {
   }
 }
 h.displayName = "GIFPickerViewStore";
-var T = new h(a.default, {
+var R = new h(a.default, {
   GIF_PICKER_INITIALIZE: function(e) {
     I = e.analyticsID
   },

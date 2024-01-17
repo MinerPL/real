@@ -30,11 +30,11 @@ let N = {
     transform: "translate3d(15%, 0, 0)",
     opacity: .3
   },
-  p = {
+  S = {
     transform: "translate3d(5%, 0, 0)",
     opacity: .5
   },
-  S = {
+  p = {
     transform: "translate3d(0, 0, 0)",
     opacity: 1
   },
@@ -79,9 +79,9 @@ let N = {
           let t = M.default.getEnhancedMember(l.id, e),
             a = M.default.getLastRefreshTimestamp(l.id),
             n = null != t && t.refreshTimestamp === a;
-          return null != t && 0 !== a && n ? V ? p : N : S
+          return null != t && 0 !== a && n ? V ? S : N : p
         },
-        enter: S,
+        enter: p,
         config: v
       });
     return (0, a.jsxs)("table", {

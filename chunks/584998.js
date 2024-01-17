@@ -40,12 +40,12 @@ function N(e) {
       channel: c,
       rating: n
     })
-  }, b = d.default.can(x.Permissions.MANAGE_MESSAGES, c);
+  }, O = d.default.can(x.Permissions.MANAGE_MESSAGES, c);
   return (0, l.jsxs)(i.Clickable, {
     className: S.container,
     onClick: T,
     onContextMenu: e => {
-      b && (0, r.openContextMenuLazy)(e, async () => {
+      O && (0, r.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("113286").then(n.bind(n, "113286"));

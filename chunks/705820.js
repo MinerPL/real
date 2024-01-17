@@ -9,12 +9,12 @@ n.r(t), n.d(t, {
 }), n("222007");
 var s = n("37983"),
   r = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
-  a = n("77078"),
+  a = n("414456"),
+  l = n.n(a),
+  i = n("77078"),
   u = n("850391"),
-  o = n("149022"),
-  c = n("681060"),
+  c = n("149022"),
+  o = n("681060"),
   d = n("570697"),
   f = n("233069"),
   m = n("49111"),
@@ -30,39 +30,39 @@ function N(e) {
   let {
     sectionTitle: t,
     errors: n,
-    onTextChange: l,
+    onTextChange: a,
     pendingText: f,
     placeholder: m,
     currentText: N,
     className: S,
-    innerClassName: P,
-    disabled: T = !1,
+    innerClassName: T,
+    disabled: P = !1,
     disableThemedBackground: C = !1
-  } = e, [A, h] = r.useState(null != f ? f : N), [O, R] = r.useState((0, o.toRichValue)(A)), g = r.useRef(!1);
+  } = e, [A, O] = r.useState(null != f ? f : N), [h, R] = r.useState((0, c.toRichValue)(A)), g = r.useRef(!1);
   return r.useEffect(() => {
     g.current = !0
   }, []), r.useEffect(() => {
     if (void 0 === f) {
-      let e = (0, o.toRichValue)(N);
-      h(N), R(e)
+      let e = (0, c.toRichValue)(N);
+      O(N), R(e)
     }
   }, [f, N]), (0, s.jsx)("div", {
-    className: i(E.body, S),
+    className: l(E.body, S),
     children: (0, s.jsxs)(d.default, {
       title: t,
       errors: n,
-      disabled: T,
-      children: [(0, s.jsx)(c.default, {
-        innerClassName: i(E.textArea, P),
+      disabled: P,
+      children: [(0, s.jsx)(o.default, {
+        innerClassName: l(E.textArea, T),
         editorClassName: E.editorTextArea,
         maxCharacterCount: I,
         onChange: function(e, t, n) {
-          t !== A && (h(t), R(n), l(t))
+          t !== A && (O(t), R(n), a(t))
         },
         placeholder: m,
         channel: p,
         textValue: A,
-        richValue: O,
+        richValue: h,
         type: u.ChatInputTypes.CUSTOM_GIFT,
         onBlur: () => {
           g.current = !1
@@ -80,7 +80,7 @@ function N(e) {
           })
         },
         disableThemedBackground: C
-      }), (0, s.jsx)(a.HiddenVisually, {
+      }), (0, s.jsx)(i.HiddenVisually, {
         children: _.default.Messages.MAXIMUM_LENGTH.format({
           maxLength: I
         })

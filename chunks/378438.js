@@ -25,10 +25,10 @@ n.r(t), n.d(t, {
     return T
   },
   updateAutocompleteQuery: function() {
-    return p
+    return N
   },
   setShowBlockedResults: function() {
-    return N
+    return p
   }
 }), n("808653");
 var l = n("913144"),
@@ -134,7 +134,7 @@ function T(e) {
   }))
 }
 
-function p(e, t, n) {
+function N(e, t, n) {
   null != e && l.default.dispatch({
     type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE",
     searchId: e,
@@ -143,7 +143,7 @@ function p(e, t, n) {
   })
 }
 
-function N(e, t) {
+function p(e, t) {
   l.default.dispatch({
     type: "SEARCH_SET_SHOW_BLOCKED_RESULTS",
     searchId: e,

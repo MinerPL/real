@@ -10,10 +10,10 @@ a.r(t), a.d(t, {
     return o
   },
   getFrameDimensions: function() {
-    return u
+    return d
   },
   IMAGE_PADDING: function() {
-    return d
+    return u
   },
   getGridPostHeight: function() {
     return c
@@ -53,9 +53,9 @@ let o = {
     columns: 1,
     columnWidth: 450
   },
-  u = e => {
+  d = e => {
     let t = e - 2;
     return [t, Math.ceil(t * l)]
   },
-  d = 12,
-  c = e => 60 + u(e - 2 * d)[1] + 24 + 3 * r
+  u = 12,
+  c = e => 60 + d(e - 2 * u)[1] + 24 + 3 * r

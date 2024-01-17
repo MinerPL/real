@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   },
   isPaymentSourceEligibleForMultiMonthPlans: function() {
     return u
@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var s = n("976979"),
   r = n("862205"),
-  l = n("646718"),
-  i = (0, r.createExperiment)({
+  a = n("646718"),
+  l = (0, r.createExperiment)({
     kind: "user",
     id: "2022-02_multi_month_plans",
     label: "Multi Month Plans",
@@ -21,18 +21,18 @@ var s = n("976979"),
       id: 1,
       label: "3 and 6 Month Plans",
       config: {
-        newPlans: [l.SubscriptionPlans.PREMIUM_6_MONTH_TIER_2, l.SubscriptionPlans.PREMIUM_3_MONTH_TIER_2]
+        newPlans: [a.SubscriptionPlans.PREMIUM_6_MONTH_TIER_2, a.SubscriptionPlans.PREMIUM_3_MONTH_TIER_2]
       }
     }, {
       id: 2,
       label: "3 Month Plan Only",
       config: {
-        newPlans: [l.SubscriptionPlans.PREMIUM_3_MONTH_TIER_2]
+        newPlans: [a.SubscriptionPlans.PREMIUM_3_MONTH_TIER_2]
       }
     }]
   });
-let a = new Set([s.CountryCodes.US, s.CountryCodes.CA]);
+let i = new Set([s.CountryCodes.US, s.CountryCodes.CA]);
 
 function u(e) {
-  return null == e || a.has(e.country)
+  return null == e || i.has(e.country)
 }

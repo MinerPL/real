@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   EVERYONE_ID: function() {
-    return N
+    return v
   },
   EVERYONE_CHANNEL_ID: function() {
     return C
@@ -13,8 +13,8 @@ n.r(t), n.d(t, {
     return H
   }
 }), n("808653"), n("424973"), n("222007");
-var i, a, l = n("917351"),
-  s = n.n(l),
+var i, l, a = n("917351"),
+  s = n.n(a),
   r = n("210696"),
   u = n.n(r),
   d = n("316693"),
@@ -31,8 +31,8 @@ var i, a, l = n("917351"),
   p = n("101125"),
   S = n("697218"),
   M = n("49111"),
-  v = n("782340");
-let N = "everyone",
+  N = n("782340");
+let v = "everyone",
   C = 0;
 
 function O(e, t, n, i) {
@@ -44,27 +44,27 @@ function O(e, t, n, i) {
         type: "GROUP", key: t, id: t, get title() {
           switch (t) {
             case M.StatusTypes.ONLINE:
-              return v.default.Messages.STATUS_ONLINE;
+              return N.default.Messages.STATUS_ONLINE;
             case M.StatusTypes.OFFLINE:
-              return v.default.Messages.STATUS_OFFLINE;
+              return N.default.Messages.STATUS_OFFLINE;
             default:
-              return v.default.Messages.STATUS_UNKNOWN
+              return N.default.Messages.STATUS_UNKNOWN
           }
         }, count: n, index: i
       };
     default:
-      let a = A.default.getGuild(e),
-        l = null != a ? a.getRole(t) : null;
+      let l = A.default.getGuild(e),
+        a = null != l ? l.getRole(t) : null;
       return {
-        type: "GROUP", key: t, id: t, title: null != l ? l.name : "", count: n, index: i
+        type: "GROUP", key: t, id: t, title: null != a ? a.name : "", count: n, index: i
       }
   }
 }
 
 function R(e, t, n) {
   let i = n === h.default.getId(),
-    a = T.default.isMobileOnline(n),
-    l = i ? p.default.getStatus() : T.default.getStatus(n, e),
+    l = T.default.isMobileOnline(n),
+    a = i ? p.default.getStatus() : T.default.getStatus(n, e),
     s = i ? p.default.getActivities() : T.default.getActivities(n, e),
     r = f.default.getStreamForUser(n, e),
     u = S.default.getUser(n);
@@ -72,27 +72,27 @@ function R(e, t, n) {
     type: "MEMBER",
     ...m.default.getMember(e, n),
     user: u,
-    status: l,
+    status: a,
     activities: s,
     applicationStream: r,
     isOwner: t === n,
-    isMobileOnline: a
+    isMobileOnline: l
   }
 }
 
 function I(e) {
   let t = E.default.getChannel(e);
-  return null == t ? N : null == t.memberListId ? function(e) {
-    return _.default.canEveryone(M.Permissions.VIEW_CHANNEL, e) ? N : u.v3(s(e.permissionOverwrites).reduce((e, t) => {
+  return null == t ? v : null == t.memberListId ? function(e) {
+    return _.default.canEveryone(M.Permissions.VIEW_CHANNEL, e) ? v : u.v3(s(e.permissionOverwrites).reduce((e, t) => {
       let {
         id: n,
         allow: i,
-        deny: a
+        deny: l
       } = t;
-      return d.default.has(i, M.Permissions.VIEW_CHANNEL) ? e.push("allow:".concat(n)) : d.default.has(a, M.Permissions.VIEW_CHANNEL) && e.push("deny:".concat(n)), e
+      return d.default.has(i, M.Permissions.VIEW_CHANNEL) ? e.push("allow:".concat(n)) : d.default.has(l, M.Permissions.VIEW_CHANNEL) && e.push("deny:".concat(n)), e
     }, []).sort().join(",")).toString()
   }(t) : t.memberListId
-}(a = i || (i = {})).GROUP = "GROUP", a.MEMBER = "MEMBER";
+}(l = i || (i = {})).GROUP = "GROUP", l.MEMBER = "MEMBER";
 class b {
   updateOwnerId() {
     let e = A.default.getGuild(this.guildId);
@@ -105,8 +105,8 @@ class b {
     this.groups = e.map(e => {
       var n;
       let i = t,
-        a = Math.max(0, null !== (n = e.count) && void 0 !== n ? n : 0);
-      return t += a + 1, O(this.guildId, e.id, a, i)
+        l = Math.max(0, null !== (n = e.count) && void 0 !== n ? n : 0);
+      return t += l + 1, O(this.guildId, e.id, l, i)
     }), this.rows.length = t
   }
   sync(e, t) {
@@ -139,8 +139,8 @@ class b {
     let {
       group: n,
       member: i
-    } = t, a = this.rows[e];
-    if (null != a && "MEMBER" === a.type && delete this.members[a.user.id], null != n) this.rows[e] = O(this.guildId, n.id, n.count);
+    } = t, l = this.rows[e];
+    if (null != l && "MEMBER" === l.type && delete this.members[l.user.id], null != n) this.rows[e] = O(this.guildId, n.id, n.count);
     else if (null != i) {
       let t = R(this.guildId, this.ownerId, i.user.id);
       if (null == t) return;
@@ -208,13 +208,13 @@ function P() {
   })
 }
 
-function F() {
+function U() {
   let e = h.default.getId();
   D.forEach(null, t => t.rebuildMember(e))
 }
-class U extends o.default.Store {
+class F extends o.default.Store {
   initialize() {
-    this.waitFor(S.default, A.default, E.default, m.default, T.default, p.default, h.default, g.default, f.default), this.syncWith([p.default], F), this.syncWith([f.default], P)
+    this.waitFor(S.default, A.default, E.default, m.default, T.default, p.default, h.default, g.default, f.default), this.syncWith([p.default], U), this.syncWith([f.default], P)
   }
   getProps(e, t) {
     let n = D.get(e, I(t));
@@ -230,8 +230,8 @@ class U extends o.default.Store {
     return n.rows
   }
 }
-U.displayName = "ChannelMemberStore";
-var H = new U(c.default, {
+F.displayName = "ChannelMemberStore";
+var H = new F(c.default, {
   CONNECTION_OPEN: y,
   OVERLAY_INITIALIZE: y,
   GUILD_MEMBER_LIST_UPDATE: function(e) {

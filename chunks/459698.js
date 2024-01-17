@@ -45,8 +45,8 @@ var l = n("37983"),
   y = n("162771"),
   R = n("697218"),
   L = n("145131"),
-  b = n("791106"),
-  O = n("580357"),
+  O = n("791106"),
+  b = n("580357"),
   D = n("476263"),
   P = n("98292"),
   w = n("256170"),
@@ -181,7 +181,7 @@ let J = () => {
         className: i(X.guildInformation, X.truncatingText),
         children: [(0, l.jsxs)(L.default, {
           align: L.default.Align.CENTER,
-          children: [(0, l.jsx)(O.default, {
+          children: [(0, l.jsx)(b.default, {
             guild: t,
             className: X.guildBadge
           }), c ? (0, l.jsx)(d.Clickable, {
@@ -248,26 +248,26 @@ let J = () => {
       joinedEmojiSourceGuildRecord: S,
       closePopout: A,
       onToggleShowMoreEmojis: j,
-      guildEmoji: b,
-      demoMode: O = !1,
+      guildEmoji: O,
+      demoMode: b = !1,
       nonce: D
     } = e, U = (0, o.useStateFromStores)([R.default], () => R.default.getCurrentUser()), k = (0, o.useStateFromStores)([y.default], () => y.default.getGuildId()), F = H.default.isPremium(U), B = null != k && (k === (null == v ? void 0 : v.id) || k === (null == S ? void 0 : S.id)), q = null != S, $ = null !== (t = null == v ? void 0 : v.isDiscoverable()) && void 0 !== t && t;
-    O && (F = !0, $ = !0, q = !1, B = !1);
+    b && (F = !0, $ = !0, q = !1, B = !1);
     let ee = J(),
       {
         isRoleSubscriptionEmoji: en,
         isUnusableRoleSubscriptionEmoji: el,
         userIsRoleSubscriber: ea
-      } = a.useMemo(() => null == b ? {
+      } = a.useMemo(() => null == O ? {
         isRoleSubscriptionEmoji: !1,
         isUnusableRoleSubscriptionEmoji: !1,
         userIsRoleSubscriber: !1
       } : {
-        isRoleSubscriptionEmoji: C.isPurchasableRoleSubscriptionEmoji(b),
-        isUnusableRoleSubscriptionEmoji: C.isUnusableRoleSubscriptionEmoji(b, null != k ? k : void 0),
-        userIsRoleSubscriber: I.default.getUserSubscriptionRoles(b.guildId).size > 0
-      }, [b, k]),
-      es = !!el && (0, g.shouldHideGuildPurchaseEntryPoints)(null == b ? void 0 : b.guildId),
+        isRoleSubscriptionEmoji: C.isPurchasableRoleSubscriptionEmoji(O),
+        isUnusableRoleSubscriptionEmoji: C.isUnusableRoleSubscriptionEmoji(O, null != k ? k : void 0),
+        userIsRoleSubscriber: I.default.getUserSubscriptionRoles(O.guildId).size > 0
+      }, [O, k]),
+      es = !!el && (0, g.shouldHideGuildPurchaseEntryPoints)(null == O ? void 0 : O.guildId),
       {
         analyticsLocations: ei
       } = (0, h.default)(f.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
@@ -276,8 +276,8 @@ let J = () => {
       name: r.ImpressionNames.ROLE_SUBSCRIPTION_EMOJI_UPSELL,
       properties: {
         location_stack: ei,
-        emoji_guild_id: null !== (n = null == b ? void 0 : b.guildId) && void 0 !== n ? n : null,
-        emoji_id: null !== (s = null == b ? void 0 : b.id) && void 0 !== s ? s : null
+        emoji_guild_id: null !== (n = null == O ? void 0 : O.guildId) && void 0 !== n ? n : null,
+        emoji_id: null !== (s = null == O ? void 0 : O.id) && void 0 !== s ? s : null
       }
     }, {
       disableTrack: !en
@@ -312,7 +312,7 @@ let J = () => {
         popoutData: ed,
         emojiSourceGuildId: null == v ? void 0 : v.id,
         nonce: D,
-        demoMode: O
+        demoMode: b
       }),
       eh = ed.type === G.EmojiPopoutType.JOIN_GUILD,
       ep = ed.type === G.EmojiPopoutType.GET_PREMIUM_INVENTORY_DISABLED,
@@ -322,7 +322,7 @@ let J = () => {
       className: X.popoutContent,
       children: [(() => {
         let e = async () => {
-          if (O || null == v || q) return;
+          if (b || null == v || q) return;
           A();
           let e = v.id;
           try {
@@ -382,7 +382,7 @@ let J = () => {
         let e = q || null != eo.collectedPack,
           t = null != v && !q && ($ || eu),
           n = () => {
-            t && (null == j || j(), !eg && !O && V.default.track(z.AnalyticEvents.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ef), eE(!eg))
+            t && (null == j || j(), !eg && !b && V.default.track(z.AnalyticEvents.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, ef), eE(!eg))
           };
         return (0, l.jsxs)("div", {
           className: X.guildSection,
@@ -484,7 +484,7 @@ let J = () => {
               className: X.ctaDescription,
               children: [u && (0, l.jsx)(U.default, {
                 className: X.nitroWheel,
-                color: b.GradientCssUrls.PREMIUM_TIER_2
+                color: O.GradientCssUrls.PREMIUM_TIER_2
               }), (0, l.jsx)(d.Text, {
                 variant: "text-sm/medium",
                 "aria-label": g,

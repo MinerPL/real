@@ -19,8 +19,8 @@ var l = n("37983"),
   _ = n("253981"),
   S = n("352273"),
   T = n("360191"),
-  p = n("342176"),
-  N = n("183030"),
+  N = n("342176"),
+  p = n("183030"),
   I = n("899779"),
   m = n("778597"),
   A = n("960082"),
@@ -95,7 +95,7 @@ let y = a.memo(function(e) {
     let {
       item: r,
       ackedBeforeId: c
-    } = e, f = (0, N.useNotificationCenterItemAcked)(r, c), E = a.useCallback(async () => {
+    } = e, f = (0, p.useNotificationCenterItemAcked)(r, c), E = a.useCallback(async () => {
       if (!f && (0, S.markNotificationCenterItemAcked)(r), null != r.item_enum && r.item_enum === T.ItemEnum.FIND_FRIENDS) {
         (0, i.openModalLazy)(async () => {
           let {
@@ -163,7 +163,7 @@ let y = a.memo(function(e) {
           }) : null, (0, l.jsx)(i.Text, {
             variant: "text-xs/medium",
             color: f ? "text-muted" : "header-secondary",
-            children: (0, p.getRelativeTimestamp)(s.default.extractTimestamp(r.id))
+            children: (0, N.getRelativeTimestamp)(s.default.extractTimestamp(r.id))
           }), C]
         })]
       }), M ? null : (0, l.jsx)(A.MoreButton, {

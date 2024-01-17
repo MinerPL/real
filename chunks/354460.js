@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   getGuildFeatureFromUploadType: function() {
-    return r
+    return i
   },
   shouldShowPremiumIconForGIFPickerOption: function() {
-    return l
+    return u
   }
 });
-var a = n("49111"),
-  i = n("75015");
+var r = n("49111"),
+  a = n("75015");
 
-function r(e, t) {
+function i(e, t) {
   let {
     isGIF: n
   } = t;
-  if (e === i.UploadTypes.GUILD_BANNER) return n ? a.GuildFeatures.ANIMATED_BANNER : a.GuildFeatures.BANNER
+  if (e === a.UploadTypes.GUILD_BANNER) return n ? r.GuildFeatures.ANIMATED_BANNER : r.GuildFeatures.BANNER
 }
 
-function l(e) {
-  return e === i.UploadTypes.AVATAR || e === i.UploadTypes.BANNER
+function u(e) {
+  return e === a.UploadTypes.AVATAR || e === a.UploadTypes.BANNER
 }

@@ -24,8 +24,8 @@ var l, a, s, i, r = n("884691"),
   _ = n("267363"),
   S = n("206230"),
   T = n("379881"),
-  p = n("542827"),
-  N = n("615387"),
+  N = n("542827"),
+  p = n("615387"),
   I = n("401690"),
   m = n("689275"),
   A = n("755624"),
@@ -177,7 +177,7 @@ class H extends o.EventEmitter {
         }))
       }), S.default.useReducedMotion && this.deleteChannel(t), this.maybeLoadMore()
     }, this.markGuildRead = e => {
-      E.default.wait(() => (0, p.default)([e], k.AnalyticsSections.INBOX)), this.setState({
+      E.default.wait(() => (0, N.default)([e], k.AnalyticsSections.INBOX)), this.setState({
         channels: this.state.channels.filter(t => t.guildId !== e)
       }), this.maybeLoadMore()
     }, this.deleteChannel = e => {
@@ -308,7 +308,7 @@ function K(e, t, n, l) {
   if (!s && b.default.isGuildOrCategoryOrChannelMuted(n, a.id)) return;
   if (a.isPrivate()) {
     if (0 === P.default.getMentionCount(l)) return
-  } else if (!(0, N.getHasImportantUnread)(a) && 0 === P.default.getMentionCount(l)) return;
+  } else if (!(0, p.getHasImportantUnread)(a) && 0 === P.default.getMentionCount(l)) return;
   if (!a.isPrivate() && !x.default.can(k.Permissions.READ_MESSAGE_HISTORY, a)) return;
   let i = P.default.ackMessageId(l);
   if (null == i) {

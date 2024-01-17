@@ -34,11 +34,11 @@ var s = r("37983"),
   R = r("113270"),
   b = r("49111"),
   j = r("782340"),
-  g = r("687133");
-let M = (0, h.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSIONS),
+  M = r("687133");
+let g = (0, h.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSIONS),
   v = (0, h.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_PADDING),
   D = (0, h.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_MARGIN),
-  O = M + 2 * v,
+  O = g + 2 * v,
   L = c(I.resetInspectedStickerPosition, 250),
   B = () => {
     L.cancel()
@@ -68,11 +68,11 @@ let M = (0, h.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PURCHASE_PA
       listWidth: r
     });
     return (0, s.jsxs)("div", {
-      className: a(g.container, {
-        [g.containerWithHeader]: n
+      className: a(M.container, {
+        [M.containerWithHeader]: n
       }),
       children: [(0, s.jsx)(x.default, {
-        className: g.header,
+        className: M.header,
         stickerPack: t,
         withDescription: !0
       }, t.id), (0, s.jsx)("div", {
@@ -93,7 +93,7 @@ let M = (0, h.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PURCHASE_PA
             rowIndex: t,
             stickerDescriptors: S[t],
             stickerPadding: v,
-            stickerSize: M,
+            stickerSize: g,
             isDisplayingIndividualStickers: !0,
             checkSendability: !1
           }, t));
@@ -110,22 +110,22 @@ let M = (0, h.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PURCHASE_PA
     (0, A.useFetchStickerPacks)(), (0, p.useMaybeFetchPremiumLikelihood)(N.default);
     let l = (0, o.useStateFromStores)([P.default], () => P.default.isPremiumPack(r.id));
     return (0, s.jsxs)(d.ModalFooter, {
-      className: g.footer,
+      className: M.footer,
       children: [(0, s.jsx)(d.Anchor, {
         onClick: t,
-        className: g.skuPreviewFooterCloseButton,
+        className: M.skuPreviewFooterCloseButton,
         children: j.default.Messages.CLOSE
       }), l && (0, s.jsxs)(C.default, {
         color: d.Button.Colors.GREEN,
         type: "submit",
-        innerClassName: g.premiumButtonInner,
+        innerClassName: M.premiumButtonInner,
         onClick: () => {
           t(), (0, R.default)({
             section: b.AnalyticsSections.STICKER_PACK_VIEW_ALL
           })
         },
         children: [(0, s.jsx)(_.default, {
-          className: g.premiumButtonNitroWheel
+          className: M.premiumButtonNitroWheel
         }), j.default.Messages.STICKER_PACK_AVAILABLE_WITH_PREMIUM]
       })]
     })
@@ -136,15 +136,15 @@ let M = (0, h.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PURCHASE_PA
       onClose: r
     } = e, l = (0, T.getStickerPackBannerAssetUrl)(t, 1024);
     return null == l ? null : (0, s.jsxs)(d.ModalHeader, {
-      className: g.headerWithImage,
+      className: M.headerWithImage,
       children: [(0, s.jsx)("div", {
         role: "image",
         style: {
           backgroundImage: "url(".concat(l, ")")
         },
-        className: g.backgroundImage
+        className: M.backgroundImage
       }), (0, s.jsx)(d.ModalCloseButton, {
-        className: g.closeButton,
+        className: M.closeButton,
         onClick: r
       })]
     })

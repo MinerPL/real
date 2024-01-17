@@ -20,8 +20,8 @@ var a = n("414456"),
   _ = n("913796"),
   S = n("826267"),
   T = n("956089"),
-  p = n("124031"),
-  N = n("782340"),
+  N = n("124031"),
+  p = n("782340"),
   I = n("804220");
 
 function m(e) {
@@ -60,8 +60,8 @@ function A(e) {
       }), (0, l.jsx)(o.Text, {
         className: I.inboxTitle,
         variant: "text-lg/semibold",
-        children: N.default.Messages.INBOX
-      }), (0, l.jsx)(p.default, {
+        children: p.default.Messages.INBOX
+      }), (0, l.jsx)(N.default, {
         closePopout: m
       })]
     }), (0, l.jsxs)("div", {
@@ -72,11 +72,11 @@ function A(e) {
         onItemSelect: n,
         children: [(0, l.jsxs)(o.TabBar.Item, {
           id: r.InboxTab.FOR_YOU,
-          "aria-label": N.default.Messages.FOR_YOU,
+          "aria-label": p.default.Messages.FOR_YOU,
           className: s(I.tab, I.expanded, {
             [I.active]: t === r.InboxTab.FOR_YOU
           }),
-          children: [N.default.Messages.FOR_YOU, (null == _ ? void 0 : _.badgeForYou) ? (0, l.jsx)(T.CircleBadge, {
+          children: [p.default.Messages.FOR_YOU, (null == _ ? void 0 : _.badgeForYou) ? (0, l.jsx)(T.CircleBadge, {
             color: d.default.STATUS_DANGER,
             className: s(I.iconBadge)
           }) : null]
@@ -85,21 +85,21 @@ function A(e) {
           className: s(I.tab, I.expanded, {
             [I.active]: t === r.InboxTab.UNREADS
           }),
-          children: N.default.Messages.UNREADS_TAB_LABEL
+          children: p.default.Messages.UNREADS_TAB_LABEL
         }), (0, l.jsx)(o.TabBar.Item, {
-          "aria-label": N.default.Messages.MENTIONS,
+          "aria-label": p.default.Messages.MENTIONS,
           id: r.InboxTab.MENTIONS,
           className: s(I.tab, I.expanded, {
             [I.active]: t === r.InboxTab.MENTIONS
           }),
-          children: N.default.Messages.MENTIONS
+          children: p.default.Messages.MENTIONS
         }), g ? (0, l.jsxs)(o.TabBar.Item, {
           "aria-label": "game_invites",
           id: r.InboxTab.GAME_INVITES,
           className: s(I.tab, I.expanded, {
             [I.active]: t === r.InboxTab.GAME_INVITES
           }),
-          children: [N.default.Messages.GAME_INVITES, C > 0 ? (0, l.jsx)(T.CircleBadge, {
+          children: [p.default.Messages.GAME_INVITES, C > 0 ? (0, l.jsx)(T.CircleBadge, {
             color: d.default.STATUS_DANGER,
             className: s(I.iconBadge)
           }) : null]
@@ -109,7 +109,7 @@ function A(e) {
           className: s(I.tab, I.expanded, {
             [I.active]: t === r.InboxTab.TODOS
           }),
-          children: [N.default.Messages.MESSAGE_REMINDERS_HEADER, M > 0 ? (0, l.jsx)(T.CircleBadge, {
+          children: [p.default.Messages.MESSAGE_REMINDERS_HEADER, M > 0 ? (0, l.jsx)(T.CircleBadge, {
             color: d.default.STATUS_DANGER,
             className: s(I.iconBadge)
           }) : null]
@@ -150,31 +150,31 @@ function g(e) {
         className: s(I.tab, {
           [I.active]: t === r.InboxTab.FOR_YOU
         }),
-        children: N.default.Messages.FOR_YOU
+        children: p.default.Messages.FOR_YOU
       }) : null, (0, l.jsx)(o.TabBar.Item, {
         id: r.InboxTab.MENTIONS,
         className: s(I.tab, {
           [I.active]: t === r.InboxTab.MENTIONS
         }),
-        children: N.default.Messages.MENTIONS
+        children: p.default.Messages.MENTIONS
       }), (0, l.jsx)(o.TabBar.Item, {
         id: r.InboxTab.UNREADS,
         className: s(I.tab, {
           [I.active]: t === r.InboxTab.UNREADS
         }),
-        children: N.default.Messages.UNREADS_TAB_LABEL
+        children: p.default.Messages.UNREADS_TAB_LABEL
       }), c ? (0, l.jsx)(o.TabBar.Item, {
         id: r.InboxTab.GAME_INVITES,
         className: s(I.tab, {
           [I.active]: t === r.InboxTab.GAME_INVITES
         }),
-        children: N.default.Messages.GAME_INVITES
+        children: p.default.Messages.GAME_INVITES
       }) : null, i ? (0, l.jsx)(o.TabBar.Item, {
         id: r.InboxTab.TODOS,
         className: s(I.tab, {
           [I.active]: t === r.InboxTab.TODOS
         }),
-        children: N.default.Messages.MESSAGE_REMINDERS_HEADER
+        children: p.default.Messages.MESSAGE_REMINDERS_HEADER
       }) : null]
     }), (0, l.jsx)("div", {
       className: I.controls,

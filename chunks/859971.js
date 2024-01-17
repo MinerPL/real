@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return s
   },
   toSeconds: function() {
-    return r
+    return a
   },
   getMaxValue: function() {
-    return a
+    return r
   },
   getStartHandleValue: function() {
     return o
@@ -26,10 +26,10 @@ var i = n("89050"),
   l = n("782340");
 let s = (e, t, n) => -1 === e ? 0 : e - t * e / n;
 
-function r(e) {
+function a(e) {
   return e / 1e3
 }
-let a = (e, t, n) => -1 === e ? n : e + t * (n - e) / n,
+let r = (e, t, n) => -1 === e ? n : e + t * (n - e) / n,
   o = (e, t, n, i) => {
     let l = 0;
     return (l = t >= 0 && n > 0 ? (e - (t - n * t / i)) * 100 / n : 100 * e / i).toFixed(4)

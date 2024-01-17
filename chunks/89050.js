@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return s
   },
   SUPPORTED_AUDIO_FILE_TYPES: function() {
-    return r
+    return a
   }
 }), n("222007");
 let i = {
@@ -25,4 +25,4 @@ let i = {
     return "".concat(n, "-").concat(JSON.stringify(t))
   },
   s = e => "".concat(e.name, "-").concat(e.size, "-").concat(e.lastModified),
-  r = new Set(["audio/mpeg", "audio/mp3", "audio/wav", "audio/x-wav", "audio/ogg", "video/mp4"])
+  a = new Set(["audio/mpeg", "audio/mp3", "audio/wav", "audio/x-wav", "audio/ogg", "video/mp4"])

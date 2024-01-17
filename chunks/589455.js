@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return u
+    return d
   }
 }), a("222007");
 var s = a("884691"),
@@ -18,7 +18,7 @@ let r = "undefined" == typeof ResizeObserver ? n.ResizeObserver : ResizeObserver
       null === (t = i.get(a)) || void 0 === t || t(e)
     })
   });
-var u = () => {
+var d = () => {
   let e = s.useRef(null),
     [t, a] = s.useState(400),
     n = s.useCallback(() => {

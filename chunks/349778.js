@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   isForumActivityExperimentEnabled: function() {
-    return l
+    return a
   }
 });
 var i = n("943314"),
-  a = n("531869");
+  l = n("531869");
 
-function l(e) {
-  let t = a.default.getCurrentConfig({
+function a(e) {
+  let t = l.default.getCurrentConfig({
       guildId: null != e ? e : "",
       location: "3fde52_1"
     }),

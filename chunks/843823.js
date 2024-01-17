@@ -1,34 +1,34 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return c
   }
-}), s("222007");
-var n = s("446674"),
-  r = s("913144"),
-  a = s("27618");
-let l = !1,
-  i = Object.freeze({
+}), n("222007");
+var l = n("446674"),
+  i = n("913144"),
+  r = n("27618");
+let a = !1,
+  s = Object.freeze({
     userAffinities: [],
     affinityUserIds: new Set,
     lastFetched: 0
   }),
   o = {
-    ...i
+    ...s
   };
 
 function u() {
-  o.affinityUserIds = new Set(o.userAffinities.map(e => e.user_id).filter(e => !a.default.isBlocked(e)))
+  o.affinityUserIds = new Set(o.userAffinities.map(e => e.user_id).filter(e => !r.default.isBlocked(e)))
 }
-class d extends n.default.PersistedStore {
+class d extends l.default.PersistedStore {
   initialize(e) {
-    this.waitFor(a.default), null != e && (o.userAffinities = e.userAffinities, o.affinityUserIds = new Set(e.affinityUserIds), o.lastFetched = e.lastFetched), this.syncWith([a.default], u)
+    this.waitFor(r.default), null != e && (o.userAffinities = e.userAffinities, o.affinityUserIds = new Set(e.affinityUserIds), o.lastFetched = e.lastFetched), this.syncWith([r.default], u)
   }
   needsRefresh() {
     return Date.now() - o.lastFetched > 864e5
   }
   getFetching() {
-    return l
+    return a
   }
   getState() {
     return o
@@ -41,23 +41,23 @@ class d extends n.default.PersistedStore {
   }
 }
 d.displayName = "UserAffinitiesStore", d.persistKey = "UserAffinitiesStore", d.migrations = [e => null];
-var c = new d(r.default, {
+var c = new d(i.default, {
   LOAD_USER_AFFINITIES_SUCCESS: function(e) {
     var t;
     let {
-      affinities: s
+      affinities: n
     } = e;
-    o.userAffinities = null !== (t = s.user_affinities) && void 0 !== t ? t : [], o.lastFetched = Date.now(), u(), l = !1
+    o.userAffinities = null !== (t = n.user_affinities) && void 0 !== t ? t : [], o.lastFetched = Date.now(), u(), a = !1
   },
   LOAD_USER_AFFINITIES: function() {
-    l = !0
+    a = !0
   },
   LOAD_USER_AFFINITIES_FAILURE: function() {
-    l = !1
+    a = !1
   },
   LOGOUT: function() {
     o = {
-      ...i
+      ...s
     }
   }
 })

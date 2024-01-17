@@ -112,8 +112,8 @@ function B(e) {
     return (null == r ? void 0 : null === (e = r.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, O.getAssetURL)(r.cover_image_asset.application_id, r.cover_image_asset, P)
   }, [r]), [c, _] = n.useState(i), [S, m] = n.useState(null !== (t = null == r ? void 0 : r.description) && void 0 !== t ? t : ""), [C, h] = n.useState(d), [y, B] = n.useState(null == r ? void 0 : r.store_page_guild_products_default_sort), [F, H] = n.useState(null == r ? void 0 : r.server_shop_tab_order), {
     loading: V,
-    error: k,
-    updateSubscriptionsSettings: w
+    error: w,
+    updateSubscriptionsSettings: k
   } = (0, R.useUpdateSubscriptionsSettings)(), {
     imageCTA: Y,
     imageAriaLabel: K,
@@ -149,9 +149,9 @@ function B(e) {
     }], []);
   return (0, a.jsxs)("div", {
     className: j.container,
-    children: [null != k && (0, a.jsxs)(a.Fragment, {
+    children: [null != w && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(x.default, {
-        children: k.getAnyErrorMessage()
+        children: w.getAnyErrorMessage()
       }), (0, a.jsx)(f.default, {
         size: 16
       })]
@@ -284,7 +284,7 @@ function B(e) {
           onSave: () => {
             o(null != r, "Settings must be defined");
             let e = {};
-            S !== r.description && (e.description = S), null != C && C.startsWith("data:") && (e.cover_image = C), c !== i && (e.full_server_gate = c === p.GuildRoleSubscriptionFormat.ALL_CHANNELS), y !== r.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = y), F !== r.server_shop_tab_order && (e.server_shop_tab_order = F), !u.isEmpty(e) && w(s.id, e)
+            S !== r.description && (e.description = S), null != C && C.startsWith("data:") && (e.cover_image = C), c !== i && (e.full_server_gate = c === p.GuildRoleSubscriptionFormat.ALL_CHANNELS), y !== r.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = y), F !== r.server_shop_tab_order && (e.server_shop_tab_order = F), !u.isEmpty(e) && k(s.id, e)
           },
           saveButtonTooltip: q ? void 0 : v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_FULL_OUT_ALL_INFO
         })

@@ -128,8 +128,8 @@ class c {
     let f = null !== (n = o.default.getThreadSettings(h.id)) && void 0 !== n ? n : {},
       m = null == h.template ? "" : h.template.trim(),
       g = o.default.getDraft(h.id, o.DraftType.FirstThreadMessage),
-      p = (0, i.createState)(null != g && "" !== g.trim() ? g : m);
-    this.name = null !== (a = f.name) && void 0 !== a ? a : "", c = new Set(f.appliedTags), this.appliedTags = void 0 !== c ? c : new Set, this.formOpen = this.name.length > 0, this.textAreaState = p
+      S = (0, i.createState)(null != g && "" !== g.trim() ? g : m);
+    this.name = null !== (a = f.name) && void 0 !== a ? a : "", c = new Set(f.appliedTags), this.appliedTags = void 0 !== c ? c : new Set, this.formOpen = this.name.length > 0, this.textAreaState = S
   }
 }
 let {

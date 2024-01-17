@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return ee
   }
 }), n("222007"), n("424973"), n("860677"), n("70102");
-var a = n("37983"),
-  l = n("884691"),
+var l = n("37983"),
+  a = n("884691"),
   r = n("414456"),
   i = n.n(r),
   o = n("627445"),
@@ -58,20 +58,20 @@ let W = e => {
     emoji: t,
     channelId: n,
     messageId: r
-  } = e, [o, s] = l.useState(!0), [u, c] = l.useState([]), d = l.useMemo(() => {
+  } = e, [o, s] = a.useState(!0), [u, c] = a.useState([]), d = a.useMemo(() => {
     if (null == u || u.length < 1) return;
     let e = (0, N.buildEffect)(t, u[0], n, {
       emojiSize: M.BurstReactionSize.LARGE,
       messageId: r
     });
-    return (0, a.jsx)(M.default, {
+    return (0, l.jsx)(M.default, {
       className: J.effect,
       effect: e,
       emojiSize: M.BurstReactionSize.LARGE,
       onComplete: () => s(!1)
     })
   }, [u, t, n, r]);
-  return l.useEffect(() => {
+  return a.useEffect(() => {
     let e = !1;
     return s(!0), !async function() {
       let n = await (0, Y.getEmojiColors)(t);
@@ -79,9 +79,9 @@ let W = e => {
     }(), () => {
       e = !0
     }
-  }, [t]), (0, a.jsxs)("div", {
+  }, [t]), (0, l.jsxs)("div", {
     className: J.burstEmojiSection,
-    children: [d, (0, a.jsx)(E.default, {
+    children: [d, (0, l.jsx)(E.default, {
       className: i(J.burstEmoji, {
         [J.hideEmoji]: o
       }),
@@ -89,33 +89,33 @@ let W = e => {
       emojiName: t.name,
       animated: t.animated,
       size: "reaction"
-    }), (0, a.jsx)(m.Text, {
+    }), (0, l.jsx)(m.Text, {
       variant: "text-md/medium",
       children: K(t)
     })]
   })
 };
-class X extends l.PureComponent {
+class X extends a.PureComponent {
   render() {
     let {
       emoji: e,
       count: t,
       isSelected: n,
-      setSelected: l,
+      setSelected: a,
       reactionType: r,
       colors: o
-    } = this.props, s = K(e), u = function(e, t, n, l) {
+    } = this.props, s = K(e), u = function(e, t, n, a) {
       let r = null == e.id ? Y.default.getURL(e.name) : P.default.getEmojiURL({
         id: e.id,
         animated: e.animated,
         size: 24
       });
-      return null != r && "" !== r ? (0, a.jsx)("img", {
+      return null != r && "" !== r ? (0, l.jsx)("img", {
         className: n,
         src: r,
         alt: e.name
-      }) : (0, a.jsx)("span", {
-        className: l,
+      }) : (0, l.jsx)("span", {
+        className: a,
         children: e.name
       })
     }(e, 24, J.emoji, i(J.emoji, J.emojiText)), c = r === I.ReactionTypes.BURST, f = c ? z.default.Messages.BURST_REACTION_REACTORS_A11Y : z.default.Messages.REACTION_REACTORS_A11Y, R = f.format({
@@ -126,14 +126,14 @@ class X extends l.PureComponent {
       let {
         backgroundColor: e = "",
         opacity: t = 1,
-        accentColor: a = ""
+        accentColor: l = ""
       } = null != o ? o : {};
-      if (h.color = a, n) {
+      if (h.color = l, n) {
         var A;
         E.background = null !== (A = (0, d.hex2rgb)(e, t)) && void 0 !== A ? A : ""
       }
     }
-    return (0, a.jsx)(m.Tooltip, {
+    return (0, l.jsx)(m.Tooltip, {
       position: "left",
       text: s,
       children: o => {
@@ -141,20 +141,20 @@ class X extends l.PureComponent {
           onMouseEnter: s,
           onMouseLeave: c
         } = o;
-        return (0, a.jsxs)(m.Clickable, {
+        return (0, l.jsxs)(m.Clickable, {
           className: i({
             [J.reactionDefault]: !n,
             [J.reactionSelected]: n
           }),
           "aria-label": R,
-          onClick: () => l({
+          onClick: () => a({
             emoji: e,
             reactionType: r
           }),
           onMouseEnter: s,
           onMouseLeave: c,
           style: E,
-          children: [u, (0, a.jsx)(m.Text, {
+          children: [u, (0, l.jsx)(m.Text, {
             variant: "text-sm/bold",
             style: h,
             children: t
@@ -169,7 +169,7 @@ function Z(e) {
   let {
     emoji: t,
     user: n,
-    message: l,
+    message: a,
     channel: r,
     guildId: i,
     reactionType: o,
@@ -181,28 +181,28 @@ function Z(e) {
     T = (0, f.useStateFromStores)([w.default], () => w.default.can(V.Permissions.MANAGE_MESSAGES, r) && E),
     g = T || d.id === n.id,
     _ = (0, f.useStateFromStores)([U.default, j.default, B.default], () => G.default.getName(i, r.id, n));
-  return (0, a.jsxs)(F.default, {
+  return (0, l.jsxs)(F.default, {
     className: J.reactorDefault,
     onContextMenu: e => (0, H.openUserContextMenu)(e, n, r),
     align: F.default.Align.CENTER,
-    children: [(0, a.jsx)(F.default.Child, {
+    children: [(0, l.jsx)(F.default.Child, {
       wrap: !0,
       grow: 0,
       shrink: 0,
       className: q.marginReset,
-      children: (0, a.jsx)(A.default, {
+      children: (0, l.jsx)(A.default, {
         user: null != R ? R : n,
         size: m.AvatarSizes.SIZE_24
       })
-    }), (0, a.jsx)(F.default.Child, {
-      children: (0, a.jsxs)(m.Text, {
+    }), (0, l.jsx)(F.default.Child, {
+      children: (0, l.jsxs)(m.Text, {
         tag: "strong",
         variant: "text-md/normal",
         className: J.name,
-        children: [null != _ && "" !== _ && (0, a.jsx)("span", {
+        children: [null != _ && "" !== _ && (0, l.jsx)("span", {
           className: n.isPomelo() ? "" : J.nickname,
           children: _
-        }), (0, a.jsx)(h.default, {
+        }), (0, l.jsx)(h.default, {
           user: n,
           className: null != _ && "" !== _ ? J.tagFaded : null,
           usernameClass: J.username,
@@ -210,18 +210,18 @@ function Z(e) {
           forceUsername: !0
         })]
       })
-    }), !c && g && (0, a.jsx)(m.Clickable, {
+    }), !c && g && (0, l.jsx)(m.Clickable, {
       onClick: function() {
         C.removeReactionWithConfirmation({
           emoji: t,
           userId: n.id,
           channelId: r.id,
-          messageId: l.id,
+          messageId: a.id,
           reactionType: o,
           isMe: (null == d ? void 0 : d.id) === n.id
         }), null == u || u()
       },
-      children: (0, a.jsx)(k.default, {
+      children: (0, l.jsx)(k.default, {
         width: 16,
         height: 16,
         className: J.remove
@@ -229,7 +229,7 @@ function Z(e) {
     })]
   })
 }
-class Q extends l.PureComponent {
+class Q extends a.PureComponent {
   componentDidMount() {
     this.loadMore()
   }
@@ -245,7 +245,7 @@ class Q extends l.PureComponent {
       reaction: t,
       reactionType: n
     } = this.props, {
-      lastId: a
+      lastId: l
     } = this.state;
     this.setState({
       loadingMore: !0
@@ -254,7 +254,7 @@ class Q extends l.PureComponent {
       messageId: e.id,
       emoji: t.emoji,
       limit: V.DEFAULT_NUM_REACTION_USERS,
-      after: a,
+      after: l,
       type: n
     }).then(e => {
       var t;
@@ -272,16 +272,16 @@ class Q extends l.PureComponent {
       hasMore: e,
       reactors: t,
       reaction: n,
-      message: l,
+      message: a,
       reactionType: r
     } = this.props, i = [];
-    return 0 === t.length && this.state.loadingMore ? i.push(length) : (i.push(t.length), e && i.push(1)), (0, a.jsxs)("div", {
+    return 0 === t.length && this.state.loadingMore ? i.push(length) : (i.push(t.length), e && i.push(1)), (0, l.jsxs)("div", {
       className: J.reactorsContainer,
-      children: [r === I.ReactionTypes.BURST && (0, a.jsx)(W, {
+      children: [r === I.ReactionTypes.BURST && (0, l.jsx)(W, {
         emoji: n.emoji,
-        channelId: l.getChannelId(),
-        messageId: l.id
-      }), (0, a.jsx)(m.List, {
+        channelId: a.getChannelId(),
+        messageId: a.id
+      }), (0, l.jsx)(m.List, {
         className: J.reactors,
         fade: !0,
         ref: this.scrollerRef,
@@ -295,7 +295,7 @@ class Q extends l.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), this.scrollerRef = l.createRef(), this.state = {
+    super(...e), this.scrollerRef = a.createRef(), this.state = {
       lastId: null,
       loadingMore: !1
     }, this.handleScroll = () => {
@@ -320,7 +320,7 @@ class Q extends l.PureComponent {
         section: t,
         row: n
       } = e, {
-        message: l,
+        message: a,
         guildId: r,
         channel: i,
         reaction: o,
@@ -328,13 +328,13 @@ class Q extends l.PureComponent {
         reactionType: u,
         disableManage: c
       } = this.props, d = s[n];
-      if (1 === t) return 0 === n ? (0, a.jsx)(m.Spinner, {
+      if (1 === t) return 0 === n ? (0, l.jsx)(m.Spinner, {
         className: J.spinnerMore
       }, "hasMore") : null;
-      return 0 === s.length && this.state.loadingMore ? (0, a.jsx)(m.Spinner, {
+      return 0 === s.length && this.state.loadingMore ? (0, l.jsx)(m.Spinner, {
         className: J.spinner
-      }, "loadingMore") : null != d && (0, a.jsx)(Z, {
-        message: l,
+      }, "loadingMore") : null != d && (0, l.jsx)(Z, {
+        message: a,
         emoji: o.emoji,
         guildId: r,
         channel: i,
@@ -350,14 +350,14 @@ let $ = f.default.connectStores([x.default], e => {
   let {
     message: t,
     reaction: n,
-    reactionType: a
-  } = e, l = x.default.getReactions(t.getChannelId(), t.id, n.emoji, V.DEFAULT_NUM_REACTION_USERS, a);
-  if (null == l) return {
+    reactionType: l
+  } = e, a = x.default.getReactions(t.getChannelId(), t.id, n.emoji, V.DEFAULT_NUM_REACTION_USERS, l);
+  if (null == a) return {
     reactors: [],
     hasMore: !1
   };
-  let r = Object.values(l),
-    i = a === I.ReactionTypes.BURST ? n.burst_count : n.count,
+  let r = Object.values(a),
+    i = l === I.ReactionTypes.BURST ? n.burst_count : n.count,
     o = i > r.length;
   return {
     reactors: r,
@@ -376,11 +376,11 @@ function ee(e) {
     transitionState: u,
     "aria-label": c = z.default.Messages.REACTIONS
   } = e, d = (0, f.useStateFromStores)([j.default], () => j.default.getChannel(n.getChannelId())), E = null == d ? void 0 : d.getGuildId(), h = (0, f.useStateFromStores)([D.default, S.default, p.default], () => {
-    var e, t, a;
-    let l = null !== (a = null !== (t = D.default.getMessage(n.getChannelId(), n.id)) && void 0 !== t ? t : null === (e = S.default.getMessage(n.id)) || void 0 === e ? void 0 : e.firstMessage) && void 0 !== a ? a : null != E ? p.default.getCachedMessage(E, n.getChannelId(), n.id) : void 0;
-    return null != l ? l.reactions : []
+    var e, t, l;
+    let a = null !== (l = null !== (t = D.default.getMessage(n.getChannelId(), n.id)) && void 0 !== t ? t : null === (e = S.default.getMessage(n.id)) || void 0 === e ? void 0 : e.firstMessage) && void 0 !== l ? l : null != E ? p.default.getCachedMessage(E, n.getChannelId(), n.id) : void 0;
+    return null != a ? a.reactions : []
   }, [n, E]);
-  let A = (t = h, l.useMemo(() => {
+  let A = (t = h, a.useMemo(() => {
       let e = [];
       return t.forEach(t => {
         t.burst_count > 0 && e.push({
@@ -392,8 +392,8 @@ function ee(e) {
         })
       }), e.sort((e, t) => {
         let n = e.burst_count > 0 ? e.burst_count : e.count,
-          a = t.burst_count > 0 ? t.burst_count : t.count;
-        return a - n
+          l = t.burst_count > 0 ? t.burst_count : t.count;
+        return l - n
       }), e
     }, [t])),
     g = A[0],
@@ -402,41 +402,41 @@ function ee(e) {
       reactionType: g.burst_count > 0 ? I.ReactionTypes.BURST : I.ReactionTypes.NORMAL
     } : null,
     [N, C] = function(e, t, n) {
-      let [a, r] = l.useState(null != e ? e : t);
-      return l.useEffect(() => {
-        if (null != a) {
+      let [l, r] = a.useState(null != e ? e : t);
+      return a.useEffect(() => {
+        if (null != l) {
           let e = n.find(e => {
             let t = null != e.me_vote ? I.ReactionTypes.VOTE : e.burst_count > 0 ? I.ReactionTypes.BURST : I.ReactionTypes.NORMAL;
-            return (0, y.emojiEquals)(e.emoji, a.emoji) && t === a.reactionType
+            return (0, y.emojiEquals)(e.emoji, l.emoji) && t === l.reactionType
           });
           null == e && r(t)
         }
-      }, [a, r, n, t]), [a, r]
+      }, [l, r, n, t]), [l, r]
     }(r, M, h),
-    v = l.useMemo(() => {
+    v = a.useMemo(() => {
       var e;
       return null == N ? null : null !== (e = h.find(e => (0, y.emojiEquals)(e.emoji, N.emoji))) && void 0 !== e ? e : null
     }, [h, N]),
     U = (0, f.useStateFromStores)([T.default], () => T.default.saturation),
     x = (0, f.useStateFromStores)([b.default], () => (0, R.isThemeDark)(b.default.theme));
-  if (l.useEffect(() => {
+  if (a.useEffect(() => {
       (0 === h.length || null == N && null == v) && setImmediate(s)
-    }, [s, h.length, v, N]), null == N || null == v) return (0, a.jsx)(m.Spinner, {});
+    }, [s, h.length, v, N]), null == N || null == v) return (0, l.jsx)(m.Spinner, {});
   if (null == d) throw Error("MessageReactions.render: Message does not have a channelId");
-  return (0, a.jsx)(O.default.Provider, {
+  return (0, l.jsx)(O.default.Provider, {
     value: null != E ? E : void 0,
-    children: (0, a.jsxs)(m.ModalRoot, {
+    children: (0, l.jsxs)(m.ModalRoot, {
       "aria-label": c,
       transitionState: u,
       size: m.ModalSize.DYNAMIC,
       className: J.container,
-      children: [o ? null : (0, a.jsx)(m.Scroller, {
+      children: [o ? null : (0, l.jsx)(m.Scroller, {
         className: J.scroller,
         fade: !0,
         children: A.map(e => {
           var t;
           let n = e.burst_count > 0;
-          return (0, a.jsx)(X, {
+          return (0, l.jsx)(X, {
             isSelected: et(N, e, n ? I.ReactionTypes.BURST : I.ReactionTypes.NORMAL),
             setSelected: C,
             reactionType: n ? I.ReactionTypes.BURST : I.ReactionTypes.NORMAL,
@@ -445,7 +445,7 @@ function ee(e) {
             colors: null != e.burst_colors ? (0, _.buildEmojiColorPalette)(e.burst_colors, U, x) : void 0
           }, "".concat(n ? "burst-" : "normal-").concat(null !== (t = e.emoji.id) && void 0 !== t ? t : "", ":").concat(e.emoji.name))
         })
-      }), (0, a.jsx)($, {
+      }), (0, l.jsx)($, {
         message: n,
         reaction: v,
         guildId: E,

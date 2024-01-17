@@ -55,7 +55,7 @@ s.r(t), s.d(t, {
     return V
   },
   transformLogs: function() {
-    return k
+    return w
   }
 }), s("70102"), s("424973");
 var a = s("552442"),
@@ -570,7 +570,7 @@ function V(e, t) {
   return null
 }
 
-function k(e, t) {
+function w(e, t) {
   if (null == t) return [];
   let s = [];
   return e.forEach(e => {
@@ -684,7 +684,7 @@ function k(e, t) {
                   {
                     added: s,
                     removed: a
-                  } = w(e.oldValue, e.newValue);
+                  } = k(e.oldValue, e.newValue);
                 if (s.length > 0) {
                   let e = new T.AuditLogChange(f.AuditLogChangeKeys.PERMISSIONS_GRANTED, null, s);
                   t.push(e)
@@ -701,7 +701,7 @@ function k(e, t) {
                   {
                     added: s,
                     removed: a
-                  } = w(e.oldValue, e.newValue);
+                  } = k(e.oldValue, e.newValue);
                 if (s.length > 0) {
                   let a = new T.AuditLogChange(e.key, null, s);
                   t.push(a)
@@ -747,7 +747,7 @@ function k(e, t) {
   }), s
 }
 
-function w(e, t) {
+function k(e, t) {
   let s = l.default.deserialize("string" == typeof e ? e : 0),
     a = l.default.deserialize("string" == typeof t ? t : 0),
     n = l.default.remove(a, s),

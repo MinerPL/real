@@ -33,8 +33,8 @@ function o(e) {
     avatarOverride: f
   }), {
     avatarPlaceholderSrc: I,
-    avatarDecorationSrc: p,
-    eventHandlers: P
+    avatarDecorationSrc: P,
+    eventHandlers: p
   } = (0, s.default)({
     user: t,
     size: (0, l.getDecorationSizeForAvatarSize)(o),
@@ -43,13 +43,13 @@ function o(e) {
     avatarDecorationOverride: m,
     showTryItOut: d
   }), S = i.useCallback(() => {
-    T.onMouseEnter(), P.onMouseEnter()
-  }, [T, P]), R = i.useCallback(() => {
-    T.onMouseLeave(), P.onMouseLeave()
-  }, [T, P]);
+    T.onMouseEnter(), p.onMouseEnter()
+  }, [T, p]), R = i.useCallback(() => {
+    T.onMouseLeave(), p.onMouseLeave()
+  }, [T, p]);
   return {
     avatarPlaceholderSrc: I,
-    avatarDecorationSrc: p,
+    avatarDecorationSrc: P,
     avatarSrc: _,
     isAnimating: E,
     eventHandlers: {

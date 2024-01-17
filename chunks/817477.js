@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var l = n("37983"),
   a = n("884691"),
   u = n("414456"),
-  o = n.n(u),
-  i = n("841076"),
+  i = n.n(u),
+  o = n("841076"),
   s = n("748820"),
   r = n("446674"),
   d = n("292687"),
@@ -18,33 +18,33 @@ var l = n("37983"),
   p = n("157945"),
   m = n("828466"),
   T = n("954016"),
-  _ = n("49111"),
-  S = n("165544");
+  S = n("49111"),
+  _ = n("165544");
 
 function C(e) {
   let {
     url: t,
     className: n,
     style: u,
-    onLoad: o,
-    shouldRefocus: S,
+    onLoad: i,
+    shouldRefocus: _,
     queryParams: C,
     allowPopups: N = !1,
     referrerPolicy: I = "origin"
-  } = e, v = (0, r.useStateFromStores)([d.default], () => d.default.getWindow(_.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), O = (0, i.useMemoOne)(() => (0, s.v4)(), [t]), L = a.useRef(null), A = (0, p.default)(L, S, null == v ? window : v), h = {
+  } = e, O = (0, r.useStateFromStores)([d.default], () => d.default.getWindow(S.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), v = (0, o.useMemoOne)(() => (0, s.v4)(), [t]), L = a.useRef(null), A = (0, p.default)(L, _, null == O ? window : O), h = {
     ...C,
-    frame_id: O,
+    frame_id: v,
     platform: T.ActivityPlatform.DESKTOP
   }, [y, M] = a.useState(!1), R = f.default.theme, g = {
     ...u
   };
-  return R === _.ThemeTypes.LIGHT ? g.colorScheme = "light" : g.colorScheme = "dark", a.useEffect(() => (E.ComponentDispatch.dispatch(_.ComponentActions.IFRAME_MOUNT, {
-    id: O
+  return R === S.ThemeTypes.LIGHT ? g.colorScheme = "light" : g.colorScheme = "dark", a.useEffect(() => (E.ComponentDispatch.dispatch(S.ComponentActions.IFRAME_MOUNT, {
+    id: v
   }), () => {
-    E.ComponentDispatch.dispatch(_.ComponentActions.IFRAME_UNMOUNT, {
-      id: O
+    E.ComponentDispatch.dispatch(S.ComponentActions.IFRAME_UNMOUNT, {
+      id: v
     })
-  }), [O]), E.ComponentDispatch.subscribe(_.ComponentActions.MANUAL_IFRAME_RESIZING, e => {
+  }), [v]), E.ComponentDispatch.subscribe(S.ComponentActions.MANUAL_IFRAME_RESIZING, e => {
     let {
       resizing: t
     } = e;
@@ -55,7 +55,7 @@ function C(e) {
     referrerPolicy: I,
     onLoad: function(e) {
       var n;
-      null == o || o(e.target), L.current = e.target, A(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([c.default.HELLO, h], null != t ? t : "")
+      null == i || i(e.target), L.current = e.target, A(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([c.default.HELLO, h], null != t ? t : "")
     },
     sandbox: (0, m.default)({
       allowPopups: N
@@ -68,18 +68,18 @@ function C(e) {
 function N(e) {
   let {
     onLoad: t
-  } = e, [n, u] = a.useState(!1), i = a.useCallback(e => {
+  } = e, [n, u] = a.useState(!1), o = a.useCallback(e => {
     u(!0), null == t || t(e)
   }, [t]);
   return (0, l.jsxs)("div", {
-    className: S.fillParent,
+    className: _.fillParent,
     children: [!n && (0, l.jsx)("div", {
-      className: o(S.fillParent, S.iframePlaceholder)
+      className: i(_.fillParent, _.iframePlaceholder)
     }), (0, l.jsx)("div", {
-      className: o(S.fillParent, n ? void 0 : S.hiddenIframeContainer),
+      className: i(_.fillParent, n ? void 0 : _.hiddenIframeContainer),
       children: (0, l.jsx)(C, {
         ...e,
-        onLoad: i
+        onLoad: o
       })
     })]
   })

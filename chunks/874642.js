@@ -16,9 +16,9 @@ var n = l("37983"),
   p = l("427459"),
   m = l("617917"),
   f = l("49111"),
-  h = l("782340"),
-  E = l("315706"),
-  N = l("926622");
+  E = l("782340"),
+  N = l("315706"),
+  h = l("926622");
 let S = "premium-guild-subscription-upsell-modal-header";
 
 function x(e) {
@@ -28,16 +28,16 @@ function x(e) {
     image: t
   } = e;
   return (0, n.jsxs)("div", {
-    className: E.header,
+    className: N.header,
     children: [(0, n.jsx)(s.Heading, {
       variant: "heading-xl/semibold",
       id: S,
       color: "header-primary",
-      className: N.marginBottom8,
+      className: h.marginBottom8,
       children: r
     }), (0, n.jsx)(s.Text, {
       variant: "text-md/normal",
-      className: E.subtitleText,
+      className: N.subtitleText,
       children: l
     }), t]
   })
@@ -46,13 +46,13 @@ let C = e => {
     let {
       onClose: r,
       perks: l,
-      perkIntro: t = h.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_HEADER,
+      perkIntro: t = E.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_HEADER,
       headerProps: a
     } = e;
     return (0, n.jsxs)("div", {
-      className: E.wrapper,
+      className: N.wrapper,
       children: [(0, n.jsx)(s.ModalCloseButton, {
-        className: E.closeButton,
+        className: N.closeButton,
         onClick: () => {
           r()
         }
@@ -60,7 +60,7 @@ let C = e => {
         headerProps: a,
         perkIntro: t
       }), (0, n.jsx)("div", {
-        className: E.perks,
+        className: N.perks,
         children: l.map((e, r) => {
           let {
             icon: l,
@@ -87,12 +87,12 @@ let C = e => {
       children: [null != r ? (0, n.jsx)(x, {
         ...r
       }) : (0, n.jsx)("img", {
-        className: E.heroImage,
+        className: N.heroImage,
         src: l("243704"),
-        alt: h.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_HEADER_IMG_ALT_TEXT
+        alt: E.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_HEADER_IMG_ALT_TEXT
       }), (0, n.jsx)(s.Text, {
         variant: "text-md/normal",
-        className: E.heading,
+        className: N.heading,
         children: a
       })]
     })
@@ -109,7 +109,7 @@ let C = e => {
       objectType: null != l ? (0, p.boostedGuildTierToAnalyticsObjectType)(l) : null
     };
     return (0, n.jsxs)(s.ModalFooter, {
-      className: E.footer,
+      className: N.footer,
       children: [(0, n.jsx)(s.Button, {
         size: s.Button.Sizes.SMALL,
         color: s.Button.Colors.PRIMARY,
@@ -117,7 +117,7 @@ let C = e => {
         onClick: () => {
           t()
         },
-        children: h.default.Messages.CLOSE
+        children: E.default.Messages.CLOSE
       }), (0, n.jsx)(m.default, {
         analyticsLocation: o,
         analyticsSourceLocation: a,
@@ -139,17 +139,17 @@ function v(e) {
     perkIntro: p,
     headerProps: m,
     onClose: f,
-    ...h
+    ...E
   } = e, {
-    AnalyticsLocationProvider: E
+    AnalyticsLocationProvider: N
   } = (0, o.default)(a.default.ACTIVITY_DIRECTORY);
-  return (0, n.jsx)(E, {
+  return (0, n.jsx)(N, {
     children: (0, n.jsx)(i.PaymentContextProvider, {
       activeSubscription: null,
       stepConfigs: [],
       skuIDs: [],
       children: (0, n.jsx)(s.ModalRoot, {
-        ...h,
+        ...E,
         "aria-labelledby": S,
         children: (0, n.jsx)(d.default, {
           hideBreadcrumbs: !0,

@@ -302,19 +302,19 @@ function F() {
       E.default.fetchGuildBansBatch(O, 1e3, e)
     }, [O]),
     V = n.useMemo(() => o.chunk(x, y.pageSize), [y.pageSize, x]),
-    k = n.useCallback(e => {
+    w = n.useCallback(e => {
       var t, s, a;
       null === (t = h.current) || void 0 === t || t.scrollToSectionTop(0);
       let n = (e + 1) * y.pageSize,
         l = n > x.length;
-      l && U && !_ && (w.current = null !== (a = null === (s = x[x.length - 1]) || void 0 === s ? void 0 : s.id) && void 0 !== a ? a : null, H(w.current)), (null != V[e - 1] || U) && F(t => ({
+      l && U && !_ && (k.current = null !== (a = null === (s = x[x.length - 1]) || void 0 === s ? void 0 : s.id) && void 0 !== a ? a : null, H(k.current)), (null != V[e - 1] || U) && F(t => ({
         ...t,
         currentPage: e
       }))
     }, [y.pageSize, x, U, V, H, _]),
-    w = n.useRef(null);
+    k = n.useRef(null);
   n.useEffect(() => {
-    H(w.current)
+    H(k.current)
   }, [H]);
   let Y = n.useMemo(() => {
     var e;
@@ -355,7 +355,7 @@ function F() {
         totalCount: x.length + (U ? y.pageSize : 0),
         pageSize: y.pageSize,
         currentPage: y.currentPage,
-        onPageChange: k,
+        onPageChange: w,
         maxVisiblePages: 9
       })
     })]

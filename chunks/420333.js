@@ -4,32 +4,32 @@ n.r(t), n.d(t, {
     return M
   }
 }), n("222007");
-var a = n("37983"),
-  i = n("884691"),
-  r = n("446674"),
-  l = n("77078"),
-  u = n("812204"),
+var r = n("37983"),
+  a = n("884691"),
+  i = n("446674"),
+  u = n("77078"),
+  l = n("812204"),
   o = n("685665"),
   s = n("473591"),
   c = n("634544"),
   d = n("694187"),
   f = n("305961"),
   E = n("162771"),
-  _ = n("697218"),
-  p = n("471671"),
+  p = n("697218"),
+  _ = n("471671"),
   T = n("887718"),
-  h = n("818643"),
-  C = n("216422"),
-  A = n("599110"),
-  S = n("719923"),
-  N = n("354460"),
-  I = n("424960"),
-  v = n("49111"),
-  R = n("75015"),
-  m = n("991207"),
-  y = n("782340"),
-  g = n("461300");
-let U = [{
+  S = n("818643"),
+  h = n("216422"),
+  I = n("599110"),
+  C = n("719923"),
+  A = n("354460"),
+  m = n("424960"),
+  N = n("49111"),
+  y = n("75015"),
+  v = n("991207"),
+  R = n("782340"),
+  P = n("461300");
+let g = [{
   gif: n("6916"),
   png: n("12412")
 }, {
@@ -43,16 +43,16 @@ let U = [{
   png: n("122574")
 }];
 
-function P(e) {
+function U(e) {
   let {
     shouldAnimate: t = !0
-  } = e, [n, r] = i.useState(!1);
-  return (0, a.jsx)("div", {
-    className: g.gifGrid,
-    onMouseMove: () => r(!0),
-    onMouseLeave: () => r(!1),
-    children: U.map(e => (0, a.jsx)("div", {
-      className: g.gif,
+  } = e, [n, i] = a.useState(!1);
+  return (0, r.jsx)("div", {
+    className: P.gifGrid,
+    onMouseMove: () => i(!0),
+    onMouseLeave: () => i(!1),
+    children: g.map(e => (0, r.jsx)("div", {
+      className: P.gif,
       style: {
         backgroundImage: "url(".concat(t || n ? e.gif : e.png, ")")
       }
@@ -65,9 +65,9 @@ function O(e) {
     guildFeature: t,
     guild: n
   } = e;
-  return null == t || null == n ? null : (0, a.jsx)("div", {
-    className: g.pillWrapper,
-    children: (0, a.jsx)(c.default, {
+  return null == t || null == n ? null : (0, r.jsx)("div", {
+    className: P.pillWrapper,
+    children: (0, r.jsx)(c.default, {
       guildFeature: t,
       guild: n,
       hideTooltip: !0
@@ -79,24 +79,24 @@ function L(e) {
   let {
     uploadType: t,
     guild: n,
-    showNitroWheel: i
+    showNitroWheel: a
   } = e;
-  return (0, a.jsxs)("div", {
-    className: g.optionBoxText,
-    children: [(0, a.jsx)(O, {
+  return (0, r.jsxs)("div", {
+    className: P.optionBoxText,
+    children: [(0, r.jsx)(O, {
       guild: n,
-      guildFeature: (0, N.getGuildFeatureFromUploadType)(t, {
+      guildFeature: (0, A.getGuildFeatureFromUploadType)(t, {
         isGIF: !0
       })
-    }), (0, a.jsxs)("div", {
-      className: g.optionBoxDescription,
-      children: [(0, N.shouldShowPremiumIconForGIFPickerOption)(t) && (0, a.jsx)(l.TooltipContainer, {
-        className: g.nitroWheelFlairContainer,
-        text: y.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
-        children: i && (0, a.jsx)(C.default, {
-          className: g.nitroWheelFlair
+    }), (0, r.jsxs)("div", {
+      className: P.optionBoxDescription,
+      children: [(0, A.shouldShowPremiumIconForGIFPickerOption)(t) && (0, r.jsx)(u.TooltipContainer, {
+        className: P.nitroWheelFlairContainer,
+        text: R.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+        children: a && (0, r.jsx)(h.default, {
+          className: P.nitroWheelFlair
         })
-      }), y.default.Messages.SELECT_IMAGE_MODAL_CHOOSE_GIF]
+      }), R.default.Messages.SELECT_IMAGE_MODAL_CHOOSE_GIF]
     })]
   })
 }
@@ -105,17 +105,17 @@ function x(e) {
   let {
     title: t,
     uploadType: n,
-    guild: i
+    guild: a
   } = e;
-  return (0, a.jsxs)("div", {
-    className: g.optionBoxText,
-    children: [(0, a.jsx)(O, {
-      guildFeature: (0, N.getGuildFeatureFromUploadType)(n, {
+  return (0, r.jsxs)("div", {
+    className: P.optionBoxText,
+    children: [(0, r.jsx)(O, {
+      guildFeature: (0, A.getGuildFeatureFromUploadType)(n, {
         isGIF: !1
       }),
-      guild: i
-    }), (0, a.jsx)("div", {
-      className: g.optionBoxDescription,
+      guild: a
+    }), (0, r.jsx)("div", {
+      className: P.optionBoxDescription,
       children: t
     })]
   })
@@ -125,142 +125,142 @@ function M(e) {
   let {
     transitionState: t,
     onClose: c,
-    onComplete: C,
-    uploadType: N,
-    maxFileSizeBytes: U,
+    onComplete: h,
+    uploadType: A,
+    maxFileSizeBytes: g,
     showUpsellHeader: O,
     filters: M,
     analyticsLocation: F,
-    analyticsLocations: D = [],
-    modalSubTitle: G,
-    imageSpecifications: b,
-    modalTitle: H = y.default.Messages.SELECT_IMAGE_MODAL_TITLE,
-    uploadOptionTitle: j = y.default.Messages.UPLOAD_IMAGE
-  } = e, w = (0, r.useStateFromStores)([p.default], () => p.default.isFocused()), V = (0, r.useStateFromStores)([_.default], () => _.default.getCurrentUser()), k = (0, r.useStateFromStores)([E.default], () => E.default.getGuildId()), B = (0, r.useStateFromStores)([f.default], () => f.default.getGuild(k)), Z = (0, r.useStateFromStores)([s.default], () => s.default.isEditingClydeProfile()), {
+    analyticsLocations: b = [],
+    modalSubTitle: D,
+    imageSpecifications: G,
+    modalTitle: w = R.default.Messages.SELECT_IMAGE_MODAL_TITLE,
+    uploadOptionTitle: H = R.default.Messages.UPLOAD_IMAGE
+  } = e, j = (0, i.useStateFromStores)([_.default], () => _.default.isFocused()), V = (0, i.useStateFromStores)([p.default], () => p.default.getCurrentUser()), B = (0, i.useStateFromStores)([E.default], () => E.default.getGuildId()), k = (0, i.useStateFromStores)([f.default], () => f.default.getGuild(B)), Z = (0, i.useStateFromStores)([s.default], () => s.default.isEditingClydeProfile()), {
     reducedMotion: W
-  } = i.useContext(l.AccessibilityPreferencesContext), z = (0, l.useModalContext)(), Y = !S.default.canUseAnimatedAvatar(V) && N === R.UploadTypes.AVATAR && !Z, {
-    analyticsLocations: K
-  } = (0, o.default)(D, u.default.SELECT_IMAGE_MODAL);
+  } = a.useContext(u.AccessibilityPreferencesContext), K = (0, u.useModalContext)(), z = !C.default.canUseAnimatedAvatar(V) && A === y.UploadTypes.AVATAR && !Z, {
+    analyticsLocations: Y
+  } = (0, o.default)(b, l.default.SELECT_IMAGE_MODAL);
 
   function q(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    c(), C(e, t, n)
+    c(), h(e, t, n)
   }
-  return i.useEffect(() => {
-    Y && A.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: v.AnalyticsSections.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
-      location_stack: K
-    }), A.default.track(v.AnalyticEvents.OPEN_MODAL, {
-      type: v.AnalyticsSections.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
+  return a.useEffect(() => {
+    z && I.default.track(N.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      type: N.AnalyticsSections.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
+      location_stack: Y
+    }), I.default.track(N.AnalyticEvents.OPEN_MODAL, {
+      type: N.AnalyticsSections.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
       location: F
     })
-  }, [Y, F, K]), (0, a.jsxs)(l.ModalRoot, {
+  }, [z, F, Y]), (0, r.jsxs)(u.ModalRoot, {
     transitionState: t,
-    size: l.ModalSize.SMALL,
-    children: [(0, a.jsxs)(l.ModalHeader, {
-      className: g.modalHeader,
+    size: u.ModalSize.SMALL,
+    children: [(0, r.jsxs)(u.ModalHeader, {
+      className: P.modalHeader,
       separator: !1,
-      children: [(0, a.jsxs)("div", {
-        children: [(0, a.jsx)(l.FormTitle, {
-          tag: l.FormTitleTags.H1,
-          className: g.modalTitle,
-          children: H
-        }), null != G ? (0, a.jsx)(l.Text, {
+      children: [(0, r.jsxs)("div", {
+        children: [(0, r.jsx)(u.FormTitle, {
+          tag: u.FormTitleTags.H1,
+          className: P.modalTitle,
+          children: w
+        }), null != D ? (0, r.jsx)(u.Text, {
           variant: "text-md/normal",
-          children: G
+          children: D
         }) : null]
-      }), (0, a.jsx)(l.ModalCloseButton, {
+      }), (0, r.jsx)(u.ModalCloseButton, {
         onClick: c,
-        className: g.modalCloseButton
+        className: P.modalCloseButton
       })]
-    }), (0, a.jsxs)(l.ModalContent, {
-      className: g.modalContent,
-      children: [(0, a.jsxs)("div", {
-        className: g.imagePickerContainer,
-        children: [(0, a.jsxs)(l.Clickable, {
-          className: g.optionBox,
-          children: [(0, a.jsx)("div", {
-            className: g.contentCircle,
-            children: (0, a.jsx)(h.default, {
-              className: g.uploadIcon
+    }), (0, r.jsxs)(u.ModalContent, {
+      className: P.modalContent,
+      children: [(0, r.jsxs)("div", {
+        className: P.imagePickerContainer,
+        children: [(0, r.jsxs)(u.Clickable, {
+          className: P.optionBox,
+          children: [(0, r.jsx)("div", {
+            className: P.contentCircle,
+            children: (0, r.jsx)(S.default, {
+              className: P.uploadIcon
             })
-          }), (0, a.jsx)(l.Text, {
+          }), (0, r.jsx)(u.Text, {
             variant: "text-sm/semibold",
             color: "interactive-normal",
-            children: (0, a.jsx)(x, {
-              title: j,
-              uploadType: N,
-              guild: B
+            children: (0, r.jsx)(x, {
+              title: H,
+              uploadType: A,
+              guild: k
             })
-          }), (0, a.jsx)(d.default, {
+          }), (0, r.jsx)(d.default, {
             onChange: function(e, t) {
-              if (t.type === m.FileTypes.MP4) return q(e, t);
-              (0, l.openModalLazy)(async () => {
+              if (t.type === v.FileTypes.MP4) return q(e, t);
+              (0, u.openModalLazy)(async () => {
                 let {
-                  default: i
+                  default: a
                 } = await n.el("57015").then(n.bind(n, "57015"));
-                return n => (0, a.jsx)(i, {
+                return n => (0, r.jsx)(a, {
                   imgURI: e,
                   file: t,
                   onCrop: q,
-                  uploadType: N,
+                  uploadType: A,
                   showUpsellHeader: O,
                   allowSkip: !0,
                   analyticsPage: null == F ? void 0 : F.page,
                   ...n
                 })
               }, {
-                contextKey: z
+                contextKey: K
               })
             },
-            maxFileSizeBytes: U,
+            maxFileSizeBytes: g,
             onFileSizeError: function() {
-              c(), (0, I.default)(U)
+              c(), (0, m.default)(g)
             },
             filters: M
           })]
-        }), (0, a.jsxs)(l.Clickable, {
-          className: g.optionBox,
+        }), (0, r.jsxs)(u.Clickable, {
+          className: P.optionBox,
           onClick: function() {
-            (0, l.openModalLazy)(async () => {
+            (0, u.openModalLazy)(async () => {
               let {
                 default: e
               } = await n.el("646077").then(n.bind(n, "646077"));
-              return t => (0, a.jsx)(e, {
-                uploadType: N,
+              return t => (0, r.jsx)(e, {
+                uploadType: A,
                 onComplete: (e, t) => q(e, t, !0),
                 showUpsellHeader: O,
                 analyticsPage: null == F ? void 0 : F.page,
                 ...t
               })
             }, {
-              contextKey: z
+              contextKey: K
             })
           },
-          children: [(0, a.jsxs)("div", {
-            className: g.contentCircle,
-            children: [(0, a.jsx)(P, {
-              shouldAnimate: w && !W.enabled
-            }), (0, a.jsx)("div", {
-              className: g.gifIconContainer,
-              children: (0, a.jsx)(T.default, {
-                className: g.gifIcon
+          children: [(0, r.jsxs)("div", {
+            className: P.contentCircle,
+            children: [(0, r.jsx)(U, {
+              shouldAnimate: j && !W.enabled
+            }), (0, r.jsx)("div", {
+              className: P.gifIconContainer,
+              children: (0, r.jsx)(T.default, {
+                className: P.gifIcon
               })
             })]
-          }), (0, a.jsx)(l.Text, {
+          }), (0, r.jsx)(u.Text, {
             variant: "text-sm/semibold",
             color: "interactive-normal",
-            children: (0, a.jsx)(L, {
-              uploadType: N,
-              guild: B,
+            children: (0, r.jsx)(L, {
+              uploadType: A,
+              guild: k,
               showNitroWheel: !Z
             })
           })]
         })]
-      }), null != b ? (0, a.jsx)(l.Text, {
-        className: g.imageSpecifications,
+      }), null != G ? (0, r.jsx)(u.Text, {
+        className: P.imageSpecifications,
         variant: "text-sm/normal",
-        children: b
+        children: G
       }) : null]
     })]
   })

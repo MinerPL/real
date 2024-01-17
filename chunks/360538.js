@@ -151,11 +151,11 @@ function b(e) {
     endTime: b
   } = (0, S.default)(t.id, C), P = (0, a.useStateFromStores)([_.default], () => _.default.getUserCount(t.id, C)), O = l.useCallback(e => {
     e.stopPropagation(), null != t && (0, u.transitionToGuildFromEventInvite)(t)
-  }, [t]), D = (0, g.default)(t);
+  }, [t]), M = (0, g.default)(t);
   l.useEffect(() => {
     v.default.getGuildEventUserCounts(n.id, t.id, null != C ? [C] : []), v.default.getGuildEventsForCurrentUser(n.id)
   }, [n.id, t.id, C]);
-  let M = (0, T.recurrenceRuleFromServer)(t.recurrence_rule);
+  let D = (0, T.recurrenceRuleFromServer)(t.recurrence_rule);
   return (0, i.jsxs)("div", {
     ref: E,
     children: [(0, i.jsxs)("div", {
@@ -187,10 +187,10 @@ function b(e) {
       }), null != P && (0, i.jsx)(w, {
         userCount: P,
         onClick: c
-      }), !h && null != D && (0, i.jsx)(x, {
-        creator: D,
+      }), !h && null != M && (0, i.jsx)(x, {
+        creator: M,
         guildId: n.id
-      }, D.id), null != t.description && (0, i.jsx)("div", {
+      }, M.id), null != t.description && (0, i.jsx)("div", {
         className: y.description,
         children: (0, i.jsx)(m.default, {
           description: t.description,
@@ -198,11 +198,11 @@ function b(e) {
           guildId: n.id
         })
       })]
-    }), null != M && (0, i.jsx)("hr", {
+    }), null != D && (0, i.jsx)("hr", {
       className: y.divider
-    }), null != M && (0, i.jsx)(N.default, {
+    }), null != D && (0, i.jsx)(N.default, {
       guildId: n.id,
-      recurrenceRule: M,
+      recurrenceRule: D,
       guildEventId: t.id,
       onRecurrenceClick: p,
       hideScroller: !0,

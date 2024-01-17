@@ -19,8 +19,8 @@ var l = n("37983"),
   _ = n("981024"),
   S = n("519540"),
   T = n("80649"),
-  p = n("385730"),
-  N = n("788072"),
+  N = n("385730"),
+  p = n("788072"),
   I = n("49111"),
   m = n("782340");
 
@@ -106,7 +106,7 @@ function A(e) {
           onJump: G,
           badgeState: g,
           closePopout: x
-        }) : j && L === r.InboxTab.GAME_INVITES ? (0, l.jsx)(N.default, {
+        }) : j && L === r.InboxTab.GAME_INVITES ? (0, l.jsx)(p.default, {
           setTab: v,
           badgeState: g,
           closePopout: x
@@ -115,12 +115,12 @@ function A(e) {
           onJump: G,
           closePopout: x
         }) : (0, l.jsx)(s.ErrorBoundary, {
-          fallback: (0, l.jsx)(p.UnreadsCrashed, {
+          fallback: (0, l.jsx)(N.UnreadsCrashed, {
             setTab: v,
             closePopout: x,
             badgeState: g
           }),
-          children: (0, l.jsx)(p.default, {
+          children: (0, l.jsx)(N.default, {
             setTab: v,
             onJump: G,
             showTutorial: D,

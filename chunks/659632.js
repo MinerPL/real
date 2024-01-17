@@ -90,9 +90,9 @@ let C = v.default.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
   O = RegExp("(?: |^|https?://)(?:".concat(N, ")/([a-z0-9-]+)"), "gi"),
   b = (e, t) => Array(t).fill(void 0).map(() => "[".concat("abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789", "]{").concat(e, "}")).join("-?"),
   P = b(4, 4),
-  V = b(4, 6),
-  R = b(5, 3),
-  k = [P, V, R, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
+  R = b(4, 6),
+  V = b(5, 3),
+  k = [P, R, V, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
   M = new RegExp("^(".concat("WUMP-?", ")?(").concat(k, ")$")),
   w = e => null != e && !0;
 (i = s || (s = {}))[i.DEFAULT = 0] = "DEFAULT", i[i.CUSTOM_STYLE = 1] = "CUSTOM_STYLE", i[i.CUSTOM_MESSAGE = 2] = "CUSTOM_MESSAGE", i[i.EMOJI_SOUNDBOARD = 3] = "EMOJI_SOUNDBOARD";

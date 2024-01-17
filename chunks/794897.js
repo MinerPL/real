@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return I
   }
 }), n("222007");
 var a = n("446674"),
@@ -101,7 +101,7 @@ function T(e) {
     a = r.default.getChannelId();
   n && t === a && p.recordChannel(t), !n && p.deleteChannel(t)
 }
-var A = new p(l.default, {
+var I = new p(l.default, {
   CACHE_LOADED_LAZY_NO_CACHE: function(e) {
     S = !0
   },

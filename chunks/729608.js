@@ -10,8 +10,8 @@ var s = a("37983"),
   r = a("300322"),
   i = a("660074"),
   o = a("543289"),
-  u = a("772280"),
-  d = a("659500"),
+  d = a("772280"),
+  u = a("659500"),
   c = a("680986"),
   m = a("867965"),
   h = a("49111"),
@@ -34,7 +34,7 @@ function x(e) {
         guildId: x
       })
     })
-  }, [x]), N = C.size > 0, M = S || _, A = !N && _ && !p, v = n.useCallback(() => A ? E() : S ? void d.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_COMPOSER_TITLE) : (0, h.NOOP_NULL)(), [E, A, S]);
+  }, [x]), N = C.size > 0, M = S || _, A = !N && _ && !p, v = n.useCallback(() => A ? E() : S ? void u.ComponentDispatch.dispatch(h.ComponentActions.FOCUS_COMPOSER_TITLE) : (0, h.NOOP_NULL)(), [E, A, S]);
   return (0, s.jsxs)("div", {
     className: g.container,
     children: [(0, s.jsxs)("div", {
@@ -69,7 +69,7 @@ function x(e) {
       onClick: v,
       className: g.cta,
       innerClassName: g.button,
-      children: [A ? f.default.Messages.FORUM_EMPTY_STATE_CTA : f.default.Messages.FORUM_EMPTY_STATE_CREATE_POST_CTA, (0, s.jsx)(u.default, {
+      children: [A ? f.default.Messages.FORUM_EMPTY_STATE_CTA : f.default.Messages.FORUM_EMPTY_STATE_CREATE_POST_CTA, (0, s.jsx)(d.default, {
         width: 12
       })]
     })]

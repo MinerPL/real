@@ -11,8 +11,8 @@ var n = a("448105"),
   r = a("446674"),
   i = a("77078"),
   o = a("430568"),
-  u = a("385976"),
-  d = a("547896"),
+  d = a("385976"),
+  u = a("547896"),
   c = a("680986"),
   m = a("782340"),
   h = a("224300");
@@ -24,7 +24,7 @@ let f = e => {
     name: n,
     emojiId: l,
     emojiName: c
-  } = t, m = (0, r.useStateFromStores)([u.default], () => null != l ? u.default.getUsableCustomEmojiById(l) : null), f = null != l || null != c;
+  } = t, m = (0, r.useStateFromStores)([d.default], () => null != l ? d.default.getUsableCustomEmojiById(l) : null), f = null != l || null != c;
   return (0, s.jsx)(i.ComboboxItem, {
     value: a,
     children: (0, s.jsx)(i.ComboboxItem.Label, {
@@ -35,7 +35,7 @@ let f = e => {
           emojiId: l,
           emojiName: c,
           animated: !!(null == m ? void 0 : m.animated)
-        }) : (0, s.jsx)(d.default, {
+        }) : (0, s.jsx)(u.default, {
           className: h.emoji
         }), (0, s.jsx)(i.Text, {
           variant: "text-md/semibold",
@@ -54,7 +54,7 @@ function g(e) {
     maxTagsApplied: n,
     onSelectTag: r,
     onClose: o
-  } = e, u = (0, c.useVisibleForumTags)(t), d = (e, t) => t.filter(t => l(e.toLowerCase(), t.name.toLowerCase()));
+  } = e, d = (0, c.useVisibleForumTags)(t), u = (e, t) => t.filter(t => l(e.toLowerCase(), t.name.toLowerCase()));
   return (0, s.jsx)(i.ComboboxPopout, {
     showScrollbar: !0,
     value: a,
@@ -63,7 +63,7 @@ function g(e) {
     },
     placeholder: m.default.Messages.FORUM_TAG_POST_SEARCH_PLACEHOLDER,
     "aria-label": m.default.Messages.FORUM_TAG_POST_SEARCH_PLACEHOLDER,
-    children: e => d(e, u).map(e => (0, s.jsx)(f, {
+    children: e => u(e, d).map(e => (0, s.jsx)(f, {
       tag: e
     }, e.id))
   })

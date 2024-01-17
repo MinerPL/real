@@ -6,15 +6,15 @@ n.r(t), n.d(t, {
 });
 var r = n("37983");
 n("884691");
-var u = n("469563"),
-  i = n("470131"),
+var i = n("469563"),
+  u = n("470131"),
   l = n("75196"),
-  a = (0, u.replaceIcon)(function(e) {
+  a = (0, i.replaceIcon)(function(e) {
     let {
       width: t = 6,
       height: n = 11,
-      color: u = "currentColor",
-      foreground: i,
+      color: i = "currentColor",
+      foreground: u,
       ...a
     } = e;
     return (0, r.jsx)("svg", {
@@ -23,9 +23,9 @@ var u = n("469563"),
       height: n,
       viewBox: "0 0 6 11",
       children: (0, r.jsxs)("g", {
-        fill: u,
+        fill: i,
         fillRule: "evenodd",
-        className: i,
+        className: u,
         children: [(0, r.jsx)("path", {
           d: "M2 4.42007V6.79007L3 7.79007L4 6.79007V4.42007L3.01 3.42007L2 4.42007Z"
         }), (0, r.jsx)("path", {
@@ -33,6 +33,6 @@ var u = n("469563"),
         })]
       })
     })
-  }, i.BoostTier2SimpleIcon, void 0, {
+  }, u.BoostTier2SimpleIcon, void 0, {
     size: 11
   })

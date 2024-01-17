@@ -31,7 +31,7 @@ function S(e) {
     onClose: S,
     onSlideChange: C,
     hasJoinButton: v
-  } = e, [N, A] = i.useState(n), L = (0, s.default)(N), [w, R] = i.useState(null), [M, D] = i.useState(null), [O, b] = i.useState(null), [U, G] = i.useState(!1), {
+  } = e, [N, A] = i.useState(n), L = (0, s.default)(N), [w, R] = i.useState(null), [M, D] = i.useState(null), [O, U] = i.useState(null), [b, G] = i.useState(!1), {
     forceLightTheme: y
   } = (0, f.default)({
     location: "CreateGuildModal"
@@ -59,8 +59,8 @@ function S(e) {
       A(_.CreateGuildSlideTypes.GUILD_TEMPLATES), D(null)
     }, [N]),
     j = i.useCallback(e => {
-      b(e), l(e)
-    }, [l, b]),
+      U(e), l(e)
+    }, [l, U]),
     z = i.useCallback(() => {
       o(null != O, "handleSuccess called before onGuildCreated"), l(O)
     }, [l, O]),
@@ -107,7 +107,7 @@ function S(e) {
               onClose: S,
               onBack: P,
               isSlideReady: w === _.CreateGuildSlideTypes.CUSTOMIZE_GUILD,
-              isCommunity: U
+              isCommunity: b
             })
           }), (0, r.jsx)(a.Slide, {
             id: _.CreateGuildSlideTypes.CHANNEL_PROMPT,

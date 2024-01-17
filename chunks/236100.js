@@ -1,53 +1,53 @@
 "use strict";
-r.r(t), r.d(t, {
+l.r(r), l.d(r, {
   default: function() {
-    return c
+    return d
   }
 });
-var l = r("37983");
-r("884691");
-var i = r("77078"),
-  o = r("38766"),
-  n = r("49111"),
-  s = r("782340"),
-  a = r("364547");
+var t = l("37983");
+l("884691");
+var o = l("77078"),
+  i = l("38766"),
+  n = l("49111"),
+  a = l("782340"),
+  s = l("364547");
 let u = {
     page: n.AnalyticsPages.GUILD_CHANNEL,
     section: n.AnalyticsSections.PROFILE_POPOUT,
     object: n.AnalyticsObjects.EDIT_PER_SERVER_IDENTITY
   },
-  d = {
+  f = {
     page: n.AnalyticsPages.USER_POPOUT,
     section: n.AnalyticsSections.PROFILE_POPOUT
   };
 
-function c(e) {
+function d(e) {
   let {
-    onSelect: t,
-    onClose: r,
+    onSelect: r,
+    onClose: l,
     guild: n
-  } = e, c = (0, o.default)({
+  } = e, d = (0, i.default)({
     guild: n,
     analyticsLocation: u
-  }), f = (0, o.default)({
-    analyticsLocation: d
+  }), c = (0, i.default)({
+    analyticsLocation: f
   });
-  return (0, l.jsxs)(i.Menu, {
-    className: a.popoutMenu,
-    onSelect: t,
+  return (0, t.jsxs)(o.Menu, {
+    className: s.popoutMenu,
+    onSelect: r,
     navId: "edit-profile-popout",
-    onClose: r,
-    "aria-label": s.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
-    children: [(0, l.jsx)(i.MenuItem, {
+    onClose: l,
+    "aria-label": a.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
+    children: [(0, t.jsx)(o.MenuItem, {
       id: "edit-server-profile",
-      label: s.default.Messages.CHANGE_IDENTITY,
-      subtext: s.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE_MENU_HELP,
-      action: () => c()
-    }), (0, l.jsx)(i.MenuItem, {
+      label: a.default.Messages.CHANGE_IDENTITY,
+      subtext: a.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE_MENU_HELP,
+      action: () => d()
+    }), (0, t.jsx)(o.MenuItem, {
       id: "edit-default-profile",
-      label: s.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE,
-      subtext: s.default.Messages.USER_PROFILE_MENU_HELP,
-      action: () => f()
+      label: a.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE,
+      subtext: a.default.Messages.USER_PROFILE_MENU_HELP,
+      action: () => c()
     })]
   })
 }

@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return T
   },
   getShowDropsNoticeBanner: function() {
-    return N
+    return p
   },
   getShowDropsEndedIncompleteBanner: function() {
     return I
@@ -91,14 +91,14 @@ function T(e) {
   return S(e, t, _())
 }
 
-function p(e, t) {
+function N(e, t) {
   let {
     endDate: n
   } = e, l = a(), s = a(n, d.noticeBannerDateFormat), i = a(l.clone().add(e.dropsNoticeBannerDurationDays, "days").format(d.noticeBannerDateFormat)), r = s.isSameOrBefore(i), o = s.isBefore(l, "minute");
   return r && (t && !o || !t && o)
 }
 
-function N(e) {
+function p(e) {
   var t;
   let n = A(e);
   if (null == n || !(null === (t = f(e)) || void 0 === t ? void 0 : t.getCurrentConfig({
@@ -107,7 +107,7 @@ function N(e) {
       autoTrackExposure: !1
     }).dropsEnabled)) return !1;
   let l = s.DropsOptedOut.getSetting(),
-    a = p(n, !0);
+    a = N(n, !0);
   return !l && a
 }
 
@@ -120,7 +120,7 @@ function I(e) {
       autoTrackExposure: !1
     })) || void 0 === t ? void 0 : t.dropsEnabled)) return !1;
   let a = s.DropsOptedOut.getSetting(),
-    i = p(l, !1);
+    i = N(l, !1);
   return m(l) && !a && i
 }
 

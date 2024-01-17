@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var l = n("37983");
 n("884691");
-var i = n("414456"),
-  r = n.n(i),
+var r = n("414456"),
+  i = n.n(r),
   s = n("394846"),
   a = n("77078"),
   o = n("570697"),
@@ -18,7 +18,7 @@ function d(e) {
   let {
     children: t,
     className: n,
-    layoutClassName: i,
+    layoutClassName: r,
     profilePreview: d,
     previewTitle: f
   } = e, h = () => (0, l.jsx)(o.default, {
@@ -31,7 +31,7 @@ function d(e) {
     children: (0, l.jsxs)(a.FormSection, {
       className: c.profileCustomizationSection,
       children: [s.isMobile && h(), (0, l.jsxs)("div", {
-        className: r(c.baseLayout, i),
+        className: i(c.baseLayout, r),
         children: [t, !s.isMobile && h()]
       })]
     })
