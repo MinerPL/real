@@ -15634,7 +15634,7 @@ html.decorate-links .lowSaturationUnderline__95e71 {
 }
 
 .embed_d3cbe3 .embedAuthorNameLink_b25226 {
-    color: var(--header-primary)
+    color: var(--embed-title)
 }
 
 .embedAuthorIcon__6b055 {
@@ -15916,7 +15916,7 @@ html.decorate-links .lowSaturationUnderline__95e71 {
 .embedAuthorName_a1274b,
 .embedTitle__31740,
 .embedFieldName_d42d0c {
-    color: var(--header-primary)
+    color: var(--embed-title)
 }
 
 .embedProvider_cfa718,
