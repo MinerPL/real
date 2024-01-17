@@ -68,6 +68,12 @@ n.r(t), n.d(t, {
   },
   CLIPS_RUNNING_GAME_CHANGE_CLIPS_INIT_DELAY: function() {
     return y
+  },
+  SEEK_DENOMINATOR: function() {
+    return P
+  },
+  SEEK_SHIFT_MODIFIER: function() {
+    return L
   }
 });
 var i, r, s, a, o = n("605250"),
@@ -93,4 +99,6 @@ let u = "alt+c",
   N = 100,
   O = e => "Clip - ".concat(new Date(e).toLocaleString()),
   D = 15,
-  y = 15e3
+  y = 15e3,
+  P = 30,
+  L = 10
