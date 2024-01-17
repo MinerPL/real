@@ -6,19 +6,13 @@ n.r(t), n.d(t, {
   getAttachmentPayload: function() {
     return o
   },
-  getFileChunk: function() {
+  getFileData: function() {
     return l
   },
-  getFileData: function() {
-    return u
-  },
-  getFileContentLength: function() {
-    return c
-  },
   getFile: function() {
-    return d
+    return u
   }
-}), n("70102");
+});
 var i = n("66175"),
   r = n("894488");
 let s = [{
@@ -87,16 +81,7 @@ function o(e) {
   return a.filename = "".concat(o).concat(null != s ? s : e.filename), a.uploaded_filename = e.uploadedFilename, "durationSecs" in e && null != e.durationSecs && (a.duration_secs = e.durationSecs), "waveform" in e && null != e.waveform && (a.waveform = e.waveform), "isThumbnail" in e && !0 === e.isThumbnail && (a.is_thumbnail = e.isThumbnail), "isRemix" in e && !0 === e.isRemix && (a.is_remix = e.isRemix), "clip" in e && null != e.clip && (a.is_clip = !0, a.title = e.clip.name, a.application_id = e.clip.applicationId, a.clip_created_at = (0, i.getClipCreatedAt)(e.clip.id), a.clip_participant_ids = (0, i.getClipParticipantIds)(e.clip.users)), a
 }
 
-function l(e, t, n) {
-  let i = new XMLHttpRequest;
-  return new Promise((r, s) => {
-    i.open("GET", e, !0), i.responseType = "blob", i.setRequestHeader("Range", "bytes=".concat(t, "-").concat(n)), i.onabort = e => s(e), i.onerror = e => s(e), i.ontimeout = e => s(e), i.onload = () => {
-      206 === i.status ? r(i.response) : s(Error("Range request failed"))
-    }, i.send()
-  })
-}
-
-function u(e) {
+function l(e) {
   let t = new XMLHttpRequest;
   return new Promise((n, i) => {
     t.open("GET", e, !0), t.responseType = "blob", t.onabort = e => i(e), t.onerror = e => i(e), t.ontimeout = e => i(e), t.onload = () => {
@@ -106,19 +91,7 @@ function u(e) {
   })
 }
 
-function c(e) {
-  return new Promise((t, n) => {
-    let i = new XMLHttpRequest;
-    i.open("HEAD", e, !0), i.onload = () => {
-      if (i.status >= 200 && i.status < 300) {
-        let e = i.getResponseHeader("Content-Length");
-        null != e && "" !== e ? t(parseInt(e, 10)) : n(Error("Content-Length header is missing"))
-      } else n(Error("HTTP request failed with status code ".concat(i.status)))
-    }, i.onerror = n, i.onabort = n, i.ontimeout = n, i.send()
-  })
-}
-
-function d(e) {
+function u(e) {
   var t, n, i, r, a, o;
   let l, {
       uri: u,
