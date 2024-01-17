@@ -14,9 +14,9 @@ var s = n("759843"),
   u = n("669499"),
   d = n("49111"),
   c = n("782340"),
-  E = n("762874");
+  f = n("762874");
 
-function f() {
+function E() {
   (0, u.closeAgeGateModal)(), (0, l.transitionTo)(d.Routes.LOGIN)
 }
 
@@ -37,19 +37,19 @@ function _(e) {
     },
     children: [(0, a.jsx)(i.ModalContent, {
       children: (0, a.jsxs)("div", {
-        className: E.container,
+        className: f.container,
         children: [(0, a.jsx)("img", {
           alt: "",
           src: n("803452"),
-          className: E.img
+          className: f.img
         }), (0, a.jsx)(i.Heading, {
           variant: "heading-xl/semibold",
-          className: E.title,
+          className: f.title,
           id: u,
           children: c.default.Messages.AGE_GATE_UNDERAGE_EXISTING_HEADER
         }), (0, a.jsx)(i.Text, {
           color: "header-secondary",
-          className: E.subtitle,
+          className: f.subtitle,
           variant: "text-sm/normal",
           children: c.default.Messages.AGE_GATE_UNDERAGE_BODY.format({
             underageMessage: null != t ? t : c.default.Messages.AGE_GATE_UNDERAGE_BODY_DEFAULT_REG_MESSAGE,
@@ -57,7 +57,7 @@ function _(e) {
           })
         }), (0, a.jsx)(i.Text, {
           color: "header-secondary",
-          className: E.subtitle,
+          className: f.subtitle,
           variant: "text-sm/normal",
           children: c.default.Messages.AGE_GATE_UNDERAGE_EXISTING_BODY_DELETION_WITH_DAYS.format({
             days: 30
@@ -68,7 +68,7 @@ function _(e) {
       children: (0, a.jsx)(i.Button, {
         size: i.ButtonSizes.SMALL,
         fullWidth: !0,
-        onClick: f,
+        onClick: E,
         children: c.default.Messages.AGE_GATE_UNDERAGE_BACK_TO_LOGIN
       })
     })]

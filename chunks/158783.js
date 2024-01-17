@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("627445"),
-  l = n.n(s),
+var l = n("627445"),
+  a = n.n(l),
   i = n("446674"),
   r = n("233069"),
   o = n("813006"),
@@ -15,69 +15,69 @@ var s = n("627445"),
   d = n("162771"),
   c = n("174622"),
   f = n("793079"),
-  m = n("49111"),
-  E = n("91366"),
-  _ = n("782340"),
-  h = n("18978");
+  E = n("49111"),
+  _ = n("91366"),
+  T = n("782340"),
+  I = n("18978");
 
-function p(e) {
-  let t, n, s, {
-      invite: p,
-      currentUserId: I,
-      guild: T,
-      onTransitionToInviteChannel: g,
-      onAcceptInstantInvite: C
+function m(e) {
+  let t, n, l, {
+      invite: m,
+      currentUserId: N,
+      guild: p,
+      onTransitionToInviteChannel: S,
+      onAcceptInstantInvite: A
     } = e,
-    S = null == T ? void 0 : T.id,
-    A = (0, i.useStateFromStores)([d.default], () => d.default.getGuildId()),
-    N = (0, i.useStateFromStores)([u.default], () => null != p && null != p.target_user ? u.default.getActiveStreamForUser(p.target_user.id, S) : null, [p, S]),
-    M = (0, i.useStateFromStores)([u.default], () => null != p && null != p.target_user ? u.default.getStreamForUser(p.target_user.id, S) : null, [p, S]),
-    v = null != p && p.target_type === E.InviteTargetTypes.STREAM && null != p.target_user && null != N,
-    x = null != p && null != M && null != p.channel && null != p.guild && M.channelId === p.channel.id && M.guildId === p.guild.id;
-  l(null != p, "Invite cannot be null");
+    C = null == p ? void 0 : p.id,
+    h = (0, i.useStateFromStores)([d.default], () => d.default.getGuildId()),
+    g = (0, i.useStateFromStores)([u.default], () => null != m && null != m.target_user ? u.default.getActiveStreamForUser(m.target_user.id, C) : null, [m, C]),
+    M = (0, i.useStateFromStores)([u.default], () => null != m && null != m.target_user ? u.default.getStreamForUser(m.target_user.id, C) : null, [m, C]),
+    O = null != m && m.target_type === _.InviteTargetTypes.STREAM && null != m.target_user && null != g,
+    R = null != m && null != M && null != m.channel && null != m.guild && M.channelId === m.channel.id && M.guildId === m.guild.id;
+  a(null != m, "Invite cannot be null");
   let {
-    target_type: O,
-    target_user: L
-  } = p;
-  l(O === E.InviteTargetTypes.STREAM && null != L, "invalid streaming invite");
-  let R = I === L.id,
-    P = p.state === m.InviteStates.ACCEPTING,
-    y = null != T;
-  if (null == T) {
-    if (null == p.guild) return (0, a.jsx)(f.default, {});
-    T = new o.default(p.guild)
+    target_type: L,
+    target_user: v
+  } = m;
+  a(L === _.InviteTargetTypes.STREAM && null != v, "invalid streaming invite");
+  let P = N === v.id,
+    D = m.state === E.InviteStates.ACCEPTING,
+    x = null != p;
+  if (null == p) {
+    if (null == m.guild) return (0, s.jsx)(f.default, {});
+    p = new o.default(m.guild)
   }
-  let D = null != p.channel ? (0, r.createChannelRecordFromInvite)(p.channel) : null,
-    j = v ? g : C;
-  y && !x ? s = R ? _.default.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : _.default.Messages.INVITE_BUTTON_STREAM_ENDED.format({
-    name: L.username
-  }) : (t = _.default.Messages.WATCH, n = c.default.Button.Colors.GREEN, v && (t = _.default.Messages.INVITE_BUTTON_STREAM_WATCHING, n = c.default.Button.Colors.PRIMARY), s = R ? _.default.Messages.INVITE_BUTTON_STREAMER : _.default.Messages.INVITE_BUTTON_STREAMING.format({
-    name: L.username
+  let y = null != m.channel ? (0, r.createChannelRecordFromInvite)(m.channel) : null,
+    U = O ? S : A;
+  x && !R ? l = P ? T.default.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : T.default.Messages.INVITE_BUTTON_STREAM_ENDED.format({
+    name: v.username
+  }) : (t = T.default.Messages.WATCH, n = c.default.Button.Colors.GREEN, O && (t = T.default.Messages.INVITE_BUTTON_STREAM_WATCHING, n = c.default.Button.Colors.PRIMARY), l = P ? T.default.Messages.INVITE_BUTTON_STREAMER : T.default.Messages.INVITE_BUTTON_STREAMING.format({
+    name: v.username
   }));
-  let U = A === T.id && null != D ? (0, a.jsx)(c.default.Channel, {
-    channel: D
-  }) : _.default.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
-    guildName: T.name
+  let j = h === p.id && null != y ? (0, s.jsx)(c.default.Channel, {
+    channel: y
+  }) : T.default.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({
+    guildName: p.name
   });
-  return (0, a.jsxs)(c.default, {
-    children: [(0, a.jsx)(c.default.Header, {
-      text: _.default.Messages.INVITE_BUTTON_TITLE_STREAMING
-    }), (0, a.jsxs)(c.default.Body, {
-      children: [(0, a.jsxs)("div", {
-        className: h.headerLine,
-        children: [(0, a.jsx)(c.default.Icon, {
-          guild: T,
-          onClick: y && x ? j : void 0
-        }), (0, a.jsx)(c.default.Info, {
-          title: s,
-          onClick: y && x ? j : void 0,
-          children: U
+  return (0, s.jsxs)(c.default, {
+    children: [(0, s.jsx)(c.default.Header, {
+      text: T.default.Messages.INVITE_BUTTON_TITLE_STREAMING
+    }), (0, s.jsxs)(c.default.Body, {
+      children: [(0, s.jsxs)("div", {
+        className: I.headerLine,
+        children: [(0, s.jsx)(c.default.Icon, {
+          guild: p,
+          onClick: x && R ? U : void 0
+        }), (0, s.jsx)(c.default.Info, {
+          title: l,
+          onClick: x && R ? U : void 0,
+          children: j
         })]
-      }), x ? (0, a.jsx)(c.default.Button, {
-        disabled: y && !x,
-        onClick: j,
-        submitting: P,
-        isDisabled: v && x,
+      }), R ? (0, s.jsx)(c.default.Button, {
+        disabled: x && !R,
+        onClick: U,
+        submitting: D,
+        isDisabled: O && R,
         color: n,
         children: t
       }) : null]

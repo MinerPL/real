@@ -4,19 +4,19 @@ n.r(t), n.d(t, {
     return G
   },
   transformChannel: function() {
-    return k
+    return w
   },
   transformInternalTextMessage: function() {
-    return w
+    return k
   },
   transformVoiceState: function() {
     return F
   },
   transformRelationship: function() {
-    return B
+    return H
   },
   isMatchingOrigin: function() {
-    return H
+    return B
   },
   hasMessageReadPermission: function() {
     return V
@@ -60,19 +60,19 @@ var a, s = n("746379"),
   u = n("819689"),
   d = n("711562"),
   c = n("367376"),
-  E = n("574073"),
-  f = n("845579"),
+  f = n("574073"),
+  E = n("845579"),
   _ = n("233069"),
   h = n("766274"),
   C = n("42203"),
-  T = n("305961"),
-  I = n("42887"),
+  I = n("305961"),
+  T = n("42887"),
   S = n("377253"),
-  N = n("824563"),
-  A = n("697218"),
-  p = n("800762"),
-  m = n("718517"),
-  g = n("387111"),
+  m = n("824563"),
+  p = n("697218"),
+  A = n("800762"),
+  g = n("718517"),
+  N = n("387111"),
   R = n("655518"),
   O = n("861309"),
   L = n("694352"),
@@ -87,7 +87,7 @@ let P = null !== (a = i.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && v
     return /^\d+$/.test(n) ? e : t.slice(-2).join(".")
   }(),
   y = new RegExp("^".concat(R.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(R.default.escape(D), "|discordapp.com|discord.com)$")),
-  x = 1 * m.default.Millis.MINUTE,
+  x = 1 * g.default.Millis.MINUTE,
   b = {};
 
 function U(e) {
@@ -103,7 +103,7 @@ function j(e) {
   return t.indexOf(e) > -1
 }
 
-function k(e, t) {
+function w(e, t) {
   let n = [],
     a = e.getGuildId();
   return ![M.ChannelTypes.GUILD_CATEGORY, ...(0, _.GUILD_VOCAL_CHANNEL_TYPES)].includes(e.type) && n.push(new Promise(t => {
@@ -113,9 +113,9 @@ function k(e, t) {
     })
   })), Promise.all(n).then(() => {
     var n;
-    let s = !e.isNSFW() || (null === (n = A.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0,
-      i = s && t ? S.default.getMessages(e.id).toArray().map(w) : [],
-      l = Object.values(p.default.getVoiceStatesForChannel(e.id)).map(t => F(a, e.id, t));
+    let s = !e.isNSFW() || (null === (n = p.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0,
+      i = s && t ? S.default.getMessages(e.id).toArray().map(k) : [],
+      l = Object.values(A.default.getVoiceStatesForChannel(e.id)).map(t => F(a, e.id, t));
     return {
       id: e.id,
       name: e.name,
@@ -131,12 +131,12 @@ function k(e, t) {
   })
 }
 
-function w(e) {
+function k(e) {
   let t = c.default.parseToAST(e.content, !0, {
       channelId: e.channel_id
     }).map(U),
     n = C.default.getChannel(e.channel_id),
-    a = null != e.author ? (0, E.getUserAuthor)(new h.default(e.author), n) : void 0;
+    a = null != e.author ? (0, f.getUserAuthor)(new h.default(e.author), n) : void 0;
   return {
     id: e.id,
     blocked: e.blocked,
@@ -167,13 +167,13 @@ function F(e, t, n) {
     selfDeaf: l,
     suppress: r,
     userId: o
-  } = n, u = A.default.getUser(o);
+  } = n, u = p.default.getUser(o);
   if (null == u) throw Error("Invalid user id: ".concat(o));
   return {
-    nick: g.default.getName(e, t, u),
-    mute: I.default.isLocalMute(u.id),
-    volume: I.default.getLocalVolume(u.id),
-    pan: I.default.getLocalPan(u.id),
+    nick: N.default.getName(e, t, u),
+    mute: T.default.isLocalMute(u.id),
+    volume: T.default.getLocalVolume(u.id),
+    pan: T.default.getLocalPan(u.id),
     voice_state: {
       mute: a,
       deaf: s,
@@ -185,19 +185,19 @@ function F(e, t, n) {
   }
 }
 
-function B(e, t, n) {
-  let a = A.default.getUser(t);
+function H(e, t, n) {
+  let a = p.default.getUser(t);
   return {
     type: e,
     user: null != a ? (0, L.default)(a) : null,
     presence: {
-      status: N.default.getStatus(t),
-      activity: null != n ? N.default.getApplicationActivity(t, n) : N.default.getPrimaryActivity(t)
+      status: m.default.getStatus(t),
+      activity: null != n ? m.default.getApplicationActivity(t, n) : m.default.getPrimaryActivity(t)
     }
   }
 }
 
-function H(e) {
+function B(e) {
   let t;
   if (null == e) return !1;
   let n = window.location.origin;
@@ -211,7 +211,7 @@ function H(e) {
 }
 
 function V(e, t, n) {
-  let a = T.default.getGuild(e.getGuildId()),
+  let a = I.default.getGuild(e.getGuildId()),
     s = null != a ? a.getApplicationId() : e.getApplicationId();
   return s === t || n.indexOf(M.OAuth2Scopes.MESSAGES_READ) > -1
 }
@@ -235,7 +235,7 @@ function W(e) {
       party: s
     } = e,
     i = 0;
-  return (n && (i |= M.ActivityFlags.INSTANCE), (null == a ? void 0 : a.join) != null && (i |= M.ActivityFlags.JOIN), t) ? (i |= M.ActivityFlags.EMBEDDED, i |= M.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == s ? void 0 : s.privacy) === M.ActivityPartyPrivacy.PUBLIC || o.default.get("ACTIVITIES_FORCE_PUBLIC")) && (f.AllowActivityPartyPrivacyFriends.getSetting() && (i |= M.ActivityFlags.PARTY_PRIVACY_FRIENDS), f.AllowActivityPartyPrivacyVoiceChannel.getSetting() && (i |= M.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL)), i)
+  return (n && (i |= M.ActivityFlags.INSTANCE), (null == a ? void 0 : a.join) != null && (i |= M.ActivityFlags.JOIN), t) ? (i |= M.ActivityFlags.EMBEDDED, i |= M.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == s ? void 0 : s.privacy) === M.ActivityPartyPrivacy.PUBLIC || o.default.get("ACTIVITIES_FORCE_PUBLIC")) && (E.AllowActivityPartyPrivacyFriends.getSetting() && (i |= M.ActivityFlags.PARTY_PRIVACY_FRIENDS), E.AllowActivityPartyPrivacyVoiceChannel.getSetting() && (i |= M.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL)), i)
 }
 
 function K(e, t, n) {
@@ -286,7 +286,7 @@ function Q(e, t) {
 }
 
 function Z(e) {
-  let t = I.default.getSettings(),
+  let t = T.default.getSettings(),
     n = e => Object.values(e).sort((e, t) => e.index - t.index).map(e => ({
       id: e.id,
       name: e.name
@@ -294,12 +294,12 @@ function Z(e) {
     a = e(t);
   return {
     input: {
-      available_devices: n(I.default.getInputDevices()),
+      available_devices: n(T.default.getInputDevices()),
       device_id: t.inputDeviceId,
       volume: t.inputVolume
     },
     output: {
-      available_devices: n(I.default.getOutputDevices()),
+      available_devices: n(T.default.getOutputDevices()),
       device_id: t.outputDeviceId,
       volume: t.outputVolume
     },
@@ -321,7 +321,7 @@ function Z(e) {
 }
 
 function X(e, t) {
-  let n = I.default.getSettings(e),
+  let n = T.default.getSettings(e),
     a = t(n);
   return {
     input_mode: {

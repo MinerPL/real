@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return A
   }
 });
 var s = n("37983");
@@ -19,8 +19,8 @@ var a = n("414456"),
   C = n("118094"),
   p = n("200521"),
   m = n("894488"),
-  E = n("782340"),
-  g = n("339723");
+  g = n("782340"),
+  E = n("339723");
 
 function S(e) {
   let {
@@ -53,25 +53,25 @@ function S(e) {
   });
   return (0, s.jsx)(s.Fragment, {
     children: u((e, t) => t ? (0, s.jsx)("div", {
-      className: g.summaryFeedbackWrapper,
+      className: E.summaryFeedbackWrapper,
       children: (0, s.jsxs)(i.animated.div, {
         style: e,
-        className: g.summaryFeedback,
+        className: E.summaryFeedback,
         children: [(0, s.jsx)(o.Text, {
           variant: "text-xs/medium",
           color: "interactive-normal",
-          children: E.default.Messages.SUMMARY_FEEDBACK
+          children: g.default.Messages.SUMMARY_FEEDBACK
         }), (0, s.jsx)(o.Clickable, {
           onClick: e => l(e, p.FeedbackRating.GOOD),
           children: (0, s.jsx)(f.default, {
-            className: g.thumbIcon,
+            className: E.thumbIcon,
             width: 12,
             height: 12
           })
         }), (0, s.jsx)(o.Clickable, {
           onClick: e => l(e, p.FeedbackRating.BAD),
           children: (0, s.jsx)(c.default, {
-            className: g.thumbIcon,
+            className: E.thumbIcon,
             width: 12,
             height: 12
           })
@@ -81,7 +81,7 @@ function S(e) {
   })
 }
 
-function _(e) {
+function A(e) {
   var t, n;
   let a, {
       item: i,
@@ -94,7 +94,7 @@ function _(e) {
     p = null != i.content;
   return a = p ? (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(d.default, {
-      className: g.summaryStartIcon,
+      className: E.summaryStartIcon,
       width: 16,
       height: 16
     }), i.content]
@@ -103,13 +103,13 @@ function _(e) {
       summary: f,
       channel: o
     }), (0, s.jsx)(d.default, {
-      className: g.summaryEndIcon,
+      className: E.summaryEndIcon,
       width: 16,
       height: 16
     })]
   }), (0, s.jsx)(u.default, {
-    className: l(g.summaryDivider, p ? g.summaryDividerStart : g.summaryDividerEnd),
-    contentClassName: p ? g.summaryStartContent : g.summaryEndContent,
+    className: l(E.summaryDivider, p ? E.summaryDividerStart : E.summaryDividerEnd),
+    contentClassName: p ? E.summaryStartContent : E.summaryEndContent,
     isUnread: C,
     id: C ? m.NEW_MESSAGE_BAR_ID : void 0,
     children: a

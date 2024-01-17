@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   useGuildEligibleForMediaChannels: function() {
-    return l
+    return a
   },
   useEligibleForGuildMediaChannelPostPreviewEmbed: function() {
     return r
   }
 });
-var a = n("862205");
-let s = (0, a.createExperiment)({
+var s = n("862205");
+let l = (0, s.createExperiment)({
   kind: "guild",
   id: "2023-03_guild_media_channel",
   label: "Media Channel",
@@ -24,11 +24,11 @@ let s = (0, a.createExperiment)({
   }]
 });
 
-function l(e) {
+function a(e) {
   var t;
   let {
     enabled: n
-  } = s.useExperiment({
+  } = l.useExperiment({
     guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "",
     location: "96e84c_1"
   }, {
@@ -36,7 +36,7 @@ function l(e) {
   });
   return (null == e ? void 0 : e.id) != null && n
 }
-let i = (0, a.createExperiment)({
+let i = (0, s.createExperiment)({
   kind: "user",
   id: "2023-04_guild_media_channel_post_preview_embed_users",
   label: "Guild Role Subscription Users",

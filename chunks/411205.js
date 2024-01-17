@@ -7,9 +7,9 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var n = s("446674"),
-  r = s("77078"),
-  l = s("915639"),
-  i = s("521012"),
+  l = s("77078"),
+  i = s("915639"),
+  r = s("521012"),
   u = s("909469"),
   o = s("485138"),
   d = s("585624"),
@@ -18,9 +18,9 @@ var n = s("446674"),
   E = function(e) {
     let {
       localizedPricingPromo: t
-    } = e, s = t.countryCode, E = (0, n.useStateFromStores)([l.default], () => l.default.locale);
+    } = e, s = t.countryCode, E = (0, n.useStateFromStores)([i.default], () => i.default.locale);
     (0, o.useTrackLocalizedPricingPromoImpression)(c.AnalyticsSections.SETTINGS_PREMIUM_BANNER, s);
-    let I = (0, n.useStateFromStores)([i.default], () => i.default.getPremiumTypeSubscription()),
+    let I = (0, n.useStateFromStores)([r.default], () => r.default.getPremiumTypeSubscription()),
       {
         localizedPricingBannerBody: T
       } = (0, u.getLocalizedPricingBannerStrings)({
@@ -36,7 +36,7 @@ var n = s("446674"),
         countryCode: s
       }), (0, a.jsx)("div", {
         className: _.bannerBodyContainer,
-        children: (0, a.jsx)(r.Text, {
+        children: (0, a.jsx)(l.Text, {
           color: "none",
           variant: "text-md/normal",
           className: _.bannerBody,

@@ -14,8 +14,8 @@ var s = n("77078"),
   u = n("235660"),
   d = n("808422"),
   c = n("49111");
-let E = "STAGE_INVITED_TO_SPEAK_MODAL";
-class f extends l.default {
+let f = "STAGE_INVITED_TO_SPEAK_MODAL";
+class E extends l.default {
   _initialize() {
     i.default.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
   }
@@ -27,19 +27,19 @@ class f extends l.default {
       var t;
       let {
         voiceStates: i
-      } = e, l = r.default.getId(), f = null === (t = u.default.getSession()) || void 0 === t ? void 0 : t.sessionId, _ = i.find(e => e.userId === l && e.sessionId === f);
+      } = e, l = r.default.getId(), E = null === (t = u.default.getSession()) || void 0 === t ? void 0 : t.sessionId, _ = i.find(e => e.userId === l && e.sessionId === E);
       if (null == _) return;
       let h = _.channelId;
       if (null == h) {
-        (0, s.hasModalOpen)(E) && (0, s.closeModal)(E);
+        (0, s.hasModalOpen)(f) && (0, s.closeModal)(f);
         return
       }
       let C = o.default.getChannel(h),
-        T = null == C ? void 0 : C.isGuildStageVoice();
-      if (!T) return;
-      let I = (0, d.getAudienceRequestToSpeakState)(_) === d.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
-      if (null != C && I) {
-        if ((0, s.hasModalOpen)(E)) return;
+        I = null == C ? void 0 : C.isGuildStageVoice();
+      if (!I) return;
+      let T = (0, d.getAudienceRequestToSpeakState)(_) === d.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+      if (null != C && T) {
+        if ((0, s.hasModalOpen)(f)) return;
         (0, s.openModalLazy)(async () => {
           let {
             default: e
@@ -49,11 +49,11 @@ class f extends l.default {
             channel: C
           })
         }, {
-          modalKey: E,
+          modalKey: f,
           onCloseRequest: c.NOOP_NULL
         })
       }
     }
   }
 }
-var _ = new f
+var _ = new E

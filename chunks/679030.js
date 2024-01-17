@@ -18,8 +18,8 @@ var s, a, l = n("37983"),
   p = n("970366"),
   h = n("271938"),
   N = n("476108"),
-  m = n("55411"),
-  T = n("686470"),
+  T = n("55411"),
+  m = n("686470"),
   g = n("552712"),
   A = n("124969"),
   S = n("659632"),
@@ -272,19 +272,19 @@ class P extends i.PureComponent {
     }
   }
 }
-var j = o.default.connectStores([m.default, T.default, h.default, g.default, N.default, _.default], e => {
+var j = o.default.connectStores([T.default, m.default, h.default, g.default, N.default, _.default], e => {
   let t = e.match.params.giftCode,
-    n = m.default.get(t),
+    n = T.default.get(t),
     s = null != n ? g.default.get(n.skuId) : null;
   return {
     giftCode: n,
     sku: s,
-    libraryApplication: null != s && (null == n ? void 0 : n.entitlementBranches) != null ? S.firstLibraryApplicationForGiftCode(n.entitlementBranches, s, T.default) : null,
+    libraryApplication: null != s && (null == n ? void 0 : n.entitlementBranches) != null ? S.firstLibraryApplicationForGiftCode(n.entitlementBranches, s, m.default) : null,
     authenticated: h.default.isAuthenticated(),
     defaultRoute: N.default.defaultRoute,
-    isResolved: m.default.getIsResolved(t),
-    isAccepting: m.default.getIsAccepting(t),
-    libraryApplicationsFetched: T.default.fetched,
+    isResolved: T.default.getIsResolved(t),
+    isAccepting: T.default.getIsAccepting(t),
+    libraryApplicationsFetched: m.default.fetched,
     nativeAppState: _.default.getState(t)
   }
 })(P)

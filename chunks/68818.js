@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return A
   }
 });
 var a = n("37983"),
@@ -13,39 +13,39 @@ var a = n("37983"),
   u = n("446674"),
   d = n("77078"),
   c = n("54239"),
-  E = n("389434"),
-  f = n("521128"),
+  f = n("389434"),
+  E = n("521128"),
   _ = n("845579"),
   h = n("538137"),
   C = n("956089"),
-  T = n("49111"),
-  I = n("853994"),
+  I = n("49111"),
+  T = n("853994"),
   S = n("782340"),
-  N = n("724708"),
-  A = n("926622"),
-  p = () => {
+  m = n("724708"),
+  p = n("926622"),
+  A = () => {
     let e = _.FamilyCenterEnabled.useSetting(),
       {
         categories: t,
         initialized: n
-      } = (0, u.useStateFromStoresObject)([f.default], () => f.default.getEmailSettings());
+      } = (0, u.useStateFromStoresObject)([E.default], () => E.default.getEmailSettings());
     return s.useEffect(() => {
-      null == n && (0, E.fetchEmailSettings)()
+      null == n && (0, f.fetchEmailSettings)()
     }, [n]), (0, a.jsxs)("div", {
-      className: N.container,
+      className: m.container,
       children: [(0, a.jsx)(d.Text, {
         variant: "eyebrow",
         color: "text-muted",
         children: S.default.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
       }), (0, a.jsx)(d.FormSwitch, {
-        className: l(A.marginTop8, A.marginBottom20),
+        className: l(p.marginTop8, p.marginBottom20),
         value: e,
         note: S.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
         hideBorder: !0,
         onChange: _.FamilyCenterEnabled.updateSetting,
         children: S.default.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH
       }), e ? (0, a.jsx)(d.Card, {
-        className: N.enableCard,
+        className: m.enableCard,
         type: d.Card.Types.CUSTOM,
         outline: !0,
         children: (0, a.jsxs)(o.default, {
@@ -60,7 +60,7 @@ var a = n("37983"),
             children: (0, a.jsx)(r.Link, {
               onClick: c.popLayer,
               to: {
-                pathname: T.Routes.FAMILY_CENTER,
+                pathname: I.Routes.FAMILY_CENTER,
                 state: {
                   scrollRestoration: !1
                 }
@@ -69,17 +69,17 @@ var a = n("37983"),
             })
           }), (0, a.jsx)(C.IconBadge, {
             icon: h.default,
-            className: N.arrow,
+            className: m.arrow,
             disableColor: !0
           })]
         })
       }) : null, (0, a.jsx)(d.FormSwitch, {
-        className: l(A.marginTop20, A.marginBottom20),
-        value: !!t[I.EmailCategories.FAMILY_CENTER_DIGEST],
+        className: l(p.marginTop20, p.marginBottom20),
+        value: !!t[T.EmailCategories.FAMILY_CENTER_DIGEST],
         note: S.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
         hideBorder: !0,
         onChange: function(e) {
-          (0, E.updateEmailSetting)(I.EmailCategories.FAMILY_CENTER_DIGEST, e)
+          (0, f.updateEmailSetting)(T.EmailCategories.FAMILY_CENTER_DIGEST, e)
         },
         children: S.default.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH
       })]

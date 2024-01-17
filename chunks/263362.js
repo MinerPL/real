@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   RecentsPopout: function() {
-    return A
+    return T
   }
 }), n("222007");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("397613"),
   i = n("446674"),
   r = n("151426"),
@@ -14,30 +14,30 @@ var l = n("37983"),
   d = n("979268"),
   c = n("913796"),
   f = n("872173"),
-  E = n("374363"),
-  h = n("659500"),
-  _ = n("981024"),
-  S = n("519540"),
-  T = n("80649"),
-  N = n("385730"),
-  p = n("788072"),
-  I = n("49111"),
-  m = n("782340");
+  h = n("374363"),
+  E = n("659500"),
+  m = n("981024"),
+  p = n("519540"),
+  g = n("80649"),
+  S = n("385730"),
+  N = n("788072"),
+  _ = n("49111"),
+  I = n("782340");
 
-function A(e) {
+function T(e) {
   let {
     onOpen: t,
     onClose: n,
-    children: A,
-    badgeState: g,
-    popoutPosition: C,
-    popoutAlign: R
-  } = e, [M, O] = a.useState(!1), [L, v] = function() {
-    let e = (0, i.useStateFromStores)([E.default], () => {
+    children: T,
+    badgeState: C,
+    popoutPosition: A,
+    popoutAlign: x
+  } = e, [v, M] = l.useState(!1), [R, L] = function() {
+    let e = (0, i.useStateFromStores)([h.default], () => {
         var e, t;
-        return null !== (t = null === (e = E.default.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : r.InboxTab.UNREADS
+        return null !== (t = null === (e = h.default.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : r.InboxTab.UNREADS
       }),
-      t = a.useCallback(e => {
+      t = l.useCallback(e => {
         f.PreloadedUserSettingsActionCreators.updateAsync("inbox", t => {
           if (t.currentTab === e) return !1;
           t.currentTab = e
@@ -45,88 +45,88 @@ function A(e) {
       }, []);
     return [e, t]
   }(), {
-    showTutorial: D,
-    setSeenTutorial: y
+    showTutorial: O,
+    setSeenTutorial: b
   } = function(e) {
-    let t = (0, i.useStateFromStores)([E.default], () => {
+    let t = (0, i.useStateFromStores)([h.default], () => {
         var e, t;
-        return null !== (t = null === (e = E.default.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t
+        return null !== (t = null === (e = h.default.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t
       }),
-      n = a.useCallback(() => {
+      n = l.useCallback(() => {
         f.PreloadedUserSettingsActionCreators.updateAsync("inbox", e => {
           e.viewedTutorial = !0
         }, f.UserSettingsDelay.INFREQUENT_USER_ACTION)
       }, []),
-      l = !t && e === r.InboxTab.UNREADS;
+      a = !t && e === r.InboxTab.UNREADS;
     return {
-      showTutorial: l,
+      showTutorial: a,
       setSeenTutorial: n
     }
-  }(L), x = a.useCallback(() => {
-    O(!1), M && (null == n || n())
-  }, [n, M]), P = a.useCallback(() => {
-    O(!M), M ? null == n || n() : null == t || t()
-  }, [n, t, M]), U = a.useCallback(() => {
-    P(), v(r.InboxTab.UNREADS)
-  }, [v, P]);
-  a.useEffect(() => (h.ComponentDispatch.subscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, U), () => void h.ComponentDispatch.unsubscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, U)), [U]);
+  }(R), y = l.useCallback(() => {
+    M(!1), v && (null == n || n())
+  }, [n, v]), j = l.useCallback(() => {
+    M(!v), v ? null == n || n() : null == t || t()
+  }, [n, t, v]), F = l.useCallback(() => {
+    j(), L(r.InboxTab.UNREADS)
+  }, [L, j]);
+  l.useEffect(() => (E.ComponentDispatch.subscribe(_.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, F), () => void E.ComponentDispatch.unsubscribe(_.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, F)), [F]);
   let {
-    showReminders: b
+    showReminders: D
   } = d.default.useExperiment({
     location: "RecentsPopout"
   }, {
     autoTrackExposure: !1
-  }), F = (0, c.useInDesktopNotificationCenterExperiment)(), {
-    enabled: j
+  }), U = (0, c.useInDesktopNotificationCenterExperiment)(), {
+    enabled: k
   } = u.default.useExperiment({
     location: "RecentsPopout"
   });
-  a.useEffect(() => {
-    !b && L === r.InboxTab.TODOS && v(r.InboxTab.MENTIONS)
+  l.useEffect(() => {
+    !D && R === r.InboxTab.TODOS && L(r.InboxTab.MENTIONS)
   });
-  let G = a.useCallback(e => {
-    !e.shiftKey && x()
-  }, [x]);
-  return (0, l.jsx)(o.Popout, {
+  let P = l.useCallback(e => {
+    !e.shiftKey && y()
+  }, [y]);
+  return (0, a.jsx)(o.Popout, {
     animation: o.Popout.Animation.NONE,
-    position: C,
-    align: R,
+    position: A,
+    align: x,
     autoInvert: !1,
-    shouldShow: M,
-    onRequestClose: x,
+    shouldShow: v,
+    onRequestClose: y,
     renderPopout: function() {
-      return (0, l.jsx)(o.Dialog, {
-        "aria-label": m.default.Messages.INBOX,
-        children: L === r.InboxTab.FOR_YOU && F ? (0, l.jsx)(_.default, {
-          setTab: v,
-          badgeState: g,
-          closePopout: x
-        }) : L === r.InboxTab.MENTIONS ? (0, l.jsx)(T.default, {
-          setTab: v,
-          onJump: G,
-          badgeState: g,
-          closePopout: x
-        }) : j && L === r.InboxTab.GAME_INVITES ? (0, l.jsx)(p.default, {
-          setTab: v,
-          badgeState: g,
-          closePopout: x
-        }) : b && L === r.InboxTab.TODOS ? (0, l.jsx)(S.default, {
-          setTab: v,
-          onJump: G,
-          closePopout: x
-        }) : (0, l.jsx)(s.ErrorBoundary, {
-          fallback: (0, l.jsx)(N.UnreadsCrashed, {
-            setTab: v,
-            closePopout: x,
-            badgeState: g
+      return (0, a.jsx)(o.Dialog, {
+        "aria-label": I.default.Messages.INBOX,
+        children: R === r.InboxTab.FOR_YOU && U ? (0, a.jsx)(m.default, {
+          setTab: L,
+          badgeState: C,
+          closePopout: y
+        }) : R === r.InboxTab.MENTIONS ? (0, a.jsx)(g.default, {
+          setTab: L,
+          onJump: P,
+          badgeState: C,
+          closePopout: y
+        }) : k && R === r.InboxTab.GAME_INVITES ? (0, a.jsx)(N.default, {
+          setTab: L,
+          badgeState: C,
+          closePopout: y
+        }) : D && R === r.InboxTab.TODOS ? (0, a.jsx)(p.default, {
+          setTab: L,
+          onJump: P,
+          closePopout: y
+        }) : (0, a.jsx)(s.ErrorBoundary, {
+          fallback: (0, a.jsx)(S.UnreadsCrashed, {
+            setTab: L,
+            closePopout: y,
+            badgeState: C
           }),
-          children: (0, l.jsx)(N.default, {
-            setTab: v,
-            onJump: G,
-            showTutorial: D,
-            setSeenTutorial: y,
-            closePopout: x,
-            badgeState: g
+          children: (0, a.jsx)(S.default, {
+            setTab: L,
+            onJump: P,
+            showTutorial: O,
+            setSeenTutorial: b,
+            closePopout: y,
+            badgeState: C
           })
         })
       })
@@ -136,7 +136,7 @@ function A(e) {
       let {
         isShown: n
       } = t;
-      return A(P, n, e)
+      return T(j, n, e)
     }
   })
 }

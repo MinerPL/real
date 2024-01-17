@@ -9,8 +9,8 @@ l("884691");
 var n = l("414456"),
   s = l.n(n),
   r = l("77078"),
-  i = l("355313"),
-  o = l("837899"),
+  o = l("355313"),
+  i = l("837899"),
   u = l("425190"),
   d = l("782340"),
   c = l("960320");
@@ -27,8 +27,8 @@ function f(e) {
     guilds: g,
     query: E,
     maxCount: T,
-    onQueryChange: _,
-    onClickRow: R,
+    onQueryChange: R,
+    onClickRow: _,
     onRemoveTag: p
   } = e;
   return (0, a.jsx)(r.Collapsible, {
@@ -38,12 +38,12 @@ function f(e) {
       className: s(c.collapsibleContent, {
         [c.visible]: S
       }),
-      children: (0, a.jsx)(i.default, {
+      children: (0, a.jsx)(o.default, {
         listClassName: c.list,
         pendingAdditions: t,
         query: E,
-        onQueryChange: _,
-        onClickRow: R,
+        onQueryChange: R,
+        onClickRow: _,
         onRemovePendingAddition: p,
         users: A,
         guilds: g,
@@ -69,7 +69,7 @@ function f(e) {
         children: [(0, a.jsx)(r.Heading, {
           variant: "text-sm/normal",
           children: l
-        }), S ? (0, a.jsx)(u.default, {}) : (0, a.jsx)(o.default, {})]
+        }), S ? (0, a.jsx)(u.default, {}) : (0, a.jsx)(i.default, {})]
       })
     }
   })

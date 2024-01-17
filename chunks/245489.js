@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return g
   }
 }), n("222007");
 var a = n("37983"),
@@ -13,33 +13,33 @@ var a = n("37983"),
   u = n("77078"),
   d = n("736964"),
   c = n("476765"),
-  E = n("284609"),
-  f = n("49111"),
+  f = n("284609"),
+  E = n("49111"),
   _ = n("894282"),
   h = n("782340"),
   C = n("636478"),
-  T = n("926622");
-let I = {
+  I = n("926622");
+let T = {
     canSend: !1,
     hint: null,
     success: null,
     error: null
   },
   S = (0, c.uid)(),
-  N = "".concat(S, "-decription"),
-  A = "".concat(S, "-error");
+  m = "".concat(S, "-decription"),
+  p = "".concat(S, "-error");
 
-function p(e, t) {
+function A(e, t) {
   switch (t.type) {
     case "RESET":
-      return I;
+      return T;
     case "SUCCESS":
       return {
-        ...I, success: t.text
+        ...T, success: t.text
       };
     case "HINT":
       return {
-        ...I, canSend: !0, hint: t.text
+        ...T, canSend: !0, hint: t.text
       };
     case "ERROR":
       return {
@@ -48,24 +48,24 @@ function p(e, t) {
   }
 }
 
-function m() {
+function g() {
   let e = s.createRef(),
     t = s.createRef(),
-    [n, i] = s.useReducer(p, I),
+    [n, i] = s.useReducer(A, T),
     {
       canSend: r,
       hint: c,
-      success: m,
-      error: g
+      success: g,
+      error: N
     } = n;
   return s.useEffect(() => {
-    null != m && (o(null != e.current, "Input is submitting when not mounted"), e.current.value = "", e.current.focus())
-  }, [m, e]), (0, a.jsxs)("form", {
+    null != g && (o(null != e.current, "Input is submitting when not mounted"), e.current.value = "", e.current.focus())
+  }, [g, e]), (0, a.jsxs)("form", {
     onSubmit: t => {
       t.preventDefault(), o(null != e.current, "Input is submitted when not mounted");
       let n = e.current.value.trim();
       !n.includes("#") && n.startsWith("@") && (n = n.substring(1));
-      let a = (0, E.validateDiscordTag)(n);
+      let a = (0, f.validateDiscordTag)(n);
       if (null != a) {
         i({
           type: "ERROR",
@@ -87,13 +87,13 @@ function m() {
         var t;
         return i({
           type: "ERROR",
-          text: (0, E.humanizeAbortCode)(null === (t = e.body) || void 0 === t ? void 0 : t.code, n)
+          text: (0, f.humanizeAbortCode)(null === (t = e.body) || void 0 === t ? void 0 : t.code, n)
         })
       })
     },
     autoComplete: "off",
     children: [(0, a.jsx)(u.FormText, {
-      id: N,
+      id: m,
       type: u.FormText.Types.DESCRIPTION,
       children: h.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION
     }), (0, a.jsx)(u.FocusRing, {
@@ -103,8 +103,8 @@ function m() {
       children: (0, a.jsxs)("div", {
         ref: t,
         className: l(C.addFriendInputWrapper, {
-          [C.success]: m,
-          [C.error]: g
+          [C.success]: g,
+          [C.error]: N
         }),
         children: [(0, a.jsx)(u.TextInput, {
           id: S,
@@ -131,7 +131,7 @@ function m() {
             }
             let t = "",
               [, n] = e.split("#");
-            null != n && (t = e + f.PLACEHOLDER_TAG.slice(null != n ? n.length + 1 : 0)), i({
+            null != n && (t = e + E.PLACEHOLDER_TAG.slice(null != n ? n.length + 1 : 0)), i({
               type: "HINT",
               text: t
             })
@@ -143,8 +143,8 @@ function m() {
           "data-lpignore": !0,
           placeholder: h.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
           "aria-label": h.default.Messages.POMELO_ADD_FRIEND_DESCRIPTION,
-          "aria-invalid": null != g || void 0,
-          "aria-describedby": null != g ? A : N
+          "aria-invalid": null != N || void 0,
+          "aria-describedby": null != N ? p : m
         }), null != c && (0, a.jsx)("div", {
           className: C.addFriendHint,
           "aria-hidden": !0,
@@ -156,17 +156,17 @@ function m() {
           children: h.default.Messages.ADD_FRIEND_BUTTON
         })]
       })
-    }), null != g && (0, a.jsx)(u.FormText, {
+    }), null != N && (0, a.jsx)(u.FormText, {
       role: "alert",
-      id: A,
+      id: p,
       type: u.FormText.Types.ERROR,
-      className: T.marginTop8,
-      children: g
-    }), null != m && (0, a.jsx)(u.FormText, {
+      className: I.marginTop8,
+      children: N
+    }), null != g && (0, a.jsx)(u.FormText, {
       role: "status",
       type: u.FormText.Types.SUCCESS,
-      className: T.marginTop8,
-      children: m
+      className: I.marginTop8,
+      children: g
     })]
   })
 }

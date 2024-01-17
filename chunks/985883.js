@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var a = n("884691"),
-  s = n("841098"),
-  l = n("845579"),
+var s = n("884691"),
+  l = n("841098"),
+  a = n("845579"),
   i = n("209346"),
   r = n("641126"),
   o = n("849197"),
@@ -17,15 +17,15 @@ function c(e, t) {
   var n;
   let c = (0, o.useInteractivePollMessage)(e),
     f = (0, r.useChannelPollInteractions)(c.getChannelId()),
-    m = f[c.id],
-    E = (0, d.default)(null === (n = c.poll) || void 0 === n ? void 0 : n.expiry),
-    _ = l.AnimateEmoji.useSetting(),
-    h = (0, i.useUserEligibleForPolls)("poll_message_data"),
-    p = (0, s.default)(),
-    I = null != t ? t : p;
-  return a.useMemo(() => (0, u.default)(c, h, m, {
-    animateEmoji: _,
-    theme: I,
-    formattedExpirationLabel: E
-  }), [_, c, m, E, I, h])
+    E = f[c.id],
+    _ = (0, d.default)(null === (n = c.poll) || void 0 === n ? void 0 : n.expiry),
+    T = a.AnimateEmoji.useSetting(),
+    I = (0, i.useUserEligibleForPolls)("poll_message_data"),
+    m = (0, l.default)(),
+    N = null != t ? t : m;
+  return s.useMemo(() => (0, u.default)(c, I, E, {
+    animateEmoji: T,
+    theme: N,
+    formattedExpirationLabel: _
+  }), [T, c, E, _, N, I])
 }

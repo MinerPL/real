@@ -10,22 +10,22 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var l = n("759843"),
-  a = n("627929"),
-  s = n("913144"),
+var s = n("759843"),
+  l = n("627929"),
+  a = n("913144"),
   i = n("599110"),
   r = n("840707"),
   o = n("49111");
 
 function u(e) {
-  s.default.dispatch({
+  a.default.dispatch({
     type: "SURVEY_OVERRIDE",
     id: e
   })
 }
 
 function d(e, t) {
-  s.default.dispatch({
+  a.default.dispatch({
     type: "SURVEY_HIDE",
     key: e
   }), t ? i.default.track(o.AnalyticEvents.APP_NOTICE_CLOSED, {
@@ -43,23 +43,23 @@ function c(e) {
     url: o.Endpoints.USER_SURVEY,
     query: t,
     trackedActionData: {
-      event: l.NetworkActionNames.USER_SURVEY_FETCH,
+      event: s.NetworkActionNames.USER_SURVEY_FETCH,
       properties: e => {
         var t;
         let n = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.survey;
-        return (0, a.exact)({
+        return (0, l.exact)({
           key: null == n ? void 0 : n.key
         })
       }
     }
   }).then(e => {
     var t;
-    s.default.dispatch({
+    a.default.dispatch({
       type: "SURVEY_FETCHED",
       survey: null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.survey
     })
   }, () => {
-    s.default.dispatch({
+    a.default.dispatch({
       type: "SURVEY_FETCHED",
       survey: null
     })

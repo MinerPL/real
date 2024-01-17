@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MAX_GUILDS_PER_PAGE: function() {
-    return A
+    return p
   },
   default: function() {
     return R
@@ -16,39 +16,39 @@ var a = n("37983"),
   u = n("77078"),
   d = n("340626"),
   c = n("393414"),
-  E = n("926787"),
-  f = n("246053"),
+  f = n("926787"),
+  E = n("246053"),
   _ = n("794818"),
   h = n("961098"),
   C = n("338638"),
-  T = n("719369"),
-  I = n("447621"),
+  I = n("719369"),
+  T = n("447621"),
   S = n("782340"),
-  N = n("492898");
-let A = 12,
-  p = () => {
+  m = n("492898");
+let p = 12,
+  A = () => {
     let e = (0, c.getHistory)(),
       t = e.location.search,
       n = null != t && t.length > 0 && t.startsWith("?");
     return n ? r.parse(t) : {}
   },
-  m = e => {
+  g = e => {
     let {
       categoryId: t,
       categoryName: n,
       onClick: s
-    } = e, i = t === I.DISCOVERY_ALL_CATEGORIES_ID, l = i ? S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
+    } = e, i = t === T.DISCOVERY_ALL_CATEGORIES_ID, l = i ? S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
       categoryName: n
     }), r = i ? S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({
       onClick: s
     });
     return (0, a.jsxs)("div", {
-      className: N.emptyContainer,
+      className: m.emptyContainer,
       children: [(0, a.jsx)("div", {
-        className: N.emptyImage
+        className: m.emptyImage
       }), (0, a.jsx)(u.Heading, {
         variant: "heading-xl/semibold",
-        className: N.emptyHeader,
+        className: m.emptyHeader,
         children: l
       }), (0, a.jsx)(u.Text, {
         variant: "text-md/normal",
@@ -57,14 +57,14 @@ let A = 12,
       })]
     })
   },
-  g = () => (0, a.jsxs)("div", {
-    className: N.emptyContainer,
+  N = () => (0, a.jsxs)("div", {
+    className: m.emptyContainer,
     children: [(0, a.jsx)("div", {
-      className: N.errorImage
+      className: m.errorImage
     }), (0, a.jsx)(u.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: N.emptyHeader,
+      className: m.emptyHeader,
       children: S.default.Messages.GUILD_DISCOVERY_SEARCH_ERROR
     })]
   });
@@ -88,12 +88,12 @@ var R = e => {
   } = e, U = l.uniqueId("GuildDiscovery"), {
     guilds: G,
     loading: j,
-    total: k
-  } = n, [w, F] = s.useState(!1), {
-    tag: B
-  } = p(), [H, V] = s.useState(B), Y = (0, o.useStateFromStores)([E.default], () => E.default.hasSearchError()), W = (e, t, n) => {
+    total: w
+  } = n, [k, F] = s.useState(!1), {
+    tag: H
+  } = A(), [B, V] = s.useState(H), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, n) => {
     d.doAlgoliaSearch(i, {
-      categoryId: n ? I.DISCOVERY_ALL_CATEGORIES_ID : M,
+      categoryId: n ? T.DISCOVERY_ALL_CATEGORIES_ID : M,
       preferredLocale: r.code,
       offset: e,
       length: t,
@@ -110,33 +110,33 @@ var R = e => {
     let {
       offset: e,
       tag: t
-    } = p(), n = null != e ? Math.floor(parseInt(e, 10) / A) + 1 : 1;
+    } = A(), n = null != e ? Math.floor(parseInt(e, 10) / p) + 1 : 1;
     V(!!t), 1 === n && F(!0)
   }, [i]);
-  let z = M === I.DISCOVERY_ALL_CATEGORIES_ID ? S.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
-    count: null != k ? k.toLocaleString() : "0",
+  let z = M === T.DISCOVERY_ALL_CATEGORIES_ID ? S.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
+    count: null != w ? w.toLocaleString() : "0",
     query: i
   }) : S.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_CATEGORY_HEADER.format({
-    count: null != k ? k.toLocaleString() : "0",
+    count: null != w ? w.toLocaleString() : "0",
     query: i,
     category: P
   });
   return (0, a.jsxs)("div", {
-    className: N.container,
+    className: m.container,
     children: [(0, a.jsxs)("div", {
-      className: N.searchHeader,
+      className: m.searchHeader,
       children: [(0, a.jsx)(u.Clickable, {
         onClick: () => {
           d.clearSearch(), _.trackSearchClosed(t)
         },
-        className: N.arrow,
+        className: m.arrow,
         "aria-label": S.default.Messages.BACK,
-        children: (0, a.jsx)(f.default, {
-          direction: f.default.Directions.LEFT
+        children: (0, a.jsx)(E.default, {
+          direction: E.default.Directions.LEFT
         })
       }), (0, a.jsx)(u.Heading, {
         variant: "heading-xl/semibold",
-        className: N.header,
+        className: m.header,
         children: z
       })]
     }), (0, a.jsx)(C.default, {
@@ -149,22 +149,22 @@ var R = e => {
       availableLanguages: c,
       isSearchPage: !0,
       currentCategoryId: M,
-      isTagSearch: H
-    }), Y ? (0, a.jsx)(g, {}) : k <= 0 ? (0, a.jsx)(m, {
+      isTagSearch: B
+    }), Y ? (0, a.jsx)(N, {}) : w <= 0 ? (0, a.jsx)(g, {
       categoryId: M,
       categoryName: P,
       onClick: () => {
-        d.selectCategory(I.DISCOVERY_ALL_CATEGORIES_ID), W(0, A, !0)
+        d.selectCategory(T.DISCOVERY_ALL_CATEGORIES_ID), W(0, p, !0)
       }
     }) : (0, a.jsx)("div", {
-      className: N.results,
+      className: m.results,
       children: (0, a.jsx)(h.default, {
-        pageSize: A,
-        totalCount: k,
-        resetCurrentPage: w,
+        pageSize: p,
+        totalCount: w,
+        resetCurrentPage: k,
         onPageChange: e => {
-          let t = (e - 1) * A;
-          W(t, A), K()
+          let t = (e - 1) * p;
+          W(t, p), K()
         },
         children: e => {
           let {
@@ -172,10 +172,10 @@ var R = e => {
           } = e;
           return (0, a.jsxs)("section", {
             "aria-labelledby": U,
-            children: [(0, a.jsx)(T.default, {
+            children: [(0, a.jsx)(I.default, {
               guilds: G,
               loading: j,
-              loadingPlaceholderCount: A,
+              loadingPlaceholderCount: p,
               onViewGuild: D,
               loadingGuildId: L,
               theme: v,

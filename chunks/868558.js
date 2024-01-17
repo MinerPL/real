@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 }), n("222007");
 var a = n("862337"),
@@ -13,12 +13,12 @@ var a = n("862337"),
   u = n("305961"),
   d = n("603699"),
   c = n("945956"),
-  E = n("718517"),
-  f = n("773336"),
+  f = n("718517"),
+  E = n("773336"),
   _ = n("49111");
 let h = new a.Timeout,
   C = new a.Timeout;
-class T extends l.default {
+class I extends l.default {
   _initialize() {
     s.default.subscribe("IDLE", this.handleIdleUpdate)
   }
@@ -27,7 +27,7 @@ class T extends l.default {
   }
   handleIdleUpdate() {
     let e = d.default.getIdleSince();
-    if (!f.isPlatformEmbedded) return;
+    if (!E.isPlatformEmbedded) return;
     h.stop(), C.stop();
     let t = r.default.getAllActiveStreams();
     for (let e of t)
@@ -41,9 +41,9 @@ class T extends l.default {
     let a = u.default.getGuild(c.default.getGuildId());
     if (null == a || null == a.afkChannelId || a.afkChannelId === n || null == a.afkTimeout) return;
     let s = o.default.getChannel(n);
-    if (null != s) !s.isGuildStageVoice() && h.start(e + a.afkTimeout * E.default.Millis.SECOND - Date.now(), () => {
+    if (null != s) !s.isGuildStageVoice() && h.start(e + a.afkTimeout * f.default.Millis.SECOND - Date.now(), () => {
       null != (a = u.default.getGuild(c.default.getGuildId())) && null != a.afkChannelId && i.default.selectVoiceChannel(a.afkChannelId)
     })
   }
 }
-var I = new T
+var T = new I

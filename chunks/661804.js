@@ -12,19 +12,19 @@ var a, s = n("37983"),
   u = n("913144"),
   d = n("939488"),
   c = n("157552"),
-  E = n("444949"),
-  f = n("901582"),
+  f = n("444949"),
+  E = n("901582"),
   _ = n("778043"),
   h = n("875358"),
   C = n("737295"),
-  T = n("153034"),
-  I = n("129215"),
+  I = n("153034"),
+  T = n("129215"),
   S = n("49111"),
-  N = n("492249"),
-  A = n("677654");
+  m = n("492249"),
+  p = n("677654");
 a = class extends i.PureComponent {
   componentDidMount() {
-    d.setHomeLink(S.Routes.APPLICATION_LIBRARY), (0, _.deepLinkRouteIfLanded)(N.RPCDeepLinks.LIBRARY), u.default.wait(() => (0, c.fetchBranches)()), (0, E.fetchActivityStatistics)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding)
+    d.setHomeLink(S.Routes.APPLICATION_LIBRARY), (0, _.deepLinkRouteIfLanded)(m.RPCDeepLinks.LIBRARY), u.default.wait(() => (0, c.fetchBranches)()), (0, f.fetchActivityStatistics)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding)
   }
   renderToolbar() {
     return (0, s.jsx)(h.default, {})
@@ -33,9 +33,9 @@ a = class extends i.PureComponent {
     let {
       includeUpdatesInScroller: e
     } = this.state, t = (0, s.jsx)("div", {
-      children: (0, s.jsx)(f.default, {
+      children: (0, s.jsx)(E.default, {
         section: S.AnalyticsSections.LIBRARY_INSTALL_MODULE,
-        children: (0, s.jsx)(I.default, {
+        children: (0, s.jsx)(T.default, {
           onHeightTallerThanHalfViewportChange: this.handleHeightTallerThanHalfViewportChange
         })
       })
@@ -45,11 +45,11 @@ a = class extends i.PureComponent {
         currentRoute: S.Routes.APPLICATION_LIBRARY,
         renderToolbar: this.renderToolbar
       }), e ? null : t, (0, s.jsxs)(o.AdvancedScrollerAuto, {
-        className: r(A.container, A.scroller),
+        className: r(p.container, p.scroller),
         ref: this._scrollerRef,
-        children: [e ? t : null, (0, s.jsx)(f.default, {
+        children: [e ? t : null, (0, s.jsx)(E.default, {
           section: S.AnalyticsSections.LIBRARY_APPLICATION_LIST,
-          children: (0, s.jsx)(T.default, {
+          children: (0, s.jsx)(I.default, {
             stickyHeader: !e,
             scrollToRow: this.scrollToRow
           })

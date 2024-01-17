@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return C
   },
   DiscoveryTags: function() {
-    return T
+    return I
   }
 }), n("222007");
 var a = n("37983"),
@@ -16,8 +16,8 @@ var a = n("37983"),
   u = n("599110"),
   d = n("49111"),
   c = n("259160");
-let E = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid", "harem", "playgirl", "shitcoin", "shitpost", "porno", "nudes", "sexy", "horny", "fart", "tits", "balls", "cum"],
-  f = e => {
+let f = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid", "harem", "playgirl", "shitcoin", "shitpost", "porno", "nudes", "sexy", "horny", "fart", "tits", "balls", "cum"],
+  E = e => {
     let {
       text: t,
       onClick: n,
@@ -56,7 +56,7 @@ let E = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
     }, [i, l]), (0, a.jsx)(r.Dialog, {
       className: c.overflowTagsPopout,
       children: (0, a.jsx)("ul", {
-        children: t.map(e => (0, a.jsx)(f, {
+        children: t.map(e => (0, a.jsx)(E, {
           onClick: () => n(e),
           className: c.tagAlt,
           text: e
@@ -76,7 +76,7 @@ let E = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       position: "right",
       align: "top",
       closeOnScroll: !0,
-      children: e => (0, a.jsx)(f, {
+      children: e => (0, a.jsx)(E, {
         className: t,
         ...e,
         text: "+".concat(n)
@@ -88,7 +88,7 @@ let E = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
     LIGHT: c.tagLight,
     ALT: c.tagAlt
   },
-  T = e => {
+  I = e => {
     let {
       tags: t,
       onTagClick: n,
@@ -98,36 +98,36 @@ let E = ["egirl", "egirls", "waifu", "dating", "nsfw", "sex", "playboy", "stupid
       guildId: d,
       section: _
     } = e, {
-      ref: T,
-      width: I
-    } = (0, o.default)(), [S, N] = s.useState(null), A = t.filter(e => !E.includes(e.toLowerCase()));
+      ref: I,
+      width: T
+    } = (0, o.default)(), [S, m] = s.useState(null), p = t.filter(e => !f.includes(e.toLowerCase()));
     return s.useLayoutEffect(() => {
-      if (null == T.current || null == I || 0 === I) return;
+      if (null == I.current || null == T || 0 === T) return;
       let e = 0,
         t = 0,
-        n = I - 40 - 4;
-      for (let a = 0; a < A.length; a++) {
-        let s = T.current.children[a],
+        n = T - 40 - 4;
+      for (let a = 0; a < p.length; a++) {
+        let s = I.current.children[a],
           i = s.clientWidth;
-        if (t += i + 4, a === A.length - 1 ? t > n + 40 : t > n) break;
+        if (t += i + 4, a === p.length - 1 ? t > n + 40 : t > n) break;
         e++
       }
-      N(t => e <= A.length ? e : t)
-    }, [I, T, A]), (0, a.jsxs)("ul", {
-      ref: T,
+      m(t => e <= p.length ? e : t)
+    }, [T, I, p]), (0, a.jsxs)("ul", {
+      ref: I,
       className: l(c.tagContainer, i, {
         [c.invisible]: null == S
       }),
-      children: [A.map((e, t) => (0, a.jsx)(f, {
+      children: [p.map((e, t) => (0, a.jsx)(E, {
         className: r,
         onClick: () => n(e),
         hide: null != S && t >= S,
         text: e
-      }, e)), !u && null != S && S < A.length && (0, a.jsx)(h, {
+      }, e)), !u && null != S && S < p.length && (0, a.jsx)(h, {
         className: r,
         onTagClick: n,
-        tags: A.slice(S),
-        count: A.length - S,
+        tags: p.slice(S),
+        count: p.length - S,
         guildId: d,
         section: _
       })]

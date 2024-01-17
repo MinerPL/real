@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 }), n("222007");
 var a = n("629109"),
@@ -18,7 +18,7 @@ function c(e) {
   if (null == t) throw new l.default(o.RPCErrors.INVALID_COMMAND, "No application.");
   return t
 }
-var E = {
+var f = {
   [u.RPCCommands.SET_VOICE_SETTINGS_2]: {
     scope: o.RPC_LOCAL_SCOPE,
     validation: e => (0, r.default)(e).required().keys({

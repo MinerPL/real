@@ -1,86 +1,86 @@
 "use strict";
-l.r(t), l.d(t, {
+t.r(e), t.d(e, {
   loadOnboardingPrompts: function() {
-    return A
+    return f
   },
   fetchOnboardingPrompts: function() {
-    return g
+    return N
   },
   maybeFetchOnboardingPrompts: function() {
-    return E
+    return g
   },
   startOnboarding: function() {
-    return T
+    return E
   }
-}), l("702976");
-var a = l("872717"),
-  n = l("913144"),
-  s = l("716241"),
-  r = l("271938"),
-  i = l("26989"),
-  o = l("305961"),
-  u = l("599110"),
-  d = l("568734"),
-  c = l("863636"),
-  f = l("653138"),
-  S = l("49111"),
-  h = l("657944");
+}), t("702976");
+var i = t("872717"),
+  r = t("913144"),
+  o = t("716241"),
+  l = t("271938"),
+  u = t("26989"),
+  d = t("305961"),
+  s = t("599110"),
+  a = t("568734"),
+  p = t("863636"),
+  O = t("653138"),
+  _ = t("49111"),
+  c = t("657944");
 
-function A(e) {
-  u.default.track(S.AnalyticEvents.GUILD_ONBOARDING_LOADED, {
-    ...(0, s.collectGuildAnalyticsMetadata)(e),
+function f(n) {
+  s.default.track(_.AnalyticEvents.GUILD_ONBOARDING_LOADED, {
+    ...(0, o.collectGuildAnalyticsMetadata)(n),
     has_new_prompts: !1,
     number_of_prompts: 0
   })
 }
 
-function g(e) {
-  return n.default.dispatch({
+function N(n) {
+  return r.default.dispatch({
     type: "GUILD_ONBOARDING_PROMPTS_FETCH_START",
-    guildId: e
-  }), a.default.get({
-    url: S.Endpoints.GUILD_ONBOARDING(e)
-  }).then(t => {
+    guildId: n
+  }), i.default.get({
+    url: _.Endpoints.GUILD_ONBOARDING(n)
+  }).then(e => {
     let {
-      body: l
-    } = t, a = (0, f.serverApiResponseToClientState)(l);
-    return n.default.dispatch({
+      body: t
+    } = e, i = (0, O.serverApiResponseToClientState)(t);
+    return r.default.dispatch({
       type: "GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS",
-      guildId: e,
-      ...a
-    }).then(() => a.prompts)
-  }, t => (n.default.dispatch({
+      guildId: n,
+      ...i
+    }).then(() => i.prompts)
+  }, e => (r.default.dispatch({
     type: "GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE",
-    guildId: e
-  }), t))
+    guildId: n
+  }), e))
 }
-async function E(e) {
-  var t, l;
-  let a = r.default.getId(),
-    n = (0, d.hasFlag)(null !== (l = null === (t = i.default.getMember(e, a)) || void 0 === t ? void 0 : t.flags) && void 0 !== l ? l : 0, h.GuildMemberFlags.COMPLETED_ONBOARDING),
-    s = o.default.getGuild(e);
-  if (null == s || !s.hasFeature(S.GuildFeatures.GUILD_ONBOARDING)) return Promise.resolve();
-  let u = c.default.shouldFetchPrompts(e),
-    f = c.default.getOnboardingPrompts(e);
-  if (!u && f.length > 0) return f.every(e => !e.inOnboarding) ? (_(e), Promise.resolve()) : (!n && T(e), Promise.resolve());
-  let A = await g(e);
-  return Array.isArray(A) && A.every(e => !e.inOnboarding) ? (_(e), Promise.resolve()) : (!n && T(e), A)
+async function g(n) {
+  var e, t;
+  let i = l.default.getId(),
+    r = (0, a.hasFlag)(null !== (t = null === (e = u.default.getMember(n, i)) || void 0 === e ? void 0 : e.flags) && void 0 !== t ? t : 0, c.GuildMemberFlags.COMPLETED_ONBOARDING),
+    o = d.default.getGuild(n);
+  if (null == o || !o.hasFeature(_.GuildFeatures.GUILD_ONBOARDING)) return Promise.resolve();
+  let s = p.default.shouldFetchPrompts(n),
+    O = p.default.getOnboardingPrompts(n);
+  if (!s && O.length > 0) return O.every(n => !n.inOnboarding) ? (P(n), Promise.resolve()) : (!r && E(n), Promise.resolve());
+  let f = await N(n);
+  return Array.isArray(f) && f.every(n => !n.inOnboarding) ? (P(n), Promise.resolve()) : (!r && E(n), f)
 }
 
-function T(e) {
-  n.default.dispatch({
+function E(n) {
+  r.default.dispatch({
     type: "GUILD_ONBOARDING_START",
-    guildId: e
+    guildId: n
   })
 }
 
-function _(e) {
-  u.default.track(S.AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, {
-    ...(0, s.collectGuildAnalyticsMetadata)(e),
+function P(n) {
+  s.default.track(_.AnalyticEvents.GUILD_ONBOARDING_STEP_VIEWED, {
+    ...(0, o.collectGuildAnalyticsMetadata)(n),
     step: -2,
     required: !0
-  }), u.default.track(S.AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, {
-    ...(0, s.collectGuildAnalyticsMetadata)(e),
+  }), s.default.track(_.AnalyticEvents.GUILD_ONBOARDING_STEP_COMPLETED, {
+    ...(0, o.collectGuildAnalyticsMetadata)(n),
     step: -2,
     skipped: !1,
     is_final_step: !0,

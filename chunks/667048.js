@@ -13,8 +13,8 @@ var a = n("37983"),
   u = n("49111"),
   d = n("994428"),
   c = n("782340"),
-  E = n("367574");
-class f extends s.PureComponent {
+  f = n("367574");
+class E extends s.PureComponent {
   render() {
     let {
       guild: e,
@@ -29,7 +29,7 @@ class f extends s.PureComponent {
       cta: c.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_NOTICE_BUTTON,
       trackingSource: u.ChannelNoticeCtaSources.GUILD_SUBSCRIPTION_NOTICE,
       type: u.ChannelNoticeTypes.GUILD_BOOSTING,
-      image: E,
+      image: f,
       imageMarginX: 26
     })
   }
@@ -55,4 +55,4 @@ var _ = i.default.connectStores([o.default], e => {
   return {
     memberCount: o.default.getMemberCount(t.id)
   }
-})(f)
+})(E)

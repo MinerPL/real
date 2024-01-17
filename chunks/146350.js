@@ -13,37 +13,37 @@ var a = n("37983"),
   u = n("77078"),
   d = n("86621"),
   c = n("775377"),
-  E = n("583232"),
-  f = n("891964"),
+  f = n("583232"),
+  E = n("891964"),
   _ = n("644091"),
   h = n("845579"),
   C = n("52028"),
-  T = n("381546"),
-  I = n("304121"),
+  I = n("381546"),
+  T = n("304121"),
   S = n("599110"),
-  N = n("158998"),
-  A = n("49111"),
-  p = n("782340"),
-  m = n("304169");
+  m = n("158998"),
+  p = n("49111"),
+  A = n("782340"),
+  g = n("304169");
 
-function g(e) {
+function N(e) {
   let {
     status: t,
     description: n,
     focused: s
   } = e;
   return (0, a.jsxs)("div", {
-    className: m.statusItem,
+    className: g.statusItem,
     children: [(0, a.jsx)(u.Status, {
       status: t,
-      className: m.icon,
+      className: g.icon,
       size: 10,
       color: s ? "currentColor" : void 0
     }), (0, a.jsx)("div", {
-      className: m.status,
-      children: (0, N.humanizeStatus)(t)
+      className: g.status,
+      children: (0, m.humanizeStatus)(t)
     }), null != n && (0, a.jsx)("div", {
-      className: m.description,
+      className: g.description,
       children: n
     })]
   })
@@ -56,37 +56,37 @@ function R(e) {
     e.stopPropagation(), h.CustomStatusSetting.updateSetting(void 0)
   };
   return null != t ? (0, a.jsx)("div", {
-    "aria-label": p.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
+    "aria-label": A.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
     children: (0, a.jsx)(c.default, {
-      className: null != t.emoji ? m.customStatusWithEmoji : m.customStatusItem,
+      className: null != t.emoji ? g.customStatusWithEmoji : g.customStatusItem,
       activity: t,
-      emojiClassName: m.customEmoji,
-      textClassName: m.customText,
-      placeholderText: p.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
+      emojiClassName: g.customEmoji,
+      textClassName: g.customText,
+      placeholderText: A.default.Messages.CUSTOM_STATUS_EDIT_CUSTOM_STATUS_PLACEHOLDER,
       children: (0, a.jsx)(u.Tooltip, {
-        text: p.default.Messages.CUSTOM_STATUS_CLEAR_CUSTOM_STATUS,
+        text: A.default.Messages.CUSTOM_STATUS_CLEAR_CUSTOM_STATUS,
         children: e => (0, a.jsx)(u.Button, {
           ...e,
-          className: m.clearStatusButton,
+          className: g.clearStatusButton,
           onClick: n,
           look: u.Button.Looks.BLANK,
           size: u.Button.Sizes.NONE,
           tabIndex: -1,
           "aria-hidden": !0,
-          children: (0, a.jsx)(T.default, {
-            className: m.clearStatusIcon
+          children: (0, a.jsx)(I.default, {
+            className: g.clearStatusIcon
           })
         })
       })
     })
   }) : (0, a.jsxs)("div", {
-    className: l(m.statusItem, m.customStatusContentIcon),
-    "aria-label": p.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS,
+    className: l(g.statusItem, g.customStatusContentIcon),
+    "aria-label": A.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS,
     children: [(0, a.jsx)("div", {
-      className: m.customEmojiPlaceholder
+      className: g.customEmojiPlaceholder
     }), (0, a.jsx)("div", {
-      className: m.status,
-      children: p.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS
+      className: g.status,
+      children: A.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS
     })]
   })
 }
@@ -96,16 +96,16 @@ function O(e) {
     focused: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: l(m.statusItem, m.statusItemNoPadding, m.customStatusContentIcon, m.switchAccountsItem),
-    "aria-label": p.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
-    children: [(0, a.jsx)(I.default, {
+    className: l(g.statusItem, g.statusItemNoPadding, g.customStatusContentIcon, g.switchAccountsItem),
+    "aria-label": A.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
+    children: [(0, a.jsx)(T.default, {
       width: 18,
       height: 18,
-      className: m.switchAccountsIcon,
+      className: g.switchAccountsIcon,
       color: t ? o.default.unsafe_rawColors.WHITE_500.css : "currentColor"
     }), (0, a.jsx)("div", {
-      className: m.status,
-      children: p.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE
+      className: g.status,
+      children: A.default.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE
     })]
   })
 }
@@ -117,21 +117,21 @@ let L = e => {
     onSelect: r
   } = e, o = (0, _.useMultiAccountMenuItems)();
   s.useEffect(() => {
-    S.default.track(A.AnalyticEvents.OPEN_POPOUT, {
+    S.default.track(p.AnalyticEvents.OPEN_POPOUT, {
       type: "User Status Menu",
       has_custom_status: null != t,
       location: l.location
     })
   }, []);
   let d = e => {
-    (0, E.default)(e, void 0, {
+    (0, f.default)(e, void 0, {
       location: l.location
     })
   };
   return (0, a.jsxs)(u.Menu, {
     navId: "status-picker",
     variant: "fixed",
-    "aria-label": p.default.Messages.SET_STATUS,
+    "aria-label": A.default.Messages.SET_STATUS,
     onClose: i,
     onSelect: r,
     children: [(0, a.jsx)(u.MenuItem, {
@@ -141,7 +141,7 @@ let L = e => {
         let {
           isFocused: t
         } = e;
-        return (0, a.jsx)(g, {
+        return (0, a.jsx)(N, {
           status: u.StatusTypes.ONLINE,
           focused: t
         })
@@ -154,7 +154,7 @@ let L = e => {
         let {
           isFocused: t
         } = e;
-        return (0, a.jsx)(g, {
+        return (0, a.jsx)(N, {
           status: u.StatusTypes.IDLE,
           focused: t
         })
@@ -167,9 +167,9 @@ let L = e => {
         let {
           isFocused: t
         } = e;
-        return (0, a.jsx)(g, {
+        return (0, a.jsx)(N, {
           status: u.StatusTypes.DND,
-          description: p.default.Messages.STATUS_DND_HELP,
+          description: A.default.Messages.STATUS_DND_HELP,
           focused: t
         })
       },
@@ -181,9 +181,9 @@ let L = e => {
         let {
           isFocused: t
         } = e;
-        return (0, a.jsx)(g, {
+        return (0, a.jsx)(N, {
           status: u.StatusTypes.INVISIBLE,
-          description: p.default.Messages.STATUS_INVISIBLE_HELPER,
+          description: A.default.Messages.STATUS_INVISIBLE_HELPER,
           focused: t
         })
       },
@@ -207,7 +207,7 @@ let L = e => {
       }
     }), (0, a.jsx)(u.MenuSeparator, {}), (0, a.jsx)(u.MenuItem, {
       id: "switch-account",
-      action: f.default,
+      action: E.default,
       label: e => {
         let {
           isFocused: t

@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return _
+    return p
   }
-}), n("222007"), n("424973");
-var s = n("37983"),
-  i = n("884691"),
-  a = n("499032"),
-  u = n.n(a),
-  o = n("312165"),
-  d = n("3958"),
-  r = n("773336"),
-  l = n("50885"),
-  c = n("49111");
-let p = r.isPlatformEmbedded && null != l.default.getDiscordUtils().inputCaptureRegisterElement;
-class f extends i.PureComponent {
+}), s("222007"), s("424973");
+var n = s("37983"),
+  l = s("884691"),
+  i = s("499032"),
+  a = s.n(i),
+  o = s("312165"),
+  r = s("3958"),
+  d = s("773336"),
+  u = s("50885"),
+  c = s("49111");
+let h = d.isPlatformEmbedded && null != u.default.getDiscordUtils().inputCaptureRegisterElement;
+class m extends l.PureComponent {
   componentDidMount() {
     this._mounted = !0
   }
@@ -27,57 +27,57 @@ class f extends i.PureComponent {
     })
   }
   cleanUp() {
-    r.isPlatformEmbedded && null != this.gs && (this.gs.destroy(), this.gs = null)
+    d.isPlatformEmbedded && null != this.gs && (this.gs.destroy(), this.gs = null)
   }
   handleComboChange(e) {
     let {
       mode: t
     } = this.state, {
-      onChange: n
+      onChange: s
     } = this.props;
-    t === d.RecordModes.RECORDING && (null != n && n(e), this.setState({
+    t === r.RecordModes.RECORDING && (null != s && s(e), this.setState({
       codes: e
     }))
   }
   render() {
     let e, t;
     let {
-      codes: n,
-      mode: i
+      codes: s,
+      mode: l
     } = this.state, {
-      disabled: a
+      disabled: i
     } = this.props;
-    return p ? (t = l.default.getDiscordUtils().inputCaptureRegisterElement, e = this.handleNativeChange) : !r.isPlatformEmbedded && (e = this.handleComboKeys), (0, s.jsx)(d.default, {
-      disabled: a,
-      value: n,
-      mode: i,
+    return h ? (t = u.default.getDiscordUtils().inputCaptureRegisterElement, e = this.handleNativeChange) : !d.isPlatformEmbedded && (e = this.handleComboKeys), (0, n.jsx)(r.default, {
+      disabled: i,
+      value: s,
+      mode: l,
       onClick: this.toggleRecordMode,
       onChange: e,
       registerNativeRecorder: t,
-      disableOnClickWhileRecording: p
+      disableOnClickWhileRecording: h
     })
   }
   constructor(e) {
     super(e), this._mounted = !1, this.recordStart = () => {
-      r.isPlatformEmbedded && !p && (this.gs = new o.default, this.gs.on("change", this.handleGSChange)), this.setState({
-        mode: d.RecordModes.RECORDING
+      d.isPlatformEmbedded && !h && (this.gs = new o.default, this.gs.on("change", this.handleGSChange)), this.setState({
+        mode: r.RecordModes.RECORDING
       })
     }, this.recordEnd = () => {
       this.cleanUp(), this.setState({
-        mode: d.RecordModes.DEFAULT
+        mode: r.RecordModes.DEFAULT
       })
     }, this.toggleRecordMode = () => {
-      this.state.mode === d.RecordModes.DEFAULT ? this.recordStart() : this.recordEnd()
-    }, this.handleComboKeys = (e, t, n) => {
-      if (n.preventDefault(), "keydown" === n.type) {
-        let e = t.map(e => [c.KeyboardDeviceTypes.KEYBOARD_KEY, u(e), c.KeyboardEnvs.BROWSER]),
+      this.state.mode === r.RecordModes.DEFAULT ? this.recordStart() : this.recordEnd()
+    }, this.handleComboKeys = (e, t, s) => {
+      if (s.preventDefault(), "keydown" === s.type) {
+        let e = t.map(e => [c.KeyboardDeviceTypes.KEYBOARD_KEY, a(e), c.KeyboardEnvs.BROWSER]),
           {
-            keyCode: s
-          } = n;
+            keyCode: n
+          } = s;
         null == e.find(e => {
           let [, t] = e;
-          return s === t
-        }) && e.push([c.KeyboardDeviceTypes.KEYBOARD_KEY, s, c.KeyboardEnvs.BROWSER]), this.handleComboChange(e)
+          return n === t
+        }) && e.push([c.KeyboardDeviceTypes.KEYBOARD_KEY, n, c.KeyboardEnvs.BROWSER]), this.handleComboChange(e)
       }
     }, this.handleGSChange = e => {
       if (!1 === this._mounted) return;
@@ -91,8 +91,8 @@ class f extends i.PureComponent {
     } = e;
     this.state = {
       codes: t,
-      mode: d.RecordModes.DEFAULT
+      mode: r.RecordModes.DEFAULT
     }
   }
 }
-var _ = f
+var p = m

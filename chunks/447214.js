@@ -32,9 +32,9 @@ var s, i, r, a = n("627445"),
   O = n("342797"),
   b = n("340115"),
   P = n("289362"),
-  R = n("571420"),
-  V = n("797785"),
-  k = n("49111");
+  k = n("571420"),
+  R = n("797785"),
+  V = n("49111");
 let M = new h.default("GatewaySocket"),
   w = new N.default;
 
@@ -99,7 +99,7 @@ i = class extends b.default {
       M.verbose("Skipping _connect because willReconnect is false");
       return
     }
-    if (R.getIsPaused()) {
+    if (k.getIsPaused()) {
       M.info("Skipping _connect because socket is paused");
       return
     }
@@ -144,7 +144,7 @@ i = class extends b.default {
           }), u = d.state.open, l = d.state.identify, f = d.state.messages, _ = d.state.clientState
         }
       }
-      null == t && ((t = (0, V.default)(n)).binaryType = "arraybuffer"), s(t), u && i(l, _), null != f && f.forEach(r), t.onopen = () => i(l, _), t.onmessage = r, t.onclose = o, t.onerror = a
+      null == t && ((t = (0, R.default)(n)).binaryType = "arraybuffer"), s(t), u && i(l, _), null != f && f.forEach(r), t.onopen = () => i(l, _), t.onmessage = r, t.onclose = o, t.onerror = a
     }({
       gatewayURL: o.toString(),
       newCallback: e => {
@@ -295,7 +295,7 @@ i = class extends b.default {
   }
   _tryDetectInvalidIOSToken(e, t, n) {
     (0, S.isIOS)() && null != this.token && 1001 === e && "Stream end encountered" === t && (this.iosGoingAwayEventCount += 1, 3 === this.iosGoingAwayEventCount && c.default.get({
-      url: k.Endpoints.ME,
+      url: V.Endpoints.ME,
       headers: {
         authorization: this.token
       }
@@ -303,14 +303,14 @@ i = class extends b.default {
       let {
         status: t
       } = e;
-      y.default.track(k.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
+      y.default.track(V.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
         api_status_code: t
       })
     }, e => {
       let {
         status: t
       } = e;
-      401 === t && (this.connectionState = "CLOSED", M.warn("[WS CLOSED] because of manual authentication failure, marking as closed."), this._reset(n, 4004, "invalid token manually detected")), y.default.track(k.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
+      401 === t && (this.connectionState = "CLOSED", M.warn("[WS CLOSED] because of manual authentication failure, marking as closed."), this._reset(n, 4004, "invalid token manually detected")), y.default.track(V.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
         api_status_code: t
       })
     }))

@@ -13,21 +13,21 @@ var a = n("37983"),
   u = n("239380"),
   d = n("957255"),
   c = n("456353"),
-  E = n("599110"),
-  f = n("49111"),
+  f = n("599110"),
+  E = n("49111"),
   _ = n("782340");
 
 function h(e) {
-  let t = s.useContext(E.AnalyticsContext),
+  let t = s.useContext(f.AnalyticsContext),
     n = e.voiceChannels[0],
-    h = (0, i.useStateFromStores)([d.default], () => null != n && d.default.can(f.Permissions.CONNECT, n.channel));
+    h = (0, i.useStateFromStores)([d.default], () => null != n && d.default.can(E.Permissions.CONNECT, n.channel));
   return null == n ? null : [(0, a.jsx)(l.MenuItem, {
     id: "join-voice",
     action: function() {
-      (0, u.transitionToGuild)(n.guild.id), r.default.selectVoiceChannel(n.channel.id), o.default.trackWithMetadata(f.AnalyticEvents.ACTIVITY_FEED_VOICE_CHANNEL_VISITED, {
+      (0, u.transitionToGuild)(n.guild.id), r.default.selectVoiceChannel(n.channel.id), o.default.trackWithMetadata(E.AnalyticEvents.ACTIVITY_FEED_VOICE_CHANNEL_VISITED, {
         source: {
           ...t.location,
-          object: f.AnalyticsObjects.LIST_ITEM
+          object: E.AnalyticsObjects.LIST_ITEM
         },
         guild_id: n.guild.id,
         channel_id: n.channel.id,
@@ -39,10 +39,10 @@ function h(e) {
   }, "join-voice"), (0, a.jsx)(l.MenuItem, {
     id: "goto-server",
     action: function() {
-      (0, u.transitionToGuild)(n.guild.id), o.default.trackWithMetadata(f.AnalyticEvents.ACTIVITY_FEED_GUILD_VISITED, {
+      (0, u.transitionToGuild)(n.guild.id), o.default.trackWithMetadata(E.AnalyticEvents.ACTIVITY_FEED_GUILD_VISITED, {
         source: {
           ...t.location,
-          object: f.AnalyticsObjects.LIST_ITEM
+          object: E.AnalyticsObjects.LIST_ITEM
         },
         guild_id: n.guild.id,
         af_recently_played: !1,

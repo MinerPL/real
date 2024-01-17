@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("77078"),
+var l = n("77078"),
   s = n("102253");
 let i = e => {
   let {
@@ -14,11 +14,11 @@ let i = e => {
     icon: n,
     onClick: i
   } = e;
-  return (0, l.jsxs)(a.Button, {
+  return (0, a.jsxs)(l.Button, {
     className: s.button,
     innerClassName: s.buttonInner,
     onClick: i,
-    children: [(0, l.jsx)(n, {}), (0, l.jsx)(a.Text, {
+    children: [(0, a.jsx)(n, {}), (0, a.jsx)(l.Text, {
       variant: "text-md/semibold",
       color: "none",
       children: t

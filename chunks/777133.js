@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("748820"),
-  l = n("77078"),
+var l = n("748820"),
+  a = n("77078"),
   i = n("112679"),
   r = n("55689"),
   o = n("599110"),
@@ -18,14 +18,14 @@ function d(e) {
     guildProductListing: t,
     guildId: d,
     sourceAnalyticsLocations: c
-  } = e, f = !1, m = (0, s.v4)(), E = () => {
+  } = e, f = !1, E = (0, l.v4)(), _ = () => {
     f = !0
   };
-  (0, l.openModalLazy)(async () => {
+  (0, a.openModalLazy)(async () => {
     let {
       default: e
     } = await n.el("191131").then(n.bind(n, "191131"));
-    return n => (0, a.jsx)(e, {
+    return n => (0, s.jsx)(e, {
       ...n,
       applicationId: t.application_id,
       skuId: t.id,
@@ -34,13 +34,13 @@ function d(e) {
         guildProductListingId: t.id,
         guildId: d
       },
-      loadId: m,
-      onComplete: E
+      loadId: E,
+      onComplete: _
     })
   }, {
     onCloseCallback: () => {
       !f && o.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-        load_id: m,
+        load_id: E,
         payment_type: u.PurchaseTypeToAnalyticsPaymentType[u.PurchaseTypes.ONE_TIME],
         is_gift: !1,
         location_stack: Array.isArray(c) ? c : [c]

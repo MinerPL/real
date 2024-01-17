@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return d
   }
 }), n("222007");
 var l = n("37983"),
   i = n("884691"),
   r = n("597755"),
   s = n.n(r),
-  a = n("458960"),
-  o = n("904160");
+  o = n("458960"),
+  a = n("904160");
 
 function u(e) {
   let t = e => e.interpolate({
@@ -24,14 +24,14 @@ function u(e) {
     }]
   }
 }
-class d extends i.Component {
+class c extends i.Component {
   componentDidMount() {
     this._isMounted = !0;
     let {
       x: e,
       y: t
     } = this.state;
-    "Firefox" !== s.name && (a.default.animate(e, {
+    "Firefox" !== s.name && (o.default.animate(e, {
       loop: !0,
       toValueMin: -74,
       toValueMax: 95,
@@ -39,7 +39,7 @@ class d extends i.Component {
       friction: 5,
       tension: 1,
       shouldLoop: this.shouldLoop
-    }), a.default.animate(t, {
+    }), o.default.animate(t, {
       loop: !0,
       toValueMin: -59,
       toValueMax: 75,
@@ -54,11 +54,11 @@ class d extends i.Component {
   }
   render() {
     return (0, l.jsxs)("div", {
-      className: o.searchIndexAnimation,
+      className: a.searchIndexAnimation,
       children: [(0, l.jsx)("div", {
-        className: o.searchIndexBackground
+        className: a.searchIndexBackground
       }), (0, l.jsxs)("svg", {
-        className: o.searchIndexForeground,
+        className: a.searchIndexForeground,
         width: "320",
         height: "280",
         children: [(0, l.jsx)("defs", {
@@ -76,9 +76,9 @@ class d extends i.Component {
             children: [(0, l.jsx)("mask", {
               id: "search-index-foreground-mask-b",
               fill: "#fff",
-              children: (0, l.jsx)(a.default.use, {
+              children: (0, l.jsx)(o.default.use, {
                 style: u(this.state),
-                className: o.mask,
+                className: a.mask,
                 xlinkHref: "#search-index-foreground-mask-a"
               })
             }), (0, l.jsxs)("g", {
@@ -340,8 +340,8 @@ class d extends i.Component {
                 strokeLinejoin: "round"
               })]
             })]
-          }), (0, l.jsxs)(a.default.g, {
-            className: o.magnifyingGlass,
+          }), (0, l.jsxs)(o.default.g, {
+            className: a.magnifyingGlass,
             style: u(this.state),
             children: [(0, l.jsx)("path", {
               fill: "#C9D2F0",
@@ -386,9 +386,9 @@ class d extends i.Component {
   }
   constructor(...e) {
     super(...e), this.state = {
-      x: new a.default.Value(0),
-      y: new a.default.Value(0)
+      x: new o.default.Value(0),
+      y: new o.default.Value(0)
     }, this._isMounted = !1, this.shouldLoop = () => this._isMounted
   }
 }
-var c = d
+var d = c

@@ -1,30 +1,30 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return m
   }
 });
-var i = n("37983");
+var s = n("37983");
 n("884691");
-var r = n("907002"),
-  s = n("65597"),
-  l = n("77078"),
-  a = n("206230"),
+var a = n("907002"),
+  l = n("65597"),
+  r = n("77078"),
+  i = n("206230"),
   u = n("812204"),
   o = n("685665"),
   d = n("21526"),
   c = n("393414"),
-  f = n("49111"),
-  m = n("782340"),
-  p = n("526380"),
-  S = n("34125"),
-  E = e => {
+  _ = n("49111"),
+  f = n("782340"),
+  E = n("526380"),
+  I = n("34125"),
+  m = e => {
     let {
       onClose: t
     } = e, {
       analyticsLocations: n
-    } = (0, o.default)(), E = (0, s.default)([a.default], () => a.default.useReducedMotion), P = (0, r.useSpring)({
-      immediate: E,
+    } = (0, o.default)(), m = (0, l.default)([i.default], () => i.default.useReducedMotion), S = (0, a.useSpring)({
+      immediate: m,
       delay: 800,
       from: {
         transform: "translate(0, -100%)"
@@ -32,27 +32,27 @@ var r = n("907002"),
       to: {
         transform: "translate(0, 0)"
       }
-    }), _ = () => {
-      t(), (0, c.transitionTo)(f.Routes.COLLECTIBLES_SHOP), (0, d.openCollectiblesShop)({
+    }), p = () => {
+      t(), (0, c.transitionTo)(_.Routes.COLLECTIBLES_SHOP), (0, d.openCollectiblesShop)({
         openInLayer: !1,
         analyticsSource: u.default.PREMIUM_PAYMENT_MODAL,
         analyticsLocations: n
       })
     };
-    return (0, i.jsxs)(r.animated.div, {
-      style: P,
-      className: p.container,
-      children: [(0, i.jsx)("img", {
-        className: p.image,
-        src: S,
+    return (0, s.jsxs)(a.animated.div, {
+      style: S,
+      className: E.container,
+      children: [(0, s.jsx)("img", {
+        className: E.image,
+        src: I,
         alt: ""
-      }), (0, i.jsx)(l.Text, {
+      }), (0, s.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "header-primary",
-        children: m.default.Messages.COLLECTIBLES_GIFT_CODE_MODAL_UPSELL.format({
-          checkItOut: e => (0, i.jsx)(l.Clickable, {
-            className: p.link,
-            onClick: _,
+        children: f.default.Messages.COLLECTIBLES_GIFT_CODE_MODAL_UPSELL.format({
+          checkItOut: e => (0, s.jsx)(r.Clickable, {
+            className: E.link,
+            onClick: p,
             children: e
           }, "COLLECTIBLES_GIFT_CODE_MODAL_UPSELL")
         })

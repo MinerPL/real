@@ -7,10 +7,10 @@ s.r(t), s.d(t, {
     return N
   }
 });
-var a, n, r = s("37983"),
-  l = s("884691"),
-  i = s("414456"),
-  u = s.n(i),
+var a, n, l = s("37983"),
+  i = s("884691"),
+  r = s("414456"),
+  u = s.n(r),
   o = s("65597"),
   d = s("77078"),
   c = s("411691"),
@@ -21,9 +21,9 @@ var a, n, r = s("37983"),
   f = s("558566"),
   S = s("646718"),
   R = s("782340"),
-  p = s("650734");
+  m = s("650734");
 (a = n || (n = {})).PERKS_DISCOVERABILITY = "perks_discoverability", a.WHATS_NEW = "whats_new";
-let m = e => {
+let p = e => {
   let t = (0, o.default)([_.default], () => _.default.getPremiumTypeSubscription()),
     s = null != t ? E.default.getPremiumPlanItem(t) : null,
     a = null != s ? E.default.getSkuIdForPlan(s.planId) : null,
@@ -46,11 +46,11 @@ var N = e => {
     variant: s = "perks_discoverability",
     noBackground: a = !1,
     leftAlignHeaders: n = !1
-  } = e, i = l.useRef(null), o = (0, I.useShouldScrollToWhatsNew)(), _ = (0, c.default)("perks-discoverability");
+  } = e, r = i.useRef(null), o = (0, I.useShouldScrollToWhatsNew)(), _ = (0, c.default)("perks-discoverability");
   (0, I.useClearNewBadge)();
   let E = "whats_new" === s;
-  l.useEffect(() => {
-    let e = i.current;
+  i.useEffect(() => {
+    let e = r.current;
     if (null == e || !o || !E) return;
     let t = requestAnimationFrame(() => {
       e.scrollIntoView({
@@ -58,9 +58,9 @@ var N = e => {
       })
     });
     return () => cancelAnimationFrame(t)
-  }, [i, o, E]);
+  }, [r, o, E]);
   let S = (0, T.default)(),
-    R = m(E),
+    R = p(E),
     N = [];
   switch (s) {
     case "perks_discoverability":
@@ -70,30 +70,30 @@ var N = e => {
       N = [S.earlyAccess, _ !== c.CollectiblesShopMarketingVariants.DEFAULT ? S.specialShopPerks : S.specialMemberPricing, S.unlimitedSuperReactions]
   }
   let A = N.some(e => null != e.pillText);
-  return (0, r.jsxs)("div", {
-    ref: i,
-    className: u(p.section, {
-      [p.centerAlignSection]: !n,
-      [p.leftAlignSection]: n
+  return (0, l.jsxs)("div", {
+    ref: r,
+    className: u(m.section, {
+      [m.centerAlignSection]: !n,
+      [m.leftAlignSection]: n
     }, t),
-    children: [(0, r.jsx)(d.Heading, {
+    children: [(0, l.jsx)(d.Heading, {
       variant: "heading-xxl/extrabold",
       color: "header-primary",
-      className: p.heading,
+      className: m.heading,
       children: R.title
-    }), (0, r.jsx)(d.Text, {
+    }), (0, l.jsx)(d.Text, {
       variant: "text-lg/normal",
       color: "header-primary",
-      className: u(p.subtitle, {
-        [p.fullWidth]: E || n,
-        [p.moreSubtitleMargin]: A,
-        [p.leftAlignSubtitle]: n,
-        [p.centerAlignSubtitle]: !n
+      className: u(m.subtitle, {
+        [m.fullWidth]: E || n,
+        [m.moreSubtitleMargin]: A,
+        [m.leftAlignSubtitle]: n,
+        [m.centerAlignSubtitle]: !n
       }),
       children: R.subtitle
-    }), (0, r.jsx)("div", {
-      className: p.cardContainer,
-      children: N.map((e, t) => (0, r.jsx)(f.default, {
+    }), (0, l.jsx)("div", {
+      className: m.cardContainer,
+      children: N.map((e, t) => (0, l.jsx)(f.default, {
         ...e,
         forceShadow: a
       }, "".concat(e.name, "_").concat(t)))

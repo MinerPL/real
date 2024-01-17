@@ -20,8 +20,8 @@ var s = n("37983"),
   p = n("165926"),
   h = n("970366"),
   N = n("42963"),
-  m = n("271938"),
-  T = n("476108"),
+  T = n("271938"),
+  m = n("476108"),
   g = n("124969"),
   A = n("65300"),
   S = n("291850"),
@@ -152,8 +152,8 @@ function G(e) {
   let t = {
     guildTemplate: (0, o.useStateFromStores)([c.default], () => c.default.getGuildTemplate(e.code)),
     nativeAppState: (0, o.useStateFromStores)([d.default], () => d.default.getState(e.code)),
-    authenticated: (0, o.useStateFromStores)([m.default], () => m.default.isAuthenticated()),
-    defaultRoute: (0, o.useStateFromStores)([T.default], () => T.default.defaultRoute)
+    authenticated: (0, o.useStateFromStores)([T.default], () => T.default.isAuthenticated()),
+    defaultRoute: (0, o.useStateFromStores)([m.default], () => m.default.defaultRoute)
   };
   return (0, s.jsx)(U, {
     ...e,

@@ -4,30 +4,30 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var r = n("37983"),
-  i = n("884691"),
-  u = n("93332"),
-  l = n("913491");
-let o = i.memo(u.default);
+var i = n("37983"),
+  r = n("884691"),
+  l = n("93332"),
+  u = n("913491");
+let o = r.memo(l.default);
 
 function s(e) {
   let {
     message: t,
     channel: n,
-    author: i,
-    compact: u,
+    author: r,
+    compact: l,
     animateAvatar: s,
     guildId: a,
     isGroupStart: d = !0,
     roleIcon: c,
     hideTimestamp: f
   } = e;
-  return !(0, l.default)(t) && (d || u) ? (0, r.jsx)(o, {
+  return !(0, u.default)(t) && (d || l) ? (0, i.jsx)(o, {
     message: t,
     channel: n,
-    author: i,
+    author: r,
     guildId: a,
-    compact: u,
+    compact: l,
     animate: s,
     roleIcon: c,
     hideTimestamp: f

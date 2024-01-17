@@ -13,8 +13,8 @@ var a = n("37983"),
   u = n("143217"),
   d = n("447621"),
   c = n("782340"),
-  E = n("254514"),
-  f = n("152985"),
+  f = n("254514"),
+  E = n("152985"),
   _ = e => {
     let {
       loadId: t
@@ -30,23 +30,23 @@ var a = n("37983"),
       subsection: c.default.Messages.HUB_SCHOOL_HUBS,
       location: c.default.Messages.HUB_DIRECTORY_SEARCH_TITLE
     }), (0, a.jsx)(i.Scroller, {
-      className: E.scroller,
+      className: f.scroller,
       children: (0, a.jsxs)("div", {
-        className: E.viewWrapper,
+        className: f.viewWrapper,
         children: [(0, a.jsxs)("div", {
-          className: E.headerContainer,
+          className: f.headerContainer,
           children: [(0, a.jsx)("img", {
             alt: "",
-            className: E.headerImage,
-            src: f
+            className: f.headerImage,
+            src: E
           }), (0, a.jsxs)("div", {
-            className: E.headerContent,
+            className: f.headerContent,
             children: [(0, a.jsx)(i.Heading, {
-              className: E.headerText,
+              className: f.headerText,
               variant: "heading-xl/semibold",
               children: c.default.Messages.HUB_DIRECTORY_SEARCH_TITLE
             }), (0, a.jsx)(i.Text, {
-              className: E.headerDescription,
+              className: f.headerDescription,
               variant: "text-md/normal",
               color: "none",
               children: c.default.Messages.HUB_DIRECTORY_SEARCH_SUBTITLE
@@ -55,9 +55,9 @@ var a = n("37983"),
         }), (0, a.jsx)(u.default, {
           guilds: n
         }), (0, a.jsx)("div", {
-          className: E.divider
+          className: f.divider
         }), (0, a.jsx)(i.Text, {
-          className: E.footerDescription,
+          className: f.footerDescription,
           variant: "text-md/medium",
           color: "header-secondary",
           children: c.default.Messages.HUB_DISCOVERY_FOOTER_DESCRIPTION

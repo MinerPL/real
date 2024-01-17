@@ -14,24 +14,24 @@ var s = n("917351"),
   u = n("42887"),
   d = n("353927");
 let c = new Set(["DisplayPort"]),
-  E = !1;
+  f = !1;
 
-function f() {
+function E() {
   let e;
-  if (E) return;
+  if (f) return;
   let t = u.default.getInputDeviceId(),
     s = u.default.getOutputDeviceId();
   if (o.default.getState().neverShowModal || i.isEmpty(o.default.lastDeviceConnected)) return;
-  let f = (0, o.extractDisplayName)(u.default.getInputDevices()[t]),
+  let E = (0, o.extractDisplayName)(u.default.getInputDevices()[t]),
     _ = (0, o.extractDisplayName)(u.default.getOutputDevices()[s]),
-    h = i.some(o.default.lastDeviceConnected, e => c.has(e.displayName) || e.displayName === f || e.displayName === _);
+    h = i.some(o.default.lastDeviceConnected, e => c.has(e.displayName) || e.displayName === E || e.displayName === _);
   if (h) return;
   let C = i.some(o.default.lastDeviceConnected, e => r.default.isCertified(o.default.inputDevices[e.displayName]) || r.default.isCertified(o.default.outputDevices[e.displayName])),
-    T = t === d.DEFAULT_DEVICE_ID && o.default.lastInputSystemDevice.justChanged || s === d.DEFAULT_DEVICE_ID && o.default.lastOutputSystemDevice.justChanged;
-  if (T && !C) return;
-  let I = i.first(Object.keys(o.default.lastDeviceConnected)),
-    S = null != I && "" !== I ? o.default.lastDeviceConnected[I] : null;
-  null != S && (o.default.initialized && null != I && (r.default.isCertified(o.default.inputDevices[I]) ? e = r.default.getCertifiedDevice(o.default.inputDevices[I]) : r.default.isCertified(o.default.outputDevices[I]) && (e = r.default.getCertifiedDevice(o.default.outputDevices[I]))), E = !0, (0, l.openModalLazy)(async () => {
+    I = t === d.DEFAULT_DEVICE_ID && o.default.lastInputSystemDevice.justChanged || s === d.DEFAULT_DEVICE_ID && o.default.lastOutputSystemDevice.justChanged;
+  if (I && !C) return;
+  let T = i.first(Object.keys(o.default.lastDeviceConnected)),
+    S = null != T && "" !== T ? o.default.lastDeviceConnected[T] : null;
+  null != S && (o.default.initialized && null != T && (r.default.isCertified(o.default.inputDevices[T]) ? e = r.default.getCertifiedDevice(o.default.inputDevices[T]) : r.default.isCertified(o.default.outputDevices[T]) && (e = r.default.getCertifiedDevice(o.default.outputDevices[T]))), f = !0, (0, l.openModalLazy)(async () => {
     let {
       default: t
     } = await n.el("134064").then(n.bind(n, "134064"));
@@ -44,13 +44,13 @@ function f() {
         device: S,
         certifiedDeviceMetadata: e,
         transitionState: s,
-        onClose: () => (E = !1, i())
+        onClose: () => (f = !1, i())
       })
     }
   }))
 }
 var _ = {
   init() {
-    o.default.addChangeListener(f)
+    o.default.addChangeListener(E)
   }
 }

@@ -1,15 +1,15 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return D
+    return C
   }
 }), l("222007");
 var a = l("37983"),
   n = l("884691"),
   s = l("917351"),
   r = l("446674"),
-  i = l("750028"),
-  o = l("77078"),
+  o = l("750028"),
+  i = l("77078"),
   u = l("716241"),
   d = l("355313"),
   c = l("845579"),
@@ -20,34 +20,34 @@ var a = l("37983"),
   g = l("882278"),
   E = l("754493"),
   T = l("5920"),
-  _ = l("835236"),
-  R = l("844153"),
+  R = l("835236"),
+  _ = l("844153"),
   p = l("49111"),
-  I = l("606762"),
-  v = l("782340"),
+  v = l("606762"),
+  I = l("782340"),
   m = l("147594");
 
-function D(e) {
+function C(e) {
   let {
-    headerText: t = v.default.Messages.BROADCASTING_SETTINGS,
-    buttonCTA: l = v.default.Messages.BROADCAST_SETTINGS_SAVE,
-    transitionState: D,
-    onClose: C,
-    onSave: N
-  } = e, y = (0, T.useBroadcastingStoredSelectedTags)(), [x, O] = n.useState(y), [L, b] = n.useState(""), M = c.BroadcastAllowFriends.useSetting(), [w, B] = n.useState(null == M || M), U = c.BroadcastAutoBroadcast.useSetting(), [G, j] = n.useState(U), [P, k] = n.useState(!1), [F, K] = n.useState(!1), H = (0, E.useSelfBroadcast)(), V = (0, g.default)(null == H ? void 0 : H.channelId), z = n.useMemo(() => M !== w || !(0, s.isEqual)(y, x) || U !== G, [M, w, y, x, U, G]), W = null != N, Y = n.useMemo(() => w || Object.keys(x[I.RowType.USER]).length > 0 || Object.keys(x[I.RowType.GUILD]).length > 0, [w, x]), X = !Y && null != H || !Y && W || !z && !W, q = n.useMemo(() => "@" === L.trim().charAt(0), [L]), Z = (0, r.useStateFromStoresArray)([S.default], () => S.default.getGuildIds()), Q = (0, T.useFilteredGuilds)(Z), J = n.useMemo(() => Q.map(e => e.id), [Q]), [$, ee] = (0, T.useBroadcastingPrivacyAudience)(q, function(e) {
+    headerText: t = I.default.Messages.BROADCASTING_SETTINGS,
+    buttonCTA: l = I.default.Messages.BROADCAST_SETTINGS_SAVE,
+    transitionState: C,
+    onClose: D,
+    onSave: x
+  } = e, N = (0, T.useBroadcastingStoredSelectedTags)(), [y, L] = n.useState(N), [b, w] = n.useState(""), M = c.BroadcastAllowFriends.useSetting(), [O, B] = n.useState(null == M || M), U = c.BroadcastAutoBroadcast.useSetting(), [j, G] = n.useState(U), [k, P] = n.useState(!1), [F, K] = n.useState(!1), H = (0, E.useSelfBroadcast)(), V = (0, g.default)(null == H ? void 0 : H.channelId), z = n.useMemo(() => M !== O || !(0, s.isEqual)(N, y) || U !== j, [M, O, N, y, U, j]), W = null != x, Y = n.useMemo(() => O || Object.keys(y[v.RowType.USER]).length > 0 || Object.keys(y[v.RowType.GUILD]).length > 0, [O, y]), X = !Y && null != H || !Y && W || !z && !W, q = n.useMemo(() => "@" === b.trim().charAt(0), [b]), Z = (0, r.useStateFromStoresArray)([S.default], () => S.default.getGuildIds()), Q = (0, T.useFilteredGuilds)(Z), J = n.useMemo(() => Q.map(e => e.id), [Q]), [$, ee] = (0, T.useBroadcastingPrivacyAudience)(q, function(e) {
     var t;
-    let l = (t = L.trim(), q ? t.slice(1) : t),
+    let l = (t = b.trim(), q ? t.slice(1) : t),
       a = RegExp("".concat(A.default.escape(l)), "i");
     return a.test(e)
-  }, w);
+  }, O);
 
   function et() {
     var e;
-    null == N || N();
+    null == x || x();
     let [t, l] = es();
     u.default.trackWithMetadata(p.AnalyticEvents.BROADCAST_SETTINGS_UPDATED, {
-      auto_broadcast: G,
-      broadcast_to_all_friends: w,
+      auto_broadcast: j,
+      broadcast_to_all_friends: O,
       num_allowed_users_in_broadcast: l.length,
       allowed_users: l,
       num_guilds_in_broadcast: t.length,
@@ -59,12 +59,12 @@ function D(e) {
   }
 
   function el(e) {
-    b(e)
+    w(e)
   }
 
   function ea(e, t) {
     let l = (0, d.getFullRowId)(t);
-    O(a => {
+    L(a => {
       let n = {
         ...a
       };
@@ -75,7 +75,7 @@ function D(e) {
   }
 
   function en(e, t) {
-    O(l => {
+    L(l => {
       let a = {
         ...l
       };
@@ -88,12 +88,12 @@ function D(e) {
   function es() {
     let e = new Set,
       t = new Set;
-    Object.values(x[I.RowType.USER]).forEach(e => {
+    Object.values(y[v.RowType.USER]).forEach(e => {
       let {
         row: l
       } = e;
       return t.add(l.id)
-    }), Object.values(x[I.RowType.GUILD]).forEach(t => {
+    }), Object.values(y[v.RowType.GUILD]).forEach(t => {
       let {
         row: l
       } = t;
@@ -110,105 +110,105 @@ function D(e) {
   }, [W]), n.useEffect(() => {
     let e = (0, s.chunk)(J, 100);
     e.forEach(e => {
-      h.default.requestMembers(e, L.trim())
+      h.default.requestMembers(e, b.trim())
     })
-  }, [J, L]), (0, a.jsxs)(o.ModalRoot, {
-    transitionState: D,
-    children: [(0, a.jsx)(o.Heading, {
+  }, [J, b]), (0, a.jsxs)(i.ModalRoot, {
+    transitionState: C,
+    children: [(0, a.jsx)(i.Heading, {
       variant: "heading-xl/semibold",
       className: m.header,
       children: t
-    }), (0, a.jsx)(o.ModalCloseButton, {
-      onClick: C,
+    }), (0, a.jsx)(i.ModalCloseButton, {
+      onClick: D,
       className: m.close
-    }), (0, a.jsxs)(o.ModalContent, {
+    }), (0, a.jsxs)(i.ModalContent, {
       className: m.content,
       paddingFix: !1,
-      children: [(0, a.jsx)(o.Text, {
+      children: [(0, a.jsx)(i.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
         className: m.description,
-        children: v.default.Messages.BROADCASTING_DESCRIPTION
-      }), (0, a.jsx)(o.FormTitle, {
-        tag: o.FormTitleTags.H5,
+        children: I.default.Messages.BROADCASTING_DESCRIPTION
+      }), (0, a.jsx)(i.FormTitle, {
+        tag: i.FormTitleTags.H5,
         className: m.title,
-        children: v.default.Messages.BROADCASTING_SETTINGS_MODAL_AUDIENCE_TITLE
+        children: I.default.Messages.BROADCASTING_SETTINGS_MODAL_AUDIENCE_TITLE
       }), (0, a.jsxs)("div", {
         className: m.switch,
-        children: [(0, a.jsx)(o.Text, {
+        children: [(0, a.jsx)(i.Text, {
           variant: "text-sm/normal",
-          children: v.default.Messages.BROADCASTING_SETTINGS_MODAL_FRIENDS
-        }), (0, a.jsx)(o.Switch, {
-          checked: w,
+          children: I.default.Messages.BROADCASTING_SETTINGS_MODAL_FRIENDS
+        }), (0, a.jsx)(i.Switch, {
+          checked: O,
           onChange: e => {
             B(e)
           }
         })]
-      }), (0, a.jsx)(_.default, {
-        selectedTags: x[I.RowType.USER],
-        query: L,
+      }), (0, a.jsx)(R.default, {
+        selectedTags: y[v.RowType.USER],
+        query: b,
         onQueryChange: el,
-        onClickRow: e => ea(I.RowType.USER, e),
-        onRemoveTag: e => en(I.RowType.USER, e),
-        title: v.default.Messages.BROADCASTING_SETTINGS_MODAL_CUSTOM_USERS,
-        hintText: v.default.Messages.BROADCASTING_SETTINGS_MODAL_CUSTOM_USERS_HINT.format({
-          count: R.BROADCASTING_MAX_ALLOWED_USER_IDS
+        onClickRow: e => ea(v.RowType.USER, e),
+        onRemoveTag: e => en(v.RowType.USER, e),
+        title: I.default.Messages.BROADCASTING_SETTINGS_MODAL_CUSTOM_USERS,
+        hintText: I.default.Messages.BROADCASTING_SETTINGS_MODAL_CUSTOM_USERS_HINT.format({
+          count: _.BROADCASTING_MAX_ALLOWED_USER_IDS
         }),
-        placeholderText: v.default.Messages.BROADCASTING_SETTINGS_MODAL_CUSTOM_AUDIENCE_PLACEHOLDER_USERS,
+        placeholderText: I.default.Messages.BROADCASTING_SETTINGS_MODAL_CUSTOM_AUDIENCE_PLACEHOLDER_USERS,
         users: $,
-        expanded: P,
+        expanded: k,
         setExpanded: e => {
-          el(""), k(e), K(!1)
+          el(""), P(e), K(!1)
         },
-        maxCount: R.BROADCASTING_MAX_ALLOWED_USER_IDS
-      }), (0, a.jsx)(_.default, {
-        selectedTags: x[I.RowType.GUILD],
-        query: L,
+        maxCount: _.BROADCASTING_MAX_ALLOWED_USER_IDS
+      }), (0, a.jsx)(R.default, {
+        selectedTags: y[v.RowType.GUILD],
+        query: b,
         onQueryChange: el,
-        onClickRow: e => ea(I.RowType.GUILD, e),
-        onRemoveTag: e => en(I.RowType.GUILD, e),
-        title: v.default.Messages.BROADCASTING_SETTINGS_MODAL_CUSTOM_GUILDS,
-        hintText: v.default.Messages.BROADCASTING_SETTINGS_MODAL_CUSTOM_GUILDS_HINT.format({
-          count: R.BROADCASTING_MAX_ALLOWED_GUILD_IDS
+        onClickRow: e => ea(v.RowType.GUILD, e),
+        onRemoveTag: e => en(v.RowType.GUILD, e),
+        title: I.default.Messages.BROADCASTING_SETTINGS_MODAL_CUSTOM_GUILDS,
+        hintText: I.default.Messages.BROADCASTING_SETTINGS_MODAL_CUSTOM_GUILDS_HINT.format({
+          count: _.BROADCASTING_MAX_ALLOWED_GUILD_IDS
         }),
-        placeholderText: v.default.Messages.BROADCASTING_SETTINGS_MODAL_CUSTOM_AUDIENCE_PLACEHOLDER_GUILDS,
+        placeholderText: I.default.Messages.BROADCASTING_SETTINGS_MODAL_CUSTOM_AUDIENCE_PLACEHOLDER_GUILDS,
         guilds: ee,
         expanded: F,
         setExpanded: e => {
-          el(""), K(e), k(!1)
+          el(""), K(e), P(!1)
         },
-        maxCount: R.BROADCASTING_MAX_ALLOWED_GUILD_IDS
-      }), (0, a.jsx)(o.FormTitle, {
-        tag: o.FormTitleTags.H5,
+        maxCount: _.BROADCASTING_MAX_ALLOWED_GUILD_IDS
+      }), (0, a.jsx)(i.FormTitle, {
+        tag: i.FormTitleTags.H5,
         className: m.title,
-        children: v.default.Messages.BROADCASTING_SETTINGS_MODAL_BEHAVIOR_TITLE
+        children: I.default.Messages.BROADCASTING_SETTINGS_MODAL_BEHAVIOR_TITLE
       }), (0, a.jsxs)("div", {
         className: m.switch,
-        children: [(0, a.jsx)(o.Text, {
+        children: [(0, a.jsx)(i.Text, {
           variant: "text-sm/normal",
-          children: v.default.Messages.AUTO_BROADCAST_TOGGLE
-        }), (0, a.jsx)(o.Switch, {
-          checked: G,
-          onChange: j
+          children: I.default.Messages.AUTO_BROADCAST_TOGGLE
+        }), (0, a.jsx)(i.Switch, {
+          checked: j,
+          onChange: G
         })]
       })]
-    }), (0, a.jsx)(o.ModalFooter, {
-      children: (0, a.jsx)(o.Button, {
+    }), (0, a.jsx)(i.ModalFooter, {
+      children: (0, a.jsx)(i.Button, {
         disabled: X,
         onClick: function() {
           if (!X) {
             if (z) {
               let [e, t] = es();
               f.PreloadedUserSettingsActionCreators.updateAsync("broadcast", l => {
-                l.allowedGuildIds = e, l.allowedUserIds = t, l.allowFriends = i.BoolValue.create({
-                  value: w
-                }), l.autoBroadcast = i.BoolValue.create({
-                  value: G
-                }), et(), C()
+                l.allowedGuildIds = e, l.allowedUserIds = t, l.allowFriends = o.BoolValue.create({
+                  value: O
+                }), l.autoBroadcast = o.BoolValue.create({
+                  value: j
+                }), et(), D()
               }, f.UserSettingsDelay.INFREQUENT_USER_ACTION);
               return
             }
-            et(), C()
+            et(), D()
           }
         },
         children: l

@@ -14,8 +14,8 @@ var s = n("414456"),
   u = n("564875"),
   d = n("368874"),
   c = n("589333"),
-  E = n("782340"),
-  f = n("635577"),
+  f = n("782340"),
+  E = n("635577"),
   _ = n("926622");
 let h = e => {
   let {
@@ -25,15 +25,15 @@ let h = e => {
     inModal: r
   } = e;
   return (0, a.jsxs)("div", {
-    className: i(f.row, _.marginBottom8, {
-      [f.inModal]: r
+    className: i(E.row, _.marginBottom8, {
+      [E.inModal]: r
     }),
     children: [(0, a.jsx)("div", {
-      className: f.iconContainer,
+      className: E.iconContainer,
       children: s
     }), (0, a.jsxs)("div", {
       children: [(0, a.jsx)(l.Text, {
-        className: f.header,
+        className: E.header,
         variant: "text-sm/bold",
         color: "header-primary",
         children: t
@@ -48,16 +48,16 @@ let h = e => {
 var C = e => {
   let {
     inModal: t
-  } = e, n = (0, d.useAgeSpecificText)(E.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_INCLUDED_HEADER_TEEN, E.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_INCLUDED_HEADER_PARENT), s = (0, d.useAgeSpecificText)(E.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_HEADER_TEEN, E.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_HEADER_PARENT), i = (0, d.useAgeSpecificText)(E.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_HEADER_TEEN, E.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_HEADER_PARENT), _ = (0, d.useAgeSpecificText)(E.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_DESCRIPTION_TEEN, E.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_DESCRIPTION_PARENT);
+  } = e, n = (0, d.useAgeSpecificText)(f.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_INCLUDED_HEADER_TEEN, f.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_INCLUDED_HEADER_PARENT), s = (0, d.useAgeSpecificText)(f.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_HEADER_TEEN, f.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_HEADER_PARENT), i = (0, d.useAgeSpecificText)(f.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_HEADER_TEEN, f.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_HEADER_PARENT), _ = (0, d.useAgeSpecificText)(f.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_DESCRIPTION_TEEN, f.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_EXCLUDED_CONTENT_DESCRIPTION_PARENT);
   return (0, a.jsxs)("div", {
     children: [(0, a.jsx)(l.Text, {
-      className: f.groupHeader,
+      className: E.groupHeader,
       variant: "text-xxs/bold",
       color: "header-secondary",
       children: n
     }), (0, a.jsx)(h, {
-      header: E.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_FRIEND_ADD_HEADER,
-      description: E.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_FRIEND_ADD_DESCRIPTION,
+      header: f.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_FRIEND_ADD_HEADER,
+      description: f.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_FRIEND_ADD_DESCRIPTION,
       icon: (0, a.jsx)(u.default, {
         width: 20,
         height: 20,
@@ -65,8 +65,8 @@ var C = e => {
       }),
       inModal: t
     }), (0, a.jsx)(h, {
-      header: E.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_GUILD_PARTICIPATION_HEADER,
-      description: E.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_GUILD_PARTICIPATION_DESCRIPTION,
+      header: f.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_GUILD_PARTICIPATION_HEADER,
+      description: f.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_GUILD_PARTICIPATION_DESCRIPTION,
       icon: (0, a.jsx)(o.default, {
         width: 20,
         height: 20,
@@ -74,8 +74,8 @@ var C = e => {
       }),
       inModal: t
     }), (0, a.jsx)(h, {
-      header: E.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_USERS_MESSAGED_HEADER,
-      description: E.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_USERS_MESSAGED_DESCRIPTION,
+      header: f.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_USERS_MESSAGED_HEADER,
+      description: f.default.Messages.FAMILY_CENTER_DATA_CONFIRMATION_USERS_MESSAGED_DESCRIPTION,
       icon: (0, a.jsx)(c.default, {
         width: 20,
         height: 20,
@@ -83,7 +83,7 @@ var C = e => {
       }),
       inModal: t
     }), (0, a.jsx)(l.Text, {
-      className: f.groupHeader,
+      className: E.groupHeader,
       variant: "text-xxs/bold",
       color: "header-secondary",
       children: s

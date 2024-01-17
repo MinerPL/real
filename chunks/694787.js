@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   validateMultiAccountTokens: function() {
-    return E
+    return f
   },
   switchAccount: function() {
-    return f
+    return E
   },
   removeAccount: function() {
     return _
@@ -20,7 +20,7 @@ var a = n("171718"),
   d = n("49111");
 let c = new r.default("MultiAccountActionCreators");
 
-function E() {
+function f() {
   let e = o.default.getId(),
     t = u.default.getUsers();
   t.forEach(async t => {
@@ -65,7 +65,7 @@ function E() {
   })
 }
 
-function f(e, t) {
+function E(e, t) {
   c.log("Switching account to ".concat(e), {
     switchSynchronously: t
   });

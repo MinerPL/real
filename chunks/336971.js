@@ -8,8 +8,8 @@ var a = n("37983");
 n("884691");
 var r = n("414456"),
   s = n.n(r),
-  i = n("758710"),
-  l = n("981913"),
+  l = n("758710"),
+  i = n("981913"),
   u = n("782340"),
   o = n("407735");
 
@@ -20,10 +20,10 @@ function d(e) {
     onOpenPopout: r,
     ...d
   } = e, c = t ? u.default.Messages.POPOUT_RETURN : u.default.Messages.POPOUT_PLAYER;
-  return (0, a.jsx)(l.default, {
+  return (0, a.jsx)(i.default, {
     label: c,
     onClick: t ? n : r,
-    iconComponent: i.default,
+    iconComponent: l.default,
     iconClassName: s({
       [o.popIn]: t
     }),

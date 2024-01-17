@@ -13,8 +13,8 @@ n.r(t), n.d(t, {
 var l = n("37983");
 n("884691");
 var r = n("414456"),
-  i = n.n(r),
-  a = n("77078"),
+  a = n.n(r),
+  i = n("77078"),
   s = n("739926");
 let u = {
     TERTIARY: s.tertiary,
@@ -36,9 +36,9 @@ function c(e) {
     icon: c,
     onClick: d,
     disabled: f,
-    focusProps: E
+    focusProps: m
   } = e;
-  return (0, l.jsx)(a.Tooltip, {
+  return (0, l.jsx)(i.Tooltip, {
     text: n,
     shouldShow: !f,
     children: e => {
@@ -46,17 +46,17 @@ function c(e) {
         onClick: o,
         ...g
       } = e;
-      return (0, l.jsx)(a.Clickable, {
+      return (0, l.jsx)(i.Clickable, {
         ...g,
         "aria-label": n,
         "aria-disabled": f,
-        className: i(t, s.button, r, u, {
+        className: a(t, s.button, r, u, {
           [s.disabled]: f
         }),
         onClick: e => {
           null == o || o(), d(e)
         },
-        focusProps: E,
+        focusProps: m,
         children: c
       })
     }

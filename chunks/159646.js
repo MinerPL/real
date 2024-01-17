@@ -7,9 +7,9 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var n = s("414456"),
-  r = s.n(n),
-  l = s("77078"),
-  i = s("79112"),
+  l = s.n(n),
+  i = s("77078"),
+  r = s("79112"),
   u = s("423487"),
   o = s("701909"),
   d = s("719923"),
@@ -27,30 +27,30 @@ var n = s("414456"),
       S = (0, c.useIsInPremiumOfferExperience)();
     if (null == s) return null;
     let R = null != s ? d.default.getPremiumPlanItem(s) : null,
-      p = d.default.isBoostOnlySubscription(s);
-    if (p ? t = I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != R && (t = d.default.getDisplayPremiumType(R.planId)), null == t) return null;
-    let m = () => i.default.open(E.UserSettingsSections.SUBSCRIPTIONS),
+      m = d.default.isBoostOnlySubscription(s);
+    if (m ? t = I.default.Messages.PREMIUM_GUILD_SUBSCRIPTION : null != R && (t = d.default.getDisplayPremiumType(R.planId)), null == t) return null;
+    let p = () => r.default.open(E.UserSettingsSections.SUBSCRIPTIONS),
       N = null != R ? d.default.getSkuIdForPlan(R.planId) : null,
       A = N === _.PremiumSubscriptionSKUs.TIER_1;
-    return (0, a.jsxs)(l.Card, {
-      className: r(T.container, n, {
+    return (0, a.jsxs)(i.Card, {
+      className: l(T.container, n, {
         [T.lightTextLink]: f,
         [T.centerText]: S
       }),
-      type: l.Card.Types.CUSTOM,
+      type: i.Card.Types.CUSTOM,
       children: [(0, a.jsx)(u.default, {
-        className: r(T.icon, {
+        className: l(T.icon, {
           [T.lightThemeColorOnly]: S || f
         })
-      }), (0, a.jsx)(l.Text, {
+      }), (0, a.jsx)(i.Text, {
         variant: "text-sm/medium",
         color: S || f ? "always-white" : "text-normal",
         children: A ? I.default.Messages.PREMIUM_SUBSCRIPTION_TIER_1_DEPRECATION.format({
           helpdeskArticle: o.default.getArticleURL(E.HelpdeskArticles.PREMIUM_DETAILS),
-          onSubscriptionsClick: m
+          onSubscriptionsClick: p
         }) : I.default.Messages.PREMIUM_SUBSCRIPTION_MANAGE_YOURS_LINK.format({
           subscriptionName: t,
-          onSubscriptionsClick: m
+          onSubscriptionsClick: p
         })
       })]
     })

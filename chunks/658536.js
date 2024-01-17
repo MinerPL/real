@@ -4,51 +4,51 @@ n.r(t), n.d(t, {
     return f
   }
 }), n("222007");
-var i = n("913144"),
-  a = n("689988"),
+var a = n("913144"),
+  i = n("689988"),
   l = n("26989"),
-  s = n("697218"),
+  d = n("697218"),
   u = n("509");
-let d = null,
+let s = null,
   r = () => {
     let e = l.default.getCommunicationDisabledUserMap();
     Object.keys(e).forEach(t => {
       let n = (0, l.getGuildIdFromCommunicationDisabledUserKey)(t),
-        i = (0, l.getUserIdFromCommunicationDisabledUserKey)(t),
-        a = e[t];
-      !(0, u.isCommunicationDisabled)(a) && o(n, i)
+        a = (0, l.getUserIdFromCommunicationDisabledUserKey)(t),
+        i = e[t];
+      !(0, u.isCommunicationDisabled)(i) && o(n, a)
     })
   },
   o = (e, t) => {
-    var n, a, d, r, o, c;
+    var n, i, s, r, o, c;
     let f = l.default.getMember(e, t),
-      p = s.default.getUser(t);
-    if (null == f || null == p || (0, u.isMemberCommunicationDisabled)(f)) return;
-    let m = {
+      g = d.default.getUser(t);
+    if (null == f || null == g || (0, u.isMemberCommunicationDisabled)(f)) return;
+    let p = {
       ...f,
       guildId: e,
-      nick: null !== (n = f.nick) && void 0 !== n ? n : p.username,
-      avatar: null !== (a = f.avatar) && void 0 !== a ? a : void 0,
-      premiumSince: null !== (d = f.premiumSince) && void 0 !== d ? d : void 0,
+      nick: null !== (n = f.nick) && void 0 !== n ? n : g.username,
+      avatar: null !== (i = f.avatar) && void 0 !== i ? i : void 0,
+      premiumSince: null !== (s = f.premiumSince) && void 0 !== s ? s : void 0,
       isPending: null !== (r = f.isPending) && void 0 !== r && r,
       user: {
-        ...p,
-        email: null !== (o = p.email) && void 0 !== o ? o : void 0,
-        phone: null !== (c = p.phone) && void 0 !== c ? c : void 0
+        ...g,
+        email: null !== (o = g.email) && void 0 !== o ? o : void 0,
+        phone: null !== (c = g.phone) && void 0 !== c ? c : void 0
       },
       communicationDisabledUntil: null
     };
-    i.default.dispatch({
+    a.default.dispatch({
       type: "GUILD_MEMBER_UPDATE",
-      ...m
+      ...p
     })
   };
-class c extends a.default {
+class c extends i.default {
   _initialize() {
-    d = setInterval(() => r(), 1e4)
+    s = setInterval(() => r(), 1e4)
   }
   _terminate() {
-    clearInterval(d)
+    clearInterval(s)
   }
   constructor(...e) {
     super(...e), this.clearGuildMemberTimeout = o

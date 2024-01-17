@@ -13,35 +13,35 @@ n.r(t), n.d(t, {
     return f
   }
 }), n("808653");
-var a = n("866227"),
-  s = n.n(a),
-  l = n("651693"),
+var s = n("866227"),
+  l = n.n(s),
+  a = n("651693"),
   i = n("908539"),
   r = n("170213"),
   o = n("894488");
 
 function u(e) {
-  return s().to(s(e))
+  return l().to(l(e))
 }
 
 function d(e) {
   var t, n;
-  return (0, l.isImageFile)(e.filename) ? "".concat(o.SPOILER_ATTACHMENT_PREFIX).concat(null !== (t = e.filename) && void 0 !== t ? t : ".png") : null !== (n = e.filename) && void 0 !== n ? n : ""
+  return (0, a.isImageFile)(e.filename) ? "".concat(o.SPOILER_ATTACHMENT_PREFIX).concat(null !== (t = e.filename) && void 0 !== t ? t : ".png") : null !== (n = e.filename) && void 0 !== n ? n : ""
 }
 
 function c(e) {
-  var t, n, a, s;
+  var t, n, s, l;
   if (null == e.fields) return;
-  let l = e.fields.reduce((e, t) => (e[t.rawName] = t.rawValue, e), {});
+  let a = e.fields.reduce((e, t) => (e[t.rawName] = t.rawValue, e), {});
   return {
-    header: null !== (t = l[r.SafetySystemNotificationEmbedKeys.HEADER]) && void 0 !== t ? t : "",
-    icon: l[r.SafetySystemNotificationEmbedKeys.ICON_TYPE],
-    body: null !== (n = l[r.SafetySystemNotificationEmbedKeys.BODY]) && void 0 !== n ? n : "",
-    ctas: (null !== (a = l[r.SafetySystemNotificationEmbedKeys.CTAS]) && void 0 !== a ? a : "").split(",").filter(e => "" !== e),
-    timestamp: parseFloat(null !== (s = l[r.SafetySystemNotificationEmbedKeys.TIMESTAMP]) && void 0 !== s ? s : 0),
-    theme: l[r.SafetySystemNotificationEmbedKeys.THEME],
-    learn_more_link: l[r.SafetySystemNotificationEmbedKeys.LEARN_MORE_LINK],
-    classification_id: l[r.SafetySystemNotificationEmbedKeys.CLASSIFICATION_ID]
+    header: null !== (t = a[r.SafetySystemNotificationEmbedKeys.HEADER]) && void 0 !== t ? t : "",
+    icon: a[r.SafetySystemNotificationEmbedKeys.ICON_TYPE],
+    body: null !== (n = a[r.SafetySystemNotificationEmbedKeys.BODY]) && void 0 !== n ? n : "",
+    ctas: (null !== (s = a[r.SafetySystemNotificationEmbedKeys.CTAS]) && void 0 !== s ? s : "").split(",").filter(e => "" !== e),
+    timestamp: parseFloat(null !== (l = a[r.SafetySystemNotificationEmbedKeys.TIMESTAMP]) && void 0 !== l ? l : 0),
+    theme: a[r.SafetySystemNotificationEmbedKeys.THEME],
+    learn_more_link: a[r.SafetySystemNotificationEmbedKeys.LEARN_MORE_LINK],
+    classification_id: a[r.SafetySystemNotificationEmbedKeys.CLASSIFICATION_ID]
   }
 }
 

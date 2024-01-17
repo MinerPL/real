@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   CREATE_GUILD_EVENT_CORE_PERMISSIONS: function() {
     return r
   },
@@ -10,9 +10,9 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var a = n("316693"),
-  l = n("923510"),
-  i = n("49111");
+var n = a("316693"),
+  l = a("923510"),
+  i = a("49111");
 let r = i.Permissions.VIEW_CHANNEL,
-  s = a.default.combine(r, i.Permissions.CONNECT),
-  u = a.default.combine(r, l.MODERATE_STAGE_CHANNEL_PERMISSIONS)
+  s = n.default.combine(r, i.Permissions.CONNECT),
+  u = n.default.combine(r, l.MODERATE_STAGE_CHANNEL_PERMISSIONS)

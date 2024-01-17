@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   LAST_HIDDEN_CHANNEL_NOTICE: function() {
-    return E
+    return f
   },
   CHANNEL_NOTICES: function() {
-    return f
+    return E
   },
   CHANNEL_NOTICE_STORES: function() {
     return _
@@ -19,8 +19,8 @@ var a = n("151426"),
   u = n("141162"),
   d = n("449008"),
   c = n("49111");
-let E = "lastHiddenChannelNotice",
-  f = [{
+let f = "lastHiddenChannelNotice",
+  E = [{
     type: c.ChannelNoticeTypes.GUILD_BOOSTING,
     store: l.default,
     dismissibleContentType: a.DismissibleContent.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION
@@ -54,4 +54,4 @@ let E = "lastHiddenChannelNotice",
     type: c.ChannelNoticeTypes.CLYDE_USER_NUX,
     dismissibleContentType: a.DismissibleContent.CHANNEL_NOTICE_CLYDE_NUX
   }],
-  _ = f.map(e => e.store).filter(d.isNotNullish)
+  _ = E.map(e => e.store).filter(d.isNotNullish)

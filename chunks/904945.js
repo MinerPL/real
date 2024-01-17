@@ -18,14 +18,14 @@ var s = n("974667"),
       statusSections: t,
       renderRow: n,
       searchQuery: c,
-      sectionFilter: E,
-      useReducedMotion: f
+      sectionFilter: f,
+      useReducedMotion: E
     } = e, _ = (0, i.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), h = (0, s.default)({
       id: "people",
       isEnabled: _,
       async scrollToStart() {},
       async scrollToEnd() {}
-    }), C = E !== u.FriendsSections.ONLINE && E !== u.FriendsSections.ALL, T = f || "" !== c || C, I = t.map((e, t) => T ? (0, a.jsx)("div", {
+    }), C = f !== u.FriendsSections.ONLINE && f !== u.FriendsSections.ALL, I = E || "" !== c || C, T = t.map((e, t) => I ? (0, a.jsx)("div", {
       children: e.map(n)
     }, t) : (0, a.jsx)(l.default, {
       transitionAppear: !1,
@@ -44,7 +44,7 @@ var s = n("974667"),
             ref: t,
             className: d.peopleList,
             ...n,
-            children: I
+            children: T
           })
         }
       })

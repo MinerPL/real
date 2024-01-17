@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   UserSafetyEducationReportingCoachmark: function() {
-    return E
+    return f
   }
 });
 var a = n("37983");
@@ -14,11 +14,11 @@ var s = n("65597"),
   u = n("994428"),
   d = n("782340"),
   c = n("564998");
-let E = e => {
+let f = e => {
   let {
     markAsDismissed: t
-  } = e, n = (0, s.default)([i.default], () => i.default.useReducedMotion), E = (0, o.useCanSeeSafetyEducationReportingCoachmark)();
-  return E ? (0, a.jsx)(l.default, {
+  } = e, n = (0, s.default)([i.default], () => i.default.useReducedMotion), f = (0, o.useCanSeeSafetyEducationReportingCoachmark)();
+  return f ? (0, a.jsx)(l.default, {
     asset: (0, a.jsx)(r.default, {
       src: "https://cdn.discordapp.com/attachments/1063579271815245944/1095089224421740695/CEC_Reporting_Animation_v03_EN_1x1_Music_1.mp4",
       loop: !0,

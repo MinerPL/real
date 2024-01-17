@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
+u.r(e), u.d(e, {
   NoticeColors: function() {
-    return p
-  },
-  NoticeButton: function() {
     return _
   },
-  PrimaryCTANoticeButton: function() {
-    return m
-  },
-  NoticeButtonAnchor: function() {
+  NoticeButton: function() {
     return E
   },
+  PrimaryCTANoticeButton: function() {
+    return C
+  },
+  NoticeButtonAnchor: function() {
+    return T
+  },
   NoticeCloseButton: function() {
-    return I
+    return D
   },
   default: function() {
-    return h
+    return P
   }
 });
-var r = n("37983");
-n("884691");
-var i = n("414456"),
-  s = n.n(i),
-  l = n("394846"),
-  a = n("77078"),
-  o = n("945330"),
-  u = n("599110"),
-  c = n("49111"),
-  d = n("782340"),
-  f = n("105029");
-let p = Object.freeze({
+var r = u("37983");
+u("884691");
+var n = u("414456"),
+  i = u.n(n),
+  l = u("394846"),
+  o = u("77078"),
+  c = u("945330"),
+  a = u("599110"),
+  d = u("49111"),
+  s = u("782340"),
+  f = u("105029");
+let _ = Object.freeze({
   DEFAULT: f.colorDefault,
   NEUTRAL: f.colorNeutral,
   BRAND: f.colorBrand,
@@ -46,76 +46,76 @@ let p = Object.freeze({
   PREMIUM_TIER_2: f.colorPremiumTier2
 });
 
-function _(e) {
+function E(t) {
   let {
-    children: t,
-    className: n,
-    minor: i = !1,
+    children: e,
+    className: u,
+    minor: n = !1,
     ...l
-  } = e;
-  return (0, r.jsx)(a.FocusRing, {
+  } = t;
+  return (0, r.jsx)(o.FocusRing, {
     children: (0, r.jsx)("button", {
-      className: s(f.button, n, {
-        [f.buttonMinor]: i
+      className: i(f.button, u, {
+        [f.buttonMinor]: n
       }),
       ...l,
-      children: t
+      children: e
     })
   })
 }
 
-function m(e) {
+function C(t) {
   let {
-    children: t,
-    noticeType: n,
-    additionalTrackingProps: i,
-    ...s
-  } = e;
-  return (0, r.jsx)(_, {
-    ...s,
-    onClick: e => {
-      var t, r;
-      null != s.onClick && s.onClick(e), t = n, r = i, null != t && u.default.track(c.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
-        notice_type: t,
+    children: e,
+    noticeType: u,
+    additionalTrackingProps: n,
+    ...i
+  } = t;
+  return (0, r.jsx)(E, {
+    ...i,
+    onClick: t => {
+      var e, r;
+      null != i.onClick && i.onClick(t), e = u, r = n, null != e && a.default.track(d.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
+        notice_type: e,
         ...r
       })
     },
-    children: t
+    children: e
   })
 }
 
-function E(e) {
+function T(t) {
   let {
-    children: t,
-    href: n,
-    ...i
-  } = e;
-  return (0, r.jsx)(a.Anchor, {
-    ...i,
+    children: e,
+    href: u,
+    ...n
+  } = t;
+  return (0, r.jsx)(o.Anchor, {
+    ...n,
     className: f.button,
-    href: n,
-    children: t
+    href: u,
+    children: e
   })
 }
 
-function I(e) {
+function D(t) {
   let {
-    onClick: t,
-    noticeType: n
-  } = e;
-  return (0, r.jsx)(a.Clickable, {
+    onClick: e,
+    noticeType: u
+  } = t;
+  return (0, r.jsx)(o.Clickable, {
     focusProps: {
       offset: 6
     },
     className: f.closeButton,
     onClick: () => {
-      var e;
-      t(), null != (e = n) && u.default.track(c.AnalyticEvents.APP_NOTICE_CLOSED, {
-        notice_type: e
+      var t;
+      e(), null != (t = u) && a.default.track(d.AnalyticEvents.APP_NOTICE_CLOSED, {
+        notice_type: t
       })
     },
-    "aria-label": d.default.Messages.DISMISS,
-    children: (0, r.jsx)(o.default, {
+    "aria-label": s.default.Messages.DISMISS,
+    children: (0, r.jsx)(c.default, {
       className: f.closeIcon,
       width: 18,
       height: 18
@@ -123,18 +123,18 @@ function I(e) {
   })
 }
 
-function h(e) {
+function P(t) {
   let {
-    color: t = p.DEFAULT,
-    className: n,
-    style: i,
-    children: a
-  } = e;
+    color: e = _.DEFAULT,
+    className: u,
+    style: n,
+    children: o
+  } = t;
   return (0, r.jsx)("div", {
-    className: s(f.notice, {
+    className: i(f.notice, {
       [f.isMobile]: l.isMobile
-    }, n, t),
-    style: null != i ? i : void 0,
-    children: a
+    }, u, e),
+    style: null != n ? n : void 0,
+    children: o
   })
 }

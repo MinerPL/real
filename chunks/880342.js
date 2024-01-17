@@ -7,8 +7,8 @@ t.r(n), t.d(n, {
     return o
   }
 });
-var l = t("862205");
-let u = (0, l.createExperiment)({
+var u = t("862205");
+let l = (0, u.createExperiment)({
   kind: "user",
   id: "2023-11_soundboard_recently_heard_frequently_played",
   label: "Soundboard Recently Heard & Frequently Played",
@@ -45,7 +45,7 @@ function i(e) {
     location: n,
     autoTrackExposure: t
   } = e;
-  return u.getCurrentConfig({
+  return l.getCurrentConfig({
     location: n
   }, {
     autoTrackExposure: t
@@ -57,7 +57,7 @@ function o(e) {
     autoTrackExposure: n,
     location: t
   } = e;
-  return u.useExperiment({
+  return l.useExperiment({
     location: t
   }, {
     autoTrackExposure: n

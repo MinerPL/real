@@ -16,8 +16,8 @@ var a = n("37983"),
   u = n("599110"),
   d = n("50885"),
   c = n("49111"),
-  E = n("782340"),
-  f = n("646224");
+  f = n("782340"),
+  E = n("646224");
 let _ = "Activity Encourages Hardware Acceleration";
 
 function h(e) {
@@ -25,13 +25,13 @@ function h(e) {
   let {
     applicationId: n,
     ...h
-  } = e, [C, T] = s.useState(!1), [I] = (0, r.default)([n]), S = null !== (t = null == I ? void 0 : I.name) && void 0 !== t ? t : "This Activity";
+  } = e, [C, I] = s.useState(!1), [T] = (0, r.default)([n]), S = null !== (t = null == T ? void 0 : T.name) && void 0 !== t ? t : "This Activity";
   s.useEffect(() => {
     u.default.track(c.AnalyticEvents.OPEN_MODAL, {
       type: _
     })
   }, []);
-  let N = () => {
+  let m = () => {
     let e = "temporary";
     C && (e = "permanent", l.default.updatedUnsyncedSettings({
       disableActivityHardwareAccelerationPrompt: !0
@@ -41,44 +41,44 @@ function h(e) {
     }), h.onClose()
   };
   return (0, a.jsxs)(i.ModalRoot, {
-    className: f.root,
-    "aria-label": E.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE,
+    className: E.root,
+    "aria-label": f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE,
     ...h,
     children: [(0, a.jsxs)(i.ModalHeader, {
       separator: !1,
       children: [(0, a.jsx)(i.Text, {
-        className: f.header,
+        className: E.header,
         variant: "text-lg/normal",
-        children: E.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE
+        children: f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE
       }), (0, a.jsx)(i.ModalCloseButton, {
-        onClick: N,
-        className: f.closeButton
+        onClick: m,
+        className: E.closeButton
       })]
     }), (0, a.jsx)(i.ModalContent, {
-      className: f.content,
+      className: E.content,
       children: (0, a.jsx)(i.Text, {
         variant: "text-md/normal",
-        className: f.ratingBody,
-        children: E.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_BODY.format({
+        className: E.ratingBody,
+        children: f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_BODY.format({
           applicationName: S
         })
       })
     }), (0, a.jsxs)(i.ModalFooter, {
-      className: f.footer,
+      className: E.footer,
       direction: o.default.Direction.HORIZONTAL,
       children: [(0, a.jsx)(i.Checkbox, {
         type: i.Checkbox.Types.INVERTED,
         size: 18,
         value: C,
-        onChange: () => T(!C),
+        onChange: () => I(!C),
         children: (0, a.jsx)(i.Text, {
           variant: "text-sm/normal",
-          children: E.default.Messages.DONT_SHOW_AGAIN
+          children: f.default.Messages.DONT_SHOW_AGAIN
         })
       }), (0, a.jsx)(i.Button, {
         color: i.Button.Colors.PRIMARY,
-        onClick: N,
-        children: E.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_NO_THANKS
+        onClick: m,
+        children: f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_NO_THANKS
       }), (0, a.jsx)(i.Button, {
         color: i.Button.Colors.BRAND,
         onClick: () => {
@@ -86,7 +86,7 @@ function h(e) {
             application_id: n
           }), d.default.setEnableHardwareAcceleration(!0)
         },
-        children: E.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_TURN_IT_ON
+        children: f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_TURN_IT_ON
       })]
     })]
   })

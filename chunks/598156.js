@@ -13,19 +13,19 @@ var a = n("37983"),
   u = n("446674"),
   d = n("151426"),
   c = n("77078"),
-  E = n("939488"),
-  f = n("737960"),
+  f = n("939488"),
+  E = n("737960"),
   _ = n("74456"),
   h = n("206230"),
   C = n("302437"),
-  T = n("665182"),
-  I = n("442174"),
+  I = n("665182"),
+  T = n("442174"),
   S = n("69927"),
-  N = n("10641"),
-  A = n("384997"),
-  p = n("539938"),
-  m = n("155084"),
-  g = n("393414"),
+  m = n("10641"),
+  p = n("384997"),
+  A = n("539938"),
+  g = n("155084"),
+  N = n("393414"),
   R = n("582713"),
   O = n("970366"),
   L = n("5667"),
@@ -39,11 +39,11 @@ var a = n("37983"),
   U = n("439932"),
   G = n("288518"),
   j = n("486503"),
-  k = n("916650"),
-  w = n("803524"),
+  w = n("916650"),
+  k = n("803524"),
   F = n("7643"),
-  B = n("785770"),
-  H = n("260488"),
+  H = n("785770"),
+  B = n("260488"),
   V = n("500526"),
   Y = n("452229"),
   W = n("196986"),
@@ -58,27 +58,27 @@ var a = n("37983"),
 
 function ee() {
   let e = s.useRef(null),
-    t = (0, H.useMessageRequestsCount)(),
+    t = (0, B.useMessageRequestsCount)(),
     n = (0, V.default)(),
-    i = (0, w.useListHasSingleMessageRequest)(),
+    i = (0, k.useListHasSingleMessageRequest)(),
     u = (0, _.useIsRejectAllMessageRequestsEnabled)(),
     d = s.useCallback(() => {
       (0, c.showToast)((0, c.createToast)(X.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, c.ToastType.FAILURE))
     }, []),
     {
-      rejectAll: E
+      rejectAll: f
     } = (0, F.useMessageRequestActions)({
       onError: d
     }),
-    f = (0, C.default)("message-requests-list"),
+    E = (0, C.default)("message-requests-list"),
     {
       channelId: h
-    } = (0, B.useMessageRequestSidebarState)(),
-    T = s.useCallback(() => {
+    } = (0, H.useMessageRequestSidebarState)(),
+    I = s.useCallback(() => {
       let e = n.map(e => e.channel.id);
-      E(e)
-    }, [n, E]),
-    I = s.useCallback(e => {
+      f(e)
+    }, [n, f]),
+    T = s.useCallback(e => {
       var t, s;
       let {
         row: r
@@ -106,7 +106,7 @@ function ee() {
           tag: "span",
           children: "•"
         }), (0, a.jsx)(c.Button, {
-          onClick: T,
+          onClick: I,
           look: c.ButtonLooks.LINK,
           color: c.ButtonColors.LINK,
           size: c.ButtonSizes.SMALL,
@@ -115,13 +115,13 @@ function ee() {
           children: X.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
-    }, "title"), [t, T, u]);
-  return (n.length !== t && m.default.increment({
+    }, "title"), [t, I, u]);
+  return (n.length !== t && g.default.increment({
     name: o.MetricEvents.MESSAGE_REQUEST_COUNT_DRIFT
   }), 0 === n.length) ? (0, a.jsx)(W.default, {
     section: q.MessageRequestSections.REQUESTS
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
-    navigator: f,
+    navigator: E,
     children: (0, a.jsx)(r.ListNavigatorContainer, {
       children: t => {
         let {
@@ -142,7 +142,7 @@ function ee() {
           sectionHeight: q.LIST_SECTION_HEIGHT,
           rowHeight: q.LIST_ROW_HEIGHT,
           renderSection: S,
-          renderRow: I,
+          renderRow: T,
           sections: [n.length],
           chunkSize: 30,
           fade: !0,
@@ -160,11 +160,11 @@ function et(e) {
   } = e, s = (0, u.useStateFromStores)([M.default], () => M.default.getSidebarState(M.MESSAGE_REQUESTS_BASE_CHANNEL_ID)), i = (0, u.useStateFromStores)([P.default], () => P.default.getChannel(null == s ? void 0 : s.channelId));
   if (null == s || s.type !== R.SidebarType.VIEW_MESSAGE_REQUEST || null == i || !i.isPrivate()) return null;
   let l = t - Q.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
-  return (0, a.jsx)(T.default, {
-    sidebarType: T.ChatSidebarType.MessageRequestSidebar,
+  return (0, a.jsx)(I.default, {
+    sidebarType: I.ChatSidebarType.MessageRequestSidebar,
     maxWidth: l,
     onWidthChange: n,
-    children: (0, a.jsx)(I.default, {
+    children: (0, a.jsx)(T.default, {
       channel: i,
       baseChannelId: M.MESSAGE_REQUESTS_BASE_CHANNEL_ID
     })
@@ -186,12 +186,12 @@ let en = function(e) {
     })
   },
   ea = e => {
-    let t = (0, k.default)(),
+    let t = (0, w.default)(),
       n = () => D.default.hasLayers() || (0, c.hasAnyModalOpen)(),
       i = (0, u.useStateFromStores)([h.default], () => h.default.useReducedMotion);
     return s.useEffect(() => {
-      (0, N.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
-    }, []), (0, a.jsx)(A.default, {
+      (0, m.requestMarkDismissibleContentAsShown)(d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK)
+    }, []), (0, a.jsx)(p.default, {
       contentTypes: [d.DismissibleContent.MESSAGE_REQUEST_SETTINGS_COACH_MARK],
       children: s => {
         let {
@@ -208,7 +208,7 @@ let en = function(e) {
             secondaryButtonCTA: X.default.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
             className: J.messageRequestCoachmark,
             onClick: e => {
-              e.stopPropagation(), (0, g.transitionTo)(Q.Routes.SETTINGS("privacy-and-safety"))
+              e.stopPropagation(), (0, N.transitionTo)(Q.Routes.SETTINGS("privacy-and-safety"))
             },
             markAsDismissed: r,
             caretPosition: L.CaretPosition.TOP_CENTER,
@@ -232,20 +232,20 @@ function es(e) {
   } = e;
   return t === q.MessageRequestSections.SPAM ? (0, a.jsx)(z.default, {}) : (0, a.jsx)(ee, {})
 }
-let ei = (0, f.default)(function(e) {
+let ei = (0, E.default)(function(e) {
   let {
     width: t
-  } = e, n = (0, H.useMessageRequestsCount)();
+  } = e, n = (0, B.useMessageRequestsCount)();
   s.useEffect(() => {
-    E.setHomeLink(Q.Routes.MESSAGE_REQUESTS), (0, O.trackAppUIViewed)("message-requests"), b.default.track(Q.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
+    f.setHomeLink(Q.Routes.MESSAGE_REQUESTS), (0, O.trackAppUIViewed)("message-requests"), b.default.track(Q.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
       num_message_requests: n
-    }), m.default.increment({
+    }), g.default.increment({
       name: o.MetricEvents.MESSAGE_REQUEST_VIEW
     })
   }, []);
   let i = (0, u.useStateFromStores)([v.default], () => v.default.theme),
     r = (0, Y.useSpamMessageRequestCount)(),
-    [d, f] = s.useState(!1),
+    [d, E] = s.useState(!1),
     _ = (0, u.useStateFromStores)([M.default, G.default, j.default], () => {
       let e = M.default.getSidebarState(M.MESSAGE_REQUESTS_BASE_CHANNEL_ID);
       return null != e && e.type === R.SidebarType.VIEW_MESSAGE_REQUEST && (G.default.isMessageRequest(e.channelId) || j.default.isSpam(e.channelId))
@@ -259,17 +259,17 @@ let ei = (0, f.default)(function(e) {
         [$.threadSidebarOpen]: _,
         [$.threadSidebarFloating]: _ && d
       }),
-      children: [(0, a.jsxs)(p.default, {
+      children: [(0, a.jsxs)(A.default, {
         className: (0, U.getThemeClass)(i),
         toolbar: !0,
-        children: [(0, a.jsx)(p.default.Icon, {
+        children: [(0, a.jsx)(A.default.Icon, {
           icon: y.default,
           "aria-hidden": !0
         }), (0, a.jsx)(ea, {
-          children: (0, a.jsx)(p.default.Title, {
+          children: (0, a.jsx)(A.default.Title, {
             children: X.default.Messages.MESSAGE_REQUESTS
           })
-        }), (0, a.jsx)(p.default.Divider, {}), (0, a.jsxs)(c.TabBar, {
+        }), (0, a.jsx)(A.default.Divider, {}), (0, a.jsxs)(c.TabBar, {
           "aria-label": X.default.Messages.MESSAGE_REQUESTS,
           selectedItem: h,
           type: "top-pill",
@@ -298,7 +298,7 @@ let ei = (0, f.default)(function(e) {
     }), _ && (0, a.jsx)(et, {
       pageWidth: t,
       onSidebarResize: (e, t) => {
-        f(t)
+        E(t)
       }
     })]
   })

@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return T
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("414456"),
-  l = n.n(s),
+var l = n("414456"),
+  a = n.n(l),
   i = n("77078"),
   r = n("574073"),
   o = n("79798"),
@@ -15,65 +15,65 @@ var s = n("414456"),
   d = n("304198"),
   c = n("250375"),
   f = n("988268"),
-  m = n("782340"),
-  E = n("413362");
+  E = n("782340"),
+  _ = n("413362");
 
-function _(e) {
+function T(e) {
   let {
     message: t,
     compact: n,
-    usernameHook: s
-  } = e, _ = (0, r.default)(t), h = s(_), {
-    avatarSrc: p,
+    usernameHook: l
+  } = e, T = (0, r.default)(t), I = l(T), {
+    avatarSrc: m,
     eventHandlers: {
-      onMouseEnter: I,
-      onMouseLeave: T
+      onMouseEnter: N,
+      onMouseLeave: p
     }
   } = (0, c.useAutomodAvatar)(!0);
-  return (0, a.jsx)("div", {
-    onMouseEnter: I,
-    onMouseLeave: T,
-    children: (0, a.jsx)(d.default, {
-      className: l(E.mainContainer, {
-        [E.compact]: n
+  return (0, s.jsx)("div", {
+    onMouseEnter: N,
+    onMouseLeave: p,
+    children: (0, s.jsx)(d.default, {
+      className: a(_.mainContainer, {
+        [_.compact]: n
       }),
-      iconNode: n ? null : (0, a.jsx)(c.AutomodAvatar, {
-        src: p
+      iconNode: n ? null : (0, s.jsx)(c.AutomodAvatar, {
+        src: m
       }),
-      iconContainerClassName: E.iconContainer,
+      iconContainerClassName: _.iconContainer,
       compact: n,
-      children: (0, a.jsxs)("div", {
-        className: l(E.content, {
-          [E.compact]: n
+      children: (0, s.jsxs)("div", {
+        className: a(_.content, {
+          [_.compact]: n
         }),
-        children: [(0, a.jsx)(u.BaseMessageHeader, {
+        children: [(0, s.jsx)(u.BaseMessageHeader, {
           message: t,
-          messageClassname: E.spanCorrection,
-          className: l(E.usernameContainer, E.spanCorrection, {
-            [E.compact]: n
+          messageClassname: _.spanCorrection,
+          className: a(_.usernameContainer, _.spanCorrection, {
+            [_.compact]: n
           }),
-          username: (0, a.jsxs)("div", {
-            className: E.spanCorrection,
-            children: [(0, a.jsx)(i.Text, {
+          username: (0, s.jsxs)("div", {
+            className: _.spanCorrection,
+            children: [(0, s.jsx)(i.Text, {
               variant: "text-md/normal",
               color: "text-brand",
               tag: "span",
-              className: E.username,
-              children: m.default.Messages.GUILD_AUTOMOD_USERNAME
-            }), (0, a.jsx)(o.default, {
+              className: _.username,
+              children: E.default.Messages.GUILD_AUTOMOD_USERNAME
+            }), (0, s.jsx)(o.default, {
               type: f.BotTagTypes.SYSTEM_DM,
-              className: E.systemTag
+              className: _.systemTag
             })]
           }),
           compact: n,
           showTimestamp: !0
-        }), (0, a.jsx)("div", {
-          className: l(E.messageContent, {
-            [E.compact]: n
+        }), (0, s.jsx)("div", {
+          className: a(_.messageContent, {
+            [_.compact]: n
           }),
-          children: m.default.Messages.GUILD_REPORT_FALSE_ALARM_SYSTEM_MESSAGE_SHORT.format({
-            username: _.nick,
-            usernameHook: h
+          children: E.default.Messages.GUILD_REPORT_FALSE_ALARM_SYSTEM_MESSAGE_SHORT.format({
+            username: T.nick,
+            usernameHook: I
           })
         })]
       })

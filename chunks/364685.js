@@ -102,7 +102,7 @@ let v = 2,
       let t = s.findIndex(t => t.id === e.id); - 1 !== t ? s[t] = e : s.push(e), T = s
     }(t || n) && e.stickers.forEach(e => O(e))
   },
-  R = () => {
+  k = () => {
     I.forEach((e, t) => {
       let n = c.default.getGuild(t);
       null != n && e.forEach(e => b(e, n))
@@ -111,10 +111,10 @@ let v = 2,
     })
   };
 
-function V(e) {
+function R(e) {
   null != e.stickers && (e.stickers.forEach(t => O(t, !0, e)), A(e.id, e.stickers))
 }
-class k extends i.default.Store {
+class V extends i.default.Store {
   initialize() {
     this.waitFor(a.default, _.default, c.default)
   }
@@ -122,7 +122,7 @@ class k extends i.default.Store {
     return 0 !== v
   }
   get stickerMetadata() {
-    return N(), null == y && (y = new Map, R()), y
+    return N(), null == y && (y = new Map, k()), y
   }
   get hasLoadedStickerPacks() {
     return null != C && C + D > Date.now()
@@ -155,8 +155,8 @@ class k extends i.default.Store {
     return N(), I.get(e)
   }
 }
-k.displayName = "StickersStore";
-var M = new k(r.default, {
+V.displayName = "StickersStore";
+var M = new V(r.default, {
   BACKGROUND_SYNC: () => {
     y = null, p = new Map, I = new Map, v = 0
   },
@@ -164,13 +164,13 @@ var M = new k(r.default, {
     let {
       guilds: t
     } = e;
-    y = null, p = new Map, I = new Map, t.forEach(V), v = t.every(e => null != e.stickers) ? 1 : 0
+    y = null, p = new Map, I = new Map, t.forEach(R), v = t.every(e => null != e.stickers) ? 1 : 0
   },
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e;
-    !l.default.isLurking(t.id) && (V(t), 1 === v && null == t.stickers && null != t.stickerUpdates && (v = 0))
+    !l.default.isLurking(t.id) && (R(t), 1 === v && null == t.stickers && null != t.stickerUpdates && (v = 0))
   },
   GUILD_DELETE: function(e) {
     var t;

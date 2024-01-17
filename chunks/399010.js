@@ -33,7 +33,7 @@ var r = n("446674"),
   O = n("509065"),
   b = n("518916");
 let P = new l.default("ConnectionStore"),
-  R = new O.default(b.socket, (e, t) => {
+  k = new O.default(b.socket, (e, t) => {
     var n;
     e = null != e ? e : {
       type: "CHANNEL_UPDATES",
@@ -48,7 +48,7 @@ let P = new l.default("ConnectionStore"),
       });
     return e.channels.push(null != r ? r : s), e
   }, e => "CHANNEL_UPDATE" !== e),
-  V = new O.default(b.socket, (e, t) => ((e = null == e ? {
+  R = new O.default(b.socket, (e, t) => ((e = null == e ? {
     type: "SOUNDBOARD_SOUNDS_RECEIVED",
     updates: []
   } : e).updates.push({
@@ -64,7 +64,7 @@ let P = new l.default("ConnectionStore"),
       guildId: t.guild_id
     }))
   }), e), e => "SOUNDBOARD_SOUNDS" !== e),
-  k = new O.default(b.socket, (e, t) => ((e = null == e ? {
+  V = new O.default(b.socket, (e, t) => ((e = null == e ? {
     type: "PRESENCE_UPDATES",
     updates: []
   } : e).updates.push(t), e), e => "PRESENCE_UPDATE" !== e);
@@ -345,7 +345,7 @@ function M(e, t) {
       });
       break;
     case "CHANNEL_UPDATE":
-      R.add(t);
+      k.add(t);
       break;
     case "THREAD_CREATE":
     case "THREAD_UPDATE":
@@ -416,7 +416,7 @@ function M(e, t) {
       });
       break;
     case "SOUNDBOARD_SOUNDS":
-      V.add(t);
+      R.add(t);
       break;
     case "CHANNEL_RECIPIENT_ADD":
     case "CHANNEL_RECIPIENT_REMOVE":
@@ -610,17 +610,17 @@ function M(e, t) {
       });
       break;
     case "USER_SETTINGS_PROTO_UPDATE":
-      let k = (0, g.b64ToProtoWithType)(t.settings.type, t.settings.proto);
-      if (null == k) break;
-      if ("string" == typeof k) throw console.error("Invalid proto: |".concat(k, "| |").concat(t.settings.proto, "|")), console.error({
-        parsed: k,
+      let V = (0, g.b64ToProtoWithType)(t.settings.type, t.settings.proto);
+      if (null == V) break;
+      if ("string" == typeof V) throw console.error("Invalid proto: |".concat(V, "| |").concat(t.settings.proto, "|")), console.error({
+        parsed: V,
         wire: t.settings.proto,
         type: t.settings.type
       }), Error("UserSettingsProto must not be a string");
       w({
         type: "USER_SETTINGS_PROTO_UPDATE",
         settings: {
-          proto: k,
+          proto: V,
           type: t.settings.type
         },
         partial: t.partial
@@ -1680,7 +1680,7 @@ function x(e) {
     clientStatus: r,
     broadcast: a
   } = e;
-  k.add({
+  V.add({
     guildId: t,
     user: n,
     status: s,

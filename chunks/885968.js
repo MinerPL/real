@@ -1,98 +1,98 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return R
   }
 }), n("222007");
-var a = n("37983"),
-  s = n("884691"),
-  l = n("414456"),
-  i = n.n(l),
+var s = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  i = n.n(a),
   r = n("77078"),
   o = n("446674"),
   u = n("997289"),
   d = n("191225"),
   c = n("706508"),
   f = n("501260"),
-  m = n("698372"),
-  E = n("969380"),
-  _ = n("817039"),
-  h = n("141962"),
-  p = n("685665"),
-  I = n("653047"),
-  T = n("271938"),
-  g = n("824563"),
-  C = n("697218"),
-  S = n("811305"),
-  A = n("449008"),
-  N = n("954016"),
+  E = n("698372"),
+  _ = n("969380"),
+  T = n("817039"),
+  I = n("141962"),
+  m = n("685665"),
+  N = n("653047"),
+  p = n("271938"),
+  S = n("824563"),
+  A = n("697218"),
+  C = n("811305"),
+  h = n("449008"),
+  g = n("954016"),
   M = n("782340"),
-  v = n("502079");
+  O = n("502079");
 
-function x(e) {
+function R(e) {
   var t, n;
   let {
-    application: l,
-    activityInstance: x,
-    channelId: O,
-    guildId: L
-  } = e, [R, P] = s.useState(!1), {
-    analyticsLocations: y
-  } = (0, p.default)(), D = (0, u.useAnalyticsContext)(), {
-    containerRef: j,
-    isStacked: U
+    application: a,
+    activityInstance: R,
+    channelId: L,
+    guildId: v
+  } = e, [P, D] = l.useState(!1), {
+    analyticsLocations: x
+  } = (0, m.default)(), y = (0, u.useAnalyticsContext)(), {
+    containerRef: U,
+    isStacked: j
   } = function() {
-    let e = s.useRef(null),
-      [t, n] = s.useState(!1);
-    return s.useEffect(() => {
+    let e = l.useRef(null),
+      [t, n] = l.useState(!1);
+    return l.useEffect(() => {
       let t = new ResizeObserver(() => (function() {
           var t;
-          let a = null === (t = e.current) || void 0 === t ? void 0 : t.offsetWidth;
-          null != a && n(a < 512)
+          let s = null === (t = e.current) || void 0 === t ? void 0 : t.offsetWidth;
+          null != s && n(s < 512)
         })()),
-        a = e.current;
-      return null != a && t.observe(a), () => {
+        s = e.current;
+      return null != s && t.observe(s), () => {
         t.disconnect()
       }
     }, [e]), {
       containerRef: e,
       isStacked: t
     }
-  }(), b = (0, E.default)({
-    applicationId: l.id,
+  }(), b = (0, _.default)({
+    applicationId: a.id,
     size: 1024
-  }), G = (0, m.default)(), B = (0, o.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(O).find(e => e.instanceId === x.id)), k = (0, o.useStateFromStores)([T.default], () => T.default.getId()), w = null == B, H = null != B && B.userIds.has(k), F = w ? M.default.Messages.EMBEDDED_ACTIVITIES_ENDED : M.default.Messages.EMBEDDED_ACTIVITIES_JOIN;
-  H && (F = M.default.Messages.EMBEDDED_ACTIVITIES_JOINED);
-  let V = (0, o.useStateFromStoresArray)([C.default], () => {
+  }), G = (0, E.default)(), B = (0, o.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(L).find(e => e.instanceId === R.id)), F = (0, o.useStateFromStores)([p.default], () => p.default.getId()), k = null == B, w = null != B && B.userIds.has(F), H = k ? M.default.Messages.EMBEDDED_ACTIVITIES_ENDED : M.default.Messages.EMBEDDED_ACTIVITIES_JOIN;
+  w && (H = M.default.Messages.EMBEDDED_ACTIVITIES_JOINED);
+  let V = (0, o.useStateFromStoresArray)([A.default], () => {
       var e;
-      return Array.from(null !== (e = null == B ? void 0 : B.userIds) && void 0 !== e ? e : []).map(e => C.default.getUser(e)).filter(A.isNotNullish)
+      return Array.from(null !== (e = null == B ? void 0 : B.userIds) && void 0 !== e ? e : []).map(e => A.default.getUser(e)).filter(h.isNotNullish)
     }),
-    Y = (0, o.useStateFromStores)([g.default], () => {
+    Y = (0, o.useStateFromStores)([S.default], () => {
       var e;
       let t = null == B ? void 0 : B.userIds.values().next().value;
-      return null == t ? null : null === (e = g.default.findActivity(t.user_id, e => e.application_id === l.id)) || void 0 === e ? void 0 : e.details
+      return null == t ? null : null === (e = S.default.findActivity(t.user_id, e => e.application_id === a.id)) || void 0 === e ? void 0 : e.details
     }),
-    W = s.useMemo(() => {
-      let e = new I.default(l);
-      return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = N.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
-    }, [l]),
-    K = function(e, t, n) {
-      let a = (0, o.useStateFromStores)([d.default], () => {
+    K = l.useMemo(() => {
+      let e = new N.default(a);
+      return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = g.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
+    }, [a]),
+    W = function(e, t, n) {
+      let s = (0, o.useStateFromStores)([d.default], () => {
           var n;
           return (null === (n = d.default.getSelfEmbeddedActivityForChannel(t)) || void 0 === n ? void 0 : n.applicationId) === e.id
         }),
-        s = (0, f.useEmbeddedActivityJoinability)({
-          userId: T.default.getId(),
+        l = (0, f.useEmbeddedActivityJoinability)({
+          userId: p.default.getId(),
           channelId: t,
           application: e
         });
       if (null == n) return {
         status: M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED
       };
-      if (a) return {
+      if (s) return {
         tooltip: M.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY
       };
-      switch (s) {
+      switch (l) {
         case f.EmbeddedActivityJoinability.CAN_JOIN:
           return null;
         case f.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
@@ -127,76 +127,76 @@ function x(e) {
             tooltip: M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL
           }
       }
-    }(W, O, B),
+    }(K, L, B),
     z = async () => {
       if (null != B) {
-        P(!0);
+        D(!0);
         try {
           await (0, c.default)({
             applicationId: B.applicationId,
             currentEmbeddedApplication: G,
-            activityChannelId: O,
-            locationObject: D.location,
-            embeddedActivitiesManager: h.default,
-            analyticsLocations: y
+            activityChannelId: L,
+            locationObject: y.location,
+            embeddedActivitiesManager: I.default,
+            analyticsLocations: x
           })
         } finally {
-          P(!1)
+          D(!1)
         }
       }
     };
-  return (0, a.jsx)("div", {
-    className: i(v.outerContainer, {
-      [v.rowLayout]: !U,
-      [v.stackedLayout]: U
+  return (0, s.jsx)("div", {
+    className: i(O.outerContainer, {
+      [O.rowLayout]: !j,
+      [O.stackedLayout]: j
     }),
-    ref: j,
-    children: (0, a.jsxs)("div", {
-      className: v.container,
-      children: [(0, a.jsx)("div", {
-        className: v.imgContainer,
-        children: (0, a.jsx)(_.default, {
+    ref: U,
+    children: (0, s.jsxs)("div", {
+      className: O.container,
+      children: [(0, s.jsx)("div", {
+        className: O.imgContainer,
+        children: (0, s.jsx)(T.default, {
           imageBackground: b,
-          applicationName: l.name,
-          imageClassName: v.img,
-          imageNotFoundClassName: v.imgBroken
+          applicationName: a.name,
+          imageClassName: O.img,
+          imageNotFoundClassName: O.imgBroken
         })
-      }), (0, a.jsxs)("div", {
-        className: v.contentContainer,
-        children: [(0, a.jsxs)("div", {
-          className: v.info,
-          children: [(0, a.jsx)(r.Heading, {
+      }), (0, s.jsxs)("div", {
+        className: O.contentContainer,
+        children: [(0, s.jsxs)("div", {
+          className: O.info,
+          children: [(0, s.jsx)(r.Heading, {
             variant: "heading-lg/bold",
-            children: null == l ? void 0 : l.name
-          }), (0, a.jsx)(r.Text, {
+            children: null == a ? void 0 : a.name
+          }), (0, s.jsx)(r.Text, {
             variant: "text-md/medium",
-            lineClamp: U ? 3 : 1,
-            children: null !== (n = null !== (t = null == K ? void 0 : K.status) && void 0 !== t ? t : Y) && void 0 !== n ? n : M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
+            lineClamp: j ? 3 : 1,
+            children: null !== (n = null !== (t = null == W ? void 0 : W.status) && void 0 !== t ? t : Y) && void 0 !== n ? n : M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
           })]
-        }), (0, a.jsxs)("div", {
-          className: v.cta,
-          children: [(0, a.jsx)(r.Tooltip, {
-            text: null == K ? void 0 : K.tooltip,
+        }), (0, s.jsxs)("div", {
+          className: O.cta,
+          children: [(0, s.jsx)(r.Tooltip, {
+            text: null == W ? void 0 : W.tooltip,
             children: e => {
               let {
                 onClick: t,
                 ...n
               } = e;
-              return (0, a.jsx)(r.Button, {
+              return (0, s.jsx)(r.Button, {
                 ...n,
                 onClick: () => {
                   z(), null == t || t()
                 },
-                color: w ? r.ButtonColors.PRIMARY : r.ButtonColors.GREEN,
-                submitting: R,
-                disabled: H || w,
-                children: F
+                color: k ? r.ButtonColors.PRIMARY : r.ButtonColors.GREEN,
+                submitting: P,
+                disabled: w || k,
+                children: H
               })
             }
-          }), (0, a.jsx)("div", {
-            className: v.avatars,
-            children: (0, a.jsx)(S.default, {
-              guildId: L,
+          }), (0, s.jsx)("div", {
+            className: O.avatars,
+            children: (0, s.jsx)(C.default, {
+              guildId: v,
               users: V,
               max: 4
             })

@@ -14,53 +14,53 @@ var s = n("446674"),
   u = n("688318"),
   d = n("843962"),
   c = n("27618"),
-  E = n("158998"),
-  f = n("50885"),
+  f = n("158998"),
+  E = n("50885"),
   _ = n("91830"),
   h = n("214621"),
   C = n("782340"),
-  T = n("556559");
-let I = f.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
+  I = n("556559");
+let T = E.default.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;
 
 function S(e) {
   var t;
   let {
     channel: n,
-    otherUser: f,
+    otherUser: E,
     active: S
-  } = e, N = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), A = (0, s.useStateFromStores)([c.default], () => null == f ? null : c.default.getNickname(f.id)), p = (0, _.useMessageRequestRelativeTimestampText)(n), {
-    avatarDecorationSrc: m
+  } = e, m = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), p = (0, s.useStateFromStores)([c.default], () => null == E ? null : c.default.getNickname(E.id)), A = (0, _.useMessageRequestRelativeTimestampText)(n), {
+    avatarDecorationSrc: g
   } = (0, u.default)({
-    user: f,
+    user: E,
     size: (0, o.getDecorationSizeForAvatarSize)(i.AvatarSizes.SIZE_40),
     animateOnHover: !0
   });
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(I, {
-      className: T.avatar,
-      src: (0, d.getChannelIconURL)(n, 40, !N && S),
-      avatarDecoration: m,
+    children: [(0, a.jsx)(T, {
+      className: I.avatar,
+      src: (0, d.getChannelIconURL)(n, 40, !m && S),
+      avatarDecoration: g,
       size: i.AvatarSizes.SIZE_40,
-      "aria-label": null !== (t = null == f ? void 0 : f.username) && void 0 !== t ? t : C.default.Messages.UNKNOWN_USER
+      "aria-label": null !== (t = null == E ? void 0 : E.username) && void 0 !== t ? t : C.default.Messages.UNKNOWN_USER
     }), (0, a.jsxs)("div", {
-      className: T.userPreview,
+      className: I.userPreview,
       children: [(0, a.jsxs)("div", {
-        className: T.userContainerWithPreview,
+        className: I.userContainerWithPreview,
         children: [(0, a.jsx)(l.default, {
-          nick: A,
-          user: f,
+          nick: p,
+          user: E,
           showAccountIdentifier: !0,
-          className: T.tagContainer,
-          usernameClass: T.username,
-          discriminatorClass: null != E.default.getGlobalName(f) ? T.globalName : T.discriminator
+          className: I.tagContainer,
+          usernameClass: I.username,
+          discriminatorClass: null != f.default.getGlobalName(E) ? I.globalName : I.discriminator
         }), (0, a.jsx)(i.Text, {
-          className: T.timestampWithPreview,
+          className: I.timestampWithPreview,
           color: "text-muted",
           variant: "text-xs/normal",
-          children: p
+          children: A
         })]
       }), (0, a.jsx)("div", {
-        className: T.messagePreview,
+        className: I.messagePreview,
         children: (0, a.jsx)(h.default, {
           channel: n
         })

@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return O
   }
 });
-var l = n("866227"),
-  a = n.n(l),
-  s = n("446674"),
+var s = n("866227"),
+  l = n.n(s),
+  a = n("446674"),
   i = n("862337"),
   r = n("913144"),
   o = n("374014"),
@@ -15,38 +15,38 @@ var l = n("866227"),
   c = n("718517"),
   f = n("376152"),
   E = n("579565"),
-  h = n("411511");
-let _ = null,
-  S = null,
-  T = {},
+  _ = n("411511");
+let T = null,
+  I = null,
+  m = {},
   N = {},
-  p = h.TooltipActions.LOADING_INITIAL_PROGRESS,
-  I = new i.Timeout,
-  m = {
+  p = _.TooltipActions.LOADING_INITIAL_PROGRESS,
+  S = new i.Timeout,
+  A = {
     completed: !1,
     initialProgressFetched: !1,
     interrupted: !1,
     retries: 0
   },
-  A = e => {
+  C = e => {
     let {
       dropsQuestId: t,
       streamKey: n,
-      game: l,
-      completed: a,
-      gameTitle: s
-    } = m;
-    !(null == t || null == s || a || null == l || null == n || I.isStarted()) && (e ? (0, f.sendHeartbeat)(t, n, l.pid) : I.start(1 * c.default.Millis.MINUTE, () => {
-      (0, f.sendHeartbeat)(t, n, l.pid)
+      game: s,
+      completed: l,
+      gameTitle: a
+    } = A;
+    !(null == t || null == a || l || null == s || null == n || S.isStarted()) && (e ? (0, f.sendHeartbeat)(t, n, s.pid) : S.start(1 * c.default.Millis.MINUTE, () => {
+      (0, f.sendHeartbeat)(t, n, s.pid)
     }))
   },
-  g = e => {
-    m.retries = 0, m.completed = e.completed, m.initialProgressFetched = !0, m.progress = e.progress, m.lastCheckedAt = a.now(), p = m.completed ? h.TooltipActions.QUEST_COMPLETION : h.TooltipActions.TRACK_PROGRESS
+  h = e => {
+    A.retries = 0, A.completed = e.completed, A.initialProgressFetched = !0, A.progress = e.progress, A.lastCheckedAt = l.now(), p = A.completed ? _.TooltipActions.QUEST_COMPLETION : _.TooltipActions.TRACK_PROGRESS
   },
-  C = (e, t, n) => {
-    (!m.completed || e.dropsQuestId !== m.dropsQuestId) && (m.game = t, m.dropsQuestId = e.dropsQuestId, m.gameTitle = e.title, m.completed = !1, m.interrupted = !1, m.streamKey = n, m.retries = 0, m.lastCheckedAt = a.now(), I.start(5e3, () => A(!0)))
+  g = (e, t, n) => {
+    (!A.completed || e.dropsQuestId !== A.dropsQuestId) && (A.game = t, A.dropsQuestId = e.dropsQuestId, A.gameTitle = e.title, A.completed = !1, A.interrupted = !1, A.streamKey = n, A.retries = 0, A.lastCheckedAt = l.now(), S.start(5e3, () => C(!0)))
   };
-class R extends s.default.Store {
+class M extends a.default.Store {
   initialize() {
     this.waitFor(d.default)
   }
@@ -56,19 +56,19 @@ class R extends s.default.Store {
   getIsPartnerGameQuestComplete(e) {
     var t;
     let n = (0, E.getDrop)(e);
-    if (null == n || null == S) return !1;
-    let l = !!(null === (t = S[n.dropsQuestId]) || void 0 === t ? void 0 : t.completed_at),
-      a = m.completed && m.gameTitle === n.title || l;
-    return a
+    if (null == n || null == I) return !1;
+    let s = !!(null === (t = I[n.dropsQuestId]) || void 0 === t ? void 0 : t.completed_at),
+      l = A.completed && A.gameTitle === n.title || s;
+    return l
   }
   get serverEligibleByQuestIds() {
-    return T
+    return m
   }
   get platformAvailability() {
-    return _
+    return T
   }
   get userStatus() {
-    return S
+    return I
   }
   get activityPanelTooltipAction() {
     return p
@@ -77,38 +77,38 @@ class R extends s.default.Store {
     return N
   }
   get hasInitialProgressFetched() {
-    return m.initialProgressFetched
+    return A.initialProgressFetched
   }
   get isCurrentQuestCompleted() {
-    return m.completed
+    return A.completed
   }
   get isCurrentQuestInterrupted() {
-    return m.interrupted
+    return A.interrupted
   }
   get currentDropQuestGameTitle() {
-    return m.gameTitle
+    return A.gameTitle
   }
   get currentDropQuestStreamProgress() {
-    let e = m.progress;
+    let e = A.progress;
     if (null == e || null == e.steps || 0 === e.steps.length) return 0;
     let t = e.steps.find(e => "stream_length" === e.name);
     return null == t ? 0 : t.percent
   }
 }
-R.displayName = "DropsStore";
-var M = new R(r.default, {
+M.displayName = "DropsStore";
+var O = new M(r.default, {
   DROPS_ELIGIBILITY_FETCH_SUCCESS: e => {
-    T[e.dropsQuestId] = e.isEligible
+    m[e.dropsQuestId] = e.isEligible
   },
   DROPS_PLATFORM_AVAILABILITY_SUCCESS: e => {
-    _ = e.availablePlatforms.filter(e => h.DROPS_PLATFORMS.includes(e))
+    T = e.availablePlatforms.filter(e => _.DROPS_PLATFORMS.includes(e))
   },
   DROPS_USER_STATUS_FETCH_SUCCESS: e => {
     var t;
-    S = null !== (t = e.codes) && void 0 !== t ? t : {}
+    I = null !== (t = e.codes) && void 0 !== t ? t : {}
   },
   DROPS_USER_STATUS_FETCH_FAILURE: e => {
-    S = {}
+    I = {}
   },
   DROPS_ENROLLED_USER_FETCH_SUCCESS: e => {
     N[e.dropsQuestId] = {
@@ -116,30 +116,30 @@ var M = new R(r.default, {
       enrolledUser: e.enrolledUser
     }
   },
-  DROPS_FETCH_PROGRESS_SUCCESS: g,
+  DROPS_FETCH_PROGRESS_SUCCESS: h,
   DROPS_FETCH_PROGRESS_FAILURE: e => {
-    !m.initialProgressFetched && (m.initialProgressFetched = !0, p = h.TooltipActions.STREAM_CTA)
+    !A.initialProgressFetched && (A.initialProgressFetched = !0, p = _.TooltipActions.STREAM_CTA)
   },
   DROPS_HEARTBEAT_SUCCESS: e => {
-    g(e), T[e.dropsQuestId] = !0, A()
+    h(e), m[e.dropsQuestId] = !0, C()
   },
   DROPS_HEARTBEAT_FAILURE: e => {
     let {
       dropsQuestId: t,
       statusCode: n
     } = e;
-    if (m.completed = !1, m.initialProgressFetched = !0, m.lastCheckedAt = a.now(), 429 === n && 0 === m.retries) {
-      m.retries = m.retries + 1, A();
+    if (A.completed = !1, A.initialProgressFetched = !0, A.lastCheckedAt = l.now(), 429 === n && 0 === A.retries) {
+      A.retries = A.retries + 1, C();
       return
     }
-    p = h.TooltipActions.STREAM_CTA, 403 === n ? T[t] = !1 : m.interrupted = !0
+    p = _.TooltipActions.STREAM_CTA, 403 === n ? m[t] = !1 : A.interrupted = !0
   },
   DROPS_UNENROLL_USER: e => {
-    S = null, T = {
-      ...T
-    }, delete T[e.dropsQuestId], N = {
+    I = null, m = {
+      ...m
+    }, delete m[e.dropsQuestId], N = {
       ...N
-    }, delete N[e.dropsQuestId], m.dropsQuestId === e.dropsQuestId && (m = {
+    }, delete N[e.dropsQuestId], A.dropsQuestId === e.dropsQuestId && (A = {
       completed: !1,
       initialProgressFetched: !1,
       interrupted: !1,
@@ -147,42 +147,42 @@ var M = new R(r.default, {
     })
   },
   STREAM_CLOSE: () => {
-    m.completed && (p = h.TooltipActions.QUEST_COMPLETION), m.interrupted = !1, m.retries = 0, I.stop()
+    A.completed && (p = _.TooltipActions.QUEST_COMPLETION), A.interrupted = !1, A.retries = 0, S.stop()
   },
   STREAM_START: function(e) {
     var t;
     let {
       streamType: n,
-      guildId: l,
-      channelId: a,
-      pid: s
+      guildId: s,
+      channelId: l,
+      pid: a
     } = e, i = (0, o.encodeStreamKey)({
       streamType: n,
-      guildId: l,
-      channelId: a,
+      guildId: s,
+      channelId: l,
       ownerId: u.default.getId()
     });
-    if (null == s) return;
-    let c = d.default.getGameForPID(s);
+    if (null == a) return;
+    let c = d.default.getGameForPID(a);
     if (null == c) return;
-    let _ = Object.values(h.DROPS_GAMES).find(e => e.gameSearchTerm.find(e => {
+    let T = Object.values(_.DROPS_GAMES).find(e => e.gameSearchTerm.find(e => {
       var t;
       return e.toLowerCase() === (null === (t = c.name) || void 0 === t ? void 0 : t.toLowerCase())
     }));
-    if (null == _ || (0, E.getDropExpired)(_)) return;
-    let S = null === (t = (0, E.getDropsExperimentForDrop)(_)) || void 0 === t ? void 0 : t.getCurrentConfig({
+    if (null == T || (0, E.getDropExpired)(T)) return;
+    let I = null === (t = (0, E.getDropsExperimentForDrop)(T)) || void 0 === t ? void 0 : t.getCurrentConfig({
       location: "1"
     }, {
       autoTrackExposure: !1
     });
-    if (null == S || !S.dropsEnabled) return;
-    let T = S.autoEnrollment;
-    null != N[_.dropsQuestId] && N[_.dropsQuestId].isEnrolled || T ? C(_, c, i) : r.default.wait(async () => {
+    if (null == I || !I.dropsEnabled) return;
+    let m = I.autoEnrollment;
+    null != N[T.dropsQuestId] && N[T.dropsQuestId].isEnrolled || m ? g(T, c, i) : r.default.wait(async () => {
       var e;
-      await (0, f.fetchEnrolledUser)(_.dropsQuestId), (null === (e = N[_.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && C(_, c, i)
+      await (0, f.fetchEnrolledUser)(T.dropsQuestId), (null === (e = N[T.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && g(T, c, i)
     })
   },
   LOGOUT: function() {
-    T = {}, N = {}, S = {}, I.stop()
+    m = {}, N = {}, I = {}, S.stop()
   }
 })

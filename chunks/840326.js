@@ -6,9 +6,9 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   n = s("884691"),
-  r = s("77078"),
-  l = s("290381"),
-  i = s("812204"),
+  l = s("77078"),
+  i = s("290381"),
+  r = s("812204"),
   u = s("685665"),
   o = s("594098"),
   d = s("599110"),
@@ -24,9 +24,9 @@ var a = s("37983"),
       {
         AnalyticsLocationProvider: t,
         analyticsLocations: s
-      } = (0, u.default)(i.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
-      [R, p] = n.useState(!1);
-    return (0, a.jsx)(r.AdvancedScrollerAuto, {
+      } = (0, u.default)(r.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
+      [R, m] = n.useState(!1);
+    return (0, a.jsx)(l.AdvancedScrollerAuto, {
       className: f.mainPageScroller,
       ref: e,
       children: (0, a.jsx)("div", {
@@ -50,11 +50,11 @@ var a = s("37983"),
             className: f.giftNitro
           }), (0, a.jsx)("div", {
             className: f.footerSpacing
-          }), (0, a.jsx)(l.VisibilitySensor, {
+          }), (0, a.jsx)(i.VisibilitySensor, {
             onChange: e => {
               e && !R && (d.default.track(T.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                 location_stack: s
-              }), p(!0))
+              }), m(!0))
             },
             children: (0, a.jsx)("div", {
               className: f.bottomOfPageVisibilitySensor

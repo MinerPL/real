@@ -16,22 +16,22 @@ var a = n("37983"),
   u = n("685665"),
   d = n("407063"),
   c = n("141254"),
-  E = n("116616"),
-  f = n("580357"),
+  f = n("116616"),
+  E = n("580357"),
   _ = n("587974"),
   h = n("315102"),
   C = n("794818"),
-  T = n("378662"),
-  I = n("574921"),
+  I = n("378662"),
+  T = n("574921"),
   S = n("311092"),
-  N = n("613088"),
-  A = n("49111"),
-  p = n("782340"),
-  m = n("750408"),
-  g = n("68422"),
+  m = n("613088"),
+  p = n("49111"),
+  A = n("782340"),
+  g = n("750408"),
+  N = n("68422"),
   R = n("578817");
 let O = () => (0, a.jsx)("div", {
-  className: m.placeholder
+  className: g.placeholder
 });
 var L = e => {
   var t;
@@ -49,17 +49,17 @@ var L = e => {
     presenceCount: b,
     memberCount: U,
     keywords: G
-  } = i, [j, k] = s.useState(!1), [w, F] = s.useState(!1), {
-    analyticsLocations: B
-  } = (0, u.default)(), H = h.default.getGuildDiscoverySplashURL({
+  } = i, [j, w] = s.useState(!1), [k, F] = s.useState(!1), {
+    analyticsLocations: H
+  } = (0, u.default)(), B = h.default.getGuildDiscoverySplashURL({
     id: M,
     splash: P,
     size: 240 * (0, d.getDevicePixelRatio)()
-  }), V = null != H ? H : function(e) {
+  }), V = null != B ? B : function(e) {
     switch (e) {
-      case A.ThemeTypes.DARK:
-        return g;
-      case A.ThemeTypes.LIGHT:
+      case p.ThemeTypes.DARK:
+        return N;
+      case p.ThemeTypes.LIGHT:
         return R
     }
   }(O), Y = null !== (t = h.default.getGuildIconURL({
@@ -72,15 +72,15 @@ var L = e => {
     } = e.target;
     if (!t.includes("Menu")) {
       if ((0, c.isAtGuildCapAndNonPremium)()) {
-        (0, E.default)({
+        (0, f.default)({
           analyticsSource: {
-            page: A.AnalyticsPages.GUILD_DISCOVERY
+            page: p.AnalyticsPages.GUILD_DISCOVERY
           },
           analyticsLocation: {
-            page: A.AnalyticsPages.GUILD_DISCOVERY,
-            section: A.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+            page: p.AnalyticsPages.GUILD_DISCOVERY,
+            section: p.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
           },
-          analyticsLocations: B
+          analyticsLocations: H
         });
         return
       }
@@ -92,26 +92,26 @@ var L = e => {
       }
     }
   };
-  s.useEffect(() => I.DiscoveryTagsExperiment.trackExposure({
+  s.useEffect(() => T.DiscoveryTagsExperiment.trackExposure({
     location: "4302e4_1"
   }));
   let {
     shouldDisplayTags: K
-  } = I.DiscoveryTagsExperiment.useExperiment({
+  } = T.DiscoveryTagsExperiment.useExperiment({
     location: "4302e4_2"
   }, {
     autoTrackExposure: !1
-  }), z = (0, T.useCanSeeDiscoveryContextMenu)();
+  }), z = (0, I.useCanSeeDiscoveryContextMenu)();
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: m.card,
-      children: [w ? (0, a.jsx)(r.Spinner, {
+      className: g.card,
+      children: [k ? (0, a.jsx)(r.Spinner, {
         type: r.Spinner.Type.PULSING_ELLIPSIS,
-        className: m.spinner
+        className: g.spinner
       }) : null, (0, a.jsxs)(r.Clickable, {
-        className: l(m.container, {
-          [m.hover]: j,
-          [m.submitting]: w
+        className: l(g.container, {
+          [g.hover]: j,
+          [g.submitting]: k
         }),
         onClick: W,
         onContextMenu: e => {
@@ -125,24 +125,24 @@ var L = e => {
             })
           })
         },
-        onMouseEnter: () => k(!0),
-        onMouseLeave: () => k(!1),
+        onMouseEnter: () => w(!0),
+        onMouseLeave: () => w(!1),
         children: [(0, a.jsx)("div", {
-          className: l(m.splashContainer, {
-            [m.splashContainerWithTags]: K
+          className: l(g.splashContainer, {
+            [g.splashContainerWithTags]: K
           }),
           children: (0, a.jsx)("img", {
             src: V,
             alt: "",
-            className: m.splashImage,
+            className: g.splashImage,
             width: 240
           })
         }), (0, a.jsxs)("div", {
-          className: l(m.content, {
-            [m.contentWithTags]: K
+          className: l(g.content, {
+            [g.contentWithTags]: K
           }),
           children: [(0, a.jsxs)("div", {
-            className: m.header,
+            className: g.header,
             children: [(0, a.jsx)(_.default, {
               mask: _.default.Masks.SQUIRCLE,
               width: 32,
@@ -150,24 +150,24 @@ var L = e => {
               children: (0, a.jsx)("img", {
                 src: Y,
                 alt: "",
-                className: m.avatar
+                className: g.avatar
               })
             }), (0, a.jsxs)("div", {
-              className: m.headerName,
+              className: g.headerName,
               children: [(0, a.jsx)("div", {
-                children: (0, a.jsx)(f.default, {
+                children: (0, a.jsx)(E.default, {
                   guild: i,
-                  className: m.guildBadge,
+                  className: g.guildBadge,
                   size: 16
                 })
               }), (0, a.jsx)(r.Heading, {
                 variant: "heading-md/semibold",
-                className: m.headerTitle,
+                className: g.headerTitle,
                 children: y
               })]
             })]
           }), (0, a.jsx)(r.Text, {
-            className: m.description,
+            className: g.description,
             variant: "text-sm/normal",
             children: x
           }), K && null != G && null != v && (0, a.jsx)(S.DiscoveryTags, {
@@ -177,25 +177,25 @@ var L = e => {
             tags: G,
             section: C.AnalyticsContexts.SEARCH
           }), (0, a.jsxs)("div", {
-            className: m.memberInfo,
+            className: g.memberInfo,
             children: [null != b && (0, a.jsx)("div", {
-              className: m.memberCount,
+              className: g.memberCount,
               children: (0, a.jsx)(r.Text, {
                 variant: "text-xs/normal",
                 color: "header-secondary",
-                children: p.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                children: A.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                   membersOnline: b
                 })
               })
             }), null != U && (0, a.jsxs)(a.Fragment, {
               children: [(0, a.jsx)("div", {
-                className: m.dotSeparator
+                className: g.dotSeparator
               }), (0, a.jsx)("div", {
-                className: m.memberCount,
+                className: g.memberCount,
                 children: (0, a.jsx)(r.Text, {
                   variant: "text-xs/normal",
                   color: "header-secondary",
-                  children: p.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                  children: A.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                     count: U
                   })
                 })
@@ -203,14 +203,14 @@ var L = e => {
             })]
           })]
         }), z ? (0, a.jsx)("div", {
-          className: m.actionButtons,
-          children: (0, a.jsx)(N.default, {
+          className: g.actionButtons,
+          children: (0, a.jsx)(m.default, {
             guild: i
           })
         }) : null]
       })]
     }), (0, a.jsx)("hr", {
-      className: m.separator
+      className: g.separator
     })]
   })
 }

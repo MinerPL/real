@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 }), n("222007");
-var l = n("446674"),
-  a = n("913144");
+var a = n("446674"),
+  l = n("913144");
 n("21121");
 var s = n("138217"),
   i = n("718517"),
@@ -19,13 +19,13 @@ let u = 90 * i.default.Millis.DAY,
     isDataStale: !1,
     isRefreshing: !1
   };
-class c extends l.default.PersistedStore {
+class c extends a.default.PersistedStore {
   initialize(e) {
     if (this.waitFor(s.default), null != e) {
       var t;
       (d = e).localItemAcks = function(e) {
         let t = {};
-        for (let [n, l] of Object.entries(e)) Date.now() - l < u && (t[n] = l);
+        for (let [n, a] of Object.entries(e)) Date.now() - a < u && (t[n] = a);
         return t
       }(null !== (t = d.localItemAcks) && void 0 !== t ? t : {}), d.isDataStale = !0
     }
@@ -58,7 +58,7 @@ c.displayName = "NotificationCenterStore", c.persistKey = "NotificationCenterSto
 function f() {
   d.hasNewMentions = !1, d.isDataStale = !1, d.isRefreshing = !1
 }
-var E = new c(a.default, {
+var h = new c(l.default, {
   MESSAGE_CREATE: function(e) {
     let {
       message: t

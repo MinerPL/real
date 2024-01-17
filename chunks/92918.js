@@ -19,24 +19,24 @@ function c(e) {
     index: t,
     className: n,
     channel: c,
-    user: E,
-    hasSingleMessageRequest: f
+    user: f,
+    hasSingleMessageRequest: E
   } = e;
   return (0, a.jsx)(o.default, {
     index: t,
     className: n,
     isFocused: !1,
     channel: c,
-    user: E,
+    user: f,
     onClick: e => {
       e.stopPropagation(), s.default.openPrivateChannelAsSidebar({
         channelId: c.id,
         baseChannelId: i.MESSAGE_REQUESTS_BASE_CHANNEL_ID,
-        hasSingleMessageRequest: f
+        hasSingleMessageRequest: E
       }), l.default.track(d.AnalyticEvents.MESSAGE_REQUEST_PREVIEW_VIEWED, {
         is_spam: !0,
         channel_id: c.id,
-        other_user_id: E.id
+        other_user_id: f.id
       }), setTimeout(() => {
         r.ComponentDispatch.dispatch(d.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
           channelId: c.id
@@ -45,7 +45,7 @@ function c(e) {
     },
     children: e => (0, a.jsx)(u.default, {
       active: e,
-      user: E,
+      user: f,
       channel: c
     })
   })

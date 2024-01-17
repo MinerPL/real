@@ -32,9 +32,9 @@ let A = new l.default("ChannelRTCStore"),
   O = {},
   b = {},
   P = {},
+  k = {},
   R = {},
   V = {},
-  k = {},
   M = {},
   w = {},
   L = {},
@@ -53,7 +53,7 @@ function F(e) {
       let t = G(e);
       if (0 === t.size()) return;
       let n = ee(e) || K(t) ? I.ChannelModes.VIDEO : I.ChannelModes.VOICE;
-      n === I.ChannelModes.VOICE ? (delete R[e], delete V[e]) : R[e] = n
+      n === I.ChannelModes.VOICE ? (delete k[e], delete R[e]) : k[e] = n
     }(n), function(e) {
       let t = g.default.getId(),
         n = G(e);
@@ -132,7 +132,7 @@ function K(e) {
 }
 
 function W(e) {
-  delete O[e], delete b[e], delete R[e], delete V[e]
+  delete O[e], delete b[e], delete k[e], delete R[e]
 }
 
 function z() {
@@ -237,7 +237,7 @@ class et extends o.default.Store {
   }
   getParticipantsOpen(e) {
     var t;
-    return null === (t = k[e]) || void 0 === t || t
+    return null === (t = V[e]) || void 0 === t || t
   }
   getVoiceParticipantsHidden(e) {
     var t;
@@ -261,7 +261,7 @@ class et extends o.default.Store {
   }
   getMode(e) {
     var t;
-    return null !== (t = R[e]) && void 0 !== t ? t : ee(e) ? I.ChannelModes.VIDEO : I.ChannelModes.VOICE
+    return null !== (t = k[e]) && void 0 !== t ? t : ee(e) ? I.ChannelModes.VIDEO : I.ChannelModes.VOICE
   }
   getLayout(e) {
     var t, n;
@@ -269,7 +269,7 @@ class et extends o.default.Store {
     if (__OVERLAY__) return I.ChannelLayouts.NORMAL;
     let i = h.default.getChannel(e),
       r = ee(e) || (null == i ? void 0 : i.isBroadcastChannel());
-    return null !== (n = null === (t = V[e]) || void 0 === t ? void 0 : t[s]) && void 0 !== n ? n : r ? I.ChannelLayouts.NO_CHAT : I.ChannelLayouts.NORMAL
+    return null !== (n = null === (t = R[e]) || void 0 === t ? void 0 : t[s]) && void 0 !== n ? n : r ? I.ChannelLayouts.NO_CHAT : I.ChannelLayouts.NORMAL
   }
   getChatOpen(e) {
     var t;
@@ -277,7 +277,7 @@ class et extends o.default.Store {
   }
   isFullscreenInContext() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : I.AppContext.APP;
-    return Object.values(V).some(t => t[e] === I.ChannelLayouts.FULL_SCREEN)
+    return Object.values(R).some(t => t[e] === I.ChannelLayouts.FULL_SCREEN)
   }
   getStageStreamSize(e) {
     return L[e]
@@ -328,11 +328,11 @@ var en = new et(d.default, {
       let e = t.originChannelId;
       if (null != e) {
         var n, s;
-        return V[t.id] = {
-          [I.AppContext.APP]: null !== (s = null === (n = V[e]) || void 0 === n ? void 0 : n[I.AppContext.APP]) && void 0 !== s ? s : I.ChannelLayouts.NORMAL
+        return R[t.id] = {
+          [I.AppContext.APP]: null !== (s = null === (n = R[e]) || void 0 === n ? void 0 : n[I.AppContext.APP]) && void 0 !== s ? s : I.ChannelLayouts.NORMAL
         }, !0
       }
-      t.isBroadcastChannel() && (V[t.id] = {
+      t.isBroadcastChannel() && (R[t.id] = {
         [I.AppContext.APP]: I.ChannelLayouts.NO_CHAT
       })
     }
@@ -365,7 +365,7 @@ var en = new et(d.default, {
         e === g.default.getId() && x(e, [t])
       } catch (e) {
         A.warn("INVALID STREAM KEY FORMAT ".concat(n), e)
-      }!K(s) && (k[t] = !1)
+      }!K(s) && (V[t] = !1)
     }
   },
   CHANNEL_RTC_UPDATE_LAYOUT: function(e) {
@@ -374,8 +374,8 @@ var en = new et(d.default, {
       layout: n,
       appContext: s
     } = e;
-    V[t] = {
-      ...V[t],
+    R[t] = {
+      ...R[t],
       [s]: n
     }
   },
@@ -384,7 +384,7 @@ var en = new et(d.default, {
       channelId: t,
       participantsOpen: n
     } = e;
-    k[t] = n
+    V[t] = n
   },
   CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN: function(e) {
     let {

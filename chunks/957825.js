@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("446674"),
+var l = n("446674"),
   s = n("77078"),
   i = n("531674"),
   r = n("619436"),
@@ -16,27 +16,27 @@ var a = n("446674"),
   c = n("233069"),
   f = n("305961");
 
-function E(e) {
+function h(e) {
   let {
     channel: t,
     closePopout: n,
-    onSelect: E,
-    navId: h,
-    label: _,
-    location: S,
-    includeGuildMute: T
-  } = e, N = (0, r.useChannelNotificationRadioItems)(t), p = (0, o.useChannelNotificationSettingsItemInner)(t), I = (0, a.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id)), m = (0, u.default)(I), A = (0, d.useShouldUseNewNotificationSystem)("ChannelNotificationSettingsPopoutMenu") && c.CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING.has(t.type);
-  return (0, l.jsxs)(s.Menu, {
-    navId: h,
+    onSelect: h,
+    navId: E,
+    label: m,
+    location: p,
+    includeGuildMute: g
+  } = e, S = (0, r.useChannelNotificationRadioItems)(t), N = (0, o.useChannelNotificationSettingsItemInner)(t), _ = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(t.guild_id)), I = (0, u.default)(_), T = (0, d.useShouldUseNewNotificationSystem)("ChannelNotificationSettingsPopoutMenu") && c.CHANNEL_ELIGIBLE_FOR_UNREAD_SETTING.has(t.type);
+  return (0, a.jsxs)(s.Menu, {
+    navId: E,
     onClose: n,
-    "aria-label": _,
-    onSelect: E,
-    children: [(0, l.jsx)(s.MenuGroup, {
-      children: (0, i.default)(t, S)
-    }), T ? (0, l.jsx)(s.MenuGroup, {
-      children: m
-    }) : null, A ? p : (0, l.jsx)(s.MenuGroup, {
-      children: N
+    "aria-label": m,
+    onSelect: h,
+    children: [(0, a.jsx)(s.MenuGroup, {
+      children: (0, i.default)(t, p)
+    }), g ? (0, a.jsx)(s.MenuGroup, {
+      children: I
+    }) : null, T ? N : (0, a.jsx)(s.MenuGroup, {
+      children: S
     })]
   })
 }

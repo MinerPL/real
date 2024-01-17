@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 }), n("222007");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("77078"),
   i = n("913796"),
   r = n("211248"),
@@ -15,41 +15,41 @@ var l = n("37983"),
   c = n("49111"),
   f = n("782340");
 
-function E(e) {
+function h(e) {
   let {
     type: t,
     onClick: n
-  } = e, [s, E] = a.useState(!1), _ = (0, i.useInDesktopNotificationCenterExperiment)(), S = () => {
+  } = e, [s, h] = l.useState(!1), m = (0, i.useInDesktopNotificationCenterExperiment)(), p = () => {
     n(), u.default.track(c.AnalyticEvents.INBOX_CHANNEL_ACKED, {
       marked_all_channels_as_read: !0,
       num_unread_channels_remaining: 0
     })
-  }, T = e => {
-    e.shiftKey ? S() : E(!0)
+  }, g = e => {
+    e.shiftKey ? p() : h(!0)
   };
-  return (0, l.jsxs)(l.Fragment, {
-    children: [s ? (0, l.jsx)(h, {
-      confirm: S,
-      cancel: () => E(!1)
-    }) : null, "bottom-floating" === t ? (0, l.jsx)(d.FloatingActionButton, {
+  return (0, a.jsxs)(a.Fragment, {
+    children: [s ? (0, a.jsx)(E, {
+      confirm: p,
+      cancel: () => h(!1)
+    }) : null, "bottom-floating" === t ? (0, a.jsx)(d.FloatingActionButton, {
       text: f.default.Messages.MARK_ALL_AS_READ,
       icon: o.default,
-      onClick: T
-    }) : (0, l.jsx)(r.default, {
-      tooltip: _ ? f.default.Messages.MARK_ALL_AS_READ : f.default.Messages.UNREADS_MARK_READ,
+      onClick: g
+    }) : (0, a.jsx)(r.default, {
+      tooltip: m ? f.default.Messages.MARK_ALL_AS_READ : f.default.Messages.UNREADS_MARK_READ,
       color: r.CircleIconButtonColors.SECONDARY,
-      icon: (0, l.jsx)(o.default, {}),
-      onClick: T
+      icon: (0, a.jsx)(o.default, {}),
+      onClick: g
     })]
   })
 }
 
-function h(e) {
+function E(e) {
   let {
     cancel: t,
     confirm: n
   } = e;
-  return (0, l.jsx)(s.DeclarativeConfirmModal, {
+  return (0, a.jsx)(s.DeclarativeConfirmModal, {
     dismissable: !0,
     header: f.default.Messages.UNREADS_CONFIRM_MARK_ALL_READ_HEADER,
     confirmText: f.default.Messages.MARK_AS_READ,
@@ -57,7 +57,7 @@ function h(e) {
     confirmButtonColor: s.Button.Colors.BRAND,
     onCancel: t,
     onConfirm: n,
-    children: (0, l.jsx)(s.Text, {
+    children: (0, a.jsx)(s.Text, {
       color: "text-normal",
       variant: "text-sm/normal",
       children: f.default.Messages.UNREADS_CONFIRM_MARK_ALL_READ_DESCRIPTION

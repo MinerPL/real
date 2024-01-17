@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return b
   },
   watchStream: function() {
-    return R
+    return k
   },
   toggleSelfStreamHidden: function() {
-    return V
+    return R
   },
   watchStreamAndTransitionToStream: function() {
-    return k
+    return V
   },
   stopStream: function() {
     return M
@@ -96,7 +96,7 @@ function P(e, t) {
   return !s && (0, E.isChannelFull)(n, v.default, m.default)
 }
 
-function R(e, t) {
+function k(e, t) {
   let n = null != d.default.getRemoteSessionId();
   if (n) return;
   let {
@@ -118,7 +118,7 @@ function R(e, t) {
   }), !a && (null == t || !t.noFocus) && I.default.selectParticipant(e.channelId, r)
 }
 
-function V(e, t) {
+function R(e, t) {
   o.default.dispatch({
     type: "STREAM_UPDATE_SELF_HIDDEN",
     channelId: e,
@@ -126,13 +126,13 @@ function V(e, t) {
   })
 }
 
-function k(e, t) {
+function V(e, t) {
   let {
     guildId: n,
     channelId: s
   } = e;
   if (null != n && P(n, s)) return;
-  R(e, t);
+  k(e, t);
   let i = f.default.getWindowOpen(D.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
     r = h.default.getVoiceChannelId();
   (!i || r !== s) && (0, l.default)(e)
@@ -250,7 +250,7 @@ function H(e, t) {
     i = h.default.getVoiceChannelId();
   null != i && i !== e && A.default.disconnect(), S.default.addRecipient(e, n, void 0, () => {
     C.default.call(e, !1, !1, null, () => {
-      k(s)
+      V(s)
     })
   })
 }

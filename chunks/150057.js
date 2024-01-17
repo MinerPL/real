@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 }), n("222007");
 var a = n("446674"),
@@ -28,7 +28,7 @@ class c extends a.default.Store {
   }
 }
 c.displayName = "HubLinkNoticeStore";
-var E = new c(s.default, {
+var f = new c(s.default, {
   CONNECTION_OPEN: function(e) {
     for (let t of e.guilds)
       if (u(t.id)) return !0;

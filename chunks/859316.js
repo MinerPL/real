@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("574073"),
-  l = n("304198"),
+var l = n("574073"),
+  a = n("304198"),
   i = n("782340"),
   r = n("902896");
 
@@ -17,8 +17,8 @@ function o(e) {
     usernameHook: o,
     compact: u,
     isForumPost: d
-  } = e, c = (0, s.default)(t), f = o(c);
-  return (0, a.jsx)(l.default, {
+  } = e, c = (0, l.default)(t), f = o(c);
+  return (0, s.jsx)(a.default, {
     compact: u,
     className: r.channelNameChange,
     icon: n("544484"),

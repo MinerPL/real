@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("77078"),
+var l = n("77078"),
   s = n("803725"),
   i = n("714319"),
   r = n("782340"),
@@ -18,27 +18,27 @@ function u(e) {
     clipIconRef: n,
     lastClipsSession: u
   } = e;
-  return (0, l.jsxs)(a.TooltipLayer, {
+  return (0, a.jsxs)(l.TooltipLayer, {
     tooltipClassName: o.reminderTooltip,
     tooltipContentClassName: o.tooltipContent,
     targetElementRef: {
       current: n
     },
     position: "bottom",
-    color: a.TooltipColors.PRIMARY,
-    children: [(0, l.jsx)(i.default, {}), (0, l.jsx)(a.Heading, {
+    color: l.TooltipColors.PRIMARY,
+    children: [(0, a.jsx)(i.default, {}), (0, a.jsx)(l.Heading, {
       variant: "heading-md/extrabold",
       children: r.default.Messages.CLIPS_YOU_HAVE_NEW_CLIPS.format({
         count: u.newClipIds.length
       })
-    }), (0, l.jsxs)("div", {
+    }), (0, a.jsxs)("div", {
       className: o.buttonContainer,
-      children: [(0, l.jsx)(a.Button, {
-        color: a.Button.Colors.TRANSPARENT,
+      children: [(0, a.jsx)(l.Button, {
+        color: l.Button.Colors.TRANSPARENT,
         onClick: s.clearClipsSession,
         children: r.default.Messages.DISMISS
-      }), (0, l.jsx)(a.Button, {
-        color: a.Button.Colors.BRAND,
+      }), (0, a.jsx)(l.Button, {
+        color: l.Button.Colors.BRAND,
         onClick: t,
         children: r.default.Messages.CLIPS_REVIEW_NOW
       })]

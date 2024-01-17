@@ -1,27 +1,27 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchPriceTiers: function() {
-    return u
+    return l
   }
 });
-var r = n("913144"),
-  i = n("56949");
-async function u(e, t) {
-  r.default.dispatch({
+var i = n("913144"),
+  r = n("56949");
+async function l(e, t) {
+  i.default.dispatch({
     type: "CREATOR_MONETIZATION_PRICE_TIERS_FETCH",
     guildId: e,
     priceTierType: t
   });
   try {
-    let n = await i.getPriceTiers(e, t);
-    r.default.dispatch({
+    let n = await r.getPriceTiers(e, t);
+    i.default.dispatch({
       type: "CREATOR_MONETIZATION_PRICE_TIERS_FETCH_SUCCESS",
       guildId: e,
       priceTierType: t,
       priceTiers: n
     })
   } catch (n) {
-    r.default.dispatch({
+    i.default.dispatch({
       type: "CREATOR_MONETIZATION_PRICE_TIERS_FETCH_FAILURE",
       guildId: e,
       priceTierType: t

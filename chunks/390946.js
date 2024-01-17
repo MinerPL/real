@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return N
   },
   hydratePreviouslyUnavailableGuild: function() {
-    return R
+    return k
   }
 }), n("424973"), n("222007"), n("70102");
 var s = n("627445"),
@@ -122,7 +122,7 @@ function D(e, t, n) {
 function N(e, t) {
   var n, s, i;
   let r = v.default.getGuild(e.id),
-    a = R(e, null == r ? void 0 : {
+    a = k(e, null == r ? void 0 : {
       properties: p.toServer(r),
       roles: r.roles,
       emojis: null !== (s = null === (n = g.default.getGuilds()[r.id]) || void 0 === n ? void 0 : n.rawEmojis) && void 0 !== s ? s : null,
@@ -167,7 +167,7 @@ function P(e) {
     stage_instances: e.stage_instances,
     stickers: e.stickers,
     threads: null !== (i = null === (s = e.threads) || void 0 === s ? void 0 : s.map(t => (0, h.createChannelRecordFromServer)(t, e.id))) && void 0 !== i ? i : [],
-    threadMessages: V(e.threads),
+    threadMessages: R(e.threads),
     channels: e.channels.map(t => (t.guild_id = e.id, (0, h.createChannelRecordFromServer)(t, e.id))),
     version: e.version,
     hasThreadsSubscription: e.has_threads_subscription
@@ -182,7 +182,7 @@ function P(e) {
       deletes: null !== (a = e.partial_updates.deleted_channel_ids) && void 0 !== a ? a : []
     },
     channelTimestampUpdates: e.channel_updates,
-    emojis: null == c.emojis ? null : k(c.emojis, e.partial_updates.emojis, e.partial_updates.deleted_emoji_ids),
+    emojis: null == c.emojis ? null : V(c.emojis, e.partial_updates.emojis, e.partial_updates.deleted_emoji_ids),
     emojiUpdates: {
       writes: null !== (o = e.partial_updates.emojis) && void 0 !== o ? o : [],
       deletes: null !== (d = e.partial_updates.deleted_emoji_ids) && void 0 !== d ? d : []
@@ -196,20 +196,20 @@ function P(e) {
     properties: null !== (u = e.properties) && void 0 !== u ? u : c.properties,
     roles: p.filterRoleDeletes(e.id, c.roles, e.partial_updates.roles, e.partial_updates.deleted_role_ids),
     stage_instances: e.stage_instances,
-    stickers: null == c.stickers ? null : k(c.stickers, e.partial_updates.stickers, e.partial_updates.deleted_sticker_ids),
+    stickers: null == c.stickers ? null : V(c.stickers, e.partial_updates.stickers, e.partial_updates.deleted_sticker_ids),
     stickerUpdates: {
       writes: null !== (l = e.partial_updates.stickers) && void 0 !== l ? l : [],
       deletes: null !== (f = e.partial_updates.deleted_sticker_ids) && void 0 !== f ? f : []
     },
     unableToSyncDeletes: e.unable_to_sync_deletes,
     threads: null !== (_ = null === (n = e.threads) || void 0 === n ? void 0 : n.map(t => (0, h.createChannelRecordFromServer)(t, e.id))) && void 0 !== _ ? _ : [],
-    threadMessages: V(e.threads),
+    threadMessages: R(e.threads),
     version: e.version,
     hasThreadsSubscription: e.has_threads_subscription
   }
 }
 
-function R(e, t) {
+function k(e, t) {
   var n, s, i, r, a, o, d, u, l, f, _, c;
   if (null == t && (t = b(e.id)), "partial" !== e.data_mode) return {
     id: e.id,
@@ -225,7 +225,7 @@ function R(e, t) {
     stage_instances: e.stage_instances,
     stickers: e.stickers,
     threads: null !== (r = null === (i = e.threads) || void 0 === i ? void 0 : i.map(t => (0, h.createChannelRecordFromServer)(t, e.id))) && void 0 !== r ? r : [],
-    threadMessages: V(e.threads),
+    threadMessages: R(e.threads),
     channels: e.channels.map(t => (t.guild_id = e.id, (0, h.createChannelRecordFromServer)(t, e.id))),
     presences: e.presences,
     embedded_activities: e.embedded_activities,
@@ -243,7 +243,7 @@ function R(e, t) {
     },
     channelTimestampUpdates: e.channel_updates,
     embedded_activities: e.embedded_activities,
-    emojis: null == t.emojis ? null : k(t.emojis, e.partial_updates.emojis, e.partial_updates.deleted_emoji_ids),
+    emojis: null == t.emojis ? null : V(t.emojis, e.partial_updates.emojis, e.partial_updates.deleted_emoji_ids),
     emojiUpdates: {
       writes: null !== (d = e.partial_updates.emojis) && void 0 !== d ? d : [],
       deletes: null !== (u = e.partial_updates.deleted_emoji_ids) && void 0 !== u ? u : []
@@ -258,28 +258,28 @@ function R(e, t) {
     properties: null !== (l = e.properties) && void 0 !== l ? l : t.properties,
     roles: p.filterRoleDeletes(e.id, t.roles, e.partial_updates.roles, e.partial_updates.deleted_role_ids),
     stage_instances: e.stage_instances,
-    stickers: null == t.stickers ? null : k(t.stickers, e.partial_updates.stickers, e.partial_updates.deleted_sticker_ids),
+    stickers: null == t.stickers ? null : V(t.stickers, e.partial_updates.stickers, e.partial_updates.deleted_sticker_ids),
     stickerUpdates: {
       writes: null !== (f = e.partial_updates.stickers) && void 0 !== f ? f : [],
       deletes: null !== (_ = e.partial_updates.deleted_sticker_ids) && void 0 !== _ ? _ : []
     },
     unableToSyncDeletes: e.unable_to_sync_deletes,
     threads: null !== (c = null === (s = e.threads) || void 0 === s ? void 0 : s.map(t => (0, h.createChannelRecordFromServer)(t, e.id))) && void 0 !== c ? c : [],
-    threadMessages: V(e.threads),
+    threadMessages: R(e.threads),
     voice_states: e.voice_states,
     version: e.version,
     hasThreadsSubscription: e.has_threads_subscription
   }
 }
 
-function V(e) {
+function R(e) {
   let t = [];
   if (null != e)
     for (let n of e) null != n.most_recent_message && t.push(n.most_recent_message);
   return t
 }
 
-function k(e, t, n) {
+function V(e, t, n) {
   t = null != t ? t : [];
   let s = new Set((null != n ? n : []).concat(t.map(e => e.id)));
   return e.filter(e => !s.has(e.id)).concat(t)

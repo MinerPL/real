@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   ImprovedMarkdownUserExperiment: function() {
-    return i
+    return r
   },
   ImprovedMarkdownGuildExperiment: function() {
-    return u
+    return l
   }
 });
-var r = n("862205");
-let i = (0, r.createExperiment)({
+var i = n("862205");
+let r = (0, i.createExperiment)({
     kind: "user",
     id: "2023-03_improved_message_markdown",
     label: "Improved Message Markdown ",
@@ -32,7 +32,7 @@ let i = (0, r.createExperiment)({
       }
     }]
   }),
-  u = (0, r.createExperiment)({
+  l = (0, i.createExperiment)({
     kind: "guild",
     id: "2023-03_improved_message_markdown_guild",
     label: "Improved Message Markdown Guild Experiment",

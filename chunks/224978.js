@@ -13,8 +13,8 @@ var a = n("37983"),
   u = n("77078"),
   d = n("272030"),
   c = n("59678"),
-  E = n("890474");
-class f extends s.PureComponent {
+  f = n("890474");
+class E extends s.PureComponent {
   componentWillLeave(e) {
     r.default.parallel([r.default.timing(this.state.opacity, {
       toValue: 0,
@@ -43,7 +43,7 @@ class f extends s.PureComponent {
       children: i,
       user: d,
       onClick: c,
-      isActive: f
+      isActive: E
     } = this.props;
     return (0, a.jsx)(o.ListNavigatorItem, {
       id: d.id,
@@ -53,8 +53,8 @@ class f extends s.PureComponent {
           right: -8
         },
         children: (0, a.jsx)(r.default.div, {
-          className: l(E.peopleListItem, {
-            [E.active]: f || s
+          className: l(f.peopleListItem, {
+            [f.active]: E || s
           }),
           onContextMenu: e => this.handleContextMenu(e, d),
           onMouseEnter: this.handleMouseEnter,
@@ -65,7 +65,7 @@ class f extends s.PureComponent {
             opacity: t
           },
           ...o,
-          children: i(n || f || s)
+          children: i(n || E || s)
         })
       })
     })
@@ -112,4 +112,4 @@ class f extends s.PureComponent {
     }
   }
 }
-var _ = f
+var _ = E

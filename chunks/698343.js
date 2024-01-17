@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 });
 var a = n("37983");
@@ -14,29 +14,29 @@ var s = n("446674"),
   u = n("685665"),
   d = n("384997"),
   c = n("911574"),
-  E = n("350522"),
-  f = n("476765"),
+  f = n("350522"),
+  E = n("476765"),
   _ = n("386133"),
   h = n("49111"),
   C = n("782340"),
-  T = n("607626");
+  I = n("607626");
 
-function I() {
+function T() {
   let {
     AnalyticsLocationProvider: e
-  } = (0, u.default)(o.default.ACTIVE_NOW_COLUMN), t = (0, s.useStateFromStores)([E.default], () => E.default.hasConsented(h.Consents.PERSONALIZATION)), n = t ? [] : [i.DismissibleContent.NOW_PLAYING_CONSENT_CARD], I = (0, f.useUID)();
+  } = (0, u.default)(o.default.ACTIVE_NOW_COLUMN), t = (0, s.useStateFromStores)([f.default], () => f.default.hasConsented(h.Consents.PERSONALIZATION)), n = t ? [] : [i.DismissibleContent.NOW_PLAYING_CONSENT_CARD], T = (0, E.useUID)();
   return (0, a.jsx)(e, {
     children: (0, a.jsx)(r.default, {
       section: h.AnalyticsSections.ACTIVE_NOW_COLUMN,
       children: (0, a.jsx)("aside", {
-        className: T.container,
-        "aria-labelledby": I,
+        className: I.container,
+        "aria-labelledby": T,
         children: (0, a.jsxs)(l.Scroller, {
-          className: T.scroller,
+          className: I.scroller,
           children: [(0, a.jsx)(l.Heading, {
             variant: "heading-lg/semibold",
-            className: T.header,
-            id: I,
+            className: I.header,
+            id: T,
             children: C.default.Messages.GAME_FEED_CURRENT_HEADER_TITLE
           }), (0, a.jsx)(d.default, {
             contentTypes: n,
@@ -46,7 +46,7 @@ function I() {
                 markAsDismissed: n
               } = e;
               if (t === i.DismissibleContent.NOW_PLAYING_CONSENT_CARD) return (0, a.jsx)(c.default, {
-                className: T.consentCard,
+                className: I.consentCard,
                 markAsDismissed: n
               })
             }

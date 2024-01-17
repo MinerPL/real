@@ -19,18 +19,18 @@ var a = n("414456"),
   C = n("959097"),
   p = n("158998"),
   m = n("172554"),
-  E = n("49111"),
-  g = n("782340"),
+  g = n("49111"),
+  E = n("782340"),
   S = n("881812");
 
-function _(e) {
+function A(e) {
   var t, a;
   let {
     userId: u,
     channel: C
-  } = e, m = (0, i.useStateFromStores)([h.default], () => h.default.getUser(u)), E = (0, i.useStateFromStores)([f.default], () => null != u ? f.default.getMember(C.guild_id, u) : null);
+  } = e, m = (0, i.useStateFromStores)([h.default], () => h.default.getUser(u)), g = (0, i.useStateFromStores)([f.default], () => null != u ? f.default.getMember(C.guild_id, u) : null);
 
-  function g(e) {
+  function E(e) {
     if (null == m) return null;
     (0, o.openContextMenuLazy)(e, async () => {
       let {
@@ -44,11 +44,11 @@ function _(e) {
       })
     })
   }
-  let _ = null !== (a = null !== (t = null == E ? void 0 : E.nick) && void 0 !== t ? t : p.default.getName(m)) && void 0 !== a ? a : "???",
-    A = null == E ? void 0 : E.colorString;
+  let A = null !== (a = null !== (t = null == g ? void 0 : g.nick) && void 0 !== t ? t : p.default.getName(m)) && void 0 !== a ? a : "???",
+    _ = null == g ? void 0 : g.colorString;
   return null == m ? (0, s.jsx)("span", {
     className: l(S.threadCreatorName, S.unknownCreatorName),
-    children: _
+    children: A
   }) : (0, s.jsx)(r.Popout, {
     preload: () => (0, d.default)(m.id, m.getAvatarURL(C.guild_id, 80), {
       guildId: C.guild_id,
@@ -65,16 +65,16 @@ function _(e) {
       ...e,
       tag: "span",
       className: S.threadCreatorName,
-      onContextMenu: g,
+      onContextMenu: E,
       children: (0, s.jsx)(r.NameWithRole, {
-        name: _,
-        color: null != A ? A : void 0
+        name: A,
+        color: null != _ ? _ : void 0
       })
     })
   })
 }
 
-function A(e) {
+function _(e) {
   let {
     channel: t
   } = e, {
@@ -90,17 +90,17 @@ function A(e) {
       color: "header-secondary",
       children: (0, s.jsx)("div", {
         className: S.subtitle,
-        children: g.default.Messages.THREAD_STARTED_BY.format({
-          usernameHook: (e, n) => (0, s.jsx)(_, {
+        children: E.default.Messages.THREAD_STARTED_BY.format({
+          usernameHook: (e, n) => (0, s.jsx)(A, {
             userId: t.ownerId,
             channel: t
           }, n)
         })
       })
-    }), t.type === E.ChannelTypes.PRIVATE_THREAD ? (0, s.jsx)(r.Text, {
+    }), t.type === g.ChannelTypes.PRIVATE_THREAD ? (0, s.jsx)(r.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      children: g.default.Messages.EMPTY_MESSAGE_PRIVATE_THREAD_INSTRUCTIONS
+      children: E.default.Messages.EMPTY_MESSAGE_PRIVATE_THREAD_INSTRUCTIONS
     }) : null]
   })
 }
@@ -119,7 +119,7 @@ function T(e) {
       })
     }), (0, s.jsx)(m.EmptyMessageHeader, {
       children: n.name
-    }), (0, s.jsx)(A, {
+    }), (0, s.jsx)(_, {
       channel: n
     })]
   })

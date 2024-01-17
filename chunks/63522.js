@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("574073"),
-  l = n("232259"),
+var l = n("574073"),
+  a = n("232259"),
   i = n("8161"),
   r = n("304198"),
   o = n("509425"),
@@ -18,9 +18,9 @@ function d(e) {
     message: t,
     channel: n,
     compact: d
-  } = e, c = (0, s.default)(t), f = t.application, m = (0, l.useUsernameHook)(t.author, n.id, n.guild_id);
-  return (0, a.jsx)(r.default, {
-    iconNode: (0, a.jsx)(i.default, {
+  } = e, c = (0, l.default)(t), f = t.application, E = (0, a.useUsernameHook)(t.author, n.id, n.guild_id);
+  return (0, s.jsx)(r.default, {
+    iconNode: (0, s.jsx)(i.default, {
       className: u.ticketIcon
     }),
     timestamp: t.timestamp,
@@ -28,7 +28,7 @@ function d(e) {
     children: (0, o.getApplicationSubscriptionSystemMessageContent)({
       application: f,
       username: c.nick,
-      usernameHook: m(c)
+      usernameHook: E(c)
     })
   })
 }

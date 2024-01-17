@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   PrivateChannelIntegrationAddedSystemMessage: function() {
-    return T
+    return p
   },
   PrivateChannelIntegrationRemovedSystemMessage: function() {
-    return g
+    return S
   }
 });
-var a = n("37983"),
-  s = n("884691"),
-  l = n("77078"),
+var s = n("37983"),
+  l = n("884691"),
+  a = n("77078"),
   i = n("272030"),
   r = n("574073"),
   o = n("232259"),
@@ -17,93 +17,93 @@ var a = n("37983"),
   d = n("981601"),
   c = n("697218"),
   f = n("304198"),
-  m = n("315102"),
-  E = n("441823"),
-  _ = n("140596"),
-  h = n("950576"),
-  p = n("49111");
+  E = n("315102"),
+  _ = n("441823"),
+  T = n("140596"),
+  I = n("950576"),
+  m = n("49111");
 
-function I(e) {
-  return s.useCallback(t => (s, r) => {
+function N(e) {
+  return l.useCallback(t => (l, r) => {
     var o;
-    let f = m.default.getApplicationIconURL({
+    let f = E.default.getApplicationIconURL({
         id: t.id,
         icon: t.icon,
         bot: t.bot,
         botIconFirst: !0
       }),
-      h = c.default.getUser(null === (o = t.bot) || void 0 === o ? void 0 : o.id),
-      p = _.default.getIntegration(e.id, t.id),
-      I = e.isPrivate() && null != p ? t => {
+      I = c.default.getUser(null === (o = t.bot) || void 0 === o ? void 0 : o.id),
+      m = T.default.getIntegration(e.id, t.id),
+      N = e.isPrivate() && null != m ? t => {
         (0, i.openContextMenuLazy)(t, async () => {
           let {
             default: t
           } = await n.el("348866").then(n.bind(n, "348866"));
-          return n => (0, a.jsx)(t, {
+          return n => (0, s.jsx)(t, {
             ...n,
             channel: e,
-            integration: p
+            integration: m
           })
         })
-      } : null != h ? t => (0, E.openUserContextMenu)(t, h, e) : void 0,
+      } : null != I ? t => (0, _.openUserContextMenu)(t, I, e) : void 0,
       {
-        bot: T
+        bot: p
       } = t;
-    return null == T ? s : (0, a.jsx)(l.Popout, {
+    return null == p ? l : (0, s.jsx)(a.Popout, {
       position: "right",
-      preload: () => (0, u.default)(T.id, f, {
+      preload: () => (0, u.default)(p.id, f, {
         guildId: e.guild_id,
         channelId: e.id
       }),
-      renderPopout: t => (0, a.jsx)(d.default, {
+      renderPopout: t => (0, s.jsx)(d.default, {
         ...t,
-        userId: T.id,
+        userId: p.id,
         guildId: e.guild_id,
         channelId: e.id
       }),
-      children: e => (0, a.jsx)(l.Anchor, {
+      children: e => (0, s.jsx)(a.Anchor, {
         ...e,
-        onContextMenu: I,
-        children: s
+        onContextMenu: N,
+        children: l
       })
     }, r)
   }, [e])
 }
 
-function T(e) {
+function p(e) {
   let {
     message: t,
-    channel: s,
-    compact: l
-  } = e, i = (0, r.default)(t), u = t.application, d = (0, o.useUsernameHook)(t.author, s.id, s.guild_id), c = I(s);
-  return (0, a.jsx)(f.default, {
+    channel: l,
+    compact: a
+  } = e, i = (0, r.default)(t), u = t.application, d = (0, o.useUsernameHook)(t.author, l.id, l.guild_id), c = N(l);
+  return (0, s.jsx)(f.default, {
     icon: n("127067"),
     timestamp: t.timestamp,
-    compact: l,
-    children: (0, h.getPrivateChannelIntegrationAddedSystemMessageContent)({
+    compact: a,
+    children: (0, I.getPrivateChannelIntegrationAddedSystemMessageContent)({
       application: u,
       username: i.nick,
       usernameHook: d(i),
-      applicationNameHook: null != u ? c(u) : p.NOOP
+      applicationNameHook: null != u ? c(u) : m.NOOP
     })
   })
 }
 
-function g(e) {
+function S(e) {
   let {
     message: t,
-    channel: s,
-    compact: l
-  } = e, i = (0, r.default)(t), u = t.application, d = (0, o.useUsernameHook)(t.author, s.id, s.guild_id), c = I(s);
-  return (0, a.jsx)(f.default, {
+    channel: l,
+    compact: a
+  } = e, i = (0, r.default)(t), u = t.application, d = (0, o.useUsernameHook)(t.author, l.id, l.guild_id), c = N(l);
+  return (0, s.jsx)(f.default, {
     icon: n("226315"),
     timestamp: t.timestamp,
-    compact: l,
-    children: (0, h.getPrivateChannelIntegrationRemovedSystemMessageContent)({
+    compact: a,
+    children: (0, I.getPrivateChannelIntegrationRemovedSystemMessageContent)({
       application: u,
       username: i.nick,
       usernameHook: d(i),
-      applicationNameHook: null != u ? c(u) : p.NOOP
+      applicationNameHook: null != u ? c(u) : m.NOOP
     })
   })
 }

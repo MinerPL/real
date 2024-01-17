@@ -13,9 +13,9 @@ var a = n("446674"),
   u = n("674268"),
   d = n("116949"),
   c = n("49111"),
-  E = n("583374");
+  f = n("583374");
 
-function f(e, t) {
+function E(e, t) {
   let n = !1;
   return null == e.userContent && (e.userContent = {
     dismissedContents: new Uint8Array
@@ -24,7 +24,7 @@ function f(e, t) {
 
 function _(e, t, n) {
   let a = r.HotspotStore.hasHiddenHotspot(t);
-  return !!a && f(e, n)
+  return !!a && E(e, n)
 }
 let h = [{
   version: 2,
@@ -37,9 +37,9 @@ let h = [{
     e.inbox = u, l.default.get("seenInboxTutorial", !1) && (u.viewedTutorial = !0, r = !0);
     let c = l.default.get("recentsButtonTab2");
     null != c && (u.currentTab = "Recent Mentions" === c ? s.InboxTab.MENTIONS : s.InboxTab.UNREADS, r = !0);
-    let E = null !== (t = l.default.get("unread-messages-collapsed-channels")) && void 0 !== t ? t : {};
-    for (let t in E) {
-      if (!E[t]) continue;
+    let f = null !== (t = l.default.get("unread-messages-collapsed-channels")) && void 0 !== t ? t : {};
+    for (let t in f) {
+      if (!f[t]) continue;
       let a = o.default.getChannel(t);
       null != a && (r = !0, (0, d.mutateUserChannelSettings)(e, null !== (n = a.guild_id) && void 0 !== n ? n : "0", a.id, e => {
         e.collapsedInInbox = !0
@@ -68,7 +68,7 @@ let h = [{
   run(e) {
     let t = !1,
       n = !0 === l.default.get("HAS_SEEN_HUB_UPSELL") || r.HotspotStore.hasHiddenHotspot(r.HotspotLocations.HUB_SECOND_EMAIL_CONNECTION_UPSELL);
-    return n && (t = f(e, s.DismissibleContent.HUB_WAITLIST_UPSELL)), t
+    return n && (t = E(e, s.DismissibleContent.HUB_WAITLIST_UPSELL)), t
   },
   cleanup() {
     l.default.remove("HAS_SEEN_HUB_UPSELL")
@@ -79,33 +79,33 @@ let h = [{
     var t, n, a, r, o, u, d;
     let c = !1;
     e.textAndImages = null !== (t = e.textAndImages) && void 0 !== t ? t : s.TextAndImagesSettings.create(), e.notifications = null !== (n = e.notifications) && void 0 !== n ? n : s.NotificationSettings.create(), e.privacy = null !== (a = e.privacy) && void 0 !== a ? a : s.PrivacySettings.create(), e.voiceAndVideo = null !== (r = e.voiceAndVideo) && void 0 !== r ? r : s.VoiceAndVideoSettings.create(), e.gameLibrary = null !== (o = e.gameLibrary) && void 0 !== o ? o : s.GameLibrarySettings.create(), e.debug = null !== (u = e.debug) && void 0 !== u ? u : s.DebugSettings.create();
-    let E = null !== (d = l.default.get("UserSettingsStore")) && void 0 !== d ? d : {};
-    return "boolean" == typeof E.useRichChatTextBox && (e.textAndImages.useRichChatInput = i.BoolValue.create({
-      value: E.useRichChatTextBox
-    }), c = !0), "string" == typeof E.renderSpoilers && (e.textAndImages.renderSpoilers = i.StringValue.create({
-      value: E.renderSpoilers
-    }), c = !0), "boolean" == typeof E.useThreadSidebar && (e.textAndImages.useThreadSidebar = i.BoolValue.create({
-      value: E.useThreadSidebar
-    }), c = !0), "boolean" == typeof E.showInAppNotifications && (e.notifications.showInAppNotifications = i.BoolValue.create({
-      value: E.showInAppNotifications
-    }), c = !0), E.emojiPickerCollapsedSections instanceof Array && (e.textAndImages.emojiPickerCollapsedSections = E.emojiPickerCollapsedSections, c = !0), E.stickerPickerCollapsedSections instanceof Array && (e.textAndImages.stickerPickerCollapsedSections = E.stickerPickerCollapsedSections, c = !0), "boolean" == typeof E.viewImageDescriptions && (e.textAndImages.viewImageDescriptions = i.BoolValue.create({
-      value: E.viewImageDescriptions
-    }), c = !0), "boolean" == typeof E.showCommandSuggestions && (e.textAndImages.showCommandSuggestions = i.BoolValue.create({
-      value: E.showCommandSuggestions
-    }), c = !0), "boolean" == typeof E.alwaysPreviewVideo && (e.voiceAndVideo.alwaysPreviewVideo = i.BoolValue.create({
-      value: E.alwaysPreviewVideo
-    }), c = !0), "boolean" == typeof E.notifyFriendsOnGoLive && (e.notifications.notifyFriendsOnGoLive = i.BoolValue.create({
-      value: E.notifyFriendsOnGoLive
-    }), c = !0), "boolean" == typeof E.installShortcutDesktop && (e.gameLibrary.installShortcutDesktop = i.BoolValue.create({
-      value: E.installShortcutDesktop
-    }), c = !0), "boolean" == typeof E.installShortcutStartMenu && (e.gameLibrary.installShortcutStartMenu = i.BoolValue.create({
-      value: E.installShortcutStartMenu
-    }), c = !0), "boolean" == typeof E.allowActivityPartyPrivacyFriends && (e.privacy.allowActivityPartyPrivacyFriends = i.BoolValue.create({
-      value: E.allowActivityPartyPrivacyFriends
-    }), c = !0), "boolean" == typeof E.allowActivityPartyPrivacyVoiceChannel && (e.privacy.allowActivityPartyPrivacyVoiceChannel = i.BoolValue.create({
-      value: E.allowActivityPartyPrivacyVoiceChannel
-    }), c = !0), "boolean" == typeof E.rtcPanelShowVoiceStates && (e.debug.rtcPanelShowVoiceStates = i.BoolValue.create({
-      value: E.rtcPanelShowVoiceStates
+    let f = null !== (d = l.default.get("UserSettingsStore")) && void 0 !== d ? d : {};
+    return "boolean" == typeof f.useRichChatTextBox && (e.textAndImages.useRichChatInput = i.BoolValue.create({
+      value: f.useRichChatTextBox
+    }), c = !0), "string" == typeof f.renderSpoilers && (e.textAndImages.renderSpoilers = i.StringValue.create({
+      value: f.renderSpoilers
+    }), c = !0), "boolean" == typeof f.useThreadSidebar && (e.textAndImages.useThreadSidebar = i.BoolValue.create({
+      value: f.useThreadSidebar
+    }), c = !0), "boolean" == typeof f.showInAppNotifications && (e.notifications.showInAppNotifications = i.BoolValue.create({
+      value: f.showInAppNotifications
+    }), c = !0), f.emojiPickerCollapsedSections instanceof Array && (e.textAndImages.emojiPickerCollapsedSections = f.emojiPickerCollapsedSections, c = !0), f.stickerPickerCollapsedSections instanceof Array && (e.textAndImages.stickerPickerCollapsedSections = f.stickerPickerCollapsedSections, c = !0), "boolean" == typeof f.viewImageDescriptions && (e.textAndImages.viewImageDescriptions = i.BoolValue.create({
+      value: f.viewImageDescriptions
+    }), c = !0), "boolean" == typeof f.showCommandSuggestions && (e.textAndImages.showCommandSuggestions = i.BoolValue.create({
+      value: f.showCommandSuggestions
+    }), c = !0), "boolean" == typeof f.alwaysPreviewVideo && (e.voiceAndVideo.alwaysPreviewVideo = i.BoolValue.create({
+      value: f.alwaysPreviewVideo
+    }), c = !0), "boolean" == typeof f.notifyFriendsOnGoLive && (e.notifications.notifyFriendsOnGoLive = i.BoolValue.create({
+      value: f.notifyFriendsOnGoLive
+    }), c = !0), "boolean" == typeof f.installShortcutDesktop && (e.gameLibrary.installShortcutDesktop = i.BoolValue.create({
+      value: f.installShortcutDesktop
+    }), c = !0), "boolean" == typeof f.installShortcutStartMenu && (e.gameLibrary.installShortcutStartMenu = i.BoolValue.create({
+      value: f.installShortcutStartMenu
+    }), c = !0), "boolean" == typeof f.allowActivityPartyPrivacyFriends && (e.privacy.allowActivityPartyPrivacyFriends = i.BoolValue.create({
+      value: f.allowActivityPartyPrivacyFriends
+    }), c = !0), "boolean" == typeof f.allowActivityPartyPrivacyVoiceChannel && (e.privacy.allowActivityPartyPrivacyVoiceChannel = i.BoolValue.create({
+      value: f.allowActivityPartyPrivacyVoiceChannel
+    }), c = !0), "boolean" == typeof f.rtcPanelShowVoiceStates && (e.debug.rtcPanelShowVoiceStates = i.BoolValue.create({
+      value: f.rtcPanelShowVoiceStates
     }), c = !0), c
   },
   cleanup() {}
@@ -119,7 +119,7 @@ let h = [{
   cleanup() {}
 }, {
   version: 9,
-  run: e => (r.HotspotStore.hasHiddenHotspot(r.HotspotLocations.MULTI_ACCOUNT_TOOLTIP) && l.default.set(E.MULTIACCOUNT_TOOLTIP_SEEN_KEY, "true"), _(e, r.HotspotLocations.MULTI_ACCOUNT_TOOLTIP, s.DismissibleContent.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
+  run: e => (r.HotspotStore.hasHiddenHotspot(r.HotspotLocations.MULTI_ACCOUNT_TOOLTIP) && l.default.set(f.MULTIACCOUNT_TOOLTIP_SEEN_KEY, "true"), _(e, r.HotspotLocations.MULTI_ACCOUNT_TOOLTIP, s.DismissibleContent.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
   cleanup() {}
 }, {
   version: 10,
@@ -127,7 +127,7 @@ let h = [{
     var t;
     let n = _(e, r.HotspotLocations.HUB_LINK_CHANNEL_NOTICE, s.DismissibleContent.CHANNEL_NOTICE_HUBLINK),
       a = null !== (t = l.default.get("channelNotices")) && void 0 !== t ? t : {};
-    return !1 === a[c.ChannelNoticeTypes.INVITE] && f(e, s.DismissibleContent.CHANNEL_NOTICE_INVITE) && (n = !0), !1 === a[c.ChannelNoticeTypes.QUICKSWITCHER] && f(e, s.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0), !1 === a[c.ChannelNoticeTypes.GUILD_BOOSTING] && f(e, s.DismissibleContent.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0), n
+    return !1 === a[c.ChannelNoticeTypes.INVITE] && E(e, s.DismissibleContent.CHANNEL_NOTICE_INVITE) && (n = !0), !1 === a[c.ChannelNoticeTypes.QUICKSWITCHER] && E(e, s.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0), !1 === a[c.ChannelNoticeTypes.GUILD_BOOSTING] && E(e, s.DismissibleContent.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0), n
   },
   cleanup() {
     l.default.remove("channelNotices")
@@ -143,7 +143,7 @@ let h = [{
   version: 12,
   run(e) {
     let t = !1;
-    return l.default.get("hideNag") && f(e, s.DismissibleContent.NAGBAR_NOTICE_DOWNLOAD) && (t = !0), l.default.get("hideConnectSpotify") && f(e, s.DismissibleContent.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0), l.default.get("hideConnectPlayStation") && f(e, s.DismissibleContent.NAGBAR_NOTICE_CONNECT_PLAYSTATION) && (t = !0), l.default.get("hideMFASMSNotice") && f(e, s.DismissibleContent.NAGBAR_NOTICE_MFA_SMS_BACKUP) && (t = !0), t
+    return l.default.get("hideNag") && E(e, s.DismissibleContent.NAGBAR_NOTICE_DOWNLOAD) && (t = !0), l.default.get("hideConnectSpotify") && E(e, s.DismissibleContent.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0), l.default.get("hideConnectPlayStation") && E(e, s.DismissibleContent.NAGBAR_NOTICE_CONNECT_PLAYSTATION) && (t = !0), l.default.get("hideMFASMSNotice") && E(e, s.DismissibleContent.NAGBAR_NOTICE_MFA_SMS_BACKUP) && (t = !0), t
   },
   cleanup() {
     l.default.remove("hideNag"), l.default.remove("hideConnectSpotify"), l.default.remove("hideConnectPlayStation"), l.default.remove("hideMFASMSNotice")
@@ -152,7 +152,7 @@ let h = [{
   version: 13,
   run(e) {
     let t = !1;
-    return l.default.get("hidePremiumPromo") && f(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0), l.default.get("hidePremiumTier2TrialEnding") && f(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (t = !0), l.default.get("hidePremiumReactivateNotice") && f(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0), _(e, r.HotspotLocations.INVITE_SPLASH_GUILD_HEADER_TOOLTIP, s.DismissibleContent.GUILD_HEADER_INVITE_SPLASH) && (t = !0), t
+    return l.default.get("hidePremiumPromo") && E(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0), l.default.get("hidePremiumTier2TrialEnding") && E(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (t = !0), l.default.get("hidePremiumReactivateNotice") && E(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0), _(e, r.HotspotLocations.INVITE_SPLASH_GUILD_HEADER_TOOLTIP, s.DismissibleContent.GUILD_HEADER_INVITE_SPLASH) && (t = !0), t
   },
   cleanup() {
     l.default.remove("hidePremiumPromo"), l.default.remove("hidePremiumTier2TrialEnding"), l.default.remove("hidePremiumReactivateNotice")
@@ -204,7 +204,7 @@ let h = [{
     var t;
     let n = !1,
       a = null !== (t = l.default.get("forumHelperCardStorageKey")) && void 0 !== t && t;
-    return a && (n = f(e, s.DismissibleContent.FORUM_CHANNEL_HELPER_CARD)), n
+    return a && (n = E(e, s.DismissibleContent.FORUM_CHANNEL_HELPER_CARD)), n
   },
   cleanup() {
     l.default.remove("forumHelperCardStorageKey")

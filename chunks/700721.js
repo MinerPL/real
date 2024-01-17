@@ -14,15 +14,15 @@ var s = n("872717"),
   u = n("299285"),
   d = n("697218"),
   c = n("437712"),
-  E = n("167726"),
-  f = n("718517"),
+  f = n("167726"),
+  E = n("718517"),
   _ = n("50885"),
   h = n("861309"),
   C = n("492249"),
-  T = n("49111");
-let I = 10 * f.default.Millis.SECOND;
+  I = n("49111");
+let T = 10 * E.default.Millis.SECOND;
 var S = {
-  [T.RPCCommands.VALIDATE_APPLICATION]: {
+  [I.RPCCommands.VALIDATE_APPLICATION]: {
     scope: C.RPC_LOCAL_SCOPE,
     handler(e) {
       let {
@@ -39,7 +39,7 @@ var S = {
           return null != n ? Promise.resolve(n) : (0, r.fetchUserEntitlementsForApplication)(t).then(() => !0 === c.default.isEntitledToSku(d.default.getCurrentUser(), e, t))
         })(t, e.id).then(e => {
           if (!e) throw new h.default(C.RPCErrors.INVALID_ENTITLEMENT, "User does not have entitlement.")
-        }), (0, i.timeoutPromise)(I).then(() => {
+        }), (0, i.timeoutPromise)(T).then(() => {
           throw new h.default(C.RPCErrors.INVALID_ENTITLEMENT, "Timed out fetching entitlement.")
         })])
       } catch (e) {
@@ -55,7 +55,7 @@ var S = {
       }
     }
   },
-  [T.RPCCommands.GET_ENTITLEMENT_TICKET]: {
+  [I.RPCCommands.GET_ENTITLEMENT_TICKET]: {
     scope: C.RPC_LOCAL_SCOPE,
     handler(e) {
       let {
@@ -63,9 +63,9 @@ var S = {
       } = e, i = t.application.id;
       if (null == i) throw new h.default(C.RPCErrors.INVALID_COMMAND, "No application.");
       return s.default.post({
-        url: T.Endpoints.ENTITLEMENT_TICKET(i),
+        url: I.Endpoints.ENTITLEMENT_TICKET(i),
         body: {
-          test_mode: E.default.inTestModeForApplication(i) || o.default.inDevModeForApplication(i)
+          test_mode: f.default.inTestModeForApplication(i) || o.default.inDevModeForApplication(i)
         },
         retries: 3,
         oldFormErrors: !0

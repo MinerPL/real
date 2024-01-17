@@ -155,12 +155,12 @@ function P(e) {
     } = n("33942"), i = t(e);
     if (null != i) return e => (null == e || e.preventDefault(), s(i), !0)
   }
-  let R = (0, h.tryParseEventDetailsPath)(o);
-  if (null != o && P && null != R) return e => {
+  let k = (0, h.tryParseEventDetailsPath)(o);
+  if (null != o && P && null != k) return e => {
     null == e || e.preventDefault();
     let t = C.default.getGuildId();
-    null != R.guildId && "" !== R.guildId && R.guildId !== t && (0, v.default)(D.Routes.CHANNEL(R.guildId));
-    let n = g.default.getGuildScheduledEvent(R.guildEventId);
+    null != k.guildId && "" !== k.guildId && k.guildId !== t && (0, v.default)(D.Routes.CHANNEL(k.guildId));
+    let n = g.default.getGuildScheduledEvent(k.guildEventId);
     return null != n && (0, c.openGuildEventDetails)({
       eventId: n.id
     }), !0

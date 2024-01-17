@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   fetchUserAffinities: function() {
-    return s
+    return r
   }
 });
-var l = n("872717"),
-  i = n("913144"),
-  r = n("843823"),
-  a = n("49111");
+var n = a("872717"),
+  i = a("913144"),
+  s = a("843823"),
+  l = a("49111");
 
-function s() {
+function r() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  return r.default.needsRefresh() ? (i.default.dispatch({
+  return s.default.needsRefresh() ? (i.default.dispatch({
     type: "LOAD_USER_AFFINITIES"
-  }), l.default.get({
-    url: a.Endpoints.USER_AFFINITIES,
+  }), n.default.get({
+    url: l.Endpoints.USER_AFFINITIES,
     retries: e ? 3 : 0,
     oldFormErrors: !0
   }).then(e => {

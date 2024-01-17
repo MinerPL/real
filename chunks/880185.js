@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 }), n("222007");
 var a = n("913144"),
@@ -13,7 +13,7 @@ var a = n("913144"),
   u = n("880731"),
   d = n("943551");
 let c = new Set;
-class E extends s.default {
+class f extends s.default {
   _initialize() {
     a.default.subscribe("MESSAGE_CREATE", this.handleMessageCreate), a.default.subscribe("POGGERMODE_SETTINGS_UPDATE", this.handleSettingsUpdate)
   }
@@ -35,12 +35,12 @@ class E extends s.default {
         message: {
           author: a,
           nonce: s,
-          mentions: E
+          mentions: f
         }
       } = e;
       if (!u.default.isEnabled()) return !1;
-      let f = i.default.getId();
-      if ((null == E ? void 0 : E.find(e => e.id === f)) != null ? (0, l.unlockAchievement)(o.PoggermodeAchievementId.PING_ME) : (null !== (t = null == E ? void 0 : E.length) && void 0 !== t ? t : 0) > 0 && (null == a ? void 0 : a.id) === f && (0, l.unlockAchievement)(o.PoggermodeAchievementId.PING_SOMEONE), !(0, d.shouldTrackMessage)(null == a ? void 0 : a.id, f, s, c)) return !1;
+      let E = i.default.getId();
+      if ((null == f ? void 0 : f.find(e => e.id === E)) != null ? (0, l.unlockAchievement)(o.PoggermodeAchievementId.PING_ME) : (null !== (t = null == f ? void 0 : f.length) && void 0 !== t ? t : 0) > 0 && (null == a ? void 0 : a.id) === E && (0, l.unlockAchievement)(o.PoggermodeAchievementId.PING_SOMEONE), !(0, d.shouldTrackMessage)(null == a ? void 0 : a.id, E, s, c)) return !1;
       let _ = d.default.getMostRecentMessageCombo(n),
         {
           combo: h
@@ -55,4 +55,4 @@ class E extends s.default {
     }
   }
 }
-var f = new E
+var E = new f

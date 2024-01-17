@@ -1,28 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   ACCOUNT_AGE_DATE_TOOLTIP_CONFIG: function() {
-    return a
+    return o
   },
   MEMBER_JOIN_DATE_TOOLTIP_CONFIG: function() {
-    return o
+    return a
   },
   MembersTableDateFormats: function() {
     return i
   },
   formatDateRelativeTime: function() {
-    return c
+    return d
   }
 });
 var l, i, r = n("319126"),
   s = n("782340");
-let a = {
+let o = {
     month: "short",
     day: "numeric",
     year: "numeric",
     hour: "numeric",
     minute: "2-digit"
   },
-  o = {
+  a = {
     month: "short",
     day: "numeric",
     year: "numeric",
@@ -38,14 +38,14 @@ let u = () => ({
     months: s.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_MONTH,
     years: s.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MORE_THAN_YEAR
   }),
-  d = () => ({
+  c = () => ({
     hours: s.default.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_HOURS,
     days: s.default.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_DAYS,
     months: s.default.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_MORE_THAN_MONTH,
     years: s.default.Messages.MEMBERS_TABLE_ACCOUNT_AGE_TIMESTAMP_MORE_THAN_YEAR
   }),
-  c = (e, t) => {
+  d = (e, t) => {
     var n;
-    let l = 0 === (n = t) ? u : 1 === n ? d : void 0;
+    let l = 0 === (n = t) ? u : 1 === n ? c : void 0;
     return (0, r.default)(e, l, !1)
   }

@@ -26,12 +26,12 @@ function m(e, t, m) {
   (0, d.useSubscribeGuildMembers)(A), (0, n.useStateFromStores)([E.default], () => E.default.getGuildVersion(t), [t]);
   let g = (0, n.useStateFromStores)([f.default], () => f.default.getChannel(m)),
     R = (0, n.useStateFromStores)([c.default], () => c.default.getGuild(t), [t]),
-    C = (0, n.useStateFromStores)([_.default], () => _.default.getCurrentUser()),
-    T = (0, i.default)(g, "Context Menu"),
+    T = (0, n.useStateFromStores)([_.default], () => _.default.getCurrentUser()),
+    C = (0, i.default)(g, "Context Menu"),
     N = (0, o.useIsThreadModerator)(g);
-  if ((null == C ? void 0 : C.id) === e.id) return [T];
-  if (null == R || null == g || null == C) return [];
-  let I = N || g.ownerId === C.id && g.type === M.ChannelTypes.PRIVATE_THREAD;
+  if ((null == T ? void 0 : T.id) === e.id) return [C];
+  if (null == R || null == g || null == T) return [];
+  let I = N || g.ownerId === T.id && g.type === M.ChannelTypes.PRIVATE_THREAD;
   return [I ? (0, u.jsx)(r.MenuItem, {
     id: "remove",
     label: g.isForumPost() ? S.default.Messages.REMOVE_USER_FROM_FORUM_POST.format({

@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return _
   },
   useContextMenuModerateUser: function() {
-    return p
+    return h
   },
   useHighestRole: function() {
-    return h
+    return p
   },
   SearchState: function() {
     return i
@@ -21,18 +21,18 @@ n.r(t), n.d(t, {
 });
 var l, i, r = n("884691"),
   s = n("65597"),
-  a = n("685665"),
-  o = n("401642"),
+  o = n("685665"),
+  a = n("401642"),
   u = n("305961"),
-  d = n("697218"),
-  c = n("441823"),
+  c = n("697218"),
+  d = n("441823"),
   f = n("49111");
 let E = e => {
   let {
     guildId: t,
     userId: n
   } = e;
-  (0, o.openUserProfileModal)({
+  (0, a.openUserProfileModal)({
     userId: n,
     guildId: t,
     analyticsLocation: {
@@ -45,11 +45,11 @@ let E = e => {
 function _(e, t, n) {
   let {
     analyticsLocations: l
-  } = (0, a.default)();
+  } = (0, o.default)();
   return r.useCallback(i => {
     if (null == e) return;
-    let r = d.default.getUser(e.userId);
-    null != r && (i.stopPropagation(), (0, c.openModerateRoleContextMenu)(i, {
+    let r = c.default.getUser(e.userId);
+    null != r && (i.stopPropagation(), (0, d.openModerateRoleContextMenu)(i, {
       user: r,
       guildId: e.guildId,
       analyticsLocations: null != t ? [t] : l,
@@ -58,14 +58,14 @@ function _(e, t, n) {
   }, [e, l, n, t])
 }
 
-function p(e, t, n) {
+function h(e, t, n) {
   let {
     analyticsLocations: l
-  } = (0, a.default)();
+  } = (0, o.default)();
   return r.useCallback(i => {
     if (null == e) return;
-    let r = d.default.getUser(e.userId);
-    null != r && (i.stopPropagation(), (0, c.openModerateUserContextMenu)(i, {
+    let r = c.default.getUser(e.userId);
+    null != r && (i.stopPropagation(), (0, d.openModerateUserContextMenu)(i, {
       user: r,
       guildId: e.guildId,
       analyticsLocations: null != t ? [t] : l,
@@ -74,7 +74,7 @@ function p(e, t, n) {
   }, [e, n, l, t])
 }
 
-function h(e) {
+function p(e) {
   return (0, s.default)([u.default], () => {
     var t;
     if (null == e) return null;

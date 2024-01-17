@@ -7,24 +7,24 @@ n.r(t), n.d(t, {
     return g
   },
   toggleMessageReminders: function() {
-    return E
+    return p
   },
   completeMessageReminders: function() {
-    return S
+    return E
   },
   cleanupMessageReminders: function() {
-    return h
+    return S
   },
   fetchAndUpdateSavedMessages: function() {
-    return M
+    return v
   }
 });
 var a = n("872717"),
   s = n("913144"),
   i = n("679653"),
   r = n("42203"),
-  u = n("305961"),
-  l = n("27618"),
+  l = n("305961"),
+  u = n("27618"),
   d = n("697218"),
   c = n("599110"),
   o = n("520899"),
@@ -44,14 +44,14 @@ function _(e, t) {
     ... function(e) {
       let t = r.default.getChannel(e.channel_id);
       if (null == t) return null;
-      let n = u.default.getGuild(t.guild_id),
+      let n = l.default.getGuild(t.guild_id),
         a = "",
-        s = (0, i.computeChannelName)(t, d.default, l.default, !0);
+        s = (0, i.computeChannelName)(t, d.default, u.default, !0);
       if (t.isPrivate()) a = s;
       else if (t.isThread()) {
         let e = r.default.getChannel(t.parent_id);
         if (null == e) return null;
-        let n = (0, i.computeChannelName)(e, d.default, l.default, !0);
+        let n = (0, i.computeChannelName)(e, d.default, u.default, !0);
         a = "".concat(n, " > ").concat(s)
       } else a = s;
       let c = "".concat(e.content.length > 0 ? e.content : "".concat(e.attachments.length, " attachments"));
@@ -81,7 +81,7 @@ function g(e, t) {
   }], [a])
 }
 
-function E(e, t) {
+function p(e, t) {
   c.default.track(f.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
     skipped: t,
     reason: "updating within the list",
@@ -93,7 +93,7 @@ function E(e, t) {
   })
 }
 
-function S(e) {
+function E(e) {
   c.default.track(f.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
     skipped: !1,
     reason: "complete and clear immediately",
@@ -103,7 +103,7 @@ function S(e) {
   I([], t.filter(t => t.messageId === e))
 }
 
-function h() {
+function S() {
   c.default.track(f.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
     skipped: !1,
     reason: "clearing",
@@ -113,7 +113,7 @@ function h() {
   e.some(e => e.complete) && I([], e.filter(e => e.complete))
 }
 
-function p(e) {
+function h(e) {
   c.default.track(f.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
     skipped: !1,
     reason: "updated_from_server",
@@ -132,16 +132,16 @@ function I(e, t) {
       removed: t.map(m.savedMessageToServer)
     }
   }).then(e => {
-    p(e.body.saved_messages.map(m.savedMessageToClient))
+    h(e.body.saved_messages.map(m.savedMessageToClient))
   })
 }
 
-function M() {
+function v() {
   return o.default.recentlyFetched() ? Promise.resolve() : a.default.get({
     url: f.Endpoints.SAVED_MESSAGES
   }).then(e => {
     let t = e.body.saved_messages,
       n = t.map(m.savedMessageToClient);
-    p(n)
+    h(n)
   })
 }

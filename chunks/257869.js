@@ -7,22 +7,22 @@ n.r(t), n.d(t, {
     return c
   }
 }), n("70102");
-var r = n("37983"),
-  i = n("884691"),
-  u = n("65597"),
-  l = n("619443"),
+var i = n("37983"),
+  r = n("884691"),
+  l = n("65597"),
+  u = n("619443"),
   o = n("371358"),
   s = n("648825");
-let a = i.createContext(void 0);
+let a = r.createContext(void 0);
 
 function d(e) {
-  let t = i.useContext(a);
+  let t = r.useContext(a);
   if (null == t) throw Error("".concat(null != e ? e : "useGroupListingsFetchContext", " must be used within a GroupListingsFetchContextProvider"));
   let {
     listingsLoaded: n,
-    fetchGroupListingsForGuild: r
+    fetchGroupListingsForGuild: i
   } = t;
-  return r(), n
+  return i(), n
 }
 
 function c(e) {
@@ -32,19 +32,19 @@ function c(e) {
     refetchOnMount: d,
     includeSoftDeleted: c,
     countryCode: f,
-    dontFetchWhileTrue: h
-  } = e, _ = (0, u.default)([l.default], () => l.default.isConnected()), C = (0, u.default)([s.default], () => null != t ? s.default.getSubscriptionGroupListingsForGuildFetchState(t) : s.FetchState.FETCHED), p = i.useRef(d), g = i.useCallback(() => {
-    if (null == t || !_ || !0 === h) return;
+    dontFetchWhileTrue: S
+  } = e, E = (0, l.default)([u.default], () => u.default.isConnected()), h = (0, l.default)([s.default], () => null != t ? s.default.getSubscriptionGroupListingsForGuildFetchState(t) : s.FetchState.FETCHED), g = r.useRef(d), p = r.useCallback(() => {
+    if (null == t || !E || !0 === S) return;
     let e = s.default.getSubscriptionGroupListingsForGuildFetchState(t);
-    (p.current || e === s.FetchState.NOT_FETCHED) && (p.current = !1, o.fetchAllSubscriptionListingsDataForGuild(t, {
+    (g.current || e === s.FetchState.NOT_FETCHED) && (g.current = !1, o.fetchAllSubscriptionListingsDataForGuild(t, {
       includeSoftDeleted: c,
       countryCode: f
     }))
-  }, [_, t, c, f, h]), E = i.useMemo(() => C === s.FetchState.FETCHED && !0 !== p.current, [C, p]);
-  return (0, r.jsx)(a.Provider, {
+  }, [E, t, c, f, S]), _ = r.useMemo(() => h === s.FetchState.FETCHED && !0 !== g.current, [h, g]);
+  return (0, i.jsx)(a.Provider, {
     value: {
-      listingsLoaded: E,
-      fetchGroupListingsForGuild: g
+      listingsLoaded: _,
+      fetchGroupListingsForGuild: p
     },
     children: n
   })

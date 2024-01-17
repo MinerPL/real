@@ -1,11 +1,11 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   getVerifiedName: function() {
-    return n
+    return a
   }
 });
-var a = s("5487");
+var s = n("5487");
 
-function n(e) {
-  return (0, a.default)(e).author
+function a(e) {
+  return (0, s.default)(e).author
 }

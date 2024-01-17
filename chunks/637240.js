@@ -1,28 +1,28 @@
 "use strict";
 i.r(t), i.d(t, {
   GuildMemberSafetyPageStore: function() {
-    return d
+    return o
   }
 }), i("222007"), i("808653"), i("424973");
 var r = i("917351"),
   n = i("26989"),
   s = i("697218"),
-  u = i("718517"),
-  a = i("493910"),
+  a = i("718517"),
+  u = i("493910"),
   l = i("691386"),
   h = i("936763");
-let o = 3 * u.default.Millis.SECOND;
-class d {
+let d = 3 * a.default.Millis.SECOND;
+class o {
   getSearchIndex() {
     let e = null == this._search || this._search.hasDefaultQuery;
-    return e ? a.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER : a.MemberSafetySecondaryIndex.INCLUDED_IN_SEARCH_RESULTS
+    return e ? u.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER : u.MemberSafetySecondaryIndex.INCLUDED_IN_SEARCH_RESULTS
   }
   initialize() {
     if (this._initialized) {
       this.lastCursorTimestamp = Date.now();
       return
     }
-    this._initialized = !0, this._search = new h.GuildMemberSafetySearch(this.guildId), this._members = new a.GuildMemberSafetyMembers(this.guildId), this._pagination = new l.GuildMemberSafetyPagination(this.guildId, this._members.values(this.getSearchIndex()))
+    this._initialized = !0, this._search = new h.GuildMemberSafetySearch(this.guildId), this._members = new u.GuildMemberSafetyMembers(this.guildId), this._pagination = new l.GuildMemberSafetyPagination(this.guildId, this._members.values(this.getSearchIndex()))
   }
   get isInitialized() {
     return this._initialized
@@ -132,8 +132,8 @@ class d {
           refreshTimestamp: this.lastRefreshTimestamp
         }
       }
-      let [u, a] = this._rawUpdateMember(s.userId, e);
-      r = u || r, n = a || n
+      let [a, u] = this._rawUpdateMember(s.userId, e);
+      r = a || r, n = u || n
     }
     return r ? this.updatePaginationChunks() : n
   }
@@ -144,8 +144,8 @@ class d {
     for (let r of e) {
       let e = n.default.getTrueMember(this.guildId, r.user.id);
       if (null == e) continue;
-      let [s, u] = this._rawUpdateMember(r.user.id, e);
-      t = s || t, i = u || i
+      let [s, a] = this._rawUpdateMember(r.user.id, e);
+      t = s || t, i = a || i
     }
     return t ? this.updatePaginationChunks() : i
   }
@@ -173,13 +173,13 @@ class d {
   _scheduleRefresh(e) {
     this.lastRefreshTimestamp = e, this.lastCursorTimestamp = Date.now(), null != this._lastRefreshTimer && clearTimeout(this._lastRefreshTimer), this._lastRefreshTimer = setTimeout(() => {
       this._lastRefreshTimer = null, this.lastRefreshTimestamp = 0
-    }, o)
+    }, d)
   }
   refreshNewMembersAndSearchResults() {
     if (null == this._search || null == this._members || !this._initialized) return !1;
     let e = Number(Date.now());
     this._scheduleRefresh(e);
-    let t = (0, r.cloneDeep)(this._members.values(a.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER)),
+    let t = (0, r.cloneDeep)(this._members.values(u.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER)),
       i = !1;
     for (let r of t) i = this._members.updateMember(r, {
       isCurrentGuildMemberByTimestamp: !0,
@@ -187,10 +187,10 @@ class d {
       user: s.default.getUser(r.userId)
     }) || i;
     this._members.resetNewMemberTimestamp(), this.resetSearchState() && (i = !1);
-    let [n, u] = this.updatePaginationState({
+    let [n, a] = this.updatePaginationState({
       currentPage: 1
     }, !1);
-    return u && (i = !1), i && this.updatePaginationChunks(), !0
+    return a && (i = !1), i && this.updatePaginationChunks(), !0
   }
   getNewMemberTimestamp() {
     return null != this._members && this._initialized ? this._members.newMemberTimestamp : 0
@@ -200,7 +200,7 @@ class d {
     let t = !!this._search.hasDefaultQuery,
       i = this._search.updateSearchState(e);
     if (this._search.hasDefaultQuery && t) return this.updatePaginationChunks();
-    let n = (0, r.cloneDeep)(this._members.values(a.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER)),
+    let n = (0, r.cloneDeep)(this._members.values(u.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER)),
       s = t !== this._search.hasDefaultQuery;
     for (let e of n) {
       if (!e.isCurrentGuildMemberByTimestamp) continue;

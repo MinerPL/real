@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("574073"),
-  l = n("304198"),
+var l = n("574073"),
+  a = n("304198"),
   i = n("782340");
 
 function r(e) {
@@ -18,16 +18,16 @@ function r(e) {
     actorUsernameHook: u,
     targetUsernameHook: d,
     compact: c
-  } = e, f = (0, s.default)(t), m = (0, s.useNullableUserAuthor)(o, r), E = u(f), _ = d(null != m ? m : void 0), h = i.default.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
+  } = e, f = (0, l.default)(t), E = (0, l.useNullableUserAuthor)(o, r), _ = u(f), T = d(null != E ? E : void 0), I = i.default.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
     actorName: f.nick,
-    actorHook: E,
-    targetName: null == m ? void 0 : m.nick,
-    targetHook: _
+    actorHook: _,
+    targetName: null == E ? void 0 : E.nick,
+    targetHook: T
   });
-  return (0, a.jsx)(l.default, {
+  return (0, s.jsx)(a.default, {
     icon: n("127067"),
     timestamp: t.timestamp,
     compact: c,
-    children: h
+    children: I
   })
 }

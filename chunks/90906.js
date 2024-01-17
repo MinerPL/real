@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return g
   }
 }), n("222007"), n("70102");
 var a = n("446825"),
@@ -13,8 +13,8 @@ var a = n("446825"),
   u = n("856116"),
   d = n("470313"),
   c = n("56245"),
-  E = n("49111");
-let f = o.default.requireModule("discord_rpc").RPCIPC,
+  f = n("49111");
+let E = o.default.requireModule("discord_rpc").RPCIPC,
   _ = new r.default("RPCServer:IPC"),
   h = {
     HANDSHAKE: 0,
@@ -28,15 +28,15 @@ function C(e, t) {
   null != e.setHandshakeComplete ? e.setHandshakeComplete(t) : e._didHandshake = t
 }
 
-function T(e) {
+function I(e) {
   return null != e.getHandshakeComplete ? e.getHandshakeComplete() : e._didHandshake
 }
 
-function I(e) {
+function T(e) {
   return new Promise((t, n) => {
-    "string" == typeof e && (e = f.net.createConnection(e)), e.pause(), e.on("readable", () => {
+    "string" == typeof e && (e = E.net.createConnection(e)), e.pause(), e.on("readable", () => {
       try {
-        N(e)
+        m(e)
       } catch (t) {
         e.end(S(h.CLOSE, {
           code: 1003,
@@ -70,7 +70,7 @@ function S(e, t) {
   return i.writeInt32LE(e, 0), i.writeInt32LE(s, 4), i.write(t, 8, s), (n = i).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength)
 }
 
-function N(e) {
+function m(e) {
   let t = e.read(8);
   if (null == t) return;
   let n = a.Buffer.from(t),
@@ -88,19 +88,19 @@ function N(e) {
       e.emit("pong", l);
       break;
     case h.HANDSHAKE:
-      if (T(e)) throw Error("already did handshake");
+      if (I(e)) throw Error("already did handshake");
       C(e, !0), e.emit("handshake", l);
       break;
     case h.FRAME:
-      if (!T(e)) throw Error("did not handshake");
+      if (!I(e)) throw Error("did not handshake");
       e.emit("request", l);
       break;
     case h.CLOSE:
       e.end(), e.destroy()
   }
-  N(e)
+  m(e)
 }
-class A extends d.default {
+class p extends d.default {
   send(e) {
     _.info("Socket Emit: ".concat(this.id), (0, u.default)(e)), this.socket.write(S(h.FRAME, e))
   }
@@ -114,14 +114,14 @@ class A extends d.default {
     super("ipc", t, n), this.socket = e
   }
 }
-class p extends s.EventEmitter {
+class A extends s.EventEmitter {
   handleConnection(e) {
     C(e, !1), e.pause(), e.on("readable", () => {
       try {
-        N(e)
+        m(e)
       } catch (t) {
         e.end(S(h.CLOSE, {
-          code: E.RPCCloseCodes.CLOSE_UNSUPPORTED,
+          code: f.RPCCloseCodes.CLOSE_UNSUPPORTED,
           message: t.message
         })), e.destroy()
       }
@@ -130,7 +130,7 @@ class p extends s.EventEmitter {
       let a = t.client_id,
         s = +t.v;
       try {
-        n = new A(e, s, "json")
+        n = new p(e, s, "json")
       } catch (t) {
         e.end(S(h.CLOSE, {
           code: t.code,
@@ -155,8 +155,8 @@ class p extends s.EventEmitter {
   }
   constructor() {
     super();
-    let e = f.net.createServer(e => this.handleConnection(e));
-    e.on("error", e => _.error("Error: ".concat(e.message))), f.getAvailableSocket(I).then(t => {
+    let e = E.net.createServer(e => this.handleConnection(e));
+    e.on("error", e => _.error("Error: ".concat(e.message))), E.getAvailableSocket(T).then(t => {
       e.listen(t, () => {
         let t = "function" == typeof e.listening ? e.listening() : e.listening;
         t && _.info("Starting on ".concat(e.address()))
@@ -164,4 +164,4 @@ class p extends s.EventEmitter {
     })
   }
 }
-var m = new p
+var g = new A

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return c
   },
   getActivitiesWhatsNewCount: function() {
-    return E
+    return f
   }
 });
 var a = n("446674"),
@@ -17,10 +17,10 @@ var a = n("446674"),
   d = n("954016");
 
 function c() {
-  return (0, a.useStateFromStores)([s.default], () => E(s.default))
+  return (0, a.useStateFromStores)([s.default], () => f(s.default))
 }
 
-function E(e) {
+function f(e) {
   let t = 0,
     n = e.getAcknowledged();
   return u.ExperimentBirthdayGoodbye.getCurrentConfig({

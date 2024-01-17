@@ -4,29 +4,29 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var a = n("446674"),
-  s = n("913144");
-let l = {
+var s = n("446674"),
+  l = n("913144");
+let a = {
   matureAgree: !1,
   muted: !0
 };
-class i extends a.default.Store {
+class i extends s.default.Store {
   get didMatureAgree() {
-    return l.matureAgree
+    return a.matureAgree
   }
   get isDirectoryMuted() {
-    return l.muted
+    return a.muted
   }
 }
 i.displayName = "ApplicationStoreSettingsStore";
-var r = new i(s.default, {
+var r = new i(l.default, {
   APPLICATION_STORE_MATURE_AGREE: function() {
-    l.matureAgree = !0
+    a.matureAgree = !0
   },
   APPLICATION_STORE_DIRECTORY_MUTE: function() {
-    l.muted = !0
+    a.muted = !0
   },
   APPLICATION_STORE_DIRECTORY_UNMUTE: function() {
-    l.muted = !1
+    a.muted = !1
   }
 })

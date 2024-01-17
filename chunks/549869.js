@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return em
+    return eT
   }
 }), n("222007");
 var s = n("37983"),
@@ -20,8 +20,8 @@ var s = n("37983"),
   p = n("178116"),
   h = n("759315"),
   N = n("569808"),
-  m = n("913645"),
-  T = n("777858"),
+  T = n("913645"),
+  m = n("777858"),
   g = n("9294"),
   A = n("701662"),
   S = n("271938"),
@@ -69,7 +69,7 @@ let $ = (0, j.default)(H.default),
   ed = (0, j.default)(Z.default),
   ec = (0, j.default)(y.default),
   ef = (0, j.default)(p.default),
-  eE = (0, j.default)(T.default),
+  eE = (0, j.default)(m.default),
   eI = (0, j.default)(B.default),
   e_ = (0, j.default)(W.default),
   ep = (0, j.default)(X.default),
@@ -159,7 +159,7 @@ class eN extends a.PureComponent {
       load_time: D.default.getTimeSinceNavigationStart()
     }, {
       flush: !0
-    }), m.default.resolveGuildTemplate(e), m.default.openNativeAppModal(e))
+    }), T.default.resolveGuildTemplate(e), T.default.openNativeAppModal(e))
   }
   resolveGiftCode() {
     let {
@@ -342,7 +342,7 @@ class eN extends a.PureComponent {
     }
   }
 }
-var em = u.default.connectStores([S.default, x.default, v.default, C.default, N.default], e => {
+var eT = u.default.connectStores([S.default, x.default, v.default, C.default, N.default], e => {
   var t, n, s;
   let {
     match: a,

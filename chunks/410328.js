@@ -7,20 +7,20 @@ n.r(t), n.d(t, {
     return r
   }
 }), n("794252");
-var a = n("506838"),
-  s = n("418009"),
-  l = n("944313");
+var s = n("506838"),
+  l = n("418009"),
+  a = n("944313");
 
 function i(e, t) {
-  let n = (0, a.match)(t).with(s.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => l.normalStylesImageOnlyAnswers).otherwise(() => l.normalStylesDefault),
+  let n = (0, s.match)(t).with(l.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => a.normalStylesImageOnlyAnswers).otherwise(() => a.normalStylesDefault),
     i = {
       styles: {
         loser: n,
         normal: n,
         notVoted: n,
         selected: n,
-        voted: l.votedStyles,
-        victor: l.victorStyles
+        voted: a.votedStyles,
+        victor: a.victorStyles
       }
     };
   return i

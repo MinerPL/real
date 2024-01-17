@@ -14,15 +14,15 @@ var s = n("759843"),
   u = n("243632"),
   d = n("49111"),
   c = n("994428"),
-  E = n("782340"),
-  f = n("905769");
+  f = n("782340"),
+  E = n("905769");
 let _ = (e, t) => ({
-  header: E.default.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({
+  header: f.default.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({
     gameName: e.title
   }),
   body: e.messages.enrollmentTooltip(t),
   imgSrc: e.assets.tooltipSrc,
-  imgStyle: f.defaultDropImage
+  imgStyle: E.defaultDropImage
 });
 
 function h(e) {
@@ -35,60 +35,60 @@ function h(e) {
   if (null == h) return null;
   let {
     header: C,
-    body: T,
-    imgSrc: I,
+    body: I,
+    imgSrc: T,
     imgStyle: S
-  } = _(h.drop, h.config.streamLengthRequirement), N = () => {
+  } = _(h.drop, h.config.streamLengthRequirement), m = () => {
     t(c.ContentDismissActionType.DISMISS)
   };
   return (0, a.jsxs)("div", {
-    className: f.container,
+    className: E.container,
     children: [(0, a.jsx)("img", {
-      src: I,
+      src: T,
       alt: "",
       className: S
     }), (0, a.jsx)(i.Clickable, {
-      className: f.buttonClose,
-      "aria-label": E.default.Messages.CLOSE,
-      onClick: N,
+      className: E.buttonClose,
+      "aria-label": f.default.Messages.CLOSE,
+      onClick: m,
       children: (0, a.jsx)(r.default, {
         width: 16,
         height: 16,
-        className: f.closeIcon
+        className: E.closeIcon
       })
     }), (0, a.jsx)(i.Heading, {
-      className: f.title,
+      className: E.title,
       variant: "heading-md/extrabold",
       children: C
     }), (0, a.jsx)(i.Text, {
       variant: "text-sm/medium",
-      className: f.subTitle,
-      children: T
+      className: E.subTitle,
+      children: I
     }), h.config.autoEnrollment ? (0, a.jsx)(i.Button, {
       look: i.Button.Looks.INVERTED,
       fullWidth: !0,
       onClick: () => {
         l.default.open(d.UserSettingsSections.INVENTORY), t(c.ContentDismissActionType.PRIMARY)
       },
-      children: E.default.Messages.LEARN_MORE
+      children: f.default.Messages.LEARN_MORE
     }) : (0, a.jsx)(i.Button, {
-      innerClassName: f.button,
+      innerClassName: E.button,
       look: i.Button.Looks.INVERTED,
       fullWidth: !0,
       onClick: () => {
         (0, o.enrollDropsUser)(h.drop.dropsQuestId), l.default.open(d.UserSettingsSections.INVENTORY), t(c.ContentDismissActionType.PRIMARY)
       },
-      children: E.default.Messages.DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA
+      children: f.default.Messages.DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA
     }), (0, a.jsx)(i.Button, {
-      className: f.linkButtonContainer,
-      innerClassName: f.linkButton,
-      onClick: N,
+      className: E.linkButtonContainer,
+      innerClassName: E.linkButton,
+      onClick: m,
       look: i.Button.Looks.LINK,
       fullWidth: !0,
       color: i.Button.Colors.WHITE,
-      children: E.default.Messages.NOT_NOW
+      children: f.default.Messages.NOT_NOW
     }), (0, a.jsx)("div", {
-      className: f.pointer
+      className: E.pointer
     })]
   })
 }

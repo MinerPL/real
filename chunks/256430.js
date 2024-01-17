@@ -14,23 +14,23 @@ var s = n("446674"),
   u = n("926787"),
   d = n("868246"),
   c = n("649725"),
-  E = n("866487"),
-  f = n("447621"),
+  f = n("866487"),
+  E = n("447621"),
   _ = n("782340");
 let h = e => {
   switch (e) {
     case 1:
-      return f.CategoryIcons.Activity;
+      return E.CategoryIcons.Activity;
     case 2:
-      return f.CategoryIcons.Music;
+      return E.CategoryIcons.Music;
     case 3:
-      return f.CategoryIcons.Television;
+      return E.CategoryIcons.Television;
     case 5:
-      return f.CategoryIcons.Science;
+      return E.CategoryIcons.Science;
     case 6:
-      return f.CategoryIcons.Education;
+      return E.CategoryIcons.Education;
     default:
-      return f.CategoryIcons.Discover
+      return E.CategoryIcons.Discover
   }
 };
 var C = () => {
@@ -40,17 +40,17 @@ var C = () => {
   } = (0, s.useStateFromStoresObject)([u.default], () => ({
     currentCategoryId: u.default.getCurrentCategoryId(),
     isViewingSearchResults: u.default.getMostRecentQuery().length > 0
-  })), n = (0, s.useStateFromStores)([d.default], () => d.default.getDiscoveryCategories(), [], d.areDiscoveryCategoriesEqual), f = null == n ? void 0 : n.map(e => ({
+  })), n = (0, s.useStateFromStores)([d.default], () => d.default.getDiscoveryCategories(), [], d.areDiscoveryCategoriesEqual), E = null == n ? void 0 : n.map(e => ({
     ...e,
     icon: h(e.categoryId)
   })), C = e => {
     (0, l.selectCategory)(e, !0), o.default.closeSidebar(), t && (0, l.clearSearch)()
   };
   return (0, a.jsxs)(i.Scroller, {
-    children: [(0, a.jsx)(E.DiscoverySidebarHeader, {
+    children: [(0, a.jsx)(f.DiscoverySidebarHeader, {
       text: _.default.Messages.DISCOVER
     }), (0, a.jsx)(c.default, {
-      categories: f,
+      categories: E,
       handleCategorySelect: C,
       currentCategoryId: e,
       shouldDisplaySelectedCategory: !t

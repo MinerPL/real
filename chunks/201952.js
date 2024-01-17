@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 }), n("222007");
 var a = n("446674"),
@@ -28,7 +28,7 @@ class c extends a.default.Store {
   }
 }
 c.displayName = "MaxMemberCountChannelNoticeStore";
-var E = new c(i.default, {
+var f = new c(i.default, {
   MAX_MEMBER_COUNT_NOTICE_DISMISS: function(e) {
     let t = e.guildId;
     if (!d[u.ChannelNoticeTypes.MAX_MEMBER_COUNT].has(t)) return d[u.ChannelNoticeTypes.MAX_MEMBER_COUNT].add(t), s.default.set(u.ChannelNoticeTypes.MAX_MEMBER_COUNT, d[u.ChannelNoticeTypes.MAX_MEMBER_COUNT]), !0

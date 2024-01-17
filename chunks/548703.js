@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("574073"),
-  l = n("304198"),
+var l = n("574073"),
+  a = n("304198"),
   i = n("782340");
 
 function r(e) {
@@ -15,8 +15,8 @@ function r(e) {
     message: t,
     usernameHook: r,
     compact: o
-  } = e, u = (0, s.default)(t), d = r(u);
-  return (0, a.jsx)(l.default, {
+  } = e, u = (0, l.default)(t), d = r(u);
+  return (0, s.jsx)(a.default, {
     icon: n("544484"),
     timestamp: t.timestamp,
     compact: o,

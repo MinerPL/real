@@ -9,8 +9,8 @@ var a = n("446674"),
 let s = {
     enabled: !1
   },
-  i = {},
   l = {},
+  i = {},
   u = !1;
 class o extends a.default.DeviceSettingsStore {
   initialize() {
@@ -19,11 +19,11 @@ class o extends a.default.DeviceSettingsStore {
   }
   getWaitingHighFive(e, t) {
     var n;
-    return null === (n = i[e]) || void 0 === n ? void 0 : n[t]
+    return null === (n = l[e]) || void 0 === n ? void 0 : n[t]
   }
   getCompletedHighFive(e, t) {
     var n;
-    return null === (n = l[e]) || void 0 === n ? void 0 : n[t]
+    return null === (n = i[e]) || void 0 === n ? void 0 : n[t]
   }
   getEnabled() {
     return u
@@ -42,8 +42,8 @@ var d = new o(r.default, {
       channelId: n,
       emoji: a
     } = e;
-    i[n] = {
-      ...i[n],
+    l[n] = {
+      ...l[n],
       [t]: a
     }
   },
@@ -51,7 +51,7 @@ var d = new o(r.default, {
     let {
       userId: t,
       channelId: n
-    } = e, a = i[n];
+    } = e, a = l[n];
     if (null == a) return !1;
     delete a[t]
   },
@@ -68,10 +68,10 @@ var d = new o(r.default, {
       completingUserId: a,
       waitingUserId: r,
       channelId: s
-    } = e, u = null !== (t = i[s]) && void 0 !== t ? t : {}, o = u[r];
+    } = e, u = null !== (t = l[s]) && void 0 !== t ? t : {}, o = u[r];
     if (delete u[r], null == o) return !1;
-    l[s] = {
-      ...l[s],
+    i[s] = {
+      ...i[s],
       [r]: [o, n],
       [a]: [n, o]
     }
@@ -82,7 +82,7 @@ var d = new o(r.default, {
       firstUserId: n,
       secondUserId: a,
       channelId: r
-    } = e, s = null !== (t = l[r]) && void 0 !== t ? t : {};
+    } = e, s = null !== (t = i[r]) && void 0 !== t ? t : {};
     delete s[n], delete s[a]
   }
 })

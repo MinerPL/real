@@ -13,11 +13,11 @@ function s(e) {
     width: t = 12,
     height: n = 12,
     color: s = "currentColor",
-    foreground: i,
-    ...l
+    foreground: l,
+    ...i
   } = e;
   return (0, a.jsx)("svg", {
-    ...(0, r.default)(l),
+    ...(0, r.default)(i),
     width: t,
     height: n,
     viewBox: "0 0 12 12",
@@ -28,7 +28,7 @@ function s(e) {
       y: "1.5",
       fill: "none",
       stroke: s,
-      className: i
+      className: l
     })
   })
 }

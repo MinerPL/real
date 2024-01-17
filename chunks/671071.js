@@ -7,14 +7,14 @@ n.r(t), n.d(t, {
     return o
   },
   default: function() {
-    return a
+    return s
   }
 });
-var a, s = n("376556"),
-  l = n("653047");
+var s, l = n("376556"),
+  a = n("653047");
 let i = "spotify",
-  r = s.default.get(i);
-a = class extends l.default {
+  r = l.default.get(i);
+s = class extends a.default {
   getIconURL(e) {
     return r.icon.lightPNG
   }
@@ -22,4 +22,4 @@ a = class extends l.default {
     super({}), this.id = i, this.name = r.name
   }
 };
-let o = new a
+let o = new s

@@ -1,43 +1,43 @@
 "use strict";
 n.r(t), n.d(t, {
   TestModeSKUButtonEnums: function() {
-    return f
+    return E
   },
   default: function() {
-    return h
+    return T
   }
 }), n("222007");
-var a = n("37983"),
-  s = n("884691"),
-  i = n("446674"),
-  l = n("77078"),
+var s = n("37983"),
+  l = n("884691"),
+  a = n("446674"),
+  i = n("77078"),
   r = n("272030"),
   o = n("741130"),
   u = n("299285"),
   d = n("552712"),
   c = n("271560"),
-  E = n("782340");
-let f = {
+  f = n("782340");
+let E = {
   DropdownSizes: o.default.DropdownSizes,
   Sizes: o.default.Sizes,
   Colors: o.default.Colors,
   Looks: o.default.Looks
 };
-class _ extends s.PureComponent {
+class _ extends l.PureComponent {
   render() {
     let {
       skus: e,
       children: t,
       applicationId: n,
-      primarySKU: s,
-      onSKUSelect: i,
-      ...l
+      primarySKU: l,
+      onSKUSelect: a,
+      ...i
     } = this.props;
-    return (0, a.jsx)(o.default, {
+    return (0, s.jsx)(o.default, {
       onClick: this.handleClick,
       onDropdownClick: e.length > 0 ? this.handleContextMenu : null,
       onContextMenu: e.length > 0 ? this.handleContextMenu : void 0,
-      ...l,
+      ...i,
       children: t
     })
   }
@@ -48,12 +48,12 @@ class _ extends s.PureComponent {
         onSKUSelect: t,
         onMenuSelect: n
       } = this.props;
-      return (0, a.jsx)(l.Menu, {
+      return (0, s.jsx)(i.Menu, {
         onSelect: n,
         navId: "test-skus",
-        "aria-label": E.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+        "aria-label": f.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
         onClose: r.closeContextMenu,
-        children: e.map(e => (0, a.jsx)(l.MenuItem, {
+        children: e.map(e => (0, s.jsx)(i.MenuItem, {
           id: "".concat(e.id),
           label: e.name,
           action: () => {
@@ -72,13 +72,13 @@ class _ extends s.PureComponent {
     }
   }
 }
-var h = i.default.connectStores([d.default, u.default], e => {
+var T = a.default.connectStores([d.default, u.default], e => {
   var t;
   let {
     applicationId: n
-  } = e, a = (0, c.getPrimarySKUForApplication)(n, u.default, d.default);
+  } = e, s = (0, c.getPrimarySKUForApplication)(n, u.default, d.default);
   return {
-    skus: (null !== (t = d.default.getForApplication(n)) && void 0 !== t ? t : []).sort((e, t) => null != a && e.id === a.id ? -1 : null != a && t.id === a.id ? 1 : e.name >= t.name ? -1 : 1),
-    primarySKU: a
+    skus: (null !== (t = d.default.getForApplication(n)) && void 0 !== t ? t : []).sort((e, t) => null != s && e.id === s.id ? -1 : null != s && t.id === s.id ? 1 : e.name >= t.name ? -1 : 1),
+    primarySKU: s
   }
 })(_)

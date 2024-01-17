@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildProductListingPublicCard: function() {
-    return I
+    return N
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("65597"),
-  l = n("801765"),
+var l = n("65597"),
+  a = n("801765"),
   i = n("228035"),
   r = n("465869"),
   o = n("305961"),
@@ -15,46 +15,46 @@ var s = n("65597"),
   d = n("442379"),
   c = n("757515"),
   f = n("727411"),
-  m = n("492724"),
-  E = n("928576"),
-  _ = n("739726"),
-  h = n("358404"),
-  p = n("875746");
+  E = n("492724"),
+  _ = n("928576"),
+  T = n("739726"),
+  I = n("358404"),
+  m = n("875746");
 
-function I(e) {
+function N(e) {
   var t;
   let {
     guildProductListing: n,
-    guildId: I,
-    location: T,
-    shouldShowFullDescriptionButton: g = !0,
-    hideRoleTag: C = !1,
-    lineClamp: S = 1,
-    cardWidth: A,
-    cardHeight: N,
+    guildId: N,
+    location: p,
+    shouldShowFullDescriptionButton: S = !0,
+    hideRoleTag: A = !1,
+    lineClamp: C = 1,
+    cardWidth: h,
+    cardHeight: g,
     thumbnailHeight: M,
-    descriptionTextVariant: v = "text-sm/normal",
-    showOpaqueBackground: x = !1
-  } = e, O = (0, s.default)([o.default], () => o.default.getGuild(I), [I]), L = null == O ? void 0 : O.roles[null !== (t = null == n ? void 0 : n.role_id) && void 0 !== t ? t : ""], R = (0, l.useListingThumbnailUrl)(n, 600), P = (0, E.useProductType)(n), y = (0, d.useCanManageGuildProduct)(O), {
-    shouldHideGuildPurchaseEntryPoints: D
-  } = (0, r.useShouldHideGuildPurchaseEntryPoints)(I), j = (0, E.usePrice)(n);
-  if (null == O || D) return null;
-  let U = () => (0, h.openGuildProductInfoModal)({
-      guildId: I,
+    descriptionTextVariant: O = "text-sm/normal",
+    showOpaqueBackground: R = !1
+  } = e, L = (0, l.default)([o.default], () => o.default.getGuild(N), [N]), v = null == L ? void 0 : L.roles[null !== (t = null == n ? void 0 : n.role_id) && void 0 !== t ? t : ""], P = (0, a.useListingThumbnailUrl)(n, 600), D = (0, _.useProductType)(n), x = (0, d.useCanManageGuildProduct)(L), {
+    shouldHideGuildPurchaseEntryPoints: y
+  } = (0, r.useShouldHideGuildPurchaseEntryPoints)(N), U = (0, _.usePrice)(n);
+  if (null == L || y) return null;
+  let j = () => (0, I.openGuildProductInfoModal)({
+      guildId: N,
       guildProductListingId: n.id,
-      analyticsLocation: T
+      analyticsLocation: p
     }),
-    b = (0, a.jsx)(_.GuildProductListingPopout, {
+    b = (0, s.jsx)(T.GuildProductListingPopout, {
       product: n,
-      guildId: I,
-      showEditProduct: y,
+      guildId: N,
+      showEditProduct: x,
       showUnpublishProduct: !1,
       showCopyLink: !0,
       showTestDownload: !1,
       showDeleteProduct: !1,
       showReportProduct: !0,
-      onEditProduct: y ? () => {
-        f.openModal(O.id, n.id)
+      onEditProduct: x ? () => {
+        f.openModal(L.id, n.id)
       } : () => {},
       onUnpublishProduct: () => {},
       onDeleteProduct: () => {},
@@ -64,32 +64,32 @@ function I(e) {
         })
       },
       onCopyProductLink: () => {
-        (0, u.copy)((0, c.getGuildProductListingUrl)(I, n.id))
+        (0, u.copy)((0, c.getGuildProductListingUrl)(N, n.id))
       },
       onTestDownload: () => {}
     });
-  return (0, a.jsx)(m.default, {
-    imageUrl: R,
+  return (0, s.jsx)(E.default, {
+    imageUrl: P,
     name: n.name,
     description: n.description,
-    formattedPrice: j,
-    role: L,
-    ctaComponent: (0, a.jsx)(p.default, {
-      guildId: I,
+    formattedPrice: U,
+    role: v,
+    ctaComponent: (0, s.jsx)(m.default, {
+      guildId: N,
       guildProductListingId: n.id,
-      sourceAnalyticsLocations: T
+      sourceAnalyticsLocations: p
     }),
-    productType: P,
-    shouldShowFullDescriptionButton: g,
-    onShowFullDescription: U,
-    onTapCard: U,
+    productType: D,
+    shouldShowFullDescriptionButton: S,
+    onShowFullDescription: j,
+    onTapCard: j,
     actionMenu: b,
-    showOpaqueBackground: x,
-    hideRoleTag: C,
-    lineClamp: S,
-    cardWidth: A,
-    cardHeight: N,
+    showOpaqueBackground: R,
+    hideRoleTag: A,
+    lineClamp: C,
+    cardWidth: h,
+    cardHeight: g,
     thumbnailHeight: M,
-    descriptionTextVariant: v
+    descriptionTextVariant: O
   }, n.id)
 }

@@ -13,33 +13,33 @@ var a = n("37983"),
   u = n("77078"),
   d = n("74456"),
   c = n("302437"),
-  E = n("155084"),
-  f = n("826684"),
+  f = n("155084"),
+  E = n("826684"),
   _ = n("599110"),
   h = n("803524"),
   C = n("7643"),
-  T = n("785770"),
-  I = n("521702"),
+  I = n("785770"),
+  T = n("521702"),
   S = n("452229"),
-  N = n("196986"),
-  A = n("92918"),
-  p = n("973199"),
-  m = n("49111"),
-  g = n("782340"),
+  m = n("196986"),
+  p = n("92918"),
+  A = n("973199"),
+  g = n("49111"),
+  N = n("782340"),
   R = n("127671");
 
 function O() {
   let e = s.useRef(null),
-    t = (0, I.default)(),
+    t = (0, T.default)(),
     n = (0, S.useSpamMessageRequestCount)(),
     i = (0, h.useListHasSingleSpamMessageRequest)(),
     O = (0, d.useIsRejectAllMessageRequestsEnabled)(),
     L = (0, c.default)("message-requests-spam-list"),
     {
       channelId: v
-    } = (0, T.useMessageRequestSidebarState)(),
+    } = (0, I.useMessageRequestSidebarState)(),
     M = s.useCallback(() => {
-      (0, u.showToast)((0, u.createToast)(g.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
+      (0, u.showToast)((0, u.createToast)(N.default.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE))
     }, []),
     {
       rejectAll: P
@@ -51,9 +51,9 @@ function O() {
       P(e)
     }, [t, P]);
   s.useEffect(() => {
-    _.default.track(m.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
+    _.default.track(g.AnalyticEvents.SPAM_MESSAGE_REQUESTS_VIEWED, {
       num_spam_message_requests: n
-    }), E.default.increment({
+    }), f.default.increment({
       name: o.MetricEvents.SPAM_MESSAGE_REQUEST_VIEW
     })
   }, []);
@@ -62,7 +62,7 @@ function O() {
       let {
         row: r
       } = e, o = t[r], u = null === (s = t[r + 1]) || void 0 === s ? void 0 : null === (n = s.channel) || void 0 === n ? void 0 : n.id, d = o.channel.id;
-      return (0, a.jsx)(A.default, {
+      return (0, a.jsx)(p.default, {
         index: r,
         className: l({
           [R.selected]: null != v && v === d,
@@ -73,9 +73,9 @@ function O() {
         hasSingleMessageRequest: i
       }, d)
     }, [t, i, v]),
-    x = s.useCallback(() => (0, a.jsxs)(f.default, {
+    x = s.useCallback(() => (0, a.jsxs)(E.default, {
       className: R.sectionTitle,
-      children: [g.default.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
+      children: [N.default.Messages.MESSAGE_REQUESTS_SPAM_HEADER.format({
         count: n
       }), O && n > 0 ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(u.Text, {
@@ -90,13 +90,13 @@ function O() {
           color: u.ButtonColors.LINK,
           size: u.ButtonSizes.SMALL,
           className: R.clearAllButton,
-          "aria-label": g.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL,
-          children: g.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
+          "aria-label": N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL,
+          children: N.default.Messages.MESSAGE_REQUESTS_CLEAR_ALL
         })]
       }) : null]
     }, "message-requests-spam-title"), [n, D, O]);
-  return 0 === t.length ? (0, a.jsx)(N.default, {
-    section: p.MessageRequestSections.SPAM
+  return 0 === t.length ? (0, a.jsx)(m.default, {
+    section: A.MessageRequestSections.SPAM
   }) : (0, a.jsx)(r.ListNavigatorProvider, {
     navigator: L,
     children: (0, a.jsx)(r.ListNavigatorContainer, {
@@ -109,15 +109,15 @@ function O() {
         return (0, a.jsx)(u.List, {
           className: R.list,
           innerRole: i,
-          innerAriaLabel: g.default.Messages.MESSAGE_REQUESTS,
+          innerAriaLabel: N.default.Messages.MESSAGE_REQUESTS,
           ref: t => {
             var n;
             e.current = t, s.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null
           },
           paddingTop: 24,
           paddingBottom: 24,
-          sectionHeight: p.LIST_SECTION_HEIGHT,
-          rowHeight: p.LIST_ROW_HEIGHT,
+          sectionHeight: A.LIST_SECTION_HEIGHT,
+          rowHeight: A.LIST_ROW_HEIGHT,
           renderSection: x,
           renderRow: y,
           sections: [t.length],

@@ -1,71 +1,71 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return m
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("414456"),
-  i = n.n(s),
-  l = n("77078"),
+var l = n("414456"),
+  a = n.n(l),
+  i = n("77078"),
   r = n("42203"),
   o = n("18494"),
   u = n("328275"),
   d = n("489622"),
   c = n("244480"),
-  E = n("130563"),
-  f = n("151642"),
+  f = n("130563"),
+  E = n("151642"),
   _ = n("782340"),
-  h = n("779007");
+  T = n("779007");
 
-function C(e) {
+function I(e) {
   let t = o.default.getVoiceChannelId();
   if (null == t) return;
   let n = r.default.getChannel(t);
   null != n && (0, c.audienceAckRequestToSpeak)(n, e)
 }
 
-function T() {
+function m() {
   var e;
-  let t = (0, E.default)(),
-    n = null !== (e = (0, f.useStageBlockedUsersCount)(null == t ? void 0 : t.id)) && void 0 !== e ? e : 0;
-  return null == t ? null : (0, a.jsxs)(d.default, {
-    className: h.container,
+  let t = (0, f.default)(),
+    n = null !== (e = (0, E.useStageBlockedUsersCount)(null == t ? void 0 : t.id)) && void 0 !== e ? e : 0;
+  return null == t ? null : (0, s.jsxs)(d.default, {
+    className: T.container,
     color: d.NoticeColors.DEFAULT,
-    children: [(0, a.jsx)("div", {
+    children: [(0, s.jsx)("div", {
       children: _.default.Messages.STAGE_SPEAK_INVITE_HEADER
-    }), n > 0 ? (0, a.jsxs)("div", {
-      className: h.blocked,
-      children: [(0, a.jsx)(u.default, {
+    }), n > 0 ? (0, s.jsxs)("div", {
+      className: T.blocked,
+      children: [(0, s.jsx)(u.default, {
         width: 12,
         height: 12,
-        className: h.blockedIcon
-      }), (0, a.jsx)("div", {
-        className: h.blockedText,
+        className: T.blockedIcon
+      }), (0, s.jsx)("div", {
+        className: T.blockedText,
         children: _.default.Messages.STAGE_SPEAK_INVITE_HEADER_BLOCKED_USERS.format({
           number: n
         })
       })]
-    }) : null, (0, a.jsx)(l.Button, {
-      className: i(h.button, h.acceptButton),
-      size: l.Button.Sizes.MIN,
-      color: l.Button.Colors.WHITE,
-      onClick: () => C(!1),
-      children: (0, a.jsx)(l.Text, {
-        className: h.acceptText,
+    }) : null, (0, s.jsx)(i.Button, {
+      className: a(T.button, T.acceptButton),
+      size: i.Button.Sizes.MIN,
+      color: i.Button.Colors.WHITE,
+      onClick: () => I(!1),
+      children: (0, s.jsx)(i.Text, {
+        className: T.acceptText,
         variant: "text-xs/normal",
         color: "none",
         children: _.default.Messages.STAGE_SPEAK_INVITE_ACCEPT
       })
-    }), (0, a.jsx)(l.Button, {
-      className: i(h.button, h.declineButton),
-      look: l.Button.Looks.OUTLINED,
-      size: l.Button.Sizes.MIN,
-      color: l.Button.Colors.WHITE,
-      onClick: () => C(!0),
-      children: (0, a.jsx)(l.Text, {
-        className: h.declineText,
+    }), (0, s.jsx)(i.Button, {
+      className: a(T.button, T.declineButton),
+      look: i.Button.Looks.OUTLINED,
+      size: i.Button.Sizes.MIN,
+      color: i.Button.Colors.WHITE,
+      onClick: () => I(!0),
+      children: (0, s.jsx)(i.Text, {
+        className: T.declineText,
         variant: "text-xs/normal",
         color: "none",
         children: _.default.Messages.STAGE_SPEAK_INVITE_DECLINE

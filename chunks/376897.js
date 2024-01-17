@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 }), n("222007");
 var a = n("37983");
@@ -14,14 +14,14 @@ var s = n("77078"),
   u = n("299803"),
   d = n("52028"),
   c = n("101125"),
-  E = n("861309"),
-  f = n("578287"),
+  f = n("861309"),
+  E = n("578287"),
   _ = n("716724"),
   h = n("56245"),
   C = n("492249"),
-  T = n("49111"),
-  I = {
-    [T.RPCCommands.SET_OVERLAY_LOCKED]: {
+  I = n("49111"),
+  T = {
+    [I.RPCCommands.SET_OVERLAY_LOCKED]: {
       scope: C.RPC_LOCAL_SCOPE,
       validation: e => (0, _.default)(e).required().keys({
         locked: e.boolean().required(),
@@ -37,14 +37,14 @@ var s = n("77078"),
             application: a
           }
         } = e, s = a.id;
-        if (null == s) throw new E.default(C.RPCErrors.INVALID_COMMAND, "No application.");
+        if (null == s) throw new f.default(C.RPCErrors.INVALID_COMMAND, "No application.");
         o.default.setLocked(t, n)
       }
     },
-    [T.RPCCommands.OPEN_OVERLAY_ACTIVITY_INVITE]: {
+    [I.RPCCommands.OPEN_OVERLAY_ACTIVITY_INVITE]: {
       scope: C.RPC_LOCAL_SCOPE,
       validation: e => (0, _.default)(e).required().keys({
-        type: e.number().required().valid([T.ActivityActionTypes.JOIN]),
+        type: e.number().required().valid([I.ActivityActionTypes.JOIN]),
         pid: e.number().min(0).required()
       }),
       handler(e) {
@@ -55,18 +55,18 @@ var s = n("77078"),
             pid: a
           }
         } = e, s = t.application.id;
-        if (null == s) throw new E.default(C.RPCErrors.INVALID_COMMAND, "No application.");
+        if (null == s) throw new f.default(C.RPCErrors.INVALID_COMMAND, "No application.");
         let i = d.default.getApplicationActivity(s);
-        if (null == i || null == i.secrets || !(0, f.validateActivityInvite)(n, i.party, i.secrets)) throw new E.default(C.RPCErrors.NO_ELIGIBLE_ACTIVITY, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
+        if (null == i || null == i.secrets || !(0, E.validateActivityInvite)(n, i.party, i.secrets)) throw new f.default(C.RPCErrors.NO_ELIGIBLE_ACTIVITY, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
         let {
           lock: r
         } = (0, h.unlockOverlay)(a), o = (0, u.default)(i, c.default);
         return (0, l.openModal)(i, o).then(() => {
-          if (r(), o) throw new E.default(C.RPCErrors.NO_ELIGIBLE_ACTIVITY, "No eligible activity for application. Ensure user does have have privacy enabled.")
+          if (r(), o) throw new f.default(C.RPCErrors.NO_ELIGIBLE_ACTIVITY, "No eligible activity for application. Ensure user does have have privacy enabled.")
         })
       }
     },
-    [T.RPCCommands.OPEN_OVERLAY_GUILD_INVITE]: {
+    [I.RPCCommands.OPEN_OVERLAY_GUILD_INVITE]: {
       scope: C.RPC_LOCAL_SCOPE,
       validation: e => (0, _.default)(e).required().keys({
         code: e.string().required(),
@@ -80,13 +80,13 @@ var s = n("77078"),
           },
           socket: a
         } = e, s = a.application.id;
-        if (null == s) throw new E.default(C.RPCErrors.INVALID_COMMAND, "No application.");
+        if (null == s) throw new f.default(C.RPCErrors.INVALID_COMMAND, "No application.");
         return r.default.resolveInvite(t, "Game SDK").then(e => {
           let {
             invite: t,
             code: a
           } = e;
-          if (null == t) throw new E.default(C.RPCErrors.INVALID_INVITE, "Invalid invite id: ".concat(a));
+          if (null == t) throw new f.default(C.RPCErrors.INVALID_INVITE, "Invalid invite id: ".concat(a));
           let {
             context: s,
             lock: l
@@ -103,7 +103,7 @@ var s = n("77078"),
         })
       }
     },
-    [T.RPCCommands.OPEN_OVERLAY_VOICE_SETTINGS]: {
+    [I.RPCCommands.OPEN_OVERLAY_VOICE_SETTINGS]: {
       scope: C.RPC_LOCAL_SCOPE,
       validation: e => (0, _.default)(e).required().keys({
         pid: e.number().min(0).required()
@@ -115,7 +115,7 @@ var s = n("77078"),
           },
           socket: i
         } = e, l = i.application.id;
-        if (null == l) throw new E.default(C.RPCErrors.INVALID_COMMAND, "No application.");
+        if (null == l) throw new f.default(C.RPCErrors.INVALID_COMMAND, "No application.");
         let {
           lock: r
         } = (0, h.unlockOverlay)(t);

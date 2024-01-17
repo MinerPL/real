@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var r = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("414456"),
-  u = n.n(i),
-  l = n("931138"),
+var r = n("414456"),
+  l = n.n(r),
+  u = n("931138"),
   o = n("206453"),
   s = n("49111"),
   a = n("323755");
@@ -29,15 +29,15 @@ function f(e) {
   let {
     premiumTier: t,
     iconBackgroundClassName: n,
-    iconClassName: i,
+    iconClassName: r,
     size: s
   } = e;
-  return (0, r.jsx)(l.default, {
-    className: u(n, d[t]),
+  return (0, i.jsx)(u.default, {
+    className: l(n, d[t]),
     size: s,
-    children: (0, r.jsx)(o.default, {
+    children: (0, i.jsx)(o.default, {
       tier: t,
-      className: u(i, a.boostedGuildIconGem, c[t])
+      className: l(r, a.boostedGuildIconGem, c[t])
     })
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   LARGE_SERVER_MEMBER_THRESHOLD: function() {
-    return m
+    return T
   },
   isGroupInvite: function() {
     return A
@@ -41,8 +41,8 @@ var s = n("37983"),
   p = n("238055"),
   h = n("782340"),
   N = n("692089");
-let m = 100,
-  T = e => {
+let T = 100,
+  m = e => {
     var t, n;
     let s = {
       onlineCount: null !== (t = e.approximate_presence_count) && void 0 !== t ? t : 0,
@@ -58,8 +58,8 @@ let m = 100,
   S = e => null == e.channel && null == e.guild && null != e.inviter,
   C = e => {
     var t;
-    let n = T(e);
-    return (null !== (t = null == n ? void 0 : n.memberCount) && void 0 !== t ? t : 0) > m
+    let n = m(e);
+    return (null !== (t = null == n ? void 0 : n.memberCount) && void 0 !== t ? t : 0) > T
   },
   v = e => e.state === _.InviteStates.ACCEPTED,
   x = e => {
@@ -100,7 +100,7 @@ function O(e) {
     invite: n,
     textClassName: a,
     className: l
-  } = e, r = T(n);
+  } = e, r = m(n);
   return null == r || R(n) || (null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id) === p.INVITE_ROUTING_HUB_GUILD_ID ? null : (0, s.jsx)(d.ActivityCount, {
     className: i(N.activityCount, l),
     online: r.onlineCount,

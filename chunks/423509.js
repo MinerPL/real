@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("446674"),
-  l = n("574073"),
+var l = n("446674"),
+  a = n("574073"),
   i = n("42203"),
   r = n("959097"),
   o = n("304198"),
@@ -20,28 +20,28 @@ function c(e) {
     message: n,
     compact: c,
     usernameHook: f,
-    onClickThread: m,
-    onClickViewThreads: E,
-    onContextMenuThread: _
-  } = e, h = (0, l.default)(n), p = f(h), I = (0, s.useStateFromStores)([i.default], () => {
+    onClickThread: E,
+    onClickViewThreads: _,
+    onContextMenuThread: T
+  } = e, I = (0, a.default)(n), m = f(I), N = (0, l.useStateFromStores)([i.default], () => {
     var e;
     return i.default.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id)
-  }), T = u.default.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
-    actorName: h.nick,
-    actorHook: p,
-    threadName: null !== (t = null == I ? void 0 : I.name) && void 0 !== t ? t : n.content,
+  }), p = u.default.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
+    actorName: I.nick,
+    actorHook: m,
+    threadName: null !== (t = null == N ? void 0 : N.name) && void 0 !== t ? t : n.content,
     threadOnClick: {
-      onClick: m,
-      onContextMenu: _
+      onClick: E,
+      onContextMenu: T
     },
-    viewThreadsOnClick: E
+    viewThreadsOnClick: _
   });
-  return (0, a.jsx)(o.default, {
-    iconNode: (0, a.jsx)(r.default, {
+  return (0, s.jsx)(o.default, {
+    iconNode: (0, s.jsx)(r.default, {
       className: d.icon
     }),
     timestamp: n.timestamp,
     compact: c,
-    children: T
+    children: p
   })
 }

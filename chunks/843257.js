@@ -7,22 +7,22 @@ n.r(t), n.d(t, {
     return d
   },
   getRoleSubscriptionPurchaseSystemMessageContentMobile: function() {
-    return h
+    return S
   },
   isEligibleForRoleSubscriptionPurchaseSystemMessageSettings: function() {
-    return _
+    return E
   },
   trackRoleSubscriptionPurchaseMessageTierClick: function() {
-    return C
+    return h
   },
   getRoleSubscriptionPurchaseSystemMessageEventProperties: function() {
-    return p
+    return g
   }
 }), n("249654");
-var r = n("716241"),
-  i = n("250666"),
-  u = n("305961"),
-  l = n("697218");
+var i = n("716241"),
+  r = n("250666"),
+  l = n("305961"),
+  u = n("697218");
 n("531034");
 var o = n("49111"),
   s = n("782340");
@@ -31,51 +31,51 @@ function a(e) {
   let {
     username: t,
     usernameOnClickHandler: n,
-    roleSubscriptionOnClickHandler: r,
-    guildId: i,
-    roleSubscriptionData: u
+    roleSubscriptionOnClickHandler: i,
+    guildId: r,
+    roleSubscriptionData: l
   } = e, {
-    content: l,
+    content: u,
     formatParams: o
   } = f({
     username: t,
     usernameOnClickHandler: n,
-    roleSubscriptionOnClickHandler: r,
-    guildId: i,
-    roleSubscriptionData: u
+    roleSubscriptionOnClickHandler: i,
+    guildId: r,
+    roleSubscriptionData: l
   });
-  return l.format(o)
+  return u.format(o)
 }
 
 function d(e) {
   let {
     username: t,
     usernameOnClickHandler: n,
-    roleSubscriptionOnClickHandler: r,
-    guildId: i,
-    roleSubscriptionData: u
+    roleSubscriptionOnClickHandler: i,
+    guildId: r,
+    roleSubscriptionData: l
   } = e, {
-    content: l,
+    content: u,
     formatParams: o
   } = f({
     username: t,
     usernameOnClickHandler: n,
-    roleSubscriptionOnClickHandler: r,
-    guildId: i,
-    roleSubscriptionData: u
+    roleSubscriptionOnClickHandler: i,
+    guildId: r,
+    roleSubscriptionData: l
   });
-  return l.astFormat(o)
+  return u.astFormat(o)
 }
 
 function c(e, t) {
-  var n, r;
-  let i = u.default.getGuild(e),
-    l = null !== (n = null == t ? void 0 : t.total_months_subscribed) && void 0 !== n ? n : 0,
-    o = null !== (r = null == t ? void 0 : t.is_renewal) && void 0 !== r && r;
+  var n, i;
+  let r = l.default.getGuild(e),
+    u = null !== (n = null == t ? void 0 : t.total_months_subscribed) && void 0 !== n ? n : 0,
+    o = null !== (i = null == t ? void 0 : t.is_renewal) && void 0 !== i && i;
   return {
-    guild: i,
-    totalMonthsSubscribed: l,
-    showWithDuration: l > 0,
+    guild: r,
+    totalMonthsSubscribed: u,
+    showWithDuration: u > 0,
     isRenewal: o
   }
 }
@@ -83,82 +83,82 @@ function c(e, t) {
 function f(e) {
   let t, {
       username: n,
-      usernameOnClickHandler: r,
-      roleSubscriptionOnClickHandler: i,
-      guildId: u,
-      roleSubscriptionData: l
+      usernameOnClickHandler: i,
+      roleSubscriptionOnClickHandler: r,
+      guildId: l,
+      roleSubscriptionData: u
     } = e,
     {
       guild: o,
       totalMonthsSubscribed: a,
       showWithDuration: d,
       isRenewal: f
-    } = c(u, l);
+    } = c(l, u);
   t = d ? f ? s.default.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_WITH_DURATION : s.default.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_WITH_DURATION : f ? s.default.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW : s.default.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN;
-  let h = {
+  let S = {
     username: n,
-    usernameHook: r,
+    usernameHook: i,
     guildName: null == o ? void 0 : o.name,
-    handleGuildNameClick: i,
-    tierName: null == l ? void 0 : l.tier_name,
+    handleGuildNameClick: r,
+    tierName: null == u ? void 0 : u.tier_name,
     months: a
   };
   return {
     content: t,
-    formatParams: h
+    formatParams: S
   }
 }
 
-function h(e) {
+function S(e) {
   let t, {
       username: n,
-      usernameOnClickHandler: r = o.NOOP,
-      roleSubscriptionOnClickHandler: i = o.NOOP,
-      guildId: u,
-      roleSubscriptionData: l
+      usernameOnClickHandler: i = o.NOOP,
+      roleSubscriptionOnClickHandler: r = o.NOOP,
+      guildId: l,
+      roleSubscriptionData: u
     } = e,
     {
       guild: a,
       totalMonthsSubscribed: d,
       showWithDuration: f,
-      isRenewal: h
-    } = c(u, l),
-    _ = {
+      isRenewal: S
+    } = c(l, u),
+    E = {
       guildName: null == a ? void 0 : a.name,
-      tierName: null == l ? void 0 : l.tier_name,
+      tierName: null == u ? void 0 : u.tier_name,
       username: n,
-      usernameOnClick: r,
-      roleSubscriptionOnClick: i
+      usernameOnClick: i,
+      roleSubscriptionOnClick: r
     };
-  return t = f ? h ? s.default.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_WITH_DURATION_MOBILE.astFormat({
-    ..._,
+  return t = f ? S ? s.default.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_WITH_DURATION_MOBILE.astFormat({
+    ...E,
     months: d
   }) : s.default.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_WITH_DURATION_MOBILE.astFormat({
-    ..._,
+    ...E,
     months: d
-  }) : h ? s.default.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_MOBILE.astFormat(_) : s.default.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_MOBILE.astFormat(_)
+  }) : S ? s.default.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_RENEW_MOBILE.astFormat(E) : s.default.Messages.SYSTEM_MESSAGE_ROLE_SUBSCRIPTION_JOIN_MOBILE.astFormat(E)
 }
 
-function _(e) {
-  return (0, i.isCreatorMonetizationEnabledGuild)(e)
+function E(e) {
+  return (0, r.isCreatorMonetizationEnabledGuild)(e)
 }
 
-function C(e, t, n, i) {
-  var u;
-  r.default.trackWithMetadata(o.AnalyticEvents.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CLICKED, {
+function h(e, t, n, r) {
+  var l;
+  i.default.trackWithMetadata(o.AnalyticEvents.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CLICKED, {
     guild_id: e,
-    user_id: null === (u = l.default.getCurrentUser()) || void 0 === u ? void 0 : u.id,
+    user_id: null === (l = u.default.getCurrentUser()) || void 0 === l ? void 0 : l.id,
     channel_id: t,
     message_id: n,
-    role_subscription_listing_id: i
+    role_subscription_listing_id: r
   })
 }
 
-function p(e, t) {
+function g(e, t) {
   var n;
   return {
     guild_id: e.guild_id,
-    sender: null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id,
+    sender: null === (n = u.default.getCurrentUser()) || void 0 === n ? void 0 : n.id,
     target_user: t.author.id,
     channel_id: e.id,
     message_id: t.id

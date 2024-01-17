@@ -1,26 +1,26 @@
 "use strict";
 t.r(s), t.d(s, {
   default: function() {
-    return x
+    return v
   }
 });
-var r, l, a = t("37983"),
+var r, a, l = t("37983"),
   n = t("884691"),
   i = t("414456"),
-  c = t.n(i),
-  d = t("77078"),
+  d = t.n(i),
+  c = t("77078"),
   o = t("200639"),
   u = t("97347"),
   h = t("587974"),
   f = t("989769");
-(r = l || (l = {}))[r.OUTGOING = 0] = "OUTGOING", r[r.INCOMING = 1] = "INCOMING";
-class v extends n.PureComponent {
+(r = a || (a = {}))[r.OUTGOING = 0] = "OUTGOING", r[r.INCOMING = 1] = "INCOMING";
+class C extends n.PureComponent {
   renderStatus() {
     let {
       muted: e,
       deafen: s
     } = this.props, t = s ? o.default : u.default;
-    return e || s ? (0, a.jsx)(t, {
+    return e || s ? (0, l.jsx)(t, {
       className: f.status
     }, "status") : null
   }
@@ -28,8 +28,8 @@ class v extends n.PureComponent {
     let {
       speaking: e
     } = this.props;
-    return (0, a.jsx)("div", {
-      className: c(f.border, {
+    return (0, l.jsx)("div", {
+      className: d(f.border, {
         [f.speaking]: e
       })
     }, "border")
@@ -40,11 +40,11 @@ class v extends n.PureComponent {
       speaking: s,
       deafen: t
     } = this.props;
-    return e && s ? (0, a.jsxs)(a.Fragment, {
+    return e && s ? (0, l.jsxs)(l.Fragment, {
       children: [this.renderBorder(), this.renderStatus()]
-    }) : e || t ? (0, a.jsx)(a.Fragment, {
+    }) : e || t ? (0, l.jsx)(l.Fragment, {
       children: this.renderStatus()
-    }) : (0, a.jsx)(a.Fragment, {
+    }) : (0, l.jsx)(l.Fragment, {
       children: this.renderBorder()
     })
   }
@@ -54,28 +54,28 @@ class v extends n.PureComponent {
       disabled: s,
       ringing: t,
       ringingType: r,
-      avatarClassName: l,
+      avatarClassName: a,
       muted: n,
       deafen: i,
       size: o,
       renderIcon: u
-    } = this.props, v = (0, d.getAvatarSize)(o), x = (0, a.jsx)("img", {
+    } = this.props, C = (0, c.getAvatarSize)(o), v = (0, l.jsx)("img", {
       src: e,
       alt: " ",
-      className: c(f.voiceAvatar, l, {
+      className: d(f.voiceAvatar, a, {
         [f.ringingOutgoing]: t && 0 === r
       })
     });
-    if (s) return x;
-    let C = h.MaskIDs.AVATAR_DEFAULT;
-    return null != u ? C = o === d.AvatarSizes.SIZE_32 ? h.MaskIDs.AVATAR_CALL_ICON_32 : h.MaskIDs.AVATAR_CALL_ICON : (n || i) && (C = h.MaskIDs.AVATAR_VOICE_CALL_80), (0, a.jsxs)("div", {
+    if (s) return v;
+    let x = h.MaskIDs.AVATAR_DEFAULT;
+    return null != u ? x = o === c.AvatarSizes.SIZE_32 ? h.MaskIDs.AVATAR_CALL_ICON_32 : h.MaskIDs.AVATAR_CALL_ICON : (n || i) && (x = h.MaskIDs.AVATAR_VOICE_CALL_80), (0, l.jsxs)("div", {
       className: f.callAvatarMaskContainer,
-      children: [(0, a.jsxs)(h.default, {
+      children: [(0, l.jsxs)(h.default, {
         className: f.callAvatarMask,
-        width: v,
-        height: v,
-        mask: C,
-        children: [null == u ? void 0 : u(), x]
+        width: C,
+        height: C,
+        mask: x,
+        children: [null == u ? void 0 : u(), v]
       }), this.renderMask()]
     })
   }
@@ -85,19 +85,19 @@ class v extends n.PureComponent {
       onClick: s,
       style: t,
       onContextMenu: r,
-      className: l,
+      className: a,
       ringingType: n,
       ringing: i
-    } = this.props, o = c(f.wrapper, {
+    } = this.props, o = d(f.wrapper, {
       [f.clickable]: null != s,
       [f.ringingOutgoing]: i && 0 === n,
       [f.ringingIncoming]: i && 1 === n
-    }, l), u = (0, d.getAvatarSize)(e), h = {
+    }, a), u = (0, c.getAvatarSize)(e), h = {
       height: u,
       width: u,
       ...t
     };
-    return (0, a.jsx)("div", {
+    return (0, l.jsx)("div", {
       style: h,
       onContextMenu: r,
       className: o,
@@ -105,8 +105,8 @@ class v extends n.PureComponent {
     })
   }
 }
-v.defaultProps = {
-  size: d.AvatarSizes.SIZE_80,
+C.defaultProps = {
+  size: c.AvatarSizes.SIZE_80,
   ringingType: 0,
   speaking: !1,
   soundsharing: !1,
@@ -117,5 +117,5 @@ v.defaultProps = {
   mirror: !1,
   disabled: !1,
   paused: !1
-}, v.RingingType = l;
-var x = v
+}, C.RingingType = a;
+var v = C

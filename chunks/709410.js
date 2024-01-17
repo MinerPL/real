@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return a
   },
   default: function() {
-    return T
+    return I
   }
 }), n("70102"), n("222007");
 var a, s = n("37983"),
@@ -15,8 +15,8 @@ var a, s = n("37983"),
   u = n("161778"),
   d = n("941886"),
   c = n("49111"),
-  E = n("782340"),
-  f = n("401060");
+  f = n("782340"),
+  E = n("401060");
 (a || (a = {})).SECTION_NO_RESULTS = "SECTION_NO_RESULTS";
 let _ = Object.freeze({
     SECTION_ALL: {
@@ -26,11 +26,11 @@ let _ = Object.freeze({
       height: 162,
       renderContent: e => (0, s.jsxs)(i.Fragment, {
         children: [(0, s.jsx)(d.default.Text, {
-          note: E.default.Messages.FRIENDS_EMPTY_STATE_ALL
+          note: f.default.Messages.FRIENDS_EMPTY_STATE_ALL
         }), (0, s.jsx)(o.Button, {
-          className: f.button,
+          className: E.button,
           onClick: e,
-          children: E.default.Messages.ADD_FRIEND
+          children: f.default.Messages.ADD_FRIEND
         })]
       })
     },
@@ -40,7 +40,7 @@ let _ = Object.freeze({
       width: 421,
       height: 218,
       renderContent: () => (0, s.jsx)(d.default.Text, {
-        note: E.default.Messages.FRIENDS_EMPTY_STATE_ONLINE
+        note: f.default.Messages.FRIENDS_EMPTY_STATE_ONLINE
       })
     },
     SECTION_BLOCKED: {
@@ -49,7 +49,7 @@ let _ = Object.freeze({
       width: 433,
       height: 232,
       renderContent: () => (0, s.jsx)(d.default.Text, {
-        note: E.default.Messages.FRIENDS_EMPTY_STATE_BLOCKED
+        note: f.default.Messages.FRIENDS_EMPTY_STATE_BLOCKED
       })
     },
     SECTION_PENDING: {
@@ -58,7 +58,7 @@ let _ = Object.freeze({
       width: 415,
       height: 200,
       renderContent: () => (0, s.jsx)(d.default.Text, {
-        note: E.default.Messages.FRIENDS_EMPTY_STATE_PENDING
+        note: f.default.Messages.FRIENDS_EMPTY_STATE_PENDING
       })
     },
     SECTION_SUGGESTIONS: {
@@ -67,7 +67,7 @@ let _ = Object.freeze({
       width: 415,
       height: 200,
       renderContent: () => (0, s.jsx)(d.default.Text, {
-        note: E.default.Messages.FRIENDS_EMPTY_STATE_SUGGESTIONS
+        note: f.default.Messages.FRIENDS_EMPTY_STATE_SUGGESTIONS
       })
     },
     SECTION_NO_RESULTS: {
@@ -76,14 +76,14 @@ let _ = Object.freeze({
       width: 421,
       height: 218,
       renderContent: () => (0, s.jsx)(d.default.Text, {
-        note: E.default.Messages.FRIEND_REQUEST_NO_RESULTS_FOUND
+        note: f.default.Messages.FRIEND_REQUEST_NO_RESULTS_FOUND
       })
     }
   }),
   h = e => {
     let {
       theme: t
-    } = e, n = E.default.Messages.FRIENDS_EMPTY_STATE_ALL, a = _.SECTION_ALL;
+    } = e, n = f.default.Messages.FRIENDS_EMPTY_STATE_ALL, a = _.SECTION_ALL;
     return (0, s.jsx)(i.Fragment, {
       children: (0, s.jsxs)(d.default, {
         theme: t,
@@ -126,13 +126,13 @@ class C extends i.PureComponent {
       }
     }(e);
     return e === c.FriendsSections.ADD_FRIEND ? (0, s.jsx)(l.default.div, {
-      className: f.friendsEmpty,
+      className: E.friendsEmpty,
       style: a,
       children: (0, s.jsx)(h, {
         theme: n
       })
     }) : (0, s.jsx)(l.default.div, {
-      className: f.friendsEmpty,
+      className: E.friendsEmpty,
       style: a,
       children: (0, s.jsxs)(d.default, {
         theme: n,
@@ -161,7 +161,7 @@ class C extends i.PureComponent {
     }
   }
 }
-var T = r.default.connectStores([u.default], () => ({
+var I = r.default.connectStores([u.default], () => ({
   theme: u.default.theme
 }), {
   forwardRef: !0

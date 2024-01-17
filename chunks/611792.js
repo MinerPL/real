@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("446674"),
-  l = n("27618"),
+var l = n("446674"),
+  a = n("27618"),
   i = n("341716");
 
 function r(e) {
@@ -15,8 +15,8 @@ function r(e) {
     message: t,
     channel: n,
     compact: r
-  } = e, o = (0, s.useStateFromStores)([l.default], () => null != t.interaction && l.default.isBlocked(t.interaction.user.id), [t.interaction]);
-  return (0, a.jsx)(i.default, {
+  } = e, o = (0, l.useStateFromStores)([a.default], () => null != t.interaction && a.default.isBlocked(t.interaction.user.id), [t.interaction]);
+  return (0, s.jsx)(i.default, {
     message: t,
     channel: n,
     compact: r,
@@ -25,7 +25,7 @@ function r(e) {
 }
 
 function o(e, t, n) {
-  return null != e.interaction && "" !== e.interaction.displayName ? (0, a.jsx)(r, {
+  return null != e.interaction && "" !== e.interaction.displayName ? (0, s.jsx)(r, {
     message: e,
     channel: t,
     compact: n

@@ -62,12 +62,12 @@ class u extends s.PureComponent {
         gradientStopColor: c
       } = this.props;
       if (s.length < 2) return;
-      let E = Math.max(Math.min((e - this.dataChangedAt) / i, 1), 0),
-        f = a.getContext("2d"),
+      let f = Math.max(Math.min((e - this.dataChangedAt) / i, 1), 0),
+        E = a.getContext("2d"),
         _ = this.maxValue;
-      f.strokeStyle = l, f.lineWidth = u;
-      let h = a.height - f.lineWidth,
-        C = f.createLinearGradient(0, 0, 0, h);
+      E.strokeStyle = l, E.lineWidth = u;
+      let h = a.height - E.lineWidth,
+        C = E.createLinearGradient(0, 0, 0, h);
       if (null != c) C.addColorStop(0, c);
       else {
         let {
@@ -77,19 +77,19 @@ class u extends s.PureComponent {
         } = r.hexToRgb(l);
         C.addColorStop(0, "rgba(".concat(e, ", ").concat(t, ", ").concat(n, ", 0)"))
       }
-      C.addColorStop(1, this.fillColor), f.fillStyle = C;
-      let T = s.length >= o ? o : s.length;
-      f.setTransform(1, 0, 0, -1, 0, a.height), f.clearRect(0, 0, a.width, a.height), f.translate(0, .5 * f.lineWidth);
-      let I = Math.floor(a.width / (T - 3)),
-        S = .5 * I;
-      f.translate(I - I * E, 0), f.beginPath();
-      let N = -I;
+      C.addColorStop(1, this.fillColor), E.fillStyle = C;
+      let I = s.length >= o ? o : s.length;
+      E.setTransform(1, 0, 0, -1, 0, a.height), E.clearRect(0, 0, a.width, a.height), E.translate(0, .5 * E.lineWidth);
+      let T = Math.floor(a.width / (I - 3)),
+        S = .5 * T;
+      E.translate(T - T * f, 0), E.beginPath();
+      let m = -T;
       s.forEach((e, a) => {
         t = {
-          x: N,
+          x: m,
           y: h * e / _
-        }, 0 === a ? f.moveTo(t.x, t.y) : f.bezierCurveTo(n.x + S, n.y, t.x - S, t.y, t.x, t.y), n = t, N += I
-      }), f.stroke(), f.lineTo(N - I, 0), f.lineTo(0, 0), f.fill(), d && E < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation))
+        }, 0 === a ? E.moveTo(t.x, t.y) : E.bezierCurveTo(n.x + S, n.y, t.x - S, t.y, t.x, t.y), n = t, m += T
+      }), E.stroke(), E.lineTo(m - T, 0), E.lineTo(0, 0), E.fill(), d && f < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation))
     }
   }
 }

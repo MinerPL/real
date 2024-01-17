@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("669491"),
-  l = n("574073"),
+var l = n("669491"),
+  a = n("574073"),
   i = n("228427"),
   r = n("304198"),
   o = n("782340"),
@@ -18,21 +18,21 @@ function d(e) {
     message: t,
     compact: n,
     usernameHook: d
-  } = e, c = (0, l.default)(t), f = d(c), m = o.default.Messages.SYSTEM_MESSAGE_STAGE_START_HOOK.format({
+  } = e, c = (0, a.default)(t), f = d(c), E = o.default.Messages.SYSTEM_MESSAGE_STAGE_START_HOOK.format({
     username: c.nick,
     usernameHook: f,
     topic: t.content
   });
-  return (0, a.jsx)(r.default, {
+  return (0, s.jsx)(r.default, {
     className: u.stageSystemMessage,
-    iconNode: (0, a.jsx)(i.default, {
+    iconNode: (0, s.jsx)(i.default, {
       height: 24,
       width: 24,
-      color: s.default.unsafe_rawColors.GREEN_360.css
+      color: l.default.unsafe_rawColors.GREEN_360.css
     }),
     iconContainerClassName: u.iconContainer,
     timestamp: t.timestamp,
     compact: n,
-    children: m
+    children: E
   })
 }

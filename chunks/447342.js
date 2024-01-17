@@ -13,19 +13,19 @@ var a = n("37983"),
   u = n("462579"),
   d = n("266926"),
   c = n("599110"),
-  E = n("299039"),
-  f = n("822825"),
+  f = n("299039"),
+  E = n("822825"),
   _ = n("117933"),
   h = n("368874"),
   C = n("648750"),
-  T = n("710514"),
-  I = n("339853"),
+  I = n("710514"),
+  T = n("339853"),
   S = n("775032"),
-  N = n("25132"),
-  A = n("453479"),
-  p = n("975344"),
-  m = n("57"),
-  g = n("863972"),
+  m = n("25132"),
+  p = n("453479"),
+  A = n("975344"),
+  g = n("57"),
+  N = n("863972"),
   R = n("884706"),
   O = n("424373"),
   L = n("922832"),
@@ -60,41 +60,41 @@ function y(e) {
     displayType: t
   } = e, n = s.useCallback(() => {
     (0, o.showToast)((0, o.createToast)(M.default.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE))
-  }, []), i = (0, S.default)(), r = (0, T.useActionsForDisplayType)(t), u = (0, T.useActionTotalsForDisplayType)(t), {
+  }, []), i = (0, S.default)(), r = (0, I.useActionsForDisplayType)(t), u = (0, I.useActionTotalsForDisplayType)(t), {
     loadMore: d,
     isMoreLoading: c
   } = (0, C.useFamilyCenterActions)({
     onError: n
-  }), f = L.ACTION_TO_TEXT.get(t), [h, I] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), N = s.useCallback(() => {
-    I(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
+  }), E = L.ACTION_TO_TEXT.get(t), [h, T] = s.useState(L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), m = s.useCallback(() => {
+    T(e => e + L.FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS), d(t)
   }, [t, d]);
-  l(f, "No text for action type");
-  let A = f.sectionHeader(u),
-    g = s.useCallback(e => {
+  l(E, "No text for action type");
+  let p = E.sectionHeader(u),
+    N = s.useCallback(e => {
       let {
         row: t
       } = e, n = r[t];
-      return (0, _.isUserAction)(n) ? (0, a.jsx)(m.default, {
+      return (0, _.isUserAction)(n) ? (0, a.jsx)(g.default, {
         userId: n.entity_id,
-        timestamp: E.default.extractTimestamp(n.event_id),
-        timestampFormatter: f.timestampFormatter
-      }, n.event_id) : (0, _.isGuildAction)(n) ? (0, a.jsx)(p.default, {
+        timestamp: f.default.extractTimestamp(n.event_id),
+        timestampFormatter: E.timestampFormatter
+      }, n.event_id) : (0, _.isGuildAction)(n) ? (0, a.jsx)(A.default, {
         guildId: n.entity_id
       }, n.event_id) : void 0
-    }, [r, f.timestampFormatter]),
+    }, [r, E.timestampFormatter]),
     R = s.useCallback(() => (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.Text, {
         className: P.sectionHeader,
         variant: "eyebrow",
         color: "header-secondary",
-        children: A
-      }), void 0 !== f.sectionDescription ? (0, a.jsx)(o.Text, {
+        children: p
+      }), void 0 !== E.sectionDescription ? (0, a.jsx)(o.Text, {
         className: P.sectionDescription,
         variant: "text-md/medium",
         color: "text-muted",
-        children: f.sectionDescription(null != i && i)
+        children: E.sectionDescription(null != i && i)
       }) : null]
-    }), [A, f, i]);
+    }), [p, E, i]);
   if (0 === r.length) return null;
   let O = r.slice(0, h);
   return (0, a.jsxs)("div", {
@@ -104,12 +104,12 @@ function y(e) {
       style: {
         maxHeight: 65 * O.length
       },
-      children: O.map((e, t) => g({
+      children: O.map((e, t) => N({
         row: t
       }))
     }), O.length !== u ? (0, a.jsx)(o.Clickable, {
       className: P.loadMoreBar,
-      onClick: N,
+      onClick: m,
       role: "button",
       children: c ? (0, a.jsx)(o.Spinner, {
         type: o.Spinner.Type.PULSING_ELLIPSIS,
@@ -126,12 +126,12 @@ function y(e) {
 }
 let x = () => {
     let e = (0, S.default)(),
-      t = (0, N.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
+      t = (0, m.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
       n = (0, h.useAgeSpecificText)(M.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({
         activeLinks: t.length
       }), M.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
       s = (0, _.getActivityWindowTimestampFormatter)(!!e),
-      i = (0, N.useActivityWindowTimeStamp)(s);
+      i = (0, m.useActivityWindowTimeStamp)(s);
     return e && t.length > 1 ? (0, a.jsx)(o.Text, {
       variant: "eyebrow",
       children: i
@@ -149,10 +149,10 @@ let x = () => {
       userId: t,
       subText: n,
       avatarSize: s = o.AvatarSizes.SIZE_40
-    } = e, i = (0, I.useTeenUserForId)(t);
+    } = e, i = (0, T.useTeenUserForId)(t);
     return void 0 === i ? null : (0, a.jsxs)("div", {
       className: P.accountRow,
-      children: [(0, a.jsx)(g.FamilyCenterAvatar, {
+      children: [(0, a.jsx)(N.FamilyCenterAvatar, {
         user: i,
         avatarSize: s
       }), (0, a.jsxs)("div", {
@@ -168,8 +168,8 @@ let x = () => {
     })
   },
   U = () => {
-    let e = (0, N.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
-      t = (0, r.default)([f.default], () => f.default.getSelectedTeenId()),
+    let e = (0, m.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE),
+      t = (0, r.default)([E.default], () => E.default.getSelectedTeenId()),
       {
         selectTeenUser: n
       } = (0, C.useFamilyCenterActions)({}),
@@ -201,7 +201,7 @@ let x = () => {
   G = e => {
     let {
       userId: t
-    } = e, n = (0, S.default)(), s = (0, N.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE), i = (0, _.getActivityWindowTimestampFormatter)(!!n), l = (0, N.useActivityWindowTimeStamp)(i);
+    } = e, n = (0, S.default)(), s = (0, m.useUserForLinkStatus)(L.UserLinkStatus.ACTIVE), i = (0, _.getActivityWindowTimestampFormatter)(!!n), l = (0, m.useActivityWindowTimeStamp)(i);
     return n && 1 !== s.length ? (0, a.jsx)(U, {}) : (0, a.jsx)(b, {
       userId: t,
       subText: l
@@ -210,7 +210,7 @@ let x = () => {
 var j = e => {
   let {
     user: t
-  } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, T.useHasActionForAnyDisplayType)(), i = (0, _.getEmptyActivityFormatter)(), l = (0, N.useActivityWindowTimeStamp)(i);
+  } = e, n = Array.from(L.ACTION_TO_TEXT.entries()), s = (0, I.useHasActionForAnyDisplayType)(), i = (0, _.getEmptyActivityFormatter)(), l = (0, m.useActivityWindowTimeStamp)(i);
   return (0, a.jsxs)("div", {
     className: P.container,
     children: [(0, a.jsxs)("div", {
@@ -229,7 +229,7 @@ var j = e => {
           className: P.activityCounterRow,
           children: n.map(e => {
             let [t, n] = e;
-            return (0, a.jsx)(A.default, {
+            return (0, a.jsx)(p.default, {
               displayType: t,
               header: n.tooltipHeader()
             }, "counter-".concat(t))

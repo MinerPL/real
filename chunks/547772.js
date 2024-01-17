@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("77078"),
+var l = n("77078"),
   s = n("64016"),
   i = n("255228"),
   r = n("263024"),
@@ -20,28 +20,28 @@ function d(e) {
     onSelect: d,
     navId: c,
     label: f
-  } = e, E = (0, s.default)(t, "Notifications Bell"), h = (0, i.default)(t), _ = (0, o.useThreadNotificationSetting)(t);
-  return (0, l.jsxs)(a.Menu, {
+  } = e, h = (0, s.default)(t, "Notifications Bell"), E = (0, i.default)(t), m = (0, o.useThreadNotificationSetting)(t);
+  return (0, a.jsxs)(l.Menu, {
     navId: c,
     onClose: n,
     "aria-label": f,
     onSelect: d,
-    children: [(0, l.jsxs)(a.MenuGroup, {
-      children: [t.isForumPost() ? E : null, h]
-    }), (0, l.jsx)(a.MenuGroup, {
+    children: [(0, a.jsxs)(l.MenuGroup, {
+      children: [t.isForumPost() ? h : null, E]
+    }), (0, a.jsx)(l.MenuGroup, {
       children: (0, u.getThreadNotificationOptions)().map(e => {
         let {
           setting: n,
           label: s
         } = e;
-        return (0, l.jsx)(a.MenuRadioItem, {
+        return (0, a.jsx)(l.MenuRadioItem, {
           group: "thread-notifications",
           id: "".concat(n),
           label: s,
           action: () => r.default.setNotificationSettings(t, {
             flags: n
           }),
-          checked: n === _
+          checked: n === m
         }, n)
       })
     })]

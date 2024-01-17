@@ -35,9 +35,9 @@ var s = n("597755"),
   O = n("393414"),
   b = n("716214"),
   P = n("233069"),
-  R = n("271938"),
-  V = n("42203"),
-  k = n("923959"),
+  k = n("271938"),
+  R = n("42203"),
+  V = n("923959"),
   M = n("26989"),
   w = n("305961"),
   L = n("88093"),
@@ -88,8 +88,8 @@ function ee(e) {
     var s, i;
     if ((null == n ? void 0 : n.targetType) === X.InviteTargetTypes.ROLE_SUBSCRIPTIONS_PURCHASE) return z.StaticChannelRoute.ROLE_SUBSCRIPTIONS;
     if ((null == n ? void 0 : n.targetType) == null && !P.GUILD_VOCAL_CHANNEL_TYPES.has(t.type) && ((0, v.canSeeGuildHome)(e) || (0, y.canSeeOnboardingHome)(e))) return z.StaticChannelRoute.GUILD_HOME;
-    let r = V.default.getChannel(t.id);
-    return G.default.can(W.Permissions.VIEW_CHANNEL, r) ? t.id : null !== (i = null === (s = k.default.getDefaultChannel(e, !0, W.Permissions.CREATE_INSTANT_INVITE)) || void 0 === s ? void 0 : s.id) && void 0 !== i ? i : t.id
+    let r = R.default.getChannel(t.id);
+    return G.default.can(W.Permissions.VIEW_CHANNEL, r) ? t.id : null !== (i = null === (s = V.default.getDefaultChannel(e, !0, W.Permissions.CREATE_INSTANT_INVITE)) || void 0 === s ? void 0 : s.id) && void 0 !== i ? i : t.id
   }(t, s, i), {
     targetUserId: d,
     targetType: u,
@@ -128,9 +128,9 @@ function ee(e) {
 }
 let et = function(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-    V.default.addConditionalChangeListener(() => {
+    R.default.addConditionalChangeListener(() => {
       var s;
-      let i = V.default.getChannel(e),
+      let i = R.default.getChannel(e),
         r = F.default.getCurrentUser();
       return null == i || null == r || (!i.nsfw || !!r.nsfwAllowed) && ((null == t ? void 0 : t.guildScheduledEvent) != null ? (! function(e) {
         let {
@@ -326,7 +326,7 @@ var es = {
       context: a,
       callback: o,
       skipOnboarding: d
-    } = e, f = (0, I.parseExtraDataFromInviteKey)(r), c = f.baseCode, g = R.default.getSessionId();
+    } = e, f = (0, I.parseExtraDataFromInviteKey)(r), c = f.baseCode, g = k.default.getSessionId();
     let m = (s = a, i = f, {
         ...s,
         invite_guild_scheduled_event_id: i.guildScheduledEventId

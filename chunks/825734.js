@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 }), n("70102"), n("222007");
 var a = n("308757"),
@@ -13,14 +13,14 @@ var a = n("308757"),
   u = n("383928"),
   d = n("56245"),
   c = n("492249"),
-  E = n("49111"),
-  f = n("646718");
+  f = n("49111"),
+  E = n("646718");
 let _ = [s.default.RPC];
 
 function h(e) {
   if (null == e) return {
-    lock: E.NOOP_NULL,
-    context: E.AppContext.APP
+    lock: f.NOOP_NULL,
+    context: f.AppContext.APP
   };
   let t = (0, d.unlockOverlay)(e);
   return {
@@ -31,21 +31,21 @@ function h(e) {
 
 function C(e, t) {
   let n = {
-    subscriptionTier: f.PremiumSubscriptionSKUs.TIER_2,
+    subscriptionTier: E.PremiumSubscriptionSKUs.TIER_2,
     analyticsLocations: _,
     analyticsObject: t
   };
   switch (e) {
-    case E.AppContext.APP:
+    case f.AppContext.APP:
       return i.default.openPremiumPaymentModalInApp(n);
-    case E.AppContext.OVERLAY:
+    case f.AppContext.OVERLAY:
       return i.default.openPremiumPaymentModalInOverlay(n);
     default:
       throw Error("Unexpected app context: ".concat(e))
   }
 }
-var T = {
-  [E.RPCCommands.START_PURCHASE]: {
+var I = {
+  [f.RPCCommands.START_PURCHASE]: {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE, c.RPC_LOCAL_SCOPE],
     validation: e => (0, r.default)(e).required().keys({
       sku_id: e.string().required(),
@@ -65,19 +65,19 @@ var T = {
       let {
         lock: r,
         context: d
-      } = h(t.transport !== c.TransportTypes.POST_MESSAGE ? s : null), f = (0, o.default)();
-      if (null == f) throw new l.default(c.RPCErrors.INVALID_CHANNEL, "Invalid channel");
-      let T = {
-          page: E.AnalyticsPages.IN_APP
+      } = h(t.transport !== c.TransportTypes.POST_MESSAGE ? s : null), E = (0, o.default)();
+      if (null == E) throw new l.default(c.RPCErrors.INVALID_CHANNEL, "Invalid channel");
+      let I = {
+          page: f.AnalyticsPages.IN_APP
         },
-        I = async () => {
+        T = async () => {
           try {
             let e = await (0, a.openIAPPurchaseModal)({
               applicationId: i,
               skuId: n,
-              openPremiumPaymentModal: () => C(d, T),
+              openPremiumPaymentModal: () => C(d, I),
               analyticsLocations: _,
-              analyticsLocationObject: T,
+              analyticsLocationObject: I,
               context: d
             });
             return r(), e
@@ -89,10 +89,10 @@ var T = {
             throw new l.default(c.RPCErrors.PURCHASE_CANCELED, "Purchase was canceled by the user.")
           }
         };
-      return I()
+      return T()
     }
   },
-  [E.RPCCommands.START_PREMIUM_PURCHASE]: {
+  [f.RPCCommands.START_PREMIUM_PURCHASE]: {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE, c.RPC_LOCAL_SCOPE],
     validation: e => (0, r.default)(e).keys({
       pid: e.number().min(0)
@@ -111,7 +111,7 @@ var T = {
         lock: s,
         context: i
       } = h(t.transport !== c.TransportTypes.POST_MESSAGE ? n : null), r = {
-        page: E.AnalyticsPages.IN_APP
+        page: f.AnalyticsPages.IN_APP
       };
       return C(i, r).then(() => {
         s()

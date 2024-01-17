@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return p
   }
 }), n("222007");
 var a = n("37983");
@@ -14,15 +14,15 @@ var s = n("77078"),
   u = n("697218"),
   d = n("340412"),
   c = n("719923"),
-  E = n("197881"),
-  f = n("982457"),
+  f = n("197881"),
+  E = n("982457"),
   _ = n("443504"),
   h = n("247820"),
   C = n("641078"),
-  T = n("953314"),
-  I = n("518151");
+  I = n("953314"),
+  T = n("518151");
 let S = "PremiumServerDriveAnnouncementModal";
-class N extends l.default {
+class m extends l.default {
   _initialize() {
     i.default.subscribe("POST_CONNECTION_OPEN", this.mayShowAnnouncementModal), i.default.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
   }
@@ -31,7 +31,7 @@ class N extends l.default {
   }
   constructor(...e) {
     super(...e), this.maybeOpenServerDriveAnnouncementModal = (e, t) => {
-      let i = (0, I.extractAnnouncementModalContent)({
+      let i = (0, T.extractAnnouncementModalContent)({
         content: e,
         isPreview: t
       });
@@ -52,7 +52,7 @@ class N extends l.default {
       } = e;
       this.maybeOpenServerDriveAnnouncementModal(t, !0)
     }, this.mayShowAnnouncementModal = async () => {
-      if (await (0, C.maybeFetchActiveBogoPromotion)(), await (0, o.maybeGetPacksForUser)("try packs modal"), E.ProcessArgs.isDisallowPopupsSet()) return;
+      if (await (0, C.maybeFetchActiveBogoPromotion)(), await (0, o.maybeGetPacksForUser)("try packs modal"), f.ProcessArgs.isDisallowPopupsSet()) return;
       if (!(0, s.hasAnyModalOpen)() && _.default.getCurrentConfig({
           location: "OfferAnnouncementManager"
         }).enabled) {
@@ -71,7 +71,7 @@ class N extends l.default {
         t = (0, r.getInventoryGuildPacksUserExperimentConfig)({
           user: e
         });
-      !(0, s.hasAnyModalOpen)() && t.showTryPacksModalAndV2Copy && t.collectEnabled && (0, T.isEligibleForTryPacksModal)((0, c.isPremium)(e)) && (0, s.openModalLazy)(async () => {
+      !(0, s.hasAnyModalOpen)() && t.showTryPacksModalAndV2Copy && t.collectEnabled && (0, I.isEligibleForTryPacksModal)((0, c.isPremium)(e)) && (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await n.el("953314").then(n.bind(n, "953314"));
@@ -81,7 +81,7 @@ class N extends l.default {
       })
     }, this._hasTrialOffer = async () => {
       try {
-        if (d.default.shouldFetchOffer() && await f.default.fetchUserTrialOffer(), d.default.hasFetchedOffer() && d.default.hasAnyUnexpiredOffer()) return !0;
+        if (d.default.shouldFetchOffer() && await E.default.fetchUserTrialOffer(), d.default.hasFetchedOffer() && d.default.hasAnyUnexpiredOffer()) return !0;
         return !1
       } catch (e) {
         return !1
@@ -89,4 +89,4 @@ class N extends l.default {
     }
   }
 }
-var A = new N
+var p = new m

@@ -14,19 +14,19 @@ var s = n("907002"),
   u = n("119153"),
   d = n("602632"),
   c = n("723872"),
-  E = n("49111");
+  f = n("49111");
 
-function f(e) {
+function E(e) {
   let {
     channel: t,
     guild: n
-  } = e, r = (0, i.useStateFromStores)([l.HotspotStore], () => l.HotspotStore.hasHotspot(l.HotspotLocations.HUB_STUDY_ROOM_NOTICE)), o = (0, c.useConnectedInCurrentHub)(t.guild_id), E = (0, s.useSpring)({
+  } = e, r = (0, i.useStateFromStores)([l.HotspotStore], () => l.HotspotStore.hasHotspot(l.HotspotLocations.HUB_STUDY_ROOM_NOTICE)), o = (0, c.useConnectedInCurrentHub)(t.guild_id), f = (0, s.useSpring)({
     maxHeight: o ? 0 : 300,
     overflow: "hidden",
     delay: 400
   });
   return (0, a.jsx)(s.animated.div, {
-    style: E,
+    style: f,
     children: r ? (0, a.jsx)(u.default, {
       channel: t,
       guild: n
@@ -43,8 +43,8 @@ var _ = function(e) {
     let e = r.default.getChannels(t.id),
       n = e[r.GUILD_VOCAL_CHANNELS_KEY];
     return n[0]
-  }), s = (0, i.useStateFromStores)([o.default], () => null != n && o.default.can(E.Permissions.CONNECT, n.channel));
-  return t.hasFeature(E.GuildFeatures.HUB) && null != n && s ? (0, a.jsx)(f, {
+  }), s = (0, i.useStateFromStores)([o.default], () => null != n && o.default.can(f.Permissions.CONNECT, n.channel));
+  return t.hasFeature(f.GuildFeatures.HUB) && null != n && s ? (0, a.jsx)(E, {
     channel: n.channel,
     guild: t
   }) : null

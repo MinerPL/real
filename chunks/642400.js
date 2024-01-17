@@ -13,13 +13,13 @@ var a = n("37983"),
   u = n("892313"),
   d = n("701909"),
   c = n("145131"),
-  E = n("109507"),
-  f = n("49111"),
+  f = n("109507"),
+  E = n("49111"),
   _ = n("782340"),
   h = n("291273"),
   C = n("926622");
-let T = d.default.getArticleURL(f.HelpdeskArticles.VERIFICATION_FAQ);
-class I extends s.PureComponent {
+let I = d.default.getArticleURL(E.HelpdeskArticles.VERIFICATION_FAQ);
+class T extends s.PureComponent {
   renderFields() {
     let {
       types: e,
@@ -28,7 +28,7 @@ class I extends s.PureComponent {
       onCaptchaVerify: s
     } = this.props;
     return (0, a.jsx)(a.Fragment, {
-      children: e.map(e => e === f.VerificationTypes.CAPTCHA ? (0, a.jsx)(E.default, {
+      children: e.map(e => e === E.VerificationTypes.CAPTCHA ? (0, a.jsx)(f.default, {
         onVerify: s,
         theme: n
       }, t) : (0, a.jsx)(o.Button, {
@@ -58,7 +58,7 @@ class I extends s.PureComponent {
         }), (0, a.jsx)("div", {
           className: l(h.body, C.marginTop4, C.marginBottom20),
           children: _.default.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({
-            helpCenterURL: T
+            helpCenterURL: I
           })
         }), (0, a.jsx)(c.default, {
           grow: 0,
@@ -98,9 +98,9 @@ class I extends s.PureComponent {
     }
   }
 }
-I.defaultProps = {
-  types: [f.VerificationTypes.CAPTCHA],
-  onCaptchaVerify: f.NOOP,
-  onLogout: f.NOOP
+T.defaultProps = {
+  types: [E.VerificationTypes.CAPTCHA],
+  onCaptchaVerify: E.NOOP,
+  onLogout: E.NOOP
 };
-var S = I
+var S = T

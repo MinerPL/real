@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var a = n("37983");
@@ -14,9 +14,9 @@ var s = n("669491"),
   u = n("484140"),
   d = n("395635"),
   c = n("782340"),
-  E = n("472036");
+  f = n("472036");
 
-function f() {
+function E() {
   let {
     canViewBroadcasts: e
   } = r.default.useExperiment({
@@ -27,11 +27,11 @@ function f() {
   return 0 === t.length ? null : (r.default.trackExposure({
     location: "broadcast_list"
   }), e) ? (0, a.jsxs)("div", {
-    className: E.container,
+    className: f.container,
     children: [(0, a.jsx)("div", {
-      className: E.header,
+      className: f.header,
       children: (0, a.jsxs)("div", {
-        className: E.inline,
+        className: f.inline,
         children: [(0, a.jsx)(l.default, {
           color: s.default.colors.HEADER_PRIMARY.css,
           height: 20,

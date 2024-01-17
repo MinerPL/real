@@ -26,8 +26,8 @@ var m = a.memo(function(e) {
   let {
     channel: t,
     isLastItem: n
-  } = e, a = (0, l.useStateFromStores)([r.default], () => r.default.useReducedMotion), m = (0, l.useStateFromStores)([d.default], () => d.default.can(f.Permissions.SEND_MESSAGES_IN_THREADS, t)), E = (0, o.useIsNonModInLockedThread)(t), g = (0, l.useStateFromStores)([u.default], () => u.default.getId());
-  return n ? m && !E && t.ownerId !== g ? (0, s.jsxs)("div", {
+  } = e, a = (0, l.useStateFromStores)([r.default], () => r.default.useReducedMotion), m = (0, l.useStateFromStores)([d.default], () => d.default.can(f.Permissions.SEND_MESSAGES_IN_THREADS, t)), g = (0, o.useIsNonModInLockedThread)(t), E = (0, l.useStateFromStores)([u.default], () => u.default.getId());
+  return n ? m && !g && t.ownerId !== E ? (0, s.jsxs)("div", {
     className: C.box,
     children: [(0, s.jsx)(c.default, {
       importData: p,

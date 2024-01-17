@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return c
   },
   playWebSound: function() {
-    return E
+    return f
   }
 }), n("222007");
 var a = n("627445"),
@@ -42,7 +42,7 @@ function c(e) {
   })
 }
 
-function E(e, t) {
+function f(e, t) {
   let {
     soundKey: n,
     soundURL: a,

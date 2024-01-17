@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
-var l = n("862205");
-let a = (0, l.createExperiment)({
+var s = n("862205");
+let l = (0, s.createExperiment)({
   kind: "user",
   id: "2023-08_guild_usage_survey",
   label: "Guild Usage Survey",
@@ -20,4 +20,4 @@ let a = (0, l.createExperiment)({
     }
   }]
 });
-var s = a
+var a = l

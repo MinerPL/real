@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return a
   }
 });
-var a = n("917351"),
-  s = n("410328"),
-  l = (0, a.memoize)(function(e) {
+var s = n("917351"),
+  l = n("410328"),
+  a = (0, s.memoize)(function(e) {
     let {
       theme: t,
       layoutType: n
     } = e;
-    return (0, s.buildPlatformPollResources)(t, n)
+    return (0, l.buildPlatformPollResources)(t, n)
   }, e => {
     let {
       theme: t,

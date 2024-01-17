@@ -19,24 +19,24 @@ var a = n("599110"),
           socket: n,
           evt: d,
           args: c
-        } = e, E = t.events[d];
-        if (null == E) throw new i.default(o.RPCErrors.INVALID_EVENT, "Invalid event: ".concat(d));
-        if (!(0, l.default)(n.authorization.scopes, E.scope)) throw new i.default(o.RPCErrors.INVALID_PERMISSIONS, "Not authenticated or invalid scope");
+        } = e, f = t.events[d];
+        if (null == f) throw new i.default(o.RPCErrors.INVALID_EVENT, "Invalid event: ".concat(d));
+        if (!(0, l.default)(n.authorization.scopes, f.scope)) throw new i.default(o.RPCErrors.INVALID_PERMISSIONS, "Not authenticated or invalid scope");
         s.ExperimentRPCServerAnalyticsKillswitch.getCurrentConfig({
           location: "RPCServer"
         }).enabled && a.default.track(u.AnalyticEvents.RPC_SUBSCRIPTION_REQUESTED, {
           event: d,
-          scope: "object" == typeof E.scope ? JSON.stringify(E.scope) : E.scope,
+          scope: "object" == typeof f.scope ? JSON.stringify(f.scope) : f.scope,
           application_id: n.application.id
         });
-        let f = E.handler({
+        let E = f.handler({
             args: c,
             socket: n
           }),
           _ = await (0, r.getInitialSubscriptionPayload)(n, d, c);
         return new Promise(e => {
           setImmediate(() => {
-            t.addSubscription(n, d, c, f), null != _ && t.dispatchToSubscriptions(d, e => e.socket.id === n.id, _)
+            t.addSubscription(n, d, c, E), null != _ && t.dispatchToSubscriptions(d, e => e.socket.id === n.id, _)
           }), e({
             evt: d
           })

@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return R
   }
 }), n("222007");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("907002"),
@@ -14,33 +14,33 @@ var l = n("37983"),
   d = n("913144"),
   c = n("267363"),
   f = n("716241"),
-  E = n("739034"),
-  h = n("393414"),
-  _ = n("42203"),
-  S = n("211248"),
-  T = n("461380"),
-  N = n("36694"),
-  p = n("11539"),
-  I = n("815978"),
-  m = n("814744"),
-  A = n("879165"),
-  g = n("609023"),
-  C = n("49111"),
-  R = n("782340"),
-  M = n("951244");
-let O = a.memo(function(e) {
+  h = n("739034"),
+  E = n("393414"),
+  m = n("42203"),
+  p = n("211248"),
+  g = n("461380"),
+  S = n("36694"),
+  N = n("11539"),
+  _ = n("815978"),
+  I = n("814744"),
+  T = n("879165"),
+  C = n("609023"),
+  A = n("49111"),
+  x = n("782340"),
+  v = n("951244");
+let M = l.memo(function(e) {
   let {
     channel: t,
     deleteChannel: n
-  } = e, s = a.useRef(null), [
+  } = e, s = l.useRef(null), [
     [i, o], u
-  ] = a.useState([0, 0]), d = t.deleted && i > 0;
+  ] = l.useState([0, 0]), d = t.deleted && i > 0;
   if (t.deleted && 0 === i && null != s.current) {
     let e = s.current.offsetHeight,
       t = s.current.offsetTop,
       n = s.current.parentElement.scrollTop,
-      l = n > t ? e - (n - t) : e;
-    u([e, e - l])
+      a = n > t ? e - (n - t) : e;
+    u([e, e - a])
   }
   let {
     opacity: c,
@@ -56,63 +56,63 @@ let O = a.memo(function(e) {
     onRest: () => {
       n(t.channelId)
     }
-  }), E = {
+  }), h = {
     opacity: c,
     height: f.to(e => d ? function(e, t, n) {
       return t + (e - t) * n
     }(i, o, e) : "auto")
   };
-  return (0, l.jsx)(r.animated.div, {
+  return (0, a.jsx)(r.animated.div, {
     ref: s,
-    style: E,
-    children: (0, l.jsx)(v, {
+    style: h,
+    children: (0, a.jsx)(L, {
       ...e
     })
   })
 });
-var L = O;
-let v = a.memo(function(e) {
+var R = M;
+let L = l.memo(function(e) {
   let {
     channel: t,
     onJump: n,
     deleteChannel: s,
     toggle: i
-  } = e, r = (0, o.useStateFromStores)([_.default], () => _.default.getChannel(t.channelId));
-  if (a.useEffect(() => {
+  } = e, r = (0, o.useStateFromStores)([m.default], () => m.default.getChannel(t.channelId));
+  if (l.useEffect(() => {
       null != r && t.isFullyLoaded && !t.hasError && !t.collapsed && "messages" === t.type && 0 === t.messages.length && d.default.wait(() => {
         (0, c.ack)(t.channelId, !0), s(t.channelId)
       })
     }), null == r || !t.hasLoadedAnything) return null;
-  let E = (e, l) => {
-    (0, f.trackWithMetadata)(C.AnalyticEvents.INBOX_CHANNEL_CLICKED, {
+  let h = (e, a) => {
+    (0, f.trackWithMetadata)(A.AnalyticEvents.INBOX_CHANNEL_CLICKED, {
       channel_id: t.channelId,
       guild_id: t.guildId
     });
-    let a = null != l ? l : t.oldestUnreadMessageId;
-    (0, h.transitionTo)(C.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : a)), n(e)
+    let l = null != a ? a : t.oldestUnreadMessageId;
+    (0, E.transitionTo)(A.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : l)), n(e)
   };
-  return (0, l.jsx)("div", {
-    className: M.channel,
-    children: (0, l.jsx)(u.HeadingLevel, {
-      component: (0, l.jsxs)(m.default, {
+  return (0, a.jsx)("div", {
+    className: v.channel,
+    children: (0, a.jsx)(u.HeadingLevel, {
+      component: (0, a.jsxs)(I.default, {
         channel: r,
-        gotoChannel: E,
+        gotoChannel: h,
         mentionCount: t.mentionCount,
         toggleCollapsed: i,
         channelState: t,
-        children: [(0, l.jsx)(I.default, {
+        children: [(0, a.jsx)(_.default, {
           channel: r
-        }), (0, l.jsx)(D, {
+        }), (0, a.jsx)(O, {
           ...e
-        }), "nsfw" === t.type ? null : (0, l.jsx)(y, {
+        }), "nsfw" === t.type ? null : (0, a.jsx)(b, {
           ...e
         })]
       }),
-      children: t.collapsed ? null : "messages" === t.type ? (0, l.jsx)(g.default, {
+      children: t.collapsed ? null : "messages" === t.type ? (0, a.jsx)(C.default, {
         channel: t,
         channelRecord: r,
-        gotoChannel: E
-      }) : "forum" === t.type ? (0, l.jsx)(A.default, {
+        gotoChannel: h
+      }) : "forum" === t.type ? (0, a.jsx)(T.default, {
         channel: t,
         channelRecord: r,
         deleteChannel: s
@@ -121,26 +121,26 @@ let v = a.memo(function(e) {
   })
 });
 
-function D(e) {
+function O(e) {
   let {
     channel: t,
     markChannelRead: n,
-    markGuildRead: a,
+    markGuildRead: l,
     getNumUnreadChannels: s
-  } = e, i = (0, E.default)(), r = i && null != t.guildId;
-  return (0, l.jsx)(S.default, {
-    className: M.markReadButton,
-    tooltip: r ? R.default.Messages.MARK_GUILD_AS_READ : R.default.Messages.MARK_AS_READ,
-    color: S.CircleIconButtonColors.TERTIARY,
-    icon: r ? (0, l.jsx)(p.default, {
+  } = e, i = (0, h.default)(), r = i && null != t.guildId;
+  return (0, a.jsx)(p.default, {
+    className: v.markReadButton,
+    tooltip: r ? x.default.Messages.MARK_GUILD_AS_READ : x.default.Messages.MARK_AS_READ,
+    color: p.CircleIconButtonColors.TERTIARY,
+    icon: r ? (0, a.jsx)(N.default, {
       width: 16,
       height: 16
-    }) : (0, l.jsx)(N.default, {
+    }) : (0, a.jsx)(S.default, {
       width: 16,
       height: 16
     }),
     onClick: function() {
-      r && null != t.guildId ? a(t.guildId) : n(t), (0, f.trackWithMetadata)(C.AnalyticEvents.INBOX_CHANNEL_ACKED, {
+      r && null != t.guildId ? l(t.guildId) : n(t), (0, f.trackWithMetadata)(A.AnalyticEvents.INBOX_CHANNEL_ACKED, {
         channel_id: t.channelId,
         guild_id: t.guildId,
         marked_all_channels_as_read: !1,
@@ -150,30 +150,30 @@ function D(e) {
   })
 }
 
-function y(e) {
+function b(e) {
   let {
     channel: t,
     toggle: n,
-    getNumUnreadChannels: a
+    getNumUnreadChannels: l
   } = e;
 
   function s() {
-    n(t), (0, f.trackWithMetadata)(C.AnalyticEvents.INBOX_CHANNEL_COLLAPSED, {
+    n(t), (0, f.trackWithMetadata)(A.AnalyticEvents.INBOX_CHANNEL_COLLAPSED, {
       channel_id: t.channelId,
       guild_id: t.guildId,
-      num_unread_channels_remaining: a(),
+      num_unread_channels_remaining: l(),
       is_now_collapsed: !t.collapsed
     })
   }
-  return (0, l.jsx)(u.Tooltip, {
-    text: R.default.Messages.COLLAPSE,
-    children: e => (0, l.jsx)(u.Clickable, {
+  return (0, a.jsx)(u.Tooltip, {
+    text: x.default.Messages.COLLAPSE,
+    children: e => (0, a.jsx)(u.Clickable, {
       ...e,
-      className: i(M.collapseButton, {
-        [M.collapsed]: t.collapsed
+      className: i(v.collapseButton, {
+        [v.collapsed]: t.collapsed
       }),
       onClick: s,
-      children: (0, l.jsx)(T.default, {
+      children: (0, a.jsx)(g.default, {
         width: 16,
         height: 16
       })

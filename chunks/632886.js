@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return k
+    return V
   }
 });
 var s = n("132710"),
@@ -227,7 +227,7 @@ let P = {
       return null == i ? O(null, s, null, T(n.channelId)) : b(i, null, T(n.channelId))
     }
   },
-  R = {
+  k = {
     order: i.defaultRules.url.order - .5,
     requiredFirstCharacters: ["h"],
     match(e) {
@@ -244,7 +244,7 @@ let P = {
       return null == o ? O(i, r, a, T(n.channelId), s) : b(o, a, T(n.channelId), s)
     }
   },
-  V = {
+  R = {
     order: i.defaultRules.url.order - .5,
     requiredFirstCharacters: ["h"],
     match: e => d.MEDIA_POST_URL_RE.exec(e),
@@ -261,8 +261,8 @@ let P = {
       return null != u ? b(u, o, T(n.channelId), s) : O(i, r, o, T(n.channelId), s)
     }
   };
-var k = {
+var V = {
   channelMention: P,
-  channelOrMessageUrl: R,
-  mediaPostLink: V
+  channelOrMessageUrl: k,
+  mediaPostLink: R
 }

@@ -1,40 +1,40 @@
 "use strict";
-s.r(t), s.d(t, {
+s.r(e), s.d(e, {
   default: function() {
-    return r
+    return o
   }
 }), s("222007");
 var i = s("37983"),
-  n = s("884691"),
+  l = s("884691"),
   a = s("516555"),
-  o = s("526887"),
-  u = s("172858"),
-  r = function(e) {
+  n = s("526887"),
+  r = s("172858"),
+  o = function(t) {
     let {
-      confettiTarget: t,
+      confettiTarget: e,
       colors: s,
-      emojiURL: r
-    } = e, [l, c] = n.useState(null), {
-      confettiCanvas: d
-    } = n.useContext(o.ConfettiCannonContext), p = (0, a.useConfettiCannon)(d, l), f = n.useMemo(() => [{
-      src: r,
+      emojiURL: o
+    } = t, [u, d] = l.useState(null), {
+      confettiCanvas: c
+    } = l.useContext(n.ConfettiCannonContext), f = (0, a.useConfettiCannon)(c, u), p = l.useMemo(() => [{
+      src: o,
       colorize: !1
-    }], [r]);
-    return n.useEffect(() => {
-      let e = [, , , , ].fill(0);
-      return null != t && (e = e.map((e, s) => setTimeout(() => {
-        var e;
-        p.createMultipleConfetti((e = t.getBoundingClientRect(), {
-          ...u.COMMON_CONFETTI_BASE_CONFIG,
+    }], [o]);
+    return l.useEffect(() => {
+      let t = [, , , , ].fill(0);
+      return null != e && (t = t.map((t, s) => setTimeout(() => {
+        var t;
+        f.createMultipleConfetti((t = e.getBoundingClientRect(), {
+          ...r.COMMON_CONFETTI_BASE_CONFIG,
           position: {
             type: "static-random",
             minValue: {
-              x: e.left + 100,
-              y: e.top + 75
+              x: t.left + 100,
+              y: t.top + 75
             },
             maxValue: {
-              x: e.left + 350,
-              y: e.top + 150
+              x: t.left + 350,
+              y: t.top + 150
             }
           },
           velocity: {
@@ -50,8 +50,8 @@ var i = s("37983"),
           },
           size: {
             type: "static-random",
-            minValue: u.COMMON_CONFETTI_MAX_SPRITE_SIZE,
-            maxValue: u.COMMON_CONFETTI_MAX_SPRITE_SIZE
+            minValue: r.COMMON_CONFETTI_MAX_SPRITE_SIZE,
+            maxValue: r.COMMON_CONFETTI_MAX_SPRITE_SIZE
           },
           dragCoefficient: {
             type: "static",
@@ -59,13 +59,13 @@ var i = s("37983"),
           }
         }), 50)
       }, 60 * s))), () => {
-        for (let t of e) clearTimeout(t)
+        for (let e of t) clearTimeout(e)
       }
-    }, [p, t]), (0, i.jsx)(a.SpriteCanvas, {
-      ref: c,
-      sprites: null != f ? f : u.COMMON_CONFETTI_SPRITES,
-      colors: null != s ? s : u.COMMON_CONFETTI_COLORS,
-      spriteWidth: u.COMMON_CONFETTI_MAX_SPRITE_SIZE,
-      spriteHeight: u.COMMON_CONFETTI_MAX_SPRITE_SIZE
+    }, [f, e]), (0, i.jsx)(a.SpriteCanvas, {
+      ref: d,
+      sprites: null != p ? p : r.COMMON_CONFETTI_SPRITES,
+      colors: null != s ? s : r.COMMON_CONFETTI_COLORS,
+      spriteWidth: r.COMMON_CONFETTI_MAX_SPRITE_SIZE,
+      spriteHeight: r.COMMON_CONFETTI_MAX_SPRITE_SIZE
     })
   }

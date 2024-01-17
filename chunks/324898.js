@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return v
   }
 });
 var s = n("37983"),
@@ -18,11 +18,11 @@ var s = n("37983"),
   C = n("865343"),
   p = n("148337"),
   m = n("701909"),
-  E = n("124297"),
-  g = n("497880"),
+  g = n("124297"),
+  E = n("497880"),
   S = n("587904"),
-  _ = n("49111"),
-  A = n("782340"),
+  A = n("49111"),
+  _ = n("782340"),
   T = n("676831"),
   M = n("632215"),
   I = n("741566");
@@ -57,7 +57,7 @@ let N = a.memo(function(e) {
       className: i(T.ephemeralAccessories, {
         [T.compact]: a
       }),
-      children: (0, s.jsx)(E.default, {
+      children: (0, s.jsx)(g.default, {
         message: t,
         onDeleteMessage: l,
         children: (0, s.jsx)(d.Text, {
@@ -65,15 +65,15 @@ let N = a.memo(function(e) {
           color: "interactive-normal",
           tag: "span",
           className: T.learnMore,
-          children: A.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_LEARN_MORE.format({
-            helpUrl: m.default.getArticleURL(_.HelpdeskArticles.GUILD_AUTOMOD_BLOCKED_MESSAGE)
+          children: _.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_LEARN_MORE.format({
+            helpUrl: m.default.getArticleURL(A.HelpdeskArticles.GUILD_AUTOMOD_BLOCKED_MESSAGE)
           })
         })
       })
     })]
   })
 });
-var L = a.memo(function(e) {
+var v = a.memo(function(e) {
   var t, n;
   let {
     className: l,
@@ -81,35 +81,35 @@ var L = a.memo(function(e) {
     message: d,
     children: p,
     content: m,
-    onUpdate: E
-  } = e, _ = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), L = a.useRef(!1), v = (0, u.useStateFromStores)([h.default], () => h.default.getMessage(d.id), [d.id]), R = a.useCallback(() => {
-    (null == v ? void 0 : v.isBlockedEdit) ? (0, f.removeAutomodMessageNotice)(d.id) : c.default.deleteMessage(d.channel_id, d.id, !0)
-  }, [d, v]);
+    onUpdate: g
+  } = e, A = null === (t = d.editedTimestamp) || void 0 === t ? void 0 : t.toString(), v = a.useRef(!1), L = (0, u.useStateFromStores)([h.default], () => h.default.getMessage(d.id), [d.id]), x = a.useCallback(() => {
+    (null == L ? void 0 : L.isBlockedEdit) ? (0, f.removeAutomodMessageNotice)(d.id) : c.default.deleteMessage(d.channel_id, d.id, !0)
+  }, [d, L]);
   return a.useLayoutEffect(() => {
-    L.current ? null != E && E() : L.current = !0
-  }, [E, d.content, m, _, p]), (0, s.jsxs)("div", {
+    v.current ? null != g && g() : v.current = !0
+  }, [g, d.content, m, A, p]), (0, s.jsxs)("div", {
     id: (0, C.getMessageContentId)(d),
     className: i(l, M.markup, {
       [I.messageContent]: !0,
       [I.markupRtl]: "rtl" === o(d.content),
-      [T.blockedEdit]: null == v ? void 0 : v.isBlockedEdit,
-      [T.blockedSend]: !(null == v ? void 0 : v.isBlockedEdit)
+      [T.blockedEdit]: null == L ? void 0 : L.isBlockedEdit,
+      [T.blockedSend]: !(null == L ? void 0 : L.isBlockedEdit)
     }),
-    children: [null != p ? p : (0, g.getContent)(d, m), (null == v ? void 0 : v.isBlockedEdit) && null != d.timestamp && (0, s.jsxs)(s.Fragment, {
+    children: [null != p ? p : (0, E.getContent)(d, m), (null == L ? void 0 : L.isBlockedEdit) && null != d.timestamp && (0, s.jsxs)(s.Fragment, {
       children: [" ", (0, s.jsx)(S.default, {
         timestamp: d.timestamp,
         isEdited: !0,
         isInline: !1,
         children: (0, s.jsxs)("span", {
           className: I.edited,
-          children: ["(", A.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_EDIT_POSTFIX, ")"]
+          children: ["(", _.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_EDIT_POSTFIX, ")"]
         })
       })]
     }), (0, s.jsx)(N, {
-      notice: null !== (n = null == v ? void 0 : v.errorMessage) && void 0 !== n ? n : A.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
+      notice: null !== (n = null == L ? void 0 : L.errorMessage) && void 0 !== n ? n : _.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
       message: d,
       compact: r,
-      onDismiss: R
+      onDismiss: x
     })]
   })
-}, g.memoizeMessageProps)
+}, E.memoizeMessageProps)

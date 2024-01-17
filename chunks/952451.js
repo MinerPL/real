@@ -69,7 +69,7 @@ function P(e) {
   return !(!e.isPrivate() && (b(e, t, (0, r.isOptInEnabledForGuild)(e.guild_id)) || !c.default.can(e.accessPermissions, e))) && (t > 0 || v.default.getChannelUnreadMode(e) === T.UnreadMode.IMPORTANT)
 }
 
-function R(e) {
+function k(e) {
   switch (e) {
     case C:
     case null:
@@ -80,13 +80,13 @@ function R(e) {
   }
 }
 
-function V(e, t) {
+function R(e, t) {
   let n = g.default.hasUnread(e, t);
   if (t === T.ReadStateTypes.GUILD_EVENT) return !(v.default.isMuted(e) || v.default.isMuteScheduledEventsEnabled(e)) && n;
   return n
 }
 
-function k(e, t) {
+function V(e, t) {
   let n = D(e);
   return n.mentionCounts = {
     ...t.mentionCounts
@@ -107,9 +107,9 @@ function L(e, t, n) {
 }
 
 function U(e, t) {
-  let n = R(e),
+  let n = k(e),
     s = N(n),
-    i = k(n, s),
+    i = V(n, s),
     r = !1;
   if (t.forEach(e => {
       let t = f.default.getChannel(e);
@@ -131,12 +131,12 @@ function U(e, t) {
 function G(e, t) {
   if (null == e) return;
   let n = N(e),
-    s = k(e, n);
-  return s.unreadByType[T.ReadStateTypes.GUILD_EVENT] = V(e, t), L(e, s, n)
+    s = V(e, n);
+  return s.unreadByType[T.ReadStateTypes.GUILD_EVENT] = R(e, t), L(e, s, n)
 }
 
 function F(e, t) {
-  let n = R(e),
+  let n = k(e),
     s = D(n);
   if (null == n) {
     let e = f.default.getMutablePrivateChannels();
@@ -177,7 +177,7 @@ function F(e, t) {
         !s.unreadByType[T.ReadStateTypes.CHANNEL] && g.default.hasUnread(n) && !o.default.isMuted(n) && !e && (s.unreadByType[T.ReadStateTypes.CHANNEL] = !0, s.unreadChannelId = n);
         let t = g.default.getMentionCount(n);
         t > 0 && (s.mentionCount += t, s.mentionCounts[n] = t)
-      }!s.unreadByType[T.ReadStateTypes.GUILD_EVENT] && V(n, T.ReadStateTypes.GUILD_EVENT) && (s.unreadByType[T.ReadStateTypes.GUILD_EVENT] = !0)
+      }!s.unreadByType[T.ReadStateTypes.GUILD_EVENT] && R(n, T.ReadStateTypes.GUILD_EVENT) && (s.unreadByType[T.ReadStateTypes.GUILD_EVENT] = !0)
   }
   M(s);
   let i = N(n);

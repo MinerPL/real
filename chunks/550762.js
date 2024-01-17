@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return a
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("77078");
+var l = n("77078");
 
-function l(e, t) {
-  (0, s.openModalLazy)(async () => {
+function a(e, t) {
+  (0, l.openModalLazy)(async () => {
     let {
-      default: s
+      default: l
     } = await n.el("557981").then(n.bind(n, "557981"));
-    return n => (0, a.jsx)(s, {
+    return n => (0, s.jsx)(l, {
       channelId: e,
       messageId: t,
       ...n

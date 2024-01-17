@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 }), n("222007");
 var a = n("37983"),
@@ -13,14 +13,14 @@ var a = n("37983"),
   u = n("476765"),
   d = n("49111"),
   c = n("782340"),
-  E = n("305502");
+  f = n("305502");
 
-function f(e) {
+function E(e) {
   let {
     transitionState: t
-  } = e, f = (0, i.default)([o.default], () => o.default.getAction()), [_, h] = s.useState(!1), C = (0, u.useUID)();
-  async function T() {
-    if (h(!0), f === d.UserRequiredActions.AGREEMENTS) {
+  } = e, E = (0, i.default)([o.default], () => o.default.getAction()), [_, h] = s.useState(!1), C = (0, u.useUID)();
+  async function I() {
+    if (h(!0), E === d.UserRequiredActions.AGREEMENTS) {
       let e = await (0, r.acceptAgreements)();
       h(e)
     }
@@ -40,11 +40,11 @@ function f(e) {
     }), (0, a.jsxs)(l.ModalContent, {
       children: [(0, a.jsx)(l.Text, {
         variant: "text-md/normal",
-        children: f === d.UserRequiredActions.AGREEMENTS ? c.default.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
+        children: E === d.UserRequiredActions.AGREEMENTS ? c.default.Messages.TERMS_OF_SERVICE_UPDATE_03_27_2023_DESCRIPTION.format() : null
       }), (0, a.jsxs)("div", {
-        className: E.container,
+        className: f.container,
         children: [(0, a.jsxs)("ul", {
-          className: E.links,
+          className: f.links,
           children: [(0, a.jsx)("li", {
             children: c.default.Messages.TERMS_OF_SERVICE.format({
               url: d.MarketingURLs.TERMS
@@ -63,7 +63,7 @@ function f(e) {
             })
           })]
         }), (0, a.jsx)("img", {
-          className: E.image,
+          className: f.image,
           alt: "",
           src: n("275974")
         })]
@@ -71,7 +71,7 @@ function f(e) {
     }), (0, a.jsx)(l.ModalFooter, {
       children: (0, a.jsx)(l.Button, {
         submitting: _,
-        onClick: T,
+        onClick: I,
         color: l.Button.Colors.GREEN,
         children: c.default.Messages.AGREE
       })

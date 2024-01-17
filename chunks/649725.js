@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 });
 var a = n("37983");
@@ -14,30 +14,30 @@ var s = n("316887"),
   u = n("228427"),
   d = n("855670"),
   c = n("11056"),
-  E = n("449008"),
-  f = n("447621"),
+  f = n("449008"),
+  E = n("447621"),
   _ = n("763065");
 let h = e => {
     switch (e) {
-      case f.CategoryIcons.Activity:
+      case E.CategoryIcons.Activity:
         return (0, a.jsx)(s.default, {});
-      case f.CategoryIcons.Discover:
+      case E.CategoryIcons.Discover:
         return (0, a.jsx)(i.default, {});
-      case f.CategoryIcons.Education:
+      case E.CategoryIcons.Education:
         return (0, a.jsx)(l.default, {});
-      case f.CategoryIcons.Music:
+      case E.CategoryIcons.Music:
         return (0, a.jsx)(r.default, {});
-      case f.CategoryIcons.Science:
+      case E.CategoryIcons.Science:
         return (0, a.jsx)(o.default, {});
-      case f.CategoryIcons.Stage:
+      case E.CategoryIcons.Stage:
         return (0, a.jsx)(u.default, {
           height: 22,
           width: 22
         });
-      case f.CategoryIcons.Television:
+      case E.CategoryIcons.Television:
         return (0, a.jsx)(d.default, {});
       default:
-        (0, E.assertNever)(e)
+        (0, f.assertNever)(e)
     }
   },
   C = e => {
@@ -67,5 +67,5 @@ let h = e => {
       }, e.categoryId))
     })
   };
-C.Icons = f.CategoryIcons;
-var T = C
+C.Icons = E.CategoryIcons;
+var I = C

@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var l = n("976789");
-let a = new l.default;
+var a = n("976789");
+let l = new a.default;
 
 function s() {
-  a.quitAndInstall()
+  l.quitAndInstall()
 }

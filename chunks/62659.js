@@ -11,19 +11,19 @@ var a, s, i = n("37983"),
   u = n("446674"),
   d = n("669491"),
   c = n("77078"),
-  E = n("832627"),
-  f = n("997289"),
+  f = n("832627"),
+  E = n("997289"),
   _ = n("376556"),
   h = n("706508"),
   C = n("287585"),
-  T = n("309570"),
-  I = n("985677"),
+  I = n("309570"),
+  T = n("985677"),
   S = n("429928"),
-  N = n("502651"),
-  A = n("29088"),
-  p = n("698372"),
-  m = n("141962"),
-  g = n("685665"),
+  m = n("502651"),
+  p = n("29088"),
+  A = n("698372"),
+  g = n("141962"),
+  N = n("685665"),
   R = n("299285"),
   O = n("679653"),
   L = n("223913"),
@@ -37,11 +37,11 @@ var a, s, i = n("37983"),
   U = n("280174"),
   G = n("163466"),
   j = n("316887"),
-  k = n("936629"),
-  w = n("420145"),
+  w = n("936629"),
+  k = n("420145"),
   F = n("368121"),
-  B = n("980423"),
-  H = n("550368"),
+  H = n("980423"),
+  B = n("550368"),
   V = n("449008"),
   Y = n("158998"),
   W = n("356070"),
@@ -69,7 +69,7 @@ let Q = {
       children: e
     })
   },
-  $ = (0, E.default)(e => {
+  $ = (0, f.default)(e => {
     let {
       message: t
     } = e;
@@ -95,7 +95,7 @@ class et extends l.Component {
     } = this.props, {
       timestamps: n
     } = t;
-    return null == n || !(0, I.default)(t) || (0, S.default)(t) ? null : J(e = (0, T.default)(t) ? (0, i.jsx)($, {
+    return null == n || !(0, T.default)(t) || (0, S.default)(t) ? null : J(e = (0, I.default)(t) ? (0, i.jsx)($, {
       timestamps: n
     }) : (0, i.jsx)(U.default, {
       start: n.start,
@@ -153,13 +153,13 @@ let en = e => {
   } = e;
   switch (n) {
     case "XBOX":
-      t = (0, i.jsx)(w.default, {
+      t = (0, i.jsx)(k.default, {
         className: q.headerIcon,
         color: d.default.unsafe_rawColors.PRIMARY_300.css
       });
       break;
     case "SPOTIFY":
-      t = (0, i.jsx)(k.default, {
+      t = (0, i.jsx)(w.default, {
         className: q.headerIcon,
         color: d.default.unsafe_rawColors.SPOTIFY.css
       });
@@ -265,13 +265,13 @@ es.Header = ea, es.Body = e => {
     onGuildClick: r,
     partySize: u,
     members: d,
-    onChannelContextMenu: E
-  } = e, f = l.useRef(null), _ = (0, O.default)(s, !0);
+    onChannelContextMenu: f
+  } = e, E = l.useRef(null), _ = (0, O.default)(s, !0);
   return (0, i.jsx)(ee, {
     children: (0, i.jsxs)("div", {
       className: q.voiceSection,
-      ref: f,
-      onContextMenu: e => E(e, s),
+      ref: E,
+      onContextMenu: e => f(e, s),
       children: [(0, i.jsx)(c.Clickable, {
         onClick: r,
         "aria-hidden": !0,
@@ -301,7 +301,7 @@ es.Header = ea, es.Body = e => {
       }), (0, i.jsx)(c.Clickable, {
         onClick: r,
         focusProps: {
-          ringTarget: f
+          ringTarget: E
         },
         children: (0, i.jsxs)("div", {
           className: q.voiceSectionDetails,
@@ -345,7 +345,7 @@ es.Header = ea, es.Body = e => {
   return (0, i.jsx)(ee, {
     children: (0, i.jsxs)("div", {
       className: q.xboxSection,
-      children: [(0, i.jsx)(w.default, {
+      children: [(0, i.jsx)(k.default, {
         className: q.xboxSectionIcon
       }), (0, i.jsxs)("div", {
         className: q.xboxSectionDetails,
@@ -365,7 +365,7 @@ es.Header = ea, es.Body = e => {
     partySize: r,
     members: u,
     isSolo: c,
-    getAssetImage: E
+    getAssetImage: f
   } = e;
   return (0, i.jsx)(ee, {
     children: (0, i.jsxs)("div", {
@@ -374,11 +374,11 @@ es.Header = ea, es.Body = e => {
         className: q.activitySectionAssets,
         children: [(0, i.jsx)("img", {
           alt: null !== (t = n.large_text) && void 0 !== t ? t : "",
-          src: E(l, n.large_image, [Q.LARGE, Q.LARGE]),
+          src: f(l, n.large_image, [Q.LARGE, Q.LARGE]),
           className: o(q.largeImage, q.borderRadius0, {
             [q.largeImageMask]: null != n.small_image
           })
-        }), c ? null : (0, i.jsx)(k.default, {
+        }), c ? null : (0, i.jsx)(w.default, {
           className: q.smallImage,
           color: d.default.unsafe_rawColors.SPOTIFY.css
         })]
@@ -401,10 +401,10 @@ es.Header = ea, es.Body = e => {
     {
       name: u,
       details: d,
-      assets: E,
-      application_id: f
+      assets: f,
+      application_id: E
     } = a;
-  if (null != E && (0, N.default)(a)) {
+  if (null != f && (0, m.default)(a)) {
     var h;
     t = (0, i.jsx)(x.default, {
       className: q.twitchSectionPreviewWrapper,
@@ -414,8 +414,8 @@ es.Header = ea, es.Body = e => {
         tag: "a",
         target: "_blank",
         children: [(0, i.jsx)("img", {
-          alt: null !== (h = E.large_text) && void 0 !== h ? h : "",
-          src: l(f, E.large_image, [900, 500]),
+          alt: null !== (h = f.large_text) && void 0 !== h ? h : "",
+          src: l(E, f.large_image, [900, 500]),
           className: q.twitchSectionPreview
         }), (0, i.jsx)("img", {
           src: n("306910"),
@@ -453,11 +453,11 @@ es.Header = ea, es.Body = e => {
     applicationStream: l,
     onPreviewClick: r,
     guildId: o
-  } = e, d = (0, u.useStateFromStores)([D.default], () => D.default.getChannel(l.channelId)), [E, f] = (0, L.useCanWatchStream)(d), _ = (0, i.jsx)(x.default, {
+  } = e, d = (0, u.useStateFromStores)([D.default], () => D.default.getChannel(l.channelId)), [f, E] = (0, L.useCanWatchStream)(d), _ = (0, i.jsx)(x.default, {
     className: q.applicationStreamingPreviewWrapper,
     aspectRatio: 16 / 9,
     children: (0, i.jsxs)(c.Clickable, {
-      onClick: E ? r : void 0,
+      onClick: f ? r : void 0,
       className: q.applicationStreamingPreviewSize,
       children: [(0, i.jsx)(v.default, {
         stream: l,
@@ -466,11 +466,11 @@ es.Header = ea, es.Body = e => {
         className: q.applicationStreamingHoverWrapper,
         children: (0, i.jsx)("div", {
           className: q.applicationStreamingHoverText,
-          children: (0, L.getStreamCTAString)(f)
+          children: (0, L.getStreamCTAString)(E)
         })
       })]
     })
-  }), h = null !== (n = null === (t = (0, A.default)(a, l)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
+  }), h = null !== (n = null === (t = (0, p.default)(a, l)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
   return (0, i.jsxs)(ee, {
     children: [(0, i.jsxs)("div", {
       className: q.applicationStreamingSection,
@@ -481,8 +481,8 @@ es.Header = ea, es.Body = e => {
         className: q.applicationStreamingAvatar
       }), (0, i.jsxs)("div", {
         children: [X(Y.default.getName(s)), J(h)]
-      }), (0, i.jsx)(B.default, {
-        size: B.default.Sizes.SMALL
+      }), (0, i.jsx)(H.default, {
+        size: H.default.Sizes.SMALL
       })]
     }), _]
   })
@@ -492,37 +492,37 @@ es.Header = ea, es.Body = e => {
     channel: n,
     guildId: a,
     participants: s
-  } = e, r = (0, p.default)(), [o, d] = l.useState(null), E = t.application_id;
+  } = e, r = (0, A.default)(), [o, d] = l.useState(null), f = t.application_id;
   l.useEffect(() => {
-    null != E && (0, H.fetchAssetIds)(E, ["embedded_background"]).then(e => {
+    null != f && (0, B.fetchAssetIds)(f, ["embedded_background"]).then(e => {
       let [t] = e;
       return d(t)
     })
-  }, [E]);
+  }, [f]);
   let _ = (0, u.useStateFromStoresArray)([y.default, P.default], () => Array.from(s).map(e => P.default.getId() === e ? null : y.default.getUser(e)).filter(V.isNotNullish)),
-    C = (0, f.useAnalyticsContext)(),
+    C = (0, E.useAnalyticsContext)(),
     {
-      analyticsLocations: T
-    } = (0, g.default)();
-  if (null == E) return null;
-  let I = R.default.getApplication(E);
-  if (null == I) return null;
+      analyticsLocations: I
+    } = (0, N.default)();
+  if (null == f) return null;
+  let T = R.default.getApplication(f);
+  if (null == T) return null;
   let S = null != t.created_at && t.created_at > 0 ? {
       start: t.created_at
     } : void 0,
-    N = (0, H.getAssetImage)(I.id, o, 300);
+    m = (0, B.getAssetImage)(T.id, o, 300);
   return (0, i.jsxs)(ee, {
     children: [(0, i.jsxs)("div", {
       className: q.embeddedActivityTopRow,
       children: [(0, i.jsx)(b.default, {
-        game: I,
+        game: T,
         size: b.default.Sizes.XSMALL,
         className: q.embeddedActivityIcon
       }), (0, i.jsx)("div", {
         className: q.embeddedActivityName,
         children: (0, i.jsx)(c.Text, {
           variant: "text-sm/semibold",
-          children: I.name
+          children: T.name
         })
       }), null != S ? (0, i.jsx)("div", {
         className: q.embeddedActivityTimeElapsed,
@@ -538,9 +538,9 @@ es.Header = ea, es.Body = e => {
       aspectRatio: 16 / 9,
       children: (0, i.jsxs)("div", {
         className: q.embeddedActivityPlayerContainer,
-        children: [null != N ? (0, i.jsx)("img", {
-          src: N,
-          alt: I.name,
+        children: [null != m ? (0, i.jsx)("img", {
+          src: m,
+          alt: T.name,
           className: q.embeddedActivityImage
         }) : null, (0, i.jsxs)("div", {
           className: q.embeddedActivityImageOverlay,
@@ -554,12 +554,12 @@ es.Header = ea, es.Body = e => {
               size: c.Button.Sizes.SMALL,
               onClick: e => {
                 e.stopPropagation(), (0, h.default)({
-                  applicationId: E,
+                  applicationId: f,
                   currentEmbeddedApplication: r,
                   activityChannelId: n.id,
                   locationObject: C.location,
-                  embeddedActivitiesManager: m.default,
-                  analyticsLocations: T
+                  embeddedActivitiesManager: g.default,
+                  analyticsLocations: I
                 })
               },
               children: z.default.Messages.JOIN

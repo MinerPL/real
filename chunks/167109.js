@@ -1,31 +1,31 @@
 "use strict";
 n.r(t), n.d(t, {
   useName: function() {
-    return x
-  },
-  usePriceTier: function() {
     return j
   },
+  usePriceTier: function() {
+    return R
+  },
   useDescription: function() {
-    return y
+    return k
   },
   useImage: function() {
     return O
   },
   useRoleIcon: function() {
-    return k
+    return y
   },
   useRole: function() {
-    return F
-  },
-  useRoleColor: function() {
     return D
   },
+  useRoleColor: function() {
+    return B
+  },
   useChannelAccessFormat: function() {
-    return b
+    return F
   },
   useChannelBenefits: function() {
-    return U
+    return b
   },
   useIntangibleBenefits: function() {
     return w
@@ -62,29 +62,29 @@ var l = n("884691"),
   i = n("627445"),
   r = n.n(i),
   s = n("917351"),
-  a = n("748820"),
-  o = n("509043"),
+  o = n("748820"),
+  a = n("509043"),
   u = n("446674"),
-  d = n("150021"),
-  c = n("851387"),
+  c = n("150021"),
+  d = n("851387"),
   f = n("385976"),
   E = n("271560"),
   _ = n("577357"),
-  p = n("371358"),
-  h = n("837008"),
+  h = n("371358"),
+  p = n("837008"),
   S = n("648825"),
-  T = n("866595"),
-  m = n("432153"),
-  C = n("549590"),
-  M = n("59767"),
-  g = n("679027"),
-  v = n("971150"),
+  M = n("866595"),
+  T = n("432153"),
+  m = n("549590"),
+  C = n("59767"),
+  v = n("679027"),
+  L = n("971150"),
   I = n("677795"),
   A = n("49111"),
-  L = n("646718");
+  g = n("646718");
 
 function N(e, t, n) {
-  let i = (0, v.useEditStateStore)(e => e.setListing),
+  let i = (0, L.useEditStateStore)(e => e.setListing),
     r = l.useCallback(l => {
       i(e, e => {
         var i;
@@ -95,37 +95,37 @@ function N(e, t, n) {
         })
       })
     }, [i, e, t, n]),
-    s = (0, v.useEditStateStore)(n => {
+    s = (0, L.useEditStateStore)(n => {
       var l;
       return null === (l = n.listings[e]) || void 0 === l ? void 0 : l[t]
     }),
-    a = void 0 !== s ? s : n;
-  return [a, r]
+    o = void 0 !== s ? s : n;
+  return [o, r]
 }
 
-function R(e, t) {
+function x(e, t) {
   let n = (0, u.useStateFromStores)([S.default], () => S.default.getSubscriptionListing(e));
   return l.useMemo(() => t(n), [n])
 }
 
-function x(e) {
-  let t = R(e, e => {
+function j(e) {
+  let t = x(e, e => {
     var t;
     return null !== (t = null == e ? void 0 : e.name) && void 0 !== t ? t : ""
   });
   return N(e, "name", t)
 }
 
-function j(e) {
-  let t = R(e, e => {
+function R(e) {
+  let t = x(e, e => {
     var t;
     return null == e ? void 0 : null === (t = e.subscription_plans[0]) || void 0 === t ? void 0 : t.price
   });
   return N(e, "priceTier", t)
 }
 
-function y(e) {
-  let t = R(e, e => {
+function k(e) {
+  let t = x(e, e => {
     var t;
     return null !== (t = null == e ? void 0 : e.description) && void 0 !== t ? t : ""
   });
@@ -133,14 +133,14 @@ function y(e) {
 }
 
 function O(e, t) {
-  let n = R(e, e => {
+  let n = x(e, e => {
     if ((null == e ? void 0 : e.image_asset) != null) return (0, E.getAssetURL)(e.application_id, e.image_asset, t)
   });
   return N(e, "image", n)
 }
 
-function k(e, t) {
-  let n = (0, C.default)(t, e),
+function y(e, t) {
+  let n = (0, m.default)(t, e),
     i = l.useMemo(() => {
       var e, t;
       return {
@@ -151,30 +151,30 @@ function k(e, t) {
   return N(e, "roleIcon", i)
 }
 
-function F(e, t) {
-  let n = (0, C.default)(t, e),
-    i = (0, v.useEditStateStore)(t => {
+function D(e, t) {
+  let n = (0, m.default)(t, e),
+    i = (0, L.useEditStateStore)(t => {
       var n;
       return null === (n = t.listings[e]) || void 0 === n ? void 0 : n.roleColor
     }),
-    r = (0, v.useEditStateStore)(t => {
+    r = (0, L.useEditStateStore)(t => {
       var n;
       return null === (n = t.listings[e]) || void 0 === n ? void 0 : n.roleIcon
     });
   return l.useMemo(() => {
     let e = {
-      ...null != n ? n : g.DEFAULT_PREVIEW_ROLE
+      ...null != n ? n : v.DEFAULT_PREVIEW_ROLE
     };
     if (void 0 !== r) {
       var t, l;
       e.icon = null !== (t = r.icon) && void 0 !== t ? t : "", e.unicodeEmoji = null !== (l = r.unicodeEmoji) && void 0 !== l ? l : ""
     }
-    return void 0 !== i && (e.color = i, e.colorString = (0, o.int2hex)(i)), e
+    return void 0 !== i && (e.color = i, e.colorString = (0, a.int2hex)(i)), e
   }, [n, r, i])
 }
 
-function D(e, t) {
-  let n = (0, C.default)(t, e),
+function B(e, t) {
+  let n = (0, m.default)(t, e),
     i = l.useMemo(() => {
       var e;
       return null !== (e = null == n ? void 0 : n.color) && void 0 !== e ? e : A.DEFAULT_ROLE_COLOR
@@ -182,27 +182,27 @@ function D(e, t) {
   return N(e, "roleColor", i)
 }
 
-function b(e, t) {
-  let n = (0, C.default)(t, e),
-    i = l.useMemo(() => null == n ? v.AllChannelAccessOptions.SOME_CHANNELS_ACCESS : (0, T.isAllChannelsRole)(n) ? v.AllChannelAccessOptions.ALL_CHANNELS_ACCESS : v.AllChannelAccessOptions.SOME_CHANNELS_ACCESS, [n]);
+function F(e, t) {
+  let n = (0, m.default)(t, e),
+    i = l.useMemo(() => null == n ? L.AllChannelAccessOptions.SOME_CHANNELS_ACCESS : (0, M.isAllChannelsRole)(n) ? L.AllChannelAccessOptions.ALL_CHANNELS_ACCESS : L.AllChannelAccessOptions.SOME_CHANNELS_ACCESS, [n]);
   return N(e, "channelAccessFormat", i)
 }
-let B = [];
+let U = [];
 
-function U(e) {
-  let t = R(e, e => null == e ? B : e.role_benefits.benefits.filter(_.isChannelBenefit));
+function b(e) {
+  let t = x(e, e => null == e ? U : e.role_benefits.benefits.filter(_.isChannelBenefit));
   return N(e, "channelBenefits", t)
 }
-let G = [];
+let H = [];
 
 function w(e) {
-  let t = R(e, e => null == e ? G : e.role_benefits.benefits.filter(_.isIntangibleBenefit));
+  let t = x(e, e => null == e ? H : e.role_benefits.benefits.filter(_.isIntangibleBenefit));
   return N(e, "intangibleBenefits", t)
 }
-let H = new Set;
+let G = new Set;
 
 function P(e, t) {
-  if (0 === e.length) return H;
+  if (0 === e.length) return G;
   let n = e.filter(e => e.roles.includes(t));
   return new Set(n.map(e => {
     let {
@@ -213,33 +213,33 @@ function P(e, t) {
 }
 
 function Y(e, t) {
-  let n = (0, C.default)(t, e),
+  let n = (0, m.default)(t, e),
     i = (0, u.useStateFromStoresArray)([f.default], () => f.default.getGuildEmoji(t), [t]),
-    r = l.useMemo(() => null == n ? H : P(i, n.id), [i, n]);
+    r = l.useMemo(() => null == n ? G : P(i, n.id), [i, n]);
   return N(e, "tierEmojiIds", r)
 }
 
 function W(e) {
   var t;
-  let n = (0, h.useSubscriptionTrial)(e),
+  let n = (0, p.useSubscriptionTrial)(e),
     {
       selectedOption: l
-    } = (0, M.default)(null !== (t = null == n ? void 0 : n.active_trial) && void 0 !== t ? t : null);
+    } = (0, C.default)(null !== (t = null == n ? void 0 : n.active_trial) && void 0 !== t ? t : null);
   return N(e, "trialInterval", null != l ? l : null)
 }
 
 function V(e) {
   var t;
-  let n = (0, h.useSubscriptionTrial)(e);
+  let n = (0, p.useSubscriptionTrial)(e);
   return N(e, "trialLimit", null !== (t = null == n ? void 0 : n.max_num_active_trial_users) && void 0 !== t ? t : null)
 }
 
 function z(e) {
-  return (0, v.useEditStateStore)(t => void 0 !== t.listings[e])
+  return (0, L.useEditStateStore)(t => void 0 !== t.listings[e])
 }
 
 function J(e) {
-  return (0, v.useEditStateStore)(t => {
+  return (0, L.useEditStateStore)(t => {
     for (let n of e)
       if (void 0 !== t.listings[n]) return !0;
     return !1
@@ -247,14 +247,14 @@ function J(e) {
 }
 
 function Z(e) {
-  let t = R(e, e => null == e ? void 0 : e.subscription_plans[0]),
+  let t = x(e, e => null == e ? void 0 : e.subscription_plans[0]),
     [n] = N(e, "priceTier", void 0),
     i = l.useMemo(() => {
       var e, l, i, r, s;
       return {
         price: null !== (e = null != n ? n : null == t ? void 0 : t.price) && void 0 !== e ? e : 0,
         currency: null !== (l = null == t ? void 0 : t.currency) && void 0 !== l ? l : A.CurrencyCodes.USD,
-        interval: null !== (i = null == t ? void 0 : t.interval) && void 0 !== i ? i : L.SubscriptionIntervalTypes.MONTH,
+        interval: null !== (i = null == t ? void 0 : t.interval) && void 0 !== i ? i : g.SubscriptionIntervalTypes.MONTH,
         interval_count: null !== (r = null == t ? void 0 : t.interval_count) && void 0 !== r ? r : 1,
         id: null !== (s = null == t ? void 0 : t.id) && void 0 !== s ? s : ""
       }
@@ -264,7 +264,7 @@ function Z(e) {
 
 function K(e) {
   var t;
-  t = e, v.useEditStateStore.setState(e => ({
+  t = e, L.useEditStateStore.setState(e => ({
     listings: {
       ...e.listings,
       [t]: e.listings.nonexistantEditStateId
@@ -278,47 +278,47 @@ async function q(e) {
   } = e, l = S.default.getSubscriptionListing(n);
   r(null != l, "listing doesnt exist");
   let i = l.role_id,
-    a = l.id,
-    o = v.useEditStateStore.getState().listings[n];
-  r(null != o, "edit state does not exist");
+    o = l.id,
+    a = L.useEditStateStore.getState().listings[n];
+  r(null != a, "edit state does not exist");
   let {
     roleColor: u,
     roleIcon: E,
     trialLimit: _,
-    trialInterval: h,
-    tierEmojiIds: T
-  } = o;
-  (void 0 !== u || void 0 !== E) && await c.default.updateRole(t, i, {
+    trialInterval: p,
+    tierEmojiIds: M
+  } = a;
+  (void 0 !== u || void 0 !== E) && await d.default.updateRole(t, i, {
     color: u,
     icon: null == E ? void 0 : E.icon,
     unicodeEmoji: null == E ? void 0 : E.unicodeEmoji
   });
-  let m = S.default.getSubscriptionTrial(a);
-  if ((null != _ || null != h || null != m && null == h) && await p.updateSubscriptionTrial(t, a, {
-      trial: h,
+  let T = S.default.getSubscriptionTrial(o);
+  if ((null != _ || null != p || null != T && null == p) && await h.updateSubscriptionTrial(t, o, {
+      trial: p,
       max_num_active_trial_users: _
-    }), void 0 !== T) {
+    }), void 0 !== M) {
     let e = f.default.getGuildEmoji(t),
       n = P(e, i),
-      l = (0, s.difference)([...T], [...n]),
-      r = (0, s.difference)([...n], [...T]),
-      a = l.map(e => f.default.getCustomEmojiById(e)).map(e => {
-        if (null != e) return (0, d.updateEmoji)({
+      l = (0, s.difference)([...M], [...n]),
+      r = (0, s.difference)([...n], [...M]),
+      o = l.map(e => f.default.getCustomEmojiById(e)).map(e => {
+        if (null != e) return (0, c.updateEmoji)({
           guildId: t,
           emojiId: e.id,
           roles: [...e.roles, i]
         })
       }),
-      o = r.map(e => f.default.getCustomEmojiById(e)).map(e => {
+      a = r.map(e => f.default.getCustomEmojiById(e)).map(e => {
         if (null == e) return;
         let n = e.roles.filter(e => e !== i);
-        return n.length > 0 ? (0, d.updateEmoji)({
+        return n.length > 0 ? (0, c.updateEmoji)({
           guildId: t,
           emojiId: e.id,
           roles: n
-        }) : (0, d.deleteEmoji)(t, e.id)
+        }) : (0, c.deleteEmoji)(t, e.id)
       });
-    await Promise.all([...a, ...o])
+    await Promise.all([...o, ...a])
   }
 }
 async function X(e) {
@@ -327,54 +327,54 @@ async function X(e) {
     editStateId: n,
     groupListingId: l,
     onBeforeDispatchNewListing: i
-  } = e, s = v.useEditStateStore.getState().listings[n];
+  } = e, s = L.useEditStateStore.getState().listings[n];
   r(null != s, "edit state does not exist");
   let {
-    name: a,
-    description: o,
+    name: o,
+    description: a,
     channelBenefits: u,
-    intangibleBenefits: d,
-    priceTier: c,
+    intangibleBenefits: c,
+    priceTier: d,
     image: f,
     channelAccessFormat: E
   } = s;
-  r(null != a, "no name provided"), r(null != o, "no description provided"), r(null != c, "no priceTier provided"), r(null != f, "no image provided");
-  let _ = E === v.AllChannelAccessOptions.ALL_CHANNELS_ACCESS,
-    h = l;
-  if (null == h) {
-    let e = await p.createSubscriptionGroupListing(t, {});
-    h = e.id
+  r(null != o, "no name provided"), r(null != a, "no description provided"), r(null != d, "no priceTier provided"), r(null != f, "no image provided");
+  let _ = E === L.AllChannelAccessOptions.ALL_CHANNELS_ACCESS,
+    p = l;
+  if (null == p) {
+    let e = await h.createSubscriptionGroupListing(t, {});
+    p = e.id
   }
-  null != u && u.length > 0 && await (0, m.createChannelsFromTemplateTierBenefits)(t, u);
-  let S = [...null != u ? u : [], ...null != d ? d : []],
-    T = (0, m.getTemplateTierCreationAnalyticsContext)(n, t);
-  return p.createSubscriptionListing({
+  null != u && u.length > 0 && await (0, T.createChannelsFromTemplateTierBenefits)(t, u);
+  let S = [...null != u ? u : [], ...null != c ? c : []],
+    M = (0, T.getTemplateTierCreationAnalyticsContext)(n, t);
+  return h.createSubscriptionListing({
     guildId: t,
-    groupListingId: h,
+    groupListingId: p,
     data: {
       can_access_all_channels: _,
       image: f,
-      name: a,
-      description: o,
+      name: o,
+      description: a,
       benefits: S,
-      priceTier: c
+      priceTier: d
     },
-    analyticsContext: T,
+    analyticsContext: M,
     onBeforeDispatchNewListing: i
   })
 }
 
 function Q() {
-  let [e, t] = l.useState(!1), [n, i] = l.useState(), a = l.useCallback(async e => {
+  let [e, t] = l.useState(!1), [n, i] = l.useState(), o = l.useCallback(async e => {
     let {
       guildId: n,
       editStateId: l,
-      groupListingId: a,
-      onBeforeDispatchNewListing: o,
+      groupListingId: o,
+      onBeforeDispatchNewListing: a,
       onAfterDispatchNewListing: u
-    } = e, d = l, c = S.default.getSubscriptionListing(d);
+    } = e, c = l, d = S.default.getSubscriptionListing(c);
     try {
-      if (t(!0), i(void 0), null != c) r(null != a, "groupListingId is null"), await
+      if (t(!0), i(void 0), null != d) r(null != o, "groupListingId is null"), await
 
       function(e) {
         var t;
@@ -382,45 +382,45 @@ function Q() {
           guildId: n,
           editStateId: l,
           groupListingId: i
-        } = e, a = S.default.getSubscriptionListing(l);
-        r(null != a, "listing doesnt exist");
-        let o = v.useEditStateStore.getState().listings[l];
-        r(null != o, "edit state does not exist");
+        } = e, o = S.default.getSubscriptionListing(l);
+        r(null != o, "listing doesnt exist");
+        let a = L.useEditStateStore.getState().listings[l];
+        r(null != a, "edit state does not exist");
         let {
           name: u,
-          description: d,
-          channelBenefits: c,
+          description: c,
+          channelBenefits: d,
           intangibleBenefits: f,
           priceTier: E,
-          image: h,
-          channelAccessFormat: T
-        } = o, m = {};
-        if (u !== a.name && (m.name = u), d !== a.description && (m.description = d), E !== (null === (t = a.subscription_plans[0]) || void 0 === t ? void 0 : t.price) && (m.priceTier = E), null != h && (m.image = h), null != T && (m.can_access_all_channels = T === v.AllChannelAccessOptions.ALL_CHANNELS_ACCESS), null != c || null != f) {
-          let e = a.role_benefits.benefits.filter(_.isChannelBenefit),
-            t = a.role_benefits.benefits.filter(_.isIntangibleBenefit),
-            n = [...null != c ? c : e, ...null != f ? f : t];
-          m.benefits = n
+          image: p,
+          channelAccessFormat: M
+        } = a, T = {};
+        if (u !== o.name && (T.name = u), c !== o.description && (T.description = c), E !== (null === (t = o.subscription_plans[0]) || void 0 === t ? void 0 : t.price) && (T.priceTier = E), null != p && (T.image = p), null != M && (T.can_access_all_channels = M === L.AllChannelAccessOptions.ALL_CHANNELS_ACCESS), null != d || null != f) {
+          let e = o.role_benefits.benefits.filter(_.isChannelBenefit),
+            t = o.role_benefits.benefits.filter(_.isIntangibleBenefit),
+            n = [...null != d ? d : e, ...null != f ? f : t];
+          T.benefits = n
         }
-        return (0, s.isEmpty)(m) ? a : p.updateSubscriptionListing({
+        return (0, s.isEmpty)(T) ? o : h.updateSubscriptionListing({
           guildId: n,
           groupListingId: i,
           listingId: l,
-          data: m
+          data: T
         })
       }({
         guildId: n,
-        editStateId: d,
-        groupListingId: a
+        editStateId: c,
+        groupListingId: o
       });
       else {
         var f, E;
         let e = await X({
           guildId: n,
-          editStateId: d,
-          groupListingId: a,
-          onBeforeDispatchNewListing: o
+          editStateId: c,
+          groupListingId: o,
+          onBeforeDispatchNewListing: a
         });
-        d = e.id, f = l, E = d, v.useEditStateStore.setState(e => ({
+        c = e.id, f = l, E = c, L.useEditStateStore.setState(e => ({
           listings: {
             ...e.listings,
             [E]: e.listings[f],
@@ -430,8 +430,8 @@ function Q() {
       }
       return await q({
         guildId: n,
-        editStateId: d
-      }), K(d), !0
+        editStateId: c
+      }), K(c), !0
     } catch (e) {
       if (!("getAnyErrorMessage" in e)) throw e;
       i(e)
@@ -442,7 +442,7 @@ function Q() {
   return {
     loading: e,
     error: n,
-    handleCreateOrUpdateFromEditState: a
+    handleCreateOrUpdateFromEditState: o
   }
 }
 
@@ -450,24 +450,24 @@ function $(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
       includeSoftDeleted: !1
     },
-    i = (0, h.useSubscriptionListingsForGroup)(e, n),
-    r = (0, v.useEditStateStore)(e => e.editStateIdsForGroup[t]),
-    s = (0, v.useEditStateStore)(e => e.setEditStateIdsForGroup),
-    o = (0, v.useEditStateStore)(e => e.setListing),
+    i = (0, p.useSubscriptionListingsForGroup)(e, n),
+    r = (0, L.useEditStateStore)(e => e.editStateIdsForGroup[t]),
+    s = (0, L.useEditStateStore)(e => e.setEditStateIdsForGroup),
+    a = (0, L.useEditStateStore)(e => e.setListing),
     u = l.useMemo(() => [...i.map(e => {
       let {
         id: t
       } = e;
       return t
     }), ...null != r ? r : []], [r, i]),
-    d = l.useCallback(() => {
-      let e = (0, a.v4)();
+    c = l.useCallback(() => {
+      let e = (0, o.v4)();
       s(t, t => [...null != t ? t : [], e])
     }, [t, s]),
-    c = l.useCallback(e => {
-      let n = (0, a.v4)();
+    d = l.useCallback(e => {
+      let n = (0, o.v4)();
       return s(t, e => [...null != e ? e : [], n]), e.listings.forEach(t => {
-        o(n, () => ({
+        a(n, () => ({
           name: t.name,
           description: t.description,
           priceTier: t.price_tier,
@@ -488,14 +488,14 @@ function $(e, t) {
           usedTemplate: e.category
         }))
       }), n
-    }, [t, s, o]),
+    }, [t, s, a]),
     f = l.useCallback(e => {
       s(t, t => (null != t ? t : []).filter(t => t !== e))
     }, [t, s]);
   return {
     editStateIds: u,
-    addNewEditStateId: d,
-    addNewEditStateFromTemplate: c,
+    addNewEditStateId: c,
+    addNewEditStateFromTemplate: d,
     removeEditStateId: f
   }
 }

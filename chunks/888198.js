@@ -32,9 +32,9 @@ var s = n("917351"),
 let O = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
   b = /^$|\n *$/,
   P = /^ *>>> ?/,
-  R = /^ *> ?/gm;
+  k = /^ *> ?/gm;
 
-function V(e) {
+function R(e) {
   let t = (0, E.punycodeLink)(e[1]);
   if (null == t) return {
     type: "text",
@@ -54,11 +54,11 @@ function V(e) {
     title: void 0
   }
 }
-let k = e => {
+let V = e => {
     let t = l.default.getChannel(e);
     return null == t ? void 0 : t.getGuildId()
   },
-  M = e => null != e.guildId ? f.default.getGuild(e.guildId) : null != e.channelId ? f.default.getGuild(k(e.channelId)) : null,
+  M = e => null != e.guildId ? f.default.getGuild(e.guildId) : null != e.channelId ? f.default.getGuild(V(e.channelId)) : null,
   w = {
     newline: a.defaultRules.newline,
     paragraph: a.defaultRules.paragraph,
@@ -83,7 +83,7 @@ let k = e => {
       parse(e, t, n) {
         let s = e[0],
           i = !!P.exec(s),
-          r = s.replace(i ? P : R, ""),
+          r = s.replace(i ? P : k, ""),
           a = n.inQuote || !1,
           o = n.inline || !1;
         n.inQuote = !0, !i && (n.inline = !0);
@@ -100,7 +100,7 @@ let k = e => {
     link: E.default,
     autolink: {
       ...a.defaultRules.autolink,
-      parse: V
+      parse: R
     },
     url: {
       ...a.defaultRules.url,
@@ -123,7 +123,7 @@ let k = e => {
         }
         return n
       },
-      parse: V
+      parse: R
     },
     strong: a.defaultRules.strong,
     em: a.defaultRules.em,
@@ -342,7 +342,7 @@ let k = e => {
             content: s[e[1]]
           }],
           channelId: e[1],
-          guildId: k(n.channelId),
+          guildId: V(n.channelId),
           id: e[1]
         }
       }

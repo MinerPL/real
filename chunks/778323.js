@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   dismiss: function() {
-    return s
+    return l
   }
 });
-var a = n("913144");
+var s = n("913144");
 
-function s(e) {
-  a.default.dispatch({
+function l(e) {
+  s.default.dispatch({
     type: "DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS",
     skuId: e
   })

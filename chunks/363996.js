@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   ESLatamLaunchExperiment: function() {
-    return a
+    return l
   }
 });
-var l = n("862205");
-let a = (0, l.createExperiment)({
+var s = n("862205");
+let l = (0, s.createExperiment)({
   kind: "user",
   id: "2023-12_eslatam_launch",
   label: "ES LATAM Launch",

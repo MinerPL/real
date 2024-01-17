@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   StrangerDangerWarningBanner: function() {
-    return E
+    return g
   }
 });
 var s = n("37983"),
@@ -19,43 +19,43 @@ var s = n("37983"),
   p = n("921548"),
   m = n("145680");
 
-function E(e) {
+function g(e) {
   let {
     channelId: t,
-    warningId: E,
-    senderId: g
+    warningId: g,
+    senderId: E
   } = e, S = a.useCallback(() => {
-    (0, d.dismissChannelSafetyWarnings)(t, [E])
-  }, [t, E]), _ = a.useCallback(() => {
+    (0, d.dismissChannelSafetyWarnings)(t, [g])
+  }, [t, g]), A = a.useCallback(() => {
     S(), (0, c.trackCtaEvent)({
       channelId: t,
-      warningId: E,
-      senderId: g,
+      warningId: g,
+      senderId: E,
       cta: c.CtaEventTypes.DISMISS
     })
-  }, [S, t, E, g]), A = a.useCallback(e => () => {
+  }, [S, t, g, E]), _ = a.useCallback(e => () => {
     r.default.addRelationship({
-      userId: g,
+      userId: E,
       context: {
         location: f.LOCATION_CONTEXT_WEB
       },
       type: h.RelationshipTypes.BLOCKED
     }), S(), (0, i.showToast)((0, i.createToast)(C.default.Messages.STRANGER_DANGER_BLOCK_CONFIRM, i.ToastType.SUCCESS)), (0, c.trackCtaEvent)({
       channelId: t,
-      warningId: E,
-      senderId: g,
+      warningId: g,
+      senderId: E,
       cta: e
     })
-  }, [S, t, E, g]);
+  }, [S, t, g, E]);
   a.useEffect(() => {
     (0, c.trackViewedEvent)(h.AnalyticEvents.SAFETY_WARNING_VIEWED, {
       channelId: t,
-      warningId: E,
-      senderId: g
+      warningId: g,
+      senderId: E
     }), o.default.increment({
       name: l.MetricEvents.SAFETY_WARNING_VIEW
     })
-  }, [t, E, g]);
+  }, [t, g, E]);
   let T = () => {
       (0, i.openModalLazy)(async () => {
         let {
@@ -70,8 +70,8 @@ function E(e) {
             transitionState: a,
             onClose: l,
             channelId: t,
-            warningId: E,
-            senderId: g,
+            warningId: g,
+            senderId: E,
             handleBlock: () => {
               M(c.CtaEventTypes.USER_MODAL_BLOCK_CONFIRM, c.CtaEventTypes.USER_MODAL_BLOCK_CANCEL, T)
             }
@@ -86,13 +86,13 @@ function E(e) {
         } = await n.el("968710").then(n.bind(n, "968710"));
         return n => (0, s.jsx)(i, {
           ...n,
-          userId: g,
-          confirmBlock: A(e),
+          userId: E,
+          confirmBlock: _(e),
           onCancel: () => {
             null == l || l(), (0, c.trackCtaEvent)({
               channelId: t,
-              warningId: E,
-              senderId: g,
+              warningId: g,
+              senderId: E,
               cta: a
             })
           }
@@ -127,8 +127,8 @@ function E(e) {
         onClick: () => {
           T(), (0, c.trackCtaEvent)({
             channelId: t,
-            warningId: E,
-            senderId: g,
+            warningId: g,
+            senderId: E,
             cta: c.CtaEventTypes.OPEN_MORE_TIPS
           })
         },
@@ -142,7 +142,7 @@ function E(e) {
       })]
     }), (0, s.jsx)(i.Clickable, {
       className: p.closeButton,
-      onClick: _,
+      onClick: A,
       role: "button",
       "aria-label": C.default.Messages.DISMISS,
       children: (0, s.jsx)(u.default, {

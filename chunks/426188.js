@@ -1,24 +1,24 @@
 "use strict";
-s.r(t), s.d(t, {
+s.r(e), s.d(e, {
   useFetchCollectiblesProduct: function() {
-    return l
+    return u
   }
 }), s("222007");
 var i = s("884691"),
-  n = s("65597"),
+  l = s("65597"),
   a = s("552712"),
-  o = s("21526"),
-  u = s("853987"),
-  r = s("49111");
+  n = s("21526"),
+  r = s("853987"),
+  o = s("49111");
 
-function l(e) {
-  let t = (0, n.default)([a.default], () => null != e ? a.default.get(e) : null),
-    s = null != t && t.productLine !== r.SKUProductLines.COLLECTIBLES,
-    [l, c] = (0, n.useStateFromStoresArray)([u.default], () => [u.default.isFetching, u.default.getProduct(e)]);
+function u(t) {
+  let e = (0, l.default)([a.default], () => null != t ? a.default.get(t) : null),
+    s = null != e && e.productLine !== o.SKUProductLines.COLLECTIBLES,
+    [u, d] = (0, l.useStateFromStoresArray)([r.default], () => [r.default.isFetching, r.default.getProduct(t)]);
   return (0, i.useEffect)(() => {
-    null != e && null == c && !s && !l && (0, o.fetchCollectiblesProduct)(e)
-  }, [e, c, s, l]), {
-    product: c,
-    isFetching: l
+    null != t && null == d && !s && !u && (0, n.fetchCollectiblesProduct)(t)
+  }, [t, d, s, u]), {
+    product: d,
+    isFetching: u
   }
 }

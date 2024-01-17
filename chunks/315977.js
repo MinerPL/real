@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 }), n("222007");
 var a = n("37983"),
@@ -13,8 +13,8 @@ var a = n("37983"),
   u = n("970366"),
   d = n("2105"),
   c = n("901582"),
-  E = n("294135"),
-  f = n("404247"),
+  f = n("294135"),
+  E = n("404247"),
   _ = n("49111"),
   h = n("128403");
 class C extends s.Component {
@@ -49,17 +49,17 @@ class C extends s.Component {
         skuId: s,
         width: i
       } = this.props;
-      return (0, a.jsx)(E.default, {
+      return (0, a.jsx)(f.default, {
         channel: n,
         inputSkuId: s,
         fetchStoreListing: this.fetchStoreListing,
         location: t,
-        pageSize: (0, f.getPageSize)(i)
+        pageSize: (0, E.getPageSize)(i)
       })
     }
   }
 }
-var T = (0, o.default)(l.default.connectStores([d.default], e => {
+var I = (0, o.default)(l.default.connectStores([d.default], e => {
   let {
     channel: t,
     inputSkuId: n

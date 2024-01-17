@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   isNotSupported: function() {
-    return E
+    return S
   },
   enable: function() {
-    return S
+    return A
   },
   trackToggleSelfMute: function() {
     return D
@@ -12,21 +12,21 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var i = n("77078"),
+var u = n("77078"),
   a = n("913144"),
-  u = n("605250"),
-  o = n("42887"),
-  d = n("227602"),
-  r = n("471671"),
-  l = n("599110"),
-  c = n("360782"),
-  p = n("49111"),
+  i = n("605250"),
+  d = n("42887"),
+  o = n("227602"),
+  c = n("471671"),
+  p = n("599110"),
+  r = n("360782"),
+  l = n("49111"),
   f = n("180524"),
   _ = n("782340");
-let m = new u.default("AudioActionCreators");
+let m = new i.default("AudioActionCreators");
 
-function h() {
-  (0, i.openModalLazy)(async () => {
+function E() {
+  (0, u.openModalLazy)(async () => {
     let {
       default: e
     } = await n.el("649486").then(n.bind(n, "649486"));
@@ -37,15 +37,15 @@ function h() {
   })
 }
 
-function E() {
-  return !o.default.isSupported() && ((0, i.openModal)(e => (0, s.jsx)(i.ConfirmModal, {
+function S() {
+  return !d.default.isSupported() && ((0, u.openModal)(e => (0, s.jsx)(u.ConfirmModal, {
     header: _.default.Messages.UNSUPPORTED_BROWSER,
     confirmText: _.default.Messages.DOWNLOAD_APP,
     cancelText: _.default.Messages.CANCEL,
-    onConfirm: h,
-    confirmButtonColor: i.Button.Colors.BRAND,
+    onConfirm: E,
+    confirmButtonColor: u.Button.Colors.BRAND,
     ...e,
-    children: (0, s.jsx)(i.Text, {
+    children: (0, s.jsx)(u.Text, {
       variant: "text-md/normal",
       children: _.default.Messages.UNSUPPORTED_BROWSER_DETAILS
     })
@@ -53,17 +53,17 @@ function E() {
 }
 
 function g(e) {
-  l.default.track(p.AnalyticEvents.PERMISSIONS_ACKED, {
+  p.default.track(l.AnalyticEvents.PERMISSIONS_ACKED, {
     type: "audio",
     action: e
   })
 }
 
-function S() {
+function A() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  return E() ? Promise.resolve(!1) : (l.default.track(p.AnalyticEvents.PERMISSIONS_REQUESTED, {
+  return S() ? Promise.resolve(!1) : (p.default.track(l.AnalyticEvents.PERMISSIONS_REQUESTED, {
     type: "audio"
-  }), o.default.getMediaEngine().enable().then(() => {
+  }), d.default.getMediaEngine().enable().then(() => {
     a.default.dispatch({
       type: "MEDIA_ENGINE_SET_AUDIO_ENABLED",
       enabled: !0,
@@ -71,13 +71,13 @@ function S() {
     }), g(f.NativePermissionStates.ACCEPTED)
   }, e => {
     switch (e) {
-      case p.UserMediaErrors.NO_DEVICES_FOUND:
+      case l.UserMediaErrors.NO_DEVICES_FOUND:
         g(f.NativePermissionStates.NO_DEVICES);
         break;
-      case p.UserMediaErrors.PERMISSION_DENIED:
+      case l.UserMediaErrors.PERMISSION_DENIED:
         g(f.NativePermissionStates.DENIED);
         break;
-      case p.UserMediaErrors.PERMISSION_DISMISSED:
+      case l.UserMediaErrors.PERMISSION_DISMISSED:
         g(f.NativePermissionStates.DISMISSED);
         break;
       default:
@@ -89,12 +89,12 @@ function S() {
 function D(e) {
   let {
     usedKeybind: t = !1
-  } = e, n = d.default.getKeybindForAction(p.GlobalKeybindActions.TOGGLE_MUTE, !1, !0);
-  l.default.track(p.AnalyticEvents.INPUT_MUTE_TOGGLED, {
-    enabled: !o.default.isSelfMute(),
-    custom_keybind_assigned: null != n && n.id !== d.DEFAULT_MUTE_KEYBIND.id,
+  } = e, n = o.default.getKeybindForAction(l.GlobalKeybindActions.TOGGLE_MUTE, !1, !0);
+  p.default.track(l.AnalyticEvents.INPUT_MUTE_TOGGLED, {
+    enabled: !d.default.isSelfMute(),
+    custom_keybind_assigned: null != n && n.id !== o.DEFAULT_MUTE_KEYBIND.id,
     used_keybind: t,
-    app_in_focus: r.default.isFocused(),
-    overlay_activated: null != (0, c.default)()
+    app_in_focus: c.default.isFocused(),
+    overlay_activated: null != (0, r.default)()
   })
 }

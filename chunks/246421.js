@@ -1,48 +1,48 @@
 "use strict";
-n.r(t), n.d(t, {
+A.r(t), A.d(t, {
   default: function() {
-    return d
+    return u
   }
 });
-var a = n("37983");
-n("884691");
-var s = n("509043"),
-  l = n("77078"),
-  i = n("191814"),
-  r = n("45029"),
-  o = n("782340"),
-  u = n("411531");
+var a = A("37983");
+A("884691");
+var l = A("509043"),
+  n = A("77078"),
+  r = A("191814"),
+  s = A("45029"),
+  o = A("782340"),
+  i = A("411531");
 
-function d(e) {
+function u(e) {
   let {
     locked: t,
-    role: n,
-    textVariant: d = "text-xs/medium"
-  } = e, c = (0, l.useToken)(l.tokens.colors.INTERACTIVE_NORMAL).hex();
+    role: A,
+    textVariant: u = "text-xs/medium"
+  } = e, d = (0, n.useToken)(n.tokens.colors.INTERACTIVE_NORMAL).hex();
   return (0, a.jsx)("div", {
-    className: u.roleTagContainer,
+    className: i.roleTagContainer,
     children: (0, a.jsxs)("div", {
-      className: u.roleTag,
+      className: i.roleTag,
       children: [(0, a.jsx)("div", {
-        className: u.roleColor,
+        className: i.roleColor,
         style: {
-          backgroundColor: (0, s.int2hex)(n.color)
+          backgroundColor: (0, l.int2hex)(A.color)
         }
-      }), (0, a.jsx)(i.default, {
+      }), (0, a.jsx)(r.default, {
         size: 8,
         horizontal: !0
-      }), (0, a.jsxs)(l.Text, {
-        variant: d,
+      }), (0, a.jsxs)(n.Text, {
+        variant: u,
         color: "text-normal",
-        children: [(0, a.jsx)(l.HiddenVisually, {
+        children: [(0, a.jsx)(n.HiddenVisually, {
           children: o.default.Messages.GUILD_PRODUCT_CARD_HIDDEN_ROLE_SCREEN_READER
-        }), n.name]
+        }), A.name]
       }), !0 === t && (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(i.default, {
+        children: [(0, a.jsx)(r.default, {
           size: 8,
           horizontal: !0
-        }), (0, a.jsx)(r.default, {
-          color: c
+        }), (0, a.jsx)(s.default, {
+          color: d
         })]
       })]
     })

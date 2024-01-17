@@ -13,8 +13,8 @@ var a = n("37983"),
   u = n("116616"),
   d = n("465126"),
   c = n("738169"),
-  E = n("49111"),
-  f = n("628159");
+  f = n("49111"),
+  E = n("628159");
 let _ = [
     [1696, 20],
     [1432, 16],
@@ -31,44 +31,44 @@ var C = e => {
   let t, {
     title: n,
     subtitle: C,
-    guildsData: T,
-    analyticsContext: I,
+    guildsData: I,
+    analyticsContext: T,
     theme: S,
-    onViewGuild: N,
-    fetchGuilds: A,
-    onGuildCardSeen: p,
-    currentCategoryId: m,
-    loadId: g,
+    onViewGuild: m,
+    fetchGuilds: p,
+    onGuildCardSeen: A,
+    currentCategoryId: g,
+    loadId: N,
     onTagClick: R,
     showMoreCards: O = !1
   } = e;
   s.useEffect(() => {
-    l.default.wait(() => A())
-  }, [m]);
+    l.default.wait(() => p())
+  }, [g]);
   let L = (0, c.default)(O ? h : _),
     {
       analyticsLocations: v
     } = (0, r.default)();
-  if (null == T) return null;
+  if (null == I) return null;
   let {
     guilds: M,
     loading: P
-  } = T, D = null == M || 0 === M.length;
+  } = I, D = null == M || 0 === M.length;
   if (!P && D) return null;
   let y = async e => {
     if ((0, o.isAtGuildCapAndNonPremium)())(0, u.default)({
       analyticsSource: {
-        page: E.AnalyticsPages.GUILD_DISCOVERY
+        page: f.AnalyticsPages.GUILD_DISCOVERY
       },
       analyticsLocation: {
-        page: E.AnalyticsPages.GUILD_DISCOVERY,
-        section: E.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+        page: f.AnalyticsPages.GUILD_DISCOVERY,
+        section: f.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
       },
       analyticsLocations: v
     });
     else {
       let t = M.findIndex(t => t.id === e);
-      await N(e, t, I, g)
+      await m(e, t, T, N)
     }
   };
   if (P || null == M) {
@@ -76,28 +76,28 @@ var C = e => {
     for (let t = 0; t < L; t++) e.push((0, a.jsx)(d.default.Placeholder, {}, t));
     t = e
   } else t = M.slice(0, L).map(e => (0, a.jsx)(d.default, {
-    className: f.guildCard,
+    className: E.guildCard,
     guild: e,
     onView: y,
     theme: S,
-    onGuildCardSeen: p,
+    onGuildCardSeen: A,
     onTagClick: R
   }, e.id));
   return (0, a.jsx)("section", {
-    className: f.guildListSection,
+    className: E.guildListSection,
     children: (0, a.jsxs)(i.HeadingLevel, {
       component: (0, a.jsx)(i.Heading, {
-        className: f.title,
+        className: E.title,
         variant: "heading-lg/semibold",
         children: n
       }),
       children: [null != C && (0, a.jsx)(i.Text, {
-        className: f.subtitle,
+        className: E.subtitle,
         variant: "text-sm/normal",
         color: "header-secondary",
         children: C
       }), (0, a.jsx)("div", {
-        className: f.guildList,
+        className: E.guildList,
         children: t
       })]
     })

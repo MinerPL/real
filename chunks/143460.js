@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   AutomodEventType: function() {
-    return a.AutomodEventType
+    return _.AutomodEventType
   },
   AutomodTriggerType: function() {
-    return _.AutomodTriggerType
+    return i.AutomodTriggerType
   },
   AutomodActionType: function() {
     return r.AutomodActionType
@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return u
   },
   MAX_KEYWORDS_PER_KEYWORD_FILTER: function() {
-    return E
+    return a
   },
   MAX_KEYWORDS_PER_ALLOWLIST_KEYWORD_FILTER_RULE: function() {
-    return i
+    return E
   },
   MAX_KEYWORDS_PER_ALLOWLIST_DEFAULT_KEYWORD_RULE: function() {
     return s
@@ -37,13 +37,13 @@ n.r(t), n.d(t, {
     return N
   },
   MAX_RULE_NAME_LENGTH: function() {
-    return O
+    return I
   },
   MIN_MENTION_SPAM_LIMIT: function() {
-    return c
+    return O
   },
   MAX_MENTION_SPAM_LIMIT: function() {
-    return I
+    return c
   },
   MENTION_SPAM_LIMIT_DEFAULT: function() {
     return M
@@ -56,20 +56,20 @@ n.r(t), n.d(t, {
   }
 });
 var o, u, r = n("214764"),
-  a = n("155481"),
-  _ = n("363312");
-(o = u || (u = {}))[o.PROFANITY = 1] = "PROFANITY", o[o.SEXUAL_CONTENT = 2] = "SEXUAL_CONTENT", o[o.SLURS = 3] = "SLURS", _.AutomodTriggerType.USER_PROFILE, _.AutomodTriggerType.SERVER_POLICY, _.AutomodTriggerType.MENTION_SPAM, _.AutomodTriggerType.ML_SPAM, _.AutomodTriggerType.DEFAULT_KEYWORD_LIST, _.AutomodTriggerType.KEYWORD;
-let E = 1e3,
-  i = 100,
+  _ = n("155481"),
+  i = n("363312");
+(o = u || (u = {}))[o.PROFANITY = 1] = "PROFANITY", o[o.SEXUAL_CONTENT = 2] = "SEXUAL_CONTENT", o[o.SLURS = 3] = "SLURS", i.AutomodTriggerType.USER_PROFILE, i.AutomodTriggerType.SERVER_POLICY, i.AutomodTriggerType.MENTION_SPAM, i.AutomodTriggerType.ML_SPAM, i.AutomodTriggerType.DEFAULT_KEYWORD_LIST, i.AutomodTriggerType.KEYWORD;
+let a = 1e3,
+  E = 100,
   s = 1e3,
   A = 10,
   d = 60,
   T = 1,
   l = 1,
   N = 260,
-  O = 100,
-  c = 1,
-  I = 50,
+  I = 100,
+  O = 1,
+  c = 50,
   M = 20,
   R = 150,
   f = "automod-profile-quarantine-alert"

@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return l
   }
 });
-var a = n("49111");
+var s = n("49111");
 
-function s(e, t) {
-  return e.type === a.MessageTypes.GUILD_INVITE_REMINDER && !t
+function l(e, t) {
+  return e.type === s.MessageTypes.GUILD_INVITE_REMINDER && !t
 }

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return a
   }
 });
-var l = (0, n("862205").createExperiment)({
+var a = (0, n("862205").createExperiment)({
   kind: "user",
   id: "2021-12_inferno_spam_redaction",
   label: "Inferno Spam Redaction",

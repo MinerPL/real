@@ -20,8 +20,8 @@ var s = n("37983"),
   p = n("534438"),
   h = n("208620"),
   N = n("129040"),
-  m = n("9294"),
-  T = n("165926"),
+  T = n("9294"),
+  m = n("165926"),
   g = n("393414"),
   A = n("970366"),
   S = n("271938"),
@@ -73,7 +73,7 @@ class Y extends a.PureComponent {
       let e = this.getInviteKey(),
         {
           baseCode: t
-        } = (0, m.parseExtraDataFromInviteKey)(e);
+        } = (0, T.parseExtraDataFromInviteKey)(e);
       (0, g.replaceWith)(G.Routes.INVITE_LOGIN(t))
     }
   }
@@ -105,7 +105,7 @@ class Y extends a.PureComponent {
       let {
         channel: e
       } = t;
-      null != e && ((0, T.setNewUser)(B.NewUserTypes.INVITE_UNCLAIMED), null != t.guild ? a(G.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : c.default.transitionToInvite(t, a))
+      null != e && ((0, m.setNewUser)(B.NewUserTypes.INVITE_UNCLAIMED), null != t.guild ? a(G.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : c.default.transitionToInvite(t, a))
     }
   }
   getInviteKey() {
@@ -122,7 +122,7 @@ class Y extends a.PureComponent {
         invite: s
       } = this.props,
       a = this.getInviteKey(),
-      l = (0, m.parseInviteCodeFromInviteKey)(a),
+      l = (0, T.parseInviteCodeFromInviteKey)(a),
       i = t ? {
         guild_id: null != s.guild ? s.guild.id : null,
         channel_id: null != s.channel ? s.channel.id : null,

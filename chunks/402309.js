@@ -1,17 +1,17 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   useIsMassMentionsDefaultDisabledExperiment: function() {
-    return r
+    return o
   },
   useCanCurrentUserViewDisableUnsafeGuildSettingsNotice: function() {
-    return d
+    return u
   }
 });
-var n = s("446674"),
-  a = s("862205"),
-  l = s("957255"),
-  i = s("49111");
-let o = (0, a.createExperiment)({
+var a = n("446674"),
+  s = n("862205"),
+  i = n("957255"),
+  l = n("49111");
+let r = (0, s.createExperiment)({
   kind: "guild",
   id: "2022-11_default_disable_mass_mention",
   label: "Disable mass mentions for communities by default",
@@ -27,8 +27,8 @@ let o = (0, a.createExperiment)({
   }]
 });
 
-function r(e) {
-  return o.useExperiment({
+function o(e) {
+  return r.useExperiment({
     guildId: e,
     location: "dd4beb_1"
   }, {
@@ -36,18 +36,18 @@ function r(e) {
   })
 }
 
-function d(e) {
+function u(e) {
   var t;
-  let s = (0, n.useStateFromStores)([l.default], () => l.default.can(i.Permissions.MANAGE_GUILD, e)),
+  let n = (0, a.useStateFromStores)([i.default], () => i.default.can(l.Permissions.MANAGE_GUILD, e)),
     {
-      enabled: a
-    } = o.useExperiment({
+      enabled: s
+    } = r.useExperiment({
       guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "",
       location: "dd4beb_3"
     }, {
       autoTrackExposure: !0
     });
   if (null == e) return !1;
-  let r = e.hasFeature(i.GuildFeatures.COMMUNITY);
-  return s && r && a
+  let o = e.hasFeature(l.GuildFeatures.COMMUNITY);
+  return n && o && s
 }

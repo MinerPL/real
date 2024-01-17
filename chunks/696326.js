@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return a
   }
 });
 var i = n("862205");
-let a = (0, i.createExperiment)({
+let s = (0, i.createExperiment)({
   kind: "guild",
   id: "2023-03_onboarding_upsell_lifecycle",
   label: "Onboarding Upsell Lifecycle",
@@ -20,4 +20,4 @@ let a = (0, i.createExperiment)({
     }
   }]
 });
-var l = a
+var a = s

@@ -6,9 +6,9 @@ s.r(t), s.d(t, {
 });
 var a = s("446674"),
   n = s("521012"),
-  r = s("719923"),
-  l = s("154889"),
-  i = s("917247"),
+  l = s("719923"),
+  i = s("154889"),
+  r = s("917247"),
   u = s("646718");
 
 function o(e) {
@@ -23,10 +23,10 @@ function o(e) {
     onNonTier2Subscriber: I,
     onTier2Subscriber: T,
     onCustomCriteria: f
-  } = e, S = (0, i.usePremiumTrialOffer)(), R = (0, l.usePremiumDiscountOffer)(), p = (0, a.useStateFromStores)([n.default], () => n.default.getPremiumTypeSubscription()), m = r.default.getPremiumTypeFromSubscription(p);
+  } = e, S = (0, r.usePremiumTrialOffer)(), R = (0, i.usePremiumDiscountOffer)(), m = (0, a.useStateFromStores)([n.default], () => n.default.getPremiumTypeSubscription()), p = l.default.getPremiumTypeFromSubscription(m);
   if (null != f) {
     let e = f();
     if (null != e) return e
   }
-  return null != S && (0, u.SubscriptionTrials)[S.trial_id].skus.includes(u.PremiumSubscriptionSKUs.TIER_0) ? null != d ? d : t : null != S && (0, u.SubscriptionTrials)[S.trial_id].skus.includes(u.PremiumSubscriptionSKUs.TIER_2) ? null != c ? c : t : null != p && null != p.trialId && m === u.PremiumTypes.TIER_0 ? null != _ ? _ : t : null != p && null != p.trialId && m === u.PremiumTypes.TIER_2 ? null != E ? E : t : null != R ? null != s ? s : t : null == m ? null != o ? o : t : m === u.PremiumTypes.TIER_0 || m === u.PremiumTypes.TIER_1 ? null != I ? I : t : m === u.PremiumTypes.TIER_2 ? null != T ? T : t : t
+  return null != S && (0, u.SubscriptionTrials)[S.trial_id].skus.includes(u.PremiumSubscriptionSKUs.TIER_0) ? null != d ? d : t : null != S && (0, u.SubscriptionTrials)[S.trial_id].skus.includes(u.PremiumSubscriptionSKUs.TIER_2) ? null != c ? c : t : null != m && null != m.trialId && p === u.PremiumTypes.TIER_0 ? null != _ ? _ : t : null != m && null != m.trialId && p === u.PremiumTypes.TIER_2 ? null != E ? E : t : null != R ? null != s ? s : t : null == p ? null != o ? o : t : p === u.PremiumTypes.TIER_0 || p === u.PremiumTypes.TIER_1 ? null != I ? I : t : p === u.PremiumTypes.TIER_2 ? null != T ? T : t : t
 }

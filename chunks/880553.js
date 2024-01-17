@@ -4,12 +4,12 @@ t.r(n), t.d(n, {
     return o
   }
 });
-var l = t("271938"),
-  u = t("42203"),
+var u = t("271938"),
+  l = t("42203"),
   i = t("800762");
 
 function o() {
-  let e = i.default.getVoiceStateForSession(l.default.getId(), l.default.getSessionId()),
+  let e = i.default.getVoiceStateForSession(u.default.getId(), u.default.getSessionId()),
     n = null == e ? void 0 : e.channelId;
-  return u.default.getChannel(n)
+  return l.default.getChannel(n)
 }

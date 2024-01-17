@@ -1,46 +1,46 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return I
   }
 });
-var a = n("37983"),
-  s = n("884691"),
-  i = n("65597"),
-  l = n("151426"),
+var s = n("37983"),
+  l = n("884691"),
+  a = n("65597"),
+  i = n("151426"),
   r = n("10641"),
   o = n("592407"),
   u = n("305961"),
   d = n("162771"),
   c = n("489622"),
-  E = n("599110"),
-  f = n("179803"),
+  f = n("599110"),
+  E = n("179803"),
   _ = n("49111"),
-  h = n("782340");
+  T = n("782340");
 
-function C(e) {
+function I(e) {
   let {
     dismissCurrentNotice: t
-  } = e, n = (0, i.default)([d.default], () => d.default.getGuildId(), []), C = (0, i.default)([u.default], () => u.default.getGuild(n), [n]);
-  return (s.useEffect(() => {
-    (0, r.requestMarkDismissibleContentAsShown)(l.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR)
-  }, []), null == C) ? null : (0, a.jsxs)(c.default, {
+  } = e, n = (0, a.default)([d.default], () => d.default.getGuildId(), []), I = (0, a.default)([u.default], () => u.default.getGuild(n), [n]);
+  return (l.useEffect(() => {
+    (0, r.requestMarkDismissibleContentAsShown)(i.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR)
+  }, []), null == I) ? null : (0, s.jsxs)(c.default, {
     color: c.NoticeColors.DEFAULT,
-    children: [(0, a.jsx)(c.NoticeCloseButton, {
+    children: [(0, s.jsx)(c.NoticeCloseButton, {
       onClick: () => {
-        E.default.track(_.AnalyticEvents.UPSELL_CLICKED, {
-          type: l.DismissibleContent[l.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR],
+        f.default.track(_.AnalyticEvents.UPSELL_CLICKED, {
+          type: i.DismissibleContent[i.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR],
           action: "dismiss"
-        }), t(), (0, f.dismissedGuildOnboardingUpsell)(C.id, l.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR)
+        }), t(), (0, E.dismissedGuildOnboardingUpsell)(I.id, i.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR)
       }
-    }), h.default.Messages.GUILD_ONBOARDING_NAGBAR_MESSAGE, (0, a.jsx)(c.NoticeButton, {
+    }), T.default.Messages.GUILD_ONBOARDING_NAGBAR_MESSAGE, (0, s.jsx)(c.NoticeButton, {
       onClick: () => {
-        E.default.track(_.AnalyticEvents.UPSELL_CLICKED, {
-          type: l.DismissibleContent[l.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR],
+        f.default.track(_.AnalyticEvents.UPSELL_CLICKED, {
+          type: i.DismissibleContent[i.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR],
           action: "primary"
-        }), o.default.open(C.id, _.GuildSettingsSections.ONBOARDING), (0, f.dismissedGuildOnboardingUpsell)(C.id, l.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR)
+        }), o.default.open(I.id, _.GuildSettingsSections.ONBOARDING), (0, E.dismissedGuildOnboardingUpsell)(I.id, i.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR)
       },
-      children: h.default.Messages.GUILD_ONBOARDING_UPSELL_COACHMARK_CHECK_IT_OUT
+      children: T.default.Messages.GUILD_ONBOARDING_UPSELL_COACHMARK_CHECK_IT_OUT
     })]
   })
 }

@@ -14,8 +14,8 @@ var s = n("812204"),
   u = n("49111"),
   d = n("994428"),
   c = n("944305"),
-  E = n("782340"),
-  f = n("65016");
+  f = n("782340"),
+  E = n("65016");
 
 function _(e) {
   let {
@@ -27,12 +27,12 @@ function _(e) {
   return (0, a.jsx)(l.default, {
     guild: t,
     onDismissed: () => n(d.ContentDismissActionType.UNKNOWN),
-    cta: E.default.Messages.GUILD_BANNER_NOTICE_CTA,
-    message: E.default.Messages.GUILD_BANNER_NOTICE.format({
+    cta: f.default.Messages.GUILD_BANNER_NOTICE_CTA,
+    message: f.default.Messages.GUILD_BANNER_NOTICE.format({
       boostsNeeded: _
     }),
     type: u.ChannelNoticeTypes.GUILD_BANNER,
-    image: f,
+    image: E,
     onClick: () => (0, r.default)({
       analyticsLocations: h,
       analyticsSourceLocation: {

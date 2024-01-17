@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var a = n("37983");
@@ -14,11 +14,11 @@ var s = n("65597"),
   u = n("994428"),
   d = n("782340"),
   c = n("421294"),
-  E = e => {
+  f = e => {
     let {
       markAsDismissed: t
-    } = e, n = (0, s.default)([i.default], () => i.default.useReducedMotion), E = (0, o.useCanSeeSafetyEducationBlockMuteCoachmark)();
-    return E ? (0, a.jsx)(l.default, {
+    } = e, n = (0, s.default)([i.default], () => i.default.useReducedMotion), f = (0, o.useCanSeeSafetyEducationBlockMuteCoachmark)();
+    return f ? (0, a.jsx)(l.default, {
       asset: (0, a.jsx)(r.default, {
         className: c.video,
         src: "https://cdn.discordapp.com/attachments/1067194967979733053/1067195117439557712/Safety_BLOCK_Coachmark.mp4",

@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   setupWindow: function() {
-    return l
+    return i
   }
 }), n("222007");
 var a = n("741148"),
   r = n("563680"),
   s = n("816454"),
-  i = n("421804");
+  l = n("421804");
 
-function l(e) {
+function i(e) {
   let t = e.document,
     n = (0, s.setupWindowId)(e);
 
-  function l() {
-    (0, i.setCurrentlyInteractingWindowId)(n)
+  function i() {
+    (0, l.setCurrentlyInteractingWindowId)(n)
   }
 
   function u() {
     setTimeout(() => {
-      (0, i.clearCurrentlyInteractingWindowId)(n)
+      (0, l.clearCurrentlyInteractingWindowId)(n)
     }, 0)
   }
   for (let n of (e.addEventListener("resize", function() {
@@ -30,7 +30,7 @@ function l(e) {
       !e.document.hasFocus() && (0, a.focus)(e, !1)
     }), e.addEventListener("unload", function() {
       (0, a.unload)(e)
-    }), i.INTERACTION_EVENTS)) t.addEventListener(n, l, !0), t.addEventListener(n, u, !1);
+    }), l.INTERACTION_EVENTS)) t.addEventListener(n, i, !0), t.addEventListener(n, u, !1);
   (0, r.subscribeDocumentToFullScreenChange)(t, function() {
     (0, a.fullscreenChange)(e)
   }), (0, a.init)(e)

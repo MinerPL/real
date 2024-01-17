@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return _.NotchBackground
   },
   default: function() {
-    return N
+    return m
   }
 }), n("222007");
 var a = n("37983"),
@@ -16,19 +16,19 @@ var a = n("37983"),
   u = n("862337"),
   d = n("77078"),
   c = n("629109"),
-  E = n("42887"),
-  f = n("945956"),
+  f = n("42887"),
+  E = n("945956"),
   _ = n("230962"),
   h = n("599110"),
   C = n("49111"),
-  T = n("782340"),
-  I = n("626009");
+  I = n("782340"),
+  T = n("626009");
 class S extends s.PureComponent {
   componentDidMount() {
     this._initTimeout.start(1e3, this.setupVoiceActivity)
   }
   componentWillUnmount() {
-    this._initTimeout.stop(), this._silenceTimeout.stop(), this._micTestStop(), E.default.getMediaEngine().removeListener(o.MediaEngineEvent.VoiceActivity, this.handleVoiceActivity)
+    this._initTimeout.stop(), this._silenceTimeout.stop(), this._micTestStop(), f.default.getMediaEngine().removeListener(o.MediaEngineEvent.VoiceActivity, this.handleVoiceActivity)
   }
   _micTestStart() {
     let {
@@ -82,7 +82,7 @@ class S extends s.PureComponent {
       isDetectingInput: s
     } = this.state;
     return (0, a.jsx)(d.FormText, {
-      className: I.micTestCaption,
+      className: T.micTestCaption,
       type: d.FormText.Types.DESCRIPTION,
       children: n ? s ? e : t : null
     })
@@ -100,22 +100,22 @@ class S extends s.PureComponent {
       isDeafened: u
     } = this.props, {
       isMicTesting: c,
-      volume: E
-    } = this.state, f = e && !c ? T.default.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
+      volume: f
+    } = this.state, E = e && !c ? I.default.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
     return c && e && !u && this._micTestStop(), (0, a.jsxs)("div", {
-      className: I.container,
+      className: T.container,
       children: [(0, a.jsx)(d.FormTitle, {
         tag: d.FormTitleTags.H5,
-        className: I.title,
+        className: T.title,
         children: t
       }), null != n && (0, a.jsx)(d.FormText, {
         type: d.FormText.Types.DESCRIPTION,
-        className: I.description,
+        className: T.description,
         children: n
       }), (0, a.jsxs)("div", {
-        className: I.micTest,
+        className: T.micTest,
         children: [(0, a.jsx)(d.Tooltip, {
-          text: f,
+          text: E,
           children: e => {
             let {
               onMouseEnter: t,
@@ -133,7 +133,7 @@ class S extends s.PureComponent {
             })
           }
         }), (0, a.jsx)(_.default, {
-          progress: c ? E + 100 : 0,
+          progress: c ? f + 100 : 0,
           notchBackground: s
         }), this.renderCaption()]
       })]
@@ -146,7 +146,7 @@ class S extends s.PureComponent {
       isDetectingInput: !0,
       didDeafenUser: !1
     }, this.setupVoiceActivity = () => {
-      E.default.getMediaEngine().on(o.MediaEngineEvent.VoiceActivity, this.handleVoiceActivity)
+      f.default.getMediaEngine().on(o.MediaEngineEvent.VoiceActivity, this.handleVoiceActivity)
     }, this.handleVoiceActivity = e => {
       let {
         isMicTesting: t
@@ -170,31 +170,31 @@ class S extends s.PureComponent {
     }
   }
 }
-var N = r.default.connectStores([f.default, E.default], () => {
-  let e = E.default.getInputDeviceId(),
-    t = E.default.getInputDevices(),
+var m = r.default.connectStores([E.default, f.default], () => {
+  let e = f.default.getInputDeviceId(),
+    t = f.default.getInputDevices(),
     n = l.find(t, t => {
       let {
         id: n
       } = t;
       return n === e
     }),
-    a = E.default.getOutputDeviceId(),
-    s = E.default.getOutputDevices(),
+    a = f.default.getOutputDeviceId(),
+    s = f.default.getOutputDevices(),
     i = l.find(s, e => {
       let {
         id: t
       } = e;
       return t === a
     }),
-    r = E.default.getModeOptions();
+    r = f.default.getModeOptions();
   return {
-    isVoiceConnected: f.default.isConnected(),
-    inputVolume: E.default.getInputVolume(),
-    outputVolume: E.default.getOutputVolume(),
-    inputMode: E.default.getMode(),
+    isVoiceConnected: E.default.isConnected(),
+    inputVolume: f.default.getInputVolume(),
+    outputVolume: f.default.getOutputVolume(),
+    inputMode: f.default.getMode(),
     vadThreshold: r.threshold,
-    isDeafened: E.default.isSelfDeaf(),
+    isDeafened: f.default.isSelfDeaf(),
     vadAutoThreshold: r.autoThreshold,
     inputDeviceName: null != n ? n.name : "",
     outputDeviceName: null != i ? i.name : ""

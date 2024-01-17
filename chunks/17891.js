@@ -12,8 +12,8 @@ var a, s = n("44170"),
   u = n("861309"),
   d = n("614818"),
   c = n("49111");
-let E = 10 * o.default.Millis.SECOND,
-  f = new Map,
+let f = 10 * o.default.Millis.SECOND,
+  E = new Map,
   _ = new Set,
   h = (e, t, n) => {
     n([d.default.CLOSE, t], e)
@@ -42,11 +42,11 @@ a = class extends s.EventEmitter {
       var n, a;
       let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
       o.emit("disconnect", e, s ? void 0 : t), e.close(t.code, null !== (n = t.message) && void 0 !== n ? n : "Unknown");
-      let [i] = null !== (a = Array.from(f.entries()).find(t => {
+      let [i] = null !== (a = Array.from(E.entries()).find(t => {
         let [n, a] = t;
         return a === e
       })) && void 0 !== a ? a : [null, null];
-      null != i && f.delete(i)
+      null != i && E.delete(i)
     }, this.handleIFrameMount = e => {
       let {
         id: t
@@ -58,26 +58,26 @@ a = class extends s.EventEmitter {
             application_id: t,
             channel_id: n.channelId,
             guild_id: n.guildId,
-            timeout_ms: E
+            timeout_ms: f
           })
         })
-      }, E)
+      }, f)
     }, this.handleIFrameUnmount = e => {
       var t;
       let {
         id: n
       } = e;
       _.delete(n);
-      let [a, s] = null !== (t = Array.from(f.entries()).find(e => {
+      let [a, s] = null !== (t = Array.from(E.entries()).find(e => {
         let [t, a] = e;
         return a.frameId === n
       })) && void 0 !== t ? t : [null, null];
       null != s && null != a && (this.disconnectSocket(s, {
         code: c.RPCCloseCodes.CLOSE_NORMAL,
         message: "iFrame gone"
-      }, !0), f.delete(a))
+      }, !0), E.delete(a))
     }, this.handleMessage = (e, t, n) => {
-      let a = f.get(t);
+      let a = E.get(t);
       try {
         this.routeEvent(a, t, e, n)
       } catch (e) {
@@ -133,7 +133,7 @@ a = class extends s.EventEmitter {
       this.logger.info("Socket Opened: ".concat(s.id));
       try {
         if (await this.validateSocketClient(s, e, t.client_id), !_.has(l)) throw this.logger.error("Frame ID ".concat(l, " no longer exists")), new u.default(c.RPCCloseCodes.CLOSE_UNSUPPORTED, "Unrecognized frame ID ".concat(l));
-        f.set(e, s), _.delete(l), this.emit("connect", s), this.logger.info("Socket Validated: ".concat(s.id))
+        E.set(e, s), _.delete(l), this.emit("connect", s), this.logger.info("Socket Validated: ".concat(s.id))
       } catch (e) {
         throw this.logger.info("Socket Closed: ".concat(s.id, ", ").concat(e.message)), e
       }

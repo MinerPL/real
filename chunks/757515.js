@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ROLE_FIELD_NAME: function() {
-    return l
+    return u
   },
   describeUploadProgressError: function() {
     return o
@@ -16,22 +16,22 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var r = n("448993");
+var i = n("448993");
 n("957255");
-var i = n("49111"),
-  u = n("782340");
-let l = "_role";
+var r = n("49111"),
+  l = n("782340");
+let u = "_role";
 
 function o(e) {
   if (!(e >= 0)) switch (-e) {
-    case i.AbortCodes.ENTITY_TOO_LARGE:
-      return u.default.Messages.UPLOAD_ERROR_TOO_LARGE;
-    case i.AbortCodes.INVALID_SKU_ATTACHMENT_NO_ARCHIVES:
-      return u.default.Messages.GUILD_PRODUCT_ERROR_NO_ARCHIVES;
+    case r.AbortCodes.ENTITY_TOO_LARGE:
+      return l.default.Messages.UPLOAD_ERROR_TOO_LARGE;
+    case r.AbortCodes.INVALID_SKU_ATTACHMENT_NO_ARCHIVES:
+      return l.default.Messages.GUILD_PRODUCT_ERROR_NO_ARCHIVES;
     case 1:
-      return u.default.Messages.ERROR_GENERIC_TITLE;
+      return l.default.Messages.ERROR_GENERIC_TITLE;
     default:
-      return u.default.Messages.GUILD_PRODUCT_ERROR_OTHER_CODE.format({
+      return l.default.Messages.GUILD_PRODUCT_ERROR_OTHER_CODE.format({
         code: -e
       })
   }
@@ -42,8 +42,8 @@ function s(e) {
     newRoleParams: t
   } = e;
   if (null != t && "" === t.name.trim()) {
-    var n, i;
-    return n = l, i = u.default.Messages.GUILD_PRODUCT_ERROR_EMPTY_ROLE_NAME, new r.APIError({
+    var n, r;
+    return n = u, r = l.default.Messages.GUILD_PRODUCT_ERROR_EMPTY_ROLE_NAME, new i.APIError({
       status: 400,
       body: {
         message: "Invalid form body",
@@ -51,7 +51,7 @@ function s(e) {
           [n]: {
             _errors: [{
               code: "",
-              message: i
+              message: r
             }]
           }
         }
@@ -64,16 +64,16 @@ function a(e) {
   var t;
   let {
     guildProductListing: n,
-    name: r,
-    priceTier: i,
-    description: u,
-    image: l,
+    name: i,
+    priceTier: r,
+    description: l,
+    image: u,
     imageName: o,
     isImageChanged: s,
     newRoleParams: a,
     hasUnsavedAttachmentChanges: d
   } = e, c = {};
-  (null == n ? void 0 : n.name) !== r && "" !== r.trim() && (c.name = r), (null !== (t = null == n ? void 0 : n.description) && void 0 !== t ? t : "") !== u && (c.description = u), (null == n ? void 0 : n.price_tier) !== i && null != i && (c.priceTier = i), null != a && "" !== a.name.trim() ? c.createNewRole = !0 : null === a && (c.unlinkRole = !0), l.startsWith("data:") && (s || null == n && (Object.keys(c).length > 0 || d)) && (c.image = l, c.imageName = o);
+  (null == n ? void 0 : n.name) !== i && "" !== i.trim() && (c.name = i), (null !== (t = null == n ? void 0 : n.description) && void 0 !== t ? t : "") !== l && (c.description = l), (null == n ? void 0 : n.price_tier) !== r && null != r && (c.priceTier = r), null != a && "" !== a.name.trim() ? c.createNewRole = !0 : null === a && (c.unlinkRole = !0), u.startsWith("data:") && (s || null == n && (Object.keys(c).length > 0 || d)) && (c.image = u, c.imageName = o);
   let f = Object.keys(c).length > 0 || d;
   return {
     changes: c,
@@ -85,5 +85,5 @@ function a(e) {
 }
 
 function d(e, t) {
-  return "".concat(location.protocol, "//").concat(location.host).concat(i.Routes.GUILD_PRODUCT(e, t))
+  return "".concat(location.protocol, "//").concat(location.host).concat(r.Routes.GUILD_PRODUCT(e, t))
 }

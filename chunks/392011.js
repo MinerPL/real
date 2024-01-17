@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var a = n("917351"),
@@ -13,13 +13,13 @@ var a = n("917351"),
   u = n("872173"),
   d = n("374363"),
   c = n("397336"),
-  E = {
+  f = {
     init() {
-      o.default[c.UserSettingsTypes.PRELOADED_USER_SETTINGS] = r.default, o.default[c.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS] = l.default, i.default.subscribe("CONNECTION_OPEN", f), i.default.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", _), i.default.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", h), i.default.subscribe("APP_STATE_UPDATE", C)
+      o.default[c.UserSettingsTypes.PRELOADED_USER_SETTINGS] = r.default, o.default[c.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS] = l.default, i.default.subscribe("CONNECTION_OPEN", E), i.default.subscribe("USER_SETTINGS_PROTO_ENQUEUE_UPDATE", _), i.default.subscribe("USER_SETTINGS_PROTO_LOAD_IF_NECESSARY", h), i.default.subscribe("APP_STATE_UPDATE", C)
     }
   };
 
-function f() {
+function E() {
   let e = d.default.getFullState(),
     t = e[c.UserSettingsTypes.PRELOADED_USER_SETTINGS];
   t.editInfo.triggeredMigrations && u.PreloadedUserSettingsActionCreators.markDirtyFromMigration(t.proto, t.editInfo.cleanupFuncs), s.forEach(u.UserSettingsActionCreatorsByType, (t, n) => {

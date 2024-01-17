@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("77078"),
-  l = n("875978"),
+var l = n("77078"),
+  a = n("875978"),
   i = n("377253"),
   r = n("782340");
 
@@ -24,13 +24,13 @@ function o(e) {
       name: u,
       animated: !1
     },
-    reactionType: l.ReactionTypes.VOTE
+    reactionType: a.ReactionTypes.VOTE
   };
-  (0, s.openModalLazy)(async () => {
+  (0, l.openModalLazy)(async () => {
     let {
       default: e
     } = await n.el("57155").then(n.bind(n, "57155"));
-    return t => (0, a.jsx)(e, {
+    return t => (0, s.jsx)(e, {
       ...t,
       message: d,
       selectedReaction: c,

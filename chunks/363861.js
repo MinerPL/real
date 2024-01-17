@@ -1,22 +1,22 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   default: function() {
-    return n
+    return a
   }
 });
-var t = E("37983");
-E("884691");
-var o = E("77078");
-async function n(e) {
-  let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  await (0, o.openModalLazy)(async () => {
+var i = n("37983");
+n("884691");
+var s = n("77078");
+async function a(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  await (0, s.openModalLazy)(async () => {
     let {
-      default: o
-    } = await E.el("892845").then(E.bind(E, "892845"));
-    return E => (0, t.jsx)(o, {
+      default: s
+    } = await n.el("892845").then(n.bind(n, "892845"));
+    return n => (0, i.jsx)(s, {
       source: e,
-      oneClickFlow: _,
-      ...E
+      oneClickFlow: t,
+      ...n
     })
   })
 }

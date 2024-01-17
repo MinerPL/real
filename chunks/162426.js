@@ -1,26 +1,26 @@
 "use strict";
-n.r(t), n.d(t, {
+u.r(e), u.d(e, {
   default: function() {
     return l
   }
-}), n("222007");
-var r = n("884691"),
-  i = n("599417"),
-  u = n("782340");
+}), u("222007");
+var r = u("884691"),
+  n = u("599417"),
+  i = u("782340");
 
-function l(e) {
-  let [t, n] = r.useState(!1), [l, o] = r.useState(null), s = r.useCallback(async function() {
-    for (var t = arguments.length, r = Array(t), l = 0; l < t; l++) r[l] = arguments[l];
+function l(t) {
+  let [e, u] = r.useState(!1), [l, o] = r.useState(null), c = r.useCallback(async function() {
+    for (var e = arguments.length, r = Array(e), l = 0; l < e; l++) r[l] = arguments[l];
     try {
-      return o(null), n(!0), await e(...r)
-    } catch (e) {
-      e.message !== u.default.Messages.MFA_V2_CANCELED && o(e instanceof i.default ? e : new i.default(e))
+      return o(null), u(!0), await t(...r)
+    } catch (t) {
+      t.message !== i.default.Messages.MFA_V2_CANCELED && o(t instanceof n.default ? t : new n.default(t))
     } finally {
-      n(!1)
+      u(!1)
     }
-  }, [e]);
-  return [s, {
-    loading: t,
+  }, [t]);
+  return [c, {
+    loading: e,
     error: l
   }]
 }

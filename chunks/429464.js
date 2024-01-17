@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var a = n("446674"),
@@ -36,7 +36,7 @@ class c extends a.default.PersistedStore {
   }
 }
 c.displayName = "PoggermodeAchievementStore", c.persistKey = "PoggermodeAchievementStore";
-var E = new c(s.default, {
+var f = new c(s.default, {
   POGGERMODE_ACHIEVEMENT_UNLOCK: function(e) {
     var t;
     let {

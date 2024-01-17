@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var a = n("37983");
@@ -14,17 +14,17 @@ var s = n("77078"),
   u = n("701909"),
   d = n("49111"),
   c = n("782340"),
-  E = n("45243");
+  f = n("45243");
 
-function f(e) {
+function E(e) {
   let {
     guildId: t,
-    markAsDismissed: f
+    markAsDismissed: E
   } = e, _ = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(s.Text, {
       color: "always-white",
       variant: "text-sm/normal",
-      className: E.upsellBody,
+      className: f.upsellBody,
       children: c.default.Messages.MEDIA_CHANNEL_UPSELL_BODY
     }), (0, a.jsx)(s.Text, {
       color: "always-white",
@@ -38,7 +38,7 @@ function f(e) {
     header: c.default.Messages.MEDIA_CHANNEL_UPSELL_TITLE,
     content: _,
     asset: (0, a.jsx)(r.default, {
-      className: E.video,
+      className: f.video,
       src: "https://cdn.discordapp.com/assets/media_channel/media_channel_upsell_demo.mp4",
       autoPlay: !0,
       loop: !0
@@ -59,6 +59,6 @@ function f(e) {
       })
     },
     secondaryButtonCTA: c.default.Messages.DISMISS,
-    markAsDismissed: f
+    markAsDismissed: E
   })
 }

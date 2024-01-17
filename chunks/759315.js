@@ -20,14 +20,14 @@ var s = n("37983"),
   p = n("173791"),
   h = n("926622"),
   N = () => {
-    let [e, t] = a.useState(""), [l, N] = a.useState(""), [m, T] = a.useState(!1), [g, A] = a.useState(!1), [S, C] = a.useState(null), [v, x] = a.useState(null), R = (0, r.useStateFromStores)([d.default], () => d.default.getCountryCode()), L = R.code.split(" ")[0], O = async () => {
+    let [e, t] = a.useState(""), [l, N] = a.useState(""), [T, m] = a.useState(!1), [g, A] = a.useState(!1), [S, C] = a.useState(null), [v, x] = a.useState(null), R = (0, r.useStateFromStores)([d.default], () => d.default.getCountryCode()), L = R.code.split(" ")[0], O = async () => {
       try {
         await u.default.resendCode(e)
       } catch (e) {
         x(e.body.message)
       }
     }, M = async () => {
-      T(!0);
+      m(!0);
       try {
         let {
           token: t
@@ -36,7 +36,7 @@ var s = n("37983"),
       } catch (e) {
         e.body.message ? (C(null), x(e.body.message)) : (C(e.body.phone), x(e.body.code))
       } finally {
-        T(!1)
+        m(!1)
       }
     }, D = (0, s.jsxs)(f.default, {
       children: [(0, s.jsx)(f.Image, {
@@ -81,7 +81,7 @@ var s = n("37983"),
         }), (0, s.jsx)(f.Button, {
           className: h.marginTop20,
           onClick: M,
-          submitting: m,
+          submitting: T,
           children: _.default.Messages.DONE
         })]
       })]

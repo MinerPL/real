@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 }), n("222007");
 var a = n("913144"),
@@ -13,13 +13,13 @@ var a = n("913144"),
   u = n("471671"),
   d = n("49111"),
   c = n("353927");
-let E = new Set,
-  f = new Set,
+let f = new Set,
+  E = new Set,
   _ = null;
 
 function h() {
-  for (let e of E) s.default.setDisableLocalVideo(e, d.VideoToggleState.MANUAL_ENABLED, c.MediaEngineContextTypes.DEFAULT, !1);
-  f.clear(), E.clear()
+  for (let e of f) s.default.setDisableLocalVideo(e, d.VideoToggleState.MANUAL_ENABLED, c.MediaEngineContextTypes.DEFAULT, !1);
+  E.clear(), f.clear()
 }
 class C extends i.default {
   _initialize() {
@@ -39,15 +39,15 @@ class C extends i.default {
       _ = u.default.isFocused(),
       h = l.default.getWindowFocused(d.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
       C = r.default.isLocalVideoDisabled(t, n),
-      T = f.has(t);
-    i && !_ && !h && !C && !T && (E.add(t), s.default.setDisableLocalVideo(t, d.VideoToggleState.DISABLED, n, !1))
+      I = E.has(t);
+    i && !_ && !h && !C && !I && (f.add(t), s.default.setDisableLocalVideo(t, d.VideoToggleState.DISABLED, n, !1))
   }
   handleManualLocalVideoToggle(e) {
     let {
       userId: t,
       persist: n
     } = e;
-    n && (f.add(t), E.delete(t))
+    n && (E.add(t), f.delete(t))
   }
   constructor(...e) {
     super(...e), this.handleWindowFocus = e => {
@@ -65,4 +65,4 @@ class C extends i.default {
     }
   }
 }
-var T = new C
+var I = new C

@@ -4,19 +4,19 @@ n.r(t), n.d(t, {
     return s
   },
   fetchWelcomeScreen: function() {
-    return a
+    return o
   },
   resetWelcomeScreen: function() {
-    return o
+    return a
   },
   clearWelcomeScreenSettings: function() {
     return u
   },
   updateSettings: function() {
-    return d
+    return c
   },
   saveWelcomeScreen: function() {
-    return c
+    return d
   }
 });
 var l = n("872717"),
@@ -30,7 +30,7 @@ let s = function(e) {
       isLurking: t
     })
   },
-  a = async e => {
+  o = async e => {
     i.default.dispatch({
       type: "WELCOME_SCREEN_FETCH_START"
     });
@@ -49,7 +49,7 @@ let s = function(e) {
         type: "WELCOME_SCREEN_FETCH_FAIL"
       })
     }
-  }, o = () => {
+  }, a = () => {
     i.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_RESET"
     })
@@ -57,12 +57,12 @@ let s = function(e) {
     i.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_CLEAR"
     })
-  }, d = e => {
+  }, c = e => {
     i.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_UPDATE",
       settings: e
     })
-  }, c = async (e, t) => {
+  }, d = async (e, t) => {
     i.default.dispatch({
       type: "WELCOME_SCREEN_SUBMIT"
     });

@@ -13,13 +13,13 @@ var a = n("917351"),
   u = n("861309"),
   d = n("578287"),
   c = n("716724"),
-  E = n("492249"),
-  f = n("49111");
+  f = n("492249"),
+  E = n("49111");
 let _ = ["349134787773988865"];
 var h = {
-  [f.RPCCommands.SET_ACTIVITY]: {
+  [E.RPCCommands.SET_ACTIVITY]: {
     scope: {
-      [E.RPC_SCOPE_CONFIG.ANY]: [f.OAuth2Scopes.RPC, f.OAuth2Scopes.RPC_ACTIVITIES_WRITE, E.RPC_LOCAL_SCOPE]
+      [f.RPC_SCOPE_CONFIG.ANY]: [E.OAuth2Scopes.RPC, E.OAuth2Scopes.RPC_ACTIVITIES_WRITE, f.RPC_LOCAL_SCOPE]
     },
     validation: e => (0, c.default)(e).required().keys({
       pid: e.number().min(0),
@@ -39,7 +39,7 @@ var h = {
         party: (0, c.default)(e).keys({
           id: e.string().min(2).max(128),
           size: e.array().items(e.number().min(1)).length(2),
-          privacy: e.number().default(f.ActivityPartyPrivacy.PRIVATE).valid([f.ActivityPartyPrivacy.PRIVATE, f.ActivityPartyPrivacy.PUBLIC])
+          privacy: e.number().default(E.ActivityPartyPrivacy.PRIVATE).valid([E.ActivityPartyPrivacy.PRIVATE, E.ActivityPartyPrivacy.PUBLIC])
         }),
         secrets: (0, c.default)(e).keys({
           match: e.string().min(2).max(128),
@@ -52,7 +52,7 @@ var h = {
         })).min(1).max(2),
         instance: e.boolean(),
         supported_platforms: e.array().items(e.string().min(1).max(32)).min(1).max(3),
-        type: e.number().default(f.ActivityTypes.PLAYING).valid(f.ActivityTypes.PLAYING, f.ActivityTypes.LISTENING, f.ActivityTypes.WATCHING)
+        type: e.number().default(E.ActivityTypes.PLAYING).valid(E.ActivityTypes.PLAYING, E.ActivityTypes.LISTENING, E.ActivityTypes.WATCHING)
       }).allow(null)
     }),
     handler(e) {
@@ -65,8 +65,8 @@ var h = {
         },
         isSocketConnected: C
       } = e;
-      if (![E.TransportTypes.IPC, E.TransportTypes.WEBSOCKET, E.TransportTypes.POST_MESSAGE].includes(a.transport)) throw new u.default(E.RPCErrors.INVALID_COMMAND, 'command not available from "'.concat(a.transport, '" transport'));
-      if (null == c && E.TransportTypes.IPC === a.transport) throw new u.default(E.RPCErrors.INVALID_COMMAND, "nonzero pid required");
+      if (![f.TransportTypes.IPC, f.TransportTypes.WEBSOCKET, f.TransportTypes.POST_MESSAGE].includes(a.transport)) throw new u.default(f.RPCErrors.INVALID_COMMAND, 'command not available from "'.concat(a.transport, '" transport'));
+      if (null == c && f.TransportTypes.IPC === a.transport) throw new u.default(f.RPCErrors.INVALID_COMMAND, "nonzero pid required");
       if (null == h) return i.default.dispatch({
         type: "LOCAL_ACTIVITY_UPDATE",
         socketId: a.id,
@@ -74,27 +74,27 @@ var h = {
         activity: h
       }), Promise.resolve(h);
       h.name = a.application.name, h.application_id = a.application.id;
-      let T = a.transport === E.TransportTypes.POST_MESSAGE,
-        I = (0, d.computeActivityFlags)(h, T);
-      I > 0 && (h.flags = I), delete h.instance, null === (t = h.party) || void 0 === t || delete t.privacy;
+      let I = a.transport === f.TransportTypes.POST_MESSAGE,
+        T = (0, d.computeActivityFlags)(h, I);
+      T > 0 && (h.flags = T), delete h.instance, null === (t = h.party) || void 0 === t || delete t.privacy;
       let {
         assets: S,
-        party: N,
-        secrets: A,
-        timestamps: p,
-        buttons: m,
-        type: g
+        party: m,
+        secrets: p,
+        timestamps: A,
+        buttons: g,
+        type: N
       } = h;
-      if ((null == g || g !== f.ActivityTypes.PLAYING && !T) && (h.type = f.ActivityTypes.PLAYING), null != A) {
-        let e = s.values(A).filter(e => !!e);
-        if (null != N && s.intersection(e, [N.id]).length > 0 && !_.includes(a.application.id)) throw new u.default(E.RPCErrors.INVALID_ACTIVITY_SECRET, "secrets cannot match the party id");
-        if (s.uniq(e).length < e.length) throw new u.default(E.RPCErrors.INVALID_ACTIVITY_SECRET, "secrets must be unique");
-        if (null != m) throw new u.default(E.RPCErrors.INVALID_ACTIVITY_SECRET, "secrets cannot currently be sent with buttons")
+      if ((null == N || N !== E.ActivityTypes.PLAYING && !I) && (h.type = E.ActivityTypes.PLAYING), null != p) {
+        let e = s.values(p).filter(e => !!e);
+        if (null != m && s.intersection(e, [m.id]).length > 0 && !_.includes(a.application.id)) throw new u.default(f.RPCErrors.INVALID_ACTIVITY_SECRET, "secrets cannot match the party id");
+        if (s.uniq(e).length < e.length) throw new u.default(f.RPCErrors.INVALID_ACTIVITY_SECRET, "secrets must be unique");
+        if (null != g) throw new u.default(f.RPCErrors.INVALID_ACTIVITY_SECRET, "secrets cannot currently be sent with buttons")
       }
-      if (null != m && (h.metadata = {
-          button_urls: m.map(e => e.url)
-        }, h.buttons = m.map(e => e.label)), null != p)
-        for (let e of Object.keys(p)) Date.now().toString().length - p[e].toString().length > 2 && (p[e] = Math.floor(p[e] * o.default.Millis.SECOND));
+      if (null != g && (h.metadata = {
+          button_urls: g.map(e => e.url)
+        }, h.buttons = g.map(e => e.label)), null != A)
+        for (let e of Object.keys(A)) Date.now().toString().length - A[e].toString().length > 2 && (A[e] = Math.floor(A[e] * o.default.Millis.SECOND));
       if (null == S) n = Promise.resolve([]);
       else {
         if (null == a.application || null == a.application.id) throw Error();
@@ -116,7 +116,7 @@ var h = {
           application_id: a.application.id,
           type: h.type
         };
-        return null != s && (o.has_match_secret = !!s.match, o.has_join_secret = !!s.join), null != S && (o.has_images = !!(S.large_image || S.small_image)), null != r && (o.party_max = null != r.size ? r.size[1] : void 0, o.party_id = r.id), l.default.track(f.AnalyticEvents.ACTIVITY_UPDATED, o), h
+        return null != s && (o.has_match_secret = !!s.match, o.has_join_secret = !!s.join), null != S && (o.has_images = !!(S.large_image || S.small_image)), null != r && (o.party_max = null != r.size ? r.size[1] : void 0, o.party_id = r.id), l.default.track(E.AnalyticEvents.ACTIVITY_UPDATED, o), h
       })
     }
   }

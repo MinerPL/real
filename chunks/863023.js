@@ -13,8 +13,8 @@ var a = n("37983"),
   u = n("697218"),
   d = n("945330"),
   c = n("768815"),
-  E = n("176661"),
-  f = n("922832"),
+  f = n("176661"),
+  E = n("922832"),
   _ = n("782340"),
   h = n("850832");
 
@@ -37,9 +37,9 @@ function C(e) {
     className: h.container,
     children: [(0, a.jsx)("div", {
       className: h.details,
-      children: (0, a.jsx)(E.default, {
+      children: (0, a.jsx)(f.default, {
         otherUser: t,
-        status: f.UserLinkStatus.ACTIVE
+        status: E.UserLinkStatus.ACTIVE
       })
     }), (0, a.jsx)("div", {
       className: h.actions,

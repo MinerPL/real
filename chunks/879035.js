@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return S
   }
 }), n("222007");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("446674"),
   i = n("77078"),
   r = n("404118"),
@@ -14,11 +14,11 @@ var l = n("37983"),
   d = n("945956"),
   c = n("195812"),
   f = n("733350"),
-  E = n("664336"),
-  h = n("868308"),
-  _ = n("782340"),
-  S = n("122693");
-class T extends a.PureComponent {
+  h = n("664336"),
+  E = n("868308"),
+  m = n("782340"),
+  p = n("122693");
+class g extends l.PureComponent {
   static getDerivedStateFromProps(e, t) {
     return e.mode !== t.memoizedMode ? {
       memoizedMode: e.mode,
@@ -26,7 +26,7 @@ class T extends a.PureComponent {
     } : null
   }
   handleDownloadApps() {
-    (0, i.openModal)(e => (0, l.jsx)(o.default, {
+    (0, i.openModal)(e => (0, a.jsx)(o.default, {
       source: "Links",
       ...e
     }))
@@ -34,18 +34,18 @@ class T extends a.PureComponent {
   render() {
     switch (this.props.mode) {
       case "UPDATE_AVAILABLE":
-        return (0, l.jsx)(E.Icon, {
+        return (0, a.jsx)(h.Icon, {
           hideOnClick: !1,
-          tooltip: _.default.Messages.UPDATE_AVAILABLE,
-          foreground: S.downloadArrow,
-          background: S.cloud,
+          tooltip: m.default.Messages.UPDATE_AVAILABLE,
+          foreground: p.downloadArrow,
+          background: p.cloud,
           icon: f.default
         });
       case "UPDATE_MANUALLY":
       case "UPDATE_DOWNLOADED":
-        return (0, l.jsx)(E.Icon, {
-          tooltip: _.default.Messages.UPDATE_DOWNLOADED,
-          foreground: S.updateIconForeground,
+        return (0, a.jsx)(h.Icon, {
+          tooltip: m.default.Messages.UPDATE_DOWNLOADED,
+          foreground: p.updateIconForeground,
           onClick: this.handleInstallDownload,
           icon: c.default
         });
@@ -59,19 +59,19 @@ class T extends a.PureComponent {
       clicked: !1
     }, this.handleInstallDownload = () => {
       d.default.isConnected() ? r.default.show({
-        title: _.default.Messages.UPDATE_DURING_CALL_TITLE,
-        body: _.default.Messages.UPDATE_DURING_CALL_BODY,
+        title: m.default.Messages.UPDATE_DURING_CALL_TITLE,
+        body: m.default.Messages.UPDATE_DURING_CALL_BODY,
         onConfirm: this.doUpdate,
-        cancelText: _.default.Messages.CANCEL,
-        confirmText: _.default.Messages.UPDATE_DURING_CALL_CONTINUE
+        cancelText: m.default.Messages.CANCEL,
+        confirmText: m.default.Messages.UPDATE_DURING_CALL_CONTINUE
       }) : this.doUpdate()
     }, this.doUpdate = () => {
       !this.state.clicked && (this.setState({
         clicked: !0
-      }), (0, h.quitAndInstall)())
+      }), (0, E.quitAndInstall)())
     }
   }
 }
-var N = s.default.connectStores([u.default], () => ({
+var S = s.default.connectStores([u.default], () => ({
   mode: u.default.getState()
-}))(T)
+}))(g)

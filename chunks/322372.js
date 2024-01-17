@@ -14,8 +14,8 @@ var s = n("77078"),
   u = n("806468"),
   d = n("922832"),
   c = n("782340"),
-  E = n("960943"),
-  f = n("358616"),
+  f = n("960943"),
+  E = n("358616"),
   _ = n("215529");
 let h = () => {
   let e = (0, o.useUserForLinkStatus)(d.UserLinkStatus.ACTIVE),
@@ -25,7 +25,7 @@ let h = () => {
     } = (0, l.default)(),
     i = (0, o.useHasMaxConnections)();
   return i || t && e.length > 0 ? null : (0, a.jsx)("div", {
-    className: E.button,
+    className: f.button,
     children: t ? (0, a.jsx)(s.Button, {
       fullWidth: !1,
       size: s.ButtonSizes.LARGE,
@@ -43,11 +43,11 @@ var C = () => {
       articleLink: "https://support.discord.com/hc/articles/14155043715735"
     }));
   return (0, a.jsxs)("div", {
-    className: E.container,
+    className: f.container,
     children: [(0, a.jsxs)("div", {
       children: [(0, a.jsx)("div", {
         children: (0, a.jsxs)("div", {
-          className: E.headerText,
+          className: f.headerText,
           children: [(0, a.jsx)(s.Heading, {
             variant: "heading-xl/medium",
             children: (0, a.jsx)(s.HeadingLevel, {
@@ -61,9 +61,9 @@ var C = () => {
         })
       }), (0, a.jsx)(h, {})]
     }), (0, a.jsx)("div", {
-      className: E.headerImage,
+      className: f.headerImage,
       children: (0, a.jsx)("img", {
-        src: e ? f : _,
+        src: e ? E : _,
         alt: c.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_IMAGE_ALT
       })
     })]

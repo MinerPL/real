@@ -1,5 +1,5 @@
 "use strict";
-let l;
+let u;
 t.r(n), t.d(n, {
   clearVoiceChannelEffectForUser: function() {
     return E
@@ -8,7 +8,7 @@ t.r(n), t.d(n, {
     return A
   }
 }), t("222007"), t("843762");
-var u = t("917351"),
+var l = t("917351"),
   i = t("446674"),
   o = t("819855"),
   a = t("913144"),
@@ -16,8 +16,8 @@ var u = t("917351"),
   r = t("397485"),
   s = t("99795");
 let c = [],
-  f = {},
-  _ = [],
+  _ = {},
+  f = [],
   E = e => {
     null != e && a.default.dispatch({
       type: "VOICE_CHANNEL_EFFECT_CLEAR",
@@ -26,22 +26,22 @@ let c = [],
   },
   S = [],
   C = 10 * d.default.Millis.SECOND,
-  y = (0, u.debounce)(() => {
-    let e = (0, r.getEffectAnnouncement)(_);
-    o.AccessibilityAnnouncer.announce(e, "polite"), _ = []
+  y = (0, l.debounce)(() => {
+    let e = (0, r.getEffectAnnouncement)(f);
+    o.AccessibilityAnnouncer.announce(e, "polite"), f = []
   }, 500);
 class m extends i.default.Store {
   get recentlyUsedEmojis() {
     return c
   }
   get isOnCooldown() {
-    return null != l && new Date < l
+    return null != u && new Date < u
   }
   get effectCooldownEndTime() {
-    return l
+    return u
   }
   getEffectForUserId(e) {
-    return f[e]
+    return _[e]
   }
 }
 m.displayName = "VoiceChannelEffectsStore";
@@ -50,25 +50,25 @@ var A = new m(a.default, {
     let {
       userId: n
     } = e;
-    null != f[n] && delete f[n]
+    null != _[n] && delete _[n]
   },
   VOICE_CHANNEL_EFFECT_RECENT_EMOJI: e => {
     let {
       emoji: n
     } = e;
-    null != n && (c.unshift(n), (c = (0, u.uniqBy)(c, "name")).length > s.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT + 1 && c.pop())
+    null != n && (c.unshift(n), (c = (0, l.uniqBy)(c, "name")).length > s.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT + 1 && c.pop())
   },
   VOICE_CHANNEL_EFFECT_SEND: e => {
     let {
       emoji: n,
       userId: t,
-      animationType: l
+      animationType: u
     } = e;
-    null != n && null != l && (f[t] = {
+    null != n && null != u && (_[t] = {
       emoji: n,
       sentAt: Date.now(),
-      animationType: l
-    }, _ = [..._, {
+      animationType: u
+    }, f = [...f, {
       emojiName: n.name,
       userId: t
     }], y())
@@ -78,13 +78,13 @@ var A = new m(a.default, {
     if ((S = [e, ...S].slice(0, 20)).length >= 20) {
       let n = S[S.length - 1],
         t = e.getTime() - n.getTime();
-      t < C && (l = new Date(e.getTime() + C - t))
+      t < C && (u = new Date(e.getTime() + C - t))
     }
   },
   VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: e => {
     let {
       cooldownEndsAtMs: n
     } = e;
-    l = new Date(Date.now() + n)
+    u = new Date(Date.now() + n)
   }
 })

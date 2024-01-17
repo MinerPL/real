@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return i
   }
 }), n("686130"), n("781738");
-let i = /[<>:"/\\|?*\.]/g;
-var a = function(e) {
-  return e.replaceAll(i, "").trim().replaceAll(" ", "_")
+let a = /[<>:"/\\|?*\.]/g;
+var i = function(e) {
+  return e.replaceAll(a, "").trim().replaceAll(" ", "_")
 }

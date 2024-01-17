@@ -22,10 +22,10 @@ function d(e) {
   s.useEffect(() => {
     null == d || d()
   }, [d]);
-  let E = s.useCallback(e => {
+  let f = s.useCallback(e => {
       t(e), null == c || c(r.ContentDismissActionType.PRIMARY)
     }, [t, c]),
-    f = s.useCallback(() => {
+    E = s.useCallback(() => {
       null == n || n(), null == c || c(r.ContentDismissActionType.SECONDARY)
     }, [n, c]);
   return (0, a.jsxs)("div", {
@@ -46,13 +46,13 @@ function d(e) {
         fullWidth: !0,
         size: i.Button.Sizes.SMALL,
         color: i.Button.Colors.BRAND,
-        onClick: E,
+        onClick: f,
         children: o.default.Messages.LEARN_MORE
       }), (0, a.jsx)(i.Button, {
         fullWidth: !0,
         size: i.Button.Sizes.SMALL,
         look: i.Button.Looks.BLANK,
-        onClick: f,
+        onClick: E,
         children: o.default.Messages.NO_THANKS
       })]
     })]

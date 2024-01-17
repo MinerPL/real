@@ -7,12 +7,12 @@ i.r(t), i.d(t, {
 var r = i("446674"),
   n = i("913144"),
   s = i("271938"),
-  u = i("26989"),
-  a = i("305961"),
+  a = i("26989"),
+  u = i("305961"),
   l = i("697218"),
   h = i("637240"),
-  o = i("159132"),
-  d = i("835257");
+  d = i("159132"),
+  o = i("835257");
 let m = !1,
   c = {};
 
@@ -26,18 +26,18 @@ function M(e) {
   i.reset(t)
 }
 
-function f() {
+function g() {
   return !1
 }
 
-function g(e) {
+function b(e) {
   let {
     guildId: t
   } = e, i = _(t);
   return i.rebuildAllMembers()
 }
 
-function b(e) {
+function f(e) {
   let {
     guildId: t,
     userId: i
@@ -45,7 +45,7 @@ function b(e) {
   return r.updateMembersByMemberIds([i])
 }
 
-function I(e) {
+function S(e) {
   let t = !1;
   return e.guilds.forEach(e => {
     let {
@@ -57,7 +57,7 @@ function I(e) {
 }
 class p extends r.default.Store {
   initialize() {
-    this.waitFor(s.default, u.default, l.default)
+    this.waitFor(s.default, a.default, l.default)
   }
   isInitialized(e) {
     let t = _(e);
@@ -128,22 +128,22 @@ class p extends r.default.Store {
   }
 }
 p.displayName = "MemberSafetyStore";
-let S = new p(n.default, {
+let I = new p(n.default, {
   CONNECTION_OPEN: function(e) {
     return m ? m = !1 : ! function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
       for (let t in c) M(t, e)
-    }(!0), I(e)
+    }(!0), S(e)
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
-    return I(e)
+    return S(e)
   },
   LOCAL_MESSAGES_LOADED: function(e) {
     let {
       guildId: t,
       members: i
     } = e;
-    if (null == t || null == a.default.getGuild(t)) return !1;
+    if (null == t || null == u.default.getGuild(t)) return !1;
     m = !0;
     let r = _(t),
       n = [];
@@ -194,8 +194,8 @@ let S = new p(n.default, {
     } = e, r = _(t);
     return r.updateServerMembers(i)
   },
-  GUILD_MEMBER_ADD: f,
-  GUILD_MEMBER_UPDATE: f,
+  GUILD_MEMBER_ADD: g,
+  GUILD_MEMBER_UPDATE: g,
   GUILD_MEMBER_UPDATE_LOCAL: function(e) {
     let {
       guildId: t
@@ -209,8 +209,8 @@ let S = new p(n.default, {
     } = e, r = _(t);
     return r.removeMember(i.id)
   },
-  GUILD_ROLE_UPDATE: g,
-  GUILD_ROLE_DELETE: g,
+  GUILD_ROLE_UPDATE: b,
+  GUILD_ROLE_DELETE: b,
   GUILD_MEMBER_PROFILE_UPDATE: function(e) {
     let {
       guildId: t,
@@ -218,8 +218,8 @@ let S = new p(n.default, {
     } = e, r = _(t);
     return r.updateMembersByMemberIds([i.user.id])
   },
-  GUILD_ROLE_MEMBER_REMOVE: b,
-  GUILD_ROLE_MEMBER_ADD: b,
+  GUILD_ROLE_MEMBER_REMOVE: f,
+  GUILD_ROLE_MEMBER_ADD: f,
   THREAD_MEMBER_LIST_UPDATE: function(e) {
     let {
       guildId: t,
@@ -315,7 +315,7 @@ let S = new p(n.default, {
     let {
       guildId: t,
       memberSupplementals: i
-    } = e, r = (0, o.syncMemberSupplemental)(t, i);
+    } = e, r = (0, d.syncMemberSupplemental)(t, i);
     if (r) {
       let e = _(t);
       e.updateMembersByMemberIds(i.map(e => e.userId))
@@ -329,16 +329,16 @@ let S = new p(n.default, {
       total_result_count: r
     } = e, n = _(t), {
       memberIds: s,
-      memberSupplementals: u
+      memberSupplementals: a
     } = i.reduce((e, t) => {
       let {
         member: i,
         source_invite_code: r,
         join_source_type: n,
         inviter_id: s
-      } = t, u = i.user;
-      return e.memberIds.push(u.id), e.memberSupplementals.push({
-        userId: u.id,
+      } = t, a = i.user;
+      return e.memberIds.push(a.id), e.memberSupplementals.push({
+        userId: a.id,
         sourceInviteCode: r,
         joinSourceType: n,
         inviterId: s
@@ -346,13 +346,13 @@ let S = new p(n.default, {
     }, {
       memberIds: [],
       memberSupplementals: []
-    }), a = (0, o.syncMemberSupplemental)(t, u);
-    (0, d.registerFetchedSupplementals)(t, s);
+    }), u = (0, d.syncMemberSupplemental)(t, a);
+    (0, o.registerFetchedSupplementals)(t, s);
     let l = n.updateSearchedMembersByMemberIds(s),
       [h] = n.updatePaginationState({
         totalResultsCount: r
       }, !1);
-    return a || l || h
+    return u || l || h
   },
   MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH: function(e) {
     let {
@@ -362,4 +362,4 @@ let S = new p(n.default, {
     return r.updateMembersByMemberIds(i)
   }
 });
-var E = S
+var E = I

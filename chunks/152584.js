@@ -1,84 +1,84 @@
 "use strict";
 n.r(t), n.d(t, {
   accountDetailsInit: function() {
-    return S
+    return p
   },
   accountDetailsClose: function() {
-    return T
+    return C
   },
   disableAccount: function() {
-    return p
+    return I
   },
   saveAccountRequest: function() {
     return A
   },
   saveAccountChanges: function() {
-    return g
+    return T
   },
   getHarvestStatus: function() {
-    return C
-  },
-  requestHarvest: function() {
-    return I
-  },
-  setPendingAvatar: function() {
-    return N
-  },
-  setPendingGlobalNameName: function() {
-    return U
-  },
-  setPendingAvatarDecoration: function() {
-    return O
-  },
-  setPendingProfileEffectId: function() {
-    return h
-  },
-  clearErrors: function() {
     return R
   },
-  resetPendingAccountChanges: function() {
-    return v
+  requestHarvest: function() {
+    return h
   },
-  resetAllPending: function() {
+  setPendingAvatar: function() {
+    return S
+  },
+  setPendingGlobalNameName: function() {
+    return N
+  },
+  setPendingAvatarDecoration: function() {
     return m
   },
-  resetAndCloseUserProfileForm: function() {
+  setPendingProfileEffectId: function() {
+    return g
+  },
+  clearErrors: function() {
     return P
   },
+  resetPendingAccountChanges: function() {
+    return O
+  },
+  resetAllPending: function() {
+    return v
+  },
+  resetAndCloseUserProfileForm: function() {
+    return L
+  },
   setDisableSubmit: function() {
-    return y
+    return U
   }
 });
-var i = n("872717"),
-  l = n("95410"),
-  u = n("819855"),
+var r = n("872717"),
+  i = n("95410"),
+  l = n("819855"),
   o = n("913144"),
-  a = n("393414"),
-  r = n("599110"),
-  d = n("315102"),
-  s = n("730622"),
-  c = n("437822"),
+  s = n("393414"),
+  a = n("599110"),
+  u = n("315102"),
+  c = n("730622"),
+  d = n("437822"),
   f = n("49111"),
   E = n("191349"),
   _ = n("782340");
 
-function S() {
+function p() {
   o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_INIT"
   })
 }
 
-function T() {
+function C() {
   o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_CLOSE"
   })
 }
 
-function p(e, t) {
+function I(e, t) {
   let n = t ? _.default.Messages.DELETE_ACCOUNT : _.default.Messages.DISABLE_ACCOUNT,
-    l = t ? f.Endpoints.DELETE_ACCOUNT : f.Endpoints.DISABLE_ACCOUNT;
-  return (0, s.default)(t => i.default.post({
-    url: l,
+    i = t ? f.Endpoints.DELETE_ACCOUNT : f.Endpoints.DISABLE_ACCOUNT;
+  return (0, c.default)(t => r.default.post({
+    url: i,
     body: {
       password: e,
       ...t
@@ -90,11 +90,11 @@ function p(e, t) {
     },
     checkEnabled: !1
   }).then(() => {
-    c.default.logoutInternal(), (0, a.transitionTo)(f.Routes.DEFAULT_LOGGED_OUT)
+    d.default.logoutInternal(), (0, s.transitionTo)(f.Routes.DEFAULT_LOGGED_OUT)
   })
 }
 async function A(e) {
-  let t = await i.default.patch({
+  let t = await r.default.patch({
       url: f.Endpoints.ME,
       oldFormErrors: !0,
       body: e
@@ -117,38 +117,38 @@ async function A(e) {
   }), t
 }
 
-function g(e) {
+function T(e) {
   let {
     username: t,
     discriminator: n,
-    email: i,
-    emailToken: u,
-    password: a,
-    avatar: c,
-    avatarDecoration: S,
-    newPassword: T,
-    globalName: p
+    email: r,
+    emailToken: l,
+    password: s,
+    avatar: d,
+    avatarDecoration: p,
+    newPassword: C,
+    globalName: I
   } = e;
   return o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SUBMIT"
-  }), (0, s.default)(e => {
+  }), (0, c.default)(e => {
     let o = {
       username: t,
-      email: i,
-      email_token: u,
-      password: a,
-      avatar: c,
+      email: r,
+      email_token: l,
+      password: s,
+      avatar: d,
       discriminator: n,
-      global_name: p,
-      new_password: T,
+      global_name: I,
+      new_password: C,
       ...e
     };
-    null === S && (o.avatar_decoration_id = null), null != S && (o.avatar_decoration_id = S.id, o.avatar_decoration_sku_id = S.skuId);
-    let r = l.default.get(f.DEVICE_TOKEN),
-      d = (0, E.getDevicePushProvider)();
-    null != d && null != r && (o.push_provider = d, o.push_token = r);
-    let s = l.default.get(f.DEVICE_VOIP_TOKEN);
-    return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != s && (o.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, o.push_voip_token = s), A(o)
+    null === p && (o.avatar_decoration_id = null), null != p && (o.avatar_decoration_id = p.id, o.avatar_decoration_sku_id = p.skuId);
+    let a = i.default.get(f.DEVICE_TOKEN),
+      u = (0, E.getDevicePushProvider)();
+    null != u && null != a && (o.push_provider = u, o.push_token = a);
+    let c = i.default.get(f.DEVICE_VOIP_TOKEN);
+    return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != c && (o.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, o.push_voip_token = c), A(o)
   }, {
     checkEnabled: !1,
     modalProps: {
@@ -162,8 +162,8 @@ function g(e) {
     }
   }).then(e => {
     let t = e.body;
-    return r.default.track(f.AnalyticEvents.USER_AVATAR_UPDATED, {
-      animated: (0, d.isAnimatedIconHash)(t.avatar)
+    return a.default.track(f.AnalyticEvents.USER_AVATAR_UPDATED, {
+      animated: (0, u.isAnimatedIconHash)(t.avatar)
     }), o.default.dispatch({
       type: "USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS"
     }), e
@@ -173,73 +173,73 @@ function g(e) {
   }), e))
 }
 
-function C() {
-  return i.default.get({
+function R() {
+  return r.default.get({
     url: f.Endpoints.USER_HARVEST,
     oldFormErrors: !0
   })
 }
 
-function I() {
-  return i.default.post({
+function h() {
+  return r.default.post({
     url: f.Endpoints.USER_HARVEST,
     oldFormErrors: !0
   })
 }
 
-function N(e) {
+function S(e) {
   o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR",
     avatar: e
-  }), null == e ? u.AccessibilityAnnouncer.announce(_.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : u.AccessibilityAnnouncer.announce(_.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
+  }), null == e ? l.AccessibilityAnnouncer.announce(_.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : l.AccessibilityAnnouncer.announce(_.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
 }
 
-function U(e) {
+function N(e) {
   o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME",
     globalName: e
   })
 }
 
-function O(e) {
+function m(e) {
   o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION",
     avatarDecoration: e
   })
 }
 
-function h(e) {
+function g(e) {
   o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID",
     profileEffectId: e
   })
 }
 
-function R() {
+function P() {
   o.default.dispatch({
     type: "USER_SETTINGS_CLEAR_ERRORS"
   })
 }
 
-function v() {
+function O() {
   o.default.dispatch({
     type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
   })
 }
 
-function m() {
+function v() {
   o.default.dispatch({
     type: "USER_SETTINGS_RESET_ALL_PENDING"
   })
 }
 
-function P() {
+function L() {
   o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM"
   })
 }
 
-function y(e) {
+function U(e) {
   o.default.dispatch({
     type: "USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT",
     disable: e

@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("77078"),
+var l = n("77078"),
   s = n("543289"),
   i = n("782340"),
   r = n("651245");
@@ -18,25 +18,25 @@ function o(e) {
     tip: o,
     disableStars: u
   } = e;
-  return (0, l.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: r.container,
-    children: [(0, l.jsxs)("div", {
+    children: [(0, a.jsxs)("div", {
       className: r.iconContainer,
-      children: [(0, l.jsx)(t, {
+      children: [(0, a.jsx)(t, {
         className: r.icon,
         width: 36,
         height: 36
-      }), u ? null : (0, l.jsx)(s.default, {
+      }), u ? null : (0, a.jsx)(s.default, {
         className: r.stars
       })]
-    }), (0, l.jsx)(a.Heading, {
+    }), (0, a.jsx)(l.Heading, {
       className: r.header,
       variant: "heading-xl/semibold",
       children: n
-    }), (0, l.jsxs)(a.Text, {
+    }), (0, a.jsxs)(l.Text, {
       color: "header-secondary",
       variant: "text-xs/normal",
-      children: [u ? null : (0, l.jsxs)(a.Text, {
+      children: [u ? null : (0, a.jsxs)(l.Text, {
         tag: "span",
         className: r.protip,
         variant: "text-xs/bold",

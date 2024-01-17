@@ -13,8 +13,8 @@ var a = n("37983"),
   u = n("568456"),
   d = n("49111"),
   c = n("994428"),
-  E = n("782340"),
-  f = n("393254"),
+  f = n("782340"),
+  E = n("393254"),
   _ = e => {
     let {
       markAsDismissed: t
@@ -24,13 +24,13 @@ var a = n("37983"),
         action: u.DMSafetyCoachmarkActions.VIEW
       })
     }, []), (0, a.jsx)(l.default, {
-      header: E.default.Messages.USER_EXPLICIT_CONTENT_FILTER_COACHMARK_HEADER_V2,
-      content: E.default.Messages.USER_EXPLICIT_CONTENT_FILTER_COACHMARK_CONTENT_V2.format({
+      header: f.default.Messages.USER_EXPLICIT_CONTENT_FILTER_COACHMARK_HEADER_V2,
+      content: f.default.Messages.USER_EXPLICIT_CONTENT_FILTER_COACHMARK_CONTENT_V2.format({
         helpdeskArticle: o.default.getArticleURL(d.HelpdeskArticles.SAFE_DIRECT_MESSAGING)
       }),
-      buttonCTA: E.default.Messages.GOT_IT,
-      secondaryButtonCTA: E.default.Messages.USER_EXPLICIT_CONTENT_FILTER_COACHMARK_REDIRECT,
-      className: f.coachmark,
+      buttonCTA: f.default.Messages.GOT_IT,
+      secondaryButtonCTA: f.default.Messages.USER_EXPLICIT_CONTENT_FILTER_COACHMARK_REDIRECT,
+      className: E.coachmark,
       onClick: e => {
         e.stopPropagation(), t(c.ContentDismissActionType.UNKNOWN), r.default.track(d.AnalyticEvents.DM_SAFETY_COACHMARK_ACTION, {
           action: u.DMSafetyCoachmarkActions.DISMISS
@@ -43,6 +43,6 @@ var a = n("37983"),
       },
       markAsDismissed: t,
       caretPosition: l.CaretPosition.BOTTOM_CENTER,
-      headerClassName: f.header
+      headerClassName: E.header
     })
   }

@@ -21,19 +21,19 @@ var s = n("37983"),
   C = n("299285"),
   p = n("983444"),
   m = n("592407"),
-  E = n("970700"),
-  g = n("271938"),
+  g = n("970700"),
+  E = n("271938"),
   S = n("305961"),
-  _ = n("697218"),
-  A = n("461380"),
+  A = n("697218"),
+  _ = n("461380"),
   T = n("36694"),
   M = n("659500"),
   I = n("701909"),
   N = n("773336"),
-  L = n("299039"),
-  v = n("172554"),
-  R = n("49111"),
-  x = n("188631"),
+  v = n("299039"),
+  L = n("172554"),
+  x = n("49111"),
+  R = n("188631"),
   y = n("782340"),
   D = n("508328");
 
@@ -67,9 +67,9 @@ function O(e) {
       className: i(D.checkmark, {
         [D.animate]: d
       })
-    }) : (0, s.jsx)(A.default, {
+    }) : (0, s.jsx)(_.default, {
       className: D.arrow,
-      direction: A.default.Directions.RIGHT
+      direction: _.default.Directions.RIGHT
     })]
   })
 }
@@ -77,17 +77,17 @@ function O(e) {
 function j(e) {
   let {
     channel: t
-  } = e, l = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != l && L.default.extractTimestamp(l.id) < Date.now() - R.WELCOME_OLD_GUILD_AGE_THRESHOLD, A = (0, u.useStateFromStores)([g.default], () => (null == l ? void 0 : l.ownerId) === g.default.getId(), [l]), {
+  } = e, l = (0, u.useStateFromStores)([S.default], () => null != t ? S.default.getGuild(t.getGuildId()) : null, [t]), f = null != l && v.default.extractTimestamp(l.id) < Date.now() - x.WELCOME_OLD_GUILD_AGE_THRESHOLD, _ = (0, u.useStateFromStores)([E.default], () => (null == l ? void 0 : l.ownerId) === E.default.getId(), [l]), {
     canInvite: T,
     canManageGuild: j,
-    canMessage: P
-  } = (0, p.usePermissions)(t, l), b = (0, u.useStateFromStores)([_.default], () => {
+    canMessage: b
+  } = (0, p.usePermissions)(t, l), P = (0, u.useStateFromStores)([A.default], () => {
     var e, t;
-    return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0
+    return (null === (e = A.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = A.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0
   }), {
-    guildPopulated: U,
+    guildPopulated: H,
     guildMessaged: F,
-    guildPersonalized: H
+    guildPersonalized: U
   } = (0, p.useCompletedStates)(l), {
     handleInvite: k,
     handleMessage: G,
@@ -96,9 +96,9 @@ function j(e) {
     handleAddApplication: V
   } = function(e) {
     let t = a.useCallback(() => {
-        h.default.trackWithMetadata(R.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
-          setup_type: x.AnalyticsSetupTypes.CHANNEL_WELCOME,
-          action: x.AnalyticsActions.INVITE
+        h.default.trackWithMetadata(x.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
+          setup_type: R.AnalyticsSetupTypes.CHANNEL_WELCOME,
+          action: R.AnalyticsActions.INVITE
         }), null != e && (0, c.openModalLazy)(async () => {
           let {
             default: t
@@ -106,48 +106,48 @@ function j(e) {
           return n => (0, s.jsx)(t, {
             ...n,
             guild: e,
-            source: R.InstantInviteSources.CHANNEL_WELCOME,
+            source: x.InstantInviteSources.CHANNEL_WELCOME,
             analyticsLocation: {
-              section: R.AnalyticsSections.CHANNEL_WELCOME_CTA
+              section: x.AnalyticsSections.CHANNEL_WELCOME_CTA
             }
           })
         })
       }, [e]),
       l = a.useCallback(() => {
-        h.default.trackWithMetadata(R.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
-          setup_type: x.AnalyticsSetupTypes.CHANNEL_WELCOME,
-          action: x.AnalyticsActions.SEND_MESSAGE
-        }), M.ComponentDispatch.dispatch(R.ComponentActions.TEXTAREA_FOCUS, {
+        h.default.trackWithMetadata(x.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
+          setup_type: R.AnalyticsSetupTypes.CHANNEL_WELCOME,
+          action: R.AnalyticsActions.SEND_MESSAGE
+        }), M.ComponentDispatch.dispatch(x.ComponentActions.TEXTAREA_FOCUS, {
           highlight: !0,
           channelId: ""
         })
       }, []),
       i = a.useCallback(() => {
-        h.default.trackWithMetadata(R.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
-          setup_type: x.AnalyticsSetupTypes.CHANNEL_WELCOME,
-          action: x.AnalyticsActions.PERSONALIZE_SERVER
-        }), null != e && m.default.open(e.id, R.GuildSettingsSections.OVERVIEW, {
-          section: R.AnalyticsSections.CHANNEL_WELCOME_CTA
+        h.default.trackWithMetadata(x.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
+          setup_type: R.AnalyticsSetupTypes.CHANNEL_WELCOME,
+          action: R.AnalyticsActions.PERSONALIZE_SERVER
+        }), null != e && m.default.open(e.id, x.GuildSettingsSections.OVERVIEW, {
+          section: x.AnalyticsSections.CHANNEL_WELCOME_CTA
         })
       }, [e]),
       r = a.useCallback(() => {
-        h.default.trackWithMetadata(R.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
-          setup_type: x.AnalyticsSetupTypes.CHANNEL_WELCOME,
-          action: x.AnalyticsActions.DOWNLOAD
+        h.default.trackWithMetadata(x.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
+          setup_type: R.AnalyticsSetupTypes.CHANNEL_WELCOME,
+          action: R.AnalyticsActions.DOWNLOAD
         }), (0, c.openModalLazy)(async () => {
           let {
             default: e
           } = await n.el("649486").then(n.bind(n, "649486"));
           return t => (0, s.jsx)(e, {
-            source: R.AnalyticsSections.CHANNEL_WELCOME_CTA,
+            source: x.AnalyticsSections.CHANNEL_WELCOME_CTA,
             ...t
           })
         })
       }, []),
       o = a.useCallback(() => {
-        null != e && (h.default.trackWithMetadata(R.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
-          setup_type: x.AnalyticsSetupTypes.CHANNEL_WELCOME,
-          action: x.AnalyticsActions.ADD_APP
+        null != e && (h.default.trackWithMetadata(x.AnalyticEvents.SERVER_SETUP_CTA_CLICKED, {
+          setup_type: R.AnalyticsSetupTypes.CHANNEL_WELCOME,
+          action: R.AnalyticsActions.ADD_APP
         }), (0, c.openModalLazy)(async () => {
           let {
             default: t
@@ -169,7 +169,7 @@ function j(e) {
       handleDownload: r,
       handleAddApplication: o
     }
-  }(l), W = !(b || U || F || H), {
+  }(l), W = !(P || H || F || U), {
     titleAnimatedStyle: Z,
     opacities: z
   } = function(e) {
@@ -213,35 +213,35 @@ function j(e) {
   }(W), K = (0, u.useStateFromStores)([C.default], () => C.default.getGuildApplicationIds(null == l ? void 0 : l.id)), Y = K.length > 0;
   if (a.useEffect(() => {
       var e;
-      (0, E.fetchGuildIntegrationsApplications)(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : "")
+      (0, g.fetchGuildIntegrationsApplications)(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : "")
     }, [l]), null == l) return null;
-  let q = [];
-  !f && (T && q.push((0, s.jsx)(o.default.div, {
+  let X = [];
+  !f && (T && X.push((0, s.jsx)(o.default.div, {
     className: D.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, s.jsx)(O, {
       iconUrl: n("243826"),
       header: y.default.Messages.WELCOME_CTA_INVITE_TITLE,
-      completed: U,
+      completed: H,
       onClick: k
     })
-  }, "invite")), j && q.push((0, s.jsx)(o.default.div, {
+  }, "invite")), j && X.push((0, s.jsx)(o.default.div, {
     className: D.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, s.jsx)(O, {
       iconUrl: n("215036"),
       header: y.default.Messages.WELCOME_CTA_PERSONALIZE_TITLE,
-      completed: H,
+      completed: U,
       onClick: w
     })
-  }, "customize")), P && q.push((0, s.jsx)(o.default.div, {
+  }, "customize")), b && X.push((0, s.jsx)(o.default.div, {
     className: D.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, s.jsx)(O, {
       iconUrl: n("505873"),
@@ -249,21 +249,21 @@ function j(e) {
       completed: F,
       onClick: G
     })
-  }, "message")), (0, N.isWeb)() && q.push((0, s.jsx)(o.default.div, {
+  }, "message")), (0, N.isWeb)() && X.push((0, s.jsx)(o.default.div, {
     className: D.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, s.jsx)(O, {
       iconUrl: n("238032"),
       header: y.default.Messages.WELCOME_CTA_DOWNLOAD_TITLE,
-      completed: b,
+      completed: P,
       onClick: B
     })
-  }, "download")), q.push((0, s.jsx)(o.default.div, {
+  }, "download")), X.push((0, s.jsx)(o.default.div, {
     className: D.cardWrapper,
     style: W ? {
-      opacity: z[q.length]
+      opacity: z[X.length]
     } : {},
     children: (0, s.jsx)(O, {
       iconUrl: n("356451"),
@@ -272,10 +272,10 @@ function j(e) {
       onClick: V
     })
   }, "addapp")));
-  let X = A ? y.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : y.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
-  f && (X = y.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
-  let J = "".concat(I.default.getArticleURL(R.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
-  return (0, s.jsx)(v.default, {
+  let q = _ ? y.default.Messages.WELCOME_CTA_SUBTITLE_OWNER : y.default.Messages.WELCOME_CTA_SUBTITLE_MEMBER;
+  f && (q = y.default.Messages.WELCOME_CTA_SUBTITLE_EXISTING_SERVER);
+  let J = "".concat(I.default.getArticleURL(x.HelpdeskArticles.GUILD_GETTING_STARTED), "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm");
+  return (0, s.jsx)(L.default, {
     channelId: t.id,
     children: (0, s.jsx)("div", {
       className: D.container,
@@ -293,14 +293,14 @@ function j(e) {
             color: "header-secondary",
             className: i({
               [D.subtitle]: !0,
-              [D.noChildren]: 0 === q.length
+              [D.noChildren]: 0 === X.length
             }),
             variant: "text-sm/normal",
-            children: [X, " ", q.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
+            children: [q, " ", X.length > 0 ? y.default.Messages.WELCOME_CTA_SUBTITLE_ACTION_WITH_GUIDE.format({
               guideURL: J
             }) : null]
           })]
-        }), q]
+        }), X]
       })
     })
   })

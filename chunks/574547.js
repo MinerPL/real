@@ -7,18 +7,18 @@ s.r(t), s.d(t, {
     return E
   }
 }), s("424973");
-var n = s("37983"),
-  r = s("884691"),
+var r = s("37983"),
+  n = s("884691"),
   a = s("77078"),
-  l = s("812952"),
-  i = s("740055"),
+  i = s("812952"),
+  l = s("740055"),
   o = s("545876"),
   u = s("181114"),
   d = s("561703"),
   c = s("315585"),
   p = s("153160"),
-  S = s("782340"),
-  h = s("36662");
+  h = s("782340"),
+  S = s("36662");
 let f = e => {
     let {
       legalNotice: t,
@@ -26,56 +26,56 @@ let f = e => {
       price: u,
       hidePersonalInformation: f,
       paymentSourceId: E,
-      isGiftable: _,
+      isGiftable: P,
       isGift: A,
-      needsToBeGift: I,
-      onPaymentSourceChange: P,
+      needsToBeGift: _,
+      onPaymentSourceChange: m,
       onPaymentSourceAdd: C,
-      onPurchaseTermsChange: T,
-      onToggleIsGift: m
-    } = e, R = [], N = null != E ? s[E] : null;
-    return null != N && N.invalid && R.push((0, n.jsx)(l.default, {
+      onPurchaseTermsChange: I,
+      onToggleIsGift: T
+    } = e, N = [], R = null != E ? s[E] : null;
+    return null != R && R.invalid && N.push((0, r.jsx)(i.default, {
       icon: c.default,
-      color: l.default.Colors.ERROR,
-      iconSize: l.default.Sizes.NONE,
-      iconClassName: h.invalidIcon,
-      children: S.default.Messages.BILLING_PAYMENT_SOURCE_INVALID
-    }, "source_invalid")), null != u && (u.taxInclusive ? R.push((0, n.jsx)(l.default, {
+      color: i.default.Colors.ERROR,
+      iconSize: i.default.Sizes.NONE,
+      iconClassName: S.invalidIcon,
+      children: h.default.Messages.BILLING_PAYMENT_SOURCE_INVALID
+    }, "source_invalid")), null != u && (u.taxInclusive ? N.push((0, r.jsx)(i.default, {
       icon: d.default,
-      color: l.default.Colors.PRIMARY,
-      iconSize: l.default.Sizes.LARGE,
-      children: S.default.Messages.BILLING_SALES_TAX_INCLUDED
-    }, "tax_included")) : u.tax > 0 && R.push((0, n.jsx)(l.default, {
+      color: i.default.Colors.PRIMARY,
+      iconSize: i.default.Sizes.LARGE,
+      children: h.default.Messages.BILLING_SALES_TAX_INCLUDED
+    }, "tax_included")) : u.tax > 0 && N.push((0, r.jsx)(i.default, {
       icon: d.default,
-      color: l.default.Colors.PRIMARY,
-      iconSize: l.default.Sizes.LARGE,
-      children: S.default.Messages.BILLING_SALES_TAX_ADDED.format({
+      color: i.default.Colors.PRIMARY,
+      iconSize: i.default.Sizes.LARGE,
+      children: h.default.Messages.BILLING_SALES_TAX_ADDED.format({
         tax: (0, p.formatPrice)(u.tax, u.currency)
       })
-    }, "tax_added"))), (0, n.jsxs)(r.Fragment, {
-      children: [(0, n.jsx)(a.FormTitle, {
-        className: h.formTitle,
-        children: S.default.Messages.BILLING_PAY_FOR_IT_WITH
-      }), (0, n.jsx)(i.default, {
+    }, "tax_added"))), (0, r.jsxs)(n.Fragment, {
+      children: [(0, r.jsx)(a.FormTitle, {
+        className: S.formTitle,
+        children: h.default.Messages.BILLING_PAY_FOR_IT_WITH
+      }), (0, r.jsx)(l.default, {
         paymentSources: Object.values(s),
         selectedPaymentSourceId: E,
         hidePersonalInformation: f,
-        onChange: P,
+        onChange: m,
         onPaymentSourceAdd: C
-      }), R, _ && (0, n.jsx)(a.Checkbox, {
-        disabled: I,
-        className: h.giftToggle,
+      }), N, P && (0, r.jsx)(a.Checkbox, {
+        disabled: _,
+        className: S.giftToggle,
         type: a.Checkbox.Types.INVERTED,
         value: A,
-        onChange: m,
-        children: (0, n.jsx)("div", {
-          className: h.checkboxLabel,
-          children: S.default.Messages.BILLING_IS_GIFT_PURCHASE
-        })
-      }), (0, n.jsx)(o.default, {
         onChange: T,
+        children: (0, r.jsx)("div", {
+          className: S.checkboxLabel,
+          children: h.default.Messages.BILLING_IS_GIFT_PURCHASE
+        })
+      }), (0, r.jsx)(o.default, {
+        onChange: I,
         forceShow: !0,
-        className: h.purchaseTerms,
+        className: S.purchaseTerms,
         finePrint: t
       })]
     })
@@ -84,34 +84,34 @@ let f = e => {
     let {
       canSubmit: t,
       submitButtonText: s,
-      useShinySubmitButton: r,
-      isPurchasing: l,
-      hasAcceptedTerms: i,
+      useShinySubmitButton: n,
+      isPurchasing: i,
+      hasAcceptedTerms: l,
       paymentSource: o,
       onPurchase: d,
       tooltipText: c,
       needsToBeGift: p,
-      isGift: S
+      isGift: h
     } = e, f = null != o && !o.invalid, E = {
-      submitting: l,
+      submitting: i,
       color: a.Button.Colors.GREEN,
-      disabled: !(i && !(p && !S) && f && t),
+      disabled: !(l && !(p && !h) && f && t),
       onClick: d
     };
-    return (0, n.jsx)(a.ModalFooter, {
-      children: (0, n.jsxs)("div", {
-        className: h.buyButtonTooltipWrapper,
-        children: [E.disabled && null != c ? (0, n.jsx)(a.Tooltip, {
+    return (0, r.jsx)(a.ModalFooter, {
+      children: (0, r.jsxs)("div", {
+        className: S.buyButtonTooltipWrapper,
+        children: [E.disabled && null != c ? (0, r.jsx)(a.Tooltip, {
           text: c,
-          children: e => (0, n.jsx)("div", {
+          children: e => (0, r.jsx)("div", {
             "aria-hidden": !0,
-            className: h.buyButtonTooltipTarget,
+            className: S.buyButtonTooltipTarget,
             ...e
           })
-        }) : null, r ? (0, n.jsx)(u.default, {
+        }) : null, n ? (0, r.jsx)(u.default, {
           ...E,
           children: s
-        }) : (0, n.jsx)(a.Button, {
+        }) : (0, r.jsx)(a.Button, {
           type: "submit",
           ...E,
           children: s

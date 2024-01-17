@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 });
 var a = n("37983");
@@ -14,14 +14,14 @@ var s = n("151426"),
   u = n("525065"),
   d = n("305961"),
   c = n("957255"),
-  E = n("867965"),
-  f = n("49111"),
+  f = n("867965"),
+  E = n("49111"),
   _ = n("994428");
 let h = e => {
   var t;
   let n = d.default.getGuild(e),
-    a = !!(null == n ? void 0 : n.hasFeature(f.GuildFeatures.COMMUNITY)),
-    i = c.default.can(f.Permissions.MANAGE_CHANNELS, n),
+    a = !!(null == n ? void 0 : n.hasFeature(E.GuildFeatures.COMMUNITY)),
+    i = c.default.can(E.Permissions.MANAGE_CHANNELS, n),
     l = (0, o.isDismissibleContentDismissed)(s.DismissibleContent.FORUM_CHANNEL_UPSELL_MODAL),
     r = null !== (t = u.default.getMemberCount(e)) && void 0 !== t ? t : 0;
   return a && i && !l && r >= 200
@@ -40,7 +40,7 @@ class C extends r.default {
     if (null == t) return;
     let l = h(t);
     if (!l) return;
-    (0, E.trackForumUpsellModalViewed)(), (0, o.requestMarkDismissibleContentAsShown)(s.DismissibleContent.FORUM_CHANNEL_UPSELL_MODAL);
+    (0, f.trackForumUpsellModalViewed)(), (0, o.requestMarkDismissibleContentAsShown)(s.DismissibleContent.FORUM_CHANNEL_UPSELL_MODAL);
     let r = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.ContentDismissActionType.DISMISS;
       (0, o.markDismissibleContentAsDismissed)(s.DismissibleContent.FORUM_CHANNEL_UPSELL_MODAL, {
@@ -63,8 +63,8 @@ class C extends r.default {
       onCloseCallback: () => (0, o.markDismissibleContentAsDismissed)(s.DismissibleContent.FORUM_CHANNEL_UPSELL_MODAL, {
         dismissAction: _.ContentDismissActionType.DISMISS
       }),
-      onCloseRequest: f.NOOP_NULL
+      onCloseRequest: E.NOOP_NULL
     })
   }
 }
-var T = new C
+var I = new C

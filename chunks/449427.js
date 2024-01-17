@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var a = n("37983");
@@ -14,16 +14,16 @@ var s = n("414456"),
   u = n("318042"),
   d = n("782340"),
   c = n("391269"),
-  E = function(e) {
+  f = function(e) {
     var t;
     let {
       title: n,
       className: s,
-      color: E,
-      animate: f,
+      color: f,
+      animate: E,
       gradientStopColor: _,
       getHistoricalTotalBytes: h
-    } = e, C = (0, l.useColorValue)(E).hex, T = null === (t = (0, l.useColorValue)(_)) || void 0 === t ? void 0 : t.hex;
+    } = e, C = (0, l.useColorValue)(f).hex, I = null === (t = (0, l.useColorValue)(_)) || void 0 === t ? void 0 : t.hex;
     return (0, a.jsx)(u.default, {
       getHistoricalTotalBytes: h,
       children: (e, t, l) => {
@@ -54,9 +54,9 @@ var s = n("414456"),
                 className: c.sparkChart,
                 updateInterval: t,
                 color: C,
-                gradientStopColor: T,
+                gradientStopColor: I,
                 numUpdatesToShow: l,
-                animate: f,
+                animate: E,
                 pixelWidth: 600,
                 pixelHeight: 48,
                 lineWidth: 4

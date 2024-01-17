@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 });
 var a = n("37983");
@@ -14,12 +14,12 @@ var s = n("987317"),
   u = n("751661"),
   d = n("734019"),
   c = n("293137"),
-  E = n("962541"),
-  f = n("782340");
+  f = n("962541"),
+  E = n("782340");
 
 function _() {
-  return (0, a.jsx)(E.default, {
-    tooltipText: f.default.Messages.DISCONNECT_SELF,
+  return (0, a.jsx)(f.default, {
+    tooltipText: E.default.Messages.DISCONNECT_SELF,
     onClick: () => {
       (0, i.stopBroadcast)(), s.default.disconnect()
     },
@@ -31,8 +31,8 @@ function h(e) {
   let {
     channel: t
   } = e;
-  return (0, a.jsx)(E.default, {
-    tooltipText: f.default.Messages.AUDIENCE_DISCONNECT,
+  return (0, a.jsx)(f.default, {
+    tooltipText: E.default.Messages.AUDIENCE_DISCONNECT,
     onClick: () => {
       if ((0, d.default)(t)) {
         (0, u.openEndStageModal)(t);
@@ -48,8 +48,8 @@ function C(e) {
   let {
     channel: t
   } = e;
-  return (0, a.jsx)(E.default, {
-    tooltipText: f.default.Messages.DISCONNECT_SELF,
+  return (0, a.jsx)(f.default, {
+    tooltipText: E.default.Messages.DISCONNECT_SELF,
     onClick: () => {
       if ((0, o.default)(t)) {
         (0, r.openEndEventModal)(t);
@@ -61,7 +61,7 @@ function C(e) {
   })
 }
 
-function T(e) {
+function I(e) {
   let {
     channel: t
   } = e, n = (0, l.default)();

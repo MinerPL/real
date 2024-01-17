@@ -13,41 +13,41 @@ var a = n("37983"),
   u = n("337543"),
   d = n("554054"),
   c = n("831588"),
-  E = n("927475"),
-  f = n("49111"),
+  f = n("927475"),
+  E = n("49111"),
   _ = n("289382"),
   h = n("694907"),
   C = e => {
     let {
       guildId: t,
       inviteCode: n
-    } = e, [C, T] = s.useState(_.WaveStates.INITIAL), [I, S] = s.useState(null != n);
+    } = e, [C, I] = s.useState(_.WaveStates.INITIAL), [T, S] = s.useState(null != n);
     s.useEffect(() => {
       null != n && l.default.resolveInvite(n, "Hub").finally(() => S(!1))
     }, [n]);
-    let N = (0, i.useStateFromStores)([u.default], () => null != n ? u.default.getInvite(n) : null),
-      A = (0, i.useStateFromStores)([o.default], () => o.default.getGuild(t));
+    let m = (0, i.useStateFromStores)([u.default], () => null != n ? u.default.getInvite(n) : null),
+      p = (0, i.useStateFromStores)([o.default], () => o.default.getGuild(t));
     s.useEffect(() => {
-      null != A && (0, r.transitionTo)(f.Routes.CHANNEL(t))
-    }, [A, t]);
-    let p = s.useCallback(e => {
-        T(t => Math.max(t, e))
+      null != p && (0, r.transitionTo)(E.Routes.CHANNEL(t))
+    }, [p, t]);
+    let A = s.useCallback(e => {
+        I(t => Math.max(t, e))
       }, []),
-      m = (0, c.getArtForPath)();
+      g = (0, c.getArtForPath)();
     return (0, a.jsx)("div", {
       className: h.page,
       children: (0, a.jsxs)(d.default, {
         embedded: !0,
-        splash: m,
+        splash: g,
         waveState: C,
         showLogo: !1,
-        updateWaveState: p,
+        updateWaveState: A,
         children: [(0, a.jsx)("div", {
           className: h.dragRegion
         }), (0, a.jsx)("div", {
           className: h.contentWrapper,
-          children: !I && (0, a.jsx)(E.HubEmailConnectionModalView, {
-            invite: N
+          children: !T && (0, a.jsx)(f.HubEmailConnectionModalView, {
+            invite: m
           })
         })]
       })

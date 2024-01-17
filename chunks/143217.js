@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var a = n("37983");
@@ -14,10 +14,10 @@ var s = n("446674"),
   u = n("973191"),
   d = n("782340"),
   c = n("683449"),
-  E = e => {
+  f = e => {
     let {
       guilds: t
-    } = e, n = (0, s.useStateFromStores)([r.default], () => r.default.theme), E = t.map(e => (0, a.jsx)(o.default, {
+    } = e, n = (0, s.useStateFromStores)([r.default], () => r.default.theme), f = t.map(e => (0, a.jsx)(o.default, {
       className: c.guildCard,
       onView: () => l.default.transitionToGuildSync(e.id),
       guild: {
@@ -38,7 +38,7 @@ var s = n("446674"),
           children: d.default.Messages.YOUR_HUB
         }), (0, a.jsxs)("div", {
           className: c.guildList,
-          children: [E, (0, a.jsx)(u.default, {
+          children: [f, (0, a.jsx)(u.default, {
             hasHub: !0
           })]
         })]

@@ -1,24 +1,24 @@
 "use strict";
 n.r(t), n.d(t, {
   getApplicationSubscriptionSystemMessageContent: function() {
-    return l
+    return a
   }
 });
-var a = n("49111"),
-  s = n("782340");
+var s = n("49111"),
+  l = n("782340");
 
-function l(e) {
+function a(e) {
   let {
     application: t,
     username: n,
-    usernameHook: l = a.NOOP
+    usernameHook: a = s.NOOP
   } = e;
-  return null != t ? s.default.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE.format({
+  return null != t ? l.default.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE.format({
     username: n,
     applicationName: t.name,
-    usernameHook: l
-  }) : s.default.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_FROM_DELETED_APPLICATION.format({
+    usernameHook: a
+  }) : l.default.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_FROM_DELETED_APPLICATION.format({
     username: n,
-    usernameHook: l
+    usernameHook: a
   })
 }

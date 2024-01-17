@@ -8,11 +8,11 @@ var l = n("37983"),
   i = n("884691"),
   r = n("414456"),
   s = n.n(r),
-  a = n("193865"),
-  o = n("780571"),
+  o = n("193865"),
+  a = n("780571"),
   u = n("39331"),
-  d = n("596368"),
-  c = n("227439"),
+  c = n("596368"),
+  d = n("227439"),
   f = n("877671"),
   E = i.memo(function(e) {
     var t, n, i;
@@ -20,32 +20,32 @@ var l = n("37983"),
       message: r,
       channel: E,
       compact: _,
-      className: p,
-      isGroupStart: h,
+      className: h,
+      isGroupStart: p,
       hideSimpleEmbedContent: S = !0,
-      disableInteraction: T
-    } = e, m = (0, a.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = r.editedTimestamp) && void 0 !== t ? t : r.timestamp).valueOf()), C = (0, a.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == E ? void 0 : E.guild_id) && void 0 !== n ? n : "", (null !== (i = r.editedTimestamp) && void 0 !== i ? i : r.timestamp).valueOf()), {
-      content: M
+      disableInteraction: M
+    } = e, T = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = r.editedTimestamp) && void 0 !== t ? t : r.timestamp).valueOf()), m = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == E ? void 0 : E.guild_id) && void 0 !== n ? n : "", (null !== (i = r.editedTimestamp) && void 0 !== i ? i : r.timestamp).valueOf()), {
+      content: C
     } = (0, u.default)(r, {
       hideSimpleEmbedContent: S,
-      allowList: m.showListsAndHeaders || C.showListsAndHeaders,
-      allowHeading: m.showListsAndHeaders || C.showListsAndHeaders,
-      allowLinks: m.showMaskedLinks || C.showMaskedLinks,
-      previewLinkTarget: m.showMaskedLinks || C.showMaskedLinks
+      allowList: T.showListsAndHeaders || m.showListsAndHeaders,
+      allowHeading: T.showListsAndHeaders || m.showListsAndHeaders,
+      allowLinks: T.showMaskedLinks || m.showMaskedLinks,
+      previewLinkTarget: T.showMaskedLinks || m.showMaskedLinks
     });
-    return (0, l.jsx)(o.default, {
+    return (0, l.jsx)(a.default, {
       compact: _,
-      className: s(p, {
+      className: s(h, {
         [f.message]: !0,
         [f.cozyMessage]: !_,
-        [f.groupStart]: h
+        [f.groupStart]: p
       }),
-      childrenHeader: (0, c.default)({
+      childrenHeader: (0, d.default)({
         ...e,
         channel: E,
         guildId: void 0
       }),
-      childrenMessageContent: (0, d.default)(e, M),
-      disableInteraction: T
+      childrenMessageContent: (0, c.default)(e, C),
+      disableInteraction: M
     })
   })

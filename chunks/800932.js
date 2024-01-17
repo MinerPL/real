@@ -20,8 +20,8 @@ var s = n("37983"),
   p = n("461380"),
   h = n("593195"),
   N = n("368121"),
-  m = n("767517"),
-  T = n("5487"),
+  T = n("767517"),
+  m = n("5487"),
   g = n("932180"),
   A = n("473759"),
   S = n("49111"),
@@ -33,7 +33,7 @@ function x(e) {
     [n, l] = a.useState(""),
     [i, r] = a.useState(null),
     [u, o] = a.useState(null),
-    d = (0, T.default)(e.code);
+    d = (0, m.default)(e.code);
   a.useEffect(() => {
     (async function e() {
       let e = _.default.getCurrentUser();
@@ -106,7 +106,7 @@ function x(e) {
   return {
     form: p,
     preview: N,
-    handleSubmit: () => m.default.acceptGuildTemplate(e.code, n, i).catch(e => o(e))
+    handleSubmit: () => T.default.acceptGuildTemplate(e.code, n, i).catch(e => o(e))
   }
 }
 

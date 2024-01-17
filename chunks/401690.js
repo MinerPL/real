@@ -89,7 +89,7 @@ function P(e, t) {
   for (let n in p[e][t]) t === S ? f.default.isNewForumThread(n, t, s) && C[e][t]++ : r.default.compare(n, i) > 0 && !f.default.hasOpenedThread(n) && C[e][t]++
 }
 
-function R(e, t, n) {
+function k(e, t, n) {
   if (null == t) return !1;
   let s = u.default.getChannel(n),
     i = g.default.joinTimestamp(n);
@@ -113,13 +113,13 @@ function R(e, t, n) {
   } else B(v, e, t, n), B(T, e, t, n), B(E, e, t, n), B(p, e, t, n), B(y, e, t, n), F(n), P(e, t)
 }
 
-function V(e) {
-  return R(e.channel.guild_id, e.channel.parent_id, e.channel.id)
+function R(e) {
+  return k(e.channel.guild_id, e.channel.parent_id, e.channel.id)
 }
 
-function k(e) {
+function V(e) {
   let t = u.default.getChannel(e.id);
-  return !!(null != t && c.default.isActive(e.guildId, t.parent_id, e.id)) && R(t.guild_id, t.parent_id, t.id)
+  return !!(null != t && c.default.isActive(e.guildId, t.parent_id, e.id)) && k(t.guild_id, t.parent_id, t.id)
 }
 
 function M(e) {
@@ -341,9 +341,9 @@ var Q = new X(o.default, {
   },
   GUILD_DELETE: A,
   CURRENT_USER_UPDATE: A,
-  THREAD_CREATE: V,
-  THREAD_UPDATE: V,
-  THREAD_DELETE: V,
+  THREAD_CREATE: R,
+  THREAD_UPDATE: R,
+  THREAD_DELETE: R,
   CHANNEL_UPDATES: function(e) {
     let {
       channels: t
@@ -375,8 +375,8 @@ var Q = new X(o.default, {
     } = e, n = !1;
     return null != t.guild_id && null != t.parent_id && (t.guild_id in v && t.parent_id in v[t.guild_id] && (delete v[t.guild_id][t.parent_id], n = !0), t.guild_id in E && t.parent_id in E[t.guild_id] && (delete E[t.guild_id][t.parent_id], n = !0), t.guild_id in T && t.parent_id in T[t.guild_id] && (Object.keys(T[t.guild_id][t.parent_id]).forEach(F), delete T[t.guild_id][t.parent_id], n = !0), t.guild_id in p && t.parent_id in p[t.guild_id] && (delete p[t.guild_id][t.parent_id], n = !0), t.guild_id in y && t.parent_id in y[t.guild_id] && (delete y[t.guild_id][t.parent_id], n = !0), n && P(t.guild_id, t.parent_id)), n
   },
-  THREAD_MEMBER_UPDATE: k,
-  THREAD_MEMBERS_UPDATE: k,
+  THREAD_MEMBER_UPDATE: V,
+  THREAD_MEMBERS_UPDATE: V,
   LOAD_MESSAGES_SUCCESS: M,
   MESSAGE_CREATE: M,
   MESSAGE_DELETE: M,

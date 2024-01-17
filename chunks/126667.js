@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 }), n("222007");
 var a = n("37983"),
@@ -13,19 +13,19 @@ var a = n("37983"),
   u = n("152584"),
   d = n("648661"),
   c = n("330387"),
-  E = n("790618"),
-  f = n("697218"),
+  f = n("790618"),
+  E = n("697218"),
   _ = n("67211"),
   h = n("892313"),
   C = n("49111"),
-  T = e => {
+  I = e => {
     let {
       transitionState: t,
       onClose: n
-    } = e, i = (0, r.useStateFromStores)([E.default], () => E.default.getErrors()), T = (0, r.useStateFromStores)([E.default], () => E.default.getFormState()), I = (0, r.useStateFromStores)([f.default], () => {
-      let e = f.default.getCurrentUser();
+    } = e, i = (0, r.useStateFromStores)([f.default], () => f.default.getErrors()), I = (0, r.useStateFromStores)([f.default], () => f.default.getFormState()), T = (0, r.useStateFromStores)([E.default], () => {
+      let e = E.default.getCurrentUser();
       return l(null != e, "EmailVerificationModal: user cannot be undefined"), e
-    }), S = (0, r.useStateFromStores)([c.default], () => c.default.getAction()), N = !h.default.isEmailReverification(S), A = null != I.email, [p, m] = s.useState(!0), g = T === C.FormStates.SUBMITTING;
+    }), S = (0, r.useStateFromStores)([c.default], () => c.default.getAction()), m = !h.default.isEmailReverification(S), p = null != T.email, [A, g] = s.useState(!0), N = I === C.FormStates.SUBMITTING;
 
     function R(e) {
       var t, n;
@@ -35,14 +35,14 @@ var a = n("37983"),
       L = R("password");
     return (0, a.jsx)(_.default, {
       transitionState: t,
-      email: I.email,
+      email: T.email,
       emailError: O,
       passwordError: L,
-      submitting: g,
-      canResend: p && !g && A && 0 === O.length && 0 === L.length,
-      canChange: N,
+      submitting: N,
+      canResend: A && !N && p && 0 === O.length && 0 === L.length,
+      canChange: m,
       onChangeEmailClick: function() {
-        m(!1)
+        g(!1)
       },
       onVerify: function(e, t) {
         (0, u.saveAccountChanges)({
@@ -51,7 +51,7 @@ var a = n("37983"),
         }).then(e => {
           var t;
           !(null == e ? void 0 : e.ok) && (null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.username) != null && (0, d.showInvalidUsernameToast)()
-        }), m(!0)
+        }), g(!0)
       },
       onResend: function() {
         o.default.verifyResend()

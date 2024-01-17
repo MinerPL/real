@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   unlockOverlay: function() {
-    return E
+    return f
   },
   validateSocketClient: function() {
-    return f
+    return E
   },
   getDeprecatedVoiceSettings: function() {
     return _
@@ -23,7 +23,7 @@ var a = n("539405"),
   d = n("49111");
 let c = ["207646673902501888"];
 
-function E(e) {
+function f(e) {
   let t = s.default.isReady(e);
   return t ? (a.default.setLocked(!1, e), {
     lock() {
@@ -37,7 +37,7 @@ function E(e) {
     context: d.AppContext.APP
   })
 }
-let f = async (e, t, n) => {
+let E = async (e, t, n) => {
   if ((0, o.validateOriginAndUpdateSocket)(e, t), (null == n || "" === n) && (0, o.isMatchingOrigin)(t)) return e.authorization.scopes = [u.RPC_PRIVATE_SCOPE, u.RPC_PRIVATE_LIMITED_SCOPE], Promise.resolve();
   if (null == n || "" === n) return Promise.reject(new r.default(d.RPCCloseCodes.INVALID_CLIENTID, "No Client ID Specified"));
   let a = i.default.releaseChannel !== d.PublicReleaseChannels.CANARY && !c.includes(n) && e.transport !== u.TransportTypes.POST_MESSAGE;

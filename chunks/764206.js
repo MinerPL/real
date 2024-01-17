@@ -5,9 +5,9 @@ s.r(t), s.d(t, {
   }
 });
 var a, n = s("37983"),
-  r = s("884691"),
-  l = s("414456"),
-  i = s.n(l),
+  l = s("884691"),
+  i = s("414456"),
+  r = s.n(i),
   u = s("888400"),
   o = s("943232"),
   d = s("36694"),
@@ -22,7 +22,7 @@ let f = e => {
       className: s
     } = e;
     return (0, n.jsx)("div", {
-      className: i(T.iconCircle, s),
+      className: r(T.iconCircle, s),
       children: (0, n.jsx)(t, {
         className: T.icon
       })
@@ -33,10 +33,10 @@ let f = e => {
       circle: t,
       smallHeader: s,
       text: a,
-      className: r
+      className: l
     } = e;
     return (0, n.jsxs)("div", {
-      className: i(T.recommendationReason, r),
+      className: r(T.recommendationReason, l),
       children: [t, (0, n.jsxs)("div", {
         className: T.description,
         children: [null != s ? (0, n.jsx)("div", {
@@ -49,7 +49,7 @@ let f = e => {
       })]
     })
   };
-a = class extends r.Component {
+a = class extends l.Component {
   render() {
     let {
       reason: e,

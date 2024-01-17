@@ -19,8 +19,8 @@ function d(e) {
     title: n,
     guild: d,
     description: c,
-    children: E
-  } = e, f = i.GifAutoPlay.useSetting(), _ = (0, r.useIsWindowFocused)(), [h, C] = (0, o.default)(t, _ && f);
+    children: f
+  } = e, E = i.GifAutoPlay.useSetting(), _ = (0, r.useIsWindowFocused)(), [h, C] = (0, o.default)(t, _ && E);
   return (0, a.jsxs)("div", {
     className: u.container,
     children: [(0, a.jsx)("div", {
@@ -46,6 +46,6 @@ function d(e) {
       variant: "text-md/normal",
       color: "header-secondary",
       children: c
-    }), E]
+    }), f]
   })
 }

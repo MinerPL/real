@@ -4,17 +4,17 @@ n.r(t), n.d(t, {
     return r
   }
 }), n("222007");
-var l = n("884691");
-let a = !1,
+var a = n("884691");
+let l = !1,
   s = new Set;
 
 function i(e) {
-  e !== a && (a = e, s.forEach(e => e(a)))
+  e !== l && (l = e, s.forEach(e => e(l)))
 }
 
 function r() {
-  let [e, t] = l.useState(a);
-  return l.useEffect(() => {
+  let [e, t] = a.useState(l);
+  return a.useEffect(() => {
     let e = e => {
       t(e)
     };

@@ -9,36 +9,36 @@ t.r(s), t.d(s, {
 });
 var r = t("37983");
 t("884691");
-var l = t("446674"),
-  a = t("669491"),
+var a = t("446674"),
+  l = t("669491"),
   n = t("77078"),
   i = t("272030"),
-  c = t("328275"),
-  d = t("849467"),
+  d = t("328275"),
+  c = t("849467"),
   o = t("258078"),
   u = t("823050"),
   h = t("158998"),
   f = t("325861"),
-  v = t("151642"),
-  x = t("782340"),
-  C = t("960236");
+  C = t("151642"),
+  v = t("782340"),
+  x = t("960236");
 let g = e => {
     let {
       channelId: s
-    } = e, t = (0, v.useStageBlockedUsersCount)(s);
+    } = e, t = (0, C.useStageBlockedUsersCount)(s);
     return 0 === t ? null : (0, r.jsxs)("div", {
-      className: C.blockedNotice,
-      children: [(0, r.jsx)(c.default, {
-        className: C.blockedIcon,
-        color: a.default.unsafe_rawColors.RED_400.css
+      className: x.blockedNotice,
+      children: [(0, r.jsx)(d.default, {
+        className: x.blockedIcon,
+        color: l.default.unsafe_rawColors.RED_400.css
       }), (0, r.jsx)(n.Text, {
         variant: "text-xs/normal",
         color: "header-secondary",
-        children: x.default.Messages.STAGE_BLOCKED_USERS_DESCRIPTION_COUNT.format({
+        children: v.default.Messages.STAGE_BLOCKED_USERS_DESCRIPTION_COUNT.format({
           number: t
         })
       }), (0, r.jsx)(n.Clickable, {
-        className: C.blockedButton,
+        className: x.blockedButton,
         onClick: e => {
           (0, i.openContextMenu)(e, e => (0, r.jsx)(m, {
             ...e,
@@ -48,7 +48,7 @@ let g = e => {
             align: "bottom"
           })
         },
-        children: x.default.Messages.VIEW_ALL
+        children: v.default.Messages.VIEW_ALL
       })]
     })
   },
@@ -56,11 +56,11 @@ let g = e => {
     let {
       user: s,
       showStatus: t,
-      speaker: a,
+      speaker: l,
       channelId: i
-    } = e, c = (0, l.useStateFromStores)([f.default], () => f.default.isModerator(s.id, i)), v = null;
-    return t && (v = a ? x.default.Messages.STAGE_SPEAKER : c ? x.default.Messages.STAGE_MODERATOR_TOOLTIP : x.default.Messages.STAGE_AUDIENCE), (0, r.jsxs)("div", {
-      className: C.user,
+    } = e, d = (0, a.useStateFromStores)([f.default], () => f.default.isModerator(s.id, i)), C = null;
+    return t && (C = l ? v.default.Messages.STAGE_SPEAKER : d ? v.default.Messages.STAGE_MODERATOR_TOOLTIP : v.default.Messages.STAGE_AUDIENCE), (0, r.jsxs)("div", {
+      className: x.user,
       children: [(0, r.jsx)(u.default, {
         src: s.getAvatarURL(null, 32),
         size: n.AvatarSizes.SIZE_32,
@@ -68,13 +68,13 @@ let g = e => {
         deafen: !1,
         speaking: !1,
         ringing: !1,
-        renderIcon: a ? () => (0, r.jsx)(d.default, {
-          className: C.icon
+        renderIcon: l ? () => (0, r.jsx)(c.default, {
+          className: x.icon
         }) : null
       }, s.id), (0, r.jsxs)("div", {
-        className: C.userInfo,
+        className: x.userInfo,
         children: [(0, r.jsxs)("div", {
-          className: C.username,
+          className: x.username,
           children: [(0, r.jsx)(o.default, {
             size: t ? o.default.Sizes.SIZE_16 : o.default.Sizes.SIZE_14,
             children: h.default.getName(s)
@@ -84,15 +84,15 @@ let g = e => {
             children: "#".concat(s.discriminator)
           })]
         }), (0, r.jsxs)("div", {
-          className: C.username,
+          className: x.username,
           children: [(0, r.jsx)(n.Text, {
             variant: "text-xs/normal",
             color: "text-danger",
-            children: x.default.Messages.BLOCKED
+            children: v.default.Messages.BLOCKED
           }), (0, r.jsxs)(n.Text, {
             variant: "text-xs/normal",
             color: "text-muted",
-            children: [" ", "| ", v]
+            children: [" ", "| ", C]
           })]
         })]
       })]
@@ -101,9 +101,9 @@ let g = e => {
   m = e => {
     let {
       channelId: s
-    } = e, t = (0, v.useStageBlockedUsers)(s);
+    } = e, t = (0, C.useStageBlockedUsers)(s);
     return (0, r.jsx)(n.Scroller, {
-      className: C.container,
+      className: x.container,
       children: t.map(e => {
         let {
           user: t

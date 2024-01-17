@@ -19,8 +19,8 @@ var s = n("414456"),
       hovered: n,
       subText: s,
       showAccountIdentifier: c,
-      status: E,
-      isMobile: f,
+      status: f,
+      isMobile: E,
       className: _
     } = e, h = (0, l.useStateFromStores)([u.default], () => u.default.getNickname(t.id));
     return (0, a.jsxs)("div", {
@@ -31,8 +31,8 @@ var s = n("414456"),
         user: t,
         className: d.avatar,
         animate: n,
-        status: E,
-        isMobile: f
+        status: f,
+        isMobile: E
       }), (0, a.jsxs)("div", {
         className: d.text,
         children: [(0, a.jsx)(r.default, {

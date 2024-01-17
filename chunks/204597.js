@@ -17,10 +17,10 @@ var a = n("37983"),
       statusSections: t,
       renderRow: n,
       searchQuery: c
-    } = e, E = e => {
+    } = e, f = e => {
       let n = t[e];
       return 0 === n.length ? 0 : u.STATUS_HEADER_HEIGHT + 16
-    }, f = e => {
+    }, E = e => {
       let {
         section: a,
         row: s
@@ -34,13 +34,13 @@ var a = n("37983"),
       t.scrollToTop({
         callback: () => requestAnimationFrame(() => e())
       })
-    }), []), T = s.useCallback(() => new Promise(e => {
+    }), []), I = s.useCallback(() => new Promise(e => {
       let t = h.current;
       if (null == t) return e();
       t.scrollToBottom({
         callback: () => requestAnimationFrame(() => e())
       })
-    }), []), I = s.useCallback(e => {
+    }), []), T = s.useCallback(e => {
       let t = document.querySelector(e),
         n = h.current;
       null != t && null != n && n.scrollIntoViewNode({
@@ -52,8 +52,8 @@ var a = n("37983"),
       id: "people-list",
       isEnabled: _,
       scrollToStart: C,
-      scrollToEnd: T,
-      setFocus: I
+      scrollToEnd: I,
+      setFocus: T
     });
     return (0, a.jsx)(i.ListNavigatorProvider, {
       navigator: S,
@@ -68,8 +68,8 @@ var a = n("37983"),
               var t;
               h.current = e, n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
             },
-            sectionHeight: E,
-            renderRow: f,
+            sectionHeight: f,
+            renderRow: E,
             rowHeight: u.PEOPLE_LIST_ITEM_HEIGHT,
             sections: t.map(e => "" !== c && 0 === e.length ? e.length + 1 : e.length),
             className: d.peopleList,

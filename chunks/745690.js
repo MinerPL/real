@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var a = n("37983"),
@@ -13,7 +13,7 @@ var a = n("37983"),
   u = n("624043"),
   d = n("408792"),
   c = n("492532");
-let E = e => {
+let f = e => {
   let {
     color: t
   } = e;
@@ -65,18 +65,18 @@ let E = e => {
   })
 };
 
-function f(e) {
+function E(e) {
   let {
     achievement: t,
     unlocked: n
   } = e, {
     name: i,
-    description: f,
+    description: E,
     rarity: _,
     hideDescriptionUntilUnlock: h,
     onAction: C
   } = t, {
-    color: T
+    color: I
   } = (0, o.getAchievementStyles)(_);
   s.useEffect(() => {
     let e = setTimeout(() => {
@@ -86,12 +86,12 @@ function f(e) {
       clearTimeout(e)
     }
   }, []);
-  let I = null != C && n,
-    S = I ? r.Clickable : "div";
+  let T = null != C && n,
+    S = T ? r.Clickable : "div";
   return (0, a.jsxs)(S, {
-    className: l(c.container, I && c.actionable),
+    className: l(c.container, T && c.actionable),
     onClick: () => {
-      I && C()
+      T && C()
     },
     children: [(0, a.jsx)("div", {
       className: c.iconContainer,
@@ -109,12 +109,12 @@ function f(e) {
       }), (0, a.jsx)(r.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
-        children: h && !n ? "?????" : f()
+        children: h && !n ? "?????" : E()
       })]
     }), (0, a.jsx)("div", {
       className: c.flair,
-      children: (0, a.jsx)(E, {
-        color: T
+      children: (0, a.jsx)(f, {
+        color: I
       })
     })]
   })

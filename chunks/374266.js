@@ -6,9 +6,9 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   n = s("884691"),
-  r = s("414456"),
-  l = s.n(r),
-  i = s("77078"),
+  l = s("414456"),
+  i = s.n(l),
+  r = s("77078"),
   u = s("895530"),
   o = s("145131"),
   d = s("993105"),
@@ -30,14 +30,14 @@ class R extends n.PureComponent {
       children: t,
       pageSize: s,
       onClick: n
-    } = this.props, r = s === E.PageSizes.LARGE;
-    return (0, a.jsx)(i.Button, {
-      size: r ? i.Button.Sizes.MIN : i.Button.Sizes.LARGE,
-      fullWidth: !r,
+    } = this.props, l = s === E.PageSizes.LARGE;
+    return (0, a.jsx)(r.Button, {
+      size: l ? r.Button.Sizes.MIN : r.Button.Sizes.LARGE,
+      fullWidth: !l,
       color: e ? f.tabSelectedColor : f.tabNotSelectedColor,
-      className: l({
-        [f.tabPageLarge]: r,
-        [f.tabPageSmall]: !r,
+      className: i({
+        [f.tabPageLarge]: l,
+        [f.tabPageSmall]: !l,
         [f.tabSelected]: e,
         [f.tabNotSelected]: !e
       }),
@@ -46,7 +46,7 @@ class R extends n.PureComponent {
     })
   }
 }
-let p = e => [{
+let m = e => [{
   key: T.default.Messages.APPLICATION_STORE_SPECS_OS,
   value: e.operating_system_version
 }, {
@@ -77,7 +77,7 @@ let p = e => [{
   key: T.default.Messages.APPLICATION_STORE_SPECS_NOTES,
   value: e.notes
 }];
-class m extends n.PureComponent {
+class p extends n.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let {
       systemRequirements: s
@@ -118,7 +118,7 @@ class m extends n.PureComponent {
   }
   renderRequirementsSection(e, t) {
     if (null == e) return null;
-    let s = p(e),
+    let s = m(e),
       n = s.map((e, t) => {
         let s = null != e.value ? e.value.trim() : null;
         return null == s || 0 === s.length ? null : (0, a.jsxs)("div", {
@@ -170,4 +170,4 @@ class m extends n.PureComponent {
     }
   }
 }
-var N = m
+var N = p

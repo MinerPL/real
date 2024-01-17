@@ -44,14 +44,14 @@ function c(e) {
       return C += u * c + f * c + (e - 1) * h * c, e
     }),
     m = p.map((e, t) => t),
-    E = [];
-  for (; E.length < a;) {
+    g = [];
+  for (; g.length < a;) {
     let e = d();
-    E.push([m.splice(i.random(0, m.length - 1), 1)[0], e]), C += e.height + r.HEIGHT_ATTACHMEMT_PADDING * c
+    g.push([m.splice(i.random(0, m.length - 1), 1)[0], e]), C += e.height + r.HEIGHT_ATTACHMEMT_PADDING * c
   }
   return {
     messages: p,
-    attachmentSpecs: E,
+    attachmentSpecs: g,
     totalHeight: C,
     groupSpacing: u
   }

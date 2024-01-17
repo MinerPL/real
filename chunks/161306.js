@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   }
 });
 var a = n("99795"),
@@ -13,6 +13,6 @@ let s = Object.freeze({
   [a.ParticipantTypes.ACTIVITY]: r.MediaEngineContextTypes.DEFAULT
 });
 
-function i(e) {
+function l(e) {
   return s[e]
 }

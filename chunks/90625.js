@@ -23,8 +23,8 @@ var l, i, a = n("37983"),
   f = n("430568"),
   m = n("206230"),
   g = n("385976"),
-  _ = n("945330"),
-  h = n("782340"),
+  h = n("945330"),
+  _ = n("782340"),
   p = n("951779");
 
 function E(e) {
@@ -41,19 +41,19 @@ function E(e) {
     name: A,
     emojiId: S,
     emojiName: T
-  } = t, v = null != E, [C, O] = s.useState(!1), I = (0, d.useStateFromStores)([g.default], () => null != S ? g.default.getUsableCustomEmojiById(S) : null), R = v || null != r, b = (!v || !C) && (null != S || null != T), L = 0 === n, y = s.useRef(null), U = (0, d.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), N = (0, a.jsxs)(a.Fragment, {
-    children: [b ? (0, a.jsx)(f.default, {
+  } = t, v = null != E, [C, O] = s.useState(!1), R = (0, d.useStateFromStores)([g.default], () => null != S ? g.default.getUsableCustomEmojiById(S) : null), b = v || null != r, I = (!v || !C) && (null != S || null != T), y = 0 === n, L = s.useRef(null), F = (0, d.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), N = (0, a.jsxs)(a.Fragment, {
+    children: [I ? (0, a.jsx)(f.default, {
       className: u(p.emoji, {
-        [p.small]: L
+        [p.small]: y
       }),
       emojiId: S,
       emojiName: T,
-      animated: !!(null == I ? void 0 : I.animated),
+      animated: !!(null == R ? void 0 : R.animated),
       size: "reaction",
       alt: ""
     }) : null, C && v && (0, a.jsx)("div", {
       className: p.closeCircle,
-      children: (0, a.jsx)(_.default, {
+      children: (0, a.jsx)(h.default, {
         className: p.close
       })
     }), (0, a.jsx)(c.Text, {
@@ -62,38 +62,38 @@ function E(e) {
       lineClamp: 1,
       children: A
     })]
-  }), F = {
+  }), U = {
     key: t.id,
     className: u(p.pill, p.increasedActivityPill, {
       [p.disabled]: l,
-      [p.clickable]: R,
-      [p.increasedActivitySmall]: L,
+      [p.clickable]: b,
+      [p.increasedActivitySmall]: y,
       [p.selected]: x
     }, i),
     onClick: e => {
-      null == r || r(e), null == E || E(t), !U && null != y.current && y.current.blur()
+      null == r || r(e), null == E || E(t), !F && null != L.current && L.current.blur()
     },
     onMouseEnter: () => v && O(!0),
     onMouseLeave: () => v && O(!1)
   }, P = (0, o.useListItem)("forum-tag-".concat(t.id));
-  return R ? (0, a.jsx)(c.Clickable, {
+  return b ? (0, a.jsx)(c.Clickable, {
     ...P,
-    innerRef: y,
+    innerRef: L,
     focusProps: {
-      ringTarget: y
+      ringTarget: L
     },
-    "aria-label": null != M ? M : h.default.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({
+    "aria-label": null != M ? M : _.default.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({
       tagName: A
     }),
     role: "button",
     "aria-pressed": x,
-    ...F,
+    ...U,
     children: N
   }) : (0, a.jsx)("div", {
-    "aria-label": null != M ? M : h.default.Messages.FORUM_TAG_A11Y_TAG_BY.format({
+    "aria-label": null != M ? M : _.default.Messages.FORUM_TAG_A11Y_TAG_BY.format({
       tagName: A
     }),
-    ...F,
+    ...U,
     children: N
   })
 }
@@ -105,7 +105,7 @@ function x(e) {
     size: l = 1
   } = e, i = 0 === l;
   return (0, a.jsx)(c.Tooltip, {
-    "aria-label": h.default.Messages.FORUM_TAGS,
+    "aria-label": _.default.Messages.FORUM_TAGS,
     text: (0, a.jsx)(a.Fragment, {
       children: t.map(e => (0, a.jsx)(M, {
         tag: e,
@@ -141,54 +141,54 @@ function M(e) {
     name: A,
     emojiId: S,
     emojiName: T
-  } = t, v = null != E, [C, O] = s.useState(!1), I = (0, d.useStateFromStores)([g.default], () => null != S ? g.default.getUsableCustomEmojiById(S) : null), R = v || null != r, b = (!v || !C) && (null != S || null != T), L = 0 === n, y = s.useRef(null), U = (0, d.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), N = (0, a.jsxs)(a.Fragment, {
-    children: [b ? (0, a.jsx)(f.default, {
+  } = t, v = null != E, [C, O] = s.useState(!1), R = (0, d.useStateFromStores)([g.default], () => null != S ? g.default.getUsableCustomEmojiById(S) : null), b = v || null != r, I = (!v || !C) && (null != S || null != T), y = 0 === n, L = s.useRef(null), F = (0, d.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), N = (0, a.jsxs)(a.Fragment, {
+    children: [I ? (0, a.jsx)(f.default, {
       className: u(p.emoji, {
-        [p.small]: L
+        [p.small]: y
       }),
       emojiId: S,
       emojiName: T,
-      animated: !!(null == I ? void 0 : I.animated),
+      animated: !!(null == R ? void 0 : R.animated),
       size: "reaction"
     }) : null, C && v && (0, a.jsx)("div", {
       className: p.closeCircle,
-      children: (0, a.jsx)(_.default, {
+      children: (0, a.jsx)(h.default, {
         className: p.close
       })
     }), (0, a.jsx)(c.Text, {
-      variant: L ? "text-xs/semibold" : "text-sm/semibold",
+      variant: y ? "text-xs/semibold" : "text-sm/semibold",
       lineClamp: 1,
       children: A
     })]
-  }), F = {
+  }), U = {
     key: t.id,
     className: u(p.pill, {
       [p.disabled]: l,
-      [p.clickable]: R,
-      [p.small]: L,
+      [p.clickable]: b,
+      [p.small]: y,
       [p.selected]: x
     }, i),
     onClick: e => {
-      null == r || r(e), null == E || E(t), !U && null != y.current && y.current.blur()
+      null == r || r(e), null == E || E(t), !F && null != L.current && L.current.blur()
     },
     onMouseEnter: () => v && O(!0),
     onMouseLeave: () => v && O(!1)
   }, P = (0, o.useListItem)("forum-tag-".concat(t.id));
-  return R ? (0, a.jsx)(c.Clickable, {
+  return b ? (0, a.jsx)(c.Clickable, {
     ...P,
-    innerRef: y,
+    innerRef: L,
     focusProps: {
-      ringTarget: y
+      ringTarget: L
     },
-    "aria-label": null != M ? M : h.default.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({
+    "aria-label": null != M ? M : _.default.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({
       tagName: A
     }),
     role: "button",
     "aria-pressed": x,
-    ...F,
+    ...U,
     children: N
   }) : (0, a.jsx)("div", {
-    ...F,
+    ...U,
     children: N
   })
 }
@@ -200,7 +200,7 @@ function A(e) {
     size: l = 1
   } = e, i = 0 === l;
   return (0, a.jsx)(c.Tooltip, {
-    "aria-label": h.default.Messages.FORUM_TAGS,
+    "aria-label": _.default.Messages.FORUM_TAGS,
     text: (0, a.jsx)(a.Fragment, {
       children: t.map(e => (0, a.jsx)(M, {
         tag: e,

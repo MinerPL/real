@@ -13,8 +13,8 @@ var a = n("37983"),
   u = n("524503"),
   d = n("650509"),
   c = n("49111"),
-  E = n("782340"),
-  f = n("630159");
+  f = n("782340"),
+  E = n("630159");
 
 function _(e) {
   let {
@@ -28,27 +28,27 @@ function _(e) {
     return e
   }, [h]);
   if (0 === C.length) return null;
-  let T = "";
-  return T = 1 === C.length ? E.default.Messages.ONE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
+  let I = "";
+  return I = 1 === C.length ? f.default.Messages.ONE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
     a: C[0].name
-  }) : 2 === C.length ? E.default.Messages.TWO_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
+  }) : 2 === C.length ? f.default.Messages.TWO_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
     a: C[0].name,
     b: C[1].name
-  }) : 3 === C.length ? E.default.Messages.THREE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
+  }) : 3 === C.length ? f.default.Messages.THREE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT.format({
     a: C[0].name,
     b: C[1].name,
     c: C[2].name
-  }) : E.default.Messages.MORE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT, (0, a.jsx)(r.default, {
+  }) : f.default.Messages.MORE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT, (0, a.jsx)(r.default, {
     guild: t,
     onDismissed: _,
-    message: T,
+    message: I,
     type: c.ChannelNoticeTypes.APPLICATION_SUBSCRIPTION_EXPIRATION,
-    image: f,
+    image: E,
     onClick: () => {
       _(), o.default.open(t.id, c.GuildSettingsSections.INTEGRATIONS)
     },
     imageMarginTop: 6,
     imageMarginX: 46,
-    cta: E.default.Messages.APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CTA
+    cta: f.default.Messages.APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CTA
   })
 }

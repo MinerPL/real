@@ -13,19 +13,19 @@ var a = n("37983"),
   u = n("446674"),
   d = n("77078"),
   c = n("913144"),
-  E = n("939488"),
-  f = n("630086"),
+  f = n("939488"),
+  E = n("630086"),
   _ = n("69927"),
   h = n("449004"),
   C = n("539938"),
-  T = n("718091"),
-  I = n("698343"),
+  I = n("718091"),
+  T = n("698343"),
   S = n("970366"),
-  N = n("161778"),
-  A = n("545429"),
-  p = n("476765"),
-  m = n("564875"),
-  g = n("956089"),
+  m = n("161778"),
+  p = n("545429"),
+  A = n("476765"),
+  g = n("564875"),
+  N = n("956089"),
   R = n("439932"),
   O = n("161011"),
   L = n("756183"),
@@ -37,7 +37,7 @@ var a = n("37983"),
 function y() {
   return (0, a.jsxs)("div", {
     className: D.inviteToolbar,
-    children: [(0, a.jsx)(T.default, {
+    children: [(0, a.jsx)(I.default, {
       tooltip: P.default.Messages.NEW_GROUP_DM
     }), (0, a.jsx)(C.default.Divider, {})]
   })
@@ -55,31 +55,31 @@ var x = function(e) {
       i.replace(v.Routes.ME)
     })
   }, [i, n]), s.useEffect(() => {
-    E.setHomeLink(v.Routes.FRIENDS), (0, S.trackAppUIViewed)("friends")
+    f.setHomeLink(v.Routes.FRIENDS), (0, S.trackAppUIViewed)("friends")
   }), s.useEffect(() => {
-    null != t && f.default.setInitialSection(t)
+    null != t && E.default.setInitialSection(t)
   }, [t]);
-  let T = (0, u.useStateFromStores)([N.default], () => N.default.theme),
+  let I = (0, u.useStateFromStores)([m.default], () => m.default.theme),
     {
       section: x,
       pendingCount: b
-    } = (0, u.useStateFromStoresObject)([A.default], () => A.default.getState()),
+    } = (0, u.useStateFromStoresObject)([p.default], () => p.default.getState()),
     U = (0, u.useStateFromStoresObject)([h.default], () => h.default.getSuggestionCount()),
-    G = (0, p.useUID)(),
-    j = (0, p.useUID)();
+    G = (0, A.useUID)(),
+    j = (0, A.useUID)();
   return (0, a.jsxs)("main", {
     className: D.container,
     "aria-label": P.default.Messages.FRIENDS,
     children: [(0, a.jsx)(_.AppPageTitle, {
       location: P.default.Messages.FRIENDS
     }), (0, a.jsxs)(C.default, {
-      className: (0, R.getThemeClass)(T),
+      className: (0, R.getThemeClass)(I),
       toolbar: (0, a.jsx)(y, {}),
       scrollable: o.isMobile,
       role: "navigation",
       "aria-labelledby": G,
       children: [(0, a.jsx)(C.default.Icon, {
-        icon: m.default,
+        icon: g.default,
         "aria-hidden": !0
       }), (0, a.jsx)(C.default.Title, {
         id: G,
@@ -89,7 +89,7 @@ var x = function(e) {
         selectedItem: x,
         type: "top-pill",
         onItemSelect: e => {
-          f.default.setSection(e)
+          E.default.setSection(e)
         },
         className: D.tabBar,
         children: [(0, a.jsx)(d.TabBar.Item, {
@@ -104,7 +104,7 @@ var x = function(e) {
           id: v.FriendsSections.PENDING,
           className: D.item,
           "aria-label": P.default.Messages.FRIENDS_SECTION_PENDING,
-          children: [P.default.Messages.FRIENDS_SECTION_PENDING, b > 0 ? (0, a.jsx)(g.NumberBadge, {
+          children: [P.default.Messages.FRIENDS_SECTION_PENDING, b > 0 ? (0, a.jsx)(N.NumberBadge, {
             count: b,
             className: D.badge,
             style: {
@@ -115,7 +115,7 @@ var x = function(e) {
           id: v.FriendsSections.SUGGESTIONS,
           className: D.item,
           "aria-label": P.default.Messages.FRIENDS_SECTION_SUGGESTIONS,
-          children: [P.default.Messages.FRIENDS_SECTION_SUGGESTIONS, (0, a.jsx)(g.NumberBadge, {
+          children: [P.default.Messages.FRIENDS_SECTION_SUGGESTIONS, (0, a.jsx)(N.NumberBadge, {
             count: U,
             className: D.badge,
             style: {
@@ -147,7 +147,7 @@ var x = function(e) {
         })
       }), (0, a.jsx)("div", {
         className: D.nowPlayingColumn,
-        children: (0, a.jsx)(I.default, {})
+        children: (0, a.jsx)(T.default, {})
       })]
     })]
   })

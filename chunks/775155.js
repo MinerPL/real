@@ -1,183 +1,183 @@
 "use strict";
-t.r(s), t.d(s, {
+n.r(t), n.d(t, {
   default: function() {
     return M
   },
   PremiumSubscriptionGiftPurchaseConfirmation: function() {
     return C
   }
-}), t("222007"), t("70102");
-var a = t("37983"),
-  l = t("884691"),
-  n = t("627445"),
-  u = t.n(n),
-  _ = t("446674"),
-  i = t("77078"),
-  I = t("465527"),
-  r = t("635357"),
-  d = t("891865"),
-  N = t("353365"),
-  E = t("10514"),
-  o = t("552712"),
-  T = t("719923"),
-  R = t("977934"),
-  c = t("646718"),
-  S = t("49111"),
-  f = t("782340"),
-  A = t("535539");
+}), n("222007"), n("70102");
+var s = n("37983"),
+  a = n("884691"),
+  l = n("627445"),
+  r = n.n(l),
+  i = n("446674"),
+  u = n("77078"),
+  o = n("465527"),
+  d = n("635357"),
+  c = n("891865"),
+  _ = n("353365"),
+  f = n("10514"),
+  E = n("552712"),
+  I = n("719923"),
+  m = n("977934"),
+  S = n("646718"),
+  p = n("49111"),
+  P = n("782340"),
+  T = n("535539");
 
-function P(e) {
-  var s, t;
-  let l, {
-      planId: n,
-      startingPremiumSubscriptionPlanId: i,
-      paymentSourceType: I
+function N(e) {
+  var t, n;
+  let a, {
+      planId: l,
+      startingPremiumSubscriptionPlanId: u,
+      paymentSourceType: o
     } = e,
-    [r, d] = (0, _.useStateFromStoresArray)([E.default], () => [E.default.get(i), E.default.get(n)]);
-  if (u(null != r && null != d, "Missing startingPlan or newPlan"), s = i, t = n, c.ORDERED_PREMIUM_SUBSCRIPTION_PLANS.indexOf(s) < c.ORDERED_PREMIUM_SUBSCRIPTION_PLANS.indexOf(t)) switch (n) {
-      case c.SubscriptionPlans.PREMIUM_MONTH_TIER_1:
-        l = f.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1, S.DELAYED_PAYMENTS.has(null != I ? I : S.PaymentSourceTypes.UNKNOWN) && (l = f.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format());
+    [d, c] = (0, i.useStateFromStoresArray)([f.default], () => [f.default.get(u), f.default.get(l)]);
+  if (r(null != d && null != c, "Missing startingPlan or newPlan"), t = u, n = l, S.ORDERED_PREMIUM_SUBSCRIPTION_PLANS.indexOf(t) < S.ORDERED_PREMIUM_SUBSCRIPTION_PLANS.indexOf(n)) switch (l) {
+      case S.SubscriptionPlans.PREMIUM_MONTH_TIER_1:
+        a = P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1, p.DELAYED_PAYMENTS.has(null != o ? o : p.PaymentSourceTypes.UNKNOWN) && (a = P.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format());
         break;
-      case c.SubscriptionPlans.PREMIUM_MONTH_TIER_2:
-        l = f.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_MONTH, S.DELAYED_PAYMENTS.has(null != I ? I : S.PaymentSourceTypes.UNKNOWN) && (l = f.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_2.format());
+      case S.SubscriptionPlans.PREMIUM_MONTH_TIER_2:
+        a = P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_MONTH, p.DELAYED_PAYMENTS.has(null != o ? o : p.PaymentSourceTypes.UNKNOWN) && (a = P.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_2.format());
         break;
-      case c.SubscriptionPlans.PREMIUM_YEAR_TIER_1:
-        l = f.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_1_YEAR, S.DELAYED_PAYMENTS.has(null != I ? I : S.PaymentSourceTypes.UNKNOWN) && (l = f.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_1_YEAR.format());
+      case S.SubscriptionPlans.PREMIUM_YEAR_TIER_1:
+        a = P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_1_YEAR, p.DELAYED_PAYMENTS.has(null != o ? o : p.PaymentSourceTypes.UNKNOWN) && (a = P.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_1_YEAR.format());
         break;
-      case c.SubscriptionPlans.PREMIUM_YEAR_TIER_2:
-        l = f.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_YEAR.format({
-          numFreeGuildSubscriptions: c.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM
-        }), S.DELAYED_PAYMENTS.has(null != I ? I : S.PaymentSourceTypes.UNKNOWN) && (l = f.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_2_YEAR.format({
-          numFreeGuildSubscriptions: c.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM
+      case S.SubscriptionPlans.PREMIUM_YEAR_TIER_2:
+        a = P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_YEAR.format({
+          numFreeGuildSubscriptions: S.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM
+        }), p.DELAYED_PAYMENTS.has(null != o ? o : p.PaymentSourceTypes.UNKNOWN) && (a = P.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_UPGRADE_TIER_2_YEAR.format({
+          numFreeGuildSubscriptions: S.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM
         }));
         break;
-      case c.SubscriptionPlans.PREMIUM_3_MONTH_TIER_2:
-      case c.SubscriptionPlans.PREMIUM_6_MONTH_TIER_2:
-        l = f.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_MULTI_MONTH;
+      case S.SubscriptionPlans.PREMIUM_3_MONTH_TIER_2:
+      case S.SubscriptionPlans.PREMIUM_6_MONTH_TIER_2:
+        a = P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_UPGRADE_TIER_2_MULTI_MONTH;
         break;
-      case c.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
-      case c.SubscriptionPlans.PREMIUM_YEAR_TIER_0:
-        l = f.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
-        break;
-      default:
-        throw Error("Unexpected planId: ".concat(n))
-    } else if (r.skuId === c.PremiumSubscriptionSKUs.TIER_2 && d.skuId === c.PremiumSubscriptionSKUs.TIER_1) l = f.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_TO_TIER_1;
-    else switch (d.skuId) {
-      case c.PremiumSubscriptionSKUs.TIER_0:
-        l = f.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
-        break;
-      case c.PremiumSubscriptionSKUs.TIER_1:
-        l = f.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1_YEAR_TO_MONTH;
-        break;
-      case c.PremiumSubscriptionSKUs.TIER_2:
-        l = 1 !== r.intervalCount ? f.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_GENERIC_TO_MONTH : f.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_YEAR_TO_MONTH;
+      case S.SubscriptionPlans.PREMIUM_MONTH_TIER_0:
+      case S.SubscriptionPlans.PREMIUM_YEAR_TIER_0:
+        a = P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
         break;
       default:
-        throw Error("Unexpected skuId: ".concat(d.skuId))
+        throw Error("Unexpected planId: ".concat(l))
+    } else if (d.skuId === S.PremiumSubscriptionSKUs.TIER_2 && c.skuId === S.PremiumSubscriptionSKUs.TIER_1) a = P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_TO_TIER_1;
+    else switch (c.skuId) {
+      case S.PremiumSubscriptionSKUs.TIER_0:
+        a = P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TO_TIER_0;
+        break;
+      case S.PremiumSubscriptionSKUs.TIER_1:
+        a = P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1_YEAR_TO_MONTH;
+        break;
+      case S.PremiumSubscriptionSKUs.TIER_2:
+        a = 1 !== d.intervalCount ? P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_GENERIC_TO_MONTH : P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_YEAR_TO_MONTH;
+        break;
+      default:
+        throw Error("Unexpected skuId: ".concat(c.skuId))
     }
-  return (0, a.jsx)("div", {
-    className: A.text,
-    children: l
+  return (0, s.jsx)("div", {
+    className: T.text,
+    children: a
   })
 }
 
 function M(e) {
-  let s, t, {
-      planId: n,
-      enableNoPaymentTrial: r,
-      startingPremiumSubscriptionPlanId: d,
-      onClose: N,
+  let t, n, {
+      planId: l,
+      enableNoPaymentTrial: d,
+      startingPremiumSubscriptionPlanId: c,
+      onClose: _,
       followupSKUInfo: M,
       isDowngrade: C,
-      hideClose: L,
-      postSuccessGuild: O,
-      paymentSourceType: m
+      hideClose: R,
+      postSuccessGuild: L,
+      paymentSourceType: A
     } = e,
     {
-      theme: p
-    } = (0, i.useThemeContext)(),
-    g = (0, _.useStateFromStores)([o.default], () => null != M ? o.default.get(M.id) : null);
-  l.useEffect(() => {
-    if (null == M || null != g) return;
+      theme: g
+    } = (0, u.useThemeContext)(),
+    x = (0, i.useStateFromStores)([E.default], () => null != M ? E.default.get(M.id) : null);
+  a.useEffect(() => {
+    if (null == M || null != x) return;
     let {
       applicationId: e,
-      id: s
+      id: t
     } = M;
-    (0, I.fetchSKU)(e, s).catch(S.NOOP_NULL)
-  }, [M, g]);
-  let U = e => {
-    if (e.skuId === c.PremiumSubscriptionSKUs.TIER_0) return S.DELAYED_PAYMENTS.has(null != m ? m : S.PaymentSourceTypes.UNKNOWN) ? f.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format() : f.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_0;
-    if (e.skuId === c.PremiumSubscriptionSKUs.TIER_1) return S.DELAYED_PAYMENTS.has(null != m ? m : S.PaymentSourceTypes.UNKNOWN) ? f.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format() : f.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1;
-    return S.DELAYED_PAYMENTS.has(null != m ? m : S.PaymentSourceTypes.UNKNOWN) ? f.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_2.format() : r ? f.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_NO_PAYMENT_TRIAL : f.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2
+    (0, o.fetchSKU)(e, t).catch(p.NOOP_NULL)
+  }, [M, x]);
+  let O = e => {
+    if (e.skuId === S.PremiumSubscriptionSKUs.TIER_0) return p.DELAYED_PAYMENTS.has(null != A ? A : p.PaymentSourceTypes.UNKNOWN) ? P.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format() : P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_0;
+    if (e.skuId === S.PremiumSubscriptionSKUs.TIER_1) return p.DELAYED_PAYMENTS.has(null != A ? A : p.PaymentSourceTypes.UNKNOWN) ? P.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_1.format() : P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_1;
+    return p.DELAYED_PAYMENTS.has(null != A ? A : p.PaymentSourceTypes.UNKNOWN) ? P.default.Messages.BILLING_SWITCH_PLAN_DELAYED_CONFIRMATION_TIER_2.format() : d ? P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2_NO_PAYMENT_TRIAL : P.default.Messages.BILLING_SWITCH_PLAN_CONFIRM_TIER_2
   };
-  if (null != g) s = (0, a.jsx)("div", {
-    className: A.text,
-    children: f.default.Messages.PREMIUM_PAYMENT_CONFIRMATION_BLURB_IAP.format({
-      skuName: g.name
+  if (null != x) t = (0, s.jsx)("div", {
+    className: T.text,
+    children: P.default.Messages.PREMIUM_PAYMENT_CONFIRMATION_BLURB_IAP.format({
+      skuName: x.name
     })
   });
-  else if (null != d) s = (0, a.jsx)(P, {
-    planId: n,
-    startingPremiumSubscriptionPlanId: d
+  else if (null != c) t = (0, s.jsx)(N, {
+    planId: l,
+    startingPremiumSubscriptionPlanId: c
   });
-  else if (null != O) {
-    let e = E.default.get(n);
-    u(null != e, "Missing plan"), s = (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)("div", {
-        className: A.text,
-        children: U(e)
-      }), (0, a.jsx)("div", {
-        className: A.text,
-        children: f.default.Messages.BILLING_POST_PURCHASE_JOIN_GUILD_FOR_EMOJI.format({
-          guildName: O.name
+  else if (null != L) {
+    let e = f.default.get(l);
+    r(null != e, "Missing plan"), t = (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsx)("div", {
+        className: T.text,
+        children: O(e)
+      }), (0, s.jsx)("div", {
+        className: T.text,
+        children: P.default.Messages.BILLING_POST_PURCHASE_JOIN_GUILD_FOR_EMOJI.format({
+          guildName: L.name
         })
       })]
     })
   } else {
-    let e = E.default.get(n);
-    u(null != e, "Missing plan"), s = (0, a.jsx)("div", {
-      className: A.text,
-      children: U(e)
+    let e = f.default.get(l);
+    r(null != e, "Missing plan"), t = (0, s.jsx)("div", {
+      className: T.text,
+      children: O(e)
     })
   }
-  let h = T.default.getPremiumType(n);
-  return u(null != h, "premium type should not be null in purchase confirmation"), t = null != g ? f.default.Messages.PREMIUM_PAYMENT_CONFIRMATION_BUTTON_IAP.format({
-    skuName: g.name
-  }) : C ? f.default.Messages.PREMIUM_DOWNGRADE_DONE_BUTTON : null != O ? f.default.Messages.BILLING_POST_PURCHASE_JOIN_GUILD_FOR_EMOJI_CTA : f.default.Messages.PREMIUM_UPGRADE_DONE_BUTTON, (0, a.jsxs)("div", {
-    className: A.confirmation,
-    children: [(0, a.jsx)(R.default, {
-      className: A.banner,
-      theme: p,
+  let h = I.default.getPremiumType(l);
+  return r(null != h, "premium type should not be null in purchase confirmation"), n = null != x ? P.default.Messages.PREMIUM_PAYMENT_CONFIRMATION_BUTTON_IAP.format({
+    skuName: x.name
+  }) : C ? P.default.Messages.PREMIUM_DOWNGRADE_DONE_BUTTON : null != L ? P.default.Messages.BILLING_POST_PURCHASE_JOIN_GUILD_FOR_EMOJI_CTA : P.default.Messages.PREMIUM_UPGRADE_DONE_BUTTON, (0, s.jsxs)("div", {
+    className: T.confirmation,
+    children: [(0, s.jsx)(m.default, {
+      className: T.banner,
+      theme: g,
       premiumType: h,
-      type: S.DELAYED_PAYMENTS.has(null != m ? m : S.PaymentSourceTypes.UNKNOWN) ? R.default.Types.PREMIUM_PAYMENT_STARTED : null != d ? R.default.Types.PREMIUM_UPDATED : R.default.Types.PREMIUM_ACTIVATED
-    }), s, L ? null : (0, a.jsx)(i.Button, {
-      onClick: N,
-      children: t
+      type: p.DELAYED_PAYMENTS.has(null != A ? A : p.PaymentSourceTypes.UNKNOWN) ? m.default.Types.PREMIUM_PAYMENT_STARTED : null != c ? m.default.Types.PREMIUM_UPDATED : m.default.Types.PREMIUM_ACTIVATED
+    }), t, R ? null : (0, s.jsx)(u.Button, {
+      onClick: _,
+      children: n
     })]
   })
 }
 
 function C(e) {
   let {
-    planId: s,
-    onClose: t
+    planId: t,
+    onClose: n
   } = e, {
-    giftRecipient: l,
-    selectedGiftStyle: n,
-    hasSentMessage: i,
-    giftMessageError: I,
-    isSendingMessage: o
-  } = (0, r.useGiftContext)(), T = (0, _.useStateFromStores)([E.default], () => E.default.get(s));
-  u(null != T, "Missing plan");
-  let R = (0, _.useStateFromStores)([N.default], () => N.default.getGiftCode(T.skuId));
-  return (0, a.jsx)(d.default, {
-    giftCode: R,
-    subscriptionPlan: T,
-    onClose: t,
-    selectedGiftStyle: n,
-    hasSentMessage: i,
-    giftRecipient: l,
-    giftMessageError: I,
-    isSendingMessage: o
+    giftRecipient: a,
+    selectedGiftStyle: l,
+    hasSentMessage: u,
+    giftMessageError: o,
+    isSendingMessage: E
+  } = (0, d.useGiftContext)(), I = (0, i.useStateFromStores)([f.default], () => f.default.get(t));
+  r(null != I, "Missing plan");
+  let m = (0, i.useStateFromStores)([_.default], () => _.default.getGiftCode(I.skuId));
+  return (0, s.jsx)(c.default, {
+    giftCode: m,
+    subscriptionPlan: I,
+    onClose: n,
+    selectedGiftStyle: l,
+    hasSentMessage: u,
+    giftRecipient: a,
+    giftMessageError: o,
+    isSendingMessage: E
   })
 }

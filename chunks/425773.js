@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return c
   },
   default: function() {
-    return E
+    return h
   }
 }), n("70102");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("414456"),
   i = n.n(s),
   r = n("77078"),
@@ -27,34 +27,34 @@ function c(e, t, n) {
     "aria-selected": n
   }
 }
-class f extends a.PureComponent {
+class f extends l.PureComponent {
   renderQuery(e) {
     let {
       query: t,
       navId: n,
-      focusedIndex: a,
+      focusedIndex: l,
       onSelectQuery: s,
       onHighlightQuery: d,
       hideQuery: f
     } = this.props;
     if (e || f) return null;
-    let E = -1 === a;
-    return (0, l.jsxs)(r.Clickable, {
+    let h = -1 === l;
+    return (0, a.jsxs)(r.Clickable, {
       className: i(u.queryContainer, {
-        [u.focused]: E
+        [u.focused]: h
       }),
-      ...c(n, -1, E),
+      ...c(n, -1, h),
       onMouseEnter: d,
       onClick: s,
-      children: [(0, l.jsx)("div", {
+      children: [(0, a.jsx)("div", {
         className: u.queryText,
         children: o.default.Messages.SEARCH_FOR_VALUE.format({
           value: t
         })
-      }), (0, l.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: u.queryShortcut,
         "aria-hidden": !0,
-        children: (0, l.jsx)(r.KeyCombo, {
+        children: (0, a.jsx)(r.KeyCombo, {
           shortcut: "return",
           dim: !0,
           className: u.keyCombo
@@ -66,15 +66,15 @@ class f extends a.PureComponent {
     let {
       numResults: t,
       renderNoResults: n,
-      renderInitialState: l,
-      renderResult: a,
+      renderInitialState: a,
+      renderResult: l,
       renderCustomResults: s
     } = this.props;
-    if (e) return l();
+    if (e) return a();
     if (0 === t) return n();
-    if (null != a) return Array.from({
+    if (null != l) return Array.from({
       length: t
-    }).map((e, t) => a(t));
+    }).map((e, t) => l(t));
     if (null != s) return s();
     throw Error("SearchResultsPopout.renderResults: Flow should never allow this...")
   }
@@ -83,12 +83,12 @@ class f extends a.PureComponent {
       query: e,
       focusedIndex: t,
       navId: n,
-      width: a
+      width: l
     } = this.props, s = "" === e.trim();
-    return (0, l.jsxs)("div", {
+    return (0, a.jsxs)("div", {
       className: u.container,
       style: {
-        width: a
+        width: l
       },
       onMouseDown: d,
       role: "listbox",
@@ -104,4 +104,4 @@ f.defaultProps = {
   hideQuery: !1,
   width: 320
 };
-var E = f
+var h = f

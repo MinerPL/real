@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var a = n("37983");
@@ -15,7 +15,7 @@ var s = n("446674"),
   d = n("855143"),
   c = n("934516");
 
-function E(e) {
+function f(e) {
   let {
     section: t
   } = e, n = (0, s.useStateFromStores)([i.default], () => i.default.theme);

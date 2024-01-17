@@ -97,8 +97,8 @@ var a = n("629109"),
             noise_suppression: u,
             qos: d,
             silence_warning: c,
-            deaf: E,
-            mute: f
+            deaf: f,
+            mute: E
           }
         } = e;
         if (t && (null != t.device_id && a.default.setInputDevice(t.device_id), null != t.volume && a.default.setInputVolume(t.volume)), n && (null != n.device_id && a.default.setOutputDevice(n.device_id), null != n.volume && a.default.setOutputVolume(n.volume)), i) {
@@ -106,13 +106,13 @@ var a = n("629109"),
             t = s.default.getModeOptions();
           null != i.type && (e = i.type), null != i.auto_threshold && (t.autoThreshold = i.auto_threshold), null != i.threshold && (t.threshold = i.threshold), null != i.shortcut && (t.shortcut = i.shortcut.map(e => [e.type, e.code])), null != i.delay && (t.delay = i.delay), a.default.setMode(e, t)
         }
-        if (null != l && a.default.setAutomaticGainControl(l), null != r && a.default.setEchoCancellation(r), null != u && a.default.setNoiseSuppression(u), null != d && a.default.setQoS(d), null != c && a.default.setSilenceWarning(c), null != E) {
+        if (null != l && a.default.setAutomaticGainControl(l), null != r && a.default.setEchoCancellation(r), null != u && a.default.setNoiseSuppression(u), null != d && a.default.setQoS(d), null != c && a.default.setSilenceWarning(c), null != f) {
           let e = s.default.isSelfDeaf();
-          (e && !E || !e && E) && a.default.toggleSelfDeaf()
+          (e && !f || !e && f) && a.default.toggleSelfDeaf()
         }
-        if (null != f) {
+        if (null != E) {
           let e = s.default.isSelfMute();
-          (e && !f || !e && f) && a.default.toggleSelfMute()
+          (e && !E || !e && E) && a.default.toggleSelfMute()
         }
         return (0, o.getDeprecatedVoiceSettings)()
       }

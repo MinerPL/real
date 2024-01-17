@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("77078"),
-  l = n("996866");
+var l = n("77078"),
+  a = n("996866");
 
 function i(e) {
   let {
@@ -21,17 +21,17 @@ function i(e) {
     loading: d,
     disabled: c,
     onClick: f
-  } = (0, l.useSpotifyJoinAction)(t, n, i);
-  return (0, a.jsx)(s.Tooltip, {
+  } = (0, a.useSpotifyJoinAction)(t, n, i);
+  return (0, s.jsx)(l.Tooltip, {
     text: u,
     children: e => {
       let {
         onMouseEnter: t,
         onMouseLeave: n
       } = e;
-      return (0, a.jsx)(s.Button, {
+      return (0, s.jsx)(l.Button, {
         ...r,
-        color: c ? s.Button.Colors.PRIMARY : s.Button.Colors.GREEN,
+        color: c ? l.Button.Colors.PRIMARY : l.Button.Colors.GREEN,
         onClick: f,
         onMouseEnter: t,
         onMouseLeave: n,

@@ -1,66 +1,66 @@
 "use strict";
-s.r(t), s.d(t, {
+s.r(e), s.d(e, {
   default: function() {
-    return g
+    return S
   }
 });
 var i = s("37983");
 s("884691");
-var n = s("265586"),
+var l = s("265586"),
   a = s("446674"),
-  o = s("77078"),
-  u = s("606292"),
-  r = s("688318"),
-  l = s("601095"),
-  c = s("697218"),
-  d = s("853987"),
-  p = s("929392");
-let f = o.AvatarSizes.SIZE_152,
-  m = (0, u.getDecorationSizeForAvatarSize)(f),
-  h = e => {
+  n = s("77078"),
+  r = s("606292"),
+  o = s("688318"),
+  u = s("601095"),
+  d = s("697218"),
+  c = s("853987"),
+  f = s("929392");
+let p = n.AvatarSizes.SIZE_152,
+  h = (0, r.getDecorationSizeForAvatarSize)(p),
+  m = t => {
     let {
-      item: t
-    } = e, s = (0, a.useStateFromStores)([c.default], () => c.default.getCurrentUser()), {
-      avatarDecorationSrc: n,
-      avatarPlaceholderSrc: u,
-      eventHandlers: l
-    } = (0, r.default)({
+      item: e
+    } = t, s = (0, a.useStateFromStores)([d.default], () => d.default.getCurrentUser()), {
+      avatarDecorationSrc: l,
+      avatarPlaceholderSrc: r,
+      eventHandlers: u
+    } = (0, o.default)({
       user: s,
-      avatarDecorationOverride: t,
-      size: m
+      avatarDecorationOverride: e,
+      size: h
     });
     return (0, i.jsx)("div", {
-      className: p.avatarDecorationPreview,
-      children: (0, i.jsx)(o.Avatar, {
-        ...l,
-        "aria-label": t.label,
-        src: u,
-        avatarDecoration: n,
-        size: f
+      className: f.avatarDecorationPreview,
+      children: (0, i.jsx)(n.Avatar, {
+        ...u,
+        "aria-label": e.label,
+        src: r,
+        avatarDecoration: l,
+        size: p
       })
     })
   },
-  _ = e => {
+  C = t => {
     let {
-      item: t
-    } = e;
+      item: e
+    } = t;
     return (0, i.jsx)("div", {
-      className: p.profileEffectPreview,
-      children: (0, i.jsx)(l.default, {
+      className: f.profileEffectPreview,
+      children: (0, i.jsx)(u.default, {
         isHovering: !0,
-        profileEffectId: null == t ? void 0 : t.id
+        profileEffectId: null == e ? void 0 : e.id
       })
     })
   };
-var g = e => {
+var S = t => {
   let {
-    giftCode: t
-  } = e, s = (0, a.useStateFromStores)([d.default], () => d.default.getProduct(t.skuId)), o = null == s ? void 0 : s.items[0];
+    giftCode: e
+  } = t, s = (0, a.useStateFromStores)([c.default], () => c.default.getProduct(e.skuId)), n = null == s ? void 0 : s.items[0];
   return (0, i.jsxs)(i.Fragment, {
-    children: [(null == o ? void 0 : o.type) === n.CollectiblesItemType.AVATAR_DECORATION && (0, i.jsx)(h, {
-      item: o
-    }), (null == o ? void 0 : o.type) === n.CollectiblesItemType.PROFILE_EFFECT && (0, i.jsx)(_, {
-      item: o
+    children: [(null == n ? void 0 : n.type) === l.CollectiblesItemType.AVATAR_DECORATION && (0, i.jsx)(m, {
+      item: n
+    }), (null == n ? void 0 : n.type) === l.CollectiblesItemType.PROFILE_EFFECT && (0, i.jsx)(C, {
+      item: n
     })]
   })
 }

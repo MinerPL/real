@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("574073"),
-  l = n("985622"),
+var l = n("574073"),
+  a = n("985622"),
   i = n("304198"),
   r = n("980423"),
   o = n("782340");
@@ -20,27 +20,27 @@ function u(e) {
     playingActivity: d,
     onJoinStream: c,
     usernameHook: f,
-    compact: m
-  } = e, E = (0, s.default)(n), _ = null === (t = n.call) || void 0 === t ? void 0 : t.duration, h = f(E), p = o.default.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
-    username: E.nick,
+    compact: E
+  } = e, _ = (0, l.default)(n), T = null === (t = n.call) || void 0 === t ? void 0 : t.duration, I = f(_), m = o.default.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
+    username: _.nick,
     activityName: null != d ? d.name : "unknown",
     onJoinStream: c,
-    usernameHook: h
+    usernameHook: I
   });
-  return null != _ && (p = o.default.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ENDED.format({
-    username: E.nick,
-    duration: _.humanize(),
+  return null != T && (m = o.default.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ENDED.format({
+    username: _.nick,
+    duration: T.humanize(),
     channelName: u.name,
-    usernameHook: h
-  })), (0, a.jsx)(i.default, {
-    iconNode: null != _ ? (0, a.jsx)(l.default, {
+    usernameHook: I
+  })), (0, s.jsx)(i.default, {
+    iconNode: null != T ? (0, s.jsx)(a.default, {
       width: 20,
       height: 20
-    }) : (0, a.jsx)(r.default, {
+    }) : (0, s.jsx)(r.default, {
       size: r.default.Sizes.SMALL
     }),
     timestamp: n.timestamp,
-    compact: m,
-    children: p
+    compact: E,
+    children: m
   })
 }

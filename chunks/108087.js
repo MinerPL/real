@@ -13,9 +13,9 @@ var a = n("316718"),
   u = n("861309"),
   d = n("383928"),
   c = n("492249"),
-  E = n("49111");
-async function f(e, t) {
-  let n = t.filter(e => e.type === E.SKUTypes.SUBSCRIPTION_GROUP),
+  f = n("49111");
+async function E(e, t) {
+  let n = t.filter(e => e.type === f.SKUTypes.SUBSCRIPTION_GROUP),
     a = await Promise.all(n.map(async t => await (0, r.fetchAllSubscriptionListingsDataForApplication)(e, t.id))),
     s = [];
   return a.forEach(e => {
@@ -35,7 +35,7 @@ async function f(e, t) {
           type: l.type,
           price: {
             amount: i,
-            currency: E.CurrencyCodes.USD
+            currency: f.CurrencyCodes.USD
           },
           application_id: e.application_id,
           flags: e.sku_flags,
@@ -55,12 +55,12 @@ async function _(e) {
   if (null == n) throw new u.default(c.RPCErrors.INVALID_COMMAND, "No application.");
   if (o.default.inTestModeForApplication(n) || l.default.inDevModeForApplication(n)) {
     let e = await s.fetchSKUsForApplication(n, !1),
-      t = await f(n, e);
+      t = await E(n, e);
     return [...e.filter(e => null != e.price), ...t]
   }
   let a = await i.fetchAllStoreListingsForApplication(n),
-    r = a.filter(e => e.sku.type !== E.SKUTypes.SUBSCRIPTION_GROUP).map(e => e.sku).filter(e => null != e.price),
-    _ = await f(n, a.map(e => e.sku));
+    r = a.filter(e => e.sku.type !== f.SKUTypes.SUBSCRIPTION_GROUP).map(e => e.sku).filter(e => null != e.price),
+    _ = await E(n, a.map(e => e.sku));
   return [...r, ..._]
 }
 
@@ -74,21 +74,21 @@ function h(e) {
   return a.fetchUserEntitlementsForApplication(n)
 }
 var C = {
-  [E.RPCCommands.GET_SKUS]: {
+  [f.RPCCommands.GET_SKUS]: {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE, c.RPC_LOCAL_SCOPE],
     handler: _
   },
-  [E.RPCCommands.GET_ENTITLEMENTS]: {
+  [f.RPCCommands.GET_ENTITLEMENTS]: {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE, c.RPC_LOCAL_SCOPE],
     handler: h
   },
-  [E.RPCCommands.GET_SKUS_EMBEDDED]: {
+  [f.RPCCommands.GET_SKUS_EMBEDDED]: {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE, c.RPC_LOCAL_SCOPE],
     handler: async e => ({
       skus: await _(e)
     })
   },
-  [E.RPCCommands.GET_ENTITLEMENTS_EMBEDDED]: {
+  [f.RPCCommands.GET_ENTITLEMENTS_EMBEDDED]: {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE, c.RPC_LOCAL_SCOPE],
     handler: async e => ({
       entitlements: await h(e)

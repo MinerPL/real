@@ -1,13 +1,13 @@
 "use strict";
 
-function a(e, t) {
+function s(e, t) {
   var n;
-  let a = decodeURIComponent(t),
-    s = null !== (n = a.split("/").pop()) && void 0 !== n ? n : "temp.gif";
-  return "".concat(e, "-").concat(s)
+  let s = decodeURIComponent(t),
+    l = null !== (n = s.split("/").pop()) && void 0 !== n ? n : "temp.gif";
+  return "".concat(e, "-").concat(l)
 }
 n.r(t), n.d(t, {
   getFileNameFromGifUrl: function() {
-    return a
+    return s
   }
 }), n("186859")

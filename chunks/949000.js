@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return A
   }
 }), n("222007");
 var a = n("37983");
@@ -14,16 +14,16 @@ var s = n("77078"),
   u = n("42887"),
   d = n("18494"),
   c = n("227602"),
-  E = n("447973"),
-  f = n("305122"),
+  f = n("447973"),
+  E = n("305122"),
   _ = n("235004"),
   h = n("245463"),
   C = n("520497"),
-  T = n("812809"),
-  I = n("435895"),
+  I = n("812809"),
+  T = n("435895"),
   S = n("49111"),
-  N = n("353927");
-class A extends E.default {
+  m = n("353927");
+class p extends f.default {
   _initialize() {
     super._initialize(), !__OVERLAY__ && i.default.subscribe("OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST", this._handleOverlaySoundboardSoundsFetchRequest)
   }
@@ -33,7 +33,7 @@ class A extends E.default {
   constructor(...e) {
     var t;
     super(...e), t = this, this.playingSoundsWeb = new Map, this._stopAndClearSounds = () => {
-      u.default.supports(N.Features.SAMPLE_PLAYBACK) && u.default.getMediaEngine().eachConnection(e => {
+      u.default.supports(m.Features.SAMPLE_PLAYBACK) && u.default.getMediaEngine().eachConnection(e => {
         e.stopAllSamplesLocalPlayback()
       }), this.playingSoundsWeb.forEach(e => {
         e.pause(), e.src = ""
@@ -47,15 +47,15 @@ class A extends E.default {
         let s = {
           soundKey: "".concat(a, "-").concat(e),
           soundURL: (0, C.default)(e),
-          soundVolume: (0, T.default)(n),
-          reportSoundStartedPlaying: () => (0, f.reportSoundStartedPlaying)(e, a)
+          soundVolume: (0, I.default)(n),
+          reportSoundStartedPlaying: () => (0, E.reportSoundStartedPlaying)(e, a)
         };
-        u.default.supports(N.Features.SAMPLE_PLAYBACK) ? await (0, I.playDesktopSound)(s) : await (0, I.playWebSound)(s, t.playingSoundsWeb)
+        u.default.supports(m.Features.SAMPLE_PLAYBACK) ? await (0, T.playDesktopSound)(s) : await (0, T.playWebSound)(s, t.playingSoundsWeb)
       } finally {
-        (0, f.reportSoundFinishedPlaying)(e, a)
+        (0, E.reportSoundFinishedPlaying)(e, a)
       }
     }, this._handleOverlaySoundboardSoundsFetchRequest = () => {
-      (0, f.maybeFetchSoundboardSounds)()
+      (0, E.maybeFetchSoundboardSounds)()
     }, this._handleOpenEducationModal = (e, t) => {
       if (null == e) return;
       let i = o.default.getChannel(t),
@@ -74,4 +74,4 @@ class A extends E.default {
     }
   }
 }
-var p = new A
+var A = new p

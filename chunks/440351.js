@@ -1,60 +1,60 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return f
   }
 });
-var i = s("37983"),
-  n = s("884691"),
-  a = s("414456"),
-  l = s.n(a),
-  o = s("77078"),
-  r = s("145131"),
-  u = s("296165"),
-  d = s("926622");
-class c extends n.PureComponent {
+var i = n("37983"),
+  s = n("884691"),
+  r = n("414456"),
+  l = n.n(r),
+  a = n("77078"),
+  u = n("145131"),
+  o = n("296165"),
+  c = n("926622");
+class d extends s.PureComponent {
   render() {
     let {
       title: e,
       description: t,
-      agreement: s,
-      disagreement: n,
-      onAgree: a,
-      onDisagree: c,
+      agreement: n,
+      disagreement: s,
+      onAgree: r,
+      onDisagree: d,
       imageClassName: f
     } = this.props;
-    return (0, i.jsxs)(r.default, {
-      className: u.gatedContent,
-      justify: r.default.Justify.CENTER,
-      align: r.default.Align.CENTER,
-      direction: r.default.Direction.VERTICAL,
+    return (0, i.jsxs)(u.default, {
+      className: o.gatedContent,
+      justify: u.default.Justify.CENTER,
+      align: u.default.Align.CENTER,
+      direction: u.default.Direction.VERTICAL,
       children: [(0, i.jsx)("div", {
-        className: l(u.image, f)
+        className: l(o.image, f)
       }), (0, i.jsx)("div", {
-        className: l(u.title, d.marginBottom8),
+        className: l(o.title, c.marginBottom8),
         children: e
       }), (0, i.jsx)("div", {
-        className: l(u.description, d.marginBottom20),
+        className: l(o.description, c.marginBottom20),
         children: t
-      }), (0, i.jsxs)(r.default, {
-        justify: r.default.Justify.CENTER,
-        align: r.default.Align.CENTER,
+      }), (0, i.jsxs)(u.default, {
+        justify: u.default.Justify.CENTER,
+        align: u.default.Align.CENTER,
         grow: 0,
-        children: [null != n ? (0, i.jsx)(o.Button, {
-          className: u.action,
-          size: o.ButtonSizes.LARGE,
-          color: o.ButtonColors.PRIMARY,
-          onClick: c,
-          children: n
-        }) : null, null != s ? (0, i.jsx)(o.Button, {
-          className: u.action,
-          color: o.Button.Colors.RED,
-          size: o.ButtonSizes.LARGE,
-          onClick: a,
+        children: [null != s ? (0, i.jsx)(a.Button, {
+          className: o.action,
+          size: a.ButtonSizes.LARGE,
+          color: a.ButtonColors.PRIMARY,
+          onClick: d,
           children: s
+        }) : null, null != n ? (0, i.jsx)(a.Button, {
+          className: o.action,
+          color: a.Button.Colors.RED,
+          size: a.ButtonSizes.LARGE,
+          onClick: r,
+          children: n
         }) : null]
       })]
     })
   }
 }
-var f = c
+var f = d

@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   useManageResourcePermissions: function() {
     return E
   },
@@ -12,18 +12,18 @@ n.r(t), n.d(t, {
   useShouldShowInventoryGuildSettingsCoachmark: function() {
     return C
   }
-}), n("222007");
-var a = n("884691"),
-  l = n("316693"),
-  i = n("446674"),
-  r = n("252931"),
-  s = n("813006");
-n("923959");
-var u = n("957255"),
-  o = n("697218");
-n("991170");
-var d = n("270161"),
-  c = n("843455");
+}), a("222007");
+var n = a("884691"),
+  l = a("316693"),
+  i = a("446674"),
+  r = a("252931"),
+  s = a("813006");
+a("923959");
+var u = a("957255"),
+  o = a("697218");
+a("991170");
+var d = a("270161"),
+  c = a("843455");
 let f = {
     canCreateExpressions: !1,
     canCreateGuildEvent: !1,
@@ -32,14 +32,14 @@ let f = {
     canManageGuildExpression: () => !1,
     canManageGuildEvent: () => !1
   },
-  m = (e, t, n, a) => {
+  m = (e, t, a, n) => {
     if (null == e) return !1;
-    if (n) return !0;
-    if ("creator_id" in e) return a && null != t && e.creator_id === t.id;
-    if ("userId" in e) return a && null != t && e.userId === t.id;
+    if (a) return !0;
+    if ("creator_id" in e) return n && null != t && e.creator_id === t.id;
+    if ("userId" in e) return n && null != t && e.userId === t.id;
     if ("user" in e) {
       var l;
-      return a && null != t && (null === (l = e.user) || void 0 === l ? void 0 : l.id) === t.id
+      return n && null != t && (null === (l = e.user) || void 0 === l ? void 0 : l.id) === t.id
     }
     return !1
   },
@@ -49,7 +49,7 @@ let f = {
     return e.isGuildStageVoice() ? t = d.CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS : e.isGuildVoice() && (t = d.CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS), [l.default.combine(t, c.Permissions.CREATE_EVENTS), l.default.combine(t, c.Permissions.MANAGE_EVENTS)]
   },
   E = e => {
-    let [t, n] = e instanceof s.default ? [c.Permissions.CREATE_EVENTS, c.Permissions.MANAGE_EVENTS] : v(e), [l, r, d, E] = (0, i.useStateFromStoresArray)([u.default], () => [u.default.can(c.Permissions.CREATE_GUILD_EXPRESSIONS, e), u.default.can(c.Permissions.MANAGE_GUILD_EXPRESSIONS, e), u.default.can(t, e), u.default.can(n, e)]), p = (0, i.useStateFromStores)([o.default], () => o.default.getCurrentUser()), h = a.useCallback(e => m(e, p, r, l), [l, r, p]), C = a.useCallback(e => m(e, p, E, d), [E, d, p]);
+    let [t, a] = e instanceof s.default ? [c.Permissions.CREATE_EVENTS, c.Permissions.MANAGE_EVENTS] : v(e), [l, r, d, E] = (0, i.useStateFromStoresArray)([u.default], () => [u.default.can(c.Permissions.CREATE_GUILD_EXPRESSIONS, e), u.default.can(c.Permissions.MANAGE_GUILD_EXPRESSIONS, e), u.default.can(t, e), u.default.can(a, e)]), p = (0, i.useStateFromStores)([o.default], () => o.default.getCurrentUser()), h = n.useCallback(e => m(e, p, r, l), [l, r, p]), C = n.useCallback(e => m(e, p, E, d), [E, d, p]);
     return null == e ? f : {
       canCreateExpressions: l,
       canCreateGuildEvent: d,
@@ -61,13 +61,13 @@ let f = {
   },
   p = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.default,
-      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.default,
-      [a, l] = e instanceof s.default ? [c.Permissions.CREATE_EVENTS, c.Permissions.MANAGE_EVENTS] : v(e),
+      a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.default,
+      [n, l] = e instanceof s.default ? [c.Permissions.CREATE_EVENTS, c.Permissions.MANAGE_EVENTS] : v(e),
       i = t.can(c.Permissions.CREATE_GUILD_EXPRESSIONS, e),
       r = t.can(c.Permissions.MANAGE_GUILD_EXPRESSIONS, e),
-      d = t.can(a, e),
+      d = t.can(n, e),
       E = t.can(l, e),
-      p = n.getCurrentUser();
+      p = a.getCurrentUser();
     return null == e ? f : {
       canCreateExpressions: i,
       canCreateGuildEvent: d,
@@ -80,19 +80,19 @@ let f = {
   h = e => {
     let t = (0, i.useStateFromStores)([u.default], () => u.default.can(c.Permissions.MANAGE_GUILD, e)),
       {
-        showSettingsToggle: n
+        showSettingsToggle: a
       } = (0, r.useInventoryGuildSettingsExperiment)({
         guildId: null == e ? void 0 : e.id
       });
-    return t && null != n
+    return t && null != a
   },
   C = e => {
     let t = (0, i.useStateFromStores)([u.default], () => u.default.can(c.Permissions.MANAGE_GUILD, e)),
       {
-        showSettingsToggle: n,
-        getNewSettingsDescriptionLine1: a
+        showSettingsToggle: a,
+        getNewSettingsDescriptionLine1: n
       } = (0, r.useInventoryGuildSettingsExperiment)({
         guildId: null == e ? void 0 : e.id
       });
-    return t && null != n && null != a()
+    return t && null != a && null != n()
   }

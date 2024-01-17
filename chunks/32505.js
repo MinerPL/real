@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var a = n("37983");
@@ -14,7 +14,7 @@ var s = n("77078"),
   u = n("994428"),
   d = n("782340"),
   c = n("398586"),
-  E = e => {
+  f = e => {
     let t = i.QUICKSWITCHER_SHOW.binds[0].split("+").map(e => null != s.PRETTY_KEYS[e] ? (0, s.PRETTY_KEYS)[e]() : e).join(" + ").toUpperCase();
     return (0, a.jsx)(r.default, {
       guild: e.guild,

@@ -13,8 +13,8 @@ var a = n("913144"),
   u = n("271938"),
   d = n("42203"),
   c = n("42887"),
-  E = n("808422");
-class f extends l.default {
+  f = n("808422");
+class E extends l.default {
   _initialize() {
     a.default.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates)
   }
@@ -31,7 +31,7 @@ class f extends l.default {
         if (e.userId !== n) return;
         let a = null === (t = d.default.getChannel(e.channelId)) || void 0 === t ? void 0 : t.isGuildStageVoice();
         if (!a) return;
-        let s = (0, E.getAudienceRequestToSpeakState)(e) === E.RequestToSpeakStates.ON_STAGE;
+        let s = (0, f.getAudienceRequestToSpeakState)(e) === f.RequestToSpeakStates.ON_STAGE;
         !s && (this.handleStopStream(e), this.handleStopUserVideo())
       })
     }, this.handleStopStream = e => {
@@ -42,4 +42,4 @@ class f extends l.default {
     }
   }
 }
-var _ = new f
+var _ = new E

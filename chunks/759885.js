@@ -1,72 +1,72 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return C
   }
 });
-var r = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("446674"),
-  u = n("77078"),
-  l = n("255397"),
+var r = n("446674"),
+  l = n("77078"),
+  u = n("255397"),
   o = n("987317"),
   s = n("679653"),
   a = n("393414"),
   d = n("233069"),
   c = n("42203"),
   f = n("305961"),
-  h = n("27618"),
-  _ = n("697218"),
-  C = n("666897"),
-  p = n("404008"),
-  g = n("794818"),
-  E = n("49111");
+  S = n("27618"),
+  E = n("697218"),
+  h = n("666897"),
+  g = n("404008"),
+  p = n("794818"),
+  _ = n("49111");
 
-function S(e) {
+function C(e) {
   let {
     channel: t,
     onClick: n,
-    beforeTransition: S,
-    className: T,
+    beforeTransition: C,
+    className: m,
     openChatWithoutConnecting: I
-  } = e, m = (0, i.useStateFromStores)([_.default, h.default], () => null == t ? "" : (0, s.computeChannelName)(t, _.default, h.default), [t]);
-  return (0, r.jsx)(u.Tooltip, {
-    text: m,
+  } = e, T = (0, r.useStateFromStores)([E.default, S.default], () => null == t ? "" : (0, s.computeChannelName)(t, E.default, S.default), [t]);
+  return (0, i.jsx)(l.Tooltip, {
+    text: T,
     position: "top",
     children: e => {
       let {
-        onMouseEnter: i,
+        onMouseEnter: r,
         onMouseLeave: s
       } = e;
-      return (0, r.jsx)(C.default, {
+      return (0, i.jsx)(h.default, {
         role: "link",
-        className: T,
+        className: m,
         onClick: e => {
-          e.stopPropagation(), null != n ? n() : (null != S && S(), (0, u.closeAllModals)(), ! function(e, t) {
+          e.stopPropagation(), null != n ? n() : (null != C && C(), (0, l.closeAllModals)(), ! function(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             if (null == e || null == t) return;
-            let r = f.default.getGuild(e);
-            if ((null == r ? void 0 : r.joinedAt) == null) {
-              g.startLurking(e, {}, {
+            let i = f.default.getGuild(e);
+            if ((null == i ? void 0 : i.joinedAt) == null) {
+              p.startLurking(e, {}, {
                 channelId: t
               });
               return
             }
-            let i = c.default.getChannel(t);
-            if (null != i && (0, d.isGuildVocalChannelType)(i.type)) {
+            let r = c.default.getChannel(t);
+            if (null != r && (0, d.isGuildVocalChannelType)(r.type)) {
               if (n) {
-                l.default.updateChatOpen(i.id, !0), (0, a.transitionTo)(E.Routes.CHANNEL(e, t));
+                u.default.updateChatOpen(r.id, !0), (0, a.transitionTo)(_.Routes.CHANNEL(e, t));
                 return
               }
-              o.default.selectVoiceChannel(i.id);
+              o.default.selectVoiceChannel(r.id);
               return
-            }(0, a.transitionTo)(E.Routes.CHANNEL(e, t))
+            }(0, a.transitionTo)(_.Routes.CHANNEL(e, t))
           }(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, I))
         },
-        onMouseEnter: i,
+        onMouseEnter: r,
         onMouseLeave: s,
-        iconType: (0, p.getMentionIconType)(t),
-        children: m
+        iconType: (0, g.getMentionIconType)(t),
+        children: T
       })
     }
   })

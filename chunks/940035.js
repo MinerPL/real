@@ -13,32 +13,32 @@ var a = n("913144"),
   u = n("316272"),
   d = n("56947"),
   c = n("803725"),
-  E = n("374014"),
-  f = n("712258"),
+  f = n("374014"),
+  E = n("712258"),
   _ = n("393414"),
   h = n("245463"),
   C = n("570413"),
-  T = n("373469"),
-  I = n("42887"),
+  I = n("373469"),
+  T = n("42887"),
   S = n("102985"),
-  N = n("860957"),
-  A = n("901165"),
-  p = n("599110"),
-  m = n("360782"),
-  g = n("49111"),
+  m = n("860957"),
+  p = n("901165"),
+  A = n("599110"),
+  g = n("360782"),
+  N = n("49111"),
   R = n("353927");
 let O = {
-  [g.GlobalKeybindActions.TOGGLE_PRIORITY_SPEAKER]: {
+  [N.GlobalKeybindActions.TOGGLE_PRIORITY_SPEAKER]: {
     onTrigger() {},
     keyEvents: {}
   },
-  [g.GlobalKeybindActions.UNASSIGNED]: {
+  [N.GlobalKeybindActions.UNASSIGNED]: {
     onTrigger() {},
     keyEvents: {}
   },
-  [g.GlobalKeybindActions.PUSH_TO_TALK]: {
+  [N.GlobalKeybindActions.PUSH_TO_TALK]: {
     onTrigger(e, t) {
-      I.default.getMode(t.context) === g.InputModes.PUSH_TO_TALK && (O[g.GlobalKeybindActions.PUSH_TO_TALK].isPressed = e, I.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context))
+      T.default.getMode(t.context) === N.InputModes.PUSH_TO_TALK && (O[N.GlobalKeybindActions.PUSH_TO_TALK].isPressed = e, T.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !1), t.context))
     },
     keyEvents: {
       keyup: !0,
@@ -46,9 +46,9 @@ let O = {
     },
     isPressed: !1
   },
-  [g.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY]: {
+  [N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY]: {
     onTrigger(e) {
-      I.default.getMode() === g.InputModes.PUSH_TO_TALK && (O[g.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY].isPressed = e, I.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), R.MediaEngineContextTypes.DEFAULT))
+      T.default.getMode() === N.InputModes.PUSH_TO_TALK && (O[N.GlobalKeybindActions.PUSH_TO_TALK_PRIORITY].isPressed = e, T.default.getMediaEngine().eachConnection(t => t.setForceAudioInput(e, !0), R.MediaEngineContextTypes.DEFAULT))
     },
     keyEvents: {
       keyup: !0,
@@ -56,9 +56,9 @@ let O = {
     },
     isPressed: !1
   },
-  [g.GlobalKeybindActions.PUSH_TO_MUTE]: {
+  [N.GlobalKeybindActions.PUSH_TO_MUTE]: {
     onTrigger(e) {
-      if (I.default.getMode() === g.InputModes.VOICE_ACTIVITY) !I.default.isSelfDeaf() && (O[g.GlobalKeybindActions.PUSH_TO_MUTE].isPressed = e, s.default.setTemporarySelfMute(e))
+      if (T.default.getMode() === N.InputModes.VOICE_ACTIVITY) !T.default.isSelfDeaf() && (O[N.GlobalKeybindActions.PUSH_TO_MUTE].isPressed = e, s.default.setTemporarySelfMute(e))
     },
     keyEvents: {
       keyup: !0,
@@ -66,7 +66,7 @@ let O = {
     },
     isPressed: !1
   },
-  [g.GlobalKeybindActions.TOGGLE_MUTE]: {
+  [N.GlobalKeybindActions.TOGGLE_MUTE]: {
     onTrigger: () => s.default.toggleSelfMute({
       usedKeybind: !0
     }),
@@ -75,7 +75,7 @@ let O = {
       keydown: !1
     }
   },
-  [g.GlobalKeybindActions.TOGGLE_DEAFEN]: {
+  [N.GlobalKeybindActions.TOGGLE_DEAFEN]: {
     onTrigger() {
       s.default.toggleSelfDeaf()
     },
@@ -84,9 +84,9 @@ let O = {
       keydown: !1
     }
   },
-  [g.GlobalKeybindActions.TOGGLE_VOICE_MODE]: {
+  [N.GlobalKeybindActions.TOGGLE_VOICE_MODE]: {
     onTrigger() {
-      let e = I.default.getMode() === g.InputModes.PUSH_TO_TALK ? g.InputModes.VOICE_ACTIVITY : g.InputModes.PUSH_TO_TALK;
+      let e = T.default.getMode() === N.InputModes.PUSH_TO_TALK ? N.InputModes.VOICE_ACTIVITY : N.InputModes.PUSH_TO_TALK;
       s.default.setMode(e)
     },
     keyEvents: {
@@ -94,9 +94,9 @@ let O = {
       keydown: !1
     }
   },
-  [g.GlobalKeybindActions.TOGGLE_OVERLAY]: {
+  [N.GlobalKeybindActions.TOGGLE_OVERLAY]: {
     onTrigger() {
-      let e = N.default.enabled;
+      let e = m.default.enabled;
       i.default.setEnabled(!e)
     },
     keyEvents: {
@@ -104,39 +104,39 @@ let O = {
       keydown: !1
     }
   },
-  [g.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK]: {
+  [N.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK]: {
     onTrigger(e) {
-      let t = (0, m.default)();
-      null != t && (e ? i.default.setUILocked(!A.default.isUILocked(t), t) : i.default.setInputLocked(!N.default.isInputLocked(t), t))
+      let t = (0, g.default)();
+      null != t && (e ? i.default.setUILocked(!p.default.isUILocked(t), t) : i.default.setInputLocked(!m.default.isInputLocked(t), t))
     },
     keyEvents: {
       keyup: !0,
       keydown: !0
     }
   },
-  [g.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET]: {
+  [N.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET]: {
     onTrigger() {
-      let e = N.default.getFocusedPID(),
+      let e = m.default.getFocusedPID(),
         t = null != e;
-      null != e && t && A.default.isPinned(g.OverlayWidgets.TEXT) && N.default.isReady(e) && N.default.isInputLocked(e) && i.default.activateRegion(g.OverlayActiveRegions.TEXT_WIDGET)
+      null != e && t && p.default.isPinned(N.OverlayWidgets.TEXT) && m.default.isReady(e) && m.default.isInputLocked(e) && i.default.activateRegion(N.OverlayActiveRegions.TEXT_WIDGET)
     },
     keyEvents: {
       keyup: !0,
       keydown: !1
     }
   },
-  [g.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING]: {
+  [N.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING]: {
     onTrigger() {
-      let e = T.default.getCurrentUserActiveStream();
-      if (null != e) return (0, r.stopStream)((0, E.encodeStreamKey)(e));
-      (0, f.default)()
+      let e = I.default.getCurrentUserActiveStream();
+      if (null != e) return (0, r.stopStream)((0, f.encodeStreamKey)(e));
+      (0, E.default)()
     },
     keyEvents: {
       keyup: !0,
       keydown: !1
     }
   },
-  [g.GlobalKeybindActions.TOGGLE_STREAMER_MODE]: {
+  [N.GlobalKeybindActions.TOGGLE_STREAMER_MODE]: {
     onTrigger() {
       o.default.setEnabled(!S.default.enabled)
     },
@@ -145,7 +145,7 @@ let O = {
       keydown: !1
     }
   },
-  [g.GlobalKeybindActions.NAVIGATE_BACK]: {
+  [N.GlobalKeybindActions.NAVIGATE_BACK]: {
     onTrigger: () => (0, _.back)(),
     keyEvents: {
       keyup: !0,
@@ -154,7 +154,7 @@ let O = {
       blurred: !1
     }
   },
-  [g.GlobalKeybindActions.NAVIGATE_FORWARD]: {
+  [N.GlobalKeybindActions.NAVIGATE_FORWARD]: {
     onTrigger: () => (0, _.forward)(),
     keyEvents: {
       keyup: !0,
@@ -163,21 +163,21 @@ let O = {
       blurred: !1
     }
   },
-  [g.GlobalKeybindActions.SOUNDBOARD]: {
+  [N.GlobalKeybindActions.SOUNDBOARD]: {
     onTrigger: () => {
       if (!(0, h.canSelectedVoiceChannelUseSoundboard)()) return;
-      let e = (0, m.default)();
-      null != e && (A.default.isUILocked(e) ? (0, C.openSoundboardInOverlay)(!0, e) : (0, C.closeSoundboardInOverlay)(e))
+      let e = (0, g.default)();
+      null != e && (p.default.isUILocked(e) ? (0, C.openSoundboardInOverlay)(!0, e) : (0, C.closeSoundboardInOverlay)(e))
     },
     keyEvents: {
       keyup: !0,
       keydown: !1
     }
   },
-  [g.GlobalKeybindActions.SOUNDBOARD_HOLD]: {
+  [N.GlobalKeybindActions.SOUNDBOARD_HOLD]: {
     onTrigger: e => {
       if (!(0, h.canSelectedVoiceChannelUseSoundboard)()) return;
-      let t = (0, m.default)();
+      let t = (0, g.default)();
       if (null != t) {
         e ? (0, C.openSoundboardInOverlay)(!1, t) : (0, C.closeSoundboardInOverlay)(t);
         return
@@ -188,17 +188,17 @@ let O = {
       keydown: !0
     }
   },
-  [g.GlobalKeybindActions.SAVE_CLIP]: {
+  [N.GlobalKeybindActions.SAVE_CLIP]: {
     onTrigger: () => {
       let e = (0, d.areClipsEnabled)();
-      e && (p.default.track(g.AnalyticEvents.CLIP_SAVE_KEYBIND_PRESSED), (0, c.saveClip)())
+      e && (A.default.track(N.AnalyticEvents.CLIP_SAVE_KEYBIND_PRESSED), (0, c.saveClip)())
     },
     keyEvents: {
       keyup: !1,
       keydown: !0
     }
   },
-  [g.GlobalKeybindActions.SWITCH_TO_VOICE_CHANNEL]: {
+  [N.GlobalKeybindActions.SWITCH_TO_VOICE_CHANNEL]: {
     onTrigger(e, t) {
       let {
         params: {
@@ -214,7 +214,7 @@ let O = {
       focused: !0
     }
   },
-  [g.GlobalKeybindActions.DISCONNECT_FROM_VOICE_CHANNEL]: {
+  [N.GlobalKeybindActions.DISCONNECT_FROM_VOICE_CHANNEL]: {
     onTrigger() {
       l.default.selectVoiceChannel(null)
     },

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return A
   }
 }), n("222007");
 var a = n("37983"),
@@ -13,16 +13,16 @@ var a = n("37983"),
   u = n("577427"),
   d = n("145131"),
   c = n("945330"),
-  E = n("599110"),
-  f = n("568734"),
+  f = n("599110"),
+  E = n("568734"),
   _ = n("602043"),
   h = n("737295"),
   C = n("762448"),
-  T = n("49111"),
-  I = n("782340"),
+  I = n("49111"),
+  T = n("782340"),
   S = n("352561");
 
-function N(e) {
+function m(e) {
   let {
     applicationViewItems: t,
     restoreApplication: n
@@ -40,7 +40,7 @@ function N(e) {
           children: e.libraryApplication.getBranchedName(e.application)
         }), null != t ? (0, a.jsx)("div", {
           className: S.applicationSubText,
-          children: T.DistributorNames[t]
+          children: I.DistributorNames[t]
         }) : null]
       }), (0, a.jsx)(l.Clickable, {
         className: S.restoreButton,
@@ -55,11 +55,11 @@ function N(e) {
     className: S.hiddenLibraryApplications,
     children: [(0, a.jsx)(l.FormTitle, {
       className: S.hiddenLibraryApplicationsTitle,
-      children: I.default.Messages.SETTINGS_GAMES_HIDDEN_LIBRARY_APPLICATIONS_LABEL
+      children: T.default.Messages.SETTINGS_GAMES_HIDDEN_LIBRARY_APPLICATIONS_LABEL
     }), s]
   })
 }
-class A extends s.PureComponent {
+class p extends s.PureComponent {
   handleToggleShortcutDesktop(e) {
     o.InstallShortcutDesktop.updateSetting(e)
   }
@@ -67,7 +67,7 @@ class A extends s.PureComponent {
     o.InstallShortcutStartMenu.updateSetting(e)
   }
   trackRestoreApplication(e, t) {
-    E.default.track(T.AnalyticEvents.APPLICATION_SETTINGS_UPDATED, {
+    f.default.track(I.AnalyticEvents.APPLICATION_SETTINGS_UPDATED, {
       hidden_enabled: t,
       ...e.getAnalyticsData()
     })
@@ -84,15 +84,15 @@ class A extends s.PureComponent {
         children: [(0, a.jsx)(l.FormSwitch, {
           value: t,
           onChange: this.handleToggleShortcutDesktop,
-          note: I.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP_NOTE,
-          children: I.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP
+          note: T.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP_NOTE,
+          children: T.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_DESKTOP
         }), (0, a.jsx)(l.FormSwitch, {
           value: n,
           onChange: this.handleToggleShortcutStartMenu,
-          note: I.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU_NOTE,
-          children: I.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU
+          note: T.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU_NOTE,
+          children: T.default.Messages.USER_SETTINGS_GAMES_SHORTCUTS_START_MENU
         }), (0, a.jsx)(C.default, {})]
-      }) : null, (0, a.jsx)(N, {
+      }) : null, (0, a.jsx)(m, {
         restoreApplication: this.handleRestoreHiddenLibraryApplication,
         applicationViewItems: e
       })]
@@ -101,7 +101,7 @@ class A extends s.PureComponent {
   render() {
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(h.default, {
-        currentRoute: T.Routes.APPLICATION_LIBRARY_SETTINGS
+        currentRoute: I.Routes.APPLICATION_LIBRARY_SETTINGS
       }), (0, a.jsx)(l.ScrollerAuto, {
         className: S.scroller,
         children: this.renderBody()
@@ -110,19 +110,19 @@ class A extends s.PureComponent {
   }
   constructor(...e) {
     super(...e), this.handleRestoreHiddenLibraryApplication = e => {
-      let t = f.toggleFlag(e.getFlags(), T.LibraryApplicationFlags.HIDDEN);
-      r.updateFlags(e.id, e.branchId, t), this.trackRestoreApplication(e, f.hasFlag(t, T.LibraryApplicationFlags.HIDDEN))
+      let t = E.toggleFlag(e.getFlags(), I.LibraryApplicationFlags.HIDDEN);
+      r.updateFlags(e.id, e.branchId, t), this.trackRestoreApplication(e, E.hasFlag(t, I.LibraryApplicationFlags.HIDDEN))
     }
   }
 }
 
-function p() {
+function A() {
   let e = {
     installShortcutDesktop: o.InstallShortcutDesktop.useSetting(),
     installShortcutStartMenu: o.InstallShortcutStartMenu.useSetting(),
     hiddenLibraryApplicationViewItems: (0, i.useStateFromStores)([u.default], () => u.default.hiddenLibraryApplicationViewItems)
   };
-  return (0, a.jsx)(A, {
+  return (0, a.jsx)(p, {
     ...e
   })
 }

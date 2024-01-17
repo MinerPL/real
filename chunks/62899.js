@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 });
 var a = n("37983"),
@@ -13,13 +13,13 @@ var a = n("37983"),
   u = n("305961"),
   d = n("627490"),
   c = n("599110"),
-  E = n("315102"),
-  f = n("853004"),
+  f = n("315102"),
+  E = n("853004"),
   _ = n("49111"),
   h = n("782340"),
   C = n("443");
 
-function T(e, t, n) {
+function I(e, t, n) {
   return (0, a.jsxs)("button", {
     className: C.container,
     onClick: n,
@@ -37,13 +37,13 @@ function T(e, t, n) {
       className: C.text,
       variant: "text-md/medium",
       children: t
-    }), (0, a.jsx)(f.default, {
+    }), (0, a.jsx)(E.default, {
       className: C.arrow
     })]
   }, t)
 }
 
-function I() {
+function T() {
   let e = Object.values(u.default.getGuilds()),
     t = e.filter(e => e.hasFeature(_.GuildFeatures.HUB)),
     n = e => {
@@ -61,13 +61,13 @@ function I() {
       })
     }), (0, a.jsxs)("div", {
       className: C.grid,
-      children: [t.map(e => T(E.default.getGuildIconURL({
+      children: [t.map(e => I(f.default.getGuildIconURL({
         id: e.id,
         icon: e.icon,
         size: 240
       }), e.name, () => {
         n(e.id)
-      })), T(d.default, h.default.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
+      })), I(d.default, h.default.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
         (0, l.clearSearch)(), c.default.track(_.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, r.transitionTo)(_.Routes.GUILD_DISCOVERY)
       })]
     })]

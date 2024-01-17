@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return u
   }
 }), n("222007"), n("424973");
-var s = n("693566"),
-  i = n.n(s),
+var i = n("693566"),
+  s = n.n(i),
   a = n("689988"),
   l = n("599110"),
   r = n("49111");
-class u extends a.default {
+class o extends a.default {
   handleMessageBecameVisible(e) {
     let {
       messageId: t
@@ -17,10 +17,10 @@ class u extends a.default {
     if (null != this.currentlyVisibleMessageTimers[t] || this.viewsInCurrentChannel.has(t)) return;
     let n = this.recentViewTimes.get(t);
     if (null != n && Date.now() - n < 6e4) return;
-    let s = setTimeout(() => {
+    let i = setTimeout(() => {
       delete this.currentlyVisibleMessageTimers[t], this.viewsInCurrentChannel.add(t), this.recentViewTimes.set(t, Date.now()), this.bufferViewTrack(e)
     }, 1e3);
-    this.currentlyVisibleMessageTimers[t] = s
+    this.currentlyVisibleMessageTimers[t] = i
   }
   handleMessageLostVisibility(e) {
     let t = this.currentlyVisibleMessageTimers[e];
@@ -49,7 +49,7 @@ class u extends a.default {
     this.batchBuffer.length >= 10 && this.drainBuffer(), this.batchBuffer.push(e), null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), 2e3))
   }
   constructor(...e) {
-    super(...e), this.currentlyVisibleMessageTimers = {}, this.viewsInCurrentChannel = new Set, this.recentViewTimes = new i({
+    super(...e), this.currentlyVisibleMessageTimers = {}, this.viewsInCurrentChannel = new Set, this.recentViewTimes = new s({
       max: 500,
       maxAge: 6e4
     }), this.batchBuffer = [], this.batchTimerId = null, this.actions = {
@@ -57,4 +57,4 @@ class u extends a.default {
     }
   }
 }
-var c = new u
+var u = new o

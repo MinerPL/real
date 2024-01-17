@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 });
 var a = n("37983"),
@@ -13,56 +13,56 @@ var a = n("37983"),
   u = n("945330"),
   d = n("599110"),
   c = n("478761"),
-  E = n("164586"),
-  f = n("49111"),
+  f = n("164586"),
+  E = n("49111"),
   _ = n("782340"),
   h = n("866241");
 let C = l.debounce(o.default.trackWithMetadata, 500),
-  T = e => {
+  I = e => {
     let {
       guild: t,
       title: n,
       message: i,
       image: l,
       type: c,
-      imageMarginX: E,
-      imageMarginTop: T,
-      trackingSource: I,
+      imageMarginX: f,
+      imageMarginTop: I,
+      trackingSource: T,
       undismissable: S,
-      onDismissed: N,
-      onClick: A,
-      cta: p,
-      ctaColor: m
+      onDismissed: m,
+      onClick: p,
+      cta: A,
+      ctaColor: g
     } = e;
     s.useEffect(() => {
-      C(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
+      C(E.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
         notice_type: c,
         guild_id: t.id
       })
     }, [t.id, c]);
-    let g = null;
-    "function" == typeof p ? g = p() : null != p && (g = (0, a.jsx)(r.Button, {
+    let N = null;
+    "function" == typeof A ? N = A() : null != A && (N = (0, a.jsx)(r.Button, {
       className: h.btn,
       size: r.Button.Sizes.SMALL,
       onClick: () => {
-        null != c && d.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-          source: I,
+        null != c && d.default.track(E.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
+          source: T,
           guild_id: t.id,
           notice_type: c
-        }), null == A || A()
+        }), null == p || p()
       },
       fullWidth: !0,
-      color: m,
-      children: p
+      color: g,
+      children: A
     }));
-    let R = null != E ? "".concat(E, "px") : "16px";
+    let R = null != f ? "".concat(f, "px") : "16px";
     return (0, a.jsxs)("div", {
       className: h.channelNotice,
       children: [!0 === S ? null : (0, a.jsx)(r.Clickable, {
         onClick: () => {
-          o.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
+          o.default.trackWithMetadata(E.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
             notice_type: c
-          }), null == N || N()
+          }), null == m || m()
         },
         className: h.close,
         "aria-label": _.default.Messages.DISMISS,
@@ -72,7 +72,7 @@ let C = l.debounce(o.default.trackWithMetadata, 500),
       }), (0, a.jsx)("div", {
         className: h.imageContainer,
         style: {
-          marginTop: "".concat(T, "px"),
+          marginTop: "".concat(I, "px"),
           marginLeft: R,
           marginRight: R
         },
@@ -90,17 +90,17 @@ let C = l.debounce(o.default.trackWithMetadata, 500),
         }) : null, (0, a.jsx)(r.Text, {
           variant: "text-sm/normal",
           children: i
-        }), g]
+        }), N]
       })]
     })
   };
-var I = function(e) {
+var T = function(e) {
   let {
     showRedesignedChannelNotice: t
   } = (0, c.useChannelNoticeRedesignExperiment)(!0);
-  return t ? (0, a.jsx)(E.default, {
+  return t ? (0, a.jsx)(f.default, {
     ...e
-  }) : (0, a.jsx)(T, {
+  }) : (0, a.jsx)(I, {
     ...e
   })
 }

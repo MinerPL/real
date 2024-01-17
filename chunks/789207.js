@@ -4,30 +4,30 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var l = n("872717"),
-  a = n("913144"),
+var a = n("872717"),
+  l = n("913144"),
   s = n("49111"),
   i = {
     setGuildFilter(e) {
       let {
         guildFilter: t,
         roleFilter: n,
-        everyoneFilter: l
+        everyoneFilter: a
       } = e;
-      a.default.dispatch({
+      l.default.dispatch({
         type: "SET_RECENT_MENTIONS_FILTER",
         guildFilter: t,
         roleFilter: n,
-        everyoneFilter: l
+        everyoneFilter: a
       })
     },
     clearMentions() {
-      a.default.dispatch({
+      l.default.dispatch({
         type: "CLEAR_MENTIONS"
       })
     },
     truncateMentions(e) {
-      a.default.dispatch({
+      l.default.dispatch({
         type: "TRUNCATE_MENTIONS",
         size: e
       })
@@ -37,10 +37,10 @@ var l = n("872717"),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
         i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
         r = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4];
-      a.default.dispatch({
+      l.default.dispatch({
         type: "LOAD_RECENT_MENTIONS",
         guildId: n
-      }), l.default.get({
+      }), a.default.get({
         url: s.Endpoints.MENTIONS,
         query: {
           before: e,
@@ -55,30 +55,30 @@ var l = n("872717"),
         let {
           body: n
         } = t;
-        a.default.dispatch({
+        l.default.dispatch({
           type: "LOAD_RECENT_MENTIONS_SUCCESS",
           messages: n,
           isAfter: null != e,
           hasMoreAfter: n.length >= s.MAX_MENTIONS_PER_FETCH
         })
       }, () => {
-        a.default.dispatch({
+        l.default.dispatch({
           type: "LOAD_RECENT_MENTIONS_FAILURE"
         })
       })
     },
     deleteRecentMention(e) {
-      l.default.delete({
+      a.default.delete({
         url: s.Endpoints.MENTIONS_MESSAGE_ID(e),
         retries: 2,
         oldFormErrors: !0
-      }), a.default.dispatch({
+      }), l.default.dispatch({
         type: "RECENT_MENTION_DELETE",
         id: e
       })
     },
     setRecentMentionsStale() {
-      a.default.dispatch({
+      l.default.dispatch({
         type: "SET_RECENT_MENTIONS_STALE"
       })
     }

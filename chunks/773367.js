@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
 var r = n("37983"),
   i = n("884691"),
   s = n("414456"),
-  l = n.n(s),
-  a = n("77078"),
-  o = n("174727"),
-  u = n("93393"),
+  a = n.n(s),
+  l = n("77078"),
+  u = n("174727"),
+  o = n("93393"),
   c = n("888400"),
   d = n("719923"),
   f = n("917247"),
@@ -26,8 +26,8 @@ function E(e) {
     isTabSelected: t,
     expiresAt: n,
     trialDuration: s
-  } = e, d = i.useMemo(() => Date.parse(n), [n]), f = (0, o.default)(d, 6e4);
-  return Object.values(f).every(e => 0 === e) ? null : (0, r.jsx)(a.Tooltip, {
+  } = e, d = i.useMemo(() => Date.parse(n), [n]), f = (0, u.default)(d, 6e4);
+  return Object.values(f).every(e => 0 === e) ? null : (0, r.jsx)(l.Tooltip, {
     text: (0, c.unitsAsStrings)(f, {
       days: _.default.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_DAYS,
       hours: _.default.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_HOURS,
@@ -35,10 +35,10 @@ function E(e) {
     }),
     children: e => (0, r.jsxs)("div", {
       ...e,
-      className: l(m.premiumTrialBadge, m.premiumTrialAcknowledgedBadge, {
+      className: a(m.premiumTrialBadge, m.premiumTrialAcknowledgedBadge, {
         [m.premiumTrialBadgeSelected]: t
       }),
-      children: [(0, r.jsx)(u.default, {
+      children: [(0, r.jsx)(o.default, {
         className: m.premiumTrialBadgeIcon
       }), s]
     })
@@ -50,13 +50,13 @@ function I(e) {
   let {
     isTabSelected: n,
     trialOffer: i
-  } = e, s = null === (t = (0, f.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, l = (0, d.formatTrialOfferIntervalDuration)({
+  } = e, s = null === (t = (0, f.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, a = (0, d.formatTrialOfferIntervalDuration)({
     intervalType: null == s ? void 0 : s.interval,
     intervalCount: null == s ? void 0 : s.interval_count
   });
   return (0, r.jsx)(C, {
     isTabSelected: n,
-    badgeCopy: l,
+    badgeCopy: a,
     offerExpiresAt: i.expires_at,
     className: (null == s ? void 0 : s.sku_id) === p.PremiumSubscriptionSKUs.TIER_2 ? m.premiumTrialTier2UnacknowledgedBadge : m.premiumTrialTier0UnacknowledgedBadge
   })
@@ -90,7 +90,7 @@ function C(e) {
     isTabSelected: t,
     trialDuration: n
   }) : (0, r.jsx)("div", {
-    className: l(m.premiumTrialBadge, s),
+    className: a(m.premiumTrialBadge, s),
     children: n
   })
 }

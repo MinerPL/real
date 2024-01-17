@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return g
   }
 }), n("222007");
 var s = n("394846"),
@@ -55,7 +55,7 @@ class m extends a.default.Store {
   }
 }
 m.displayName = "TutorialIndicatorStore";
-var E = new m(l.default, {
+var g = new m(l.default, {
   CONNECTION_OPEN: function(e) {
     let {
       tutorial: t

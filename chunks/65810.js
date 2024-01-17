@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   activityInstanceConnectedParticipants: function() {
-    return E
+    return f
   },
   activityInstanceConnectedParticipantsScope: function() {
-    return f
+    return E
   },
   activityInstanceConnectedParticipantsUpdateEvent: function() {
     return _
@@ -23,7 +23,7 @@ var a = n("917351"),
   d = n("694352"),
   c = n("492249");
 
-function E() {
+function f() {
   let e = l.default.getCurrentEmbeddedActivity();
   if (null == e) return {
     participants: []
@@ -44,16 +44,16 @@ function E() {
     participants: a
   }
 }
-let f = {
+let E = {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE]
   },
   _ = {
-    scope: f,
+    scope: E,
     handler: () => e => {
       let {
         prevState: t,
         dispatch: n
-      } = e, a = E();
+      } = e, a = f();
       return !s.isEqual(a, t) && n(a), a
     }
   };
@@ -61,7 +61,7 @@ let f = {
 function h(e) {
   let t = "EMBEDDED_ACTIVITY_INBOUND_UPDATE",
     n = () => {
-      e(E())
+      e(f())
     };
   return i.default.subscribe(t, n), () => i.default.unsubscribe(t, n)
 }

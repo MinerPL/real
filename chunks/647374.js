@@ -81,10 +81,10 @@ var S = {
     }), m = g(o), S = g(a), I = g(null != _ ? _ : ""), A = m.whitespaceSanitized, D = S.fullySanitized, N = I.fullySanitized, O = D.trim(), b = A.trim();
     if (0 === b.length || 0 === O.length) return c();
     let P = d.unescapeUrl(o),
-      R = C(P),
-      V = (0, u.default)(a).length > 0 || (0, u.default)(_).length > 0;
-    if (null == R || V) return c();
-    let k = {
+      k = C(P),
+      R = (0, u.default)(a).length > 0 || (0, u.default)(_).length > 0;
+    if (null == k || R) return c();
+    let V = {
         ...s,
         allowEscape: !1,
         parseInlineCodeChildContent: !0
@@ -92,9 +92,9 @@ var S = {
       M = s.allowEmojiLinks ? v : h,
       w = [...M, ...E],
       L = [...p, ...y],
-      U = t(D, k),
+      U = t(D, V),
       G = T(U, w, [f.AST_KEY.EMOJI]),
-      F = t(N, k),
+      F = t(N, V),
       x = T(F, L);
     if (null == G || null == x) return c();
     let B = function e(t) {
@@ -139,9 +139,9 @@ var S = {
       default: {
         RULES: Y
       }
-    } = n("888198"), j = d.parserFor(i.pick(Y, M)), K = j(S.whitespaceSanitized, k), W = I.whitespaceSanitized, {
+    } = n("888198"), j = d.parserFor(i.pick(Y, M)), K = j(S.whitespaceSanitized, V), W = I.whitespaceSanitized, {
       target: z
-    } = R;
+    } = k;
     return {
       content: K,
       target: z,

@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var a = n("872717"),
-  s = n("448993"),
-  l = n("49111");
+var s = n("872717"),
+  l = n("448993"),
+  a = n("49111");
 async function i(e) {
   let {
     channelId: t,
@@ -14,13 +14,13 @@ async function i(e) {
     answerIds: i
   } = e;
   try {
-    await a.default.put({
-      url: l.Endpoints.POLL_ANSWERS(t, n),
+    await s.default.put({
+      url: a.Endpoints.POLL_ANSWERS(t, n),
       body: {
         answer_ids: i
       }
     })
   } catch (e) {
-    throw new s.APIError(e)
+    throw new l.APIError(e)
   }
 }

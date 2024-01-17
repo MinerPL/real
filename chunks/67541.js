@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return T
   }
 });
-var a = n("37983"),
-  s = n("884691"),
-  l = n("987317"),
+var s = n("37983"),
+  l = n("884691"),
+  a = n("987317"),
   i = n("722525"),
   r = n("974755"),
   o = n("18494"),
@@ -14,54 +14,54 @@ var a = n("37983"),
   d = n("174622"),
   c = n("599110"),
   f = n("49111"),
-  m = n("782340"),
-  E = n("18978");
+  E = n("782340"),
+  _ = n("18978");
 
-function _(e) {
+function T(e) {
   var t;
   let {
     guild: n,
-    channel: _,
-    messageData: h
-  } = e, p = u.default.getGuildId(), I = o.default.getChannelId(p), T = s.useCallback(() => {
+    channel: T,
+    messageData: I
+  } = e, m = u.default.getGuildId(), N = o.default.getChannelId(m), p = l.useCallback(() => {
     var e;
     c.default.track(f.AnalyticEvents.CHANNEL_LINK_PREVIEW_JOINED, {
-      author_id: null === (e = h.author) || void 0 === e ? void 0 : e.id,
+      author_id: null === (e = I.author) || void 0 === e ? void 0 : e.id,
       link_guild_id: n.id,
-      link_channel_id: _.id,
-      link_channel_type: _.type,
-      guild_id: p,
-      channel_id: I
-    }), (0, i.transitionToChannel)(n.id, _.id), l.default.selectVoiceChannel(_.id)
-  }, [null === (t = h.author) || void 0 === t ? void 0 : t.id, n.id, _.id, _.type, p, I]), g = (0, a.jsx)(d.default.Channel, {
-    channel: _
+      link_channel_id: T.id,
+      link_channel_type: T.type,
+      guild_id: m,
+      channel_id: N
+    }), (0, i.transitionToChannel)(n.id, T.id), a.default.selectVoiceChannel(T.id)
+  }, [null === (t = I.author) || void 0 === t ? void 0 : t.id, n.id, T.id, T.type, m, N]), S = (0, s.jsx)(d.default.Channel, {
+    channel: T
   });
-  return (0, a.jsx)(d.default, {
-    children: (0, a.jsxs)(d.default.Body, {
-      children: [(0, a.jsxs)("div", {
-        className: E.headerLine,
-        children: [(0, a.jsx)(d.default.Icon, {
+  return (0, s.jsx)(d.default, {
+    children: (0, s.jsxs)(d.default.Body, {
+      children: [(0, s.jsxs)("div", {
+        className: _.headerLine,
+        children: [(0, s.jsx)(d.default.Icon, {
           guild: n
-        }), (0, a.jsx)(d.default.Info, {
-          title: g,
-          onClick: T,
-          children: (0, a.jsxs)("span", {
-            className: E.infoTitle,
-            children: [m.default.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({
+        }), (0, s.jsx)(d.default.Info, {
+          title: S,
+          onClick: p,
+          children: (0, s.jsxs)("span", {
+            className: _.infoTitle,
+            children: [E.default.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({
               guildName: n.name
-            }), (0, a.jsx)("span", {
-              className: E.infoBadge,
-              children: (0, a.jsx)(r.default, {
+            }), (0, s.jsx)("span", {
+              className: _.infoBadge,
+              children: (0, s.jsx)(r.default, {
                 guild: n,
                 isBannerVisible: !1
               })
             })]
           })
         })]
-      }), (0, a.jsx)(d.default.Button, {
-        onClick: T,
+      }), (0, s.jsx)(d.default.Button, {
+        onClick: p,
         color: d.default.Button.Colors.GREEN,
-        children: _.isGuildStageVoice() ? m.default.Messages.STAGE_CHANNEL_JOIN : m.default.Messages.JOIN_VOICE
+        children: T.isGuildStageVoice() ? E.default.Messages.STAGE_CHANNEL_JOIN : E.default.Messages.JOIN_VOICE
       })]
     })
   })

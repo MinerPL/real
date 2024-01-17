@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return A
   }
 }), n("222007");
 var s = n("37983"),
@@ -19,7 +19,7 @@ var s = n("37983"),
   p = n("782340"),
   m = n("887960");
 
-function E(e) {
+function g(e) {
   let {
     channel: t,
     onClose: n,
@@ -49,7 +49,7 @@ function E(e) {
   })
 }
 
-function g(e) {
+function E(e) {
   return e.matches("a") || "highlight" === e.className || e.className.includes("mention")
 }
 class S extends a.Component {
@@ -80,10 +80,10 @@ class S extends a.Component {
     super(...e), this._mouseDown = !1, this._mouseUp = !1, this.handleOpenTopic = e => {
       let t = e.target;
       if ((0, r.isElement)(t)) {
-        if (g(t)) return;
+        if (E(t)) return;
         let e = t.parentNode;
-        if ((0, r.isElement)(e) && g(e)) return
-      }(0, o.openModal)(e => (0, s.jsx)(E, {
+        if ((0, r.isElement)(e) && E(e)) return
+      }(0, o.openModal)(e => (0, s.jsx)(g, {
         ...e,
         ...this.props
       }))
@@ -118,4 +118,4 @@ class S extends a.Component {
     }
   }
 }
-var _ = S
+var A = S

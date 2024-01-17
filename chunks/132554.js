@@ -4,32 +4,32 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i = n("37983");
+var s = n("37983");
 n("884691");
-var r = n("414456"),
-  s = n.n(r),
-  l = n("77078"),
-  a = n("978679"),
+var a = n("414456"),
+  l = n.n(a),
+  r = n("77078"),
+  i = n("978679"),
   u = n("265469");
 
 function o(e) {
   let {
     className: t,
     copy: n,
-    bannerImage: r,
+    bannerImage: a,
     textColor: o = "always-white"
   } = e;
-  return (0, i.jsxs)("div", {
-    className: s(u.bannerContainer, t),
-    children: [null == r ? null : (0, i.jsx)("img", {
+  return (0, s.jsxs)("div", {
+    className: l(u.bannerContainer, t),
+    children: [null == a ? null : (0, s.jsx)("img", {
       alt: "",
       className: u.banner,
-      src: r
-    }), (0, i.jsxs)("div", {
+      src: a
+    }), (0, s.jsxs)("div", {
       className: u.textContainer,
-      children: [(0, i.jsx)(a.default, {
+      children: [(0, s.jsx)(i.default, {
         className: u.giftIcon
-      }), (0, i.jsx)(l.Heading, {
+      }), (0, s.jsx)(r.Heading, {
         className: u.textHeader,
         color: o,
         variant: "eyebrow",

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return m
   }
 }), n("222007");
 var a = n("37983"),
@@ -13,13 +13,13 @@ var a = n("37983"),
   u = n("630273"),
   d = n("823704"),
   c = n("662285"),
-  E = n("981601"),
-  f = n("925758"),
+  f = n("981601"),
+  E = n("925758"),
   _ = n("27618"),
   h = n("697218"),
   C = n("663449"),
-  T = n("449008"),
-  I = n("782340");
+  I = n("449008"),
+  T = n("782340");
 class S extends s.PureComponent {
   hasParty(e) {
     return e.length > 1
@@ -28,7 +28,7 @@ class S extends s.PureComponent {
     (0, d.default)()
   }
   renderUserPopout(e, t) {
-    return (0, a.jsx)(E.default, {
+    return (0, a.jsx)(f.default, {
       ...e,
       userId: t.id
     })
@@ -66,14 +66,14 @@ class S extends s.PureComponent {
       } = this.props;
       return (0, a.jsx)(u.default, {
         party: e,
-        header: I.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENING_ALONG_COUNT.format({
+        header: T.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENING_ALONG_COUNT.format({
           count: e.length
         })
       })
     }
   }
 }
-var N = r.default.connectStores([c.default, h.default, _.default, f.default], () => {
+var m = r.default.connectStores([c.default, h.default, _.default, E.default], () => {
   let e, t;
   let n = c.default.getSyncingWith(),
     a = c.default.getActivity(),
@@ -81,7 +81,7 @@ var N = r.default.connectStores([c.default, h.default, _.default, f.default], ()
     i = [];
   if (null != n ? (e = h.default.getUser(n.userId), t = n.partyId) : null != a && null != a.party && null != a.party.id && (e = s, t = a.party.id), null != t) {
     var r;
-    i = l(Array.from(null !== (r = f.default.getParty(t)) && void 0 !== r ? r : [])).map(e => h.default.getUser(e)).filter(T.isNotNullish).orderBy([t => null == e || e.id === t.id, e => _.default.isFriend(e.id)], ["desc", "desc"]).value()
+    i = l(Array.from(null !== (r = E.default.getParty(t)) && void 0 !== r ? r : [])).map(e => h.default.getUser(e)).filter(I.isNotNullish).orderBy([t => null == e || e.id === t.id, e => _.default.isFriend(e.id)], ["desc", "desc"]).value()
   }
   return {
     currentUser: s,

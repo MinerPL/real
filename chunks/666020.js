@@ -1,28 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   subscribeMembers: function() {
-    return l
+    return r
   },
   unsubscribeMembers: function() {
-    return r
+    return a
   },
   subscribeToMemberUpdates: function() {
     return s
   },
   unsubscribeFromMemberUpdates: function() {
-    return u
+    return o
   },
   subscribeChannel: function() {
-    return o
+    return u
   },
   subscribeChannelDimensions: function() {
     return d
   }
 }), n("424973");
 var i = n("913144"),
-  a = n("696605");
+  l = n("696605");
 
-function l(e, t) {
+function r(e, t) {
   i.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_MEMBERS_ADD",
     guildId: e,
@@ -30,7 +30,7 @@ function l(e, t) {
   })
 }
 
-function r(e, t) {
+function a(e, t) {
   i.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE",
     guildId: e,
@@ -45,14 +45,14 @@ function s(e) {
   })
 }
 
-function u(e) {
+function o(e) {
   i.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES",
     guildId: e
   })
 }
 
-function o(e, t, n) {
+function u(e, t, n) {
   i.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_CHANNEL",
     guildId: e,
@@ -66,23 +66,23 @@ function d(e) {
     guildId: t,
     channelId: n,
     y: i,
-    height: l,
-    rowHeight: r
+    height: r,
+    rowHeight: a
   } = e;
 
   function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-    return Math.max(0, Math.ceil(Math.ceil(e / r)) + t)
+    return Math.max(0, Math.ceil(Math.ceil(e / a)) + t)
   }
-  let u = [];
+  let o = [];
 
   function d(e) {
-    let t = e + (a.MINIMUM_RANGE - 1);
-    return u.push([e, t]), t + 1
+    let t = e + (l.MINIMUM_RANGE - 1);
+    return o.push([e, t]), t + 1
   }
-  let c = s(.5 * l),
-    E = s(i, -c),
-    _ = s(i + l, c);
-  for (E > 0 && (E = Math.max(d(0), E)), E = Math.floor(E / a.MINIMUM_RANGE) * a.MINIMUM_RANGE; E <= _;) E = d(E);
-  o(t, n, u)
+  let c = s(.5 * r),
+    f = s(i, -c),
+    h = s(i + r, c);
+  for (f > 0 && (f = Math.max(d(0), f)), f = Math.floor(f / l.MINIMUM_RANGE) * l.MINIMUM_RANGE; f <= h;) f = d(f);
+  u(t, n, o)
 }

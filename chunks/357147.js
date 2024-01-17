@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var a = n("605250"),
@@ -15,7 +15,7 @@ let d = new a.default("RPCServer:PostMessage"),
   c = (e, t, n) => {
     (s.default.isLoggingOverlayEvents || e.cmd !== u.RPCCommands.OVERLAY) && t.info("Socket Message: ".concat(n.id), (0, i.default)(e))
   };
-var E = function() {
+var f = function() {
   let e = new l.default(r.validateSocketClient, d, o.default, c);
   return window.addEventListener("message", t => {
     if (window === t.source) return;

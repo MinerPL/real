@@ -14,8 +14,8 @@ var s = n("759843"),
   u = n("305961"),
   d = n("697218"),
   c = n("49111"),
-  E = n("782340"),
-  f = n("123685"),
+  f = n("782340"),
+  E = n("123685"),
   _ = n("936775");
 
 function h(e) {
@@ -35,23 +35,23 @@ function h(e) {
       is_owner: h
     }
   }), (0, a.jsx)("div", {
-    className: f.container,
+    className: E.container,
     children: (0, a.jsx)(o.default, {
-      header: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_UPSELL_HEADER,
-      content: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_UPSELL_BODY,
+      header: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_UPSELL_HEADER,
+      content: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_UPSELL_BODY,
       asset: (0, a.jsx)("div", {
-        className: f.image,
+        className: E.image,
         children: (0, a.jsx)("img", {
-          alt: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_UPSELL_IMG_ALT,
+          alt: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_UPSELL_IMG_ALT,
           src: _,
-          className: f.image
+          className: E.image
         })
       }),
-      buttonCTA: E.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_UPSELL_CTA,
+      buttonCTA: f.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_UPSELL_CTA,
       onClick: () => {
         r.default.open(t, c.GuildSettingsSections.ROLE_SUBSCRIPTIONS)
       },
-      secondaryButtonCTA: E.default.Messages.DISMISS,
+      secondaryButtonCTA: f.default.Messages.DISMISS,
       markAsDismissed: n
     })
   })

@@ -18,8 +18,8 @@ function u(e) {
     d = (0, a.useStateFromStores)([s.default], () => s.default.getStageInstanceByChannel(null == u ? void 0 : u.id), [u]),
     c = (0, o.useGuildActiveEvent)(e),
     {
-      isStageNoticeHidden: E,
-      isEventNoticeHidden: f
+      isStageNoticeHidden: f,
+      isEventNoticeHidden: E
     } = (0, a.useStateFromStoresObject)([r.default], () => ({
       isStageNoticeHidden: r.default.isLiveChannelNoticeHidden({
         stageId: null == d ? void 0 : d.id
@@ -28,6 +28,6 @@ function u(e) {
         eventId: null == c ? void 0 : c.id
       })
     }), [d, c]);
-  if (null != c) return null != d ? !E : !f;
-  return null != d && !E
+  if (null != c) return null != d ? !f : !E;
+  return null != d && !f
 }

@@ -22,19 +22,19 @@ l("373469");
 var s = l("271938"),
   r = l("42203");
 l("18494");
-var i = l("101125"),
-  o = l("9759");
+var o = l("101125"),
+  i = l("9759");
 
 function u() {
   let e = (0, a.useStateFromStores)([s.default], () => s.default.getId()),
     {
       canBroadcast: t
-    } = o.default.useExperiment({
+    } = i.default.useExperiment({
       location: "use_self_broadcast"
     }, {
       autoTrackExposure: !1
     }),
-    l = (0, a.useStateFromStores)([i.default], () => i.default.getBroadcast());
+    l = (0, a.useStateFromStores)([o.default], () => o.default.getBroadcast());
   return t && (null == l ? void 0 : l.userId) === e ? l : null
 }
 
@@ -53,12 +53,12 @@ function f(e) {
   let t = s.default.getId(),
     {
       canBroadcast: l
-    } = o.default.getCurrentConfig({
+    } = i.default.getCurrentConfig({
       location: "is_broadcasting_in_channel"
     }, {
       autoTrackExposure: !1
     }),
-    a = i.default.getBroadcast();
+    a = o.default.getBroadcast();
   if (!l || null == a || a.userId !== t) return !1;
   let n = r.default.getChannel(e);
   return null != n && n.ownerId === a.userId && n.isBroadcastChannel()

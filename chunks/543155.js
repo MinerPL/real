@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
 var a, s, i, l, r, o, u = n("37983"),
   d = n("884691"),
   c = n("49111");
-let E = (e, t) => {
+let f = (e, t) => {
   let {
     x: n,
     y: a
@@ -18,7 +18,7 @@ let E = (e, t) => {
   return Math.pow(n - s, 2) + Math.pow(a - i, 2)
 };
 
-function f(e, t, n, a, s) {
+function E(e, t, n, a, s) {
   let {
     top: i,
     bottom: l,
@@ -68,7 +68,7 @@ function C(e) {
   }
 }
 
-function T(e) {
+function I(e) {
   return null != e ? "".concat(e, "px") : "auto"
 }(a = class extends d.PureComponent {
   componentDidMount() {
@@ -109,7 +109,7 @@ function T(e) {
       left: n,
       bottom: a,
       right: s
-    }, null != i && (i.style.top = T(t), i.style.bottom = T(a), i.style.left = T(n), i.style.right = T(s))
+    }, null != i && (i.style.top = I(t), i.style.bottom = I(a), i.style.left = I(n), i.style.right = I(s))
   }
   render() {
     let {
@@ -167,7 +167,7 @@ function T(e) {
         current: d
       } = this.draggableRef;
       if (null != d && e.button === c.MouseButtons.PRIMARY && (i || null != u && null != l && "" !== l && null != u.closest(l))) {
-        let i = f({
+        let i = E({
             top: t,
             left: n,
             bottom: a,
@@ -208,35 +208,35 @@ function T(e) {
         onFlip: d,
         snapOrientation: c
       } = this.props, {
-        dragging: T,
         dragging: I,
+        dragging: T,
         verticalOrientation: S,
-        horizontalOrientation: N
-      } = this.state, A = !1;
-      if (null == a || !T && 9 > E(this._dragStart, {
+        horizontalOrientation: m
+      } = this.state, p = !1;
+      if (null == a || !I && 9 > f(this._dragStart, {
           x: t,
           y: n
         })) return;
-      T = !0;
+      I = !0;
       let {
-        clientWidth: p,
-        clientHeight: m
-      } = a, g = n - this._offsetY, R = t - this._offsetX, O = C(f({
-        top: g,
+        clientWidth: A,
+        clientHeight: g
+      } = a, N = n - this._offsetY, R = t - this._offsetX, O = C(E({
+        top: N,
         left: R
-      }, s, i, p, m));
+      }, s, i, A, g));
       if (c) {
         O = h(O);
         let e = _(O);
-        S = e[0], N = e[1]
+        S = e[0], m = e[1]
       } else O = {
         top: O.top,
         left: O.left
       };
-      2 === r && N !== this.state.horizontalOrientation && (this._offsetX = p - this._offsetX, A = !0), 2 === l && S !== this.state.verticalOrientation && (this._offsetY = m - this._offsetY, A = !0), this.setDOMPositions(O), !I && (null == o || o(O, a)), null == u || u(O, a), A && (null == d || d([S, N])), this.setState({
-        dragging: T,
+      2 === r && m !== this.state.horizontalOrientation && (this._offsetX = A - this._offsetX, p = !0), 2 === l && S !== this.state.verticalOrientation && (this._offsetY = g - this._offsetY, p = !0), this.setDOMPositions(O), !T && (null == o || o(O, a)), null == u || u(O, a), p && (null == d || d([S, m])), this.setState({
+        dragging: I,
         verticalOrientation: S,
-        horizontalOrientation: N,
+        horizontalOrientation: m,
         atTopEdge: 0 === O.top
       })
     }, this.handleMouseUp = () => {
@@ -274,24 +274,24 @@ function T(e) {
       let {
         clientHeight: d,
         clientWidth: c
-      } = a, E = f(t, s, i, c, d);
-      if (E = C(E), r) {
-        e = h(E);
+      } = a, f = E(t, s, i, c, d);
+      if (f = C(f), r) {
+        e = h(f);
         let t = _(e);
         o = t[0], u = t[1]
       } else e = {
-        top: E.top,
-        left: E.left,
+        top: f.top,
+        left: f.left,
         right: null,
         bottom: null
       };
       if (t.left === e.left && t.right === e.right && t.top === e.top && t.bottom === e.bottom) return;
       null == l || l(e, a), this.setDOMPositions(e);
-      let T = 0 === e.top;
-      (o !== n.verticalOrientation || u !== n.horizontalOrientation || T !== n.atTopEdge) && this.setState({
+      let I = 0 === e.top;
+      (o !== n.verticalOrientation || u !== n.horizontalOrientation || I !== n.atTopEdge) && this.setState({
         verticalOrientation: o,
         horizontalOrientation: u,
-        atTopEdge: T
+        atTopEdge: I
       })
     };
     let [t, n] = _(e.initialPosition);

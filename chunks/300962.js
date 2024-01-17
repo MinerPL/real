@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return i
+    return r
   }
 });
 var a = s("862205"),
   n = s("697218"),
-  r = s("764364");
-let l = (0, a.createExperiment)({
+  l = s("764364");
+let i = (0, a.createExperiment)({
   kind: "user",
   id: "2023-11_nitro_tab_holdout",
   label: "Nitro Tab Holdout",
@@ -22,12 +22,12 @@ let l = (0, a.createExperiment)({
     }
   }]
 });
-var i = function() {
+var r = function() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     s = n.default.getCurrentUser(),
-    a = (0, r.isPremium)(s);
-  return l.useExperiment({
+    a = (0, l.isPremium)(s);
+  return i.useExperiment({
     location: "experiment_hook"
   }, {
     autoTrackExposure: e,

@@ -8,41 +8,41 @@ var a, s = n("446674"),
   u = n("374363"),
   d = n("718517"),
   c = n("964889"),
-  E = n("546463"),
-  f = n("686470"),
+  f = n("546463"),
+  E = n("686470"),
   _ = n("568307"),
   h = n("49111");
 let C = "ActivityTrackingStore",
-  T = 30 * d.default.Millis.MINUTE,
-  I = 5 * d.default.Millis.MINUTE,
+  I = 30 * d.default.Millis.MINUTE,
+  T = 5 * d.default.Millis.MINUTE,
   S = null !== (a = i.default.get(C)) && void 0 !== a ? a : {},
-  N = {},
-  A = !1;
+  m = {},
+  p = !1;
 
-function p(e) {
+function A(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  t && m(e, !0);
-  let n = N[e.applicationId];
-  null != n && (n.stop(), delete N[e.applicationId]), delete S[e.applicationId], i.default.set(C, S)
+  t && g(e, !0);
+  let n = m[e.applicationId];
+  null != n && (n.stop(), delete m[e.applicationId]), delete S[e.applicationId], i.default.set(C, S)
 }
 
-function m(e) {
+function g(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = Date.now(),
     a = null != e.updatedAt ? n - e.updatedAt : 0;
-  a > T + I && (a = 0), o.default.updateActivity({
+  a > I + T && (a = 0), o.default.updateActivity({
     applicationId: e.applicationId,
     distributor: e.isDiscordApplication ? h.Distributors.DISCORD : e.distributor,
-    shareActivity: (0, c.shouldShareApplicationActivity)(e.applicationId, f.default),
+    shareActivity: (0, c.shouldShareApplicationActivity)(e.applicationId, E.default),
     token: e.token,
     duration: Math.floor(a / 1e3),
     closed: t
   }), e.updatedAt = n;
-  let s = N[e.applicationId];
-  null == s && (s = N[e.applicationId] = new l.Interval).start(T, () => m(e)), !t && (S[e.applicationId] = e, i.default.set(C, S))
+  let s = m[e.applicationId];
+  null == s && (s = m[e.applicationId] = new l.Interval).start(I, () => g(e)), !t && (S[e.applicationId] = e, i.default.set(C, S))
 }
 
-function g() {
+function N() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     t = _.default.getRunningGames(),
     n = new Set;
@@ -51,34 +51,34 @@ function g() {
       distributor: a
     }
     of t) {
-    let t = E.default.getGameByName(e);
-    if (null != t) n.add(t.id), !(t.id in S) && m({
+    let t = f.default.getGameByName(e);
+    if (null != t) n.add(t.id), !(t.id in S) && g({
       applicationId: t.id,
       updatedAt: Date.now(),
       distributor: a
     })
   }
-  for (let t of Object.keys(S)) !n.has(t) && p(S[t], e)
+  for (let t of Object.keys(S)) !n.has(t) && A(S[t], e)
 }
 
 function R() {
-  for (let e of Object.keys(S)) p(S[e]);
-  A = !1
+  for (let e of Object.keys(S)) A(S[e]);
+  p = !1
 }
 class O extends s.default.Store {
   initialize() {
-    this.waitFor(_.default, u.default, f.default), this.syncWith([u.default], g)
+    this.waitFor(_.default, u.default, E.default), this.syncWith([u.default], N)
   }
   getActivities() {
     return S
   }
 }
 O.displayName = "ActivityTrackingStore", new O(r.default, {
-  RUNNING_GAMES_CHANGE: () => g(),
+  RUNNING_GAMES_CHANGE: () => N(),
   CONNECTION_OPEN: function() {
-    if (A) return !1;
-    for (let e of Object.keys(S)) m(S[e]);
-    g(!1), A = !0
+    if (p) return !1;
+    for (let e of Object.keys(S)) g(S[e]);
+    N(!1), p = !0
   },
   CONNECTION_CLOSED: function(e) {
     let {

@@ -7,12 +7,12 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i = n("446674"),
-  a = n("95410"),
+var a = n("446674"),
+  i = n("95410"),
   l = n("913144"),
-  s = n("9503");
+  d = n("9503");
 let u = 360,
-  d = {
+  s = {
     devToolsEnabled: !1,
     sidebarWidth: u,
     lastOpenTabId: null,
@@ -23,38 +23,38 @@ let u = 360,
       y: 0
     }
   };
-class r extends i.default.DeviceSettingsStore {
+class r extends a.default.DeviceSettingsStore {
   initialize(e) {
-    d = null != e ? e : d, l.default.actionLogger.persist = this.devToolsEnabled
+    s = null != e ? e : s, l.default.actionLogger.persist = this.devToolsEnabled
   }
   getUserAgnosticState() {
-    return d
+    return s
   }
   get devToolsEnabled() {
-    return d.devToolsEnabled
+    return s.devToolsEnabled
   }
   get sidebarWidth() {
-    return this.displayTools ? d.sidebarWidth : 0
+    return this.displayTools ? s.sidebarWidth : 0
   }
   get lastOpenTabId() {
     var e;
-    return null !== (e = d.lastOpenTabId) && void 0 !== e ? e : null
+    return null !== (e = s.lastOpenTabId) && void 0 !== e ? e : null
   }
   get displayTools() {
-    return this.devToolsEnabled && d.displayTools
+    return this.devToolsEnabled && s.displayTools
   }
   get showDevWidget() {
-    return this.devToolsEnabled && d.showDevWidget
+    return this.devToolsEnabled && s.showDevWidget
   }
   get devWidgetPosition() {
-    return d.devWidgetPosition
+    return s.devWidgetPosition
   }
 }
 r.displayName = "DevToolsSettingsStore", r.persistKey = "DevToolsSettingsStore";
 var o = new r(l.default, {
   DEV_TOOLS_SETTINGS_UPDATE: function(e) {
-    (d.devToolsEnabled || e.settings.devToolsEnabled) && (null != e.settings.devToolsEnabled && (l.default.actionLogger.persist = e.settings.devToolsEnabled, a.default.set(s.STORAGE_KEY_LOG_DISPATCHES, e.settings.devToolsEnabled)), d = {
-      ...d,
+    (s.devToolsEnabled || e.settings.devToolsEnabled) && (null != e.settings.devToolsEnabled && (l.default.actionLogger.persist = e.settings.devToolsEnabled, i.default.set(d.STORAGE_KEY_LOG_DISPATCHES, e.settings.devToolsEnabled)), s = {
+      ...s,
       ...e.settings
     })
   }

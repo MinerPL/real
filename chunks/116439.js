@@ -4,22 +4,22 @@ n.r(t), n.d(t, {
     return f
   },
   default: function() {
-    return E
+    return h
   }
 });
 var a = n("37983");
 n("884691");
 var r = n("414456"),
   s = n.n(r),
-  i = n("244201"),
-  l = n("289656"),
+  l = n("244201"),
+  i = n("289656"),
   u = n("437825"),
   o = n("142303"),
   d = n("981913"),
   c = n("911360");
 
 function f(e) {
-  let t = (0, l.getVideoButtonLabel)(e),
+  let t = (0, i.getVideoButtonLabel)(e),
     {
       enabled: n,
       cameraUnavailable: r,
@@ -27,62 +27,62 @@ function f(e) {
       onCameraUnavailable: d,
       hasPermission: c,
       children: f,
-      channelLimitReached: E = !1,
-      join: h
+      channelLimitReached: h = !1,
+      join: p
     } = e,
-    p = (0, i.useAppContext)(),
-    S = r ? () => d() : () => s(!e.enabled, p);
+    E = (0, l.useAppContext)(),
+    C = r ? () => d() : () => s(!e.enabled, E);
   return (0, a.jsx)(a.Fragment, {
     children: f({
-      onClick: S,
+      onClick: C,
       active: n,
-      disabled: !n && (!c || E),
-      iconComponent: h || n ? u.default : o.default,
+      disabled: !n && (!c || h),
+      iconComponent: p || n ? u.default : o.default,
       label: t,
       unavailable: r
     })
   })
 }
 
-function E(e) {
+function h(e) {
   let {
     enabled: t,
     join: n,
     channel: r,
-    onChange: i,
-    onCameraUnavailable: l,
+    onChange: l,
+    onCameraUnavailable: i,
     cameraUnavailable: u,
     hasPermission: o,
-    className: E,
-    channelLimitReached: h,
-    channelLimit: p,
-    centerButton: S = !1,
-    onPopoutClick: _,
-    ...C
-  } = e, m = S ? d.CenterControlButton : d.default;
+    className: h,
+    channelLimitReached: p,
+    channelLimit: E,
+    centerButton: C = !1,
+    onPopoutClick: m,
+    ...S
+  } = e, g = C ? d.CenterControlButton : d.default;
   return (0, a.jsx)(f, {
     enabled: t,
     join: n,
     channel: r,
-    onChange: i,
-    onCameraUnavailable: l,
+    onChange: l,
+    onCameraUnavailable: i,
     cameraUnavailable: u,
     hasPermission: o,
-    channelLimitReached: h,
-    channelLimit: p,
+    channelLimitReached: p,
+    channelLimit: E,
     children: e => {
       let {
         unavailable: n,
         ...r
       } = e;
-      return (0, a.jsx)(m, {
+      return (0, a.jsx)(g, {
         ...r,
-        ...C,
+        ...S,
         isActive: t,
-        className: s(E, {
+        className: s(h, {
           [c.fauxDisabled]: n
         }),
-        onPopoutClick: _
+        onPopoutClick: m
       })
     }
   })

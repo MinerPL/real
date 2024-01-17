@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 }), n("222007");
 var a = n("37983"),
@@ -13,13 +13,13 @@ var a = n("37983"),
   u = n("355262"),
   d = n("401642"),
   c = n("49111"),
-  E = n("721578"),
-  f = e => {
+  f = n("721578"),
+  E = e => {
     let {
       userId: t,
       children: n,
       isLast: i,
-      className: f
+      className: E
     } = e, [_, h] = s.useState(!1), C = s.useCallback(() => {
       (0, d.openUserProfileModal)({
         userId: t,
@@ -27,9 +27,9 @@ var a = n("37983"),
           section: c.AnalyticsSections.FAMILY_CENTER
         }
       })
-    }, [t]), T = () => {
+    }, [t]), I = () => {
       h(!0)
-    }, I = () => {
+    }, T = () => {
       h(!1)
     };
     return (0, a.jsx)(u.ListNavigatorItem, {
@@ -43,12 +43,12 @@ var a = n("37983"),
           style: {
             opacity: 1
           },
-          className: l(E.rowItem, f, {
-            [E.last]: i,
-            [E.active]: _
+          className: l(f.rowItem, E, {
+            [f.last]: i,
+            [f.active]: _
           }),
-          onMouseEnter: T,
-          onMouseLeave: I,
+          onMouseEnter: I,
+          onMouseLeave: T,
           onClick: C,
           ...e,
           children: n(_)

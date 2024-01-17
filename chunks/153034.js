@@ -13,19 +13,19 @@ var a = n("37983"),
   u = n("862337"),
   d = n("769846"),
   c = n("77078"),
-  E = n("913144"),
-  f = n("272030"),
+  f = n("913144"),
+  E = n("272030"),
   _ = n("259083"),
   h = n("790219"),
   C = n("827825"),
-  T = n("577427"),
-  I = n("946749"),
+  I = n("577427"),
+  T = n("946749"),
   S = n("145131"),
-  N = n("953109"),
-  A = n("280174"),
-  p = n("158352"),
-  m = n("867544"),
-  g = n("216422"),
+  m = n("953109"),
+  p = n("280174"),
+  A = n("158352"),
+  g = n("867544"),
+  N = n("216422"),
   R = n("688342"),
   O = n("599110"),
   L = n("964889"),
@@ -66,9 +66,9 @@ let x = (0, v.cssValueToNumber)(d.default.GAME_LIST_ROW_MIN_HEIGHT),
     bodyCellClassName: y.nameBodyCell,
     render: e => (0, a.jsxs)(S.default, {
       align: S.default.Align.CENTER,
-      children: [(0, a.jsx)(N.default, {
+      children: [(0, a.jsx)(m.default, {
         game: e.application,
-        size: N.default.Sizes.SMALL,
+        size: m.default.Sizes.SMALL,
         className: y.gameIcon
       }), (0, a.jsxs)("div", {
         className: y.nameCellInfo,
@@ -77,7 +77,7 @@ let x = (0, v.cssValueToNumber)(d.default.GAME_LIST_ROW_MIN_HEIGHT),
           children: e.libraryApplication.getBranchedName(e.application)
         }), e.libraryApplication.hasFlag(P.LibraryApplicationFlags.PREMIUM) ? (0, a.jsx)(c.Tooltip, {
           text: D.default.Messages.PREMIUM_GAME,
-          children: e => (0, a.jsx)(g.default, {
+          children: e => (0, a.jsx)(N.default, {
             className: y.nitroIcon,
             ...e
           })
@@ -105,9 +105,9 @@ let x = (0, v.cssValueToNumber)(d.default.GAME_LIST_ROW_MIN_HEIGHT),
     bodyCellClassName: y.textCell,
     render(e) {
       let t;
-      return t = e.isRunning ? D.default.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? D.default.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, a.jsx)(A.default, {
+      return t = e.isRunning ? D.default.Messages.GAME_LIBRARY_LAST_PLAYED_PLAYING_NOW : e.isNew ? D.default.Messages.GAME_LIBRARY_NEW : 0 !== e.lastPlayed ? (0, a.jsx)(p.default, {
         end: e.lastPlayed,
-        location: A.default.Locations.GAME_LIBRARY_LAST_PLAYED
+        location: p.default.Locations.GAME_LIBRARY_LAST_PLAYED
       }) : D.default.Messages.GAME_LIBRARY_LAST_PLAYED_NONE, (0, a.jsx)(S.default, {
         align: S.default.Align.CENTER,
         className: l({
@@ -130,7 +130,7 @@ let x = (0, v.cssValueToNumber)(d.default.GAME_LIST_ROW_MIN_HEIGHT),
           children: [(0, a.jsx)(G, {
             flag: P.LibraryApplicationFlags.PRIVATE,
             item: e,
-            icon: m.default,
+            icon: g.default,
             tooltip: D.default.Messages.GAME_LIBRARY_PRIVATE_TOOLTIP
           }), (0, a.jsx)(G, {
             flag: P.LibraryApplicationFlags.OVERLAY_DISABLED,
@@ -164,7 +164,7 @@ let x = (0, v.cssValueToNumber)(d.default.GAME_LIST_ROW_MIN_HEIGHT),
       })
     }
   }],
-  k = e => {
+  w = e => {
     let {
       item: t,
       activeRowKey: n,
@@ -174,12 +174,12 @@ let x = (0, v.cssValueToNumber)(d.default.GAME_LIST_ROW_MIN_HEIGHT),
       onContextMenu: o,
       setRef: u,
       ...d
-    } = e, c = t.key === n, E = t.key === s;
+    } = e, c = t.key === n, f = t.key === s;
     return (0, a.jsx)("div", {
       className: l({
-        [y.rowWrapperActive]: c && !E,
-        [y.rowWrapperGlow]: E,
-        [y.rowWrapper]: !c && !E,
+        [y.rowWrapperActive]: c && !f,
+        [y.rowWrapperGlow]: f,
+        [y.rowWrapper]: !c && !f,
         [y.rowWrapperDim]: !c && !t.isLaunchable
       }),
       ref: e => u(e, t.key),
@@ -191,7 +191,7 @@ let x = (0, v.cssValueToNumber)(d.default.GAME_LIST_ROW_MIN_HEIGHT),
       })
     })
   };
-class w extends s.PureComponent {
+class k extends s.PureComponent {
   componentDidMount() {
     let {
       fetched: e
@@ -206,7 +206,7 @@ class w extends s.PureComponent {
     let t = this.props.activeRowKey;
     if (null != t && e.activeRowKey !== t && this.props.isNavigatingByKeyboard) {
       let e = this._rowRefs[t];
-      null != e && (E.default.wait(f.closeContextMenu), this.props.scrollToRow(e, x))
+      null != e && (f.default.wait(E.closeContextMenu), this.props.scrollToRow(e, x))
     }
   }
   handleHighlightedApplicationKey() {
@@ -316,11 +316,11 @@ class w extends s.PureComponent {
       highlightedApplicationKey: o
     } = this.state;
     return (0, a.jsxs)(s.Fragment, {
-      children: [n.length > 0 ? (0, a.jsx)(p.default, {
+      children: [n.length > 0 ? (0, a.jsx)(A.default, {
         columns: j,
         data: n,
         sortData: !1,
-        rowComponent: k,
+        rowComponent: w,
         className: y.table,
         headerClassName: l ? y.stickyHeader : y.header,
         headerCellClassName: y.headerCell,
@@ -373,7 +373,7 @@ class w extends s.PureComponent {
       let {
         analyticsContext: s
       } = this.props;
-      (0, f.openContextMenuLazy)(e, async () => {
+      (0, E.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("975419").then(n.bind(n, "975419"));
@@ -397,23 +397,23 @@ function F(e) {
       applicationViewItems: i,
       filterQuery: l,
       fetched: u
-    } = (0, o.useStateFromStoresObject)([T.default], () => ({
-      applicationViewItems: T.default.sortedFilteredLibraryApplicationViewItems,
-      filterQuery: T.default.applicationFilterQuery,
-      fetched: T.default.hasFetchedApplications
+    } = (0, o.useStateFromStoresObject)([I.default], () => ({
+      applicationViewItems: I.default.sortedFilteredLibraryApplicationViewItems,
+      filterQuery: I.default.applicationFilterQuery,
+      fetched: I.default.hasFetchedApplications
     })),
     {
       sortKey: d,
       sortDirection: c,
-      activeRowKey: E,
-      isNavigatingByKeyboard: f
-    } = (0, o.useStateFromStoresObject)([I.default], () => ({
-      sortKey: I.default.sortKey,
-      sortDirection: I.default.sortDirection,
-      activeRowKey: I.default.activeRowKey,
-      isNavigatingByKeyboard: I.default.isNavigatingByKeyboard
+      activeRowKey: f,
+      isNavigatingByKeyboard: E
+    } = (0, o.useStateFromStoresObject)([T.default], () => ({
+      sortKey: T.default.sortKey,
+      sortDirection: T.default.sortDirection,
+      activeRowKey: T.default.activeRowKey,
+      isNavigatingByKeyboard: T.default.isNavigatingByKeyboard
     }));
-  return (0, a.jsx)(w, {
+  return (0, a.jsx)(k, {
     ...e,
     analyticsContext: t,
     location: n,
@@ -422,10 +422,10 @@ function F(e) {
     fetched: u,
     sortKey: d,
     sortDirection: c,
-    activeRowKey: E,
-    isNavigatingByKeyboard: f
+    activeRowKey: f,
+    isNavigatingByKeyboard: E
   })
 }
-w.defaultProps = {
+k.defaultProps = {
   stickyHeader: !1
 }

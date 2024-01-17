@@ -23,15 +23,15 @@ function p(e) {
     location: t
   } = e, [p, h] = a.useState(!1), {
     verifySuccess: N,
-    verifyErrors: m,
-    redirectGuildId: T
+    verifyErrors: T,
+    redirectGuildId: m
   } = (0, l.useStateFromStores)([c.default], () => c.default.getState());
   a.useEffect(() => {
     let e = (0, r.default)(t);
     i.default.verify(e), (0, o.trackAppUIViewed)("verify_hub_email")
   }, [t]);
   let g = () => {
-    (0, f.default)(T), h(!0)
+    (0, f.default)(m), h(!0)
   };
   return p ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Title, {
@@ -42,7 +42,7 @@ function p(e) {
       children: I.default.Messages.APP_OPENED_BODY
     }), (0, s.jsx)(d.Button, {
       className: _.spacedButton,
-      onClick: () => (0, u.transitionTo)(E.Routes.CHANNEL(T)),
+      onClick: () => (0, u.transitionTo)(E.Routes.CHANNEL(m)),
       children: I.default.Messages.CONTINUE_TO_WEBAPP
     })]
   }) : N ? (0, s.jsxs)(d.default, {
@@ -56,7 +56,7 @@ function p(e) {
       onClick: g,
       children: I.default.Messages.VERIFICATION_OPEN_DISCORD
     })]
-  }) : null != m ? (0, s.jsxs)(d.default, {
+  }) : null != T ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Image, {
       className: _.image,
       src: n("768025")

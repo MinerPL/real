@@ -20,7 +20,7 @@ function d(e) {
     onClick: s,
     submitting: d,
     className: c,
-    ctaMessage: E
+    ctaMessage: f
   } = e;
   return (0, a.jsxs)("div", {
     className: i(u.container, c),
@@ -54,7 +54,7 @@ function d(e) {
       size: l.Button.Sizes.ICON,
       onClick: s,
       submitting: d,
-      children: E
+      children: f
     })]
   })
 }

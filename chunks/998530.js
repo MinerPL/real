@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return m
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("446674"),
+var l = n("446674"),
   s = n("77078"),
   i = n("789207"),
   r = n("42203"),
@@ -16,17 +16,17 @@ var a = n("446674"),
   c = n("138217");
 n("440612");
 var f = n("49111"),
-  E = n("782340");
+  h = n("782340");
 
-function h(e) {
+function E(e) {
   let {
     closePopout: t,
     onSelect: n
-  } = e, u = (0, a.useStateFromStores)([r.default, o.default], () => r.default.getChannel(o.default.getChannelId())), {
+  } = e, u = (0, l.useStateFromStores)([r.default, o.default], () => r.default.getChannel(o.default.getChannelId())), {
     everyoneFilter: d,
-    roleFilter: h,
-    guildFilter: _
-  } = (0, a.useStateFromStoresObject)([c.default], () => {
+    roleFilter: E,
+    guildFilter: m
+  } = (0, l.useStateFromStoresObject)([c.default], () => {
     let {
       everyoneFilter: e,
       roleFilter: t,
@@ -38,44 +38,44 @@ function h(e) {
       guildFilter: n
     }
   });
-  return (0, l.jsxs)(s.Menu, {
+  return (0, a.jsxs)(s.Menu, {
     navId: "mentions-filter",
-    "aria-label": E.default.Messages.FILTER,
+    "aria-label": h.default.Messages.FILTER,
     onClose: t,
     onSelect: n,
-    children: [(0, l.jsx)(s.MenuCheckboxItem, {
+    children: [(0, a.jsx)(s.MenuCheckboxItem, {
       id: "Everyone",
-      label: E.default.Messages.RECENT_MENTIONS_FILTER_EVERYONE,
+      label: h.default.Messages.RECENT_MENTIONS_FILTER_EVERYONE,
       action: function() {
         i.default.setGuildFilter({
           everyoneFilter: !d
         })
       },
       checked: d
-    }), (0, l.jsx)(s.MenuCheckboxItem, {
+    }), (0, a.jsx)(s.MenuCheckboxItem, {
       id: "Roles",
-      label: E.default.Messages.RECENT_MENTIONS_FILTER_ROLES,
+      label: h.default.Messages.RECENT_MENTIONS_FILTER_ROLES,
       action: function() {
         i.default.setGuildFilter({
-          roleFilter: !h
+          roleFilter: !E
         })
       },
-      checked: h
-    }), null == u || u.isPrivate() ? null : (0, l.jsx)(s.MenuCheckboxItem, {
+      checked: E
+    }), null == u || u.isPrivate() ? null : (0, a.jsx)(s.MenuCheckboxItem, {
       id: "All Servers",
-      label: E.default.Messages.RECENT_MENTIONS_FILTER_ALL_SERVERS,
+      label: h.default.Messages.RECENT_MENTIONS_FILTER_ALL_SERVERS,
       action: function() {
         i.default.setGuildFilter({
-          guildFilter: _ === f.RecentMentionsFilters.THIS_SERVER ? f.RecentMentionsFilters.ALL_SERVERS : f.RecentMentionsFilters.THIS_SERVER
+          guildFilter: m === f.RecentMentionsFilters.THIS_SERVER ? f.RecentMentionsFilters.ALL_SERVERS : f.RecentMentionsFilters.THIS_SERVER
         })
       },
-      checked: _ === f.RecentMentionsFilters.ALL_SERVERS
+      checked: m === f.RecentMentionsFilters.ALL_SERVERS
     })]
   })
 }
 
-function _() {
-  return (0, l.jsx)(s.Popout, {
+function m() {
+  return (0, a.jsx)(s.Popout, {
     align: "right",
     animation: s.Popout.Animation.NONE,
     position: "bottom",
@@ -83,7 +83,7 @@ function _() {
       let {
         closePopout: t
       } = e;
-      return (0, l.jsx)(h, {
+      return (0, a.jsx)(E, {
         closePopout: t
       })
     },
@@ -91,10 +91,10 @@ function _() {
       let {
         onClick: t
       } = e;
-      return (0, l.jsx)(u.default, {
-        tooltip: E.default.Messages.FILTER,
+      return (0, a.jsx)(u.default, {
+        tooltip: h.default.Messages.FILTER,
         color: u.CircleIconButtonColors.SECONDARY,
-        icon: (0, l.jsx)(d.default, {}),
+        icon: (0, a.jsx)(d.default, {}),
         onClick: t
       })
     }

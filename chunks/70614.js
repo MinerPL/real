@@ -1,43 +1,43 @@
 "use strict";
 n.r(t), n.d(t, {
   authorizeAndSetTestModeApplication: function() {
-    return E
+    return f
   },
   reset: function() {
-    return f
+    return E
   },
   resetError: function() {
     return _
   }
 }), n("70102"), n("702976");
-var a = n("913144"),
-  s = n("550766"),
-  i = n("651057"),
-  l = n("299285"),
+var s = n("913144"),
+  l = n("550766"),
+  a = n("651057"),
+  i = n("299285"),
   r = n("653047"),
   o = n("568734"),
   u = n("253981"),
   d = n("568131"),
   c = n("49111");
-async function E(e, t) {
-  a.default.dispatch({
+async function f(e, t) {
+  s.default.dispatch({
     applicationId: e,
     type: "DEVELOPER_TEST_MODE_AUTHORIZATION_START"
   });
   try {
-    let n = await (0, s.validateTestMode)(e);
+    let n = await (0, l.validateTestMode)(e);
     if (!n) throw Error("Do not have access!");
-    let E = l.default.getApplication(e);
-    null == E && (E = r.default.createFromServer(await i.default.fetchApplication(e)));
-    let f = (0, o.hasFlag)(E.flags, c.ApplicationFlags.EMBEDDED);
-    if (f && (null == t || !u.default.URL_REGEX.test(t))) throw Error("Invalid Origin URL for embedded application");
-    return !f && d.createTestModeLibraryApplications(E), a.default.dispatch({
+    let f = i.default.getApplication(e);
+    null == f && (f = r.default.createFromServer(await a.default.fetchApplication(e)));
+    let E = (0, o.hasFlag)(f.flags, c.ApplicationFlags.EMBEDDED);
+    if (E && (null == t || !u.default.URL_REGEX.test(t))) throw Error("Invalid Origin URL for embedded application");
+    return !E && d.createTestModeLibraryApplications(f), s.default.dispatch({
       type: "DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS",
       applicationId: e,
-      originURL: f ? t : null
-    }), E
+      originURL: E ? t : null
+    }), f
   } catch (t) {
-    return a.default.dispatch({
+    return s.default.dispatch({
       type: "DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL",
       applicationId: e,
       error: t.message
@@ -45,14 +45,14 @@ async function E(e, t) {
   }
 }
 
-function f() {
-  a.default.dispatch({
+function E() {
+  s.default.dispatch({
     type: "DEVELOPER_TEST_MODE_RESET"
   })
 }
 
 function _() {
-  a.default.dispatch({
+  s.default.dispatch({
     type: "DEVELOPER_TEST_MODE_RESET_ERROR"
   })
 }

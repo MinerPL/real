@@ -22,24 +22,24 @@ var s = n("37983"),
       buttonColor: C,
       buttonSubmitting: p,
       onButtonClick: m,
-      imageSrc: E,
-      animationSrc: g,
+      imageSrc: g,
+      animationSrc: E,
       secondaryButtonText: S,
-      onSecondaryButtonClick: _,
-      children: A,
+      onSecondaryButtonClick: A,
+      children: _,
       useReducedMotion: T = !1
     } = e, M = (0, i.useStateFromStores)([o.default], () => o.default.getState().isMembersOpen);
     if (l.isMobile && M) return null;
     if (null == t) return (0, s.jsx)(s.Fragment, {
-      children: a.Children.only(A)
+      children: a.Children.only(_)
     });
     let I = null;
-    return null != E ? I = (0, s.jsx)("img", {
+    return null != g ? I = (0, s.jsx)("img", {
       alt: "",
-      src: E,
+      src: g,
       className: c.image
-    }) : null != g && (I = (0, s.jsx)(d.default, {
-      importData: g,
+    }) : null != E && (I = (0, s.jsx)(d.default, {
+      importData: E,
       shouldAnimate: !T,
       className: c.animation
     })), (0, s.jsxs)("div", {
@@ -63,7 +63,7 @@ var s = n("37983"),
         children: [null != S && (0, s.jsx)(r.Button, {
           className: c.button,
           size: r.Button.Sizes.SMALL,
-          onClick: _,
+          onClick: A,
           look: r.Button.Looks.LINK,
           color: r.Button.Colors.PRIMARY,
           submitting: p,

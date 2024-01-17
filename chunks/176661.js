@@ -20,8 +20,8 @@ function c(e) {
     status: n
   } = e, l = (0, r.useLinkTimestampText)(t.id, n), {
     avatarSrc: c,
-    avatarDecorationSrc: E,
-    eventHandlers: f
+    avatarDecorationSrc: f,
+    eventHandlers: E
   } = (0, i.default)({
     user: t,
     size: s.AvatarSizes.SIZE_40,
@@ -29,11 +29,11 @@ function c(e) {
   });
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
-      ...f,
+      ...E,
       children: (0, a.jsx)(d, {
         className: u.avatar,
         src: c,
-        avatarDecoration: E,
+        avatarDecoration: f,
         size: s.AvatarSizes.SIZE_40,
         "aria-label": t.username
       })

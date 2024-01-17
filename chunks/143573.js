@@ -4,17 +4,17 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var l = n("446674"),
-  a = n("913144");
-let s = !1;
-class i extends l.default.Store {
+var s = n("446674"),
+  l = n("913144");
+let a = !1;
+class i extends s.default.Store {
   get blockedByProxy() {
-    return s
+    return a
   }
 }
 i.displayName = "ProxyBlockStore";
-var r = new i(a.default, {
+var r = new i(l.default, {
   PROXY_BLOCKED_REQUEST: function(e) {
-    s = !0
+    a = !0
   }
 })

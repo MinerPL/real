@@ -1,49 +1,49 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return z
+    return Z
   }
 }), s("70102"), s("424973"), s("222007"), s("702976");
-var n, r, a = s("37983"),
-  l = s("884691"),
-  i = s("748820"),
+var r, n, a = s("37983"),
+  i = s("884691"),
+  l = s("748820"),
   o = s("446674"),
   u = s("77078"),
   d = s("913144"),
   c = s("885508"),
   p = s("465527"),
-  S = s("703332"),
-  h = s("657130"),
+  h = s("703332"),
+  S = s("657130"),
   f = s("812952"),
   E = s("846239"),
-  _ = s("84460"),
+  P = s("84460"),
   A = s("299285"),
-  I = s("791160"),
-  P = s("891865"),
+  _ = s("791160"),
+  m = s("891865"),
   C = s("697218"),
-  T = s("758764"),
-  m = s("437712"),
-  R = s("622839"),
-  N = s("552712"),
-  g = s("167726"),
-  y = s("454589"),
+  I = s("758764"),
+  T = s("437712"),
+  N = s("622839"),
+  R = s("552712"),
+  y = s("167726"),
+  g = s("454589"),
   O = s("145131"),
-  L = s("953109"),
-  M = s("315585"),
+  M = s("953109"),
+  L = s("315585"),
   D = s("599110"),
   B = s("568734"),
   x = s("45640"),
-  U = s("773336"),
-  F = s("153160"),
-  b = s("882941"),
+  b = s("773336"),
+  Y = s("153160"),
+  U = s("882941"),
   v = s("271560"),
-  G = s("733835"),
-  Y = s("391294"),
+  F = s("733835"),
+  G = s("391294"),
   k = s("49111"),
   j = s("782340"),
-  H = s("184048");
-(r = n || (n = {})).UNSUPPORTED_OS = "UNSUPPORTED_OS", r.TEST_MODE = "TEST_MODE", r.GIFT_ONLY = "GIFT_ONLY", r.PREORDER = "PREORDER";
-class w extends l.PureComponent {
+  w = s("184048");
+(n = r || (r = {})).UNSUPPORTED_OS = "UNSUPPORTED_OS", n.TEST_MODE = "TEST_MODE", n.GIFT_ONLY = "GIFT_ONLY", n.PREORDER = "PREORDER";
+class V extends i.PureComponent {
   getSkuPrice() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.props,
       t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.state,
@@ -51,9 +51,9 @@ class w extends l.PureComponent {
         prices: s
       } = e,
       {
-        paymentSourceId: n
+        paymentSourceId: r
       } = t;
-    return null == s ? null : s[null != n ? n : R.NO_PAYMENT_SOURCE]
+    return null == s ? null : s[null != r ? r : N.NO_PAYMENT_SOURCE]
   }
   componentDidMount() {
     let {
@@ -69,11 +69,11 @@ class w extends l.PureComponent {
   checkPriceChange(e, t) {
     let {
       sku: s,
-      onClose: n
+      onClose: r
     } = this.props;
     null != e && null != t && e.discount_percent_off !== t.discount_percent_off && d.default.wait(() => {
       if (null == s) throw Error("Unexpected null SKU");
-      n(k.PaymentModalPriceChangedError)
+      r(k.PaymentModalPriceChangedError)
     })
   }
   get closable() {
@@ -103,9 +103,9 @@ class w extends l.PureComponent {
       currency: s.currency
     };
     let {
-      paymentSourceId: n
+      paymentSourceId: r
     } = this.state;
-    if (null == n) {
+    if (null == r) {
       let t = e.getPrice();
       if (null == t) throw Error("Sku Price cannot be null");
       return {
@@ -122,20 +122,20 @@ class w extends l.PureComponent {
       sku: e,
       analyticsLocation: t,
       appContext: s,
-      promotionId: n
+      promotionId: r
     } = this.props;
     if (null == e) return {};
-    let r = this.getPrice();
+    let n = this.getPrice();
     return {
-      ...(0, I.default)(e),
+      ...(0, _.default)(e),
       load_id: this._loadId,
       payment_type: k.PurchaseTypeToAnalyticsPaymentType[k.PurchaseTypes.ONE_TIME],
       is_gift: this.isGift,
       client_event_source: s === k.AppContext.OVERLAY ? k.AppContext.OVERLAY : null,
       location: t,
-      price: null != r ? r.amount : null,
-      currency: null != r ? r.currency : null,
-      location_promotion_id: n
+      price: null != n ? n.amount : null,
+      currency: null != n ? n.currency : null,
+      location_promotion_id: r
     }
   }
   renderPurchaseWarning() {
@@ -143,94 +143,94 @@ class w extends l.PureComponent {
       sku: e,
       isInTestMode: t,
       isIAP: s,
-      isUserEntitledToSku: n
+      isUserEntitledToSku: r
     } = this.props;
     if (null == e) return null;
-    let r = (0, v.nativePlatformTypeToSKUOperatingSystem)((0, U.getPlatform)()),
-      i = [];
-    return (null == r || !e.supportedOperatingSystems.includes(r)) && !s && i.push((0, a.jsx)(f.default, {
-      icon: M.default,
+    let n = (0, v.nativePlatformTypeToSKUOperatingSystem)((0, b.getPlatform)()),
+      l = [];
+    return (null == n || !e.supportedOperatingSystems.includes(n)) && !s && l.push((0, a.jsx)(f.default, {
+      icon: L.default,
       iconSize: f.default.Sizes.SMALL,
       color: f.default.Colors.WARNING,
-      className: H.errorBlock,
+      className: w.errorBlock,
       children: j.default.Messages.APPLICATION_STORE_PURCHASE_GAME_CURRENT_OS_UNSUPPORTED
-    }, "UNSUPPORTED_OS")), t && i.push((0, a.jsx)(f.default, {
-      icon: M.default,
+    }, "UNSUPPORTED_OS")), t && l.push((0, a.jsx)(f.default, {
+      icon: L.default,
       iconSize: f.default.Sizes.SMALL,
       color: f.default.Colors.WARNING,
-      className: H.errorBlock,
+      className: w.errorBlock,
       children: j.default.Messages.APPLICATION_STORE_PURCHASE_TEST_MODE
-    }, "TEST_MODE")), !0 === n && this.isGiftable && i.push((0, a.jsx)(f.default, {
-      icon: M.default,
+    }, "TEST_MODE")), !0 === r && this.isGiftable && l.push((0, a.jsx)(f.default, {
+      icon: L.default,
       iconSize: f.default.Sizes.SMALL,
       color: f.default.Colors.PRIMARY,
-      className: H.errorBlock,
+      className: w.errorBlock,
       children: j.default.Messages.APPLICATION_STORE_PURCHASE_GIFT_ONLY
-    }, "GIFT_ONLY")), e.isPreorder() && i.push((0, a.jsx)(f.default, {
-      icon: M.default,
+    }, "GIFT_ONLY")), e.isPreorder() && l.push((0, a.jsx)(f.default, {
+      icon: L.default,
       iconSize: f.default.Sizes.SMALL,
       color: f.default.Colors.PRIMARY,
-      className: H.errorBlock,
+      className: w.errorBlock,
       children: j.default.Messages.APPLICATION_STORE_PURCHASE_WARNING_PREORDER.format({
-        date: (0, b.getReadablePreorderReleaseDate)(e)
+        date: (0, U.getReadablePreorderReleaseDate)(e)
       })
-    }, "PREORDER")), (0, a.jsx)(l.Fragment, {
-      children: i
+    }, "PREORDER")), (0, a.jsx)(i.Fragment, {
+      children: l
     })
   }
   renderGenericError(e, t) {
     return null == e && null == t ? null : (0, a.jsx)(u.FormErrorBlock, {
-      className: H.errorBlock,
+      className: w.errorBlock,
       children: null != e ? e.message : null != t ? t.message : null
     })
   }
   renderDefaultHeader(e, t, s) {
     let {
-      isIAP: n,
-      application: r,
-      sku: l,
-      purchaseError: i
+      isIAP: r,
+      application: n,
+      sku: i,
+      purchaseError: l
     } = this.props;
-    if (null == l || null == r) return null;
+    if (null == i || null == n) return null;
     let o = this.getPrice();
     return (0, a.jsxs)(u.ModalHeader, {
       direction: O.default.Direction.VERTICAL,
       align: O.default.Align.START,
       separator: !1,
       children: [(0, a.jsx)(E.default, {
-        application: r,
+        application: n,
         splashSize: 880
       }), (0, a.jsxs)(O.default, {
         align: O.default.Align.CENTER,
-        className: H.headerHeader,
+        className: w.headerHeader,
         children: [(0, a.jsx)(u.FormTitle, {
           tag: u.FormTitleTags.H4,
-          children: (0, Y.getSkuHeaderText)(n, l.type)
+          children: (0, G.getSkuHeaderText)(r, i.type)
         }), (0, a.jsx)(u.ModalCloseButton, {
           onClick: () => this.handleClose()
         })]
       }), (0, a.jsxs)(O.default, {
         align: O.default.Align.CENTER,
-        className: H.headerContent,
+        className: w.headerContent,
         children: [(0, a.jsxs)(O.default, {
           align: O.default.Align.CENTER,
-          children: [(0, a.jsx)(L.default, {
-            game: r
+          children: [(0, a.jsx)(M.default, {
+            game: n
           }), (0, a.jsx)("div", {
-            className: H.applicationName,
-            children: l.name
+            className: w.applicationName,
+            children: i.name
           })]
         }), (0, a.jsx)("div", {
-          className: H.price,
-          children: null != o ? (0, F.formatPrice)(o.amount, o.currency) : (0, a.jsx)(u.Spinner, {
+          className: w.price,
+          children: null != o ? (0, Y.formatPrice)(o.amount, o.currency) : (0, a.jsx)(u.Spinner, {
             type: u.Spinner.Type.PULSING_ELLIPSIS,
-            className: H.priceSpinner
+            className: w.priceSpinner
           })
         })]
-      }), this.renderPurchaseWarning(), this.renderGenericError(i, s), t.length > 1 ? (0, a.jsx)(y.default, {
+      }), this.renderPurchaseWarning(), this.renderGenericError(l, s), t.length > 1 ? (0, a.jsx)(g.default, {
         activeId: e,
         breadcrumbs: t,
-        className: H.breadcrumbs
+        className: w.breadcrumbs
       }) : null]
     })
   }
@@ -239,23 +239,23 @@ class w extends l.PureComponent {
       sku: e,
       isFetchingSKU: t,
       isPurchasing: s,
-      isEmbeddedIAP: n,
-      purchaseError: r,
-      isUserEntitledToSku: l,
-      forceConfirmationStepOnMount: i,
+      isEmbeddedIAP: r,
+      purchaseError: n,
+      isUserEntitledToSku: i,
+      forceConfirmationStepOnMount: l,
       transitionState: o
     } = this.props;
-    return null == e || t ? (0, a.jsx)(u.Spinner, {}) : (0, a.jsx)(h.default, {
+    return null == e || t ? (0, a.jsx)(u.Spinner, {}) : (0, a.jsx)(S.default, {
       ref: this._paymentModalRef,
       transitionState: o,
       canSubmit: null != this.getSkuPrice(),
-      needsToBeGift: e.type === k.SKUTypes.DURABLE_PRIMARY && !0 === l,
+      needsToBeGift: e.type === k.SKUTypes.DURABLE_PRIMARY && !0 === i,
       isGiftable: this.isGiftable,
-      legalNotice: n ? (0, a.jsx)(S.default, {
-        isEmbeddedIAP: n
+      legalNotice: r ? (0, a.jsx)(h.default, {
+        isEmbeddedIAP: r
       }) : null,
       isPurchasing: s,
-      purchaseError: r,
+      purchaseError: n,
       price: this.getPrice(),
       size: u.ModalSize.SMALL,
       onPurchase: this.handlePurchase,
@@ -266,7 +266,7 @@ class w extends l.PureComponent {
       renderHeader: this.renderHeader,
       renderConfirmationBody: this.renderConfirmation,
       submitButtonText: this.isGift ? j.default.Messages.APPLICATION_STORE_BUY_GIFT : j.default.Messages.APPLICATION_STORE_BUY,
-      initialStep: i ? x.Steps.CONFIRM : null,
+      initialStep: l ? x.Steps.CONFIRM : null,
       onStepChange: this.handleStepChange,
       isGift: this.isGift
     })
@@ -275,7 +275,7 @@ class w extends l.PureComponent {
     var t;
     super(...e), t = this, this.state = {
       paymentSourceId: null
-    }, this._loadId = (0, i.v4)(), this._stepStartTime = Date.now(), this._flowStartTime = Date.now(), this._paymentModalRef = l.createRef(), this.handlePaymentSourceChange = e => {
+    }, this._loadId = (0, l.v4)(), this._stepStartTime = Date.now(), this._flowStartTime = Date.now(), this._paymentModalRef = i.createRef(), this.handlePaymentSourceChange = e => {
       let {
         applicationId: t,
         skuId: s
@@ -289,14 +289,14 @@ class w extends l.PureComponent {
       let {
         applicationId: t,
         sku: s
-      } = this.props, n = this.getPrice(), r = null != n ? n.amount : 0, a = null != n ? n.currency : k.CurrencyCodes.USD;
+      } = this.props, r = this.getPrice(), n = null != r ? r.amount : 0, a = null != r ? r.currency : k.CurrencyCodes.USD;
       if (null == s) throw Error("SKU is null during purchase");
-      if (!R.default.isPurchasingSKU) try {
+      if (!N.default.isPurchasingSKU) try {
         D.default.track(k.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
           ...this.getBaseAnalyticsData(),
           duration_ms: Date.now() - this._flowStartTime
         }), await p.purchaseSKU(t, s.id, {
-          expectedAmount: r,
+          expectedAmount: n,
           expectedCurrency: a,
           paymentSource: e,
           analyticsLoadId: this._loadId,
@@ -328,10 +328,10 @@ class w extends l.PureComponent {
       }), this._stepStartTime = s, t === x.Steps.CONFIRM && p.showPurchaseConfirmationStep()
     }, this.renderHeader = (e, t, s) => {
       let {
-        application: n
+        application: r
       } = this.props;
-      if (e === x.Steps.CONFIRM) return null != n ? (0, a.jsx)(E.default, {
-        application: n,
+      if (e === x.Steps.CONFIRM) return null != r ? (0, a.jsx)(E.default, {
+        application: r,
         splashSize: 880
       }) : null;
       return this.renderDefaultHeader(e, t, s)
@@ -340,22 +340,22 @@ class w extends l.PureComponent {
         application: e,
         sku: t,
         isIAP: s,
-        giftCode: n
+        giftCode: r
       } = this.props;
       if (null == t || null == e) throw Error("No SKU for confirmation step!");
       return (0, a.jsx)("div", {
-        className: H.confirmContent,
+        className: w.confirmContent,
         children: (0, a.jsxs)(O.default, {
           direction: O.default.Direction.VERTICAL,
           children: [(0, a.jsx)(u.ModalCloseButton, {
             onClick: () => this.handleClose(),
-            className: H.confirmCloseButton
-          }), null != n ? (0, a.jsx)(P.default, {
-            giftCode: n,
+            className: w.confirmCloseButton
+          }), null != r ? (0, a.jsx)(m.default, {
+            giftCode: r,
             application: e,
             sku: t,
             onClose: () => this.handleClose()
-          }) : (0, a.jsx)(G.default, {
+          }) : (0, a.jsx)(F.default, {
             application: e,
             sku: t,
             isIAP: s,
@@ -366,36 +366,36 @@ class w extends l.PureComponent {
     }
   }
 }
-let V = l.forwardRef((e, t) => {
-  var s, n;
+let H = i.forwardRef((e, t) => {
+  var s, r;
   let {
-    applicationId: r,
-    skuId: l,
-    ...i
-  } = e, u = (0, o.useStateFromStores)([A.default], () => A.default.getApplication(r)), d = (0, B.hasFlag)(null !== (s = null == u ? void 0 : u.flags) && void 0 !== s ? s : 0, k.ApplicationFlags.EMBEDDED) && (0, B.hasFlag)(null !== (n = null == u ? void 0 : u.flags) && void 0 !== n ? n : 0, k.ApplicationFlags.EMBEDDED_IAP), [c, p, S, h, f, E, I, P, y] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.getPricesForSku(l), R.default.isPurchasingSKU, R.default.error, R.default.analyticsLocation, R.default.promotionId, R.default.giftCode, R.default.isGift, R.default.isIAP, R.default.forceConfirmationStepOnMount]), [O, L] = (0, o.useStateFromStoresArray)([N.default], () => [N.default.get(l), N.default.isFetching(l)]), M = (0, o.useStateFromStores)([_.default, g.default], () => g.default.inTestModeForApplication(r) || _.default.inDevModeForApplication(r), [r]), D = (0, o.useStateFromStores)([m.default, C.default], () => m.default.isEntitledToSku(C.default.getCurrentUser(), l, r)), x = (0, o.useStateFromStores)([T.default], () => T.default.error);
-  return (0, a.jsx)(w, {
-    ...i,
+    applicationId: n,
+    skuId: i,
+    ...l
+  } = e, u = (0, o.useStateFromStores)([A.default], () => A.default.getApplication(n)), d = (0, B.hasFlag)(null !== (s = null == u ? void 0 : u.flags) && void 0 !== s ? s : 0, k.ApplicationFlags.EMBEDDED) && (0, B.hasFlag)(null !== (r = null == u ? void 0 : u.flags) && void 0 !== r ? r : 0, k.ApplicationFlags.EMBEDDED_IAP), [c, p, h, S, f, E, _, m, g] = (0, o.useStateFromStoresArray)([N.default], () => [N.default.getPricesForSku(i), N.default.isPurchasingSKU, N.default.error, N.default.analyticsLocation, N.default.promotionId, N.default.giftCode, N.default.isGift, N.default.isIAP, N.default.forceConfirmationStepOnMount]), [O, M] = (0, o.useStateFromStoresArray)([R.default], () => [R.default.get(i), R.default.isFetching(i)]), L = (0, o.useStateFromStores)([P.default, y.default], () => y.default.inTestModeForApplication(n) || P.default.inDevModeForApplication(n), [n]), D = (0, o.useStateFromStores)([T.default, C.default], () => T.default.isEntitledToSku(C.default.getCurrentUser(), i, n)), x = (0, o.useStateFromStores)([I.default], () => I.default.error);
+  return (0, a.jsx)(V, {
+    ...l,
     application: u,
-    applicationId: r,
-    skuId: l,
+    applicationId: n,
+    skuId: i,
     prices: c,
     isPurchasing: p,
-    purchaseError: null != x ? x : S,
-    analyticsLocation: h,
+    purchaseError: null != x ? x : h,
+    analyticsLocation: S,
     promotionId: f,
-    isIAP: P,
+    isIAP: m,
     giftCode: E,
-    isGift: I,
-    forceConfirmationStepOnMount: y,
+    isGift: _,
+    forceConfirmationStepOnMount: g,
     sku: O,
-    isFetchingSKU: L,
-    isInTestMode: M,
+    isFetchingSKU: M,
+    isInTestMode: L,
     isUserEntitledToSku: D,
     isEmbeddedIAP: d,
     ref: t
   })
 });
-class W extends l.PureComponent {
+class W extends i.PureComponent {
   close() {
     null != this._skuPaymentModalRef.current && this._skuPaymentModalRef.current.closable && this.handleClose()
   }
@@ -404,14 +404,14 @@ class W extends l.PureComponent {
     this.props.onClose(e)
   }
   render() {
-    return (0, a.jsx)(V, {
+    return (0, a.jsx)(H, {
       ...this.props,
       ref: this._skuPaymentModalRef,
       onClose: () => this.handleClose()
     })
   }
   constructor(...e) {
-    super(...e), this._skuPaymentModalRef = l.createRef()
+    super(...e), this._skuPaymentModalRef = i.createRef()
   }
 }
-var z = W
+var Z = W

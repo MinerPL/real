@@ -1,13 +1,13 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return I
+    return v
   }
 }), l("222007");
 var a, n, s = l("917351"),
   r = l("446674"),
-  i = l("407846"),
-  o = l("913144"),
+  o = l("407846"),
+  i = l("913144"),
   u = l("766274"),
   d = l("271938"),
   c = l("9759"),
@@ -22,12 +22,12 @@ let S = new Set,
     BROADCASTS_BY_CHANNEL_ID: e => "channel:".concat(e),
     BROADCASTS_BY_VALIDITY: e => "validity:".concat(e)
   },
-  T = new i.default(function(e) {
+  T = new o.default(function(e) {
     let t = S.has(e.userId) ? 1 : 0;
     return null != e.viewers && (t = 2), [E.BROADCASTS_BY_USER_ID(e.userId), E.BROADCASTS_BY_CHANNEL_ID(e.channelId), E.BROADCASTS_BY_VALIDITY(t)]
   }, e => e.channelId);
 
-function _(e, t, l) {
+function R(e, t, l) {
   if (d.default.getId() === e) return !1;
   if (null == t) {
     let t = T.get(e);
@@ -37,7 +37,7 @@ function _(e, t, l) {
   T.set(e, a)
 }
 
-function R(e) {
+function _(e) {
   return null != e ? {
     type: f.BroadcastSourceType.GUILD,
     guildId: e
@@ -63,7 +63,7 @@ class p extends r.default.Store {
   }
 }
 p.displayName = "BroadcastingStore";
-var I = new p(o.default, {
+var v = new p(i.default, {
   PRESENCE_UPDATES: function(e) {
     let {
       updates: t
@@ -74,7 +74,7 @@ var I = new p(o.default, {
         broadcast: l,
         guildId: a
       } = e;
-      _(t.id, l, R(a))
+      R(t.id, l, _(a))
     })
   },
   PRESENCES_REPLACE: function(e) {
@@ -87,7 +87,7 @@ var I = new p(o.default, {
         broadcast: l,
         guildId: a
       } = e;
-      _(t.id, l, R(a))
+      R(t.id, l, _(a))
     })
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
@@ -101,7 +101,7 @@ var I = new p(o.default, {
         broadcast: l,
         guildId: a
       } = e;
-      _(t.id, l, R(a))
+      R(t.id, l, _(a))
     }), l.forEach(e => {
       let {
         presences: t,
@@ -112,7 +112,7 @@ var I = new p(o.default, {
           user: t,
           broadcast: a
         } = e;
-        _(t.id, a, R(l))
+        R(t.id, a, _(l))
       })
     })
   },

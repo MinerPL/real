@@ -17,8 +17,8 @@ var s = n("446674"),
   u = n("305961"),
   d = n("957255"),
   c = n("907566"),
-  E = n("378662"),
-  f = n("49111"),
+  f = n("378662"),
+  E = n("49111"),
   _ = n("782340");
 
 function h(e) {
@@ -27,38 +27,38 @@ function h(e) {
     shiftId: n,
     onSelect: h,
     closePopout: C,
-    "aria-label": T
-  } = e, I = (0, r.default)({
+    "aria-label": I
+  } = e, T = (0, r.default)({
     id: t.id,
     label: _.default.Messages.COPY_ID_GUILD,
     shiftId: n,
     onSuccess: C
-  }), S = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t.id), [t.id]), N = (0, s.useStateFromStores)([d.default], () => d.default.can(f.Permissions.ADMINISTRATOR, S)), {
-    canSeeInAppReportingButtons: A
-  } = E.DiscoveryInAppReportingExperiment.useExperiment({
+  }), S = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t.id), [t.id]), m = (0, s.useStateFromStores)([d.default], () => d.default.can(E.Permissions.ADMINISTRATOR, S)), {
+    canSeeInAppReportingButtons: p
+  } = f.DiscoveryInAppReportingExperiment.useExperiment({
     location: "0e35b9_1"
   }, {
     autoTrackExposure: !1
-  }), p = () => {
+  }), A = () => {
     (0, l.closeContextMenu)(), null == C || C()
   };
   return (0, a.jsxs)(i.Menu, {
     onSelect: h,
     navId: "guild-discovery-context-menu",
-    "aria-label": null != T ? T : _.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+    "aria-label": null != I ? I : _.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
     onClose: l.closeContextMenu,
     children: [(0, a.jsx)(i.MenuGroup, {
-      children: !N && A ? (0, a.jsx)(i.MenuItem, {
+      children: !m && p ? (0, a.jsx)(i.MenuItem, {
         id: "report-guild-discovery-listing",
         label: _.default.Messages.REPORT_SERVER_NO_NAME,
         action: () => {
-          (0, o.showReportModalForDiscoverableGuild)(t), p()
+          (0, o.showReportModalForDiscoverableGuild)(t), A()
         },
         icon: c.default,
         color: "danger"
       }) : null
     }), (0, a.jsx)(i.MenuGroup, {
-      children: I
+      children: T
     })]
   })
 }

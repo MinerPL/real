@@ -13,8 +13,8 @@ var a = n("37983"),
   u = n("49111"),
   d = n("994428"),
   c = n("782340"),
-  E = n("292379");
-class f extends s.PureComponent {
+  f = n("292379");
+class E extends s.PureComponent {
   render() {
     let e = "".concat(c.default.Messages.INVITE_NOTICE_MESSAGE, "\n").concat(c.default.Messages.INVITE_NOTICE_MESSAGE_PART_2);
     return (0, a.jsx)(o.default, {
@@ -25,7 +25,7 @@ class f extends s.PureComponent {
       cta: c.default.Messages.INVITE_PEOPLE,
       trackingSource: u.ChannelNoticeCtaSources.INVITE_NOTICE,
       type: u.ChannelNoticeTypes.INVITE,
-      image: E,
+      image: f,
       imageMarginX: 46
     })
   }
@@ -52,4 +52,4 @@ class f extends s.PureComponent {
     }
   }
 }
-var _ = f
+var _ = E

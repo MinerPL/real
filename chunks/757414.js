@@ -1,14 +1,14 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(t), l.d(t, {
   default: function() {
     return c
   }
 });
-var l, n, s = a("446674"),
-  i = a("913144"),
-  u = a("271938"),
-  d = a("794818");
-(l = n || (n = {})).UNSET = "unset", l.FETCHING = "fetching", l.FAILED = "failed", l.SUCCEEDED = "succeeded";
+var n, a, s = l("446674"),
+  i = l("913144"),
+  u = l("271938"),
+  d = l("794818");
+(n = a || (a = {})).UNSET = "unset", n.FETCHING = "fetching", n.FAILED = "failed", n.SUCCEEDED = "succeeded";
 let r = {
   guilds: {}
 };
@@ -43,11 +43,11 @@ var c = new o(i.default, {
   GUILD_POPOUT_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
-      guild: a
-    } = e, l = (0, d.makeDiscoverableGuild)(a);
+      guild: l
+    } = e, n = (0, d.makeDiscoverableGuild)(l);
     r.guilds[t] = {
       ...r.guilds[t],
-      guild: l,
+      guild: n,
       fetchState: "succeeded"
     }
   },

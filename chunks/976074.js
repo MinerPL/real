@@ -8,25 +8,25 @@ var a = n("37983");
 n("884691");
 var r = n("446674"),
   s = n("77078"),
-  i = n("374014"),
-  l = n("582415"),
+  l = n("374014"),
+  i = n("582415"),
   u = n("271938"),
   o = n("824563"),
   d = n("205817"),
   c = n("782340");
 
 function f(e, t, f) {
-  var E;
-  let h = (0, r.useStateFromStores)([o.default], () => (0, l.getStreamerApplication)(e, o.default), [e]),
-    p = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
-    S = null != e ? (0, i.encodeStreamKey)(e) : d.default.getActiveStreamKey(),
-    _ = null !== (E = d.default.getVideoStats(S)) && void 0 !== E ? E : {},
-    C = {
-      media_session_id: d.default.getMediaSessionId(S),
-      rtc_connection_id: d.default.getRtcConnectionId(S),
-      stream_region: d.default.getRegion(S),
-      max_viewers: d.default.getMaxViewers(S),
-      ..._
+  var h;
+  let p = (0, r.useStateFromStores)([o.default], () => (0, i.getStreamerApplication)(e, o.default), [e]),
+    E = (0, r.useStateFromStores)([u.default], () => u.default.getId()),
+    C = null != e ? (0, l.encodeStreamKey)(e) : d.default.getActiveStreamKey(),
+    m = null !== (h = d.default.getVideoStats(C)) && void 0 !== h ? h : {},
+    S = {
+      media_session_id: d.default.getMediaSessionId(C),
+      rtc_connection_id: d.default.getRtcConnectionId(C),
+      stream_region: d.default.getRegion(C),
+      max_viewers: d.default.getMaxViewers(C),
+      ...m
     };
   return null == e ? null : (0, a.jsx)(s.MenuItem, {
     id: "report-stream-problem",
@@ -38,9 +38,9 @@ function f(e, t, f) {
         } = await n.el("485857").then(n.bind(n, "485857"));
         return n => (0, a.jsx)(t, {
           stream: e,
-          streamApplication: h,
-          isStreamer: p === (null == e ? void 0 : e.ownerId),
-          analyticsData: C,
+          streamApplication: p,
+          isStreamer: E === (null == e ? void 0 : e.ownerId),
+          analyticsData: S,
           ...n
         })
       })

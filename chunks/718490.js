@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return v
   }
 }), n("222007");
 var s = n("37983"),
@@ -18,11 +18,11 @@ var s = n("37983"),
   C = n("98292"),
   p = n("351825"),
   m = n("956089"),
-  E = n("664336"),
-  g = n("811305"),
+  g = n("664336"),
+  E = n("811305"),
   S = n("117362"),
-  _ = n("449008"),
-  A = n("49111"),
+  A = n("449008"),
+  _ = n("49111"),
   T = n("590456"),
   M = n("782340"),
   I = n("961282");
@@ -58,7 +58,7 @@ class N {
         return [t, n.map(e => {
           var t;
           return null === (t = f.default.getGuild(e)) || void 0 === t ? void 0 : t.name
-        }).filter(_.isNotNullish)]
+        }).filter(A.isNotNullish)]
       }).value();
       return n
     }), this.renderMoreAvatars = () => (0, s.jsx)(o.TooltipContainer, {
@@ -76,14 +76,14 @@ class N {
         userId: this.userId,
         section: T.UserProfileSections.MUTUAL_GUILDS,
         analyticsLocation: {
-          section: A.AnalyticsSections.CHANNEL_HEADER
+          section: _.AnalyticsSections.CHANNEL_HEADER
         }
       })
     }, this.userId = e, this.user = t
   }
 }
 
-function L(e) {
+function v(e) {
   let {
     channel: t
   } = e, n = t.getRecipientId(), l = (0, u.useAvatarsWithGuilds)(n), i = Array(l.length).fill(null), d = function(e) {
@@ -94,11 +94,11 @@ function L(e) {
   return 0 === d.getNicknameGuildPairs().length && 0 === l.length ? (0, s.jsx)("div", {
     className: I.spacer
   }) : (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(E.Divider, {}), (0, s.jsx)(m.TextBadge, {
+    children: [(0, s.jsx)(g.Divider, {}), (0, s.jsx)(m.TextBadge, {
       text: M.default.Messages.AKA,
       disableColor: !0,
       className: I.akaBadge
-    }), l.length > 0 ? (0, s.jsx)(g.default, {
+    }), l.length > 0 ? (0, s.jsx)(E.default, {
       size: 16,
       users: i,
       showUserPopout: !1,

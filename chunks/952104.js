@@ -25,7 +25,7 @@ function f(e) {
     guildId: null !== (t = null == f ? void 0 : f.id) && void 0 !== t ? t : "",
     analyticsLocations: h,
     openWithoutBackstack: !0
-  }), m = p ? d.default.Messages.GUILD_AUTOMOD_PROFILE_INVALID_DESCRIPTION : d.default.Messages.GUILD_AUTOMOD_PROFILE_INVALID_NO_PERMS_DESCRIPTION, E = p ? d.default.Messages.GUILD_AUTOMOD_UPDATE_PROFILE_CTA : d.default.Messages.GUILD_AUTOMOD_UPDATE_ACCOUNT_USERNAME_CTA;
+  }), m = p ? d.default.Messages.GUILD_AUTOMOD_PROFILE_INVALID_DESCRIPTION : d.default.Messages.GUILD_AUTOMOD_PROFILE_INVALID_NO_PERMS_DESCRIPTION, g = p ? d.default.Messages.GUILD_AUTOMOD_UPDATE_PROFILE_CTA : d.default.Messages.GUILD_AUTOMOD_UPDATE_ACCOUNT_USERNAME_CTA;
   return (0, s.jsx)("div", {
     children: (0, s.jsx)(r.MessageNoticeBanner, {
       bannerIcon: (0, s.jsx)(o.default, {
@@ -44,7 +44,7 @@ function f(e) {
           C()
         },
         size: a.Button.Sizes.SMALL,
-        children: E
+        children: g
       })
     })
   })

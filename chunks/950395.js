@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 }), n("222007");
 var a = n("37983"),
@@ -13,25 +13,25 @@ var a = n("37983"),
   u = n("530311"),
   d = n("858722"),
   c = n("220978"),
-  E = n("581454"),
-  f = n("49111"),
+  f = n("581454"),
+  E = n("49111"),
   _ = n("782340");
-let h = new Set([f.CloudSyncStateTypes.PUSHING, f.CloudSyncStateTypes.PULLING]),
+let h = new Set([E.CloudSyncStateTypes.PUSHING, E.CloudSyncStateTypes.PULLING]),
   C = Object.freeze({
-    [f.CloudSyncStateTypes.DONE]: u.default,
-    [f.CloudSyncStateTypes.PLANNING]: u.default,
-    [f.CloudSyncStateTypes.PREPARING]: u.default,
-    [f.CloudSyncStateTypes.PUSHING]: E.default,
-    [f.CloudSyncStateTypes.PULLING]: c.default,
-    [f.CloudSyncStateTypes.CONFLICT]: u.default,
-    [f.CloudSyncStateTypes.ERROR]: u.default
+    [E.CloudSyncStateTypes.DONE]: u.default,
+    [E.CloudSyncStateTypes.PLANNING]: u.default,
+    [E.CloudSyncStateTypes.PREPARING]: u.default,
+    [E.CloudSyncStateTypes.PUSHING]: f.default,
+    [E.CloudSyncStateTypes.PULLING]: c.default,
+    [E.CloudSyncStateTypes.CONFLICT]: u.default,
+    [E.CloudSyncStateTypes.ERROR]: u.default
   });
-class T extends s.PureComponent {
+class I extends s.PureComponent {
   componentDidMount() {
     this.getIsRecentlySynced() && this.setRecentlySyncedTimeout()
   }
   componentDidUpdate(e) {
-    null != this.props.cloudSyncState && this.props.cloudSyncState.type === f.CloudSyncStateTypes.DONE && null != this.props.cloudSyncState.timestamp && (null == e.cloudSyncState || null == e.cloudSyncState.timestamp) && this.setRecentlySyncedTimeout()
+    null != this.props.cloudSyncState && this.props.cloudSyncState.type === E.CloudSyncStateTypes.DONE && null != this.props.cloudSyncState.timestamp && (null == e.cloudSyncState || null == e.cloudSyncState.timestamp) && this.setRecentlySyncedTimeout()
   }
   componentWillUnmount() {
     this._doneTimer.stop()
@@ -43,7 +43,7 @@ class T extends s.PureComponent {
     let {
       cloudSyncState: e
     } = this.props;
-    if (null != e && e.type === f.CloudSyncStateTypes.DONE) {
+    if (null != e && e.type === E.CloudSyncStateTypes.DONE) {
       let t = e.timestamp;
       return null != t && Date.now() - t <= 2e3
     }
@@ -51,7 +51,7 @@ class T extends s.PureComponent {
   }
   getStop(e, t) {
     if (t) return 1;
-    if (e.type === f.CloudSyncStateTypes.PUSHING || e.type === f.CloudSyncStateTypes.PULLING) {
+    if (e.type === E.CloudSyncStateTypes.PUSHING || e.type === E.CloudSyncStateTypes.PULLING) {
       let {
         progress: t,
         total: n
@@ -62,19 +62,19 @@ class T extends s.PureComponent {
   }
   getTooltip(e, t) {
     switch (e.type) {
-      case f.CloudSyncStateTypes.DONE:
+      case E.CloudSyncStateTypes.DONE:
         if (t) return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_DONE;
         return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_SUPPORTED;
-      case f.CloudSyncStateTypes.CONFLICT:
-      case f.CloudSyncStateTypes.ERROR:
+      case E.CloudSyncStateTypes.CONFLICT:
+      case E.CloudSyncStateTypes.ERROR:
         return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_SUPPORTED;
-      case f.CloudSyncStateTypes.PLANNING:
+      case E.CloudSyncStateTypes.PLANNING:
         return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PLANNING;
-      case f.CloudSyncStateTypes.PREPARING:
+      case E.CloudSyncStateTypes.PREPARING:
         return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PREPARING;
-      case f.CloudSyncStateTypes.PUSHING:
+      case E.CloudSyncStateTypes.PUSHING:
         return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PUSHING;
-      case f.CloudSyncStateTypes.PULLING:
+      case E.CloudSyncStateTypes.PULLING:
         return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PULLING;
       default:
         return null
@@ -86,7 +86,7 @@ class T extends s.PureComponent {
       libraryApplication: t,
       className: n
     } = this.props, s = null == e ? {
-      type: f.CloudSyncStateTypes.DONE
+      type: E.CloudSyncStateTypes.DONE
     } : e, i = this.getIsRecentlySynced(), l = {};
     (h.has(s.type) || i) && (l.gradientConfig = {
       id: t.id,
@@ -108,11 +108,11 @@ class T extends s.PureComponent {
     super(...e), this._doneTimer = new l.Timeout
   }
 }
-var I = i.default.connectStores([o.default], e => {
+var T = i.default.connectStores([o.default], e => {
   let {
     libraryApplication: t
   } = e;
   return {
     cloudSyncState: o.default.getState(t.id, t.branchId)
   }
-})(T)
+})(I)

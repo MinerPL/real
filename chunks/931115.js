@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   DropsForGoLiveFortniteExperiment: function() {
-    return a
+    return l
   }
 });
-var l = n("862205");
-let a = (0, l.createExperiment)({
+var s = n("862205");
+let l = (0, s.createExperiment)({
   kind: "user",
   id: "2023-05_go_live_quest_fortnite",
   label: "Fortnite: Go Live Quest",

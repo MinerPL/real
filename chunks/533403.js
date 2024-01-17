@@ -1,40 +1,40 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return S
   }
 }), n("424973"), n("222007");
-var r = n("37983"),
-  i = n("884691"),
-  u = n("414456"),
-  l = n.n(u),
+var i = n("37983"),
+  r = n("884691"),
+  l = n("414456"),
+  u = n.n(l),
   o = n("77078"),
   s = n("766274"),
   a = n("368121"),
   d = n("519657"),
   c = n("486425");
-class f extends i.PureComponent {
+class f extends r.PureComponent {
   renderUsers() {
     let {
       users: e,
       max: t,
       renderUser: n = this.defaultRenderUser,
-      renderMoreUsers: r
-    } = this.props, i = [], u = e.length === t ? e.length : t - 1, l = 0;
-    for (; l < u && l < e.length;) {
-      let t = l === e.length - 1;
-      i.push(n(e[l] || null, t ? null : d.avatarMasked, "user-".concat(l), t)), l++
+      renderMoreUsers: i
+    } = this.props, r = [], l = e.length === t ? e.length : t - 1, u = 0;
+    for (; u < l && u < e.length;) {
+      let t = u === e.length - 1;
+      r.push(n(e[u] || null, t ? null : d.avatarMasked, "user-".concat(u), t)), u++
     }
-    if (l < e.length) {
-      let t = Math.min(e.length - l, 99);
-      i.push(r("+".concat(t), d.moreUsers, "more-users", t))
+    if (u < e.length) {
+      let t = Math.min(e.length - u, 99);
+      r.push(i("+".concat(t), d.moreUsers, "more-users", t))
     }
-    return i
+    return r
   }
   renderIcon() {
-    return this.props.icon ? (0, r.jsx)("div", {
+    return this.props.icon ? (0, i.jsx)("div", {
       className: d.iconContainer,
-      children: (0, r.jsx)(a.default, {
+      children: (0, i.jsx)(a.default, {
         width: 16,
         height: 16,
         foreground: d.foreground,
@@ -46,40 +46,40 @@ class f extends i.PureComponent {
     let {
       className: e
     } = this.props;
-    return (0, r.jsxs)("div", {
-      className: l(e, d.container),
+    return (0, i.jsxs)("div", {
+      className: u(e, d.container),
       ref: e => this._ref = e,
       children: [this.renderIcon(), this.renderUsers()]
     })
   }
   constructor(...e) {
-    super(...e), this.defaultRenderUser = (e, t, n, i) => {
+    super(...e), this.defaultRenderUser = (e, t, n, r) => {
       let {
-        onClick: u,
+        onClick: l,
         size: a,
         guildId: f
-      } = this.props, h = e instanceof s.default ? e : null != e ? e.user : null;
-      return null == h ? (0, r.jsx)("div", {
-        className: l(d.emptyUser, t)
-      }, n) : (0, r.jsx)(o.Avatar, {
+      } = this.props, S = e instanceof s.default ? e : null != e ? e.user : null;
+      return null == S ? (0, i.jsx)("div", {
+        className: u(d.emptyUser, t)
+      }, n) : (0, i.jsx)(o.Avatar, {
         tabIndex: 0,
-        src: h.getAvatarURL(f, (0, o.getAvatarSize)(a)),
+        src: S.getAvatarURL(f, (0, o.getAvatarSize)(a)),
         size: a,
-        "aria-label": h.username,
-        className: l(t, c.cursorPointer, d.avatarSize),
-        onClick: e => null != u ? u(e, h, this._ref) : null
-      }, h.id)
+        "aria-label": S.username,
+        className: u(t, c.cursorPointer, d.avatarSize),
+        onClick: e => null != l ? l(e, S, this._ref) : null
+      }, S.id)
     }
   }
 }
 f.defaultProps = {
   max: 10,
   renderMoreUsers: function(e, t, n) {
-    return (0, r.jsx)("div", {
+    return (0, i.jsx)("div", {
       className: t,
       children: e
     }, n)
   },
   size: o.AvatarSizes.SIZE_24
 };
-var h = f
+var S = f

@@ -4,20 +4,20 @@ n.r(t), n.d(t, {
     return f
   },
   resetNotificationCenter: function() {
-    return E
-  },
-  fetchNotificationCenterItems: function() {
     return h
   },
+  fetchNotificationCenterItems: function() {
+    return E
+  },
   markNotificationCenterItemAcked: function() {
-    return _
+    return m
   },
   deleteNotificationCenterItem: function() {
-    return T
+    return g
   }
 });
-var l = n("759843"),
-  a = n("872717"),
+var a = n("759843"),
+  l = n("872717"),
   s = n("627929"),
   i = n("913144"),
   r = n("845579"),
@@ -33,29 +33,29 @@ function f(e) {
   })
 }
 
-function E() {
+function h() {
   i.default.dispatch({
     type: "RESET_NOTIFICATION_CENTER"
   })
 }
-async function h(e, t) {
+async function E(e, t) {
   if (u.default.loading) return;
   await i.default.dispatch({
     type: "LOAD_NOTIFICATION_CENTER_ITEMS"
   });
   let n = Math.ceil(u.default.items.length / e.limit);
   try {
-    let a = await o.default.get({
+    let l = await o.default.get({
       url: c.Endpoints.NOTIF_CENTER_ITEMS(),
       trackedActionData: {
-        event: l.NetworkActionNames.NOTIFICATION_CENTER_PAGE_FETCH,
+        event: a.NetworkActionNames.NOTIFICATION_CENTER_PAGE_FETCH,
         properties: e => {
           var t;
-          let l = ((null === (t = e.body) || void 0 === t ? void 0 : t.items) || []).map(e => e.type);
+          let a = ((null === (t = e.body) || void 0 === t ? void 0 : t.items) || []).map(e => e.type);
           return (0, s.exact)({
             page: n,
-            items: l,
-            item_count: l.length
+            items: a,
+            item_count: a.length
           })
         }
       },
@@ -65,9 +65,9 @@ async function h(e, t) {
     });
     null == t || t(), await i.default.dispatch({
       type: "LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS",
-      items: a.body.items,
-      cursor: a.body.cursor,
-      hasMore: a.body.has_more
+      items: l.body.items,
+      cursor: l.body.cursor,
+      hasMore: l.body.has_more
     })
   } catch (e) {
     null == t || t(), await i.default.dispatch({
@@ -76,7 +76,7 @@ async function h(e, t) {
   }
 }
 
-function _(e) {
+function m(e) {
   null != e.local_id ? function(e) {
     i.default.dispatch({
       type: "NOTIFICATION_CENTER_ITEMS_LOCAL_ACK",
@@ -88,15 +88,15 @@ function _(e) {
       optimistic: !0,
       ids: [e]
     })
-  }(e.id) : S(e.id)
+  }(e.id) : p(e.id)
 }
-async function S(e) {
+async function p(e) {
   try {
     i.default.dispatch({
       type: "NOTIFICATION_CENTER_ITEMS_ACK",
       optimistic: !0,
       ids: [e]
-    }), await a.default.post({
+    }), await l.default.post({
       url: c.Endpoints.NOTIF_CENTER_ITEMS_ACK(e)
     })
   } catch (t) {
@@ -106,7 +106,7 @@ async function S(e) {
     })
   }
 }
-async function T(e) {
+async function g(e) {
   let t = r.NotificationCenterAckedBeforeId.getSetting();
   try {
     i.default.dispatch({
@@ -118,7 +118,7 @@ async function T(e) {
         item_type: (0, d.isMentionItem)(e) ? "mention" : "regular"
       },
       trackedActionData: {
-        event: l.NetworkActionNames.NOTIFICATION_CENTER_ITEM_DELETE,
+        event: a.NetworkActionNames.NOTIFICATION_CENTER_ITEM_DELETE,
         properties: {
           notification_center_id: e.id,
           acked: (0, d.isRemoteAcked)(e, t),

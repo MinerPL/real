@@ -49,13 +49,13 @@ function d(e, t, n, s, d) {
       }
     })
   }));
-  let E = n - c.length;
-  return E > 0 && c.push((0, a.jsx)(i.MenuItem, {
+  let f = n - c.length;
+  return f > 0 && c.push((0, a.jsx)(i.MenuItem, {
     id: "unknown-members-".concat(null == s ? void 0 : s.session_id),
     render: e => (0, a.jsx)(r.NowPlayingUnknownMemberMenuItem, {
       ...e,
       label: u.default.Messages.GAME_FEED_UNKNOWN_PLAYERS.format({
-        count: E
+        count: f
       })
     })
   })), c
@@ -72,7 +72,7 @@ function c(e) {
       user: t
     } = e;
     return t.id
-  })), c = n.filter(e => !o.has(e.id)), E = s.useMemo(() => {
+  })), c = n.filter(e => !o.has(e.id)), f = s.useMemo(() => {
     let e = l.flatMap(e => {
       let {
         playingMembers: t
@@ -81,13 +81,13 @@ function c(e) {
     }).map(e => e.id);
     return n.filter(t => !e.includes(t.id))
   }, [n, l]);
-  if (l.length <= 1 && 0 === E.length) {
-    var f, _;
+  if (l.length <= 1 && 0 === f.length) {
+    var E, _;
     return (0, a.jsx)(i.MenuGroup, {
       label: n.length > 1 ? u.default.Messages.ACTIVITY_FEED_SINGLE_MEMBER_LIST_HEADER.format({
         memberCount: n.length
       }) : void 0,
-      children: d(t, c, n.length, null !== (_ = null === (f = l[0]) || void 0 === f ? void 0 : f.activity) && void 0 !== _ ? _ : void 0, null == r ? void 0 : r.id)
+      children: d(t, c, n.length, null !== (_ = null === (E = l[0]) || void 0 === E ? void 0 : E.activity) && void 0 !== _ ? _ : void 0, null == r ? void 0 : r.id)
     })
   }
   let h = l.map((e, n) => {
@@ -106,15 +106,15 @@ function c(e) {
         }), s.filter(e => !o.has(e.id)), s.length, null != u ? u : void 0, null == r ? void 0 : r.id)
       }, n)
     }),
-    C = E.map(e => e.id),
-    T = (0, a.jsx)(i.MenuGroup, {
-      label: "".concat(u.default.Messages.ACTIVITY_FEED_OTHER_MEMBER_LIST_HEADER, " - ").concat(E.length),
+    C = f.map(e => e.id),
+    I = (0, a.jsx)(i.MenuGroup, {
+      label: "".concat(u.default.Messages.ACTIVITY_FEED_OTHER_MEMBER_LIST_HEADER, " - ").concat(f.length),
       children: d(t.filter(e => {
         let {
           user: t
         } = e;
         return C.includes(t.id)
-      }), E.filter(e => !o.has(e.id)), E.length, void 0, null == r ? void 0 : r.id)
+      }), f.filter(e => !o.has(e.id)), f.length, void 0, null == r ? void 0 : r.id)
     });
-  return [...h, T]
+  return [...h, I]
 }

@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   getPriceTiers: function() {
-    return l
+    return u
   }
 });
-var r = n("872717"),
-  i = n("448993"),
-  u = n("49111");
-let l = async (e, t) => {
+var i = n("872717"),
+  r = n("448993"),
+  l = n("49111");
+let u = async (e, t) => {
   try {
-    let n = await r.default.get({
-      url: u.Endpoints.PRICE_TIERS,
+    let n = await i.default.get({
+      url: l.Endpoints.PRICE_TIERS,
       query: {
         price_tier_type: t,
         guild_id: e
@@ -18,6 +18,6 @@ let l = async (e, t) => {
     });
     return n.body
   } catch (e) {
-    throw new i.APIError(e)
+    throw new r.APIError(e)
   }
 }

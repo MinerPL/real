@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return m
   }
 });
-var i = n("37983");
+var l = n("37983");
 n("884691");
-var l = n("77078"),
+var i = n("77078"),
   u = n("272030"),
-  o = n("838446"),
-  a = n("158534"),
+  a = n("838446"),
+  o = n("158534"),
   r = n("846883"),
   d = n("812204"),
   s = n("861370"),
@@ -22,44 +22,44 @@ var l = n("77078"),
   p = n("314838"),
   A = n("421602"),
   g = n("692986"),
-  C = n("806179"),
-  I = n("816106"),
-  N = n("623879"),
-  U = n("49111"),
-  O = n("782340"),
-  h = (0, a.default)((0, o.default)(function(e) {
+  N = n("806179"),
+  C = n("816106"),
+  I = n("623879"),
+  O = n("49111"),
+  U = n("782340"),
+  m = (0, o.default)((0, a.default)(function(e) {
     let {
       user: t,
       showMediaItems: n = !1,
-      mediaEngineContext: o,
-      onSelect: a
-    } = e, d = (0, C.default)(t.id), U = (0, A.default)(t.id), h = (0, T.default)(t), R = (0, _.default)({
+      mediaEngineContext: a,
+      onSelect: o
+    } = e, d = (0, N.default)(t.id), O = (0, A.default)(t.id), m = (0, T.default)(t), v = (0, _.default)({
       user: t
-    }), v = (0, E.default)(t), m = (0, N.default)(t.id), P = (0, I.default)(t.id), y = (0, g.default)(t.id, o), b = (0, p.default)(t), w = (0, r.default)(null, t), D = (0, f.default)(t), L = (0, S.default)(t), M = (0, s.default)({
+    }), h = (0, E.default)(t), R = (0, I.default)(t.id), P = (0, C.default)(t.id), y = (0, g.default)(t.id, a), b = (0, p.default)(t), M = (0, r.default)(null, t), D = (0, f.default)(t), L = (0, S.default)(t), w = (0, s.default)({
       id: t.id,
-      label: O.default.Messages.COPY_ID_USER
-    }), G = (0, c.default)(t), k = t.isNonUserBot();
-    return (0, i.jsxs)(l.Menu, {
+      label: U.default.Messages.COPY_ID_USER
+    }), V = (0, c.default)(t), G = t.isNonUserBot();
+    return (0, l.jsxs)(i.Menu, {
       navId: "user-context",
       onClose: u.closeContextMenu,
-      "aria-label": O.default.Messages.USER_ACTIONS_MENU_LABEL,
-      onSelect: a,
-      children: [!k && (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(l.MenuGroup, {
-          children: G
-        }), (0, i.jsxs)(l.MenuGroup, {
-          children: [d, U, h, R, v, m]
-        }), n && (0, i.jsx)(l.MenuGroup, {
+      "aria-label": U.default.Messages.USER_ACTIONS_MENU_LABEL,
+      onSelect: o,
+      children: [!G && (0, l.jsxs)(l.Fragment, {
+        children: [(0, l.jsx)(i.MenuGroup, {
+          children: V
+        }), (0, l.jsxs)(i.MenuGroup, {
+          children: [d, O, m, v, h, R]
+        }), n && (0, l.jsx)(i.MenuGroup, {
           children: P
-        }), (0, i.jsx)(l.MenuGroup, {
-          children: w
-        }), (0, i.jsxs)(l.MenuGroup, {
+        }), (0, l.jsx)(i.MenuGroup, {
+          children: M
+        }), (0, l.jsxs)(i.MenuGroup, {
           children: [n && y, b, D, L]
         })]
-      }), (0, i.jsx)(l.MenuGroup, {
-        children: M
+      }), (0, l.jsx)(i.MenuGroup, {
+        children: w
       })]
     })
   }, {
-    object: U.AnalyticsObjects.CONTEXT_MENU
+    object: O.AnalyticsObjects.CONTEXT_MENU
   }), [d.default.CONTEXT_MENU, d.default.USER_GENERIC_MENU])

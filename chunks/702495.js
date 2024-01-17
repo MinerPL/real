@@ -1,83 +1,83 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return C
+    return A
   }
 }), n("781738");
-var r = n("37983"),
+var a = n("37983"),
   i = n("884691"),
-  a = n("446674"),
-  u = n("77078"),
-  s = n("150021"),
-  o = n("997289"),
-  c = n("788506"),
-  l = n("385976"),
-  d = n("867805"),
+  l = n("446674"),
+  s = n("77078"),
+  u = n("150021"),
+  r = n("997289"),
+  d = n("788506"),
+  o = n("385976"),
+  c = n("867805"),
   f = n("246511"),
   E = n("467094"),
-  _ = n("178207"),
-  p = n("256860"),
-  S = n("364685"),
-  y = n("24373"),
-  I = n("49111"),
-  m = n("782340");
+  M = n("178207"),
+  m = n("256860"),
+  g = n("364685"),
+  I = n("24373"),
+  S = n("49111"),
+  p = n("782340");
 
-function T(t) {
-  return d.default.getByName(t.replace(/(^:|:$)/g, ""))
+function _(e) {
+  return c.default.getByName(e.replace(/(^:|:$)/g, ""))
 }
 
-function C(t) {
+function A(e) {
   let {
-    type: e,
+    type: t,
     id: n,
-    name: C,
-    isInExpressionPicker: k = !1
-  } = t, {
+    name: A,
+    isInExpressionPicker: h = !1
+  } = e, {
     location: v
-  } = (0, o.useAnalyticsContext)(), A = i.useMemo(() => ({
+  } = (0, r.useAnalyticsContext)(), T = i.useMemo(() => ({
     ...v,
-    section: k ? I.AnalyticsSections.EXPRESSION_PICKER : I.AnalyticsSections.CONTEXT_MENU
-  }), [v, k]), h = (0, p.useFavoriteStickerIds)(), R = (0, a.useStateFromStores)([S.default], () => e === f.PickerContextMenuDataTypes.STICKER && null != n ? S.default.getStickerById(n) : null), O = null != R && h.includes(R.id), M = (0, a.useStateFromStores)([l.default], () => {
-    if (e === f.PickerContextMenuDataTypes.EMOJI) {
-      if (null != n) return l.default.getDisambiguatedEmojiContext().getById(n);
-      if (null != C) {
-        var t;
-        return null !== (t = T(C)) && void 0 !== t ? t : T(d.default.convertSurrogateToName(C))
+    section: h ? S.AnalyticsSections.EXPRESSION_PICKER : S.AnalyticsSections.CONTEXT_MENU
+  }), [v, h]), C = (0, m.useFavoriteStickerIds)(), R = (0, l.useStateFromStores)([g.default], () => t === f.PickerContextMenuDataTypes.STICKER && null != n ? g.default.getStickerById(n) : null), O = null != R && C.includes(R.id), y = (0, l.useStateFromStores)([o.default], () => {
+    if (t === f.PickerContextMenuDataTypes.EMOJI) {
+      if (null != n) return o.default.getDisambiguatedEmojiContext().getById(n);
+      if (null != A) {
+        var e;
+        return null !== (e = _(A)) && void 0 !== e ? e : _(c.default.convertSurrogateToName(A))
       }
     }
-  }), g = (0, c.useIsFavoriteEmoji)(null, M);
-  if (null != R && e === f.PickerContextMenuDataTypes.STICKER) return (0, y.isGuildSticker)(R) && !(0, y.isAvailableGuildSticker)(R) ? null : O ? (0, r.jsx)(u.MenuItem, {
+  }), x = (0, d.useIsFavoriteEmoji)(null, y);
+  if (null != R && t === f.PickerContextMenuDataTypes.STICKER) return (0, I.isGuildSticker)(R) && !(0, I.isAvailableGuildSticker)(R) ? null : O ? (0, a.jsx)(s.MenuItem, {
     id: "unfavorite",
     action: () => (0, E.unfavoriteSticker)(R.id),
-    label: m.default.Messages.UNFAVORITE_ITEM
-  }) : (0, r.jsx)(u.MenuItem, {
+    label: p.default.Messages.UNFAVORITE_ITEM
+  }) : (0, a.jsx)(s.MenuItem, {
     id: "favorite",
     action: () => {
-      (0, _.trackStickerFavorited)({
+      (0, M.trackStickerFavorited)({
         sticker: R,
         location: {
-          ...A,
-          object: I.AnalyticsObjects.STICKER
+          ...T,
+          object: S.AnalyticsObjects.STICKER
         }
       }), (0, E.favoriteSticker)(null == R ? void 0 : R.id)
     },
-    label: m.default.Messages.FAVORITE_ITEM
+    label: p.default.Messages.FAVORITE_ITEM
   });
-  if (null != M && e === f.PickerContextMenuDataTypes.EMOJI) return g ? (0, r.jsx)(u.MenuItem, {
+  if (null != y && t === f.PickerContextMenuDataTypes.EMOJI) return x ? (0, a.jsx)(s.MenuItem, {
     id: "unfavorite",
-    action: () => (0, s.unfavoriteEmoji)(M),
-    label: m.default.Messages.UNFAVORITE_ITEM
-  }) : (0, r.jsx)(u.MenuItem, {
+    action: () => (0, u.unfavoriteEmoji)(y),
+    label: p.default.Messages.UNFAVORITE_ITEM
+  }) : (0, a.jsx)(s.MenuItem, {
     id: "favorite",
     action: () => {
-      (0, c.trackEmojiFavorited)({
-        emoji: M,
+      (0, d.trackEmojiFavorited)({
+        emoji: y,
         location: {
-          ...A,
-          object: I.AnalyticsObjects.EMOJI
+          ...T,
+          object: S.AnalyticsObjects.EMOJI
         }
-      }), (0, s.favoriteEmoji)(M)
+      }), (0, u.favoriteEmoji)(y)
     },
-    label: m.default.Messages.FAVORITE_ITEM
+    label: p.default.Messages.FAVORITE_ITEM
   })
 }

@@ -4,13 +4,13 @@ s.r(t), s.d(t, {
     return n
   },
   useWhatsNewAvatarDecoRollout: function() {
-    return r
-  },
-  WhatsNewProfileFXRollout: function() {
     return l
   },
-  useWhatsNewProfileFXRollout: function() {
+  WhatsNewProfileFXRollout: function() {
     return i
+  },
+  useWhatsNewProfileFXRollout: function() {
+    return r
   }
 });
 var a = s("862205");
@@ -29,10 +29,10 @@ let n = (0, a.createExperiment)({
       }
     }]
   }),
-  r = () => n.useExperiment({
+  l = () => n.useExperiment({
     location: "experiment_hook"
   }),
-  l = (0, a.createExperiment)({
+  i = (0, a.createExperiment)({
     kind: "user",
     id: "2023-09_whats_new_drop_2_flip",
     label: "What's New Drop 2",
@@ -47,6 +47,6 @@ let n = (0, a.createExperiment)({
       }
     }]
   }),
-  i = () => l.useExperiment({
+  r = () => i.useExperiment({
     location: "experiment_hook"
   })

@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   PublishedBadge: function() {
-    return h
+    return S
   },
   DraftBadge: function() {
-    return _
+    return E
   }
 });
-var r = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("77078"),
-  u = n("449918"),
-  l = n("20606"),
+var r = n("77078"),
+  l = n("449918"),
+  u = n("20606"),
   o = n("832132"),
   s = n("952479"),
   a = n("49111"),
@@ -21,21 +21,21 @@ var i = n("77078"),
 function f(e) {
   let {
     label: t,
-    backgroundColor: n = l.default.BUTTON_SECONDARY_BACKGROUND,
-    icon: u,
+    backgroundColor: n = u.default.BUTTON_SECONDARY_BACKGROUND,
+    icon: l,
     iconColor: o
   } = e;
-  return (0, r.jsxs)("div", {
+  return (0, i.jsxs)("div", {
     className: c.badge,
     style: {
       backgroundColor: n
     },
-    children: [(0, r.jsx)(i.Text, {
+    children: [(0, i.jsx)(r.Text, {
       variant: "text-sm/normal",
       color: "always-white",
       className: c.badgeText,
       children: t
-    }), (0, r.jsx)(u, {
+    }), (0, i.jsx)(l, {
       className: c.badgeIcon,
       color: null != o ? o : "currentColor",
       "aria-hidden": !0
@@ -43,18 +43,18 @@ function f(e) {
   })
 }
 
-function h() {
-  return (0, r.jsx)(f, {
+function S() {
+  return (0, i.jsx)(f, {
     label: d.default.Messages.GUILD_PRODUCT_STATUS_BADGE_PUBLISHED,
     backgroundColor: "#207B8D",
     icon: s.default
   })
 }
 
-function _() {
-  return (0, r.jsx)(f, {
+function E() {
+  return (0, i.jsx)(f, {
     label: d.default.Messages.GUILD_PRODUCT_STATUS_BADGE_DRAFT,
     icon: o.default,
-    iconColor: (0, u.getColor)(a.Color.PRIMARY_330)
+    iconColor: (0, l.getColor)(a.Color.PRIMARY_330)
   })
 }

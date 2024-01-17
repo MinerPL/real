@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return p
   }
 }), n("222007"), n("808653");
 var a = n("37983"),
@@ -18,29 +18,29 @@ var a = n("37983"),
   M = n("49111"),
   m = n("143460"),
   g = n("782340"),
-  p = n("490291");
-let I = m.AutomodTriggerType.KEYWORD;
+  I = n("490291");
+let S = m.AutomodTriggerType.KEYWORD;
 
-function S(e, t) {
+function p(e, t) {
   let {
     perGuildMaxCount: n
-  } = r.triggerConfigs[I], {
+  } = r.triggerConfigs[S], {
     isLoading: m,
-    saveRule: S
+    saveRule: p
   } = (0, o.useAutomodEditingRuleActions)(), {
-    createNewEditingRule: v
-  } = (0, o.useAutomodEditingRuleState)(), [A, _] = i.useState(!1), [h, T] = (0, u.useSyncAutomodRules)(t), {
+    createNewEditingRule: _
+  } = (0, o.useAutomodEditingRuleState)(), [A, h] = i.useState(!1), [v, T] = (0, u.useSyncAutomodRules)(t), {
     rulesByTriggerType: C,
     updateRule: R
   } = (0, u.useAutomodRulesList)(t), O = i.useMemo(() => {
     var e;
-    return null !== (e = C[I]) && void 0 !== e ? e : []
-  }, [C]), x = 0 === O.length, N = n > O.length && !x, y = i.useMemo(() => (0, d.canCurrentUserManageMessageFilters)(t), [t]);
-  if (!y || null == e || 0 === e.length || null == t) return null;
+    return null !== (e = C[S]) && void 0 !== e ? e : []
+  }, [C]), y = 0 === O.length, x = n > O.length && !y, N = i.useMemo(() => (0, d.canCurrentUserManageMessageFilters)(t), [t]);
+  if (!N || null == e || 0 === e.length || null == t) return null;
   let b = e.split(" ").length,
-    j = () => {
+    D = () => {
       null != t && ((0, s.closeContextMenu)(), E.default.open(t, M.GuildSettingsSections.GUILD_AUTOMOD), setTimeout(() => {
-        v(t, I, {
+        _(t, S, {
           triggerMetadata: {
             keywordFilter: [e],
             regexPatterns: [],
@@ -49,7 +49,7 @@ function S(e, t) {
         })
       }, 400))
     },
-    D = async t => {
+    j = async t => {
       var n, a;
       (0, s.closeContextMenu)();
       let i = await (0, f.confirmAddKeyword)(t.name, e);
@@ -61,21 +61,21 @@ function S(e, t) {
           keywordFilter: [...null !== (a = null === (n = t.triggerMetadata) || void 0 === n ? void 0 : n.keywordFilter) && void 0 !== a ? a : [], e]
         }
       };
-      await S(l, O), R(l)
+      await p(l, O), R(l)
     }, G = (0, a.jsx)(a.Fragment, {
       children: (0, a.jsx)(l.MenuItem, {
         id: "automod-rules-loading",
         label: g.default.Messages.LOADING
       })
     });
-  return !h && (G = (0, a.jsxs)(a.Fragment, {
-    children: [x && (0, a.jsx)(l.MenuItem, {
+  return !v && (G = (0, a.jsxs)(a.Fragment, {
+    children: [y && (0, a.jsx)(l.MenuItem, {
       id: "add-first-rule",
       label: g.default.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_CREATE,
-      action: j,
+      action: D,
       disabled: m
     }), O.map(e => {
-      let t = (0, r.getAvailableActionTypes)(I).reduce((t, n) => {
+      let t = (0, r.getAvailableActionTypes)(S).reduce((t, n) => {
         let a = e.actions.find(e => {
           let {
             type: t
@@ -91,20 +91,20 @@ function S(e, t) {
         label: e.name,
         subtext: (0, a.jsx)(l.Text, {
           color: "text-muted",
-          className: p.actionTextHeader,
+          className: I.actionTextHeader,
           variant: "text-xs/normal",
           children: t.slice(2)
         }),
         group: "automod-rule-selection",
         checked: !1,
         disabled: m,
-        action: () => D(e)
+        action: () => j(e)
       }, e.id)
-    }), N && (0, a.jsxs)(a.Fragment, {
+    }), x && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(l.MenuSeparator, {}), (0, a.jsx)(l.MenuItem, {
         id: "add-another-rule",
         label: g.default.Messages.GUILD_AUTOMOD_ADD_NEW_RULE,
-        action: j,
+        action: D,
         disabled: m
       })]
     })]
@@ -114,7 +114,7 @@ function S(e, t) {
       keywordCount: b
     }),
     onFocus: () => {
-      !A && (_(!0), T())
+      !A && (h(!0), T())
     },
     children: G
   })

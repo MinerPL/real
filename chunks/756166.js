@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return l
   }
 });
-var l = n("884691"),
-  a = () => {
-    let e = l.useRef(!0);
-    l.useEffect(() => () => {
+var a = n("884691"),
+  l = () => {
+    let e = a.useRef(!0);
+    a.useEffect(() => () => {
       e.current = !1
     }, []);
-    let t = l.useCallback(() => e.current, []);
+    let t = a.useCallback(() => e.current, []);
     return t
   }

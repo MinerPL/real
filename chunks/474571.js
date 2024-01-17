@@ -4,38 +4,38 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("469563"),
+var l = n("469563"),
   r = n("197801"),
   a = n("75196"),
-  s = (0, i.replaceIcon)(function(e) {
+  s = (0, l.replaceIcon)(function(e) {
     let {
       width: t = 24,
       height: n = 24,
-      color: i = "currentColor",
+      color: l = "currentColor",
       foreground: r,
       ...s
     } = e;
-    return 16 === t || 16 === n ? (0, l.jsx)("svg", {
+    return 16 === t || 16 === n ? (0, i.jsx)("svg", {
       ...(0, a.default)(s),
       width: t,
       height: n,
       viewBox: "0 0 16 16",
-      children: (0, l.jsx)("path", {
-        fill: i,
+      children: (0, i.jsx)("path", {
+        fill: l,
         className: r,
         fillRule: "evenodd",
         clipRule: "evenodd",
         d: "M14 7V9C14 9 12.5867 9 12.5733 9.00667C12.42 9.58667 12.1733 10.1267 11.84 10.6067L12.74 11.5067L11.4933 12.7533L10.5933 11.8533C10.1133 12.1867 9.57334 12.44 8.99334 12.5867V14H6.99334V12.58C6.41334 12.4333 5.87334 12.18 5.39334 11.8467L4.49333 12.7467L3.24667 11.5L4.14667 10.6C3.81333 10.1267 3.56 9.58 3.41333 9H2V7H3.41333C3.56 6.42 3.81333 5.88 4.14667 5.4L3.24667 4.5L4.5 3.24667L5.4 4.14667C5.87334 3.81333 6.42 3.56 7 3.41333V2H9V3.41333C9.58 3.56667 10.12 3.81333 10.6 4.14667L11.5067 3.25333L12.7533 4.5L11.8533 5.4C12.1867 5.87334 12.44 6.42 12.5867 7H14ZM8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z"
       })
-    }) : (0, l.jsx)("svg", {
+    }) : (0, i.jsx)("svg", {
       ...(0, a.default)(s),
       width: t,
       height: n,
       viewBox: "0 0 24 24",
-      children: (0, l.jsx)("path", {
-        fill: i,
+      children: (0, i.jsx)("path", {
+        fill: l,
         className: r,
         fillRule: "evenodd",
         clipRule: "evenodd",

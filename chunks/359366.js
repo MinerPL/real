@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+u.r(e), u.d(e, {
   fetchGuildProductsForGuild: function() {
     return l
   },
@@ -7,62 +7,62 @@ n.r(t), n.d(t, {
     return o
   },
   updateGuildProductListing: function() {
-    return s
+    return c
   },
   deleteGuildProductListing: function() {
     return a
   }
 });
-var r = n("913144"),
-  i = n("448993"),
-  u = n("242278");
-let l = async e => {
+var r = u("913144"),
+  n = u("448993"),
+  i = u("242278");
+let l = async t => {
   r.default.dispatch({
     type: "GUILD_PRODUCTS_FETCH",
-    guildId: e
+    guildId: t
   });
   try {
-    let t = await u.getGuildProductListingsForGuild(e);
+    let e = await i.getGuildProductListingsForGuild(t);
     r.default.dispatch({
       type: "GUILD_PRODUCTS_FETCH_SUCCESS",
-      guildId: e,
-      products: t
+      guildId: t,
+      products: e
     })
-  } catch (t) {
+  } catch (e) {
     r.default.dispatch({
       type: "GUILD_PRODUCTS_FETCH_FAILURE",
-      guildId: e
+      guildId: t
     })
   }
-}, o = async (e, t) => {
+}, o = async (t, e) => {
   r.default.dispatch({
     type: "GUILD_PRODUCT_FETCH",
-    productId: t
+    productId: e
   });
   try {
-    let n = await u.getGuildProductListing(e, t);
+    let u = await i.getGuildProductListing(t, e);
     return r.default.dispatch({
       type: "GUILD_PRODUCT_FETCH_SUCCESS",
-      product: n
-    }), n
-  } catch (e) {
+      product: u
+    }), u
+  } catch (t) {
     throw r.default.dispatch({
       type: "GUILD_PRODUCT_FETCH_FAILURE",
-      productId: t,
-      error: new i.APIError(e)
-    }), e
+      productId: e,
+      error: new n.APIError(t)
+    }), t
   }
 };
-async function s(e, t, n) {
-  let i = await u.updateGuildProductListing(e, t, n);
+async function c(t, e, u) {
+  let n = await i.updateGuildProductListing(t, e, u);
   return r.default.dispatch({
     type: "GUILD_PRODUCT_UPDATE",
-    product: i
-  }), i
+    product: n
+  }), n
 }
-async function a(e, t) {
-  return await u.deleteGuildProductListing(e, t), r.default.dispatch({
+async function a(t, e) {
+  return await i.deleteGuildProductListing(t, e), r.default.dispatch({
     type: "GUILD_PRODUCT_DELETE",
-    productId: t
+    productId: e
   }), !0
 }

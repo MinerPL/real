@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("86678"),
-  l = n("958706");
+var l = n("86678"),
+  a = n("958706");
 
 function i(e) {
   let {
@@ -17,11 +17,11 @@ function i(e) {
     onSelectEmoji: r,
     messageId: o
   } = e;
-  return (0, a.jsx)(s.default, {
+  return (0, s.jsx)(l.default, {
     closePopout: n,
     channel: t,
     onSelectEmoji: r,
-    pickerIntention: l.EmojiIntention.REACTION,
+    pickerIntention: a.EmojiIntention.REACTION,
     analyticsOverride: i,
     messageId: o
   })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return m
   }
 });
 var s = n("37983"),
@@ -21,7 +21,7 @@ var s = n("37983"),
   h = n("782340"),
   N = n("926622");
 
-function m(e, t, n) {
+function T(e, t, n) {
   e.preventDefault(), E.default.track(_.AnalyticEvents.GUILD_TEMPLATE_APP_OPENED, {
     guild_template_code: t,
     guild_template_name: n.name,
@@ -33,7 +33,7 @@ function m(e, t, n) {
   u.default.openMobileApp(n.state === p.GuildTemplateStates.RESOLVED ? t : void 0, a)
 }
 
-function T(e) {
+function m(e) {
   let {
     code: t
   } = e, n = (0, l.useStateFromStores)([r.default], () => r.default.getGuildTemplate(t));
@@ -46,14 +46,14 @@ function T(e) {
       guildTemplate: n,
       tall: !0
     }), (0, s.jsx)(f.Button, {
-      onClick: e => m(e, t, n),
+      onClick: e => T(e, t, n),
       className: N.marginTop20,
       children: h.default.Messages.GUILD_TEMPLATE_OPEN
     })]
   }) : (0, s.jsx)(I.default, {
     text: h.default.Messages.GUILD_TEMPLATE_MOBILE_INVALID_ERROR,
     buttonCta: h.default.Messages.GUILD_TEMPLATE_MOBILE_INVALID_CTA,
-    onClick: e => m(e, t, n)
+    onClick: e => T(e, t, n)
   })
 }
 l.default.initialize()

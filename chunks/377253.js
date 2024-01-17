@@ -33,9 +33,9 @@ var m = n("432173"),
   O = n("697218"),
   b = n("49111");
 let P = new Set,
-  R = new u.default("MessageStore");
+  k = new u.default("MessageStore");
 
-function V() {
+function R() {
   o.default.forEach(e => {
     o.default.commit(e.mutate({
       ready: !1,
@@ -44,7 +44,7 @@ function V() {
   }), P.clear()
 }
 
-function k() {
+function V() {
   o.default.forEach(e => {
     e.forAll(e => {
       e.timestamp.locale(h.default.locale)
@@ -168,14 +168,14 @@ var x = new F(a.default, {
       if (null == n) continue;
       let s = n.cached || true;
       if (!s) {
-        R.log("Skipping background message sync for ".concat(e, " cached:").concat(n.cached, " ") + "ready:".concat(n.ready, " hasMoreAfter:").concat(n.hasMoreAfter, " ") + "isConnected:".concat(!1));
+        k.log("Skipping background message sync for ".concat(e, " cached:").concat(n.cached, " ") + "ready:".concat(n.ready, " hasMoreAfter:").concat(n.hasMoreAfter, " ") + "isConnected:".concat(!1));
         continue
       }
       n.mergeDelta(t[e].new_messages, t[e].modified_messages, t[e].deleted_message_ids)
     }
   },
-  CONNECTION_OPEN: V,
-  OVERLAY_INITIALIZE: V,
+  CONNECTION_OPEN: R,
+  OVERLAY_INITIALIZE: R,
   CACHE_LOADED: function(e) {
     for (let [t, n] of Object.entries(e.messages)) {
       let e = o.default.getOrCreate(t).addCachedMessages(n, !0);
@@ -246,7 +246,7 @@ var x = new F(a.default, {
       truncateBottom: n,
       truncateTop: s
     } = e;
-    R.log("Truncating messages for ".concat(t, " bottom:").concat(n, " top:").concat(s));
+    k.log("Truncating messages for ".concat(t, " bottom:").concat(n, " top:").concat(s));
     let i = o.default.getOrCreate(t);
     i = i.truncate(n, s), o.default.commit(i)
   },
@@ -254,7 +254,7 @@ var x = new F(a.default, {
     let {
       channelId: t
     } = e;
-    R.log("Clearing messages for ".concat(t)), o.default.clear(t), P.clear()
+    k.log("Clearing messages for ".concat(t)), o.default.clear(t), P.clear()
   },
   MESSAGE_CREATE: function(e) {
     let {
@@ -263,7 +263,7 @@ var x = new F(a.default, {
       isPushNotification: s
     } = e, i = o.default.getOrCreate(t);
     if (s) {
-      R.log("Inserting message tapped on from a push notification", n.id, n.channel_id), o.default.commit(i.receivePushNotification(n));
+      k.log("Inserting message tapped on from a push notification", n.id, n.channel_id), o.default.commit(i.receivePushNotification(n));
       return
     }
     if (!i.ready) return !1;
@@ -341,8 +341,8 @@ var x = new F(a.default, {
       revealedMessageId: n
     }))
   },
-  USER_SETTINGS_PROTO_UPDATE: k,
-  I18N_LOAD_SUCCESS: k,
+  USER_SETTINGS_PROTO_UPDATE: V,
+  I18N_LOAD_SUCCESS: V,
   THREAD_CREATE_LOCAL: function(e) {
     let {
       channelId: t

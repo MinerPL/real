@@ -33,16 +33,16 @@ let O = window.DiscordNative;
 (0, S.setDispatchSocketMessageFunction)(A.default);
 let b = new u.default("ConnectionStore"),
   P = 0,
-  R = null,
-  V = !0;
-async function k(e) {
-  P = Date.now(), R = e.sessionId, S.localPresenceState.handleConnectionOpen();
+  k = null,
+  R = !0;
+async function V(e) {
+  P = Date.now(), k = e.sessionId, S.localPresenceState.handleConnectionOpen();
   let t = {},
     n = p.default.getVoiceChannelId();
   if (null != n) {
     var s, i, r, a, d, u, l, f;
     let e = (null === (d = window) || void 0 === d ? void 0 : null === (a = d.performance) || void 0 === a ? void 0 : null === (r = a.getEntriesByType) || void 0 === r ? void 0 : null === (i = r.call(a, "navigation")) || void 0 === i ? void 0 : null === (s = i[0]) || void 0 === s ? void 0 : s.type) === "reload" || (null === (u = await (null == O ? void 0 : null === (f = O.processUtils) || void 0 === f ? void 0 : null === (l = f.getLastCrash) || void 0 === l ? void 0 : l.call(f))) || void 0 === u ? void 0 : u.rendererCrashReason) != null;
-    if (e || !V) {
+    if (e || !R) {
       let e = g.default.getChannel(n);
       null != e && (t = {
         guildId: e.getGuildId(),
@@ -50,7 +50,7 @@ async function k(e) {
       })
     } else v.default.setLastSessionVoiceChannelId(null != n ? n : null), o.default.selectVoiceChannel(null)
   }
-  S.localVoiceState.update(t, !0), S.localLobbyVoiceStates.update({}, !0), V = !1
+  S.localVoiceState.update(t, !0), S.localLobbyVoiceStates.update({}, !0), R = !1
 }
 
 function M() {
@@ -109,7 +109,7 @@ var x = new F(a.default, {
     return S.socket.close(), S.socket.clearDispatchQueue(), S.socket.connect(), !1
   },
   CONNECTION_OPEN: e => {
-    k(e)
+    V(e)
   },
   CONNECTION_CLOSED: function() {
     b.verbose("connection closed dispatched"), P = Date.now()
@@ -130,7 +130,7 @@ var x = new F(a.default, {
     } = e;
     return t.reduce((e, t) => {
       if (_.default.getId() !== t.userId) return e;
-      if (t.sessionId === R) S.localVoiceState.setState({
+      if (t.sessionId === k) S.localVoiceState.setState({
         guildId: t.guildId,
         channelId: t.channelId
       });

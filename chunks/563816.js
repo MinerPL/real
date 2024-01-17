@@ -47,7 +47,7 @@ var i = n("37983"),
         limit: f.CONTEXT_MENU_COMMANDS_QUERY_LIMIT
       }),
       {
-        sections: U
+        sections: v
       } = a.useMemo(() => {
         let e = {};
         return M.forEach(t => {
@@ -56,13 +56,13 @@ var i = n("37983"),
           sections: e
         }
       }, [M]),
-      v = a.useRef(D.current);
+      U = a.useRef(D.current);
     a.useEffect(() => {
-      D.current !== v.current && (v.current = D.current, null == A || A())
+      D.current !== U.current && (U.current = D.current, null == A || A())
     }, [D, A]);
     let R = a.useCallback(e => {
       r(null != p, "menu item should not show if channel is null");
-      let t = U[e.applicationId],
+      let t = v[e.applicationId],
         n = null != t ? (0, c.getIconComponent)(t) : void 0;
       return (0, i.jsx)(u.MenuItem, {
         id: e.id,
@@ -87,7 +87,7 @@ var i = n("37983"),
           })
         }
       }, e.id)
-    }, [p, C, l, U]);
+    }, [p, C, l, v]);
     return D.current ? t = (0, i.jsx)(u.MenuItem, {
       id: "menu-commands-placeholder",
       render: () => (0, i.jsx)(E.default, {}),

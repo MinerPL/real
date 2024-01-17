@@ -13,8 +13,8 @@ var a = n("37983"),
   u = n("77078"),
   d = n("49111"),
   c = n("782340"),
-  E = n("361473"),
-  f = n("173791"),
+  f = n("361473"),
+  E = n("173791"),
   _ = n("926622");
 class h extends s.PureComponent {
   async componentDidMount() {
@@ -42,7 +42,7 @@ class h extends s.PureComponent {
       password: i
     } = this.state;
     return (0, a.jsxs)("div", {
-      className: E.container,
+      className: f.container,
       children: [(0, a.jsx)(u.FormItem, {
         title: c.default.Messages.FORM_LABEL_EMAIL,
         className: _.marginBottom20,
@@ -78,7 +78,7 @@ class h extends s.PureComponent {
       canChange: e
     } = this.props;
     return (0, a.jsxs)("div", {
-      className: E.container,
+      className: f.container,
       children: [(0, a.jsx)(u.Button, {
         className: _.marginTop20,
         fullWidth: !0,
@@ -112,16 +112,16 @@ class h extends s.PureComponent {
     }) : s ? c.default.Messages.VERIFY_EMAIL_BODY : c.default.Messages.ENTER_EMAIL_BODY, (0, a.jsxs)(u.ModalRoot, {
       transitionState: i,
       "aria-labelledby": this._headerId,
-      className: l(E.emailVerificationModal, f.vertical, f.alignCenter, f.justifyCenter, _.marginTop60),
+      className: l(f.emailVerificationModal, E.vertical, E.alignCenter, E.justifyCenter, _.marginTop60),
       children: [(0, a.jsx)("div", {
-        className: E.animationContainer,
+        className: f.animationContainer,
         ref: this.setLottieRef
       }), (0, a.jsx)("div", {
         id: this._headerId,
-        className: l(E.title, _.marginBottom8),
+        className: l(f.title, _.marginBottom8),
         children: c.default.Messages.VERIFY_BY_EMAIL
       }), (0, a.jsx)("div", {
-        className: l(E.body, _.marginBottom20),
+        className: l(f.body, _.marginBottom20),
         children: e
       }), s ? this.renderActions() : this.renderInputs()]
     })

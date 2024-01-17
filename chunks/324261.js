@@ -38,7 +38,7 @@ function g(e) {
   return null === (t = d[e]) || void 0 === t ? void 0 : t.message
 }
 
-function _(e) {
+function h(e) {
   let {
     threads: t,
     mostRecentMessages: n
@@ -47,7 +47,7 @@ function _(e) {
     f(e.channel_id, e)
   })
 }
-class h extends l.default.Store {
+class _ extends l.default.Store {
   initialize() {
     this.waitFor(s.default, r.default)
   }
@@ -58,8 +58,8 @@ class h extends l.default.Store {
     }), d[e]
   }
 }
-h.displayName = "ForumPostRecentMessageStore";
-var p = new h(i.default, {
+_.displayName = "ForumPostRecentMessageStore";
+var p = new _(i.default, {
   CONNECTION_OPEN: function() {
     d = {}
   },
@@ -92,6 +92,6 @@ var p = new h(i.default, {
     } = e;
     for (let e in t) f(e, t[e].most_recent_message)
   },
-  LOAD_ARCHIVED_THREADS_SUCCESS: _,
-  LOAD_THREADS_SUCCESS: _
+  LOAD_ARCHIVED_THREADS_SUCCESS: h,
+  LOAD_THREADS_SUCCESS: h
 })

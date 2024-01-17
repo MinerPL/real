@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return c
   },
   getActivityWindowTimestampFormatter: function() {
-    return E
+    return f
   },
   formatUserActivityTimestamp: function() {
-    return f
+    return E
   },
   formatLinkTimestamp: function() {
     return _
@@ -19,7 +19,7 @@ n.r(t), n.d(t, {
     return C
   },
   displayTypeFromString: function() {
-    return T
+    return I
   }
 }), n("222007");
 var a = n("866227"),
@@ -35,7 +35,7 @@ let r = 3600,
     yesterday: l.default.Messages.FAMILY_CENTER_EMPTY_ACTIVITY_YESTERDAY,
     days: l.default.Messages.FAMILY_CENTER_EMPTY_ACTIVITY_DAYS
   }),
-  E = e => e ? {
+  f = e => e ? {
     today: l.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_DESCRIPTION_PARENT_TODAY,
     yesterday: l.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_DESCRIPTION_PARENT_YESTERDAY,
     days: l.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_DESCRIPTION_PARENT_DAYS
@@ -44,7 +44,7 @@ let r = 3600,
     yesterday: l.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_DESCRIPTION_TEEN_YESTERDAY,
     days: l.default.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_DESCRIPTION_TEEN_DAYS
   },
-  f = (e, t, n) => {
+  E = (e, t, n) => {
     let a = s().diff(s(e), "s"),
       i = t(),
       l = s(e).format("LL");
@@ -68,7 +68,7 @@ let r = 3600,
   },
   h = e => e.display_type === i.TeenActionDisplayType.USER_ADD || e.display_type === i.TeenActionDisplayType.USER_INTERACTION || e.display_type === i.TeenActionDisplayType.USER_CALLED,
   C = e => e.display_type === i.TeenActionDisplayType.GUILD_ADD || e.display_type === i.TeenActionDisplayType.GUILD_INTERACTION,
-  T = e => {
+  I = e => {
     let t = Object.values(i.TeenActionDisplayType);
     for (let n of t)
       if (n.toString() === e) return n

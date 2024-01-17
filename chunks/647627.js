@@ -14,7 +14,7 @@ var a = n("917351"),
   d = n("49111");
 let c = "selectedChannelGuildFrecency";
 
-function E(e) {
+function f(e) {
   var t;
   let n;
   (t = n || (n = {})).IMAGE = "IMAGE", t.VIDEO = "VIDEO";
@@ -38,10 +38,10 @@ function E(e) {
     }
   })
 }
-let f = [{
+let E = [{
   version: 2,
   run(e) {
-    let t = E(1);
+    let t = f(1);
     if (0 === t.length) return !1;
     for (let {
         url: n,
@@ -89,7 +89,7 @@ let f = [{
   version: 6,
   run(e) {
     null == e.favoriteGifs && (e.favoriteGifs = l.FavoriteGIFs.create()), null == e.favoriteGifs.gifs && (e.favoriteGifs.gifs = {});
-    let t = E(1);
+    let t = f(1);
     if (0 === t.length) return !1;
     s(e.favoriteGifs.gifs).values().sortBy("order").forEach((e, n) => e.order = t.length + 1 + n);
     let n = l.FavoriteGIFs.toBinary(e.favoriteGifs).length,
@@ -159,4 +159,4 @@ let f = [{
     r.default.remove(c)
   }
 }];
-var _ = f
+var _ = E

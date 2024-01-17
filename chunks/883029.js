@@ -1,57 +1,57 @@
 "use strict";
 n.r(t), n.d(t, {
   getDescriptiveInviteError: function() {
-    return o
+    return a
   },
   getInviteError: function() {
-    return u
+    return s
   }
 });
-var a = n("697218"),
-  s = n("701909"),
+var r = n("697218"),
+  i = n("701909"),
   l = n("719923"),
-  i = n("49111"),
-  r = n("782340");
+  o = n("49111"),
+  u = n("782340");
 
-function o(e) {
+function a(e) {
   switch (e) {
-    case i.AbortCodes.TOO_MANY_USER_GUILDS:
-      let t = a.default.getCurrentUser(),
+    case o.AbortCodes.TOO_MANY_USER_GUILDS:
+      let t = r.default.getCurrentUser(),
         n = l.default.canUseIncreasedGuildCap(t) || (null == t ? void 0 : t.isStaff()),
-        s = n ? i.MAX_USER_GUILDS_PREMIUM : i.MAX_USER_GUILDS;
+        i = n ? o.MAX_USER_GUILDS_PREMIUM : o.MAX_USER_GUILDS;
       return {
-        title: r.default.Messages.TOO_MANY_USER_GUILDS_TITLE_2.format({
-          quantity: s
-        }), description: r.default.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION
+        title: u.default.Messages.TOO_MANY_USER_GUILDS_TITLE_2.format({
+          quantity: i
+        }), description: u.default.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION
       };
-    case i.AbortCodes.GUILD_AT_CAPACITY:
+    case o.AbortCodes.GUILD_AT_CAPACITY:
       return {
-        title: r.default.Messages.SERVER_IS_CURRENTLY_FULL, description: r.default.Messages.PLEASE_TRY_AGAIN_LATER
+        title: u.default.Messages.SERVER_IS_CURRENTLY_FULL, description: u.default.Messages.PLEASE_TRY_AGAIN_LATER
       };
-    case i.AbortCodes.GUILD_JOIN_INVITE_LIMITED_ACCESS:
+    case o.AbortCodes.GUILD_JOIN_INVITE_LIMITED_ACCESS:
       return {
-        title: r.default.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_HEADING, description: r.default.Messages.PLEASE_TRY_AGAIN_LATER
+        title: u.default.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_HEADING, description: u.default.Messages.PLEASE_TRY_AGAIN_LATER
       };
     default:
       return null
   }
 }
 
-function u(e) {
+function s(e) {
   switch (e) {
-    case i.AbortCodes.TOO_MANY_USER_GUILDS:
-      return r.default.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION;
-    case i.AbortCodes.GUILD_AT_CAPACITY:
-      return r.default.Messages.MAX_GUILD_MEMBERS_REACHED_ERROR;
-    case i.AbortCodes.INVALID_COUNTRY_CODE:
-      return r.default.Messages.INVALID_COUNTRY_CODE;
-    case i.AbortCodes.INVALID_CANNOT_FRIEND_SELF:
-      return r.default.Messages.INVALID_CANNOT_FRIEND_SELF;
-    case i.AbortCodes.INVITES_DISABLED:
-      return r.default.Messages.INVITES_DISABLED_MODAL_DESCRIPTION.format({
-        articleLink: s.default.getArticleURL(i.HelpdeskArticles.INVITE_DISABLED)
+    case o.AbortCodes.TOO_MANY_USER_GUILDS:
+      return u.default.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION;
+    case o.AbortCodes.GUILD_AT_CAPACITY:
+      return u.default.Messages.MAX_GUILD_MEMBERS_REACHED_ERROR;
+    case o.AbortCodes.INVALID_COUNTRY_CODE:
+      return u.default.Messages.INVALID_COUNTRY_CODE;
+    case o.AbortCodes.INVALID_CANNOT_FRIEND_SELF:
+      return u.default.Messages.INVALID_CANNOT_FRIEND_SELF;
+    case o.AbortCodes.INVITES_DISABLED:
+      return u.default.Messages.INVITES_DISABLED_MODAL_DESCRIPTION.format({
+        articleLink: i.default.getArticleURL(o.HelpdeskArticles.INVITE_DISABLED)
       });
     default:
-      return r.default.Messages.INVITE_MODAL_ERROR_DEFAULT
+      return u.default.Messages.INVITE_MODAL_ERROR_DEFAULT
   }
 }

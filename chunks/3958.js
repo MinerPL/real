@@ -1,31 +1,31 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   RecordModes: function() {
-    return s
+    return n
   },
   default: function() {
-    return D
+    return T
   }
-}), n("222007");
-var s, i, a = n("37983"),
-  u = n("884691"),
-  o = n("414456"),
-  d = n.n(o),
-  r = n("800648"),
-  l = n.n(r),
-  c = n("917351"),
-  p = n.n(c),
-  f = n("77078"),
-  _ = n("13798"),
-  m = n("145131"),
-  h = n("782340"),
-  E = n("523192");
-(i = s || (s = {})).DEFAULT = "DEFAULT", i.RECORDING = "RECORDING";
-let g = {
+}), s("222007");
+var n, l, i = s("37983"),
+  a = s("884691"),
+  o = s("414456"),
+  r = s.n(o),
+  d = s("800648"),
+  u = s.n(d),
+  c = s("917351"),
+  h = s.n(c),
+  m = s("77078"),
+  p = s("13798"),
+  f = s("145131"),
+  g = s("782340"),
+  E = s("523192");
+(l = n || (n = {})).DEFAULT = "DEFAULT", l.RECORDING = "RECORDING";
+let _ = {
   DEFAULT: E.default,
   RECORDING: E.recording
 };
-class S extends u.PureComponent {
+class R extends a.PureComponent {
   componentWillUnmount() {
     null != this._unregisterNativeRecorder && this._unregisterNativeRecorder()
   }
@@ -33,69 +33,69 @@ class S extends u.PureComponent {
     let {
       mode: t
     } = this.props, {
-      mode: n
+      mode: s
     } = e;
-    if (n === t) return;
+    if (s === t) return;
     let {
-      _inputRef: s
+      _inputRef: n
     } = this;
-    if (null == s.current) return;
+    if (null == n.current) return;
     let {
-      activeElement: i
+      activeElement: l
     } = document;
-    "DEFAULT" === t && s.current === i && s.current.blur(), "RECORDING" === t && s.current !== i && s.current.focus()
+    "DEFAULT" === t && n.current === l && n.current.blur(), "RECORDING" === t && n.current !== l && n.current.focus()
   }
   render() {
     let e;
     let {
       mode: t,
-      value: n,
-      disabled: s
-    } = this.props, i = (0, _.toString)(n, !0);
-    e = "RECORDING" === t ? h.default.Messages.SHORTCUT_RECORDER_BUTTON_RECORDING : 0 === n.length ? h.default.Messages.SHORTCUT_RECORDER_BUTTON : h.default.Messages.SHORTCUT_RECORDER_BUTTON_EDIT;
-    let u = "DEFAULT" === t && n.length > 0;
-    return (0, a.jsx)(f.FocusRing, {
+      value: s,
+      disabled: n
+    } = this.props, l = (0, p.toString)(s, !0);
+    e = "RECORDING" === t ? g.default.Messages.SHORTCUT_RECORDER_BUTTON_RECORDING : 0 === s.length ? g.default.Messages.SHORTCUT_RECORDER_BUTTON : g.default.Messages.SHORTCUT_RECORDER_BUTTON_EDIT;
+    let a = "DEFAULT" === t && s.length > 0;
+    return (0, i.jsx)(m.FocusRing, {
       focusTarget: this._inputRef,
       ringTarget: this._containerRef,
-      children: (0, a.jsx)("div", {
+      children: (0, i.jsx)("div", {
         onClick: this.handleClick,
         onMouseDown: this.handleMouseDown,
         ref: this._containerRef,
-        className: d(E.container, g[t], {
-          [E.hasValue]: u,
-          [E.disabled]: s
+        className: r(E.container, _[t], {
+          [E.hasValue]: a,
+          [E.disabled]: n
         }),
-        children: (0, a.jsxs)(m.default, {
+        children: (0, i.jsxs)(f.default, {
           className: E.layout,
-          children: [(0, a.jsx)(m.default.Child, {
+          children: [(0, i.jsx)(f.default.Child, {
             className: E.input,
-            children: (0, a.jsx)("input", {
+            children: (0, i.jsx)("input", {
               id: this._inputId,
-              placeholder: h.default.Messages.SHORTCUT_RECORDER_NO_BIND,
+              placeholder: g.default.Messages.SHORTCUT_RECORDER_NO_BIND,
               type: "text",
               ref: this.setInputRef,
               readOnly: !0,
-              value: i,
-              disabled: "RECORDING" !== this.props.mode || s
+              value: l,
+              disabled: "RECORDING" !== this.props.mode || n
             })
-          }), (0, a.jsx)(m.default, {
+          }), (0, i.jsx)(f.default, {
             shrink: 1,
             grow: 0,
             style: {
               margin: 0
             },
-            children: (0, a.jsxs)(f.Button, {
+            children: (0, i.jsxs)(m.Button, {
               className: E.button,
-              disabled: s,
+              disabled: n,
               onClick: e => {
                 e.stopPropagation(), e.preventDefault(), this.handleClick(e)
               },
-              size: f.Button.Sizes.MIN,
-              color: f.ButtonColors.PRIMARY,
-              children: [(0, a.jsx)("span", {
+              size: m.Button.Sizes.MIN,
+              color: m.ButtonColors.PRIMARY,
+              children: [(0, i.jsx)("span", {
                 className: E.text,
                 children: e
-              }), (0, a.jsx)("span", {
+              }), (0, i.jsx)("span", {
                 className: E.editIcon
               })]
             })
@@ -105,29 +105,29 @@ class S extends u.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), this._inputId = p.uniqueId("key-recorder-"), this._unregisterNativeRecorder = null, this._mousedownMode = null, this._inputRef = u.createRef(), this._containerRef = u.createRef(), this.setInputRef = e => {
+    super(...e), this._inputId = h.uniqueId("key-recorder-"), this._unregisterNativeRecorder = null, this._mousedownMode = null, this._inputRef = a.createRef(), this._containerRef = a.createRef(), this.setInputRef = e => {
       var t;
       let {
-        registerNativeRecorder: n,
-        onChange: s
+        registerNativeRecorder: s,
+        onChange: n
       } = this.props;
       if (this._inputRef.current = e, null === (t = this._unregisterNativeRecorder) || void 0 === t || t.call(this), null != e) {
-        if (null != n && null != s) this._unregisterNativeRecorder = n(e.id, s);
-        else if (null != s) {
-          let t = new l(e);
-          t.handleKey = s
+        if (null != s && null != n) this._unregisterNativeRecorder = s(e.id, n);
+        else if (null != n) {
+          let t = new u(e);
+          t.handleKey = n
         }
       }
     }, this.handleClick = e => {
       e.stopPropagation(), e.preventDefault();
       let {
         onClick: t,
-        disableOnClickWhileRecording: n
+        disableOnClickWhileRecording: s
       } = this.props;
-      (!n || "RECORDING" !== this._mousedownMode) && t()
+      (!s || "RECORDING" !== this._mousedownMode) && t()
     }, this.handleMouseDown = () => {
       this._mousedownMode = this.props.mode
     }
   }
 }
-var D = S
+var T = R

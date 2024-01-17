@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return c
   },
   send: function() {
-    return E
+    return f
   },
   search: function() {
-    return f
+    return E
   },
   voiceConnect: function() {
     return _
@@ -103,7 +103,7 @@ function c(e) {
   }).then(i.NOOP)
 }
 
-function E(e, t) {
+function f(e, t) {
   return a.default.post({
     url: i.Endpoints.LOBBY_SEND(e),
     body: {
@@ -113,7 +113,7 @@ function E(e, t) {
   }).then(i.NOOP)
 }
 
-function f(e) {
+function E(e) {
   return a.default.post({
     url: i.Endpoints.LOBBY_SEARCH,
     body: e,

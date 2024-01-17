@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   WELCOME_STICKERS: function() {
-    return a
+    return s
   }
 });
-let a = [{
+let s = [{
   id: "749054660769218631",
   format_type: 3,
   description: "Wumpus waves hello",

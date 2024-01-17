@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("574073"),
-  l = n("304198"),
+var l = n("574073"),
+  a = n("304198"),
   i = n("782340");
 
 function r(e) {
@@ -19,23 +19,23 @@ function r(e) {
       compact: c,
       channel: f
     } = e,
-    m = (0, s.default)(r),
-    E = m.nick,
-    _ = o(m),
-    h = (0, s.useNullableUserAuthor)(u, f);
-  if (null != h && null != d) {
-    let e = d(h);
+    E = (0, l.default)(r),
+    _ = E.nick,
+    T = o(E),
+    I = (0, l.useNullableUserAuthor)(u, f);
+  if (null != I && null != d) {
+    let e = d(I);
     t = i.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_HOOK.format({
-      username: E,
-      usernameHook: _,
-      otherUsername: h.nick,
+      username: _,
+      usernameHook: T,
+      otherUsername: I.nick,
       otherUsernameHook: e
     })
   } else t = i.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF_HOOK.format({
-    username: E,
-    usernameHook: _
+    username: _,
+    usernameHook: T
   });
-  return (0, a.jsx)(l.default, {
+  return (0, s.jsx)(a.default, {
     icon: n("226315"),
     timestamp: r.timestamp,
     compact: c,

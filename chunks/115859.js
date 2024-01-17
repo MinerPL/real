@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("849197"),
-  l = n("723931");
+var l = n("849197"),
+  a = n("723931");
 
 function i(e) {
   let {
@@ -25,14 +25,14 @@ function i(e) {
     isAutomodBlockedMessage: d,
     renderThreadAccessory: c,
     renderComponentAccessory: f,
-    renderSuppressEmbeds: m,
-    forceAddReactions: E,
-    className: _
+    renderSuppressEmbeds: E,
+    forceAddReactions: _,
+    className: T
   } = e;
-  return d ? null : (0, a.jsx)(s.default, {
+  return d ? null : (0, s.jsx)(l.default, {
     message: t,
-    children: (0, a.jsx)(l.default, {
-      className: _,
+    children: (0, s.jsx)(a.default, {
+      className: T,
       isInteracting: u,
       message: t,
       channel: n,
@@ -41,8 +41,8 @@ function i(e) {
       onAttachmentContextMenu: o,
       renderThreadAccessory: c,
       renderComponentAccessory: f,
-      renderSuppressEmbeds: m,
-      forceAddReactions: E
+      renderSuppressEmbeds: E,
+      forceAddReactions: _
     })
   })
 }
@@ -50,15 +50,15 @@ function i(e) {
 function r(e, t) {
   let {
     message: n,
-    channel: s,
+    channel: l,
     compact: i = !1,
     renderThreadAccessory: r,
     disableReactionCreates: o,
     disableReactionUpdates: u
   } = e;
-  return (0, a.jsx)(l.SimpleMessageAccessories, {
+  return (0, s.jsx)(a.SimpleMessageAccessories, {
     message: n,
-    channel: s,
+    channel: l,
     compact: i,
     hasSpoilerEmbeds: t,
     renderThreadAccessory: r,

@@ -8,8 +8,8 @@ var a = n("446674"),
   s = n("913144"),
   i = n("718517");
 let r = [],
-  u = new Set,
-  l = 0;
+  l = new Set,
+  u = 0;
 class d extends a.default.Store {
   initialize() {
     setInterval(() => {
@@ -27,10 +27,10 @@ class d extends a.default.Store {
     return r.filter(e => null == e.dueAt || new Date > e.dueAt).length
   }
   recentlyFetched() {
-    return new Date().getTime() - l < 1 * i.default.Millis.MINUTE
+    return new Date().getTime() - u < 1 * i.default.Millis.MINUTE
   }
   hasSentNotification(e) {
-    return u.has(e)
+    return l.has(e)
   }
   getState() {
     return {
@@ -44,11 +44,11 @@ var c = new d(s.default, {
     let {
       messages: t
     } = e;
-    l = new Date().getTime(), r = t.map(e => ({
+    u = new Date().getTime(), r = t.map(e => ({
       ...e,
       complete: !1
     })), t.forEach(e => {
-      null != e.dueAt && e.dueAt > new Date && u.delete(e.messageId), null != e.dueAt && e.dueAt < new Date && u.add(e.messageId)
+      null != e.dueAt && e.dueAt > new Date && l.delete(e.messageId), null != e.dueAt && e.dueAt < new Date && l.add(e.messageId)
     })
   },
   MESSAGE_REMINDER_TOGGLE: function(e) {
@@ -66,6 +66,6 @@ var c = new d(s.default, {
     let {
       messageId: t
     } = e;
-    u.add(t)
+    l.add(t)
   }
 })

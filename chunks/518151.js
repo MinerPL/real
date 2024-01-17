@@ -17,8 +17,8 @@ var s = n("849266"),
   u = n("812204"),
   d = n("685665"),
   c = n("10641"),
-  E = n("286235"),
-  f = n("516129"),
+  f = n("286235"),
+  E = n("516129"),
   _ = n("702542");
 
 function h(e) {
@@ -39,7 +39,7 @@ function C(e) {
     analyticsLocations: i
   } = (0, d.default)(u.default.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL), c = (0, o.default)(), h = (0, l.isThemeLight)(c);
   if ("announcementModalVariant1" === n.properties.oneofKind) {
-    let e = (0, f.adaptAnnouncementModalVariant1)({
+    let e = (0, E.adaptAnnouncementModalVariant1)({
       content: n.properties.announcementModalVariant1,
       renderModalProps: t,
       analyticsLocations: i,
@@ -50,5 +50,5 @@ function C(e) {
       ...e
     })
   }
-  return E.default.captureMessage("Property type ".concat(n.properties.oneofKind, " is not supported to render ServerDriveAnnouncementModal")), null
+  return f.default.captureMessage("Property type ".concat(n.properties.oneofKind, " is not supported to render ServerDriveAnnouncementModal")), null
 }

@@ -7,9 +7,9 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var n = s("414456"),
-  r = s.n(n),
-  l = s("446674"),
-  i = s("77078"),
+  l = s.n(n),
+  i = s("446674"),
+  r = s("77078"),
   u = s("915639"),
   o = s("521012"),
   d = s("909469"),
@@ -23,12 +23,12 @@ var n = s("414456"),
     let {
       localizedPricingPromo: t,
       smallGap: s
-    } = e, n = t.countryCode, S = (0, l.useStateFromStores)([u.default], () => u.default.locale);
+    } = e, n = t.countryCode, S = (0, i.useStateFromStores)([u.default], () => u.default.locale);
     (0, c.useTrackLocalizedPricingPromoImpression)(T.AnalyticsSections.SETTINGS_PREMIUM_BANNER, n);
-    let R = (0, l.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription()),
+    let R = (0, i.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription()),
       {
-        localizedPricingBannerHeader: p,
-        localizedPricingBannerBody: m
+        localizedPricingBannerHeader: m,
+        localizedPricingBannerBody: p
       } = (0, d.getLocalizedPricingBannerStrings)({
         localizedPricingPromo: t,
         subscription: R,
@@ -36,23 +36,23 @@ var n = s("414456"),
       }),
       N = n.toLowerCase() + "Banner";
     return (0, a.jsxs)("div", {
-      className: r(f.bannerContainer, {
+      className: l(f.bannerContainer, {
         [f.smallGap]: s,
         [f.bigGap]: !s
       }),
       children: [(0, a.jsx)("div", {
-        className: r(f[N], f.bannerImageContainer)
-      }), (0, a.jsx)(i.Heading, {
+        className: l(f[N], f.bannerImageContainer)
+      }), (0, a.jsx)(r.Heading, {
         className: f.bannerHeading,
         variant: "heading-xl/semibold",
-        children: p
+        children: m
       }), (0, a.jsx)("div", {
         className: f.textContainer,
-        children: (0, a.jsx)(i.Text, {
+        children: (0, a.jsx)(r.Text, {
           color: "none",
           variant: "text-md/normal",
           className: f.bannerBody,
-          children: m
+          children: p
         })
       }), (0, a.jsxs)("div", {
         className: f.ctaButtonContainer,

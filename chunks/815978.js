@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("77078"),
+var l = n("77078"),
   s = n("957825"),
   i = n("547772"),
   r = n("211248"),
@@ -18,16 +18,16 @@ function c(e) {
   let {
     channel: t
   } = e;
-  return (0, l.jsx)(a.Popout, {
+  return (0, a.jsx)(l.Popout, {
     align: "right",
-    animation: a.Popout.Animation.NONE,
+    animation: l.Popout.Animation.NONE,
     position: "bottom",
-    renderPopout: e => t.isThread() ? (0, l.jsx)(i.default, {
+    renderPopout: e => t.isThread() ? (0, a.jsx)(i.default, {
       ...e,
       channel: t,
       navId: "recents-thread-notifications",
       label: d.default.Messages.RECENTS_NOTIFICATIONS_MENU_LABEL
-    }) : (0, l.jsx)(s.default, {
+    }) : (0, a.jsx)(s.default, {
       ...e,
       channel: t,
       navId: "recents-notifications",
@@ -41,10 +41,10 @@ function c(e) {
       let {
         onClick: t
       } = e;
-      return (0, l.jsx)(r.default, {
+      return (0, a.jsx)(r.default, {
         tooltip: d.default.Messages.NOTIFICATION_SETTINGS,
         color: r.CircleIconButtonColors.TERTIARY,
-        icon: (0, l.jsx)(o.default, {
+        icon: (0, a.jsx)(o.default, {
           width: 16,
           height: 16
         }),

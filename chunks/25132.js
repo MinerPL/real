@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return c
   },
   useHasMaxConnections: function() {
-    return E
+    return f
   },
   usePendingRequestCount: function() {
-    return f
+    return E
   },
   useAcceptedRequestsCount: function() {
     return _
@@ -46,14 +46,14 @@ function c() {
   return null == e || null == t ? null : (0, u.FAMILY_CENTER_REQUEST_QR_CODE_URL)(t.id, e)
 }
 
-function E() {
+function f() {
   let e = (0, o.default)(),
     t = d(u.UserLinkStatus.ACTIVE),
     n = e ? u.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : u.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS;
   return t.length >= n
 }
 
-function f() {
+function E() {
   let e = (0, a.default)([s.default], () => s.default.getCurrentUser()),
     t = (0, a.default)([i.default], () => i.default.getLinkedUsers());
   if (null == e) return 0;

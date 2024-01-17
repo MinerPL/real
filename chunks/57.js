@@ -18,18 +18,18 @@ var s = n("65597"),
       userId: t,
       timestamp: n,
       timestampFormatter: c
-    } = e, E = (0, s.default)([l.default], () => l.default.getUser(t));
-    return void 0 === E ? null : (0, a.jsxs)("div", {
+    } = e, f = (0, s.default)([l.default], () => l.default.getUser(t));
+    return void 0 === f ? null : (0, a.jsxs)("div", {
       className: d.container,
       children: [(0, a.jsx)(u.FamilyCenterAvatar, {
-        user: E,
+        user: f,
         avatarSize: i.AvatarSizes.SIZE_40
       }), (0, a.jsx)("div", {
         children: (0, a.jsxs)("div", {
           className: d.descriptors,
           children: [(0, a.jsx)(i.Text, {
             variant: "text-md/semibold",
-            children: r.default.getName(E)
+            children: r.default.getName(f)
           }), (0, a.jsx)(i.Text, {
             variant: "text-xs/medium",
             color: "text-muted",

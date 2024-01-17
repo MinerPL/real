@@ -13,8 +13,8 @@ var a = n("37983"),
   u = n("384997"),
   d = n("131143"),
   c = n("162771"),
-  E = n("120363"),
-  f = n("994428"),
+  f = n("120363"),
+  E = n("994428"),
   _ = n("326185");
 let h = s.memo(function(e) {
   var t, n, i;
@@ -23,19 +23,19 @@ let h = s.memo(function(e) {
     markAsDismissed: u
   } = e, {
     name: c,
-    guildId: E,
-    boundingRect: f
+    guildId: f,
+    boundingRect: E
   } = r, h = s.useMemo(() => (function(e, t, n) {
     if (e === o.DismissibleContent.RECURRING_EVENT_COACHMARK) return (0, a.jsx)(d.default, {
       guildId: t,
       markAsDismissed: n
     });
     return null
-  })(c, E, u), [c, E, u]);
+  })(c, f, u), [c, f, u]);
   if (null == h) return null;
   return (0, a.jsx)("div", {
-    className: l(_.upsell, !(null != (t = f) && !(t.y < 0)) && _.hidden),
-    style: (n = 0, null == (i = f) ? {} : {
+    className: l(_.upsell, !(null != (t = E) && !(t.y < 0)) && _.hidden),
+    style: (n = 0, null == (i = E) ? {} : {
       top: i.top,
       left: i.right - i.x
     }),
@@ -45,7 +45,7 @@ let h = s.memo(function(e) {
 
 function C() {
   let e = (0, r.default)([c.default], () => c.default.getGuildId()),
-    t = (0, E.useChannelListUpsells)(e),
+    t = (0, f.useChannelListUpsells)(e),
     [n, s] = (0, u.useSelectedDismissibleContent)(Object.values(t).filter(e => {
       let {
         disabled: t
@@ -56,7 +56,7 @@ function C() {
         name: t
       } = e;
       return t
-    }), f.DismissibleContentGroupName.SIDEBAR);
+    }), E.DismissibleContentGroupName.SIDEBAR);
   if (null == n) return null;
   let i = t[n];
   return null == i ? null : (0, a.jsx)("div", {

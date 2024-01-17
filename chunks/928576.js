@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+u.r(e), u.d(e, {
   useProductType: function() {
     return l
   },
@@ -7,28 +7,28 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var r = n("884691"),
-  i = n("153160"),
-  u = n("782340");
+var r = u("884691"),
+  n = u("153160"),
+  i = u("782340");
 
-function l(e) {
+function l(t) {
   return r.useMemo(() => {
-    if (null == e) return;
-    let t = null != e.role_id,
-      n = e.attachments_count > 0;
-    if (t && n) return u.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE;
-    if (t) return u.default.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE;
-    if (n) return u.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE
-  }, [e])
+    if (null == t) return;
+    let e = null != t.role_id,
+      u = t.attachments_count > 0;
+    if (e && u) return i.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE;
+    if (e) return i.default.Messages.GUILD_PRODUCT_CARD_TYPE_ROLE;
+    if (u) return i.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE
+  }, [t])
 }
 
-function o(e) {
+function o(t) {
   return r.useMemo(() => {
-    if ((null == e ? void 0 : e.price) == null) return;
+    if ((null == t ? void 0 : t.price) == null) return;
     let {
-      amount: t,
-      currency: n
-    } = e.price;
-    return (0, i.formatPrice)(t, n)
-  }, [e])
+      amount: e,
+      currency: u
+    } = t.price;
+    return (0, n.formatPrice)(e, u)
+  }, [t])
 }

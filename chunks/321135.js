@@ -4,31 +4,31 @@ n.r(t), n.d(t, {
     return f
   }
 }), n("222007");
-var i = n("37983");
+var a = n("37983");
 n("884691");
 var l = n("446674"),
-  u = n("77078"),
-  o = n("168973"),
-  a = n("301603"),
-  r = n("632616"),
-  d = n("535348"),
-  s = n("353927"),
+  s = n("77078"),
+  i = n("168973"),
+  r = n("301603"),
+  o = n("632616"),
+  u = n("535348"),
+  d = n("353927"),
   c = n("782340");
 
 function f(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.MediaEngineContextTypes.DEFAULT,
-    [n, f, E] = (0, a.default)(e, t),
-    _ = (0, l.useStateFromStores)([o.default], () => o.default.disableHideSelfStreamAndVideoConfirmationAlert);
-  return n ? (0, i.jsx)(u.MenuCheckboxItem, {
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.MediaEngineContextTypes.DEFAULT,
+    [n, f, h] = (0, r.default)(e, t),
+    p = (0, l.useStateFromStores)([i.default], () => i.default.disableHideSelfStreamAndVideoConfirmationAlert);
+  return n ? (0, a.jsx)(s.MenuCheckboxItem, {
     id: "self-video-hide",
     label: c.default.Messages.SHOW_SELF_VIDEO,
     checked: !f,
     action: () => {
-      if (_ || f) return E(!f);
-      (0, u.openModal)(e => (0, i.jsx)(r.default, {
+      if (p || f) return h(!f);
+      (0, s.openModal)(e => (0, a.jsx)(o.default, {
         ...e,
-        type: d.SelfStreamAndVideoAlertType.VIDEO,
-        onConfirm: () => E(!f)
+        type: u.SelfStreamAndVideoAlertType.VIDEO,
+        onConfirm: () => h(!f)
       }))
     }
   }) : null

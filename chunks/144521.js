@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 });
 var a = n("37983"),
@@ -13,19 +13,19 @@ var a = n("37983"),
   u = n("945330"),
   d = n("599110"),
   c = n("371449"),
-  E = n("224978"),
-  f = n("559541"),
+  f = n("224978"),
+  E = n("559541"),
   _ = n("49111"),
   h = n("782340"),
   C = n("858401");
 
-function T(e) {
+function I(e) {
   let {
     user: t,
     nickname: n,
-    status: T,
-    isFocused: I
-  } = e, S = s.useContext(d.AnalyticsContext), N = e => {
+    status: I,
+    isFocused: T
+  } = e, S = s.useContext(d.AnalyticsContext), m = e => {
     null == e || e.stopPropagation(), i.default.addRelationship({
       userId: t.id,
       context: {
@@ -35,11 +35,11 @@ function T(e) {
       friendToken: void 0,
       fromFriendSuggestion: !0
     })
-  }, A = e => {
+  }, p = e => {
     null == e || e.stopPropagation(), l.default.ignore(t.id)
-  }, p = T === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : T;
-  return (0, a.jsx)(E.default, {
-    isFocused: I,
+  }, A = I === _.StatusTypes.OFFLINE ? _.StatusTypes.UNKNOWN : I;
+  return (0, a.jsx)(f.default, {
+    isFocused: T,
     user: t,
     onClick: () => (0, r.openUserProfileModal)({
       userId: t.id,
@@ -51,22 +51,22 @@ function T(e) {
           icon: o.default,
           actionType: c.default.ActionTypes.ACCEPT,
           tooltip: h.default.Messages.FRIEND_REQUEST_ACCEPT,
-          onClick: N,
+          onClick: m,
           shouldHighlight: e
         }), (0, a.jsx)(c.default, {
           icon: u.default,
           actionType: c.default.ActionTypes.DENY,
           tooltip: h.default.Messages.FRIEND_REQUEST_IGNORE,
-          onClick: A,
+          onClick: p,
           shouldHighlight: e
         })]
       });
       return (0, a.jsxs)("div", {
         className: C.listItemContents,
-        children: [(0, a.jsx)(f.default, {
+        children: [(0, a.jsx)(E.default, {
           user: t,
           hovered: e,
-          status: p,
+          status: A,
           subText: n,
           className: C.userInfo
         }), (0, a.jsx)("div", {

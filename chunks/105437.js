@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return m
   }
 }), n("222007");
 var a = n("884691"),
@@ -13,16 +13,16 @@ var a = n("884691"),
   u = n("952451"),
   d = n("385649"),
   c = n("27618"),
-  E = n("31957"),
-  f = n("773336"),
+  f = n("31957"),
+  E = n("773336"),
   _ = n("50885"),
   h = n("69927"),
   C = n("49111"),
-  T = n("782340");
-let I = new Set(["Blink", "Gecko", "WebKit"]),
+  I = n("782340");
+let T = new Set(["Blink", "Gecko", "WebKit"]),
   S = C.NOOP;
-if (f.isPlatformEmbedded) S = e => _.default.setBadge(e);
-else if (I.has(r.layout)) {
+if (E.isPlatformEmbedded) S = e => _.default.setBadge(e);
+else if (T.has(r.layout)) {
   let e = new i({
     animation: "none"
   });
@@ -33,8 +33,8 @@ else if (I.has(r.layout)) {
   }
 }
 
-function N() {
-  let e = (0, o.useStateFromStores)([E.default], () => E.default.hasIncomingCalls()),
+function m() {
+  let e = (0, o.useStateFromStores)([f.default], () => f.default.hasIncomingCalls()),
     t = (0, o.useStateFromStores)([u.default, c.default, d.default], () => {
       let e = u.default.getTotalMentionCount(),
         t = c.default.getPendingCount(),
@@ -47,7 +47,7 @@ function N() {
     if (!e) return;
     let t = _.default.bounceDock("critical"),
       n = (0, h.flashPageTitle)({
-        messages: [T.default.Messages.INCOMING_CALL],
+        messages: [I.default.Messages.INCOMING_CALL],
         count: 50
       });
     return () => {

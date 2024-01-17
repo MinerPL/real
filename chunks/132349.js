@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return a
   }
 }), n("222007");
-var a = n("876927"),
-  s = n("271560");
+var s = n("876927"),
+  l = n("271560");
 
-function l(e) {
+function a(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-    [n, l] = (0, a.default)(),
-    i = (null == e ? void 0 : e.application_id) != null && null != l ? (0, s.getAssetURL)(e.application_id, e, l, t ? void 0 : "webp") : void 0;
+    [n, a] = (0, s.default)(),
+    i = (null == e ? void 0 : e.application_id) != null && null != a ? (0, l.getAssetURL)(e.application_id, e, a, t ? void 0 : "webp") : void 0;
   return [n, i]
 }

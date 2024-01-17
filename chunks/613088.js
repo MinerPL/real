@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 }), n("222007");
 var a = n("37983"),
@@ -13,18 +13,18 @@ var a = n("37983"),
   u = n("149279"),
   d = n("392533"),
   c = n("782340"),
-  E = n("133487"),
-  f = function(e) {
+  f = n("133487"),
+  E = function(e) {
     let {
       guild: t
-    } = e, [n, i] = s.useState(!1), f = s.useCallback(() => i(!0), [i]), _ = s.useCallback(() => i(!0), [i]);
+    } = e, [n, i] = s.useState(!1), E = s.useCallback(() => i(!0), [i]), _ = s.useCallback(() => i(!0), [i]);
     return (0, a.jsx)("div", {
-      className: l(E.actionButtonsContainer, {
-        [E.forceButtonsShow]: n
+      className: l(f.actionButtonsContainer, {
+        [f.forceButtonsShow]: n
       }),
       children: (0, a.jsx)(u.default, {
         children: (0, a.jsx)(d.GuildDiscoveryMenuPopout, {
-          onRequestOpen: f,
+          onRequestOpen: E,
           onRequestClose: _,
           guild: t,
           children: e => {
@@ -48,7 +48,7 @@ var a = n("37983"),
                   },
                   "aria-label": c.default.Messages.MORE,
                   children: (0, a.jsx)(o.default, {
-                    className: E.overflowIcon
+                    className: f.overflowIcon
                   })
                 })
               }

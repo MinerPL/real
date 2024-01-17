@@ -8,8 +8,8 @@ var a = n("37983");
 n("884691");
 var r = n("77078"),
   s = n("452804"),
-  i = n("135230"),
-  l = n("168973"),
+  l = n("135230"),
+  i = n("168973"),
   u = n("782340");
 
 function o(e) {
@@ -19,8 +19,8 @@ function o(e) {
         disableEmbeddedActivityPopOutAlert: !0
       }), e()
     },
-    o = !l.default.disableEmbeddedActivityPopOutAlert;
-  o ? (0, r.openModal)(r => (0, a.jsx)(i.default, {
+    o = !i.default.disableEmbeddedActivityPopOutAlert;
+  o ? (0, r.openModal)(r => (0, a.jsx)(l.default, {
     confirmText: u.default.Messages.EMBEDDED_ACTIVITIES_YEP,
     secondaryConfirmText: u.default.Messages.DONT_ASK_AGAIN,
     title: u.default.Messages.EMBEDDED_ACTIVITIES_CAREFUL,

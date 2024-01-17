@@ -13,20 +13,20 @@ var a = n("37983"),
   u = n("79112"),
   d = n("376556"),
   c = n("871388"),
-  E = n("152311"),
-  f = n("36539"),
+  f = n("152311"),
+  E = n("36539"),
   _ = n("860285"),
   h = n("47319"),
   C = n("86878"),
-  T = n("686470"),
-  I = n("568307"),
+  I = n("686470"),
+  T = n("568307"),
   S = n("535974"),
-  N = n("599110"),
-  A = n("602043"),
-  p = n("780009"),
-  m = n("49111"),
-  g = n("782340");
-let R = d.default.get(m.PlatformTypes.XBOX).name;
+  m = n("599110"),
+  p = n("602043"),
+  A = n("780009"),
+  g = n("49111"),
+  N = n("782340");
+let R = d.default.get(g.PlatformTypes.XBOX).name;
 
 function O(e) {
   let {
@@ -34,34 +34,34 @@ function O(e) {
   } = e, n = t.length > 1, O = function(e) {
     let {
       currentActivities: t
-    } = e, n = (0, i.useStateFromStores)([h.default], () => h.default.getAccounts().some(e => e.type === d.default.get(m.PlatformTypes.XBOX).type)), s = t.some(e => {
+    } = e, n = (0, i.useStateFromStores)([h.default], () => h.default.getAccounts().some(e => e.type === d.default.get(g.PlatformTypes.XBOX).type)), s = t.some(e => {
       let {
         activity: t
       } = e;
-      return (0, f.default)(t)
+      return (0, E.default)(t)
     });
     return n || !s ? null : (0, a.jsx)(l.MenuItem, {
       id: "xbox-connect",
-      action: () => u.default.open(m.UserSettingsSections.CONNECTIONS),
-      label: g.default.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
+      action: () => u.default.open(g.UserSettingsSections.CONNECTIONS),
+      label: N.default.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({
         platform: R
       })
     })
   }(e), L = function(e) {
     let {
       currentActivities: t
-    } = e, n = s.useContext(N.AnalyticsContext);
-    return (0, i.useStateFromStoresArray)([I.default, T.default, _.default, S.default, C.default], () => t.filter(e => !(0, E.default)(e.activity)).map(e => {
+    } = e, n = s.useContext(m.AnalyticsContext);
+    return (0, i.useStateFromStoresArray)([T.default, I.default, _.default, S.default, C.default], () => t.filter(e => !(0, f.default)(e.activity)).map(e => {
       let {
         activity: t,
         game: a
-      } = e, s = T.default.getActiveLibraryApplication(a.id);
+      } = e, s = I.default.getActiveLibraryApplication(a.id);
       return {
         ...e,
         libraryApplication: s,
-        canJoin: null != t && (0, c.default)(t, m.ActivityFlags.JOIN) && t.type === m.ActivityTypes.PLAYING,
-        canPlay: (0, A.isLaunchable)({
-          LibraryApplicationStore: T.default,
+        canJoin: null != t && (0, c.default)(t, g.ActivityFlags.JOIN) && t.type === g.ActivityTypes.PLAYING,
+        canPlay: (0, p.isLaunchable)({
+          LibraryApplicationStore: I.default,
           LaunchableGameStore: _.default,
           DispatchApplicationStore: S.default,
           ConnectedAppsStore: C.default,
@@ -69,7 +69,7 @@ function O(e) {
           branchId: null != s ? s.branchId : null
         }),
         isLaunching: _.default.launchingGames.has(a.id),
-        isRunning: I.default.getRunningVerifiedApplicationIds().includes(a.id),
+        isRunning: T.default.getRunningVerifiedApplicationIds().includes(a.id),
         location: n.location
       }
     }), [n.location, t])
@@ -88,18 +88,18 @@ function O(e) {
       async function u() {
         if (null == s) return;
         let e = await r.default.sendActivityInviteUser({
-          type: m.ActivityActionTypes.JOIN_REQUEST,
+          type: g.ActivityActionTypes.JOIN_REQUEST,
           userId: i.id,
           activity: s,
-          location: m.AnalyticsLocations.PROFILE_POPOUT
+          location: g.AnalyticsLocations.PROFILE_POPOUT
         });
         null != e && o.default.selectPrivateChannel(e.id)
       }
       return (0, a.jsx)(l.MenuItem, {
         id: "join-".concat(s.session_id),
-        label: t ? g.default.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN_USER.format({
+        label: t ? N.default.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN_USER.format({
           name: i.toString()
-        }) : g.default.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
+        }) : N.default.Messages.USER_ACTIVITY_ACTION_ASK_TO_JOIN,
         action: u
       })
     }(e, n), function(e, t) {
@@ -113,26 +113,26 @@ function O(e) {
         isLaunching: d
       } = e;
       if (!o || null == n) return null;
-      let c = u ? g.default.Messages.ACTIVITY_FEED_POPOUT_APPLICATION_RUNNING.format({
+      let c = u ? N.default.Messages.ACTIVITY_FEED_POPOUT_APPLICATION_RUNNING.format({
         name: s.name
-      }) : d ? g.default.Messages.ACTIVITY_FEED_POPOUT_APPLICATION_LAUNCHING.format({
+      }) : d ? N.default.Messages.ACTIVITY_FEED_POPOUT_APPLICATION_LAUNCHING.format({
         name: s.name
       }) : void 0;
       return (0, a.jsx)(l.MenuItem, {
         id: "play-".concat(n.session_id),
         action: function() {
-          (0, p.playApplication)(s.id, i, {
+          (0, A.playApplication)(s.id, i, {
             analyticsParams: {
               location: {
                 ...r,
-                object: m.AnalyticsObjects.LIST_ITEM
+                object: g.AnalyticsObjects.LIST_ITEM
               }
             }
           })
         },
-        label: t ? g.default.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_APPLICATION_NAME.format({
+        label: t ? N.default.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_APPLICATION_NAME.format({
           name: s.name
-        }) : g.default.Messages.APPLICATION_CONTEXT_MENU_LAUNCH,
+        }) : N.default.Messages.APPLICATION_CONTEXT_MENU_LAUNCH,
         subtext: c
       })
     }(e, n))

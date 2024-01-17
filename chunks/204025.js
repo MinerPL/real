@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var a = n("37983");
@@ -27,7 +27,7 @@ let u = (0, l.makeLazy)({
     webpackId: "620635",
     name: "PopoutWindowRTCDebug"
   });
-class E extends i.default {
+class f extends i.default {
   _initialize() {
     s.default.subscribe("CHANNEL_CALL_POPOUT_WINDOW_OPEN", this.handleOpenChannelCallPopout), s.default.subscribe("RTC_DEBUG_POPOUT_WINDOW_OPEN", this.handleOpenRTCDebugPopout)
   }
@@ -58,4 +58,4 @@ class E extends i.default {
     })
   }
 }
-var f = new E
+var E = new f

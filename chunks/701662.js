@@ -18,8 +18,8 @@ var s, a, l = n("37983"),
   p = n("337543"),
   h = n("124969"),
   N = n("599110"),
-  m = n("315102"),
-  T = n("449008"),
+  T = n("315102"),
+  m = n("449008"),
   g = n("9294"),
   A = n("800118"),
   S = n("243961"),
@@ -53,7 +53,7 @@ let O = e => {
     case v.InviteStates.RESOLVING:
       return 0;
     default:
-      (0, T.assertNever)(n)
+      (0, m.assertNever)(n)
   }
 };
 
@@ -176,7 +176,7 @@ function U(e) {
     guild: s
   } = null != t ? t : {}, a = {};
   if ((null == s ? void 0 : s.splash) != null) {
-    let e = m.default.getGuildSplashURL({
+    let e = T.default.getGuildSplashURL({
       id: s.id,
       splash: s.splash
     });

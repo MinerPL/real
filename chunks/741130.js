@@ -1,49 +1,49 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return _
+    return f
   }
 });
-var a, n, r = s("37983");
-s("884691");
-var l = s("77078"),
-  i = s("145131"),
-  u = s("837899"),
-  o = s("417462");
-(a = n || (n = {})).SMALL = "SMALL", a.MEDIUM = "MEDIUM", a.LARGE = "LARGE";
+var s, l, a = n("37983");
+n("884691");
+var i = n("77078"),
+  r = n("145131"),
+  o = n("837899"),
+  u = n("417462");
+(s = l || (l = {})).SMALL = "SMALL", s.MEDIUM = "MEDIUM", s.LARGE = "LARGE";
 let d = {
-    SMALL: o.dropdownSmall,
-    MEDIUM: o.dropdownMedium,
-    LARGE: o.dropdownLarge
+    SMALL: u.dropdownSmall,
+    MEDIUM: u.dropdownMedium,
+    LARGE: u.dropdownLarge
   },
   c = e => {
     let {
       onDropdownClick: t,
-      children: s,
-      contentClassName: a,
-      dropdownSize: n = "MEDIUM",
+      children: n,
+      contentClassName: s,
+      dropdownSize: l = "MEDIUM",
       ...c
     } = e;
-    return (0, r.jsx)(l.Button, {
+    return (0, a.jsx)(i.Button, {
       ...c,
-      children: (0, r.jsxs)(i.default, {
-        align: i.default.Align.CENTER,
-        children: [(0, r.jsx)(i.default.Child, {
-          className: a,
-          children: s
-        }), null != t ? (0, r.jsxs)(l.Clickable, {
-          className: d[n],
+      children: (0, a.jsxs)(r.default, {
+        align: r.default.Align.CENTER,
+        children: [(0, a.jsx)(r.default.Child, {
+          className: s,
+          children: n
+        }), null != t ? (0, a.jsxs)(i.Clickable, {
+          className: d[l],
           onClick: e => {
             e.stopPropagation(), null != t && t(e)
           },
-          children: [(0, r.jsx)("div", {
-            className: o.arrowSeparator
-          }), (0, r.jsx)(u.default, {
-            className: o.dropdownArrow
+          children: [(0, a.jsx)("div", {
+            className: u.arrowSeparator
+          }), (0, a.jsx)(o.default, {
+            className: u.dropdownArrow
           })]
         }) : null]
       })
     })
   };
-c.DropdownSizes = n, c.Sizes = l.Button.Sizes, c.Colors = l.Button.Colors, c.Looks = l.Button.Looks;
-var _ = c
+c.DropdownSizes = l, c.Sizes = i.Button.Sizes, c.Colors = i.Button.Colors, c.Looks = i.Button.Looks;
+var f = c

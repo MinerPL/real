@@ -4,24 +4,24 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("414456"),
-  s = n.n(a),
+var l = n("414456"),
+  s = n.n(l),
   i = n("584074"),
   r = e => {
     let {
       value: t = 0,
       text: n,
-      className: a,
+      className: l,
       ...r
     } = e;
-    return null != n ? (0, l.jsx)("div", {
-      className: s(i.wrapper, a),
+    return null != n ? (0, a.jsx)("div", {
+      className: s(i.wrapper, l),
       ...r,
       children: n
-    }) : t > 0 ? (0, l.jsx)("div", {
-      className: s(i.wrapper, a),
+    }) : t > 0 ? (0, a.jsx)("div", {
+      className: s(i.wrapper, l),
       ...r,
       children: t
     }) : null

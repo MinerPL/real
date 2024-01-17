@@ -18,22 +18,22 @@ var s, a, l, i, r, o, u = n("37983"),
   C = n("77078"),
   p = n("599110"),
   m = n("439932"),
-  E = n("145131"),
-  g = n("49111"),
+  g = n("145131"),
+  E = n("49111"),
   S = n("782340"),
-  _ = n("816456");
+  A = n("816456");
 (r = a || (a = {})).CENTER = "center", r.LEFT = "left", (o = l || (l = {})).TOP = "top", o.MIDDLE = "middle";
-class A extends d.PureComponent {
+class _ extends d.PureComponent {
   componentDidMount() {
     let {
       uniqueId: e
     } = this.props;
-    p.default.track(g.AnalyticEvents.SHOW_TUTORIAL, {
+    p.default.track(E.AnalyticEvents.SHOW_TUTORIAL, {
       tutorial: e
     })
   }
   componentWillUnmount() {
-    p.default.track(g.AnalyticEvents.CLOSE_TUTORIAL, {
+    p.default.track(E.AnalyticEvents.CLOSE_TUTORIAL, {
       tutorial: this.props.uniqueId,
       acknowledged: this.state.confirmed
     })
@@ -50,26 +50,26 @@ class A extends d.PureComponent {
       onClickSkipAll: r
     } = this.props, o = "left" === t || n, d = "center" === t || !o;
     return (0, u.jsxs)(C.Dialog, {
-      className: f(_.popoutRoot, l),
-      children: [null != e && (0, u.jsx)(E.default, {
-        className: _.mediaContainer,
-        justify: o ? E.default.Justify.START : E.default.Justify.CENTER,
+      className: f(A.popoutRoot, l),
+      children: [null != e && (0, u.jsx)(g.default, {
+        className: A.mediaContainer,
+        justify: o ? g.default.Justify.START : g.default.Justify.CENTER,
         children: e()
       }), (0, u.jsx)(C.H, {
         className: f({
-          [_.titleCenter]: d,
-          [_.titleLeft]: o
+          [A.titleCenter]: d,
+          [A.titleLeft]: o
         }),
         children: s
       }), (0, u.jsx)("string" == typeof a ? "p" : "div", {
         className: f({
-          [_.bodyCenter]: d,
-          [_.bodyLeft]: o
+          [A.bodyCenter]: d,
+          [A.bodyLeft]: o
         }),
         children: a
-      }), (0, u.jsxs)(E.default, {
-        className: _.buttonContainer,
-        justify: o ? E.default.Justify.BETWEEN : E.default.Justify.CENTER,
+      }), (0, u.jsxs)(g.default, {
+        className: A.buttonContainer,
+        justify: o ? g.default.Justify.BETWEEN : g.default.Justify.CENTER,
         children: [(0, u.jsx)(C.Button, {
           size: C.ButtonSizes.SMALL,
           onClick: this.handleDismiss,
@@ -79,7 +79,7 @@ class A extends d.PureComponent {
           look: C.Button.Looks.BLANK,
           onClick: r,
           color: (0, h.isThemeLight)(i) ? C.Button.Colors.PRIMARY : C.Button.Colors.WHITE,
-          className: o ? _.buttonSkipLeftAlign : _.buttonSkipCenterAlign,
+          className: o ? A.buttonSkipLeftAlign : A.buttonSkipCenterAlign,
           children: S.default.Messages.SKIP_ALL_TIPS
         })]
       })]
@@ -129,7 +129,7 @@ class A extends d.PureComponent {
         onSkipAll: t,
         uniqueId: n
       } = this.props;
-      e(), t(), p.default.track(g.AnalyticEvents.DISMISS_ALL_TUTORIALS, {
+      e(), t(), p.default.track(E.AnalyticEvents.DISMISS_ALL_TUTORIALS, {
         tutorial: n
       })
     }, this.renderPopoutContent = e => {
@@ -142,19 +142,19 @@ class A extends d.PureComponent {
         arrowAlignment: l,
         renderMedia: i
       } = this.props, r = null != i;
-      return (0, u.jsx)(A, {
+      return (0, u.jsx)(_, {
         ...this.props,
         className: f({
-          [_.bottom]: "bottom" === n,
-          [_.contentNarrowNoMedia]: !a && !r,
-          [_.contentNarrowWithMedia]: !a && r,
-          [_.contentWideNoMedia]: a && !r,
-          [_.contentWideWithMedia]: a && r,
-          [_.right]: "right" === n,
-          [_.top]: "top" === n,
-          [_.left]: "left" === n,
-          [_.arrowAlignmentTop]: "top" === l,
-          [_.arrowAlignmentMiddle]: "middle" === l,
+          [A.bottom]: "bottom" === n,
+          [A.contentNarrowNoMedia]: !a && !r,
+          [A.contentNarrowWithMedia]: !a && r,
+          [A.contentWideNoMedia]: a && !r,
+          [A.contentWideWithMedia]: a && r,
+          [A.right]: "right" === n,
+          [A.top]: "top" === n,
+          [A.left]: "left" === n,
+          [A.arrowAlignmentTop]: "top" === l,
+          [A.arrowAlignmentMiddle]: "middle" === l,
           "force-theme": null != s
         }, (0, m.getThemeClass)(s)),
         onClickComplete: () => this.onClickComplete(t),

@@ -4,22 +4,22 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("782340"),
+var l = n("782340"),
   s = n("210423"),
   i = n("794027");
-let r = () => (0, l.jsxs)("div", {
+let r = () => (0, a.jsxs)("div", {
   className: s.container,
-  children: [(0, l.jsx)("img", {
+  children: [(0, a.jsx)("img", {
     className: s.image,
     alt: "",
     src: i
-  }), (0, l.jsx)("div", {
+  }), (0, a.jsx)("div", {
     className: s.title,
-    children: a.default.Messages.FOR_YOU_EMPTY_TITLE
-  }), (0, l.jsx)("div", {
+    children: l.default.Messages.FOR_YOU_EMPTY_TITLE
+  }), (0, a.jsx)("div", {
     className: s.body,
-    children: a.default.Messages.FOR_YOU_EMPTY_BODY
+    children: l.default.Messages.FOR_YOU_EMPTY_BODY
   })]
 })

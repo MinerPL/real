@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return a
   }
 }), n("222007");
-var a = n("884691"),
-  s = n("731898");
+var s = n("884691"),
+  l = n("731898");
 
-function l() {
+function a() {
   let {
     ref: e,
     width: t
-  } = (0, s.default)(), [n, l] = a.useState();
-  return a.useEffect(() => {
-    null == n && null != t && l(t)
+  } = (0, l.default)(), [n, a] = s.useState();
+  return s.useEffect(() => {
+    null == n && null != t && a(t)
   }, [n, t]), [e, n]
 }

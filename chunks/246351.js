@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var a = n("37983");
@@ -14,13 +14,13 @@ var s = n("77078"),
   u = n("994428"),
   d = n("782340"),
   c = n("502081"),
-  E = n("173090"),
-  f = e => {
+  f = n("173090"),
+  E = e => {
     let {
       guild: t,
       markAsDismissed: n
     } = e, {
-      getNewSettingsDescriptionLine1: f,
+      getNewSettingsDescriptionLine1: E,
       getNewSettingsDescriptionLine2: _
     } = (0, i.useInventoryGuildSettingsExperiment)({
       guildId: t.id
@@ -29,7 +29,7 @@ var s = n("77078"),
         className: c.description,
         variant: "text-sm/normal",
         color: "always-white",
-        children: f()
+        children: E()
       }), (0, a.jsx)(s.Text, {
         className: c.description,
         variant: "text-sm/normal",
@@ -43,7 +43,7 @@ var s = n("77078"),
       buttonCTA: d.default.Messages.GOT_IT,
       asset: (0, a.jsx)("img", {
         alt: "Bird yelling into a bullhorn",
-        src: E,
+        src: f,
         className: c.tooltipImage
       }),
       onClick: () => n(u.ContentDismissActionType.USER_DISMISS),

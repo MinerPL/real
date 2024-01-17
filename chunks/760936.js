@@ -6,9 +6,9 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   n = s("884691"),
-  r = s("414456"),
-  l = s.n(r),
-  i = s("77078"),
+  l = s("414456"),
+  i = s.n(l),
+  r = s("77078"),
   u = s("506885"),
   o = s("981601"),
   d = s("280174"),
@@ -70,7 +70,7 @@ class S extends n.PureComponent {
     return 1 === t.length ? s.single(t[0].user, e => this.renderActivityDiscordTag(e)) : 2 === t.length ? s.double(t[0].user, t[1].user, e => this.renderActivityDiscordTag(e)) : s.other(t.length)
   }
   renderActivityDiscordTag(e) {
-    return (0, a.jsx)(i.Popout, {
+    return (0, a.jsx)(r.Popout, {
       preload: () => (0, u.default)(e.id, e.getAvatarURL(void 0, 80)),
       renderPopout: t => this.renderUserPopout(e, t),
       position: "right",
@@ -90,7 +90,7 @@ class S extends n.PureComponent {
       userInfo: n
     } = e;
     return 0 === n.length ? null : (0, a.jsxs)("div", {
-      className: l(T.recommendationActivity, t),
+      className: i(T.recommendationActivity, t),
       children: [(0, a.jsx)(c.default, {
         className: T.players,
         users: n.map(e => {
@@ -124,23 +124,23 @@ class S extends n.PureComponent {
       })]
     }), this.renderPlayer = (e, t, s, n) => {
       if (null == e) return null;
-      let r = this.props.reason.userInfo.find(t => t.user === e);
-      return null == r ? null : (0, a.jsx)(i.Popout, {
+      let l = this.props.reason.userInfo.find(t => t.user === e);
+      return null == l ? null : (0, a.jsx)(r.Popout, {
         preload: () => (0, u.default)(e.id, e.getAvatarURL(void 0, 80)),
         renderPopout: t => this.renderUserPopout(e, t),
         position: "right",
-        children: t => (0, a.jsx)(i.Tooltip, {
-          text: this.renderUserTooltip(e, r.startTime, r.endTime),
+        children: t => (0, a.jsx)(r.Tooltip, {
+          text: this.renderUserTooltip(e, l.startTime, l.endTime),
           "aria-label": (0, _.getUserTag)(e, {
             decoration: "never"
           }),
-          children: s => (0, a.jsx)(i.Avatar, {
-            className: l(T.playerAvatar, {
+          children: s => (0, a.jsx)(r.Avatar, {
+            className: i(T.playerAvatar, {
               [T.avatarMasked]: !n
             }),
             src: e.getAvatarURL(void 0, 32),
             "aria-label": e.username,
-            size: i.AvatarSizes.SIZE_32,
+            size: r.AvatarSizes.SIZE_32,
             ...s,
             ...t
           })

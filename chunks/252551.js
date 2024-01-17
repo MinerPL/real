@@ -14,8 +14,8 @@ var s = n("151426"),
   u = n("21526"),
   d = n("49111"),
   c = n("782340"),
-  E = n("608284"),
-  f = n("811982"),
+  f = n("608284"),
+  E = n("811982"),
   _ = () => {
     let {
       analyticsLocations: e
@@ -37,8 +37,8 @@ var s = n("151426"),
       position: "right",
       align: "top",
       art: (0, a.jsx)("img", {
-        className: E.art,
-        src: f,
+        className: f.art,
+        src: E,
         alt: ""
       })
     })

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   DROPS_PLATFORMS: function() {
-    return a
+    return l
   },
   DROPS_ELIGIBILITY_SEEN_GAMES_LOOKBACK_SECONDS: function() {
-    return s
+    return a
   },
   DropsFaqUrl: function() {
     return i
@@ -28,9 +28,9 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var l = n("782340");
-let a = ["XBOX", "PLAYSTATION", "SWITCH", "PC"],
-  s = 2592e4,
+var s = n("782340");
+let l = ["XBOX", "PLAYSTATION", "SWITCH", "PC"],
+  a = 2592e4,
   i = "https://support.discord.com/hc/en-us/articles/9146392276375",
   r = {
     FORTNITE: "FORTNITE"
@@ -62,19 +62,19 @@ let a = ["XBOX", "PLAYSTATION", "SWITCH", "PC"],
       dropsNoticeBannerDurationDays: 3,
       articleUrl: i,
       messages: {
-        claimTip: () => l.default.Messages.FORTNITE_REDEMPTION_TIP.format({
+        claimTip: () => s.default.Messages.FORTNITE_REDEMPTION_TIP.format({
           learnMoreUrl: "https://discord.com/blog/fortnite-quest"
         }),
-        giftInfo: () => l.default.Messages.FORTNITE_GIFT_INVENTORY_INFO.format({
-          guardOutfitName: l.default.Messages.FORNITE_GUARD_OUTPUT,
-          rewardName: l.default.Messages.FORTNITE_REWARD_NAME
+        giftInfo: () => s.default.Messages.FORTNITE_GIFT_INVENTORY_INFO.format({
+          guardOutfitName: s.default.Messages.FORNITE_GUARD_OUTPUT,
+          rewardName: s.default.Messages.FORTNITE_REWARD_NAME
         }),
-        enrollmentTooltip: e => l.default.Messages.FORTNITE_DROPS_ELIGIBILITY_ENROLLMENT_TOOLTIP.format({
-          rewardName: l.default.Messages.FORTNITE_REWARD_NAME,
+        enrollmentTooltip: e => s.default.Messages.FORTNITE_DROPS_ELIGIBILITY_ENROLLMENT_TOOLTIP.format({
+          rewardName: s.default.Messages.FORTNITE_REWARD_NAME,
           streamLengthRequirement: e
         }),
-        completionTooltip: e => l.default.Messages.FORTNITE_DROPS_COMPLETION_TOOLTIP.format({
-          rewardName: l.default.Messages.FORTNITE_REWARD_NAME,
+        completionTooltip: e => s.default.Messages.FORTNITE_DROPS_COMPLETION_TOOLTIP.format({
+          rewardName: s.default.Messages.FORTNITE_REWARD_NAME,
           streamLengthRequirement: e
         })
       }

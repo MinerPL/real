@@ -13,8 +13,8 @@ var a = n("37983"),
   u = n("371449"),
   d = n("224978"),
   c = n("559541"),
-  E = n("49111"),
-  f = n("782340"),
+  f = n("49111"),
+  E = n("782340"),
   _ = n("728221");
 
 function h(e) {
@@ -22,7 +22,7 @@ function h(e) {
     user: t,
     key: n,
     isFocused: h
-  } = e, C = s.useContext(o.AnalyticsContext), T = e => {
+  } = e, C = s.useContext(o.AnalyticsContext), I = e => {
     e.stopPropagation(), i.default.unblockUser(t.id, {
       location: "Friends"
     })
@@ -39,13 +39,13 @@ function h(e) {
       children: [(0, a.jsx)(c.default, {
         user: t,
         hovered: e,
-        status: E.StatusTypes.UNKNOWN,
-        subText: f.default.Messages.BLOCKED
+        status: f.StatusTypes.UNKNOWN,
+        subText: E.default.Messages.BLOCKED
       }), (0, a.jsx)(u.default, {
         icon: r.default,
         actionType: u.default.ActionTypes.DENY,
-        tooltip: f.default.Messages.UNBLOCK,
-        onClick: T,
+        tooltip: E.default.Messages.UNBLOCK,
+        onClick: I,
         shouldHighlight: e
       })]
     })

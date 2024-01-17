@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useCustomStatusMenuItem: function() {
-    return f
+    return E
   }
 });
 var a = n("37983");
@@ -14,12 +14,12 @@ var s = n("414456"),
   u = n("845579"),
   d = n("381546"),
   c = n("782340"),
-  E = n("352865");
+  f = n("352865");
 
-function f(e, t) {
+function E(e, t) {
   let s = (0, o.useAnalyticsContext)();
 
-  function f(e) {
+  function E(e) {
     e.stopPropagation(), u.CustomStatusSetting.updateSetting(void 0)
   }
 
@@ -54,7 +54,7 @@ function f(e, t) {
       showIconFirst: !0,
       hint: e => (0, a.jsx)(l.Clickable, {
         ...e,
-        onClick: f,
+        onClick: E,
         tabIndex: -1,
         children: (0, a.jsx)(d.default, {
           width: 18,
@@ -69,7 +69,7 @@ function f(e, t) {
     focusedClassName: t,
     label: c.default.Messages.CUSTOM_STATUS_SET_CUSTOM_STATUS_CTA,
     icon: e => (0, a.jsx)("div", {
-      className: i(E.customEmojiPlaceholder, e)
+      className: i(f.customEmojiPlaceholder, e)
     }),
     action: _,
     showIconFirst: !0

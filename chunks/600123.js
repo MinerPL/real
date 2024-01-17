@@ -1,24 +1,24 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return i
   }
 });
 var a = n("37983");
 n("884691");
 var r = n("607391"),
   s = n("145131"),
-  i = n("191933");
+  l = n("191933");
 
-function l(e) {
+function i(e) {
   let {
     mainText: t,
     supportingText: n,
-    children: l,
+    children: i,
     size: u
   } = e;
   return (0, a.jsxs)(s.default, {
-    className: i.root,
+    className: l.root,
     justify: s.default.Justify.CENTER,
     align: s.default.Align.CENTER,
     direction: s.default.Direction.VERTICAL,
@@ -26,6 +26,6 @@ function l(e) {
       header: t,
       description: n,
       size: u
-    }), l]
+    }), i]
   })
 }

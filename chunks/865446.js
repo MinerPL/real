@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   shouldShowNitroUpsell: function() {
-    return l
+    return a
   }
 });
-var a = n("862205");
-let s = (0, a.createExperiment)({
+var s = n("862205");
+let l = (0, s.createExperiment)({
   kind: "user",
   id: "2023-10_social_proofing_file_size",
   label: "Social Proofing File Size",
@@ -21,8 +21,8 @@ let s = (0, a.createExperiment)({
   }]
 });
 
-function l(e) {
-  let t = s.getCurrentConfig({
+function a(e) {
+  let t = l.getCurrentConfig({
     location: e
   });
   return t.enabled

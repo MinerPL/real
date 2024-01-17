@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 }), n("222007");
-var l = n("446674"),
-  a = n("913144"),
+var a = n("446674"),
+  l = n("913144"),
   s = n("449008"),
   i = n("49111");
 let r = [],
@@ -22,18 +22,18 @@ function c(e) {
   }
   if (e.platform_type === i.PlatformTypes.XBOX) {
     let n = null == t ? void 0 : t.titleId,
-      l = null == t ? void 0 : t.inviteToken;
-    return null == n || null == l ? null : {
+      a = null == t ? void 0 : t.inviteToken;
+    return null == n || null == a ? null : {
       ...e,
       parsed_launch_parameters: {
         titleId: n,
-        inviteToken: l
+        inviteToken: a
       }
     }
   }
   return null
 }
-class f extends l.default.Store {
+class f extends a.default.Store {
   getInvites() {
     return r
   }
@@ -56,7 +56,7 @@ class f extends l.default.Store {
   }
 }
 f.displayName = "GameInviteStore";
-var E = new f(a.default, {
+var h = new f(l.default, {
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
     let {
       gameInvites: t

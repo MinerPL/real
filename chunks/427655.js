@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("281862"),
-  l = n("77078"),
+var l = n("281862"),
+  a = n("77078"),
   i = n("819689"),
   r = n("574073"),
   o = n("304198"),
@@ -19,7 +19,7 @@ function d(e) {
     usernameHook: d,
     onClickPins: c,
     compact: f
-  } = e, m = (0, r.default)(t), E = m.nick, _ = d(m), h = () => {
+  } = e, E = (0, r.default)(t), _ = E.nick, T = d(E), I = () => {
     if (null == t.messageReference) return;
     let {
       channel_id: e,
@@ -30,8 +30,8 @@ function d(e) {
       messageId: n,
       flash: !0
     })
-  }, p = (0, l.useRedesignIconContext)().enabled, I = p ? {
-    iconNode: (0, a.jsx)(s.PinIcon, {
+  }, m = (0, a.useRedesignIconContext)().enabled, N = m ? {
+    iconNode: (0, s.jsx)(l.PinIcon, {
       width: 18,
       height: 18,
       color: "currentColor"
@@ -39,25 +39,25 @@ function d(e) {
   } : {
     icon: n("728963")
   };
-  return (0, a.jsx)(o.default, {
-    ...I,
+  return (0, s.jsx)(o.default, {
+    ...N,
     timestamp: t.timestamp,
     compact: f,
     children: null != t.messageReference ? null == c ? u.default.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_WITH_MESSAGE_HOOK.format({
-      usernameHook: _,
-      username: E,
-      messageOnClick: h
+      usernameHook: T,
+      username: _,
+      messageOnClick: I
     }) : u.default.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_WITH_MESSAGE.format({
-      usernameHook: _,
-      username: E,
+      usernameHook: T,
+      username: _,
       pinsActionOnClick: c,
-      messageOnClick: h
+      messageOnClick: I
     }) : null == c ? u.default.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_HOOK.format({
-      usernameHook: _,
-      username: E
+      usernameHook: T,
+      username: _
     }) : u.default.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE.format({
-      usernameHook: _,
-      username: E,
+      usernameHook: T,
+      username: _,
       pinsActionOnClick: c
     })
   })

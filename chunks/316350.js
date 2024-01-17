@@ -7,9 +7,9 @@ n.r(t), n.d(t, {
     return d
   }
 }), n("70102"), n("222007");
-var a, s, l = n("37983"),
+var s, l, a = n("37983"),
   i = n("884691");
-(s = a || (a = {})).POLL_ANSWERS = "POLL_ANSWERS", s.ACTION_BUTTON = "ACTION_BUTTON";
+(l = s || (s = {})).POLL_ANSWERS = "POLL_ANSWERS", l.ACTION_BUTTON = "ACTION_BUTTON";
 let r = i.createContext(void 0);
 
 function o() {
@@ -22,14 +22,14 @@ function u(e) {
   let {
     children: t,
     actionButtonRef: n,
-    pollAnswerRef: a,
-    manageFocusOnAction: s
+    pollAnswerRef: s,
+    manageFocusOnAction: l
   } = e, o = i.useMemo(() => ({
     actionButtonRef: n,
-    pollAnswerRef: a,
-    manageFocusOnAction: s
-  }), [n, a, s]);
-  return (0, l.jsx)(r.Provider, {
+    pollAnswerRef: s,
+    manageFocusOnAction: l
+  }), [n, s, l]);
+  return (0, a.jsx)(r.Provider, {
     value: o,
     children: t
   })
@@ -38,21 +38,21 @@ function u(e) {
 function d(e) {
   let {
     children: t
-  } = e, [n, a] = i.useState(), s = i.useRef(null), r = i.useRef(null);
+  } = e, [n, s] = i.useState(), l = i.useRef(null), r = i.useRef(null);
   return i.useEffect(() => {
-    var e, t, a;
-    "POLL_ANSWERS" === n && null != r.current && (null === (t = r.current) || void 0 === t || null === (e = t.ref) || void 0 === e || e.focus()), "ACTION_BUTTON" === n && null != s.current && (null === (a = s.current) || void 0 === a || a.focus())
-  }, [n]), (0, l.jsx)(u, {
+    var e, t, s;
+    "POLL_ANSWERS" === n && null != r.current && (null === (t = r.current) || void 0 === t || null === (e = t.ref) || void 0 === e || e.focus()), "ACTION_BUTTON" === n && null != l.current && (null === (s = l.current) || void 0 === s || s.focus())
+  }, [n]), (0, a.jsx)(u, {
     pollAnswerRef: r,
-    actionButtonRef: s,
+    actionButtonRef: l,
     manageFocusOnAction: e => {
       switch (e) {
         case "submit":
         case "cancel":
-          a("ACTION_BUTTON");
+          s("ACTION_BUTTON");
           break;
         case "edit":
-          a("POLL_ANSWERS")
+          s("POLL_ANSWERS")
       }
     },
     children: t

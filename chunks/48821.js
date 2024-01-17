@@ -14,8 +14,8 @@ var s = n("446674"),
   u = n("735201"),
   d = n("427459"),
   c = n("49111"),
-  E = n("782340"),
-  f = n("557659"),
+  f = n("782340"),
+  E = n("557659"),
   _ = e => {
     let {
       guild: t
@@ -28,11 +28,11 @@ var s = n("446674"),
       onClick: () => {
         o.default.open(n, c.GuildSettingsSections.GUILD_PREMIUM)
       },
-      message: E.default.Messages.PREMIUM_GUILD_GRACE_PERIOD_NOTICE,
+      message: f.default.Messages.PREMIUM_GUILD_GRACE_PERIOD_NOTICE,
       trackingSource: c.ChannelNoticeCtaSources.GRACE_PERIOD_NOTICE,
       type: c.ChannelNoticeTypes.GUILD_BOOSTING_GRACE_PERIOD,
-      image: f,
-      cta: E.default.Messages.PREMIUM_GUILD_GRACE_PERIOD_NOTICE_BUTTON,
+      image: E,
+      cta: f.default.Messages.PREMIUM_GUILD_GRACE_PERIOD_NOTICE_BUTTON,
       ctaColor: i.ButtonColors.PRIMARY
     })
   }

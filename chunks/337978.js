@@ -1,38 +1,38 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return d
   }
 });
-var n = s("37983");
-s("884691");
-var r = s("77078"),
-  l = s("834897"),
-  i = s("85336"),
-  a = s("425480"),
-  u = s("504898"),
-  o = s("551290");
+var s = n("37983");
+n("884691");
+var r = n("77078"),
+  l = n("834897"),
+  i = n("85336"),
+  a = n("425480"),
+  u = n("504898"),
+  o = n("551290");
 
 function d(e) {
   let {
     step: t,
-    onClose: s
+    onClose: n
   } = e, d = (0, l.default)(a.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY);
-  return t === i.Step.BENEFITS || t === i.Step.CONFIRM ? null : (0, n.jsxs)("div", {
+  return t === i.Step.BENEFITS || t === i.Step.CONFIRM ? null : (0, s.jsxs)("div", {
     className: u.headerContainer,
-    children: [!d && (0, n.jsx)("div", {
+    children: [!d && (0, s.jsx)("div", {
       className: u.headerImageContainer,
       "aria-hidden": "true",
       "data-accessibility": "desaturate",
-      children: (0, n.jsx)("img", {
+      children: (0, s.jsx)("img", {
         src: o,
         alt: "",
         className: u.headerImage
       })
-    }), (0, n.jsx)(r.ModalCloseButton, {
+    }), (0, s.jsx)(r.ModalCloseButton, {
       withCircleBackground: !0,
       className: u.closeButton,
-      onClick: s
+      onClick: n
     })]
   })
 }

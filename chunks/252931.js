@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   getInventoryGuildPacksUserExperimentConfig: function() {
-    return s
+    return c
   },
   useInventoryGuildPacksUserExperiment: function() {
-    return c
+    return d
   },
   useInventoryGuildSettingsExperiment: function() {
     return E
   }
 });
-var i = n("65597"),
-  l = n("862205"),
-  u = n("697218"),
+var r = n("65597"),
+  i = n("862205"),
+  l = n("697218"),
   o = n("719923"),
-  a = n("782340");
-let r = (0, l.createExperiment)({
+  s = n("782340");
+let a = (0, i.createExperiment)({
     kind: "user",
     id: "2023-05_inventory_guild_packs",
     label: "Inventory Guild Packs Experiment",
@@ -108,25 +108,25 @@ let r = (0, l.createExperiment)({
       }
     }]
   }),
-  d = e => {
+  u = e => {
     let {
       user: t,
       config: n
     } = e, {
-      desktopViewAndUseAndCollectEnabled: i,
-      mobileViewAndUseEnabled: l,
-      mobileAndFreemiumCollectEnabled: u,
-      autoUnfurlReactionTooltip: a,
-      collectOffOverride: r
-    } = n, d = o.default.isPremium(t);
+      desktopViewAndUseAndCollectEnabled: r,
+      mobileViewAndUseEnabled: i,
+      mobileAndFreemiumCollectEnabled: l,
+      autoUnfurlReactionTooltip: s,
+      collectOffOverride: a
+    } = n, u = o.default.isPremium(t);
     return {
-      viewAndUseEnabled: i,
-      showTryPacksModalAndV2Copy: u,
-      collectEnabled: !r && (d ? i : u),
-      autoUnfurlReactionTooltip: a
+      viewAndUseEnabled: r,
+      showTryPacksModalAndV2Copy: l,
+      collectEnabled: !a && (u ? r : l),
+      autoUnfurlReactionTooltip: s
     }
   },
-  s = e => {
+  c = e => {
     let {
       user: t,
       autoTrackExposure: n = !0
@@ -136,16 +136,16 @@ let r = (0, l.createExperiment)({
       showTryPacksModalAndV2Copy: !1,
       collectEnabled: !1,
       autoUnfurlReactionTooltip: !1
-    } : d({
+    } : u({
       user: t,
-      config: r.getCurrentConfig({
+      config: a.getCurrentConfig({
         location: "inventory_guild_packs_experiment"
       }, {
         autoTrackExposure: n
       })
     })
   },
-  c = function() {
+  d = function() {
     var e;
     let {
       expressionSourceGuild: t,
@@ -153,27 +153,27 @@ let r = (0, l.createExperiment)({
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
       expressionSourceGuild: void 0,
       autoTrackExposure: !0
-    }, l = (0, i.default)([u.default], () => u.default.getCurrentUser()), o = r.useExperiment({
+    }, i = (0, r.default)([l.default], () => l.default.getCurrentUser()), o = a.useExperiment({
       location: "inventory_guild_setting_experiment"
     }, {
       autoTrackExposure: n
     }), {
-      viewAndUseEnabled: a,
-      showTryPacksModalAndV2Copy: s,
-      collectEnabled: c,
+      viewAndUseEnabled: s,
+      showTryPacksModalAndV2Copy: c,
+      collectEnabled: d,
       autoUnfurlReactionTooltip: f
-    } = d({
-      user: l,
+    } = u({
+      user: i,
       config: o
-    }), E = a && c && null != t && (null == t ? void 0 : null === (e = t.inventorySettings) || void 0 === e ? void 0 : e.isEmojiPackCollectible) !== !1;
+    }), E = s && d && null != t && (null == t ? void 0 : null === (e = t.inventorySettings) || void 0 === e ? void 0 : e.isEmojiPackCollectible) !== !1;
     return {
-      viewAndUseEnabled: a,
+      viewAndUseEnabled: s,
       collectEnabled: E,
-      showTryPacksModalAndV2Copy: s,
+      showTryPacksModalAndV2Copy: c,
       autoUnfurlReactionTooltip: f
     }
   },
-  f = (0, l.createExperiment)({
+  f = (0, i.createExperiment)({
     kind: "guild",
     id: "2023-06_inventory_guild_setting",
     label: "Inventory Guild Settings Experiment",
@@ -216,8 +216,8 @@ let r = (0, l.createExperiment)({
       config: {
         showSettingsToggle: !0,
         allowCollection: !0,
-        getNewSettingsDescriptionLine1: () => a.default.Messages.INVENTORY_NEW_SETTING_ROLLBACK_DESCRIPTION_LINE_1,
-        getNewSettingsDescriptionLine2: () => a.default.Messages.INVENTORY_NEW_SETTING_ROLLBACK_DESCRIPTION_LINE_2
+        getNewSettingsDescriptionLine1: () => s.default.Messages.INVENTORY_NEW_SETTING_ROLLBACK_DESCRIPTION_LINE_1,
+        getNewSettingsDescriptionLine2: () => s.default.Messages.INVENTORY_NEW_SETTING_ROLLBACK_DESCRIPTION_LINE_2
       }
     }]
   }),

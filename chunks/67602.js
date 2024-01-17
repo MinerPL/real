@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return m
   },
   HEIGHT_COMPACT_MESSAGE: function() {
-    return E
+    return g
   },
   HEIGHT_ATTACHMEMT_PADDING: function() {
-    return g
+    return E
   },
   default: function() {
     return S
@@ -127,8 +127,8 @@ function h(e) {
 let C = 44,
   p = 22,
   m = 26,
-  E = 26,
-  g = 6;
+  g = 26,
+  E = 6;
 
 function S(e) {
   let {

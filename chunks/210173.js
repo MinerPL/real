@@ -13,19 +13,19 @@ var a = n("37983"),
   u = n("302437"),
   d = n("826684"),
   c = n("368874"),
-  E = n("652126"),
-  f = n("775032"),
+  f = n("652126"),
+  E = n("775032"),
   _ = n("25132"),
   h = n("424373"),
   C = n("806468"),
-  T = n("863023"),
-  I = n("299387"),
+  I = n("863023"),
+  T = n("299387"),
   S = n("154640"),
-  N = n("922832"),
-  A = n("782340"),
-  p = n("563662"),
-  m = n("926622"),
-  g = n("371997");
+  m = n("922832"),
+  p = n("782340"),
+  A = n("563662"),
+  g = n("926622"),
+  N = n("371997");
 
 function R(e) {
   let {
@@ -34,9 +34,9 @@ function R(e) {
     stepNumber: s
   } = e;
   return (0, a.jsxs)("div", {
-    className: p.step,
+    className: A.step,
     children: [(0, a.jsx)("div", {
-      className: p.stepNumber,
+      className: A.stepNumber,
       children: (0, a.jsx)(o.Heading, {
         variant: "heading-md/semibold",
         color: "text-brand",
@@ -61,41 +61,41 @@ function R(e) {
 
 function O() {
   return (0, a.jsxs)("div", {
-    className: l(p.box, p.linkingBanner, p.linkingBannerParent),
+    className: l(A.box, A.linkingBanner, A.linkingBannerParent),
     children: [(0, a.jsxs)("div", {
-      className: l(p.linkingBannerUpper),
+      className: l(A.linkingBannerUpper),
       children: [(0, a.jsxs)("div", {
-        className: p.header,
+        className: A.header,
         children: [(0, a.jsx)(o.Heading, {
-          className: m.marginBottom8,
+          className: g.marginBottom8,
           variant: "heading-xl/medium",
           children: (0, a.jsx)(o.HeadingLevel, {
-            children: A.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_PARENT
+            children: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_PARENT
           })
         }), (0, a.jsx)(o.Text, {
           variant: "text-sm/medium",
           color: "text-muted",
-          className: m.marginBottom20,
-          children: A.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_PARENT
+          className: g.marginBottom20,
+          children: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_PARENT
         })]
       }), (0, a.jsx)("img", {
-        className: p.bannerArt,
-        src: g,
-        alt: A.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
+        className: A.bannerArt,
+        src: N,
+        alt: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
       })]
     }), (0, a.jsxs)("div", {
-      className: p.steps,
+      className: A.steps,
       children: [(0, a.jsx)(R, {
-        header: A.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_HEADER,
-        description: A.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_DESCRIPTION,
+        header: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_HEADER,
+        description: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_1_DESCRIPTION,
         stepNumber: 1
       }), (0, a.jsx)(R, {
-        header: A.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_HEADER,
-        description: A.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_DESCRIPTION,
+        header: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_HEADER,
+        description: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_2_DESCRIPTION,
         stepNumber: 2
       }), (0, a.jsx)(R, {
-        header: A.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_HEADER,
-        description: A.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_DESCRIPTION,
+        header: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_HEADER,
+        description: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_PARENT_STEP_3_DESCRIPTION,
         stepNumber: 3
       })]
     })]
@@ -105,26 +105,26 @@ function O() {
 function L() {
   let e = (0, _.useHasMaxConnections)();
   return (0, a.jsxs)("div", {
-    className: l(p.box, p.linkingBanner),
+    className: l(A.box, A.linkingBanner),
     children: [(0, a.jsxs)("div", {
       children: [(0, a.jsx)(o.Heading, {
-        className: m.marginBottom8,
+        className: g.marginBottom8,
         variant: "heading-xl/medium",
         children: (0, a.jsx)(o.HeadingLevel, {
-          children: A.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN
+          children: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_HEADER_TEEN
         })
       }), (0, a.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "text-muted",
-        className: m.marginBottom20,
-        children: A.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_TEEN.format({
+        className: g.marginBottom20,
+        children: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_DESCRIPTION_TEEN.format({
           link: "https://support.discord.com/hc/articles/14155060633623"
         })
       }), e ? null : (0, a.jsx)(C.default, {})]
     }), (0, a.jsx)("img", {
-      className: p.bannerArt,
-      src: g,
-      alt: A.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
+      className: A.bannerArt,
+      src: N,
+      alt: p.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_ASSET_ALT
     })]
   })
 }
@@ -134,7 +134,7 @@ function v(e) {
     sectionType: t,
     sectionTitle: n,
     requests: i
-  } = e, l = s.useRef(null), c = "".concat(t, "-list"), E = (0, u.default)(c), f = s.useCallback(e => {
+  } = e, l = s.useRef(null), c = "".concat(t, "-list"), f = (0, u.default)(c), E = s.useCallback(e => {
     let {
       row: n,
       listIndex: s
@@ -142,25 +142,25 @@ function v(e) {
     return null == l ? null : (0, a.jsx)(S.default, {
       userId: l.id,
       isLast: r,
-      children: () => t === N.UserLinkStatus.ACTIVE ? (0, a.jsx)(T.UserLinkAcceptedRequestRow, {
+      children: () => t === m.UserLinkStatus.ACTIVE ? (0, a.jsx)(I.UserLinkAcceptedRequestRow, {
         user: l
-      }) : (0, a.jsx)(I.UserLinkPendingRequestRow, {
+      }) : (0, a.jsx)(T.UserLinkPendingRequestRow, {
         user: l
       })
     }, l.id)
   }, [i, t]), _ = s.useCallback(() => (0, a.jsx)(d.default, {
-    className: p.sectionTitle,
+    className: A.sectionTitle,
     children: (0, a.jsx)(o.Text, {
-      className: m.marginBottom8,
+      className: g.marginBottom8,
       variant: "eyebrow",
       color: "header-secondary",
       children: n
     })
   }, "title"), [n]);
   return (0, a.jsx)("div", {
-    className: p.section,
+    className: A.section,
     children: (0, a.jsx)(r.ListNavigatorProvider, {
-      navigator: E,
+      navigator: f,
       children: (0, a.jsx)(r.ListNavigatorContainer, {
         children: e => {
           let {
@@ -169,17 +169,17 @@ function v(e) {
             ...r
           } = e;
           return (0, a.jsx)(o.List, {
-            className: p.list,
+            className: A.list,
             innerRole: s,
             innerAriaLabel: n,
             ref: e => {
               var n;
               l.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
-            sectionHeight: N.FAMILY_CENTER_REQUEST_SECTION_HEIGHT,
-            rowHeight: N.FAMILY_CENTER_REQUEST_ROW_HEIGHT,
+            sectionHeight: m.FAMILY_CENTER_REQUEST_SECTION_HEIGHT,
+            rowHeight: m.FAMILY_CENTER_REQUEST_ROW_HEIGHT,
             renderSection: _,
-            renderRow: f,
+            renderRow: E,
             sections: [i.length],
             chunkSize: 30,
             fade: !0,
@@ -191,30 +191,30 @@ function v(e) {
   })
 }
 let M = () => {
-    let e = (0, f.default)(),
-      t = (0, _.useUserForLinkStatus)(N.UserLinkStatus.ACTIVE),
-      n = e ? N.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : N.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
+    let e = (0, E.default)(),
+      t = (0, _.useUserForLinkStatus)(m.UserLinkStatus.ACTIVE),
+      n = e ? m.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : m.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
       s = {
         count: t.length,
         max: n
       },
-      i = (0, c.useAgeSpecificText)(A.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(s), A.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(s));
+      i = (0, c.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(s), p.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(s));
     return (0, a.jsx)(a.Fragment, {
       children: t.length > 0 ? (0, a.jsx)(v, {
-        sectionType: N.UserLinkStatus.ACTIVE,
+        sectionType: m.UserLinkStatus.ACTIVE,
         sectionTitle: i,
         requests: t
       }) : (0, a.jsxs)("div", {
-        className: p.section,
+        className: A.section,
         children: [(0, a.jsx)(o.Text, {
-          className: m.marginBottom8,
+          className: g.marginBottom8,
           variant: "eyebrow",
           color: "header-secondary",
           children: i
         }), (0, a.jsx)("div", {
-          className: p.box,
+          className: A.box,
           children: (0, a.jsx)(h.default, {
-            text: A.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_EMPTY_DESCRIPTION
+            text: p.default.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_EMPTY_DESCRIPTION
           })
         })]
       })
@@ -222,15 +222,15 @@ let M = () => {
   },
   P = () => {
     let e = (0, _.useHasMaxConnections)(),
-      t = (0, f.default)(),
-      n = t ? N.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : N.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
-      s = (0, c.useAgeSpecificText)(A.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({
+      t = (0, E.default)(),
+      n = t ? m.MAX_PARENT_TO_TEEN_ACTIVE_CONNECTIONS : m.MAX_TEEN_TO_PARENT_ACTIVE_CONNECTIONS,
+      s = (0, c.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({
         maxConnections: n
-      }), A.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_PARENT.format({
+      }), p.default.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_PARENT.format({
         maxConnections: n
       }));
     return e ? (0, a.jsx)("div", {
-      className: p.maxConnectionInfo,
+      className: A.maxConnectionInfo,
       children: (0, a.jsx)(o.Text, {
         variant: "text-xxs/medium",
         color: "text-muted",
@@ -239,41 +239,41 @@ let M = () => {
     }) : null
   },
   D = () => {
-    let e = (0, E.useShouldShowHelplineLink)();
+    let e = (0, f.useShouldShowHelplineLink)();
     return e ? (0, a.jsxs)("div", {
-      className: l(p.helpLineInfo, m.marginTop20),
+      className: l(A.helpLineInfo, g.marginTop20),
       children: [(0, a.jsx)(o.Heading, {
-        className: p.supportHeader,
+        className: A.supportHeader,
         variant: "heading-sm/semibold",
         children: (0, a.jsx)(o.HeadingLevel, {
-          children: A.default.Messages.FAMILY_CENTER_HELP_LINE_HEADER
+          children: p.default.Messages.FAMILY_CENTER_HELP_LINE_HEADER
         })
       }), (0, a.jsx)(o.Text, {
         variant: "text-xs/medium",
         color: "text-muted",
-        children: A.default.Messages.FAMILY_CENTER_HELP_LINE_CONTENT.format({
+        children: p.default.Messages.FAMILY_CENTER_HELP_LINE_CONTENT.format({
           helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line"
         })
       })]
     }) : null
   },
   y = () => {
-    let e = (0, _.useUserForLinkStatus)(N.UserLinkStatus.PENDING),
-      t = (0, c.useAgeSpecificText)(A.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({
+    let e = (0, _.useUserForLinkStatus)(m.UserLinkStatus.PENDING),
+      t = (0, c.useAgeSpecificText)(p.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({
         count: e.length
-      }), A.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({
+      }), p.default.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({
         count: e.length
       }));
     return 0 === e.length ? null : (0, a.jsx)(v, {
-      sectionType: N.UserLinkStatus.PENDING,
+      sectionType: m.UserLinkStatus.PENDING,
       sectionTitle: t,
       requests: e
     })
   };
 var x = () => {
-  let e = (0, f.default)();
+  let e = (0, E.default)();
   return (0, a.jsxs)("div", {
-    className: p.container,
+    className: A.container,
     children: [e ? (0, a.jsx)(O, {}) : (0, a.jsx)(L, {}), (0, a.jsx)(M, {}), (0, a.jsx)(y, {}), (0, a.jsx)(P, {}), (0, a.jsx)(D, {})]
   })
 }

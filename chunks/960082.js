@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("77078"),
   i = n("211248"),
   r = n("433487"),
@@ -17,12 +17,12 @@ let c = e => {
       item: t,
       closePopout: n
     } = e;
-    return (0, l.jsx)(s.Menu, {
+    return (0, a.jsx)(s.Menu, {
       navId: "notification-actions",
       onClose: n,
       onSelect: n,
       "aria-label": d.default.Messages.RECENTS_NOTIFICATIONS_MENU_LABEL,
-      children: (0, l.jsx)(s.MenuItem, {
+      children: (0, a.jsx)(s.MenuItem, {
         id: "delete",
         label: d.default.Messages.DELETE,
         icon: o.default,
@@ -32,12 +32,12 @@ let c = e => {
       })
     })
   },
-  f = a.memo(function(e) {
+  f = l.memo(function(e) {
     let {
       item: t
     } = e;
-    return (0, l.jsx)(s.Popout, {
-      renderPopout: e => (0, l.jsx)(c, {
+    return (0, a.jsx)(s.Popout, {
+      renderPopout: e => (0, a.jsx)(c, {
         ...e,
         item: t
       }),
@@ -48,10 +48,10 @@ let c = e => {
         let {
           onClick: t
         } = e;
-        return (0, l.jsx)(i.default, {
+        return (0, a.jsx)(i.default, {
           tooltip: d.default.Messages.MORE,
           color: i.CircleIconButtonColors.TERTIARY,
-          icon: (0, l.jsx)(r.default, {
+          icon: (0, a.jsx)(r.default, {
             height: 16,
             width: 16
           }),

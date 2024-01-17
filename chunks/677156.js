@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   CustomGiftExperiment: function() {
-    return r
+    return a
   }
 });
-var i = n("862205");
-let r = (0, i.createExperiment)({
+var s = n("862205");
+let a = (0, s.createExperiment)({
   kind: "user",
   id: "2023-08_custom_gift",
   label: "Custom Gift Experiment",

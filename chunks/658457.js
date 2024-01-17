@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var a = n("37983");
+var s = n("37983");
 n("884691");
-var s = n("446674"),
-  l = n("77078"),
+var l = n("446674"),
+  a = n("77078"),
   i = n("686470"),
   r = n("552712"),
   o = n("964889"),
@@ -19,42 +19,42 @@ function f(e) {
   let {
     application: t,
     fullWidth: n = !1,
-    size: f = l.Button.Sizes.LARGE,
-    color: m,
-    customDisabledColor: E,
-    hideNotLaunchable: _,
-    tooltipPosition: h,
-    onClick: p,
-    className: I,
-    source: T,
-    storeListingAnalyticsProperties: g,
-    pauseAnimation: C,
-    hover: S,
-    innerClassName: A
-  } = e, N = {
+    size: f = a.Button.Sizes.LARGE,
+    color: E,
+    customDisabledColor: _,
+    hideNotLaunchable: T,
+    tooltipPosition: I,
+    onClick: m,
+    className: N,
+    source: p,
+    storeListingAnalyticsProperties: S,
+    pauseAnimation: A,
+    hover: C,
+    innerClassName: h
+  } = e, g = {
     fullWidth: n,
     size: f,
-    color: m,
-    customDisabledColor: E,
-    tooltipPosition: h,
-    onClick: p,
-    className: I,
-    hover: S,
-    innerClassName: A
-  }, M = (0, s.useStateFromStores)([i.default], () => i.default.getActiveLibraryApplication(t.id)), v = null != M ? M.sku.id : null, x = null != v ? v : t.primarySkuId, O = (0, s.useStateFromStores)([r.default], () => null != x && !r.default.didFetchingSkuFail(x));
-  return null != M && (0, o.isUserEntitledToLibraryApplication)(M) ? (0, a.jsx)(c.default, {
-    ...N,
+    color: E,
+    customDisabledColor: _,
+    tooltipPosition: I,
+    onClick: m,
+    className: N,
+    hover: C,
+    innerClassName: h
+  }, M = (0, l.useStateFromStores)([i.default], () => i.default.getActiveLibraryApplication(t.id)), O = null != M ? M.sku.id : null, R = null != O ? O : t.primarySkuId, L = (0, l.useStateFromStores)([r.default], () => null != R && !r.default.didFetchingSkuFail(R));
+  return null != M && (0, o.isUserEntitledToLibraryApplication)(M) ? (0, s.jsx)(c.default, {
+    ...g,
     libraryApplication: M,
-    source: T
-  }) : O ? (0, a.jsx)(u.default, {
-    ...N,
+    source: p
+  }) : L ? (0, s.jsx)(u.default, {
+    ...g,
     skuId: null != M ? M.sku.id : null,
     applicationId: t.id,
-    pauseAnimation: C,
-    storeListingAnalyticsProperties: g
-  }) : (0, a.jsx)(d.default, {
-    ...N,
-    hideNotLaunchable: _,
+    pauseAnimation: A,
+    storeListingAnalyticsProperties: S
+  }) : (0, s.jsx)(d.default, {
+    ...g,
+    hideNotLaunchable: T,
     applicationId: t.id
   })
 }

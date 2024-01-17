@@ -13,19 +13,19 @@ var a = n("37983"),
   u = n("516899"),
   d = n("69927"),
   c = n("657199"),
-  E = n("250666"),
-  f = n("465869"),
+  f = n("250666"),
+  E = n("465869"),
   _ = n("619443"),
   h = n("539938"),
   C = n("305961"),
-  T = n("160299"),
-  I = n("257869"),
+  I = n("160299"),
+  T = n("257869"),
   S = n("638779"),
-  N = n("459736"),
-  A = n("967251"),
-  p = n("663831"),
-  m = n("170185"),
-  g = n("277860"),
+  m = n("459736"),
+  p = n("967251"),
+  A = n("663831"),
+  g = n("170185"),
+  N = n("277860"),
   R = n("724210"),
   O = n("782340"),
   L = n("981239");
@@ -33,10 +33,10 @@ var a = n("37983"),
 function v(e) {
   let {
     guildId: t
-  } = e, n = (0, l.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), v = (0, l.useStateFromStores)([_.default], () => _.default.isConnected()), M = (0, E.default)(t), P = (0, S.default)(t), D = (0, l.useStateFromStores)([T.default], () => T.default.isSubscriptionFetching), y = (0, I.useGroupListingsFetchContext)(), {
+  } = e, n = (0, l.useStateFromStores)([C.default], () => C.default.getGuild(t), [t]), v = (0, l.useStateFromStores)([_.default], () => _.default.isConnected()), M = (0, f.default)(t), P = (0, S.default)(t), D = (0, l.useStateFromStores)([I.default], () => I.default.isSubscriptionFetching), y = (0, T.useGroupListingsFetchContext)(), {
     shouldHideGuildPurchaseEntryPoints: x,
     restrictionsLoading: b
-  } = (0, f.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !y || D || b;
+  } = (0, E.useShouldHideGuildPurchaseEntryPoints)(t), U = null == n || !y || D || b;
   (0, d.usePageTitle)({
     subsection: O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
     location: null == n ? void 0 : n.name
@@ -47,8 +47,8 @@ function v(e) {
     }, []), s.useEffect(() => {
       G && !i.isMobile && (0, c.handleInaccessiblePage)(t, R.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
     }, [t, G]), i.isMobile && G) {
-    let e = null == n ? p.GuildRoleSubscriptionsOverviewErrorType.NOT_GUILD_MEMBER : p.GuildRoleSubscriptionsOverviewErrorType.GUILD_NOT_ELIGIBLE;
-    return (0, a.jsx)(p.GuildRoleSubscriptionsOverviewErrorPage, {
+    let e = null == n ? A.GuildRoleSubscriptionsOverviewErrorType.NOT_GUILD_MEMBER : A.GuildRoleSubscriptionsOverviewErrorType.GUILD_NOT_ELIGIBLE;
+    return (0, a.jsx)(A.GuildRoleSubscriptionsOverviewErrorPage, {
       errorType: e
     })
   }
@@ -58,24 +58,24 @@ function v(e) {
       toolbar: (0, a.jsx)(s.Fragment, {}),
       className: L.headerBar,
       children: [(0, a.jsx)(h.default.Icon, {
-        icon: N.default,
+        icon: m.default,
         "aria-hidden": !0
       }), (0, a.jsx)(h.default.Title, {
         children: O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE
       })]
     }), (0, a.jsx)("div", {
-      id: g.OVERVIEW_NOTICE_ROOT
+      id: N.OVERVIEW_NOTICE_ROOT
     }), (0, a.jsx)("div", {
       className: L.content,
       children: M ? (0, a.jsx)(r.ScrollerNone, {
         className: L.scroller,
         children: (0, a.jsx)("div", {
           className: L.scrollerContent,
-          children: U ? (0, a.jsx)(r.Spinner, {}) : (0, a.jsx)(A.default, {
+          children: U ? (0, a.jsx)(r.Spinner, {}) : (0, a.jsx)(p.default, {
             guild: n
           })
         })
-      }) : (0, a.jsx)(m.default, {})
+      }) : (0, a.jsx)(g.default, {})
     })]
   })
 }
@@ -84,7 +84,7 @@ function M(e) {
   let {
     guildId: t
   } = e;
-  return (0, a.jsx)(I.GroupListingsFetchContextProvider, {
+  return (0, a.jsx)(T.GroupListingsFetchContextProvider, {
     guildId: t,
     refetchOnMount: !0,
     children: (0, a.jsx)(v, {

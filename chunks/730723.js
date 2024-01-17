@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var a = n("986632"),
-  s = n("659500"),
-  l = n("49111"),
+var s = n("986632"),
+  l = n("659500"),
+  a = n("49111"),
   i = n("13030");
 
 function r(e) {
@@ -14,8 +14,8 @@ function r(e) {
     stickerPack: t,
     stickerPickerCategories: n
   } = e;
-  s.ComponentDispatch.dispatchToLastSubscribed(l.ComponentActions.OPEN_EXPRESSION_PICKER, {
+  l.ComponentDispatch.dispatchToLastSubscribed(a.ComponentActions.OPEN_EXPRESSION_PICKER, {
     activeView: i.ExpressionPickerViewType.STICKER
   });
-  let r = n.findIndex(e => e.id === t.id); - 1 !== r && a.StickerPickerStore.setActiveCategoryIndex(r)
+  let r = n.findIndex(e => e.id === t.id); - 1 !== r && s.StickerPickerStore.setActiveCategoryIndex(r)
 }

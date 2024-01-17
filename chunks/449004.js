@@ -13,13 +13,13 @@ var a = n("917351"),
   u = n("697218"),
   d = n("390790");
 let c = {},
-  E = 0,
-  f = !1,
+  f = 0,
+  E = !1,
   _ = !1,
   h = new Set,
   C = new Set;
 
-function T(e, t) {
+function I(e, t) {
   var n;
   return {
     key: e.suggested_user.id,
@@ -29,12 +29,12 @@ function T(e, t) {
     isUnseen: !t && !e.is_viewed
   }
 }(0, a.debounce)(e => d.default.viewSuggestions(e), 15e3);
-class I extends i.default.Store {
+class T extends i.default.Store {
   initialize() {
     this.waitFor(u.default)
   }
   getSuggestionCount() {
-    return E
+    return f
   }
   getSuggestions() {
     return Object.entries(c).map(e => {
@@ -46,31 +46,31 @@ class I extends i.default.Store {
     return c[e]
   }
 }
-I.displayName = "FriendSuggestionStore";
-var S = new I(l.default, {
+T.displayName = "FriendSuggestionStore";
+var S = new T(l.default, {
   CONNECTION_OPEN: function(e) {
-    c = {}, (E = e.friendSuggestionCount) > 0 && (_ = !0, f || !_ || (f = !0, _ = !1, d.default.fetch()))
+    c = {}, (f = e.friendSuggestionCount) > 0 && (_ = !0, E || !_ || (E = !0, _ = !1, d.default.fetch()))
   },
   FRIEND_SUGGESTION_CREATE: function(e) {
-    let t = T(e.suggestion);
+    let t = I(e.suggestion);
     if (null != c[t.key]) return !1;
-    E++, c = {
+    f++, c = {
       ...c,
       [t.key]: t
     }
   },
   FRIEND_SUGGESTION_DELETE: function(e) {
-    E = Math.max(0, --E), delete c[e.suggestedUserId]
+    f = Math.max(0, --f), delete c[e.suggestedUserId]
   },
   LOAD_FRIEND_SUGGESTIONS_SUCCESS: function(e) {
-    f = !1, c = function(e) {
+    E = !1, c = function(e) {
       let t = e.reduce((e, t) => e + (t.is_viewed ? 0 : 1), 0) === e.length,
         n = !(0, r.isInFriendSuggestionSeenStateExperiment)() || t;
-      return s.chain(e).map(e => T(e, n)).keyBy(e => e.key).value()
-    }(e.suggestions), E = s.keys(c).length
+      return s.chain(e).map(e => I(e, n)).keyBy(e => e.key).value()
+    }(e.suggestions), f = s.keys(c).length
   },
   LOAD_FRIEND_SUGGESTIONS_FAILURE: function() {
-    f = !1, c = {}
+    E = !1, c = {}
   },
   VIEWED_FRIEND_SUGGESTIONS_SUCCESS: function(e) {
     e.userIds.forEach(e => {

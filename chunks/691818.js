@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var a = n("446674"),
@@ -34,7 +34,7 @@ class c extends a.default.PersistedStore {
   }
 }
 c.displayName = "PerksRelevanceStore", c.persistKey = "PerksRelevanceStore";
-var E = new c(s.default, {
+var f = new c(s.default, {
   BILLING_PERKS_RELEVANCE_FETCH_START: function() {
     d.hasFetchedRelevance = !0
   },

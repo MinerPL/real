@@ -1,23 +1,23 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return o
   }
 });
-var a = n("37983");
+var i = n("37983");
 n("884691");
-var l = n("446674"),
-  u = n("77078"),
-  s = n("126501"),
-  d = n("282109"),
-  i = n("782340");
+var s = n("446674"),
+  a = n("77078"),
+  l = n("126501"),
+  u = n("282109"),
+  d = n("782340");
 
-function r(e) {
-  let t = (0, l.useStateFromStores)([d.default], () => d.default.isGuildCollapsed(e), [e]);
-  return (0, a.jsx)(u.MenuCheckboxItem, {
+function o(e) {
+  let t = (0, s.useStateFromStores)([u.default], () => u.default.isGuildCollapsed(e), [e]);
+  return (0, i.jsx)(a.MenuCheckboxItem, {
     id: "hide-muted-channels",
-    label: i.default.Messages.HIDE_MUTED_CHANNELS,
-    action: () => s.default.toggleCollapseGuild(e),
+    label: d.default.Messages.HIDE_MUTED_CHANNELS,
+    action: () => l.default.toggleCollapseGuild(e),
     checked: t
   })
 }

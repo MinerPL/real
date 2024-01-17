@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   useMediaPostEmbedData: function() {
-    return I
+    return N
   }
 });
-var a = n("884691"),
-  s = n("65597"),
-  l = n("203288"),
+var s = n("884691"),
+  l = n("65597"),
+  a = n("203288"),
   i = n("361572"),
   r = n("271938"),
   o = n("42203"),
@@ -14,63 +14,63 @@ var a = n("884691"),
   d = n("305961"),
   c = n("162771"),
   f = n("697218"),
-  m = n("639440"),
-  E = n("690563"),
-  _ = n("921387"),
-  h = n("711326"),
-  p = n("49111");
+  E = n("639440"),
+  _ = n("690563"),
+  T = n("921387"),
+  I = n("711326"),
+  m = n("49111");
 
-function I(e, t) {
-  let n = (0, E.useEligibleForGuildMediaChannelPostPreviewEmbed)(),
-    I = (0, h.getMediaPostEmbedChannelPath)(e),
-    T = (0, s.default)([u.default, r.default], () => {
+function N(e, t) {
+  let n = (0, _.useEligibleForGuildMediaChannelPostPreviewEmbed)(),
+    N = (0, I.getMediaPostEmbedChannelPath)(e),
+    p = (0, l.default)([u.default, r.default], () => {
       let e = r.default.getId();
-      return u.default.isMember(null == I ? void 0 : I.guildId, e)
-    }, [I]),
-    g = (0, s.default)([l.default], () => null != I && (null == I ? void 0 : I.channelId) != null && l.default.isChannelGated(I.guildId, I.channelId), [I]),
-    C = t.hasFlag(p.MessageFlags.IS_CROSSPOST),
+      return u.default.isMember(null == N ? void 0 : N.guildId, e)
+    }, [N]),
+    S = (0, l.default)([a.default], () => null != N && (null == N ? void 0 : N.channelId) != null && a.default.isChannelGated(N.guildId, N.channelId), [N]),
+    A = t.hasFlag(m.MessageFlags.IS_CROSSPOST),
     {
-      rawMediaPostEmbedData: S,
-      guild: A,
-      parentChannel: N,
+      rawMediaPostEmbedData: C,
+      guild: h,
+      parentChannel: g,
       user: M,
-      selectedGuildId: v,
-      canAccess: x
-    } = (0, s.useStateFromStoresObject)([_.default, d.default, o.default, f.default, c.default], () => {
+      selectedGuildId: O,
+      canAccess: R
+    } = (0, l.useStateFromStoresObject)([T.default, d.default, o.default, f.default, c.default], () => {
       var e;
-      let t = null === (e = _.default.getMediaPostEmbed(null == I ? void 0 : I.threadId)) || void 0 === e ? void 0 : e.media,
-        n = d.default.getGuild(null == I ? void 0 : I.guildId),
-        a = o.default.getChannel(null == I ? void 0 : I.channelId),
-        s = f.default.getUser(null == t ? void 0 : t.author_id),
-        l = c.default.getGuildId(),
-        r = null != a && (0, i.canViewChannel)(a);
+      let t = null === (e = T.default.getMediaPostEmbed(null == N ? void 0 : N.threadId)) || void 0 === e ? void 0 : e.media,
+        n = d.default.getGuild(null == N ? void 0 : N.guildId),
+        s = o.default.getChannel(null == N ? void 0 : N.channelId),
+        l = f.default.getUser(null == t ? void 0 : t.author_id),
+        a = c.default.getGuildId(),
+        r = null != s && (0, i.canViewChannel)(s);
       return {
         rawMediaPostEmbedData: t,
         guild: n,
-        parentChannel: a,
-        user: s,
-        selectedGuildId: l,
+        parentChannel: s,
+        user: l,
+        selectedGuildId: a,
         canAccess: r
       }
-    }, [I]),
-    O = a.useMemo(() => {
-      let e = (0, h.getMediaPostEmbedCommonData)({
-        mediaPostEmbedData: S,
-        guild: A,
-        parentChannel: N,
+    }, [N]),
+    L = s.useMemo(() => {
+      let e = (0, I.getMediaPostEmbedCommonData)({
+        mediaPostEmbedData: C,
+        guild: h,
+        parentChannel: g,
         user: M,
-        selectedGuildId: v,
-        canAccess: x
+        selectedGuildId: O,
+        canAccess: R
       });
       return null == e ? null : {
         ...e,
         user: M
       }
-    }, [S, A, N, M, v, x]);
-  return a.useEffect(() => {
-    if ((null == I ? void 0 : I.threadId) != null) {
-      let e = _.default.getEmbedFetchState(I.threadId);
-      !0 === n && e === _.FetchState.NOT_FETCHED && (!T || !1 !== g) && (T || !C) && (0, m.fetchMediaPostEmbed)(null == I ? void 0 : I.threadId)
+    }, [C, h, g, M, O, R]);
+  return s.useEffect(() => {
+    if ((null == N ? void 0 : N.threadId) != null) {
+      let e = T.default.getEmbedFetchState(N.threadId);
+      !0 === n && e === T.FetchState.NOT_FETCHED && (!p || !1 !== S) && (p || !A) && (0, E.fetchMediaPostEmbed)(null == N ? void 0 : N.threadId)
     }
-  }, [I, n, T, g, C]), O
+  }, [N, n, p, S, A]), L
 }

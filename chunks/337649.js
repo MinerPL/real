@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return E
   }
 });
 var a = n("37983");
@@ -9,64 +9,64 @@ n("884691");
 var s = n("77078"),
   l = n("476765"),
   i = n("849467"),
-  u = n("155207"),
-  r = n("228427"),
-  d = n("244480"),
-  o = n("151642"),
-  c = n("29846"),
+  r = n("155207"),
+  u = n("228427"),
+  c = n("244480"),
+  d = n("151642"),
+  o = n("29846"),
   f = n("119184"),
   _ = n("782340"),
-  E = n("262999");
+  h = n("262999");
 
-function h(e) {
+function E(e) {
   let {
     channel: t,
     transitionState: n,
-    onClose: h,
-    ...T
-  } = e, p = (0, l.useUID)(), g = (0, o.useStageBlockedUsersCount)(t.id), I = async () => {
-    await (0, d.moveSelfToAudience)(t), h()
+    onClose: E,
+    ...p
+  } = e, T = (0, l.useUID)(), g = (0, d.useStageBlockedUsersCount)(t.id), I = async () => {
+    await (0, c.moveSelfToAudience)(t), E()
   }, S = async () => {
-    await (0, d.audienceAckRequestToSpeak)(t, !1), h()
+    await (0, c.audienceAckRequestToSpeak)(t, !1), E()
   };
   return (0, a.jsx)(s.ModalRoot, {
     transitionState: n,
-    "aria-labelledby": p,
-    ...T,
+    "aria-labelledby": T,
+    ...p,
     size: s.ModalSize.SMALL,
     children: (0, a.jsxs)(s.ModalContent, {
-      className: E.content,
+      className: h.content,
       children: [(0, a.jsx)(f.default, {
         children: (0, a.jsx)("div", {
-          className: E.stageIconBackground,
-          children: (0, a.jsx)(r.default, {
+          className: h.stageIconBackground,
+          children: (0, a.jsx)(u.default, {
             width: 40,
             height: 40,
-            className: E.stageIcon
+            className: h.stageIcon
           })
         })
       }), (0, a.jsx)(s.Heading, {
-        id: p,
+        id: T,
         variant: "heading-xl/semibold",
         color: "header-primary",
-        className: E.headerTitle,
+        className: h.headerTitle,
         children: _.default.Messages.STAGE_MODERATOR_JOIN_MODAL_TITLE
       }), (0, a.jsx)(s.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        className: E.headerSubtitle,
+        className: h.headerSubtitle,
         children: _.default.Messages.STAGE_MODERATOR_JOIN_MODAL_SUBTITLE
-      }), g > 0 && (0, a.jsx)(c.BlockedUsersNotice, {
+      }), g > 0 && (0, a.jsx)(o.BlockedUsersNotice, {
         channelId: t.id
       }), (0, a.jsxs)("div", {
-        className: E.buttonsContainer,
+        className: h.buttonsContainer,
         children: [(0, a.jsxs)(s.Button, {
           color: s.Button.Colors.PRIMARY,
-          className: E.button,
-          innerClassName: E.innerButton,
+          className: h.button,
+          innerClassName: h.innerButton,
           onClick: S,
           children: [(0, a.jsx)("div", {
-            className: E.icon,
+            className: h.icon,
             children: (0, a.jsx)(i.default, {
               width: 20,
               height: 20
@@ -74,12 +74,12 @@ function h(e) {
           }), _.default.Messages.STAGE_MODERATOR_JOIN_MODAL_JOIN_SPEAKER]
         }), (0, a.jsxs)(s.Button, {
           color: s.Button.Colors.PRIMARY,
-          className: E.button,
-          innerClassName: E.innerButton,
+          className: h.button,
+          innerClassName: h.innerButton,
           onClick: I,
           children: [(0, a.jsx)("div", {
-            className: E.icon,
-            children: (0, a.jsx)(u.default, {
+            className: h.icon,
+            children: (0, a.jsx)(r.default, {
               width: 20,
               height: 20
             })

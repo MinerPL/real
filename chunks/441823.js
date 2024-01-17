@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   openUserContextMenu: function() {
-    return u
+    return l
   },
   openModerateUserContextMenu: function() {
-    return l
+    return u
   },
   openModerateRoleContextMenu: function() {
     return o
@@ -13,71 +13,71 @@ n.r(t), n.d(t, {
     return s
   }
 }), n("70102");
-var r = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("272030");
+var r = n("272030");
 
-function u(e, t, u) {
-  u.isGroupDM() ? (0, i.openContextMenuLazy)(e, async () => {
+function l(e, t, l) {
+  l.isGroupDM() ? (0, r.openContextMenuLazy)(e, async () => {
     let {
       default: e
     } = await n.el("166452").then(n.bind(n, "166452"));
-    return n => (0, r.jsx)(e, {
+    return n => (0, i.jsx)(e, {
       ...n,
       user: t,
-      channel: u
+      channel: l
     })
-  }) : u.isDM() ? (0, i.openContextMenuLazy)(e, async () => {
+  }) : l.isDM() ? (0, r.openContextMenuLazy)(e, async () => {
     let {
       default: e
     } = await n.el("130074").then(n.bind(n, "130074"));
-    return n => (0, r.jsx)(e, {
+    return n => (0, i.jsx)(e, {
       ...n,
       user: t,
-      channel: u,
+      channel: l,
       showMute: !1,
       targetIsUser: !0
     })
-  }) : null != u.guild_id ? (0, i.openContextMenuLazy)(e, async () => {
+  }) : null != l.guild_id ? (0, r.openContextMenuLazy)(e, async () => {
     let {
       default: e
     } = await n.el("834247").then(n.bind(n, "834247"));
-    return n => (0, r.jsx)(e, {
+    return n => (0, i.jsx)(e, {
       ...n,
       user: t,
-      channel: u,
-      guildId: u.guild_id
+      channel: l,
+      guildId: l.guild_id
     })
-  }) : (0, i.openContextMenuLazy)(e, async () => {
+  }) : (0, r.openContextMenuLazy)(e, async () => {
     let {
       default: e
     } = await n.el("406784").then(n.bind(n, "406784"));
-    return n => (0, r.jsx)(e, {
+    return n => (0, i.jsx)(e, {
       ...n,
       user: t
     })
   })
 }
 
-function l(e, t) {
+function u(e, t) {
   let {
-    user: u,
-    channel: l,
+    user: l,
+    channel: u,
     moderationAlertId: o,
     guildId: s,
     analyticsLocations: a,
     onCloseContextMenu: d
   } = t;
-  if ((null == l ? void 0 : l.isGroupDM()) || (null == l ? void 0 : l.isDM())) throw Error("Cannot moderate user in DM or group DM");
-  let c = null != s ? s : null == l ? void 0 : l.getGuildId();
-  null != c && (0, i.openContextMenuLazy)(e, async () => {
+  if ((null == u ? void 0 : u.isGroupDM()) || (null == u ? void 0 : u.isDM())) throw Error("Cannot moderate user in DM or group DM");
+  let c = null != s ? s : null == u ? void 0 : u.getGuildId();
+  null != c && (0, r.openContextMenuLazy)(e, async () => {
     let {
       default: e
     } = await n.el("467940").then(n.bind(n, "467940"));
-    return t => (0, r.jsx)(e, {
+    return t => (0, i.jsx)(e, {
       ...t,
-      user: u,
-      channelId: null == l ? void 0 : l.id,
+      user: l,
+      channelId: null == u ? void 0 : u.id,
       guildId: c,
       moderationAlertId: o,
       analyticsLocations: a,
@@ -88,33 +88,33 @@ function l(e, t) {
 
 function o(e, t) {
   let {
-    user: u,
-    guildId: l,
+    user: l,
+    guildId: u,
     analyticsLocations: o,
     onCloseContextMenu: s
   } = t;
-  (0, i.openContextMenuLazy)(e, async () => {
+  (0, r.openContextMenuLazy)(e, async () => {
     let {
       default: e
     } = await n.el("522651").then(n.bind(n, "522651"));
-    return t => (0, r.jsx)(e, {
+    return t => (0, i.jsx)(e, {
       ...t,
-      user: u,
-      guildId: l,
+      user: l,
+      guildId: u,
       analyticsLocations: o,
       onCloseContextMenu: s
     })
   })
 }
 
-function s(e, t, u) {
-  null != u && (0, i.openContextMenuLazy)(e, async () => {
+function s(e, t, l) {
+  null != l && (0, r.openContextMenuLazy)(e, async () => {
     let {
       default: e
     } = await n.el("701587").then(n.bind(n, "701587"));
-    return t => (0, r.jsx)(e, {
+    return t => (0, i.jsx)(e, {
       ...t,
-      guildId: u
+      guildId: l
     })
   })
 }

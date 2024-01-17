@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var a = n("37983");
@@ -15,7 +15,7 @@ var s = n("77078"),
   d = n("49111");
 let c = "activity-hardware-acceleration-modal";
 
-function E(e) {
+function f(e) {
   let t = !i.default.disableActivityHardwareAccelerationPrompt;
   t && r.isPlatformEmbedded && !o.default.getEnableHardwareAcceleration() && (0, s.openModalLazy)(async () => {
     let {

@@ -13,19 +13,19 @@ var a = n("37983"),
   u = n("55058"),
   d = n("384997"),
   c = n("48821"),
-  E = n("388437"),
-  f = n("667048"),
+  f = n("388437"),
+  E = n("667048"),
   _ = n("153014"),
   h = n("79176"),
   C = n("986321"),
-  T = n("519440"),
-  I = n("947337"),
+  I = n("519440"),
+  T = n("947337"),
   S = n("197881"),
-  N = n("401774"),
-  A = n("607894"),
-  p = n("746504"),
-  m = n("107153"),
-  g = n("32505"),
+  m = n("401774"),
+  p = n("607894"),
+  A = n("746504"),
+  g = n("107153"),
+  N = n("32505"),
   R = n("731681"),
   O = n("427474"),
   L = n("994428");
@@ -63,27 +63,27 @@ function M(e) {
               markAsDismissed: i
             });
           case l.DismissibleContent.CHANNEL_NOTICE_INVITE:
-            return (0, a.jsx)(p.default, {
+            return (0, a.jsx)(A.default, {
               guild: n,
               markAsDismissed: i
             });
           case l.DismissibleContent.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION:
-            return (0, a.jsx)(f.default, {
-              guild: n,
-              markAsDismissed: i
-            });
-          case l.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER:
-            return (0, a.jsx)(g.default, {
-              guild: n,
-              markAsDismissed: i
-            });
-          case l.DismissibleContent.CHANNEL_NOTICE_GUILD_BANNER:
             return (0, a.jsx)(E.default, {
               guild: n,
               markAsDismissed: i
             });
+          case l.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER:
+            return (0, a.jsx)(N.default, {
+              guild: n,
+              markAsDismissed: i
+            });
+          case l.DismissibleContent.CHANNEL_NOTICE_GUILD_BANNER:
+            return (0, a.jsx)(f.default, {
+              guild: n,
+              markAsDismissed: i
+            });
           case l.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE:
-            return (0, a.jsx)(A.default, {
+            return (0, a.jsx)(p.default, {
               guild: n,
               markAsDismissed: i
             });
@@ -109,7 +109,7 @@ var P = e => {
   } = e, n = (0, R.default)(t);
   switch (n) {
     case R.ConnectedChannelNotices.ENABLE_PUBLIC_GUILD:
-      return (0, a.jsx)(I.default, {
+      return (0, a.jsx)(T.default, {
         guild: t
       });
     case R.ConnectedChannelNotices.APPLIED_GUILD_BOOST_GRACE_PERIOD:
@@ -117,7 +117,7 @@ var P = e => {
         guild: t
       });
     case R.ConnectedChannelNotices.MAX_MEMBER_COUNT:
-      return (0, a.jsx)(m.default, {
+      return (0, a.jsx)(g.default, {
         guild: t
       });
     case R.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
@@ -125,11 +125,11 @@ var P = e => {
         guild: t
       });
     case R.ConnectedChannelNotices.GUILD_MFA_WARNING:
-      return (0, a.jsx)(N.default, {
+      return (0, a.jsx)(m.default, {
         guild: t
       });
     case R.ConnectedChannelNotices.COMMANDS_MIGRATION:
-      return (0, a.jsx)(T.default, {
+      return (0, a.jsx)(I.default, {
         guild: t
       });
     case R.ConnectedChannelNotices.APPLICATION_SUBSCRIPTION_EXPIRATION:

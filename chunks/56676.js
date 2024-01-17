@@ -5,13 +5,13 @@ n.r(t), n.d(t, {
   }
 }), n("808653");
 var l = n("446674"),
-  r = n("913144");
-let s = {},
+  s = n("913144");
+let r = {},
   u = null,
   a = null;
 
 function i(e, t) {
-  null == t ? e in s && delete s[e] : null != e && (s[e] = t)
+  null == t ? e in r && delete r[e] : null != e && (r[e] = t)
 }
 
 function o(e) {
@@ -22,11 +22,11 @@ function o(e) {
 }
 class c extends l.default.PersistedStore {
   initialize(e) {
-    null != e && (s = e)
+    null != e && (r = e)
   }
   requiredActions(e) {
     var t;
-    return null !== (t = s[e]) && void 0 !== t ? t : null
+    return null !== (t = r[e]) && void 0 !== t ? t : null
   }
   requiredActionsIncludes(e, t) {
     let n = this.requiredActions(e);
@@ -36,11 +36,11 @@ class c extends l.default.PersistedStore {
     return u === e
   }
   getState() {
-    return s
+    return r
   }
 }
 c.displayName = "LoginRequiredActionStore", c.persistKey = "LoginRequiredActionStore";
-var d = new c(r.default, {
+var d = new c(s.default, {
   LOGIN_ATTEMPTED: function(e) {
     let {
       required_actions: t,

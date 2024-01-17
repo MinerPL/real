@@ -14,8 +14,8 @@ var s = n("77078"),
   u = n("473591"),
   d = n("929423"),
   c = n("783142"),
-  E = n("697218"),
-  f = n("719923"),
+  f = n("697218"),
+  E = n("719923"),
   _ = n("75015");
 class h extends r.default {
   _initialize() {
@@ -31,15 +31,15 @@ class h extends r.default {
       uploadType: r,
       guildId: h,
       isTryItOutFlow: C
-    } = e, T = u.default.isEditingClydeProfile(), I = T ? o.setPendingAvatar : null != h ? d.setPendingAvatar : l.setPendingAvatar, S = T ? o.setPendingBanner : null != h ? d.setPendingBanner : c.setPendingBanner, N = E.default.getCurrentUser();
+    } = e, I = u.default.isEditingClydeProfile(), T = I ? o.setPendingAvatar : null != h ? d.setPendingAvatar : l.setPendingAvatar, S = I ? o.setPendingBanner : null != h ? d.setPendingBanner : c.setPendingBanner, m = f.default.getCurrentUser();
     if (r === _.UploadTypes.AVATAR) {
       if (C) {
         (0, c.setTryItOutAvatar)(t);
         return
       }
-      let e = f.default.canUseAnimatedAvatar(N);
-      if (e || "image/gif" !== i.type || T) {
-        I(t);
+      let e = E.default.canUseAnimatedAvatar(m);
+      if (e || "image/gif" !== i.type || I) {
+        T(t);
         return
       }(0, s.openModalLazy)(async () => {
         let {
@@ -47,7 +47,7 @@ class h extends r.default {
         } = await n.el("745544").then(n.bind(n, "745544"));
         return n => (0, a.jsx)(e, {
           avatarSrc: t,
-          onSubscribe: () => I(t),
+          onSubscribe: () => T(t),
           ...n
         })
       })
@@ -56,8 +56,8 @@ class h extends r.default {
         (0, c.setTryItOutBanner)(t);
         return
       }
-      let e = f.default.canUsePremiumProfileCustomization(N);
-      if (e || T) {
+      let e = E.default.canUsePremiumProfileCustomization(m);
+      if (e || I) {
         S(t);
         return
       }(0, s.openModalLazy)(async () => {

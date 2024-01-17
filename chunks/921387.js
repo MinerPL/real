@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   FetchState: function() {
-    return s
+    return l
   },
   default: function() {
     return d
   }
 });
-var a, s, l = n("35092"),
+var s, l, a = n("35092"),
   i = n("913144");
-(a = s || (s = {}))[a.NOT_FETCHED = 0] = "NOT_FETCHED", a[a.FETCHING = 1] = "FETCHING", a[a.FETCHED = 2] = "FETCHED", a[a.FAILED = 3] = "FAILED";
+(s = l || (l = {}))[s.NOT_FETCHED = 0] = "NOT_FETCHED", s[s.FETCHING = 1] = "FETCHING", s[s.FETCHED = 2] = "FETCHED", s[s.FAILED = 3] = "FAILED";
 let r = {},
   o = {};
-class u extends l.default.Store {
+class u extends a.default.Store {
   getMediaPostEmbed(e) {
     if (null != e) return r[e]
   }

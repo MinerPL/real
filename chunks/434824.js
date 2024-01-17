@@ -1,62 +1,62 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return o
+    return d
   }
 });
-var a = s("37983");
-s("884691");
-var n = s("124969"),
-  l = s("5487"),
-  i = s("473759"),
-  r = s("579033"),
-  u = s("685991");
-let d = {
-  [r.InternalTemplateCodes.CLASSROOM]: s("251834"),
-  [r.InternalTemplateCodes.LOCAL_COMMUNITIES]: s("787762"),
-  [r.InternalTemplateCodes.CREATORS_HOBBIES]: s("41668"),
-  [r.InternalTemplateCodes.GLOBAL_COMMUNITIES]: s("494323"),
-  [r.InternalTemplateCodes.FRIENDS_FAMILY]: s("660389"),
-  [r.InternalTemplateCodes.STUDY_GROUPS]: s("508971"),
-  [r.InternalTemplateCodes.CREATE_FROM_SCRATCH]: s("800573"),
-  [r.InternalTemplateCodes.CAMPUS_CLUBS]: s("97595"),
-  [r.InternalTemplateCodes.LEAGUE_CLUBS]: s("556659"),
-  [r.InternalTemplateCodes.GITHUB_HACKATHON]: s("212509")
+var s = n("37983");
+n("884691");
+var a = n("124969"),
+  l = n("5487"),
+  r = n("473759"),
+  i = n("579033"),
+  o = n("685991");
+let u = {
+  [i.InternalTemplateCodes.CLASSROOM]: n("251834"),
+  [i.InternalTemplateCodes.LOCAL_COMMUNITIES]: n("787762"),
+  [i.InternalTemplateCodes.CREATORS_HOBBIES]: n("41668"),
+  [i.InternalTemplateCodes.GLOBAL_COMMUNITIES]: n("494323"),
+  [i.InternalTemplateCodes.FRIENDS_FAMILY]: n("660389"),
+  [i.InternalTemplateCodes.STUDY_GROUPS]: n("508971"),
+  [i.InternalTemplateCodes.CREATE_FROM_SCRATCH]: n("800573"),
+  [i.InternalTemplateCodes.CAMPUS_CLUBS]: n("97595"),
+  [i.InternalTemplateCodes.LEAGUE_CLUBS]: n("556659"),
+  [i.InternalTemplateCodes.GITHUB_HACKATHON]: n("212509")
 };
 
-function o(e) {
+function d(e) {
   let {
     headerId: t,
-    guildTemplate: s
-  } = e, o = s.code, c = d[o];
+    guildTemplate: n
+  } = e, d = n.code, c = u[d];
   if (null != c) {
-    var E;
+    var f;
     let {
       header: e,
-      description: d,
-      author: T
-    } = (0, l.default)(o);
-    return (0, a.jsxs)("div", {
-      children: [(0, a.jsx)("img", {
-        className: u.image,
+      description: u,
+      author: E
+    } = (0, l.default)(d);
+    return (0, s.jsxs)("div", {
+      children: [(0, s.jsx)("img", {
+        className: o.image,
         src: c,
         alt: ""
-      }), (0, a.jsx)(n.Title, {
-        className: u.header,
+      }), (0, s.jsx)(a.Title, {
+        className: o.header,
         id: t,
         children: e
-      }), (0, a.jsx)(n.SubTitle, {
-        children: d
-      }), s.state === r.GuildTemplateStates.RESOLVED ? (0, a.jsx)(i.UsagePill, {
-        className: u.usagePill,
-        count: null !== (E = s.usageCount) && void 0 !== E ? E : 0,
-        verifiedName: T
+      }), (0, s.jsx)(a.SubTitle, {
+        children: u
+      }), n.state === i.GuildTemplateStates.RESOLVED ? (0, s.jsx)(r.UsagePill, {
+        className: o.usagePill,
+        count: null !== (f = n.usageCount) && void 0 !== f ? f : 0,
+        verifiedName: E
       }) : null]
     })
   }
-  return (0, a.jsx)(i.default, {
-    pillClassName: u.usagePill,
-    guildTemplate: s,
+  return (0, s.jsx)(r.default, {
+    pillClassName: o.usagePill,
+    guildTemplate: n,
     tall: !0
   })
 }

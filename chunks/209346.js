@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   useUserEligibleForPolls: function() {
-    return s
+    return l
   }
 });
-var a = n("83995");
+var s = n("83995");
 
-function s(e) {
+function l(e) {
   let {
     enabled: t
-  } = a.PollsUserExperiment.useExperiment({
+  } = s.PollsUserExperiment.useExperiment({
     location: e
   }, {
     autoTrackExposure: !0

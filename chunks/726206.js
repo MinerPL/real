@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return m
   }
 }), n("222007");
 var s = n("37983"),
@@ -21,7 +21,7 @@ var s = n("37983"),
   h = n("956874"),
   N = n("926622");
 r.default.initialize();
-class m extends a.PureComponent {
+class T extends a.PureComponent {
   componentDidMount() {
     this.handleVerify(), (0, c.trackAppUIViewed)("verify_email")
   }
@@ -99,13 +99,13 @@ class m extends a.PureComponent {
     }
   }
 }
-m.defaultProps = {
+T.defaultProps = {
   transitionTo: e => n.g.location.assign(e)
 };
-var T = r.default.connectStores([f.default], () => ({
+var m = r.default.connectStores([f.default], () => ({
   verifyFailed: f.default.didVerifyFail(),
   verifyErrors: f.default.getVerifyErrors(),
   verifySucceeded: f.default.didVerifySucceed(),
   fingerprint: f.default.getFingerprint(),
   verifyingUserId: f.default.getVerifyingUserId()
-}))(m)
+}))(T)

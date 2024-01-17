@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return a
   }
 });
-var a = n("862205");
-let s = (0, a.createExperiment)({
+var s = n("862205");
+let l = (0, s.createExperiment)({
   id: "2023-06_new_activity_one_time_purchase_modal",
   label: "New Activity One Time Purchase Modal",
   kind: "user",
@@ -20,4 +20,4 @@ let s = (0, a.createExperiment)({
     }
   }]
 });
-var l = s
+var a = l

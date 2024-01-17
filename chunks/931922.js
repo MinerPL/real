@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return P
+    return b
   }
 }), n("222007");
 var s = n("37983"),
@@ -18,86 +18,86 @@ var s = n("37983"),
   C = n("798609"),
   p = n("679653"),
   m = n("462430"),
-  E = n("592407"),
-  g = n("367376"),
+  g = n("592407"),
+  E = n("367376"),
   S = n("305961"),
-  _ = n("957255"),
-  A = n("697218"),
+  A = n("957255"),
+  _ = n("697218"),
   T = n("987772"),
   M = n("155207"),
   I = n("917686"),
   N = n("317134"),
-  L = n("991170"),
-  v = n("158998"),
-  R = n("938244"),
-  x = n("172554"),
+  v = n("991170"),
+  L = n("158998"),
+  x = n("938244"),
+  R = n("172554"),
   y = n("730859"),
   D = n("49111"),
   O = n("782340"),
   j = n("935107");
 
-function P(e) {
+function b(e) {
   let {
     channel: t
-  } = e, [n, l] = a.useState(!1), r = (0, p.default)(t, !0), P = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), b = (0, c.useStateFromStores)([A.default], () => A.default.getUser(null == P ? void 0 : P.ownerId)), U = a.useMemo(() => null != P ? o(P.roles).sortBy(e => -e.position).filter(e => e.id !== P.id).value() : [], [P]), F = a.useMemo(() => o(U).filter(e => {
-    if (null == P) return !1;
-    let n = L.default.computePermissionsForRoles({
+  } = e, [n, l] = a.useState(!1), r = (0, p.default)(t, !0), b = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), P = (0, c.useStateFromStores)([_.default], () => _.default.getUser(null == b ? void 0 : b.ownerId)), H = a.useMemo(() => null != b ? o(b.roles).sortBy(e => -e.position).filter(e => e.id !== b.id).value() : [], [b]), F = a.useMemo(() => o(H).filter(e => {
+    if (null == b) return !1;
+    let n = v.default.computePermissionsForRoles({
       forceRoles: {
         [e.id]: e
       },
       context: t
     });
     return u.default.has(n, D.Permissions.ADMINISTRATOR) || u.default.has(n, D.Permissions.VIEW_CHANNEL)
-  }).value(), [t, P, U]), H = (0, c.useStateFromStoresArray)([A.default], () => {
+  }).value(), [t, b, H]), U = (0, c.useStateFromStoresArray)([_.default], () => {
     let e = {};
-    for (let n of (null != b && (e[b.id] = b), Object.values(t.permissionOverwrites))) {
+    for (let n of (null != P && (e[P.id] = P), Object.values(t.permissionOverwrites))) {
       if (n.type !== C.PermissionOverwriteType.MEMBER || null != e[n.id]) continue;
-      let t = A.default.getUser(n.id);
+      let t = _.default.getUser(n.id);
       null != t && (e[t.id] = t)
     }
     return o(e).filter(e => {
       var n;
-      let s = L.default.can({
+      let s = v.default.can({
           permission: D.Permissions.ADMINISTRATOR,
           user: e,
           context: t
         }),
-        a = null !== (n = t.permissionOverwrites[e.id]) && void 0 !== n ? n : L.default.NONE,
+        a = null !== (n = t.permissionOverwrites[e.id]) && void 0 !== n ? n : v.default.NONE,
         l = u.default.has(a.allow, D.Permissions.VIEW_CHANNEL);
       return s || l
     }).value()
-  }, [t, b]), k = _.default.can(D.Permissions.MANAGE_CHANNELS, t) || _.default.can(D.Permissions.MANAGE_ROLES, t);
+  }, [t, P]), k = A.default.can(D.Permissions.MANAGE_CHANNELS, t) || A.default.can(D.Permissions.MANAGE_ROLES, t);
 
   function G() {
     h.default.open(t.id)
   }
   let w = a.useCallback(() => l(!1), []);
-  return (0, s.jsxs)(x.default, {
+  return (0, s.jsxs)(R.default, {
     channelId: t.id,
-    children: [(0, s.jsx)(x.EmptyMessageIcon, {
+    children: [(0, s.jsx)(R.EmptyMessageIcon, {
       locked: !0,
       channelType: t.type
-    }), (0, s.jsx)(x.EmptyMessageHeader, {
+    }), (0, s.jsx)(R.EmptyMessageHeader, {
       children: O.default.Messages.BEGINNING_CHANNEL_WELCOME.format({
         channelName: r
       })
-    }), (0, s.jsx)(x.EmptyMessageBody, {
+    }), (0, s.jsx)(R.EmptyMessageBody, {
       children: O.default.Messages.BEGINNING_ROLE_REQUIRED_CHANNEL_DESCRIPTION.format({
         channelName: r,
-        topicHook: () => g.default.parseTopic(t.topic, !0, {
+        topicHook: () => E.default.parseTopic(t.topic, !0, {
           channelId: t.id
         })
       })
     }), k ? (0, s.jsxs)("div", {
       className: j.channelSettingButtons,
-      children: [(0, s.jsx)(R.default, {
+      children: [(0, s.jsx)(x.default, {
         label: O.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE,
         onClick: () => l(!0),
         icon: (0, s.jsx)(M.default, {
           width: 16,
           height: 16
         })
-      }), (0, s.jsx)(R.default, {
+      }), (0, s.jsx)(x.default, {
         label: O.default.Messages.EDIT_CHANNEL,
         onClick: G,
         icon: (0, s.jsx)(T.default, {
@@ -108,14 +108,14 @@ function P(e) {
     }) : null, (0, s.jsxs)("div", {
       className: j.members,
       children: [function() {
-        if (1 !== H.length || F.length > 0) return (0, s.jsx)(y.default, {
+        if (1 !== U.length || F.length > 0) return (0, s.jsx)(y.default, {
           guildId: t.guild_id,
           className: j.avatars,
           maxUsers: 5,
-          users: H
+          users: U
         });
-        let e = H[0],
-          n = v.default.getName(e);
+        let e = U[0],
+          n = L.default.getName(e);
         return (0, s.jsxs)("div", {
           className: j.avatars,
           children: [(0, s.jsx)(f.Avatar, {
@@ -147,7 +147,7 @@ function P(e) {
           disabled: !k,
           verified: o,
           onClick: () => {
-            E.default.open(t.guild_id, D.GuildSettingsSections.MEMBERS), E.default.selectRole(e.id)
+            g.default.open(t.guild_id, D.GuildSettingsSections.MEMBERS), g.default.selectRole(e.id)
           }
         }, e.id) : (0, s.jsx)(N.default, {
           className: i(j.role, {

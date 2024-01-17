@@ -11,12 +11,12 @@ var l = n("446674"),
   i = n("913144");
 let r = {},
   s = {},
-  a = {},
-  o = !1,
+  o = {},
+  a = !1,
   u = !1,
-  d = !1;
+  c = !1;
 
-function c(e) {
+function d(e) {
   let {
     guild: t
   } = e.invite;
@@ -38,11 +38,11 @@ class E extends l.default.Store {
     return u
   }
   hasError() {
-    return d
+    return c
   }
   hasSeen(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return null != e && (t ? o : a[e] || !1)
+    return null != e && (t ? a : o[e] || !1)
   }
   isEmpty(e) {
     if (null == e) return !0;
@@ -52,8 +52,8 @@ class E extends l.default.Store {
 }
 E.displayName = "WelcomeScreenStore";
 var _ = new E(i.default, {
-  INVITE_RESOLVE_SUCCESS: c,
-  INVITE_ACCEPT_SUCCESS: c,
+  INVITE_RESOLVE_SUCCESS: d,
+  INVITE_ACCEPT_SUCCESS: d,
   WELCOME_SCREEN_SUBMIT_SUCCESS: f,
   WELCOME_SCREEN_UPDATE: f,
   WELCOME_SCREEN_VIEW: function(e) {
@@ -61,10 +61,10 @@ var _ = new E(i.default, {
       guildId: t,
       isLurking: n
     } = e;
-    a[t] = !0, n && (o = !0)
+    o[t] = !0, n && (a = !0)
   },
   GUILD_STOP_LURKING: function() {
-    o = !1
+    a = !1
   },
   GUILD_DELETE: function(e) {
     let {
@@ -72,13 +72,13 @@ var _ = new E(i.default, {
         id: t
       }
     } = e;
-    a[t] = !1
+    o[t] = !1
   },
   WELCOME_SCREEN_FETCH_START: function() {
-    u = !0, d = !1
+    u = !0, c = !1
   },
   WELCOME_SCREEN_FETCH_SUCCESS: function(e) {
-    u = !1, d = !1;
+    u = !1, c = !1;
     let {
       welcomeScreen: t,
       guildId: n
@@ -86,6 +86,6 @@ var _ = new E(i.default, {
     s[n] = null != t ? t : r
   },
   WELCOME_SCREEN_FETCH_FAIL: function() {
-    u = !1, d = !0
+    u = !1, c = !0
   }
 })

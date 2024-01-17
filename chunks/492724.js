@@ -1,44 +1,44 @@
 "use strict";
-n.r(t), n.d(t, {
+A.r(t), A.d(t, {
   default: function() {
-    return p
+    return T
   }
 });
-var a = n("37983");
-n("884691");
-var s = n("414456"),
-  l = n.n(s),
-  i = n("77078"),
-  r = n("17692"),
-  o = n("191814"),
-  u = n("476765"),
-  d = n("538137"),
-  c = n("600785"),
-  f = n("246421"),
-  m = n("782340"),
-  E = n("767165");
+var a = A("37983");
+A("884691");
+var l = A("414456"),
+  n = A.n(l),
+  r = A("77078"),
+  s = A("17692"),
+  o = A("191814"),
+  i = A("476765"),
+  u = A("538137"),
+  d = A("600785"),
+  c = A("246421"),
+  f = A("782340"),
+  C = A("767165");
 
-function _(e) {
+function g(e) {
   let {
     hidePurchaseToUnlockBadge: t,
-    className: n,
-    children: s
+    className: A,
+    children: l
   } = e;
   return (0, a.jsxs)("div", {
-    className: l(E.productThumbnailContainer, n),
-    children: [s, !t && (0, a.jsxs)("div", {
-      className: E.purchaseToUnlockBadge,
-      children: [(0, a.jsx)(c.default, {
-        className: E.lockIcon,
+    className: n(C.productThumbnailContainer, A),
+    children: [l, !t && (0, a.jsxs)("div", {
+      className: C.purchaseToUnlockBadge,
+      children: [(0, a.jsx)(d.default, {
+        className: C.lockIcon,
         width: 16,
         height: 16,
         color: "currentColor",
         "aria-hidden": !0
-      }), (0, a.jsx)(i.Text, {
+      }), (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "always-white",
-        className: E.unlockText,
-        children: m.default.Messages.GUILD_PRODUCT_CARD_PURCHASE_TO_UNLOCK
+        className: C.unlockText,
+        children: f.default.Messages.GUILD_PRODUCT_CARD_PURCHASE_TO_UNLOCK
       })]
     })]
   })
@@ -47,127 +47,127 @@ function _(e) {
 function h(e) {
   let {
     onShowFullDescription: t,
-    variant: n
-  } = e, s = (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(i.Text, {
-      variant: n,
+    variant: A
+  } = e, l = (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(r.Text, {
+      variant: A,
       color: null != t ? "text-link" : "interactive-hover",
-      children: m.default.Messages.GUILD_PRODUCT_CARD_SEE_FULL_DESCRIPTION
-    }), (0, a.jsx)(d.default, {
-      className: E.arrowIcon,
+      children: f.default.Messages.GUILD_PRODUCT_CARD_SEE_FULL_DESCRIPTION
+    }), (0, a.jsx)(u.default, {
+      className: C.arrowIcon,
       backgroundColor: "currentColor",
       width: 16,
       height: 16
     })]
   });
   return null == t ? (0, a.jsx)("div", {
-    className: E.showMoreButton,
-    children: s
-  }) : (0, a.jsx)(i.Clickable, {
-    className: l(E.showMoreButton, E.hasAction),
+    className: C.showMoreButton,
+    children: l
+  }) : (0, a.jsx)(r.Clickable, {
+    className: n(C.showMoreButton, C.hasAction),
     onClick: e => {
       e.stopPropagation(), null != t && t()
     },
-    children: s
+    children: l
   })
 }
 
-function p(e) {
+function T(e) {
   let {
     imageUrl: t,
-    name: n,
-    description: s,
-    formattedPrice: d,
-    role: c,
-    ctaComponent: p,
-    shouldShowFullDescriptionButton: I = !0,
-    onShowFullDescription: T,
-    productType: g,
-    onTapCard: C,
-    actionMenu: S,
-    showOpaqueBackground: A = !1,
-    hideRoleTag: N = !1,
-    lineClamp: M = 1,
-    cardWidth: v = 332,
-    cardHeight: x,
-    thumbnailHeight: O = 187,
+    name: A,
+    description: l,
+    formattedPrice: u,
+    role: d,
+    ctaComponent: T,
+    shouldShowFullDescriptionButton: m = !0,
+    onShowFullDescription: p,
+    productType: U,
+    onTapCard: I,
+    actionMenu: v,
+    showOpaqueBackground: E = !1,
+    hideRoleTag: x = !1,
+    lineClamp: N = 1,
+    cardWidth: q = 332,
+    cardHeight: O,
+    thumbnailHeight: R = 187,
     descriptionTextVariant: L = "text-sm/normal"
-  } = e, R = (0, u.uid)(), P = (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(_, {
+  } = e, D = (0, i.uid)(), P = (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(g, {
       hidePurchaseToUnlockBadge: !0,
       children: (0, a.jsx)("img", {
         alt: "",
         src: t,
-        className: E.productThumbnail,
+        className: C.productThumbnail,
         style: {
-          height: O
+          height: R
         }
       })
     }), (0, a.jsxs)("div", {
-      className: E.productDetails,
+      className: C.productDetails,
       children: [(0, a.jsxs)("div", {
-        className: E.productDetailContent,
-        children: [(0, a.jsx)(i.Heading, {
+        className: C.productDetailContent,
+        children: [(0, a.jsx)(r.Heading, {
           variant: "text-md/medium",
           color: "header-primary",
-          className: E.productName,
-          id: R,
-          children: n
-        }), (0, a.jsx)(i.FocusBlock, {
-          children: (0, a.jsx)(r.default, {
+          className: C.productName,
+          id: D,
+          children: A
+        }), (0, a.jsx)(r.FocusBlock, {
+          children: (0, a.jsx)(s.default, {
             variant: L,
             color: "text-muted",
-            lineClamp: M,
-            text: s
+            lineClamp: N,
+            text: l
           })
-        }), I && (0, a.jsx)(h, {
-          onShowFullDescription: T,
+        }), m && (0, a.jsx)(h, {
+          onShowFullDescription: p,
           variant: L
-        }), N || null == c || "" === c.name ? null : (0, a.jsxs)(a.Fragment, {
+        }), x || null == d || "" === d.name ? null : (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(o.default, {
             size: 16
-          }), (0, a.jsx)(f.default, {
-            role: c
+          }), (0, a.jsx)(c.default, {
+            role: d
           })]
         })]
-      }), S]
+      }), v]
     }), (0, a.jsxs)("div", {
-      className: E.purchaseDetails,
-      children: [(0, a.jsx)(i.Text, {
+      className: C.purchaseDetails,
+      children: [(0, a.jsx)(r.Text, {
         variant: "text-md/medium",
         color: "interactive-active",
-        className: E.productPrice,
-        children: null != d ? d : m.default.Messages.GUILD_PRODUCT_CARD_EMPTY_PRICE
-      }), (0, a.jsx)(i.Text, {
+        className: C.productPrice,
+        children: null != u ? u : f.default.Messages.GUILD_PRODUCT_CARD_EMPTY_PRICE
+      }), (0, a.jsx)(r.Text, {
         variant: "text-xxs/normal",
         color: "text-normal",
-        className: E.productType,
-        children: g
+        className: C.productType,
+        children: U
       }), (0, a.jsx)("div", {
-        className: E.productActionButton,
+        className: C.productActionButton,
         onClick: e => {
           e.stopPropagation()
         },
-        children: p
+        children: T
       })]
     })]
   });
-  return null == C ? (0, a.jsx)("article", {
-    className: l(E.productCard, A ? E.opaqueBackground : E.solidBackground),
-    "aria-labelledby": R,
+  return null == I ? (0, a.jsx)("article", {
+    className: n(C.productCard, E ? C.opaqueBackground : C.solidBackground),
+    "aria-labelledby": D,
     children: P
   }) : (0, a.jsx)("div", {
     style: {
-      width: v,
-      height: x
+      width: q,
+      height: O
     },
-    children: (0, a.jsx)(i.ClickableContainer, {
+    children: (0, a.jsx)(r.ClickableContainer, {
       tag: "article",
-      "aria-label": m.default.Messages.GUILD_SHOP_LISTING_CARD_A11Y_LABEL.format({
-        productName: n
+      "aria-label": f.default.Messages.GUILD_SHOP_LISTING_CARD_A11Y_LABEL.format({
+        productName: A
       }),
-      className: l(E.productCard, A ? E.opaqueBackground : E.solidBackground, E.cardClickableContainer),
-      onClick: C,
+      className: n(C.productCard, E ? C.opaqueBackground : C.solidBackground, C.cardClickableContainer),
+      onClick: I,
       children: P
     })
   })

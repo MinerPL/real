@@ -26,19 +26,19 @@ var a = n("716241"),
   s = n("599110"),
   i = n("161585"),
   r = n("49111"),
-  u = n("13030"),
-  l = n("646718");
+  l = n("13030"),
+  u = n("646718");
 let d = e => {
     let {
       containerWidth: t,
       favoriteStickers: n,
       frequentlyUsedStickers: s,
-      guildStickers: l,
+      guildStickers: u,
       stickersTotal: d
     } = e;
     a.default.trackWithMetadata(r.AnalyticEvents.EXPRESSION_PICKER_OPENED, {
       width: t,
-      tab: u.ExpressionPickerViewType.STICKER,
+      tab: l.ExpressionPickerViewType.STICKER,
       badged: !1,
       num_expressions_favorites: n.length,
       num_animated_expressions_favorites: n.filter(e => (0, i.isAnimatedSticker)(e.format_type)).length,
@@ -48,7 +48,7 @@ let d = e => {
       num_custom_expressions_frecent: s.filter(e => (0, i.isCustomSticker)(e.type)).length,
       num_animated_expressions_frecent: s.filter(e => (0, i.isAnimatedSticker)(e.format_type)).length,
       num_standard_expressions_frecent: s.filter(e => !(0, i.isCustomSticker)(e.type)).length,
-      num_current_guild_expressions: l.length,
+      num_current_guild_expressions: u.length,
       num_custom_expressions_total: d
     })
   },
@@ -59,7 +59,7 @@ let d = e => {
     } = e;
     n.type === i.MetaStickerType.GUILD && (t = n.guild_id), a.default.trackWithMetadata(r.AnalyticEvents.EXPRESSION_FAVORITED, {
       location: s,
-      expression_type: u.ExpressionPickerViewType.STICKER,
+      expression_type: l.ExpressionPickerViewType.STICKER,
       expression_id: n.id,
       expression_name: n.name,
       expression_guild_id: t,
@@ -83,15 +83,15 @@ let d = e => {
   f = (e, t, n) => {
     let s;
     let {
-      sticker: u
+      sticker: l
     } = e;
-    u.type === i.MetaStickerType.GUILD && (s = u.guild_id), a.default.trackWithMetadata(r.AnalyticEvents.SEARCH_RESULT_SELECTED, {
-      load_id: u.id,
+    l.type === i.MetaStickerType.GUILD && (s = l.guild_id), a.default.trackWithMetadata(r.AnalyticEvents.SEARCH_RESULT_SELECTED, {
+      load_id: l.id,
       search_type: r.SearchTypes.STICKER,
       source_object: "Sticker Picker",
       total_results: n,
       expression_guild_id: s,
-      sticker_id: u.id,
+      sticker_id: l.id,
       query: t
     })
   },
@@ -102,7 +102,7 @@ let d = e => {
       category: s
     } = e;
     n.type === i.MetaStickerType.GUILD && (t = n.guild_id), a.default.trackWithMetadata(r.AnalyticEvents.EXPRESSION_PICKER_EXPRESSION_SELECTED, {
-      type: l.PremiumUpsellTypes.EMOJI_PICKER_STICKER_CLICKED,
+      type: u.PremiumUpsellTypes.EMOJI_PICKER_STICKER_CLICKED,
       expression_id: n.id,
       expression_name: n.name,
       expression_picker_section: s,
