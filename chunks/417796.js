@@ -1,7 +1,7 @@
 "use strict";
-var a, s;
+var s, l;
 n.r(t), n.d(t, {
   AutomodRaidAlertTypes: function() {
-    return a
+    return s
   }
-}), (s = a || (a = {})).JOIN_RAID = "JOIN_RAID", s.DM_RAID = "DM_RAID"
+}), (l = s || (s = {})).JOIN_RAID = "JOIN_RAID", l.DM_RAID = "DM_RAID", l.MENTION_RAID = "MENTION_RAID"

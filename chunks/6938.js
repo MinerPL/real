@@ -1,7 +1,7 @@
 "use strict";
-var a, s;
+var s, l;
 n.r(t), n.d(t, {
   AutomodNotificationEmbedTypeKeys: function() {
-    return a
+    return s
   }
-}), (s = a || (a = {})).RAID = "raid", s.ACTIVITY_ALERTS_ENABLED = "activity_alerts_enabled"
+}), (l = s || (s = {})).RAID = "raid", l.MENTION_RAID = "mention_raid", l.ACTIVITY_ALERTS_ENABLED = "activity_alerts_enabled"
