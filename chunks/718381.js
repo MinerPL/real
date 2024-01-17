@@ -21,7 +21,7 @@ function g(e, t) {
   let s = (0, n.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
     g = (0, r.useIsActiveChannelOrUnarchivableThread)(t),
     M = (0, n.useStateFromStores)([u.default], () => u.default.can(f.Permissions.MANAGE_MESSAGES, t), [t]);
-  return e.state !== f.MessageStates.SENDING && (e.author.id === (null == s ? void 0 : s.id) || M) && e.type in f.MessageTypesDeletable && g ? (0, a.jsx)(l.MenuItem, {
+  return e.state === f.MessageStates.SENDING || e.author.id !== (null == s ? void 0 : s.id) && !M || f.MessageTypesSets.UNDELETABLE.has(e.type) || !g ? null : (0, a.jsx)(l.MenuItem, {
     id: "delete",
     label: E.default.Messages.DELETE_MESSAGE,
     action: function(s) {
@@ -29,5 +29,5 @@ function g(e, t) {
     },
     color: "danger",
     icon: c.default
-  }) : null
+  })
 }
