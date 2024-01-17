@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return S
   }
 });
 var s = n("446674"),
@@ -9,102 +9,103 @@ var s = n("446674"),
   r = n("987317"),
   a = n("49671"),
   o = n("845579"),
-  d = n("773336"),
-  u = n("271938"),
-  l = n("49111"),
-  f = n("353927");
-let _ = Date.now(),
-  c = !1,
+  d = n("718517"),
+  u = n("773336"),
+  l = n("271938"),
+  f = n("49111"),
+  _ = n("353927");
+let c = Date.now(),
   g = !1,
   m = !1,
   h = !1,
-  v = !1;
-
-function E() {
-  return m || h || (0, d.isAndroid)() && v
-}
+  v = !1,
+  E = !1;
 
 function p() {
-  Date.now() - _ > l.IDLE_DURATION || E() ? c || i.default.dispatch({
+  return h || v || (0, u.isAndroid)() && E
+}
+
+function y() {
+  Date.now() - c > f.IDLE_DURATION || p() ? g || i.default.dispatch({
     type: "IDLE",
     idle: !0,
-    idleSince: _
-  }) : c && i.default.dispatch({
+    idleSince: c
+  }) : g && i.default.dispatch({
     type: "IDLE",
     idle: !1
-  }), Date.now() - _ > Math.min(1e3 * o.AfkTimeout.getSetting(), l.IDLE_DURATION) || E() ? g || i.default.dispatch({
+  }), Date.now() - c > Math.min(o.AfkTimeout.getSetting() * d.default.Millis.SECOND, f.IDLE_DURATION) || p() ? m || i.default.dispatch({
     type: "AFK",
     afk: !0
-  }) : g && i.default.dispatch({
+  }) : m && i.default.dispatch({
     type: "AFK",
     afk: !1
   })
-}!__OVERLAY__ && (d.isPlatformEmbedded && (null === a.default || void 0 === a.default ? void 0 : a.default.remotePowerMonitor) != null ? (! function e() {
+}!__OVERLAY__ && (u.isPlatformEmbedded && (null === a.default || void 0 === a.default ? void 0 : a.default.remotePowerMonitor) != null ? (! function e() {
   var t;
   let n = t => {
-    _ = Math.max(Date.now() - t, _), p(), setTimeout(e, 1e4)
+    c = Math.max(Date.now() - t, c), y(), setTimeout(e, 10 * d.default.Millis.SECOND)
   };
   if ((null === a.default || void 0 === a.default ? void 0 : null === (t = a.default.remotePowerMonitor) || void 0 === t ? void 0 : t.getSystemIdleTimeMs) != null) {
     let e = a.default.remotePowerMonitor.getSystemIdleTimeMs();
     e instanceof Promise ? e.then(n) : n(e)
   }
 }(), a.default.remotePowerMonitor.on("resume", () => {
-  m = !1, y({})
+  h = !1, T({})
 }), a.default.remotePowerMonitor.on("suspend", () => {
-  m = !0, y({}), r.default.disconnect()
+  h = !0, T({}), r.default.disconnect()
 }), a.default.remotePowerMonitor.on("lock-screen", () => {
-  h = !0, y({})
+  v = !0, T({})
 }), a.default.remotePowerMonitor.on("unlock-screen", () => {
-  h = !1, y({})
-})) : setInterval(p, .25 * l.IDLE_DURATION));
+  v = !1, T({})
+})) : setInterval(y, .25 * f.IDLE_DURATION));
 
-function y(e) {
+function T(e) {
   let {
     timestamp: t,
     type: n
   } = e, s = "OVERLAY_SET_NOT_IDLE" === n && null != t;
-  return (!s || !(t <= _)) && (_ = s ? t : Date.now(), __OVERLAY__ ? i.default.dispatch({
+  return (!s || !(t <= c)) && (c = s ? t : Date.now(), __OVERLAY__ ? i.default.dispatch({
     type: "OVERLAY_SET_NOT_IDLE",
-    timestamp: _
-  }) : p(), !1)
+    timestamp: c
+  }) : y(), !1)
 }
-class T extends s.default.Store {
+class C extends s.default.Store {
   isIdle() {
-    return c
-  }
-  isAFK() {
     return g
   }
+  isAFK() {
+    return m
+  }
   getIdleSince() {
-    return c ? _ : null
+    return g ? c : null
   }
 }
-T.displayName = "IdleStore";
-var C = new T(i.default, {
+C.displayName = "IdleStore";
+var S = new C(i.default, {
   IDLE: function(e) {
-    c = e.idle
+    g = e.idle
   },
   AFK: function(e) {
-    g = e.afk
+    m = e.afk
   },
   SPEAKING: function(e) {
     let {
       userId: t,
       speakingFlags: n
     } = e;
-    return n !== f.SpeakingFlags.NONE && t === u.default.getId() && y({}), !1
+    return n !== _.SpeakingFlags.NONE && t === l.default.getId() && T({}), !1
   },
   APP_STATE_UPDATE: function(e) {
     let {
       state: t
     } = e;
-    return v = t === l.AppStates.BACKGROUND, _ = Date.now(), p(), !1
+    return E = t === f.AppStates.BACKGROUND, c = Date.now(), y(), !1
   },
-  OVERLAY_SET_NOT_IDLE: y,
-  CHANNEL_SELECT: y,
-  VOICE_CHANNEL_SELECT: y,
-  WINDOW_FOCUS: y,
-  OVERLAY_INITIALIZE: y,
-  OVERLAY_SET_INPUT_LOCKED: y,
-  USER_SETTINGS_PROTO_UPDATE: y
+  OVERLAY_SET_NOT_IDLE: T,
+  CHANNEL_SELECT: T,
+  VOICE_CHANNEL_SELECT: T,
+  WINDOW_FOCUS: T,
+  OVERLAY_INITIALIZE: T,
+  OVERLAY_SET_INPUT_LOCKED: T,
+  USER_SETTINGS_PROTO_UPDATE: T
 })

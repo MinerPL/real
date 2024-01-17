@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return M
   }
 }), n("222007"), n("424973");
 var i = n("917351"),
@@ -16,87 +16,91 @@ var i = n("917351"),
   f = n("686470"),
   E = n("535974"),
   h = n("98328"),
-  p = n("964889"),
-  _ = n("602043");
-let S = new Set,
-  m = {},
-  T = new Set,
-  g = {},
-  I = new Set,
-  C = {},
-  v = new a.Timeout;
+  p = n("718517"),
+  _ = n("964889"),
+  S = n("602043");
+let m = new Set,
+  T = {},
+  g = new Set,
+  I = {},
+  C = new Set,
+  v = {},
+  A = 10 * p.default.Millis.MINUTE,
+  R = 6 * p.default.Millis.HOUR,
+  N = 10 * p.default.Millis.MINUTE,
+  O = new a.Timeout;
 
-function A(e) {
-  v.start(e + 6e5 * Math.random(), l.fetchBranches)
+function D(e) {
+  O.start(e + Math.random() * A, l.fetchBranches)
 }
 
-function R() {
-  if (!(0, _.isSupportedPlatform)()) return !1;
+function y() {
+  if (!(0, S.isSupportedPlatform)()) return !1;
   let e = f.default.entitledBranchIds,
     t = [];
-  for (let n of e) !C.hasOwnProperty(n) && (C[n] = null, t.push(n));
+  for (let n of e) !v.hasOwnProperty(n) && (v[n] = null, t.push(n));
   if (0 === t.length) return !1;
   o.default.wait(() => l.fetchBranches(t))
 }
 
-function N(e, t) {
-  if (null != m[t] && h.default.shouldBeInstalled(e, t)) {
-    let n = m[t],
+function P(e, t) {
+  if (null != T[t] && h.default.shouldBeInstalled(e, t)) {
+    let n = T[t],
       i = n.manifestIds,
       s = E.default.getState(e, t);
     null != s && s.shouldPatch && (s.buildId !== n.id || !r.isEqual(s.manifestIds, i)) && o.default.wait(() => {
       let r = d.default.getApplication(e);
-      null != r ? (I.delete((0, p.getComboId)(e, t)), (0, c.updateApplication)(r, t, n.id, i, !0)) : I.add((0, p.getComboId)(e, t))
+      null != r ? (C.delete((0, _.getComboId)(e, t)), (0, c.updateApplication)(r, t, n.id, i, !0)) : C.add((0, _.getComboId)(e, t))
     })
   }
 }
 
-function O() {
-  v.stop()
+function L() {
+  O.stop()
 }
-class D extends s.default.Store {
+class b extends s.default.Store {
   initialize() {
-    this.syncWith([f.default], R), this.waitFor(E.default, f.default, d.default)
+    this.syncWith([f.default], y), this.waitFor(E.default, f.default, d.default)
   }
   getTargetBuildId(e, t) {
-    return null == m[t] ? null : m[t].id
+    return null == T[t] ? null : T[t].id
   }
   getTargetManifests(e, t) {
-    return null == m[t] ? null : m[t].manifestIds
+    return null == T[t] ? null : T[t].manifestIds
   }
   hasNoBuild(e, t) {
-    return T.has(t)
+    return g.has(t)
   }
   isFetching(e, t) {
-    return S.has(t)
+    return m.has(t)
   }
   needsToFetchBuildSize(e) {
-    return !g.hasOwnProperty(e)
+    return !I.hasOwnProperty(e)
   }
   getBuildSize(e) {
-    return g[e]
+    return I[e]
   }
 }
-D.displayName = "ApplicationBuildStore";
-var y = new D(o.default, {
+b.displayName = "ApplicationBuildStore";
+var M = new b(o.default, {
   CONNECTION_OPEN: function() {
-    return A(216e5), R()
+    return D(R), y()
   },
   GAMES_DATABASE_UPDATE: function() {
-    if (!(0, _.isSupportedPlatform)()) return !1;
-    for (let e of I) {
+    if (!(0, S.isSupportedPlatform)()) return !1;
+    for (let e of C) {
       let {
         applicationId: t,
         branchId: n
-      } = (0, p.convertComboId)(e), i = d.default.getApplication(t);
-      null != i && (I.delete(e), N(t, n))
+      } = (0, _.convertComboId)(e), i = d.default.getApplication(t);
+      null != i && (C.delete(e), P(t, n))
     }
   },
   APPLICATION_BUILD_FETCH_START: function(e) {
     let {
       branchId: t
     } = e;
-    S.add(t)
+    m.add(t)
   },
   APPLICATION_BUILD_FETCH_SUCCESS: function(e) {
     let {
@@ -105,7 +109,7 @@ var y = new D(o.default, {
       locale: i,
       build: r
     } = e;
-    S.delete(n);
+    m.delete(n);
     let s = r.manifests.map(e => {
         let {
           id: t
@@ -113,38 +117,38 @@ var y = new D(o.default, {
         return t
       }),
       a = r.id;
-    T.delete(n), m[n] = {
+    g.delete(n), T[n] = {
       id: a,
       applicationId: t,
       branchId: n,
       locale: i,
       manifestIds: s
-    }, N(t, n)
+    }, P(t, n)
   },
   APPLICATION_BUILD_NOT_FOUND: function(e) {
     let {
       branchId: t
     } = e;
-    S.delete(t), T.add(t)
+    m.delete(t), g.add(t)
   },
   APPLICATION_BUILD_SIZE_FETCH_START: function(e) {
     let {
       buildId: t
     } = e;
-    !g.hasOwnProperty(t) && (g[t] = null)
+    !I.hasOwnProperty(t) && (I[t] = null)
   },
   APPLICATION_BUILD_SIZE_FETCH_SUCCESS: function(e) {
     let {
       buildId: t,
       sizeKB: n
     } = e;
-    g[t] = n
+    I[t] = n
   },
   APPLICATION_BUILD_SIZE_FETCH_FAIL: function(e) {
     let {
       buildId: t
     } = e;
-    null == g[t] && delete g[t]
+    null == I[t] && delete I[t]
   },
   APPLICATION_BRANCHES_FETCH_SUCCESS: function(e) {
     let {
@@ -158,30 +162,30 @@ var y = new D(o.default, {
       let {
         id: t,
         liveBuildId: i
-      } = e, r = C[t];
+      } = e, r = v[t];
       if (i !== r) {
         let e = n[t];
         null != e && o.default.wait(() => u.fetchLiveBuild(e.id, e.branchId, !0))
       }
-      C[t] = i
+      v[t] = i
     }
-    A(216e5)
+    D(R)
   },
   APPLICATION_BRANCHES_FETCH_FAIL: function() {
-    A(6e5)
+    D(N)
   },
-  CONNECTION_CLOSED: O,
-  LOGOUT: O,
+  CONNECTION_CLOSED: L,
+  LOGOUT: L,
   SKU_PURCHASE_SUCCESS: function(e) {
     let {
       entitlements: t
     } = e;
-    if (!(0, _.isSupportedPlatform)()) return !1;
+    if (!(0, S.isSupportedPlatform)()) return !1;
     let n = new Set;
     for (let e of t) n.add(e.application_id);
     for (let e in f.default.libraryApplications) {
       let t = f.default.libraryApplications[e];
-      n.has(t.id) && (0, p.isUserEntitledToLibraryApplication)(t) && o.default.wait(() => u.fetchLiveBuild(t.id, t.branchId))
+      n.has(t.id) && (0, _.isUserEntitledToLibraryApplication)(t) && o.default.wait(() => u.fetchLiveBuild(t.id, t.branchId))
     }
   }
 })

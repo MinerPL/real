@@ -1,11 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
-var i = n("862205");
-let r = (0, i.createExperiment)({
+var i = n("862205"),
+  r = n("718517");
+let s = (0, i.createExperiment)({
   kind: "user",
   id: "2023-10_wgc_stale_frame_timeout",
   label: "Windows Graphics Capture Stale Frame Timeout",
@@ -16,44 +17,44 @@ let r = (0, i.createExperiment)({
     id: 1,
     label: "1 second",
     config: {
-      graphicsCaptureStaleFrameTimeoutMs: 1e3
+      graphicsCaptureStaleFrameTimeoutMs: 1 * r.default.Millis.SECOND
     }
   }, {
     id: 2,
     label: "5 seconds",
     config: {
-      graphicsCaptureStaleFrameTimeoutMs: 5e3
+      graphicsCaptureStaleFrameTimeoutMs: 5 * r.default.Millis.SECOND
     }
   }, {
     id: 3,
     label: "10 seconds",
     config: {
-      graphicsCaptureStaleFrameTimeoutMs: 1e4
+      graphicsCaptureStaleFrameTimeoutMs: 10 * r.default.Millis.SECOND
     }
   }, {
     id: 4,
     label: "30 seconds",
     config: {
-      graphicsCaptureStaleFrameTimeoutMs: 3e4
+      graphicsCaptureStaleFrameTimeoutMs: 30 * r.default.Millis.SECOND
     }
   }, {
     id: 5,
     label: "60 seconds",
     config: {
-      graphicsCaptureStaleFrameTimeoutMs: 6e4
+      graphicsCaptureStaleFrameTimeoutMs: 60 * r.default.Millis.SECOND
     }
   }, {
     id: 5,
     label: "120 seconds",
     config: {
-      graphicsCaptureStaleFrameTimeoutMs: 12e4
+      graphicsCaptureStaleFrameTimeoutMs: 120 * r.default.Millis.SECOND
     }
   }]
 });
-var s = {
-  getConfig: (e, t, n) => e ? r.getCurrentConfig({
+var a = {
+  getConfig: (e, t, n) => e ? s.getCurrentConfig({
     location: t
   }, {
     autoTrackExposure: n
-  }) : r.definition.defaultConfig
+  }) : s.definition.defaultConfig
 }

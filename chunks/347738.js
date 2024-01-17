@@ -28,17 +28,17 @@ let j = {},
   y = {},
   R = [],
   L = {},
-  b = {
+  O = {
     status: "ok",
     lastRequest: null,
     lastResponse: null
   },
-  O = [],
+  b = [],
   D = A.SummarySources.SOURCE_0,
   P = null;
 
 function w() {
-  O = E.default.getProps().results.filter(e => e.type === p.AutocompleterResultTypes.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
+  b = E.default.getProps().results.filter(e => e.type === p.AutocompleterResultTypes.TEXT_CHANNEL && 0 === e.record.type).map(e => e.record.id)
 }
 
 function U(e) {
@@ -61,7 +61,7 @@ class k extends m.default.PersistedStore {
       summariesFeedback: r,
       channelAffinities: R,
       channelAffinitiesById: L,
-      channelAffinitiesStatus: b
+      channelAffinitiesStatus: O
     }
   }
   initialize(e) {
@@ -153,10 +153,10 @@ class k extends m.default.PersistedStore {
     return null == e ? L : L[e]
   }
   channelAffinitiesStatus() {
-    return b
+    return O
   }
   shouldFetchChannelAffinities() {
-    return !("fetching" === b.status || null != b.lastResponse && Date.now() - b.lastResponse < 3e4) && !0
+    return !("fetching" === O.status || null != O.lastResponse && Date.now() - O.lastResponse < 30 * N.default.Millis.SECOND) && !0
   }
   defaultChannelIds(e) {
     let {
@@ -165,7 +165,7 @@ class k extends m.default.PersistedStore {
       withUnreads: l,
       numChannels: a = 25
     } = e, s = [];
-    return t && (s = s.concat(O)), n && (s = s.concat(R.map(e => e.channel_id))), l && (s = s.filter(e => {
+    return t && (s = s.concat(b)), n && (s = s.concat(R.map(e => e.channel_id))), l && (s = s.filter(e => {
       let t = v.default.getChannel(e);
       return null != t && !_.default.isChannelMuted(t.guild_id, e) && I.default.hasUnread(e)
     })), (s = s.filter(e => {
@@ -316,8 +316,8 @@ let V = new k(f.default, {
     null != n ? r[t.id] = n : delete r[t.id]
   },
   REQUEST_CHANNEL_AFFINITIES() {
-    b = {
-      ...b,
+    O = {
+      ...O,
       status: "fetching",
       lastRequest: Date.now()
     }
@@ -329,15 +329,15 @@ let V = new k(f.default, {
       error: l
     } = e;
     if (null != l) {
-      R = [], L = {}, b = {
-        ...b,
+      R = [], L = {}, O = {
+        ...O,
         status: "error",
         lastResponse: Date.now()
       };
       return
     }
-    R = null != n ? n : [], L = null !== (t = null == n ? void 0 : n.reduce((e, t) => (e[t.channel_id] = t.affinity, e), {})) && void 0 !== t ? t : {}, b = {
-      ...b,
+    R = null != n ? n : [], L = null !== (t = null == n ? void 0 : n.reduce((e, t) => (e[t.channel_id] = t.affinity, e), {})) && void 0 !== t ? t : {}, O = {
+      ...O,
       status: "ok",
       lastResponse: Date.now()
     }

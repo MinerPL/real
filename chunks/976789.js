@@ -9,44 +9,48 @@ var l, a = n("872717"),
   i = n("913144"),
   r = n("355025"),
   o = n("605250"),
-  u = n("773336"),
-  d = n("286235"),
-  c = n("50885");
-let f = s.default.get("lastNonRequiredUpdateShown", Date.now()),
-  E = new o.default("AutoUpdateManager");
+  u = n("718517"),
+  d = n("773336"),
+  c = n("286235"),
+  f = n("50885");
+let E = 1 * u.default.Millis.HOUR,
+  h = 7 * u.default.Millis.DAY,
+  _ = 1 * u.default.Millis.DAY,
+  S = s.default.get("lastNonRequiredUpdateShown", Date.now()),
+  T = new o.default("AutoUpdateManager");
 l = class {
   destroy() {
     clearInterval(this._checkInterval)
   }
   quitAndInstall() {
-    this.updateAvailable && (this.hasNativeUpdate ? null != this._bootstrapper ? this._bootstrapper.finishBootstrap() : c.default.send("QUIT_AND_INSTALL") : location.reload(!0))
+    this.updateAvailable && (this.hasNativeUpdate ? null != this._bootstrapper ? this._bootstrapper.finishBootstrap() : f.default.send("QUIT_AND_INSTALL") : location.reload(!0))
   }
   async _requestNewUpdaterBootstrap() {
     let e;
-    E.log("Bootstrapping new updater host...");
+    T.log("Bootstrapping new updater host...");
     try {
-      await c.default.ensureModule("discord_updater_bootstrap"), e = c.default.requireModule("discord_updater_bootstrap"), this._bootstrapper = e
+      await f.default.ensureModule("discord_updater_bootstrap"), e = f.default.requireModule("discord_updater_bootstrap"), this._bootstrapper = e
     } catch (e) {
       this._handleNativeUpdateNotAvailable();
       return
     }
     try {
-      this._handleCheckingForUpdates(), await e.bootstrap(c.default.releaseChannel, "win"), this.updateAvailable = !0, this.hasNativeUpdate = !0, this._handleUpdateDownloaded(!0)
+      this._handleCheckingForUpdates(), await e.bootstrap(f.default.releaseChannel, "win"), this.updateAvailable = !0, this.hasNativeUpdate = !0, this._handleUpdateDownloaded(!0)
     } catch (e) {
-      E.log("Failed to bootstrap new updater:", e), this._handleNativeUpdateNotAvailable(), d.default.captureException(e)
+      T.log("Failed to bootstrap new updater:", e), this._handleNativeUpdateNotAvailable(), c.default.captureException(e)
     }
   }
   _emitCallbacks() {
     this._callbacks.forEach(e => e(this.updateAvailable)), this._callbacks = []
   }
-  constructor(e = 36e5) {
+  constructor(e = E) {
     var t = this;
     this.updateAvailable = !1, this.hasNativeUpdate = !1, this._callbacks = [], this._bootstrapper = null, this.checkForUpdates = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
       if (e || !t.hasNativeUpdate) {
-        if (u.isPlatformEmbedded) {
-          let e = "win32" === (0, u.getPlatformName)() && c.default.canBootstrapNewUpdater;
-          e ? t._requestNewUpdaterBootstrap() : c.default.send("CHECK_FOR_UPDATES")
+        if (d.isPlatformEmbedded) {
+          let e = "win32" === (0, d.getPlatformName)() && f.default.canBootstrapNewUpdater;
+          e ? t._requestNewUpdaterBootstrap() : f.default.send("CHECK_FOR_UPDATES")
         } else t._handleNativeUpdateNotAvailable()
       }
       return new Promise(e => {
@@ -64,10 +68,10 @@ l = class {
         },
         oldFormErrors: !0
       }).then(e => {
-        if (null == e.body || "fbdcbc6e2bb33da6d5e258955549447e297c36d8" === e.body.hash) return this._handleUpdateNotAvailable();
+        if (null == e.body || "73562de57799e19a20792e036fc830c57802bff5" === e.body.hash) return this._handleUpdateNotAvailable();
         if (e.body.required || (0, r.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
-        let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? 6048e5 : 864e5;
-        if (Date.now() - f > t) return s.default.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
+        let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? h : _;
+        if (Date.now() - S > t) return s.default.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)
       }, () => this._handleUpdateError())
     }, this._handleUpdateNotAvailable = () => {
       i.default.dispatch({
@@ -94,7 +98,7 @@ l = class {
         releaseDate: l,
         updateURL: a
       }), this._emitCallbacks()
-    }, u.isPlatformEmbedded && (c.default.on("CHECKING_FOR_UPDATES", this._handleCheckingForUpdates), c.default.on("UPDATE_NOT_AVAILABLE", this._handleNativeUpdateNotAvailable), c.default.on("UPDATE_AVAILABLE", () => this._handleUpdateAvailable(!0)), c.default.on("UPDATE_ERROR", this._handleUpdateError), c.default.on("UPDATE_DOWNLOADED", () => this._handleUpdateDownloaded(!0)), c.default.on("UPDATE_MANUALLY", this._handleUpdateManually)), i.default.wait(() => {
+    }, d.isPlatformEmbedded && (f.default.on("CHECKING_FOR_UPDATES", this._handleCheckingForUpdates), f.default.on("UPDATE_NOT_AVAILABLE", this._handleNativeUpdateNotAvailable), f.default.on("UPDATE_AVAILABLE", () => this._handleUpdateAvailable(!0)), f.default.on("UPDATE_ERROR", this._handleUpdateError), f.default.on("UPDATE_DOWNLOADED", () => this._handleUpdateDownloaded(!0)), f.default.on("UPDATE_MANUALLY", this._handleUpdateManually)), i.default.wait(() => {
       this.checkForUpdates()
     }), this._checkInterval = setInterval(this.checkForUpdates, e)
   }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(e), n.d(e, {
   default: function() {
-    return v
+    return m
   }
 }), n("222007");
 var r, u, i = n("37983"),
@@ -11,67 +11,68 @@ var r, u, i = n("37983"),
   l = n("130037"),
   c = n("772280"),
   f = n("58608"),
-  d = n("387111"),
-  h = n("49111"),
-  _ = n("782340"),
-  E = n("676702");
+  d = n("718517"),
+  h = n("387111"),
+  _ = n("49111"),
+  E = n("782340"),
+  p = n("676702");
 (u = r || (r = {}))[u.INITIAL = 0] = "INITIAL", u[u.OTHER_REASON = 1] = "OTHER_REASON";
 
-function p() {
+function g() {
   return [{
     value: 0,
-    label: _.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_NONE
+    label: E.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_NONE
   }, {
-    value: 1 * h.Durations.HOUR,
-    label: _.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_1HR
+    value: 1 * d.default.Seconds.HOUR,
+    label: E.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_1HR
   }, {
-    value: 6 * h.Durations.HOUR,
-    label: _.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_6HR
+    value: 6 * d.default.Seconds.HOUR,
+    label: E.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_6HR
   }, {
-    value: 12 * h.Durations.HOUR,
-    label: _.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_12HR
+    value: 12 * d.default.Seconds.HOUR,
+    label: E.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_12HR
   }, {
-    value: 1 * h.Durations.DAY,
-    label: _.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_24HR
+    value: 1 * d.default.Seconds.DAY,
+    label: E.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_24HR
   }, {
-    value: 3 * h.Durations.DAY,
-    label: _.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_3D
+    value: 3 * d.default.Seconds.DAY,
+    label: E.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_3D
   }, {
-    value: 7 * h.Durations.DAY,
-    label: _.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_7D
+    value: 7 * d.default.Seconds.DAY,
+    label: E.default.Messages.DELETE_MESSAGE_HISTORY_OPTION_7D
   }]
 }
-let g = p()[1].value;
+let v = g()[1].value;
 
-function v(t) {
+function m(t) {
   let {
     guildId: e,
     user: r,
     location: u,
-    userIds: v,
+    userIds: d,
     onBanMultiple: m,
     transitionState: M,
     onClose: A,
-    canBulkBan: I = !1
-  } = t, [S, b] = o.useState(g), [O, w] = o.useState(""), [N, R] = o.useState(0), [T, C] = o.useState(!1), x = (0, l.useTrackModerationAction)(e, {
+    canBulkBan: S = !1
+  } = t, [I, b] = o.useState(v), [O, w] = o.useState(""), [N, R] = o.useState(0), [T, C] = o.useState(!1), x = (0, l.useTrackModerationAction)(e, {
     location: u,
     targetUserId: null == r ? void 0 : r.id,
-    targets: v
+    targets: d
   }), y = o.useCallback(() => {
     if (null != m) {
-      let t = null != v && (null == v ? void 0 : v.size) > 0 && I;
+      let t = null != d && (null == d ? void 0 : d.size) > 0 && S;
       if (!t || T) return;
       if ("" === O.trim() && !T) {
         C(!0);
         return
       }
-      m(e, [...v], S, O)
+      m(e, [...d], I, O)
     } else {
       if (null == r) return;
-      s.default.banUser(e, null == r ? void 0 : r.id, S, O)
+      s.default.banUser(e, null == r ? void 0 : r.id, I, O)
     }
     x(l.ModerationActionType.BAN), A()
-  }, [m, x, A, v, I, T, O, e, S, r]), L = o.useCallback(t => {
+  }, [m, x, A, d, S, T, O, e, I, r]), L = o.useCallback(t => {
     b(t)
   }, []), k = o.useCallback(t => {
     let {
@@ -85,18 +86,18 @@ function v(t) {
   }, []), B = o.useCallback(() => {
     R(0)
   }, []), U = [{
-    name: _.default.Messages.BAN_REASON_OPTION_SPAM_ACCOUNT,
-    value: _.default.Messages.BAN_REASON_OPTION_SPAM_ACCOUNT
+    name: E.default.Messages.BAN_REASON_OPTION_SPAM_ACCOUNT,
+    value: E.default.Messages.BAN_REASON_OPTION_SPAM_ACCOUNT
   }, {
-    name: _.default.Messages.BAN_REASON_OPTION_HACKED_ACCOUNT,
-    value: _.default.Messages.BAN_REASON_OPTION_HACKED_ACCOUNT
+    name: E.default.Messages.BAN_REASON_OPTION_HACKED_ACCOUNT,
+    value: E.default.Messages.BAN_REASON_OPTION_HACKED_ACCOUNT
   }, {
-    name: _.default.Messages.BAN_REASON_OPTION_BREAKING_RULES,
-    value: _.default.Messages.BAN_REASON_OPTION_BREAKING_RULES
-  }], z = null != m && null != v ? _.default.Messages.BAN_MULTIPLE_CONFIRM_TITLE.format({
-    count: null == v ? void 0 : v.size
-  }) : null == r ? "" : _.default.Messages.BAN_CONFIRM_TITLE.format({
-    username: "@".concat(d.default.getName(e, null, r))
+    name: E.default.Messages.BAN_REASON_OPTION_BREAKING_RULES,
+    value: E.default.Messages.BAN_REASON_OPTION_BREAKING_RULES
+  }], z = null != m && null != d ? E.default.Messages.BAN_MULTIPLE_CONFIRM_TITLE.format({
+    count: null == d ? void 0 : d.size
+  }) : null == r ? "" : E.default.Messages.BAN_CONFIRM_TITLE.format({
+    username: "@".concat(h.default.getName(e, null, r))
   });
   return (0, i.jsxs)(a.ModalRoot, {
     transitionState: M,
@@ -107,11 +108,11 @@ function v(t) {
         children: z
       })
     }), (0, i.jsxs)(a.ModalContent, {
-      className: E.modalContent,
+      className: p.modalContent,
       children: [(0, i.jsxs)(f.default, {
         autoPlay: !0,
         loop: !0,
-        className: E.spacing,
+        className: p.spacing,
         width: 400,
         children: [(0, i.jsx)("source", {
           src: n("430857"),
@@ -124,11 +125,11 @@ function v(t) {
           src: n("429777")
         })]
       }), (0, i.jsxs)(a.FormItem, {
-        title: _.default.Messages.FORM_LABEL_REASON_BAN,
-        className: E.spacing,
+        title: E.default.Messages.FORM_LABEL_REASON_BAN,
+        className: p.spacing,
         children: [T && (0, i.jsx)(a.FormErrorBlock, {
-          className: E.error,
-          children: _.default.Messages.BAN_REASON_REQUIRED_ERROR
+          className: p.error,
+          children: E.default.Messages.BAN_REASON_REQUIRED_ERROR
         }), (0, i.jsx)(a.Sequencer, {
           steps: [0, 1],
           step: N,
@@ -140,14 +141,14 @@ function v(t) {
                     value: O,
                     options: t,
                     onChange: k,
-                    radioItemClassName: E.radioItemStyles
+                    radioItemClassName: p.radioItemStyles
                   }), (0, i.jsxs)(a.Clickable, {
                     onClick: F,
-                    className: E.banReasonOtherClickable,
+                    className: p.banReasonOtherClickable,
                     children: [(0, i.jsx)(a.Text, {
                       variant: "text-md/medium",
                       color: "none",
-                      children: _.default.Messages.OTHER
+                      children: E.default.Messages.OTHER
                     }), (0, i.jsx)(c.default, {
                       width: "16",
                       height: "16"
@@ -156,7 +157,7 @@ function v(t) {
                 });
               case 1:
                 return (0, i.jsx)(a.TextArea, {
-                  maxLength: h.MAX_REASON_LENGTH,
+                  maxLength: _.MAX_REASON_LENGTH,
                   onChange: D,
                   value: O,
                   rows: 5,
@@ -166,11 +167,11 @@ function v(t) {
           })(U)
         })]
       }), (0, i.jsx)(a.FormItem, {
-        title: _.default.Messages.FORM_LABEL_DELETE_MESSAGE_HISTORY,
-        className: E.spacing,
+        title: E.default.Messages.FORM_LABEL_DELETE_MESSAGE_HISTORY,
+        className: p.spacing,
         children: (0, i.jsx)(a.SingleSelect, {
-          options: p(),
-          value: S,
+          options: g(),
+          value: I,
           onChange: L
         })
       })]
@@ -178,39 +179,39 @@ function v(t) {
       switch (N) {
         case 0:
           return (0, i.jsxs)(a.ModalFooter, {
-            className: E.footer,
+            className: p.footer,
             children: [(0, i.jsx)(a.Button, {
               type: "button",
               look: a.Button.Looks.LINK,
               color: a.Button.Colors.PRIMARY,
               onClick: A,
-              children: _.default.Messages.CANCEL
+              children: E.default.Messages.CANCEL
             }), (0, i.jsx)(a.Button, {
               type: "submit",
               color: a.Button.Colors.RED,
               size: a.Button.Sizes.SMALL,
               onClick: y,
-              children: _.default.Messages.BAN
+              children: E.default.Messages.BAN
             })]
           });
         case 1:
           return (0, i.jsxs)(a.ModalFooter, {
-            className: E.footerStepped,
+            className: p.footerStepped,
             children: [(0, i.jsx)(a.Button, {
-              className: E.cancel,
-              innerClassName: E.cancel,
+              className: p.cancel,
+              innerClassName: p.cancel,
               type: "button",
               look: a.Button.Looks.LINK,
               color: a.Button.Colors.PRIMARY,
               size: a.Button.Sizes.SMALL,
               onClick: B,
-              children: _.default.Messages.BACK
+              children: E.default.Messages.BACK
             }), (0, i.jsx)(a.Button, {
               type: "submit",
               color: a.Button.Colors.RED,
               size: a.Button.Sizes.SMALL,
               onClick: y,
-              children: _.default.Messages.BAN
+              children: E.default.Messages.BAN
             })]
           })
       }

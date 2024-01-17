@@ -1,46 +1,46 @@
 "use strict";
 n.r(t), n.d(t, {
   startStream: function() {
-    return N
-  },
-  setStreamPaused: function() {
     return O
   },
+  setStreamPaused: function() {
+    return b
+  },
   watchStream: function() {
-    return P
+    return R
   },
   toggleSelfStreamHidden: function() {
     return V
   },
   watchStreamAndTransitionToStream: function() {
-    return R
-  },
-  stopStream: function() {
     return k
   },
-  closeStream: function() {
+  stopStream: function() {
     return M
   },
-  fetchStreamPreview: function() {
+  closeStream: function() {
     return w
   },
-  notifyStreamStart: function() {
+  fetchStreamPreview: function() {
     return L
   },
-  updateStreamSettings: function() {
+  notifyStreamStart: function() {
     return U
   },
-  changeStreamRegion: function() {
+  updateStreamSettings: function() {
     return G
   },
-  stopOwnStream: function() {
+  changeStreamRegion: function() {
     return F
   },
-  createBroadcastChannelOrStartStream: function() {
+  stopOwnStream: function() {
     return x
   },
-  joinPrivateChannelAndWatchStream: function() {
+  createBroadcastChannelOrStartStream: function() {
     return B
+  },
+  joinPrivateChannelAndWatchStream: function() {
+    return H
   }
 });
 var s = n("627445"),
@@ -59,27 +59,28 @@ var s = n("627445"),
   h = n("18494"),
   v = n("800762"),
   E = n("404008"),
-  p = n("12307"),
-  y = n("840707"),
-  T = n("561288"),
-  C = n("450911"),
-  S = n("255397"),
-  I = n("987317"),
-  A = n("49111"),
-  D = n("706530");
+  p = n("718517"),
+  y = n("12307"),
+  T = n("840707"),
+  C = n("561288"),
+  S = n("450911"),
+  I = n("255397"),
+  A = n("987317"),
+  D = n("49111"),
+  N = n("706530");
 
-function N(e, t, n) {
+function O(e, t, n) {
   o.default.dispatch({
     type: "STREAM_START",
-    streamType: null != e ? D.StreamTypes.GUILD : D.StreamTypes.CALL,
+    streamType: null != e ? N.StreamTypes.GUILD : N.StreamTypes.CALL,
     guildId: e,
     channelId: t,
-    appContext: __OVERLAY__ ? A.AppContext.OVERLAY : A.AppContext.APP,
+    appContext: __OVERLAY__ ? D.AppContext.OVERLAY : D.AppContext.APP,
     ...n
   })
 }
 
-function O(e, t) {
+function b(e, t) {
   let n = (0, u.encodeStreamKey)(e);
   o.default.dispatch({
     type: "STREAM_SET_PAUSED",
@@ -88,21 +89,21 @@ function O(e, t) {
   })
 }
 
-function b(e, t) {
+function P(e, t) {
   let n = g.default.getChannel(t);
   i(null != n, "Cannot join a null voice channel");
   let s = v.default.isInChannel(t);
   return !s && (0, E.isChannelFull)(n, v.default, m.default)
 }
 
-function P(e, t) {
+function R(e, t) {
   let n = null != d.default.getRemoteSessionId();
   if (n) return;
   let {
     guildId: s,
     channelId: i
   } = e;
-  if (null != s && b(s, i)) return;
+  if (null != s && P(s, i)) return;
   let r = (0, u.encodeStreamKey)(e),
     a = (null == t ? void 0 : t.forceMultiple) || _.default.getAllActiveStreamsForChannel(i).filter(e => {
       let {
@@ -114,7 +115,7 @@ function P(e, t) {
     type: "STREAM_WATCH",
     streamKey: r,
     allowMultiple: a
-  }), !a && (null == t || !t.noFocus) && S.default.selectParticipant(e.channelId, r)
+  }), !a && (null == t || !t.noFocus) && I.default.selectParticipant(e.channelId, r)
 }
 
 function V(e, t) {
@@ -125,28 +126,28 @@ function V(e, t) {
   })
 }
 
-function R(e, t) {
+function k(e, t) {
   let {
     guildId: n,
     channelId: s
   } = e;
-  if (null != n && b(n, s)) return;
-  P(e, t);
-  let i = f.default.getWindowOpen(A.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
+  if (null != n && P(n, s)) return;
+  R(e, t);
+  let i = f.default.getWindowOpen(D.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
     r = h.default.getVoiceChannelId();
   (!i || r !== s) && (0, l.default)(e)
 }
 
-function k(e) {
+function M(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  M(e, t), o.default.dispatch({
+  w(e, t), o.default.dispatch({
     type: "STREAM_STOP",
     streamKey: e,
-    appContext: __OVERLAY__ ? A.AppContext.OVERLAY : A.AppContext.APP
+    appContext: __OVERLAY__ ? D.AppContext.OVERLAY : D.AppContext.APP
   })
 }
 
-function M(e) {
+function w(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   o.default.dispatch({
     type: "STREAM_CLOSE",
@@ -154,9 +155,9 @@ function M(e) {
     canShowFeedback: t
   })
 }
-async function w(e, t, n) {
+async function L(e, t, n) {
   let s = (0, u.encodeStreamKey)({
-    streamType: null != e ? D.StreamTypes.GUILD : D.StreamTypes.CALL,
+    streamType: null != e ? N.StreamTypes.GUILD : N.StreamTypes.CALL,
     guildId: e,
     channelId: t,
     ownerId: n
@@ -167,7 +168,7 @@ async function w(e, t, n) {
   });
   try {
     let e = await a.default.get({
-      url: A.Endpoints.STREAM_PREVIEW(s),
+      url: D.Endpoints.STREAM_PREVIEW(s),
       query: {
         version: Date.now()
       },
@@ -180,17 +181,17 @@ async function w(e, t, n) {
     })
   } catch (t) {
     let e;
-    429 === t.status && (e = 1e3 * t.body.retry_after), o.default.dispatch({
+    429 === t.status && (e = t.body.retry_after * p.default.Millis.SECOND), o.default.dispatch({
       type: "STREAM_PREVIEW_FETCH_FAIL",
       streamKey: s,
       retryAfter: e
     })
   }
 }
-async function L(e) {
+async function U(e) {
   try {
-    await y.default.post({
-      url: A.Endpoints.STREAM_NOTIFY(e),
+    await T.default.post({
+      url: D.Endpoints.STREAM_NOTIFY(e),
       oldFormErrors: !0,
       trackedActionData: {
         event: r.NetworkActionNames.STREAM_NOTIFY
@@ -199,16 +200,16 @@ async function L(e) {
   } catch (e) {}
 }
 
-function U(e) {
-  (0, p.trackStreamSettingsUpdate)(e.preset, e.resolution, e.frameRate), o.default.dispatch({
+function G(e) {
+  (0, y.trackStreamSettingsUpdate)(e.preset, e.resolution, e.frameRate), o.default.dispatch({
     type: "STREAM_UPDATE_SETTINGS",
     ...e
   })
 }
 
-function G(e, t) {
+function F(e, t) {
   a.default.patch({
-    url: A.Endpoints.STREAM(e),
+    url: D.Endpoints.STREAM(e),
     body: {
       region: t
     },
@@ -216,13 +217,13 @@ function G(e, t) {
   })
 }
 
-function F() {
+function x() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     t = _.default.getCurrentUserActiveStream();
-  null != t && k((0, u.encodeStreamKey)(t), e)
+  null != t && M((0, u.encodeStreamKey)(t), e)
 }
 
-function x(e) {
+function B(e) {
   let {
     channelId: t,
     pid: n,
@@ -236,20 +237,20 @@ function x(e) {
       sourceId: s,
       sourceName: i
     }
-  }), null == t ? C.default.createBroadcastPrivateChannel() : N(null, t, {
+  }), null == t ? S.default.createBroadcastPrivateChannel() : O(null, t, {
     pid: n,
     sourceId: s,
     sourceName: i
   }))
 }
 
-function B(e, t) {
+function H(e, t) {
   let n = c.default.getId(),
     s = (0, u.decodeStreamKey)(t),
     i = h.default.getVoiceChannelId();
-  null != i && i !== e && I.default.disconnect(), C.default.addRecipient(e, n, void 0, () => {
-    T.default.call(e, !1, !1, null, () => {
-      R(s)
+  null != i && i !== e && A.default.disconnect(), S.default.addRecipient(e, n, void 0, () => {
+    C.default.call(e, !1, !1, null, () => {
+      k(s)
     })
   })
 }

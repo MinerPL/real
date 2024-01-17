@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   TOAST_LINGER_MS: function() {
-    return R
+    return j
   },
   default: function() {
-    return L
+    return O
   }
 }), n("222007");
 var a = n("37983"),
@@ -27,14 +27,15 @@ var a = n("37983"),
   _ = n("27618"),
   I = n("93427"),
   T = n("315102"),
-  v = n("449008"),
-  x = n("439932"),
-  N = n("49111"),
-  A = n("719347"),
-  M = n("858327");
-let R = 1e4;
+  v = n("718517"),
+  x = n("449008"),
+  N = n("439932"),
+  A = n("49111"),
+  M = n("719347"),
+  R = n("858327");
+let j = 10 * v.default.Millis.SECOND;
 
-function j(e) {
+function L(e) {
   var t;
   let {
     message: n
@@ -48,19 +49,19 @@ function j(e) {
     isInteracting: c
   }).content : null, {
     contentPlaceholder: N,
-    renderedContent: R,
+    renderedContent: A,
     icon: j
-  } = (0, I.renderSingleLineMessage)(n, x, s, M.messageContent, {
-    iconClass: M.messageContentIcon,
-    iconSize: A.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
+  } = (0, I.renderSingleLineMessage)(n, x, s, R.messageContent, {
+    iconClass: R.messageContentIcon,
+    iconSize: M.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
   }), L = (0, C.getMessageStickers)(n), O = L.length > 0, y = O ? L.map(e => (0, a.jsx)(g.default, {
-    className: M.sticker,
+    className: R.sticker,
     size: 128,
     sticker: e,
     isInteracting: c
   }, e.id)) : null;
   return (0, a.jsxs)(d.Clickable, {
-    className: M.toast,
+    className: R.toast,
     onMouseEnter: () => {
       S(!0)
     },
@@ -69,10 +70,10 @@ function j(e) {
     },
     onClick: v,
     children: [(0, a.jsxs)("div", {
-      className: i(M.messageContentWrapper, {
-        [M.mentioned]: n.mentioned
+      className: i(R.messageContentWrapper, {
+        [R.mentioned]: n.mentioned
       }),
-      children: [null !== (t = null != R ? R : y) && void 0 !== t ? t : (0, a.jsx)("span", {
+      children: [null !== (t = null != A ? A : y) && void 0 !== t ? t : (0, a.jsx)("span", {
         children: N
       }), null != y ? null : j]
     }), (0, a.jsx)("img", {
@@ -82,12 +83,12 @@ function j(e) {
         userId: n.author.id,
         avatar: r.guildMemberAvatar
       }) : n.author.getAvatarURL(o, 32),
-      className: M.avatar
+      className: R.avatar
     })]
   })
 }
 
-function L(e) {
+function O(e) {
   let {
     channelId: t,
     className: n
@@ -110,7 +111,7 @@ function L(e) {
           channelId: t,
           message: a
         } = e;
-        t === n && a.type !== N.MessageTypes.STAGE_START && a.type !== N.MessageTypes.STAGE_END && a.type !== N.MessageTypes.STAGE_TOPIC && a.type !== N.MessageTypes.STAGE_SPEAKER && a.type !== N.MessageTypes.STAGE_RAISE_HAND && (clearTimeout(p.current), p.current = setTimeout(m, i), o(e => [...e, a.id]))
+        t === n && a.type !== A.MessageTypes.STAGE_START && a.type !== A.MessageTypes.STAGE_END && a.type !== A.MessageTypes.STAGE_TOPIC && a.type !== A.MessageTypes.STAGE_SPEAKER && a.type !== A.MessageTypes.STAGE_RAISE_HAND && (clearTimeout(p.current), p.current = setTimeout(m, i), o(e => [...e, a.id]))
       }
       return c.default.subscribe("MESSAGE_CREATE", e), () => {
         c.default.unsubscribe("MESSAGE_CREATE", e)
@@ -127,13 +128,13 @@ function L(e) {
       C = (0, u.useStateFromStoresArray)([S.default], () => E.map(e => S.default.getMessage(n, e)), [n, E]);
     return {
       toastsHidden: d,
-      toastMessages: C.filter(v.isNotNullish)
+      toastMessages: C.filter(x.isNotNullish)
     }
   }({
     channelId: t,
     isFrozen: s,
     count: 3,
-    lingerMs: R
+    lingerMs: j
   }), p = l.useRef({}), [m, E] = l.useState({}), C = l.useCallback((e, t) => {
     null == t ? delete p.current[e] : p.current[e] = t
   }, []);
@@ -186,7 +187,7 @@ function L(e) {
       }
     });
   return (0, a.jsx)("div", {
-    className: i(n, (0, x.getThemeClass)(N.ThemeTypes.DARK)),
+    className: i(n, (0, N.getThemeClass)(A.ThemeTypes.DARK)),
     onMouseEnter: () => {
       d(!0)
     },
@@ -195,9 +196,9 @@ function L(e) {
     },
     children: _((e, t) => (0, a.jsx)(o.animated.div, {
       ref: e => C(t.message.id, null != e ? e.offsetHeight : null),
-      className: M.toastWrapper,
+      className: R.toastWrapper,
       style: e,
-      children: (0, a.jsx)(j, {
+      children: (0, a.jsx)(L, {
         message: t.message
       })
     }))

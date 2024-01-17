@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   },
   default: function() {
-    return m
+    return g
   }
 });
 var a, s, i = n("884691"),
@@ -23,10 +23,11 @@ var a, s, i = n("884691"),
   I = n("833781"),
   S = n("572182"),
   N = n("201952"),
-  A = n("427459"),
-  p = n("49111");
+  A = n("718517"),
+  p = n("427459"),
+  m = n("49111");
 
-function m(e) {
+function g(e) {
   var t;
   let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "",
     {
@@ -37,53 +38,53 @@ function m(e) {
     })),
     {
       lastDismissedGracePeriod: s,
-      isGracePeriodVisible: m
+      isGracePeriodVisible: g
     } = (0, l.useStateFromStoresObject)([I.default], () => ({
       lastDismissedGracePeriod: I.default.getLastDismissedGracePeriodForGuild(n),
       isGracePeriodVisible: I.default.isVisible(n)
     })),
-    g = (0, l.useStateFromStores)([h.default], () => h.default.isVisible(e)),
-    R = (0, l.useStateFromStores)([N.default], () => N.default.isVisible(e)),
-    O = (0, l.useStateFromStores)([T.default], () => T.default.can(p.Permissions.ADMINISTRATOR, e)),
-    L = null != s && Date.now() - s <= p.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
-    v = null != e ? e.premiumSubscriberCount : 0,
-    M = (0, A.getGuildTierFromAppliedBoostCount)(v, n) !== p.BoostedGuildTiers.NONE,
-    P = null != a && Date.now() - a <= 432e5,
-    D = !P && !L && O && M,
-    y = (0, c.useGuildHasLiveChannelNotice)(n),
-    x = (0, l.useStateFromStores)([S.default], () => S.default.isVisible(e)),
-    b = _.default.useShouldShowChannelNotice(n),
-    U = (0, o.useUnseenEndedApplicationSubscriptionEntitlements)(e),
+    R = (0, l.useStateFromStores)([h.default], () => h.default.isVisible(e)),
+    O = (0, l.useStateFromStores)([N.default], () => N.default.isVisible(e)),
+    L = (0, l.useStateFromStores)([T.default], () => T.default.can(m.Permissions.ADMINISTRATOR, e)),
+    v = null != s && Date.now() - s <= m.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
+    M = null != e ? e.premiumSubscriberCount : 0,
+    P = (0, p.getGuildTierFromAppliedBoostCount)(M, n) !== m.BoostedGuildTiers.NONE,
+    D = null != a && Date.now() - a <= 432e5,
+    y = !D && !v && L && P,
+    x = (0, c.useGuildHasLiveChannelNotice)(n),
+    b = (0, l.useStateFromStores)([S.default], () => S.default.isVisible(e)),
+    U = _.default.useShouldShowChannelNotice(n),
+    G = (0, o.useUnseenEndedApplicationSubscriptionEntitlements)(e),
     {
-      enableStudyGroup: G
+      enableStudyGroup: j
     } = (0, f.useHubStudyGroupExperiment)(e),
-    j = U.length > 0,
-    k = G && !(null == e ? void 0 : e.hasFeature(p.GuildFeatures.HUB)),
+    k = G.length > 0,
+    w = j && !(null == e ? void 0 : e.hasFeature(m.GuildFeatures.HUB)),
     {
-      canSeeUpcomingEventsNotices: w
+      canSeeUpcomingEventsNotices: F
     } = d.default.useExperiment({
       guildId: n,
       location: "useVisibleConnectedNotice"
     }, {
       autoTrackExposure: !1
     }),
-    F = null != (0, E.useGuildUpcomingEventsNotice)(n);
+    B = null != (0, E.useGuildUpcomingEventsNotice)(n);
   if (i.useEffect(() => {
       u.default.getGuildEventsForCurrentUser(n)
     }, [n]), i.useEffect(() => {
       let e = -1;
-      return D && (e = window.setTimeout(() => {
+      return y && (e = window.setTimeout(() => {
         null != n && (0, r.fetchAppliedGuildBoostsForGuild)(n)
-      }, 3e4 * Math.random())), () => {
+      }, 30 * Math.random() * A.default.Millis.SECOND)), () => {
         window.clearTimeout(e)
       }
-    }, [n, D]), g) return 0;
-  if (m) return 1;
-  if (R) return 2;
-  else if (y || w && null != F) return 3;
-  else if (x) return 4;
-  else if (b) return 5;
-  else if (j) return 6;
-  else if (k) return 7;
+    }, [n, y]), R) return 0;
+  if (g) return 1;
+  if (O) return 2;
+  else if (x || F && null != B) return 3;
+  else if (b) return 4;
+  else if (U) return 5;
+  else if (k) return 6;
+  else if (w) return 7;
   return null
 }(a = s || (s = {}))[a.ENABLE_PUBLIC_GUILD = 0] = "ENABLE_PUBLIC_GUILD", a[a.APPLIED_GUILD_BOOST_GRACE_PERIOD = 1] = "APPLIED_GUILD_BOOST_GRACE_PERIOD", a[a.MAX_MEMBER_COUNT = 2] = "MAX_MEMBER_COUNT", a[a.GUILD_LIVE_CHANNEL = 3] = "GUILD_LIVE_CHANNEL", a[a.GUILD_MFA_WARNING = 4] = "GUILD_MFA_WARNING", a[a.COMMANDS_MIGRATION = 5] = "COMMANDS_MIGRATION", a[a.APPLICATION_SUBSCRIPTION_EXPIRATION = 6] = "APPLICATION_SUBSCRIPTION_EXPIRATION", a[a.HUB_STUDY_ROOM = 7] = "HUB_STUDY_ROOM"

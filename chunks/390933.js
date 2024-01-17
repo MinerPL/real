@@ -7,8 +7,9 @@ n.r(t), n.d(t, {
 var s, i = n("522632"),
   r = n("872717"),
   a = n("605250"),
-  o = n("49111");
-class d {
+  o = n("718517"),
+  d = n("49111");
+class u {
   async fetch(e, t, n) {
     if (!this.isCanceled) try {
       let i = await this.makeRequest();
@@ -17,7 +18,7 @@ class d {
       else if (202 === i.status) {
         var s;
         if (this.query.attempts = (null !== (s = this.query.attempts) && void 0 !== s ? s : 0) + 1, this.query.attempts > 5) return;
-        let r = 1e3 * i.body.retry_after;
+        let r = i.body.retry_after * o.default.Millis.SECOND;
         this.retryDelay = isNaN(r) || 0 === r ? 5e3 : r, this.retryLater(e, t, n), t(i)
       }
     } catch (e) {
@@ -34,17 +35,17 @@ class d {
     this.isCanceled = !1, this.searchId = e, this.searchType = t, this.query = n
   }
 }
-s = class extends d {
+s = class extends u {
   getEndpoint() {
     switch (this.searchType) {
-      case o.SearchTypes.DMS:
-        return o.Endpoints.SEARCH_DMS;
-      case o.SearchTypes.GUILD:
+      case d.SearchTypes.DMS:
+        return d.Endpoints.SEARCH_DMS;
+      case d.SearchTypes.GUILD:
         if (null == this.searchId || "" === this.searchId) return;
-        return o.Endpoints.SEARCH_GUILD(this.searchId);
-      case o.SearchTypes.CHANNEL:
+        return d.Endpoints.SEARCH_GUILD(this.searchId);
+      case d.SearchTypes.CHANNEL:
         if (null == this.searchId || "" === this.searchId) return;
-        return o.Endpoints.SEARCH_CHANNEL(this.searchId);
+        return d.Endpoints.SEARCH_CHANNEL(this.searchId);
       default:
         throw Error("[SearchFetcher] Unhandled search type: ".concat(this.searchType))
     }

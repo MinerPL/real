@@ -6,97 +6,100 @@ var a, s = n("446674"),
   r = n("913144"),
   o = n("260365"),
   u = n("374363"),
-  d = n("964889"),
-  c = n("546463"),
-  E = n("686470"),
-  f = n("568307"),
-  _ = n("49111");
-let h = "ActivityTrackingStore",
-  C = null !== (a = i.default.get(h)) && void 0 !== a ? a : {},
-  T = {},
-  I = !1;
+  d = n("718517"),
+  c = n("964889"),
+  E = n("546463"),
+  f = n("686470"),
+  _ = n("568307"),
+  h = n("49111");
+let C = "ActivityTrackingStore",
+  T = 30 * d.default.Millis.MINUTE,
+  I = 5 * d.default.Millis.MINUTE,
+  S = null !== (a = i.default.get(C)) && void 0 !== a ? a : {},
+  N = {},
+  A = !1;
 
-function S(e) {
+function p(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  t && N(e, !0);
-  let n = T[e.applicationId];
-  null != n && (n.stop(), delete T[e.applicationId]), delete C[e.applicationId], i.default.set(h, C)
+  t && m(e, !0);
+  let n = N[e.applicationId];
+  null != n && (n.stop(), delete N[e.applicationId]), delete S[e.applicationId], i.default.set(C, S)
 }
 
-function N(e) {
+function m(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = Date.now(),
     a = null != e.updatedAt ? n - e.updatedAt : 0;
-  a > 21e5 && (a = 0), o.default.updateActivity({
+  a > T + I && (a = 0), o.default.updateActivity({
     applicationId: e.applicationId,
-    distributor: e.isDiscordApplication ? _.Distributors.DISCORD : e.distributor,
-    shareActivity: (0, d.shouldShareApplicationActivity)(e.applicationId, E.default),
+    distributor: e.isDiscordApplication ? h.Distributors.DISCORD : e.distributor,
+    shareActivity: (0, c.shouldShareApplicationActivity)(e.applicationId, f.default),
     token: e.token,
     duration: Math.floor(a / 1e3),
     closed: t
   }), e.updatedAt = n;
-  let s = T[e.applicationId];
-  null == s && (s = T[e.applicationId] = new l.Interval).start(18e5, () => N(e)), !t && (C[e.applicationId] = e, i.default.set(h, C))
+  let s = N[e.applicationId];
+  null == s && (s = N[e.applicationId] = new l.Interval).start(T, () => m(e)), !t && (S[e.applicationId] = e, i.default.set(C, S))
 }
 
-function A() {
+function g() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-    t = f.default.getRunningGames(),
+    t = _.default.getRunningGames(),
     n = new Set;
   for (let {
       name: e,
       distributor: a
     }
     of t) {
-    let t = c.default.getGameByName(e);
-    if (null != t) n.add(t.id), !(t.id in C) && N({
+    let t = E.default.getGameByName(e);
+    if (null != t) n.add(t.id), !(t.id in S) && m({
       applicationId: t.id,
       updatedAt: Date.now(),
       distributor: a
     })
   }
-  for (let t of Object.keys(C)) !n.has(t) && S(C[t], e)
+  for (let t of Object.keys(S)) !n.has(t) && p(S[t], e)
 }
 
-function p() {
-  for (let e of Object.keys(C)) S(C[e]);
-  I = !1
+function R() {
+  for (let e of Object.keys(S)) p(S[e]);
+  A = !1
 }
-class m extends s.default.Store {
+class O extends s.default.Store {
   initialize() {
-    this.waitFor(f.default, u.default, E.default), this.syncWith([u.default], A)
+    this.waitFor(_.default, u.default, f.default), this.syncWith([u.default], g)
   }
   getActivities() {
-    return C
+    return S
   }
 }
-m.displayName = "ActivityTrackingStore", new m(r.default, {
-  RUNNING_GAMES_CHANGE: () => A(),
+O.displayName = "ActivityTrackingStore", new O(r.default, {
+  RUNNING_GAMES_CHANGE: () => g(),
   CONNECTION_OPEN: function() {
-    if (I) return !1;
-    for (let e of Object.keys(C)) N(C[e]);
-    A(!1), I = !0
+    if (A) return !1;
+    for (let e of Object.keys(S)) m(S[e]);
+    g(!1), A = !0
   },
   CONNECTION_CLOSED: function(e) {
     let {
       code: t
     } = e;
-    4004 === t && p()
+    4004 === t && R()
   },
-  LOGOUT: p,
+  LOGOUT: R,
   ACTIVITY_UPDATE_SUCCESS: function(e) {
     let {
       applicationId: t,
       token: n
-    } = e, a = C[t];
+    } = e, a = S[t];
     if (null == a) return !1;
-    a.token = n, i.default.set(h, C)
+    a.token = n, i.default.set(C, S)
   },
   ACTIVITY_UPDATE_FAIL: function(e) {
     let {
       applicationId: t
-    } = e, n = C[t];
+    } = e, n = S[t];
     if (null == n) return !1;
-    n.token = null, n.updatedAt = null, i.default.set(h, C)
+    n.token = null, n.updatedAt = null, i.default.set(C, S)
   }
 })

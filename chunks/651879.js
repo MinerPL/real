@@ -2,7 +2,7 @@
 let r;
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return E
   }
 }), n("424973");
 var i = n("917351"),
@@ -12,13 +12,14 @@ var i = n("917351"),
   a = n("851387"),
   s = n("305961"),
   c = n("697218"),
-  d = n("158998"),
-  f = n("782340");
-let h = new u({
-  maxAge: 6e4
+  d = n("718517"),
+  f = n("158998"),
+  h = n("782340");
+let p = new u({
+  maxAge: 1 * d.default.Millis.MINUTE
 });
 
-function p(e, t, n) {
+function I(e, t, n) {
   null != r && clearTimeout(r), r = setTimeout(() => {
     let r = [],
       i = e => {
@@ -37,17 +38,17 @@ function p(e, t, n) {
   }, 200)
 }
 
-function I(e, t) {
+function m(e, t) {
   let n = "".concat(null != e ? e : "", ":").concat(t),
-    r = h.get(n);
+    r = p.get(n);
   if (null != r) return r;
-  h.set(n, !0)
+  p.set(n, !0)
 }
-var m = {
+var E = {
   getGuildNameSuggestion: function(e) {
     let t = c.default.getCurrentUser(),
-      n = d.getName(t);
-    return null == n || 0 === n.length ? "" : f.default.Messages.CREATE_SERVER_DEFAULT_SERVER_NAME_FORMAT.format({
+      n = f.getName(t);
+    return null == n || 0 === n.length ? "" : h.default.Messages.CREATE_SERVER_DEFAULT_SERVER_NAME_FORMAT.format({
       username: (null == e ? void 0 : e.truncateUsername) ? n.slice(0, 20) : n
     })
   },
@@ -57,13 +58,13 @@ var m = {
       i = [],
       l = !1;
     if (r) e.forEach(e => {
-      let n = I(e, t);
+      let n = m(e, t);
       null == n && i.push(e)
     });
     else {
-      let n = I(e, t);
+      let n = m(e, t);
       null == n && (l = !0)
     }
-    i.length > 0 && r ? p(i, t, n) : l && p(e, t, n)
+    i.length > 0 && r ? I(i, t, n) : l && I(e, t, n)
   }
 }

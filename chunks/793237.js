@@ -1,28 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   setHighlightedSummary: function() {
-    return I
-  },
-  toggleTopicsBar: function() {
-    return x
-  },
-  setSelectedSummary: function() {
-    return _
-  },
-  updateVisibleMessages: function() {
     return S
   },
-  useSummaryPolling: function() {
+  toggleTopicsBar: function() {
+    return N
+  },
+  setSelectedSummary: function() {
     return M
   },
-  setSummaryFeedback: function() {
+  updateVisibleMessages: function() {
     return T
   },
-  deleteSummary: function() {
+  useSummaryPolling: function() {
+    return j
+  },
+  setSummaryFeedback: function() {
     return y
   },
+  deleteSummary: function() {
+    return O
+  },
   default: function() {
-    return L
+    return D
   }
 }), n("222007");
 var l = n("884691"),
@@ -37,12 +37,15 @@ var l = n("884691"),
   m = n("104589"),
   f = n("116460"),
   h = n("42203"),
-  p = n("347738");
-let g = {},
-  E = {};
-async function v(e, t) {
+  p = n("718517"),
+  g = n("347738");
+let E = 30 * p.default.Millis.SECOND,
+  v = 5 * p.default.Millis.SECOND,
+  C = {},
+  I = {};
+async function x(e, t) {
   let n, l;
-  if (!p.default.shouldFetch(e, t)) return;
+  if (!g.default.shouldFetch(e, t)) return;
   let a = Date.now();
   u.default.dispatch({
     type: "REQUEST_CHANNEL_SUMMARY",
@@ -65,10 +68,10 @@ async function v(e, t) {
     receivedAt: Date.now()
   })
 }
-async function C(e) {
+async function _(e) {
   var t, n;
   let l, a;
-  if (!p.default.shouldFetch(e)) return;
+  if (!g.default.shouldFetch(e)) return;
   let i = Date.now();
   u.default.dispatch({
     type: "REQUEST_CHANNEL_SUMMARIES",
@@ -91,7 +94,7 @@ async function C(e) {
   })
 }
 
-function I(e, t) {
+function S(e, t) {
   u.default.dispatch({
     type: "SET_HIGHLIGHTED_SUMMARY",
     channelId: e,
@@ -99,21 +102,21 @@ function I(e, t) {
   })
 }
 
-function x() {
+function N() {
   u.default.dispatch({
     type: "TOGGLE_TOPICS_BAR"
   })
 }
 
-function _(e, t) {
-  null != e && null != t && v(e, t), u.default.dispatch({
+function M(e, t) {
+  null != e && null != t && x(e, t), u.default.dispatch({
     type: "SET_SELECTED_SUMMARY",
     channelId: e,
     summaryId: null != t ? t : null
   })
 }
 
-function S(e, t) {
+function T(e, t) {
   u.default.dispatch({
     type: "UPDATE_VISIBLE_MESSAGES",
     topVisibleMessage: null != e ? e : null,
@@ -121,11 +124,11 @@ function S(e, t) {
   })
 }
 
-function N(e, t) {
-  return null == g[e] && (g[e] = 0), null === t ? g[e] = 0 : g[e] += t, g[e]
+function A(e, t) {
+  return null == C[e] && (C[e] = 0), null === t ? C[e] = 0 : C[e] += t, C[e]
 }
 
-function M(e) {
+function j(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     n = (0, r.default)([h.default], () => h.default.getChannel(e), [e]),
     [a, s] = l.useState(null),
@@ -135,23 +138,23 @@ function M(e) {
       s(null)
     }
   }, [e, o]), l.useEffect(() => {
-    if (a !== e && null != a && R.stopPolling(e), o && null != a) return (t || null != e && a !== e) && R.fetchSummaries(e), R.startPolling(e), () => {
-      null != a && R.stopPolling(e)
+    if (a !== e && null != a && b.stopPolling(e), o && null != a) return (t || null != e && a !== e) && b.fetchSummaries(e), b.startPolling(e), () => {
+      null != a && b.stopPolling(e)
     }
   }, [e, t, a, o])
 }
 
-function T(e, t) {
+function y(e, t) {
   u.default.dispatch({
     type: "SET_SUMMARY_FEEDBACK",
     summary: e,
     rating: t
   })
 }
-async function A() {
+async function R() {
   var e;
   let t, n;
-  if (!p.default.shouldFetchChannelAffinities()) return Promise.resolve(null);
+  if (!g.default.shouldFetchChannelAffinities()) return Promise.resolve(null);
   let l = Date.now();
   u.default.dispatch({
     type: "REQUEST_CHANNEL_AFFINITIES",
@@ -171,14 +174,14 @@ async function A() {
     receivedAt: Date.now()
   })
 }
-async function j(e) {
+async function L(e) {
   let t, n, {
     useQuickSwitcher: l = !0,
     useChannelAffinities: a = !0
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   e = null != e ? e : [];
   let s = Date.now();
-  if (0 === (e = e.concat(p.default.defaultChannelIds({
+  if (0 === (e = e.concat(g.default.defaultChannelIds({
       withQuickSwitcher: l,
       withChannelAffinities: a
     })).filter(e => {
@@ -186,10 +189,10 @@ async function j(e) {
       return (0, c.canSeeChannelSummaries)(t, !1, !0)
     }).filter(e => {
       let t = Date.now(),
-        n = p.default.status(e);
+        n = g.default.status(e);
       if (null == n ? void 0 : n.fetching) return !1;
       let l = null == n ? void 0 : n.lastReceivedAt;
-      return null == l || t - l > 3e4
+      return null == l || t - l > E
     }).slice(0, 50)).length) return Promise.resolve(null);
   u.default.dispatch({
     type: "REQUEST_CHANNEL_SUMMARIES_BULK",
@@ -218,7 +221,7 @@ async function j(e) {
     error: t
   })
 }
-async function y(e) {
+async function O(e) {
   try {
     await o.default.delete("/channels/".concat(e.channelId, "/summaries/").concat(e.id)), u.default.dispatch({
       type: "DELETE_SUMMARY",
@@ -228,24 +231,24 @@ async function y(e) {
     throw new d.APIError(e)
   }
 }
-let R = {
+let b = {
   startPolling: function(e) {
-    let t = N(e, 1);
-    t - 1 == 0 && (E[e] = setInterval(async () => {
-      await R.fetchSummaries(e)
-    }, 5e3))
+    let t = A(e, 1);
+    t - 1 == 0 && (I[e] = setInterval(async () => {
+      await b.fetchSummaries(e)
+    }, v))
   },
   stopPolling: function(e) {
-    let t = N(e, -1);
-    t <= 0 && (N(e, 0), clearInterval(E[e]))
+    let t = A(e, -1);
+    t <= 0 && (A(e, 0), clearInterval(I[e]))
   },
-  setSummaryFeedback: T,
-  useSummaryPolling: M,
-  updateVisibleMessages: S,
-  setSelectedSummary: _,
-  setHighlightedSummary: I,
-  fetchSummaries: C,
-  fetchSummariesBulk: j,
+  setSummaryFeedback: y,
+  useSummaryPolling: j,
+  updateVisibleMessages: T,
+  setSelectedSummary: M,
+  setHighlightedSummary: S,
+  fetchSummaries: _,
+  fetchSummariesBulk: L,
   useChannelSummaries: function(e) {
     let {
       channelIds: t = []
@@ -256,17 +259,17 @@ let R = {
       l.useEffect(() => {
         (async function e() {
           try {
-            await A()
+            await R()
           } catch (e) {}
           try {
             var e, n;
             (null === (e = f.default.getProps().results) || void 0 === e ? void 0 : e.length) === 0 && (0, m.search)(null !== (n = f.default.getProps().query) && void 0 !== n ? n : "")
           } catch (e) {}
-          await j(t.split(","))
+          await L(t.split(","))
         })()
       }, [t])
-    }(t), (0, r.useStateFromStoresArray)([p.default], () => p.default.topSummaries(), [])
+    }(t), (0, r.useStateFromStoresArray)([g.default], () => g.default.topSummaries(), [])
   },
-  deleteSummary: y
+  deleteSummary: O
 };
-var L = R
+var D = b

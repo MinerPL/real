@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   generateEmptyPollAnswer: function() {
-    return o
-  },
-  filterOutUUID: function() {
     return c
   },
-  hasNonVoteReactions: function() {
+  filterOutUUID: function() {
     return E
   },
-  useCanPostPollsInChannel: function() {
+  hasNonVoteReactions: function() {
     return f
   },
-  isAnswerFilled: function() {
+  useCanPostPollsInChannel: function() {
     return _
   },
-  isIncompleteAnswer: function() {
+  isAnswerFilled: function() {
     return g
   },
-  createPollServerDataFromCreateRequest: function() {
+  isIncompleteAnswer: function() {
     return h
+  },
+  createPollServerDataFromCreateRequest: function() {
+    return m
   }
 }), n("781738"), n("222007");
 var a = n("748820"),
@@ -27,10 +27,11 @@ var a = n("748820"),
   s = n("418009"),
   i = n("957255"),
   r = n("697218"),
-  d = n("83995"),
-  u = n("49111");
+  d = n("718517"),
+  u = n("83995"),
+  o = n("49111");
 
-function o() {
+function c() {
   return {
     text: void 0,
     image: void 0,
@@ -40,38 +41,38 @@ function o() {
   }
 }
 
-function c(e) {
+function E(e) {
   return e.replace(/\b[a-f\d]{8}-(?:[a-f\d]{4}-){3}[a-f\d]{12}-\b/i, "")
 }
 
-function E(e) {
+function f(e) {
   for (let t of e.reactions)
     if (null == t.me_vote) return !0;
   return !1
 }
 
-function f(e) {
+function _(e) {
   let {
     enabled: t
-  } = d.PollsExperiment.useExperiment({
+  } = u.PollsExperiment.useExperiment({
     guildId: e.guild_id,
     location: "useCanPostPollsInChannel"
   }), n = (0, l.useStateFromStoresArray)([r.default], () => {
     var t, n;
     return null !== (n = null === (t = e.recipients) || void 0 === t ? void 0 : t.map(r.default.getUser)) && void 0 !== n ? n : []
   }, [e.recipients]);
-  return !!u.ChannelTypesSets.POLLS.has(e.type) && (e.isPrivate() ? n.every(e => (null == e ? void 0 : e.isStaff()) === !0) : t && i.default.can(u.Permissions.SEND_MESSAGES, e))
-}
-
-function _(e, t) {
-  return t === s.PollLayoutTypes.IMAGE_ONLY_ANSWERS ? null != e.image : null != e.text && e.text.length > 0
+  return !!o.ChannelTypesSets.POLLS.has(e.type) && (e.isPrivate() ? n.every(e => (null == e ? void 0 : e.isStaff()) === !0) : t && i.default.can(o.Permissions.SEND_MESSAGES, e))
 }
 
 function g(e, t) {
+  return t === s.PollLayoutTypes.IMAGE_ONLY_ANSWERS ? null != e.image : null != e.text && e.text.length > 0
+}
+
+function h(e, t) {
   return t === s.PollLayoutTypes.DEFAULT && null != e.image && (null == e.text || 0 === e.text.length)
 }
 
-function h(e) {
+function m(e) {
   var t, n;
   if (null == e) return;
   let a = null == e ? void 0 : null === (t = e.answers) || void 0 === t ? void 0 : t.map((e, t) => {
@@ -90,7 +91,7 @@ function h(e) {
       poll_media: i
     }
   });
-  let l = (null == e ? void 0 : e.duration) != null ? (n = e.duration, new Date(Date.now() + 36e5 * n).toISOString()) : "0";
+  let l = (null == e ? void 0 : e.duration) != null ? (n = e.duration, new Date(Date.now() + n * d.default.Millis.HOUR).toISOString()) : "0";
   return {
     ...e,
     expiry: l,

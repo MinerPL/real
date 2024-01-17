@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   },
   CloudUpload: function() {
-    return p
+    return y
   }
 }), n("222007"), n("70102");
 var s, i, r = n("917351"),
@@ -14,34 +14,35 @@ var s, i, r = n("917351"),
   u = n("605250"),
   l = n("676574"),
   f = n("994440"),
-  _ = n("286235"),
-  c = n("980134"),
-  g = n("966724"),
-  m = n("142852"),
-  h = n("49111");
-let v = new u.default("CloudUpload.tsx"),
-  E = n("123010").default;
+  _ = n("718517"),
+  c = n("286235"),
+  g = n("980134"),
+  m = n("966724"),
+  h = n("142852"),
+  v = n("49111");
+let E = new u.default("CloudUpload.tsx"),
+  p = n("123010").default;
 (i = s || (s = {})).NOT_STARTED = "NOT_STARTED", i.STARTED = "STARTED", i.UPLOADING = "UPLOADING", i.ERROR = "ERROR", i.COMPLETED = "COMPLETED", i.CANCELED = "CANCELED";
-class p extends g.default {
+class y extends m.default {
   static fromJson(e) {
     let {
       item: t,
       channelId: n,
       showLargeMessageDialog: s,
       reactNativeFileIndex: i
-    } = e, r = new p(t, n, s, i);
+    } = e, r = new y(t, n, s, i);
     return "COMPLETED" !== r.status && (r.status = "NOT_STARTED"), Object.entries(e).forEach(e => {
       let [t, n] = e;
       !t.startsWith("_") && (r[t] = n)
     }), r
   }
   retryOpts() {
-    return this.item.platform === g.UploadPlatform.REACT_NATIVE ? {
-      timeout: 36e5,
-      backoff: new o.default(500, 2048e3),
+    return this.item.platform === m.UploadPlatform.REACT_NATIVE ? {
+      timeout: 1 * _.default.Millis.HOUR,
+      backoff: new o.default(.5 * _.default.Millis.SECOND, 30 * _.default.Millis.MINUTE),
       retries: 12
     } : {
-      timeout: 36e5,
+      timeout: 1 * _.default.Millis.HOUR,
       retries: 12,
       backoff: new o.default
     }
@@ -49,7 +50,7 @@ class p extends g.default {
   uploadFileToCloud() {
     let e, t;
     if (null == this.responseUrl) throw Error("_uploadFileToCloud - responseUrl is not set");
-    v.log("Uploading ".concat(this.id)), this.item.platform === g.UploadPlatform.REACT_NATIVE ? t = null != (e = {
+    E.log("Uploading ".concat(this.id)), this.item.platform === m.UploadPlatform.REACT_NATIVE ? t = null != (e = {
       type: this.item.mimeType,
       uri: this.item.uri,
       name: this.item.filename
@@ -80,14 +81,14 @@ class p extends g.default {
       this.handleComplete(this.id);
       return
     }
-    let s = await E.getUploadPayload(this),
-      i = (0, m.getUploadTarget)(this.item.target);
+    let s = await p.getUploadPayload(this),
+      i = (0, h.getUploadTarget)(this.item.target);
     if (null == s.filename || "" === s.filename || 0 === this.currentSize) {
-      v.error("File does not have a filename or size is 0.", JSON.stringify(s)), this.handleError(h.AbortCodes.INVALID_FILE_ASSET);
+      E.error("File does not have a filename or size is 0.", JSON.stringify(s)), this.handleError(v.AbortCodes.INVALID_FILE_ASSET);
       return
     }
     if ((null !== (e = this.currentSize) && void 0 !== e ? e : 0) > i.getMaxFileSize(this.channelId)) {
-      this.handleError(h.AbortCodes.ENTITY_TOO_LARGE);
+      this.handleError(v.AbortCodes.ENTITY_TOO_LARGE);
       return
     }
     if (l.default.get("upload_fail_50") && .5 > Math.random()) {
@@ -97,7 +98,7 @@ class p extends g.default {
       return
     }
     try {
-      v.log("Requesting upload url for ".concat(this.id));
+      E.log("Requesting upload url for ".concat(this.id));
       let e = await d.default.post({
         url: i.getCreateAttachmentURL(this.channelId),
         body: {
@@ -108,33 +109,33 @@ class p extends g.default {
       this.setResponseUrl(e.body.attachments[0].upload_url), this.setUploadedFilename(e.body.attachments[0].upload_filename)
     } catch (s) {
       let e = null !== (n = null == s ? void 0 : null === (t = s.body) || void 0 === t ? void 0 : t.code) && void 0 !== n ? n : s.status;
-      e !== h.AbortCodes.ENTITY_TOO_LARGE && (v.error("Requesting upload url failed with code ".concat(null != e ? e : JSON.stringify(s.body), " for ").concat(this.id)), _.default.captureException(s)), this.handleError(e);
+      e !== v.AbortCodes.ENTITY_TOO_LARGE && (E.error("Requesting upload url failed with code ".concat(null != e ? e : JSON.stringify(s.body), " for ").concat(this.id)), c.default.captureException(s)), this.handleError(e);
       return
     }
     try {
       let e = await this.uploadFileToCloud();
       this.handleComplete(e)
     } catch (e) {
-      "CANCELED" === this.status ? this.handleComplete(e) : (v.info("Error: status ".concat(e.status, " for ").concat(this.id)), this.handleError(e))
+      "CANCELED" === this.status ? this.handleComplete(e) : (E.info("Error: status ".concat(e.status, " for ").concat(this.id)), this.handleError(e))
     }
   }
   async reactNativeCompressAndExtractData() {
     var e, t;
-    if (!(0, m.getUploadTarget)(this.item.target).shouldReactNativeCompressUploads) {
-      v.log("reactNativeCompressAndExtractData() disabled by upload target");
+    if (!(0, h.getUploadTarget)(this.item.target).shouldReactNativeCompressUploads) {
+      E.log("reactNativeCompressAndExtractData() disabled by upload target");
       return
     }
     if (!0 === this.reactNativeFilePrepped) {
-      v.log("reactNativeCompressAndExtractData() file already prepped - ".concat(this.id));
+      E.log("reactNativeCompressAndExtractData() file already prepped - ".concat(this.id));
       return
     }
-    v.log("Starting compression/conversion for ".concat(this.id));
+    E.log("Starting compression/conversion for ".concat(this.id));
     let n = await (0, f.getAttachmentFile)(this, null !== (e = this.reactNativeFileIndex) && void 0 !== e ? e : 0);
     if (null == n || null == n.file) return;
     let s = n.uri,
       i = n.file.name,
       r = n.file.type;
-    if (this.filename = i, null == i || null == s || null == r) throw v.error("Insufficient file data: ".concat({
+    if (this.filename = i, null == i || null == s || null == r) throw E.error("Insufficient file data: ".concat({
       filename: i,
       uri: s,
       mimeType: r
@@ -143,9 +144,9 @@ class p extends g.default {
       uri: s,
       mimeType: r
     }));
-    let a = null !== (t = n.fileSize) && void 0 !== t ? t : (await (0, c.getFileData)(s)).size;
-    if (this.postCompressionSize = a, this.currentSize = a, null == a) throw v.error("Size missing from file data for ".concat(this.id)), Error("Size missing from file data");
-    v.log("Completed compression and conversion. Output size=".concat(a, " bytes; filename=").concat(i, " for ").concat(this.id));
+    let a = null !== (t = n.fileSize) && void 0 !== t ? t : (await (0, g.getFileData)(s)).size;
+    if (this.postCompressionSize = a, this.currentSize = a, null == a) throw E.error("Size missing from file data for ".concat(this.id)), Error("Size missing from file data");
+    E.log("Completed compression and conversion. Output size=".concat(a, " bytes; filename=").concat(i, " for ").concat(this.id));
     this.item = {
       ...this.item,
       uri: s,
@@ -161,17 +162,17 @@ class p extends g.default {
     this.removeAllListeners()
   }
   handleComplete(e) {
-    this.setStatus("COMPLETED"), v.log("Upload complete for ".concat(this.id)), this.emit("complete", e), this.removeAllListeners()
+    this.setStatus("COMPLETED"), E.log("Upload complete for ".concat(this.id)), this.emit("complete", e), this.removeAllListeners()
   }
   cancel() {
-    v.log("Cancelled called for ".concat(this.id)), this._abortController.abort(), "COMPLETED" === this.status && this.delete(), this.setStatus("CANCELED"), this.emit("complete"), this.removeAllListeners()
+    E.log("Cancelled called for ".concat(this.id)), this._abortController.abort(), "COMPLETED" === this.status && this.delete(), this.setStatus("CANCELED"), this.emit("complete"), this.removeAllListeners()
   }
   resetState() {
     return this.status = "NOT_STARTED", this.uploadedFilename = void 0, this.responseUrl = void 0, this.error = void 0, this._abortController = new AbortController, super.resetState()
   }
   async delete() {
     if (null == this.uploadedFilename) return;
-    let e = (0, m.getUploadTarget)(this.item.target).getDeleteUploadURL(this.uploadedFilename);
+    let e = (0, h.getUploadTarget)(this.item.target).getDeleteUploadURL(this.uploadedFilename);
     try {
       await d.default.delete(e)
     } catch {}

@@ -2,7 +2,7 @@
 let i;
 n.r(t), n.d(t, {
   default: function() {
-    return eh
+    return ep
   }
 }), n("424973");
 var a = n("37983"),
@@ -47,30 +47,31 @@ var a = n("37983"),
   G = n("471671"),
   W = n("145131");
 n("58608");
-var Y = n("773336"),
-  z = n("50885"),
-  K = n("13798"),
-  Z = n("819068"),
-  X = n("999819"),
-  J = n("878624"),
-  Q = n("827922"),
-  q = n("485415"),
-  $ = n("206496"),
-  ee = n("684325"),
-  et = n("762243"),
-  en = n("265268"),
-  ei = n("6791"),
-  ea = n("49111"),
-  el = n("782340"),
-  es = n("885971");
+var Y = n("718517"),
+  z = n("773336"),
+  K = n("50885"),
+  Z = n("13798"),
+  X = n("819068"),
+  J = n("999819"),
+  Q = n("878624"),
+  q = n("827922"),
+  $ = n("485415"),
+  ee = n("206496"),
+  et = n("684325"),
+  en = n("762243"),
+  ei = n("265268"),
+  ea = n("6791"),
+  el = n("49111"),
+  es = n("782340"),
+  eo = n("885971");
 p.default.PersistedStore.disableWrites = __OVERLAY__, p.default.initialize();
-let eo = null;
+let er = null;
 
-function er(e) {
+function ed(e) {
   e.preventDefault()
 }
 
-function ed(e) {
+function eu(e) {
   (0, E.openContextMenuLazy)(e, async () => {
     let {
       default: e
@@ -80,7 +81,7 @@ function ed(e) {
     })
   })
 }
-let eu = e => {
+let ec = e => {
     let {
       keybind: t,
       onClick: n,
@@ -88,10 +89,10 @@ let eu = e => {
       locked: l
     } = e, s = l ? g.Clickable : "div";
     return (0, a.jsx)(s, {
-      className: o(es.overlayBackground, {
-        [es.overlayActive]: !l,
-        [es.overlayLocked]: l,
-        [es.previewMode]: !l && i
+      className: o(eo.overlayBackground, {
+        [eo.overlayActive]: !l,
+        [eo.overlayLocked]: l,
+        [eo.previewMode]: !l && i
       }),
       onMouseDown: e => {
         let {
@@ -99,11 +100,11 @@ let eu = e => {
           target: i,
           button: a
         } = e;
-        a === ea.MouseButtons.PRIMARY && t === i && n()
+        a === el.MouseButtons.PRIMARY && t === i && n()
       },
-      onContextMenu: ed,
+      onContextMenu: eu,
       children: l ? null : (0, a.jsx)("div", {
-        className: es.closeContainer,
+        className: eo.closeContainer,
         children: (0, a.jsx)(v.default, {
           variant: v.default.Variants.BOLD,
           keybind: t,
@@ -112,7 +113,7 @@ let eu = e => {
       })
     })
   },
-  ec = e => {
+  ef = e => {
     let {
       keyCode: t,
       shiftKey: n,
@@ -128,9 +129,9 @@ let eu = e => {
       ctrlKey: l
     }
   };
-class ef extends l.Component {
+class eh extends l.Component {
   handleLock() {
-    !(0, g.hasAnyModalOpen)() && !B.default.isOpen() && S.default.setLocked(!0, (0, Z.getPID)())
+    !(0, g.hasAnyModalOpen)() && !B.default.isOpen() && S.default.setLocked(!0, (0, X.getPID)())
   }
   handleDeactivate() {
     S.default.deactivateAllRegions()
@@ -148,15 +149,15 @@ class ef extends l.Component {
         return
       }
       if (!e.locked && this.props.locked) {
-        if (window.addEventListener("contextmenu", er, !1), null != eo) {
-          let e = Date.now() - eo;
-          S.default.track(ea.AnalyticEvents.OVERLAY_LOCKED, {
+        if (window.addEventListener("contextmenu", ed, !1), null != er) {
+          let e = Date.now() - er;
+          S.default.track(el.AnalyticEvents.OVERLAY_LOCKED, {
             unlocked_duration: e
-          }), eo = null
+          }), er = null
         }
-        C.default.disable(), this.activeKeyEventShapes = [], H.default.isPinned(ea.OverlayWidgets.TEXT) && (C.default.setLayout(y.OVERLAY_LOCKED_LAYOUT), C.default.enable())
-      } else e.locked && !this.props.locked && (window.removeEventListener("contextmenu", er, !1), null == eo && (eo = Date.now(), S.default.track(ea.AnalyticEvents.OVERLAY_UNLOCKED)), C.default.disable(), this.activeKeyEventShapes = [], C.default.setLayout(y.OVERLAY_LAYOUT), C.default.enable());
-      e.keybindKeyCodes !== this.props.keybindKeyCodes && (this.lockEventShape = (0, K.toBrowserEvents)(this.props.keybindKeyCodes))
+        C.default.disable(), this.activeKeyEventShapes = [], H.default.isPinned(el.OverlayWidgets.TEXT) && (C.default.setLayout(y.OVERLAY_LOCKED_LAYOUT), C.default.enable())
+      } else e.locked && !this.props.locked && (window.removeEventListener("contextmenu", ed, !1), null == er && (er = Date.now(), S.default.track(el.AnalyticEvents.OVERLAY_UNLOCKED)), C.default.disable(), this.activeKeyEventShapes = [], C.default.setLayout(y.OVERLAY_LAYOUT), C.default.enable());
+      e.keybindKeyCodes !== this.props.keybindKeyCodes && (this.lockEventShape = (0, Z.toBrowserEvents)(this.props.keybindKeyCodes))
     }
   }
   initialSetup() {
@@ -173,67 +174,67 @@ class ef extends l.Component {
       showKeybindNotification: d,
       dismissKeybindNotification: u
     } = this.props;
-    S.default.track(ea.AnalyticEvents.OVERLAY_INITIALIZED, {
+    S.default.track(el.AnalyticEvents.OVERLAY_INITIALIZED, {
       voice_widget_connected: e,
-      text_widget_connected: H.default.isPinned(ea.OverlayWidgets.TEXT)
-    }), X.default.trackExposure({
+      text_widget_connected: H.default.isPinned(el.OverlayWidgets.TEXT)
+    }), J.default.trackExposure({
       location: "Overlay"
     });
     let c = n && !i && null != s,
       f = e && null != a && null != l,
       h = {
-        type: ei.OverlayNudgeTypes.WELCOME
+        type: ea.OverlayNudgeTypes.WELCOME
       };
     if (d ? h = {
-        type: ei.OverlayNudgeTypes.KEYBIND_INDICATORS,
+        type: ea.OverlayNudgeTypes.KEYBIND_INDICATORS,
         markAsDismissed: u
       } : c && !e && o ? (I.default.trackExposure({
         location: "overlay_notification"
       }), r && (h = {
-        type: ei.OverlayNudgeTypes.BROADCAST,
+        type: ea.OverlayNudgeTypes.BROADCAST,
         game: s
       })) : c && f ? h = {
-        type: ei.OverlayNudgeTypes.GO_LIVE_VOICE,
+        type: ea.OverlayNudgeTypes.GO_LIVE_VOICE,
         game: s,
         voiceChannelId: l,
         voiceGuild: a
       } : c && (h = {
-        type: ei.OverlayNudgeTypes.GO_LIVE_NON_VOICE,
+        type: ea.OverlayNudgeTypes.GO_LIVE_NON_VOICE,
         game: s
-      }), S.default.overlayMounted(h), window.addEventListener("resize", this.handleWindowResize), t && window.addEventListener("contextmenu", er, !1), Y.isPlatformEmbedded) {
-      let e = z.default.requireModule("discord_overlay2");
+      }), S.default.overlayMounted(h), window.addEventListener("resize", this.handleWindowResize), t && window.addEventListener("contextmenu", ed, !1), z.isPlatformEmbedded) {
+      let e = K.default.requireModule("discord_overlay2");
       void 0 !== e.setPerfInfoCallback && (e.setPerfInfoCallback(e => {
-        S.default.track(ea.AnalyticEvents.OVERLAY_PERF_INFO, e)
+        S.default.track(el.AnalyticEvents.OVERLAY_PERF_INFO, e)
       }), e.broadcastCommand({
         message: "set_perf_report_interval",
-        interval: 9e5
-      })), z.default.on("REQUEST_OPEN_EXTERNAL_URL", (e, t) => {
-        H.default.getDisableExternalLinkAlert() || t === V.default.getLastURL() ? z.default.send("OPEN_EXTERNAL_URL", t) : m.default.show({
-          title: el.default.Messages.OVERLAY_LINK_ALERT_TITLE,
-          body: el.default.Messages.OVERLAY_LINK_ALERT_BODY,
-          secondaryConfirmText: el.default.Messages.OVERLAY_LINK_ALERT_SECONDARY,
-          confirmText: el.default.Messages.CONTINUE,
-          cancelText: el.default.Messages.CANCEL,
+        interval: 15 * Y.default.Millis.MINUTE
+      })), K.default.on("REQUEST_OPEN_EXTERNAL_URL", (e, t) => {
+        H.default.getDisableExternalLinkAlert() || t === V.default.getLastURL() ? K.default.send("OPEN_EXTERNAL_URL", t) : m.default.show({
+          title: es.default.Messages.OVERLAY_LINK_ALERT_TITLE,
+          body: es.default.Messages.OVERLAY_LINK_ALERT_BODY,
+          secondaryConfirmText: es.default.Messages.OVERLAY_LINK_ALERT_SECONDARY,
+          confirmText: es.default.Messages.CONTINUE,
+          cancelText: es.default.Messages.CANCEL,
           onConfirmSecondary: () => {
-            S.default.disableExternalLinkAlert(), z.default.send("OPEN_EXTERNAL_URL", t)
+            S.default.disableExternalLinkAlert(), K.default.send("OPEN_EXTERNAL_URL", t)
           },
-          onConfirm: () => z.default.send("OPEN_EXTERNAL_URL", t)
+          onConfirm: () => K.default.send("OPEN_EXTERNAL_URL", t)
         })
       })
     }
     window.addEventListener("keydown", this.onKeyDownGlobal, !0), window.addEventListener("keyup", this.onKeyUpGlobal, !0)
   }
   componentWillUnmount() {
-    window.removeEventListener("resize", this.handleWindowResize), window.removeEventListener("keydown", this.onKeyDownGlobal, !0), window.removeEventListener("keyup", this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener("contextmenu", er, !1), R.default.terminate(), N.default.terminate(), M.default.terminate()
+    window.removeEventListener("resize", this.handleWindowResize), window.removeEventListener("keydown", this.onKeyDownGlobal, !0), window.removeEventListener("keyup", this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener("contextmenu", ed, !1), R.default.terminate(), N.default.terminate(), M.default.terminate()
   }
   renderInvalidSizeMessage() {
     return (0, a.jsx)(W.default, {
       justify: W.default.Justify.CENTER,
       align: W.default.Align.CENTER,
-      className: es.invalidContainer,
+      className: eo.invalidContainer,
       children: (0, a.jsx)("div", {
-        className: es.inactiveContainer,
-        children: el.default.Messages.OVERLAY_TOO_SMALL.format(Z.OVERLAY_MIN_RESOLUTION)
+        className: eo.inactiveContainer,
+        children: es.default.Messages.OVERLAY_TOO_SMALL.format(X.OVERLAY_MIN_RESOLUTION)
       })
     })
   }
@@ -256,35 +257,35 @@ class ef extends l.Component {
     let p = e || s,
       g = D.default.getId();
     return (0, a.jsxs)("div", {
-      className: es.overlay,
-      children: [(0, a.jsx)(ee.default, {}), s && (0, a.jsx)("header", {
-        className: es.previewingInGameHeader,
-        children: el.default.Messages.OVERLAY_IN_GAME_PREVIEW_HEADER
-      }), i, (!e || r.has(ea.OverlayActiveRegions.TEXT_WIDGET)) && (0, a.jsx)(eu, {
+      className: eo.overlay,
+      children: [(0, a.jsx)(et.default, {}), s && (0, a.jsx)("header", {
+        className: eo.previewingInGameHeader,
+        children: es.default.Messages.OVERLAY_IN_GAME_PREVIEW_HEADER
+      }), i, (!e || r.has(el.OverlayActiveRegions.TEXT_WIDGET)) && (0, a.jsx)(ec, {
         locked: e,
         keybind: t,
         onClick: e ? this.handleDeactivate : this.handleLock,
         isPreviewingInGame: s
-      }), (0, Z.validResolution)(d) ? (0, a.jsx)($.default, {
+      }), (0, X.validResolution)(d) ? (0, a.jsx)(ee.default, {
         className: o({
-          [es.layoutLocked]: e,
-          [es.layoutUnlocked]: !e
+          [eo.layoutLocked]: e,
+          [eo.layoutUnlocked]: !e
         })
-      }) : e ? null : this.renderInvalidSizeMessage(), (0, a.jsx)(en.default, {}), null != u && null != c && (0, a.jsx)(et.default, {
+      }) : e ? null : this.renderInvalidSizeMessage(), (0, a.jsx)(ei.default, {}), null != u && null != c && (0, a.jsx)(en.default, {
         streamerId: g,
         guildId: u.id,
         channelId: c
-      }), (0, a.jsx)(q.default, {
+      }), (0, a.jsx)($.default, {
         locked: p,
         keybind: t
-      }), (0, a.jsx)(J.default, {})]
+      }), (0, a.jsx)(Q.default, {})]
     })
   }
   constructor(e) {
     super(e), this.handleWindowResize = c(() => {
       this.forceUpdate()
-    }, 500), this.activeKeyEventShapes = [], this.lockEventShape = (0, K.toBrowserEvents)(this.props.keybindKeyCodes), this.getActiveKeyEventIndex = e => this.activeKeyEventShapes.findIndex(t => h(t, e)), this.onKeyDownGlobal = e => {
-      let t = ec(e),
+    }, 500), this.activeKeyEventShapes = [], this.lockEventShape = (0, Z.toBrowserEvents)(this.props.keybindKeyCodes), this.getActiveKeyEventIndex = e => this.activeKeyEventShapes.findIndex(t => h(t, e)), this.onKeyDownGlobal = e => {
+      let t = ef(e),
         n = this.getActiveKeyEventIndex(t) > -1,
         i = [16, 17, 18, 91].includes(e.keyCode);
       !n && !i && this.activeKeyEventShapes.push(t);
@@ -294,18 +295,18 @@ class ef extends l.Component {
         locked: l,
         activeRegions: s
       } = this.props;
-      t.keyCode === d.codes.esc && l && s.has(ea.OverlayActiveRegions.TEXT_WIDGET) && S.default.deactivateAllRegions()
+      t.keyCode === d.codes.esc && l && s.has(el.OverlayActiveRegions.TEXT_WIDGET) && S.default.deactivateAllRegions()
     }, this.onKeyUpGlobal = e => {
-      let t = ec(e),
+      let t = ef(e),
         n = this.getActiveKeyEventIndex(t);
       n > -1 && this.activeKeyEventShapes.splice(n, 1)
     };
-    let t = e.locked && H.default.isPinned(ea.OverlayWidgets.TEXT);
+    let t = e.locked && H.default.isPinned(el.OverlayWidgets.TEXT);
     C.default.setLayout(t ? y.OVERLAY_LOCKED_LAYOUT : y.OVERLAY_LAYOUT), t && C.default.enable()
   }
 }
 
-function eh() {
+function ep() {
   let {
     locked: e,
     initialized: t,
@@ -313,7 +314,7 @@ function eh() {
     activeRegions: i,
     isPreviewingInGame: l
   } = (0, p.useStateFromStoresObject)([H.default], () => ({
-    locked: H.default.isUILocked((0, Z.getPID)()),
+    locked: H.default.isUILocked((0, X.getPID)()),
     initialized: H.default.initialized,
     incompatibleApp: H.default.incompatibleApp,
     activeRegions: H.default.getActiveRegions(),
@@ -329,17 +330,17 @@ function eh() {
   } = (0, T.default)(O.default.OVERLAY), {
     showKeybindIndicators: v,
     dismissKeybindNotification: y
-  } = (0, Q.useGetKeybindNotification)();
+  } = (0, q.useGetKeybindNotification)();
   return (0, a.jsx)(S, {
     children: (0, a.jsx)(g.RedesignIconContextProvider, {
-      children: (0, a.jsx)(ef, {
+      children: (0, a.jsx)(eh, {
         locked: e,
         initialized: t,
         incompatibleApp: n,
         activeRegions: i,
         isPreviewingInGame: l,
         windowSize: s,
-        keybind: null != o ? (0, K.toString)(o.shortcut, !0) : "???",
+        keybind: null != o ? (0, Z.toString)(o.shortcut, !0) : "???",
         keybindKeyCodes: null != o ? o.shortcut : [],
         connectedToVoice: null != r,
         voiceChannelId: null != d ? d.id : null,

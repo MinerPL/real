@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useModalState: function() {
-    return g
+    return O
   },
   useIframeModalState: function() {
-    return O
+    return A
   }
 }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660");
 var l = n("884691"),
@@ -19,26 +19,27 @@ var l = n("884691"),
   f = n("274800"),
   I = n("271938"),
   E = n("42203"),
-  p = n("26989"),
-  C = n("162771"),
+  C = n("26989"),
+  p = n("162771"),
   _ = n("315102"),
-  h = n("299039"),
-  M = n("812684"),
-  R = n("470055"),
-  m = n("524094"),
-  T = n("49111"),
-  v = n("782340");
-let S = e => {
+  h = n("718517"),
+  M = n("299039"),
+  R = n("812684"),
+  m = n("470055"),
+  T = n("524094"),
+  v = n("49111"),
+  S = n("782340");
+let N = e => {
   let t = !0;
   return e.forEach(e => {
     !e() && (t = !1)
   }), t
 };
 
-function N(e) {
+function g(e) {
   return l.useMemo(() => {
-    let t = C.default.getGuildId(),
-      n = null != t && null != e.bot ? p.default.getMember(t, e.bot.id) : void 0,
+    let t = p.default.getGuildId(),
+      n = null != t && null != e.bot ? C.default.getMember(t, e.bot.id) : void 0,
       l = _.default.getApplicationIconURL({
         id: e.id,
         icon: e.icon,
@@ -55,20 +56,20 @@ function N(e) {
   }, [e.id, e.icon, e.name, e.bot])
 }
 
-function g(e, t) {
+function O(e, t) {
   var n;
   let {
     application: u,
     customId: d,
-    components: p,
-    channelId: C
-  } = e, _ = null === (n = E.default.getChannel(C)) || void 0 === n ? void 0 : n.guild_id, m = (0, c.default)(), [g, O] = l.useState(null), [L, x] = l.useState(null), y = (0, r.useStateFromStores)([R.default], () => R.default.getModalState(L), [L]), D = l.useMemo(() => (0, M.createComponents)(p, u.id, _), [p, u.id, _]), U = l.useRef(new Set), w = l.useCallback(() => {
-    O(null), x(null), S(U.current) && x(function(e, t) {
-      let n = h.default.fromTimestamp(Date.now()),
+    components: C,
+    channelId: p
+  } = e, _ = null === (n = E.default.getChannel(p)) || void 0 === n ? void 0 : n.guild_id, T = (0, c.default)(), [O, A] = l.useState(null), [D, x] = l.useState(null), y = (0, r.useStateFromStores)([m.default], () => m.default.getModalState(D), [D]), U = l.useMemo(() => (0, R.createComponents)(C, u.id, _), [C, u.id, _]), w = l.useRef(new Set), b = l.useCallback(() => {
+    A(null), x(null), N(w.current) && x(function(e, t) {
+      let n = M.default.fromTimestamp(Date.now()),
         l = e.channelId,
         u = E.default.getChannel(l);
       a(null != u, "expected channel");
-      let r = A(e.customId, e.components, []);
+      let r = L(e.customId, e.components, []);
       (0, f.addQueued)(n, {
         data: {
           interactionType: s.InteractionTypes.MODAL_SUBMIT
@@ -76,7 +77,7 @@ function g(e, t) {
       });
       let i = () => {
         (null == t || !t.aborted) && o.default.post({
-          url: T.Endpoints.INTERACTIONS,
+          url: v.Endpoints.INTERACTIONS,
           body: {
             type: s.InteractionTypes.MODAL_SUBMIT,
             application_id: e.application.id,
@@ -92,34 +93,34 @@ function g(e, t) {
           },
           signal: t
         }).catch(e => {
-          429 === e.status ? setTimeout(i, 1e3 * e.body.retry_after) : (0, f.setFailed)(n)
+          429 === e.status ? setTimeout(i, e.body.retry_after * h.default.Millis.SECOND) : (0, f.setFailed)(n)
         })
       };
       return i(), n
-    }(e, m))
-  }, [m, e]);
+    }(e, T))
+  }, [T, e]);
   l.useEffect(() => {
-    y === R.InteractionModalState.SUCCEEDED && (i.default.dispatch({
+    y === m.InteractionModalState.SUCCEEDED && (i.default.dispatch({
       type: "CLEAR_INTERACTION_MODAL_STATE",
       id: d
-    }), t()), y === R.InteractionModalState.ERRORED && O(v.default.Messages.INTERACTION_FORM_SUBMISSION_FAILED)
-  }, [L, y, t, d]);
+    }), t()), y === m.InteractionModalState.ERRORED && A(S.default.Messages.INTERACTION_FORM_SUBMISSION_FAILED)
+  }, [D, y, t, d]);
   let {
-    applicationIconURL: b,
-    applicationName: B
-  } = N(u);
+    applicationIconURL: B,
+    applicationName: j
+  } = g(u);
   return {
-    components: D,
-    applicationIconURL: b,
-    applicationName: B,
+    components: U,
+    applicationIconURL: B,
+    applicationName: j,
     submissionState: y,
-    error: g,
-    validators: U.current,
-    onSubmit: w
+    error: O,
+    validators: w.current,
+    onSubmit: b
   }
 }
 
-function O(e) {
+function A(e) {
   let {
     application: t,
     customId: n
@@ -127,7 +128,7 @@ function O(e) {
     applicationIconURL: l,
     applicationName: u,
     applicationBaseUrl: r
-  } = N(t), o = E.default.getChannel(e.channelId);
+  } = g(t), o = E.default.getChannel(e.channelId);
   a(null != o, "channel should not be null");
   let i = "".concat(e.channelId, ":").concat(t.id, ":").concat(n),
     s = {
@@ -147,16 +148,16 @@ function O(e) {
     iframeUrl: d
   }
 }
-let A = (e, t, n) => t.map((t, l) => {
+let L = (e, t, n) => t.map((t, l) => {
   let u = [...n, l];
   switch (t.type) {
     case s.ComponentType.ACTION_ROW:
       var r;
       return {
-        type: t.type, components: A(e, null !== (r = t.components) && void 0 !== r ? r : [], u)
+        type: t.type, components: L(e, null !== (r = t.components) && void 0 !== r ? r : [], u)
       };
     case s.ComponentType.INPUT_TEXT: {
-      let n = m.default.getInteractionComponentState(e, u);
+      let n = T.default.getInteractionComponentState(e, u);
       return {
         type: t.type,
         custom_id: t.custom_id,
@@ -164,7 +165,7 @@ let A = (e, t, n) => t.map((t, l) => {
       }
     }
     case s.ComponentType.STRING_SELECT: {
-      let n = m.default.getInteractionComponentState(e, u);
+      let n = T.default.getInteractionComponentState(e, u);
       return {
         type: t.type,
         custom_id: t.custom_id,

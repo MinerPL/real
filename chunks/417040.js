@@ -13,12 +13,16 @@ var i, r, s, a, o, l, u, c, d, f = n("627445"),
   p = n("595275"),
   _ = n("605250"),
   S = n("313915"),
-  m = n("773336"),
-  T = n("353927");
+  m = n("718517"),
+  T = n("773336"),
+  g = n("353927");
 
-function g() {}(l = i || (i = {}))[l.IDENTIFY = 0] = "IDENTIFY", l[l.SELECT_PROTOCOL = 1] = "SELECT_PROTOCOL", l[l.READY = 2] = "READY", l[l.HEARTBEAT = 3] = "HEARTBEAT", l[l.SELECT_PROTOCOL_ACK = 4] = "SELECT_PROTOCOL_ACK", l[l.SPEAKING = 5] = "SPEAKING", l[l.HEARTBEAT_ACK = 6] = "HEARTBEAT_ACK", l[l.RESUME = 7] = "RESUME", l[l.HELLO = 8] = "HELLO", l[l.RESUMED = 9] = "RESUMED", l[l.VIDEO = 12] = "VIDEO", l[l.CLIENT_DISCONNECT = 13] = "CLIENT_DISCONNECT", l[l.SESSION_UPDATE = 14] = "SESSION_UPDATE", l[l.MEDIA_SINK_WANTS = 15] = "MEDIA_SINK_WANTS", l[l.VOICE_BACKEND_VERSION = 16] = "VOICE_BACKEND_VERSION", l[l.CHANNEL_OPTIONS_UPDATE = 17] = "CHANNEL_OPTIONS_UPDATE", l[l.FLAGS = 18] = "FLAGS", l[l.SPEED_TEST = 19] = "SPEED_TEST", l[l.PLATFORM = 20] = "PLATFORM", l[l.SECURE_FRAMES_PREPARE_PROTOCOL_TRANSITION = 21] = "SECURE_FRAMES_PREPARE_PROTOCOL_TRANSITION", l[l.SECURE_FRAMES_EXECUTE_TRANSITION = 22] = "SECURE_FRAMES_EXECUTE_TRANSITION", l[l.SECURE_FRAMES_READY_FOR_TRANSITION = 23] = "SECURE_FRAMES_READY_FOR_TRANSITION", l[l.SECURE_FRAMES_PREPARE_EPOCH = 24] = "SECURE_FRAMES_PREPARE_EPOCH", l[l.MLS_EXTERNAL_SENDER_PACKAGE = 25] = "MLS_EXTERNAL_SENDER_PACKAGE", l[l.MLS_KEY_PACKAGE = 26] = "MLS_KEY_PACKAGE", l[l.MLS_PROPOSALS = 27] = "MLS_PROPOSALS", l[l.MLS_COMMIT_WELCOME = 28] = "MLS_COMMIT_WELCOME", l[l.MLS_PREPARE_COMMIT_TRANSITION = 29] = "MLS_PREPARE_COMMIT_TRANSITION", l[l.MLS_WELCOME = 30] = "MLS_WELCOME", (u = r || (r = {}))[u.AUTHENTICATION_FAILED = 4004] = "AUTHENTICATION_FAILED", u[u.INVALID_SESSION = 4006] = "INVALID_SESSION", u[u.SERVER_NOT_FOUND = 4011] = "SERVER_NOT_FOUND", u[u.SERVER_CRASH = 4015] = "SERVER_CRASH", u[u.CANCELED = 4016] = "CANCELED", u[u.HEARTBEAT_TIMEOUT = 4800] = "HEARTBEAT_TIMEOUT", u[u.UNRESUMABLE = 4801] = "UNRESUMABLE", u[u.RESET_BACKOFF = 4802] = "RESET_BACKOFF", (c = s || (s = {}))[c.DISCONNECTED = 0] = "DISCONNECTED", c[c.CONNECTING = 1] = "CONNECTING", c[c.IDENTIFYING = 2] = "IDENTIFYING", c[c.RESUMING = 3] = "RESUMING", c[c.CONNECTED = 4] = "CONNECTED", c[c.RECONNECTING = 5] = "RECONNECTING";
+function I() {}(l = i || (i = {}))[l.IDENTIFY = 0] = "IDENTIFY", l[l.SELECT_PROTOCOL = 1] = "SELECT_PROTOCOL", l[l.READY = 2] = "READY", l[l.HEARTBEAT = 3] = "HEARTBEAT", l[l.SELECT_PROTOCOL_ACK = 4] = "SELECT_PROTOCOL_ACK", l[l.SPEAKING = 5] = "SPEAKING", l[l.HEARTBEAT_ACK = 6] = "HEARTBEAT_ACK", l[l.RESUME = 7] = "RESUME", l[l.HELLO = 8] = "HELLO", l[l.RESUMED = 9] = "RESUMED", l[l.VIDEO = 12] = "VIDEO", l[l.CLIENT_DISCONNECT = 13] = "CLIENT_DISCONNECT", l[l.SESSION_UPDATE = 14] = "SESSION_UPDATE", l[l.MEDIA_SINK_WANTS = 15] = "MEDIA_SINK_WANTS", l[l.VOICE_BACKEND_VERSION = 16] = "VOICE_BACKEND_VERSION", l[l.CHANNEL_OPTIONS_UPDATE = 17] = "CHANNEL_OPTIONS_UPDATE", l[l.FLAGS = 18] = "FLAGS", l[l.SPEED_TEST = 19] = "SPEED_TEST", l[l.PLATFORM = 20] = "PLATFORM", l[l.SECURE_FRAMES_PREPARE_PROTOCOL_TRANSITION = 21] = "SECURE_FRAMES_PREPARE_PROTOCOL_TRANSITION", l[l.SECURE_FRAMES_EXECUTE_TRANSITION = 22] = "SECURE_FRAMES_EXECUTE_TRANSITION", l[l.SECURE_FRAMES_READY_FOR_TRANSITION = 23] = "SECURE_FRAMES_READY_FOR_TRANSITION", l[l.SECURE_FRAMES_PREPARE_EPOCH = 24] = "SECURE_FRAMES_PREPARE_EPOCH", l[l.MLS_EXTERNAL_SENDER_PACKAGE = 25] = "MLS_EXTERNAL_SENDER_PACKAGE", l[l.MLS_KEY_PACKAGE = 26] = "MLS_KEY_PACKAGE", l[l.MLS_PROPOSALS = 27] = "MLS_PROPOSALS", l[l.MLS_COMMIT_WELCOME = 28] = "MLS_COMMIT_WELCOME", l[l.MLS_PREPARE_COMMIT_TRANSITION = 29] = "MLS_PREPARE_COMMIT_TRANSITION", l[l.MLS_WELCOME = 30] = "MLS_WELCOME", (u = r || (r = {}))[u.AUTHENTICATION_FAILED = 4004] = "AUTHENTICATION_FAILED", u[u.INVALID_SESSION = 4006] = "INVALID_SESSION", u[u.SERVER_NOT_FOUND = 4011] = "SERVER_NOT_FOUND", u[u.SERVER_CRASH = 4015] = "SERVER_CRASH", u[u.CANCELED = 4016] = "CANCELED", u[u.HEARTBEAT_TIMEOUT = 4800] = "HEARTBEAT_TIMEOUT", u[u.UNRESUMABLE = 4801] = "UNRESUMABLE", u[u.RESET_BACKOFF = 4802] = "RESET_BACKOFF", (c = s || (s = {}))[c.DISCONNECTED = 0] = "DISCONNECTED", c[c.CONNECTING = 1] = "CONNECTING", c[c.IDENTIFYING = 2] = "IDENTIFYING", c[c.RESUMING = 3] = "RESUMING", c[c.CONNECTED = 4] = "CONNECTED", c[c.RECONNECTING = 5] = "RECONNECTING";
+let C = 20 * m.default.Millis.SECOND,
+  v = 1 * m.default.Millis.MINUTE,
+  A = 5 * m.default.Millis.SECOND;
 
-function I(e) {
+function R(e) {
   return e.map(e => ({
     name: e.name,
     type: e.type,
@@ -30,7 +34,7 @@ function I(e) {
   }))
 }
 
-function C(e) {
+function N(e) {
   return null == e ? void 0 : e.map(e => ({
     type: e.type,
     rid: e.rid,
@@ -48,14 +52,14 @@ function C(e) {
   }))
 }
 
-function v(e) {
+function O(e) {
   var t;
   return null !== (t = null == e ? void 0 : e.map(e => ({
     type: function(e) {
-      if ("audio" === e) return T.MediaTypes.AUDIO;
-      if ("test" === e) return T.MediaTypes.TEST;
-      if ("screen" === e) return T.MediaTypes.SCREEN;
-      else return T.MediaTypes.VIDEO
+      if ("audio" === e) return g.MediaTypes.AUDIO;
+      if ("test" === e) return g.MediaTypes.TEST;
+      if ("screen" === e) return g.MediaTypes.SCREEN;
+      else return g.MediaTypes.VIDEO
     }(e.type),
     rid: e.rid,
     ssrc: e.ssrc,
@@ -75,7 +79,7 @@ function v(e) {
     this.logger.info("[CONNECT] ".concat(this.url)), null !== this.webSocket && (this.logger.error("Connect called with already existing websocket"), this.cleanupWebSocket(e => e.close(4e3))), this.connectionStartTime = Date.now(), this.helloTimeout = setTimeout(() => {
       let e = Date.now() - this.connectionStartTime;
       this.handleClose(!1, 0, "The connection timed out after ".concat(e, " ms - did not receive OP_HELLO in time."))
-    }, 2e4);
+    }, C);
     let e = this.webSocket = new WebSocket("".concat(this.url, "?v=").concat(7));
     e.binaryType = "arraybuffer", e.onopen = () => {
       1 === this.connectionState ? this.emit("connect") : 5 === this.connectionState && this.doResumeOrClose(), this.connectionState = 4;
@@ -107,7 +111,7 @@ function v(e) {
           break;
         case 5:
           let i = n.speaking;
-          "boolean" == typeof i && (i = i ? T.SpeakingFlags.VOICE : T.SpeakingFlags.NONE), this.emit("speaking", n.user_id, n.ssrc, i);
+          "boolean" == typeof i && (i = i ? g.SpeakingFlags.VOICE : g.SpeakingFlags.NONE), this.emit("speaking", n.user_id, n.ssrc, i);
           break;
         case 3:
           this.sendHeartbeat();
@@ -116,7 +120,7 @@ function v(e) {
           this.emit("ping", Date.now() - n), this.handleHeartbeatAck(n);
           break;
         case 12:
-          this.emit("video", n.user_id, n.audio_ssrc, n.video_ssrc, v(n.streams));
+          this.emit("video", n.user_id, n.audio_ssrc, n.video_ssrc, O(n.streams));
           break;
         case 13:
           this.emit("client-disconnect", n.user_id);
@@ -210,7 +214,7 @@ function v(e) {
   }
   doResumeOrClose() {
     let e = Date.now(),
-      t = null !== this.serverId && null !== this.token && null !== this.sessionId && this.resumable && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= 6e4);
+      t = null !== this.serverId && null !== this.token && null !== this.sessionId && this.resumable && (null == this.lastHeartbeatAckTime || e - this.lastHeartbeatAckTime <= v);
     t ? (this.doResume(), this.lastHeartbeatAckTime = e) : this.disconnect(!1, 4801, "Cannot resume connection.")
   }
   doResume() {
@@ -224,16 +228,16 @@ function v(e) {
   handleHello(e) {
     var t, n, i;
     if (this.serverVersion = null !== (t = e.v) && void 0 !== t ? t : 3, this.serverVersion <= 3) {
-      let t = m.isPlatformEmbedded ? .25 : .1;
+      let t = T.isPlatformEmbedded ? .25 : .1;
       this.heartbeatInterval = e.heartbeat_interval * t
-    } else this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier, !m.isPlatformEmbedded && (this.heartbeatInterval = Math.min(5e3, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
+    } else this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier, !T.isPlatformEmbedded && (this.heartbeatInterval = Math.min(A, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
     let r = Date.now() - this.connectionStartTime;
     this.logger.info("[HELLO] heartbeat interval: ".concat(null !== (i = this.heartbeatInterval) && void 0 !== i ? i : "??", ", version: ").concat(this.serverVersion, ", took ").concat(r, " ms")), this.startHeartbeater()
   }
   handleReady(e) {
     this.backoff.succeed();
     let t = Date.now() - this.connectionStartTime;
-    this.logger.info("[READY] took ".concat(t, " ms")), this.serverVersion >= 6 && this.send(16, {}), this.emit("ready", e.ip, e.port, e.modes, e.ssrc, v(e.streams), e.experiments)
+    this.logger.info("[READY] took ".concat(t, " ms")), this.serverVersion >= 6 && this.send(16, {}), this.emit("ready", e.ip, e.port, e.modes, e.ssrc, O(e.streams), e.experiments)
   }
   handleResumed(e) {
     this.backoff.succeed()
@@ -255,7 +259,7 @@ function v(e) {
   cleanupWebSocket(e) {
     this.stopHeartbeater(), this.clearHelloTimeout();
     let t = this.webSocket;
-    this.webSocket = null, null != t && (t.onopen = g, t.onmessage = g, t.onerror = g, t.onclose = g, null == e || e(t)), this.backoff.cancel()
+    this.webSocket = null, null != t && (t.onopen = I, t.onmessage = I, t.onerror = I, t.onclose = I, null == e || e(t)), this.backoff.cancel()
   }
   cleanupState() {
     this.serverId = null, this.sessionId = null, this.token = null, this.resumable = !1
@@ -312,7 +316,7 @@ function v(e) {
       token: r,
       max_secure_frames_version: s,
       video: a,
-      streams: C(o)
+      streams: N(o)
     })
   }
   expeditedHeartbeat(e) {
@@ -342,7 +346,7 @@ function v(e) {
     let s = {};
     null == n ? r = null : "sdp" in n && null != n.sdp && "" !== n.sdp ? (r = n.sdp, s = {
       ...n,
-      codecs: I(n.codecs),
+      codecs: R(n.codecs),
       rtc_connection_id: t
     }) : "address" in n && null != n.address && "" !== n.address && n.port && null != n.mode && "" !== n.mode && (r = {
       address: n.address,
@@ -350,7 +354,7 @@ function v(e) {
       mode: n.mode
     }, s = {
       ...n,
-      codecs: I(n.codecs),
+      codecs: R(n.codecs),
       rtc_connection_id: t,
       experiments: i
     }), this.send(1, {
@@ -361,7 +365,7 @@ function v(e) {
   }
   updateSession(e) {
     this.send(14, {
-      codecs: I(e.codecs)
+      codecs: R(e.codecs)
     })
   }
   speaking(e) {
@@ -378,7 +382,7 @@ function v(e) {
       audio_ssrc: e,
       video_ssrc: t,
       rtx_ssrc: n,
-      streams: C(i)
+      streams: N(i)
     })
   }
   mediaSinkWants(e) {

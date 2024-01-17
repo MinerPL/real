@@ -5,7 +5,7 @@ n.r(t), n.d(t, {
     return s
   },
   default: function() {
-    return h
+    return M
   }
 });
 var i, s, c = n("627445"),
@@ -13,16 +13,17 @@ var i, s, c = n("627445"),
   f = n("446674"),
   I = n("913144"),
   E = n("819689"),
-  p = n("798609"),
-  C = n("274800");
+  C = n("798609"),
+  p = n("274800"),
+  _ = n("718517");
 (i = s || (s = {}))[i.IN_FLIGHT = 0] = "IN_FLIGHT", i[i.ERRORED = 1] = "ERRORED", i[i.SUCCEEDED = 2] = "SUCCEEDED";
-class _ extends f.default.Store {
+class h extends f.default.Store {
   getModalState(e) {
     return e !== l ? null : u
   }
 }
-_.displayName = "InteractionModalStore";
-var h = new _(I.default, {
+h.displayName = "InteractionModalStore";
+var M = new h(I.default, {
   LOGOUT: function() {
     return l = null, u = null, a = null, r = null, o = null, !0
   },
@@ -45,12 +46,12 @@ var h = new _(I.default, {
       data: i
     } = e;
     switch (i.interactionType) {
-      case p.InteractionTypes.APPLICATION_COMMAND:
+      case C.InteractionTypes.APPLICATION_COMMAND:
         return a = t, r = i.channelId, o = n, !1;
-      case p.InteractionTypes.MODAL_SUBMIT:
+      case C.InteractionTypes.MODAL_SUBMIT:
         return d(null == l || 1 === u || 2 === u, "cannot submit multiple modals at once"), l = n, u = 0, setTimeout(() => {
-          l === n && 0 === u && (0, C.setFailed)(n)
-        }, 1e4), !0;
+          l === n && 0 === u && (0, p.setFailed)(n)
+        }, 10 * _.default.Millis.SECOND), !0;
       default:
         return !1
     }

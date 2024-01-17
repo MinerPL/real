@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return W
+    return V
   }
 }), s("424973"), s("222007");
 var n = s("37983"),
@@ -17,8 +17,8 @@ var n = s("37983"),
   f = s("446674"),
   m = s("669491"),
   g = s("77078"),
-  p = s("642995"),
-  S = s("656723"),
+  S = s("642995"),
+  p = s("656723"),
   v = s("299285"),
   x = s("384997"),
   C = s("943551"),
@@ -36,13 +36,14 @@ var n = s("37983"),
   y = s("32238"),
   L = s("599110"),
   R = s("659500"),
-  b = s("449008"),
+  b = s("718517"),
+  P = s("449008"),
   D = s("387111"),
-  P = s("49111"),
-  U = s("782340"),
-  H = s("883181");
-let k = [];
-class B extends a.PureComponent {
+  U = s("49111"),
+  H = s("782340"),
+  k = s("883181");
+let B = [];
+class z extends a.PureComponent {
   componentDidMount() {
     this.timeout = setTimeout(() => {
       this.setState({
@@ -55,10 +56,10 @@ class B extends a.PureComponent {
   }
   logShownEventIfNeeded() {
     let e = this.props.activity.application_id;
-    null != e && -1 === k.indexOf(e) && (L.default.track(P.AnalyticEvents.SHOW_TUTORIAL, {
+    null != e && -1 === B.indexOf(e) && (L.default.track(U.AnalyticEvents.SHOW_TUTORIAL, {
       tutorial: "activity-invite-nux-inline",
       application_id: e
-    }), k.push(e))
+    }), B.push(e))
   }
   componentWillUnmount() {
     null !== this.timeout && clearTimeout(this.timeout)
@@ -68,13 +69,13 @@ class B extends a.PureComponent {
       activity: e
     } = this.props;
     return (0, n.jsxs)("div", {
-      className: i(H.activityInviteEducation, {
-        [H.activityInviteEducationFadeIn]: this.state.fadeIn
+      className: i(k.activityInviteEducation, {
+        [k.activityInviteEducationFadeIn]: this.state.fadeIn
       }),
       children: [(0, n.jsx)("div", {
-        className: H.activityInviteEducationArrow
+        className: k.activityInviteEducationArrow
       }), (0, n.jsx)("span", {
-        children: U.default.Messages.USER_ACTIVITY_CHAT_INVITE_EDUCATION.format({
+        children: H.default.Messages.USER_ACTIVITY_CHAT_INVITE_EDUCATION.format({
           game: e.name,
           dismissOnClick: this.handleDismissInviteEducation
         })
@@ -88,12 +89,12 @@ class B extends a.PureComponent {
       let {
         activity: e
       } = this.props;
-      null != e && null != e.application_id && p.default.dismissForApplicationId(e.application_id)
+      null != e && null != e.application_id && S.default.dismissForApplicationId(e.application_id)
     }
   }
 }
 
-function z(e) {
+function G(e) {
   let {
     channel: t,
     guild: s
@@ -109,12 +110,12 @@ function z(e) {
     }
   })
 }
-class G extends a.PureComponent {
+class W extends a.PureComponent {
   componentDidMount() {
-    R.ComponentDispatch.subscribe(P.ComponentActions.EMPHASIZE_SLOWMODE_COOLDOWN, this.emphasizeSlowmodeCooldown)
+    R.ComponentDispatch.subscribe(U.ComponentActions.EMPHASIZE_SLOWMODE_COOLDOWN, this.emphasizeSlowmodeCooldown)
   }
   componentWillUnmount() {
-    R.ComponentDispatch.unsubscribe(P.ComponentActions.EMPHASIZE_SLOWMODE_COOLDOWN, this.emphasizeSlowmodeCooldown)
+    R.ComponentDispatch.unsubscribe(U.ComponentActions.EMPHASIZE_SLOWMODE_COOLDOWN, this.emphasizeSlowmodeCooldown)
   }
   getCooldownTextStyle() {
     let {
@@ -142,17 +143,17 @@ class G extends a.PureComponent {
       slowmodeCooldownGuess: h,
       isBypassSlowmode: f,
       channel: m,
-      isThreadCreation: p,
-      renderDots: S,
+      isThreadCreation: S,
+      renderDots: p,
       poggermodeEnabled: v,
       isComboing: x
     } = this.props, {
       rateLimitPerUser: C
-    } = m, N = O.default.getCurrentUser(), E = I.default.getGuild(t), _ = C > 0, M = p ? [] : o(r).keys().filter(e => e !== (null == N ? void 0 : N.id)).reject(A.default.isBlocked).map(e => O.default.getUser(e)).filter(b.isNotNullish).map(e => D.default.getName(t, this.props.channel.id, e)).value();
-    if (0 === M.length && !_ && !x) return a && null != s ? (0, n.jsx)(B, {
+    } = m, N = O.default.getCurrentUser(), E = I.default.getGuild(t), _ = C > 0, M = S ? [] : o(r).keys().filter(e => e !== (null == N ? void 0 : N.id)).reject(A.default.isBlocked).map(e => O.default.getUser(e)).filter(P.isNotNullish).map(e => D.default.getName(t, this.props.channel.id, e)).value();
+    if (0 === M.length && !_ && !x) return a && null != s ? (0, n.jsx)(z, {
       activity: s,
       isFocused: l
-    }) : (0, n.jsx)(z, {
+    }) : (0, n.jsx)(G, {
       channel: m,
       guild: E
     });
@@ -161,30 +162,30 @@ class G extends a.PureComponent {
       w = "";
     if (_) {
       if (j = (0, n.jsx)(y.default, {
-          className: H.slowModeIcon,
+          className: k.slowModeIcon,
           width: 16,
           height: 16
-        }), C >= P.Durations.HOUR) {
-        let e = Math.floor(C / P.Durations.HOUR),
-          t = Math.floor((C - e * P.Durations.HOUR) / P.Durations.MINUTE),
-          s = C - e * P.Durations.HOUR - t * P.Durations.MINUTE;
-        w = U.default.Messages.CHANNEL_SLOWMODE_DESC_HOURS.format({
+        }), C >= b.default.Seconds.HOUR) {
+        let e = Math.floor(C / b.default.Seconds.HOUR),
+          t = Math.floor((C - e * b.default.Seconds.HOUR) / b.default.Seconds.MINUTE),
+          s = C - e * b.default.Seconds.HOUR - t * b.default.Seconds.MINUTE;
+        w = H.default.Messages.CHANNEL_SLOWMODE_DESC_HOURS.format({
           hours: e,
           minutes: t,
           seconds: s
         })
       } else if (C >= 60) {
         let e = Math.floor(C / 60);
-        w = U.default.Messages.CHANNEL_SLOWMODE_DESC_MINUTES.format({
+        w = H.default.Messages.CHANNEL_SLOWMODE_DESC_MINUTES.format({
           minutes: e,
           seconds: C - 60 * e
         })
-      } else w = U.default.Messages.CHANNEL_SLOWMODE_DESC.format({
+      } else w = H.default.Messages.CHANNEL_SLOWMODE_DESC.format({
         seconds: C
       });
       if (!f && h > 0) {
         let e = d.duration(h);
-        if (h > 1e3 * P.Durations.HOUR) {
+        if (h > b.default.Millis.HOUR) {
           let t = "".concat(e.minutes()).padStart(2, "0"),
             s = "".concat(e.seconds()).padStart(2, "0");
           F = "".concat(e.hours(), ":").concat(t, ":").concat(s)
@@ -192,31 +193,31 @@ class G extends a.PureComponent {
           let t = "".concat(e.seconds()).padStart(2, "0");
           F = "".concat(e.minutes(), ":").concat(t)
         }
-      } else 0 === M.length && (F = f ? U.default.Messages.CHANNEL_SLOWMODE_DESC_IMMUNE : U.default.Messages.CHANNEL_SLOWMODE_DESC_SHORT)
+      } else 0 === M.length && (F = f ? H.default.Messages.CHANNEL_SLOWMODE_DESC_IMMUNE : H.default.Messages.CHANNEL_SLOWMODE_DESC_SHORT)
     }
-    let [L, R, k] = M;
-    return e = 0 === M.length ? "" : 1 === M.length ? U.default.Messages.ONE_USER_TYPING.format({
+    let [L, R, U] = M;
+    return e = 0 === M.length ? "" : 1 === M.length ? H.default.Messages.ONE_USER_TYPING.format({
       a: L
-    }) : 2 === M.length ? U.default.Messages.TWO_USERS_TYPING.format({
+    }) : 2 === M.length ? H.default.Messages.TWO_USERS_TYPING.format({
       a: L,
       b: R
-    }) : 3 === M.length ? U.default.Messages.THREE_USERS_TYPING.format({
+    }) : 3 === M.length ? H.default.Messages.THREE_USERS_TYPING.format({
       a: L,
       b: R,
-      c: k
-    }) : U.default.Messages.SEVERAL_USERS_TYPING, (0, n.jsxs)("div", {
-      className: i(H.typing, {
+      c: U
+    }) : H.default.Messages.SEVERAL_USERS_TYPING, (0, n.jsxs)("div", {
+      className: i(k.typing, {
         "stop-animation": !l,
-        [H.isComboing]: v && x
+        [k.isComboing]: v && x
       }, u),
       children: [(0, n.jsxs)("div", {
-        className: H.typingDots,
-        children: [M.length > 0 && !1 !== S && (0, n.jsx)(g.Dots, {
-          className: H.ellipsis,
+        className: k.typingDots,
+        children: [M.length > 0 && !1 !== p && (0, n.jsx)(g.Dots, {
+          className: k.ellipsis,
           dotRadius: 3.5,
           themed: !0
         }), (0, n.jsx)("span", {
-          className: H.text,
+          className: k.text,
           "aria-live": "polite",
           "aria-atomic": !0,
           children: e
@@ -225,7 +226,7 @@ class G extends a.PureComponent {
         text: w,
         children: e => (0, n.jsxs)(c.default.div, {
           style: this.getCooldownTextStyle(),
-          className: H.cooldownWrapper,
+          className: k.cooldownWrapper,
           ...e,
           children: [F, j]
         })
@@ -255,12 +256,12 @@ class G extends a.PureComponent {
   }
 }
 
-function W(e) {
+function V(e) {
   let {
     channel: t,
     isThreadCreation: s = !1,
     ...a
-  } = e, l = (0, f.useStateFromStores)([M.default], () => M.default.findActivity(e => null != e.application_id)), i = (0, f.useStateFromStores)([C.default, E.default], () => C.default.getUserCombo(E.default.getId(), t.id)), r = (0, f.useStateFromStores)([N.default, v.default], () => (0, S.default)(t, l, N.default, v.default)), o = (0, f.useStateFromStores)([F.default], () => F.default.getSlowmodeCooldownGuess(t.id, s ? F.SlowmodeType.CreateThread : F.SlowmodeType.SendMessage)), u = (0, f.useStateFromStores)([_.default], () => s ? _.default.can(P.Permissions.MANAGE_THREADS, t) : _.default.can(P.Permissions.MANAGE_CHANNELS, t) || _.default.can(P.Permissions.MANAGE_MESSAGES, t)), d = {
+  } = e, l = (0, f.useStateFromStores)([M.default], () => M.default.findActivity(e => null != e.application_id)), i = (0, f.useStateFromStores)([C.default, E.default], () => C.default.getUserCombo(E.default.getId(), t.id)), r = (0, f.useStateFromStores)([N.default, v.default], () => (0, p.default)(t, l, N.default, v.default)), o = (0, f.useStateFromStores)([F.default], () => F.default.getSlowmodeCooldownGuess(t.id, s ? F.SlowmodeType.CreateThread : F.SlowmodeType.SendMessage)), u = (0, f.useStateFromStores)([_.default], () => s ? _.default.can(U.Permissions.MANAGE_THREADS, t) : _.default.can(U.Permissions.MANAGE_CHANNELS, t) || _.default.can(U.Permissions.MANAGE_MESSAGES, t)), d = {
     ...a,
     baseTextColor: (0, g.useToken)(m.default.colors.INTERACTIVE_NORMAL).hex(),
     activeTextColor: (0, g.useToken)(m.default.colors.INTERACTIVE_NORMAL).hex(),
@@ -275,7 +276,7 @@ function W(e) {
     channel: t,
     isThreadCreation: s
   };
-  return (0, n.jsx)(G, {
+  return (0, n.jsx)(W, {
     ...d
   })
 }

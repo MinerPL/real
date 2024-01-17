@@ -4,16 +4,18 @@ n.r(t), n.d(t, {
     return i
   },
   default: function() {
-    return c
+    return h
   }
 });
 var l, i, r = n("450911"),
   a = n("819689"),
   s = n("605250"),
   o = n("42203"),
-  u = n("231987");
+  u = n("718517"),
+  d = n("231987");
+let c = 1 * u.default.Millis.SECOND + 10;
 (l = i || (i = {}))[l.GROUP_DM = 0] = "GROUP_DM", l[l.USER = 1] = "USER", l[l.CHANNEL = 2] = "CHANNEL";
-class d extends u.default {
+class f extends d.default {
   _sendInvite(e, t, n, l, i) {
     a.default.sendInvite(e.id, t, n, l).then(() => i(null, !0), () => i(null, !1))
   }
@@ -35,7 +37,7 @@ class d extends u.default {
     }
   }
   constructor() {
-    super(new s.default("InviteQueue"), 1010)
+    super(new s.default("InviteQueue"), c)
   }
 }
-var c = new d
+var h = new f

@@ -2,35 +2,37 @@
 let l;
 t.r(n), t.d(n, {
   clearVoiceChannelEffectForUser: function() {
-    return _
+    return E
   },
   default: function() {
-    return y
+    return A
   }
 }), t("222007"), t("843762");
 var u = t("917351"),
   i = t("446674"),
   o = t("819855"),
   a = t("913144"),
-  d = t("397485"),
-  r = t("99795");
-let s = [],
-  c = {},
-  f = [],
-  _ = e => {
+  d = t("718517"),
+  r = t("397485"),
+  s = t("99795");
+let c = [],
+  f = {},
+  _ = [],
+  E = e => {
     null != e && a.default.dispatch({
       type: "VOICE_CHANNEL_EFFECT_CLEAR",
       userId: e
     })
   },
-  E = [],
-  S = (0, u.debounce)(() => {
-    let e = (0, d.getEffectAnnouncement)(f);
-    o.AccessibilityAnnouncer.announce(e, "polite"), f = []
+  S = [],
+  C = 10 * d.default.Millis.SECOND,
+  y = (0, u.debounce)(() => {
+    let e = (0, r.getEffectAnnouncement)(_);
+    o.AccessibilityAnnouncer.announce(e, "polite"), _ = []
   }, 500);
-class C extends i.default.Store {
+class m extends i.default.Store {
   get recentlyUsedEmojis() {
-    return s
+    return c
   }
   get isOnCooldown() {
     return null != l && new Date < l
@@ -39,22 +41,22 @@ class C extends i.default.Store {
     return l
   }
   getEffectForUserId(e) {
-    return c[e]
+    return f[e]
   }
 }
-C.displayName = "VoiceChannelEffectsStore";
-var y = new C(a.default, {
+m.displayName = "VoiceChannelEffectsStore";
+var A = new m(a.default, {
   VOICE_CHANNEL_EFFECT_CLEAR: e => {
     let {
       userId: n
     } = e;
-    null != c[n] && delete c[n]
+    null != f[n] && delete f[n]
   },
   VOICE_CHANNEL_EFFECT_RECENT_EMOJI: e => {
     let {
       emoji: n
     } = e;
-    null != n && (s.unshift(n), (s = (0, u.uniqBy)(s, "name")).length > r.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT + 1 && s.pop())
+    null != n && (c.unshift(n), (c = (0, u.uniqBy)(c, "name")).length > s.EMOJI_PICKER_EMOJI_TO_SHOW_COUNT + 1 && c.pop())
   },
   VOICE_CHANNEL_EFFECT_SEND: e => {
     let {
@@ -62,21 +64,21 @@ var y = new C(a.default, {
       userId: t,
       animationType: l
     } = e;
-    null != n && null != l && (c[t] = {
+    null != n && null != l && (f[t] = {
       emoji: n,
       sentAt: Date.now(),
       animationType: l
-    }, f = [...f, {
+    }, _ = [..._, {
       emojiName: n.name,
       userId: t
-    }], S())
+    }], y())
   },
   VOICE_CHANNEL_EFFECT_SENT_LOCAL: () => {
     let e = new Date;
-    if ((E = [e, ...E].slice(0, 20)).length >= 20) {
-      let n = E[E.length - 1],
+    if ((S = [e, ...S].slice(0, 20)).length >= 20) {
+      let n = S[S.length - 1],
         t = e.getTime() - n.getTime();
-      t < 1e4 && (l = new Date(e.getTime() + 1e4 - t))
+      t < C && (l = new Date(e.getTime() + C - t))
     }
   },
   VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: e => {

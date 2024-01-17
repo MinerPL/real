@@ -1,49 +1,51 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return E
   }
 });
 var a = n("446674"),
-  s = n("913144");
-let i = {
+  s = n("913144"),
+  i = n("718517");
+let l = 12 * i.default.Millis.HOUR,
+  r = {
     profileThemesRelevanceExceeded: null,
     savedAt: null
   },
-  l = {
+  o = {
     hasFetchedRelevance: !1
   },
-  r = i,
-  o = l;
-class u extends a.default.PersistedStore {
+  u = r,
+  d = o;
+class c extends a.default.PersistedStore {
   initialize(e) {
-    o = l, r = i;
+    d = o, u = r;
     let t = new Date;
-    null != e && null != e.savedAt && t.getTime() - e.savedAt < 432e5 && (r = e)
+    null != e && null != e.savedAt && t.getTime() - e.savedAt < l && (u = e)
   }
   get hasFetchedRelevance() {
-    return o.hasFetchedRelevance
+    return d.hasFetchedRelevance
   }
   get profileThemesRelevanceExceeded() {
-    return r.profileThemesRelevanceExceeded
+    return u.profileThemesRelevanceExceeded
   }
   getState() {
-    return r
+    return u
   }
 }
-u.displayName = "PerksRelevanceStore", u.persistKey = "PerksRelevanceStore";
-var d = new u(s.default, {
+c.displayName = "PerksRelevanceStore", c.persistKey = "PerksRelevanceStore";
+var E = new c(s.default, {
   BILLING_PERKS_RELEVANCE_FETCH_START: function() {
-    o.hasFetchedRelevance = !0
+    d.hasFetchedRelevance = !0
   },
   BILLING_PERKS_RELEVANCE_FETCH_SUCCESS: function(e) {
     let {
       res: t
     } = e;
-    null != t && (r.profileThemesRelevanceExceeded = t.eligible, r.savedAt = new Date().getTime())
+    null != t && (u.profileThemesRelevanceExceeded = t.eligible, u.savedAt = new Date().getTime())
   },
   BILLING_PERKS_RELEVANCE_FETCH_FAIL: function() {},
   LOGOUT: function() {
-    o = l, r = i
+    d = o, u = r
   }
 })

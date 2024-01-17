@@ -1,25 +1,26 @@
 "use strict";
 n.r(t), n.d(t, {
   TIMESTAMP_FORMATS: function() {
-    return a
-  },
-  DEFAULT_TIMESTAMP_FORMAT: function() {
     return o
   },
-  TIMESTAMP_REGEX: function() {
-    return u
+  DEFAULT_TIMESTAMP_FORMAT: function() {
+    return d
   },
-  parseTimestamp: function() {
+  TIMESTAMP_REGEX: function() {
     return l
   },
-  unparseTimestamp: function() {
+  parseTimestamp: function() {
     return f
+  },
+  unparseTimestamp: function() {
+    return _
   }
 });
 var s = n("866227"),
   i = n.n(s),
-  r = n("888400");
-let a = {
+  r = n("888400"),
+  a = n("718517");
+let o = {
     t: e => (0, r.dateFormat)(e, "LT"),
     T: e => (0, r.dateFormat)(e, "LTS"),
     d: e => (0, r.dateFormat)(e, "L"),
@@ -40,24 +41,24 @@ let a = {
       return i.relativeTimeThreshold("s", t), i.relativeTimeThreshold("ss", n), i.relativeTimeThreshold("m", s), null != r ? r : i(e.toDate()).fromNow()
     }
   },
-  o = "f";
-Object.setPrototypeOf(a, null);
-let d = Object.keys(a).join("|"),
-  u = new RegExp("^<t:(-?\\d{1,17})(?::(".concat(d, "))?>"));
+  d = "f";
+Object.setPrototypeOf(o, null);
+let u = Object.keys(o).join("|"),
+  l = new RegExp("^<t:(-?\\d{1,17})(?::(".concat(u, "))?>"));
 
-function l(e, t) {
-  let n = i(1e3 * Number(e));
+function f(e, t) {
+  let n = i(Number(e) * a.default.Millis.SECOND);
   if (!n.isValid()) return null;
-  let s = null != t ? a[t] : void 0;
-  return null == s && (s = a[o]), {
+  let s = null != t ? o[t] : void 0;
+  return null == s && (s = o[d]), {
     timestamp: e,
     format: t,
     parsed: n,
-    full: a.F(n),
+    full: o.F(n),
     formatted: s(n)
   }
 }
 
-function f(e, t) {
+function _(e, t) {
   return null != t ? "<t:".concat(e, ":").concat(t, ">") : "<t:".concat(e, ">")
 }

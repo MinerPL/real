@@ -1,15 +1,16 @@
 "use strict";
 i.r(t), i.d(t, {
   UNUSUAL_DM_COMPARISON_DELTA: function() {
-    return r
+    return n
   },
   createMemberSearchCursor: function() {
-    return n
+    return s
   }
 });
-let r = 1728e5;
+var r = i("718517");
+let n = 2 * r.default.Millis.DAY;
 
-function n(e) {
+function s(e) {
   if (null == e || null == e.joinedAt) return null;
   let t = new Date(e.joinedAt).getTime();
   return {

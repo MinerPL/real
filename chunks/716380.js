@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DEFAULT_WANTS_FULL: function() {
-    return E
+    return h
   },
   RTCMediaSinkWantsManagerEvent: function() {
     return i
@@ -16,11 +16,14 @@ var i, r, s, a = n("595275"),
   u = n("233736"),
   c = n("862337"),
   d = n("560528"),
-  f = n("49111");
-let E = {
+  f = n("718517"),
+  E = n("49111");
+let h = {
     any: 100
   },
-  h = -1 !== (0, d.getFirefoxVersion)();
+  p = 30 * f.default.Millis.SECOND,
+  _ = 120 * f.default.Millis.SECOND,
+  S = -1 !== (0, d.getFirefoxVersion)();
 (s = i || (i = {})).UserSSRCUpdate = "user-ssrc-update", s.Update = "update", r = class extends a.default {
   getWantsLevel() {
     let e = this.getVideoParticipantCount();
@@ -72,7 +75,7 @@ let E = {
     return delete this.audioSsrcs[e], delete this.videoSsrcs[e], this.participants.delete(e), delete this.streamIds[e], this.update(Array.from(this.participants))
   }
   reset() {
-    this.setConnection(null, !1), this.audioSsrcs = {}, this.videoSsrcs = {}, this.remoteVideoSsrcs = {}, this.framesReceived = {}, this.streamIds = {}, this.latestWants = E
+    this.setConnection(null, !1), this.audioSsrcs = {}, this.videoSsrcs = {}, this.remoteVideoSsrcs = {}, this.framesReceived = {}, this.streamIds = {}, this.latestWants = h
   }
   setSelectedParticipant(e) {
     if (e === this.selectedParticipantId) return this.latestWants;
@@ -113,11 +116,11 @@ let E = {
     return e
   }
   getOffscreenTimeoutMs() {
-    return this.isStageChannel ? 12e4 : 3e4
+    return this.isStageChannel ? _ : p
   }
   constructor(e, t, n, i = new l.MediaSinkWantsLadder) {
     var r;
-    super(), r = this, this.userId = e, this.isStageChannel = t, this.supportsSeamless = n, this.ladder = i, this.connection = null, this.audioSsrcs = {}, this.videoSsrcs = {}, this.remoteVideoSsrcs = {}, this.framesReceived = {}, this.streamIds = {}, this.offscreenUsers = {}, this.offscreenDisabledUsers = {}, this.latestWants = E, this.participants = new Set, this.selectedParticipantId = null, this.pipOpen = !1, this.videoHealthManager = null, this.delayedUpdate = () => {
+    super(), r = this, this.userId = e, this.isStageChannel = t, this.supportsSeamless = n, this.ladder = i, this.connection = null, this.audioSsrcs = {}, this.videoSsrcs = {}, this.remoteVideoSsrcs = {}, this.framesReceived = {}, this.streamIds = {}, this.offscreenUsers = {}, this.offscreenDisabledUsers = {}, this.latestWants = h, this.participants = new Set, this.selectedParticipantId = null, this.pipOpen = !1, this.videoHealthManager = null, this.delayedUpdate = () => {
       this.delayedCall.delay()
     }, this.addLru = (e, t, n) => {
       if (n.push(e), n.length <= 3) return;
@@ -162,7 +165,7 @@ let E = {
         let l = [],
           c = !1,
           d = o[0].ssrc;
-        if ((null === (e = r.connection) || void 0 === e ? void 0 : e.getLocalVideoDisabled(n)) || r.userVideoDisabled(n) && (null === (t = r.videoHealthManager) || void 0 === t ? void 0 : t.getCurrentVideoToggleState(n)) !== f.VideoToggleState.AUTO_PROBING)
+        if ((null === (e = r.connection) || void 0 === e ? void 0 : e.getLocalVideoDisabled(n)) || r.userVideoDisabled(n) && (null === (t = r.videoHealthManager) || void 0 === t ? void 0 : t.getCurrentVideoToggleState(n)) !== E.VideoToggleState.AUTO_PROBING)
           for (let e of o) a[e.ssrc] = 0;
         else {
           let e = n === r.selectedParticipantId && 100 !== s && !r.pipOpen;
@@ -176,7 +179,7 @@ let E = {
         (i.includes(n) || void 0 !== r.remoteVideoSsrcs[n] && !(0, u.default)(r.remoteVideoSsrcs[n], l)) && (r.remoteVideoSsrcs[n] = [...l], r.emit("user-ssrc-update", n, r.audioSsrcs[n], l))
       }
       for (let [e, t] of Object.entries(r.audioSsrcs))(null === (n = r.connection) || void 0 === n ? void 0 : n.getLocalMute(e)) && (a[t] = 0);
-      return h ? r.latestWants : (null != r.connection && !(0, u.default)(r.latestWants, a) && (r.latestWants = a, r.emit("update", a)), a)
+      return S ? r.latestWants : (null != r.connection && !(0, u.default)(r.latestWants, a) && (r.latestWants = a, r.emit("update", a)), a)
     }, this.delayedCall = new c.DelayedCall(100, this.update), this.offscreenTimeout = new c.Timeout
   }
 }

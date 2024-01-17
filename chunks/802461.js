@@ -1,70 +1,71 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return f
   }
 }), n("222007");
 var s = n("446674"),
-  i = n("913144");
-let r = {
+  i = n("913144"),
+  r = n("718517");
+let a = {
     captionsById: new Map
   },
-  a = r,
-  o = !1,
-  d = null;
-class u extends s.default.PersistedStore {
+  o = a,
+  d = !1,
+  u = null;
+class l extends s.default.PersistedStore {
   initialize(e) {
-    a = null != e ? {
+    o = null != e ? {
       captionsById: new Map(e.captionsById)
-    } : r
+    } : a
   }
   getState() {
-    return a
+    return o
   }
   getCaptionsForEmojiById(e) {
     var t;
     let {
       emojiId: n
     } = e;
-    return null !== (t = a.captionsById.get(n)) && void 0 !== t ? t : []
+    return null !== (t = o.captionsById.get(n)) && void 0 !== t ? t : []
   }
   getIsFetching() {
-    return o
-  }
-  getEmojiCaptionsTTL() {
     return d
   }
+  getEmojiCaptionsTTL() {
+    return u
+  }
   hasPersistedState() {
-    return a.captionsById.size > 0
+    return o.captionsById.size > 0
   }
   clear() {
-    a = r, o = !1, d = null
+    o = a, d = !1, u = null
   }
 }
-u.displayName = "EmojiCaptionsStore", u.persistKey = "EmojiCaptionsStore";
-var l = new u(i.default, {
+l.displayName = "EmojiCaptionsStore", l.persistKey = "EmojiCaptionsStore";
+var f = new l(i.default, {
   LOGOUT: function() {
-    a = r, o = !1, d = null
+    o = a, d = !1, u = null
   },
   EMOJI_CAPTIONS_FETCH: function(e) {
     let {} = e;
-    !o && (o = !0)
+    !d && (d = !0)
   },
   EMOJI_CAPTIONS_FETCH_SUCCESS: function(e) {
     let {
       emojiCaptions: t
     } = e;
-    a.captionsById = new Map(Object.entries(t)), o = !1, d = Date.now() + 216e5
+    o.captionsById = new Map(Object.entries(t)), d = !1, u = Date.now() + 360 * r.default.Millis.MINUTE
   },
   EMOJI_CAPTIONS_FETCH_ERROR: function(e) {
     let {
       is4XXError: t
     } = e;
-    o = !1;
-    d = Date.now() + 6e4 * (t ? 10 : 1)
+    d = !1;
+    u = Date.now() + (t ? 10 : 1) * r.default.Millis.MINUTE
   },
   POST_CONNECTION_OPEN: function(e) {
     let {} = e;
-    o = !1
+    d = !1
   }
 })

@@ -8,15 +8,15 @@ var l = n("884691"),
   a = n("866227"),
   s = n.n(a),
   i = n("775560"),
-  r = n("646630"),
-  o = n("49111");
+  r = n("718517"),
+  o = n("646630");
 let u = [
-    [2 * o.Durations.MINUTE, o.Durations.SECOND],
-    [5 * o.Durations.MINUTE, o.Durations.MINUTE],
-    [45 * o.Durations.MINUTE, 2 * o.Durations.MINUTE],
-    [21 * o.Durations.HOUR, 5 * o.Durations.MINUTE]
+    [2 * r.default.Seconds.MINUTE, r.default.Seconds.SECOND],
+    [5 * r.default.Seconds.MINUTE, r.default.Seconds.MINUTE],
+    [45 * r.default.Seconds.MINUTE, 2 * r.default.Seconds.MINUTE],
+    [21 * r.default.Seconds.HOUR, 5 * r.default.Seconds.MINUTE]
   ],
-  d = 2 * o.Durations.HOUR;
+  d = 2 * r.default.Seconds.HOUR;
 
 function c(e) {
   let t = (0, i.useForceUpdate)();
@@ -32,5 +32,5 @@ function c(e) {
       t()
     }, n);
     return () => clearInterval(a)
-  }, [t, e.format, e.parsed]), "R" === e.format) ? r.TIMESTAMP_FORMATS.R(e.parsed) : e.formatted
+  }, [t, e.format, e.parsed]), "R" === e.format) ? o.TIMESTAMP_FORMATS.R(e.parsed) : e.formatted
 }

@@ -1,43 +1,45 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return f
   }
 });
 var i = n("917351"),
   r = n.n(i),
   s = n("446674"),
-  a = n("913144");
-let o = {
+  a = n("913144"),
+  o = n("718517");
+let l = {
     preferredRegion: null,
     lastTestTimestamp: null,
     lastGeoRankedOrder: null
   },
-  l = o;
-class u extends s.default.DeviceSettingsStore {
+  u = l,
+  c = 1 * o.default.Millis.HOUR;
+class d extends s.default.DeviceSettingsStore {
   initialize(e) {
-    l = null != e ? e : o
+    u = null != e ? e : l
   }
   shouldIncludePreferredRegion() {
-    return null != l.preferredRegion
+    return null != u.preferredRegion
   }
   getPreferredRegion() {
-    return l.preferredRegion
+    return u.preferredRegion
   }
   getRegion(e) {
     if (null != e) return e.substr(0, e.search(/\d/))
   }
   getUserAgnosticState() {
-    return l
+    return u
   }
   shouldPerformLatencyTest(e) {
     var t, n;
-    return null === l.preferredRegion || !r.isEqual(e, null !== (t = l.lastGeoRankedOrder) && void 0 !== t ? t : []) || Date.now() - (null !== (n = l.lastTestTimestamp) && void 0 !== n ? n : 0) >= 864e5
+    return null === u.preferredRegion || !r.isEqual(e, null !== (t = u.lastGeoRankedOrder) && void 0 !== t ? t : []) || Date.now() - (null !== (n = u.lastTestTimestamp) && void 0 !== n ? n : 0) >= c
   }
 }
-u.displayName = "RTCRegionStore", u.persistKey = "RTCRegionStore";
-var c = new u(a.default, {
+d.displayName = "RTCRegionStore", d.persistKey = "RTCRegionStore";
+var f = new d(a.default, {
   RTC_LATENCY_TEST_COMPLETE: function(e) {
-    e.latencyRankedRegions.length > 0 && (l.lastGeoRankedOrder = e.geoRankedRegions, l.preferredRegion = e.latencyRankedRegions[0]), l.lastTestTimestamp = Date.now()
+    e.latencyRankedRegions.length > 0 && (u.lastGeoRankedOrder = e.geoRankedRegions, u.preferredRegion = e.latencyRankedRegions[0]), u.lastTestTimestamp = Date.now()
   }
 })

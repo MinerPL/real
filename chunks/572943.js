@@ -1,13 +1,13 @@
 "use strict";
 l.r(t), l.d(t, {
   usePlatformAllowed: function() {
-    return E
+    return _
   },
   usePlatforms: function() {
-    return T
+    return S
   },
   useLegacyPlatformType: function() {
-    return _
+    return h
   }
 }), l("222007");
 var n = l("884691"),
@@ -18,16 +18,18 @@ var n = l("884691"),
   o = l("695702"),
   u = l("47319"),
   d = l("697218"),
-  c = l("49111"),
-  f = l("894282");
-let m = {
-    [c.PlatformTypes.INSTAGRAM]: ["1036753656588017764"]
+  c = l("718517"),
+  f = l("49111"),
+  m = l("894282");
+let p = {
+    [f.PlatformTypes.INSTAGRAM]: ["1036753656588017764"]
   },
-  p = new Map([
-    [c.PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()]
-  ]);
+  E = new Map([
+    [f.PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()]
+  ]),
+  T = 30 * c.default.Millis.DAY;
 
-function E(e) {
+function _(e) {
   let {
     forUserProfile: t
   } = e, l = (0, i.useStateFromStores)([d.default], () => d.default.getCurrentUser()), n = o.PlayStationVoiceExperiment.useExperiment({
@@ -37,13 +39,13 @@ function E(e) {
   }).allowPlayStationStaging;
   return e => {
     var a;
-    return e.type === c.PlatformTypes.PLAYSTATION_STAGING ? n : !!(void 0 !== l && (null === (a = m[e.type]) || void 0 === a ? void 0 : a.includes(l.id))) || !!t || e.enabled
+    return e.type === f.PlatformTypes.PLAYSTATION_STAGING ? n : !!(void 0 !== l && (null === (a = p[e.type]) || void 0 === a ? void 0 : a.includes(l.id))) || !!t || e.enabled
   }
 }
 
-function T() {
+function S() {
   let e = (0, i.useStateFromStores)([u.default], () => u.default.getAccounts()),
-    t = E({
+    t = _({
       forUserProfile: !1
     }),
     l = n.useMemo(() => {
@@ -52,27 +54,27 @@ function T() {
     }, [e]);
   return s.sortBy(r.default.filter(t), [e => {
     var t;
-    return !(p.has(e.type) && Date.now() < (null !== (t = p.get(e.type)) && void 0 !== t ? t : 0) + 2592e6)
-  }, e => l.has(e.type), e => e.hasMetadata, e => !c.ACTIVITY_PLATFORM_TYPES.has(e.type), e => e.name])
+    return !(E.has(e.type) && Date.now() < (null !== (t = E.get(e.type)) && void 0 !== t ? t : 0) + T)
+  }, e => l.has(e.type), e => e.hasMetadata, e => !f.ACTIVITY_PLATFORM_TYPES.has(e.type), e => e.name])
 }
 
-function _(e) {
+function h(e) {
   let [t, l] = n.useState(!1);
 
   function a(e) {
     let {
       key: t
     } = e;
-    t === f.KeyboardKeysUpdated.SHIFT && l(!0)
+    t === m.KeyboardKeysUpdated.SHIFT && l(!0)
   }
 
   function s(e) {
     let {
       key: t
     } = e;
-    t === f.KeyboardKeysUpdated.SHIFT && l(!1)
+    t === m.KeyboardKeysUpdated.SHIFT && l(!1)
   }
   return (n.useEffect(() => (window.addEventListener("keydown", a), window.addEventListener("keyup", s), () => {
     window.removeEventListener("keydown", a), window.removeEventListener("keyup", s)
-  }), []), t && e === c.PlatformTypes.TWITTER) ? c.PlatformTypes.TWITTER_LEGACY : e
+  }), []), t && e === f.PlatformTypes.TWITTER) ? f.PlatformTypes.TWITTER_LEGACY : e
 }

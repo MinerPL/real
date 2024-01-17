@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   initSessionHeartbeatScheduler: function() {
-    return p
+    return m
   }
 }), n("70102");
 var a = n("976255"),
@@ -9,51 +9,52 @@ var a = n("976255"),
   i = n("913144"),
   l = n("945956"),
   r = n("599110"),
-  o = n("872507"),
-  u = n("286235"),
-  d = n("49111");
-let c = "LATEST_HEARTBEAST_EVENT_TIMESTAMP",
-  E = null,
+  o = n("718517"),
+  u = n("872507"),
+  d = n("286235"),
+  c = n("49111");
+let E = "LATEST_HEARTBEAST_EVENT_TIMESTAMP",
   f = null,
   _ = null,
-  h = !1;
-async function C() {
-  if (h) return;
-  h = !0, (0, a.setSessionExtendingEnabled)(!0), u.default.addBreadcrumb({
+  h = null,
+  C = !1;
+async function T() {
+  if (C) return;
+  C = !0, (0, a.setSessionExtendingEnabled)(!0), d.default.addBreadcrumb({
     message: "Start Analytics Heartbeat"
   });
-  let e = await s.default.getAfterRefresh(c).then(a.timestampOrZero);
-  if (!h) return;
+  let e = await s.default.getAfterRefresh(E).then(a.timestampOrZero);
+  if (!C) return;
   let t = Date.now(),
-    n = 9e5 + e - t;
-  n > 36e5 && u.default.addBreadcrumb({
+    n = 15 * o.default.Millis.MINUTE + e - t;
+  n > o.default.Millis.HOUR && d.default.addBreadcrumb({
     message: "Received invalid Date.now() when generating a heartbeat. Date.now() = ".concat(t, ", timeUntilNextHeartbeat = ").concat(n, ", latestHeartbeatEventTimestamp = ").concat(e)
-  }), e > t && (n = 0), u.default.addBreadcrumb({
+  }), e > t && (n = 0), d.default.addBreadcrumb({
     message: "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ".concat(n / 1e3, " seconds. Scheduling Heartbeat")
-  }), T(!1), f = setTimeout(() => {
-    I(), E = setInterval(() => {
-      I()
-    }, 9e5)
+  }), I(!1), _ = setTimeout(() => {
+    S(), f = setInterval(() => {
+      S()
+    }, 15 * o.default.Millis.MINUTE)
   }, Math.max(n, 0))
 }
 
-function T() {
+function I() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  null != f && (clearTimeout(f), f = null), null != E && (clearInterval(E), E = null), null != _ && e && (clearTimeout(_), _ = null)
+  null != _ && (clearTimeout(_), _ = null), null != f && (clearInterval(f), f = null), null != h && e && (clearTimeout(h), h = null)
 }
-async function I() {
+async function S() {
   let e = Date.now(),
     t = await (0, a.getSession)(),
     n = Date.now();
   if (null == t) {
-    u.default.captureException(Error("Null session when tracking session heartbeat. Waited ".concat(n - e, "ms")));
+    d.default.captureException(Error("Null session when tracking session heartbeat. Waited ".concat(n - e, "ms")));
     return
   }
-  if (!h) {
-    u.default.captureException(Error("Heartbeat scheduler not started when tracking session heartbeat.")), T();
+  if (!C) {
+    d.default.captureException(Error("Heartbeat scheduler not started when tracking session heartbeat.")), I();
     return
   }
-  u.default.addBreadcrumb({
+  d.default.addBreadcrumb({
     message: "Tracking Heartbeat",
     data: {
       initialized: t.initialized
@@ -63,49 +64,49 @@ async function I() {
       client_heartbeat_initialization_timestamp: t.initialized,
       client_heartbeat_version: 17
     },
-    l = o.default.getMemoryUsageElectronRenderer();
+    l = u.default.getMemoryUsageElectronRenderer();
   null != l && (i.client_heartbeat_renderer_memory = l);
-  let E = o.default.getMemoryUsageElectronRendererUsedHeapSize();
-  null != E && (i.client_heartbeat_renderer_memory_used_heap = E), r.default.track(d.AnalyticEvents.CLIENT_HEARTBEAT, i), s.default.set(c, Date.now().toString())
+  let o = u.default.getMemoryUsageElectronRendererUsedHeapSize();
+  null != o && (i.client_heartbeat_renderer_memory_used_heap = o), r.default.track(c.AnalyticEvents.CLIENT_HEARTBEAT, i), s.default.set(E, Date.now().toString())
 }
-let S = null,
-  N = !0;
-
-function A() {
-  if (N || null != S && S !== d.RTCConnectionStates.DISCONNECTED && S !== d.RTCConnectionStates.RTC_DISCONNECTED) try {
-    C()
-  } catch (e) {
-    u.default.captureException(e)
-  } else !h || (h = !1, u.default.addBreadcrumb({
-    message: "Stopping Analytics Heartbeat"
-  }), (0, a.setSessionExtendingEnabled)(!1), T())
-}
+let N = null,
+  A = !0;
 
 function p() {
-  u.default.addBreadcrumb({
-    message: "Initializing SessionHeartbeatScheduler"
-  }), l.default.addChangeListener(g), i.default.subscribe("WINDOW_FOCUS", R), i.default.subscribe("APP_STATE_UPDATE", O), i.default.subscribe("LOGIN_SUCCESS", m), A()
+  if (A || null != N && N !== c.RTCConnectionStates.DISCONNECTED && N !== c.RTCConnectionStates.RTC_DISCONNECTED) try {
+    T()
+  } catch (e) {
+    d.default.captureException(e)
+  } else !C || (C = !1, d.default.addBreadcrumb({
+    message: "Stopping Analytics Heartbeat"
+  }), (0, a.setSessionExtendingEnabled)(!1), I())
 }
 
 function m() {
-  I()
+  d.default.addBreadcrumb({
+    message: "Initializing SessionHeartbeatScheduler"
+  }), l.default.addChangeListener(R), i.default.subscribe("WINDOW_FOCUS", O), i.default.subscribe("APP_STATE_UPDATE", L), i.default.subscribe("LOGIN_SUCCESS", g), p()
 }
 
 function g() {
-  let e = l.default.getState();
-  S !== e && (S = e, A())
+  S()
 }
 
-function R(e) {
-  let {
-    focused: t
-  } = e;
-  N = t, A()
+function R() {
+  let e = l.default.getState();
+  N !== e && (N = e, p())
 }
 
 function O(e) {
   let {
+    focused: t
+  } = e;
+  A = t, p()
+}
+
+function L(e) {
+  let {
     state: t
   } = e;
-  N = t === d.AppStates.ACTIVE, A()
+  A = t === c.AppStates.ACTIVE, p()
 }

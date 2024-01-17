@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return T
   }
 }), n("702976");
 var i = n("981980"),
@@ -11,12 +11,13 @@ var i = n("981980"),
   o = n("95410"),
   l = n("913144"),
   u = n("527015"),
-  c = n("286235"),
-  d = n("49111");
-let f = (() => {
+  c = n("718517"),
+  d = n("286235"),
+  f = n("49111");
+let E = (() => {
     let e = "".concat(location.protocol, "//").concat(location.host, "/__development/source_maps"),
       t = null,
-      n = new i.default(5e3, 6e4, !0),
+      n = new i.default(5 * c.default.Millis.SECOND, 1 * c.default.Millis.MINUTE, !0),
       s = () => {
         a.default.put({
           url: e,
@@ -27,7 +28,7 @@ let f = (() => {
         }).then(e => {
           401 === e.status || 403 === e.status ? (t = null, (0, u.setDeveloperOptionSettings)({
             sourceMapsEnabled: !1
-          })) : 200 !== e.status ? t = setTimeout(s, n.fail()) : (n.succeed(), t = setTimeout(s, 750 * e.body.sourceMapCookieTTLSeconds))
+          })) : 200 !== e.status ? t = setTimeout(s, n.fail()) : (n.succeed(), t = setTimeout(s, e.body.sourceMapCookieTTLSeconds * c.default.Millis.SECOND * .75))
         }, () => {
           t = setTimeout(s, n.fail())
         })
@@ -45,8 +46,8 @@ let f = (() => {
       }
     }
   })(),
-  E = "DeveloperOptionsStore",
-  h = {
+  h = "DeveloperOptionsStore",
+  p = {
     trace: !1,
     canary: !1,
     logGatewayEvents: !1,
@@ -59,74 +60,74 @@ let f = (() => {
     idleStatusIndicatorEnabled: !1,
     appDirectoryIncludesInactiveCollections: !1
   },
-  p = {
-    ...h
+  _ = {
+    ...p
   };
 
-function _(e) {
-  p = {
-    ...h,
+function S(e) {
+  _ = {
     ...p,
+    ..._,
     ...e
-  }, f.set(p.sourceMapsEnabled), o.default.set(E, p)
+  }, E.set(_.sourceMapsEnabled), o.default.set(h, _)
 }
-class S extends s.default.Store {
+class m extends s.default.Store {
   initialize() {
-    let e = o.default.get(E);
-    null != e && (p = {
-      ...h,
+    let e = o.default.get(h);
+    null != e && (_ = {
+      ...p,
       ...e
     })
   }
   get isTracingRequests() {
-    return p.trace
+    return _.trace
   }
   get isForcedCanary() {
-    return p.canary
+    return _.canary
   }
   get isLoggingGatewayEvents() {
-    return p.logGatewayEvents
+    return _.logGatewayEvents
   }
   get isLoggingOverlayEvents() {
-    return p.logOverlayEvents
+    return _.logOverlayEvents
   }
   get isLoggingAnalyticsEvents() {
-    return p.logAnalyticsEvents
+    return _.logAnalyticsEvents
   }
   get isAxeEnabled() {
-    return p.axeEnabled
+    return _.axeEnabled
   }
   get sourceMapsEnabled() {
-    return p.sourceMapsEnabled
+    return _.sourceMapsEnabled
   }
   get isAnalyticsDebuggerEnabled() {
-    return p.analyticsDebuggerEnabled
+    return _.analyticsDebuggerEnabled
   }
   get isBugReporterEnabled() {
-    return p.bugReporterEnabled
+    return _.bugReporterEnabled
   }
   get isIdleStatusIndicatorEnabled() {
-    return p.idleStatusIndicatorEnabled
+    return _.idleStatusIndicatorEnabled
   }
   get appDirectoryIncludesInactiveCollections() {
-    return p.appDirectoryIncludesInactiveCollections
+    return _.appDirectoryIncludesInactiveCollections
   }
   getDebugOptionsHeaderValue() {
-    Object.keys(p).map(e => p[e]);
-    let e = Object.keys(p).filter(e => p[e]);
+    Object.keys(_).map(e => _[e]);
+    let e = Object.keys(_).filter(e => _[e]);
     return e.join(",")
   }
 }
-S.displayName = "DeveloperOptionsStore";
-var m = new S(l.default, {
+m.displayName = "DeveloperOptionsStore";
+var T = new m(l.default, {
   LOGOUT: function(e) {
-    _(h)
+    S(p)
   },
   CONNECTION_OPEN: function(e) {
     var t;
-    let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & d.UserFlags.STAFF) === d.UserFlags.STAFF,
+    let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & f.UserFlags.STAFF) === f.UserFlags.STAFF,
       i = n || null != e.user.personal_connection_id;
-    n && f.set(p.sourceMapsEnabled), c.default.setTags({
+    n && E.set(_.sourceMapsEnabled), d.default.setTags({
       isStaff: i.toString()
     })
   },
@@ -134,6 +135,6 @@ var m = new S(l.default, {
     let {
       settings: t
     } = e;
-    _(t)
+    S(t)
   }
 })

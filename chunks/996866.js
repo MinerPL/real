@@ -1,13 +1,13 @@
 "use strict";
 l.r(t), l.d(t, {
   useSpotifyPlayAction: function() {
-    return S
+    return I
   },
   useSpotifySyncAction: function() {
-    return h
+    return A
   },
   useSpotifyJoinAction: function() {
-    return I
+    return g
   }
 }), l("222007");
 var n = l("884691"),
@@ -15,16 +15,18 @@ var n = l("884691"),
   s = l("862337"),
   i = l("84339"),
   r = l("271938"),
-  o = l("158998"),
-  u = l("662285"),
-  d = l("782911"),
-  c = l("629414"),
-  f = l("53887"),
-  m = l("486150"),
-  p = l("555759"),
-  E = l("450484");
+  o = l("718517"),
+  u = l("158998"),
+  d = l("662285"),
+  c = l("782911"),
+  f = l("629414"),
+  m = l("53887"),
+  p = l("486150"),
+  E = l("555759"),
+  T = l("450484");
+let _ = 30 * o.default.Millis.SECOND;
 
-function T(e) {
+function S(e) {
   let {
     currentUserTrackId: t,
     syncingWithUser: l,
@@ -34,7 +36,7 @@ function T(e) {
     r && (t !== d || l || a) && (o(!1), u.stop())
   }, [t, d, l, a, r, u]);
   let c = n.useCallback(() => {
-      o(!0), u.start(3e4, () => o(!1))
+      o(!0), u.start(_, () => o(!1))
     }, [u]),
     f = n.useCallback(() => {
       o(!1), u.stop()
@@ -46,12 +48,12 @@ function T(e) {
   }
 }
 
-function _(e, t) {
-  return (0, a.useStateFromStoresObject)([u.default, r.default], () => (0, f.default)(u.default, r.default, t, e), [e, t])
+function h(e, t) {
+  return (0, a.useStateFromStoresObject)([d.default, r.default], () => (0, m.default)(d.default, r.default, t, e), [e, t])
 }
 
-function S(e, t, l) {
-  let a = _(e, t),
+function I(e, t, l) {
+  let a = h(e, t),
     {
       notPlayable: s,
       isCurrentUser: i,
@@ -60,14 +62,14 @@ function S(e, t, l) {
     {
       loading: o,
       startLoading: u,
-      clearLoading: f
-    } = T(a),
+      clearLoading: d
+    } = S(a),
     m = n.useCallback(() => {
-      u(), (0, p.default)(a, E.SpotifyActionTypes.USER_ACTIVITY_PLAY, l).catch(f)
-    }, [a, l, u, f]);
+      u(), (0, E.default)(a, T.SpotifyActionTypes.USER_ACTIVITY_PLAY, l).catch(d)
+    }, [a, l, u, d]);
   return {
-    label: (0, d.default)(a, E.SpotifyActionTypes.USER_ACTIVITY_PLAY),
-    tooltip: (0, c.default)(a, E.SpotifyActionTypes.USER_ACTIVITY_PLAY),
+    label: (0, c.default)(a, T.SpotifyActionTypes.USER_ACTIVITY_PLAY),
+    tooltip: (0, f.default)(a, T.SpotifyActionTypes.USER_ACTIVITY_PLAY),
     disabled: !o && (i || s || r),
     loading: o,
     onClick: m,
@@ -75,34 +77,34 @@ function S(e, t, l) {
   }
 }
 
-function h(e, t, l, a) {
-  let s = null != a ? a : o.default.getName(t),
-    i = _(e, t),
+function A(e, t, l, a) {
+  let s = null != a ? a : u.default.getName(t),
+    i = h(e, t),
     {
       syncingWithUser: r,
-      syncingWithParty: u,
-      isCurrentUser: f
+      syncingWithParty: o,
+      isCurrentUser: d
     } = i,
     {
-      loading: p,
-      startLoading: S,
-      clearLoading: h
-    } = T(i),
+      loading: m,
+      startLoading: E,
+      clearLoading: _
+    } = S(i),
     I = n.useCallback(() => {
-      S(), (0, m.default)(i, E.SpotifyActionTypes.USER_ACTIVITY_SYNC, l).catch(h)
-    }, [i, l, S, h]);
+      E(), (0, p.default)(i, T.SpotifyActionTypes.USER_ACTIVITY_SYNC, l).catch(_)
+    }, [i, l, E, _]);
   return {
-    label: (0, d.default)(i, E.SpotifyActionTypes.USER_ACTIVITY_SYNC),
-    tooltip: (0, c.default)(i, E.SpotifyActionTypes.USER_ACTIVITY_SYNC, s),
-    disabled: !p && (f || r || u),
-    loading: p,
+    label: (0, c.default)(i, T.SpotifyActionTypes.USER_ACTIVITY_SYNC),
+    tooltip: (0, f.default)(i, T.SpotifyActionTypes.USER_ACTIVITY_SYNC, s),
+    disabled: !m && (d || r || o),
+    loading: m,
     onClick: I,
     spotifyData: i
   }
 }
 
-function I(e, t, l) {
-  let a = _(e, t),
+function g(e, t, l) {
+  let a = h(e, t),
     {
       notPlayable: s,
       syncingWithUser: i,
@@ -111,18 +113,18 @@ function I(e, t, l) {
     } = a,
     {
       loading: u,
-      startLoading: f,
-      clearLoading: p
-    } = T(a),
-    S = n.useCallback(() => {
-      f(), (0, m.default)(a, E.SpotifyActionTypes.EMBED_SYNC, l).catch(p)
-    }, [a, l, f, p]);
+      startLoading: d,
+      clearLoading: m
+    } = S(a),
+    E = n.useCallback(() => {
+      d(), (0, p.default)(a, T.SpotifyActionTypes.EMBED_SYNC, l).catch(m)
+    }, [a, l, d, m]);
   return {
-    label: (0, d.default)(a, E.SpotifyActionTypes.EMBED_SYNC),
-    tooltip: (0, c.default)(a, E.SpotifyActionTypes.EMBED_SYNC),
+    label: (0, c.default)(a, T.SpotifyActionTypes.EMBED_SYNC),
+    tooltip: (0, f.default)(a, T.SpotifyActionTypes.EMBED_SYNC),
     disabled: !u && (o || i || r || s),
     loading: u,
-    onClick: S,
+    onClick: E,
     spotifyData: a
   }
 }

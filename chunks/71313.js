@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchLiveBuild: function() {
-    return f
+    return _
   }
 });
 var i = n("872717"),
@@ -11,21 +11,25 @@ var i = n("872717"),
   o = n("915639"),
   l = n("686470"),
   u = n("645672"),
-  c = n("49111");
-let d = {};
-async function f(e, t) {
+  c = n("718517"),
+  d = n("49111");
+let f = 10 * c.default.Millis.MINUTE,
+  E = 10 * c.default.Millis.MINUTE,
+  h = 1 * c.default.Millis.MINUTE,
+  p = {};
+async function _(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    E = o.default.locale;
+    c = o.default.locale;
   return a.default.dispatch({
     type: "APPLICATION_BUILD_FETCH_START",
     applicationId: e,
     branchId: t,
-    locale: E
-  }), n && await (0, r.sleep)(6e4 * Math.random()), i.default.get({
-    url: c.Endpoints.APPLICATION_LIVE_BUILD(e, t),
+    locale: c
+  }), n && await (0, r.sleep)(Math.random() * h), i.default.get({
+    url: d.Endpoints.APPLICATION_LIVE_BUILD(e, t),
     query: {
       platform: (0, u.getBuildPlatform)(),
-      locale: E
+      locale: c
     },
     oldFormErrors: !0
   }).then(n => {
@@ -42,7 +46,7 @@ async function f(e, t) {
       type: "APPLICATION_BUILD_FETCH_SUCCESS",
       applicationId: e,
       branchId: t,
-      locale: E,
+      locale: c,
       build: i
     })
   }, n => {
@@ -56,9 +60,9 @@ async function f(e, t) {
     });
     else {
       var r, o;
-      r = e, null == d[o = t] && (d[o] = new s.Timeout), d[o].start(6e5 + 6e5 * Math.random(), () => {
+      r = e, null == p[o = t] && (p[o] = new s.Timeout), p[o].start(f + Math.random() * E, () => {
         let e = l.default.getLibraryApplication(r, o);
-        null != e && f(r, o)
+        null != e && _(r, o)
       })
     }
   })

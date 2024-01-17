@@ -10,25 +10,25 @@ var i = n("917351"),
   o = n("913144"),
   a = n("80507"),
   r = n("374363"),
-  d = n("364685"),
-  s = n("49111"),
+  d = n("718517"),
+  s = n("364685"),
   c = n("397336");
 let f = {
   pendingUsages: []
 };
-s.Durations.DAY;
+d.default.Millis.DAY;
 let E = new a.default({
     computeBonus: () => 100,
     computeWeight: e => {
       let t = 0;
       return e <= 3 ? t = 100 : e <= 15 ? t = 70 : e <= 30 ? t = 50 : e <= 45 ? t = 30 : e <= 80 && (t = 10), t
     },
-    lookupKey: e => d.default.getStickerById(e),
+    lookupKey: e => s.default.getStickerById(e),
     afterCompute: () => {},
     numFrequentlyItems: 20
   }),
   _ = () => {
-    d.default.isLoaded && E.compute()
+    s.default.isLoaded && E.compute()
   },
   S = () => {
     _()
@@ -45,7 +45,7 @@ function T() {
 }
 class p extends u.default.PersistedStore {
   initialize(e) {
-    this.waitFor(d.default), null != e && (f = e), this.syncWith([d.default], S), this.syncWith([r.default], T)
+    this.waitFor(s.default), null != e && (f = e), this.syncWith([s.default], S), this.syncWith([r.default], T)
   }
   getState() {
     return f

@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   SpotifyAPI: function() {
-    return _
+    return c
   },
   getAccessToken: function() {
-    return c
+    return g
   },
   subscribePlayerStateNotifications: function() {
     return function e(t, n, s) {
       let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
-      return _.put(t, n, {
-        url: u.SpotifyEndpoints.NOTIFICATIONS_PLAYER,
+      return c.put(t, n, {
+        url: l.SpotifyEndpoints.NOTIFICATIONS_PLAYER,
         query: {
           connection_id: s
         }
@@ -18,34 +18,35 @@ n.r(t), n.d(t, {
     }
   },
   getProfile: function() {
-    return g
-  },
-  getDevices: function() {
     return m
   },
-  play: function() {
+  getDevices: function() {
     return h
   },
-  pause: function() {
+  play: function() {
     return v
   },
-  fetchIsSpotifyProtocolRegistered: function() {
+  pause: function() {
     return E
   },
-  setActiveDevice: function() {
+  fetchIsSpotifyProtocolRegistered: function() {
     return p
+  },
+  setActiveDevice: function() {
+    return y
   }
 }), n("860677");
 var s = n("872717"),
   i = n("862337"),
   r = n("913144"),
-  a = n("269180"),
-  o = n("773336"),
-  d = n("155815"),
-  u = n("450484"),
-  l = n("49111");
+  a = n("718517"),
+  o = n("269180"),
+  d = n("773336"),
+  u = n("155815"),
+  l = n("450484"),
+  f = n("49111");
 
-function f(e, t, n, s) {
+function _(e, t, n, s) {
   let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1;
   return e(s = {
     ...s,
@@ -54,24 +55,24 @@ function f(e, t, n, s) {
     }
   }).then(e => 202 === e.status ? Promise.reject(e) : e).catch(n => {
     let a = !0 !== s.onlyRetryOnAuthorizationErrors && 202 === n.status;
-    return (401 === n.status || a) && r > 0 ? (202 === n.status ? (0, i.timeoutPromise)(5e3) : Promise.resolve()).then(() => c(t)).then(n => {
+    return (401 === n.status || a) && r > 0 ? (202 === n.status ? (0, i.timeoutPromise)(5e3) : Promise.resolve()).then(() => g(t)).then(n => {
       let {
         body: {
           access_token: i
         }
       } = n;
-      return f(e, t, i, s, r - 1)
+      return _(e, t, i, s, r - 1)
     }).then(e => new Promise(t => setImmediate(() => t(e)))) : Promise.reject(n)
   })
 }
-let _ = {
-  get: f.bind(null, s.default.get),
-  put: f.bind(null, s.default.put)
+let c = {
+  get: _.bind(null, s.default.get),
+  put: _.bind(null, s.default.put)
 };
 
-function c(e) {
+function g(e) {
   return s.default.get({
-    url: l.Endpoints.CONNECTION_ACCESS_TOKEN(l.PlatformTypes.SPOTIFY, e),
+    url: f.Endpoints.CONNECTION_ACCESS_TOKEN(f.PlatformTypes.SPOTIFY, e),
     oldFormErrors: !0
   }).catch(t => {
     if (401 === t.status) r.default.dispatch({
@@ -79,9 +80,9 @@ function c(e) {
       accountId: e
     });
     else if (429 === t.status) {
-      let n = 1e3 * t.headers["retry-after"],
+      let n = t.headers["retry-after"] * a.default.Millis.SECOND,
         s = isNaN(n) || 0 === n ? 5e3 : n;
-      return (0, i.timeoutPromise)(s).then(() => c(e))
+      return (0, i.timeoutPromise)(s).then(() => g(e))
     }
     return Promise.reject(t)
   }).then(t => {
@@ -96,9 +97,9 @@ function c(e) {
   })
 }
 
-function g(e, t) {
-  return _.get(e, t, {
-    url: u.SpotifyEndpoints.PROFILE
+function m(e, t) {
+  return c.get(e, t, {
+    url: l.SpotifyEndpoints.PROFILE
   }).then(t => (r.default.dispatch({
     type: "SPOTIFY_PROFILE_UPDATE",
     accountId: e,
@@ -106,9 +107,9 @@ function g(e, t) {
   }), t))
 }
 
-function m(e, t) {
-  return _.get(e, t, {
-    url: u.SpotifyEndpoints.PLAYER_DEVICES
+function h(e, t) {
+  return c.get(e, t, {
+    url: l.SpotifyEndpoints.PLAYER_DEVICES
   }).then(t => (t.body && r.default.dispatch({
     type: "SPOTIFY_SET_DEVICES",
     accountId: e,
@@ -116,17 +117,17 @@ function m(e, t) {
   }), t))
 }
 
-function h(e, t, n) {
+function v(e, t, n) {
   let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-    i = u.SpotifyEndpoints.PLAYER_OPEN(u.SpotifyResourceTypes.TRACK, n, !1),
+    i = l.SpotifyEndpoints.PLAYER_OPEN(l.SpotifyResourceTypes.TRACK, n, !1),
     {
       deviceId: a,
       position: o,
       contextUri: d,
-      repeat: l
+      repeat: u
     } = s;
-  return _.put(e, t, {
-    url: u.SpotifyEndpoints.PLAYER_PLAY,
+  return c.put(e, t, {
+    url: l.SpotifyEndpoints.PLAYER_PLAY,
     query: {
       device_id: a
     },
@@ -138,11 +139,11 @@ function h(e, t, n) {
       } : void 0,
       position_ms: null != o ? o : 0
     }
-  }).then(n => null == l ? n : _.put(e, t, {
-    url: u.SpotifyEndpoints.PLAYER_REPEAT,
+  }).then(n => null == u ? n : c.put(e, t, {
+    url: l.SpotifyEndpoints.PLAYER_REPEAT,
     query: {
       device_id: a,
-      state: l ? "context" : "off"
+      state: u ? "context" : "off"
     }
   })).then(e => (r.default.dispatch({
     type: "SPOTIFY_PLAYER_PLAY",
@@ -151,16 +152,16 @@ function h(e, t, n) {
   }), e))
 }
 
-function v(e, t) {
-  return _.put(e, t, {
-    url: u.SpotifyEndpoints.PLAYER_PAUSE
+function E(e, t) {
+  return c.put(e, t, {
+    url: l.SpotifyEndpoints.PLAYER_PAUSE
   }).then(e => (r.default.dispatch({
     type: "SPOTIFY_PLAYER_PAUSE"
   }), e))
 }
 
-function E() {
-  !d.default.isProtocolRegistered() && (0, o.isDesktop)() && a.default.isProtocolRegistered(u.SPOTIFY_APP_PROTOCOL).then(e => {
+function p() {
+  !u.default.isProtocolRegistered() && (0, d.isDesktop)() && o.default.isProtocolRegistered(l.SPOTIFY_APP_PROTOCOL).then(e => {
     r.default.dispatch({
       type: "SPOTIFY_SET_PROTOCOL_REGISTERED",
       isRegistered: e
@@ -168,7 +169,7 @@ function E() {
   })
 }
 
-function p(e, t) {
+function y(e, t) {
   r.default.dispatch({
     type: "SPOTIFY_SET_ACTIVE_DEVICE",
     accountId: e,

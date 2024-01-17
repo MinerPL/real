@@ -1,43 +1,45 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return C
   }
 }), n("222007");
 var i = n("872717"),
   l = n("689988"),
   a = n("870691"),
   r = n("42203"),
-  s = n("49111");
-let o = {},
-  u = 0;
+  s = n("718517"),
+  o = n("49111");
+let u = {},
+  d = 0,
+  c = 15 * s.default.Millis.SECOND;
 
-function d() {
-  o = {
+function f() {
+  u = {
     ...a.default.getCollapsedCategories()
   }
 }
 
-function c() {
-  !__OVERLAY__ && (clearTimeout(u), u = setTimeout(() => f(), 15e3))
+function h() {
+  !__OVERLAY__ && (clearTimeout(d), d = setTimeout(() => E(), c))
 }
-async function f(e, t) {
-  null == e || e === s.ME ? await i.default.patch({
-    url: s.Endpoints.USER_GUILD_SETTINGS(s.ME),
+async function E(e, t) {
+  null == e || e === o.ME ? await i.default.patch({
+    url: o.Endpoints.USER_GUILD_SETTINGS(o.ME),
     body: t
-  }) : await h(null != t ? {
-    [null != e ? e : s.ME]: t
+  }) : await _(null != t ? {
+    [null != e ? e : o.ME]: t
   } : {})
 }
-async function h(e) {
-  clearTimeout(u);
+async function _(e) {
+  clearTimeout(d);
   let t = 0 !== Object.keys(e).length,
     n = a.default.getCollapsedCategories(),
     l = function() {
       let e = {},
         t = a.default.getCollapsedCategories();
-      for (let n in t) t[n] !== o[n] && (e[n] = !0);
-      for (let n in o) t[n] !== o[n] && (e[n] = !0);
+      for (let n in t) t[n] !== u[n] && (e[n] = !0);
+      for (let n in u) t[n] !== u[n] && (e[n] = !0);
       return e
     }();
   for (let i in l) {
@@ -47,31 +49,31 @@ async function h(e) {
       collapsed: l.id in n
     }, t = !0)
   }
-  return t ? (o = {
+  return t ? (u = {
     ...n
-  }, delete e[s.FAVORITES], (await i.default.patch({
-    url: s.Endpoints.USER_GUILD_SETTINGS_BULK,
+  }, delete e[o.FAVORITES], (await i.default.patch({
+    url: o.Endpoints.USER_GUILD_SETTINGS_BULK,
     body: {
       guilds: e
     }
   })).body) : []
 }
 
-function E() {
-  o = {
+function p() {
+  u = {
     ...a.default.getCollapsedCategories()
   }
 }
-class _ extends l.default {
+class I extends l.default {
   constructor(...e) {
     super(...e), this.actions = {
-      CATEGORY_COLLAPSE: c,
-      CATEGORY_EXPAND: c,
-      CATEGORY_COLLAPSE_ALL: c,
-      CATEGORY_EXPAND_ALL: c,
-      POST_CONNECTION_OPEN: d,
-      USER_GUILD_SETTINGS_FULL_UPDATE: E
-    }, this.saveUserGuildSettings = f, this.saveUserGuildSettingsBulk = h
+      CATEGORY_COLLAPSE: h,
+      CATEGORY_EXPAND: h,
+      CATEGORY_COLLAPSE_ALL: h,
+      CATEGORY_EXPAND_ALL: h,
+      POST_CONNECTION_OPEN: f,
+      USER_GUILD_SETTINGS_FULL_UPDATE: p
+    }, this.saveUserGuildSettings = E, this.saveUserGuildSettingsBulk = _
   }
 }
-var p = new _
+var C = new I

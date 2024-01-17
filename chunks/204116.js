@@ -1,70 +1,72 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return E
   }
 }), n("222007");
 var l = n("446674"),
   a = n("913144");
 n("21121");
 var s = n("138217"),
-  i = n("299039"),
-  r = n("360191");
-let o = {
-  tab: null,
-  localItemAcks: {},
-  hasNewMentions: !1,
-  isDataStale: !1,
-  isRefreshing: !1
-};
-class u extends l.default.PersistedStore {
+  i = n("718517"),
+  r = n("299039"),
+  o = n("360191");
+let u = 90 * i.default.Millis.DAY,
+  d = {
+    tab: null,
+    localItemAcks: {},
+    hasNewMentions: !1,
+    isDataStale: !1,
+    isRefreshing: !1
+  };
+class c extends l.default.PersistedStore {
   initialize(e) {
     if (this.waitFor(s.default), null != e) {
       var t;
-      (o = e).localItemAcks = function(e) {
+      (d = e).localItemAcks = function(e) {
         let t = {};
-        for (let [n, l] of Object.entries(e)) Date.now() - l < 7776e6 && (t[n] = l);
+        for (let [n, l] of Object.entries(e)) Date.now() - l < u && (t[n] = l);
         return t
-      }(null !== (t = o.localItemAcks) && void 0 !== t ? t : {}), o.isDataStale = !0
+      }(null !== (t = d.localItemAcks) && void 0 !== t ? t : {}), d.isDataStale = !0
     }
   }
   getState() {
-    return o
+    return d
   }
   getTab() {
     var e;
-    return null !== (e = o.tab) && void 0 !== e ? e : r.NotificationCenterTabs.ForYou
+    return null !== (e = d.tab) && void 0 !== e ? e : o.NotificationCenterTabs.ForYou
   }
   isLocalItemAcked(e) {
-    return null != e.local_id && (null != o.localItemAcks[e.local_id] || i.default.age(e.id) > 7776e6)
+    return null != e.local_id && (null != d.localItemAcks[e.local_id] || r.default.age(e.id) > u)
   }
   hasNewMentions() {
-    return o.hasNewMentions
+    return d.hasNewMentions
   }
   isDataStale() {
-    return o.isDataStale
+    return d.isDataStale
   }
   isRefreshing() {
-    return o.isRefreshing
+    return d.isRefreshing
   }
   shouldReload() {
-    return o.hasNewMentions || o.isDataStale || o.isRefreshing
+    return d.hasNewMentions || d.isDataStale || d.isRefreshing
   }
 }
-u.displayName = "NotificationCenterStore", u.persistKey = "NotificationCenterStore";
+c.displayName = "NotificationCenterStore", c.persistKey = "NotificationCenterStore";
 
-function d() {
-  o.hasNewMentions = !1, o.isDataStale = !1, o.isRefreshing = !1
+function f() {
+  d.hasNewMentions = !1, d.isDataStale = !1, d.isRefreshing = !1
 }
-var c = new u(a.default, {
+var E = new c(a.default, {
   MESSAGE_CREATE: function(e) {
     let {
       message: t
     } = e
   },
   NOTIFICATION_CENTER_SET_TAB: function(e) {
-    o = {
-      ...o,
+    d = {
+      ...d,
       tab: e.tab
     }
   },
@@ -73,18 +75,18 @@ var c = new u(a.default, {
       localIds: t
     } = e;
     t.forEach(e => {
-      o = {
-        ...o,
+      d = {
+        ...d,
         localItemAcks: {
-          ...o.localItemAcks,
+          ...d.localItemAcks,
           [e]: Date.now()
         }
       }
     })
   },
   NOTIFICATION_CENTER_REFRESH: function() {
-    o.isRefreshing = !0
+    d.isRefreshing = !0
   },
-  LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: d,
-  LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: d
+  LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE: f,
+  LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: f
 })

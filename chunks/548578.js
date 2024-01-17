@@ -1,19 +1,20 @@
 "use strict";
 n.r(t), n.d(t, {
   MAX_CACHE_AGE_MS: function() {
-    return s
-  },
-  CACHE_VERSION: function() {
     return i
   },
-  getDefaultState: function() {
+  CACHE_VERSION: function() {
     return r
+  },
+  getDefaultState: function() {
+    return a
   }
 });
-let s = 2592e6,
-  i = "stable-50";
+var s = n("718517");
+let i = 30 * s.default.Millis.DAY,
+  r = "stable-50";
 
-function r() {
+function a() {
   return {
     nonce: "",
     useGuildVersions: !1,
@@ -21,7 +22,7 @@ function r() {
     readStateVersion: 0,
     userGuildSettingsVersion: -1,
     userSettingsVersion: -1,
-    version: i,
+    version: r,
     cacheCreationDate: null,
     privateChannelsVersion: "0",
     apiCodeVersion: 0,

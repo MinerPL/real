@@ -11,8 +11,8 @@ var n = a("414456"),
   r = a("866227"),
   i = a.n(r),
   o = a("77078"),
-  u = a("32238"),
-  d = a("49111"),
+  d = a("32238"),
+  u = a("718517"),
   c = a("782340"),
   m = a("17366"),
   h = e => {
@@ -22,10 +22,10 @@ var n = a("414456"),
       isBypassSlowmode: n,
       leadingIcon: r = !1
     } = e, h = "", f = "";
-    if (t >= d.Durations.HOUR) {
-      let e = Math.floor(t / d.Durations.HOUR),
-        a = Math.floor((t - e * d.Durations.HOUR) / d.Durations.MINUTE),
-        s = t - e * d.Durations.HOUR - a * d.Durations.MINUTE;
+    if (t >= u.default.Seconds.HOUR) {
+      let e = Math.floor(t / u.default.Seconds.HOUR),
+        a = Math.floor((t - e * u.default.Seconds.HOUR) / u.default.Seconds.MINUTE),
+        s = t - e * u.default.Seconds.HOUR - a * u.default.Seconds.MINUTE;
       f = c.default.Messages.FORUM_SLOWMODE_DESC_HOURS.format({
         hours: e,
         minutes: a,
@@ -42,7 +42,7 @@ var n = a("414456"),
     });
     if (!n && a > 0) {
       let e = i.duration(a);
-      if (a > 1e3 * d.Durations.HOUR) {
+      if (a > u.default.Millis.HOUR) {
         let t = "".concat(e.minutes()).padStart(2, "0"),
           a = "".concat(e.seconds()).padStart(2, "0");
         h = "".concat(e.hours(), ":").concat(t, ":").concat(a)
@@ -56,7 +56,7 @@ var n = a("414456"),
         color: "text-muted",
         children: h
       }),
-      x = (0, s.jsx)(u.default, {
+      x = (0, s.jsx)(d.default, {
         className: l(m.slowModeIcon, {
           [m.leadingIcon]: r
         })

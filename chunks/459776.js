@@ -1,23 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   isNewGroupItem: function() {
-    return r
+    return u
   },
   default: function() {
-    return o
+    return d
   }
 });
 var l = n("888400"),
-  a = n("500858"),
-  s = n("913491"),
-  i = n("49111");
+  a = n("718517"),
+  s = n("500858"),
+  i = n("913491"),
+  r = n("49111");
+let o = 7 * a.default.Millis.MINUTE;
 
-function r(e, t, n) {
-  return null == t || t.type === i.ChannelStreamTypes.MESSAGE && t.content.id === t.content.channel_id || t.type !== i.ChannelStreamTypes.MESSAGE && t.type !== i.ChannelStreamTypes.THREAD_STARTER_MESSAGE || o(e, t.content, n)
+function u(e, t, n) {
+  return null == t || t.type === r.ChannelStreamTypes.MESSAGE && t.content.id === t.content.channel_id || t.type !== r.ChannelStreamTypes.MESSAGE && t.type !== r.ChannelStreamTypes.THREAD_STARTER_MESSAGE || d(e, t.content, n)
 }
 
-function o(e, t, n) {
-  if (n.hasFlag(i.MessageFlags.HAS_THREAD) || n.isCommandType()) return !0;
-  if (n.type > i.MessageTypes.DEFAULT) return !(0, s.default)(t) || n.type === i.MessageTypes.REPLY || !1;
-  return !!((0, s.default)(t) || t.author.id !== n.author.id || t.hasFlag(i.MessageFlags.EPHEMERAL) !== n.hasFlag(i.MessageFlags.EPHEMERAL) || null != n.webhookId && t.author.username !== n.author.username || (null == e ? void 0 : e.isForumPost()) && t.id === e.id || !(0, l.isWithinInterval)(t.timestamp, n.timestamp, 42e4) || n.hasFlag(i.MessageFlags.SUPPRESS_NOTIFICATIONS) && !t.hasFlag(i.MessageFlags.SUPPRESS_NOTIFICATIONS) || t.hasFlag(i.MessageFlags.SUPPRESS_NOTIFICATIONS) && !n.hasFlag(i.MessageFlags.SUPPRESS_NOTIFICATIONS) && (n.mentions.length > 0 || n.mentionRoles.length > 0 || n.mentionEveryone) || (0, a.default)(n)) || !1
+function d(e, t, n) {
+  if (n.hasFlag(r.MessageFlags.HAS_THREAD) || n.isCommandType()) return !0;
+  if (n.type > r.MessageTypes.DEFAULT) return !(0, i.default)(t) || n.type === r.MessageTypes.REPLY || !1;
+  return !!((0, i.default)(t) || t.author.id !== n.author.id || t.hasFlag(r.MessageFlags.EPHEMERAL) !== n.hasFlag(r.MessageFlags.EPHEMERAL) || null != n.webhookId && t.author.username !== n.author.username || (null == e ? void 0 : e.isForumPost()) && t.id === e.id || !(0, l.isWithinInterval)(t.timestamp, n.timestamp, o) || n.hasFlag(r.MessageFlags.SUPPRESS_NOTIFICATIONS) && !t.hasFlag(r.MessageFlags.SUPPRESS_NOTIFICATIONS) || t.hasFlag(r.MessageFlags.SUPPRESS_NOTIFICATIONS) && !n.hasFlag(r.MessageFlags.SUPPRESS_NOTIFICATIONS) && (n.mentions.length > 0 || n.mentionRoles.length > 0 || n.mentionEveryone) || (0, s.default)(n)) || !1
 }

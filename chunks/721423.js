@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return l
   }
 });
-var s, i, r = n("49111");
+var s, i, r = n("718517");
 let a = 4,
   o = 5,
   d = 350,
-  u = 1e3 * r.Durations.MINUTE,
-  l = 1e3 * r.Durations.MINUTE * 2;
+  u = r.default.Millis.MINUTE,
+  l = 2 * r.default.Millis.MINUTE;
 (s = i || (i = {}))[s.STICKER = 0] = "STICKER"
