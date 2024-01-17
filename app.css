@@ -98009,6 +98009,7 @@ html .invoiceCancelRow_a8669b {
 }
 
 .media_c4f903 {
+    display: flex;
     align-items: center;
     border-radius: 8px;
     box-sizing: border-box;
