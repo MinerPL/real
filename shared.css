@@ -16239,6 +16239,10 @@ html.decorate-links .lowSaturationUnderline__95e71 {
     border-bottom-right-radius: 0
 }
 
+.messageAttachmentWithFooter_b68ca2 {
+    flex-direction: column
+}
+
 .hideOverflow_d442b2 {
     overflow: hidden
 }

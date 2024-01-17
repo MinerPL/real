@@ -16,15 +16,15 @@ var n = a("37983"),
   i = a.n(s),
   r = a("77078"),
   o = a("963119"),
-  d = a("467475"),
-  u = a("651693"),
+  u = a("467475"),
+  d = a("651693"),
   c = a("605160"),
   m = a("903962"),
   h = a("923873"),
   g = a("165405"),
   f = a("410889"),
-  _ = a("725962"),
-  A = a("505684"),
+  A = a("725962"),
+  _ = a("505684"),
   x = a("328620"),
   p = a("522049"),
   I = a("945330"),
@@ -44,7 +44,7 @@ function O(e, t) {
     width: n,
     height: l
   } = e;
-  if (t && null != n && n > 0 && null != l && l > 0) return (0, u.isImageFile)(a) ? "IMAGE" : (0, u.isVideoFile)(a) && null != e.proxy_url ? "VIDEO" : "INVALID";
+  if (t && null != n && n > 0 && null != l && l > 0) return (0, d.isImageFile)(a) ? "IMAGE" : (0, d.isVideoFile)(a) && null != e.proxy_url ? "VIDEO" : "INVALID";
   if (null != t && S.test(a) && null != e.url) return "AUDIO";
   if (null != e.url && (0, m.isPlaintextPreviewableFile)(a)) return "PLAINTEXT_PREVIEW";
   return "OTHER"
@@ -54,11 +54,11 @@ let b = e => {
       downloadURL: l,
       downloadMimeType: s,
       onRemoveAttachment: o,
-      isAttachmentMediaType: d
+      isAttachmentMediaType: u
     } = e;
     return (null != l && null != s && (t = (0, n.jsx)(r.Tooltip, {
       text: T.default.Messages.DOWNLOAD,
-      children: e => (0, n.jsx)(_.default, {
+      children: e => (0, n.jsx)(A.default, {
         ...e,
         target: "_blank",
         rel: "noreferrer noopener",
@@ -87,7 +87,7 @@ let b = e => {
       })
     })), null == a && null == t) ? null : (0, n.jsxs)("div", {
       className: i(y.hoverButtonGroup, {
-        [y.nonMediaAttachment]: !d
+        [y.nonMediaAttachment]: !u
       }),
       children: [t, a]
     })
@@ -98,11 +98,11 @@ let b = e => {
       attachment: a,
       inlineMedia: s,
       autoPlayGif: o,
-      canRemoveAttachment: u,
+      canRemoveAttachment: d,
       onRemoveAttachment: c,
       onClick: m,
-      onContextMenu: _,
-      onPlay: A,
+      onContextMenu: A,
+      onPlay: _,
       renderImageComponent: M,
       renderVideoComponent: S,
       renderAudioComponent: j,
@@ -123,7 +123,7 @@ let b = e => {
       height: U,
       description: z,
       spoiler: X
-    } = a, Y = O(a, s), [q, J] = l.useState(!1), Q = (0, d.default)(t.getChannelId()), {
+    } = a, Y = O(a, s), [q, J] = l.useState(!1), Q = (0, u.default)(t.getChannelId()), {
       enabled: Z
     } = h.default.useExperiment({
       location: "MessageAttachment"
@@ -135,8 +135,8 @@ let b = e => {
       if (t.hasFlag(N.MessageFlags.IS_VOICE_MESSAGE)) {
         var s;
         (0, g.logVoiceMessagePlaybackStarted)(t.id, null !== (s = a.duration_secs) && void 0 !== s ? s : null, n, t.author.id)
-      } else null == A || A(e, n, l)
-    }, [t, a.duration_secs, A]), ea = l.useCallback((e, n) => {
+      } else null == _ || _(e, n, l)
+    }, [t, a.duration_secs, _]), ea = l.useCallback((e, n) => {
       var l;
       t.hasFlag(N.MessageFlags.IS_VOICE_MESSAGE) && (0, g.logVoiceMessagePlaybackEnded)(t.id, null !== (l = a.duration_secs) && void 0 !== l ? l : null, e, t.author.id, n)
     }, [t, a.duration_secs]), en = l.useCallback(e => {
@@ -158,11 +158,11 @@ let b = e => {
         return !q && (0, n.jsx)(b, {
           downloadURL: e ? a.url : void 0,
           downloadMimeType: e ? $ : void 0,
-          onRemoveAttachment: u ? ee : void 0,
+          onRemoveAttachment: d ? ee : void 0,
           isAttachmentMediaType: K
         })
       }
-      return u && (0, n.jsx)(r.Clickable, {
+      return d && (0, n.jsx)(r.Clickable, {
         className: X ? y.spoilerRemoveAttachmentButton : y.removeAttachmentButton,
         focusProps: {
           offset: {
@@ -176,7 +176,7 @@ let b = e => {
           height: 16
         })
       })
-    }, [B, u, X, Y, K, q, a, $, ee, W, U, H, c, Q]), es = l.useCallback(() => {
+    }, [B, d, X, Y, K, q, a, $, ee, W, U, H, c, Q]), es = l.useCallback(() => {
       var e;
       return (0, E.hasFlag)(null !== (e = a.flags) && void 0 !== e ? e : 0, N.MessageAttachmentFlags.IS_CLIP) ? (0, n.jsxs)(r.TooltipContainer, {
         text: T.default.Messages.CLIPS_BETA_TAG_HOVER,
@@ -202,7 +202,7 @@ let b = e => {
             height: U,
             autoPlay: o && !k,
             onClick: m,
-            onContextMenu: _,
+            onContextMenu: A,
             shouldHideMediaOptions: Q,
             renderAccessory: e,
             renderAdjacentContent: el,
@@ -231,7 +231,7 @@ let b = e => {
           width: W,
           height: U,
           onClick: m,
-          onContextMenu: _,
+          onContextMenu: A,
           renderOverlayContent: es,
           renderAdjacentContent: el,
           naturalWidth: W,
@@ -246,7 +246,7 @@ let b = e => {
           maxHeight: V,
           useFullWidth: H,
           mimeType: $,
-          onPlay: A,
+          onPlay: _,
           downloadable: !Q,
           mediaPlayerClassName: R ? y.noBorderBottomRadius : void 0
         });
@@ -272,7 +272,7 @@ let b = e => {
           attachment: a,
           className: D,
           onClick: m,
-          onContextMenu: _,
+          onContextMenu: A,
           renderAdjacentContent: el
         });
       case "OTHER":
@@ -281,7 +281,7 @@ let b = e => {
           filename: a.filename,
           size: a.size,
           onClick: m,
-          onContextMenu: _,
+          onContextMenu: A,
           className: D,
           renderAdjacentContent: el
         });
@@ -295,26 +295,26 @@ var D = e => {
     className: a,
     attachment: s,
     message: r,
-    inlineMedia: d,
-    useFullWidth: u,
+    inlineMedia: u,
+    useFullWidth: d,
     mediaLayoutType: m,
     canRemoveAttachment: h,
     isSingleMosaicItem: g,
     footer: f,
-    ..._
+    ...A
   } = e, {
     width: x,
     height: p
-  } = s, I = (0, o.useShouldRedactExplicitContent)(r.channel_id, r.author.id), M = (0, c.getObscureReason)(s, I), [E, N] = l.useState(void 0 !== M), T = m === C.MediaLayoutType.MOSAIC, S = !T && (null != x && x < 200 || null != p && p < 50), b = O(s, d);
+  } = s, I = (0, o.useShouldRedactExplicitContent)(r.channel_id, r.author.id), M = (0, c.getObscureReason)(s, I), [E, N] = l.useState(void 0 !== M), T = m === C.MediaLayoutType.MOSAIC, S = !T && (null != x && x < 200 || null != p && p < 50), b = O(s, u);
   let D = "IMAGE" === (t = b) || "VIDEO" === t,
-    w = j(O(s, d)),
+    w = j(O(s, u)),
     F = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
       return (0, n.jsx)(L, {
-        ..._,
+        ...A,
         attachment: s,
         message: r,
-        inlineMedia: d,
+        inlineMedia: u,
         hiddenSpoilers: e,
         canRemoveAttachment: h,
         className: i(a, y.attachmentContentItem, {
@@ -327,21 +327,21 @@ var D = e => {
         focusable: !e,
         mediaLayoutType: m,
         noBorderBottomRadius: null != f,
-        useFullWidth: u,
+        useFullWidth: d,
         isAttachmentMediaType: w
       })
     };
-  return (0, n.jsxs)("div", {
-    children: [(0, n.jsx)("div", {
+  return (0, n.jsx)(n.Fragment, {
+    children: (0, n.jsxs)("div", {
       className: i(y.messageAttachment, {
         [y.messageAttachmentNoJustify]: D,
-        [y.messageAttachmentFullWidth]: u,
+        [y.messageAttachmentFullWidth]: d,
         [y.messageAttachmentMediaMosaic]: T,
         [y.hideOverflow]: T && w,
-        [y.noBorderBottomRadius]: null != f
+        [y.messageAttachmentWithFooter]: null != f
       }),
-      children: null != M ? (0, n.jsx)(A.default, {
-        type: A.default.Types.ATTACHMENT,
+      children: [null != M ? (0, n.jsx)(_.default, {
+        type: _.default.Types.ATTACHMENT,
         inline: S,
         reason: M,
         isSingleMosaicItem: g,
@@ -374,7 +374,7 @@ var D = e => {
         }),
         onToggleObscurity: () => N(e => !e),
         children: e => F(e)
-      }) : F()
-    }), f]
+      }) : F(), f]
+    })
   })
 }
