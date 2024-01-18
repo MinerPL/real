@@ -133,16 +133,6 @@ class v {
     }
     this.aggregationDuration += e.timestamp - t.timestamp
   }
-  collectFpsDataDuringProbe(e) {
-    var t, n;
-    if (this.auxillaryStatsWindow.push(e), this.auxillaryStatsWindow.length < 2) return [0, 0];
-    let i = this.auxillaryStatsWindow[this.auxillaryStatsWindow.length - 1],
-      r = this.auxillaryStatsWindow[this.auxillaryStatsWindow.length - 2];
-    return this.auxillaryAggFramesCodec += (null !== (t = i.framesCodec) && void 0 !== t ? t : 0) - (null !== (n = r.framesCodec) && void 0 !== n ? n : 0), this.auxillaryAggregationDuration += i.timestamp - r.timestamp, this.auxillaryStatsWindow.shift(), [this.auxillaryAggFramesCodec, this.auxillaryAggregationDuration]
-  }
-  resetAuxillaryStats() {
-    this.auxillaryStatsWindow.length > 0 && (this.auxillaryStatsWindow.splice(0), this.auxillaryAggFramesCodec = 0, this.auxillaryAggregationDuration = 0)
-  }
   setVideoStopped(e, t) {
     if (e) {
       this.videoStoppedReason |= t, this.videoStoppedWatch.start();
@@ -232,7 +222,7 @@ class v {
       totalPausesDuration: 0,
       totalFramesDuration: 0,
       keyframes: 0
-    }, this.aggregationDuration = 0, this.bitrateBuckets = {}, this.fpsBuckets = {}, this.resolutionBuckets = {}, this.resolutionTotal = 0, this.minorResolutionTotal = 0, this.majorResolutionTotal = 0, this.intervalTotal = 0, this.auxillaryStatsWindow = [], this.auxillaryAggFramesCodec = 0, this.auxillaryAggregationDuration = 0, this.videoStoppedReason = 0, this.startTime = e.now(), this.videoStoppedWatch = new d.StopWatch(e), h.forEach(e => {
+    }, this.aggregationDuration = 0, this.bitrateBuckets = {}, this.fpsBuckets = {}, this.resolutionBuckets = {}, this.resolutionTotal = 0, this.minorResolutionTotal = 0, this.majorResolutionTotal = 0, this.intervalTotal = 0, this.videoStoppedReason = 0, this.startTime = e.now(), this.videoStoppedWatch = new d.StopWatch(e), h.forEach(e => {
       this.bitrateBuckets[e] = 0
     }), p.forEach(e => {
       this.fpsBuckets[e] = 0

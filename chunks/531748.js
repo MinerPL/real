@@ -354,10 +354,8 @@ class h extends a.default {
         if (null != i) {
           let t = this.inboundStats[n];
           null == t && (console.warn("Unknown inbound video stream for user: ".concat(n)), t = new d.InboundStats(this.timestampProducer), this.inboundStats[n] = t);
-          let r = 0,
-            s = 0,
-            a = d.RawVideoStats.parseInboundStats(i, e);
-          this.statCollectionPausedUsers.has(n) ? [r, s] = t.collectFpsDataDuringProbe(a) : (t.resetAuxillaryStats(), t.appendAndIncrementStats(a), [r, s] = [t.aggregatedProperties.framesCodec, t.aggregationDuration]), this.emit("fps-update", n, r, s / 1e3), t.decoderCodec !== d.CodecTypes.UNKNOWN && E.add(t.decoderCodec), null == t.timeToFirstFrame && i.framesDecoded > 0 && (t.timeToFirstFrame = e - t.startTime)
+          let r = d.RawVideoStats.parseInboundStats(i, e);
+          !this.statCollectionPausedUsers.has(n) && t.appendAndIncrementStats(r), this.emit("fps-update", n, r.framesCodec, r.timestamp), t.decoderCodec !== d.CodecTypes.UNKNOWN && E.add(t.decoderCodec), null == t.timeToFirstFrame && i.framesDecoded > 0 && (t.timeToFirstFrame = e - t.startTime)
         }
       }), 0 !== f.size && 0 !== E.size) {
       ;
