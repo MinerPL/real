@@ -123523,6 +123523,7 @@ div.nagbar_c731ff {
     --border-faint: hsl(var(--white-500-hsl) / 0.03);
     --border-strong: hsl(var(--white-500-hsl) / 0.16);
     --border-subtle: hsl(var(--white-500-hsl) / 0.08);
+    --brand: var(--brand-500);
     --bug-reporter-modal-submitting-background: hsl(var(--primary-800-hsl) / 0.6);
     --button-creator-revenue-background: var(--teal-430);
     --button-danger-background: var(--red-430);
@@ -123828,6 +123829,7 @@ div.nagbar_c731ff {
     --border-faint: hsl(var(--black-500-hsl) / 0.04);
     --border-strong: hsl(var(--black-500-hsl) / 0.16);
     --border-subtle: hsl(var(--black-500-hsl) / 0.08);
+    --brand: var(--brand-500);
     --bug-reporter-modal-submitting-background: hsl(var(--white-500-hsl) / 0.6);
     --button-creator-revenue-background: var(--teal-430);
     --button-danger-background: var(--red-430);
@@ -124133,6 +124135,7 @@ div.nagbar_c731ff {
     --border-faint: hsl(var(--plum-11-hsl) / 0.06);
     --border-strong: hsl(var(--plum-11-hsl) / 0.24);
     --border-subtle: hsl(var(--plum-11-hsl) / 0.12);
+    --brand: var(--brand-500);
     --bug-reporter-modal-submitting-background: hsl(var(--plum-23-hsl) / 0.6);
     --button-creator-revenue-background: var(--teal-430);
     --button-danger-background: var(--red-430);
@@ -124438,6 +124441,7 @@ div.nagbar_c731ff {
     --border-faint: hsl(var(--plum-11-hsl) / 0.06);
     --border-strong: hsl(var(--plum-11-hsl) / 0.22);
     --border-subtle: hsl(var(--plum-11-hsl) / 0.12);
+    --brand: var(--brand-500);
     --bug-reporter-modal-submitting-background: hsl(var(--plum-23-hsl) / 0.6);
     --button-creator-revenue-background: var(--teal-430);
     --button-danger-background: var(--red-430);
