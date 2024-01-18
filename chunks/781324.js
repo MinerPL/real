@@ -5,6 +5,9 @@ n.r(t), n.d(t, {
   },
   getSafetyHubDataForClassification: function() {
     return u
+  },
+  requestReview: function() {
+    return d
   }
 });
 var i = n("872717"),
@@ -82,4 +85,25 @@ function c(e) {
       return (0, r.isImageFile)(t)
     }), e.flagged_content = (0, a.isFlaggedContentEmpty)(t) ? [] : [t]
   }
+}
+async function d(e, t, n) {
+  l.default.dispatch({
+    type: "SAFETY_HUB_REQUEST_REVIEW_START"
+  }), await i.default.put({
+    url: o.Endpoints.SAFETY_HUB_REQUEST_REVIEW(e),
+    body: {
+      signal: t,
+      user_input: n
+    }
+  }).then(() => {
+    l.default.dispatch({
+      type: "SAFETY_HUB_REQUEST_REVIEW_SUCCESS"
+    })
+  }).catch(e => {
+    var t, n;
+    l.default.dispatch({
+      type: "SAFETY_HUB_REQUEST_REVIEW_FAILURE",
+      error: null !== (n = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : "Unknown error"
+    })
+  })
 }

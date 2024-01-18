@@ -47,7 +47,7 @@ var s = l("37983"),
   z = l("54809"),
   W = l("408381"),
   G = l("264579"),
-  Y = l("57940"),
+  Y = l("177586"),
   K = l("49111"),
   X = l("646718"),
   Z = l("843455"),
@@ -90,7 +90,7 @@ let $ = n.AvatarSizes.SIZE_152,
     }), {
       buttonColors: S,
       backgroundColors: x
-    } = (0, Y.default)(t.categorySkuId), N = null != S ? {
+    } = (0, Y.default)(t.styles), N = null != S ? {
       background: (0, W.getBackgroundGradient)(S, 90),
       color: S.text.toHslString()
     } : void 0, R = null != x ? {
