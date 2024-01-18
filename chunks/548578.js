@@ -21,7 +21,6 @@ function a() {
     highestLastMessageId: "0",
     readStateVersion: 0,
     userGuildSettingsVersion: -1,
-    userSettingsVersion: -1,
     version: r,
     cacheCreationDate: null,
     privateChannelsVersion: "0",

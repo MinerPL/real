@@ -1,13 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return V
   }
 }), n("222007");
-var s, i, r, a = n("446674"),
-  o = n("95410"),
-  d = n("913144"),
-  u = n("105059"),
+var s, i, r = n("446674"),
+  a = n("95410"),
+  o = n("913144"),
+  d = n("105059"),
+  u = n("11275"),
   l = n("605250"),
   f = n("271938"),
   _ = n("42203"),
@@ -19,97 +20,97 @@ var s, i, r, a = n("446674"),
 let E = new l.default("ClientStateStore"),
   p = m.initialState.nonce,
   y = m.initialState.useGuildVersions,
-  T = m.initialState.highestLastMessageId,
-  C = m.initialState.readStateVersion,
+  C = m.initialState.highestLastMessageId,
+  T = m.initialState.readStateVersion,
   S = m.initialState.userGuildSettingsVersion,
-  I = null !== (s = m.initialState.userSettingsVersion) && void 0 !== s ? s : -1,
-  A = m.initialState.cacheCreationDate,
-  D = m.initialState.apiCodeVersion,
-  N = null !== (i = m.initialState.privateChannelsVersion) && void 0 !== i ? i : "0",
-  O = new Set(null !== (r = m.initialState.guildIdsRequiringDeletedIdsSync) && void 0 !== r ? r : []),
-  b = m.initialState.lastSelectedGuildId,
-  P = !1;
+  I = m.initialState.cacheCreationDate,
+  A = m.initialState.apiCodeVersion,
+  D = null !== (s = m.initialState.privateChannelsVersion) && void 0 !== s ? s : "0",
+  N = new Set(null !== (i = m.initialState.guildIdsRequiringDeletedIdsSync) && void 0 !== i ? i : []),
+  O = m.initialState.lastSelectedGuildId,
+  b = !1;
 
-function k(e) {
-  null != e && 1 === g.default.compare(e, T) && (T = e)
+function P(e) {
+  null != e && 1 === g.default.compare(e, C) && (C = e)
 }
 
-function R() {
-  T = "0", C = 0, S = -1, I = -1, N = "0", m.clear(), D = 0, O.clear()
+function k() {
+  C = "0", T = 0, S = -1, D = "0", m.clear(), A = 0, N.clear()
 }
-class V extends a.default.Store {
+class R extends r.default.Store {
   initialize() {
     this.waitFor(f.default), this.syncWith([c.default], () => {
-      if (!P) return !1;
-      b = c.default.getGuildId()
+      if (!b) return !1;
+      O = c.default.getGuildId()
     })
   }
   persist(e) {
-    E.verbose("writing ClientStateStore (nonce: ".concat(e, ")")), null == A && (A = Date.now()), p = e, m.persist(f.default.getId(), {
+    E.verbose("writing ClientStateStore (nonce: ".concat(e, ")")), null == I && (I = Date.now()), p = e, m.persist(f.default.getId(), {
       nonce: e,
       version: v.CACHE_VERSION,
       useGuildVersions: y,
-      highestLastMessageId: T,
-      readStateVersion: C,
+      highestLastMessageId: C,
+      readStateVersion: T,
       userGuildSettingsVersion: S,
-      userSettingsVersion: I,
-      cacheCreationDate: A,
-      privateChannelsVersion: N,
-      apiCodeVersion: D,
-      guildIdsRequiringDeletedIdsSync: Array.from(O),
-      lastSelectedGuildId: b
-    }), o.default.remove("GuildIdsRequiringDeletedIdsSync")
+      cacheCreationDate: I,
+      privateChannelsVersion: D,
+      apiCodeVersion: A,
+      guildIdsRequiringDeletedIdsSync: Array.from(N),
+      lastSelectedGuildId: O
+    }), a.default.remove("GuildIdsRequiringDeletedIdsSync")
   }
   clear() {
-    R()
+    k()
   }
   getClientState() {
-    let e = y && (0, h.isCacheEnabled)() ? Object.fromEntries(u.default.getCommittedVersions()) : {};
+    let e = y && (0, h.isCacheEnabled)() ? Object.fromEntries(d.default.getCommittedVersions()) : {},
+      t = y && (0, h.isCacheEnabled)() ? Object.fromEntries(u.default.getCommittedVersions()) : {};
     return {
       knownGuildVersions: e,
-      highestLastMessageId: T,
-      readStateVersion: C,
+      highestLastMessageId: C,
+      readStateVersion: T,
       userGuildSettingsVersion: S,
-      userSettingsVersion: I,
-      privateChannelsVersion: N,
-      apiCodeVersion: D,
-      lastSelectedGuildId: b
+      privateChannelsVersion: D,
+      apiCodeVersion: A,
+      lastSelectedGuildId: O,
+      userSettingsVersion: t.user_settings_version
     }
   }
   getGuildIdsRequiringDeletedIdsSync() {
-    return O
+    return N
   }
   getSavedNonce() {
     return p
   }
 }
-V.displayName = "ClientStateStore";
-var M = new V(d.default, {
+R.displayName = "ClientStateStore";
+var V = new R(o.default, {
   BACKGROUND_SYNC: function(e) {
-    for (let t of e.guilds) "partial" === t.data_mode && t.unableToSyncDeletes && O.add(t.id);
-    null != e.apiCodeVersion && (D = e.apiCodeVersion)
+    for (let t of e.guilds) "partial" === t.data_mode && t.unableToSyncDeletes && N.add(t.id);
+    null != e.apiCodeVersion && (A = e.apiCodeVersion)
   },
   CONNECTION_OPEN: function(e) {
-    var t, n, s, i, r, a;
     let {
-      guilds: o,
-      readState: d,
-      userGuildSettings: u,
-      userSettingsProto: l,
-      apiCodeVersion: f
+      guilds: t,
+      readState: n,
+      userGuildSettings: s,
+      apiCodeVersion: i
     } = e;
-    for (let e of (C = d.version, S = u.version, I = null !== (n = null == l ? void 0 : null === (t = l.versions) || void 0 === t ? void 0 : t.dataVersion) && void 0 !== n ? n : -1, D = f, P = !0, y = !0, o)) e.unableToSyncDeletes && O.add(e.id), e.unableToSyncDeletes && O.add(e.id), null === (s = e.channels) || void 0 === s || s.forEach(e => k(e.lastMessageId)), null === (r = e.channelUpdates) || void 0 === r || null === (i = r.writes) || void 0 === i || i.forEach(e => k(e.lastMessageId)), null === (a = e.channelTimestampUpdates) || void 0 === a || a.forEach(e => k(e.last_message_id))
+    for (let e of (T = n.version, S = s.version, A = i, b = !0, y = !0, t)) {
+      var r, a, o, d;
+      e.unableToSyncDeletes && N.add(e.id), e.unableToSyncDeletes && N.add(e.id), null === (r = e.channels) || void 0 === r || r.forEach(e => P(e.lastMessageId)), null === (o = e.channelUpdates) || void 0 === o || null === (a = o.writes) || void 0 === a || a.forEach(e => P(e.lastMessageId)), null === (d = e.channelTimestampUpdates) || void 0 === d || d.forEach(e => P(e.last_message_id))
+    }
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function() {
     let e = _.default.getMutablePrivateChannels();
     for (let t in e) {
-      1 === g.default.compare(t, N) && (N = t);
+      1 === g.default.compare(t, D) && (D = t);
       let n = e[t].lastMessageId;
-      null != n && 1 === g.default.compare(n, N) && (N = n)
+      null != n && 1 === g.default.compare(n, D) && (D = n)
     }
   },
   DELETED_ENTITY_IDS: function(e) {
-    O.delete(e.guild_id)
+    N.delete(e.guild_id)
   },
   MESSAGE_CREATE: function(e) {
     var t;
@@ -121,46 +122,37 @@ var M = new V(d.default, {
       isPushNotification: i,
       optimistic: r
     } = e;
-    !i && !r && (k(n), (null === (t = _.default.getChannel(s)) || void 0 === t ? void 0 : t.isPrivate()) && 1 === g.default.compare(n, N) && (N = n))
+    !i && !r && (P(n), (null === (t = _.default.getChannel(s)) || void 0 === t ? void 0 : t.isPrivate()) && 1 === g.default.compare(n, D) && (D = n))
   },
   GUILD_CREATE: function(e) {
     var t, n, s, i;
     let {
       guild: r
     } = e;
-    !r.unavailable && (r.unableToSyncDeletes && O.add(r.id), null === (t = r.channels) || void 0 === t || t.forEach(e => k(e.lastMessageId)), null === (s = r.channelUpdates) || void 0 === s || null === (n = s.writes) || void 0 === n || n.forEach(e => k(e.lastMessageId)), null === (i = r.channelTimestampUpdates) || void 0 === i || i.forEach(e => k(e.last_message_id)), r.unableToSyncDeletes && O.add(r.id))
+    !r.unavailable && (r.unableToSyncDeletes && N.add(r.id), null === (t = r.channels) || void 0 === t || t.forEach(e => P(e.lastMessageId)), null === (s = r.channelUpdates) || void 0 === s || null === (n = s.writes) || void 0 === n || n.forEach(e => P(e.lastMessageId)), null === (i = r.channelTimestampUpdates) || void 0 === i || i.forEach(e => P(e.last_message_id)), r.unableToSyncDeletes && N.add(r.id))
   },
-  CLEAR_GUILD_CACHE: R,
-  CLEAR_CACHES: R,
-  LOGOUT: R,
-  LOGIN: R,
+  CLEAR_GUILD_CACHE: k,
+  CLEAR_CACHES: k,
+  LOGOUT: k,
+  LOGIN: k,
   MESSAGE_ACK: function(e) {
     let {
       version: t,
       ...n
     } = e;
-    null != t ? C = t : E.log("Received null read states version", n)
+    null != t ? T = t : E.log("Received null read states version", n)
   },
   CHANNEL_PINS_ACK: function(e) {
     let {
       version: t,
       ...n
     } = e;
-    null != t ? C = t : E.log("Received null read states version", n)
+    null != t ? T = t : E.log("Received null read states version", n)
   },
   USER_GUILD_SETTINGS_FULL_UPDATE: function(e) {
     let {
       userGuildSettings: t
     } = e;
     for (let e of t) null != e.version && e.version > S && (S = e.version)
-  },
-  USER_SETTINGS_PROTO_UPDATE: function(e) {
-    let {
-      settings: t
-    } = e;
-    if (null != t.proto.versions) {
-      var n;
-      I = null !== (n = t.proto.versions.dataVersion) && void 0 !== n ? n : -1
-    }
   }
 })

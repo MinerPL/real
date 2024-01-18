@@ -12,18 +12,11 @@ var o = new class e {
   getCommittedVersions() {
     try {
       var e, t;
-      let n = null === (t = r.default.versions()) || void 0 === t ? void 0 : null === (e = t.getManySyncUnsafe()) || void 0 === e ? void 0 : e.map(e => [e.id, e.version]);
+      let n = null === (t = r.default.guildVersions()) || void 0 === t ? void 0 : null === (e = t.getManySyncUnsafe()) || void 0 === e ? void 0 : e.map(e => [e.id, e.version]);
       return new Map(null != n ? n : [])
     } catch (e) {
       return a.warn("couldn't load guild versions", e), new Map
     }
-  }
-  pause(e) {
-    let t = Symbol(e);
-    return this.pauseTokens.add(t), t
-  }
-  resume(e, t) {
-    this.pauseTokens.delete(e) && 0 === this.pauseTokens.size && this.commit(t)
   }
   remove(e, t) {
     this.deleteWith(e), this.commit(t)
@@ -75,13 +68,13 @@ var o = new class e {
     null != e.channel.guild_id && this.updateWith(e.channel.guild_id, [e.channel]), this.commit(t)
   }
   handleClearGuildCache(e) {
-    this.reset(), r.default.versionsTransaction(e).delete()
+    this.reset(), r.default.guildVersionsTransaction(e).delete()
   }
   handleReset() {
     this.reset()
   }
   reset() {
-    this.committed = new Map, this.pending = new Map, this.pauseTokens = new Set
+    this.committed = new Map, this.pending = new Map
   }
   deleteWith(e) {
     this.pending.set(e, null)
@@ -103,8 +96,8 @@ var o = new class e {
     return n
   }
   commit(e) {
-    if (this.pending.size > 0 && 0 === this.pauseTokens.size) {
-      let t = r.default.versionsTransaction(e);
+    if (this.pending.size > 0) {
+      let t = r.default.guildVersionsTransaction(e);
       for (let [e, n] of this.pending) null != n ? (t.put({
         id: e,
         version: n
@@ -113,7 +106,7 @@ var o = new class e {
     }
   }
   constructor() {
-    this.pending = new Map, this.committed = new Map, this.pauseTokens = new Set, this.actions = {
+    this.pending = new Map, this.committed = new Map, this.actions = {
       BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
       CHANNEL_CREATE: (e, t) => this.handleChannelCreate(e, t),
       CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),
