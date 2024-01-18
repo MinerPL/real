@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   RecentsPopout: function() {
-    return T
+    return I
   }
 }), n("222007");
 var a = n("37983"),
@@ -18,21 +18,21 @@ var a = n("37983"),
   E = n("659500"),
   m = n("981024"),
   p = n("519540"),
-  g = n("80649"),
-  S = n("385730"),
+  S = n("80649"),
+  g = n("385730"),
   N = n("788072"),
   _ = n("49111"),
-  I = n("782340");
+  T = n("782340");
 
-function T(e) {
+function I(e) {
   let {
     onOpen: t,
     onClose: n,
-    children: T,
+    children: I,
     badgeState: C,
     popoutPosition: A,
-    popoutAlign: x
-  } = e, [v, M] = l.useState(!1), [R, L] = function() {
+    popoutAlign: M
+  } = e, [v, x] = l.useState(!1), [R, L] = function() {
     let e = (0, i.useStateFromStores)([h.default], () => {
         var e, t;
         return null !== (t = null === (e = h.default.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : r.InboxTab.UNREADS
@@ -63,15 +63,15 @@ function T(e) {
       setSeenTutorial: n
     }
   }(R), y = l.useCallback(() => {
-    M(!1), v && (null == n || n())
+    x(!1), v && (null == n || n())
   }, [n, v]), j = l.useCallback(() => {
-    M(!v), v ? null == n || n() : null == t || t()
-  }, [n, t, v]), F = l.useCallback(() => {
+    x(!v), v ? null == n || n() : null == t || t()
+  }, [n, t, v]), D = l.useCallback(() => {
     j(), L(r.InboxTab.UNREADS)
   }, [L, j]);
-  l.useEffect(() => (E.ComponentDispatch.subscribe(_.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, F), () => void E.ComponentDispatch.unsubscribe(_.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, F)), [F]);
+  l.useEffect(() => (E.ComponentDispatch.subscribe(_.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, D), () => void E.ComponentDispatch.unsubscribe(_.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, D)), [D]);
   let {
-    showReminders: D
+    showReminders: F
   } = d.default.useExperiment({
     location: "RecentsPopout"
   }, {
@@ -82,7 +82,7 @@ function T(e) {
     location: "RecentsPopout"
   });
   l.useEffect(() => {
-    !D && R === r.InboxTab.TODOS && L(r.InboxTab.MENTIONS)
+    !F && R === r.InboxTab.TODOS && L(r.InboxTab.MENTIONS)
   });
   let P = l.useCallback(e => {
     !e.shiftKey && y()
@@ -90,18 +90,18 @@ function T(e) {
   return (0, a.jsx)(o.Popout, {
     animation: o.Popout.Animation.NONE,
     position: A,
-    align: x,
+    align: M,
     autoInvert: !1,
     shouldShow: v,
     onRequestClose: y,
     renderPopout: function() {
       return (0, a.jsx)(o.Dialog, {
-        "aria-label": I.default.Messages.INBOX,
+        "aria-label": T.default.Messages.INBOX,
         children: R === r.InboxTab.FOR_YOU && U ? (0, a.jsx)(m.default, {
           setTab: L,
           badgeState: C,
           closePopout: y
-        }) : R === r.InboxTab.MENTIONS ? (0, a.jsx)(g.default, {
+        }) : R === r.InboxTab.MENTIONS ? (0, a.jsx)(S.default, {
           setTab: L,
           onJump: P,
           badgeState: C,
@@ -110,17 +110,17 @@ function T(e) {
           setTab: L,
           badgeState: C,
           closePopout: y
-        }) : D && R === r.InboxTab.TODOS ? (0, a.jsx)(p.default, {
+        }) : F && R === r.InboxTab.TODOS ? (0, a.jsx)(p.default, {
           setTab: L,
           onJump: P,
           closePopout: y
         }) : (0, a.jsx)(s.ErrorBoundary, {
-          fallback: (0, a.jsx)(S.UnreadsCrashed, {
+          fallback: (0, a.jsx)(g.UnreadsCrashed, {
             setTab: L,
             closePopout: y,
             badgeState: C
           }),
-          children: (0, a.jsx)(S.default, {
+          children: (0, a.jsx)(g.default, {
             setTab: L,
             onJump: P,
             showTutorial: O,
@@ -136,7 +136,7 @@ function T(e) {
       let {
         isShown: n
       } = t;
-      return T(j, n, e)
+      return I(j, n, e)
     }
   })
 }

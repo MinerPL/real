@@ -22,8 +22,8 @@ var s = n("714617"),
   E = n("848872"),
   p = n("568307"),
   y = n("49111"),
-  T = n("782340");
-let C = [],
+  C = n("782340");
+let T = [],
   S = {};
 
 function I() {
@@ -50,7 +50,7 @@ function I() {
     let i = null === (n = l.default.getApplication(s)) || void 0 === n ? void 0 : n.name;
     e.push({
       type: y.ActivityTypes.PLAYING,
-      name: null != i ? i : T.default.Messages.EMBEDDED_ACTIVITIES_LAUNCHING_ACTIVITY,
+      name: null != i ? i : C.default.Messages.EMBEDDED_ACTIVITIES_LAUNCHING_ACTIVITY,
       application_id: s,
       flags: y.ActivityFlags.EMBEDDED
     })
@@ -82,17 +82,17 @@ function I() {
       details: null == t ? void 0 : t.status,
       emoji: null == t ? void 0 : t.emoji
     })
-  }!i(C, e) && (C = e)
+  }!i(T, e) && (T = e)
 }
 class A extends o.default.Store {
   initialize() {
     this.waitFor(p.default, u.default, E.default, v.default, g.default, h.default, _.default), this.syncWith([c.default, _.default], () => I())
   }
   getActivities() {
-    return C
+    return T
   }
   getPrimaryActivity() {
-    return C[0]
+    return T[0]
   }
   getApplicationActivity(e) {
     return this.findActivity(t => t.application_id === e)
@@ -101,7 +101,7 @@ class A extends o.default.Store {
     return this.findActivity(e => e.type === y.ActivityTypes.CUSTOM_STATUS)
   }
   findActivity(e) {
-    return C.find(e)
+    return T.find(e)
   }
   getApplicationActivities() {
     return S

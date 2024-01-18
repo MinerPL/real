@@ -1,75 +1,75 @@
 "use strict";
-let i, l, r, a, s, o, u, d, c;
+let i, a, l, r, s, u, o, d, c;
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return C
   }
 });
-var f = n("446674"),
-  h = n("913144"),
-  E = n("49111");
-let _ = E.FormStates.CLOSED,
-  p = {},
-  I = !1;
+var E = n("446674"),
+  _ = n("913144"),
+  I = n("49111");
+let T = I.FormStates.CLOSED,
+  f = {},
+  S = !1;
 
-function C() {
-  _ = E.FormStates.CLOSED, p = {}, u = null, d = void 0, c = []
+function N() {
+  T = I.FormStates.CLOSED, f = {}, o = null, d = void 0, c = []
 }
 
-function T() {
-  S(), v(), p = {}, _ = E.FormStates.OPEN
+function p() {
+  h(), A(), f = {}, T = I.FormStates.OPEN
 }
 
-function S() {
+function h() {
   i = void 0, s = void 0
 }
 
-function v() {
-  l = void 0, r = void 0, a = void 0, o = void 0
+function A() {
+  a = void 0, l = void 0, r = void 0, u = void 0
 }
-class N extends f.default.Store {
+class m extends E.default.Store {
   getFormState() {
-    return _
+    return T
   }
   getErrors() {
-    return p
+    return f
   }
   showNotice() {
-    return void 0 !== i || void 0 !== l || void 0 !== r || void 0 !== a || void 0 !== s || void 0 !== o
+    return void 0 !== i || void 0 !== a || void 0 !== l || void 0 !== r || void 0 !== s || void 0 !== u
   }
   getPendingAvatar() {
     return i
   }
   getPendingBanner() {
-    return l
+    return a
   }
   getPendingBio() {
-    return r
+    return l
   }
   getPendingNickname() {
     return s
   }
   getPendingPronouns() {
-    return a
+    return r
   }
   getPendingAccentColor() {
     return s
   }
   getPendingThemeColors() {
-    return o
+    return u
   }
   getAllPending() {
     return {
       pendingAvatar: i,
-      pendingBanner: l,
-      pendingBio: r,
-      pendingPronouns: a,
+      pendingBanner: a,
+      pendingBio: l,
+      pendingPronouns: r,
       pendingNickname: s,
-      pendingThemeColors: o
+      pendingThemeColors: u
     }
   }
   getGuild() {
-    return u
+    return o
   }
   getSource() {
     return d
@@ -78,31 +78,31 @@ class N extends f.default.Store {
     return c
   }
   getIsDisableSubmit() {
-    return I
+    return S
   }
 }
-N.displayName = "GuildIdentitySettingsStore";
-var g = new N(h.default, {
+m.displayName = "GuildIdentitySettingsStore";
+var C = new m(_.default, {
   GUILD_IDENTITY_SETTINGS_INIT: function(e) {
-    u = e.guild, _ = E.FormStates.OPEN, p = {}, d = e.source, c = e.analyticsLocations
+    o = e.guild, T = I.FormStates.OPEN, f = {}, d = e.source, c = e.analyticsLocations
   },
-  GUILD_IDENTITY_SETTINGS_CLOSE: C,
+  GUILD_IDENTITY_SETTINGS_CLOSE: N,
   GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function() {
-    T(), C()
+    p(), N()
   },
   GUILD_IDENTITY_SETTINGS_SET_GUILD: function(e) {
-    u = e.guild, p = {}
+    o = e.guild, f = {}
   },
   GUILD_IDENTITY_SETTINGS_SUBMIT: function() {
-    _ = E.FormStates.SUBMITTING, p = {}
+    T = I.FormStates.SUBMITTING, f = {}
   },
   GUILD_IDENTITY_SETTINGS_SUBMIT_FAILURE: function(e) {
     var t;
-    if (_ !== E.FormStates.SUBMITTING) return !1;
-    _ = E.FormStates.OPEN, p = null !== (t = e.errors) && void 0 !== t ? t : {}
+    if (T !== I.FormStates.SUBMITTING) return !1;
+    T = I.FormStates.OPEN, f = null !== (t = e.errors) && void 0 !== t ? t : {}
   },
   USER_PROFILE_UPDATE_FAILURE: function(e) {
-    _ = E.FormStates.OPEN, p = e.errors
+    T = I.FormStates.OPEN, f = e.errors
   },
   GUILD_IDENTITY_SETTINGS_SET_PENDING_AVATAR: function(e) {
     let {
@@ -114,19 +114,19 @@ var g = new N(h.default, {
     let {
       banner: t
     } = e;
-    l = t
+    a = t
   },
   GUILD_IDENTITY_SETTINGS_SET_PENDING_BIO: function(e) {
     let {
       bio: t
     } = e;
-    r = t
+    l = t
   },
   GUILD_IDENTITY_SETTINGS_SET_PENDING_PRONOUNS: function(e) {
     let {
       pronouns: t
     } = e;
-    a = t
+    r = t
   },
   GUILD_IDENTITY_SETTINGS_SET_PENDING_NICKNAME: function(e) {
     let {
@@ -138,19 +138,19 @@ var g = new N(h.default, {
     let {
       themeColors: t
     } = e;
-    o = t
+    u = t
   },
-  GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: S,
-  GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: v,
-  GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: T,
-  GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: T,
+  GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: h,
+  GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: A,
+  GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: p,
+  GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: p,
   GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function() {
-    p = {}
+    f = {}
   },
   GUILD_IDENTITY_SETTINGS_SET_DISABLE_SUBMIT: function(e) {
     let {
       disable: t
     } = e;
-    I = t
+    S = t
   }
 })

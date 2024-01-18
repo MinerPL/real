@@ -22,8 +22,8 @@ function m(e) {
   let {
     onClose: t,
     onConfirm: m,
-    onCancel: g,
-    channel: E,
+    onCancel: E,
+    channel: g,
     analyticsType: S,
     popoutText: A,
     animation: _
@@ -31,16 +31,16 @@ function m(e) {
   a.useEffect(() => {
     c.default.track(f.AnalyticEvents.OPEN_POPOUT, {
       type: S,
-      ...(0, o.collectChannelAnalyticsMetadata)(E)
+      ...(0, o.collectChannelAnalyticsMetadata)(g)
     })
-  }, [S, E]);
+  }, [S, g]);
   let T = a.useCallback(() => {
       null == m || m(), t()
     }, [m, t]),
     M = a.useCallback(() => {
-      null == g || g(), t()
-    }, [g, t]),
-    I = a.useRef(null);
+      null == E || E(), t()
+    }, [E, t]),
+    N = a.useRef(null);
   return a.useEffect(() => {
     let e;
     let t = u.default.theme,
@@ -50,7 +50,7 @@ function m(e) {
         default: a
       }, l] = await Promise.all([n.el("245749").then(n.t.bind(n, "245749", 23)), (0, i.isThemeDark)(t) ? _.dark() : _.light()]);
       !s && (e = a.loadAnimation({
-        container: I.current,
+        container: N.current,
         renderer: "svg",
         loop: !0,
         autoplay: !0,
@@ -68,7 +68,7 @@ function m(e) {
         className: C.body,
         children: [null != _ && (0, s.jsx)("div", {
           className: C.animation,
-          ref: I
+          ref: N
         }), (0, s.jsxs)("div", {
           className: C.content,
           children: [(0, s.jsx)("div", {

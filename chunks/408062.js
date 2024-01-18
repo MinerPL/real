@@ -398,8 +398,8 @@ class g {
       E = null !== (t = e.isBefore) && void 0 !== t && t,
       p = null !== (n = e.isAfter) && void 0 !== n && n,
       y = null !== (s = e.jump) && void 0 !== s ? s : null,
-      T = null !== (o = e.hasMoreBefore) && void 0 !== o && o,
-      C = null !== (u = e.hasMoreAfter) && void 0 !== u && u,
+      C = null !== (o = e.hasMoreBefore) && void 0 !== o && o,
+      T = null !== (u = e.hasMoreAfter) && void 0 !== u && u,
       S = null !== (l = e.cached) && void 0 !== l && l,
       I = i(v).reverse().map(r.default.getCurrentConfig({
         location: "2ecb25_2"
@@ -418,8 +418,8 @@ class g {
       jumpTargetOffset: null != y && null != y.messageId && null != y.offset ? y.offset : 0,
       jumpSequenceId: null != y ? A.jumpSequenceId + 1 : A.jumpSequenceId,
       jumpReturnTargetId: null !== (h = null == y ? void 0 : y.returnMessageId) && void 0 !== h ? h : null,
-      hasMoreBefore: null == y && p ? A.hasMoreBefore : T,
-      hasMoreAfter: null == y && E ? A.hasMoreAfter : C,
+      hasMoreBefore: null == y && p ? A.hasMoreBefore : C,
+      hasMoreAfter: null == y && E ? A.hasMoreAfter : T,
       cached: S,
       hasFetched: e.hasFetched,
       error: !1

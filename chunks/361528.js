@@ -22,8 +22,8 @@ var s = n("37983"),
       buttonColor: C,
       buttonSubmitting: p,
       onButtonClick: m,
-      imageSrc: g,
-      animationSrc: E,
+      imageSrc: E,
+      animationSrc: g,
       secondaryButtonText: S,
       onSecondaryButtonClick: A,
       children: _,
@@ -33,20 +33,20 @@ var s = n("37983"),
     if (null == t) return (0, s.jsx)(s.Fragment, {
       children: a.Children.only(_)
     });
-    let I = null;
-    return null != g ? I = (0, s.jsx)("img", {
+    let N = null;
+    return null != E ? N = (0, s.jsx)("img", {
       alt: "",
-      src: g,
+      src: E,
       className: c.image
-    }) : null != E && (I = (0, s.jsx)(d.default, {
-      importData: E,
+    }) : null != g && (N = (0, s.jsx)(d.default, {
+      importData: g,
       shouldAnimate: !T,
       className: c.animation
     })), (0, s.jsxs)("div", {
       className: c.wrapper,
       children: [(0, s.jsxs)("div", {
         className: c.content,
-        children: [I, (0, s.jsxs)("div", {
+        children: [N, (0, s.jsxs)("div", {
           className: c.text,
           children: [(0, s.jsx)(r.Heading, {
             variant: "heading-md/semibold",

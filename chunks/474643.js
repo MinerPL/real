@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   },
   default: function() {
-    return C
+    return T
   }
 }), n("222007");
 var s, i, r = n("917351"),
@@ -73,7 +73,7 @@ function y(e) {
   let s = h(n);
   return delete s[t], !1
 }
-class T extends o.default.PersistedStore {
+class C extends o.default.PersistedStore {
   initialize(e) {
     m = null != e ? e : {}, ! function() {
       for (let [e, t] of Object.entries(m))
@@ -136,7 +136,7 @@ class T extends o.default.PersistedStore {
     return null == s ? null : s[1]
   }
 }
-T.displayName = "DraftStore", T.persistKey = "DraftStore", T.migrations = [e => {
+C.displayName = "DraftStore", C.persistKey = "DraftStore", C.migrations = [e => {
   if (null == e) return {};
   for (let t in e) "timestamp" in e[t] && (e[t] = {
     0: e[t]
@@ -150,7 +150,7 @@ T.displayName = "DraftStore", T.persistKey = "DraftStore", T.migrations = [e => 
   for (let t in e) s[t] = e[t];
   return n
 }];
-var C = new T(d.default, {
+var T = new C(d.default, {
   CONNECTION_OPEN: function() {
     let e = l.default.getId();
     return !(e in m) && (m[e] = {}), p(), !1

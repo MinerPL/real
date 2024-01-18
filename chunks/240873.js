@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return y
   },
   isServerShopArticleEmbed: function() {
-    return T
+    return C
   },
   getMaxEmbedMediaSize: function() {
-    return C
+    return T
   }
 }), n("222007"), n("702976"), n("424973");
 var s = n("917351"),
@@ -139,11 +139,11 @@ function y(e) {
   return (null != t || null != n) && (s === u.MessageEmbedTypes.GIFV || s !== u.MessageEmbedTypes.RICH && null == i && null == r)
 }
 
-function T(e) {
+function C(e) {
   return e.type === u.MessageEmbedTypes.ARTICLE && null != e.url && (g.test(e.url) || c.test(e.url))
 }
 
-function C(e, t, n) {
+function T(e, t, n) {
   var s;
   return null != t && null != n ? {
     maxMediaWidth: t,

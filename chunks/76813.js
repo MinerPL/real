@@ -23,8 +23,8 @@ function p(e) {
     canShowReminder: t = !1,
     className: p
   } = e, {
-    showClipsHeaderEntrypoint: g,
-    ignorePlatformRestriction: S
+    showClipsHeaderEntrypoint: S,
+    ignorePlatformRestriction: g
   } = c.ClipsExperiment.useExperiment({
     location: "ClipsButton"
   }, {
@@ -32,16 +32,16 @@ function p(e) {
   }), {
     hasClips: N,
     hasNewClips: _,
-    lastClipsSession: I,
-    remindersEnabled: T
+    lastClipsSession: T,
+    remindersEnabled: I
   } = (0, s.useStateFromStoresObject)([f.default], () => ({
     hasClips: f.default.hasClips(),
     hasNewClips: f.default.getNewClipIds().length > 0,
     lastClipsSession: f.default.getLastClipsSession(),
     remindersEnabled: f.default.getSettings().remindersEnabled
-  })), C = null != I && I.newClipIds.length > 0, [A, x] = l.useState(null), v = (0, s.useStateFromStores)([r.default], () => r.default.hasLayers());
+  })), C = null != T && T.newClipIds.length > 0, [A, M] = l.useState(null), v = (0, s.useStateFromStores)([r.default], () => r.default.hasLayers());
 
-  function M() {
+  function x() {
     (0, i.openModalLazy)(async () => {
       let {
         default: e
@@ -53,19 +53,19 @@ function p(e) {
       modalKey: E.CLIPS_GALLERY_MODAL_KEY
     })
   }
-  return g && ((0, d.isWindows)() || S) && N ? (0, a.jsxs)(a.Fragment, {
-    children: [null != A && t && T && C && !(0, i.hasAnyModalOpen)() && !v && (0, a.jsx)(h.default, {
+  return S && ((0, d.isWindows)() || g) && N ? (0, a.jsxs)(a.Fragment, {
+    children: [null != A && t && I && C && !(0, i.hasAnyModalOpen)() && !v && (0, a.jsx)(h.default, {
       clipIconRef: A,
-      lastClipsSession: I,
-      onOpenClipsGallery: M
+      lastClipsSession: T,
+      onOpenClipsGallery: x
     }), (0, a.jsx)("div", {
-      ref: x,
+      ref: M,
       children: (0, a.jsx)(u.Icon, {
         className: p,
         icon: o.default,
         showBadge: _,
         tooltip: m.default.Messages.CLIPS_GALLERY_TOOLTIP,
-        onClick: M
+        onClick: x
       })
     })]
   }) : null

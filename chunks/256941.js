@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return T
   }
 }), n("222007");
 var s = n("316693"),
@@ -70,7 +70,7 @@ function y(e) {
   } = e;
   return !!_.has(t) && v(t)
 }
-class T extends i.default.Store {
+class C extends i.default.Store {
   initialize() {
     this.waitFor(o.default)
   }
@@ -102,8 +102,8 @@ class T extends i.default.Store {
     return this.buildRoles(e), null !== (t = m.get(e)) && void 0 !== t && t
   }
 }
-T.displayName = "SubscriptionRoleStore";
-var C = new T(r.default, {
+C.displayName = "SubscriptionRoleStore";
+var T = new C(r.default, {
   CONNECTION_OPEN: E,
   LOGOUT: E,
   GUILD_CREATE: p,

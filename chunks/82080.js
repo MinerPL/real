@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return N
   }
 }), n("702976"), n("222007");
 var s = n("37983"),
@@ -18,8 +18,8 @@ var s = n("37983"),
   C = n("497880"),
   p = n("851220"),
   m = n("659500"),
-  g = n("568734"),
-  E = n("718422"),
+  E = n("568734"),
+  g = n("718422"),
   S = n("49111"),
   A = n("877671");
 
@@ -28,7 +28,7 @@ function _(e) {
     value: t,
     channel: n
   } = e;
-  return (0, E.applyChatRestrictions)({
+  return (0, g.applyChatRestrictions)({
     type: o.ChatInputTypes.EDIT,
     content: t,
     channel: n,
@@ -45,8 +45,8 @@ function T(e) {
     id: o
   } = t, {
     id: u
-  } = n, C = t.getGuildId(), m = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(C), [C]), E = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, T = null != m && m.hasFeature(S.GuildFeatures.NEWS), I = E && T, {
-    editingMessage: N,
+  } = n, C = t.getGuildId(), m = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(C), [C]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, T = null != m && m.hasFeature(S.GuildFeatures.NEWS), N = g && T, {
+    editingMessage: I,
     editingTextValue: v,
     editingRichValue: L
   } = (0, l.useStateFromStoresObject)([c.default], () => ({
@@ -56,11 +56,11 @@ function T(e) {
   }), [o]), x = (0, l.useStateFromStores)([d.default], () => d.default.getId()), R = a.useCallback((e, n, s) => {
     let {
       content: a
-    } = s, l = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != N && null != N.author ? N.author.id : null, u = I && (o === x || l);
-    return u && null != N && (0, g.hasFlag)(N.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, a) : i.default.editMessage(e, n, {
+    } = s, l = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != I && null != I.author ? I.author.id : null, u = N && (o === x || l);
+    return u && null != I && (0, E.hasFlag)(I.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, a) : i.default.editMessage(e, n, {
       content: a
     }), Promise.resolve()
-  }, [N, I, x, t]), y = a.useCallback(e => (0, a.createElement)(M, {
+  }, [I, N, x, t]), y = a.useCallback(e => (0, a.createElement)(M, {
     ...e,
     className: A.channelTextArea,
     key: u
@@ -112,7 +112,7 @@ function M(e) {
   }, l.id)
 }
 
-function I(e, t, n) {
+function N(e, t, n) {
   let {
     message: a,
     channel: l

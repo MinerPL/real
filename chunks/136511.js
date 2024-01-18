@@ -70,14 +70,14 @@ function y(e) {
   h.notifCenterIds.add(t.id), h.notifCenterItems = [t, ...h.notifCenterItems], h.notifCenterItems.sort((e, t) => l.default.compare(t.id, e.id))
 }
 
-function T(e, t) {
+function C(e, t) {
   h.notifCenterItems = h.notifCenterItems.map(n => e.includes(n.id) ? {
     ...n,
     acked: t
   } : n).filter(v)
 }
 
-function C(e, t, n) {
+function T(e, t, n) {
   var s;
   return e.type === t && (null === (s = e.other_user) || void 0 === s ? void 0 : s.id) === n
 }
@@ -180,13 +180,13 @@ var A = new I(i.default, {
     let {
       ids: t
     } = e;
-    T(t, !0)
+    C(t, !0)
   },
   NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: function(e) {
     let {
       ids: t
     } = e;
-    T(t, !1)
+    C(t, !1)
   },
   GUILD_SCHEDULED_EVENT_UPDATE: function(e) {
     let {
@@ -242,7 +242,7 @@ var A = new I(i.default, {
       h.notifCenterLocalItems = [...h.notifCenterLocalItems, (0, c.incomingFriendRequestLocalItem)(s, n)]
     }
     e.relationship.type === g.RelationshipTypes.FRIEND && (h.notifCenterLocalItems = h.notifCenterLocalItems.map(t => {
-      if (C(t, _.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, e.relationship.user.id)) {
+      if (T(t, _.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, e.relationship.user.id)) {
         var n;
         let s = u.default.getUser(e.relationship.user.id);
         return {
@@ -260,7 +260,7 @@ var A = new I(i.default, {
     }))
   },
   RELATIONSHIP_REMOVE: function(e) {
-    h.notifCenterLocalItems = h.notifCenterLocalItems.filter(t => !(C(t, _.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, e.relationship.id) || C(t, _.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id)) && !0)
+    h.notifCenterLocalItems = h.notifCenterLocalItems.filter(t => !(T(t, _.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS, e.relationship.id) || T(t, _.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED, e.relationship.id)) && !0)
   },
   NOTIFICATION_CENTER_ITEM_COMPLETED: function(e) {
     let {

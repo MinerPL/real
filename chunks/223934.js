@@ -28,17 +28,17 @@ function m(e) {
     showLogout: E,
     location: p,
     isTrustedName: y
-  } = e, T = d.default.getApplicationIconURL({
+  } = e, C = d.default.getApplicationIconURL({
     id: m.id,
     icon: m.icon
-  }), C = d.default.getUserAvatarURL(n);
+  }), T = d.default.getUserAvatarURL(n);
   return (0, s.jsxs)("header", {
     id: t,
     className: g.header,
     children: [(0, s.jsxs)("div", {
       className: g.headerIcons,
       children: [(0, s.jsx)(i.Avatar, {
-        src: T,
+        src: C,
         size: _.AvatarSizes.SIZE_80,
         "aria-label": m.name
       }), (0, s.jsxs)("div", {
@@ -51,7 +51,7 @@ function m(e) {
           className: g.ellipse
         })]
       }), (0, s.jsx)(i.Avatar, {
-        src: C,
+        src: T,
         size: _.AvatarSizes.SIZE_80,
         "aria-label": n.username
       })]

@@ -50,16 +50,16 @@ function y() {
     e instanceof Promise ? e.then(n) : n(e)
   }
 }(), a.default.remotePowerMonitor.on("resume", () => {
-  h = !1, T({})
+  h = !1, C({})
 }), a.default.remotePowerMonitor.on("suspend", () => {
-  h = !0, T({}), r.default.disconnect()
+  h = !0, C({}), r.default.disconnect()
 }), a.default.remotePowerMonitor.on("lock-screen", () => {
-  v = !0, T({})
+  v = !0, C({})
 }), a.default.remotePowerMonitor.on("unlock-screen", () => {
-  v = !1, T({})
+  v = !1, C({})
 })) : setInterval(y, .25 * f.IDLE_DURATION));
 
-function T(e) {
+function C(e) {
   let {
     timestamp: t,
     type: n
@@ -69,7 +69,7 @@ function T(e) {
     timestamp: c
   }) : y(), !1)
 }
-class C extends s.default.Store {
+class T extends s.default.Store {
   isIdle() {
     return g
   }
@@ -80,8 +80,8 @@ class C extends s.default.Store {
     return g ? c : null
   }
 }
-C.displayName = "IdleStore";
-var S = new C(i.default, {
+T.displayName = "IdleStore";
+var S = new T(i.default, {
   IDLE: function(e) {
     g = e.idle
   },
@@ -93,7 +93,7 @@ var S = new C(i.default, {
       userId: t,
       speakingFlags: n
     } = e;
-    return n !== _.SpeakingFlags.NONE && t === l.default.getId() && T({}), !1
+    return n !== _.SpeakingFlags.NONE && t === l.default.getId() && C({}), !1
   },
   APP_STATE_UPDATE: function(e) {
     let {
@@ -101,11 +101,11 @@ var S = new C(i.default, {
     } = e;
     return E = t === f.AppStates.BACKGROUND, c = Date.now(), y(), !1
   },
-  OVERLAY_SET_NOT_IDLE: T,
-  CHANNEL_SELECT: T,
-  VOICE_CHANNEL_SELECT: T,
-  WINDOW_FOCUS: T,
-  OVERLAY_INITIALIZE: T,
-  OVERLAY_SET_INPUT_LOCKED: T,
-  USER_SETTINGS_PROTO_UPDATE: T
+  OVERLAY_SET_NOT_IDLE: C,
+  CHANNEL_SELECT: C,
+  VOICE_CHANNEL_SELECT: C,
+  WINDOW_FOCUS: C,
+  OVERLAY_INITIALIZE: C,
+  OVERLAY_SET_INPUT_LOCKED: C,
+  USER_SETTINGS_PROTO_UPDATE: C
 })

@@ -19,8 +19,8 @@ var a = n("414456"),
   C = n("118094"),
   p = n("200521"),
   m = n("894488"),
-  g = n("782340"),
-  E = n("339723");
+  E = n("782340"),
+  g = n("339723");
 
 function S(e) {
   let {
@@ -53,25 +53,25 @@ function S(e) {
   });
   return (0, s.jsx)(s.Fragment, {
     children: u((e, t) => t ? (0, s.jsx)("div", {
-      className: E.summaryFeedbackWrapper,
+      className: g.summaryFeedbackWrapper,
       children: (0, s.jsxs)(i.animated.div, {
         style: e,
-        className: E.summaryFeedback,
+        className: g.summaryFeedback,
         children: [(0, s.jsx)(o.Text, {
           variant: "text-xs/medium",
           color: "interactive-normal",
-          children: g.default.Messages.SUMMARY_FEEDBACK
+          children: E.default.Messages.SUMMARY_FEEDBACK
         }), (0, s.jsx)(o.Clickable, {
           onClick: e => l(e, p.FeedbackRating.GOOD),
           children: (0, s.jsx)(f.default, {
-            className: E.thumbIcon,
+            className: g.thumbIcon,
             width: 12,
             height: 12
           })
         }), (0, s.jsx)(o.Clickable, {
           onClick: e => l(e, p.FeedbackRating.BAD),
           children: (0, s.jsx)(c.default, {
-            className: E.thumbIcon,
+            className: g.thumbIcon,
             width: 12,
             height: 12
           })
@@ -94,7 +94,7 @@ function A(e) {
     p = null != i.content;
   return a = p ? (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(d.default, {
-      className: E.summaryStartIcon,
+      className: g.summaryStartIcon,
       width: 16,
       height: 16
     }), i.content]
@@ -103,13 +103,13 @@ function A(e) {
       summary: f,
       channel: o
     }), (0, s.jsx)(d.default, {
-      className: E.summaryEndIcon,
+      className: g.summaryEndIcon,
       width: 16,
       height: 16
     })]
   }), (0, s.jsx)(u.default, {
-    className: l(E.summaryDivider, p ? E.summaryDividerStart : E.summaryDividerEnd),
-    contentClassName: p ? E.summaryStartContent : E.summaryEndContent,
+    className: l(g.summaryDivider, p ? g.summaryDividerStart : g.summaryDividerEnd),
+    contentClassName: p ? g.summaryStartContent : g.summaryEndContent,
     isUnread: C,
     id: C ? m.NEW_MESSAGE_BAR_ID : void 0,
     children: a

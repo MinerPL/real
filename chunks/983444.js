@@ -21,15 +21,15 @@ var s = n("884691"),
   C = n("778588"),
   p = n("377253"),
   m = n("957255"),
-  g = n("299039"),
-  E = n("49111");
+  E = n("299039"),
+  g = n("49111");
 
 function S(e, t) {
   return (0, i.useStateFromStoresObject)([m.default], () => ({
     canInvite: (0, r.canViewInviteModal)(m.default, t, e),
-    canManageGuild: null != t && m.default.can(E.Permissions.MANAGE_GUILD, t),
-    canMessage: null != e && m.default.can(E.Permissions.SEND_MESSAGES, e),
-    canCreateChannel: null != t && m.default.can(E.Permissions.MANAGE_CHANNELS, t)
+    canManageGuild: null != t && m.default.can(g.Permissions.MANAGE_GUILD, t),
+    canMessage: null != e && m.default.can(g.Permissions.SEND_MESSAGES, e),
+    canCreateChannel: null != t && m.default.can(g.Permissions.MANAGE_CHANNELS, t)
   }), [t, e])
 }
 
@@ -42,7 +42,7 @@ function A(e) {
       return (0, i.useStateFromStores)([f.default], () => {
         var t;
         let s = null !== (t = f.default.getMemberCount(null == e ? void 0 : e.id)) && void 0 !== t ? t : 0,
-          a = n.some(e => e.type === E.MessageTypes.USER_JOIN);
+          a = n.some(e => e.type === g.MessageTypes.USER_JOIN);
         return s > 1 || a
       }, [e, n])
     }(e),
@@ -67,7 +67,7 @@ function A(e) {
         n = e[c.GUILD_VOCAL_CHANNELS_KEY];
 
       function s(e) {
-        return null != t && g.default.extractTimestamp(e.channel.id) - g.default.extractTimestamp(t.id) > 500
+        return null != t && E.default.extractTimestamp(e.channel.id) - E.default.extractTimestamp(t.id) > 500
       }
       return e[0, c.GUILD_SELECTABLE_CHANNELS_KEY].some(s) || n.some(s)
     }, [t]))

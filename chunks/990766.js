@@ -61,8 +61,8 @@ var s = n("627445"),
   E = n("404008"),
   p = n("718517"),
   y = n("12307"),
-  T = n("840707"),
-  C = n("561288"),
+  C = n("840707"),
+  T = n("561288"),
   S = n("450911"),
   I = n("255397"),
   A = n("987317"),
@@ -190,7 +190,7 @@ async function L(e, t, n) {
 }
 async function U(e) {
   try {
-    await T.default.post({
+    await C.default.post({
       url: D.Endpoints.STREAM_NOTIFY(e),
       oldFormErrors: !0,
       trackedActionData: {
@@ -249,7 +249,7 @@ function H(e, t) {
     s = (0, u.decodeStreamKey)(t),
     i = h.default.getVoiceChannelId();
   null != i && i !== e && A.default.disconnect(), S.default.addRecipient(e, n, void 0, () => {
-    C.default.call(e, !1, !1, null, () => {
+    T.default.call(e, !1, !1, null, () => {
       V(s)
     })
   })

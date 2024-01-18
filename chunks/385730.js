@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return x
   },
   UnreadsCrashed: function() {
     return L
@@ -21,30 +21,30 @@ var a = n("37983"),
   E = n("206230"),
   m = n("510889"),
   p = n("826267"),
-  g = n("599110"),
-  S = n("659500"),
+  S = n("599110"),
+  g = n("659500"),
   N = n("150938"),
   _ = n("805614"),
-  I = n("64318"),
-  T = n("474282"),
+  T = n("64318"),
+  I = n("474282"),
   C = n("970268"),
   A = n("49111"),
-  x = n("782340"),
+  M = n("782340"),
   v = n("930391");
 
-function M(e) {
+function x(e) {
   let {
     setTab: t,
     onJump: n,
     showTutorial: s,
     setSeenTutorial: r,
-    closePopout: M,
+    closePopout: x,
     badgeState: L
   } = e, O = l.useRef(null), [b, y] = (0, C.default)(O), {
     loadState: j,
-    channels: F
+    channels: D
   } = b, {
-    maybeLoadMore: D,
+    maybeLoadMore: F,
     markAllRead: U
   } = y;
   (function(e, t, n) {
@@ -77,43 +77,43 @@ function M(e) {
         let n = e.channels.find(e => !e.collapsed);
         null != n && t.markChannelRead(n)
       };
-      return S.ComponentDispatch.subscribe(A.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n), () => {
-        S.ComponentDispatch.unsubscribe(A.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n)
+      return g.ComponentDispatch.subscribe(A.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n), () => {
+        g.ComponentDispatch.unsubscribe(A.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n)
       }
     }, [t, e.channels])
   }(b, y), l.useEffect(() => {
-    g.default.track(A.AnalyticEvents.OPEN_POPOUT, {
+    S.default.track(A.AnalyticEvents.OPEN_POPOUT, {
       type: "Inbox"
     })
-  }, []), l.useEffect(() => (h.default.subscribe("CONNECTION_OPEN", M), () => {
-    h.default.unsubscribe("CONNECTION_OPEN", M)
-  }), [M]);
+  }, []), l.useEffect(() => (h.default.subscribe("CONNECTION_OPEN", x), () => {
+    h.default.unsubscribe("CONNECTION_OPEN", x)
+  }), [x]);
   let k = (0, d.useStateFromStores)([E.default], () => E.default.messageGroupSpacing),
     P = (0, m.default)("unreads", O);
-  if (0 === F.length) {
+  if (0 === D.length) {
     var w;
     return (0, a.jsxs)("div", {
       className: v.container,
-      children: [(0, a.jsx)(I.default, {
+      children: [(0, a.jsx)(T.default, {
         tab: c.InboxTab.UNREADS,
         setTab: t,
         badgeState: L,
-        closePopout: M
+        closePopout: x
       }), (0, a.jsx)(_.default, {
         Icon: p.default,
-        header: x.default.Messages.UNREADS_EMPTY_STATE_HEADER,
-        tip: (null === (w = o.os) || void 0 === w ? void 0 : w.family) === "OS X" ? x.default.Messages.UNREADS_EMPTY_STATE_TIP_MAC : x.default.Messages.UNREADS_EMPTY_STATE_TIP
+        header: M.default.Messages.UNREADS_EMPTY_STATE_HEADER,
+        tip: (null === (w = o.os) || void 0 === w ? void 0 : w.family) === "OS X" ? M.default.Messages.UNREADS_EMPTY_STATE_TIP_MAC : M.default.Messages.UNREADS_EMPTY_STATE_TIP
       })]
     })
   }
   return (0, a.jsxs)("div", {
     className: i(v.container, "group-spacing-".concat(k)),
-    "aria-label": x.default.Messages.UNREADS_TAB_LABEL,
-    children: [(0, a.jsx)(I.default, {
+    "aria-label": M.default.Messages.UNREADS_TAB_LABEL,
+    children: [(0, a.jsx)(T.default, {
       tab: c.InboxTab.UNREADS,
       setTab: t,
       badgeState: L,
-      closePopout: M,
+      closePopout: x,
       children: (0, a.jsx)(N.default, {
         type: "top-header",
         onClick: U
@@ -132,11 +132,11 @@ function M(e) {
               O.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
             ...l,
-            onScroll: j === C.LoadState.Done ? void 0 : D,
+            onScroll: j === C.LoadState.Done ? void 0 : F,
             className: v.scroller,
             children: [s ? (0, a.jsx)(R, {
               setSeenTutorial: r
-            }) : null, (0, T.default)(F, y, n), j === C.LoadState.Done ? null : (0, a.jsx)(f.Spinner, {
+            }) : null, (0, I.default)(D, y, n), j === C.LoadState.Done ? null : (0, a.jsx)(f.Spinner, {
               className: v.spinner
             })]
           })
@@ -162,16 +162,16 @@ function R(e) {
       children: [(0, a.jsx)(f.Heading, {
         className: v.tutorialHeader,
         variant: "heading-md/semibold",
-        children: x.default.Messages.UNREADS_TUTORIAL_HEADER
+        children: M.default.Messages.UNREADS_TUTORIAL_HEADER
       }), (0, a.jsx)(f.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: x.default.Messages.UNREADS_TUTORIAL_BODY
+        children: M.default.Messages.UNREADS_TUTORIAL_BODY
       }), (0, a.jsx)(f.Button, {
         className: v.tutorialButton,
         onClick: t,
         size: f.Button.Sizes.SMALL,
-        children: x.default.Messages.TUTORIAL_CLOSE
+        children: M.default.Messages.TUTORIAL_CLOSE
       })]
     })]
   })
@@ -185,7 +185,7 @@ function L(e) {
   } = e;
   return (0, a.jsxs)("div", {
     className: v.container,
-    children: [(0, a.jsx)(I.default, {
+    children: [(0, a.jsx)(T.default, {
       tab: c.InboxTab.UNREADS,
       setTab: t,
       badgeState: n,
@@ -193,8 +193,8 @@ function L(e) {
     }), (0, a.jsx)(_.default, {
       Icon: p.default,
       disableStars: !0,
-      header: x.default.Messages.UNREADS_EMPTY_STATE_ERROR_HEADER,
-      tip: x.default.Messages.UNREADS_EMPTY_STATE_ERROR_SUBTITLE
+      header: M.default.Messages.UNREADS_EMPTY_STATE_ERROR_HEADER,
+      tip: M.default.Messages.UNREADS_EMPTY_STATE_ERROR_SUBTITLE
     })]
   })
 }

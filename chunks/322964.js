@@ -18,17 +18,17 @@ var a = n("37983"),
   E = n("599110"),
   m = n("253981"),
   p = n("352273"),
-  g = n("360191"),
-  S = n("342176"),
+  S = n("360191"),
+  g = n("342176"),
   N = n("183030"),
   _ = n("899779"),
-  I = n("778597"),
-  T = n("960082"),
+  T = n("778597"),
+  I = n("960082"),
   C = n("49111"),
   A = n("782340"),
-  x = n("183419"),
+  M = n("183419"),
   v = n("786948"),
-  M = n("780810");
+  x = n("780810");
 
 function R(e) {
   var t, n, l;
@@ -41,12 +41,12 @@ function R(e) {
   let d = null !== (l = h.default.getUser(null === (n = s.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== l ? l : new f.default(s.other_user),
     c = u.default.parse(o);
   return (0, a.jsxs)("div", {
-    className: x.messagePreviewContainer,
+    className: M.messagePreviewContainer,
     children: [(0, a.jsx)(r.default, {
       user: d,
       size: i.AvatarSizes.SIZE_24
     }), (0, a.jsx)(i.Text, {
-      className: x.messagePreviewText,
+      className: M.messagePreviewText,
       variant: "text-sm/normal",
       lineClamp: 2,
       children: c
@@ -63,7 +63,7 @@ function L(e) {
   if (null == t) return null;
   let n = u.default.parse(t);
   return (0, a.jsx)("div", {
-    className: x.calloutContainer,
+    className: M.calloutContainer,
     children: (0, a.jsx)(i.Text, {
       variant: "text-sm/normal",
       lineClamp: 2,
@@ -75,15 +75,15 @@ function L(e) {
 function O(e) {
   let {
     item: t
-  } = e, n = M, l = A.default.Messages.NOTIFICATION_CENTER_TODO;
+  } = e, n = x, l = A.default.Messages.NOTIFICATION_CENTER_TODO;
   return t.completed && (n = v, l = A.default.Messages.NOTIFICATION_CENTER_DONE), (0, a.jsxs)("div", {
-    className: x.lifecycleContainer,
+    className: M.lifecycleContainer,
     children: [(0, a.jsx)("img", {
-      className: x.checkbox,
+      className: M.checkbox,
       alt: "",
       src: n
     }), (0, a.jsx)(i.Text, {
-      className: x.lifecycleText,
+      className: M.lifecycleText,
       variant: "text-xs/bold",
       color: "header-secondary",
       children: l
@@ -96,7 +96,7 @@ let b = l.memo(function(e) {
       item: r,
       ackedBeforeId: c
     } = e, f = (0, N.useNotificationCenterItemAcked)(r, c), h = l.useCallback(async () => {
-      if (!f && (0, p.markNotificationCenterItemAcked)(r), null != r.item_enum && r.item_enum === g.ItemEnum.FIND_FRIENDS) {
+      if (!f && (0, p.markNotificationCenterItemAcked)(r), null != r.item_enum && r.item_enum === S.ItemEnum.FIND_FRIENDS) {
         (0, i.openModalLazy)(async () => {
           let {
             default: e
@@ -124,32 +124,32 @@ let b = l.memo(function(e) {
           }) : await (0, o.default)(n)
         }
         E.default.track(C.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
-          action_type: g.NotificationCenterActionTypes.CLICKED,
+          action_type: S.NotificationCenterActionTypes.CLICKED,
           notification_center_id: r.id,
           item_type: r.type,
           acked: f
         })
       }
     }, [r, f]), A = null;
-    r.type === g.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && null != r.other_user && (A = (0, a.jsx)(I.default, {
+    r.type === S.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && null != r.other_user && (A = (0, a.jsx)(T.default, {
       userId: r.other_user.id
     }));
     let v = null != r.local_id;
     return (0, a.jsxs)("div", {
-      className: x.row,
+      className: M.row,
       children: [(0, a.jsxs)(i.ClickableContainer, {
-        className: x.rowContent,
+        className: M.rowContent,
         focusProps: {
           offset: 4
         },
         "aria-label": r.body,
         onClick: h,
         children: [f ? null : (0, a.jsx)("div", {
-          className: x.unread
+          className: M.unread
         }), (0, a.jsx)(_.ForYouItemImage, {
           item: r
         }), (0, a.jsxs)("div", {
-          className: x.body,
+          className: M.body,
           children: ["lifecycle_item" === r.type && null != r.item_enum && (0, a.jsx)(O, {
             item: r
           }), (0, a.jsx)(i.Text, {
@@ -163,10 +163,10 @@ let b = l.memo(function(e) {
           }) : null, (0, a.jsx)(i.Text, {
             variant: "text-xs/medium",
             color: f ? "text-muted" : "header-secondary",
-            children: (0, S.getRelativeTimestamp)(s.default.extractTimestamp(r.id))
+            children: (0, g.getRelativeTimestamp)(s.default.extractTimestamp(r.id))
           }), A]
         })]
-      }), v ? null : (0, a.jsx)(T.MoreButton, {
+      }), v ? null : (0, a.jsx)(I.MoreButton, {
         item: r
       })]
     })

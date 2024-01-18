@@ -49,7 +49,7 @@ async function u(e) {
 async function d(e) {
   if (e.platform_type === r.PlatformTypes.XBOX) {
     let t = e.parsed_launch_parameters.inviteToken;
-    return !!(0, i.isWindows)() && null != t && await g(t)
+    return !!(0, i.isWindows)() && null != t && await S(t)
   }
   throw Error("Unsupported invite platform " + e.platform_type)
 }
@@ -108,7 +108,7 @@ async function p(e) {
     })
   })
 }
-async function g(e) {
+async function S(e) {
   if (!(0, i.isWindows)()) return !1;
   let t = await (0, s.default)();
   return new Promise((n, a) => {

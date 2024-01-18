@@ -36,8 +36,8 @@ var s, i, r, a, o = n("37983"),
   E = n("84460"),
   p = n("191225"),
   y = n("716241"),
-  T = n("148217"),
-  C = n("970254"),
+  C = n("148217"),
+  T = n("970254"),
   S = n("616265"),
   I = n("894887"),
   A = n("393414"),
@@ -68,7 +68,7 @@ let q = "oauth2-authorize-header-id";
 function X() {
   let e = (0, u.useLocation)(),
     t = d.useMemo(() => (0, k.parseOAuth2AuthorizeProps)(e.search), [e.search]);
-  return (0, T.default)(), (0, o.jsx)(H.OAuth2Page, {
+  return (0, C.default)(), (0, o.jsx)(H.OAuth2Page, {
     children: (0, o.jsx)(Z, {
       ...t,
       showLogout: !0
@@ -123,7 +123,7 @@ function Z(e) {
 
 function J(e) {
   var t, n, s, i, r, a, l, m;
-  let h, T, S, {
+  let h, C, S, {
       clientId: I,
       scopes: H,
       responseType: X,
@@ -148,12 +148,12 @@ function J(e) {
     } = e,
     eg = d.useMemo(() => (0, k.filterScopes)(H), [H]),
     em = (0, u.useLocation)(),
-    eh = C.default.useExperiment({
+    eh = T.default.useExperiment({
       location: "auth web"
     }),
-    ev = eh.userAppsTreatment === C.UserAppsTreatment.ALLOWED;
+    ev = eh.userAppsTreatment === T.UserAppsTreatment.ALLOWED;
   !ev && (ec = !1);
-  let [eE, ep] = d.useState(0), [ey, eT] = d.useState(null), [eC, eS] = d.useState(b.default.NONE), [eI, eA] = d.useState(1), [eD, eN] = d.useState(null), [eO] = d.useState(w.OrderedAccountScopes.filter(e => eg.includes(e))), [eb, eP] = d.useState(null != ee ? ee : null), [ek, eR] = d.useState(null != et ? et : null), [eV, eM] = d.useState(!1), ew = d.useMemo(() => {
+  let [eE, ep] = d.useState(0), [ey, eC] = d.useState(null), [eT, eS] = d.useState(b.default.NONE), [eI, eA] = d.useState(1), [eD, eN] = d.useState(null), [eO] = d.useState(w.OrderedAccountScopes.filter(e => eg.includes(e))), [eb, eP] = d.useState(null != ee ? ee : null), [ek, eR] = d.useState(null != et ? et : null), [eV, eM] = d.useState(!1), ew = d.useMemo(() => {
     var e;
     return null == ey ? void 0 : null === (e = ey.guilds) || void 0 === e ? void 0 : e.find(e => e.id === eb)
   }, [null == ey ? void 0 : ey.guilds, eb]), eL = (0, c.useStateFromStoresObject)([E.default, p.default], () => {
@@ -188,7 +188,7 @@ function J(e) {
         codeChallenge: Z,
         codeChallengeMethod: J,
         state: $,
-        permissions: _.default.remove(null != en ? en : b.default.NONE, eC),
+        permissions: _.default.remove(null != en ? en : b.default.NONE, eT),
         guildId: null == eb || ec ? void 0 : eb,
         channelId: null != ek ? ek : void 0,
         userInstall: ec
@@ -214,7 +214,7 @@ function J(e) {
       let e = t.body;
       (null == e ? void 0 : e.message) != null && "" !== e.message ? eN(Error(e.message)) : eN(e), eA(1), ep(2), eM(!1)
     }
-  }, [eo, ed, I, Z, J, eC, eu, en, Q, X, eg, eb, ek, $, el, null == ey ? void 0 : ey.application, ew, ec]), eF = d.useRef(!1), ex = d.useCallback(async () => {
+  }, [eo, ed, I, Z, J, eT, eu, en, Q, X, eg, eb, ek, $, el, null == ey ? void 0 : ey.application, ew, ec]), eF = d.useRef(!1), ex = d.useCallback(async () => {
     if (0 === eE) {
       if (ep(1), !N.default.isAuthenticated()) {
         (0, R.logoutWithRedirect)(em);
@@ -233,7 +233,7 @@ function J(e) {
             state: $,
             userInstall: ev && ec
           });
-          eT((0, V.convertOAuth2Authorization)(e)), es === L.OAuth2Prompts.NONE && e.authorized ? eG(!0) : ep(2), (0, y.trackWithMetadata)(j.AnalyticEvents.OAUTH2_AUTHORIZE_VIEWED, {
+          eC((0, V.convertOAuth2Authorization)(e)), es === L.OAuth2Prompts.NONE && e.authorized ? eG(!0) : ep(2), (0, y.trackWithMetadata)(j.AnalyticEvents.OAUTH2_AUTHORIZE_VIEWED, {
             application_id: e.application.id
           })
         } catch (n) {
@@ -306,10 +306,10 @@ function J(e) {
       h = (0, o.jsx)(F.default, {
         application: ey.application,
         permissions: null != en ? en : b.default.NONE,
-        deniedPermissions: eC,
+        deniedPermissions: eT,
         onPermissionsChange: eB,
         guild: eY
-      }), T = 1
+      }), C = 1
   }
   let eZ = (0, o.jsx)(U.default, {
       embeddedActivityConfig: eU,
@@ -321,10 +321,10 @@ function J(e) {
     }),
     eJ = (0, o.jsxs)("div", {
       className: z.footer,
-      children: [null != T ? (0, o.jsx)(g.Button, {
+      children: [null != C ? (0, o.jsx)(g.Button, {
         look: g.Button.Looks.LINK,
         color: g.Button.Colors.PRIMARY,
-        onClick: () => eA(T),
+        onClick: () => eA(C),
         children: W.default.Messages.BACK
       }) : (0, o.jsx)(g.Button, {
         look: g.Button.Looks.LINK,

@@ -22,8 +22,8 @@ var s = n("917351"),
   E = n("590401"),
   p = n("18494"),
   y = n("101125"),
-  T = n("205817"),
-  C = n("447214"),
+  C = n("205817"),
+  T = n("447214"),
   S = n("518916"),
   I = n("571420"),
   A = n("399010"),
@@ -251,9 +251,9 @@ var x = new F(a.default, {
     } = e;
     return S.socket.isSessionEstablished() && (n || ! function() {
       let e = function() {
-        return T.default.getAllActiveStreamKeys().find(e => (0, l.decodeStreamKey)(e).ownerId === _.default.getId())
+        return C.default.getAllActiveStreamKeys().find(e => (0, l.decodeStreamKey)(e).ownerId === _.default.getId())
       }();
-      T.default.getAllActiveStreamKeys().filter(t => t !== e).forEach(e => G(e))
+      C.default.getAllActiveStreamKeys().filter(t => t !== e).forEach(e => G(e))
     }(), S.socket.streamWatch(t)), !1
   },
   STREAM_STOP: function(e) {
@@ -302,7 +302,7 @@ var x = new F(a.default, {
     return S.socket.isSessionEstablished() && S.socket.remoteCommand(t, n), !1
   },
   RESET_CONNECTION: function(e) {
-    S.socket.connectionState !== C.ConnectionState.WILL_RECONNECT && (e.badCache ? (d.default.replaceDisableAllDatabases("RESET_CONNECTION"), S.socket.resetSocketOnError(Error("Guild data was missing from store (via RESET_CONNECTION)"), "RESET_CONNECTION_DATA_MISSING")) : S.socket.resetSocketOnError(Error("Connection reset requested (via RESET_CONNECTION)"), "RESET_CONNECTION"))
+    S.socket.connectionState !== T.ConnectionState.WILL_RECONNECT && (e.badCache ? (d.default.replaceDisableAllDatabases("RESET_CONNECTION"), S.socket.resetSocketOnError(Error("Guild data was missing from store (via RESET_CONNECTION)"), "RESET_CONNECTION_DATA_MISSING")) : S.socket.resetSocketOnError(Error("Connection reset requested (via RESET_CONNECTION)"), "RESET_CONNECTION"))
   },
   RTC_SPEED_TEST_START_TEST: function() {
     return S.socket.isSessionEstablished() && S.socket.speedTestCreate(E.default.getPreferredRegion()), !1

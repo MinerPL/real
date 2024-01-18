@@ -22,8 +22,8 @@ var s = n("917351"),
   E = n("647374"),
   p = n("693078"),
   y = n("290689"),
-  T = n("839462"),
-  C = n("646630"),
+  C = n("839462"),
+  T = n("646630"),
   S = n("788554"),
   I = n("49111"),
   A = n("317041"),
@@ -301,9 +301,9 @@ let V = e => {
     timestamp: {
       order: y.default.order - 1,
       requiredFirstCharacters: ["<"],
-      match: e => C.TIMESTAMP_REGEX.exec(e),
+      match: e => T.TIMESTAMP_REGEX.exec(e),
       parse(e) {
-        let [t, n, s] = e, i = (0, C.parseTimestamp)(n, s);
+        let [t, n, s] = e, i = (0, T.parseTimestamp)(n, s);
         return null == i ? {
           type: "text",
           content: t
@@ -350,7 +350,7 @@ let V = e => {
     heading: v.default,
     list: p.default
   },
-  L = (0, S.default)([w, T.default]),
+  L = (0, S.default)([w, C.default]),
   U = i.omit(L, ["inlineCode", "codeBlock", "br", "blockQuote"]),
   G = i.omit(L, ["inlineCode", "codeBlock", "br", "blockQuote", "url", "attachmentLink", "mention", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink"]),
   F = i.omit(L, ["codeBlock", "br", "mention", "channel", "roleMention", "attachmentLink"]),

@@ -18,8 +18,8 @@ var a = n("37983"),
   E = n("211248"),
   m = n("805614"),
   p = n("64318"),
-  g = n("833150"),
-  S = n("782340"),
+  S = n("833150"),
+  g = n("782340"),
   N = n("643000");
 
 function _(e) {
@@ -27,15 +27,15 @@ function _(e) {
     setTab: t,
     badgeState: s,
     closePopout: _
-  } = e, T = (0, r.useStateFromStoresArray)([f.default], () => f.default.getInvites()), C = (0, r.useStateFromStores)([f.default], () => f.default.getInviteStatuses()), [A, x] = l.useMemo(() => i.partition(T, e => {
+  } = e, I = (0, r.useStateFromStoresArray)([f.default], () => f.default.getInvites()), C = (0, r.useStateFromStores)([f.default], () => f.default.getInviteStatuses()), [A, M] = l.useMemo(() => i.partition(I, e => {
     var t;
     if ((null === (t = C[e.invite_id]) || void 0 === t ? void 0 : t.joinable) === !1) return !1;
     let n = (Date.now() - new Date(e.created_at).getTime()) / 1e3;
     return n < e.ttl
-  }), [T, C]);
+  }), [I, C]);
   return (l.useEffect(() => {
     (0, h.clearUnseenInvites)()
-  }), 0 === T.length) ? (0, a.jsxs)("div", {
+  }), 0 === I.length) ? (0, a.jsxs)("div", {
     className: N.container,
     children: [(0, a.jsx)(p.default, {
       tab: o.InboxTab.GAME_INVITES,
@@ -46,8 +46,8 @@ function _(e) {
       className: N.emptyStateContainer,
       children: (0, a.jsx)(m.default, {
         Icon: u.GameControllerIcon,
-        header: S.default.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
-        tip: S.default.Messages.GAME_INVITES_EMPTY_STATE_SUBTITLE
+        header: g.default.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
+        tip: g.default.Messages.GAME_INVITES_EMPTY_STATE_SUBTITLE
       })
     })]
   }) : (0, a.jsxs)("div", {
@@ -59,7 +59,7 @@ function _(e) {
       closePopout: _,
       children: (0, a.jsx)(E.default, {
         className: N.deleteButton,
-        tooltip: S.default.Messages.GAME_INVITES_DELETE_ALL,
+        tooltip: g.default.Messages.GAME_INVITES_DELETE_ALL,
         color: E.CircleIconButtonColors.SECONDARY,
         icon: (0, a.jsx)(d.TrashIcon, {
           width: 16,
@@ -83,19 +83,19 @@ function _(e) {
       children: (0, a.jsxs)("div", {
         className: N.invitesContainer,
         children: [A.length > 0 && (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(I, {
-            title: S.default.Messages.GAME_INVITES_RECENT_HEADER
+          children: [(0, a.jsx)(T, {
+            title: g.default.Messages.GAME_INVITES_RECENT_HEADER
           }), (0, a.jsx)(a.Fragment, {
-            children: A.map(e => (0, a.jsx)(g.default, {
+            children: A.map(e => (0, a.jsx)(S.default, {
               invite: e,
               expired: !1
             }, e.invite_id))
           })]
-        }), x.length > 0 && (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)(I, {
-            title: S.default.Messages.GAME_INVITES_EXPIRED_HEADER
+        }), M.length > 0 && (0, a.jsxs)(a.Fragment, {
+          children: [(0, a.jsx)(T, {
+            title: g.default.Messages.GAME_INVITES_EXPIRED_HEADER
           }), (0, a.jsx)(a.Fragment, {
-            children: x.map(e => (0, a.jsx)(g.default, {
+            children: M.map(e => (0, a.jsx)(S.default, {
               invite: e,
               expired: !0
             }, e.invite_id))
@@ -106,7 +106,7 @@ function _(e) {
   })
 }
 
-function I(e) {
+function T(e) {
   let {
     title: t
   } = e;

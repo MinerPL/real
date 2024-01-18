@@ -19,8 +19,8 @@ var s, a, l = n("167115"),
   C = n("824326"),
   p = n("616225"),
   m = n("12724"),
-  g = n("959097"),
-  E = n("507491"),
+  E = n("959097"),
+  g = n("507491"),
   S = n("49111"),
   A = n("782340");
 
@@ -33,13 +33,13 @@ function _(e) {
     hasClips: _,
     channel: T,
     activities: M,
-    newClipsCount: I,
-    canPostPolls: N,
+    newClipsCount: N,
+    canPostPolls: I,
     appContext: v
   } = e, L = [];
   return t && (L.push({
     type: "UPLOAD_A_FILE",
-    icon: E.default,
+    icon: g.default,
     display: A.default.Messages.CHAT_ATTACH_UPLOAD_A_FILE
   }), L.push({
     type: "UPLOAD_TEXT_AS_FILE",
@@ -49,13 +49,13 @@ function _(e) {
     type: "CLIPS",
     icon: f.default,
     display: A.default.Messages.CLIPS_SHARE_A_CLIP,
-    badgeVal: I,
+    badgeVal: N,
     badgeColor: o.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND
   }), n && L.push({
     type: "CREATE_THREAD",
-    icon: g.default,
+    icon: E.default,
     display: A.default.Messages.CREATE_THREAD
-  }), N && L.push({
+  }), I && L.push({
     type: "POLL",
     icon: l.PollsIcon,
     display: A.default.Messages.CREATE_POLL

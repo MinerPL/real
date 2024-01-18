@@ -1,33 +1,33 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var i = n("884691"),
-  l = n("79112"),
-  r = n("685665"),
-  a = n("929423");
+  a = n("79112"),
+  l = n("685665"),
+  r = n("929423");
 n("424562");
 var s = n("49111"),
-  o = n("397336");
+  u = n("397336");
 
-function u(e) {
+function o(e) {
   let {
     guild: t,
     scrollPosition: n,
-    analyticsLocation: u,
+    analyticsLocation: o,
     analyticsLocations: d,
     openWithoutBackstack: c = !1
   } = e, {
-    analyticsLocations: f
-  } = (0, r.default)(), h = (0, i.useCallback)(() => {
-    null != t && (0, a.initGuildIdentitySettings)(t, null != d ? d : f), l.default.open(s.UserSettingsSections.PROFILE_CUSTOMIZATION, null != t ? o.ProfileCustomizationSubsection.GUILD : o.ProfileCustomizationSubsection.USER_PROFILE, {
+    analyticsLocations: E
+  } = (0, l.default)(), _ = (0, i.useCallback)(() => {
+    null != t && (0, r.initGuildIdentitySettings)(t, null != d ? d : E), a.default.open(s.UserSettingsSections.PROFILE_CUSTOMIZATION, null != t ? u.ProfileCustomizationSubsection.GUILD : u.ProfileCustomizationSubsection.USER_PROFILE, {
       scrollPosition: n,
-      analyticsLocation: u,
+      analyticsLocation: o,
       analyticsLocations: d,
       openWithoutBackstack: c
     })
-  }, [t, n, u, d, c, f]);
-  return h
+  }, [t, n, o, d, c, E]);
+  return _
 }

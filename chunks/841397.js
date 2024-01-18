@@ -24,9 +24,9 @@ function d(e) {
     onReportClick: C,
     onReportSubmit: p,
     onMouseEnter: m,
-    onMouseLeave: g
-  } = e, E = (0, r.useIsRelationshipTypeSpamReportable)(t), S = (0, o.useLongestChannelMessageBeforeReply)(n.id, t);
-  if (!E || null == S) return null;
+    onMouseLeave: E
+  } = e, g = (0, r.useIsRelationshipTypeSpamReportable)(t), S = (0, o.useLongestChannelMessageBeforeReply)(n.id, t);
+  if (!g || null == S) return null;
   let A = () => {
     null == p || p(), l.default.closePrivateChannel(n.id, h)
   };
@@ -39,7 +39,7 @@ function d(e) {
       null == C || C(), (0, i.showReportModalForFirstDM)(S, A)
     },
     onMouseEnter: m,
-    onMouseLeave: g,
+    onMouseLeave: E,
     children: null != f ? f : u.default.Messages.REPORT_SPAM
   })
 }

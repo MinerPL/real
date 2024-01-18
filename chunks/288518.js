@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return C
   }
 }), n("222007");
 var s = n("988415"),
@@ -116,4 +116,4 @@ class y extends r.default {
   }
 }
 y.displayName = "MessageRequestStore", y.LATEST_SNAPSHOT_VERSION = 1;
-var T = new y
+var C = new y

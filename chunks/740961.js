@@ -19,7 +19,7 @@ var s = n("37983"),
   p = n("782340"),
   m = n("887960");
 
-function g(e) {
+function E(e) {
   let {
     channel: t,
     onClose: n,
@@ -49,7 +49,7 @@ function g(e) {
   })
 }
 
-function E(e) {
+function g(e) {
   return e.matches("a") || "highlight" === e.className || e.className.includes("mention")
 }
 class S extends a.Component {
@@ -80,10 +80,10 @@ class S extends a.Component {
     super(...e), this._mouseDown = !1, this._mouseUp = !1, this.handleOpenTopic = e => {
       let t = e.target;
       if ((0, r.isElement)(t)) {
-        if (E(t)) return;
+        if (g(t)) return;
         let e = t.parentNode;
-        if ((0, r.isElement)(e) && E(e)) return
-      }(0, o.openModal)(e => (0, s.jsx)(g, {
+        if ((0, r.isElement)(e) && g(e)) return
+      }(0, o.openModal)(e => (0, s.jsx)(E, {
         ...e,
         ...this.props
       }))

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   handleLegacyCommands: function() {
-    return g
+    return E
   }
 }), n("222007"), n("781738");
 var s = n("132710"),
@@ -104,7 +104,7 @@ function m(e, t, n, s) {
   }), t.action(n, s)
 }
 
-function g(e, t) {
+function E(e, t) {
   for (let s in p) {
     let a = p[s];
     if (null != a.match) {

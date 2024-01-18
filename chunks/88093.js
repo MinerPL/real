@@ -48,20 +48,20 @@ function g(e) {
     E = n.verificationLevel >= u.VerificationLevels.LOW && !s.isClaimed(),
     p = !1,
     y = !1,
-    T = !1,
-    C = !1;
-  !s.isPhoneVerified() && !s.isStaff() && (p = n.verificationLevel >= u.VerificationLevels.LOW && !s.verified, y = n.verificationLevel >= u.VerificationLevels.VERY_HIGH, T = n.verificationLevel >= u.VerificationLevels.MEDIUM && h > 0, C = n.verificationLevel >= u.VerificationLevels.HIGH && v > 0);
+    C = !1,
+    T = !1;
+  !s.isPhoneVerified() && !s.isStaff() && (p = n.verificationLevel >= u.VerificationLevels.LOW && !s.verified, y = n.verificationLevel >= u.VerificationLevels.VERY_HIGH, C = n.verificationLevel >= u.VerificationLevels.MEDIUM && h > 0, T = n.verificationLevel >= u.VerificationLevels.HIGH && v > 0);
   let S = [];
-  C && S.push(v), T && S.push(h), S.length > 0 && (t = setTimeout(() => i.default.dispatch({
+  T && S.push(v), C && S.push(h), S.length > 0 && (t = setTimeout(() => i.default.dispatch({
     type: "GUILD_VERIFICATION_CHECK",
     guildId: e
   }), Math.max(...S))), c[e] = {
     notClaimed: E,
     notEmailVerified: p,
     notPhoneVerified: y,
-    newAccount: T,
-    newMember: C,
-    canChat: !(E || p || y || T || C),
+    newAccount: C,
+    newMember: T,
+    canChat: !(E || p || y || C || T),
     accountDeadline: new Date(Date.now() + h),
     memberDeadline: new Date(Date.now() + v),
     timeoutRef: t

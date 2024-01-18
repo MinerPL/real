@@ -22,8 +22,8 @@ let m = 1 * f.default.Millis.MINUTE,
   E = /live_user_(.*)-\{width\}/,
   p = null,
   y = 0,
-  T = null,
-  C = new Set,
+  C = null,
+  T = new Set,
   S = {};
 
 function I(e, t, n) {
@@ -53,7 +53,7 @@ let D = new class e {
     !this._started && (this._started = !0, _.default.isFetching() ? d.default.fetch() : this._check())
   }
   stop() {
-    this._started = !1, T = null, y = 0, null != this._nextCheck && clearTimeout(this._nextCheck), o.default.dispatch({
+    this._started = !1, C = null, y = 0, null != this._nextCheck && clearTimeout(this._nextCheck), o.default.dispatch({
       type: "STREAMING_UPDATE",
       stream: null
     })
@@ -97,7 +97,7 @@ let D = new class e {
   }
   async _checkYouTube(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-    if (T = null, e.revoked || C.has(e.id)) return null;
+    if (C = null, e.revoked || T.has(e.id)) return null;
     try {
       var n;
       let {
@@ -126,7 +126,7 @@ let D = new class e {
       } = s[0], d = {
         large_image: null !== (n = (0, l.getAssetFromImageURL)(g.PlatformTypes.YOUTUBE, o.high.url)) && void 0 !== n ? n : void 0
       };
-      return T = {
+      return C = {
         url: h(i),
         name: u.default.get(g.PlatformTypes.YOUTUBE).name,
         details: r,
@@ -134,7 +134,7 @@ let D = new class e {
       }
     } catch (n) {
       if (401 === n.status && null == t) return d.default.refreshAccessToken(e.type, e.id).then(t => this._checkYouTube(e, t)).catch(() => null);
-      return 403 === n.status && C.add(e.id), null
+      return 403 === n.status && T.add(e.id), null
     }
   }
   _check() {
@@ -150,7 +150,7 @@ let D = new class e {
       if (this._started) {
         var t;
         let n = null === (t = e.find(e => "fulfilled" === e.status && null != e.value)) || void 0 === t ? void 0 : t.value;
-        null == n && null != T && (n = T), o.default.dispatch({
+        null == n && null != C && (n = C), o.default.dispatch({
           type: "STREAMING_UPDATE",
           stream: n
         })

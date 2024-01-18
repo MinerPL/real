@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return y
   },
   updateImpersonatedChannels: function() {
-    return C
+    return T
   },
   updateImpersonatedRoles: function() {
     return S
@@ -44,7 +44,7 @@ function E(e, t) {
     type: "IMPERSONATE_UPDATE",
     guildId: e,
     data: t
-  }), T(e)
+  }), C(e)
 }
 
 function p(e, t) {
@@ -60,7 +60,7 @@ function p(e, t) {
       ...n,
       ...t
     }
-  }), T(e))
+  }), C(e))
 }
 
 function y(e) {
@@ -70,7 +70,7 @@ function y(e) {
   })
 }
 
-function T(e) {
+function C(e) {
   let t = f.default.getChannelId(e),
     n = a.default.getChannel(t),
     s = null != t && (0, v.isStaticChannelRoute)(t);
@@ -80,7 +80,7 @@ function T(e) {
   }
 }
 
-function C(e, t, n) {
+function T(e, t, n) {
   let s = new Set(_.default.getOptedInChannels(e));
   t.forEach(e => s.add(e)), n.forEach(e => s.delete(e)), p(e, {
     type: m.ImpersonateType.NEW_MEMBER,
@@ -100,7 +100,7 @@ function S(e, t) {
       if (s.some(e => !t.roles.includes(e))) return !0;
       let i = [...o.default.getSelectableChannelIds(e), ...o.default.getVocalChannelIds(e)],
         r = i.filter(e => !n.includes(e));
-      return r.length > 0 && C(e, r, []), !1
+      return r.length > 0 && T(e, r, []), !1
     })
   }(e, t);
   let s = {};

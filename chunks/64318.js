@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 });
 var a = n("37983");
@@ -19,29 +19,29 @@ var l = n("414456"),
   E = n("520899"),
   m = n("913796"),
   p = n("826267"),
-  g = n("956089"),
-  S = n("124031"),
+  S = n("956089"),
+  g = n("124031"),
   N = n("782340"),
   _ = n("804220");
 
-function I(e) {
+function T(e) {
   let t = (0, m.useInDesktopNotificationCenterExperiment)();
-  return t ? (0, a.jsx)(T, {
+  return t ? (0, a.jsx)(I, {
     ...e
   }) : (0, a.jsx)(C, {
     ...e
   })
 }
 
-function T(e) {
+function I(e) {
   let {
     tab: t,
     setTab: n,
     children: l,
     badgeState: m,
-    closePopout: I
+    closePopout: T
   } = e, {
-    showReminders: T
+    showReminders: I
   } = h.default.useExperiment({
     location: "RecentsHeader"
   }, {
@@ -50,7 +50,7 @@ function T(e) {
     enabled: C
   } = f.default.useExperiment({
     location: "RecentsHeader"
-  }), A = (0, i.default)([c.default], () => c.default.getUnseenInviteCount()), x = (0, i.default)([E.default], () => E.default.getMessageReminders()), v = x.length;
+  }), A = (0, i.default)([c.default], () => c.default.getUnseenInviteCount()), M = (0, i.default)([E.default], () => E.default.getMessageReminders()), v = M.length;
   return (0, a.jsxs)(u.Header, {
     className: s(_.header, _.expanded),
     children: [(0, a.jsxs)("div", {
@@ -61,8 +61,8 @@ function T(e) {
         className: _.inboxTitle,
         variant: "text-lg/semibold",
         children: N.default.Messages.INBOX
-      }), (0, a.jsx)(S.default, {
-        closePopout: I
+      }), (0, a.jsx)(g.default, {
+        closePopout: T
       })]
     }), (0, a.jsxs)("div", {
       className: s(_.expandedTabSection),
@@ -76,7 +76,7 @@ function T(e) {
           className: s(_.tab, _.expanded, {
             [_.active]: t === r.InboxTab.FOR_YOU
           }),
-          children: [N.default.Messages.FOR_YOU, (null == m ? void 0 : m.badgeForYou) ? (0, a.jsx)(g.CircleBadge, {
+          children: [N.default.Messages.FOR_YOU, (null == m ? void 0 : m.badgeForYou) ? (0, a.jsx)(S.CircleBadge, {
             color: d.default.STATUS_DANGER,
             className: s(_.iconBadge)
           }) : null]
@@ -99,17 +99,17 @@ function T(e) {
           className: s(_.tab, _.expanded, {
             [_.active]: t === r.InboxTab.GAME_INVITES
           }),
-          children: [N.default.Messages.GAME_INVITES, A > 0 ? (0, a.jsx)(g.CircleBadge, {
+          children: [N.default.Messages.GAME_INVITES, A > 0 ? (0, a.jsx)(S.CircleBadge, {
             color: d.default.STATUS_DANGER,
             className: s(_.iconBadge)
           }) : null]
-        }) : null, T ? (0, a.jsxs)(o.TabBar.Item, {
+        }) : null, I ? (0, a.jsxs)(o.TabBar.Item, {
           "aria-label": "todos",
           id: r.InboxTab.TODOS,
           className: s(_.tab, _.expanded, {
             [_.active]: t === r.InboxTab.TODOS
           }),
-          children: [N.default.Messages.MESSAGE_REMINDERS_HEADER, v > 0 ? (0, a.jsx)(g.CircleBadge, {
+          children: [N.default.Messages.MESSAGE_REMINDERS_HEADER, v > 0 ? (0, a.jsx)(S.CircleBadge, {
             color: d.default.STATUS_DANGER,
             className: s(_.iconBadge)
           }) : null]

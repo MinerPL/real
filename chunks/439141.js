@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return y
   },
   applyInitialVideoBackgroundOption: function() {
-    return T
+    return C
   }
 }), n("332822"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341");
 var s = n("627445"),
@@ -107,7 +107,7 @@ async function y(e, t, n) {
   }, e), s && (0, f.trackBackgroundOptionUpdated)(e, i, "Preview")
 }
 
-function T() {
+function C() {
   let e = a.default.getCurrentUser();
   if (null == e) return;
   let t = (0, d.getLastUsedVideoBackgroundOption)(e);

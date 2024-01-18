@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return m
   },
   deleteNotificationCenterItem: function() {
-    return g
+    return S
   }
 });
 var a = n("759843"),
@@ -106,7 +106,7 @@ async function p(e) {
     })
   }
 }
-async function g(e) {
+async function S(e) {
   let t = r.NotificationCenterAckedBeforeId.getSetting();
   try {
     i.default.dispatch({

@@ -24,8 +24,8 @@ var s, i = n("917351"),
   E = n("590401"),
   p = n("278163"),
   y = n("599110"),
-  T = n("104478"),
-  C = n("374014"),
+  C = n("104478"),
+  T = n("374014"),
   S = n("933034"),
   I = n("196383"),
   A = n("49111"),
@@ -152,7 +152,7 @@ s = class extends d.default {
         })
       }
     }), this.on(u.RTCConnectionEvent.Video, (t, n, s, i, r) => {
-      let a = (0, C.decodeStreamKey)(this._streamKey);
+      let a = (0, T.decodeStreamKey)(this._streamKey);
       a.guildId === t && a.channelId === n && a.ownerId === s && (null != this.getMediaSessionId() && !e && (this._trackVideoStartStats(), e = !0), this._updateVideoStreamId(i, r))
     }), this.on(u.RTCConnectionEvent.VideoSourceQualityChanged, (e, t, n, s, i, r) => {
       o.default.wait(() => o.default.dispatch({
@@ -246,7 +246,7 @@ s = class extends d.default {
   }
   _getExtraConnectionOptions() {
     return {
-      streamUserId: (0, C.decodeStreamKey)(this._streamKey).ownerId
+      streamUserId: (0, T.decodeStreamKey)(this._streamKey).ownerId
     }
   }
   constructor({
@@ -258,7 +258,7 @@ s = class extends d.default {
     isStreamer: a,
     parentMediaSessionId: d
   }) {
-    let u = (0, C.decodeStreamKey)(t),
+    let u = (0, T.decodeStreamKey)(t),
       {
         guildId: l,
         channelId: f
@@ -271,12 +271,12 @@ s = class extends d.default {
       context: D.MediaEngineContextTypes.STREAM,
       rtcServerId: n,
       parentMediaSessionId: d
-    }), this._streamContext = u, this._streamKey = t, this._isStreamer = a, this._videoStreamStats = new T.default(s, this.isOwner), this.analyticsContext = i, this._updateVideoStreamId = r.debounce((e, t) => {
+    }), this._streamContext = u, this._streamKey = t, this._isStreamer = a, this._videoStreamStats = new C.default(s, this.isOwner), this.analyticsContext = i, this._updateVideoStreamId = r.debounce((e, t) => {
       let {
         guildId: n,
         channelId: s,
         ownerId: i
-      } = (0, C.decodeStreamKey)(this._streamKey);
+      } = (0, T.decodeStreamKey)(this._streamKey);
       o.default.wait(() => o.default.dispatch({
         type: "RTC_CONNECTION_VIDEO",
         guildId: n,

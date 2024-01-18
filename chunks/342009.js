@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return g
   }
 }), n("222007");
 var s = n("37983"),
@@ -19,7 +19,7 @@ var s = n("37983"),
   p = n("555821"),
   m = n("877671");
 
-function g(e) {
+function E(e) {
   let {
     expanded: t,
     onClick: n,
@@ -54,7 +54,7 @@ function g(e) {
     })
   })
 }
-var E = a.memo(function(e) {
+var g = a.memo(function(e) {
   var t;
   let {
     messages: n,
@@ -64,7 +64,7 @@ var E = a.memo(function(e) {
     collapsedReason: u
   } = e, {
     hasJumpTarget: d = !1
-  } = n, [C, E] = a.useState(d), S = a.useCallback(() => E(e => !e), []), A = n.hasUnread ? n.content.length - 1 : n.content.length;
+  } = n, [C, g] = a.useState(d), S = a.useCallback(() => g(e => !e), []), A = n.hasUnread ? n.content.length - 1 : n.content.length;
   return (0, s.jsxs)("div", {
     className: i({
       [m.groupStart]: !0,
@@ -73,7 +73,7 @@ var E = a.memo(function(e) {
     children: [n.hasUnread && (!C || (null === (t = n.content[0]) || void 0 === t ? void 0 : t.type) === h.ChannelStreamTypes.DIVIDER) ? (0, s.jsx)(f.default, {
       isUnread: !0,
       id: o
-    }, "divider") : null, (0, s.jsx)(g, {
+    }, "divider") : null, (0, s.jsx)(E, {
       count: A,
       compact: r,
       expanded: C,

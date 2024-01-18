@@ -2,7 +2,7 @@
 let s, i;
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return T
   }
 }), n("424973"), n("222007"), n("70102"), n("808653");
 var r, a, o = n("917351"),
@@ -146,7 +146,7 @@ function y(e) {
   var t;
   return null === (t = E[e]) || void 0 === t ? void 0 : t.defaultSettings
 }
-class T extends l.default.PersistedStore {
+class C extends l.default.PersistedStore {
   initialize(e) {
     null != e && null != e.layouts && null != e.widgets ? (s = function(e) {
       let t = {};
@@ -252,7 +252,7 @@ class T extends l.default.PersistedStore {
     }), t
   }
 }
-T.displayName = "LayoutStore", T.persistKey = "LayoutStore", T.migrations = [() => {
+C.displayName = "LayoutStore", C.persistKey = "LayoutStore", C.migrations = [() => {
   let e = {
       ...f.default.get("OverlayStore")
     },
@@ -348,7 +348,7 @@ T.displayName = "LayoutStore", T.persistKey = "LayoutStore", T.migrations = [() 
     widgets: i
   }
 }];
-var C = new T(_.default, {
+var T = new C(_.default, {
   LAYOUT_CREATE: function(e) {
     let {
       layoutId: t,

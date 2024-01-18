@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 }), n("222007");
 var a = n("37983"),
@@ -18,7 +18,7 @@ var a = n("37983"),
   E = n("868308"),
   m = n("782340"),
   p = n("122693");
-class g extends l.PureComponent {
+class S extends l.PureComponent {
   static getDerivedStateFromProps(e, t) {
     return e.mode !== t.memoizedMode ? {
       memoizedMode: e.mode,
@@ -72,6 +72,6 @@ class g extends l.PureComponent {
     }
   }
 }
-var S = s.default.connectStores([u.default], () => ({
+var g = s.default.connectStores([u.default], () => ({
   mode: u.default.getState()
-}))(g)
+}))(S)

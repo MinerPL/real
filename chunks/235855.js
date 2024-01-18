@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return u
   }
 }), n("222007"), n("70102");
 var i = n("884691"),
   l = n("748820"),
-  r = n("157590");
-let a = (0, l.v4)(),
-  s = new Map,
+  s = n("157590");
+let r = (0, l.v4)(),
+  a = new Map,
   o = new Map;
-class u extends i.Component {
+class c extends i.Component {
   componentDidMount() {
     if (this.props.active) {
       let e = this.getVisibilityObserver();
@@ -48,20 +48,20 @@ class u extends i.Component {
       rootMargin: n,
       threshold: i
     } = e;
-    t ? s.has(t) ? this.elementId = s.get(t) || "" : s.set(t, (0, l.v4)()) : this.elementId = a;
-    let u = this.getVisibilityObserverId();
-    !o.has(u) && o.set(u, new r.default({
+    t ? a.has(t) ? this.elementId = a.get(t) || "" : a.set(t, (0, l.v4)()) : this.elementId = r;
+    let c = this.getVisibilityObserverId();
+    !o.has(c) && o.set(c, new s.default({
       root: t,
       rootMargin: n,
       threshold: i
     }))
   }
 }
-u.defaultProps = {
+c.defaultProps = {
   active: !0,
   children: i.createElement("span"),
   root: null,
   rootMargin: "0px 0px 0px 0px",
   threshold: [0, Number.MIN_VALUE]
 };
-var d = u
+var u = c

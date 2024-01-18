@@ -27,8 +27,8 @@ var s, i, r, a, o = n("627445"),
   E = n("718517"),
   p = n("254490"),
   y = n("231987"),
-  T = n("980134"),
-  C = n("282928"),
+  C = n("980134"),
+  T = n("282928"),
   S = n("49111");
 let I = null;
 __OVERLAY__ && (I = n("901165").default), (r = s || (s = {})).OVERLAY_UNLOCKED = "overlay_unlocked", r.OVERLAY_UNLOCKED_PINNED = "overlay_unlocked_pinned", r.OVERLAY_LOCKED_ACTIVATED = "overlay_locked_activated", (a = i || (i = {}))[a.SEND = 0] = "SEND", a[a.EDIT = 1] = "EDIT", a[a.COMMAND = 2] = "COMMAND";
@@ -190,7 +190,7 @@ class b extends y.default {
       };
     if (null != u) {
       g.data.attachments = [], n = [];
-      g.data.attachments = u.map((e, t) => (d(e.status === C.CloudUploadStatus.COMPLETED, "Uploads must be staged before trying to send a message"), (0, T.getAttachmentPayload)(e, t)))
+      g.data.attachments = u.map((e, t) => (d(e.status === T.CloudUploadStatus.COMPLETED, "Uploads must be staged before trying to send a message"), (0, C.getAttachmentPayload)(e, t)))
     }
     let m = new AbortController;
     l.default.post({

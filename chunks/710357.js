@@ -23,7 +23,7 @@ function c(e) {
   } = e, h = (0, a.useStateFromStores)([i.default], () => i.default.useReducedMotion), C = null !== (t = (0, o.default)(n)) && void 0 !== t ? t : "", {
     avatarDecorationSrc: p,
     eventHandlers: m,
-    isAnimating: g
+    isAnimating: E
   } = (0, u.default)({
     user: f,
     size: l.AvatarSizes.SIZE_80,
@@ -35,7 +35,7 @@ function c(e) {
     children: [(0, s.jsx)(l.Avatar, {
       "aria-label": C,
       size: l.AvatarSizes.SIZE_80,
-      src: (0, r.getChannelIconURL)(n, 80, !h && g),
+      src: (0, r.getChannelIconURL)(n, 80, !h && E),
       avatarDecoration: p
     }), (0, s.jsx)(d.EmptyMessageHeader, {
       children: C

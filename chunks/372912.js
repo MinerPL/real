@@ -19,8 +19,8 @@ var a = n("414456"),
   C = n("959097"),
   p = n("158998"),
   m = n("172554"),
-  g = n("49111"),
-  E = n("782340"),
+  E = n("49111"),
+  g = n("782340"),
   S = n("881812");
 
 function A(e) {
@@ -28,9 +28,9 @@ function A(e) {
   let {
     userId: u,
     channel: C
-  } = e, m = (0, i.useStateFromStores)([h.default], () => h.default.getUser(u)), g = (0, i.useStateFromStores)([f.default], () => null != u ? f.default.getMember(C.guild_id, u) : null);
+  } = e, m = (0, i.useStateFromStores)([h.default], () => h.default.getUser(u)), E = (0, i.useStateFromStores)([f.default], () => null != u ? f.default.getMember(C.guild_id, u) : null);
 
-  function E(e) {
+  function g(e) {
     if (null == m) return null;
     (0, o.openContextMenuLazy)(e, async () => {
       let {
@@ -44,8 +44,8 @@ function A(e) {
       })
     })
   }
-  let A = null !== (a = null !== (t = null == g ? void 0 : g.nick) && void 0 !== t ? t : p.default.getName(m)) && void 0 !== a ? a : "???",
-    _ = null == g ? void 0 : g.colorString;
+  let A = null !== (a = null !== (t = null == E ? void 0 : E.nick) && void 0 !== t ? t : p.default.getName(m)) && void 0 !== a ? a : "???",
+    _ = null == E ? void 0 : E.colorString;
   return null == m ? (0, s.jsx)("span", {
     className: l(S.threadCreatorName, S.unknownCreatorName),
     children: A
@@ -65,7 +65,7 @@ function A(e) {
       ...e,
       tag: "span",
       className: S.threadCreatorName,
-      onContextMenu: E,
+      onContextMenu: g,
       children: (0, s.jsx)(r.NameWithRole, {
         name: A,
         color: null != _ ? _ : void 0
@@ -90,17 +90,17 @@ function _(e) {
       color: "header-secondary",
       children: (0, s.jsx)("div", {
         className: S.subtitle,
-        children: E.default.Messages.THREAD_STARTED_BY.format({
+        children: g.default.Messages.THREAD_STARTED_BY.format({
           usernameHook: (e, n) => (0, s.jsx)(A, {
             userId: t.ownerId,
             channel: t
           }, n)
         })
       })
-    }), t.type === g.ChannelTypes.PRIVATE_THREAD ? (0, s.jsx)(r.Text, {
+    }), t.type === E.ChannelTypes.PRIVATE_THREAD ? (0, s.jsx)(r.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      children: E.default.Messages.EMPTY_MESSAGE_PRIVATE_THREAD_INSTRUCTIONS
+      children: g.default.Messages.EMPTY_MESSAGE_PRIVATE_THREAD_INSTRUCTIONS
     }) : null]
   })
 }

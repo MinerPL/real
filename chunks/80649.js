@@ -18,17 +18,17 @@ var a = n("37983"),
   E = n("42203"),
   m = n("247013"),
   p = n("18494"),
-  g = n("211248"),
-  S = n("116320"),
+  S = n("211248"),
+  g = n("116320"),
   N = n("945330"),
   _ = n("138217"),
-  I = n("530686"),
-  T = n("998530"),
+  T = n("530686"),
+  I = n("998530"),
   C = n("814744"),
   A = n("805614"),
-  x = n("64318"),
+  M = n("64318"),
   v = n("49111"),
-  M = n("782340"),
+  x = n("782340"),
   R = n("228146");
 let L = {
   offset: {
@@ -52,10 +52,10 @@ function b(e) {
     badgeState: f,
     closePopout: h
   } = e, m = (0, s.useStateFromStores)([E.default, p.default], () => E.default.getChannel(p.default.getChannelId())), {
-    messages: g,
-    hasMore: S,
+    messages: S,
+    hasMore: g,
     loading: N,
-    guildFilter: I,
+    guildFilter: T,
     roleFilter: C,
     everyoneFilter: A
   } = (0, s.useStateFromStoresObject)([_.default], () => ({
@@ -65,26 +65,26 @@ function b(e) {
     guildFilter: _.default.guildFilter,
     roleFilter: _.default.roleFilter,
     everyoneFilter: _.default.everyoneFilter
-  })), L = (0, u.default)(I), b = (0, u.default)(C), y = (0, u.default)(A);
+  })), L = (0, u.default)(T), b = (0, u.default)(C), y = (0, u.default)(A);
   l.useEffect(() => {
     if (!_.default.hasLoadedEver) {
       O(m, !0);
       return
-    }(null != L && I !== L || null != b && C !== b || null != y && A !== y) && O(m, !0)
-  }, [L, I, b, C, y, A, m, !0]);
+    }(null != L && T !== L || null != b && C !== b || null != y && A !== y) && O(m, !0)
+  }, [L, T, b, C, y, A, m, !0]);
   l.useEffect(() => {
     d.AttachmentLinkRefreshExperiment.getCurrentConfig({
       location: "mentions"
-    }).enabled && (null == g ? void 0 : g.some(c.messageHasExpiredAttachmentUrl)) && (r.default.clearMentions(), O(m, !0))
+    }).enabled && (null == S ? void 0 : S.some(c.messageHasExpiredAttachmentUrl)) && (r.default.clearMentions(), O(m, !0))
   }, []), l.useEffect(() => () => {
     r.default.truncateMentions(v.MAX_MENTIONS_PER_FETCH)
   }, []);
-  let F = l.useCallback(() => (0, a.jsx)(x.default, {
+  let D = l.useCallback(() => (0, a.jsx)(M.default, {
     tab: i.InboxTab.MENTIONS,
     setTab: t,
     badgeState: f,
     closePopout: h,
-    children: (0, a.jsx)(T.default, {})
+    children: (0, a.jsx)(I.default, {})
   }), [!0, t, f, h]);
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsx)(o.default, {
@@ -96,40 +96,40 @@ function b(e) {
         r.default.deleteRecentMention(e.id)
       },
       channel: m,
-      messages: g,
+      messages: S,
       loading: N,
-      hasMore: S,
+      hasMore: g,
       analyticsName: "Recent Mentions",
       loadMore: function() {
-        let e = null != g && g.length > 0 ? g[g.length - 1].id : null;
+        let e = null != S && S.length > 0 ? S[S.length - 1].id : null;
         O(m, !0, e)
       },
       canCloseAllMessages: !0,
-      renderHeader: F,
-      renderEmptyState: D,
+      renderHeader: D,
+      renderEmptyState: F,
       renderMessage: j,
-      "aria-label": M.default.Messages.RECENT_MENTIONS,
+      "aria-label": x.default.Messages.RECENT_MENTIONS,
       listName: "recents"
     })
   })
 }
 
 function y(e, t) {
-  return [(0, a.jsx)(F, {
+  return [(0, a.jsx)(D, {
     message: e,
     gotoMessage: t
   }, e.id)]
 }
 
 function j(e, t) {
-  return [(0, a.jsx)(F, {
+  return [(0, a.jsx)(D, {
     message: e,
     gotoMessage: t,
     dismissible: !0
   }, e.id)]
 }
 
-function F(e) {
+function D(e) {
   let {
     message: t,
     gotoMessage: n,
@@ -145,10 +145,10 @@ function F(e) {
     children: [(0, a.jsx)(C.default, {
       channel: s,
       gotoChannel: n,
-      children: null != l ? (0, a.jsx)(g.default, {
+      children: null != l ? (0, a.jsx)(S.default, {
         className: R.closeButton,
-        tooltip: M.default.Messages.CLOSE,
-        color: g.CircleIconButtonColors.TERTIARY,
+        tooltip: x.default.Messages.CLOSE,
+        color: S.CircleIconButtonColors.TERTIARY,
         icon: (0, a.jsx)(N.default, {
           width: 16,
           height: 16
@@ -157,7 +157,7 @@ function F(e) {
       }) : null
     }), (0, a.jsxs)("div", {
       className: R.messageContainer,
-      children: [(0, a.jsx)(I.default, {
+      children: [(0, a.jsx)(T.default, {
         className: R.jumpButton,
         onJump: n
       }), (0, a.jsx)(f.default, {
@@ -174,10 +174,10 @@ function F(e) {
   })
 }
 
-function D(e) {
+function F(e) {
   return (0, a.jsx)(A.default, {
-    Icon: S.default,
-    header: M.default.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,
-    tip: M.default.Messages.RECENT_MENTIONS_EMPTY_STATE_TIP
+    Icon: g.default,
+    header: x.default.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,
+    tip: x.default.Messages.RECENT_MENTIONS_EMPTY_STATE_TIP
   })
 }

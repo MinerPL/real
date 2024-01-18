@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return I
   }
 }), n("222007"), n("860677");
 var s = n("37983"),
@@ -18,8 +18,8 @@ var s = n("37983"),
   C = n("191542"),
   p = n("451166"),
   m = n("28007"),
-  g = n("880731"),
-  E = n("943551"),
+  E = n("880731"),
+  g = n("943551"),
   S = n("119035"),
   A = n("65626"),
   _ = n("782340"),
@@ -28,7 +28,7 @@ let M = a.memo(function(e) {
     let {
       channelId: t,
       width: n
-    } = e, l = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), i = (0, o.useStateFromStores)([E.default], () => E.default.getMostRecentMessageCombo(t), [t]), [d, f] = a.useState(!1);
+    } = e, l = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), i = (0, o.useStateFromStores)([g.default], () => g.default.getMostRecentMessageCombo(t), [t]), [d, f] = a.useState(!1);
     a.useEffect(() => {
       if (null == i ? void 0 : i.displayed) return;
       f(!1), setImmediate(() => {
@@ -59,7 +59,7 @@ let M = a.memo(function(e) {
       })
     })
   }),
-  I = a.memo(function(e) {
+  N = a.memo(function(e) {
     let {
       value: t,
       multiplier: n
@@ -121,13 +121,13 @@ let M = a.memo(function(e) {
       })]
     })
   });
-var N = a.memo(function(e) {
+var I = a.memo(function(e) {
   let {
     channelId: t
-  } = e, n = (0, o.useStateFromStores)([h.default], () => h.default.getId()), l = (0, o.useStateFromStores)([C.default], () => C.default.isTyping(t, n), [t, n]), i = (0, o.useStateFromStores)([g.default], () => g.default.isEnabled()), u = (0, o.useStateFromStores)([E.default], () => E.default.isComboing(n, t), [t, n]), {
+  } = e, n = (0, o.useStateFromStores)([h.default], () => h.default.getId()), l = (0, o.useStateFromStores)([C.default], () => C.default.isTyping(t, n), [t, n]), i = (0, o.useStateFromStores)([E.default], () => E.default.isEnabled()), u = (0, o.useStateFromStores)([g.default], () => g.default.isComboing(n, t), [t, n]), {
     ref: f,
     width: p = 0
-  } = (0, d.default)(), m = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [S, _] = a.useState(!1), N = (0, A.default)(t), v = i && u && l;
+  } = (0, d.default)(), m = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [S, _] = a.useState(!1), I = (0, A.default)(t), v = i && u && l;
   a.useEffect(() => {
     v && _(!0);
     let e = setTimeout(() => _(v), 1e3);
@@ -140,10 +140,10 @@ var N = a.memo(function(e) {
       config: r.config.stiff,
       immediate: m
     }),
-    x = a.useMemo(() => null != N ? N : {
+    x = a.useMemo(() => null != I ? I : {
       value: 0,
       multiplier: 1
-    }, [N]),
+    }, [I]),
     R = a.useRef(x);
   a.useEffect(() => {
     (x.multiplier > 1 || x.value > 0) && (R.current = x)
@@ -163,7 +163,7 @@ var N = a.memo(function(e) {
       ref: f,
       className: T.combo,
       style: L,
-      children: (0, s.jsx)(I, {
+      children: (0, s.jsx)(N, {
         value: D,
         multiplier: y
       })

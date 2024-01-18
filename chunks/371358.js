@@ -25,10 +25,10 @@ n.r(t), n.d(t, {
     return p
   },
   createSubscriptionListing: function() {
-    return T
+    return C
   },
   updateSubscriptionListing: function() {
-    return C
+    return T
   },
   fetchMonetizationRestrictions: function() {
     return S
@@ -134,7 +134,7 @@ async function y(e, t) {
     listing: s
   }), s
 }
-async function T(e) {
+async function C(e) {
   let {
     guildId: t,
     groupListingId: n,
@@ -155,7 +155,7 @@ async function T(e) {
     listing: u
   }), u
 }
-async function C(e) {
+async function T(e) {
   let {
     guildId: t,
     listingId: n,

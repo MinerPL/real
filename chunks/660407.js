@@ -18,17 +18,17 @@ var a = n("37983"),
   E = n("393414"),
   m = n("42203"),
   p = n("211248"),
-  g = n("461380"),
-  S = n("36694"),
+  S = n("461380"),
+  g = n("36694"),
   N = n("11539"),
   _ = n("815978"),
-  I = n("814744"),
-  T = n("879165"),
+  T = n("814744"),
+  I = n("879165"),
   C = n("609023"),
   A = n("49111"),
-  x = n("782340"),
+  M = n("782340"),
   v = n("951244");
-let M = l.memo(function(e) {
+let x = l.memo(function(e) {
   let {
     channel: t,
     deleteChannel: n
@@ -70,7 +70,7 @@ let M = l.memo(function(e) {
     })
   })
 });
-var R = M;
+var R = x;
 let L = l.memo(function(e) {
   let {
     channel: t,
@@ -94,7 +94,7 @@ let L = l.memo(function(e) {
   return (0, a.jsx)("div", {
     className: v.channel,
     children: (0, a.jsx)(u.HeadingLevel, {
-      component: (0, a.jsxs)(I.default, {
+      component: (0, a.jsxs)(T.default, {
         channel: r,
         gotoChannel: h,
         mentionCount: t.mentionCount,
@@ -112,7 +112,7 @@ let L = l.memo(function(e) {
         channel: t,
         channelRecord: r,
         gotoChannel: h
-      }) : "forum" === t.type ? (0, a.jsx)(T.default, {
+      }) : "forum" === t.type ? (0, a.jsx)(I.default, {
         channel: t,
         channelRecord: r,
         deleteChannel: s
@@ -130,12 +130,12 @@ function O(e) {
   } = e, i = (0, h.default)(), r = i && null != t.guildId;
   return (0, a.jsx)(p.default, {
     className: v.markReadButton,
-    tooltip: r ? x.default.Messages.MARK_GUILD_AS_READ : x.default.Messages.MARK_AS_READ,
+    tooltip: r ? M.default.Messages.MARK_GUILD_AS_READ : M.default.Messages.MARK_AS_READ,
     color: p.CircleIconButtonColors.TERTIARY,
     icon: r ? (0, a.jsx)(N.default, {
       width: 16,
       height: 16
-    }) : (0, a.jsx)(S.default, {
+    }) : (0, a.jsx)(g.default, {
       width: 16,
       height: 16
     }),
@@ -166,14 +166,14 @@ function b(e) {
     })
   }
   return (0, a.jsx)(u.Tooltip, {
-    text: x.default.Messages.COLLAPSE,
+    text: M.default.Messages.COLLAPSE,
     children: e => (0, a.jsx)(u.Clickable, {
       ...e,
       className: i(v.collapseButton, {
         [v.collapsed]: t.collapsed
       }),
       onClick: s,
-      children: (0, a.jsx)(g.default, {
+      children: (0, a.jsx)(S.default, {
         width: 16,
         height: 16
       })

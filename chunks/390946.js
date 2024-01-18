@@ -31,8 +31,8 @@ var s = n("627445"),
   E = n("660478"),
   p = n("665618");
 let y = new c.default("ReadyPayloadUtils"),
-  T = {},
-  C = null,
+  C = {},
+  T = null,
   S = {};
 
 function I(e, t) {
@@ -74,13 +74,13 @@ function A(e, t) {
     private_channels: c,
     merged_members: h,
     guilds: y,
-    ...C
+    ...T
   } = e;
   (function() {
     ! function() {
       let e = o.default.database();
       null != e && !1 === u.default.okSync(e) && f.default.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok")
-    }(), T = {};
+    }(), C = {};
     let e = Object.values(v.default.getGuilds()),
       t = g.default.getGuilds(),
       n = m.default.getRawStickersByGuild(),
@@ -89,7 +89,7 @@ function A(e, t) {
       r = (0, _.isCacheEnabled)() ? l.default.getGuildIdsSync() : new Set;
     for (let o of e) {
       var a, c, h;
-      i.has(o.id) && r.has(o.id) && (T[o.id] = {
+      i.has(o.id) && r.has(o.id) && (C[o.id] = {
         properties: p.toServer(o),
         roles: o.roles,
         emojis: null !== (c = null === (a = t[o.id]) || void 0 === a ? void 0 : a.rawEmojis) && void 0 !== c ? c : null,
@@ -106,7 +106,7 @@ function A(e, t) {
   let A = null !== (n = null == y ? void 0 : y.map((e, t) => !0 === e.unavailable ? e : (e.members = O(S, null == h ? void 0 : h[t]), P(e)))) && void 0 !== n ? n : [],
     N = D(t, y, e => P(e));
   return null != N && A.push(N), {
-    ...C,
+    ...T,
     users: s,
     presences: [],
     relationships: I,
@@ -116,7 +116,7 @@ function A(e, t) {
 }
 
 function D(e, t, n) {
-  return null == C || C.identifyTime !== e || null != t && t.some(e => e.id === C.guild.id) ? null : n(C.guild)
+  return null == T || T.identifyTime !== e || null != t && t.some(e => e.id === T.guild.id) ? null : n(T.guild)
 }
 
 function N(e, t) {
@@ -129,7 +129,7 @@ function N(e, t) {
       stickers: null !== (i = m.default.getRawStickersByGuild().get(r.id)) && void 0 !== i ? i : null,
       readStates: {}
     });
-  return C = {
+  return T = {
     guild: e,
     identifyTime: t
   }, a
@@ -145,8 +145,8 @@ function O(e, t) {
 }
 
 function b(e) {
-  let t = T[e];
-  return delete T[e], t
+  let t = C[e];
+  return delete C[e], t
 }
 
 function P(e) {

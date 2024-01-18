@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return q
+    return X
   }
 }), n("424973"), n("222007"), n("843762");
 var s = n("37983"),
@@ -18,15 +18,15 @@ var s = n("37983"),
   C = n("554393"),
   p = n("120027"),
   m = n("934288"),
-  g = n("144491"),
-  E = n("933152"),
+  E = n("144491"),
+  g = n("933152"),
   S = n("820899"),
   A = n("347738"),
   _ = n("339670"),
   T = n("21763"),
   M = n("719926"),
-  I = n("957255"),
-  N = n("660478"),
+  N = n("957255"),
+  I = n("660478"),
   v = n("18494"),
   L = n("697218"),
   x = n("410889"),
@@ -35,8 +35,8 @@ var s = n("37983"),
   D = n("299039"),
   O = n("154864"),
   j = n("383667"),
-  b = n("459776"),
-  P = n("366757"),
+  P = n("459776"),
+  b = n("366757"),
   H = n("699473"),
   F = n("556118"),
   U = n("342009"),
@@ -53,7 +53,7 @@ var s = n("37983"),
 function Y(e) {
   return null != e && e.type === Z.ChannelStreamTypes.MESSAGE && e.content.id === e.groupId
 }
-let X = a.memo(function(e) {
+let q = a.memo(function(e) {
   let {
     file: t,
     channel: n,
@@ -84,13 +84,13 @@ let X = a.memo(function(e) {
   })
 });
 
-function q(e) {
+function X(e) {
   var t;
   let n, a, l, {
       channel: u,
       messages: x,
       unreadCount: H,
-      showNewMessagesBar: q,
+      showNewMessagesBar: X,
       messageDisplayCompact: J,
       channelStream: Q,
       uploads: $,
@@ -101,11 +101,11 @@ function q(e) {
     } = e,
     ea = L.default.getCurrentUser(),
     el = () => ee.isInitialized() || x.ready,
-    ei = (0, P.useShowConvoStarterInDM)(u),
+    ei = (0, b.useShowConvoStarterInDM)(u),
     er = x.length > 0 && (null === (t = x.first()) || void 0 === t ? void 0 : t.isFirstMessageInForumPost(u)),
     eo = (0, d.useChannelSummariesExperiment)(u),
     eu = (0, r.useStateFromStores)([A.default], () => A.default.shouldShowTopicsBar()),
-    ed = (0, E.useStrangerDangerWarning)(u.id, z.LOCATION_CONTEXT_WEB);
+    ed = (0, g.useStrangerDangerWarning)(u.id, z.LOCATION_CONTEXT_WEB);
   u.isDM() && null != ed && (n = (0, s.jsx)(S.StrangerDangerWarningBanner, {
     channelId: u.id,
     warningId: ed.id,
@@ -151,7 +151,7 @@ function q(e) {
         }, e.key)
       }
       if (null != en && en > e.content.timestamp.unix() * y.default.Millis.SECOND) return;
-      let l = I.default.can(Z.Permissions.CREATE_INSTANT_INVITE, u);
+      let l = N.default.can(Z.Permissions.CREATE_INSTANT_INVITE, u);
       if ((0, j.default)(e.content, l)) return;
       e.type === Z.ChannelStreamTypes.MESSAGE && null == eh && (eh = e);
       let i = e.groupId === (null == eh ? void 0 : eh.groupId) ? eh.content.id : e.groupId,
@@ -170,11 +170,11 @@ function q(e) {
   eC.push(...ep);
   let em = Q[Q.length - 1];
   if (null != ea && $.forEach((e, t) => {
-      let n = 0 === t && (0, b.isNewGroupItem)(u, em, new M.default({
+      let n = 0 === t && (0, P.isNewGroupItem)(u, em, new M.default({
         type: Z.MessageTypes.DEFAULT,
         author: ea
       }));
-      eC.push((0, s.jsx)(X, {
+      eC.push((0, s.jsx)(q, {
         file: e,
         channel: u,
         user: ea,
@@ -203,14 +203,14 @@ function q(e) {
       ...et
     }, "has-more-after")), !es && ei && el() && eC.push((0, s.jsx)(B.default, {
       channel: u
-    })), H > 0 && q && el()) {
+    })), H > 0 && X && el()) {
     let e, t;
-    let n = N.default.getOldestUnreadTimestamp(u.id),
+    let n = I.default.getOldestUnreadTimestamp(u.id),
       l = 0 !== n ? n : D.default.extractTimestamp(u.id),
       r = (0, R.isSameDay)(i(), i(new Date(l)));
-    if (N.default.isEstimated(u.id) ? (e = r ? K.default.Messages.NEW_MESSAGES_ESTIMATED : K.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = K.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = r ? K.default.Messages.NEW_MESSAGES : K.default.Messages.NEW_MESSAGES_WITH_DATE, t = K.default.Messages.NEW_MESSAGES_SUMMARIES), eo && (0, d.channelEligibleForSummaries)(u)) {
-      let n = N.default.ackMessageId(u.id),
-        i = (0, _.getUnreadTopicsCount)(u.id, N.default.getOldestUnreadMessageId(u.id));
+    if (I.default.isEstimated(u.id) ? (e = r ? K.default.Messages.NEW_MESSAGES_ESTIMATED : K.default.Messages.NEW_MESSAGES_ESTIMATED_WITH_DATE, t = K.default.Messages.NEW_MESSAGES_ESTIMATED_SUMMARIES) : (e = r ? K.default.Messages.NEW_MESSAGES : K.default.Messages.NEW_MESSAGES_WITH_DATE, t = K.default.Messages.NEW_MESSAGES_SUMMARIES), eo && (0, d.channelEligibleForSummaries)(u)) {
+      let n = I.default.ackMessageId(u.id),
+        i = (0, _.getUnreadTopicsCount)(u.id, I.default.getOldestUnreadMessageId(u.id));
       if ((0, f.trackWithMetadata)(Z.AnalyticEvents.SUMMARIES_UNREAD_BAR_VIEWED, {
           num_unread_summaries: i,
           num_unread_messages: H,
@@ -330,7 +330,7 @@ function q(e) {
       onClick: () => (function(e) {
         o.default.jumpToPresent(e.id, Z.MAX_MESSAGES_PER_CHANNEL);
         let t = v.default.getChannelId();
-        e.id === t && (0, g.transitionToChannel)(e.id)
+        e.id === t && (0, E.transitionToChannel)(e.id)
       })(u)
     })
   }

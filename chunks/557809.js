@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return O
   },
   HeaderGuildBreadcrumb: function() {
-    return b
+    return P
   },
   ChannelEmoji: function() {
-    return P
+    return b
   }
 });
 var s = n("37983"),
@@ -27,15 +27,15 @@ var s = n("37983"),
   C = n("965381"),
   p = n("393414"),
   m = n("506885"),
-  g = n("27618"),
-  E = n("162771"),
+  E = n("27618"),
+  g = n("162771"),
   S = n("697218"),
   A = n("79798"),
   _ = n("476263"),
   T = n("718490"),
   M = n("960454"),
-  I = n("740961"),
-  N = n("539938"),
+  N = n("740961"),
+  I = n("539938"),
   v = n("540853"),
   L = n("49111"),
   x = n("782340"),
@@ -52,11 +52,11 @@ function y(e) {
     handleContextMenu: C,
     handleParentClick: p,
     handleParentContextMenu: m,
-    renderFollowButton: E,
+    renderFollowButton: g,
     channelEmojiLeftOfIcon: A
   } = e, _ = (0, h.default)(t, r), {
     prefix: T,
-    level: I
+    level: N
   } = function(e, t) {
     var n, s;
     switch (e) {
@@ -96,13 +96,13 @@ function y(e) {
     children: [null != T ? (0, s.jsxs)(o.HiddenVisually, {
       children: [T, ":"]
     }) : null, " ", n]
-  }), D = (0, s.jsx)(P, {
+  }), D = (0, s.jsx)(b, {
     channel: t
   });
   switch (t.type) {
     case L.ChannelTypes.DM:
       return (0, s.jsx)(v.default, {
-        level: I,
+        level: N,
         channel: t,
         handleClick: d,
         handleContextMenu: C
@@ -128,17 +128,17 @@ function y(e) {
     case L.ChannelTypes.GUILD_FORUM:
     case L.ChannelTypes.GUILD_MEDIA:
       return (0, s.jsxs)(a.Fragment, {
-        children: [A && D, j(_, t.type === L.ChannelTypes.GUILD_ANNOUNCEMENT ? x.default.Messages.NEWS_CHANNEL : x.default.Messages.TEXT_CHANNEL), !A && D, (0, s.jsx)(N.default.Title, {
-          level: I,
+        children: [A && D, j(_, t.type === L.ChannelTypes.GUILD_ANNOUNCEMENT ? x.default.Messages.NEWS_CHANNEL : x.default.Messages.TEXT_CHANNEL), !A && D, (0, s.jsx)(I.default.Title, {
+          level: N,
           onContextMenu: C,
           onClick: d,
           children: y
-        }), null != E ? E() : null]
+        }), null != g ? g() : null]
       });
     case L.ChannelTypes.GUILD_VOICE:
       return (0, s.jsxs)(a.Fragment, {
-        children: [A && D, j(_, x.default.Messages.VOICE_CHANNEL), !A && D, (0, s.jsx)(N.default.Title, {
-          level: I,
+        children: [A && D, j(_, x.default.Messages.VOICE_CHANNEL), !A && D, (0, s.jsx)(I.default.Title, {
+          level: N,
           onContextMenu: C,
           onClick: d,
           children: y
@@ -146,8 +146,8 @@ function y(e) {
       });
     case L.ChannelTypes.GUILD_STAGE_VOICE:
       return (0, s.jsxs)(a.Fragment, {
-        children: [A && D, j(_, x.default.Messages.STAGE_CHANNEL), !A && D, (0, s.jsx)(N.default.Title, {
-          level: I,
+        children: [A && D, j(_, x.default.Messages.STAGE_CHANNEL), !A && D, (0, s.jsx)(I.default.Title, {
+          level: N,
           onContextMenu: C,
           onClick: d,
           children: y
@@ -160,24 +160,24 @@ function y(e) {
       if (!u && null != l) {
         let e = (0, h.default)(l, r);
         O = (0, s.jsxs)(a.Fragment, {
-          children: [j(e, x.default.Messages.TEXT_CHANNEL), (0, s.jsx)(N.default.Title, {
-            level: I,
+          children: [j(e, x.default.Messages.TEXT_CHANNEL), (0, s.jsx)(I.default.Title, {
+            level: N,
             onContextMenu: m,
             onClick: p,
             className: i(R.parentChannelName, R.cursorPointer),
-            children: (0, f.computeChannelName)(l, S.default, g.default)
-          }), (0, s.jsx)(N.default.Caret, {})]
+            children: (0, f.computeChannelName)(l, S.default, E.default)
+          }), (0, s.jsx)(I.default.Caret, {})]
         })
       }
-      let b = (null == l ? void 0 : l.type) != null && L.ChannelTypesSets.GUILD_THREADS_ONLY.has(l.type);
+      let P = (null == l ? void 0 : l.type) != null && L.ChannelTypesSets.GUILD_THREADS_ONLY.has(l.type);
       return (0, s.jsxs)(a.Fragment, {
-        children: [O, j(b ? null : _, x.default.Messages.THREAD), (0, s.jsx)(N.default.Title, {
-          level: I,
+        children: [O, j(P ? null : _, x.default.Messages.THREAD), (0, s.jsx)(I.default.Title, {
+          level: N,
           onContextMenu: C,
           onClick: d,
           className: i({
             [R.cursorPointer]: u,
-            [R.forumPostTitle]: b
+            [R.forumPostTitle]: P
           }),
           children: y
         })]
@@ -187,12 +187,12 @@ function y(e) {
         guildName: n
       }) : n;
       return (0, s.jsxs)(a.Fragment, {
-        children: [null !== _ ? (0, s.jsx)(N.default.Icon, {
+        children: [null !== _ ? (0, s.jsx)(I.default.Icon, {
           iconClassName: R.icon,
           icon: _,
           "aria-hidden": !0
-        }) : null, (0, s.jsxs)(N.default.Title, {
-          level: I,
+        }) : null, (0, s.jsxs)(I.default.Title, {
+          level: N,
           onContextMenu: C,
           onClick: d,
           children: [null != T ? (0, s.jsxs)(o.HiddenVisually, {
@@ -234,7 +234,7 @@ function O(e, t) {
     case L.ChannelTypes.GUILD_VOICE:
     case L.ChannelTypes.GUILD_STAGE_VOICE:
     case L.ChannelTypes.GROUP_DM:
-      return null != t ? (0, s.jsx)(I.default, {
+      return null != t ? (0, s.jsx)(N.default, {
         channel: e,
         guild: t
       }, e.id) : null;
@@ -245,7 +245,7 @@ function O(e, t) {
 
 function j(e, t) {
   return (0, s.jsxs)(s.Fragment, {
-    children: [null !== e && (0, s.jsx)(N.default.Icon, {
+    children: [null !== e && (0, s.jsx)(I.default.Icon, {
       iconClassName: R.icon,
       icon: e,
       "aria-hidden": !0
@@ -255,33 +255,33 @@ function j(e, t) {
   })
 }
 
-function b(e) {
+function P(e) {
   let {
     guild: t,
     channel: n,
     caretPosition: a = "left"
-  } = e, l = (0, r.useStateFromStores)([E.default], () => E.default.getGuildId());
+  } = e, l = (0, r.useStateFromStores)([g.default], () => g.default.getGuildId());
   return l !== L.FAVORITES || null == t ? null : (0, s.jsxs)("div", {
     className: R.guildBreadcrumbContainer,
-    children: ["left" === a && (0, s.jsx)(N.default.Caret, {
+    children: ["left" === a && (0, s.jsx)(I.default.Caret, {
       direction: "left"
     }), (0, s.jsx)(_.default, {
       guild: t,
       size: _.default.Sizes.SMALLER,
       className: R.guildBreadcrumbIcon,
       active: !0
-    }), (0, s.jsx)(N.default.Title, {
+    }), (0, s.jsx)(I.default.Title, {
       onClick: () => {
         (0, p.transitionToGuild)(t.id, n.id)
       },
       className: i(R.parentChannelName, R.cursorPointer),
       children: t.name
-    }), "right" === a && (0, s.jsx)(N.default.Caret, {
+    }), "right" === a && (0, s.jsx)(I.default.Caret, {
       direction: "right"
     })]
   })
 }
-let P = a.memo(function(e) {
+let b = a.memo(function(e) {
   let {
     channel: t
   } = e, {

@@ -18,16 +18,16 @@ var s = n("37983"),
   C = n("26989"),
   p = n("538137"),
   m = n("593195"),
-  g = n("578706"),
-  E = n("347895"),
+  E = n("578706"),
+  g = n("347895"),
   S = n("129092"),
   A = n("726274"),
   _ = n("290886"),
   T = n("205454"),
   M = n("782340"),
-  I = n("719832");
+  N = n("719832");
 
-function N(e) {
+function I(e) {
   let {
     action: t
   } = e, n = (0, o.default)([h.default], () => h.default.getChannel(t.channelId)), a = (0, c.default)(n, !0);
@@ -60,7 +60,7 @@ function v(e) {
     emojiName: l,
     size: T.CTAEmojiSize.MEDIUM,
     defaultComponent: (0, s.jsx)(r, {
-      className: I.channelIcon
+      className: N.channelIcon
     })
   })
 }
@@ -95,11 +95,11 @@ function L(e) {
       delay: 400
     }).start()
   }, [_, j, y, L]);
-  let b = a.useCallback(() => {
-    null != T && (0, E.selectNewMemberActionChannel)(f, T.channelId)
+  let P = a.useCallback(() => {
+    null != T && (0, g.selectNewMemberActionChannel)(f, T.channelId)
   }, [f, T]);
   return null == m || x && !y ? null : (0, s.jsx)("div", {
-    className: i(I.container, C),
+    className: i(N.container, C),
     children: y && null != T ? (0, s.jsx)(r.default.div, {
       style: {
         marginBottom: j.interpolate({
@@ -108,35 +108,35 @@ function L(e) {
         })
       },
       children: (0, s.jsxs)(u.Clickable, {
-        className: i(I.banner, I.clickable),
-        onClick: b,
+        className: i(N.banner, N.clickable),
+        onClick: P,
         children: [(0, s.jsx)(v, {
           channelId: T.channelId,
           emojiId: null === (t = T.emoji) || void 0 === t ? void 0 : t.id,
           emojiName: null == T ? void 0 : null === (n = T.emoji) || void 0 === n ? void 0 : n.name
         }), (0, s.jsxs)("div", {
-          className: I.text,
+          className: N.text,
           children: [(0, s.jsx)(u.Text, {
             variant: "text-md/semibold",
             color: "header-primary",
             children: M.default.Messages.MEMBER_ACTIONS_NEXT_STEP.format({
               step: T.title
             })
-          }), (0, s.jsx)(N, {
+          }), (0, s.jsx)(I, {
             action: T
           })]
         }), (0, s.jsx)("div", {
-          className: I.iconCircle,
+          className: N.iconCircle,
           children: (0, s.jsx)(p.default, {
             width: 16,
             height: 16,
             color: R.hex(),
-            className: I.nextIcon
+            className: N.nextIcon
           })
         })]
       })
     }) : (0, s.jsxs)(r.default.div, {
-      className: I.banner,
+      className: N.banner,
       style: {
         marginBottom: O.interpolate({
           inputRange: [0, 1],
@@ -148,7 +148,7 @@ function L(e) {
         emojiId: null === (l = m.emoji) || void 0 === l ? void 0 : l.id,
         emojiName: null == m ? void 0 : null === (c = m.emoji) || void 0 === c ? void 0 : c.name
       }), (0, s.jsxs)("div", {
-        className: I.text,
+        className: N.text,
         children: [(0, s.jsx)(u.Text, {
           variant: "text-md/semibold",
           color: "header-primary",
@@ -158,8 +158,8 @@ function L(e) {
           color: "text-muted",
           children: M.default.Messages.MEMBER_ACTION_CHAT
         })]
-      }), _ ? (0, s.jsx)(g.default, {
-        className: I.completed,
+      }), _ ? (0, s.jsx)(E.default, {
+        className: N.completed,
         backgroundColor: R.hex(),
         width: 20,
         height: 20

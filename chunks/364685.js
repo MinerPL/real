@@ -22,8 +22,8 @@ let v = 2,
   E = new Map,
   p = new Map,
   y = null,
-  T = [],
-  C = null,
+  C = [],
+  T = null,
   S = !1,
   I = new Map,
   A = (e, t) => {
@@ -59,7 +59,7 @@ let v = 2,
       value: e.name.trim().toLocaleLowerCase()
     };
     if ((0, h.isStandardSticker)(e)) {
-      let t = T.find(t => t.id === e.pack_id),
+      let t = C.find(t => t.id === e.pack_id),
         i = [s, ...(null != n ? n : "").split(",").map(e => ({
           type: m.StickerMetadataTypes.TAG,
           value: e.trim().toLocaleLowerCase()
@@ -97,16 +97,16 @@ let v = 2,
   },
   P = (e, t, n) => {
     E.set(e.id, e);
-    let s = [...T];
+    let s = [...C];
     if (t) {
-      let t = s.findIndex(t => t.id === e.id); - 1 !== t ? s[t] = e : s.push(e), T = s
+      let t = s.findIndex(t => t.id === e.id); - 1 !== t ? s[t] = e : s.push(e), C = s
     }(t || n) && e.stickers.forEach(e => O(e))
   },
   k = () => {
     I.forEach((e, t) => {
       let n = c.default.getGuild(t);
       null != n && e.forEach(e => b(e, n))
-    }), T.forEach(e => {
+    }), C.forEach(e => {
       e.stickers.forEach(e => b(e))
     })
   };
@@ -125,7 +125,7 @@ class V extends i.default.Store {
     return N(), null == y && (y = new Map, k()), y
   }
   get hasLoadedStickerPacks() {
-    return null != C && C + D > Date.now()
+    return null != T && T + D > Date.now()
   }
   get isFetchingStickerPacks() {
     return S
@@ -137,10 +137,10 @@ class V extends i.default.Store {
     return E.get(e)
   }
   getPremiumPacks() {
-    return T
+    return C
   }
   isPremiumPack(e) {
-    return T.some(t => t.id === e)
+    return C.some(t => t.id === e)
   }
   getRawStickersByGuild() {
     return I
@@ -182,7 +182,7 @@ var M = new V(r.default, {
     }), I.delete(n.id), I = new Map(I)
   },
   LOGOUT: () => {
-    v = 0, T = [], p.clear(), E.clear(), y = null, I.clear(), I = new Map(I), S = !1, C = null
+    v = 0, C = [], p.clear(), E.clear(), y = null, I.clear(), I = new Map(I), S = !1, T = null
   },
   STICKER_PACKS_FETCH_START: () => {
     S = !0
@@ -191,7 +191,7 @@ var M = new V(r.default, {
     let {
       packs: t
     } = e;
-    t.forEach(e => P(e, !0)), C = Date.now(), S = !1
+    t.forEach(e => P(e, !0)), T = Date.now(), S = !1
   },
   STICKER_PACK_FETCH_SUCCESS: e => {
     let {

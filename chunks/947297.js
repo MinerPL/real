@@ -7,12 +7,12 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var i, s = n("376556"),
-  r = n("653047");
+var i, r = n("376556"),
+  s = n("653047");
 let l = "xbox:";
-i = class extends r.default {
+i = class extends s.default {
   getIconURL() {
-    return s.default.get("xbox").icon.lightPNG
+    return r.default.get("xbox").icon.lightPNG
   }
   constructor(e) {
     super(e), this.id = "".concat(l).concat(e.name), this.name = e.name

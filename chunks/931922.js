@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return b
+    return P
   }
 }), n("222007");
 var s = n("37983"),
@@ -18,15 +18,15 @@ var s = n("37983"),
   C = n("798609"),
   p = n("679653"),
   m = n("462430"),
-  g = n("592407"),
-  E = n("367376"),
+  E = n("592407"),
+  g = n("367376"),
   S = n("305961"),
   A = n("957255"),
   _ = n("697218"),
   T = n("987772"),
   M = n("155207"),
-  I = n("917686"),
-  N = n("317134"),
+  N = n("917686"),
+  I = n("317134"),
   v = n("991170"),
   L = n("158998"),
   x = n("938244"),
@@ -36,11 +36,11 @@ var s = n("37983"),
   O = n("782340"),
   j = n("935107");
 
-function b(e) {
+function P(e) {
   let {
     channel: t
-  } = e, [n, l] = a.useState(!1), r = (0, p.default)(t, !0), b = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), P = (0, c.useStateFromStores)([_.default], () => _.default.getUser(null == b ? void 0 : b.ownerId)), H = a.useMemo(() => null != b ? o(b.roles).sortBy(e => -e.position).filter(e => e.id !== b.id).value() : [], [b]), F = a.useMemo(() => o(H).filter(e => {
-    if (null == b) return !1;
+  } = e, [n, l] = a.useState(!1), r = (0, p.default)(t, !0), P = (0, c.useStateFromStores)([S.default], () => S.default.getGuild(t.guild_id)), b = (0, c.useStateFromStores)([_.default], () => _.default.getUser(null == P ? void 0 : P.ownerId)), H = a.useMemo(() => null != P ? o(P.roles).sortBy(e => -e.position).filter(e => e.id !== P.id).value() : [], [P]), F = a.useMemo(() => o(H).filter(e => {
+    if (null == P) return !1;
     let n = v.default.computePermissionsForRoles({
       forceRoles: {
         [e.id]: e
@@ -48,9 +48,9 @@ function b(e) {
       context: t
     });
     return u.default.has(n, D.Permissions.ADMINISTRATOR) || u.default.has(n, D.Permissions.VIEW_CHANNEL)
-  }).value(), [t, b, H]), U = (0, c.useStateFromStoresArray)([_.default], () => {
+  }).value(), [t, P, H]), U = (0, c.useStateFromStoresArray)([_.default], () => {
     let e = {};
-    for (let n of (null != P && (e[P.id] = P), Object.values(t.permissionOverwrites))) {
+    for (let n of (null != b && (e[b.id] = b), Object.values(t.permissionOverwrites))) {
       if (n.type !== C.PermissionOverwriteType.MEMBER || null != e[n.id]) continue;
       let t = _.default.getUser(n.id);
       null != t && (e[t.id] = t)
@@ -66,7 +66,7 @@ function b(e) {
         l = u.default.has(a.allow, D.Permissions.VIEW_CHANNEL);
       return s || l
     }).value()
-  }, [t, P]), k = A.default.can(D.Permissions.MANAGE_CHANNELS, t) || A.default.can(D.Permissions.MANAGE_ROLES, t);
+  }, [t, b]), k = A.default.can(D.Permissions.MANAGE_CHANNELS, t) || A.default.can(D.Permissions.MANAGE_ROLES, t);
 
   function G() {
     h.default.open(t.id)
@@ -84,7 +84,7 @@ function b(e) {
     }), (0, s.jsx)(R.EmptyMessageBody, {
       children: O.default.Messages.BEGINNING_ROLE_REQUIRED_CHANNEL_DESCRIPTION.format({
         channelName: r,
-        topicHook: () => E.default.parseTopic(t.topic, !0, {
+        topicHook: () => g.default.parseTopic(t.topic, !0, {
           channelId: t.id
         })
       })
@@ -138,7 +138,7 @@ function b(e) {
         var a, l;
         let r = null !== (l = e.colorString) && void 0 !== l ? l : (0, d.int2hex)(D.DEFAULT_ROLE_COLOR),
           o = (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) !== void 0;
-        return k ? (0, s.jsx)(I.default, {
+        return k ? (0, s.jsx)(N.default, {
           className: i(j.role, {
             [j.last]: n === F.length - 1
           }),
@@ -147,9 +147,9 @@ function b(e) {
           disabled: !k,
           verified: o,
           onClick: () => {
-            g.default.open(t.guild_id, D.GuildSettingsSections.MEMBERS), g.default.selectRole(e.id)
+            E.default.open(t.guild_id, D.GuildSettingsSections.MEMBERS), E.default.selectRole(e.id)
           }
-        }, e.id) : (0, s.jsx)(N.default, {
+        }, e.id) : (0, s.jsx)(I.default, {
           className: i(j.role, {
             [j.last]: n === F.length - 1
           }),

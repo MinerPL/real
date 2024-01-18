@@ -64,8 +64,8 @@ var s, i, r, a, o, d, u = n("432710"),
   E = n("599110"),
   p = n("568734"),
   y = n("983850"),
-  T = n("457971"),
-  C = n("49111"),
+  C = n("457971"),
+  T = n("49111"),
   S = n("568456");
 n("782340");
 let I = () => {
@@ -94,7 +94,7 @@ function N(e) {
 
 function O(e) {
   var t;
-  if (!(0, T.isEligibleForExplicitMediaRedaction)()) return !1;
+  if (!(0, C.isEligibleForExplicitMediaRedaction)()) return !1;
   let n = v.default.getCurrentUser();
   if (null == n || (null === (t = e.author) || void 0 === t ? void 0 : t.id) === n.id) return !1;
   let {
@@ -120,9 +120,9 @@ function P(e, t) {
   if (f.default.get("obscure_blur_effect_enabled")) return !0;
   switch (e.type) {
     case 1:
-      return (0, p.hasFlag)(null !== (n = e.media.flags) && void 0 !== n ? n : 0, C.MessageEmbedFlags.CONTAINS_EXPLICIT_MEDIA);
+      return (0, p.hasFlag)(null !== (n = e.media.flags) && void 0 !== n ? n : 0, T.MessageEmbedFlags.CONTAINS_EXPLICIT_MEDIA);
     case 0:
-      return (0, p.hasFlag)(null !== (s = e.media.flags) && void 0 !== s ? s : 0, C.MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA);
+      return (0, p.hasFlag)(null !== (s = e.media.flags) && void 0 !== s ? s : 0, T.MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA);
     default:
       return !1
   }
@@ -157,7 +157,7 @@ function V(e) {
   } = e;
   if (null == n || null == s) return;
   let i = m.default.getChannel(n);
-  E.default.track(C.AnalyticEvents.EXPLICIT_MEDIA_ACTION, {
+  E.default.track(T.AnalyticEvents.EXPLICIT_MEDIA_ACTION, {
     action: t,
     guild_id: null == i ? void 0 : i.guild_id,
     channel_id: n,
@@ -183,7 +183,7 @@ function w(e) {
   } = e;
   if (null == t || null == n) return;
   let r = m.default.getChannel(t);
-  E.default.track(C.AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
+  E.default.track(T.AnalyticEvents.EXPLICIT_MEDIA_SCAN_CLIENT_TIMED_OUT, {
     channel_id: t,
     guild_id: null == r ? void 0 : r.guild_id,
     message_id: n,
@@ -206,7 +206,7 @@ function L(e) {
   } = e;
   if (null == t) return;
   let a = m.default.getChannel(t);
-  E.default.track(C.AnalyticEvents.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, {
+  E.default.track(T.AnalyticEvents.EXPLICIT_MEDIA_REDACTABLE_MESSAGES_LOADED, {
     channel_id: t,
     guild_id: null == a ? void 0 : a.guild_id,
     num_of_attachments: n,
@@ -227,7 +227,7 @@ function U(e) {
   } = e;
   if (null == n) return;
   let o = m.default.getChannel(n);
-  E.default.track(C.AnalyticEvents.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, {
+  E.default.track(T.AnalyticEvents.EXPLICIT_MEDIA_RETROACTIVE_SCAN_COMPLETE, {
     message_id: t,
     channel_id: n,
     channel_type: null == o ? void 0 : o.type,

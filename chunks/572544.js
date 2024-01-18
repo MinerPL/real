@@ -22,8 +22,8 @@ var s = n("746379"),
   E = n("835174"),
   p = n("566271"),
   y = n("337543"),
-  T = n("18494"),
-  C = n("162771"),
+  C = n("18494"),
+  T = n("162771"),
   S = n("677099"),
   I = n("599110"),
   A = n("253981");
@@ -73,12 +73,12 @@ function P(e) {
     null == e || e.preventDefault();
     let {
       code: i
-    } = s, a = null !== (t = C.default.getGuildId()) && void 0 !== t ? t : void 0;
+    } = s, a = null !== (t = T.default.getGuildId()) && void 0 !== t ? t : void 0;
     return I.default.track(D.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
       application_id: i,
       device_platform: r.isMobile ? "mobile_web" : "desktop_web",
       guild_id: a,
-      channel_id: T.default.getChannelId()
+      channel_id: C.default.getChannelId()
     }), n.el("646186").then(n.bind(n, "646186")).then(e => {
       let {
         goToAppDirectory: t
@@ -120,12 +120,12 @@ function P(e) {
         ApplicationDirectoryProfileSections: o
       } = n("750947"), {
         ApplicationDirectoryViews: d
-      } = n("412707"), u = null !== (a = C.default.getGuildId()) && void 0 !== a ? a : void 0, f = d.HOME;
+      } = n("412707"), u = null !== (a = T.default.getGuildId()) && void 0 !== a ? a : void 0, f = d.HOME;
       return "search" === e && (f = d.SEARCH), null != s && (f = d.APPLICATION, I.default.track(D.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
         application_id: s,
         device_platform: r.isMobile ? "mobile_web" : "desktop_web",
         guild_id: u,
-        channel_id: T.default.getChannelId()
+        channel_id: C.default.getChannelId()
       })), n.el("646186").then(n.bind(n, "646186")).then(e => {
         let {
           goToAppDirectory: n
@@ -158,7 +158,7 @@ function P(e) {
   let k = (0, h.tryParseEventDetailsPath)(o);
   if (null != o && P && null != k) return e => {
     null == e || e.preventDefault();
-    let t = C.default.getGuildId();
+    let t = T.default.getGuildId();
     null != k.guildId && "" !== k.guildId && k.guildId !== t && (0, v.default)(D.Routes.CHANNEL(k.guildId));
     let n = g.default.getGuildScheduledEvent(k.guildEventId);
     return null != n && (0, c.openGuildEventDetails)({

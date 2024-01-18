@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return C
   }
 });
 var s = n("37983"),
@@ -143,7 +143,7 @@ class y extends i.Component {
 y.defaultProps = {
   embedded: !1
 };
-var T = e => {
+var C = e => {
   let t = (0, u.useToken)(o.default.unsafe_rawColors.PRIMARY_630).hex();
   return (0, s.jsx)(y, {
     canvasFillStyle: t,

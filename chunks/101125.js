@@ -21,8 +21,8 @@ var r = n("714617"),
   E = n("271938"),
   p = n("546463"),
   y = n("603699"),
-  T = n("686470"),
-  C = n("52028"),
+  C = n("686470"),
+  T = n("52028"),
   S = n("824563"),
   I = n("235660"),
   A = n("49111");
@@ -37,7 +37,7 @@ let D = !1,
   M = [];
 
 function w(e) {
-  return (0, v.shouldShareApplicationActivity)(e, T.default)
+  return (0, v.shouldShareApplicationActivity)(e, C.default)
 }
 
 function L(e) {
@@ -62,7 +62,7 @@ function U() {
   var e;
   b = null !== (e = y.default.getIdleSince()) && void 0 !== e ? e : 0, k = y.default.isAFK(), R ? (N = O, G()) : N = D ? A.StatusTypes.INVISIBLE : g.StatusSetting.getSetting(), N === A.StatusTypes.ONLINE && b > 0 && (N = A.StatusTypes.IDLE);
   let t = !1,
-    n = R || N === A.StatusTypes.INVISIBLE ? [] : C.default.getActivities().filter(L);
+    n = R || N === A.StatusTypes.INVISIBLE ? [] : T.default.getActivities().filter(L);
   !a(P, n) && (P = n, t = !0);
   let s = I.default.getRemoteActivities();
   if (V !== s && (V = s, t = !0), t) {
@@ -81,7 +81,7 @@ function F() {
 }
 class x extends u.default.Store {
   initialize() {
-    this.waitFor(y.default, m.default, C.default, I.default, T.default, p.default), this.syncWith([C.default], U)
+    this.waitFor(y.default, m.default, T.default, I.default, C.default, p.default), this.syncWith([T.default], U)
   }
   getLocalPresence() {
     return {

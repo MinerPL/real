@@ -18,8 +18,8 @@ var a = n("37983"),
   E = n("967241"),
   m = n("42203"),
   p = n("449008"),
-  g = n("648564"),
-  S = n("419309");
+  S = n("648564"),
+  g = n("419309");
 
 function N(e) {
   let {
@@ -37,18 +37,18 @@ function N(e) {
     } = e;
     return m.default.getChannel(t)
   }).filter(p.isNotNullish).sort((e, t) => r.default.compare(e.id, t.id)).value(), [t.oldestReadMessageId, n.guild_id, n.id]), _ = l.useCallback((e, t) => {
-    (0, E.openThreadSidebarForViewing)(e, t, g.OpenThreadAnalyticsLocations.INBOX)
+    (0, E.openThreadSidebarForViewing)(e, t, S.OpenThreadAnalyticsLocations.INBOX)
   }, []);
   return l.useEffect(() => {
     null != n && t.isFullyLoaded && !t.hasError && !t.collapsed && 0 === N.length && u.default.wait(() => {
       (0, d.ack)(t.channelId, !0), s(t.channelId)
     })
   }), (0, a.jsx)("div", {
-    className: S.container,
+    className: g.container,
     children: N.map(e => (0, a.jsx)(f.ForumPostComposerStoreProvider, {
       createStore: () => (0, f.createForumPostComposerStore)(n),
       children: (0, a.jsx)(c.default, {
-        className: S.forumPost,
+        className: g.forumPost,
         threadId: e.id,
         goToThread: _
       })

@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("70102"), n("222007");
 var i = n("884691");
-let s = (0, i.createContext)(null),
-  r = {
+let r = (0, i.createContext)(null),
+  s = {
     didCatch: !1,
     error: null
   };
@@ -22,11 +22,11 @@ class l extends i.Component {
       error: e
     } = this.state;
     if (null !== e) {
-      for (var t, n, i = arguments.length, s = Array(i), l = 0; l < i; l++) s[l] = arguments[l];
+      for (var t, n, i = arguments.length, r = Array(i), l = 0; l < i; l++) r[l] = arguments[l];
       null === (t = (n = this.props).onReset) || void 0 === t || t.call(n, {
-        args: s,
+        args: r,
         reason: "imperative-api"
-      }), this.setState(r)
+      }), this.setState(s)
     }
   }
   componentDidCatch(e, t) {
@@ -44,12 +44,12 @@ class l extends i.Component {
           t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
         return e.length !== t.length || e.some((e, n) => !Object.is(e, t[n]))
       }(e.resetKeys, i)) {
-      var s, l;
-      null === (s = (l = this.props).onReset) || void 0 === s || s.call(l, {
+      var r, l;
+      null === (r = (l = this.props).onReset) || void 0 === r || r.call(l, {
         next: i,
         prev: e.resetKeys,
         reason: "keys"
-      }), this.setState(r)
+      }), this.setState(s)
     }
   }
   render() {
@@ -57,30 +57,30 @@ class l extends i.Component {
       children: e,
       fallbackRender: t,
       FallbackComponent: n,
-      fallback: r
+      fallback: s
     } = this.props, {
       didCatch: l,
       error: a
-    } = this.state, u = e;
+    } = this.state, o = e;
     if (l) {
       let e = {
         error: a,
         resetErrorBoundary: this.resetErrorBoundary
       };
-      if ((0, i.isValidElement)(r)) u = r;
-      else if ("function" == typeof t) u = t(e);
-      else if (n) u = (0, i.createElement)(n, e);
+      if ((0, i.isValidElement)(s)) o = s;
+      else if ("function" == typeof t) o = t(e);
+      else if (n) o = (0, i.createElement)(n, e);
       else throw a
     }
-    return (0, i.createElement)(s.Provider, {
+    return (0, i.createElement)(r.Provider, {
       value: {
         didCatch: l,
         error: a,
         resetErrorBoundary: this.resetErrorBoundary
       }
-    }, u)
+    }, o)
   }
   constructor(e) {
-    super(e), this.resetErrorBoundary = this.resetErrorBoundary.bind(this), this.state = r
+    super(e), this.resetErrorBoundary = this.resetErrorBoundary.bind(this), this.state = s
   }
 }

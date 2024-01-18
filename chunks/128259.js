@@ -25,8 +25,8 @@ var s = n("132710"),
   E = n("305961"),
   p = n("569983"),
   y = n("48703"),
-  T = n("377253"),
-  C = n("27618"),
+  C = n("377253"),
+  T = n("27618"),
   S = n("18494"),
   I = n("599110"),
   A = n("49111"),
@@ -35,13 +35,13 @@ var s = n("132710"),
 function N(e, t) {
   var n;
   let s = v.default.getChannel(S.default.getChannelId());
-  return !!(null == s || s.type !== A.ChannelTypes.DM || C.default.isFriend(null !== (n = s.getRecipientId()) && void 0 !== n ? n : "")) && e === t
+  return !!(null == s || s.type !== A.ChannelTypes.DM || T.default.isFriend(null !== (n = s.getRecipientId()) && void 0 !== n ? n : "")) && e === t
 }
 
 function O(e, t) {
   let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
     {
-      trusted: C,
+      trusted: T,
       onClick: N,
       onConfirm: O,
       shouldConfirm: b,
@@ -66,7 +66,7 @@ function O(e, t) {
     U = null;
   if (null != P && null != k) {
     var G, F, x;
-    let e = T.default.getMessage(k, P),
+    let e = C.default.getMessage(k, P),
       t = v.default.getBasicChannel(k);
     V = null !== (x = null == t ? void 0 : t.guild_id) && void 0 !== x ? x : null;
     let n = E.default.getGuild(V),
@@ -118,7 +118,7 @@ function O(e, t) {
     null == t || t.preventDefault(), l.default.show(R);
     return
   }
-  let K = "function" == typeof C ? C() : C,
+  let K = "function" == typeof T ? T() : T,
     W = (0, y.getProtocol)(R),
     z = !("http:" === W || "https:" === W);
   if (!z && (K || p.default.isTrustedDomain(R)) || z && p.default.isTrustedProtocol(R)) {

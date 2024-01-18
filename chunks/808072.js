@@ -18,8 +18,8 @@ var s, a, l, i, r, o, u = n("37983"),
   C = n("77078"),
   p = n("599110"),
   m = n("439932"),
-  g = n("145131"),
-  E = n("49111"),
+  E = n("145131"),
+  g = n("49111"),
   S = n("782340"),
   A = n("816456");
 (r = a || (a = {})).CENTER = "center", r.LEFT = "left", (o = l || (l = {})).TOP = "top", o.MIDDLE = "middle";
@@ -28,12 +28,12 @@ class _ extends d.PureComponent {
     let {
       uniqueId: e
     } = this.props;
-    p.default.track(E.AnalyticEvents.SHOW_TUTORIAL, {
+    p.default.track(g.AnalyticEvents.SHOW_TUTORIAL, {
       tutorial: e
     })
   }
   componentWillUnmount() {
-    p.default.track(E.AnalyticEvents.CLOSE_TUTORIAL, {
+    p.default.track(g.AnalyticEvents.CLOSE_TUTORIAL, {
       tutorial: this.props.uniqueId,
       acknowledged: this.state.confirmed
     })
@@ -51,9 +51,9 @@ class _ extends d.PureComponent {
     } = this.props, o = "left" === t || n, d = "center" === t || !o;
     return (0, u.jsxs)(C.Dialog, {
       className: f(A.popoutRoot, l),
-      children: [null != e && (0, u.jsx)(g.default, {
+      children: [null != e && (0, u.jsx)(E.default, {
         className: A.mediaContainer,
-        justify: o ? g.default.Justify.START : g.default.Justify.CENTER,
+        justify: o ? E.default.Justify.START : E.default.Justify.CENTER,
         children: e()
       }), (0, u.jsx)(C.H, {
         className: f({
@@ -67,9 +67,9 @@ class _ extends d.PureComponent {
           [A.bodyLeft]: o
         }),
         children: a
-      }), (0, u.jsxs)(g.default, {
+      }), (0, u.jsxs)(E.default, {
         className: A.buttonContainer,
-        justify: o ? g.default.Justify.BETWEEN : g.default.Justify.CENTER,
+        justify: o ? E.default.Justify.BETWEEN : E.default.Justify.CENTER,
         children: [(0, u.jsx)(C.Button, {
           size: C.ButtonSizes.SMALL,
           onClick: this.handleDismiss,
@@ -129,7 +129,7 @@ class _ extends d.PureComponent {
         onSkipAll: t,
         uniqueId: n
       } = this.props;
-      e(), t(), p.default.track(E.AnalyticEvents.DISMISS_ALL_TUTORIALS, {
+      e(), t(), p.default.track(g.AnalyticEvents.DISMISS_ALL_TUTORIALS, {
         tutorial: n
       })
     }, this.renderPopoutContent = e => {

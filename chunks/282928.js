@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   },
   CloudUpload: function() {
-    return T
+    return C
   }
 }), n("222007"), n("70102");
 var s, i, r = n("917351"),
@@ -24,14 +24,14 @@ var s, i, r = n("917351"),
 let p = new u.default("CloudUpload.tsx"),
   y = n("123010").default;
 (i = s || (s = {})).NOT_STARTED = "NOT_STARTED", i.STARTED = "STARTED", i.UPLOADING = "UPLOADING", i.ERROR = "ERROR", i.COMPLETED = "COMPLETED", i.CANCELED = "CANCELED";
-class T extends h.default {
+class C extends h.default {
   static fromJson(e) {
     let {
       item: t,
       channelId: n,
       showLargeMessageDialog: s,
       reactNativeFileIndex: i
-    } = e, r = new T(t, n, s, i);
+    } = e, r = new C(t, n, s, i);
     return "COMPLETED" !== r.status && (r.status = "NOT_STARTED"), Object.entries(e).forEach(e => {
       let [t, n] = e;
       !t.startsWith("_") && (r[t] = n)

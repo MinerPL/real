@@ -26,7 +26,7 @@ function y(e, t) {
   let n = m[e];
   return null != n ? n[t] : null
 }
-let T = e => {
+let C = e => {
     switch (e.type) {
       case c.ActivityTypes.CUSTOM_STATUS:
         return 4;
@@ -40,11 +40,11 @@ let T = e => {
         return 0
     }
   },
-  C = e => (0, u.default)(e) ? 1 : 0;
+  T = e => (0, u.default)(e) ? 1 : 0;
 
 function S(e, t) {
   var n, s, i, r, a;
-  return n = e, T(t) - T(n) || (s = e, C(t) - C(s)) || (i = e, (null !== (r = t.created_at) && void 0 !== r ? r : 0) - (null !== (a = i.created_at) && void 0 !== a ? a : 0))
+  return n = e, C(t) - C(n) || (s = e, T(t) - T(s)) || (i = e, (null !== (r = t.created_at) && void 0 !== r ? r : 0) - (null !== (a = i.created_at) && void 0 !== a ? a : 0))
 }
 
 function I(e) {

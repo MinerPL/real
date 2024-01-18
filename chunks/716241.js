@@ -46,8 +46,8 @@ var s = n("917351"),
   E = n("660478"),
   p = n("18494"),
   y = n("162771"),
-  T = n("282109"),
-  C = n("800762"),
+  C = n("282109"),
+  T = n("800762"),
   S = n("599110"),
   I = n("718517"),
   A = n("991170"),
@@ -71,7 +71,7 @@ function P(e) {
     r = l.default.getChannels(e),
     a = r[l.GUILD_SELECTABLE_CHANNELS_KEY].length,
     o = r[l.GUILD_VOCAL_CHANNELS_KEY].length,
-    u = C.default.getVoiceStates(e);
+    u = T.default.getVoiceStates(e);
   return {
     guild_id: n.id,
     guild_size_total: f.default.getMemberCount(e),
@@ -163,14 +163,14 @@ function w(e) {
   return {
     channel_was_unread: s.unread,
     channel_mention_count: s.mentionCount,
-    channel_is_muted: T.default.isChannelMuted(t.guild_id, t.id),
-    channel_resolved_unread_setting: T.default.resolveUnreadSetting(t),
-    channel_preset: (0, a.presetFromSettings)(T.default.resolveUnreadSetting(t), T.default.resolvedMessageNotifications(t)),
+    channel_is_muted: C.default.isChannelMuted(t.guild_id, t.id),
+    channel_resolved_unread_setting: C.default.resolveUnreadSetting(t),
+    channel_preset: (0, a.presetFromSettings)(C.default.resolveUnreadSetting(t), C.default.resolvedMessageNotifications(t)),
     guild_was_unread: s.guildUnread,
     guild_mention_count: s.guildMentionCount,
-    guild_is_muted: T.default.isMuted(t.guild_id),
-    guild_resolved_unread_setting: T.default.resolveGuildUnreadSetting(n),
-    guild_preset: (0, a.presetFromSettings)(T.default.resolveGuildUnreadSetting(n), T.default.getMessageNotifications(t.guild_id))
+    guild_is_muted: C.default.isMuted(t.guild_id),
+    guild_resolved_unread_setting: C.default.resolveGuildUnreadSetting(n),
+    guild_preset: (0, a.presetFromSettings)(C.default.resolveGuildUnreadSetting(n), C.default.getMessageNotifications(t.guild_id))
   }
 }
 
@@ -180,7 +180,7 @@ function L(e, t, n) {
     video_stream_count: 0,
     video_enabled: n
   };
-  return i(C.default.getVoiceStates(e)).filter(e => e.channelId === t).filter(e => e.userId !== d.default.getId()).forEach(e => {
+  return i(T.default.getVoiceStates(e)).filter(e => e.channelId === t).filter(e => e.userId !== d.default.getId()).forEach(e => {
     s.voice_state_count++, (e.selfVideo || e.selfStream) && s.video_stream_count++
   }), s
 }
@@ -189,7 +189,7 @@ function U(e, t) {
   let n = {
     custom_status_count: 0
   };
-  return i(C.default.getVoiceStates(e)).forEach(e => {
+  return i(T.default.getVoiceStates(e)).forEach(e => {
     e.channelId === t && null != h.default.findActivity(e.userId, e => e.type === N.ActivityTypes.CUSTOM_STATUS) && n.custom_status_count++
   }), n
 }

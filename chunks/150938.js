@@ -24,7 +24,7 @@ function h(e) {
       marked_all_channels_as_read: !0,
       num_unread_channels_remaining: 0
     })
-  }, g = e => {
+  }, S = e => {
     e.shiftKey ? p() : h(!0)
   };
   return (0, a.jsxs)(a.Fragment, {
@@ -34,12 +34,12 @@ function h(e) {
     }) : null, "bottom-floating" === t ? (0, a.jsx)(d.FloatingActionButton, {
       text: f.default.Messages.MARK_ALL_AS_READ,
       icon: o.default,
-      onClick: g
+      onClick: S
     }) : (0, a.jsx)(r.default, {
       tooltip: m ? f.default.Messages.MARK_ALL_AS_READ : f.default.Messages.UNREADS_MARK_READ,
       color: r.CircleIconButtonColors.SECONDARY,
       icon: (0, a.jsx)(o.default, {}),
-      onClick: g
+      onClick: S
     })]
   })
 }

@@ -6,12 +6,12 @@ n.r(t), n.d(t, {
 });
 var l = n("446674"),
   i = n("271938"),
-  u = n("18494"),
-  a = n("808422");
+  a = n("18494"),
+  u = n("808422");
 
 function o() {
-  let e = (0, l.useStateFromStores)([u.default], () => u.default.getVoiceChannelId()),
+  let e = (0, l.useStateFromStores)([a.default], () => a.default.getVoiceChannelId()),
     t = (0, l.useStateFromStores)([i.default], () => i.default.getId()),
-    n = (0, a.default)(t, e);
-  return n === a.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
+    n = (0, u.default)(t, e);
+  return n === u.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK
 }

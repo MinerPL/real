@@ -21,8 +21,8 @@ let v = new Map,
   E = new Map,
   p = new Set,
   y = 0,
-  T = 0,
-  C = new Set,
+  C = 0,
+  T = new Set,
   S = new Map,
   I = !1;
 
@@ -53,7 +53,7 @@ class O extends o.default.Store {
   getOverlaySerializedState() {
     return {
       soundboardSounds: Object.fromEntries(v),
-      favoritedSoundIds: Array.from(C),
+      favoritedSoundIds: Array.from(T),
       localSoundboardMutes: Array.from(p)
     }
   }
@@ -73,7 +73,7 @@ class O extends o.default.Store {
     return t.find(t => t.soundId === e)
   }
   isFetchingSounds() {
-    return 1 === T
+    return 1 === C
   }
   isFetchingDefaultSounds() {
     return 1 === y
@@ -95,10 +95,10 @@ class O extends o.default.Store {
     return null != E.get(e)
   }
   isFavoriteSound(e) {
-    return C.has(e)
+    return T.has(e)
   }
   getFavorites() {
-    return C
+    return T
   }
   isLocalSoundboardMuted(e) {
     return p.has(e)
@@ -107,16 +107,16 @@ class O extends o.default.Store {
     return I
   }
   hasFetchedAllSounds() {
-    return 2 === T && 2 === y
+    return 2 === C && 2 === y
   }
 }
 O.displayName = "SoundboardStore";
 var b = new O(d.default, {
   LOGOUT: function() {
-    v.clear(), E.clear(), S.clear(), I = !1, T = 0, y = 0
+    v.clear(), E.clear(), S.clear(), I = !1, C = 0, y = 0
   },
   GUILD_SOUNDBOARD_FETCH: function() {
-    T = 1
+    C = 1
   },
   GUILD_SOUNDBOARD_SOUND_CREATE: A,
   GUILD_SOUNDBOARD_SOUND_UPDATE: A,
@@ -164,7 +164,7 @@ var b = new O(d.default, {
     } = t;
     if (n === h.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
       var i, r;
-      C = new Set(null !== (r = null == s ? void 0 : null === (i = s.favoriteSoundboardSounds) || void 0 === i ? void 0 : i.soundIds) && void 0 !== r ? r : [])
+      T = new Set(null !== (r = null == s ? void 0 : null === (i = s.favoriteSoundboardSounds) || void 0 === i ? void 0 : i.soundIds) && void 0 !== r ? r : [])
     } else n === h.UserSettingsTypes.PRELOADED_USER_SETTINGS && N(s)
   },
   SOUNDBOARD_FETCH_DEFAULT_SOUNDS: function() {
@@ -186,7 +186,7 @@ var b = new O(d.default, {
         sounds: n
       } = e;
       v.set(t, n)
-    }), T = 2
+    }), C = 2
   },
   GUILD_DELETE: function(e) {
     let {
@@ -204,7 +204,7 @@ var b = new O(d.default, {
     let {
       soundboardStoreState: t
     } = e;
-    v = new Map(Object.entries(t.soundboardSounds)), C = new Set(t.favoritedSoundIds), p = new Set(t.localSoundboardMutes)
+    v = new Map(Object.entries(t.soundboardSounds)), T = new Set(t.favoritedSoundIds), p = new Set(t.localSoundboardMutes)
   },
   GUILD_SOUNDBOARD_SOUNDS_UPDATE: function(e) {
     let {

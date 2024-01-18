@@ -31,7 +31,7 @@ function h(e) {
   }, {
     disableTrack: !t
   }, [t]);
-  let g = () => {
+  let S = () => {
     var e;
     let t = null === (e = m.current) || void 0 === e ? void 0 : e.getScrollerState();
     if (null == t) return;
@@ -54,7 +54,7 @@ function h(e) {
               m.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
             ...l,
-            onScroll: g,
+            onScroll: S,
             children: [(0, a.jsx)(c.ForYouItems, {
               items: n
             }), h ? (0, a.jsx)(r.Spinner, {

@@ -25,8 +25,8 @@ function d(e) {
   } = e, {
     error: p,
     loaded: m
-  } = (0, o.useMessageRequestPreview)(t), g = t.isDM() ? t.getRecipientId() : null, E = (0, r.useLongestChannelMessageBeforeReply)(t.id, g);
-  if (null == E && (m || p)) return null;
+  } = (0, o.useMessageRequestPreview)(t), E = t.isDM() ? t.getRecipientId() : null, g = (0, r.useLongestChannelMessageBeforeReply)(t.id, E);
+  if (null == g && (m || p)) return null;
   let S = () => {
     null == f || f(), l.default.closePrivateChannel(t.id)
   };
@@ -34,9 +34,9 @@ function d(e) {
     className: d,
     size: n,
     color: a.Button.Colors.RED,
-    disabled: null == E,
+    disabled: null == g,
     onClick: e => {
-      e.stopPropagation(), null == c || c(), null != E && (0, i.showReportModalForFirstDM)(E, S)
+      e.stopPropagation(), null == c || c(), null != g && (0, i.showReportModalForFirstDM)(g, S)
     },
     onMouseEnter: h,
     onMouseLeave: C,

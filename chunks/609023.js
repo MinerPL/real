@@ -18,21 +18,21 @@ var a = n("37983"),
   E = n("603531"),
   m = n("845579"),
   p = n("271938"),
-  g = n("957255"),
-  S = n("697218"),
+  S = n("957255"),
+  g = n("697218"),
   N = n("898260"),
   _ = n("888400"),
-  I = n("530686"),
-  T = n("970268"),
+  T = n("530686"),
+  I = n("970268"),
   C = n("49111"),
   A = n("782340"),
-  x = n("145568");
+  M = n("145568");
 let v = {
   left: 4,
   right: -12
 };
 
-function M(e) {
+function x(e) {
   var t;
   let {
     channel: n,
@@ -50,17 +50,17 @@ function M(e) {
   return (0, a.jsx)(u.FocusRing, {
     offset: v,
     children: (0, a.jsxs)("div", {
-      className: x.messageContainer,
+      className: M.messageContainer,
       onKeyDown: h,
       ...f,
-      children: [(0, a.jsx)(I.default, {
-        className: x.jumpButton,
+      children: [(0, a.jsx)(T.default, {
+        className: M.jumpButton,
         onJump: e => c(e, s.id)
       }), (0, a.jsx)(E.default, {
         id: s.id,
         message: s,
         channel: n,
-        className: x.message,
+        className: M.message,
         compact: i,
         animateAvatar: !1,
         isGroupStart: o,
@@ -83,31 +83,31 @@ function R(e) {
     location: "20e3b0_1"
   }, {
     autoTrackExposure: !1
-  }), I = m.MessageDisplayCompact.useSetting(), v = (0, o.useStateFromStores)([g.default], () => g.default.can(C.Permissions.CREATE_INSTANT_INVITE, s)), R = (0, h.isSpamSupported)(s), L = !1, O = 0 === l.messages.length || l.messages[0].timestamp.isSame(i(), "day"), b = null !== (n = null === (t = S.default.getUser(p.default.getId())) || void 0 === t ? void 0 : t.hasFlag(C.UserFlags.SPAMMER)) && void 0 !== n && n, y = [];
+  }), T = m.MessageDisplayCompact.useSetting(), v = (0, o.useStateFromStores)([S.default], () => S.default.can(C.Permissions.CREATE_INSTANT_INVITE, s)), R = (0, h.isSpamSupported)(s), L = !1, O = 0 === l.messages.length || l.messages[0].timestamp.isSame(i(), "day"), b = null !== (n = null === (t = g.default.getUser(p.default.getId())) || void 0 === t ? void 0 : t.hasFlag(C.UserFlags.SPAMMER)) && void 0 !== n && n, y = [];
   if (!l.collapsed) {
     let e = null,
       t = null,
-      n = l.messages.slice(0, T.MAX_SHOWN_MESSAGES);
+      n = l.messages.slice(0, I.MAX_SHOWN_MESSAGES);
     n.forEach(n => {
       if (!(0, c.default)(n, v)) {
         if (!O && (null == e || !e.isSame(n.timestamp, "day"))) {
           let t = (0, _.dateFormat)(n.timestamp, "LL");
           y.push((0, a.jsx)(N.default, {
-            className: x.divider,
+            className: M.divider,
             children: t
           }, t)), e = n.timestamp
         }
         let l = null == t || (0, f.default)(s, t, n);
-        t = n, L = L || (0, h.isSpam)(n), y.push((0, a.jsx)(M, {
+        t = n, L = L || (0, h.isSpam)(n), y.push((0, a.jsx)(x, {
           channel: s,
           message: n,
-          compact: I,
+          compact: T,
           isGroupStart: l,
           treatSpam: !b && E && (0, h.isSpam)(n) && R,
           gotoChannel: r
         }, n.id))
       }
-    }), l.messages.length >= T.MAX_SHOWN_MESSAGES && y.push((0, a.jsxs)(u.Button, {
+    }), l.messages.length >= I.MAX_SHOWN_MESSAGES && y.push((0, a.jsxs)(u.Button, {
       color: u.Button.Colors.LINK,
       look: u.Button.Looks.LINK,
       onClick: e => r(e, n[n.length - 1].id),
@@ -117,7 +117,7 @@ function R(e) {
   return L && R && d.default.trackExposure({
     location: "20e3b0_2"
   }), (0, a.jsx)("div", {
-    className: x.messages,
+    className: M.messages,
     children: y
   })
 }

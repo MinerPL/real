@@ -23,8 +23,8 @@ var m = n("432173"),
   E = n("271938"),
   p = n("42203"),
   y = n("162805"),
-  T = n("923959"),
-  C = n("26989"),
+  C = n("923959"),
+  T = n("26989"),
   S = n("305961"),
   I = n("957255"),
   A = n("27618"),
@@ -107,7 +107,7 @@ function G(e) {
 }
 class F extends r.default.Store {
   initialize() {
-    this.waitFor(O.default, p.default, y.default, C.default, h.default, D.default, N.default, S.default, A.default, T.default), this.syncWith([_.default], () => {})
+    this.waitFor(O.default, p.default, y.default, T.default, h.default, D.default, N.default, S.default, A.default, C.default), this.syncWith([_.default], () => {})
   }
   getMessages(e) {
     if (_.default.hasViewingRoles()) {

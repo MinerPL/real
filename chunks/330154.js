@@ -2,7 +2,7 @@
 let s;
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return T
   }
 });
 var i = n("671725"),
@@ -22,7 +22,7 @@ let g = {},
   E = !1,
   p = !1,
   y = !1;
-class T extends l.default.Store {
+class C extends l.default.Store {
   getInvite(e) {
     var t, n;
     let {
@@ -42,8 +42,8 @@ class T extends l.default.Store {
     return null != s && !p && !y
   }
 }
-T.displayName = "InstantInviteStore";
-var C = new T(f.default, {
+C.displayName = "InstantInviteStore";
+var T = new C(f.default, {
   CONNECTION_OPEN: function() {
     g = {}, m = {}, h = {}, v = {}, s = null, p = !1, y = !1, E = !1
   },

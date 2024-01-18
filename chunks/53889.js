@@ -21,8 +21,8 @@ var s = n("37983"),
   C = n("778588"),
   p = n("471671"),
   m = n("808072"),
-  g = n("807061"),
-  E = n("826431"),
+  E = n("807061"),
+  g = n("826431"),
   S = n("612246"),
   A = n("933934");
 class _ extends a.PureComponent {
@@ -76,7 +76,7 @@ class _ extends a.PureComponent {
     let {
       tutorialId: e
     } = this.props;
-    return (0, E.getTutorialPopoutText)(e)
+    return (0, g.getTutorialPopoutText)(e)
   }
   render() {
     let {
@@ -84,7 +84,7 @@ class _ extends a.PureComponent {
       autoInvert: t,
       focused: n,
       origin: a
-    } = this.props, l = (0, g.getTutorialPopoutAttributes)(e);
+    } = this.props, l = (0, E.getTutorialPopoutAttributes)(e);
     if (null == l) return null;
     let {
       media: r,
@@ -96,10 +96,10 @@ class _ extends a.PureComponent {
       popoutPosition: C
     } = l, {
       offsetX: p,
-      offsetY: E
+      offsetY: g
     } = this.state, S = {
       left: null != p ? a.x + p : void 0,
-      top: null != E ? a.y + E : void 0
+      top: null != g ? a.y + g : void 0
     }, _ = e => {
       let t = n && !e;
       return !0 !== d ? null : (0, s.jsxs)("div", {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return T
   }
 });
 var s = n("714617"),
@@ -29,27 +29,27 @@ function y() {
     if (null == u) return null;
     let y = m.default.getStageInstanceByChannel(u);
     if (null == y) return null;
-    let T = o.default.getChannel(u);
-    if (null == T || !f.default.canEveryone(E.Permissions.VIEW_CHANNEL, T)) return null;
-    let C = d.default.getGuild(T.getGuildId());
-    if (null == C || !C.hasFeature(E.GuildFeatures.DISCOVERABLE)) return null;
-    let S = (0, g.packStageChannelPartyId)(T, y),
+    let C = o.default.getChannel(u);
+    if (null == C || !f.default.canEveryone(E.Permissions.VIEW_CHANNEL, C)) return null;
+    let T = d.default.getGuild(C.getGuildId());
+    if (null == T || !T.hasFeature(E.GuildFeatures.DISCOVERABLE)) return null;
+    let S = (0, g.packStageChannelPartyId)(C, y),
       I = (null == p ? void 0 : null === (e = p.party) || void 0 === e ? void 0 : e.id) === S ? p : null,
-      A = _.default.getMutableParticipants(T.id, c.StageChannelParticipantNamedIndex.SPEAKER),
+      A = _.default.getMutableParticipants(C.id, c.StageChannelParticipantNamedIndex.SPEAKER),
       D = A.filter(e => e.type === c.StageChannelParticipantTypes.STREAM).length,
       N = A.length - D,
       O = _.default.getParticipantCount(u) - D,
       b = (null == I ? void 0 : null === (t = I.party) || void 0 === t ? void 0 : t.size) != null ? I.party.size[1] : 0;
     return {
       application_id: v.STAGE_APPLICATION_ID,
-      name: null !== (i = null !== (s = y.topic) && void 0 !== s ? s : T.topic) && void 0 !== i ? i : T.name,
-      type: (0, h.getStageHasMedia)(T.id) ? E.ActivityTypes.WATCHING : E.ActivityTypes.LISTENING,
+      name: null !== (i = null !== (s = y.topic) && void 0 !== s ? s : C.topic) && void 0 !== i ? i : C.name,
+      type: (0, h.getStageHasMedia)(C.id) ? E.ActivityTypes.WATCHING : E.ActivityTypes.LISTENING,
       timestamps: {
         start: null !== (r = null == I ? void 0 : null === (n = I.timestamps) || void 0 === n ? void 0 : n.start) && void 0 !== r ? r : new Date().getTime()
       },
       assets: {
-        small_image: null !== (a = C.icon) && void 0 !== a ? a : void 0,
-        small_text: C.name
+        small_image: null !== (a = T.icon) && void 0 !== a ? a : void 0,
+        small_text: T.name
       },
       party: {
         id: S,
@@ -59,7 +59,7 @@ function y() {
   }();
   return !i(e, p) && (p = e, !0)
 }
-class T extends r.default.Store {
+class C extends r.default.Store {
   initialize() {
     this.waitFor(o.default, l.default, m.default, u.default)
   }
@@ -67,8 +67,8 @@ class T extends r.default.Store {
     return p
   }
 }
-T.displayName = "StageChannelSelfRichPresenceStore";
-var C = new T(a.default, {
+C.displayName = "StageChannelSelfRichPresenceStore";
+var T = new C(a.default, {
   CONNECTION_OPEN: y,
   STAGE_INSTANCE_CREATE: y,
   STAGE_INSTANCE_UPDATE: y,

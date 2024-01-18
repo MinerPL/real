@@ -38,10 +38,10 @@ n.r(t), n.d(t, {
     return y
   },
   EMOJI_SIZE_MAP: function() {
-    return T
+    return C
   },
   EMOJI_ROW_SIZE: function() {
-    return C
+    return T
   }
 }), (d = s || (s = {})).GUILD = "GUILD", d.PACK = "PACK", d.UNICODE = "UNICODE", d.RECENT = "RECENT", d.CUSTOM = "CUSTOM", d.SEARCH_RESULTS = "SEARCH_RESULTS", d.FAVORITES = "FAVORITES", d.TOP_GUILD_EMOJI = "TOP_GUILD_EMOJI", d.PREMIUM_UPSELL = "PREMIUM_UPSELL";
 let c = "emoji-picker-grid";
@@ -54,9 +54,9 @@ let m = "emoji-picker-tab-panel",
   E = "soundboard-picker-tab",
   p = "gif-picker-tab-panel",
   y = "gif-picker-tab",
-  T = {
+  C = {
     reaction: 32,
     default: 44,
     jumbo: 96
   },
-  C = 9
+  T = 9

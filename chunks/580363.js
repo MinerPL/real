@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return C
   }
 }), n("702976"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
 var s = n("37983");
@@ -24,13 +24,13 @@ var i = n("414456"),
   p = n("782340"),
   y = n("413973");
 
-function T(e) {
+function C(e) {
   var t;
   let n, {
       application: i,
       scopes: r,
       redirectUri: a,
-      approximateGuildCount: T,
+      approximateGuildCount: C,
       isEmbeddedFlow: S,
       embeddedActivityConfig: I
     } = e,
@@ -43,36 +43,36 @@ function T(e) {
   }
   return (0, s.jsxs)("div", {
     className: y.applicationDetails,
-    children: [null != n ? (0, s.jsx)(C, {
+    children: [null != n ? (0, s.jsx)(T, {
       className: y.redirectWarning,
       icon: u.default,
       text: p.default.Messages.OAUTH2_DETAILS_REDIRECT.format({
         origin: n
       })
-    }) : null, (0, s.jsx)(C, {
+    }) : null, (0, s.jsx)(T, {
       icon: l.default,
       text: (0, m.getApplicationDetailsText)(i)
-    }), (0, s.jsx)(C, {
+    }), (0, s.jsx)(T, {
       icon: o.default,
       text: p.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
         date: A
       })
-    }), r.includes(E.OAuth2Scopes.BOT) && null != T ? (0, s.jsx)(C, {
+    }), r.includes(E.OAuth2Scopes.BOT) && null != C ? (0, s.jsx)(T, {
       icon: f.default,
       text: p.default.Messages.OAUTH2_DETAILS_GUILDS.format({
-        guildCount: T
+        guildCount: C
       })
-    }) : null, (0, s.jsx)(C, {
+    }) : null, (0, s.jsx)(T, {
       icon: _.default,
       text: D
-    }), (null == I ? void 0 : I.has_csp_exception) ? (0, s.jsx)(C, {
+    }), (null == I ? void 0 : I.has_csp_exception) ? (0, s.jsx)(T, {
       icon: d.default,
       text: p.default.Messages.OAUTH2_SCOPES_IP_LOCATION_SCOPE
     }) : null]
   })
 }
 
-function C(e) {
+function T(e) {
   let {
     icon: t,
     text: n,

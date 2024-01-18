@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getBenefitKey: function() {
-    return r
+    return l
   },
   formatPlanInterval: function() {
-    return a
+    return r
   },
   formatPlanIntervalDuration: function() {
     return u
@@ -18,13 +18,13 @@ n.r(t), n.d(t, {
 });
 var s = n("677795"),
   i = n("646718"),
-  l = n("782340");
+  a = n("782340");
 
-function r(e) {
+function l(e) {
   return "roles" in e ? "emoji-".concat(e.id) : "".concat(e.ref_type, "-").concat(e.emoji_id, "-").concat(e.name, "-").concat(e.ref_id)
 }
 
-function a(e) {
+function r(e) {
   let {
     interval: t,
     interval_count: n
@@ -32,11 +32,11 @@ function a(e) {
   return (function(e) {
     switch (e) {
       case i.SubscriptionIntervalTypes.DAY:
-        return l.default.Messages.DAY;
+        return a.default.Messages.DAY;
       case i.SubscriptionIntervalTypes.MONTH:
-        return l.default.Messages.MONTH;
+        return a.default.Messages.MONTH;
       case i.SubscriptionIntervalTypes.YEAR:
-        return l.default.Messages.YEAR
+        return a.default.Messages.YEAR
     }
   })(t).format({
     count: n
@@ -50,18 +50,18 @@ function u(e) {
   } = e;
   switch (t) {
     case i.SubscriptionIntervalTypes.DAY:
-      if (n > 0 && n % 7 == 0) return l.default.Messages.DURATION_WEEKS_CAPITALIZE.format({
+      if (n > 0 && n % 7 == 0) return a.default.Messages.DURATION_WEEKS_CAPITALIZE.format({
         weeks: n / 7
       });
-      return l.default.Messages.DURATION_DAYS_CAPITALIZE.format({
+      return a.default.Messages.DURATION_DAYS_CAPITALIZE.format({
         days: n
       });
     case i.SubscriptionIntervalTypes.MONTH:
-      return l.default.Messages.DURATION_MONTHS_CAPITALIZE.format({
+      return a.default.Messages.DURATION_MONTHS_CAPITALIZE.format({
         months: n
       });
     case i.SubscriptionIntervalTypes.YEAR:
-      return l.default.Messages.DURATION_YEARS_CAPITALIZE.format({
+      return a.default.Messages.DURATION_YEARS_CAPITALIZE.format({
         years: n
       })
   }

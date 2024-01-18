@@ -22,8 +22,8 @@ let u = d.FormStates.CLOSED,
   E = !1,
   p = null,
   y = null,
-  T = null,
-  C = [],
+  C = null,
+  T = [],
   S = null,
   I = null;
 
@@ -44,11 +44,11 @@ function A(e) {
         claimed: l.isClaimed()
       }
     }
-  }, y = null !== (s = e.onClose) && void 0 !== s ? s : null, T = null !== (i = e.analyticsLocation) && void 0 !== i ? i : null, C = null !== (r = e.analyticsLocations) && void 0 !== r ? r : [], I = null !== (a = e.impressionSource) && void 0 !== a ? a : null
+  }, y = null !== (s = e.onClose) && void 0 !== s ? s : null, C = null !== (i = e.analyticsLocation) && void 0 !== i ? i : null, T = null !== (r = e.analyticsLocations) && void 0 !== r ? r : [], I = null !== (a = e.impressionSource) && void 0 !== a ? a : null
 }
 
 function D() {
-  u = d.FormStates.CLOSED, v = !1, m = null, S = null, h = null, l = null, f = null, _ = {}, c = {}, y = null, T = null, C = [], I = null
+  u = d.FormStates.CLOSED, v = !1, m = null, S = null, h = null, l = null, f = null, _ = {}, c = {}, y = null, C = null, T = [], I = null
 }
 
 function N() {
@@ -89,8 +89,8 @@ class O extends r.default.Store {
       errors: g,
       hasChanges: this.hasChanges(),
       openWithoutBackstack: E,
-      analyticsLocation: T,
-      analyticsLocations: C,
+      analyticsLocation: C,
+      analyticsLocations: T,
       initialSection: S,
       impressionSource: I
     }
@@ -117,7 +117,7 @@ var b = new O(a.default, {
   },
   USER_SETTINGS_MODAL_SET_SECTION: function(e) {
     var t;
-    l = f, f = e.section, T = null, C = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (_[f] = e.subsection)
+    l = f, f = e.section, C = null, T = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (_[f] = e.subsection)
   },
   USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function(e) {
     let {

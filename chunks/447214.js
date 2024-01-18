@@ -22,8 +22,8 @@ var s, i, r, a = n("627445"),
   E = n("410912"),
   p = n("313915"),
   y = n("599110"),
-  T = n("922932"),
-  C = n("718517"),
+  C = n("922932"),
+  T = n("718517"),
   S = n("773336"),
   I = n("286235"),
   A = n("265912"),
@@ -39,9 +39,9 @@ let M = new h.default("GatewaySocket"),
   w = new N.default;
 
 function L() {}(r = s || (s = {})).CLOSED = "CLOSED", r.WILL_RECONNECT = "WILL_RECONNECT", r.CONNECTING = "CONNECTING", r.IDENTIFYING = "IDENTIFYING", r.RESUMING = "RESUMING", r.SESSION_ESTABLISHED = "SESSION_ESTABLISHED";
-let U = 30 * C.default.Millis.SECOND,
-  G = 3 * C.default.Millis.MINUTE,
-  F = 1 * C.default.Millis.MINUTE;
+let U = 30 * T.default.Millis.SECOND,
+  G = 3 * T.default.Millis.MINUTE,
+  F = 1 * T.default.Millis.MINUTE;
 
 function x(e) {
   return null == e ? 0 : "string" == typeof e ? e.length : e.byteLength
@@ -204,7 +204,7 @@ i = class extends b.default {
         null != t.raw_length ? n += t.raw_length : n += x(s), e.feed(s)
       }),
       onError: () => {
-        this.setResumeUrl(null), T.default.flushDNSCache(), this._handleClose(!1, 0, "An error with the websocket occurred")
+        this.setResumeUrl(null), C.default.flushDNSCache(), this._handleClose(!1, 0, "An error with the websocket occurred")
       },
       onClose: e => {
         let {

@@ -22,10 +22,10 @@ n.r(t), n.d(t, {
     return p
   },
   clearSearchState: function() {
-    return g
+    return S
   },
   updateAutocompleteQuery: function() {
-    return S
+    return g
   },
   setShowBlockedResults: function() {
     return N
@@ -125,7 +125,7 @@ function p(e, t) {
   })
 }
 
-function g(e) {
+function S(e) {
   l.default.trackWithMetadata(r.AnalyticEvents.SEARCH_CLOSED, {
     search_id: s.default.getAnalyticsId(e)
   }), a.default.wait(() => a.default.dispatch({
@@ -134,7 +134,7 @@ function g(e) {
   }))
 }
 
-function S(e, t, n) {
+function g(e, t, n) {
   null != e && a.default.dispatch({
     type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE",
     searchId: e,

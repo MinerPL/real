@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return y
   },
   setDispatchSocketMessageFunction: function() {
-    return C
+    return T
   }
 }), n("222007"), n("424973"), n("70102");
 var s = n("35092"),
@@ -34,10 +34,10 @@ let h = new a.default("ConnectionStore"),
   E = new g.default(v),
   p = new m.default(v),
   y = new c.default(v),
-  T = null;
+  C = null;
 
-function C(e) {
-  T = e
+function T(e) {
+  C = e
 }
 v.handleIdentify = () => {
   let e = o.default.getToken();
@@ -84,13 +84,13 @@ function N() {
   I = null;
   let e = Date.now(),
     t = S.slice();
-  if (S.length = 0, null == T) throw Error("setDispatchSocketMessageFunction needs to be called first!");
+  if (S.length = 0, null == C) throw Error("setDispatchSocketMessageFunction needs to be called first!");
   let n = "none";
   try {
     s.default.Emitter.batched(() => {
       t.forEach(e => {
         let [t, s] = e;
-        n = t, T(t, s)
+        n = t, C(t, s)
       }), f.default.flush()
     })
   } catch (e) {

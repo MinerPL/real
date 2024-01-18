@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return y
   },
   getVisibleConnectionsRole: function() {
-    return T
+    return C
   },
   getCreatedAtDate: function() {
-    return C
+    return T
   }
 });
 var s, i, r = n("627445"),
@@ -280,7 +280,7 @@ function y(e) {
   })
 }
 
-function T(e) {
+function C(e) {
   var t, n;
   let {
     guildMember: s,
@@ -301,7 +301,7 @@ function T(e) {
   return l.length > 0 ? null !== (t = l[0]) && void 0 !== t ? t : null : o ? null : null !== (n = u[0]) && void 0 !== n ? n : null
 }
 
-function C(e, t) {
+function T(e, t) {
   if (null == e || "" === e) return null;
   let n = new Date(e);
   return !(n instanceof Date) || isNaN(n.getTime()) ? null : n.toLocaleDateString(t, {

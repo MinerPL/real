@@ -18,15 +18,15 @@ var s = n("37983"),
   C = n("701909"),
   p = n("639440"),
   m = n("673844"),
-  g = n("49111"),
-  E = n("782340"),
+  E = n("49111"),
+  g = n("782340"),
   S = n("64664");
 
 function A(e) {
   let {
     threadId: t
   } = e, n = (0, i.default)([u.default], () => u.default.getChannel(t)), A = (0, i.default)([u.default], () => u.default.getChannel(null == n ? void 0 : n.parent_id)), _ = a.useCallback(() => {
-    null != n && null != A && ((0, o.trackWithMetadata)(g.AnalyticEvents.MEDIA_POST_SHARE_PROMPT_CLICKED, {
+    null != n && null != A && ((0, o.trackWithMetadata)(E.AnalyticEvents.MEDIA_POST_SHARE_PROMPT_CLICKED, {
       media_post_id: n.id
     }), (0, l.copy)((0, h.getChannelLinkToCopy)(n, A)))
   }, [n, A]);
@@ -37,12 +37,12 @@ function A(e) {
       children: [(0, s.jsx)(r.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: E.default.Messages.MEDIA_POST_SHARE_PROMPT_TITLE
+        children: g.default.Messages.MEDIA_POST_SHARE_PROMPT_TITLE
       }), (0, s.jsx)(r.Text, {
         variant: "text-sm/medium",
         color: "text-normal",
-        children: E.default.Messages.MEDIA_POST_SHARE_PROMPT_SUBTITLE.format({
-          helpArticleUrl: C.default.getCreatorSupportArticleURL(g.HelpdeskArticles.MEDIA_CHANNEL)
+        children: g.default.Messages.MEDIA_POST_SHARE_PROMPT_SUBTITLE.format({
+          helpArticleUrl: C.default.getCreatorSupportArticleURL(E.HelpdeskArticles.MEDIA_CHANNEL)
         })
       }), (0, s.jsx)(d.default, {
         size: 4
@@ -56,7 +56,7 @@ function A(e) {
         }), (0, s.jsx)(r.Text, {
           variant: "text-sm/medium",
           color: "always-white",
-          children: E.default.Messages.MEDIA_POST_SHARE_PROMPT_CTA
+          children: g.default.Messages.MEDIA_POST_SHARE_PROMPT_CTA
         })]
       })]
     }), (0, s.jsx)(r.Clickable, {
@@ -64,7 +64,7 @@ function A(e) {
       onClick: () => {
         (0, p.dismissMediaPostSharePrompt)(t)
       },
-      "aria-label": E.default.Messages.REMOVE_MESSAGE_ATTACHMENT,
+      "aria-label": g.default.Messages.REMOVE_MESSAGE_ATTACHMENT,
       children: (0, s.jsx)(c.default, {
         height: "15px",
         width: "15px"

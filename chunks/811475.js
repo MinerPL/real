@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   activityInviteKey: function() {
-    return N
+    return I
   },
   default: function() {
     return L
@@ -21,15 +21,15 @@ var s = n("37983"),
   C = n("299285"),
   p = n("850391"),
   m = n("149022"),
-  g = n("681060"),
-  E = n("884351"),
+  E = n("681060"),
+  g = n("884351"),
   S = n("671071"),
   A = n("401848"),
   _ = n("718422"),
   T = n("49111"),
   M = n("782340"),
-  I = n("216220");
-let N = "ActivityInvite";
+  N = n("216220");
+let I = "ActivityInvite";
 class v extends a.PureComponent {
   componentDidMount() {
     this.fetchApplication()
@@ -74,7 +74,7 @@ class v extends a.PureComponent {
       cooldown: h,
       application: C,
       transitionState: m,
-      onClose: E
+      onClose: g
     } = this.props, S = h > 0, A = S ? M.default.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
       seconds: Math.round((h + 1e3) / 1e3)
     }) : null;
@@ -90,18 +90,18 @@ class v extends a.PureComponent {
         })
       }), (0, s.jsxs)(o.ModalContent, {
         children: [(0, s.jsx)("div", {
-          className: I.subHeader,
+          className: N.subHeader,
           children: M.default.Messages.MESSAGE_PREVIEW
         }), (0, s.jsx)(d.default, {
           activityActionType: f,
           activity: l,
-          className: I.preview,
+          className: N.preview,
           application: C,
           partyId: null != l.party ? l.party.id : null,
           isPreview: !0,
           analyticsLocations: r
         }), (0, s.jsx)("div", {
-          className: I.subHeader,
+          className: N.subHeader,
           children: M.default.Messages.ADD_A_COMMENT_OPTIONAL
         }), (0, s.jsx)(o.Popout, {
           position: "top",
@@ -121,8 +121,8 @@ class v extends a.PureComponent {
               ...a
             })
           },
-          children: () => (0, s.jsx)(g.default, {
-            className: I.textArea,
+          children: () => (0, s.jsx)(E.default, {
+            className: N.textArea,
             textValue: e,
             richValue: t,
             focused: n,
@@ -130,7 +130,7 @@ class v extends a.PureComponent {
             onChange: this.handleTextChange,
             onSubmit: this.handleShare,
             type: p.ChatInputTypes.FORM,
-            parentModalKey: N
+            parentModalKey: I
           })
         })]
       }), (0, s.jsxs)(o.ModalFooter, {
@@ -147,7 +147,7 @@ class v extends a.PureComponent {
         }), (0, s.jsx)(o.Button, {
           look: o.Button.Looks.LINK,
           color: o.Button.Colors.PRIMARY,
-          onClick: E,
+          onClick: g,
           children: M.default.Messages.CANCEL
         })]
       })]
@@ -204,7 +204,7 @@ class v extends a.PureComponent {
         shouldClear: !1,
         shouldRefocus: !0
       });
-      let r = E.default.parse(e, l),
+      let r = g.default.parse(e, l),
         o = {
           activity: t,
           type: n

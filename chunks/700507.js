@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return y
   },
   remoteVoiceStateUpdate: function() {
-    return T
+    return C
   },
   remoteDisconnect: function() {
-    return C
+    return T
   },
   remoteAudioSettingsUpdate: function() {
     return S
@@ -77,7 +77,7 @@ function y(e) {
   })
 }
 
-function T(e, t) {
+function C(e, t) {
   let {
     selfMute: n,
     selfDeaf: s
@@ -93,7 +93,7 @@ function T(e, t) {
   }), E("VOICE_STATE_UPDATE", e)
 }
 
-function C(e) {
+function T(e) {
   a.default.dispatch({
     type: "REMOTE_COMMAND",
     sessionId: e,

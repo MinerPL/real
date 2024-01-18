@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 });
 var i = n("913144"),
-  s = {
+  r = {
     toggleMembersSection() {
       i.default.dispatch({
         type: "CHANNEL_TOGGLE_MEMBERS_SECTION"

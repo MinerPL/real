@@ -28,8 +28,8 @@ var s = n("345570"),
   E = n("457971"),
   p = n("447435"),
   y = n("574933"),
-  T = n("49111"),
-  C = n("397336");
+  C = n("49111"),
+  T = n("397336");
 let S = 3e3,
   I = 800,
   A = {};
@@ -314,7 +314,7 @@ function K(e) {
     settings: t,
     local: n
   } = e;
-  if (!(0, E.isEligibleForExplicitMediaRedaction)() || !n || t.type !== C.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
+  if (!(0, E.isEligibleForExplicitMediaRedaction)() || !n || t.type !== T.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
   let s = m.default.getChannelId();
   return null != s && z(s)
 }
@@ -336,7 +336,7 @@ function z(e) {
     } = function(e) {
       let t = e.filter(e => w(e) && (0, p.shouldRedactExplicitContent)(e)),
         n = e.map(e => {
-          if (T.MessageTypesWithLazyLoadedReferences.has(e.type) && null != e.messageReference) {
+          if (C.MessageTypesWithLazyLoadedReferences.has(e.type) && null != e.messageReference) {
             let t = l.default.getMessageByReference(e.messageReference);
             if (t.state === l.ReferencedMessageState.LOADED && null != t.message && w(t.message)) return t.message
           }

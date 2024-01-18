@@ -21,8 +21,8 @@ var r = n("627445"),
   E = n("271938"),
   p = n("42203"),
   y = n("42887"),
-  T = n("824563"),
-  C = n("945956"),
+  C = n("824563"),
+  T = n("945956"),
   S = n("568307"),
   I = n("49111"),
   A = n("353927");
@@ -208,7 +208,7 @@ var U = new L(f.default, !y.default.isSupported() || __OVERLAY__ ? {} : {
       var u, f, m;
       null == O[t] && (N[t] = null);
       let e = (0, c.decodeStreamKey)(t);
-      null == N[t] && null == b[t] && (N[t] = (0, g.getStreamerApplication)(e, T.default));
+      null == N[t] && null == b[t] && (N[t] = (0, g.getStreamerApplication)(e, C.default));
       let i = p.default.getChannel(e.channelId),
         l = null != i && i.isBroadcastChannel(),
         v = new _.StreamRTCAnalyticsContext({
@@ -236,7 +236,7 @@ var U = new L(f.default, !y.default.isSupported() || __OVERLAY__ ? {} : {
         initialLayout: P,
         analyticsContext: m,
         isStreamer: null != N[u],
-        parentMediaSessionId: C.default.getMediaSessionId()
+        parentMediaSessionId: T.default.getMediaSessionId()
       }), k[t] = d
     }
     R = [], y.default.getMediaEngine().on(l.MediaEngineEvent.ConnectionStats, M)

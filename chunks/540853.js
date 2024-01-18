@@ -23,7 +23,7 @@ function h(e) {
     C = (0, a.default)([i.default], () => i.default.getStatus(t)),
     p = (0, a.default)([i.default], () => i.default.isMobileOnline(t)),
     m = (0, a.default)([r.default], () => r.default.getNickname(t)),
-    g = u.default.useUserTag(h);
+    E = u.default.useUserTag(h);
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(l.HiddenVisually, {
       children: c.default.Messages.DIRECT_MESSAGE
@@ -42,7 +42,7 @@ function h(e) {
       onContextMenu: e.handleContextMenu,
       className: null != e.handleClick ? f.cursorPointer : null,
       children: (0, s.jsx)(l.TooltipContainer, {
-        text: g,
+        text: E,
         position: "bottom",
         children: null != m ? m : u.default.getName(h)
       })

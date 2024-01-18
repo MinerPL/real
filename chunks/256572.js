@@ -119,14 +119,14 @@ function y(e, t) {
   return n
 }
 
-function T(e) {
+function C(e) {
   let {
     messages: t
   } = e;
   return y(t, e => p(e))
 }
 
-function C(e) {
+function T(e) {
   return E.deleteChannelCache(e.channel.id)
 }
 
@@ -172,9 +172,9 @@ var N = new D(d.default, {
     } = e;
     return y(Object.values(t), e => y(Object.values(e), e => p(e)))
   },
-  LOCAL_MESSAGES_LOADED: T,
-  LOAD_MESSAGES_SUCCESS: T,
-  LOAD_MESSAGES_AROUND_SUCCESS: T,
+  LOCAL_MESSAGES_LOADED: C,
+  LOAD_MESSAGES_SUCCESS: C,
+  LOAD_MESSAGES_AROUND_SUCCESS: C,
   SEARCH_FINISH: function(e) {
     let {
       messages: t
@@ -254,8 +254,8 @@ var N = new D(d.default, {
       message: t
     })
   },
-  CHANNEL_DELETE: C,
-  THREAD_DELETE: C,
+  CHANNEL_DELETE: T,
+  THREAD_DELETE: T,
   GUILD_DELETE: function() {
     let e = E.retainWhere(e => null != _.default.getChannel(e));
     if (0 === e) return !1

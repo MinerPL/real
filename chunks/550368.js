@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getAssetFromImageURL: function() {
-    return T
+    return C
   },
   getAssetImage: function() {
-    return C
+    return T
   },
   getAssets: function() {
     return S
@@ -69,12 +69,12 @@ async function y(e) {
   }
 }
 
-function T(e, t) {
+function C(e, t) {
   let n = v[e].serialize(t);
   return n ? "".concat(e, ":").concat(n.toString()) : null
 }
 
-function C(e, t, n) {
+function T(e, t, n) {
   if (null != t && t.includes(":")) {
     let [e, s] = t.split(":");
     if (e === f.PlatformTypes.TWITCH) {
@@ -129,7 +129,7 @@ function A(e, t) {
       let i = e[s];
       if (null == i) continue;
       let r = Object.prototype.hasOwnProperty.call(p, i) ? p[i] : void 0;
-      null != r && (t[s] = T("mp", r), n++)
+      null != r && (t[s] = C("mp", r), n++)
     }
   return n === e.length
 }

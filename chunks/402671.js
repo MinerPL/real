@@ -45,11 +45,11 @@ function y(e) {
   return t ? e : null
 }
 
-function T(e, t) {
+function C(e, t) {
   return null != e && null != t && (!p(e) || null == y(e) && t === e.guildId)
 }
 
-function C(e) {
+function T(e) {
   var t;
   let {
     emoji: n,
@@ -62,8 +62,8 @@ function C(e) {
   let _ = null !== (t = e.guildId) && void 0 !== t ? t : null == i ? void 0 : i.getGuildId(),
     h = null != i && (0, o.isGuildTextChannelType)(i.type),
     v = null != i && (0, o.isGuildVocalChannelType)(i.type),
-    E = T(n, _),
-    C = d.default.can(g.Permissions.USE_EXTERNAL_EMOJIS, i),
+    E = C(n, _),
+    T = d.default.can(g.Permissions.USE_EXTERNAL_EMOJIS, i),
     S = function(e, t) {
       var n;
       if (!t || null == e) return !1;
@@ -77,7 +77,7 @@ function C(e) {
       return i.id === r
     }(n, e.canViewAndUsePackEmoji);
   if (l === m.EmojiIntention.COMMUNITY_CONTENT || l === m.EmojiIntention.COMMUNITY_CONTENT_ONLY) return E && n.available ? null : m.EmojiDisabledReasons.DISALLOW_EXTERNAL;
-  if (!(0, m.isExternalEmojiAllowedForIntention)(l) && !T(n, _) && !f || (h || v) && !E && !C) return m.EmojiDisabledReasons.DISALLOW_EXTERNAL;
+  if (!(0, m.isExternalEmojiAllowedForIntention)(l) && !C(n, _) && !f || (h || v) && !E && !T) return m.EmojiDisabledReasons.DISALLOW_EXTERNAL;
   if (!n.available) return m.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE;
   let I = u.default.getCurrentUser();
   if (!c.default.canUseEmojisEverywhere(I) && !E && !S) {
@@ -113,8 +113,8 @@ var I = {
   },
   filterUnsupportedEmojis: f.default.filterUnsupportedEmojis,
   getURL: f.default.getURL,
-  isInternalEmojiForGuildId: T,
-  getEmojiUnavailableReason: C,
+  isInternalEmojiForGuildId: C,
+  getEmojiUnavailableReason: T,
   isCustomEmoji: p,
   isEmojiFiltered(e) {
     let {
@@ -123,7 +123,7 @@ var I = {
       intention: s,
       canViewAndUsePackEmoji: i,
       guildId: r
-    } = e, a = C({
+    } = e, a = T({
       emoji: t,
       channel: n,
       intention: s,
@@ -139,7 +139,7 @@ var I = {
       intention: s,
       canViewAndUsePackEmoji: i,
       guildId: r
-    } = e, a = C({
+    } = e, a = T({
       emoji: t,
       channel: n,
       guildId: r,
@@ -173,7 +173,7 @@ var I = {
       channel: n,
       intention: s,
       canViewAndUsePackEmoji: i
-    } = e, r = C({
+    } = e, r = T({
       emoji: t,
       channel: n,
       intention: s,

@@ -43,10 +43,10 @@ n.r(t), n.d(t, {
     return y
   },
   getGuildMonetizationRestrictions: function() {
-    return T
+    return C
   },
   fetchHighlightedCreatorGuildDetails: function() {
-    return C
+    return T
   }
 });
 var s = n("872717"),
@@ -210,7 +210,7 @@ let o = async (e, t) => {
   } catch (e) {
     throw new i.APIError(e)
   }
-}, T = async function(e) {
+}, C = async function(e) {
   let {
     signal: t
   } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -223,7 +223,7 @@ let o = async (e, t) => {
   } catch (e) {
     throw new i.APIError(e)
   }
-}, C = async e => {
+}, T = async e => {
   try {
     var t;
     let n = await s.default.get({

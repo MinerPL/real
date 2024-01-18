@@ -23,8 +23,8 @@ let h = function(e, t) {
     E = l.default.getChannel(e),
     p = g.default.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
     y = null != E ? _.default.getCheck(E.guild_id) : null,
-    T = null != t && (0, r.shouldShowMembershipVerificationGate)(t);
-  if (!T) {
+    C = null != t && (0, r.shouldShowMembershipVerificationGate)(t);
+  if (!C) {
     if (null == y || y.canChat || (0, a.canLurkerListen)(E)) {
       if (null != E && !p) {
         let e = (0, m.isChannelFull)(E, g.default, f.default);

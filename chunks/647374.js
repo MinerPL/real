@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   punycodeLink: function() {
-    return C
+    return T
   },
   default: function() {
     return S
@@ -40,20 +40,20 @@ let m = ["http:", "https:", "discord:"],
   p = [f.AST_KEY.TEXT],
   y = [f.AST_KEY.UNDERLINE, f.AST_KEY.STRONG, f.AST_KEY.ITALICS, f.AST_KEY.STRIKETHROUGH, f.AST_KEY.INLINE_CODE, f.AST_KEY.SPOILER, f.AST_KEY.LINE_BREAK, f.AST_KEY.TIMESTAMP, f.AST_KEY.EMOJI, f.AST_KEY.CUSTOM_EMOJI, f.AST_KEY.LIST, f.AST_KEY.HEADING, f.AST_KEY.BLOCK_QUOTE];
 
-function T(e, t) {
+function C(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
   for (let s of (!Array.isArray(e) && (e = [e]), e)) {
     if (!t.includes(s.type)) return null;
     if (s.type === f.AST_KEY.INLINE_CODE) {
       let e = [...t, ...n];
-      if (null == T(s.validationChildContent, e)) return null
+      if (null == C(s.validationChildContent, e)) return null
     }
-    if (Array.isArray(s.content) && null == T(s.content, t)) return null
+    if (Array.isArray(s.content) && null == C(s.content, t)) return null
   }
   return e
 }
 
-function C(e) {
+function T(e) {
   try {
     var t;
     let n = new URL(e),
@@ -81,7 +81,7 @@ var S = {
     }), m = g(o), S = g(a), I = g(null != _ ? _ : ""), A = m.whitespaceSanitized, D = S.fullySanitized, N = I.fullySanitized, O = D.trim(), b = A.trim();
     if (0 === b.length || 0 === O.length) return c();
     let P = d.unescapeUrl(o),
-      k = C(P),
+      k = T(P),
       R = (0, u.default)(a).length > 0 || (0, u.default)(_).length > 0;
     if (null == k || R) return c();
     let V = {
@@ -93,9 +93,9 @@ var S = {
       w = [...M, ...E],
       L = [...p, ...y],
       U = t(D, V),
-      G = T(U, w, [f.AST_KEY.EMOJI]),
+      G = C(U, w, [f.AST_KEY.EMOJI]),
       F = t(N, V),
-      x = T(F, L);
+      x = C(F, L);
     if (null == G || null == x) return c();
     let B = function e(t) {
         let n = "";

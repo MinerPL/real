@@ -25,8 +25,8 @@ let f = a.memo(function(e) {
       setPopout: C,
       author: p,
       repliedMessage: m,
-      roleIcon: g
-    } = e, E = (0, d.useContextMenuUser)(t.author.id, n.id), S = (0, d.useClickMessageAuthorUsername)(t, n, f, C), A = (0, d.useClickMessageAuthorAvatar)(h, C), _ = a.useCallback(() => C({
+      roleIcon: E
+    } = e, g = (0, d.useContextMenuUser)(t.author.id, n.id), S = (0, d.useClickMessageAuthorUsername)(t, n, f, C), A = (0, d.useClickMessageAuthorAvatar)(h, C), _ = a.useCallback(() => C({
       usernameProfile: !1,
       avatarProfile: !1,
       referencedUsernameProfile: !1
@@ -45,9 +45,9 @@ let f = a.memo(function(e) {
       showUsernamePopout: f,
       onClickAvatar: A,
       onClickUsername: S,
-      onContextMenu: E,
+      onContextMenu: g,
       onPopoutRequestClose: _,
-      roleIcon: g
+      roleIcon: E
     })
   }),
   h = a.memo(i.default);
@@ -67,8 +67,8 @@ function C(e) {
     channel: p,
     groupId: m
   } = t, {
-    usernameProfile: g,
-    avatarProfile: E
+    usernameProfile: E,
+    avatarProfile: g
   } = a;
   if ((0, r.default)(c)) return null;
   let S = c.id === m;
@@ -80,8 +80,8 @@ function C(e) {
     isGroupStart: S,
     groupId: m,
     setPopout: n,
-    usernameProfile: g,
-    avatarProfile: E,
+    usernameProfile: E,
+    avatarProfile: g,
     author: i,
     repliedMessage: u,
     roleIcon: d

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return T
   }
 }), n("222007");
 var s, i, r = n("872717"),
@@ -62,7 +62,7 @@ function y(e, t, n) {
   }
   throw e
 }(i = s || (s = {}))[i.SHOW_ALWAYS = 0] = "SHOW_ALWAYS", i[i.SHOW_ONLY_IF_ACTION_NEEDED = 1] = "SHOW_ONLY_IF_ACTION_NEEDED";
-let T = {
+let C = {
   sendRequest(e) {
     let {
       discordTag: t,
@@ -108,19 +108,19 @@ let T = {
       y(e, u, g.default.getUserTag(l))
     })
   },
-  acceptFriendRequest: e => T.addRelationship(e, function() {
+  acceptFriendRequest: e => C.addRelationship(e, function() {
     a.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_ACCEPT_REQUEST)
   }),
-  cancelFriendRequest: (e, t) => T.removeRelationship(e, t, function() {
+  cancelFriendRequest: (e, t) => C.removeRelationship(e, t, function() {
     a.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_CANCEL_REQUEST)
   }),
   removeFriend(e, t) {
-    T.removeRelationship(e, t, function() {
+    C.removeRelationship(e, t, function() {
       a.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_FRIEND_REMOVED)
     })
   },
   unblockUser(e, t) {
-    T.removeRelationship(e, t, function() {
+    C.removeRelationship(e, t, function() {
       a.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_USER_UNBLOCKED)
     })
   },
@@ -166,4 +166,4 @@ let T = {
     a.AccessibilityAnnouncer.announce(E.default.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL)
   })
 };
-var C = T
+var T = C

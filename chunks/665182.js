@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   },
   default: function() {
-    return g
+    return E
   }
 }), n("222007");
 var s, a, l = n("37983"),
@@ -40,14 +40,14 @@ function m(e) {
   })
 }
 
-function g(e) {
+function E(e) {
   let {
     sidebarType: t,
     maxWidth: n,
     onWidthChange: s,
     children: a,
     floatingLayer: r
-  } = e, f = i.useRef(null), g = function(e) {
+  } = e, f = i.useRef(null), E = function(e) {
     switch (e) {
       case 0:
         return "postSidebarWidth";
@@ -60,17 +60,17 @@ function g(e) {
       case 4:
         return "homeSidebarWidth"
     }
-  }(t), [E, S] = i.useState(h.default[g]), A = i.useCallback(e => {
+  }(t), [g, S] = i.useState(h.default[E]), A = i.useCallback(e => {
     c.default.updatedUnsyncedSettings({
-      [g]: e
+      [E]: e
     })
-  }, [g]), _ = (0, C.shouldChannelChatFloat)({
+  }, [E]), _ = (0, C.shouldChannelChatFloat)({
     maxWidth: n
-  }), T = (0, u.clamp)(E, C.MIN_CHAT_SIDEBAR_WIDTH, n), M = _ ? T : T + d.default.modules.chat.RESIZE_HANDLE_WIDTH;
+  }), T = (0, u.clamp)(g, C.MIN_CHAT_SIDEBAR_WIDTH, n), M = _ ? T : T + d.default.modules.chat.RESIZE_HANDLE_WIDTH;
   i.useEffect(() => {
     null == s || s(T, _)
   }, [T, s, _]);
-  let I = (0, l.jsxs)(l.Fragment, {
+  let N = (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
       className: o(p.chatTarget, {
         [p.floating]: _,
@@ -100,11 +100,11 @@ function g(e) {
     return (0, l.jsx)(e, {
       children: (0, l.jsx)("div", {
         className: p.chatLayerWrapper,
-        children: I
+        children: N
       })
     })
   }
   return (0, l.jsx)(l.Fragment, {
-    children: I
+    children: N
   })
 }

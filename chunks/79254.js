@@ -18,15 +18,15 @@ var s = n("37983"),
   C = n("599110"),
   p = n("659500"),
   m = n("254490"),
-  g = n("412861"),
-  E = n("149022"),
+  E = n("412861"),
+  g = n("149022"),
   S = n("64096"),
   A = n("49111"),
   _ = n("186859"),
   T = n("782340"),
   M = n("648198");
 
-function I(e, t, a, l) {
+function N(e, t, a, l) {
   (0, i.openModalLazy)(async () => {
     let {
       default: i
@@ -42,7 +42,7 @@ function I(e, t, a, l) {
     modalKey: r.activityInviteKey
   })
 }
-let N = /(.*)```(\w+)\n(.*)```(.*)/s;
+let I = /(.*)```(\w+)\n(.*)```(.*)/s;
 
 function v(e) {
   let {
@@ -68,12 +68,12 @@ function v(e) {
     })
   }, [t.guild_id, t.id]);
 
-  function b() {
+  function P() {
     (0, c.openThreadSidebarForCreating)(t, void 0, "Plus Button")
   }
 
-  function P() {
-    C.default.track(A.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D("/", (0, E.toRichValue)("/"))
+  function b() {
+    C.default.track(A.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D("/", (0, g.toRichValue)("/"))
   }
 
   function H() {
@@ -98,8 +98,8 @@ function v(e) {
     let e = y,
       n = "txt",
       s = "",
-      a = y.match(N);
-    null != a && (s = a[1], n = a[2], e = a[3], s += a[4]), (0, g.promptToUpload)([(0, m.makeFile)(new Blob([e], {
+      a = y.match(I);
+    null != a && (s = a[1], n = a[2], e = a[3], s += a[4]), (0, E.promptToUpload)([(0, m.makeFile)(new Blob([e], {
       type: "text/plain"
     }), "message.".concat(n))], t, R), p.ComponentDispatch.dispatchToLastSubscribed(A.ComponentActions.CLEAR_TEXT), "" !== s && p.ComponentDispatch.dispatchToLastSubscribed(A.ComponentActions.INSERT_TEXT, {
       plainText: s
@@ -172,7 +172,7 @@ function v(e) {
                 type: "Send Join Invite",
                 application_id: n.application_id,
                 location: A.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), I(n, t, A.ActivityActionTypes.JOIN, j))
+              }), N(n, t, A.ActivityActionTypes.JOIN, j))
             }
           }, "play");
         case S.AttachmentTypes.INVITE_TO_LISTEN:
@@ -184,7 +184,7 @@ function v(e) {
               return n = e.activity, void(C.default.track(A.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Listen Invite",
                 location: A.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), I(n, t, A.ActivityActionTypes.LISTEN, j))
+              }), N(n, t, A.ActivityActionTypes.LISTEN, j))
             }
           }, "listen");
         case S.AttachmentTypes.INVITE_TO_WATCH:
@@ -196,20 +196,20 @@ function v(e) {
               return n = e.activity, void(C.default.track(A.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Watch Invite",
                 location: A.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), I(n, t, A.ActivityActionTypes.WATCH, j))
+              }), N(n, t, A.ActivityActionTypes.WATCH, j))
             }
           }, "watch");
         case S.AttachmentTypes.CREATE_THREAD:
           return (0, s.jsx)(i.MenuItem, {
             id: "THREAD",
             label: a,
-            action: b
+            action: P
           }, "THREAD");
         case S.AttachmentTypes.SLASH_COMMAND:
           return (0, s.jsx)(i.MenuItem, {
             id: "SLASH_COMMAND",
             label: a,
-            action: P
+            action: b
           }, "SLASH_COMMAND");
         default:
           return null

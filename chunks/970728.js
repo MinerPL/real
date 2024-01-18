@@ -25,8 +25,8 @@ var s = n("597755"),
   E = n("233322"),
   p = n("157186"),
   y = n("290886"),
-  T = n("374021"),
-  C = n("398604"),
+  C = n("374021"),
+  T = n("398604"),
   S = n("704341"),
   I = n("9294"),
   A = n("487946"),
@@ -141,7 +141,7 @@ let et = function(e, t) {
           let e = {
             guildScheduledEventId: t.id
           };
-          null != n && (e.welcomeModalChannelId = n), (0, T.transitionToEventDetailsFromInvite)(t, e)
+          null != n && (e.welcomeModalChannelId = n), (0, C.transitionToEventDetailsFromInvite)(t, e)
         })
       }(t), !1) : (ee({
         guildId: null !== (s = i.getGuildId()) && void 0 !== s ? s : W.ME,
@@ -156,7 +156,7 @@ let et = function(e, t) {
       guild_id: t,
       channel_id: n
     } = e;
-    (0, C.isGuildScheduledEventActive)(e) && null != n ? et(n) : await j.default.transitionToGuildSync(t)
+    (0, T.isGuildScheduledEventActive)(e) && null != n ? et(n) : await j.default.transitionToGuildSync(t)
   };
 var es = {
   resolveInvite: function e(t, n, s) {
@@ -349,7 +349,7 @@ var es = {
         invite: e.body,
         code: c
       });
-      let i = C.default.getGuildScheduledEvent(f.guildScheduledEventId),
+      let i = T.default.getGuildScheduledEvent(f.guildScheduledEventId),
         r = {
           ...e.body,
           guild_scheduled_event: i

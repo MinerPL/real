@@ -23,8 +23,8 @@ var r = n("446674"),
   E = n("42203"),
   p = n("26989"),
   y = n("778588"),
-  T = n("260320"),
-  C = n("697218"),
+  C = n("260320"),
+  T = n("697218"),
   S = n("800762"),
   I = n("10514"),
   A = n("521012"),
@@ -76,7 +76,7 @@ function M(e, t) {
       c.default.initialGuild.measure(() => {
         r.default.Emitter.batched(() => {
           let e = N.hydrateInitialGuild(t, b.socket.identifyStartTime);
-          null != C.default.getCurrentUser() && (w({
+          null != T.default.getCurrentUser() && (w({
             type: "GUILD_CREATE",
             guild: e
           }), w({
@@ -420,13 +420,13 @@ function M(e, t) {
       break;
     case "CHANNEL_RECIPIENT_ADD":
     case "CHANNEL_RECIPIENT_REMOVE":
-      let T = E.default.getBasicChannel(t.channel_id);
+      let C = E.default.getBasicChannel(t.channel_id);
       w({
         type: e,
         channelId: t.channel_id,
         user: t.user,
         nick: t.nick,
-        isMember: null != T
+        isMember: null != C
       });
       break;
     case "GUILD_CREATE":
@@ -1666,7 +1666,7 @@ function G(e) {
 }
 
 function F() {
-  b.socket.isSessionEstablished() && T.default.getPendingLobbies().forEach(e => {
+  b.socket.isSessionEstablished() && C.default.getPendingLobbies().forEach(e => {
     b.socket.lobbyConnect(e.id, e.secret)
   })
 }
