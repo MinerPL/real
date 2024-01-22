@@ -1,65 +1,64 @@
 "use strict";
-l.r(t), l.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return f
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("414456"),
-  s = l.n(a),
-  i = l("77078"),
-  r = l("888355"),
-  o = l("49111"),
-  u = l("782340"),
-  d = l("355718");
+var l = s("37983");
+s("884691");
+var a = s("414456"),
+  i = s.n(a),
+  r = s("77078"),
+  o = s("888355"),
+  n = s("49111"),
+  u = s("782340"),
+  d = s("355718");
 
 function c(e) {
   let {
     className: t,
-    ...l
+    ...s
   } = e;
-  return (0, n.jsx)(i.Button, {
-    ...l,
-    look: i.Button.Looks.FILLED,
-    size: i.Button.Sizes.SMALL,
-    className: s(d.actionButton, t)
+  return (0, l.jsx)(r.Button, {
+    ...s,
+    look: r.Button.Looks.FILLED,
+    size: r.Button.Sizes.SMALL,
+    className: i(d.actionButton, t)
   })
 }
 
 function f(e) {
   let {
     isCurrentUser: t,
-    user: l,
+    user: s,
     relationshipType: a,
-    onAddFriend: s,
+    onAddFriend: i,
     onIgnoreFriend: f,
-    onSendMessage: m,
-    addFriendText: p
-  } = e, E = (0, r.useIsDMsToClydeEnabled)();
-  return t || a === o.RelationshipTypes.BLOCKED || l.isClyde() && !E ? null : a === o.RelationshipTypes.FRIEND || l.bot || l.isClyde() ? (0, n.jsx)(c, {
-    color: i.Button.Colors.GREEN,
-    onClick: m,
+    onSendMessage: S
+  } = e, m = (0, o.useIsDMsToClydeEnabled)();
+  return t || a === n.RelationshipTypes.BLOCKED || s.isClyde() && !m ? null : a === n.RelationshipTypes.FRIEND || s.bot || s.isClyde() ? (0, l.jsx)(c, {
+    color: r.Button.Colors.GREEN,
+    onClick: S,
     children: u.default.Messages.SEND_MESSAGE
-  }) : a === o.RelationshipTypes.PENDING_OUTGOING ? (0, n.jsx)(c, {
-    color: i.Button.Colors.GREEN,
+  }) : a === n.RelationshipTypes.PENDING_OUTGOING ? (0, l.jsx)(c, {
+    color: r.Button.Colors.GREEN,
     disabled: !0,
     children: u.default.Messages.ADD_FRIEND_BUTTON_AFTER
-  }) : a === o.RelationshipTypes.PENDING_INCOMING ? (0, n.jsxs)("div", {
+  }) : a === n.RelationshipTypes.PENDING_INCOMING ? (0, l.jsxs)("div", {
     className: d.pendingIncoming,
-    children: [(0, n.jsx)(c, {
-      color: i.Button.Colors.GREEN,
-      onClick: s,
+    children: [(0, l.jsx)(c, {
+      color: r.Button.Colors.GREEN,
+      onClick: i,
       children: u.default.Messages.FRIEND_REQUEST_ACCEPT
-    }), (0, n.jsx)(c, {
-      color: i.Button.Colors.PRIMARY,
+    }), (0, l.jsx)(c, {
+      color: r.Button.Colors.PRIMARY,
       onClick: f,
       className: d.actionRightButton,
       children: u.default.Messages.FRIEND_REQUEST_IGNORE
     })]
-  }) : (0, n.jsx)(c, {
-    color: i.Button.Colors.GREEN,
-    onClick: s,
-    children: null != p ? p : u.default.Messages.ADD_FRIEND_BUTTON
+  }) : (0, l.jsx)(c, {
+    color: r.Button.Colors.GREEN,
+    onClick: i,
+    children: u.default.Messages.ADD_FRIEND_BUTTON
   })
 }

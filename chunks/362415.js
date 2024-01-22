@@ -17,7 +17,7 @@ function r(e, t, a, r) {
     t.forEach(e => {
       null != e.text && l.push(e.text);
       let t = e.image;
-      null != t && (null != t.emoji ? o += 1 : null != t.stickerId ? u += 1 : null != t.gifAttachmentState && (i += 1))
+      null != t && (null != t.emoji ? o += 1 : null != t.stickerId ? u += 1 : null != t.mediaAttachmentState && (i += 1))
     }), n.default.trackWithMetadata(s.AnalyticEvents.POLL_CREATION_CANCELLED, {
       question_text: e,
       answers_text: l,

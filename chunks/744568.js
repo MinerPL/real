@@ -33,7 +33,7 @@ function v(e) {
     className: v,
     infoPanelClassName: x,
     style: N
-  } = e, A = (0, g.useCanAccessGuildMemberModView)(n, !0), M = (0, r.useStateFromStores)([C.default], () => C.default.getUser(t), [t]), R = (0, r.useStateFromStores)([E.default], () => E.default.getMember(n, t), [n, t]), j = null == M || null == R, {
+  } = e, A = (0, g.useCanAccessGuildMemberModView)(n), M = (0, r.useStateFromStores)([C.default], () => C.default.getUser(t), [t]), R = (0, r.useStateFromStores)([E.default], () => E.default.getMember(n, t), [n, t]), j = null == M || null == R, {
     AnalyticsLocationProvider: L
   } = (0, f.default)(c.default.GUILD_MEMBER_MOD_VIEW);
   return (l.useEffect(() => {

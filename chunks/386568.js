@@ -152,6 +152,7 @@ function D(e) {
     onMouseMove: s,
     onMouseDown: o,
     onMouseLeave: d,
+    onDoubleClick: c,
     children: [(0, a.jsx)("div", {
       className: i(w.topControls),
       children: (0, a.jsx)(v.PictureInPictureHeader, {

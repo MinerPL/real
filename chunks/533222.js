@@ -1,80 +1,68 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
-  }
-});
-var i = n("917351"),
-  r = n.n(i),
-  s = n("446674"),
-  a = n("95410"),
-  o = n("913144"),
-  l = n("353927");
-let u = "CertifiedDeviceStore",
-  c = {},
-  d = {},
-  f = 0;
-
-function E(e, t, n) {
-  let i = d[e];
-  return null != i ? n(i) : t
-}
-
-function h(e, t) {
-  let n = c[e];
-  null != n && n.forEach(e => delete d[e.id]), c[e] = t, t.forEach(e => d[e.id] = e)
-}
-class p extends s.default.Store {
-  initialize() {
-    let e = a.default.get(u);
-    null != e && r.forEach(e, (e, t) => {
-      e.forEach(e => {
-        "audioinput" === e.type && e.hardwareMute && (e.hardwareMute = !1)
-      }), h(t, e)
-    })
-  }
-  isCertified(e) {
-    return null != d[e]
-  }
-  getCertifiedDevice(e) {
-    return d[e]
-  }
-  getCertifiedDeviceName(e, t) {
-    let n = this.getCertifiedDevice(e);
-    return null != n ? "".concat(n.vendor.name, " ").concat(n.model.name) : t
-  }
-  getCertifiedDeviceByType(e) {
-    return r.find(d, t => t.type === e)
-  }
-  isHardwareMute(e) {
-    return E(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.hardwareMute)
-  }
-  hasEchoCancellation(e) {
-    return E(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.echoCancellation)
-  }
-  hasNoiseSuppression(e) {
-    return E(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.noiseSuppression)
-  }
-  hasAutomaticGainControl(e) {
-    return E(e, !1, e => e.type === l.DeviceTypes.AUDIO_INPUT && e.automaticGainControl)
-  }
-  getVendor(e) {
-    return E(e, null, e => e.vendor)
-  }
-  getModel(e) {
-    return E(e, null, e => e.model)
-  }
-  getRevision() {
     return f
   }
+}), n("808653");
+var i = n("446674"),
+  s = n("913144"),
+  r = n("692038"),
+  a = n("457971"),
+  o = n("447435");
+let l = {};
+
+function u(e) {
+  return "".concat(e.channel_id, ":").concat(e.id)
 }
-p.displayName = "CertifiedDeviceStore";
-var _ = new p(o.default, {
-  CERTIFIED_DEVICES_SET: function(e) {
+
+function d() {
+  l = {}
+}
+class c extends i.default.Store {
+  getMessage(e, t) {
+    return l[u({
+      id: e,
+      channel_id: t
+    })]
+  }
+}
+c.displayName = "SearchMessageStore";
+var f = new c(s.default, {
+  SEARCH_FINISH: function(e) {
+    return !!(0, a.isEligibleForExplicitMediaRedaction)() && null != e.messages && (l = e.messages.reduce((e, t) => (t.forEach(t => {
+      e[u(t)] = (0, r.createMessageRecord)(t)
+    }), e), {}), !0)
+  },
+  MESSAGE_UPDATE: function(e) {
     let {
-      applicationId: t,
-      devices: n
+      message: t
     } = e;
-    h(t, n), a.default.set(u, c), f++
+    if (!(0, a.isEligibleForExplicitMediaRedaction)() || null == t.id || null == t.channel_id) return !1;
+    let n = u(t),
+      i = l[n];
+    return null != i && (l[n] = (0, r.updateMessageRecord)(i, {
+      attachments: t.attachments,
+      embeds: t.embeds
+    }), !0)
+  },
+  LOGOUT: function() {
+    (function() {
+      l = {}
+    })()
+  },
+  CONNECTION_OPEN: function() {
+    (function() {
+      l = {}
+    })()
+  },
+  MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function(e) {
+    let {
+      messageId: t,
+      channelId: n
+    } = e, i = u({
+      id: t,
+      channel_id: n
+    }), s = l[i];
+    null != s && (l[i] = (0, o.handleExplicitMediaScanTimeoutForMessage)(s))
   }
 })

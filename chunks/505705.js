@@ -149,8 +149,10 @@ function B(e) {
         [e.id]: e
       };
       (0, u.startImpersonating)(s.id, {
-        type: c.ImpersonateType.ROLE_SUBSCRIPTION,
-        roles: t
+        type: c.ImpersonateType.SERVER_SHOP,
+        roles: t,
+        initialTab: "role_subscriptions",
+        returnToSection: x.GuildSettingsSections.ROLE_SUBSCRIPTIONS
       }), (0, A.announceCreateTemplateChannels)(s.id), (0, E.transitionTo)(x.Routes.CHANNEL(s.id, p.StaticChannelRoute.ROLE_SUBSCRIPTIONS))
     };
   if (!g) return (0, a.jsx)(l.Spinner, {});

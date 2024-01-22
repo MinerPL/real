@@ -15,15 +15,9 @@ var l = n("917351"),
       var t;
       let {
         destination: [n],
-        multiSelect: a,
-        textInput: l
-      } = e, r = [null, null], s = Object.values(null !== (t = null == a ? void 0 : a.state) && void 0 !== t ? t : {});
-      s.length > 0 && (r[0] = s.join(", "));
-      let i = Object.entries(null != l ? l : {});
-      return i.length > 0 && (r[0] = i.map(e => {
-        let [t, n] = e;
-        return "".concat(t, "=").concat(n)
-      }).join(", ")), "" !== n && (r[1] = n), r
+        multiSelect: a
+      } = e, l = [null, null], r = Object.values(null !== (t = null == a ? void 0 : a.state) && void 0 !== t ? t : {});
+      return r.length > 0 && (l[0] = r.join(", ")), "" !== n && (l[1] = n), l
     }).filter(e => null != e);
     return 0 === t.length ? null : (0, a.jsxs)("div", {
       className: i.container,

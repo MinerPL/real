@@ -1,90 +1,91 @@
 "use strict";
-s.r(l), s.d(l, {
+a.r(t), a.d(t, {
   default: function() {
-    return N
+    return _
   }
-}), s("222007");
-var a = s("37983"),
-  t = s("884691"),
-  n = s("77078"),
-  i = s("698609"),
-  o = s("124539"),
-  d = s("776724"),
-  r = s("57242"),
-  c = s("711734"),
-  u = s("299738"),
-  E = s("170213"),
-  x = s("701098");
+}), a("222007");
+var l = a("37983"),
+  s = a("884691"),
+  n = a("77078"),
+  i = a("698609"),
+  o = a("124539"),
+  d = a("776724"),
+  r = a("57242"),
+  c = a("711734"),
+  u = a("299738"),
+  E = a("170213"),
+  A = a("701098");
 
-function N(e) {
+function _(e) {
   let {
-    classificationId: l,
-    transitionState: s,
-    initialSlide: N = E.AppealIngestionSlideTypes.SPEED_BUMP,
-    onClose: _
-  } = e, [S, A] = t.useState(N), {
-    classification: I,
-    isDsaEligible: T
-  } = (0, i.useSafetyHubClassification)(null != l ? l : ""), f = (null == I ? void 0 : I.is_spam) || !1, h = (null == I ? void 0 : I.is_coppa) || !1;
-  t.useEffect(() => {
-    T ? A(N) : A(E.AppealIngestionSlideTypes.COLLECT_SIGNAL)
-  }, [A, N, T]);
-  let m = t.useCallback(() => {
-      r.default.close(), _()
-    }, [_]),
-    M = t.useCallback(() => {
-      var e, l;
-      let s = null;
-      (s = T ? null === (e = E.SlidesOrderDsaEligible[S]) || void 0 === e ? void 0 : e.next : null === (l = E.SlidesOrderNonDsaEligible[S]) || void 0 === l ? void 0 : l.next) ? A(s): m()
-    }, [S, T, m]),
-    g = t.useCallback(() => {
-      var e, l;
-      let s;
-      (s = T ? null === (e = E.SlidesOrderDsaEligible[S]) || void 0 === e ? void 0 : e.prev : null === (l = E.SlidesOrderNonDsaEligible[S]) || void 0 === l ? void 0 : l.prev) ? A(s): m()
-    }, [S, T, m]);
-  return (0, a.jsx)(n.ModalRoot, {
-    transitionState: s,
+    classificationId: t,
+    transitionState: a,
+    initialSlide: _ = E.AppealIngestionSlideTypes.SPEED_BUMP,
+    onClose: S
+  } = e, [N, I] = s.useState(_), {
+    classification: x,
+    isDsaEligible: f
+  } = (0, i.useSafetyHubClassification)(null != t ? t : ""), T = (null == x ? void 0 : x.is_spam) || !1, g = (null == x ? void 0 : x.is_coppa) || !1;
+  s.useEffect(() => {
+    f ? I(_) : I(E.AppealIngestionSlideTypes.COLLECT_SIGNAL)
+  }, [I, _, f]);
+  let p = s.useCallback(() => {
+      r.default.close(), S()
+    }, [S]),
+    C = s.useCallback(() => {
+      var e, t;
+      let a = null;
+      (a = f ? null === (e = E.SlidesOrderDsaEligible[N]) || void 0 === e ? void 0 : e.next : null === (t = E.SlidesOrderNonDsaEligible[N]) || void 0 === t ? void 0 : t.next) ? I(a): p()
+    }, [N, f, p]),
+    m = s.useCallback(() => {
+      var e, t;
+      let a;
+      (a = f ? null === (e = E.SlidesOrderDsaEligible[N]) || void 0 === e ? void 0 : e.prev : null === (t = E.SlidesOrderNonDsaEligible[N]) || void 0 === t ? void 0 : t.prev) ? I(a): p()
+    }, [N, f, p]);
+  return (0, l.jsx)(n.ModalRoot, {
+    transitionState: a,
     disableTrack: !0,
-    children: (0, a.jsx)("div", {
-      className: x.container,
-      children: (0, a.jsxs)(n.Slides, {
-        activeSlide: S,
+    children: (0, l.jsx)("div", {
+      className: A.container,
+      children: (0, l.jsxs)(n.Slides, {
+        activeSlide: N,
         width: 440,
-        children: [(0, a.jsx)(n.Slide, {
+        children: [(0, l.jsx)(n.Slide, {
           id: E.AppealIngestionSlideTypes.SPEED_BUMP,
-          children: (0, a.jsx)(u.default, {
-            classification: I,
-            onClose: m,
-            onNext: M,
-            isSpam: f,
-            isCoppa: h
+          children: (0, l.jsx)(u.default, {
+            classification: x,
+            onClose: p,
+            onNext: C,
+            isSpam: T,
+            isCoppa: g
           })
-        }), (0, a.jsx)(n.Slide, {
+        }), (0, l.jsx)(n.Slide, {
           id: E.AppealIngestionSlideTypes.COLLECT_SIGNAL,
-          children: (0, a.jsx)(o.default, {
-            isDsaEligible: T,
-            onClose: m,
-            onNext: M,
-            onBack: g
+          children: (0, l.jsx)(o.default, {
+            isDsaEligible: f,
+            onClose: p,
+            onNext: C,
+            onBack: m
           })
-        }), (0, a.jsx)(n.Slide, {
+        }), (0, l.jsx)(n.Slide, {
           id: E.AppealIngestionSlideTypes.CONFIRM_SUBMISSION,
-          children: (0, a.jsx)(d.default, {
-            onClose: m,
-            onNext: M,
-            onBack: g
+          children: (0, l.jsx)(d.default, {
+            onClose: p,
+            onNext: C,
+            onBack: m
           })
-        }), (0, a.jsx)(n.Slide, {
+        }), (0, l.jsx)(n.Slide, {
           id: E.AppealIngestionSlideTypes.REQUEST_SENT,
-          children: (0, a.jsx)(c.default, {
-            onNext: M
+          children: (0, l.jsx)(c.default, {
+            onNext: C
           })
-        }), (0, a.jsx)(n.Slide, {
+        }), (0, l.jsx)(n.Slide, {
           id: E.AppealIngestionSlideTypes.THANKS,
-          children: (0, a.jsx)(o.default, {
-            onClose: m,
-            onNext: M,
-            onBack: g
+          children: (0, l.jsx)(o.default, {
+            isDsaEligible: f,
+            onClose: p,
+            onNext: C,
+            onBack: m
           })
         })]
       })

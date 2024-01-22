@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return M
+    return S
   }
 }), a("222007");
 var l = a("37983"),
@@ -15,24 +15,24 @@ var l = a("37983"),
   d = a("418009"),
   E = a("428958"),
   _ = a("773284"),
-  f = a("476765"),
-  A = a("151185"),
-  m = a("562228"),
+  A = a("476765"),
+  m = a("151185"),
+  f = a("562228"),
   L = a("104182"),
   T = a("741138"),
   C = a("362415"),
   p = a("418298"),
-  x = a("612805"),
-  O = a("53013"),
-  P = a("233365"),
-  R = a("264317"),
-  N = a("186859"),
-  h = a("660516"),
+  R = a("612805"),
+  P = a("53013"),
+  x = a("233365"),
+  O = a("264317"),
+  h = a("186859"),
+  N = a("660516"),
   I = a("782340"),
   g = a("877055");
-let v = (0, f.uid)();
+let M = (0, A.uid)();
 
-function S(e) {
+function v(e) {
   let {
     selectedDuration: t,
     onSelect: a
@@ -69,74 +69,75 @@ function S(e) {
   })
 }
 
-function M(e) {
+function S(e) {
   let {
     channel: t,
     transitionState: a,
     onClose: s
   } = e;
   (0, E.default)({
-    type: h.ImpressionTypes.MODAL,
+    type: N.ImpressionTypes.MODAL,
     name: c.ImpressionNames.POLL_EDITOR_VIEWED
   });
   let {
     answers: i,
-    question: f,
+    question: A,
     setQuestion: T,
-    selectedLayoutType: j,
-    setSelectedLayoutType: D,
-    allowMultiSelect: y,
-    setAllowMultiSelect: b,
+    selectedLayoutType: D,
+    setSelectedLayoutType: j,
+    allowMultiSelect: b,
+    setAllowMultiSelect: y,
     duration: k,
-    setDuration: w,
-    canPost: U,
-    canAddMoreAnswers: G,
-    handleAddAnswer: B,
+    setDuration: U,
+    canPost: w,
+    canAddMoreAnswers: B,
+    handleAddAnswer: G,
     handleAnswerTextChange: H,
     handleEmojiSelect: F,
     handleGifSelect: W,
+    handleCustomUpload: Y,
     handleRemoveAnswer: V,
-    createPoll: Y,
-    createPollError: K,
-    submitting: z
+    createPoll: K,
+    createPollError: z,
+    submitting: X
   } = (0, L.default)(t, s), {
-    trackPollCreationCancelled: X
-  } = (0, C.useTrackPollCreationEvents)(f, i, y, j), Z = n.useRef([]), {
-    togglePollExpressionPicker: J,
-    lastActiveParentIndex: Q
-  } = (0, R.default)(j), q = n.useCallback(() => {
-    o(null != Q, "Must have an active input");
-    let e = Z.current[Q];
+    trackPollCreationCancelled: Z
+  } = (0, C.useTrackPollCreationEvents)(A, i, b, D), J = n.useRef([]), {
+    togglePollExpressionPicker: Q,
+    lastActiveParentIndex: q
+  } = (0, O.default)(D), $ = n.useCallback(() => {
+    o(null != q, "Must have an active input");
+    let e = J.current[q];
     return o(null != e, "Expected a mounted answer input component"), e.getBoundingClientRect()
-  }, [Q]), $ = j === d.PollLayoutTypes.DEFAULT, ee = n.useCallback(() => {
-    X(), s()
-  }, [s, X]), et = n.useCallback(() => {
-    let e = f.length > 0 || i.some(e => (0, m.isAnswerFilled)(e, j));
-    e ? (0, P.default)({
+  }, [q]), ee = D === d.PollLayoutTypes.DEFAULT, et = n.useCallback(() => {
+    Z(), s()
+  }, [s, Z]), ea = n.useCallback(() => {
+    let e = A.length > 0 || i.some(e => (0, f.isAnswerFilled)(e, D));
+    e ? (0, x.default)({
       title: I.default.Messages.CREATE_POLL_MODAL_WARNING_MODAL_TITLE,
       body: I.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BODY,
       cta: I.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_CTA_EXIT,
       closeLabel: I.default.Messages.CREATE_POLL_MODAL_WARNING_UNSAVED_CHANGES_BACK_TO_EDITING,
       onConfirm: () => {
-        ee()
+        et()
       }
-    }) : ee()
-  }, [ee, i, f, j]);
+    }) : et()
+  }, [et, i, A, D]);
   n.useEffect(() => {
-    (0, u.updateModal)(N.POLL_CREATION_MODAL_KEY, e => (0, l.jsx)(M, {
+    (0, u.updateModal)(h.POLL_CREATION_MODAL_KEY, e => (0, l.jsx)(S, {
       ...e,
       channel: t
-    }), et)
-  }, [et, t]);
-  let ea = (0, _.default)({
-    disabled: !U,
-    onSubmit: Y
+    }), ea)
+  }, [ea, t]);
+  let el = (0, _.default)({
+    disabled: !w,
+    onSubmit: K
   });
   return (0, l.jsxs)(u.ModalRoot, {
     size: u.ModalSize.MEDIUM,
     className: g.container,
     transitionState: a,
-    "aria-labelledby": v,
+    "aria-labelledby": M,
     children: [(0, l.jsxs)(u.ModalHeader, {
       className: g.header,
       separator: !1,
@@ -144,63 +145,63 @@ function M(e) {
         color: "interactive-normal",
         variant: "text-lg/semibold",
         className: g.headerText,
-        id: v,
+        id: M,
         children: I.default.Messages.CREATE_POLL_HEADING
       }), (0, l.jsx)(u.ModalCloseButton, {
-        onClick: et
+        onClick: ea
       })]
     }), (0, l.jsxs)(u.ModalContent, {
       className: g.content,
-      onKeyDown: ea,
-      children: [null != K && (0, l.jsx)(u.FormErrorBlock, {
-        children: K.getAnyErrorMessage()
+      onKeyDown: el,
+      children: [null != z && (0, l.jsx)(u.FormErrorBlock, {
+        children: z.getAnyErrorMessage()
       }), (0, l.jsx)(u.TextInput, {
         "aria-label": I.default.Messages.CREATE_POLL_QUESTION_INPUT_LABEL,
         placeholder: I.default.Messages.CREATE_POLL_QUESTION_PLACEHOLDER,
-        value: f,
+        value: A,
         inputClassName: g.questionInput,
         onChange: T,
-        maxLength: N.MAX_POLL_QUESTION_LENGTH,
+        maxLength: h.MAX_POLL_QUESTION_LENGTH,
         autoFocus: !0
-      }), (0, l.jsx)(x.default, {
-        selectedLayoutType: j,
-        onSelectedLayoutType: D
+      }), (0, l.jsx)(R.default, {
+        selectedLayoutType: D,
+        onSelectedLayoutType: j
       }), (0, l.jsxs)("div", {
-        className: r(g.answerInputsContainer, $ ? g.defaultContainer : g.imageOnlyContainer),
+        className: r(g.answerInputsContainer, ee ? g.defaultContainer : g.imageOnlyContainer),
         role: "group",
         "aria-label": I.default.Messages.POLL_OPTIONS_ARIA,
         children: [i.map((e, a) => (0, l.jsx)(p.default, {
           answer: e,
           channelId: t.id,
           index: a,
-          ref: e => Z.current[a] = e,
-          handleTogglePollExpressionPicker: () => J(a),
-          layout: j,
+          ref: e => J.current[a] = e,
+          handleTogglePollExpressionPicker: () => Q(a),
+          layout: D,
           onAnswerTextChange: H,
           onRemoveAnswer: V
-        }, e.localCreationAnswerId)), G && (0, l.jsxs)(u.Clickable, {
-          className: $ ? g.addAnswerButtonDefault : g.addAnswerButtonImageOnly,
-          onClick: G ? B : void 0,
+        }, e.localCreationAnswerId)), B && (0, l.jsxs)(u.Clickable, {
+          className: ee ? g.addAnswerButtonDefault : g.addAnswerButtonImageOnly,
+          onClick: B ? G : void 0,
           "aria-label": I.default.Messages.CREATE_POLL_ADD_ANSWER_BUTTON,
-          children: [(0, l.jsx)(A.default, {
-            className: $ ? g.addAnswerIconDefault : g.addAnswerIconImageOnly
-          }), $ && (0, l.jsx)(u.Text, {
+          children: [(0, l.jsx)(m.default, {
+            className: ee ? g.addAnswerIconDefault : g.addAnswerIconImageOnly
+          }), ee && (0, l.jsx)(u.Text, {
             variant: "text-md/normal",
             color: "text-muted",
             children: I.default.Messages.CREATE_POLL_ADD_ANSWER_BUTTON
           })]
         })]
-      }), (0, l.jsx)(S, {
+      }), (0, l.jsx)(v, {
         selectedDuration: k,
-        onSelect: w
+        onSelect: U
       })]
     }), (0, l.jsxs)(u.ModalFooter, {
       className: g.footer,
       children: [(0, l.jsx)(u.Checkbox, {
         type: u.Checkbox.Types.INVERTED,
         size: 24,
-        value: y,
-        onChange: (e, t) => b(t),
+        value: b,
+        onChange: (e, t) => y(t),
         children: (0, l.jsx)(u.Text, {
           variant: "text-md/normal",
           color: "text-normal",
@@ -210,23 +211,24 @@ function M(e) {
         look: u.ButtonLooks.FILLED,
         size: u.Button.Sizes.MEDIUM,
         className: g.postButton,
-        onClick: Y,
-        submitting: z,
-        disabled: !U,
+        onClick: K,
+        submitting: X,
+        disabled: !w,
         children: (0, l.jsx)(u.Text, {
           variant: "text-md/semibold",
           className: g.postButtonText,
           children: I.default.Messages.CREATE_POLL_POST
         })
       })]
-    }), (0, l.jsx)(O.default, {
+    }), (0, l.jsx)(P.default, {
       channel: t,
-      layout: j,
-      parentModalKey: N.POLL_CREATION_MODAL_KEY,
+      layout: D,
+      parentModalKey: h.POLL_CREATION_MODAL_KEY,
       onEmojiSelect: F,
       onGifSelect: W,
-      positionTargetRef: q,
-      lastActiveInputIndex: Q
+      onCustomUpload: Y,
+      positionTargetRef: $,
+      lastActiveInputIndex: q
     })]
   })
 }

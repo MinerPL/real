@@ -10,8 +10,8 @@ i.r(t), i.d(t, {
 var r = i("448105"),
   n = i.n(r),
   s = i("969176"),
-  a = i.n(s),
-  u = i("249654"),
+  u = i.n(s),
+  a = i("249654"),
   l = i("681937"),
   h = i("509"),
   d = i("770115");
@@ -33,7 +33,9 @@ function o() {
       optionId: 0,
       afterDate: null,
       beforeDate: null
-    }
+    },
+    selectedJoinSourceType: void 0,
+    selectedSourceInviteCode: void 0
   }
 }
 let m = Object.freeze(o());
@@ -52,7 +54,7 @@ class _ {
     return this._searchState = {
       ...this._searchState,
       ...e
-    }, this.hasDefaultQuery = a(this._searchState, m), !0
+    }, this.hasDefaultQuery = u(this._searchState, m), !0
   }
   resetSearchState() {
     return !this.hasDefaultQuery && (this._searchState = o(), this.hasDefaultQuery = !0, !0)
@@ -67,9 +69,11 @@ class _ {
       requireCommunicationDisabled: r,
       requireUnusualAccountActivity: n,
       requireUsernameQuarantined: s,
-      selectedRoleIds: a,
+      selectedRoleIds: u,
       selectedJoinDateOption: o,
-      selectedAccountAgeOption: m
+      selectedAccountAgeOption: m,
+      selectedSourceInviteCode: _,
+      selectedJoinSourceType: M
     } = this._searchState;
     if (t.length > 0 && ! function(e, t) {
         if ("" === t.trim()) return !1;
@@ -89,11 +93,11 @@ class _ {
           if (c(n, e)) return !0;
         return !1
       }(e, t)) return !1;
-    if (a.size > 0) {
-      var _, M;
-      if (_ = e, !(0 !== (M = a).size && Array.from(M).every(e => _.roles.includes(e)))) return !1
+    if (u.size > 0) {
+      var g, b;
+      if (g = e, !(0 !== (b = u).size && Array.from(b).every(e => g.roles.includes(e)))) return !1
     }
-    if (null != o.afterDate && e.joinedAtTimestamp < o.afterDate || null != o.beforeDate && e.joinedAtTimestamp > o.beforeDate || null != m.afterDate && u.default.extractTimestamp(e.userId) < m.afterDate || null != m.beforeDate && u.default.extractTimestamp(e.userId) > m.beforeDate) return !1;
+    if (null != o.afterDate && e.joinedAtTimestamp < o.afterDate || null != o.beforeDate && e.joinedAtTimestamp > o.beforeDate || null != m.afterDate && a.default.extractTimestamp(e.userId) < m.afterDate || null != m.beforeDate && a.default.extractTimestamp(e.userId) > m.beforeDate || null != _ && e.sourceInviteCode !== _ || null != M && e.joinSourceType !== M) return !1;
     if (i || r || n || s) return !!(i && e.hasUnusualDmActivity || r && (0, h.isMemberCommunicationDisabled)(e) || n && e.hasUnusualAccountActivity || s && (0, l.hasAutomodQuarantinedProfile)(e)) || !1;
     return !0
   }

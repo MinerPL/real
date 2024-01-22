@@ -93,7 +93,7 @@ async function R(e) {
         failureCode: t,
         errorMessage: null == l ? void 0 : l.msg
       }), t === y.AbortCodes.EXPLICIT_CONTENT) {
-      r.default.sendClydeError(f, t);
+      r.default.sendExplicitMediaClydeError(f, null == a ? void 0 : a.attachments);
       return
     }
     if (t === y.AbortCodes.AUTOMOD_MESSAGE_BLOCKED) {
@@ -193,7 +193,7 @@ var S = {
         channelId: a,
         file: e
       })
-    }), p.on("error", (t, _) => {
+    }), p.on("error", (t, _, f) => {
       if (n.default.dispatch({
           type: "UPLOAD_FAIL",
           channelId: a,
@@ -202,7 +202,7 @@ var S = {
           fileItems: t.items,
           failureCode: _
         }), _ === y.AbortCodes.EXPLICIT_CONTENT) {
-        r.default.sendClydeError(a, _);
+        r.default.sendExplicitMediaClydeError(a, null == f ? void 0 : f.attachments);
         return
       }(0, i.openUploadError)({
         title: D.default.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,

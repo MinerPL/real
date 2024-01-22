@@ -16,10 +16,10 @@ var r = n("77078"),
   l = n("834897"),
   a = n("85336"),
   s = n("159149"),
-  u = n("650484"),
-  o = n("945330"),
-  d = n("829805"),
-  c = n("425480"),
+  o = n("650484"),
+  u = n("945330"),
+  c = n("829805"),
+  d = n("425480"),
   f = n("782340"),
   p = n("370184"),
   h = n("137852"),
@@ -28,7 +28,7 @@ let m = e => {
     let {
       step: t,
       onClose: n
-    } = e, s = (0, l.default)(c.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY);
+    } = e, s = (0, l.default)(d.RESPONSIVE_MOBILE_HEIGHT_SMALL_QUERY);
     return t === a.Step.CONFIRM || t === a.Step.BENEFITS ? (0, i.jsx)("div", {}) : (0, i.jsxs)("div", {
       className: p.headerContainer,
       children: [!s && (0, i.jsx)("div", {
@@ -43,7 +43,7 @@ let m = e => {
         className: p.closeContainer,
         onClick: () => n(),
         "aria-label": f.default.Messages.CLOSE,
-        children: (0, i.jsx)(o.default, {
+        children: (0, i.jsx)(u.default, {
           className: p.closeIcon
         })
       })]
@@ -59,17 +59,19 @@ let m = e => {
     } = e;
     return null == n ? null : (0, i.jsx)("div", {
       className: p.confirmationContainer,
-      children: (0, i.jsxs)(d.ApplicationBenefitsModalContent, {
-        children: [(0, i.jsx)(d.ApplicationBenefitsModalIcon, {
+      children: (0, i.jsxs)(c.ApplicationBenefitsModalContent, {
+        children: [(0, i.jsx)(c.ApplicationBenefitsModalIcon, {
           application: n,
           asset: t.image_asset
-        }), (0, i.jsx)(d.ApplicationBenefitsModalHeading, {
+        }), (0, i.jsx)(c.ApplicationBenefitsModalHeading, {
           children: r
-        }), (0, i.jsx)(d.ApplicationBenefitsModalDivider, {}), (0, i.jsx)(d.ApplicationBenefitsModalDescription, {
+        }), (0, i.jsx)(c.ApplicationBenefitsModalDivider, {}), (0, i.jsx)(c.ApplicationBenefitsModalDescription, {
           title: l,
           description: a
-        }), (0, i.jsx)(d.ApplicationBenefitsModalBenefits, {
-          benefits: t.sku_benefits.benefits
+        }), (0, i.jsx)(c.ApplicationBenefitsModalBenefits, {
+          applicationId: t.application_id,
+          storeListingBenefits: t.store_listing_benefits,
+          skuBenefits: t.sku_benefits.benefits
         })]
       })
     })
@@ -102,7 +104,7 @@ function I(e) {
       children: f.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({
         timestamp: null == l ? void 0 : l.currentPeriodEnd
       })
-    }), (0, i.jsx)(u.PaymentPortalFooter, {
+    }), (0, i.jsx)(o.PaymentPortalFooter, {
       children: (0, i.jsx)(s.default, {
         onPrimary: n,
         primaryCTA: s.CTAType.CONTINUE,

@@ -127,24 +127,6 @@ class D extends n.PureComponent {
       }), t, e]
     })
   }
-  renderTOTPRemove() {
-    let {
-      totpDisabledReason: e
-    } = this.props, t = null !== e;
-    return (0, a.jsx)(o.Tooltip, {
-      text: e,
-      shouldShow: t,
-      children: e => (0, a.jsx)(o.Button, {
-        ...e,
-        onClick: this.handleDisableMFA,
-        size: o.Button.Sizes.SMALL,
-        color: o.ButtonColors.RED,
-        look: o.ButtonLooks.OUTLINED,
-        disabled: t,
-        children: x.default.Messages.TWO_FA_REMOVE
-      })
-    })
-  }
   renderEnabled() {
     let e;
     let {
@@ -213,7 +195,13 @@ class D extends n.PureComponent {
           children: s
         }), (0, a.jsx)(h.default.Child, {
           wrap: !0,
-          children: this.props.hasTOTPEnabled ? this.renderTOTPRemove() : (0, a.jsx)(o.Button, {
+          children: this.props.hasTOTPEnabled ? (0, a.jsx)(o.Button, {
+            onClick: this.handleDisableMFA,
+            size: o.Button.Sizes.SMALL,
+            color: o.ButtonColors.RED,
+            look: o.ButtonLooks.OUTLINED,
+            children: x.default.Messages.TWO_FA_REMOVE
+          }) : (0, a.jsx)(o.Button, {
             onClick: C.default.enableMFA,
             size: o.ButtonSizes.SMALL,
             children: x.default.Messages.TWO_FA_ENABLE
@@ -344,14 +332,12 @@ function L(e) {
   let t = (0, r.useStateFromStores)([g.default], () => g.default.getCurrentUser());
   i(null != t, "TwoFactorAuth: currentUser cannot be undefined");
   let s = (0, r.useStateFromStoresObject)([_.default, m.default], () => ({
-      togglingSMS: _.default.togglingSMS,
-      hasTOTPEnabled: m.default.hasTOTPEnabled()
-    })),
-    n = (0, p.use2FARemoveDisableReason)();
+    togglingSMS: _.default.togglingSMS,
+    hasTOTPEnabled: m.default.hasTOTPEnabled()
+  }));
   return (0, a.jsx)(D, {
     currentUser: t,
     ...s,
-    ...e,
-    totpDisabledReason: n
+    ...e
   })
 }

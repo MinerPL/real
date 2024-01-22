@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   ApplicationBenefitsModalIcon: function() {
-    return d
+    return c
   },
   ApplicationBenefitsModalHeading: function() {
-    return c
+    return d
   },
   ApplicationBenefitsModalDivider: function() {
     return f
@@ -25,9 +25,9 @@ var r = n("414456"),
   l = n.n(r),
   a = n("77078"),
   s = n("850644"),
-  u = n("899604"),
-  o = n("114067");
-let d = e => {
+  o = n("899604"),
+  u = n("114067");
+let c = e => {
     let {
       application: t,
       asset: n,
@@ -42,7 +42,7 @@ let d = e => {
       ...l
     })
   },
-  c = e => {
+  d = e => {
     let {
       children: t,
       className: n,
@@ -50,7 +50,7 @@ let d = e => {
       ...s
     } = e;
     return (0, i.jsx)(a.Heading, {
-      className: l(o.header, n),
+      className: l(u.header, n),
       variant: "heading-xl/extrabold",
       id: r,
       ...s,
@@ -60,7 +60,7 @@ let d = e => {
 
 function f() {
   return (0, i.jsx)("hr", {
-    className: o.divider
+    className: u.divider
   })
 }
 let p = e => {
@@ -86,19 +86,20 @@ let p = e => {
   },
   h = e => {
     let {
-      benefits: t,
-      className: n,
-      ...r
+      applicationId: t,
+      storeListingBenefits: n,
+      skuBenefits: r,
+      className: a,
+      ...s
     } = e;
     return (0, i.jsx)("div", {
-      className: l(o.benefitsContainer, n),
-      ...r,
-      children: t.map(e => {
-        var t, n;
-        return (0, i.jsx)(u.default, {
-          className: o.benefit,
-          benefit: e
-        }, "".concat(e.ref_type, "-").concat(null === (t = e.emoji) || void 0 === t ? void 0 : t.id, "-").concat(null === (n = e.emoji) || void 0 === n ? void 0 : n.name))
+      className: l(u.benefitsContainer, a),
+      ...s,
+      children: (0, i.jsx)(o.SubscriptionListingBenefits, {
+        applicationId: t,
+        storeListingBenefits: n,
+        skuBenefits: r,
+        className: u.benefit
       })
     })
   },
@@ -109,7 +110,7 @@ let p = e => {
       ...r
     } = e;
     return (0, i.jsx)("div", {
-      className: l(o.container, n),
+      className: l(u.container, n),
       ...r,
       children: t
     })

@@ -20,8 +20,8 @@ var l = a("37983"),
   g = a("606292"),
   E = a("688318"),
   h = a("946964"),
-  T = a("635956"),
-  b = a("38766"),
+  b = a("635956"),
+  T = a("38766"),
   x = a("601095"),
   L = a("493390"),
   S = a("161778"),
@@ -112,7 +112,7 @@ var Y = function(e) {
       e.removeEventListener("focusin", t)
     }
   }, []);
-  let ef = (0, b.default)({
+  let ef = (0, T.default)({
       analyticsLocations: Y
     }),
     em = s.useRef(null),
@@ -141,7 +141,7 @@ var Y = function(e) {
     eE = ep(C.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
     eh = () => (0, l.jsx)("div", {
       className: U.hoverUpsellContainer,
-      children: (0, l.jsx)(T.default, {
+      children: (0, l.jsx)(b.default, {
         fullWidth: !0,
         className: U.premiumSubscribeButton,
         disabled: eu,
@@ -153,7 +153,7 @@ var Y = function(e) {
   s.useEffect(() => {
     null == r || r(X)
   }, [r]);
-  let eT = () => null != eo ? (0, l.jsx)(u.Text, {
+  let eb = () => null != eo ? (0, l.jsx)(u.Text, {
       variant: "text-md/semibold",
       className: U.priceTag,
       children: H.default.Messages.COLLECTIBLES_ALREADY_OWNED
@@ -167,7 +167,7 @@ var Y = function(e) {
       className: U.priceTag,
       disableTooltipPointerEvents: !0
     }),
-    eb = () => en ? null : ei ? (0, l.jsx)(K, {
+    eT = () => en ? null : ei ? (0, l.jsx)(K, {
       onClick: eE
     }) : (0, l.jsx)(P.default, {
       product: t,
@@ -208,7 +208,7 @@ var Y = function(e) {
           disabled: eu,
           onClick: eC,
           children: H.default.Messages.COLLECTIBLES_USE_NOW
-        }), eb()]
+        }), eT()]
       })
     },
     eL = ed ? "0 0 15px 1px ".concat(o.default.unsafe_rawColors.PRIMARY_700.css) : "var(--elevation-high)";
@@ -268,12 +268,10 @@ var Y = function(e) {
         }),
         children: [(0, l.jsx)("div", {
           className: n(U.cardBackground, ed ? U.darkCardBackground : U.lightCardBackground, (null == ee ? void 0 : ee.type) === d.CollectiblesItemType.PROFILE_EFFECT ? U.cardLowOpacity : null)
-        }), (0, l.jsx)("div", {
+        }), (0, l.jsx)(u.Text, {
+          variant: "text-lg/bold",
           className: U.productName,
-          children: N && (0, l.jsx)(u.Text, {
-            variant: "text-lg/bold",
-            children: t.name
-          })
+          children: t.name
         }), (0, l.jsxs)("div", {
           className: U.detailsWrapper,
           children: [(0, l.jsx)(u.Text, {
@@ -283,7 +281,7 @@ var Y = function(e) {
             children: t.summary
           }), (0, l.jsx)("div", {
             className: U.innerBlur,
-            children: eT()
+            children: eb()
           }), (0, l.jsx)("div", {
             className: U.innerHover,
             children: ex()

@@ -90,6 +90,7 @@ function N(e) {
     cardWidth: h,
     cardHeight: g,
     thumbnailHeight: M,
-    descriptionTextVariant: O
+    descriptionTextVariant: O,
+    isDraft: !n.published
   }, n.id)
 }

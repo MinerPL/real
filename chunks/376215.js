@@ -25,7 +25,7 @@ var l = n("37983"),
   v = n("761354"),
   y = n("49111"),
   x = n("735189"),
-  I = n("862839");
+  I = n("180615");
 let N = [];
 
 function _(e) {
@@ -98,7 +98,8 @@ function _(e) {
               channelId: t,
               draftType: n.drafts.type,
               upload: e,
-              keyboardModeEnabled: r
+              keyboardModeEnabled: r,
+              clip: e.clip
             }, e.id))
           })
         }

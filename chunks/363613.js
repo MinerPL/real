@@ -1,12 +1,14 @@
 "use strict";
 E.r(_), E.d(_, {
   openPomeloModal: function() {
-    return o
+    return n
   }
 });
-var t = E("363861");
+var t = E("77078"),
+  o = E("363861");
 
-function o(e) {
-  let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  (0, t.default)(e, _)
+function n(e) {
+  let _ = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+    E = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
+  return !(!E && (0, t.hasAnyModalOpen)()) && ((0, o.default)(e, _), !0)
 }

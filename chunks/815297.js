@@ -86,17 +86,18 @@ function E(e) {
 
 function f(e) {
   let {
-    channelId: t,
-    content: n,
-    embeds: a,
-    loggingName: l
+    messageId: t,
+    channelId: n,
+    content: a,
+    embeds: l,
+    loggingName: s
   } = e;
   return {
-    id: o(),
+    id: null != t ? t : o(),
     type: u.MessageTypes.DEFAULT,
     flags: u.MessageFlags.EPHEMERAL,
-    content: n,
-    channel_id: t,
+    content: a,
+    channel_id: n,
     author: {
       id: u.LOCAL_BOT_ID,
       username: "Clyde",
@@ -105,7 +106,7 @@ function f(e) {
       bot: !0
     },
     attachments: [],
-    embeds: null != a ? a : [],
+    embeds: null != l ? l : [],
     pinned: !1,
     mentions: [],
     mention_channels: [],
@@ -114,6 +115,6 @@ function f(e) {
     timestamp: new Date().toISOString(),
     state: u.MessageStates.SENT,
     tts: !1,
-    loggingName: l
+    loggingName: s
   }
 }

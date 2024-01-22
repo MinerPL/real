@@ -99,14 +99,16 @@ class X extends F.default {
       channel: e,
       voiceStates: t,
       collapsed: n,
-      tabIndex: a
+      withGuildIcon: a,
+      tabIndex: s
     } = this.props;
     return (0, l.jsx)(Y.default, {
       channel: e,
       collapsed: n,
       collapsedMax: 6,
       voiceStates: t,
-      tabIndex: a,
+      withGuildIcon: a,
+      tabIndex: s,
       location: K.AnalyticsLocations.GUILD_CHANNEL_LIST
     })
   }

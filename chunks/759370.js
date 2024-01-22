@@ -82,7 +82,7 @@ var C = new class e {
       if (t !== f.default.database() || e !== i.default.lastTimeConnectedChanged()) break;
       _.verbose("optimstically writing basic_channels (guild: ".concat(n, ")"));
       try {
-        await t.transaction(e => this.syncOne(n, e))
+        await t.transaction(e => this.syncOne(n, e), "handlePostConnectionOpen")
       } catch (e) {
         _.warn("couldn't optimstically write basic_channel:", e);
         return

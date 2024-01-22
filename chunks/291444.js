@@ -21,7 +21,7 @@ function c(e) {
   return (0, l.useStateFromStoresArray)([i.default, r.default, s.default], () => {
     let e = i.default.getChannel(n),
       l = r.default.getGuild(t),
-      o = s.default.isViewingSubscriptionRoles(t);
+      o = s.default.isViewingServerShop(t);
     return null != l && null != e ? c.filter(t => (function(e, t, n) {
       let {
         isPreviewingRoles: l = !1

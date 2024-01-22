@@ -1,40 +1,40 @@
 "use strict";
-a.r(t), a.d(t, {
+t.r(a), t.d(a, {
   default: function() {
     return C
   }
-}), a("222007");
-var s = a("37983"),
-  i = a("884691"),
-  o = a("414456"),
-  l = a.n(o),
-  n = a("77078"),
-  r = a("476765"),
-  d = a("418298"),
-  u = a("356581"),
-  c = a("186859"),
-  m = a("782340"),
-  h = a("353096");
-let L = (0, r.uid)();
+}), t("222007");
+var s = t("37983"),
+  i = t("884691"),
+  o = t("414456"),
+  l = t.n(o),
+  n = t("77078"),
+  d = t("476765"),
+  r = t("418298"),
+  u = t("356581"),
+  m = t("186859"),
+  c = t("782340"),
+  h = t("353096");
+let L = (0, d.uid)();
 
 function C(e) {
   let {
-    channelId: t,
-    answer: a,
+    channelId: a,
+    answer: t,
     index: o,
-    onAnswerTextChange: r,
+    onAnswerTextChange: d,
     transitionState: C,
     onClose: E
   } = e, {
     emoji: x,
     hasUpload: M,
-    gifUrl: g,
-    gifFilename: j
+    mediaUrl: j,
+    mediaFilename: T
   } = (0, u.default)({
-    channelId: t,
-    localCreationAnswerId: a.localCreationAnswerId,
-    image: a.image
-  }), [T, A] = i.useState(a.text);
+    channelId: a,
+    localCreationAnswerId: t.localCreationAnswerId,
+    image: t.image
+  }), [g, A] = i.useState(t.text);
   return (0, s.jsxs)(n.ModalRoot, {
     size: n.ModalSize.DYNAMIC,
     className: l(h.modal, {
@@ -42,11 +42,11 @@ function C(e) {
       [h.hasEmoji]: null != x
     }),
     transitionState: C,
-    "aria-label": m.default.Messages.CREATE_POLL_EDIT_IMAGE_DESCRIPTION,
-    children: [(0, s.jsx)(d.PollCreationMediaPreview, {
+    "aria-label": c.default.Messages.CREATE_POLL_EDIT_IMAGE_DESCRIPTION,
+    children: [(0, s.jsx)(r.PollCreationMediaPreview, {
       hasUpload: M,
-      gifUrl: g,
-      gifFilename: j,
+      mediaUrl: j,
+      mediaFilename: T,
       imageClassName: h.imagePreview,
       emoji: x,
       emojiClassName: h.emojiPreview
@@ -55,13 +55,13 @@ function C(e) {
       children: [(0, s.jsx)(n.FormTitle, {
         tag: n.FormTitleTags.LABEL,
         htmlFor: L,
-        children: m.default.Messages.CREATE_POLL_ALT_TEXT_LABEL
+        children: c.default.Messages.CREATE_POLL_ALT_TEXT_LABEL
       }), (0, s.jsx)(n.TextInput, {
         id: L,
-        value: T,
+        value: g,
         inputClassName: h.input,
         onChange: A,
-        maxLength: c.MAX_POLL_ANSWER_LENGTH,
+        maxLength: m.MAX_POLL_ANSWER_LENGTH,
         autoFocus: !0
       })]
     }), (0, s.jsxs)(n.ModalFooter, {
@@ -70,11 +70,11 @@ function C(e) {
         look: n.ButtonLooks.FILLED,
         size: n.Button.Sizes.MEDIUM,
         onClick: () => {
-          null != T && r(T, o), E()
+          null != g && d(g, o), E()
         },
         children: (0, s.jsx)(n.Text, {
           variant: "text-md/semibold",
-          children: m.default.Messages.SAVE
+          children: c.default.Messages.SAVE
         })
       }), (0, s.jsx)(n.Button, {
         look: n.ButtonLooks.LINK,
@@ -82,7 +82,7 @@ function C(e) {
         onClick: E,
         children: (0, s.jsx)(n.Text, {
           variant: "text-md/semibold",
-          children: m.default.Messages.CANCEL
+          children: c.default.Messages.CANCEL
         })
       })]
     })]

@@ -43,7 +43,7 @@ function v(e) {
   } = (0, d.useStateFromStoresObject)([p.default], () => ({
     impersonateType: p.default.getImpersonateType(t),
     viewingRoles: p.default.getViewingRoles(t)
-  })), N = o === _.ImpersonateType.ROLE_SUBSCRIPTION, R = (0, d.useStateFromStores)([f.default], () => null != n ? f.default.getTrueMember(t, n.id) : null), [M, A] = (0, c.useMultiSelect)(null == v ? [] : Object.keys(v)), O = r.useRef(l);
+  })), N = o === _.ImpersonateType.SERVER_SHOP, R = (0, d.useStateFromStores)([f.default], () => null != n ? f.default.getTrueMember(t, n.id) : null), [M, A] = (0, c.useMultiSelect)(null == v ? [] : Object.keys(v)), O = r.useRef(l);
   r.useEffect(() => {
     let e = {},
       t = O.current;

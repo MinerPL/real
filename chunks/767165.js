@@ -2,6 +2,7 @@
 e.exports = {
   arrowIcon: "arrowIcon__123d4",
   cardClickableContainer: "cardClickableContainer__765d4",
+  draftBadge: "draftBadge_dbf179",
   hasAction: "hasAction_ec3f29",
   lockIcon: "lockIcon__45e98",
   opaqueBackground: "opaqueBackground_bea563",

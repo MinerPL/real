@@ -47,8 +47,8 @@ var a = s("37983"),
   V = s("716731"),
   Y = s("405879"),
   W = s("926622"),
-  K = s("862839");
-let z = ["discord_web", "discord_marketing", "discord_ios", "discord_android"],
+  K = s("180615");
+let z = ["discord_web", "discord_marketing", "discord_developers", "discord_ios", "discord_android"],
   Q = [{
     value: "branch",
     label: "Branch Name"

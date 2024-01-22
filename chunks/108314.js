@@ -194,7 +194,7 @@ var V = e => {
   } = (0, I.default)(h), w = (null == U ? void 0 : U.id) === n, V = (null == R ? void 0 : R.status) === P.SubscriptionStatusTypes.CANCELED, [B, H] = l.useState(!1), [G, W] = l.useState(!1), Y = l.useCallback(e => {
     let t = !1;
     null != e && (t = e.scrollHeight - e.clientHeight > 1), W(t)
-  }, []), [z] = _.useName(n), [K] = _.useDescription(n), [Z] = _.useTrialInterval(n), [X] = _.useTrialLimit(n), J = (0, T.default)(s, n), q = null != Z && null == R && J, Q = (0, u.default)(y.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), [$, ee] = l.useState(!1), et = $ || !Q, en = (0, r.useStateFromStores)([d.default], () => d.default.isViewingSubscriptionRoles(s)), ea = (null == m ? void 0 : m.published) === !0, el = (null == m ? void 0 : m.soft_deleted) === !0, es = b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
+  }, []), [z] = _.useName(n), [K] = _.useDescription(n), [Z] = _.useTrialInterval(n), [X] = _.useTrialLimit(n), J = (0, T.default)(s, n), q = null != Z && null == R && J, Q = (0, u.default)(y.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), [$, ee] = l.useState(!1), et = $ || !Q, en = (0, r.useStateFromStores)([d.default], () => d.default.isViewingServerShop(s)), ea = (null == m ? void 0 : m.published) === !0, el = (null == m ? void 0 : m.soft_deleted) === !0, es = b.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
   return (ea || en) && !el ? (0, a.jsxs)("article", {
     className: D.container,
     "aria-label": z,

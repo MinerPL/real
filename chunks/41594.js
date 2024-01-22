@@ -50,16 +50,16 @@ let g = (B, e, E) => {
     LOCKED: L.modeLocked
   };
 
-function U(B) {
+function y(B) {
   B.preventDefault(), B.stopPropagation()
 }
-let y = S.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
+let U = S.default.getEnableHardwareAcceleration() ? a.AnimatedAvatar : a.Avatar;
 
 function j(B) {
   let {
     channel: e
   } = B;
-  return (0, C.jsx)(y, {
+  return (0, C.jsx)(U, {
     src: (0, D.getChannelIconURL)(e),
     "aria-hidden": !0,
     size: a.AvatarSizes.SIZE_20
@@ -79,7 +79,7 @@ function M(B) {
     status: N.default.getStatus(E.id),
     isMobile: N.default.isMobileOnline(E.id)
   });
-  return (0, C.jsx)(y, {
+  return (0, C.jsx)(U, {
     size: a.AvatarSizes.SIZE_20,
     src: null == E ? void 0 : E.getAvatarURL(void 0, 40),
     status: l,
@@ -122,7 +122,8 @@ let G = [13, 11, 10, 10, 10, 10, 10],
     if (null == A) return null;
     let c = (0, s.getChannelIconTooltipText)(n, r, l, F),
       N = d && null != r ? "".concat(r.name, " - ").concat(c, " icon") : "".concat(c, " icon"),
-      f = (0, i.getAcronym)(null !== (e = null == r ? void 0 : r.toString()) && void 0 !== e ? e : null);
+      f = (0, i.getAcronym)(null !== (e = null == r ? void 0 : r.toString()) && void 0 !== e ? e : null),
+      m = n.type === I.ChannelTypes.DM || n.type === I.ChannelTypes.GROUP_DM;
     return (0, C.jsx)(a.Tooltip, {
       text: c,
       delay: 500,
@@ -142,7 +143,7 @@ let G = [13, 11, 10, 10, 10, 10, 10],
               src: D,
               className: L.channelGuildIcon
             })
-          }), !d && o && (0, C.jsx)(v.default, {
+          }), !d && o && !m && (0, C.jsx)(v.default, {
             mask: v.MaskIDs.GUILD_ICON_WITH_CHANNEL_TYPE,
             children: (0, C.jsx)("div", {
               className: t(L.channelGuildIcon, L.acronym),
@@ -176,7 +177,7 @@ function x(B) {
     onMouseDown: m,
     onMouseUp: v,
     onContextMenu: S,
-    connectDragPreview: y,
+    connectDragPreview: U,
     className: j,
     iconClassName: M,
     subtitle: G,
@@ -186,8 +187,8 @@ function x(B) {
       type: b
     },
     onMouseEnter: P,
-    onMouseLeave: k,
-    "aria-label": w,
+    onMouseLeave: w,
+    "aria-label": k,
     children: V,
     guild: J,
     channelTypeOverride: K,
@@ -251,7 +252,7 @@ function x(B) {
         },
         onClick: () => null == f ? void 0 : f(E),
         ...Be,
-        "aria-label": w,
+        "aria-label": k,
         focusProps: {
           enabled: !1
         },
@@ -287,12 +288,14 @@ function x(B) {
             "aria-hidden": !0,
             children: null == l ? Bt : l
           }), n.Children.count(V) > 0 ? (0, C.jsx)("div", {
-            onClick: U,
+            onClick: y,
             className: L.children,
             children: V
           }) : null]
         }), H || null == G ? null : (0, C.jsx)("div", {
-          className: L.linkBottom,
+          className: t(L.linkBottom, {
+            [L.withGuildIcon]: X
+          }),
           children: (0, C.jsx)(a.Text, {
             color: null != x ? x : "text-muted",
             variant: "text-xs/medium",
@@ -351,10 +354,10 @@ function x(B) {
       onMouseDown: B => null == m ? void 0 : m(B, E),
       onContextMenu: B => null == S ? void 0 : S(B, E),
       onMouseEnter: P,
-      onMouseLeave: k,
+      onMouseLeave: w,
       children: [i || !s || u && !BF ? null : (0, C.jsx)("div", {
         className: t(L.unread, $ ? L.unreadImportant : void 0)
-      }), null !== (e = null == y ? void 0 : y(BA)) && void 0 !== e ? e : BA]
+      }), null !== (e = null == U ? void 0 : U(BA)) && void 0 !== e ? e : BA]
     })
   })
 }

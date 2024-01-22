@@ -137,11 +137,13 @@ class O extends l.Component {
       {
         collapsed: t,
         className: n,
-        children: l
+        children: l,
+        withGuildIcon: s
       } = this.props;
     return null == e && null == l ? null : (0, a.jsxs)(x.VoiceUserList, {
       className: i(n, j.list, {
-        [j.collapsed]: t
+        [j.collapsed]: t,
+        [j.withGuildIcon]: s
       }),
       collapsed: t,
       children: [e, l]

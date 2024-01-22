@@ -1,3 +1,3 @@
 "use strict";
-var r = s("817736");
-e.createRoot = r.createRoot, e.hydrateRoot = r.hydrateRoot
+var r = n("817736");
+t.createRoot = r.createRoot, t.hydrateRoot = r.hydrateRoot

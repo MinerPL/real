@@ -95,7 +95,7 @@ function P(e) {
     guildId: t
   } = e, n = (0, u.useStateFromStores)([p.default], () => p.default.getGuild(t)), {
     AnalyticsLocationProvider: a
-  } = (0, d.default)(o.default.MEMBER_SAFETY_PAGE), c = (0, N.useCanAccessMemberSafetyPage)(t), m = (0, h.useCanAccessGuildMemberModView)(t), S = (0, u.useStateFromStores)([I.default], () => I.default.getLastSelectedChannelId(t)), M = (0, u.useStateFromStores)([T.default], () => T.default.getChannel(S)), A = s.useRef(null);
+  } = (0, d.default)(o.default.MEMBER_SAFETY_PAGE), c = (0, N.useCanAccessMemberSafetyPage)(t), m = (0, h.useCanAccessGuildMemberModView)(t, c), S = (0, u.useStateFromStores)([I.default], () => I.default.getLastSelectedChannelId(t)), M = (0, u.useStateFromStores)([T.default], () => T.default.getChannel(S)), A = s.useRef(null);
   (0, b.useSubscribeToGuildMemberUpdates)(t), s.useEffect(() => {
     if (!c && null != n) {
       var e;

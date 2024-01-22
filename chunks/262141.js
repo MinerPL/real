@@ -26,10 +26,14 @@ function u(e) {
       })
     }), (0, l.jsx)("div", {
       className: o.headerDivider
-    }), c.map((e, a) => (0, l.jsx)(i.default, {
-      embeddedApp: e,
-      channel: t,
-      onAction: n
-    }, a))]
+    }), c.map((e, a) => {
+      var s;
+      return (0, l.jsx)(i.default, {
+        embeddedApp: e,
+        presenceActivity: null !== (s = e.presenceActivity) && void 0 !== s ? s : void 0,
+        channel: t,
+        onAction: n
+      }, a)
+    })]
   })
 }

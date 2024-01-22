@@ -8,8 +8,8 @@ var t = E("95410"),
   o = E("689988"),
   n = E("697218"),
   r = E("553257"),
-  i = E("363613"),
-  a = E("275803"),
+  a = E("363613"),
+  i = E("275803"),
   I = E("935583");
 let s = "lastSawPomelo";
 class T extends o.default {
@@ -29,12 +29,13 @@ class T extends o.default {
           let E = t.default.get(s);
           return !(null != E && Date.now() - E < 6048e5) && !0
         }()) {
-        let e = a.UUOneClickExperiment.getCurrentConfig({
-          location: "uu_one_click"
-        }, {
-          autoTrackExposure: !1
-        }).enabled;
-        (0, i.openPomeloModal)(I.PomeloEntrypoints.APP_START, e), t.default.set(s, Date.now())
+        let e = i.UUOneClickExperiment.getCurrentConfig({
+            location: "uu_one_click"
+          }, {
+            autoTrackExposure: !1
+          }).enabled,
+          _ = (0, a.openPomeloModal)(I.PomeloEntrypoints.APP_START, e, !1);
+        _ && t.default.set(s, Date.now())
       }
     }
   }

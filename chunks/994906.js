@@ -1,29 +1,34 @@
 "use strict";
 n.r(t), n.d(t, {
   openGuildMemberModViewSidebar: function() {
-    return r
+    return u
   }
 });
-var a = n("208021"),
-  l = n("582713"),
-  s = n("459824"),
-  i = n("789150");
+var a = n("812204"),
+  l = n("208021"),
+  s = n("582713"),
+  i = n("383606"),
+  r = n("459824"),
+  o = n("789150");
 
-function r(e, t, n) {
-  var r;
-  let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
-    modViewPanel: i.ModViewPanel.INFO
+function u(e, t, n) {
+  var u, d, c;
+  let f = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+    modViewPanel: o.ModViewPanel.INFO
   };
-  (0, s.canAccessGuildMemberModViewWithExperiment)(e) && a.default.openGuildSidebar({
+  if (!(0, r.canAccessGuildMemberModViewWithExperiment)(e)) return;
+  let h = null !== (u = f.modViewPanel) && void 0 !== u ? u : o.ModViewPanel.INFO,
+    p = null !== (d = f.sourceLocation) && void 0 !== d ? d : a.default.MEMBER_SAFETY_PAGE;
+  (0, i.trackModViewOpened)(e, t, h, p), l.default.openGuildSidebar({
     guildId: e,
     baseChannelId: n,
-    sidebarType: l.GuildSidebarType.GUILD_MEMBER_MOD_VIEW,
+    sidebarType: s.GuildSidebarType.GUILD_MEMBER_MOD_VIEW,
     details: {
-      type: l.SidebarOpenDetailsType.GUILD_MEMBER_MOD_VIEW,
+      type: s.SidebarOpenDetailsType.GUILD_MEMBER_MOD_VIEW,
       userId: t,
       guildId: e,
-      ...o,
-      modViewPanel: null !== (r = o.modViewPanel) && void 0 !== r ? r : i.ModViewPanel.INFO
+      ...f,
+      modViewPanel: null !== (c = f.modViewPanel) && void 0 !== c ? c : o.ModViewPanel.INFO
     }
   })
 }

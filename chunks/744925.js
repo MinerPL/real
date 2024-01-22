@@ -105,7 +105,7 @@ function L(e) {
         activity: a
       } = e, s = a.application_id, i = null != s ? M.get(s) : void 0;
       return (0, l.jsx)(g.default, {
-        activity: a,
+        presenceActivity: a,
         embeddedApp: i,
         channel: f,
         members: n,

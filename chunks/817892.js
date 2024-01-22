@@ -1,38 +1,43 @@
 "use strict";
-n.r(t);
-var a = n("446674"),
-  s = n("913144");
-let i = {};
+n.r(t), n.d(t, {
+  default: function() {
+    return o
+  }
+});
+var s = n("446674"),
+  l = n("913144");
+let a = {};
 
-function l() {
-  i = {}
+function i() {
+  a = {}
 }
-class r extends a.default.Store {
+class r extends s.default.Store {
   getFpMessageInfo(e) {
-    return i[e]
+    return a[e]
   }
 }
-r.displayName = "FalsePositiveStore", new r(s.default, {
+r.displayName = "FalsePositiveStore";
+var o = new r(l.default, {
   LOGOUT: function() {
     (function() {
-      i = {}
+      a = {}
     })()
   },
   CONNECTION_OPEN: function() {
     (function() {
-      i = {}
+      a = {}
     })()
   },
   MESSAGE_EXPLICIT_CONTENT_FP_CREATE: function(e) {
     let {
       messageId: t,
       channelId: n,
-      attachments: a
+      attachments: s
     } = e;
-    i[t] = {
+    a[t] = {
       messageId: t,
       channelId: n,
-      attachments: a,
+      attachments: s,
       reportSubmit: !1
     }
   }

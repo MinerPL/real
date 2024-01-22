@@ -1,110 +1,109 @@
 "use strict";
 r.r(e), r.d(e, {
   isPremiumCollectiblesProduct: function() {
-    return E
+    return c
   },
   isPremiumCollectiblesPurchase: function() {
-    return s
+    return E
   },
   getFormattedPriceForCollectiblesProduct: function() {
-    return _
+    return s
   },
   extractPriceByPurchaseTypes: function() {
-    return S
+    return _
   },
   isFreeCollectiblesProduct: function() {
     return d
   },
   getProductsFromCategories: function() {
-    return C
+    return S
   },
   getAvatarDecorationsFromPurchases: function() {
     return f
   },
   getAvatarDecorationsFromCategories: function() {
-    return v
+    return A
   },
   getCollectiblesAssetURL: function() {
-    return O
+    return v
   },
   getProfileEffectsFromPurchases: function() {
     return N
   },
   getProfileEffectsFromCategories: function() {
-    return R
+    return O
   },
   groupProfileEffects: function() {
-    return P
+    return R
   },
   isCollectiblesGiftCode: function() {
-    return g
+    return P
   }
 }), r("222007");
 var n = r("917351"),
-  i = r("635058"),
-  o = r("265586"),
-  u = r("407063"),
-  l = r("153160"),
-  a = r("730297"),
-  T = r("806410"),
-  c = r("49111");
-let E = t => (null == t ? void 0 : t.categorySkuId) === i.CollectiblesCategorySkuId.DISXCORE,
-  s = t => (null == t ? void 0 : t.purchaseType) === c.EntitlementTypes.PREMIUM_PURCHASE,
-  _ = (t, e) => {
-    let r = S(t, e ? c.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2 : c.PriceSetAssignmentPurchaseTypes.DEFAULT);
-    return null == r ? "" : (0, l.formatPrice)(null == r ? void 0 : r.amount, null == r ? void 0 : r.currency)
+  i = r("265586"),
+  o = r("407063"),
+  u = r("153160"),
+  l = r("730297"),
+  a = r("806410"),
+  T = r("49111");
+let c = t => (null == t ? void 0 : t.premiumType) != null,
+  E = t => (null == t ? void 0 : t.purchaseType) === T.EntitlementTypes.PREMIUM_PURCHASE,
+  s = (t, e) => {
+    let r = _(t, e ? T.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2 : T.PriceSetAssignmentPurchaseTypes.DEFAULT);
+    return null == r ? "" : (0, u.formatPrice)(null == r ? void 0 : r.amount, null == r ? void 0 : r.currency)
   },
-  S = (t, e) => {
+  _ = (t, e) => {
     var r, n, i;
     let o = null !== (i = t.prices[e]) && void 0 !== i ? i : null;
     return null == o ? null : null === (n = o.countryPrices) || void 0 === n ? void 0 : null === (r = n.prices) || void 0 === r ? void 0 : r[0]
   },
   d = t => {
     var e;
-    return (null === (e = S(t, c.PriceSetAssignmentPurchaseTypes.DEFAULT)) || void 0 === e ? void 0 : e.amount) === 0
+    return (null === (e = _(t, T.PriceSetAssignmentPurchaseTypes.DEFAULT)) || void 0 === e ? void 0 : e.amount) === 0
   },
-  C = t => {
+  S = t => {
     let e = (0, n.flatMap)([...t.values()], "products");
     return (0, n.uniqBy)(e, "storeListingId")
   },
+  C = (t, e) => {
+    if (e === i.CollectiblesItemType.AVATAR_DECORATION) {
+      let e = (0, n.flatMap)([...t.values()], "items").filter(l.isAvatarDecorationRecord);
+      return (0, n.uniqBy)(e, "id")
+    }
+    if (e === i.CollectiblesItemType.PROFILE_EFFECT) {
+      let e = (0, n.flatMap)([...t.values()], "items").filter(a.isProfileEffectRecord);
+      return (0, n.uniqBy)(e, "id")
+    }
+  },
   I = (t, e) => {
-    if (e === o.CollectiblesItemType.AVATAR_DECORATION) {
-      let e = (0, n.flatMap)([...t.values()], "items").filter(a.isAvatarDecorationRecord);
-      return (0, n.uniqBy)(e, "id")
-    }
-    if (e === o.CollectiblesItemType.PROFILE_EFFECT) {
-      let e = (0, n.flatMap)([...t.values()], "items").filter(T.isProfileEffectRecord);
-      return (0, n.uniqBy)(e, "id")
-    }
-  },
-  A = (t, e) => {
-    let r = C(t);
-    if (e === o.CollectiblesItemType.AVATAR_DECORATION) {
-      let t = (0, n.flatMap)(r, "items").filter(a.isAvatarDecorationRecord);
+    let r = S(t);
+    if (e === i.CollectiblesItemType.AVATAR_DECORATION) {
+      let t = (0, n.flatMap)(r, "items").filter(l.isAvatarDecorationRecord);
       return (0, n.uniqBy)(t, "id")
     }
-    if (e === o.CollectiblesItemType.PROFILE_EFFECT) {
-      let t = (0, n.flatMap)(r, "items").filter(T.isProfileEffectRecord);
+    if (e === i.CollectiblesItemType.PROFILE_EFFECT) {
+      let t = (0, n.flatMap)(r, "items").filter(a.isProfileEffectRecord);
       return (0, n.uniqBy)(t, "id")
     }
   },
-  f = t => I(t, o.CollectiblesItemType.AVATAR_DECORATION),
-  v = t => A(t, o.CollectiblesItemType.AVATAR_DECORATION),
-  O = (t, e) => {
+  f = t => C(t, i.CollectiblesItemType.AVATAR_DECORATION),
+  A = t => I(t, i.CollectiblesItemType.AVATAR_DECORATION),
+  v = (t, e) => {
     var r;
     let {
       CDN_HOST: n,
       API_ENDPOINT: i
-    } = window.GLOBAL_ENV, o = (0, u.getBestMediaProxySize)(e.size * (0, u.getDevicePixelRatio)()), l = null !== (r = null == e ? void 0 : e.format) && void 0 !== r ? r : "png";
-    if (null != n) return "".concat(location.protocol, "//").concat(n, "/app-assets/").concat(c.COLLECTIBLES_APPLICATION_ID, "/").concat(t, ".").concat(l, "?size=").concat(o);
-    let a = c.Endpoints.APPLICATION_ASSET(c.COLLECTIBLES_APPLICATION_ID, t, l);
-    return "".concat(location.protocol).concat(i).concat(a, "?size=").concat(o)
+    } = window.GLOBAL_ENV, u = (0, o.getBestMediaProxySize)(e.size * (0, o.getDevicePixelRatio)()), l = null !== (r = null == e ? void 0 : e.format) && void 0 !== r ? r : "png";
+    if (null != n) return "".concat(location.protocol, "//").concat(n, "/app-assets/").concat(T.COLLECTIBLES_APPLICATION_ID, "/").concat(t, ".").concat(l, "?size=").concat(u);
+    let a = T.Endpoints.APPLICATION_ASSET(T.COLLECTIBLES_APPLICATION_ID, t, l);
+    return "".concat(location.protocol).concat(i).concat(a, "?size=").concat(u)
   },
-  N = t => I(t, o.CollectiblesItemType.PROFILE_EFFECT),
-  R = t => A(t, o.CollectiblesItemType.PROFILE_EFFECT),
-  P = (t, e) => {
+  N = t => C(t, i.CollectiblesItemType.PROFILE_EFFECT),
+  O = t => I(t, i.CollectiblesItemType.PROFILE_EFFECT),
+  R = (t, e) => {
     let r = N(e),
-      n = R(t).filter(t => {
+      n = O(t).filter(t => {
         let {
           id: e
         } = t;
@@ -115,4 +114,4 @@ let E = t => (null == t ? void 0 : t.categorySkuId) === i.CollectiblesCategorySk
       shopPreviews: n
     }
   },
-  g = t => t.applicationId === c.COLLECTIBLES_APPLICATION_ID
+  P = t => t.applicationId === T.COLLECTIBLES_APPLICATION_ID

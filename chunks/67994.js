@@ -69,8 +69,8 @@ function O(e) {
         }), s.on("progress", e => {
           let r = (0, _.maxFileSize)(i.id);
           e.currentSize > r && (s.cancel(), l(!1), a(), (0, p.showUploadFileSizeExceededError)(t, (0, E.getWebUploadFiles)(n)))
-        }), s.on("error", (e, n) => {
-          l(!1), n === S.AbortCodes.EXPLICIT_CONTENT && (a(), r.default.sendClydeError(t.id, n), u.default.clearAll(t.id, f.DraftType.ChannelMessage))
+        }), s.on("error", (e, n, i) => {
+          l(!1), n === S.AbortCodes.EXPLICIT_CONTENT && (a(), r.default.sendExplicitMediaClydeError(t.id, null == i ? void 0 : i.attachments), u.default.clearAll(t.id, f.DraftType.ChannelMessage))
         }), s.on("complete", () => {
           l(!1), a(), u.default.clearAll(t.id, f.DraftType.ChannelMessage)
         });

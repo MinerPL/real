@@ -1,14 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildDao: function() {
-    return s
+    return r
   }
 });
 var i = n("999673"),
-  r = n("429231");
-class s {
+  s = n("429231");
+class r {
   get prefix() {
     return this.table.prefix
+  }
+  withoutLogging() {
+    return new r(this.originalPrefix, this.table.tableId, this.table.database, !1)
   }
   get(e, t) {
     return this.table.get([e, t])
@@ -35,16 +38,16 @@ class s {
     return this.table.getParentId([null, e])
   }
   put(e, t, n) {
-    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.ConflictOptions.Replace;
-    return this.putWithGeneration(e, t, n, null, r)
+    let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.ConflictOptions.Replace;
+    return this.putWithGeneration(e, t, n, null, s)
   }
-  putWithGeneration(e, t, n, r) {
-    let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.ConflictOptions.Replace;
+  putWithGeneration(e, t, n, s) {
+    let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.ConflictOptions.Replace;
     return this.table.put({
       key: [e, t],
       data: n,
-      generation: r
-    }, s)
+      generation: s
+    }, r)
   }
   delete(e, t) {
     switch (arguments.length) {
@@ -59,8 +62,8 @@ class s {
   deleteGeneration(e, t) {
     return this.table.deleteGeneration([], e, t)
   }
-  transaction(e) {
-    return this.table.transaction(t => e(new a(t)))
+  transaction(e, t) {
+    return this.table.transaction(t => e(new a(t)), t)
   }
   upgradeTransaction(e) {
     return new a(this.table.upgradeTransaction(e))
@@ -71,9 +74,6 @@ class s {
   getManySyncUnsafe(e, t) {
     return this.table.getManySyncUnsafe([e], t)
   }
-  getKvEntriesSyncUnsafe() {
-    return this.table.getKvEntriesSyncUnsafe()
-  }
   getMapEntriesSyncUnsafe() {
     return this.table.getMapEntriesSyncUnsafe()
   }
@@ -83,28 +83,25 @@ class s {
   getGuildIdsSyncUnsafe() {
     return this.table.getChildIdsSyncUnsafe([])
   }
-  getGuildIdSyncUnsafe(e) {
-    return this.table.getParentIdSyncUnsafe([null, e])
-  }
-  constructor(e, t, n) {
-    this.table = new r.Table([e], t, n)
+  constructor(e, t, n, i = !0) {
+    this.originalPrefix = e, this.table = new s.Table([e], t, n, i)
   }
 }
 class a {
   static fromDatabaseTransaction(e, t, n) {
-    return new a(new r.TableTransaction(e, t, n))
+    return new a(new s.TableTransaction(e, t, n))
   }
   put(e, t, n) {
-    let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.ConflictOptions.Replace;
-    this.putWithGeneration(e, t, n, null, r)
+    let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : i.ConflictOptions.Replace;
+    this.putWithGeneration(e, t, n, null, s)
   }
-  putWithGeneration(e, t, n, r) {
-    let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.ConflictOptions.Replace;
+  putWithGeneration(e, t, n, s) {
+    let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : i.ConflictOptions.Replace;
     return this.state.put({
       key: [e, t],
       data: n,
-      generation: r
-    }, s)
+      generation: s
+    }, r)
   }
   delete(e, t) {
     switch (arguments.length) {

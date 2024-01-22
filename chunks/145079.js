@@ -41,6 +41,7 @@ let p = e => {
     children: [(0, i.jsx)(a.Tooltip, {
       text: h.default.Messages.STREAMER_MODE_ENABLED,
       shouldShow: I,
+      "aria-label": !!I && void 0,
       children: e => (0, i.jsx)("span", {
         ...e,
         className: l(f.username, c),

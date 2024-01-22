@@ -1,16 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return r
   }
 }), n("702976");
 var a = n("292687"),
   s = n("568734"),
-  i = n("49111");
+  i = n("420444"),
+  l = n("49111");
 
-function l(e) {
-  var t;
-  let n = (0, s.hasFlag)(null !== (t = e.flags) && void 0 !== t ? t : 0, i.ApplicationFlags.EMBEDDED),
-    l = a.default.getWindowOpen(i.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
-  return n && l
+function r(e, t) {
+  var n;
+  let r = (0, s.hasFlag)(null !== (n = e.flags) && void 0 !== n ? n : 0, l.ApplicationFlags.EMBEDDED),
+    o = a.default.getWindowOpen(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+  return r && o && (0, i.default)(t)
 }

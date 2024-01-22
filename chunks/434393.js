@@ -20,8 +20,8 @@ var l = a("37983"),
   g = a("946964"),
   E = a("635956"),
   h = a("38766"),
-  T = a("601095"),
-  b = a("493390"),
+  b = a("601095"),
+  T = a("493390"),
   x = a("697218"),
   L = a("944441"),
   S = a("462579"),
@@ -121,7 +121,7 @@ var V = function(e) {
           analyticsLocations: V
         });
         return
-      }(null == J ? void 0 : J.type) === c.CollectiblesItemType.PROFILE_EFFECT && (0, b.openProfileEffectModal)({
+      }(null == J ? void 0 : J.type) === c.CollectiblesItemType.PROFILE_EFFECT && (0, T.openProfileEffectModal)({
         initialSelectedEffectId: J.id,
         analyticsLocations: V
       })
@@ -179,7 +179,7 @@ var V = function(e) {
       isGiftEasterEggEnabled: N,
       tooltipDelay: 250
     }),
-    eT = () => {
+    eb = () => {
       if (er && !S && !en) return eg();
       let e = null != ea ? {
           background: (0, P.getBackgroundGradient)(ea, 90),
@@ -220,7 +220,7 @@ var V = function(e) {
         }), eh()]
       })
     },
-    eb = null != el ? {
+    eT = null != el ? {
       background: "".concat((0, P.getBackgroundGradient)(el), " border-box border-box"),
       borderColor: el.border.toHslString(),
       boxShadow: q ? "0 0 25px 1px ".concat(el.primary.toHslString()) : "none"
@@ -231,7 +231,7 @@ var V = function(e) {
       className: w.shopCard,
       onBlur: () => Z(!1),
       onClick: eC,
-      style: eb,
+      style: eT,
       id: "shop-item-".concat(t.skuId),
       children: [er && (0, l.jsx)(o.Tooltip, {
         tooltipContentClassName: w.premiumWheelTooltipContent,
@@ -246,7 +246,7 @@ var V = function(e) {
         })
       }), (null == J ? void 0 : J.type) === c.CollectiblesItemType.PROFILE_EFFECT && (0, l.jsx)("div", {
         className: w.profileEffectShopPreview,
-        children: (0, l.jsx)(T.default, {
+        children: (0, l.jsx)(b.default, {
           isHovering: q,
           profileEffectId: J.id,
           isPurchased: null != ei
@@ -271,13 +271,11 @@ var V = function(e) {
         className: n(w.cardText, {
           [w.cardTextProfileEffect]: (null == J ? void 0 : J.type) === c.CollectiblesItemType.PROFILE_EFFECT
         }),
-        children: [(0, l.jsx)("div", {
+        children: [(0, l.jsx)(o.Text, {
+          color: "always-white",
+          variant: "text-lg/bold",
           className: w.productName,
-          children: S && (0, l.jsx)(o.Text, {
-            color: "always-white",
-            variant: "text-lg/bold",
-            children: t.name
-          })
+          children: t.name
         }), (0, l.jsxs)("div", {
           className: w.detailsWrapper,
           children: [(0, l.jsxs)("div", {
@@ -290,7 +288,7 @@ var V = function(e) {
             }), eE()]
           }), (0, l.jsx)("div", {
             className: w.innerHover,
-            children: eT()
+            children: eb()
           })]
         })]
       }), (0, l.jsx)(k.default, {

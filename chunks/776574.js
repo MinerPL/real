@@ -274,6 +274,13 @@ class y extends i.PureComponent {
       enableSpellCheck: !0
     }) : blur()
   }
+  handlePasteCapture(e) {
+    let {
+      editor: t,
+      onPaste: n
+    } = this.props;
+    null == n || n(e), !(e.isDefaultPrevented() || e.isPropagationStopped()) && (t.insertData(e.clipboardData), e.preventDefault(), e.stopPropagation())
+  }
   render() {
     let {
       editor: e,
@@ -282,18 +289,17 @@ class y extends i.PureComponent {
       canFocus: i,
       autoFocus: r,
       placeholder: a,
-      onPaste: u,
-      channelId: d,
-      guildId: c,
-      onChange: f,
-      onFocus: p,
-      onBlur: m,
-      onKeyDown: h,
-      onKeyUp: E,
-      decorateExtra: S,
-      renderExtraElement: g,
-      renderExtraLeaf: C,
-      ...y
+      channelId: u,
+      guildId: d,
+      onChange: c,
+      onFocus: f,
+      onBlur: p,
+      onKeyDown: m,
+      onKeyUp: h,
+      decorateExtra: E,
+      renderExtraElement: S,
+      renderExtraLeaf: g,
+      ...C
     } = this.props;
     return (0, l.jsxs)("div", {
       ref: this.containerRef,
@@ -306,7 +312,7 @@ class y extends i.PureComponent {
         editor: e,
         value: [...this.state.initialValue],
         children: (0, l.jsx)(s.Editable, {
-          ...y,
+          ...C,
           className: o(v.markup, T.editor, t),
           decorate: this.decorate,
           renderElement: this.renderElement,
@@ -319,7 +325,7 @@ class y extends i.PureComponent {
           onDOMBeforeInput: this.handleBeforeInput,
           onCompositionStart: this.handleCompositionStart,
           onCompositionEnd: this.handleCompositionEnd,
-          onPasteCapture: u,
+          onPasteCapture: this.handlePasteCapture,
           autoFocus: r && !1 !== i,
           autoCorrect: "off",
           "data-can-focus": !1 !== i,
@@ -330,7 +336,7 @@ class y extends i.PureComponent {
     })
   }
   constructor(e) {
-    super(e), this.containerRef = i.createRef(), this.decorate = this.decorate.bind(this), this.renderElement = this.renderElement.bind(this), this.renderLeaf = this.renderLeaf.bind(this), this.handleOnChange = this.handleOnChange.bind(this), this.handleKeyDown = this.handleKeyDown.bind(this), this.handleKeyUp = this.handleKeyUp.bind(this), this.handleBeforeInput = this.handleBeforeInput.bind(this), this.handleCompositionStart = this.handleCompositionStart.bind(this), this.handleCompositionEnd = this.handleCompositionEnd.bind(this), this.handleFocusCapture = this.handleFocusCapture.bind(this), this.handleBlurCapture = this.handleBlurCapture.bind(this), this.handleContextMenu = this.handleContextMenu.bind(this), h.EditorUtils.isEditorEmpty(e.editor) ? this.state = {
+    super(e), this.containerRef = i.createRef(), this.decorate = this.decorate.bind(this), this.renderElement = this.renderElement.bind(this), this.renderLeaf = this.renderLeaf.bind(this), this.handleOnChange = this.handleOnChange.bind(this), this.handleKeyDown = this.handleKeyDown.bind(this), this.handleKeyUp = this.handleKeyUp.bind(this), this.handleBeforeInput = this.handleBeforeInput.bind(this), this.handleCompositionStart = this.handleCompositionStart.bind(this), this.handleCompositionEnd = this.handleCompositionEnd.bind(this), this.handleFocusCapture = this.handleFocusCapture.bind(this), this.handleBlurCapture = this.handleBlurCapture.bind(this), this.handleContextMenu = this.handleContextMenu.bind(this), this.handlePasteCapture = this.handlePasteCapture.bind(this), h.EditorUtils.isEditorEmpty(e.editor) ? this.state = {
       initialValue: (0, c.createEmptyState)().richValue,
       showPlaceholder: !0
     } : this.state = {

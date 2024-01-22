@@ -49,7 +49,7 @@ var E = new class e {
           value: t[e]
         });
         c.default.handleUserSettingsProtoChange(e)
-      })
+      }, "handleUserSettingsProtoChange")
     }, this.throttledOnChange = s.debounce(this.handleUserSettingsProtoChange, 0)
   }
 }

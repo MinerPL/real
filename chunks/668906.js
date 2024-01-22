@@ -1,42 +1,82 @@
 "use strict";
 n.r(t), n.d(t, {
   getExperimentCodecs: function() {
-    return s
-  },
-  filterVideoCodecs: function() {
     return a
   },
+  filterVideoCodecs: function() {
+    return o
+  },
   codecNameToPayloadName: function() {
-    return l
+    return u
   }
-}), n("222007");
+}), n("424973"), n("843762");
 var i = n("353927");
-let r = ["H264", "VP8", "VP9"];
+let s = [{
+  name: "H264",
+  encode: !0,
+  decode: !0
+}, {
+  name: "VP8",
+  encode: !0,
+  decode: !0
+}, {
+  name: "VP9",
+  encode: !0,
+  decode: !0
+}];
 
-function s(e) {
+function r(e, t) {
+  let n = t.concat(s),
+    i = [];
+  return n.forEach(t => {
+    let n = e.find(e => t.name === e.codec);
+    null != n && i.push({
+      name: n.codec,
+      encode: n.encode && t.encode,
+      decode: n.decode && t.decode
+    })
+  }), i
+}
+
+function a(e) {
   let t = [];
-  return e.has(i.ExperimentFlags.SIGNAL_H265_SUPPORT) && (t = ["H265"].concat(t)), e.has(i.ExperimentFlags.SIGNAL_AV1_SUPPORT) && (t = ["AV1"].concat(t)), t.slice()
+  return e.has(i.ExperimentFlags.SIGNAL_H265_SUPPORT) ? t.unshift({
+    name: "H265",
+    encode: !0,
+    decode: !0
+  }) : e.has(i.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT) && t.unshift({
+    name: "H265",
+    encode: !1,
+    decode: !0
+  }), e.has(i.ExperimentFlags.SIGNAL_AV1_SUPPORT) && t.unshift({
+    name: "AV1",
+    encode: !0,
+    decode: !0
+  }), t
 }
 
-function a(e, t) {
-  return "string" == typeof e ? function(e, t) {
-    let n = JSON.parse(e),
-      i = new Map(n.map(e => [o(e.codec), [e.encode, e.decode]])),
-      s = [...i.keys()],
-      a = t.concat(r);
-    return a.filter(e => s.includes(e)).map(e => [e, i.get(e)])
-  }(e, t) : function(e, t) {
-    let n = new Map(e.map(e => [o(e), [!0, !0]])),
-      i = e.map(e => e.toUpperCase()),
-      s = t.concat(r);
-    return s.filter(e => i.includes(e)).map(e => [e, n.get(e)])
-  }(e, t)
-}
-
-function o(e) {
-  return "AV1X" === e ? "AV1" : e
+function o(e, t) {
+  if ("string" == typeof e) {
+    let n = JSON.parse(e).map(e => ({
+      codec: l(e.codec),
+      encode: e.encode,
+      decode: e.decode
+    }));
+    return r(n, t)
+  } {
+    let n = e.map(e => ({
+      codec: l(e),
+      encode: !0,
+      decode: !0
+    }));
+    return r(n, t)
+  }
 }
 
 function l(e) {
+  return "AV1X" === e ? "AV1" : e
+}
+
+function u(e) {
   return "AV1" === e ? "AV1X" : e
 }

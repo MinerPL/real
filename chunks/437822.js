@@ -1,61 +1,61 @@
 "use strict";
-let s;
+let i;
 n.r(t), n.d(t, {
   PasswordResetResult: function() {
-    return o
+    return s
   },
   default: function() {
-    return y
+    return R
   }
 }), n("70102"), n("860677"), n("506083");
-var o, l, a = n("759843"),
-  i = n("171718"),
-  r = n("872717"),
-  d = n("95410"),
-  u = n("913144"),
+var s, r, a = n("759843"),
+  o = n("171718"),
+  l = n("872717"),
+  u = n("95410"),
+  d = n("913144"),
   c = n("448993"),
-  E = n("307439"),
+  f = n("307439"),
   _ = n("605250"),
-  p = n("21121"),
-  f = n("776502"),
-  h = n("393414"),
-  S = n("271938"),
-  A = n("350522"),
-  O = n("840707"),
-  I = n("772017"),
-  N = n("49111"),
-  C = n("191349");
-let m = new _.default("AuthenticationActionCreators"),
-  T = null;
+  h = n("21121"),
+  g = n("776502"),
+  m = n("393414"),
+  E = n("271938"),
+  p = n("350522"),
+  v = n("840707"),
+  S = n("772017"),
+  T = n("49111"),
+  I = n("191349");
+let C = new _.default("AuthenticationActionCreators"),
+  A = null;
 
-function R(e) {
+function y(e) {
   let t = {
     type: "LOGOUT",
     ...e
   };
-  u.default.dispatch(t).catch(e => {
+  d.default.dispatch(t).catch(e => {
     var t;
-    throw m.error("Error while dispatching LOGOUT", e), null === (t = window.DiscordErrors) || void 0 === t || t.softCrash(e), e
+    throw C.error("Error while dispatching LOGOUT", e), null === (t = window.DiscordErrors) || void 0 === t || t.softCrash(e), e
   })
 }
 
-function v() {
-  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : N.Routes.DEFAULT_LOGGED_OUT;
-  R();
-  let t = (0, p.getRootNavigationRefIfInExperiment)();
-  null != e && (null != t ? (I.default.popAll(), t.navigate("auth")) : (0, h.transitionTo)(e))
-}(l = o || (o = {})).MFA = "MFA", l.SUCCESS = "SUCCESS";
-var y = {
+function N() {
+  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : T.Routes.DEFAULT_LOGGED_OUT;
+  y();
+  let t = (0, h.getRootNavigationRefIfInExperiment)();
+  null != e && (null != t ? (S.default.popAll(), t.navigate("auth")) : (0, m.transitionTo)(e))
+}(r = s || (s = {})).MFA = "MFA", r.SUCCESS = "SUCCESS";
+var R = {
   startSession(e) {
-    u.default.wait(() => {
-      u.default.dispatch({
+    d.default.wait(() => {
+      d.default.dispatch({
         type: "START_SESSION",
         token: e
       })
     })
   },
   setLoginCredentials(e, t) {
-    u.default.dispatch({
+    d.default.dispatch({
       type: "SET_LOGIN_CREDENTIALS",
       login: e,
       password: t
@@ -65,38 +65,38 @@ var y = {
     var t;
     let {
       login: n,
-      password: s,
-      loginCode: o,
-      undelete: l,
-      source: i,
-      giftCodeSKUId: r,
-      invite: d,
-      isMultiAccount: E
+      password: i,
+      loginCode: s,
+      undelete: r,
+      source: o,
+      giftCodeSKUId: l,
+      invite: u,
+      isMultiAccount: f
     } = e;
-    u.default.dispatch({
+    d.default.dispatch({
       type: "LOGIN",
       login: n,
-      loginMethod: null != o && "" !== o ? N.LoginMethods.LOGIN_CODE : N.LoginMethods.PASSWORD
-    }), this.setLoginCredentials(n, null !== (t = null != s ? s : o) && void 0 !== t ? t : void 0), O.default.post({
-      url: N.Endpoints.LOGIN,
+      loginMethod: null != s && "" !== s ? T.LoginMethods.LOGIN_CODE : T.LoginMethods.PASSWORD
+    }), this.setLoginCredentials(n, null !== (t = null != i ? i : s) && void 0 !== t ? t : void 0), v.default.post({
+      url: T.Endpoints.LOGIN,
       body: {
         login: n,
-        password: s,
-        undelete: l,
-        login_code: o,
-        login_source: i,
-        gift_code_sku_id: r
+        password: i,
+        undelete: r,
+        login_code: s,
+        login_source: o,
+        gift_code_sku_id: l
       },
       retries: 2,
       oldFormErrors: !0,
       trackedActionData: {
         event: a.NetworkActionNames.USER_LOGIN,
         properties: {
-          invite_code: null == d ? void 0 : d.code,
-          is_multi_account: E
+          invite_code: null == u ? void 0 : u.code,
+          is_multi_account: f
         }
       },
-      ...E ? {
+      ...f ? {
         headers: {
           authorization: ""
         }
@@ -106,48 +106,48 @@ var y = {
         body: {
           mfa: t,
           sms: n,
-          webauthn: s,
-          ticket: o,
-          token: l,
+          webauthn: i,
+          ticket: s,
+          token: r,
           backup: a,
-          user_id: i,
-          required_actions: r,
-          totp: d
+          user_id: o,
+          required_actions: l,
+          totp: u
         }
       } = e;
-      u.default.dispatch({
+      d.default.dispatch({
         type: "LOGIN_ATTEMPTED",
-        user_id: i,
-        required_actions: r
-      }), t ? u.default.dispatch({
+        user_id: o,
+        required_actions: l
+      }), t ? d.default.dispatch({
         type: "LOGIN_MFA_STEP",
-        ticket: o,
+        ticket: s,
         sms: n,
-        webauthn: s,
-        totp: d,
+        webauthn: i,
+        totp: u,
         backup: a
-      }) : E ? this.switchAccountToken(l) : u.default.dispatch({
+      }) : f ? this.switchAccountToken(r) : d.default.dispatch({
         type: "LOGIN_SUCCESS",
-        token: l
+        token: r
       })
     }, e => {
       var t;
-      let o = null === (t = e.body) || void 0 === t ? void 0 : t.code;
-      o === N.AbortCodes.ACCOUNT_SCHEDULED_FOR_DELETION && null != s && "" !== s ? u.default.dispatch({
+      let s = null === (t = e.body) || void 0 === t ? void 0 : t.code;
+      s === T.AbortCodes.ACCOUNT_SCHEDULED_FOR_DELETION && null != i && "" !== i ? d.default.dispatch({
         type: "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION",
         credentials: {
           login: n,
-          password: s
+          password: i
         }
-      }) : o === N.AbortCodes.ACCOUNT_DISABLED && null != s && "" !== s ? u.default.dispatch({
+      }) : s === T.AbortCodes.ACCOUNT_DISABLED && null != i && "" !== i ? d.default.dispatch({
         type: "LOGIN_ACCOUNT_DISABLED",
         credentials: {
           login: n,
-          password: s
+          password: i
         }
-      }) : o === N.AbortCodes.PHONE_VERIFICATION_REQUIRED ? u.default.dispatch({
+      }) : s === T.AbortCodes.PHONE_VERIFICATION_REQUIRED ? d.default.dispatch({
         type: "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED"
-      }) : u.default.dispatch({
+      }) : d.default.dispatch({
         type: "LOGIN_FAILURE",
         error: new c.V6OrEarlierAPIError(e)
       })
@@ -156,19 +156,19 @@ var y = {
   loginMFAv2(e) {
     let t, {
       code: n,
-      ticket: s,
-      source: o,
-      giftCodeSKUId: l,
-      isMultiAccount: i,
-      mfaType: r
+      ticket: i,
+      source: s,
+      giftCodeSKUId: r,
+      isMultiAccount: o,
+      mfaType: l
     } = e;
-    return t = "webauthn" === r ? N.Endpoints.LOGIN_WEBAUTHN : "sms" === r ? N.Endpoints.LOGIN_SMS : N.Endpoints.LOGIN_MFA, O.default.post({
+    return t = "webauthn" === l ? T.Endpoints.LOGIN_WEBAUTHN : "sms" === l ? T.Endpoints.LOGIN_SMS : T.Endpoints.LOGIN_MFA, v.default.post({
       url: t,
       body: {
         code: n,
-        ticket: s,
-        login_source: o,
-        gift_code_sku_id: l
+        ticket: i,
+        login_source: s,
+        gift_code_sku_id: r
       },
       retries: 2,
       oldFormErrors: !0,
@@ -176,23 +176,23 @@ var y = {
         event: a.NetworkActionNames.USER_LOGIN_MFA
       }
     }).then(e => {
-      i ? this.switchAccountToken(e.body.token) : u.default.dispatch({
+      o ? this.switchAccountToken(e.body.token) : d.default.dispatch({
         type: "LOGIN_SUCCESS",
         token: e.body.token
       })
     }).catch(e => {
       var t;
-      if ((null === (t = e.body) || void 0 === t ? void 0 : t.code) === N.AbortCodes.MFA_INVALID_CODE) throw Error((0, f.mapError)(r));
+      if ((null === (t = e.body) || void 0 === t ? void 0 : t.code) === T.AbortCodes.MFA_INVALID_CODE) throw Error((0, g.getInvalidMFACodeError)(l));
       throw e
     })
   },
   loginToken(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return u.default.dispatch({
+    return d.default.dispatch({
       type: "LOGIN"
     }), new Promise(n => {
       setImmediate(() => {
-        u.default.dispatch({
+        d.default.dispatch({
           type: "LOGIN_SUCCESS",
           token: e
         }), t && this.startSession(e), n()
@@ -200,30 +200,30 @@ var y = {
     })
   },
   loginReset(e) {
-    u.default.dispatch({
+    d.default.dispatch({
       type: "LOGIN_RESET",
       isMultiAccount: e
     })
   },
   loginStatusReset() {
-    u.default.dispatch({
+    d.default.dispatch({
       type: "LOGIN_STATUS_RESET"
     })
   },
   logoutInternal(e) {
-    R(e)
+    y(e)
   },
   logout() {
     var e;
-    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : N.Routes.DEFAULT_LOGGED_OUT,
+    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : T.Routes.DEFAULT_LOGGED_OUT,
       n = arguments.length > 1 ? arguments[1] : void 0;
-    return O.default.post({
-      url: N.Endpoints.LOGOUT,
+    return v.default.post({
+      url: T.Endpoints.LOGOUT,
       body: {
-        provider: (0, C.getDevicePushProvider)(),
-        token: d.default.get(N.DEVICE_TOKEN),
-        voip_provider: C.DEVICE_PUSH_VOIP_PROVIDER,
-        voip_token: d.default.get(N.DEVICE_VOIP_TOKEN)
+        provider: (0, I.getDevicePushProvider)(),
+        token: u.default.get(T.DEVICE_TOKEN),
+        voip_provider: I.DEVICE_PUSH_VOIP_PROVIDER,
+        voip_token: u.default.get(T.DEVICE_VOIP_TOKEN)
       },
       oldFormErrors: !0,
       trackedActionData: {
@@ -231,40 +231,40 @@ var y = {
       },
       ...null != n && {
         headers: {
-          authorization: null !== (e = i.default.getToken(n)) && void 0 !== e ? e : ""
+          authorization: null !== (e = o.default.getToken(n)) && void 0 !== e ? e : ""
         }
       }
     }).finally(() => {
-      (null == n || n === S.default.getId()) && v(t)
+      (null == n || n === E.default.getId()) && N(t)
     })
   },
   switchAccountToken(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-      n = S.default.getToken();
-    m.log("Switching accounts", {
+      n = E.default.getToken();
+    C.log("Switching accounts", {
       wasLoggedIn: null != n,
       tokenHasChanged: e !== n
-    }), R({
+    }), y({
       isSwitchingAccount: !0
     });
-    let s = this.loginToken(e, !0).then(() => {
-      let t = S.default.getToken();
-      m.log("Switched accounts finished", {
+    let i = this.loginToken(e, !0).then(() => {
+      let t = E.default.getToken();
+      C.log("Switched accounts finished", {
         isCorrectToken: e === t
       })
     });
-    return t && (0, h.transitionTo)(N.Routes.ME), s
+    return t && (0, m.transitionTo)(T.Routes.ME), i
   },
   verifySSOToken() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : N.Routes.DEFAULT_LOGGED_OUT;
-    return r.default.get({
-      url: N.Endpoints.ME,
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : T.Routes.DEFAULT_LOGGED_OUT;
+    return l.default.get({
+      url: T.Endpoints.ME,
       oldFormErrors: !0
-    }).catch(() => v(e))
+    }).catch(() => N(e))
   },
   verify(e) {
-    null != e ? O.default.post({
-      url: N.Endpoints.VERIFY,
+    null != e ? v.default.post({
+      url: T.Endpoints.VERIFY,
       body: {
         token: e
       },
@@ -273,25 +273,25 @@ var y = {
         event: a.NetworkActionNames.USER_VERIFY
       }
     }).then(e => {
-      u.default.dispatch({
+      d.default.dispatch({
         type: "LOGIN_SUCCESS",
         token: e.body.token
-      }), u.default.dispatch({
+      }), d.default.dispatch({
         type: "VERIFY_SUCCESS",
         verifyingUserId: e.body.user_id
       })
-    }, e => u.default.dispatch({
+    }, e => d.default.dispatch({
       type: "VERIFY_FAILURE",
       errors: e.body
-    })) : u.default.dispatch({
+    })) : d.default.dispatch({
       type: "VERIFY_FAILURE",
       errors: {}
     })
   },
   async authorizePayment(e) {
     try {
-      await O.default.post({
-        url: N.Endpoints.AUTHORIZE_PAYMENT,
+      await v.default.post({
+        url: T.Endpoints.AUTHORIZE_PAYMENT,
         body: {
           token: e
         },
@@ -299,11 +299,11 @@ var y = {
         trackedActionData: {
           event: a.NetworkActionNames.AUTHORIZE_PAYMENT
         }
-      }), u.default.dispatch({
+      }), d.default.dispatch({
         type: "VERIFY_SUCCESS"
       })
     } catch (e) {
-      u.default.dispatch({
+      d.default.dispatch({
         type: "VERIFY_FAILURE",
         errors: {}
       })
@@ -311,15 +311,15 @@ var y = {
   },
   async authorizeIPAddress(e) {
     if (null == e) {
-      u.default.dispatch({
+      d.default.dispatch({
         type: "VERIFY_FAILURE",
         errors: {}
       });
       return
     }
     try {
-      await O.default.post({
-        url: N.Endpoints.AUTHORIZE_IP,
+      await v.default.post({
+        url: T.Endpoints.AUTHORIZE_IP,
         body: {
           token: e
         },
@@ -327,51 +327,51 @@ var y = {
         trackedActionData: {
           event: a.NetworkActionNames.AUTHORIZE_IP
         }
-      }), u.default.dispatch({
+      }), d.default.dispatch({
         type: "VERIFY_SUCCESS"
       })
     } catch (e) {
-      u.default.dispatch({
+      d.default.dispatch({
         type: "VERIFY_FAILURE",
         errors: {}
       })
     }
   },
-  verifyResend: () => O.default.post({
-    url: N.Endpoints.VERIFY_RESEND,
+  verifyResend: () => v.default.post({
+    url: T.Endpoints.VERIFY_RESEND,
     oldFormErrors: !0,
     trackedActionData: {
       event: a.NetworkActionNames.USER_VERIFY_RESEND
     }
   }),
   async resetPassword(e, t, n) {
-    u.default.dispatch({
+    d.default.dispatch({
       type: "LOGIN"
     });
-    let s = {
+    let i = {
         token: e,
         password: t,
         source: n
       },
-      o = d.default.get(N.DEVICE_TOKEN),
-      l = (0, C.getDevicePushProvider)();
-    null != l && null != o && (s.push_provider = l, s.push_token = o);
-    let i = d.default.get(N.DEVICE_VOIP_TOKEN);
-    null != C.DEVICE_PUSH_VOIP_PROVIDER && null != i && (s.push_voip_provider = C.DEVICE_PUSH_VOIP_PROVIDER, s.push_voip_token = i);
+      s = u.default.get(T.DEVICE_TOKEN),
+      r = (0, I.getDevicePushProvider)();
+    null != r && null != s && (i.push_provider = r, i.push_token = s);
+    let o = u.default.get(T.DEVICE_VOIP_TOKEN);
+    null != I.DEVICE_PUSH_VOIP_PROVIDER && null != o && (i.push_voip_provider = I.DEVICE_PUSH_VOIP_PROVIDER, i.push_voip_token = o);
     try {
       let {
         body: {
           mfa: e,
           sms: t,
           webauthn: n,
-          ticket: o,
-          token: l,
-          backup: i,
-          totp: r
+          ticket: s,
+          token: r,
+          backup: o,
+          totp: l
         }
-      } = await O.default.post({
-        url: N.Endpoints.RESET_PASSWORD,
-        body: s,
+      } = await v.default.post({
+        url: T.Endpoints.RESET_PASSWORD,
+        body: i,
         oldFormErrors: !0,
         trackedActionData: {
           event: a.NetworkActionNames.USER_RESET_PASSWORD
@@ -381,13 +381,13 @@ var y = {
         result: e ? "MFA" : "SUCCESS",
         sms: t,
         webauthn: n,
-        ticket: o,
-        token: l,
-        backup: i,
-        totp: r
+        ticket: s,
+        token: r,
+        backup: o,
+        totp: l
       }
     } catch (e) {
-      throw u.default.dispatch({
+      throw d.default.dispatch({
         type: "LOGIN_FAILURE",
         error: new c.V6OrEarlierAPIError(e)
       }), e
@@ -397,22 +397,22 @@ var y = {
     let {
       method: t,
       code: n,
-      ticket: s,
-      password: o,
-      token: l,
-      source: i
+      ticket: i,
+      password: s,
+      token: r,
+      source: o
     } = e;
-    u.default.dispatch({
+    d.default.dispatch({
       type: "LOGIN_MFA"
     });
-    let r = await O.default.post({
-      url: N.Endpoints.RESET_PASSWORD,
+    let l = await v.default.post({
+      url: T.Endpoints.RESET_PASSWORD,
       body: {
         code: n,
-        ticket: s,
-        password: o,
-        token: l,
-        source: i,
+        ticket: i,
+        password: s,
+        token: r,
+        source: o,
         method: t
       },
       oldFormErrors: !0,
@@ -423,15 +423,15 @@ var y = {
         }
       }
     });
-    return r.body.token
+    return l.body.token
   },
   async forgotPassword(e) {
-    this.setLoginCredentials(e), u.default.dispatch({
+    this.setLoginCredentials(e), d.default.dispatch({
       type: "FORGOT_PASSWORD_REQUEST"
     });
     try {
-      await O.default.post({
-        url: N.Endpoints.FORGOT_PASSWORD,
+      await v.default.post({
+        url: T.Endpoints.FORGOT_PASSWORD,
         body: {
           login: e
         },
@@ -439,65 +439,65 @@ var y = {
         trackedActionData: {
           event: a.NetworkActionNames.FORGOT_PASSWORD
         }
-      }), u.default.dispatch({
+      }), d.default.dispatch({
         type: "FORGOT_PASSWORD_SENT"
       })
     } catch (n) {
       let e = new c.V6OrEarlierAPIError(n),
         t = e.code;
-      throw t === N.AbortCodes.PHONE_VERIFICATION_REQUIRED ? u.default.dispatch({
+      throw t === T.AbortCodes.PHONE_VERIFICATION_REQUIRED ? d.default.dispatch({
         type: "LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION"
-      }) : u.default.dispatch({
+      }) : d.default.dispatch({
         type: "LOGIN_FAILURE",
         error: e
       }), n
     }
   },
   setFingerprint(e) {
-    u.default.dispatch({
+    d.default.dispatch({
       type: "FINGERPRINT",
       fingerprint: e
     })
   },
   getExperiments(e) {
-    u.default.dispatch({
+    d.default.dispatch({
       type: "EXPERIMENTS_FETCH",
       withGuildExperiments: e
     })
   },
-  getLocationMetadata: () => null != T ? T : (clearTimeout(s), s = setTimeout(() => {
-    u.default.dispatch({
+  getLocationMetadata: () => null != A ? A : (clearTimeout(i), i = setTimeout(() => {
+    d.default.dispatch({
       type: "SET_CONSENT_REQUIRED",
       consentRequired: !0
     })
-  }, 5e3), T = r.default.get({
-    url: N.Endpoints.AUTH_LOCATION_METADATA,
+  }, 5e3), A = l.default.get({
+    url: T.Endpoints.AUTH_LOCATION_METADATA,
     retries: 2,
     oldFormErrors: !0
   }).then(e => {
-    var t, n, o, l, a;
-    if (clearTimeout(s), null == A.default.getAuthenticationConsentRequired()) {
-      let t = null === (l = null == e ? void 0 : null === (o = e.body) || void 0 === o ? void 0 : o.consent_required) || void 0 === l || l;
-      u.default.dispatch({
+    var t, n, s, r, a;
+    if (clearTimeout(i), null == p.default.getAuthenticationConsentRequired()) {
+      let t = null === (r = null == e ? void 0 : null === (s = e.body) || void 0 === s ? void 0 : s.consent_required) || void 0 === r || r;
+      d.default.dispatch({
         type: "SET_CONSENT_REQUIRED",
         consentRequired: t
       })
     }
-    if (u.default.dispatch({
+    if (d.default.dispatch({
         type: "SET_LOCATION_METADATA",
         countryCode: null !== (a = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.country_code) && void 0 !== a ? a : void 0
-      }), T = null, (null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.promotional_email_opt_in) != null) {
+      }), A = null, (null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.promotional_email_opt_in) != null) {
       let t = e.body.promotional_email_opt_in;
-      (0, E.setPromoEmailConsentState)({
+      (0, f.setPromoEmailConsentState)({
         required: t.required,
         checked: t.pre_checked,
         preChecked: t.pre_checked
       })
     }
   }, () => {
-    clearTimeout(s), u.default.dispatch({
+    clearTimeout(i), d.default.dispatch({
       type: "SET_CONSENT_REQUIRED",
       consentRequired: !0
-    }), T = null
+    }), A = null
   }))
 }

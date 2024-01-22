@@ -1,95 +1,112 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return S
   }
-});
-var s = n("37983");
-n("884691");
-var a = n("759843"),
-  l = n("77078"),
-  i = n("143618"),
-  r = n("377114"),
-  u = n("965153"),
-  o = n("98352"),
-  d = n("124969"),
-  c = n("701909"),
-  f = n("49111"),
-  E = n("782340"),
-  I = n("939564"),
-  _ = n("926622");
-let p = e => {
+}), n("222007");
+var s = n("37983"),
+  a = n("884691"),
+  l = n("759843"),
+  i = n("446674"),
+  r = n("77078"),
+  u = n("437822"),
+  o = n("327037"),
+  d = n("143618"),
+  c = n("377114"),
+  f = n("965153"),
+  E = n("98352"),
+  I = n("271938"),
+  _ = n("760190"),
+  p = n("124969"),
+  h = n("701909"),
+  m = n("49111"),
+  T = n("782340"),
+  N = n("939564"),
+  g = n("926622");
+i.default.initialize();
+let A = e => {
   let {
     title: t,
-    menuType: o
-  } = e, d = () => {
-    (0, l.openModalLazy)(async () => {
+    menuType: a
+  } = e, i = () => {
+    (0, r.openModalLazy)(async () => {
       let {
         default: e
       } = await n.el("650672").then(n.bind(n, "650672"));
       return t => (0, s.jsx)(e, {
         ...t,
-        onSuccess: c,
-        headerText: E.default.Messages.ENTER_EMAIL,
-        confirmButtonText: E.default.Messages.NEXT,
-        confirmButtonColor: l.Button.Colors.BRAND_NEW,
-        impressionName: a.ImpressionNames.URF_ENTER_EMAIL
+        onSuccess: u,
+        headerText: T.default.Messages.ENTER_EMAIL,
+        confirmButtonText: T.default.Messages.NEXT,
+        confirmButtonColor: r.Button.Colors.BRAND_NEW,
+        impressionName: l.ImpressionNames.URF_ENTER_EMAIL
       })
     })
-  }, c = e => {
+  }, u = e => {
     let t = async () => {
-      await (0, u.sendUnauthenticatedReportPincode)(o, e)
-    }, d = async t => await (0, u.verifyUnauthenticatedReport)(o, e, t), c = e => {
+      await (0, f.sendUnauthenticatedReportPincode)(a, e)
+    }, i = async t => await (0, f.verifyUnauthenticatedReport)(a, e, t), u = e => {
       let t = null == e ? void 0 : e.token;
-      o === i.UnauthenticatedReportNames.MESSAGE ? (0, r.showUnauthenticatedReportModalForMessage)(t) : o === i.UnauthenticatedReportNames.USER && (0, r.showUnauthenticatedReportModalForUser)(t)
+      a === d.UnauthenticatedReportNames.MESSAGE ? (0, c.showUnauthenticatedReportModalForMessage)(t) : a === d.UnauthenticatedReportNames.USER && (0, c.showUnauthenticatedReportModalForUser)(t)
     };
-    t(), (0, l.openModalLazy)(async () => {
+    t(), (0, r.openModalLazy)(async () => {
       let {
         default: e
       } = await n.el("644512").then(n.bind(n, "644512"));
       return n => (0, s.jsx)(e, {
         ...n,
-        onFormSubmit: d,
+        onFormSubmit: i,
         onResend: t,
-        onSuccess: c,
-        headerText: E.default.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT,
-        confirmButtonText: E.default.Messages.VERIFY,
-        confirmButtonColor: l.Button.Colors.BRAND_NEW,
-        impressionName: a.ImpressionNames.URF_CONFIRM_EMAIL_CODE
+        onSuccess: u,
+        headerText: T.default.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT,
+        confirmButtonText: T.default.Messages.VERIFY,
+        confirmButtonColor: r.Button.Colors.BRAND_NEW,
+        impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE
       })
     })
   };
   return (0, s.jsx)("div", {
-    className: I.buttonColumn,
-    children: (0, s.jsx)(l.Button, {
-      className: _.reportButton,
+    className: N.buttonColumn,
+    children: (0, s.jsx)(r.Button, {
+      className: g.reportButton,
       fullWidth: !0,
-      color: l.Button.Colors.BRAND_NEW,
-      hover: l.Button.Colors.BRAND_NEW,
-      onClick: () => d(),
+      color: r.Button.Colors.BRAND_NEW,
+      hover: r.Button.Colors.BRAND_NEW,
+      onClick: () => i(),
       children: t
     })
   })
 };
-var h = () => {
-  let e = (0, o.useIsUnauthenticatedReportFormEnabled)("URF - Landing Page");
-  return e && (0, s.jsxs)(d.default, {
-    children: [(0, s.jsx)(d.Title, {
-      className: _.marginBottom8,
-      children: E.default.Messages.URF_LANDING_PAGE_TITLE
-    }), (0, s.jsx)(d.SubTitle, {
-      className: _.marginBottom8,
-      children: E.default.Messages.URF_LANDING_PAGE_SUBTITLE.format({
-        supportURL: c.default.getArticleURL(f.HelpdeskArticles.COPYRIGHT_AND_IP_POLICY)
+var S = () => {
+  let e = (0, i.useStateFromStores)([I.default], () => I.default.isAuthenticated()),
+    t = (0, i.useStateFromStores)([_.default], () => _.default.hasLoadedExperiments),
+    n = (0, E.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"),
+    [l, c] = a.useState(!0);
+  return a.useEffect(() => {
+    e ? (c(!0), o.fetchCurrentUser({
+      withAnalyticsToken: !0
+    }).then(() => c(!1)).catch(() => c(!1))) : c(!1)
+  }, [e]), a.useEffect(() => {
+    !t && !n && u.default.getExperiments()
+  }, [t, n]), l ? (0, s.jsx)(p.default, {
+    children: (0, s.jsx)(r.Spinner, {})
+  }) : n && (0, s.jsxs)(p.default, {
+    children: [(0, s.jsx)(p.Title, {
+      className: g.marginBottom8,
+      children: T.default.Messages.URF_LANDING_PAGE_TITLE
+    }), (0, s.jsx)(p.SubTitle, {
+      className: g.marginBottom8,
+      children: T.default.Messages.URF_LANDING_PAGE_SUBTITLE.format({
+        supportURL: h.default.getArticleURL(m.HelpdeskArticles.COPYRIGHT_AND_IP_POLICY)
       })
     }), (0, s.jsxs)("div", {
-      className: I.container,
-      children: [(0, s.jsx)(p, {
-        title: E.default.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
-        menuType: i.UnauthenticatedReportNames.MESSAGE
-      }), (0, s.jsx)(p, {
-        title: E.default.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
-        menuType: i.UnauthenticatedReportNames.USER
+      className: N.container,
+      children: [(0, s.jsx)(A, {
+        title: T.default.Messages.URF_LANDING_PAGE_REPORT_MESSAGE_BUTTON,
+        menuType: d.UnauthenticatedReportNames.MESSAGE
+      }), (0, s.jsx)(A, {
+        title: T.default.Messages.URF_LANDING_PAGE_REPORT_USER_PROFILE_BUTTON,
+        menuType: d.UnauthenticatedReportNames.USER
       })]
     })]
   })

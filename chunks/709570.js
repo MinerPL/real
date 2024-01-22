@@ -1,1 +1,1 @@
-t.exports = s("44170").EventEmitter
+e.exports = n("44170").EventEmitter

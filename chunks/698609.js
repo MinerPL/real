@@ -1,50 +1,58 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(e), a.d(e, {
   useSafetyHubClassification: function() {
-    return c
+    return o
   },
   useActiveSafetyHubClassifications: function() {
     return d
   },
   useExpiredSafetyHubClassifications: function() {
-    return f
+    return _
+  },
+  useSafetyHubAppealSignal: function() {
+    return S
   }
 });
-var i = n("884691"),
-  l = n("446674"),
-  r = n("299039"),
-  a = n("781324"),
-  o = n("647149"),
-  s = n("646356");
+var n = a("884691"),
+  i = a("446674"),
+  s = a("299039"),
+  l = a("781324"),
+  r = a("647149"),
+  u = a("646356");
 
-function u() {
-  let e = (0, l.useStateFromStoresArray)([s.default], () => s.default.getClassifications());
-  return e.sort((e, t) => r.default.extractTimestamp(t.id) - r.default.extractTimestamp(e.id))
+function c() {
+  let t = (0, i.useStateFromStoresArray)([u.default], () => u.default.getClassifications());
+  return t.sort((t, e) => s.default.extractTimestamp(e.id) - s.default.extractTimestamp(t.id))
 }
 
-function c(e) {
-  let t = (0, l.useStateFromStores)([s.default], () => s.default.getClassification(e)),
-    n = (0, l.useStateFromStores)([s.default], () => s.default.getClassificationRequestState(e)),
-    r = (0, l.useStateFromStores)([s.default], () => s.default.getIsDsaEligible()),
-    u = (0, o.useIsInappAppealIngestionEnabled)();
-  return i.useEffect(() => {
-    void 0 === t && null == n && a.getSafetyHubDataForClassification(e)
-  }, [e, t, n]), {
-    classification: t,
-    classificationRequestState: n,
-    isDsaEligible: r,
-    isAppealEligible: u && r && null != t && null == t.appeal_status
+function o(t) {
+  let e = (0, i.useStateFromStores)([u.default], () => u.default.getClassification(t)),
+    a = (0, i.useStateFromStores)([u.default], () => u.default.getClassificationRequestState(t)),
+    s = (0, i.useStateFromStores)([u.default], () => u.default.getIsDsaEligible()),
+    c = (0, r.useIsInappAppealIngestionEnabled)();
+  return n.useEffect(() => {
+    void 0 === e && null == a && l.getSafetyHubDataForClassification(t)
+  }, [t, e, a]), {
+    classification: e,
+    classificationRequestState: a,
+    isDsaEligible: s,
+    isAppealEligible: c && s && null != e && null == e.appeal_status
   }
 }
 
 function d() {
-  let e = u(),
-    t = new Date;
-  return e.filter(e => new Date(e.max_expiration_time) > t)
+  let t = c(),
+    e = new Date;
+  return t.filter(t => new Date(t.max_expiration_time) > e)
 }
 
-function f() {
-  let e = u(),
-    t = new Date;
-  return e.filter(e => new Date(e.max_expiration_time) <= t)
+function _() {
+  let t = c(),
+    e = new Date;
+  return t.filter(t => new Date(t.max_expiration_time) <= e)
+}
+
+function S() {
+  let t = (0, i.useStateFromStores)([u.default], () => u.default.getAppealSignal());
+  return t
 }

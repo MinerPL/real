@@ -1,35 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return f
   }
 });
 var s = n("37983"),
   a = n("884691"),
-  l = n("66945"),
-  i = n("247982"),
-  r = n("396856"),
-  o = n("549077"),
-  u = n("809168"),
-  d = a.memo(function(e) {
+  l = n("921450"),
+  i = n("66945"),
+  r = n("247982"),
+  o = n("396856"),
+  u = n("549077"),
+  d = n("809168"),
+  c = n("321933"),
+  f = a.memo(function(e) {
     let {
       channel: t,
       narrow: n
-    } = e, a = (0, r.default)(t), {
-      canRenderNotice: d,
-      recordNoticeRender: c
-    } = (0, l.default)(t);
-    return t.isArchivedLockedThread() ? (0, s.jsx)(u.ArchivedLockedThreadNotice, {
+    } = e, a = (0, o.default)(t), f = (0, l.default)(), {
+      canRenderNotice: h,
+      recordNoticeRender: C
+    } = (0, i.default)(t);
+    return t.isArchivedLockedThread() ? (0, s.jsx)(d.ArchivedLockedThreadNotice, {
       channel: t,
       narrow: n
-    }) : t.isLockedThread() ? (0, s.jsx)(u.LockedThreadNotice, {
+    }) : t.isLockedThread() ? (0, s.jsx)(d.LockedThreadNotice, {
       channel: t,
       narrow: n
-    }) : a ? (0, s.jsx)(o.default, {
+    }) : a && f.includes(c.ChatOverlays.OPT_IN_CHANNEL) ? (0, s.jsx)(u.default, {
       channel: t,
       narrow: n
-    }) : d ? (0, s.jsx)(i.default, {
+    }) : h ? (0, s.jsx)(r.default, {
       channel: t,
-      onChannelChange: c
+      onChannelChange: C
     }) : null
   })

@@ -6,103 +6,103 @@ n.r(t), n.d(t, {
 });
 var r = n("37983");
 n("884691");
-var i = n("77078"),
-  a = n("272030"),
-  o = n("838446"),
-  l = n("158534"),
+var a = n("77078"),
+  i = n("272030"),
+  l = n("838446"),
+  o = n("158534"),
   u = n("846883"),
   s = n("812204"),
   d = n("861370"),
   c = n("20209"),
-  f = n("972701"),
-  h = n("390008"),
-  p = n("41205"),
+  p = n("972701"),
+  f = n("390008"),
+  h = n("41205"),
   E = n("936947"),
-  m = n("47495"),
-  _ = n("715243"),
+  _ = n("47495"),
+  m = n("715243"),
   g = n("458574"),
-  x = n("963150"),
+  I = n("963150"),
   v = n("308798"),
   C = n("47006"),
-  O = n("878526"),
-  I = n("44141"),
+  x = n("878526"),
+  S = n("44141"),
   N = n("531674"),
-  b = n("619436"),
-  y = n("625399"),
-  P = n("731390"),
-  S = n("339876"),
-  A = n("49111"),
-  M = n("782340");
+  y = n("619436"),
+  b = n("625399"),
+  O = n("731390"),
+  A = n("339876"),
+  T = n("49111"),
+  P = n("782340");
 
-function R(e) {
+function M(e) {
   let {
     channel: t,
     onSelect: n
-  } = e, o = (0, I.default)(t), l = (0, g.default)(t), s = (0, f.useAddToFavoritesItem)(t), c = (0, f.useRemoveFromFavoritesItem)(t), _ = (0, h.default)(t), x = (0, p.default)(t), v = (0, E.default)(t), O = (0, N.default)(t), P = (0, b.default)(t), S = (0, C.default)(t), A = (0, d.default)({
+  } = e, l = (0, S.default)(t), o = (0, g.default)(t), s = (0, p.useAddToFavoritesItem)(t), c = (0, p.useRemoveFromFavoritesItem)(t), m = (0, f.default)(t), I = (0, h.default)(t), v = (0, E.default)(t), x = (0, N.default)(t), O = (0, y.default)(t), A = (0, C.default)(t), T = (0, d.default)({
     id: t.id,
-    label: M.default.Messages.COPY_ID_CHANNEL
-  }), R = (0, u.default)(t), T = (0, y.default)(t), L = (0, m.useShouldUseNewNotificationSystem)("ChannelContextFavoritesMenu");
-  return (0, r.jsxs)(i.Menu, {
+    label: P.default.Messages.COPY_ID_CHANNEL
+  }), M = (0, u.default)(t), R = (0, b.default)(t), L = (0, _.useShouldUseNewNotificationSystem)("ChannelContextFavoritesMenu");
+  return (0, r.jsxs)(a.Menu, {
     navId: "channel-context",
-    onClose: a.closeContextMenu,
-    "aria-label": M.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    onClose: i.closeContextMenu,
+    "aria-label": P.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
     onSelect: n,
-    children: [(0, r.jsx)(i.MenuGroup, {
-      children: o
-    }), (0, r.jsxs)(i.MenuGroup, {
-      children: [x, v, _, s]
-    }), (0, r.jsxs)(i.MenuGroup, {
-      children: [O, L ? T : P]
-    }), (0, r.jsx)(i.MenuGroup, {
-      children: S
-    }), (0, r.jsx)(i.MenuGroup, {
-      children: R
-    }), (0, r.jsx)(i.MenuGroup, {
-      children: c
-    }), (0, r.jsx)(i.MenuGroup, {
+    children: [(0, r.jsx)(a.MenuGroup, {
       children: l
-    }), (0, r.jsx)(i.MenuGroup, {
+    }), (0, r.jsxs)(a.MenuGroup, {
+      children: [I, v, m, s]
+    }), (0, r.jsxs)(a.MenuGroup, {
+      children: [x, L ? R : O]
+    }), (0, r.jsx)(a.MenuGroup, {
       children: A
+    }), (0, r.jsx)(a.MenuGroup, {
+      children: M
+    }), (0, r.jsx)(a.MenuGroup, {
+      children: c
+    }), (0, r.jsx)(a.MenuGroup, {
+      children: o
+    }), (0, r.jsx)(a.MenuGroup, {
+      children: T
     })]
   })
 }
 
-function T(e) {
+function R(e) {
   let {
     channel: t,
     guild: n,
-    onSelect: o
-  } = e, l = (0, I.default)(t), u = (0, g.default)(t), s = (0, f.useAddToFavoritesItem)(t), c = (0, f.useRemoveFromFavoritesItem)(t), h = (0, S.default)(t), p = (0, N.default)(t), E = (0, C.default)(t), A = (0, O.default)(t, n), R = (0, _.default)(t, n), T = (0, x.default)(t, n), L = (0, v.default)(t), U = (0, d.default)({
+    onSelect: l
+  } = e, o = (0, S.default)(t), u = (0, g.default)(t), s = (0, p.useAddToFavoritesItem)(t), c = (0, p.useRemoveFromFavoritesItem)(t), f = (0, A.default)(t), h = (0, N.default)(t), E = (0, C.default)(t), T = (0, x.default)(t, n), M = (0, m.default)(t, n), R = (0, I.default)(t, n), L = (0, v.default)(t), D = (0, d.default)({
     id: t.id,
-    label: M.default.Messages.COPY_ID_CHANNEL
-  }), F = (0, P.default)(t, "list_text_channel_context_menu"), w = (0, b.default)(t), D = (0, y.default)(t), j = (0, m.useShouldUseNewNotificationSystem)("ChannelContextMenuNormal");
-  return (0, r.jsxs)(i.Menu, {
+    label: P.default.Messages.COPY_ID_CHANNEL
+  }), U = (0, O.default)(t, "list_text_channel_context_menu"), F = (0, y.default)(t), w = (0, b.default)(t), H = (0, _.useShouldUseNewNotificationSystem)("ChannelContextMenuNormal");
+  return (0, r.jsxs)(a.Menu, {
     navId: "channel-context",
-    onClose: a.closeContextMenu,
-    "aria-label": M.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-    onSelect: o,
-    children: [(0, r.jsx)(i.MenuGroup, {
-      children: l
-    }, "mark-as-read"), (0, r.jsxs)(i.MenuGroup, {
-      children: [A, h, u, s, F]
-    }, "channel-actions"), (0, r.jsxs)(i.MenuGroup, {
-      children: [p, j ? D : w]
-    }, "notifications"), (0, r.jsxs)(i.MenuGroup, {
-      children: [E, R, T, L]
-    }, "admin-actions"), (0, r.jsx)(i.MenuGroup, {
+    onClose: i.closeContextMenu,
+    "aria-label": P.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    onSelect: l,
+    children: [(0, r.jsxs)(a.MenuGroup, {
+      children: [o, s]
+    }, "mark-as-read-or-favorite"), (0, r.jsxs)(a.MenuGroup, {
+      children: [T, f, u, U]
+    }, "channel-actions"), (0, r.jsxs)(a.MenuGroup, {
+      children: [h, H ? w : F]
+    }, "notifications"), (0, r.jsxs)(a.MenuGroup, {
+      children: [E, M, R, L]
+    }, "admin-actions"), (0, r.jsx)(a.MenuGroup, {
       children: c
-    }), (0, r.jsx)(i.MenuGroup, {
-      children: U
+    }), (0, r.jsx)(a.MenuGroup, {
+      children: D
     }, "developer-actions")]
   })
 }
-var L = (0, l.default)((0, o.default)(function(e) {
+var L = (0, o.default)((0, l.default)(function(e) {
   let t = (0, c.default)();
-  return t ? (0, r.jsx)(R, {
+  return t ? (0, r.jsx)(M, {
     ...e
-  }) : (0, r.jsx)(T, {
+  }) : (0, r.jsx)(R, {
     ...e
   })
 }, {
-  object: A.AnalyticsObjects.CONTEXT_MENU
+  object: T.AnalyticsObjects.CONTEXT_MENU
 }), [s.default.CONTEXT_MENU, s.default.CHANNEL_LIST_TEXT_CHANNEL_MENU])

@@ -21,7 +21,7 @@ function f() {
 }
 
 function h() {
-  !__OVERLAY__ && (clearTimeout(d), d = setTimeout(() => E(), c))
+  !__OVERLAY__ && (clearTimeout(d), d = setTimeout(() => _({}), c))
 }
 async function E(e, t) {
   null == e || e === o.ME ? await i.default.patch({

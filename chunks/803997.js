@@ -70,7 +70,7 @@ function I(e) {
       onClick: T,
       label: A,
       "aria-label": M.join(", "),
-      tooltipPosition: "bottom",
+      tooltipPosition: "top",
       iconComponent: h.default,
       themeable: !0,
       className: i(_.circularButton, R === C.FocusedActivityLayouts.NO_CHAT ? _.upArrow : _.downArrow),

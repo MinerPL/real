@@ -32,7 +32,7 @@ function h(e) {
     }
   }), m = (0, r.useIsActivitiesInTextEnabled)(n, "ActivityPanelUI"), E = (0, i.default)(n);
   if (l.useEffect(() => {
-      null == n && null != E ? (0, o.updateActivityPanelMode)(f.ActivityPanelModes.ACTION_BAR) : null != n && null == E && (0, o.updateFocusedActivityLayout)(f.FocusedActivityLayouts.NO_CHAT)
+      null == n && null != E ? (0, o.updateActivityPanelMode)(f.ActivityPanelModes.ACTION_BAR) : null != n && null == E && (0, o.updateFocusedActivityLayout)(f.FocusedActivityLayouts.RESIZABLE)
     }, [n, E]), !m) return null;
   let C = null == h ? void 0 : h.applicationId;
   return p !== f.ActivityPanelModes.PANEL || null == C ? null : null == n || null == h || (0, d.default)(n) || null == C ? null : (0, a.jsx)(c.default, {

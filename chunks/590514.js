@@ -27,8 +27,8 @@ var a = n("37983"),
   E = n("510889"),
   m = n("699473"),
   p = n("393414"),
-  S = n("161778"),
-  g = n("42203"),
+  g = n("161778"),
+  S = n("42203"),
   N = n("377253"),
   _ = n("957255"),
   T = n("600133"),
@@ -156,7 +156,7 @@ function F(e) {
     renderHeader: h,
     renderEmptyState: m,
     renderItem: p,
-    getProTip: g,
+    getProTip: S,
     scrollerClassName: N,
     className: _,
     listName: A
@@ -194,7 +194,7 @@ function F(e) {
     className: i(L.emptyPlaceholder, L.loadingPlaceholder),
     children: (0, a.jsx)(c.Spinner, {})
   }, "spinner")] : 0 === n.length ? U.push((0, a.jsx)(l.Fragment, {
-    children: m(S.default.theme)
+    children: m(g.default.theme)
   }, "empty-state")) : (k = !1, U = [], o.each(n, e => {
     U.push(...p(e))
   }));
@@ -213,15 +213,16 @@ function F(e) {
     })
   }) : (0, a.jsx)("div", {
     className: L.scrollingFooterWrap,
-    children: m(S.default.theme)
+    children: m(g.default.theme)
   }));
-  let w = null == g ? void 0 : g(),
+  let w = null == S ? void 0 : S(),
     G = k && null != w ? (0, a.jsx)("div", {
       className: L.footer,
       children: (0, a.jsx)(C.default, {
         style: {
           width: "100%",
-          paddingTop: 10
+          paddingTop: 10,
+          paddingBottom: 10
         },
         children: w
       })
@@ -275,7 +276,7 @@ function U(e) {
     loadMore: u,
     onJump: c,
     canCloseAllMessages: E = !1,
-    renderHeader: S,
+    renderHeader: g,
     renderEmptyState: _,
     renderMessage: T,
     getProTip: I,
@@ -303,7 +304,7 @@ function U(e) {
       confirmText: R.default.Messages.OKAY
     });
     else if (!O) {
-      let e = g.default.getChannel(i);
+      let e = S.default.getChannel(i);
       null != e && (h.default.trackJump(i, a, t), (0, p.transitionTo)(x.Routes.CHANNEL(e.getGuildId(), i, a))), null == c || c(n)
     }
   }
@@ -321,7 +322,7 @@ function U(e) {
     loading: o,
     analyticsName: t,
     renderEmptyState: _,
-    renderHeader: S,
+    renderHeader: g,
     hasMore: r,
     loadMore: u,
     getProTip: I,

@@ -1,84 +1,75 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildRoleSubscriptionCardTierName: function() {
-    return h
+    return f
   },
   GuildRoleSubscriptionCardTierImage: function() {
-    return p
-  },
-  GuildRoleSubscriptionCardDraftTierBadge: function() {
-    return m
+    return h
   },
   GuildRoleSubscriptionCardBasicInfo: function() {
-    return E
+    return p
   }
 }), n("222007");
 var a = n("37983");
 n("884691");
-var l = n("669491"),
-  s = n("77078"),
-  i = n("956089"),
-  r = n("153160"),
-  o = n("577357"),
-  u = n("167109"),
-  d = n("373622"),
-  c = n("782340"),
-  f = n("118338");
-let h = e => {
+var l = n("77078"),
+  s = n("944371"),
+  i = n("153160"),
+  r = n("577357"),
+  o = n("167109"),
+  u = n("373622"),
+  d = n("782340"),
+  c = n("118338");
+let f = e => {
   let {
     listingName: t
   } = e;
-  return (0, a.jsx)(s.Heading, {
+  return (0, a.jsx)(l.Heading, {
     variant: "text-md/normal",
     color: "interactive-active",
-    className: f.tierName,
+    className: c.tierName,
     children: t
   })
 };
 
-function p(e) {
+function h(e) {
   let {
     image: t
   } = e;
   return null == t ? null : (0, a.jsx)("img", {
     src: t,
     alt: "",
-    className: f.tierImage
+    className: c.tierImage
   })
 }
-let m = () => (0, a.jsx)(i.TextBadge, {
-    color: l.default.unsafe_rawColors.YELLOW_300.css,
-    text: c.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_MANAGEMENT_DRAFT_LABEL,
-    className: f.draftBadge
-  }),
-  E = e => {
-    let {
-      listingId: t,
-      isListingPublished: n
-    } = e, l = (0, d.default)(), [i] = u.useName(t), [E] = u.useImage(t, l), [C] = u.useSubscriptionPlan(t);
-    return (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(h, {
-        listingName: i
-      }), (0, a.jsx)(p, {
-        image: E
-      }), !n && (0, a.jsx)("div", {
-        className: f.draftBadgeContainer,
-        children: (0, a.jsx)(m, {})
-      }), (0, a.jsx)(s.Text, {
-        variant: "heading-xl/semibold",
-        className: f.tierPrice,
-        tag: "div",
-        children: (0, r.formatPrice)(C.price, C.currency)
-      }), (0, a.jsx)(s.Text, {
-        variant: "text-xs/normal",
-        color: "interactive-normal",
-        className: f.tierPeriod,
-        children: c.default.Messages.GUILD_ROLE_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
-          period: (0, o.formatPlanInterval)({
-            interval: C.interval,
-            interval_count: C.interval_count
-          })
+let p = e => {
+  let {
+    listingId: t,
+    isListingPublished: n
+  } = e, p = (0, u.default)(), [m] = o.useName(t), [E] = o.useImage(t, p), [C] = o.useSubscriptionPlan(t);
+  return (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(f, {
+      listingName: m
+    }), (0, a.jsx)(h, {
+      image: E
+    }), !n && (0, a.jsx)("div", {
+      className: c.draftBadgeContainer,
+      children: (0, a.jsx)(s.MonetizationListingDraftBadge, {})
+    }), (0, a.jsx)(l.Text, {
+      variant: "heading-xl/semibold",
+      className: c.tierPrice,
+      tag: "div",
+      children: (0, i.formatPrice)(C.price, C.currency)
+    }), (0, a.jsx)(l.Text, {
+      variant: "text-xs/normal",
+      color: "interactive-normal",
+      className: c.tierPeriod,
+      children: d.default.Messages.GUILD_ROLE_SUBSCRIPTION_AMOUNT_PER_PERIOD.format({
+        period: (0, r.formatPlanInterval)({
+          interval: C.interval,
+          interval_count: C.interval_count
         })
-      })]
-    })
-  }
+      })
+    })]
+  })
+}

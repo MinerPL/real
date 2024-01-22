@@ -73,7 +73,7 @@ async function I(e, t, n) {
     } = t;
     throw new E.default(_.RPCErrors.OAUTH2_ERROR, "OAuth2 Authorize Error: ".concat(e.message || "Unknown Error"))
   }
-  null == n || n(a.application);
+  null == n || n(a.application, m);
   let R = f.default.NONE;
   try {
     R = s.default.deserialize(null != T ? T : 0)

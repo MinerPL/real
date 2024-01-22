@@ -43,11 +43,11 @@ var s = n("77078"),
         onCloseRequest: () => {
           (0, s.closeModal)(I), T(void 0)
         }
-      }, (0, i.default)(t.application) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
+      }, (0, i.default)(t.application, _) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
     })
-  }, function(e) {
+  }, function(e, t) {
     if (r.isPlatformEmbedded) {
-      let t = (0, i.default)(e) ? d.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
-      (0, r.isWindows)() ? o.default.minimize(t): o.default.restore(t), o.default.focus(t)
+      let n = (0, i.default)(e, t) ? d.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
+      (0, r.isWindows)() ? o.default.minimize(n): o.default.restore(n), o.default.focus(n)
     }
   })

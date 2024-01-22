@@ -42,10 +42,10 @@ var l = n("77078"),
       onClose: i.closeContextMenu,
       "aria-label": I.default.Messages.THREAD_ACTIONS_MENU_LABEL,
       onSelect: n,
-      children: [(0, a.jsx)(l.MenuGroup, {
-        children: r
-      }, "mark-as-read"), (0, a.jsxs)(l.MenuGroup, {
-        children: [L, b, p, O, y, D, u, H]
+      children: [(0, a.jsxs)(l.MenuGroup, {
+        children: [r, H]
+      }, "mark-as-read-or-favorite"), (0, a.jsxs)(l.MenuGroup, {
+        children: [L, b, p, O, y, D, u]
       }, "thread-actions"), (0, a.jsxs)(l.MenuGroup, {
         children: [v, G]
       }, "notifications"), (0, a.jsx)(l.MenuGroup, {

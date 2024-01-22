@@ -77,34 +77,14 @@ function j(e) {
       maxHeight: n,
       height: b
     } : void 0,
-    children: [(0, a.jsxs)("div", {
+    children: [P ? null : (0, a.jsx)("div", {
       className: M.header,
-      children: [(0, a.jsx)("div", {
-        className: M.arrowContainer,
-        children: (0, a.jsx)(f.default, {
-          label: A.default.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
-          onClick: L,
-          className: M.circularButton,
-          iconComponent: m.default,
-          iconClassName: M.minimizeIcon,
-          themeable: !0
-        })
-      }), (0, a.jsx)(o.Text, {
+      children: (0, a.jsx)(o.Text, {
         color: "header-primary",
         variant: "text-md/semibold",
         className: M.headerTitle,
         children: null == j ? void 0 : j.name
-      }), (0, a.jsx)("div", {
-        className: M.leaveButtonContainer,
-        children: (0, a.jsx)(h.default, {
-          applicationId: j.id,
-          channelId: s,
-          className: M.leaveActivityButton,
-          iconClassName: M.leaveActivityIcon,
-          centerButton: !0,
-          color: "red"
-        })
-      })]
+      })
     }), (0, a.jsx)("div", {
       className: M.activityContainer,
       style: {
@@ -118,11 +98,28 @@ function j(e) {
         className: M.iframe,
         embedId: (0, T.default)(s, j.id)
       })
-    }), null != z ? (0, a.jsx)("div", {
+    }), null != z ? (0, a.jsxs)("div", {
       className: M.footer,
-      children: (0, a.jsx)(v.default, {
+      children: [(0, a.jsx)(v.default, {
         channelId: z
-      })
+      }), (0, a.jsx)("div", {
+        className: M.leaveButtonContainer,
+        children: (0, a.jsx)(h.default, {
+          applicationId: j.id,
+          channelId: s,
+          className: M.leaveActivityButton,
+          iconClassName: M.leaveActivityIcon,
+          centerButton: !0,
+          color: "red"
+        })
+      }), (0, a.jsx)(f.default, {
+        label: A.default.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
+        onClick: L,
+        className: M.circularButton,
+        iconComponent: m.default,
+        iconClassName: M.minimizeIcon,
+        themeable: !0
+      })]
     }) : null, P ? (0, a.jsx)(d.default, {
       minHeight: 480,
       maxHeight: n,

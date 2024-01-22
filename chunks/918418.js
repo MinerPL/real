@@ -1,64 +1,69 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return m
   }
 }), n("222007");
 var a = n("37983"),
   l = n("884691"),
   r = n("77078"),
-  s = n("782340"),
-  i = n("45853"),
-  d = n("926622");
-let u = e => {
+  s = n("367376"),
+  i = n("442791"),
+  d = n("782340"),
+  u = n("45853"),
+  o = n("926622");
+let c = e => {
   let {
     data: {
       title: t,
       subtitle: n,
-      placeholder: u,
-      rows: o,
-      character_limit: c,
-      pattern: m
+      placeholder: c,
+      rows: m,
+      character_limit: f,
+      pattern: _
     },
-    onChange: f,
-    initialText: _,
-    isRequired: h
-  } = e, [E, v] = l.useState(""), [R, x] = l.useState("");
+    onChange: h,
+    initialText: E,
+    isRequired: v
+  } = e, R = l.useRef(s.default.reactParserFor({
+    ...s.default.defaultRules,
+    link: i.LinkMarkupRule
+  })), [x, p] = l.useState(""), [g, N] = l.useState("");
   l.useEffect(() => {
-    v(null != _ ? _ : "")
-  }, [_]);
-  let p = l.useCallback(e => {
-    let t = null != m ? new RegExp(m) : null;
-    null != t && null == t.exec(e) ? (x(s.default.Messages.IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR), v(""), f("")) : null != e && (x(""), v(e), f(e))
-  }, [f, m]);
+    p(null != E ? E : "")
+  }, [E]);
+  let T = l.useCallback(e => {
+    let t = null != _ ? new RegExp(_) : null;
+    null != t && null == t.exec(e) ? (N(d.default.Messages.IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR), p(""), h("")) : null != e && (N(""), p(e), h(e))
+  }, [h, _]);
   return (0, a.jsxs)("div", {
-    className: d.marginBottom8,
+    className: o.marginBottom8,
     children: [null != t && (0, a.jsx)("div", {
-      className: d.marginBottom8,
+      className: o.marginBottom8,
       children: (0, a.jsxs)(r.Text, {
         variant: "text-sm/bold",
-        children: [t, h && (0, a.jsx)("span", {
-          className: i.required,
+        children: [t, v && (0, a.jsx)("span", {
+          className: u.required,
           children: "*"
         })]
       })
     }), (0, a.jsx)(r.TextArea, {
-      maxLength: c,
-      onChange: p,
-      value: E,
-      error: R,
-      rows: o,
-      placeholder: u,
+      maxLength: f,
+      onChange: T,
+      value: x,
+      error: g,
+      rows: m,
+      placeholder: c,
       autoFocus: !0
     }), null != n && (0, a.jsx)("div", {
       children: (0, a.jsx)(r.Text, {
         variant: "text-sm/normal",
-        children: n
+        children: R.current(n)
       })
     })]
   })
 };
-var o = e => {
+var m = e => {
   let {
     elements: t,
     onChange: n,
@@ -66,7 +71,7 @@ var o = e => {
   } = e, r = t.map(e => {
     var t;
     let r = e.name;
-    return (0, a.jsx)(u, {
+    return (0, a.jsx)(c, {
       data: e.data,
       onChange: e => n(r, e),
       initialText: null !== (t = null == l ? void 0 : l[r]) && void 0 !== t ? t : void 0,

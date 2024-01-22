@@ -1,2 +1,2 @@
 "use strict";
-I.exports = {}
+N.exports = {}

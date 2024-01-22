@@ -3,14 +3,17 @@ n.r(t), n.d(t, {
   handlePollGifAttachmentAdd: function() {
     return o
   },
-  removePollUploadAttachment: function() {
+  handlePollMediaAttachmentAdd: function() {
     return u
   },
-  removeAllPollUploadAttachments: function() {
+  removePollUploadAttachment: function() {
     return d
   },
-  sendPollMessageWithAttachments: function() {
+  removeAllPollUploadAttachments: function() {
     return c
+  },
+  sendPollMessageWithAttachments: function() {
+    return f
   }
 });
 var s = n("81594"),
@@ -19,31 +22,35 @@ var s = n("81594"),
   i = n("474643"),
   r = n("314743");
 async function o(e, t, n) {
-  let l = (0, r.getFileNameFromGifUrl)(t, n),
-    o = await fetch(n),
-    u = await o.blob(),
-    d = new File([u], l, {
+  let s = (0, r.getFileNameFromGifUrl)(t, n),
+    l = await fetch(n),
+    a = await l.blob(),
+    i = new File([a], s, {
       type: "image/gif"
-    }),
-    c = {
-      id: t,
-      channelId: e,
-      file: d,
-      platform: a.UploadPlatform.WEB
-    };
-  return s.default.addFile({
-    file: c,
+    });
+  return u(e, t, i), n
+}
+
+function u(e, t, n) {
+  let l = {
+    id: t,
+    channelId: e,
+    file: n,
+    platform: a.UploadPlatform.WEB
+  };
+  s.default.addFile({
+    file: l,
     channelId: e,
     draftType: i.DraftType.Poll
-  }), n
+  })
 }
-async function u(e, t, n) {
+async function d(e, t, n) {
   s.default.remove(e, t, i.DraftType.Poll)
 }
-async function d(e) {
+async function c(e) {
   s.default.clearAll(e, i.DraftType.Poll)
 }
-async function c(e) {
+async function f(e) {
   let {
     channel: t,
     items: n,

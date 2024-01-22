@@ -69,7 +69,7 @@ function _(e) {
 var N = e => {
   let {
     channel: t,
-    activity: n,
+    presenceActivity: n,
     members: a,
     embeddedApp: s,
     onAction: r

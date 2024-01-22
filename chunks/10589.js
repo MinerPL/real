@@ -25,9 +25,7 @@ function S(e) {
     productId: s
   } = e, {
     listingsLoaded: r
-  } = (0, c.useFetchGuildProductListingsForGuild)(t), n = (0, c.useGuildProductsForGuild)(t, {
-    publishedOnly: !0
-  }), S = i.useRef(null), {
+  } = (0, c.useFetchGuildProductListingsForGuild)(t), n = (0, c.useGuildProductsForGuild)(t), S = i.useRef(null), {
     sortOption: x
   } = (0, _.useGuildProductsSortOptionContext)(), I = i.useMemo(() => (function(e, t) {
     let s, l;
