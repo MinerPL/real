@@ -16528,6 +16528,5 @@ e.exports = Object.freeze({
   FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE: "Prompt members to chat after this channel has been inactive for a while.",
   PROMPT_CAMERA_LOADING_TITLE: "What are you looking at?",
   PROMPT_CAMERA_ERROR: "There was an issue taking a photo, try again",
-  DEADCHAT_ACTION_CAMERA: "My View",
-  DEADCHAT_ACTION_STICKER: "Surprise Me"
+  DEADCHAT_ACTION_CAMERA: "My View"
 })
