@@ -84649,7 +84649,8 @@ html .tabBadge__002b3 {
 
 .categoryLogo__1444c {
     z-index: 1;
-    max-height: 96px
+    max-height: 96px;
+    max-width: 80%
 }
 
 .discordLogo_efcf47 {
@@ -85324,6 +85325,18 @@ html .tabBadge__002b3 {
 @media(max-width:1e3px) {
     .heroDescriptionWithSidebar_c1ef6c>* {
         margin-left: 16px
+    }
+}
+
+@media(max-width:720px) {
+    .heroDescription__31612>* {
+        font-size: 16px;
+        line-height: 24px
+    }
+
+    .heroDescription__31612>h2 {
+        font-size: 34px;
+        line-height: 1.0588235294117647
     }
 }
 
@@ -108822,6 +108835,15 @@ html .invoiceCancelRow_a8669b {
     margin-bottom: 0
 }
 
+.advanceSettingTitle__50465 {
+    display: inline-flex;
+    align-items: center
+}
+
+.settingTitleIcon__6f523 {
+    margin-left: 8px
+}
+
 .input_b45823 {
     margin-top: 12px
 }
@@ -108928,6 +108950,23 @@ html .invoiceCancelRow_a8669b {
     display: flex
 }
 
+.segmentedControlsContainer__70e91 {
+    padding: 16px
+}
+
+.presetSeparator__13306 {
+    height: 1px;
+    background-color: var(--modal-background)
+}
+
+.segmentedControl_b02584 {
+    padding: 4px
+}
+
+.customPresetsContainer__88e36 {
+    padding: 24px
+}
+
 .input_ee086a {
     min-width: 240px
 }
@@ -108940,9 +108979,12 @@ html .invoiceCancelRow_a8669b {
     display: grid;
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr 1fr;
-    margin-top: 24px;
     grid-gap: 24px;
     gap: 24px
+}
+
+.grid__6d90a:not(:first-child) {
+    margin-top: 16px
 }
 
 .item__77e2c {
@@ -109075,7 +109117,10 @@ html .invoiceCancelRow_a8669b {
 .sectionContent_fb280b {
     background-color: var(--bg-base-secondary);
     margin-bottom: 24px;
-    border-radius: 12px;
+    border-radius: 12px
+}
+
+.sectionContentPadding_f7178e {
     padding: 16px
 }
 

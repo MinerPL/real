@@ -1,91 +1,96 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return S
+    return m
   }
 });
 var i = s("37983"),
   l = s("884691"),
-  a = s("77078"),
-  n = s("660279"),
-  r = s("149943"),
-  d = s("784905"),
-  o = s("489618"),
-  u = s("205382"),
-  c = s("782340"),
-  h = s("551040");
+  a = s("414456"),
+  n = s.n(a),
+  r = s("77078"),
+  d = s("660279"),
+  o = s("149943"),
+  u = s("784905"),
+  c = s("489618"),
+  h = s("205382"),
+  N = s("782340"),
+  f = s("551040");
 
-function f(e) {
+function g(e) {
   return (0, i.jsx)("div", {
-    className: h.sectionHeader,
-    children: (0, i.jsx)(a.Heading, {
+    className: f.sectionHeader,
+    children: (0, i.jsx)(r.Heading, {
       variant: "text-xs/bold",
-      className: h.sectionHeaderTitle,
+      className: f.sectionHeaderTitle,
       color: "text-muted",
       children: e.title
     })
   })
 }
 
-function N(e) {
+function S(e) {
   return (0, i.jsxs)("div", {
-    children: [null != e.title && (0, i.jsx)(f, {
+    children: [null != e.title && (0, i.jsx)(g, {
       title: e.title
     }), (0, i.jsx)("div", {
-      className: h.sectionContent,
+      className: n(f.sectionContent, {
+        [f.sectionContentPadding]: !0 !== e.noPadding
+      }),
       children: e.children
     })]
   })
 }
 
-function g(e) {
+function E(e) {
   let {
     onClose: t
   } = e;
-  return (0, i.jsxs)(a.ModalHeader, {
-    className: h.header,
+  return (0, i.jsxs)(r.ModalHeader, {
+    className: f.header,
     children: [(0, i.jsxs)("div", {
-      className: h.headerLeft,
-      children: [(0, i.jsx)(n.default, {
-        className: h.headerBell
-      }), (0, i.jsx)(a.Heading, {
+      className: f.headerLeft,
+      children: [(0, i.jsx)(d.default, {
+        className: f.headerBell
+      }), (0, i.jsx)(r.Heading, {
         variant: "heading-lg/semibold",
-        children: c.default.Messages.NOTIFICATION_SETTINGS
+        children: N.default.Messages.NOTIFICATION_SETTINGS
       })]
-    }), (0, i.jsx)(a.ModalCloseButton, {
+    }), (0, i.jsx)(r.ModalCloseButton, {
       onClick: t
     })]
   })
 }
 
-function S(e) {
+function m(e) {
   let t = l.useRef(null);
-  return (0, i.jsxs)(a.ModalRoot, {
-    size: a.ModalSize.MEDIUM,
+  return (0, i.jsxs)(r.ModalRoot, {
+    size: r.ModalSize.MEDIUM,
     transitionState: e.transitionState,
-    "aria-label": c.default.Messages.NOTIFICATION_SETTINGS,
-    children: [(0, i.jsx)(g, {
+    "aria-label": N.default.Messages.NOTIFICATION_SETTINGS,
+    children: [(0, i.jsx)(E, {
       onClose: e.onClose
-    }), (0, i.jsxs)(a.ModalContent, {
-      className: h.content,
+    }), (0, i.jsxs)(r.ModalContent, {
+      className: f.content,
       scrollerRef: t,
-      children: [(0, i.jsx)(N, {
+      children: [(0, i.jsx)(S, {
+        children: (0, i.jsx)(c.default, {
+          guildId: e.guildId
+        })
+      }), (0, i.jsx)(S, {
+        title: N.default.Messages.NOTIFICATION_SETTINGS_PRESETS,
+        noPadding: !0,
+        children: (0, i.jsx)(h.default, {
+          guildId: e.guildId
+        })
+      }), (0, i.jsx)(S, {
+        title: N.default.Messages.NOTIFICATION_SETTINGS_ADVANCED,
         children: (0, i.jsx)(o.default, {
           guildId: e.guildId
         })
-      }), (0, i.jsx)(N, {
-        title: c.default.Messages.NOTIFICATION_SETTINGS_PRESETS,
-        children: (0, i.jsx)(u.default, {
-          guildId: e.guildId
-        })
-      }), (0, i.jsx)(N, {
-        title: c.default.Messages.NOTIFICATION_SETTINGS_ADVANCED,
-        children: (0, i.jsx)(r.default, {
-          guildId: e.guildId
-        })
-      }), (0, i.jsx)(f, {
-        title: c.default.Messages.CHANNEL_NOTIFICATION_OVERRIDES
-      }), (0, i.jsx)(d.default, {
+      }), (0, i.jsx)(g, {
+        title: N.default.Messages.CHANNEL_NOTIFICATION_OVERRIDES
+      }), (0, i.jsx)(u.default, {
         guildId: e.guildId,
         requestScrollToBottom: () => {
           null != t && null != t.current && t.current.scrollToBottom({

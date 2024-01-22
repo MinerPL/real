@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return d
+    return u
   }
 });
 var n = l("37983");
@@ -11,8 +11,9 @@ var r = l("414456"),
   s = l("746379"),
   a = l.n(s),
   o = l("590787");
+let d = RegExp("^music\\.amazon\\.(?:com|co\\.uk|de|co\\.jp|es|fr|it|com\\.au|in|ca|com\\.mx|com\\.br)");
 
-function d(e) {
+function u(e) {
   let {
     className: t,
     embed: {
@@ -22,24 +23,24 @@ function d(e) {
   } = e;
   if (null == l || null == r) return null;
   let s = null,
-    d = null;
+    u = null;
   try {
     let e = a.parse(l, !0);
-    s = e.host, d = e.pathname
+    s = e.host, u = e.pathname
   } catch (e) {
     return null
   }
-  if ("music.amazon.com" !== s || null == d) return null;
+  if (!d.test(null != s ? s : "") || null == u) return null;
   let {
-    width: u,
-    height: c
+    width: c,
+    height: m
   } = r;
   return (0, n.jsx)("iframe", {
     className: i(o.embedAmazonMusic, t),
     src: l,
     style: {
-      width: Math.min(u, 500),
-      height: Math.min(c, 400)
+      width: Math.min(c, 500),
+      height: Math.min(m, 400)
     },
     frameBorder: 0,
     sandbox: "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"

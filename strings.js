@@ -2418,9 +2418,9 @@ e.exports = Object.freeze({
   NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY: "Mention Only",
   NOTIFICATION_SETTINGS_PRESETS_NONE: "None",
   NOTIFICATION_SETTINGS_PRESETS_UNREAD_TITLE: "Unread Badges",
-  NOTIFICATION_SETTINGS_PRESETS_UNREAD_SUBTITLE: "Choose when you see a full unread badge next to the channel.",
+  NOTIFICATION_SETTINGS_PRESETS_UNREAD_SUBTITLE: "Highlighted channel name and half dot",
   NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_TITLE: "Notifications",
-  NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_SUBTITLE: "Choose when you receive a notification from this server.",
+  NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_SUBTITLE: "Push notification and ping sound",
   NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_CHANNEL_SUBTITLE: "Choose when you receive a notification from this channel.",
   NOTIFICATION_SETTINGS_CUSTOMIZE: "Customize",
   NOTIFICATION_SETTINGS_PRESETS_UNREAD_CHANNEL_1: "announcements",
@@ -16528,5 +16528,6 @@ e.exports = Object.freeze({
   FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE: "Prompt members to chat after this channel has been inactive for a while.",
   PROMPT_CAMERA_LOADING_TITLE: "What are you looking at?",
   PROMPT_CAMERA_ERROR: "There was an issue taking a photo, try again",
-  DEADCHAT_ACTION_CAMERA: "My View"
+  DEADCHAT_ACTION_CAMERA: "My View",
+  DEADCHAT_ACTION_STICKER: "Surprise Me"
 })

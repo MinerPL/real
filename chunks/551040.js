@@ -5,6 +5,7 @@ e.exports = {
   headerBell: "headerBell_a9f96c",
   headerLeft: "headerLeft__810aa",
   sectionContent: "sectionContent_fb280b",
+  sectionContentPadding: "sectionContentPadding_f7178e",
   sectionHeader: "sectionHeader_fe8db6",
   sectionHeaderTitle: "sectionHeaderTitle__0489c"
 }
