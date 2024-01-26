@@ -47,7 +47,7 @@ i = class e extends l.default {
     let r = s.createReplayConnection("default", (e, n) => {
       let r = null != s.getCodecCapabilities ? s.getCodecCapabilities : s.getSupportedVideoCodecs;
       i.on(c.BaseConnectionEvent.Stats, i.handleStats), i.conn.setOnVideoCallback(i.handleVideo), r(e => {
-        let n = (0, f.getExperimentCodecs)(i.experimentFlags);
+        let n = (0, f.getExperimentCodecs)(i.experimentFlags, p.MediaEngineContextTypes.DEFAULT);
         i.codecs = [{
           type: "audio",
           name: p.Codecs.OPUS,
@@ -95,7 +95,7 @@ i = class e extends l.default {
         port: l
       } = r;
       this.logger.info("Connected with local address ".concat(o, ":").concat(l, " and protocol: ").concat(a)), i(i => {
-        let s = (0, f.getExperimentCodecs)(this.experimentFlags);
+        let s = (0, f.getExperimentCodecs)(this.experimentFlags, this.context);
         this.codecs = [{
           type: "audio",
           name: p.Codecs.OPUS,
@@ -234,7 +234,8 @@ i = class e extends l.default {
   }
   setClipsKeyFrameInterval(e) {
     this.context === p.MediaEngineContextTypes.STREAM && (this.clipsKeyFrameInterval = e, this.conn.setTransportOptions({
-      keyframeInterval: this.getKeyFrameInterval()
+      keyframeInterval: this.getKeyFrameInterval(),
+      alwaysSendVideo: this.keyframeInterval > 0
     }))
   }
   setViewerSideClip(e) {
@@ -369,7 +370,8 @@ i = class e extends l.default {
   }
   setKeyframeInterval(e) {
     this.keyframeInterval = e, this.conn.setTransportOptions({
-      keyframeInterval: this.getKeyFrameInterval()
+      keyframeInterval: this.getKeyFrameInterval(),
+      alwaysSendVideo: this.keyframeInterval > 0
     })
   }
   setVideoQualityMeasurement(e) {

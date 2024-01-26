@@ -7,6 +7,5 @@ e.exports = {
   roleLabel: "roleLabel__2aaf3",
   roleNameContainer: "roleNameContainer__10853",
   rolePopout: "rolePopout_da0123",
-  selected: "selected_a67006",
-  spacer: "spacer__940cc"
+  selected: "selected_a67006"
 }

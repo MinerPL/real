@@ -131,21 +131,28 @@ var R = {
         token: r
       })
     }, e => {
-      var t;
-      let s = null === (t = e.body) || void 0 === t ? void 0 : t.code;
-      s === T.AbortCodes.ACCOUNT_SCHEDULED_FOR_DELETION && null != i && "" !== i ? d.default.dispatch({
+      var t, s, r;
+      if (null != e.body && (null === (t = e.body) || void 0 === t ? void 0 : t.suspended_user_token) != null) {
+        d.default.dispatch({
+          type: "LOGIN_SUSPENDED_USER",
+          suspendedUserToken: null === (r = e.body) || void 0 === r ? void 0 : r.suspended_user_token
+        });
+        return
+      }
+      let a = null === (s = e.body) || void 0 === s ? void 0 : s.code;
+      a === T.AbortCodes.ACCOUNT_SCHEDULED_FOR_DELETION && null != i && "" !== i ? d.default.dispatch({
         type: "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION",
         credentials: {
           login: n,
           password: i
         }
-      }) : s === T.AbortCodes.ACCOUNT_DISABLED && null != i && "" !== i ? d.default.dispatch({
+      }) : a === T.AbortCodes.ACCOUNT_DISABLED && null != i && "" !== i ? d.default.dispatch({
         type: "LOGIN_ACCOUNT_DISABLED",
         credentials: {
           login: n,
           password: i
         }
-      }) : s === T.AbortCodes.PHONE_VERIFICATION_REQUIRED ? d.default.dispatch({
+      }) : a === T.AbortCodes.PHONE_VERIFICATION_REQUIRED ? d.default.dispatch({
         type: "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED"
       }) : d.default.dispatch({
         type: "LOGIN_FAILURE",
@@ -182,6 +189,13 @@ var R = {
       })
     }).catch(e => {
       var t;
+      if (null != e.body && null != e.body.suspended_user_token) {
+        d.default.dispatch({
+          type: "LOGIN_SUSPENDED_USER",
+          suspendedUserToken: e.body.suspended_user_token
+        });
+        return
+      }
       if ((null === (t = e.body) || void 0 === t ? void 0 : t.code) === T.AbortCodes.MFA_INVALID_CODE) throw Error((0, g.getInvalidMFACodeError)(l));
       throw e
     })
@@ -499,5 +513,10 @@ var R = {
       type: "SET_CONSENT_REQUIRED",
       consentRequired: !0
     }), A = null
-  }))
+  })),
+  closeSuspendedUser() {
+    d.default.dispatch({
+      type: "CLOSE_SUSPENDED_USER"
+    })
+  }
 }

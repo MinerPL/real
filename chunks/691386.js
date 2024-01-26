@@ -1,54 +1,53 @@
 "use strict";
-i.r(t), i.d(t, {
+r.r(t), r.d(t, {
   PAGINATION_PAGE_SIZE_OPTIONS: function() {
-    return l
+    return a
   },
   MAX_VISIBLE_PAGES: function() {
-    return h
+    return l
   },
   createDefaultMemberSafetyPaginationState: function() {
-    return d
+    return h
   },
   getSearchChunkLimit: function() {
-    return o
+    return d
   },
   GuildMemberSafetyPagination: function() {
-    return m
+    return o
   }
-}), i("808653"), i("424973"), i("222007");
-var r, n, s = i("525065"),
-  a = i("26989"),
-  u = i("490931");
-let l = [12, 25, 50, 100],
-  h = 7;
+}), r("808653"), r("424973"), r("222007");
+var i, n, s = r("26989"),
+  u = r("490931");
+let a = [12, 25, 50, 100],
+  l = 7;
 
-function d() {
+function h() {
   return {
-    pageSize: l[0],
+    pageSize: a[0],
     currentPage: 1,
     continuationToken: null
   }
-}(n = r || (r = {}))[n.FORWARD = 1] = "FORWARD", n[n.BACKWARD = -1] = "BACKWARD";
-
-function o(e) {
-  return Math.max(5 * e.pageSize, 250)
 }
-class m {
+
+function d(e) {
+  return Math.max(5 * e.pageSize, 250)
+}(n = i || (i = {}))[n.FORWARD = 1] = "FORWARD", n[n.BACKWARD = -1] = "BACKWARD";
+class o {
   reset() {
-    this._paginationState = d(), this._sortedMemberIds = [], this._cachedPaginationChunks = {}, this._version += 1
+    this._paginationState = h(), this._sortedMemberIds = [], this._cachedPaginationChunks = {}, this._version += 1
   }
   isMemberOnCurrentPage(e) {
     var t;
-    let i = null !== (t = this._cachedPaginationChunks[this._paginationState.currentPage]) && void 0 !== t ? t : [];
-    return i.includes(e)
+    let r = null !== (t = this._cachedPaginationChunks[this._paginationState.currentPage]) && void 0 !== t ? t : [];
+    return r.includes(e)
   }
   isMemberInAnyChunk(e) {
     return this._sortedMemberIds.includes(e)
   }
   _initPaginationFromRawMembers(e) {
     let t = [],
-      i = e.reduce((e, i, r) => (e = this._reduceMemberIdsToPaginationChunks(e, i.userId, r), t.push(i.userId), e), {});
-    return [t, i]
+      r = e.reduce((e, r, i) => (e = this._reduceMemberIdsToPaginationChunks(e, r.userId, i), t.push(r.userId), e), {});
+    return [t, r]
   }
   _buildPaginationFromMemberIds(e) {
     let t = e.reduce(this._reduceMemberIdsToPaginationChunks, {});
@@ -56,18 +55,6 @@ class m {
   }
   _rebuildPaginationChunksFromStoredMembers() {
     return this._cachedPaginationChunks = this._buildPaginationFromMemberIds(this._sortedMemberIds), this._version += 1, !0
-  }
-  calculateNewContinuationToken(e) {
-    var t, i, r;
-    let n = null !== (t = s.default.getMemberCount(this.guildId)) && void 0 !== t ? t : this._sortedMemberIds.length,
-      a = this._sortedMemberIds.length - 1,
-      u = this._sortedMemberIds[a],
-      l = Math.min(o(this._paginationState), a);
-    let h = null != (r = e).totalResultsCount ? r.totalResultsCount : r.currentPage * r.pageSize,
-      d = null !== (i = this._sortedMemberIds[h - 1]) && void 0 !== i ? i : u;
-    if (null == this._paginationState.continuationToken) return h < l ? this._paginationState.continuationToken : d;
-    let m = this._sortedMemberIds.findIndex(e => e === this._paginationState.continuationToken);
-    return -1 === m ? d : h > n ? u : m - h >= 0 ? this._paginationState.continuationToken : Math.ceil(h / l) > Math.ceil(m / l) ? d : this._paginationState.continuationToken
   }
   getPaginationState() {
     return this._paginationState
@@ -80,17 +67,17 @@ class m {
   }
   _calculateNewPageFromPageSizeChange(e, t) {
     let {
-      currentPage: i,
-      pageSize: r
-    } = this._paginationState, n = e * r <= this._sortedMemberIds.length;
-    return n ? Math.max(Math.ceil(r / e * (null != t ? t : i)), 1) : 1
+      currentPage: r,
+      pageSize: i
+    } = this._paginationState, n = e * i <= this._sortedMemberIds.length;
+    return n ? Math.max(Math.ceil(i / e * (null != t ? t : r)), 1) : 1
   }
   updatePaginationState(e) {
     let t = !1,
-      i = null != e.pageSize && e.pageSize !== this._paginationState.pageSize;
-    if (i) {
-      var r;
-      t = !0, e.currentPage = this._calculateNewPageFromPageSizeChange(null !== (r = e.pageSize) && void 0 !== r ? r : this._paginationState.pageSize, e.currentPage)
+      r = null != e.pageSize && e.pageSize !== this._paginationState.pageSize;
+    if (r) {
+      var i;
+      t = !0, e.currentPage = this._calculateNewPageFromPageSizeChange(null !== (i = e.pageSize) && void 0 !== i ? i : this._paginationState.pageSize, e.currentPage)
     }
     return this._paginationState = {
       ...this._paginationState,
@@ -98,21 +85,21 @@ class m {
     }, t && this._rebuildPaginationChunksFromStoredMembers(), [!0, t]
   }
   updateSortedMembers(e) {
-    let [t, i] = this._initPaginationFromRawMembers(e);
-    return this._sortedMemberIds = t, this._cachedPaginationChunks = i, this._version += 1, !0
+    let [t, r] = this._initPaginationFromRawMembers(e);
+    return this._sortedMemberIds = t, this._cachedPaginationChunks = r, this._version += 1, !0
   }
   updateSortedMembersByUserIds(e) {
     return this._sortedMemberIds = e, this._rebuildPaginationChunksFromStoredMembers(), !0
   }
   _findMember(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-      i = e;
-    i < this._sortedMemberIds.length && (i = this._sortedMemberIds.length - 1), i < 0 && (i = 0);
-    let r = this._sortedMemberIds[e],
-      n = a.default.getMember(this.guildId, r);
+      r = e;
+    r < this._sortedMemberIds.length && (r = this._sortedMemberIds.length - 1), r < 0 && (r = 0);
+    let i = this._sortedMemberIds[e],
+      n = s.default.getMember(this.guildId, i);
     for (; null == n && !((e += t) < 0) && !(e >= this._sortedMemberIds.length);) {
       ;
-      r = this._sortedMemberIds[e], (null == (n = a.default.getMember(this.guildId, r)) ? void 0 : n.joinedAt) == null && (n = null)
+      i = this._sortedMemberIds[e], (null == (n = s.default.getMember(this.guildId, i)) ? void 0 : n.joinedAt) == null && (n = null)
     }
     return n
   }
@@ -120,9 +107,9 @@ class m {
     let {
       pageSize: e,
       currentPage: t
-    } = this._paginationState, i = o(this._paginationState), r = Math.min((Math.floor(e * t / i) + 1) * (i - 1), this._sortedMemberIds.length - 1), n = this._findMember(r, -1), s = this._findMember(Math.max(r - i, 0), 1);
+    } = this._paginationState, r = d(this._paginationState), i = Math.min((Math.floor(e * t / r) + 1) * (r - 1), this._sortedMemberIds.length - 1), n = this._findMember(i, -1), s = this._findMember(Math.max(i - r, 0), 1);
     return {
-      limit: i,
+      limit: r,
       after: (0, u.createMemberSearchCursor)(n),
       before: (0, u.createMemberSearchCursor)(s)
     }
@@ -134,11 +121,11 @@ class m {
     return this._version
   }
   constructor(e, t) {
-    this._reduceMemberIdsToPaginationChunks = (e, t, i) => {
-      let r = Math.floor(i / this._paginationState.pageSize) + 1;
-      return null == e[r] && (e[r] = []), e[r].push(t), e
-    }, this.guildId = e, this._paginationState = d(), this._version = 0;
-    let [i, r] = this._initPaginationFromRawMembers(t);
-    this._sortedMemberIds = i, this._cachedPaginationChunks = r, this._version += 1
+    this._reduceMemberIdsToPaginationChunks = (e, t, r) => {
+      let i = Math.floor(r / this._paginationState.pageSize) + 1;
+      return null == e[i] && (e[i] = []), e[i].push(t), e
+    }, this.guildId = e, this._paginationState = h(), this._version = 0;
+    let [r, i] = this._initPaginationFromRawMembers(t);
+    this._sortedMemberIds = r, this._cachedPaginationChunks = i, this._version += 1
   }
 }

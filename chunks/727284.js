@@ -1,27 +1,27 @@
-"use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return l
-  }
-});
-var r = n("37983");
-n("884691");
-var i = n("77078"),
-  a = n("845579"),
-  o = n("49111");
+    "use strict";
+    t.r(a), t.d(a, {
+      default: function() {
+        return i
+      }
+    });
+    var d = t("37983");
+    t("884691");
+    var s = t("77078"),
+      n = t("845579"),
+      c = t("49111");
 
-function l(e, t) {
-  a.AlwaysPreviewVideo.getSetting() ? (0, i.openModalLazy)(async () => {
-    let {
-      default: t
-    } = await n.el("381736").then(n.bind(n, "381736"));
-    return n => (0, r.jsx)(t, {
-      ...n,
-      onEnable: e,
-      videoEnabled: !1
-    })
-  }, {
-    modalKey: "camera-preview",
-    contextKey: t === o.AppContext.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
-  }) : null == e || e()
-}
+    function i(e, a) {
+      n.AlwaysPreviewVideo.getSetting() ? (0, s.openModalLazy)(async () => {
+        let {
+          default: a
+        } = await t.el("381736").then(t.bind(t, "381736"));
+        return t => (0, d.jsx)(a, {
+          ...t,
+          onEnable: e,
+          videoEnabled: !1
+        })
+      }, {
+        modalKey: "camera-preview",
+        contextKey: a === c.AppContext.POPOUT ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT
+      }) : null == e || e()
+    }

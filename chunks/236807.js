@@ -45,11 +45,8 @@ e.exports = {
   "heading-xxl/normal": "heading-xxl-normal__5ffb4",
   "heading-xxl/semibold": "heading-xxl-semibold_b19593",
   highestRole: "highestRole__93122",
-  integrationIcon: "integrationIcon__4d2c6",
   inviteChiplet: "inviteChiplet__8bf4b",
   inviteChipletContainer: "inviteChipletContainer_aa2289",
-  inviteContainer: "inviteContainer__4d80b",
-  inviterTooltipContainer: "inviterTooltipContainer_a6dcab",
   mediumCol: "mediumCol_a1c627",
   mediumSmallCol: "mediumSmallCol__1cfae",
   memberAvatar: "memberAvatar__0cf3a",
@@ -68,7 +65,6 @@ e.exports = {
   "redesign/message-preview/medium": "redesign-message-preview-medium__1b66e",
   "redesign/message-preview/normal": "redesign-message-preview-normal__1aa6d",
   "redesign/message-preview/semibold": "redesign-message-preview-semibold__9f0d9",
-  robot: "robot__70072",
   roleContainer: "roleContainer__7cd51",
   roleTooltip: "roleTooltip__776ce",
   roleTooltipItem: "roleTooltipItem_fe6bd1",
@@ -97,6 +93,5 @@ e.exports = {
   "text-xxs/medium": "text-xxs-medium__2fc94",
   "text-xxs/normal": "text-xxs-normal__21171",
   "text-xxs/semibold": "text-xxs-semibold__13ba2",
-  unknownInvite: "unknownInvite__9f726",
   xsmallCol: "xsmallCol__5f935"
 }

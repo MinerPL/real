@@ -188,13 +188,13 @@ let c = {
         width: 0,
         height: 0
       },
-      T = {
+      A = {
         top: 0,
         left: 0,
         right: 0,
         bottom: 0
       },
-      A = {
+      T = {
         width: 312,
         height: 0
       },
@@ -220,7 +220,7 @@ let c = {
             O = (0, E.getSizeFromLayoutSize)(l, c), (0, s.deleteWidget)(n);
             break;
           case _.OverlayWidgets.GUILDS:
-            T = (0, E.getFullCoordsFromLayoutSize)(a, l, c), A = (0, E.getSizeFromLayoutSize)(l, c), (0, s.deleteWidget)(n);
+            A = (0, E.getFullCoordsFromLayoutSize)(a, l, c), T = (0, E.getSizeFromLayoutSize)(l, c), (0, s.deleteWidget)(n);
             break;
           case _.OverlayWidgets.GUILDS_TEXT:
             I = (0, E.getFullCoordsFromLayoutSize)(a, l, c), S = (0, E.getSizeFromLayoutSize)(l, c), (0, s.deleteWidget)(n)
@@ -247,10 +247,10 @@ let c = {
         anchor: d,
         layoutId: t
       });
-      let T = i.default.getWidgetDefaultSettings(_.OverlayWidgets.GUILDS);
-      if (null == T) throw Error("OverlayActionCreators.setPinChat: No config for GUILDS exists");
+      let A = i.default.getWidgetDefaultSettings(_.OverlayWidgets.GUILDS);
+      if (null == A) throw Error("OverlayActionCreators.setPinChat: No config for GUILDS exists");
       (0, s.createWidget)({
-        ...T,
+        ...A,
         type: _.OverlayWidgets.GUILDS,
         id: (0, a.v4)(),
         size: o,
@@ -260,8 +260,8 @@ let c = {
     } else {
       let e = "auto" === O.width ? o.minSize.width : O.width;
       e += l.minSize.width;
-      let [n, r] = (0, E.getLeftWidgetSpecs)(T, {
-        height: A.height,
+      let [n, r] = (0, E.getLeftWidgetSpecs)(A, {
+        height: T.height,
         width: e
       }, c), d = i.default.getWidgetDefaultSettings(_.OverlayWidgets.GUILDS_TEXT);
       if (null == d) throw Error("OverlayActionCreators.setPinChat: No config for GUILDS_TEXT exists");
@@ -291,6 +291,20 @@ let c = {
       zoneName: e,
       normalizedMouseX: t,
       normalizedMouseY: n
+    })
+  },
+  setAssociatedGame(e, t, n) {
+    l.default.dispatch({
+      type: "OVERLAY_SET_ASSOCIATED_GAME",
+      previousAssociatedGamePID: e,
+      associatedGamePID: t,
+      associatedGame: n
+    })
+  },
+  notifyReadyToShow(e) {
+    l.default.dispatch({
+      type: "OVERLAY_NOTIFY_READY_TO_SHOW",
+      pid: e
     })
   }
 };

@@ -1,5 +1,6 @@
 "use strict";
 e.exports = {
+  constrainedObscureContent: "constrainedObscureContent__2b3c7",
   embed: "embed_d66863",
   explicitContentWarning: "explicitContentWarning__3f1a4 obscureWarning_f6d53e",
   explicitContentWarningText: "explicitContentWarningText_db3408",

@@ -10,5 +10,6 @@ e.exports = {
   moreSubtitleMargin: "moreSubtitleMargin__91793",
   noBackground: "noBackground_eead40",
   section: "section__0bfb9",
+  showAllPerksButton: "showAllPerksButton__15f8d",
   subtitle: "subtitle_c3170a"
 }

@@ -2,7 +2,7 @@
 let a;
 n.r(t), n.d(t, {
   DEFAULT_MUTE_KEYBIND: function() {
-    return R
+    return v
   },
   default: function() {
     return Q
@@ -19,22 +19,22 @@ var l = n("800648"),
   _ = n("446674"),
   c = n("913144"),
   O = n("485328"),
-  T = n("605250"),
-  A = n("999819"),
+  A = n("605250"),
+  T = n("999819"),
   I = n("42887"),
   S = n("599110"),
   f = n("773336"),
   N = n("50885"),
   L = n("13798"),
   C = n("860957"),
-  y = n("49111"),
-  D = n("80028"),
+  D = n("49111"),
+  y = n("80028"),
   p = n("846325"),
   h = n("390493");
-let v = new T.default("KeybindsStore"),
-  R = {
+let R = new A.default("KeybindsStore"),
+  v = {
     id: "1000",
-    action: y.GlobalKeybindActions.TOGGLE_MUTE,
+    action: D.GlobalKeybindActions.TOGGLE_MUTE,
     shortcut: (0, L.toCombo)("mod+shift+m"),
     enabled: !0,
     managed: !0,
@@ -46,20 +46,20 @@ let v = new T.default("KeybindsStore"),
   b = !0,
   m = {},
   U = !1,
-  M = [y.GlobalKeybindActions.PUSH_TO_TALK, y.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK, y.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET];
+  M = [D.GlobalKeybindActions.PUSH_TO_TALK, D.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK, D.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET];
 
 function Y() {
   let {
     showKeybindIndicators: e
-  } = A.default.getCurrentConfig({
+  } = T.default.getCurrentConfig({
     location: "KeybindsStore"
-  }), t = s.find(P, e => R.action === e.action && e.enabled && e.shortcut.length > 0);
-  null == t && !__OVERLAY__ && !U && b && e && (K(R), U = !0)
+  }), t = s.find(P, e => v.action === e.action && e.enabled && e.shortcut.length > 0);
+  null == t && !__OVERLAY__ && !U && b && e && (K(v), U = !0)
 }
 
 function w() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  (U || e) && (V(R.id), U = !1)
+  (U || e) && (V(v.id), U = !1)
 }
 
 function H(e) {
@@ -88,14 +88,14 @@ function K(e) {
     action: n,
     enabled: a
   } = e;
-  if ("" === t || null == t || n === y.GlobalKeybindActions.UNASSIGNED || !a) return;
+  if ("" === t || null == t || n === D.GlobalKeybindActions.UNASSIGNED || !a) return;
   if (null == m[n]) {
-    v.error("[kb store] KeybindStore: Looking for callback action ".concat(n, " but it doesn't exist in this version. Skipping"));
+    R.error("[kb store] KeybindStore: Looking for callback action ".concat(n, " but it doesn't exist in this version. Skipping"));
     return
   }
   let l = e.id,
     i = m[n].keyEvents;
-  e.action === y.GlobalKeybindActions.TOGGLE_MUTE && w(), ! function(e, t, n, a) {
+  e.action === D.GlobalKeybindActions.TOGGLE_MUTE && w(), ! function(e, t, n, a) {
     if (f.isPlatformEmbedded) N.default.inputEventRegister(parseInt(e), t, n, a);
     else {
       V(e);
@@ -103,7 +103,7 @@ function K(e) {
       a.keyup && l.bindGlobal((0, L.toString)(t), () => n(!1), "keyup"), a.keydown && l.bindGlobal((0, L.toString)(t), () => n(!0), "keydown"), g[e] = l
     }
   }(l, t, e => (function(e, t) {
-    let n = e === R.id ? R : P[e];
+    let n = e === v.id ? v : P[e];
     null != n && m[n.action].onTrigger(t, n)
   })(l, e), {
     focused: !0,
@@ -114,11 +114,11 @@ function K(e) {
   }), O.default.validateKeybind((0, L.toString)(e.shortcut))
 }
 
-function k(e) {
+function W(e) {
   let t = {
     id: G.toString(),
     enabled: !0,
-    action: y.GlobalKeybindActions.UNASSIGNED,
+    action: D.GlobalKeybindActions.UNASSIGNED,
     shortcut: [],
     managed: !1,
     params: {},
@@ -130,10 +130,10 @@ function k(e) {
   }, G += 1, t
 }
 
-function W(e) {
+function k(e) {
   V(e.id), P = {
     ...P
-  }, delete P[e.id], e.action === y.GlobalKeybindActions.TOGGLE_MUTE && Y()
+  }, delete P[e.id], e.action === D.GlobalKeybindActions.TOGGLE_MUTE && Y()
 }
 
 function F(e) {
@@ -143,21 +143,21 @@ function F(e) {
   P = {
     ...P,
     [t.id]: t
-  }, !__OVERLAY__ && (S.default.track(y.AnalyticEvents.USER_SETTINGS_KEYBIND_UPDATED, {
+  }, !__OVERLAY__ && (S.default.track(D.AnalyticEvents.USER_SETTINGS_KEYBIND_UPDATED, {
     keybind_action: t.action,
     keybind_is_bound: !0,
     keybind_has_shortcut: t.shortcut.length > 0
-  }), t.action === y.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK ? S.default.track(y.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, {
-    hotkey: t.action === y.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK ? (0, L.toString)(t.shortcut) : null
-  }) : t.action === y.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET && S.default.track(y.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, {
-    text_activation_hotkey: t.action === y.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET ? (0, L.toString)(t.shortcut) : null
+  }), t.action === D.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK ? S.default.track(D.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, {
+    hotkey: t.action === D.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK ? (0, L.toString)(t.shortcut) : null
+  }) : t.action === D.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET && S.default.track(D.AnalyticEvents.OVERLAY_SETTINGS_UPDATED, {
+    text_activation_hotkey: t.action === D.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET ? (0, L.toString)(t.shortcut) : null
   })), K(t)
 }
 
 function x(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
     a = s.find(P, t => t.action === e && (!n || t.managed === n));
-  return null == a && (K(k({
+  return null == a && (K(W({
     action: e,
     enabled: !0,
     shortcut: (0, L.toCombo)(t),
@@ -168,11 +168,11 @@ function x(e, t) {
 let B = [function() {
   let e = I.default.getShortcuts();
   return s.each(P, t => {
-    t.action === y.GlobalKeybindActions.PUSH_TO_TALK && !0 === t.managed && (null == t.context || null == e[t.context]) && W(t)
+    t.action === D.GlobalKeybindActions.PUSH_TO_TALK && !0 === t.managed && (null == t.context || null == e[t.context]) && k(t)
   }), s.reduce(I.default.getShortcuts(), (e, t, n) => {
-    let a = s.find(P, e => e.action === y.GlobalKeybindActions.PUSH_TO_TALK && !0 === e.managed && e.context === n);
-    if (null == a) K(k({
-      action: y.GlobalKeybindActions.PUSH_TO_TALK,
+    let a = s.find(P, e => e.action === D.GlobalKeybindActions.PUSH_TO_TALK && !0 === e.managed && e.context === n);
+    if (null == a) K(W({
+      action: D.GlobalKeybindActions.PUSH_TO_TALK,
       enabled: !0,
       shortcut: t,
       managed: !0,
@@ -192,13 +192,13 @@ let B = [function() {
     return !0
   }, !1)
 }, function() {
-  return !!C.default.enabled && x(y.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK, "shift+`")
+  return !!C.default.enabled && x(D.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK, "shift+`")
 }, function() {
-  return !!C.default.enabled && x(y.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, "]`")
+  return !!C.default.enabled && x(D.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, "]`")
 }, function() {
-  return x(y.GlobalKeybindActions.SOUNDBOARD_HOLD, p.DEFAULT_KEYBIND, !1)
+  return x(D.GlobalKeybindActions.SOUNDBOARD_HOLD, p.DEFAULT_KEYBIND, !1)
 }, function() {
-  return x(y.GlobalKeybindActions.SAVE_CLIP, D.DEFAULT_KEYBIND)
+  return x(D.GlobalKeybindActions.SAVE_CLIP, y.DEFAULT_KEYBIND)
 }];
 
 function X() {
@@ -209,10 +209,10 @@ O.default.setGetKeybindList(() => {
   for (let t in P) P.hasOwnProperty(t) && e.push((0, L.toString)(P[t].shortcut));
   let {
     showKeybindIndicators: t
-  } = A.default.getCurrentConfig({
+  } = T.default.getCurrentConfig({
     location: "KeybindsStore"
   });
-  return t && e.push((0, L.toString)(R.shortcut)), e
+  return t && e.push((0, L.toString)(v.shortcut)), e
 });
 class z extends _.default.DeviceSettingsStore {
   initialize(e) {
@@ -239,17 +239,17 @@ class z extends _.default.DeviceSettingsStore {
       n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
       {
         showKeybindIndicators: a
-      } = A.default.getCurrentConfig({
+      } = T.default.getCurrentConfig({
         location: "KeybindsStore"
       }),
       l = s.find(P, a => a.action === e && (!t || a.managed) && (!n || a.shortcut.length > 0 && a.enabled));
-    return null != l ? l : a && e === y.GlobalKeybindActions.TOGGLE_MUTE ? R : null
+    return null != l ? l : a && e === D.GlobalKeybindActions.TOGGLE_MUTE ? v : null
   }
   getOverlayKeybind() {
-    return this.getKeybindForAction(y.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK, !0)
+    return this.getKeybindForAction(D.GlobalKeybindActions.TOGGLE_OVERLAY_INPUT_LOCK, !0)
   }
   getOverlayChatKeybind() {
-    return this.getKeybindForAction(y.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, !0)
+    return this.getKeybindForAction(D.GlobalKeybindActions.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, !0)
   }
 }
 z.displayName = "KeybindsStore", z.persistKey = "keybinds", z.migrations = [function() {
@@ -267,7 +267,7 @@ z.displayName = "KeybindsStore", z.persistKey = "keybinds", z.migrations = [func
     keybinds: t = e
   } = e;
   return s.reduce(t, (e, t, n) => {
-    if ((0, f.isLinux)() && t.action === y.GlobalKeybindActions.SOUNDBOARD_HOLD) {
+    if ((0, f.isLinux)() && t.action === D.GlobalKeybindActions.SOUNDBOARD_HOLD) {
       let n = t.shortcut.map(e => e[1]),
         a = (0, L.toCombo)("`").map(e => e[1]);
       if (E(n, a)) return e
@@ -294,7 +294,10 @@ z.displayName = "KeybindsStore", z.persistKey = "keybinds", z.migrations = [func
     }
   }
   return t
-}];
+}, e => s.reduce(e, (e, t, n) => t.action === D.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING && t.managed ? e : {
+  ...e,
+  [n]: t
+}, {})];
 var Q = new z(c.default, {
   CONNECTION_OPEN: X,
   AUDIO_SET_MODE: X,
@@ -304,18 +307,18 @@ var Q = new z(c.default, {
   KEYBINDS_ADD_KEYBIND: function(e) {
     let {
       keybind: t
-    } = e, n = k(t);
+    } = e, n = W(t);
     K(n)
   },
   KEYBINDS_DELETE_KEYBIND: function(e) {
     let {
       id: t
     } = e, n = P[t];
-    !__OVERLAY__ && S.default.track(y.AnalyticEvents.USER_SETTINGS_KEYBIND_UPDATED, {
+    !__OVERLAY__ && S.default.track(D.AnalyticEvents.USER_SETTINGS_KEYBIND_UPDATED, {
       keybind_action: n.action,
       keybind_is_bound: !1,
       keybind_has_shortcut: !1
-    }), null != n && W(n)
+    }), null != n && k(n)
   },
   KEYBINDS_SET_KEYBIND: F,
   KEYBINDS_ENABLE_ALL_KEYBINDS: function(e) {
@@ -335,9 +338,9 @@ var Q = new z(c.default, {
       try {
         K(e)
       } catch (t) {
-        v.error("Failed to register keybind", e, t)
+        R.error("Failed to register keybind", e, t)
       }
-    }), b = !0, null == a && (a = A.default.subscribe({
+    }), b = !0, null == a && (a = T.default.subscribe({
       location: "KeybindsStore"
     }, H))
   }

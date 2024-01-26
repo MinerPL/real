@@ -1,8 +1,16 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   SUPPORTED_EMBED_TYPES: function() {
-    return l
+    return s
+  },
+  EXPLICIT_MEDIA_MIN_WIDTH: function() {
+    return r
+  },
+  EXPLICIT_MEDIA_MIN_HEIGHT: function() {
+    return a
   }
-}), a("222007");
-var s = a("246111");
-let l = new Set([s.MessageEmbedTypes.IMAGE, s.MessageEmbedTypes.VIDEO, s.MessageEmbedTypes.GIFV])
+}), n("222007");
+var i = n("246111");
+let s = new Set([i.MessageEmbedTypes.IMAGE, i.MessageEmbedTypes.VIDEO, i.MessageEmbedTypes.GIFV]),
+  r = 146,
+  a = 212

@@ -16,9 +16,6 @@ function r(e, t) {
   }
 }
 n.r(t), n.d(t, {
-  SummarySources: function() {
-    return l
-  },
   createSummaryFromServer: function() {
     return r
   }

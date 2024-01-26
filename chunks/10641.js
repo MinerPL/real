@@ -1,69 +1,68 @@
 "use strict";
 n.r(t), n.d(t, {
   isDismissibleContentDismissed: function() {
-    return T
+    return p
   },
   useIsDismissibleContentDismissed: function() {
-    return g
+    return v
   },
   requestMarkDismissibleContentAsShown: function() {
-    return I
+    return S
   },
   markDismissibleContentAsDismissed: function() {
-    return C
+    return T
   }
 }), n("222007");
 var i = n("446674"),
-  r = n("151426"),
-  s = n("848415"),
-  a = n("193302"),
-  o = n("872173"),
-  l = n("374363"),
-  u = n("599110"),
-  c = n("674268"),
+  s = n("151426"),
+  r = n("193302"),
+  a = n("872173"),
+  o = n("374363"),
+  l = n("599110"),
+  u = n("674268"),
   d = n("495226"),
-  f = n("585653"),
-  E = n("989691"),
-  h = n("127746"),
-  p = n("862853"),
-  _ = n("846614"),
-  S = n("994428"),
-  m = n("49111");
+  c = n("585653"),
+  f = n("989691"),
+  _ = n("127746"),
+  h = n("862853"),
+  g = n("846614"),
+  m = n("994428"),
+  E = n("49111");
 
-function T(e) {
+function p(e) {
   var t;
-  if ((0, _.disableNewUserDismissibleContent)(e)) return !0;
-  let n = null === (t = l.default.settings.userContent) || void 0 === t ? void 0 : t.dismissedContents;
-  return null != n && (0, c.hasBit)(n, e)
+  if ((0, g.disableNewUserDismissibleContent)(e)) return !0;
+  let n = null === (t = o.default.settings.userContent) || void 0 === t ? void 0 : t.dismissedContents;
+  return null != n && (0, u.hasBit)(n, e)
 }
 
-function g(e) {
-  return (0, i.useStateFromStores)([l.default], () => T(e))
+function v(e) {
+  return (0, i.useStateFromStores)([o.default], () => p(e))
 }
 
-function I(e, t, n) {
-  if ((0, p.isContentShown)(e) || s.default.isAnyActive() || E.default.hasUserHitDCCap(e)) return;
+function S(e, t, n) {
+  if ((0, h.isContentShown)(e) || f.default.hasUserHitDCCap(e)) return;
   let i = function(e) {
-    let t = h.CONTENT_TYPES_WITH_BYPASS_HOLDOUT.has(e),
+    let t = _.CONTENT_TYPES_WITH_BYPASS_HOLDOUT.has(e),
       {
         enabled: n
-      } = a.default.getCurrentConfig({
+      } = r.default.getCurrentConfig({
         location: "isUserSubjectToDCFHoldout"
       }, {
         autoTrackExposure: !t
       });
     return n && !t
   }(e);
-  if (!i) !n && (0, p.addCandidateContent)({
+  if (!i) !n && (0, h.addCandidateContent)({
     content: e,
     groupName: null == t ? void 0 : t.groupName,
     onAdded: () => {
       var n;
-      let [i, s] = (0, p.getCurrentlyShownCounts)();
-      (0, f.handleDCShownToUser)(e), u.default.track(m.AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, {
-        type: r.DismissibleContent[e],
+      let [i, r] = (0, h.getCurrentlyShownCounts)();
+      (0, c.handleDCShownToUser)(e), l.default.track(E.AnalyticEvents.DISMISSIBLE_CONTENT_SHOWN, {
+        type: s.DismissibleContent[e],
         content_count: i,
-        fatigable_content_count: s,
+        fatigable_content_count: r,
         group_name: null == t ? void 0 : t.groupName,
         bypass_fatigue: d.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(e),
         guild_id: null == t ? void 0 : t.guildId
@@ -71,23 +70,23 @@ function I(e, t, n) {
     }
   })
 }
-async function C(e) {
+async function T(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-  ((0, p.isContentShown)(e) || t.forceTrack) && function(e, t) {
+  ((0, h.isContentShown)(e) || t.forceTrack) && function(e, t) {
     var n;
-    let [i] = (0, p.getCurrentlyShownCounts)(), s = E.default.getRenderedAtTimestamp(e), a = new Date, o = null == s ? null : a.getTime() - s;
-    u.default.track(m.AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, {
-      type: r.DismissibleContent[e],
-      action: null !== (n = null == t ? void 0 : t.dismissAction) && void 0 !== n ? n : S.ContentDismissActionType.UNKNOWN,
+    let [i] = (0, h.getCurrentlyShownCounts)(), r = f.default.getRenderedAtTimestamp(e), a = new Date, o = null == r ? null : a.getTime() - r;
+    l.default.track(E.AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, {
+      type: s.DismissibleContent[e],
+      action: null !== (n = null == t ? void 0 : t.dismissAction) && void 0 !== n ? n : m.ContentDismissActionType.UNKNOWN,
       content_count: i,
       group_name: null == t ? void 0 : t.groupName,
       bypass_fatigue: d.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(e),
       guild_id: null == t ? void 0 : t.guildId,
       shown_duration: o
     })
-  }(e, t), (0, f.handleDCDismissed)(e), await (0, o.addDismissedContent)(e);
-  let n = !E.default.hasUserHitDCCap();
-  (0, p.removeCandidateContent)({
+  }(e, t), (0, c.handleDCDismissed)(e), await (0, a.addDismissedContent)(e);
+  let n = !f.default.hasUserHitDCCap();
+  (0, h.removeCandidateContent)({
     content: e,
     groupName: null == t ? void 0 : t.groupName
   }, n)

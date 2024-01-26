@@ -1,8 +1,8 @@
-    "use strict";
-    var e = r("125359"),
-      o = r("472960"),
-      u = r("823493");
-    t.exports = function(t, n, r) {
-      var i, c;
-      return u && e(i = n.constructor) && i !== r && o(c = i.prototype) && c !== r.prototype && u(t, c), t
-    }
+"use strict";
+var e = n("125359"),
+  i = n("472960"),
+  u = n("823493");
+t.exports = function(t, r, n) {
+  var o, c;
+  return u && e(o = r.constructor) && o !== n && i(c = o.prototype) && c !== n.prototype && u(t, c), t
+}

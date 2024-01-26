@@ -4,95 +4,95 @@ n.r(t), n.d(t, {
     return x
   }
 }), n("222007"), n("70102");
-var s = n("446674"),
-  i = n("95410"),
+var i = n("446674"),
+  s = n("95410"),
   r = n("913144"),
   a = n("741148"),
   o = n("121338"),
-  d = n("116949"),
+  l = n("116949"),
   u = n("233069"),
-  l = n("271938"),
-  f = n("42203"),
-  _ = n("923959"),
-  c = n("505507"),
-  g = n("162771"),
-  m = n("773336"),
-  h = n("50885"),
-  v = n("819068"),
-  E = n("471671"),
-  p = n("49111"),
-  y = n("6791");
-let C = Object.freeze({
+  d = n("271938"),
+  c = n("42203"),
+  f = n("923959"),
+  _ = n("505507"),
+  h = n("162771"),
+  g = n("773336"),
+  m = n("50885"),
+  E = n("819068"),
+  p = n("471671"),
+  v = n("49111"),
+  S = n("6791");
+let T = Object.freeze({
     selectedGuildId: null,
     selectedChannelId: null,
-    displayUserMode: p.OverlayDisplayUsers.ALWAYS,
-    displayNameMode: p.OverlayDisplayNames.ALWAYS,
-    avatarSizeMode: p.OverlayAvatarSizes.LARGE,
-    notificationPositionMode: p.OverlayNotificationPositions.TOP_LEFT,
-    textChatNotifications: p.OverlayNotificationTextChatTypes.ENABLED,
+    displayUserMode: v.OverlayDisplayUsers.ALWAYS,
+    displayNameMode: v.OverlayDisplayNames.ALWAYS,
+    avatarSizeMode: v.OverlayAvatarSizes.LARGE,
+    notificationPositionMode: v.OverlayNotificationPositions.TOP_LEFT,
+    textChatNotifications: v.OverlayNotificationTextChatTypes.ENABLED,
     disableExternalLinkAlert: !1,
     disablePinTutorial: !1,
     showKeybindIndicators: !0,
-    textWidgetOpacity: y.OpacityBounds.LOWER
+    textWidgetOpacity: S.OpacityBounds.LOWER
   }),
-  T = null,
-  S = {},
   I = null,
-  A = new Set,
-  D = !1,
-  N = null,
+  C = {},
+  A = null,
+  y = new Set,
+  N = !1,
+  R = null,
   O = !1,
-  b = !1,
+  D = !1,
   P = new Set,
-  k = !1;
+  b = !1;
 
-function R(e) {
-  let t = S[e];
-  return null == t && (t = S[e] = {
-    ...C
+function L(e) {
+  let t = C[e];
+  return null == t && (t = C[e] = {
+    ...T
   }), t
 }
-let V = {
-    ...C
+let M = {
+    ...T
   },
-  M = new Set(["AUDIO_SET_INPUT_DEVICE", "AUDIO_SET_INPUT_VOLUME", "AUDIO_SET_LOCAL_VIDEO_DISABLED", "AUDIO_SET_LOCAL_VOLUME", "AUDIO_SET_MODE", "AUDIO_SET_NOISE_CANCELLATION", "AUDIO_SET_NOISE_SUPPRESSION", "AUDIO_SET_OUTPUT_DEVICE", "AUDIO_SET_OUTPUT_VOLUME", "AUDIO_TOGGLE_LOCAL_MUTE", "AUDIO_TOGGLE_SELF_DEAF", "AUDIO_TOGGLE_SELF_MUTE", "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", "CATEGORY_COLLAPSE", "CATEGORY_EXPAND", "CHANNEL_ACK", "CHANNEL_PRELOAD", "GIFT_CODE_REDEEM", "GIFT_CODE_REDEEM_FAILURE", "GIFT_CODE_REDEEM_SUCCESS", "HOTSPOT_HIDE", "INVITE_MODAL_CLOSE", "LAYOUT_CREATE", "LAYOUT_CREATE_WIDGETS", "LAYOUT_DELETE_ALL_WIDGETS", "LAYOUT_DELETE_WIDGET", "LAYOUT_SET_PINNED", "LAYOUT_SET_TOP_WIDGET", "LAYOUT_UPDATE_WIDGET", "LOAD_MESSAGES", "LOAD_MESSAGES_FAILURE", "LOAD_MESSAGES_SUCCESS", "MEDIA_ENGINE_SET_GO_LIVE_SOURCE", "OVERLAY_ACTIVATE_REGION", "OVERLAY_DEACTIVATE_ALL_REGIONS", "OVERLAY_MESSAGE_EVENT_ACTION", "OVERLAY_SET_AVATAR_SIZE_MODE", "OVERLAY_SET_CLICK_ZONES", "OVERLAY_SET_DISPLAY_NAME_MODE", "OVERLAY_SET_DISPLAY_USER_MODE", "OVERLAY_SET_INPUT_LOCKED", "OVERLAY_SET_NOTIFICATION_POSITION_MODE", "OVERLAY_SET_TEXT_CHAT_NOTIFICATION_MODE", "OVERLAY_SET_SHOW_KEYBIND_INDICATORS", "OVERLAY_SET_TEXT_WIDGET_OPACITY", "OVERLAY_SET_UI_LOCKED", "PREMIUM_PAYMENT_ERROR_CLEAR", "PREMIUM_PAYMENT_MODAL_CLOSE", "PREMIUM_PAYMENT_MODAL_OPEN", "PREMIUM_PAYMENT_SUBSCRIBE_FAIL", "PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS", "PREMIUM_PAYMENT_UPDATE_FAIL", "PREMIUM_PAYMENT_UPDATE_SUCCESS", "PREMIUM_REQUIRED_MODAL_CLOSE", "PREMIUM_REQUIRED_MODAL_OPEN", "PURCHASE_CONFIRMATION_MODAL_CLOSE", "PURCHASE_CONFIRMATION_MODAL_OPEN", "SKU_PURCHASE_CLEAR_ERROR", "SKU_PURCHASE_FAIL", "SKU_PURCHASE_MODAL_CLOSE", "SKU_PURCHASE_MODAL_OPEN", "SKU_PURCHASE_PREVIEW_FETCH_SUCCESS", "SKU_PURCHASE_SHOW_CONFIRMATION_STEP", "SKU_PURCHASE_START", "SKU_PURCHASE_SUCCESS", "STREAM_CLOSE", "STREAM_START", "VOICE_CHANNEL_SELECT", "USER_SETTINGS_PROTO_ENQUEUE_UPDATE", "USER_SETTINGS_PROTO_LOAD_IF_NECESSARY"]),
-  w = new Set([...M.values(), "ACTIVITY_INVITE_MODAL_CLOSE", "CALL_DELETE", "CHANNEL_COLLAPSE", "CHANNEL_SELECT", "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", "OVERLAY_CALL_PRIVATE_CHANNEL", "OVERLAY_JOIN_GAME", "OVERLAY_NOTIFICATION_EVENT", "OVERLAY_SELECT_CALL", "OVERLAY_SET_NOT_IDLE", "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST", "OVERLAY_WIDGET_CHANGED", "SOUNDBOARD_SET_OVERLAY_ENABLED", "STREAM_STOP"]);
+  U = new Set(["AUDIO_SET_INPUT_DEVICE", "AUDIO_SET_INPUT_VOLUME", "AUDIO_SET_LOCAL_VIDEO_DISABLED", "AUDIO_SET_LOCAL_VOLUME", "AUDIO_SET_MODE", "AUDIO_SET_NOISE_CANCELLATION", "AUDIO_SET_NOISE_SUPPRESSION", "AUDIO_SET_OUTPUT_DEVICE", "AUDIO_SET_OUTPUT_VOLUME", "AUDIO_TOGGLE_LOCAL_MUTE", "AUDIO_TOGGLE_SELF_DEAF", "AUDIO_TOGGLE_SELF_MUTE", "BILLING_SUBSCRIPTION_UPDATE_SUCCESS", "CATEGORY_COLLAPSE", "CATEGORY_EXPAND", "CHANNEL_ACK", "CHANNEL_PRELOAD", "GIFT_CODE_REDEEM", "GIFT_CODE_REDEEM_FAILURE", "GIFT_CODE_REDEEM_SUCCESS", "HOTSPOT_HIDE", "INVITE_MODAL_CLOSE", "LAYOUT_CREATE", "LAYOUT_CREATE_WIDGETS", "LAYOUT_DELETE_ALL_WIDGETS", "LAYOUT_DELETE_WIDGET", "LAYOUT_SET_PINNED", "LAYOUT_SET_TOP_WIDGET", "LAYOUT_UPDATE_WIDGET", "LOAD_MESSAGES", "LOAD_MESSAGES_FAILURE", "LOAD_MESSAGES_SUCCESS", "MEDIA_ENGINE_SET_GO_LIVE_SOURCE", "OVERLAY_ACTIVATE_REGION", "OVERLAY_DEACTIVATE_ALL_REGIONS", "OVERLAY_MESSAGE_EVENT_ACTION", "OVERLAY_SET_AVATAR_SIZE_MODE", "OVERLAY_SET_CLICK_ZONES", "OVERLAY_SET_DISPLAY_NAME_MODE", "OVERLAY_SET_DISPLAY_USER_MODE", "OVERLAY_SET_INPUT_LOCKED", "OVERLAY_SET_NOTIFICATION_POSITION_MODE", "OVERLAY_SET_TEXT_CHAT_NOTIFICATION_MODE", "OVERLAY_SET_SHOW_KEYBIND_INDICATORS", "OVERLAY_SET_TEXT_WIDGET_OPACITY", "OVERLAY_SET_UI_LOCKED", "OVERLAY_NOTIFY_READY_TO_SHOW", "PREMIUM_PAYMENT_ERROR_CLEAR", "PREMIUM_PAYMENT_MODAL_CLOSE", "PREMIUM_PAYMENT_MODAL_OPEN", "PREMIUM_PAYMENT_SUBSCRIBE_FAIL", "PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS", "PREMIUM_PAYMENT_UPDATE_FAIL", "PREMIUM_PAYMENT_UPDATE_SUCCESS", "PREMIUM_REQUIRED_MODAL_CLOSE", "PREMIUM_REQUIRED_MODAL_OPEN", "PURCHASE_CONFIRMATION_MODAL_CLOSE", "PURCHASE_CONFIRMATION_MODAL_OPEN", "SKU_PURCHASE_CLEAR_ERROR", "SKU_PURCHASE_FAIL", "SKU_PURCHASE_MODAL_CLOSE", "SKU_PURCHASE_MODAL_OPEN", "SKU_PURCHASE_PREVIEW_FETCH_SUCCESS", "SKU_PURCHASE_SHOW_CONFIRMATION_STEP", "SKU_PURCHASE_START", "SKU_PURCHASE_SUCCESS", "STREAM_CLOSE", "STREAM_START", "VOICE_CHANNEL_SELECT", "USER_SETTINGS_PROTO_ENQUEUE_UPDATE", "USER_SETTINGS_PROTO_LOAD_IF_NECESSARY"]),
+  k = new Set([...U.values(), "ACTIVITY_INVITE_MODAL_CLOSE", "CALL_DELETE", "CHANNEL_COLLAPSE", "CHANNEL_SELECT", "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", "OVERLAY_CALL_PRIVATE_CHANNEL", "OVERLAY_JOIN_GAME", "OVERLAY_NOTIFICATION_EVENT", "OVERLAY_SELECT_CALL", "OVERLAY_SET_NOT_IDLE", "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST", "OVERLAY_WIDGET_CHANGED", "SOUNDBOARD_SET_OVERLAY_ENABLED", "STREAM_STOP"]);
 
-function L() {
+function w() {
   if (!__OVERLAY__) return !1;
-  let e = T === (0, v.getPID)(),
-    t = A.has((0, v.getPID)()) || P.size > 0;
+  let e = I === (0, E.getPID)(),
+    t = y.has((0, E.getPID)()) || P.size > 0;
   e && t ? (0, a.focus)(window, !0) : (0, a.focus)(window, !1)
 }
 
-function U() {
-  if (T !== (0, v.getPID)()) return !1;
+function V() {
+  if (I !== (0, E.getPID)()) return !1;
   P.clear()
 }
 
 function G(e) {
-  let t = (0, v.getPID)();
+  let t = (0, E.getPID)();
   if (null == e.pid || e.pid === t) switch (e.type) {
-    case p.OverlayEventTypes.STORAGE_SYNC:
-      s.default.PersistedStore.initializeAll(e.states);
+    case v.OverlayEventTypes.STORAGE_SYNC:
+      i.default.PersistedStore.initializeAll(e.states);
       break;
-    case p.OverlayEventTypes.DISPATCH:
+    case v.OverlayEventTypes.DISPATCH:
       null != e.payloads && (O = !0, e.payloads.forEach(e => (function(e) {
-        var t, n, s, i, a, l;
-        if ("OVERLAY_INITIALIZE" === e.type && (null == (l = e).version && 1 === v.OVERLAY_VERSION || l.version === v.OVERLAY_VERSION || (r.default.dispatch({
+        var t, n, i, s, a, d;
+        if ("OVERLAY_INITIALIZE" === e.type && (null == (d = e).version && 1 === E.OVERLAY_VERSION || d.version === E.OVERLAY_VERSION || (r.default.dispatch({
             type: "OVERLAY_INCOMPATIBLE_APP"
-          }), (0, o.disconnect)(), 0))) b = !0;
-        if (b) switch (e.type) {
+          }), (0, o.disconnect)(), 0))) D = !0;
+        if (D) switch (e.type) {
           case "CHANNEL_CREATE":
           case "THREAD_CREATE":
           case "THREAD_UPDATE":
           case "CHANNEL_DELETE":
           case "THREAD_DELETE":
-            let f = (0, u.createChannelRecord)(e.channel);
-            if (!u.ALL_CHANNEL_TYPES.has(f.type)) break;
+            let c = (0, u.createChannelRecord)(e.channel);
+            if (!u.ALL_CHANNEL_TYPES.has(c.type)) break;
             r.default.dispatch({
               type: e.type,
-              channel: f
+              channel: c
             });
             break;
           case "CHANNEL_UPDATES":
@@ -111,18 +111,18 @@ function G(e) {
             });
             break;
           case "GUILD_CREATE":
-            let _ = e => (0, u.createChannelRecord)(e),
-              c = e.guild;
-            c.channels = null !== (i = null === (n = c.channels) || void 0 === n ? void 0 : n.map(_)) && void 0 !== i ? i : null, c.threads = null === (s = c.threads) || void 0 === s ? void 0 : s.map(_), null != c.channelUpdates && (c.channelUpdates.writes = null === (a = c.channelUpdates.writes) || void 0 === a ? void 0 : a.map(_)), r.default.dispatch({
+            let f = e => (0, u.createChannelRecord)(e),
+              _ = e.guild;
+            _.channels = null !== (s = null === (n = _.channels) || void 0 === n ? void 0 : n.map(f)) && void 0 !== s ? s : null, _.threads = null === (i = _.threads) || void 0 === i ? void 0 : i.map(f), null != _.channelUpdates && (_.channelUpdates.writes = null === (a = _.channelUpdates.writes) || void 0 === a ? void 0 : a.map(f)), r.default.dispatch({
               type: "GUILD_CREATE",
-              guild: c
+              guild: _
             });
             break;
           case "USER_SETTINGS_PROTO_UPDATE":
             r.default.dispatch({
               ...e,
               settings: {
-                proto: (0, d.b64ToProtoWithType)(e.settings.type, e.settings.proto),
+                proto: (0, l.b64ToProtoWithType)(e.settings.type, e.settings.proto),
                 type: e.settings.type
               }
             });
@@ -133,41 +133,41 @@ function G(e) {
       })(e)), O = !1)
   }
 }
-class F extends s.default.PersistedStore {
+class F extends i.default.PersistedStore {
   initialize(e) {
-    if (this.waitFor(l.default), this.syncWith([l.default], () => {
-        let e = l.default.getId();
-        V = null != e ? R(e) : {
-          ...C
+    if (this.waitFor(d.default), this.syncWith([d.default], () => {
+        let e = d.default.getId();
+        M = null != e ? L(e) : {
+          ...T
         }
-      }), __OVERLAY__ && (m.isPlatformEmbedded && h.default.requireModule("discord_overlay2"), A.delete((0, v.getPID)())), null != e) {
-      S = e;
-      let t = l.default.getId();
-      null != t && (null == (V = R(t)).textChatNotifications && (V.textChatNotifications = C.textChatNotifications), null == V.textWidgetOpacity && (V.textWidgetOpacity = C.textWidgetOpacity))
+      }), __OVERLAY__ && (g.isPlatformEmbedded && m.default.requireModule("discord_overlay2"), y.delete((0, E.getPID)())), null != e) {
+      C = e;
+      let t = d.default.getId();
+      null != t && (null == (M = L(t)).textChatNotifications && (M.textChatNotifications = T.textChatNotifications), null == M.textWidgetOpacity && (M.textWidgetOpacity = T.textWidgetOpacity))
     }
   }
   getState() {
-    return S
+    return C
   }
   isUILocked(e) {
-    return !A.has(e)
+    return !y.has(e)
   }
   isInstanceUILocked() {
     if (!__OVERLAY__) throw Error("OverlayStore: App instance should never call .isInstanceUILocked()");
-    return !A.has((0, v.getPID)())
+    return !y.has((0, E.getPID)())
   }
   isInstanceFocused() {
     if (!__OVERLAY__) throw Error("OverlayStore: App instance should never call .isInstanceFocused()");
-    return T === (0, v.getPID)()
+    return I === (0, E.getPID)()
   }
   isFocused(e) {
-    return T === e
+    return I === e
   }
   isPinned(e) {
-    let t = c.default.getLayout(v.OVERLAY_LAYOUT_ID);
+    let t = _.default.getLayout(E.OVERLAY_LAYOUT_ID);
     if (null != t) {
       let n = t.widgets.find(t => {
-        let n = c.default.getWidget(t);
+        let n = _.default.getWidget(t);
         return null != n && n.type === e && !!n.pinned || !1
       });
       return null != n
@@ -175,71 +175,71 @@ class F extends s.default.PersistedStore {
     return !1
   }
   getSelectedGuildId() {
-    return V.selectedGuildId
+    return M.selectedGuildId
   }
   getSelectedChannelId() {
-    return V.selectedChannelId
+    return M.selectedChannelId
   }
   getSelectedCallId() {
-    return I
+    return A
   }
   getDisplayUserMode() {
-    return V.displayUserMode
+    return M.displayUserMode
   }
   getDisplayNameMode() {
-    return V.displayNameMode
+    return M.displayNameMode
   }
   getAvatarSizeMode() {
-    return V.avatarSizeMode
+    return M.avatarSizeMode
   }
   getNotificationPositionMode() {
-    return V.notificationPositionMode
+    return M.notificationPositionMode
   }
   getTextChatNotificationMode() {
-    return V.notificationPositionMode === p.OverlayNotificationPositions.DISABLED ? p.OverlayNotificationTextChatTypes.DISABLED : V.textChatNotifications
+    return M.notificationPositionMode === v.OverlayNotificationPositions.DISABLED ? v.OverlayNotificationTextChatTypes.DISABLED : M.textChatNotifications
   }
   get showKeybindIndicators() {
-    return null == V.showKeybindIndicators || V.showKeybindIndicators
+    return null == M.showKeybindIndicators || M.showKeybindIndicators
   }
   getDisableExternalLinkAlert() {
-    return V.disableExternalLinkAlert
+    return M.disableExternalLinkAlert
   }
   getFocusedPID() {
-    return T
+    return I
   }
   get initialized() {
-    return b
+    return D
   }
   get incompatibleApp() {
-    return D
+    return N
   }
   getActiveRegions() {
     return P
   }
   getTextWidgetOpacity() {
-    return V.textWidgetOpacity
+    return M.textWidgetOpacity
   }
   isPreviewingInGame() {
-    return k
+    return b
   }
 }
 F.displayName = "OverlayStore", F.persistKey = "OverlayStoreV2", F.migrations = [() => {
   let e = {
-      ...i.default.get("OverlayStore")
+      ...s.default.get("OverlayStore")
     },
     {
       pinnedWidgets: t,
       positions: n,
-      sizes: s,
+      sizes: i,
       v: r,
       ...a
     } = e;
   return {
-    ...C,
+    ...T,
     ...5 === r ? a : null
   }
 }, e => {
-  let t = l.default.getId();
+  let t = d.default.getId();
   if (null == e || null == t) return {};
   let n = {
     [t]: {
@@ -250,31 +250,31 @@ F.displayName = "OverlayStore", F.persistKey = "OverlayStoreV2", F.migrations = 
 }];
 var x = new F(r.default, {
   LOGOUT: function(e) {
-    !e.isSwitchingAccount && (S = {})
+    !e.isSwitchingAccount && (C = {})
   },
   MULTI_ACCOUNT_REMOVE_ACCOUNT: function(e) {
-    e.userId in S && delete S[e.userId]
+    e.userId in C && delete C[e.userId]
   },
   CONNECTION_CLOSED: function() {
-    A.clear()
+    y.clear()
   },
   OVERLAY_START_SESSION: function() {
     r.default.addInterceptor(e => {
-      if (O || !w.has(e.type)) return !1;
+      if (O || !k.has(e.type)) return !1;
       if ("CHANNEL_SELECT" === e.type) {
         let {
           guildId: t,
           channelId: n
         } = e;
         return null != n && ((0, o.send)({
-          type: p.OverlayEventTypes.DISPATCH,
-          pid: (0, v.getPID)(),
-          token: (0, v.getRPCAuthToken)(),
+          type: v.OverlayEventTypes.DISPATCH,
+          pid: (0, E.getPID)(),
+          token: (0, E.getRPCAuthToken)(),
           payloads: [{
             type: "CHANNEL_PRELOAD",
-            guildId: t === p.ME ? null : t,
+            guildId: t === v.ME ? null : t,
             channelId: n,
-            context: p.CURRENT_APP_CONTEXT
+            context: v.CURRENT_APP_CONTEXT
           }, {
             type: "OVERLAY_SELECT_CHANNEL",
             guildId: t,
@@ -283,125 +283,128 @@ var x = new F(r.default, {
         }), !1)
       }
       return (0, o.send)({
-        type: p.OverlayEventTypes.DISPATCH,
-        pid: (0, v.getPID)(),
-        token: (0, v.getRPCAuthToken)(),
+        type: v.OverlayEventTypes.DISPATCH,
+        pid: (0, E.getPID)(),
+        token: (0, E.getRPCAuthToken)(),
         payloads: [e]
-      }), !M.has(e.type)
-    }), (0, o.setReceiveEventHandler)(G, (0, v.getRPCAuthToken)()), (0, o.connect)(), (0, o.send)({
-      type: p.OverlayEventTypes.CONNECT,
-      pid: (0, v.getPID)(),
-      token: (0, v.getRPCAuthToken)()
+      }), !U.has(e.type)
+    }), (0, o.setReceiveEventHandler)(G, (0, E.getRPCAuthToken)()), (0, o.connect)(), (0, o.send)({
+      type: v.OverlayEventTypes.CONNECT,
+      pid: (0, E.getPID)(),
+      token: (0, E.getRPCAuthToken)()
     })
   },
   OVERLAY_INITIALIZE: function(e) {
     let {
       focusedPID: t
     } = e;
-    T = t
+    I = t
   },
   OVERLAY_READY: function() {
-    let e = V.selectedGuildId,
-      t = V.selectedChannelId;
-    if (null != e && (!_.default.hasChannels(e) || null != t && !_.default.hasSelectableChannel(e, t)) && (e = null, t = null), null != t && null == f.default.getChannel(t) && (e = null, t = null), null == e && null == t && (e = g.default.getGuildId()), null != e && null == t) {
-      let n = _.default.getDefaultChannel(e);
+    let e = M.selectedGuildId,
+      t = M.selectedChannelId;
+    if (null != e && (!f.default.hasChannels(e) || null != t && !f.default.hasSelectableChannel(e, t)) && (e = null, t = null), null != t && null == c.default.getChannel(t) && (e = null, t = null), null == e && null == t && (e = h.default.getGuildId()), null != e && null == t) {
+      let n = f.default.getDefaultChannel(e);
       null != n && (t = n.id)
     }
-    V.selectedGuildId = e, V.selectedChannelId = t
+    M.selectedGuildId = e, M.selectedChannelId = t
   },
   OVERLAY_FOCUSED: function(e) {
     let {
       pid: t
     } = e;
-    T = t, L()
+    I = t, w()
   },
   OVERLAY_SELECT_CHANNEL: function(e) {
     let {
       guildId: t,
       channelId: n
     } = e;
-    V.selectedGuildId = t, V.selectedChannelId = n
+    M.selectedGuildId = t, M.selectedChannelId = n
   },
   OVERLAY_SELECT_CALL: function(e) {
     let {
       callId: t
     } = e;
-    I = t
+    A = t
   },
   CALL_DELETE: function() {
-    I = null
+    A = null
   },
   LAYOUT_CREATE: function() {},
   OVERLAY_SET_DISPLAY_NAME_MODE: function(e) {
     let {
       mode: t
     } = e;
-    V.displayNameMode = t
+    M.displayNameMode = t
   },
   OVERLAY_SET_DISPLAY_USER_MODE: function(e) {
     let {
       mode: t
     } = e;
-    V.displayUserMode = t
+    M.displayUserMode = t
   },
   OVERLAY_SET_AVATAR_SIZE_MODE: function(e) {
     let {
       mode: t
     } = e;
-    V.avatarSizeMode = t
+    M.avatarSizeMode = t
   },
   OVERLAY_SET_NOTIFICATION_POSITION_MODE: function(e) {
     let {
       mode: t
     } = e;
-    V.notificationPositionMode = t
+    M.notificationPositionMode = t
   },
   OVERLAY_SET_TEXT_CHAT_NOTIFICATION_MODE: function(e) {
     let {
       mode: t
     } = e;
-    V.textChatNotifications = t
+    M.textChatNotifications = t
   },
   OVERLAY_SET_SHOW_KEYBIND_INDICATORS: function(e) {
     let {
       shouldShow: t
     } = e;
-    V.showKeybindIndicators = t
+    M.showKeybindIndicators = t
   },
   OVERLAY_SET_TEXT_WIDGET_OPACITY: function(e) {
     let {
       opacity: t
-    } = e, n = V.textWidgetOpacity !== t;
-    return V.textWidgetOpacity = t, n
+    } = e, n = M.textWidgetOpacity !== t;
+    return M.textWidgetOpacity = t, n
   },
   OVERLAY_DISABLE_EXTERNAL_LINK_ALERT: function() {
-    V.disableExternalLinkAlert = !0
+    M.disableExternalLinkAlert = !0
   },
   OVERLAY_INCOMPATIBLE_APP: function() {
-    D = !0
+    N = !0
   },
   OVERLAY_SET_UI_LOCKED: function(e) {
     let {
       locked: t,
       pid: n
     } = e;
-    t ? A.delete(n) : A.add(n), U(), L(), k = !1
+    t ? y.delete(n) : y.add(n), V(), w(), b = !1
   },
   OVERLAY_ACTIVATE_REGION: function(e) {
     let {
       region: t
     } = e;
-    if (T !== (0, v.getPID)() || P.has(t)) return !1;
+    if (I !== (0, E.getPID)() || P.has(t)) return !1;
     P.add(t)
   },
-  OVERLAY_DEACTIVATE_ALL_REGIONS: U,
+  OVERLAY_DEACTIVATE_ALL_REGIONS: V,
   OVERLAY_SET_PREVIEW_IN_GAME_MODE: function(e) {
-    k = e.isPreviewingInGame
+    b = e.isPreviewingInGame
   },
   WINDOW_RESIZED: function() {
     if (__OVERLAY__) {
-      let e = E.default.windowSize();
-      !(0, v.validResolution)(e) && (k = !1)
+      let e = p.default.windowSize();
+      !(0, E.validResolution)(e) && (b = !1)
     }
+  },
+  OVERLAY_SET_ASSOCIATED_GAME: function(e) {
+    y.delete(e.previousAssociatedGamePID)
   }
 })

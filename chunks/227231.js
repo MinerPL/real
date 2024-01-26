@@ -1,48 +1,54 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(_), E.d(_, {
   getQuestByApplicationId: function() {
-    return s
+    return n
   },
   isQuestExpired: function() {
-    return l
-  },
-  questUserStatusFromServer: function() {
     return r
   },
+  questUserStatusFromServer: function() {
+    return a
+  },
   questWithUserStatusFromServer: function() {
-    return u
+    return i
   },
   getRewardAssetUrl: function() {
-    return o
+    return I
   },
   getHeroAssetUrl: function() {
-    return d
+    return s
+  },
+  getQuestBarHeroAssetUrl: function() {
+    return T
   },
   getGameTileAssetUrl: function() {
-    return c
+    return S
   },
   getGameLogotypeAssetUrl: function() {
-    return f
+    return N
+  },
+  getQuestForTargetedContent: function() {
+    return O
   }
-}), n("222007");
-var a = n("2973");
-let i = "https://cdn.discordapp.com/assets/quests/";
+}), E("222007");
+var t = E("2973");
+let o = "https://cdn.discordapp.com/assets/quests/";
 
-function s(e) {
-  let t;
-  for (let [n, i] of a.default.quests)
-    if (i.config.applicationId === e) {
-      t = i;
+function n(e) {
+  let _;
+  for (let [E, o] of t.default.quests)
+    if (o.config.applicationId === e) {
+      _ = o;
       break
-    } return t
-}
-
-function l(e) {
-  let t = new Date(e.config.expiresAt);
-  return t.valueOf() <= Date.now()
+    } return _
 }
 
 function r(e) {
+  let _ = new Date(e.config.expiresAt);
+  return _.valueOf() <= Date.now()
+}
+
+function a(e) {
   return {
     userId: e.user_id,
     questId: e.quest_id,
@@ -55,26 +61,40 @@ function r(e) {
   }
 }
 
-function u(e) {
-  var t, n;
+function i(e) {
+  var _, E, t;
   return {
     id: e.id,
     config: {
-      expiresAt: (t = e.config).expires_at,
-      streamDurationRequirementMinutes: t.stream_duration_requirement_minutes,
-      gameTitle: t.game_title,
-      applicationId: t.application_id,
+      expiresAt: (_ = e.config).expires_at,
+      streamDurationRequirementMinutes: _.stream_duration_requirement_minutes,
+      gameTitle: _.game_title,
+      applicationId: _.application_id,
       messages: {
-        questName: (n = t.messages).quest_name,
-        rewardName: n.reward_name,
-        rewardNameWithArticle: n.reward_name_with_article,
-        rewardRedemptionInstructions: n.reward_redemption_instructions
+        questName: (E = _.messages).quest_name,
+        rewardName: E.reward_name,
+        rewardNameWithArticle: E.reward_name_with_article,
+        rewardRedemptionInstructions: E.reward_redemption_instructions,
+        gameTitle: E.game_title,
+        gamePublisher: E.game_publisher
+      },
+      colors: {
+        primary: (t = _.colors).primary,
+        secondary: t.secondary
       }
     },
-    userStatus: null == e.user_status ? null : r(e.user_status)
+    userStatus: null == e.user_status ? null : a(e.user_status),
+    targetedContent: e.targeted_content
   }
 }
-let o = e => "".concat(i).concat(e).concat("/reward.png"),
-  d = e => "".concat(i).concat(e).concat("/hero.png"),
-  c = e => "".concat(i).concat(e).concat("/game_tile.png"),
-  f = (e, t) => "".concat(i).concat(e, "/").concat(t).concat("/game_logotype.png")
+let I = e => "".concat(o).concat(e).concat("/reward.png"),
+  s = e => "".concat(o).concat(e).concat("/hero.png"),
+  T = e => "".concat(o).concat(e).concat("/quest_bar_hero.gif"),
+  S = e => "".concat(o).concat(e).concat("/game_tile.png"),
+  N = (e, _) => "".concat(o).concat(e, "/").concat(_).concat("/game_logotype.png");
+
+function O(e, _) {
+  for (let [E, t] of e)
+    if (!r(t) && t.targetedContent.includes(_)) return t;
+  return null
+}

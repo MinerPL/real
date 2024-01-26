@@ -13,7 +13,10 @@ e.exports = {
   mainPageScroller: "mainPageScroller__12afb",
   manageMembership: "manageMembership__63c2c",
   open: "open__0960c",
+  openCloseReduceMotion: "openCloseReduceMotion__39a8a",
   perksCards: "perksCards_e83187",
   perksDiscoverability: "perksDiscoverability__4242c",
+  seeAllPerksButton: "seeAllPerksButton_c90d04",
+  seeAllPerksButtonContent: "seeAllPerksButtonContent_f387e5",
   whatsNew: "whatsNew__2b2f9"
 }

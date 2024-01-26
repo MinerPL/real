@@ -1,30 +1,30 @@
-"use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return c
-  }
-});
-var l = n("37983");
-n("884691");
-var r = n("414456"),
-  i = n.n(r),
-  s = n("77078"),
-  a = n("216422"),
-  o = n("782340"),
-  u = n("881609");
+    "use strict";
+    t.r(a), t.d(a, {
+      default: function() {
+        return f
+      }
+    });
+    var d = t("37983");
+    t("884691");
+    var s = t("414456"),
+      n = t.n(s),
+      c = t("77078"),
+      i = t("216422"),
+      r = t("782340"),
+      o = t("881609");
 
-function c(e) {
-  let {
-    text: t = o.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
-    className: n
-  } = e;
-  return (0, l.jsx)(s.Tooltip, {
-    text: t,
-    children: e => (0, l.jsx)(s.Clickable, {
-      ...e,
-      children: (0, l.jsx)(a.default, {
-        className: i(u.nitroWheel, n)
+    function f(e) {
+      let {
+        text: a = r.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP,
+        className: t
+      } = e;
+      return (0, d.jsx)(c.Tooltip, {
+        text: a,
+        children: e => (0, d.jsx)(c.Clickable, {
+          ...e,
+          children: (0, d.jsx)(i.default, {
+            className: n(o.nitroWheel, t)
+          })
+        })
       })
-    })
-  })
-}
+    }

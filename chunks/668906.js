@@ -38,21 +38,21 @@ function r(e, t) {
   }), i
 }
 
-function a(e) {
-  let t = [];
-  return e.has(i.ExperimentFlags.SIGNAL_H265_SUPPORT) ? t.unshift({
+function a(e, t) {
+  let n = [];
+  return e.has(i.ExperimentFlags.SIGNAL_H265_SUPPORT) ? n.unshift({
     name: "H265",
     encode: !0,
     decode: !0
-  }) : e.has(i.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT) && t.unshift({
+  }) : e.has(i.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT) && t === i.MediaEngineContextTypes.STREAM && n.unshift({
     name: "H265",
     encode: !1,
     decode: !0
-  }), e.has(i.ExperimentFlags.SIGNAL_AV1_SUPPORT) && t.unshift({
+  }), e.has(i.ExperimentFlags.SIGNAL_AV1_SUPPORT) && n.unshift({
     name: "AV1",
     encode: !0,
     decode: !0
-  }), t
+  }), n
 }
 
 function o(e, t) {

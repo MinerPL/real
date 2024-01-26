@@ -7,80 +7,85 @@ n.r(t), n.d(t, {
     return m
   }
 }), n("808653");
-var a = n("917351"),
-  i = n.n(a),
-  s = n("233069"),
-  l = n("42203"),
+var i = n("917351"),
+  a = n.n(i),
+  l = n("233069"),
+  s = n("42203"),
   r = n("319781"),
-  u = n("525065"),
-  o = n("718517"),
+  o = n("525065"),
+  u = n("718517"),
   d = n("380353");
 
-function c(e, t, n, a) {
-  var i, s, r;
-  let o = l.default.getMutableGuildChannelsForGuild(e.id),
-    c = a.filter(e => e.channel_id in o),
-    m = null !== (i = n.filter(t => t.guild_id === e.id)[0]) && void 0 !== i ? i : {},
-    _ = u.default.getMemberCount(e.id),
-    h = f("year", a, c, e => {
+function c(e, t, n, i, a) {
+  var l, r, u, c;
+  let m = s.default.getMutableGuildChannelsForGuild(e.id),
+    h = i.filter(e => e.channel_id in m),
+    g = null !== (l = n.filter(t => t.guild_id === e.id)[0]) && void 0 !== l ? l : {},
+    _ = o.default.getMemberCount(e.id),
+    p = f("year", i, h, e => {
       var t;
       return Number(null !== (t = e.num_year_opens) && void 0 !== t ? t : 0)
     }),
-    g = f("one month", a, c, e => {
+    S = f("one month", i, h, e => {
       var t;
       return Number(null !== (t = e.num_month_opens) && void 0 !== t ? t : 0)
     }),
-    S = f("three month", a, c, e => {
+    v = f("three month", i, h, e => {
       var t;
       return Number(null !== (t = e.num_three_month_opens) && void 0 !== t ? t : 0)
     }),
-    p = f("six month", a, c, e => {
+    T = f("six month", i, h, e => {
       var t;
       return Number(null !== (t = e.num_six_month_opens) && void 0 !== t ? t : 0)
     }),
-    E = [g, S, p, h],
-    T = 0,
-    v = 0;
-  c.forEach(e => {
+    E = [S, v, T, p],
+    N = 0,
+    I = 0;
+  h.forEach(e => {
     var t;
-    T++, v += null !== (t = Number(e.num_messages)) && void 0 !== t ? t : 0
+    N++, I += null !== (t = Number(e.num_messages)) && void 0 !== t ? t : 0
   });
-  let N = "\n**Pain**:\n- Everyones: ".concat(d.PainLevel[null !== (s = m.everyones) && void 0 !== s ? s : 0], "\n- Messages: ").concat(d.PainLevel[null !== (r = m.messages) && void 0 !== r ? r : 0], "\n- Size: ").concat(_, "\n**Remote**:\n- Channels: ").concat(T, "\n- AllVisits: ").concat(E.map(e => e.totalOpensAcrossAllServers).join(" / "), "\n- GuildVisits: ").concat(E.map(e => e.guildOpens).join(" / "), "\n- Biggest Channel (abs): ").concat(E.map(e => e.biggestChannel).join(" / "), "\n- Biggest Channel (%): ").concat(E.map(e => e.biggestChannelFormatted).join(" / "), "\n- Sent Msgs: ").concat(v, "\n"),
-    I = S.guildOpens >= .02 * S.totalOpensAcrossAllServers;
-  return m.messages !== d.PainLevel.High || I ? [d.Mode.KeepAsIs, I, "KeepAsIs" + N] : [d.Mode.UseGreyDot, I, "UseGreyDot" + N]
+  let y = "\n**Pain**:\n- Everyones: ".concat(d.PainLevel[null !== (r = g.everyones) && void 0 !== r ? r : 0], "\n- Messages: ").concat(d.PainLevel[null !== (u = g.messages) && void 0 !== u ? u : 0], "\n- Size: ").concat(_, "\n**Remote**:\n- Channels: ").concat(N, "\n- AllVisits: ").concat(E.map(e => e.totalOpensAcrossAllServers).join(" / "), "\n- GuildVisits: ").concat(E.map(e => e.guildOpens).join(" / "), "\n- Biggest Channel (abs): ").concat(E.map(e => e.biggestChannel).join(" / "), "\n- Biggest Channel (%): ").concat(E.map(e => e.biggestChannelFormatted).join(" / "), "\n- Sent Msgs: ").concat(I, "\n"),
+    O = v.guildOpens >= .02 * v.totalOpensAcrossAllServers,
+    C = (null !== (c = p.guildOpens) && void 0 !== c ? c : 0) > 0;
+  if (g.messages === d.PainLevel.High) {
+    if (!a) return [d.Mode.UseGreyDot, O, "UseGreyDot" + y];
+    if (!O && C) return [d.Mode.UseGreyDot, O, "UseGreyDot" + y]
+  }
+  return [d.Mode.KeepAsIs, O, "KeepAsIs" + y]
 }
 
-function f(e, t, n, a) {
-  let s = t.reduce((e, t) => e + a(t), 0),
-    l = n.reduce((e, t) => e + a(t), 0),
-    r = i.sortBy(n, a).reverse()[0],
-    u = null == r ? 0 : a(r),
-    o = (u / l * 100).toFixed(1);
+function f(e, t, n, i) {
+  let l = t.reduce((e, t) => e + i(t), 0),
+    s = n.reduce((e, t) => e + i(t), 0),
+    r = a.sortBy(n, i).reverse()[0],
+    o = null == r ? 0 : i(r),
+    u = (o / s * 100).toFixed(1);
   return {
     label: e,
-    totalOpensAcrossAllServers: s,
-    guildOpens: l,
-    biggestChannel: u,
-    biggestChannelFormatted: o
+    totalOpensAcrossAllServers: l,
+    guildOpens: s,
+    biggestChannel: o,
+    biggestChannelFormatted: u
   }
 }
 
 function m(e, t) {
-  var n, a;
-  let i = null !== (n = t.filter(t => t.guild_id === e.id)[0]) && void 0 !== n ? n : {},
-    l = null !== (a = u.default.getMemberCount(e.id)) && void 0 !== a ? a : 0,
-    c = Date.now() - o.default.Millis.DAYS_30,
-    f = r.default.getFrequentlyWithoutFetchingLatest().filter(t => t instanceof s.ChannelRecordBase && t.guild_id === e.id),
+  var n, i;
+  let a = null !== (n = t.filter(t => t.guild_id === e.id)[0]) && void 0 !== n ? n : {},
+    s = null !== (i = o.default.getMemberCount(e.id)) && void 0 !== i ? i : 0,
+    c = Date.now() - u.default.Millis.DAYS_30,
+    f = r.default.getFrequentlyWithoutFetchingLatest().filter(t => t instanceof l.ChannelRecordBase && t.guild_id === e.id),
     m = f.filter(e => {
       var t, n;
-      let a = null !== (n = null === (t = r.default.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === t ? void 0 : t.recentUses) && void 0 !== n ? n : [];
-      return 0 !== a.length && a[a.length - 1] >= c
+      let i = null !== (n = null === (t = r.default.frecencyWithoutFetchingLatest.usageHistory[e.id]) || void 0 === t ? void 0 : t.recentUses) && void 0 !== n ? n : [];
+      return 0 !== i.length && i[i.length - 1] >= c
     }),
-    _ = m.length >= 5,
-    h = f.reduce((e, t) => {
-      var n, a;
-      return e + (null !== (a = null === (n = r.default.frecencyWithoutFetchingLatest.usageHistory[t.id]) || void 0 === n ? void 0 : n.totalUses) && void 0 !== a ? a : 0)
+    h = m.length >= 5,
+    g = f.reduce((e, t) => {
+      var n, i;
+      return e + (null !== (i = null === (n = r.default.frecencyWithoutFetchingLatest.usageHistory[t.id]) || void 0 === n ? void 0 : n.totalUses) && void 0 !== i ? i : 0)
     }, 0),
-    g = "\n- **Local**:\n    - Guild Visits: ".concat(h, "\n    - Channels: ").concat(f.length, "\n    - Recent Channels: ").concat(m.length, "\n");
-  return i.messages === d.PainLevel.High || l > 1e3 ? [d.Mode.UseGreyDot, _, "SuggestGreyDot" + g] : [d.Mode.KeepAsIs, _, "KeepAsIs" + g]
+    _ = "\n- **Local**:\n    - Guild Visits: ".concat(g, "\n    - Channels: ").concat(f.length, "\n    - Recent Channels: ").concat(m.length, "\n");
+  return a.messages === d.PainLevel.High || s > 1e3 ? [d.Mode.UseGreyDot, h, "SuggestGreyDot" + _] : [d.Mode.KeepAsIs, h, "KeepAsIs" + _]
 }

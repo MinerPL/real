@@ -1,107 +1,108 @@
 "use strict";
-let s, i;
+let i, s;
 n.r(t), n.d(t, {
   default: function() {
-    return B
+    return H
   }
 }), n("222007");
 var r = n("714617"),
   a = n.n(r),
   o = n("917351"),
-  d = n.n(o),
+  l = n.n(o),
   u = n("446674"),
-  l = n("913144"),
-  f = n("429928"),
-  _ = n("837374"),
-  c = n("662285"),
-  g = n("845579"),
-  m = n("374363"),
-  h = n("233069"),
-  v = n("964889"),
-  E = n("271938"),
-  p = n("546463"),
-  y = n("603699"),
-  C = n("686470"),
-  T = n("52028"),
-  S = n("824563"),
-  I = n("235660"),
-  A = n("49111");
-let D = !1,
-  N = A.StatusTypes.ONLINE,
-  O = A.StatusTypes.UNKNOWN,
-  b = 0,
-  P = [],
-  k = !1,
-  R = !0,
-  V = Object.freeze([]),
-  M = [];
+  d = n("913144"),
+  c = n("429928"),
+  f = n("837374"),
+  _ = n("662285"),
+  h = n("845579"),
+  g = n("374363"),
+  m = n("233069"),
+  E = n("599110"),
+  p = n("964889"),
+  v = n("271938"),
+  S = n("546463"),
+  T = n("603699"),
+  I = n("686470"),
+  C = n("52028"),
+  A = n("824563"),
+  y = n("235660"),
+  N = n("49111");
+let R = !1,
+  O = N.StatusTypes.ONLINE,
+  D = N.StatusTypes.UNKNOWN,
+  P = 0,
+  b = [],
+  L = !1,
+  M = !0,
+  U = Object.freeze([]),
+  k = [];
 
 function w(e) {
-  return (0, v.shouldShareApplicationActivity)(e, C.default)
+  return (0, p.shouldShareApplicationActivity)(e, I.default)
 }
 
-function L(e) {
+function V(e) {
   switch (e.type) {
-    case A.ActivityTypes.LISTENING:
-      if ((0, f.default)(e)) return c.default.shouldShowActivity();
+    case N.ActivityTypes.LISTENING:
+      if ((0, c.default)(e)) return _.default.shouldShowActivity();
       if (null != e.application_id) return w(e.application_id);
       return !1;
-    case A.ActivityTypes.PLAYING:
+    case N.ActivityTypes.PLAYING:
       return null != e.application_id ? w(e.application_id) : function(e) {
-        let t = p.default.getGameByName(e);
-        return null != t ? w(t.id) : g.ShowCurrentGame.getSetting()
+        let t = S.default.getGameByName(e);
+        return null != t ? w(t.id) : h.ShowCurrentGame.getSetting()
       }(e.name);
-    case A.ActivityTypes.STREAMING:
-    case A.ActivityTypes.WATCHING:
+    case N.ActivityTypes.STREAMING:
+    case N.ActivityTypes.WATCHING:
     default:
       return null == e.application_id || w(e.application_id)
   }
 }
 
-function U() {
-  var e;
-  b = null !== (e = y.default.getIdleSince()) && void 0 !== e ? e : 0, k = y.default.isAFK(), R ? (N = O, G()) : N = D ? A.StatusTypes.INVISIBLE : g.StatusSetting.getSetting(), N === A.StatusTypes.ONLINE && b > 0 && (N = A.StatusTypes.IDLE);
-  let t = !1,
-    n = R || N === A.StatusTypes.INVISIBLE ? [] : T.default.getActivities().filter(L);
-  !a(P, n) && (P = n, t = !0);
-  let s = I.default.getRemoteActivities();
-  if (V !== s && (V = s, t = !0), t) {
-    let e = P.find(e => e.type === A.ActivityTypes.CUSTOM_STATUS),
-      t = P.filter(e => e.type !== A.ActivityTypes.CUSTOM_STATUS);
-    M = t.length > 0 ? P : null != e ? [e, ...d(V).filter(e => e.type !== A.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : d.uniqBy(V, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
-  }
-}
-
 function G() {
-  s = void 0, i = void 0
+  var e;
+  P = null !== (e = T.default.getIdleSince()) && void 0 !== e ? e : 0, L = T.default.isAFK(), M ? (O = D, F()) : O = R ? N.StatusTypes.INVISIBLE : h.StatusSetting.getSetting(), O === N.StatusTypes.ONLINE && P > 0 && (O = N.StatusTypes.IDLE);
+  let t = !1,
+    n = M || O === N.StatusTypes.INVISIBLE ? [] : C.default.getActivities().filter(V);
+  !a(b, n) && (b = n, t = !0);
+  let i = y.default.getRemoteActivities();
+  if (U !== i && (U = i, t = !0), t) {
+    let e = b.find(e => e.type === N.ActivityTypes.CUSTOM_STATUS),
+      t = b.filter(e => e.type !== N.ActivityTypes.CUSTOM_STATUS);
+    k = t.length > 0 ? b : null != e ? [e, ...l(U).filter(e => e.type !== N.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : l.uniqBy(U, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
+  }
 }
 
 function F() {
-  R = !1, O = A.StatusTypes.UNKNOWN, U(), S.default.setCurrentUserOnConnectionOpen(N, M)
+  i = void 0, s = void 0
 }
-class x extends u.default.Store {
+
+function x() {
+  M = !1, D = N.StatusTypes.UNKNOWN, G(), A.default.setCurrentUserOnConnectionOpen(O, k)
+}
+class B extends u.default.Store {
   initialize() {
-    this.waitFor(y.default, m.default, T.default, I.default, C.default, p.default), this.syncWith([T.default], U)
+    this.waitFor(T.default, g.default, C.default, y.default, I.default, S.default), this.syncWith([C.default], G)
   }
   getLocalPresence() {
     return {
-      status: N,
-      since: b,
-      activities: P,
-      afk: k,
-      broadcast: i
+      status: O,
+      since: P,
+      activities: b,
+      afk: L,
+      broadcast: s
     }
   }
   getStatus() {
-    return N
+    return O
   }
   getActivities() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return e ? M : P
+    return e ? k : b
   }
   getPrimaryActivity() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return e ? M[0] : P[0]
+    return e ? k[0] : b[0]
   }
   getApplicationActivity(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -112,48 +113,53 @@ class x extends u.default.Store {
     return this.getActivities(t).find(e)
   }
   getBroadcast() {
-    return s
+    return i
   }
 }
-x.displayName = "SelfPresenceStore";
-var B = new x(l.default, {
-  START_SESSION: U,
-  CONNECTION_OPEN: F,
-  CONNECTION_OPEN_SUPPLEMENTAL: F,
-  OVERLAY_INITIALIZE: F,
-  CONNECTION_CLOSED: U,
-  IDLE: U,
-  AFK: U,
-  RUNNING_GAMES_CHANGE: U,
-  STREAMING_UPDATE: U,
-  USER_SETTINGS_PROTO_UPDATE: U,
-  LOCAL_ACTIVITY_UPDATE: U,
-  SPOTIFY_PLAYER_STATE: U,
-  SPOTIFY_PLAYER_PLAY: U,
-  USER_CONNECTIONS_UPDATE: U,
-  SESSIONS_REPLACE: U,
-  RPC_APP_DISCONNECTED: U,
-  LIBRARY_FETCH_SUCCESS: U,
-  LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: U,
-  LOGOUT: function() {
-    R = !0, O = N, U()
+B.displayName = "SelfPresenceStore";
+var H = new B(d.default, {
+  START_SESSION: G,
+  CONNECTION_OPEN: function() {
+    x(), .001 > Math.random() && E.default.track(N.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
+      reason: "status_on_connection",
+      rating: O
+    })
   },
-  EMBEDDED_ACTIVITY_CLOSE: U,
-  EMBEDDED_ACTIVITY_OPEN: U,
+  CONNECTION_OPEN_SUPPLEMENTAL: x,
+  OVERLAY_INITIALIZE: x,
+  CONNECTION_CLOSED: G,
+  IDLE: G,
+  AFK: G,
+  RUNNING_GAMES_CHANGE: G,
+  STREAMING_UPDATE: G,
+  USER_SETTINGS_PROTO_UPDATE: G,
+  LOCAL_ACTIVITY_UPDATE: G,
+  SPOTIFY_PLAYER_STATE: G,
+  SPOTIFY_PLAYER_PLAY: G,
+  USER_CONNECTIONS_UPDATE: G,
+  SESSIONS_REPLACE: G,
+  RPC_APP_DISCONNECTED: G,
+  LIBRARY_FETCH_SUCCESS: G,
+  LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: G,
+  LOGOUT: function() {
+    M = !0, D = O, G()
+  },
+  EMBEDDED_ACTIVITY_CLOSE: G,
+  EMBEDDED_ACTIVITY_OPEN: G,
   FORCE_INVISIBLE: function(e) {
-    return D = e.invisible, U()
+    return R = e.invisible, G()
   },
   WINDOW_FOCUS: function() {
-    return D = !1, U()
+    return R = !1, G()
   },
   BROADCAST_START: function(e) {
-    s = e.broadcast, i = (0, _.broadcastToServer)(e.broadcast)
+    i = e.broadcast, s = (0, f.broadcastToServer)(e.broadcast)
   },
-  BROADCAST_STOP: G,
+  BROADCAST_STOP: F,
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    t instanceof h.ChannelRecordBase && (null == t ? void 0 : t.isBroadcastChannel()) && (null == t ? void 0 : t.ownerId) === E.default.getId() && (s = void 0, i = void 0)
+    t instanceof m.ChannelRecordBase && (null == t ? void 0 : t.isBroadcastChannel()) && (null == t ? void 0 : t.ownerId) === v.default.getId() && (i = void 0, s = void 0)
   }
 })

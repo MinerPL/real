@@ -33,7 +33,8 @@ let r = {
     enable_channel_emojis: "Enables channel emoji UI components",
     mobile_profile_effect_debug_controls: "mobile_profile_effect_debug_controls",
     enable_new_search_filters: "Enables new search filters behavior",
-    force_channel_list_v2: "Force channel list V2"
+    force_channel_list_v2: "Force channel list V2",
+    render_native_message_previews_pins: "Render native message previews in pins (Android only)"
   },
   a = {};
 class o extends i.default.DeviceSettingsStore {

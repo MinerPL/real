@@ -29,8 +29,8 @@
       T = t("599110"),
       O = t("98013"),
       R = t("924822"),
-      w = t("773336"),
-      v = t("50885"),
+      v = t("773336"),
+      w = t("50885"),
       S = t("49111"),
       A = t("492397"),
       N = t("53452");
@@ -130,7 +130,7 @@
     }
     class q extends s.Component {
       componentDidMount() {
-        v.default.cleanupDisplaySleep(), g.default.initialize()
+        w.default.cleanupDisplaySleep(), g.default.initialize()
       }
       componentWillUnmount() {
         g.default.terminate()
@@ -142,7 +142,7 @@
           migrationStatus: t,
           skipsSettingDefaultPageTitle: s
         } = this.props;
-        return e = t === _.MigrationStatus.IN_PROGRESS ? null : N.IS_APP_COMPATIBLE_BROWSER ? w.isPlatformEmbedded ? (0, d.jsxs)(i.Switch, {
+        return e = t === _.MigrationStatus.IN_PROGRESS ? null : N.IS_APP_COMPATIBLE_BROWSER ? v.isPlatformEmbedded ? (0, d.jsxs)(i.Switch, {
           children: [(0, d.jsx)(i.Route, {
             exact: !0,
             path: S.Routes.INDEX,
@@ -258,7 +258,7 @@
           }), (0, d.jsx)(i.Route, {
             path: [S.Routes.OAUTH2_AUTHORIZED, S.Routes.OAUTH2_AUTHORIZE, S.Routes.OAUTH2_ERROR, S.Routes.OAUTH2_WHITELIST_ACCEPT],
             component: H
-          }), (0, d.jsx)(i.Route, {
+          }), a ? null : (0, d.jsx)(i.Route, {
             path: [S.Routes.ACCOUNT_STANDING],
             component: K
           }), a ? null : (0, d.jsx)(i.Route, {
@@ -276,7 +276,7 @@
           })
         }), (0, d.jsxs)(m.default, {
           skipsSettingDefaultPageTitle: s,
-          children: [e, w.isPlatformEmbedded && (t === _.MigrationStatus.NOT_STARTED || t === _.MigrationStatus.IN_PROGRESS) && !0 !== u.default.get(r.DOMAIN_MIGRATION_SUCCESS_KEY) ? (0, d.jsx)(E.default, {}) : null]
+          children: [e, v.isPlatformEmbedded && (t === _.MigrationStatus.NOT_STARTED || t === _.MigrationStatus.IN_PROGRESS) && !0 !== u.default.get(r.DOMAIN_MIGRATION_SUCCESS_KEY) ? (0, d.jsx)(E.default, {}) : null]
         })
       }
     }

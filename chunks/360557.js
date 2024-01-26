@@ -8,8 +8,8 @@ var t = E("689988"),
   o = E("42203"),
   n = E("233965"),
   r = E("699209"),
-  i = E("32346"),
-  a = E("49111");
+  a = E("32346"),
+  i = E("49111");
 class I extends t.default {
   constructor(...e) {
     super(...e), this.actions = {
@@ -34,12 +34,12 @@ class I extends t.default {
       if (!t || _ === this.previousVoiceChannelId) return;
       if (this.previousVoiceChannelId = _, null == E || null == _) return;
       let I = o.default.getChannel(_);
-      if (null == I || I.type !== a.ChannelTypes.GUILD_VOICE) return;
-      let s = i.default.getCurrentHangStatus();
+      if (null == I || I.type !== i.ChannelTypes.GUILD_VOICE) return;
+      let s = a.default.getCurrentHangStatus();
       if (null != s) return;
-      let T = i.default.getCurrentDefaultStatus();
+      let T = a.default.getCurrentDefaultStatus();
       if ((null == T ? void 0 : T.expiresAt) != null && (null == T ? void 0 : T.expiresAt) >= Date.now()) {
-        if (T.status === a.HangStatusTypes.CUSTOM && null != T.customHangStatus) {
+        if (T.status === i.HangStatusTypes.CUSTOM && null != T.customHangStatus) {
           let {
             status: e,
             emoji: _
@@ -52,7 +52,7 @@ class I extends t.default {
           (0, n.updateHangStatus)(T.status);
           return
         }
-      }(0, n.updateHangStatus)(a.HangStatusTypes.CHILLING)
+      }
     }, this.handleDisconnectFromVoiceChannel = () => {
       (0, n.clearHangStatus)()
     }, this.handleLogout = () => {

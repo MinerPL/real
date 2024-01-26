@@ -116,6 +116,13 @@
               (0, o.resetToAuthRoute)();
               return
             }
+            if (t.startsWith("/account-standing")) {
+              d.navigate({
+                name: "account-standing",
+                params: void 0
+              });
+              return
+            }
             n && (0, o.navigateToRootTab)({
               screen: "messages",
               resetRoot: e.navigationReplace

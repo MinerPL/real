@@ -4,15 +4,21 @@ n.r(t), n.d(t, {
     return a
   }
 }), n("222007"), n("781738"), n("424973"), n("686130");
-var s = n("605250"),
-  i = n("802493");
-let r = new s.default("GuildEmojis");
+var i = n("605250"),
+  s = n("802493");
+let r = new i.default("GuildEmojis");
 var a = new class e {
+  async getAsync(e) {
+    let t = performance.now(),
+      n = await s.default.emojis(e).getMapEntries(),
+      i = performance.now();
+    return r.log("asynchronously loaded in ".concat(i - t, "ms (guilds: ").concat(n.length, ")")), n
+  }
   getSync(e) {
     let t = performance.now(),
-      n = i.default.emojis(e).getMapEntriesSyncUnsafe(),
-      s = performance.now();
-    return r.log("synchronously loaded in ".concat(s - t, "ms (guilds: ").concat(n.length, ")")), n
+      n = s.default.emojis(e).getMapEntriesSyncUnsafe(),
+      i = performance.now();
+    return r.log("synchronously loaded in ".concat(i - t, "ms (guilds: ").concat(n.length, ")")), n
   }
   handleConnectionOpen(e, t) {
     for (let n of e.guilds) this.handleOneGuildCreate(n, t)
@@ -43,17 +49,17 @@ var a = new class e {
   }
   handleReset() {}
   replace(e, t, n) {
-    i.default.emojisTransaction(n).replaceAll(e, t)
+    s.default.emojisTransaction(n).replaceAll(e, t)
   }
   delete(e, t) {
-    i.default.emojisTransaction(t).delete(e)
+    s.default.emojisTransaction(t).delete(e)
   }
   clear(e) {
-    i.default.emojisTransaction(e).delete()
+    s.default.emojisTransaction(e).delete()
   }
-  update(e, t, n, s) {
-    let r = i.default.emojisTransaction(s);
-    for (let s of (r.putAll(e, t), n)) r.delete(e, s)
+  update(e, t, n, i) {
+    let r = s.default.emojisTransaction(i);
+    for (let i of (r.putAll(e, t), n)) r.delete(e, i)
   }
   constructor() {
     this.actions = {

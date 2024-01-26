@@ -23,6 +23,7 @@ let r = {
     },
     drafts: {
       type: i.DraftType.ChannelMessage,
+      commandType: i.DraftType.SlashCommand,
       autoSave: !0
     },
     emojis: {
@@ -114,7 +115,8 @@ let r = {
     },
     disableAutoFocus: !0,
     drafts: {
-      type: i.DraftType.ChannelMessage
+      type: i.DraftType.ChannelMessage,
+      commandType: i.DraftType.SlashCommand
     },
     emojis: {
       button: !0
@@ -277,7 +279,7 @@ let r = {
     hideAttachmentArea: !0,
     uploadLongMessages: !0
   },
-  E = {
+  T = {
     analyticsName: "create_poll",
     attachments: !0,
     drafts: {
@@ -297,7 +299,7 @@ let r = {
       disableEnterToSubmit: !0
     }
   },
-  T = {
+  E = {
     analyticsName: "profile_bio_input",
     drafts: {
       type: i.DraftType.ChannelMessage
@@ -315,7 +317,7 @@ let r = {
     disableAutoFocus: !0,
     showCharacterCount: !0
   },
-  _ = {
+  S = {
     analyticsName: "custom_gift_type",
     drafts: {
       type: i.DraftType.ChannelMessage
@@ -331,7 +333,7 @@ let r = {
     disableAutoFocus: !0,
     showCharacterCount: !0
   },
-  S = {
+  _ = {
     analyticsName: "rules_input",
     drafts: {
       type: i.DraftType.ChannelMessage
@@ -372,10 +374,10 @@ let r = {
     FORM: c,
     VOICE_CHANNEL_STATUS: f,
     THREAD_CREATION: m,
-    PROFILE_BIO_INPUT: T,
-    CUSTOM_GIFT: _,
-    RULES_INPUT: S,
+    PROFILE_BIO_INPUT: E,
+    CUSTOM_GIFT: S,
+    RULES_INPUT: _,
     CREATE_FORUM_POST: p,
-    CREATE_POLL: E,
+    CREATE_POLL: T,
     FORUM_CHANNEL_GUIDELINES: h
   }

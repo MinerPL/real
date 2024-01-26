@@ -23,8 +23,10 @@ function d() {
   return null != e || t || null != n || i
 }
 let c = () => {
-  var e;
-  let t = (0, l.useStateFromStores)([s.default], () => s.default.getPremiumTypeSubscription()),
-    n = null == t ? void 0 : null === (e = t.metadata) || void 0 === e ? void 0 : e.nitro_likelihood_discount_expires_at;
-  return null != n && r(Date.now()) <= r(n)
+  var e, t;
+  let n = (0, l.useStateFromStores)([s.default], () => s.default.getPremiumTypeSubscription()),
+    i = null == n ? void 0 : null === (e = n.metadata) || void 0 === e ? void 0 : e.nitro_likelihood_discount_expires_at,
+    a = null == n ? void 0 : null === (t = n.metadata) || void 0 === t ? void 0 : t.nitro_reactivation_discount_expires_at,
+    o = null != i ? i : a;
+  return null != o && r(Date.now()) <= r(o)
 }

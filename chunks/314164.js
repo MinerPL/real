@@ -4,6 +4,7 @@ e.exports = {
   answersContainer: "answersContainer_fd091b",
   attachment: "attachment__02b3f",
   attachmentWithResults: "attachmentWithResults__2468b",
+  currentlyVoting: "currentlyVoting_ee856e",
   emoji: "emoji__27dab",
   mediaMissing: "mediaMissing__2a6d1",
   pollAnswerIcon: "pollAnswerIcon__5fba2",

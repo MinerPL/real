@@ -1,43 +1,34 @@
 "use strict";
 i.r(t), i.d(t, {
-  toggleEnableDeveloperActivityShelf: function() {
+  toggleUseActivityUrlOverride: function() {
     return l
   },
-  toggleUseActivityUrlOverride: function() {
+  setActivityUrlOverride: function() {
     return a
   },
-  setActivityUrlOverride: function() {
+  markActivityUsed: function() {
     return u
   },
-  markActivityUsed: function() {
-    return r
-  },
   updateFilter: function() {
-    return d
+    return r
   }
 });
 var n = i("913144");
 
 function l() {
   n.default.dispatch({
-    type: "DEVELOPER_ACTIVITY_SHELF_TOGGLE_ENABLED"
-  })
-}
-
-function a() {
-  n.default.dispatch({
     type: "DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE"
   })
 }
 
-function u(e) {
+function a(e) {
   n.default.dispatch({
     type: "DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE",
     activityUrlOverride: e
   })
 }
 
-function r(e) {
+function u(e) {
   n.default.dispatch({
     type: "DEVELOPER_ACTIVITY_SHELF_MARK_ACTIVITY_USED",
     applicationId: e,
@@ -45,7 +36,7 @@ function r(e) {
   })
 }
 
-function d(e) {
+function r(e) {
   n.default.dispatch({
     type: "DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER",
     filter: e

@@ -16,8 +16,8 @@ var r = n("77078"),
   l = n("834897"),
   a = n("85336"),
   s = n("159149"),
-  o = n("650484"),
-  u = n("945330"),
+  u = n("650484"),
+  o = n("945330"),
   c = n("829805"),
   d = n("425480"),
   f = n("782340"),
@@ -43,7 +43,7 @@ let m = e => {
         className: p.closeContainer,
         onClick: () => n(),
         "aria-label": f.default.Messages.CLOSE,
-        children: (0, i.jsx)(u.default, {
+        children: (0, i.jsx)(o.default, {
           className: p.closeIcon
         })
       })]
@@ -51,27 +51,29 @@ let m = e => {
   },
   _ = e => {
     let {
-      listing: t,
-      application: n,
-      title: r,
-      subtitle: l,
-      description: a
+      icon: t,
+      storeListingBenefits: n,
+      skuBenefits: r,
+      application: l,
+      title: a,
+      subtitle: s,
+      description: u
     } = e;
-    return null == n ? null : (0, i.jsx)("div", {
+    return null == l ? null : (0, i.jsx)("div", {
       className: p.confirmationContainer,
       children: (0, i.jsxs)(c.ApplicationBenefitsModalContent, {
         children: [(0, i.jsx)(c.ApplicationBenefitsModalIcon, {
-          application: n,
-          asset: t.image_asset
+          application: l,
+          asset: t
         }), (0, i.jsx)(c.ApplicationBenefitsModalHeading, {
-          children: r
+          children: a
         }), (0, i.jsx)(c.ApplicationBenefitsModalDivider, {}), (0, i.jsx)(c.ApplicationBenefitsModalDescription, {
-          title: l,
-          description: a
+          title: s,
+          description: u
         }), (0, i.jsx)(c.ApplicationBenefitsModalBenefits, {
-          applicationId: t.application_id,
-          storeListingBenefits: t.store_listing_benefits,
-          skuBenefits: t.sku_benefits.benefits
+          applicationId: l.id,
+          storeListingBenefits: n,
+          skuBenefits: r
         })]
       })
     })
@@ -79,7 +81,7 @@ let m = e => {
 
 function I(e) {
   let {
-    listing: t,
+    tierName: t,
     onConfirm: n,
     subscription: l
   } = e;
@@ -95,7 +97,7 @@ function I(e) {
       variant: "heading-xl/extrabold",
       color: "header-primary",
       children: f.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_TITLE.format({
-        tier: t.name
+        tier: t
       })
     }), (0, i.jsx)(r.Text, {
       className: p.confirmationSubtitle,
@@ -104,7 +106,7 @@ function I(e) {
       children: f.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_CONFIRMATION_SUBTITLE.format({
         timestamp: null == l ? void 0 : l.currentPeriodEnd
       })
-    }), (0, i.jsx)(o.PaymentPortalFooter, {
+    }), (0, i.jsx)(u.PaymentPortalFooter, {
       children: (0, i.jsx)(s.default, {
         onPrimary: n,
         primaryCTA: s.CTAType.CONTINUE,

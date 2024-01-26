@@ -1,74 +1,91 @@
 "use strict";
-let i;
+let i, s;
 n.r(t), n.d(t, {
   OVERLAY_VERSION: function() {
-    return s
-  },
-  OVERLAY_DEFAULT_RESOLUTION: function() {
     return a
   },
-  OVERLAY_MIN_RESOLUTION: function() {
+  OVERLAY_DEFAULT_RESOLUTION: function() {
     return o
   },
-  OVERLAY_LAYOUT_ID: function() {
+  OVERLAY_MIN_RESOLUTION: function() {
     return l
   },
-  DEV_PID: function() {
+  OVERLAY_LAYOUT_ID: function() {
     return u
   },
-  getPID: function() {
+  DEV_PID: function() {
     return d
   },
-  getRPCAuthToken: function() {
+  getPID: function() {
     return f
   },
-  validResolution: function() {
-    return E
+  setPID: function() {
+    return _
   },
-  setOutOfProcessSupport: function() {
+  getRPCAuthToken: function() {
     return h
   },
+  validResolution: function() {
+    return g
+  },
+  setOutOfProcessSupport: function() {
+    return m
+  },
   supportsOutOfProcess: function() {
+    return E
+  },
+  isOutOfProcess: function() {
     return p
   }
 }), n("313619"), n("654714"), n("287168"), n("956660"), n("222007"), n("121338");
 var r = n("773336");
 n("49111");
-let s = 2,
-  a = {
+let a = 2,
+  o = {
     width: 3840,
     height: 2160
   },
-  o = {
+  l = {
     width: 768,
     height: 432
   },
-  l = "overlay_default",
-  u = -2,
+  u = "overlay_default",
+  d = -2,
   c = !1;
 
-function d() {
+function f() {
   var e;
   if (void 0 !== i) return i;
   let t = new URLSearchParams(window.location.search),
     n = null !== (e = t.get("pid")) && void 0 !== e ? e : "",
-    r = parseInt(n, 10);
-  return isNaN(r) && (r = -1), i = r
+    s = parseInt(n, 10);
+  return isNaN(s) && (s = -1), i = s
 }
 
-function f() {
+function _(e) {
+  p() && (i = e)
+}
+
+function h() {
   let e = new URLSearchParams(window.location.search);
   return e.get("rpc_auth_token")
 }
 
-function E(e) {
-  return !r.isPlatformEmbedded || e.width >= o.width && e.height >= o.height
+function g(e) {
+  return !r.isPlatformEmbedded || e.width >= l.width && e.height >= l.height
 }
 
-function h(e) {
+function m(e) {
   c = e
 }
 
-function p() {
+function E() {
   return c
+}
+
+function p() {
+  var e;
+  if (void 0 !== s) return s;
+  let t = new URLSearchParams(window.location.search);
+  return s = (null !== (e = t.get("oop")) && void 0 !== e ? e : "") === "true"
 }
